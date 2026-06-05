@@ -1,507 +1,417 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleria – Die Welt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Grundstile & Animationen */
-        @keyframes subtleGlow {
-            0% { text-shadow: 0 0 5px rgba(255,215,0,0.4), 0 0 10px rgba(255,215,0,0.2); }
-            50% { text-shadow: 0 0 8px rgba(255,215,0,0.6), 0 0 15px rgba(255,215,0,0.3); }
-            100% { text-shadow: 0 0 5px rgba(255,215,0,0.4), 0 0 10px rgba(255,215,0,0.2); }
-        }
-
-        @keyframes backgroundPan {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Crimson Pro', serif;
-            background-color: #0d0d0d;
-            color: #f0e6d2;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZlcnNpb25BPSIxLjEiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJ0ZXh0dXJlIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iODAiIGhlaWdodD0iODAiPgogICAgICA8cGF0aCBkPSJNMCA0MGM0LjQxOCAwIDgtMy41ODIgOC04czMuNTgyLTggOC04YzQuNDE4IDAgOC0zLjU4MiA4LThzMy41ODItOCA4LTggNC40MTggMCA4LTguOTUxIDQgOS43NTIgNCA4LjIzIDQuNDA3IDIuNzk3IDQuNDAzIDQuNzg5LTQuMDczIDguMi01LjIzOCA5LjEwNi01LjI5OCA5LjIzNy00LjUzMyAzLjIxOCA1LjI3OCA0LjEwMiAzLjc0MTMgNS4wNTcgMS4wNy42NDYgMS43NSAyLjMxNCAyLjc4NSAzLjQ5NCAyLjI5OCA1LjUxMiAyLjU2OCA1LjI5OCAyLjgxOCA0LjkzOCAyLjg5OSA0LjIwNCAzLjg4OS0zLjM4NiAzLjkwNiA0LjY2NyAzLjkyOSA1LjkxNiAzLjk2NSA2Ljk1OCA0LjAxNSA3LjMzMiA0LjA2NSA3Ljc5OCA0LjQ4MyA2LjYzIDQuNzYzIDUuNjcgNS40NiA0LjQyNyA1LjU2NiAzLjc2MyA2LjEzMiAzLjM2NCA2LjQwOCAyLjg2NCA2Ljk2NCAxLjQ4NCA3LjI0Ny0uNDU5IDcuMzcwLS45ODMgNy40MTctMi4wNjUgNy43NTYtMi41MSAyLjE5Ny00LjQ2OSA4LjU0Mi01LjQ3MSA4LjY1My02LjI1NiA4LjgzNS03LjcyOSA5LjI5NS04LjY1MyA5LjY1OS05LjIwOCA5LjY2LTkuNjM2IDkuNjQ4LTkuOTAyIDkuNjU2LTguOTI3IDkuNzE4LTguMzI1IDkuNzI5LTcuNzMgOS43NDYtNi43NSA9Ljc2LTUuNzQzIDkuNzYxLTQuODAyIDkuNjMzLTMuNzIxIDkuNTg4LTMuMjczIDkuNDg9LTIuNDEyIDkuMzkzLTEuNzA1IDkuMzExLTEuMjYxIDkuMTY3LS44NDIgOS4wODMtLjU3NSA5LjAwNC0uNDEyIDguODg1LS4yOTggOC43ODctLjIxNyA4LjY4NC0uMTQ3IDguNTQ1LS4wOTYgOC40MDctLjA2MyA4LjI0Ny0uMDM3IDguMDg1LS4wMTYgNy45Mi0uMDA1IDcuNzU2IDAgNy41ODkgMCA3LjU3NSAwIDcuNTYgMCA3LjU0OCAwIDcuNTM2IDAgNy41MjQgMCA3LjUxNCAwIDcuNTA0IDAgNy40OTMgMCA3LjQ4NCAwIDcuNDc3IDAgNy40NjkgMCA3LjQ2IDAgNy40NTcgMCA3LjQ0MyAwIDcuNDM3IDAgNy40MyAwIDcuNDI3IDAgNy40MTkgMCA3LjQwMyAwIDcuMzc5IDAgNy4zNTUgMCA3LjMzMyAwIDcuMzExIDAgNy4yODcgMCA3LjI2MiAwIDcuMjQzIDAgNy4yMjEgMCA3LjE5NyAwIDcuMTY4IDAgNy4xNDYgMCA3LjEwMiAwIDcuMDkxIDAgNy4wNjUgMCA3LjA0NSAwIDcuMDE0IDAgNi45NzkgMCA2Ljk0NyAwIDYuOTE2IDAgNi44ODYgMCA2Ljg1NiAwIDYuODIyIDAgNi43ODkgMCA2Ljc1MyAwIDYuNzIzIDAgNi42OTQgMCA2LjY1MiAwIDYuNjExIDAgNi41NjkgMCA2LjUyOCAwIDYuNDg1IDAgNi40NDMgMCA2LjQgMCA2LjM1NyAwIDYuMzE1IDAgNi4yNzUgMCA2LjIzNSAwIDYuMTk0IDAgNi4xNTQgMCA2LjExMyAwIDYuMDczIDAgNi4wMzMgMCA1Ljk5MyAwIDUuOTUzIDAgNS45MTQgMCA1Ljg3NSAwIDUuODM3IDAgNS43OTggMCA1Ljc2IDAgNS43MjIgMCA1LjY4MyAwIDUuNjQ2IDAgNS42MDggMCA1LjU3MSAwIDUuNTM1IDAgNS40OTggMCA1LjQ2MiAwIDUuNDI2IDAgNS4zOTIgMCA1LjM1NiAwIDUuMzIxIDAgNS4yODcgMCA1LjI1MiAwIDUuMjE4IDAgNS4xODUgMCA1LjE1MiAwIDUuMTE5IDAgNS4wODcMCA1LjA1NiAwIDUuMDI0IDAgNC45OTMgMCA0L5NNjIgNCB2Nkg2OFY0SDYyek0zMCA0NXY2aDZWNDVIMzB6TTk2IDI0djZoNlYyNEg5NnptLTY2LTIydiZoNlYyem0xOC0yNXY2aDZWLTJINjB6TTQ2IDY4djZoNlY2OEg0NnptLTE2LTIydiZoNlY0NkgzMHptLTMyLTJ2NmgyVi0ySC0yem0wIDMydiZoNlY1MmgtMnptMTYtNDh2NmgyVi00OEgxNHptMTYtNDh2NmgyVi00OEgzMHptMzItNHY2aDdWLTRINzB6IiBmaWxsPSIjNmM2NTQ4IiBmaWxsLW9wYWNpdHk9IjMuMyIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3RleHR1cmUpIi8+Cjwvc3ZnPg==');
-            background-size: 80px 80px;
-            background-blend-mode: overlay;
-            animation: backgroundPan 120s linear infinite;
-            border: 5px solid #a37c27;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.5);
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #24221f;
-            padding: 20px 40px;
-            border-bottom: 4px solid #ffd700;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            text-transform: uppercase;
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 38px;
-            font-weight: 700;
-            color: #ffd700;
-            animation: subtleGlow 4s infinite alternate;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 20px rgba(255,215,0,0.3);
-        }
-
-        .menu-toggle {
-            font-size: 26px;
-            background: none;
-            border: none;
-            color: #d4c2a0;
-            cursor: pointer;
-            padding: 10px 20px;
-            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-            text-shadow: 0 0 5px rgba(255,215,0,0.2);
-        }
-
-        .menu-toggle:hover {
-            color: #ffd700;
-            transform: scale(1.08);
-            text-shadow: 0 0 10px rgba(255,215,0,0.7), 0 0 20px rgba(255,215,0,0.4);
-        }
-
-        /* Sidebars */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            width: 320px;
-            height: 100%;
-            background-color: rgba(36, 34, 31, 0.98);
-            padding: 30px 25px;
-            box-shadow: 5px 0 20px rgba(0,0,0,0.8), inset -2px 0 10px rgba(255,215,0,0.1);
-            overflow-y: auto;
-            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            z-index: 999;
-            box-sizing: border-box;
-            border-right: 2px solid #a37c27;
-            border-left: 2px solid #a37c27;
-        }
-        .sidebar-right {
-             border-right: 2px solid #a37c27;
-             border-left: 2px solid #a37c27;
-        }
-        .sidebar-left { left: -320px; border-left: none; }
-        .sidebar-left.open { transform: translateX(320px); }
-        .sidebar-right { right: -320px; border-right: none; }
-        .sidebar-right.open { transform: translateX(-320px); }
-
-
-        .sidebar h3 {
-            font-family: 'Cinzel', serif;
-            color: #ffd700;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid rgba(255,215,0,0.5);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 0 0 8px rgba(255,215,0,0.4);
-        }
-
-        .sidebar a {
-            display: block;
-            margin: 12px 0;
-            color: #e0d8c8;
-            text-decoration: none;
-            font-size: 17px;
-            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-        }
-
-        .sidebar a:hover {
-            color: #ffd700;
-            transform: translateX(8px);
-            text-shadow: 0 0 10px rgba(255,215,0,0.6);
-            text-decoration: none;
-        }
-
-        .sidebar img.banner {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 25px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 3px solid #a37c27;
-            box-shadow: 0 0 15px rgba(0,0,0,0.7), 0 0 20px rgba(255,215,0,0.2);
-            border-radius: 5px;
-        }
-
-        .sidebar strong {
-            font-family: 'Cinzel', serif;
-            color: #ffd700;
-            display: block;
-            margin-bottom: 20px;
-            font-size: 20px;
-            text-align: center;
-            text-shadow: 0 0 8px rgba(255,215,0,0.4);
-            text-transform: uppercase;
-        }
-
-        .sidebar hr {
-            border: none;
-            border-top: 2px dashed rgba(255,215,0,0.3);
-            margin: 30px 0;
-        }
-
-        .sidebar input[type="text"] {
-            width: calc(100% - 20px);
-            padding: 12px;
-            background: #151515;
-            border: 2px solid #a37c27;
-            color: #f0e6d2;
-            font-family: 'Crimson Pro', serif;
-            border-radius: 8px;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 0 5px rgba(255,215,0,0.1);
-            outline: none;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .sidebar input[type="text"]:focus {
-            border-color: #ffd700;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.8), 0 0 15px rgba(255,215,0,0.6);
-        }
-
-        .sidebar input[type="text"]::placeholder {
-            color: rgba(240, 230, 210, 0.5);
-        }
-
-        /* Menü-Icons (Rechte Sidebar) */
-        .menu-icons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .menu-icons a {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        .menu-icons img {
-            width: 40px;
-            height: 40px;
-            filter: drop-shadow(0 0 6px #ffd700);
-            transition: transform 0.2s ease;
-        }
-        .menu-icons a:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Hauptinhalt (der Container für den Iframe) */
-        main {
-            flex-grow: 1;
-            padding: 30px;
-            margin-left: 0;
-            margin-right: 0;
-            transition: margin-left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), margin-right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            box-sizing: border-box;
-        }
-
-        /* Anpassung des Main-Bereichs, wenn Sidebars geöffnet sind */
-        body.sidebar-left-open main { margin-left: 320px; }
-        body.sidebar-right-open main { margin-right: 320px; }
-        body.sidebar-left-open.sidebar-right-open main {
-             margin-left: 320px;
-             margin-right: 320px;
-        }
-
-        /* Der Iframe selbst */
-        #inhalt {
-            width: 100%;
-            height: calc(100vh - (2 * 30px) - 82px - 50px);
-            max-width: 1600px;
-            border: 3px solid #a37c27;
-            background: #f5f1e6;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.8), 0 0 40px rgba(255,215,0,0.3), inset 0 0 15px rgba(0,0,0,0.5);
-            overflow: hidden;
-            transition: box-shadow 0.3s ease;
-        }
-        #inhalt:hover {
-             box-shadow: 0 0 30px rgba(0,0,0,0.9), 0 0 50px rgba(255,215,0,0.5), inset 0 0 20px rgba(0,0,0,0.6);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #24221f;
-            color: #d4c2a0;
-            text-align: center;
-            padding: 15px 30px;
-            font-size: 14px;
-            border-top: 4px solid #ffd700;
-            z-index: 1000;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.4);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex; /* Flexbox für die Buttons */
-            justify-content: space-between; /* Abstand zwischen den Elementen */
-            align-items: center; /* Vertikale Zentrierung */
-            flex-wrap: wrap; /* Umbruch auf kleinen Bildschirmen */
-            gap: 10px; /* Abstand zwischen den Elementen bei Umbruch */
-        }
-
-        .footer-nav-buttons {
-            display: flex;
-            gap: 15px; /* Abstand zwischen den Buttons */
-        }
-
-        .footer-nav-buttons button {
-            background-color: #a37c27; /* Goldener Button-Hintergrund */
-            color: #f0e6d2; /* Heller Text */
-            border: 2px solid #ffd700; /* Heller Goldrand */
-            padding: 8px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: 'Crimson Pro', serif;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-            text-shadow: 0 0 3px rgba(0,0,0,0.4);
-        }
-
-        .footer-nav-buttons button:hover {
-            background-color: #ffd700; /* Hintergrund wird heller Gold */
-            color: #24221f; /* Text wird dunkel */
-            transform: translateY(-2px); /* Leichter Schwebeeffekt */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5), 0 0 15px rgba(255,215,0,0.6); /* Stärkerer Schatten und Glanz */
-            text-shadow: none; /* Textschatten entfernen, wenn hell */
-        }
-
-        /* Media Queries für kleinere Bildschirme */
-        @media (max-width: 768px) {
-            body { border: none; box-shadow: none; }
-            header { padding: 10px 15px; }
-            .logo { font-size: 26px; }
-            .menu-toggle { font-size: 20px; }
-
-            .sidebar {
-                width: 100vw;
-                left: -100vw;
-                right: auto;
-                transform: translateX(0) !important;
-                box-shadow: none;
-                padding: 15px;
-                border: none;
-            }
-            .sidebar-right {
-                left: auto;
-                right: -100vw;
-            }
-
-            .sidebar-left.open { left: 0; }
-            .sidebar-right.open { right: 0; }
-            
-            main { padding: 15px; }
-
-            body.sidebar-left-open main, body.sidebar-right-open main, body.sidebar-left-open.sidebar-right-open main {
-                margin-left: 0;
-                margin-right: 0;
-            }
-            
-            #inhalt {
-                height: calc(100vh - 150px);
-                border-radius: 8px;
-                box-shadow: 0 0 15px rgba(0,0,0,0.6);
-            }
-
-            footer {
-                flex-direction: column; /* Buttons untereinander auf kleinen Bildschirmen */
-                padding: 10px 15px;
-                font-size: 12px;
-            }
-
-            .footer-nav-buttons {
-                flex-direction: row; /* Immer noch nebeneinander, aber mit Umbruch */
-                gap: 10px;
-                width: 100%; /* Nehmen volle Breite ein */
-                justify-content: center; /* Zentrieren der Buttons */
-                margin-top: 10px;
-            }
-
-            .footer-nav-buttons button {
-                padding: 6px 12px;
-                font-size: 13px;
-                flex-grow: 1; /* Gleichmäßige Breite der Buttons */
-            }
-        }
-    </style>
-    <script>
-        function toggleSidebar(side) {
-            const sidebar = document.getElementById(`sidebar-${side}`);
-            const body = document.body;
-
-            sidebar.classList.toggle('open');
-            body.classList.toggle(`sidebar-${side}-open`);
-
-            const otherSide = side === 'left' ? 'right' : 'left';
-            const otherSidebar = document.getElementById(`sidebar-${otherSide}`);
-            if (otherSidebar.classList.contains('open')) {
-                otherSidebar.classList.remove('open');
-                body.classList.remove(`sidebar-${otherSide}-open`);
-            }
-        }
-
-        function ladeSeite(ziel) {
-            const iframe = document.getElementById('inhalt');
-            iframe.src = ziel;
-            // Optional: Beide Sidebars schließen nach Klick
-            document.getElementById('sidebar-left').classList.remove('open');
-            document.getElementById('sidebar-right').classList.remove('open');
-            document.body.classList.remove('sidebar-left-open', 'sidebar-right-open');
-        }
-
-        // Neue Funktionen für die Iframe-Navigation
-        function goBack() {
-            const iframe = document.getElementById('inhalt');
-            iframe.contentWindow.history.back();
-        }
-
-        function goForward() {
-            const iframe = document.getElementById('inhalt');
-            iframe.contentWindow.history.forward();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.querySelector('.sidebar-left input[type="text"]');
-            searchInput.addEventListener('keyup', (event) => {
-                const searchTerm = event.target.value.toLowerCase();
-                const allLinks = document.querySelectorAll('.sidebar-left a, .sidebar-right a');
-                
-                allLinks.forEach(link => {
-                    if (link.getAttribute('target') === '_blank') {
-                        link.style.display = 'block';
-                        return;
-                    }
-                    
-                    if (link.textContent.toLowerCase().includes(searchTerm)) {
-                        link.style.display = 'block';
-                    } else {
-                        link.style.display = 'none';
-                    }
-                });
-            });
-
-            const iframe = document.getElementById('inhalt');
-            // Nur laden, wenn der Iframe leer ist oder die URL nur die Basis-Domain anzeigt
-            if (iframe.src === '' || iframe.src.endsWith(window.location.host + '/') || iframe.src.endsWith(window.location.host + '/index.html')) { 
-                // ladeSeite('bestiarium.html'); // oder eine andere existierende Seite
-            }
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleria Seitenindex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="SeitenIndex/index.css">
+  <script src="SeitenIndex/index.js" defer></script>
 </head>
 <body>
+  <header class="index-header">
+    <div class="brand-block">
+      <span class="brand-kicker">Aleria</span>
+      <h1>Seitenindex</h1>
+      <p>Direkte Links zu allen aktuell angelegten HTML-Seiten im Projekt.</p>
+    </div>
+    <div class="index-stats" aria-label="Seitenstatistik">
+      <div>
+        <strong data-role="visible-count">42</strong>
+        <span>sichtbar</span>
+      </div>
+      <div>
+        <strong data-role="total-count">42</strong>
+        <span>gesamt</span>
+      </div>
+    </div>
+  </header>
 
-    <header>
-        <button class="menu-toggle" onclick="toggleSidebar('left')">☰</button>
-        <div class="logo">Die Welt von Aleria</div>
-        <button class="menu-toggle" onclick="toggleSidebar('right')">☰ Menü</button>
-    </header>
+  <main class="index-layout">
+    <aside class="index-sidebar" aria-label="Bereiche">
+      <label class="search-box">
+        <span>Suche</span>
+        <input type="search" data-role="page-search" placeholder="Name, Bereich oder Pfad">
+      </label>
 
-    <aside class="sidebar sidebar-left" id="sidebar-left">
-        <img src="images/h6HEyp1.png" alt="Aldrimarbanner" class="banner">
-        <strong>Das Königreich Aldrimar</strong>
-        <hr>
-        <h3>Suche</h3>
-        <input type="text" placeholder="Aleria durchsuchen...">
+      <nav class="section-nav" aria-label="Schnellnavigation">
+        <a href="#hauptseiten">Hauptseiten</a>
+        <a href="#almanach">Almanach</a>
+        <a href="#karten-tafeln">Karten & Tafeln</a>
+        <a href="#markte">Märkte</a>
+        <a href="#welt-organisationen">Welt & Organisationen</a>
+        <a href="#figuren">Figuren</a>
+        <a href="#ereignisse">Ereignisse</a>
+        <a href="#werkstatt-galerie">Werkstatt & Galerie</a>
+        <a href="#vorlagen-tests">Vorlagen & Tests</a>
+      </nav>
     </aside>
 
-    <aside class="sidebar sidebar-right" id="sidebar-right">
-        <h3>Navigation</h3>
-        <div class="menu-icons">
-            <a href="#" onclick="ladeSeite('home.html')">
-                <img src="/IconOrdner/ReiterIcons/Home.png" class="icon-inline" alt="Home" title="Home"> Home
-            </a>
-            <a href="#" onclick="ladeSeite('bestiarium.html')">
-                <img src="/IconOrdner/ReiterIcons/Bestiarium.png" class="icon-inline" alt="Bestiarium" title="Bestiarium"> Bestiarium
-            </a>
-            <a href="#" onclick="ladeSeite('dunkle-gilden.html')">
-                <img src="/IconOrdner/ReiterIcons/Dunkle%20Gilden.png" class="icon-inline" alt="Dunkle Gilden" title="Dunkle Gilden"> Dunkle Gilden
-            </a>
-            <a href="#" onclick="ladeSeite('ereignisse.html')">
-                <img src="/IconOrdner/ReiterIcons/Ereignisse.png" class="icon-inline" alt="Ereignisse" title="Ereignisse"> Ereignisse
-            </a>
-            <a href="#" onclick="ladeSeite('gilden.html')">
-                <img src="/IconOrdner/ReiterIcons/Gilden.png" class="icon-inline" alt="Gilden" title="Gilden"> Gilden
-            </a>
-            <a href="#" onclick="ladeSeite('kalender.html')">
-                <img src="/IconOrdner/ReiterIcons/Kalender.png" class="icon-inline" alt="Kalender" title="Kalender"> Kalender
-            </a>
-            <a href="#" onclick="ladeSeite('klassen.html')">
-                <img src="/IconOrdner/ReiterIcons/Klassen.png" class="icon-inline" alt="Klassen" title="Klassen"> Klassen
-            </a>
-            <a href="#" onclick="ladeSeite('kulte.html')">
-                <img src="/IconOrdner/ReiterIcons/Kulte.png" class="icon-inline" alt="Kulte" title="Kulte"> Kulte
-            </a>
-            <a href="#" onclick="ladeSeite('markt.html')">
-                <img src="/IconOrdner/ReiterIcons/Markt.png" class="icon-inline" alt="Markt" title="Markt"> Markt
-            </a>
-            <a href="#" onclick="ladeSeite('orden.html')">
-                <img src="/IconOrdner/ReiterIcons/Orden.png" class="icon-inline" alt="Orden" title="Orden"> Orden
-            </a>
-            <a href="#" onclick="ladeSeite('organisationen.html')">
-                <img src="/IconOrdner/ReiterIcons/Organisationen.png" class="icon-inline" alt="Organisationen" title="Organisationen"> Organisationen
-            </a>
-            <a href="#" onclick="ladeSeite('religion.html')">
-                <img src="/IconOrdner/ReiterIcons/Religion.png" class="icon-inline" alt="Religion" title="Religion"> Religion
-            </a>
-            <a href="#" onclick="ladeSeite('sternzeichen.html')">
-                <img src="/IconOrdner/ReiterIcons/Sternzeichen.png" class="icon-inline" alt="Sternzeichen" title="Sternzeichen"> Sternzeichen
-            </a>
-            <a href="#" onclick="ladeSeite('zauber.html')">
-                <img src="/IconOrdner/ReiterIcons/Zauber.png" class="icon-inline" alt="Zauber" title="Zauber"> Zauber
-            </a>
-            <a href="#" onclick="ladeSeite('zeitstrahl.html')">
-                <img src="/IconOrdner/ReiterIcons/Zeitstrahl.png" class="icon-inline" alt="Zeitstrahl" title="Zeitstrahl"> Zeitstrahl
-            </a>
-            <a href="#" onclick="ladeSeite('platzhalter.html')">
-                <img src="/IconOrdner/ReiterIcons/Platzhalter.png" class="icon-inline" alt="Platzhalter" title="Platzhalter"> Platzhalter
-            </a>
+    <div class="sections" data-role="page-list">
+      <section class="link-section" id="hauptseiten" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Platzhalter.png" alt="">
+          <div>
+            <h2>Hauptseiten</h2>
+            <p>Startpunkte und zentrale Übersichten.</p>
+          </div>
         </div>
-    </aside>
+        <ul class="page-list">
+          <li data-page-item data-search="hauptseite archiv portal hauptseite/index.html">
+            <a href="Hauptseite/index.html">
+              <span class="page-title">Aleria Archiv - Hauptseite</span>
+              <span class="page-path">Hauptseite/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="aleria almanach aleriaalmanach/start.html">
+            <a href="AleriaAlmanach/start.html">
+              <span class="page-title">Aleria Almanach Start</span>
+              <span class="page-path">AleriaAlmanach/start.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="not found fehlerseite not_found.html">
+            <a href="not_found.html">
+              <span class="page-title">404 Fehlerseite</span>
+              <span class="page-path">not_found.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
 
-    <main>
-        <iframe
-            id="inhalt"
-            src=""
-            title="Wiki-Inhalt"
-        ></iframe>
-    </main>
-
-    <footer>
-        <div class="footer-info">
-            &copy; 2025 Die Welt von Aleria | Impressum | Datenschutz
+      <section class="link-section" id="almanach" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Kalender.png" alt="">
+          <div>
+            <h2>Almanach</h2>
+            <p>Archiv, Module, Kommentare und Dokumentenwerkstatt.</p>
+          </div>
         </div>
-        <div class="footer-nav-buttons">
-            <button onclick="goBack()">Zurück</button>
-            <button onclick="ladeSeite('seiten2/home.html')">Home</button>
-            <button onclick="goForward()">Vor</button>
-        </div>
-    </footer>
+        <ul class="page-list">
+          <li data-page-item data-search="aleria almanach archiv module kommentare aleriaalmanach/aleriaalmanach.html">
+            <a href="AleriaAlmanach/AleriaAlmanach.html">
+              <span class="page-title">Aleria Almanach</span>
+              <span class="page-path">AleriaAlmanach/AleriaAlmanach.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="dokumentenwerkstatt dokumente schriftstücke aleriaalmanach/dokumentenwerkstatt.html">
+            <a href="AleriaAlmanach/DokumentenWerkstatt.html">
+              <span class="page-title">Aleria Dokumentenwerkstatt</span>
+              <span class="page-path">AleriaAlmanach/DokumentenWerkstatt.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
 
+      <section class="link-section" id="karten-tafeln" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Organisationen.png" alt="">
+          <div>
+            <h2>Karten & Tafeln</h2>
+            <p>Interaktive Karten, Marker und Anzeigetafeln.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="celtigerns wacht karte cenyr karten/cenyr/celtigerns-wacht/celtigernswachtkarte.html">
+            <a href="Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html">
+              <span class="page-title">Celtigerns Wacht Karte</span>
+              <span class="page-path">Karten/Cenyr/celtigerns-wacht/CeltigernsWachtKarte.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="morddyn anzeigetafel cenyr celtigerns wacht anzeigetafeln/cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/morddynanzeigetafel.html">
+            <a href="Anzeigetafeln/Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/MorddynAnzeigetafel.html">
+              <span class="page-title">Anzeigetafel Morddyn</span>
+              <span class="page-path">Anzeigetafeln/Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/MorddynAnzeigetafel.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="markte" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Markt.png" alt="">
+          <div>
+            <h2>Märkte</h2>
+            <p>Shops, Tavernen und Handelsseiten.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="alchemist kräuterhändler markt/alchemist/index.html">
+            <a href="Markt/Alchemist/index.html">
+              <span class="page-title">Der Alchemist / Kräuterhändler</span>
+              <span class="page-path">Markt/Alchemist/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="arkanist markt/arkanist/index.html">
+            <a href="Markt/Arkanist/index.html">
+              <span class="page-title">Der Arkanist</span>
+              <span class="page-path">Markt/Arkanist/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="gemischtwarenhändler markt/gemischtwarenhändler/index.html">
+            <a href="Markt/Gemischtwarenhändler/index.html">
+              <span class="page-title">Der Gemischtwarenhändler</span>
+              <span class="page-path">Markt/Gemischtwarenhändler/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="rossmarkt reittierverzeichnis pferde markt/rossmarkt/rossmarkt.html">
+            <a href="Markt/Rossmarkt/Rossmarkt.html">
+              <span class="page-title">Rossmarkt - Reittierverzeichnis</span>
+              <span class="page-path">Markt/Rossmarkt/Rossmarkt.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="schwarzmarkt markt/schwarzmarkt/index.html">
+            <a href="Markt/Schwarzmarkt/index.html">
+              <span class="page-title">Der Schwarzmarkt</span>
+              <span class="page-path">Markt/Schwarzmarkt/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="taverne markt/taverne/index.html">
+            <a href="Markt/Taverne/index.html">
+              <span class="page-title">Die Taverne</span>
+              <span class="page-path">Markt/Taverne/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="viehmarkt markt/viehmarkt/index.html">
+            <a href="Markt/Viehmarkt/index.html">
+              <span class="page-title">Viehmarkt</span>
+              <span class="page-path">Markt/Viehmarkt/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="waffen rüstungen shop markt/waffenrüstungen/index.html">
+            <a href="Markt/WaffenRüstungen/index.html">
+              <span class="page-title">Waffen- und Rüstungsshop</span>
+              <span class="page-path">Markt/WaffenRüstungen/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="alte taverne kupferkrug taverne.html">
+            <a href="Taverne.html">
+              <span class="page-title">Taverne "Zum Kupferkrug"</span>
+              <span class="page-path">Taverne.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="welt-organisationen" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Religion.png" alt="">
+          <div>
+            <h2>Welt & Organisationen</h2>
+            <p>Kontinente, Klassen, Klerus, Gilden und Bestiarium.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="rüstkammer der neun klerus religion aleriaklerus/alerischerklerus.html">
+            <a href="AleriaKlerus/AlerischerKlerus.html">
+              <span class="page-title">Die Rüstkammer der Neun</span>
+              <span class="page-path">AleriaKlerus/AlerischerKlerus.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="bestiarium kreaturen bestiarium/bestiarium.html">
+            <a href="Bestiarium/Bestiarium.html">
+              <span class="page-title">Das Große Bestiarium von Aleria</span>
+              <span class="page-path">Bestiarium/Bestiarium.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="charakterdatenbank charaktere charakterdatenbank/index.html">
+            <a href="CharakterDatenbank/index.html">
+              <span class="page-title">CharakterDatenbank</span>
+              <span class="page-path">CharakterDatenbank/index.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="drachenritter lager gilde gilden/abenteurer gilden/drachenritter/drachenritterlager.html">
+            <a href="Gilden/Abenteurer Gilden/Drachenritter/DrachenritterLager.html">
+              <span class="page-title">Drachenritter-Lager</span>
+              <span class="page-path">Gilden/Abenteurer Gilden/Drachenritter/DrachenritterLager.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="klassenübersicht klassenordner/klassenseite.html">
+            <a href="Klassenordner/Klassenseite.html">
+              <span class="page-title">Klassenübersicht</span>
+              <span class="page-path">Klassenordner/Klassenseite.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="königreich cenyr kontinente/estryll/königreich cenyr/königreich von cenyr.html">
+            <a href="Kontinente/Estryll/Königreich Cenyr/Königreich von Cenyr.html">
+              <span class="page-title">Das Königreich von Cenyr</span>
+              <span class="page-path">Kontinente/Estryll/Königreich Cenyr/Königreich von Cenyr.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="museum arkane künste magie museum myrddin museummyrddin/index.html">
+            <a href="MuseumMyrddin/index.html">
+              <span class="page-title">Museum der Arkanen Künste</span>
+              <span class="page-path">MuseumMyrddin/index.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="figuren" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Organisationen.png" alt="">
+          <div>
+            <h2>Figuren</h2>
+            <p>Steckbriefe und charakterbezogene Einzelseiten.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="fenrir varulv aldrimar steckbrief steckbriefe/land/aldrimar/roriksheim/clans/varulvclan/fenrir/fenrirvarulvsteckbrief.html">
+            <a href="Steckbriefe/Land/Aldrimar/Roriksheim/Clans/VarulvClan/Fenrir/fenrirVarulvSteckbrief.html">
+              <span class="page-title">Fenrir Varulv</span>
+              <span class="page-path">Steckbriefe/Land/Aldrimar/Roriksheim/Clans/VarulvClan/Fenrir/fenrirVarulvSteckbrief.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="freya skald aldrimar steckbrief steckbriefe/land/aldrimar/roriksheim/klangheim/clans/skald/freyaskald/freyaskaldsteckbrief.html">
+            <a href="Steckbriefe/Land/Aldrimar/Roriksheim/Klangheim/Clans/Skald/FreyaSkald/FreyaSkaldSteckbrief.html">
+              <span class="page-title">Freya Skald</span>
+              <span class="page-path">Steckbriefe/Land/Aldrimar/Roriksheim/Klangheim/Clans/Skald/FreyaSkald/FreyaSkaldSteckbrief.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="gawain draig cenyr steckbrief steckbriefe/land/cenyr/celtigernswacht/adelshäuser/hausdraig/gawaindraig/gawaindraigsteckbrief.html">
+            <a href="Steckbriefe/Land/Cenyr/CeltigernsWacht/Adelshäuser/HausDraig/GawainDraig/GawainDraigSteckbrief.html">
+              <span class="page-title">Gawain Draig</span>
+              <span class="page-path">Steckbriefe/Land/Cenyr/CeltigernsWacht/Adelshäuser/HausDraig/GawainDraig/GawainDraigSteckbrief.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="guinevere neidr cenyr silberinsel steckbrief steckbriefe/land/cenyr/silberinsel/adelshäuser/hausneidr/guinevereneidr/guinevereneidrsteckbrief.html">
+            <a href="Steckbriefe/Land/Cenyr/Silberinsel/Adelshäuser/HausNeidr/GuinevereNeidr/GuinevereNeidrSteckbrief.html">
+              <span class="page-title">Guinevere Neidr</span>
+              <span class="page-path">Steckbriefe/Land/Cenyr/Silberinsel/Adelshäuser/HausNeidr/GuinevereNeidr/GuinevereNeidrSteckbrief.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="ereignisse" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Ereignisse.png" alt="">
+          <div>
+            <h2>Ereignisse</h2>
+            <p>Events und einzelne Ereignisseiten.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="hochzeit haus draig penderyn ereignisse/hochzeiten/haus-draig-und-penderyn.html">
+            <a href="Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html">
+              <span class="page-title">Die Hochzeit von Haus Draig &amp; Penderyn</span>
+              <span class="page-path">Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="hochzeitsevent vorlage ereignisse/hochzeitsevent.html">
+            <a href="Ereignisse/Hochzeitsevent.html">
+              <span class="page-title">Hochzeitsevent Vorlage</span>
+              <span class="page-path">Ereignisse/Hochzeitsevent.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="werkstatt-galerie" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Zauber.png" alt="">
+          <div>
+            <h2>Werkstatt & Galerie</h2>
+            <p>Bilder, Notizen und temporäre Arbeitsseiten.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="bilderprompting bilder prompting bilderprompting.html">
+            <a href="BilderPrompting.html">
+              <span class="page-title">BilderPrompting</span>
+              <span class="page-path">BilderPrompting.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="abgerissene notiz dokumente werkstatt dokumente aus der werkstatt/abgerissene-notiz.html">
+            <a href="Dokumente aus der Werkstatt/abgerissene-notiz.html">
+              <span class="page-title">Abgerissene Notiz</span>
+              <span class="page-path">Dokumente aus der Werkstatt/abgerissene-notiz.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="galerie bildreferenzen gallerien/gallerieversion2.html">
+            <a href="Gallerien/GallerieVersion2.html">
+              <span class="page-title">Aleria Bildreferenzen</span>
+              <span class="page-path">Gallerien/GallerieVersion2.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="dynastieplaner stammbaum animexx seiten temporär/stammbaum.html">
+            <a href="Animexx Seiten - Temporär/Stammbaum.html">
+              <span class="page-title">Dynastieplaner</span>
+              <span class="page-path">Animexx Seiten - Temporär/Stammbaum.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="link-section" id="vorlagen-tests" data-section>
+        <div class="section-heading">
+          <img src="IconOrdner/ReiterIcons/Platzhalter.png" alt="">
+          <div>
+            <h2>Vorlagen & Tests</h2>
+            <p>Templates, Testseiten und temporäre Entwicklungsstände.</p>
+          </div>
+        </div>
+        <ul class="page-list">
+          <li data-page-item data-search="anzeigetafel vorlage template anzeigetafeln/_template/anzeigetafeltemplate.html">
+            <a href="Anzeigetafeln/_template/AnzeigetafelTemplate.html">
+              <span class="page-title">Anzeigetafel-Vorlage</span>
+              <span class="page-path">Anzeigetafeln/_template/AnzeigetafelTemplate.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="bestiarium test kreaturenarchiv bestiarium/test.html">
+            <a href="Bestiarium/test.html">
+              <span class="page-title">Kreaturenarchiv Testseite</span>
+              <span class="page-path">Bestiarium/test.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="drachenritter testseite gilden/abenteurer gilden/drachenritter/testseite.html">
+            <a href="Gilden/Abenteurer Gilden/Drachenritter/TestSeite.html">
+              <span class="page-title">Drachenritter Testseite</span>
+              <span class="page-path">Gilden/Abenteurer Gilden/Drachenritter/TestSeite.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="karten vorlage template karten/_template/kartentemplate.html">
+            <a href="Karten/_template/KartenTemplate.html">
+              <span class="page-title">Karten-Vorlage</span>
+              <span class="page-path">Karten/_template/KartenTemplate.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="klassenübersicht temporär animexx seiten temporär/klassenseite.html">
+            <a href="Animexx Seiten - Temporär/Klassenseite.html">
+              <span class="page-title">Klassenübersicht temporär</span>
+              <span class="page-path">Animexx Seiten - Temporär/Klassenseite.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="königreich template kontinente/_template/koenigreichtemplate.html">
+            <a href="Kontinente/_template/KoenigreichTemplate.html">
+              <span class="page-title">Königreich-Vorlage</span>
+              <span class="page-path">Kontinente/_template/KoenigreichTemplate.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="portfolio test architektin animexx seiten temporär/test.html">
+            <a href="Animexx Seiten - Temporär/Test.html">
+              <span class="page-title">Portfolio Testseite</span>
+              <span class="page-path">Animexx Seiten - Temporär/Test.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="steckbrief template steckbriefe/_template/steckbrieftemplate.html">
+            <a href="Steckbriefe/_template/SteckbriefTemplate.html">
+              <span class="page-title">Steckbrief-Template</span>
+              <span class="page-path">Steckbriefe/_template/SteckbriefTemplate.html</span>
+            </a>
+          </li>
+          <li data-page-item data-search="steckbrief vorlage steckbriefe/steckbriefvorlage.html">
+            <a href="Steckbriefe/SteckbriefVorlage.html">
+              <span class="page-title">Steckbrief-Vorlage</span>
+              <span class="page-path">Steckbriefe/SteckbriefVorlage.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="empty-state" data-role="empty-state" hidden>Keine passende Seite gefunden.</p>
+    </div>
+  </main>
 </body>
 </html>
