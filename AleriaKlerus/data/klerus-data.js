@@ -1,5 +1,5 @@
 ﻿// ========= BILDER-PFAD (dein Ordner, RELATIV, ohne führenden Slash) =========
-    const IMG_DIR = "https://dieweltvonaleria.neocities.org/BilderR%C3%BCstungen";
+    const IMG_DIR = "../BilderR%C3%BCstungen";
 
     // Helper: baut Pfade wie "BilderRüstungen/maldras_paladin.png"
     function imgPath(id, mode){
