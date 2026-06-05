@@ -51,9 +51,11 @@ function syncPortraitDisplay(src, name) {
   }
 
   img1.style.display = 'none';
+  img1.removeAttribute('src');
   ph1.style.display = 'flex';
   ph1.textContent = initial;
   img2.style.display = 'none';
+  img2.removeAttribute('src');
   ph2.style.display = 'flex';
   ph2.textContent = initial;
 }

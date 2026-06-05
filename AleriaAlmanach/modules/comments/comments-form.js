@@ -15,7 +15,10 @@ function openCommentForm() {
   setRichEditorContent('cf-text', '');
   document.getElementById('cf-error').style.display = 'none';
   const prev = document.getElementById('cf-portrait-preview');
-  if (prev) prev.style.display = 'none';
+  if (prev) {
+    prev.removeAttribute('src');
+    prev.style.display = 'none';
+  }
   const portraitUrlInput = document.getElementById('cf-portrait-url');
   if (portraitUrlInput) portraitUrlInput.value = '';
   document.getElementById('cf-manual-fields').style.display = 'none';

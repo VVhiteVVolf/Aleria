@@ -6,21 +6,6 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Aleria Almanach</title>
-<script>
-  (function () {
-    var isPublishedSite = location.hostname === 'dieweltvonaleria.neocities.org';
-    if (!isPublishedSite) return;
-    var params = new URLSearchParams(location.search);
-    var fresh = Number(params.get('fresh') || 0);
-    var now = Date.now();
-    var maxAgeMs = 10 * 60 * 1000;
-    var freshIsCurrent = Number.isFinite(fresh) && fresh > now - maxAgeMs && fresh < now + maxAgeMs;
-    if (!freshIsCurrent) {
-      params.set('fresh', String(now));
-      location.replace(location.pathname + '?' + params.toString() + location.hash);
-    }
-  }());
-</script>
 <link rel="preconnect" href="https://i.imgur.com">
 <link rel="dns-prefetch" href="//i.imgur.com">
 <link rel="preconnect" href="https://imgur.com">
@@ -282,7 +267,7 @@
         <label>Portrait-URL (optional)</label>
         <div class="comment-form-row">
           <input type="url" id="cf-portrait-url" placeholder="https://i.imgur.com/..." data-action="set-comment-portrait-url">
-          <img id="cf-portrait-preview" class="comment-portrait-preview" src="https://dieweltvonaleria.neocities.org/Animexx%20Seiten%20-%20Tempor%C3%A4r/AleriaAlmanach" alt="Vorschau">
+          <img id="cf-portrait-preview" class="comment-portrait-preview" alt="Vorschau">
         </div>
       </div>
     </div>
@@ -705,7 +690,7 @@
       <!-- Portrait links -->
       <div class="cp-info-portrait">
         <a id="cp-profile-link-anchor" class="cp-info-portrait-link" target="_blank" rel="noopener noreferrer" aria-disabled="true">
-          <img id="cp-portrait-img" src="https://dieweltvonaleria.neocities.org/Animexx%20Seiten%20-%20Tempor%C3%A4r/AleriaAlmanach" alt="Portrait" style="display:none">
+          <img id="cp-portrait-img" alt="Portrait" style="display:none">
           <div id="cp-portrait-placeholder" class="cp-info-portrait-placeholder">?</div>
         </a>
       </div>
@@ -759,7 +744,7 @@
         <div class="cp-section-title">Hauptportrait</div>
         <div class="cp-portrait-upload-area">
           <div class="cp-portrait-thumb">
-            <img id="cp-portrait-thumb-img" src="https://dieweltvonaleria.neocities.org/Animexx%20Seiten%20-%20Tempor%C3%A4r/AleriaAlmanach" alt="Portrait" style="display:none">
+            <img id="cp-portrait-thumb-img" alt="Portrait" style="display:none">
             <div id="cp-portrait-thumb-ph" class="cp-portrait-thumb-placeholder">?</div>
           </div>
           <div style="display:flex;flex-direction:column;gap:0.6rem;flex:1">
