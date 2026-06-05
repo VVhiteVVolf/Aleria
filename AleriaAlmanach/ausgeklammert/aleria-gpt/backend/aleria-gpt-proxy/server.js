@@ -75,6 +75,16 @@ function cleanText(value, maxLength) {
   return String(value || '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
 }
 
+function cleanOutputText(value, maxLength) {
+  return String(value || '')
+    .replace(/\r\n?/g, '\n')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+    .slice(0, maxLength);
+}
+
 function buildSystemPrompt() {
   return [
     'Du bist AleriaGPT, ein neutraler und sachlicher Gespraechs- und Analyseassistent fuer den Aleria Almanach.',
@@ -85,6 +95,7 @@ function buildSystemPrompt() {
     'Reagiere bei Kommentarfragen konkret auf Ton, Haltung, Sprecher, Reibungen, Zustimmung, Ablehnung und wiederkehrende Muster in den gelieferten Texten.',
     'Bei reiner Unterhaltung oder Bedienfragen darfst du kurz ohne Almanach-Deutung antworten.',
     'Antworte wie in einem normalen Chat, ausser der Nutzer verlangt ausdruecklich eine formale Analyse.',
+    'Nutze lesbare Formatierung: kurze Absaetze, bei mehreren Punkten einfache Listen mit "- ", und sparsame Hervorhebungen mit **fett**.',
     'Verwende keine Markdown-Trennlinien und keine Standardueberschriften wie "Kernaussage" oder "Belegte Beobachtungen", ausser der Nutzer fordert genau dieses Format.',
     'Trenne bei ausdruecklichen Analysen belegbare Beobachtung, Statistik und Interpretation.',
     'Erfinde keine Ereignisse, Figuren, Quellen oder Zitate.',
@@ -109,6 +120,7 @@ function buildUserPrompt(payload) {
     'Bei normalen Gespraechsfragen antworte kurz und natuerlich, als Chatantwort.',
     'Bei Kommentar- oder Szenenfragen nutze zuerst die gelieferten Kommentar- und Sprecherquellen.',
     'Erstelle nur dann eine formale Analyse mit Abschnitten, wenn die Frage das ausdruecklich verlangt.',
+    'Formatiere die Antwort mit echten Zeilenumbruechen, kurzen Absaetzen und einfachen Listen, wenn es mehr als zwei Punkte sind.',
     'Keine Quellenmarker, keine erfundenen inneren Motive, keine Deutung ueber den gelieferten Text hinaus.',
     'Schliesse mit Unsicherheiten oder fehlenden Daten nur dann, wenn es relevant ist.'
   ].join('\n');
@@ -159,7 +171,7 @@ async function callProvider(payload) {
       throw error;
     }
 
-    return cleanText(json?.choices?.[0]?.message?.content || '', 10000);
+    return cleanOutputText(json?.choices?.[0]?.message?.content || '', 10000);
   } finally {
     clearTimeout(timer);
   }

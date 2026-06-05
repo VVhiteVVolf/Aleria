@@ -202,8 +202,42 @@
   color: var(--ink);
   font-size: 0.86rem;
   line-height: 1.48;
-  white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+.speaker-profile-ai-message-text p {
+  margin: 0 0 0.55rem;
+}
+.speaker-profile-ai-message-text p:last-child,
+.speaker-profile-ai-message-text ul:last-child,
+.speaker-profile-ai-message-text ol:last-child {
+  margin-bottom: 0;
+}
+.speaker-profile-ai-message-text ul,
+.speaker-profile-ai-message-text ol {
+  margin: 0 0 0.55rem;
+  padding-left: 1.15rem;
+}
+.speaker-profile-ai-message-text li + li {
+  margin-top: 0.25rem;
+}
+.speaker-profile-ai-message-text strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.speaker-profile-ai-message-text code {
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.26);
+  color: var(--red-wax);
+  padding: 0 0.18rem;
+  font-size: 0.78rem;
+}
+.speaker-profile-ai-message-text h4 {
+  margin: 0 0 0.45rem;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .speaker-profile-ai-form {
   display: grid;

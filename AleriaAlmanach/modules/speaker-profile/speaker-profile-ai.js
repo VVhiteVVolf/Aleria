@@ -152,6 +152,7 @@ function buildSpeakerProfileAiCustomQuery(name, question) {
     `Beantworte diese Frage zu ${name} normal und direkt: ${String(question || '').trim()}`,
     'Nutze vor allem die direkten Kommentare/Sprechertexte dieser Figur.',
     'Antworte wie in einem Chat, nicht wie in einem Gutachten.',
+    'Nutze lesbare Formatierung: kurze Absaetze, einfache Listen mit "- " bei mehreren Punkten und sparsame Hervorhebungen mit **fett**.',
     'Nutze keine Quellenmarker und erfinde keine inneren Motive.',
     'Wenn die Kommentare die Frage nicht belegen, sage klar, was fehlt.'
   ].join('\n');
@@ -216,13 +217,60 @@ function addSpeakerProfileAiMessage(role, text) {
   renderSpeakerProfileAiMessages();
 }
 
+function escapeSpeakerProfileAiHtml(value) {
+  if (typeof escapeHtml === 'function') return escapeHtml(value);
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function renderSpeakerProfileAiInlineMarkdown(value) {
+  return escapeSpeakerProfileAiHtml(value)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+function renderSpeakerProfileAiFormattedText(value) {
+  const text = String(value || '').replace(/\r\n?/g, '\n').trim();
+  if (!text) return '';
+
+  return text.split(/\n{2,}/g).map(block => {
+    const lines = block.split('\n').map(line => line.trim()).filter(Boolean);
+    if (!lines.length) return '';
+
+    const bulletItems = lines
+      .map(line => line.match(/^[-*]\s+(.+)$/))
+      .filter(Boolean);
+    if (bulletItems.length === lines.length) {
+      return `<ul>${bulletItems.map(match => `<li>${renderSpeakerProfileAiInlineMarkdown(match[1])}</li>`).join('')}</ul>`;
+    }
+
+    const numberedItems = lines
+      .map(line => line.match(/^\d+[.)]\s+(.+)$/))
+      .filter(Boolean);
+    if (numberedItems.length === lines.length) {
+      return `<ol>${numberedItems.map(match => `<li>${renderSpeakerProfileAiInlineMarkdown(match[1])}</li>`).join('')}</ol>`;
+    }
+
+    const heading = lines.length === 1 ? lines[0].match(/^#{1,3}\s+(.+)$/) : null;
+    if (heading) {
+      return `<h4>${renderSpeakerProfileAiInlineMarkdown(heading[1])}</h4>`;
+    }
+
+    return `<p>${lines.map(renderSpeakerProfileAiInlineMarkdown).join('<br>')}</p>`;
+  }).filter(Boolean).join('');
+}
+
 function renderSpeakerProfileAiMessages() {
   const log = document.querySelector('[data-speaker-profile-ai-chat-log]');
   if (!log) return;
   log.innerHTML = _speakerProfileAiMessages.map(message => `
     <article class="speaker-profile-ai-message ${message.role}">
       <div class="speaker-profile-ai-message-role">${message.role === 'user' ? 'Du' : 'AleriaGPT'}</div>
-      <div class="speaker-profile-ai-message-text">${escapeHtml(message.text || '')}</div>
+      <div class="speaker-profile-ai-message-text">${renderSpeakerProfileAiFormattedText(message.text || '')}</div>
     </article>
   `).join('');
   log.scrollTop = log.scrollHeight;
