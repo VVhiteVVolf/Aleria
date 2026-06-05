@@ -45,6 +45,7 @@ function buildAleriaGptChatPayload(query, retrieval, options = {}) {
   return {
     schemaVersion: 1,
     query: String(query || '').trim(),
+    responseMode: String(options.responseMode || 'chat').trim() || 'chat',
     scope: options.scope || {},
     retrieval: {
       sourceHash: retrieval?.sourceHash || '',
@@ -117,4 +118,3 @@ window.AleriaGptClient = {
 };
 
 window.setAleriaGptBackendEndpoint = setAleriaGptBackendEndpoint;
-

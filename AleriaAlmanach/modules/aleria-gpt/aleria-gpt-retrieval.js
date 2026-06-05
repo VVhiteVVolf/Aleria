@@ -454,6 +454,7 @@ function buildAleriaGptPromptContext(retrieval) {
     '',
     'Regel: Nutze nur die folgenden Quellen. Trenne belegte Beobachtung und Interpretation.',
     'Wenn Kommentarquellen vorhanden sind, beziehe dich konkret auf die Sprechertexte und nicht nur auf allgemeine Moduldaten.',
+    'Die Nummern der Kontextbloecke sind interne Orientierung. Gib sie nicht als Quellenmarker aus.',
     ''
   ];
 

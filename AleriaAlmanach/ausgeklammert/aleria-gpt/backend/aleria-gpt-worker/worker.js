@@ -58,27 +58,32 @@ function buildSystemPrompt() {
     'Wenn der Kontext direkte Kommentare, Sprechertexte oder Szene-Dialoge enthaelt, haben diese Vorrang vor allgemeinen Moduldaten.',
     'Reagiere bei Kommentarfragen konkret auf Ton, Haltung, Sprecher, Reibungen, Zustimmung, Ablehnung und wiederkehrende Muster in den gelieferten Texten.',
     'Bei reiner Unterhaltung oder Bedienfragen darfst du kurz ohne Almanach-Deutung antworten.',
-    'Trenne bei Analysen belegbare Beobachtung, Statistik und Interpretation.',
+    'Antworte wie in einem normalen Chat, ausser der Nutzer verlangt ausdruecklich eine formale Analyse.',
+    'Verwende keine Markdown-Trennlinien und keine Standardueberschriften wie "Kernaussage" oder "Belegte Beobachtungen", ausser der Nutzer fordert genau dieses Format.',
+    'Trenne bei ausdruecklichen Analysen belegbare Beobachtung, Statistik und Interpretation.',
     'Erfinde keine Ereignisse, Figuren, Quellen oder Zitate.',
     'Wenn Daten fehlen, sage konkret, welche Daten fehlen.',
     'Bei Figurenanalysen formulierst du literarisch/rollenbezogen, nicht als medizinische Diagnose.',
-    'Nutze Quellenhinweise nur sparsam, wenn sie fuer die Antwort wirklich helfen.'
+    'Die Kontextnummern sind interne Marker. Gib keine Quellenmarker wie [1] aus, ausser der Nutzer fragt explizit nach Belegen.'
   ].join(' ');
 }
 
 function buildUserPrompt(payload) {
   const query = cleanText(payload?.query, 1200);
+  const responseMode = cleanText(payload?.responseMode, 80) || 'chat';
   const promptContext = String(payload?.retrieval?.promptContext || '').slice(0, 60000);
   return [
+    `Antwortmodus: ${responseMode}`,
     `Frage: ${query}`,
     '',
     promptContext,
     '',
     'Aufgabe:',
     'Beantworte die Frage direkt.',
-    'Bei normalen Gespraechsfragen antworte kurz und natuerlich.',
+    'Bei normalen Gespraechsfragen antworte kurz und natuerlich, als Chatantwort.',
     'Bei Kommentar- oder Szenenfragen nutze zuerst die gelieferten Kommentar- und Sprecherquellen.',
-    'Bei Analysefragen beginne mit einer kurzen Kernaussage, danach 3-6 belegte Beobachtungen.',
+    'Erstelle nur dann eine formale Analyse mit Abschnitten, wenn die Frage das ausdruecklich verlangt.',
+    'Keine Quellenmarker, keine erfundenen inneren Motive, keine Deutung ueber den gelieferten Text hinaus.',
     'Schliesse mit Unsicherheiten oder fehlenden Daten nur dann, wenn es relevant ist.'
   ].join('\n');
 }

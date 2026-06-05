@@ -109,7 +109,8 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
     'Weiterer Almanach-Kontext zu Figur, Modulen, Dialogen und Kommentaren:',
     broaderContext || 'Kein weiterer Almanach-Kontext verfuegbar.',
     '',
-    'Arbeitsregel: Wenn direkte Kommentare vorhanden sind, beziehe dich konkret auf deren Ton, Haltung, Reaktion und wiederkehrende Muster. Erfinde keine Ereignisse.'
+    'Arbeitsregel: Wenn direkte Kommentare vorhanden sind, beziehe dich konkret auf deren Ton, Haltung, Reaktion und wiederkehrende Muster. Erfinde keine Ereignisse.',
+    'Antworte normal und lesbar. Verwende keine Quellenmarker wie [1] und keine standardisierte Gutachtenform mit Kernaussage/Beobachtungen, ausser der Nutzer verlangt das ausdruecklich.'
   ].join('\n');
 
   return {
@@ -139,18 +140,19 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
 
 function buildSpeakerProfileAiSummaryQuery(name) {
   return [
-    `Erstelle eine kompakte literarische Sprecheranalyse zu ${name}.`,
-    'Fasse nicht nur Metadaten zusammen, sondern werte die direkten Kommentare aus.',
-    'Ermittle Ton, Stimmung, wiederkehrende Haltung, moegliche Strategie und Reaktion auf das aktuelle Geschehen.',
-    'Trenne sichere Beobachtungen von vorsichtigen Interpretationen.',
-    'Keine medizinische Diagnose und keine erfundenen Ereignisse.'
+    `Fasse kurz und normal zusammen, was in den direkten Texten von ${name} tatsaechlich erkennbar ist.`,
+    'Nutze keine Quellenmarker, keine Markdown-Trennlinien und keine Ueberschrift "Kernaussage".',
+    'Bleibe bei Ton, sichtbarer Haltung und auffaelligen Formulierungen. Keine tiefen psychologischen Deutungen.',
+    'Wenn das Material duenn oder uneindeutig ist, sage das klar.'
   ].join(' ');
 }
 
 function buildSpeakerProfileAiCustomQuery(name, question) {
   return [
-    `Beantworte diese Frage zu ${name}: ${String(question || '').trim()}`,
+    `Beantworte diese Frage zu ${name} normal und direkt: ${String(question || '').trim()}`,
     'Nutze vor allem die direkten Kommentare/Sprechertexte dieser Figur.',
+    'Antworte wie in einem Chat, nicht wie in einem Gutachten.',
+    'Nutze keine Quellenmarker und erfinde keine inneren Motive.',
     'Wenn die Kommentare die Frage nicht belegen, sage klar, was fehlt.'
   ].join('\n');
 }
@@ -244,11 +246,14 @@ async function requestSpeakerProfileAi(question, options = {}) {
   }
 
   updateSpeakerProfileAiBox('loading', 'AleriaGPT liest direkte Kommentare und aktuellen Almanach-Kontext...');
-  const broaderRetrieval = await buildSpeakerProfileAiBroaderContext(name, context);
+  const broaderRetrieval = options.includeBroaderContext
+    ? await buildSpeakerProfileAiBroaderContext(name, context)
+    : null;
   const retrieval = buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval);
   const response = await window.AleriaGptClient.sendChat(question, retrieval, {
     sourceLimit: 24,
-    timeoutMs: 45000
+    timeoutMs: 45000,
+    responseMode: options.responseMode || 'chat'
   });
 
   if (!response.ok || !response.text) {
@@ -278,7 +283,11 @@ async function generateSpeakerProfileAiSummary(context = {}) {
     return;
   }
 
-  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiSummaryQuery(name), { context: active });
+  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiSummaryQuery(name), {
+    context: active,
+    responseMode: 'summary',
+    includeBroaderContext: false
+  });
   if (!text) return;
   SPEAKER_PROFILE_AI_CACHE.set(cacheKey, text);
   addSpeakerProfileAiMessage('assistant', text);
@@ -290,6 +299,10 @@ async function submitSpeakerProfileAiChat(question) {
   const cleanQuestion = String(question || '').trim();
   if (!cleanQuestion) return;
   addSpeakerProfileAiMessage('user', cleanQuestion);
-  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiCustomQuery(name, cleanQuestion), { context: active });
+  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiCustomQuery(name, cleanQuestion), {
+    context: active,
+    responseMode: 'chat',
+    includeBroaderContext: false
+  });
   if (text) addSpeakerProfileAiMessage('assistant', text);
 }
