@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Das Große Bestiarium von Aleria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="hero" aria-label="Das Große Bestiarium von Aleria"></header>
+
+    <div class="shell">
+      <main class="content">
+        <section class="panel overview" id="uebersicht"></section>
+
+        <div class="toolbar" aria-label="Bestiarium Werkzeuge">
+          <input class="search" id="search" type="search" placeholder="Bestiarium durchsuchen..." aria-label="Bestiarium durchsuchen">
+          <div class="filters" id="filters" aria-label="Kategorie filtern"></div>
+        </div>
+
+        <div id="bestiary"></div>
+        <p class="empty" id="empty">Keine Einträge für diese Suche gefunden.</p>
+      </main>
+
+      <aside class="sidebar" aria-label="Seitennavigation">
+        <nav class="side-panel" aria-label="Inhaltsangabe">
+          <h3 id="tocTitle">Inhaltsangabe</h3>
+          <ul class="link-list" id="toc"></ul>
+        </nav>
+
+        <section class="side-panel">
+          <h3 id="themeLinksTitle">Infernale &amp; Celestiale Themen</h3>
+          <ul class="link-list editable-link-list" id="themeLinks" data-link-group="themes"></ul>
+        </section>
+
+        <section class="side-panel">
+          <h3 id="otherLinksTitle">Sonstige Themen</h3>
+          <ul class="link-list editable-link-list" id="otherLinks" data-link-group="other"></ul>
+        </section>
+
+        <section class="side-panel">
+          <h3 id="literatureLinksTitle">Literatur</h3>
+          <ul class="link-list editable-link-list" id="literatureLinks" data-link-group="literature"></ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer" id="footer"></footer>
+  </div>
+
+  <script src="bestiarium-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

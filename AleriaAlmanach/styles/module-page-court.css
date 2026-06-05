@@ -1,0 +1,623 @@
+.court-page {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  padding: clamp(18px, 2.8vw, 38px);
+  color: #22180f;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 235, 0.96), rgba(228, 206, 162, 0.82)),
+    var(--parchment-dark, #e9d5a3);
+  border: 1px solid rgba(93, 68, 42, 0.46);
+  box-shadow: inset 0 0 0 2px rgba(255, 246, 218, 0.38), 0 18px 38px rgba(28, 18, 10, 0.2);
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+.court-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--court-bg, none);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.court-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.court-header,
+.court-layout,
+.court-parties-panel,
+.court-bottom-grid,
+.court-note,
+.court-footer,
+.court-banner {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.court-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(93, 68, 42, 0.28);
+}
+
+.court-header-title {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+}
+
+.court-header-title span,
+.court-header-meta,
+.court-panel h3,
+.court-summary h3,
+.court-note h3,
+.court-footer {
+  font-family: "Cinzel", Georgia, serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.court-header-title span {
+  display: block;
+  color: #74532d;
+  font-size: 0.72rem;
+}
+
+.court-header-title h2 {
+  margin: 2px 0 0;
+  color: #15100b;
+  font: clamp(2rem, 4vw, 4.1rem) "Cinzel", Georgia, serif;
+  line-height: 0.98;
+}
+
+.court-header-title p {
+  margin: 8px 0 0;
+  color: #49341f;
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  font-style: italic;
+}
+
+.court-header-icon,
+.court-header-icon.placeholder {
+  width: 58px;
+  height: 58px;
+}
+
+.court-header-icon,
+.court-header-meta img,
+.court-row-icon,
+.court-date-icon,
+.court-evidence-icon,
+.court-question-icon,
+.court-related-icon {
+  object-fit: contain;
+}
+
+.court-header-icon.placeholder,
+.court-row-icon.placeholder,
+.court-date-icon.placeholder,
+.court-evidence-icon.placeholder,
+.court-question-icon.placeholder,
+.court-related-icon.placeholder,
+.court-party-portrait.placeholder,
+.court-witness-portrait.placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(93, 68, 42, 0.34);
+  background: rgba(255, 249, 229, 0.62);
+  color: #79562a;
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.court-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #4f3921;
+  font-size: 0.66rem;
+  text-align: right;
+}
+
+.court-header-meta strong,
+.court-header-meta span,
+.court-header-meta em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid rgba(93, 68, 42, 0.28);
+  background: rgba(255, 247, 223, 0.52);
+  font-style: normal;
+}
+
+.court-header-meta em {
+  color: #6f251f;
+}
+
+.court-header-meta img {
+  width: 54px;
+  height: 54px;
+}
+
+.court-banner {
+  display: block;
+  width: min(180px, 22vw);
+  max-height: 190px;
+  margin-top: 18px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 16px rgba(54, 31, 10, 0.2));
+}
+
+.court-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: clamp(16px, 2vw, 28px);
+  align-items: start;
+  margin-top: clamp(18px, 2.5vw, 30px);
+}
+
+.court-main,
+.court-side {
+  display: grid;
+  gap: 14px;
+}
+
+.court-panel,
+.court-summary,
+.court-note,
+.court-footer {
+  border: 1px solid rgba(93, 68, 42, 0.25);
+  background: rgba(255, 249, 230, 0.52);
+  box-shadow: inset 0 0 18px rgba(90, 63, 34, 0.06);
+}
+
+.court-panel,
+.court-summary,
+.court-note {
+  padding: clamp(13px, 1.6vw, 20px);
+}
+
+.court-panel h3,
+.court-summary h3,
+.court-note h3 {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(93, 68, 42, 0.2);
+  color: #261b11;
+  font-size: 1.02rem;
+}
+
+.court-summary {
+  color: #24180f;
+  font-size: 1.06rem;
+  line-height: 1.62;
+}
+
+.court-summary p,
+.court-note p,
+.court-charge-card p,
+.court-date-row p,
+.court-party-card p,
+.court-evidence-row p,
+.court-witness-row p,
+.court-timeline-row p,
+.court-question-row p {
+  margin: 0;
+}
+
+.court-hero-image {
+  margin: 0;
+  overflow: hidden;
+  border: 3px double rgba(93, 68, 42, 0.62);
+  background: rgba(255, 247, 222, 0.42);
+  box-shadow: 0 14px 26px rgba(41, 27, 13, 0.18);
+  aspect-ratio: 16 / 9;
+}
+
+.court-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.court-overview-list,
+.court-date-list,
+.court-evidence-list,
+.court-witness-list,
+.court-timeline,
+.court-question-list,
+.court-related-list {
+  display: grid;
+  gap: 0;
+}
+
+.court-overview-row,
+.court-date-row,
+.court-evidence-row,
+.court-witness-row,
+.court-timeline-row,
+.court-question-row,
+.court-related-row,
+.court-charge-card,
+.court-party-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(button).court-overview-row,
+:where(button).court-charge-card,
+:where(button).court-date-row,
+:where(button).court-evidence-row,
+:where(button).court-witness-row,
+:where(button).court-party-card,
+:where(button).court-timeline-row,
+:where(button).court-question-row,
+:where(button).court-related-row {
+  width: 100%;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.court-overview-row {
+  display: grid;
+  grid-template-columns: 28px minmax(110px, 0.38fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(93, 68, 42, 0.13);
+}
+
+.court-overview-row span,
+.court-date-row span,
+.court-evidence-meta span,
+.court-witness-status span,
+.court-related-row span,
+.court-party-card em {
+  color: #70512f;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.court-overview-row strong {
+  color: #24180f;
+  font-weight: 600;
+}
+
+.court-row-icon,
+.court-date-icon,
+.court-evidence-icon,
+.court-question-icon,
+.court-related-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.court-charge-list {
+  display: grid;
+  gap: 8px;
+}
+
+.court-charge-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  padding: 11px;
+  border: 1px solid rgba(93, 68, 42, 0.18);
+  background: rgba(255, 248, 225, 0.42);
+}
+
+.court-charge-number {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #4e3217;
+  color: #f6dfaa;
+  font: 0.92rem "Cinzel", Georgia, serif;
+}
+
+.court-charge-card strong,
+.court-party-card strong,
+.court-evidence-row strong,
+.court-witness-row strong,
+.court-timeline-row strong,
+.court-related-row strong {
+  display: block;
+  color: #21170e;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.86rem;
+  line-height: 1.25;
+}
+
+.court-charge-card p,
+.court-date-row p,
+.court-party-card p,
+.court-evidence-row p,
+.court-witness-row p,
+.court-timeline-row p,
+.court-question-row p {
+  color: #2f2114;
+  line-height: 1.42;
+}
+
+.court-date-row,
+.court-evidence-row,
+.court-witness-row,
+.court-timeline-row,
+.court-question-row,
+.court-related-row {
+  display: grid;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(93, 68, 42, 0.13);
+}
+
+.court-date-row {
+  grid-template-columns: 30px minmax(0, 1fr);
+}
+
+.court-date-row strong {
+  display: block;
+  margin: 2px 0 3px;
+  color: #281b10;
+}
+
+.court-evidence-row {
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.court-evidence-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.court-evidence-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.court-evidence-meta span,
+.court-witness-status span,
+.court-witness-status em,
+.court-question-row > span {
+  border: 1px solid rgba(93, 68, 42, 0.2);
+  background: rgba(255, 247, 221, 0.48);
+  padding: 2px 7px;
+  font-style: normal;
+}
+
+.court-evidence-row time,
+.court-timeline-row time {
+  color: #624726;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.64rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.court-witness-row {
+  grid-template-columns: 46px minmax(0, 1fr) minmax(90px, auto);
+  align-items: start;
+}
+
+.court-witness-portrait,
+.court-party-portrait {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(93, 68, 42, 0.34);
+}
+
+.court-witness-main span,
+.court-party-card span {
+  display: block;
+  color: #5b4126;
+  font-style: italic;
+}
+
+.court-witness-status {
+  display: grid;
+  justify-items: end;
+  gap: 5px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.58rem;
+  text-align: right;
+}
+
+.court-parties-panel {
+  margin-top: 16px;
+}
+
+.court-party-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.court-party-card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(93, 68, 42, 0.18);
+  background: rgba(255, 248, 225, 0.42);
+}
+
+.court-party-portrait {
+  width: 54px;
+  height: 54px;
+}
+
+.court-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(250px, 0.75fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.court-timeline-row {
+  grid-template-columns: minmax(90px, auto) minmax(0, 1fr);
+}
+
+.court-timeline-row time {
+  text-align: left;
+}
+
+.court-question-row {
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.court-related-row {
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+}
+
+.court-note {
+  margin-top: 14px;
+  line-height: 1.58;
+}
+
+.court-footer {
+  margin-top: 14px;
+  padding: 11px 14px;
+  color: #70512f;
+  font-size: 0.66rem;
+  text-align: center;
+}
+
+.court-edit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.court-edit-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)) auto;
+  gap: 0.45rem;
+  align-items: start;
+  border: 1px solid rgba(93, 68, 42, 0.18);
+  background: rgba(255, 255, 255, 0.16);
+  padding: 0.5rem;
+}
+
+.court-edit-row textarea {
+  min-height: 68px;
+}
+
+.module-court-evidence-row,
+.module-court-witness-row,
+.module-court-party-row {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)) auto;
+}
+
+.court-overview-row[href]:hover,
+.court-charge-card[href]:hover,
+.court-date-row[href]:hover,
+.court-evidence-row[href]:hover,
+.court-witness-row[href]:hover,
+.court-party-card[href]:hover,
+.court-timeline-row[href]:hover,
+.court-question-row[href]:hover,
+.court-related-row[href]:hover,
+:where(button).court-overview-row:hover,
+:where(button).court-charge-card:hover,
+:where(button).court-date-row:hover,
+:where(button).court-evidence-row:hover,
+:where(button).court-witness-row:hover,
+:where(button).court-party-card:hover,
+:where(button).court-timeline-row:hover,
+:where(button).court-question-row:hover,
+:where(button).court-related-row:hover {
+  background: rgba(126, 91, 48, 0.08);
+}
+
+@media (max-width: 900px) {
+  .court-header,
+  .court-layout,
+  .court-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .court-header {
+    display: grid;
+  }
+
+  .court-header-meta {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .court-side {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .court-page {
+    padding: 14px;
+  }
+
+  .court-header-title {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .court-header-icon,
+  .court-header-icon.placeholder {
+    width: 44px;
+    height: 44px;
+  }
+
+  .court-header-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .court-overview-row,
+  .court-evidence-row,
+  .court-witness-row,
+  .court-timeline-row,
+  .court-question-row {
+    grid-template-columns: 1fr;
+  }
+
+  .court-evidence-row time,
+  .court-witness-status {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .court-party-card {
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+}

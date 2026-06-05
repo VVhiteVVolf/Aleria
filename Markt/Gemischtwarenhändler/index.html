@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Gemischtwarenhändler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/gemischtwaren.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-icon">
+        <img src="https://i.imgur.com/UbjFi5T.png" alt="Zeichen des Gemischtwarenhändlers">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Ausrüstung, Werkzeug, Proviant &amp; Kleinkram</p>
+        <h1>Der Gemischtwarenhändler</h1>
+        <p>Ein Markt für Dinge, die man erst vermisst, wenn man sie nicht dabei hat: Seil, Licht, Beutel, Rationen, Schreibzeug, Nadel und Faden.</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Inhalt">
+      <a href="#einleitung">Einleitung</a>
+      <a href="#markt">Markt</a>
+      <a href="#einkauf">Einkaufsliste</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+
+    <section class="intro-grid" id="einleitung">
+      <article>
+        <h2>Einleitung</h2>
+        <p>Diese Seite dient als Orientierung für Gemischtwarenläden, Marktstände, Handelswagen und kleine Verkaufsräume in Dörfern und Städten.</p>
+      </article>
+      <article id="markt">
+        <h2>Markt</h2>
+        <p>Die Waren sind gewöhnlich, aber entscheidend: einfache Ausrüstung, Lichtquellen, Schreibmaterial, Hygieneartikel, Kleidung, Proviant und Handwerkskram.</p>
+      </article>
+      <article>
+        <h2>Währung</h2>
+        <p>Die Preise werden in Kupfertalern geführt. 10 Silbertaler entsprechen 1.000 Kupfertalern und einem Goldtaler.</p>
+      </article>
+    </section>
+
+    <section class="controls" id="einkauf">
+      <div class="search">
+        <label for="q">Suche</label>
+        <input id="q" type="search" placeholder="Name, Kategorie, Beschreibung, Tag ..." autocomplete="off">
+      </div>
+      <div class="chips" id="categoryChips"></div>
+      <div class="ranges">
+        <label>Preis bis <input id="maxPrice" type="number" min="0" placeholder="Kupfer"></label>
+      </div>
+      <div class="status-row">
+        <span id="status"></span>
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="inventory">
+      <div class="section-title">
+        <h2>Einkaufsliste</h2>
+        <p>Alltägliche Waren, schlicht untereinander gelistet. Preisangaben erfolgen in Kupfertalern.</p>
+      </div>
+      <div id="itemList" class="item-list"></div>
+    </section>
+
+    <section class="trivia" id="trivia">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Gemischtwarenhändler verkaufen selten Ruhm, aber oft genau das, was Ruhm möglich macht.</li>
+        <li>Ein billiges Seil ist günstig, bis jemand daran hängt.</li>
+        <li>Die besten Läden erkennt man daran, dass sie auch Nägel, Salz und Gerüchte führen.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="data/goods-data.js"></script>
+  <script src="scripts/gemischtwaren.js"></script>
+</body>
+</html>

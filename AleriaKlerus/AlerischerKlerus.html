@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Rüstkammer der Neun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/klerus.css">
+</head>
+<body>
+  <div class="sidebar" id="godList"></div>
+
+  <div class="main-stage">
+    <div class="top-bar">
+      <div class="mode-switch" id="modeSwitch">
+        <button class="mode-btn active" data-mode="priest" type="button">Priester &amp; Klerus</button>
+        <button class="mode-btn" data-mode="paladin" type="button">Paladine &amp; Orden</button>
+        <button class="mode-btn" data-mode="monk" type="button">Mönche &amp; Nonnen</button>
+        <button class="mode-btn" data-mode="gelauterte" type="button">Geläuterte</button>
+      </div>
+
+      <div class="mode-explainer" id="modeExplainer">
+        <div class="mode-explainer-inner">
+          <div class="mode-explainer-head">
+            <span class="mode-explainer-kicker">Was ist das?</span>
+            <span class="mode-explainer-mode" id="modeExplainerMode"></span>
+          </div>
+          <div class="mode-explainer-text" id="modeExplainerText"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage-grid">
+      <div class="content-shell">
+        <div class="content-container" id="contentArea">
+          <div class="info-panel">
+            <h1 class="god-title-main" id="godName"></h1>
+            <span class="god-subtitle" id="godTitle"></span>
+            <div class="color-palette" id="paletteBox"></div>
+
+            <div class="lore-text">
+              <div class="gear-head">
+                <h3 id="gearTitle"></h3>
+                <p class="mini-note" id="modeLabel"></p>
+              </div>
+              <p id="gearDesc"></p>
+              <div class="tag-row hidden" id="tagRow"></div>
+            </div>
+          </div>
+
+          <div class="image-frame">
+            <img id="charImage" class="character-img" alt="Klerus-Darstellung" decoding="async" fetchpriority="high">
+            <div class="img-caption" id="imgCaption">400×600</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="right-panel">
+        <div class="panel-top">
+          <h3 id="panelTitle">Wissenswertes</h3>
+          <div class="panel-tabbar" role="tablist" aria-label="Rechts-Panel">
+            <button class="panel-tab active" data-panel="info" type="button">Wissenswertes</button>
+            <button class="panel-tab" data-panel="hierarchy" type="button">Hierarchie</button>
+          </div>
+        </div>
+
+        <div id="panelInfo">
+          <table class="info-table">
+            <tbody>
+              <tr><td>Gottheit</td><td id="infoGod"></td></tr>
+              <tr><td>Titel</td><td id="infoTitle"></td></tr>
+              <tr><td>Symbol</td><td id="infoSymbol"></td></tr>
+              <tr><td>Merkmale</td><td id="infoTraits"></td></tr>
+              <tr><td>3 Tugenden</td><td id="infoVirtues"></td></tr>
+              <tr><td>Zielgruppe</td><td id="infoAudience"></td></tr>
+              <tr><td>Schirmherr</td><td id="infoPatron"></td></tr>
+              <tr><td>Zünfte</td><td id="infoGuilds"></td></tr>
+            </tbody>
+          </table>
+
+          <div class="right-note">
+            Bilder sind 400×600 und liegen in <b>BilderRüstungen/</b> als PNG:
+            <b>maldras_priest.png</b>, <b>maldras_paladin.png</b>, <b>maldras_monk.png</b> usw.
+          </div>
+        </div>
+
+        <div id="panelHierarchy" style="display: none;">
+          <div class="hierarchy-wrap">
+            <div class="hierarchy-title" id="hierarchyTitle"></div>
+            <div class="hierarchy-list" id="hierarchyList"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="data/klerus-data.js"></script>
+  <script src="scripts/klerus.js"></script>
+</body>
+</html>

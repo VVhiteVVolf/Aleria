@@ -1,0 +1,81 @@
+﻿/* Aleria Almanach - image crop dialog styles. Extracted from styles.css. */
+
+  /* ── CROP DIALOG ── */
+  #crop-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(60,35,10,0.88); z-index: 5000;
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  #crop-overlay.active { display: flex; }
+  .crop-card {
+    background: var(--parchment-dark);
+    border: 2px solid var(--gold);
+    box-shadow: 0 16px 60px rgba(0,0,0,0.9);
+    width: min(560px, calc(100vw - 40px));
+    display: flex; flex-direction: column;
+    gap: 0; overflow: hidden;
+    animation: modalIn 0.25s ease;
+  }
+  .crop-header {
+    background: var(--ink); padding: 8px 16px;
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; color: var(--gold-light);
+    text-transform: uppercase; border-bottom: 1px solid var(--gold);
+    flex-shrink: 0;
+  }
+  .crop-viewport {
+    position: relative;
+    width: 100%;
+    background: var(--parchment-deeper);
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+  }
+  .crop-viewport.grabbing { cursor: grabbing; }
+  .crop-viewport canvas {
+    display: block; width: 100%; pointer-events: none;
+  }
+  /* The crop frame overlay */
+  .crop-frame {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+  .crop-controls {
+    padding: 0.8rem 1.2rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+    background: var(--parchment);
+    border-top: 1px solid var(--parchment-deeper);
+  }
+  .crop-zoom-row {
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .crop-zoom-label {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;
+    min-width: 50px;
+  }
+  .crop-zoom-slider {
+    flex: 1; accent-color: var(--gold);
+  }
+  .crop-ratio-row {
+    display: flex; gap: 0.5rem; align-items: center;
+  }
+  .crop-ratio-label {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;
+    min-width: 50px;
+  }
+  .crop-ratio-btn {
+    background: var(--parchment-dark); border: 1px solid var(--parchment-deeper);
+    color: var(--ink); font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.08em;
+    padding: 4px 10px; cursor: pointer; transition: all 0.15s;
+  }
+  .crop-ratio-btn.active { background: var(--ink); color: var(--gold); border-color: var(--gold); }
+  .crop-actions {
+    padding: 0.7rem 1.2rem;
+    display: flex; gap: 0.6rem; justify-content: flex-end;
+    background: var(--parchment); border-top: 1px solid var(--parchment-deeper);
+  }
+
+

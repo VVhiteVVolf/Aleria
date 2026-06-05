@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Schwarzmarkt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/schwarzmarkt.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-icon">
+        <img src="https://i.imgur.com/DVdaKdb.png" alt="Schwarzmarkt Symbol">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Illegale Waren, geheime Kontakte &amp; verbotene Reliquien</p>
+        <h1>Der Schwarzmarkt</h1>
+        <p>Ein Markt für Eingeweihte, die dunkle Waren suchen: Drogen, verdorbene Artefakte, verbotene Zauberrollen und andere Gilden-offene Güter.</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Inhalt">
+      <a href="#einleitung">Einleitung</a>
+      <a href="#markt">Markt</a>
+      <a href="#einkauf">Einkaufsliste</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+
+    <section class="intro-grid" id="einleitung">
+      <article>
+        <h2>Einleitung</h2>
+        <p>Auf dem Schwarzmarkt findet man derlei Dinge, an die man unter normalen Umständen niemals kommen würde.</p>
+      </article>
+      <article id="markt">
+        <h2>Markt</h2>
+        <p>Sei es die Diebesgilde, das Syndikat oder direkt der Schwarze Krug, Kriminelle und Schurken finden hier alles, was sie begehren und mehr.</p>
+      </article>
+      <article>
+        <h2>Währung</h2>
+        <p>Gerechnet wird der Übersicht halber in <b>ST.</b> 10 Silbertaler entsprechen 1.000 Kupfertalern und einem Goldtaler. Mit der Zahlmünze lässt sich der Goldpreis umgehen.</p>
+      </article>
+    </section>
+
+    <section class="controls" id="einkauf">
+      <div class="search">
+        <label for="q">Suche</label>
+        <input id="q" type="search" placeholder="Name, Kategorie, Effekt, Beschreibung ..." autocomplete="off">
+      </div>
+      <div class="chips" id="categoryChips"></div>
+      <div class="ranges">
+        <label>Preis bis <input id="maxPrice" type="number" min="0" placeholder="Kupfer"></label>
+        <label>Risiko ab <input id="minRisk" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Gefahr ab <input id="minDanger" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Magie ab <input id="minMagic" type="number" min="1" max="10" placeholder="1-10"></label>
+      </div>
+      <div class="status-row">
+        <span id="status"></span>
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="inventory">
+      <div class="section-title">
+        <h2>Einkaufsliste</h2>
+        <p>Jede Ware besitzt ein dunkles Profil: Gefahr, Verbot, Magie, Nutzen, Seltenheit und Risiko. Nicht alles, was mächtig ist, ist sicher.</p>
+      </div>
+      <div id="itemList" class="item-list"></div>
+    </section>
+
+    <section class="trivia" id="trivia">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Auf dem Schwarzmarkt zählen Kontakte, Tokens und Geheimnisse oft mehr als Gold.</li>
+        <li>Viele verbotene Gegenstände existieren nur als Kopie oder als Gerücht.</li>
+        <li>Einige Waren können nur mit einer Zahlmünze eingelöst werden.</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="compare-bar" id="compareBar">
+    <span>Vergleich</span>
+    <div id="compareSlots"></div>
+    <button id="compareBtn" type="button" disabled>Vergleichen</button>
+    <button id="clearCompareBtn" type="button">Leeren</button>
+  </aside>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Schließen">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div class="modal" id="compareModal" aria-hidden="true">
+    <article class="modal-card compare-modal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+      <button class="modal-close" id="compareClose" type="button" aria-label="Schließen">×</button>
+      <div id="compareContent"></div>
+    </article>
+  </div>
+
+  <script src="data/blackmarket-data.js"></script>
+  <script src="scripts/schwarzmarkt.js"></script>
+</body>
+</html>

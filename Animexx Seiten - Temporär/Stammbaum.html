@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Dynastieplaner</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ══════════════ TOKENS ══════════════ */
+:root{
+  --bg:#c9bc98; --bg2:#bdb08a; --bg3:#d4c9a8;
+  --ink:#1a1206; --ink2:#4a3820; --ink3:#8a7050;
+  --gold:#c8a838; --gold2:#e8c868;
+  --panel:#ede2c2; --pbdr:#b8a870;
+  --core-bg:#b02020;   --core-bdr:#781010;   --core-txt:#fff5ee;
+  --married-bg:#286820;--married-bdr:#164010; --married-txt:#f0fff0;
+  --bastard-bg:#646464;--bastard-bdr:#404040; --bastard-txt:#fff;
+  --affair-bg:#682090; --affair-bdr:#441060;  --affair-txt:#f8f0ff;
+  --forced-bg:#a84810; --forced-bdr:#703008;  --forced-txt:#fff4ee;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;font-family:'EB Garamond',Georgia,serif;background:var(--bg);color:var(--ink)}
+body{display:flex;flex-direction:column}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.062'/%3E%3C/svg%3E")}
+
+/* ══════════════ TOPBAR ══════════════ */
+#topbar{position:relative;z-index:300;background:linear-gradient(180deg,#100c02,#1e1408);
+  border-bottom:2px solid #781010;padding:6px 14px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+.hblock{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.hcrest{width:34px;height:34px;object-fit:contain;filter:drop-shadow(0 0 5px rgba(200,168,40,.5))}
+.hname{font-family:'Cinzel',serif;font-size:1.05em;font-weight:900;color:var(--gold2);
+  letter-spacing:3px;cursor:pointer;text-shadow:0 1px 3px rgba(0,0,0,.6);white-space:nowrap}
+.hname input{background:transparent;border:none;border-bottom:1px solid #7a6030;color:var(--gold2);
+  font-family:'Cinzel',serif;font-size:1em;font-weight:900;letter-spacing:3px;outline:none;width:200px}
+.hmotto{font-style:italic;color:#b09050;font-size:.76em;cursor:pointer;white-space:nowrap}
+.hmotto input{background:transparent;border:none;border-bottom:1px solid #4a3010;color:#b09050;
+  font-style:italic;font-size:1em;outline:none;width:170px;font-family:'EB Garamond',serif}
+.legend{display:flex;gap:6px;align-items:center;flex-wrap:wrap;flex:1;justify-content:center}
+.li{display:flex;align-items:center;gap:3px;font-size:.58em;color:#a09060;font-family:'Cinzel',serif;letter-spacing:.3px}
+.lsw{width:22px;height:12px;border-radius:1px;border:1px solid rgba(0,0,0,.25);flex-shrink:0}
+.tbx{display:flex;gap:3px;align-items:center;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.tb{font-family:'Cinzel',serif;font-size:.54em;letter-spacing:.8px;padding:4px 8px;
+  border:1px solid #7a6030;background:transparent;color:var(--gold);cursor:pointer;
+  transition:all .18s;text-transform:uppercase;white-space:nowrap}
+.tb:hover{background:#7a6030;color:#100c02}
+.tb.p{border-color:var(--gold);color:var(--gold2)}
+.tb.p:hover{background:var(--gold);color:#100c02}
+.tb.undo{border-color:#4a6030;color:#a0c878}
+.tb.undo:hover{background:#4a6030;color:#100c02}
+/* search */
+#searchbox{display:flex;align-items:center;gap:4px;background:rgba(0,0,0,.25);
+  border:1px solid #4a3820;padding:2px 7px}
+#searchbox input{background:transparent;border:none;color:var(--gold2);font-family:'EB Garamond',serif;
+  font-size:.78em;outline:none;width:120px}
+#searchbox input::placeholder{color:#7a6030}
+#search-clear{background:none;border:none;color:#7a6030;cursor:pointer;font-size:.8em;line-height:1}
+#search-clear:hover{color:var(--gold2)}
+
+/* ══════════════ MAIN ══════════════ */
+#main{display:flex;flex:1;overflow:hidden;position:relative;z-index:1}
+#scroll{flex:1;overflow:auto;position:relative}
+#scroll::-webkit-scrollbar{width:8px;height:8px}
+#scroll::-webkit-scrollbar-track{background:rgba(0,0,0,.08)}
+#scroll::-webkit-scrollbar-thumb{background:rgba(90,72,32,.35);border-radius:4px}
+
+/* ══════════════ TREE — CK3 style ══════════════ */
+#tree{
+  position:relative;padding:60px 80px 120px;
+  min-width:max-content;min-height:100%;
+  display:flex;flex-direction:column;align-items:center;
+}
+#svg{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:visible}
+
+/* generation ruler */
+.gen-ruler{
+  position:absolute;left:8px;
+  font-family:'Cinzel',serif;font-size:.44em;letter-spacing:2px;
+  color:rgba(30,20,8,.25);white-space:nowrap;
+  border-left:1px solid rgba(30,20,8,.12);padding-left:5px;
+}
+
+/* ── Couple node ── */
+.tnode{display:flex;flex-direction:column;align-items:center;position:relative}
+.thead{display:flex;flex-direction:row;align-items:center;gap:0;position:relative}
+.tconn{width:2px;background:rgba(90,72,32,.3);flex-shrink:0;min-height:40px;align-self:center}
+.tchildren{display:flex;flex-direction:row;align-items:flex-start;gap:20px;position:relative}
+
+/* ── Partner tie — simple horizontal line with ♥ ── */
+.ptie{
+  display:flex;flex-direction:row;align-items:center;
+  padding:0 4px;gap:3px;flex-shrink:0;
+  margin-top:0; /* cells are same height now */
+}
+.ptie-line{height:2px;width:18px;flex-shrink:0}
+.ptie-icon{font-size:.62em;color:var(--ink3);line-height:1}
+
+/* ── Collapse toggle ── */
+.chtog{
+  font-family:'Cinzel',serif;font-size:.44em;letter-spacing:.8px;
+  padding:2px 8px;border:1px solid var(--pbdr);background:var(--panel);
+  color:var(--ink2);cursor:pointer;white-space:nowrap;margin:4px 0;
+  transition:all .14s;
+}
+.chtog:hover{background:var(--bg2)}
+
+/* ── Reorder arrows ── */
+.reorder-arrows{
+  display:flex;gap:2px;margin-top:3px;justify-content:center;
+  opacity:0;transition:opacity .15s;
+}
+.child-wrap:hover>.reorder-arrows{ opacity:1; }
+.child-wrap{display:flex;flex-direction:column;align-items:center;position:relative}
+.rarr{
+  font-size:.5em;padding:1px 5px;
+  border:1px solid var(--pbdr);background:var(--panel);color:var(--ink2);
+  cursor:pointer;font-family:'Cinzel',serif;line-height:1.5;
+  transition:all .12s;white-space:nowrap;
+}
+.rarr:hover{background:var(--bg2);border-color:var(--core-bdr);color:var(--core-bg)}
+
+/* crest top */
+#crest-top{display:flex;flex-direction:column;align-items:center;margin-bottom:0}
+#crest-top img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.42))}
+#crest-top .clabel2{font-family:'Cinzel',serif;font-size:.46em;letter-spacing:2.5px;color:var(--ink2);margin-top:3px}
+#crest-top .stemline{width:2px;height:28px;background:rgba(90,72,32,.28);margin-top:4px}
+
+/* ══════════════ CELL — CK3-style compact label ══════════════ */
+/*
+  CK3 layout:
+    ┌─────────────────────┐
+    │ [portrait]  NAME    │  ← portrait only if set; name always
+    │             † 1620  │  ← dates small below name
+    └─────────────────────┘
+  Colour = lineType (red=core, green=married, grey=bastard, etc.)
+  Width: fixed, compact. No giant portrait zone.
+*/
+
+.cell{
+  display:flex;flex-direction:row;align-items:center;
+  cursor:pointer;user-select:none;position:relative;
+  width:130px;min-height:36px;
+  border:2px solid var(--c-bdr);
+  background:var(--c-bg);
+  transition:filter .14s, transform .1s;
+  flex-shrink:0;
+  gap:0;
+}
+.cell:hover{ filter:brightness(1.15); transform:translateY(-1px); }
+.cell.sel{
+  outline:2.5px solid var(--gold2);
+  outline-offset:1px;
+  filter:brightness(1.1);
+}
+.cell.highlight{ outline:2.5px solid #78c8f8; outline-offset:1px; }
+
+/* ── Portrait thumbnail (only shown when portrait set) ── */
+.cport{
+  width:34px;height:34px;flex-shrink:0;
+  overflow:hidden;display:none; /* hidden by default */
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,.25);border-right:1px solid rgba(0,0,0,.2);
+}
+.cell.has-portrait .cport{ display:flex; }
+.cport img{ width:100%;height:100%;object-fit:cover; }
+
+/* ── Text block ── */
+.ctext{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:4px 6px;flex:1;min-width:0;
+}
+.clbl{
+  font-family:'Cinzel',serif;font-size:.6em;font-weight:700;letter-spacing:.6px;
+  color:var(--c-txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  line-height:1.3;
+}
+.clbl.dead::before{ content:'† '; opacity:.8; }
+.cdates{
+  font-family:'EB Garamond',serif;font-size:.56em;
+  color:var(--c-txt);opacity:.7;white-space:nowrap;
+  line-height:1.2;margin-top:1px;
+}
+/* rank indicator: small coloured dot on top-right corner */
+.crank-dot{
+  position:absolute;top:3px;right:3px;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);opacity:.85;
+  display:none;
+}
+.cell.imp .crank-dot{ display:block; }
+
+/* ── lineType colour themes ── */
+.lt-core   { --c-bg:var(--core-bg);    --c-bdr:var(--core-bdr);    --c-txt:var(--core-txt); }
+.lt-married{ --c-bg:var(--married-bg); --c-bdr:var(--married-bdr); --c-txt:var(--married-txt); }
+.lt-bastard{ --c-bg:var(--bastard-bg); --c-bdr:var(--bastard-bdr); --c-txt:var(--bastard-txt); }
+.lt-affair { --c-bg:var(--affair-bg);  --c-bdr:var(--affair-bdr);  --c-txt:var(--affair-txt); }
+.lt-forced { --c-bg:var(--forced-bg);  --c-bdr:var(--forced-bdr);  --c-txt:var(--forced-txt); }
+
+/* Couple ID badge below pair */
+.cid-badge{
+  font-family:'Cinzel',serif;font-size:.42em;letter-spacing:1.5px;
+  color:var(--ink3);text-align:center;margin-top:4px;opacity:.45;
+}
+
+/* ══════════════ PANEL ══════════════ */
+#panel{width:268px;flex-shrink:0;background:var(--panel);border-left:2px solid var(--pbdr);
+  display:flex;flex-direction:column;position:relative;z-index:200;transition:margin-right .28s}
+#panel.hide{margin-right:-270px}
+.ptabs{display:flex;border-bottom:1px solid var(--pbdr);flex-shrink:0;background:var(--bg2)}
+.ptab{flex:1;padding:7px 3px;text-align:center;font-family:'Cinzel',serif;font-size:.5em;
+  letter-spacing:1.2px;color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;
+  transition:all .18s;text-transform:uppercase}
+.ptab.on{color:var(--core-bg);border-bottom-color:var(--core-bg);background:var(--panel)}
+.psc{flex:1;overflow-y:auto;overflow-x:hidden}
+.psc::-webkit-scrollbar{width:4px}
+.psc::-webkit-scrollbar-thumb{background:var(--bg2)}
+
+.dport{height:72px;background:var(--bg2);display:flex;align-items:center;justify-content:center;
+  position:relative;border-bottom:1px solid var(--pbdr);overflow:hidden;flex-shrink:0}
+.dport img.sil{height:48px;object-fit:contain;opacity:.6}
+.dport img.por{width:100%;height:100%;object-fit:cover;opacity:.88}
+.dno{position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(0deg,rgba(190,176,140,.97) 38%,transparent);padding:6px 10px 4px}
+.did{font-family:'Cinzel',serif;font-size:.5em;color:var(--ink2);letter-spacing:2px}
+.dname{font-family:'Cinzel',serif;font-size:.82em;font-weight:700;color:var(--ink)}
+
+.psec{padding:7px 10px;border-bottom:1px solid var(--pbdr)}
+.psec h3{font-family:'Cinzel',serif;font-size:.5em;letter-spacing:1.8px;color:var(--ink2);
+  margin-bottom:5px;text-transform:uppercase}
+.pf{width:100%;margin-bottom:4px}
+.pf label{display:block;font-size:.62em;color:var(--ink2);margin-bottom:2px}
+.pf input,.pf select,.pf textarea{width:100%;background:var(--bg3);border:1px solid var(--pbdr);
+  color:var(--ink);padding:3px 6px;font-family:'EB Garamond',serif;font-size:.82em;
+  outline:none;transition:border-color .18s}
+.pf input:focus,.pf select:focus,.pf textarea:focus{border-color:var(--core-bdr)}
+.pf textarea{resize:vertical;min-height:40px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+
+.pact{padding:6px 10px;display:flex;flex-direction:column;gap:3px;
+  border-top:1px solid var(--pbdr);flex-shrink:0}
+.pbtn{font-family:'Cinzel',serif;font-size:.52em;letter-spacing:.8px;padding:5px 8px;
+  border:1px solid var(--pbdr);background:transparent;color:var(--ink2);cursor:pointer;
+  transition:all .16s;text-transform:uppercase;width:100%}
+.pbtn:hover{background:var(--bg2)}
+.pbtn.pp{border-color:var(--core-bdr);color:var(--core-bg)}
+.pbtn.pp:hover{background:var(--core-bg);color:#fff}
+.pbtn.pd{border-color:#c04040;color:#c04040}
+.pbtn.pd:hover{background:#c04040;color:#fff}
+
+.reltag{display:inline-flex;align-items:center;gap:4px;font-size:.64em;color:var(--ink2);
+  cursor:pointer;padding:2px 5px;border:1px solid var(--pbdr);margin:2px;
+  background:var(--bg3);transition:all .12s}
+.reltag:hover{border-color:var(--core-bdr);color:var(--core-bg)}
+.rdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* couples list */
+.clist-item{padding:5px 0;border-bottom:1px solid var(--pbdr);cursor:pointer;font-size:.72em}
+.clist-item:hover{background:var(--bg3);padding-left:3px}
+
+/* settings */
+.srow{display:flex;align-items:center;gap:5px;margin-bottom:5px}
+.srow label{font-size:.62em;color:var(--ink2);flex:1;min-width:80px}
+.srow input[type=range]{flex:1;accent-color:var(--core-bg)}
+.srow input[type=number]{width:56px;background:var(--bg3);border:1px solid var(--pbdr);
+  color:var(--ink);padding:2px 4px;font-size:.74em;text-align:center;outline:none}
+.sv{font-size:.64em;color:var(--ink2);width:24px;text-align:right;flex-shrink:0}
+
+/* ══════════════ MODALS ══════════════ */
+.mo{position:fixed;inset:0;background:rgba(10,6,2,.65);z-index:4000;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .2s}
+.mo.open{opacity:1;pointer-events:all}
+.mbox{background:var(--panel);border:1px solid var(--pbdr);width:400px;max-height:84vh;
+  overflow-y:auto;box-shadow:0 16px 50px rgba(0,0,0,.55);
+  transform:translateY(10px);transition:transform .2s}
+.mo.open .mbox{transform:translateY(0)}
+.mhead{padding:10px 15px;border-bottom:1px solid var(--pbdr);
+  display:flex;justify-content:space-between;align-items:center;background:var(--bg2)}
+.mhead h2{font-family:'Cinzel',serif;font-size:.76em;font-weight:700;color:var(--ink);letter-spacing:2px}
+.mcl{background:none;border:none;color:var(--ink2);font-size:1.1em;cursor:pointer;line-height:1}
+.mcl:hover{color:var(--core-bg)}
+.mbody{padding:12px 14px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.mbody .fw{grid-column:1/-1}
+.mbody .pf textarea{width:100%;background:var(--bg3);border:1px solid var(--pbdr);color:var(--ink);
+  padding:3px 6px;font-family:'EB Garamond',serif;font-size:.82em;resize:vertical;min-height:36px;outline:none}
+/* cascade confirm */
+.mbox.narrow{width:320px}
+.minfo{padding:12px 14px;font-size:.8em;color:var(--ink2);line-height:1.6}
+.mfoot{padding:8px 14px;border-top:1px solid var(--pbdr);display:flex;gap:5px;justify-content:flex-end}
+.mb{font-family:'Cinzel',serif;font-size:.56em;letter-spacing:1px;padding:5px 10px;
+  border:1px solid var(--pbdr);background:transparent;color:var(--ink2);cursor:pointer;
+  transition:all .18s;text-transform:uppercase}
+.mb:hover{background:var(--bg2)}
+.mb.p{border-color:var(--core-bdr);color:var(--core-bg)}
+.mb.p:hover{background:var(--core-bg);color:#fff}
+.mb.d{border-color:#c04040;color:#c04040}
+.mb.d:hover{background:#c04040;color:#fff}
+
+/* start */
+#stp{position:fixed;inset:0;z-index:5000;display:flex;align-items:center;justify-content:center;
+  background:rgba(180,168,132,.82);backdrop-filter:blur(3px)}
+#stp .box{background:var(--panel);border:1px solid var(--pbdr);
+  box-shadow:0 14px 45px rgba(10,6,2,.5)}
+#stp .bh{padding:10px 16px;border-bottom:1px solid var(--pbdr);background:var(--bg2);
+  font-family:'Cinzel',serif;font-size:.84em;font-weight:700;color:var(--ink);
+  letter-spacing:2px;text-align:center}
+#stp .bb{padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+#stp .hint{font-size:.72em;color:var(--ink2);font-style:italic;text-align:center;margin-bottom:2px}
+.sptab{flex:1;padding:7px 4px;text-align:center;font-family:'Cinzel',serif;font-size:.52em;
+  letter-spacing:1.2px;color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;
+  transition:all .16s;text-transform:uppercase}
+.sptab.on{color:var(--core-bg);border-bottom-color:var(--core-bg);background:var(--panel)}
+.sptab:not(.on):hover{background:var(--bg3)}
+/* generator range inputs */
+#sp-gen input[type=range]{width:100%;accent-color:var(--core-bg);margin-top:3px}
+
+/* ctx */
+#ctx{position:fixed;z-index:6000;background:var(--panel);border:1px solid var(--pbdr);
+  min-width:148px;box-shadow:2px 4px 12px rgba(10,6,2,.38);display:none}
+#ctx.open{display:block}
+.cxi{padding:7px 12px;font-size:.76em;cursor:pointer;color:var(--ink);
+  transition:background .1s;display:flex;align-items:center;gap:6px}
+.cxi:hover{background:var(--bg2)}
+.cxi.d{color:#c04040}
+.cxi.d:hover{background:rgba(192,64,64,.08)}
+.cxsep{height:1px;background:var(--pbdr);margin:2px 0}
+
+/* notif */
+#notif{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--gold2);font-family:'Cinzel',serif;font-size:.6em;
+  letter-spacing:1.5px;padding:6px 16px;z-index:9000;opacity:0;transition:opacity .28s;
+  pointer-events:none;border:1px solid #7a6030;white-space:nowrap}
+#notif.on{opacity:1}
+
+/* ══════════════ PRINT ══════════════ */
+@media print{
+  #topbar,#panel,#ctx,#notif,.chtog,.cid-badge{display:none!important}
+  #main{display:block}
+  #scroll{overflow:visible;height:auto}
+  #tree{padding:10px 40px}
+  body,html{overflow:visible;height:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div class="hblock">
+    <img class="hcrest" src="https://i.imgur.com/SEFM0ux.png" alt="">
+    <div>
+      <div class="hname" id="hn" onclick="editHN()">HAUS DER ASCHE</div>
+      <div class="hmotto" id="hm" onclick="editHM()">„Durch Feuer bestehen"</div>
+    </div>
+  </div>
+  <div class="legend">
+    <div class="li"><div class="lsw lt-core" style="color:var(--core-txt)">K</div>Kern</div>
+    <div class="li"><div class="lsw lt-married" style="color:var(--married-txt)">A</div>Angeheiratet</div>
+    <div class="li"><div class="lsw lt-bastard" style="color:var(--bastard-txt)">B</div>Bastard</div>
+    <div class="li"><div class="lsw lt-affair" style="color:var(--affair-txt)">AF</div>Affäre</div>
+    <div class="li"><div class="lsw lt-forced" style="color:var(--forced-txt)">EZ</div>Erzwungen</div>
+  </div>
+  <div id="searchbox">
+    <span style="color:#7a6030;font-size:.72em">🔍</span>
+    <input id="search-input" type="text" placeholder="Person suchen…" oninput="doSearch(this.value)" onkeydown="searchNav(event)">
+    <button id="search-clear" onclick="clearSearch()" title="Leeren">✕</button>
+  </div>
+  <div class="tbx">
+    <button class="tb undo" onclick="doUndo()" title="Rückgängig (Strg+Z)">↩ Undo</button>
+    <button class="tb p" onclick="openAddChildModal(null)">+ Kind</button>
+    <button class="tb" onclick="openAddPersonModal()">+ Person</button>
+    <button class="tb" onclick="doExport()">↓ JSON</button>
+    <label class="tb" style="cursor:pointer">↑ Import<input type="file" accept=".json" style="display:none" onchange="doImport(this)"></label>
+    <button class="tb" onclick="exportPNG()">↓ PNG</button>
+    <button class="tb" onclick="window.print()">🖨 Print</button>
+    <button class="tb" onclick="togglePanel()">☰</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+  <div id="scroll">
+    <div id="tree">
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+
+  <!-- PANEL -->
+  <div id="panel">
+    <div class="ptabs">
+      <div class="ptab on" id="pt-d" onclick="ptab('d')">Person</div>
+      <div class="ptab" id="pt-t" onclick="ptab('t')">Paare</div>
+      <div class="ptab" id="pt-s" onclick="ptab('s')">Einst.</div>
+    </div>
+
+    <!-- PERSON TAB -->
+    <div class="psc" id="pc-d">
+      <div id="pe" style="padding:22px 12px;text-align:center;color:var(--ink2);font-style:italic;font-size:.8em">
+        Klicke auf eine Person.
+      </div>
+      <div id="pf2" style="display:none">
+        <div class="dport">
+          <img id="dpi" class="sil" src="" alt="">
+          <div class="dno"><div class="did" id="did"></div><div class="dname" id="dnn"></div></div>
+        </div>
+        <div class="psec">
+          <h3>Grunddaten</h3>
+          <div class="pf"><label>Name</label><input id="en" type="text" oninput="upd('name',this.value)"></div>
+          <div class="g2">
+            <div class="pf"><label>Geburtsjahr</label><input id="eb" type="number" oninput="upd('birth',+this.value)"></div>
+            <div class="pf"><label>Todesjahr</label><input id="ed" type="number" placeholder="—" oninput="upd('death',this.value?+this.value:null)"></div>
+          </div>
+          <div class="g2">
+            <div class="pf"><label>Geschlecht</label>
+              <select id="eg" onchange="upd('gender',this.value)">
+                <option value="m">Männlich</option><option value="f">Weiblich</option><option value="n">Neutral</option>
+              </select>
+            </div>
+            <div class="pf"><label>Status</label>
+              <select id="es" onchange="upd('status',this.value)">
+                <option value="alive">Lebend</option><option value="dead">Tot</option><option value="missing">Vermisst</option>
+              </select>
+            </div>
+          </div>
+          <div class="pf"><label>Rang</label>
+            <select id="er" onchange="upd('rank',this.value)">
+              <option value="">—</option><option value="founder">Gründer/in</option>
+              <option value="head">Oberhaupt</option><option value="former-head">Ehem. Oberhaupt</option>
+              <option value="heir">Erbe/Erbin</option><option value="bastard">Bastard</option><option value="exile">Verstoßen</option>
+            </select>
+          </div>
+          <div class="pf"><label>Linientyp</label>
+            <select id="elt" onchange="upd('lineType',this.value)">
+              <option value="core">Kernlinie (Rot)</option><option value="married">Angeheiratet (Grün)</option>
+              <option value="bastard">Bastard (Grau)</option><option value="affair">Affäre (Lila)</option>
+              <option value="forced">Erzwungen (Orange)</option>
+            </select>
+          </div>
+          <div class="pf"><label>Portrait URL</label>
+            <input id="ep" type="text" placeholder="https://…" oninput="upd('portrait',this.value)">
+          </div>
+          <div class="pf"><label>Tags</label>
+            <input id="etag" type="text" placeholder="magisch, krieger, …" oninput="upd('tags',this.value)">
+          </div>
+          <div class="pf"><label>Notizen</label>
+            <textarea id="eno" oninput="upd('notes',this.value)" placeholder="Geschichte, Geheimnisse…"></textarea>
+          </div>
+        </div>
+        <div class="psec"><h3>Zugehörigkeiten</h3><div id="prel"></div></div>
+        <div class="pact">
+          <button class="pbtn pp" onclick="openAddChildModal(selId)">↓ Kind hinzufügen</button>
+          <button class="pbtn pp" onclick="openAddPartnerModal(selId)">♥ Partner hinzufügen</button>
+          <button class="pbtn pd" onclick="delPersonPrompt()">✕ Person löschen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COUPLES TAB -->
+    <div class="psc" id="pc-t" style="display:none">
+      <div style="padding:8px 10px">
+        <div style="font-family:'Cinzel',serif;font-size:.5em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:5px">ALLE PAARE</div>
+        <div id="couples-list"></div>
+      </div>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div class="psc" id="pc-s" style="display:none">
+      <div class="psec">
+        <h3>Abstände</h3>
+        <div class="srow"><label>Geschwisterabstand</label>
+          <input type="range" min="8" max="100" value="48" id="s-sg"
+            oninput="$('sv-sg').textContent=this.value;setSibGap(+this.value)">
+          <span class="sv" id="sv-sg">48</span>
+        </div>
+        <div class="srow"><label>Verbindungshöhe</label>
+          <input type="range" min="16" max="100" value="48" id="s-ch"
+            oninput="$('sv-ch').textContent=this.value;setConnH(+this.value)">
+          <span class="sv" id="sv-ch">48</span>
+        </div>
+        <div class="srow"><label>Linienstärke</label>
+          <input type="range" min="1" max="5" value="2" step=".5" id="s-lw"
+            oninput="$('sv-lw').textContent=this.value;drawLines()">
+          <span class="sv" id="sv-lw">2</span>
+        </div>
+      </div>
+      <div class="psec">
+        <h3>Allgemein</h3>
+        <div class="srow"><label>Aktuelles Jahr</label>
+          <input type="number" id="s-yr" value="1740" style="width:70px;background:var(--bg3);border:1px solid var(--pbdr);color:var(--ink);padding:2px 5px;font-size:.78em;outline:none"
+            oninput="curYear=+this.value;rerender()">
+        </div>
+      </div>
+      <div class="psec" style="display:flex;flex-direction:column;gap:3px">
+        <button class="pbtn" onclick="rerender()">↺ Neu rendern</button>
+        <button class="pbtn pd" onclick="clearAll()">✕ Alles löschen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START PROMPT -->
+<div id="stp">
+  <div class="box" style="width:520px;max-height:90vh;overflow-y:auto">
+    <div class="bh" style="display:flex;align-items:center;gap:10px;justify-content:center">
+      <img src="https://i.imgur.com/SEFM0ux.png" style="width:28px;height:28px;object-fit:contain;opacity:.8">
+      DYNASTIEPLANER
+    </div>
+    <!-- Tab bar -->
+    <div style="display:flex;border-bottom:1px solid var(--pbdr);background:var(--bg2)">
+      <div class="sptab on" id="spt-manual" onclick="spTab('manual')">✎ Manuell</div>
+      <div class="sptab" id="spt-gen" onclick="spTab('gen')">⚙ Generator</div>
+    </div>
+
+    <!-- MANUAL TAB -->
+    <div id="sp-manual" class="bb">
+      <p class="hint">Gib das erste Stammpaar ein.</p>
+      <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:3px">ELTERNTEIL A</div>
+      <div class="g2">
+        <div class="pf"><label>Name *</label><input id="fn1" type="text" placeholder="Gründer…" onkeydown="if(event.key==='Enter')spStart()"></div>
+        <div class="pf"><label>Geburtsjahr</label><input id="fb1" type="number" value="1620"></div>
+      </div>
+      <div class="g2">
+        <div class="pf"><label>Geschlecht</label><select id="fg1"><option value="m">Männlich</option><option value="f">Weiblich</option><option value="n">Neutral</option></select></div>
+        <div class="pf"><label>Rang</label><select id="fr1"><option value="founder">Gründer/in</option><option value="head">Oberhaupt</option></select></div>
+      </div>
+      <hr style="border:none;border-top:1px solid var(--pbdr);margin:6px 0">
+      <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:3px">ELTERNTEIL B <span style="opacity:.6;font-weight:400">(optional)</span></div>
+      <div class="g2">
+        <div class="pf"><label>Name</label><input id="fn2" type="text" placeholder="Gründerin…"></div>
+        <div class="pf"><label>Geburtsjahr</label><input id="fb2" type="number" value="1624"></div>
+      </div>
+      <div class="g2">
+        <div class="pf"><label>Geschlecht</label><select id="fg2"><option value="f">Weiblich</option><option value="m">Männlich</option><option value="n">Neutral</option></select></div>
+        <div class="pf"><label>Linientyp</label><select id="fl2"><option value="core">Kernlinie</option><option value="married">Angeheiratet</option></select></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:8px">
+        <button class="mb p" onclick="spStart()">Beginnen →</button>
+      </div>
+    </div>
+
+    <!-- GENERATOR TAB -->
+    <div id="sp-gen" class="bb" style="display:none">
+      <p class="hint">Der Generator erstellt einen vollständigen Stammbaum-Entwurf.</p>
+
+      <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:6px;margin-top:2px">GRÜNDERPAAR</div>
+      <div class="g2">
+        <div class="pf"><label>Name Elternteil A</label><input id="gn1" type="text" placeholder="z.B. Aldric" value="Aldric"></div>
+        <div class="pf"><label>Geschlecht A</label><select id="gg1"><option value="m">Männlich</option><option value="f">Weiblich</option><option value="n">Neutral</option></select></div>
+      </div>
+      <div class="g2">
+        <div class="pf"><label>Name Elternteil B</label><input id="gn2" type="text" placeholder="z.B. Mira" value="Mira"></div>
+        <div class="pf"><label>Geschlecht B</label><select id="gg2"><option value="f">Weiblich</option><option value="m">Männlich</option><option value="n">Neutral</option></select></div>
+      </div>
+      <div class="g2">
+        <div class="pf"><label>Gründungsjahr</label><input id="gyr" type="number" value="1580"></div>
+        <div class="pf"><label>Hausname</label><input id="ghouse" type="text" placeholder="Haus der Asche" value="Haus der Asche"></div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--pbdr);margin:8px 0">
+      <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:6px">STAMMBAUM-STRUKTUR</div>
+
+      <div class="g2">
+        <div class="pf">
+          <label>Generationen <span id="ggen-v" style="color:var(--core-bg);font-weight:700">3</span></label>
+          <input type="range" min="1" max="6" value="3" id="ggen" oninput="$('ggen-v').textContent=this.value;genPreview()">
+        </div>
+        <div class="pf">
+          <label>Breite (Kinder ∅) <span id="gbr-v" style="color:var(--core-bg);font-weight:700">3</span></label>
+          <input type="range" min="1" max="7" value="3" id="gbr" oninput="$('gbr-v').textContent=this.value;genPreview()">
+        </div>
+      </div>
+      <div class="g2">
+        <div class="pf">
+          <label>Breiten-Varianz <span id="gvar-v" style="color:var(--core-bg);font-weight:700">2</span></label>
+          <input type="range" min="0" max="4" value="2" id="gvar" oninput="$('gvar-v').textContent=this.value;genPreview()">
+          <div style="font-size:.6em;color:var(--ink3);margin-top:2px">Zufällige Abweichung ±</div>
+        </div>
+        <div class="pf">
+          <label>Generationsabstand (J.)</label>
+          <input type="number" id="ggap" value="25" min="10" max="60" style="width:100%;background:var(--bg3);border:1px solid var(--pbdr);color:var(--ink);padding:3px 6px;font-size:.82em;outline:none">
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--pbdr);margin:8px 0">
+      <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:6px">BESONDERE EREIGNISSE</div>
+
+      <div class="g2">
+        <div class="pf">
+          <label>Bastard-Wahrsch. <span id="gbast-v" style="color:var(--bastard-bg);font-weight:700">15%</span></label>
+          <input type="range" min="0" max="60" value="15" id="gbast" oninput="$('gbast-v').textContent=this.value+'%';genPreview()">
+        </div>
+        <div class="pf">
+          <label>Affäre-Wahrsch. <span id="gaff-v" style="color:var(--affair-bg);font-weight:700">10%</span></label>
+          <input type="range" min="0" max="50" value="10" id="gaff" oninput="$('gaff-v').textContent=this.value+'%';genPreview()">
+        </div>
+      </div>
+      <div class="g2">
+        <div class="pf">
+          <label>Erzwungen-Wahrsch. <span id="gfrc-v" style="color:var(--forced-bg);font-weight:700">5%</span></label>
+          <input type="range" min="0" max="30" value="5" id="gfrc" oninput="$('gfrc-v').textContent=this.value+'%';genPreview()">
+        </div>
+        <div class="pf">
+          <label>Frühtod-Wahrsch. <span id="gdeath-v" style="color:var(--ink2);font-weight:700">20%</span></label>
+          <input type="range" min="0" max="60" value="20" id="gdeath" oninput="$('gdeath-v').textContent=this.value+'%';genPreview()">
+        </div>
+      </div>
+      <div class="g2">
+        <div class="pf">
+          <label>Ehe mit Auswärtigen <span id="gmarr-v" style="color:var(--married-bg);font-weight:700">70%</span></label>
+          <input type="range" min="0" max="100" value="70" id="gmarr" oninput="$('gmarr-v').textContent=this.value+'%';genPreview()">
+          <div style="font-size:.6em;color:var(--ink3);margin-top:2px">Wahrsch. dass ein Kind heiratet</div>
+        </div>
+        <div class="pf">
+          <label>Verbannungen <span id="gexl-v" style="color:var(--ink2);font-weight:700">5%</span></label>
+          <input type="range" min="0" max="30" value="5" id="gexl" oninput="$('gexl-v').textContent=this.value+'%';genPreview()">
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--pbdr);margin:8px 0">
+
+      <!-- Live preview bar -->
+      <div id="gen-preview" style="background:var(--bg2);border:1px solid var(--pbdr);padding:7px 10px;font-size:.66em;color:var(--ink2);font-family:'EB Garamond',serif;line-height:1.7;margin-bottom:8px">
+        Vorschau wird geladen…
+      </div>
+
+      <div style="display:flex;gap:6px;justify-content:flex-end">
+        <button class="mb" onclick="spTab('manual')">← Manuell</button>
+        <button class="mb p" onclick="runGenerator()">⚙ Stammbaum generieren →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD CHILD MODAL -->
+<div class="mo" id="m-child">
+  <div class="mbox">
+    <div class="mhead"><h2 id="mct">KIND HINZUFÜGEN</h2><button class="mcl" onclick="CM('m-child')">✕</button></div>
+    <div class="mbody">
+      <div class="pf fw"><label>Name</label><input id="mc-n" type="text" placeholder="Name…"></div>
+      <div class="pf"><label>Geschlecht</label>
+        <select id="mc-g"><option value="m">Männlich</option><option value="f">Weiblich</option><option value="n">Neutral</option></select>
+      </div>
+      <div class="pf"><label>Geburtsjahr</label><input id="mc-b" type="number" value="1680"></div>
+      <div class="pf"><label>Todesjahr</label><input id="mc-d" type="number" placeholder="—"></div>
+      <div class="pf"><label>Rang</label>
+        <select id="mc-r"><option value="">—</option><option value="heir">Erbe/Erbin</option><option value="bastard">Bastard</option><option value="exile">Verstoßen</option></select>
+      </div>
+
+      <!-- PARENT SELECTION — the core of the new logic -->
+      <div class="pf fw" style="background:var(--bg3);border:1px solid var(--pbdr);padding:8px;margin-top:4px">
+        <div style="font-family:'Cinzel',serif;font-size:.54em;letter-spacing:1.5px;color:var(--ink2);margin-bottom:6px">ELTERNTEIL AUSWAHL</div>
+
+        <div class="pf"><label>Elternteil 1 (Stammbaum-Mitglied)</label>
+          <select id="mc-p1" onchange="onParent1Change()"></select>
+        </div>
+        <div class="pf"><label>Elternteil 2 (Partner)</label>
+          <select id="mc-p2" onchange="onParent2Change()"></select>
+        </div>
+        <div class="pf"><label>Beziehungstyp</label>
+          <select id="mc-rel" onchange="onRelTypeChange()">
+            <option value="married">Ehelich</option>
+            <option value="affair">Affäre</option>
+            <option value="forced">Erzwungen</option>
+            <option value="core">Kernlinie</option>
+          </select>
+        </div>
+        <div id="mc-couple-info" style="font-size:.66em;color:var(--ink2);margin-top:4px;font-style:italic"></div>
+      </div>
+
+      <div class="pf fw"><label>Linientyp des Kindes</label>
+        <select id="mc-lt">
+          <option value="core">Kernlinie (Rot)</option>
+          <option value="bastard">Bastard (Grau)</option>
+          <option value="affair">Affäre (Lila)</option>
+          <option value="forced">Erzwungen (Orange)</option>
+          <option value="married">Angeheiratet (Grün)</option>
+        </select>
+      </div>
+      <div class="pf fw"><label>Notizen</label>
+        <textarea id="mc-no" placeholder="Hintergrund…"></textarea>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="mb" onclick="CM('m-child')">Abbrechen</button>
+      <button class="mb p" onclick="addChild()">Kind hinzufügen</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD PARTNER MODAL -->
+<div class="mo" id="m-partner">
+  <div class="mbox">
+    <div class="mhead"><h2 id="mpt">PARTNER HINZUFÜGEN</h2><button class="mcl" onclick="CM('m-partner')">✕</button></div>
+    <div class="mbody">
+      <div class="pf fw"><label>Name</label><input id="mp-n" type="text" placeholder="Name…"></div>
+      <div class="pf"><label>Geschlecht</label>
+        <select id="mp-g"><option value="f">Weiblich</option><option value="m">Männlich</option><option value="n">Neutral</option></select>
+      </div>
+      <div class="pf"><label>Geburtsjahr</label><input id="mp-b" type="number" value="1660"></div>
+      <div class="pf"><label>Todesjahr</label><input id="mp-d" type="number" placeholder="—"></div>
+      <div class="pf fw"><label>Beziehungstyp</label>
+        <select id="mp-lt">
+          <option value="married">Ehepartner/in (Grün)</option>
+          <option value="affair">Affäre (Lila)</option>
+          <option value="forced">Erzwungen (Orange)</option>
+          <option value="core">Kernlinie (Rot)</option>
+        </select>
+      </div>
+      <div class="pf fw"><label>Notizen</label><textarea id="mp-no" placeholder="Hintergrund…"></textarea></div>
+    </div>
+    <div class="mfoot">
+      <button class="mb" onclick="CM('m-partner')">Abbrechen</button>
+      <button class="mb p" onclick="addPartner()">Hinzufügen</button>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM MODAL -->
+<div class="mo" id="m-del">
+  <div class="mbox narrow">
+    <div class="mhead"><h2>PERSON LÖSCHEN</h2><button class="mcl" onclick="CM('m-del')">✕</button></div>
+    <div class="minfo" id="m-del-info"></div>
+    <div class="mfoot">
+      <button class="mb" onclick="CM('m-del')">Abbrechen</button>
+      <button class="mb d" onclick="delPersonCascade(false)">Nur diese Person</button>
+      <button class="mb d" id="del-cascade-btn" onclick="delPersonCascade(true)">+ alle Kinder</button>
+    </div>
+  </div>
+</div>
+
+<!-- CTX MENU -->
+<div id="ctx">
+  <div class="cxi" onclick="ctxDo('edit')">✎ Bearbeiten</div>
+  <div class="cxi" onclick="ctxDo('child')">↓ Kind hinzufügen</div>
+  <div class="cxi" onclick="ctxDo('partner')">♥ Partner hinzufügen</div>
+  <div class="cxsep"></div>
+  <div class="cxi" onclick="ctxDo('focus')">⊙ Fokus (nur Linie)</div>
+  <div class="cxsep"></div>
+  <div class="cxi d" onclick="ctxDo('del')">✕ Löschen</div>
+</div>
+
+<div id="notif"></div>
+
+<script>
+'use strict';
+/* ════════════════════════════════════════
+   DATA MODEL
+   ─────────────────────────────────────
+   persons[]: { id, name, gender, birth, death, status, rank, lineType, portrait, tags, notes }
+
+   couples[]: {
+     id,              // "C001"
+     parentA,         // personId  — always the "tree-member" anchor
+     parentB,         // personId | null — their partner
+     relationshipType,// 'married'|'affair'|'forced'|'core'
+     children[],      // [personId] — ordered list, draggable
+     childrenVisible, // bool
+     anchorCoupleId   // id of the couple that parentA is a CHILD of (for tree placement)
+                      // null = root couple
+   }
+
+   RULES:
+   - Every child belongs to exactly one couple (their biological parents).
+   - A person can be parentA of multiple couples (multiple relationships).
+   - All children of a person (across all their couples) appear UNDER that person.
+   - Children order within a couple is user-controlled (drag/swap).
+   - Bastard/affair children: lineType='bastard', relationship='affair'/'forced'.
+   - No phantom nodes: a couple only appears if parentA exists in persons[].
+════════════════════════════════════════ */
+let persons=[], couples=[];
+let selId=null, ctxId=null, curYear=1740;
+let sibGap=48, connH=48;
+let undoStack=[];         // snapshots for undo
+let searchResults=[], searchIdx=0;
+let _puid=1, _cuid=1;
+
+const mkPid=()=>'P'+String(_puid++).padStart(3,'0');
+const mkCid=()=>'C'+String(_cuid++).padStart(3,'0');
+const GP=id=>persons.find(p=>p.id===id);
+const GC=id=>couples.find(c=>c.id===id);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+const SIL={m:'https://i.imgur.com/51CghpL.png',f:'https://i.imgur.com/7yB9PR6.png',n:'https://i.imgur.com/Bpo3Pzn.png'};
+const SIL_K='https://i.imgur.com/2iukHXR.png';
+const CRESTM='https://i.imgur.com/SEFM0ux.png';
+const RL={head:'OBERHAUPT','former-head':'EHEM. OBH.',heir:'ERBE/ERBIN',bastard:'BASTARD',exile:'VERSTOSSEN',founder:'GRÜNDER/IN'};
+const LC={core:'#8a1010',married:'#186018',bastard:'#484848',affair:'#501870',forced:'#804010'};
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded',()=>{
+  document.addEventListener('click',e=>{if(!e.target.closest('#ctx'))$('ctx').classList.remove('open');});
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') $('ctx').classList.remove('open');
+    if((e.ctrlKey||e.metaKey)&&e.key==='z'){e.preventDefault();doUndo();}
+  });
+  $('scroll').addEventListener('scroll',()=>drawLines());
+  window.addEventListener('resize',()=>drawLines());
+  setTimeout(()=>$('fn1')?.focus(),80);
+});
+
+/* ── UNDO ── */
+function snapshot(){
+  const state=JSON.stringify({persons,couples,curYear});
+  if(undoStack[undoStack.length-1]===state) return;
+  undoStack.push(state);
+  if(undoStack.length>40) undoStack.shift();
+}
+function doUndo(){
+  if(undoStack.length<2){notify('Nichts rückgängig zu machen');return;}
+  undoStack.pop(); // current state
+  const prev=JSON.parse(undoStack[undoStack.length-1]);
+  persons=prev.persons; couples=prev.couples; curYear=prev.curYear;
+  // restore UIDs
+  persons.forEach(p=>{const n=+p.id.slice(1);if(n>=_puid)_puid=n+1;});
+  couples.forEach(c=>{const n=+c.id.slice(1);if(n>=_cuid)_cuid=n+1;});
+  // Migrate legacy field names
+  couples.forEach(c=>{ if(!c.parentA&&c.personA)c.parentA=c.personA; if(!c.parentB&&c.personB)c.parentB=c.personB; });
+  selId=null;
+  $('pe').style.display='';$('pf2').style.display='none';
+  rerender();
+  notify('↩ Rückgängig');
+}
+
+/* ── START ── */
+function spStart(){
+  const n1=$('fn1').value.trim();if(!n1){$('fn1').focus();return;}
+  $('stp').style.display='none';
+  snapshot();
+  const pA=mkPerson({name:n1,gender:$('fg1').value,birth:+$('fb1').value||1620,rank:$('fr1').value,lineType:'core'});
+  let pB=null;
+  if($('fn2').value.trim())
+    pB=mkPerson({name:$('fn2').value.trim(),gender:$('fg2').value,birth:+$('fb2').value||1624,rank:'founder',lineType:$('fl2').value});
+  mkCouple(pA.id,pB?.id||null,'married',null);
+  snapshot();
+  rerender();
+  notify('Stammbaum beginnt!');
+}
+
+/* ── START TABS ── */
+function spTab(t){
+  ['manual','gen'].forEach(x=>{
+    $('spt-'+x).classList.toggle('on',x===t);
+    $('sp-'+x).style.display=x===t?'':'none';
+  });
+  if(t==='gen') genPreview();
+}
+
+/* ── GENERATOR NAMES ── */
+const GEN_NAMES={
+  m:['Aldric','Beron','Caius','Davan','Edric','Feron','Gareth','Hadwin','Ivar','Jorin',
+     'Kael','Lorcan','Maren','Naldo','Oswin','Percis','Quill','Roran','Seren','Treval',
+     'Ulric','Valdis','Warin','Xander','Yorin','Zared'],
+  f:['Aelith','Briseis','Calla','Dwyn','Eirith','Faye','Gwynne','Heloise','Isolde','Jessa',
+     'Kira','Laela','Mira','Nessa','Orla','Priya','Quinn','Rowena','Seraphine','Thalia',
+     'Ursula','Vanna','Wren','Xyla','Ysolde','Zara'],
+  n:['Auren','Brynn','Cael','Davan','Elin','Fael','Grey','Haven','Idris','Jyn',
+     'Kael','Luen','Maren','Niall','Oren','Penn','Quel','Ren','Sael','Tael',
+     'Ulen','Vael','Wren','Xael','Yren','Zael']
+};
+const SURNAMES=['von Asche','der Starke','des Nordens','de Vael','von Eikenwacht',
+  'des Feuers','von Graustein','der Weise','de Morast','von Hochborn'];
+let _usedNames={};
+function rndName(gender){
+  const pool=GEN_NAMES[gender]||GEN_NAMES.n;
+  const key=gender;
+  if(!_usedNames[key])_usedNames[key]=new Set();
+  const avail=pool.filter(n=>!_usedNames[key].has(n));
+  const name=(avail.length?avail:pool)[Math.floor(Math.random()*(avail.length||pool.length))];
+  _usedNames[key].add(name);
+  return name;
+}
+function rndGender(){ return Math.random()<0.48?'m':Math.random()<0.5?'f':'n'; }
+function rndBetween(a,b){ return a+Math.floor(Math.random()*(b-a+1)); }
+function chance(pct){ return Math.random()*100 < pct; }
+
+/* ── GENERATOR PREVIEW ── */
+function genPreview(){
+  const gens=+$('ggen').value||3;
+  const avgKids=+$('gbr').value||3;
+  const variance=+$('gvar').value||2;
+  const gap=+$('ggap').value||25;
+  const bastPct=+$('gbast').value||0;
+  const affPct=+$('gaff').value||0;
+  const frcPct=+$('gfrc').value||0;
+  const deathPct=+$('gdeath').value||0;
+  const marrPct=+$('gmarr').value||70;
+  const exlPct=+$('gexl').value||0;
+
+  // Estimate person count
+  let total=2; // founders
+  let prevGen=1; // couples in prev gen
+  let genPersons=[2];
+  for(let g=0;g<gens;g++){
+    const kidsPerCouple=Math.max(0,avgKids);
+    const newPairs=Math.round(prevGen*kidsPerCouple*(marrPct/100));
+    const newPersons=prevGen*kidsPerCouple + newPairs; // kids + their spouses
+    total+=newPersons;
+    genPersons.push(Math.round(prevGen*kidsPerCouple));
+    prevGen=newPairs;
+  }
+  const bastards=Math.round(total*(bastPct/100));
+  const affairs=Math.round(total*(affPct/100)*0.5);
+  const forced=Math.round(total*(frcPct/100)*0.3);
+  const deaths=Math.round(total*(deathPct/100));
+  const exiles=Math.round(total*(exlPct/100));
+  const estYears=+$('gyr').value+gens*gap;
+
+  $('gen-preview').innerHTML=
+    `<strong>Geschätzte Personen:</strong> ~${total}<br>`+
+    `<strong>Generationen:</strong> Gründer + ${gens} (bis ca. ${estYears})<br>`+
+    `<strong>Pro Generation:</strong> ${genPersons.slice(1).join(' → ')} Kinder<br>`+
+    (bastards?`<span style="color:var(--bastard-bg)">⬥ ~${bastards} Bastarde</span><br>`:``) +
+    (affairs?`<span style="color:var(--affair-bg)">⬥ ~${affairs} Affären-Kinder</span><br>`:``)+
+    (forced?`<span style="color:var(--forced-bg)">⬥ ~${forced} Erzwungene Kinder</span><br>`:``)+
+    (deaths?`<span style="color:var(--ink3)">⬥ ~${deaths} Frühtode</span><br>`:``)+
+    (exiles?`<span style="color:var(--ink3)">⬥ ~${exiles} Verbannungen</span>`:``);
+}
+
+/* ════════════════════════════════════════
+   GENERATOR — builds a full dynasty
+════════════════════════════════════════ */
+function runGenerator(){
+  const n1=$('gn1').value.trim()||'Aldric';
+  const n2=$('gn2').value.trim()||'Mira';
+  const g1=$('gg1').value;
+  const g2=$('gg2').value;
+  const baseYear=+$('gyr').value||1580;
+  const house=$('ghouse').value.trim()||'Haus der Asche';
+  const gens=+$('ggen').value||3;
+  const avgKids=+$('gbr').value||3;
+  const variance=+$('gvar').value||2;
+  const gap=+$('ggap').value||25;
+  const bastPct=+$('gbast').value;
+  const affPct=+$('gaff').value;
+  const frcPct=+$('gfrc').value;
+  const deathPct=+$('gdeath').value;
+  const marrPct=+$('gmarr').value;
+  const exlPct=+$('gexl').value;
+
+  // Reset
+  persons=[];couples=[];_puid=1;_cuid=1;_usedNames={};
+  curYear=baseYear+gens*gap+10;
+  $('s-yr').value=curYear;
+
+  // Set house name
+  $('hn').textContent=house;
+
+  snapshot();
+
+  // ── Create founders ──
+  const founder1=mkPerson({name:n1,gender:g1,birth:baseYear,rank:'founder',lineType:'core'});
+  const founder2=mkPerson({name:n2,gender:g2,birth:baseYear+rndBetween(-4,4),rank:'founder',lineType:'core'});
+  const rootCouple=mkCouple(founder1.id,founder2.id,'married',null);
+
+  // ── Generate recursively ──
+  // Queue: [{coupleId, genDepth, parentBirth}]
+  let queue=[{coupleId:rootCouple.id, depth:0, parentBirth:baseYear}];
+
+  while(queue.length>0){
+    const {coupleId, depth, parentBirth}=queue.shift();
+    if(depth>=gens) continue;
+    const couple=GC(coupleId); if(!couple) continue;
+
+    // How many kids for this couple?
+    const raw=avgKids+rndBetween(-variance,variance);
+    const numKids=Math.max(0,raw);
+
+    for(let k=0;k<numKids;k++){
+      const childBirth=parentBirth+gap+rndBetween(-5,8);
+      const cg=rndGender();
+
+      // Determine child type
+      let childLt='core';
+      let relType='married';
+      const roll=Math.random()*100;
+      if(roll<bastPct){
+        childLt='bastard';
+        // Bastard: create an affair couple for the primary parent
+        const pA=GP(couple.parentA);
+        const affairPartner=mkPerson({
+          name:rndName(cg==='m'?'f':'m'),
+          gender:cg==='m'?'f':'m',
+          birth:parentBirth+rndBetween(-3,3),
+          lineType:'affair'
+        });
+        const affairCouple=mkCouple(couple.parentA, affairPartner.id, 'affair', coupleId);
+        const child=mkPerson({
+          name:rndName(cg),gender:cg,birth:childBirth,
+          lineType:'bastard',rank:'bastard',
+          death:chance(deathPct)?childBirth+rndBetween(1,30):null,
+          status:chance(deathPct)?'dead':'alive'
+        });
+        affairCouple.children.push(child.id);
+        // Bastards rarely get their own sub-tree
+        if(depth+1<gens && chance(20) && chance(marrPct)){
+          const spouseLt='married';
+          const spouse=mkPerson({name:rndName(cg==='m'?'f':'m'),gender:cg==='m'?'f':'m',
+            birth:childBirth+rndBetween(-3,3),lineType:spouseLt});
+          const childCouple=mkCouple(child.id,spouse.id,'married',affairCouple.id);
+          queue.push({coupleId:childCouple.id,depth:depth+1,parentBirth:childBirth});
+        }
+        continue;
+      } else if(roll<bastPct+affPct){
+        childLt='affair';relType='affair';
+      } else if(roll<bastPct+affPct+frcPct){
+        childLt='forced';relType='forced';
+      }
+
+      const child=mkPerson({
+        name:rndName(cg),gender:cg,birth:childBirth,
+        lineType:childLt,
+        rank:chance(exlPct)?'exile':(k===0&&depth===0?'heir':''),
+        death:chance(deathPct)?childBirth+rndBetween(5,gap-2):null,
+        status:chance(deathPct)?'dead':'alive'
+      });
+      couple.children.push(child.id);
+
+      // Give child their own couple if they survived and we're not at max depth
+      const isDead=child.death!==null;
+      if(!isDead && depth+1<gens && chance(marrPct)){
+        const spouseGender=cg==='m'?'f':cg==='f'?'m':'n';
+        const spouse=mkPerson({
+          name:rndName(spouseGender),gender:spouseGender,
+          birth:childBirth+rndBetween(-3,4),lineType:'married'
+        });
+        const childCouple=mkCouple(child.id,spouse.id,'married',coupleId);
+        queue.push({coupleId:childCouple.id,depth:depth+1,parentBirth:childBirth});
+      }
+    }
+  }
+
+  snapshot();
+  $('stp').style.display='none';
+  rerender();
+  notify(`Stammbaum generiert — ${persons.length} Personen, ${couples.length} Paare`);
+}
+
+/* ── FACTORY ── */
+function mkPerson(d){
+  const p={id:mkPid(),name:d.name||'—',gender:d.gender||'n',birth:d.birth||1700,
+    death:d.death||null,status:d.status||'alive',rank:d.rank||'',
+    lineType:d.lineType||'core',portrait:d.portrait||null,tags:d.tags||'',notes:d.notes||''};
+  persons.push(p);return p;
+}
+function mkCouple(parentA,parentB,relType,anchorCoupleId){
+  const c={
+    id:mkCid(),
+    parentA,
+    parentB:parentB||null,
+    relationshipType:relType||'married',
+    children:[],
+    childrenVisible:true,
+    anchorCoupleId:anchorCoupleId||null
+  };
+  couples.push(c);return c;
+}
+// Compat helpers for old field names used elsewhere
+function couplePersonA(c){return c.parentA||c.personA||null;}
+function couplePersonB(c){return c.parentB||c.personB||null;}
+
+/* ════════════════════════════════════════
+   RENDER
+════════════════════════════════════════ */
+function rerender(){
+  const tree=$('tree');
+  tree.querySelectorAll('.tnode,#crest-top,.gen-ruler').forEach(e=>e.remove());
+
+  // Crest
+  const cr=document.createElement('div');cr.id='crest-top';
+  cr.innerHTML=`<img src="${CRESTM}" alt=""><div class="clabel2">STAMMWAPPEN</div><div class="stemline"></div>`;
+  tree.insertBefore(cr,$('svg').nextSibling);
+
+  // ══════════════════════════════════════════════════
+  // ROOT DETECTION — data-driven, not array-order dependent
+  //
+  // A couple C is rendered as a ROOT entry point if:
+  //   1. parentA(C) is NOT listed as a child in any couple's children[]
+  //
+  // When parentA has multiple partnerships (C1,C2,C3 all same parentA):
+  //   → All share the same "is root person" status
+  //   → We render exactly ONE entry point per root person
+  //   → buildCoupleNode iterates ALL their couples via childCouples filter
+  //
+  // Root entry point = the FIRST couple in couples[] for that person
+  // (array order among that person's own couples only — stable within a session,
+  //  and movePartnerCouple lets user reorder if needed)
+  // ══════════════════════════════════════════════════
+
+  // Step 1: all personIds who appear as children
+  const isChildSomewhere=new Set();
+  couples.forEach(c=>(c.children||[]).forEach(id=>isChildSomewhere.add(id)));
+
+  // Step 2: for each root person, find their FIRST couple (entry point)
+  const rootEntryCouple={};  // personId → first couple id for that person
+  couples.forEach(c=>{
+    const pA=c.parentA||c.personA;
+    if(!pA||isChildSomewhere.has(pA)) return;  // skip non-roots
+    if(!rootEntryCouple[pA]) rootEntryCouple[pA]=c.id;
+  });
+
+  // Step 3: render one entry per root person
+  // buildCoupleNode will then render ALL their couples (multiple partnerships)
+  Object.values(rootEntryCouple).forEach(cid=>{
+    const c=GC(cid);
+    if(c) tree.appendChild(buildCoupleNode(c,0));
+  });
+
+  // Gen rulers — measure after paint
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      drawLines();
+      drawGenRulers();
+    });
+  });
+  updateCouplesList();
+}
+
+/* ── GEN RULERS ── */
+function drawGenRulers(){
+  $('tree').querySelectorAll('.gen-ruler').forEach(e=>e.remove());
+  const tree=$('tree');
+  const tr=tree.getBoundingClientRect();
+  const scroll=$('scroll');
+  // collect gen depths by measuring couple heads
+  const genMap={};
+  tree.querySelectorAll('.tnode[data-couple-id]').forEach(node=>{
+    const depth=+node.dataset.depth||0;
+    const headEl=node.querySelector('.thead');
+    if(!headEl)return;
+    const r=headEl.getBoundingClientRect();
+    const y=r.top-tr.top+scroll.scrollTop;
+    if(genMap[depth]===undefined||y<genMap[depth]) genMap[depth]=y;
+  });
+  Object.entries(genMap).forEach(([d,y])=>{
+    const lbl=document.createElement('div');
+    lbl.className='gen-ruler';
+    lbl.style.top=(y+4)+'px';
+    lbl.textContent='GEN '+(+d+1);
+    tree.appendChild(lbl);
+  });
+}
+
+/* ════════════════════════════════════════════════════════
+   BUILD PERSON NODE
+   
+   Called with the FIRST couple of a person.
+   Renders that person ONCE, with ALL their partners and
+   ALL their children (from all partnerships) in one block.
+
+   Structure:
+     .tnode[data-person-id=pAid]
+       .thead   →  [pA card]  [♥ pB1]  [♥ pB2]  [♥ pB3] ...
+       .cid-badge
+       (for each couple Cx that has children:)
+         .tconn  (stem, tagged data-couple-id=Cx.id for SVG)
+         .chtog  (collapse toggle)
+         .tchildren[data-couple-id=Cx.id]  (child row)
+           .child-wrap × N
+════════════════════════════════════════════════════════ */
+function buildCoupleNode(c,depth){
+  const pAid=c.parentA||c.personA;
+  const pA=GP(pAid);
+  if(!pA) return document.createElement('div');
+
+  // All couples for this person in array order
+  const allMyCouples=couples.filter(cx=>(cx.parentA||cx.personA)===pAid);
+
+  // Only render from the first couple of this person
+  // (if called with a non-first couple, delegate to first)
+  if(allMyCouples[0]?.id !== c.id){
+    return buildCoupleNode(allMyCouples[0], depth);
+  }
+
+  const node=document.createElement('div');
+  node.className='tnode';
+  node.dataset.personId=pAid;  // keyed on person, not couple
+  node.dataset.coupleId=c.id;  // primary couple id for SVG compat
+  node.dataset.depth=depth;
+
+  // ── HEAD: person + all partners ──
+  const head=document.createElement('div');head.className='thead';
+  head.appendChild(buildCell(pA, c.id));  // person shown ONCE
+
+  allMyCouples.forEach(cx=>{
+    const pBid=cx.parentB||cx.personB||null;
+    if(!pBid) return;
+    const pB=GP(pBid); if(!pB) return;
+    const rt=cx.relationshipType||cx.coupleType||'married';
+    const rtColor={married:LC.married,affair:LC.affair,forced:LC.forced,core:LC.core}[rt]||LC.married;
+    head.appendChild(makeTie(rtColor));
+    head.appendChild(buildCell(pB, cx.id));
+  });
+  node.appendChild(head);
+
+  // Couple ID badge (show all couple IDs)
+  const badge=document.createElement('div');badge.className='cid-badge';
+  badge.textContent=allMyCouples.map(cx=>cx.id).join(' · ');
+  node.appendChild(badge);
+
+  // ── CHILDREN: one block per couple that has children ──
+  allMyCouples.forEach(cx=>{
+    const kids=cx.children||[];
+    if(kids.length===0) return;
+
+    if(!cx.childrenVisible){
+      const tog=document.createElement('div');tog.className='chtog';
+      tog.textContent=`▼ ${kids.length} ${kids.length===1?'Kind':'Kinder'} (${cx.id})`;
+      tog.onclick=e=>{e.stopPropagation();cx.childrenVisible=true;snapshot();rerender();};
+      node.appendChild(tog);
+      return;
+    }
+
+    // Stem
+    const conn=document.createElement('div');
+    conn.className='tconn';conn.dataset.coupleId=cx.id;
+    conn.style.minHeight=connH+'px';
+    // Collapse toggle
+    const tog=document.createElement('div');tog.className='chtog';
+    tog.textContent=`▲ ${kids.length} ${kids.length===1?'Kind':'Kinder'}${allMyCouples.length>1?' ('+cx.id+')':''}`;
+    tog.onclick=e=>{e.stopPropagation();cx.childrenVisible=false;snapshot();rerender();};
+    conn.appendChild(tog);
+    node.appendChild(conn);
+
+    // Children row
+    const chrow=document.createElement('div');
+    chrow.className='tchildren';chrow.dataset.coupleId=cx.id;
+    chrow.style.gap=sibGap+'px';
+
+    kids.forEach((childId,chIdx)=>{
+      const ch=GP(childId);if(!ch)return;
+      const wrap=document.createElement('div');
+      wrap.className='child-wrap';
+      wrap.style.cssText='display:flex;flex-direction:column;align-items:center;gap:0;position:relative';
+      wrap.dataset.childId=childId;
+      wrap.dataset.coupleId=cx.id;
+      wrap.dataset.chIdx=chIdx;
+
+      // Render child's subtree (all THEIR couples recursively)
+      const childFirstCouple=couples.find(cc=>(cc.parentA||cc.personA)===childId);
+      if(childFirstCouple){
+        wrap.appendChild(buildCoupleNode(childFirstCouple, depth+1));
+      } else {
+        wrap.appendChild(buildCell(ch,null));
+      }
+
+      // Sibling reorder arrows
+      const arrows=document.createElement('div');arrows.className='reorder-arrows';
+      arrows.innerHTML=
+        `<button class="rarr" onclick="moveChild('${cx.id}','${childId}',-1);event.stopPropagation()">◀</button>`+
+        `<button class="rarr" onclick="moveChild('${cx.id}','${childId}',+1);event.stopPropagation()">▶</button>`;
+      wrap.appendChild(arrows);
+      chrow.appendChild(wrap);
+    });
+    node.appendChild(chrow);
+  });
+
+  return node;
+}
+
+function makeTie(colOrType){
+  const tie=document.createElement('div');tie.className='ptie';
+  const col=(colOrType&&colOrType.startsWith('#'))?colOrType:(LC[colOrType]||LC.married);
+  tie.innerHTML=`<div class="ptie-line" style="background:${col}"></div>`+
+    `<div class="ptie-icon">♥</div>`+
+    `<div class="ptie-line" style="background:${col}"></div>`;
+  return tie;
+}
+
+/* ── BUILD CELL — CK3-style compact label ── */
+function buildCell(p,coupleId){
+  const lt=p.lineType||'core';
+  const isImp=p.rank==='founder'||p.rank==='head'||p.rank==='heir';
+  const isDead=p.status==='dead'||!!p.death;
+  const age=(p.death||curYear)-p.birth;
+  const hasPortrait=!!p.portrait;
+
+  const div=document.createElement('div');
+  div.className=`cell lt-${lt}${isImp?' imp':''}${selId===p.id?' sel':''}${hasPortrait?' has-portrait':''}`;
+  div.dataset.pid=p.id;
+  if(coupleId) div.dataset.coupleId=coupleId;
+
+  // ── Portrait thumbnail (only if portrait URL set) ──
+  const port=document.createElement('div');
+  port.className='cport';
+  if(hasPortrait){
+    const img=document.createElement('img');
+    img.src=p.portrait; img.alt='';
+    img.onerror=()=>{ div.classList.remove('has-portrait'); };
+    port.appendChild(img);
+  }
+  div.appendChild(port);
+
+  // ── Text block: name + dates ──
+  const txt=document.createElement('div');
+  txt.className='ctext';
+
+  const lbl=document.createElement('div');
+  lbl.className=`clbl${isDead?' dead':''}`;
+  lbl.textContent=p.name||'—';
+  txt.appendChild(lbl);
+
+  const dates=document.createElement('div');
+  dates.className='cdates';
+  const deathStr=p.death?String(p.death):'';
+  if(deathStr) dates.textContent=`${p.birth}–${deathStr}`;
+  else dates.textContent=String(p.birth);
+  txt.appendChild(dates);
+
+  div.appendChild(txt);
+
+  // ── Rank dot (top-right corner, gold, only for important people) ──
+  const dot=document.createElement('div');
+  dot.className='crank-dot';
+  if(p.rank&&RL[p.rank]) dot.title=RL[p.rank];
+  div.appendChild(dot);
+
+  div.addEventListener('click',e=>{e.stopPropagation();selectP(p.id);});
+  div.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();openCtx(e,p.id);});
+  return div;
+}
+
+/* ════════════════════════════════════════
+   SVG LINES — T-connectors with smart routing
+════════════════════════════════════════ */
+function drawLines(){
+  const svg=$('svg');svg.innerHTML='';
+  const lw=+$('s-lw').value||2;
+  const tree=$('tree');
+  const tr=tree.getBoundingClientRect();
+  const sv=x=>x-tr.left;
+  const sy=y=>y-tr.top;
+
+  // Iterate every children-row (one per couple that has children)
+  tree.querySelectorAll('.tchildren[data-couple-id]').forEach(chrow=>{
+    const cid=chrow.dataset.coupleId;
+    const c=GC(cid);if(!c)return;
+    if(!c.childrenVisible)return;
+
+    const kids=chrow.querySelectorAll(':scope>.child-wrap');
+    if(!kids.length)return;
+
+    // Find the parent node (.tnode) containing this chrow
+    const node=chrow.closest('.tnode');if(!node)return;
+
+    // Midpoint of THIS couple's pair in the head row
+    const pAid=c.parentA||c.personA;
+    const pBid=c.parentB||c.personB||null;
+    const pACell=node.querySelector(`.thead .cell[data-pid="${pAid}"]`);
+    if(!pACell)return;
+    const pAr=pACell.getBoundingClientRect();
+    const pAmx=(pAr.left+pAr.right)/2;
+    const pAbot=pAr.bottom;
+
+    let pairMidX=pAmx;
+    if(pBid){
+      const pBCell=node.querySelector(`.thead .cell[data-pid="${pBid}"]`);
+      if(pBCell){
+        const pBr=pBCell.getBoundingClientRect();
+        pairMidX=(pAmx+(pBr.left+pBr.right)/2)/2;
+      }
+    }
+
+    // Top of first child cell
+    const firstCell=chrow.querySelector('.child-wrap .cell');
+    if(!firstCell)return;
+    const childTopY=firstCell.getBoundingClientRect().top;
+    const busY=pAbot+(childTopY-pAbot)*0.5;
+
+    // Collect child midpoints grouped by lineType
+    const groups={};
+    kids.forEach(wrap=>{
+      const childId=wrap.dataset.childId;
+      const cellEl=wrap.querySelector('.cell');if(!cellEl)return;
+      const r=cellEl.getBoundingClientRect();
+      const ch=GP(childId);
+      const lt=ch?.lineType||'core';
+      if(!groups[lt])groups[lt]=[];
+      groups[lt].push({mx:(r.left+r.right)/2,topY:r.top});
+    });
+
+    const stemX=sv(pairMidX);
+    const bsy=sy(busY);
+    const pbot=sy(pAbot);
+
+    // Vertical stem: pair midpoint → bus
+    addLine(svg,stemX,pbot,stemX,bsy,'rgba(90,72,32,.38)',lw,false);
+
+    // Per lineType: horizontal bus + drops to each child
+    Object.entries(groups).forEach(([lt,items])=>{
+      const col=LC[lt]||LC.core;
+      const dashed=lt==='bastard'||lt==='affair'||lt==='forced';
+      const xs=items.map(i=>sv(i.mx));
+      const allXs=[stemX,...xs];
+      if(allXs.length>1)
+        addLine(svg,Math.min(...allXs),bsy,Math.max(...allXs),bsy,col,lw,dashed);
+      items.forEach(({mx,topY})=>
+        addLine(svg,sv(mx),bsy,sv(mx),sy(topY),col,lw,dashed));
+    });
+  });
+}
+
+function addLine(svg,x1,y1,x2,y2,col,w,dashed){
+  const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',x1.toFixed(1));l.setAttribute('y1',y1.toFixed(1));
+  l.setAttribute('x2',x2.toFixed(1));l.setAttribute('y2',y2.toFixed(1));
+  l.setAttribute('stroke',col);l.setAttribute('stroke-width',w);
+  l.setAttribute('stroke-linecap','round');
+  if(dashed)l.setAttribute('stroke-dasharray','7,5');
+  svg.appendChild(l);
+}
+
+/* ════════════════════════════════════════
+   SELECTION & DETAIL
+════════════════════════════════════════ */
+function selectP(id){
+  selId=id;
+  $('tree').querySelectorAll('.cell').forEach(el=>el.classList.toggle('sel',el.dataset.pid===id));
+  fillDetail(id);ptab('d');
+  // scroll to person
+  const cell=$('tree').querySelector(`.cell[data-pid="${id}"]`);
+  if(cell) cell.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
+}
+
+function fillDetail(id){
+  const p=GP(id);
+  if(!p){$('pe').style.display='';$('pf2').style.display='none';return;}
+  $('pe').style.display='none';$('pf2').style.display='';
+  const img=$('dpi');
+  img.src=p.portrait||'';
+  img.className=p.portrait?'por':'sil';
+  img.style.display=p.portrait?'':'none';
+  $('did').textContent=p.id;$('dnn').textContent=p.name;
+  $('en').value=p.name;$('eb').value=p.birth;$('ed').value=p.death||'';
+  $('eg').value=p.gender;$('es').value=p.status;$('er').value=p.rank;
+  $('elt').value=p.lineType;$('ep').value=p.portrait||'';
+  $('etag').value=p.tags||'';$('eno').value=p.notes||'';
+
+  const rel=$('prel');rel.innerHTML='';
+  couples.forEach(c=>{
+    let role=null;
+    const pAid=c.parentA||c.personA;
+    const pBid=c.parentB||c.personB||null;
+    if(pAid===id)role='Elternteil A';
+    else if(pBid===id)role='Elternteil B';
+    else if((c.children||[]).includes(id))role='Kind';
+    if(role){
+      const t=document.createElement('div');t.className='reltag';
+      t.innerHTML=`<span class="rdot" style="background:${LC.core}"></span>${esc(c.id)} – ${esc(role)}`;
+      t.onclick=()=>{const pid=c.parentA||c.personA;if(GP(pid))selectP(pid);};
+      rel.appendChild(t);
+    }
+  });
+  if(!rel.children.length)rel.innerHTML='<span style="font-size:.68em;color:var(--ink2)">Keine Verbindungen.</span>';
+}
+
+function upd(f,v){
+  const p=GP(selId);if(!p)return;
+  snapshot();p[f]=v;
+  if(f==='name')$('dnn').textContent=v;
+  if(f==='portrait'||f==='gender'){
+    const img=$('dpi');
+    img.src=p.portrait||'';
+    img.className=p.portrait?'por':'sil';
+    img.style.display=p.portrait?'':'none';
+  }
+  rerender();
+  // reselect to keep highlight
+  setTimeout(()=>{
+    $('tree').querySelectorAll('.cell').forEach(el=>el.classList.toggle('sel',el.dataset.pid===selId));
+  },50);
+}
+
+/* ════════════════════════════════════════
+   ADD CHILD — new parent-selection model
+   Logic:
+   - Parent1 = any person in the tree (the "anchor" who owns the subtree)
+   - Parent2 = any person (their partner, including affair partners)
+   - If a couple (Parent1+Parent2) already exists → add child there
+   - If not → create new couple, anchored under Parent1's existing couple
+   - lineType auto-set based on relationship type
+════════════════════════════════════════ */
+function openAddChildModal(personId){
+  // Populate Parent1 dropdown with all persons
+  const p1sel=$('mc-p1'); p1sel.innerHTML='';
+  const p2sel=$('mc-p2'); p2sel.innerHTML='';
+
+  persons.forEach(p=>{
+    p1sel.appendChild(new Option(`${p.name} (${p.id})`, p.id));
+  });
+
+  // Pre-select personId as Parent1 if given
+  if(personId) p1sel.value=personId;
+
+  // Populate Parent2 based on Parent1
+  populateParent2();
+
+  // Title
+  const anchor=personId?GP(personId):null;
+  $('mct').textContent=anchor?`KIND VON ${anchor.name.toUpperCase()}`:'KIND HINZUFÜGEN';
+
+  // Default birth year
+  if(anchor) $('mc-b').value=anchor.birth+20;
+  else $('mc-b').value=curYear-30;
+
+  $('mc-n').value='';$('mc-d').value='';$('mc-r').value='';$('mc-no').value='';
+  $('mc-rel').value='married';
+  $('mc-lt').value='core';
+  $('mc-couple-info').textContent='';
+  $('m-child').classList.add('open');
+  setTimeout(()=>$('mc-n').focus(),100);
+}
+
+function populateParent2(){
+  const p1id=$('mc-p1').value;
+  const p2sel=$('mc-p2'); p2sel.innerHTML='';
+  const relType=$('mc-rel').value;
+
+  // Option: no second parent
+  p2sel.appendChild(new Option('— Kein zweites Elternteil —',''));
+
+  // All persons except P1
+  persons.filter(p=>p.id!==p1id).forEach(p=>{
+    p2sel.appendChild(new Option(`${p.name} (${p.id})`, p.id));
+  });
+
+  // Try to auto-select: find existing couple where p1 is parentA and partner exists
+  const existingMain=couples.find(c=>(c.parentA||c.personA)===p1id && (c.parentB||c.personB));
+  if(existingMain) p2sel.value=existingMain.parentB||existingMain.personB||'';
+
+  updateCoupleInfo();
+}
+
+function onParent1Change(){ populateParent2(); }
+
+function onParent2Change(){ updateCoupleInfo(); }
+
+function onRelTypeChange(){
+  const rel=$('mc-rel').value;
+  // Auto-set child lineType based on relationship
+  if(rel==='affair'||rel==='forced') $('mc-lt').value='bastard';
+  else $('mc-lt').value='core';
+  updateCoupleInfo();
+}
+
+function updateCoupleInfo(){
+  const p1id=$('mc-p1').value;
+  const p2id=$('mc-p2').value;
+  const info=$('mc-couple-info');
+  if(!p1id){info.textContent='';return;}
+
+  const existingCouple=p2id
+    ? couples.find(c=>
+        (c.parentA||c.personA)===p1id && (c.parentB||c.personB)===p2id
+      )
+    : couples.find(c=>(c.parentA||c.personA)===p1id && !(c.parentB||c.personB));
+
+  if(existingCouple){
+    const cnt=existingCouple.children.length;
+    info.textContent=`→ Vorhandenes Paar ${existingCouple.id} (${cnt} Kinder) — Kind wird dort eingetragen.`;
+  } else if(p2id){
+    info.textContent=`→ Neues Paar wird angelegt (${GP(p1id)?.name||'?'} ♥ ${GP(p2id)?.name||'?'}).`;
+  } else {
+    info.textContent=`→ Neues Paar ohne Partner wird angelegt.`;
+  }
+}
+
+function addChild(){
+  const p1id=$('mc-p1').value;
+  const p2id=$('mc-p2').value||null;
+  const relType=$('mc-rel').value;
+  if(!p1id){notify('Elternteil 1 wählen');return;}
+
+  const nm=$('mc-n').value.trim()||'—';
+  const lt=$('mc-lt').value;
+
+  // Find or create the couple
+  let targetCouple=null;
+  if(p2id){
+    // Only match couples where p1 is parentA — never swap roles
+    targetCouple=couples.find(c=>
+      (c.parentA||c.personA)===p1id && (c.parentB||c.personB)===p2id
+    );
+  } else {
+    targetCouple=couples.find(c=>(c.parentA||c.personA)===p1id && !(c.parentB||c.personB));
+  }
+
+  if(!targetCouple){
+    // No existing couple for this exact (p1,p2) pair with p1 as parentA.
+    // Create a new one anchored to p1's parent couple.
+    const anchorId=getAnchorCoupleId(p1id);
+    targetCouple=mkCouple(p1id, p2id||null, relType, anchorId);
+  }
+
+  // Create the child person
+  const child=mkPerson({
+    name:nm, gender:$('mc-g').value,
+    birth:+$('mc-b').value||curYear-20,
+    death:$('mc-d').value?+$('mc-d').value:null,
+    rank:$('mc-r').value, lineType:lt, notes:$('mc-no').value
+  });
+
+  snapshot();
+  targetCouple.children.push(child.id);
+  CM('m-child');rerender();selectP(child.id);
+  notify(`${child.name} hinzugefügt unter ${GP(p1id)?.name||p1id}`);
+}
+
+/* Move child left/right within its couple's children array */
+function moveChild(coupleId, childId, dir){
+  const c=GC(coupleId); if(!c) return;
+  const idx=c.children.indexOf(childId); if(idx===-1) return;
+  const newIdx=idx+dir;
+  if(newIdx<0||newIdx>=c.children.length) return;
+  snapshot();
+  [c.children[idx], c.children[newIdx]]=[c.children[newIdx], c.children[idx]];
+  rerender();
+}
+
+/* Move a partner-couple up/down in the global couples[] array for a given parentA person.
+   This controls which partnership appears first (top) under that person. */
+function movePartnerCouple(personId, coupleId, dir){
+  // Get all couples for this person in current order
+  const mine=couples.filter(c=>(c.parentA||c.personA)===personId);
+  const globalIdx=couples.indexOf(GC(coupleId));
+  if(globalIdx===-1) return;
+  const localIdx=mine.indexOf(GC(coupleId));
+  const targetLocal=localIdx+dir;
+  if(targetLocal<0||targetLocal>=mine.length) return;
+  const targetCouple=mine[targetLocal];
+  const targetGlobal=couples.indexOf(targetCouple);
+  snapshot();
+  // Swap in global array
+  [couples[globalIdx],couples[targetGlobal]]=[couples[targetGlobal],couples[globalIdx]];
+  rerender();
+}
+
+/* ════════════════════════════════════════
+   ADD PARTNER
+════════════════════════════════════════ */
+function openAddPartnerModal(personId){
+  $('m-partner').dataset.fp=personId||'';
+  const p=GP(personId);
+  $('mpt').textContent=personId?`PARTNER FÜR ${(p?.name||personId).toUpperCase()}`:'PARTNER HINZUFÜGEN';
+  if(p)$('mp-b').value=p.birth;
+  $('mp-n').value='';$('mp-d').value='';$('mp-no').value='';
+  $('m-partner').classList.add('open');
+  setTimeout(()=>$('mp-n').focus(),100);
+}
+
+function addPartner(){
+  const fp=$('m-partner').dataset.fp;if(!fp){notify('Keine Bezugsperson');return;}
+  const lt=$('mp-lt').value;
+  const relType=(lt==='affair'||lt==='forced'||lt==='married')?lt:'married';
+
+  const np=mkPerson({
+    name:$('mp-n').value||'—',gender:$('mp-g').value,
+    birth:+$('mp-b').value||1700,death:$('mp-d').value?+$('mp-d').value:null,
+    lineType:lt,notes:$('mp-no').value
+  });
+
+  snapshot();
+  // anchorCoupleId for this person = the couple where fp appears as a child
+  // This is what places fp's subtree correctly in the tree.
+  const anchorId=getAnchorCoupleId(fp);
+
+  // Find existing couple where fp is parentA without a partnerB
+  const emptyCouple=couples.find(c=>(c.parentA||c.personA)===fp && !(c.parentB||c.personB));
+
+  if(emptyCouple){
+    // Fill it in
+    emptyCouple.parentB=np.id; emptyCouple.personB=np.id;
+    emptyCouple.relationshipType=relType; emptyCouple.coupleType=relType;
+    emptyCouple.anchorCoupleId=anchorId; // ensure correct anchor
+    if(relType==='affair'||relType==='forced')
+      emptyCouple.children.forEach(cid=>{const ch=GP(cid);if(ch)ch.lineType='bastard';});
+  } else {
+    // All existing couples for fp have a partner — create a new couple
+    // anchorCoupleId = same as fp's primary couple (fp is still the same child of the same parents)
+    const nc=mkCouple(fp,np.id,relType,anchorId);
+    // nc will be rendered as a second couple under fp's child-wrap (not as a root)
+  }
+
+  CM('m-partner');rerender();
+  notify(`${np.name} als Partner von ${GP(fp)?.name||fp} hinzugefügt`);
+}
+
+/* ════════════════════════════════════════
+   ADD FREE PERSON
+════════════════════════════════════════ */
+function openAddPersonModal(){
+  const n=prompt('Name der Person:');if(!n)return;
+  snapshot();
+  const p=mkPerson({name:n,gender:'m',birth:curYear-30,lineType:'core'});
+  mkCouple(p.id,null,'married',null);
+  snapshot();rerender();selectP(p.id);
+}
+
+/* ════════════════════════════════════════
+   DELETE WITH CASCADE
+════════════════════════════════════════ */
+function delPersonPrompt(){
+  if(!selId)return;
+  const p=GP(selId);if(!p)return;
+  // count descendants
+  const desc=getDescendants(selId);
+  $('m-del-info').innerHTML=
+    `<strong>${esc(p.name)}</strong> löschen?<br><br>`+
+    (desc.length>0
+      ?`Diese Person hat <strong>${desc.length}</strong> Nachkomm${desc.length===1?'en':'en'} (Kinder, Kindeskinder…).<br><br>Wähle ob nur diese Person oder der gesamte Ast gelöscht werden soll.`
+      :`Diese Person hat keine Nachkommen.`);
+  $('del-cascade-btn').style.display=desc.length>0?'':'none';
+  $('m-del').classList.add('open');
+}
+function getDescendants(id){
+  const result=[];
+  function walk(pid){
+    couples.forEach(c=>{
+      const pA=c.parentA||c.personA;
+      const pB=c.parentB||c.personB;
+      if(pA!==pid&&pB!==pid)return;
+      (c.children||[]).forEach(cid=>{
+        if(!result.includes(cid)){result.push(cid);walk(cid);}
+      });
+    });
+  }
+  walk(id);return result;
+}
+function delPersonCascade(cascade){
+  CM('m-del');
+  snapshot();
+  const toDelete=cascade?[selId,...getDescendants(selId)]:[selId];
+  toDelete.forEach(id=>{
+    couples.forEach(c=>{
+      if((c.parentA||c.personA)===id){c.parentA=null;c.personA=null;}
+      if((c.parentB||c.personB)===id){c.parentB=null;c.personB=null;}
+      c.children=(c.children||[]).filter(x=>x!==id);
+    });
+  });
+  couples=couples.filter(c=>c.parentA||c.personA);
+  persons=persons.filter(p=>!toDelete.includes(p.id));
+  selId=null;$('pe').style.display='';$('pf2').style.display='none';
+  snapshot();rerender();
+  notify(`${toDelete.length} Person${toDelete.length===1?'':'en'} gelöscht`);
+}
+
+/* ════════════════════════════════════════
+   SEARCH
+════════════════════════════════════════ */
+function doSearch(q){
+  // clear highlights
+  $('tree').querySelectorAll('.cell.highlight').forEach(el=>el.classList.remove('highlight'));
+  searchResults=[];searchIdx=0;
+  if(!q.trim())return;
+  const lq=q.toLowerCase();
+  searchResults=persons.filter(p=>
+    p.name.toLowerCase().includes(lq)||
+    (p.tags||'').toLowerCase().includes(lq)||
+    (p.notes||'').toLowerCase().includes(lq)
+  );
+  if(!searchResults.length){notify('Keine Treffer');return;}
+  searchResults.forEach(p=>{
+    $('tree').querySelectorAll(`.cell[data-pid="${p.id}"]`).forEach(el=>el.classList.add('highlight'));
+  });
+  notify(`${searchResults.length} Treffer — Enter zum Navigieren`);
+  jumpToSearchResult(0);
+}
+function searchNav(e){
+  if(e.key==='Enter'&&searchResults.length){
+    searchIdx=(searchIdx+1)%searchResults.length;
+    jumpToSearchResult(searchIdx);
+  }
+}
+function jumpToSearchResult(i){
+  const p=searchResults[i];if(!p)return;
+  const cell=$('tree').querySelector(`.cell[data-pid="${p.id}"]`);
+  if(cell)cell.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
+  selectP(p.id);
+}
+function clearSearch(){
+  $('search-input').value='';
+  $('tree').querySelectorAll('.cell.highlight').forEach(el=>el.classList.remove('highlight'));
+  searchResults=[];
+}
+
+/* ════════════════════════════════════════
+   CTX + PANEL
+════════════════════════════════════════ */
+function openCtx(e,id){
+  ctxId=id;const m=$('ctx');
+  m.style.left=e.clientX+'px';m.style.top=e.clientY+'px';
+  m.classList.add('open');
+}
+function ctxDo(a){
+  $('ctx').classList.remove('open');if(!ctxId)return;
+  if(a==='edit')selectP(ctxId);
+  else if(a==='child'){selectP(ctxId);openAddChildModal(ctxId);}
+  else if(a==='partner')openAddPartnerModal(ctxId);
+  else if(a==='focus')focusLine(ctxId);
+  else if(a==='del'){selId=ctxId;delPersonPrompt();}
+}
+function focusLine(id){
+  // Dim all cells except ancestors/descendants of this person
+  const related=new Set([id]);
+  // ancestors
+  function walkUp(pid){
+    couples.forEach(c=>{
+      if((c.children||[]).includes(pid)){
+        const pA=c.parentA||c.personA;
+        const pB=c.parentB||c.personB;
+        if(pA){related.add(pA);walkUp(pA);}
+        if(pB){related.add(pB);walkUp(pB);}
+      }
+    });
+  }
+  function walkDown(pid){
+    couples.filter(c=>(c.parentA||c.personA)===pid||(c.parentB||c.personB)===pid).forEach(c=>{
+      (c.children||[]).forEach(cid=>{related.add(cid);walkDown(cid);});
+    });
+  }
+  walkUp(id);walkDown(id);
+  $('tree').querySelectorAll('.cell').forEach(el=>{
+    el.style.opacity=related.has(el.dataset.pid)?'1':'0.2';
+  });
+  notify('Klicke auf eine andere Person zum Zurücksetzen');
+  // reset on next click
+  const reset=()=>{
+    $('tree').querySelectorAll('.cell').forEach(el=>el.style.opacity='');
+    document.removeEventListener('click',reset);
+  };
+  setTimeout(()=>document.addEventListener('click',reset),200);
+}
+
+function ptab(t){
+  ['d','t','s'].forEach(x=>{
+    $('pt-'+x).classList.toggle('on',x===t);
+    $('pc-'+x).style.display=x===t?'':'none';
+  });
+}
+function togglePanel(){$('panel').classList.toggle('hide');}
+
+function updateCouplesList(){
+  const list=$('couples-list');if(!list)return;
+  list.innerHTML='';
+  couples.forEach(c=>{
+    const pAid=c.parentA||c.personA;
+    const pBid=c.parentB||c.personB||null;
+    const pA=GP(pAid),pB=pBid?GP(pBid):null;
+    const allCh=(c.children||[]).length;
+    const d=document.createElement('div');d.className='clist-item';
+    d.innerHTML=
+      `<span style="font-family:'Cinzel',serif;font-size:.86em;color:var(--core-bg)">${esc(c.id)}</span> `+
+      `<span style="color:var(--ink2)">${allCh} Kinder</span><br>`+
+      `<span style="color:var(--ink)">${esc(pA?.name||'?')} ♥ ${esc(pB?.name||'—')}</span>`;
+    d.onclick=()=>{if(pA){selectP(pAid);ptab('d');}};
+    list.appendChild(d);
+  });
+  if(!couples.length)list.innerHTML='<span style="font-size:.7em;color:var(--ink2)">Noch keine Paare.</span>';
+}
+
+/* ════════════════════════════════════════
+   SETTINGS HELPERS
+════════════════════════════════════════ */
+function setSibGap(v){
+  sibGap=v;
+  $('tree').querySelectorAll('.tchildren').forEach(el=>el.style.gap=v+'px');
+  drawLines();
+}
+function setConnH(v){
+  connH=v;
+  $('tree').querySelectorAll('.tconn').forEach(el=>el.style.minHeight=v+'px');
+  drawLines();
+}
+
+/* ════════════════════════════════════════
+   HOUSE NAME
+════════════════════════════════════════ */
+function editHN(){
+  const el=$('hn'),v=el.textContent;
+  el.innerHTML=`<input type="text" value="${esc(v)}" style="background:transparent;border:none;border-bottom:1px solid #7a6030;color:var(--gold2);font-family:'Cinzel',serif;font-size:1em;font-weight:900;letter-spacing:3px;outline:none;width:195px" onblur="this.parentNode.textContent=this.value||'HAUS'" onkeydown="if(event.key==='Enter')this.blur()">`;
+  el.querySelector('input').focus();
+}
+function editHM(){
+  const el=$('hm'),v=el.textContent;
+  el.innerHTML=`<input type="text" value="${esc(v)}" style="background:transparent;border:none;border-bottom:1px solid #4a3010;color:#b09050;font-style:italic;font-size:1em;outline:none;width:165px;font-family:'EB Garamond',serif" onblur="this.parentNode.textContent=this.value||'—'" onkeydown="if(event.key==='Enter')this.blur()">`;
+  el.querySelector('input').focus();
+}
+
+/* ════════════════════════════════════════
+   EXPORT / IMPORT / CLEAR / PNG
+════════════════════════════════════════ */
+function doExport(){
+  const data={persons,couples,house:$('hn').textContent,motto:$('hm').textContent,curYear};
+  const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='stammbaum.json';a.click();
+  notify('Exportiert ✓');
+}
+function doImport(input){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const d=JSON.parse(e.target.result);
+      persons=d.persons||[];couples=d.couples||[];curYear=d.curYear||1740;
+      $('s-yr').value=curYear;
+      persons.forEach(p=>{const n=+p.id.slice(1);if(n>=_puid)_puid=n+1;});
+      couples.forEach(c=>{const n=+c.id.slice(1);if(n>=_cuid)_cuid=n+1;});
+      // Migrate legacy field names
+  couples.forEach(c=>{ if(!c.parentA&&c.personA)c.parentA=c.personA; if(!c.parentB&&c.personB)c.parentB=c.personB; });
+      $('stp').style.display='none';
+      snapshot();rerender();
+      notify('Importiert: '+persons.length+' Personen');
+    }catch(err){notify('Importfehler');console.error(err);}
+  };
+  reader.readAsText(file);input.value='';
+}
+function exportPNG(){
+  notify('PNG wird vorbereitet…');
+  // Use html2canvas via CDN
+  if(!window.html2canvas){
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload=()=>doPNG();
+    document.head.appendChild(s);
+  }else doPNG();
+}
+function doPNG(){
+  html2canvas($('tree'),{
+    backgroundColor:'#c9bc98',
+    scale:2,
+    useCORS:true,
+    logging:false
+  }).then(canvas=>{
+    const a=document.createElement('a');
+    a.download='stammbaum.png';
+    a.href=canvas.toDataURL('image/png');
+    a.click();
+    notify('PNG gespeichert ✓');
+  }).catch(()=>notify('PNG-Export fehlgeschlagen'));
+}
+function clearAll(){
+  if(!confirm('Wirklich alles löschen?'))return;
+  snapshot();persons=[];couples=[];selId=null;_puid=1;_cuid=1;
+  $('tree').querySelectorAll('.tnode,#crest-top,.gen-ruler').forEach(e=>e.remove());
+  $('svg').innerHTML='';
+  $('pe').style.display='';$('pf2').style.display='none';
+  $('stp').style.display='flex';
+  notify('Gelöscht');
+}
+
+/* ════════════════════════════════════════
+   HELPERS
+════════════════════════════════════════ */
+/* Find which couple a person is a CHILD of (for tree anchoring) */
+function getAnchorCoupleId(personId){
+  const c=couples.find(c=>c.children.includes(personId));
+  return c?c.id:null;
+}
+// Legacy alias
+function getParentCoupleId(personId){ return getAnchorCoupleId(personId); }
+function CM(id){$(id).classList.remove('open');}
+function notify(msg){
+  const el=$('notif');el.textContent=msg;
+  el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),2600);
+}
+</script>
+</body>
+</html>

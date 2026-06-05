@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CharakterDatenbank - Aleria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/charakter-datenbank.css">
+  <script type="module" src="assets/js/charakter-datenbank-firebase.js"></script>
+  <script src="assets/js/charakter-datenbank-app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>CharakterDatenbank</h1>
+      <p>Aleria - Suche nach Personen, Haeusern, Clans, Orten und Organisationen</p>
+    </div>
+    <div class="sync" title="Firebase Status">
+      <span id="syncDot"></span>
+      <span id="syncText">lokal</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters" aria-label="Filter">
+      <div class="field wide">
+        <label for="searchInput">Suche</label>
+        <input id="searchInput" type="search" placeholder="Name, Clan, Ort, Organisation..." autocomplete="off">
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="landFilter">Land</label>
+          <select id="landFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="countyFilter">Grafschaft / Region</label>
+          <select id="countyFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="settlementFilter">Ort</label>
+          <select id="settlementFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="genderFilter">Geschlecht</label>
+          <select id="genderFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="clanFilter">Clan / Haus</label>
+          <select id="clanFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="orgFilter">Organisation</label>
+          <select id="orgFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field">
+          <label for="statusFilter">Status</label>
+          <select id="statusFilter"><option value="">Alle</option></select>
+        </div>
+        <div class="field age-row">
+          <label>Alter</label>
+          <div>
+            <input id="ageMin" type="number" min="0" placeholder="von">
+            <input id="ageMax" type="number" min="0" placeholder="bis">
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="resetBtn" type="button">Filter loeschen</button>
+        <button id="loadSeedBtn" type="button">Beispieldaten laden</button>
+      </div>
+    </aside>
+
+    <section class="results" aria-live="polite">
+      <div class="results-head">
+        <div>
+          <strong id="resultCount">0</strong>
+          <span>Treffer</span>
+        </div>
+        <select id="sortSelect" title="Sortierung">
+          <option value="name">Name</option>
+          <option value="land">Land</option>
+          <option value="age">Alter</option>
+          <option value="organization">Organisation</option>
+        </select>
+      </div>
+      <div id="resultList" class="result-list"></div>
+      <div id="emptyState" class="empty">Keine Charaktere gefunden.</div>
+    </section>
+  </main>
+
+  <template id="characterCardTemplate">
+    <article class="character-card">
+      <div class="card-main">
+        <div class="avatar" data-field="initials"></div>
+        <div>
+          <h2 data-field="fullName"></h2>
+          <p class="meta" data-field="meta"></p>
+          <p class="desc" data-field="description"></p>
+        </div>
+      </div>
+      <dl class="facts"></dl>
+      <div class="tags"></div>
+    </article>
+  </template>
+</body>
+</html>

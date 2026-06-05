@@ -1,0 +1,296 @@
+﻿/* Aleria Almanach - bestiary module page styles. */
+
+  /* ── BESTIARIUM FIELD SHEET ── */
+  .bestiary-page {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(250px, 24%) minmax(0, 1fr) minmax(270px, 25%);
+    grid-template-rows: minmax(0, 1fr) auto;
+    overflow: hidden;
+    color: var(--ink);
+    background:
+      var(--bestiary-bg, linear-gradient(0deg, transparent, transparent)),
+      radial-gradient(circle at 50% 16%, rgba(255,255,255,0.36), transparent 34%),
+      linear-gradient(90deg, rgba(139,105,20,0.1), transparent 18%, transparent 82%, rgba(139,105,20,0.1)),
+      var(--parchment);
+    background-size: cover, auto, auto, auto;
+    background-position: center;
+  }
+  .bestiary-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(139,105,20,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,105,20,0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.42;
+  }
+  .bestiary-left,
+  .bestiary-right,
+  .bestiary-figure-stage {
+    position: relative;
+    z-index: 1;
+    min-height: 0;
+  }
+  .bestiary-left,
+  .bestiary-right {
+    overflow: auto;
+    padding: 1.05rem;
+  }
+  .bestiary-left {
+    border-right: 1px solid rgba(139,105,20,0.24);
+    background: rgba(255,255,255,0.08);
+  }
+  .bestiary-right {
+    border-left: 1px solid rgba(139,105,20,0.24);
+    background: rgba(223,201,160,0.16);
+  }
+  .bestiary-class,
+  .bestiary-volume,
+  .bestiary-panel-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .bestiary-class {
+    font-size: 0.54rem;
+    letter-spacing: 0.15em;
+    margin: 0.4rem 0 0.45rem;
+  }
+  .bestiary-left h2 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.35rem, 2.3vw, 2rem);
+    line-height: 1.05;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .bestiary-latin {
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--ink-faded);
+  }
+  .bestiary-description {
+    margin-top: 1rem;
+    max-width: 34ch;
+    color: var(--ink);
+    font-size: 0.86rem;
+    line-height: 1.72;
+  }
+  .bestiary-panel {
+    margin-top: 1rem;
+    border: 1px solid rgba(139,105,20,0.32);
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0.04)),
+      rgba(232,214,166,0.24);
+    box-shadow: 0 8px 18px rgba(80,50,20,0.08);
+    padding: 0.8rem 0.9rem;
+  }
+  .bestiary-panel-title {
+    font-size: 0.56rem;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.62rem;
+  }
+  .bestiary-panel p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.58;
+    color: var(--ink-faded);
+  }
+  .bestiary-fact-list {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .bestiary-fact-row {
+    display: grid;
+    grid-template-columns: minmax(6rem, 0.9fr) minmax(0, 1.2fr);
+    gap: 0.5rem;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(139,105,20,0.14);
+    padding-bottom: 0.32rem;
+  }
+  .bestiary-fact-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .bestiary-fact-row span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .bestiary-fact-row strong {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .bestiary-figure-stage {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.2rem 0.8rem;
+  }
+  .bestiary-volume {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.18em;
+    opacity: 0.82;
+  }
+  .bestiary-side-note {
+    position: absolute;
+    top: 3.15rem;
+    left: 2rem;
+    z-index: 3;
+    max-width: 18ch;
+    color: rgba(88,64,34,0.74);
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.35;
+    transform: rotate(-2deg);
+  }
+  .bestiary-figure {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+  .bestiary-figure img {
+    position: absolute;
+    left: var(--bestiary-image-x, 50%);
+    top: var(--bestiary-image-y, 50%);
+    width: min(80%, 760px);
+    height: min(88%, 720px);
+    object-fit: contain;
+    object-position: center;
+    transform: translate(-50%, -50%) scale(var(--bestiary-image-scale, 1));
+    filter: sepia(16%) contrast(0.96) drop-shadow(0 16px 18px rgba(62,40,16,0.18));
+  }
+  .bestiary-figure-placeholder {
+    position: absolute;
+    inset: 14% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(139,105,20,0.32);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.1);
+  }
+  .bestiary-marker {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    z-index: 4;
+    display: grid;
+    grid-template-columns: auto minmax(0, 9rem);
+    gap: 0.35rem;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    color: rgba(74,52,27,0.9);
+  }
+  .bestiary-marker span,
+  .bestiary-number {
+    width: 1.55rem;
+    height: 1.55rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(139,105,20,0.55);
+    border-radius: 50%;
+    background: rgba(232,214,166,0.78);
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(80,50,20,0.14);
+  }
+  .bestiary-marker em {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    font-style: italic;
+    text-shadow: 0 1px 0 rgba(246,232,190,0.8);
+  }
+  .bestiary-anatomy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+  .bestiary-anatomy-list li {
+    display: grid;
+    grid-template-columns: 1.8rem minmax(0,1fr);
+    gap: 0.58rem;
+    align-items: start;
+  }
+  .bestiary-anatomy-list strong {
+    display: block;
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+  .bestiary-anatomy-list p {
+    margin-top: 0.16rem;
+  }
+  .bestiary-weakness-list {
+    margin: 0;
+    padding-left: 1rem;
+    color: var(--ink);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .bestiary-weakness-list li { margin-bottom: 0.36rem; }
+  .bestiary-quote-body {
+    position: relative;
+    min-height: 4rem;
+  }
+  .bestiary-quote-body blockquote {
+    margin: 0;
+    padding-right: 4.2rem;
+    color: var(--ink);
+    font-style: italic;
+    font-size: 0.83rem;
+    line-height: 1.5;
+  }
+  .bestiary-quote-body cite {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.1em;
+    font-style: normal;
+  }
+  .bestiary-quote-body img {
+    position: absolute;
+    right: 0;
+    bottom: -0.2rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(139,105,20,0.34);
+    filter: sepia(24%);
+  }
+  .bestiary-footer {
+    grid-column: 1 / -1;
+    position: relative;
+    z-index: 1;
+    padding: 0.48rem 1rem;
+    background: var(--ink);
+    color: var(--gold);
+    text-align: center;
+    font: 700 0.56rem/1 'Cinzel', serif;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+

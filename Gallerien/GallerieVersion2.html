@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aleria — Bildreferenzen</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════
+   THEME VARIABLES
+═══════════════════════════════════════════════════ */
+:root {
+  --gold:#8b6914;--gold-light:#a8820e;--gold-bright:#d4b464;
+  --red-wax:#8a2020;--shadow:rgba(80,50,20,0.22);
+}
+[data-theme="dark"] {
+  --parchment:#efe0c0;--parchment-dark:#e6d4a8;--parchment-deeper:#cdb880;
+  --parchment-bg:#dfc9a0;--ink:#2c1a08;--ink-faded:#5c3d1a;
+  --bg-page:#1a1410;
+  --header-grad:linear-gradient(180deg,#c8a96e 0%,#d4b87a 40%,#e6d4a8 100%);
+  --tabs-grad:linear-gradient(180deg,#c9ad72 0%,#e6d4a8 100%);
+  --sec-bg:linear-gradient(135deg,rgba(245,233,204,0.97) 0%,rgba(232,213,168,0.95) 100%);
+  --sec-border:var(--gold);
+  --cap-bg:rgba(252,244,220,0.95);
+  --modal-bg:rgba(60,35,10,0.82);
+  --cm-card-bg:#e6d4a8;
+  --cm-input-bg:#efe0c0;
+  --conf-bg:#efe0c0;
+  --toast-bg:#2c1a08;
+  --help-bg:rgba(180,130,40,0.09);
+  --help-border:rgba(180,130,40,0.22);
+  --scrollbar-track:#e6d4a8;
+}
+[data-theme="light"] {
+  --parchment:#faf6ee;--parchment-dark:#f0e8d0;--parchment-deeper:#d8c898;
+  --parchment-bg:#ece0c0;--ink:#1a0e04;--ink-faded:#4a3010;
+  --bg-page:#f5edd8;
+  --header-grad:linear-gradient(180deg,#e8c880 0%,#f0d890 40%,#f5edd8 100%);
+  --tabs-grad:linear-gradient(180deg,#e0c878 0%,#f0e8d0 100%);
+  --sec-bg:linear-gradient(135deg,rgba(255,250,240,0.99) 0%,rgba(245,235,210,0.97) 100%);
+  --sec-border:var(--gold-light);
+  --cap-bg:rgba(255,252,242,0.98);
+  --modal-bg:rgba(80,55,20,0.70);
+  --cm-card-bg:#f0e8d0;
+  --cm-input-bg:#faf6ee;
+  --conf-bg:#faf6ee;
+  --toast-bg:#1a0e04;
+  --help-bg:rgba(180,130,40,0.06);
+  --help-border:rgba(180,130,40,0.18);
+  --scrollbar-track:#f0e8d0;
+}
+
+/* ═══════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100vh;transition:background .3s}
+body{background:var(--bg-page);font-family:'EB Garamond',serif;color:var(--ink);
+  background-image:radial-gradient(ellipse at 15% 40%,rgba(90,55,15,0.15) 0%,transparent 55%),
+    radial-gradient(ellipse at 85% 70%,rgba(60,35,10,0.12) 0%,transparent 50%)}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--scrollbar-track)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* ═══════════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════════ */
+header{background:var(--header-grad);border-bottom:3px solid var(--gold);
+  padding:2.2rem 2rem 1.6rem;text-align:center;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(184,149,42,0.18) 0%,transparent 70%);pointer-events:none}
+.header-pre{font-style:italic;font-size:0.9rem;color:var(--ink-faded);letter-spacing:0.25em;opacity:0.75;margin-bottom:0.7rem}
+h1{font-family:'Cinzel',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;
+  color:var(--ink);text-shadow:0 1px 3px rgba(80,50,10,0.15);letter-spacing:0.07em}
+.header-sub{font-style:italic;color:var(--ink-faded);font-size:0.9rem;margin-top:0.3rem;opacity:0.8}
+.header-divider{width:260px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.2rem auto 0}
+
+/* ═══════════════════════════════════════════════════
+   TABS BAR
+═══════════════════════════════════════════════════ */
+.tabs-bar{position:sticky;top:0;z-index:200;
+  background:var(--tabs-grad);border-bottom:2px solid var(--gold);min-height:48px;
+  display:flex;align-items:stretch;overflow-x:auto;padding:0 4px;
+  scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent;gap:0}
+.tabs-bar::-webkit-scrollbar{height:3px}
+.tabs-bar::-webkit-scrollbar-thumb{background:var(--gold)}
+
+.tab-btn{font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;
+  padding:0.8rem 1.1rem;border:none;background:none;color:var(--gold-light);cursor:pointer;
+  white-space:nowrap;border-bottom:2px solid transparent;opacity:0.5;
+  transition:border-color .18s,background .18s,opacity .18s,box-shadow .15s;
+  display:flex;align-items:center;gap:6px;position:relative;flex-shrink:0}
+.tab-btn:hover{opacity:0.85;background:rgba(180,130,40,0.1)}
+.tab-btn.active{opacity:1;border-bottom-color:var(--gold);color:var(--gold)}
+
+/* Drag-target: card or section being dragged over this tab */
+.tab-btn.drag-target{
+  background:rgba(180,130,40,0.22)!important;border-bottom-color:var(--gold-bright)!important;
+  opacity:1!important;box-shadow:inset 0 -2px 0 var(--gold-bright);
+}
+@keyframes tabGlow{0%,100%{background:rgba(180,130,40,0.15)}50%{background:rgba(180,130,40,0.32)}}
+
+.tab-edit-name{background:none;border:none;font-family:inherit;font-size:inherit;
+  letter-spacing:inherit;color:inherit;text-transform:inherit;cursor:pointer;outline:none;min-width:30px}
+.tab-btn.active .tab-edit-name{cursor:text}
+.tab-del{font-size:0.65rem;opacity:0;cursor:pointer;padding:0 2px;transition:opacity .15s;line-height:1}
+.tab-btn:hover .tab-del{opacity:0.45}
+.tab-del:hover{opacity:1!important;color:var(--red-wax)}
+
+/* Toolbar (right side of tab bar) */
+.tabs-toolbar{margin-left:auto;display:flex;align-items:center;gap:0.5rem;
+  padding:0 10px;flex-shrink:0;border-left:1px solid rgba(139,105,20,0.2)}
+.tool-btn{background:none;border:1px solid transparent;color:var(--gold-light);
+  font-size:0.75rem;cursor:pointer;padding:4px 8px;border-radius:2px;
+  opacity:0.55;transition:all .15s;white-space:nowrap;font-family:'Cinzel',serif;letter-spacing:0.06em;font-size:0.58rem}
+.tool-btn:hover{opacity:1;border-color:rgba(139,105,20,0.4);background:rgba(180,130,40,0.1)}
+.size-label{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.1em;color:var(--gold-light);opacity:0.6}
+.size-slider{-webkit-appearance:none;appearance:none;width:72px;height:3px;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold-bright));
+  border-radius:2px;outline:none;cursor:pointer;opacity:0.6;transition:opacity .15s}
+.size-slider:hover{opacity:1}
+.size-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;
+  border-radius:50%;background:var(--gold-bright);border:1.5px solid var(--gold);cursor:pointer}
+.size-slider::-moz-range-thumb{width:11px;height:11px;border-radius:50%;
+  background:var(--gold-bright);border:1.5px solid var(--gold);cursor:pointer}
+.tab-add-btn{padding:0 12px;background:none;border:none;color:var(--gold-light);
+  font-size:1.1rem;cursor:pointer;opacity:0.45;transition:opacity .15s;align-self:center;flex-shrink:0}
+.tab-add-btn:hover{opacity:1}
+
+/* ═══════════════════════════════════════════════════
+   TAB HOVER MINI-PREVIEW PANEL
+═══════════════════════════════════════════════════ */
+#tab-preview{
+  position:fixed;z-index:300;pointer-events:none;
+  background:var(--cm-card-bg);border:1px solid var(--gold);
+  box-shadow:0 8px 32px rgba(0,0,0,0.45);border-radius:3px;
+  padding:8px 10px;min-width:180px;max-width:280px;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .18s ease,transform .18s ease;
+}
+#tab-preview.show{opacity:1;transform:translateY(0)}
+.tp-title{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.12em;
+  color:var(--gold);border-bottom:1px solid rgba(139,105,20,0.25);
+  padding-bottom:5px;margin-bottom:6px}
+.tp-grid{display:flex;flex-wrap:wrap;gap:4px}
+.tp-thumb{width:44px;height:60px;object-fit:cover;border:1px solid var(--gold);
+  border-radius:1px;background:var(--parchment-bg)}
+.tp-thumb-placeholder{width:44px;height:60px;background:var(--parchment-bg);
+  border:1px solid var(--parchment-deeper);border-radius:1px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-size:0.6rem;color:var(--gold-light);opacity:0.4}
+.tp-count{font-style:italic;font-size:0.68rem;color:var(--ink-faded);margin-top:5px}
+.tp-empty{font-style:italic;font-size:0.7rem;color:var(--ink-faded);opacity:0.5;padding:4px 0}
+
+/* ═══════════════════════════════════════════════════
+   MAIN / PANELS
+═══════════════════════════════════════════════════ */
+main{max-width:1600px;margin:0 auto;padding:2rem 2rem 5rem}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* ═══════════════════════════════════════════════════
+   GALLERY SECTION
+═══════════════════════════════════════════════════ */
+.gallery-section{margin-bottom:2.5rem;background:var(--sec-bg);
+  border:2px solid var(--sec-border);outline:1px solid rgba(100,70,20,0.25);
+  box-shadow:0 6px 28px var(--shadow);border-radius:3px;position:relative;
+  transition:box-shadow .2s,transform .15s,outline .15s}
+.gallery-section::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold-bright),transparent)}
+.section-header{display:flex;align-items:center;gap:10px;padding:11px 16px 9px;
+  border-bottom:1px solid rgba(100,70,20,0.18);background:rgba(180,130,50,0.06)}
+.section-title-input{font-family:'Cinzel',serif;font-size:clamp(13px,1.5vw,17px);font-weight:700;
+  color:var(--ink);letter-spacing:0.04em;flex:1;background:none;border:none;outline:none;cursor:text}
+.section-title-input::placeholder{color:var(--ink-faded);opacity:0.35}
+.section-actions{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.s-btn{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.1em;
+  padding:4px 9px;border:1px solid transparent;background:none;color:var(--gold);
+  cursor:pointer;border-radius:2px;transition:all .15s;white-space:nowrap}
+.s-btn:hover{border-color:var(--gold);background:rgba(180,130,50,0.1)}
+.s-btn.danger:hover{border-color:var(--red-wax);color:var(--red-wax);background:rgba(138,32,32,0.07)}
+
+/* Section drag states */
+.gallery-section.dragging-sec{opacity:0.35;transform:scale(0.98)}
+.gallery-section.drag-over-sec{
+  outline:2px solid var(--gold-bright);outline-offset:2px;
+  box-shadow:0 0 0 4px rgba(212,180,100,0.18),0 6px 28px var(--shadow)}
+
+/* ═══════════════════════════════════════════════════
+   CARD GRID
+═══════════════════════════════════════════════════ */
+.card-grid{display:flex;flex-wrap:wrap;gap:1rem;padding:1.2rem 1.4rem 1.4rem;
+  align-items:flex-start;min-height:80px;position:relative;
+  border-radius:0 0 3px 3px;transition:background .18s}
+/* Cross-section/tab drop highlight */
+.card-grid.drop-active{
+  background:rgba(180,130,40,0.07);
+  outline:2px dashed var(--gold);outline-offset:-6px;
+}
+
+/* ═══════════════════════════════════════════════════
+   IMAGE CARD
+═══════════════════════════════════════════════════ */
+.img-card{border:1px solid var(--gold);background:var(--parchment-dark);
+  box-shadow:0 4px 16px var(--shadow);border-radius:2px;cursor:grab;
+  display:flex;flex-direction:column;
+  transition:transform .2s,box-shadow .2s,opacity .18s;position:relative}
+.img-card:active{cursor:grabbing}
+.img-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px var(--shadow),0 0 0 1px var(--gold-light)}
+.img-card.dragging{opacity:0.2;transform:scale(0.92)!important;pointer-events:none;cursor:grabbing}
+.img-card.drag-over-card{
+  outline:2px solid var(--gold-bright);outline-offset:2px;
+  box-shadow:0 0 0 4px rgba(212,180,100,0.2),0 6px 20px var(--shadow)}
+
+.card-img-wrap{width:100%;position:relative;overflow:hidden;background:var(--parchment-bg);border-radius:2px 2px 0 0;cursor:pointer}
+.card-img-wrap img{position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:contain;object-position:center;display:block;transition:transform .3s}
+.img-card:hover .card-img-wrap img{transform:scale(1.04)}
+.card-img-placeholder{position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-size:1.8rem;color:var(--gold);opacity:0.2}
+.card-corner{position:absolute;top:5px;right:5px;width:10px;height:10px;
+  border-top:1.5px solid var(--gold);border-right:1.5px solid var(--gold);opacity:.35;pointer-events:none;z-index:1}
+.card-corner-bl{position:absolute;bottom:5px;left:5px;width:10px;height:10px;
+  border-bottom:1.5px solid var(--gold);border-left:1.5px solid var(--gold);opacity:.35;pointer-events:none;z-index:1}
+
+.card-caption{flex-shrink:0;padding:6px 38px 6px 8px;
+  border-top:1px solid rgba(100,70,20,0.18);background:var(--cap-bg);
+  border-radius:0 0 2px 2px;position:relative;min-height:32px}
+.caption-name{font-family:'Cinzel',serif;font-size:11px;font-weight:700;
+  color:var(--ink);letter-spacing:0.03em;display:block;
+  white-space:normal;overflow:visible;word-break:break-word;}
+.caption-sub{font-style:italic;font-size:10.5px;color:var(--ink-faded);
+  display:block;margin-top:1px;white-space:normal;overflow:visible;word-break:break-word;}
+.card-actions{position:absolute;top:50%;right:4px;transform:translateY(-50%);
+  display:flex;gap:1px;opacity:0;transition:opacity .14s}
+.img-card:hover .card-actions{opacity:1}
+.card-action-btn{background:none;border:none;color:var(--gold);font-size:12px;
+  cursor:pointer;padding:3px 4px;transition:color .12s;line-height:1}
+.card-action-btn:hover{color:var(--ink)}
+.card-action-btn.del:hover{color:var(--red-wax)}
+
+/* Section insert row */
+.sec-insert-row{
+  display:flex;align-items:center;gap:10px;
+  margin:0 0 0 0;padding:3px 0;
+  opacity:0;transition:opacity .2s;
+}
+.sec-insert-row:hover{ opacity:1; }
+/* Always show the last one (after the last section = "append") */
+.sec-insert-row:last-child{ opacity:0.35; }
+.sec-insert-row:last-child:hover{ opacity:1; }
+.sec-insert-line{
+  flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+  opacity:0.5;
+}
+.sec-insert-btn{
+  font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.14em;
+  text-transform:uppercase;white-space:nowrap;
+  padding:3px 10px;border:1px solid var(--gold-light);
+  background:var(--tabs-grad);color:var(--gold-light);
+  cursor:pointer;border-radius:2px;transition:all .15s;flex-shrink:0;
+}
+.sec-insert-btn:hover{
+  background:rgba(180,130,40,0.15);border-color:var(--gold-bright);
+  color:var(--gold-bright);
+}
+
+/* ADD CARD */
+.add-card{cursor:pointer;border:2px dashed var(--gold);background:transparent;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0.4rem;opacity:0.35;transition:opacity .2s,background .2s;border-radius:2px}
+.add-card:hover{opacity:1;background:rgba(180,130,50,0.06)}
+.add-card-icon{font-size:1.8rem;color:var(--gold)}
+.add-card-label{font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.18em;color:var(--gold);text-transform:uppercase}
+
+/* ═══════════════════════════════════════════════════
+   DROP INDICATOR (vertical line between cards)
+═══════════════════════════════════════════════════ */
+.drop-indicator{width:3px;align-self:stretch;min-height:60px;flex-shrink:0;
+  background:linear-gradient(180deg,transparent,var(--gold-bright),transparent);
+  border-radius:2px;animation:indPulse .5s ease infinite alternate;pointer-events:none}
+@keyframes indPulse{from{opacity:0.4}to{opacity:1}}
+
+/* ═══════════════════════════════════════════════════
+   LIGHTBOX
+═══════════════════════════════════════════════════ */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(8,4,1,0.93);
+  backdrop-filter:blur(6px);z-index:500;align-items:center;justify-content:center;padding:20px}
+#lightbox.active{display:flex}
+.lb-card{position:relative;max-width:min(1100px,calc(100vw - 40px));
+  max-height:calc(100vh - 40px);background:#0f0a04;border:1px solid var(--gold);
+  box-shadow:0 20px 80px rgba(0,0,0,0.95);animation:popIn .22s ease;display:flex;align-items:center}
+.lb-img{max-height:calc(100vh - 40px);max-width:100%;object-fit:contain;display:block}
+.lb-close{position:absolute;top:8px;right:10px;background:none;border:none;color:var(--gold);
+  font-size:1.4rem;cursor:pointer;z-index:10;opacity:.65;padding:4px;line-height:1;transition:opacity .15s}
+.lb-close:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,6,2,0.75);
+  border:1px solid var(--gold);color:var(--gold);font-size:1.1rem;cursor:pointer;
+  padding:8px 11px;line-height:1;transition:background .15s;z-index:10}
+.lb-nav:hover{background:rgba(180,130,50,0.3)}
+.lb-nav.prev{left:8px}.lb-nav.next{right:8px}
+.lb-info{position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(8,4,1,0.9),transparent);
+  padding:1.4rem 1rem 0.7rem;font-family:'Cinzel',serif;font-size:0.72rem;
+  color:var(--gold-bright);letter-spacing:0.1em;text-align:center;pointer-events:none}
+
+/* ═══════════════════════════════════════════════════
+   MODALS
+═══════════════════════════════════════════════════ */
+@keyframes popIn{from{opacity:0;transform:scale(0.93)}to{opacity:1;transform:scale(1)}}
+@keyframes sectionIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:var(--modal-bg);
+  backdrop-filter:blur(4px);z-index:600;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.active{display:flex}
+.cm-card{background:var(--cm-card-bg);border:2px solid var(--gold);
+  box-shadow:0 16px 60px rgba(0,0,0,0.75);width:min(520px,calc(100vw - 40px));
+  display:flex;flex-direction:column;overflow:hidden;animation:popIn .22s ease;
+  max-height:calc(100vh - 40px)}
+.cm-card.scrollable{overflow-y:auto}
+.cm-header{background:var(--ink);padding:10px 16px;font-family:'Cinzel',serif;
+  font-size:0.62rem;letter-spacing:0.25em;color:var(--gold-bright);text-transform:uppercase;
+  border-bottom:1px solid var(--gold);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.cm-header button{background:none;border:none;color:var(--gold-bright);font-size:1rem;cursor:pointer;opacity:.6;padding:0 4px;transition:opacity .15s}
+.cm-header button:hover{opacity:1}
+.cm-body{padding:1.3rem 1.5rem;display:flex;flex-direction:column;gap:0.9rem;overflow-y:auto}
+.cm-label{font-family:'Cinzel',serif;font-size:0.56rem;font-weight:700;color:var(--gold);
+  letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:0.22rem}
+.cm-input{width:100%;background:var(--cm-input-bg);border:1px solid var(--parchment-deeper);
+  color:var(--ink);font-family:'EB Garamond',serif;font-size:0.88rem;padding:0.4rem 0.6rem;outline:none}
+.cm-input:focus{border-color:var(--gold)}
+.cm-preview-wrap{width:100%;overflow:hidden;background:var(--cm-input-bg);
+  border:1px solid var(--parchment-deeper);display:flex;align-items:center;justify-content:center;min-height:60px}
+.cm-preview-wrap img{max-width:100%;max-height:240px;object-fit:contain;display:block}
+.cm-preview-placeholder{font-family:'Cinzel',serif;font-size:0.68rem;color:var(--gold-light);opacity:0.4;letter-spacing:0.1em;padding:1.2rem}
+.ratio-presets{display:flex;flex-wrap:wrap;gap:5px}
+.ratio-btn{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.07em;
+  padding:4px 10px;border:1px solid var(--parchment-deeper);background:var(--cm-input-bg);
+  color:var(--ink-faded);cursor:pointer;transition:all .15s;border-radius:1px}
+.ratio-btn:hover,.ratio-btn.active{border-color:var(--gold);color:var(--ink);background:rgba(180,130,50,0.13)}
+.ratio-manual{display:none;flex-direction:column;gap:6px;margin-top:5px}
+.ratio-manual.visible{display:flex}
+.ratio-px-row{display:flex;align-items:center;gap:7px}
+.ratio-px-input{width:70px;padding:4px 8px;font-family:'EB Garamond',serif;font-size:0.85rem;
+  background:var(--cm-input-bg);border:1px solid var(--parchment-deeper);color:var(--ink);outline:none;text-align:center}
+.ratio-px-input:focus{border-color:var(--gold)}
+.ratio-px-sep{color:var(--ink-faded);font-family:'Cinzel',serif;font-size:0.65rem}
+.ratio-lock{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none;font-size:0.72rem;color:var(--ink-faded)}
+.ratio-lock input{accent-color:var(--gold);cursor:pointer}
+.ratio-hint{font-style:italic;font-size:0.72rem;color:var(--ink-faded)}
+.cm-error{color:var(--red-wax);font-size:0.73rem;font-style:italic;display:none;margin-top:3px}
+.cm-actions{display:flex;gap:0.6rem;justify-content:flex-end;padding:0.8rem 1.5rem 1.1rem;flex-shrink:0}
+.cm-btn{font-family:'Cinzel',serif;font-size:0.63rem;letter-spacing:0.1em;padding:7px 17px;cursor:pointer;transition:all .15s;border-radius:1px}
+.cm-btn-cancel{background:none;border:1px solid var(--parchment-deeper);color:var(--ink-faded)}
+.cm-btn-cancel:hover{border-color:var(--gold);color:var(--ink)}
+.cm-btn-save{background:var(--ink);border:1px solid var(--gold);color:var(--gold)}
+.cm-btn-save:hover{background:var(--gold);color:var(--ink)}
+.cm-btn-save:disabled{opacity:.4;cursor:default}
+
+/* CONFIRM */
+#confirm-modal{z-index:700}
+.conf-card{background:var(--conf-bg);border:2px solid var(--red-wax);
+  box-shadow:0 12px 40px rgba(0,0,0,0.7);width:min(360px,calc(100vw - 40px));
+  padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:0.8rem;animation:popIn .2s ease}
+.conf-title{font-family:'Cinzel',serif;font-size:0.76rem;color:var(--red-wax);letter-spacing:0.12em;text-transform:uppercase}
+.conf-text{font-size:0.82rem;color:var(--ink-faded);line-height:1.5}
+.conf-actions{display:flex;gap:0.6rem;justify-content:flex-end}
+.conf-cancel,.conf-ok{font-family:'Cinzel',serif;font-size:0.63rem;letter-spacing:0.1em;padding:6px 15px;cursor:pointer;border-radius:1px}
+.conf-cancel{background:none;border:1px solid var(--parchment-deeper);color:var(--ink-faded)}
+.conf-ok{background:var(--red-wax);border:none;color:#fff;transition:opacity .15s}
+.conf-ok:hover{opacity:0.85}
+
+/* STATUS + TOAST */
+.status-bar{display:flex;align-items:center;justify-content:flex-end;padding:4px 0 6px;
+  font-family:'Cinzel',serif;font-size:0.56rem;color:var(--gold-bright);letter-spacing:0.1em;opacity:0.55}
+#sync-dot{width:7px;height:7px;border-radius:50%;background:#5a8a5a;display:inline-block;margin-right:5px;transition:background .3s}
+#sync-dot.saving{background:#d4b464;animation:blink .8s infinite}
+#sync-dot.error{background:var(--red-wax)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.35}}
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);
+  background:var(--toast-bg);border:1px solid var(--gold);color:var(--gold-bright);
+  font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.12em;
+  padding:0.5rem 1.2rem;z-index:999;pointer-events:none;opacity:0;transition:opacity .3s;
+  white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.5)}
+#toast.show{opacity:1}
+
+/* MISC */
+.empty-tab{text-align:center;padding:3rem 2rem;font-style:italic;color:var(--ink-faded);opacity:0.45;font-size:0.85rem}
+.empty-tab::before{content:'✦';display:block;font-size:1.3rem;margin-bottom:0.5rem;opacity:0.3;font-style:normal}
+.help-bar{background:var(--help-bg);border:1px solid var(--help-border);
+  padding:0.45rem 1.2rem;margin-bottom:1.2rem;border-radius:2px;font-size:0.72rem;
+  color:var(--ink-faded);display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.help-bar b{font-family:'Cinzel',serif;font-size:0.6rem;color:var(--gold);letter-spacing:0.05em}
+</style>
+
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, doc, setDoc, onSnapshot, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey:"AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
+  authDomain:"aleriaprojekt.firebaseapp.com",projectId:"aleriaprojekt",
+  storageBucket:"aleriaprojekt.firebasestorage.app",
+  messagingSenderId:"377039244960",appId:"1:377039244960:web:27ab9971f25657224403c5"
+},'gallery');
+const db=getFirestore(app);
+function setSyncUI(s){
+  const d=document.getElementById('sync-dot'),l=document.getElementById('sync-lbl');
+  if(!d)return;
+  d.className=s==='saving'?'saving':s==='error'?'error':'';
+  if(l)l.textContent=s==='saving'?'Speichert…':s==='error'?'Fehler':'Live';
+}
+window._gfb={
+  async save(state){
+    setSyncUI('saving');
+    try{
+      await setDoc(doc(db,'gallery_state','main'),{data:JSON.stringify(state),ts:serverTimestamp()});
+      setSyncUI('ok');
+    }catch(e){console.error(e);setSyncUI('error');}
+  },
+  subscribe(cb){
+    return onSnapshot(doc(db,'gallery_state','main'),snap=>{
+      if(snap.exists())cb(JSON.parse(snap.data().data||'{}'));
+    });
+  }
+};
+window.dispatchEvent(new Event('fb-rdy'));
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-pre">Aleria Kampagnenwelt — Dungeon Masters</div>
+  <h1>Bildreferenzen</h1>
+  <p class="header-sub">— Charaktere, Kreaturen, Orte &amp; Artefakte —</p>
+  <div class="header-divider"></div>
+</header>
+
+<div class="tabs-bar" id="tabs-bar">
+  <!-- Tab buttons inserted by JS here -->
+  <div class="tabs-toolbar">
+    <span class="size-label">S</span>
+    <input class="size-slider" id="size-slider" type="range" min="80" max="300" value="150" step="10"
+      title="Kartengröße anpassen" oninput="onSizeSlider(+this.value)">
+    <span class="size-label">L</span>
+    <button class="tool-btn" id="theme-btn" onclick="toggleTheme()" title="Hell/Dunkel wechseln">☀ Hell</button>
+  </div>
+  <button class="tab-add-btn" id="tab-add-btn" onclick="addTab()" title="Neuer Reiter">＋</button>
+</div>
+
+<main>
+  <div class="status-bar">
+    <span id="sync-dot"></span>
+    <span id="sync-lbl" style="font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.12em">Verbinde…</span>
+  </div>
+  <div id="panels"></div>
+</main>
+
+<!-- Tab hover mini-preview panel -->
+<div id="tab-preview">
+  <div class="tp-title" id="tp-title"></div>
+  <div class="tp-grid" id="tp-grid"></div>
+  <div class="tp-count" id="tp-count"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="modal-overlay" style="z-index:500">
+  <div class="lb-card">
+    <button class="lb-close" onclick="closeLB()">✕</button>
+    <button class="lb-nav prev" onclick="lbStep(-1)">❮</button>
+    <img class="lb-img" id="lb-img" src="" alt="">
+    <button class="lb-nav next" onclick="lbStep(1)">❯</button>
+    <div class="lb-info" id="lb-info"></div>
+  </div>
+</div>
+
+<!-- CARD MODAL -->
+<div id="card-modal" class="modal-overlay">
+  <div class="cm-card scrollable">
+    <div class="cm-header"><span id="cm-ttl">Bild hinzufügen</span><button onclick="closeCM()">✕</button></div>
+    <div class="cm-body">
+      <div>
+        <label class="cm-label">Bild-URL</label>
+        <input class="cm-input" id="cm-url" type="url" placeholder="https://i.imgur.com/xxxxx.jpg" oninput="cmPreview(this.value)">
+        <div id="cm-url-err" class="cm-error">URL konnte nicht geladen werden.</div>
+      </div>
+      <div>
+        <label class="cm-label">Vorschau</label>
+        <div class="cm-preview-wrap" id="cm-prev"><span class="cm-preview-placeholder">URL eingeben…</span></div>
+      </div>
+      <div>
+        <label class="cm-label">Format / Seitenverhältnis</label>
+        <div class="ratio-presets">
+          <button class="ratio-btn active" data-rw="2" data-rh="3" onclick="pickRatio(this)">2:3 — Portrait</button>
+          <button class="ratio-btn" data-rw="1" data-rh="1" onclick="pickRatio(this)">1:1 — Quadrat</button>
+          <button class="ratio-btn" data-rw="3" data-rh="2" onclick="pickRatio(this)">3:2 — Quer</button>
+          <button class="ratio-btn" data-rw="16" data-rh="9" onclick="pickRatio(this)">16:9</button>
+          <button class="ratio-btn" data-rw="4" data-rh="5" onclick="pickRatio(this)">4:5</button>
+          <button class="ratio-btn" data-rw="3" data-rh="4" onclick="pickRatio(this)">3:4</button>
+          <button class="ratio-btn" data-rw="0" data-rh="0" onclick="pickRatio(this)">Eigene…</button>
+        </div>
+        <div class="ratio-manual" id="ratio-manual">
+          <div class="ratio-px-row">
+            <input class="ratio-px-input" id="rpx-w" type="number" min="1" max="9999" placeholder="B" oninput="rpxInput('w')">
+            <span class="ratio-px-sep">×</span>
+            <input class="ratio-px-input" id="rpx-h" type="number" min="1" max="9999" placeholder="H" oninput="rpxInput('h')">
+            <span class="ratio-px-sep" style="font-size:0.65rem;color:var(--ink-faded)">px</span>
+          </div>
+          <label class="ratio-lock">
+            <input type="checkbox" id="ratio-lock" checked>
+            <span>Seitenverhältnis sperren</span>
+          </label>
+        </div>
+        <div class="ratio-hint" id="ratio-hint">Bild vollständig sichtbar (contain)</div>
+      </div>
+      <div>
+        <label class="cm-label">Name / Bezeichnung</label>
+        <input class="cm-input" id="cm-name" type="text" placeholder="z.B. Sir Aldric von Brennmark" maxlength="80">
+      </div>
+      <div>
+        <label class="cm-label">Untertitel (optional)</label>
+        <input class="cm-input" id="cm-sub" type="text" placeholder="z.B. Ritter · Cenyr" maxlength="80">
+      </div>
+    </div>
+    <div class="cm-actions">
+      <button class="cm-btn cm-btn-cancel" onclick="closeCM()">Abbrechen</button>
+      <button class="cm-btn cm-btn-save" onclick="saveCard()">Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION MODAL -->
+<div id="sec-modal" class="modal-overlay">
+  <div class="cm-card">
+    <div class="cm-header"><span>Neue Sektion anlegen</span><button onclick="closeSecModal()">✕</button></div>
+    <div class="cm-body">
+      <div>
+        <label class="cm-label">Titel</label>
+        <input class="cm-input" id="sec-ttl-inp" type="text" placeholder="z.B. Magiergilde, Portraits…" maxlength="60"
+          onkeydown="if(event.key==='Enter')saveSecModal()">
+      </div>
+    </div>
+    <div class="cm-actions">
+      <button class="cm-btn cm-btn-cancel" onclick="closeSecModal()">Abbrechen</button>
+      <button class="cm-btn cm-btn-save" onclick="saveSecModal()">Anlegen</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRM -->
+<div id="confirm-modal" class="modal-overlay" style="z-index:700">
+  <div class="conf-card">
+    <div class="conf-title" id="conf-ttl">Bestätigung</div>
+    <p class="conf-text" id="conf-txt"></p>
+    <div class="conf-actions">
+      <button class="conf-cancel" onclick="closeConf()">Abbrechen</button>
+      <button class="conf-ok" id="conf-ok">Löschen</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+'use strict';
+// ══════════════════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════════════════
+let S = { tabs:[], activeTab:null, sections:[] };
+let _saveTmr = null;
+let _ignoreRemote = false;
+let CARD_W = 150;
+
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+// ══════════════════════════════════════════════════════════════════
+// DRAG STATE
+// Using a simple object + dragCounter trick to fix dragleave firing
+// on child elements (the #1 cause of broken D&D highlight)
+// ══════════════════════════════════════════════════════════════════
+const drag = {
+  type: null,      // 'card' | 'section'
+  id: null,
+  srcSecId: null,
+  srcTabId: null,
+  tabTimer: null,
+  overEl: null,    // current highlighted element
+};
+
+function dragReset() {
+  clearTimeout(drag.tabTimer);
+  Object.assign(drag, {type:null,id:null,srcSecId:null,srcTabId:null,tabTimer:null,overEl:null});
+  document.querySelectorAll('.drag-over-card,.drag-over-sec,.drop-active,.drag-target')
+    .forEach(el=>el.classList.remove('drag-over-card','drag-over-sec','drop-active','drag-target'));
+}
+
+// Safe dragleave: only clears when we actually leave the element (not its children)
+function reallyLeft(el, e) {
+  return !el.contains(e.relatedTarget);
+}
+
+// ══════════════════════════════════════════════════════════════════
+// THEME
+// ══════════════════════════════════════════════════════════════════
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = next;
+  document.getElementById('theme-btn').textContent = next === 'dark' ? '☀ Hell' : '☾ Dunkel';
+  try { localStorage.setItem('aleria_theme', next); } catch(e) {}
+}
+function applyTheme(t) {
+  document.documentElement.dataset.theme = t;
+  document.getElementById('theme-btn').textContent = t === 'dark' ? '☀ Hell' : '☾ Dunkel';
+}
+
+// ══════════════════════════════════════════════════════════════════
+// CARD SIZE
+// ══════════════════════════════════════════════════════════════════
+function onSizeSlider(v) {
+  CARD_W = v;
+  secsOf(S.activeTab).forEach(s => refreshGrid(s.id));
+  try { localStorage.setItem('aleria_card_w', v); } catch(e) {}
+}
+
+// ══════════════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════════════
+function init() {
+  // Restore prefs
+  try {
+    const t = localStorage.getItem('aleria_theme'); if(t) applyTheme(t);
+    const w = localStorage.getItem('aleria_card_w'); if(w) { CARD_W=+w; document.getElementById('size-slider').value=w; }
+  } catch(e) {}
+
+  const go = () => {
+    window._gfb.subscribe(remote => {
+      if (_ignoreRemote) return;
+      if (!remote || !remote.tabs) return;
+      S = remote;
+      if (!S.activeTab && S.tabs.length) S.activeTab = S.tabs[0].id;
+      fullRebuild();
+    });
+    setTimeout(() => {
+      if (!S.tabs.length) { S = mkDefault(); fullRebuild(); save(); }
+    }, 1800);
+  };
+  if (window._gfb) go(); else window.addEventListener('fb-rdy', go, { once:true });
+}
+
+function mkDefault() {
+  const tabs = [
+    {id:uid(),name:'Portraits'},{id:uid(),name:'Items'},
+    {id:uid(),name:'Wappen & Symbole'},{id:uid(),name:'Tiere & Kreaturen'}
+  ];
+  const sections = tabs.map((t,i) => ({id:uid(),tabId:t.id,title:t.name,order:i,cards:[]}));
+  return { tabs, activeTab:tabs[0].id, sections };
+}
+
+function save() {
+  clearTimeout(_saveTmr);
+  _saveTmr = setTimeout(() => {
+    _ignoreRemote = true;
+    window._gfb.save(S).then(() => setTimeout(() => { _ignoreRemote = false; }, 1200));
+  }, 700);
+}
+
+// ══════════════════════════════════════════════════════════════════
+// FULL REBUILD
+// ══════════════════════════════════════════════════════════════════
+function fullRebuild() {
+  buildTabBtns();
+  const host = document.getElementById('panels');
+  const existing = new Set([...host.querySelectorAll('.tab-panel')].map(p => p.dataset.tabId));
+  const current = new Set(S.tabs.map(t => t.id));
+  existing.forEach(id => { if (!current.has(id)) { const p=document.getElementById('panel-'+id); if(p) p.remove(); } });
+  S.tabs.forEach(t => {
+    if (!existing.has(t.id)) {
+      const p = document.createElement('div');
+      p.className='tab-panel'; p.id='panel-'+t.id; p.dataset.tabId=t.id;
+      host.appendChild(p);
+    }
+    rebuildPanel(t.id);
+  });
+  showTab(S.activeTab, false);
+}
+
+// ══════════════════════════════════════════════════════════════════
+// TAB BUTTONS
+// ══════════════════════════════════════════════════════════════════
+function buildTabBtns() {
+  const bar = document.getElementById('tabs-bar');
+  const toolbar = document.querySelector('.tabs-toolbar');
+  [...bar.querySelectorAll('.tab-btn')].forEach(b => b.remove());
+
+  S.tabs.forEach(tab => {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (tab.id === S.activeTab ? ' active' : '');
+    btn.dataset.tabId = tab.id;
+
+    const inp = document.createElement('input');
+    inp.className='tab-edit-name'; inp.value=tab.name; inp.maxLength=40;
+    inp.style.width = Math.max(32, tab.name.length * 8.5) + 'px';
+    inp.onclick = e => { e.stopPropagation(); switchTab(tab.id); };
+    inp.onblur = () => { tab.name=inp.value.trim()||tab.name; inp.value=tab.name; inp.style.width=Math.max(32,tab.name.length*8.5)+'px'; buildTabBtns(); save(); };
+    inp.onkeydown = e => { if(e.key==='Enter') inp.blur(); e.stopPropagation(); };
+    inp.oninput = () => { inp.style.width = Math.max(32,inp.value.length*8.5)+'px'; };
+
+    const del = document.createElement('span');
+    del.className='tab-del'; del.textContent='✕';
+    del.onclick = e => { e.stopPropagation(); confirmDeleteTab(tab.id, tab.name); };
+
+    btn.appendChild(inp); btn.appendChild(del);
+    btn.onclick = e => { if(e.target===btn) switchTab(tab.id); };
+
+    // ── Hover mini-preview ───────────────────────────────
+    let hoverTimer = null;
+    btn.addEventListener('mouseenter', () => {
+      hoverTimer = setTimeout(() => showTabPreview(tab, btn), 320);
+    });
+    btn.addEventListener('mouseleave', () => {
+      clearTimeout(hoverTimer);
+      hideTabPreview();
+    });
+
+    // ── Drop target for card/section drags ───────────────
+    btn.addEventListener('dragover', e => {
+      if (!drag.type) return;
+      e.preventDefault();
+      btn.classList.add('drag-target');
+      if (!drag.tabTimer) {
+        drag.tabTimer = setTimeout(() => {
+          if (tab.id !== S.activeTab) switchTab(tab.id);
+        }, 700);
+      }
+    });
+    btn.addEventListener('dragleave', e => {
+      if (reallyLeft(btn, e)) {
+        btn.classList.remove('drag-target');
+        clearTimeout(drag.tabTimer); drag.tabTimer = null;
+      }
+    });
+    btn.addEventListener('drop', e => {
+      e.preventDefault(); e.stopPropagation();
+      btn.classList.remove('drag-target');
+      clearTimeout(drag.tabTimer); drag.tabTimer = null;
+      if (drag.type === 'card' && tab.id !== drag.srcTabId) {
+        moveCardToTab(drag.id, drag.srcSecId, tab.id);
+        showToast('Karte → „' + tab.name + '"');
+      } else if (drag.type === 'section' && tab.id !== drag.srcTabId) {
+        moveSectionToTab(drag.id, tab.id);
+        showToast('Sektion → „' + tab.name + '"');
+      }
+    });
+
+    bar.insertBefore(btn, toolbar);
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+// TAB MINI-PREVIEW
+// ══════════════════════════════════════════════════════════════════
+function showTabPreview(tab, btn) {
+  const preview = document.getElementById('tab-preview');
+  const secs = secsOf(tab.id);
+  const allCards = secs.flatMap(s => s.cards).filter(c => c.url);
+  const total = secs.flatMap(s => s.cards).length;
+
+  document.getElementById('tp-title').textContent = tab.name;
+  const grid = document.getElementById('tp-grid');
+  grid.innerHTML = '';
+  const shown = allCards.slice(0, 8);
+  if (shown.length === 0) {
+    grid.innerHTML = '<div class="tp-empty">Noch keine Bilder</div>';
+  } else {
+    shown.forEach(c => {
+      const img = document.createElement('img');
+      img.className = 'tp-thumb'; img.src = c.url; img.alt = c.name||'';
+      img.title = c.name||'';
+      img.onerror = () => img.remove();
+      grid.appendChild(img);
+    });
+  }
+  document.getElementById('tp-count').textContent =
+    total > 0 ? `${total} Bild${total!==1?'er':''} · ${secs.length} Sektion${secs.length!==1?'en':''}` : '';
+
+  // Position below the tab button
+  const rect = btn.getBoundingClientRect();
+  preview.style.left = Math.min(rect.left, window.innerWidth - 300) + 'px';
+  preview.style.top = (rect.bottom + 6) + 'px';
+  preview.classList.add('show');
+}
+function hideTabPreview() {
+  document.getElementById('tab-preview').classList.remove('show');
+}
+
+function switchTab(id) {
+  if (S.activeTab === id) return;
+  S.activeTab = id;
+  showTab(id, true);
+  save();
+}
+
+function showTab(id, updateBtns) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.dataset.tabId === id));
+  if (updateBtns) document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tabId === id));
+}
+
+// ══════════════════════════════════════════════════════════════════
+// PANEL
+// ══════════════════════════════════════════════════════════════════
+function rebuildPanel(tabId) {
+  const panel = document.getElementById('panel-'+tabId);
+  if (!panel) return;
+  panel.innerHTML = '';
+  const secs = secsOf(tabId);
+  if (!secs.length) {
+    panel.innerHTML = `<div class="empty-tab">Noch keine Sektionen</div>
+      <div style="text-align:center;padding:1rem">
+        <button class="cm-btn cm-btn-save" onclick="openSecModal('${tabId}', -1)" style="font-size:0.72rem;padding:8px 20px">＋ Erste Sektion anlegen</button>
+      </div>`;
+    return;
+  }
+  const help = document.createElement('div'); help.className='help-bar';
+  help.innerHTML = `<span><b>Karte ziehen</b> → auf andere Sektion oder Reiter-Tab</span><span><b>Sektion ziehen</b> → Header anfassen</span><span><b>Tab-Hover</b> → Vorschau</span><span><b>Größe</b> → Slider rechts oben</span>`;
+  panel.appendChild(help);
+
+  // Insert button BEFORE first section
+  panel.appendChild(makeInsertBtn(tabId, -1));
+
+  secs.forEach((sec, i) => {
+    const el = buildSecEl(sec);
+    el.style.animationDelay = i*0.04+'s';
+    panel.appendChild(el);
+    // Insert button AFTER each section
+    panel.appendChild(makeInsertBtn(tabId, sec.order));
+  });
+}
+
+function makeInsertBtn(tabId, afterOrder) {
+  const wrap = document.createElement('div');
+  wrap.className = 'sec-insert-row';
+  wrap.innerHTML = `<div class="sec-insert-line"></div>
+    <button class="sec-insert-btn" onclick="openSecModal('${tabId}', ${afterOrder})">＋ Sektion hier einfügen</button>
+    <div class="sec-insert-line"></div>`;
+  return wrap;
+}
+
+function secsOf(tabId) {
+  return S.sections.filter(s => s.tabId === tabId).sort((a,b) => (a.order||0)-(b.order||0));
+}
+
+// ══════════════════════════════════════════════════════════════════
+// SECTION ELEMENT
+// ══════════════════════════════════════════════════════════════════
+function buildSecEl(sec) {
+  const div = document.createElement('div');
+  div.className='gallery-section'; div.dataset.secId=sec.id;
+  div.style.animation='sectionIn .35s ease both';
+
+  const hdr = document.createElement('div'); hdr.className='section-header';
+
+  // Drag handle on header (section drag)
+  hdr.style.cursor='grab';
+  hdr.draggable=true;
+  hdr.addEventListener('dragstart', e => {
+    // Block drag if user clicked an input or button
+    if (e.target.tagName==='INPUT'||e.target.tagName==='BUTTON'||e.target.tagName==='SPAN') {
+      e.preventDefault(); return;
+    }
+    drag.type='section'; drag.id=sec.id; drag.srcTabId=sec.tabId;
+    div.classList.add('dragging-sec');
+    e.dataTransfer.effectAllowed='move';
+    e.dataTransfer.setData('text/plain','section:'+sec.id);
+  });
+  hdr.addEventListener('dragend', () => {
+    div.classList.remove('dragging-sec');
+    dragReset();
+  });
+
+  const ti = document.createElement('input'); ti.className='section-title-input';
+  ti.value=sec.title; ti.placeholder='Sektionsname…'; ti.maxLength=60;
+  ti.draggable=false;
+  ti.ondragstart=e=>e.preventDefault();
+  ti.onmousedown=e=>e.stopPropagation();
+  ti.onblur=()=>{sec.title=ti.value.trim()||sec.title; ti.value=sec.title; save();};
+  ti.onkeydown=e=>{if(e.key==='Enter') ti.blur();};
+
+  const acts = document.createElement('div'); acts.className='section-actions';
+  acts.draggable=false;
+  acts.ondragstart=e=>e.preventDefault();
+  acts.innerHTML=`<button class="s-btn" onclick="openCM('${sec.id}',null)">＋ Bild</button><button class="s-btn danger" onclick="confirmDelSec('${sec.id}')">✕ Sektion</button>`;
+
+  hdr.appendChild(ti); hdr.appendChild(acts); div.appendChild(hdr);
+
+  const grid = buildGrid(sec);
+  div.appendChild(grid);
+
+  // Section drop zone: reorder sections OR accept card cross-section drop
+  div.addEventListener('dragover', e => {
+    if (!drag.type) return;
+    e.preventDefault();
+    if (drag.type==='section' && drag.id!==sec.id && drag.srcTabId===sec.tabId) {
+      div.classList.add('drag-over-sec');
+    }
+    if (drag.type==='card' && drag.srcSecId!==sec.id) {
+      grid.classList.add('drop-active');
+    }
+  });
+  div.addEventListener('dragleave', e => {
+    if (reallyLeft(div, e)) {
+      div.classList.remove('drag-over-sec');
+      grid.classList.remove('drop-active');
+    }
+  });
+  div.addEventListener('drop', e => {
+    e.preventDefault(); e.stopPropagation();
+    div.classList.remove('drag-over-sec');
+    grid.classList.remove('drop-active');
+    if (drag.type==='section' && drag.id!==sec.id && drag.srcTabId===sec.tabId) {
+      const secs = secsOf(sec.tabId);
+      const si=secs.findIndex(s=>s.id===drag.id), di=secs.findIndex(s=>s.id===sec.id);
+      if (si>=0&&di>=0) { const[m]=secs.splice(si,1); secs.splice(di,0,m); secs.forEach((s,i)=>s.order=i); }
+      rebuildPanel(sec.tabId); save(); showToast('Sektion neu angeordnet');
+    } else if (drag.type==='card' && drag.srcSecId!==sec.id) {
+      dropCardIntoSection(drag.id, drag.srcSecId, sec.id, null);
+      showToast('Karte verschoben');
+    }
+  });
+
+  return div;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// CARD GRID
+// ══════════════════════════════════════════════════════════════════
+function buildGrid(sec) {
+  const grid = document.createElement('div');
+  grid.className='card-grid'; grid.id='grid-'+sec.id;
+
+  const cards = [...(sec.cards||[])].sort((a,b)=>(a.order||0)-(b.order||0));
+  cards.forEach((c,i) => {
+    const el = buildCardEl(c, sec, cards);
+    el.style.animationDelay = i*0.03+'s';
+    grid.appendChild(el);
+  });
+
+  // ADD placeholder
+  const add = document.createElement('div');
+  add.className='add-card';
+  add.style.cssText=`width:${CARD_W}px;height:${Math.round(CARD_W*3/2)+34}px`;
+  add.innerHTML=`<div class="add-card-icon">＋</div><div class="add-card-label">Bild hinzufügen</div>`;
+  add.onclick=()=>openCM(sec.id,null);
+  grid.appendChild(add);
+
+  return grid;
+}
+
+function refreshGrid(secId) {
+  const g = document.getElementById('grid-'+secId);
+  const sec = S.sections.find(s=>s.id===secId);
+  if (!g||!sec) { rebuildPanel(S.activeTab); return; }
+  g.replaceWith(buildGrid(sec));
+}
+
+// ══════════════════════════════════════════════════════════════════
+// CARD ELEMENT
+// ══════════════════════════════════════════════════════════════════
+function buildCardEl(card, sec, allCards) {
+  const rw=card.rw||2, rh=card.rh||3;
+  const w=CARD_W;
+
+  const div = document.createElement('div');
+  div.className='img-card'; div.dataset.cardId=card.id; div.dataset.secId=sec.id;
+  div.style.width=w+'px';
+
+  // ── Make the WHOLE CARD draggable (not a child element) ──────
+  // This is the correct approach — draggable on child elements is unreliable.
+  div.draggable = true;
+  div.addEventListener('dragstart', e => {
+    // Don't start drag from buttons
+    if (e.target.tagName==='BUTTON') { e.preventDefault(); return; }
+    drag.type='card'; drag.id=card.id; drag.srcSecId=sec.id;
+    // Look up tabId from section data to be safe
+    const srcSec = S.sections.find(s=>s.id===sec.id);
+    drag.srcTabId = srcSec ? srcSec.tabId : sec.tabId;
+    e.dataTransfer.effectAllowed='move';
+    e.dataTransfer.setData('text/plain','card:'+card.id);
+    // Delay adding class so the drag image captures the un-faded card
+    requestAnimationFrame(()=>div.classList.add('dragging'));
+  });
+  div.addEventListener('dragend', () => {
+    div.classList.remove('dragging');
+    dragReset();
+  });
+
+  // ── Image area ───────────────────────────────────────────
+  const wrap = document.createElement('div');
+  wrap.className='card-img-wrap';
+  wrap.style.paddingBottom = (rh/rw*100).toFixed(3)+'%';
+
+  if (card.url) {
+    const img = document.createElement('img');
+    img.src=card.url; img.alt=card.name||''; img.loading='lazy';
+    img.onerror=()=>img.replaceWith(Object.assign(document.createElement('div'),{className:'card-img-placeholder',textContent:'?'}));
+    wrap.appendChild(img);
+  } else {
+    wrap.innerHTML='<div class="card-img-placeholder">＋</div>';
+  }
+  // Click on image → lightbox (only if not dragging)
+  wrap.addEventListener('click', e => { if (!drag.id) openLB(card, sec, allCards); });
+  div.appendChild(wrap);
+
+  // Corner deco
+  ['card-corner','card-corner-bl'].forEach(cls=>{
+    const d=document.createElement('div'); d.className=cls; div.appendChild(d);
+  });
+
+  // ── Caption ──────────────────────────────────────────────
+  const cap = document.createElement('div'); cap.className='card-caption';
+  cap.innerHTML=`<span class="caption-name">${esc(card.name||'Unbenannt')}</span>${card.sub?`<span class="caption-sub">${esc(card.sub)}</span>`:''}<div class="card-actions"><button class="card-action-btn" title="Bearbeiten" onclick="openCM('${sec.id}','${card.id}');event.stopPropagation()">✎</button><button class="card-action-btn del" title="Löschen" onclick="confirmDelCard('${sec.id}','${card.id}');event.stopPropagation()">✕</button></div>`;
+  div.appendChild(cap);
+
+  // ── Drop target: insert before this card ──────────────────
+  div.addEventListener('dragover', e => {
+    if (drag.type!=='card' || drag.id===card.id) return;
+    e.preventDefault(); e.stopPropagation();
+    div.classList.add('drag-over-card');
+  });
+  div.addEventListener('dragleave', e => {
+    if (reallyLeft(div, e)) div.classList.remove('drag-over-card');
+  });
+  div.addEventListener('drop', e => {
+    e.preventDefault(); e.stopPropagation();
+    div.classList.remove('drag-over-card');
+    if (drag.type!=='card' || drag.id===card.id) return;
+    dropCardIntoSection(drag.id, drag.srcSecId, sec.id, card.id);
+    showToast('Karte verschoben');
+  });
+
+  return div;
+}
+
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+// ══════════════════════════════════════════════════════════════════
+// CARD MOVEMENT
+// ══════════════════════════════════════════════════════════════════
+// Drop card into a section, optionally before a specific card
+function dropCardIntoSection(cardId, fromSecId, toSecId, beforeCardId) {
+  const ss = S.sections.find(s=>s.id===fromSecId);
+  const ds = S.sections.find(s=>s.id===toSecId);
+  if (!ss||!ds) return;
+  const idx = ss.cards.findIndex(c=>c.id===cardId); if(idx<0) return;
+  const [card] = ss.cards.splice(idx,1);
+  if (beforeCardId) {
+    const bi = ds.cards.findIndex(c=>c.id===beforeCardId);
+    bi<0 ? ds.cards.push(card) : ds.cards.splice(bi,0,card);
+  } else {
+    ds.cards.push(card);
+  }
+  ss.cards.forEach((c,i)=>c.order=i);
+  ds.cards.forEach((c,i)=>c.order=i);
+  refreshGrid(fromSecId);
+  if (fromSecId!==toSecId) refreshGrid(toSecId);
+  save();
+}
+
+// Move card to a different tab (into first section of that tab, or create one)
+function moveCardToTab(cardId, fromSecId, toTabId) {
+  const fromSec = S.sections.find(s=>s.id===fromSecId);
+  const fromTabId = fromSec ? fromSec.tabId : null;
+  let targetSec = secsOf(toTabId)[0];
+  if (!targetSec) {
+    targetSec = {id:uid(), tabId:toTabId, title:'Allgemein', order:0, cards:[]};
+    S.sections.push(targetSec);
+    rebuildPanel(toTabId);
+  }
+  dropCardIntoSection(cardId, fromSecId, targetSec.id, null);
+  if (fromTabId && fromTabId !== toTabId) rebuildPanel(fromTabId);
+}
+
+// Move entire section to another tab
+function moveSectionToTab(secId, toTabId) {
+  const sec = S.sections.find(s=>s.id===secId); if(!sec) return;
+  const fromTabId = sec.tabId;
+  sec.tabId = toTabId;
+  // Fix order in both tabs
+  secsOf(fromTabId).forEach((s,i)=>s.order=i);
+  const newOrder = secsOf(toTabId); newOrder.forEach((s,i)=>s.order=i);
+  rebuildPanel(fromTabId);
+  rebuildPanel(toTabId);
+  save();
+  showToast('Sektion verschoben');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// TAB MANAGEMENT
+// ══════════════════════════════════════════════════════════════════
+function addTab() {
+  const id=uid(), name='Neue Kategorie';
+  S.tabs.push({id,name});
+  S.sections.push({id:uid(), tabId:id, title:name, order:0, cards:[]});
+  S.activeTab=id;
+  const host=document.getElementById('panels');
+  const p=document.createElement('div'); p.className='tab-panel'; p.id='panel-'+id; p.dataset.tabId=id;
+  host.appendChild(p);
+  rebuildPanel(id); buildTabBtns(); showTab(id,false); save();
+  setTimeout(()=>{ const i=document.querySelector(`.tab-btn[data-tab-id="${id}"] .tab-edit-name`); if(i) i.select(); },60);
+  showToast('Neuer Reiter angelegt');
+}
+
+function confirmDeleteTab(id, name) {
+  openConf('Reiter löschen?', `Alles unter „${name}" wird entfernt.`, ()=>{
+    S.tabs=S.tabs.filter(t=>t.id!==id);
+    S.sections=S.sections.filter(s=>s.tabId!==id);
+    const p=document.getElementById('panel-'+id); if(p) p.remove();
+    if (S.activeTab===id) S.activeTab=S.tabs.length?S.tabs[0].id:null;
+    buildTabBtns(); if(S.activeTab) showTab(S.activeTab,false); save();
+    showToast('Reiter gelöscht');
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+// SECTION MANAGEMENT
+// ══════════════════════════════════════════════════════════════════
+let _smTab=null, _smAfterOrder=null;
+
+// afterOrder: insert AFTER the section with this order value.
+// -1 = insert at the very top. null/undefined = append at end.
+function openSecModal(tabId, afterOrder) {
+  _smTab=tabId;
+  _smAfterOrder = (afterOrder !== undefined) ? afterOrder : null;
+  document.getElementById('sec-ttl-inp').value='';
+  document.getElementById('sec-modal').classList.add('active');
+  setTimeout(()=>document.getElementById('sec-ttl-inp').focus(), 50);
+}
+function closeSecModal(){ document.getElementById('sec-modal').classList.remove('active'); }
+function saveSecModal(){
+  const t=document.getElementById('sec-ttl-inp').value.trim(); if(!t) return;
+  const secs=secsOf(_smTab);
+
+  let insertIdx; // index in secs array to insert before
+  if (_smAfterOrder === null || _smAfterOrder === undefined) {
+    // Append at end
+    insertIdx = secs.length;
+  } else if (_smAfterOrder === -1) {
+    // Insert at very top
+    insertIdx = 0;
+  } else {
+    // Insert after the section whose order === _smAfterOrder
+    const pos = secs.findIndex(s => s.order === _smAfterOrder);
+    insertIdx = pos >= 0 ? pos + 1 : secs.length;
+  }
+
+  const newSec = {id:uid(), tabId:_smTab, title:t, order:0, cards:[]};
+  // Inject at correct position and renumber
+  secs.splice(insertIdx, 0, newSec);
+  secs.forEach((s,i) => s.order=i);
+  // Push into global state if it's genuinely new
+  if (!S.sections.find(s=>s.id===newSec.id)) S.sections.push(newSec);
+
+  closeSecModal(); rebuildPanel(_smTab); save(); showToast('Sektion angelegt');
+}
+function confirmDelSec(secId){
+  const s=S.sections.find(x=>x.id===secId);
+  openConf('Sektion löschen?',`„${s?.title||'Sektion'}" und alle Bilder werden entfernt.`,()=>{
+    S.sections=S.sections.filter(x=>x.id!==secId);
+    const el=document.querySelector(`.gallery-section[data-sec-id="${secId}"]`);
+    if(el) el.remove(); else rebuildPanel(S.activeTab);
+    save(); showToast('Sektion gelöscht');
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+// RATIO PICKER
+// ══════════════════════════════════════════════════════════════════
+let _rw=2, _rh=3;
+function pickRatio(btn){
+  document.querySelectorAll('.ratio-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const w=+btn.dataset.rw, h=+btn.dataset.rh;
+  const man=document.getElementById('ratio-manual');
+  if(w===0&&h===0){
+    man.classList.add('visible');
+    document.getElementById('ratio-hint').textContent='Pixelgröße eingeben';
+  } else {
+    man.classList.remove('visible');
+    _rw=w; _rh=h;
+    document.getElementById('ratio-hint').textContent=`${w}∶${h} aktiv`;
+    updatePrevSize();
+  }
+}
+function rpxInput(axis){
+  const wEl=document.getElementById('rpx-w'), hEl=document.getElementById('rpx-h');
+  const locked=document.getElementById('ratio-lock').checked;
+  const wv=parseFloat(wEl.value)||0, hv=parseFloat(hEl.value)||0;
+  if(locked){
+    if(axis==='w'&&wv>0&&_rw>0) hEl.value=Math.round(wv*_rh/_rw)||'';
+    else if(axis==='h'&&hv>0&&_rh>0) wEl.value=Math.round(hv*_rw/_rh)||'';
+  }
+  const fw=parseFloat(wEl.value)||0, fh=parseFloat(hEl.value)||0;
+  if(fw>0&&fh>0){ _rw=fw; _rh=fh; updatePrevSize(); document.getElementById('ratio-hint').textContent=`${Math.round(fw)}×${Math.round(fh)}px`; }
+}
+function updatePrevSize(){
+  const wrap=document.getElementById('cm-prev'); if(!wrap) return;
+  wrap.style.maxHeight=Math.min(240,Math.round(300*_rh/_rw))+'px';
+}
+
+// ══════════════════════════════════════════════════════════════════
+// CARD MODAL
+// ══════════════════════════════════════════════════════════════════
+let _cmSec=null, _cmCard=null;
+function openCM(secId, cardId){
+  _cmSec=secId; _cmCard=cardId;
+  const sec=S.sections.find(s=>s.id===secId);
+  const card=cardId ? sec?.cards.find(c=>c.id===cardId) : null;
+  document.getElementById('cm-ttl').textContent=card?'Bild bearbeiten':'Bild hinzufügen';
+  document.getElementById('cm-url').value=card?.url||'';
+  document.getElementById('cm-name').value=card?.name||'';
+  document.getElementById('cm-sub').value=card?.sub||'';
+  document.getElementById('cm-url-err').style.display='none';
+  _rw=card?.rw||2; _rh=card?.rh||3;
+  let matched=false;
+  document.querySelectorAll('.ratio-btn').forEach(b=>{
+    const hit=(+b.dataset.rw===_rw&&+b.dataset.rh===_rh);
+    b.classList.toggle('active',hit); if(hit) matched=true;
+  });
+  const man=document.getElementById('ratio-manual');
+  if(!matched){
+    document.querySelectorAll('.ratio-btn').forEach(b=>{b.classList.remove('active');if(+b.dataset.rw===0)b.classList.add('active');});
+    man.classList.add('visible');
+    document.getElementById('rpx-w').value=_rw; document.getElementById('rpx-h').value=_rh;
+  } else {
+    man.classList.remove('visible');
+  }
+  const wrap=document.getElementById('cm-prev');
+  if(card?.url) wrap.innerHTML=`<img src="${card.url}" style="max-width:100%;max-height:240px;object-fit:contain">`;
+  else wrap.innerHTML='<span class="cm-preview-placeholder">URL eingeben…</span>';
+  updatePrevSize();
+  document.getElementById('card-modal').classList.add('active');
+  setTimeout(()=>document.getElementById('cm-url').focus(),60);
+}
+function closeCM(){ document.getElementById('card-modal').classList.remove('active'); _cmSec=_cmCard=null; }
+function cmPreview(url){
+  const wrap=document.getElementById('cm-prev'), err=document.getElementById('cm-url-err');
+  if(!url.trim()){ wrap.innerHTML='<span class="cm-preview-placeholder">URL eingeben…</span>'; err.style.display='none'; return; }
+  const img=new Image();
+  img.onload=()=>{ err.style.display='none'; wrap.innerHTML=''; img.style.cssText='max-width:100%;max-height:240px;object-fit:contain'; wrap.appendChild(img); };
+  img.onerror=()=>{ err.style.display='block'; wrap.innerHTML='<span class="cm-preview-placeholder">Nicht ladbar</span>'; };
+  img.src=url;
+}
+function saveCard(){
+  const url=document.getElementById('cm-url').value.trim();
+  const name=document.getElementById('cm-name').value.trim()||'Unbenannt';
+  const sub=document.getElementById('cm-sub').value.trim();
+  const sec=S.sections.find(s=>s.id===_cmSec); if(!sec) return;
+  if(_cmCard){
+    const c=sec.cards.find(x=>x.id===_cmCard);
+    if(c){ c.url=url; c.name=name; c.sub=sub; c.rw=_rw; c.rh=_rh; }
+  } else {
+    sec.cards.push({id:uid(),url,name,sub,order:sec.cards.length,rw:_rw,rh:_rh});
+  }
+  const sid=_cmSec; closeCM(); refreshGrid(sid); save();
+  showToast(_cmCard?'Bild aktualisiert':'Bild hinzugefügt');
+}
+function confirmDelCard(secId, cardId){
+  const sec=S.sections.find(s=>s.id===secId), c=sec?.cards.find(x=>x.id===cardId);
+  openConf('Bild löschen?',`„${c?.name||'Dieses Bild'}" wird entfernt.`,()=>{
+    sec.cards=sec.cards.filter(x=>x.id!==cardId); refreshGrid(secId); save(); showToast('Bild gelöscht');
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+// LIGHTBOX
+// ══════════════════════════════════════════════════════════════════
+let _lbCards=[], _lbi=0;
+function openLB(card, sec, all){
+  if(!card.url) return;
+  _lbCards=all.filter(c=>c.url); _lbi=_lbCards.findIndex(c=>c.id===card.id); if(_lbi<0) _lbi=0;
+  showLBCard(); document.getElementById('lightbox').classList.add('active'); document.body.style.overflow='hidden';
+}
+function showLBCard(){
+  const c=_lbCards[_lbi]; if(!c) return;
+  document.getElementById('lb-img').src=c.url;
+  document.getElementById('lb-info').innerHTML=`<div style="font-weight:700">${esc(c.name||'')}</div>${c.sub?`<div style="font-size:0.63rem;opacity:0.65;margin-top:2px">${esc(c.sub)}</div>`:''}<div style="font-size:0.56rem;opacity:0.4;margin-top:3px">${_lbi+1} / ${_lbCards.length}</div>`;
+}
+function lbStep(d){ _lbi=(_lbi+d+_lbCards.length)%_lbCards.length; showLBCard(); }
+function closeLB(){ document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow=''; }
+document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target.id==='lightbox') closeLB(); });
+
+// ══════════════════════════════════════════════════════════════════
+// CONFIRM
+// ══════════════════════════════════════════════════════════════════
+let _confCb=null;
+function openConf(ttl,txt,cb){
+  document.getElementById('conf-ttl').textContent=ttl;
+  document.getElementById('conf-txt').textContent=txt;
+  _confCb=cb;
+  document.getElementById('conf-ok').onclick=()=>{ closeConf(); _confCb&&_confCb(); };
+  document.getElementById('confirm-modal').classList.add('active');
+}
+function closeConf(){ document.getElementById('confirm-modal').classList.remove('active'); }
+document.getElementById('confirm-modal').addEventListener('click', e=>{ if(e.target.id==='confirm-modal') closeConf(); });
+
+// ══════════════════════════════════════════════════════════════════
+// TOAST + KEYBOARD
+// ══════════════════════════════════════════════════════════════════
+let _tt;
+function showToast(m){
+  const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show');
+  clearTimeout(_tt); _tt=setTimeout(()=>t.classList.remove('show'),2400);
+}
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ closeCM(); closeSecModal(); closeConf(); closeLB(); }
+  if(document.getElementById('lightbox').classList.contains('active')){
+    if(e.key==='ArrowRight') lbStep(1);
+    if(e.key==='ArrowLeft') lbStep(-1);
+  }
+});
+
+init();
+</script>
+</body>
+</html>

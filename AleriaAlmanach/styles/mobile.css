@@ -1,0 +1,728 @@
+﻿/* Aleria Almanach - general mobile polish. Extracted from styles.css. */
+
+  /* ── PHONE POLISH ───────────────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    html {
+      overflow-x: hidden;
+      scroll-padding-top: 3rem;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-size: 15px;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    header {
+      padding: 2rem 1rem 1.35rem;
+      width: 100%;
+    }
+
+    .header-pre {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      max-width: 100%;
+      font-size: clamp(1.45rem, 7.4vw, 1.8rem);
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+    }
+
+    .header-subtitle {
+      max-width: 25rem;
+      margin: 0.55rem auto 0;
+      padding: 0 0.2rem;
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .header-divider {
+      width: min(72vw, 260px);
+      margin-top: 1rem;
+    }
+
+    .gallery-tabs {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 0.25rem;
+      margin-bottom: 1.1rem;
+      padding: 0 0.65rem;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-tab-btn {
+      flex: 0 0 auto;
+      padding: 0.72rem 0.82rem;
+      font-size: 0.55rem;
+      letter-spacing: 0.13em;
+    }
+
+    .gallery-tab-btn.gallery-tab-add {
+      margin-left: 0;
+    }
+
+    main,
+    #main-content {
+      padding: 1.1rem 0.75rem 1rem;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    .page-layout {
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    .section-block {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.9rem 0.75rem 1rem;
+    }
+
+    .section-header {
+      gap: 0.45rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .section-title {
+      max-width: 100%;
+      padding: 0.28rem 0.48rem;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    .section-kicker {
+      margin-bottom: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .archive-toolbar {
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+      padding: 0.85rem;
+      width: 100%;
+      max-width: calc(100vw - 1.5rem);
+    }
+
+    .archive-search-wrap,
+    .comment-form-row,
+    .cp-portrait-upload-area,
+    .module-editor-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .archive-search-clear {
+      width: 100%;
+    }
+
+    .archive-search-meta,
+    .archive-empty-text {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .card-grid,
+    .char-grid {
+      grid-template-columns: repeat(2, minmax(0, calc((100vw - 3.75rem) / 2)));
+      gap: 0.75rem;
+      justify-content: start;
+    }
+
+    .card-label,
+    .char-card-label {
+      padding: 0.75rem 0.65rem 0.6rem;
+    }
+
+    .card-label h3,
+    .char-card-name {
+      font-size: 0.68rem;
+      line-height: 1.32;
+    }
+
+    .card-type-tag,
+    .char-card-title {
+      font-size: 0.62rem;
+    }
+
+    #sidebar {
+      margin: 0 0.75rem 1rem;
+      padding: 0.8rem;
+    }
+
+    .sidebar-section {
+      padding: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .app-status-toast {
+      right: 0.65rem;
+      bottom: 0.65rem;
+      max-width: calc(100vw - 1.3rem);
+      font-size: 0.86rem;
+    }
+
+    .sync-conflict-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .firebase-sync-status {
+      left: 0.65rem;
+      right: 0.65rem;
+      bottom: 4.4rem;
+      max-width: none;
+      justify-content: flex-start;
+      font-size: 0.74rem;
+    }
+
+    .firebase-sync-label {
+      white-space: normal;
+    }
+
+    #modal-overlay,
+    #comment-form-overlay,
+    #edit-comment-overlay,
+    #delete-confirm-overlay,
+    #attachment-form-overlay,
+    #char-profile-overlay,
+    #module-editor-overlay,
+    #crop-overlay {
+      padding: 0;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+
+    .modal-card,
+    .comment-form-card,
+    .edit-comment-card,
+    .delete-confirm-card,
+    .char-profile-card,
+    .module-editor-card,
+    .crop-card {
+      width: 100vw;
+      max-width: none;
+      height: 100dvh;
+      max-height: none;
+      border-width: 0;
+      border-radius: 0;
+    }
+
+    .modal-close {
+      top: 0.35rem;
+      right: 0.45rem;
+      min-width: 2.35rem;
+      min-height: 2.35rem;
+      background: rgba(230,212,168,0.9);
+      border: 1px solid rgba(139,105,20,0.32);
+    }
+
+    .modal-page-header {
+      padding: 0.65rem 0.65rem 0.7rem;
+      gap: 0.45rem;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background:
+        linear-gradient(180deg, rgba(239,224,192,0.98), rgba(230,212,168,0.98)),
+        var(--parchment-dark);
+    }
+
+    .modal-page-top {
+      gap: 0.55rem;
+    }
+
+    .modal-page-title {
+      padding-right: 2.8rem;
+      font-size: 0.56rem;
+      letter-spacing: 0.14em;
+    }
+
+    .modal-page-subtitle {
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .modal-page-tabs {
+      margin-right: -0.65rem;
+      padding-right: 0.65rem;
+      max-width: 100%;
+    }
+
+    .modal-page-tab,
+    .modal-page-tool,
+    .modal-page-btn,
+    .module-editor-mini-btn {
+      min-height: 2.05rem;
+      font-size: 0.52rem;
+    }
+
+    .modal-img-col,
+    .session-art-col {
+      height: clamp(140px, 24dvh, 220px);
+    }
+    .session-page.session-focus-mode .session-art-col {
+      height: 0;
+      min-height: 0;
+    }
+
+    .modal-text-col {
+      padding: 0.85rem 0.8rem 1rem;
+    }
+
+    .modal-category {
+      font-size: 0.52rem;
+      letter-spacing: 0.2em;
+    }
+
+    .modal-title {
+      font-size: 0.96rem;
+    }
+
+    .modal-description,
+    .commentator-text,
+    .entry-quote,
+    .scene-speech {
+      font-size: 0.86rem;
+      line-height: 1.68;
+    }
+
+    .wanted-page,
+    .profile-page,
+    .artifact-page {
+      overflow-y: auto;
+      justify-content: flex-start;
+    }
+
+    .artifact-header {
+      padding: 0.8rem;
+      gap: 0.7rem;
+    }
+
+    .artifact-header h2 {
+      font-size: 1.15rem;
+    }
+
+    .artifact-left-panel,
+    .artifact-main,
+    .artifact-right-panel {
+      padding: 0.8rem;
+    }
+
+    .artifact-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .recipe-edit-row,
+    .module-recipe-step-row,
+    .module-recipe-variant-row,
+    .module-recipe-warning-row,
+    .module-recipe-equipment-row,
+    .module-recipe-property-row,
+    .caste-edit-row,
+    .court-edit-row {
+      grid-template-columns: 1fr;
+    }
+
+    .wanted-grid,
+    .profile-grid {
+      grid-template-columns: 1fr;
+      padding: 0.8rem;
+      gap: 0.85rem;
+    }
+
+    .wanted-card,
+    .profile-card {
+      transform: none;
+    }
+
+    .wanted-card:hover,
+    .profile-card:hover {
+      transform: none;
+    }
+
+    .comments-scroll {
+      padding: 0.8rem 0.75rem 0.35rem;
+      gap: 0.65rem;
+    }
+
+    .comments-page {
+      flex-direction: column !important;
+    }
+
+    .comments-page > div:first-child {
+      width: 100% !important;
+      min-width: 0 !important;
+      height: 108px;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(212,180,100,0.2);
+    }
+
+    .comment-entry,
+    .comment-entry.left,
+    .comment-entry.right {
+      align-self: stretch;
+      flex-direction: row;
+      gap: 0.65rem;
+      padding: 0.85rem 0;
+      max-width: 100%;
+    }
+
+    .comment-entry.right .comment-content,
+    .comment-entry.right .comment-char-header {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .comment-portrait,
+    .comment-portrait-placeholder {
+      width: 58px;
+      height: 58px;
+      font-size: 0.9rem;
+    }
+
+    .comment-body {
+      padding: 0.62rem 0.75rem;
+    }
+
+    .comment-entry.right .comment-body {
+      border-right-width: 1px;
+      border-left: 3px solid rgba(139,105,20,0.58);
+    }
+
+    .comments-form-bar,
+    .comment-form-actions,
+    .delete-confirm-actions,
+    .char-profile-actions,
+    .module-editor-footer,
+    .module-editor-footer-actions,
+    .crop-actions {
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .comment-quick-tools {
+      flex-wrap: wrap;
+      align-items: stretch;
+      padding: 0.55rem 0.8rem;
+    }
+
+    .comment-jump-search {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+
+    .comment-scroll-actions {
+      flex: 0 0 auto;
+    }
+
+    .comment-jump-status {
+      flex: 1 1 160px;
+      min-width: 0;
+      align-self: center;
+    }
+
+    .comments-form-hint {
+      font-size: 0.72rem;
+      line-height: 1.45;
+    }
+
+    .comment-btn-cancel,
+    .comment-btn-submit,
+    .delete-btn-confirm,
+    .char-save-btn,
+    .char-delete-btn {
+      flex: 1 1 140px;
+      min-height: 2.35rem;
+      text-align: center;
+    }
+
+    .bestiary-edit-row.anatomy,
+    .bestiary-edit-row.annotation,
+    .bestiary-edit-row.weakness,
+    .quest-file-edit-row.objective,
+    .quest-file-edit-row.simple,
+    .quest-file-edit-row.contact,
+    .quest-file-edit-row.reward {
+      grid-template-columns: 1fr;
+    }
+
+    .comment-form-card,
+    .edit-comment-card {
+      padding: 0.9rem;
+      overflow-y: auto;
+      width: min(100%, calc(100vw - 20px));
+      max-height: 96vh;
+    }
+
+    .comment-form-title,
+    .edit-comment-title,
+    .delete-confirm-title,
+    .module-editor-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      line-height: 1.35;
+    }
+
+    .cf-mode-toggle {
+      gap: 0.35rem;
+    }
+
+    .cf-mode-btn {
+      min-height: 2.25rem;
+      padding: 0.4rem 0.35rem;
+      font-size: 0.62rem;
+    }
+
+    .cf-char-picker {
+      grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+      max-height: 280px;
+      gap: 0.55rem;
+    }
+
+    .cf-char-option img,
+    .cf-char-option-placeholder {
+      width: 72px;
+      height: 72px;
+    }
+
+    .cf-emote-picker {
+      grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+      max-height: 420px;
+      gap: 0.55rem;
+    }
+
+    .cf-emote-option {
+      padding: 0.3rem;
+    }
+
+    .cf-emote-option img {
+      min-height: 118px;
+    }
+
+    .fmt-toolbar,
+    .text-format-toolbar {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 0.35rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .fmt-btn,
+    .text-format-btn {
+      flex: 0 0 auto;
+      min-width: 2rem;
+      min-height: 2rem;
+    }
+
+    .fmt-color-row {
+      flex: 0 0 auto;
+    }
+
+    .fmt-color-swatch {
+      width: 18px;
+      height: 18px;
+    }
+
+    .fmt-editor {
+      min-height: 150px;
+      font-size: 0.94rem;
+    }
+
+    .comment-live-preview {
+      padding: 0.75rem;
+    }
+
+    .char-profile-header,
+    .module-editor-head {
+      align-items: stretch;
+    }
+
+    .char-profile-tabs {
+      min-width: 0;
+      overflow-x: auto;
+    }
+
+    .char-profile-tab {
+      flex: 0 0 auto;
+      padding: 0.85rem 0.8rem;
+      font-size: 0.52rem;
+      letter-spacing: 0.12em;
+    }
+
+    .char-profile-close,
+    .module-editor-close {
+      min-width: 3rem;
+    }
+
+    .char-tab-panel.active {
+      overflow-y: auto;
+    }
+
+    #cp-tab-info.char-tab-panel.active {
+      flex-direction: column;
+    }
+
+    .cp-info-portrait {
+      width: 100%;
+      height: clamp(170px, 34vh, 260px);
+      border-right: none;
+      border-bottom: 1px solid var(--parchment-deeper);
+    }
+
+    .cp-info-fields,
+    .cp-images-panel {
+      padding: 1rem;
+      justify-content: flex-start;
+    }
+
+    .cp-portrait-thumb {
+      width: min(140px, 48vw);
+      align-self: center;
+    }
+
+    .emote-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .module-editor-card {
+      height: 100dvh;
+    }
+
+    .module-editor-head {
+      padding: 0.8rem;
+    }
+
+    .module-editor-body.visible {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .module-editor-main,
+    .module-editor-side {
+      overflow: visible;
+      padding: 0.85rem;
+    }
+
+    .module-editor-main {
+      border-right: none;
+      border-bottom: 1px solid rgba(139,105,20,0.16);
+    }
+
+    .module-editor-section {
+      gap: 0.65rem;
+      padding: 0.8rem 0;
+    }
+
+    .module-page-card,
+    .module-scene-block-card,
+    .inline-edit-section,
+    .inline-comment-card,
+    .inline-scene-card,
+    .inline-profile-card {
+      padding: 0.7rem;
+    }
+
+    .module-page-head,
+    .module-scene-block-head,
+    .inline-edit-head {
+      align-items: stretch;
+    }
+
+    .module-page-actions,
+    .module-scene-block-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
+    }
+
+    .module-editor-mini-btn {
+      width: 100%;
+    }
+
+    .module-character-list {
+      grid-template-columns: 1fr;
+      max-height: 180px;
+    }
+
+    .inline-edit-grid,
+    .inline-stat-row {
+      grid-template-columns: 1fr;
+    }
+
+    .module-editor-preview-stage {
+      max-height: 320px;
+    }
+
+    .scene-bubble,
+    .scene-bubble.left,
+    .scene-bubble.right {
+      flex-direction: row;
+      align-self: stretch;
+    }
+
+    .scene-bubble.right .scene-bubble-body {
+      text-align: left;
+    }
+
+    .scene-bubble img {
+      width: 54px;
+      height: 54px;
+    }
+
+    .scene-bubble-body {
+      max-width: none;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .curl-corner-left,
+    .curl-corner-right {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .modal-page-header {
+      padding: 0.55rem 0.5rem 0.6rem;
+    }
+
+    .modal-page-nav {
+      gap: 0.35rem;
+    }
+
+    .modal-page-btn,
+    .modal-page-tab,
+    .modal-page-tool {
+      padding-left: 0.48rem;
+      padding-right: 0.48rem;
+      letter-spacing: 0.04em;
+    }
+
+    .modal-img-col,
+    .session-art-col {
+      height: 132px;
+    }
+
+    .card-grid,
+    .char-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-tab-btn {
+      padding-inline: 0.7rem;
+    }
+  }

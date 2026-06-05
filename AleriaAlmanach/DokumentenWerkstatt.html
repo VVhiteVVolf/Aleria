@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aleria Dokumentenwerkstatt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Creepster&family=Eagle+Lake&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Fredericka+the+Great&family=Homemade+Apple&family=IM+Fell+English+SC&family=Macondo&family=MedievalSharp&family=Pirata+One&family=Rock+Salt&family=Shadows+Into+Light&family=Special+Elite&family=Uncial+Antiqua&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="DokumentenWerkstatt/css/werkstatt.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-kicker">Aleria Almanach</div>
+      <h1>Dokumentenwerkstatt</h1>
+    </div>
+    <div class="status" id="status">Bereit.</div>
+    <div class="topbar-actions">
+      <button class="btn" type="button" onclick="newDocument()">Neu</button>
+      <button class="btn" type="button" onclick="saveDraft()">Entwurf speichern</button>
+      <button class="btn" type="button" onclick="loadDraft()">Entwurf laden</button>
+      <button class="btn" type="button" onclick="exportJson()">JSON</button>
+      <label class="btn" for="json-import">Import</label>
+      <input id="json-import" type="file" accept="application/json" hidden onchange="importJson(this)">
+      <button class="btn primary" type="button" onclick="exportHtml()">HTML exportieren</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="editor-pane">
+      <div class="editor-inner">
+        <nav class="editor-tabs" aria-label="Werkzeugbereiche">
+          <button class="tab-btn active" type="button" data-tab="document" onclick="switchEditorTab('document')">Dokument</button>
+          <button class="tab-btn" type="button" data-tab="style" onclick="switchEditorTab('style')">Schrift</button>
+          <button class="tab-btn" type="button" data-tab="paper" onclick="switchEditorTab('paper')">Papier</button>
+          <button class="tab-btn" type="button" data-tab="text" onclick="switchEditorTab('text')">Text</button>
+          <button class="tab-btn" type="button" data-tab="export" onclick="switchEditorTab('export')">Export</button>
+        </nav>
+
+        <section class="section editor-panel active" data-panel="document">
+          <div class="section-head">
+            <div class="section-title">Dokument</div>
+          </div>
+          <div class="grid">
+            <div class="field" data-field-key="template">
+              <label for="doc-template">Vorlage</label>
+              <select id="doc-template" onchange="setTemplate(this.value)">
+                <option value="letter">Brief</option>
+                <option value="book">Buch / Seiten</option>
+                <option value="note">Zerrissene Notiz</option>
+                <option value="wanted">Fahndung</option>
+              </select>
+            </div>
+            <div class="field" data-field-key="preset">
+              <label for="doc-preset">Aleria-Preset</label>
+              <select id="doc-preset">
+                <option value="">Manuell</option>
+                <option value="archiveLetter">Archivbrief</option>
+                <option value="mageNote">Magiernotiz</option>
+                <option value="tavernNotice">Tavernaushang</option>
+                <option value="cultFragment">Kultfragment</option>
+                <option value="nobleDecree">Adelsdekret</option>
+                <option value="fieldBook">Forschungsbuch</option>
+                <option value="wantedPoster">Steckbrief</option>
+              </select>
+            </div>
+            <div class="field" data-field-key="slug">
+              <label for="doc-slug">Dateiname / Link</label>
+              <input id="doc-slug" type="text" placeholder="archivnotiz-aelira">
+            </div>
+            <div class="field wide" data-field-key="title">
+              <label for="doc-title">Titel</label>
+              <input id="doc-title" type="text" value="Archivnotiz oder Dokument">
+            </div>
+            <div class="field wide" data-field-key="subtitle">
+              <label for="doc-subtitle">Untertitel</label>
+              <input id="doc-subtitle" type="text" value="Aus den Aufzeichnungen des Almanachs">
+            </div>
+            <div class="field" data-field-key="author">
+              <label for="doc-author">Autor / Absender</label>
+              <input id="doc-author" type="text" value="Unbekannter Schreiber">
+            </div>
+            <div class="field" data-field-key="recipient">
+              <label for="doc-recipient">Empfänger / Bezug</label>
+              <input id="doc-recipient" type="text" value="">
+            </div>
+            <div class="field" data-field-key="date">
+              <label for="doc-date">Datum</label>
+              <input id="doc-date" type="text" value="">
+            </div>
+            <div class="field" data-field-key="location">
+              <label for="doc-location">Ort</label>
+              <input id="doc-location" type="text" value="">
+            </div>
+            <div class="field wide" id="doc-image-field" data-field-key="image">
+              <label for="doc-image">Bild / Signatur / Siegel</label>
+              <input id="doc-image" type="url" placeholder="https://i.imgur.com/...">
+            </div>
+            <div class="field" data-field-key="image-options">
+              <label for="doc-image-position">Bildposition</label>
+              <select id="doc-image-position">
+                <option value="right">Unten rechts</option>
+                <option value="center">Mittig</option>
+                <option value="left">Unten links</option>
+                <option value="watermark">Wasserzeichen</option>
+              </select>
+            </div>
+            <div class="field" data-field-key="image-options">
+              <label for="doc-image-size">Bildgröße <span id="image-size-label">240px</span></label>
+              <input id="doc-image-size" type="range" min="80" max="520" step="10" value="240">
+            </div>
+            <div class="field" data-field-key="image-options">
+              <label for="doc-image-frame">Bildrahmen</label>
+              <select id="doc-image-frame">
+                <option value="plain">Fein</option>
+                <option value="none">Keiner</option>
+                <option value="heavy">Schwer</option>
+              </select>
+            </div>
+            <div class="media-preview-card" data-field-key="image-options">
+              <div class="media-preview" data-media-preview="main"><span>Kein Hauptbild</span></div>
+              <button class="btn" type="button" onclick="clearMediaSlot('main')">Hauptbild entfernen</button>
+            </div>
+          </div>
+
+          <div class="media-slots" data-field-key="media">
+            <div class="media-slot" data-media-slot="signature">
+              <div class="media-slot-head">
+                <div class="media-slot-title">Signatur</div>
+                <button class="btn" type="button" onclick="clearMediaSlot('signature')">Entfernen</button>
+              </div>
+              <div class="grid compact">
+                <div class="field wide">
+                  <label for="doc-signature-image">Bildlink</label>
+                  <input id="doc-signature-image" type="url" placeholder="https://i.imgur.com/...">
+                </div>
+                <div class="field">
+                  <label for="doc-signature-position">Position</label>
+                  <select id="doc-signature-position">
+                    <option value="right">Unten rechts</option>
+                    <option value="center">Mittig</option>
+                    <option value="left">Unten links</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="doc-signature-size">Größe <span id="signature-size-label">180px</span></label>
+                  <input id="doc-signature-size" type="range" min="80" max="420" step="10" value="180">
+                </div>
+                <div class="field">
+                  <label for="doc-signature-frame">Rahmen</label>
+                  <select id="doc-signature-frame">
+                    <option value="none">Keiner</option>
+                    <option value="plain">Fein</option>
+                    <option value="heavy">Schwer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="media-preview" data-media-preview="signature"><span>Keine Signatur</span></div>
+            </div>
+
+            <div class="media-slot" data-media-slot="emblem">
+              <div class="media-slot-head">
+                <div class="media-slot-title">Siegel / Emblem</div>
+                <button class="btn" type="button" onclick="clearMediaSlot('emblem')">Entfernen</button>
+              </div>
+              <div class="grid compact">
+                <div class="field wide">
+                  <label for="doc-emblem-image">Bildlink</label>
+                  <input id="doc-emblem-image" type="url" placeholder="https://i.imgur.com/...">
+                </div>
+                <div class="field">
+                  <label for="doc-emblem-position">Position</label>
+                  <select id="doc-emblem-position">
+                    <option value="right">Unten rechts</option>
+                    <option value="center">Mittig</option>
+                    <option value="left">Unten links</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="doc-emblem-size">Größe <span id="emblem-size-label">160px</span></label>
+                  <input id="doc-emblem-size" type="range" min="80" max="420" step="10" value="160">
+                </div>
+                <div class="field">
+                  <label for="doc-emblem-frame">Rahmen</label>
+                  <select id="doc-emblem-frame">
+                    <option value="plain">Fein</option>
+                    <option value="none">Keiner</option>
+                    <option value="heavy">Schwer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="media-preview" data-media-preview="emblem"><span>Kein Emblem</span></div>
+            </div>
+
+            <div class="media-slot" data-media-slot="watermark">
+              <div class="media-slot-head">
+                <div class="media-slot-title">Wasserzeichen</div>
+                <button class="btn" type="button" onclick="clearMediaSlot('watermark')">Entfernen</button>
+              </div>
+              <div class="grid compact">
+                <div class="field wide">
+                  <label for="doc-watermark-image">Bildlink</label>
+                  <input id="doc-watermark-image" type="url" placeholder="https://i.imgur.com/...">
+                </div>
+                <div class="field">
+                  <label for="doc-watermark-size">Größe <span id="watermark-size-label">420px</span></label>
+                  <input id="doc-watermark-size" type="range" min="160" max="820" step="20" value="420">
+                </div>
+              </div>
+              <div class="media-preview" data-media-preview="watermark"><span>Kein Wasserzeichen</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section editor-panel" data-panel="style">
+          <div class="section-head">
+            <div class="section-title">Schriftbild</div>
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="doc-font">Schrift</label>
+              <select id="doc-font">
+                <option value="'Eagle Lake'">Mittelalterliche Handschrift</option>
+                <option value="'Uncial Antiqua'">Unziale</option>
+                <option value="'MedievalSharp'">Kantige Handschrift</option>
+                <option value="'EB Garamond'">Garamond</option>
+                <option value="'Cinzel'">Archivschrift</option>
+                <option value="'IM Fell English SC'">Alte Druckschrift</option>
+                <option value="'Pirata One'">Piratenbrief</option>
+                <option value="'Macondo'">Verspielte Feder</option>
+                <option value="'UnifrakturMaguntia'">Fraktur</option>
+                <option value="'Special Elite'">Schreibmaschine</option>
+                <option value="'Homemade Apple'">Feine Handschrift</option>
+                <option value="'Shadows Into Light'">Lockere Handschrift</option>
+                <option value="'Rock Salt'">Krakelschrift</option>
+                <option value="'Fredericka the Great'">Krakelige Druckschrift</option>
+                <option value="'Creepster'">Unheimliche Krakelschrift</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="doc-font-size">Textgröße <span id="font-size-label">18px</span></label>
+              <input id="doc-font-size" type="range" min="14" max="30" step="1" value="18">
+            </div>
+          </div>
+        </section>
+
+        <section class="section editor-panel" data-panel="paper">
+          <div class="section-head">
+            <div class="section-title">Papier & Rahmen</div>
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="doc-background">Hintergrund</label>
+              <select id="doc-background">
+                <option value="parchment">Pergament</option>
+                <option value="aged">Fleckiges Papier</option>
+                <option value="fibers">Faserpapier</option>
+                <option value="plain">Hell schlicht</option>
+                <option value="dark">Dunkles Archivpapier</option>
+                <option value="custom">Imgur-Textur</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="doc-border">Rahmen</label>
+              <select id="doc-border">
+                <option value="thin">Fein</option>
+                <option value="none">Keiner</option>
+                <option value="double">Doppellinie</option>
+                <option value="heavy">Schwer</option>
+                <option value="ornate">Schmuckrahmen</option>
+              </select>
+            </div>
+            <div class="field wide">
+              <label for="doc-texture">Eigene Textur</label>
+              <input id="doc-texture" type="url" placeholder="https://i.imgur.com/...">
+            </div>
+            <div class="field wide">
+              <label for="doc-width">Dokumentbreite <span id="width-label">820px</span></label>
+              <input id="doc-width" type="range" min="520" max="1200" step="20" value="820">
+            </div>
+            <div class="field wide">
+              <label for="doc-height">Dokumenthöhe <span id="height-label">780px</span></label>
+              <input id="doc-height" type="range" min="360" max="1200" step="20" value="780">
+            </div>
+          </div>
+        </section>
+
+        <section class="section editor-panel" data-panel="text">
+          <div class="section-head">
+            <div class="section-title">Text</div>
+            <div class="book-pages" id="book-pages"></div>
+          </div>
+          <div class="toolbar" onmousedown="event.preventDefault()">
+            <select id="block-format" title="Absatzformat" onchange="formatBlock(this.value)">
+              <option value="p">Absatz</option>
+              <option value="h2">Kapitel</option>
+              <option value="h3">Zwischenruf</option>
+              <option value="blockquote">Zitat</option>
+            </select>
+            <button class="icon-btn" type="button" title="Rückgängig" onclick="formatText('undo')">↶</button>
+            <button class="icon-btn" type="button" title="Wiederholen" onclick="formatText('redo')">↷</button>
+            <button class="icon-btn" type="button" title="Fett" onclick="formatText('bold')"><b>F</b></button>
+            <button class="icon-btn" type="button" title="Kursiv" onclick="formatText('italic')"><i>I</i></button>
+            <button class="icon-btn" type="button" title="Unterstrichen" onclick="formatText('underline')"><u>U</u></button>
+            <button class="icon-btn" type="button" title="Liste" onclick="formatText('insertUnorderedList')">•</button>
+            <button class="icon-btn" type="button" title="Links" onclick="formatText('justifyLeft')">↤</button>
+            <button class="icon-btn" type="button" title="Mitte" onclick="formatText('justifyCenter')">↔</button>
+            <button class="icon-btn" type="button" title="Rechts" onclick="formatText('justifyRight')">↦</button>
+            <button class="icon-btn" type="button" title="Trenner" onclick="insertDivider()">―</button>
+            <button class="btn" type="button" onclick="insertLink()">Link</button>
+            <button class="btn" type="button" onclick="clearFormatting()">Format entfernen</button>
+            <button class="btn" type="button" id="add-page-btn" onclick="addBookPage()">+ Seite</button>
+            <button class="btn" type="button" id="remove-page-btn" onclick="removeBookPage()">Seite löschen</button>
+          </div>
+          <div class="book-manager" id="book-manager" aria-label="Buchseiten verwalten"></div>
+          <div id="doc-editor" class="rich-editor" contenteditable="true" spellcheck="true"></div>
+          <div class="hint">Die Formatierung ist direkt im Text. Keine BB-Codes. Bei Buch-Vorlagen bearbeitest du jeweils die aktive Seite.</div>
+        </section>
+
+        <section class="section editor-panel" data-panel="export">
+          <div class="section-head">
+            <div class="section-title">Export & Entwuerfe</div>
+          </div>
+          <div class="export-grid">
+            <button class="btn" type="button" onclick="saveDraft()">Entwurf speichern</button>
+            <button class="btn" type="button" onclick="loadDraft()">Entwurf laden</button>
+            <button class="btn" type="button" onclick="loadAutoSave()">Autosave laden</button>
+            <button class="btn" type="button" onclick="exportJson()">JSON exportieren</button>
+            <label class="btn" for="json-import-panel">JSON importieren</label>
+            <input id="json-import-panel" type="file" accept="application/json" hidden onchange="importJson(this)">
+            <button class="btn primary" type="button" onclick="exportHtml()">HTML exportieren</button>
+          </div>
+          <div class="snippet-box">
+            <label for="snippet-output">Almanach-Link</label>
+            <textarea id="snippet-output" readonly spellcheck="false"></textarea>
+            <button class="btn" type="button" onclick="copySnippet()">Snippet kopieren</button>
+          </div>
+          <div class="hint">Der HTML-Export bettet die Werkstatt-CSS ein, damit das Dokument auch ausserhalb des Editors seine Gestaltung behaelt.</div>
+        </section>
+      </div>
+    </section>
+
+    <section class="preview-pane" id="preview-pane">
+      <div class="preview-frame">
+        <div class="preview-tools">
+          <span>Vorschau</span>
+          <div class="preview-zoom">
+            <button class="icon-btn" type="button" title="Verkleinern" onclick="setPreviewZoom(-0.1)">-</button>
+            <button class="btn" type="button" onclick="resetPreviewZoom()">Fit</button>
+            <button class="icon-btn" type="button" title="Vergroessern" onclick="setPreviewZoom(0.1)">+</button>
+          </div>
+        </div>
+        <div class="preview-scroll">
+          <div id="preview"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="DokumentenWerkstatt/js/export-css.js"></script>
+<script src="DokumentenWerkstatt/js/werkstatt.js?v=20260602-mojibake-fix-v1"></script>
+</body>
+</html>

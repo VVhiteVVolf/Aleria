@@ -1,0 +1,657 @@
+.caste-page {
+  position: relative;
+  --caste-image-scale: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: clamp(16px, 2.2vw, 30px);
+  color: #24170e;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 232, 0.95), rgba(226, 196, 136, 0.72)),
+    var(--parchment-dark, #e9d5a3);
+  border: 1px solid rgba(112, 75, 30, 0.45);
+  box-shadow: inset 0 0 0 2px rgba(255, 245, 203, 0.35), 0 18px 38px rgba(31, 18, 7, 0.2);
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+.caste-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--caste-bg, none);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.caste-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.caste-page::-webkit-scrollbar {
+  width: 10px;
+}
+
+.caste-page::-webkit-scrollbar-thumb {
+  background: rgba(112, 75, 30, 0.42);
+  border-radius: 999px;
+}
+
+.caste-archive-head,
+.caste-hero,
+.caste-layout,
+.caste-description,
+.caste-quote,
+.caste-footer {
+  max-width: 1420px;
+  margin-inline: auto;
+}
+
+.caste-archive-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(112, 75, 30, 0.28);
+  color: #4f3518;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.caste-archive-head > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.caste-archive-head strong,
+.caste-archive-head em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgba(112, 75, 30, 0.28);
+  background: rgba(255, 246, 220, 0.46);
+  font-style: normal;
+}
+
+.caste-archive-head img {
+  width: calc(34px * var(--caste-image-scale));
+  height: calc(34px * var(--caste-image-scale));
+  object-fit: contain;
+}
+
+.caste-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(14px, 2.4vw, 28px);
+  padding: clamp(14px, 2.1vw, 26px) 0 16px;
+}
+
+.caste-title-row {
+  display: grid;
+  grid-template-columns: calc(64px * var(--caste-image-scale)) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 18px);
+}
+
+.caste-header-symbol {
+  width: calc(64px * var(--caste-image-scale));
+  height: calc(64px * var(--caste-image-scale));
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(59, 35, 12, 0.24));
+}
+
+.caste-header-symbol.placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(112, 75, 30, 0.35);
+  border-radius: 50%;
+  color: #8a6426;
+  background: rgba(255, 248, 224, 0.68);
+  font: 2rem "Cinzel", Georgia, serif;
+}
+
+.caste-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: #6d451d;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.caste-title-row h2 {
+  margin: 0;
+  color: #18100b;
+  font: clamp(1.9rem, 3.25vw, 3.55rem) "Cinzel", Georgia, serif;
+  line-height: 0.98;
+}
+
+.caste-title-row p {
+  margin: 7px 0 0;
+  color: #3f2b16;
+  font-size: clamp(0.94rem, 1.1vw, 1.1rem);
+  font-style: italic;
+}
+
+.caste-banner {
+  width: clamp(calc(74px * var(--caste-image-scale)), calc(9vw * var(--caste-image-scale)), calc(120px * var(--caste-image-scale)));
+  max-height: calc(130px * var(--caste-image-scale));
+  object-fit: contain;
+  filter: drop-shadow(0 12px 16px rgba(54, 31, 10, 0.22));
+}
+
+.caste-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 34%) minmax(0, 1fr);
+  gap: clamp(14px, 1.9vw, 24px);
+  align-items: start;
+}
+
+.caste-left,
+.caste-main {
+  display: grid;
+  gap: 12px;
+}
+
+.caste-portrait {
+  margin: 0;
+  overflow: hidden;
+  border: 3px double rgba(112, 75, 30, 0.72);
+  background: rgba(255, 244, 214, 0.42);
+  box-shadow: 0 16px 32px rgba(47, 27, 9, 0.24);
+  aspect-ratio: 4 / 3;
+}
+
+.caste-portrait img,
+.caste-portrait-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.caste-portrait img {
+  display: block;
+  object-fit: cover;
+}
+
+.caste-portrait-placeholder {
+  display: grid;
+  place-items: center;
+  color: #8a6426;
+  font: 4rem "Cinzel", Georgia, serif;
+}
+
+.caste-panel,
+.caste-description,
+.caste-quote,
+.caste-footer {
+  border: 1px solid rgba(112, 75, 30, 0.27);
+  background: rgba(255, 248, 226, 0.5);
+  box-shadow: inset 0 0 18px rgba(145, 98, 38, 0.07);
+}
+
+.caste-panel,
+.caste-description {
+  padding: clamp(11px, 1.35vw, 17px);
+}
+
+.caste-panel h3,
+.caste-description h3 {
+  margin: 0 0 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(112, 75, 30, 0.22);
+  color: #2c1b0d;
+  font: 1rem "Cinzel", Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+.caste-intro {
+  padding: 0 2px 8px;
+  color: #28190d;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.caste-intro p,
+.caste-description p,
+.caste-text-list p,
+.caste-role-card p,
+.caste-representative-card p {
+  margin: 0;
+}
+
+.caste-info-list,
+.caste-organization-list,
+.caste-related-list {
+  display: grid;
+  gap: 9px;
+}
+
+.caste-info-row,
+.caste-organization-row,
+.caste-related-row {
+  display: grid;
+  align-items: center;
+  gap: 10px;
+}
+
+.caste-info-row {
+  grid-template-columns: calc(24px * var(--caste-image-scale)) minmax(82px, 0.45fr) minmax(0, 1fr);
+}
+
+.caste-info-row span,
+.caste-organization-row span {
+  color: #5a3918;
+  font: 0.76rem "Cinzel", Georgia, serif;
+}
+
+.caste-info-row strong,
+.caste-organization-row strong {
+  min-width: 0;
+  color: #26170b;
+  font-weight: 600;
+}
+
+.caste-info-icon,
+.caste-related-icon {
+  width: calc(21px * var(--caste-image-scale));
+  height: calc(21px * var(--caste-image-scale));
+  object-fit: contain;
+}
+
+.caste-info-icon.placeholder,
+.caste-related-icon.placeholder {
+  display: grid;
+  place-items: center;
+  color: #8a6426;
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.caste-symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.caste-symbol-card {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  min-width: 0;
+  text-align: center;
+}
+
+.caste-symbol-icon {
+  width: calc(46px * var(--caste-image-scale));
+  height: calc(46px * var(--caste-image-scale));
+  object-fit: contain;
+}
+
+.caste-symbol-icon.placeholder {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #8a6426;
+  background: rgba(113, 78, 29, 0.08);
+  font: 1.5rem "Cinzel", Georgia, serif;
+}
+
+.caste-symbol-card strong,
+.caste-role-card h4 {
+  color: #26170b;
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.caste-symbol-card,
+.caste-related-row {
+  border: 0;
+  font: inherit;
+}
+
+button.caste-symbol-card,
+button.caste-related-row {
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+}
+
+a.caste-symbol-card,
+button.caste-symbol-card,
+a.caste-related-row,
+button.caste-related-row {
+  text-decoration: none;
+}
+
+a.caste-symbol-card:hover strong,
+button.caste-symbol-card:hover strong,
+a.caste-related-row:hover span,
+button.caste-related-row:hover span {
+  color: #7b4b16;
+  text-decoration: underline;
+}
+
+.caste-symbol-card span {
+  color: #5a3918;
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.caste-role-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.caste-role-card {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px 10px;
+  border-right: 1px solid rgba(112, 75, 30, 0.18);
+  text-align: center;
+}
+
+.caste-role-card:last-child {
+  border-right: 0;
+}
+
+.caste-role-icon {
+  width: calc(40px * var(--caste-image-scale));
+  height: calc(40px * var(--caste-image-scale));
+  object-fit: contain;
+}
+
+.caste-role-icon.placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(112, 75, 30, 0.22);
+  border-radius: 50%;
+  color: #8a6426;
+  background: rgba(255, 249, 229, 0.62);
+  font: 1.15rem "Cinzel", Georgia, serif;
+}
+
+.caste-role-card h4 {
+  margin: 0;
+  font-size: 0.86rem;
+}
+
+.caste-role-card p {
+  color: #2f1d0f;
+  font-size: 0.88rem;
+  line-height: 1.38;
+}
+
+.caste-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.caste-text-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.caste-text-list li {
+  display: grid;
+  grid-template-columns: calc(24px * var(--caste-image-scale)) minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.caste-text-list img {
+  width: calc(22px * var(--caste-image-scale));
+  height: calc(22px * var(--caste-image-scale));
+  object-fit: contain;
+}
+
+.caste-text-list span {
+  color: #8a6426;
+  line-height: 1.35;
+}
+
+.caste-organization-row {
+  grid-template-columns: minmax(86px, 0.36fr) minmax(0, 1fr);
+}
+
+.caste-representative-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.caste-representative-card {
+  display: grid;
+  grid-template-columns: calc(52px * var(--caste-image-scale)) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.caste-representative-portrait {
+  width: calc(52px * var(--caste-image-scale));
+  height: calc(52px * var(--caste-image-scale));
+  border: 2px solid rgba(112, 75, 30, 0.48);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.caste-representative-portrait.placeholder {
+  display: grid;
+  place-items: center;
+  color: #8a6426;
+  background: rgba(113, 78, 29, 0.08);
+  font: 1.15rem "Cinzel", Georgia, serif;
+}
+
+.caste-representative-card strong,
+.caste-representative-card span {
+  display: block;
+}
+
+.caste-representative-card span {
+  color: #5a3918;
+  font-style: italic;
+}
+
+.caste-related-row {
+  grid-template-columns: calc(26px * var(--caste-image-scale)) minmax(0, 1fr);
+}
+
+.caste-related-row a,
+.caste-related-row span,
+.caste-related-row {
+  color: #3a2411;
+  text-decoration: none;
+}
+
+.caste-related-row a:hover {
+  color: #7b4b16;
+  text-decoration: underline;
+}
+
+.caste-description {
+  margin-top: 14px;
+  font-size: 0.96rem;
+  line-height: 1.52;
+}
+
+.caste-quote {
+  margin-top: 14px;
+  padding: clamp(14px, 1.6vw, 22px);
+  color: #2e1b0d;
+  text-align: center;
+  font-size: clamp(0.98rem, 1.35vw, 1.22rem);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.caste-quote cite {
+  display: block;
+  margin-top: 12px;
+  color: #6b431b;
+  font-size: 0.96rem;
+  font-style: normal;
+}
+
+.caste-footer {
+  margin-top: 14px;
+  padding: 10px 14px;
+  color: #5c3b1b;
+  text-align: center;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+.caste-edit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.caste-edit-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.8fr) minmax(150px, 1fr) minmax(180px, 1.35fr) auto;
+  gap: 0.45rem;
+  align-items: start;
+  border: 1px solid rgba(139, 105, 20, 0.18);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem;
+}
+
+.caste-edit-row textarea {
+  min-height: 68px;
+}
+
+.module-caste-role-row,
+.module-caste-symbol-row,
+.module-caste-representative-row {
+  grid-template-columns: minmax(120px, 0.7fr) minmax(140px, 0.9fr) minmax(200px, 1.45fr) auto;
+}
+
+.module-caste-symbol-row {
+  grid-template-columns: minmax(120px, 0.7fr) minmax(130px, 0.75fr) minmax(180px, 1.1fr) minmax(150px, 0.9fr) auto;
+}
+
+.module-caste-representative-row {
+  grid-template-columns: minmax(135px, 0.8fr) minmax(130px, 0.8fr) minmax(130px, 0.85fr) minmax(190px, 1.4fr) auto;
+}
+
+.module-caste-skill-row,
+.module-caste-privilege-row,
+.module-caste-restriction-row,
+.module-caste-organization-row {
+  grid-template-columns: minmax(130px, 0.75fr) minmax(220px, 1.6fr) auto;
+}
+
+.module-caste-related-row {
+  grid-template-columns: minmax(130px, 0.7fr) minmax(150px, 0.9fr) minmax(180px, 1.25fr) auto;
+}
+
+@media (max-width: 1100px) {
+  .caste-role-grid,
+  .caste-representative-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .caste-role-card:nth-child(2n) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .caste-hero,
+  .caste-layout,
+  .caste-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caste-banner {
+    justify-self: start;
+  }
+
+  .caste-left {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .caste-portrait {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .caste-page {
+    padding: 16px;
+  }
+
+  .caste-archive-head,
+  .caste-archive-head > div,
+  .caste-left,
+  .caste-role-grid,
+  .caste-symbol-grid,
+  .caste-representative-list {
+    grid-template-columns: 1fr;
+  }
+
+  .caste-archive-head {
+    display: grid;
+    align-items: start;
+  }
+
+  .caste-title-row {
+    grid-template-columns: calc(54px * var(--caste-image-scale)) minmax(0, 1fr);
+  }
+
+  .caste-header-symbol {
+    width: calc(54px * var(--caste-image-scale));
+    height: calc(54px * var(--caste-image-scale));
+  }
+
+  .caste-role-card {
+    border-right: 0;
+    border-bottom: 1px solid rgba(112, 75, 30, 0.18);
+  }
+
+  .caste-role-card:last-child {
+    border-bottom: 0;
+  }
+
+  .caste-info-row,
+  .caste-organization-row {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .caste-info-row strong,
+  .caste-organization-row strong {
+    grid-column: 2;
+  }
+
+  .caste-edit-row,
+  .module-caste-role-row,
+  .module-caste-representative-row,
+  .module-caste-skill-row,
+  .module-caste-privilege-row,
+  .module-caste-restriction-row,
+  .module-caste-organization-row,
+  .module-caste-related-row {
+    grid-template-columns: 1fr;
+  }
+}

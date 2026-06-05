@@ -1,0 +1,3039 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Klassenübersicht</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+      CSS VARIABLES – HOCHMITTELALTER PALETTE
+    ========================================================= */
+    :root {
+      --paper:        #f2e8cf;
+      --paper-dark:   #e8d9b5;
+      --paper-edge:   #c9b580;
+      --ink:          #1a1a0e;
+      --ink-mid:      #2e2e1a;
+      --blue:         #1e4060;
+      --blue-dark:    #122840;
+      --blue-mid:     #2a5578;
+      --blue-light:   #4a7ea0;
+      --gold:         #9a7820;
+      --gold-light:   #c49a28;
+      --gold-bright:  #e0b830;
+      --gold-pale:    #f0dc90;
+      --green:        #1a3e28;
+      --green-mid:    #254e34;
+      --green-light:  #3a6e4a;
+      --crimson:      #6a1a1a;
+      --border:       #a89050;
+      --border-light: #c8a860;
+      --border-dim:   #d8c890;
+      --card:         #faf4e4;
+      --card-hover:   #fff9ee;
+      --muted:        #5a5040;
+      --shadow-sm:    0 2px 8px rgba(0,0,0,.18);
+      --shadow-md:    0 5px 22px rgba(0,0,0,.26);
+      --shadow-lg:    0 10px 50px rgba(0,0,0,.38);
+      --shadow-gold:  0 0 18px rgba(180,140,20,.35);
+      --nav-height:   56px;
+      --transition:   .3s cubic-bezier(.4,0,.2,1);
+      --icon-base:    115px;
+      --icon-land:    105px;
+      --sidebar-left-width: 320px;
+      --sidebar-left-collapsed: 50px;
+      --sidebar-right-width: 420px;
+      --sidebar-right-collapsed: 50px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #1a1610;
+      background-image:
+        radial-gradient(ellipse 35% 40% at 0% 0%,   rgba(180,100,20,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 40% at 100% 0%,  rgba(180,100,20,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 30% at 50%  0%,  rgba(120,80,10,.10)  0%, transparent 60%),
+        repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(255,255,255,.018) 38px, rgba(255,255,255,.018) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(255,255,255,.015) 58px, rgba(255,255,255,.015) 60px);
+      color: var(--ink);
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    
+    /* =========================================================
+      SIDEBARS
+    ========================================================= */
+    
+    /* LEFT SIDEBAR - Stats & Navigation */
+    .sidebar-left {
+      position: fixed;
+      left: 0;
+      top: var(--nav-height);
+      height: calc(100vh - var(--nav-height));
+      width: var(--sidebar-left-width);
+      background: var(--paper-dark);
+      background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      border-right: 2px solid var(--border);
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 500;
+      transition: width var(--transition);
+      box-shadow: 4px 0 20px rgba(0,0,0,.15);
+    }
+    
+    .sidebar-left.collapsed {
+      width: var(--sidebar-left-collapsed);
+    }
+    
+    .sidebar-left.collapsed .sidebar-content {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .sidebar-toggle-left {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 32px;
+      height: 32px;
+      background: var(--blue-dark);
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      color: var(--gold-bright);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .sidebar-toggle-left:hover {
+      background: var(--blue-mid);
+      box-shadow: var(--shadow-gold);
+      transform: scale(1.05);
+    }
+    
+    .sidebar-content {
+      padding: 50px 18px 20px;
+      transition: opacity var(--transition);
+    }
+    
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+    
+    .sidebar-section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-dim);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,.5);
+      border: 1px solid var(--border-dim);
+      border-radius: 2px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .stat-number {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    
+    .stat-label {
+      font-family: 'Crimson Text', serif;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .nav-land-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-land-item {
+      margin-bottom: 6px;
+    }
+    
+    .nav-land-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.3);
+      border: 1px solid transparent;
+      border-radius: 2px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: var(--transition);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .nav-land-link:hover,
+    .nav-land-link.active {
+      background: rgba(255,255,255,.7);
+      border-color: var(--gold);
+      color: var(--blue-dark);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .nav-land-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+    
+    .nav-land-count {
+      margin-left: auto;
+      font-size: 10px;
+      color: var(--muted);
+      background: rgba(0,0,0,.1);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    
+    /* RIGHT SIDEBAR - Dynamic Lore */
+    .sidebar-right {
+      position: fixed;
+      right: 0;
+      top: var(--nav-height);
+      height: calc(100vh - var(--nav-height));
+      width: var(--sidebar-right-width);
+      background: var(--paper-dark);
+      background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      border-left: 2px solid var(--border);
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 500;
+      padding: 50px 22px 24px;
+      box-shadow: -4px 0 20px rgba(0,0,0,.15);
+      transition: width var(--transition);
+    }
+    
+    .sidebar-right.collapsed {
+      width: var(--sidebar-right-collapsed);
+      padding: 50px 5px 24px;
+    }
+    
+    .sidebar-right.collapsed .lore-container {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .sidebar-toggle-right {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 32px;
+      height: 32px;
+      background: var(--blue-dark);
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      color: var(--gold-bright);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .sidebar-toggle-right:hover {
+      background: var(--blue-mid);
+      box-shadow: var(--shadow-gold);
+      transform: scale(1.05);
+    }
+    
+    .lore-container {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    
+    .lore-container.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .lore-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    .lore-wappen {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 12px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      padding: 8px;
+      background: rgba(255,255,255,.6);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .lore-wappen img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .lore-land-name {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 22px;
+      color: var(--blue-dark);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+    }
+    
+    .lore-land-subtitle {
+      font-family: 'Crimson Text', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+    }
+    
+    .lore-section {
+      margin-bottom: 24px;
+    }
+    
+    .lore-section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--gold);
+    }
+    
+    .lore-text {
+      font-family: 'Crimson Text', serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink);
+      text-align: justify;
+      padding: 12px;
+      background: rgba(255,255,255,.4);
+      border: 1px solid var(--border-dim);
+      border-radius: 2px;
+    }
+    
+    .lore-placeholder {
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+    }
+    
+    .lore-hierarchy {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .lore-hierarchy li {
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background: rgba(255,255,255,.4);
+      border-left: 3px solid var(--gold);
+      font-family: 'Crimson Text', serif;
+      font-size: 14px;
+    }
+    
+    .lore-rank {
+      font-weight: 600;
+      color: var(--blue-dark);
+    }
+    
+    /* Main content adjustment for sidebars */
+    body.sidebars-active {
+      margin-left: var(--sidebar-left-width);
+      margin-right: var(--sidebar-right-width);
+    }
+    
+    body.sidebars-active.left-collapsed {
+      margin-left: var(--sidebar-left-collapsed);
+    }
+    
+    body.sidebars-active.right-collapsed {
+      margin-right: var(--sidebar-right-collapsed);
+    }
+    
+    body.sidebars-active.left-collapsed.right-collapsed {
+      margin-left: var(--sidebar-left-collapsed);
+      margin-right: var(--sidebar-right-collapsed);
+    }
+    
+    /* Mobile: Hide sidebars */
+    @media (max-width: 1500px) {
+      .sidebar-right {
+        display: none;
+      }
+      body.sidebars-active,
+      body.sidebars-active.right-collapsed {
+        margin-right: 0;
+      }
+    }
+    
+    @media (max-width: 900px) {
+      .sidebar-left {
+        transform: translateX(-100%);
+        width: 320px;
+      }
+      .sidebar-left.collapsed {
+        transform: translateX(-100%);
+      }
+      .sidebar-left.mobile-open {
+        transform: translateX(0);
+      }
+      .sidebar-toggle-left {
+        right: auto;
+        left: -50px;
+      }
+      body.sidebars-active,
+      body.sidebars-active.left-collapsed {
+        margin-left: 0;
+      }
+    }
+
+    /* =========================================================
+      STICKY NAVIGATION
+    ========================================================= */
+    .sticky-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-height);
+      background: linear-gradient(180deg, #0e1a12 0%, #122040 100%);
+      border-bottom: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      box-shadow: 0 2px 24px rgba(0,0,0,.7), 0 1px 0 rgba(180,140,20,.3);
+    }
+    .sticky-nav::-webkit-scrollbar { display: none; }
+
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-bright);
+      letter-spacing: 2px;
+      white-space: nowrap;
+      margin-right: 8px;
+      flex-shrink: 0;
+      text-shadow: 0 0 14px rgba(224,184,48,.5);
+    }
+    .nav-divider {
+      width: 1px; height: 26px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      margin: 0 6px;
+      flex-shrink: 0;
+      opacity: .6;
+    }
+    .nav-link {
+      font-family: 'Cinzel', serif;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(240,220,160,.7);
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--gold-bright);
+      background: rgba(154,120,32,.18);
+      border-color: rgba(154,120,32,.5);
+      text-shadow: 0 0 8px rgba(224,184,48,.4);
+    }
+
+    /* =========================================================
+      BACK TO TOP
+    ========================================================= */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 999;
+      width: 50px; height: 50px;
+      background: var(--blue-dark);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-bright);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(20px) scale(.8);
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      text-decoration: none;
+    }
+    .back-to-top.visible { opacity: 1; transform: translateY(0) scale(1); }
+    .back-to-top:hover {
+      background: var(--blue-mid);
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-4px) scale(1.06);
+    }
+
+    /* =========================================================
+      MASTER CONTAINER – Pergament
+    ========================================================= */
+    .rpg-master-container {
+      background: var(--paper);
+      background-image:
+        radial-gradient(ellipse 85% 60% at 50% 50%, transparent 55%, rgba(140,100,30,.12) 100%),
+        radial-gradient(ellipse 30% 20% at 15%  8%, rgba(120,90,20,.07)  0%, transparent 100%),
+        radial-gradient(ellipse 25% 15% at 85% 12%, rgba(100,70,10,.06)  0%, transparent 100%),
+        radial-gradient(ellipse 20% 25% at 10% 90%, rgba(110,80,15,.05)  0%, transparent 100%),
+        radial-gradient(ellipse 35% 18% at 90% 88%, rgba(130,95,25,.07)  0%, transparent 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      padding: 44px 40px;
+      max-width: 1130px;
+      margin: calc(var(--nav-height) + 28px) auto 60px;
+      border: 1px solid var(--paper-edge);
+      outline: 4px solid var(--blue-dark);
+      outline-offset: -12px;
+      border-radius: 3px;
+      box-shadow: var(--shadow-lg), inset 0 0 0 2px rgba(154,120,32,.15), inset 0 0 60px rgba(140,100,20,.06);
+      position: relative;
+    }
+    .rpg-master-container::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(154,120,32,.25);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    .corner {
+      position: absolute;
+      width: 48px; height: 48px;
+      color: var(--gold);
+      opacity: .55;
+      font-size: 32px;
+      line-height: 1;
+      pointer-events: none;
+      font-family: serif;
+    }
+    .corner--tl { top: 14px;    left: 14px; }
+    .corner--tr { top: 14px;    right: 14px; transform: scaleX(-1); }
+    .corner--bl { bottom: 14px; left: 14px;  transform: scaleY(-1); }
+    .corner--br { bottom: 14px; right: 14px; transform: scale(-1,-1); }
+
+    /* =========================================================
+      MAIN TITLE
+    ========================================================= */
+    .main-title {
+      text-align: center;
+      color: var(--blue-dark);
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(24px, 4.5vw, 42px);
+      letter-spacing: 3px;
+      line-height: 1.25;
+      margin: 10px 0 6px;
+      text-shadow: 1px 2px 0 rgba(255,255,255,.6), 0 0 30px rgba(26,56,90,.12);
+      animation: fadeDown .8s ease both;
+    }
+    .title-sub {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      opacity: .75;
+      margin-bottom: 18px;
+      animation: fadeDown .8s .1s ease both;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =========================================================
+      RUNEN-ORNAMENT DIVIDER
+    ========================================================= */
+    .rune-divider {
+      display: flex;
+      align-items: center;
+      margin: 6px auto 0;
+      max-width: 640px;
+      animation: fadeDown .8s .2s ease both;
+    }
+    .rune-divider__line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+    .rune-divider__center {
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 6px;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      margin: 56px 0 32px;
+    }
+    .section-divider__line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border) 30%, var(--border) 70%, transparent);
+    }
+    .section-divider__badge {
+      margin: 0 16px;
+      padding: 6px 18px;
+      background: var(--blue-dark);
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      color: var(--gold-bright);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(11px, 1.8vw, 17px);
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      box-shadow: var(--shadow-sm), inset 0 0 0 1px rgba(224,184,48,.1);
+      text-shadow: 0 0 10px rgba(224,184,48,.35);
+    }
+
+    .mini-rune {
+      text-align: center;
+      color: var(--border);
+      font-size: 14px;
+      letter-spacing: 8px;
+      margin: -16px 0 20px;
+      user-select: none;
+      opacity: .6;
+    }
+
+    /* =========================================================
+      SEARCH
+    ========================================================= */
+    .search-wrapper {
+      max-width: 420px;
+      margin: 28px auto 16px;
+      position: relative;
+    }
+    
+    /* Random Class Button & Sound Toggle */
+    .feature-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin: 16px auto 0;
+      max-width: 420px;
+    }
+    .random-class-btn,
+    .sound-toggle-btn {
+      padding: 10px 18px;
+      background: var(--blue-dark);
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      color: var(--gold-bright);
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .random-class-btn:hover,
+    .sound-toggle-btn:hover {
+      background: var(--blue-mid);
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-2px);
+    }
+    .sound-toggle-btn.active {
+      background: var(--green-mid);
+      border-color: var(--green-light);
+    }
+    
+    /* Random Class Modal */
+    .random-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .random-modal.active { display: flex; }
+    .random-modal-content {
+      background: var(--paper);
+      border: 3px solid var(--gold);
+      border-radius: 3px;
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: var(--shadow-lg), 0 0 40px rgba(224,184,48,.4);
+      position: relative;
+    }
+    .random-modal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      color: var(--blue-dark);
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    .land-checkboxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .land-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      background: rgba(255,255,255,.5);
+      border: 1px solid var(--border-dim);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .land-checkbox:hover {
+      background: rgba(255,255,255,.8);
+      border-color: var(--gold);
+    }
+    .land-checkbox input {
+      cursor: pointer;
+    }
+    .land-checkbox label {
+      cursor: pointer;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .random-modal-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .modal-btn {
+      padding: 10px 20px;
+      background: var(--blue-dark);
+      border: 2px solid var(--gold);
+      border-radius: 2px;
+      color: var(--gold-bright);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .modal-btn:hover {
+      background: var(--blue-mid);
+      box-shadow: var(--shadow-gold);
+    }
+    .modal-btn.cancel {
+      background: var(--muted);
+      border-color: var(--border);
+      color: var(--paper);
+    }
+    
+    /* EPIC REVEAL OVERLAY */
+    .reveal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0);
+      z-index: 20000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease;
+      pointer-events: none;
+    }
+    .reveal-overlay.active {
+      display: flex;
+      background: rgba(0,0,0,.95);
+      pointer-events: all;
+    }
+    
+    .reveal-card-container {
+      position: relative;
+      perspective: 1500px;
+      width: 280px;
+      height: 360px;
+    }
+    
+    .reveal-card {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation: rollIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+    
+    .reveal-card.flipped {
+      animation: flipReveal 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1.2s forwards;
+    }
+    
+    @keyframes rollIn {
+      0% {
+        transform: translateX(-150vw) rotateY(720deg) rotateZ(360deg) scale(0.3);
+        opacity: 0;
+      }
+      60% {
+        transform: translateX(20px) rotateY(0deg) rotateZ(0deg) scale(1.1);
+        opacity: 1;
+      }
+      80% {
+        transform: translateX(-10px) rotateY(0deg) rotateZ(0deg) scale(0.95);
+      }
+      100% {
+        transform: translateX(0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes flipReveal {
+      0% {
+        transform: rotateY(0deg) scale(1);
+      }
+      50% {
+        transform: rotateY(90deg) scale(1.1);
+      }
+      100% {
+        transform: rotateY(180deg) scale(1);
+      }
+    }
+    
+    .reveal-card-back,
+    .reveal-card-front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 40px rgba(224,184,48,.4);
+    }
+    
+    .reveal-card-back {
+      background: linear-gradient(135deg, #1a1610 0%, #2a2418 50%, #1a1610 100%);
+      border: 4px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 80px;
+      color: var(--gold-bright);
+      text-shadow: 0 0 30px rgba(224,184,48,.8);
+    }
+    
+    .reveal-card-front {
+      background: var(--card);
+      border: 4px solid var(--gold);
+      transform: rotateY(180deg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      overflow: hidden;
+    }
+    
+    .reveal-card-front::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 2px solid rgba(224,184,48,.3);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    
+    .reveal-card-icon {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,.3));
+      position: relative;
+      z-index: 1;
+    }
+    
+    .reveal-card-name {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 4px rgba(255,255,255,.5);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .reveal-card-flavor {
+      font-family: 'Crimson Text', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .reveal-card-land {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 6px 12px;
+      background: rgba(0,0,0,.2);
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .reveal-close-btn {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 50px;
+      height: 50px;
+      background: var(--crimson);
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      opacity: 0;
+      transform: scale(0) rotate(-180deg);
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 4px 15px rgba(0,0,0,.5);
+    }
+    
+    .reveal-close-btn.visible {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    
+    .reveal-close-btn:hover {
+      background: #8a1a1a;
+      transform: scale(1.1) rotate(90deg);
+      box-shadow: 0 6px 20px rgba(0,0,0,.7), 0 0 20px rgba(224,184,48,.5);
+    }
+    
+    .reveal-sparkles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--gold-bright);
+      border-radius: 50%;
+      animation: sparkle 1.5s ease-out forwards;
+      box-shadow: 0 0 10px var(--gold-bright);
+    }
+    
+    @keyframes sparkle {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(var(--tx), var(--ty)) scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(calc(var(--tx) * 2), calc(var(--ty) * 2)) scale(0);
+      }
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 11px 42px 11px 18px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-family: 'Crimson Text', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--ink);
+      outline: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm), inset 0 1px 3px rgba(0,0,0,.08);
+    }
+    .search-input:focus {
+      border-color: var(--gold);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 0 0 3px rgba(154,120,32,.15), var(--shadow-sm);
+    }
+    .search-input::placeholder { color: var(--muted); }
+    .search-icon {
+      position: absolute;
+      right: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 15px;
+      pointer-events: none;
+    }
+    .no-results {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      color: var(--crimson);
+      font-size: 14px;
+      padding: 24px;
+      display: none;
+      font-style: italic;
+    }
+
+    /* =========================================================
+      LAND SECTIONS
+    ========================================================= */
+    .land-section {
+      margin-bottom: 32px;
+      background: rgba(255,255,255,.38);
+      border-radius: 2px;
+      padding: 22px 20px 20px;
+      border: 1px solid var(--border-dim);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Diagonalstreifen-Textur */
+    .land-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 2px;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(154,120,32,.018) 18px, rgba(154,120,32,.018) 19px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Wappen-Wasserzeichen (Sektion, groß) */
+    .land-watermark {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+      opacity: .10;
+      pointer-events: none;
+      user-select: none;
+      filter: grayscale(1) contrast(1.2);
+      z-index: 0;
+      transform: rotate(-8deg);
+      transition: opacity .4s ease;
+    }
+    .land-section:hover .land-watermark {
+      opacity: .17;
+    }
+
+    /* Wappen-Wasserzeichen pro Karte (hinter dem Icon) */
+    .class-card .card-icon-wrap {
+      position: relative;
+      display: block;
+      width: var(--icon-land);
+      height: var(--icon-land);
+      min-width: var(--icon-land);
+      min-height: var(--icon-land);
+      max-width: var(--icon-land);
+      max-height: var(--icon-land);
+      margin-bottom: 10px;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+    .class-grid--three .class-card .card-icon-wrap {
+      width: var(--icon-base);
+      height: var(--icon-base);
+      min-width: var(--icon-base);
+      min-height: var(--icon-base);
+      max-width: var(--icon-base);
+      max-height: var(--icon-base);
+    }
+    /* Icon oben drauf */
+    .class-card .card-icon-wrap > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-dim);
+      z-index: 1;
+      transition: transform var(--transition), filter var(--transition);
+    }
+    /* Wappen dahinter */
+    .class-card .card-icon-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      background-image: var(--card-wappen);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: .25;
+      filter: grayscale(1) contrast(1.1);
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity .3s ease;
+    }
+    .class-card:hover .card-icon-wrap > img {
+      transform: scale(1.08);
+      filter: drop-shadow(0 2px 6px rgba(154,120,32,.3));
+    }
+    .class-card:hover .card-icon-wrap::before {
+      opacity: .38;
+    }
+
+    .land-header {
+      display: flex;
+      align-items: center;
+      padding: 13px 18px;
+      border-radius: 1px 1px 0 0;
+      margin: -22px -20px 22px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .land-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(-55deg, rgba(255,255,255,.04), rgba(255,255,255,.04) 10px, transparent 10px, transparent 22px);
+      pointer-events: none;
+    }
+    .land-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+      opacity: .5;
+    }
+
+    .land-banner {
+      width: 54px; height: 54px;
+      margin-right: 16px;
+      border: 2px solid rgba(255,255,255,.4);
+      border-radius: 50%;
+      object-fit: cover;
+      flex: 0 0 54px;
+      box-shadow: 0 0 0 3px rgba(0,0,0,.25), 0 2px 8px rgba(0,0,0,.4);
+    }
+    .land-info h2 {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #fff;
+      text-shadow: 0 1px 6px rgba(0,0,0,.5);
+    }
+
+    /* ── CENYR: Tiefrot, Gold, Schwarz ── */
+    .header-cenyr {
+      background: linear-gradient(120deg, #6a1a1a 0%, #3a0e0e 100%);
+      border-bottom: 2px solid #c49a28;
+    }
+    .land-section.section-cenyr {
+      border-color: rgba(106,26,26,.35);
+      background: rgba(106,26,26,.05);
+    }
+    .land-section.section-cenyr::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(196,154,40,.025) 18px, rgba(196,154,40,.025) 19px);
+    }
+
+    /* ── VENNYR: Gold, Schwarz, Silber ── */
+    .header-vennyr {
+      background: linear-gradient(120deg, #2a2200 0%, #1a1500 100%);
+      border-bottom: 2px solid #c8c8c8;
+    }
+    .land-section.section-vennyr {
+      border-color: rgba(180,150,20,.35);
+      background: rgba(40,34,0,.04);
+    }
+    .land-section.section-vennyr::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(200,200,200,.025) 18px, rgba(200,200,200,.025) 19px);
+    }
+
+    /* ── ALBEN: Gold, Grün, Schwarz, Silber ── */
+    .header-alben {
+      background: linear-gradient(120deg, #1a3a1a 0%, #0e2010 100%);
+      border-bottom: 2px solid #c49a28;
+    }
+    .land-section.section-alben {
+      border-color: rgba(26,58,26,.35);
+      background: rgba(26,58,26,.05);
+    }
+    .land-section.section-alben::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(196,154,40,.025) 18px, rgba(196,154,40,.025) 19px);
+    }
+
+    /* ── ALDRIMAR: Schwarz, Weiß, Türkis ── */
+    .header-aldrimar {
+      background: linear-gradient(120deg, #0a1a1a 0%, #041010 100%);
+      border-bottom: 2px solid #2ab8b8;
+    }
+    .land-section.section-aldrimar {
+      border-color: rgba(42,184,184,.25);
+      background: rgba(42,184,184,.03);
+    }
+    .land-section.section-aldrimar::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(42,184,184,.025) 18px, rgba(42,184,184,.025) 19px);
+    }
+
+    /* ── NORDMÄNNER: Gold, Schwarz, Weiß ── */
+    .header-nord {
+      background: linear-gradient(120deg, #1a1400 0%, #0e0c00 100%);
+      border-bottom: 2px solid #e0b830;
+    }
+    .land-section.section-nord {
+      border-color: rgba(224,184,48,.3);
+      background: rgba(20,16,0,.04);
+    }
+
+    /* ── GOLDMUND & ALDINGEN: Gold, Schwarz, Rot ── */
+    .header-goldmund {
+      background: linear-gradient(120deg, #2a1800 0%, #1a0e00 100%);
+      border-bottom: 2px solid #d4a028;
+    }
+    .land-section.section-goldmund {
+      border-color: rgba(212,160,40,.32);
+      background: rgba(42,24,0,.04);
+    }
+    .land-section.section-goldmund::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(212,160,40,.022) 18px, rgba(212,160,40,.022) 19px);
+    }
+
+    /* ── BLUTSTADT: Blutrot, Schwarz, Gold ── */
+    .header-blutstadt {
+      background: linear-gradient(120deg, #4a0a0a 0%, #2a0000 100%);
+      border-bottom: 2px solid #b82020;
+    }
+    .land-section.section-blutstadt {
+      border-color: rgba(184,32,32,.35);
+      background: rgba(74,10,10,.04);
+    }
+    .land-section.section-blutstadt::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(184,32,32,.025) 18px, rgba(184,32,32,.025) 19px);
+    }
+
+    /* ── MÓINNEACH: Schwarz, Grün, Grau (Sumpffarben) ── */
+    .header-moinneach {
+      background: linear-gradient(120deg, #1a2818 0%, #0e1510 100%);
+      border-bottom: 2px solid #4a6e48;
+    }
+    .land-section.section-moinneach {
+      border-color: rgba(74,110,72,.32);
+      background: rgba(26,40,24,.04);
+    }
+    .land-section.section-moinneach::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(74,110,72,.022) 18px, rgba(74,110,72,.022) 19px);
+    }
+
+    /* ── WEISENFLUH: Weiß, Blau, Silber (Alpenfarben) ── */
+    .header-weisenfluh {
+      background: linear-gradient(120deg, #1a2838 0%, #0e1620 100%);
+      border-bottom: 2px solid #6a9dc8;
+    }
+    .land-section.section-weisenfluh {
+      border-color: rgba(106,157,200,.32);
+      background: rgba(26,40,56,.03);
+    }
+    .land-section.section-weisenfluh::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(106,157,200,.022) 18px, rgba(106,157,200,.022) 19px);
+    }
+
+    /* ── AELDRUNMAR & TALYNDOR: Gold, Rot, Schwarz ── */
+    .header-aeldrunmar {
+      background: linear-gradient(120deg, #2a1408 0%, #1a0c00 100%);
+      border-bottom: 2px solid #c8844a;
+    }
+    .land-section.section-aeldrunmar {
+      border-color: rgba(200,132,74,.32);
+      background: rgba(42,20,8,.04);
+    }
+    .land-section.section-aeldrunmar::after {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(200,132,74,.022) 18px, rgba(200,132,74,.022) 19px);
+    }
+
+    .header-gilden   { background: linear-gradient(120deg, #3a3020 0%, #221c10 100%); border-bottom: 2px solid #c49a28; }
+    .header-orden    { background: linear-gradient(120deg, #3a1e20 0%, #221010 100%); border-bottom: 2px solid #c49a28; }
+
+    /* Heraldische Akzentfarbe im Sektions-Wasserzeichen je nach Land */
+    .section-cenyr    { --section-accent: rgba(106,26,26,.18); }
+    .section-vennyr   { --section-accent: rgba(180,150,20,.15); }
+    .section-alben    { --section-accent: rgba(26,80,26,.18); }
+    .section-aldrimar { --section-accent: rgba(42,184,184,.12); }
+    .section-nord     { --section-accent: rgba(224,184,48,.15); }
+    .section-goldmund { --section-accent: rgba(212,160,40,.15); }
+    .section-blutstadt { --section-accent: rgba(184,32,32,.18); }
+    .section-moinneach { --section-accent: rgba(74,110,72,.15); }
+    .section-weisenfluh { --section-accent: rgba(106,157,200,.15); }
+    .section-aeldrunmar { --section-accent: rgba(200,132,74,.15); }
+
+    /* Hover-Glühen der Karten passend zur Landfarbe */
+    .section-cenyr    .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #c49a28, 0 0 18px rgba(180,40,40,.3); }
+    .section-vennyr   .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #c8c8c8, 0 0 18px rgba(200,200,200,.2); }
+    .section-alben    .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #c49a28, 0 0 18px rgba(40,140,40,.25); }
+    .section-aldrimar .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #2ab8b8, 0 0 18px rgba(42,184,184,.3); }
+    .section-nord     .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #e0b830, 0 0 18px rgba(224,184,48,.3); }
+    .section-goldmund .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #d4a028, 0 0 18px rgba(212,160,40,.35); }
+    .section-blutstadt .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #b82020, 0 0 18px rgba(184,32,32,.4); }
+    .section-moinneach .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #4a6e48, 0 0 18px rgba(74,110,72,.35); }
+    .section-weisenfluh .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #6a9dc8, 0 0 18px rgba(106,157,200,.35); }
+    .section-aeldrunmar .class-card:hover { box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #c8844a, 0 0 18px rgba(200,132,74,.35); }
+
+    /* Heraldische Akzentfarben für Titel je nach Land */
+    .header-cenyr    .land-info h2 { color: #f0c860; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(200,60,60,.3); }
+    .header-vennyr   .land-info h2 { color: #e0e0e0; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(200,200,200,.2); }
+    .header-alben    .land-info h2 { color: #d4c060; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(60,160,60,.2); }
+    .header-aldrimar .land-info h2 { color: #7adedc; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(42,184,184,.35); }
+    .header-nord     .land-info h2 { color: #f0d060; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(224,184,48,.3); }
+    .header-goldmund .land-info h2 { color: #f0d070; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(212,160,40,.35); }
+    .header-blutstadt .land-info h2 { color: #f08080; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(184,32,32,.4); }
+    .header-moinneach .land-info h2 { color: #a8d0a0; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(74,110,72,.35); }
+    .header-weisenfluh .land-info h2 { color: #b8d8f0; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(106,157,200,.35); }
+    .header-aeldrunmar .land-info h2 { color: #e8c090; text-shadow: 0 1px 6px rgba(0,0,0,.7), 0 0 20px rgba(200,132,74,.35); }
+
+    /* =========================================================
+      CARD GRID
+    ========================================================= */
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+      gap: 18px;
+      justify-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Basisklassen - 4-Spalten Hero Grid */
+    .class-grid--three { 
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      background: rgba(0,0,0,.03);
+      border: 1px solid var(--border-dim);
+      border-radius: 3px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,.05);
+    }
+    
+    .class-grid--three .class-card {
+      max-width: 210px;
+    }
+    
+    .class-grid--three .class-card .card-icon-wrap {
+      width: 130px;
+      height: 130px;
+      min-width: 130px;
+      min-height: 130px;
+      max-width: 130px;
+      max-height: 130px;
+    }
+    
+    .class-grid--three .class-card > img {
+      width: 130px;
+      height: 130px;
+    }
+    
+    @media (max-width: 1100px) { 
+      .class-grid--three { 
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 750px;
+      }
+    }
+    @media (max-width: 900px) { 
+      .class-grid--three { 
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        gap: 20px;
+        padding: 25px 15px;
+      }
+    }
+    @media (max-width: 560px) {
+      .class-grid--three { 
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        gap: 18px;
+        padding: 20px 10px;
+      }
+      .class-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* =========================================================
+      CLASS CARD – Wappenrahmen
+    ========================================================= */
+    .class-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 2px;
+      width: 100%;
+      max-width: 185px;
+      padding: 14px 12px 12px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition), opacity .4s ease;
+      box-shadow: var(--shadow-sm), inset 0 0 0 1px rgba(255,255,255,.7);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    
+    /* RARITY TIERS */
+    /* Common - Grauer Rahmen */
+    .class-card.rarity-common {
+      border-color: #888;
+    }
+    .class-card.rarity-common:hover {
+      border-color: #aaa;
+      box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #999, 0 0 18px rgba(136,136,136,.3);
+    }
+    
+    /* Elite - Goldener Rahmen (Standard) */
+    .class-card.rarity-elite {
+      border-color: var(--gold);
+    }
+    
+    /* Special/Alternate - Lila Rahmen */
+    .class-card.rarity-special {
+      border-color: #a855f7;
+    }
+    .class-card.rarity-special::before {
+      border-color: rgba(168,85,247,.35);
+    }
+    .class-card.rarity-special:hover {
+      border-color: #c084fc;
+      box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #a855f7, 0 0 18px rgba(168,85,247,.5);
+    }
+    
+    /* Holy/Divine - Himmlisches Weiß-Gold */
+    .class-card.rarity-holy {
+      border-color: #fbbf24;
+      background: linear-gradient(180deg, #fffef0 0%, var(--card) 100%);
+    }
+    .class-card.rarity-holy::before {
+      border-color: rgba(251,191,36,.45);
+    }
+    .class-card.rarity-holy::after {
+      background: linear-gradient(160deg, rgba(251,191,36,.15) 0%, transparent 55%);
+      opacity: 1;
+    }
+    .class-card.rarity-holy:hover {
+      border-color: #f59e0b;
+      box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #fbbf24, 0 0 25px rgba(251,191,36,.6), 0 0 40px rgba(251,191,36,.3);
+    }
+    
+    /* Aldingen-specific (Rot-Schwarz) */
+    .class-card.rarity-aldingen {
+      border-color: #991b1b;
+    }
+    .class-card.rarity-aldingen::before {
+      border-color: rgba(153,27,27,.35);
+    }
+    .class-card.rarity-aldingen:hover {
+      border-color: #dc2626;
+      box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #991b1b, 0 0 18px rgba(153,27,27,.5);
+    }
+    
+    /* Goldmund-specific (Helles Gold) */
+    .class-card.rarity-goldmund {
+      border-color: #f59e0b;
+    }
+    .class-card.rarity-goldmund::before {
+      border-color: rgba(245,158,11,.35);
+    }
+    .class-card.rarity-goldmund:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 14px 34px rgba(0,0,0,.22), 0 0 0 2px #f59e0b, 0 0 18px rgba(245,158,11,.5);
+    }
+
+    /* Innerer Wappenrahmen */
+    .class-card::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(154,120,32,.22);
+      border-radius: 1px;
+      pointer-events: none;
+      transition: border-color var(--transition);
+      z-index: 0;
+    }
+
+    /* Gold-Schimmer Overlay */
+    .class-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(224,184,48,.10) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .class-card.visible { opacity: 1; transform: translateY(0); }
+
+    .class-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow:
+        0 14px 34px rgba(0,0,0,.22),
+        0 0 0 2px var(--gold),
+        0 0 0 4px rgba(154,120,32,.15),
+        var(--shadow-gold);
+      border-color: var(--gold-bright);
+      background: var(--card-hover);
+    }
+    .class-card:hover::before { border-color: rgba(224,184,48,.45); }
+    .class-card:hover::after  { opacity: 1; }
+
+    /* Fallback für Karten OHNE wrap (Platzhalter, Basisklassen) */
+    .class-card > img {
+      width: var(--icon-land);
+      height: var(--icon-land);
+      object-fit: contain;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-dim);
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      transition: transform var(--transition), filter var(--transition);
+    }
+    .class-grid--three .class-card > img {
+      width: var(--icon-base);
+      height: var(--icon-base);
+    }
+    .class-card:hover > img {
+      transform: scale(1.1);
+      filter: drop-shadow(0 2px 6px rgba(154,120,32,.3));
+    }
+
+    .class-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--blue-dark);
+      margin-bottom: 4px;
+      letter-spacing: .8px;
+      position: relative;
+      z-index: 1;
+      transition: color var(--transition);
+    }
+    .class-card:hover .class-name { color: var(--green); }
+
+    .class-flavor {
+      font-size: 10.5px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.3;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =========================================================
+      TOOLTIP – JS-driven, fixed overlap issue
+    ========================================================= */
+    .rpg-tooltip {
+      position: fixed;
+      z-index: 9999;
+      background: rgba(10,18,30,.97);
+      color: #e8d8a0;
+      font-family: 'Crimson Text', serif;
+      font-size: 13px;
+      font-style: italic;
+      padding: 7px 14px;
+      border-radius: 2px;
+      white-space: nowrap;
+      pointer-events: none;
+      border: 1px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,.5), 0 0 0 1px rgba(224,184,48,.15);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .rpg-tooltip.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+      PLACEHOLDER
+    ========================================================= */
+    .placeholder-card {
+      opacity: .35 !important;
+      border-style: dashed !important;
+      border-color: var(--border-dim) !important;
+      background: rgba(255,255,255,.25) !important;
+      cursor: default;
+      pointer-events: none;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+    .placeholder-card::before,
+    .placeholder-card::after { display: none !important; }
+
+    .class-card.hidden { display: none !important; }
+
+    /* =========================================================
+      RESPONSIVE
+    ========================================================= */
+    @media (max-width: 680px) {
+      .rpg-master-container { padding: 28px 14px; margin-inline: 10px; outline-offset: -6px; }
+      .nav-logo   { font-size: 10px; }
+      .nav-link   { font-size: 8.5px; padding: 4px 7px; }
+      .section-divider__badge { font-size: 11px; padding: 5px 10px; letter-spacing: 1.5px; }
+    }
+  </style>
+</head>
+<body class="sidebars-active">
+
+  <!-- LEFT SIDEBAR - Stats & Navigation -->
+  <aside class="sidebar-left" id="sidebarLeft">
+    <button class="sidebar-toggle-left" id="sidebarToggleLeft" title="Sidebar ein/ausklappen">
+      <span id="toggleIconLeft">◀</span>
+    </button>
+    <div class="sidebar-content">
+      
+      <!-- Statistics Section -->
+      <div class="sidebar-section">
+        <h3 class="sidebar-section-title">📊 Statistik</h3>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number" id="totalClasses">0</div>
+            <div class="stat-label">Klassen</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="totalLands">0</div>
+            <div class="stat-label">Länder</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation Section -->
+      <div class="sidebar-section">
+        <h3 class="sidebar-section-title">🗺️ Navigation</h3>
+        <ul class="nav-land-list" id="navLandList">
+          <!-- Will be populated by JavaScript -->
+        </ul>
+      </div>
+      
+    </div>
+  </aside>
+  
+  <!-- RIGHT SIDEBAR - Dynamic Lore -->
+  <aside class="sidebar-right" id="sidebarRight">
+    <button class="sidebar-toggle-right" id="sidebarToggleRight" title="Lore ein/ausklappen">
+      <span id="toggleIconRight">▶</span>
+    </button>
+    <div class="lore-container active" id="loreContainer">
+      <div class="lore-header">
+        <div class="lore-wappen" id="loreWappen">
+          <img src="https://i.imgur.com/00DWDQW.png" alt="Wappen" id="loreWappenImg">
+        </div>
+        <h2 class="lore-land-name" id="loreLandName">Willkommen</h2>
+        <p class="lore-land-subtitle" id="loreLandSubtitle">Wähle ein Land aus der Navigation</p>
+      </div>
+      
+      <div class="lore-section">
+        <h4 class="lore-section-title">⚔ Kriegertum & Ehre</h4>
+        <div class="lore-text lore-placeholder" id="loreWarriorhood">
+          <em>Hier wird beschrieben, wie Kriegertum in diesem Land definiert wird...</em>
+        </div>
+      </div>
+      
+      <div class="lore-section">
+        <h4 class="lore-section-title">👑 Gesellschaftsordnung</h4>
+        <div class="lore-text lore-placeholder" id="loreSociety">
+          <em>Informationen über Adel, Gemeinvolk und soziale Strukturen...</em>
+        </div>
+      </div>
+      
+      <div class="lore-section">
+        <h4 class="lore-section-title">📜 Hierarchie & Ränge</h4>
+        <ul class="lore-hierarchy lore-placeholder" id="loreHierarchy">
+          <li><span class="lore-rank">König/Fürst:</span> <em>Platzhalter...</em></li>
+          <li><span class="lore-rank">Hochadel:</span> <em>Platzhalter...</em></li>
+          <li><span class="lore-rank">Ritter:</span> <em>Platzhalter...</em></li>
+          <li><span class="lore-rank">Krieger:</span> <em>Platzhalter...</em></li>
+          <li><span class="lore-rank">Gemeinvolk:</span> <em>Platzhalter...</em></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <nav class="sticky-nav" id="stickyNav">
+    <span class="nav-logo">⚔ Klassen</span>
+    <div class="nav-divider"></div>
+    <a class="nav-link" href="#basis">Basisklassen</a>
+    <a class="nav-link" href="#laender">Länderpfade</a>
+    <a class="nav-link" href="#cenyr">Cenyr</a>
+    <a class="nav-link" href="#vennyr">Vennyr</a>
+    <a class="nav-link" href="#alben">Alben</a>
+    <a class="nav-link" href="#aldrimar">Aldrimar</a>
+    <a class="nav-link" href="#nordmaenner">Nordmänner</a>
+    <a class="nav-link" href="#goldmund">Goldmund & Aldingen</a>
+    <a class="nav-link" href="#blutstadt">Blutstadt</a>
+    <a class="nav-link" href="#moinneach">Móinneach</a>
+    <a class="nav-link" href="#weisenfluh">Weisenfluh</a>
+    <a class="nav-link" href="#aeldrunmar">Aeldrunmar & Talyndor</a>
+    <div class="nav-divider"></div>
+    <a class="nav-link" href="#zukuenftig">Zukünftig</a>
+    <a class="nav-link" href="#gilden">Gilden</a>
+    <a class="nav-link" href="#orden">Orden</a>
+  </nav>
+
+  <a class="back-to-top" id="backToTop" href="#top" aria-label="Nach oben">↑</a>
+
+  <div class="rpg-master-container" id="top">
+    <span class="corner corner--tl">❧</span>
+    <span class="corner corner--tr">❧</span>
+    <span class="corner corner--bl">❧</span>
+    <span class="corner corner--br">❧</span>
+
+    <h1 class="main-title">Klassenübersicht</h1>
+    <p class="title-sub">Codex der Berufe &amp; Pfade</p>
+    <div class="rune-divider">
+      <div class="rune-divider__line"></div>
+      <div class="rune-divider__center">⚜ ✦ ⚜</div>
+      <div class="rune-divider__line"></div>
+    </div>
+
+    <div class="search-wrapper">
+      <input class="search-input" type="text" id="classSearch"
+        placeholder="Klasse suchen… z.B. Magier, Skalde, Berserkir" autocomplete="off" />
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="feature-buttons">
+      <button class="random-class-btn" id="randomClassBtn">
+        <span>🎲</span> Zufällige Klasse
+      </button>
+      <button class="sound-toggle-btn" id="soundToggleBtn" title="Sound-Effekte an/aus">
+        <span id="soundIcon">🔇</span>
+      </button>
+    </div>
+    <div class="no-results" id="noResults">– Keine Klassen gefunden –</div>
+    
+    <!-- Random Class Modal -->
+    <div class="random-modal" id="randomModal">
+      <div class="random-modal-content">
+        <h3 class="random-modal-title">⚔ Zufällige Klasse würfeln ⚔</h3>
+        <p style="text-align: center; margin-bottom: 15px; font-family: 'Crimson Text', serif; font-size: 14px; color: var(--muted);">Wähle die Länder aus (Milizen ausgeschlossen):</p>
+        <div class="land-checkboxes" id="landCheckboxes"></div>
+        <div class="random-modal-buttons">
+          <button class="modal-btn cancel" id="cancelRandomBtn">Abbrechen</button>
+          <button class="modal-btn" id="rollRandomBtn">🎲 Würfeln!</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Epic Reveal Overlay -->
+    <div class="reveal-overlay" id="revealOverlay">
+      <div class="reveal-card-container">
+        <div class="reveal-card" id="revealCard">
+          <div class="reveal-card-back">
+            🎲
+          </div>
+          <div class="reveal-card-front" id="revealCardFront">
+            <div class="reveal-sparkles" id="revealSparkles"></div>
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+        <button class="reveal-close-btn" id="revealCloseBtn" title="Schließen">✕</button>
+      </div>
+    </div>
+
+    <!-- BASISKLASSEN -->
+    <div class="section-divider" id="basis">
+      <div class="section-divider__line"></div>
+      <div class="section-divider__badge">⚔ Die Basis-Klassen ⚔</div>
+      <div class="section-divider__line"></div>
+    </div>
+
+    <div class="class-grid class-grid--three">
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1956" data-tooltip="Meister des Nahkampfs" data-name="kämpfer">
+        <img src="https://i.imgur.com/blpHr0S.png" alt="Kämpfer" loading="lazy" /><span class="class-name">Kämpfer</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1968" data-tooltip="Herr zu Pferde" data-name="reiter">
+        <img src="https://i.imgur.com/x2dFvAg.png" alt="Reiter" loading="lazy" /><span class="class-name">Reiter</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1967" data-tooltip="Meister der Substanzen" data-name="alchemist">
+        <img src="https://i.imgur.com/xeD43vb.png" alt="Alchemist" loading="lazy" /><span class="class-name">Alchemist</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1966" data-tooltip="Meister der arkanen Künste" data-name="magier">
+        <img src="https://i.imgur.com/n5A2PlT.png" alt="Magier" loading="lazy" /><span class="class-name">Magier</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1965" data-tooltip="Pfad der inneren Stärke" data-name="mönch">
+        <img src="https://i.imgur.com/zCXtHAy.png" alt="Mönch" loading="lazy" /><span class="class-name">Mönch</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1964" data-tooltip="Hüter der Natur" data-name="druide">
+        <img src="https://i.imgur.com/Xy9tSn6.png" alt="Druide" loading="lazy" /><span class="class-name">Druide</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1963" data-tooltip="Dieb aus dem Schatten" data-name="schurke">
+        <img src="https://i.imgur.com/XE3TOXy.png" alt="Schurke" loading="lazy" /><span class="class-name">Schurke</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1962" data-tooltip="Gesang und Schwert" data-name="barde">
+        <img src="https://i.imgur.com/JEBhRaS.png" alt="Barde" loading="lazy" /><span class="class-name">Barde</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1961" data-tooltip="Pakt mit dunklen Mächten" data-name="hexenmeister">
+        <img src="https://i.imgur.com/5Dkv7Ri.png" alt="Hexenmeister" loading="lazy" /><span class="class-name">Hexenmeister</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1958" data-tooltip="Diener der Götter" data-name="kleriker">
+        <img src="https://i.imgur.com/05uOAbw.png" alt="Kleriker" loading="lazy" /><span class="class-name">Kleriker</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1959" data-tooltip="Heiliger Krieger" data-name="paladin">
+        <img src="https://i.imgur.com/mWd46UL.png" alt="Paladin" loading="lazy" /><span class="class-name">Paladin</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1957" data-tooltip="Ungebändigte Wildheit" data-name="barbar">
+        <img src="https://i.imgur.com/D7mPI7G.png" alt="Barbar" loading="lazy" /><span class="class-name">Barbar</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1960" data-tooltip="Späher & Jäger der Wildnis" data-name="waldläufer">
+        <img src="https://i.imgur.com/X9DByEV.png" alt="Waldläufer" loading="lazy" /><span class="class-name">Waldläufer</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1969" data-tooltip="Herr der Meere" data-name="seefahrer">
+        <img src="https://i.imgur.com/accNyX6.png" alt="Seefahrer" loading="lazy" /><span class="class-name">Seefahrer</span>
+      </a>
+      <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2450" data-tooltip="Stimme der Geister" data-name="schamane">
+        <img src="https://i.imgur.com/UyMKN0J.png" alt="Schamane" loading="lazy" /><span class="class-name">Schamane</span>
+      </a>
+    </div>
+
+    <!-- LÄNDERPFADE -->
+    <div class="section-divider" id="laender">
+      <div class="section-divider__line"></div>
+      <div class="section-divider__badge">🛡 Länderspezifische Pfade 🛡</div>
+      <div class="section-divider__line"></div>
+    </div>
+
+    <!-- CENYR -->
+    <section class="land-section section-cenyr" id="cenyr">
+      <img class="land-watermark" src="https://i.imgur.com/00DWDQW.png" alt="" aria-hidden="true" />
+      <div class="land-header header-cenyr">
+        <img class="land-banner" src="https://i.imgur.com/00DWDQW.png" alt="Cenyr" loading="lazy" />
+        <div class="land-info"><h2>Cenyr</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card rarity-common" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1035" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/zj8Kobl.png" alt="Milwr" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1030" data-tooltip="Klassischer Ritter Cenyrs" data-name="teulu"><img src="https://i.imgur.com/ocBxSrC.png" alt="Teulu" loading="lazy" /><span class="class-name">Teulu</span><span class="class-flavor">Klassischer Ritter Cenyrs</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1031" data-tooltip="Speerkämpfer Ritter" data-name="cantref"><img src="https://i.imgur.com/10LmjQR.png" alt="Cantref" loading="lazy" /><span class="class-name">Cantref</span><span class="class-flavor">Speerkämpfer Ritter</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1034" data-tooltip="Ritter zu Pferd" data-name="uchelwyr"><img src="https://i.imgur.com/J1dBp5C.png" alt="Uchelwyr" loading="lazy" /><span class="class-name">Uchelwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1032" data-tooltip="Fernkämpfender Ritter" data-name="helwyr"><img src="https://i.imgur.com/HjxiJxW.png" alt="Helwyr" loading="lazy" /><span class="class-name">Helwyr</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
+        <a class="class-card rarity-special" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1417" data-tooltip="Ritter der Arth" data-name="arthwyr"><img src="https://i.imgur.com/xGZMBX2.png" alt="Arthwyr" loading="lazy" /><span class="class-name">Arthwyr</span><span class="class-flavor">Ritter der Arth</span></a>
+        <a class="class-card rarity-special" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1591" data-tooltip="Barde & Ritter" data-name="barddwyr"><img src="https://i.imgur.com/HvWlZul.png" alt="Barddwyr" loading="lazy" /><span class="class-name">Barddwyr</span><span class="class-flavor">Barde &amp; Ritter</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- VENNYR -->
+    <section class="land-section section-vennyr" id="vennyr">
+      <img class="land-watermark" src="https://i.imgur.com/T8e0EqY.png" alt="" aria-hidden="true" />
+      <div class="land-header header-vennyr">
+        <img class="land-banner" src="https://i.imgur.com/T8e0EqY.png" alt="Vennyr" loading="lazy" />
+        <div class="land-info"><h2>Vennyr</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card rarity-common" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1035" data-tooltip="Waffenknecht & Miliz" data-name="milwr"><img src="https://i.imgur.com/2wdIWQ2.png" alt="Milwr" loading="lazy" /><span class="class-name">Milwr</span><span class="class-flavor">Waffenknecht &amp; Miliz</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1036" data-tooltip="Ritter zur See" data-name="morwyr"><img src="https://i.imgur.com/FzoXhtJ.png" alt="Morwyr" loading="lazy" /><span class="class-name">Morwyr</span><span class="class-flavor">Ritter zur See</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1037" data-tooltip="Klassischer Vennyrischer Ritter" data-name="rhyfelwyr"><img src="https://i.imgur.com/Jh8DGNz.png" alt="Rhyfelwyr" loading="lazy" /><span class="class-name">Rhyfelwyr</span><span class="class-flavor">Klassischer Vennyrischer Ritter</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1681" data-tooltip="Fernkämpfender Ritter" data-name="ceidwyn"><img src="https://i.imgur.com/k7eQ3Kt.png" alt="Ceidwyn" loading="lazy" /><span class="class-name">Ceidwyn</span><span class="class-flavor">Fernkämpfender Ritter</span></a>
+        <a class="class-card rarity-elite" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1683" data-tooltip="Ritter zu Pferd" data-name="rhiddwyr"><img src="https://i.imgur.com/UnjMmYp.png" alt="Rhiddwyr" loading="lazy" /><span class="class-name">Rhiddwyr</span><span class="class-flavor">Ritter zu Pferd</span></a>
+        <a class="class-card rarity-holy" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1033" data-tooltip="Glaubenskrieger der Nimue" data-name="derwyn"><img src="https://i.imgur.com/oaYwMOs.png" alt="Derwyn" loading="lazy" /><span class="class-name">Derwyn</span><span class="class-flavor">Glaubenskrieger der Nimue</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- ALBEN -->
+    <section class="land-section section-alben" id="alben">
+      <img class="land-watermark" src="https://i.imgur.com/WRnLB3t.png" alt="" aria-hidden="true" />
+      <div class="land-header header-alben">
+        <img class="land-banner" src="https://i.imgur.com/WRnLB3t.png" alt="Alben" loading="lazy" />
+        <div class="land-info"><h2>Alben</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1039" data-tooltip="Leichtes Fußvolk" data-name="kern"><img src="https://i.imgur.com/E92CDhq.png" alt="Kern" loading="lazy" /><span class="class-name">Kern</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1040" data-tooltip="Schwertkämpfer" data-name="cateran"><img src="https://i.imgur.com/ZZSDo2z.png" alt="Cateran" loading="lazy" /><span class="class-name">Cateran</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1046" data-tooltip="Reiter der Alben" data-name="mormaer"><img src="https://i.imgur.com/vCXWd55.png" alt="Mormaer" loading="lazy" /><span class="class-name">Mormaer</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1045" data-tooltip="Waldläufer der Alben" data-name="serf"><img src="https://i.imgur.com/qwsuhcH.png" alt="Serf" loading="lazy" /><span class="class-name">Serf</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1041" data-tooltip="Speerkrieger der Alben" data-name="airig"><img src="https://i.imgur.com/oxk3dMj.png" alt="Airig" loading="lazy" /><span class="class-name">Airig</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1773" data-tooltip="Krieger zur See" data-name="currach"><img src="https://i.imgur.com/raG2iIO.png" alt="Currach" loading="lazy" /><span class="class-name">Currach</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1147" data-tooltip="Dudelsackpfeifer & Kampfbarden" data-name="piobaire"><img src="https://i.imgur.com/JmtKs6F.png" alt="Piobaire" loading="lazy" /><span class="class-name">Ceólaire & Piobaire</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1772" data-tooltip="Freischärler der Alben" data-name="riada"><img src="https://i.imgur.com/BmaklcS.png" alt="Riada" loading="lazy" /><span class="class-name">Riada</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1878" data-tooltip="Waldläufer, Pionier & Entdecker" data-name="silvaner" data-wappen="https://i.imgur.com/CByvGxO.png"><img src="https://i.imgur.com/McVUKVQ.png" alt="Silvaner" loading="lazy" /><span class="class-name">Silvaner</span><span class="class-flavor">Waldläufer, Pionier &amp; Entdecker</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1047" data-tooltip="Krieger der der Gallochbhair" data-name="galloghlaigh" data-wappen="https://i.imgur.com/CxhdyTH.png"><img src="https://i.imgur.com/T387Q5y.png" alt="Galloghlaigh" loading="lazy" /><span class="class-name">Galloghlaigh</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1048" data-tooltip="Riesengeschlecht" data-name="fathach" data-wappen="https://i.imgur.com/onWDymh.png"><img src="https://i.imgur.com/NAEUMM1.png" alt="Fathach" loading="lazy" /><span class="class-name">Fathach</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- ALDRIMAR -->
+    <section class="land-section section-aldrimar" id="aldrimar">
+      <img class="land-watermark" src="https://i.imgur.com/OnNslhr.png" alt="" aria-hidden="true" />
+      <div class="land-header header-aldrimar">
+        <img class="land-banner" src="https://i.imgur.com/OnNslhr.png" alt="Aldrimar" loading="lazy" />
+        <div class="land-info"><h2>Aldrimar</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1049" data-tooltip="Fußvolk & Miliz Aldrimars" data-name="hird maid"><img src="https://i.imgur.com/DXELbM2.png" alt="Hird/Maid" loading="lazy" /><span class="class-name">Hird/Maid</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2893" data-tooltip="Axtkämpfender Huskarl" data-name="skjoldr"><img src="https://i.imgur.com/rlVtCrn.png" alt="Skjoldr" loading="lazy" /><span class="class-name">Skjoldr</span><span class="class-flavor">Axtkämpfender Huskarl</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1051" data-tooltip="Berittener Huskarl" data-name="thegnar"><img src="https://i.imgur.com/Z081bE6.png" alt="Thegnar" loading="lazy" /><span class="class-name">Thegnar</span><span class="class-flavor">Berittener Huskarl</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1203" data-tooltip="Huskarl zur See" data-name="skeidr"><img src="https://i.imgur.com/RMS1Joo.png" alt="Skeidr" loading="lazy" /><span class="class-name">Skeidr</span><span class="class-flavor">Huskarl zur See</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1050" data-tooltip="Schildbeißer Huskarl" data-name="skjaldr"><img src="https://i.imgur.com/TjnJlHf.png" alt="Skjaldr" loading="lazy" /><span class="class-name">Skjaldr</span><span class="class-flavor">Schildbeißer Huskarl</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1052" data-tooltip="Fernkämpfender Huskarl" data-name="skytte"><img src="https://i.imgur.com/kUMAEYt.png" alt="Skytte" loading="lazy" /><span class="class-name">Skytte</span><span class="class-flavor">Fernkämpfender Huskarl</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1053" data-tooltip="Skalde und Huskarl" data-name="skalde"><img src="https://i.imgur.com/wAuI5MD.png" alt="Skalde" loading="lazy" /><span class="class-name">Skalde</span><span class="class-flavor">Skalde und Huskarl</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- NORDMÄNNER -->
+    <section class="land-section section-nord" id="nordmaenner">
+      <img class="land-watermark" src="https://i.imgur.com/2KOkdu5.png" alt="" aria-hidden="true" />
+      <div class="land-header header-nord">
+        <img class="land-banner" src="https://i.imgur.com/2KOkdu5.png" alt="Nordmänner" loading="lazy" />
+        <div class="land-info"><h2>Nordmänner</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1054" data-tooltip="Fußvolk des Nordens" data-name="hird kona"><img src="https://i.imgur.com/kiyvovh.png" alt="Hird/Kona" loading="lazy" /><span class="class-name">Hird/Kona</span><span class="class-flavor">Fußvolk des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2890" data-tooltip="Speerkämpfer des Nordens" data-name="stjorn"><img src="https://i.imgur.com/YmjS2bm.png" alt="Stjorn" loading="lazy" /><span class="class-name">Stjorn</span><span class="class-flavor">Speerkämpfer des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2891" data-tooltip="Infanterist des Nordens" data-name="ravnar"><img src="https://i.imgur.com/MHnDy0V.png" alt="Ravnar" loading="lazy" /><span class="class-name">Ravnar</span><span class="class-flavor">Infanterist des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1058" data-tooltip="Hautwechsler & Tierkrieger" data-name="ulfhednar"><img src="https://i.imgur.com/LOjpDQS.png" alt="Ulfhednar" loading="lazy" /><span class="class-name">Ulfhednar</span><span class="class-flavor">Hautwechsler</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1055" data-tooltip="Berserker des Nordens" data-name="berserkir"><img src="https://i.imgur.com/D7sqCbe.png" alt="Berserkir" loading="lazy" /><span class="class-name">Berserkir</span><span class="class-flavor">Berserker des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1056" data-tooltip="Seemann des Nordens" data-name="veigir"><img src="https://i.imgur.com/26xBwIU.png" alt="Veigir" loading="lazy" /><span class="class-name">Veigir</span><span class="class-flavor">Seemann des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1264" data-tooltip="Skalde des Nordens" data-name="tungur"><img src="https://i.imgur.com/Afgf6m7.png" alt="Tungur" loading="lazy" /><span class="class-name">Tungur</span><span class="class-flavor">Skalde des Nordens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2892" data-tooltip="Reiter des Nordens" data-name="hestgar"><img src="https://i.imgur.com/tN9JEZA.png" alt="Hestgar" loading="lazy" /><span class="class-name">Hestgar</span><span class="class-flavor">Reiter des Nordens</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- GOLDMUND & ALDINGEN -->
+    <section class="land-section section-goldmund" id="goldmund">
+      <img class="land-watermark" src="https://i.imgur.com/tTjs23K.png" alt="" aria-hidden="true" />
+      <div class="land-header header-goldmund">
+        <img class="land-banner" src="https://i.imgur.com/tTjs23K.png" alt="Goldmund & Aldingen" loading="lazy" />
+        <div class="land-info"><h2>Goldmund &amp; Aldingen</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Gold & Aldknecht" data-name="aldknecht" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/WYGSPpU.png" alt="Gold & Aldknecht" loading="lazy" /><span class="class-name">Gold &amp; Aldknecht</span><span class="class-flavor">Fußvolk</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schockkavallerist Aldingens & Goldmunds" data-name="husar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/rwQoRC2.png" alt="Husar" loading="lazy" /><span class="class-name">Husar</span><span class="class-flavor">Schockkavallerist</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Infanterist Aldingens & Goldmunds" data-name="aldmar" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/HlhliDQ.png" alt="Aldmar" loading="lazy" /><span class="class-name">Aldmar</span><span class="class-flavor">Infanterist</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Grenzer Aldingens & Goldmunds" data-name="eldner" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/yy0BAJB.png" alt="Eldner" loading="lazy" /><span class="class-name">Eldner</span><span class="class-flavor">Grenzer</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Fechtmeister & Barde" data-name="schirmer" data-wappen="https://i.imgur.com/tTjs23K.png"><img src="https://i.imgur.com/d77KKNs.png" alt="Schirmer" loading="lazy" /><span class="class-name">Schirmer</span><span class="class-flavor">Fechtmeister &amp; Barde</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Aldinger Schwertmeister" data-name="flamberger" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/4g4xFJZ.png" alt="Flamberger" loading="lazy" /><span class="class-name">Flamberger</span><span class="class-flavor">Aldinger Schwertmeister</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Havner Aldingens" data-name="havner" data-wappen="https://i.imgur.com/OBjj3gT.png"><img src="https://i.imgur.com/ynFlx0y.png" alt="Havner" loading="lazy" /><span class="class-name">Havner</span><span class="class-flavor">Havner Aldingens</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Goldritter Goldmunds" data-name="güldner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/9q7AX4t.png" alt="Güldner" loading="lazy" /><span class="class-name">Güldner</span><span class="class-flavor">Goldritter Goldmunds</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Goldener Ritter Goldmunds" data-name="oraner" data-wappen="https://i.imgur.com/6O0NbWi.png"><img src="https://i.imgur.com/uB9Aa6L.png" alt="Oraner" loading="lazy" /><span class="class-name">Oraner</span><span class="class-flavor">Goldener Ritter Goldmunds</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- BLUTSTADT -->
+    <section class="land-section section-blutstadt" id="blutstadt">
+      <img class="land-watermark" src="https://i.imgur.com/A8um0JC.png" alt="" aria-hidden="true" />
+      <div class="land-header header-blutstadt">
+        <img class="land-banner" src="https://i.imgur.com/A8um0JC.png" alt="Blutstadt" loading="lazy" />
+        <div class="land-info"><h2>Blutstadt</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Gardist der Blutstadt" data-name="gardist" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/6vjWPt4.png" alt="Gardist" loading="lazy" /><span class="class-name">Gardist</span><span class="class-flavor">Gardist der Blutstadt</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter der Blutstadt" data-name="blutritter" data-wappen="https://i.imgur.com/A8um0JC.png"><img src="https://i.imgur.com/wci55D2.png" alt="Ritter" loading="lazy" /><span class="class-name">Ritter</span><span class="class-flavor">Ritter der Blutstadt</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- MÓINNEACH - Die Schwarzmarschen -->
+    <section class="land-section section-moinneach" id="moinneach">
+      <img class="land-watermark" src="https://i.imgur.com/4I3r6n7.png" alt="" aria-hidden="true" />
+      <div class="land-header header-moinneach">
+        <img class="land-banner" src="https://i.imgur.com/4I3r6n7.png" alt="Móinneach" loading="lazy" />
+        <div class="land-info"><h2>Móinneach – Die Schwarzmarschen</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Miliz der Schwarzmarschen" data-name="slógar" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/wgmxBe6.png" alt="Slógar" loading="lazy" /><span class="class-name">Slógar</span><span class="class-flavor">Miliz der Schwarzmarschen</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Krieger der Schwarzmarschen" data-name="rathaire" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/J2suRuv.png" alt="Rathaire" loading="lazy" /><span class="class-name">Rathaire</span><span class="class-flavor">Krieger der Schwarzmarschen</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Grenzer der Schwarzmarschen" data-name="coillan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/lLEDXlj.png" alt="Coillan" loading="lazy" /><span class="class-name">Coillan</span><span class="class-flavor">Grenzer der Schwarzmarschen</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Echsenreiter der Schwarzmarschen" data-name="drúan" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/l4OtuHd.png" alt="Drúan" loading="lazy" /><span class="class-name">Drúan</span><span class="class-flavor">Echsenreiter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Bestientöter der Schwarzmarschen" data-name="mordán" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/kzb5WTu.png" alt="Mordán" loading="lazy" /><span class="class-name">Mordán</span><span class="class-flavor">Bestientöter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Alchemist der Schwarzmarschen" data-name="cernach" data-wappen="https://i.imgur.com/4I3r6n7.png"><img src="https://i.imgur.com/m72MzP4.png" alt="Cernach" loading="lazy" /><span class="class-name">Cernach</span><span class="class-flavor">Alchemist</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- WEISENFLUH -->
+    <section class="land-section section-weisenfluh" id="weisenfluh">
+      <img class="land-watermark" src="https://i.imgur.com/Fk0d1kf.png" alt="" aria-hidden="true" />
+      <div class="land-header header-weisenfluh">
+        <img class="land-banner" src="https://i.imgur.com/Fk0d1kf.png" alt="Weisenfluh" loading="lazy" />
+        <div class="land-info"><h2>Weisenfluh</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Fußvolk & Miliz Weisenfluhs" data-name="landsknecht" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/KT4sryu.png" alt="Landsknecht" loading="lazy" /><span class="class-name">Landsknecht</span><span class="class-flavor">Fußvolk &amp; Miliz</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter von Weisenfluh" data-name="landsprotektor" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/CDzMPrL.png" alt="Landsprotektor" loading="lazy" /><span class="class-name">Landsprotektor</span><span class="class-flavor">Ritter von Weisenfluh</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Berittener Ritter Weisenfluhs" data-name="kürassier" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/ZHX2bny.png" alt="Kürassier" loading="lazy" /><span class="class-name">Kürassier</span><span class="class-flavor">Berittener Ritter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Narr, Ritter & Barde" data-name="harlekin" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/eOKihDK.png" alt="Harlekin" loading="lazy" /><span class="class-name">Harlekin</span><span class="class-flavor">Narr, Ritter &amp; Barde</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter zur See Weisenfluhs" data-name="landsmariner" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/coKMJ4o.png" alt="Landsmariner" loading="lazy" /><span class="class-name">Landsmariner</span><span class="class-flavor">Ritter zur See</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter Waldläufer & Schütze" data-name="landsjäger" data-wappen="https://i.imgur.com/Fk0d1kf.png"><img src="https://i.imgur.com/BXUzhek.png" alt="Landsjäger" loading="lazy" /><span class="class-name">Landsjäger</span><span class="class-flavor">Ritter Waldläufer &amp; Schütze</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <div class="mini-rune">· · ✦ · ·</div>
+
+    <!-- AELDRUNMAR & TALYNDOR -->
+    <section class="land-section section-aeldrunmar" id="aeldrunmar">
+      <img class="land-watermark" src="https://i.imgur.com/MJhCj7S.png" alt="" aria-hidden="true" />
+      <div class="land-header header-aeldrunmar">
+        <img class="land-banner" src="https://i.imgur.com/MJhCj7S.png" alt="Aeldrunmar & Talyndor" loading="lazy" />
+        <div class="land-info"><h2>Aeldrunmar &amp; Talyndor</h2></div>
+      </div>
+      <div class="class-grid">
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Miliz Aeldrunmars & Talyndors" data-name="fyrd" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/UFDHJJ1.png" alt="Fyrd" loading="lazy" /><span class="class-name">Fyrd</span><span class="class-flavor">Miliz</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schwertkämpfer Ritter" data-name="isen" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/pdAjG6t.png" alt="Isen" loading="lazy" /><span class="class-name">Isen</span><span class="class-flavor">Schwertkämpfer Ritter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Lanzenritter" data-name="wigar" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xxhC0DE.png" alt="Wigar" loading="lazy" /><span class="class-name">Wigar</span><span class="class-flavor">Lanzenritter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Berittener Ritter" data-name="hyld" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/A8dTu8r.png" alt="Hyld" loading="lazy" /><span class="class-name">Hyld</span><span class="class-flavor">Berittener Ritter</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Waldläufer & Schütze" data-name="scoet" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/7JXDvLR.png" alt="Scoet" loading="lazy" /><span class="class-name">Scoet</span><span class="class-flavor">Waldläufer &amp; Schütze</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter zur See Aeldrunmars" data-name="særinc" data-wappen="https://i.imgur.com/qgxo2h7.png"><img src="https://i.imgur.com/5263xR7.png" alt="Særinc" loading="lazy" /><span class="class-name">Særinc</span><span class="class-flavor">Ritter zur See (Aeldrunmar)</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Ritter & Troubadour" data-name="gliwere" data-wappen="https://i.imgur.com/MJhCj7S.png"><img src="https://i.imgur.com/xBIoUEr.png" alt="Gliwere" loading="lazy" /><span class="class-name">Gliwere</span><span class="class-flavor">Ritter &amp; Troubadour</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Lanzierer Talyndors" data-name="miles" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/Z9OH3mu.png" alt="Miles" loading="lazy" /><span class="class-name">Miles</span><span class="class-flavor">Lanzierer (Talyndor)</span></a>
+        <a class="class-card" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/" data-tooltip="Schwerer Ritter mit Morgenstern" data-name="ceorl" data-wappen="https://i.imgur.com/jntsKY2.png"><img src="https://i.imgur.com/XVBDnZP.png" alt="Ceorl" loading="lazy" /><span class="class-name">Ceorl</span><span class="class-flavor">Schwerer Ritter (Talyndor)</span></a>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <!-- ZUKÜNFTIG -->
+    <div class="section-divider" id="zukuenftig">
+      <div class="section-divider__line"></div>
+      <div class="section-divider__badge">⋯ Zukünftige Völker &amp; Pfade ⋯</div>
+      <div class="section-divider__line"></div>
+    </div>
+    <section class="land-section">
+      <div class="land-header" style="background: linear-gradient(120deg, #3a2e1a 0%, #221a0e 100%);">
+        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" />
+        <div class="land-info"><h2>Unbekannte Fraktionen</h2></div>
+      </div>
+      <div class="class-grid">
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Volk ??</span><span class="class-flavor">Wird noch enthüllt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Pfad ??</span><span class="class-flavor">Verschlüsselt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Platzhalter" loading="lazy" /><span class="class-name">Unterklasse</span><span class="class-flavor">folgt…</span></div>
+      </div>
+    </section>
+
+    <!-- GILDEN -->
+    <div class="section-divider" id="gilden">
+      <div class="section-divider__line"></div>
+      <div class="section-divider__badge">⚖ Gilden &amp; Organisationen ⚖</div>
+      <div class="section-divider__line"></div>
+    </div>
+    <section class="land-section">
+      <div class="land-header header-gilden">
+        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilden" loading="lazy" />
+        <div class="land-info"><h2>Gilden &amp; Organisationen</h2></div>
+      </div>
+      <div class="class-grid">
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Unbekannt" loading="lazy" /><span class="class-name">Unbekannt</span><span class="class-flavor">Wird noch enthüllt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilde" loading="lazy" /><span class="class-name">Gilde ??</span><span class="class-flavor">Verschlüsselt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Gilde" loading="lazy" /><span class="class-name">Neue Gilde</span><span class="class-flavor">Platzhalter…</span></div>
+      </div>
+    </section>
+
+    <!-- ORDEN -->
+    <div class="section-divider" id="orden">
+      <div class="section-divider__line"></div>
+      <div class="section-divider__badge">✝ Orden &amp; Bünde ✝</div>
+      <div class="section-divider__line"></div>
+    </div>
+    <section class="land-section">
+      <div class="land-header header-orden">
+        <img class="land-banner" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" />
+        <div class="land-info"><h2>Orden &amp; Bünde</h2></div>
+      </div>
+      <div class="class-grid">
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Orden ??</span><span class="class-flavor">Wird noch enthüllt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Orden ??</span><span class="class-flavor">Verschlüsselt…</span></div>
+        <div class="class-card placeholder-card"><img src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" alt="Orden" loading="lazy" /><span class="class-name">Neuer Orden</span><span class="class-flavor">Platzhalter…</span></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // BACK TO TOP
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    // NAV ACTIVE STATE
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const anchors  = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    const secObs   = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-35% 0px -58% 0px' });
+    anchors.forEach(a => secObs.observe(a));
+
+    // STAGGERED CARD FADE-IN
+    const cards   = document.querySelectorAll('.class-card:not(.placeholder-card)');
+    const cardObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx   = Array.from(cards).indexOf(entry.target);
+          const delay = (idx % 8) * 55;
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          cardObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    cards.forEach(c => cardObs.observe(c));
+    document.querySelectorAll('.placeholder-card').forEach(c => c.classList.add('visible'));
+
+    // WAPPEN PRO KARTE: wrap icons + set CSS var per land section
+    const landWappen = {
+      'cenyr':       'https://i.imgur.com/00DWDQW.png',
+      'vennyr':      'https://i.imgur.com/T8e0EqY.png',
+      'alben':       'https://i.imgur.com/WRnLB3t.png',
+      'aldrimar':    'https://i.imgur.com/OnNslhr.png',
+      'nordmaenner': 'https://i.imgur.com/2KOkdu5.png',
+      'goldmund':    'https://i.imgur.com/tTjs23K.png', // Default für Sektion
+      'blutstadt':   'https://i.imgur.com/A8um0JC.png',
+      'moinneach':   'https://i.imgur.com/4I3r6n7.png',
+      'weisenfluh':  'https://i.imgur.com/Fk0d1kf.png',
+      'aeldrunmar':  'https://i.imgur.com/MJhCj7S.png',
+    };
+
+    Object.entries(landWappen).forEach(([sectionId, wappenUrl]) => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      // Set CSS variable for the ::before pseudo-element
+      section.style.setProperty('--card-wappen', `url('${wappenUrl}')`);
+      // Wrap every non-placeholder card's img in .card-icon-wrap
+      section.querySelectorAll('.class-card:not(.placeholder-card) img').forEach(img => {
+        const card = img.closest('.class-card');
+        const wrap = document.createElement('div');
+        wrap.className = 'card-icon-wrap';
+        
+        // Für Goldmund & Aldingen: individuelle Wappen pro Karte
+        if (sectionId === 'goldmund' && card.dataset.wappen) {
+          wrap.style.setProperty('--card-wappen', `url('${card.dataset.wappen}')`);
+        }
+        
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+      });
+    });
+
+    // TOOLTIP – JS-driven to avoid ::after conflict with shimmer
+    const tooltip = document.createElement('div');
+    tooltip.className = 'rpg-tooltip';
+    document.body.appendChild(tooltip);
+
+    document.querySelectorAll('.class-card[data-tooltip]').forEach(card => {
+      card.addEventListener('mouseenter', e => {
+        tooltip.textContent = card.dataset.tooltip;
+        tooltip.classList.add('visible');
+        positionTooltip(e);
+      });
+      card.addEventListener('mousemove', positionTooltip);
+      card.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+      });
+    });
+
+    function positionTooltip(e) {
+      const margin = 14;
+      const tw = tooltip.offsetWidth;
+      const th = tooltip.offsetHeight;
+      let x = e.clientX - tw / 2;
+      let y = e.clientY - th - margin;
+      // Keep within viewport
+      x = Math.max(8, Math.min(x, window.innerWidth - tw - 8));
+      if (y < 8) y = e.clientY + margin;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top  = y + 'px';
+    }
+
+    // SEARCH
+    const searchInput = document.getElementById('classSearch');
+    const noResults   = document.getElementById('noResults');
+    const allCards    = document.querySelectorAll('.class-card');
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase().trim();
+      let count = 0;
+      allCards.forEach(card => {
+        if (card.classList.contains('placeholder-card')) return;
+        const match = !q
+          || (card.dataset.name    || '').toLowerCase().includes(q)
+          || (card.dataset.tooltip || '').toLowerCase().includes(q)
+          || (card.querySelector('.class-name')?.textContent   || '').toLowerCase().includes(q)
+          || (card.querySelector('.class-flavor')?.textContent || '').toLowerCase().includes(q);
+        card.classList.toggle('hidden', !match);
+        if (match) count++;
+      });
+      noResults.style.display = (q && count === 0) ? 'block' : 'none';
+    });
+    searchInput.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { searchInput.value = ''; searchInput.dispatchEvent(new Event('input')); searchInput.blur(); }
+    });
+
+    // =========================================================
+    // SIDEBAR FUNCTIONALITY
+    // =========================================================
+    
+    // Left Sidebar - Toggle Collapse
+    const sidebarLeft = document.getElementById('sidebarLeft');
+    const sidebarToggleLeft = document.getElementById('sidebarToggleLeft');
+    const toggleIconLeft = document.getElementById('toggleIconLeft');
+    
+    sidebarToggleLeft.addEventListener('click', () => {
+      sidebarLeft.classList.toggle('collapsed');
+      document.body.classList.toggle('left-collapsed');
+      toggleIconLeft.textContent = sidebarLeft.classList.contains('collapsed') ? '▶' : '◀';
+      playSound('toggle');
+    });
+    
+    // Right Sidebar - Toggle Collapse
+    const sidebarRight = document.getElementById('sidebarRight');
+    const sidebarToggleRight = document.getElementById('sidebarToggleRight');
+    const toggleIconRight = document.getElementById('toggleIconRight');
+    
+    sidebarToggleRight.addEventListener('click', () => {
+      sidebarRight.classList.toggle('collapsed');
+      document.body.classList.toggle('right-collapsed');
+      toggleIconRight.textContent = sidebarRight.classList.contains('collapsed') ? '◀' : '▶';
+      playSound('toggle');
+    });
+    
+    // Calculate Statistics
+    function updateStats() {
+      const allClassCards = document.querySelectorAll('.class-card:not(.placeholder-card)');
+      const totalClasses = allClassCards.length;
+      
+      const landSections = document.querySelectorAll('.land-section[id]');
+      const totalLands = landSections.length;
+      
+      document.getElementById('totalClasses').textContent = totalClasses;
+      document.getElementById('totalLands').textContent = totalLands;
+    }
+    
+    // Build Navigation List
+    function buildNavigation() {
+      const navList = document.getElementById('navLandList');
+      const landSections = [
+        { id: 'basis', name: 'Basisklassen', icon: 'https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png' },
+        { id: 'cenyr', name: 'Cenyr', icon: 'https://i.imgur.com/00DWDQW.png' },
+        { id: 'vennyr', name: 'Vennyr', icon: 'https://i.imgur.com/T8e0EqY.png' },
+        { id: 'alben', name: 'Alben', icon: 'https://i.imgur.com/WRnLB3t.png' },
+        { id: 'aldrimar', name: 'Aldrimar', icon: 'https://i.imgur.com/OnNslhr.png' },
+        { id: 'nordmaenner', name: 'Nordmänner', icon: 'https://i.imgur.com/2KOkdu5.png' },
+        { id: 'goldmund', name: 'Goldmund & Aldingen', icon: 'https://i.imgur.com/tTjs23K.png' },
+        { id: 'blutstadt', name: 'Blutstadt', icon: 'https://i.imgur.com/A8um0JC.png' },
+        { id: 'moinneach', name: 'Móinneach', icon: 'https://i.imgur.com/4I3r6n7.png' },
+        { id: 'weisenfluh', name: 'Weisenfluh', icon: 'https://i.imgur.com/Fk0d1kf.png' },
+        { id: 'aeldrunmar', name: 'Aeldrunmar & Talyndor', icon: 'https://i.imgur.com/MJhCj7S.png' }
+      ];
+      
+      landSections.forEach(land => {
+        const section = document.getElementById(land.id);
+        if (!section) return;
+        
+        const classCount = section.querySelectorAll('.class-card:not(.placeholder-card)').length;
+        
+        const li = document.createElement('li');
+        li.className = 'nav-land-item';
+        li.innerHTML = `
+          <a href="#${land.id}" class="nav-land-link" data-land="${land.id}">
+            <img src="${land.icon}" alt="${land.name}" class="nav-land-icon">
+            <span>${land.name}</span>
+            <span class="nav-land-count">${classCount}</span>
+          </a>
+        `;
+        navList.appendChild(li);
+      });
+      
+      // Add click handlers
+      document.querySelectorAll('.nav-land-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.dataset.land;
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    }
+    
+    // Right Sidebar - ScrollSpy & Dynamic Lore
+    const loreData = {
+      basis: {
+        name: 'Basisklassen',
+        subtitle: 'Die Grundpfeiler des Kriegshandwerks',
+        wappen: 'https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png',
+        warriorhood: 'Die Basisklassen repräsentieren die fundamentalen Wege des Kampfes und der Magie. Jeder Krieger beginnt hier seine Reise...',
+        society: 'Diese Klassen sind universell und in allen Ländern zu finden. Sie bilden die Grundlage für spezialisierte Pfade...',
+        hierarchy: [
+          { rank: 'Meister', desc: 'Legendäre Kämpfer ihrer Zunft' },
+          { rank: 'Veteran', desc: 'Erfahrene Krieger' },
+          { rank: 'Geselle', desc: 'Ausgebildete Kämpfer' },
+          { rank: 'Novize', desc: 'Lehrlinge des Kampfes' }
+        ]
+      },
+      cenyr: {
+        name: 'Cenyr',
+        subtitle: 'Das Rote Königreich',
+        wappen: 'https://i.imgur.com/00DWDQW.png',
+        warriorhood: `Das cenyrische Rittertum entstand nicht aus dem Bedürfnis nach Reiterei oder militärischer Überlegenheit, sondern aus einem <strong>moralischen Anspruch</strong>. Als die Avallornier ihre verschleierte Heimat verließen und nach Estryll gelangten, brachten sie mehr mit als Schwerter und Banner – sie brachten eine Vorstellung davon, wie ein Mensch sein sollte.<br><br>
+        
+        Auf dem Glauben an die Göttlichen, Verkörperungen der neun absoluten Tugenden, gründete sich eine Idee: Der Ritter sollte nicht nur kämpfen, sondern im Augenblick größter Entscheidung handeln, wie es die Göttlichen selbst täten. In den frühen Tagen war Ritterlichkeit kein Titel, sondern ein <strong>Gelöbnis</strong>.<br><br>
+        
+        Mit der Gründung Cenyrs und der Verbindung mit dem albenländischen Feudalsystem wurde dieses Ideal institutionalisiert. Die Schwertleite, die Salbung, der ritterliche Eid – all dies formte aus einem moralischen Streben eine gesellschaftliche Ordnung. <strong>Rittertum wurde zum Fundament des Staates</strong>, zum sichtbaren Maßstab dessen, was Cenyr sein wollte.`,
+        society: `Das Rittertum ist sowohl eine soziale Ordnung als auch eine Lebensphilosophie, die tief in den Lehren der Avallornier verwurzelt ist. Anders als frühere feudale Systeme stellte es nicht bloß die Herrschaft des Adels über das Volk in den Vordergrund, sondern verband diese Herrschaft mit den <strong>Idealen der Ritterlichkeit und der Tugendhaftigkeit</strong>.<br><br>
+        
+        In Cenyr sind alle Bürgerlichen <strong>frei</strong>. Es gibt zwar einen Adel, der sich vom Bürger abhebt, er tut dies aber in Funktion, nicht in Moral und als Mensch. Leibeigene gibt es nicht. Der Adel schützt, führt und stärkt das Volk im Glauben – diese Art der Herrschaft legt besonderen Wert darauf, dass die Ritter im Dienst eines höheren Gutes stehen.<br><br>
+        
+        Ein Ritter verschreibt sich dem Schutz seines Landes und lebt nach einem Kodex von <strong>Ehre, Treue, Integrität und Selbstlosigkeit</strong>. So steht das cenyrische Rittertum bis heute zwischen Anspruch und Wirklichkeit: ein unvollkommenes menschliches Streben nach einem vollkommenen Bild – und gerade darin liegt seine Seele.`,
+        hierarchy: [
+          { rank: 'König (Cenyr) / König (Vennyr)', desc: '<strong>Cenyr:</strong> Souverän aus dem Geschlecht der Pendrag (avallornisch). <strong>Vennyr:</strong> Priesterliches Geschlecht der Blodyn mit geistlichem Erbe.' },
+          { rank: 'Graf / Penron (nur Vennyr)', desc: 'Provinzieller Herrscher einer Grafschaft. <strong>Penron:</strong> Vennyrische Besonderheit – Vorstufe des Grafen, steht über dem Baron.' },
+          { rank: 'Baron', desc: 'Regionaler Herr einer Baronie, untersteht dem Grafen (oder Penron in Vennyr).' },
+          { rank: 'Ritterfürst', desc: '"Fürst unter Rittern" – kleiner als Baron, größer als Ritterherr. Verwaltet mehrere Siedlungen.' },
+          { rank: 'Ritterherr', desc: 'Kopf eines ritterlichen Hauses. Darf Ritter schlagen, hält Burgen, wird oft zum Lehenswart eingesetzt.' },
+          { rank: 'Lehenswart / Seewart (Vennyr)', desc: 'Lokaler Statthalter einer Ortschaft, Burg oder Stadt. In Vennyr oft für Häfen und Küstenwachen zuständig.' },
+          { rank: 'Feudalritter', desc: 'Lehensritter im Dienst eines Hauses. Zu diesem Stand gehören alle Pfade wie <strong>Teulu, Cantref, Uchelwyr, Helwyr (Cenyr)</strong> und <strong>Rhyfelwyr, Morwyr, Ceidwyn, Rhiddwyr (Vennyr)</strong>.' },
+          { rank: 'Fahrender Ritter', desc: 'Ritter mit Erlaubnis durchs Land zu ziehen. Oft junge Ritter oder Prinzen. In Vennyr auch "zur See fahrend".' },
+          { rank: 'Paladin', desc: 'Gesalbter Kirchenritter mit spezifischem Eid. Dient Kirche und Glauben, nicht Herr und Land.' },
+          { rank: 'Derwyn (Cenyr & Vennyr)', desc: 'Glaubenskrieger der Nimue. Kann ein Paladin sein (mit Eid), aber auch reiner Geistlicher ohne Ritterstand. Vereint spirituelle Mission mit Kampfkunst.' },
+          { rank: 'Heckenritter', desc: 'Ritter ohne Herr und Land, heimatlos, verschmäht. Lebt von der Hand in den Mund.' },
+          { rank: 'Jungritter', desc: 'Kürzlich geschlagener Ritter, der noch viel zu lernen hat. Seine Zukunft entscheidet sich noch.' },
+          { rank: 'Knappe', desc: 'Angehender Ritter (14-18 Jahre), dient einem Rittervater. Kämpft bereits an seiner Seite. In Vennyr lernt er auch Seemannsschaft.' },
+          { rank: 'Page / Maid', desc: 'Sehr junger Diener (6-12 Jahre) mit haushaltlichen Pflichten. Schulische Zeit, noch kein Kampf.' },
+          { rank: 'Milwr (Bürgerliche)', desc: 'Freie Bürger, aus denen die Miliz eingezogen wird. <strong>Keine Leibeigenschaft</strong> – alle sind frei.' }
+        ]
+      },
+      vennyr: {
+        name: 'Vennyr',
+        subtitle: 'Die Silberne Flotte',
+        wappen: 'https://i.imgur.com/T8e0EqY.png',
+        warriorhood: `Obwohl das Rittertum Vennyrs denselben avallornischen Ursprung wie jenes Cenyrs besitzt, entwickelte es unter anderen Bedingungen eine eigene, spürbar <strong>rauere Prägung</strong>. Der cenyrische Ritter steht stärker für Ordnung, Hofkultur und eine klar strukturierte Feudalhierarchie. In Vennyr hingegen wurde das Ideal durch Küstenüberfälle, Grenzkriege und das harte Leben zwischen Fjord und Hochland ständig geprüft und neu geformt.<br><br>
+        
+        Der Einfluss der <strong>Muirath</strong> verstärkte die Stammesbindung des vennyrischen Ritters. Ehre war nicht nur höfischer Kodex, sondern <strong>Sippenpflicht</strong> gegenüber Clan, Blutlinie und Land. Gleichzeitig hinterließ das Erbe der <strong>Norrnaigh</strong> deutliche Spuren in Kriegstaktik und Ausrüstung: größere Seetüchtigkeit, funktionalere Rüstung, häufiger Einsatz von Axt und Enterkampf sowie die Verwendung von Runen und Meeressymbolen als Schutzzeichen.<br><br>
+        
+        Der Kern des Ritterideals – Treue, Schutzpflicht und Glaubensfestigkeit – blieb bestehen, doch seine Ausprägung wurde rauer und pragmatischer. Während der Ritter Cenyrs die geordnete Herrschaft verkörpert, musste der Ritter Vennyrs seine Tugend <strong>im Sturm und im ständigen Grenzkampf</strong> immer wieder behaupten.`,
+        society: `Das Rittertum Vennyrs trägt dieselben avallornischen Wurzeln wie Cenyr, doch die raue Küste und die ständigen Konflikte formten eine andere Gesellschaft. Die <strong>königliche Linie der Blodyn</strong>, ein priesterliches Geschlecht mit geistlichem Erbe, begründete im Norden ein Königreich, das Glaube und Krieg enger miteinander verwebt als im Süden.<br><br>
+        
+        Hier ist Rittertum nicht nur höfischer Kodex, sondern <strong>Überlebenspflicht</strong>. Die Stammesbindung der Muirath, die Seetüchtigkeit der Norrnaigh und die ritterlichen Ideale der Avallornier verschmolzen zu einer einzigartigen Kriegerkultur. Ein Ritter Vennyrs schuldet Treue seinem Clan ebenso wie seinem König, seinem Schiff ebenso wie seiner Burg.<br><br>
+        
+        Die Gesellschaft ist rauer, direkter – aber nicht weniger ehrenvoll. Das Ideal bleibt bestehen: Schutz der Schwachen, Treue zum Eid, Standhaftigkeit im Glauben. Doch während Cenyr seine Ritter am Hof misst, prüft Vennyr sie an der Küste, im Sturm, im Blut.`,
+        hierarchy: [
+          { rank: 'König (Cenyr) / König (Vennyr)', desc: '<strong>Cenyr:</strong> Souverän aus dem Geschlecht der Pendrag (avallornisch). <strong>Vennyr:</strong> Priesterliches Geschlecht der Blodyn mit geistlichem Erbe.' },
+          { rank: 'Graf / Penron (nur Vennyr)', desc: 'Provinzieller Herrscher einer Grafschaft. <strong>Penron:</strong> Vennyrische Besonderheit – Vorstufe des Grafen, steht über dem Baron.' },
+          { rank: 'Baron', desc: 'Regionaler Herr einer Baronie, untersteht dem Grafen (oder Penron in Vennyr).' },
+          { rank: 'Ritterfürst', desc: '"Fürst unter Rittern" – kleiner als Baron, größer als Ritterherr. Verwaltet mehrere Siedlungen.' },
+          { rank: 'Ritterherr', desc: 'Kopf eines ritterlichen Hauses. Darf Ritter schlagen, hält Burgen, wird oft zum Lehenswart eingesetzt.' },
+          { rank: 'Lehenswart / Seewart (Vennyr)', desc: 'Lokaler Statthalter einer Ortschaft, Burg oder Stadt. In Vennyr oft für Häfen und Küstenwachen zuständig.' },
+          { rank: 'Feudalritter', desc: 'Lehensritter im Dienst eines Hauses. Zu diesem Stand gehören alle Pfade wie <strong>Teulu, Cantref, Uchelwyr, Helwyr (Cenyr)</strong> und <strong>Rhyfelwyr, Morwyr, Ceidwyn, Rhiddwyr (Vennyr)</strong>.' },
+          { rank: 'Fahrender Ritter', desc: 'Ritter mit Erlaubnis durchs Land zu ziehen. Oft junge Ritter oder Prinzen. In Vennyr auch "zur See fahrend".' },
+          { rank: 'Paladin', desc: 'Gesalbter Kirchenritter mit spezifischem Eid. Dient Kirche und Glauben, nicht Herr und Land.' },
+          { rank: 'Derwyn (Cenyr & Vennyr)', desc: 'Glaubenskrieger der Nimue. Kann ein Paladin sein (mit Eid), aber auch reiner Geistlicher ohne Ritterstand. Vereint spirituelle Mission mit Kampfkunst.' },
+          { rank: 'Heckenritter', desc: 'Ritter ohne Herr und Land, heimatlos, verschmäht. Lebt von der Hand in den Mund.' },
+          { rank: 'Jungritter', desc: 'Kürzlich geschlagener Ritter, der noch viel zu lernen hat. Seine Zukunft entscheidet sich noch.' },
+          { rank: 'Knappe', desc: 'Angehender Ritter (14-18 Jahre), dient einem Rittervater. Kämpft bereits an seiner Seite. In Vennyr lernt er auch Seemannsschaft.' },
+          { rank: 'Page / Maid', desc: 'Sehr junger Diener (6-12 Jahre) mit haushaltlichen Pflichten. Schulische Zeit, noch kein Kampf.' },
+          { rank: 'Milwr (Bürgerliche)', desc: 'Freie Bürger, aus denen die Miliz eingezogen wird. <strong>Keine Leibeigenschaft</strong> – alle sind frei.' }
+        ]
+      },
+      alben: {
+        name: 'Alben',
+        subtitle: 'Die Grünen Hügel',
+        wappen: 'https://i.imgur.com/WRnLB3t.png',
+        warriorhood: '<em>Platzhalter: Kriegertum der Alben...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Rí Tiarna', desc: 'Der König der Alben (derzeit vakant)' },
+          { rank: 'Fianna', desc: 'Keine Aristokratie, sondern die Führer der Alben. Entscheiden über Gesetz, Sitte, Regeln, Erbfolge und Königstum' },
+          { rank: 'Ard Tiarna', desc: 'Herzog' },
+          { rank: 'Mor Tiarna', desc: 'Graf' },
+          { rank: 'Dún Tiarna', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Laird', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Triath', desc: 'Wie Lehenswart und Thengr – lokaler Statthalter' },
+          { rank: 'Einfacher Tiarna', desc: 'Pendant zum Ritter' },
+          { rank: 'Laochan', desc: 'Knappe' },
+          { rank: 'Fola', desc: 'Page' },
+          { rank: 'Kern', desc: 'Waffenknecht, Miliz' },
+          { rank: 'Sept', desc: 'Freier Bürger' }
+        ]
+      },
+      aldrimar: {
+        name: 'Aldrimar',
+        subtitle: 'Die Eisernen Hallen',
+        wappen: 'https://i.imgur.com/OnNslhr.png',
+        warriorhood: '<em>Platzhalter: Kriegertum Aldrimars...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'König', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Reik', desc: 'Fürst / Herzog' },
+          { rank: 'Jarl', desc: 'Graf' },
+          { rank: 'Thane', desc: 'Baron' },
+          { rank: 'Hesir', desc: 'Kleiner als Baron, wie Ritterfürst' },
+          { rank: 'Huskarlherr', desc: 'Wie Ritterherr' },
+          { rank: 'Thengr', desc: 'Lokaler Statthalter, aus den Huskarlen' },
+          { rank: 'Huskarl', desc: 'Pendant zum Ritter. Zu diesem Stand gehören alle Pfade wie Skjoldr, Thegnar, Skeidr, Skjaldr, Skytte, Skalde' },
+          { rank: 'Drengr / Maer', desc: 'Knappe' },
+          { rank: 'Karl (Bürger)', desc: 'In Aldrimar sind sie frei, keine leibeigene Kaste' }
+        ]
+      },
+      nordmaenner: {
+        name: 'Nordmänner',
+        subtitle: 'Die Wilden des Nordens',
+        wappen: 'https://i.imgur.com/2KOkdu5.png',
+        warriorhood: '<em>Platzhalter: Kriegertum der Nordmänner...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'König', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Reik', desc: 'Fürst / Herzog' },
+          { rank: 'Jarl', desc: 'Graf' },
+          { rank: 'Thane', desc: 'Baron' },
+          { rank: 'Hesir', desc: 'Wie Ritterfürst' },
+          { rank: 'Huskarlherr', desc: 'Wie Ritterherr' },
+          { rank: 'Thengr', desc: 'Lokaler Statthalter' },
+          { rank: 'Huskarl', desc: 'Pendant zum Ritter. Zu diesem Stand gehören Ravnar, Hestgar, Ulfhednar, Berserkir, Veigir, Tungur' },
+          { rank: 'Drengr / Maer', desc: 'Knappe' },
+          { rank: 'Karl (Bürger)', desc: 'Freie Bürger' },
+          { rank: 'Thralls (Leibeigene)', desc: 'Unfreie, dem Land und Adel gehörig' },
+          { rank: 'Sweyn (Sklaven)', desc: 'Leibsklave' }
+        ]
+      },
+      goldmund: {
+        name: 'Goldmund & Aldingen',
+        subtitle: 'Die Vereinten Fürstentümer',
+        wappen: 'https://i.imgur.com/tTjs23K.png',
+        warriorhood: '<em>Platzhalter: Kriegertum...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Großherzog (Aldingen)', desc: 'Herrscher Aldingens' },
+          { rank: 'Fürst (Goldmund)', desc: 'Herrscher Goldmunds' },
+          { rank: 'Graf', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Baron', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Ritterfürst', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Ministerialer', desc: 'Wie Ritterherr' },
+          { rank: 'Lehensritter', desc: 'Zu diesem Stand gehören Husar, Aldmar, Eldner, Schirmer, Flamberger, Havner, Güldner, Oraner' },
+          { rank: 'Fahrender Ritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Heckenritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Kirchenritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Knappe', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Page', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Freier', desc: 'Freie Bürger' }
+        ]
+      },
+      blutstadt: {
+        name: 'Blutstadt',
+        subtitle: 'Der Rote Stadtstaat',
+        wappen: 'https://i.imgur.com/A8um0JC.png',
+        warriorhood: '<em>Platzhalter: Kriegertum...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Stadtfürst', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Graf', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Baron', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Ritterfürst', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Ministerialer', desc: 'Wie Ritterherr' },
+          { rank: 'Lehensritter', desc: 'Gardist, Ritter der Blutstadt' },
+          { rank: 'Fahrender Ritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Heckenritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Kirchenritter', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Knappe', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Page', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Freier', desc: 'Freie Bürger' }
+        ]
+      },
+      moinneach: {
+        name: 'Móinneach',
+        subtitle: 'Die Schwarzmarschen',
+        wappen: 'https://i.imgur.com/4I3r6n7.png',
+        warriorhood: '<em>Platzhalter: Kriegertum...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Fianna', desc: 'Wie bei den Alben – Führer ohne Aristokratie' },
+          { rank: 'Ard Tiarna', desc: 'Herzog' },
+          { rank: 'Mor Tiarna', desc: 'Graf' },
+          { rank: 'Dún Tiarna', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Laird', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Triath', desc: 'Lokaler Statthalter' },
+          { rank: 'Einfacher Tiarna', desc: 'Pendant zum Ritter. Zu diesem Stand gehören Rathaire, Coillan, Drúan, Mordán, Cernach' },
+          { rank: 'Laochan', desc: 'Knappe' },
+          { rank: 'Fola', desc: 'Page' },
+          { rank: 'Slógar', desc: 'Miliz, Waffenknecht' },
+          { rank: 'Sept', desc: 'Freier Bürger' }
+        ]
+      },
+      weisenfluh: {
+        name: 'Weisenfluh',
+        subtitle: 'Die Alpenfestung',
+        wappen: 'https://i.imgur.com/Fk0d1kf.png',
+        warriorhood: '<em>Platzhalter: Kriegertum...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Erlenkönig', desc: 'Wie ein Kleinkönig – oberster Herrscher Weisenfluhs' },
+          { rank: 'Landgraf', desc: 'Weisenfluh hat keine Landgrafen (Position nicht besetzt)' },
+          { rank: 'Freiherr', desc: 'Baron' },
+          { rank: 'Landmann', desc: 'Ritterfürst' },
+          { rank: 'Landherr', desc: 'Ritterlicher Herr' },
+          { rank: 'Landsritter', desc: 'Ritter. Zu diesem Stand gehören Landsknecht, Landsprotektor, Kürassier, Harlekin, Landsmariner, Landsjäger' },
+          { rank: 'Knappe', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Page', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Freier Bürger', desc: 'Freie Bürger' }
+        ]
+      },
+      aeldrunmar: {
+        name: 'Aeldrunmar & Talyndor',
+        subtitle: 'Die Zwillingskronen',
+        wappen: 'https://i.imgur.com/MJhCj7S.png',
+        warriorhood: '<em>Platzhalter: Kriegertum...</em>',
+        society: '<em>Platzhalter: Gesellschaft...</em>',
+        hierarchy: [
+          { rank: 'Coel- / König', desc: 'König' },
+          { rank: 'Æthel-', desc: 'Königlichen Blutes' },
+          { rank: 'Ealdor-', desc: 'Fürst, Herzog' },
+          { rank: 'Earl-', desc: 'Graf' },
+          { rank: 'Thain', desc: 'Baron' },
+          { rank: 'Reeve', desc: 'Ritterfürst' },
+          { rank: 'Ritterherr', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Hold', desc: 'Wie Lehenswart, Triath, Thengr – lokaler Statthalter' },
+          { rank: 'Eored', desc: 'Ritter. Zu diesem Stand gehören Isen, Wigar, Hyld, Scoet, Særinc, Gliwere, Miles, Ceorl' },
+          { rank: 'Knappe', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Page', desc: '<em>Platzhalter...</em>' },
+          { rank: 'Fyrd', desc: 'Bürger, Freier' }
+        ]
+      }
+    };
+    
+    function updateLore(landId) {
+      const data = loreData[landId];
+      if (!data) return;
+      
+      const container = document.getElementById('loreContainer');
+      container.classList.remove('active');
+      
+      setTimeout(() => {
+        document.getElementById('loreWappenImg').src = data.wappen;
+        document.getElementById('loreLandName').textContent = data.name;
+        document.getElementById('loreLandSubtitle').textContent = data.subtitle;
+        document.getElementById('loreWarriorhood').innerHTML = data.warriorhood;
+        document.getElementById('loreSociety').innerHTML = data.society;
+        
+        const hierarchyList = document.getElementById('loreHierarchy');
+        hierarchyList.innerHTML = data.hierarchy.map(h => 
+          `<li><span class="lore-rank">${h.rank}:</span> ${h.desc}</li>`
+        ).join('');
+        
+        container.classList.add('active');
+      }, 200);
+    }
+    
+    // ScrollSpy - Update lore based on visible section
+    const loreObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          const landId = entry.target.id;
+          updateLore(landId);
+          
+          // Update active nav link
+          document.querySelectorAll('.nav-land-link').forEach(link => {
+            link.classList.toggle('active', link.dataset.land === landId);
+          });
+        }
+      });
+    }, { threshold: [0.3, 0.5], rootMargin: '-100px 0px -60% 0px' });
+    
+    // Observe all sections
+    document.querySelectorAll('.land-section[id], #basis').forEach(section => {
+      loreObserver.observe(section);
+    });
+    
+    // Initialize
+    updateStats();
+    buildNavigation();
+
+    // =========================================================
+    // RARITY SYSTEM - Auto-assign rarity classes
+    // =========================================================
+    const rarityMap = {
+      // Cenyr
+      'milwr': 'common',
+      'arthwyr': 'special',
+      'barddwyr': 'special',
+      // Vennyr
+      'derwyn': 'holy',
+      // Alben
+      'kern': 'common',
+      'silvaner': 'special',
+      'fathach': 'special',
+      'galloghlaigh': 'special',
+      // Aldrimar
+      'hird': 'common',
+      'maid': 'common',
+      // Nordmänner
+      'kona': 'common',
+      'ulfhednar': 'holy',
+      // Goldmund & Aldingen
+      'aldknecht': 'common',
+      'flamberger': 'aldingen',
+      'havner': 'aldingen',
+      'güldner': 'goldmund',
+      'oraner': 'goldmund',
+      // Blutstadt
+      'gardist': 'common',
+      // Móinneach
+      'slógar': 'common',
+      // Weisenfluh
+      'landsknecht': 'common',
+      // Aeldrunmar & Talyndor
+      'fyrd': 'common'
+    };
+
+    document.querySelectorAll('.class-card:not(.placeholder-card)').forEach(card => {
+      const name = (card.dataset.name || '').toLowerCase();
+      const rarity = rarityMap[name] || 'elite';
+      card.classList.add(`rarity-${rarity}`);
+    });
+
+    // =========================================================
+    // RANDOM CLASS FEATURE
+    // =========================================================
+    const lands = [
+      { id: 'cenyr', name: 'Cenyr' },
+      { id: 'vennyr', name: 'Vennyr' },
+      { id: 'alben', name: 'Alben' },
+      { id: 'aldrimar', name: 'Aldrimar' },
+      { id: 'nordmaenner', name: 'Nordmänner' },
+      { id: 'goldmund', name: 'Goldmund & Aldingen' },
+      { id: 'blutstadt', name: 'Blutstadt' },
+      { id: 'moinneach', name: 'Móinneach' },
+      { id: 'weisenfluh', name: 'Weisenfluh' },
+      { id: 'aeldrunmar', name: 'Aeldrunmar & Talyndor' }
+    ];
+
+    const randomModal = document.getElementById('randomModal');
+    const landCheckboxes = document.getElementById('landCheckboxes');
+    const randomClassBtn = document.getElementById('randomClassBtn');
+    const cancelRandomBtn = document.getElementById('cancelRandomBtn');
+    const rollRandomBtn = document.getElementById('rollRandomBtn');
+
+    // Create checkboxes
+    lands.forEach(land => {
+      const div = document.createElement('div');
+      div.className = 'land-checkbox';
+      div.innerHTML = `
+        <input type="checkbox" id="land-${land.id}" value="${land.id}" checked>
+        <label for="land-${land.id}">${land.name}</label>
+      `;
+      div.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'INPUT') {
+          const checkbox = div.querySelector('input');
+          checkbox.checked = !checkbox.checked;
+        }
+      });
+      landCheckboxes.appendChild(div);
+    });
+
+    randomClassBtn.addEventListener('click', () => {
+      randomModal.classList.add('active');
+      playSound('open');
+    });
+
+    cancelRandomBtn.addEventListener('click', () => {
+      randomModal.classList.remove('active');
+      playSound('close');
+    });
+
+    randomModal.addEventListener('click', (e) => {
+      if (e.target === randomModal) {
+        randomModal.classList.remove('active');
+        playSound('close');
+      }
+    });
+
+    rollRandomBtn.addEventListener('click', () => {
+      const selectedLands = Array.from(document.querySelectorAll('#landCheckboxes input:checked')).map(cb => cb.value);
+      
+      if (selectedLands.length === 0) {
+        alert('Bitte wähle mindestens ein Land aus!');
+        return;
+      }
+
+      // Get all non-common, non-placeholder cards from selected lands
+      const eligibleCards = [];
+      selectedLands.forEach(landId => {
+        const section = document.getElementById(landId);
+        if (section) {
+          section.querySelectorAll('.class-card:not(.placeholder-card):not(.rarity-common)').forEach(card => {
+            eligibleCards.push(card);
+          });
+        }
+      });
+
+      if (eligibleCards.length === 0) {
+        alert('Keine Klassen in den gewählten Ländern gefunden (Milizen ausgeschlossen)!');
+        return;
+      }
+
+      // Roll random
+      const randomCard = eligibleCards[Math.floor(Math.random() * eligibleCards.length)];
+      
+      randomModal.classList.remove('active');
+      playSound('roll');
+      
+      // Show epic reveal
+      showEpicReveal(randomCard);
+    });
+
+    // Epic Reveal System
+    function showEpicReveal(card) {
+      const overlay = document.getElementById('revealOverlay');
+      const revealCard = document.getElementById('revealCard');
+      const revealFront = document.getElementById('revealCardFront');
+      const revealCloseBtn = document.getElementById('revealCloseBtn');
+      const sparklesContainer = document.getElementById('revealSparkles');
+      
+      // Get card data
+      const cardIcon = card.querySelector('img');
+      const cardName = card.querySelector('.class-name');
+      const cardFlavor = card.querySelector('.class-flavor');
+      const landSection = card.closest('.land-section');
+      const landName = landSection ? landSection.querySelector('.land-info h2')?.textContent : 'Unbekannt';
+      
+      // Build reveal card content
+      revealFront.innerHTML = `
+        <div class="reveal-sparkles" id="revealSparkles"></div>
+        <img class="reveal-card-icon" src="${cardIcon.src}" alt="${cardName.textContent}">
+        <div class="reveal-card-name">${cardName.textContent}</div>
+        ${cardFlavor ? `<div class="reveal-card-flavor">${cardFlavor.textContent}</div>` : ''}
+        <div class="reveal-card-land">${landName}</div>
+      `;
+      
+      // Reset animations
+      revealCard.classList.remove('flipped');
+      revealCloseBtn.classList.remove('visible');
+      
+      // Show overlay
+      overlay.classList.add('active');
+      
+      // Play reveal sound sequence
+      playSound('roll');
+      
+      // Flip card after roll-in
+      setTimeout(() => {
+        revealCard.classList.add('flipped');
+        playSound('open');
+        
+        // Create sparkles
+        createSparkles();
+        
+        // Show close button
+        setTimeout(() => {
+          revealCloseBtn.classList.add('visible');
+        }, 800);
+      }, 1200);
+      
+      // Close button handler
+      revealCloseBtn.onclick = () => {
+        closeReveal();
+      };
+      
+      // Click overlay to close
+      overlay.onclick = (e) => {
+        if (e.target === overlay) {
+          closeReveal();
+        }
+      };
+      
+      // ESC to close
+      const escHandler = (e) => {
+        if (e.key === 'Escape') {
+          closeReveal();
+          document.removeEventListener('keydown', escHandler);
+        }
+      };
+      document.addEventListener('keydown', escHandler);
+      
+      function closeReveal() {
+        playSound('close');
+        overlay.classList.remove('active');
+        revealCard.classList.remove('flipped');
+        revealCloseBtn.classList.remove('visible');
+        
+        // Scroll to actual card after closing
+        setTimeout(() => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Brief highlight on actual card
+          card.style.animation = 'none';
+          setTimeout(() => {
+            card.style.animation = 'highlight 1.5s ease';
+          }, 100);
+          
+          setTimeout(() => {
+            card.style.animation = '';
+          }, 1600);
+        }, 300);
+      }
+      
+      function createSparkles() {
+        const sparklesContainer = revealFront.querySelector('.reveal-sparkles');
+        sparklesContainer.innerHTML = '';
+        
+        for (let i = 0; i < 30; i++) {
+          setTimeout(() => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 50 + Math.random() * 100;
+            const tx = Math.cos(angle) * distance;
+            const ty = Math.sin(angle) * distance;
+            
+            sparkle.style.setProperty('--tx', `${tx}px`);
+            sparkle.style.setProperty('--ty', `${ty}px`);
+            sparkle.style.left = '50%';
+            sparkle.style.top = '50%';
+            
+            sparklesContainer.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1500);
+          }, i * 50);
+        }
+      }
+    }
+
+    // Add highlight animation (keep existing)
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes highlight {
+        0%, 100% { transform: translateY(0) scale(1); box-shadow: var(--shadow-sm); }
+        50% { transform: translateY(-15px) scale(1.1); box-shadow: 0 20px 50px rgba(0,0,0,.3), 0 0 40px var(--gold-bright); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // =========================================================
+    // SOUND EFFECTS SYSTEM
+    // =========================================================
+    let soundEnabled = localStorage.getItem('soundEnabled') === 'true';
+    const soundToggleBtn = document.getElementById('soundToggleBtn');
+    const soundIcon = document.getElementById('soundIcon');
+
+    // Update UI
+    function updateSoundUI() {
+      if (soundEnabled) {
+        soundToggleBtn.classList.add('active');
+        soundIcon.textContent = '🔊';
+      } else {
+        soundToggleBtn.classList.remove('active');
+        soundIcon.textContent = '🔇';
+      }
+    }
+    updateSoundUI();
+
+    soundToggleBtn.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      localStorage.setItem('soundEnabled', soundEnabled);
+      updateSoundUI();
+      if (soundEnabled) playSound('toggle');
+    });
+
+    // Create audio context for sounds
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioCtx = new AudioContext();
+
+    function playSound(type) {
+      if (!soundEnabled) return;
+
+      const oscillator = audioCtx.createOscillator();
+      const gainNode = audioCtx.createGain();
+      oscillator.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      switch(type) {
+        case 'hover': // Subtle metal clink
+          oscillator.frequency.value = 880;
+          oscillator.type = 'sine';
+          gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.1);
+          break;
+        
+        case 'scroll': // Parchment rustle
+          oscillator.frequency.value = 200;
+          oscillator.type = 'triangle';
+          gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.15);
+          break;
+        
+        case 'open': // Modal open
+          oscillator.frequency.value = 440;
+          oscillator.type = 'sine';
+          gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.2);
+          break;
+        
+        case 'close': // Modal close
+          oscillator.frequency.value = 330;
+          oscillator.type = 'sine';
+          gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.15);
+          break;
+        
+        case 'roll': // Dice roll
+          oscillator.frequency.value = 600;
+          oscillator.type = 'square';
+          gainNode.gain.setValueAtTime(0.12, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.3);
+          break;
+        
+        case 'toggle': // Toggle sound
+          oscillator.frequency.value = 550;
+          oscillator.type = 'sine';
+          gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.12);
+          oscillator.start(audioCtx.currentTime);
+          oscillator.stop(audioCtx.currentTime + 0.12);
+          break;
+      }
+    }
+
+    // Add sound to card hovers
+    document.querySelectorAll('.class-card:not(.placeholder-card)').forEach(card => {
+      card.addEventListener('mouseenter', () => playSound('hover'));
+    });
+
+    // Add sound to scrolling between lands
+    let lastScrollTop = 0;
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (Math.abs(st - lastScrollTop) > 200) {
+          playSound('scroll');
+          lastScrollTop = st;
+        }
+      }, 100);
+    }, { passive: true });
+
+  </script>
+</body>
+</html>

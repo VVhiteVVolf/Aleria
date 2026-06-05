@@ -1,0 +1,1487 @@
+# Vollständige überarbeitete Kreaturenvorlage
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kreaturenarchiv – Titel</title>
+
+<style>
+
+:root{
+  --page:#14110c;
+  --paper:#f4e2b6;
+  --paper-light:#fff4d8;
+  --paper-dark:#e1c48a;
+
+  --ink:#2b1c0f;
+  --muted:#70583b;
+
+  --gold:#b8863b;
+  --gold-light:#d9b36b;
+
+  --danger:#7f1d1d;
+
+  --shadow:0 18px 40px rgba(0,0,0,.35);
+
+  --radius:10px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  color:var(--ink);
+
+  background:
+    linear-gradient(rgba(10,8,5,.55), rgba(10,8,5,.75)),
+    url("https://i.imgur.com/CUGDGdu.png") center top / cover fixed;
+
+  font-family:Inter, Arial, sans-serif;
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.page{
+  width:min(1500px, calc(100% - 40px));
+  margin:auto;
+  padding:30px 0 80px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+
+  min-height:520px;
+
+  border-radius:var(--radius);
+
+  overflow:hidden;
+
+  box-shadow:var(--shadow);
+
+  background:
+    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.55)),
+    url("https://i.imgur.com/YETjoai.png") center / cover;
+
+  animation:heroPan 26s ease-in-out infinite alternate;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at center, transparent 35%, rgba(0,0,0,.45));
+
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  opacity:.18;
+
+  background-image:
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+
+  mix-blend-mode:screen;
+}
+
+@keyframes heroPan{
+  from{
+    background-position:center top;
+  }
+
+  to{
+    background-position:center bottom;
+  }
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  align-items:end;
+
+  padding:48px;
+}
+
+.hero-box{
+  width:min(760px,100%);
+
+  padding:28px;
+
+  background:rgba(18,12,8,.72);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,230,180,.12);
+
+  border-radius:var(--radius);
+}
+
+.hero-stamps{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+
+  margin-bottom:18px;
+}
+
+.hero-stamp{
+  padding:8px 12px;
+
+  border-radius:999px;
+
+  background:rgba(127,29,29,.7);
+
+  border:1px solid rgba(255,180,180,.15);
+
+  color:#ffe2e2;
+
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.hero-box h1{
+  margin:0;
+
+  color:#f7e5b6;
+
+  font-family:Georgia, serif;
+  font-size:64px;
+}
+
+.hero-sub{
+  margin-top:12px;
+
+  color:#d8c39b;
+
+  font-size:18px;
+  font-style:italic;
+}
+
+.hero-quote{
+  margin-top:24px;
+
+  padding-left:18px;
+
+  border-left:4px solid var(--gold);
+
+  color:#e9d6aa;
+
+  font-size:15px;
+  font-style:italic;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+
+  gap:22px;
+
+  margin-top:24px;
+}
+
+.main{
+  display:grid;
+  gap:22px;
+}
+
+/* =========================
+   PANEL
+========================= */
+
+.panel{
+  position:relative;
+
+  padding:32px;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(184,130,54,.45);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--paper-light),
+      var(--paper) 55%,
+      var(--paper-dark)
+    );
+
+  box-shadow:var(--shadow);
+}
+
+.panel::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:inherit;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(80,45,12,.08),
+      transparent 10%,
+      transparent 90%,
+      rgba(80,45,12,.08)
+    );
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.creature-top{
+
+  display:grid;
+
+  grid-template-columns:minmax(0,1.45fr) 540px;
+
+  gap:28px;
+
+  align-items:start;
+}
+
+.creature-top-left{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:28px;
+
+  max-height:1200px;
+
+  overflow-y:auto;
+
+  padding-right:8px;
+}
+
+.creature-top-left::-webkit-scrollbar{
+  width:10px;
+}
+
+.creature-top-left::-webkit-scrollbar-track{
+  background:rgba(80,45,12,.08);
+  border-radius:999px;
+}
+
+.creature-top-left::-webkit-scrollbar-thumb{
+  background:rgba(92,54,14,.45);
+  border-radius:999px;
+}
+
+.section-title{
+  margin:0 0 18px;
+
+  padding-bottom:12px;
+
+  border-bottom:1px solid rgba(100,65,20,.28);
+
+  font-family:Georgia, serif;
+  font-size:42px;
+}
+
+.intro{
+  color:var(--muted);
+  font-size:16px;
+}
+
+.history-box{
+
+  padding-top:24px;
+
+  border-top:1px solid rgba(92,54,14,.18);
+}
+
+.history-box h2{
+
+  margin:0 0 18px;
+
+  padding-bottom:12px;
+
+  border-bottom:1px solid rgba(92,54,14,.18);
+
+  font-family:Georgia, serif;
+  font-size:34px;
+}
+
+.history-box p{
+  color:#4d3923;
+}
+
+/* =========================
+   CONTENT NAV
+========================= */
+
+.intro-nav{
+
+  padding-top:22px;
+
+  border-top:1px solid rgba(92,54,14,.18);
+}
+
+.intro-nav h3{
+  margin:0 0 14px;
+
+  font-family:Georgia, serif;
+  font-size:24px;
+}
+
+.intro-nav-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.intro-nav-grid a{
+  padding:10px 14px;
+
+  border:1px solid rgba(92,54,14,.28);
+  border-radius:8px;
+
+  background:rgba(255,247,225,.7);
+
+  font-weight:800;
+
+  transition:.15s;
+}
+
+.intro-nav-grid a:hover{
+  background:#3b2612;
+  color:#fff4d6;
+}
+
+/* =========================
+   IMAGE + INFO
+========================= */
+
+.image-card{
+  display:grid;
+  gap:18px;
+}
+
+.main-image{
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(92,54,14,.35);
+
+  background:#1a120c;
+
+  min-height:760px;
+}
+
+.main-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+/* =========================
+   DANGER METER
+========================= */
+
+.danger-meter{
+  display:flex;
+  gap:8px;
+
+  margin-bottom:16px;
+}
+
+.danger-rank{
+  flex:1;
+
+  height:14px;
+
+  border-radius:999px;
+
+  background:#2b1c0f;
+
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.danger-rank.active{
+  background:
+    linear-gradient(90deg,#7f1d1d,#dc2626);
+
+  box-shadow:
+    0 0 14px rgba(220,38,38,.35);
+}
+
+.danger-label{
+  margin-top:10px;
+
+  color:#5f2319;
+
+  font-weight:800;
+  letter-spacing:.06em;
+}
+
+/* =========================
+   INFO TABLE
+========================= */
+
+.info-group{
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(92,54,14,.35);
+
+  margin-bottom:14px;
+}
+
+.info-group-title{
+  padding:12px 16px;
+
+  background:#2f1f11;
+
+  color:#f5dfb0;
+
+  font-family:Georgia, serif;
+  font-size:20px;
+}
+
+.info-row{
+  display:grid;
+  grid-template-columns:150px 1fr;
+}
+
+.info-row:nth-child(odd){
+  background:rgba(255,245,220,.55);
+}
+
+.info-row:nth-child(even){
+  background:rgba(233,209,160,.45);
+}
+
+.info-label{
+  padding:12px 14px;
+
+  border-right:1px solid rgba(92,54,14,.18);
+
+  font-weight:800;
+}
+
+.info-value{
+  padding:12px 14px;
+}
+
+/* =========================
+   ARTICLE SECTIONS
+========================= */
+
+.article-section{
+  scroll-margin-top:30px;
+}
+
+.article-section h2{
+  margin-top:0;
+
+  padding-bottom:12px;
+
+  border-bottom:1px solid rgba(92,54,14,.22);
+
+  font-family:Georgia, serif;
+  font-size:40px;
+}
+
+.article-section p{
+  color:#4d3923;
+}
+
+.article-section ul{
+  padding-left:22px;
+}
+
+/* =========================
+   TEXT + SIDE IMAGE
+========================= */
+
+.section-layout{
+
+  display:grid;
+
+  grid-template-columns:minmax(0,1fr) 360px;
+
+  gap:32px;
+
+  align-items:start;
+}
+
+.section-text{
+  min-width:0;
+}
+
+.section-side{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+
+  position:sticky;
+  top:18px;
+}
+
+.optional-image{
+
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(92,54,14,.28);
+
+  background:#1b120c;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.22);
+}
+
+.optional-image img{
+
+  width:100%;
+  height:auto;
+
+  object-fit:cover;
+
+  transition:transform .25s;
+}
+
+.optional-image:hover img{
+  transform:scale(1.02);
+}
+
+.optional-caption{
+
+  padding:12px 14px;
+
+  border-top:1px solid rgba(92,54,14,.18);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,248,225,.88),
+      rgba(236,209,156,.88)
+    );
+}
+
+.optional-caption h4{
+
+  margin:0 0 6px;
+
+  color:#4b2f14;
+
+  font-family:Georgia, serif;
+  font-size:22px;
+}
+
+.optional-caption p{
+
+  margin:0;
+
+  color:#6d5538;
+
+  font-size:13px;
+}
+
+.optional-note{
+
+  padding:14px;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(92,54,14,.18);
+
+  background:
+    rgba(255,245,220,.5);
+}
+
+.optional-note h5{
+
+  margin:0 0 8px;
+
+  color:#4b2f14;
+
+  font-size:16px;
+}
+
+.optional-note p{
+
+  margin:0;
+
+  color:#6e5637;
+
+  font-size:13px;
+}
+
+/* =========================
+   UNTERARTEN
+========================= */
+
+.subspecies-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(320px,1fr));
+
+  gap:24px;
+}
+
+.subspecies-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  min-height:420px;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(92,54,14,.35);
+
+  background:#1b120c;
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.25);
+
+  transition:
+    transform .25s,
+    box-shadow .25s,
+    border-color .25s;
+}
+
+.subspecies-card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(214,172,95,.55);
+
+  box-shadow:
+    0 24px 48px rgba(0,0,0,.42);
+}
+
+.subspecies-image{
+
+  position:absolute;
+  inset:0;
+}
+
+.subspecies-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:transform .35s;
+}
+
+.subspecies-card:hover .subspecies-image img{
+  transform:scale(1.05);
+}
+
+.subspecies-overlay{
+
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.35) 45%,
+      rgba(0,0,0,.92)
+    );
+}
+
+.subspecies-title{
+
+  margin:0 0 8px;
+
+  color:#f7e5b6;
+
+  font-family:Georgia, serif;
+  font-size:34px;
+}
+
+.subspecies-subtitle{
+
+  color:#d9c6a2;
+
+  font-size:14px;
+  font-style:italic;
+
+  margin-bottom:16px;
+}
+
+.subspecies-preview{
+
+  display:grid;
+
+  gap:8px;
+
+  max-height:0;
+
+  overflow:hidden;
+
+  opacity:0;
+
+  transition:
+    max-height .35s,
+    opacity .35s;
+}
+
+.subspecies-card:hover .subspecies-preview{
+
+  max-height:300px;
+
+  opacity:1;
+}
+
+.subspecies-data{
+
+  display:grid;
+
+  grid-template-columns:120px 1fr;
+
+  gap:8px;
+
+  padding:8px 10px;
+
+  border-radius:8px;
+
+  background:
+    rgba(255,245,220,.08);
+
+  color:#ead8b7;
+
+  font-size:13px;
+}
+
+.subspecies-label{
+  font-weight:800;
+}
+
+.subspecies-value{
+  color:#f6ead0;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section{
+  background:
+    linear-gradient(
+      180deg,
+      #21160d,
+      #130c07
+    );
+
+  border:1px solid rgba(214,172,95,.25);
+}
+
+.gallery-section h2{
+  color:#f0ddb2;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+  gap:18px;
+}
+
+.gallery-item{
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  border:1px solid rgba(214,172,95,.18);
+
+  background:#20150d;
+}
+
+.gallery-item img{
+  width:100%;
+  height:260px;
+
+  object-fit:cover;
+
+  transition:transform .2s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.03);
+}
+
+.gallery-caption{
+  padding:14px;
+
+  border-top:1px solid rgba(255,255,255,.05);
+
+  color:#d6c09b;
+}
+
+.gallery-caption strong{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:#f6e5bc;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1100px){
+
+  .creature-top{
+    grid-template-columns:1fr;
+  }
+
+  .main-image{
+    min-height:auto;
+  }
+
+  .creature-top-left{
+    max-height:none;
+    overflow:visible;
+  }
+
+}
+
+@media(max-width:1000px){
+
+  .section-layout{
+    grid-template-columns:1fr;
+  }
+
+  .section-side{
+    position:static;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="hero">
+
+  <div class="hero-overlay">
+
+    <div class="hero-box">
+
+      <div class="hero-stamps">
+        <div class="hero-stamp">VERSIEGELT</div>
+        <div class="hero-stamp">AKADEMIEEXEMPLAR</div>
+        <div class="hero-stamp">GEFAHRENKLASSE IV</div>
+      </div>
+
+      <h1>Titel der Kreatur</h1>
+
+      <div class="hero-sub">
+        Kurze Klassifizierung oder sekundärer Titel
+      </div>
+
+      <div class="hero-quote">
+        „Zitat oder Archivnotiz über die Kreatur.“
+        <br><br>
+        — Name des Sprechers
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<div class="layout">
+
+<main class="main">
+
+<section class="panel creature-top">
+
+<div class="creature-top-left">
+
+<div>
+
+<h2 class="section-title">Einführung</h2>
+
+<p class="intro">
+Einführungstext über die Kreatur.
+Herkunft, Mythos, kulturelle Bedeutung,
+Verhalten oder historische Einordnung.
+</p>
+
+</div>
+
+<div class="history-box">
+
+<h2>Hintergrund & Geschichte</h2>
+
+<p>
+Historischer Ursprung der Kreatur...
+</p>
+
+<p>
+Alte Legenden, Sichtungen, Konflikte,
+Erwähnungen in Chroniken oder religiöse Bedeutung...
+</p>
+
+</div>
+
+<div class="intro-nav">
+
+<h3>Inhaltsangabe</h3>
+
+<div class="intro-nav-grid">
+
+<a href="#verhalten">Verhalten</a>
+<a href="#lebensraum">Lebensraum</a>
+<a href="#faehigkeiten">Fähigkeiten</a>
+<a href="#hintergrund">Hintergrund</a>
+<a href="#unterarten">Unterarten</a>
+<a href="#trivia">Trivia</a>
+<a href="#gallerie">Galerie</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="image-card">
+
+<div class="main-image">
+<img src="https://i.imgur.com/fw9MCDW.png">
+</div>
+
+<div class="panel">
+
+<div class="danger-meter">
+  <div class="danger-rank active"></div>
+  <div class="danger-rank active"></div>
+  <div class="danger-rank active"></div>
+  <div class="danger-rank active"></div>
+  <div class="danger-rank"></div>
+</div>
+
+<div class="danger-label">
+  BEDROHUNGSGRAD — HOCH
+</div>
+
+</div>
+
+<div class="info-group">
+
+<div class="info-group-title">Biologie</div>
+
+<div class="info-row">
+<div class="info-label">Typ</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Herkunft</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Lebensraum</div>
+<div class="info-value">...</div>
+</div>
+
+</div>
+
+<div class="info-group">
+
+<div class="info-group-title">Verhalten</div>
+
+<div class="info-row">
+<div class="info-label">Aktivzyklus</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Beute</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Verhalten</div>
+<div class="info-value">...</div>
+</div>
+
+</div>
+
+<div class="info-group">
+
+<div class="info-group-title">Kampf</div>
+
+<div class="info-row">
+<div class="info-label">Fähigkeiten</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Stärken</div>
+<div class="info-value">...</div>
+</div>
+
+<div class="info-row">
+<div class="info-label">Schwächen</div>
+<div class="info-value">...</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="verhalten">
+
+<h2>Verhalten</h2>
+
+<div class="section-layout">
+
+<div class="section-text">
+
+<p>
+Verhalten der Kreatur...
+</p>
+
+<p>
+Weitere Beschreibung des Jagdverhaltens,
+Territorialinstinkts oder Sozialverhaltens...
+</p>
+
+</div>
+
+<aside class="section-side">
+
+<div class="optional-image">
+
+<img src="https://i.imgur.com/430LhxR.png">
+
+<div class="optional-caption">
+
+<h4>Jagdverhalten</h4>
+
+<p>
+Archivskizze eines beobachteten Angriffs.
+</p>
+
+</div>
+
+</div>
+
+<div class="optional-note">
+
+<h5>Archivnotiz</h5>
+
+<p>
+Sichtungen häufen sich bei Nebelperioden.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="lebensraum">
+
+<h2>Lebensraum</h2>
+
+<div class="section-layout">
+
+<div class="section-text">
+
+<p>
+Beschreibung des Lebensraums...
+</p>
+
+<p>
+Regionen, Klima, Nester oder bevorzugte Jagdgebiete...
+</p>
+
+</div>
+
+<aside class="section-side">
+
+<div class="optional-image">
+
+<img src="https://i.imgur.com/kvKsjVd.png">
+
+<div class="optional-caption">
+
+<h4>Bekanntes Habitat</h4>
+
+<p>
+Kartierung eines beobachteten Brutgebiets.
+</p>
+
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="faehigkeiten">
+
+<h2>Fähigkeiten</h2>
+
+<div class="section-layout">
+
+<div class="section-text">
+
+<p>
+Fähigkeiten, Kampfverhalten, Schwächen,
+Stärken und Bekämpfung...
+</p>
+
+</div>
+
+<aside class="section-side">
+
+<div class="optional-image">
+
+<img src="https://i.imgur.com/ScU6e3o.png">
+
+<div class="optional-caption">
+
+<h4>Archivzeichnung</h4>
+
+<p>
+Darstellung einer dokumentierten Fähigkeit.
+</p>
+
+</div>
+
+</div>
+
+<div class="optional-note">
+
+<h5>Gefahrenhinweis</h5>
+
+<p>
+Kontakt mit Blut vermeiden.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="hintergrund">
+
+<h2>Hintergrund</h2>
+
+<div class="section-layout">
+
+<div class="section-text">
+
+<p>
+Historischer Ursprung, Legenden,
+Sichtungen oder kulturelle Bedeutung...
+</p>
+
+</div>
+
+<aside class="section-side">
+
+<div class="optional-image">
+
+<img src="https://i.imgur.com/HHMoYMB.png">
+
+<div class="optional-caption">
+
+<h4>Alte Darstellung</h4>
+
+<p>
+Fragment aus einem vergessenen Manuskript.
+</p>
+
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="unterarten">
+
+<h2>Unterarten</h2>
+
+<div class="subspecies-grid">
+
+<a class="subspecies-card" href="#">
+
+<div class="subspecies-image">
+<img src="https://i.imgur.com/430LhxR.png">
+</div>
+
+<div class="subspecies-overlay">
+
+<h3 class="subspecies-title">
+Unterart I
+</h3>
+
+<div class="subspecies-subtitle">
+Kurze Klassifizierung
+</div>
+
+<div class="subspecies-preview">
+
+<div class="subspecies-data">
+<div class="subspecies-label">Lebensraum</div>
+<div class="subspecies-value">Dichte Wälder</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Gefahr</div>
+<div class="subspecies-value">Mittel</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Verhalten</div>
+<div class="subspecies-value">
+Territorial und nachtaktiv
+</div>
+</div>
+
+</div>
+
+</div>
+
+</a>
+
+<a class="subspecies-card" href="#">
+
+<div class="subspecies-image">
+<img src="https://i.imgur.com/kvKsjVd.png">
+</div>
+
+<div class="subspecies-overlay">
+
+<h3 class="subspecies-title">
+Unterart II
+</h3>
+
+<div class="subspecies-subtitle">
+Seltene Mutation
+</div>
+
+<div class="subspecies-preview">
+
+<div class="subspecies-data">
+<div class="subspecies-label">Lebensraum</div>
+<div class="subspecies-value">Gebirge</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Gefahr</div>
+<div class="subspecies-value">Hoch</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Besonderheit</div>
+<div class="subspecies-value">
+Frostresistent
+</div>
+</div>
+
+</div>
+
+</div>
+
+</a>
+
+<a class="subspecies-card" href="#">
+
+<div class="subspecies-image">
+<img src="https://i.imgur.com/ScU6e3o.png">
+</div>
+
+<div class="subspecies-overlay">
+
+<h3 class="subspecies-title">
+Unterart III
+</h3>
+
+<div class="subspecies-subtitle">
+Archivierter Sonderfall
+</div>
+
+<div class="subspecies-preview">
+
+<div class="subspecies-data">
+<div class="subspecies-label">Verbreitung</div>
+<div class="subspecies-value">
+Unbekannt
+</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Status</div>
+<div class="subspecies-value">
+Selten gesichtet
+</div>
+</div>
+
+<div class="subspecies-data">
+<div class="subspecies-label">Besonderheit</div>
+<div class="subspecies-value">
+Hohe Intelligenz
+</div>
+</div>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<section class="panel article-section" id="trivia">
+
+<h2>Trivia</h2>
+
+<ul>
+<li>Trivia Punkt...</li>
+<li>Trivia Punkt...</li>
+</ul>
+
+</section>
+
+<section class="panel article-section gallery-section" id="gallerie">
+
+<h2>Galerie & Archivmaterial</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="https://i.imgur.com/430LhxR.png">
+
+<div class="gallery-caption">
+<strong>Archivaufnahme I</strong>
+Letzte bekannte Sichtung nahe der Nordküste.
+</div>
+
+</div>
+
+<div class="gallery-item">
+<img src="https://i.imgur.com/kvKsjVd.png">
+
+<div class="gallery-caption">
+<strong>Jagdtrophäe</strong>
+Dokumentiert im Jahr 1462.
+</div>
+
+</div>
+
+<div class="gallery-item">
+<img src="https://i.imgur.com/ScU6e3o.png">
+
+<div class="gallery-caption">
+<strong>Bestiarium-Skizze</strong>
+Unvollständige Rekonstruktion.
+</div>
+
+</div>
+
+<div class="gallery-item">
+<img src="https://i.imgur.com/HHMoYMB.png">
+
+<div class="gallery-caption">
+<strong>Manuskriptfragment</strong>
+Aus den Archiven von Cenyr.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+</div>
+
+</body>
+</html>
+```

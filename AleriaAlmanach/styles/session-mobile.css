@@ -1,0 +1,217 @@
+@media (max-width: 760px) {
+  .session-page {
+    min-height: 0;
+    background: var(--parchment-dark);
+  }
+
+  .session-page .session-art-col {
+    width: 100% !important;
+    min-width: 0;
+    height: clamp(112px, 19dvh, 172px);
+    flex: 0 0 auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(139,105,20,0.22);
+  }
+
+  .session-page .session-art-col img {
+    object-position: center 24%;
+    opacity: 0.7;
+  }
+
+  .session-page .session-art-overlay {
+    height: 64px;
+  }
+
+  .session-page .session-art-stamp {
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.55rem;
+    font-size: 0.46rem;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+  }
+
+  .session-page .session-content {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .session-page .session-stage-bar {
+    padding: 0.62rem 0.72rem 0.58rem;
+    gap: 0.22rem;
+  }
+
+  .session-page .session-stage-head {
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .session-page .session-stage-heading {
+    gap: 0.18rem;
+  }
+
+  .session-page .session-stage-kicker {
+    font-size: 0.48rem;
+    letter-spacing: 0.16em;
+  }
+
+  .session-page .session-stage-title {
+    font-size: 0.84rem;
+    line-height: 1.22;
+  }
+
+  .session-page .session-stage-copy {
+    max-height: 4.8em;
+    overflow: auto;
+    font-size: 0.76rem;
+    line-height: 1.48;
+    padding-right: 0.2rem;
+  }
+
+  .session-page .session-focus-toggle {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 1.08rem;
+  }
+
+  .session-page .comments-scroll {
+    padding: 0.72rem 0.72rem 0.28rem;
+    gap: 0.7rem;
+  }
+
+  .session-page .comment-entry,
+  .session-page .comment-entry.left,
+  .session-page .comment-entry.right {
+    align-self: stretch;
+    max-width: 100%;
+    gap: 0.62rem;
+    padding: 0.72rem 0;
+  }
+
+  .session-page .comment-entry.right .comment-content,
+  .session-page .comment-entry.right .comment-char-header {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .session-page .comment-portrait,
+  .session-page .comment-portrait-placeholder {
+    width: calc(42px * var(--session-comment-avatar-scale));
+    height: calc(42px * var(--session-comment-avatar-scale));
+    flex-basis: calc(42px * var(--session-comment-avatar-scale));
+  }
+
+  .session-page .comment-text,
+  .session-page .comment-body {
+    font-size: calc(0.9rem * var(--session-comment-font-scale));
+    line-height: 1.62;
+  }
+
+  .session-page .comment-quick-tools,
+  .session-page .comment-turn-bar,
+  .session-page .comments-form-bar {
+    padding-left: 0.72rem;
+    padding-right: 0.72rem;
+  }
+
+  .session-page .comment-quick-tools {
+    gap: 0.45rem;
+    padding-top: 0.38rem;
+    padding-bottom: 0.38rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .session-page .comment-reader-controls {
+    flex: 1 0 100%;
+    justify-content: space-between;
+    gap: 0.35rem;
+  }
+
+  .session-page .comment-reader-control {
+    flex: 1 1 0;
+  }
+
+  .session-page .comment-reader-control input {
+    width: 100%;
+    min-width: 62px;
+  }
+
+  .session-page .comment-turn-bar {
+    align-items: stretch;
+    gap: 0.45rem;
+    padding-top: 0.45rem;
+    padding-bottom: 0.48rem;
+  }
+
+  .session-page .comment-turn-main {
+    min-width: 0;
+  }
+
+  .session-page .comment-turn-actions {
+    overflow-x: auto;
+    padding-bottom: 0.08rem;
+    scrollbar-width: thin;
+  }
+
+  .session-page .comment-turn-btn {
+    min-height: 34px;
+    white-space: nowrap;
+  }
+
+  .session-page .comments-form-bar {
+    position: sticky;
+    bottom: 0;
+    z-index: 12;
+    gap: 0.42rem;
+    padding-top: 0.48rem;
+    padding-bottom: calc(0.48rem + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -8px 18px rgba(58,36,12,0.12);
+  }
+
+  .session-page .comments-add-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.22rem;
+  }
+
+  .session-page .comments-form-hint {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .session-page.session-focus-mode .session-art-col {
+    height: 0;
+    min-height: 0;
+    opacity: 0;
+    border-bottom: 0;
+  }
+
+  .session-page.session-focus-mode .session-stage-bar {
+    padding: 0.48rem 0.65rem;
+  }
+
+  .session-page.session-focus-mode .session-stage-copy {
+    display: none;
+  }
+
+  .session-page.session-focus-mode .comments-scroll {
+    padding: 0.74rem 0.78rem 0.25rem;
+  }
+
+  .session-page.session-focus-mode .comment-quick-tools {
+    padding-top: 0.32rem;
+    padding-bottom: 0.32rem;
+  }
+
+  .session-page.session-focus-mode .comment-turn-bar,
+  .session-page.session-focus-mode .comments-form-bar {
+    padding-left: 0.78rem;
+    padding-right: 0.78rem;
+  }
+}

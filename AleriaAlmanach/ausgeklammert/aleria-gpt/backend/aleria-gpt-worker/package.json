@@ -1,0 +1,15 @@
+{
+  "name": "aleria-gpt-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret:openrouter": "wrangler secret put ALERIA_GPT_API_KEY"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
+

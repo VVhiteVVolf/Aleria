@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Alchemist / Kräuterhändler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/alchemist.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-icon">
+        <img src="https://i.imgur.com/8fO35vQ.png" alt="Zeichen des Alchemisten">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Kräuter, Pilze, Extrakte &amp; Gebräu</p>
+        <h1>Der Alchemist</h1>
+        <p>Ein Markt für Kräuterhändler, Alchemisten, Heiler, Druiden, Magier und jene, die besser wissen sollten, was sie in eine Phiole füllen.</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Inhalt">
+      <a href="#einleitung">Einleitung</a>
+      <a href="#markt">Markt</a>
+      <a href="#einkauf">Einkaufsliste</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+
+    <section class="intro-grid" id="einleitung">
+      <article>
+        <h2>Einleitung</h2>
+        <p>Diese Tabellen dienen als Orientierung beim Stöbern in Kräuterläden, alchemistischen Werkstätten, Gemischtwarenläden, Märkten der Fortuna oder Handelshäusern der Klingenden Münze.</p>
+      </article>
+      <article id="markt">
+        <h2>Markt</h2>
+        <p>Viele Pflanzen und Pilze sind offen erhältlich. Organe, infernale Substanzen, Drogen und Bomben laufen dagegen oft über Gilden, Lizenzen, Schwarzmarktkanäle oder sehr persönliche Kontakte.</p>
+      </article>
+      <article>
+        <h2>Währung</h2>
+        <p>Die Preise verwenden Kupfer, Silber und Gold. Für Filter wird intern umgerechnet: 1 Silber = 100 Kupfer, 1 Gold = 1.000 Kupfer.</p>
+      </article>
+    </section>
+
+    <section class="controls" id="einkauf">
+      <div class="search">
+        <label for="q">Suche</label>
+        <input id="q" type="search" placeholder="Name, Wirkung, Kategorie, Beschreibung ..." autocomplete="off">
+      </div>
+      <div class="chips" id="categoryChips"></div>
+      <div class="ranges">
+        <label>Preis bis <input id="maxPrice" type="number" min="0" placeholder="Kupfer"></label>
+        <label>Risiko ab <input id="minRisk" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Heilung ab <input id="minHealing" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Mana ab <input id="minMana" type="number" min="1" max="10" placeholder="1-10"></label>
+      </div>
+      <div class="status-row">
+        <span id="status"></span>
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="inventory">
+      <div class="section-title">
+        <h2>Einkaufsliste</h2>
+        <p>Jede Ware besitzt ein alchemistisches Wirkprofil: Heilung, Mana, Gift, Ritual, Seltenheit und Risiko. Hohe Werte sind nicht immer gut, besonders beim Risiko.</p>
+      </div>
+      <div id="itemList" class="item-list"></div>
+    </section>
+
+    <section class="trivia" id="trivia">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Bei Alchemie entscheidet die Dosierung oft stärker als die Zutat selbst.</li>
+        <li>Viele billige Pflanzen sind legal, aber ihre Verarbeitung kann verboten sein.</li>
+        <li>Alles, was in Gold bezahlt wird und in eine Phiole passt, sollte beschriftet werden.</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="compare-bar" id="compareBar">
+    <span>Vergleich</span>
+    <div id="compareSlots"></div>
+    <button id="compareBtn" type="button" disabled>Vergleichen</button>
+    <button id="clearCompareBtn" type="button">Leeren</button>
+  </aside>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Schließen">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div class="modal" id="compareModal" aria-hidden="true">
+    <article class="modal-card compare-modal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+      <button class="modal-close" id="compareClose" type="button" aria-label="Schließen">×</button>
+      <div id="compareContent"></div>
+    </article>
+  </div>
+
+  <script src="data/alchemy-data.js"></script>
+  <script src="scripts/alchemist.js"></script>
+</body>
+</html>

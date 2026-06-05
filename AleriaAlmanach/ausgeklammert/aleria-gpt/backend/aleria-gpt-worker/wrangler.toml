@@ -1,0 +1,14 @@
+name = "aleria-gpt"
+main = "worker.js"
+compatibility_date = "2026-06-04"
+
+[vars]
+ALERIA_GPT_ALLOWED_ORIGINS = "https://dieweltvonaleria.neocities.org,http://127.0.0.1:5508"
+ALERIA_GPT_PROVIDER_BASE_URL = "https://openrouter.ai/api/v1"
+ALERIA_GPT_MODEL = ""
+ALERIA_GPT_APP_URL = "https://dieweltvonaleria.neocities.org"
+ALERIA_GPT_APP_TITLE = "Aleria Almanach"
+ALERIA_GPT_MAX_TOKENS = "700"
+ALERIA_GPT_TIMEOUT_MS = "30000"
+ALERIA_GPT_MAX_BODY_CHARS = "650000"
+

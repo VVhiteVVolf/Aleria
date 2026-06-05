@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waffen- und Ruestungsshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/shop.css?v=20260501-detail-layout">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero" id="top">
+      <div class="hero-mark">
+        <img src="https://i.imgur.com/Jd05CgY.png" alt="Wappen des Waffenmarkts">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Herkömmliche Waffen &amp; Rüstungstypen</p>
+        <h1>Der Zeughausmarkt</h1>
+        <p>Ein geordneter Markt für Söldner, Stadtwachen, Ritter und Abenteurer: einfache Klingen, robuste Rüstungen, Schilde, Erze und regionale Werkstattstile.</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Inhalt">
+      <a href="#markt">Markt</a>
+      <a href="#waren">Einkaufsliste</a>
+      <a href="#erze">Metalle &amp; Erze</a>
+      <a href="#stile">Stile</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+
+    <section class="intro-grid" id="markt">
+      <article>
+        <h2>Einleitung</h2>
+        <p>Für einfache Söldner, Reisende und Kämpfer ohne adelige Schatzkammer ist die Wahl der Ausrüstung entscheidend. Manche sparen jahrelang auf ein vernünftiges Schwert oder eine tragfähige Rüstung, andere verlassen sich auf einfache Ware, die reparierbar, bezahlbar und überall verfügbar ist.</p>
+      </article>
+      <article>
+        <h2>Markt</h2>
+        <p>Herkömmliche Waffen und Rüstungen findet man beim Dorfschmied, in städtischen Zeughäusern, an Feldlagerständen oder in Handelshäusern der Klingenden Münze und Fortunas.</p>
+      </article>
+      <article>
+        <h2>Eigenschaften</h2>
+        <p>Von gewöhnlicher Ausrüstung sollte niemand Wunder erwarten. Sie erfüllt ihren Zweck, schützt vor den meisten Alltagsgefahren und entscheidet oft weniger durch Glanz als durch Pflege, Passform und den Menschen, der sie führt.</p>
+      </article>
+    </section>
+
+    <section class="controls" id="waren" aria-label="Filter">
+      <div class="search-wrap">
+        <label for="q">Suche</label>
+        <input id="q" type="search" placeholder="Name, Material, Beschreibung ..." autocomplete="off">
+      </div>
+      <div class="control-group" role="group" aria-label="Kategorie">
+        <button class="chip active" data-filter="category" data-value="Alle">Alle</button>
+        <button class="chip" data-filter="category" data-value="Waffen">Waffen</button>
+        <button class="chip" data-filter="category" data-value="Ruestungen">Rüstungen</button>
+        <button class="chip" data-filter="category" data-value="Schilde">Schilde</button>
+      </div>
+      <div class="control-group" role="group" aria-label="Seltenheit">
+        <button class="chip active" data-filter="rarity" data-value="Alle">Alle Seltenheiten</button>
+        <button class="chip" data-filter="rarity" data-value="Gewoehnlich">Gewöhnlich</button>
+        <button class="chip" data-filter="rarity" data-value="Ungewoehnlich">Ungewöhnlich</button>
+        <button class="chip" data-filter="rarity" data-value="Selten">Selten</button>
+      </div>
+      <div class="range-controls">
+        <label>Preis bis <input id="maxPrice" type="number" min="0" placeholder="Kupfer"></label>
+        <label>Gewicht bis <input id="maxWeight" type="number" min="0" step="0.1" placeholder="kg"></label>
+      </div>
+      <div class="status-row">
+        <span id="status"></span>
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="inventory">
+      <div class="section-band">
+        <h2>Einkaufsliste</h2>
+        <p>Preise werden intern in Kupfertalern verglichen. Ein Goldstück entspricht 1.000 Kupfertalern.</p>
+      </div>
+      <div class="item-grid" id="itemGrid"></div>
+    </section>
+
+    <section class="catalog-band" id="erze">
+      <div class="section-band">
+        <h2>Metalle &amp; Erze</h2>
+        <p>Seltene Erze sind keine gewöhnliche Marktware, aber in spezialisierten Werkstätten und Handelsverweisen dokumentiert.</p>
+      </div>
+      <div class="mini-grid" id="oreGrid"></div>
+    </section>
+
+    <section class="catalog-band" id="stile">
+      <div class="section-band">
+        <h2>Waffen- &amp; Rüstungsstile</h2>
+        <p>Regionale Formen, Zierweisen und Schmiedetraditionen prägen, wie Waffen und Rüstungen wahrgenommen werden.</p>
+      </div>
+      <div class="style-grid" id="styleGrid"></div>
+    </section>
+
+    <section class="trivia" id="trivia">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Gewöhnliche Ausrüstung ist nicht schwach; sie ist berechenbar. Das macht sie für Söldner wertvoll.</li>
+        <li>Ein gutes Futteral, Öl und Ersatzriemen retten mehr Ausrüstung als prunkvolle Gravuren.</li>
+        <li>Bei Rüstungen entscheidet die Passform oft stärker als der Materialname.</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="compare-bar" id="compareBar" aria-live="polite">
+    <span>Vergleich</span>
+    <div id="compareSlots"></div>
+    <button id="compareBtn" type="button" disabled>Vergleichen</button>
+    <button id="clearCompareBtn" type="button">Leeren</button>
+  </aside>
+
+  <div class="modal-veil" id="detailModal" aria-hidden="true">
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Schließen">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div class="modal-veil" id="compareModal" aria-hidden="true">
+    <article class="modal-card compare-modal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+      <button class="modal-close" id="compareClose" type="button" aria-label="Schließen">×</button>
+      <div id="compareContent"></div>
+    </article>
+  </div>
+
+  <script src="data/shop-data.js?v=20260501-detail-layout"></script>
+  <script src="scripts/shop.js?v=20260501-detail-layout"></script>
+</body>
+</html>

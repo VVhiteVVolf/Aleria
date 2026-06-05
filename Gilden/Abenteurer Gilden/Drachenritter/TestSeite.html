@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagerbuch der Gruppe – Status, Vermögen & Inventar</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-dark:#1a1512;
+    --paper:#e6dac3;
+    --ink:#2b221a;
+    --ink-red:#8a1c1c;
+    --wood:#5c4033;
+    --gold:#bd9b60;
+    --line:rgba(43,34,26,0.35);
+
+    --shadow-deep:0 15px 35px rgba(0,0,0,0.6);
+    --shadow-paper:0 2px 8px rgba(0,0,0,0.15);
+
+    --blackbar:#0b0b0b;
+    --table-bg:rgba(255,255,255,0.35);
+  }
+
+  *{box-sizing:border-box}
+
+  /* ===== SCROLLBAR (Custom) ===== */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #1a1512; }
+  ::-webkit-scrollbar-thumb{
+    background:#5c4033;
+    border:1px solid #2b221a;
+    border-radius:4px;
+  }
+  ::-webkit-scrollbar-thumb:hover{ background:#8a1c1c; }
+
+  body{
+    margin:0;
+    background:#120f0c;
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(255,210,140,0.10) 0%, transparent 45%),
+      radial-gradient(circle at 80% 25%, rgba(255,190,120,0.07) 0%, transparent 50%),
+      radial-gradient(circle at 50% 85%, rgba(0,0,0,0.35) 0%, transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65)),
+      url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+
+    font-family:'Crimson Pro',serif;
+    color:var(--ink);
+    line-height:1.55;
+    padding:20px;
+    overflow-x:hidden;
+  }
+
+  /* Day/Night Mode Toggle */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(189,155,96,0.4);
+  }
+
+  body.night-mode {
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(100,120,200,0.15) 0%, transparent 45%),
+      radial-gradient(circle at 80% 25%, rgba(80,100,180,0.10) 0%, transparent 50%),
+      radial-gradient(circle at 50% 85%, rgba(0,0,0,0.55) 0%, transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+      url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  }
+
+  body.night-mode .page {
+    background: #1a1612;
+    box-shadow:
+      var(--shadow-deep),
+      inset 0 0 0 2px rgba(189,155,96,0.20),
+      inset 0 0 120px rgba(255,150,50,0.08);
+  }
+
+.page{
+  max-width:2000px;
+  margin:0 auto;
+  padding:46px 56px;
+  position:relative;
+  min-height:100vh;
+  background:#e2d3b6;
+  border:1px solid rgba(92,64,51,0.45);
+  box-shadow:
+    var(--shadow-deep),
+    inset 0 0 0 2px rgba(92,64,51,0.30),
+    inset 0 0 90px rgba(0,0,0,0.22);
+  background-image:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,0.35) 0%, rgba(0,0,0,0.08) 75%, rgba(0,0,0,0.16) 100%),
+    radial-gradient(circle at 75% 70%, rgba(0,0,0,0.10) 0%, transparent 55%),
+    radial-gradient(circle at 20% 85%, rgba(92,64,51,0.10) 0%, transparent 60%),
+    url("https://www.transparenttextures.com/patterns/aged-paper.png"),
+    url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+  background-repeat:no-repeat, no-repeat, no-repeat, repeat, repeat;
+  background-blend-mode:multiply, multiply, multiply, normal, multiply;
+  
+  animation: pageLoad 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.page::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:10;
+  mix-blend-mode:multiply;
+  background:
+    radial-gradient(circle at 50% 35%, transparent 45%, rgba(20,15,10,0.40) 100%),
+    radial-gradient(circle at 20% 20%, rgba(255,210,140,0.10) 0%, transparent 45%);
+  border:1px solid rgba(0,0,0,0.18);
+}
+
+  /* ===== Header ===== */
+  .header{
+    border-bottom:4px double var(--ink);
+    padding-bottom:18px;
+    margin-bottom:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:14px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:11;
+    animation: fadeInDown 0.6s ease 0.2s both;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .title-group h1{
+    font-family:'Cinzel',serif;
+    font-size:2.35rem;
+    margin:0;
+    color:#1a1a1a;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:0 1px 2px rgba(255,255,255,0.5);
+  }
+
+  .title-group .sub{
+    font-family:'Reenie Beanie',cursive;
+    font-size:1.55rem;
+    color:var(--ink-red);
+    transform:rotate(-2deg);
+    display:block;
+    margin-top:-8px;
+  }
+
+  .date-line{
+    font-family:'Uncial Antiqua', serif;
+    font-size:1.1rem;
+    color:#5b3f3f;
+    letter-spacing:0.08em;
+    opacity:0.85;
+    padding-bottom:6px;
+    white-space:nowrap;
+  }
+
+  /* ===== IMPROVED RESPONSIVE LAYOUT ===== */
+  .layout{
+    display:grid;
+    grid-template-columns:360px 1fr 420px;
+    gap:24px;
+    position:relative;
+    z-index:11;
+    align-items:start;
+  }
+
+  @media (max-width:1400px){
+    .layout{ 
+      grid-template-columns:300px 1fr 300px; 
+      gap:18px;
+    }
+    .page {
+      padding: 32px 40px;
+    }
+  }
+
+  @media (max-width:1100px){
+    .layout{ 
+      grid-template-columns:420px 1fr; 
+      grid-template-areas:
+        "left main"
+        "right main";
+    }
+    .board:first-child { grid-area: left; }
+    main { grid-area: main; }
+    .board:last-child { grid-area: right; }
+  }
+
+  @media (max-width:900px){
+    .layout{ 
+      grid-template-columns:1fr;
+      grid-template-areas:
+        "main"
+        "left"
+        "right";
+    }
+    .page {
+      padding: 24px 20px;
+    }
+    .title-group h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* ===== Seitenleisten (Pinnwand-Stil) ===== */
+  .board{
+    background:rgba(40,30,20,0.05);
+    border:2px dashed var(--wood);
+    padding:14px;
+    position:relative;
+    box-shadow:var(--shadow-paper);
+    animation: fadeIn 0.8s ease 0.4s both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .board h3{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    margin:0 0 20px;
+    border-bottom:1px solid var(--wood);
+    padding-bottom:10px;
+    letter-spacing:0.05em;
+  }
+
+  /* ===== ENHANCED EDITABLE NOTICES ===== */
+.notice{
+  position:relative;
+  background:#fdf6e3;
+  color:var(--ink);
+  padding:14px 16px 12px;
+  margin-bottom:26px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.25);
+  border:1px solid rgba(92,64,51,0.55);
+  border-radius:4px;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.05), transparent 10%, transparent 90%, rgba(0,0,0,0.05)),
+    url("https://www.transparenttextures.com/patterns/aged-paper.png");
+  background-repeat:repeat, repeat;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.notice:hover{
+  transform:scale(1.02) rotate(0.5deg);
+  box-shadow:0 14px 26px rgba(0,0,0,0.28);
+  z-index:5;
+}
+
+.notice::after{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #bdbdbd 0%, #4a4a4a 55%, #151515 100%);
+  border:1px solid #000;
+  box-shadow:0 2px 4px rgba(0,0,0,0.45);
+  z-index:10;
+}
+
+.notice strong{
+  display:block;
+  font-family:'Cinzel',serif;
+  color:var(--ink-red);
+  letter-spacing:0.06em;
+  font-size:0.95rem;
+  margin:0 0 6px;
+  border-bottom:1px solid rgba(92,64,51,0.28);
+  padding-bottom:4px;
+}
+
+.note-lines{
+  margin-top:-2px;
+  text-align:left;
+}
+
+.note-line{
+  border-bottom:1px solid rgba(92,64,51,0.35);
+  padding:3px 0 2px;
+  line-height:1.15;
+  font-size:0.98rem;
+  min-height: 1.2em;
+}
+
+/* Editable state */
+.note-line[contenteditable="true"] {
+  outline: 2px dashed var(--gold);
+  outline-offset: 2px;
+  background: rgba(189,155,96,0.1);
+  cursor: text;
+}
+
+.handwritten.sig{
+  display:block;
+  text-align:right;
+  margin-top:6px;
+  font-family:'Reenie Beanie',cursive;
+  font-size:1.35rem;
+  color:#4a3b2a;
+  transform:rotate(-2deg) translateY(-4px);
+}
+
+.notice.urgent{
+  background:#fff1f1;
+  border-color:#8a1c1c;
+}
+
+/* Delete button for notices */
+.notice-delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--ink-red);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice:hover .notice-delete {
+  opacity: 0.7;
+}
+
+.notice-delete:hover {
+  opacity: 1 !important;
+  transform: scale(1.15);
+}
+
+/* Add notice button */
+.add-notice-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(92,64,51,0.15);
+  border: 2px dashed var(--wood);
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  color: var(--wood);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.add-notice-btn:hover {
+  background: rgba(92,64,51,0.25);
+  border-color: var(--ink-red);
+  color: var(--ink-red);
+  transform: translateY(-2px);
+}
+
+  .fill-line{
+    display:inline-block;
+    width:100%;
+    border-bottom:1px dashed rgba(92,64,51,0.25);
+    height:1.2em;
+    vertical-align:bottom;
+  }
+
+  /* ===== Collapsible Blocks ===== */
+  details.block{
+    width:100%;
+    margin:0 0 20px;
+    border:2px solid #000;
+    background:rgba(255,255,255,0.12);
+    box-shadow:var(--shadow-paper);
+  }
+
+  details.block > summary{
+    cursor:pointer;
+    user-select:none;
+    padding:10px 12px;
+    background:var(--blackbar);
+    color:#fff;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    letter-spacing:0.04em;
+    list-style:none;
+    outline:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition: background 0.2s ease;
+  }
+
+  details.block > summary:hover {
+    background: #1a1a1a;
+  }
+
+  details.block > summary::after{
+    content:"▼";
+    font-size:0.8rem;
+    transition:0.3s;
+  }
+
+  details.block[open] > summary::after{
+    transform:rotate(180deg);
+  }
+
+  details.block > summary::-webkit-details-marker{ display:none; }
+
+  .block-body{
+    padding:12px;
+    background:rgba(255,255,255,0.20);
+  }
+
+  /* ===== CHARAKTER KARTEN ===== */
+  .char-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:20px;
+  }
+
+  @media (max-width:600px) {
+    .char-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .char-card{
+    position:relative;
+    height:380px;
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    border:1px solid #4a3b2a;
+    background:#000;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .char-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.6), 0 0 10px rgba(189, 155, 96, 0.2);
+    z-index:5;
+  }
+
+  .char-bg-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.5s ease, filter 0.5s ease;
+    filter:sepia(0.4) brightness(0.75);
+  }
+
+  .char-card:hover .char-bg-img{
+    transform:scale(1.05);
+    filter:sepia(0.1) brightness(1);
+  }
+
+  .char-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:linear-gradient(to top, rgba(10,5,2,0.98) 20%, rgba(10,5,2,0.85) 70%, transparent 100%);
+    padding:60px 15px 15px;
+    transform:translateY(68%);
+    transition:transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color:#e6dac3;
+    border-top:1px solid rgba(189,155,96,0.3);
+  }
+
+  .char-card:hover .char-overlay{
+    transform:translateY(0);
+    background:linear-gradient(to top, rgba(10,5,2,1) 40%, rgba(10,5,2,0.9) 90%, transparent 100%);
+  }
+
+  .char-name{
+    font-family:'Cinzel',serif;
+    font-size:1.3rem;
+    color:var(--gold);
+    text-shadow:0 2px 4px rgba(0,0,0,0.8);
+    margin:0;
+    border-bottom:1px solid var(--ink-red);
+    padding-bottom:4px;
+    line-height:1.2;
+  }
+
+  .char-role{
+    font-family:'Crimson Pro',serif;
+    font-style:italic;
+    font-size:0.9rem;
+    margin-bottom:10px;
+    color:#bbb;
+    margin-top:2px;
+  }
+
+  .char-status-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:12px;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    flex-wrap:wrap;
+  }
+
+  .status-pill{
+    background:rgba(255,255,255,0.08);
+    padding:3px 6px;
+    border-radius:3px;
+    border:1px solid rgba(255,255,255,0.15);
+  }
+
+  .status-pill.hp{ color:#ff8e8e; border-color:#8a1c1c; }
+  .status-pill.res{ color:#8effa3; border-color:#1c8a30; }
+
+  .char-details{
+    font-size:0.9rem;
+    line-height:1.4;
+    opacity:0;
+    transition:opacity 0.3s ease 0.1s;
+  }
+
+  .char-card:hover .char-details{ opacity:1; }
+
+  .char-details b{
+    color:var(--gold);
+    display:block;
+    margin-top:8px;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  
+.pet-panel{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(92,64,51,0.35);
+}
+
+.pet-stack{
+  display:grid;
+  gap:14px;
+}
+
+.pet-card{
+  height:260px;
+}
+
+.pet-card .char-bg-img{
+  object-fit:contain;
+  background:rgba(0,0,0,0.35);
+  filter:sepia(0.35) brightness(0.78);
+}
+
+.pet-card .char-overlay{
+  transform:translateY(70%);
+  padding:58px 12px 12px;
+}
+
+.pet-card .char-name{
+  font-size:1.15rem;
+}
+
+.board details.block{
+  margin:0;
+}
+
+  /* ===== Tables ===== */
+  table.sheet{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--table-bg);
+    border:2px solid #000;
+  }
+
+  table.sheet th, table.sheet td{
+    border:1px solid rgba(0,0,0,0.55);
+    padding:8px 10px;
+    vertical-align:top;
+  }
+
+  .thead-main th{
+    background:#6b3f18;
+    color:#fff;
+    text-align:center;
+    font-family:'Cinzel',serif;
+    font-size:1.15rem;
+    padding:10px;
+  }
+
+  .thead-sub th{
+    background:#845427;
+    color:#fff;
+    text-align:center;
+    font-family:Verdana,Arial,sans-serif;
+    font-size:0.85rem;
+  }
+
+  .section-row td{
+    background:#5b3f3f;
+    color:#fff;
+    text-align:center;
+    font-weight:bold;
+    font-family:'Cinzel',serif;
+    letter-spacing:0.06em;
+  }
+
+  /* Editable table cells */
+  td[contenteditable="true"] {
+    outline: 2px solid var(--gold);
+    outline-offset: -2px;
+    background: rgba(189,155,96,0.1);
+    cursor: text;
+  }
+
+  /* ===== ENHANCED MONEY DISPLAY ===== */
+  .money-wrap{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:12px;
+  }
+
+  .pouch{
+    border:2px solid rgba(0,0,0,0.65);
+    background:rgba(255,255,255,0.25);
+    display:grid;
+    place-items:center;
+    padding:10px;
+    min-height:140px;
+  }
+
+  .pouch img{
+    width:200px;
+    max-width:100%;
+    filter:sepia(0.3);
+  }
+
+  .coins{
+    border:2px solid rgba(0,0,0,0.65);
+    background:rgba(255,255,255,0.20);
+    padding:10px;
+  }
+
+  .coin-row{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+  }
+
+  .coin-card{
+    border:1px solid rgba(0,0,0,0.55);
+    background:rgba(255,255,255,0.25);
+    padding:10px;
+    text-align:center;
+    transition: transform 0.2s ease;
+  }
+
+  .coin-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .coin-card img{
+    height:40px;
+    display:block;
+    margin:5px auto;
+  }
+
+  .coin-card .amt {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--ink);
+  }
+
+  .coin-card .amt[contenteditable="true"] {
+    outline: 2px dashed var(--gold);
+    outline-offset: 2px;
+    background: rgba(189,155,96,0.15);
+    cursor: text;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .total-copper {
+    font-family: 'Cinzel', serif;
+    color: var(--ink-red);
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+    padding: 6px;
+    background: rgba(138,28,28,0.1);
+    border-radius: 4px;
+  }
+
+  @media (max-width:900px){
+    .money-wrap{ grid-template-columns:1fr; }
+    .coin-row{ grid-template-columns:repeat(3, 1fr); }
+  }
+
+  @media (max-width:500px){
+    .coin-row{ grid-template-columns:1fr; }
+  }
+
+  /* ===== Map & Camp ===== */
+  .map-wrap, .camp-block{
+    border:2px solid #000;
+    background:rgba(255,255,255,0.22);
+    padding:10px;
+    margin-bottom:14px;
+  }
+
+  .map-link img, .camp-media video, .camp-media img{
+    width:100%;
+    border:2px solid rgba(0,0,0,0.5);
+    display:block;
+    transition: transform 0.3s ease;
+  }
+
+  .map-link:hover img {
+    transform: scale(1.02);
+  }
+
+  .map-title, .camp-title{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    margin-bottom:8px;
+    font-weight:bold;
+  }
+
+  .audio-panel{
+    margin-top:10px;
+    display:grid;
+    gap:8px;
+  }
+
+  .audio-row{
+    background:rgba(255,255,255,0.4);
+    padding:5px;
+    border:1px solid rgba(0,0,0,0.3);
+  }
+
+  audio{ width:100%; height:30px; }
+
+  /* Inventory Image */
+  .inv-img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    border:1px solid rgba(0,0,0,0.5);
+    background:rgba(255,255,255,0.3);
+    display:block;
+    margin:0 auto;
+  }
+
+  /* ===== TEMPORÄRE BEGLEITER ===== */
+.temp-companions{
+  margin-top:18px;
+}
+
+.temp-grid{
+  grid-template-columns:1fr;
+}
+
+.temp-card{
+  height:320px;
+  opacity:0.92;
+}
+
+.temp-card.placeholder{
+  opacity:0.45;
+  filter:grayscale(1);
+}
+
+.temp-card .char-overlay{
+  transform:translateY(60%);
+}
+
+.temp-card:hover .char-overlay{
+  transform:translateY(0);
+}
+
+.temp-card .char-role{
+  color:#b9b0a4;
+  font-style:italic;
+}
+
+.temp-card .char-details{
+  font-size:0.85rem;
+}
+
+  /* ===== DICE ROLLER ===== */
+  .dice-roller {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .dice-button {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8a1c1c 0%, #5b3f3f 100%);
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+  }
+
+  .dice-button:hover {
+    transform: translateY(-4px) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(189,155,96,0.5);
+  }
+
+  .dice-result {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.95);
+    color: var(--gold);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    min-width: 150px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .dice-result.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dice-result .roll-type {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .dice-result .roll-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  /* ===== SAVE INDICATOR ===== */
+  .save-indicator {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: rgba(28,138,48,0.95);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .save-indicator.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+    }
+    
+    .page {
+      box-shadow: none;
+      border: 1px solid #000;
+      max-width: 100%;
+    }
+
+    .theme-toggle,
+    .dice-roller,
+    .save-indicator,
+    .notice-delete,
+    .add-notice-btn,
+    audio {
+      display: none !important;
+    }
+
+    .char-card {
+      page-break-inside: avoid;
+    }
+
+    details {
+      page-break-inside: avoid;
+    }
+
+    details summary::after {
+      display: none;
+    }
+  }
+
+  .muted{ opacity:0.85; }
+
+  /* Accessibility improvements */
+  :focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  button:focus-visible,
+  [contenteditable]:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+</style>
+
+</head>
+
+<body>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()" title="Tag/Nacht Modus" aria-label="Themenwechsel">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <!-- Save Indicator -->
+  <div class="save-indicator" id="saveIndicator">
+    ✓ Gespeichert
+  </div>
+
+  <!-- Dice Roller -->
+  <div class="dice-roller">
+    <div class="dice-result" id="diceResult">
+      <div class="roll-type">D20</div>
+      <div class="roll-value">—</div>
+    </div>
+    <button class="dice-button" onclick="rollDice()" title="Würfel werfen (Klick für D20, Rechtsklick für Menü)" aria-label="Würfel werfen">
+      🎲
+    </button>
+  </div>
+
+  <div class="page">
+
+    <header class="header">
+      <div class="title-group">
+        <h1>Lager der Gruppe</h1>
+        <span class="sub">Status • Inventar • Vermögen • Personen</span>
+      </div>
+      <div class="date-line" id="currentDate">Im Jahre 1740</div>
+    </header>
+
+    <div class="layout">
+
+      <aside class="board">
+        <h3>Notizen</h3>
+
+        <button class="add-notice-btn" onclick="addNotice('notes')">+ Neue Notiz</button>
+
+        <div id="notesContainer">
+          <div class="notice" data-id="note1">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Notiz löschen">×</button>
+            <strong>HEUTE</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="notes">Wir haben kein Fleisch mehr, sollten uns beim nächsten Bauernhof eindecken</div>
+            </div>
+            <span class="handwritten sig">— Freya</span>
+          </div>
+
+          <div class="notice" data-id="note2">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Notiz löschen">×</button>
+            <strong>REISE / ROUTE</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="notes">Sollten den Wald umgehen, habe bei der Jagd am Morgen spuren eines Wargs gesehen</div>
+            </div>
+            <span class="handwritten sig">— Guinevere</span>
+          </div>
+
+          <div class="notice" data-id="note3">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Notiz löschen">×</button>
+            <strong>KONTAKTE</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="notes">Sind einem Bauern Namens Cedric begegnet, sah eher aus wie ein Bandit!</div>
+              <div class="note-line" contenteditable="true" data-save="notes">Beim nächsten Bauernhof nachfragen ob er in der Region bekannt ist.</div>
+            </div>
+            <span class="handwritten sig">— Guinevere</span>
+          </div>
+
+          <div class="notice" data-id="note4">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Notiz löschen">×</button>
+            <strong>EINKAUF / BEDARF</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="notes">Salz, Nähgarn, Lampenöl. Und nein: kein</div>
+              <div class="note-line" contenteditable="true" data-save="notes">Rosenwasser. wir haben Wasser, das reicht!</div>
+            </div>
+            <span class="handwritten sig">— Fenrir</span>
+          </div>
+        </div>
+
+        <details class="block temp-companions" open>
+          <summary>Temporäre Begleiter</summary>
+          <div class="block-body">
+            <div class="char-grid temp-grid">
+              <article class="char-card temp-card">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23654321' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='20' fill='%23fff' text-anchor='middle' dy='.3em'%3ELeanor%3C/text%3E%3C/svg%3E" alt="Bauer Leanor">
+                <div class="char-overlay">
+                  <h3 class="char-name">Leanor</h3>
+                  <div class="char-role">Bauer • Zivilist</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    Gesund, bodenständig, redselig.
+                    <b>Bemerkung</b>
+                    Fragte die Gruppe, ob er sie bis zum nächsten Ort begleitet.
+                    Kocht guten Möhrentopf mit Hase.
+                  </div>
+                </div>
+              </article>
+
+              <article class="char-card temp-card placeholder">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23333' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='20' fill='%23666' text-anchor='middle' dy='.3em'%3ELeer%3C/text%3E%3C/svg%3E" alt="Unbekannter Begleiter">
+                <div class="char-overlay">
+                  <h3 class="char-name">—</h3>
+                  <div class="char-role">Unbekannt</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    —
+                    <b>Bemerkung</b>
+                    —
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </details>
+      </aside>
+
+      <main>
+
+        <details class="block" open>
+          <summary>Lagerfeuer &amp; Lager</summary>
+          <div class="block-body">
+            <div class="camp-block">
+              <div class="camp-title">Lagerfeuer</div>
+              <div class="camp-media">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300'%3E%3Crect fill='%23000' width='600' height='300'/%3E%3Ccircle cx='300' cy='200' r='80' fill='%23ff6600' opacity='0.7'/%3E%3Ccircle cx='300' cy='200' r='50' fill='%23ffaa00' opacity='0.9'/%3E%3Ctext x='50%25' y='40' font-size='16' fill='%23fff' text-anchor='middle'%3ELagerfeuer Animation%3C/text%3E%3C/svg%3E" alt="Lagerfeuer">
+                <div class="audio-panel">
+                  <div class="audio-row">
+                    <audio controls loop preload="none">
+                      <source src="#" type="audio/mpeg">
+                      Dein Browser unterstützt kein Audio.
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="block">
+          <summary>Aktuelle Regionalkarte</summary>
+          <div class="block-body">
+            <div class="map-wrap">
+              <div class="map-title">Region Morddyn (Klick zum Öffnen)</div>
+              <a class="map-link" href="#" target="_blank">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d4c4a8' width='800' height='600'/%3E%3Cpath d='M100,100 Q200,50 300,100 T500,100 L500,400 Q400,450 300,400 T100,400 Z' fill='%23a8d4a8' stroke='%23654321' stroke-width='2'/%3E%3Ctext x='50%25' y='50%25' font-size='32' fill='%23654321' text-anchor='middle' dy='.3em'%3EMorddyn%3C/text%3E%3C/svg%3E" alt="Morddyn – Regionalkarte">
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <details class="block" open>
+          <summary>Am Feuer (Charaktere)</summary>
+          <div class="block-body">
+            <div class="char-grid">
+
+              <article class="char-card">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23333' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='%23gold' text-anchor='middle' dy='.3em'%3EGawain%3C/text%3E%3C/svg%3E" alt="Portrait Gawain">
+                <div class="char-overlay">
+                  <h3 class="char-name">Gawain</h3>
+                  <div class="char-role">Ritter • Teulu</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    Gesund.
+                    <b>Gedanken</b>
+                    <span contenteditable="true" data-save="character-thoughts">"Mein Rosenwasser geht mir langsam alle... Ob Freya welches hat?"</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="char-card">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23444' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='%23silver' text-anchor='middle' dy='.3em'%3EFenrir%3C/text%3E%3C/svg%3E" alt="Portrait Fenrir">
+                <div class="char-overlay">
+                  <h3 class="char-name">Fenrir</h3>
+                  <div class="char-role">Huskarl • Schildbeißer</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    Gesund.
+                    <b>Gedanken</b>
+                    <span contenteditable="true" data-save="character-thoughts">"Wenn Gawain denkt er kriegt was von meinem Hammel ab box ich ihm in die Fresse"</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="char-card">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23555' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='%23lightgreen' text-anchor='middle' dy='.3em'%3EGuinevere%3C/text%3E%3C/svg%3E" alt="Portrait Guinevere">
+                <div class="char-overlay">
+                  <h3 class="char-name">Guinevere</h3>
+                  <div class="char-role">Ritter • Helwyr</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    Gesund.
+                    <b>Gedanken</b>
+                    <span contenteditable="true" data-save="character-thoughts">"Morgen schieß ich uns einen Hasen... Wenn Gawains 'Rosenwasser' nicht alles Wild verjagt"</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="char-card">
+                <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23666' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='%23pink' text-anchor='middle' dy='.3em'%3EFreya%3C/text%3E%3C/svg%3E" alt="Portrait Freya">
+                <div class="char-overlay">
+                  <h3 class="char-name">Freya</h3>
+                  <div class="char-role">Walküre • Skalde</div>
+                  <div class="char-details">
+                    <b>Zustand</b>
+                    Munter!
+                    <b>Gedanken</b>
+                    <span contenteditable="true" data-save="character-thoughts">"la la la li li la... Ne, das Lied ging anders."</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </details>
+
+        <details class="block" open>
+          <summary>Gemeinsames Vermögen</summary>
+          <div class="block-body">
+            <table class="sheet">
+              <tbody>
+                <tr>
+                  <td colspan="4" style="padding:12px;">
+                    <div class="money-wrap">
+                      <div class="pouch">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cellipse cx='100' cy='120' rx='80' ry='60' fill='%23654321'/%3E%3Cpath d='M60,100 Q100,60 140,100' fill='none' stroke='%23333' stroke-width='3'/%3E%3Ctext x='100' y='130' font-size='16' fill='%23fff' text-anchor='middle'%3EBEUTEL%3C/text%3E%3C/svg%3E" alt="Beutel">
+                      </div>
+
+                      <div class="coins">
+                        <div class="coin-row">
+                          <div class="coin-card">
+                            <b>Gold</b>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23ffd700' stroke='%23b8860b' stroke-width='2'/%3E%3Ctext x='20' y='25' font-size='16' fill='%23b8860b' text-anchor='middle' font-weight='bold'%3EG%3C/text%3E%3C/svg%3E" alt="Gold">
+                            <div class="amt" contenteditable="true" data-save="money" data-coin="gold">× 4</div>
+                          </div>
+                          <div class="coin-card">
+                            <b>Silber</b>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23c0c0c0' stroke='%23888' stroke-width='2'/%3E%3Ctext x='20' y='25' font-size='16' fill='%23666' text-anchor='middle' font-weight='bold'%3ES%3C/text%3E%3C/svg%3E" alt="Silber">
+                            <div class="amt" contenteditable="true" data-save="money" data-coin="silver">× 20</div>
+                          </div>
+                          <div class="coin-card">
+                            <b>Kupfer</b>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23b87333' stroke='%23654321' stroke-width='2'/%3E%3Ctext x='20' y='25' font-size='16' fill='%23654321' text-anchor='middle' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E" alt="Kupfer">
+                            <div class="amt" contenteditable="true" data-save="money" data-coin="copper">× 120</div>
+                          </div>
+                        </div>
+                        <div class="total-copper" id="totalCopper">
+                          Gesamtwert: 620 Kupfermünzen
+                        </div>
+                        <div style="margin-top:10px; border-top:1px solid var(--line); padding-top:10px;">
+                          <div class="muted"><b>Wertpapiere:</b> <span contenteditable="true" data-save="money-notes" style="border-bottom:1px dashed rgba(92,64,51,0.25);">—</span></div>
+                          <div class="muted"><b>Schulden:</b> <span style="color:var(--ink-red);font-weight:bold;">Keine</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details class="block" open>
+          <summary>Inventar der Gruppe</summary>
+          <div class="block-body">
+            <table class="sheet">
+              <thead class="thead-main">
+                <tr><th colspan="5">Ausrüstung &amp; Beute</th></tr>
+              </thead>
+              <thead class="thead-sub">
+                <tr>
+                  <th style="width:70px;">Bild</th>
+                  <th>Name</th>
+                  <th style="width:140px;">Typ</th>
+                  <th>Notizen</th>
+                  <th style="width:90px;">Wert</th>
+                </tr>
+              </thead>
+
+              <tbody id="inventoryTable">
+                <tr class="section-row"><td colspan="5">Gegenstände</td></tr>
+
+                <tr>
+                  <td><img class="inv-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23ddd' width='48' height='48'/%3E%3Ctext x='24' y='28' font-size='12' fill='%23666' text-anchor='middle'%3E🗝️%3C/text%3E%3C/svg%3E" alt="Schlüssel"></td>
+                  <td contenteditable="true" data-save="inventory">Seltsamer Schlüssel</td>
+                  <td contenteditable="true" data-save="inventory">Quest-Item</td>
+                  <td contenteditable="true" data-save="inventory">Rostig, Totenkopf-Gravur</td>
+                  <td contenteditable="true" data-save="inventory">-</td>
+                </tr>
+
+                <tr>
+                  <td><img class="inv-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23eee' width='48' height='48'/%3E%3Ctext x='24' y='28' font-size='24' fill='%23999' text-anchor='middle'%3E?%3C/text%3E%3C/svg%3E" alt="Leer"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                </tr>
+
+                <tr class="section-row"><td colspan="5">Proviant</td></tr>
+
+                <tr>
+                  <td><img class="inv-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23ddd' width='48' height='48'/%3E%3Ctext x='24' y='28' font-size='12' fill='%23666' text-anchor='middle'%3E🥩%3C/text%3E%3C/svg%3E" alt="Fleisch"></td>
+                  <td contenteditable="true" data-save="inventory">Trockenfleisch</td>
+                  <td contenteditable="true" data-save="inventory">Essen</td>
+                  <td contenteditable="true" data-save="inventory">Reicht für 3 Tage</td>
+                  <td contenteditable="true" data-save="inventory">2s</td>
+                </tr>
+
+                <tr>
+                  <td><img class="inv-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='%23eee' width='48' height='48'/%3E%3Ctext x='24' y='28' font-size='24' fill='%23999' text-anchor='middle'%3E?%3C/text%3E%3C/svg%3E" alt="Leer"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                  <td contenteditable="true" data-save="inventory"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details class="block" open>
+          <summary>Lagebericht (letzte 10 Ereignisse)</summary>
+          <div class="block-body">
+            <table class="sheet">
+              <thead class="thead-main">
+                <tr><th colspan="4">Lagebericht</th></tr>
+              </thead>
+              <thead class="thead-sub">
+                <tr>
+                  <th style="width:160px;">Wie lange her</th>
+                  <th style="width:200px;">Zeitmarker</th>
+                  <th>Ereignis</th>
+                  <th style="width:220px;">Beteiligte</th>
+                </tr>
+              </thead>
+
+              <tbody id="eventsTable">
+                <tr>
+                  <td contenteditable="true" data-save="events">Vor 2 Stunden</td>
+                  <td contenteditable="true" data-save="events" id="event1Time">—</td>
+                  <td contenteditable="true" data-save="events">Fenrir hat einen verfaulten Apfel gegessen und hat Durchfall bekommen.</td>
+                  <td contenteditable="true" data-save="events">Fenrir</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true" data-save="events">Gestern</td>
+                  <td contenteditable="true" data-save="events" id="event2Time">—</td>
+                  <td contenteditable="true" data-save="events">Gawain hat einen alten Dolch gefunden.</td>
+                  <td contenteditable="true" data-save="events">Gawain</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true" data-save="events"></td>
+                  <td contenteditable="true" data-save="events"></td>
+                  <td contenteditable="true" data-save="events"></td>
+                  <td contenteditable="true" data-save="events"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+      </main>
+
+      <aside class="board">
+        <h3>Questlog</h3>
+
+        <button class="add-notice-btn" onclick="addNotice('quests')">+ Neue Quest</button>
+
+        <div id="questsContainer">
+          <div class="notice" data-id="quest1">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Quest löschen">×</button>
+            <strong>HAUPTQUEST</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="quests">Den Händler nach Morddyn begleiten,</div>
+              <div class="note-line" contenteditable="true" data-save="quests">Treffpunkt bei der Brücke im Norden.</div>
+            </div>
+            <span class="handwritten sig">— Guinevere</span>
+          </div>
+
+          <div class="notice" data-id="quest2">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Quest löschen">×</button>
+            <strong>NEBENQUEST</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="quests">Fenrir hat Gaul bei der alten Mühle angebunden</div>
+              <div class="note-line" contenteditable="true" data-save="quests">und vergessen mitzunehmen...Beim Rückweg einholen</div>
+            </div>
+            <span class="handwritten sig">— Freya</span>
+          </div>
+
+          <div class="notice urgent" data-id="quest3">
+            <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Quest löschen">×</button>
+            <strong>Sonstiges</strong>
+            <div class="note-lines">
+              <div class="note-line" contenteditable="true" data-save="quests">Der Händler bei Morddyn verkauft geilen Scheiß,</div>
+              <div class="note-line" contenteditable="true" data-save="quests">vielleicht hat er paar Aufträge für uns.</div>
+            </div>
+            <span class="handwritten sig" style="color:#8a1c1c;">— Gawain</span>
+          </div>
+        </div>
+
+        <div class="pet-panel">
+          <details class="block" open>
+            <summary>Begleiter (Pferde)</summary>
+            <div class="block-body">
+              <div class="pet-stack">
+
+                <article class="char-card pet-card">
+                  <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect fill='%238B4513' width='500' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='32' fill='%23fff' text-anchor='middle' dy='.3em'%3E🐴 Gaul%3C/text%3E%3C/svg%3E" alt="Pferd Gaul">
+                  <div class="char-overlay">
+                    <h3 class="char-name">Gaul</h3>
+                    <div class="char-role">Rasse: Hest • Geschlecht: Hengst</div>
+                    <div class="char-details">
+                      <b>Zustand</b> Resignierend, passiv, selbstmordgefährdet.
+                      <b>Zuletzt</b> Er starrt zielstrebig ins Feuer, als führe er darin einen lautlosen Kampf mit sich selbst.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="char-card pet-card">
+                  <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect fill='%23A0522D' width='500' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='32' fill='%23fff' text-anchor='middle' dy='.3em'%3E🐴 Tanor%3C/text%3E%3C/svg%3E" alt="Pferd Tanor">
+                  <div class="char-overlay">
+                    <h3 class="char-name">Tanor</h3>
+                    <div class="char-role">Rasse: Rhyfel • Geschlecht: Hengst</div>
+                    <div class="char-details">
+                      <b>Zustand</b> Divahaft, eitel, schnell beleidigt.
+                      <b>Zuletzt</b> Heute Morgen hat er wegen der nassen Straße komplett blockiert. Gawain stieg ab, nahm Umwege und schleppte ihn ins Lager.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="char-card pet-card">
+                  <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect fill='%23696969' width='500' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='32' fill='%23fff' text-anchor='middle' dy='.3em'%3E🐴 Uath%3C/text%3E%3C/svg%3E" alt="Pferd Uath">
+                  <div class="char-overlay">
+                    <h3 class="char-name">Uath</h3>
+                    <div class="char-role">Rasse: Rhyfel • Geschlecht: Stute</div>
+                    <div class="char-details">
+                      <b>Zustand</b> Militärisch. Streng. Stoisch.
+                      <b>Zuletzt</b> Fixiert Guinevere konfrontativ – dieser Blick, der sagt, dass heute eigentlich noch jemand sterben sollte.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="char-card pet-card">
+                  <img class="char-bg-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Crect fill='%23CD853F' width='500' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='32' fill='%23fff' text-anchor='middle' dy='.3em'%3E🐴 Eldfaxi%3C/text%3E%3C/svg%3E" alt="Pferd Eldfaxi">
+                  <div class="char-overlay">
+                    <h3 class="char-name">Eldfaxi</h3>
+                    <div class="char-role">Rasse: Hest Mischling • Geschlecht: Stute</div>
+                    <div class="char-details">
+                      <b>Zustand</b> Freigeist. Inspiriert. Fröhlich.
+                      <b>Zuletzt</b> Hüpfte unbekümmert umher.
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </details>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+<script>
+// ===== LOCAL STORAGE MANAGEMENT =====
+const STORAGE_KEY = 'drachenritter_lager';
+
+// Load saved data on page load
+window.addEventListener('DOMContentLoaded', () => {
+  loadData();
+  updateDateTime();
+  setInterval(updateDateTime, 60000); // Update every minute
+  
+  // Auto-save on content change
+  document.addEventListener('input', (e) => {
+    if (e.target.hasAttribute('contenteditable') || e.target.hasAttribute('data-save')) {
+      debounce(saveData, 1000)();
+    }
+  });
+
+  // Calculate total copper on money change
+  document.querySelectorAll('[data-coin]').forEach(el => {
+    el.addEventListener('input', () => {
+      calculateTotalCopper();
+      debounce(saveData, 1000)();
+    });
+  });
+});
+
+function loadData() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const data = JSON.parse(saved);
+      
+      // Load notes
+      if (data.notes) {
+        document.getElementById('notesContainer').innerHTML = data.notes;
+        reattachEventListeners('notesContainer');
+      }
+      
+      // Load quests
+      if (data.quests) {
+        document.getElementById('questsContainer').innerHTML = data.quests;
+        reattachEventListeners('questsContainer');
+      }
+      
+      // Load inventory
+      if (data.inventory) {
+        document.getElementById('inventoryTable').innerHTML = data.inventory;
+      }
+      
+      // Load events
+      if (data.events) {
+        document.getElementById('eventsTable').innerHTML = data.events;
+      }
+      
+      // Load money
+      if (data.money) {
+        data.money.forEach(item => {
+          const el = document.querySelector(`[data-coin="${item.coin}"]`);
+          if (el) el.textContent = item.value;
+        });
+        calculateTotalCopper();
+      }
+      
+      // Load theme
+      if (data.theme === 'night') {
+        document.body.classList.add('night-mode');
+        document.getElementById('theme-icon').textContent = '☀️';
+      }
+    }
+  } catch (error) {
+    console.error('Error loading data:', error);
+  }
+}
+
+function saveData() {
+  try {
+    const data = {
+      notes: document.getElementById('notesContainer').innerHTML,
+      quests: document.getElementById('questsContainer').innerHTML,
+      inventory: document.getElementById('inventoryTable').innerHTML,
+      events: document.getElementById('eventsTable').innerHTML,
+      money: Array.from(document.querySelectorAll('[data-coin]')).map(el => ({
+        coin: el.dataset.coin,
+        value: el.textContent
+      })),
+      theme: document.body.classList.contains('night-mode') ? 'night' : 'day',
+      timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    showSaveIndicator();
+  } catch (error) {
+    console.error('Error saving data:', error);
+  }
+}
+
+function reattachEventListeners(containerId) {
+  const container = document.getElementById(containerId);
+  container.querySelectorAll('.notice-delete').forEach(btn => {
+    btn.onclick = function() { deleteNotice(this); };
+  });
+}
+
+function showSaveIndicator() {
+  const indicator = document.getElementById('saveIndicator');
+  indicator.classList.add('show');
+  setTimeout(() => {
+    indicator.classList.remove('show');
+  }, 2000);
+}
+
+// Debounce function
+let debounceTimer;
+function debounce(func, delay) {
+  return function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => func.apply(this, arguments), delay);
+  };
+}
+
+// ===== THEME TOGGLE =====
+function toggleTheme() {
+  document.body.classList.toggle('night-mode');
+  const icon = document.getElementById('theme-icon');
+  icon.textContent = document.body.classList.contains('night-mode') ? '☀️' : '🌙';
+  saveData();
+}
+
+// ===== DATE/TIME =====
+function updateDateTime() {
+  const now = new Date();
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  };
+  const dateStr = now.toLocaleDateString('de-DE', options);
+  
+  // Keep the fantasy year
+  document.getElementById('currentDate').textContent = `Im Jahre 1740 • ${dateStr}`;
+  
+  // Update event timestamps if empty
+  const event1 = document.getElementById('event1Time');
+  const event2 = document.getElementById('event2Time');
+  if (event1 && event1.textContent === '—') {
+    const twoHoursAgo = new Date(now - 2 * 60 * 60 * 1000);
+    event1.textContent = twoHoursAgo.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+  }
+  if (event2 && event2.textContent === '—') {
+    const yesterday = new Date(now - 24 * 60 * 60 * 1000);
+    event2.textContent = yesterday.toLocaleDateString('de-DE', { month: 'short', day: 'numeric' });
+  }
+}
+
+// ===== MONEY CALCULATOR =====
+function calculateTotalCopper() {
+  const gold = parseInt(document.querySelector('[data-coin="gold"]').textContent.replace(/[^0-9]/g, '')) || 0;
+  const silver = parseInt(document.querySelector('[data-coin="silver"]').textContent.replace(/[^0-9]/g, '')) || 0;
+  const copper = parseInt(document.querySelector('[data-coin="copper"]').textContent.replace(/[^0-9]/g, '')) || 0;
+  
+  // 1 Gold = 100 Copper, 1 Silver = 10 Copper (adjust as needed for your system)
+  const total = (gold * 100) + (silver * 10) + copper;
+  
+  document.getElementById('totalCopper').textContent = `Gesamtwert: ${total} Kupfermünzen`;
+}
+
+// ===== NOTICE MANAGEMENT =====
+let noticeCounter = Date.now();
+
+function addNotice(type) {
+  const container = type === 'notes' ? 'notesContainer' : 'questsContainer';
+  const noticeId = `${type}-${noticeCounter++}`;
+  
+  const template = `
+    <div class="notice" data-id="${noticeId}">
+      <button class="notice-delete" onclick="deleteNotice(this)" aria-label="Notiz löschen">×</button>
+      <strong>TITEL</strong>
+      <div class="note-lines">
+        <div class="note-line" contenteditable="true" data-save="${type}">Neue Notiz...</div>
+      </div>
+      <span class="handwritten sig">— ???</span>
+    </div>
+  `;
+  
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = template;
+  document.getElementById(container).appendChild(tempDiv.firstElementChild);
+  saveData();
+}
+
+function deleteNotice(button) {
+  if (confirm('Diese Notiz wirklich löschen?')) {
+    button.closest('.notice').remove();
+    saveData();
+  }
+}
+
+// ===== DICE ROLLER =====
+let currentDiceType = 20;
+
+function rollDice() {
+  const result = Math.floor(Math.random() * currentDiceType) + 1;
+  const resultDiv = document.getElementById('diceResult');
+  
+  resultDiv.querySelector('.roll-type').textContent = `D${currentDiceType}`;
+  resultDiv.querySelector('.roll-value').textContent = result;
+  resultDiv.classList.add('show');
+  
+  // Add critical success/fail styling
+  const valueEl = resultDiv.querySelector('.roll-value');
+  valueEl.style.color = '';
+  if (currentDiceType === 20) {
+    if (result === 20) {
+      valueEl.style.color = '#00ff00';
+    } else if (result === 1) {
+      valueEl.style.color = '#ff0000';
+    }
+  }
+  
+  setTimeout(() => {
+    resultDiv.classList.remove('show');
+  }, 3000);
+}
+
+// Right-click for dice menu
+document.querySelector('.dice-button').addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  const dice = [4, 6, 8, 10, 12, 20, 100];
+  const choice = prompt(`Würfeltyp wählen:\n${dice.join(', ')}\n\nAktuell: D${currentDiceType}`);
+  if (choice && dice.includes(parseInt(choice))) {
+    currentDiceType = parseInt(choice);
+  }
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  // Ctrl/Cmd + S to save
+  if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+    e.preventDefault();
+    saveData();
+  }
+  
+  // Ctrl/Cmd + D to roll dice
+  if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
+    e.preventDefault();
+    rollDice();
+  }
+});
+
+// Sound effects (optional - uncomment to enable)
+// function playSound(type) {
+//   const audio = new Audio();
+//   if (type === 'dice') {
+//     audio.src = 'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFKHzM8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQoUXrTp66hVFApGn+DyvmwhBTGH0O/JdyYFK37M8d2WQQo=';
+//   }
+//   audio.play().catch(() => {}); // Ignore errors
+// }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Taverne „Zum Kupferkrug“ – Markt & Angebot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root{
+      --bg:#f7f3ea; --paper-top:#fffdfa; --paper-mid:#f7f3ea; --paper-bot:#efe9dc;
+      --ink:#2a2a2a; --muted:#5b5b5b; --line:#d8d0c2;
+      --panel:#ffffff; --panel-2:#fbf7ef;
+      --accent:#415a77; --accent-2:#778da9;
+      --good:#3a8651; --warn:#b28a36; --bad:#b34a42;
+      --shadow:0 8px 28px rgba(0,0,0,.10);
+      --radius:14px; --radius-sm:10px;
+      --gap:18px; --gap-lg:28px; --maxw:1200px; --tab-h:52px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 800px at 12% -6%, var(--paper-top) 0%, transparent 55%),
+        linear-gradient(180deg, var(--paper-top), var(--paper-mid) 38%, var(--paper-bot));
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      line-height:1.6;
+      background-attachment: fixed;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent);text-underline-offset:2px}
+    .wrap{max-width:var(--maxw);margin-inline:auto;padding:22px clamp(14px,3vw,28px)}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* Header */
+    header.site{
+      display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:var(--gap);
+      background:linear-gradient(180deg,#fffefe,#fbf7ef);
+      border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:16px 20px;position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.03) blur(6px)
+    }
+    .crest{width:72px;height:72px;border-radius:50%;border:1px solid var(--line);background:#ffffff;padding:8px}
+    header.site h1{margin:0;font-size:clamp(18px,2vw,26px);letter-spacing:.4px}
+    .tagline{margin:4px 0 0;color:var(--muted);font-size:.96rem}
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:.92rem}
+    .badge{display:inline-flex;align-items:center;gap:.45em;padding:.35em .6em;background:linear-gradient(180deg,#ffffff,#f6f2e9);border:1px solid var(--line);border-radius:999px}
+
+    /* Tabs */
+    .tabs{margin-top:var(--gap-lg);background:linear-gradient(180deg,#ffffff,#fbf7ef 60%);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .tabbar{display:flex;flex-wrap:wrap;gap:6px;padding:8px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#ffffff,#f6f2e9)}
+    .tabbar label{display:inline-flex;align-items:center;gap:.55em;height:var(--tab-h);padding:0 14px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(180deg,#ffffff,#f7f3ea);color:var(--muted);cursor:pointer;user-select:none;letter-spacing:.2px;transition:transform .12s ease, background .2s ease, color .2s ease, border-color .2s ease}
+    .tabbar label:hover{transform:translateY(-1px);color:var(--accent)}
+    .tabbar label.active{ color:#0f172a; background:linear-gradient(180deg,#fff,#fdfbf6); border-color:#cfd2d9; box-shadow: inset 0 0 0 1px rgba(0,0,0,.03), 0 2px 10px rgba(0,0,0,.06) }
+    .dot{width:8px;height:8px;border-radius:50%;background:#cfd6de;box-shadow:0 0 0 2px rgba(0,0,0,.06) inset}
+    .tab input{position:absolute;opacity:0;pointer-events:none}
+    .panels{position:relative}
+    .panel{display:none;padding:20px}
+    .tab input:checked ~ .panels .panel{display:none}
+    .tab:nth-of-type(1) input:checked ~ .panels [data-panel="intro"],
+    .tab:nth-of-type(2) input:checked ~ .panels [data-panel="markt"],
+    .tab:nth-of-type(3) input:checked ~ .panels [data-panel="einkauf"],
+    .tab:nth-of-type(4) input:checked ~ .panels [data-panel="trivia"]{display:block}
+
+    /* Split */
+    .split{display:grid;grid-template-columns:1.25fr .95fr;gap:var(--gap-lg);align-items:start}
+    .content{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px}
+    .side{position:sticky;top:calc(var(--tab-h) + 28px);align-self:start;display:flex;flex-direction:column;gap:var(--gap)}
+    .card{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px;box-shadow:var(--shadow)}
+    .card figure{margin:0}
+    .card figcaption{margin-top:8px;font-size:.95rem;color:var(--muted)}
+
+    /* Toolbar & Table */
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+    .toolbar input,.toolbar select{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;color:var(--ink)}
+    .toolbar .btn{background:linear-gradient(180deg,#ffffff,#f6f2e9);border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:#0f172a;cursor:pointer}
+
+    .table-wrap{overflow:auto}
+    table.offer{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .offer th,.offer td{padding:10px 12px;border-bottom:1px solid #ebe5d8;vertical-align:middle}
+    .offer th{position:sticky;top:0;background:linear-gradient(180deg,#ffffff,#faf6ee);text-align:left}
+    .offer tr:last-child td{border-bottom:0}
+    .offer .price,.offer .add{white-space:nowrap}
+    .ico-cell{width:44px;text-align:center}
+    .ico{width:32px;height:32px;display:inline-grid;place-items:center;border-radius:8px;border:1px solid var(--line);background:#ffffff;box-shadow:0 1px 0 rgba(0,0,0,.04) inset;font-size:20px;line-height:1}
+    /* Bild-Icons in der Kachel */
+    .ico img{width:24px;height:24px;display:block;object-fit:contain}
+    .pill{display:inline-block;padding:.15em .55em;border:1px solid #e3dccf;border-radius:999px;font-size:.8rem;color:#334155;background:#faf8f3}
+    .btn-sm{padding:.35em .6em;border-radius:9px;border:1px solid var(--line);background:#fff;color:#0f172a;cursor:pointer}
+    .btn-sm:hover{filter:brightness(0.98)}
+
+    /* Gruppenüberschriften */
+    .offer tr.group th{
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--muted);
+      background: #faf6ee;
+      border-top: 1px solid #ede6d8;
+      border-bottom: 1px solid #ede6d8;
+    }
+    /* Optional sticky Gruppen-Header
+    .offer tr.group th{ position:sticky; top:41px; z-index:1; } */
+
+    /* Aufklapp-Beschreibung unter der Zeile */
+    .desc-row td{background:#fffaf1}
+    .desc-box{padding:12px;border:1px dashed #e2d8c6;border-radius:10px;background:#fff}
+
+    /* Warenkorb */
+    .cart{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+    .cart-list{width:100%;border-collapse:separate;border-spacing:0}
+    .cart-list th,.cart-list td{padding:8px 10px;border-bottom:1px solid #ebe5d8}
+    .cart-list tr:last-child td{border-bottom:0}
+    .cart .total{display:flex;justify-content:space-between;margin-top:10px;font-weight:700}
+    .cart .actions{display:flex;gap:8px;margin-top:8px}
+    .cart .actions .btn{flex:1}
+
+    details.scene{border:1px dashed #c9c2b4;border-radius:8px;padding:10px;background:#fff}
+    details.scene summary{cursor:pointer;font-weight:700;color:var(--accent)}
+    details.scene .scene-body{margin-top:10px;background:#fbf7ef;border:1px solid #e8e0d0;border-radius:8px;padding:12px;font-family:Georgia,"Times New Roman",serif}
+
+    @media (max-width: 980px){
+      .split{grid-template-columns:1fr}
+      .side{position:static}
+      header.site{grid-template-columns:72px 1fr}
+      .meta{grid-column:1 / -1;justify-self:start}
+      .offer th,.offer td{padding:8px 9px}
+    }
+
+    /* === Feedback FX: Münzen + Barrierefreiheit === */
+    #fx-layer{position:fixed;inset:0;pointer-events:none;z-index:9999}
+    .fx-coin{
+      position:fixed; width:28px; height:28px; pointer-events:none;
+      background: url("https://i.imgur.com/jvPNRu8.png") center/contain no-repeat;
+      transform: translate(-50%,-50%); opacity:0; will-change: transform, opacity, rotate;
+      filter: drop-shadow(0 3px 6px rgba(0,0,0,.25));
+      animation: coinDrop .7s ease-out forwards, coinSpin .7s linear forwards;
+    }
+    @keyframes coinDrop{
+      0%   { opacity:0; transform: translate(var(--x,0), var(--y,0)) scale(.9) }
+      10%  { opacity:1 }
+      100% { opacity:0; transform: translate(var(--x,0), calc(var(--y,0) + 140px)) scale(1) }
+    }
+    @keyframes coinSpin{ from { rotate: 0deg } to { rotate: 360deg } }
+
+    @media (prefers-reduced-motion: reduce){
+      .fx-coin{ animation:none; opacity:1; transition:opacity .25s ease }
+      .fx-coin{ opacity:0 }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site" role="banner">
+      <img class="crest" src="https://i.imgur.com/tWnyDmF.png" alt="Wappen der Taverne Zum Kupferkrug">
+      <div>
+        <h1>Zum Kupferkrug</h1>
+        <p class="tagline">„Wo Geschichten wachsen und Krüge niemals leer bleiben.“</p>
+      </div>
+      <div class="meta" aria-label="Kurzinfos">
+        <span class="badge" title="Ort">Marktplatz 3, Altstadt</span>
+        <span class="badge" title="Währung">KT / Pfennig</span>
+      </div>
+    </header>
+
+    <section class="tabs" aria-label="Reiter">
+      <nav class="tabbar" aria-label="Reiternavigation">
+        <label for="tab-intro"><span class="dot" aria-hidden="true"></span> Einleitung</label>
+        <label for="tab-markt"><span class="dot" aria-hidden="true"></span> Markt</label>
+        <label for="tab-einkauf"><span class="dot" aria-hidden="true"></span> Einkaufsliste</label>
+        <label for="tab-trivia"><span class="dot" aria-hidden="true"></span> Trivia</label>
+      </nav>
+
+      <!-- Radio-Tabs -->
+      <div class="tab">
+        <input type="radio" name="tab" id="tab-intro" checked aria-controls="panel-intro">
+        <label class="sr-only" for="tab-intro">Einleitung</label>
+        <div class="panels">
+          <section class="panel" data-panel="intro" id="panel-intro" role="tabpanel" aria-labelledby="tab-intro">
+            <div class="split">
+              <article class="content">
+                <h2>Willkommen im Kupferkrug</h2>
+                <p>Diese Seite listet Speisen & Getränke unserer Taverne auf. Sortiere, filtere, wechsle die Währung zwischen Kupfertaler (KT) und Pfennig, und stelle dir eine Einkaufsliste für die nächste Runde zusammen. Klicke auf einen Artikel, um die Beschreibung aufzuklappen.</p>
+                <hr>
+                <details class="scene">
+                  <summary>📜 Am Feuer</summary>
+                  <div class="scene-body">
+                    <p><em>„Der Wirt poliert Krüge, die Luft riecht nach Brot und Rauch. Stimmen schwellen an, als eine neue Geschichte beginnt…“</em></p>
+                  </div>
+                </details>
+              </article>
+              <aside class="side" aria-label="Flavour">
+                <div class="card">
+                  <figure>
+                    <img src="https://i.imgur.com/uBYWWHX.png" alt="Illustration der Taverne: helles Papier, Krüge, Kamin">
+                    <figcaption>Hausbrand & Kupferglanz</figcaption>
+                  </figure>
+                </div>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- TAB 2: Markt -->
+      <div class="tab">
+        <input type="radio" name="tab" id="tab-markt" aria-controls="panel-markt">
+        <label class="sr-only" for="tab-markt">Markt</label>
+
+        <div class="panels">
+          <section class="panel" data-panel="markt" id="panel-markt" role="tabpanel" aria-labelledby="tab-markt">
+            <article class="content">
+              <h2>Markt &amp; Angebot</h2>
+
+              <div class="toolbar" role="region" aria-label="Filter und Sortierung">
+                <input id="filter-q" type="search" placeholder="Suche: Name, Schlagwort …" aria-label="Suche">
+                <select id="filter-cat" aria-label="Kategorie">
+                  <option value="">Alle Kategorien</option>
+                  <option value="Speise">Speisen</option>
+                  <option value="Getränk">Getränke</option>
+                  <option value="Spezialität">Spezialitäten</option>
+                  <option value="Marktware">Marktware</option>
+                </select>
+                <select id="filter-qual" aria-label="Qualität">
+                  <option value="">Alle Qualitäten</option>
+                  <option>Gewöhnlich</option>
+                  <option>Gut</option>
+                  <option>Erlesen</option>
+                  <option>Legendär</option>
+                </select>
+                <select id="sort-by" aria-label="Sortierung">
+                  <option value="name-asc">Name ↑</option>
+                  <option value="name-desc">Name ↓</option>
+                  <option value="preis-asc">Preis ↑</option>
+                  <option value="preis-desc">Preis ↓</option>
+                  <option value="qual-desc">Qualität ↓</option>
+                </select>
+                <select id="currency" aria-label="Währung">
+                  <option value="KT">Kupfertaler (KT)</option>
+                  <option value="PF">Pfennig</option>
+                </select>
+                <button class="btn" id="reset-filters" type="button" aria-label="Filter zurücksetzen">Zurücksetzen</button>
+              </div>
+
+              <p class="muted" aria-hidden="true">
+                <span class="pill">Vorrat: viel</span>
+                <span class="pill">Vorrat: knapp</span>
+                <span class="pill">Saisonal</span>
+              </p>
+
+              <div class="table-wrap">
+                <table class="offer" id="offer-table" role="grid" aria-describedby="offer-caption">
+                  <caption id="offer-caption" class="sr-only">Angebotsliste der Taverne – klick auf eine Zeile, um die Beschreibung zu öffnen.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="ico-cell" aria-label="Icon"></th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Kategorie</th>
+                      <th scope="col">Qualität</th>
+                      <th scope="col">Vorrat</th>
+                      <th scope="col">Preis</th>
+                      <th scope="col">Einheit</th>
+                      <th scope="col">Aktion</th>
+                    </tr>
+                  </thead>
+                  <tbody id="offer-body">
+                    <tr>
+                      <td colspan="8" class="muted">Wird geladen … Falls nichts erscheint, ist JavaScript deaktiviert.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <noscript>
+                  <p class="muted" style="margin-top:10px">JavaScript ist deaktiviert. Eine statische Marktliste ohne Filter und Warenkorb kann optional eingebunden werden.</p>
+                </noscript>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <!-- TAB 3: Einkaufsliste -->
+      <div class="tab">
+        <input type="radio" name="tab" id="tab-einkauf" aria-controls="panel-einkauf">
+        <label class="sr-only" for="tab-einkauf">Einkaufsliste</label>
+
+        <div class="panels">
+          <section class="panel" data-panel="einkauf" id="panel-einkauf" role="tabpanel" aria-labelledby="tab-einkauf">
+            <div class="split">
+              <article class="content">
+                <h2>Einkaufsliste</h2>
+                <p class="muted">Füge im Reiter <strong>Markt</strong> Positionen hinzu. Hier kannst du Mengen ändern, Positionen entfernen und die Gesamtsumme in der gewählten Währung prüfen.</p>
+                <hr>
+
+                <div class="cart" aria-live="polite">
+                  <h3>Warenkorb</h3>
+                  <table class="cart-list" id="cart-table" role="grid" aria-describedby="cart-caption">
+                    <caption id="cart-caption" class="sr-only">Aktuelle Warenkorbliste</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Artikel</th>
+                        <th scope="col">Einheit</th>
+                        <th scope="col">Preis</th>
+                        <th scope="col">Menge</th>
+                        <th scope="col">Zwischensumme</th>
+                        <th scope="col">Aktion</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                      <tr id="cart-empty">
+                        <td colspan="6" class="muted">Noch keine Artikel im Korb.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="total" id="cart-total">
+                    <span>Gesamtsumme</span>
+                    <span><strong id="total-amount">0,00&nbsp;KT</strong></span>
+                  </div>
+
+                  <div class="actions">
+                    <button class="btn" id="btn-clear" type="button" aria-label="Warenkorb leeren">Leeren</button>
+                    <button class="btn" id="btn-export" type="button" aria-label="Einkaufsliste exportieren">Als Liste kopieren</button>
+                    <button class="btn" id="btn-checkout" type="button" aria-label="Zur Kasse">Zur Kasse</button>
+                  </div>
+                </div>
+              </article>
+
+              <aside class="side" aria-label="Hinweise & Angebote">
+                <div class="card">
+                  <h3 style="margin:0 0 8px 0;">Tagesempfehlung</h3>
+                  <figure>
+                    <img src="https://i.imgur.com/3QAk2zG.png" alt="Tagesgericht: Braten mit Wurzelgemüse (Illustration)">
+                    <figcaption>Braten mit Wurzelgemüse – satt und herzhaft.</figcaption>
+                  </figure>
+                </div>
+
+                <div class="card">
+                  <h3 style="margin:0 0 8px 0;">Hinweis</h3>
+                  <p class="muted">Saisonware kann im Preis schwanken. Bei knappen Vorräten gelten Mengenlimits.</p>
+                </div>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- TAB 4: Trivia -->
+      <div class="tab">
+        <input type="radio" name="tab" id="tab-trivia" aria-controls="panel-trivia">
+        <label class="sr-only" for="tab-trivia">Trivia</label>
+
+        <div class="panels">
+          <section class="panel" data-panel="trivia" id="panel-trivia" role="tabpanel" aria-labelledby="tab-trivia">
+            <div class="split">
+              <article class="content">
+                <h2>Trivia</h2>
+                <ul>
+                  <li>Der Hausbrand wird in Kupferkesseln destilliert, daher der Name „Zum Kupferkrug“.</li>
+                  <li>Am 3. Vollmond gibt es „Erlesene Woche“: Qualitätsstufe +1 zum gleichen Preis (solange Vorrat reicht).</li>
+                  <li>Die Währung ist Kupfertaler (KT); 1&nbsp;KT = 100&nbsp;Pfennig (PF).</li>
+                </ul>
+                <hr>
+                <details class="scene">
+                  <summary>📜 Hinter der Schank</summary>
+                  <div class="scene-body">
+                    <p><em>„Es heißt, wer dem Wirt ein altes Rezept bringt, trinkt die erste Runde umsonst.“</em></p>
+                  </div>
+                </details>
+              </article>
+
+              <aside class="side" aria-label="Bildmaterial">
+                <div class="card">
+                  <figure>
+                    <img src="https://i.imgur.com/4u8kM9c.png" alt="Kupferne Krüge auf einem hellen Holzregal">
+                    <figcaption>Sammelkrüge aus drei Zeitaltern.</figcaption>
+                  </figure>
+                </div>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- === Daten + Logik === -->
+      <script>
+        const FX = { KT_TO_PF: 100 };
+        const STATE = { currency:'KT', sort:'name-asc', filters:{ q:'', cat:'', qual:'' }, cart:[] };
+        const QUALITY_RANK = { 'Gewöhnlich':0, 'Gut':1, 'Erlesen':2, 'Legendär':3 };
+
+        /* Vollständiges Sortiment – alle mit iconUrl Platzhalter */
+        const IMG_PLACEHOLDER = 'https://i.imgur.com/jvPNRu8.png';
+
+        const MENU = [
+          /* VORSPEISEN */
+          { id:'bread_toast',     icon:'🍞', iconUrl:IMG_PLACEHOLDER, iconAlt:'Geröstetes Brot', name:'Geröstetes Bauernbrot', cat:'Speise', qual:'Gewöhnlich', stock:'viel', priceKT:0.35, unit:'Scheibe',  tags:['Brot'],        group:'Vorspeisen',
+            desc:'Dicke Scheiben vom Landbrot, über der Flamme geröstet und mit Kräuteröl bestrichen. Knuspernde Rinde, weiche Krume.' },
+          { id:'pickled_veg',     icon:'🥒', iconUrl:IMG_PLACEHOLDER, iconAlt:'Sauergemüse',     name:'Sauergemüse',            cat:'Speise', qual:'Gewöhnlich', stock:'viel', priceKT:0.30, unit:'Schale',   tags:['Beilage'],     group:'Vorspeisen',
+            desc:'Knackig und säuerlich: Gurke, Rote Bete und Meerrettich. Bringt Fettiges ins Gleichgewicht.' },
+          { id:'dumplings',       icon:'🥟', iconUrl:IMG_PLACEHOLDER, iconAlt:'Teigtaschen',     name:'Teigtaschen',            cat:'Speise', qual:'Gut',        stock:'viel', priceKT:0.85, unit:'Portion',  tags:['Hausgemacht'], group:'Vorspeisen',
+            desc:'Mit Kräuterkäse gefüllte Halbmonde, in Butter geschwenkt. Ein Hauch Muskat – und man greift zur nächsten.' },
+
+          /* MAHLZEITEN */
+          { id:'stew_day',        icon:'🍲', iconUrl:IMG_PLACEHOLDER, iconAlt:'Eintopf',         name:'Eintopf des Tages',      cat:'Speise', qual:'Gut',        stock:'saisonal', priceKT:0.90, unit:'Schüssel', tags:['Suppe','Saisonal'], group:'Mahlzeiten',
+            desc:'Kräftige Brühe, je nach Jahreszeit mit Wurzeln, Linsen oder Waldpilzen. Der Wirt rührt ab Morgengrauen im Kessel.' },
+          { id:'bean_stew',       icon:'🫘', iconUrl:IMG_PLACEHOLDER, iconAlt:'Bohneneintopf',   name:'Bohneneintopf',          cat:'Speise', qual:'Gewöhnlich', stock:'viel',     priceKT:0.85, unit:'Schüssel', tags:['Suppe'],        group:'Mahlzeiten',
+            desc:'Weiße Bohnen, Lauch und ein Hauch geräucherter Speck. Dick, sämig, sättigend – der Löffel bleibt fast stehen.' },
+          { id:'blood_sauerkraut',icon:'🥩', iconUrl:IMG_PLACEHOLDER, iconAlt:'Blutwurst',       name:'Blutwurst & Kraut',      cat:'Speise', qual:'Gut',        stock:'viel',     priceKT:1.10, unit:'Teller',   tags:['Deftig'],      group:'Mahlzeiten',
+            desc:'Dunkle Wurstscheiben, in der Pfanne angeröstet, auf hausgemachtem Sauerkraut. Pfefferkörner knacken, Senf ist dabei.' },
+          { id:'chicken_baked',   icon:'🍗', iconUrl:IMG_PLACEHOLDER, iconAlt:'Gebackenes Huhn', name:'Gebackenes Huhn',        cat:'Speise', qual:'Gut',        stock:'knapp',    priceKT:1.80, unit:'Teller',   tags:['Fleisch','Ofen'], group:'Mahlzeiten',
+            desc:'Mit Thymian, Knoblauch und Honig glasierte Keulen. Aus dem Steinofen – die Haut knistert noch beim Servieren.' },
+          { id:'breakfast_plate', icon:'🍳', iconUrl:IMG_PLACEHOLDER, iconAlt:'Frühstücksteller',name:'Frühstücksteller',       cat:'Speise', qual:'Gewöhnlich', stock:'viel',     priceKT:0.50, unit:'Teller',   tags:['Frühstück'],   group:'Mahlzeiten',
+            desc:'Ein kleines Brett mit Ei, Käse, Brot und eingelegter Rübe. Für Reisende, die den Morgentau im Rücken haben.' },
+
+          /* MENÜS (Spezialität) */
+          { id:'menu_knecht',     icon:'🍽️',iconUrl:IMG_PLACEHOLDER, iconAlt:'Knechtfraß',      name:'Knechtfraß',             cat:'Spezialität', qual:'Gewöhnlich', stock:'viel', priceKT:1.00, unit:'Menü', tags:['Set','Eintopf','Brot','Dünnbier'], group:'Menüs',
+            desc:'Eine Schale Eintopf, ein Brotlaib und ein Krug Dünnbier. Unspektakulär, aber ehrlich – satt bis zur Vesper.' },
+          { id:'menu_kurgrund',   icon:'🍖', iconUrl:IMG_PLACEHOLDER, iconAlt:'Kurgrunden Teller',name:'Kurgrunden Teller',     cat:'Spezialität', qual:'Erlesen',    stock:'knapp', priceKT:3.00, unit:'Menü', tags:['Set','Fleisch','Käse','Starkbier'], group:'Menüs',
+            desc:'Geröstetes Fleisch, ein Keil Bergkäse, zwei dicke Brotscheiben und ein Krug „Eiserner Krug“. Für Helden.' },
+          { id:'menu_bard',       icon:'🎻', iconUrl:IMG_PLACEHOLDER, iconAlt:'Bardenmahl',      name:'Bardenmahl',             cat:'Spezialität', qual:'Gut',        stock:'saisonal', priceKT:2.50, unit:'Menü', tags:['Set','Festlich'], group:'Menüs',
+            desc:'Ein festliches Brett: Pastete, Früchte, Käse und süßer Met. Wer dazu singt, spart den Nachtisch.' },
+
+          /* GETRÄNKE (nicht-alkoholisch) */
+          { id:'water_plain',     icon:'💧', iconUrl:IMG_PLACEHOLDER, iconAlt:'Wasser',          name:'Wasser',                 cat:'Getränk', qual:'Gewöhnlich', stock:'viel', priceKT:0.05, unit:'Becher', tags:['Ohne Alkohol'], group:'Getränke',
+            desc:'Frisch aus dem Ziehbrunnen, notfalls abgekocht. Wer misstraut, nimmt einen Spritzer Met dazu.' },
+
+          /* ALKOHOLISCHES */
+          { id:'beer_thin',       icon:'🍺', iconUrl:IMG_PLACEHOLDER, iconAlt:'Dünnes Bier',     name:'Dünnes Bier (gewässert)',cat:'Getränk', qual:'Gewöhnlich', stock:'viel', priceKT:0.15, unit:'Krug',   tags:['Bier','Leicht'], group:'Alkoholisches',
+            desc:'Leichtes Zechbier, tagsüber getrunken, wenn noch Arbeit wartet. Löscht den Durst, benebelt nicht.' },
+          { id:'beer_monastery',  icon:'🍺', iconUrl:IMG_PLACEHOLDER, iconAlt:'Klosterbier',     name:'Klosterbier',            cat:'Getränk', qual:'Gut',        stock:'viel', priceKT:0.25, unit:'Krug',   tags:['Bier'],         group:'Alkoholisches',
+            desc:'Bernsteinfarben, klar und sauber vergoren. Die Brüder hüten das Rezept wie ihre Chroniken.' },
+          { id:'beer_strong',     icon:'🍺', iconUrl:IMG_PLACEHOLDER, iconAlt:'Starkbier',       name:'Starkbier „Eiserner Krug“',cat:'Getränk', qual:'Gut',    stock:'viel', priceKT:1.00, unit:'Krug',   tags:['Bier','Stark'], group:'Alkoholisches',
+            desc:'Dunkel, malzig und schwer. Die Stammkundschaft sagt: „Zwei Krüge machen den Markt stiller.“' },
+          { id:'cider_apple',     icon:'🍎', iconUrl:IMG_PLACEHOLDER, iconAlt:'Apfelwein',       name:'Apfelwein',              cat:'Getränk', qual:'Gewöhnlich', stock:'viel', priceKT:0.05, unit:'Becher', tags:['Wein','Frucht'], group:'Alkoholisches',
+            desc:'Sauerspritziger Trunk aus den Obstwiesen der Vorstadt. Beim zweiten Schluck beginnt er zu gefallen.' },
+          { id:'mead_honey',      icon:'🍯', iconUrl:IMG_PLACEHOLDER, iconAlt:'Honigmet',        name:'Honigmet (Blütenhonig)', cat:'Getränk', qual:'Erlesen',  stock:'viel', priceKT:0.60, unit:'Becher', tags:['Met','Süß'],    group:'Alkoholisches',
+            desc:'Sonnengelbe Süße mit Blumenduft. Im Spätsommer aus Heidehonig gebraut – sacht wärmend.' },
+          { id:'spirit_monastery',icon:'🥃', iconUrl:IMG_PLACEHOLDER, iconAlt:'Schnaps',         name:'Kloster-„Spiritus“',     cat:'Getränk', qual:'Erlesen',  stock:'knapp', priceKT:1.00, unit:'Schnaps',tags:['Hochprozentig'], group:'Alkoholisches',
+            desc:'Ein scharfes Destillat aus Kräutern und Korn. In kleinen Schlucken – brennt, dann leuchtet die Brust.' },
+
+          /* SIMPLE NAHRUNGSMITTEL (MARKTWARE) */
+          { id:'milk_mug',        icon:'🥛', iconUrl:IMG_PLACEHOLDER, iconAlt:'Milch',           name:'Milch',                  cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.12, unit:'Becher', tags:['Dorfhof'],      group:'Simple Nahrungsmittel',
+            desc:'Frische Kuhmilch vom Stadtrand. Morgens geliefert, am besten leicht angewärmt.' },
+          { id:'egg',             icon:'🥚', iconUrl:IMG_PLACEHOLDER, iconAlt:'Ei',              name:'Ei',                     cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.06, unit:'Stück',  tags:['Hof'],          group:'Simple Nahrungsmittel',
+            desc:'Braune Schalen, fest im Griff. Beliebt für Frühstücksteller und Pasteten.' },
+          { id:'bacon_slice',     icon:'🥓', iconUrl:IMG_PLACEHOLDER, iconAlt:'Speck',           name:'Speck',                  cat:'Marktware', qual:'Gut',        stock:'viel', priceKT:0.20, unit:'Scheibe',tags:['Räucherei'],    group:'Simple Nahrungsmittel',
+            desc:'Geräuchert über Buchenholz, kräftig und salzig. Brät in der Pfanne und duftet durchs Haus.' },
+          { id:'butter_chunk',    icon:'🧈', iconUrl:IMG_PLACEHOLDER, iconAlt:'Butter',          name:'Butter',                 cat:'Marktware', qual:'Gut',        stock:'viel', priceKT:0.25, unit:'Stück',  tags:['Molkerei'],     group:'Simple Nahrungsmittel',
+            desc:'Goldene Butter aus Rahm geschlagen. Schmilzt auf warmem Brot in Sekunden.' },
+          { id:'cheese_wedge',    icon:'🧀', iconUrl:IMG_PLACEHOLDER, iconAlt:'Käse',            name:'Käse',                   cat:'Marktware', qual:'Erlesen',    stock:'viel', priceKT:0.45, unit:'Stück',  tags:['Bergkäse'],     group:'Simple Nahrungsmittel',
+            desc:'Fester Bergkäse mit nussiger Note. Reift im Felsenkeller der Nordhänge.' },
+          { id:'loaf_plain',      icon:'🍞', iconUrl:IMG_PLACEHOLDER, iconAlt:'Brotlaib',        name:'Brotlaib',               cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.50, unit:'Laib',   tags:['Bäckerei'],     group:'Simple Nahrungsmittel',
+            desc:'Dorfbackofen-Laib, dicht und sättigend. Hält drei Tage, wenn man ihm die Kruste lässt.' },
+          { id:'flour_bag',       icon:'🌾', iconUrl:IMG_PLACEHOLDER, iconAlt:'Mehl',            name:'Mehl',                   cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.30, unit:'Beutel', tags:['Mühle'],        group:'Simple Nahrungsmittel',
+            desc:'Helles Weizenmehl – feiner Staub an jedem Beutel. Für Pasteten und Fladen.' },
+          { id:'oats_bag',        icon:'🌾', iconUrl:IMG_PLACEHOLDER, iconAlt:'Haferflocken',    name:'Haferflocken',           cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.28, unit:'Beutel', tags:['Mühle'],        group:'Simple Nahrungsmittel',
+            desc:'Geröstete Flocken für Brei oder Röstkraut. Beliebt bei Stallknechten und Barden.' },
+          { id:'salt_pouch',      icon:'🧂', iconUrl:IMG_PLACEHOLDER, iconAlt:'Salz',            name:'Salz',                   cat:'Marktware', qual:'Gewöhnlich', stock:'viel', priceKT:0.18, unit:'Beutel', tags:['Handel'],       group:'Simple Nahrungsmittel',
+            desc:'Grobes Meersalz, über Landstraßen gekommen. Ein Muss in jeder Küche.' }
+        ];
+
+        /* Utils */
+        function toPF(valueKT){ return Math.round(valueKT * FX.KT_TO_PF); }
+        function fmtPrice(valueKT, currency){
+          if(currency === 'PF'){ return toPF(valueKT).toLocaleString('de-DE') + '\u00A0PF'; }
+          return valueKT.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '\u00A0KT';
+        }
+        function stockLabel(stock){
+          if(stock === 'viel') return 'Vorrat: viel';
+          if(stock === 'knapp') return 'Vorrat: knapp';
+          if(stock === 'saisonal') return 'Saisonal';
+          return stock || '-';
+        }
+
+        (function(){
+          /* --- DOM-Refs --- */
+          const $q = document.getElementById('filter-q');
+          const $cat = document.getElementById('filter-cat');
+          const $qual = document.getElementById('filter-qual');
+          const $sort = document.getElementById('sort-by');
+          const $ccy = document.getElementById('currency');
+          const $reset = document.getElementById('reset-filters');
+          const $offerBody = document.getElementById('offer-body');
+
+          const $cartBody = document.getElementById('cart-body');
+          const $totalAmount = document.getElementById('total-amount');
+          const $btnClear = document.getElementById('btn-clear');
+          const $btnExport = document.getElementById('btn-export');
+          const $btnCheckout = document.getElementById('btn-checkout');
+
+          /* --- State laden --- */
+          try {
+            const saved = JSON.parse(localStorage.getItem('kupferkrug-state') || '{}');
+            if(saved && typeof saved === 'object'){
+              if(saved.currency) STATE.currency = saved.currency;
+              if(Array.isArray(saved.cart)) STATE.cart = saved.cart.filter(Boolean);
+              if(saved.sort) STATE.sort = saved.sort;
+              if(saved.filters) STATE.filters = Object.assign(STATE.filters, saved.filters);
+            }
+          } catch(e){}
+
+          $q.value = STATE.filters.q || '';
+          $cat.value = STATE.filters.cat || '';
+          $qual.value = STATE.filters.qual || '';
+          $sort.value = STATE.sort || 'name-asc';
+          $ccy.value = STATE.currency || 'KT';
+
+          function persist(){
+            try {
+              localStorage.setItem('kupferkrug-state', JSON.stringify({
+                currency: STATE.currency, sort: STATE.sort, filters: STATE.filters, cart: STATE.cart
+              }));
+            } catch(e){}
+          }
+
+          function filteredSortedMenu(){
+            const q = (STATE.filters.q || '').toLowerCase().trim();
+            const cat = STATE.filters.cat || '';
+            const qual = STATE.filters.qual || '';
+
+            let items = MENU.filter(it=>{
+              if(cat && it.cat !== cat) return false;
+              if(qual && it.qual !== qual) return false;
+              if(q){
+                const hay = `${it.name} ${it.cat} ${it.qual} ${it.unit} ${(it.tags||[]).join(' ')}`.toLowerCase();
+                if(!hay.includes(q)) return false;
+              }
+              return true;
+            });
+
+            switch(STATE.sort){
+              case 'name-desc': items.sort((a,b)=> b.name.localeCompare(a.name,'de')); break;
+              case 'preis-asc': items.sort((a,b)=> a.priceKT - b.priceKT); break;
+              case 'preis-desc': items.sort((a,b)=> b.priceKT - a.priceKT); break;
+              case 'qual-desc': items.sort((a,b)=> (QUALITY_RANK[b.qual]-QUALITY_RANK[a.qual]) || a.name.localeCompare(b.name,'de')); break;
+              default: items.sort((a,b)=> a.name.localeCompare(b.name,'de'));
+            }
+            return items;
+          }
+
+          function toggleDesc(itemId, expand){
+            const row = document.getElementById('row-' + itemId);
+            const desc = document.getElementById('desc-' + itemId);
+            if(!row || !desc) return;
+            const newState = (expand !== undefined) ? !!expand : desc.hidden;
+            desc.hidden = !newState;
+            row.setAttribute('aria-expanded', String(newState));
+          }
+
+          function renderOffers(){
+            while($offerBody.firstChild) $offerBody.removeChild($offerBody.firstChild);
+
+            const data = filteredSortedMenu();
+            if(!data.length){
+              const tr = document.createElement('tr');
+              const td = document.createElement('td');
+              td.colSpan = 8; td.className = 'muted'; td.textContent = 'Keine Treffer.';
+              tr.appendChild(td); $offerBody.appendChild(tr); return;
+            }
+
+            const ORDER = ['Vorspeisen','Mahlzeiten','Menüs','Getränke','Alkoholisches','Simple Nahrungsmittel'];
+            const buckets = new Map(); for(const g of ORDER) buckets.set(g, []);
+            for(const it of data){ buckets.get(buckets.has(it.group)? it.group : 'Mahlzeiten').push(it); }
+
+            const addGroupHeader = (title)=>{
+              const tr = document.createElement('tr'); tr.className='group';
+              const th = document.createElement('th'); th.colSpan=8; th.textContent = title;
+              tr.appendChild(th); $offerBody.appendChild(tr);
+            };
+
+            for(const groupName of ORDER){
+              const items = buckets.get(groupName) || [];
+              if(!items.length) continue;
+              addGroupHeader(groupName);
+
+              for(const it of items){
+                const tr = document.createElement('tr');
+                tr.id = 'row-' + it.id;
+                tr.className = 'offer-row';
+                tr.setAttribute('role','button');
+                tr.setAttribute('tabindex','0');
+                tr.setAttribute('aria-expanded','false');
+                tr.setAttribute('aria-controls','desc-' + it.id);
+
+                /* Icon-Zelle: Bild bevorzugt, Emoji Fallback */
+                const tdI = document.createElement('td'); tdI.className = 'ico-cell';
+                const ico = document.createElement('span'); ico.className='ico'; ico.setAttribute('role','img');
+                if (it.iconUrl){
+                  const img = document.createElement('img');
+                  img.src = it.iconUrl; img.alt = it.iconAlt || (it.name + ' Icon'); img.loading = 'lazy';
+                  ico.appendChild(img);
+                } else {
+                  ico.setAttribute('aria-label', (it.iconAlt || it.name) + ' Icon');
+                  ico.textContent = it.icon || '🍽️';
+                }
+                tdI.appendChild(ico); tr.appendChild(tdI);
+
+                const tdName = document.createElement('td');
+                const nameBtn = document.createElement('button');
+                nameBtn.type = 'button'; nameBtn.className = 'btn-sm';
+                nameBtn.textContent = it.name;
+                nameBtn.style.background = '#fff'; nameBtn.style.borderColor = 'var(--line)'; nameBtn.style.cursor='pointer';
+                tdName.appendChild(nameBtn); tr.appendChild(tdName);
+
+                const tdCat = document.createElement('td');
+                const spanCat = document.createElement('span'); spanCat.className='pill'; spanCat.textContent = it.cat;
+                tdCat.appendChild(spanCat); tr.appendChild(tdCat);
+
+                const tdQual = document.createElement('td'); tdQual.textContent = it.qual; tr.appendChild(tdQual);
+                const tdStock = document.createElement('td'); tdStock.textContent = stockLabel(it.stock); tr.appendChild(tdStock);
+
+                const tdPrice = document.createElement('td'); tdPrice.className='price';
+                tdPrice.dataset.priceKt = String(it.priceKT);
+                tdPrice.textContent = fmtPrice(it.priceKT, STATE.currency);
+                tr.appendChild(tdPrice);
+
+                const tdUnit = document.createElement('td'); tdUnit.textContent = it.unit; tr.appendChild(tdUnit);
+
+                const tdAdd = document.createElement('td'); tdAdd.className = 'add';
+                const btn = document.createElement('button'); btn.className='btn-sm'; btn.type='button'; btn.textContent='In den Korb';
+btn.addEventListener('click', (ev)=>{
+  ev.stopPropagation();
+  addToCart(it.id);
+  feedbackPurchase(it.name, { x: ev.clientX, y: ev.clientY });
+});
+
+                tdAdd.appendChild(btn); tr.appendChild(tdAdd);
+
+                const toggle = (ev)=>{ if(ev){ ev.stopPropagation(); } toggleDesc(it.id); };
+                tr.addEventListener('click', toggle);
+                tr.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggle(); } });
+                ico.addEventListener('click', toggle);
+                nameBtn.addEventListener('click', toggle);
+
+                $offerBody.appendChild(tr);
+
+                /* Beschreibungszeile – nur Text */
+                const dtr = document.createElement('tr');
+                dtr.className = 'desc-row'; dtr.id = 'desc-' + it.id; dtr.hidden = true;
+                const dtd = document.createElement('td'); dtd.colSpan = 8;
+                const box = document.createElement('div'); box.className='desc-box';
+                box.textContent = it.desc || '';
+                dtd.appendChild(box); dtr.appendChild(dtd);
+                $offerBody.appendChild(dtr);
+              }
+            }
+          }
+
+          function findMenu(id){ return MENU.find(x=>x.id===id); }
+          function cartIndex(id){ return STATE.cart.findIndex(x=>x.id===id); }
+          function addToCart(id, qty=1){
+            const idx = cartIndex(id);
+            if(idx>=0) STATE.cart[idx].qty += qty;
+            else STATE.cart.push({id, qty: Math.max(1, qty)});
+            renderCart(); persist();
+          }
+          function updateQty(id, qty){
+            const idx = cartIndex(id); if(idx<0) return;
+            STATE.cart[idx].qty = Math.max(1, qty|0);
+            renderCart(); persist();
+          }
+          function removeFromCart(id){
+            STATE.cart = STATE.cart.filter(x=>x.id!==id);
+            renderCart(); persist();
+          }
+          function clearCart(){ STATE.cart = []; renderCart(); persist(); }
+
+          function renderCart(){
+            while($cartBody.firstChild) $cartBody.removeChild($cartBody.firstChild);
+
+            if(!STATE.cart.length){
+              const tr = document.createElement('tr');
+              const td = document.createElement('td'); td.colSpan=6; td.className='muted'; td.textContent='Noch keine Artikel im Korb.';
+              tr.appendChild(td); $cartBody.appendChild(tr);
+              $totalAmount.textContent = (STATE.currency==='PF' ? '0 PF' : '0,00\u00A0KT');
+              return;
+            }
+
+            let totalKT = 0;
+            for(const line of STATE.cart){
+              const item = findMenu(line.id); if(!item) continue;
+
+              const tr = document.createElement('tr');
+
+              const tdA = document.createElement('td'); tdA.textContent = item.name; tr.appendChild(tdA);
+              const tdU = document.createElement('td'); tdU.textContent = item.unit; tr.appendChild(tdU);
+              const tdP = document.createElement('td'); tdP.textContent = fmtPrice(item.priceKT, STATE.currency); tr.appendChild(tdP);
+
+              const tdQ = document.createElement('td');
+              const btnMinus = document.createElement('button'); btnMinus.className='btn-sm'; btnMinus.type='button'; btnMinus.textContent='–';
+              const qty = document.createElement('input'); qty.type='number'; qty.min='1'; qty.value=String(line.qty);
+              qty.style.width='64px'; qty.style.margin='0 6px';
+              const btnPlus = document.createElement('button'); btnPlus.className='btn-sm'; btnPlus.type='button'; btnPlus.textContent='+';
+              btnMinus.addEventListener('click', ()=> updateQty(item.id, Math.max(1, Number(qty.value)-1)));
+              btnPlus.addEventListener('click', ()=> updateQty(item.id, Number(qty.value)+1));
+              qty.addEventListener('change', ()=> updateQty(item.id, Number(qty.value)));
+              tdQ.append(btnMinus, qty, btnPlus); tr.appendChild(tdQ);
+
+              const subKT = item.priceKT * line.qty; totalKT += subKT;
+              const tdS = document.createElement('td'); tdS.textContent = fmtPrice(subKT, STATE.currency); tr.appendChild(tdS);
+
+              const tdX = document.createElement('td');
+              const btnDel = document.createElement('button'); btnDel.className='btn-sm'; btnDel.type='button'; btnDel.textContent='Entfernen';
+              btnDel.addEventListener('click', ()=> removeFromCart(item.id));
+              tdX.appendChild(btnDel); tr.appendChild(tdX);
+
+              $cartBody.appendChild(tr);
+            }
+            $totalAmount.textContent = fmtPrice(totalKT, STATE.currency);
+          }
+
+          /* Events */
+          $q.addEventListener('input', ()=>{ STATE.filters.q = $q.value; renderOffers(); persist(); });
+          $cat.addEventListener('change', ()=>{ STATE.filters.cat = $cat.value; renderOffers(); persist(); });
+          $qual.addEventListener('change', ()=>{ STATE.filters.qual = $qual.value; renderOffers(); persist(); });
+          $sort.addEventListener('change', ()=>{ STATE.sort = $sort.value; renderOffers(); persist(); });
+
+          $ccy.addEventListener('change', ()=>{
+            STATE.currency = $ccy.value;
+            document.querySelectorAll('#offer-body .price').forEach(td=>{
+              const kt = Number(td.dataset.priceKt||'0');
+              td.textContent = fmtPrice(kt, STATE.currency);
+            });
+            renderCart(); persist();
+          });
+
+          $reset.addEventListener('click', ()=>{
+            STATE.filters = { q:'', cat:'', qual:'' };
+            $q.value=''; $cat.value=''; $qual.value='';
+            STATE.sort = 'name-asc'; $sort.value='name-asc';
+            renderOffers(); persist();
+          });
+
+          if($btnClear)   $btnClear.addEventListener('click', clearCart);
+          if($btnExport)  $btnExport.addEventListener('click', ()=>{
+            if(!STATE.cart.length){ alert('Warenkorb ist leer.'); return; }
+            let lines = [], totalKT = 0;
+            for(const line of STATE.cart){
+              const it = findMenu(line.id); if(!it) continue;
+              const subKT = it.priceKT * line.qty; totalKT += subKT;
+              lines.push(`${line.qty}× ${it.name} (${it.unit}) – ${fmtPrice(it.priceKT, STATE.currency)} je = ${fmtPrice(subKT, STATE.currency)}`);
+            }
+            lines.push(`—`); lines.push(`Gesamt: ${fmtPrice(totalKT, STATE.currency)}`);
+            const text = lines.join('\n');
+            if(navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(()=> alert('Einkaufsliste kopiert!')).catch(()=> fallbackCopy(text));
+            else fallbackCopy(text);
+            function fallbackCopy(t){
+              const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta);
+              ta.select(); try { document.execCommand('copy'); alert('Einkaufsliste kopiert!'); } catch(e){ alert(t); }
+              ta.remove();
+            }
+          });
+          if($btnCheckout) $btnCheckout.addEventListener('click', ()=>{
+            if(!STATE.cart.length){ alert('Noch keine Artikel im Korb.'); return; }
+            alert('Der Wirt nickt: „Kommt sofort!“ — (Checkout-Integration möglich.)');
+          });
+
+          /* Tab-Highlight synchronisieren */
+          (function syncTabsHighlight(){
+            const navLabels=[...document.querySelectorAll('.tabbar label')];
+            function update(){
+              navLabels.forEach(l=> l.classList.remove('active'));
+              navLabels.forEach(l=>{
+                const radio = document.getElementById(l.getAttribute('for'));
+                if(radio?.checked) l.classList.add('active');
+              });
+            }
+            document.querySelectorAll('.tab > input[type="radio"]').forEach(r=> r.addEventListener('change', update));
+            update();
+          })();
+
+          renderOffers();
+          renderCart();
+          persist();
+        })();
+      </script>
+
+<!-- FX-Layer & ARIA-Live (lassen, falls schon vorhanden) -->
+<div id="fx-layer" aria-hidden="true"></div>
+<div id="live" class="sr-only" role="status" aria-live="polite"></div>
+<audio id="sfx-coin-1" preload="auto" src="assets/sfx/coin1.mp3"></audio>
+<audio id="sfx-coin-2" preload="auto" src="assets/sfx/coin2.mp3"></audio>
+<audio id="sfx-coin-3" preload="auto" src="assets/sfx/coin3.mp3"></audio>
+
+<script>
+/* ===== Robuster Feedback-Patch: Münzregen + Sound ===== */
+
+/* 1) CSS-Fallback für Münz-Icon, falls Bild nicht lädt */
+(function ensureCoinStyle(){
+  if(document.getElementById('coin-fallback-style')) return;
+  const css = `
+    .fx-coin{
+      background: url("https://i.imgur.com/jvPNRu8.png") center/contain no-repeat, 
+                  radial-gradient(closest-side, #ffd34d 0%, #e0a300 70%, #b57f00 100%);
+    }
+  `;
+  const el = document.createElement('style'); el.id='coin-fallback-style'; el.textContent = css;
+  document.head.appendChild(el);
+})();
+
+/* 2) Globale SFX-Lautstärke */
+const SFX_VOLUME = 0.6;
+
+/* 3) Letzte Klick-Position für Spawn-Punkt */
+let __lastClick = { x: window.innerWidth/2, y: window.innerHeight/2 };
+document.addEventListener('click', e => { __lastClick = { x:e.clientX, y:e.clientY }; }, { capture:true });
+
+/* 4) Screenreader-Ansage */
+function announce(msg){
+  const live = document.getElementById('live');
+  if(!live) return;
+  live.textContent = '';
+  setTimeout(()=> live.textContent = msg, 30);
+}
+
+/* 5) Sound */
+function playCoinSfx(){
+  const ids = ['sfx-coin-1','sfx-coin-2','sfx-coin-3'].filter(id => document.getElementById(id));
+  if(!ids.length) return;
+  const playOne = ()=>{
+    const el = document.getElementById(ids[Math.floor(Math.random()*ids.length)]);
+    if(!el) return;
+    try { el.volume = SFX_VOLUME; el.currentTime = 0; el.play().catch(()=>{}); } catch(e){}
+  };
+  playOne(); setTimeout(playOne, 120); setTimeout(playOne, 240);
+}
+
+/* 6) Münzregen */
+function rainCoins(x, y, count = 3){
+  const layer = document.getElementById('fx-layer'); if(!layer) return;
+  for(let i=0;i<count;i++){
+    const c = document.createElement('div');
+    c.className = 'fx-coin';
+    const dx = (Math.random()*24 - 12);
+    const dy = (Math.random()*10 - 6);
+    c.style.position='fixed';
+    c.style.left='0'; c.style.top='0';
+    c.style.setProperty('--x', `${x + dx}px`);
+    c.style.setProperty('--y', `${y + dy}px`);
+    c.style.animationDelay = `${i*0.05}s`;
+    layer.appendChild(c);
+    setTimeout(()=> c.remove(), 900);
+  }
+}
+
+/* 7) Zentrale Feedback-Funktion */
+function feedbackPurchase(label, pos){
+  const x = (pos && pos.x) || __lastClick.x || (window.innerWidth/2);
+  const y = (pos && pos.y) || __lastClick.y || (window.innerHeight/2);
+  rainCoins(x, y, 3);
+  playCoinSfx();
+  if(label) announce(`${label} zum Korb hinzugefügt.`);
+}
+
+/* 8) Monkey-Patch addToCart – falls vorhanden */
+(function patchAddToCartSafe(){
+  // Führung: Mehrfaches Patchen vermeiden
+  if(window.__addToCartPatched) return;
+  window.__addToCartPatched = true;
+
+  function tryPatch(){
+    if(typeof window.addToCart !== 'function') return false;
+    const __orig = window.addToCart;
+    window.addToCart = function(id, qty=1){
+      __orig(id, qty);
+      try {
+        const it = (typeof window.findMenu==='function') ? window.findMenu(id) : null;
+        feedbackPurchase(it?.name || 'Artikel', __lastClick);
+      } catch(e){}
+    };
+    return true;
+  }
+
+  // Sofort versuchen…
+  if(tryPatch()) return;
+
+  // …oder später, falls Hauptscript noch lädt
+  const iv = setInterval(()=>{ if(tryPatch()){ clearInterval(iv); } }, 100);
+  setTimeout(()=> clearInterval(iv), 5000); // nach 5s aufgeben
+})();
+
+/* 9) Event-Delegation als zweite Sicherheitsleine
+   – feuert auch dann, wenn addToCart NICHT gepatcht werden konnte */
+document.addEventListener('click', function(e){
+  // Button „In den Korb“ in der Angebotsliste?
+  const btn = e.target.closest('#offer-body .add .btn-sm');
+  if(!btn) return;
+  // Artikelname herausfinden: in derselben Zeile steht der Name im zweiten <td>
+  const row = btn.closest('tr');
+  if(!row) return;
+  const nameCell = row.querySelector('td:nth-child(2)');
+  const label = nameCell ? nameCell.textContent.trim() : 'Artikel';
+
+  // Wir lassen erst die ursprüngliche Logik laufen, dann Feedback (kleine Verzögerung).
+  setTimeout(()=> feedbackPurchase(label, {x:e.clientX, y:e.clientY}), 0);
+}, {capture:false});
+
+/* 10) Test-Hotkey: drücke "t", um Feedback in Bildschirmmitte zu sehen */
+document.addEventListener('keydown', (ev)=>{
+  if(ev.key.toLowerCase()==='t'){
+    feedbackPurchase('Testkauf', {x: window.innerWidth/2, y: window.innerHeight/2});
+  }
+});
+      </script>
+
+    </section>
+  </div>
+</body>
+</html>

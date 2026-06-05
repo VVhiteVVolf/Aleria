@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Architektin — Portfolio</title>
+
+<style>
+:root{
+  --bg:#0b0f14;
+  --text:#eef2f6;
+  --muted:#9aa6b5;
+  --line:rgba(255,255,255,.08);
+  --accent:#7ee1ff;
+  --max:1200px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:40px 20px 80px;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+
+header h1{
+  font-size:18px;
+  font-weight:600;
+  margin:0;
+}
+
+nav a{
+  margin-left:18px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:var(--text);
+}
+
+/* HERO */
+.hero{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+}
+
+.hero img{
+  width:100%;
+  border-radius:20px;
+  object-fit:cover;
+  box-shadow:0 25px 70px rgba(0,0,0,.5);
+}
+
+.hero h2{
+  font-size:48px;
+  line-height:1.05;
+  margin:0 0 20px;
+  letter-spacing:-1px;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+  max-width:60ch;
+}
+
+.cta{
+  margin-top:25px;
+}
+
+.cta a{
+  display:inline-block;
+  padding:12px 20px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+  margin-right:10px;
+}
+
+.cta a:hover{
+  border-color:var(--accent);
+}
+
+/* SECTION */
+section{
+  margin-top:80px;
+}
+
+section h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+section p{
+  color:var(--muted);
+  max-width:70ch;
+  line-height:1.6;
+}
+
+footer{
+  margin-top:80px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+  <h1>Vorname Nachname — Architektin M.Sc.</h1>
+  <nav>
+    <a href="#">Profil</a>
+    <a href="#">Projekte</a>
+    <a href="#">Leistungen</a>
+    <a href="#">Kontakt</a>
+  </nav>
+</header>
+
+<div class="hero">
+  
+  <div>
+    <h2>Architektur mit Klarheit und Haltung.</h2>
+    <p>
+      Masterabschluss in Architektur in Bremen. Aufgewachsen im beschaulichen Ottersberg,
+      heute tätig mit Fokus auf durchdachte Grundrisse, konstruktive Präzision und
+      moderne, funktionale Gestaltung.  
+      Architektur bedeutet Konsequenz im Detail – vom Entwurf bis zur Umsetzung.
+    </p>
+
+    <div class="cta">
+      <a href="#">Projekte ansehen</a>
+      <a href="#">Kontakt aufnehmen</a>
+    </div>
+  </div>
+
+  <div>
+    <!-- Dein Bild prominent eingebunden -->
+    <img src="https://i.imgur.com/cKqcOuV.png" alt="Architektin Portrait">
+  </div>
+
+</div>
+
+<section>
+  <h3>Profil</h3>
+  <p>
+    Nach dem Masterstudium in Bremen vertiefte sie ihren Schwerpunkt im Bereich
+    Entwurfsplanung und Ausführungslogik. Ihre Arbeiten zeichnen sich durch
+    Reduktion, Materialbewusstsein und klare Linien aus.
+    Projekte entstehen nicht zufällig – sie folgen Konzept und Struktur.
+  </p>
+</section>
+
+<section>
+  <h3>Zukünftige Inhalte</h3>
+  <p>
+    Die Navigationsreiter sind vorbereitet. Projekte, Referenzen und Leistungsphasen
+    werden hier ergänzt. Die Seite bleibt bewusst minimal und modern – ohne unnötige
+    Effekte, ohne visuelles Chaos.
+  </p>
+</section>
+
+<footer>
+  © 2026 Vorname Nachname — Architektur
+</footer>
+
+</div>
+</body>
+</html>

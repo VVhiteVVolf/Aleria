@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Arkanist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/arkanist.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-icon">
+        <img src="https://i.imgur.com/w9CAWac.png" alt="Zeichen des Arkanisten">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Schriftrollen, Zaubersteine &amp; Artefakte</p>
+        <h1>Der Arkanist</h1>
+        <p>Ein Markt für magische Gegenstände, arkanes Werkzeug, Schutzartefakte und jene Waren, die selten offen im Schaufenster liegen.</p>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Inhalt">
+      <a href="#einleitung">Einleitung</a>
+      <a href="#markt">Markt</a>
+      <a href="#arkanist">Der Arkanist</a>
+      <a href="#einkauf">Einkaufsliste</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+
+    <section class="intro-grid" id="einleitung">
+      <article>
+        <h2>Einleitung</h2>
+        <p>Diese Seite dient als Orientierung für arkanistische Läden, reisende Sammler, ehemalige Magierstudenten, Schatzhändler und Gemischtwarenläden mit ungewöhnlich gutem Sortiment.</p>
+      </article>
+      <article id="markt">
+        <h2>Markt</h2>
+        <p>Arkanisten sind selten. Manche verkaufen nur Schriftrollen und einfache Foki, andere handeln mit Seelengefäßen, Tenebrium oder alten Artefakten aus vergessenen Orden.</p>
+      </article>
+      <article id="arkanist">
+        <h2>Der Arkanist</h2>
+        <p>Ein guter Arkanist bewertet nicht nur Preis und Seltenheit, sondern auch Risiko, Anforderungen und Stabilität. Nicht alles Magische ist nützlich, und nicht alles Nützliche ist sicher.</p>
+      </article>
+    </section>
+
+    <section class="controls" id="einkauf">
+      <div class="search">
+        <label for="q">Suche</label>
+        <input id="q" type="search" placeholder="Name, Kategorie, Schule, Material, Beschreibung ..." autocomplete="off">
+      </div>
+      <div class="chips" id="categoryChips"></div>
+      <div class="ranges">
+        <label>Preis bis <input id="maxPrice" type="number" min="0" placeholder="Kupfer"></label>
+        <label>Risiko ab <input id="minRisk" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Macht ab <input id="minPower" type="number" min="1" max="10" placeholder="1-10"></label>
+        <label>Schutz ab <input id="minProtection" type="number" min="1" max="10" placeholder="1-10"></label>
+      </div>
+      <div class="status-row">
+        <span id="status"></span>
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="inventory">
+      <div class="section-title">
+        <h2>Einkaufsliste</h2>
+        <p>Jede Ware besitzt ein arkanes Wirkprofil: Macht, Speicher, Kontrolle, Schutz, Seltenheit und Risiko. Besonders hohe Machtwerte verlangen meist saubere Handhabung.</p>
+      </div>
+      <div id="itemList" class="item-list"></div>
+    </section>
+
+    <section class="trivia" id="trivia">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Viele arkanistische Waren werden offiziell als Sammlerstücke geführt.</li>
+        <li>Seelenmagie und Tenebrium sind in vielen Reichen lizenzpflichtig oder verboten.</li>
+        <li>Ein billiger Fokus ist oft gefährlicher als gar kein Fokus.</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="compare-bar" id="compareBar">
+    <span>Vergleich</span>
+    <div id="compareSlots"></div>
+    <button id="compareBtn" type="button" disabled>Vergleichen</button>
+    <button id="clearCompareBtn" type="button">Leeren</button>
+  </aside>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Schließen">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div class="modal" id="compareModal" aria-hidden="true">
+    <article class="modal-card compare-modal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+      <button class="modal-close" id="compareClose" type="button" aria-label="Schließen">×</button>
+      <div id="compareContent"></div>
+    </article>
+  </div>
+
+  <script src="data/arcane-data.js"></script>
+  <script src="scripts/arkanist.js"></script>
+</body>
+</html>

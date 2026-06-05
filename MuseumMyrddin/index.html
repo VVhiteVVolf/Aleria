@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum der Arkanen K&uuml;nste</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/museum.css">
+  <script type="module" src="../firebase.js"></script>
+  <script src="./scripts/museum.js" defer></script>
+</head>
+<body>
+  <header class="museum-header">
+    <div class="header-pre">Aus den privaten Hallen des gro&szlig;en Zauberers</div>
+    <h1>Museum der Arkanen K&uuml;nste</h1>
+    <p class="header-subtitle">- Kuratiert, kommentiert und streng &uuml;berwacht von Myrddin Draig -</p>
+    <div class="header-divider"></div>
+  </header>
+
+  <nav class="museum-tabs" aria-label="Museumsbereiche">
+    <a href="../AleriaAlmanach.html">Aleria Almanach</a>
+    <a href="#malereien">Malereien</a>
+    <a href="#gegenstaende">Gegenst&auml;nde</a>
+    <button class="edit-toggle" id="edit-toggle" type="button">Bearbeiten</button>
+  </nav>
+
+  <main>
+    <section class="intro-panel">
+      <div class="intro-portrait">
+        <img src="https://i.imgur.com/yNfM9GJ.png" alt="Myrddin Draig">
+      </div>
+      <div class="intro-copy">
+        <div class="section-kicker">Er&ouml;ffnungsnotiz</div>
+        <h2>Myrddins Galerie der selbstverst&auml;ndlich bedeutenden Werke</h2>
+        <p>
+          Hinter dieser Schwelle liegen die stilleren S&auml;le des Sanctums:
+          gerahmte Studien, versiegelte Entw&uuml;rfe und jene Gegenst&auml;nde, deren
+          Bedeutung Myrddin mit gr&ouml;&szlig;ter Selbstverst&auml;ndlichkeit als offenkundig
+          betrachtet. Wer verweilt, darf staunen. Wer zweifelt, sollte leserlich schreiben.
+        </p>
+      </div>
+    </section>
+
+    <section id="malereien" class="museum-section">
+      <div class="section-heading">
+        <div class="section-kicker">Erster Fl&uuml;gel</div>
+        <h2>Malereien &amp; Illustrationen</h2>
+        <p>In diesem Fl&uuml;gel h&auml;ngen Skizzen, Bildtafeln und farbige Zeugnisse jener Augenblicke, in denen Myrddin beschloss, dass die Welt eine weitere Darstellung seiner Einsicht ben&ouml;tige.</p>
+        <button class="add-module-btn" type="button" data-add-module="painting-modules">Neue Tafel einh&auml;ngen</button>
+      </div>
+      <div class="module-grid" id="painting-modules"></div>
+    </section>
+
+    <section id="gegenstaende" class="museum-section">
+      <div class="section-heading">
+        <div class="section-kicker">Zweiter Fl&uuml;gel</div>
+        <h2>Gegenst&auml;nde &amp; Artefakte</h2>
+        <p>Unter Glas, Bannkreis und gelegentlich widerwilliger Aufsicht ruhen die kleineren Wunder des Meisters: Apparaturen, Werkzeuge und Ideen, die sich nicht immer mit blo&szlig;er Vernunft anfassen lassen.</p>
+        <button class="add-module-btn" type="button" data-add-module="artifact-modules">Neuen Sockel vorbereiten</button>
+      </div>
+      <div class="module-grid" id="artifact-modules"></div>
+    </section>
+  </main>
+
+  <div class="module-overlay" id="module-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="detail-title">
+    <article class="module-book">
+      <button class="overlay-close" type="button" id="detail-close" aria-label="Modul schlie&szlig;en">x</button>
+      <div id="detail-content"></div>
+    </article>
+  </div>
+
+  <div class="comment-overlay" id="comment-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="comment-title">
+    <form class="comment-card" id="comment-form">
+      <button class="overlay-close" type="button" id="comment-close" aria-label="Kommentarfenster schlie&szlig;en">x</button>
+      <div class="section-kicker">G&auml;stebuch</div>
+      <h2 id="comment-title">Stimme hinterlassen</h2>
+      <p class="comment-card-intro">Der Museumsschreiber nimmt Lob, Zweifel und gelehrte Einw&auml;nde entgegen. Unleserliches wird Myrddin nicht vorgelegt.</p>
+
+      <label>Name
+        <input type="text" name="name" maxlength="60" placeholder="Name des Besuchers">
+      </label>
+      <label>Titel / Herkunft
+        <input type="text" name="title" maxlength="90" placeholder="z.B. Magistra der Nordakademie">
+      </label>
+      <label>Avatarbild
+        <input type="url" name="portrait" placeholder="https://i.imgur.com/...">
+      </label>
+      <label>Code
+        <input type="password" name="code" inputmode="numeric" placeholder="Siegelwort">
+      </label>
+      <label class="full">Kommentar
+        <textarea name="text" maxlength="1800" placeholder="Welche Stimme soll im Werkbuch verbleiben?"></textarea>
+      </label>
+      <div class="comment-avatar-preview">
+        <div class="avatar-preview-frame" id="avatar-preview">?</div>
+        <span>Siegelbild der Stimme</span>
+      </div>
+      <div class="comment-actions">
+        <span class="comment-error" id="comment-error"></span>
+        <button type="submit">Eintragen</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="status-toast" class="status-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

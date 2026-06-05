@@ -1,0 +1,187 @@
+/* Speaker mini profile overlay. */
+.speaker-profile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3400;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(35,20,8,0.42);
+  backdrop-filter: blur(3px);
+}
+.speaker-profile-overlay.active {
+  display: flex;
+}
+.speaker-profile-card {
+  position: relative;
+  width: min(430px, calc(100vw - 2rem));
+  max-height: min(720px, calc(100dvh - 2rem));
+  overflow-y: auto;
+  border: 1px solid rgba(139,105,20,0.38);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0)),
+    var(--parchment);
+  box-shadow: 0 20px 58px rgba(26,14,5,0.52);
+  padding: 1rem;
+}
+.speaker-profile-close {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.5rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid rgba(139,105,20,0.25);
+  background: rgba(255,255,255,0.24);
+  color: var(--gold);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  line-height: 1;
+}
+.speaker-profile-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-right: 1.8rem;
+  margin-bottom: 0.85rem;
+}
+.speaker-profile-portrait {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  object-fit: cover;
+  object-position: top center;
+  flex: 0 0 auto;
+  background: var(--ink);
+}
+.speaker-profile-initial {
+  display: grid;
+  place-items: center;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+}
+.speaker-profile-title-block {
+  min-width: 0;
+}
+.speaker-profile-kicker,
+.speaker-profile-section-title,
+.speaker-profile-stat span {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.speaker-profile-kicker {
+  font-size: 0.54rem;
+  color: var(--gold);
+  margin-bottom: 0.18rem;
+}
+.speaker-profile-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.speaker-profile-subtitle {
+  margin-top: 0.16rem;
+  color: var(--ink-faded);
+  font-style: italic;
+  font-size: 0.82rem;
+}
+.speaker-profile-meta,
+.speaker-profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+.speaker-profile-stat {
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.22);
+  padding: 0.45rem 0.52rem;
+  min-width: 0;
+}
+.speaker-profile-stat span {
+  display: block;
+  color: var(--gold);
+  font-size: 0.48rem;
+  margin-bottom: 0.16rem;
+}
+.speaker-profile-stat strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.84rem;
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+}
+.speaker-profile-section {
+  margin-top: 0.8rem;
+}
+.speaker-profile-section-title {
+  color: var(--gold);
+  font-size: 0.56rem;
+  margin-bottom: 0.36rem;
+}
+.speaker-profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.speaker-profile-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  border: 1px solid rgba(139,105,20,0.2);
+  background: rgba(255,255,255,0.26);
+  color: var(--ink);
+  padding: 0.22rem 0.45rem;
+  font-size: 0.78rem;
+}
+.speaker-profile-chip strong {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+}
+.speaker-profile-empty {
+  color: var(--ink-faded);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+.speaker-profile-link {
+  display: inline-flex;
+  margin-top: 0.95rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  color: var(--gold);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.62rem;
+}
+.scene-speaker[data-action="open-speaker-profile"],
+.comment-char-name[data-action="open-speaker-profile"],
+.comment-portrait-placeholder[data-action="open-speaker-profile"] {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.scene-speaker[data-action="open-speaker-profile"]:hover,
+.comment-char-name[data-action="open-speaker-profile"]:hover {
+  color: var(--red-wax);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+.comment-portrait[data-action="open-speaker-profile"] {
+  cursor: pointer;
+}
+@media (max-width: 520px) {
+  .speaker-profile-meta,
+  .speaker-profile-stats {
+    grid-template-columns: 1fr;
+  }
+}

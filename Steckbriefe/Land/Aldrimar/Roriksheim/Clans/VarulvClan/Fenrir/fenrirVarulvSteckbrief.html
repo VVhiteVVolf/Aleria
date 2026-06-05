@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fenrir Varulv - Aldrimar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Steckbriefe/assets/css/steckbrief.css">
+  <script src="./charakter.data.js"></script>
+  <script type="module" src="/Steckbriefe/assets/js/steckbrief-firebase.js"></script>
+  <script src="/Steckbriefe/assets/js/steckbrief.js" defer></script>
+</head>
+<body>
+  <div class="page-shell" data-steckbrief-root>
+    <header class="profile-hero">
+      <div class="hero-wappen">
+        <img data-bind-image="wappen" alt="">
+      </div>
+      <div class="hero-copy">
+        <nav class="breadcrumbs" data-render="hierarchie"></nav>
+        <p class="eyebrow" data-bind="meta.kategorie"></p>
+        <h1 data-bind="name.vollstaendig"></h1>
+        <blockquote>
+          <p data-bind="zitat.text"></p>
+          <cite data-bind="zitat.urheber"></cite>
+        </blockquote>
+      </div>
+    </header>
+
+    <main class="profile-layout">
+      <aside class="profile-sidebar" aria-label="Kurzprofil">
+        <section class="portrait-panel">
+          <img data-bind-image="portrait" alt="">
+        </section>
+
+        <section class="fact-stack" data-render="fakten"></section>
+      </aside>
+
+      <article class="profile-main">
+        <section class="intro-panel">
+          <div>
+            <h2>Einführung</h2>
+            <p data-bind="einfuehrung"></p>
+          </div>
+          <nav class="toc" data-render="navigation" aria-label="Inhalt"></nav>
+        </section>
+
+        <div class="section-stack" data-render="sektionen"></div>
+      </article>
+    </main>
+
+    <section class="full-section-stack" data-render="vollbreite-sektionen"></section>
+  </div>
+</body>
+</html>
