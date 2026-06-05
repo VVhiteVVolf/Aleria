@@ -127,15 +127,53 @@ function isSpeakerProfileSegmentMatch(segment, character, fallbackName = '') {
   return !!segmentNameKey && keys.has(segmentNameKey);
 }
 
+function getSpeakerProfileThreadId(comment) {
+  return String(comment?.entryId || comment?.threadId || '').trim();
+}
+
+function getSpeakerProfileSegmentName(segment) {
+  if (segment?.narrator) return 'Erzaehler';
+  return String(segment?.charName || segment?.name || 'Unbekannte Stimme').trim();
+}
+
+function makeSpeakerProfileSegmentRef(commentId, role, index) {
+  return `comment:${commentId}:${role}:${index}`;
+}
+
+function makeSpeakerProfileSegmentContext(comment, segment, options = {}) {
+  const kind = normalizeCommentKind(segment.commentKind || segment.kind || 'speech', segment.narrator);
+  const threadId = getSpeakerProfileThreadId(comment);
+  const current = options.threadSet?.has(threadId);
+  const speakerName = getSpeakerProfileSegmentName(segment);
+  const label = [
+    options.roleLabel || 'Kontext',
+    speakerName,
+    getCommentKindLabel(kind),
+    current ? 'aktuelle Szene' : ''
+  ].filter(Boolean).join(' | ');
+
+  return {
+    sourceRef: makeSpeakerProfileSegmentRef(options.commentId || comment?.id || 'comment', options.role || 'segment', options.index || 0),
+    threadId,
+    label,
+    speakerName,
+    kind,
+    role: options.role || (segment?.narrator ? 'narrator' : 'other-speaker'),
+    text: stripSpeakerProfileMarkup(segment.text)
+  };
+}
+
 function buildSpeakerProfileStats(character, fallbackName, comments, currentThreadIds = []) {
   const threadSet = new Set((currentThreadIds || []).map(id => String(id || '').trim()).filter(Boolean));
   const wordCounts = new Map();
   const kindCounts = new Map();
   const matchedCommentIds = new Set();
   const matchedCurrentCommentIds = new Set();
+  const matchedThreadIds = new Set();
   const partnerCounts = new Map();
   const recentPortraits = [];
   const analysisSegments = [];
+  const contextSegments = [];
   let segmentCount = 0;
   let wordTotal = 0;
   let latestMs = null;
@@ -146,8 +184,10 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
     if (!matchingSegments.length) return;
 
     const commentId = String(comment?.id || `${comment?.entryId || 'comment'}-${matchedCommentIds.size}`);
+    const threadId = getSpeakerProfileThreadId(comment);
     matchedCommentIds.add(commentId);
-    if (threadSet.has(String(comment?.entryId || ''))) matchedCurrentCommentIds.add(commentId);
+    if (threadId) matchedThreadIds.add(threadId);
+    if (threadSet.has(threadId)) matchedCurrentCommentIds.add(commentId);
     const timestamp = getSpeakerProfileCommentTimestamp(comment);
     if (Number.isFinite(timestamp)) latestMs = latestMs == null ? timestamp : Math.max(latestMs, timestamp);
 
@@ -170,10 +210,10 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
       if (segment.text && analysisSegments.length < 120) {
         analysisSegments.push({
           sourceRef: `comment:${commentId}:segment:${analysisSegments.length}`,
-          threadId: String(comment?.entryId || ''),
+          threadId,
           label: [
             getCommentKindLabel(kind),
-            threadSet.has(String(comment?.entryId || '')) ? 'aktuelle Szene' : ''
+            threadSet.has(threadId) ? 'aktuelle Szene' : ''
           ].filter(Boolean).join(' | '),
           kind,
           text: stripSpeakerProfileMarkup(segment.text)
@@ -183,6 +223,34 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
         if (SPEAKER_PROFILE_STOPWORDS.has(word)) return;
         wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
       });
+    });
+  });
+
+  (comments || []).forEach(comment => {
+    const threadId = getSpeakerProfileThreadId(comment);
+    if (!threadId || !matchedThreadIds.has(threadId)) return;
+    const timestamp = getSpeakerProfileCommentTimestamp(comment);
+    if (Number.isFinite(timestamp)) latestMs = latestMs == null ? timestamp : Math.max(latestMs, timestamp);
+    const commentId = String(comment?.id || `${threadId}-${contextSegments.length}`);
+    const segments = getSpeakerProfileCommentSegments(comment);
+    segments.forEach((segment, index) => {
+      if (!String(segment?.text || '').trim()) return;
+      if (isSpeakerProfileSegmentMatch(segment, character, fallbackName)) return;
+      if (contextSegments.length >= 180) return;
+
+      const partner = segment?.narrator ? 'Erzaehler' : String(segment?.charName || '').trim();
+      if (partner && !segment?.narrator) {
+        const key = normalizeSpeakerProfileName(partner);
+        if (key) partnerCounts.set(partner, (partnerCounts.get(partner) || 0) + 1);
+      }
+
+      contextSegments.push(makeSpeakerProfileSegmentContext(comment, segment, {
+        commentId,
+        index,
+        threadSet,
+        role: segment?.narrator ? 'narrator' : 'other-speaker',
+        roleLabel: segment?.narrator ? 'Erzaehlerkontext' : 'Andere Stimme'
+      }));
     });
   });
 
@@ -201,6 +269,8 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
   return {
     commentCount: matchedCommentIds.size,
     currentCommentCount: matchedCurrentCommentIds.size,
+    contextThreadCount: matchedThreadIds.size,
+    contextSegmentCount: contextSegments.length,
     segmentCount,
     wordTotal,
     latestMs,
@@ -208,6 +278,7 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
     topKinds,
     topPartners,
     analysisSegments,
+    contextSegments,
     recentPortraits: recentPortraits.slice(0, 4)
   };
 }

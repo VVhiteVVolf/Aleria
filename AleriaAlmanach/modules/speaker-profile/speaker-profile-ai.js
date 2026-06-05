@@ -1,5 +1,6 @@
 const SPEAKER_PROFILE_AI_CACHE = new Map();
 const SPEAKER_PROFILE_AI_MAX_SEGMENTS = 100;
+const SPEAKER_PROFILE_AI_MAX_CONTEXT_SEGMENTS = 120;
 const SPEAKER_PROFILE_AI_MAX_TEXT_CHARS = 28000;
 
 let _speakerProfileAiContext = null;
@@ -16,6 +17,7 @@ function getSpeakerProfileAiCacheKey(character, fallbackName, stats = {}) {
     character?.id || name,
     stats.commentCount || 0,
     stats.segmentCount || 0,
+    stats.contextSegmentCount || 0,
     stats.wordTotal || 0,
     latest
   ].join(':');
@@ -34,19 +36,34 @@ function formatSpeakerProfileAiSegment(segment, index) {
   return `[${index + 1}] ${label}${sourceRef}\n${text}`;
 }
 
-function buildSpeakerProfileAiTranscript(stats = {}) {
-  const segments = Array.isArray(stats.analysisSegments) ? stats.analysisSegments : [];
+function buildSpeakerProfileAiSegmentTranscript(segments = [], options = {}) {
+  const maxSegments = Number(options.maxSegments || SPEAKER_PROFILE_AI_MAX_SEGMENTS);
+  const maxTextChars = Number(options.maxTextChars || SPEAKER_PROFILE_AI_MAX_TEXT_CHARS);
   let usedChars = 0;
   const lines = [];
 
-  segments.slice(0, SPEAKER_PROFILE_AI_MAX_SEGMENTS).forEach((segment, index) => {
+  segments.slice(0, maxSegments).forEach((segment, index) => {
     const line = formatSpeakerProfileAiSegment(segment, index);
-    if (usedChars + line.length > SPEAKER_PROFILE_AI_MAX_TEXT_CHARS) return;
+    if (usedChars + line.length > maxTextChars) return;
     usedChars += line.length;
     lines.push(line);
   });
 
   return lines.join('\n\n');
+}
+
+function buildSpeakerProfileAiTranscript(stats = {}) {
+  return buildSpeakerProfileAiSegmentTranscript(stats.analysisSegments || [], {
+    maxSegments: SPEAKER_PROFILE_AI_MAX_SEGMENTS,
+    maxTextChars: SPEAKER_PROFILE_AI_MAX_TEXT_CHARS
+  });
+}
+
+function buildSpeakerProfileAiContextTranscript(stats = {}) {
+  return buildSpeakerProfileAiSegmentTranscript(stats.contextSegments || [], {
+    maxSegments: SPEAKER_PROFILE_AI_MAX_CONTEXT_SEGMENTS,
+    maxTextChars: 32000
+  });
 }
 
 function buildSpeakerProfileAiStatContext(name, stats = {}) {
@@ -57,7 +74,9 @@ function buildSpeakerProfileAiStatContext(name, stats = {}) {
     `Figur/Sprecher: ${name}`,
     `Kommentare gesamt: ${stats.commentCount || 0}`,
     `Kommentare in aktueller Szene: ${stats.currentCommentCount || 0}`,
+    `Gespraechs-Threads mit dieser Stimme: ${stats.contextThreadCount || 0}`,
     `Abschnitte: ${stats.segmentCount || 0}`,
+    `Kontextabschnitte von Erzaehler/anderen Stimmen: ${stats.contextSegmentCount || 0}`,
     `Wortmaterial: ${stats.wordTotal || 0} auswertbare Woerter`,
     `Haeufige Woerter: ${topWords}`,
     `Kommentararten: ${topKinds}`,
@@ -75,13 +94,13 @@ async function buildSpeakerProfileAiBroaderContext(name, context = {}) {
       ? String(currentThreadIds[0] || '').split(':')[0]
       : '';
     return await window.AleriaGptRetrieval.retrieve(
-      `Analysiere ${name}: Ton, Stimmung, Strategie, Haltung zu den Ereignissen und Reaktionen in den Kommentaren.`,
+      `Kontext zu ${name}: direkte Aussagen, fruehere Gespraeche, Erzaehlerperspektive, Aussagen anderer Personen, Reaktionen und Szenenlage.`,
       {
-        scope: moduleId ? 'module' : 'all',
+        scope: 'all',
         moduleId,
         characterId: context.character?.id || '',
         characterName: name,
-        limit: 24
+        limit: 36
       }
     );
   } catch (error) {
@@ -92,13 +111,15 @@ async function buildSpeakerProfileAiBroaderContext(name, context = {}) {
 
 function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
   const transcript = buildSpeakerProfileAiTranscript(stats);
+  const contextTranscript = buildSpeakerProfileAiContextTranscript(stats);
   const broaderContext = broaderRetrieval?.promptContext
     ? String(broaderRetrieval.promptContext).slice(0, 26000)
     : '';
   const promptContext = [
     'AleriaGPT Sprecherprofil-Kontext',
     '',
-    'Wichtig: Die direkten Texte dieser Figur haben Vorrang vor Statistik und allgemeinem Almanach-Kontext.',
+    'Wichtig: Die direkten Texte dieser Figur haben Vorrang. Erzaehlertexte, Aussagen anderer Personen und Szenenquellen sind Kontext fuer Lage, Reaktion und moegliche Schlussfolgerungen.',
+    'Unterscheide deutlich: Was sagt die Figur selbst? Was sagen andere ueber sie oder in ihrer Szene? Was ist nur eine vorsichtige Schlussfolgerung?',
     '',
     'Metadaten fuer Gewichtung, nicht als eigentliche Zusammenfassung:',
     buildSpeakerProfileAiStatContext(name, stats),
@@ -106,10 +127,13 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
     'Direkte Kommentare / Sprechertexte dieser Figur:',
     transcript || 'Keine direkten Sprechertexte gefunden.',
     '',
+    'Gespraechskontext aus denselben Threads (Erzaehler / andere Stimmen / Reaktionen):',
+    contextTranscript || 'Kein Kontext aus denselben Threads gefunden.',
+    '',
     'Weiterer Almanach-Kontext zu Figur, Modulen, Dialogen und Kommentaren:',
     broaderContext || 'Kein weiterer Almanach-Kontext verfuegbar.',
     '',
-    'Arbeitsregel: Wenn direkte Kommentare vorhanden sind, beziehe dich konkret auf deren Ton, Haltung, Reaktion und wiederkehrende Muster. Erfinde keine Ereignisse.',
+    'Arbeitsregel: Beziehe direkte Kommentare, fruehere Gespraeche, Erzaehlerperspektive und Aussagen anderer Personen zusammen, wenn die Frage das braucht. Erfinde keine Ereignisse.',
     'Antworte normal und lesbar. Verwende keine Quellenmarker wie [1] und keine standardisierte Gutachtenform mit Kernaussage/Beobachtungen, ausser der Nutzer verlangt das ausdruecklich.'
   ].join('\n');
 
@@ -121,6 +145,8 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
       speakerCurrentCommentCount: stats.currentCommentCount || 0,
       speakerSegmentCount: stats.segmentCount || 0,
       speakerWordTotal: stats.wordTotal || 0,
+      speakerContextThreadCount: stats.contextThreadCount || 0,
+      speakerContextSegmentCount: stats.contextSegmentCount || 0,
       broaderChunkCount: broaderRetrieval?.stats?.returnedChunks || 0
     },
     promptContext,
@@ -133,6 +159,14 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
         score: 120 - index,
         text: segment.text || ''
       })),
+      ...(stats.contextSegments || []).slice(0, 18).map((segment, index) => ({
+        sourceType: segment.role === 'narrator' ? 'speaker-thread-narrator-context' : 'speaker-thread-other-context',
+        sourceRef: segment.sourceRef || `speaker-context:${index}`,
+        speakerName: segment.speakerName || '',
+        kind: segment.kind || '',
+        score: 95 - index,
+        text: segment.text || ''
+      })),
       ...((broaderRetrieval?.chunks || []).slice(0, 10))
     ]
   };
@@ -140,9 +174,10 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
 
 function buildSpeakerProfileAiSummaryQuery(name) {
   return [
-    `Fasse kurz und normal zusammen, was in den direkten Texten von ${name} tatsaechlich erkennbar ist.`,
+    `Fasse kurz und normal zusammen, was zu ${name} tatsaechlich erkennbar ist.`,
+    'Nutze direkte Texte, Erzaehlerkontext, fruehere Gespraeche und Reaktionen anderer Personen.',
     'Nutze keine Quellenmarker, keine Markdown-Trennlinien und keine Ueberschrift "Kernaussage".',
-    'Bleibe bei Ton, sichtbarer Haltung und auffaelligen Formulierungen. Keine tiefen psychologischen Deutungen.',
+    'Bleibe bei Ton, sichtbarer Haltung, auffaelligen Formulierungen und belegbaren Beziehungen zwischen den Quellen. Tiefe psychologische Deutungen vermeiden.',
     'Wenn das Material duenn oder uneindeutig ist, sage das klar.'
   ].join(' ');
 }
@@ -150,10 +185,10 @@ function buildSpeakerProfileAiSummaryQuery(name) {
 function buildSpeakerProfileAiCustomQuery(name, question) {
   return [
     `Beantworte diese Frage zu ${name} normal und direkt: ${String(question || '').trim()}`,
-    'Nutze vor allem die direkten Kommentare/Sprechertexte dieser Figur.',
+    'Nutze direkte Kommentare/Sprechertexte, aber auch Erzaehlerkontext, fruehere Gespraeche und Aussagen anderer Personen, wenn sie fuer die Frage relevant sind.',
     'Antworte wie in einem Chat, nicht wie in einem Gutachten.',
     'Nutze lesbare Formatierung: kurze Absaetze, einfache Listen mit "- " bei mehreren Punkten und sparsame Hervorhebungen mit **fett**.',
-    'Nutze keine Quellenmarker und erfinde keine inneren Motive.',
+    'Nutze keine Quellenmarker und erfinde keine inneren Motive. Wenn du aus mehreren Quellen schliesst, kennzeichne es als vorsichtige Schlussfolgerung.',
     'Wenn die Kommentare die Frage nicht belegen, sage klar, was fehlt.'
   ].join('\n');
 }
@@ -334,7 +369,7 @@ async function generateSpeakerProfileAiSummary(context = {}) {
   const text = await requestSpeakerProfileAi(buildSpeakerProfileAiSummaryQuery(name), {
     context: active,
     responseMode: 'summary',
-    includeBroaderContext: false
+    includeBroaderContext: true
   });
   if (!text) return;
   SPEAKER_PROFILE_AI_CACHE.set(cacheKey, text);
@@ -350,7 +385,7 @@ async function submitSpeakerProfileAiChat(question) {
   const text = await requestSpeakerProfileAi(buildSpeakerProfileAiCustomQuery(name, cleanQuestion), {
     context: active,
     responseMode: 'chat',
-    includeBroaderContext: false
+    includeBroaderContext: true
   });
   if (text) addSpeakerProfileAiMessage('assistant', text);
 }

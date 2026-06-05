@@ -66,6 +66,8 @@ function buildSystemPrompt() {
     'Sprich ruhig, direkt und natuerlich.',
     'Nutze den bereitgestellten Kontext, wenn die Frage Figuren, Module, Dialoge, Kommentare oder Almanach-Inhalte betrifft.',
     'Wenn der Kontext direkte Kommentare, Sprechertexte oder Szene-Dialoge enthaelt, haben diese Vorrang vor allgemeinen Moduldaten.',
+    'Beruecksichtige auch Erzaehlerperspektive, fruehere Gespraeche, Reaktionen anderer Personen und Aussagen ueber die Zielperson, wenn sie im Kontext enthalten sind.',
+    'Du darfst vorsichtige Schlussfolgerungen aus mehreren gelieferten Quellen ziehen, musst aber klar machen, wenn etwas eine Schlussfolgerung und kein direkt gesagter Fakt ist.',
     'Reagiere bei Kommentarfragen konkret auf Ton, Haltung, Sprecher, Reibungen, Zustimmung, Ablehnung und wiederkehrende Muster in den gelieferten Texten.',
     'Bei reiner Unterhaltung oder Bedienfragen darfst du kurz ohne Almanach-Deutung antworten.',
     'Antworte wie in einem normalen Chat, ausser der Nutzer verlangt ausdruecklich eine formale Analyse.',
@@ -93,9 +95,10 @@ function buildUserPrompt(payload) {
     'Beantworte die Frage direkt.',
     'Bei normalen Gespraechsfragen antworte kurz und natuerlich, als Chatantwort.',
     'Bei Kommentar- oder Szenenfragen nutze zuerst die gelieferten Kommentar- und Sprecherquellen.',
+    'Nutze nicht nur die Zielperson isoliert: Ziehe Erzaehlertext, andere Sprecher, fruehere Thread-Beitraege und relevante Szenenquellen heran, wenn die Frage danach verlangt.',
     'Erstelle nur dann eine formale Analyse mit Abschnitten, wenn die Frage das ausdruecklich verlangt.',
     'Formatiere die Antwort mit echten Zeilenumbruechen, kurzen Absaetzen und einfachen Listen, wenn es mehr als zwei Punkte sind.',
-    'Keine Quellenmarker, keine erfundenen inneren Motive, keine Deutung ueber den gelieferten Text hinaus.',
+    'Keine Quellenmarker, keine erfundenen inneren Motive, keine Deutung ueber den gelieferten Text hinaus. Markiere mehrstufige Deutungen als vorsichtige Schlussfolgerung.',
     'Schliesse mit Unsicherheiten oder fehlenden Daten nur dann, wenn es relevant ist.'
   ].join('\n');
 }
