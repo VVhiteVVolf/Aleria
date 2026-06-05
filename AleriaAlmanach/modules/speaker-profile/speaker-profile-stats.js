@@ -135,7 +135,9 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
   const matchedCurrentCommentIds = new Set();
   const partnerCounts = new Map();
   const recentPortraits = [];
+  const analysisSegments = [];
   let segmentCount = 0;
+  let wordTotal = 0;
   let latestMs = null;
 
   (comments || []).forEach(comment => {
@@ -163,7 +165,21 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
       kindCounts.set(kind, (kindCounts.get(kind) || 0) + 1);
       const portrait = sanitizeImageSrc(segment.portrait || comment.portrait || '');
       if (portrait && !recentPortraits.includes(portrait)) recentPortraits.push(portrait);
-      tokenizeSpeakerProfileWords(segment.text).forEach(word => {
+      const words = tokenizeSpeakerProfileWords(segment.text);
+      wordTotal += words.length;
+      if (segment.text && analysisSegments.length < 120) {
+        analysisSegments.push({
+          sourceRef: `comment:${commentId}:segment:${analysisSegments.length}`,
+          threadId: String(comment?.entryId || ''),
+          label: [
+            getCommentKindLabel(kind),
+            threadSet.has(String(comment?.entryId || '')) ? 'aktuelle Szene' : ''
+          ].filter(Boolean).join(' | '),
+          kind,
+          text: stripSpeakerProfileMarkup(segment.text)
+        });
+      }
+      words.forEach(word => {
         if (SPEAKER_PROFILE_STOPWORDS.has(word)) return;
         wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
       });
@@ -186,10 +202,12 @@ function buildSpeakerProfileStats(character, fallbackName, comments, currentThre
     commentCount: matchedCommentIds.size,
     currentCommentCount: matchedCurrentCommentIds.size,
     segmentCount,
+    wordTotal,
     latestMs,
     topWords,
     topKinds,
     topPartners,
+    analysisSegments,
     recentPortraits: recentPortraits.slice(0, 4)
   };
 }

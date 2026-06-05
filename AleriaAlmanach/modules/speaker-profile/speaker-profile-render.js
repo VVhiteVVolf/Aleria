@@ -96,6 +96,7 @@ function renderSpeakerProfileContent(character, fallbackName, stats, source = {}
         <span class="speaker-profile-chip">${escapeHtml(item.name)} <strong>${escapeHtml(item.count)}</strong></span>
       `, 'Noch keine wiederkehrenden Gesprächspartner.')}
     </div>
+    ${typeof renderSpeakerProfileAiBox === 'function' ? renderSpeakerProfileAiBox() : ''}
     ${profileLink ? `<a class="speaker-profile-link" href="${escapeHtml(profileLink)}" target="_blank" rel="noopener noreferrer">Vollprofil öffnen</a>` : ''}`;
 }
 

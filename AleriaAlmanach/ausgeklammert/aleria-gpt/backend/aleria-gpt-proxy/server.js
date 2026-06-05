@@ -81,6 +81,8 @@ function buildSystemPrompt() {
     'Antworte auf Deutsch.',
     'Sprich ruhig, direkt und natuerlich.',
     'Nutze den bereitgestellten Kontext, wenn die Frage Figuren, Module, Dialoge, Kommentare oder Almanach-Inhalte betrifft.',
+    'Wenn der Kontext direkte Kommentare, Sprechertexte oder Szene-Dialoge enthaelt, haben diese Vorrang vor allgemeinen Moduldaten.',
+    'Reagiere bei Kommentarfragen konkret auf Ton, Haltung, Sprecher, Reibungen, Zustimmung, Ablehnung und wiederkehrende Muster in den gelieferten Texten.',
     'Bei reiner Unterhaltung oder Bedienfragen darfst du kurz ohne Almanach-Deutung antworten.',
     'Trenne bei Analysen belegbare Beobachtung, Statistik und Interpretation.',
     'Erfinde keine Ereignisse, Figuren, Quellen oder Zitate.',
@@ -101,6 +103,7 @@ function buildUserPrompt(payload) {
     'Aufgabe:',
     'Beantworte die Frage direkt.',
     'Bei normalen Gespraechsfragen antworte kurz und natuerlich.',
+    'Bei Kommentar- oder Szenenfragen nutze zuerst die gelieferten Kommentar- und Sprecherquellen.',
     'Bei Analysefragen beginne mit einer kurzen Kernaussage, danach 3-6 belegte Beobachtungen.',
     'Schliesse mit Unsicherheiten oder fehlenden Daten nur dann, wenn es relevant ist.'
   ].join('\n');

@@ -28,6 +28,9 @@ async function openSpeakerProfileFromTrigger(trigger) {
   const comments = await loadSpeakerProfileComments(false);
   const stats = buildSpeakerProfileStats(character, fallbackName, comments, getCurrentSpeakerProfileThreadIds());
   showSpeakerProfileOverlay(renderSpeakerProfileContent(character, fallbackName, stats, payload));
+  if (typeof setSpeakerProfileAiContext === 'function') {
+    setSpeakerProfileAiContext({ character, fallbackName, stats });
+  }
 }
 
 document.addEventListener('click', event => {
@@ -35,6 +38,20 @@ document.addEventListener('click', event => {
   if (closeTrigger) {
     event.preventDefault();
     closeSpeakerProfileOverlay();
+    return;
+  }
+
+  const aiSummaryTrigger = event.target?.closest?.('[data-speaker-profile-action="generate-ai-summary"]');
+  if (aiSummaryTrigger) {
+    event.preventDefault();
+    if (typeof generateSpeakerProfileAiSummary === 'function') {
+      generateSpeakerProfileAiSummary().catch(error => {
+        console.warn('speaker profile ai summary failed:', error);
+        if (typeof updateSpeakerProfileAiBox === 'function') {
+          updateSpeakerProfileAiBox('error', 'Die KI-Analyse konnte nicht erstellt werden.');
+        }
+      });
+    }
     return;
   }
 
@@ -54,6 +71,24 @@ document.addEventListener('click', event => {
         Sprecherprofil konnte nicht geladen werden.
       </div>`);
   });
+});
+
+document.addEventListener('submit', event => {
+  const form = event.target?.closest?.('form[data-speaker-profile-action="submit-ai-chat"]');
+  if (!form) return;
+  event.preventDefault();
+  const input = form.querySelector('.speaker-profile-ai-input');
+  const question = String(input?.value || '').trim();
+  if (!question) return;
+  if (input) input.value = '';
+  if (typeof submitSpeakerProfileAiChat === 'function') {
+    submitSpeakerProfileAiChat(question).catch(error => {
+      console.warn('speaker profile ai chat failed:', error);
+      if (typeof updateSpeakerProfileAiBox === 'function') {
+        updateSpeakerProfileAiBox('error', 'Die KI-Frage konnte nicht beantwortet werden.');
+      }
+    });
+  }
 });
 
 document.addEventListener('keydown', event => {

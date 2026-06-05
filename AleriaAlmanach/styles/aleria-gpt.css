@@ -1,0 +1,293 @@
+/* AleriaGPT panel. */
+.aleria-gpt-shell {
+  position: fixed;
+  left: 0;
+  top: 92px;
+  bottom: 1rem;
+  z-index: 2300;
+  pointer-events: none;
+  color: var(--ink);
+}
+
+.aleria-gpt-rail {
+  position: absolute;
+  left: 0;
+  top: 11rem;
+  width: 2.1rem;
+  min-height: 9.5rem;
+  border: 1px solid rgba(139,105,20,0.42);
+  border-left: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0)),
+    var(--parchment);
+  color: var(--gold);
+  box-shadow: 0 12px 28px rgba(30,17,6,0.22);
+  cursor: pointer;
+  pointer-events: auto;
+  display: grid;
+  place-items: center;
+  padding: 0.7rem 0.25rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0;
+}
+
+.aleria-gpt-rail span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.aleria-gpt-panel {
+  width: min(390px, calc(100vw - 3.4rem));
+  height: min(740px, calc(100dvh - 7rem));
+  margin-left: 2.1rem;
+  transform: translateX(calc(-100% - 2.2rem));
+  transition: transform 0.22s ease;
+  pointer-events: auto;
+  border: 1px solid rgba(139,105,20,0.42);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0)),
+    linear-gradient(180deg, rgba(250,244,232,0.96), rgba(233,219,190,0.94));
+  box-shadow: 0 20px 54px rgba(26,14,5,0.34);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aleria-gpt-shell.open .aleria-gpt-panel {
+  transform: translateX(0);
+}
+
+.aleria-gpt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.85rem 0.95rem;
+  border-bottom: 1px solid rgba(139,105,20,0.22);
+  background: rgba(255,255,255,0.22);
+}
+
+.aleria-gpt-kicker,
+.aleria-gpt-message-role,
+.aleria-gpt-source-top,
+.aleria-gpt-tool-btn,
+.aleria-gpt-send,
+.aleria-gpt-scope {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0;
+}
+
+.aleria-gpt-kicker {
+  color: var(--gold);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  margin-bottom: 0.12rem;
+}
+
+.aleria-gpt-head h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.aleria-gpt-icon-btn {
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,255,255,0.24);
+  color: var(--gold);
+  cursor: pointer;
+  font: 700 0.85rem/1 Arial, sans-serif;
+}
+
+.aleria-gpt-icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--red-wax);
+}
+
+.aleria-gpt-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid rgba(139,105,20,0.14);
+}
+
+.aleria-gpt-scope,
+.aleria-gpt-tool-btn,
+.aleria-gpt-send {
+  border: 1px solid rgba(139,105,20,0.3);
+  background: rgba(255,255,255,0.24);
+  color: var(--ink);
+  font-size: 0.72rem;
+}
+
+.aleria-gpt-scope {
+  min-width: 0;
+  height: 2rem;
+  padding: 0 0.45rem;
+}
+
+.aleria-gpt-tool-btn,
+.aleria-gpt-send {
+  min-height: 2rem;
+  padding: 0 0.7rem;
+  cursor: pointer;
+}
+
+.aleria-gpt-tool-btn:hover,
+.aleria-gpt-send:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.aleria-gpt-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.8rem;
+}
+
+.aleria-gpt-message {
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.2);
+  padding: 0.68rem 0.72rem;
+}
+
+.aleria-gpt-message.user {
+  margin-left: 2rem;
+  background: rgba(139,105,20,0.1);
+}
+
+.aleria-gpt-message.assistant {
+  margin-right: 1rem;
+}
+
+.aleria-gpt-message-role {
+  color: var(--gold);
+  font-size: 0.58rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+.aleria-gpt-message-text {
+  white-space: pre-wrap;
+  color: var(--ink-faded);
+  font-size: 0.86rem;
+  line-height: 1.48;
+  overflow-wrap: anywhere;
+}
+
+.aleria-gpt-sources {
+  margin-top: 0.65rem;
+}
+
+.aleria-gpt-sources summary {
+  cursor: pointer;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.aleria-gpt-source-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.48rem;
+  margin-top: 0.5rem;
+}
+
+.aleria-gpt-source {
+  border: 1px solid rgba(139,105,20,0.16);
+  background: rgba(255,255,255,0.22);
+  padding: 0.54rem;
+}
+
+.aleria-gpt-source-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  margin-bottom: 0.22rem;
+}
+
+.aleria-gpt-source-title {
+  color: var(--ink);
+  font-size: 0.78rem;
+  line-height: 1.32;
+  overflow-wrap: anywhere;
+}
+
+.aleria-gpt-source p {
+  margin: 0.32rem 0;
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+  line-height: 1.42;
+}
+
+.aleria-gpt-source code {
+  display: block;
+  color: rgba(63,41,20,0.64);
+  font-size: 0.68rem;
+  overflow-wrap: anywhere;
+}
+
+.aleria-gpt-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-top: 1px solid rgba(139,105,20,0.2);
+  background: rgba(255,255,255,0.18);
+}
+
+.aleria-gpt-input {
+  min-width: 0;
+  resize: vertical;
+  max-height: 9rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,255,255,0.34);
+  color: var(--ink);
+  padding: 0.55rem 0.62rem;
+  font: 0.88rem/1.45 'EB Garamond', serif;
+}
+
+.aleria-gpt-input:focus {
+  outline: 2px solid rgba(139,105,20,0.24);
+  border-color: var(--gold);
+}
+
+.aleria-gpt-send:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+@media (max-width: 640px) {
+  .aleria-gpt-shell {
+    top: 3.6rem;
+    bottom: 0.5rem;
+  }
+
+  .aleria-gpt-panel {
+    width: calc(100vw - 2.6rem);
+    height: calc(100dvh - 4.2rem);
+  }
+
+  .aleria-gpt-rail {
+    top: 7.5rem;
+  }
+
+  .aleria-gpt-toolbar,
+  .aleria-gpt-form {
+    grid-template-columns: 1fr;
+  }
+}
