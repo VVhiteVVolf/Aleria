@@ -1,5 +1,5 @@
 const DEFAULT_PROVIDER_BASE_URL = 'https://openrouter.ai/api/v1';
-const DEFAULT_MAX_TOKENS = 700;
+const DEFAULT_MAX_TOKENS = 1200;
 const DEFAULT_TIMEOUT_MS = 30000;
 const DEFAULT_MAX_BODY_CHARS = 650000;
 
@@ -59,6 +59,26 @@ function cleanOutputText(value, maxLength) {
     .slice(0, maxLength);
 }
 
+function getAnswerStyle(payload) {
+  const style = cleanText(payload?.answerStyle, 40);
+  return ['short', 'normal', 'deep'].includes(style) ? style : 'short';
+}
+
+function getResponseTokenLimit(env, payload) {
+  const configuredMax = getEnvNumber(env, 'ALERIA_GPT_MAX_TOKENS', DEFAULT_MAX_TOKENS);
+  const style = getAnswerStyle(payload);
+  if (style === 'deep') return Math.min(configuredMax, 1200);
+  if (style === 'normal') return Math.min(configuredMax, 620);
+  return Math.min(configuredMax, 320);
+}
+
+function getAnswerStyleInstruction(payload) {
+  const style = getAnswerStyle(payload);
+  if (style === 'deep') return 'Antwortstil: Tief. Bis zu 5 kurze Absaetze oder 6 Listenpunkte.';
+  if (style === 'normal') return 'Antwortstil: Normal. 2-3 kurze Absaetze oder bis zu 4 Listenpunkte.';
+  return 'Antwortstil: Kurz. 1-2 kurze Absaetze oder maximal 3 Listenpunkte. Keine lange Analyse.';
+}
+
 function buildSystemPrompt() {
   return [
     'Du bist AleriaGPT, ein neutraler und sachlicher Gespraechs- und Analyseassistent fuer den Aleria Almanach.',
@@ -87,6 +107,7 @@ function buildUserPrompt(payload) {
   const promptContext = String(payload?.retrieval?.promptContext || '').slice(0, 60000);
   return [
     `Antwortmodus: ${responseMode}`,
+    getAnswerStyleInstruction(payload),
     `Frage: ${query}`,
     '',
     promptContext,
@@ -133,7 +154,7 @@ async function callProvider(payload, env) {
   const providerBaseUrl = getEnvText(env, 'ALERIA_GPT_PROVIDER_BASE_URL', DEFAULT_PROVIDER_BASE_URL).replace(/\/+$/g, '');
   const apiKey = getEnvText(env, 'ALERIA_GPT_API_KEY');
   const model = getEnvText(env, 'ALERIA_GPT_MODEL');
-  const maxTokens = getEnvNumber(env, 'ALERIA_GPT_MAX_TOKENS', DEFAULT_MAX_TOKENS);
+  const maxTokens = getResponseTokenLimit(env, payload);
   const timeoutMs = getEnvNumber(env, 'ALERIA_GPT_TIMEOUT_MS', DEFAULT_TIMEOUT_MS);
   const appUrl = getEnvText(env, 'ALERIA_GPT_APP_URL');
   const appTitle = getEnvText(env, 'ALERIA_GPT_APP_TITLE', 'Aleria Almanach');

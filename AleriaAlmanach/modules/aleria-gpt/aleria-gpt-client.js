@@ -46,6 +46,7 @@ function buildAleriaGptChatPayload(query, retrieval, options = {}) {
     schemaVersion: 1,
     query: String(query || '').trim(),
     responseMode: String(options.responseMode || 'chat').trim() || 'chat',
+    answerStyle: String(options.answerStyle || 'short').trim() || 'short',
     scope: options.scope || {},
     retrieval: {
       sourceHash: retrieval?.sourceHash || '',

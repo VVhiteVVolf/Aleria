@@ -15,8 +15,8 @@
 }
 .speaker-profile-card {
   position: relative;
-  width: min(760px, calc(100vw - 2rem));
-  max-height: min(880px, calc(100dvh - 2rem));
+  width: min(940px, calc(100vw - 2rem));
+  max-height: min(960px, calc(100dvh - 1rem));
   overflow-y: auto;
   border: 1px solid rgba(139,105,20,0.38);
   background:
@@ -178,7 +178,8 @@
 .speaker-profile-ai-chat {
   display: grid;
   gap: 0.5rem;
-  max-height: min(360px, 38dvh);
+  max-height: min(620px, 56dvh);
+  min-height: min(260px, 34dvh);
   overflow-y: auto;
   padding-right: 0.2rem;
 }
@@ -263,8 +264,32 @@
 .speaker-profile-ai-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.45rem;
   justify-content: flex-end;
+}
+.speaker-profile-ai-style {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: auto;
+  color: var(--ink-faded);
+  font-size: 0.76rem;
+}
+.speaker-profile-ai-style span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.speaker-profile-ai-style select {
+  min-height: 2rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,255,255,0.26);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0 0.45rem;
 }
 .speaker-profile-ai-btn {
   border: 1px solid rgba(139,105,20,0.28);
@@ -315,6 +340,14 @@
   .speaker-profile-ai-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+  .speaker-profile-ai-style {
+    justify-content: space-between;
+    margin-right: 0;
+    width: 100%;
+  }
+  .speaker-profile-ai-style select {
+    flex: 1;
   }
   .speaker-profile-ai-btn {
     width: 100%;

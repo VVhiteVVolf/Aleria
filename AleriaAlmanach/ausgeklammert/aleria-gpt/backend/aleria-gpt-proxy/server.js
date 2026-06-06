@@ -6,7 +6,7 @@ const API_KEY = String(process.env.ALERIA_GPT_API_KEY || '');
 const MODEL = String(process.env.ALERIA_GPT_MODEL || '');
 const APP_URL = String(process.env.ALERIA_GPT_APP_URL || '');
 const APP_TITLE = String(process.env.ALERIA_GPT_APP_TITLE || 'Aleria Almanach');
-const MAX_TOKENS = Number(process.env.ALERIA_GPT_MAX_TOKENS || 700);
+const MAX_TOKENS = Number(process.env.ALERIA_GPT_MAX_TOKENS || 1200);
 const TIMEOUT_MS = Number(process.env.ALERIA_GPT_TIMEOUT_MS || 30000);
 const MAX_BODY_BYTES = Number(process.env.ALERIA_GPT_MAX_BODY_BYTES || 650000);
 const ALLOWED_ORIGINS = String(process.env.ALERIA_GPT_ALLOWED_ORIGINS || '')
@@ -85,6 +85,25 @@ function cleanOutputText(value, maxLength) {
     .slice(0, maxLength);
 }
 
+function getAnswerStyle(payload) {
+  const style = cleanText(payload?.answerStyle, 40);
+  return ['short', 'normal', 'deep'].includes(style) ? style : 'short';
+}
+
+function getResponseTokenLimit(payload) {
+  const style = getAnswerStyle(payload);
+  if (style === 'deep') return Math.min(MAX_TOKENS, 1200);
+  if (style === 'normal') return Math.min(MAX_TOKENS, 620);
+  return Math.min(MAX_TOKENS, 320);
+}
+
+function getAnswerStyleInstruction(payload) {
+  const style = getAnswerStyle(payload);
+  if (style === 'deep') return 'Antwortstil: Tief. Bis zu 5 kurze Absaetze oder 6 Listenpunkte.';
+  if (style === 'normal') return 'Antwortstil: Normal. 2-3 kurze Absaetze oder bis zu 4 Listenpunkte.';
+  return 'Antwortstil: Kurz. 1-2 kurze Absaetze oder maximal 3 Listenpunkte. Keine lange Analyse.';
+}
+
 function buildSystemPrompt() {
   return [
     'Du bist AleriaGPT, ein neutraler und sachlicher Gespraechs- und Analyseassistent fuer den Aleria Almanach.',
@@ -113,6 +132,7 @@ function buildUserPrompt(payload) {
   const promptContext = String(payload?.retrieval?.promptContext || '').slice(0, 60000);
   return [
     `Antwortmodus: ${responseMode}`,
+    getAnswerStyleInstruction(payload),
     `Frage: ${query}`,
     '',
     promptContext,
@@ -156,7 +176,7 @@ async function callProvider(payload) {
       headers,
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: MAX_TOKENS,
+        max_tokens: getResponseTokenLimit(payload),
         temperature: 0.25,
         messages: [
           { role: 'system', content: buildSystemPrompt() },

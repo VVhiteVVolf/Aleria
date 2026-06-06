@@ -91,6 +91,14 @@ document.addEventListener('submit', event => {
   }
 });
 
+document.addEventListener('change', event => {
+  const styleSelect = event.target?.closest?.('[data-speaker-profile-ai-style]');
+  if (!styleSelect) return;
+  if (typeof setSpeakerProfileAiAnswerStyle === 'function') {
+    setSpeakerProfileAiAnswerStyle(styleSelect.value);
+  }
+});
+
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
   const overlay = document.getElementById('speaker-profile-overlay');

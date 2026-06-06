@@ -1,10 +1,11 @@
 const SPEAKER_PROFILE_AI_CACHE = new Map();
-const SPEAKER_PROFILE_AI_MAX_SEGMENTS = 100;
-const SPEAKER_PROFILE_AI_MAX_CONTEXT_SEGMENTS = 120;
-const SPEAKER_PROFILE_AI_MAX_TEXT_CHARS = 28000;
+const SPEAKER_PROFILE_AI_MAX_SEGMENTS = 64;
+const SPEAKER_PROFILE_AI_MAX_CONTEXT_SEGMENTS = 96;
+const SPEAKER_PROFILE_AI_MAX_TEXT_CHARS = 18000;
 
 let _speakerProfileAiContext = null;
 let _speakerProfileAiMessages = [];
+let _speakerProfileAiAnswerStyle = 'short';
 
 function getSpeakerProfileAiName(character, fallbackName = '') {
   return String(character?.name || fallbackName || 'Unbekannte Stimme').trim();
@@ -19,6 +20,7 @@ function getSpeakerProfileAiCacheKey(character, fallbackName, stats = {}) {
     stats.segmentCount || 0,
     stats.contextSegmentCount || 0,
     stats.wordTotal || 0,
+    _speakerProfileAiAnswerStyle,
     latest
   ].join(':');
 }
@@ -62,8 +64,24 @@ function buildSpeakerProfileAiTranscript(stats = {}) {
 function buildSpeakerProfileAiContextTranscript(stats = {}) {
   return buildSpeakerProfileAiSegmentTranscript(stats.contextSegments || [], {
     maxSegments: SPEAKER_PROFILE_AI_MAX_CONTEXT_SEGMENTS,
-    maxTextChars: 32000
+    maxTextChars: 22000
   });
+}
+
+function getSpeakerProfileAiAnswerStyleLabel(style = _speakerProfileAiAnswerStyle) {
+  if (style === 'deep') return 'Tief';
+  if (style === 'normal') return 'Normal';
+  return 'Kurz';
+}
+
+function getSpeakerProfileAiAnswerStyleInstruction(style = _speakerProfileAiAnswerStyle) {
+  if (style === 'deep') {
+    return 'Antwortlaenge: Tief. Antworte ausfuehrlicher, aber strukturiert. Maximal 5 kurze Absaetze oder 6 Listenpunkte.';
+  }
+  if (style === 'normal') {
+    return 'Antwortlaenge: Normal. Antworte in 2-3 kurzen Absaetzen oder bis zu 4 Listenpunkten.';
+  }
+  return 'Antwortlaenge: Kurz. Antworte knapp in 1-2 kurzen Absaetzen oder maximal 3 Listenpunkten. Keine lange Analyse, ausser der Nutzer verlangt sie ausdruecklich.';
 }
 
 function buildSpeakerProfileAiStatContext(name, stats = {}) {
@@ -113,7 +131,7 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
   const transcript = buildSpeakerProfileAiTranscript(stats);
   const contextTranscript = buildSpeakerProfileAiContextTranscript(stats);
   const broaderContext = broaderRetrieval?.promptContext
-    ? String(broaderRetrieval.promptContext).slice(0, 26000)
+    ? String(broaderRetrieval.promptContext).slice(0, 12000)
     : '';
   const promptContext = [
     'AleriaGPT Sprecherprofil-Kontext',
@@ -134,6 +152,7 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
     broaderContext || 'Kein weiterer Almanach-Kontext verfuegbar.',
     '',
     'Arbeitsregel: Beziehe direkte Kommentare, fruehere Gespraeche, Erzaehlerperspektive und Aussagen anderer Personen zusammen, wenn die Frage das braucht. Erfinde keine Ereignisse.',
+    getSpeakerProfileAiAnswerStyleInstruction(),
     'Antworte normal und lesbar. Verwende keine Quellenmarker wie [1] und keine standardisierte Gutachtenform mit Kernaussage/Beobachtungen, ausser der Nutzer verlangt das ausdruecklich.'
   ].join('\n');
 
@@ -167,7 +186,7 @@ function buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval) {
         score: 95 - index,
         text: segment.text || ''
       })),
-      ...((broaderRetrieval?.chunks || []).slice(0, 10))
+      ...((broaderRetrieval?.chunks || []).slice(0, 12))
     ]
   };
 }
@@ -176,17 +195,27 @@ function buildSpeakerProfileAiSummaryQuery(name) {
   return [
     `Fasse kurz und normal zusammen, was zu ${name} tatsaechlich erkennbar ist.`,
     'Nutze direkte Texte, Erzaehlerkontext, fruehere Gespraeche und Reaktionen anderer Personen.',
+    getSpeakerProfileAiAnswerStyleInstruction(),
     'Nutze keine Quellenmarker, keine Markdown-Trennlinien und keine Ueberschrift "Kernaussage".',
     'Bleibe bei Ton, sichtbarer Haltung, auffaelligen Formulierungen und belegbaren Beziehungen zwischen den Quellen. Tiefe psychologische Deutungen vermeiden.',
     'Wenn das Material duenn oder uneindeutig ist, sage das klar.'
   ].join(' ');
 }
 
-function buildSpeakerProfileAiCustomQuery(name, question) {
+function buildSpeakerProfileAiChatHistory() {
+  return _speakerProfileAiMessages
+    .slice(-8)
+    .map(message => `${message.role === 'user' ? 'Nutzer' : 'AleriaGPT'}: ${trimSpeakerProfileAiText(message.text, 900)}`)
+    .join('\n');
+}
+
+function buildSpeakerProfileAiCustomQuery(name, question, history = '') {
   return [
     `Beantworte diese Frage zu ${name} normal und direkt: ${String(question || '').trim()}`,
+    history ? `Bisheriger Chatverlauf in dieser Metafunktion:\n${history}` : '',
     'Nutze direkte Kommentare/Sprechertexte, aber auch Erzaehlerkontext, fruehere Gespraeche und Aussagen anderer Personen, wenn sie fuer die Frage relevant sind.',
     'Antworte wie in einem Chat, nicht wie in einem Gutachten.',
+    getSpeakerProfileAiAnswerStyleInstruction(),
     'Nutze lesbare Formatierung: kurze Absaetze, einfache Listen mit "- " bei mehreren Punkten und sparsame Hervorhebungen mit **fett**.',
     'Nutze keine Quellenmarker und erfinde keine inneren Motive. Wenn du aus mehreren Quellen schliesst, kennzeichne es als vorsichtige Schlussfolgerung.',
     'Wenn die Kommentare die Frage nicht belegen, sage klar, was fehlt.'
@@ -204,6 +233,14 @@ function renderSpeakerProfileAiBox() {
       <form class="speaker-profile-ai-form" data-speaker-profile-action="submit-ai-chat">
         <textarea class="speaker-profile-ai-input" rows="3" placeholder="Frage zu Ton, Haltung, Reaktion oder Motivation..." aria-label="Frage an die KI-Metafunktion"></textarea>
         <div class="speaker-profile-ai-actions">
+          <label class="speaker-profile-ai-style">
+            <span>Antwort</span>
+            <select data-speaker-profile-ai-style aria-label="Antwortlänge">
+              <option value="short" ${_speakerProfileAiAnswerStyle === 'short' ? 'selected' : ''}>Kurz</option>
+              <option value="normal" ${_speakerProfileAiAnswerStyle === 'normal' ? 'selected' : ''}>Normal</option>
+              <option value="deep" ${_speakerProfileAiAnswerStyle === 'deep' ? 'selected' : ''}>Tief</option>
+            </select>
+          </label>
           <button class="speaker-profile-ai-btn" type="button" data-speaker-profile-action="generate-ai-summary">
             Analyse erstellen
           </button>
@@ -228,6 +265,12 @@ function setSpeakerProfileAiContext(context = {}) {
   }
   updateSpeakerProfileAiBox('ready', 'Bereit. Die Metafunktion nutzt direkte Kommentare dieser Stimme und den aktuellen Almanach-Kontext.');
   renderSpeakerProfileAiMessages();
+}
+
+function setSpeakerProfileAiAnswerStyle(style) {
+  const normalized = ['short', 'normal', 'deep'].includes(String(style || '')) ? String(style) : 'short';
+  _speakerProfileAiAnswerStyle = normalized;
+  updateSpeakerProfileAiBox('ready', `Antwortmodus: ${getSpeakerProfileAiAnswerStyleLabel(normalized)}. Du kannst weiterfragen.`);
 }
 
 function updateSpeakerProfileAiBox(state, text = '') {
@@ -334,9 +377,10 @@ async function requestSpeakerProfileAi(question, options = {}) {
     : null;
   const retrieval = buildSpeakerProfileAiRetrieval(name, stats, broaderRetrieval);
   const response = await window.AleriaGptClient.sendChat(question, retrieval, {
-    sourceLimit: 24,
+    sourceLimit: _speakerProfileAiAnswerStyle === 'deep' ? 36 : 28,
     timeoutMs: 45000,
-    responseMode: options.responseMode || 'chat'
+    responseMode: options.responseMode || 'chat',
+    answerStyle: _speakerProfileAiAnswerStyle
   });
 
   if (!response.ok || !response.text) {
@@ -381,8 +425,9 @@ async function submitSpeakerProfileAiChat(question) {
   const name = getSpeakerProfileAiName(active.character, active.fallbackName);
   const cleanQuestion = String(question || '').trim();
   if (!cleanQuestion) return;
+  const history = buildSpeakerProfileAiChatHistory();
   addSpeakerProfileAiMessage('user', cleanQuestion);
-  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiCustomQuery(name, cleanQuestion), {
+  const text = await requestSpeakerProfileAi(buildSpeakerProfileAiCustomQuery(name, cleanQuestion, history), {
     context: active,
     responseMode: 'chat',
     includeBroaderContext: true
