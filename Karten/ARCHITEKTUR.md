@@ -6,11 +6,18 @@ Der Ordner `Karten` soll langfristig als gemeinsame Karten-Plattform funktionier
 - Gemeinsame Bedienlogik liegt in `assets/js`.
 - Gemeinsames Styling liegt in `assets/css`.
 - Neue Karten sollen keine Kopien von Feature-Logik enthalten.
+- Neue Karten sollen nicht als eigene HTML-Dateien vervielfacht werden.
+- Der Standardzugriff laeuft ueber `karte.html?map=<karten-id>` und `karten.registry.js`.
 
 ## Aktueller Schnitt
 
 ```txt
 Karten/
+  karte.html                   # zentrale Karten-Shell fuer aktive und geplante Kartenlinks
+  karten.registry.js           # Registry fuer Karten-IDs, Hierarchie, Status, Links und Ladepfade
+  tools/
+    validate-karten-structure.mjs
+                                # prueft Registry, aktive Kartenpfade und doppelte Bildinhalte
   assets/
     js/
       karto-app.js              # Kartenkern, Runtime-Bruecke und uebergeordneter State
@@ -46,24 +53,30 @@ Karten/
     css/
       karto-map.css             # gemeinsames Karten-Styling, spaeter featureweise teilbar
   _template/
-    KartenTemplate.html         # Template-Shell fuer neue Karten
-    template.config.js          # individuelle Template-Konfiguration
+    KartenTemplate.html         # Referenz/Fallback, nicht Standard-Kopiervorlage fuer jede Karte
+    template.config.js          # Beispiel-Konfiguration
   Cenyr/
     celtigerns-wacht/
-      CeltigernsWachtKarte.html # bestehende Referenzkarte
+      CeltigernsWachtKarte.html # alter Kompatibilitaetslink zur Referenzkarte
       template.config.js        # individuelle Karten-Konfiguration
+      Kartenbilder/             # aktive Kartenbilder fuer Celtigerns Wacht
 ```
 
 ## Regeln fuer neue Karten
 
 Eine neue Karte darf individuelle Inhalte besitzen:
 
+- Registry-Eintrag mit stabiler `id`
 - `template.config.js`
 - Kartenbilder
 - eigene Firebase-`docId`
 - spaeter optionale Startdaten
 
+Geplante Karten brauchen nur einen Registry-Eintrag. Ordner, Config und Bilder werden erst angelegt, wenn die Karte wirklich entsteht.
+
 Eine neue Karte soll keine eigene Kopie von `karto-app.js`, Feature-JS oder gemeinsamem CSS erhalten.
+
+Eine neue Karte soll auch keine dauerhafte eigene HTML-Datei erhalten. Die zentrale Shell `karte.html` laedt aktive Karten ueber die Registry und zeigt geplante Karten als sauberen Platzhalter.
 
 ## Migrationsstatus
 
@@ -81,6 +94,10 @@ Abgeschlossen:
    - DM-Sitzungen, Tagebuch und Status
 3. State-Zugriffe ueber `window.KartoRuntime` kapseln, damit Features nicht direkt am globalen `S` arbeiten muessen.
 4. Firebase als Storage-Adapter behalten und nicht in Featuremodule streuen.
+5. Zentrale Karten-Shell `karte.html` fuer Registry-gesteuertes Laden anlegen.
+6. `karten.registry.js` fuer aktive und geplante Karten-IDs anlegen.
+7. Validator fuer Registry, aktive Kartenpfade und doppelte Bildinhalte anlegen.
+8. Bekannte Celtigerns-Wacht-Bildduplikate entfernen.
 
 ## Bereits extrahiert
 
@@ -192,11 +209,13 @@ Diese Schnittstelle wird bereits von Pin-Dragging, Pin-Platzierung, Touch-Zoom u
 
 ## Optionaler Feinschliff
 
-Die Architektur-Aufraeumung ist abgeschlossen. Sinnvolle spaetere Feinschliffe waeren:
+Die Kartenbasis ist fuer den naechsten Ausbau bereit. Sinnvolle spaetere Feinschliffe waeren:
 
 - weitere Kapselung des Karten-State hinter `KartoRuntime`
 - Reduktion alter Kompatibilitaets-Globals, sobald keine Module sie mehr brauchen
 - featureweise CSS-Aufteilung, falls `karto-map.css` weiter stark waechst
+- alte Einzelkarten-HTML-Dateien schrittweise als Kompatibilitaetswege markieren oder archivieren
+- Config-Dateien spaeter konsistent von `template.config.js` zu `karte.config.js` umbenennen, falls gewuenscht
 
 Die reinen LSB-Daten, Berechnungen, Kalibrierung/Messung, Reiseebenen-Canvas, Karteninteraktion, Gruppenliste und Gruppen-/Wegpunkt-Modals sind bereits ausgelagert.
 
@@ -204,4 +223,6 @@ Die statischen Template- und Referenzkarten-Handler laufen inzwischen ebenfalls 
 
 ## Fortschritt
 
-Grobe Architektur-Fortschrittsanzeige: 100%.
+Grobe Zukunfts-Fortschrittsanzeige: 95%.
+
+Die fehlenden 5% betreffen bewusst spaetere Ortsseiten-Integration und moegliche Kompatibilitaetsbereinigung alter Einzelkarten-HTML-Dateien. Der Kartenordner selbst ist aktuell ueber zentrale Shell, Registry, Validator und bereinigte Assets stabil fuer den naechsten Ausbau vorbereitet.
