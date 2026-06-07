@@ -32,8 +32,10 @@ Der Validator prueft:
 - doppelte Karten-IDs
 - ungueltige Status- und Typwerte
 - stabile Links nach dem Muster `karte.html?map=<id>`
-- aktive Karten auf Ordner, Config, Firebase-Doc-ID und Kartenbilder
+- aktive Karten auf Config oder Registry-Bildlinks, Firebase-Doc-ID und Kartenbilder
+- lokale Bildpfade oder externe HTTP/HTTPS-Bildlinks, z. B. Imgur
 - geplante Karten ohne erzwungene Ordner oder Bilder
+- editierbare Entwurfskarten auf eigene Firebase-Doc-ID
 - doppelte Bildinhalte als Warnung
 
 Warnungen blockieren die Struktur nicht. Sie markieren Punkte fuer kontrollierte Bereinigung.
@@ -102,6 +104,56 @@ Uebergangsweise fuer eine neue wirklich existierende Karte:
 3. Die drei Kartenbilder in den lokalen `Kartenbilder`-Ordner legen.
 4. In der Config `mapId`, `title`, `documentTitle`, `images` und `firebase.docId` anpassen.
 5. Keine neue HTML-Datei als Dauerloesung kopieren; die zentrale Shell soll diese Rolle uebernehmen.
+
+## Karte mit Imgur-Bildern aktivieren
+
+Wenn die Kartenbilder nicht in Git liegen sollen, kann eine aktive Karte direkt Imgur-Links in der Registry verwenden.
+
+Dann braucht sie keine lokale Config-Datei. Beispiel:
+
+```js
+{
+  id: "cenyr-vortigerns-ruh",
+  title: "Vortigerns Ruh",
+  status: MAP_STATUS.ACTIVE,
+  type: MAP_TYPES.COUNTY,
+  hierarchy: [
+    { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+    { level: "county", slug: "vortigerns-ruh", title: "Vortigerns Ruh" },
+  ],
+  link: "karte.html?map=cenyr-vortigerns-ruh",
+  images: {
+    normal: "https://i.imgur.com/DEIN_NORMAL_BILD.png",
+    regions: "https://i.imgur.com/DEIN_REGIONEN_BILD.png",
+    pins: "https://i.imgur.com/DEIN_MARKER_BILD.png",
+  },
+  firebase: {
+    collection: "karten",
+    docId: "cenyr-vortigerns-ruh",
+  },
+}
+```
+
+Wichtig:
+
+- `status` muss dann `MAP_STATUS.ACTIVE` sein.
+- `images.normal`, `images.regions` und `images.pins` muessen gesetzt sein.
+- `firebase.docId` trennt die gespeicherten Pins und Daten von anderen Karten.
+- Danach `node Karten/tools/validate-karten-structure.mjs` ausfuehren.
+
+## Imgur-Links im Browser setzen
+
+Fuer geplante Grafschaftskarten von Cenyr ist `editableDraft: true` gesetzt. Dadurch oeffnet der Kartenlink bereits die volle Kartenoberflaeche mit Platzhalterkarte.
+
+Arbeitsablauf:
+
+1. Karte oeffnen, z. B. `Karten/karte.html?map=cenyr-vortigerns-ruh`
+2. `Bearbeiten` aktivieren
+3. `Bilder` oeffnen
+4. Imgur-Links fuer `Karte`, `Regionen` und `Markierungen` eintragen
+5. speichern
+
+Diese Bildlinks werden im Firebase-Dokument dieser Karte gespeichert. Sie sind dadurch nicht in GitHub noetig und gehoeren nicht zu anderen Karten.
 
 Jede Karte bekommt durch `firebase.docId` einen eigenen Datensatz. Pins, Marker und DM-Daten werden daher nicht zwischen Karten geteilt.
 

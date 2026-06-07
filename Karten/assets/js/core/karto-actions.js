@@ -21,6 +21,9 @@
       window.cancelAdd();
     },
     'open-stamp-picker': () => window.openStampPicker(),
+    'open-map-images': () => window.openMapImagesModal(),
+    'save-map-images': () => window.saveMapImages(),
+    'clear-map-images': () => window.clearMapImages(),
     'start-stamp': el => window.startStamp(el.dataset.pinId),
     'close-scroll-and-start-stamp': el => {
       window.closeScroll();

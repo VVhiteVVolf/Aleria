@@ -42,18 +42,31 @@
     return;
   }
 
-  if (selectedMap.status !== registry.statuses.ACTIVE) {
+  if (selectedMap.status !== registry.statuses.ACTIVE && !selectedMap.editableDraft) {
     fallbackConfig(selectedMap.title, selectedMap.status);
     return;
   }
 
-  if (!selectedMap.config) {
+  if (!selectedMap.config && !selectedMap.images && !selectedMap.editableDraft) {
     fallbackConfig(selectedMap.title, 'config-missing');
     return;
   }
 
   window.KARTO_BOOT_STATUS = 'active';
-  document.write(`<script src="${selectedMap.config}"><\/script>`);
+  if (selectedMap.config) {
+    document.write(`<script src="${selectedMap.config}"><\/script>`);
+  } else {
+    window.KARTO_CONFIG = {
+      mapId: selectedMap.id,
+      title: selectedMap.title,
+      documentTitle: `${selectedMap.title} - Aleria`,
+      images: {},
+      firebase: {
+        collection: 'karten',
+        docId: selectedMap.id,
+      },
+    };
+  }
 })();
 </script>
 <script>
@@ -132,6 +145,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <button class="tbtn" id="btn-add" data-action="start-add-pin" style="display:none">📍 Pin setzen</button>
   <button class="tbtn" id="btn-stamp" data-action="open-stamp-picker" style="display:none">🔖 Kopieren &amp; stempeln</button>
   <button class="tbtn" id="btn-overwrite" data-action="open-overwrite-picker" style="display:none">✏️ Überschreiben</button>
+  <button class="tbtn" id="btn-map-images" data-action="open-map-images" style="display:none">🖼 Bilder</button>
   <button class="tbtn" id="btn-export" data-action="open-data-manager" style="display:none">📦 Daten</button>
   <div style="position:relative;display:none" id="dm-btn-wrap">
     <button class="tbtn" id="btn-dm" data-action="toggle-dm-menu">📋 DM ▾</button>
@@ -170,6 +184,26 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   <div class="map-route-status__title" id="map-route-status-title"></div>
   <div class="map-route-status__meta" id="map-route-status-meta"></div>
   <div class="map-route-status__text" id="map-route-status-text"></div>
+</div>
+
+<!-- MAP IMAGE MODAL -->
+<div class="mo" id="mapimg-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px))">
+    <div class="lmh"><span>🖼 Kartenbilder</span><button data-action="close-modal" data-modal-id="mapimg-mo">✕</button></div>
+    <div class="lmb-body">
+      <div style="font-family:'EB Garamond',serif;font-size:.9rem;color:var(--ink3);font-style:italic;">
+        Diese Links werden im Kartenzustand gespeichert und gehoeren nur zu dieser Karte.
+      </div>
+      <div><label class="lml">Karte</label><input class="e-inp" id="mapimg-normal" placeholder="https://i.imgur.com/...png"/></div>
+      <div><label class="lml">Regionen</label><input class="e-inp" id="mapimg-regions" placeholder="https://i.imgur.com/...png"/></div>
+      <div><label class="lml">Markierungen</label><input class="e-inp" id="mapimg-pins" placeholder="https://i.imgur.com/...png"/></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-del" data-action="clear-map-images" style="margin-right:auto">Leeren</button>
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="mapimg-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-map-images">✓ Speichern</button>
+    </div>
+  </div>
 </div>
 
 <!-- LEFT SIDEBAR TOGGLE -->
@@ -758,7 +792,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   const messages = {
     planned: 'Diese Karte ist geplant. Der Link ist bereits stabil, aber Kartenbilder und Config sind noch nicht angelegt.',
     missing: 'Zu dieser Karten-ID gibt es noch keinen Registry-Eintrag.',
-    'config-missing': 'Diese Karte ist aktiv markiert, aber die Config konnte nicht geladen werden.',
+    'config-missing': 'Diese Karte ist aktiv markiert, aber es fehlen Config oder Bildlinks.',
     'registry-missing': 'Die Karten-Registry konnte nicht geladen werden.',
     archived: 'Diese Karte ist archiviert und wird nicht mehr als aktive Karte geladen.',
   };

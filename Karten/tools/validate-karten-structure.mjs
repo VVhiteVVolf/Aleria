@@ -37,6 +37,15 @@ function fileExists(relativePath) {
   return fs.existsSync(resolveInsideRoot(relativePath));
 }
 
+function isExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
 function readRegistry() {
   if (!fs.existsSync(REGISTRY_FILE)) {
     reportError("Missing karten.registry.js");
@@ -99,11 +108,9 @@ function validateMapShape(map, index) {
 function validateActiveMap(map) {
   const label = map.id;
 
-  if (!map.folder) reportError(`${label}: active map needs folder`);
-  else if (!fileExists(map.folder)) reportError(`${label}: folder not found: ${map.folder}`);
+  if (map.folder && !fileExists(map.folder)) reportWarning(`${label}: folder not found yet: ${map.folder}`);
 
-  if (!map.config) reportError(`${label}: active map needs config`);
-  else if (!fileExists(map.config)) reportError(`${label}: config not found: ${map.config}`);
+  if (map.config && !fileExists(map.config)) reportError(`${label}: config not found: ${map.config}`);
 
   if (!map.firebase?.docId) {
     reportError(`${label}: active map needs firebase.docId`);
@@ -122,6 +129,7 @@ function validateActiveMap(map) {
       reportError(`${label}: missing image "${key}"`);
       return;
     }
+    if (isExternalUrl(imagePath)) return;
     if (!fileExists(imagePath)) {
       reportError(`${label}: image "${key}" not found: ${imagePath}`);
     }
@@ -131,6 +139,12 @@ function validateActiveMap(map) {
 function validatePlannedMap(map) {
   const label = map.id;
 
+  if (map.editableDraft && !map.firebase?.docId) {
+    reportError(`${label}: editable draft needs firebase.docId`);
+  }
+  if (map.editableDraft && map.firebase?.docId !== map.id) {
+    reportWarning(`${label}: editable draft firebase.docId differs from map id`);
+  }
   if (map.config) {
     reportWarning(`${label}: planned map already has config; consider switching to active when assets are ready`);
   }

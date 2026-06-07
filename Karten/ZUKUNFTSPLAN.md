@@ -289,6 +289,7 @@ Aktueller Abschlussstand:
 - `karte.html?map=cenyr-celtigerns-wacht` laedt die aktive Referenzkarte.
 - `karte.html?map=cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn` zeigt einen geplanten Kartenlink als sauberen Platzhalter.
 - `karten.registry.js` enthaelt aktive und geplante Karten.
+- Aktive Karten koennen lokale Bildpfade oder externe Imgur-/HTTP-Bildlinks verwenden.
 - `tools/validate-karten-structure.mjs` meldet aktuell 0 Fehler und 0 Warnungen.
 - `README.md` und `ARCHITEKTUR.md` beschreiben die neue Arbeitsweise.
 - Die alte `CeltigernsWachtKarte.html` bleibt als Kompatibilitaetsweg erhalten.

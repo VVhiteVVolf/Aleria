@@ -104,6 +104,21 @@ const DEFAULT_MARKER_CATALOG = [
   {id:'mmhz03mpxj4s',url:'https://i.imgur.com/Cnr33rb.png',name:'Möwensang Standort',group:'Gilden'},
 ];
 
+const EMPTY_MAP_IMAGE = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000"><rect width="1400" height="1000" fill="#e6d7ad"/><text x="700" y="475" text-anchor="middle" font-family="serif" font-size="38" fill="#87621f">Kartenbild fehlt</text><text x="700" y="525" text-anchor="middle" font-family="serif" font-size="22" fill="#87621f">Editormodus -> Bilder -> Imgur-Links eintragen</text></svg>'
+);
+const EMPTY_LAYER_IMAGE = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000"><rect width="1400" height="1000" fill="transparent"/></svg>'
+);
+
+function cleanMapImages(images){
+  return {
+    normal: String(images?.normal || '').trim(),
+    regions: String(images?.regions || '').trim(),
+    pins: String(images?.pins || '').trim(),
+  };
+}
+
 // ═══════════════════════════════════════════
 // STATE — everything saved to Firebase
 // ═══════════════════════════════════════════
@@ -114,6 +129,7 @@ let S = {
   lblSize: 13,
   regionIcon: KARTO_CONFIG.regionIcon || '',
   regionTitle: KARTO_CONFIG.title || 'Karten-Vorlage',
+  mapImages: cleanMapImages(KARTO_CONFIG.images || {}),
   dm: { sessions:[], notes:'', groupStatus:{} },
   markerCatalog: JSON.parse(JSON.stringify(KARTO_CONFIG.defaultMarkerCatalog || DEFAULT_MARKER_CATALOG)),
 };
@@ -143,14 +159,19 @@ function applyMapConfig(){
   const cfg=KARTO_CONFIG;
   if(cfg.title && (!S.regionTitle || S.regionTitle==='Karten-Vorlage')) S.regionTitle=cfg.title;
   if(cfg.regionIcon && !S.regionIcon) S.regionIcon=cfg.regionIcon;
-  const imgs=cfg.images||{};
+  if(!S.mapImages) S.mapImages=cleanMapImages(cfg.images||{});
+  applyMapImages();
+  if(cfg.documentTitle) document.title=cfg.documentTitle;
+}
+function applyMapImages(){
+  const imgs=cleanMapImages(S.mapImages||KARTO_CONFIG.images||{});
+  S.mapImages=imgs;
   const normal=document.getElementById('ln');
   const regions=document.getElementById('lr');
   const pins=document.getElementById('lm');
-  if(normal && imgs.normal) normal.src=imgs.normal;
-  if(regions && imgs.regions) regions.src=imgs.regions;
-  if(pins && imgs.pins) pins.src=imgs.pins;
-  if(cfg.documentTitle) document.title=cfg.documentTitle;
+  if(normal) normal.src=imgs.normal||EMPTY_MAP_IMAGE;
+  if(regions) regions.src=imgs.regions||EMPTY_LAYER_IMAGE;
+  if(pins) pins.src=imgs.pins||EMPTY_LAYER_IMAGE;
 }
 
 // ═══════════════════════════════════════════
@@ -334,8 +355,10 @@ function applyState(remote){
   if(remote.lblSize)    S.lblSize=remote.lblSize;
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
   if(remote.regionTitle) S.regionTitle=remote.regionTitle;
+  if(remote.mapImages) S.mapImages=cleanMapImages(remote.mapImages);
   if(remote.dm)         {S.dm=remote.dm;S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};}
   if(remote.markerCatalog?.length) S.markerCatalog=remote.markerCatalog;
+  applyMapImages();
   applySizes();
   applyRegionMeta();
   renderPins();
@@ -380,6 +403,7 @@ function exitEdit(){
   document.getElementById('btn-add').style.display='none';
   document.getElementById('btn-stamp').style.display='none';
   document.getElementById('btn-overwrite').style.display='none';
+  document.getElementById('btn-map-images').style.display='none';
   document.getElementById('btn-export').style.display='none';
   document.getElementById('dm-btn-wrap').style.display='none';
   document.getElementById('dm-panel').style.display='none';
@@ -397,6 +421,7 @@ function enterEdit(){
   document.getElementById('btn-add').style.display='block';
   document.getElementById('btn-stamp').style.display='block';
   document.getElementById('btn-overwrite').style.display='block';
+  document.getElementById('btn-map-images').style.display='block';
   document.getElementById('btn-export').style.display='block';
   document.getElementById('dm-btn-wrap').style.display='block';
   document.getElementById('dot-sl-wrap').style.display='flex';
@@ -467,6 +492,41 @@ function saveIcon(){
 }
 function clearIcon(){
   S.regionIcon='';applyRegionMeta();saveD();closeIconModal();toast('Icon entfernt');
+}
+
+// ═══════════════════════════════════════════
+// MAP IMAGE LINKS
+// ═══════════════════════════════════════════
+function openMapImagesModal(){
+  if(!editMode)return;
+  const imgs=cleanMapImages(S.mapImages||{});
+  document.getElementById('mapimg-normal').value=imgs.normal;
+  document.getElementById('mapimg-regions').value=imgs.regions;
+  document.getElementById('mapimg-pins').value=imgs.pins;
+  document.getElementById('mapimg-mo').classList.add('open');
+  setTimeout(()=>document.getElementById('mapimg-normal').focus(),60);
+}
+function saveMapImages(){
+  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  const next=cleanMapImages({
+    normal: document.getElementById('mapimg-normal').value,
+    regions: document.getElementById('mapimg-regions').value,
+    pins: document.getElementById('mapimg-pins').value,
+  });
+  if(!next.normal){toast('⚠ Kartenbild fehlt');return;}
+  S.mapImages=next;
+  applyMapImages();
+  saveD();
+  closeLMo('mapimg-mo');
+  toast('✓ Kartenbilder gespeichert');
+}
+function clearMapImages(){
+  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  S.mapImages=cleanMapImages({});
+  applyMapImages();
+  saveD();
+  closeLMo('mapimg-mo');
+  toast('Kartenbilder geleert');
 }
 
 // ═══════════════════════════════════════════

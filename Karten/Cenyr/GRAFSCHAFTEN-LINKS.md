@@ -2,7 +2,9 @@
 
 Diese Datei sammelt die stabilen Kartenlinks fuer die Grafschaften von Cenyr.
 
-Die meisten Eintraege sind vorerst `planned`. Das bedeutet: Der Link existiert bereits, aber Bilder und Config werden erst spaeter ergaenzt.
+Die meisten Eintraege sind vorerst `planned` und als `editableDraft` markiert. Das bedeutet: Der Link oeffnet bereits die Kartenoberflaeche, aber ohne eigene Bildlinks erscheint zuerst eine Platzhalterkarte.
+
+Wenn du Imgur nutzt, muss keine lokale Bilddatei in Git liegen. Du kannst die drei Bildlinks direkt im Browser setzen: Bearbeiten -> Bilder.
 
 | Grafschaft | Haus | Status | Karten-ID | Link | Geplanter Ordner |
 | --- | --- | --- | --- | --- | --- |
@@ -20,8 +22,12 @@ Die meisten Eintraege sind vorerst `planned`. Das bedeutet: Der Link existiert b
 
 Wenn eine Karte wirklich erstellt wird:
 
-1. den geplanten Ordner anlegen
-2. Config ergaenzen
-3. Imgur-URLs oder lokale Bildpfade in der Config/Registry eintragen
-4. Registry-Status von `planned` auf `active` setzen
-5. `node Karten/tools/validate-karten-structure.mjs` ausfuehren
+1. Kartenlink oeffnen
+2. Bearbeiten aktivieren
+3. `Bilder` oeffnen
+4. Imgur-URLs fuer Karte, Regionen und Markierungen speichern
+5. Pins, Kategorien und Marker wie gewohnt bearbeiten
+
+Ein lokaler Ordner ist nur noetig, wenn du lokale Dateien oder eine eigene Config verwenden willst.
+
+Wenn du die Bildlinks im Browser setzt, werden sie in Firebase gespeichert. Die Karte nutzt trotzdem ihre eigene Karten-ID und teilt keine Pins oder Marker-Daten mit anderen Karten.

@@ -62,7 +62,12 @@
       ],
       folder: "Cenyr/vortigerns-ruh",
       link: "karte.html?map=cenyr-vortigerns-ruh",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-vortigerns-ruh",
+      },
       rulingHouse: "Koenigliche Grafschaft des Hauses Pendrag",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -76,7 +81,12 @@
       ],
       folder: "Cenyr/tal-der-milane",
       link: "karte.html?map=cenyr-tal-der-milane",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-tal-der-milane",
+      },
       rulingHouse: "Haus Aderyn",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -90,7 +100,12 @@
       ],
       folder: "Cenyr/sonnenkueste",
       link: "karte.html?map=cenyr-sonnenkueste",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-sonnenkueste",
+      },
       rulingHouse: "Haus Illewod",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -104,7 +119,12 @@
       ],
       folder: "Cenyr/graue-weite",
       link: "karte.html?map=cenyr-graue-weite",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-graue-weite",
+      },
       rulingHouse: "Haus Pysgod",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -118,7 +138,12 @@
       ],
       folder: "Cenyr/weidebucht",
       link: "karte.html?map=cenyr-weidebucht",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-weidebucht",
+      },
       rulingHouse: "Haus Wylan",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -132,7 +157,12 @@
       ],
       folder: "Cenyr/aehrental",
       link: "karte.html?map=cenyr-aehrental",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-aehrental",
+      },
       rulingHouse: "Haus Grawn",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -146,7 +176,12 @@
       ],
       folder: "Cenyr/silberinsel",
       link: "karte.html?map=cenyr-silberinsel",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-silberinsel",
+      },
       rulingHouse: "Haus Neidr",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
@@ -160,7 +195,12 @@
       ],
       folder: "Cenyr/klaueninseln",
       link: "karte.html?map=cenyr-klaueninseln",
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-klaueninseln",
+      },
       rulingHouse: "Haus Arth",
+      editableDraft: true,
       notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
     },
     {
