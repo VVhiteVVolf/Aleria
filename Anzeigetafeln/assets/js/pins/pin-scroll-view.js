@@ -16,6 +16,11 @@
     return html;
   }
 
+  function mediaLink(html, href){
+    const url = (href || '').trim();
+    return url ? `<a class="sv-linked-media" href="${esc(url)}">${html}</a>` : html;
+  }
+
   function render(pin){
     const sc = document.getElementById('scroll-content');
     const sa = document.getElementById('scroll-actions');
@@ -36,7 +41,7 @@
       <div class="sv-crest-wrap">
         <div class="sv-crest">
           ${pin.crest
-            ? `<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`
+            ? mediaLink(`<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`, pin.crestLink)
             : `<span style="opacity:.3;font-size:2rem">🏰</span>`}
         </div>
       </div>
@@ -56,7 +61,7 @@
           ${affils.map(a => `<span class="sv-affil"><span class="sv-affil-lbl">${esc(a.lbl)}</span> ${esc(a.val)}</span>`).join('')}
         </div>` : ''}
       </div>
-      ${pin.banner ? `<div class="sv-banner"><img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/></div>` : ''}
+      ${pin.banner ? `<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/>`, pin.bannerLink)}</div>` : ''}
     </div>
 
     ${(pin.img || pin.table?.length) ? `
@@ -64,8 +69,8 @@
       <div class="sv-img-wrap">
         <div class="sv-img">
           ${pin.img
-            ? `<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
-               <div class="sv-img-ph" style="display:none">🗺</div>`
+            ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
+               <div class="sv-img-ph" style="display:none">🗺</div>`, pin.imgLink)
             : `<div class="sv-img-ph">🖼</div>`}
         </div>
       </div>

@@ -5,6 +5,10 @@
     return runtime.state();
   }
 
+  function mediaLink(html, href){
+    return runtime.mediaLink ? runtime.mediaLink(html, href) : html;
+  }
+
   function open(pinId){
     const pin = state().pins.find(item => item.id === pinId);
     if(!pin) return;
@@ -32,12 +36,11 @@
     content.innerHTML = `
       <div class="sv-header" style="background:${headerBg};">
         <div class="sv-crest-wrap">
-          <div class="sv-crest"${pin.crestLink ? ` style="cursor:pointer;" data-action="open-external-url" data-url="${esc(pin.crestLink)}" title="Link: ${esc(pin.crestLink)}"` : ''}>
+          <div class="sv-crest">
             ${pin.crest
-              ? `<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`
-              : `<span style="opacity:.3;font-size:2rem">🏰</span>`}
+              ? mediaLink(`<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='Burg'"/>`, pin.crestLink)
+              : `<span style="opacity:.3;font-size:1rem">Burg</span>`}
           </div>
-          ${pin.crestLink ? `<div style="position:absolute;bottom:-2px;right:-2px;background:var(--gold);border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;font-size:.6rem;z-index:3;box-shadow:0 1px 3px rgba(0,0,0,.4);" title="Link">🔗</div>` : ''}
         </div>
         ${category.marker ? `<div class="sv-marker-icon" title="${esc(category.label)}"><img src="${esc(category.marker)}" onerror="this.style.display='none'"/></div>` : ''}
         <div class="sv-header-col">
@@ -49,13 +52,13 @@
                 : `<span style="width:7px;height:7px;border-radius:50%;background:${category.color};display:inline-block;flex-shrink:0;"></span>`}
               ${esc(category.label)}
             </span>
-            ${pin.secret ? `<span class="sv-secret-badge">🔒 Geheim</span>` : ''}
+            ${pin.secret ? `<span class="sv-secret-badge">Geheim</span>` : ''}
           </div>
           ${affiliations.length ? `<div class="sv-affils">
             ${affiliations.map(item => `<span class="sv-affil"><span class="sv-affil-lbl">${esc(item.label)}</span> ${esc(item.value)}</span>`).join('')}
           </div>` : ''}
         </div>
-        ${pin.banner ? `<div class="sv-banner"${pin.bannerLink ? ` style="cursor:pointer;" data-action="open-external-url" data-url="${esc(pin.bannerLink)}" title="Link: ${esc(pin.bannerLink)}"` : ''}><img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="${pin.bannerLink ? 'Klicken zum Oeffnen' : 'Regionsbanner'}"/></div>` : ''}
+        ${pin.banner ? `<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/>`, pin.bannerLink)}</div>` : ''}
       </div>
 
       ${(pin.img || pin.table?.length) ? `
@@ -63,9 +66,9 @@
         <div class="sv-img-wrap">
           <div class="sv-img">
             ${pin.img
-              ? `<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
-                 <div class="sv-img-ph" style="display:none">🗺</div>`
-              : `<div class="sv-img-ph">🖼</div>`}
+              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
+                 <div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink)
+              : `<div class="sv-img-ph">Bild</div>`}
           </div>
         </div>
         <div class="sv-col">
@@ -78,11 +81,11 @@
 
     actions.innerHTML = `
       ${runtime.isEditMode()
-        ? `<button class="s-btn s-del" data-action="delete-pin" data-pin-id="${esc(pin.id)}" style="margin-right:auto">🗑 Löschen</button>
-          <button class="s-btn" style="background:rgba(180,140,50,.15);border-color:var(--border2);" data-action="close-scroll-and-start-stamp" data-pin-id="${esc(pin.id)}">🔖 Stempeln</button>
-          <button class="s-btn s-edit" data-action="edit-pin-from-scroll" data-pin-id="${esc(pin.id)}">✎ Bearbeiten</button>`
+        ? `<button class="s-btn s-del" data-action="delete-pin" data-pin-id="${esc(pin.id)}" style="margin-right:auto">Loeschen</button>
+          <button class="s-btn" style="background:rgba(180,140,50,.15);border-color:var(--border2);" data-action="close-scroll-and-start-stamp" data-pin-id="${esc(pin.id)}">Stempeln</button>
+          <button class="s-btn s-edit" data-action="edit-pin-from-scroll" data-pin-id="${esc(pin.id)}">? Bearbeiten</button>`
         : ''}
-      <button class="s-btn s-cancel" data-action="close-scroll">Schließen</button>`;
+      <button class="s-btn s-cancel" data-action="close-scroll">Schlie?en</button>`;
   }
 
   function hexToRgb(hex){

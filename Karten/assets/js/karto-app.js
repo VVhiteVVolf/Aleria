@@ -151,6 +151,10 @@ const pc=document.getElementById('pc');
 // ═══════════════════════════════════════════
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
 function esc(s){return(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function mediaLink(html, href){
+  const url=(href||'').trim();
+  return url?`<a class="sv-linked-media" href="${esc(url)}">${html}</a>`:html;
+}
 function catOf(p){return S.cats.find(c=>c.id===p.cat)||S.cats[S.cats.length-1]||{id:'other',label:'Sonstiges',color:'#7a6040'};}
 let _ht;function hint(m){const e=document.getElementById('hint');e.textContent=m;e.classList.toggle('on',!!m);}
 let _tt;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('on');clearTimeout(_tt);_tt=setTimeout(()=>e.classList.remove('on'),2800);}
@@ -203,6 +207,10 @@ window.KartoRuntime = {
   closeModal: closeLMo,
   applyState,
   renderPins,
+  openEditorShell,
+  renderEditorPreview,
+  closeEditorShell,
+  mediaLink,
   pinLayer: () => pl,
   pinDisplayOptions(){
     return {dotSize:S.dotSize, labelSize:S.lblSize};
@@ -602,8 +610,166 @@ mapWrap.addEventListener('touchmove',e=>{
 mapWrap.addEventListener('touchend',()=>window.KartoPanning.stop(),{passive:true});
 
 // ═══════════════════════════════════════════
-// SIDEBAR
+// SIDEBAR / FULLSCREEN EDITOR
 // ═══════════════════════════════════════════
+const EDITOR_SPLIT_KEY='karto-editor-split-width';
+
+function clampEditorWidth(value){
+  const max=Math.max(520,window.innerWidth-460);
+  return Math.max(460,Math.min(max,Number(value)||660));
+}
+
+function applyEditorSplitWidth(value){
+  const width=clampEditorWidth(value);
+  document.getElementById('sidebar')?.style.setProperty('--editor-col-width',width+'px');
+  return width;
+}
+
+function restoreEditorSplitWidth(){
+  applyEditorSplitWidth(localStorage.getItem(EDITOR_SPLIT_KEY)||660);
+}
+
+function startEditorResize(event){
+  if(!document.getElementById('sidebar')?.classList.contains('editor-fullscreen'))return;
+  event.preventDefault();
+  const move=moveEvent=>{
+    const width=applyEditorSplitWidth(moveEvent.clientX);
+    localStorage.setItem(EDITOR_SPLIT_KEY,String(width));
+  };
+  const up=()=>{
+    document.body.classList.remove('editor-resizing');
+    window.removeEventListener('pointermove',move);
+    window.removeEventListener('pointerup',up);
+  };
+  document.body.classList.add('editor-resizing');
+  window.addEventListener('pointermove',move);
+  window.addEventListener('pointerup',up,{once:true});
+}
+
+function bindEditorResizer(){
+  const resizer=document.getElementById('sb-resizer');
+  if(!resizer||resizer.dataset.bound==='true')return;
+  resizer.dataset.bound='true';
+  resizer.addEventListener('pointerdown',startEditorResize);
+}
+
+function resetSidebarFrame(){
+  const sidebar=document.getElementById('sidebar');
+  if(!sidebar)return;
+  sidebar.innerHTML=`
+    <div id="sb-header">
+      <span id="sb-title">Ort</span>
+      <span id="sb-mode-lbl">Ansicht</span>
+      <button id="sb-close" data-action="close-sidebar">x</button>
+    </div>
+    <div id="sb-main">
+      <div id="sb-editor-col">
+        <div id="sb-body"></div>
+        <div id="sb-footer"></div>
+      </div>
+      <div id="sb-resizer" role="separator" aria-label="Editorbreite anpassen" title="Editorbreite anpassen"></div>
+      <div id="sb-preview">
+        <div id="sb-preview-head">Live-Vorschau</div>
+        <div id="sb-preview-content"></div>
+      </div>
+    </div>`;
+  bindEditorResizer();
+}
+
+function openEditorShell(kind,id){
+  bindEditorResizer();
+  const sidebar=document.getElementById('sidebar');
+  restoreEditorSplitWidth();
+  sidebar.classList.add('editor-fullscreen');
+  sidebar.dataset.editorKind=kind;
+  sidebar.dataset.editorId=id;
+  renderEditorPreview();
+}
+
+function closeEditorShell(){
+  const sidebar=document.getElementById('sidebar');
+  sidebar.classList.remove('open','editor-fullscreen');
+  delete sidebar.dataset.editorKind;
+  delete sidebar.dataset.editorId;
+  resetSidebarFrame();
+}
+
+function renderEditorPreview(){
+  const sidebar=document.getElementById('sidebar');
+  const content=document.getElementById('sb-preview-content');
+  if(!sidebar||!content||!sidebar.classList.contains('editor-fullscreen'))return;
+  const id=sidebar.dataset.editorId;
+  const pin=S.pins.find(item=>item.id===id);
+  if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
+  const category=catOf(pin);
+  const affiliations=[];
+  if(pin.region) affiliations.push({label:'Region', value:pin.region});
+  if(pin.house) affiliations.push({label:'Herrschaft', value:pin.house});
+  if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
+  const rgb=hexToRgb(category.color||'#8a6510');
+  const headerBg=`linear-gradient(135deg,rgba(${rgb.r},${rgb.g},${rgb.b},.2) 0%,rgba(${rgb.r},${rgb.g},${rgb.b},.07) 55%,transparent 100%)`;
+  const rows=(pin.table||[]).filter(row=>row.k||row.v);
+  content.innerHTML=`
+    <div class="editor-preview-card">
+      <div class="sv-header" style="background:${headerBg};">
+        <div class="sv-crest-wrap">
+          <div class="sv-crest">
+            ${pin.crest
+              ? mediaLink(`<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`, pin.crestLink)
+              : `<span style="opacity:.3;font-size:2rem">🏰</span>`}
+          </div>
+        </div>
+        ${category.marker ? `<div class="sv-marker-icon" title="${esc(category.label)}"><img src="${esc(category.marker)}" onerror="this.style.display='none'"/></div>` : ''}
+        <div class="sv-header-col">
+          <div class="sv-title">${esc(pin.title||'Unbekannter Ort')}</div>
+          <div class="sv-subtitle-row">
+            <span class="sv-cat-badge" style="color:${category.color};border-color:${category.color}88;background:rgba(${rgb.r},${rgb.g},${rgb.b},.15);">
+              ${pin.pinMarker
+                ? `<img src="${esc(pin.pinMarker)}" style="width:14px;height:17px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'"/>`
+                : `<span style="width:7px;height:7px;border-radius:50%;background:${category.color};display:inline-block;flex-shrink:0;"></span>`}
+              ${esc(category.label)}
+            </span>
+            ${pin.secret ? `<span class="sv-secret-badge">Geheim</span>` : ''}
+          </div>
+          ${affiliations.length ? `<div class="sv-affils">
+            ${affiliations.map(item=>`<span class="sv-affil"><span class="sv-affil-lbl">${esc(item.label)}</span> ${esc(item.value)}</span>`).join('')}
+          </div>` : ''}
+        </div>
+        ${pin.banner ? `<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'" title="Regionsbanner"/>`, pin.bannerLink)}</div>` : ''}
+      </div>
+
+      ${(pin.img||rows.length) ? `
+      <div class="sv-body">
+        <div class="sv-img-wrap">
+          <div class="sv-img">
+            ${pin.img
+              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
+                 <div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink)
+              : `<div class="sv-img-ph">Bild</div>`}
+          </div>
+        </div>
+        <div class="sv-col">
+          ${rows.length ? `<table class="sv-table">${rows.map(row=>`<tr><td>${esc(row.k)}</td><td>${esc(row.v)}</td></tr>`).join('')}</table>` : ''}
+        </div>
+      </div>` : ''}
+
+      ${pin.text ? `<div class="sv-lore"><div class="sv-text">${fmtText(pin.text)}</div></div>` : ''}
+    </div>`;
+}
+
+function hexToRgb(hex){
+  const clean=(hex||'#8a6510').replace('#','');
+  const normalized=clean.length===3?clean.split('').map(char=>char+char).join(''):clean.padEnd(6,'0').slice(0,6);
+  const r=parseInt(normalized.slice(0,2),16);
+  const g=parseInt(normalized.slice(2,4),16);
+  const b=parseInt(normalized.slice(4,6),16);
+  return {
+    r:Number.isNaN(r)?138:r,
+    g:Number.isNaN(g)?101:g,
+    b:Number.isNaN(b)?16:b,
+  };
+}
+
 function openSidebar(id, mode){
   const p=S.pins.find(x=>x.id===id);if(!p)return;
   if(mode==='edit'){
@@ -614,6 +780,7 @@ function openSidebar(id, mode){
 }
 function closeSidebar(){
   window.KartoPinEditor?.close();
+  closeEditorShell();
 }
 function closeScroll(){
   window.KartoPinDetailView?.close();

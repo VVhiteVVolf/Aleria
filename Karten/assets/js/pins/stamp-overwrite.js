@@ -74,6 +74,15 @@
       title: stampTemplate.title,
       cat: stampTemplate.cat,
       img: stampTemplate.img || '',
+      imgLink: stampTemplate.imgLink || '',
+      crest: stampTemplate.crest || '',
+      crestLink: stampTemplate.crestLink || '',
+      banner: stampTemplate.banner || '',
+      bannerLink: stampTemplate.bannerLink || '',
+      region: stampTemplate.region || '',
+      house: stampTemplate.house || '',
+      faction: stampTemplate.faction || '',
+      pinMarker: stampTemplate.pinMarker || '',
       table: JSON.parse(JSON.stringify(stampTemplate.table || [])),
       text: stampTemplate.text || '',
       secret: stampTemplate.secret || false
@@ -203,7 +212,14 @@
     if(overwriteFields.cat && source.cat) target.cat = source.cat;
     if(overwriteFields.region) target.region = source.region || '';
     if(overwriteFields.house) target.house = source.house || '';
-    if(overwriteFields.img && source.img) target.img = source.img;
+    if(overwriteFields.img && source.img){
+      target.img = source.img;
+      target.imgLink = source.imgLink || '';
+      target.crest = source.crest || target.crest || '';
+      target.crestLink = source.crestLink || '';
+      target.banner = source.banner || target.banner || '';
+      target.bannerLink = source.bannerLink || '';
+    }
     if(overwriteFields.text && source.text) target.text = source.text;
     runtime.save();
     runtime.renderPins();

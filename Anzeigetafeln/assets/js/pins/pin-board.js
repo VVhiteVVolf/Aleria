@@ -28,7 +28,7 @@
       if(filter !== 'all' && pin.cat !== filter) return;
 
       const el = document.createElement('div');
-      el.className = 'pin' + (rt().isEditMode() ? ' edit-mode' : '') + (pin.secret ? ' secret' : '');
+      el.className = 'pin' + (rt().canEditPins() ? ' edit-mode' : '') + (pin.secret ? ' secret' : '');
       el.dataset.id = pin.id;
       el.style.left = (pin.x * size.w) + 'px';
       el.style.top = (pin.y * size.h) + 'px';
@@ -39,11 +39,11 @@
       let downX = 0;
       let downY = 0;
       el.addEventListener('mouseenter', event => {
-        if(rt().isEditMode()) return;
+        if(rt().canEditPins()) return;
         showTooltip(pin, event.clientX, event.clientY);
       });
       el.addEventListener('mousemove', event => {
-        if(rt().isEditMode()) return;
+        if(rt().canEditPins()) return;
         moveTooltip(event.clientX, event.clientY);
       });
       el.addEventListener('mouseleave', hideTooltip);
@@ -52,7 +52,7 @@
         event.stopPropagation();
         downX = event.clientX;
         downY = event.clientY;
-        if(rt().isEditMode()){
+        if(rt().canEditPins()){
           dragPinId = pin.id;
           dragMoved = false;
           const point = rt().mapPointFromClient(event.clientX, event.clientY);
@@ -67,7 +67,7 @@
         const dist = Math.hypot(event.clientX - downX, event.clientY - downY);
         if(dist < 5){
           if(rt().isOverwriteMode()) rt().applyOverwrite(pin.id);
-          else window.openSidebar(pin.id, rt().isEditMode() ? 'edit' : 'view');
+          else window.openSidebar(pin.id, rt().canEditPins() ? 'edit' : 'view');
         }
         if(dragPinId){
           rt().save();
@@ -81,7 +81,7 @@
 
   function attachDragListeners(){
     rt().mapWrap().addEventListener('mousemove', event => {
-      if(!dragPinId) return;
+      if(!dragPinId||!rt().canEditPins()) return;
       dragMoved = true;
       const S = state();
       const size = imageSize();

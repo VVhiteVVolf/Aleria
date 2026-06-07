@@ -11,6 +11,10 @@
   function activePin(){ return state().pins.find(p => p.id === activePinId); }
 
   function open(pinId){
+    if(!rt().canEditPins()){
+      rt().toast('Pins koennen nur in der Pins-Ansicht bearbeitet werden');
+      return;
+    }
     const pin = state().pins.find(p => p.id === pinId);
     if(!pin) return;
     activePinId = pinId;
@@ -78,6 +82,7 @@
           </div>
           <div class="e-img-col">
             <input class="e-inp" id="sb-crest" value="${esc(pin.crest || '')}" placeholder="URL zum Wappen-Bild…"/>
+            <input class="e-inp" id="sb-crest-link" value="${esc(pin.crestLink || '')}" placeholder="Link-Ziel beim Klick..."/>
             <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-crest">↻ Vorschau</button>
           </div>
         </div>
@@ -91,6 +96,7 @@
           </div>
           <div class="e-img-col">
             <input class="e-inp" id="sb-banner" value="${esc(pin.banner || '')}" placeholder="URL zum Regionsbanner…"/>
+            <input class="e-inp" id="sb-banner-link" value="${esc(pin.bannerLink || '')}" placeholder="Link-Ziel beim Klick..."/>
             <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-banner">↻ Vorschau</button>
           </div>
         </div>
@@ -102,6 +108,7 @@
           <div class="e-img-prev" id="sb-img-prev">${pin.img ? `<img src="${esc(pin.img)}"/>` : '🖼'}</div>
           <div class="e-img-col">
             <input class="e-inp" id="sb-img" value="${esc(pin.img || '')}" placeholder="https://i.imgur.com/…"/>
+            <input class="e-inp" id="sb-img-link" value="${esc(pin.imgLink || '')}" placeholder="Link-Ziel beim Klick..."/>
             <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-image">↻ Vorschau</button>
           </div>
         </div>
@@ -153,6 +160,19 @@
     <button class="s-btn s-del" data-action="pin-delete" data-pin-id="${pin.id}" style="margin-right:auto">🗑</button>
     <button class="s-btn s-cancel" data-action="close-sidebar">Abbrechen</button>
     <button class="s-btn s-save" data-action="save-pin" data-pin-id="${pin.id}">✓ Speichern</button>`;
+    rt().openEditorShell('pin', pin.id);
+    body.querySelectorAll('input, textarea, select').forEach(control => {
+      control.addEventListener('input', () => {
+        syncAll();
+        rt().renderEditorPreview();
+        rt().renderPins();
+      });
+      control.addEventListener('change', () => {
+        syncAll();
+        rt().renderEditorPreview();
+        rt().renderPins();
+      });
+    });
   }
 
   function previewImage(inputId, previewId, fallback, fit){
@@ -233,8 +253,11 @@
     pin.title = document.getElementById('sb-title-inp')?.value || pin.title;
     pin.cat = document.getElementById('sb-cat')?.value || pin.cat;
     pin.img = document.getElementById('sb-img')?.value ?? pin.img;
+    pin.imgLink = document.getElementById('sb-img-link')?.value ?? pin.imgLink;
     pin.crest = document.getElementById('sb-crest')?.value ?? pin.crest;
+    pin.crestLink = document.getElementById('sb-crest-link')?.value ?? pin.crestLink;
     pin.banner = document.getElementById('sb-banner')?.value ?? pin.banner;
+    pin.bannerLink = document.getElementById('sb-banner-link')?.value ?? pin.bannerLink;
     pin.region = document.getElementById('sb-region')?.value ?? pin.region;
     pin.house = document.getElementById('sb-house')?.value ?? pin.house;
     pin.faction = document.getElementById('sb-faction')?.value ?? pin.faction;
@@ -277,8 +300,11 @@
     pin.title = (document.getElementById('sb-title-inp')?.value || '').trim() || 'Unbekannter Ort';
     pin.cat = document.getElementById('sb-cat')?.value || (S.cats[0]?.id || 'other');
     pin.img = (document.getElementById('sb-img')?.value || '').trim();
+    pin.imgLink = (document.getElementById('sb-img-link')?.value || '').trim();
     pin.crest = (document.getElementById('sb-crest')?.value || '').trim();
+    pin.crestLink = (document.getElementById('sb-crest-link')?.value || '').trim();
     pin.banner = (document.getElementById('sb-banner')?.value || '').trim();
+    pin.bannerLink = (document.getElementById('sb-banner-link')?.value || '').trim();
     pin.region = (document.getElementById('sb-region')?.value || '').trim();
     pin.house = (document.getElementById('sb-house')?.value || '').trim();
     pin.faction = (document.getElementById('sb-faction')?.value || '').trim();

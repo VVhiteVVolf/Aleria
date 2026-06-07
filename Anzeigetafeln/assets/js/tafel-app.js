@@ -125,9 +125,17 @@ const pc=document.getElementById('pc');
 // ═══════════════════════════════════════════
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
 function esc(s){return(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function mediaLink(html, href){
+  const url=(href||'').trim();
+  return url?`<a class="sv-linked-media" href="${esc(url)}">${html}</a>`:html;
+}
 function catOf(p){return S.cats.find(c=>c.id===p.cat)||S.cats[S.cats.length-1]||{id:'other',label:'Sonstiges',color:'#7a6040'};}
 let _ht;function hint(m){const e=document.getElementById('hint');e.textContent=m;e.classList.toggle('on',!!m);}
 let _tt;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('on');clearTimeout(_tt);_tt=setTimeout(()=>e.classList.remove('on'),2800);}
+function isZettelLayer(){return currentLayer==='normal';}
+function isPinLayer(){return currentLayer==='pins';}
+function canEditZettel(){return editMode&&isZettelLayer();}
+function canEditPins(){return editMode&&isPinLayer();}
 
 function applyTafelConfig(){
   const cfg=TAFEL_CONFIG;
@@ -283,10 +291,16 @@ window.TafelRuntime = {
   pinTemplates(){ return PIN_TEMPLATES; },
   applyState,
   renderPins,
+  openEditorShell,
+  renderEditorPreview,
   isOverwriteMode: () => !!owTemplate,
   applyOverwrite(targetId){ applyOverwrite(targetId); },
   setLayer(layer){ setLayer(layer); },
   currentLayer: () => currentLayer,
+  canEditZettel,
+  canEditPins,
+  isZettelLayer,
+  isPinLayer,
   activeCategoryFilter: () => activeFilter,
   setActiveCategoryFilter(filter){ activeFilter = filter; },
   catOf,
@@ -388,12 +402,26 @@ new ResizeObserver(()=>{if(imgW)fitView();}).observe(mapWrap);
 // LAYERS
 // ═══════════════════════════════════════════
 let currentLayer='normal';
+function syncLayerEditControls(){
+  const showZettel=editMode&&isZettelLayer();
+  const showPins=editMode&&isPinLayer();
+  document.getElementById('btn-add-zettel').style.display=showZettel?'block':'none';
+  document.getElementById('btn-add-ort').style.display=showPins?'block':'none';
+  document.getElementById('btn-stamp').style.display=showPins?'block':'none';
+  document.getElementById('btn-overwrite').style.display=showPins?'block':'none';
+}
 function _applyLayer(l){
   currentLayer=l;
   window.TafelBoardLayers.apply(l, {editMode});
+  syncLayerEditControls();
 }
 function setLayer(l){
   if(addingOrt||addingZettel||addingPin) cancelAdd();
+  if(l!==currentLayer){
+    if(stampTemplate) stopStamp();
+    if(owTemplate) stopOverwrite();
+    closeSidebar();
+  }
   _applyLayer(l);
 }
 
@@ -426,10 +454,7 @@ function enterEdit(){
   document.getElementById('btn-edit').textContent='🔓 Editormodus';
   document.getElementById('btn-edit').classList.add('on');
   document.getElementById('lock-lbl').textContent='aktiv';
-  document.getElementById('btn-add-zettel').style.display=currentLayer==='normal'?'block':'none';
-  document.getElementById('btn-add-ort').style.display=currentLayer==='pins'?'block':'none';
-  document.getElementById('btn-stamp').style.display='block';
-  document.getElementById('btn-overwrite').style.display='block';
+  syncLayerEditControls();
   document.getElementById('btn-board-images').style.display='block';
   document.getElementById('btn-export').style.display='block';
   document.getElementById('dm-btn-cats').style.display='block';
@@ -566,6 +591,7 @@ let stampTemplate=null; // the pin being used as template
 
 function openStampPicker(){
   if(!editMode)return;
+  if(!canEditPins()){toast('Kopieren und Stempeln ist nur in der Pins-Ansicht moeglich');return;}
   document.getElementById('stamp-search').value='';
   renderStampList('');
   document.getElementById('stamp-mo').classList.add('open');
@@ -587,6 +613,7 @@ function renderStampList(q){
 }
 
 function startStamp(sourceId){
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht gestempelt werden');return;}
   const src=S.pins.find(x=>x.id===sourceId);if(!src)return;
   stampTemplate=src;
   closeLMo('stamp-mo');
@@ -616,6 +643,7 @@ let owTemplate=null; // {table, cat, region, house, img, text, title} — from t
 let owFields={};
 
 function openOverwritePicker(){
+  if(!canEditPins()){toast('Ueberschreiben ist nur in der Pins-Ansicht moeglich');return;}
   owSwitchTab('tpl');
   document.getElementById('overwrite-mo').classList.add('open');
 }
@@ -650,6 +678,7 @@ function renderOwTplList(){
 }
 
 function startOverwriteFromTemplate(tplId){
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht ueberschrieben werden');return;}
   const tpl=PIN_TEMPLATES.find(t=>t.id===tplId); if(!tpl)return;
   // Build a pseudo-pin from the template
   owTemplate={
@@ -678,12 +707,14 @@ function renderOverwritePinList(q){
 }
 
 function startOverwriteFromPin(sourceId){
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht ueberschrieben werden');return;}
   const src=S.pins.find(x=>x.id===sourceId); if(!src)return;
   owTemplate=src;
   _activateOverwriteMode(src.title);
 }
 
 function _activateOverwriteMode(label){
+  if(!canEditPins())return;
   owFields={
     table: document.getElementById('owf-table')?.checked,
     cat:   document.getElementById('owf-cat')?.checked,
@@ -715,6 +746,7 @@ function stopOverwrite(){
 }
 
 function applyOverwrite(targetId){
+  if(!canEditPins()){stopOverwrite();return;}
   if(!owTemplate) return;
   const target=S.pins.find(p=>p.id===targetId); if(!target)return;
   const src=owTemplate;
@@ -722,7 +754,14 @@ function applyOverwrite(targetId){
   if(owFields.cat && src.cat)   target.cat=src.cat;
   if(owFields.region)target.region=src.region||'';
   if(owFields.house) target.house=src.house||'';
-  if(owFields.img && src.img)   target.img=src.img;
+  if(owFields.img && src.img){
+    target.img=src.img;
+    target.imgLink=src.imgLink||'';
+    target.crest=src.crest||target.crest||'';
+    target.crestLink=src.crestLink||'';
+    target.banner=src.banner||target.banner||'';
+    target.bannerLink=src.bannerLink||'';
+  }
   if(owFields.text && src.text) target.text=src.text;
   saveD(); renderPins();
   // re-add highlight class after re-render
@@ -731,6 +770,7 @@ function applyOverwrite(targetId){
 }
 
 function placeStamp(mx,my){
+  if(!canEditPins()){stopStamp();return;}
   if(!stampTemplate)return;
   const src=stampTemplate;
   const p={
@@ -739,6 +779,15 @@ function placeStamp(mx,my){
     title:src.title,
     cat:src.cat,
     img:src.img||'',
+    imgLink:src.imgLink||'',
+    crest:src.crest||'',
+    crestLink:src.crestLink||'',
+    banner:src.banner||'',
+    bannerLink:src.bannerLink||'',
+    region:src.region||'',
+    house:src.house||'',
+    faction:src.faction||'',
+    pinMarker:src.pinMarker||'',
     table:JSON.parse(JSON.stringify(src.table||[])),
     text:src.text||'',
     secret:src.secret||false
@@ -787,7 +836,7 @@ let _zettelPendingPos=null;
 // ─── ORT setzen ───────────────────────────────
 function startAddOrt(){
   if(!editMode)return;
-  _applyLayer('pins');
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht bearbeitet werden');return;}
   addingOrt=true; addingZettel=false; addingPin=false;
   mapWrap.style.cursor='none';
   pc.style.display='block';
@@ -814,6 +863,7 @@ function selectTpl(id){
   document.getElementById('tpl-apply-btn').disabled=false;
 }
 function tplApply(){
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht bearbeitet werden');return;}
   if(!_tplPendingPin||!_ortTplSelected)return;
   const tpl=PIN_TEMPLATES.find(t=>t.id===_ortTplSelected);
   if(tpl) _tplPendingPin.table=tpl.table.map(r=>({...r}));
@@ -834,16 +884,17 @@ function cancelAdd(){
 }
 
 function placePin(mx,my){
+  if(!canEditPins()){cancelAdd();toast('Pins koennen nur in der Pins-Ansicht gesetzt werden');return;}
   addingOrt=false; addingPin=false;
   mapWrap.style.cursor='grab';pc.style.display='none';hint('');
-  const p={id:uid(),x:mx/imgW,y:my/imgH,title:'Neuer Ort',cat:S.cats[0]?.id||'other',img:'',crest:'',region:'',house:'',faction:'',table:[],text:'',secret:false};
+  const p={id:uid(),x:mx/imgW,y:my/imgH,title:'Neuer Ort',cat:S.cats[0]?.id||'other',img:'',imgLink:'',crest:'',crestLink:'',banner:'',bannerLink:'',region:'',house:'',faction:'',table:[],text:'',secret:false};
   openTplPicker(p);
 }
 
 // ─── ZETTEL setzen ────────────────────────────
 function startAddZettel(){
   if(!editMode)return;
-  _applyLayer('normal');
+  if(!canEditZettel()){toast('Zettel koennen nur in der Tafel-Ansicht bearbeitet werden');return;}
   addingZettel=true; addingOrt=false; addingPin=false;
   mapWrap.style.cursor='none';
   pc.style.display='block';
@@ -864,6 +915,7 @@ function selectZettelType(id){
   document.getElementById('zettel-tpl-apply-btn').disabled=false;
 }
 function zettelTplApply(){
+  if(!canEditZettel()){toast('Zettel koennen nur in der Tafel-Ansicht bearbeitet werden');return;}
   if(!_zettelPendingPos||!_tplSelected)return;
   const z=TafelZettelConfig.createDraft(_tplSelected, _zettelPendingPos, uid);
   closeLMo('zettel-tpl-mo');
@@ -875,6 +927,7 @@ function zettelTplApply(){
 }
 
 function placeZettel(mx,my){
+  if(!canEditZettel()){cancelAdd();toast('Zettel koennen nur in der Tafel-Ansicht gesetzt werden');return;}
   addingZettel=false;
   mapWrap.style.cursor='grab';pc.style.display='none';hint('');
   openZettelTypePicker({x:mx/imgW, y:my/imgH});
@@ -911,8 +964,8 @@ mapWrap.addEventListener('click',e=>{
   const r=mapWrap.getBoundingClientRect();
   const mx=(e.clientX-r.left-vx)/vz, my=(e.clientY-r.top-vy)/vz;
   if(stampTemplate){placeStamp(mx,my);return;}
-  if(addingOrt||addingPin){placePin(mx,my);}
-  else if(addingZettel){placeZettel(mx,my);}
+  if((addingOrt||addingPin)&&canEditPins()){placePin(mx,my);}
+  else if(addingZettel&&canEditZettel()){placeZettel(mx,my);}
 });
 mapWrap.addEventListener('contextmenu',e=>e.preventDefault());
 mapWrap.addEventListener('wheel',e=>{
@@ -978,7 +1031,7 @@ function openZettelScroll(id){
   else if(z.typ==='zeitung')sc.innerHTML=TafelZettelViews.renderZeitung(z);
   else if(z.typ==='vermisst')sc.innerHTML=TafelZettelViews.renderVermisst(z);
   else sc.innerHTML=TafelZettelViews.renderGeneric(z);
-  sa.innerHTML=editMode?
+  sa.innerHTML=canEditZettel()?
     `<button class="s-btn s-edit" data-action="zettel-open-edit" data-zettel-id="${id}">✎ Bearbeiten</button>
     <button class="s-btn s-cancel" data-action="close-scroll">Schließen</button>`
     :`<button class="s-btn s-cancel" data-action="close-scroll">Schließen</button>`;
@@ -989,10 +1042,168 @@ function openZettelScroll(id){
 
 // ═══════════════════════════════════════════
 let sidebarPinId=null;
+const EDITOR_SPLIT_KEY='tafel-editor-split-width';
+
+function clampEditorWidth(value){
+  const max=Math.max(520,window.innerWidth-460);
+  return Math.max(460,Math.min(max,Number(value)||660));
+}
+
+function applyEditorSplitWidth(value){
+  const width=clampEditorWidth(value);
+  document.getElementById('sidebar')?.style.setProperty('--editor-col-width',width+'px');
+  return width;
+}
+
+function restoreEditorSplitWidth(){
+  applyEditorSplitWidth(localStorage.getItem(EDITOR_SPLIT_KEY)||660);
+}
+
+function startEditorResize(event){
+  if(!document.getElementById('sidebar')?.classList.contains('editor-fullscreen'))return;
+  event.preventDefault();
+  const move=moveEvent=>{
+    const width=applyEditorSplitWidth(moveEvent.clientX);
+    localStorage.setItem(EDITOR_SPLIT_KEY,String(width));
+  };
+  const up=()=>{
+    document.body.classList.remove('editor-resizing');
+    window.removeEventListener('pointermove',move);
+    window.removeEventListener('pointerup',up);
+  };
+  document.body.classList.add('editor-resizing');
+  window.addEventListener('pointermove',move);
+  window.addEventListener('pointerup',up,{once:true});
+}
+
+function bindEditorResizer(){
+  const resizer=document.getElementById('sb-resizer');
+  if(!resizer||resizer.dataset.bound==='true')return;
+  resizer.dataset.bound='true';
+  resizer.addEventListener('pointerdown',startEditorResize);
+}
+
+function resetSidebarFrame(){
+  const sidebar=document.getElementById('sidebar');
+  if(!sidebar)return;
+  sidebar.innerHTML=`
+    <div id="sb-header">
+      <span id="sb-title">Ort</span>
+      <span id="sb-mode-lbl">Ansicht</span>
+      <button id="sb-close" data-action="close-sidebar">x</button>
+    </div>
+    <div id="sb-main">
+      <div id="sb-editor-col">
+        <div id="sb-body"></div>
+        <div id="sb-footer"></div>
+      </div>
+      <div id="sb-resizer" role="separator" aria-label="Editorbreite anpassen" title="Editorbreite anpassen"></div>
+      <div id="sb-preview">
+        <div id="sb-preview-head">Live-Vorschau</div>
+        <div id="sb-preview-content"></div>
+      </div>
+    </div>`;
+}
+
+function ensureEditorShellStructure(){
+  const sidebar=document.getElementById('sidebar');
+  if(!sidebar||document.getElementById('sb-main'))return;
+  const body=document.getElementById('sb-body');
+  const footer=document.getElementById('sb-footer');
+  if(!body||!footer)return;
+  const main=document.createElement('div');
+  main.id='sb-main';
+  const editorCol=document.createElement('div');
+  editorCol.id='sb-editor-col';
+  const preview=document.createElement('div');
+  preview.id='sb-preview';
+  preview.innerHTML='<div id="sb-preview-head">Live-Vorschau</div><div id="sb-preview-content"></div>';
+  const resizer=document.createElement('div');
+  resizer.id='sb-resizer';
+  resizer.setAttribute('role','separator');
+  resizer.setAttribute('aria-label','Editorbreite anpassen');
+  resizer.title='Editorbreite anpassen';
+  editorCol.appendChild(body);
+  editorCol.appendChild(footer);
+  main.appendChild(editorCol);
+  main.appendChild(resizer);
+  main.appendChild(preview);
+  sidebar.appendChild(main);
+  bindEditorResizer();
+}
+
+function openEditorShell(kind,id){
+  ensureEditorShellStructure();
+  bindEditorResizer();
+  const sidebar=document.getElementById('sidebar');
+  restoreEditorSplitWidth();
+  sidebar.classList.add('editor-fullscreen');
+  sidebar.dataset.editorKind=kind;
+  sidebar.dataset.editorId=id;
+  renderEditorPreview();
+}
+
+function renderEditorPreview(){
+  const sidebar=document.getElementById('sidebar');
+  const content=document.getElementById('sb-preview-content');
+  if(!sidebar||!content||!sidebar.classList.contains('editor-fullscreen'))return;
+  const kind=sidebar.dataset.editorKind;
+  const id=sidebar.dataset.editorId;
+  if(kind==='zettel'){
+    const z=S.zettel.find(x=>x.id===id);
+    if(!z){content.innerHTML='<div class="editor-preview-empty">Kein Zettel gewaehlt.</div>';return;}
+    let html='';
+    if(z.typ==='quest')html=TafelZettelViews.renderQuest(z);
+    else if(z.typ==='steckbrief'){
+      if(!z.personen||!z.personen.length) z.personen=[{portrait:z.portrait||'',title:z.title||'',untertitel:z.untertitel||'',text:z.text||'',table:(z.table||[]).map(r=>({...r}))}];
+      html=TafelZettelViews.renderSteckbrief(z);
+    }
+    else if(z.typ==='zeitung')html=TafelZettelViews.renderZeitung(z);
+    else if(z.typ==='vermisst')html=TafelZettelViews.renderVermisst(z);
+    else html=TafelZettelViews.renderGeneric(z);
+    content.innerHTML=`<div class="editor-preview-card">${html}</div>`;
+    return;
+  }
+  if(kind==='pin'){
+    const pin=S.pins.find(x=>x.id===id);
+    if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
+    const cat=catOf(pin);
+    const rows=(pin.table||[]).filter(row=>row.k||row.v);
+    content.innerHTML=`
+      <div class="editor-preview-card">
+        <div class="sv-header">
+          <div class="sv-crest-wrap">
+            <div class="sv-crest">${pin.crest?mediaLink(`<img src="${esc(pin.crest)}" onerror="this.parentElement.innerHTML='🏰'"/>`, pin.crestLink):'<span style="opacity:.3;font-size:2rem">🏰</span>'}</div>
+          </div>
+          <div class="sv-header-col">
+            <div class="sv-title">${esc(pin.title||'Unbekannter Ort')}</div>
+            <div class="sv-subtitle-row">
+              <span class="sv-cat-badge" style="color:${cat.color};border-color:${cat.color}88;background:rgba(180,140,50,.15);">${esc(cat.label)}</span>
+              ${pin.secret?'<span class="sv-secret-badge">Geheim</span>':''}
+            </div>
+            <div class="sv-affils">
+              ${pin.region?`<span class="sv-affil"><span class="sv-affil-lbl">Region</span> ${esc(pin.region)}</span>`:''}
+              ${pin.house?`<span class="sv-affil"><span class="sv-affil-lbl">Herrschaft</span> ${esc(pin.house)}</span>`:''}
+              ${pin.faction?`<span class="sv-affil"><span class="sv-affil-lbl">Fraktion</span> ${esc(pin.faction)}</span>`:''}
+            </div>
+          </div>
+          ${pin.banner?`<div class="sv-banner">${mediaLink(`<img src="${esc(pin.banner)}" onerror="this.parentElement.style.display='none'"/>`, pin.bannerLink)}</div>`:''}
+        </div>
+        ${(pin.img||rows.length)?`<div class="sv-body">
+          <div class="sv-img-wrap"><div class="sv-img">${pin.img?mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/><div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink):'<div class="sv-img-ph">Bild</div>'}</div></div>
+          <div class="sv-col">${rows.length?`<table class="sv-table">${rows.map(row=>`<tr><td>${esc(row.k)}</td><td>${esc(row.v)}</td></tr>`).join('')}</table>`:''}</div>
+        </div>`:''}
+        ${pin.text?`<div class="sv-lore"><div class="sv-text">${window.TafelPinScrollView.fmtText(pin.text)}</div></div>`:''}
+      </div>`;
+    return;
+  }
+  content.innerHTML='<div class="editor-preview-empty">Keine Vorschau verfuegbar.</div>';
+}
 
 function openSidebar(id, mode){
   const p=S.pins.find(x=>x.id===id);if(!p)return;
   if(mode==='edit'){
+    if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht bearbeitet werden');return;}
     // Sidebar for editing
     sidebarPinId=id;
     window.TafelPinEditor.open(id);
@@ -1005,10 +1216,14 @@ function openSidebar(id, mode){
   }
 }
 function closeSidebar(){
-  document.getElementById('sidebar').classList.remove('open');
+  const sidebar=document.getElementById('sidebar');
+  sidebar.classList.remove('open','editor-fullscreen');
+  delete sidebar.dataset.editorKind;
+  delete sidebar.dataset.editorId;
   sidebarPinId=null;
   window.TafelPinEditor?.clearActive();
   window.TafelZettelEditor?.clearActive();
+  resetSidebarFrame();
 }
 // ═══════════════════════════════════════════
 // CARD WIDTH
@@ -1055,7 +1270,7 @@ function openScroll(id,mode){openSidebar(id,mode);}
 // TEXT FORMATTING
 // ═══════════════════════════════════════════
 function askDel(id){
-  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  if(!canEditPins()){toast('Pins koennen nur in der Pins-Ansicht geloescht werden');return;}
   const p=S.pins.find(x=>x.id===id);
   if(!confirm('Pin "'+(p?.title||id)+'" wirklich löschen?'))return;
   S.pins=S.pins.filter(x=>x.id!==id);

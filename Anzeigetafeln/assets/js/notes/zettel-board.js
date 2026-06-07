@@ -25,10 +25,10 @@
       if(z.secret && !rt().isEditMode()) return;
       const el = document.createElement('div');
       el.dataset.id = z.id;
-      el.className = 'pin zettel-pin' + (rt().isEditMode() ? ' edit-mode' : '') + (z.secret ? ' secret' : '');
+      el.className = 'pin zettel-pin' + (rt().canEditZettel() ? ' edit-mode' : '') + (z.secret ? ' secret' : '');
       el.style.cssText = `position:absolute;left:${z.x * size.w}px;top:${z.y * size.h}px;
         transform:translate(-50%,-50%);pointer-events:all;
-        cursor:${rt().isEditMode() ? 'grab' : 'pointer'};`;
+        cursor:${rt().canEditZettel() ? 'grab' : 'pointer'};`;
       el.innerHTML = `<div class="pin-dot" style="width:${ds}px;height:${ds}px;background:#8b6914;border:2.5px solid #f5e9c8;box-shadow:0 2px 8px rgba(0,0,0,.5),0 0 0 1px #c8a84b;"></div>`;
 
       let downX = 0;
@@ -45,7 +45,7 @@
         e.stopPropagation();
         downX = e.clientX;
         downY = e.clientY;
-        if(rt().isEditMode()){
+        if(rt().canEditZettel()){
           dragId = z.id;
           dragMoved = false;
           const point = rt().mapPointFromClient(e.clientX, e.clientY);
@@ -58,7 +58,7 @@
         e.stopPropagation();
         const dist = Math.hypot(e.clientX - downX, e.clientY - downY);
         if(dist < 5){
-          if(rt().isEditMode()) window.openZettelSidebar(z.id, 'edit');
+          if(rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
           else window.openZettelScroll(z.id);
         }
         if(dragId){
@@ -109,7 +109,7 @@
 
   function attachDragListeners(){
     mapWrap().addEventListener('mousemove', e => {
-      if(!dragId) return;
+      if(!dragId||!rt().canEditZettel()) return;
       dragMoved = true;
       const S = state();
       const size = imageSize();

@@ -489,8 +489,17 @@ if (window.KARTO_BOOT_STATUS === 'active') {
     <span id="sb-mode-lbl">Ansicht</span>
     <button id="sb-close" data-action="close-sidebar">✕</button>
   </div>
-  <div id="sb-body"></div>
-  <div id="sb-footer"></div>
+  <div id="sb-main">
+    <div id="sb-editor-col">
+      <div id="sb-body"></div>
+      <div id="sb-footer"></div>
+    </div>
+    <div id="sb-resizer" role="separator" aria-label="Editorbreite anpassen" title="Editorbreite anpassen"></div>
+    <div id="sb-preview">
+      <div id="sb-preview-head">Live-Vorschau</div>
+      <div id="sb-preview-content"></div>
+    </div>
+  </div>
 </div>
 
 <!-- DATEN MANAGER MODAL -->

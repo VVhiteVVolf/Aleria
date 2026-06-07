@@ -16,7 +16,7 @@
   }
 
   function close(){
-    document.getElementById('sidebar').classList.remove('open');
+    runtime.closeEditorShell?.();
     activePinId = null;
   }
 
@@ -106,6 +106,7 @@
             <div class="e-img-prev" id="sb-img-prev">${pin.img ? `<img src="${esc(pin.img)}"/>` : '🖼'}</div>
             <div class="e-img-col">
               <input class="e-inp" id="sb-img" value="${esc(pin.img || '')}" placeholder="https://i.imgur.com/…"/>
+              <input class="e-inp" id="sb-imglink" value="${esc(pin.imgLink || '')}" placeholder="Link-Ziel beim Klick..." style="font-size:var(--fs-xs);opacity:.85;"/>
               <button class="add-row" style="border-style:solid;opacity:.65" data-action="preview-pin-editor-image" data-preview-target="image">↻ Vorschau</button>
             </div>
           </div>
@@ -149,6 +150,19 @@
       <button class="s-btn s-del" data-action="delete-pin-from-editor" data-pin-id="${pin.id}" style="margin-right:auto">🗑</button>
       <button class="s-btn s-cancel" data-action="close-sidebar">Abbrechen</button>
       <button class="s-btn s-save" data-action="save-pin-editor" data-pin-id="${pin.id}">✓ Speichern</button>`;
+    runtime.openEditorShell?.('pin', pin.id);
+    body.querySelectorAll('input, textarea, select').forEach(control => {
+      control.addEventListener('input', () => {
+        sbSyncAll();
+        runtime.renderEditorPreview?.();
+        runtime.renderPins();
+      });
+      control.addEventListener('change', () => {
+        sbSyncAll();
+        runtime.renderEditorPreview?.();
+        runtime.renderPins();
+      });
+    });
   }
 
   function sbPrevImg(){
@@ -242,6 +256,7 @@
     pin.title = document.getElementById('sb-title-inp')?.value || pin.title;
     pin.cat = document.getElementById('sb-cat')?.value || pin.cat;
     pin.img = document.getElementById('sb-img')?.value ?? pin.img;
+    pin.imgLink = document.getElementById('sb-imglink')?.value ?? pin.imgLink;
     pin.crest = document.getElementById('sb-crest')?.value ?? pin.crest;
     pin.crestLink = document.getElementById('sb-crestlink')?.value ?? pin.crestLink;
     pin.banner = document.getElementById('sb-banner')?.value ?? pin.banner;
@@ -300,6 +315,7 @@
     pin.title = (document.getElementById('sb-title-inp')?.value || '').trim() || 'Unbekannter Ort';
     pin.cat = document.getElementById('sb-cat')?.value || (state().cats[0]?.id || 'other');
     pin.img = (document.getElementById('sb-img')?.value || '').trim();
+    pin.imgLink = (document.getElementById('sb-imglink')?.value || '').trim();
     pin.crest = (document.getElementById('sb-crest')?.value || '').trim();
     pin.crestLink = (document.getElementById('sb-crestlink')?.value || '').trim();
     pin.banner = (document.getElementById('sb-banner')?.value || '').trim();

@@ -15,11 +15,18 @@
   function save(){
     rt().save();
   }
+  function preview(){
+    rt().renderEditorPreview();
+  }
   function typeById(id){
     return window.TafelZettelConfig.typeById(id);
   }
 
   function openZettelSidebar(id){
+    if(!rt().canEditZettel()){
+      rt().toast('Zettel koennen nur in der Tafel-Ansicht bearbeitet werden');
+      return;
+    }
     const z = state().zettel.find(x => x.id === id);
     if(!z) return;
     rt().clearPinSidebar();
@@ -106,6 +113,7 @@
     <button class="s-btn s-cancel" data-action="close-sidebar">Abbrechen</button>
     <button class="s-btn" style="margin-left:auto;color:var(--red);border-color:var(--red);" data-action="zettel-delete" data-zettel-id="${z.id}">🗑</button>
   </div>`;
+    rt().openEditorShell('zettel', z.id);
   }
 
   function zettelField(k, v){
@@ -113,9 +121,10 @@
     if(!z) return;
     z[k] = v;
     renderBoard();
+    preview();
   }
-  function zettelTableK(i, v){ const z = currentZettel(); if(z && z.table[i]) z.table[i].k = v; }
-  function zettelTableV(i, v){ const z = currentZettel(); if(z && z.table[i]) z.table[i].v = v; }
+  function zettelTableK(i, v){ const z = currentZettel(); if(z && z.table[i]){z.table[i].k = v; preview();} }
+  function zettelTableV(i, v){ const z = currentZettel(); if(z && z.table[i]){z.table[i].v = v; preview();} }
   function zettelTableDel(i){ const z = currentZettel(); if(!z) return; z.table.splice(i, 1); renderZettelSidebarEdit(z); }
   function zettelTableAdd(){ const z = currentZettel(); if(!z) return; if(!z.table) z.table = []; z.table.push({k:'', v:'', type:'text'}); renderZettelSidebarEdit(z); }
   function zettelStarAdd(){ const z = currentZettel(); if(!z) return; if(!z.table) z.table = []; z.table.push({k:'Bewertung', v:'0', type:'stars'}); renderZettelSidebarEdit(z); }
@@ -131,6 +140,7 @@
       s.textContent = on ? '\u2605' : '\u2606';
     });
     renderBoard();
+    preview();
   }
   function zettelStarHover(i, val){
     const sp = document.getElementById('gsp-' + i);
@@ -142,7 +152,7 @@
     if(!sp) return;
     sp.querySelectorAll('span').forEach(s => s.classList.remove('hover'));
   }
-  function zettelArtikel(i, k, v){ const z = currentZettel(); if(!z || !z.artikel) return; z.artikel[i][k] = v; }
+  function zettelArtikel(i, k, v){ const z = currentZettel(); if(!z || !z.artikel) return; z.artikel[i][k] = v; preview(); }
   function zettelArtikelAdd(){
     const z = currentZettel();
     if(!z) return;
@@ -218,9 +228,9 @@
     if(!sp) return;
     sp.querySelectorAll('span').forEach(s => s.classList.remove('hover'));
   }
-  function sbPersonField(pi, k, v){ const z = currentZettel(); if(!z || !z.personen) return; z.personen[pi][k] = v; renderBoard(); }
-  function sbPersonTableK(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]) z.personen[pi].table[ri].k = v; }
-  function sbPersonTableV(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]) z.personen[pi].table[ri].v = v; }
+  function sbPersonField(pi, k, v){ const z = currentZettel(); if(!z || !z.personen) return; z.personen[pi][k] = v; renderBoard(); preview(); }
+  function sbPersonTableK(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]){z.personen[pi].table[ri].k = v; preview();} }
+  function sbPersonTableV(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]){z.personen[pi].table[ri].v = v; preview();} }
   function sbPersonTableDel(pi, ri){
     const z = currentZettel();
     if(!z?.personen?.[pi]) return;
@@ -273,6 +283,10 @@
     rt().toast('Zettel gespeichert');
   }
   function zettelDelete(id){
+    if(!rt().canEditZettel()){
+      rt().toast('Zettel koennen nur in der Tafel-Ansicht geloescht werden');
+      return;
+    }
     if(!confirm('Zettel wirklich löschen?')) return;
     state().zettel = state().zettel.filter(x => x.id !== id);
     rt().closeSidebar();

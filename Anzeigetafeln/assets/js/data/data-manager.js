@@ -30,6 +30,7 @@
         .map(row => ({k: FIELD_NORM[row.k] || row.k, v: row.v || ''}));
     }
     pin.crest = pin.crest || '';
+    pin.crestLink = pin.crestLink || '';
     pin.region = pin.region || '';
     pin.house = pin.house || '';
     pin.faction = pin.faction || '';
@@ -37,6 +38,8 @@
     pin.text = pin.text || '';
     pin.pinMarker = pin.pinMarker || '';
     pin.banner = pin.banner || '';
+    pin.bannerLink = pin.bannerLink || '';
+    pin.imgLink = pin.imgLink || '';
     return pin;
   }
 

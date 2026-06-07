@@ -51,6 +51,7 @@
     p.banner = p.banner || '';
     p.crestLink = p.crestLink || '';
     p.bannerLink = p.bannerLink || '';
+    p.imgLink = p.imgLink || '';
     return p;
   }
 
