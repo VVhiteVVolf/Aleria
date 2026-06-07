@@ -139,6 +139,7 @@
     if(document.getElementById('exp-meta').checked){
       out.regionTitle = current.regionTitle;
       out.regionIcon = current.regionIcon;
+      out.boardImages = current.boardImages || {};
     }
 
     const sections = Object.keys(out).filter(key => !['exportedAt', 'version'].includes(key));
@@ -185,7 +186,7 @@
           lsb:   {el:'imp-chk-lsb',   cnt:null,            val: data.lsb},
           dm:    {el:'imp-chk-dm',    cnt:null,            val: data.dm},
           frame: {el:'imp-chk-frame', cnt:null,            val: data.frame},
-          meta:  {el:'imp-chk-meta',  cnt:null,            val: data.regionTitle || data.regionIcon},
+          meta:  {el:'imp-chk-meta',  cnt:null,            val: data.regionTitle || data.regionIcon || data.boardImages},
         };
         let found = 0;
         Object.values(sections).forEach(section => {
@@ -252,6 +253,7 @@
     if(document.getElementById('imp-meta')?.checked){
       if(data.regionTitle) current.regionTitle = data.regionTitle;
       if(data.regionIcon !== undefined) current.regionIcon = data.regionIcon;
+      if(data.boardImages !== undefined) current.boardImages = data.boardImages || {};
       applied.push('Meta');
     }
 

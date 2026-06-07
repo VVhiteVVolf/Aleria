@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anzeigetafel - Aleria</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/tafel.css">
+
+<script src="tafeln.registry.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const tafelId = params.get('tafel') || 'cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn';
+  const registry = window.TafelRegistry;
+  const selectedTafel = registry?.byId(tafelId) || null;
+
+  window.TAFEL_SELECTED_ENTRY = selectedTafel;
+  window.TAFEL_REQUESTED_ID = tafelId;
+
+  function fallbackConfig(title, status){
+    window.TAFEL_BOOT_STATUS = status;
+    window.TAFEL_CONFIG = {
+      boardId: tafelId,
+      title,
+      documentTitle: `${title} - Aleria`,
+      images: {},
+      firebase: {
+        collection: 'anzeigetafeln',
+        docId: `planned-${tafelId}`,
+      },
+    };
+  }
+
+  if (!registry) {
+    fallbackConfig('Tafel-Registry fehlt', 'registry-missing');
+    return;
+  }
+
+  if (!selectedTafel) {
+    fallbackConfig('Unbekannte Anzeigetafel', 'missing');
+    return;
+  }
+
+  if (selectedTafel.status !== registry.statuses.ACTIVE && !selectedTafel.editableDraft) {
+    fallbackConfig(selectedTafel.title, selectedTafel.status);
+    return;
+  }
+
+  if (!selectedTafel.config && !selectedTafel.images && !selectedTafel.editableDraft) {
+    fallbackConfig(selectedTafel.title, 'config-missing');
+    return;
+  }
+
+  window.TAFEL_BOOT_STATUS = 'active';
+  if (selectedTafel.config) {
+    document.write(`<script src="${selectedTafel.config}"><\/script>`);
+  } else {
+    window.TAFEL_CONFIG = {
+      boardId: selectedTafel.id,
+      title: selectedTafel.title,
+      documentTitle: `${selectedTafel.title} - Aleria`,
+      images: {},
+      firebase: {
+        collection: 'anzeigetafeln',
+        docId: selectedTafel.id,
+      },
+    };
+  }
+})();
+</script>
+<script>
+(function(){
+  const selectedTafel = window.TAFEL_SELECTED_ENTRY;
+  if (window.TAFEL_BOOT_STATUS !== 'active') return;
+
+  if (!window.TAFEL_CONFIG) {
+    window.TAFEL_BOOT_STATUS = 'config-missing';
+    window.TAFEL_CONFIG = {
+      boardId: selectedTafel?.id || window.TAFEL_REQUESTED_ID,
+      title: selectedTafel?.title || 'Anzeigetafel',
+      documentTitle: `${selectedTafel?.title || 'Anzeigetafel'} - Aleria`,
+      images: {},
+      firebase: {
+        collection: 'anzeigetafeln',
+        docId: selectedTafel?.id || window.TAFEL_REQUESTED_ID,
+      },
+    };
+    return;
+  }
+
+  if (selectedTafel?.images) {
+    window.TAFEL_CONFIG.images = { ...selectedTafel.images };
+  }
+
+  if (selectedTafel?.firebase) {
+    window.TAFEL_CONFIG.firebase = {
+      ...(window.TAFEL_CONFIG.firebase || {}),
+      ...selectedTafel.firebase,
+    };
+  }
+})();
+</script>
+<script type="module" src="assets/js/tafel-firebase.js"></script>
+<script src="assets/js/notes/zettel-config.js"></script>
+</head>
+<body>
+<div style="display:flex;flex-direction:column;height:100%;">
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <!-- Region icon -->
+  <div id="region-icon-wrap" title="" data-action="edit-region-icon">🗺</div>
+
+  <!-- Title (click to edit in edit mode) -->
+  <span id="title" data-action="edit-title">📋 Anzeigetafel — Morddyn</span>
+  <input id="title-input" maxlength="60" data-blur-action="save-title-edit" data-keydown-action="title-edit"/>
+
+  <div class="sep"></div>
+
+  <!-- Layers -->
+  <div id="layer-btns">
+    <button class="lbtn on" id="lb-normal" data-action="set-layer" data-layer="normal">📋 Anzeigetafel</button>
+    <button class="lbtn"    id="lb-pins"   data-action="set-layer" data-layer="pins">🗺 Minimap</button>
+  </div>
+  <div class="sep"></div>
+
+  <!-- Search -->
+  <div id="search-wrap">
+    <input id="search-inp" placeholder="🔍 Anzeige suchen…" data-input-action="search-pins" data-blur-action="hide-search-results" autocomplete="off"/>
+    <button id="search-clear" data-action="clear-search">✕</button>
+    <div id="search-results"></div>
+  </div>
+  <div class="sep"></div>
+
+  <!-- Edit toggle -->
+  <button class="tbtn" id="btn-edit" data-action="toggle-edit">🔒 Bearbeiten</button>
+  <span id="lock-lbl">gesperrt</span>
+
+  <!-- Edit-mode controls -->
+  <button class="tbtn" id="btn-add-zettel" data-action="start-add-zettel" style="display:none"> Zettel setzen</button>
+  <button class="tbtn" id="btn-add-ort" data-action="start-add-ort" style="display:none">📍 Ort setzen</button>
+  <button class="tbtn" id="btn-stamp" data-action="open-stamp-picker" style="display:none">🔖 Kopieren &amp; stempeln</button>
+  <button class="tbtn" id="btn-overwrite" data-action="open-overwrite-picker" style="display:none">✏️ Überschreiben</button>
+  <button class="tbtn" id="btn-export" data-action="open-data-manager" style="display:none">📦 Daten</button>
+  <button class="tbtn" style="display:none" id="dm-btn-cats" data-action="open-category-manager">🏷 Kategorien</button>
+  <button class="tbtn" style="display:none" id="dm-btn-mcat" data-action="open-marker-catalog">🗂 Marker</button>
+  <button class="tbtn" style="display:none" id="dm-btn-backup" data-action="open-backup-history">🕓 Backup</button>
+
+  <button class="tbtn" id="btn-board-images" data-action="open-board-images" style="display:none">Bilder</button>
+
+  <!-- Dot size slider -->
+  <div class="sl-wrap" id="dot-sl-wrap">
+    <span class="sl-lbl">Dot</span>
+    <input type="range" class="sl-inp" id="dot-sl" min="8" max="80" value="18" data-input-action="set-dot-size"/>
+    <span class="sl-val" id="dot-sl-val">18</span>
+  </div>
+  <!-- Label size slider -->
+  <div class="sl-wrap" id="lbl-sl-wrap">
+    <span class="sl-lbl">Text</span>
+    <input type="range" class="sl-inp" id="lbl-sl" min="9" max="60" value="13" data-input-action="set-label-size"/>
+    <span class="sl-val" id="lbl-sl-val">13</span>
+  </div>
+
+
+  <div class="sp"></div>
+  <div style="display:flex;align-items:center;gap:4px;flex-shrink:0;">
+    <div id="sdot"></div>
+    <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:#5a3a08;opacity:.65;letter-spacing:0.05em">SYNC</span>
+  </div>
+</div>
+
+<!-- BOARD IMAGE MODAL -->
+<div class="mo" id="boardimg-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px))">
+    <div class="lmh"><span>Tafelbilder</span><button data-action="close-modal" data-modal-id="boardimg-mo">x</button></div>
+    <div class="lmb-body">
+      <div style="font-family:'EB Garamond',serif;font-size:.9rem;color:#5a3a08;font-style:italic;">
+        Diese Links werden im Tafelzustand gespeichert und gehoeren nur zu dieser Tafel.
+      </div>
+      <div><label class="lml">Anzeigetafel</label><input class="e-inp" id="boardimg-board" placeholder="https://i.imgur.com/...png"/></div>
+      <div><label class="lml">Minimap / Markerbild</label><input class="e-inp" id="boardimg-marker" placeholder="https://i.imgur.com/...png"/></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-del" data-action="clear-board-images" style="margin-right:auto">Leeren</button>
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="boardimg-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-board-images">Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- LEFT SIDEBAR TOGGLE -->
+<button id="lsb-toggle" data-action="toggle-tools-sidebar" title="Werkzeuge">⚖</button>
+
+<!-- LEFT SIDEBAR -->
+<div id="lsb">
+  <div id="lsb-body">
+    <div class="lsb-sec">
+      <div class="lsb-sec-ttl">Kalibrierung</div>
+      <div style="display:flex;gap:4px;align-items:center;margin-bottom:.36rem">
+        <input class="e-inp" id="lsb-ckm" type="number" min=".01" step=".1" value="10" style="width:58px;flex-shrink:0;"/>
+        <span style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:#1a1200;opacity:.48;">km zwischen 2 Punkten</span>
+      </div>
+      <div id="lsb-cal-status">Wähle „Kalibrieren" → 2 Punkte setzen.</div>
+      <div id="lsb-scale-lbl"></div>
+      <div style="display:flex;gap:4px;margin-top:.38rem">
+        <button class="lmb" style="flex:1" data-action="start-calibration">⚖ Kalibrieren</button>
+        <button class="lmb" style="flex:1" data-action="reset-calibration">✕ Reset</button>
+      </div>
+    </div>
+    <div class="lsb-sec">
+      <div class="lsb-sec-ttl">Messen</div>
+      <div style="display:flex;gap:.3rem;flex-wrap:wrap;">
+        <button class="lmb" id="lmb-mea" data-action="start-measure">📏 Messen</button>
+        <button class="lmb" data-action="clear-measure">✕ Löschen</button>
+      </div>
+      <div id="lsb-mea-result">— noch keine Messung —</div>
+    </div>
+    <div class="lsb-sec">
+      <div class="lsb-sec-ttl" style="margin-bottom:.3rem;">Gruppen &amp; Routen <span style="font-size:.6rem;opacity:.55;font-family:'EB Garamond',serif;font-style:italic;">(Minimap)</span>
+        <button class="lgb" style="padding:1px 7px;font-size:var(--fs-sm);margin-left:auto;border-color:var(--gold);" data-action="open-travel-group-modal">＋</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:.45rem;">
+        <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:#5a3a08;opacity:.55;white-space:nowrap;">Markergröße</span>
+        <input type="range" id="lsb-icon-size" min="10" max="60" value="22" style="flex:1;accent-color:var(--gold);" data-input-action="set-travel-icon-size"/>
+        <span id="lsb-icon-size-val" style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:var(--gold);min-width:22px;text-align:right;">22</span>
+      </div>
+    </div>
+    <div id="lsb-groups"></div>
+    <div id="lsb-result">
+      <div id="lsb-rdist"><span style="font-family:'Cinzel',serif;font-size:var(--fs-sm);opacity:.3;letter-spacing:0.06em;">— Gruppe wählen oder Route zeichnen —</span></div>
+      <div id="lsb-rtime"></div>
+      <div id="lsb-rbd"></div>
+    </div>
+
+    <!-- DM Panel removed per design decision -->
+    <div id="dm-panel" style="display:none"></div>
+  </div>
+</div>
+
+<!-- SESSION MODAL -->
+<div class="mo" id="dmsess-mo">
+  <div class="lmc" style="width:min(480px,calc(100vw - 32px))">
+    <div class="lmh"><span id="dmsess-mo-ttl">Sitzung</span><button data-action="close-modal" data-modal-id="dmsess-mo">✕</button></div>
+    <div class="lmb-body">
+      <div><label class="lml">Titel / Session-Name</label><input class="e-inp" id="dmsess-name" placeholder="z.B. Session 3 — Die Ruinen von Valdras" maxlength="80"/></div>
+      <div style="display:flex;gap:.5rem;">
+        <div style="flex:1"><label class="lml">Datum (real)</label><input class="e-inp" id="dmsess-date" type="date"/></div>
+        <div style="flex:1"><label class="lml">In-Game Datum</label><input class="e-inp" id="dmsess-igdate" placeholder="z.B. 3. Herbstmond 1242" maxlength="40"/></div>
+      </div>
+      <div><label class="lml">Was geschah? (Zusammenfassung)</label><textarea class="lev-note" id="dmsess-notes" rows="5" placeholder="Die Gruppe erreichte… Begegnung mit… Entscheidung…" style="min-height:90px;"></textarea></div>
+      <div><label class="lml">Beteiligte Gruppen</label><div id="dmsess-groups" style="display:flex;flex-wrap:wrap;gap:4px;margin-top:.2rem;"></div></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-del" id="dmsess-del-btn" data-action="delete-dm-session" style="margin-right:auto;display:none">🗑</button>
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="dmsess-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-dm-session">✓ Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- GROUP STATUS MODAL -->
+<div class="mo" id="dmstat-mo">
+  <div class="lmc" style="width:min(460px,calc(100vw - 32px))">
+    <div class="lmh"><span id="dmstat-mo-ttl">Gruppen-Status</span><button data-action="close-modal" data-modal-id="dmstat-mo">✕</button></div>
+    <div class="lmb-body" id="dmstat-body"></div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="dmstat-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-dm-status">✓ Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- DIARY MODAL -->
+<div class="mo" id="dmdiary-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px));max-height:85vh">
+    <div class="lmh"><span>📖 Reise-Tagebuch</span><button data-action="close-modal" data-modal-id="dmdiary-mo">✕</button></div>
+    <div class="lmb-body" id="dmdiary-body" style="max-height:65vh;overflow-y:auto;"></div>
+    <div class="lmb-footer">
+      <button class="s-btn s-save" data-action="export-dm-diary">⬇ Exportieren</button>
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="dmdiary-mo">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<!-- STAMP PICKER MODAL -->
+<div class="mo" id="stamp-mo">
+  <div class="lmc" style="width:min(480px,calc(100vw - 32px))">
+    <div class="lmh"><span>🔖 Marker zum Stempeln wählen</span><button data-action="close-modal" data-modal-id="stamp-mo">✕</button></div>
+    <div class="lmb-body" style="max-height:60vh;overflow-y:auto;">
+      <div style="font-family:'EB Garamond',serif;font-size:var(--fs-sm);color:#5a3a08;font-style:italic;margin-bottom:.3rem;">Wähle einen bestehenden Marker als Vorlage. Er wird dann mehrfach kopiert gesetzt.</div>
+      <input class="e-inp" id="stamp-search" placeholder="🔍 Marker suchen…" data-input-action="render-stamp-list" style="margin-bottom:.5rem;width:100%;"/>
+      <div id="stamp-list"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="stamp-mo">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<!-- OVERWRITE PICKER MODAL -->
+<div class="mo" id="overwrite-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px))">
+    <div class="lmh"><span>✏️ Vorlage zum Überschreiben wählen</span><button data-action="close-modal" data-modal-id="overwrite-mo">✕</button></div>
+    <div class="lmb-body" style="gap:.6rem;">
+      <div style="font-family:'EB Garamond',serif;font-size:var(--fs-sm);color:#5a3a08;line-height:1.6;">
+        Wähle eine Vorlage. Dann auf beliebige Pins auf der Karte klicken — deren Felder werden überschrieben, Position bleibt erhalten.
+      </div>
+      <!-- Felder -->
+      <div style="background:rgba(0,0,0,.06);border-radius:3px;padding:.5rem .7rem;">
+        <div style="font-family:'Cinzel',serif;font-size:.72rem;color:#5a3a08;margin-bottom:.4rem;">FELDER DIE ÜBERSCHRIEBEN WERDEN</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+          <label class="ow-chk"><input type="checkbox" id="owf-table" checked> Tabellen-Felder</label>
+          <label class="ow-chk"><input type="checkbox" id="owf-cat" checked> Kategorie</label>
+          <label class="ow-chk"><input type="checkbox" id="owf-region" checked> Region</label>
+          <label class="ow-chk"><input type="checkbox" id="owf-house" checked> Herrschaft</label>
+          <label class="ow-chk"><input type="checkbox" id="owf-img"> Bild</label>
+          <label class="ow-chk"><input type="checkbox" id="owf-text"> Lore-Text</label>
+        </div>
+      </div>
+      <!-- Tabs -->
+      <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);">
+        <button class="ow-tab on" id="owtab-tpl"  data-action="switch-overwrite-tab" data-tab="tpl">📋 Pin-Vorlagen</button>
+        <button class="ow-tab"    id="owtab-pins" data-action="switch-overwrite-tab" data-tab="pins">📍 Bestehende Pins</button>
+      </div>
+      <!-- Template list -->
+      <div id="ow-tpl-list"></div>
+      <!-- Pin list (hidden by default) -->
+      <div id="ow-pins-wrap" style="display:none;">
+        <input class="e-inp" id="ow-search" placeholder="🔍 Pin suchen…" data-input-action="render-overwrite-pin-list" style="width:100%;margin-bottom:.4rem;"/>
+        <div id="ow-list" style="max-height:36vh;overflow-y:auto;"></div>
+      </div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="overwrite-mo">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<!-- GROUP MODAL -->
+<div class="mo" id="lgrp-mo">
+  <div class="lmc" style="width:min(420px,calc(100vw - 32px))">
+    <div class="lmh"><span id="lgrp-mo-ttl">Neue Gruppe</span><button data-action="close-modal" data-modal-id="lgrp-mo">✕</button></div>
+    <div class="lmb-body">
+      <div><label class="lml">Name</label><input class="e-inp" id="lgrp-name" placeholder="z.B. Die Gefährten" maxlength="40" data-keydown-action="save-travel-group-name"/></div>
+      <div>
+        <label class="lml">Icon</label>
+        <div style="display:flex;gap:5px;align-items:center;margin-bottom:.5rem;margin-top:.2rem;">
+          <div id="lgrp-icon-preview" style="width:44px;height:44px;border:1.5px solid var(--border2);border-radius:3px;background:rgba(255,248,220,.7);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;overflow:hidden;">📍</div>
+          <div style="display:flex;gap:3px;">
+            <button class="lgb icn-tab on" id="icntab-emoji" data-action="travel-icon-tab" data-tab="emoji">Emoji</button>
+            <button class="lgb icn-tab" id="icntab-custom" data-action="travel-icon-tab" data-tab="custom">Eigene Icons</button>
+          </div>
+        </div>
+        <div id="icn-panel-emoji">
+          <div style="display:flex;flex-wrap:wrap;gap:3px;" id="lgrp-icon-grid"></div>
+        </div>
+        <div id="icn-panel-custom" style="display:none;">
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.4rem;" id="lgrp-custom-slots"></div>
+          <div style="display:flex;gap:4px;margin-top:.3rem;">
+            <input class="e-inp" id="lgrp-icon-url" placeholder="URL (https://…)" style="flex:1;font-size:var(--fs-sm);" data-input-action="preview-travel-icon-url"/>
+            <label class="lgb" style="cursor:pointer;padding:3px 8px;display:flex;align-items:center;gap:3px;" title="Bild hochladen">📁<input type="file" accept="image/*" style="display:none" data-file-action="load-travel-icon-file"/></label>
+            <button class="lgb" data-action="add-travel-custom-icon" title="In freien Slot speichern" style="border-color:var(--gold)">＋ Slot</button>
+          </div>
+          <div style="font-family:'Cinzel',serif;font-size:var(--fs-xs);opacity:.65;margin-top:.25rem;">Klick = auswählen · ✕ = Slot löschen</div>
+        </div>
+      </div>
+      <div>
+        <label class="lml">Farbe &amp; Deckkraft</label>
+        <div class="gcsr2" id="lgrp-colors"></div>
+        <div style="display:flex;align-items:center;gap:.5rem;margin-top:.4rem;">
+          <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:#5a3a08;opacity:.55;white-space:nowrap;">Deckkraft</span>
+          <input type="range" id="lgrp-opacity" min="20" max="100" value="80" style="flex:1;accent-color:var(--gold);" data-input-action="preview-travel-opacity"/>
+          <span id="lgrp-opacity-val" style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:var(--gold);min-width:28px;text-align:right;">80%</span>
+        </div>
+        <div id="lgrp-color-preview" style="height:10px;border-radius:2px;margin-top:.3rem;transition:background .15s;"></div>
+      </div>
+      <div><label class="lml">Standard-Reisemodus</label><select class="e-sel" id="lgrp-tm"></select></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="lgrp-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-travel-group">✓ Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- WAYPOINT MODAL -->
+<div class="mo" id="lwp-mo">
+  <div class="lmc" style="width:min(500px,calc(100vw - 32px))">
+    <div class="lmh"><span id="lwp-mo-ttl">Wegpunkt</span><button data-action="close-modal" data-modal-id="lwp-mo">✕</button></div>
+    <div class="lmb-body">
+      <div><label class="lml">Bezeichnung (optional)</label><input class="e-inp" id="lwp-name" placeholder="z.B. Dorf Aschkreuz…" maxlength="60"/></div>
+      <div><label class="lml">Ereignis-Typ</label><div class="ev-type-grid" id="lwp-evt-grid"></div></div>
+      <div id="lwp-evd-wrap"></div>
+      <div><label class="lml">Notiz</label><textarea class="lev-note" id="lwp-note" placeholder="Was geschah hier?"></textarea></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-del" id="lwp-del-btn" data-action="delete-travel-waypoint-event" style="margin-right:auto;display:none">🗑 Ereignis löschen</button>
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="lwp-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-travel-waypoint-event">✓ Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<!-- MAP -->
+<div id="map-wrap" style="flex:1;position:relative;overflow:hidden;">
+  <div id="map-stage">
+    <img id="ln" class="ml" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Anzeigetafel" draggable="false"/>
+    <img id="lr" class="ml" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" draggable="false"/>
+    <img id="lm" class="ml" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" draggable="false"/>
+    <div id="pl"></div>
+    <div id="zettel-layer" style="position:absolute;inset:0;pointer-events:none;"></div>
+  </div>
+  <canvas id="measure-canvas"></canvas>
+  <div id="pc"></div>
+  <div id="stamp-cursor">📍</div>
+</div>
+
+<!-- CATEGORY BAR — fixed at page bottom, collapsible -->
+<div id="cat-bar-wrap">
+  <button id="cat-bar-toggle" data-action="toggle-category-bar" title="Kategorien ein/ausblenden">▼ Kategorien</button>
+  <div id="cat-bar"></div>
+</div>
+
+<!-- PIN MARKER PICKER MODAL -->
+<div class="mo" id="pinmkr-mo">
+  <div class="lmc" style="width:min(600px,calc(100vw - 32px));max-height:calc(100vh - 48px);display:flex;flex-direction:column;">
+    <div class="lmh"><span>📍 Pin-Marker wählen</span><button data-action="close-modal" data-modal-id="pinmkr-mo">✕</button></div>
+    <div style="padding:.5rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;">
+      <input class="e-inp" id="pinmkr-search" placeholder="🔍 Suchen…" data-input-action="render-pin-marker-grid" style="flex:1;"/>
+      <select class="e-sel" id="pinmkr-filter" data-input-action="render-pin-marker-grid" style="width:auto;padding:4px 8px;"></select>
+    </div>
+    <div id="pinmkr-grid" style="flex:1;overflow-y:auto;padding:.7rem 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:.5rem;"></div>
+    <div class="lmb-footer"><button class="s-btn s-cancel" data-action="close-modal" data-modal-id="pinmkr-mo">Abbrechen</button></div>
+  </div>
+</div>
+
+<!-- PIN TEMPLATE PICKER MODAL -->
+<div class="mo" id="pin-tpl-mo">
+  <div class="lmc" style="width:min(520px,calc(100vw - 32px))">
+    <div class="lmh"><span>📌 Neue Anzeige / Pin — Vorlage wählen</span><button data-action="cancel-pin-template">✕</button></div>
+    <div class="lmb-body" style="gap:.45rem;">
+      <div style="font-family:'EB Garamond',serif;font-size:.88rem;color:#5a3a08;margin-bottom:.2rem;font-style:italic;">
+        Wähle einen Zettel-Typ für die Anzeigetafel oder eine andere Vorlage. Die Infotabelle wird vorausgefüllt.
+      </div>
+      <div id="tpl-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="cancel-pin-template">Abbrechen</button>
+      <button class="s-btn s-save" data-action="apply-pin-template" id="tpl-apply-btn" disabled>✓ Vorlage übernehmen</button>
+    </div>
+  </div>
+</div>
+
+<!-- ZETTEL TYPE PICKER MODAL -->
+<div class="mo" id="zettel-tpl-mo">
+  <div class="lmc" style="width:min(680px,calc(100vw - 32px))">
+    <div class="lmh"><span>📜 Neuer Zettel — Typ wählen</span><button class="lmx" data-action="close-modal" data-modal-id="zettel-tpl-mo">✕</button></div>
+    <div class="lmb-body" style="padding:.9rem 1rem;">
+      <div style="font-family:'EB Garamond',serif;font-size:.88rem;color:#5a3a08;margin-bottom:.85rem;font-style:italic;">
+        Wähle den Zetteltyp. Jeder Typ hat sein eigenes Layout und Bearbeitungsformular.
+      </div>
+      <div id="zettel-type-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;"></div>
+      <div style="margin-top:.8rem;display:flex;gap:.5rem;justify-content:flex-end;">
+        <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="zettel-tpl-mo">Abbrechen</button>
+        <button class="s-btn s-save" id="zettel-tpl-apply-btn" data-action="apply-zettel-template" disabled>Zettel erstellen ▶</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIDEBAR (view + edit panel) -->
+<div id="sidebar">
+  <div id="sb-header">
+    <span id="sb-title">Ort</span>
+    <span id="sb-mode-lbl">Ansicht</span>
+    <button id="sb-close" data-action="close-sidebar">✕</button>
+  </div>
+  <div id="sb-body"></div>
+  <div id="sb-footer"></div>
+</div>
+
+<!-- DATEN MANAGER MODAL -->
+<div class="mo" id="datamgr-mo">
+  <div class="lmc" style="width:min(680px,calc(100vw - 32px));max-height:calc(100vh - 48px);display:flex;flex-direction:column;">
+    <div class="lmh"><span>📦 Daten-Manager</span><button data-action="close-modal" data-modal-id="datamgr-mo">✕</button></div>
+    <div class="lmb-body" style="gap:0;padding:0;flex:1;overflow-y:auto;">
+
+      <!-- EXPORT SECTION -->
+      <div class="dmgr-section">
+        <div class="dmgr-sec-title">⬇ Exportieren</div>
+        <div class="dmgr-sec-desc">Wähle welche Bereiche exportiert werden sollen. Die Datei kann später wieder importiert werden.</div>
+        <div class="dmgr-checks" id="exp-checks">
+          <label class="dmgr-chk"><input type="checkbox" id="exp-pins" checked><span class="dmgr-chk-icon">📍</span><span class="dmgr-chk-lbl">Pins</span><span class="dmgr-chk-cnt" id="exp-pins-cnt"></span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-cats" checked><span class="dmgr-chk-icon">🏷</span><span class="dmgr-chk-lbl">Kategorien</span><span class="dmgr-chk-cnt" id="exp-cats-cnt"></span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-mcat" checked><span class="dmgr-chk-icon">🗂</span><span class="dmgr-chk-lbl">Marker-Katalog</span><span class="dmgr-chk-cnt" id="exp-mcat-cnt"></span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-lsb"><span class="dmgr-chk-icon">📋</span><span class="dmgr-chk-lbl">Sidebar / Gruppen</span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-dm"><span class="dmgr-chk-icon">🎲</span><span class="dmgr-chk-lbl">DM-Daten (Sessions, Tagebuch)</span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-frame"><span class="dmgr-chk-icon">🖼</span><span class="dmgr-chk-lbl">Rahmen-Position</span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-meta"><span class="dmgr-chk-icon">🌍</span><span class="dmgr-chk-lbl">Regions-Titel & Icon</span></label>
+        </div>
+        <div style="display:flex;gap:.5rem;margin-top:.6rem;flex-wrap:wrap;">
+          <button class="s-btn s-save" data-action="export-data-manager">⬇ JSON herunterladen</button>
+          <button class="s-btn s-cancel" style="font-size:.75rem;" data-action="select-data-manager-section" data-selection-prefix="exp" data-selection-value="true">Alle</button>
+          <button class="s-btn s-cancel" style="font-size:.75rem;" data-action="select-data-manager-section" data-selection-prefix="exp" data-selection-value="false">Keine</button>
+        </div>
+      </div>
+
+      <div class="dmgr-divider"></div>
+
+      <!-- IMPORT SECTION -->
+      <div class="dmgr-section">
+        <div class="dmgr-sec-title">⬆ Importieren</div>
+        <div class="dmgr-sec-desc">Lade eine exportierte JSON-Datei. Wähle dann welche Bereiche übernommen werden sollen — der Rest bleibt unberührt.</div>
+
+        <!-- Drop zone -->
+        <div id="dmgr-dropzone" data-action="open-data-manager-file" data-drop-action="data-manager-import"
+             style="border:2px dashed var(--border2);border-radius:4px;padding:1.2rem;text-align:center;cursor:pointer;transition:background .15s;margin-bottom:.6rem;"
+             >
+          <div id="dmgr-dz-inner">
+            <div style="font-size:1.6rem;margin-bottom:.3rem;">📄</div>
+            <div style="font-family:'Cinzel',serif;font-size:.78rem;color:#5a3a08;">Datei hierher ziehen oder klicken</div>
+          </div>
+        </div>
+        <input type="file" id="dmgr-file" accept=".json" style="display:none" data-file-action="data-manager-import"/>
+
+        <!-- Available sections in file (shown after load) -->
+        <div id="dmgr-imp-panel" style="display:none;">
+          <div class="dmgr-sec-desc" style="margin-bottom:.4rem;" id="dmgr-imp-meta"></div>
+          <div class="dmgr-checks" id="imp-checks">
+            <label class="dmgr-chk" id="imp-chk-pins"   style="display:none"><input type="checkbox" id="imp-pins"  checked><span class="dmgr-chk-icon">📍</span><span class="dmgr-chk-lbl">Pins überschreiben</span><span class="dmgr-chk-cnt" id="imp-pins-cnt"></span></label>
+            <label class="dmgr-chk" id="imp-chk-cats"   style="display:none"><input type="checkbox" id="imp-cats"  checked><span class="dmgr-chk-icon">🏷</span><span class="dmgr-chk-lbl">Kategorien überschreiben</span><span class="dmgr-chk-cnt" id="imp-cats-cnt"></span></label>
+            <label class="dmgr-chk" id="imp-chk-mcat"   style="display:none"><input type="checkbox" id="imp-mcat"  checked><span class="dmgr-chk-icon">🗂</span><span class="dmgr-chk-lbl">Marker-Katalog</span><span class="dmgr-chk-cnt" id="imp-mcat-cnt"></span>
+              <select class="dmgr-mode-sel" id="imp-mcat-mode"><option value="replace">Ersetzen</option><option value="merge">Zusammenführen</option></select>
+            </label>
+            <label class="dmgr-chk" id="imp-chk-lsb"    style="display:none"><input type="checkbox" id="imp-lsb"  ><span class="dmgr-chk-icon">📋</span><span class="dmgr-chk-lbl">Sidebar / Gruppen</span></label>
+            <label class="dmgr-chk" id="imp-chk-dm"     style="display:none"><input type="checkbox" id="imp-dm"   ><span class="dmgr-chk-icon">🎲</span><span class="dmgr-chk-lbl">DM-Daten</span></label>
+            <label class="dmgr-chk" id="imp-chk-meta"   style="display:none"><input type="checkbox" id="imp-meta" ><span class="dmgr-chk-icon">🌍</span><span class="dmgr-chk-lbl">Regions-Titel & Icon</span></label>
+          </div>
+          <div id="dmgr-imp-warn" style="display:none;background:rgba(180,60,0,.1);border:1px solid rgba(180,60,0,.3);border-radius:3px;padding:.4rem .7rem;font-family:'Cinzel',serif;font-size:.72rem;color:#a03000;margin-top:.4rem;"></div>
+          <div style="display:flex;gap:.5rem;margin-top:.6rem;flex-wrap:wrap;">
+            <button class="s-btn s-save" id="dmgr-imp-btn" data-action="apply-data-manager-import">✓ Importieren</button>
+            <button class="s-btn s-cancel" style="font-size:.75rem;" data-action="select-data-manager-section" data-selection-prefix="imp" data-selection-value="true">Alle</button>
+            <button class="s-btn s-cancel" style="font-size:.75rem;" data-action="select-data-manager-section" data-selection-prefix="imp" data-selection-value="false">Keine</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="datamgr-mo">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<!-- IMPORT MODAL -->
+<div class="mo" id="import-mo">
+  <div class="lmc" style="width:min(520px,calc(100vw - 32px))">
+    <div class="lmh"><span>📂 JSON importieren</span><button data-action="close-modal" data-modal-id="import-mo">✕</button></div>
+    <div class="lmb-body" style="gap:.8rem;">
+      <p style="font-family:'EB Garamond',serif;font-size:.9rem;color:#5a3a08;line-height:1.6;">
+        Lade eine exportierte JSON-Datei hoch. Bestehende Pins und Kategorien werden <strong>überschrieben</strong>. Ein automatisches Backup wird vorher erstellt.
+      </p>
+      <div id="import-dropzone" data-action="open-legacy-import-file" data-drop-action="legacy-import"
+           style="border:2px dashed var(--border2);border-radius:4px;padding:2rem;text-align:center;cursor:pointer;transition:background .15s;"
+           >
+        <div style="font-size:2rem;margin-bottom:.5rem;">📄</div>
+        <div style="font-family:'Cinzel',serif;font-size:.82rem;color:#5a3a08;">Datei hierher ziehen oder klicken</div>
+        <div style="font-family:'EB Garamond',serif;font-size:.78rem;color:#5a3a08;margin-top:.3rem;">.json Backup-Datei</div>
+      </div>
+      <input type="file" id="import-file" accept=".json" style="display:none" data-file-action="legacy-import"/>
+      <div id="import-preview" style="display:none;background:rgba(0,0,0,.08);border-radius:3px;padding:.6rem .8rem;font-family:'EB Garamond',serif;font-size:.85rem;color:#5a3a08;"></div>
+      <div id="import-warn" style="display:none;background:rgba(180,60,0,.12);border:1px solid rgba(180,60,0,.3);border-radius:3px;padding:.5rem .8rem;font-family:'Cinzel',serif;font-size:.75rem;color:#a03000;"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="import-mo">Abbrechen</button>
+      <button class="s-btn s-save" id="import-apply-btn" disabled data-action="apply-legacy-import">✓ Importieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- BACKUP VERLAUF MODAL -->
+<div class="mo" id="backup-mo">
+  <div class="lmc" style="width:min(560px,calc(100vw - 32px))">
+    <div class="lmh"><span>🕓 Backup-Verlauf</span><button data-action="close-modal" data-modal-id="backup-mo">✕</button></div>
+    <div class="lmb-body" style="gap:0;padding:0;">
+      <div style="padding:.6rem 1rem;border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-family:'EB Garamond',serif;font-size:.85rem;color:#5a3a08;">Letzte 10 automatische Snapshots</span>
+        <button class="s-btn s-cancel" style="padding:2px 10px;font-size:.72rem;" data-action="save-backup-now">💾 Jetzt sichern</button>
+      </div>
+      <div id="backup-list" style="max-height:400px;overflow-y:auto;"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="backup-mo">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<!-- MARKER KATALOG MODAL -->
+<div class="mo" id="mcat-mo">
+  <div class="lmc" style="width:min(780px,calc(100vw - 32px));max-height:calc(100vh - 48px);display:flex;flex-direction:column;">
+    <div class="lmh">
+      <span>🗂 Marker-Katalog</span>
+      <button data-action="close-modal" data-modal-id="mcat-mo">✕</button>
+    </div>
+    <!-- Add entry bar -->
+    <div style="padding:.6rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;align-items:flex-end;flex-wrap:wrap;background:rgba(0,0,0,.04);">
+      <div style="flex:2;min-width:180px;">
+        <label class="lml" style="margin-bottom:3px;">Imgur-URL (direktlink auf .png/.jpg)</label>
+        <input class="e-inp" id="mcat-url" placeholder="https://i.imgur.com/xxxxx.png" style="width:100%;"/>
+      </div>
+      <div style="flex:1;min-width:120px;">
+        <label class="lml" style="margin-bottom:3px;">Name</label>
+        <input class="e-inp" id="mcat-name" placeholder="z.B. Taverne" maxlength="40" style="width:100%;"/>
+      </div>
+      <div style="flex:1;min-width:100px;">
+        <label class="lml" style="margin-bottom:3px;">Gruppe (optional)</label>
+        <input class="e-inp" id="mcat-group" placeholder="z.B. Siedlung" maxlength="30" style="width:100%;"/>
+      </div>
+      <button class="s-btn s-save" style="flex-shrink:0;height:34px;" data-action="add-marker-catalog-item">+ Hinzufügen</button>
+    </div>
+    <!-- Bulk import bar -->
+    <div style="padding:.4rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;align-items:center;background:rgba(0,0,0,.02);">
+      <span style="font-family:'Cinzel',serif;font-size:.7rem;color:#5a3a08;flex:1;">Mehrere auf einmal: URL,Name,Gruppe — eine pro Zeile</span>
+      <button class="s-btn s-cancel" style="font-size:.7rem;padding:2px 10px;" data-action="open-marker-catalog-bulk">📋 Bulk-Import</button>
+    </div>
+    <!-- Search + filter -->
+    <div style="padding:.4rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;align-items:center;">
+      <input class="e-inp" id="mcat-search" placeholder="🔍 Suchen…" data-input-action="render-marker-catalog" style="flex:1;"/>
+      <select class="e-sel" id="mcat-filter" data-input-action="render-marker-catalog" style="flex-shrink:0;width:auto;padding:4px 8px;"></select>
+      <span id="mcat-count" style="font-family:'Cinzel',serif;font-size:.72rem;color:#5a3a08;white-space:nowrap;"></span>
+    </div>
+    <!-- Grid -->
+    <div id="mcat-grid" style="flex:1;overflow-y:auto;padding:.8rem 1rem;
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:.6rem;"></div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="mcat-mo">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<!-- BULK IMPORT MODAL -->
+<div class="mo" id="mcat-bulk-mo">
+  <div class="lmc" style="width:min(520px,calc(100vw-32px))">
+    <div class="lmh"><span>📋 Bulk-Import</span><button data-action="close-modal" data-modal-id="mcat-bulk-mo">✕</button></div>
+    <div class="lmb-body">
+      <p style="font-family:'EB Garamond',serif;font-size:.85rem;color:#5a3a08;">
+        Format: <code>URL,Name,Gruppe</code> — eine Zeile pro Marker. Gruppe ist optional.
+      </p>
+      <textarea class="lev-note" id="mcat-bulk-txt" style="min-height:200px;font-size:.78rem;font-family:monospace;"
+        placeholder="https://i.imgur.com/abc.png,Taverne,Gebäude&#10;https://i.imgur.com/def.png,Burg,Befestigung&#10;https://i.imgur.com/ghi.png,Hafen"></textarea>
+      <div id="mcat-bulk-preview" style="font-family:'Cinzel',serif;font-size:.72rem;color:#5a3a08;"></div>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="mcat-bulk-mo">Abbrechen</button>
+      <button class="s-btn s-save" data-action="apply-marker-catalog-bulk">✓ Importieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL MODAL (Ansichtsmodus) -->
+<div class="mo" id="scroll-mo">
+  <div id="scroll-card">
+    <button id="scroll-close" data-action="close-scroll">✕</button>
+    <div id="scroll-content"></div>
+    <div id="scroll-actions"></div>
+  </div>
+</div>
+
+<!-- CATEGORY MANAGER MODAL -->
+<div class="mo" id="catmgr-mo">
+  <div id="catmgr-card">
+    <div class="mh">
+      <span>Kategorien verwalten</span>
+      <button class="mh-close" data-action="close-category-manager">✕</button>
+    </div>
+    <div class="mh-body" id="catmgr-body"></div>
+    <div class="mh-footer">
+      <button class="s-btn s-cancel" data-action="close-category-manager">Abbrechen</button>
+      <button class="s-btn s-save" data-action="save-categories">✓ Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- CAT MARKER PICKER -->
+<div class="mo" id="cat-marker-mo">
+  <div class="lmc" style="width:min(600px,calc(100vw - 32px));max-height:calc(100vh - 48px);display:flex;flex-direction:column;">
+    <div class="lmh"><span>📍 Marker für Kategorie wählen</span><button data-action="close-modal" data-modal-id="cat-marker-mo">✕</button></div>
+    <div style="padding:.5rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;">
+      <input class="e-inp" id="catmkr-search" placeholder="🔍 Suchen…" data-input-action="render-category-marker-grid" style="flex:1;"/>
+      <select class="e-sel" id="catmkr-filter" data-input-action="render-category-marker-grid" style="width:auto;padding:4px 8px;"></select>
+      <button class="s-btn s-cancel" style="font-size:.72rem;padding:2px 10px;" data-action="clear-category-marker">✕ Keinen</button>
+    </div>
+    <div id="catmkr-grid" style="flex:1;overflow-y:auto;padding:.7rem 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:.5rem;"></div>
+    <div class="lmb-footer"><button class="s-btn s-cancel" data-action="close-modal" data-modal-id="cat-marker-mo">Abbrechen</button></div>
+  </div>
+</div>
+
+<!-- REGION ICON MODAL -->
+<div class="mo" id="icon-mo">
+  <div id="icon-card">
+    <div class="mh">
+      <span>Regions-Icon festlegen</span>
+      <button class="mh-close" data-action="close-region-icon-modal">✕</button>
+    </div>
+    <div class="mh-body" style="display:flex;flex-direction:column;gap:.7rem;padding:.9rem 1rem;">
+      <div class="e-row">
+        <label class="e-lbl">Imgur / Bild-URL</label>
+        <input class="e-inp" id="icon-url-inp" placeholder="https://i.imgur.com/…"/>
+      </div>
+      <div style="display:flex;align-items:center;gap:.7rem;">
+        <div id="icon-preview" style="width:60px;height:60px;border:2px solid var(--border);border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:.25;background:var(--p2);color:#1a1200;">🗺</div>
+        <button class="add-row" style="border-style:solid;flex:1;opacity:.7" data-action="preview-region-icon-url">↻ Vorschau</button>
+      </div>
+      <div style="display:flex;gap:.4rem;justify-content:flex-end;padding-top:.2rem;">
+        <button class="s-btn s-del" data-action="clear-region-icon">✕ Entfernen</button>
+        <button class="s-btn s-cancel" data-action="close-region-icon-modal">Abbrechen</button>
+        <button class="s-btn s-save" data-action="save-region-icon">✓ Speichern</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PASSWORD MODAL -->
+<div class="mo" id="pw-mo">
+  <div id="pw-card">
+    <div class="pw-title">🔐 Editormodus</div>
+    <div class="pw-sub">NUR FÜR DEN TAVERNEN-WIRT</div>
+    <input id="pw-inp" type="password" placeholder="············" data-keydown-action="check-password"/>
+    <div id="pw-err">✕ Falsches Passwort</div>
+    <button id="pw-ok" data-action="check-password">Eintreten</button>
+    <button id="pw-cancel" data-action="close-password-modal">Abbrechen</button>
+  </div>
+</div>
+
+<div id="pin-tooltip">
+  <div class="pt-inner">
+    <div class="pt-title" id="pt-title"></div>
+    <div id="pt-cat"></div>
+    <div class="pt-text" id="pt-text"></div>
+    <div class="pt-hint">Klicken zum Öffnen</div>
+  </div>
+</div>
+
+<div id="hint"></div>
+<div id="toast"></div>
+
+<script src="assets/js/lsb/lsb-config.js"></script>
+<script src="assets/js/lsb/lsb-calculations.js"></script>
+<script src="assets/js/lsb/lsb-diary.js"></script>
+<script src="assets/js/tafel-app.js"></script>
+<script src="assets/js/notes/zettel-board.js"></script>
+<script src="assets/js/notes/zettel-scroll-views.js"></script>
+<script src="assets/js/notes/zettel-editor.js"></script>
+<script src="assets/js/data/data-manager.js"></script>
+<script src="assets/js/board/board-layers.js"></script>
+<script src="assets/js/board/board-viewport.js"></script>
+<script src="assets/js/pins/pin-scroll-view.js"></script>
+<script src="assets/js/pins/pin-board.js"></script>
+<script src="assets/js/pins/pin-editor.js"></script>
+<script src="assets/js/pins/marker-catalog.js"></script>
+<script src="assets/js/pins/categories.js"></script>
+<script src="assets/js/core/tafel-actions.js"></script>
+<script src="assets/js/core/tafel-bootstrap.js"></script>
+</body>
+</html>

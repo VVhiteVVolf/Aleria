@@ -102,6 +102,7 @@ let S = {
   lblSize: 13,
   regionIcon: TAFEL_CONFIG.regionIcon || '',
   regionTitle: TAFEL_CONFIG.title || '📋 Anzeigetafel-Vorlage',
+  boardImages: {},
   dm: { sessions:[], notes:'', groupStatus:{} },
   markerCatalog: JSON.parse(JSON.stringify(TAFEL_CONFIG.defaultMarkerCatalog || DEFAULT_MARKER_CATALOG)),
 };
@@ -132,14 +133,45 @@ function applyTafelConfig(){
   const cfg=TAFEL_CONFIG;
   if(cfg.title && (!S.regionTitle || S.regionTitle==='📋 Anzeigetafel-Vorlage')) S.regionTitle=cfg.title;
   if(cfg.regionIcon && !S.regionIcon) S.regionIcon=cfg.regionIcon;
-  const imgs=cfg.images||{};
+  applyBoardImages();
+  if(cfg.documentTitle) document.title=cfg.documentTitle;
+}
+
+function defaultBoardImages(){
+  const imgs=TAFEL_CONFIG.images||{};
+  return {
+    board: imgs.board || '',
+    marker: imgs.marker || '',
+  };
+}
+
+function effectiveBoardImages(){
+  return {...defaultBoardImages(), ...(S.boardImages || {})};
+}
+
+function placeholderBoardImage(title){
+  const safeTitle=String(title||'Anzeigetafel').replace(/[&<>"']/g,'');
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+    <rect width="1400" height="1000" fill="#d8c091"/>
+    <rect x="70" y="70" width="1260" height="860" fill="#eadab2" stroke="#8a6510" stroke-width="8"/>
+    <text x="700" y="455" text-anchor="middle" font-family="serif" font-size="62" fill="#5a3a08">${safeTitle}</text>
+    <text x="700" y="535" text-anchor="middle" font-family="serif" font-size="32" fill="#5a3a08">Tafelbild fehlt</text>
+    <text x="700" y="590" text-anchor="middle" font-family="serif" font-size="24" fill="#5a3a08">Editormodus -> Bilder -> Imgur-Links eintragen</text>
+  </svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function applyBoardImages(){
+  const imgs=effectiveBoardImages();
+  const fallback=placeholderBoardImage(S.regionTitle||TAFEL_CONFIG.title);
   const board=document.getElementById('ln');
   const regions=document.getElementById('lr');
   const pins=document.getElementById('lm');
-  if(board && imgs.board) board.src=imgs.board;
-  if(regions && imgs.marker) regions.src=imgs.marker;
-  if(pins && imgs.marker) pins.src=imgs.marker;
-  if(cfg.documentTitle) document.title=cfg.documentTitle;
+  const boardSrc=imgs.board||fallback;
+  const markerSrc=imgs.marker||boardSrc;
+  if(board) board.src=boardSrc;
+  if(regions) regions.src=markerSrc;
+  if(pins) pins.src=markerSrc;
 }
 
 // ═══════════════════════════════════════════
@@ -157,7 +189,7 @@ function backupSave(label){
   const snap = {
     ts: Date.now(),
     label: label||'Automatisch',
-    data: JSON.stringify({pins:S.pins, zettel:S.zettel, cats:S.cats, regionTitle:S.regionTitle, lsb:S.lsb, dm:S.dm})
+    data: JSON.stringify({pins:S.pins, zettel:S.zettel, cats:S.cats, regionTitle:S.regionTitle, boardImages:S.boardImages, lsb:S.lsb, dm:S.dm})
   };
   all.unshift(snap);
   if(all.length>BACKUP_MAX) all.length=BACKUP_MAX;
@@ -216,6 +248,7 @@ function backupRestore(i){
     if(d.pins) S.pins=d.pins;
     if(d.cats) S.cats=d.cats;
     if(d.regionTitle) S.regionTitle=d.regionTitle;
+    if(d.boardImages) S.boardImages=d.boardImages;
     if(d.lsb) S.lsb=d.lsb;
     if(d.dm) S.dm=d.dm;
     saveD();
@@ -288,8 +321,10 @@ function applyState(remote){
   if(remote.lblSize)    S.lblSize=remote.lblSize;
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
   if(remote.regionTitle) S.regionTitle=remote.regionTitle;
+  if(remote.boardImages!==undefined) S.boardImages=remote.boardImages||{};
   if(remote.dm)         {S.dm=remote.dm;S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};}
   if(remote.markerCatalog?.length) S.markerCatalog=remote.markerCatalog;
+  applyBoardImages();
   applySizes();
   applyRegionMeta();
   renderPins();
@@ -318,13 +353,21 @@ function applyRegionMeta(){
   // Icon
   const iw=document.getElementById('region-icon-wrap');
   if(S.regionIcon){
-    iw.innerHTML=`<img src="${esc(S.regionIcon)}" alt="Icon" onerror="this.parentElement.innerHTML='🗺';this.parentElement.classList.remove('has-img')"/>`;
+    iw.innerHTML=`<img src="${esc(S.regionIcon)}" alt="Icon" onerror="window.tafelHandleRegionIconError(this)"/>`;
     iw.classList.add('has-img');
   } else {
     iw.innerHTML='🗺';
     iw.classList.remove('has-img');
   }
 }
+
+function tafelHandleRegionIconError(img){
+  const parent=img?.parentElement;
+  if(!parent)return;
+  parent.innerHTML='🗺';
+  parent.classList.remove('has-img');
+}
+window.tafelHandleRegionIconError=tafelHandleRegionIconError;
 
 // ═══════════════════════════════════════════
 // IMAGE / MAP
@@ -334,7 +377,7 @@ function onImgErr(){imgW=1400;imgH=1000;stage.style.width=imgW+'px';stage.style.
 // Attach handlers after functions are defined to avoid "not defined" errors
 (function(){const ln=document.getElementById('ln');if(ln){ln.onload=function(){onImgLoad(ln);};ln.onerror=function(){onImgErr();};if(ln.complete&&ln.naturalWidth){onImgLoad(ln);}else if(ln.complete){onImgErr();}}})();
 function fitView(){
-  window.TafelBoardViewport.fitView();
+  window.TafelBoardViewport?.fitView();
 }
 function applyT(){stage.style.transform=`translate(${vx}px,${vy}px) scale(${vz})`;}
 new ResizeObserver(()=>{if(imgW)fitView();}).observe(mapWrap);
@@ -367,6 +410,7 @@ function exitEdit(){
   document.getElementById('btn-add-ort').style.display='none';
   document.getElementById('btn-stamp').style.display='none';
   document.getElementById('btn-overwrite').style.display='none';
+  document.getElementById('btn-board-images').style.display='none';
   document.getElementById('btn-export').style.display='none';
   document.getElementById('dm-btn-cats').style.display='none';
   document.getElementById('dm-btn-mcat').style.display='none';
@@ -386,6 +430,7 @@ function enterEdit(){
   document.getElementById('btn-add-ort').style.display=currentLayer==='pins'?'block':'none';
   document.getElementById('btn-stamp').style.display='block';
   document.getElementById('btn-overwrite').style.display='block';
+  document.getElementById('btn-board-images').style.display='block';
   document.getElementById('btn-export').style.display='block';
   document.getElementById('dm-btn-cats').style.display='block';
   document.getElementById('dm-btn-mcat').style.display='block';
@@ -458,6 +503,38 @@ function saveIcon(){
 }
 function clearIcon(){
   S.regionIcon='';applyRegionMeta();saveD();closeIconModal();toast('Icon entfernt');
+}
+
+// ═══════════════════════════════════════════
+// BOARD IMAGES
+// ═══════════════════════════════════════════
+function openBoardImagesModal(){
+  if(!editMode)return;
+  const imgs=effectiveBoardImages();
+  document.getElementById('boardimg-board').value=imgs.board||'';
+  document.getElementById('boardimg-marker').value=imgs.marker||'';
+  document.getElementById('boardimg-mo').classList.add('open');
+  setTimeout(()=>document.getElementById('boardimg-board')?.focus(),60);
+}
+
+function saveBoardImages(){
+  const board=document.getElementById('boardimg-board').value.trim();
+  const marker=document.getElementById('boardimg-marker').value.trim();
+  S.boardImages={};
+  if(board) S.boardImages.board=board;
+  if(marker) S.boardImages.marker=marker;
+  applyBoardImages();
+  saveD();
+  closeLMo('boardimg-mo');
+  toast('✓ Tafelbilder gespeichert');
+}
+
+function clearBoardImages(){
+  S.boardImages={};
+  applyBoardImages();
+  saveD();
+  closeLMo('boardimg-mo');
+  toast('Tafelbilder auf Registry/Config zurueckgesetzt');
 }
 
 // ═══════════════════════════════════════════
@@ -1233,7 +1310,7 @@ function lsbRenderCustomSlots(){
     const d=document.createElement('div');
     const isOn=lGrpIconIsImg&&lGrpPIcon===ic.src;
     d.className='cslot'+(isOn?' on':'');
-    d.innerHTML=`<img src="${ic.src}" onerror="this.parentElement.classList.add('empty');this.remove()"/><div class="cslot-del" data-action="delete-travel-custom-slot" data-slot-index="${i}">✕</div>`;
+    d.innerHTML=`<img src="${ic.src}" onerror="if(this.parentElement){this.parentElement.classList.add('empty');}this.remove()"/><div class="cslot-del" data-action="delete-travel-custom-slot" data-slot-index="${i}">✕</div>`;
     d.addEventListener('click',event=>{
       if(event.target.closest('.cslot-del')) return;
       lsbPickCustomSlot(ic.src,d);
@@ -1542,7 +1619,8 @@ let dmSessEditId=null;
 function dmLoad(){
   if(!S.dm){S.dm={sessions:[],notes:'',groupStatus:{}};}
   S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};
-  document.getElementById('dm-notes').value=S.dm.notes||'';
+  const notes=document.getElementById('dm-notes');
+  if(notes) notes.value=S.dm.notes||'';
   dmRenderSessions();
 }
 
