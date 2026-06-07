@@ -39,21 +39,21 @@
   ];
 
   window.ZETTEL_COLOR = {
-    quest:'#f5e9c8',
-    steckbrief:'#f5e9c8',
-    zeitung:'#f5e9c8',
-    vermisst:'#f5e9c8',
-    ankuendigung:'#f5e9c8',
-    notiz:'#f5e9c8',
+    quest:'#f8efd2',
+    steckbrief:'#f8efd2',
+    zeitung:'#f8efd2',
+    vermisst:'#f8efd2',
+    ankuendigung:'#f8efd2',
+    notiz:'#f8efd2',
   };
 
   window.ZETTEL_BORDER = {
-    quest:'#c8a84b',
-    steckbrief:'#c8a84b',
-    zeitung:'#c8a84b',
-    vermisst:'#c8a84b',
-    ankuendigung:'#c8a84b',
-    notiz:'#c8a84b',
+    quest:'#d0bb7a',
+    steckbrief:'#d0bb7a',
+    zeitung:'#d0bb7a',
+    vermisst:'#d0bb7a',
+    ankuendigung:'#d0bb7a',
+    notiz:'#d0bb7a',
   };
 
   window.ZETTEL_SIZE = {

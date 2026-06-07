@@ -29,7 +29,7 @@
       el.style.cssText = `position:absolute;left:${z.x * size.w}px;top:${z.y * size.h}px;
         transform:translate(-50%,-50%);pointer-events:all;
         cursor:${rt().canEditZettel() ? 'grab' : 'pointer'};`;
-      el.innerHTML = `<div class="pin-dot" style="width:${ds}px;height:${ds}px;background:#8b6914;border:2.5px solid #f5e9c8;box-shadow:0 2px 8px rgba(0,0,0,.5),0 0 0 1px #c8a84b;"></div>`;
+      el.innerHTML = `<div class="pin-dot" style="width:${ds}px;height:${ds}px;background:#8a641f;border:2.5px solid #f8efd2;box-shadow:0 2px 6px rgba(0,0,0,.35),0 0 0 1px #d0bb7a;"></div>`;
 
       let downX = 0;
       let downY = 0;
@@ -75,10 +75,10 @@
     const tdef = typeById(z.typ);
     const tt = document.getElementById('pin-tooltip');
     if(!tt) return;
-    tt.innerHTML = `<div class="pttt-top" style="background:linear-gradient(90deg,#5a3a08,#8b6914,#c8a030,#8b6914,#5a3a08);padding:.45rem .75rem;border-bottom:1px solid #c8a84b;">
-    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#fff;letter-spacing:.04em;">${tdef.icon} ${tdef.label}</span>
-    <div style="font-family:'Cinzel Decorative',serif;font-size:.75rem;color:#fff;margin-top:.15rem;">${esc(z.title || tdef.label)}</div>
-  </div>${z.text ? `<div style="padding:.5rem .75rem;font-family:'EB Garamond',serif;font-size:.82rem;color:#1a1200;line-height:1.55;font-style:italic;">${esc(z.text).slice(0, 200)}</div>` : ''}`;
+    tt.innerHTML = `<div class="pttt-top" style="background:#ead8a5;padding:.45rem .75rem;border-bottom:1px solid #d0bb7a;">
+    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#6f5725;letter-spacing:.04em;">${tdef.icon} ${tdef.label}</span>
+    <div style="font-family:'Cinzel Decorative',serif;font-size:.75rem;color:#1f1608;margin-top:.15rem;">${esc(z.title || tdef.label)}</div>
+  </div>${z.text ? `<div style="padding:.5rem .75rem;font-family:'EB Garamond',serif;font-size:.82rem;color:#1f1608;line-height:1.55;font-style:italic;">${esc(z.text).slice(0, 200)}</div>` : ''}`;
     tt.style.display = 'block';
     tt.classList.add('show');
     moveTooltip(cx, cy);
