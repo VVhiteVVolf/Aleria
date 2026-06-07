@@ -30,11 +30,10 @@
     if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
 
     const rgb = hexToRgb(category.color || '#8a6510');
-    const headerBg = `linear-gradient(135deg,rgba(${rgb.r},${rgb.g},${rgb.b},.2) 0%,rgba(${rgb.r},${rgb.g},${rgb.b},.07) 55%,transparent 100%)`;
     const esc = runtime.esc;
 
     content.innerHTML = `
-      <div class="sv-header" style="background:${headerBg};">
+      <div class="sv-header">
         <div class="sv-crest-wrap">
           <div class="sv-crest">
             ${pin.crest

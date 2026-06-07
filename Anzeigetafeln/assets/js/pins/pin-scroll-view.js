@@ -34,10 +34,8 @@
     const r = parseInt(h.slice(0, 2), 16);
     const g = parseInt(h.slice(2, 4), 16);
     const b = parseInt(h.slice(4, 6), 16);
-    const headerBg = `linear-gradient(135deg,rgba(${r},${g},${b},.2) 0%,rgba(${r},${g},${b},.07) 55%,transparent 100%)`;
-
     sc.innerHTML = `
-    <div class="sv-header" style="background:${headerBg};">
+    <div class="sv-header">
       <div class="sv-crest-wrap">
         <div class="sv-crest">
           ${pin.crest
