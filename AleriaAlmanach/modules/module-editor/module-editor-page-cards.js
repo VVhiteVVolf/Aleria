@@ -7,6 +7,8 @@ function collectModulePageSharedFields(card, targetType = 'standard') {
     pageTitle: getTrimmedFormValue(card, '.me-page-title-input'),
     image: getTrimmedFormValue(card, '.me-page-image-input')
   };
+  const commentThreadKey = getTrimmedFormValue(card, '.me-page-comment-thread-key');
+  if (/^[a-z0-9-]{1,64}$/i.test(commentThreadKey)) shared.commentThreadKey = commentThreadKey;
 
   if (imageStyle === 'square') shared.imageSquare = true;
   if (imageStyle === 'landscape') shared.imageLandscape = true;

@@ -291,13 +291,18 @@ function moveModulePage(button, direction) {
   const card = button.closest('.module-page-card');
   const wrap = document.getElementById('me-pages');
   if (!card || !wrap) return;
+  let moved = false;
   if (direction < 0 && card.previousElementSibling) {
     wrap.insertBefore(card, card.previousElementSibling);
+    moved = true;
   } else if (direction > 0 && card.nextElementSibling) {
     wrap.insertBefore(card.nextElementSibling, card);
+    moved = true;
   }
+  if (!moved) return;
   renumberModulePageCards();
-  syncModuleJsonPreview();
+  const index = getModulePageCards().indexOf(card);
+  setModuleEditorPreviewPage(index >= 0 ? index : 0);
   updateModuleEditorDirtyState();
 }
 
@@ -305,10 +310,12 @@ function removeModulePage(button) {
   const wrap = document.getElementById('me-pages');
   const card = button.closest('.module-page-card');
   if (!wrap || !card) return;
+  const removedIndex = getModulePageCards().indexOf(card);
   card.remove();
   if (!wrap.querySelector('.module-page-card')) addModulePage('standard');
   renumberModulePageCards();
-  syncModuleJsonPreview();
+  const nextCards = getModulePageCards();
+  setModuleEditorPreviewPage(Math.max(0, Math.min(removedIndex, nextCards.length - 1)));
   updateModuleEditorDirtyState();
 }
 

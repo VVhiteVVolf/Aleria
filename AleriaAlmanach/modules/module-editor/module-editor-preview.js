@@ -32,6 +32,8 @@ function bindModuleEditorLiveSync() {
   });
 }
 
+let _moduleEditorPreviewRenderToken = 0;
+
 function getModulePageCards() {
   return Array.from(document.querySelectorAll('#me-pages .module-page-card'));
 }
@@ -71,6 +73,7 @@ function buildModuleEditorPreviewHtml(page, entry) {
 }
 
 function renderModuleEditorPreview(payload = null, errorMessage = '') {
+  const renderToken = ++_moduleEditorPreviewRenderToken;
   const stage = document.getElementById('me-preview-stage');
   const frame = document.getElementById('me-preview-frame');
   const empty = document.getElementById('me-preview-empty');
@@ -106,6 +109,7 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry)}</div>`;
 
   requestAnimationFrame(() => {
+    if (renderToken !== _moduleEditorPreviewRenderToken) return;
     const shell = document.getElementById('me-preview-shell');
     if (!shell) return;
     const availableWidth = Math.max(220, stage.clientWidth - 32);

@@ -113,6 +113,7 @@ function jumpToPage(targetPage) {
 
 function closeModal() {
   if (!confirmDiscardInlineModuleEditChanges('schließen')) return;
+  if (typeof cancelCurlInteraction === 'function') cancelCurlInteraction();
   deactivateDialog('modal-overlay');
   document.body.style.overflow = '';
   syncSessionFocusShell(false);

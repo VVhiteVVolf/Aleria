@@ -8,6 +8,17 @@ let _curlDragging = false;
 let _curlDragStartX = 0;
 let _curlAnimId = null;
 
+function cancelCurlInteraction() {
+  if (_curlAnimId) {
+    cancelAnimationFrame(_curlAnimId);
+    _curlAnimId = null;
+  }
+  _curlActive = false;
+  _curlDragging = false;
+  _curlProgress = 0;
+  drawCurlFrame(0, _curlDir);
+}
+
 function bindCurlCorner(corner, dir) {
   if (!corner || corner.dataset.curlCornerBound === 'true') return;
   corner.dataset.curlCornerBound = 'true';
@@ -191,6 +202,7 @@ function curlAnimateTo(target, onDone) {
     if (Math.abs(diff) < 0.004) {
       _curlProgress = target;
       drawCurlFrame(_curlProgress, _curlDir);
+      _curlAnimId = null;
       if (onDone) onDone();
       return;
     }
@@ -215,6 +227,7 @@ function curlFlip(dir) {
   _curlDir = dir;
   _curlProgress = 0;
   curlAnimateTo(1, () => {
+    if (!currentEntry) return;
     currentPage += dir;
     renderPage(currentPage, 0);
     _curlProgress = 0;
@@ -253,6 +266,7 @@ document.addEventListener('mouseup', () => {
   if (_curlProgress >= 0.32) {
     _curlActive = true;
     curlAnimateTo(1, () => {
+      if (!currentEntry) return;
       currentPage += _curlDir;
       renderPage(currentPage, 0);
       _curlProgress = 0;
