@@ -256,11 +256,13 @@ async function saveModuleFromEditor() {
       } else {
         entry.id = context.sourceEntryId;
         _entryOverrides[context.sourceEntryId] = entry;
+        setModuleSectionMove(context.sourceEntryId, section);
       }
     } else if (builtin) {
       entry.id = builtin.entry.id;
       removeCustomModuleById(entry.id);
       _entryOverrides[entry.id] = entry;
+      setModuleSectionMove(entry.id, section);
     } else {
       if (existingCustom && !confirm('Ein eigenes Modul mit dieser ID existiert bereits. Soll es überschrieben werden?')) {
         return;
@@ -318,6 +320,7 @@ function deleteModuleFromEditor() {
     removeCustomModuleById(context.sourceEntryId);
   } else {
     delete _entryOverrides[context.sourceEntryId];
+    clearModuleSectionMove(context.sourceEntryId);
   }
 
   saveModuleStore();

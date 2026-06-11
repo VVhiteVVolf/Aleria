@@ -258,22 +258,24 @@
   }
 
   .section-header { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem; }
-  .section-header::before { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--section-accent, var(--gold))); }
-  .section-header::after  { content:''; flex:1; height:1px; background:linear-gradient(90deg,var(--section-accent, var(--gold)),transparent); }
+  .section-header::before { content:''; flex:1; height:2px; background:linear-gradient(90deg,transparent,var(--section-accent, var(--gold))); }
+  .section-header::after  { content:''; flex:1; height:2px; background:linear-gradient(90deg,var(--section-accent, var(--gold)),transparent); }
   .section-title {
     display:inline-flex;
     align-items:center;
     gap:0.55rem;
     font-family:'Cinzel',serif;
-    font-size:0.78rem;
-    color:var(--section-accent, var(--gold));
+    font-size:0.92rem;
+    color:#fff8df;
     letter-spacing:0.28em;
     text-transform:uppercase;
     white-space:nowrap;
-    background:rgba(255,250,241,0.82);
-    padding:0.32rem 0.7rem 0.28rem;
-    border:1px solid rgba(139,105,20,0.14);
-    box-shadow:0 6px 18px rgba(80,50,20,0.06);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--section-accent, var(--gold)) 86%, #2a1605 14%), var(--section-accent, var(--gold)));
+    padding:0.48rem 0.92rem 0.42rem;
+    border:1px solid color-mix(in srgb, var(--section-accent, var(--gold)) 70%, #fff 30%);
+    box-shadow:0 8px 22px rgba(80,50,20,0.16), inset 0 1px 0 rgba(255,255,255,0.24);
+    text-shadow:0 1px 3px rgba(35,18,4,0.7);
   }
   .section-title-mark {
     font-size: 0.95rem;
@@ -283,14 +285,25 @@
     position: relative;
     z-index: 1;
     margin-bottom: 1.25rem;
-    color: var(--ink-faded);
-    font-size: 0.82rem;
+    color: var(--ink);
+    font-size: 0.9rem;
     line-height: 1.5;
-    padding-left: 0.2rem;
+    padding: 0.42rem 0.7rem;
+    border-left: 3px solid var(--section-accent, var(--gold));
+    background: rgba(255,255,255,0.28);
   }
 
   /* ── GRID CARDS ── */
   .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:1.2rem; }
+  .archive-section-empty-hint {
+    grid-column: 1 / -1;
+    padding: 1.4rem 1rem;
+    border: 1px dashed rgba(139,105,20,0.3);
+    background: rgba(255,255,255,0.22);
+    color: var(--ink-faded);
+    font-style: italic;
+    text-align: center;
+  }
   .entry-card { cursor:pointer; position:relative; border:1px solid var(--section-accent, var(--gold)); overflow:hidden; background:var(--parchment-dark); box-shadow:0 5px 22px var(--shadow); transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s; animation:cardIn 0.5s ease both; }
   .entry-card::before {
     content:'';
@@ -317,6 +330,35 @@
   .card-corner-bl { position:absolute; bottom:7px; left:7px;   width:15px; height:15px; border-bottom:2px solid var(--section-accent, var(--gold)); border-left:  2px solid var(--section-accent, var(--gold)); opacity:.5; pointer-events:none; }
   .card-locked .card-image-overlay { background:linear-gradient(to top,rgba(8,5,1,0.93) 0%,rgba(8,5,1,0.55) 100%); }
   .lock-icon { position:absolute; top:50%; left:50%; transform:translate(-50%,-70%); color:var(--gold); opacity:0.2; font-size:2rem; pointer-events:none; }
+  .entry-card-admin {
+    display: grid;
+    gap: 0.28rem;
+    padding: 0.42rem;
+    border-top: 1px solid rgba(139,105,20,0.22);
+    background: rgba(255,255,255,0.22);
+  }
+  .entry-card-admin label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+  }
+  .entry-card-admin select {
+    width: 100%;
+    min-height: 1.65rem;
+    border: 1px solid rgba(139,105,20,0.28);
+    background: rgba(255,255,255,0.46);
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .entry-card-admin select:focus {
+    border-color: var(--section-accent, var(--gold));
+    outline: none;
+  }
 
   /* ══════════════════════════════════════════
      MODAL — clean simple layout

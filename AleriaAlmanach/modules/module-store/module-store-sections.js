@@ -8,16 +8,59 @@ function cleanCustomSection(section) {
   return next;
 }
 
+function cleanModuleSectionMove(section) {
+  const cleaned = cleanCustomSection({ ...(section || {}), entries: [] });
+  return {
+    key: cleaned.key,
+    tab: cleaned.tab,
+    desc: cleaned.desc
+  };
+}
+
+function getModuleSectionMove(entryId) {
+  const id = String(entryId || '').trim();
+  return id && _moduleSectionMoves[id] ? cleanModuleSectionMove(_moduleSectionMoves[id]) : null;
+}
+
+function setModuleSectionMove(entryId, section) {
+  const id = String(entryId || '').trim();
+  if (!id) return;
+  const builtin = findBuiltinSectionByEntryId(id);
+  const target = cleanModuleSectionMove(section);
+  if (builtin && makeSectionSignature(builtin.section) === makeSectionSignature(target)) {
+    delete _moduleSectionMoves[id];
+    return;
+  }
+  _moduleSectionMoves[id] = target;
+}
+
+function clearModuleSectionMove(entryId) {
+  const id = String(entryId || '').trim();
+  if (id) delete _moduleSectionMoves[id];
+}
+
+function findSectionBySignature(signature) {
+  return getValidSections().find(section => makeSectionSignature(section) === signature) || null;
+}
+
 function getAllSections() {
+  const movedEntries = [];
   const builtins = SECTIONS
     .filter(section => section && Array.isArray(section.entries))
     .map(section => ({
       ...deepClone(section),
       entries: (section.entries || []).map(entry => {
         if (!entry?.id) return deepClone(entry);
-        if (_entryOverrides[entry.id]) return deepClone({ ..._entryOverrides[entry.id], id: entry.id });
-        return deepClone(entry);
-      })
+        const nextEntry = _entryOverrides[entry.id]
+          ? deepClone({ ..._entryOverrides[entry.id], id: entry.id })
+          : deepClone(entry);
+        const movedSection = getModuleSectionMove(entry.id);
+        if (movedSection) {
+          movedEntries.push({ section: movedSection, entry: nextEntry });
+          return null;
+        }
+        return nextEntry;
+      }).filter(Boolean)
     }));
 
   const merged = builtins;
@@ -31,6 +74,17 @@ function getAllSections() {
     } else {
       merged.push(customSection);
     }
+  });
+
+  movedEntries.forEach(item => {
+    const signature = makeSectionSignature(item.section);
+    let target = merged.find(existing => makeSectionSignature(existing) === signature);
+    if (!target) {
+      target = cleanCustomSection({ ...item.section, entries: [] });
+      merged.push(target);
+    }
+    target.entries = (target.entries || []).filter(entry => entry?.id !== item.entry.id);
+    target.entries.push(deepClone(item.entry));
   });
 
   return merged.filter(section => section && Array.isArray(section.entries));
@@ -66,6 +120,7 @@ function findCurrentSectionByEntryId(entryId) {
 
 function upsertCustomModule(sectionInput, entry) {
   const nextEntry = sanitizeModuleEntry(entry);
+  clearModuleSectionMove(nextEntry.id);
   const targetSection = cleanCustomSection({ ...sectionInput, entries: [] });
   const signature = makeSectionSignature(targetSection);
   let section = _customSections.find(item => makeSectionSignature(item) === signature);
@@ -81,8 +136,7 @@ function upsertCustomModule(sectionInput, entry) {
   if (existingIndex >= 0) section.entries[existingIndex] = nextEntry;
   else section.entries.push(nextEntry);
   _customSections = _customSections
-    .map(cleanCustomSection)
-    .filter(customSection => customSection.entries.length);
+    .map(cleanCustomSection);
 }
 
 function removeCustomModuleById(entryId) {
@@ -90,8 +144,7 @@ function removeCustomModuleById(entryId) {
     .map(section => ({
       ...section,
       entries: (section.entries || []).filter(entry => entry?.id !== entryId)
-    }))
-    .filter(section => section.entries.length);
+    }));
 }
 
 function buildModuleExportPayload(entryId) {

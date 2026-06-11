@@ -38,6 +38,7 @@
         version: data?.version || 1,
         updatedAtClient: Number(data?.updatedAtClient) || Date.now(),
         customSections: Array.isArray(data?.customSections) ? data.customSections : [],
+        moduleSectionMoves: data?.moduleSectionMoves && typeof data.moduleSectionMoves === 'object' ? data.moduleSectionMoves : {},
         entryOverrides: data?.entryOverrides && typeof data.entryOverrides === 'object' ? data.entryOverrides : {}
       };
     }
@@ -80,7 +81,7 @@
           desc: String(section?.desc || '').trim(),
           entryIds
         };
-      }).filter(section => section.entryIds.length);
+      });
 
       const entryOverrideIds = [];
       Object.entries(normalized.entryOverrides).forEach(([entryId, entry]) => {
@@ -105,6 +106,7 @@
           version: normalized.version,
           updatedAtClient: normalized.updatedAtClient,
           customSections,
+          moduleSectionMoves: normalized.moduleSectionMoves || {},
           entryOverrideIds
         },
         docs
@@ -131,8 +133,7 @@
           entries: (Array.isArray(section?.entryIds) ? section.entryIds : [])
             .map(entryId => docsByEntryId.get(String(entryId || '').trim())?.entry)
             .filter(Boolean)
-        }))
-        .filter(section => section.entries.length);
+        }));
 
       const entryOverrides = {};
       (Array.isArray(manifest.entryOverrideIds) ? manifest.entryOverrideIds : []).forEach(entryId => {
@@ -145,6 +146,7 @@
         version: manifest.version || 1,
         updatedAtClient: Number(manifest.updatedAtClient) || 0,
         customSections,
+        moduleSectionMoves: manifest.moduleSectionMoves || configData?.moduleSectionMoves || {},
         entryOverrides
       };
     }
@@ -175,6 +177,7 @@
         moduleStoreMode: MODULE_STORE_SPLIT_FORMAT,
         moduleStoreType: 'almanach-module-store',
         moduleStoreManifest: split.manifest,
+        moduleSectionMoves: normalized.moduleSectionMoves || {},
         moduleStoreUpdatedAtClient: normalized.updatedAtClient,
         moduleStoreUpdatedAt: serverTimestamp()
       }, { merge: true });

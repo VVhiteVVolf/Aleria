@@ -153,10 +153,23 @@ function handleArchiveActionClick(event) {
     openModuleEditorForImport();
     return;
   }
+  if (action === 'create-module-section') {
+    event.preventDefault();
+    createModuleSectionFromPrompt();
+    return;
+  }
   if (action === 'open-entry') {
+    if (event.target?.closest?.('.entry-card-admin')) return;
     event.preventDefault();
     openArchiveEntryById(trigger.dataset.entryId || '');
   }
+}
+
+function handleArchiveActionChange(event) {
+  const trigger = event.target?.closest?.('[data-archive-action="move-entry-section"]');
+  if (!trigger) return;
+  event.preventDefault();
+  moveModuleToSection(trigger.dataset.entryId || '', trigger.value || '');
 }
 
 function handleArchiveActionKeydown(event) {
@@ -420,6 +433,15 @@ function renderAll() {
   importBtn.setAttribute('aria-label', 'Modul importieren, exportieren oder Backup verwalten');
   tabsNav.appendChild(importBtn);
 
+  const sectionBtn = document.createElement('button');
+  sectionBtn.className = 'gallery-tab-btn gallery-tab-add';
+  sectionBtn.type = 'button';
+  sectionBtn.textContent = '+ Reiter';
+  sectionBtn.title = 'Neuen großen Modul-Reiter erstellen';
+  sectionBtn.dataset.archiveAction = 'create-module-section';
+  sectionBtn.setAttribute('aria-label', 'Neuen großen Modul-Reiter erstellen');
+  tabsNav.appendChild(sectionBtn);
+
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
   toolbar.innerHTML = `
@@ -457,20 +479,28 @@ function renderAll() {
   sections.forEach(section => {
     const filteredEntries = section.entries.filter(entry => matchesArchiveSearch(buildEntrySearchText(entry, section)));
     entryMatchCount += filteredEntries.length;
-    if (filteredEntries.length) sectionMatchCount++;
+    const showEmptySection = !_archiveSearchNeedle && !section.entries.length;
+    if (filteredEntries.length || showEmptySection) sectionMatchCount++;
     const theme = getSectionThemeMeta(section.key);
     const block = document.createElement('div');
     block.className = 'section-block visible';
     block.dataset.tab = section.tab || section.key;
     block.dataset.sectionTheme = theme.slug;
-    block.dataset.hasMatches = filteredEntries.length ? 'true' : 'false';
+    block.dataset.hasMatches = filteredEntries.length || showEmptySection ? 'true' : 'false';
     block.innerHTML = `
       <div class="section-header"><span class="section-title"><span>${escapeHtml(section.key)}</span></span></div>
       <div class="section-kicker">${escapeHtml(section.desc || section.tab || '')}</div>
       <div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');
+    if (showEmptySection) {
+      const hint = document.createElement('div');
+      hint.className = 'archive-section-empty-hint';
+      hint.textContent = 'Noch keine Module in diesem Reiter.';
+      grid.appendChild(hint);
+    }
     filteredEntries.forEach((entry, i) => {
+      const sectionSignature = makeSectionSignature(section);
       const card = document.createElement('div');
       card.className = 'entry-card' + (entry.locked ? ' card-locked' : '');
       card.style.animationDelay = `${i * 0.07}s`;
@@ -490,6 +520,12 @@ function renderAll() {
           <div class="card-image-overlay"></div>
           ${entry.locked ? `<div class="lock-icon">🔒</div>` : ''}
           <div class="card-label"><h3>${escapeHtml(entry.title)}</h3><div class="card-type-tag">${escapeHtml(entry.type)}</div></div>
+        </div>
+        <div class="entry-card-admin">
+          <label>Verschieben nach</label>
+          <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
+            ${buildModuleSectionTargetOptions(sectionSignature)}
+          </select>
         </div>
         <div class="card-corner"></div><div class="card-corner-bl"></div>`;
       if (usePriorityImage) priorityCardImageBudget--;
@@ -531,6 +567,7 @@ function initPage() {
   if (_appInitialized) return;
   _appInitialized = true;
   document.addEventListener('click', handleArchiveActionClick);
+  document.addEventListener('change', handleArchiveActionChange);
   document.addEventListener('keydown', handleArchiveActionKeydown);
   document.addEventListener('pointerover', handleArchiveEntryPreload);
   document.addEventListener('focusin', handleArchiveEntryPreload);

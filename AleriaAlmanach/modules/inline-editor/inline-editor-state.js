@@ -266,12 +266,16 @@ function saveInlineModuleEdit() {
       } else {
         _entryOverrides[context.entryId] = { ...entry, id: context.entryId };
         entry.id = context.entryId;
+        setModuleSectionMove(context.entryId, section);
       }
     } else {
       removeCustomModuleById(entry.id);
       delete _entryOverrides[entry.id];
       const builtin = findBuiltinSectionByEntryId(entry.id);
-      if (builtin) _entryOverrides[entry.id] = entry;
+      if (builtin) {
+        _entryOverrides[entry.id] = entry;
+        setModuleSectionMove(entry.id, section);
+      }
       else upsertCustomModule(section, entry);
     }
 

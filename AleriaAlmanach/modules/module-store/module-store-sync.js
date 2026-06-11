@@ -18,8 +18,13 @@ function normalizeModuleStorePayload(payload) {
     version: Number(payload?.version) || MODULE_STORE_SCHEMA_VERSION,
     updatedAtClient: Number(payload?.updatedAtClient) || 0,
     customSections: Array.isArray(payload?.customSections)
-      ? payload.customSections.map(cleanCustomSection).filter(section => section.entries.length)
+      ? payload.customSections.map(cleanCustomSection)
       : [],
+    moduleSectionMoves: Object.fromEntries(
+      Object.entries(payload?.moduleSectionMoves || {})
+        .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
+        .filter(([entryId]) => entryId)
+    ),
     entryOverrides
   };
 }
@@ -29,6 +34,11 @@ function getModuleStorePayload(updatedAtClient = Date.now()) {
     version: MODULE_STORE_SCHEMA_VERSION,
     updatedAtClient,
     customSections: _customSections.map(cleanCustomSection),
+    moduleSectionMoves: Object.fromEntries(
+      Object.entries(_moduleSectionMoves || {})
+        .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
+        .filter(([entryId]) => entryId)
+    ),
     entryOverrides: Object.fromEntries(
       Object.entries(_entryOverrides).map(([entryId, entry]) => [entryId, sanitizeModuleEntry({ ...entry, id: entryId })])
     )
@@ -110,6 +120,7 @@ function getModuleStoreContentSignature(payload) {
   const normalized = normalizeModuleStorePayload(payload);
   return JSON.stringify({
     customSections: normalized.customSections,
+    moduleSectionMoves: normalized.moduleSectionMoves,
     entryOverrides: normalized.entryOverrides
   });
 }
@@ -280,6 +291,7 @@ function cleanupSyncedModuleStoreCache(options = {}) {
 function applyModuleStorePayload(payload) {
   const normalized = normalizeModuleStorePayload(payload);
   _customSections = normalized.customSections;
+  _moduleSectionMoves = normalized.moduleSectionMoves || {};
   _entryOverrides = {};
   Object.entries(normalized.entryOverrides).forEach(([entryId, entry]) => {
     _entryOverrides[entryId] = sanitizeModuleEntry({ ...entry, id: entryId });

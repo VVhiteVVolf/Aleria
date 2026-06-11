@@ -12,13 +12,13 @@
 <link rel="dns-prefetch" href="//imgur.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/archive.css?v=20260520-cleanup-v1">
+<link rel="stylesheet" href="./styles/archive.css?v=20260611-module-sections-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260604-story-width-v1">
 <link rel="stylesheet" href="./styles/comments.css?v=20260604-comment-format-v2">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/characters.css?v=20260611-character-bulk-v1">
+<link rel="stylesheet" href="./styles/characters.css?v=20260611-compact-character-grid-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260604-scene-comments-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260520-cleanup-v1">
@@ -34,16 +34,17 @@
 <link rel="stylesheet" href="./styles/mobile.css?v=20260603-court-editor-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260520-cleanup-v1" media="(max-width: 760px)">
   <!-- Firebase -->
-  <script type="module" src="./firebase.js?v=20260602-character-subtabs-v1"></script>
+  <script type="module" src="./firebase.js?v=20260611-module-sections-v1"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20260611-tab-sort-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20260611-module-sections-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/session/session-focus.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/module-store/module-store-sections.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20260611-module-sections-v1" defer></script>
+  <script src="./modules/module-store/module-store-sections.js?v=20260611-module-sections-v1" defer></script>
+  <script src="./modules/module-store/module-section-management.js?v=20260611-module-sections-v1" defer></script>
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-preview.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
@@ -69,10 +70,10 @@
   <script src="./modules/module-editor/module-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260611-editor-checkup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20260603-module-editor-fields-v2" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20260611-module-sections-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-state.js?v=20260611-page-isolation-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-state.js?v=20260611-module-sections-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-wanted.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -88,7 +89,7 @@
   <script src="./modules/inline-editor/inline-editor-events.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260604-module-image-fixes-v1" defer></script>
   <script src="./modules/rendering/module-renderer.js?v=20260611-page-isolation-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20260611-module-sections-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260602-character-subtabs-v1" defer></script>
   <script src="./modules/characters/character-tabs.js?v=20260603-character-hierarchy-v1" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260602-character-subtabs-v1" defer></script>

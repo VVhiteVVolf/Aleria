@@ -26,6 +26,7 @@ const ALMANACH_BACKUP_SCHEMA_VERSION = 2;
 const MODULE_COMMENT_EXPORT_SCHEMA_VERSION = 1;
 let _customSections = [];
 let _entryOverrides = {};
+let _moduleSectionMoves = {};
 let _moduleEditorAuthorized = false;
 let _moduleStoreRemoteSaveTimer = null;
 let _moduleStoreRemoteSyncStarted = false;
