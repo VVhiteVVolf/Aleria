@@ -194,6 +194,39 @@
     flex-direction: column;
   }
   .char-card:hover { transform: translateY(-5px) scale(1.015); box-shadow: 0 14px 42px var(--shadow), 0 0 0 1px var(--gold-light); }
+  .char-card-bulk-select {
+    position: absolute;
+    z-index: 4;
+    top: 0.45rem;
+    right: 0.45rem;
+    width: 1.55rem;
+    height: 1.55rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: rgba(20,12,4,0.66);
+    border: 1px solid rgba(212,180,100,0.58);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+  }
+  .char-card-bulk-select input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .char-card-bulk-select span {
+    width: 0.82rem;
+    height: 0.82rem;
+    border: 1px solid rgba(246,232,190,0.9);
+    background: rgba(255,255,255,0.12);
+  }
+  .char-card-bulk-select input:checked + span {
+    background: var(--gold);
+    box-shadow: inset 0 0 0 2px rgba(20,12,4,0.72);
+  }
+  .char-card.organizing:has(.char-card-bulk-select input:checked) {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
   .char-card-img {
     width: 100%; aspect-ratio: 1/1;
     overflow: hidden; position: relative;
@@ -313,6 +346,60 @@
   .char-group-toolbar button:hover {
     border-color: var(--gold);
     color: var(--gold);
+  }
+  .char-bulk-toolbar {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.72rem 0.85rem;
+    border: 1px solid rgba(139,105,20,0.28);
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.08)),
+      rgba(212,180,100,0.12);
+  }
+  .char-bulk-count {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .char-bulk-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+  }
+  .char-bulk-controls button,
+  .char-bulk-controls select {
+    min-height: 2rem;
+    border: 1px solid rgba(139,105,20,0.32);
+    background: rgba(255,255,255,0.36);
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.54rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.55rem;
+  }
+  .char-bulk-controls button {
+    cursor: pointer;
+  }
+  .char-bulk-controls button:hover:not(:disabled),
+  .char-bulk-controls select:focus {
+    border-color: var(--gold);
+    color: var(--gold);
+    outline: none;
+  }
+  .char-bulk-controls button:disabled,
+  .char-bulk-controls select:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
   }
   .char-empty-hint {
     grid-column: 1 / -1;

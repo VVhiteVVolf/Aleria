@@ -295,7 +295,7 @@ function deleteCharacterSubtab(parentTab, subtab) {
   renderCharGrid();
 }
 
-function assignCharToSubtab(charId, parentTab, subtab) {
+function assignCharToSubtab(charId, parentTab, subtab, options = {}) {
   const id = String(charId || '');
   if (!id || !parentTab || parentTab === 'Alle' || parentTab === CHARACTER_ARCHIVE_TAB) return;
   assignCharToTab(id, parentTab, { render: false, save: false });
@@ -305,9 +305,11 @@ function assignCharToSubtab(charId, parentTab, subtab) {
     if (!_charSubtabMap[parentTab][subtab]) _charSubtabMap[parentTab][subtab] = [];
     if (!_charSubtabMap[parentTab][subtab].includes(id)) _charSubtabMap[parentTab][subtab].push(id);
   }
-  saveCharTabs();
-  renderCharSubtabs();
-  renderCharGrid();
+  if (options.save !== false) saveCharTabs();
+  if (options.render !== false) {
+    renderCharSubtabs();
+    renderCharGrid();
+  }
 }
 
 function createCharacterTabButton(tab) {

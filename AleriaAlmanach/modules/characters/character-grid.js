@@ -9,6 +9,9 @@ function setCharacterSubgroupFromSelect(selectEl, charId) {
 
 function toggleCharacterOrganizeMode() {
   _charOrganizeMode = !_charOrganizeMode;
+  if (!_charOrganizeMode && typeof clearCharacterBulkSelection === 'function') {
+    clearCharacterBulkSelection({ render: false });
+  }
   renderCharGrid();
 }
 
@@ -138,6 +141,8 @@ function createCharacterCard(c, options = {}) {
   const assignedSubtab = getCharacterAssignedSubtab(c.id, assignedTab);
   const groupLabel = assignedTab || 'Keine Gruppe';
   const showGroupSelect = !!options.organizeMode;
+  const showBulkSelect = showGroupSelect && typeof getSelectedCharacterIds === 'function';
+  const bulkSelected = showBulkSelect && getSelectedCharacterIds().includes(String(c.id || ''));
   const groupOptions = ['Alle', ..._charTabs.filter(tab => tab !== 'Alle')]
     .map(tab => `<option value="${escapeHtml(tab)}"${(assignedTab || 'Alle') === tab ? ' selected' : ''}>${escapeHtml(tab === 'Alle' ? 'Keine Gruppe' : tab)}</option>`)
     .join('');
@@ -157,6 +162,11 @@ function createCharacterCard(c, options = {}) {
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `${c.name || 'Charakter'} öffnen`);
   card.innerHTML = `
+    ${showBulkSelect ? `
+      <label class="char-card-bulk-select" title="Für Massenaktion auswählen" data-character-grid-action="toggle-bulk-character" data-char-id="${escapeHtml(c.id)}">
+        <input type="checkbox" data-character-grid-action="toggle-bulk-character" data-char-id="${escapeHtml(c.id)}"${bulkSelected ? ' checked' : ''}>
+        <span></span>
+      </label>` : ''}
     <div class="char-card-img">
       ${portraitSrc
         ? `<img src="${portraitSrc}" alt="${safeName}" loading="lazy" decoding="async">`
@@ -287,6 +297,7 @@ function renderCharGrid() {
   }
 
   const chars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
   if (_activeCharTab === 'Alle') {
     const groups = buildCharacterGroupBuckets(chars);
     groups.forEach(group => {
@@ -376,6 +387,9 @@ function handleCharacterGridActionClick(event) {
   const action = trigger.dataset.characterGridAction;
   if (action === 'assign-group') return;
   if (action === 'assign-subgroup') return;
+  if (action === 'bulk-target-group') return;
+  if (action === 'bulk-target-subgroup') return;
+  if (action === 'toggle-bulk-character') return;
   if (action === 'open-character' && isCharacterGridControlTarget(event.target)) return;
 
   event.preventDefault();
@@ -394,6 +408,22 @@ function handleCharacterGridActionClick(event) {
   }
   if (action === 'toggle-organize') {
     toggleCharacterOrganizeMode();
+    return;
+  }
+  if (action === 'bulk-select-visible') {
+    selectVisibleCharactersForBulk(getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c))));
+    return;
+  }
+  if (action === 'bulk-clear-selection') {
+    clearCharacterBulkSelection();
+    return;
+  }
+  if (action === 'bulk-assign-group') {
+    assignSelectedCharactersToGroup(trigger);
+    return;
+  }
+  if (action === 'bulk-archive') {
+    setSelectedCharactersArchived(_activeCharTab !== CHARACTER_ARCHIVE_TAB);
     return;
   }
   if (action === 'export-archive') {
@@ -431,13 +461,24 @@ function handleCharacterGridActionKeydown(event) {
 }
 
 function handleCharacterGridGroupChange(event) {
-  const selectEl = event.target?.closest?.('[data-character-grid-action="assign-group"], [data-character-grid-action="assign-subgroup"]');
+  const selectEl = event.target?.closest?.('[data-character-grid-action="assign-group"], [data-character-grid-action="assign-subgroup"], [data-character-grid-action="bulk-target-group"], [data-character-grid-action="bulk-target-subgroup"], [data-character-grid-action="toggle-bulk-character"]');
   const grid = document.getElementById('char-grid');
   if (!selectEl || !grid || !grid.contains(selectEl)) return;
 
   event.stopPropagation();
+  if (selectEl.dataset.characterGridAction === 'toggle-bulk-character') {
+    toggleCharacterBulkSelection(selectEl.dataset.charId, !!selectEl.checked);
+    return;
+  }
   if (selectEl.dataset.characterGridAction === 'assign-group') {
     setCharacterGroupFromSelect(selectEl, selectEl.dataset.charId);
+    return;
+  }
+  if (selectEl.dataset.characterGridAction === 'bulk-target-group') {
+    updateCharacterBulkSubgroupSelect(selectEl);
+    return;
+  }
+  if (selectEl.dataset.characterGridAction === 'bulk-target-subgroup') {
     return;
   }
   setCharacterSubgroupFromSelect(selectEl, selectEl.dataset.charId);
