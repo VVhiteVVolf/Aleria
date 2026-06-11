@@ -66,6 +66,7 @@ let _archiveCharMatchCount = 0;
 let _archiveSectionMatchCount = 0;
 let _archiveEntrySectionMatchCount = 0;
 const _archiveEntrySearchCache = new Map();
+let _archiveManageMode = false;
 
 function invalidateArchiveSearchCache() {
   _archiveEntrySearchCache.clear();
@@ -156,6 +157,21 @@ function handleArchiveActionClick(event) {
   if (action === 'create-module-section') {
     event.preventDefault();
     createModuleSectionFromPrompt();
+    return;
+  }
+  if (action === 'toggle-archive-manage') {
+    event.preventDefault();
+    if (!_moduleEditorAuthorized) {
+      showAppStatus('Bitte entsperre zuerst den Modul-Editor, bevor du die Verwaltungsansicht aktivierst.', 'error');
+      return;
+    }
+    _archiveManageMode = !_archiveManageMode;
+    renderAll();
+    return;
+  }
+  if (action === 'toggle-section-expanded') {
+    event.preventDefault();
+    toggleArchiveSectionExpanded(trigger.dataset.sectionKey || '');
     return;
   }
   if (action === 'open-entry') {
@@ -371,6 +387,9 @@ function switchTab(tab) {
   document.querySelectorAll('.gallery-tab-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tab);
   });
+  document.querySelectorAll('[data-archive-dashboard]').forEach(dashboard => {
+    dashboard.hidden = tab !== 'Alle' || !!_archiveSearchNeedle;
+  });
   document.querySelectorAll('.section-block').forEach(block => {
     const blockTab = block.dataset.tab;
     const hasMatches = block.dataset.hasMatches !== 'false';
@@ -388,6 +407,7 @@ function renderAll() {
   clearTimeout(_archiveSearchRenderTimer);
   _archiveSearchRenderTimer = null;
   const sections = getValidSections();
+  const customSectionSignatures = new Set(_customSections.map(section => makeSectionSignature(section)));
   let entryMatchCount = 0;
   let sectionMatchCount = 0;
   let priorityCardImageBudget = 10;
@@ -442,6 +462,15 @@ function renderAll() {
   sectionBtn.setAttribute('aria-label', 'Neuen großen Modul-Reiter erstellen');
   tabsNav.appendChild(sectionBtn);
 
+  const manageBtn = document.createElement('button');
+  manageBtn.className = `gallery-tab-btn gallery-tab-add${_archiveManageMode ? ' active' : ''}`;
+  manageBtn.type = 'button';
+  manageBtn.textContent = _archiveManageMode ? 'Ansicht' : 'Verwalten';
+  manageBtn.title = _archiveManageMode ? 'Zur normalen Ansicht wechseln' : 'Verwaltungsansicht aktivieren';
+  manageBtn.dataset.archiveAction = 'toggle-archive-manage';
+  manageBtn.setAttribute('aria-label', manageBtn.title);
+  tabsNav.appendChild(manageBtn);
+
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
   toolbar.innerHTML = `
@@ -452,6 +481,11 @@ function renderAll() {
     </div>
     <div class="archive-search-meta" id="archive-search-meta"></div>`;
   main.appendChild(toolbar);
+
+  const dashboard = document.createElement('div');
+  dashboard.dataset.archiveDashboard = 'true';
+  dashboard.innerHTML = renderArchiveDashboard(sections);
+  main.appendChild(dashboard);
 
   const searchInput = toolbar.querySelector('#archive-search-input');
   const clearBtn = toolbar.querySelector('#archive-search-clear');
@@ -487,9 +521,9 @@ function renderAll() {
     block.dataset.tab = section.tab || section.key;
     block.dataset.sectionTheme = theme.slug;
     block.dataset.hasMatches = filteredEntries.length || showEmptySection ? 'true' : 'false';
+    const sectionSignature = makeSectionSignature(section);
     block.innerHTML = `
-      <div class="section-header"><span class="section-title"><span>${escapeHtml(section.key)}</span></span></div>
-      <div class="section-kicker">${escapeHtml(section.desc || section.tab || '')}</div>
+      ${renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}
       <div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');
@@ -499,8 +533,8 @@ function renderAll() {
       hint.textContent = 'Noch keine Module in diesem Reiter.';
       grid.appendChild(hint);
     }
-    filteredEntries.forEach((entry, i) => {
-      const sectionSignature = makeSectionSignature(section);
+    const visibleEntries = getArchiveSectionVisibleEntries(section, filteredEntries, { searchActive: !!_archiveSearchNeedle });
+    visibleEntries.forEach((entry, i) => {
       const card = document.createElement('div');
       card.className = 'entry-card' + (entry.locked ? ' card-locked' : '');
       card.style.animationDelay = `${i * 0.07}s`;
@@ -521,16 +555,18 @@ function renderAll() {
           ${entry.locked ? `<div class="lock-icon">🔒</div>` : ''}
           <div class="card-label"><h3>${escapeHtml(entry.title)}</h3><div class="card-type-tag">${escapeHtml(entry.type)}</div></div>
         </div>
-        <div class="entry-card-admin">
+        ${renderArchiveEntryMeta(entry, section)}
+        ${_archiveManageMode ? `<div class="entry-card-admin">
           <label>Verschieben nach</label>
           <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
             ${buildModuleSectionTargetOptions(sectionSignature)}
           </select>
-        </div>
+        </div>` : ''}
         <div class="card-corner"></div><div class="card-corner-bl"></div>`;
       if (usePriorityImage) priorityCardImageBudget--;
       grid.appendChild(card);
     });
+    grid.insertAdjacentHTML('beforeend', renderArchiveSectionMoreControl(section, filteredEntries, visibleEntries, { searchActive: !!_archiveSearchNeedle }));
   });
 
   // Charaktere Sektion

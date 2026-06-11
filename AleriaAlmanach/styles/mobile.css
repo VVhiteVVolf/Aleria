@@ -108,7 +108,9 @@
     }
 
     .archive-toolbar {
+      flex-direction: column;
       gap: 0.65rem;
+      align-items: stretch;
       margin-bottom: 1rem;
       padding: 0.85rem;
       width: 100%;
@@ -129,8 +131,10 @@
 
     .archive-search-meta,
     .archive-empty-text {
-      max-width: 100%;
+      width: 100%;
+      max-width: min(100%, 34ch);
       overflow-wrap: anywhere;
+      white-space: normal;
     }
 
     .card-grid,
