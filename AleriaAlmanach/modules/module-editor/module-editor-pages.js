@@ -5,6 +5,20 @@ function buildRegisteredModuleEditorFields(page, type, index) {
     : '';
 }
 
+function createModulePageCommentThreadKey(existingKeys = []) {
+  const used = new Set(existingKeys.map(key => String(key || '').trim()).filter(Boolean));
+  let key;
+  do {
+    key = `p-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+  } while (used.has(key));
+  return key;
+}
+
+function getModulePageEditorCommentThreadKey(page, index = 0) {
+  const key = String(page?.commentThreadKey || '').trim();
+  return /^[a-z0-9-]{1,64}$/i.test(key) ? key : String(index);
+}
+
 function getModulePageImageWidthMax(type = 'standard') {
   return type === 'caste' ? 160 : 70;
 }
@@ -73,6 +87,7 @@ function buildModulePageEditorMarkup(page, index) {
 
   return `
     <div class="module-page-card" data-page-index="${index}">
+      <input type="hidden" class="me-page-comment-thread-key" value="${escapeHtml(getModulePageEditorCommentThreadKey(page, index))}">
       <div class="module-page-head">
         <div class="module-page-title">Seite ${index + 1}</div>
         <div class="module-page-actions">
@@ -226,7 +241,10 @@ function addModulePage(type = 'standard') {
   const wrap = document.getElementById('me-pages');
   if (!wrap) return;
   const index = wrap.querySelectorAll('.module-page-card').length;
-  wrap.insertAdjacentHTML('beforeend', buildModulePageEditorMarkup(createInlinePageByType(type, index), index));
+  const existingKeys = Array.from(wrap.querySelectorAll('.me-page-comment-thread-key')).map(input => input.value);
+  const page = createInlinePageByType(type, index);
+  page.commentThreadKey = createModulePageCommentThreadKey(existingKeys);
+  wrap.insertAdjacentHTML('beforeend', buildModulePageEditorMarkup(page, index));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   refreshAllModuleCastPickers();
   renumberModulePageCards();
@@ -257,6 +275,9 @@ function duplicateModulePage(button) {
   const card = button.closest('.module-page-card');
   if (!card) return;
   const page = collectModulePageFromCard(card);
+  page.commentThreadKey = createModulePageCommentThreadKey(
+    getModulePageCards().map(item => item.querySelector('.me-page-comment-thread-key')?.value)
+  );
   card.insertAdjacentHTML('afterend', buildModulePageEditorMarkup(page, 0));
   const newCard = card.nextElementSibling;
   renumberModulePageCards();
@@ -308,6 +329,8 @@ function collectModulePageFromCard(card) {
     pageTitle: getTrimmedFormValue(card, '.me-page-title-input'),
     image: getTrimmedFormValue(card, '.me-page-image-input'),
   };
+  const commentThreadKey = getTrimmedFormValue(card, '.me-page-comment-thread-key');
+  if (/^[a-z0-9-]{1,64}$/i.test(commentThreadKey)) page.commentThreadKey = commentThreadKey;
 
   if (imageStyle === 'square') page.imageSquare = true;
   if (imageStyle === 'landscape') page.imageLandscape = true;

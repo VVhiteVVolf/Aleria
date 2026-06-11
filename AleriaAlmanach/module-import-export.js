@@ -92,8 +92,8 @@ function remapModuleCommentThreadId(threadId, sourceEntryId, targetEntryId) {
   if (!raw || !sourceId || !targetId || sourceId === targetId) return raw;
   const location = parseCommentThreadLocation(raw);
   if (location.baseEntryId !== sourceId) return raw;
-  if (location.kind === 'session') return getSessionThreadId(targetId, location.pageIndex);
-  if (location.kind === 'page') return getPageCommentThreadId(targetId, location.pageIndex);
+  if (location.kind === 'session') return getSessionThreadId(targetId, location.pageKey || location.pageIndex);
+  if (location.kind === 'page') return getPageCommentThreadId(targetId, location.pageKey || location.pageIndex);
   return targetId;
 }
 

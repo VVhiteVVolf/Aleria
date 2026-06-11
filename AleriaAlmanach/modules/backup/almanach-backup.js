@@ -58,11 +58,12 @@ function getModuleCommentThreadDescriptors(entry) {
 
   const pages = Array.isArray(entry.pages) ? entry.pages : [];
   pages.forEach((page, pageIndex) => {
+    const pageKey = getPageCommentThreadKey(page, pageIndex);
     if (page?.sessionPage) {
-      pushThread(getSessionThreadId(entry.id, pageIndex), 'session', pageIndex, page.pageTitle || '');
+      pushThread(getSessionThreadId(entry.id, pageKey), 'session', pageIndex, page.pageTitle || '');
     }
     if (entry.enablePageComments || page?.enableComments) {
-      pushThread(getPageCommentThreadId(entry.id, pageIndex), 'page', pageIndex, page.pageTitle || '');
+      pushThread(getPageCommentThreadId(entry.id, pageKey), 'page', pageIndex, page.pageTitle || '');
     }
   });
 

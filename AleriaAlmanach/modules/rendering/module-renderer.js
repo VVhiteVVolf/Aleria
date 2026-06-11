@@ -1384,6 +1384,8 @@ function buildNav(page, pageIndex, total) {
       ${templateSelect}
       <button class="modal-page-tool" type="button" data-modal-action="save-inline-edit">Speichern</button>
       <button class="modal-page-tool" type="button" data-modal-action="cancel-inline-edit">Abbrechen</button>
+      <button class="modal-page-tool" type="button" data-modal-action="move-inline-page" data-direction="-1" ${pageIndex===0?'disabled':''}>Nach links</button>
+      <button class="modal-page-tool" type="button" data-modal-action="move-inline-page" data-direction="1" ${pageIndex===total-1?'disabled':''}>Nach rechts</button>
       ${pages.length > 1 ? `<button class="modal-page-tool" type="button" data-modal-action="remove-inline-page">Seite löschen</button>` : ''}`
     : `
       <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Export</button>

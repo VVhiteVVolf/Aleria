@@ -13,6 +13,7 @@ document.addEventListener('click', event => {
     'flip-page',
     'save-inline-edit',
     'cancel-inline-edit',
+    'move-inline-page',
     'remove-inline-page',
     'export-current-module',
     'open-module-editor-current'
@@ -37,6 +38,10 @@ document.addEventListener('click', event => {
   }
   if (action === 'cancel-inline-edit') {
     cancelInlineModuleEdit();
+    return;
+  }
+  if (action === 'move-inline-page') {
+    moveInlineCurrentPage(Number(trigger.dataset.direction) || 0);
     return;
   }
   if (action === 'remove-inline-page') {

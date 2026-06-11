@@ -1,5 +1,5 @@
 // Per-thread render pagination for long comment lists.
-const COMMENT_PAGE_SIZE = 50;
+const COMMENT_PAGE_SIZE = 75;
 const _commentPaginationState = new Map();
 
 function getCommentPaginationThreadId(scroll) {

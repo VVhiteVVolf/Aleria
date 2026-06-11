@@ -228,6 +228,8 @@ function addInlinePage(type = 'standard') {
   const pages = _inlineModuleEdit.draft.pages;
   const nextIndex = currentPage + 1;
   pages.splice(nextIndex, 0, createInlinePageByType(type, nextIndex));
+  ensureInlinePageCommentThreadKeys();
+  pages[nextIndex].commentThreadKey = createInlinePageCommentThreadKey(pages);
   currentPage = nextIndex;
   renderPage(currentPage, 0);
 }
@@ -236,6 +238,46 @@ function removeInlineCurrentPage() {
   if (!_inlineModuleEdit?.draft?.pages?.length || _inlineModuleEdit.draft.pages.length <= 1) return;
   _inlineModuleEdit.draft.pages.splice(currentPage, 1);
   currentPage = Math.max(0, Math.min(currentPage, _inlineModuleEdit.draft.pages.length - 1));
+  renderPage(currentPage, 0);
+}
+
+function createInlinePageCommentThreadKey(pages) {
+  const used = new Set((Array.isArray(pages) ? pages : [])
+    .map(page => String(page?.commentThreadKey || '').trim())
+    .filter(Boolean));
+  let key;
+  do {
+    key = `p-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+  } while (used.has(key));
+  return key;
+}
+
+function ensureInlinePageCommentThreadKeys() {
+  const pages = _inlineModuleEdit?.draft?.pages;
+  if (!Array.isArray(pages)) return;
+  const used = new Set();
+  pages.forEach((page, index) => {
+    if (!page || typeof page !== 'object') return;
+    let key = String(page.commentThreadKey || '').trim();
+    if (!/^[a-z0-9-]{1,64}$/i.test(key) || used.has(key)) {
+      key = String(index);
+    }
+    if (used.has(key)) key = createInlinePageCommentThreadKey(pages);
+    page.commentThreadKey = key;
+    used.add(key);
+  });
+}
+
+function moveInlineCurrentPage(direction) {
+  if (!_inlineModuleEdit?.draft?.pages?.length) return;
+  const pages = _inlineModuleEdit.draft.pages;
+  const fromIndex = currentPage;
+  const toIndex = fromIndex + (Number(direction) < 0 ? -1 : 1);
+  if (toIndex < 0 || toIndex >= pages.length) return;
+  ensureInlinePageCommentThreadKeys();
+  const [page] = pages.splice(fromIndex, 1);
+  pages.splice(toIndex, 0, page);
+  currentPage = toIndex;
   renderPage(currentPage, 0);
 }
 

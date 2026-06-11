@@ -86,7 +86,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
           <div class="comment-empty" id="comments-loading">Lade Sitzung…</div>
         </div>
         ${buildCommentQuickTools()}
-        ${buildCommentTurnBar(getSessionThreadId(entry.id, pageIndex))}
+        ${buildCommentTurnBar(getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex)))}
         ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.')}
       </div>
     </div>`;

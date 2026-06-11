@@ -135,6 +135,8 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   const next = {
     schemaVersion: Number(page.schemaVersion) || MODULE_PAGE_SCHEMA_VERSION
   };
+  const commentThreadKey = String(page.commentThreadKey || '').trim();
+  if (/^[a-z0-9-]{1,64}$/i.test(commentThreadKey)) next.commentThreadKey = commentThreadKey;
 
   if (page.image != null) next.image = String(page.image || '').trim() || null;
   if (page.imageWidth != null) {

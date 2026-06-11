@@ -1,33 +1,40 @@
 // Comment thread IDs, page mapping, and current comment context.
-function getSessionThreadId(entryId, pageIndex) {
-  return `${entryId}::session:${pageIndex}`;
+function getPageCommentThreadKey(page, pageIndex) {
+  const key = String(page?.commentThreadKey || '').trim();
+  return key || String(pageIndex);
 }
 
-function getPageCommentThreadId(entryId, pageIndex) {
-  return `${entryId}::page:${pageIndex}`;
+function getSessionThreadId(entryId, pageKey) {
+  return `${entryId}::session:${pageKey}`;
+}
+
+function getPageCommentThreadId(entryId, pageKey) {
+  return `${entryId}::page:${pageKey}`;
 }
 
 function parseCommentThreadLocation(threadId) {
   const raw = String(threadId || '');
-  const sessionMatch = raw.match(/^(.*)::session:(\d+)$/);
+  const sessionMatch = raw.match(/^(.*)::session:([^:]+)$/);
   if (sessionMatch) {
     return {
       raw,
       baseEntryId: sessionMatch[1],
-      pageIndex: Number(sessionMatch[2]),
+      pageIndex: /^\d+$/.test(sessionMatch[2]) ? Number(sessionMatch[2]) : null,
+      pageKey: sessionMatch[2],
       kind: 'session',
     };
   }
-  const pageMatch = raw.match(/^(.*)::page:(\d+)$/);
+  const pageMatch = raw.match(/^(.*)::page:([^:]+)$/);
   if (pageMatch) {
     return {
       raw,
       baseEntryId: pageMatch[1],
-      pageIndex: Number(pageMatch[2]),
+      pageIndex: /^\d+$/.test(pageMatch[2]) ? Number(pageMatch[2]) : null,
+      pageKey: pageMatch[2],
       kind: 'page',
     };
   }
-  return { raw, baseEntryId: raw, pageIndex: null, kind: 'entry' };
+  return { raw, baseEntryId: raw, pageIndex: null, pageKey: '', kind: 'entry' };
 }
 
 function isCommentlessModulePage(page) {
@@ -60,8 +67,9 @@ function getCommentThreadForPage(page, entry, pageIndex) {
     };
   }
   if (page.sessionPage) {
+    const pageKey = getPageCommentThreadKey(page, pageIndex);
     return {
-      threadId: getSessionThreadId(entry.id, pageIndex),
+      threadId: getSessionThreadId(entry.id, pageKey),
       kind: 'session',
       page,
       entry,
@@ -73,8 +81,9 @@ function getCommentThreadForPage(page, entry, pageIndex) {
     };
   }
   if (entry.enablePageComments || page.enableComments) {
+    const pageKey = getPageCommentThreadKey(page, pageIndex);
     return {
-      threadId: getPageCommentThreadId(entry.id, pageIndex),
+      threadId: getPageCommentThreadId(entry.id, pageKey),
       kind: 'page',
       page,
       entry,
@@ -149,7 +158,7 @@ function getModuleCommentThreadIds(entry) {
   getPages(entry).forEach((page, index) => {
     const directThread = getCommentThreadForPage(page, entry, index);
     if (directThread?.threadId) ids.add(directThread.threadId);
-    if (shouldShowInlineEntryComments(page, entry)) ids.add(getPageCommentThreadId(entry.id, index));
+    if (shouldShowInlineEntryComments(page, entry)) ids.add(getPageCommentThreadId(entry.id, getPageCommentThreadKey(page, index)));
   });
   return Array.from(ids);
 }
