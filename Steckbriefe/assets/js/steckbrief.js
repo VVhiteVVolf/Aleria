@@ -14,12 +14,16 @@
   let activeEditable = null;
   let activeCompanionPath = "";
   let companionEditMode = false;
+  let activeGroupingPath = "";
+  let groupingEditMode = false;
   let feedbackTimer = 0;
   let audioContext = null;
   let dirty = false;
   let saving = false;
   let saveQueued = false;
   let closeAfterSave = false;
+  let editorTab = "identity";
+  const groupingPlaceholderImage = "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png";
 
   init();
 
@@ -29,6 +33,7 @@
       migrateLegacyPortrait(local, data);
       data = mergeData(data, local);
     }
+    ensureGroupingSection();
     ensureGallery();
     renderShell();
     renderAll();
@@ -60,6 +65,11 @@
       <input type="file" id="import-json-file" accept="application/json,.json" hidden>
     `;
     document.body.prepend(bar);
+
+    const dock = document.createElement("aside");
+    dock.className = "steckbrief-editor-dock";
+    dock.setAttribute("aria-label", "Steckbrief-Bearbeitung");
+    document.body.insertBefore(dock, root);
   }
 
   function renderAll() {
@@ -75,6 +85,526 @@
     renderGallery();
     refreshImageFieldStatuses(root);
     syncColumnHeight();
+    if (!document.activeElement?.closest(".steckbrief-editor-dock")) renderEditorDock();
+  }
+
+  function renderEditorDock() {
+    const dock = document.querySelector(".steckbrief-editor-dock");
+    if (!dock) return;
+    dock.innerHTML = `
+      <header class="sed-head">
+        <div>
+          <strong>Steckbrief bearbeiten</strong>
+          <span>${escapeHtml(data.name?.vollstaendig || data.meta?.id || "Unbenannter Steckbrief")}</span>
+        </div>
+      </header>
+      <nav class="sed-tabs" aria-label="Bearbeitungsbereiche">
+        ${renderEditorTabButton("identity", "Identitaet")}
+        ${renderEditorTabButton("images", "Bilder")}
+        ${renderEditorTabButton("facts", "Fakten")}
+        ${renderEditorTabButton("sections", "Sektionen")}
+        ${renderEditorTabButton("inventory", "Inventar")}
+        ${renderEditorTabButton("groupings", "Gruppierungen")}
+        ${renderEditorTabButton("relations", "Beziehungen")}
+        ${renderEditorTabButton("gallery", "Galerie")}
+      </nav>
+      <div class="sed-body">
+        ${renderEditorTab()}
+      </div>
+    `;
+    refreshImageFieldStatuses(dock);
+  }
+
+  function renderEditorTabButton(id, label) {
+    return `<button type="button" class="${editorTab === id ? "is-active" : ""}" data-steck-editor-tab="${escapeAttr(id)}">${escapeHtml(label)}</button>`;
+  }
+
+  function renderEditorTab() {
+    if (editorTab === "images") return renderImagesEditor();
+    if (editorTab === "facts") return renderFactsEditor();
+    if (editorTab === "sections") return renderSectionsEditor();
+    if (editorTab === "inventory") return renderInventoryEditor();
+    if (editorTab === "groupings") return renderGroupingsEditor();
+    if (editorTab === "relations") return renderRelationsEditor();
+    if (editorTab === "gallery") return renderGalleryEditor();
+    return renderIdentityEditor();
+  }
+
+  function renderIdentityEditor() {
+    return `
+      <section class="sed-section">
+        <h2>Identitaet</h2>
+        <div class="sed-grid two">
+          ${renderEditorInput("Vorname", "name.vorname")}
+          ${renderEditorInput("Nachname", "name.nachname")}
+          ${renderEditorInput("Vollstaendiger Name", "name.vollstaendig", "wide")}
+          ${renderEditorInput("Titel / Rang", "name.titel")}
+          ${renderEditorInput("Rufname", "name.rufname")}
+          ${renderEditorInput("Alias", "name.alias")}
+        </div>
+      </section>
+      <section class="sed-section">
+        <h2>Meta</h2>
+        <div class="sed-grid two">
+          ${renderEditorInput("Browser-Titel", "meta.titel", "wide")}
+          ${renderEditorInput("Kategorie", "meta.kategorie")}
+          ${renderEditorInput("Status", "meta.status")}
+        </div>
+      </section>
+      <section class="sed-section">
+        <h2>Zitat und Einfuehrung</h2>
+        ${renderEditorTextarea("Zitat", "zitat.text", 3)}
+        ${renderEditorInput("Zitatgeber", "zitat.urheber")}
+        ${renderEditorTextarea("Einfuehrung", "einfuehrung", 5)}
+      </section>
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Hierarchie</h2>
+          <button type="button" data-editor-add="hierarchy-row">+ Ebene</button>
+        </div>
+        <div class="sed-list">
+          ${(data.hierarchie || []).map((item, index) => `
+            <article class="sed-row-card">
+              <div class="sed-row-tools">
+                <span>${index + 1}</span>
+                <button type="button" data-editor-move="hierarchie" data-editor-index="${index}" data-editor-dir="-1">Hoch</button>
+                <button type="button" data-editor-move="hierarchie" data-editor-index="${index}" data-editor-dir="1">Runter</button>
+                <button type="button" data-editor-remove="hierarchie" data-editor-index="${index}">Entfernen</button>
+              </div>
+              <div class="sed-grid three">
+                ${renderEditorInput("Typ", `hierarchie.${index}.typ`)}
+                ${renderEditorInput("Name", `hierarchie.${index}.name`)}
+                ${renderEditorInput("Slug", `hierarchie.${index}.slug`)}
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderImagesEditor() {
+    return `
+      <section class="sed-section">
+        <h2>Portrait</h2>
+        ${renderImageEditor("portrait")}
+      </section>
+      <section class="sed-section">
+        <h2>Wappen</h2>
+        ${renderImageEditor("wappen")}
+      </section>
+      <section class="sed-section">
+        <p class="sed-note">Weitere Bilder in Sektionen, Beziehungen und Galerie bleiben im ersten Schritt ueber die bestehenden Bildfelder in der Vorschau bearbeitbar.</p>
+      </section>
+    `;
+  }
+
+  function renderImageEditor(path) {
+    const image = readPath(data, path) || {};
+    return `
+      ${renderImageUrlControl("Bild-URL", `${path}.src`, image.src || "", "sed-image-url")}
+      <div class="sed-grid two">
+        ${renderEditorInput("Alt-Text", `${path}.alt`)}
+        ${renderEditorRange("Skalierung", `${path}.scale`, 0.5, 2, 0.05)}
+        ${renderEditorSelect("Format", `${path}.format`, [
+          ["square", "Quadrat 1:1"],
+          ["portrait", "Portrait 3:4"],
+          ["tall", "Hoch 2:3"],
+          ["wide", "Breit 4:3"],
+          ["banner", "Banner 16:9"],
+          ["original", "Original"]
+        ])}
+        ${renderEditorSelect("Fuellung", `${path}.fit`, [
+          ["cover", "Zuschneiden"],
+          ["contain", "Einpassen"]
+        ])}
+      </div>
+    `;
+  }
+
+  function renderFactsEditor() {
+    const groups = Array.isArray(data.fakten) ? data.fakten : [];
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Fakten</h2>
+          <button type="button" data-editor-add="fact-group">+ Gruppe</button>
+        </div>
+        <div class="sed-list">
+          ${groups.map((group, gi) => `
+            <article class="sed-row-card">
+              <div class="sed-row-tools">
+                <span>Gruppe ${gi + 1}</span>
+                <button type="button" data-editor-move="fakten" data-editor-index="${gi}" data-editor-dir="-1">Hoch</button>
+                <button type="button" data-editor-move="fakten" data-editor-index="${gi}" data-editor-dir="1">Runter</button>
+                <button type="button" data-editor-remove="fakten" data-editor-index="${gi}">Entfernen</button>
+              </div>
+              ${renderEditorInput("Gruppentitel", `fakten.${gi}.titel`)}
+              <div class="sed-mini-list">
+                ${(group.eintraege || []).map((row, ri) => `
+                  <div class="sed-fact-row">
+                    ${renderEditorInput("Feld", `fakten.${gi}.eintraege.${ri}.0`)}
+                    ${renderEditorInput("Wert", `fakten.${gi}.eintraege.${ri}.1`)}
+                    <button type="button" data-editor-remove-row="fakten.${gi}.eintraege" data-editor-index="${ri}">-</button>
+                  </div>
+                `).join("")}
+              </div>
+              <button type="button" class="sed-add-line" data-editor-add-row="fakten.${gi}.eintraege">+ Zeile</button>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderSectionsEditor() {
+    const sections = Array.isArray(data.sektionen) ? data.sektionen : [];
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Sektionen</h2>
+          <button type="button" data-editor-add="section">+ Sektion</button>
+        </div>
+        <div class="sed-list">
+          ${sections.map((section, index) => `
+            <article class="sed-row-card">
+              <div class="sed-row-tools">
+                <span>${index + 1}</span>
+                <button type="button" data-editor-move="sektionen" data-editor-index="${index}" data-editor-dir="-1">Hoch</button>
+                <button type="button" data-editor-move="sektionen" data-editor-index="${index}" data-editor-dir="1">Runter</button>
+                <button type="button" data-editor-remove="sektionen" data-editor-index="${index}">Entfernen</button>
+              </div>
+              <div class="sed-grid two">
+                ${renderEditorInput("Titel", `sektionen.${index}.titel`)}
+                ${renderEditorInput("ID", `sektionen.${index}.id`)}
+              </div>
+              ${renderEditorTextarea("Text", `sektionen.${index}.text`, 5)}
+              <details class="sed-details">
+                <summary>Hinweis</summary>
+                <p>Untergruppen, Inventar, Beziehungen und Spezialbilder bleiben in dieser ersten Stufe im bestehenden Direkteditor der Vorschau bearbeitbar.</p>
+              </details>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderInventoryEditor() {
+    const target = ensureInventoryEditorTarget();
+    const inventory = target.inventory;
+    const basePath = target.path;
+    const categories = Array.isArray(inventory.kategorien) ? inventory.kategorien : [];
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Inventar</h2>
+          <button type="button" data-editor-add-inventory-category="${escapeAttr(basePath)}">+ Kategorie</button>
+        </div>
+        ${renderEditorInput("Inventar-Titel", `${basePath}.titel`)}
+        <div class="sed-list">
+          ${categories.map((category, ci) => renderInventoryCategoryEditor(category, `${basePath}.kategorien.${ci}`, ci)).join("")}
+        </div>
+        ${renderPurseEditor(inventory.geldboerse, `${basePath}.geldboerse`)}
+      </section>
+    `;
+  }
+
+  function renderInventoryCategoryEditor(category, path, index) {
+    const items = Array.isArray(category.eintraege) ? category.eintraege : [];
+    const companionCategory = /reittier|begleiter|gefährte|gefaehrte/i.test(category.titel || "");
+    return `
+      <article class="sed-row-card sed-inventory-category">
+        <div class="sed-row-tools">
+          <span>Kategorie ${index + 1}</span>
+          <button type="button" data-editor-move="${escapeAttr(parentPath(path))}" data-editor-index="${index}" data-editor-dir="-1">Hoch</button>
+          <button type="button" data-editor-move="${escapeAttr(parentPath(path))}" data-editor-index="${index}" data-editor-dir="1">Runter</button>
+          <button type="button" data-editor-remove="${escapeAttr(parentPath(path))}" data-editor-index="${index}">Entfernen</button>
+        </div>
+        ${renderEditorInput("Kategorie", `${path}.titel`)}
+        <div class="sed-mini-list">
+          ${items.map((item, ii) => renderInventoryItemEditor(item, `${path}.eintraege.${ii}`, ii, companionCategory)).join("")}
+        </div>
+        <button type="button" class="sed-add-line" data-editor-add-inventory-item="${escapeAttr(path)}">+ Item</button>
+      </article>
+    `;
+  }
+
+  function renderInventoryItemEditor(item, path, index, companionCategory) {
+    const hasProfile = Boolean(item.profil || companionCategory);
+    if (hasProfile) ensureCompanionProfile(item);
+    return `
+      <article class="sed-row-card sed-inventory-item">
+        <div class="sed-row-tools">
+          <span>Item ${index + 1}</span>
+          <button type="button" data-editor-move="${escapeAttr(parentPath(path))}" data-editor-index="${index}" data-editor-dir="-1">Hoch</button>
+          <button type="button" data-editor-move="${escapeAttr(parentPath(path))}" data-editor-index="${index}" data-editor-dir="1">Runter</button>
+          <button type="button" data-editor-remove="${escapeAttr(parentPath(path))}" data-editor-index="${index}">Entfernen</button>
+        </div>
+        <div class="sed-grid two">
+          ${renderEditorInput("Name", `${path}.name`)}
+          ${renderEditorRange("Icon-Skalierung", `${path}.iconScale`, 0.5, 2, 0.05)}
+          ${renderEditorInput("Icon-URL", `${path}.icon`, "wide")}
+        </div>
+        ${renderEditorTextarea("Beschreibung", `${path}.beschreibung`, 3)}
+        ${renderInventoryStatsEditor(item, path)}
+        ${hasProfile ? renderCompanionProfileEditor(item, path) : `<button type="button" class="sed-add-line" data-editor-enable-companion="${escapeAttr(path)}">+ Gefaehrtenprofil</button>`}
+      </article>
+    `;
+  }
+
+  function renderInventoryStatsEditor(item, path) {
+    if (item.werte === null) return "";
+    if (!item.werte) item.werte = { staerke: 0, geschick: 0, magie: 0 };
+    return `
+      <div class="sed-grid three sed-stat-grid">
+        ${renderEditorNumber("Staerke", `${path}.werte.staerke`, -10, 10, 1)}
+        ${renderEditorNumber("Geschick", `${path}.werte.geschick`, -10, 10, 1)}
+        ${renderEditorNumber("Magie", `${path}.werte.magie`, -10, 10, 1)}
+      </div>
+    `;
+  }
+
+  function renderCompanionProfileEditor(item, path) {
+    const profile = ensureCompanionProfile(item);
+    return `
+      <details class="sed-details sed-companion-editor" open>
+        <summary>Gefaehrtenprofil</summary>
+        <div class="sed-grid two">
+          ${renderEditorInput("Profilname", `${path}.profil.name`)}
+          ${renderEditorInput("Art", `${path}.profil.art`)}
+          ${renderEditorInput("Bild-URL", `${path}.profil.bild`, "wide")}
+          ${renderEditorRange("Bildskalierung", `${path}.profil.bildScale`, 0.5, 2, 0.05)}
+          ${renderEditorSelect("Bildformat", `${path}.profil.bildFormat`, [
+            ["square", "Quadrat 1:1"],
+            ["portrait", "Portrait 3:4"],
+            ["tall", "Hoch 2:3"],
+            ["wide", "Breit 4:3"],
+            ["banner", "Banner 16:9"],
+            ["original", "Original"]
+          ])}
+          ${renderEditorSelect("Fuellung", `${path}.profil.bildFit`, [
+            ["cover", "Zuschneiden"],
+            ["contain", "Einpassen"]
+          ])}
+        </div>
+        ${renderEditorTextarea("Kurztext", `${path}.profil.kurztext`, 3)}
+        ${renderEditorTextarea("Beschreibung", `${path}.profil.beschreibung`, 4)}
+        <div class="sed-mini-list">
+          ${(profile.info || []).map((row, ri) => `
+            <div class="sed-fact-row">
+              ${renderEditorInput("Feld", `${path}.profil.info.${ri}.0`)}
+              ${renderEditorInput("Wert", `${path}.profil.info.${ri}.1`)}
+              <button type="button" data-editor-remove-row="${path}.profil.info" data-editor-index="${ri}">-</button>
+            </div>
+          `).join("")}
+        </div>
+        <button type="button" class="sed-add-line" data-editor-add-companion-info-row="${escapeAttr(path)}">+ Infozeile</button>
+        <div class="sed-grid two sed-companion-attributes">
+          ${(profile.attribute || []).map((row, ai) => `
+            ${renderEditorNumber(row[0] || `Wert ${ai + 1}`, `${path}.profil.attribute.${ai}.1`, 0, 10, 1)}
+          `).join("")}
+        </div>
+      </details>
+    `;
+  }
+
+  function renderPurseEditor(purse, path) {
+    if (!purse) return "";
+    const currencies = Array.isArray(purse.waehrungen) ? purse.waehrungen : [];
+    return `
+      <section class="sed-section sed-purse-editor">
+        <div class="sed-section-title">
+          <h2>Geldboerse</h2>
+          <button type="button" data-editor-add-currency="${escapeAttr(path)}">+ Waehrung</button>
+        </div>
+        ${renderEditorInput("Beutelbild", `${path}.bild`)}
+        <div class="sed-list">
+          ${currencies.map((coin, index) => `
+            <article class="sed-row-card">
+              <div class="sed-row-tools">
+                <span>Waehrung ${index + 1}</span>
+                <button type="button" data-editor-remove="${escapeAttr(`${path}.waehrungen`)}" data-editor-index="${index}">Entfernen</button>
+              </div>
+              <div class="sed-grid three">
+                ${renderEditorInput("Name", `${path}.waehrungen.${index}.name`)}
+                ${renderEditorInput("Anzahl", `${path}.waehrungen.${index}.anzahl`)}
+                ${renderEditorInput("Icon", `${path}.waehrungen.${index}.icon`)}
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderGroupingsEditor() {
+    const { grouping, path } = ensureGroupingEditorTarget();
+    const entries = normalizeGroupingEntries(grouping, path);
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Gruppierungen</h2>
+        </div>
+        <div class="sed-grid">
+          ${renderEditorInput("Tabellentitel", `${path}.titel`)}
+        </div>
+        <div class="sed-list">
+          ${entries.map((entry, index) => {
+            ensureGroupingProfile(entry);
+            return `
+              <article class="sed-row-card sed-grouping-row">
+                <div class="sed-row-tools">
+                  <span>Gruppierung ${index + 1}</span>
+                </div>
+                <div class="sed-grid two">
+                  ${renderEditorInput("Name", `${path}.eintraege.${index}.name`)}
+                  ${renderEditorInput("Typ", `${path}.eintraege.${index}.typ`)}
+                  ${renderEditorInput("Bild-URL", `${path}.eintraege.${index}.bild`, "wide")}
+                  ${renderEditorRange("Bildskalierung", `${path}.eintraege.${index}.bildScale`, 0.5, 2, 0.05)}
+                </div>
+                ${renderEditorTextarea("Kurztext", `${path}.eintraege.${index}.text`, 3)}
+                <details class="sed-details">
+                  <summary>Profilfelder</summary>
+                  <div class="sed-grid two">
+                    ${renderEditorInput("Profilname", `${path}.eintraege.${index}.profil.name`)}
+                    ${renderEditorInput("Kategorie", `${path}.eintraege.${index}.profil.art`)}
+                    ${renderEditorInput("Sitz / Ort", `${path}.eintraege.${index}.profil.sitz`)}
+                    ${renderEditorInput("Anfuehrer", `${path}.eintraege.${index}.profil.anfuehrer`)}
+                  </div>
+                  ${renderEditorTextarea("Profilbeschreibung", `${path}.eintraege.${index}.profil.beschreibung`, 4)}
+                </details>
+              </article>
+            `;
+          }).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderRelationsEditor() {
+    const groups = collectRelationEditorGroups();
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Beziehungen</h2>
+          <button type="button" data-editor-add="relation-group">+ Gruppe</button>
+        </div>
+        ${groups.length ? `<div class="sed-list">
+          ${groups.map(({ section, group, sectionIndex, groupIndex, path }) => `
+            <article class="sed-row-card">
+              <div class="sed-row-tools">
+                <span>${escapeHtml(section.titel || `Sektion ${sectionIndex + 1}`)}</span>
+                <button type="button" data-editor-remove-relation-group="${escapeAttr(path)}">Gruppe entfernen</button>
+              </div>
+              <div class="sed-grid two">
+                ${renderEditorInput("Gruppentitel", `${path}.titel`)}
+                ${renderEditorInput("Slots", `${path}.slots`)}
+              </div>
+              <div class="sed-mini-list">
+                ${normalizeRelationEntries(group, path).map((relation, ri) => `
+                  <article class="sed-relation-row">
+                    <div class="sed-row-tools">
+                      <span>Beziehung ${ri + 1}</span>
+                      <button type="button" data-editor-remove-row="${path}.eintraege" data-editor-index="${ri}">Entfernen</button>
+                    </div>
+                    <div class="sed-grid two">
+                      ${renderEditorInput("Name", `${path}.eintraege.${ri}.name`)}
+                      ${renderEditorInput("Art", `${path}.eintraege.${ri}.art`)}
+                      ${renderEditorInput("Bild-URL", `${path}.eintraege.${ri}.bild`, "wide")}
+                      ${renderEditorRange("Bildskalierung", `${path}.eintraege.${ri}.bildScale`, 0.5, 2, 0.05)}
+                    </div>
+                    ${renderEditorTextarea("Beschreibung", `${path}.eintraege.${ri}.text`, 3)}
+                  </article>
+                `).join("")}
+              </div>
+              <button type="button" class="sed-add-line" data-editor-add-relation="${escapeAttr(path)}">+ Beziehung</button>
+            </article>
+          `).join("")}
+        </div>` : `<p class="sed-note">Noch keine Beziehungssektion vorhanden. Mit "+ Gruppe" wird eine Beziehungsgruppe in der Sektion "Beziehungen" angelegt.</p>`}
+      </section>
+    `;
+  }
+
+  function renderGalleryEditor() {
+    if (!Array.isArray(data.galerie)) data.galerie = [];
+    return `
+      <section class="sed-section">
+        <div class="sed-section-title">
+          <h2>Galerie</h2>
+          <button type="button" data-editor-add="gallery-image">+ Bild</button>
+        </div>
+        <div class="sed-list">
+          ${data.galerie.map((image, index) => `
+            <article class="sed-row-card sed-gallery-row">
+              <div class="sed-row-tools">
+                <span>Bild ${index + 1}</span>
+                <button type="button" data-editor-move="galerie" data-editor-index="${index}" data-editor-dir="-1">Hoch</button>
+                <button type="button" data-editor-move="galerie" data-editor-index="${index}" data-editor-dir="1">Runter</button>
+                <button type="button" data-editor-remove="galerie" data-editor-index="${index}">Entfernen</button>
+              </div>
+              ${renderImageUrlControl("Bild-URL", `galerie.${index}.src`, image.src || "", "sed-image-url")}
+              <div class="sed-grid two">
+                ${renderEditorInput("Alt-Text", `galerie.${index}.alt`)}
+                ${renderEditorRange("Skalierung", `galerie.${index}.scale`, 0.5, 2, 0.05)}
+              </div>
+              ${renderEditorTextarea("Bildbeschreibung", `galerie.${index}.caption`, 3)}
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderEditorInput(label, path, className = "") {
+    const value = readPath(data, path);
+    return `
+      <label class="sed-field ${escapeAttr(className)}">
+        <span>${escapeHtml(label)}</span>
+        <input value="${escapeAttr(value ?? "")}" data-input="${escapeAttr(path)}">
+      </label>
+    `;
+  }
+
+  function renderEditorTextarea(label, path, rows = 4) {
+    const value = readPath(data, path);
+    return `
+      <label class="sed-field wide">
+        <span>${escapeHtml(label)}</span>
+        <textarea rows="${rows}" data-input="${escapeAttr(path)}">${escapeHtml(value ?? "")}</textarea>
+      </label>
+    `;
+  }
+
+  function renderEditorRange(label, path, min, max, step) {
+    const value = readPath(data, path);
+    return `
+      <label class="sed-field">
+        <span>${escapeHtml(label)}</span>
+        <input type="range" min="${min}" max="${max}" step="${step}" value="${escapeAttr(value ?? 1)}" data-input="${escapeAttr(path)}">
+      </label>
+    `;
+  }
+
+  function renderEditorNumber(label, path, min = 0, max = 10, step = 1) {
+    const value = readPath(data, path);
+    return `
+      <label class="sed-field">
+        <span>${escapeHtml(label)}</span>
+        <input type="number" min="${min}" max="${max}" step="${step}" value="${escapeAttr(value ?? 0)}" data-input="${escapeAttr(path)}">
+      </label>
+    `;
+  }
+
+  function renderEditorSelect(label, path, options) {
+    return `
+      <label class="sed-field">
+        <span>${escapeHtml(label)}</span>
+        <select data-input="${escapeAttr(path)}">
+          ${renderSelectOptions(options, readPath(data, path))}
+        </select>
+      </label>
+    `;
   }
 
   function bindText(scope, source) {
@@ -186,6 +716,7 @@
           ${renderGroups(section.gruppen, `sektionen.${index}.gruppen`)}
           ${renderImage(section.bild, `sektionen.${index}.bild`)}
           ${renderInventory(section.inventar, `sektionen.${index}.inventar`)}
+          ${renderGroupings(section.gruppierungen, `sektionen.${index}.gruppierungen`)}
           ${renderRelationGroups(section.beziehungsgruppen, `sektionen.${index}.beziehungsgruppen`)}
         </div>
       </section>
@@ -376,6 +907,95 @@
     refreshImageFieldStatuses(modal);
   }
 
+  function renderGroupingModal(basePath) {
+    const entry = readPath(data, basePath);
+    if (!entry) return;
+    const profile = ensureGroupingProfile(entry);
+    let modal = document.querySelector(".grouping-veil");
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.className = "grouping-veil";
+      document.body.appendChild(modal);
+    }
+    modal.classList.toggle("is-editing", groupingEditMode);
+    modal.innerHTML = `
+      <div class="grouping-modal" role="dialog" aria-modal="true" aria-label="Gruppierungsprofil">
+        <header class="companion-modal-bar">
+          <div>
+            <span class="companion-kicker">Gruppierungsprofil</span>
+            <h2 ${groupingEditableAttr(`${basePath}.profil.name`)}>${escapeHtml(profile.name || entry.name || "Gruppierung")}</h2>
+          </div>
+          <div class="companion-actions">
+            <button type="button" data-grouping-toggle>${groupingEditMode ? "Ansicht" : "Bearbeiten"}</button>
+            <button type="button" data-grouping-save>Speichern</button>
+            <button type="button" data-grouping-close>Schliessen</button>
+          </div>
+        </header>
+        <div class="grouping-profile-grid">
+          <figure class="companion-portrait">
+            <div class="companion-image-box" style="--image-ratio:${imageRatioValue(profile.bildFormat || "square")};--companion-fit:${profile.bildFit || "contain"}">
+              <img src="${escapeAttr(profile.bild || entry.bild || groupingPlaceholderImage)}" alt="${escapeAttr(profile.name || entry.name || "Gruppierung")}" style="${imageStyle({ scale: profile.bildScale || entry.bildScale || 1 })}">
+            </div>
+            <div class="edit-controls compact">
+              ${renderImageUrlControl("Bildlink", `${basePath}.profil.bild`, profile.bild || entry.bild || groupingPlaceholderImage)}
+              <label>Skalierung <input type="range" min="0.5" max="2" step="0.05" value="${escapeAttr(profile.bildScale || entry.bildScale || 1)}" data-input="${escapeAttr(`${basePath}.profil.bildScale`)}"></label>
+              <label>Format
+                <select data-input="${escapeAttr(`${basePath}.profil.bildFormat`)}">
+                  ${renderImageFormatOptions(profile.bildFormat || "square")}
+                </select>
+              </label>
+              <label>Fuellung
+                <select data-input="${escapeAttr(`${basePath}.profil.bildFit`)}">
+                  ${renderSelectOptions([["cover", "Zuschneiden"], ["contain", "Einpassen"]], profile.bildFit || "contain")}
+                </select>
+              </label>
+            </div>
+            <figcaption ${groupingEditableAttr(`${basePath}.profil.kurztext`, "rich")}>${formatRichValue(profile.kurztext || "Kurze Beschreibung der Gruppierung.")}</figcaption>
+          </figure>
+          <section class="companion-main-card">
+            <div class="companion-type" ${groupingEditableAttr(`${basePath}.profil.art`)}>${escapeHtml(profile.art || entry.typ || "Gruppe / Gilde / Orden")}</div>
+            ${renderGroupingInfo(profile.info, `${basePath}.profil.info`)}
+            <div class="companion-description" ${groupingEditableAttr(`${basePath}.profil.beschreibung`, "rich")}>${formatRichValue(profile.beschreibung || "Beschreibung, Ziele, Struktur und Bedeutung der Gruppierung.")}</div>
+          </section>
+          <section class="companion-stats-card">
+            <h3>Organisationswerte</h3>
+            ${renderGroupingAttributes(profile.attribute, `${basePath}.profil.attribute`)}
+          </section>
+        </div>
+      </div>
+    `;
+    refreshImageFieldStatuses(modal);
+  }
+
+  function renderGroupingInfo(info, basePath) {
+    const rows = Array.isArray(info) ? info : [];
+    return `
+      <table class="companion-info-table"><tbody>
+        ${rows.map(([label, value], index) => `
+          <tr>
+            <th ${groupingEditableAttr(`${basePath}.${index}.0`)}>${escapeHtml(label || "Feld")}</th>
+            <td ${groupingEditableAttr(`${basePath}.${index}.1`)}>${escapeHtml(normalize(value))}</td>
+          </tr>
+        `).join("")}
+      </tbody></table>
+    `;
+  }
+
+  function renderGroupingAttributes(attributes, basePath) {
+    const rows = normalizeGroupingAttributes(attributes);
+    return `
+      <div class="companion-bars">
+        ${rows.map(([label, value], index) => `
+          <label class="companion-attribute">
+            <span>${escapeHtml(label)}</span>
+            <input type="range" min="0" max="10" step="1" value="${escapeAttr(value)}" data-input="${escapeAttr(`${basePath}.${index}.1`)}" ${groupingEditMode ? "" : "disabled"}>
+            <b>${escapeHtml(value)}</b>
+          </label>
+        `).join("")}
+      </div>
+    `;
+  }
+
   function renderCompanionInfo(info, basePath) {
     const rows = Array.isArray(info) ? info : [];
     return `
@@ -478,6 +1098,45 @@
     `;
   }
 
+  function renderGroupings(grouping, basePath) {
+    if (!grouping) return "";
+    const entries = normalizeGroupingEntries(grouping, basePath);
+    return `
+      <div class="grouping-table">
+        <div class="grouping-table-title" ${editableAttr(`${basePath}.titel`)}>${escapeHtml(grouping.titel || "Gruppierungen")}</div>
+        <div class="grouping-grid">
+          ${entries.map((entry, index) => renderGroupingSlot(entry, `${basePath}.eintraege.${index}`, index)).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  function normalizeGroupingEntries(grouping, basePath) {
+    if (!Array.isArray(grouping.eintraege)) setPath(data, `${basePath}.eintraege`, []);
+    const entries = readPath(data, `${basePath}.eintraege`);
+    const target = Math.max(Number(grouping.slots) || 5, entries.length);
+    while (entries.length < target) entries.push(createGroupingDraft(entries.length + 1));
+    entries.forEach(ensureGroupingProfile);
+    return entries;
+  }
+
+  function renderGroupingSlot(entry, basePath, index) {
+    ensureGroupingProfile(entry);
+    const image = entry.bild || entry.profil?.bild || groupingPlaceholderImage;
+    return `
+      <article class="grouping-slot">
+        <button type="button" class="grouping-image" data-open-grouping="${escapeAttr(basePath)}" aria-label="Gruppierungsprofil öffnen">
+          <img src="${escapeAttr(image)}" alt="${escapeAttr(entry.name || `Gruppierung ${index + 1}`)}" style="${imageStyle({ scale: entry.bildScale || entry.profil?.bildScale || 1 })}">
+        </button>
+        <div class="grouping-copy">
+          <strong ${editableAttr(`${basePath}.name`)}>${escapeHtml(entry.name || `Gruppierung ${index + 1}`)}</strong>
+          <span ${editableAttr(`${basePath}.typ`)}>${escapeHtml(entry.typ || "Gruppe / Orden / Gilde")}</span>
+          <p ${editableAttr(`${basePath}.text`, "rich")}>${formatRichValue(entry.text || "Kurzbeschreibung ...")}</p>
+        </div>
+      </article>
+    `;
+  }
+
   function renderRelationGroups(groups, basePath) {
     if (!Array.isArray(groups) || groups.length === 0) return "";
     return groups.map((group, index) => `
@@ -565,6 +1224,63 @@
         signalEditFeedback(event.target, editMode ? "mode-on" : "mode-off");
         renderAll();
       }
+      const nextEditorTab = event.target.closest("[data-steck-editor-tab]")?.dataset.steckEditorTab;
+      if (nextEditorTab) {
+        editorTab = nextEditorTab;
+        renderEditorDock();
+      }
+      const editorAdd = event.target.closest("[data-editor-add]")?.dataset.editorAdd;
+      if (editorAdd) {
+        applyEditorAdd(editorAdd);
+      }
+      const editorAddRelation = event.target.closest("[data-editor-add-relation]")?.dataset.editorAddRelation;
+      if (editorAddRelation) {
+        applyEditorAddRelation(editorAddRelation);
+      }
+      const editorAddGrouping = event.target.closest("[data-editor-add-grouping]")?.dataset.editorAddGrouping;
+      if (editorAddGrouping) {
+        applyEditorAddGrouping(editorAddGrouping);
+      }
+      const editorAddInventoryCategory = event.target.closest("[data-editor-add-inventory-category]")?.dataset.editorAddInventoryCategory;
+      if (editorAddInventoryCategory) {
+        applyEditorAddInventoryCategory(editorAddInventoryCategory);
+      }
+      const editorAddInventoryItem = event.target.closest("[data-editor-add-inventory-item]")?.dataset.editorAddInventoryItem;
+      if (editorAddInventoryItem) {
+        applyEditorAddInventoryItem(editorAddInventoryItem);
+      }
+      const editorEnableCompanion = event.target.closest("[data-editor-enable-companion]")?.dataset.editorEnableCompanion;
+      if (editorEnableCompanion) {
+        applyEditorEnableCompanion(editorEnableCompanion);
+      }
+      const editorAddCompanionInfoRow = event.target.closest("[data-editor-add-companion-info-row]")?.dataset.editorAddCompanionInfoRow;
+      if (editorAddCompanionInfoRow) {
+        applyEditorAddCompanionInfoRow(editorAddCompanionInfoRow);
+      }
+      const editorAddCurrency = event.target.closest("[data-editor-add-currency]")?.dataset.editorAddCurrency;
+      if (editorAddCurrency) {
+        applyEditorAddCurrency(editorAddCurrency);
+      }
+      const editorAddRow = event.target.closest("[data-editor-add-row]")?.dataset.editorAddRow;
+      if (editorAddRow) {
+        applyEditorAddRow(editorAddRow);
+      }
+      const editorRemove = event.target.closest("[data-editor-remove]");
+      if (editorRemove) {
+        applyEditorRemove(editorRemove.dataset.editorRemove, Number(editorRemove.dataset.editorIndex));
+      }
+      const editorRemoveRow = event.target.closest("[data-editor-remove-row]");
+      if (editorRemoveRow) {
+        applyEditorRemove(editorRemoveRow.dataset.editorRemoveRow, Number(editorRemoveRow.dataset.editorIndex));
+      }
+      const editorMove = event.target.closest("[data-editor-move]");
+      if (editorMove) {
+        applyEditorMove(editorMove.dataset.editorMove, Number(editorMove.dataset.editorIndex), Number(editorMove.dataset.editorDir));
+      }
+      const editorRemoveRelationGroup = event.target.closest("[data-editor-remove-relation-group]")?.dataset.editorRemoveRelationGroup;
+      if (editorRemoveRelationGroup) {
+        applyEditorRemoveRelationGroup(editorRemoveRelationGroup);
+      }
       if (event.target.id === "save-now") saveNow(true);
       if (event.target.id === "export-json") exportJson();
       if (event.target.id === "export-data-js") exportDataJs();
@@ -594,16 +1310,32 @@
         companionEditMode = false;
         renderCompanionModal(companionPath);
       }
+      const groupingPath = event.target.closest("[data-open-grouping]")?.dataset.openGrouping;
+      if (groupingPath) {
+        activeGroupingPath = groupingPath;
+        groupingEditMode = false;
+        renderGroupingModal(groupingPath);
+      }
       if (event.target.dataset.companionClose !== undefined || event.target.classList.contains("companion-veil")) {
         document.querySelector(".companion-veil")?.remove();
         activeCompanionPath = "";
         companionEditMode = false;
       }
+      if (event.target.dataset.groupingClose !== undefined || event.target.classList.contains("grouping-veil")) {
+        document.querySelector(".grouping-veil")?.remove();
+        activeGroupingPath = "";
+        groupingEditMode = false;
+      }
       if (event.target.dataset.companionToggle !== undefined && activeCompanionPath) {
         companionEditMode = !companionEditMode;
         renderCompanionModal(activeCompanionPath);
       }
+      if (event.target.dataset.groupingToggle !== undefined && activeGroupingPath) {
+        groupingEditMode = !groupingEditMode;
+        renderGroupingModal(activeGroupingPath);
+      }
       if (event.target.dataset.companionSave !== undefined) saveNow(true);
+      if (event.target.dataset.groupingSave !== undefined) saveNow(true);
       const addCompanionInfo = event.target.dataset.addCompanionInfo;
       if (addCompanionInfo) {
         const list = readPath(data, addCompanionInfo);
@@ -672,13 +1404,15 @@
         saveSoon();
       }
       if (target.dataset.input) {
-        setPath(data, target.dataset.input, castValue(target.value, target.type === "range" ? "number" : "text"));
+        setPath(data, target.dataset.input, castInputValue(target));
         signalEditFeedback(target);
         if (target.dataset.imageUrl !== undefined) updateImageFieldStatus(target);
         saveSoon();
+        if (target.closest(".steckbrief-editor-dock")) renderPreviewFromDockInput(target);
         if (target.type === "range") {
           applyLiveRangeUpdate(target);
           if (target.closest(".companion-modal") && activeCompanionPath) renderCompanionModal(activeCompanionPath);
+          if (target.closest(".grouping-modal") && activeGroupingPath) renderGroupingModal(activeGroupingPath);
         }
         if (target.tagName === "SELECT") renderAllPreserveScroll();
       }
@@ -687,10 +1421,16 @@
     document.addEventListener("change", (event) => {
       const target = event.target;
       if (!target.dataset.input) return;
-      setPath(data, target.dataset.input, castValue(target.value, target.type === "range" ? "number" : "text"));
+      setPath(data, target.dataset.input, castInputValue(target));
       if (target.dataset.imageUrl !== undefined) updateImageFieldStatus(target);
       saveSoon();
+      if (target.closest(".steckbrief-editor-dock")) {
+        renderAllPreserveScroll();
+        renderEditorDock();
+        return;
+      }
       if (target.closest(".companion-modal") && activeCompanionPath) renderCompanionModal(activeCompanionPath);
+      else if (target.closest(".grouping-modal") && activeGroupingPath) renderGroupingModal(activeGroupingPath);
       else renderAllPreserveScroll();
     });
 
@@ -711,6 +1451,255 @@
     if (!dirty && !saving && !saveQueued) return;
     event.preventDefault();
     event.returnValue = "";
+  }
+
+  function applyEditorAdd(kind) {
+    if (kind === "hierarchy-row") {
+      if (!Array.isArray(data.hierarchie)) data.hierarchie = [];
+      data.hierarchie.push({ typ: "Ebene", name: "Neuer Ort", slug: makeFileSlug("neuer-ort") });
+    }
+    if (kind === "fact-group") {
+      if (!Array.isArray(data.fakten)) data.fakten = [];
+      data.fakten.push({ titel: "Neue Faktengruppe", eintraege: [["Feld", "-"]] });
+    }
+    if (kind === "section") {
+      if (!Array.isArray(data.sektionen)) data.sektionen = [];
+      const next = data.sektionen.length + 1;
+      data.sektionen.push({ id: `sektion-${next}`, titel: "Neue Sektion", text: "Text ..." });
+    }
+    if (kind === "relation-group") {
+      const section = ensureRelationsSection();
+      if (!Array.isArray(section.beziehungsgruppen)) section.beziehungsgruppen = [];
+      section.beziehungsgruppen.push({ titel: "Neue Beziehungsgruppe", slots: 1, eintraege: [createRelationDraft()] });
+    }
+    if (kind === "gallery-image") {
+      if (!Array.isArray(data.galerie)) data.galerie = [];
+      data.galerie.push({ src: "", alt: "", scale: 1, caption: "Bildbeschreibung" });
+    }
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddRelation(path) {
+    const group = readPath(data, path);
+    if (!group) return;
+    if (!Array.isArray(group.eintraege)) group.eintraege = [];
+    group.eintraege.push(createRelationDraft());
+    group.slots = Math.max(Number(group.slots) || 0, group.eintraege.length);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddGrouping(path) {
+    const grouping = readPath(data, path);
+    if (!grouping) return;
+    if (!Array.isArray(grouping.eintraege)) grouping.eintraege = [];
+    grouping.eintraege.push(createGroupingDraft(grouping.eintraege.length + 1));
+    grouping.slots = Math.max(Number(grouping.slots) || 5, grouping.eintraege.length);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddInventoryCategory(path) {
+    const inventory = readPath(data, path);
+    if (!inventory) return;
+    if (!Array.isArray(inventory.kategorien)) inventory.kategorien = [];
+    inventory.kategorien.push(createInventoryCategoryDraft());
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddInventoryItem(path) {
+    const category = readPath(data, path);
+    if (!category) return;
+    if (!Array.isArray(category.eintraege)) category.eintraege = [];
+    const companionCategory = /reittier|begleiter|gefährte|gefaehrte/i.test(category.titel || "");
+    const item = createInventoryItemDraft(companionCategory);
+    category.eintraege.push(item);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorEnableCompanion(path) {
+    const item = readPath(data, path);
+    if (!item) return;
+    item.werte = null;
+    ensureCompanionProfile(item);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddCompanionInfoRow(path) {
+    const item = readPath(data, path);
+    if (!item) return;
+    const profile = ensureCompanionProfile(item);
+    if (!Array.isArray(profile.info)) profile.info = [];
+    profile.info.push(["Feld", "-"]);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddCurrency(path) {
+    const purse = readPath(data, path);
+    if (!purse) return;
+    if (!Array.isArray(purse.waehrungen)) purse.waehrungen = [];
+    purse.waehrungen.push({ name: "Neue Waehrung", icon: "", anzahl: "0" });
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorAddRow(path) {
+    const list = readPath(data, path);
+    if (!Array.isArray(list)) return;
+    list.push(["Feld", "-"]);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorRemove(path, index) {
+    const list = readPath(data, path);
+    if (!Array.isArray(list) || !Number.isInteger(index)) return;
+    if (list.length <= 1 && (path === "fakten" || path === "sektionen")) return;
+    list.splice(index, 1);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorMove(path, index, direction) {
+    const list = readPath(data, path);
+    if (!Array.isArray(list) || !Number.isInteger(index) || !direction) return;
+    const nextIndex = index + direction;
+    if (nextIndex < 0 || nextIndex >= list.length) return;
+    const [item] = list.splice(index, 1);
+    list.splice(nextIndex, 0, item);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function applyEditorRemoveRelationGroup(path) {
+    const parts = String(path || "").split(".");
+    const groupIndex = Number(parts.pop());
+    const groupsPath = parts.join(".");
+    const groups = readPath(data, groupsPath);
+    if (!Array.isArray(groups) || !Number.isInteger(groupIndex)) return;
+    groups.splice(groupIndex, 1);
+    saveSoon();
+    renderAllPreserveScroll();
+    renderEditorDock();
+  }
+
+  function renderPreviewFromDockInput(input) {
+    const preview = root;
+    const scrollTop = preview.scrollTop;
+    renderAll();
+    preview.scrollTop = scrollTop;
+    if (input.dataset.imageUrl !== undefined) refreshImageFieldStatuses(document.querySelector(".steckbrief-editor-dock") || document);
+  }
+
+  function collectRelationEditorGroups() {
+    const sections = Array.isArray(data.sektionen) ? data.sektionen : [];
+    const groups = [];
+    sections.forEach((section, sectionIndex) => {
+      if (!Array.isArray(section.beziehungsgruppen)) return;
+      section.beziehungsgruppen.forEach((group, groupIndex) => {
+        groups.push({
+          section,
+          group,
+          sectionIndex,
+          groupIndex,
+          path: `sektionen.${sectionIndex}.beziehungsgruppen.${groupIndex}`
+        });
+      });
+    });
+    return groups;
+  }
+
+  function ensureGroupingEditorTarget() {
+    const section = ensureGroupingSection();
+    const sectionIndex = data.sektionen.indexOf(section);
+    return {
+      section,
+      grouping: section.gruppierungen,
+      path: `sektionen.${sectionIndex}.gruppierungen`
+    };
+  }
+
+  function ensureInventoryEditorTarget() {
+    if (!Array.isArray(data.sektionen)) data.sektionen = [];
+    let section = data.sektionen.find((item) => item.inventar);
+    if (!section) {
+      section = {
+        id: "inventar",
+        titel: "Inventar",
+        inventar: {
+          titel: "Inventar",
+          kategorien: [createInventoryCategoryDraft()],
+          geldboerse: { bild: "", waehrungen: [] }
+        }
+      };
+      data.sektionen.push(section);
+    }
+    if (!section.inventar.kategorien) section.inventar.kategorien = [];
+    if (!section.inventar.geldboerse) section.inventar.geldboerse = { bild: "", waehrungen: [] };
+    return {
+      section,
+      inventory: section.inventar,
+      path: `sektionen.${data.sektionen.indexOf(section)}.inventar`
+    };
+  }
+
+  function createInventoryCategoryDraft() {
+    return {
+      titel: "Neue Kategorie",
+      eintraege: [createInventoryItemDraft(false)]
+    };
+  }
+
+  function createInventoryItemDraft(isCompanion = false) {
+    const item = {
+      name: isCompanion ? "Neuer Gefaehrte" : "Neuer Gegenstand",
+      icon: "",
+      iconScale: 1,
+      beschreibung: "Beschreibung.",
+      werte: isCompanion ? null : { staerke: 0, geschick: 0, magie: 0 }
+    };
+    if (isCompanion) ensureCompanionProfile(item);
+    return item;
+  }
+
+  function parentPath(path) {
+    return String(path || "").split(".").slice(0, -1).join(".");
+  }
+
+  function ensureRelationsSection() {
+    if (!Array.isArray(data.sektionen)) data.sektionen = [];
+    let section = data.sektionen.find((item) => Array.isArray(item.beziehungsgruppen));
+    if (!section) {
+      section = { id: "beziehungen", titel: "Beziehungen", beziehungsgruppen: [] };
+      data.sektionen.push(section);
+    }
+    return section;
+  }
+
+  function createRelationDraft() {
+    return {
+      name: "Name",
+      art: "Beziehung zur Person",
+      bild: data.portrait?.src || "",
+      bildScale: 1,
+      text: "Beschreibung ..."
+    };
   }
 
   function syncColumnHeight() {
@@ -817,6 +1806,10 @@
     return `contenteditable="${companionEditMode}" data-edit="${escapeAttr(path)}" data-type="${escapeAttr(type)}" spellcheck="true"`;
   }
 
+  function groupingEditableAttr(path, type = "text") {
+    return `contenteditable="${groupingEditMode}" data-edit="${escapeAttr(path)}" data-type="${escapeAttr(type)}" spellcheck="true"`;
+  }
+
   function makeEditable(node, path, type) {
     node.contentEditable = String(editMode);
     node.dataset.edit = path;
@@ -918,6 +1911,107 @@
     return template.innerHTML;
   }
 
+  function ensureGroupingSection() {
+    if (!Array.isArray(data.sektionen)) data.sektionen = [];
+    let section = data.sektionen.find((item) => item.id === "gruppierungen" || item.gruppierungen);
+    if (!section) {
+      section = {
+        id: "gruppierungen",
+        titel: "Gruppierungen",
+        gruppierungen: createGroupingTable()
+      };
+      const relationsIndex = data.sektionen.findIndex((item) => item.id === "beziehungen" || item.beziehungsgruppen);
+      const triviaIndex = data.sektionen.findIndex((item) => item.id === "trivia");
+      const insertIndex = relationsIndex >= 0 ? relationsIndex : triviaIndex >= 0 ? triviaIndex + 1 : data.sektionen.length;
+      data.sektionen.splice(insertIndex, 0, section);
+    }
+    if (!section.gruppierungen) section.gruppierungen = createGroupingTable();
+    normalizeGroupingEntries(section.gruppierungen, `sektionen.${data.sektionen.indexOf(section)}.gruppierungen`);
+    return section;
+  }
+
+  function createGroupingTable() {
+    return {
+      titel: "Gruppierungen",
+      slots: 5,
+      eintraege: Array.from({ length: 5 }, (_, index) => createGroupingDraft(index + 1))
+    };
+  }
+
+  function createGroupingDraft(index = 1) {
+    return {
+      name: `Gruppierung ${index}`,
+      typ: "Gilde / Orden / Trupp",
+      bild: groupingPlaceholderImage,
+      bildScale: 1,
+      text: "Kurzbeschreibung ...",
+      profil: {
+        name: `Gruppierung ${index}`,
+        art: "Gilde / Orden / Trupp",
+        bild: groupingPlaceholderImage,
+        bildScale: 1,
+        bildFormat: "square",
+        bildFit: "cover",
+        kurztext: "Kurze Beschreibung der Gruppierung.",
+        beschreibung: "Ausfuehrliche Beschreibung: Ziele, Aufbau, Stellung zur Figur, Einfluss und Geschichte.",
+        sitz: "-",
+        anfuehrer: "-",
+        info: [
+          ["Name", `Gruppierung ${index}`],
+          ["Typ", "Gilde / Orden / Trupp"],
+          ["Sitz", "-"],
+          ["Anfuehrer", "-"],
+          ["Mitglieder", "-"],
+          ["Beziehung", "-"]
+        ],
+        attribute: normalizeGroupingAttributes()
+      }
+    };
+  }
+
+  function ensureGroupingProfile(entry) {
+    if (!entry.profil) entry.profil = {};
+    entry.profil.name ||= entry.name || "Gruppierung";
+    entry.profil.art ||= entry.typ || "Gilde / Orden / Trupp";
+    entry.profil.bild ||= entry.bild || groupingPlaceholderImage;
+    entry.profil.bildScale ||= entry.bildScale || 1;
+    entry.profil.bildFormat ||= "square";
+    entry.profil.bildFit ||= "cover";
+    entry.profil.kurztext ||= entry.text || "Kurze Beschreibung der Gruppierung.";
+    entry.profil.beschreibung ||= "Ausfuehrliche Beschreibung: Ziele, Aufbau, Stellung zur Figur, Einfluss und Geschichte.";
+    entry.profil.sitz ||= "-";
+    entry.profil.anfuehrer ||= "-";
+    if (!Array.isArray(entry.profil.info)) {
+      entry.profil.info = [
+        ["Name", entry.profil.name],
+        ["Typ", entry.profil.art],
+        ["Sitz", entry.profil.sitz],
+        ["Anfuehrer", entry.profil.anfuehrer],
+        ["Mitglieder", "-"],
+        ["Beziehung", "-"]
+      ];
+    }
+    entry.profil.attribute = normalizeGroupingAttributes(entry.profil.attribute);
+    return entry.profil;
+  }
+
+  function normalizeGroupingAttributes(attributes) {
+    const defaults = [
+      ["Einfluss", 5],
+      ["Ressourcen", 5],
+      ["Struktur", 5],
+      ["Geheimhaltung", 5],
+      ["Konfliktkraft", 5],
+      ["Loyalitaet", 5]
+    ];
+    if (!Array.isArray(attributes) || attributes.length < 3) return defaults;
+    return attributes.map((entry, index) => {
+      const label = Array.isArray(entry) ? entry[0] : defaults[index]?.[0] || "Wert";
+      const value = Array.isArray(entry) ? entry[1] : 5;
+      return [label || defaults[index]?.[0] || "Wert", Math.max(0, Math.min(10, Number(value) || 0))];
+    });
+  }
+
   function ensureGallery() {
     if (!Array.isArray(data.galerie)) {
       data.galerie = [
@@ -975,10 +2069,14 @@
         }
         exportBackup("backup-vor-import");
         data = mergeData(baseData, imported);
+        ensureGroupingSection();
         ensureGallery();
         document.querySelector(".companion-veil")?.remove();
+        document.querySelector(".grouping-veil")?.remove();
         activeCompanionPath = "";
         companionEditMode = false;
+        activeGroupingPath = "";
+        groupingEditMode = false;
         dirty = true;
         saveNow();
         renderAll();
@@ -1168,11 +2266,15 @@
     exportBackup("backup-vor-reset");
     localStorage.removeItem(storageKey);
     data = clone(baseData);
+    ensureGroupingSection();
     ensureGallery();
     dirty = false;
     document.querySelector(".companion-veil")?.remove();
+    document.querySelector(".grouping-veil")?.remove();
     activeCompanionPath = "";
     companionEditMode = false;
+    activeGroupingPath = "";
+    groupingEditMode = false;
     renderAll();
     setSaveState("lokale Änderungen zurückgesetzt");
     signalEditFeedback(document.getElementById("reset-local"), "mode-off");
@@ -1196,6 +2298,7 @@
         const remote = await window.SteckbriefFirebase.load();
         if (remote) {
           data = mergeData(data, remote);
+          ensureGroupingSection();
           ensureGallery();
           renderAll();
           setSaveState("global geladen");
@@ -1360,6 +2463,12 @@
     if (type === "number") return Number(value) || 0;
     if (type === "rich") return sanitizeRich(value);
     return String(value).trim();
+  }
+
+  function castInputValue(input) {
+    const path = input.dataset.input || "";
+    const numeric = input.type === "range" || input.type === "number" || /(\.|^)(slots|scale|bildScale|iconScale|editorVersion)$/i.test(path);
+    return castValue(input.value, numeric ? "number" : "text");
   }
 
   function hasValue(value) {

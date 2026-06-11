@@ -110,6 +110,42 @@ function validateDataFile(entry, dataPath) {
   if (fullName && entry.name && fullName !== entry.name) {
     warnings.push(`${entry.id}: registry name differs from data name (${fullName})`);
   }
+
+  validateSections(entry, data);
+}
+
+function validateSections(entry, data) {
+  if (!Array.isArray(data.sektionen)) {
+    errors.push(`${entry.id}: data file is missing sektionen array`);
+    return;
+  }
+
+  const groupingIndex = data.sektionen.findIndex((section) => section.id === "gruppierungen" || section.gruppierungen);
+  const relationsIndex = data.sektionen.findIndex((section) => section.id === "beziehungen" || section.beziehungsgruppen);
+
+  if (groupingIndex < 0) {
+    errors.push(`${entry.id}: data file is missing Gruppierungen section`);
+    return;
+  }
+
+  const groupingSection = data.sektionen[groupingIndex];
+  const groupingTable = groupingSection.gruppierungen;
+  if (!groupingTable || typeof groupingTable !== "object") {
+    errors.push(`${entry.id}: Gruppierungen section is missing gruppierungen table`);
+    return;
+  }
+
+  if (!Array.isArray(groupingTable.eintraege)) {
+    errors.push(`${entry.id}: Gruppierungen table is missing eintraege array`);
+  }
+
+  if (Number(groupingTable.slots || 0) < 5) {
+    errors.push(`${entry.id}: Gruppierungen table must provide at least 5 slots`);
+  }
+
+  if (relationsIndex >= 0 && groupingIndex > relationsIndex) {
+    errors.push(`${entry.id}: Gruppierungen section must be placed before Beziehungen`);
+  }
 }
 
 function resolveRegistryPath(relativePath) {

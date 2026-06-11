@@ -333,6 +333,79 @@ window.STECKBRIEF_DATA = {
       liste: ["..."]
     },
     {
+      id: "gruppierungen",
+      titel: "Gruppierungen",
+      gruppierungen: {
+        titel: "Gruppierungen",
+        slots: 5,
+        eintraege: [
+          {
+            name: "Gruppierung 1",
+            typ: "Gilde / Orden / Trupp",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            bildScale: 1,
+            text: "Kurzbeschreibung ...",
+            profil: {
+              name: "Gruppierung 1",
+              art: "Gilde / Orden / Trupp",
+              bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              bildScale: 1,
+              bildFormat: "square",
+              bildFit: "cover",
+              kurztext: "Kurze Beschreibung der Gruppierung.",
+              beschreibung: "Ausfuehrliche Beschreibung: Ziele, Aufbau, Stellung zur Figur, Einfluss und Geschichte.",
+              sitz: "-",
+              anfuehrer: "-",
+              info: [
+                ["Name", "Gruppierung 1"],
+                ["Typ", "Gilde / Orden / Trupp"],
+                ["Sitz", "-"],
+                ["Anfuehrer", "-"],
+                ["Mitglieder", "-"],
+                ["Beziehung", "-"]
+              ],
+              attribute: [
+                ["Einfluss", 5],
+                ["Ressourcen", 5],
+                ["Struktur", 5],
+                ["Geheimhaltung", 5],
+                ["Konfliktkraft", 5],
+                ["Loyalitaet", 5]
+              ]
+            }
+          },
+          {
+            name: "Gruppierung 2",
+            typ: "Gilde / Orden / Trupp",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            bildScale: 1,
+            text: "Kurzbeschreibung ..."
+          },
+          {
+            name: "Gruppierung 3",
+            typ: "Gilde / Orden / Trupp",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            bildScale: 1,
+            text: "Kurzbeschreibung ..."
+          },
+          {
+            name: "Gruppierung 4",
+            typ: "Gilde / Orden / Trupp",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            bildScale: 1,
+            text: "Kurzbeschreibung ..."
+          },
+          {
+            name: "Gruppierung 5",
+            typ: "Gilde / Orden / Trupp",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            bildScale: 1,
+            text: "Kurzbeschreibung ..."
+          }
+        ]
+      }
+    },
+    {
       id: "beziehungen",
       titel: "Beziehungen",
       beziehungsgruppen: [

@@ -330,6 +330,52 @@ window.STECKBRIEF_DATA = {
       liste: ["..."]
     },
     {
+      id: "gruppierungen",
+      titel: "Gruppierungen",
+      gruppierungen: {
+        titel: "Gruppierungen",
+        slots: 5,
+        eintraege: [
+          {
+            name: "Varulv Clan",
+            typ: "Clan",
+            status: "Zugehoerigkeit",
+            bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+            kurztext: "Die wichtigste familiaere und politische Bindung dieser Figur.",
+            profil: {
+              name: "Varulv Clan",
+              art: "Clan",
+              bild: "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              bildScale: 1,
+              bildFormat: "square",
+              bildFit: "contain",
+              kurztext: "Kurzbeschreibung des Clans, seiner Rolle und seiner Bedeutung fuer die Figur.",
+              beschreibung: "Hier koennen Geschichte, Stellung, Ziele, innere Struktur und wichtige Mitglieder der Gruppierung beschrieben werden.",
+              info: [
+                ["Name", "Varulv Clan"],
+                ["Art", "Clan"],
+                ["Sitz", "Roriksheim"],
+                ["Anfuehrung", "-"],
+                ["Rolle", "-"],
+                ["Beziehung", "Zugehoerigkeit"]
+              ],
+              attribute: [
+                ["Einfluss", 5],
+                ["Ansehen", 5],
+                ["Macht", 5],
+                ["Nahe", 5],
+                ["Vertrauen", 5]
+              ]
+            }
+          },
+          { name: "Gruppierung 2", typ: "Gilde / Orden / Trupp", status: "-", kurztext: "Noch nicht ausgefuellt." },
+          { name: "Gruppierung 3", typ: "Gilde / Orden / Trupp", status: "-", kurztext: "Noch nicht ausgefuellt." },
+          { name: "Gruppierung 4", typ: "Gilde / Orden / Trupp", status: "-", kurztext: "Noch nicht ausgefuellt." },
+          { name: "Gruppierung 5", typ: "Gilde / Orden / Trupp", status: "-", kurztext: "Noch nicht ausgefuellt." }
+        ]
+      }
+    },
+    {
       id: "beziehungen",
       titel: "Beziehungen",
       beziehungsgruppen: [
