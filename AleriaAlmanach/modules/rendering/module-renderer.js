@@ -87,7 +87,7 @@ function buildInlineModuleWorkspace(editorHtml, page, entry, pageIndex, total, e
   const splitPercent = getInlineModuleSplitPercent();
   return `
     <div class="inline-module-workspace" style="--inline-edit-width:${splitPercent}%;">
-      <div class="inline-module-edit-pane">
+      <div class="inline-module-edit-pane" data-inline-page-index="${pageIndex}">
         <div class="modal-text-inner">
           ${editorHtml}
           ${buildInlineImagePanel(page)}

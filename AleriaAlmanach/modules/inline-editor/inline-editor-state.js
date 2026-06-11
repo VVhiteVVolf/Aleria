@@ -3,6 +3,7 @@
 
 let _inlineModuleEdit = null;
 let _inlinePreviewRefreshTimer = null;
+let _inlineEditorEventSource = null;
 
 function getInlineModuleEditSignature(context = _inlineModuleEdit) {
   if (!context?.draft) return '';
@@ -40,8 +41,20 @@ function getRenderableEntry(entry) {
   return isInlineEditingEntry(entry) ? _inlineModuleEdit.draft : entry;
 }
 
-function getInlineDraftPage(pageIndex = currentPage) {
-  return _inlineModuleEdit?.draft?.pages?.[pageIndex] || null;
+function getInlineDraftPage(pageIndex = null) {
+  const resolvedIndex = pageIndex == null && _inlineEditorEventSource
+    ? getInlineEditorPageIndex(_inlineEditorEventSource)
+    : (pageIndex == null ? currentPage : pageIndex);
+  return _inlineModuleEdit?.draft?.pages?.[resolvedIndex] || null;
+}
+
+function getInlineEditorPageIndex(source) {
+  const index = Number(source?.closest?.('[data-inline-page-index]')?.dataset.inlinePageIndex);
+  return Number.isInteger(index) && index >= 0 ? index : currentPage;
+}
+
+function getInlineDraftPageForSource(source) {
+  return getInlineDraftPage(getInlineEditorPageIndex(source));
 }
 
 function refreshInlineModuleLivePreview() {

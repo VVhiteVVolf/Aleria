@@ -40,7 +40,7 @@ function rerenderAfterInlineMetaChange(input) {
 }
 
 function syncInlinePageField(input) {
-  const page = getInlineDraftPage();
+  const page = getInlineDraftPageForSource(input);
   if (!page) return;
   const field = input.dataset.pageField;
   if (!field) return;
@@ -95,23 +95,23 @@ function rerenderAfterInlinePageChange(input) {
   renderPage(currentPage, 0);
 }
 
-function addInlineStatRow() {
-  const page = getInlineDraftPage();
+function addInlineStatRow(source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page) return;
   page.stats = Array.isArray(page.stats) ? page.stats : [];
   page.stats.push(['Neuer Eintrag', 'Wert']);
   renderPage(currentPage, 0);
 }
 
-function removeInlineStatRow(index) {
-  const page = getInlineDraftPage();
+function removeInlineStatRow(index, source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page?.stats) return;
   page.stats.splice(index, 1);
   renderPage(currentPage, 0);
 }
 
 function updateInlineStatField(input) {
-  const page = getInlineDraftPage();
+  const page = getInlineDraftPageForSource(input);
   if (!page) return;
   page.stats = Array.isArray(page.stats) ? page.stats : [];
   const index = Number(input.dataset.statIndex || -1);
@@ -121,23 +121,23 @@ function updateInlineStatField(input) {
   page.stats[index][slot] = String(input.value || '').trim();
 }
 
-function addInlineCommentBlock(kind = 'character') {
-  const page = getInlineDraftPage();
+function addInlineCommentBlock(kind = 'character', source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page) return;
   page.commentSequence = Array.isArray(page.commentSequence) ? page.commentSequence : [];
   page.commentSequence.push(createDefaultModuleCommentBlock(kind));
   renderPage(currentPage, 0);
 }
 
-function removeInlineCommentBlock(index) {
-  const page = getInlineDraftPage();
+function removeInlineCommentBlock(index, source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page?.commentSequence) return;
   page.commentSequence.splice(index, 1);
   renderPage(currentPage, 0);
 }
 
 function updateInlineCommentField(input) {
-  const page = getInlineDraftPage();
+  const page = getInlineDraftPageForSource(input);
   if (!page) return;
   page.commentSequence = Array.isArray(page.commentSequence) ? page.commentSequence : [];
   const index = Number(input.dataset.commentIndex || -1);
@@ -166,23 +166,23 @@ function updateInlineCommentField(input) {
   page.commentSequence[index] = block;
 }
 
-function addInlineSceneBlock(type = 'speech') {
-  const page = getInlineDraftPage();
+function addInlineSceneBlock(type = 'speech', source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page) return;
   page.sceneBlocks = Array.isArray(page.sceneBlocks) ? page.sceneBlocks : [];
   page.sceneBlocks.push(createDefaultSceneBlock(type));
   renderPage(currentPage, 0);
 }
 
-function removeInlineSceneBlock(index) {
-  const page = getInlineDraftPage();
+function removeInlineSceneBlock(index, source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page?.sceneBlocks) return;
   page.sceneBlocks.splice(index, 1);
   renderPage(currentPage, 0);
 }
 
-function replaceInlineSceneSpeaker(sourceKey, targetId) {
-  const page = getInlineDraftPage();
+function replaceInlineSceneSpeaker(sourceKey, targetId, source = null) {
+  const page = getInlineDraftPageForSource(source);
   if (!page) return;
   const target = getAllCharacterRecords().find(char => String(char?.id || '').trim() === String(targetId || '').trim());
   const targetName = String(target?.name || '').trim();
@@ -199,7 +199,7 @@ function replaceInlineSceneSpeaker(sourceKey, targetId) {
 }
 
 function updateInlineSceneField(input) {
-  const page = getInlineDraftPage();
+  const page = getInlineDraftPageForSource(input);
   if (!page) return;
   page.sceneBlocks = Array.isArray(page.sceneBlocks) ? page.sceneBlocks : [];
   const index = Number(input.dataset.sceneIndex || -1);

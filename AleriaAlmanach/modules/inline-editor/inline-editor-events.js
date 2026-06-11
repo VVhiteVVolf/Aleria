@@ -47,36 +47,39 @@ function handleInlineEditorActionClick(event) {
   if (!INLINE_EDITOR_CLICK_ACTIONS.has(action)) return;
 
   event.preventDefault();
+  _inlineEditorEventSource = trigger;
+  try {
 
   if (action === 'add-stat-row') {
-    addInlineStatRow();
+    addInlineStatRow(trigger);
     return;
   }
   if (action === 'remove-stat-row') {
-    removeInlineStatRow(Number(trigger.dataset.statIndex) || 0);
+    removeInlineStatRow(Number(trigger.dataset.statIndex) || 0, trigger);
     return;
   }
   if (action === 'add-comment-block') {
-    addInlineCommentBlock(trigger.dataset.commentKind || 'character');
+    addInlineCommentBlock(trigger.dataset.commentKind || 'character', trigger);
     return;
   }
   if (action === 'remove-comment-block') {
-    removeInlineCommentBlock(Number(trigger.dataset.commentIndex) || 0);
+    removeInlineCommentBlock(Number(trigger.dataset.commentIndex) || 0, trigger);
     return;
   }
   if (action === 'add-scene-block') {
-    addInlineSceneBlock(trigger.dataset.sceneKind || 'speech');
+    addInlineSceneBlock(trigger.dataset.sceneKind || 'speech', trigger);
     return;
   }
   if (action === 'remove-scene-block') {
-    removeInlineSceneBlock(Number(trigger.dataset.sceneIndex) || 0);
+    removeInlineSceneBlock(Number(trigger.dataset.sceneIndex) || 0, trigger);
     return;
   }
   if (action === 'replace-scene-speaker') {
     const tools = trigger.closest('.module-scene-speaker-tools');
     replaceInlineSceneSpeaker(
       String(tools?.querySelector('[data-inline-role="scene-replace-source"]')?.value || ''),
-      String(tools?.querySelector('[data-inline-role="scene-replace-target"]')?.value || '')
+      String(tools?.querySelector('[data-inline-role="scene-replace-target"]')?.value || ''),
+      trigger
     );
     return;
   }
@@ -232,12 +235,18 @@ function handleInlineEditorActionClick(event) {
       Number(trigger.dataset.questIndex) || 0
     );
   }
+  } finally {
+    _inlineEditorEventSource = null;
+  }
 }
 
 function handleInlineEditorFieldChange(event) {
   const field = event.target;
   if (!field?.closest?.('#modal-overlay')) return;
   const action = field.dataset?.inlineAction;
+  if (!action) return;
+  _inlineEditorEventSource = field;
+  try {
 
   if (action === 'sync-page-field') {
     syncInlinePageField(field);
@@ -395,6 +404,9 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'apply-template') {
     applyInlineModuleTemplate(field);
+  }
+  } finally {
+    _inlineEditorEventSource = null;
   }
 }
 

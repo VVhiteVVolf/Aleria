@@ -2,6 +2,7 @@
 let currentEntry = null;
 let currentPage = 0;
 let _autoScrollCommentsOnNextRender = false;
+let _modalRenderToken = 0;
 
 function openModal(entry) {
   preloadEntryImages(entry, 3);
@@ -58,6 +59,7 @@ function afterModalPageRender(entry, page, pageIndex, scope) {
 }
 
 function renderPage(idx, dir) {
+  const renderToken = ++_modalRenderToken;
   const entry = getRenderableEntry(currentEntry);
   const pages = getPages(entry);
   const page = pages[idx];
@@ -85,6 +87,7 @@ function renderPage(idx, dir) {
   oldPage.classList.add(outClass);
 
   setTimeout(() => {
+    if (renderToken !== _modalRenderToken) return;
     scene.innerHTML = `<div class="flip-page ${inClass}">${html}</div>`;
     afterModalPageRender(entry, page, idx, scene);
   }, 200);
