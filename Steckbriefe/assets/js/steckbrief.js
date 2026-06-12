@@ -23,6 +23,8 @@
   let saveQueued = false;
   let closeAfterSave = false;
   let editorTab = "identity";
+  let splitterDrag = null;
+  const editorLayoutKey = "steckbrief:editor-width";
   const groupingPlaceholderImage = "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png";
 
   init();
@@ -36,6 +38,7 @@
     ensureGroupingSection();
     ensureGallery();
     renderShell();
+    restoreEditorLayout();
     renderAll();
     wireEditorEvents();
     waitForFirebase();
@@ -70,6 +73,17 @@
     dock.className = "steckbrief-editor-dock";
     dock.setAttribute("aria-label", "Steckbrief-Bearbeitung");
     document.body.insertBefore(dock, root);
+
+    const splitter = document.createElement("button");
+    splitter.type = "button";
+    splitter.className = "steckbrief-editor-splitter";
+    splitter.dataset.editorSplitter = "";
+    splitter.setAttribute("aria-label", "Breite zwischen Bearbeitung und Livevorschau anpassen");
+    splitter.setAttribute("aria-orientation", "vertical");
+    splitter.setAttribute("aria-valuemin", "420");
+    splitter.setAttribute("aria-valuemax", "1200");
+    splitter.setAttribute("aria-valuenow", "720");
+    document.body.insertBefore(splitter, root);
   }
 
   function renderAll() {
@@ -91,6 +105,8 @@
   function renderEditorDock() {
     const dock = document.querySelector(".steckbrief-editor-dock");
     if (!dock) return;
+    const oldTab = dock.dataset.editorTab;
+    const oldScrollTop = oldTab === editorTab ? dock.querySelector(".sed-body")?.scrollTop || 0 : 0;
     dock.innerHTML = `
       <header class="sed-head">
         <div>
@@ -112,6 +128,8 @@
         ${renderEditorTab()}
       </div>
     `;
+    dock.dataset.editorTab = editorTab;
+    dock.querySelector(".sed-body")?.scrollTo(0, oldScrollTop);
     refreshImageFieldStatuses(dock);
   }
 
@@ -462,18 +480,31 @@
                   ${renderEditorInput("Typ", `${path}.eintraege.${index}.typ`)}
                   ${renderEditorInput("Bild-URL", `${path}.eintraege.${index}.bild`, "wide")}
                   ${renderEditorRange("Bildskalierung", `${path}.eintraege.${index}.bildScale`, 0.5, 2, 0.05)}
+                  ${renderEditorSelect("Bildformat", `${path}.eintraege.${index}.bildFormat`, [
+                    ["portrait", "Portrait 3:4"],
+                    ["tall", "Hoch 2:3"],
+                    ["square", "Quadrat 1:1"],
+                    ["wide", "Breit 4:3"],
+                    ["banner", "Banner 16:9"],
+                    ["original", "Original"]
+                  ])}
+                  ${renderEditorSelect("Fuellung", `${path}.eintraege.${index}.bildFit`, [
+                    ["contain", "Einpassen"],
+                    ["cover", "Zuschneiden"]
+                  ])}
                 </div>
                 ${renderEditorTextarea("Kurztext", `${path}.eintraege.${index}.text`, 3)}
                 <details class="sed-details">
                   <summary>Profilfelder</summary>
                   <div class="sed-grid two">
-                    ${renderEditorInput("Profilname", `${path}.eintraege.${index}.profil.name`)}
-                    ${renderEditorInput("Kategorie", `${path}.eintraege.${index}.profil.art`)}
-                    ${renderEditorInput("Sitz / Ort", `${path}.eintraege.${index}.profil.sitz`)}
-                    ${renderEditorInput("Anfuehrer", `${path}.eintraege.${index}.profil.anfuehrer`)}
-                  </div>
-                  ${renderEditorTextarea("Profilbeschreibung", `${path}.eintraege.${index}.profil.beschreibung`, 4)}
-                </details>
+                  ${renderEditorInput("Profilname", `${path}.eintraege.${index}.profil.name`)}
+                  ${renderEditorInput("Kategorie", `${path}.eintraege.${index}.profil.art`)}
+                  ${renderEditorInput("Sitz / Ort", `${path}.eintraege.${index}.profil.sitz`)}
+                  ${renderEditorInput("Anfuehrer", `${path}.eintraege.${index}.profil.anfuehrer`)}
+                  ${renderEditorInput("Link zur Gruppenseite", `${path}.eintraege.${index}.profil.link`, "wide")}
+                </div>
+                ${renderEditorTextarea("Profilbeschreibung", `${path}.eintraege.${index}.profil.beschreibung`, 4)}
+              </details>
               </article>
             `;
           }).join("")}
@@ -911,6 +942,9 @@
     const entry = readPath(data, basePath);
     if (!entry) return;
     const profile = ensureGroupingProfile(entry);
+    const profileImage = profile.bild || entry.bild || groupingPlaceholderImage;
+    const profileLink = normalizeLink(profile.link || entry.link || "");
+    const profileImageMarkup = `<img src="${escapeAttr(profileImage)}" alt="${escapeAttr(profile.name || entry.name || "Gruppierung")}" style="${imageStyle({ scale: profile.bildScale || entry.bildScale || 1 })}">`;
     let modal = document.querySelector(".grouping-veil");
     if (!modal) {
       modal = document.createElement("div");
@@ -933,15 +967,16 @@
         </header>
         <div class="grouping-profile-grid">
           <figure class="companion-portrait">
-            <div class="companion-image-box" style="--image-ratio:${imageRatioValue(profile.bildFormat || "square")};--companion-fit:${profile.bildFit || "contain"}">
-              <img src="${escapeAttr(profile.bild || entry.bild || groupingPlaceholderImage)}" alt="${escapeAttr(profile.name || entry.name || "Gruppierung")}" style="${imageStyle({ scale: profile.bildScale || entry.bildScale || 1 })}">
+            <div class="companion-image-box" style="--image-ratio:${imageRatioValue(profile.bildFormat || "portrait")};--companion-fit:${profile.bildFit || "contain"}">
+              ${profileLink && !groupingEditMode ? `<a class="grouping-profile-link" href="${escapeAttr(profileLink)}" target="_blank" rel="noopener noreferrer">${profileImageMarkup}</a>` : profileImageMarkup}
             </div>
             <div class="edit-controls compact">
-              ${renderImageUrlControl("Bildlink", `${basePath}.profil.bild`, profile.bild || entry.bild || groupingPlaceholderImage)}
+              ${renderImageUrlControl("Bildlink", `${basePath}.profil.bild`, profileImage)}
+              <label>Link zur Gruppenseite <input value="${escapeAttr(profile.link || entry.link || "")}" data-input="${escapeAttr(`${basePath}.profil.link`)}" placeholder="/gruppen/... oder https://..."></label>
               <label>Skalierung <input type="range" min="0.5" max="2" step="0.05" value="${escapeAttr(profile.bildScale || entry.bildScale || 1)}" data-input="${escapeAttr(`${basePath}.profil.bildScale`)}"></label>
               <label>Format
                 <select data-input="${escapeAttr(`${basePath}.profil.bildFormat`)}">
-                  ${renderImageFormatOptions(profile.bildFormat || "square")}
+                  ${renderImageFormatOptions(profile.bildFormat || "portrait")}
                 </select>
               </label>
               <label>Fuellung
@@ -1123,8 +1158,10 @@
   function renderGroupingSlot(entry, basePath, index) {
     ensureGroupingProfile(entry);
     const image = entry.bild || entry.profil?.bild || groupingPlaceholderImage;
+    const imageFormat = entry.bildFormat || entry.profil?.bildFormat || "portrait";
+    const imageFit = entry.bildFit || entry.profil?.bildFit || "contain";
     return `
-      <article class="grouping-slot">
+      <article class="grouping-slot" style="--grouping-image-ratio:${imageRatioValue(imageFormat)};--grouping-image-fit:${escapeAttr(imageFit)}">
         <button type="button" class="grouping-image" data-open-grouping="${escapeAttr(basePath)}" aria-label="Gruppierungsprofil öffnen">
           <img src="${escapeAttr(image)}" alt="${escapeAttr(entry.name || `Gruppierung ${index + 1}`)}" style="${imageStyle({ scale: entry.bildScale || entry.profil?.bildScale || 1 })}">
         </button>
@@ -1140,7 +1177,7 @@
   function renderRelationGroups(groups, basePath) {
     if (!Array.isArray(groups) || groups.length === 0) return "";
     return groups.map((group, index) => `
-      <details class="relation-disclosure" ${index === 0 ? "open" : ""}>
+      <details class="relation-disclosure">
         <summary ${editableAttr(`${basePath}.${index}.titel`)}>${escapeHtml(group.titel || "Beziehungen")}</summary>
         ${renderRelationTable(group, `${basePath}.${index}`)}
       </details>
@@ -1394,6 +1431,43 @@
       }
     });
 
+    document.addEventListener("pointerdown", (event) => {
+      const splitter = event.target.closest("[data-editor-splitter]");
+      if (!splitter || !editMode) return;
+      event.preventDefault();
+      splitterDrag = {
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startWidth: getEditorWidth()
+      };
+      splitter.setPointerCapture?.(event.pointerId);
+      document.body.classList.add("is-resizing-editor");
+    });
+
+    document.addEventListener("pointermove", (event) => {
+      if (!splitterDrag || event.pointerId !== splitterDrag.pointerId) return;
+      const nextWidth = splitterDrag.startWidth + event.clientX - splitterDrag.startX;
+      setEditorWidth(nextWidth);
+    });
+
+    document.addEventListener("pointerup", (event) => {
+      if (!splitterDrag || event.pointerId !== splitterDrag.pointerId) return;
+      splitterDrag = null;
+      document.body.classList.remove("is-resizing-editor");
+      persistEditorLayout();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      const splitter = event.target.closest("[data-editor-splitter]");
+      if (!splitter || !editMode) return;
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      if (event.key === "Home") setEditorWidth(420);
+      else if (event.key === "End") setEditorWidth(window.innerWidth - 420);
+      else setEditorWidth(getEditorWidth() + (event.key === "ArrowRight" ? 24 : -24));
+      persistEditorLayout();
+    });
+
     document.addEventListener("input", (event) => {
       const target = event.target;
       if (target.dataset.edit) {
@@ -1443,7 +1517,10 @@
     }, true);
 
     document.getElementById("import-json-file")?.addEventListener("change", importJsonFile);
-    window.addEventListener("resize", syncColumnHeight);
+    window.addEventListener("resize", () => {
+      setEditorWidth(getEditorWidth());
+      syncColumnHeight();
+    });
     window.addEventListener("beforeunload", warnBeforeUnload);
   }
 
@@ -1791,11 +1868,46 @@
     return /\.(png|jpe?g|gif|webp|avif|svg)(\?.*)?$/i.test(url);
   }
 
+  function normalizeLink(value) {
+    const link = String(value || "").trim();
+    if (!link) return "";
+    if (/^(https?:\/\/|\/|\.{1,2}\/|#)/i.test(link)) return link;
+    return `https://${link}`;
+  }
+
   function renderAllPreserveScroll() {
     const x = window.scrollX;
     const y = window.scrollY;
+    const previewScrollTop = root?.scrollTop || 0;
     renderAll();
-    requestAnimationFrame(() => window.scrollTo(x, y));
+    requestAnimationFrame(() => {
+      window.scrollTo(x, y);
+      if (root) root.scrollTop = previewScrollTop;
+    });
+  }
+
+  function restoreEditorLayout() {
+    const stored = Number(localStorage.getItem(editorLayoutKey));
+    if (Number.isFinite(stored) && stored > 0) setEditorWidth(stored);
+    else setEditorWidth(getEditorWidth());
+  }
+
+  function persistEditorLayout() {
+    localStorage.setItem(editorLayoutKey, String(getEditorWidth()));
+  }
+
+  function getEditorWidth() {
+    const configured = getComputedStyle(document.body).getPropertyValue("--steck-editor-width").trim();
+    const parsed = Number.parseFloat(configured);
+    if (Number.isFinite(parsed)) return parsed;
+    return Math.min(760, Math.max(480, window.innerWidth * 0.48));
+  }
+
+  function setEditorWidth(width) {
+    const max = Math.max(420, window.innerWidth - 420);
+    const next = Math.round(Math.min(max, Math.max(420, Number(width) || 720)));
+    document.body.style.setProperty("--steck-editor-width", `${next}px`);
+    document.querySelector("[data-editor-splitter]")?.setAttribute("aria-valuenow", String(next));
   }
 
   function editableAttr(path, type = "text") {
@@ -1944,14 +2056,17 @@
       typ: "Gilde / Orden / Trupp",
       bild: groupingPlaceholderImage,
       bildScale: 1,
+      bildFormat: "portrait",
+      bildFit: "contain",
       text: "Kurzbeschreibung ...",
       profil: {
         name: `Gruppierung ${index}`,
         art: "Gilde / Orden / Trupp",
         bild: groupingPlaceholderImage,
+        link: "",
         bildScale: 1,
-        bildFormat: "square",
-        bildFit: "cover",
+        bildFormat: "portrait",
+        bildFit: "contain",
         kurztext: "Kurze Beschreibung der Gruppierung.",
         beschreibung: "Ausfuehrliche Beschreibung: Ziele, Aufbau, Stellung zur Figur, Einfluss und Geschichte.",
         sitz: "-",
@@ -1971,12 +2086,15 @@
 
   function ensureGroupingProfile(entry) {
     if (!entry.profil) entry.profil = {};
+    entry.bildFormat ||= entry.profil.bildFormat || "portrait";
+    entry.bildFit ||= entry.profil.bildFit || "contain";
     entry.profil.name ||= entry.name || "Gruppierung";
     entry.profil.art ||= entry.typ || "Gilde / Orden / Trupp";
     entry.profil.bild ||= entry.bild || groupingPlaceholderImage;
+    entry.profil.link ||= entry.link || "";
     entry.profil.bildScale ||= entry.bildScale || 1;
-    entry.profil.bildFormat ||= "square";
-    entry.profil.bildFit ||= "cover";
+    entry.profil.bildFormat ||= entry.bildFormat || "portrait";
+    entry.profil.bildFit ||= entry.bildFit || "contain";
     entry.profil.kurztext ||= entry.text || "Kurze Beschreibung der Gruppierung.";
     entry.profil.beschreibung ||= "Ausfuehrliche Beschreibung: Ziele, Aufbau, Stellung zur Figur, Einfluss und Geschichte.";
     entry.profil.sitz ||= "-";

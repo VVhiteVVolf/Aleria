@@ -11,6 +11,7 @@
   --red: #742b22;
   --green: #2d4d39;
   --shadow: 0 14px 36px rgba(39, 20, 2, .22);
+  --steck-editor-width: min(720px, 48vw);
 }
 
 *,
@@ -187,6 +188,10 @@ body {
   display: none;
 }
 
+.steckbrief-editor-splitter {
+  display: none;
+}
+
 .is-editor-open {
   overflow: hidden;
 }
@@ -204,12 +209,52 @@ body {
   bottom: 0;
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);
-  width: min(720px, 48vw);
-  min-width: 480px;
+  width: var(--steck-editor-width);
+  min-width: 420px;
   color: var(--ink);
   background: #f8efd2;
   border-right: 2px solid var(--line);
   box-shadow: 16px 0 38px rgba(23, 14, 4, .32);
+}
+
+.is-editor-open .steckbrief-editor-splitter {
+  position: fixed;
+  z-index: 940;
+  top: 45px;
+  bottom: 0;
+  left: calc(var(--steck-editor-width) - 5px);
+  display: block;
+  width: 10px;
+  padding: 0;
+  cursor: col-resize;
+  background: transparent;
+  border: 0;
+}
+
+.is-editor-open .steckbrief-editor-splitter::before {
+  content: "";
+  position: absolute;
+  inset: 0 3px;
+  background: #b89658;
+  box-shadow: 0 0 0 1px rgba(67, 41, 12, .22);
+}
+
+.is-editor-open .steckbrief-editor-splitter::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(67, 41, 12, .45);
+  border-width: 0 1px;
+}
+
+.is-editor-open .steckbrief-editor-splitter:focus-visible::before,
+.is-resizing-editor .steckbrief-editor-splitter::before {
+  background: #7f5a1d;
+  box-shadow: 0 0 0 2px rgba(255, 248, 223, .75);
 }
 
 .is-editor-open .page-shell {
@@ -218,7 +263,7 @@ body {
   top: 45px;
   right: 0;
   bottom: 0;
-  left: min(720px, 48vw);
+  left: var(--steck-editor-width);
   width: auto;
   max-width: none;
   margin: 0;
@@ -488,6 +533,10 @@ body {
     width: 100vw;
     min-width: 0;
     right: 0;
+  }
+
+  .is-editor-open .steckbrief-editor-splitter {
+    display: none;
   }
 
   .is-editor-open .page-shell {
@@ -1275,15 +1324,16 @@ cite {
 
 .grouping-slot {
   display: grid;
-  grid-template-rows: 150px minmax(0, 1fr);
-  min-height: 310px;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 360px;
   background: var(--paper-3);
 }
 
 .grouping-image {
   display: block;
   width: 100%;
-  height: 150px;
+  min-height: 220px;
+  aspect-ratio: var(--grouping-image-ratio, 3 / 4);
   padding: 0;
   cursor: pointer;
   border: 0;
@@ -1295,7 +1345,7 @@ cite {
 .grouping-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: var(--grouping-image-fit, contain);
   transition: transform .12s ease;
 }
 
@@ -1645,6 +1695,19 @@ cite {
   width: 100%;
   height: 100%;
   object-fit: var(--companion-fit, contain);
+}
+
+.grouping-profile-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.grouping-profile-link:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
 }
 
 .companion-image-box[style*="auto"] img {
