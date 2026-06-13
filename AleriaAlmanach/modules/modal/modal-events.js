@@ -16,6 +16,8 @@ document.addEventListener('click', event => {
     'move-inline-page',
     'remove-inline-page',
     'export-current-module',
+    'export-current-comment-thread',
+    'import-current-comment-thread',
     'open-module-editor-current'
   ].includes(action)) return;
   event.preventDefault();
@@ -50,6 +52,14 @@ document.addEventListener('click', event => {
   }
   if (action === 'export-current-module') {
     exportCurrentModule();
+    return;
+  }
+  if (action === 'export-current-comment-thread') {
+    exportCurrentCommentThreadFromModal();
+    return;
+  }
+  if (action === 'import-current-comment-thread') {
+    importCurrentCommentThreadFromModal();
     return;
   }
   if (action === 'open-module-editor-current') {

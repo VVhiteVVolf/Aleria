@@ -80,9 +80,15 @@ function syncModuleJsonPreview() {
     const payload = collectModuleEditorPayload();
     output.value = modulePayloadToJson(payload);
     setModuleEditorStatus('');
+    if (typeof refreshModuleCommentThreadIoOptions === 'function') {
+      refreshModuleCommentThreadIoOptions(payload);
+    }
     renderModuleEditorPreview(payload);
   } catch (error) {
     output.value = '';
+    if (typeof refreshModuleCommentThreadIoOptions === 'function') {
+      refreshModuleCommentThreadIoOptions(null);
+    }
     renderModuleEditorPreview(null, error.message || 'Vorschau konnte nicht erzeugt werden.');
   }
 }

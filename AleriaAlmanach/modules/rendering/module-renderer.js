@@ -1361,6 +1361,12 @@ function buildNav(page, pageIndex, total) {
   const pages = activeEntry ? getPages(activeEntry) : [];
   const inlineEditing = isInlineEditingEntry(currentEntry);
   const currentLabel = getPageNavLabel(page, pageIndex, total);
+  const currentThread = !inlineEditing && activeEntry
+    ? (getCommentThreadForPage(page, activeEntry, pageIndex) || getInlineCommentThreadForPage(page, activeEntry, pageIndex))
+    : null;
+  const commentThreadActions = !inlineEditing ? `
+      <button class="modal-page-tool" type="button" data-modal-action="export-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare exportieren</button>
+      <button class="modal-page-tool" type="button" data-modal-action="import-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare importieren</button>` : '';
   const chapterTabs = pages.map((p, idx) => `
     <button
       class="modal-page-tab${idx === pageIndex ? ' active' : ''}"
@@ -1389,6 +1395,7 @@ function buildNav(page, pageIndex, total) {
       ${pages.length > 1 ? `<button class="modal-page-tool" type="button" data-modal-action="remove-inline-page">Seite löschen</button>` : ''}`
     : `
       <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Export</button>
+      ${commentThreadActions}
       <button class="modal-page-tool" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>`;
   return `
     <div class="modal-page-header">

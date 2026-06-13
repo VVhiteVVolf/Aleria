@@ -9,8 +9,12 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'load-json-as-new',
   'export-module',
   'export-module-comments',
+  'export-selected-comment-thread',
   'export-all-modules',
   'open-module-import-file',
+  'open-comment-thread-import-file',
+  'load-comment-thread-sources',
+  'rescue-comment-thread-from-firebase',
   'export-full-backup',
   'cleanup-local-storage',
   'undo-import',
@@ -108,12 +112,28 @@ function handleModuleEditorActionClick(event) {
     exportModuleCommentsFromEditor();
     return;
   }
+  if (action === 'export-selected-comment-thread') {
+    exportSelectedModuleEditorCommentThread();
+    return;
+  }
   if (action === 'export-all-modules') {
     exportAllModulePackages();
     return;
   }
   if (action === 'open-module-import-file') {
     document.getElementById('me-module-import-file')?.click();
+    return;
+  }
+  if (action === 'open-comment-thread-import-file') {
+    openSelectedModuleEditorCommentThreadImport();
+    return;
+  }
+  if (action === 'load-comment-thread-sources') {
+    loadCurrentModuleCommentThreadSources();
+    return;
+  }
+  if (action === 'rescue-comment-thread-from-firebase') {
+    rescueSelectedModuleEditorCommentThreadFromFirebase();
     return;
   }
   if (action === 'export-full-backup') {
@@ -415,6 +435,10 @@ function handleModuleEditorFileChange(event) {
 
   if (action === 'import-module-file') {
     handleModuleImportFile(field);
+    return;
+  }
+  if (action === 'import-comment-thread-file') {
+    handleSelectedModuleEditorCommentThreadImport(field);
     return;
   }
   if (action === 'import-full-backup-file') {
