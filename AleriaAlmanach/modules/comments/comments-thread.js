@@ -5,9 +5,30 @@ let _commentLiveThreadId = null;
 let _commentLiveUnsubscribe = null;
 const _commentAutoScrollThreads = new Set();
 function getCommentTimestampMs(comment) {
-  const seconds = Number(comment?.ts?.seconds);
+  const seconds = Number(comment?.ts?.seconds ?? comment?.ts?._seconds);
   if (!Number.isFinite(seconds)) return null;
-  const nanos = Number(comment?.ts?.nanoseconds || 0);
+  const nanos = Number(comment?.ts?.nanoseconds ?? comment?.ts?._nanoseconds ?? 0);
+  return (seconds * 1000) + (Number.isFinite(nanos) ? nanos / 1000000 : 0);
+}
+
+function getCommentValueTimestampMs(value) {
+  if (!value) return null;
+  if (typeof value.toMillis === 'function') {
+    const ms = Number(value.toMillis());
+    return Number.isFinite(ms) ? ms : null;
+  }
+  if (typeof value.toDate === 'function') {
+    const ms = Number(value.toDate()?.getTime());
+    return Number.isFinite(ms) ? ms : null;
+  }
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  if (typeof value === 'string') {
+    const parsed = Date.parse(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  const seconds = Number(value?.seconds ?? value?._seconds);
+  if (!Number.isFinite(seconds)) return null;
+  const nanos = Number(value?.nanoseconds ?? value?._nanoseconds ?? 0);
   return (seconds * 1000) + (Number.isFinite(nanos) ? nanos / 1000000 : 0);
 }
 
@@ -16,6 +37,22 @@ function getCommentSortValue(comment, fallbackIndex = 0) {
   if (Number.isFinite(orderKey)) return orderKey;
   const timestamp = getCommentTimestampMs(comment);
   return Number.isFinite(timestamp) ? timestamp : fallbackIndex * 1000;
+}
+
+function getCommentActivityMs(comment, fallbackIndex = 0) {
+  const candidates = [
+    Number(comment?.activityAtClient),
+    getCommentValueTimestampMs(comment?.activityAt),
+    Number(comment?.updatedAtClient),
+    getCommentValueTimestampMs(comment?.updatedAt),
+    getCommentValueTimestampMs(comment?.editedAt),
+    Number(comment?.createdAtClient),
+    Number(comment?.createdAtMs),
+    getCommentValueTimestampMs(comment?.createdAt),
+    getCommentTimestampMs(comment),
+    getCommentSortValue(comment, fallbackIndex)
+  ].filter(Number.isFinite);
+  return candidates.length ? Math.max(...candidates) : fallbackIndex;
 }
 
 function sortCommentsByTimeline(comments) {
@@ -27,6 +64,18 @@ function sortCommentsByTimeline(comments) {
     const bt = getCommentTimestampMs(b) || 0;
     return at - bt;
   });
+}
+
+function sortCommentsByRecentActivity(comments) {
+  return (Array.isArray(comments) ? comments : [])
+    .map((comment, index) => ({ comment, index }))
+    .sort((a, b) => {
+      const av = getCommentActivityMs(a.comment, a.index);
+      const bv = getCommentActivityMs(b.comment, b.index);
+      if (av !== bv) return bv - av;
+      return String(b.comment?.id || '').localeCompare(String(a.comment?.id || ''));
+    })
+    .map(item => item.comment);
 }
 
 function getNextCommentOrderKey(threadId, insertAfterId = null) {
@@ -227,6 +276,5 @@ function findCachedCommentById(commentId) {
 // Comment edit logic lives in modules/comments/comments-edit.js.
 
 // Comment delete logic lives in modules/comments/comments-delete.js.
-
 
 

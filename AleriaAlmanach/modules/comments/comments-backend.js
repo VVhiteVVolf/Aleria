@@ -55,6 +55,7 @@ function getLocalCommentBackend() {
       const key = String(entryId || '');
       const store = readLocalCommentStore();
       const comments = Array.isArray(store[key]) ? store[key] : [];
+      const nowClient = Date.now();
       comments.push({
         id: makeLocalCommentId(),
         entryId: key,
@@ -73,6 +74,8 @@ function getLocalCommentBackend() {
         itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
         documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
         orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
+        createdAtClient: nowClient,
+        activityAtClient: nowClient,
         ts: makeLocalTimestamp(),
         schemaVersion: 2,
         localOnly: true
@@ -111,7 +114,15 @@ function getLocalCommentBackend() {
         store[key] = (store[key] || []).map(comment => {
           if (comment.id !== docId) return comment;
           updated = true;
-          return { ...comment, ...updates, editedAt: makeLocalTimestamp(), localOnly: true };
+          const nowClient = Date.now();
+          return {
+            ...comment,
+            ...updates,
+            editedAt: makeLocalTimestamp(),
+            updatedAtClient: nowClient,
+            activityAtClient: nowClient,
+            localOnly: true
+          };
         });
       });
       if (!updated) throw new Error('Nicht gefunden');
@@ -127,11 +138,11 @@ function getLocalCommentBackend() {
     },
     async loadRecentComments(n) {
       const store = readLocalCommentStore();
-      return Object.values(store).flat().sort((a, b) => {
-        const ta = a.ts?.seconds || 0;
-        const tb = b.ts?.seconds || 0;
-        return tb - ta;
-      }).slice(0, Math.max(0, Number(n) || 0));
+      const comments = Object.values(store).flat();
+      const sorted = typeof sortCommentsByRecentActivity === 'function'
+        ? sortCommentsByRecentActivity(comments)
+        : comments.sort((a, b) => (b.ts?.seconds || 0) - (a.ts?.seconds || 0));
+      return sorted.slice(0, Math.max(0, Number(n) || 0));
     },
     async loadAllComments() {
       return Object.values(readLocalCommentStore()).flat();

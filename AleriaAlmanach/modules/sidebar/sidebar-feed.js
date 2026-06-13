@@ -1,13 +1,76 @@
 // Sidebar activity feed and entry navigation.
-function formatTimeAgo(ts) {
-  if (!ts || !ts.seconds) return '';
-  const now = Date.now() / 1000;
-  const diff = now - ts.seconds;
-  if (diff < 60) return 'Gerade eben';
-  if (diff < 3600) return `vor ${Math.floor(diff / 60)} Min.`;
-  if (diff < 86400) return `vor ${Math.floor(diff / 3600)} Std.`;
-  if (diff < 604800) return `vor ${Math.floor(diff / 86400)} Tagen`;
-  return new Date(ts.seconds * 1000).toLocaleDateString('de-DE', { day: '2-digit', month: 'short' });
+const SIDEBAR_FEED_RENDER_LIMIT = 12;
+const SIDEBAR_FEED_CANDIDATE_LIMIT = 30;
+
+function getSidebarTimestampMs(value) {
+  if (!value) return null;
+  if (typeof value.toMillis === 'function') {
+    const ms = Number(value.toMillis());
+    return Number.isFinite(ms) ? ms : null;
+  }
+  if (typeof value.toDate === 'function') {
+    const ms = Number(value.toDate()?.getTime());
+    return Number.isFinite(ms) ? ms : null;
+  }
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  if (typeof value === 'string') {
+    const parsed = Date.parse(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  const seconds = Number(value?.seconds ?? value?._seconds);
+  if (!Number.isFinite(seconds)) return null;
+  const nanos = Number(value?.nanoseconds ?? value?._nanoseconds ?? 0);
+  return (seconds * 1000) + (Number.isFinite(nanos) ? nanos / 1000000 : 0);
+}
+
+function getSidebarCommentActivityMs(comment, fallbackIndex = 0) {
+  const candidates = [
+    Number(comment?.activityAtClient),
+    getSidebarTimestampMs(comment?.activityAt),
+    Number(comment?.updatedAtClient),
+    getSidebarTimestampMs(comment?.updatedAt),
+    getSidebarTimestampMs(comment?.editedAt),
+    Number(comment?.createdAtClient),
+    Number(comment?.createdAtMs),
+    getSidebarTimestampMs(comment?.createdAt),
+    getSidebarTimestampMs(comment?.ts),
+    Number(comment?.orderKey)
+  ].filter(Number.isFinite);
+  return candidates.length ? Math.max(...candidates) : fallbackIndex;
+}
+
+function sortSidebarFeedComments(comments) {
+  return (Array.isArray(comments) ? comments : [])
+    .map((comment, index) => ({ comment, index }))
+    .sort((a, b) => {
+      const av = getSidebarCommentActivityMs(a.comment, a.index);
+      const bv = getSidebarCommentActivityMs(b.comment, b.index);
+      if (av !== bv) return bv - av;
+      return String(b.comment?.id || '').localeCompare(String(a.comment?.id || ''));
+    })
+    .map(item => item.comment);
+}
+
+function formatSidebarActivityDate(ms) {
+  if (!Number.isFinite(ms)) return '';
+  return new Date(ms).toLocaleString('de-DE', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+function formatTimeAgo(comment) {
+  const activityMs = getSidebarCommentActivityMs(comment);
+  if (!Number.isFinite(activityMs)) return '';
+  const diff = Math.max(0, Date.now() - activityMs);
+  if (diff < 60000) return 'Gerade eben';
+  if (diff < 3600000) return `vor ${Math.floor(diff / 60000)} Min.`;
+  if (diff < 86400000) return `vor ${Math.floor(diff / 3600000)} Std.`;
+  if (diff < 604800000) return `vor ${Math.floor(diff / 86400000)} Tagen`;
+  return new Date(activityMs).toLocaleDateString('de-DE', { day: '2-digit', month: 'short' });
 }
 
 function stripCommentMarkupForSidebar(value) {
@@ -53,6 +116,9 @@ function buildSidebarFeedItem(comment, sections) {
   const sectionLabel = escapeHtml(entrySection?.tab || entrySection?.key || 'Archiv');
   const safeThreadId = escapeHtml(threadId);
   const snippet = escapeHtml(stripCommentMarkupForSidebar(comment?.text));
+  const activityMs = getSidebarCommentActivityMs(comment);
+  const activityTitle = formatSidebarActivityDate(activityMs);
+  const activityText = formatTimeAgo(comment);
 
   return `<div class="sidebar-feed-item" role="button" tabindex="0" data-action="open-sidebar-entry" data-entry-id="${safeThreadId}">
     ${portrait}
@@ -61,7 +127,7 @@ function buildSidebarFeedItem(comment, sections) {
       <div class="sidebar-feed-tag" data-theme="${theme.slug}">${sectionLabel}</div>
       <div class="sidebar-feed-entry">↳ ${escapeHtml(entryTitle)}</div>
       <div class="sidebar-feed-snippet">${snippet}</div>
-      <div class="sidebar-feed-time">${escapeHtml(formatTimeAgo(comment?.ts))}</div>
+      <div class="sidebar-feed-time"${activityTitle ? ` title="${escapeHtml(activityTitle)}"` : ''}>${escapeHtml(activityText)}</div>
     </div>
   </div>`;
 }
@@ -76,7 +142,7 @@ function loadSidebarFeed() {
         ? await getCommentBackend({ timeoutMs: 1200 })
         : (await waitForFirebaseReady(1200), window._fb);
       if (!backend?.loadRecentComments) return;
-      const comments = await backend.loadRecentComments(12);
+      const comments = sortSidebarFeedComments(await backend.loadRecentComments(SIDEBAR_FEED_CANDIDATE_LIMIT));
       const sections = getValidSections();
 
       if (!comments || comments.length === 0) {
@@ -91,7 +157,7 @@ function loadSidebarFeed() {
           console.warn('Sidebar feed item skipped:', itemError, comment);
           return '';
         }
-      }).filter(Boolean);
+      }).filter(Boolean).slice(0, SIDEBAR_FEED_RENDER_LIMIT);
 
       feed.innerHTML = items.length
         ? items.join('')

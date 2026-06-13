@@ -225,11 +225,47 @@
     }
 
     // ── PUBLIC API used by the rest of the page ──────────────────────────────
-    function getCommentTimestampMs(comment) {
-      const seconds = Number(comment?.ts?.seconds);
+    function getTimestampMs(value) {
+      if (!value) return null;
+      if (typeof value.toMillis === 'function') {
+        const ms = Number(value.toMillis());
+        return Number.isFinite(ms) ? ms : null;
+      }
+      if (typeof value.toDate === 'function') {
+        const ms = Number(value.toDate()?.getTime());
+        return Number.isFinite(ms) ? ms : null;
+      }
+      if (typeof value === 'number') {
+        return Number.isFinite(value) ? value : null;
+      }
+      if (typeof value === 'string') {
+        const parsed = Date.parse(value);
+        return Number.isFinite(parsed) ? parsed : null;
+      }
+      const seconds = Number(value?.seconds ?? value?._seconds);
       if (!Number.isFinite(seconds)) return null;
-      const nanos = Number(comment?.ts?.nanoseconds || 0);
+      const nanos = Number(value?.nanoseconds ?? value?._nanoseconds ?? 0);
       return (seconds * 1000) + (Number.isFinite(nanos) ? nanos / 1000000 : 0);
+    }
+
+    function getCommentTimestampMs(comment) {
+      return getTimestampMs(comment?.ts);
+    }
+
+    function getCommentActivityMs(comment, fallbackIndex = 0) {
+      const candidates = [
+        Number(comment?.activityAtClient),
+        getTimestampMs(comment?.activityAt),
+        Number(comment?.updatedAtClient),
+        getTimestampMs(comment?.updatedAt),
+        getTimestampMs(comment?.editedAt),
+        Number(comment?.createdAtClient),
+        Number(comment?.createdAtMs),
+        getTimestampMs(comment?.createdAt),
+        getCommentTimestampMs(comment),
+        getCommentSortValue(comment, fallbackIndex)
+      ].filter(Number.isFinite);
+      return candidates.length ? Math.max(...candidates) : fallbackIndex;
     }
 
     function getCommentSortValue(comment, fallbackIndex = 0) {
@@ -246,6 +282,18 @@
         if (av !== bv) return av - bv;
         return (getCommentTimestampMs(a) || 0) - (getCommentTimestampMs(b) || 0);
       });
+    }
+
+    function sortCommentsByRecentActivity(comments) {
+      return (Array.isArray(comments) ? comments : [])
+        .map((comment, index) => ({ comment, index }))
+        .sort((a, b) => {
+          const av = getCommentActivityMs(a.comment, a.index);
+          const bv = getCommentActivityMs(b.comment, b.index);
+          if (av !== bv) return bv - av;
+          return String(b.comment?.id || '').localeCompare(String(a.comment?.id || ''));
+        })
+        .map(item => item.comment);
     }
 
     window._fb = {
@@ -281,6 +329,7 @@
       },
       async addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const nowClient = Date.now();
         return addDoc(collection(db, 'comments'), {
           entryId, charName, charTitle, portrait, text,
           deleteCodeHash, deleteCodeVersion: 1,
@@ -294,6 +343,9 @@
           itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
           documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
           orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
+          createdAtClient: nowClient,
+          activityAtClient: nowClient,
+          activityAt: serverTimestamp(),
           schemaVersion: 2,
           ts: serverTimestamp()
         });
@@ -383,21 +435,26 @@
       },
       async updateComment(docId, updates) {
         const { setDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
-        await setDoc(doc(db, 'comments', docId), updates, { merge: true });
+        const nowClient = Date.now();
+        await setDoc(doc(db, 'comments', docId), {
+          ...updates,
+          updatedAtClient: nowClient,
+          activityAtClient: nowClient,
+          updatedAt: serverTimestamp(),
+          activityAt: serverTimestamp()
+        }, { merge: true });
       },
       async loadRecentComments(n) {
         try {
-          const { getDocs, collection, query, orderBy, limit } = await import(
+          const { getDocs, collection } = await import(
             "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
           );
-          const q = query(
-            collection(db, 'comments'),
-            orderBy('ts', 'desc'),
-            limit(Math.max(0, Number(n) || 0))
-          );
-          const snap = await getDocs(q);
-          return snap.docs
-            .map(d => ({ id: d.id, ...d.data() }));
+          const take = Math.max(0, Number(n) || 0);
+          if (!take) return [];
+          // Legacy imports can store ts as Timestamp, plain object, or string.
+          // Firestore ordering across mixed field types is not a reliable activity order.
+          const snap = await getDocs(collection(db, 'comments'));
+          return sortCommentsByRecentActivity(snap.docs.map(d => ({ id: d.id, ...d.data() }))).slice(0, take);
         } catch(e) {
           console.error('loadRecentComments:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Letzte Aktivitäten konnten nicht geladen werden.'));
