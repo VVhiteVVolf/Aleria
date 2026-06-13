@@ -1,0 +1,117 @@
+.orte-inline-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 990;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 6px 10px;
+  color: #fff6d5;
+  background: #2b1a09;
+  border-bottom: 1px solid #9d7b39;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.orte-inline-toolbar strong {
+  font-size: 13px;
+}
+
+.orte-inline-toolbar span {
+  color: #dcc38a;
+  font-size: 12px;
+}
+
+.orte-inline-toolbar button,
+.orte-inline-image-panel button {
+  cursor: pointer;
+  border: 1px solid #7c5a22;
+  background: #f3e3bd;
+  color: #2c1b0b;
+  font: inherit;
+  min-height: 26px;
+  padding: 3px 8px;
+}
+
+.orte-inline-toolbar [data-orte-inline-edit-only] {
+  display: none;
+}
+
+.orte-inline-editing .orte-inline-toolbar [data-orte-inline-edit-only] {
+  display: inline-block;
+}
+
+.orte-inline-editing [data-orte-inline-text] {
+  cursor: text;
+  outline: 1px dashed rgba(126, 82, 25, 0.5);
+  outline-offset: 2px;
+}
+
+.orte-inline-editing [data-orte-inline-text]:focus {
+  outline: 2px solid #8d641d;
+  background: rgba(255, 249, 220, 0.54);
+}
+
+.orte-inline-editing [data-orte-image-key] {
+  cursor: pointer;
+  outline: 2px dashed rgba(126, 82, 25, 0.52);
+  outline-offset: 2px;
+  position: relative;
+}
+
+.orte-inline-image-hint {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  padding: 2px 5px;
+  color: #fff6d5;
+  background: rgba(43, 26, 9, 0.88);
+  border: 1px solid rgba(255, 246, 213, 0.34);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.orte-inline-image-panel {
+  display: grid;
+  gap: 8px;
+  width: min(100%, 420px);
+  margin: 7px auto 10px;
+  padding: 10px;
+  border: 1px solid rgba(75, 45, 14, 0.62);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 226, 0.94), rgba(226, 199, 133, 0.92)),
+    #f4e2ae;
+  box-shadow: 0 10px 24px rgba(23, 14, 4, 0.18);
+}
+
+.orte-inline-image-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.orte-inline-image-panel label {
+  display: grid;
+  gap: 3px;
+  color: #3b220c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.orte-inline-image-panel input {
+  width: 100%;
+  border: 1px solid rgba(75, 45, 14, 0.48);
+  background: rgba(255, 249, 219, 0.94);
+  color: #201408;
+  font: inherit;
+  min-height: 30px;
+  padding: 5px 7px;
+}
+
+@media (max-width: 760px) {
+  .orte-inline-toolbar {
+    position: static;
+  }
+}

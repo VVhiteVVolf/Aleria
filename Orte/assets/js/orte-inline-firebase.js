@@ -2,7 +2,7 @@ import { getApp, getApps, initializeApp } from "https://www.gstatic.com/firebase
 import { doc, getDoc, getFirestore, onSnapshot, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const scenesConfig = window.AleriaOrteScenes || {};
-const fb = scenesConfig.pageFirebase || scenesConfig.firebase || {};
+const fb = scenesConfig.inlineFirebase || {};
 
 const firebaseConfig = fb.config || {
   apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -13,32 +13,32 @@ const firebaseConfig = fb.config || {
   appId: "1:377039244960:web:27ab9971f25657224403c5",
 };
 
-const collectionName = fb.pageCollection || "orte_pages";
-const appName = fb.pageAppName || "orte-pages";
+const collectionName = fb.collection || "orte_inline_content";
+const appName = fb.appName || "orte-inline-content";
 const app = getApps().some((item) => item.name === appName)
   ? getApp(appName)
   : initializeApp(firebaseConfig, appName);
 const db = getFirestore(app);
 
-window.OrtePageFirebase = {
+window.OrteInlineFirebase = {
   collectionName,
-  async loadPage(pageId) {
-    const snap = await getDoc(getPageRef(pageId));
+  async load(pageId) {
+    const snap = await getDoc(getRef(pageId));
     return snap.exists() ? normalizePayload(snap.data()) : null;
   },
-  async savePage(pageId, payload) {
+  async save(pageId, payload) {
     const normalized = normalizePayload(payload);
-    await setDoc(getPageRef(pageId), {
-      id: getPageDocId(pageId),
-      type: "orte-page",
+    await setDoc(getRef(pageId), {
+      id: getDocId(pageId),
+      type: "orte-inline-content",
       schemaVersion: 1,
       data: JSON.stringify(normalized),
       updatedAtClient: Date.now(),
       updatedAt: serverTimestamp(),
     }, { merge: true });
   },
-  subscribePage(pageId, onNext, onError) {
-    return onSnapshot(getPageRef(pageId), (snap) => {
+  subscribe(pageId, onNext, onError) {
+    return onSnapshot(getRef(pageId), (snap) => {
       onNext(snap.exists() ? normalizePayload(snap.data()) : null);
     }, (error) => {
       if (onError) onError(error);
@@ -46,13 +46,13 @@ window.OrtePageFirebase = {
   },
 };
 
-window.dispatchEvent(new Event("orte-page-firebase-ready"));
+window.dispatchEvent(new Event("orte-inline-firebase-ready"));
 
-function getPageRef(pageId) {
-  return doc(db, collectionName, getPageDocId(pageId));
+function getRef(pageId) {
+  return doc(db, collectionName, getDocId(pageId));
 }
 
-function getPageDocId(pageId) {
+function getDocId(pageId) {
   return String(pageId || "grossstadt-vorlage")
     .trim()
     .toLowerCase()
@@ -72,12 +72,12 @@ function normalizePayload(payload) {
   }
 
   return {
-    texts: normalizeRecord(source.texts),
+    texts: normalizeTextRecord(source.texts),
     images: normalizeImageRecord(source.images),
   };
 }
 
-function normalizeRecord(record) {
+function normalizeTextRecord(record) {
   return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
     .map(([key, value]) => [String(key), String(value ?? "")]));
 }
@@ -88,8 +88,8 @@ function normalizeImageRecord(record) {
       const item = value && typeof value === "object" ? value : {};
       return [String(key), {
         src: String(item.src || ""),
-        alt: String(item.alt || ""),
         href: String(item.href || ""),
+        alt: String(item.alt || ""),
       }];
     }));
 }
