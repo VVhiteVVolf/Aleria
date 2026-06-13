@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css">
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt-template-map.css">
   <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-scene-session.css">
+  <script type="module" src="/AleriaAlmanach/firebase.js"></script>
+  <script src="/Orte/data/grossstadt-vorlage.scenes.js" defer></script>
+  <script type="module" src="/Orte/assets/js/orte-scene-firebase.js"></script>
   <script src="/Orte/assets/js/orte-grossstadt.js" defer></script>
+  <script src="/Orte/assets/js/orte-scene-session.js" defer></script>
 </head>
 <body>
   <main class="place-page grossstadt-template" data-orte-static-template>
@@ -43,14 +48,7 @@
       			<hr /><p>&nbsp;</p>
       			<!-- Gesprächsvorlage 1 -->
       
-      			<details class="pt-s-0008"><summary class="pt-s-0009"> 📜 Titel hier einf&uuml;gen </summary>
-      <div class="pt-s-0010"><p class="pt-s-0011">[Szene oder Stimmung einleiten]</p>
-      
-      			<p class="pt-s-0012"><b class="pt-s-0013">[Name 1]:</b> <i>&bdquo;Dialog von Figur 1.&ldquo;</i></p>
-      
-      			<p class="pt-s-0012"><b class="pt-s-0014">[Name 2]</b> <i class="pt-s-0015">(Handlungsbeschreibung):</i> <i>&bdquo;Antwort von Figur 2.</i></p>
-      			</div>
-      			</details>
+      			<section class="orte-scene-host" data-orte-scene="einleitung"></section>
       
       			<p class="pt-s-0003">&nbsp;</p>
       			</td>
@@ -244,14 +242,7 @@
       			<hr /><p>&nbsp;</p>
       			<!-- Gesprächsvorlage 1 -->
       
-      			<details class="pt-s-0008"><summary class="pt-s-0009"> 📜 Titel hier einf&uuml;gen </summary>
-      <div class="pt-s-0010"><p class="pt-s-0011">[Szene oder Stimmung einleiten]</p>
-      
-      			<p class="pt-s-0012"><b class="pt-s-0013">[Name 1]:</b> <i>&bdquo;Dialog von Figur 1.&ldquo;</i></p>
-      
-      			<p class="pt-s-0012"><b class="pt-s-0014">[Name 2]</b> <i class="pt-s-0015">(Handlungsbeschreibung):</i> <i>&bdquo;Antwort von Figur 2.</i></p>
-      			</div>
-      			</details>
+      			<section class="orte-scene-host" data-orte-scene="konflikte"></section>
       			</td>
       			<td class="pt-s-0037" colspan="3" rowspan="1">
       			<h2 class="pt-s-0017"><span class="pt-s-0004"><span class="pt-s-0030">Anzeigetafeln</span></span></h2>

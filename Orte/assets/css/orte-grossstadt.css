@@ -260,6 +260,23 @@ img {
   color: var(--place-text-light);
 }
 
+.grossstadt-template .pt-s-0040 {
+  width: 1240px !important;
+}
+
+.grossstadt-template .pt-s-0049,
+.grossstadt-template .pt-s-0061 {
+  width: 190px !important;
+}
+
+.grossstadt-template .pt-s-0067 {
+  width: 1280px !important;
+}
+
+.grossstadt-template .pt-s-0077 {
+  width: 987px !important;
+}
+
 .grossstadt-template b,
 .grossstadt-template strong {
   font-weight: 700;
