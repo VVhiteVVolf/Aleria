@@ -18,6 +18,7 @@ document.addEventListener('click', event => {
     'export-current-module',
     'export-current-comment-thread',
     'import-current-comment-thread',
+    'rescue-current-comment-thread',
     'open-module-editor-current'
   ].includes(action)) return;
   event.preventDefault();
@@ -60,6 +61,10 @@ document.addEventListener('click', event => {
   }
   if (action === 'import-current-comment-thread') {
     importCurrentCommentThreadFromModal();
+    return;
+  }
+  if (action === 'rescue-current-comment-thread') {
+    rescueCurrentCommentThreadFromFirebaseModal();
     return;
   }
   if (action === 'open-module-editor-current') {

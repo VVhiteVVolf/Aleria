@@ -67,6 +67,76 @@ function getLatestCommentExportSeconds(comments = []) {
   }, 0);
 }
 
+async function findFirebaseCommentThreadSourceCandidates(moduleId, targetEntry = null) {
+  const safeModuleId = String(moduleId || '').trim();
+  if (!safeModuleId) throw new Error('Es fehlt eine Modul-ID fuer die Firebase-Suche.');
+  const backend = await getCommentIoBackend();
+  if (!backend.loadAllComments) {
+    throw new Error('Firebase-Quellensuche ist nicht verfuegbar.');
+  }
+
+  const [allComments, allTurns] = await Promise.all([
+    backend.loadAllComments(),
+    backend.loadAllCommentTurns ? backend.loadAllCommentTurns() : Promise.resolve([])
+  ]);
+  const currentDescriptors = targetEntry ? getCommentThreadIoDescriptors(targetEntry) : [];
+  const currentById = new Map(currentDescriptors.map(thread => [thread.threadId, thread]));
+  const groupedComments = new Map();
+  (Array.isArray(allComments) ? allComments : []).forEach(comment => {
+    const threadId = String(comment?.entryId || '').trim();
+    if (!threadId) return;
+    const location = parseCommentThreadLocation(threadId);
+    if (location.baseEntryId !== safeModuleId) return;
+    if (!groupedComments.has(threadId)) groupedComments.set(threadId, []);
+    groupedComments.get(threadId).push(comment);
+  });
+
+  const turnsById = new Map();
+  (Array.isArray(allTurns) ? allTurns : []).forEach(turn => {
+    const threadId = String(turn?.threadId || turn?.id || '').trim();
+    if (!threadId) return;
+    const location = parseCommentThreadLocation(threadId);
+    if (location.baseEntryId !== safeModuleId) return;
+    turnsById.set(threadId, turn);
+    if (!groupedComments.has(threadId)) groupedComments.set(threadId, []);
+  });
+
+  return Array.from(groupedComments.entries()).map(([threadId, comments]) => {
+    const location = parseCommentThreadLocation(threadId);
+    const current = currentById.get(threadId);
+    const turn = turnsById.get(threadId) || null;
+    return {
+      threadId,
+      kind: current?.kind || location.kind,
+      pageIndex: Number.isInteger(current?.pageIndex) ? current.pageIndex : location.pageIndex,
+      pageTitle: current?.pageTitle || '',
+      commentCount: comments.length,
+      turnCount: turn ? 1 : 0,
+      latestSeconds: getLatestCommentExportSeconds(comments),
+      isCurrentTarget: currentById.has(threadId),
+      comments,
+      turn
+    };
+  }).filter(candidate => candidate.commentCount || candidate.turnCount)
+    .sort((a, b) => {
+      if (a.isCurrentTarget !== b.isCurrentTarget) return a.isCurrentTarget ? 1 : -1;
+      if (b.latestSeconds !== a.latestSeconds) return b.latestSeconds - a.latestSeconds;
+      return String(a.threadId).localeCompare(String(b.threadId));
+    });
+}
+
+function chooseFirebaseCommentThreadSource(candidates) {
+  if (!Array.isArray(candidates) || !candidates.length) {
+    throw new Error('Keine Firebase-Kommentarquelle gefunden.');
+  }
+  if (candidates.length === 1) return candidates[0];
+  const lines = candidates.map((candidate, index) => `${index + 1}: ${getCommentThreadSourceOptionLabel(candidate)}`);
+  const choice = prompt(`Welche Firebase-Kommentarquelle soll gerettet werden?\n\n${lines.join('\n')}`, '1');
+  if (choice === null) return null;
+  const index = Math.max(0, Math.min(candidates.length - 1, (Number(choice) || 1) - 1));
+  return candidates[index];
+}
+
 function buildCommentThreadExportFromCandidate(candidate, context = {}) {
   const threadId = String(candidate?.threadId || '').trim();
   const comments = sortCommentsForExport(candidate?.comments || []).map((comment, index) => ({
@@ -428,60 +498,9 @@ async function loadCurrentModuleCommentThreadSources() {
       document.getElementById('me-comment-thread-source-module-id')?.value || payload.entry?.id || ''
     ).trim();
     if (!moduleId) throw new Error('Das Modul braucht eine ID, bevor Quellen gesucht werden koennen.');
-    const backend = await getCommentIoBackend();
-    if (!backend.loadAllComments) {
-      throw new Error('Firebase-Quellensuche ist nicht verfuegbar.');
-    }
-
-    const [allComments, allTurns] = await Promise.all([
-      backend.loadAllComments(),
-      backend.loadAllCommentTurns ? backend.loadAllCommentTurns() : Promise.resolve([])
-    ]);
-    const currentDescriptors = getCommentThreadIoDescriptors(payload.entry);
-    const currentById = new Map(currentDescriptors.map(thread => [thread.threadId, thread]));
-    const groupedComments = new Map();
-    (Array.isArray(allComments) ? allComments : []).forEach(comment => {
-      const threadId = String(comment?.entryId || '').trim();
-      if (!threadId) return;
-      const location = parseCommentThreadLocation(threadId);
-      if (location.baseEntryId !== moduleId) return;
-      if (!groupedComments.has(threadId)) groupedComments.set(threadId, []);
-      groupedComments.get(threadId).push(comment);
-    });
-
-    const turnsById = new Map();
-    (Array.isArray(allTurns) ? allTurns : []).forEach(turn => {
-      const threadId = String(turn?.threadId || turn?.id || '').trim();
-      if (!threadId) return;
-      const location = parseCommentThreadLocation(threadId);
-      if (location.baseEntryId !== moduleId) return;
-      turnsById.set(threadId, turn);
-      if (!groupedComments.has(threadId)) groupedComments.set(threadId, []);
-    });
 
     _moduleCommentThreadSourceModuleId = moduleId;
-    _moduleCommentThreadSourceCandidates = Array.from(groupedComments.entries()).map(([threadId, comments]) => {
-      const location = parseCommentThreadLocation(threadId);
-      const current = currentById.get(threadId);
-      const turn = turnsById.get(threadId) || null;
-      return {
-        threadId,
-        kind: current?.kind || location.kind,
-        pageIndex: Number.isInteger(current?.pageIndex) ? current.pageIndex : location.pageIndex,
-        pageTitle: current?.pageTitle || '',
-        commentCount: comments.length,
-        turnCount: turn ? 1 : 0,
-        latestSeconds: getLatestCommentExportSeconds(comments),
-        isCurrentTarget: currentById.has(threadId),
-        comments,
-        turn
-      };
-    }).filter(candidate => candidate.commentCount || candidate.turnCount)
-      .sort((a, b) => {
-        if (a.isCurrentTarget !== b.isCurrentTarget) return a.isCurrentTarget ? 1 : -1;
-        if (b.latestSeconds !== a.latestSeconds) return b.latestSeconds - a.latestSeconds;
-        return String(a.threadId).localeCompare(String(b.threadId));
-      });
+    _moduleCommentThreadSourceCandidates = await findFirebaseCommentThreadSourceCandidates(moduleId, payload.entry);
 
     renderModuleCommentThreadSourceOptions(_moduleCommentThreadSourceCandidates);
     setModuleEditorStatus(_moduleCommentThreadSourceCandidates.length
@@ -516,6 +535,42 @@ async function rescueSelectedModuleEditorCommentThreadFromFirebase() {
   } catch (error) {
     console.error('comment thread rescue failed:', error);
     setModuleEditorStatus(error.message || 'Kommentar-Session konnte nicht gerettet werden.', true);
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('error', 'Kommentar-Rettung fehlgeschlagen.');
+  }
+}
+
+async function rescueCurrentCommentThreadFromFirebaseModal() {
+  try {
+    const target = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
+    if (!target?.threadId) throw new Error('Diese Seite hat keinen Kommentarbereich als Ziel.');
+    const entry = target.entry || (typeof getRenderableEntry === 'function' ? getRenderableEntry(currentEntry) : currentEntry);
+    const defaultModuleId = parseCommentThreadLocation(target.threadId).baseEntryId || entry?.id || '';
+    const sourceModuleId = prompt('Alte Modul-ID fuer die Firebase-Suche:', defaultModuleId);
+    if (sourceModuleId === null) return;
+    const safeModuleId = String(sourceModuleId || '').trim();
+    if (!safeModuleId) throw new Error('Ohne Modul-ID kann keine Firebase-Quelle gesucht werden.');
+
+    setCommentIoStatus('Firebase-Kommentarquellen werden gelesen...');
+    const candidates = await findFirebaseCommentThreadSourceCandidates(safeModuleId, entry);
+    const source = chooseFirebaseCommentThreadSource(candidates);
+    if (!source) return;
+    const sourceLabel = getCommentThreadSourceOptionLabel(source);
+    const targetLabel = getCommentThreadIoLabel(target);
+    if (!confirm(`Alte Kommentare retten?\n\nQuelle: ${sourceLabel}\nZiel: ${targetLabel}\n\nDie Kommentare werden in die aktuell geoeffnete Seite kopiert. Bestehende Kommentare dort bleiben erhalten.`)) {
+      return;
+    }
+
+    const sourcePayload = buildCommentThreadExportFromCandidate(source, {
+      moduleId: safeModuleId,
+      moduleTitle: entry?.title || ''
+    });
+    const result = await importCommentThreadPayload(sourcePayload, target, { skipConfirm: true });
+    if (result.cancelled) return;
+    setCommentIoStatus(`Kommentar-Session gerettet: ${result.commentCount} Kommentare, ${result.turnCount} Redestab-Staende.`);
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('synced', 'Kommentar-Session gerettet.');
+  } catch (error) {
+    console.error('current comment thread rescue failed:', error);
+    setCommentIoStatus(error.message || 'Kommentar-Session konnte nicht gerettet werden.', true);
     if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('error', 'Kommentar-Rettung fehlgeschlagen.');
   }
 }

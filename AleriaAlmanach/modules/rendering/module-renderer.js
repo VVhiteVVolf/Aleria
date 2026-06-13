@@ -1366,7 +1366,8 @@ function buildNav(page, pageIndex, total) {
     : null;
   const commentThreadActions = !inlineEditing ? `
       <button class="modal-page-tool" type="button" data-modal-action="export-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare exportieren</button>
-      <button class="modal-page-tool" type="button" data-modal-action="import-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare importieren</button>` : '';
+      <button class="modal-page-tool" type="button" data-modal-action="import-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare importieren</button>
+      <button class="modal-page-tool" type="button" data-modal-action="rescue-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare retten</button>` : '';
   const chapterTabs = pages.map((p, idx) => `
     <button
       class="modal-page-tab${idx === pageIndex ? ' active' : ''}"
