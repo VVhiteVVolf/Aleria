@@ -24,26 +24,27 @@ window.OrteSceneFirebase = {
   collectionName,
   async loadScene(ortId, sceneId) {
     const snap = await getDoc(getSceneRef(ortId, sceneId));
-    return snap.exists() ? normalizeRemoteScene(snap.data()) : null;
+    return snap.exists() ? normalizeRemoteModule(snap.data()) : null;
   },
   async saveScene(ortId, sceneId, payload) {
-    const scenePayload = normalizeScenePayload(payload);
+    const modulePayload = normalizeModulePayload(payload);
     await setDoc(getSceneRef(ortId, sceneId), {
       id: getSceneDocId(ortId, sceneId),
-      type: "orte-scene",
+      type: "orte-session-module",
       ortId: String(ortId || ""),
       sceneId: String(sceneId || ""),
-      title: scenePayload.title,
-      threadId: scenePayload.threadId,
-      schemaVersion: 1,
-      data: JSON.stringify(scenePayload),
+      title: modulePayload.title,
+      subtitle: modulePayload.subtitle,
+      threadId: modulePayload.threadId,
+      schemaVersion: 2,
+      data: JSON.stringify(modulePayload),
       updatedAtClient: Date.now(),
       updatedAt: serverTimestamp(),
     }, { merge: true });
   },
   subscribeScene(ortId, sceneId, onNext, onError) {
     return onSnapshot(getSceneRef(ortId, sceneId), (snap) => {
-      onNext(snap.exists() ? normalizeRemoteScene(snap.data()) : null);
+      onNext(snap.exists() ? normalizeRemoteModule(snap.data()) : null);
     }, (error) => {
       if (onError) onError(error);
     });
@@ -65,40 +66,53 @@ function getSceneDocId(ortId, sceneId) {
     .join("__");
 }
 
-function normalizeRemoteScene(data) {
+function normalizeRemoteModule(data) {
   if (!data || typeof data !== "object") return null;
 
   if (typeof data.data === "string") {
     try {
-      return normalizeScenePayload(JSON.parse(data.data));
+      return normalizeModulePayload(JSON.parse(data.data));
     } catch (error) {
       return null;
     }
   }
 
-  return normalizeScenePayload(data);
+  return normalizeModulePayload(data);
 }
 
-function normalizeScenePayload(payload) {
+function normalizeModulePayload(payload) {
   const source = payload && typeof payload === "object" ? payload : {};
+  const page = source.page && typeof source.page === "object" ? source.page : {};
+
   return {
+    id: String(source.id || ""),
     title: String(source.title || ""),
+    subtitle: String(source.subtitle || ""),
+    stamp: String(source.stamp || ""),
+    image: String(source.image || ""),
+    imageWidth: Number.isFinite(Number(source.imageWidth)) ? Number(source.imageWidth) : 36,
     threadId: String(source.threadId || ""),
-    blocks: normalizeBlocks(source.blocks),
+    page: {
+      pageTitle: String(page.pageTitle || ""),
+      sessionPage: true,
+      sessionIntro: String(page.sessionIntro || buildLegacySessionIntro(source.blocks)),
+      sessionHint: String(page.sessionHint || ""),
+      sessionEmptyTitle: String(page.sessionEmptyTitle || ""),
+      sessionEmptyText: String(page.sessionEmptyText || "")
+    }
   };
 }
 
-function normalizeBlocks(blocks) {
-  return (Array.isArray(blocks) ? blocks : [])
-    .map((block) => ({
-      type: normalizeBlockType(block.type),
-      speaker: String(block.speaker || ""),
-      text: String(block.text || ""),
-    }))
-    .filter((block) => block.type === "divider" || block.text || block.speaker);
-}
-
-function normalizeBlockType(type) {
-  const value = String(type || "intro");
-  return ["intro", "speech", "action", "thought", "divider"].includes(value) ? value : "intro";
+function buildLegacySessionIntro(blocks) {
+  if (!Array.isArray(blocks)) return "";
+  return blocks
+    .map((block) => {
+      if (!block || typeof block !== "object") return "";
+      const speaker = block.speaker || block.name;
+      const text = String(block.text || "").trim();
+      if (!text) return "";
+      return speaker ? `${speaker}: ${text}` : text;
+    })
+    .filter(Boolean)
+    .join("\n");
 }

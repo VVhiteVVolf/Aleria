@@ -5,291 +5,310 @@
   if (!hosts.length) return;
 
   const config = window.AleriaOrteScenes || {};
-  const states = new WeakMap();
+  const states = new Map();
+  let activeState = null;
   let characterLoadPromise = null;
+
+  const modal = createModal();
 
   hosts.forEach((host) => {
     const sceneId = String(host.dataset.orteScene || "").trim();
-    const scene = normalizeScene(config.scenes && config.scenes[sceneId], sceneId);
+    const module = loadModule(config.ortId, sceneId, normalizeModule(getConfiguredModule(sceneId), sceneId));
     const state = {
       host,
-      ortId: String(config.ortId || "ort-vorlage"),
-      ortName: String(config.ortName || "Ort-Vorlage"),
       sceneId,
-      scene,
-      blocks: loadSceneBlocks(config.ortId, sceneId, scene.blocks),
-      draftBlocks: [],
+      ortId: String(config.ortId || "ort-vorlage"),
+      module,
+      draft: cloneModule(module),
       comments: [],
       characters: [],
+      composerOpen: false,
       editorOpen: false,
       status: ""
     };
 
-    state.draftBlocks = cloneBlocks(state.blocks);
-    states.set(host, state);
-    renderScene(state);
+    states.set(sceneId, state);
+    renderPreview(state);
     connectSceneStore(state);
     connectComments(state);
     connectCharacters(state);
   });
 
-  document.addEventListener("click", handleSceneClick);
-  document.addEventListener("input", handleSceneInput);
-  document.addEventListener("change", handleSceneInput);
-  document.addEventListener("submit", handleSceneSubmit);
+  document.addEventListener("click", handleClick);
+  document.addEventListener("change", handleChange);
+  document.addEventListener("input", handleInput);
+  document.addEventListener("submit", handleSubmit);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && activeState) closeModal();
+  });
 
-  function normalizeScene(scene, sceneId) {
-    const fallback = {
-      id: sceneId,
-      title: sceneId || "Szene",
-      blocks: []
-    };
-    const source = scene && typeof scene === "object" ? scene : fallback;
+  function getConfiguredModule(sceneId) {
+    return (config.modules && config.modules[sceneId])
+      || (config.scenes && config.scenes[sceneId])
+      || null;
+  }
+
+  function normalizeModule(source, sceneId) {
+    const raw = source && typeof source === "object" ? source : {};
+    const page = raw.page && typeof raw.page === "object" ? raw.page : {};
+    const title = String(raw.title || sceneId || "Interaktive Szene");
+    const threadId = String(raw.threadId || `orte:${config.ortId || "ort-vorlage"}:${sceneId || "szene"}`);
 
     return {
-      id: String(source.id || sceneId || "szene"),
-      title: String(source.title || fallback.title),
-      threadId: String(source.threadId || `orte:${config.ortId || "ort-vorlage"}:${sceneId || "szene"}`),
-      blocks: normalizeBlocks(source.blocks)
+      id: String(raw.id || sceneId || "szene"),
+      title,
+      subtitle: String(raw.subtitle || "Interaktive Szene mit Kommentarfortsetzung"),
+      stamp: String(raw.stamp || "SZENE"),
+      image: String(raw.image || ""),
+      imageWidth: Number.isFinite(Number(raw.imageWidth)) ? Number(raw.imageWidth) : 36,
+      threadId,
+      page: {
+        pageTitle: String(page.pageTitle || "Interaktive Szene"),
+        sessionPage: true,
+        sessionIntro: String(page.sessionIntro || raw.sessionIntro || buildLegacySessionIntro(raw.blocks)),
+        sessionHint: String(page.sessionHint || raw.sessionHint || "Fuehre diese Szene als Kommentar fort."),
+        sessionEmptyTitle: String(page.sessionEmptyTitle || raw.sessionEmptyTitle || "Die Szene ist offen"),
+        sessionEmptyText: String(page.sessionEmptyText || raw.sessionEmptyText || "Noch ist kein Beitrag eingetragen.")
+      }
     };
   }
 
-  function normalizeBlocks(blocks) {
-    return (Array.isArray(blocks) ? blocks : [])
-      .map((block) => ({
-        type: normalizeBlockType(block.type),
-        speaker: String(block.speaker || ""),
-        text: String(block.text || "")
-      }))
-      .filter((block) => block.type === "divider" || block.text || block.speaker);
-  }
-
-  function normalizeBlockType(type) {
-    const value = String(type || "intro");
-    return ["intro", "speech", "action", "thought", "divider"].includes(value) ? value : "intro";
-  }
-
-  function renderScene(state) {
+  function renderPreview(state) {
     state.host.innerHTML = `
-      <details class="orte-scene" open>
-        <summary>${escapeHtml(state.scene.title)}</summary>
-        <div class="orte-scene-shell">
-          <div class="orte-scene-stage" data-role="scene-stage">
-            ${renderBlocks(state.blocks)}
-          </div>
-          <div class="orte-scene-actions">
-            <button class="orte-scene-button" type="button" data-action="toggle-scene-editor">Bearbeiten</button>
-            <span class="orte-scene-status" data-role="scene-status">${escapeHtml(state.status)}</span>
-          </div>
-          ${renderEditor(state)}
-          ${renderComments(state)}
-        </div>
-      </details>
-    `;
-  }
-
-  function renderBlocks(blocks) {
-    if (!blocks.length) {
-      return `<p class="orte-scene-block is-intro">Noch keine Szenenbloecke angelegt.</p>`;
-    }
-
-    return blocks.map((block) => {
-      if (block.type === "divider") return `<hr class="orte-scene-divider">`;
-      const typeClass = `is-${escapeAttr(block.type)}`;
-      const speaker = block.speaker
-        ? `<span class="orte-scene-speaker">${escapeHtml(block.speaker)}:</span> `
-        : "";
-      return `<p class="orte-scene-block ${typeClass}">${speaker}${escapeHtml(block.text)}</p>`;
-    }).join("");
-  }
-
-  function renderEditor(state) {
-    const hiddenClass = state.editorOpen ? "" : " is-hidden";
-    const rows = state.draftBlocks.map((block, index) => `
-      <div class="orte-scene-editor-row" data-editor-row="${index}">
-        <select class="orte-scene-select" data-field="type" aria-label="Blocktyp">
-          ${renderTypeOption("intro", "Einleitung", block.type)}
-          ${renderTypeOption("speech", "Dialog", block.type)}
-          ${renderTypeOption("action", "Handlung", block.type)}
-          ${renderTypeOption("thought", "Gedanke", block.type)}
-          ${renderTypeOption("divider", "Trenner", block.type)}
-        </select>
-        <input class="orte-scene-input" data-field="speaker" value="${escapeAttr(block.speaker)}" placeholder="Name">
-        <textarea class="orte-scene-textarea" data-field="text" placeholder="Text">${escapeHtml(block.text)}</textarea>
-        <button class="orte-scene-button is-secondary" type="button" data-action="remove-scene-block" aria-label="Block entfernen">Entfernen</button>
-      </div>
-    `).join("");
-
-    return `
-      <section class="orte-scene-editor${hiddenClass}" data-role="scene-editor" aria-label="Szeneneditor">
-        <h3>Szene bearbeiten</h3>
-        <div class="orte-scene-editor-list" data-role="scene-editor-list">${rows}</div>
-        <div class="orte-scene-editor-actions">
-          <button class="orte-scene-button is-secondary" type="button" data-action="add-scene-block">Block hinzufuegen</button>
-          <button class="orte-scene-button" type="button" data-action="save-scene-blocks">Szene speichern</button>
-          <button class="orte-scene-button is-secondary" type="button" data-action="reset-scene-blocks">Vorlage wiederherstellen</button>
-        </div>
-      </section>
-    `;
-  }
-
-  function renderTypeOption(value, label, current) {
-    const selected = value === current ? " selected" : "";
-    return `<option value="${escapeAttr(value)}"${selected}>${escapeHtml(label)}</option>`;
-  }
-
-  function renderComments(state) {
-    const comments = state.comments.length
-      ? state.comments.map(renderComment).join("")
-      : `<p class="orte-scene-status">Noch keine Kommentare fuer diese Ortsszene.</p>`;
-
-    return `
-      <section class="orte-scene-comments" data-role="scene-comments" aria-label="Kommentare">
-        <h3>Kommentare</h3>
-        <form class="orte-scene-comment-form" data-action="add-scene-comment">
-          ${renderCharacterSelect(state)}
-          <div class="orte-scene-comment-grid">
-            <input class="orte-scene-input" name="charName" placeholder="Name">
-            <input class="orte-scene-input" name="charTitle" placeholder="Titel / Rolle">
-            <input class="orte-scene-input" name="portrait" placeholder="Portrait-URL">
-            <select class="orte-scene-select" name="commentKind" aria-label="Kommentarart">
-              <option value="speech">Rede</option>
-              <option value="action">Handlung</option>
-              <option value="thought">Gedanke</option>
-              <option value="narrator">Erzaehler</option>
-            </select>
-          </div>
-          <textarea class="orte-scene-textarea" name="text" required placeholder="Kommentar"></textarea>
-          <div class="orte-scene-comment-actions">
-            <input class="orte-scene-input" name="deleteCode" placeholder="Loeschcode">
-            <button class="orte-scene-button" type="submit">Kommentieren</button>
-          </div>
-        </form>
-        <div class="orte-scene-comment-list" data-role="scene-comment-list">${comments}</div>
-      </section>
-    `;
-  }
-
-  function renderCharacterSelect(state) {
-    const options = state.characters.map((character) => {
-      const label = character.title
-        ? `${character.name} - ${character.title}`
-        : character.name;
-      return `<option value="${escapeAttr(character.id)}">${escapeHtml(label)}</option>`;
-    }).join("");
-
-    const status = state.characters.length
-      ? `${state.characters.length} Almanach-Charaktere verfuegbar`
-      : "Almanach-Charaktere werden geladen oder sind nicht erreichbar.";
-
-    return `
-      <div class="orte-scene-character-picker">
-        <select class="orte-scene-select" name="characterId" data-action="select-scene-character" aria-label="Almanach-Charakter auswaehlen">
-          <option value="">Freie Eingabe / Erzaehler</option>
-          ${options}
-        </select>
-        <span class="orte-scene-character-status">${escapeHtml(status)}</span>
-      </div>
-    `;
-  }
-
-  function renderComment(comment) {
-    const name = String(comment.charName || comment.author || "Unbekannt");
-    const title = String(comment.charTitle || "");
-    const kind = String(comment.commentKind || "speech");
-    const meta = title ? `${name} - ${title}` : name;
-    const portrait = String(comment.portrait || "").trim();
-    return `
-      <article class="orte-scene-comment is-${escapeAttr(kind)}${portrait ? " has-portrait" : ""}">
-        ${portrait ? `<img class="orte-scene-comment-portrait" src="${escapeAttr(portrait)}" alt="${escapeAttr(name)}" loading="lazy" decoding="async">` : ""}
-        <div>
-          <div class="orte-scene-comment-meta">${escapeHtml(meta)}</div>
-          <p class="orte-scene-comment-text">${escapeHtml(comment.text || "")}</p>
+      <article class="orte-session-preview">
+        <div class="orte-session-preview-kicker">Interaktive Szene</div>
+        <h3>${escapeHtml(state.module.title)}</h3>
+        <p>${escapeHtml(state.module.subtitle)}</p>
+        <div class="orte-session-preview-copy">${sanitizeLine(state.module.page.sessionIntro)}</div>
+        <div class="orte-session-preview-actions">
+          <button class="orte-session-button" type="button" data-action="open-orte-session" data-scene-id="${escapeAttr(state.sceneId)}">Modul oeffnen</button>
+          <span>${escapeHtml(state.status)}</span>
         </div>
       </article>
     `;
   }
 
-  async function handleSceneClick(event) {
-    const button = event.target.closest("[data-action]");
-    const host = event.target.closest("[data-orte-scene]");
-    if (!button || !host) return;
-
-    const state = states.get(host);
-    if (!state) return;
-
-    const action = button.dataset.action;
-    if (action === "toggle-scene-editor") {
-      state.editorOpen = !state.editorOpen;
-      state.draftBlocks = cloneBlocks(state.blocks);
-      renderScene(state);
-    }
-
-    if (action === "add-scene-block") {
-      state.draftBlocks.push({ type: "speech", speaker: "", text: "" });
-      renderScene(state);
-    }
-
-    if (action === "remove-scene-block") {
-      const row = button.closest("[data-editor-row]");
-      const index = Number(row && row.dataset.editorRow);
-      if (Number.isInteger(index)) state.draftBlocks.splice(index, 1);
-      renderScene(state);
-    }
-
-    if (action === "save-scene-blocks") {
-      state.blocks = normalizeBlocks(state.draftBlocks);
-      saveSceneBlocks(state.ortId, state.sceneId, state.blocks);
-      const savedRemote = await saveRemoteScene(state);
-      state.status = savedRemote
-        ? "Online fuer diesen Ort gespeichert."
-        : "Lokal fuer diesen Ort gespeichert.";
-      renderScene(state);
-    }
-
-    if (action === "reset-scene-blocks") {
-      clearSceneBlocks(state.ortId, state.sceneId);
-      state.blocks = cloneBlocks(state.scene.blocks);
-      state.draftBlocks = cloneBlocks(state.blocks);
-      const savedRemote = await saveRemoteScene(state);
-      state.status = savedRemote
-        ? "Vorlage online wiederhergestellt."
-        : "Vorlage lokal wiederhergestellt.";
-      renderScene(state);
-    }
+  function renderModal(state) {
+    modal.innerHTML = `
+      <div class="orte-session-backdrop" data-action="close-orte-session"></div>
+      <section class="orte-session-dialog" role="dialog" aria-modal="true" aria-label="${escapeAttr(state.module.title)}">
+        <header class="orte-session-modal-head">
+          <div>
+            <div class="orte-session-preview-kicker">Interaktive Szene</div>
+            <h2>${escapeHtml(state.module.title)}</h2>
+          </div>
+          <div class="orte-session-head-actions">
+            <button class="orte-session-button is-secondary" type="button" data-action="toggle-orte-session-editor">Bearbeiten</button>
+            <button class="orte-session-icon-button" type="button" data-action="close-orte-session" aria-label="Schliessen">x</button>
+          </div>
+        </header>
+        ${renderSessionPage(state)}
+      </section>
+    `;
+    modal.hidden = false;
+    document.body.classList.add("orte-session-open");
   }
 
-  function handleSceneInput(event) {
-    const characterSelect = event.target.closest("[data-action='select-scene-character']");
-    if (characterSelect) {
-      applySelectedCharacter(characterSelect);
+  function renderSessionPage(state) {
+    const module = state.module;
+    const page = module.page;
+    return `
+      <div class="session-page">
+        <aside class="session-art-col">
+          ${module.image
+            ? `<img src="${escapeAttr(module.image)}" alt="${escapeAttr(module.title)}" loading="eager" decoding="async">`
+            : `<div class="orte-session-image-placeholder">Interaktive Szene</div>`}
+          <div class="session-art-overlay"></div>
+          <div class="session-art-stamp">${escapeHtml(module.stamp)}</div>
+        </aside>
+        <div class="session-content">
+          <div class="session-stage-bar">
+            <div class="session-stage-head">
+              <div class="session-stage-heading">
+                <div class="session-stage-kicker">Interaktive Szene</div>
+                <div class="session-stage-title">${escapeHtml(page.pageTitle || module.title)}</div>
+              </div>
+            </div>
+            <div class="session-stage-copy">${sanitizeLine(page.sessionIntro)}</div>
+          </div>
+          ${state.editorOpen ? renderModuleEditor(state) : ""}
+          <div class="comments-scroll" data-role="orte-session-comments">
+            ${renderComments(state)}
+          </div>
+          <div class="comments-form-bar">
+            <button class="comments-add-btn" type="button" data-action="toggle-orte-session-composer" title="Kommentar hinterlassen" aria-label="Kommentar hinterlassen">+</button>
+            <span class="comments-form-hint">${escapeHtml(page.sessionHint)}</span>
+          </div>
+          ${state.composerOpen ? renderComposer(state) : ""}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderComments(state) {
+    if (!state.comments.length) {
+      return `
+        <div class="comment-empty">
+          <strong>${escapeHtml(state.module.page.sessionEmptyTitle)}</strong>
+          <span>${escapeHtml(state.module.page.sessionEmptyText)}</span>
+        </div>
+      `;
+    }
+
+    return state.comments.map(renderComment).join("");
+  }
+
+  function renderComment(comment) {
+    const name = String(comment.charName || "Unbekannt");
+    const title = String(comment.charTitle || "");
+    const portrait = String(comment.portrait || "").trim();
+    const kind = String(comment.commentKind || (comment.narrator ? "narrator" : "speech"));
+    const meta = title ? `${name} - ${title}` : name;
+    return `
+      <article class="comment-card is-${escapeAttr(kind)}${portrait ? " has-portrait" : ""}">
+        ${portrait ? `<img class="comment-avatar" src="${escapeAttr(portrait)}" alt="${escapeAttr(name)}" loading="lazy" decoding="async">` : ""}
+        <div class="comment-card-body">
+          <div class="comment-meta">${escapeHtml(meta)}</div>
+          <div class="comment-text">${escapeHtml(comment.text || "")}</div>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderComposer(state) {
+    return `
+      <form class="orte-session-composer" data-action="submit-orte-session-comment">
+        <div class="orte-session-character-picker">
+          <select class="orte-session-input" name="characterId" data-action="select-orte-session-character" aria-label="Almanach-Charakter auswaehlen">
+            <option value="">Freie Eingabe / Erzaehler</option>
+            ${state.characters.map((character) => {
+              const label = character.title ? `${character.name} - ${character.title}` : character.name;
+              return `<option value="${escapeAttr(character.id)}">${escapeHtml(label)}</option>`;
+            }).join("")}
+          </select>
+          <span>${state.characters.length ? `${state.characters.length} Almanach-Charaktere` : "Almanach-Charaktere werden geladen"}</span>
+        </div>
+        <div class="orte-session-form-grid">
+          <input class="orte-session-input" name="charName" placeholder="Name">
+          <input class="orte-session-input" name="charTitle" placeholder="Titel / Rolle">
+          <input class="orte-session-input" name="portrait" placeholder="Portrait-URL">
+          <select class="orte-session-input" name="commentKind" aria-label="Kommentarart">
+            <option value="speech">Rede</option>
+            <option value="action">Handlung</option>
+            <option value="thought">Gedanke</option>
+            <option value="narrator">Erzaehler</option>
+          </select>
+        </div>
+        <textarea class="orte-session-textarea" name="text" required placeholder="Kommentar"></textarea>
+        <div class="orte-session-form-actions">
+          <input class="orte-session-input" name="deleteCode" placeholder="Loeschcode">
+          <button class="orte-session-button" type="submit">Kommentieren</button>
+        </div>
+      </form>
+    `;
+  }
+
+  function renderModuleEditor(state) {
+    const module = state.draft;
+    const page = module.page;
+    return `
+      <form class="orte-session-editor" data-action="save-orte-session-module">
+        <div class="orte-session-editor-kicker">Modul-Editor</div>
+        <div class="orte-session-form-grid">
+          <label>Titel<input class="orte-session-input" name="title" value="${escapeAttr(module.title)}"></label>
+          <label>Untertitel<input class="orte-session-input" name="subtitle" value="${escapeAttr(module.subtitle)}"></label>
+          <label>Seitentitel<input class="orte-session-input" name="pageTitle" value="${escapeAttr(page.pageTitle)}"></label>
+          <label>Stempel<input class="orte-session-input" name="stamp" value="${escapeAttr(module.stamp)}"></label>
+          <label class="is-wide">Bild-URL<input class="orte-session-input" name="image" value="${escapeAttr(module.image)}"></label>
+          <label>Hinweis<input class="orte-session-input" name="sessionHint" value="${escapeAttr(page.sessionHint)}"></label>
+          <label>Leertitel<input class="orte-session-input" name="sessionEmptyTitle" value="${escapeAttr(page.sessionEmptyTitle)}"></label>
+        </div>
+        <label>Intro<textarea class="orte-session-textarea" name="sessionIntro">${escapeHtml(page.sessionIntro)}</textarea></label>
+        <label>Leertext<textarea class="orte-session-textarea" name="sessionEmptyText">${escapeHtml(page.sessionEmptyText)}</textarea></label>
+        <div class="orte-session-form-actions">
+          <button class="orte-session-button" type="submit">Modul speichern</button>
+          <button class="orte-session-button is-secondary" type="button" data-action="reset-orte-session-draft">Zuruecksetzen</button>
+        </div>
+      </form>
+    `;
+  }
+
+  function handleClick(event) {
+    const actionTarget = event.target.closest("[data-action]");
+    if (!actionTarget) return;
+    const action = actionTarget.dataset.action;
+
+    if (action === "open-orte-session") {
+      const state = states.get(actionTarget.dataset.sceneId);
+      if (!state) return;
+      activeState = state;
+      state.draft = cloneModule(state.module);
+      renderModal(state);
       return;
     }
 
-    const field = event.target.closest("[data-field]");
-    const host = event.target.closest("[data-orte-scene]");
-    if (!field || !host) return;
+    if (action === "close-orte-session") {
+      closeModal();
+      return;
+    }
 
-    const state = states.get(host);
-    const row = field.closest("[data-editor-row]");
-    const index = Number(row && row.dataset.editorRow);
-    if (!state || !Number.isInteger(index) || !state.draftBlocks[index]) return;
+    if (!activeState) return;
 
-    const key = field.dataset.field;
-    if (key === "type") state.draftBlocks[index].type = normalizeBlockType(field.value);
-    if (key === "speaker") state.draftBlocks[index].speaker = field.value;
-    if (key === "text") state.draftBlocks[index].text = field.value;
+    if (action === "toggle-orte-session-composer") {
+      activeState.composerOpen = !activeState.composerOpen;
+      renderModal(activeState);
+      return;
+    }
+
+    if (action === "toggle-orte-session-editor") {
+      activeState.editorOpen = !activeState.editorOpen;
+      activeState.draft = cloneModule(activeState.module);
+      renderModal(activeState);
+      return;
+    }
+
+    if (action === "reset-orte-session-draft") {
+      activeState.draft = cloneModule(activeState.module);
+      renderModal(activeState);
+    }
   }
 
-  async function handleSceneSubmit(event) {
-    const form = event.target.closest("form[data-action='add-scene-comment']");
-    const host = event.target.closest("[data-orte-scene]");
-    if (!form || !host) return;
+  function handleChange(event) {
+    const select = event.target.closest("[data-action='select-orte-session-character']");
+    if (select) applySelectedCharacter(select);
+  }
 
-    event.preventDefault();
-    const state = states.get(host);
-    if (!state) return;
+  function handleInput(event) {
+    if (!activeState) return;
+    const field = event.target.closest(".orte-session-editor [name]");
+    if (!field) return;
+    updateDraftField(activeState, field.name, field.value);
+  }
 
+  async function handleSubmit(event) {
+    const commentForm = event.target.closest("form[data-action='submit-orte-session-comment']");
+    if (commentForm) {
+      event.preventDefault();
+      await submitComment(commentForm);
+      return;
+    }
+
+    const editorForm = event.target.closest("form[data-action='save-orte-session-module']");
+    if (editorForm) {
+      event.preventDefault();
+      await saveModuleDraft(editorForm);
+    }
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    modal.innerHTML = "";
+    document.body.classList.remove("orte-session-open");
+    activeState = null;
+  }
+
+  async function submitComment(form) {
+    if (!activeState) return;
     const formData = new FormData(form);
     const comment = {
       charName: String(formData.get("charName") || "").trim(),
@@ -300,15 +319,15 @@
       commentKind: String(formData.get("commentKind") || "speech"),
       orderKey: Date.now()
     };
-
     if (!comment.text) return;
 
     const deleteCode = String(formData.get("deleteCode") || "").trim();
     const fb = window._fb;
+
     if (fb && typeof fb.addComment === "function") {
       try {
         await fb.addComment(
-          state.scene.threadId,
+          activeState.module.threadId,
           comment.charName,
           comment.charTitle,
           comment.portrait,
@@ -316,67 +335,145 @@
           deleteCode,
           comment.commentKind === "narrator",
           {
+            characterId: comment.characterId,
             commentKind: comment.commentKind,
             commentMode: comment.commentKind === "narrator" ? "narrator" : "character",
-            characterId: comment.characterId,
             orderKey: comment.orderKey,
-            placeId: state.ortId,
-            sceneId: state.sceneId
+            placeId: activeState.ortId,
+            sceneId: activeState.sceneId
           }
         );
       } catch (error) {
-        state.status = "Kommentar konnte online nicht gespeichert werden.";
-        renderScene(state);
-        return;
+        activeState.status = "Kommentar konnte online nicht gespeichert werden.";
+        renderPreview(activeState);
       }
     } else {
-      state.comments.push(comment);
-      saveLocalComments(state.scene.threadId, state.comments);
-      renderScene(state);
+      activeState.comments.push(comment);
+      saveLocalComments(activeState.module.threadId, activeState.comments);
     }
 
+    activeState.composerOpen = false;
     form.reset();
+    renderModal(activeState);
+  }
+
+  async function saveModuleDraft(form) {
+    if (!activeState) return;
+    if (form) {
+      Array.from(form.elements).forEach((field) => {
+        if (field.name) updateDraftField(activeState, field.name, field.value);
+      });
+    }
+    activeState.module = cloneModule(activeState.draft);
+    saveModule(activeState.ortId, activeState.sceneId, activeState.module);
+    const savedRemote = await saveRemoteModule(activeState);
+    activeState.status = savedRemote ? "Online gespeichert." : "Lokal gespeichert.";
+    activeState.editorOpen = false;
+    renderPreview(activeState);
+    renderModal(activeState);
+  }
+
+  function buildLegacySessionIntro(blocks) {
+    if (!Array.isArray(blocks)) return "";
+    return blocks
+      .map((block) => {
+        if (!block || typeof block !== "object") return "";
+        const speaker = block.speaker || block.name;
+        const text = String(block.text || "").trim();
+        if (!text) return "";
+        return speaker ? `${speaker}: ${text}` : text;
+      })
+      .filter(Boolean)
+      .join("\n");
+  }
+
+  function updateDraftField(state, name, value) {
+    const draft = state.draft;
+    if (["title", "subtitle", "stamp", "image"].includes(name)) {
+      draft[name] = String(value || "");
+      return;
+    }
+    if (name === "pageTitle") draft.page.pageTitle = String(value || "");
+    if (name === "sessionIntro") draft.page.sessionIntro = String(value || "");
+    if (name === "sessionHint") draft.page.sessionHint = String(value || "");
+    if (name === "sessionEmptyTitle") draft.page.sessionEmptyTitle = String(value || "");
+    if (name === "sessionEmptyText") draft.page.sessionEmptyText = String(value || "");
+  }
+
+  async function connectSceneStore(state) {
+    const store = await waitForSceneStore();
+    if (!store || typeof store.subscribeScene !== "function") return;
+
+    state.unsubscribeScene = store.subscribeScene(state.ortId, state.sceneId, (remoteModule) => {
+      if (!remoteModule) return;
+      state.module = normalizeModule(remoteModule, state.sceneId);
+      state.draft = cloneModule(state.module);
+      saveModule(state.ortId, state.sceneId, state.module);
+      renderPreview(state);
+      if (activeState === state) renderModal(state);
+    }, () => {
+      state.status = "Online-Szenenspeicher nicht erreichbar.";
+      renderPreview(state);
+    });
+  }
+
+  async function saveRemoteModule(state) {
+    const store = await waitForSceneStore(1200);
+    if (!store || typeof store.saveScene !== "function") return false;
+
+    try {
+      await store.saveScene(state.ortId, state.sceneId, state.module);
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 
   async function connectComments(state) {
     const fb = await waitForFirebase();
     if (fb && typeof fb.subscribeComments === "function") {
-      state.unsubscribe = fb.subscribeComments(state.scene.threadId, (comments) => {
+      state.unsubscribeComments = fb.subscribeComments(state.module.threadId, (comments) => {
         state.comments = Array.isArray(comments) ? comments : [];
-        renderScene(state);
+        if (activeState === state) renderModal(state);
       }, () => {
-        state.comments = loadLocalComments(state.scene.threadId);
-        renderScene(state);
+        state.comments = loadLocalComments(state.module.threadId);
+        if (activeState === state) renderModal(state);
       });
       return;
     }
 
-    state.comments = loadLocalComments(state.scene.threadId);
-    renderScene(state);
+    state.comments = loadLocalComments(state.module.threadId);
   }
 
   async function connectCharacters(state) {
-    const characters = await loadCharacters();
-    state.characters = characters;
-    renderScene(state);
+    state.characters = await loadCharacters();
+    if (activeState === state) renderModal(state);
   }
 
   async function loadCharacters() {
     if (characterLoadPromise) return characterLoadPromise;
-
     characterLoadPromise = (async () => {
       const fb = await waitForFirebase();
       if (!fb || typeof fb.loadCharacters !== "function") return [];
 
       try {
-        const characters = await fb.loadCharacters();
-        return normalizeCharacters(characters);
+        return normalizeCharacters(await fb.loadCharacters());
       } catch (error) {
         return [];
       }
     })();
-
     return characterLoadPromise;
+  }
+
+  function applySelectedCharacter(select) {
+    const form = select.closest("form");
+    if (!form || !activeState) return;
+    const selected = activeState.characters.find((character) => character.id === select.value);
+    if (!selected) return;
+
+    setFormValue(form, "charName", selected.name);
+    setFormValue(form, "charTitle", selected.title);
+    setFormValue(form, "portrait", selected.portrait);
   }
 
   function normalizeCharacters(characters) {
@@ -398,60 +495,8 @@
       .sort((a, b) => a.name.localeCompare(b.name, "de", { sensitivity: "base" }));
   }
 
-  function applySelectedCharacter(select) {
-    const host = select.closest("[data-orte-scene]");
-    const form = select.closest("form");
-    const state = host ? states.get(host) : null;
-    if (!state || !form) return;
-
-    const selected = state.characters.find((character) => character.id === select.value);
-    if (!selected) return;
-
-    setFormValue(form, "charName", selected.name);
-    setFormValue(form, "charTitle", selected.title);
-    setFormValue(form, "portrait", selected.portrait);
-  }
-
-  function setFormValue(form, name, value) {
-    const field = form.elements.namedItem(name);
-    if (field) field.value = value || "";
-  }
-
-  async function connectSceneStore(state) {
-    const store = await waitForSceneStore();
-    if (!store || typeof store.subscribeScene !== "function") return;
-
-    state.unsubscribeScene = store.subscribeScene(state.ortId, state.sceneId, (remoteScene) => {
-      if (!remoteScene || !Array.isArray(remoteScene.blocks) || !remoteScene.blocks.length) return;
-      state.blocks = normalizeBlocks(remoteScene.blocks);
-      if (!state.editorOpen) state.draftBlocks = cloneBlocks(state.blocks);
-      saveSceneBlocks(state.ortId, state.sceneId, state.blocks);
-      renderScene(state);
-    }, () => {
-      state.status = "Online-Szenenspeicher nicht erreichbar.";
-      renderScene(state);
-    });
-  }
-
-  async function saveRemoteScene(state) {
-    const store = await waitForSceneStore(1200);
-    if (!store || typeof store.saveScene !== "function") return false;
-
-    try {
-      await store.saveScene(state.ortId, state.sceneId, {
-        title: state.scene.title,
-        threadId: state.scene.threadId,
-        blocks: state.blocks
-      });
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
   function waitForFirebase() {
     if (window._fb) return Promise.resolve(window._fb);
-
     return new Promise((resolve) => {
       const started = Date.now();
       const timer = window.setInterval(() => {
@@ -488,25 +533,24 @@
     });
   }
 
-  function loadSceneBlocks(ortId, sceneId, fallback) {
-    const saved = readJson(getSceneStorageKey(ortId, sceneId));
-    return normalizeBlocks(saved && saved.blocks ? saved.blocks : fallback);
+  function createModal() {
+    const existing = document.querySelector("[data-orte-session-modal]");
+    if (existing) return existing;
+    const element = document.createElement("div");
+    element.className = "orte-session-modal";
+    element.dataset.orteSessionModal = "";
+    element.hidden = true;
+    document.body.appendChild(element);
+    return element;
   }
 
-  function saveSceneBlocks(ortId, sceneId, blocks) {
-    writeJson(getSceneStorageKey(ortId, sceneId), {
-      schemaVersion: 1,
-      updatedAt: Date.now(),
-      blocks
-    });
+  function loadModule(ortId, sceneId, fallback) {
+    const saved = readJson(getModuleStorageKey(ortId, sceneId));
+    return normalizeModule(saved || fallback, sceneId);
   }
 
-  function clearSceneBlocks(ortId, sceneId) {
-    try {
-      window.localStorage.removeItem(getSceneStorageKey(ortId, sceneId));
-    } catch (error) {
-      return;
-    }
+  function saveModule(ortId, sceneId, module) {
+    writeJson(getModuleStorageKey(ortId, sceneId), module);
   }
 
   function loadLocalComments(threadId) {
@@ -517,8 +561,8 @@
     writeJson(getCommentStorageKey(threadId), comments);
   }
 
-  function getSceneStorageKey(ortId, sceneId) {
-    return `aleria:orte:scene:${ortId || "ort-vorlage"}:${sceneId || "szene"}`;
+  function getModuleStorageKey(ortId, sceneId) {
+    return `aleria:orte:session-module:${ortId || "ort-vorlage"}:${sceneId || "szene"}`;
   }
 
   function getCommentStorageKey(threadId) {
@@ -541,8 +585,17 @@
     }
   }
 
-  function cloneBlocks(blocks) {
-    return normalizeBlocks(blocks).map((block) => ({ ...block }));
+  function cloneModule(module) {
+    return normalizeModule(JSON.parse(JSON.stringify(module || {})), module?.id || "szene");
+  }
+
+  function setFormValue(form, name, value) {
+    const field = form.elements.namedItem(name);
+    if (field) field.value = value || "";
+  }
+
+  function sanitizeLine(value) {
+    return escapeHtml(value).replace(/\n{2,}/g, "\n").replace(/\n/g, "<br>");
   }
 
   function escapeHtml(value) {

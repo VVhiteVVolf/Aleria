@@ -2,54 +2,46 @@
   "use strict";
 
   window.AleriaOrteScenes = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     ortId: "grossstadt-vorlage",
     ortName: "Grossstadt-Vorlage",
     firebase: {
       collection: "orte_scenes"
     },
-    scenes: {
+    modules: {
       einleitung: {
         id: "einleitung",
         title: "Einleitungsszene",
+        subtitle: "Interaktive Szene zur Stimmung und Ankunft",
+        stamp: "ORTSZENE",
+        image: "",
+        imageWidth: 36,
         threadId: "orte:grossstadt-vorlage:einleitung",
-        blocks: [
-          {
-            type: "intro",
-            text: "[Szene oder Stimmung einleiten]"
-          },
-          {
-            type: "speech",
-            speaker: "[Name 1]",
-            text: "Dialog von Figur 1."
-          },
-          {
-            type: "action",
-            speaker: "[Name 2]",
-            text: "Handlungsbeschreibung: Antwort von Figur 2."
-          }
-        ]
+        page: {
+          pageTitle: "I - Interaktive Szene",
+          sessionPage: true,
+          sessionIntro: "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht spaeter ueber Kommentare.",
+          sessionHint: "Fuehre diese Szene als Kommentar fort.",
+          sessionEmptyTitle: "Die Szene ist offen",
+          sessionEmptyText: "Hier kann die Szene im fertigen Modus beginnen."
+        }
       },
       konflikte: {
         id: "konflikte",
         title: "Konfliktszene",
+        subtitle: "Interaktive Szene zu Spannungen, Gefahren und offenen Fronten",
+        stamp: "KONFLIKT",
+        image: "",
+        imageWidth: 36,
         threadId: "orte:grossstadt-vorlage:konflikte",
-        blocks: [
-          {
-            type: "intro",
-            text: "[Konfliktlage, Stimmung oder Ausloeser einleiten]"
-          },
-          {
-            type: "speech",
-            speaker: "[Name 1]",
-            text: "Dialog zur aktuellen Spannung."
-          },
-          {
-            type: "action",
-            speaker: "[Name 2]",
-            text: "Reaktion, Handlung oder sichtbare Folge des Konflikts."
-          }
-        ]
+        page: {
+          pageTitle: "II - Interaktive Szene",
+          sessionPage: true,
+          sessionIntro: "Leite die Konfliktlage ein: Wer steht unter Druck, welche Geruechte gehen um, und welche Entscheidung liegt in der Luft?",
+          sessionHint: "Fuehre den Konflikt als Kommentar fort.",
+          sessionEmptyTitle: "Der Konflikt wartet",
+          sessionEmptyText: "Noch ist kein Beitrag eingetragen."
+        }
       }
     }
   };
