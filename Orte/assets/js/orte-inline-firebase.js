@@ -67,13 +67,15 @@ function normalizePayload(payload) {
     try {
       return normalizePayload(JSON.parse(source.data));
     } catch (error) {
-      return { texts: {}, images: {} };
+      return { texts: {}, images: {}, ratings: {}, tables: {} };
     }
   }
 
   return {
     texts: normalizeTextRecord(source.texts),
     images: normalizeImageRecord(source.images),
+    ratings: normalizeRatingRecord(source.ratings),
+    tables: normalizeTextRecord(source.tables),
   };
 }
 
@@ -90,6 +92,25 @@ function normalizeImageRecord(record) {
         src: String(item.src || ""),
         href: String(item.href || ""),
         alt: String(item.alt || ""),
+        width: clampNumber(item.width, 20, 100, 100),
+        maxHeight: clampNumber(item.maxHeight, 80, 720, 260),
+        format: ["auto", "square", "portrait", "landscape", "banner"].includes(item.format) ? item.format : "auto",
+        fit: ["contain", "cover"].includes(item.fit) ? item.fit : "contain",
       }];
     }));
+}
+
+function normalizeRatingRecord(record) {
+  return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
+    .map(([key, value]) => {
+      const number = Number(value);
+      const rating = Number.isFinite(number) ? Math.max(1, Math.min(5, Math.round(number))) : 3;
+      return [String(key), rating];
+    }));
+}
+
+function clampNumber(value, min, max, fallback) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return fallback;
+  return Math.max(min, Math.min(max, Math.round(number)));
 }

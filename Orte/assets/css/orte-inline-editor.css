@@ -18,7 +18,7 @@
   font-size: 13px;
 }
 
-.orte-inline-toolbar span {
+.orte-inline-toolbar > span:not(.orte-inline-format-tools) {
   color: #dcc38a;
   font-size: 12px;
 }
@@ -42,6 +42,46 @@
   display: inline-block;
 }
 
+.orte-inline-editing .orte-inline-toolbar .orte-inline-format-tools {
+  display: inline-flex;
+}
+
+.orte-inline-format-tools {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 6px;
+  border-left: 1px solid rgba(220, 195, 138, 0.36);
+}
+
+.orte-inline-color-tool,
+.orte-inline-tooltip-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #dcc38a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.orte-inline-color-tool input[type="color"] {
+  width: 30px;
+  height: 26px;
+  padding: 1px;
+  border: 1px solid #7c5a22;
+  background: #f3e3bd;
+}
+
+.orte-inline-tooltip-tool input {
+  width: 150px;
+  min-height: 26px;
+  border: 1px solid #7c5a22;
+  background: #fff2c8;
+  color: #201408;
+  font: inherit;
+  padding: 3px 6px;
+}
+
 .orte-inline-editing [data-orte-inline-text] {
   cursor: text;
   outline: 1px dashed rgba(126, 82, 25, 0.5);
@@ -58,6 +98,11 @@
   outline: 2px dashed rgba(126, 82, 25, 0.52);
   outline-offset: 2px;
   position: relative;
+}
+
+.orte-inline-editing [data-orte-rating-key] {
+  outline: 1px dashed rgba(126, 82, 25, 0.42);
+  outline-offset: -3px;
 }
 
 .orte-inline-image-hint {
@@ -100,7 +145,8 @@
   font-weight: 700;
 }
 
-.orte-inline-image-panel input {
+.orte-inline-image-panel input,
+.orte-inline-image-panel select {
   width: 100%;
   border: 1px solid rgba(75, 45, 14, 0.48);
   background: rgba(255, 249, 219, 0.94);
@@ -110,8 +156,71 @@
   padding: 5px 7px;
 }
 
+.orte-inline-image-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+.orte-table-add-control {
+  display: none;
+  margin: 5px 0 12px;
+  text-align: center;
+}
+
+.orte-inline-editing .orte-table-add-control {
+  display: block;
+}
+
+.orte-table-add-control button {
+  min-width: 92px;
+  min-height: 28px;
+  cursor: pointer;
+  border: 1px solid #7c5a22;
+  background: linear-gradient(180deg, #f4e3b8, #d5b56e);
+  color: #2c1b0b;
+  font: 700 13px Georgia, "Times New Roman", serif;
+}
+
+.orte-rating-cell {
+  min-width: 96px;
+  text-align: center;
+}
+
+.orte-rating-display {
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.orte-rating-control {
+  display: grid;
+  grid-template-columns: minmax(64px, 1fr) 30px;
+  align-items: center;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.orte-rating-control input {
+  width: 100%;
+}
+
+.orte-rating-control span {
+  color: #2f1d0c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.orte-inline-tooltip {
+  border-bottom: 1px dotted currentColor;
+  cursor: help;
+}
+
 @media (max-width: 760px) {
   .orte-inline-toolbar {
     position: static;
+  }
+
+  .orte-inline-image-grid {
+    grid-template-columns: 1fr;
   }
 }
