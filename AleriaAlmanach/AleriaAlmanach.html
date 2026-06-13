@@ -207,6 +207,7 @@
 <script src="./module-import-export.js?v=20260611-tab-sort-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260520-cleanup-v1" defer></script>
 <script src="./modules/comments/comments-segment-events.js?v=20260604-scene-comments-v1" defer></script>
+<script src="./modules/comments/comments-assistant.js?v=20260613-comment-assistant-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-action-events.js?v=20260602-edit-preview-toggle-v2" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260520-cleanup-v1" defer></script>
@@ -285,6 +286,24 @@
 
     <div>
       <label>Kommentar *</label>
+      <section class="comment-assistant" data-comment-assistant>
+        <div class="comment-assistant-head">
+          <div>
+            <div class="comment-assistant-kicker">KI-Assistent</div>
+            <div class="comment-assistant-title">Kommentarvorschlag</div>
+          </div>
+          <button class="comment-assistant-toggle" type="button" data-comment-assistant-action="toggle" aria-expanded="false">Öffnen</button>
+        </div>
+        <div class="comment-assistant-body" hidden>
+          <textarea class="comment-assistant-prompt" rows="2" data-comment-assistant-prompt placeholder="Optionale Richtung, z.B. vorsichtig ablehnen, misstrauisch reagieren, höfisch antworten"></textarea>
+          <div class="comment-assistant-actions">
+            <button class="comment-assistant-btn" type="button" data-comment-assistant-action="generate">Vorschlag erzeugen</button>
+            <button class="comment-assistant-btn secondary" type="button" data-comment-assistant-action="insert" disabled>Übernehmen</button>
+          </div>
+          <div class="comment-assistant-status" data-comment-assistant-status>Wähle eine Figur oder den Erzähler, dann kann AleriaGPT aus aktuellem Modul- und Figurenkontext helfen.</div>
+          <div class="comment-assistant-result" data-comment-assistant-result hidden></div>
+        </div>
+      </section>
       <div id="cf-segment-list" class="comment-segment-list"></div>
       <div class="comment-segment-actions">
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="speech">+ Rede</button>

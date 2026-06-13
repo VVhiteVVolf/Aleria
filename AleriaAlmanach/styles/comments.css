@@ -123,6 +123,97 @@
     gap: 0.65rem;
     margin-top: 0.45rem;
   }
+  .comment-assistant {
+    margin: 0.2rem 0 0.85rem;
+    border: 1px solid rgba(139,105,20,0.24);
+    background: rgba(255,248,230,0.22);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18);
+  }
+  .comment-assistant-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.58rem 0.7rem;
+  }
+  .comment-assistant-kicker {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .comment-assistant-title {
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .comment-assistant-toggle,
+  .comment-assistant-btn {
+    border: 1px solid rgba(139,105,20,0.36);
+    background: rgba(255,255,255,0.24);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.38rem 0.62rem;
+  }
+  .comment-assistant-toggle:hover,
+  .comment-assistant-btn:hover:not(:disabled) {
+    border-color: var(--gold);
+    background: rgba(139,105,20,0.14);
+  }
+  .comment-assistant-btn:disabled {
+    cursor: default;
+    opacity: 0.45;
+  }
+  .comment-assistant-btn.secondary {
+    color: var(--gold);
+  }
+  .comment-assistant-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 0 0.7rem 0.7rem;
+  }
+  .comment-assistant-body[hidden],
+  .comment-assistant-result[hidden] {
+    display: none;
+  }
+  .comment-assistant-prompt {
+    min-height: 4.1rem;
+    resize: vertical;
+  }
+  .comment-assistant-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+  }
+  .comment-assistant-status {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-style: italic;
+    line-height: 1.35;
+  }
+  .comment-assistant[data-comment-assistant-state="error"] .comment-assistant-status {
+    color: var(--red-wax);
+  }
+  .comment-assistant[data-comment-assistant-state="loading"] .comment-assistant-status {
+    color: var(--gold);
+  }
+  .comment-assistant-result {
+    white-space: pre-wrap;
+    border: 1px solid rgba(139,105,20,0.22);
+    background: rgba(255,255,255,0.22);
+    color: var(--ink);
+    font-size: 0.92rem;
+    line-height: 1.45;
+    padding: 0.62rem 0.7rem;
+  }
   .comment-segment-card {
     border: 1px solid rgba(139,105,20,0.28);
     background:

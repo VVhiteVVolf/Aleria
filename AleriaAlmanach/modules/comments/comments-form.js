@@ -31,6 +31,7 @@ function openCommentForm() {
   document.getElementById('cf-emote-picker').innerHTML = '';
   document.getElementById('cf-submit').disabled = false;
   document.getElementById('cf-submit').textContent = 'Eintragen';
+  if (typeof resetCommentAssistant === 'function') resetCommentAssistant();
   document.getElementById('comment-form-title').textContent = thread?.formTitle || '*  Stimme hinterlassen  *';
   document.getElementById('cf-text').placeholder = thread?.formPlaceholder || 'Schreibe aus der Sicht deines Charakters...';
   if (document.getElementById('cf-editor')) {
