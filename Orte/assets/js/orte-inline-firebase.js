@@ -89,7 +89,7 @@ function normalizeImageRecord(record) {
     .map(([key, value]) => {
       const item = value && typeof value === "object" ? value : {};
       return [String(key), {
-        src: String(item.src || ""),
+        src: normalizePlaceholderSrc(item.src),
         href: String(item.href || ""),
         alt: String(item.alt || ""),
         width: clampNumber(item.width, 20, 100, 100),
@@ -113,4 +113,13 @@ function clampNumber(value, min, max, fallback) {
   const number = Number(value);
   if (!Number.isFinite(number)) return fallback;
   return Math.max(min, Math.min(max, Math.round(number)));
+}
+
+function normalizePlaceholderSrc(src) {
+  const value = String(src || "");
+  const lower = value.toLowerCase();
+  if (lower.includes("tumblr_otwjgn7mfu1wwqdobo1_1280")) return "";
+  if (lower.includes("66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10")) return "";
+  if (lower.endsWith("/w5rerk3.png")) return "";
+  return value;
 }

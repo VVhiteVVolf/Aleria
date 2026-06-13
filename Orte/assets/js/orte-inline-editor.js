@@ -97,6 +97,18 @@
       if (event.key === "Escape") closeImagePanel();
     });
 
+    document.addEventListener("error", (event) => {
+      const image = event.target;
+      if (!(image instanceof HTMLImageElement)) return;
+      const slot = image.closest("[data-orte-image-key]");
+      if (!slot) return;
+      const key = slot.dataset.orteImageKey;
+      if (!key) return;
+      state.images[key] = normalizeImageState({ ...(state.images[key] || {}), src: "" }, slot.dataset.orteImageLabel || key);
+      renderImageSlot(key);
+      markDirty();
+    }, true);
+
     document.addEventListener("selectionchange", () => {
       if (!editMode) return;
       rememberSelection();
@@ -215,8 +227,11 @@
       const label = node.dataset.orteImageLabel || key;
       const existingImage = node.querySelector("img");
       const existingLink = existingImage?.closest("a");
+      const existingSrc = existingImage && !isPlaceholderImage(existingImage)
+        ? existingImage.getAttribute("src") || ""
+        : "";
       const initialImage = {
-        src: existingImage?.getAttribute("src") || "",
+        src: existingSrc,
         href: existingLink?.getAttribute("href") || "",
         alt: existingImage?.getAttribute("alt") || label,
         width: node.dataset.orteImageWidth || "",
@@ -316,6 +331,9 @@
       image.dataset.orteInlineImageKey = key;
       image.replaceWith(slot);
       slot.appendChild(image);
+      if (isPlaceholderImage(image)) {
+        state.images[key] = normalizeImageState({ src: "", alt: label }, label);
+      }
     });
   }
 
@@ -788,8 +806,9 @@
 
   function normalizeImageState(image, label) {
     const source = image && typeof image === "object" ? image : {};
+    const src = normalizePlaceholderSrc(source.src);
     return {
-      src: String(source.src || ""),
+      src,
       href: String(source.href || ""),
       alt: String(source.alt || label || ""),
       width: clampNumber(source.width, 20, 100, 100),
@@ -797,6 +816,28 @@
       format: ["auto", "square", "portrait", "landscape", "banner"].includes(source.format) ? source.format : "auto",
       fit: ["contain", "cover"].includes(source.fit) ? source.fit : "contain"
     };
+  }
+
+  function isPlaceholderImage(image) {
+    if (!image) return false;
+    const src = image.getAttribute("src") || "";
+    return image.classList.contains("transparent")
+      || image.classList.contains("pt-s-0052")
+      || image.classList.contains("pt-s-0079")
+      || isPlaceholderSrc(src);
+  }
+
+  function normalizePlaceholderSrc(src) {
+    const value = String(src || "");
+    return isPlaceholderSrc(value) ? "" : value;
+  }
+
+  function isPlaceholderSrc(src) {
+    const value = String(src || "").toLowerCase();
+    if (!value) return false;
+    return value.includes("tumblr_otwjgn7mfu1wwqdobo1_1280")
+      || value.includes("66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10")
+      || value.endsWith("/w5rerk3.png");
   }
 
   function renderOption(value, label, current) {
