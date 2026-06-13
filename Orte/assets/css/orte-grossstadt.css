@@ -17,7 +17,7 @@
   --place-detail-head: #e7d9b9;
   --place-detail-body: #f8f0d3;
   --place-gold: #c49a28;
-  --place-max-width: 1160px;
+  --place-max-width: 1580px;
 }
 
 * {
@@ -50,8 +50,15 @@ img {
 }
 
 .place-page {
-  width: min(100% - 24px, var(--place-max-width));
+  width: min(100% - 18px, var(--place-max-width));
   margin: 18px auto;
+}
+
+.grossstadt-template {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
 }
 
 .place-document {
@@ -65,7 +72,8 @@ img {
 }
 
 .grossstadt-template-frame {
-  max-width: 100%;
+  width: 1320px !important;
+  max-width: none;
   background:
     linear-gradient(180deg, rgba(255, 248, 226, 0.62), rgba(222, 195, 142, 0.5)),
     repeating-linear-gradient(-45deg, rgba(96, 62, 24, 0.025), rgba(96, 62, 24, 0.025) 1px, transparent 1px, transparent 18px),
@@ -108,12 +116,18 @@ img {
 }
 
 .grossstadt-template p {
+  margin-top: 0;
+  margin-bottom: 0.38rem;
   max-width: 100%;
+}
+
+.grossstadt-template .place-spacer {
+  display: none;
 }
 
 .grossstadt-template hr {
   height: 0;
-  margin: 1rem 0;
+  margin: 0.65rem 0;
   border: 0;
   border-top: 1px solid var(--place-line-soft);
 }
@@ -146,6 +160,62 @@ img {
 
 .grossstadt-template table table {
   box-shadow: inset 0 0 0 1px rgba(255, 248, 226, 0.24);
+}
+
+.place-template-toc {
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  padding: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 226, 0.7), rgba(222, 195, 142, 0.52)),
+    var(--place-paper);
+  border: 1px solid var(--place-border-dark);
+  box-shadow: 0 12px 28px rgba(9, 6, 2, 0.34);
+}
+
+.place-template-toc h2 {
+  margin: 0 0 0.55rem;
+  padding: 5px 7px;
+  color: var(--place-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  border: 1px solid var(--place-border-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.place-template-toc ol {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.place-template-toc a {
+  display: block;
+  padding: 4px 6px;
+  color: #241609;
+  background: linear-gradient(180deg, #f3dfac, #d8bd7a);
+  border: 1px solid rgba(67, 42, 14, 0.54);
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.place-template-toc a:hover,
+.place-template-toc a:focus-visible,
+.place-template-toc a.is-active {
+  color: var(--place-text-light);
+  background: linear-gradient(180deg, #8c672e, var(--place-panel-dark));
+}
+
+.grossstadt-region-cell {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .grossstadt-template b,
@@ -187,7 +257,18 @@ img {
     margin: 0;
   }
 
+  .grossstadt-template {
+    display: block;
+  }
+
+  .place-template-toc {
+    position: static;
+    max-height: none;
+    margin-bottom: 8px;
+  }
+
   .grossstadt-template-frame {
+    width: 1101px !important;
     border-left: 0;
     border-right: 0;
     box-shadow: none;
