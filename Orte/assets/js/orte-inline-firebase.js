@@ -72,6 +72,7 @@ function normalizePayload(payload) {
   }
 
   return {
+    contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
     texts: normalizeTextRecord(source.texts),
     images: normalizeImageRecord(source.images),
     ratings: normalizeRatingRecord(source.ratings),

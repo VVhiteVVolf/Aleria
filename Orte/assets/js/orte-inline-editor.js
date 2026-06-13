@@ -5,7 +5,8 @@
   if (!root) return;
 
   const pageId = getPageId();
-  const storageKey = `aleria:orte:inline-content:${pageId}`;
+  const CONTENT_SCHEMA_VERSION = 2;
+  const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
   const state = { texts: {}, images: {}, ratings: {}, tables: {} };
   const textItems = [];
   const imageItems = [];
@@ -24,9 +25,9 @@
   function init() {
     const localPayload = loadLocal();
     prepareTables();
-    applyTablePayload(localPayload?.tables);
+    if (isCompatiblePayload(localPayload)) applyTablePayload(localPayload?.tables);
     rebuildTargets();
-    applyPayload(localPayload, { skipTables: true });
+    if (isCompatiblePayload(localPayload)) applyPayload(localPayload, { skipTables: true });
     renderToolbar();
     wireEvents();
     connectRemote();
@@ -225,6 +226,8 @@
       const key = node.dataset.orteImageKey;
       if (!key) return;
       const label = node.dataset.orteImageLabel || key;
+      node.classList.toggle("is-compact-image", !!node.closest(".wappen"));
+      node.classList.toggle("is-portrait-image", !!node.closest(".portrait-cell"));
       const existingImage = node.querySelector("img");
       const existingLink = existingImage?.closest("a");
       const existingSrc = existingImage && !isPlaceholderImage(existingImage)
@@ -322,7 +325,7 @@
       if (image.closest("[data-orte-image-key], .orte-scene-host, .orte-session-modal, .orte-inline-toolbar, .orte-inline-image-panel")) return;
 
       const key = image.dataset.orteInlineImageKey || makeKey("auto-img");
-      const label = image.getAttribute("alt") || "Bildplatzhalter";
+      const label = getImageSlotLabel(image);
       const slot = document.createElement("span");
       slot.className = "orte-image-slot has-image";
       slot.dataset.orteImageKey = key;
@@ -358,7 +361,7 @@
 
     const editHint = editMode ? `<span class="orte-inline-image-hint">Bild bearbeiten</span>` : "";
     if (!image.src) {
-      item.node.innerHTML = `<span class="orte-image-placeholder" role="img" aria-label="${escapeAttr(item.label)}">Bildplatzhalter</span>${editHint}`;
+      item.node.innerHTML = `<span class="orte-image-placeholder" role="img" aria-label="${escapeAttr(item.label)}">${escapeHtml(getPlaceholderText(item))}</span>${editHint}`;
       return;
     }
 
@@ -585,6 +588,10 @@
 
   function applyPayload(payload, options = {}) {
     if (!payload) return;
+    if (!isCompatiblePayload(payload)) {
+      setStatus("alte Inline-Daten ignoriert");
+      return;
+    }
 
     if (!options.skipTables && payload.tables) {
       applyTablePayload(payload.tables);
@@ -685,6 +692,10 @@
 
     store.subscribe(pageId, (payload) => {
       if (!payload || dirty) return;
+      if (!isCompatiblePayload(payload)) {
+        setStatus("alte Online-Daten ignoriert");
+        return;
+      }
       applyPayload(payload);
       saveLocal(payload);
       setStatus("online geladen");
@@ -730,6 +741,7 @@
   function clonePayload() {
     tableItems.forEach((item) => updateTableState(item.table));
     return {
+      contentSchemaVersion: CONTENT_SCHEMA_VERSION,
       texts: { ...state.texts },
       tables: { ...state.tables },
       ratings: { ...state.ratings },
@@ -816,6 +828,26 @@
       format: ["auto", "square", "portrait", "landscape", "banner"].includes(source.format) ? source.format : "auto",
       fit: ["contain", "cover"].includes(source.fit) ? source.fit : "contain"
     };
+  }
+
+  function isCompatiblePayload(payload) {
+    return !!payload && Number(payload.contentSchemaVersion) === CONTENT_SCHEMA_VERSION;
+  }
+
+  function getImageSlotLabel(image) {
+    if (image.closest(".portrait-cell")) return "Portrait";
+    if (image.closest(".wappen")) return "Wappen/Symbol";
+    const alt = image.getAttribute("alt") || "";
+    return isPlaceholderSrc(alt) ? "Bildplatzhalter" : alt || "Bildplatzhalter";
+  }
+
+  function getPlaceholderText(item) {
+    if (item.node.closest(".portrait-cell")) return "Portrait";
+    if (item.node.closest(".wappen")) return "+";
+    return String(item.label || "Bild")
+      .replace(/\.(png|jpe?g|webp|gif|svg)$/i, "")
+      .replace(/[_-]+/g, " ")
+      .trim() || "Bild";
   }
 
   function isPlaceholderImage(image) {

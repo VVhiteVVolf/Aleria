@@ -223,9 +223,11 @@ img {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  line-height: 1.2;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .orte-image-slot:empty::before {
@@ -238,8 +240,29 @@ img {
 
 .grossstadt-template .wappen .orte-image-slot,
 .grossstadt-template .portrait-cell .orte-image-slot {
-  min-height: 74px;
   max-width: 220px;
+}
+
+.grossstadt-template .wappen .orte-image-slot {
+  width: 34px;
+  min-height: 34px;
+}
+
+.grossstadt-template .wappen .orte-image-placeholder {
+  width: 30px;
+  min-height: 30px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.grossstadt-template .portrait-cell .orte-image-slot {
+  width: 200px;
+  min-height: 200px;
+}
+
+.grossstadt-template .portrait-cell .orte-image-placeholder {
+  min-height: 200px;
+  font-size: 14px;
 }
 
 .grossstadt-template .wappen .orte-image-slot img,
