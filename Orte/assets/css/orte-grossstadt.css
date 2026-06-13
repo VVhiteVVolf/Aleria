@@ -54,13 +54,6 @@ img {
   margin: 18px auto;
 }
 
-.grossstadt-template {
-  display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
-}
-
 .place-document {
   overflow-x: auto;
   padding: 0 0 0.75rem;
@@ -163,8 +156,11 @@ img {
 }
 
 .place-template-toc {
-  position: sticky;
-  top: 12px;
+  position: fixed;
+  top: 52px;
+  left: 12px;
+  z-index: 30;
+  width: 210px;
   max-height: calc(100vh - 24px);
   overflow: auto;
   padding: 8px;
@@ -173,6 +169,31 @@ img {
     var(--place-paper);
   border: 1px solid var(--place-border-dark);
   box-shadow: 0 12px 28px rgba(9, 6, 2, 0.34);
+  transform: translateX(0);
+  transition: transform 160ms ease;
+}
+
+.place-template-toc.is-collapsed {
+  transform: translateX(calc(-100% - 18px));
+}
+
+.place-template-toc-toggle {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 31;
+  min-width: 74px;
+  min-height: 32px;
+  padding: 5px 9px;
+  color: var(--place-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  border: 1px solid var(--place-border-dark);
+  border-radius: 3px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(9, 6, 2, 0.3);
 }
 
 .place-template-toc h2 {
@@ -216,6 +237,27 @@ img {
 .grossstadt-region-cell {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+}
+
+.grossstadt-region-toggle {
+  margin-top: 0.75rem;
+}
+
+.grossstadt-region-toggle > summary {
+  display: block;
+  padding: 7px 9px;
+  color: var(--place-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  border: 1px solid var(--place-border-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grossstadt-region-toggle > summary::marker {
+  color: var(--place-text-light);
 }
 
 .grossstadt-template b,

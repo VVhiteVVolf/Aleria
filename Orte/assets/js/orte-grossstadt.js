@@ -57,8 +57,9 @@
     if (!documentContainer || !headings.length || page.querySelector(".place-template-toc")) return;
 
     const nav = document.createElement("nav");
-    nav.className = "place-template-toc";
+    nav.className = "place-template-toc is-collapsed";
     nav.setAttribute("aria-label", "Inhaltsangabe");
+    nav.id = "place-template-toc";
     nav.innerHTML = `
       <h2>Inhalt</h2>
       <ol>
@@ -68,7 +69,21 @@
       </ol>
     `;
 
-    page.insertBefore(nav, documentContainer);
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "place-template-toc-toggle";
+    toggle.setAttribute("aria-controls", "place-template-toc");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.textContent = "Inhalt";
+
+    document.body.appendChild(toggle);
+    document.body.appendChild(nav);
+
+    toggle.addEventListener("click", () => {
+      const collapsed = nav.classList.toggle("is-collapsed");
+      toggle.setAttribute("aria-expanded", String(!collapsed));
+    });
+
     nav.addEventListener("click", (event) => {
       const link = event.target.closest("[data-toc-link]");
       if (!link) return;
@@ -77,6 +92,8 @@
       event.preventDefault();
       target.scrollIntoView({ block: "start", behavior: "smooth" });
       history.replaceState(null, "", `#${target.id}`);
+      nav.classList.add("is-collapsed");
+      toggle.setAttribute("aria-expanded", "false");
     });
 
     const updateActiveLink = throttle(() => {
