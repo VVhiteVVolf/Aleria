@@ -188,6 +188,13 @@ function buildHierarchyModuleEditorFields(page) {
       <div class="module-page-type-block${inferModulePageType(page) === 'hierarchy' ? ' visible' : ''}" data-page-type="hierarchy">
         <div class="module-editor-grid">
           <div class="module-editor-field">
+            <label>Layoutmodus</label>
+            <select class="me-hierarchy-layout-mode">
+              <option value="vertical"${hierarchy.layoutMode !== 'depth' ? ' selected' : ''}>Mockup / Stammbaum</option>
+              <option value="depth"${hierarchy.layoutMode === 'depth' ? ' selected' : ''}>Tiefenlayout / Spalten</option>
+            </select>
+          </div>
+          <div class="module-editor-field">
             <label>Kopfzeile</label>
             <input type="text" class="me-hierarchy-eyebrow" value="${escapeHtml(hierarchy.eyebrow)}">
           </div>
@@ -282,6 +289,7 @@ function collectHierarchyModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="hierarchy"]') || card;
   page.hierarchyPage = true;
   page.hierarchy = sanitizeHierarchyData({
+    layoutMode: getFormValue(block, '.me-hierarchy-layout-mode'),
     eyebrow: getTrimmedFormValue(block, '.me-hierarchy-eyebrow'),
     subtitle: getTrimmedFormValue(block, '.me-hierarchy-subtitle'),
     centerLabel: getTrimmedFormValue(block, '.me-hierarchy-center-label'),

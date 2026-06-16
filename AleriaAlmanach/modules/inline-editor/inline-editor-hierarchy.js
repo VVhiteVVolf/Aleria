@@ -203,6 +203,13 @@ function buildInlineHierarchyEditor(page) {
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Hierarchie-Akte</div>
       <div class="inline-edit-grid">
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Layoutmodus</span>
+          <select class="inline-edit-select" data-inline-action="update-hierarchy-field" data-hierarchy-field="layoutMode">
+            <option value="vertical"${data.layoutMode !== 'depth' ? ' selected' : ''}>Mockup / Stammbaum</option>
+            <option value="depth"${data.layoutMode === 'depth' ? ' selected' : ''}>Tiefenlayout / Spalten</option>
+          </select>
+        </div>
         ${[
           ['eyebrow', 'Kopfzeile'],
           ['subtitle', 'Unterzeile'],

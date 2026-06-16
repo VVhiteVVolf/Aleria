@@ -507,7 +507,9 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
 }
 
 function sanitizeHierarchyData(data = {}) {
+  const layoutMode = String(data.layoutMode || '').trim();
   return {
+    layoutMode: layoutMode === 'depth' ? 'depth' : 'vertical',
     eyebrow: String(data.eyebrow || 'Hierarchie').trim(),
     subtitle: String(data.subtitle || 'Organisationsstruktur').trim(),
     centerLabel: String(data.centerLabel || 'Gilde der Wahrheitswaage').trim(),

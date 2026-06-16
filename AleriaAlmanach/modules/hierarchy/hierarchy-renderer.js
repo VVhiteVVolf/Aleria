@@ -97,7 +97,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             ${data.chartIntro ? `<p>${sanitizeContentHtml(data.chartIntro)}</p>` : ''}
           </div>
           <div class="hierarchy-ornament-line"></div>
-          <div class="hierarchy-chart">
+          <div class="hierarchy-chart mode-${escapeHtml(data.layoutMode)}">
             ${levels.map(buildHierarchyLevel).join('')}
           </div>
         </main>

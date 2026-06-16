@@ -609,6 +609,7 @@ function createDefaultHierarchyPage(index = 0) {
     image: '',
     hierarchyPage: true,
     hierarchy: {
+      layoutMode: 'vertical',
       eyebrow: 'Hierarchie',
       subtitle: 'Organisationsstruktur der Gilde',
       centerLabel: 'Gilde der Wahrheitswaage',
