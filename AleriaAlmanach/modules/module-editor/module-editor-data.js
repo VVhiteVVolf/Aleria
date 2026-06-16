@@ -475,6 +475,63 @@ function sanitizeCourtData(data = {}) {
   };
 }
 
+function sanitizeHierarchyDetailRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      icon: String(item?.icon || '').trim(),
+      label: String(item?.label || item?.title || '').trim(),
+      value: String(item?.value || item?.text || '').trim()
+    }))
+    .filter(item => item.icon || item.label || item.value)
+    .slice(0, 12);
+}
+
+function sanitizeHierarchyNode(item = {}, index = 0) {
+  return {
+    portrait: String(item?.portrait || item?.image || item?.img || '').trim(),
+    title: String(item?.title || item?.name || `Rang ${index + 1}`).trim(),
+    subtitle: String(item?.subtitle || item?.role || '').trim(),
+    text: String(item?.text || item?.description || item?.detail || '').trim()
+  };
+}
+
+function sanitizeHierarchyLevel(level = {}, index = 0) {
+  const nodes = (Array.isArray(level?.nodes) ? level.nodes : [])
+    .map((node, nodeIndex) => sanitizeHierarchyNode(node, nodeIndex))
+    .filter(node => node.portrait || node.title || node.subtitle || node.text)
+    .slice(0, 4);
+  return {
+    label: String(level?.label || '').trim(),
+    nodes
+  };
+}
+
+function sanitizeHierarchyData(data = {}) {
+  return {
+    eyebrow: String(data.eyebrow || 'Hierarchie').trim(),
+    subtitle: String(data.subtitle || 'Organisationsstruktur').trim(),
+    centerLabel: String(data.centerLabel || 'Gilde der Wahrheitswaage').trim(),
+    emblem: String(data.emblem || '').trim(),
+    sideImage: String(data.sideImage || '').trim(),
+    organizationTitle: String(data.organizationTitle || 'Gilde der Wahrheitswaage').trim(),
+    motto: String(data.motto || 'Wissen. Gerechtigkeit. Balance.').trim(),
+    description: String(data.description || '').trim(),
+    detailsTitle: String(data.detailsTitle || 'Details').trim(),
+    details: sanitizeHierarchyDetailRows(data.details),
+    quoteLabel: String(data.quoteLabel || 'Wahrspruch').trim(),
+    quote: String(data.quote || '').trim(),
+    chartTitle: String(data.chartTitle || 'Aufbau & Raenge').trim(),
+    chartIntro: String(data.chartIntro || '').trim(),
+    levels: (Array.isArray(data.levels) ? data.levels : [])
+      .map((level, index) => sanitizeHierarchyLevel(level, index))
+      .filter(level => level.label || level.nodes.length)
+      .slice(0, 12),
+    footerNote: String(data.footerNote || '').trim(),
+    backLabel: String(data.backLabel || 'Zurueck zur Uebersicht').trim(),
+    printLabel: String(data.printLabel || 'Akte drucken').trim()
+  };
+}
+
 function sanitizeBiographyData(data = {}) {
   const lineArray = value => Array.isArray(value)
     ? value.map(item => String(item || '').trim()).filter(Boolean)

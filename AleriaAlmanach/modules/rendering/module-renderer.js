@@ -925,18 +925,16 @@ function getRenderedCardId(card, kind = 'card', index = 0) {
 function createDefaultRenderedCardLayout(cards = [], kind = 'card') {
   const ids = cards.map((card, index) => getRenderedCardId(card, kind, index));
   if (!ids.length) return [];
-  return [
-    {
+  const rows = [];
+  for (let index = 0; index < ids.length; index += 4) {
+    const cardIds = ids.slice(index, index + 4);
+    rows.push({
       type: 'row',
-      columns: Math.min(3, ids.slice(0, 3).length),
-      cardIds: ids.slice(0, 3)
-    },
-    ...ids.slice(3).map(id => ({
-      type: 'row',
-      columns: 1,
-      cardIds: [id]
-    }))
-  ];
+      columns: Math.min(4, cardIds.length),
+      cardIds
+    });
+  }
+  return rows;
 }
 
 function normalizeRenderedCardLayout(layout = [], cards = [], kind = 'card') {
@@ -954,10 +952,10 @@ function normalizeRenderedCardLayout(layout = [], cards = [], kind = 'card') {
       const rawCardIds = (Array.isArray(block?.cardIds) ? block.cardIds : [])
         .map(id => String(id || '').trim())
         .filter(id => validIds.has(id))
-        .slice(0, 3);
+        .slice(0, 4);
       const cardIds = rawCardIds.filter(id => !usedIds.has(id) && usedIds.add(id));
       if (!cardIds.length) return null;
-      const columns = Math.max(1, Math.min(3, Number(block?.columns) || cardIds.length));
+      const columns = Math.max(1, Math.min(4, Number(block?.columns) || cardIds.length));
       return { type, columns: Math.min(columns, cardIds.length), cardIds };
     }
     return null;
@@ -986,7 +984,7 @@ function buildCardLayoutBlocks(layout, cards, renderCard, kind = 'card') {
       .filter(Boolean)
       .map(renderCard)
       .join('');
-    const columns = Math.max(1, Math.min(3, block.columns || 1));
+    const columns = Math.max(1, Math.min(4, block.columns || 1));
     return `
       <div class="module-card-layout-row cols-${columns}">
         ${cardsHtml}

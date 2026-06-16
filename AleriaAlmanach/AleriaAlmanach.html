@@ -20,12 +20,13 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260611-compact-character-grid-v1">
-<link rel="stylesheet" href="./styles/module-editor.css?v=20260616-card-hierarchy-v1">
+<link rel="stylesheet" href="./styles/module-editor.css?v=20260616-hierarchy-template-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260616-card-hierarchy-v1">
-<link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-layout-cols-v1">
+<link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-tree-v1">
+<link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20260616-hierarchy-template-v1">
 <link rel="stylesheet" href="./styles/module-page-caste.css?v=20260604-caste-image-scale-v1">
 <link rel="stylesheet" href="./styles/module-page-court.css?v=20260604-module-image-fixes-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
@@ -37,7 +38,7 @@
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260616-scene-time-v1"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20260616-dashboard-insights-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260616-scene-time-v1" defer></script>
@@ -50,10 +51,10 @@
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-preview.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-data.js?v=20260604-caste-image-scale-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-data.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260604-caste-fixes-v1" defer></script>
   <script src="./modules/court/court-editor-schema.js?v=20260603-court-editor-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260603-court-renderer-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260614-section-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260603-module-editor-fields-v2" defer></script>
@@ -61,7 +62,7 @@
   <script src="./modules/module-editor/module-editor-comment-blocks.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-page-cards.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/module-editor/module-editor-artifact.js?v=20260603-module-editor-fields-v2" defer></script>
-  <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-hierarchy-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260520-cleanup-v1" defer></script>
@@ -72,28 +73,31 @@
   <script src="./modules/module-editor/module-editor-tournament.js?v=20260603-module-editor-fields-v1" defer></script>
   <script src="./modules/module-editor/module-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-hierarchy.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260611-editor-checkup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260614-section-hierarchy-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260616-card-hierarchy-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-state.js?v=20260616-inline-scroll-restore-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260604-scene-comments-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-inline-card-hierarchy-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-wanted.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament.js?v=20260603-inline-tournament-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-artifact-recipe.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20260611-page-isolation-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260616-hierarchy-template-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260603-inline-biography-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-quest.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-events.js?v=20260616-inline-card-hierarchy-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-events.js?v=20260616-hierarchy-template-v1" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260604-module-image-fixes-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260616-card-layout-cols-v1" defer></script>
+  <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260616-hierarchy-template-v1" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20260616-archive-card-preview-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260616-folder-card-polish-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260616-dashboard-insights-v1" defer></script>
@@ -896,6 +900,7 @@
                   <option value="recipe">Rezeptur & Ritual - Template</option>
                   <option value="scene">Abgeschlossenes Gespräch - Template</option>
                   <option value="session">Interaktive Szene - Template</option>
+                  <option value="hierarchy">Hierarchie - Template</option>
                   <option value="object-profile">Biographie-Template</option>
                   <option value="bestiary">Bestiarium - Template</option>
                   <option value="quest-file">Questakte - Template</option>
@@ -960,6 +965,7 @@
               <option value="recipe">Rezeptur & Ritual - Template</option>
               <option value="scene">Abgeschlossenes Gespräch - Template</option>
               <option value="session">Interaktive Szene - Template</option>
+              <option value="hierarchy">Hierarchie - Template</option>
               <option value="object-profile">Biographie-Template</option>
               <option value="bestiary">Bestiarium - Template</option>
               <option value="quest-file">Questakte - Template</option>

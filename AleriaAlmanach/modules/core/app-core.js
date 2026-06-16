@@ -217,12 +217,12 @@ function sanitizeModuleCardLayoutBlocks(blocks, validCardIds = []) {
     }
 
     if (type === 'row') {
-      const columns = Math.max(1, Math.min(3, Number(block?.columns) || 1));
+      const columns = Math.max(1, Math.min(4, Number(block?.columns) || 1));
       const seenCards = new Set();
       const rawCardIds = (Array.isArray(block?.cardIds) ? block.cardIds : [])
         .map(cardId => String(cardId || '').trim())
         .filter(cardId => validIds.has(cardId) && !seenCards.has(cardId) && seenCards.add(cardId))
-        .slice(0, 3);
+        .slice(0, 4);
       const cardIds = rawCardIds.filter(cardId => !usedCardIds.has(cardId) && usedCardIds.add(cardId));
       if (!cardIds.length) return null;
       return { id, type, columns: Math.max(1, Math.min(columns, cardIds.length)), cardIds };
@@ -257,7 +257,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -358,6 +358,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.courtPage) {
     next.court = sanitizeCourtData(page.court);
+  }
+
+  if (page.hierarchyPage) {
+    next.hierarchy = sanitizeHierarchyData(page.hierarchy);
   }
 
   if (page.biographyPage) {

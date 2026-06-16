@@ -346,7 +346,7 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="rerender-entry-field" data-entry-field="subtitle" value="${escapeHtml(entry.subtitle || '')}">
         </div>
         ${buildInlineSectionPicker()}
-        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'wanted' ? 'wanted' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
+        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'wanted' ? 'wanted' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
         ${buildInlineModuleSizeControls(entry)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Typ</span>
@@ -407,6 +407,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'tournament-league') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTournamentLeagueEditor(page)}</div>`;
   if (type === 'caste') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineCasteEditor(page)}</div>`;
   if (type === 'court') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineCourtEditor(page)}</div>`;
+  if (type === 'hierarchy') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineHierarchyEditor(page)}</div>`;
   if (type === 'biography') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}</div>`;
   if (type === 'bestiary') return `<div class="inline-edit-shell">${buildInlineBestiaryEditor(entry, page)}</div>`;
   if (type === 'quest-file') return `<div class="inline-edit-shell">${buildInlineQuestFileEditor(entry, page)}</div>`;

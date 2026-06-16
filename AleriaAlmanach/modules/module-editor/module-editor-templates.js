@@ -603,6 +603,69 @@ function createDefaultSceneSessionPage(index = 0) {
   };
 }
 
+function createDefaultHierarchyPage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} — Hierarchie`,
+    image: '',
+    hierarchyPage: true,
+    hierarchy: {
+      eyebrow: 'Hierarchie',
+      subtitle: 'Organisationsstruktur der Gilde',
+      centerLabel: 'Gilde der Wahrheitswaage',
+      emblem: '',
+      sideImage: '',
+      organizationTitle: 'Gilde der Wahrheitswaage',
+      motto: 'Wissen. Gerechtigkeit. Balance.',
+      description: 'Die Gilde der Wahrheitswaage widmet sich der Aufzeichnung, Pruefung und Bewahrung von Gesetzen. Ihre Mitglieder sorgen fuer Recht und Ordnung und vertreten die Interessen der Gilde vor Krone und Gericht.',
+      detailsTitle: 'Details',
+      details: [
+        { icon: '*', label: 'Gegruendet', value: 'Rondra 873' },
+        { icon: '*', label: 'Hauptsitz', value: 'Valdoria' },
+        { icon: '*', label: 'Zweck', value: 'Rechtspflege, Gesetzeskunde, Beratung der Krone' },
+        { icon: '*', label: 'Mitglieder', value: '132 aktive Mitglieder' }
+      ],
+      quoteLabel: 'Wahrspruch',
+      quote: 'Gerechtigkeit ist nicht das, was geschrieben steht, sondern das, was Bestand hat.',
+      chartTitle: 'Aufbau & Raenge',
+      chartIntro: 'Die Gilde ist in verschiedene Raenge und Aemter unterteilt. Jeder Rang traegt spezifische Verantwortung innerhalb der Hierarchie.',
+      levels: [
+        {
+          label: '',
+          nodes: [
+            { portrait: '', title: 'Gildenmeister', subtitle: '', text: 'Oberhaupt der Gilde. Trifft finale Entscheidungen und vertritt die Gilde vor der Krone.' }
+          ]
+        },
+        {
+          label: '',
+          nodes: [
+            { portrait: '', title: 'Hoher Richter', subtitle: '', text: 'Leitet die Gerichtstaetigkeit der Gilde und spricht Urteile in wichtigen Faellen.' },
+            { portrait: '', title: 'Siegelmeister', subtitle: '', text: 'Verantwortlich fuer die Beglaubigung von Dokumenten und das Gildensiegel.' },
+            { portrait: '', title: 'Kanzler', subtitle: '', text: 'Verwaltet die Finanzen, Vertraege und diplomatischen Beziehungen der Gilde.' }
+          ]
+        },
+        {
+          label: '',
+          nodes: [
+            { portrait: '', title: 'Gerichtsschreiber', subtitle: '', text: 'Protokolliert Verhandlungen und fuehrt die Akten der Gerichtsprozesse.' },
+            { portrait: '', title: 'Rechtspfleger', subtitle: '', text: 'Beraet Buerger in Rechtsfragen und unterstuetzt Anwaelte.' },
+            { portrait: '', title: 'Urkundenwart', subtitle: '', text: 'Bewahrt wichtige Urkunden und Archive der Gilde sicher auf.' },
+            { portrait: '', title: 'Bote der Gilde', subtitle: '', text: 'Ueberbringt Schreiben, Ladungen und offizielle Mitteilungen.' }
+          ]
+        },
+        {
+          label: '',
+          nodes: [
+            { portrait: '', title: 'Gesellen & Lehrlinge', subtitle: '', text: 'Die Grundlage der Gilde. Sie unterstuetzen die Arbeit der hoeheren Raenge und werden ausgebildet.' }
+          ]
+        }
+      ],
+      footerNote: 'Raenge und Zustaendigkeiten koennen je nach Gildensatzung und Gildenordnung variieren.',
+      backLabel: 'Zurueck zur Uebersicht',
+      printLabel: 'Akte drucken'
+    }
+  };
+}
+
 const MODULE_TEMPLATE_REGISTRY = {
   story: {
     id: 'story',
@@ -717,6 +780,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectSessionModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildSessionPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineSessionTemplatePage(page, entry, pageIndex, total)
+  },
+  hierarchy: {
+    id: 'hierarchy',
+    pageType: 'hierarchy',
+    pageFlag: 'hierarchyPage',
+    label: 'Hierarchie - Template',
+    pageLabel: 'Hierarchie - Template',
+    defaultTitle: 'Neue Hierarchie',
+    defaultSubtitle: 'Organisationsstruktur und Raenge',
+    entryType: 'Hierarchie',
+    typeMatchers: ['hierarchie', 'organigramm', 'organisation', 'rangstruktur'],
+    createPages: () => [createDefaultHierarchyPage(0)],
+    createPage: index => createDefaultHierarchyPage(index),
+    buildEditorFields: page => buildHierarchyModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectHierarchyModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildHierarchyPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'hierarchy')
   },
   'object-profile': {
     id: 'object-profile',

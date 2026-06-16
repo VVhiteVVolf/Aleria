@@ -34,6 +34,13 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-caste-list-row',
   'add-court-list-row',
   'remove-court-list-row',
+  'add-hierarchy-detail',
+  'remove-hierarchy-detail',
+  'add-hierarchy-level',
+  'remove-hierarchy-level',
+  'move-hierarchy-level',
+  'add-hierarchy-node',
+  'remove-hierarchy-node',
   'add-tleague-row',
   'remove-tleague-row',
   'add-tournament-line-row',
@@ -216,6 +223,40 @@ function handleInlineEditorActionClick(event) {
     );
     return;
   }
+  if (action === 'add-hierarchy-detail') {
+    addInlineHierarchyDetail();
+    return;
+  }
+  if (action === 'remove-hierarchy-detail') {
+    removeInlineHierarchyDetail(Number(trigger.dataset.hierarchyDetailIndex) || 0);
+    return;
+  }
+  if (action === 'add-hierarchy-level') {
+    addInlineHierarchyLevel();
+    return;
+  }
+  if (action === 'remove-hierarchy-level') {
+    removeInlineHierarchyLevel(Number(trigger.dataset.hierarchyLevelIndex) || 0);
+    return;
+  }
+  if (action === 'move-hierarchy-level') {
+    moveInlineHierarchyLevel(
+      Number(trigger.dataset.hierarchyLevelIndex) || 0,
+      Number(trigger.dataset.hierarchyDirection) || 0
+    );
+    return;
+  }
+  if (action === 'add-hierarchy-node') {
+    addInlineHierarchyNode(Number(trigger.dataset.hierarchyLevelIndex) || 0);
+    return;
+  }
+  if (action === 'remove-hierarchy-node') {
+    removeInlineHierarchyNode(
+      Number(trigger.dataset.hierarchyLevelIndex) || 0,
+      Number(trigger.dataset.hierarchyNodeIndex) || 0
+    );
+    return;
+  }
   if (action === 'add-tleague-row') {
     addInlineTournamentLeagueRow(trigger.dataset.tleagueList || '');
     return;
@@ -392,6 +433,22 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-court-list-field') {
     updateInlineCourtListField(field);
+    return;
+  }
+  if (action === 'update-hierarchy-field') {
+    updateInlineHierarchyField(field);
+    return;
+  }
+  if (action === 'update-hierarchy-detail-field') {
+    updateInlineHierarchyDetailField(field);
+    return;
+  }
+  if (action === 'update-hierarchy-level-field') {
+    updateInlineHierarchyLevelField(field);
+    return;
+  }
+  if (action === 'update-hierarchy-node-field') {
+    updateInlineHierarchyNodeField(field);
     return;
   }
   if (action === 'update-tleague-field') {

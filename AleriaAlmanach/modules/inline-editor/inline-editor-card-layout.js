@@ -75,11 +75,11 @@ function buildInlineCardLayoutBlockMarkup(kind, block, index, cards = []) {
       </div>`;
   }
 
-  const columns = Math.max(1, Math.min(3, Number(block.columns) || 1));
+  const columns = Math.max(1, Math.min(4, Number(block.columns) || 1));
   return `
     <div class="module-card-layout-block" data-inline-layout-block>
       <div class="module-card-layout-block-head">
-        <div class="inline-edit-kicker">Kartenreihe ${index + 1}</div>
+        <div class="inline-edit-kicker">Hierarchieebene ${index + 1}</div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-card-layout-block" data-layout-kind="${escapeHtml(kind)}" data-layout-index="${index}" data-layout-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-card-layout-block" data-layout-kind="${escapeHtml(kind)}" data-layout-index="${index}" data-layout-direction="1">Runter</button>
@@ -88,14 +88,15 @@ function buildInlineCardLayoutBlockMarkup(kind, block, index, cards = []) {
       </div>
       <div class="module-card-layout-row-editor">
         <div class="inline-edit-field">
-          <span class="inline-edit-label">Karten in Reihe</span>
+          <span class="inline-edit-label">Karten in Ebene</span>
           <select class="inline-edit-select" data-inline-action="update-card-layout-row" data-layout-kind="${escapeHtml(kind)}" data-layout-index="${index}" data-layout-field="columns">
             <option value="1"${columns === 1 ? ' selected' : ''}>1 Karte</option>
             <option value="2"${columns === 2 ? ' selected' : ''}>2 Karten</option>
             <option value="3"${columns === 3 ? ' selected' : ''}>3 Karten</option>
+            <option value="4"${columns === 4 ? ' selected' : ''}>4 Karten</option>
           </select>
         </div>
-        ${[0, 1, 2].map(slot => `
+        ${[0, 1, 2, 3].map(slot => `
           <div class="inline-edit-field">
             <span class="inline-edit-label">Position ${slot + 1}</span>
             <select class="inline-edit-select" data-inline-action="update-card-layout-row" data-layout-kind="${escapeHtml(kind)}" data-layout-index="${index}" data-layout-field="card" data-layout-slot="${slot}">
@@ -115,11 +116,11 @@ function buildInlineCardLayoutEditor(kind, page) {
       <div class="module-card-layout-toolbar">
         <div>
           <div class="inline-edit-kicker">Hierarchie / Darstellung</div>
-          <div class="module-editor-help">Setze Trenner und bestimme pro Reihe, ob eine, zwei oder drei Karten nebeneinander stehen.</div>
+          <div class="module-editor-help">Setze Trenner und baue Ebenen wie einen Stammbaum. Jede Ebene kann 1 bis 4 Karten tragen.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-inline-action="add-card-layout-heading" data-layout-kind="${escapeHtml(kind)}">+ Trenner</button>
-          <button class="module-editor-mini-btn" type="button" data-inline-action="add-card-layout-row" data-layout-kind="${escapeHtml(kind)}">+ Reihe</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-card-layout-row" data-layout-kind="${escapeHtml(kind)}">+ Ebene</button>
         </div>
       </div>
       <div class="module-card-layout-blocks">
@@ -209,13 +210,13 @@ function updateInlineCardLayoutRow(input) {
   if (!block || block.type !== 'row') return;
 
   if (input.dataset.layoutField === 'columns') {
-    block.columns = Math.max(1, Math.min(3, Number(input.value) || 1));
+    block.columns = Math.max(1, Math.min(4, Number(input.value) || 1));
   } else {
-    const slot = Math.max(0, Math.min(2, Number(input.dataset.layoutSlot) || 0));
-    block.cardIds = Array.isArray(block.cardIds) ? block.cardIds.slice(0, 3) : [];
+    const slot = Math.max(0, Math.min(3, Number(input.dataset.layoutSlot) || 0));
+    block.cardIds = Array.isArray(block.cardIds) ? block.cardIds.slice(0, 4) : [];
     block.cardIds[slot] = String(input.value || '').trim();
     block.cardIds = block.cardIds.filter(Boolean);
-    block.columns = Math.max(1, Math.min(3, Number(block.columns) || block.cardIds.length || 1));
+    block.columns = Math.max(1, Math.min(4, Number(block.columns) || block.cardIds.length || 1));
   }
 
   page[config.layoutKey] = layout;

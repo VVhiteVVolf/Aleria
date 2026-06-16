@@ -1001,9 +1001,30 @@
   }
   .module-card-layout-row-editor {
     display: grid;
-    grid-template-columns: minmax(7rem, 0.55fr) repeat(3, minmax(8rem, 1fr));
+    grid-template-columns: minmax(7rem, 0.55fr) repeat(4, minmax(7rem, 1fr));
     gap: 0.5rem;
     align-items: end;
+  }
+  .hierarchy-editor-detail-list,
+  .hierarchy-editor-level-list,
+  .hierarchy-editor-node-list,
+  .hierarchy-inline-node-list {
+    display: grid;
+    gap: 0.65rem;
+  }
+  .hierarchy-editor-detail-row {
+    display: grid;
+    grid-template-columns: minmax(3.5rem, 0.35fr) minmax(8rem, 0.9fr) minmax(0, 1.35fr) auto;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .hierarchy-editor-node-row,
+  .hierarchy-inline-node-row {
+    border: 1px solid rgba(139,105,20,0.16);
+    background: rgba(255,248,230,0.2);
+    padding: 0.65rem;
+    display: grid;
+    gap: 0.55rem;
   }
   @media (max-width: 760px) {
     .module-card-layout-toolbar,
@@ -1012,7 +1033,8 @@
       align-items: stretch;
     }
 
-    .module-card-layout-row-editor {
+    .module-card-layout-row-editor,
+    .hierarchy-editor-detail-row {
       grid-template-columns: 1fr;
     }
   }

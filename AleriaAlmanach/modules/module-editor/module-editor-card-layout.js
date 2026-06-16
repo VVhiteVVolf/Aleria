@@ -62,8 +62,8 @@ function getModuleCardLayoutBlocks(page, kind = 'profiles') {
 function createDefaultModuleCardLayout(cards = [], kind = 'profiles') {
   const ids = cards.map((card, index) => normalizeModuleEditorCardId(card?.id, getModuleCardLayoutConfig(kind).cardPrefix, index));
   if (!ids.length) return [];
-  const firstRow = ids.slice(0, 3);
-  const remainingRows = ids.slice(3).map((id, index) => ({
+  const firstRow = ids.slice(0, 4);
+  const remainingRows = ids.slice(4).map((id, index) => ({
     id: createModuleEditorCardEntityId('layout-row'),
     type: 'row',
     columns: 1,
@@ -73,7 +73,7 @@ function createDefaultModuleCardLayout(cards = [], kind = 'profiles') {
     {
       id: createModuleEditorCardEntityId('layout-row'),
       type: 'row',
-      columns: Math.min(3, firstRow.length),
+      columns: Math.min(4, firstRow.length),
       cardIds: firstRow
     },
     ...remainingRows
@@ -98,13 +98,13 @@ function normalizeModuleCardLayoutForEditor(layout = [], cards = [], kind = 'pro
       const rawCardIds = (Array.isArray(block.cardIds) ? block.cardIds : [])
         .map(id => String(id || '').trim())
         .filter(id => validIds.has(id) && !seen.has(id) && seen.add(id))
-        .slice(0, 3);
+        .slice(0, 4);
       const cardIds = rawCardIds.filter(id => !usedIds.has(id) && usedIds.add(id));
       if (!cardIds.length) return null;
       return {
         id: normalizeModuleEditorCardId(block.id, 'layout', index),
         type,
-        columns: Math.max(1, Math.min(3, Number(block.columns) || cardIds.length || 1)),
+        columns: Math.max(1, Math.min(4, Number(block.columns) || cardIds.length || 1)),
         cardIds
       };
     }
@@ -166,13 +166,13 @@ function buildModuleCardLayoutBlockMarkup(block, index, cards = []) {
       </div>`;
   }
 
-  const columns = Math.max(1, Math.min(3, Number(block.columns) || 1));
+  const columns = Math.max(1, Math.min(4, Number(block.columns) || 1));
   return `
     <div class="module-card-layout-block" data-layout-block-type="row">
       <input type="hidden" class="me-card-layout-id" value="${escapeHtml(block.id || createModuleEditorCardEntityId('layout-row'))}">
       <input type="hidden" class="me-card-layout-type" value="row">
       <div class="module-card-layout-block-head">
-        <div class="inline-edit-kicker">Kartenreihe ${index + 1}</div>
+        <div class="inline-edit-kicker">Hierarchieebene ${index + 1}</div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-card-layout-block" data-layout-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-card-layout-block" data-layout-direction="1">Runter</button>
@@ -181,14 +181,15 @@ function buildModuleCardLayoutBlockMarkup(block, index, cards = []) {
       </div>
       <div class="module-card-layout-row-editor">
         <div class="module-editor-field">
-          <label>Karten in dieser Reihe</label>
+          <label>Karten in dieser Ebene</label>
           <select class="me-card-layout-columns">
             <option value="1"${columns === 1 ? ' selected' : ''}>1 Karte</option>
             <option value="2"${columns === 2 ? ' selected' : ''}>2 Karten</option>
             <option value="3"${columns === 3 ? ' selected' : ''}>3 Karten</option>
+            <option value="4"${columns === 4 ? ' selected' : ''}>4 Karten</option>
           </select>
         </div>
-        ${[0, 1, 2].map(slot => `
+        ${[0, 1, 2, 3].map(slot => `
           <div class="module-editor-field">
             <label>Position ${slot + 1}</label>
             <select class="me-card-layout-card-id">
@@ -208,11 +209,11 @@ function buildModuleCardLayoutEditor(kind, layout, cards) {
       <div class="module-card-layout-toolbar">
         <div>
           <div class="inline-edit-kicker">Hierarchie / Darstellung</div>
-          <div class="module-editor-help">Reihen bestimmen, ob eine, zwei oder drei Karten nebeneinander stehen. Ohne eigenes Layout stehen die ersten drei Karten oben; ab Karte 4 wird einzeln darunter gestapelt.</div>
+          <div class="module-editor-help">Baue Stammbaum-Ebenen von oben nach unten. Jede Ebene kann 1 bis 4 Karten tragen; darunter darf wieder 1, 2, 3 oder 4 folgen.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-card-layout-heading" data-layout-kind="${escapeHtml(kind)}">+ Trenner</button>
-          <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-card-layout-row" data-layout-kind="${escapeHtml(kind)}">+ Reihe</button>
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-card-layout-row" data-layout-kind="${escapeHtml(kind)}">+ Ebene</button>
         </div>
       </div>
       <div class="module-card-layout-blocks">
@@ -234,7 +235,7 @@ function collectModuleCardLayoutFromCard(pageCard, kind = 'profiles') {
         return title || subtitle ? { id, type, title, subtitle } : null;
       }
       if (type === 'row') {
-        const columns = Math.max(1, Math.min(3, Number(getFormValue(block, '.me-card-layout-columns')) || 1));
+        const columns = Math.max(1, Math.min(4, Number(getFormValue(block, '.me-card-layout-columns')) || 1));
         const seen = new Set();
         const cardIds = Array.from(block.querySelectorAll('.me-card-layout-card-id'))
           .slice(0, columns)

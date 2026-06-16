@@ -59,6 +59,13 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-caste-row',
   'add-court-row',
   'remove-court-row',
+  'add-hierarchy-detail',
+  'remove-hierarchy-detail',
+  'add-hierarchy-level',
+  'remove-hierarchy-level',
+  'move-hierarchy-level',
+  'add-hierarchy-node',
+  'remove-hierarchy-node',
   'add-biography-connection-row',
   'remove-biography-connection-row',
   'add-biography-document-row',
@@ -314,6 +321,34 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-court-row') {
     removeModuleCourtRow(trigger);
+    return;
+  }
+  if (action === 'add-hierarchy-detail') {
+    addModuleHierarchyDetail(trigger);
+    return;
+  }
+  if (action === 'remove-hierarchy-detail') {
+    removeModuleHierarchyDetail(trigger);
+    return;
+  }
+  if (action === 'add-hierarchy-level') {
+    addModuleHierarchyLevel(trigger);
+    return;
+  }
+  if (action === 'remove-hierarchy-level') {
+    removeModuleHierarchyLevel(trigger);
+    return;
+  }
+  if (action === 'move-hierarchy-level') {
+    moveModuleHierarchyLevel(trigger);
+    return;
+  }
+  if (action === 'add-hierarchy-node') {
+    addModuleHierarchyNode(trigger);
+    return;
+  }
+  if (action === 'remove-hierarchy-node') {
+    removeModuleHierarchyNode(trigger);
     return;
   }
   if (action === 'add-biography-connection-row') {
