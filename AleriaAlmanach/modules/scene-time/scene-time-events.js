@@ -22,9 +22,31 @@ function getSceneTimeEventCommentText(event) {
     .join('\n\n');
 }
 
+function getNextSceneTimeSegmentIndex(threadId) {
+  const comments = typeof sortCommentsByTimeline === 'function'
+    ? sortCommentsByTimeline(_commentCache[String(threadId || '')] || [])
+    : (_commentCache[String(threadId || '')] || []);
+  return comments.filter(comment => (
+    isSceneTimeEventComment(comment) &&
+    isSceneTimeSegmentBreakEvent(comment)
+  )).length + 1;
+}
+
+function prepareSceneTimeEventForThread(eventInput, threadId) {
+  const event = normalizeSceneTimeEvent(eventInput);
+  if (!isSceneTimeSegmentBreakEvent(event)) return event;
+  const segmentLabel = getSceneTimeEventSegmentLabel(event, getNextSceneTimeSegmentIndex(threadId));
+  return normalizeSceneTimeEvent({
+    ...event,
+    segmentBreak: true,
+    segmentLabel,
+    dayLabel: event.dayLabel || segmentLabel
+  });
+}
+
 async function submitSceneTimeEvent() {
   const threadId = getCurrentCommentThreadId();
-  const event = getSceneTimeDialogPayload();
+  const event = prepareSceneTimeEventForThread(getSceneTimeDialogPayload(), threadId);
   if (!threadId) {
     setSceneTimeEventStatus('Kein aktiver Szenen-Thread gefunden.', 'error');
     return;

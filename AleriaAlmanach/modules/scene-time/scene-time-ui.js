@@ -159,9 +159,15 @@ function setSceneTimePreset(presetKey) {
   const presetInput = document.getElementById('ste-preset');
   const title = document.getElementById('ste-title');
   const timeLabel = document.getElementById('ste-time-label');
+  const dayLabel = document.getElementById('ste-day-label');
   if (presetInput) presetInput.value = preset.key;
   if (title && !title.dataset.userEdited) title.value = preset.title;
   if (timeLabel && !timeLabel.dataset.userEdited) timeLabel.value = preset.timeLabel;
+  if (dayLabel) {
+    dayLabel.placeholder = isSceneTimeSegmentBreakPreset(preset.key)
+      ? 'Leer lassen fuer Tag I, Tag II ...'
+      : 'Tag 1, spaeter Abend';
+  }
   document.querySelectorAll('[data-scene-time-preset]').forEach(btn => {
     const active = btn.dataset.sceneTimePreset === preset.key;
     btn.classList.toggle('active', active);

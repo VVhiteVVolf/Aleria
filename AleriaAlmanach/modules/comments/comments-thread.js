@@ -159,7 +159,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
   let pageTarget = options.page;
   const applyPageTarget = comments => {
     if (pageTarget == null) return;
-    setCommentPageTarget(entryId, pageTarget, comments.length);
+    setCommentPageTarget(entryId, pageTarget, comments);
     pageTarget = null;
   };
 
@@ -232,7 +232,7 @@ function renderCommentsToScroll(scroll, comments) {
       </div>`;
   } else {
     const renderedComments = visibleComments.map((c, i) => {
-      const absoluteIndex = pageInfo.startIndex + i;
+      const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;
       return `${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
     }).join('');
     scroll.innerHTML = `${paginationTop}${renderedComments}${paginationBottom}`;
@@ -276,5 +276,4 @@ function findCachedCommentById(commentId) {
 // Comment edit logic lives in modules/comments/comments-edit.js.
 
 // Comment delete logic lives in modules/comments/comments-delete.js.
-
 

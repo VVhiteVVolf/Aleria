@@ -912,7 +912,7 @@
     font-size: 0.56rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
   }
   .comment-pagination-actions {
     display: flex;
@@ -938,7 +938,10 @@
     transition: background 0.15s, border-color 0.15s, color 0.15s;
   }
   .comment-pagination-page {
-    padding-inline: 0.25rem;
+    max-width: 12rem;
+    padding-inline: 0.42rem;
+    overflow-wrap: anywhere;
+    line-height: 1.15;
   }
   .comment-pagination-btn:hover,
   .comment-pagination-page:hover,
