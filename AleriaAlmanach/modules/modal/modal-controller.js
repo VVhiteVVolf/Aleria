@@ -65,10 +65,14 @@ function renderPage(idx, dir) {
   const page = pages[idx];
   const body = document.getElementById('modal-body');
   const html = buildPage(page, entry, idx, pages.length);
+  const inlineViewportState = dir === 0 && typeof captureInlineModuleViewportState === 'function'
+    ? captureInlineModuleViewportState()
+    : null;
 
   if (dir === 0) {
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
+    if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
     return;
   }
 
@@ -78,6 +82,7 @@ function renderPage(idx, dir) {
   if (!oldPage) {
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
+    if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
     return;
   }
 

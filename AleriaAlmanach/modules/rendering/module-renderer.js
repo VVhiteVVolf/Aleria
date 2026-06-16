@@ -986,8 +986,9 @@ function buildCardLayoutBlocks(layout, cards, renderCard, kind = 'card') {
       .filter(Boolean)
       .map(renderCard)
       .join('');
+    const columns = Math.max(1, Math.min(3, block.columns || 1));
     return `
-      <div class="module-card-layout-row" style="--card-layout-cols:${Math.max(1, Math.min(3, block.columns || 1))}">
+      <div class="module-card-layout-row cols-${columns}">
         ${cardsHtml}
       </div>`;
   }).join('');

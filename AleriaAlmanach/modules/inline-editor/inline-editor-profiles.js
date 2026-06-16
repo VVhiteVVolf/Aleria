@@ -98,6 +98,7 @@ function buildInlineProfileEditor(page) {
           <input class="inline-edit-input" type="text" data-inline-action="update-profile-field" data-profile-field="profileTitle" value="${escapeHtml(page.profileTitle || '')}">
         </div>
       </div>
+      ${buildInlineCardLayoutEditor('profiles', page)}
       <div class="inline-profile-card-editor">
         ${profiles.map((profile, profileIndex) => `
           <div class="inline-profile-card">
@@ -146,7 +147,5 @@ function buildInlineProfileEditor(page) {
             </div>
           </div>`).join('')}
       </div>
-      ${buildInlineCardLayoutEditor('profiles', page)}
     </div>`;
 }
-

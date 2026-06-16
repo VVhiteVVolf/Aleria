@@ -57,6 +57,7 @@ function buildInlineWantedEditor(page) {
           <input class="inline-edit-input" type="url" data-inline-action="update-wanted-field" data-wanted-field="wantedBackground" value="${escapeHtml(page.wantedBackground || '')}" placeholder="Imgur-Link oder Bild-URL">
         </div>
       </div>
+      ${buildInlineCardLayoutEditor('wanted', page)}
       <div class="inline-profile-card-editor">
         ${cards.map((item, wantedIndex) => `
           <div class="inline-profile-card">
@@ -105,7 +106,5 @@ function buildInlineWantedEditor(page) {
             </div>
           </div>`).join('')}
       </div>
-      ${buildInlineCardLayoutEditor('wanted', page)}
     </div>`;
 }
-

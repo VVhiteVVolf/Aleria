@@ -5,6 +5,35 @@ let _inlineModuleEdit = null;
 let _inlinePreviewRefreshTimer = null;
 let _inlineEditorEventSource = null;
 
+function captureInlineModuleViewportState() {
+  if (!_inlineModuleEdit?.active) return null;
+  const editPane = document.querySelector('.inline-module-edit-pane');
+  const previewStage = document.querySelector('.inline-module-preview-stage');
+  if (!editPane && !previewStage) return null;
+  return {
+    editTop: editPane?.scrollTop || 0,
+    editLeft: editPane?.scrollLeft || 0,
+    previewTop: previewStage?.scrollTop || 0,
+    previewLeft: previewStage?.scrollLeft || 0
+  };
+}
+
+function restoreInlineModuleViewportState(state) {
+  if (!state || !_inlineModuleEdit?.active) return;
+  requestAnimationFrame(() => {
+    const editPane = document.querySelector('.inline-module-edit-pane');
+    const previewStage = document.querySelector('.inline-module-preview-stage');
+    if (editPane) {
+      editPane.scrollTop = state.editTop || 0;
+      editPane.scrollLeft = state.editLeft || 0;
+    }
+    if (previewStage) {
+      previewStage.scrollTop = state.previewTop || 0;
+      previewStage.scrollLeft = state.previewLeft || 0;
+    }
+  });
+}
+
 function getInlineModuleEditSignature(context = _inlineModuleEdit) {
   if (!context?.draft) return '';
   try {
