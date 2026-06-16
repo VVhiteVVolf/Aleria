@@ -381,10 +381,6 @@
   grid-template-columns: minmax(18rem, 25rem);
 }
 
-.hierarchy-chart-level.cols-1:not(:first-child) .hierarchy-level-nodes {
-  grid-template-columns: minmax(20rem, min(100%, 54rem));
-}
-
 .hierarchy-chart-level.cols-2 .hierarchy-level-nodes {
   grid-template-columns: repeat(2, minmax(14rem, 22rem));
 }
@@ -423,7 +419,6 @@
 
 .hierarchy-chart.mode-depth .hierarchy-level-nodes,
 .hierarchy-chart.mode-depth .hierarchy-chart-level.cols-1 .hierarchy-level-nodes,
-.hierarchy-chart.mode-depth .hierarchy-chart-level.cols-1:not(:first-child) .hierarchy-level-nodes,
 .hierarchy-chart.mode-depth .hierarchy-chart-level.cols-2 .hierarchy-level-nodes,
 .hierarchy-chart.mode-depth .hierarchy-chart-level.cols-3 .hierarchy-level-nodes,
 .hierarchy-chart.mode-depth .hierarchy-chart-level.cols-4 .hierarchy-level-nodes {

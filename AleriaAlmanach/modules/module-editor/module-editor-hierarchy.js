@@ -55,6 +55,7 @@ function buildHierarchyLevelEditorMarkup(level = {}, levelIndex = 0) {
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-hierarchy-level" data-hierarchy-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-hierarchy-level" data-hierarchy-direction="1">Runter</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-hierarchy-node">+ Knoten</button>
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-hierarchy-level-after">+ Ebene darunter</button>
           <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-hierarchy-level">Loeschen</button>
         </div>
       </div>
@@ -129,6 +130,19 @@ function addModuleHierarchyLevel(button) {
     nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }]
   }, wrap.querySelectorAll('.hierarchy-editor-level-row').length));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
+  renumberHierarchyEditor(wrap);
+  syncModuleJsonPreview();
+}
+
+function addModuleHierarchyLevelAfter(button) {
+  const currentLevel = button.closest('.hierarchy-editor-level-row');
+  const wrap = currentLevel?.parentElement;
+  if (!currentLevel || !wrap) return;
+  currentLevel.insertAdjacentHTML('afterend', buildHierarchyLevelEditorMarkup({
+    label: '',
+    nodes: [{ portrait: '', title: 'Neuer Unterrang', subtitle: '', text: '' }]
+  }, 0));
+  hydrateModuleRichEditors(currentLevel.nextElementSibling || wrap);
   renumberHierarchyEditor(wrap);
   syncModuleJsonPreview();
 }

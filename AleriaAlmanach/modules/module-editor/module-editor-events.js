@@ -62,6 +62,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
+  'add-hierarchy-level-after',
   'remove-hierarchy-level',
   'move-hierarchy-level',
   'add-hierarchy-node',
@@ -333,6 +334,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'add-hierarchy-level') {
     addModuleHierarchyLevel(trigger);
+    return;
+  }
+  if (action === 'add-hierarchy-level-after') {
+    addModuleHierarchyLevelAfter(trigger);
     return;
   }
   if (action === 'remove-hierarchy-level') {

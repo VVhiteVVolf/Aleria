@@ -37,6 +37,7 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
+  'add-hierarchy-level-after',
   'remove-hierarchy-level',
   'move-hierarchy-level',
   'add-hierarchy-node',
@@ -233,6 +234,10 @@ function handleInlineEditorActionClick(event) {
   }
   if (action === 'add-hierarchy-level') {
     addInlineHierarchyLevel();
+    return;
+  }
+  if (action === 'add-hierarchy-level-after') {
+    addInlineHierarchyLevelAfter(Number(trigger.dataset.hierarchyLevelIndex) || 0);
     return;
   }
   if (action === 'remove-hierarchy-level') {

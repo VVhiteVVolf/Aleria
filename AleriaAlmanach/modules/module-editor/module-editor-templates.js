@@ -656,7 +656,16 @@ function createDefaultHierarchyPage(index = 0) {
         {
           label: '',
           nodes: [
-            { portrait: '', title: 'Gesellen & Lehrlinge', subtitle: '', text: 'Die Grundlage der Gilde. Sie unterstuetzen die Arbeit der hoeheren Raenge und werden ausgebildet.' }
+            { portrait: '', title: 'Gesellen', subtitle: '', text: 'Fortgeschrittene Mitglieder, die feste Aufgaben uebernehmen und juengere Kraefte anleiten.' },
+            { portrait: '', title: 'Lehrlinge', subtitle: '', text: 'Anwaerter der Gilde. Sie lernen Recht, Rhetorik, Aktenfuehrung und Grundsaetze des Dienstes.' }
+          ]
+        },
+        {
+          label: 'Unterdienste',
+          nodes: [
+            { portrait: '', title: 'Archivhelfer', subtitle: '', text: 'Ordnen Akten, bereiten Register vor und schuetzen die Bestandslisten der Gilde.' },
+            { portrait: '', title: 'Schreiberlehrlinge', subtitle: '', text: 'Ueben Protokolle, Abschriften und das korrekte Formulieren offizieller Eingaben.' },
+            { portrait: '', title: 'Botenlehrlinge', subtitle: '', text: 'Begleiten Boten der Gilde und lernen Routen, Siegelprotokolle und sichere Uebergaben.' }
           ]
         }
       ],

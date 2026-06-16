@@ -57,6 +57,19 @@ function addInlineHierarchyLevel() {
   renderPage(currentPage, 0);
 }
 
+function addInlineHierarchyLevelAfter(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const data = getInlineHierarchyDataForEdit(page);
+  const insertIndex = Math.max(0, Math.min(data.levels.length, index + 1));
+  data.levels.splice(insertIndex, 0, {
+    label: '',
+    nodes: [{ portrait: '', title: 'Neuer Unterrang', subtitle: '', text: '' }]
+  });
+  page.hierarchy = sanitizeHierarchyData(data);
+  renderPage(currentPage, 0);
+}
+
 function removeInlineHierarchyLevel(index) {
   const page = getInlineDraftPage();
   if (!page) return;
@@ -184,6 +197,7 @@ function buildInlineHierarchyLevelRows(levels = []) {
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="1">Runter</button>
           <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-node" data-hierarchy-level-index="${levelIndex}">+ Knoten</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-level-after" data-hierarchy-level-index="${levelIndex}">+ Ebene darunter</button>
           <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-level" data-hierarchy-level-index="${levelIndex}">Loeschen</button>
         </div>
       </div>
