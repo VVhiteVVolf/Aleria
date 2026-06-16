@@ -9,6 +9,8 @@ function cleanCustomSection(section) {
     desc: String(section?.desc || '').trim(),
     entries: Array.isArray(section?.entries) ? section.entries.map(entry => sanitizeModuleEntry(entry)).filter(Boolean) : [],
   };
+  const nodeId = String(section?.nodeId || '').trim();
+  if (nodeId) next.nodeId = nodeId;
   if (derivedPath.length) next.path = derivedPath;
   return next;
 }
@@ -19,7 +21,8 @@ function cleanModuleSectionMove(section) {
     key: cleaned.key,
     tab: cleaned.tab,
     desc: cleaned.desc,
-    path: getSectionPathParts(cleaned)
+    path: getSectionPathParts(cleaned),
+    nodeId: cleaned.nodeId || ensureModuleNodeForSection(cleaned)
   };
 }
 
@@ -33,8 +36,10 @@ function setModuleSectionMove(entryId, section) {
   if (!id) return;
   const builtin = findBuiltinSectionByEntryId(id);
   const target = cleanModuleSectionMove(section);
+  if (target.nodeId) _moduleNodeAssignments[id] = target.nodeId;
   if (builtin && makeSectionSignature(builtin.section) === makeSectionSignature(target)) {
     delete _moduleSectionMoves[id];
+    delete _moduleNodeAssignments[id];
     return;
   }
   _moduleSectionMoves[id] = target;
@@ -43,6 +48,7 @@ function setModuleSectionMove(entryId, section) {
 function clearModuleSectionMove(entryId) {
   const id = String(entryId || '').trim();
   if (id) delete _moduleSectionMoves[id];
+  if (id) delete _moduleNodeAssignments[id];
 }
 
 function findSectionBySignature(signature) {
@@ -50,6 +56,7 @@ function findSectionBySignature(signature) {
 }
 
 function getAllSections() {
+  ensureKnownModuleSectionNodes();
   const movedEntries = [];
   const builtins = SECTIONS
     .filter(section => section && Array.isArray(section.entries))
@@ -60,7 +67,10 @@ function getAllSections() {
         const nextEntry = _entryOverrides[entry.id]
           ? deepClone({ ..._entryOverrides[entry.id], id: entry.id })
           : deepClone(entry);
-        const movedSection = getModuleSectionMove(entry.id);
+        const assignedNodeId = _moduleNodeAssignments[entry.id];
+        const movedSection = assignedNodeId && findModuleSectionNodeById(assignedNodeId)
+          ? getModuleSectionFromNode(findModuleSectionNodeById(assignedNodeId), [])
+          : getModuleSectionMove(entry.id);
         if (movedSection) {
           movedEntries.push({ section: movedSection, entry: nextEntry });
           return null;
@@ -72,7 +82,8 @@ function getAllSections() {
   const merged = builtins;
 
   _customSections.forEach(section => {
-    const customSection = cleanCustomSection(section);
+    const nodeId = section.nodeId || ensureModuleNodeForSection(section);
+    const customSection = cleanCustomSection({ ...section, nodeId });
     const signature = makeSectionSignature(customSection);
     const target = merged.find(existing => makeSectionSignature(existing) === signature);
     if (target) {
@@ -91,6 +102,14 @@ function getAllSections() {
     }
     target.entries = (target.entries || []).filter(entry => entry?.id !== item.entry.id);
     target.entries.push(deepClone(item.entry));
+  });
+
+  _moduleSectionNodes.forEach(node => {
+    const nodeSection = getModuleSectionFromNode(node, []);
+    const signature = makeSectionSignature(nodeSection);
+    if (!merged.some(existing => makeSectionSignature(existing) === signature)) {
+      merged.push(nodeSection);
+    }
   });
 
   return merged.filter(section => section && Array.isArray(section.entries));
@@ -127,7 +146,8 @@ function findCurrentSectionByEntryId(entryId) {
 function upsertCustomModule(sectionInput, entry) {
   const nextEntry = sanitizeModuleEntry(entry);
   clearModuleSectionMove(nextEntry.id);
-  const targetSection = cleanCustomSection({ ...sectionInput, entries: [] });
+  const targetNodeId = sectionInput?.nodeId || ensureModuleNodeForSection(sectionInput);
+  const targetSection = cleanCustomSection({ ...sectionInput, nodeId: targetNodeId, entries: [] });
   const signature = makeSectionSignature(targetSection);
   let section = _customSections.find(item => makeSectionSignature(item) === signature);
   if (!section) {
@@ -138,6 +158,7 @@ function upsertCustomModule(sectionInput, entry) {
     section.tab = targetSection.tab;
     section.desc = targetSection.desc;
     section.path = getSectionPathParts(targetSection);
+    section.nodeId = targetSection.nodeId;
   }
   const existingIndex = (section.entries || []).findIndex(item => item.id === nextEntry.id);
   if (existingIndex >= 0) section.entries[existingIndex] = nextEntry;
@@ -164,7 +185,8 @@ function buildModuleExportPayload(entryId) {
       key: current.section.key,
       tab: current.section.tab || current.section.key,
       desc: current.section.desc || '',
-      path: getSectionPathParts(current.section)
+      path: getSectionPathParts(current.section),
+      nodeId: current.section.nodeId || ''
     },
     entry: sanitizeModuleEntry(current.entry)
   };

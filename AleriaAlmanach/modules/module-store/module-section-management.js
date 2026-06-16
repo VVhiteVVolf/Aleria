@@ -20,17 +20,20 @@ function buildModuleSectionTargetOptions(selectedSignature = '') {
 }
 
 function getVoidModuleSection() {
-  return cleanCustomSection({
+  const section = cleanCustomSection({
     key: 'Geloeste Module',
     tab: 'Void',
     path: ['Geloeste Module'],
     desc: 'Sicherer Auffangbereich fuer geloeste Reiter und unzugeordnete Module.',
     entries: []
   });
+  section.nodeId = ensureModuleNodeForSection(section);
+  return cleanCustomSection(section);
 }
 
 function ensureCustomModuleSection(sectionInput, options = {}) {
-  const section = cleanCustomSection({ ...(sectionInput || {}), entries: [] });
+  const nodeId = sectionInput?.nodeId || ensureModuleNodeForSection(sectionInput);
+  const section = cleanCustomSection({ ...(sectionInput || {}), nodeId, entries: [] });
   const signature = makeSectionSignature(section);
   let existing = _customSections.find(item => makeSectionSignature(item) === signature);
   if (!existing) {
@@ -41,6 +44,7 @@ function ensureCustomModuleSection(sectionInput, options = {}) {
   existing.key = section.key;
   existing.tab = section.tab;
   existing.path = getSectionPathParts(section);
+  existing.nodeId = section.nodeId;
   if (options.updateDesc || !String(existing.desc || '').trim()) existing.desc = section.desc || existing.desc || '';
   return { section: existing, created: false };
 }
@@ -85,6 +89,9 @@ function removeCustomSectionBySignature(signature) {
 
 function isSectionDescendantOrSelf(section, targetSection) {
   if (!section || !targetSection) return false;
+  if (section.nodeId && targetSection.nodeId && typeof getModuleSectionNodeDescendantIds === 'function') {
+    return getModuleSectionNodeDescendantIds(targetSection.nodeId).has(section.nodeId);
+  }
   if ((section.tab || section.key) !== (targetSection.tab || targetSection.key)) return false;
   const targetPath = getSectionPathParts(targetSection);
   const sectionPath = getSectionPathParts(section);
@@ -99,6 +106,8 @@ function sortModuleSectionsByHierarchy(sections = []) {
   return [...sections].sort((a, b) => {
     const tabCompare = String(a.tab || a.key || '').localeCompare(String(b.tab || b.key || ''), 'de');
     if (tabCompare) return tabCompare;
+    const pathCompare = getSectionPathParts(a).join(' > ').localeCompare(getSectionPathParts(b).join(' > '), 'de');
+    if (pathCompare) return pathCompare;
     return getSectionOptionLabel(a).localeCompare(getSectionOptionLabel(b), 'de');
   });
 }
@@ -230,7 +239,7 @@ function renderModuleSectionManagerSections(sections) {
     const signature = makeSectionSignature(section);
     const entryCount = findSectionBySignature(signature)?.entries?.length || 0;
     const path = getSectionPathLabel(section);
-    const depth = Math.min(getSectionPathParts(section).length, 6);
+    const depth = Math.min(section.nodeId ? getModuleNodeAncestors(section.nodeId).length + 1 : getSectionPathParts(section).length, 6);
     const isVoid = makeSectionSignature(section) === makeSectionSignature(getVoidModuleSection());
     return `
       <div class="module-section-manager-section-row" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
@@ -428,6 +437,9 @@ function releaseModuleSection(signature) {
 
   const voidSection = ensureModuleSectionPath(getVoidModuleSection()).section;
   const voidSignature = makeSectionSignature(voidSection);
+  const affectedNodeIds = target.nodeId && typeof getModuleSectionNodeDescendantIds === 'function'
+    ? getModuleSectionNodeDescendantIds(target.nodeId)
+    : new Set();
   let movedCount = 0;
   affectedEntries.forEach(item => {
     if (moveModuleToSection(item.id, voidSignature, { silent: true, deferSave: true, deferRender: true })) {
@@ -438,6 +450,7 @@ function releaseModuleSection(signature) {
   affectedSignatures.forEach(sectionSignature => {
     if (sectionSignature !== voidSignature) removeCustomSectionBySignature(sectionSignature);
   });
+  if (affectedNodeIds.size) removeModuleSectionNodes(affectedNodeIds);
 
   saveModuleStore();
   _activeTab = voidSection.tab || voidSection.key;

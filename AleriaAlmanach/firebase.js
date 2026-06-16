@@ -38,6 +38,8 @@
         version: data?.version || 1,
         updatedAtClient: Number(data?.updatedAtClient) || Date.now(),
         customSections: Array.isArray(data?.customSections) ? data.customSections : [],
+        moduleSectionNodes: Array.isArray(data?.moduleSectionNodes) ? data.moduleSectionNodes : [],
+        moduleNodeAssignments: data?.moduleNodeAssignments && typeof data.moduleNodeAssignments === 'object' ? data.moduleNodeAssignments : {},
         moduleSectionMoves: data?.moduleSectionMoves && typeof data.moduleSectionMoves === 'object' ? data.moduleSectionMoves : {},
         entryOverrides: data?.entryOverrides && typeof data.entryOverrides === 'object' ? data.entryOverrides : {}
       };
@@ -66,6 +68,7 @@
                 key: String(section?.key || '').trim(),
                 tab: String(section?.tab || '').trim(),
                 desc: String(section?.desc || '').trim(),
+                nodeId: String(section?.nodeId || '').trim(),
                 path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : []
               },
               sectionIndex,
@@ -80,6 +83,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || '').trim(),
           desc: String(section?.desc || '').trim(),
+          nodeId: String(section?.nodeId || '').trim(),
           path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entryIds
         };
@@ -108,6 +112,8 @@
           version: normalized.version,
           updatedAtClient: normalized.updatedAtClient,
           customSections,
+          moduleSectionNodes: normalized.moduleSectionNodes || [],
+          moduleNodeAssignments: normalized.moduleNodeAssignments || {},
           moduleSectionMoves: normalized.moduleSectionMoves || {},
           entryOverrideIds
         },
@@ -132,6 +138,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || section?.key || '').trim(),
           desc: String(section?.desc || '').trim(),
+          nodeId: String(section?.nodeId || '').trim(),
           path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entries: (Array.isArray(section?.entryIds) ? section.entryIds : [])
             .map(entryId => docsByEntryId.get(String(entryId || '').trim())?.entry)
@@ -149,6 +156,8 @@
         version: manifest.version || 1,
         updatedAtClient: Number(manifest.updatedAtClient) || 0,
         customSections,
+        moduleSectionNodes: Array.isArray(manifest.moduleSectionNodes) ? manifest.moduleSectionNodes : [],
+        moduleNodeAssignments: manifest.moduleNodeAssignments || configData?.moduleNodeAssignments || {},
         moduleSectionMoves: manifest.moduleSectionMoves || configData?.moduleSectionMoves || {},
         entryOverrides
       };
@@ -180,6 +189,8 @@
         moduleStoreMode: MODULE_STORE_SPLIT_FORMAT,
         moduleStoreType: 'almanach-module-store',
         moduleStoreManifest: split.manifest,
+        moduleSectionNodes: normalized.moduleSectionNodes || [],
+        moduleNodeAssignments: normalized.moduleNodeAssignments || {},
         moduleSectionMoves: normalized.moduleSectionMoves || {},
         moduleStoreUpdatedAtClient: normalized.updatedAtClient,
         moduleStoreUpdatedAt: serverTimestamp()

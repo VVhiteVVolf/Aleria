@@ -13,6 +13,9 @@ function normalizeModuleStorePayload(payload) {
     if (!id) return;
     entryOverrides[id] = sanitizeModuleEntry({ ...entry, id });
   });
+  const treeState = typeof normalizeModuleTreeState === 'function'
+    ? normalizeModuleTreeState(payload || {})
+    : { nodes: [], assignments: {} };
 
   return {
     version: Number(payload?.version) || MODULE_STORE_SCHEMA_VERSION,
@@ -20,6 +23,8 @@ function normalizeModuleStorePayload(payload) {
     customSections: Array.isArray(payload?.customSections)
       ? payload.customSections.map(cleanCustomSection)
       : [],
+    moduleSectionNodes: treeState.nodes,
+    moduleNodeAssignments: treeState.assignments,
     moduleSectionMoves: Object.fromEntries(
       Object.entries(payload?.moduleSectionMoves || {})
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
@@ -30,10 +35,17 @@ function normalizeModuleStorePayload(payload) {
 }
 
 function getModuleStorePayload(updatedAtClient = Date.now()) {
+  if (typeof ensureKnownModuleSectionNodes === 'function') ensureKnownModuleSectionNodes();
   return normalizeModuleStorePayload({
     version: MODULE_STORE_SCHEMA_VERSION,
     updatedAtClient,
     customSections: _customSections.map(cleanCustomSection),
+    moduleSectionNodes: _moduleSectionNodes.map(cleanModuleSectionNode),
+    moduleNodeAssignments: Object.fromEntries(
+      Object.entries(_moduleNodeAssignments || {})
+        .map(([entryId, nodeId]) => [String(entryId || '').trim(), String(nodeId || '').trim()])
+        .filter(([entryId, nodeId]) => entryId && nodeId)
+    ),
     moduleSectionMoves: Object.fromEntries(
       Object.entries(_moduleSectionMoves || {})
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
@@ -120,6 +132,8 @@ function getModuleStoreContentSignature(payload) {
   const normalized = normalizeModuleStorePayload(payload);
   return JSON.stringify({
     customSections: normalized.customSections,
+    moduleSectionNodes: normalized.moduleSectionNodes,
+    moduleNodeAssignments: normalized.moduleNodeAssignments,
     moduleSectionMoves: normalized.moduleSectionMoves,
     entryOverrides: normalized.entryOverrides
   });
@@ -156,14 +170,19 @@ function isLocalModuleStoreSynced(payload) {
 
 function hasModuleStoreContent(payload) {
   const normalized = normalizeModuleStorePayload(payload);
-  return normalized.customSections.length || Object.keys(normalized.entryOverrides).length;
+  return normalized.customSections.length
+    || normalized.moduleSectionNodes.length
+    || Object.keys(normalized.moduleNodeAssignments).length
+    || Object.keys(normalized.moduleSectionMoves).length
+    || Object.keys(normalized.entryOverrides).length;
 }
 
 function getModuleStoreSummary(payload) {
   const normalized = normalizeModuleStorePayload(payload);
   const customModuleCount = normalized.customSections.reduce((sum, section) => sum + (section.entries?.length || 0), 0);
   const overrideCount = Object.keys(normalized.entryOverrides).length;
-  return `${normalized.customSections.length} Bereiche, ${customModuleCount} eigene Module, ${overrideCount} Überschreibungen`;
+  const sectionCount = normalized.moduleSectionNodes.length || normalized.customSections.length;
+  return `${sectionCount} Bereiche, ${customModuleCount} eigene Module, ${overrideCount} Ueberschreibungen`;
 }
 
 function renderModuleStoreConflictPrompt(localPayload, remotePayload) {
@@ -290,6 +309,8 @@ function cleanupSyncedModuleStoreCache(options = {}) {
 
 function applyModuleStorePayload(payload) {
   const normalized = normalizeModuleStorePayload(payload);
+  _moduleSectionNodes = normalized.moduleSectionNodes || [];
+  _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;
   _moduleSectionMoves = normalized.moduleSectionMoves || {};
   _entryOverrides = {};
@@ -319,7 +340,10 @@ function loadModuleStore() {
     showAppStatus('Lokale Moduländerungen konnten nicht gelesen werden. Der gespeicherte Stand wurde ignoriert.', 'error');
     updateFirebaseSyncStatus('error', 'Lokale Moduländerungen konnten nicht gelesen werden.');
     _customSections = [];
+    _moduleSectionNodes = [];
+    _moduleNodeAssignments = {};
     _entryOverrides = {};
+    _moduleSectionMoves = {};
     updateModuleStoreSizePanel();
   }
 }

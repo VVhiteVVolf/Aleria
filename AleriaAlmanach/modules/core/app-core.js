@@ -13,7 +13,7 @@ const MODULE_ID_PATTERN = /^[a-z0-9][a-z0-9-]{0,79}$/;
 const MODULE_STORE_REMOTE_SAVE_DELAY = 700;
 const MODULE_STORE_SYNCED_CACHE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 const FIREBASE_READY_TIMEOUT_MS = 4500;
-const MODULE_STORE_SCHEMA_VERSION = 2;
+const MODULE_STORE_SCHEMA_VERSION = 3;
 const MODULE_EXPORT_SCHEMA_VERSION = 2;
 const MODULE_PACKAGE_EXPORT_SCHEMA_VERSION = 1;
 const MODULE_ENTRY_SCHEMA_VERSION = 1;
@@ -25,6 +25,8 @@ const MODULE_SIZE_MAX = 100;
 const ALMANACH_BACKUP_SCHEMA_VERSION = 2;
 const MODULE_COMMENT_EXPORT_SCHEMA_VERSION = 1;
 let _customSections = [];
+let _moduleSectionNodes = [];
+let _moduleNodeAssignments = {};
 let _entryOverrides = {};
 let _moduleSectionMoves = {};
 let _moduleEditorAuthorized = false;
@@ -60,6 +62,8 @@ function slugify(value, fallback = 'modul') {
 }
 
 function makeSectionSignature(section) {
+  const nodeId = String(section?.nodeId || '').trim();
+  if (nodeId) return `node::${nodeId}`;
   const key = normalizeSearchText(section?.key || '');
   const tab = normalizeSearchText(section?.tab || section?.key || '');
   const path = getSectionPathParts(section).map(normalizeSearchText).filter(Boolean);
@@ -74,6 +78,11 @@ function parseSectionPathInput(value) {
 }
 
 function getSectionPathParts(section) {
+  const nodeId = String(section?.nodeId || '').trim();
+  if (nodeId && typeof getModuleNodePathParts === 'function') {
+    const nodePath = getModuleNodePathParts(nodeId);
+    if (nodePath.length) return nodePath;
+  }
   if (Array.isArray(section?.path)) {
     return section.path.map(part => String(part || '').trim()).filter(Boolean);
   }
@@ -84,6 +93,11 @@ function getSectionPathParts(section) {
 }
 
 function getSectionLeafLabel(section) {
+  const nodeId = String(section?.nodeId || '').trim();
+  if (nodeId && typeof findModuleSectionNodeById === 'function') {
+    const node = findModuleSectionNodeById(nodeId);
+    if (node?.title) return node.title;
+  }
   const path = getSectionPathParts(section);
   return path[path.length - 1] || section?.key || section?.tab || 'Archiv';
 }

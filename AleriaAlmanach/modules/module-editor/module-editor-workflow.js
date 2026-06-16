@@ -7,6 +7,7 @@ function getPreferredEditorSection() {
     tab: current.tab || current.key,
     desc: current.desc || '',
     path: getSectionPathParts(current),
+    nodeId: current.nodeId || ensureModuleNodeForSection(current),
     signature: makeSectionSignature(current)
   };
 }

@@ -14,6 +14,7 @@ function collectModuleEditorPayload() {
       desc: document.getElementById('me-new-section-desc')?.value.trim() || '',
       path
     };
+    section.nodeId = ensureModuleNodeForSection(section);
   } else {
     const target = getValidSections().find(item => makeSectionSignature(item) === sectionSelect?.value);
     if (!target) throw new Error('Bitte wähle einen Zielbereich.');
@@ -21,7 +22,8 @@ function collectModuleEditorPayload() {
       key: target.key,
       tab: target.tab || target.key,
       desc: target.desc || '',
-      path: getSectionPathParts(target)
+      path: getSectionPathParts(target),
+      nodeId: target.nodeId || ensureModuleNodeForSection(target)
     };
   }
 

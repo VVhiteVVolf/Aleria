@@ -7,6 +7,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Der Morgen bricht an',
     timeLabel: 'Morgen',
     iconMark: 'M',
+    iconUrl: 'https://i.imgur.com/djPd9UD.png',
     theme: 'day'
   },
   {
@@ -15,14 +16,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Die Sonne steht hoch',
     timeLabel: 'Mittag',
     iconMark: 'S',
-    theme: 'day'
-  },
-  {
-    key: 'afternoon',
-    label: 'Nachmittag',
-    title: 'Der Tag schreitet voran',
-    timeLabel: 'Nachmittag',
-    iconMark: 'N',
+    iconUrl: 'https://i.imgur.com/m9ayflu.png',
     theme: 'day'
   },
   {
@@ -31,6 +25,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Der Abend senkt sich',
     timeLabel: 'Abend',
     iconMark: 'A',
+    iconUrl: 'https://i.imgur.com/2ldWsPp.png',
     theme: 'dusk'
   },
   {
@@ -39,6 +34,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Die Nacht legt sich ueber die Szene',
     timeLabel: 'Nacht',
     iconMark: 'N',
+    iconUrl: 'https://i.imgur.com/VzP9VAA.png',
     theme: 'night'
   },
   {
@@ -47,6 +43,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Ein neuer Tag bricht an',
     timeLabel: 'Tagwechsel',
     iconMark: '+',
+    iconUrl: 'https://i.imgur.com/EHo0HKi.png',
     theme: 'next-day'
   },
   {
@@ -55,6 +52,7 @@ const SCENE_TIME_EVENT_PRESETS = [
     title: 'Zeit vergeht',
     timeLabel: 'Zeitsprung',
     iconMark: '>>',
+    iconUrl: 'https://i.imgur.com/r1dNxHU.png',
     theme: 'skip'
   }
 ];
@@ -90,7 +88,7 @@ function normalizeSceneTimeEvent(input = {}) {
     timeLabel: normalizeSceneTimeText(input.timeLabel, preset.timeLabel),
     body: normalizeSceneTimeText(input.body || input.text, ''),
     iconMark: normalizeSceneTimeText(input.iconMark, preset.iconMark),
-    iconUrl: normalizeSceneTimeIconUrl(input.iconUrl || input.customIconUrl),
+    iconUrl: normalizeSceneTimeIconUrl(preset.iconUrl),
     schemaVersion: 1
   };
 }

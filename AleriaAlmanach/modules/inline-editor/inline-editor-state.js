@@ -130,7 +130,8 @@ function setInlineModuleSection(signature) {
     key: section.key,
     tab: section.tab || section.key,
     desc: section.desc || '',
-    path: getSectionPathParts(section)
+    path: getSectionPathParts(section),
+    nodeId: section.nodeId || ensureModuleNodeForSection(section)
   };
   if (_inlineModuleEdit.draft && (!String(_inlineModuleEdit.draft.category || '').trim() || _inlineModuleEdit.mode === 'new')) {
     _inlineModuleEdit.draft.category = section.key;
@@ -183,7 +184,8 @@ function openModuleEditorForNew() {
       key: preferred.key,
       tab: preferred.tab,
       desc: preferred.desc || '',
-      path: getSectionPathParts(preferred)
+      path: getSectionPathParts(preferred),
+      nodeId: preferred.nodeId || ensureModuleNodeForSection(preferred)
     },
     draft
   };
@@ -211,7 +213,8 @@ function openModuleEditorForEntry(entryId) {
       key: payload.section.key,
       tab: payload.section.tab,
       desc: payload.section.desc || '',
-      path: getSectionPathParts(payload.section)
+      path: getSectionPathParts(payload.section),
+      nodeId: payload.section.nodeId || ensureModuleNodeForSection(payload.section)
     },
     draft: sanitizeModuleEntry(payload.entry)
   };

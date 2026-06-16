@@ -26,7 +26,8 @@ async function buildModulePackageExportPayload(payload, context = {}) {
       key: validation.section.key,
       tab: validation.section.tab || validation.section.key,
       desc: validation.section.desc || '',
-      path: getSectionPathParts(validation.section)
+      path: getSectionPathParts(validation.section),
+      nodeId: validation.section.nodeId || ''
     },
     entry: sanitizeModuleEntry(validation.entry)
   };
@@ -164,7 +165,8 @@ function collectAllModuleExportPayloads() {
       key: section.key,
       tab: section.tab || section.key,
       desc: section.desc || '',
-      path: getSectionPathParts(section)
+      path: getSectionPathParts(section),
+      nodeId: section.nodeId || ''
     };
     (section.entries || []).forEach(entry => {
       const cleanEntry = sanitizeModuleEntry(entry);
@@ -271,6 +273,7 @@ async function applyAllModulePackagesPayload(parsed) {
     removeCustomModuleById(entry.id);
     if (builtin) {
       _entryOverrides[entry.id] = entry;
+      setModuleSectionMove(entry.id, section);
     } else {
       delete _entryOverrides[entry.id];
       upsertCustomModule(section, entry);

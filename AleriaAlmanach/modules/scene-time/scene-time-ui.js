@@ -9,6 +9,13 @@ function renderSceneTimeIcon(event) {
   return `<span>${escapeHtml(event.iconMark || '')}</span>`;
 }
 
+function renderSceneTimePresetMark(preset) {
+  if (preset.iconUrl) {
+    return `<img src="${sanitizeImageSrc(preset.iconUrl)}" alt="" loading="lazy" decoding="async">`;
+  }
+  return `<span>${escapeHtml(preset.iconMark)}</span>`;
+}
+
 function renderSceneTimeEventBlock(eventInput, options = {}) {
   const event = getSceneTimeSafeEvent(eventInput);
   const title = escapeHtml(event.title);
@@ -51,7 +58,7 @@ function buildSceneTimePresetButtons(selectedKey = 'evening') {
       data-scene-time-action="select-preset"
       data-scene-time-preset="${escapeHtml(preset.key)}"
       aria-pressed="${preset.key === selectedKey ? 'true' : 'false'}">
-      <span class="scene-time-preset-mark">${escapeHtml(preset.iconMark)}</span>
+      <span class="scene-time-preset-mark">${renderSceneTimePresetMark(preset)}</span>
       <span>${escapeHtml(preset.label)}</span>
     </button>`).join('');
 }
@@ -100,10 +107,6 @@ function ensureSceneTimeEventDialog() {
               <span>Zeitangabe</span>
               <input id="ste-time-label" type="text" placeholder="18:30 Uhr, Abend, mehrere Stunden spaeter">
             </label>
-            <label>
-              <span>Eigenes Icon</span>
-              <input id="ste-icon-url" type="url" placeholder="https://... optional">
-            </label>
             <label class="wide">
               <span>Ankuendigungstext</span>
               <textarea id="ste-body" rows="4" placeholder="Die Sonne verschwindet hinter den Mauern, und in der Szene vergeht Zeit."></textarea>
@@ -134,7 +137,6 @@ function getSceneTimeDialogPayload() {
     title: document.getElementById('ste-title')?.value || '',
     dayLabel: document.getElementById('ste-day-label')?.value || '',
     timeLabel: document.getElementById('ste-time-label')?.value || '',
-    iconUrl: document.getElementById('ste-icon-url')?.value || '',
     body: document.getElementById('ste-body')?.value || ''
   });
 }
@@ -170,7 +172,7 @@ function setSceneTimePreset(presetKey) {
 
 function resetSceneTimeEventDialog() {
   const preset = getSceneTimeEventPreset('evening');
-  ['ste-title', 'ste-day-label', 'ste-time-label', 'ste-icon-url', 'ste-body'].forEach(id => {
+  ['ste-title', 'ste-day-label', 'ste-time-label', 'ste-body'].forEach(id => {
     const field = document.getElementById(id);
     if (!field) return;
     field.dataset.userEdited = '';
