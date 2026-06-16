@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { doc, getDoc, getFirestore, onSnapshot, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const scenesConfig = window.AleriaOrteScenes || {};
 const fb = scenesConfig.inlineFirebase || {};
@@ -36,6 +36,9 @@ window.OrteInlineFirebase = {
       updatedAtClient: Date.now(),
       updatedAt: serverTimestamp(),
     }, { merge: true });
+  },
+  async reset(pageId) {
+    await deleteDoc(getRef(pageId));
   },
   subscribe(pageId, onNext, onError) {
     return onSnapshot(getRef(pageId), (snap) => {

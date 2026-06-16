@@ -62,7 +62,43 @@ function slugify(value, fallback = 'modul') {
 function makeSectionSignature(section) {
   const key = normalizeSearchText(section?.key || '');
   const tab = normalizeSearchText(section?.tab || section?.key || '');
-  return `${key}::${tab}`;
+  const path = getSectionPathParts(section).map(normalizeSearchText).filter(Boolean);
+  return path.length ? `${key}::${tab}::${path.join('>')}` : `${key}::${tab}`;
+}
+
+function parseSectionPathInput(value) {
+  return String(value || '')
+    .split(/\s*>\s*/g)
+    .map(part => part.trim())
+    .filter(Boolean);
+}
+
+function getSectionPathParts(section) {
+  if (Array.isArray(section?.path)) {
+    return section.path.map(part => String(part || '').trim()).filter(Boolean);
+  }
+  if (typeof section?.path === 'string') {
+    return parseSectionPathInput(section.path);
+  }
+  return [];
+}
+
+function getSectionLeafLabel(section) {
+  const path = getSectionPathParts(section);
+  return path[path.length - 1] || section?.key || section?.tab || 'Archiv';
+}
+
+function getSectionOptionLabel(section) {
+  const top = String(section?.tab || section?.key || 'Archiv').trim();
+  const path = getSectionPathParts(section);
+  if (path.length) return `${top} > ${path.join(' > ')}`;
+  const key = String(section?.key || '').trim();
+  return key && normalizeSearchText(key) !== normalizeSearchText(top) ? `${top} > ${key}` : top;
+}
+
+function getSectionPathLabel(section) {
+  const path = getSectionPathParts(section);
+  return path.join(' > ');
 }
 
 function shouldUsePageImageAsEntryImage(pages = []) {

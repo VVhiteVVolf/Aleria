@@ -34,6 +34,12 @@
   padding: 3px 8px;
 }
 
+.orte-inline-toolbar [data-action="hard-reset-orte-template"] {
+  border-color: #9d3728;
+  background: #f0c8a9;
+  color: #3a120a;
+}
+
 .orte-inline-toolbar [data-orte-inline-edit-only] {
   display: none;
 }
@@ -84,8 +90,13 @@
 
 .orte-inline-editing [data-orte-inline-text] {
   cursor: text;
-  outline: 1px dashed rgba(126, 82, 25, 0.5);
+  outline: 1px solid transparent;
   outline-offset: 2px;
+}
+
+.orte-inline-editing [data-orte-inline-text]:hover {
+  outline-color: rgba(126, 82, 25, 0.42);
+  outline-style: dashed;
 }
 
 .orte-inline-editing [data-orte-inline-text]:focus {
@@ -117,11 +128,23 @@
   font-weight: 700;
 }
 
+.orte-inline-image-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(26, 15, 5, 0.44);
+}
+
 .orte-inline-image-panel {
   display: grid;
   gap: 8px;
   width: min(100%, 420px);
-  margin: 7px auto 10px;
+  max-height: min(680px, calc(100vh - 40px));
+  overflow: auto;
+  margin: 0;
   padding: 10px;
   border: 1px solid rgba(75, 45, 14, 0.62);
   background:

@@ -67,26 +67,72 @@ let _archiveSectionMatchCount = 0;
 let _archiveEntrySectionMatchCount = 0;
 const _archiveEntrySearchCache = new Map();
 let _archiveManageMode = false;
+const _archivePathByTab = new Map();
 
 function invalidateArchiveSearchCache() {
   _archiveEntrySearchCache.clear();
+}
+
+function encodeArchivePathData(path = []) {
+  return encodeURIComponent(JSON.stringify(Array.isArray(path) ? path : []));
+}
+
+function decodeArchivePathData(value) {
+  try {
+    const parsed = JSON.parse(decodeURIComponent(String(value || '')));
+    return Array.isArray(parsed) ? parsed.map(part => String(part || '').trim()).filter(Boolean) : [];
+  } catch {
+    return [];
+  }
+}
+
+function getActiveArchivePath(tab = _activeTab) {
+  return _archivePathByTab.get(tab) || [];
+}
+
+function setActiveArchivePath(tab, path = []) {
+  _archivePathByTab.set(tab, Array.isArray(path) ? path.map(part => String(part || '').trim()).filter(Boolean) : []);
+}
+
+function normalizeArchivePathPart(part) {
+  return normalizeSearchText(part);
+}
+
+function archivePathsEqual(a = [], b = []) {
+  if (a.length !== b.length) return false;
+  return a.every((part, index) => normalizeArchivePathPart(part) === normalizeArchivePathPart(b[index]));
+}
+
+function archivePathHasPrefix(path = [], prefix = []) {
+  if (path.length < prefix.length) return false;
+  return prefix.every((part, index) => normalizeArchivePathPart(part) === normalizeArchivePathPart(path[index]));
 }
 
 function getSectionThemeMeta(sectionKey) {
   return SECTION_THEME_META[sectionKey] || SECTION_THEME_META.Archive;
 }
 
+function getThemeMetaForSection(section) {
+  if (!section) return SECTION_THEME_META.Archive;
+  if (SECTION_THEME_META[section.key]) return getSectionThemeMeta(section.key);
+  const tab = section.tab || section.key;
+  const topSection = getValidSections().find(item =>
+    (item.tab || item.key) === tab && SECTION_THEME_META[item.key]
+  );
+  return topSection ? getSectionThemeMeta(topSection.key) : SECTION_THEME_META.Archive;
+}
+
 function getThemeMetaForTab(tab) {
   if (tab === 'Alle') return SECTION_THEME_META.Archive;
   if (tab === 'Charaktere') return SECTION_THEME_META.Charaktere;
   const section = getValidSections().find(item => (item.tab || item.key) === tab);
-  return section ? getSectionThemeMeta(section.key) : SECTION_THEME_META.Archive;
+  return getThemeMetaForSection(section);
 }
 
 function getThemeMetaForEntry(entry) {
   if (!entry?.id) return SECTION_THEME_META.Archive;
   const found = findCurrentSectionByEntryId(entry.id);
-  return found ? getSectionThemeMeta(found.section.key) : SECTION_THEME_META.Archive;
+  return getThemeMetaForSection(found?.section);
 }
 
 function updateSidebarCurrentNote(tab = _activeTab) {
@@ -141,7 +187,14 @@ function handleArchiveActionClick(event) {
 
   if (action === 'switch-tab') {
     event.preventDefault();
-    switchTab(trigger.dataset.tab || 'Alle');
+    switchTab(trigger.dataset.tab || 'Alle', { resetPath: true, render: true });
+    return;
+  }
+  if (action === 'enter-section-folder' || action === 'set-section-path') {
+    event.preventDefault();
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    setActiveArchivePath(_activeTab, decodeArchivePathData(trigger.dataset.sectionPath || ''));
+    renderAll();
     return;
   }
   if (action === 'new-module') {
@@ -156,17 +209,12 @@ function handleArchiveActionClick(event) {
   }
   if (action === 'create-module-section') {
     event.preventDefault();
-    createModuleSectionFromPrompt();
+    openModuleSectionManager();
     return;
   }
   if (action === 'toggle-archive-manage') {
     event.preventDefault();
-    if (!_moduleEditorAuthorized) {
-      showAppStatus('Bitte entsperre zuerst den Modul-Editor, bevor du die Verwaltungsansicht aktivierst.', 'error');
-      return;
-    }
-    _archiveManageMode = !_archiveManageMode;
-    renderAll();
+    openModuleSectionManager();
     return;
   }
   if (action === 'toggle-section-expanded') {
@@ -225,6 +273,7 @@ function buildEntrySearchText(entry, section) {
     section.key,
     section.tab,
     section.desc,
+    getSectionPathLabel(section),
     entry.id,
     entry.title,
     entry.subtitle,
@@ -382,8 +431,88 @@ function clearTransientSearchInputsAfterBrowserRestore() {
   }, 0);
 }
 
-function switchTab(tab) {
+function shouldRenderArchiveDrilldown(tab = _activeTab) {
+  return tab !== 'Alle' && tab !== 'Charaktere' && !_archiveSearchNeedle;
+}
+
+function getArchiveTabSections(sections = [], tab = _activeTab) {
+  return sections.filter(section => (section.tab || section.key) === tab);
+}
+
+function getArchiveRootSection(tabSections = [], tab = _activeTab) {
+  const root = tabSections.find(section => !getSectionPathParts(section).length);
+  if (root) return root;
+  return {
+    key: tab || 'Archiv',
+    tab: tab || 'Archiv',
+    desc: getThemeMetaForTab(tab).note,
+    entries: []
+  };
+}
+
+function getArchiveDisplaySection(tabSections = [], tab = _activeTab, path = []) {
+  if (!path.length) return getArchiveRootSection(tabSections, tab);
+  const exact = tabSections.find(section => archivePathsEqual(getSectionPathParts(section), path));
+  if (exact) return exact;
+  return {
+    key: path[path.length - 1] || tab || 'Archiv',
+    tab: tab || 'Archiv',
+    path,
+    desc: '',
+    entries: []
+  };
+}
+
+function getArchiveSectionsAtPath(tabSections = [], path = []) {
+  return tabSections.filter(section => archivePathsEqual(getSectionPathParts(section), path));
+}
+
+function getArchiveChildFolders(tabSections = [], currentPath = []) {
+  const groups = new Map();
+  tabSections.forEach(section => {
+    const path = getSectionPathParts(section);
+    if (path.length <= currentPath.length || !archivePathHasPrefix(path, currentPath)) return;
+    const label = path[currentPath.length];
+    const folderPath = path.slice(0, currentPath.length + 1);
+    const key = folderPath.map(normalizeArchivePathPart).join('>');
+    if (!groups.has(key)) {
+      groups.set(key, {
+        label,
+        path: folderPath,
+        moduleCount: 0,
+        childKeys: new Set()
+      });
+    }
+  });
+
+  groups.forEach(folder => {
+    tabSections.forEach(section => {
+      const path = getSectionPathParts(section);
+      if (!archivePathHasPrefix(path, folder.path)) return;
+      folder.moduleCount += (section.entries || []).length;
+      if (path.length > folder.path.length) {
+        folder.childKeys.add(normalizeArchivePathPart(path[folder.path.length]));
+      }
+    });
+  });
+
+  return Array.from(groups.values())
+    .map(folder => ({
+      label: folder.label,
+      path: folder.path,
+      moduleCount: folder.moduleCount,
+      childCount: folder.childKeys.size
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label, 'de'));
+}
+
+function switchTab(tab, options = {}) {
   _activeTab = tab;
+  if (options.resetPath) setActiveArchivePath(tab, []);
+  if (options.render) {
+    renderAll();
+    return;
+  }
   document.querySelectorAll('.gallery-tab-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tab);
   });
@@ -463,10 +592,10 @@ function renderAll() {
   tabsNav.appendChild(sectionBtn);
 
   const manageBtn = document.createElement('button');
-  manageBtn.className = `gallery-tab-btn gallery-tab-add${_archiveManageMode ? ' active' : ''}`;
+  manageBtn.className = 'gallery-tab-btn gallery-tab-add';
   manageBtn.type = 'button';
-  manageBtn.textContent = _archiveManageMode ? 'Ansicht' : 'Verwalten';
-  manageBtn.title = _archiveManageMode ? 'Zur normalen Ansicht wechseln' : 'Verwaltungsansicht aktivieren';
+  manageBtn.textContent = 'Verwalten';
+  manageBtn.title = 'Reiter, Pfade und Modulpositionen verwalten';
   manageBtn.dataset.archiveAction = 'toggle-archive-manage';
   manageBtn.setAttribute('aria-label', manageBtn.title);
   tabsNav.appendChild(manageBtn);
@@ -509,21 +638,43 @@ function renderAll() {
     <div class="archive-empty-text" id="archive-empty-text"></div>`;
   main.appendChild(emptyState);
 
+  let renderSections = sections;
+  const drillFoldersBySignature = new Map();
+  const drillPathNavBySignature = new Map();
+  if (shouldRenderArchiveDrilldown(_activeTab)) {
+    const currentPath = getActiveArchivePath(_activeTab);
+    const tabSections = getArchiveTabSections(sections, _activeTab);
+    const displaySection = getArchiveDisplaySection(tabSections, _activeTab, currentPath);
+    const currentSections = getArchiveSectionsAtPath(tabSections, currentPath);
+    const folders = getArchiveChildFolders(tabSections, currentPath);
+    const directEntries = currentSections.flatMap(section => section.entries || []);
+    const renderSection = { ...displaySection, entries: directEntries };
+    const renderSignature = makeSectionSignature(renderSection);
+    renderSections = [renderSection];
+    drillFoldersBySignature.set(renderSignature, folders);
+    drillPathNavBySignature.set(renderSignature, renderArchivePathNav(getArchiveRootSection(tabSections, _activeTab), currentPath));
+  }
+
   // Build section blocks
-  sections.forEach(section => {
+  renderSections.forEach(section => {
     const filteredEntries = section.entries.filter(entry => matchesArchiveSearch(buildEntrySearchText(entry, section)));
     entryMatchCount += filteredEntries.length;
-    const showEmptySection = !_archiveSearchNeedle && !section.entries.length;
-    if (filteredEntries.length || showEmptySection) sectionMatchCount++;
-    const theme = getSectionThemeMeta(section.key);
+    const sectionSignature = makeSectionSignature(section);
+    const drillFolders = drillFoldersBySignature.get(sectionSignature) || [];
+    const showEmptySection = !_archiveSearchNeedle && !section.entries.length && !drillFolders.length;
+    if (filteredEntries.length || showEmptySection || drillFolders.length) sectionMatchCount++;
+    const theme = getThemeMetaForSection(section);
+    const sectionDepth = getSectionPathParts(section).length;
     const block = document.createElement('div');
-    block.className = 'section-block visible';
+    block.className = `section-block visible archive-section-depth-${Math.min(sectionDepth, 4)}`;
     block.dataset.tab = section.tab || section.key;
     block.dataset.sectionTheme = theme.slug;
-    block.dataset.hasMatches = filteredEntries.length || showEmptySection ? 'true' : 'false';
-    const sectionSignature = makeSectionSignature(section);
+    block.dataset.sectionDepth = String(sectionDepth);
+    block.dataset.hasMatches = filteredEntries.length || showEmptySection || drillFolders.length ? 'true' : 'false';
     block.innerHTML = `
+      ${drillPathNavBySignature.get(sectionSignature) || ''}
       ${renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}
+      ${renderArchiveFolderGrid(drillFolders)}
       <div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');

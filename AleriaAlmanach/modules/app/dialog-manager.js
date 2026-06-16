@@ -8,6 +8,8 @@ const DIALOG_CONFIGS = {
   'delete-confirm-overlay': { label: 'Kommentar l\u00f6schen', initialFocus: '#dc-code, button, input' },
   'char-profile-overlay': { label: 'Charakterprofil', initialFocus: '#cp-name, button, input, textarea, select' },
   'module-editor-overlay': { label: 'Modul-Editor', initialFocus: '#me-code, #me-title, button, input, textarea, select' },
+  'module-section-manager-overlay': { label: 'Reiter und Modulpositionen verwalten', initialFocus: '#msm-tab, button, input, textarea, select' },
+  'scene-time-event-overlay': { label: 'Szenenzeit ankuendigen', initialFocus: '#ste-title, button, input, textarea, select' },
 };
 
 const DIALOG_FOCUSABLE_SELECTOR = [

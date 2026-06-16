@@ -65,7 +65,8 @@
               section: {
                 key: String(section?.key || '').trim(),
                 tab: String(section?.tab || '').trim(),
-                desc: String(section?.desc || '').trim()
+                desc: String(section?.desc || '').trim(),
+                path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : []
               },
               sectionIndex,
               entryIndex,
@@ -79,6 +80,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || '').trim(),
           desc: String(section?.desc || '').trim(),
+          path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entryIds
         };
       });
@@ -130,6 +132,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || section?.key || '').trim(),
           desc: String(section?.desc || '').trim(),
+          path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entries: (Array.isArray(section?.entryIds) ? section.entryIds : [])
             .map(entryId => docsByEntryId.get(String(entryId || '').trim())?.entry)
             .filter(Boolean)
@@ -342,6 +345,7 @@
           commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
           itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
           documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
+          sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
           orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
           createdAtClient: nowClient,
           activityAtClient: nowClient,

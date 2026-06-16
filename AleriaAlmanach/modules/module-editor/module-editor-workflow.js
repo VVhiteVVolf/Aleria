@@ -6,6 +6,7 @@ function getPreferredEditorSection() {
     key: current.key,
     tab: current.tab || current.key,
     desc: current.desc || '',
+    path: getSectionPathParts(current),
     signature: makeSectionSignature(current)
   };
 }
@@ -23,7 +24,7 @@ function buildModuleEditorSectionOptions(selectedSignature) {
   });
   select.innerHTML = unique.map(section => {
     const signature = makeSectionSignature(section);
-    return `<option value="${escapeHtml(signature)}"${signature === selectedSignature ? ' selected' : ''}>${escapeHtml(section.tab || section.key)}</option>`;
+    return `<option value="${escapeHtml(signature)}"${signature === selectedSignature ? ' selected' : ''}>${escapeHtml(getSectionOptionLabel(section))}</option>`;
   }).join('') + `<option value="__new__"${selectedSignature === '__new__' ? ' selected' : ''}>+ Neuer Bereich</option>`;
   toggleModuleEditorSectionMode();
 }
@@ -123,7 +124,7 @@ function summarizeModuleImportPayload(payload, commentBundle = null) {
   const lines = [
     `Titel: ${entry.title || '(ohne Titel)'}`,
     `ID: ${entry.id || '(ohne ID)'}`,
-    `Bereich: ${section.tab || section.key}`,
+    `Bereich: ${getSectionOptionLabel(section)}`,
     `Seiten: ${pageCount}`
   ];
   if (commentBundle) {

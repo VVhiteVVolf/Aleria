@@ -26,12 +26,15 @@ function getArchiveSectionStats(section, entries = []) {
 
 function renderArchiveSectionBand(section, entries = [], options = {}) {
   const stats = getArchiveSectionStats(section, entries);
-  const title = section.key || section.tab || 'Archiv';
+  const title = getSectionLeafLabel(section);
   const desc = section.desc || section.tab || '';
   const isEmpty = stats.moduleCount === 0;
+  const path = getSectionPathParts(section);
+  const breadcrumbs = path.length > 1 ? path.slice(0, -1) : [];
   return `
     <div class="archive-section-band">
       <div class="archive-section-band-main">
+        ${breadcrumbs.length ? `<div class="archive-section-breadcrumbs">${breadcrumbs.map(part => `<span>${escapeHtml(part)}</span>`).join('<span class="archive-section-breadcrumb-separator">&rsaquo;</span>')}</div>` : ''}
         <div class="archive-section-title-row">
           <span class="archive-section-title">${escapeHtml(title)}</span>
           ${options.isCustom ? '<span class="archive-section-badge">Eigener Reiter</span>' : ''}
@@ -44,6 +47,34 @@ function renderArchiveSectionBand(section, entries = [], options = {}) {
         <span><strong>${stats.pageCount}</strong> Seiten</span>
         <span><strong>${stats.commentEnabledCount}</strong> Dialog</span>
       </div>
+    </div>`;
+}
+
+function renderArchivePathNav(rootSection, path = []) {
+  const rootLabel = getSectionLeafLabel(rootSection);
+  const steps = [[], ...path.map((_, index) => path.slice(0, index + 1))];
+  const labels = [rootLabel, ...path];
+  return `
+    <nav class="archive-path-nav" aria-label="Archivpfad">
+      ${steps.map((step, index) => `
+        <button type="button" data-archive-action="set-section-path" data-section-path="${escapeHtml(encodeArchivePathData(step))}"${index === steps.length - 1 ? ' aria-current="page"' : ''}>
+          ${escapeHtml(labels[index] || rootLabel)}
+        </button>
+      `).join('<span class="archive-path-separator">&rsaquo;</span>')}
+    </nav>`;
+}
+
+function renderArchiveFolderGrid(folders = []) {
+  if (!folders.length) return '';
+  return `
+    <div class="archive-folder-grid" aria-label="Unterbereiche">
+      ${folders.map(folder => `
+        <button class="archive-folder-card" type="button" data-archive-action="enter-section-folder" data-section-path="${escapeHtml(encodeArchivePathData(folder.path))}">
+          <span class="archive-folder-kicker">Unterbereich</span>
+          <strong>${escapeHtml(folder.label)}</strong>
+          <small>${folder.moduleCount} Module · ${folder.childCount} weitere Reiter</small>
+        </button>
+      `).join('')}
     </div>`;
 }
 

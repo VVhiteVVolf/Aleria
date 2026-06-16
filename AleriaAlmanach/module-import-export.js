@@ -25,7 +25,8 @@ async function buildModulePackageExportPayload(payload, context = {}) {
     section: {
       key: validation.section.key,
       tab: validation.section.tab || validation.section.key,
-      desc: validation.section.desc || ''
+      desc: validation.section.desc || '',
+      path: getSectionPathParts(validation.section)
     },
     entry: sanitizeModuleEntry(validation.entry)
   };
@@ -162,7 +163,8 @@ function collectAllModuleExportPayloads() {
     const sectionPayload = {
       key: section.key,
       tab: section.tab || section.key,
-      desc: section.desc || ''
+      desc: section.desc || '',
+      path: getSectionPathParts(section)
     };
     (section.entries || []).forEach(entry => {
       const cleanEntry = sanitizeModuleEntry(entry);

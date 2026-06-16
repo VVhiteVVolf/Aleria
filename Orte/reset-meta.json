@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "pageId": "grossstadt-vorlage",
+  "description": "Hard Reset fuer die Grossstadt-Vorlagenseite. Dieser Reset betrifft nur Orte-Vorlagendaten.",
+  "deletes": {
+    "localStorage": [
+      "aleria:orte:inline-content:v1:grossstadt-vorlage",
+      "aleria:orte:inline-content:v2:grossstadt-vorlage",
+      "aleria:orte:scene-index:grossstadt-vorlage",
+      "aleria:orte:session-module:grossstadt-vorlage:*",
+      "aleria:orte:comments:orte:grossstadt-vorlage:*"
+    ],
+    "firebase": [
+      {
+        "collection": "orte_inline_content",
+        "document": "grossstadt-vorlage"
+      },
+      {
+        "collection": "orte_scenes",
+        "document": "grossstadt-vorlage__scene-index"
+      },
+      {
+        "collection": "orte_scenes",
+        "document": "grossstadt-vorlage__{sceneId}",
+        "scope": "Alle Szenen aus der aktuellen Orte-Szenenliste plus die alten Vorlagen-IDs einleitung und konflikte."
+      }
+    ]
+  },
+  "keeps": [
+    "AleriaAlmanach module data",
+    "AleriaAlmanach characters",
+    "AleriaAlmanach comments/comment threads"
+  ]
+}

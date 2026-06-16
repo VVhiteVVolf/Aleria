@@ -6,7 +6,8 @@ const COMMENT_KIND_LABELS = {
   thought: 'Gedanke',
   whisper: 'Zu Flüstern',
   shout: 'Rufen',
-  narrator: 'Erzähler'
+  narrator: 'Erzähler',
+  'scene-time-event': 'Szenenzeit'
 };
 
 function normalizeCommentKind(kind, narrator = false) {
@@ -65,6 +66,9 @@ function renderCommentBubble(c, idx) {
   if (showcaseItem) return renderCommentShowcase(c, idx, showcaseItem);
   const attachmentItem = getCommentAttachmentItem(c);
   if (attachmentItem) return renderCommentAttachment(c, idx, attachmentItem);
+  if (typeof isSceneTimeEventComment === 'function' && isSceneTimeEventComment(c)) {
+    return renderSceneTimeEventComment(c, idx);
+  }
 
   if (Array.isArray(c.commentSegments) && c.commentSegments.some(segment => String(segment?.text || '').trim())) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());

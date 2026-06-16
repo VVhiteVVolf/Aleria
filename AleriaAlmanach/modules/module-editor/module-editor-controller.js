@@ -7,10 +7,12 @@ function collectModuleEditorPayload() {
     const key = document.getElementById('me-new-section-key')?.value.trim() || '';
     const tab = document.getElementById('me-new-section-tab')?.value.trim() || key;
     if (!key) throw new Error('Bitte gib einen Namen für den neuen Bereich an.');
+    const path = parseSectionPathInput(key);
     section = {
-      key,
+      key: path[path.length - 1] || key,
       tab: tab || key,
-      desc: document.getElementById('me-new-section-desc')?.value.trim() || ''
+      desc: document.getElementById('me-new-section-desc')?.value.trim() || '',
+      path
     };
   } else {
     const target = getValidSections().find(item => makeSectionSignature(item) === sectionSelect?.value);
@@ -18,7 +20,8 @@ function collectModuleEditorPayload() {
     section = {
       key: target.key,
       tab: target.tab || target.key,
-      desc: target.desc || ''
+      desc: target.desc || '',
+      path: getSectionPathParts(target)
     };
   }
 
@@ -107,7 +110,7 @@ function populateModuleEditor(payload, context, options = {}) {
   document.getElementById('me-section-select').value = effectiveSignature;
   toggleModuleEditorSectionMode();
 
-  document.getElementById('me-new-section-key').value = effectiveSignature === '__new__' ? (payload.section?.key || '') : '';
+  document.getElementById('me-new-section-key').value = effectiveSignature === '__new__' ? (getSectionPathLabel(payload.section) || payload.section?.key || '') : '';
   document.getElementById('me-new-section-tab').value = effectiveSignature === '__new__' ? (payload.section?.tab || '') : '';
   document.getElementById('me-new-section-desc').value = effectiveSignature === '__new__' ? (payload.section?.desc || '') : '';
 

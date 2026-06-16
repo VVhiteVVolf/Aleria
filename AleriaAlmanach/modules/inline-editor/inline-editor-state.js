@@ -94,7 +94,7 @@ function buildInlineSectionOptions() {
   });
   return unique.map(section => {
     const signature = makeSectionSignature(section);
-    const label = section.tab || section.key;
+    const label = getSectionOptionLabel(section);
     return `<option value="${escapeHtml(signature)}"${signature === currentSignature ? ' selected' : ''}>${escapeHtml(label)}</option>`;
   }).join('');
 }
@@ -129,7 +129,8 @@ function setInlineModuleSection(signature) {
   _inlineModuleEdit.section = {
     key: section.key,
     tab: section.tab || section.key,
-    desc: section.desc || ''
+    desc: section.desc || '',
+    path: getSectionPathParts(section)
   };
   if (_inlineModuleEdit.draft && (!String(_inlineModuleEdit.draft.category || '').trim() || _inlineModuleEdit.mode === 'new')) {
     _inlineModuleEdit.draft.category = section.key;
@@ -181,7 +182,8 @@ function openModuleEditorForNew() {
     section: {
       key: preferred.key,
       tab: preferred.tab,
-      desc: preferred.desc || ''
+      desc: preferred.desc || '',
+      path: getSectionPathParts(preferred)
     },
     draft
   };
@@ -208,7 +210,8 @@ function openModuleEditorForEntry(entryId) {
     section: {
       key: payload.section.key,
       tab: payload.section.tab,
-      desc: payload.section.desc || ''
+      desc: payload.section.desc || '',
+      path: getSectionPathParts(payload.section)
     },
     draft: sanitizeModuleEntry(payload.entry)
   };

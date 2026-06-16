@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { doc, getDoc, getFirestore, onSnapshot, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { deleteDoc, doc, getDoc, getFirestore, onSnapshot, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const scenesConfig = window.AleriaOrteScenes || {};
 const fb = scenesConfig.firebase || {};
@@ -42,9 +42,38 @@ window.OrteSceneFirebase = {
       updatedAt: serverTimestamp(),
     }, { merge: true });
   },
+  async deleteScene(ortId, sceneId) {
+    await deleteDoc(getSceneRef(ortId, sceneId));
+  },
   subscribeScene(ortId, sceneId, onNext, onError) {
     return onSnapshot(getSceneRef(ortId, sceneId), (snap) => {
       onNext(snap.exists() ? normalizeRemoteModule(snap.data()) : null);
+    }, (error) => {
+      if (onError) onError(error);
+    });
+  },
+  async loadSceneIndex(ortId) {
+    const snap = await getDoc(getSceneIndexRef(ortId));
+    return snap.exists() ? normalizeSceneIndex(snap.data()) : null;
+  },
+  async saveSceneIndex(ortId, payload) {
+    const indexPayload = normalizeSceneIndex(payload);
+    await setDoc(getSceneIndexRef(ortId), {
+      id: getSceneIndexDocId(ortId),
+      type: "orte-session-index",
+      ortId: String(ortId || ""),
+      schemaVersion: 1,
+      data: JSON.stringify(indexPayload),
+      updatedAtClient: Date.now(),
+      updatedAt: serverTimestamp(),
+    }, { merge: true });
+  },
+  async deleteSceneIndex(ortId) {
+    await deleteDoc(getSceneIndexRef(ortId));
+  },
+  subscribeSceneIndex(ortId, onNext, onError) {
+    return onSnapshot(getSceneIndexRef(ortId), (snap) => {
+      onNext(snap.exists() ? normalizeSceneIndex(snap.data()) : null);
     }, (error) => {
       if (onError) onError(error);
     });
@@ -57,13 +86,25 @@ function getSceneRef(ortId, sceneId) {
   return doc(db, collectionName, getSceneDocId(ortId, sceneId));
 }
 
+function getSceneIndexRef(ortId) {
+  return doc(db, collectionName, getSceneIndexDocId(ortId));
+}
+
+function getSceneIndexDocId(ortId) {
+  return `${normalizeIdPart(ortId || "ort-vorlage")}__scene-index`;
+}
+
 function getSceneDocId(ortId, sceneId) {
   return [ortId || "ort-vorlage", sceneId || "szene"]
-    .map((part) => String(part).trim().toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "") || "leer")
+    .map((part) => normalizeIdPart(part))
     .join("__");
+}
+
+function normalizeIdPart(part) {
+  return String(part).trim().toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "") || "leer";
 }
 
 function normalizeRemoteModule(data) {
@@ -95,11 +136,49 @@ function normalizeModulePayload(payload) {
     page: {
       pageTitle: String(page.pageTitle || ""),
       sessionPage: true,
+      image: String(page.image || source.image || ""),
+      imageWidth: Number.isFinite(Number(page.imageWidth ?? source.imageWidth)) ? Number(page.imageWidth ?? source.imageWidth) : 36,
+      imageFit: normalizeImageFit(page.imageFit || source.imageFit),
+      imagePosition: normalizeImagePosition(page.imagePosition || source.imagePosition),
+      imageSquare: !!(page.imageSquare || source.imageSquare),
+      imageLandscape: !!(page.imageLandscape || source.imageLandscape),
+      imageSemiLandscape: !!(page.imageSemiLandscape || source.imageSemiLandscape),
+      imageTall: !!(page.imageTall || source.imageTall),
       sessionIntro: String(page.sessionIntro || buildLegacySessionIntro(source.blocks)),
       sessionHint: String(page.sessionHint || ""),
       sessionEmptyTitle: String(page.sessionEmptyTitle || ""),
-      sessionEmptyText: String(page.sessionEmptyText || "")
+      sessionEmptyText: String(page.sessionEmptyText || ""),
+      commentThreadKey: String(page.commentThreadKey || source.commentThreadKey || source.sceneId || source.id || "")
     }
+  };
+}
+
+function normalizeImageFit(value) {
+  const safe = String(value || "").trim();
+  return ["cover", "contain"].includes(safe) ? safe : "";
+}
+
+function normalizeImagePosition(value) {
+  const safe = String(value || "").trim();
+  return ["top", "center", "bottom", "left", "right"].includes(safe) ? safe : "";
+}
+
+function normalizeSceneIndex(payload) {
+  const source = payload && typeof payload === "object" ? payload : {};
+  if (typeof source.data === "string") {
+    try {
+      return normalizeSceneIndex(JSON.parse(source.data));
+    } catch (error) {
+      return { schemaVersion: 1, order: [] };
+    }
+  }
+
+  const order = Array.isArray(source.order)
+    ? source.order.map((id) => String(id || "").trim()).filter(Boolean)
+    : [];
+  return {
+    schemaVersion: 1,
+    order: Array.from(new Set(order)),
   };
 }
 

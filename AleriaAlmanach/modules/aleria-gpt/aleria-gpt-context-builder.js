@@ -367,6 +367,7 @@ function collectAleriaGptModules(characterIndex) {
       pushAleriaGptTextFragment(moduleFacts, entry?.subtitle || '');
       pushAleriaGptTextFragment(moduleFacts, entry?.category || '');
       pushAleriaGptTextFragment(moduleFacts, section?.desc || '');
+      pushAleriaGptTextFragment(moduleFacts, getSectionPathLabel(section));
       collectAleriaGptStructuredFacts(entry, moduleFacts, 'modul', 0, {
         skipKeys: new Set(['pages', 'sceneBlocks', 'commentSequence', 'sessionCast', 'sessionCastDetails'])
       });
@@ -382,7 +383,8 @@ function collectAleriaGptModules(characterIndex) {
         section: {
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || section?.key || '').trim(),
-          desc: String(section?.desc || '').trim()
+          desc: String(section?.desc || '').trim(),
+          path: getSectionPathParts(section)
         },
         summary: toAleriaGptPlainText(entry?.subtitle || entry?.category || ''),
         plainText: Array.from(new Set(moduleFacts)).join('\n'),

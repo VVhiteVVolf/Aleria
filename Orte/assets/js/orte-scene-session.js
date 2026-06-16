@@ -1,46 +1,342 @@
+var currentEntry = null;
+var currentPage = 0;
+var _inlineModuleEdit = null;
+var _characters = window._characters || [];
+var _charTabMap = window._charTabMap || {};
+var _charSubtabMap = window._charSubtabMap || {};
+var _hiddenBuiltinCharacterIds = window._hiddenBuiltinCharacterIds || new Set();
+
+function normalizeSearchText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function getValidSections() {
+  return [];
+}
+
+function getRenderableEntry(entry) {
+  return entry;
+}
+
+function isInlineEditingEntry() {
+  return false;
+}
+
+function getPages(entry) {
+  return Array.isArray(entry?.pages) ? entry.pages : [];
+}
+
+function getModuleCastIdsFromSource(source) {
+  const ids = [];
+  const add = (value) => {
+    const safe = String(value || "").trim();
+    if (safe && !ids.includes(safe)) ids.push(safe);
+  };
+
+  if (Array.isArray(source?.sessionCast)) source.sessionCast.forEach(add);
+  if (Array.isArray(source?.cast)) source.cast.forEach(add);
+  if (Array.isArray(source?.characters)) source.characters.forEach(add);
+  if (Array.isArray(source?.sessionCastDetails)) {
+    source.sessionCastDetails.forEach((item) => add(item?.id || item?.characterId || item?.name));
+  }
+  return ids;
+}
+
+function closeModal() {
+  const overlay = document.getElementById("modal-overlay");
+  if (typeof deactivateDialog === "function") deactivateDialog("modal-overlay");
+  else overlay?.classList.remove("active");
+  document.body.style.overflow = "";
+  if (typeof syncSessionFocusShell === "function") syncSessionFocusShell(false);
+  if (typeof stopCommentLiveUpdates === "function") stopCommentLiveUpdates();
+  currentEntry = null;
+  currentPage = 0;
+}
+
+function flipPage(direction) {
+  if (!currentEntry) return;
+  const pages = getPages(currentEntry);
+  const next = currentPage + Number(direction || 0);
+  if (next < 0 || next >= pages.length) return;
+  currentPage = next;
+  renderPage(currentPage, direction);
+}
+
+function jumpToPage(targetPage) {
+  if (!currentEntry) return;
+  const pages = getPages(currentEntry);
+  const next = Math.max(0, Math.min(pages.length - 1, Number(targetPage) || 0));
+  if (next === currentPage) return;
+  const direction = next > currentPage ? 1 : -1;
+  currentPage = next;
+  renderPage(currentPage, direction);
+}
+
+function renderPage(pageIndex, direction) {
+  if (!currentEntry || typeof buildSessionPage !== "function") return;
+  const entry = getRenderableEntry(currentEntry);
+  const pages = getPages(entry);
+  const page = pages[pageIndex] || pages[0];
+  const body = document.getElementById("modal-body");
+  if (!body || !page) return;
+
+  applyOrteSessionModalTheme(entry);
+  const html = buildSessionPage(page, entry, pageIndex, pages.length);
+  body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
+
+  if (typeof applyCommentReaderSettings === "function") applyCommentReaderSettings();
+  if (typeof initResizer === "function") initResizer();
+  if (typeof resetScroll === "function") resetScroll();
+
+  const thread = typeof getCommentThreadForPage === "function"
+    ? getCommentThreadForPage(page, entry, pageIndex)
+    : null;
+  if (thread?.threadId) {
+    if (typeof requestCommentAutoScroll === "function" && Number(direction) === 0) {
+      requestCommentAutoScroll(thread.threadId);
+    }
+    if (typeof loadCommentsIntoPage === "function") loadCommentsIntoPage(thread.threadId);
+  } else if (typeof stopCommentLiveUpdates === "function") {
+    stopCommentLiveUpdates();
+  }
+}
+
+function applyOrteSessionModalTheme(entry) {
+  const card = document.querySelector("#modal-overlay .modal-card");
+  if (!card) return;
+  const width = clampOrteModuleSize(entry?.moduleWidth, 100);
+  const height = clampOrteModuleSize(entry?.moduleHeight, 100);
+  card.style.setProperty("--module-width", `${width}vw`);
+  card.style.setProperty("--module-height", `${height}vh`);
+  card.dataset.entryTheme = "archive";
+}
+
+function clampOrteModuleSize(value, fallback) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(60, Math.min(100, Math.round(safe)));
+}
+
+function exportCurrentModule() {
+  if (!currentEntry) return;
+  const payload = {
+    schema: "aleria-orte-session-entry-v1",
+    exportedAt: new Date().toISOString(),
+    entry: currentEntry
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${currentEntry.id || "orte-session"}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+function openModuleEditorForCurrent() {
+  if (window.AleriaOrteSceneRuntime?.openEditorForCurrent) {
+    window.AleriaOrteSceneRuntime.openEditorForCurrent();
+    return;
+  }
+  if (typeof showAppStatus === "function") showAppStatus("Der Orte-Szeneneditor ist noch nicht bereit.", "error");
+}
+
 (function () {
   "use strict";
 
   const hosts = Array.from(document.querySelectorAll("[data-orte-scene]"));
-  if (!hosts.length) return;
-
+  const ALMANACH_BASE = "/AleriaAlmanach/";
   const config = window.AleriaOrteScenes || {};
   const states = new Map();
-  let activeState = null;
-  let characterLoadPromise = null;
+  const hostMap = new Map(hosts.map((host) => [String(host.dataset.orteScene || "").trim(), host]));
+  const ortId = String(config.ortId || "ort-vorlage");
+  const indexStorageKey = `aleria:orte:scene-index:${ortId}`;
+  let sceneOrder = [];
+  let sidebar = null;
+  let sidebarOpen = false;
+  let saveIndexTimer = 0;
+  let runtimePromise = null;
 
-  const modal = createModal();
+  const stylePaths = [
+    { href: "styles/modal.css?v=orte-almanach-session-v1" },
+    { href: "styles/comments.css?v=orte-almanach-session-v1" },
+    { href: "styles/comment-character-picker.css?v=orte-almanach-session-v1" },
+    { href: "styles/module-editor.css?v=orte-almanach-editor-v1" },
+    { href: "styles/module-page-boards.css?v=orte-almanach-editor-v1" },
+    { href: "styles/session.css?v=orte-almanach-session-v1" },
+    { href: "styles/speaker-profile.css?v=orte-almanach-session-v1" },
+    { href: "styles/scene-blocks.css?v=orte-almanach-session-v1" },
+    { href: "styles/session-mobile.css?v=orte-almanach-session-v1", media: "(max-width: 760px)" }
+  ];
 
-  hosts.forEach((host) => {
-    const sceneId = String(host.dataset.orteScene || "").trim();
-    const module = loadModule(config.ortId, sceneId, normalizeModule(getConfiguredModule(sceneId), sceneId));
-    const state = {
-      host,
-      sceneId,
-      ortId: String(config.ortId || "ort-vorlage"),
-      module,
-      draft: cloneModule(module),
-      comments: [],
-      characters: [],
-      composerOpen: false,
-      editorOpen: false,
-      status: ""
-    };
+  const scriptPaths = [
+    "modules/core/content-safety.js?v=orte-almanach-session-v1",
+    "modules/core/app-core.js?v=orte-almanach-editor-v1",
+    "modules/app/app-status.js?v=orte-almanach-session-v1",
+    "modules/app/dialog-manager.js?v=orte-almanach-session-v1",
+    "modules/sync/firebase-sync-status.js?v=orte-almanach-session-v1",
+    "modules/session/session-focus.js?v=orte-almanach-session-v1",
+    "modules/modal/modal-layout.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-render.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-showcase-render.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-attachment-render.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-routing.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-toolbar.js?v=orte-almanach-session-v1",
+    "modules/rendering/module-renderer.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-page.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-backend.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-form-state.js?v=orte-almanach-session-v1",
+    "modules/characters/character-data.js?v=orte-almanach-session-v1",
+    "modules/characters/character-comment-picker.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-form.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-segment-base.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-segments.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-preview.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-richtext.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-draft.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-turn.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-pagination.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-thread.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-jump.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-submit.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-showcase.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-showcase-submit.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-showcase-edit-submit.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-showcase-profile.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-attachments.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit-state.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit-segments.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit-preview.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit-character-picker.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-edit-submit.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-delete.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-markup.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-session-io.js?v=orte-almanach-session-v1",
+    "modules/aleria-gpt/aleria-gpt-config.js?v=orte-almanach-session-v1",
+    "modules/aleria-gpt/aleria-gpt-client.js?v=orte-almanach-session-v1",
+    "modules/aleria-gpt/aleria-gpt-context-builder.js?v=orte-almanach-session-v1",
+    "modules/aleria-gpt/aleria-gpt-retrieval.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-assistant.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-segment-events.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-input-events.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-action-events.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-reader-events.js?v=orte-almanach-session-v1",
+    "modules/comments/comments-overlay-events.js?v=orte-almanach-session-v1",
+    "modules/module-editor/module-editor-auth.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-preview.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-dnd.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-data.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-templates.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-workflow.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-cast-picker.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-simple-lines.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-scene-blocks.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-comment-blocks.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-page-cards.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-artifact.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-profiles.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-wanted.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-session.js?v=orte-almanach-session-v1",
+    "modules/module-editor/module-editor-biography.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-bestiary.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-recipe.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-quest.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-tournament.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-caste.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-court.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-pages.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-controller.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-events.js?v=orte-almanach-editor-v1",
+    "modules/modal/modal-events.js?v=orte-almanach-session-v1"
+  ];
 
-    states.set(sceneId, state);
-    renderPreview(state);
-    connectSceneStore(state);
-    connectComments(state);
-    connectCharacters(state);
+  init();
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-action]");
+    if (!trigger) return;
+    const action = trigger.dataset.action || "";
+    if (!action.startsWith("orte-scene-") && action !== "open-orte-session") return;
+
+    if (action === "open-orte-session") {
+      event.preventDefault();
+      const state = states.get(trigger.dataset.sceneId || "");
+      if (state) openScene(state);
+      return;
+    }
+
+    if (action === "orte-scene-toggle-sidebar") {
+      event.preventDefault();
+      setSidebarOpen(!sidebarOpen);
+      return;
+    }
+
+    if (action === "orte-scene-add") {
+      event.preventDefault();
+      addScene();
+      return;
+    }
+
+    if (action === "orte-scene-edit") {
+      event.preventDefault();
+      const state = states.get(trigger.dataset.sceneId || "");
+      if (state) openSceneEditor(state);
+      return;
+    }
+
+    if (action === "orte-scene-delete") {
+      event.preventDefault();
+      const state = states.get(trigger.dataset.sceneId || "");
+      if (state) deleteScene(state);
+      return;
+    }
+
+    if (action === "orte-scene-close-editor") {
+      event.preventDefault();
+      closeSceneEditor();
+      return;
+    }
+
+    if (action === "orte-scene-save-editor") {
+      event.preventDefault();
+      saveSceneEditor(trigger.closest("[data-orte-scene-editor]"));
+    }
   });
 
-  document.addEventListener("click", handleClick);
-  document.addEventListener("change", handleChange);
-  document.addEventListener("input", handleInput);
-  document.addEventListener("submit", handleSubmit);
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && activeState) closeModal();
-  });
+  window.AleriaOrteSceneRuntime = {
+    openEditorForCurrent() {
+      const sceneId = currentEntry?.orteSceneId || "";
+      const state = states.get(sceneId);
+      if (state) openSceneEditor(state);
+    },
+    async hardReset() {
+      await hardResetScenes();
+    }
+  };
+  window.AleriaOrteSceneEditor = {
+    activeState: null,
+    originalSaveModuleFromEditor: null,
+    originalDeleteModuleFromEditor: null,
+    originalCloseModuleEditor: null
+  };
+
+  function init() {
+    ensureSidebar();
+    const localOrder = loadSceneIndex();
+    const configuredOrder = getConfiguredSceneIds();
+    sceneOrder = localOrder.length ? localOrder : configuredOrder;
+    sceneOrder.forEach((sceneId) => ensureState(sceneId));
+    renderAll();
+    connectSceneIndex();
+  }
 
   function getConfiguredModule(sceneId) {
     return (config.modules && config.modules[sceneId])
@@ -48,451 +344,887 @@
       || null;
   }
 
+  function getConfiguredSceneIds() {
+    const modules = config.modules && typeof config.modules === "object" ? Object.keys(config.modules) : [];
+    const scenes = config.scenes && typeof config.scenes === "object" ? Object.keys(config.scenes) : [];
+    return Array.from(new Set([...modules, ...scenes].map((id) => String(id || "").trim()).filter(Boolean)));
+  }
+
   function normalizeModule(source, sceneId) {
     const raw = source && typeof source === "object" ? source : {};
     const page = raw.page && typeof raw.page === "object" ? raw.page : {};
     const title = String(raw.title || sceneId || "Interaktive Szene");
-    const threadId = String(raw.threadId || `orte:${config.ortId || "ort-vorlage"}:${sceneId || "szene"}`);
+    const pageTitle = String(page.pageTitle || raw.pageTitle || title);
 
     return {
       id: String(raw.id || sceneId || "szene"),
       title,
       subtitle: String(raw.subtitle || "Interaktive Szene mit Kommentarfortsetzung"),
       stamp: String(raw.stamp || "SZENE"),
-      image: String(raw.image || ""),
-      imageWidth: Number.isFinite(Number(raw.imageWidth)) ? Number(raw.imageWidth) : 36,
-      threadId,
+      image: String(raw.image || page.image || ""),
+      imageWidth: Number.isFinite(Number(raw.imageWidth ?? page.imageWidth)) ? Number(raw.imageWidth ?? page.imageWidth) : 36,
       page: {
-        pageTitle: String(page.pageTitle || "Interaktive Szene"),
-        sessionPage: true,
+        pageTitle,
+        image: String(page.image || raw.image || ""),
+        imageWidth: Number.isFinite(Number(page.imageWidth ?? raw.imageWidth)) ? Number(page.imageWidth ?? raw.imageWidth) : 36,
+        imageFit: normalizeImageFit(page.imageFit || raw.imageFit),
+        imagePosition: normalizeImagePosition(page.imagePosition || raw.imagePosition),
+        imageSquare: !!(page.imageSquare || raw.imageSquare),
+        imageLandscape: !!(page.imageLandscape || raw.imageLandscape),
+        imageSemiLandscape: !!(page.imageSemiLandscape || raw.imageSemiLandscape),
+        imageTall: !!(page.imageTall || raw.imageTall),
         sessionIntro: String(page.sessionIntro || raw.sessionIntro || buildLegacySessionIntro(raw.blocks)),
         sessionHint: String(page.sessionHint || raw.sessionHint || "Fuehre diese Szene als Kommentar fort."),
         sessionEmptyTitle: String(page.sessionEmptyTitle || raw.sessionEmptyTitle || "Die Szene ist offen"),
-        sessionEmptyText: String(page.sessionEmptyText || raw.sessionEmptyText || "Noch ist kein Beitrag eingetragen.")
+        sessionEmptyText: String(page.sessionEmptyText || raw.sessionEmptyText || "Noch ist kein Beitrag eingetragen."),
+        commentThreadKey: String(page.commentThreadKey || raw.commentThreadKey || sceneId || "szene")
       }
     };
+  }
+
+  function ensureState(sceneId, moduleSource = null) {
+    const id = String(sceneId || "").trim();
+    if (!id) return null;
+    const existing = states.get(id);
+    if (existing) {
+      if (moduleSource) existing.module = normalizeModule(moduleSource, id);
+      existing.host = hostMap.get(id) || existing.host || null;
+      return existing;
+    }
+
+    const localModule = loadLocalModule(id);
+    const state = {
+      host: hostMap.get(id) || null,
+      sceneId: id,
+      ortId,
+      module: normalizeModule(moduleSource || localModule || getConfiguredModule(id), id),
+      status: ""
+    };
+    states.set(id, state);
+    connectSceneStore(state);
+    return state;
+  }
+
+  function renderAll() {
+    sceneOrder.forEach((sceneId) => {
+      const state = ensureState(sceneId);
+      if (state) renderPreview(state);
+    });
+    renderSidebar();
   }
 
   function renderPreview(state) {
+    if (!state.host) return;
     state.host.innerHTML = `
       <article class="orte-session-preview">
         <div class="orte-session-preview-kicker">Interaktive Szene</div>
-        <h3>${escapeHtml(state.module.title)}</h3>
-        <p>${escapeHtml(state.module.subtitle)}</p>
-        <div class="orte-session-preview-copy">${sanitizeLine(state.module.page.sessionIntro)}</div>
+        <h3>${escapeHtmlLocal(state.module.title)}</h3>
         <div class="orte-session-preview-actions">
-          <button class="orte-session-button" type="button" data-action="open-orte-session" data-scene-id="${escapeAttr(state.sceneId)}">Modul oeffnen</button>
-          <span>${escapeHtml(state.status)}</span>
+          <button class="orte-session-button" type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(state.sceneId)}">Oeffnen</button>
+          <span>${escapeHtmlLocal(state.status)}</span>
         </div>
       </article>
     `;
   }
 
-  function renderModal(state) {
-    modal.innerHTML = `
-      <div class="orte-session-backdrop" data-action="close-orte-session"></div>
-      <section class="orte-session-dialog" role="dialog" aria-modal="true" aria-label="${escapeAttr(state.module.title)}">
-        <header class="orte-session-modal-head">
-          <div>
-            <div class="orte-session-preview-kicker">Interaktive Szene</div>
-            <h2>${escapeHtml(state.module.title)}</h2>
-          </div>
-          <div class="orte-session-head-actions">
-            <button class="orte-session-button is-secondary" type="button" data-action="toggle-orte-session-editor">Bearbeiten</button>
-            <button class="orte-session-icon-button" type="button" data-action="close-orte-session" aria-label="Schliessen">x</button>
-          </div>
-        </header>
-        ${renderSessionPage(state)}
-      </section>
+  function ensureSidebar() {
+    if (sidebar) return;
+    sidebar = document.createElement("aside");
+    sidebar.className = "orte-scene-sidebar";
+    sidebar.dataset.open = "false";
+    sidebar.innerHTML = `
+      <button class="orte-scene-sidebar-toggle" type="button" data-action="orte-scene-toggle-sidebar">Szenen</button>
+      <div class="orte-scene-sidebar-panel">
+        <div class="orte-scene-sidebar-head">
+          <strong>Ortsszenen</strong>
+          <button type="button" data-action="orte-scene-add">+ Szene</button>
+        </div>
+        <div class="orte-scene-sidebar-list" data-orte-scene-list></div>
+      </div>
     `;
-    modal.hidden = false;
-    document.body.classList.add("orte-session-open");
+    document.body.appendChild(sidebar);
   }
 
-  function renderSessionPage(state) {
+  function setSidebarOpen(open) {
+    sidebarOpen = !!open;
+    if (sidebar) sidebar.dataset.open = sidebarOpen ? "true" : "false";
+  }
+
+  function renderSidebar() {
+    ensureSidebar();
+    const list = sidebar.querySelector("[data-orte-scene-list]");
+    if (!list) return;
+    if (!sceneOrder.length) {
+      list.innerHTML = `<div class="orte-scene-empty">Noch keine Ortsszene angelegt.</div>`;
+      return;
+    }
+
+    list.innerHTML = sceneOrder.map((sceneId, index) => {
+      const state = ensureState(sceneId);
+      if (!state) return "";
+      return `
+        <article class="orte-scene-sidebar-card">
+          <div>
+            <span>${escapeHtmlLocal(state.module.stamp || `SZENE ${index + 1}`)}</span>
+            <strong>${escapeHtmlLocal(state.module.title)}</strong>
+          </div>
+          <div class="orte-scene-sidebar-actions">
+            <button type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(sceneId)}">Oeffnen</button>
+            <button type="button" data-action="orte-scene-edit" data-scene-id="${escapeAttrLocal(sceneId)}">Bearbeiten</button>
+            <button type="button" data-action="orte-scene-delete" data-scene-id="${escapeAttrLocal(sceneId)}">Loeschen</button>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  async function addScene() {
+    const sceneId = createSceneId();
+    const state = ensureState(sceneId, createDefaultModule(sceneId, sceneOrder.length + 1));
+    sceneOrder.push(sceneId);
+    setSidebarOpen(true);
+    renderAll();
+    persistSceneIndex();
+    await saveScene(state);
+    openSceneEditor(state);
+  }
+
+  function createSceneId() {
+    let index = sceneOrder.length + 1;
+    let sceneId = `szene-${index}`;
+    while (states.has(sceneId) || sceneOrder.includes(sceneId)) {
+      index += 1;
+      sceneId = `szene-${index}`;
+    }
+    return sceneId;
+  }
+
+  function createDefaultModule(sceneId, index) {
+    return {
+      id: sceneId,
+      title: `Szene ${index}`,
+      subtitle: "Interaktive Ortsszene",
+      stamp: "ORTSZENE",
+      image: "",
+      imageWidth: 36,
+      threadId: `orte:${ortId}:${sceneId}`,
+      page: {
+        pageTitle: `${index} - Interaktive Szene`,
+        sessionPage: true,
+        sessionIntro: "Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht spaeter ueber Kommentare.",
+        sessionHint: "Fuehre diese Szene als Kommentar fort.",
+        sessionEmptyTitle: "Die Szene ist offen",
+        sessionEmptyText: "Noch ist kein Beitrag eingetragen.",
+        commentThreadKey: sceneId
+      }
+    };
+  }
+
+  async function deleteScene(state) {
+    const confirmed = window.confirm(`Szene "${state.module.title}" aus dieser Orte-Vorlage loeschen? Almanach-Kommentare werden nicht geloescht.`);
+    if (!confirmed) return;
+    sceneOrder = sceneOrder.filter((id) => id !== state.sceneId);
+    if (state.unsubscribeScene) state.unsubscribeScene();
+    states.delete(state.sceneId);
+    removeLocalModule(state.sceneId);
+    renderAll();
+    persistSceneIndex();
+    const store = await waitForSceneStore(900);
+    if (store?.deleteScene) await store.deleteScene(ortId, state.sceneId);
+  }
+
+  async function openScene(state) {
+    await ensureRuntime();
+    await loadAlmanachCharacters();
+
+    currentEntry = buildAlmanachEntry(state);
+    currentPage = 0;
+    renderPage(0, 0);
+    document.body.style.overflow = "hidden";
+    if (typeof activateDialog === "function") {
+      activateDialog("modal-overlay", { initialFocus: ".modal-close" });
+    } else {
+      document.getElementById("modal-overlay")?.classList.add("active");
+    }
+    if (typeof refreshCurrentModuleCommenterHighlights === "function") {
+      refreshCurrentModuleCommenterHighlights();
+    }
+  }
+
+  function buildAlmanachEntry(state) {
     const module = state.module;
     const page = module.page;
-    return `
-      <div class="session-page">
-        <aside class="session-art-col">
-          ${module.image
-            ? `<img src="${escapeAttr(module.image)}" alt="${escapeAttr(module.title)}" loading="eager" decoding="async">`
-            : `<div class="orte-session-image-placeholder">Interaktive Szene</div>`}
-          <div class="session-art-overlay"></div>
-          <div class="session-art-stamp">${escapeHtml(module.stamp)}</div>
-        </aside>
-        <div class="session-content">
-          <div class="session-stage-bar">
-            <div class="session-stage-head">
-              <div class="session-stage-heading">
-                <div class="session-stage-kicker">Interaktive Szene</div>
-                <div class="session-stage-title">${escapeHtml(page.pageTitle || module.title)}</div>
-              </div>
-            </div>
-            <div class="session-stage-copy">${sanitizeLine(page.sessionIntro)}</div>
+    const entryId = `orte:${state.ortId}:${state.sceneId}`;
+    return {
+      id: entryId,
+      orteSceneId: state.sceneId,
+      title: module.title,
+      subtitle: module.subtitle,
+      type: "Interaktive Szene",
+      category: "Orte",
+      stamp: module.stamp,
+      image: module.image || "",
+      appendCommentsPage: false,
+      multipage: true,
+      moduleWidth: 100,
+      moduleHeight: 100,
+      pages: [{
+        sessionPage: true,
+        pageTitle: page.pageTitle,
+        image: page.image || module.image || "",
+        imageWidth: page.imageWidth || module.imageWidth,
+        imageFit: page.imageFit,
+        imagePosition: page.imagePosition,
+        imageSquare: page.imageSquare,
+        imageLandscape: page.imageLandscape,
+        imageSemiLandscape: page.imageSemiLandscape,
+        imageTall: page.imageTall,
+        commentThreadKey: page.commentThreadKey || state.sceneId || "szene",
+        sessionIntro: page.sessionIntro,
+        sessionHint: page.sessionHint,
+        sessionEmptyTitle: page.sessionEmptyTitle,
+        sessionEmptyText: page.sessionEmptyText
+      }]
+    };
+  }
+
+  async function openSceneEditor(state) {
+    await ensureRuntime();
+    await loadAlmanachCharacters();
+    ensureModuleEditorSessionDependencies();
+    if (typeof openModuleEditor !== "function") {
+      openFallbackSceneEditor(state);
+      return;
+    }
+
+    window.AleriaOrteSceneEditor.activeState = state;
+    const payload = buildModuleEditorPayloadFromScene(state);
+    openModuleEditor(payload, {
+      mode: "edit",
+      sourceKind: "orte-scene",
+      sourceEntryId: payload.entry.id,
+      sectionSignature: "__new__"
+    });
+    decorateOrteModuleEditor(state);
+  }
+
+  function openFallbackSceneEditor(state) {
+    closeSceneEditor();
+    const module = state.module;
+    const page = module.page || {};
+    const overlay = document.createElement("div");
+    overlay.className = "orte-scene-editor-overlay";
+    overlay.dataset.orteSceneEditor = state.sceneId;
+    overlay.innerHTML = `
+      <div class="orte-scene-editor-dialog" role="dialog" aria-modal="true" aria-label="Ortsszene bearbeiten">
+        <div class="orte-scene-editor-head">
+          <div>
+            <span>Ortsszene bearbeiten</span>
+            <strong>${escapeHtmlLocal(module.title)}</strong>
           </div>
-          ${state.editorOpen ? renderModuleEditor(state) : ""}
-          <div class="comments-scroll" data-role="orte-session-comments">
-            ${renderComments(state)}
+          <button type="button" data-action="orte-scene-close-editor" aria-label="Schließen">x</button>
+        </div>
+        <div class="orte-scene-editor-body">
+          <div class="orte-scene-editor-grid">
+            <label>Titel<input class="ose-title" type="text" value="${escapeAttrLocal(module.title)}"></label>
+            <label>Registertitel<input class="ose-page-title" type="text" value="${escapeAttrLocal(page.pageTitle || module.title)}"></label>
+            <label>Untertitel<input class="ose-subtitle" type="text" value="${escapeAttrLocal(module.subtitle)}"></label>
+            <label>Stempel<input class="ose-stamp" type="text" value="${escapeAttrLocal(module.stamp)}"></label>
+            <label class="wide">Bild-URL<input class="ose-image" type="url" value="${escapeAttrLocal(module.image)}" placeholder="https://..."></label>
+            <label>Bildbreite %<input class="ose-image-width" type="range" min="20" max="55" step="1" value="${escapeAttrLocal(module.imageWidth)}"></label>
+            <label>Kommentar-Schlüssel<input class="ose-thread" type="text" value="${escapeAttrLocal(page.commentThreadKey || state.sceneId)}"></label>
           </div>
-          <div class="comments-form-bar">
-            <button class="comments-add-btn" type="button" data-action="toggle-orte-session-composer" title="Kommentar hinterlassen" aria-label="Kommentar hinterlassen">+</button>
-            <span class="comments-form-hint">${escapeHtml(page.sessionHint)}</span>
+          <div class="orte-scene-editor-session-fields">
+            ${buildSessionEditorFields(page)}
           </div>
-          ${state.composerOpen ? renderComposer(state) : ""}
+        </div>
+        <div class="orte-scene-editor-footer">
+          <button type="button" data-action="orte-scene-close-editor">Abbrechen</button>
+          <button type="button" data-action="orte-scene-save-editor">Speichern</button>
         </div>
       </div>
     `;
+    document.body.appendChild(overlay);
+    overlay.querySelector("input, textarea")?.focus();
   }
 
-  function renderComments(state) {
-    if (!state.comments.length) {
-      return `
-        <div class="comment-empty">
-          <strong>${escapeHtml(state.module.page.sessionEmptyTitle)}</strong>
-          <span>${escapeHtml(state.module.page.sessionEmptyText)}</span>
-        </div>
-      `;
-    }
-
-    return state.comments.map(renderComment).join("");
+  function closeSceneEditor() {
+    document.querySelectorAll("[data-orte-scene-editor]").forEach((node) => node.remove());
   }
 
-  function renderComment(comment) {
-    const name = String(comment.charName || "Unbekannt");
-    const title = String(comment.charTitle || "");
-    const portrait = String(comment.portrait || "").trim();
-    const kind = String(comment.commentKind || (comment.narrator ? "narrator" : "speech"));
-    const meta = title ? `${name} - ${title}` : name;
-    return `
-      <article class="comment-card is-${escapeAttr(kind)}${portrait ? " has-portrait" : ""}">
-        ${portrait ? `<img class="comment-avatar" src="${escapeAttr(portrait)}" alt="${escapeAttr(name)}" loading="lazy" decoding="async">` : ""}
-        <div class="comment-card-body">
-          <div class="comment-meta">${escapeHtml(meta)}</div>
-          <div class="comment-text">${escapeHtml(comment.text || "")}</div>
-        </div>
-      </article>
-    `;
-  }
+  async function saveSceneEditor(editor) {
+    if (!editor) return;
+    const sceneId = editor.dataset.orteSceneEditor || "";
+    const state = states.get(sceneId);
+    if (!state) return;
 
-  function renderComposer(state) {
-    return `
-      <form class="orte-session-composer" data-action="submit-orte-session-comment">
-        <div class="orte-session-character-picker">
-          <select class="orte-session-input" name="characterId" data-action="select-orte-session-character" aria-label="Almanach-Charakter auswaehlen">
-            <option value="">Freie Eingabe / Erzaehler</option>
-            ${state.characters.map((character) => {
-              const label = character.title ? `${character.name} - ${character.title}` : character.name;
-              return `<option value="${escapeAttr(character.id)}">${escapeHtml(label)}</option>`;
-            }).join("")}
-          </select>
-          <span>${state.characters.length ? `${state.characters.length} Almanach-Charaktere` : "Almanach-Charaktere werden geladen"}</span>
-        </div>
-        <div class="orte-session-form-grid">
-          <input class="orte-session-input" name="charName" placeholder="Name">
-          <input class="orte-session-input" name="charTitle" placeholder="Titel / Rolle">
-          <input class="orte-session-input" name="portrait" placeholder="Portrait-URL">
-          <select class="orte-session-input" name="commentKind" aria-label="Kommentarart">
-            <option value="speech">Rede</option>
-            <option value="action">Handlung</option>
-            <option value="thought">Gedanke</option>
-            <option value="narrator">Erzaehler</option>
-          </select>
-        </div>
-        <textarea class="orte-session-textarea" name="text" required placeholder="Kommentar"></textarea>
-        <div class="orte-session-form-actions">
-          <input class="orte-session-input" name="deleteCode" placeholder="Loeschcode">
-          <button class="orte-session-button" type="submit">Kommentieren</button>
-        </div>
-      </form>
-    `;
-  }
-
-  function renderModuleEditor(state) {
-    const module = state.draft;
-    const page = module.page;
-    return `
-      <form class="orte-session-editor" data-action="save-orte-session-module">
-        <div class="orte-session-editor-kicker">Modul-Editor</div>
-        <div class="orte-session-form-grid">
-          <label>Titel<input class="orte-session-input" name="title" value="${escapeAttr(module.title)}"></label>
-          <label>Untertitel<input class="orte-session-input" name="subtitle" value="${escapeAttr(module.subtitle)}"></label>
-          <label>Seitentitel<input class="orte-session-input" name="pageTitle" value="${escapeAttr(page.pageTitle)}"></label>
-          <label>Stempel<input class="orte-session-input" name="stamp" value="${escapeAttr(module.stamp)}"></label>
-          <label class="is-wide">Bild-URL<input class="orte-session-input" name="image" value="${escapeAttr(module.image)}"></label>
-          <label>Hinweis<input class="orte-session-input" name="sessionHint" value="${escapeAttr(page.sessionHint)}"></label>
-          <label>Leertitel<input class="orte-session-input" name="sessionEmptyTitle" value="${escapeAttr(page.sessionEmptyTitle)}"></label>
-        </div>
-        <label>Intro<textarea class="orte-session-textarea" name="sessionIntro">${escapeHtml(page.sessionIntro)}</textarea></label>
-        <label>Leertext<textarea class="orte-session-textarea" name="sessionEmptyText">${escapeHtml(page.sessionEmptyText)}</textarea></label>
-        <div class="orte-session-form-actions">
-          <button class="orte-session-button" type="submit">Modul speichern</button>
-          <button class="orte-session-button is-secondary" type="button" data-action="reset-orte-session-draft">Zuruecksetzen</button>
-        </div>
-      </form>
-    `;
-  }
-
-  function handleClick(event) {
-    const actionTarget = event.target.closest("[data-action]");
-    if (!actionTarget) return;
-    const action = actionTarget.dataset.action;
-
-    if (action === "open-orte-session") {
-      const state = states.get(actionTarget.dataset.sceneId);
-      if (!state) return;
-      activeState = state;
-      state.draft = cloneModule(state.module);
-      renderModal(state);
-      return;
-    }
-
-    if (action === "close-orte-session") {
-      closeModal();
-      return;
-    }
-
-    if (!activeState) return;
-
-    if (action === "toggle-orte-session-composer") {
-      activeState.composerOpen = !activeState.composerOpen;
-      renderModal(activeState);
-      return;
-    }
-
-    if (action === "toggle-orte-session-editor") {
-      activeState.editorOpen = !activeState.editorOpen;
-      activeState.draft = cloneModule(activeState.module);
-      renderModal(activeState);
-      return;
-    }
-
-    if (action === "reset-orte-session-draft") {
-      activeState.draft = cloneModule(activeState.module);
-      renderModal(activeState);
-    }
-  }
-
-  function handleChange(event) {
-    const select = event.target.closest("[data-action='select-orte-session-character']");
-    if (select) applySelectedCharacter(select);
-  }
-
-  function handleInput(event) {
-    if (!activeState) return;
-    const field = event.target.closest(".orte-session-editor [name]");
-    if (!field) return;
-    updateDraftField(activeState, field.name, field.value);
-  }
-
-  async function handleSubmit(event) {
-    const commentForm = event.target.closest("form[data-action='submit-orte-session-comment']");
-    if (commentForm) {
-      event.preventDefault();
-      await submitComment(commentForm);
-      return;
-    }
-
-    const editorForm = event.target.closest("form[data-action='save-orte-session-module']");
-    if (editorForm) {
-      event.preventDefault();
-      await saveModuleDraft(editorForm);
-    }
-  }
-
-  function closeModal() {
-    modal.hidden = true;
-    modal.innerHTML = "";
-    document.body.classList.remove("orte-session-open");
-    activeState = null;
-  }
-
-  async function submitComment(form) {
-    if (!activeState) return;
-    const formData = new FormData(form);
-    const comment = {
-      charName: String(formData.get("charName") || "").trim(),
-      charTitle: String(formData.get("charTitle") || "").trim(),
-      portrait: String(formData.get("portrait") || "").trim(),
-      text: String(formData.get("text") || "").trim(),
-      characterId: String(formData.get("characterId") || "").trim(),
-      commentKind: String(formData.get("commentKind") || "speech"),
-      orderKey: Date.now()
+    const card = editor;
+    const page = {
+      pageTitle: getValue(card, ".ose-page-title") || state.module.title,
+      commentThreadKey: getValue(card, ".ose-thread") || sceneId,
+      sessionPage: true
     };
-    if (!comment.text) return;
-
-    const deleteCode = String(formData.get("deleteCode") || "").trim();
-    const fb = window._fb;
-
-    if (fb && typeof fb.addComment === "function") {
-      try {
-        await fb.addComment(
-          activeState.module.threadId,
-          comment.charName,
-          comment.charTitle,
-          comment.portrait,
-          comment.text,
-          deleteCode,
-          comment.commentKind === "narrator",
-          {
-            characterId: comment.characterId,
-            commentKind: comment.commentKind,
-            commentMode: comment.commentKind === "narrator" ? "narrator" : "character",
-            orderKey: comment.orderKey,
-            placeId: activeState.ortId,
-            sceneId: activeState.sceneId
-          }
-        );
-      } catch (error) {
-        activeState.status = "Kommentar konnte online nicht gespeichert werden.";
-        renderPreview(activeState);
-      }
+    if (typeof collectSessionModuleEditorPage === "function") {
+      collectSessionModuleEditorPage(card, page);
     } else {
-      activeState.comments.push(comment);
-      saveLocalComments(activeState.module.threadId, activeState.comments);
+      page.sessionIntro = getValue(card, ".me-page-session-intro");
+      page.sessionHint = getValue(card, ".me-page-session-hint");
+      page.sessionEmptyTitle = getValue(card, ".me-page-session-empty-title");
+      page.sessionEmptyText = getValue(card, ".me-page-session-empty-text");
     }
 
-    activeState.composerOpen = false;
-    form.reset();
-    renderModal(activeState);
+    state.module = normalizeModule({
+      id: sceneId,
+      title: getValue(card, ".ose-title") || state.module.title,
+      subtitle: getValue(card, ".ose-subtitle"),
+      stamp: getValue(card, ".ose-stamp") || "ORTSZENE",
+      image: getValue(card, ".ose-image"),
+      imageWidth: getValue(card, ".ose-image-width"),
+      threadId: `orte:${ortId}:${sceneId}`,
+      page
+    }, sceneId);
+
+    saveLocalModule(state);
+    renderPreview(state);
+    renderSidebar();
+    await saveScene(state);
+    if (currentEntry?.orteSceneId === state.sceneId) {
+      currentEntry = buildAlmanachEntry(state);
+      renderPage(0, 0);
+    }
+    closeSceneEditor();
   }
 
-  async function saveModuleDraft(form) {
-    if (!activeState) return;
-    if (form) {
-      Array.from(form.elements).forEach((field) => {
-        if (field.name) updateDraftField(activeState, field.name, field.value);
+  function buildModuleEditorPayloadFromScene(state) {
+    const module = state.module;
+    const page = module.page || {};
+    const entryId = slugifyLocal(`${ortId}-${state.sceneId}`, "orte-szene");
+    const editorPage = {
+      schemaVersion: 1,
+      sessionPage: true,
+      pageTitle: page.pageTitle || module.title || "Interaktive Szene",
+      image: page.image || module.image || "",
+      imageWidth: page.imageWidth || module.imageWidth || 36,
+      imageFit: page.imageFit || "cover",
+      imagePosition: page.imagePosition || "top",
+      commentThreadKey: page.commentThreadKey || state.sceneId,
+      sessionIntro: page.sessionIntro || "",
+      sessionHint: page.sessionHint || "Führe diese Szene als Kommentar fort.",
+      sessionEmptyTitle: page.sessionEmptyTitle || "Die Szene ist offen",
+      sessionEmptyText: page.sessionEmptyText || "Noch ist kein Beitrag eingetragen."
+    };
+    if (page.imageSquare) editorPage.imageSquare = true;
+    if (page.imageLandscape) editorPage.imageLandscape = true;
+    if (page.imageSemiLandscape) editorPage.imageSemiLandscape = true;
+    if (page.imageTall) editorPage.imageTall = true;
+
+    return {
+      section: {
+        key: "orte",
+        tab: "Orte",
+        desc: "Interaktive Szenen dieser Orte-Seite",
+        path: ["Orte", config.ortName || ortId]
+      },
+      entry: {
+        id: entryId,
+        title: module.title || "Interaktive Szene",
+        subtitle: module.subtitle || "Interaktive Szene mit Kommentarfortsetzung",
+        type: "Interaktive Szene",
+        category: `Orte · ${config.ortName || ortId}`,
+        moduleWidth: 100,
+        moduleHeight: 100,
+        image: module.image || page.image || "",
+        stamp: module.stamp || "ORTSZENE",
+        icon: "✦",
+        symbol: "",
+        locked: false,
+        multipage: true,
+        appendCommentsPage: false,
+        enablePageComments: false,
+        sessionCast: Array.isArray(module.sessionCast) ? module.sessionCast : [],
+        sessionCastDetails: Array.isArray(module.sessionCastDetails) ? module.sessionCastDetails : [],
+        pages: [editorPage]
+      }
+    };
+  }
+
+  function applyModuleEditorPayloadToScene(state, payload) {
+    const entry = payload?.entry || {};
+    const page = Array.isArray(entry.pages) && entry.pages.length ? entry.pages[0] : {};
+    state.module = normalizeModule({
+      id: state.sceneId,
+      title: entry.title || state.module.title,
+      subtitle: entry.subtitle || "",
+      stamp: entry.stamp || "ORTSZENE",
+      image: entry.image || page.image || "",
+      imageWidth: page.imageWidth || 36,
+      sessionCast: Array.isArray(entry.sessionCast) ? entry.sessionCast : [],
+      sessionCastDetails: Array.isArray(entry.sessionCastDetails) ? entry.sessionCastDetails : [],
+      page: {
+        ...page,
+        pageTitle: page.pageTitle || entry.title || state.module.title,
+        sessionPage: true,
+        commentThreadKey: page.commentThreadKey || state.sceneId,
+        sessionIntro: page.sessionIntro || "",
+        sessionHint: page.sessionHint || "Führe diese Szene als Kommentar fort.",
+        sessionEmptyTitle: page.sessionEmptyTitle || "Die Szene ist offen",
+        sessionEmptyText: page.sessionEmptyText || "Noch ist kein Beitrag eingetragen."
+      }
+    }, state.sceneId);
+  }
+
+  async function saveSceneFromModuleEditor() {
+    const state = window.AleriaOrteSceneEditor?.activeState;
+    if (!state) return;
+    try {
+      const payload = collectModuleEditorPayload();
+      applyModuleEditorPayloadToScene(state, payload);
+      saveLocalModule(state);
+      renderPreview(state);
+      renderSidebar();
+      await saveScene(state);
+      if (currentEntry?.orteSceneId === state.sceneId) {
+        currentEntry = buildAlmanachEntry(state);
+        renderPage(0, 0);
+      }
+      if (typeof setModuleEditorStatus === "function") setModuleEditorStatus("Ortsszene gespeichert ✓");
+      if (typeof setModuleEditorCleanBaseline === "function") setModuleEditorCleanBaseline();
+    } catch (error) {
+      if (typeof setModuleEditorStatus === "function") {
+        setModuleEditorStatus(error.message || "Ortsszene konnte nicht gespeichert werden.", true);
+      }
+    }
+  }
+
+  async function deleteSceneFromModuleEditor() {
+    const state = window.AleriaOrteSceneEditor?.activeState;
+    if (!state) return;
+    await deleteScene(state);
+    window.AleriaOrteSceneEditor.activeState = null;
+    if (typeof deactivateDialog === "function") deactivateDialog("module-editor-overlay");
+    else document.getElementById("module-editor-overlay")?.classList.remove("active");
+  }
+
+  function decorateOrteModuleEditor(state) {
+    const overlay = document.getElementById("module-editor-overlay");
+    if (!overlay) return;
+    overlay.classList.add("orte-module-editor-mode");
+    overlay.dataset.orteSceneId = state.sceneId;
+    const title = overlay.querySelector("#module-editor-title");
+    if (title) title.textContent = "Ortsszene bearbeiten";
+    const deleteButton = overlay.querySelector("#me-delete-btn");
+    if (deleteButton) deleteButton.textContent = "Szene löschen";
+    const template = overlay.querySelector("#me-template");
+    if (template) template.value = "session";
+  }
+
+  function buildSessionEditorFields(page) {
+    if (typeof buildSessionModuleEditorFields === "function") {
+      return buildSessionModuleEditorFields({
+        sessionPage: true,
+        sessionIntro: page.sessionIntro || "",
+        sessionHint: page.sessionHint || "",
+        sessionEmptyTitle: page.sessionEmptyTitle || "",
+        sessionEmptyText: page.sessionEmptyText || ""
       });
     }
-    activeState.module = cloneModule(activeState.draft);
-    saveModule(activeState.ortId, activeState.sceneId, activeState.module);
-    const savedRemote = await saveRemoteModule(activeState);
-    activeState.status = savedRemote ? "Online gespeichert." : "Lokal gespeichert.";
-    activeState.editorOpen = false;
-    renderPreview(activeState);
-    renderModal(activeState);
+    return `
+      <div class="module-page-type-block visible" data-page-type="session">
+        <div class="module-editor-grid single">
+          <div class="module-editor-field"><label>Introtext</label><textarea class="me-page-session-intro">${escapeHtmlLocal(page.sessionIntro || "")}</textarea></div>
+          <div class="module-editor-field"><label>Hinweis im Eingabebalken</label><input type="text" class="me-page-session-hint" value="${escapeAttrLocal(page.sessionHint || "")}"></div>
+          <div class="module-editor-field"><label>Leertitel</label><input type="text" class="me-page-session-empty-title" value="${escapeAttrLocal(page.sessionEmptyTitle || "")}"></div>
+          <div class="module-editor-field"><label>Leertext</label><textarea class="me-page-session-empty-text small">${escapeHtmlLocal(page.sessionEmptyText || "")}</textarea></div>
+        </div>
+      </div>`;
   }
 
-  function buildLegacySessionIntro(blocks) {
-    if (!Array.isArray(blocks)) return "";
-    return blocks
-      .map((block) => {
-        if (!block || typeof block !== "object") return "";
-        const speaker = block.speaker || block.name;
-        const text = String(block.text || "").trim();
-        if (!text) return "";
-        return speaker ? `${speaker}: ${text}` : text;
-      })
-      .filter(Boolean)
-      .join("\n");
-  }
-
-  function updateDraftField(state, name, value) {
-    const draft = state.draft;
-    if (["title", "subtitle", "stamp", "image"].includes(name)) {
-      draft[name] = String(value || "");
-      return;
+  function ensureModuleEditorSessionDependencies() {
+    if (typeof window.escapeHtml !== "function") window.escapeHtml = escapeHtmlLocal;
+    if (typeof window.inferModulePageType !== "function") {
+      window.inferModulePageType = (page) => page?.sessionPage ? "session" : "";
     }
-    if (name === "pageTitle") draft.page.pageTitle = String(value || "");
-    if (name === "sessionIntro") draft.page.sessionIntro = String(value || "");
-    if (name === "sessionHint") draft.page.sessionHint = String(value || "");
-    if (name === "sessionEmptyTitle") draft.page.sessionEmptyTitle = String(value || "");
-    if (name === "sessionEmptyText") draft.page.sessionEmptyText = String(value || "");
+    if (typeof window.buildTextFormatToolbar !== "function") {
+      window.buildTextFormatToolbar = () => "";
+    }
+    if (typeof window.getTrimmedFormValue !== "function") {
+      window.getTrimmedFormValue = (scope, selector) => String(scope.querySelector(selector)?.value || "").trim();
+    }
+    if (typeof window.getFormValue !== "function") {
+      window.getFormValue = (scope, selector) => String(scope.querySelector(selector)?.value || "");
+    }
+    if (typeof window.hydrateModuleRichEditors !== "function") {
+      window.hydrateModuleRichEditors = () => {};
+    }
+    if (typeof window.updateModuleStoreSizePanel !== "function") {
+      window.updateModuleStoreSizePanel = () => {};
+    }
+    if (typeof window.refreshModuleCommentThreadIoOptions !== "function") {
+      window.refreshModuleCommentThreadIoOptions = () => {};
+    }
+    if (typeof window.showFriendlyAppError !== "function") {
+      window.showFriendlyAppError = (error, fallback) => {
+        if (typeof showAppStatus === "function") showAppStatus(fallback || error?.message || "Aktion fehlgeschlagen.", "error");
+      };
+    }
+  }
+
+  async function saveScene(state) {
+    saveLocalModule(state);
+    const store = await waitForSceneStore(900);
+    if (store?.saveScene) await store.saveScene(ortId, state.sceneId, state.module);
+  }
+
+  function persistSceneIndex() {
+    saveLocalIndex();
+    window.clearTimeout(saveIndexTimer);
+    saveIndexTimer = window.setTimeout(async () => {
+      const store = await waitForSceneStore(900);
+      if (store?.saveSceneIndex) await store.saveSceneIndex(ortId, { order: sceneOrder });
+    }, 250);
+  }
+
+  async function connectSceneIndex() {
+    const store = await waitForSceneStore();
+    if (!store?.subscribeSceneIndex) return;
+    store.subscribeSceneIndex(ortId, (remoteIndex) => {
+      if (!remoteIndex?.order) return;
+      sceneOrder = remoteIndex.order;
+      sceneOrder.forEach((sceneId) => ensureState(sceneId));
+      saveLocalIndex();
+      renderAll();
+    });
+  }
+
+  function ensureRuntime() {
+    if (runtimePromise) return runtimePromise;
+    runtimePromise = (async () => {
+      ensureAlmanachCssVariables();
+      loadStyles();
+      ensureModalShell();
+      await ensureCommentOverlays();
+      await ensureModuleEditorOverlay();
+      await loadScripts();
+      installOrteModuleEditorAdapter();
+    })();
+    return runtimePromise;
+  }
+
+  function installOrteModuleEditorAdapter() {
+    ensureModuleEditorSessionDependencies();
+    const editor = window.AleriaOrteSceneEditor;
+    if (!editor) return;
+
+    if (!editor.originalSaveModuleFromEditor && typeof saveModuleFromEditor === "function") {
+      editor.originalSaveModuleFromEditor = saveModuleFromEditor;
+      saveModuleFromEditor = async function (...args) {
+        if (window.AleriaOrteSceneEditor?.activeState) {
+          await saveSceneFromModuleEditor();
+          return;
+        }
+        return editor.originalSaveModuleFromEditor.apply(this, args);
+      };
+    }
+
+    if (!editor.originalDeleteModuleFromEditor && typeof deleteModuleFromEditor === "function") {
+      editor.originalDeleteModuleFromEditor = deleteModuleFromEditor;
+      deleteModuleFromEditor = async function (...args) {
+        if (window.AleriaOrteSceneEditor?.activeState) {
+          await deleteSceneFromModuleEditor();
+          return;
+        }
+        return editor.originalDeleteModuleFromEditor.apply(this, args);
+      };
+    }
+
+    if (!editor.originalCloseModuleEditor && typeof closeModuleEditor === "function") {
+      editor.originalCloseModuleEditor = closeModuleEditor;
+      closeModuleEditor = function (...args) {
+        const result = editor.originalCloseModuleEditor.apply(this, args);
+        const overlay = document.getElementById("module-editor-overlay");
+        if (!overlay?.classList.contains("active")) {
+          window.AleriaOrteSceneEditor.activeState = null;
+          overlay?.classList.remove("orte-module-editor-mode");
+          if (overlay) delete overlay.dataset.orteSceneId;
+        }
+        return result;
+      };
+    }
+  }
+
+  function ensureAlmanachCssVariables() {
+    if (document.getElementById("orte-almanach-session-vars")) return;
+    const style = document.createElement("style");
+    style.id = "orte-almanach-session-vars";
+    style.textContent = `
+      :root {
+        --parchment: #efe0c0;
+        --parchment-dark: #e6d4a8;
+        --parchment-deeper: #cdb880;
+        --parchment-bg: #dfc9a0;
+        --ink: #2c1a08;
+        --ink-faded: #5c3d1a;
+        --red-wax: #8a2020;
+        --gold: #8b6914;
+        --gold-light: #a8820e;
+        --shadow: rgba(80,50,20,0.18);
+        --text-main: #2c1a08;
+        --text-muted: #6b4a22;
+        --surface: #dfc9a0;
+        --surface-raised: #e8d5b2;
+        --theme-accent: #8b6914;
+        --theme-accent-strong: #6f5210;
+        --theme-accent-soft: rgba(139,105,20,0.12);
+        --theme-paper-top: rgba(255,248,232,0.52);
+        --theme-paper-bottom: rgba(223,201,160,0.72);
+        --theme-shadow: rgba(80,50,20,0.14);
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function loadStyles() {
+    stylePaths.forEach((item) => {
+      const href = ALMANACH_BASE + item.href;
+      if (document.querySelector(`link[href="${href}"]`)) return;
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      if (item.media) link.media = item.media;
+      document.head.appendChild(link);
+    });
+  }
+
+  function ensureModalShell() {
+    if (!document.getElementById("app-status-toast")) {
+      const toast = document.createElement("div");
+      toast.id = "app-status-toast";
+      toast.className = "app-status-toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      toast.setAttribute("aria-atomic", "true");
+      toast.hidden = true;
+      document.body.appendChild(toast);
+    }
+
+    if (!document.getElementById("firebase-sync-status")) {
+      const sync = document.createElement("div");
+      sync.id = "firebase-sync-status";
+      sync.className = "firebase-sync-status";
+      sync.dataset.state = "idle";
+      sync.setAttribute("role", "status");
+      sync.setAttribute("aria-live", "polite");
+      sync.setAttribute("aria-atomic", "true");
+      sync.innerHTML = '<span class="firebase-sync-dot" aria-hidden="true"></span><span class="firebase-sync-label">Speicherstatus: bereit</span>';
+      document.body.appendChild(sync);
+    }
+
+    if (document.getElementById("modal-overlay")) return;
+    const overlay = document.createElement("div");
+    overlay.id = "modal-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-hidden", "true");
+    overlay.setAttribute("aria-label", "Almanach-Eintrag");
+    overlay.tabIndex = -1;
+    overlay.innerHTML = `
+      <div class="modal-card">
+        <span class="modal-deco tl">&#10087;</span>
+        <span class="modal-deco br">&#10087;</span>
+        <button class="modal-close" type="button" data-modal-action="close" aria-label="Eintrag schliessen">&#10005;</button>
+        <div id="modal-body"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+
+  async function ensureCommentOverlays() {
+    const overlayIds = [
+      "comment-form-overlay",
+      "showcase-form-overlay",
+      "attachment-form-overlay",
+      "showcase-profile-overlay",
+      "edit-comment-overlay",
+      "delete-confirm-overlay"
+    ];
+    if (overlayIds.every((id) => document.getElementById(id))) return;
+
+    const response = await fetch(ALMANACH_BASE + "AleriaAlmanach.html", { cache: "no-store" });
+    if (!response.ok) throw new Error("Almanach-Overlays konnten nicht geladen werden.");
+    const html = await response.text();
+    const parsed = new DOMParser().parseFromString(html, "text/html");
+    overlayIds.forEach((id) => {
+      if (document.getElementById(id)) return;
+      const node = parsed.getElementById(id);
+      if (node) document.body.appendChild(document.importNode(node, true));
+    });
+  }
+
+  async function ensureModuleEditorOverlay() {
+    if (document.getElementById("module-editor-overlay")) return;
+    const response = await fetch(ALMANACH_BASE + "AleriaAlmanach.html", { cache: "no-store" });
+    if (!response.ok) throw new Error("Almanach-Moduleditor konnte nicht geladen werden.");
+    const html = await response.text();
+    const parsed = new DOMParser().parseFromString(html, "text/html");
+    const node = parsed.getElementById("module-editor-overlay");
+    if (node) document.body.appendChild(document.importNode(node, true));
+  }
+
+  async function loadScripts() {
+    for (const path of scriptPaths) {
+      await loadScript(ALMANACH_BASE + path);
+    }
+  }
+
+  function loadScript(src) {
+    const cleanSrc = src.split("?")[0];
+    const existing = Array.from(document.scripts).find((script) => script.src && script.src.split("?")[0] === new URL(cleanSrc, window.location.href).href);
+    if (existing?.dataset.loaded === "true") return Promise.resolve();
+    if (existing) {
+      return new Promise((resolve, reject) => {
+        existing.addEventListener("load", resolve, { once: true });
+        existing.addEventListener("error", reject, { once: true });
+      });
+    }
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.defer = false;
+      script.dataset.loaded = "pending";
+      script.addEventListener("load", () => {
+        script.dataset.loaded = "true";
+        resolve();
+      }, { once: true });
+      script.addEventListener("error", () => reject(new Error(`Script konnte nicht geladen werden: ${src}`)), { once: true });
+      document.head.appendChild(script);
+    });
+  }
+
+  async function loadAlmanachCharacters() {
+    const fb = await waitForFirebase();
+    if (!fb?.loadCharacters) return;
+    try {
+      _characters = await fb.loadCharacters();
+      window._characters = _characters;
+      if (typeof renderCharPickerInForm === "function") renderCharPickerInForm();
+    } catch (error) {
+      if (typeof showAppStatus === "function") {
+        showAppStatus("Almanach-Charaktere konnten nicht geladen werden.", "error");
+      }
+    }
   }
 
   async function connectSceneStore(state) {
     const store = await waitForSceneStore();
-    if (!store || typeof store.subscribeScene !== "function") return;
-
+    if (!store?.subscribeScene) return;
     state.unsubscribeScene = store.subscribeScene(state.ortId, state.sceneId, (remoteModule) => {
       if (!remoteModule) return;
       state.module = normalizeModule(remoteModule, state.sceneId);
-      state.draft = cloneModule(state.module);
-      saveModule(state.ortId, state.sceneId, state.module);
+      state.status = "Online geladen.";
+      saveLocalModule(state);
       renderPreview(state);
-      if (activeState === state) renderModal(state);
+      renderSidebar();
     }, () => {
       state.status = "Online-Szenenspeicher nicht erreichbar.";
       renderPreview(state);
+      renderSidebar();
     });
   }
 
-  async function saveRemoteModule(state) {
-    const store = await waitForSceneStore(1200);
-    if (!store || typeof store.saveScene !== "function") return false;
+  async function hardResetScenes() {
+    const allKnownIds = Array.from(new Set([...sceneOrder, ...Array.from(states.keys()), "einleitung", "konflikte"]));
+    allKnownIds.forEach(removeLocalModule);
+    removeLocalIndex();
+    sceneOrder = [];
+    states.forEach((state) => {
+      if (state.unsubscribeScene) state.unsubscribeScene();
+    });
+    states.clear();
+    renderAll();
 
-    try {
-      await store.saveScene(state.ortId, state.sceneId, state.module);
-      return true;
-    } catch (error) {
-      return false;
+    const store = await waitForSceneStore(900);
+    if (store?.deleteScene) {
+      await Promise.allSettled(allKnownIds.map((sceneId) => store.deleteScene(ortId, sceneId)));
     }
+    if (store?.deleteSceneIndex) await store.deleteSceneIndex(ortId);
   }
 
-  async function connectComments(state) {
-    const fb = await waitForFirebase();
-    if (fb && typeof fb.subscribeComments === "function") {
-      state.unsubscribeComments = fb.subscribeComments(state.module.threadId, (comments) => {
-        state.comments = Array.isArray(comments) ? comments : [];
-        if (activeState === state) renderModal(state);
-      }, () => {
-        state.comments = loadLocalComments(state.module.threadId);
-        if (activeState === state) renderModal(state);
-      });
+  function saveLocalIndex() {
+    try {
+      window.localStorage.setItem(indexStorageKey, JSON.stringify({ schemaVersion: 1, order: sceneOrder }));
+    } catch (error) {
       return;
     }
-
-    state.comments = loadLocalComments(state.module.threadId);
   }
 
-  async function connectCharacters(state) {
-    state.characters = await loadCharacters();
-    if (activeState === state) renderModal(state);
+  function loadSceneIndex() {
+    try {
+      const payload = JSON.parse(window.localStorage.getItem(indexStorageKey) || "null");
+      return Array.isArray(payload?.order) ? payload.order.map((id) => String(id || "").trim()).filter(Boolean) : [];
+    } catch (error) {
+      return [];
+    }
   }
 
-  async function loadCharacters() {
-    if (characterLoadPromise) return characterLoadPromise;
-    characterLoadPromise = (async () => {
-      const fb = await waitForFirebase();
-      if (!fb || typeof fb.loadCharacters !== "function") return [];
-
-      try {
-        return normalizeCharacters(await fb.loadCharacters());
-      } catch (error) {
-        return [];
-      }
-    })();
-    return characterLoadPromise;
+  function removeLocalIndex() {
+    try {
+      window.localStorage.removeItem(indexStorageKey);
+    } catch (error) {
+      return;
+    }
   }
 
-  function applySelectedCharacter(select) {
-    const form = select.closest("form");
-    if (!form || !activeState) return;
-    const selected = activeState.characters.find((character) => character.id === select.value);
-    if (!selected) return;
-
-    setFormValue(form, "charName", selected.name);
-    setFormValue(form, "charTitle", selected.title);
-    setFormValue(form, "portrait", selected.portrait);
+  function saveLocalModule(state) {
+    try {
+      window.localStorage.setItem(getLocalModuleKey(state.sceneId), JSON.stringify(state.module));
+    } catch (error) {
+      return;
+    }
   }
 
-  function normalizeCharacters(characters) {
-    const seen = new Set();
-    return (Array.isArray(characters) ? characters : [])
-      .map((character) => ({
-        id: String(character.id || "").trim(),
-        name: String(character.name || "").trim(),
-        title: String(character.title || "").trim(),
-        portrait: String(character.portrait || "").trim(),
-        archived: !!character.archived
-      }))
-      .filter((character) => {
-        const key = character.id || character.name;
-        if (!key || !character.name || character.archived || seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      })
-      .sort((a, b) => a.name.localeCompare(b.name, "de", { sensitivity: "base" }));
+  function loadLocalModule(sceneId) {
+    try {
+      return JSON.parse(window.localStorage.getItem(getLocalModuleKey(sceneId)) || "null");
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function removeLocalModule(sceneId) {
+    try {
+      window.localStorage.removeItem(getLocalModuleKey(sceneId));
+      window.localStorage.removeItem(`aleria:orte:comments:orte:${ortId}:${sceneId}`);
+    } catch (error) {
+      return;
+    }
+  }
+
+  function getLocalModuleKey(sceneId) {
+    return `aleria:orte:session-module:${ortId}:${sceneId}`;
+  }
+
+  function getValue(scope, selector) {
+    return String(scope.querySelector(selector)?.value || "").trim();
+  }
+
+  function normalizeImageFit(value) {
+    const safe = String(value || "").trim();
+    return ["cover", "contain"].includes(safe) ? safe : "";
+  }
+
+  function normalizeImagePosition(value) {
+    const safe = String(value || "").trim();
+    return ["top", "center", "bottom", "left", "right"].includes(safe) ? safe : "";
+  }
+
+  function slugifyLocal(value, fallback = "szene") {
+    const normalized = String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return normalized || fallback;
   }
 
   function waitForFirebase() {
@@ -515,7 +1247,6 @@
 
   function waitForSceneStore(timeout = 5000) {
     if (window.OrteSceneFirebase) return Promise.resolve(window.OrteSceneFirebase);
-
     return new Promise((resolve) => {
       let finished = false;
       const finish = (store) => {
@@ -527,78 +1258,26 @@
       };
       const onReady = () => finish(window.OrteSceneFirebase);
       const timer = window.setTimeout(() => finish(null), timeout);
-
       window.addEventListener("orte-scenes-firebase-ready", onReady, { once: true });
       if (window.OrteSceneFirebase) finish(window.OrteSceneFirebase);
     });
   }
 
-  function createModal() {
-    const existing = document.querySelector("[data-orte-session-modal]");
-    if (existing) return existing;
-    const element = document.createElement("div");
-    element.className = "orte-session-modal";
-    element.dataset.orteSessionModal = "";
-    element.hidden = true;
-    document.body.appendChild(element);
-    return element;
+  function buildLegacySessionIntro(blocks) {
+    if (!Array.isArray(blocks)) return "";
+    return blocks
+      .map((block) => {
+        if (!block || typeof block !== "object") return "";
+        const speaker = block.speaker || block.name;
+        const text = String(block.text || "").trim();
+        if (!text) return "";
+        return speaker ? `${speaker}: ${text}` : text;
+      })
+      .filter(Boolean)
+      .join("\n");
   }
 
-  function loadModule(ortId, sceneId, fallback) {
-    const saved = readJson(getModuleStorageKey(ortId, sceneId));
-    return normalizeModule(saved || fallback, sceneId);
-  }
-
-  function saveModule(ortId, sceneId, module) {
-    writeJson(getModuleStorageKey(ortId, sceneId), module);
-  }
-
-  function loadLocalComments(threadId) {
-    return readJson(getCommentStorageKey(threadId)) || [];
-  }
-
-  function saveLocalComments(threadId, comments) {
-    writeJson(getCommentStorageKey(threadId), comments);
-  }
-
-  function getModuleStorageKey(ortId, sceneId) {
-    return `aleria:orte:session-module:${ortId || "ort-vorlage"}:${sceneId || "szene"}`;
-  }
-
-  function getCommentStorageKey(threadId) {
-    return `aleria:orte:comments:${threadId || "szene"}`;
-  }
-
-  function readJson(key) {
-    try {
-      return JSON.parse(window.localStorage.getItem(key) || "null");
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function writeJson(key, value) {
-    try {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      return;
-    }
-  }
-
-  function cloneModule(module) {
-    return normalizeModule(JSON.parse(JSON.stringify(module || {})), module?.id || "szene");
-  }
-
-  function setFormValue(form, name, value) {
-    const field = form.elements.namedItem(name);
-    if (field) field.value = value || "";
-  }
-
-  function sanitizeLine(value) {
-    return escapeHtml(value).replace(/\n{2,}/g, "\n").replace(/\n/g, "<br>");
-  }
-
-  function escapeHtml(value) {
+  function escapeHtmlLocal(value) {
     return String(value ?? "")
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
@@ -607,7 +1286,7 @@
       .replaceAll("'", "&#039;");
   }
 
-  function escapeAttr(value) {
-    return escapeHtml(value).replaceAll("`", "&#096;");
+  function escapeAttrLocal(value) {
+    return escapeHtmlLocal(value).replaceAll("`", "&#096;");
   }
 })();

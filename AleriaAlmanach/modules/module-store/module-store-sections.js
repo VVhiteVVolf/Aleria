@@ -1,10 +1,15 @@
 function cleanCustomSection(section) {
+  const rawKey = String(section?.key || '').trim();
+  const path = getSectionPathParts(section);
+  const derivedPath = path.length ? path : (/>/.test(rawKey) ? parseSectionPathInput(rawKey) : []);
+  const key = derivedPath.length ? derivedPath[derivedPath.length - 1] : (rawKey || 'Neuer Bereich');
   const next = {
-    key: String(section?.key || '').trim() || 'Neuer Bereich',
-    tab: String(section?.tab || section?.key || '').trim() || 'Neuer Bereich',
+    key,
+    tab: String(section?.tab || '').trim() || key,
     desc: String(section?.desc || '').trim(),
     entries: Array.isArray(section?.entries) ? section.entries.map(entry => sanitizeModuleEntry(entry)).filter(Boolean) : [],
   };
+  if (derivedPath.length) next.path = derivedPath;
   return next;
 }
 
@@ -13,7 +18,8 @@ function cleanModuleSectionMove(section) {
   return {
     key: cleaned.key,
     tab: cleaned.tab,
-    desc: cleaned.desc
+    desc: cleaned.desc,
+    path: getSectionPathParts(cleaned)
   };
 }
 
@@ -131,6 +137,7 @@ function upsertCustomModule(sectionInput, entry) {
     section.key = targetSection.key;
     section.tab = targetSection.tab;
     section.desc = targetSection.desc;
+    section.path = getSectionPathParts(targetSection);
   }
   const existingIndex = (section.entries || []).findIndex(item => item.id === nextEntry.id);
   if (existingIndex >= 0) section.entries[existingIndex] = nextEntry;
@@ -156,7 +163,8 @@ function buildModuleExportPayload(entryId) {
     section: {
       key: current.section.key,
       tab: current.section.tab || current.section.key,
-      desc: current.section.desc || ''
+      desc: current.section.desc || '',
+      path: getSectionPathParts(current.section)
     },
     entry: sanitizeModuleEntry(current.entry)
   };

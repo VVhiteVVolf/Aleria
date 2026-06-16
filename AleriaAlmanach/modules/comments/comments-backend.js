@@ -69,10 +69,13 @@ function getLocalCommentBackend() {
         emoteIndex: Number.isInteger(metadata.emoteIndex) ? metadata.emoteIndex : null,
         avatarKind: metadata.avatarKind || '',
         commentMode: metadata.commentMode || (narrator ? 'narrator' : 'character'),
-        commentKind: normalizeCommentKind(metadata.commentKind, narrator),
+        commentKind: metadata.commentKind === 'scene-time-event'
+          ? 'scene-time-event'
+          : normalizeCommentKind(metadata.commentKind, narrator),
         commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
         itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
         documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
+        sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
         orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,

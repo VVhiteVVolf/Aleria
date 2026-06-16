@@ -22,7 +22,7 @@ function buildArchiveEntryMetaItems(entry, section) {
   if (entry?.type) items.push({ label: 'Typ', value: entry.type });
   if (pageCount) items.push({ label: 'Seiten', value: String(pageCount) });
   items.push({ label: 'Dialog', value: getArchiveEntryCommentLabel(entry) });
-  if (section?.tab || section?.key) items.push({ label: 'Reiter', value: section.tab || section.key });
+  if (section?.tab || section?.key) items.push({ label: 'Ort', value: getSectionOptionLabel(section) });
   return items;
 }
 

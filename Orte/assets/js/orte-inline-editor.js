@@ -19,6 +19,31 @@
   let activeImageKey = "";
   let activeEditable = null;
   let savedSelection = null;
+  const inlineActions = new Set([
+    "toggle-orte-inline-edit",
+    "save-orte-inline-edit",
+    "hard-reset-orte-template",
+    "close-orte-image-panel",
+    "clear-orte-image",
+    "add-orte-table-row",
+    "format-orte-text",
+    "apply-orte-tooltip"
+  ]);
+  const ignoredSurfaceSelector = [
+    "#modal-overlay",
+    "#comment-form-overlay",
+    "#showcase-form-overlay",
+    "#attachment-form-overlay",
+    "#showcase-profile-overlay",
+    "#edit-comment-overlay",
+    "#delete-confirm-overlay",
+    ".orte-scene-host",
+    ".place-template-toc",
+    ".orte-inline-toolbar",
+    ".orte-inline-image-panel",
+    ".orte-inline-image-overlay",
+    ".orte-table-add-control"
+  ].join(", ");
 
   init();
 
@@ -41,6 +66,7 @@
       <span data-orte-inline-status>bereit</span>
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
+      <button type="button" data-action="hard-reset-orte-template" data-orte-inline-edit-only>Hard Reset</button>
       <span class="orte-inline-format-tools" data-orte-inline-edit-only>
         <button type="button" data-action="format-orte-text" data-command="bold" title="Fett"><b>F</b></button>
         <button type="button" data-action="format-orte-text" data-command="italic" title="Kursiv"><i>K</i></button>
@@ -62,10 +88,12 @@
   function wireEvents() {
     document.addEventListener("click", (event) => {
       const actionTarget = event.target.closest("[data-action]");
-      if (actionTarget) handleAction(event, actionTarget);
+      if (actionTarget && inlineActions.has(actionTarget.dataset.action)) {
+        handleAction(event, actionTarget);
+      }
 
       const imageSlot = event.target.closest("[data-orte-image-key]");
-      if (!imageSlot || !editMode) return;
+      if (!imageSlot || !editMode || !root.contains(imageSlot) || isInsideIgnoredSurface(imageSlot)) return;
       event.preventDefault();
       openImagePanel(imageSlot.dataset.orteImageKey);
     });
@@ -126,6 +154,12 @@
 
     if (action === "save-orte-inline-edit") {
       saveNow();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "hard-reset-orte-template") {
+      hardResetTemplate();
       event.preventDefault();
       return;
     }
@@ -278,7 +312,7 @@
 
   function getEditableCandidates() {
     return Array.from(root.querySelectorAll("h2, h3, summary, p, td, th, li"))
-      .filter((node) => !node.closest(".orte-scene-host, .orte-session-modal, .place-template-toc, .orte-inline-toolbar, .orte-inline-image-panel, .orte-table-add-control"))
+      .filter((node) => !isInsideIgnoredSurface(node))
       .filter((node) => !node.closest("[data-orte-image-key], [data-orte-rating-key]"))
       .filter((node) => !node.matches(".place-spacer"))
       .filter((node) => !node.querySelector("table, h2, h3, summary, p, td, th, li, [data-orte-image-key], [data-orte-rating-key]"))
@@ -289,7 +323,7 @@
     return Array.from(root.querySelectorAll("table"))
       .filter((table) => !table.querySelector("table"))
       .filter((table) => table.tBodies.length && table.tBodies[0].rows.length > 1)
-      .filter((table) => !table.closest(".orte-scene-host, .orte-session-modal"));
+      .filter((table) => !isInsideIgnoredSurface(table));
   }
 
   function prepareTables() {
@@ -322,7 +356,7 @@
     });
 
     root.querySelectorAll("img").forEach((image) => {
-      if (image.closest("[data-orte-image-key], .orte-scene-host, .orte-session-modal, .orte-inline-toolbar, .orte-inline-image-panel")) return;
+      if (image.closest("[data-orte-image-key]") || isInsideIgnoredSurface(image)) return;
 
       const key = image.dataset.orteInlineImageKey || makeKey("auto-img");
       const label = getImageSlotLabel(image);
@@ -404,66 +438,70 @@
     const item = imageItems.find((entry) => entry.key === key);
     if (!item) return;
 
-    activeImageKey = key;
     closeImagePanel();
+    activeImageKey = key;
 
     const image = state.images[key] || {};
-    const panel = document.createElement("div");
-    panel.className = "orte-inline-image-panel";
-    panel.dataset.orteImagePanel = key;
-    panel.innerHTML = `
-      <div class="orte-inline-image-panel-head">
-        <strong>${escapeHtml(item.label)}</strong>
-        <button type="button" data-action="close-orte-image-panel" aria-label="Schliessen">x</button>
+    const overlay = document.createElement("div");
+    overlay.className = "orte-inline-image-overlay";
+    overlay.dataset.orteImagePanel = key;
+    overlay.innerHTML = `
+      <div class="orte-inline-image-panel" role="dialog" aria-modal="true" aria-label="${escapeAttr(item.label)} bearbeiten">
+        <div class="orte-inline-image-panel-head">
+          <strong>${escapeHtml(item.label)}</strong>
+          <button type="button" data-action="close-orte-image-panel" aria-label="Schliessen">x</button>
+        </div>
+        <label>
+          <span>Bild-URL</span>
+          <input type="url" data-orte-inline-image-field="src" value="${escapeAttr(image.src || "")}" placeholder="https://...">
+        </label>
+        <label>
+          <span>Link</span>
+          <input type="text" data-orte-inline-image-field="href" value="${escapeAttr(image.href || "")}" placeholder="Optionaler Link beim Klick">
+        </label>
+        <label>
+          <span>Alt-Text</span>
+          <input type="text" data-orte-inline-image-field="alt" value="${escapeAttr(image.alt || item.label)}">
+        </label>
+        <div class="orte-inline-image-grid">
+          <label>
+            <span>Breite</span>
+            <input type="range" min="20" max="100" step="5" data-orte-inline-image-field="width" value="${escapeAttr(image.width || 100)}">
+          </label>
+          <label>
+            <span>Hoehe</span>
+            <input type="range" min="80" max="720" step="20" data-orte-inline-image-field="maxHeight" value="${escapeAttr(image.maxHeight || 260)}">
+          </label>
+        </div>
+        <div class="orte-inline-image-grid">
+          <label>
+            <span>Format</span>
+            <select data-orte-inline-image-field="format">
+              ${renderOption("auto", "Automatisch", image.format)}
+              ${renderOption("square", "Quadrat", image.format)}
+              ${renderOption("portrait", "Hochformat", image.format)}
+              ${renderOption("landscape", "Querformat", image.format)}
+              ${renderOption("banner", "Banner", image.format)}
+            </select>
+          </label>
+          <label>
+            <span>Einpassung</span>
+            <select data-orte-inline-image-field="fit">
+              ${renderOption("contain", "Einpassen", image.fit)}
+              ${renderOption("cover", "Fuellen", image.fit)}
+            </select>
+          </label>
+        </div>
+        <button type="button" data-action="clear-orte-image">Bild leeren</button>
       </div>
-      <label>
-        <span>Bild-URL</span>
-        <input type="url" data-orte-inline-image-field="src" value="${escapeAttr(image.src || "")}" placeholder="https://...">
-      </label>
-      <label>
-        <span>Link</span>
-        <input type="text" data-orte-inline-image-field="href" value="${escapeAttr(image.href || "")}" placeholder="Optionaler Link beim Klick">
-      </label>
-      <label>
-        <span>Alt-Text</span>
-        <input type="text" data-orte-inline-image-field="alt" value="${escapeAttr(image.alt || item.label)}">
-      </label>
-      <div class="orte-inline-image-grid">
-        <label>
-          <span>Breite</span>
-          <input type="range" min="20" max="100" step="5" data-orte-inline-image-field="width" value="${escapeAttr(image.width || 100)}">
-        </label>
-        <label>
-          <span>Hoehe</span>
-          <input type="range" min="80" max="720" step="20" data-orte-inline-image-field="maxHeight" value="${escapeAttr(image.maxHeight || 260)}">
-        </label>
-      </div>
-      <div class="orte-inline-image-grid">
-        <label>
-          <span>Format</span>
-          <select data-orte-inline-image-field="format">
-            ${renderOption("auto", "Automatisch", image.format)}
-            ${renderOption("square", "Quadrat", image.format)}
-            ${renderOption("portrait", "Hochformat", image.format)}
-            ${renderOption("landscape", "Querformat", image.format)}
-            ${renderOption("banner", "Banner", image.format)}
-          </select>
-        </label>
-        <label>
-          <span>Einpassung</span>
-          <select data-orte-inline-image-field="fit">
-            ${renderOption("contain", "Einpassen", image.fit)}
-            ${renderOption("cover", "Fuellen", image.fit)}
-          </select>
-        </label>
-      </div>
-      <button type="button" data-action="clear-orte-image">Bild leeren</button>
     `;
-    item.node.insertAdjacentElement("afterend", panel);
+    document.body.appendChild(overlay);
+    overlay.querySelector("[data-orte-inline-image-field]")?.focus();
   }
 
   function closeImagePanel() {
     document.querySelectorAll("[data-orte-image-panel]").forEach((panel) => panel.remove());
+    activeImageKey = "";
   }
 
   function updateImageField(input) {
@@ -476,7 +514,7 @@
     const item = imageItems.find((entry) => entry.key === activeImageKey);
     state.images[activeImageKey] = normalizeImageState(state.images[activeImageKey], item?.label || "");
     renderImageSlot(activeImageKey);
-    updateOwningTable(input);
+    updateOwningTable(item?.node);
     markDirty();
   }
 
@@ -686,6 +724,46 @@
     }
   }
 
+  async function hardResetTemplate() {
+    const confirmed = window.confirm(
+      `Hard Reset fuer diese Orte-Vorlage?\n\nGeloescht werden nur Orte-Daten fuer "${pageId}": Direktbearbeitung, lokale Szenenliste und Orte-Szenendokumente. Almanach-Kommentare und AleriaAlmanach-Daten bleiben unangetastet.`
+    );
+    if (!confirmed) return;
+
+    closeImagePanel();
+    setStatus("reset laeuft");
+
+    try {
+      removeLocalTemplateKeys();
+      const inlineStore = await waitForInlineStore(900);
+      if (inlineStore?.reset) await inlineStore.reset(pageId);
+      if (window.AleriaOrteSceneRuntime?.hardReset) {
+        await window.AleriaOrteSceneRuntime.hardReset();
+      }
+      setStatus("reset abgeschlossen");
+      window.setTimeout(() => window.location.reload(), 250);
+    } catch (error) {
+      setStatus("reset teilweise fehlgeschlagen");
+    }
+  }
+
+  function removeLocalTemplateKeys() {
+    const prefixes = [
+      `aleria:orte:inline-content:v1:${pageId}`,
+      `aleria:orte:inline-content:v2:${pageId}`,
+      `aleria:orte:scene-index:${pageId}`,
+      `aleria:orte:session-module:${pageId}:`,
+      `aleria:orte:comments:orte:${pageId}:`
+    ];
+    try {
+      Object.keys(window.localStorage)
+        .filter((key) => prefixes.some((prefix) => key === prefix || key.startsWith(prefix)))
+        .forEach((key) => window.localStorage.removeItem(key));
+    } catch (error) {
+      return;
+    }
+  }
+
   async function connectRemote() {
     const store = await waitForInlineStore();
     if (!store?.subscribe) return;
@@ -814,6 +892,10 @@
   function getClosestElement(node) {
     if (!node) return null;
     return node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+  }
+
+  function isInsideIgnoredSurface(node) {
+    return !!getClosestElement(node)?.closest(ignoredSurfaceSelector);
   }
 
   function normalizeImageState(image, label) {

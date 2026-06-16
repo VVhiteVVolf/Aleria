@@ -1,8 +1,12 @@
 // Comment page and embedded comment shell builders.
-function buildCommentActionBar(hintText) {
+function buildCommentActionBar(hintText, options = {}) {
+  const sceneTimeButton = options.allowSceneTime
+    ? '<button class="comments-add-btn comments-time-event-btn" type="button" data-scene-time-action="open-event-dialog" title="Szenenzeit ankuendigen" aria-label="Szenenzeit ankuendigen">Zeit</button>'
+    : '';
   return `
     <div class="comments-form-bar">
       <button class="comments-add-btn" type="button" data-action="open-comment-form" title="Kommentar hinterlassen" aria-label="Kommentar hinterlassen">+</button>
+      ${sceneTimeButton}
       <button class="comments-add-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">◇</button>
       <button class="comments-add-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">▤</button>
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>
@@ -87,7 +91,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
         </div>
         ${buildCommentQuickTools()}
         ${buildCommentTurnBar(getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex)))}
-        ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.')}
+        ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.', { allowSceneTime: true })}
       </div>
     </div>`;
 }
