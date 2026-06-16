@@ -16,23 +16,25 @@ function getArchiveEntryCommentLabel(entry) {
   return 'Keine Kommentare';
 }
 
-function buildArchiveEntryMetaItems(entry, section) {
+function buildArchiveEntryMetaItems(entry, section, options = {}) {
   const pageCount = getArchiveEntryPageCount(entry);
   const items = [];
   if (entry?.type) items.push({ label: 'Typ', value: entry.type });
   if (pageCount) items.push({ label: 'Seiten', value: String(pageCount) });
   items.push({ label: 'Dialog', value: getArchiveEntryCommentLabel(entry) });
-  if (section?.tab || section?.key) items.push({ label: 'Ort', value: getSectionOptionLabel(section) });
+  if (options.showLocation && (section?.tab || section?.key)) {
+    items.push({ label: 'Ort', value: getSectionOptionLabel(section), wide: true });
+  }
   return items;
 }
 
-function renderArchiveEntryMeta(entry, section) {
-  const items = buildArchiveEntryMetaItems(entry, section);
+function renderArchiveEntryMeta(entry, section, options = {}) {
+  const items = buildArchiveEntryMetaItems(entry, section, options);
   if (!items.length) return '';
   return `
     <div class="entry-card-meta">
       ${items.map(item => `
-        <span class="entry-card-meta-chip">
+        <span class="entry-card-meta-chip${item.wide ? ' wide' : ''}">
           <span>${escapeHtml(item.label)}</span>
           <strong>${escapeHtml(item.value)}</strong>
         </span>`).join('')}

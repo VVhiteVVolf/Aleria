@@ -553,6 +553,13 @@ function renderAll() {
   // Build tab order: 'Alle' first, then unique section tabs (skip 'Alle' if a section uses it), then 'Charaktere'
   const sectionTabs = [...new Set(sections.map(s => s.tab || s.key).filter(t => t !== 'Alle'))];
   const tabOrder = ['Alle', ...sectionTabs, 'Charaktere'];
+  const tabGroup = document.createElement('div');
+  tabGroup.className = 'gallery-tab-group gallery-tab-group-main';
+  tabsNav.appendChild(tabGroup);
+  const toolGroup = document.createElement('div');
+  toolGroup.className = 'gallery-tab-group gallery-tab-group-tools';
+  toolGroup.setAttribute('aria-label', 'Archivwerkzeuge');
+  tabsNav.appendChild(toolGroup);
 
   // Build tab buttons
   tabOrder.forEach(tab => {
@@ -561,7 +568,7 @@ function renderAll() {
     btn.dataset.tab = tab;
     btn.dataset.archiveAction = 'switch-tab';
     btn.textContent = tab;
-    tabsNav.appendChild(btn);
+    tabGroup.appendChild(btn);
   });
 
   const addBtn = document.createElement('button');
@@ -571,7 +578,7 @@ function renderAll() {
   addBtn.title = 'Neues Modul anlegen';
   addBtn.dataset.archiveAction = 'new-module';
   addBtn.setAttribute('aria-label', 'Neues Modul anlegen');
-  tabsNav.appendChild(addBtn);
+  toolGroup.appendChild(addBtn);
 
   const importBtn = document.createElement('button');
   importBtn.className = 'gallery-tab-btn gallery-tab-add';
@@ -580,7 +587,7 @@ function renderAll() {
   importBtn.title = 'Modul importieren, exportieren oder Backup verwalten';
   importBtn.dataset.archiveAction = 'import-module';
   importBtn.setAttribute('aria-label', 'Modul importieren, exportieren oder Backup verwalten');
-  tabsNav.appendChild(importBtn);
+  toolGroup.appendChild(importBtn);
 
   const sectionBtn = document.createElement('button');
   sectionBtn.className = 'gallery-tab-btn gallery-tab-add';
@@ -589,7 +596,7 @@ function renderAll() {
   sectionBtn.title = 'Neuen großen Modul-Reiter erstellen';
   sectionBtn.dataset.archiveAction = 'create-module-section';
   sectionBtn.setAttribute('aria-label', 'Neuen großen Modul-Reiter erstellen');
-  tabsNav.appendChild(sectionBtn);
+  toolGroup.appendChild(sectionBtn);
 
   const manageBtn = document.createElement('button');
   manageBtn.className = 'gallery-tab-btn gallery-tab-add';
@@ -598,7 +605,7 @@ function renderAll() {
   manageBtn.title = 'Reiter, Pfade und Modulpositionen verwalten';
   manageBtn.dataset.archiveAction = 'toggle-archive-manage';
   manageBtn.setAttribute('aria-label', manageBtn.title);
-  tabsNav.appendChild(manageBtn);
+  toolGroup.appendChild(manageBtn);
 
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
@@ -706,7 +713,7 @@ function renderAll() {
           ${entry.locked ? `<div class="lock-icon">🔒</div>` : ''}
           <div class="card-label"><h3>${escapeHtml(entry.title)}</h3><div class="card-type-tag">${escapeHtml(entry.type)}</div></div>
         </div>
-        ${renderArchiveEntryMeta(entry, section)}
+        ${renderArchiveEntryMeta(entry, section, { showLocation: _archiveSearchNeedle || _activeTab === 'Alle' })}
         ${_archiveManageMode ? `<div class="entry-card-admin">
           <label>Verschieben nach</label>
           <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
