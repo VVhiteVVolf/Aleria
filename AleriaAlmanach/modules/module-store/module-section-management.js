@@ -112,6 +112,33 @@ function sortModuleSectionsByHierarchy(sections = []) {
   });
 }
 
+function canMoveModuleSectionToParent(section, parentSection) {
+  if (!section?.nodeId || !parentSection?.nodeId) return false;
+  if (makeSectionSignature(section) === makeSectionSignature(parentSection)) return false;
+  if ((section.tab || section.key) !== (parentSection.tab || parentSection.key)) return false;
+  return !getModuleSectionNodeDescendantIds(section.nodeId).has(parentSection.nodeId);
+}
+
+function buildModuleSectionParentOptions(section, sections = []) {
+  if (!section?.nodeId) return '';
+  const node = findModuleSectionNodeById(section.nodeId);
+  const currentParentId = String(node?.parentId || '');
+  const rootId = getModuleRootNodeId(section.tab || section.key);
+  const rootSelected = currentParentId === rootId ? ' selected' : '';
+  const options = [`<option value="">Verschieben...</option>`];
+  if (node?.parentId) {
+    options.push(`<option value="__root__"${rootSelected}>An Hauptreiter haengen</option>`);
+  }
+  sortModuleSectionsByHierarchy(sections)
+    .filter(candidate => canMoveModuleSectionToParent(section, candidate))
+    .forEach(candidate => {
+      const signature = makeSectionSignature(candidate);
+      const selected = currentParentId && currentParentId === candidate.nodeId ? ' selected' : '';
+      options.push(`<option value="${escapeHtml(signature)}"${selected}>Unter: ${escapeHtml(getSectionOptionLabel(candidate))}</option>`);
+    });
+  return options.join('');
+}
+
 function getModuleSectionManagerEntries() {
   const seen = new Set();
   const entries = [];
@@ -241,6 +268,7 @@ function renderModuleSectionManagerSections(sections) {
     const path = getSectionPathLabel(section);
     const depth = Math.min(section.nodeId ? getModuleNodeAncestors(section.nodeId).length + 1 : getSectionPathParts(section).length, 6);
     const isVoid = makeSectionSignature(section) === makeSectionSignature(getVoidModuleSection());
+    const isRootNode = section.nodeId && !String(findModuleSectionNodeById(section.nodeId)?.parentId || '').trim();
     return `
       <div class="module-section-manager-section-row" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
         <button class="module-section-manager-section-main" type="button" data-section-manager-action="prefill-section" data-section-signature="${escapeHtml(signature)}">
@@ -251,8 +279,11 @@ function renderModuleSectionManagerSections(sections) {
           <em>${entryCount} Module</em>
         </button>
         <div class="module-section-manager-row-actions">
-          <button type="button" data-section-manager-action="create-child-section" data-section-signature="${escapeHtml(signature)}">Kind</button>
-          <button class="danger" type="button" data-section-manager-action="release-section" data-section-signature="${escapeHtml(signature)}"${isVoid ? ' disabled' : ''}>Lösen</button>
+          <button class="module-section-manager-icon-btn" type="button" data-section-manager-action="create-child-section" data-section-signature="${escapeHtml(signature)}" title="Unterreiter anlegen" aria-label="Unterreiter anlegen">+</button>
+          <button class="module-section-manager-icon-btn danger" type="button" data-section-manager-action="release-section" data-section-signature="${escapeHtml(signature)}"${isVoid ? ' disabled' : ''} title="Reiter loesen" aria-label="Reiter loesen">-</button>
+          <select class="module-section-manager-parent-select" data-section-manager-action="move-section" data-section-signature="${escapeHtml(signature)}" aria-label="${escapeHtml(getSectionLeafLabel(section))} verschieben"${isVoid || !section.nodeId || isRootNode ? ' disabled' : ''}>
+            ${buildModuleSectionParentOptions(section, sections)}
+          </select>
         </div>
       </div>`;
   }).join('') || '<div class="module-section-manager-empty">Noch keine Bereiche vorhanden.</div>';
@@ -338,6 +369,92 @@ function prefillModuleSectionManagerChildForm(signature) {
   }
   if (desc) desc.value = '';
   setModuleSectionManagerStatus('Kindbereich vorbereitet. Namen im Pfad ersetzen und speichern.', 'info');
+}
+
+function createChildModuleSection(signature) {
+  const parent = findSectionBySignature(signature);
+  if (!parent) {
+    setModuleSectionManagerStatus('Ausgangsreiter wurde nicht gefunden.', 'error');
+    return;
+  }
+  const rawName = prompt(`Unterreiter unter "${getSectionLeafLabel(parent)}" anlegen:`, 'Neuer Reiter');
+  const name = String(rawName || '').trim();
+  if (!name) {
+    setModuleSectionManagerStatus('Kein Unterreiter angelegt.', 'info');
+    return;
+  }
+
+  const parentNodeId = parent.nodeId || ensureModuleNodeForSection(parent);
+  const parentPath = getSectionPathParts(parent);
+  const childPath = [...parentPath, name];
+  const section = cleanCustomSection({
+    key: name,
+    tab: parent.tab || parent.key,
+    path: childPath,
+    desc: '',
+    entries: []
+  });
+  const nodeId = ensureModuleNodeForSection({
+    ...section,
+    nodeId: getModulePathNodeId(section.tab || section.key, childPath)
+  }, { parentId: parentNodeId });
+  const result = ensureCustomModuleSection({ ...section, nodeId });
+
+  saveModuleStore();
+  _activeTab = section.tab || section.key;
+  renderAll();
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(
+    result.created
+      ? `Unterreiter "${name}" angelegt.`
+      : `Unterreiter "${name}" existiert bereits.`,
+    result.created ? 'success' : 'info'
+  );
+}
+
+function moveModuleSectionToParent(signature, targetSignature) {
+  const source = findSectionBySignature(signature);
+  if (!source?.nodeId || !targetSignature) return false;
+  const sourceNode = findModuleSectionNodeById(source.nodeId);
+  if (!sourceNode?.parentId) {
+    setModuleSectionManagerStatus('Hauptreiter koennen nicht verschoben werden.', 'error');
+    return false;
+  }
+
+  let nextParentId = '';
+  let label = '';
+  if (targetSignature === '__root__') {
+    nextParentId = getModuleRootNodeId(source.tab || source.key);
+    label = source.tab || source.key;
+  } else {
+    const target = findSectionBySignature(targetSignature);
+    if (!canMoveModuleSectionToParent(source, target)) {
+      setModuleSectionManagerStatus('Dieser Reiter kann dort nicht einsortiert werden.', 'error');
+      return false;
+    }
+    nextParentId = target.nodeId;
+    label = getSectionOptionLabel(target);
+  }
+
+  if (!nextParentId || sourceNode.parentId === nextParentId) {
+    setModuleSectionManagerStatus('Keine Aenderung an der Reiterposition.', 'info');
+    return false;
+  }
+
+  _moduleSectionNodes = _moduleSectionNodes.map(node =>
+    node.id === sourceNode.id ? { ...node, parentId: nextParentId } : node
+  );
+  _customSections = _customSections.map(cleanCustomSection);
+  Object.entries(_moduleSectionMoves || {}).forEach(([entryId, section]) => {
+    _moduleSectionMoves[entryId] = cleanModuleSectionMove(section);
+  });
+
+  saveModuleStore();
+  _activeTab = source.tab || source.key;
+  renderAll();
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(`"${getSectionLeafLabel(source)}" wurde unter "${label}" verschoben.`, 'success');
+  return true;
 }
 
 function saveModuleSectionFromManager() {
@@ -487,7 +604,7 @@ function handleModuleSectionManagerClick(event) {
   }
   if (action === 'create-child-section') {
     event.preventDefault();
-    prefillModuleSectionManagerChildForm(trigger.dataset.sectionSignature || '');
+    createChildModuleSection(trigger.dataset.sectionSignature || '');
     return;
   }
   if (action === 'release-section') {
@@ -497,6 +614,11 @@ function handleModuleSectionManagerClick(event) {
 }
 
 function handleModuleSectionManagerChange(event) {
+  const sectionMoveTrigger = event.target?.closest?.('[data-section-manager-action="move-section"]');
+  if (sectionMoveTrigger?.closest?.('#module-section-manager-overlay')) {
+    moveModuleSectionToParent(sectionMoveTrigger.dataset.sectionSignature || '', sectionMoveTrigger.value || '');
+    return;
+  }
   const trigger = event.target?.closest?.('[data-section-manager-action="move-module"]');
   if (!trigger || !trigger.closest('#module-section-manager-overlay')) return;
   const moved = moveModuleToSection(trigger.dataset.entryId || '', trigger.value || '', { silent: true });

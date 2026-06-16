@@ -967,6 +967,28 @@
     color: var(--red-wax);
     border-color: rgba(132,32,32,0.32);
   }
+  .module-section-manager-icon-btn {
+    width: 1.8rem;
+    padding-inline: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0;
+  }
+  .module-section-manager-parent-select {
+    min-width: 11.5rem;
+    max-width: 16rem;
+    min-height: 1.7rem;
+    border: 1px solid rgba(139,105,20,0.26);
+    background: rgba(255,255,255,0.32);
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.36rem;
+  }
+  .module-section-manager-parent-select:disabled {
+    opacity: 0.42;
+  }
   .module-section-manager-section-row strong,
   .module-section-manager-module-main strong {
     display: block;
@@ -1150,6 +1172,11 @@
 
     .module-section-manager-row-actions {
       justify-content: flex-start;
+    }
+
+    .module-section-manager-parent-select {
+      width: 100%;
+      max-width: none;
     }
   }
 
