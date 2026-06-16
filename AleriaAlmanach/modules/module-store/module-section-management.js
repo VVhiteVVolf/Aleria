@@ -1,3 +1,6 @@
+let _moduleSectionEditorSignature = '';
+let _moduleSectionEditorMode = 'edit';
+
 function getUniqueModuleSections() {
   const seen = new Set();
   const sections = [];
@@ -218,6 +221,37 @@ function ensureModuleSectionManagerDialog() {
           <div id="msm-section-list" class="module-section-manager-section-list"></div>
         </section>
 
+        <section class="module-section-manager-panel module-section-editor-panel" data-section-editor-panel hidden>
+          <div class="module-section-manager-panel-head">
+            <h3>Reiter bearbeiten</h3>
+            <button class="module-section-editor-close" type="button" data-section-manager-action="close-section-editor">Schliessen</button>
+          </div>
+          <div class="module-section-editor-summary" data-section-editor-summary></div>
+          <div class="module-section-editor-form">
+            <label>
+              <span>Reitername</span>
+              <input id="msm-edit-title" type="text" data-section-editor-field="title">
+            </label>
+            <label>
+              <span>Beschreibung</span>
+              <input id="msm-edit-desc" type="text" data-section-editor-field="desc">
+            </label>
+            <label>
+              <span>Unterreiter</span>
+              <input id="msm-edit-child-title" type="text" placeholder="z.B. Baronien" data-section-editor-field="child-title">
+            </label>
+            <label>
+              <span>Verschieben unter</span>
+              <select id="msm-edit-parent" class="module-section-manager-parent-select" data-section-manager-action="move-section-editor"></select>
+            </label>
+          </div>
+          <div class="module-section-editor-actions">
+            <button type="button" class="primary" data-section-manager-action="save-section-editor">Speichern</button>
+            <button type="button" data-section-manager-action="create-child-from-editor">Unterreiter anlegen</button>
+            <button type="button" class="danger" data-section-manager-action="release-section-editor">Reiter loesen</button>
+          </div>
+        </section>
+
         <section class="module-section-manager-panel wide">
           <div class="module-section-manager-panel-head">
             <h3>Module verschieben</h3>
@@ -249,6 +283,98 @@ function clearModuleSectionManagerForm() {
   setModuleSectionManagerStatus('');
 }
 
+function getModuleSectionEditorElements() {
+  return {
+    panel: document.querySelector('[data-section-editor-panel]'),
+    summary: document.querySelector('[data-section-editor-summary]'),
+    title: document.getElementById('msm-edit-title'),
+    desc: document.getElementById('msm-edit-desc'),
+    childTitle: document.getElementById('msm-edit-child-title'),
+    parent: document.getElementById('msm-edit-parent'),
+  };
+}
+
+function getModuleSectionEditorSection() {
+  return _moduleSectionEditorSignature ? findSectionBySignature(_moduleSectionEditorSignature) : null;
+}
+
+function closeModuleSectionEditor() {
+  _moduleSectionEditorSignature = '';
+  _moduleSectionEditorMode = 'edit';
+  const { panel } = getModuleSectionEditorElements();
+  if (panel) panel.hidden = true;
+  renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
+}
+
+function renderModuleSectionEditor() {
+  const { panel, summary, title, desc, childTitle, parent } = getModuleSectionEditorElements();
+  if (!panel) return;
+
+  const section = getModuleSectionEditorSection();
+  if (!section) {
+    panel.hidden = true;
+    return;
+  }
+
+  const sections = sortModuleSectionsByHierarchy(getUniqueModuleSections());
+  const signature = makeSectionSignature(section);
+  const entryCount = findSectionBySignature(signature)?.entries?.length || 0;
+  const isVoid = signature === makeSectionSignature(getVoidModuleSection());
+  const node = section.nodeId ? findModuleSectionNodeById(section.nodeId) : null;
+  const isRootNode = section.nodeId && !String(node?.parentId || '').trim();
+
+  panel.hidden = false;
+  panel.dataset.mode = _moduleSectionEditorMode;
+  if (summary) {
+    summary.innerHTML = `
+      <strong>${escapeHtml(getSectionLeafLabel(section))}</strong>
+      <span>${escapeHtml(getSectionOptionLabel(section))}</span>
+      <em>${entryCount} Module</em>
+    `;
+  }
+  if (title) {
+    title.value = getSectionLeafLabel(section);
+    title.disabled = isVoid;
+  }
+  if (desc) {
+    desc.value = section.desc || node?.desc || '';
+    desc.disabled = isVoid;
+  }
+  if (childTitle) {
+    if (_moduleSectionEditorMode === 'child') childTitle.value = '';
+    childTitle.placeholder = `Unter ${getSectionLeafLabel(section)} anlegen`;
+  }
+  if (parent) {
+    parent.innerHTML = buildModuleSectionParentOptions(section, sections);
+    parent.disabled = Boolean(isVoid || !section.nodeId || isRootNode);
+  }
+
+  const releaseButton = panel.querySelector('[data-section-manager-action="release-section-editor"]');
+  if (releaseButton) releaseButton.disabled = isVoid;
+}
+
+function openModuleSectionEditor(signature, options = {}) {
+  const section = findSectionBySignature(signature);
+  if (!section) {
+    setModuleSectionManagerStatus('Reiter wurde nicht gefunden.', 'error');
+    return;
+  }
+  _moduleSectionEditorSignature = makeSectionSignature(section);
+  _moduleSectionEditorMode = options.mode === 'child' ? 'child' : 'edit';
+  renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
+  renderModuleSectionEditor();
+  const focusTarget = _moduleSectionEditorMode === 'child'
+    ? document.getElementById('msm-edit-child-title')
+    : document.getElementById('msm-edit-title');
+  focusTarget?.focus();
+  setModuleSectionManagerStatus(
+    _moduleSectionEditorMode === 'child'
+      ? `Unterreiter fuer "${getSectionLeafLabel(section)}" vorbereiten.`
+      : `"${getSectionLeafLabel(section)}" wird bearbeitet.`,
+    'info'
+  );
+}
+
 function renderModuleSectionManagerTabs(sections) {
   const datalist = document.getElementById('msm-tab-options');
   if (!datalist) return;
@@ -269,8 +395,9 @@ function renderModuleSectionManagerSections(sections) {
     const depth = Math.min(section.nodeId ? getModuleNodeAncestors(section.nodeId).length + 1 : getSectionPathParts(section).length, 6);
     const isVoid = makeSectionSignature(section) === makeSectionSignature(getVoidModuleSection());
     const isRootNode = section.nodeId && !String(findModuleSectionNodeById(section.nodeId)?.parentId || '').trim();
+    const isSelected = signature === _moduleSectionEditorSignature;
     return `
-      <div class="module-section-manager-section-row" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
+      <div class="module-section-manager-section-row${isSelected ? ' is-selected' : ''}" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
         <button class="module-section-manager-section-main" type="button" data-section-manager-action="prefill-section" data-section-signature="${escapeHtml(signature)}">
           <span>
             <strong>${escapeHtml(getSectionLeafLabel(section))}</strong>
@@ -323,6 +450,7 @@ function renderModuleSectionManager() {
   renderModuleSectionManagerTabs(sections);
   renderModuleSectionManagerSections(sections);
   renderModuleSectionManagerModules(entries, filter);
+  renderModuleSectionEditor();
 }
 
 function openModuleSectionManager() {
@@ -337,6 +465,8 @@ function openModuleSectionManager() {
 }
 
 function closeModuleSectionManager() {
+  _moduleSectionEditorSignature = '';
+  _moduleSectionEditorMode = 'edit';
   deactivateDialog('module-section-manager-overlay');
 }
 
@@ -371,24 +501,74 @@ function prefillModuleSectionManagerChildForm(signature) {
   setModuleSectionManagerStatus('Kindbereich vorbereitet. Namen im Pfad ersetzen und speichern.', 'info');
 }
 
-function createChildModuleSection(signature) {
-  const parent = findSectionBySignature(signature);
-  if (!parent) {
-    setModuleSectionManagerStatus('Ausgangsreiter wurde nicht gefunden.', 'error');
-    return;
+function syncModuleSectionNodeEdits(nodeId, patch = {}) {
+  const id = String(nodeId || '').trim();
+  if (!id) return;
+  const applyPatchToSection = section => {
+    if (!section || String(section.nodeId || '') !== id) return section;
+    const next = { ...section };
+    if (typeof patch.title === 'string') next.key = patch.title;
+    if (typeof patch.desc === 'string') next.desc = patch.desc;
+    return cleanCustomSection(next);
+  };
+
+  _customSections = _customSections.map(applyPatchToSection);
+  if (Array.isArray(SECTIONS)) {
+    SECTIONS.forEach((section, index) => {
+      if (String(section?.nodeId || '') === id) {
+        SECTIONS[index] = { ...section };
+        if (typeof patch.title === 'string') SECTIONS[index].key = patch.title;
+        if (typeof patch.desc === 'string') SECTIONS[index].desc = patch.desc;
+      }
+    });
   }
-  const rawName = prompt(`Unterreiter unter "${getSectionLeafLabel(parent)}" anlegen:`, 'Neuer Reiter');
-  const name = String(rawName || '').trim();
-  if (!name) {
-    setModuleSectionManagerStatus('Kein Unterreiter angelegt.', 'info');
-    return;
+  Object.entries(_moduleSectionMoves || {}).forEach(([entryId, section]) => {
+    _moduleSectionMoves[entryId] = applyPatchToSection(section);
+  });
+}
+
+function saveModuleSectionEditor() {
+  const section = getModuleSectionEditorSection();
+  if (!section) {
+    setModuleSectionManagerStatus('Kein Reiter ausgewaehlt.', 'error');
+    return false;
   }
 
+  const title = String(document.getElementById('msm-edit-title')?.value || '').trim();
+  const desc = String(document.getElementById('msm-edit-desc')?.value || '').trim();
+  if (!title) {
+    setModuleSectionManagerStatus('Bitte einen Reiternamen eingeben.', 'error');
+    document.getElementById('msm-edit-title')?.focus();
+    return false;
+  }
+
+  const nodeId = section.nodeId || ensureModuleNodeForSection(section);
+  const node = findModuleSectionNodeById(nodeId);
+  if (node) {
+    _moduleSectionNodes = _moduleSectionNodes.map(item =>
+      item.id === nodeId ? { ...item, title, desc } : item
+    );
+  }
+  syncModuleSectionNodeEdits(nodeId, { title, desc });
+
+  saveModuleStore();
+  _activeTab = section.tab || section.key;
+  renderAll();
+  _moduleSectionEditorSignature = `node::${nodeId}`;
+  _moduleSectionEditorMode = 'edit';
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(`Reiter "${title}" gespeichert.`, 'success');
+  return true;
+}
+
+function createChildModuleSectionUnderParent(parent, name) {
+  const childName = String(name || '').trim();
+  if (!parent || !childName) return null;
   const parentNodeId = parent.nodeId || ensureModuleNodeForSection(parent);
   const parentPath = getSectionPathParts(parent);
-  const childPath = [...parentPath, name];
+  const childPath = [...parentPath, childName];
   const section = cleanCustomSection({
-    key: name,
+    key: childName,
     tab: parent.tab || parent.key,
     path: childPath,
     desc: '',
@@ -398,10 +578,33 @@ function createChildModuleSection(signature) {
     ...section,
     nodeId: getModulePathNodeId(section.tab || section.key, childPath)
   }, { parentId: parentNodeId });
-  const result = ensureCustomModuleSection({ ...section, nodeId });
+  return ensureCustomModuleSection({ ...section, nodeId });
+}
+
+function createChildModuleSectionFromEditor() {
+  const parent = getModuleSectionEditorSection();
+  if (!parent) {
+    setModuleSectionManagerStatus('Kein Ausgangsreiter ausgewaehlt.', 'error');
+    return;
+  }
+  const childInput = document.getElementById('msm-edit-child-title');
+  const name = String(childInput?.value || '').trim();
+  if (!name) {
+    setModuleSectionManagerStatus('Bitte einen Namen fuer den Unterreiter eingeben.', 'error');
+    childInput?.focus();
+    return;
+  }
+
+  const result = createChildModuleSectionUnderParent(parent, name);
+  if (!result?.section) {
+    setModuleSectionManagerStatus('Unterreiter konnte nicht angelegt werden.', 'error');
+    return;
+  }
 
   saveModuleStore();
-  _activeTab = section.tab || section.key;
+  _activeTab = result.section.tab || result.section.key;
+  _moduleSectionEditorSignature = makeSectionSignature(result.section);
+  _moduleSectionEditorMode = 'edit';
   renderAll();
   renderModuleSectionManager();
   setModuleSectionManagerStatus(
@@ -410,6 +613,10 @@ function createChildModuleSection(signature) {
       : `Unterreiter "${name}" existiert bereits.`,
     result.created ? 'success' : 'info'
   );
+}
+
+function createChildModuleSection(signature) {
+  openModuleSectionEditor(signature, { mode: 'child' });
 }
 
 function moveModuleSectionToParent(signature, targetSignature) {
@@ -568,6 +775,10 @@ function releaseModuleSection(signature) {
     if (sectionSignature !== voidSignature) removeCustomSectionBySignature(sectionSignature);
   });
   if (affectedNodeIds.size) removeModuleSectionNodes(affectedNodeIds);
+  if (affectedSignatures.has(_moduleSectionEditorSignature)) {
+    _moduleSectionEditorSignature = '';
+    _moduleSectionEditorMode = 'edit';
+  }
 
   saveModuleStore();
   _activeTab = voidSection.tab || voidSection.key;
@@ -600,11 +811,32 @@ function handleModuleSectionManagerClick(event) {
   if (action === 'prefill-section') {
     event.preventDefault();
     prefillModuleSectionManagerForm(trigger.dataset.sectionSignature || '');
+    openModuleSectionEditor(trigger.dataset.sectionSignature || '');
     return;
   }
   if (action === 'create-child-section') {
     event.preventDefault();
     createChildModuleSection(trigger.dataset.sectionSignature || '');
+    return;
+  }
+  if (action === 'close-section-editor') {
+    event.preventDefault();
+    closeModuleSectionEditor();
+    return;
+  }
+  if (action === 'save-section-editor') {
+    event.preventDefault();
+    saveModuleSectionEditor();
+    return;
+  }
+  if (action === 'create-child-from-editor') {
+    event.preventDefault();
+    createChildModuleSectionFromEditor();
+    return;
+  }
+  if (action === 'release-section-editor') {
+    event.preventDefault();
+    releaseModuleSection(_moduleSectionEditorSignature);
     return;
   }
   if (action === 'release-section') {
@@ -614,6 +846,12 @@ function handleModuleSectionManagerClick(event) {
 }
 
 function handleModuleSectionManagerChange(event) {
+  const editorMoveTrigger = event.target?.closest?.('[data-section-manager-action="move-section-editor"]');
+  if (editorMoveTrigger?.closest?.('#module-section-manager-overlay')) {
+    const moved = moveModuleSectionToParent(_moduleSectionEditorSignature, editorMoveTrigger.value || '');
+    if (!moved) renderModuleSectionEditor();
+    return;
+  }
   const sectionMoveTrigger = event.target?.closest?.('[data-section-manager-action="move-section"]');
   if (sectionMoveTrigger?.closest?.('#module-section-manager-overlay')) {
     moveModuleSectionToParent(sectionMoveTrigger.dataset.sectionSignature || '', sectionMoveTrigger.value || '');

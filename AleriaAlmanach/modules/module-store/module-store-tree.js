@@ -130,8 +130,8 @@ function ensureModuleNodeForSection(sectionInput, options = {}) {
     id: rootId,
     parentId: '',
     tab,
-    title: rootTitle,
-    desc: !getSectionPathParts(section).length ? section.desc : ''
+    title: findModuleSectionNodeById(rootId)?.title || rootTitle,
+    desc: findModuleSectionNodeById(rootId)?.desc || (!getSectionPathParts(section).length ? section.desc : '')
   });
 
   let parentId = rootId;
@@ -139,13 +139,14 @@ function ensureModuleNodeForSection(sectionInput, options = {}) {
   path.forEach((part, index) => {
     const prefix = path.slice(0, index + 1);
     const id = getModulePathNodeId(tab, prefix);
+    const existing = findModuleSectionNodeById(id);
     upsertModuleSectionNode({
       id,
-      parentId,
+      parentId: existing?.parentId || parentId,
       tab,
-      title: part,
-      desc: index === path.length - 1 ? section.desc : '',
-      path: prefix
+      title: existing?.title || part,
+      desc: existing?.desc || (index === path.length - 1 ? section.desc : ''),
+      path: existing?.path?.length ? existing.path : prefix
     });
     parentId = id;
   });

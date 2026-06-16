@@ -207,6 +207,11 @@ function handleArchiveActionClick(event) {
     openModuleEditorForImport();
     return;
   }
+  if (action === 'open-module-stamp') {
+    event.preventDefault();
+    openModuleStampDialog(trigger.dataset.sourceEntryId || '');
+    return;
+  }
   if (action === 'create-module-section') {
     event.preventDefault();
     openModuleSectionManager();
@@ -215,6 +220,13 @@ function handleArchiveActionClick(event) {
   if (action === 'toggle-archive-manage') {
     event.preventDefault();
     openModuleSectionManager();
+    return;
+  }
+  if (action === 'generate-dashboard-insights') {
+    event.preventDefault();
+    if (typeof generateArchiveDashboardInsights === 'function') {
+      generateArchiveDashboardInsights();
+    }
     return;
   }
   if (action === 'toggle-section-expanded') {
@@ -358,7 +370,8 @@ function updateArchiveSearchUI() {
     meta.textContent = formatArchiveMeta(entryCount, charCount, sectionCount);
   }
 
-  const hasVisibleSections = !!document.querySelector('#main-content .section-block.visible');
+  const hasVisibleSections = !!document.querySelector('#main-content .section-block.visible')
+    || !!document.querySelector('#main-content [data-archive-dashboard]:not([hidden])');
   if (emptyState && emptyText) {
     emptyState.classList.toggle('visible', !hasVisibleSections);
     emptyText.textContent = _archiveSearchNeedle
@@ -522,7 +535,7 @@ function switchTab(tab, options = {}) {
   document.querySelectorAll('.section-block').forEach(block => {
     const blockTab = block.dataset.tab;
     const hasMatches = block.dataset.hasMatches !== 'false';
-    const show = hasMatches && (tab === 'Alle' || blockTab === tab);
+    const show = hasMatches && ((_archiveSearchNeedle && tab === 'Alle') || blockTab === tab);
     block.classList.toggle('visible', show);
   });
   applyArchiveTheme(tab);
@@ -567,7 +580,7 @@ function renderAll() {
     btn.className = 'gallery-tab-btn' + (tab === 'Alle' ? ' active' : '');
     btn.dataset.tab = tab;
     btn.dataset.archiveAction = 'switch-tab';
-    btn.textContent = tab;
+    btn.textContent = tab === 'Alle' ? 'Dashboard' : tab;
     tabGroup.appendChild(btn);
   });
 
@@ -588,6 +601,15 @@ function renderAll() {
   importBtn.dataset.archiveAction = 'import-module';
   importBtn.setAttribute('aria-label', 'Modul importieren, exportieren oder Backup verwalten');
   toolGroup.appendChild(importBtn);
+
+  const stampBtn = document.createElement('button');
+  stampBtn.className = 'gallery-tab-btn gallery-tab-add';
+  stampBtn.type = 'button';
+  stampBtn.textContent = 'Stempel';
+  stampBtn.title = 'Bestehendes Modul kopieren und als eigenstaendige Kopie einsetzen';
+  stampBtn.dataset.archiveAction = 'open-module-stamp';
+  stampBtn.setAttribute('aria-label', stampBtn.title);
+  toolGroup.appendChild(stampBtn);
 
   const sectionBtn = document.createElement('button');
   sectionBtn.className = 'gallery-tab-btn gallery-tab-add';
@@ -622,6 +644,9 @@ function renderAll() {
   dashboard.dataset.archiveDashboard = 'true';
   dashboard.innerHTML = renderArchiveDashboard(sections);
   main.appendChild(dashboard);
+  window.setTimeout(() => {
+    if (typeof hydrateArchiveDashboardActivity === 'function') hydrateArchiveDashboardActivity();
+  }, 0);
 
   const searchInput = toolbar.querySelector('#archive-search-input');
   const clearBtn = toolbar.querySelector('#archive-search-clear');
@@ -719,6 +744,7 @@ function renderAll() {
           <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
             ${buildModuleSectionTargetOptions(sectionSignature)}
           </select>
+          <button type="button" data-archive-action="open-module-stamp" data-source-entry-id="${escapeHtml(entry.id || '')}">Kopieren</button>
         </div>` : ''}
         <div class="card-corner"></div><div class="card-corner-bl"></div>`;
       if (usePriorityImage) priorityCardImageBudget--;

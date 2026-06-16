@@ -30,8 +30,42 @@ function normalizeModuleStorePayload(payload) {
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
         .filter(([entryId]) => entryId)
     ),
+    archiveDashboardInsights: normalizeArchiveDashboardInsights(payload?.archiveDashboardInsights),
     entryOverrides
   };
+}
+
+function makeArchiveDashboardInsightId(item = {}) {
+  const input = [
+    item.sourceRef,
+    item.moduleId,
+    item.text
+  ].map(value => String(value || '').trim()).join('|');
+  let hash = 2166136261;
+  for (let i = 0; i < input.length; i += 1) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return `insight-${(hash >>> 0).toString(16).padStart(8, '0')}`;
+}
+
+function normalizeArchiveDashboardInsights(items) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      id: String(item?.id || '').trim() || makeArchiveDashboardInsightId(item),
+      text: String(item?.text || '').trim().slice(0, 420),
+      sourceLabel: String(item?.sourceLabel || '').trim().slice(0, 180),
+      sourceRef: String(item?.sourceRef || '').trim().slice(0, 240),
+      moduleId: String(item?.moduleId || '').trim().slice(0, 120),
+      moduleTitle: String(item?.moduleTitle || '').trim().slice(0, 180),
+      pageTitle: String(item?.pageTitle || '').trim().slice(0, 180),
+      speakerName: String(item?.speakerName || '').trim().slice(0, 120),
+      avatar: sanitizeImageSrc(item?.avatar || ''),
+      generatedAt: String(item?.generatedAt || '').trim().slice(0, 40),
+      sourceHash: String(item?.sourceHash || '').trim().slice(0, 80)
+    }))
+    .filter(item => item.text && (item.moduleId || item.sourceRef || item.sourceLabel))
+    .slice(0, 5);
 }
 
 function getModuleStorePayload(updatedAtClient = Date.now()) {
@@ -51,6 +85,7 @@ function getModuleStorePayload(updatedAtClient = Date.now()) {
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
         .filter(([entryId]) => entryId)
     ),
+    archiveDashboardInsights: _archiveDashboardInsights,
     entryOverrides: Object.fromEntries(
       Object.entries(_entryOverrides).map(([entryId, entry]) => [entryId, sanitizeModuleEntry({ ...entry, id: entryId })])
     )
@@ -135,6 +170,7 @@ function getModuleStoreContentSignature(payload) {
     moduleSectionNodes: normalized.moduleSectionNodes,
     moduleNodeAssignments: normalized.moduleNodeAssignments,
     moduleSectionMoves: normalized.moduleSectionMoves,
+    archiveDashboardInsights: normalized.archiveDashboardInsights,
     entryOverrides: normalized.entryOverrides
   });
 }
@@ -174,6 +210,7 @@ function hasModuleStoreContent(payload) {
     || normalized.moduleSectionNodes.length
     || Object.keys(normalized.moduleNodeAssignments).length
     || Object.keys(normalized.moduleSectionMoves).length
+    || normalized.archiveDashboardInsights.length
     || Object.keys(normalized.entryOverrides).length;
 }
 
@@ -182,7 +219,7 @@ function getModuleStoreSummary(payload) {
   const customModuleCount = normalized.customSections.reduce((sum, section) => sum + (section.entries?.length || 0), 0);
   const overrideCount = Object.keys(normalized.entryOverrides).length;
   const sectionCount = normalized.moduleSectionNodes.length || normalized.customSections.length;
-  return `${sectionCount} Bereiche, ${customModuleCount} eigene Module, ${overrideCount} Ueberschreibungen`;
+  return `${sectionCount} Bereiche, ${customModuleCount} eigene Module, ${overrideCount} Ueberschreibungen, ${normalized.archiveDashboardInsights.length} Archivfunken`;
 }
 
 function renderModuleStoreConflictPrompt(localPayload, remotePayload) {
@@ -313,6 +350,7 @@ function applyModuleStorePayload(payload) {
   _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;
   _moduleSectionMoves = normalized.moduleSectionMoves || {};
+  _archiveDashboardInsights = normalized.archiveDashboardInsights || [];
   _entryOverrides = {};
   Object.entries(normalized.entryOverrides).forEach(([entryId, entry]) => {
     _entryOverrides[entryId] = sanitizeModuleEntry({ ...entry, id: entryId });
@@ -344,6 +382,7 @@ function loadModuleStore() {
     _moduleNodeAssignments = {};
     _entryOverrides = {};
     _moduleSectionMoves = {};
+    _archiveDashboardInsights = [];
     updateModuleStoreSizePanel();
   }
 }
