@@ -72,9 +72,12 @@ function renderArchiveFolderGrid(folders = []) {
         <button class="archive-folder-card" type="button" data-archive-action="enter-section-folder" data-section-path="${escapeHtml(encodeArchivePathData(folder.path))}">
           <span class="archive-folder-mark" aria-hidden="true"></span>
           <span class="archive-folder-copy">
-            <span class="archive-folder-kicker">Naechste Ebene</span>
+            <span class="archive-folder-kicker">Unterbereich</span>
             <strong>${escapeHtml(folder.label)}</strong>
-            <small>${folder.moduleCount} Module / ${folder.childCount} Unterreiter</small>
+            <small>
+              <span>${folder.moduleCount} Module</span>
+              <span>${folder.childCount} Unterreiter</span>
+            </small>
           </span>
         </button>
       `).join('')}

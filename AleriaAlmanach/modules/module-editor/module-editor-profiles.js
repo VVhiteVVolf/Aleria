@@ -1,8 +1,10 @@
 function buildModuleProfileCardMarkup(profile = createDefaultProfileCard(0), index = 0) {
   const safeProfile = profile && typeof profile === 'object' ? profile : createDefaultProfileCard(index);
+  const profileId = normalizeModuleEditorCardId(safeProfile.id, 'profile', index);
   const fields = Array.isArray(safeProfile.fields) ? safeProfile.fields : [];
   return `
     <div class="inline-profile-card module-profile-card">
+      <input type="hidden" class="me-profile-id" value="${escapeHtml(profileId)}">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">Charakter ${index + 1}</div>
         <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-profile-card">Löschen</button>
@@ -56,7 +58,7 @@ function renumberModuleProfileCards(card) {
     if (title) title.textContent = `Charakter ${index + 1}`;
   });
   const addBtn = card.querySelector('.me-profile-add-btn');
-  if (addBtn) addBtn.disabled = cards.length >= 6;
+  if (addBtn) addBtn.disabled = false;
 }
 
 function collectModuleProfilesFromCard(card) {
@@ -68,6 +70,7 @@ function collectModuleProfilesFromCard(card) {
       ])
       .filter(([label, value]) => label || value);
     return {
+      id: getTrimmedFormValue(profileCard, '.me-profile-id') || normalizeModuleEditorCardId('', 'profile', index),
       img: getTrimmedFormValue(profileCard, '.me-profile-img'),
       name: getTrimmedFormValue(profileCard, '.me-profile-name') || `Charakter ${index + 1}`,
       role: getTrimmedFormValue(profileCard, '.me-profile-role'),
@@ -84,10 +87,13 @@ function addModuleProfileCard(button) {
   const wrap = pageCard?.querySelector('.module-profile-card-editor');
   if (!pageCard || !wrap) return;
   const count = wrap.querySelectorAll('.module-profile-card').length;
-  if (count >= 6) return;
-  wrap.insertAdjacentHTML('beforeend', buildModuleProfileCardMarkup(createDefaultProfileCard(count), count));
+  wrap.insertAdjacentHTML('beforeend', buildModuleProfileCardMarkup({
+    ...createDefaultProfileCard(count),
+    id: createModuleEditorCardEntityId('profile')
+  }, count));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberModuleProfileCards(pageCard);
+  rerenderModuleCardLayoutEditor(pageCard, 'profiles');
   syncModuleJsonPreview();
 }
 
@@ -101,6 +107,7 @@ function removeModuleProfileCard(button) {
     wrap.insertAdjacentHTML('beforeend', buildModuleProfileCardMarkup(createDefaultProfileCard(0), 0));
   }
   renumberModuleProfileCards(pageCard);
+  rerenderModuleCardLayoutEditor(pageCard, 'profiles');
   syncModuleJsonPreview();
 }
 
@@ -133,7 +140,8 @@ function removeModuleProfileField(button) {
 }
 
 function buildProfilesModuleEditorFields(page) {
-  const profiles = Array.isArray(page?.profiles) ? page.profiles.slice(0, 6) : [];
+  const profiles = normalizeModuleEditorCards(Array.isArray(page?.profiles) ? page.profiles : [], 'profiles');
+  const editorProfiles = profiles.length ? profiles : normalizeModuleEditorCards([createDefaultProfileCard(0)], 'profiles');
   return `
       <div class="module-page-type-block${inferModulePageType(page) === 'profiles' ? ' visible' : ''}" data-page-type="profiles">
         <div class="module-editor-grid single">
@@ -148,12 +156,13 @@ function buildProfilesModuleEditorFields(page) {
           <div class="module-editor-field">
             <div class="module-editor-inline" style="justify-content:space-between;">
               <label>Charakterkarten</label>
-              <button class="module-editor-mini-btn me-profile-add-btn" type="button" data-module-editor-action="add-profile-card"${profiles.length >= 6 ? ' disabled' : ''}>+ Charakter</button>
+              <button class="module-editor-mini-btn me-profile-add-btn" type="button" data-module-editor-action="add-profile-card">+ Charakter</button>
             </div>
-            <div class="module-editor-help">Bis zu sechs Karten. Sie skalieren in der Profilansicht automatisch nebeneinander.</div>
+            <div class="module-editor-help">Karten bleiben eigenstaendige Datensaetze; die Hierarchie darunter legt nur fest, wie sie dargestellt werden.</div>
             <div class="inline-profile-card-editor module-profile-card-editor">
-              ${(profiles.length ? profiles : [createDefaultProfileCard(0)]).map((profile, profileIndex) => buildModuleProfileCardMarkup(profile, profileIndex)).join('')}
+              ${editorProfiles.map((profile, profileIndex) => buildModuleProfileCardMarkup(profile, profileIndex)).join('')}
             </div>
+            ${buildModuleCardLayoutEditor('profiles', getModuleCardLayoutBlocks(page, 'profiles'), editorProfiles)}
           </div>
         </div>
       </div>`;
@@ -164,5 +173,6 @@ function collectProfilesModuleEditorPage(card, page) {
   page.profileBackground = getTrimmedFormValue(card, '.me-page-profile-background');
   page.profileTitle = getTrimmedFormValue(card, '.me-page-profile-title');
   page.profiles = collectModuleProfilesFromCard(card);
+  page.profileLayout = collectModuleCardLayoutFromCard(card, 'profiles');
   return page;
 }

@@ -14,6 +14,10 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-profile-stat',
   'add-wanted-card',
   'remove-wanted-card',
+  'add-card-layout-heading',
+  'add-card-layout-row',
+  'remove-card-layout-block',
+  'move-card-layout-block',
   'add-biography-connection',
   'remove-biography-connection',
   'add-biography-document',
@@ -108,6 +112,26 @@ function handleInlineEditorActionClick(event) {
   }
   if (action === 'remove-wanted-card') {
     removeInlineWantedCard(Number(trigger.dataset.wantedIndex) || 0);
+    return;
+  }
+  if (action === 'add-card-layout-heading') {
+    addInlineCardLayoutHeading(trigger.dataset.layoutKind || 'profiles');
+    return;
+  }
+  if (action === 'add-card-layout-row') {
+    addInlineCardLayoutRow(trigger.dataset.layoutKind || 'profiles');
+    return;
+  }
+  if (action === 'remove-card-layout-block') {
+    removeInlineCardLayoutBlock(trigger.dataset.layoutKind || 'profiles', Number(trigger.dataset.layoutIndex) || 0);
+    return;
+  }
+  if (action === 'move-card-layout-block') {
+    moveInlineCardLayoutBlock(
+      trigger.dataset.layoutKind || 'profiles',
+      Number(trigger.dataset.layoutIndex) || 0,
+      Number(trigger.dataset.layoutDirection) || 0
+    );
     return;
   }
   if (action === 'add-biography-connection') {
@@ -300,6 +324,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-wanted-card-field') {
     updateInlineWantedCardField(field);
+    return;
+  }
+  if (action === 'update-card-layout-heading') {
+    updateInlineCardLayoutHeading(field, { render: event.type === 'change' });
+    return;
+  }
+  if (action === 'update-card-layout-row') {
+    updateInlineCardLayoutRow(field);
     return;
   }
   if (action === 'update-biography-field') {

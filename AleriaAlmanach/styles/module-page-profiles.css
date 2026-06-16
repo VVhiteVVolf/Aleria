@@ -3,9 +3,9 @@
   /* ── PROFILE PAGE (Persönlichkeiten) ── */
   .profile-page {
     flex: 1; display: flex; flex-direction: column;
-    align-items: stretch; justify-content: center;
+    align-items: stretch; justify-content: flex-start;
     padding: clamp(0.7rem, 1.4vw, 1.2rem);
-    position: relative; overflow: hidden;
+    position: relative; overflow-y: auto; overflow-x: hidden;
   }
   .profile-page-bg {
     position: absolute; inset: 0;
@@ -107,6 +107,83 @@
     text-transform: uppercase; margin-bottom: 1.2rem;
     opacity: 0.9; text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+  }
+
+  .wanted-grid.module-card-layout,
+  .profile-grid.module-card-layout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 1.2vw, 1.15rem);
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .wanted-grid.module-card-layout {
+    padding: 1.2rem;
+  }
+
+  .profile-grid.module-card-layout {
+    padding: 0;
+  }
+
+  .module-card-layout-row {
+    display: grid;
+    grid-template-columns: repeat(var(--card-layout-cols, 3), minmax(0, 18rem));
+    gap: clamp(0.55rem, 1vw, 1rem);
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .module-card-layout-heading {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) auto minmax(2rem, 1fr);
+    gap: clamp(0.7rem, 1.2vw, 1.1rem);
+    align-items: center;
+    width: min(62rem, 100%);
+    margin: clamp(0.25rem, 0.7vw, 0.75rem) auto 0;
+    color: var(--gold-light);
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+  }
+
+  .module-card-layout-heading::before,
+  .module-card-layout-heading::after {
+    content: '';
+    display: block;
+    border-top: 1px solid rgba(225, 186, 92, 0.48);
+    box-shadow: 0 1px 0 rgba(20, 10, 4, 0.45);
+  }
+
+  .module-card-layout-heading h3 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.62rem, 0.85vw, 0.82rem);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  .module-card-layout-heading p {
+    grid-column: 1 / -1;
+    margin: -0.35rem 0 0;
+    color: rgba(247, 226, 178, 0.82);
+    font-size: 0.72rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .module-card-layout-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .module-card-layout-heading {
+      grid-template-columns: minmax(1.2rem, 1fr) auto minmax(1.2rem, 1fr);
+    }
   }
 
 

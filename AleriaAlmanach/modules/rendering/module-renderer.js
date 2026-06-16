@@ -260,7 +260,7 @@ function buildTournamentLeagueNoteList(items = [], className = '') {
         ${item.text ? `<span>${sanitizeContentHtml(item.text)}</span>` : ''}
       </div>
       ${item.meta ? `<em>${escapeHtml(item.meta)}</em>` : ''}
-    </div>`).join('');
+    </div>`, 'wanted');
 }
 
 function buildTournamentLeaguePage(page, entry, pageIndex, total) {
@@ -918,10 +918,86 @@ function buildCastePage(page, entry, pageIndex, total) {
     ${sym}`;
 }
 
+function getRenderedCardId(card, kind = 'card', index = 0) {
+  return String(card?.id || `${kind}-${index + 1}`).trim() || `${kind}-${index + 1}`;
+}
+
+function createDefaultRenderedCardLayout(cards = [], kind = 'card') {
+  const ids = cards.map((card, index) => getRenderedCardId(card, kind, index));
+  if (!ids.length) return [];
+  return [
+    {
+      type: 'row',
+      columns: Math.min(3, ids.slice(0, 3).length),
+      cardIds: ids.slice(0, 3)
+    },
+    ...ids.slice(3).map(id => ({
+      type: 'row',
+      columns: 1,
+      cardIds: [id]
+    }))
+  ];
+}
+
+function normalizeRenderedCardLayout(layout = [], cards = [], kind = 'card') {
+  const ids = cards.map((card, index) => getRenderedCardId(card, kind, index));
+  const validIds = new Set(ids);
+  const usedIds = new Set();
+  const blocks = (Array.isArray(layout) ? layout : []).map(block => {
+    const type = String(block?.type || '').trim();
+    if (type === 'heading') {
+      const title = String(block?.title || '').trim();
+      const subtitle = String(block?.subtitle || '').trim();
+      return title || subtitle ? { type, title, subtitle } : null;
+    }
+    if (type === 'row') {
+      const rawCardIds = (Array.isArray(block?.cardIds) ? block.cardIds : [])
+        .map(id => String(id || '').trim())
+        .filter(id => validIds.has(id))
+        .slice(0, 3);
+      const cardIds = rawCardIds.filter(id => !usedIds.has(id) && usedIds.add(id));
+      if (!cardIds.length) return null;
+      const columns = Math.max(1, Math.min(3, Number(block?.columns) || cardIds.length));
+      return { type, columns: Math.min(columns, cardIds.length), cardIds };
+    }
+    return null;
+  }).filter(Boolean);
+
+  const missingIds = ids.filter(id => !usedIds.has(id));
+  if (missingIds.length) {
+    blocks.push(...createDefaultRenderedCardLayout(missingIds.map(id => ({ id })), kind));
+  }
+
+  return blocks.length ? blocks : createDefaultRenderedCardLayout(cards, kind);
+}
+
+function buildCardLayoutBlocks(layout, cards, renderCard, kind = 'card') {
+  const cardById = new Map(cards.map((card, index) => [getRenderedCardId(card, kind, index), card]));
+  return normalizeRenderedCardLayout(layout, cards, kind).map(block => {
+    if (block.type === 'heading') {
+      return `
+        <div class="module-card-layout-heading">
+          ${block.title ? `<h3>${escapeHtml(block.title)}</h3>` : ''}
+          ${block.subtitle ? `<p>${escapeHtml(block.subtitle)}</p>` : ''}
+        </div>`;
+    }
+    const cardsHtml = block.cardIds
+      .map(cardId => cardById.get(cardId))
+      .filter(Boolean)
+      .map(renderCard)
+      .join('');
+    return `
+      <div class="module-card-layout-row" style="--card-layout-cols:${Math.max(1, Math.min(3, block.columns || 1))}">
+        ${cardsHtml}
+      </div>`;
+  }).join('');
+}
+
 function buildWantedPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const inlineCommentThread = getInlineCommentThreadForPage(page, entry, pageIndex);
-  const cards = (page.wanted || []).map(w => `
+  const wantedCards = Array.isArray(page.wanted) ? page.wanted : [];
+  const cards = buildCardLayoutBlocks(page.wantedLayout, wantedCards, w => `
     <div class="wanted-card">
       <div class="wanted-card-header">⚔ &nbsp; Kopfgeld &nbsp; ⚔</div>
         ${sanitizeHref(w.link)
@@ -936,16 +1012,16 @@ function buildWantedPage(page, entry, pageIndex, total) {
         <div class="wanted-field"><span class="wanted-field-label">Bekannt</span><span class="wanted-field-val">${escapeHtml(w.bekannt)}</span></div>
         <div class="wanted-egon">"${escapeHtml(w.egon)}"<br><span style="font-style:normal;font-size:0.62rem;font-family:'Cinzel',serif;color:var(--gold)">— Sir Egon Gafyr</span></div>
       </div>
-    </div>`).join('');
+    </div>`, 'wanted');
   const embeddedComments = inlineCommentThread ? buildOrganicCommentsContinuation(inlineCommentThread) : '';
   const sym = entry.symbol ? `<img class="modal-symbol" src="${sanitizeImageSrc(entry.symbol)}" alt="" loading="lazy" decoding="async">` : '';
-  return `${nav}<div class="wanted-page" style="background-image:url('${sanitizeStyleUrl(page.wantedBackground)}')"><div class="wanted-stamp">⚠ Gesucht</div><div class="wanted-grid">${cards}</div></div>${embeddedComments}${sym}`;
+  return `${nav}<div class="wanted-page" style="background-image:url('${sanitizeStyleUrl(page.wantedBackground)}')"><div class="wanted-stamp">⚠ Gesucht</div><div class="wanted-grid module-card-layout">${cards}</div></div>${embeddedComments}${sym}`;
 }
 
 function buildProfilesPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
-  const visibleProfiles = (page.profiles || []).slice(0, 6);
-  const cards = visibleProfiles.map(p => `
+  const visibleProfiles = Array.isArray(page.profiles) ? page.profiles : [];
+  const cards = buildCardLayoutBlocks(page.profileLayout, visibleProfiles, p => `
     <div class="profile-card">
       <div class="profile-card-banner">✦ &nbsp; ${escapeHtml(p.banner || 'Ruinenpforte')} &nbsp; ✦</div>
       ${p.img
@@ -962,13 +1038,13 @@ function buildProfilesPage(page, entry, pageIndex, total) {
         ${p.note ? `<div class="profile-card-note">${sanitizeContentHtml(p.note)}</div>` : ''}
       </div>
       ${p.stamp ? `<div class="profile-stamp">${escapeHtml(p.stamp)}</div>` : ''}
-    </div>`).join('');
+    </div>`, 'profile');
   return `
     ${nav}
     <div class="profile-page" style="background:var(--parchment-dark);">
       <div class="profile-page-bg" style="background-image:url('${sanitizeStyleUrl(page.profileBackground)}')"></div>
       <div class="profile-page-title">${escapeHtml(page.profileTitle || '✦ — Mitglieder des Forschungsteams — ✦')}</div>
-      <div class="profile-grid" style="--profile-count:${Math.max(1, visibleProfiles.length)}">${cards}</div>
+      <div class="profile-grid module-card-layout">${cards}</div>
     </div>`;
 }
 

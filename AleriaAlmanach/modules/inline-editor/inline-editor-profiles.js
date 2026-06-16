@@ -23,8 +23,10 @@ function addInlineProfileCard() {
   const page = getInlineDraftPage();
   if (!page) return;
   page.profiles = Array.isArray(page.profiles) ? page.profiles : [];
-  if (page.profiles.length >= 6) return;
-  page.profiles.push(createDefaultProfileCard(page.profiles.length));
+  page.profiles.push({
+    ...createDefaultProfileCard(page.profiles.length),
+    id: createModuleEditorCardEntityId('profile')
+  });
   renderPage(currentPage, 0);
 }
 
@@ -78,12 +80,13 @@ function updateInlineProfileStatField(input) {
 
 
 function buildInlineProfileEditor(page) {
-  const profiles = Array.isArray(page.profiles) ? page.profiles : [];
+  page.profiles = Array.isArray(page.profiles) && page.profiles.length ? page.profiles : [createDefaultProfileCard(0)];
+  const profiles = ensureInlineCardIds(page, 'profiles');
   return `
     <div class="inline-edit-section">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">Charakterprofil</div>
-        <button class="module-editor-mini-btn" type="button" data-inline-action="add-profile-card"${profiles.length >= 6 ? ' disabled' : ''}>+ Charakter</button>
+        <button class="module-editor-mini-btn" type="button" data-inline-action="add-profile-card">+ Charakter</button>
       </div>
       <div class="inline-edit-grid single">
         <div class="inline-edit-field">
@@ -143,7 +146,7 @@ function buildInlineProfileEditor(page) {
             </div>
           </div>`).join('')}
       </div>
+      ${buildInlineCardLayoutEditor('profiles', page)}
     </div>`;
 }
-
 

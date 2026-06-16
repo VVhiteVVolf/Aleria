@@ -182,6 +182,56 @@ function sanitizeCommentSequence(blocks) {
     .filter(Boolean);
 }
 
+function sanitizeModuleCardEntityId(value, kind = 'card', index = 0, usedIds = new Set()) {
+  const fallback = `${kind}-${index + 1}`;
+  const raw = String(value || '').trim().toLowerCase();
+  const base = (raw || fallback)
+    .replace(/[^a-z0-9_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 48) || fallback;
+  let next = base;
+  let suffix = 2;
+  while (usedIds.has(next)) {
+    next = `${base}-${suffix}`;
+    suffix += 1;
+  }
+  usedIds.add(next);
+  return next;
+}
+
+function sanitizeModuleCardLayoutBlocks(blocks, validCardIds = []) {
+  if (!Array.isArray(blocks)) return [];
+  const validIds = new Set(validCardIds.map(id => String(id || '').trim()).filter(Boolean));
+  const usedBlockIds = new Set();
+  const usedCardIds = new Set();
+
+  return blocks.map((block, index) => {
+    const type = String(block?.type || '').trim();
+    const id = sanitizeModuleCardEntityId(block?.id, 'layout', index, usedBlockIds);
+
+    if (type === 'heading') {
+      const title = String(block?.title || '').trim();
+      const subtitle = String(block?.subtitle || '').trim();
+      if (!title && !subtitle) return null;
+      return { id, type, title, subtitle };
+    }
+
+    if (type === 'row') {
+      const columns = Math.max(1, Math.min(3, Number(block?.columns) || 1));
+      const seenCards = new Set();
+      const rawCardIds = (Array.isArray(block?.cardIds) ? block.cardIds : [])
+        .map(cardId => String(cardId || '').trim())
+        .filter(cardId => validIds.has(cardId) && !seenCards.has(cardId) && seenCards.add(cardId))
+        .slice(0, 3);
+      const cardIds = rawCardIds.filter(cardId => !usedCardIds.has(cardId) && usedCardIds.add(cardId));
+      if (!cardIds.length) return null;
+      return { id, type, columns: Math.max(1, Math.min(columns, cardIds.length)), cardIds };
+    }
+
+    return null;
+  }).filter(Boolean);
+}
+
 function sanitizeModulePage(page, fallbackTitle = '') {
   if (!page || typeof page !== 'object') return null;
   const next = {
@@ -255,8 +305,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.wantedPage) {
     next.wantedBackground = String(page.wantedBackground || '').trim();
+    const usedWantedIds = new Set();
     next.wanted = Array.isArray(page.wanted)
-      ? page.wanted.map(item => ({
+      ? page.wanted.map((item, index) => ({
+          id: sanitizeModuleCardEntityId(item?.id, 'wanted', index, usedWantedIds),
           img: String(item?.img || '').trim(),
           name: String(item?.name || '').trim(),
           role: String(item?.role || '').trim(),
@@ -268,13 +320,17 @@ function sanitizeModulePage(page, fallbackTitle = '') {
           link: String(item?.link || '').trim(),
         })).filter(item => item.name || item.img)
       : [];
+    const wantedLayout = sanitizeModuleCardLayoutBlocks(page.wantedLayout, next.wanted.map(item => item.id));
+    if (wantedLayout.length) next.wantedLayout = wantedLayout;
   }
 
   if (page.profilePage) {
     next.profileBackground = String(page.profileBackground || '').trim();
     next.profileTitle = String(page.profileTitle || '').trim();
+    const usedProfileIds = new Set();
     next.profiles = Array.isArray(page.profiles)
-      ? page.profiles.map(profile => ({
+      ? page.profiles.map((profile, index) => ({
+          id: sanitizeModuleCardEntityId(profile?.id, 'profile', index, usedProfileIds),
           img: String(profile?.img || '').trim(),
           name: String(profile?.name || '').trim(),
           role: String(profile?.role || '').trim(),
@@ -284,6 +340,8 @@ function sanitizeModulePage(page, fallbackTitle = '') {
           fields: sanitizeStatsArray(profile?.fields),
         })).filter(profile => profile.name || profile.img)
       : [];
+    const profileLayout = sanitizeModuleCardLayoutBlocks(page.profileLayout, next.profiles.map(profile => profile.id));
+    if (profileLayout.length) next.profileLayout = profileLayout;
   }
 
   if (page.tournamentPage) {

@@ -970,6 +970,52 @@
     flex-direction: column;
     gap: 0.6rem;
   }
+  .module-card-layout-editor {
+    margin-top: 0.9rem;
+    border: 1px solid rgba(139,105,20,0.2);
+    background: rgba(255,255,255,0.14);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .module-card-layout-toolbar,
+  .module-card-layout-block-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .module-card-layout-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .module-card-layout-block {
+    border: 1px solid rgba(139,105,20,0.18);
+    background: rgba(255,248,230,0.18);
+    padding: 0.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .module-card-layout-row-editor {
+    display: grid;
+    grid-template-columns: minmax(7rem, 0.55fr) repeat(3, minmax(8rem, 1fr));
+    gap: 0.5rem;
+    align-items: end;
+  }
+  @media (max-width: 760px) {
+    .module-card-layout-toolbar,
+    .module-card-layout-block-head {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .module-card-layout-row-editor {
+      grid-template-columns: 1fr;
+    }
+  }
   .inline-image-panel {
     display: flex;
     flex-direction: column;

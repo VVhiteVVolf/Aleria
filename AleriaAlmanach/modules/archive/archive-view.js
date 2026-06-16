@@ -727,13 +727,14 @@ function renderAll() {
       card.setAttribute('role', 'button');
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', `${entry.title} öffnen`);
-      const usePriorityImage = !!entry.image && priorityCardImageBudget > 0;
+      const previewImage = getArchiveEntryPreviewImage(entry);
+      const usePriorityImage = !!previewImage && priorityCardImageBudget > 0;
       const imageLoadingAttrs = usePriorityImage
         ? 'loading="eager" decoding="async" fetchpriority="high"'
         : 'loading="lazy" decoding="async" fetchpriority="low"';
       card.innerHTML = `
         <div class="card-image-wrap">
-          ${entry.image ? `<img src="${sanitizeImageSrc(entry.image)}" alt="${escapeHtml(entry.title)}" ${imageLoadingAttrs}>` : `<div class="card-placeholder-inner">${escapeHtml(entry.icon || '')}</div>`}
+          ${previewImage ? `<img src="${previewImage}" alt="${escapeHtml(entry.title)}" ${imageLoadingAttrs}>` : `<div class="card-placeholder-inner">${escapeHtml(entry.icon || '')}</div>`}
           <div class="card-image-overlay"></div>
           ${entry.locked ? `<div class="lock-icon">🔒</div>` : ''}
           <div class="card-label"><h3>${escapeHtml(entry.title)}</h3><div class="card-type-tag">${escapeHtml(entry.type)}</div></div>

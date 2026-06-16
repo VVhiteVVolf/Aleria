@@ -69,6 +69,10 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-profile-field',
   'add-wanted-card',
   'remove-wanted-card',
+  'add-card-layout-heading',
+  'add-card-layout-row',
+  'remove-card-layout-block',
+  'move-card-layout-block',
   'save'
 ]);
 
@@ -350,6 +354,22 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-wanted-card') {
     removeModuleWantedCard(trigger);
+    return;
+  }
+  if (action === 'add-card-layout-heading') {
+    addModuleCardLayoutHeading(trigger);
+    return;
+  }
+  if (action === 'add-card-layout-row') {
+    addModuleCardLayoutRow(trigger);
+    return;
+  }
+  if (action === 'remove-card-layout-block') {
+    removeModuleCardLayoutBlock(trigger);
+    return;
+  }
+  if (action === 'move-card-layout-block') {
+    moveModuleCardLayoutBlock(trigger);
     return;
   }
   if (action === 'save') {

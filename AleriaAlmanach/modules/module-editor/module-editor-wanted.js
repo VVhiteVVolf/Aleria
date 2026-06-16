@@ -6,11 +6,13 @@ function getModuleWantedCards(page) {
 
 function buildModuleWantedCardMarkup(item = createDefaultWantedCard(0), index = 0) {
   const safeItem = item && typeof item === 'object' ? item : createDefaultWantedCard(index);
+  const wantedId = normalizeModuleEditorCardId(safeItem.id, 'wanted', index);
   return `
     <div class="inline-profile-card module-wanted-card">
+      <input type="hidden" class="me-wanted-id" value="${escapeHtml(wantedId)}">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">Kopfgeld ${index + 1}</div>
-        <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-wanted-card">Löschen</button>
+        <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-wanted-card">Loeschen</button>
       </div>
       <div class="module-editor-grid">
         <div class="module-editor-field wide">
@@ -46,7 +48,7 @@ function buildModuleWantedCardMarkup(item = createDefaultWantedCard(0), index = 
           <textarea class="me-wanted-bekannt small">${escapeHtml(safeItem.bekannt || '')}</textarea>
         </div>
         <div class="module-editor-field wide">
-          <label>Zitat / Einschätzung</label>
+          <label>Zitat / Einschaetzung</label>
           ${buildTextFormatToolbar()}
           <textarea class="me-wanted-egon small">${escapeHtml(safeItem.egon || '')}</textarea>
         </div>
@@ -64,6 +66,7 @@ function renumberModuleWantedCards(pageCard) {
 function collectModuleWantedCards(card) {
   return Array.from(card.querySelectorAll('.module-wanted-card')).map((wantedCard, index) => {
     const item = {
+      id: getTrimmedFormValue(wantedCard, '.me-wanted-id') || normalizeModuleEditorCardId('', 'wanted', index),
       img: getTrimmedFormValue(wantedCard, '.me-wanted-img'),
       name: getTrimmedFormValue(wantedCard, '.me-wanted-name'),
       role: getTrimmedFormValue(wantedCard, '.me-wanted-role'),
@@ -74,7 +77,7 @@ function collectModuleWantedCards(card) {
       egon: getTrimmedFormValue(wantedCard, '.me-wanted-egon'),
       link: getTrimmedFormValue(wantedCard, '.me-wanted-link')
     };
-    const hasContent = Object.values(item).some(Boolean);
+    const hasContent = Object.entries(item).some(([key, value]) => key !== 'id' && !!value);
     if (!hasContent) return null;
     return {
       ...item,
@@ -89,9 +92,13 @@ function addModuleWantedCard(button) {
   if (!pageCard || !wrap) return;
   const count = wrap.querySelectorAll('.module-wanted-card').length;
   wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildModuleWantedCardMarkup(createDefaultWantedCard(count), count));
+  wrap.insertAdjacentHTML('beforeend', buildModuleWantedCardMarkup({
+    ...createDefaultWantedCard(count),
+    id: createModuleEditorCardEntityId('wanted')
+  }, count));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberModuleWantedCards(pageCard);
+  rerenderModuleCardLayoutEditor(pageCard, 'wanted');
   syncModuleJsonPreview();
 }
 
@@ -102,14 +109,15 @@ function removeModuleWantedCard(button) {
   if (!pageCard || !card || !wrap) return;
   card.remove();
   if (!wrap.querySelector('.module-wanted-card')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Kopfgeld-Einträge vorhanden.</div>';
+    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Kopfgeld-Eintraege vorhanden.</div>';
   }
   renumberModuleWantedCards(pageCard);
+  rerenderModuleCardLayoutEditor(pageCard, 'wanted');
   syncModuleJsonPreview();
 }
 
 function buildWantedModuleEditorFields(page) {
-  const cards = getModuleWantedCards(page);
+  const cards = normalizeModuleEditorCards(getModuleWantedCards(page), 'wanted');
   return `
       <div class="module-page-type-block${inferModulePageType(page) === 'wanted' ? ' visible' : ''}" data-page-type="wanted">
         <div class="module-editor-grid single">
@@ -119,15 +127,16 @@ function buildWantedModuleEditorFields(page) {
           </div>
           <div class="module-editor-field">
             <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Kopfgeld-Einträge</label>
+              <label>Kopfgeld-Eintraege</label>
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-wanted-card">+ Ziel</button>
             </div>
             <div class="module-editor-help">Diese Felder erscheinen direkt auf den Wanted-Karten in der Liveansicht.</div>
             <div class="inline-profile-card-editor module-wanted-card-editor">
               ${cards.length
                 ? cards.map((item, wantedIndex) => buildModuleWantedCardMarkup(item, wantedIndex)).join('')
-                : '<div class="inline-placeholder-note">Noch keine Kopfgeld-Einträge vorhanden.</div>'}
+                : '<div class="inline-placeholder-note">Noch keine Kopfgeld-Eintraege vorhanden.</div>'}
             </div>
+            ${buildModuleCardLayoutEditor('wanted', getModuleCardLayoutBlocks(page, 'wanted'), cards)}
           </div>
         </div>
       </div>`;
@@ -137,5 +146,6 @@ function collectWantedModuleEditorPage(card, page) {
   page.wantedPage = true;
   page.wantedBackground = getTrimmedFormValue(card, '.me-page-wanted-background');
   page.wanted = collectModuleWantedCards(card);
+  page.wantedLayout = collectModuleCardLayoutFromCard(card, 'wanted');
   return page;
 }

@@ -16,6 +16,32 @@ function getArchiveEntryCommentLabel(entry) {
   return 'Keine Kommentare';
 }
 
+function getArchiveEntryPreviewImage(entry) {
+  const directImage = sanitizeImageSrc(entry?.image || '');
+  if (directImage) return directImage;
+
+  const pages = Array.isArray(entry?.pages) ? entry.pages.filter(page => page && !page._commentsPage) : [];
+  for (const page of pages) {
+    const pageImage = sanitizeImageSrc(page.image || '');
+    if (pageImage) return pageImage;
+
+    const wantedImage = Array.isArray(page.wanted)
+      ? page.wanted.map(item => sanitizeImageSrc(item?.img || '')).find(Boolean)
+      : '';
+    if (wantedImage) return wantedImage;
+
+    const profileImage = Array.isArray(page.profiles)
+      ? page.profiles.map(item => sanitizeImageSrc(item?.img || '')).find(Boolean)
+      : '';
+    if (profileImage) return profileImage;
+
+    const bestiaryImage = sanitizeImageSrc(page.bestiary?.image || page.bestiary?.portrait || '');
+    if (bestiaryImage) return bestiaryImage;
+  }
+
+  return '';
+}
+
 function buildArchiveEntryMetaItems(entry, section, options = {}) {
   const pageCount = getArchiveEntryPageCount(entry);
   const items = [];

@@ -14,7 +14,10 @@ function addInlineWantedCard() {
   const page = getInlineDraftPage();
   if (!page) return;
   page.wanted = Array.isArray(page.wanted) ? page.wanted : [];
-  page.wanted.push(createDefaultWantedCard(page.wanted.length));
+  page.wanted.push({
+    ...createDefaultWantedCard(page.wanted.length),
+    id: createModuleEditorCardEntityId('wanted')
+  });
   renderPage(currentPage, 0);
 }
 
@@ -40,8 +43,8 @@ function updateInlineWantedCardField(input) {
 
 
 function buildInlineWantedEditor(page) {
-  const wanted = Array.isArray(page.wanted) ? page.wanted : [];
-  const cards = wanted.length ? wanted : [createDefaultWantedCard(0)];
+  page.wanted = Array.isArray(page.wanted) && page.wanted.length ? page.wanted : [createDefaultWantedCard(0)];
+  const cards = ensureInlineCardIds(page, 'wanted');
   return `
     <div class="inline-edit-section">
       <div class="inline-edit-head">
@@ -102,7 +105,7 @@ function buildInlineWantedEditor(page) {
             </div>
           </div>`).join('')}
       </div>
+      ${buildInlineCardLayoutEditor('wanted', page)}
     </div>`;
 }
-
 
