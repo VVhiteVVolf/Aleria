@@ -47,9 +47,10 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
   const emblem = sanitizeImageSrc(data.emblem || entry.symbol || '');
   const sideImage = sanitizeImageSrc(data.sideImage || page.image || '');
   const levels = data.levels.length ? data.levels : sanitizeHierarchyData({}).levels;
+  const style = `--hierarchy-card-font-scale:${data.cardFontScale / 100};--hierarchy-portrait-scale:${data.portraitScale / 100};`;
   return `
     ${nav}
-    <div class="hierarchy-page">
+    <div class="hierarchy-page" style="${style}">
       <header class="hierarchy-topbar">
         <div class="hierarchy-titlemark">
           ${emblem ? `<img src="${emblem}" alt="" loading="lazy" decoding="async">` : '<div class="hierarchy-emblem-placeholder"></div>'}
@@ -59,11 +60,6 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
           </div>
         </div>
         <div class="hierarchy-center-label"><span>${escapeHtml(data.centerLabel)}</span></div>
-        <div class="hierarchy-actions" aria-hidden="true">
-          <span>Export</span>
-          <span>Bearbeiten</span>
-          <span class="close-mark">X</span>
-        </div>
       </header>
 
       <div class="hierarchy-document">
@@ -103,10 +99,9 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
         </main>
       </div>
 
-      <footer class="hierarchy-footer">
-        <button type="button" tabindex="-1">${escapeHtml(data.backLabel)}</button>
-        ${data.footerNote ? `<div class="hierarchy-note">${sanitizeContentHtml(data.footerNote)}</div>` : '<div></div>'}
-        <button type="button" tabindex="-1">${escapeHtml(data.printLabel)}</button>
-      </footer>
+      ${data.footerNote ? `
+        <footer class="hierarchy-footer">
+          <div class="hierarchy-note">${sanitizeContentHtml(data.footerNote)}</div>
+        </footer>` : ''}
     </div>`;
 }

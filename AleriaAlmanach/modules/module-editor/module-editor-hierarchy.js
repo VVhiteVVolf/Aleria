@@ -209,6 +209,16 @@ function buildHierarchyModuleEditorFields(page) {
             </select>
           </div>
           <div class="module-editor-field">
+            <label>Kartenschrift</label>
+            <input class="me-hierarchy-card-font-scale" type="number" min="65" max="125" step="1" value="${escapeHtml(hierarchy.cardFontScale)}">
+            <div class="module-editor-help">Prozent, Standard 92.</div>
+          </div>
+          <div class="module-editor-field">
+            <label>Kartenbilder</label>
+            <input class="me-hierarchy-portrait-scale" type="number" min="50" max="160" step="1" value="${escapeHtml(hierarchy.portraitScale)}">
+            <div class="module-editor-help">Prozent, Standard 100.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Kopfzeile</label>
             <input type="text" class="me-hierarchy-eyebrow" value="${escapeHtml(hierarchy.eyebrow)}">
           </div>
@@ -287,14 +297,6 @@ function buildHierarchyModuleEditorFields(page) {
             <label>Footer-Notiz</label>
             <input type="text" class="me-hierarchy-footer-note" value="${escapeHtml(hierarchy.footerNote)}">
           </div>
-          <div class="module-editor-field">
-            <label>Zurueck-Button</label>
-            <input type="text" class="me-hierarchy-back-label" value="${escapeHtml(hierarchy.backLabel)}">
-          </div>
-          <div class="module-editor-field">
-            <label>Druck-Button</label>
-            <input type="text" class="me-hierarchy-print-label" value="${escapeHtml(hierarchy.printLabel)}">
-          </div>
         </div>
       </div>`;
 }
@@ -304,6 +306,8 @@ function collectHierarchyModuleEditorPage(card, page) {
   page.hierarchyPage = true;
   page.hierarchy = sanitizeHierarchyData({
     layoutMode: getFormValue(block, '.me-hierarchy-layout-mode'),
+    cardFontScale: getFormValue(block, '.me-hierarchy-card-font-scale'),
+    portraitScale: getFormValue(block, '.me-hierarchy-portrait-scale'),
     eyebrow: getTrimmedFormValue(block, '.me-hierarchy-eyebrow'),
     subtitle: getTrimmedFormValue(block, '.me-hierarchy-subtitle'),
     centerLabel: getTrimmedFormValue(block, '.me-hierarchy-center-label'),
@@ -319,9 +323,7 @@ function collectHierarchyModuleEditorPage(card, page) {
     chartTitle: getTrimmedFormValue(block, '.me-hierarchy-chart-title'),
     chartIntro: getTrimmedFormValue(block, '.me-hierarchy-chart-intro'),
     levels: collectHierarchyLevelsFromEditor(block),
-    footerNote: getTrimmedFormValue(block, '.me-hierarchy-footer-note'),
-    backLabel: getTrimmedFormValue(block, '.me-hierarchy-back-label'),
-    printLabel: getTrimmedFormValue(block, '.me-hierarchy-print-label')
+    footerNote: getTrimmedFormValue(block, '.me-hierarchy-footer-note')
   });
   return page;
 }

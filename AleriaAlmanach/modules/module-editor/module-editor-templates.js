@@ -610,6 +610,8 @@ function createDefaultHierarchyPage(index = 0) {
     hierarchyPage: true,
     hierarchy: {
       layoutMode: 'vertical',
+      cardFontScale: 92,
+      portraitScale: 100,
       eyebrow: 'Hierarchie',
       subtitle: 'Organisationsstruktur der Gilde',
       centerLabel: 'Gilde der Wahrheitswaage',

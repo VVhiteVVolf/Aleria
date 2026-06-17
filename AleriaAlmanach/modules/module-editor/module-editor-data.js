@@ -506,10 +506,18 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
   };
 }
 
+function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(min, Math.min(max, Math.round(safe)));
+}
+
 function sanitizeHierarchyData(data = {}) {
   const layoutMode = String(data.layoutMode || '').trim();
   return {
     layoutMode: layoutMode === 'depth' ? 'depth' : 'vertical',
+    cardFontScale: clampHierarchyScale(data.cardFontScale, 92, 65, 125),
+    portraitScale: clampHierarchyScale(data.portraitScale, 100, 50, 160),
     eyebrow: String(data.eyebrow || 'Hierarchie').trim(),
     subtitle: String(data.subtitle || 'Organisationsstruktur').trim(),
     centerLabel: String(data.centerLabel || 'Gilde der Wahrheitswaage').trim(),

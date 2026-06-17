@@ -224,6 +224,14 @@ function buildInlineHierarchyEditor(page) {
             <option value="depth"${data.layoutMode === 'depth' ? ' selected' : ''}>Tiefenlayout / Spalten</option>
           </select>
         </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Kartenschrift (%)</span>
+          <input class="inline-edit-input" type="number" min="65" max="125" step="1" value="${escapeHtml(data.cardFontScale)}" data-inline-action="update-hierarchy-field" data-hierarchy-field="cardFontScale">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Kartenbilder (%)</span>
+          <input class="inline-edit-input" type="number" min="50" max="160" step="1" value="${escapeHtml(data.portraitScale)}" data-inline-action="update-hierarchy-field" data-hierarchy-field="portraitScale">
+        </div>
         ${[
           ['eyebrow', 'Kopfzeile'],
           ['subtitle', 'Unterzeile'],
@@ -235,9 +243,7 @@ function buildInlineHierarchyEditor(page) {
           ['detailsTitle', 'Details-Ueberschrift'],
           ['quoteLabel', 'Zitatlabel'],
           ['chartTitle', 'Baum-Ueberschrift'],
-          ['footerNote', 'Footer-Notiz'],
-          ['backLabel', 'Zurueck-Button'],
-          ['printLabel', 'Druck-Button']
+          ['footerNote', 'Footer-Notiz']
         ].map(([field, label]) => `
           <div class="inline-edit-field${field === 'footerNote' ? ' wide' : ''}">
             <span class="inline-edit-label">${escapeHtml(label)}</span>
