@@ -747,6 +747,197 @@ function sanitizeBiographyData(data = {}) {
   };
 }
 
+function sanitizeGoodsCategories(items = []) {
+  const used = new Set();
+  return (Array.isArray(items) ? items : [])
+    .map((item, index) => {
+      const rawId = String(item?.id || '').trim();
+      const label = String(item?.label || item?.title || item?.name || rawId || '').trim();
+      const id = slugify(rawId || label || `kategorie-${index + 1}`, `kategorie-${index + 1}`);
+      return { id, label };
+    })
+    .filter(item => item.id && item.label)
+    .filter(item => {
+      if (used.has(item.id)) return false;
+      used.add(item.id);
+      return true;
+    })
+    .slice(0, 12);
+}
+
+function getDefaultGoodsColumns() {
+  return [
+    { id: 'name', label: 'Name' },
+    { id: 'kind', label: 'Art' },
+    { id: 'description', label: 'Beschreibung' },
+    { id: 'price', label: 'Preis' },
+    { id: 'availability', label: 'Verfuegbar' }
+  ];
+}
+
+function sanitizeGoodsColumns(items = []) {
+  const source = Array.isArray(items) && items.length ? items : getDefaultGoodsColumns();
+  const used = new Set();
+  return source
+    .map((item, index) => {
+      const rawId = String(item?.id || '').trim();
+      const label = String(item?.label || item?.title || rawId || `Spalte ${index + 1}`).trim();
+      const id = slugify(rawId || label || `spalte-${index + 1}`, `spalte-${index + 1}`);
+      return { id, label };
+    })
+    .filter(item => item.id && item.label)
+    .filter(item => {
+      if (used.has(item.id)) return false;
+      used.add(item.id);
+      return true;
+    })
+    .slice(0, 10);
+}
+
+function getGoodsRowValue(item, columnId) {
+  if (item?.values && Object.prototype.hasOwnProperty.call(item.values, columnId)) {
+    return item.values[columnId];
+  }
+  if (Object.prototype.hasOwnProperty.call(item || {}, columnId)) return item[columnId];
+  if (columnId === 'name') return item?.name || item?.title || '';
+  if (columnId === 'kind') return item?.kind || item?.type || '';
+  if (columnId === 'description') return item?.description || item?.text || '';
+  if (columnId === 'availability') return item?.availability || item?.stock || '';
+  return '';
+}
+
+function sanitizeGoodsRows(items = [], columns = getDefaultGoodsColumns()) {
+  const safeColumns = sanitizeGoodsColumns(columns);
+  return (Array.isArray(items) ? items : [])
+    .map(item => {
+      const values = {};
+      safeColumns.forEach(column => {
+        values[column.id] = String(getGoodsRowValue(item, column.id) || '').trim();
+      });
+      return {
+        image: String(item?.image || item?.icon || '').trim(),
+        category: slugify(item?.category || item?.categoryId || getGoodsRowValue(item, 'kind') || 'sonstiges', 'sonstiges'),
+        values
+      };
+    })
+    .filter(item => item.image || Object.values(item.values).some(Boolean))
+    .slice(0, 120);
+}
+
+function sanitizeGoodsItems(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      image: String(item?.image || item?.icon || '').trim(),
+      name: String(item?.name || item?.title || '').trim(),
+      kind: String(item?.kind || item?.type || '').trim(),
+      category: slugify(item?.category || item?.categoryId || item?.kind || 'sonstiges', 'sonstiges'),
+      description: String(item?.description || item?.text || '').trim(),
+      price: String(item?.price || '').trim(),
+      availability: String(item?.availability || item?.stock || '').trim()
+    }))
+    .filter(item => item.image || item.name || item.kind || item.description || item.price || item.availability)
+    .slice(0, 80);
+}
+
+function sanitizeGoodsTableBlock(table = {}, fallbackIndex = 0) {
+  const columns = sanitizeGoodsColumns(table.columns);
+  const rawRows = table.rows || table.goods || table.items || [];
+  const rows = sanitizeGoodsRows(rawRows, columns);
+  const categories = sanitizeGoodsCategories(table.categories);
+  const knownCategories = new Set(categories.map(item => item.id));
+  const derivedCategories = [];
+  rows.forEach(row => {
+    if (!row.category || knownCategories.has(row.category)) return;
+    knownCategories.add(row.category);
+    const kindColumn = columns.find(column => column.id === 'kind');
+    derivedCategories.push({
+      id: row.category,
+      label: kindColumn ? row.values[kindColumn.id] || row.category.replace(/-/g, ' ') : row.category.replace(/-/g, ' ')
+    });
+  });
+
+  return {
+    id: slugify(table.id || table.title || `tabelle-${fallbackIndex + 1}`, `tabelle-${fallbackIndex + 1}`),
+    title: String(table.title || `Tabelle ${fallbackIndex + 1}`).trim(),
+    tableTitle: String(table.tableTitle || 'Alle Waren').trim(),
+    categories: [...categories, ...derivedCategories].slice(0, 12),
+    columns,
+    rows
+  };
+}
+
+function sanitizeGoodsTables(data = {}) {
+  if (Array.isArray(data.tables) && data.tables.length) {
+    return data.tables
+      .map((table, index) => sanitizeGoodsTableBlock(table, index))
+      .filter(table => table.title || table.rows.length || table.columns.length)
+      .slice(0, 8);
+  }
+
+  const legacyColumns = sanitizeGoodsColumns([
+    { id: 'name', label: data.nameLabel || 'Name' },
+    { id: 'kind', label: data.kindLabel || 'Art' },
+    { id: 'description', label: data.descriptionLabel || 'Beschreibung' },
+    { id: 'price', label: data.priceLabel || 'Preis' },
+    { id: 'availability', label: data.availabilityLabel || 'Verfuegbar' }
+  ]);
+
+  return [sanitizeGoodsTableBlock({
+    id: 'waren',
+    title: data.tableHeading || data.tableName || 'Waren',
+    tableTitle: data.tableTitle || 'Alle Waren',
+    categories: data.categories,
+    columns: legacyColumns,
+    rows: data.goods || data.items || []
+  }, 0)];
+}
+
+function sanitizeGoodsInfoRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      icon: String(item?.icon || item?.image || '').trim(),
+      label: String(item?.label || item?.title || '').trim(),
+      value: String(item?.value || item?.text || '').trim()
+    }))
+    .filter(item => item.icon || item.label || item.value)
+    .slice(0, 12);
+}
+
+function sanitizeGoodsOffers(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      image: String(item?.image || item?.icon || '').trim(),
+      name: String(item?.name || item?.title || '').trim(),
+      price: String(item?.price || '').trim()
+    }))
+    .filter(item => item.image || item.name || item.price)
+    .slice(0, 16);
+}
+
+function sanitizeGoodsTableData(data = {}) {
+  const tables = sanitizeGoodsTables(data);
+
+  return {
+    headerIcon: String(data.headerIcon || '').trim(),
+    title: String(data.title || 'Warenverzeichnis').trim(),
+    subtitle: String(data.subtitle || 'Waren, Dienste & Angebote').trim(),
+    location: String(data.location || '').trim(),
+    tables,
+    coinIcon: String(data.coinIcon || '').trim(),
+    sideTitle: String(data.sideTitle || 'Ueber diesen Ort').trim(),
+    sideImage: String(data.sideImage || '').trim(),
+    sideName: String(data.sideName || '').trim(),
+    sideText: String(data.sideText || '').trim(),
+    infoRows: sanitizeGoodsInfoRows(data.infoRows),
+    offerTitle: String(data.offerTitle || 'Angebote').trim(),
+    offerMeta: String(data.offerMeta || '').trim(),
+    offers: sanitizeGoodsOffers(data.offers),
+    noteTitle: String(data.noteTitle || 'Hinweis').trim(),
+    noteText: String(data.noteText || '').trim(),
+    footer: String(data.footer || 'Almanach-Archiv - Warenregister').trim()
+  };
+}
+
 function clampBestiaryNumber(value, fallback, min, max) {
   const number = Number(value);
   const safe = Number.isFinite(number) ? number : fallback;

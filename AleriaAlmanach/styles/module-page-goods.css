@@ -1,0 +1,542 @@
+/* Aleria Almanach - generic goods table template. */
+
+.goods-page {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  padding: clamp(12px, 1.7vw, 24px);
+  color: #24180e;
+  font-family: "EB Garamond", Georgia, serif;
+  background:
+    radial-gradient(circle at 42% 10%, rgba(255, 255, 255, 0.32), transparent 34%),
+    linear-gradient(135deg, rgba(255, 249, 229, 0.97), rgba(221, 190, 129, 0.88)),
+    var(--parchment-dark, #e9d5a3);
+}
+
+.goods-sheet {
+  min-width: min(100%, 980px);
+  max-width: 1420px;
+  margin: 0 auto;
+  border: 3px double rgba(96, 67, 36, 0.42);
+  background: rgba(255, 247, 222, 0.72);
+  box-shadow: 0 18px 34px rgba(45, 26, 10, 0.16), inset 0 0 28px rgba(121, 82, 34, 0.08);
+}
+
+.goods-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(220px, auto);
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(96, 67, 36, 0.28);
+}
+
+.goods-header-icon,
+.goods-item-image,
+.goods-info-icon,
+.goods-offer-image {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(96, 67, 36, 0.35);
+  background: rgba(255, 249, 229, 0.56);
+  color: #7b572c;
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.goods-header-icon img,
+.goods-item-image img,
+.goods-info-icon img,
+.goods-offer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.goods-header-icon {
+  width: 58px;
+  height: 58px;
+  font-size: 1.1rem;
+}
+
+.goods-header h2 {
+  margin: 0;
+  color: #271a0e;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.3rem, 2.1vw, 2rem);
+  line-height: 1.05;
+}
+
+.goods-header p {
+  margin: 3px 0 0;
+  color: #5c4024;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.goods-location {
+  justify-self: end;
+  color: #6c4d28;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.goods-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 0.34fr);
+  min-height: 0;
+}
+
+.goods-table-panel {
+  min-width: 0;
+  padding: 20px;
+  border-right: 1px solid rgba(96, 67, 36, 0.24);
+}
+
+.goods-table-block {
+  margin-bottom: 22px;
+}
+
+.goods-table-block:last-child {
+  margin-bottom: 0;
+}
+
+.goods-table-title {
+  margin: 0 0 12px;
+  color: #2d1b0b;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goods-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.goods-filter-tab {
+  min-width: 7rem;
+  border: 1px solid rgba(96, 67, 36, 0.28);
+  background: rgba(255, 255, 255, 0.24);
+  color: #5b3f22;
+  cursor: pointer;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.62rem 0.9rem;
+}
+
+.goods-filter-tab.active {
+  border-color: rgba(96, 67, 36, 0.58);
+  background: #2d1b0b;
+  color: #ead39a;
+}
+
+.goods-table-wrap {
+  overflow: auto;
+  border: 1px solid rgba(96, 67, 36, 0.18);
+}
+
+.goods-table-wrap.scrollable {
+  max-height: 540px;
+}
+
+.goods-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  background: rgba(255, 249, 229, 0.32);
+}
+
+.goods-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(244, 226, 185, 0.96);
+  color: #5b3f22;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.goods-table th,
+.goods-table td {
+  padding: 12px 14px;
+  border-right: 1px solid rgba(96, 67, 36, 0.13);
+  border-bottom: 1px solid rgba(96, 67, 36, 0.13);
+  vertical-align: middle;
+}
+
+.goods-table th:last-child,
+.goods-table td:last-child {
+  border-right: 0;
+}
+
+.goods-name-cell {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.goods-name-cell strong {
+  color: #2c1b0d;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.goods-item-image {
+  width: 72px;
+  height: 56px;
+}
+
+.goods-kind {
+  color: #5c4024;
+  font-style: italic;
+}
+
+.goods-description-cell {
+  line-height: 1.35;
+  max-width: 32ch;
+}
+
+.goods-price-cell,
+.goods-stock-cell {
+  color: #2d1b0b;
+  font-size: 1.05rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.goods-price-coin {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  margin-left: 0.35rem;
+  vertical-align: -0.18rem;
+}
+
+.goods-empty-row td {
+  color: #76562f;
+  font-style: italic;
+  text-align: center;
+}
+
+.goods-sidebar {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 20px 16px;
+  background: rgba(223, 201, 160, 0.18);
+}
+
+.goods-side-box {
+  border: 1px solid rgba(96, 67, 36, 0.22);
+  background: rgba(255, 249, 229, 0.34);
+  padding: 14px;
+}
+
+.goods-side-box h3,
+.goods-side-box h4 {
+  margin: 0;
+  color: #2c1b0d;
+  font-family: "Cinzel", Georgia, serif;
+  line-height: 1.18;
+}
+
+.goods-side-box h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.goods-side-box h4 {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.goods-side-box p {
+  margin: 8px 0 0;
+  color: #4d3821;
+  line-height: 1.42;
+}
+
+.goods-side-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.88;
+}
+
+.goods-info-list {
+  display: grid;
+  gap: 11px;
+  margin-top: 16px;
+}
+
+.goods-info-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.goods-info-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.goods-info-row strong {
+  display: block;
+  color: #76562f;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goods-info-row span {
+  display: block;
+  color: #2f2114;
+  line-height: 1.32;
+}
+
+.goods-side-box-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid rgba(96, 67, 36, 0.16);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+}
+
+.goods-side-box-head h3 {
+  margin: 0;
+}
+
+.goods-side-box-head span {
+  color: #76562f;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goods-offer-list {
+  display: grid;
+}
+
+.goods-offer-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(96, 67, 36, 0.12);
+}
+
+.goods-offer-row:last-child {
+  border-bottom: 0;
+}
+
+.goods-offer-image {
+  width: 38px;
+  height: 32px;
+}
+
+.goods-offer-row strong {
+  font-weight: 500;
+}
+
+.goods-offer-row span {
+  white-space: nowrap;
+}
+
+.goods-note-box {
+  background: rgba(255, 247, 222, 0.5);
+}
+
+.goods-footer {
+  padding: 12px 20px;
+  border-top: 1px solid rgba(96, 67, 36, 0.24);
+  color: #76562f;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.goods-edit-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.goods-table-editor-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.goods-table-editor {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(93, 68, 42, 0.22);
+  background: rgba(255, 250, 232, 0.2);
+}
+
+.goods-table-editor-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.goods-table-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.goods-table-editor-grid label,
+.goods-row-cell-grid label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.goods-table-editor-grid span,
+.goods-row-cell-grid span {
+  color: #8b6a33;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goods-nested-editor {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(93, 68, 42, 0.14);
+}
+
+.goods-category-editor {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+  padding: 0.6rem;
+  border: 1px solid rgba(93, 68, 42, 0.16);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.goods-category-editor-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.goods-category-editor-head strong {
+  display: block;
+  color: #3c2713;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goods-category-editor-head span {
+  display: block;
+  color: #8b6a33;
+  font-size: 0.78rem;
+}
+
+.goods-edit-row {
+  display: grid;
+  gap: 0.45rem;
+  align-items: start;
+  padding: 0.5rem;
+  border: 1px solid rgba(93, 68, 42, 0.18);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.goods-edit-row.category {
+  grid-template-columns: minmax(8rem, 0.7fr) minmax(10rem, 1fr) auto;
+}
+
+.goods-edit-row.column {
+  grid-template-columns: minmax(8rem, 0.7fr) minmax(10rem, 1fr) auto;
+}
+
+.goods-edit-row.item.dynamic {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.goods-row-meta {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 0.45fr) auto;
+  gap: 0.45rem;
+}
+
+.goods-row-cell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.45rem;
+}
+
+.goods-edit-row.info,
+.goods-edit-row.offer {
+  grid-template-columns: minmax(8rem, 0.8fr) minmax(8rem, 0.9fr) minmax(0, 1.2fr) auto;
+}
+
+@media (max-width: 1100px) {
+  .goods-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .goods-table-panel {
+    border-right: 0;
+    border-bottom: 1px solid rgba(96, 67, 36, 0.24);
+  }
+}
+
+@media (max-width: 720px) {
+  .goods-header {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .goods-location {
+    grid-column: 1 / -1;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .goods-filter-tab {
+    flex: 1 1 100%;
+  }
+
+  .goods-table-editor-grid,
+  .goods-row-meta {
+    grid-template-columns: 1fr;
+  }
+}

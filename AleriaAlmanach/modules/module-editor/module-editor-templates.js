@@ -745,6 +745,53 @@ function createDefaultHierarchyPage(index = 0) {
   };
 }
 
+function createDefaultGoodsTablePage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} - Warenverzeichnis`,
+    image: '',
+    imageWidth: 38,
+    goodsTablePage: true,
+    goodsTable: sanitizeGoodsTableData({
+      title: 'Warenverzeichnis',
+      subtitle: 'Waren, Dienste & Angebote',
+      location: 'Ort / Viertel / Markt',
+      headerIcon: '',
+      coinIcon: '',
+      tableTitle: 'Alle Waren',
+      categories: [
+        { id: 'speisen', label: 'Speisen' },
+        { id: 'getraenke', label: 'Getraenke' },
+        { id: 'sonstiges', label: 'Sonstiges' }
+      ],
+      goods: [
+        { image: '', name: 'Bauernbrot', kind: 'Speise', category: 'speisen', description: 'Rustikales Brot, saettigend und schlicht.', price: '2', availability: 'unbegrenzt' },
+        { image: '', name: 'Kraeutertee', kind: 'Getraenk', category: 'getraenke', description: 'Warmer Aufguss aus lokalen Kraeutern.', price: '2', availability: '12' },
+        { image: '', name: 'Reiseset', kind: 'Sonstiges', category: 'sonstiges', description: 'Einfaches Set fuer den Alltag unterwegs.', price: '8', availability: '5' }
+      ],
+      sideTitle: 'Ueber diesen Ort',
+      sideImage: '',
+      sideName: 'Name des Ladens oder Ortes',
+      sideText: 'Beschreibe Betreiber, Angebot, Ruf und Atmosphaere dieses Ortes.',
+      infoRows: [
+        { icon: '*', label: 'Betreiber', value: 'Noch festlegen' },
+        { icon: '*', label: 'Standort', value: 'Noch festlegen' },
+        { icon: '*', label: 'Ruf', value: 'Noch festlegen' }
+      ],
+      offerTitle: 'Angebote',
+      offerMeta: 'Aktuell',
+      offers: [
+        { image: '', name: 'Tagesware', price: '3' }
+      ],
+      noteTitle: 'Hinweis',
+      noteText: 'Verfuegbarkeit, Preise und Besonderheiten koennen sich im Spielverlauf aendern.',
+      footer: 'Almanach-Archiv - Warenregister'
+    }),
+    stats: [],
+    commentDivider: false,
+    commentSequence: []
+  };
+}
+
 const MODULE_TEMPLATE_REGISTRY = {
   story: {
     id: 'story',
@@ -806,6 +853,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectBountyFileModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildBountyFilePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'bounty-file')
+  },
+  goods: {
+    id: 'goods',
+    pageType: 'goods',
+    pageFlag: 'goodsTablePage',
+    label: 'Warenverzeichnis - Template',
+    pageLabel: 'Warenverzeichnis - Template',
+    defaultTitle: 'Neues Warenverzeichnis',
+    defaultSubtitle: 'Waren, Dienste und Preise',
+    entryType: 'Warenverzeichnis',
+    typeMatchers: ['waren', 'warenverzeichnis', 'shop', 'laden', 'taverne', 'schmiede', 'markt'],
+    createPages: () => [createDefaultGoodsTablePage(0)],
+    createPage: index => createDefaultGoodsTablePage(index),
+    buildEditorFields: page => buildGoodsModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectGoodsModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildGoodsTablePage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'goods')
   },
   artifact: {
     id: 'artifact',

@@ -40,6 +40,8 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-court-list-row',
   'add-bounty-list-row',
   'remove-bounty-list-row',
+  'add-goods-list-row',
+  'remove-goods-list-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
@@ -254,6 +256,18 @@ function handleInlineEditorActionClick(event) {
     removeInlineBountyListRow(
       trigger.dataset.bountyList || '',
       Number(trigger.dataset.bountyIndex) || 0
+    );
+    return;
+  }
+  if (action === 'add-goods-list-row') {
+    addInlineGoodsListRow(trigger.dataset.goodsList || '', trigger);
+    return;
+  }
+  if (action === 'remove-goods-list-row') {
+    removeInlineGoodsListRow(
+      trigger.dataset.goodsList || '',
+      Number(trigger.dataset.goodsIndex) || 0,
+      trigger
     );
     return;
   }
@@ -483,6 +497,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-bounty-list-field') {
     updateInlineBountyListField(field);
+    return;
+  }
+  if (action === 'update-goods-field') {
+    updateInlineGoodsField(field);
+    return;
+  }
+  if (action === 'update-goods-list-field') {
+    updateInlineGoodsListField(field);
     return;
   }
   if (action === 'update-hierarchy-field') {

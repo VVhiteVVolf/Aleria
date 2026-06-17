@@ -42,6 +42,7 @@ function isCommentlessModulePage(page) {
     page?.castePage ||
     page?.courtPage ||
     page?.bountyFilePage ||
+    page?.goodsTablePage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||
