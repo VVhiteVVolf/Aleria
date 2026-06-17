@@ -2,6 +2,7 @@
 
   /* ── BIOGRAPHY DOSSIER ── */
   .biography-page {
+    --biography-side-width: 100%;
     flex: 1;
     min-height: 0;
     display: grid;
@@ -21,6 +22,9 @@
   .biography-left {
     border-right: 1px solid rgba(139,105,20,0.24);
     background: rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .biography-main {
     padding: 1.25rem 1.45rem;
@@ -30,7 +34,8 @@
     background: rgba(223,201,160,0.22);
   }
   .biography-portrait {
-    width: 100%;
+    width: var(--biography-side-width);
+    max-width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: top center;
@@ -48,6 +53,8 @@
   }
   .biography-info-table,
   .biography-quote-card {
+    width: var(--biography-side-width);
+    max-width: 100%;
     margin-top: 0.8rem;
     border: 1px solid rgba(139,105,20,0.24);
     background: rgba(255,255,255,0.18);
@@ -183,6 +190,9 @@
     color: var(--gold);
     border-bottom-style: solid;
   }
+  .biography-extra-section {
+    margin-bottom: 0.25rem;
+  }
   .biography-connections {
     display: grid;
     gap: 0.55rem;
@@ -227,8 +237,17 @@
   }
   .biography-edit-row {
     display: grid;
-    grid-template-columns: 4rem minmax(7rem, 0.8fr) minmax(0, 1.6fr);
+    grid-template-columns: 4rem minmax(7rem, 0.8fr) minmax(0, 1.6fr) auto;
     gap: 0.4rem;
+  }
+  .biography-edit-section-row {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.75fr) minmax(7rem, 0.55fr) minmax(10rem, 1fr) minmax(0, 1.35fr) auto;
+    gap: 0.4rem;
+    align-items: stretch;
+  }
+  .biography-edit-section-row textarea {
+    min-height: 4.2rem;
   }
   .biography-edit-row.connection {
     grid-template-columns: minmax(8rem, 1fr) minmax(7rem, 0.8fr) minmax(0, 1.2fr) auto;

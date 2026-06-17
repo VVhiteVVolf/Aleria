@@ -22,6 +22,10 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-biography-connection',
   'add-biography-document',
   'remove-biography-document',
+  'add-biography-ability',
+  'remove-biography-ability',
+  'add-biography-section',
+  'remove-biography-section',
   'add-biography-line-row',
   'remove-biography-line-row',
   'add-bestiary-list-row',
@@ -34,6 +38,8 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-caste-list-row',
   'add-court-list-row',
   'remove-court-list-row',
+  'add-bounty-list-row',
+  'remove-bounty-list-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
@@ -158,6 +164,22 @@ function handleInlineEditorActionClick(event) {
     removeInlineBiographyDocumentRow(Number(trigger.dataset.biographyDocumentIndex) || 0);
     return;
   }
+  if (action === 'add-biography-ability') {
+    addInlineBiographyAbilityRow();
+    return;
+  }
+  if (action === 'remove-biography-ability') {
+    removeInlineBiographyAbilityRow(Number(trigger.dataset.biographyAbilityIndex) || 0);
+    return;
+  }
+  if (action === 'add-biography-section') {
+    addInlineBiographySectionRow(trigger.dataset.biographySectionPosition || 'afterIntro');
+    return;
+  }
+  if (action === 'remove-biography-section') {
+    removeInlineBiographySectionRow(Number(trigger.dataset.biographySectionIndex) || 0);
+    return;
+  }
   if (action === 'add-biography-line-row') {
     addInlineBiographyLineRow(trigger.dataset.biographyLineList || '');
     return;
@@ -221,6 +243,17 @@ function handleInlineEditorActionClick(event) {
     removeInlineCourtListRow(
       trigger.dataset.courtList || '',
       Number(trigger.dataset.courtIndex) || 0
+    );
+    return;
+  }
+  if (action === 'add-bounty-list-row') {
+    addInlineBountyListRow(trigger.dataset.bountyList || '');
+    return;
+  }
+  if (action === 'remove-bounty-list-row') {
+    removeInlineBountyListRow(
+      trigger.dataset.bountyList || '',
+      Number(trigger.dataset.bountyIndex) || 0
     );
     return;
   }
@@ -392,6 +425,10 @@ function handleInlineEditorFieldChange(event) {
     updateInlineBiographyAbilityField(field);
     return;
   }
+  if (action === 'update-biography-section-field') {
+    updateInlineBiographySectionField(field);
+    return;
+  }
   if (action === 'update-biography-connection-field') {
     updateInlineBiographyConnectionField(field);
     return;
@@ -438,6 +475,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-court-list-field') {
     updateInlineCourtListField(field);
+    return;
+  }
+  if (action === 'update-bounty-field') {
+    updateInlineBountyField(field);
+    return;
+  }
+  if (action === 'update-bounty-list-field') {
+    updateInlineBountyListField(field);
     return;
   }
   if (action === 'update-hierarchy-field') {

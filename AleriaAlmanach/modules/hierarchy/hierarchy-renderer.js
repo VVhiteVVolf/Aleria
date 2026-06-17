@@ -71,8 +71,8 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             <div class="hierarchy-side-copy">
               <h3>${escapeHtml(data.organizationTitle)}</h3>
               ${data.motto ? `<p class="hierarchy-motto">${escapeHtml(data.motto)}</p>` : ''}
-              ${data.description ? `<div class="hierarchy-description">${sanitizeContentHtml(data.description)}</div>` : ''}
             </div>
+            ${data.description ? `<div class="hierarchy-description">${sanitizeContentHtml(data.description)}</div>` : ''}
           </div>
 
           <div class="hierarchy-sidebar-divider"></div>

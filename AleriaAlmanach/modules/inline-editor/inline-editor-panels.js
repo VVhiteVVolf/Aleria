@@ -10,7 +10,7 @@ function getInlinePageImageWidthMax(page) {
 }
 
 function getInlinePageDefaultImagePosition(page) {
-  return (page?.artifactPage || page?.recipePage || !page?.questFilePage && !page?.castePage && !page?.courtPage && !page?.biographyPage)
+  return (page?.artifactPage || page?.recipePage || !page?.questFilePage && !page?.castePage && !page?.courtPage && !page?.bountyFilePage && !page?.biographyPage)
     ? 'center'
     : 'top';
 }

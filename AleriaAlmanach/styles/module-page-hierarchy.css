@@ -182,7 +182,8 @@
 }
 
 .hierarchy-description {
-  margin-top: 1rem;
+  grid-column: 1 / -1;
+  margin-top: 0.15rem;
   line-height: 1.55;
 }
 

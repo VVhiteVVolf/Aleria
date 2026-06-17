@@ -136,6 +136,62 @@ function updateInlineBiographyAbilityField(input) {
   scheduleInlineModuleLivePreviewRefresh();
 }
 
+function addInlineBiographyAbilityRow() {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineBiographyDataForEdit(page);
+  current.abilities.push({ icon: '*', title: 'Neuer Punkt', detail: '' });
+  page.biography = sanitizeBiographyData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineBiographyAbilityRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineBiographyDataForEdit(page);
+  current.abilities.splice(index, 1);
+  page.biography = sanitizeBiographyData(current);
+  renderPage(currentPage, 0);
+}
+
+function addInlineBiographySectionRow(position = 'afterIntro') {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineBiographyDataForEdit(page);
+  current.extraSections.push({
+    position: position === 'afterWorks' ? 'afterWorks' : 'afterIntro',
+    mode: 'text',
+    title: 'Neue Ueberschrift',
+    text: ''
+  });
+  page.biography = sanitizeBiographyData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineBiographySectionRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineBiographyDataForEdit(page);
+  current.extraSections.splice(index, 1);
+  page.biography = sanitizeBiographyData(current);
+  renderPage(currentPage, 0);
+}
+
+function updateInlineBiographySectionField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.biographySectionIndex || -1);
+  const field = input.dataset.biographySectionField;
+  if (index < 0 || !field) return;
+  const current = getInlineBiographyDataForEdit(page);
+  current.extraSections = current.extraSections.length ? current.extraSections : [];
+  const item = current.extraSections[index] || { position: 'afterIntro', mode: 'text', title: '', text: '' };
+  item[field] = String(input.value || '').trim();
+  current.extraSections[index] = item;
+  page.biography = sanitizeBiographyData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
 function updateInlineBiographyConnectionField(input) {
   const page = getInlineDraftPage();
   if (!page) return;
@@ -183,6 +239,10 @@ function buildInlineBiographyEditor(page) {
           <span class="inline-edit-label">Fähigkeiten-Überschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="abilitiesTitle" value="${escapeHtml(biography.abilitiesTitle)}">
         </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Linke Inhaltsbreite (%)</span>
+          <input class="inline-edit-input" type="number" min="35" max="100" step="1" data-inline-action="update-biography-field" data-biography-field="sideWidth" value="${escapeHtml(biography.sideWidth)}">
+        </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Biografie</span>
           ${buildTextFormatToolbar()}
@@ -190,7 +250,10 @@ function buildInlineBiographyEditor(page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Fähigkeiten & Spezialgebiete</span>
-          <div class="biography-edit-list">${buildBiographyAbilityRows(biography.abilities, 'inline')}</div>
+          <div class="inline-edit-head">
+            <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-ability">+ Punkt</button>
+          </div>
+          <div class="biography-edit-list">${biography.abilities.length ? buildBiographyAbilityRows(biography.abilities, 'inline') : '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>'}</div>
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Geschichte-Überschrift</span>
@@ -214,6 +277,17 @@ function buildInlineBiographyEditor(page) {
         </div>
         <div class="inline-edit-field wide">
           <div class="inline-edit-head">
+            <span class="inline-edit-label">Zusatzabschnitte im Hauptbereich</span>
+            <span>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-section" data-biography-section-position="afterIntro">+ Nach Haupttext</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-section" data-biography-section-position="afterWorks">+ Nach Abschnitt 3</button>
+            </span>
+          </div>
+          <div class="inline-placeholder-note">Textbloecke oder Bulletlisten im mittleren Biographie-Bereich.</div>
+          <div class="biography-edit-list">${biography.extraSections.length ? buildBiographySectionRows(biography.extraSections, 'inline') : '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>'}</div>
+        </div>
+        <div class="inline-edit-field wide">
+          <div class="inline-edit-head">
             <span class="inline-edit-label">Trivia</span>
             <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-line-row" data-biography-line-list="trivia">+ Trivia</button>
           </div>
@@ -234,8 +308,16 @@ function buildInlineBiographyEditor(page) {
           </div>
           <div class="biography-edit-list">${buildBiographyConnectionRows(biography.connections, 'inline')}</div>
         </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Verbindungen-Ueberschrift</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="connectionsTitle" value="${escapeHtml(biography.connectionsTitle)}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Dokumente-Ueberschrift</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="documentsTitle" value="${escapeHtml(biography.documentsTitle)}">
+        </div>
         <div class="inline-edit-field wide">
-          <span class="inline-edit-label">Dokumente & Aufzeichnungen</span>
+          <span class="inline-edit-label">${escapeHtml(biography.documentsTitle || 'Dokumente & Aufzeichnungen')}</span>
           <div class="inline-edit-head">
             <div class="inline-placeholder-note">Dokumenttitel werden anklickbar, sobald ein Link gesetzt ist.</div>
             <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-document">+ Dokument</button>

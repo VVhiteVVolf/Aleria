@@ -85,6 +85,7 @@ function getAleriaGptPageType(page) {
   if (page?.tournamentLeaguePage) return 'tournament-league';
   if (page?.castePage) return 'caste';
   if (page?.courtPage) return 'court';
+  if (page?.bountyFilePage) return 'bounty-file';
   return 'standard';
 }
 

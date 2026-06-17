@@ -41,6 +41,7 @@ function isCommentlessModulePage(page) {
   return !!(
     page?.castePage ||
     page?.courtPage ||
+    page?.bountyFilePage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||

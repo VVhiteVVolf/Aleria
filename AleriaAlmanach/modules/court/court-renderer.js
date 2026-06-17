@@ -205,47 +205,45 @@ function buildCourtPage(page, entry, pageIndex, total) {
   return `
     ${nav}
     <div class="court-page"${styleAttr}>
-      <header class="court-header">
-        <div class="court-header-title">
-          ${buildCourtImageOrMark(headerIcon, data.archiveLabel || entry.title, 'court-header-icon', 'S')}
-          <div>
-            <span>${escapeHtml(data.archiveLabel || 'Gerichtsakte')}</span>
-            <h2>${escapeHtml(entry.title || 'Gerichtsakte')}</h2>
-            ${entry.subtitle ? `<p>${escapeHtml(entry.subtitle)}</p>` : ''}
+      <div class="court-dossier">
+        <header class="court-header">
+          <div class="court-header-title">
+            ${buildCourtImageOrMark(headerIcon, data.archiveLabel || entry.title, 'court-header-icon', 'S')}
+            <div>
+              <span>${escapeHtml(data.archiveLabel || 'Gerichtsakte')}</span>
+              <h2>${escapeHtml(entry.title || 'Gerichtsakte')}</h2>
+              ${entry.subtitle ? `<p>${escapeHtml(entry.subtitle)}</p>` : ''}
+            </div>
           </div>
-        </div>
-        <div class="court-header-meta">
-          ${data.caseNumber ? `<strong>${escapeHtml(data.caseNumber)}</strong>` : ''}
-          ${data.courtName ? `<span>${escapeHtml(data.courtName)}</span>` : ''}
-          ${data.status ? `<em>${escapeHtml(data.status)}</em>` : ''}
-          ${sealImage ? `<img src="${sealImage}" alt="" loading="lazy" decoding="async">` : ''}
-        </div>
-      </header>
+          <div class="court-header-meta">
+            ${data.caseNumber ? `<strong>${escapeHtml(data.caseNumber)}</strong>` : ''}
+            ${data.courtName ? `<span>${escapeHtml(data.courtName)}</span>` : ''}
+            ${data.status ? `<em>${escapeHtml(data.status)}</em>` : ''}
+            ${sealImage ? `<img src="${sealImage}" alt="" loading="lazy" decoding="async">` : ''}
+          </div>
+        </header>
 
-      ${bannerImage ? `<img class="court-banner" src="${bannerImage}" alt="" loading="lazy" decoding="async">` : ''}
+        ${bannerImage ? `<img class="court-banner" src="${bannerImage}" alt="" loading="lazy" decoding="async">` : ''}
 
-      <div class="court-layout">
-        <main class="court-main">
+        <div class="court-record-grid">
+          ${heroImage ? `<figure class="court-hero-image court-grid-visual"${buildCourtImageFrameAttrs(page)}><img src="${heroImage}" alt="${escapeHtml(entry.title || 'Gerichtsakte')}" loading="eager" decoding="async" fetchpriority="high"${buildCourtImageElementAttrs(page, 'cover', 'center top')}></figure>` : ''}
           ${buildCourtPanel(data.overviewTitle, buildCourtOverviewRows(data.overviewRows), 'court-overview-panel')}
+          ${buildCourtPanel(data.evidenceTitle, buildCourtEvidence(data.evidence), 'court-evidence-panel')}
           ${summaryText ? `<section class="court-summary"><h3>${escapeHtml(data.summaryTitle)}</h3>${sanitizeContentHtml(summaryText)}</section>` : ''}
+          ${buildCourtPanel(data.witnessesTitle, buildCourtWitnesses(data.witnesses), 'court-witness-panel')}
           ${buildCourtPanel(data.chargesTitle, buildCourtCharges(data.charges), 'court-charges-panel')}
           ${buildCourtPanel(data.datesTitle, buildCourtDates(data.dates), 'court-dates-panel')}
-        </main>
-        <aside class="court-side">
-          ${heroImage ? `<figure class="court-hero-image"${buildCourtImageFrameAttrs(page)}><img src="${heroImage}" alt="${escapeHtml(entry.title || 'Gerichtsakte')}" loading="eager" decoding="async" fetchpriority="high"${buildCourtImageElementAttrs(page, 'cover', 'center top')}></figure>` : ''}
-          ${buildCourtPanel(data.evidenceTitle, buildCourtEvidence(data.evidence), 'court-evidence-panel')}
-          ${buildCourtPanel(data.witnessesTitle, buildCourtWitnesses(data.witnesses), 'court-witness-panel')}
-        </aside>
-      </div>
+        </div>
 
-      ${buildCourtPanel(data.partiesTitle, buildCourtParties(data.parties), 'court-parties-panel')}
-      <div class="court-bottom-grid">
-        ${buildCourtPanel(data.chronologyTitle, buildCourtChronology(data.chronology), 'court-chronology-panel')}
-        ${buildCourtPanel(data.openQuestionsTitle, buildCourtOpenQuestions(data.openQuestions), 'court-questions-panel')}
-        ${buildCourtPanel(data.relatedTitle, buildCourtRelatedEntries(data.relatedEntries), 'court-related-panel')}
+        ${buildCourtPanel(data.partiesTitle, buildCourtParties(data.parties), 'court-parties-panel')}
+        <div class="court-bottom-grid">
+          ${buildCourtPanel(data.chronologyTitle, buildCourtChronology(data.chronology), 'court-chronology-panel')}
+          ${buildCourtPanel(data.openQuestionsTitle, buildCourtOpenQuestions(data.openQuestions), 'court-questions-panel')}
+          ${buildCourtPanel(data.relatedTitle, buildCourtRelatedEntries(data.relatedEntries), 'court-related-panel')}
+        </div>
+        ${data.noteText ? `<section class="court-note"><h3>${escapeHtml(data.noteTitle)}</h3>${sanitizeContentHtml(data.noteText)}</section>` : ''}
+        ${data.footer ? `<footer class="court-footer">${escapeHtml(data.footer)}</footer>` : ''}
       </div>
-      ${data.noteText ? `<section class="court-note"><h3>${escapeHtml(data.noteTitle)}</h3>${sanitizeContentHtml(data.noteText)}</section>` : ''}
-      ${data.footer ? `<footer class="court-footer">${escapeHtml(data.footer)}</footer>` : ''}
     </div>
     ${embeddedComments}
     ${sym}`;

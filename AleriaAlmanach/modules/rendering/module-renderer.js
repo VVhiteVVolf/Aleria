@@ -405,11 +405,35 @@ function buildBiographyDocuments(items = []) {
   }).join('')}</ul>`;
 }
 
+function buildBiographyExtraSection(section) {
+  if (!section?.title && !section?.text) return '';
+  const lines = String(section.text || '')
+    .split(/\r?\n/)
+    .map(item => item.trim())
+    .filter(Boolean);
+  const body = section.mode === 'list'
+    ? buildBiographyLines(lines, 'compact')
+    : `<div class="biography-copy">${sanitizeContentHtml(section.text || '')}</div>`;
+  return `
+    <section class="biography-extra-section">
+      ${section.title ? buildBiographyHeading(section.title) : ''}
+      ${body}
+    </section>`;
+}
+
+function buildBiographyExtraSections(items = [], position = 'afterIntro') {
+  const list = Array.isArray(items)
+    ? items.filter(item => (item?.position || 'afterIntro') === position)
+    : [];
+  return list.map(buildBiographyExtraSection).join('');
+}
+
 function buildBiographyPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeBiographyData(page.biography || {});
   const image = sanitizeImageSrc(page.image || '');
   const stats = Array.isArray(page.stats) ? page.stats : [];
+  const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
   const quote = page.quote ? `
     <div class="biography-quote-card">
       <div class="biography-quote-mark">“</div>
@@ -434,9 +458,9 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>` : '';
   return `
     ${nav}
-    <div class="biography-page">
+    <div class="biography-page" style="--biography-side-width:${sideWidth}%;">
       <aside class="biography-left">
-        ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top', true)}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
+        ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
         ${stats.length ? `
           <div class="biography-info-table">
             <div class="biography-side-label">Infotabelle</div>
@@ -448,12 +472,14 @@ function buildBiographyPage(page, entry, pageIndex, total) {
       <main class="biography-main">
         ${buildBiographyHeading(data.biographyTitle)}
         <div class="biography-copy">${sanitizeContentHtml(data.biographyText || page.description || '')}</div>
+        ${buildBiographyExtraSections(data.extraSections, 'afterIntro')}
         ${buildBiographyHeading(data.abilitiesTitle)}
         ${abilities}
         ${buildBiographyHeading(data.historyTitle)}
         <div class="biography-copy">${sanitizeContentHtml(data.historyText || '')}</div>
         ${buildBiographyHeading(data.worksTitle)}
         ${buildBiographyLines(data.works, 'compact')}
+        ${buildBiographyExtraSections(data.extraSections, 'afterWorks')}
       </main>
       <aside class="biography-right">
         ${buildBiographyHeading(data.triviaTitle)}

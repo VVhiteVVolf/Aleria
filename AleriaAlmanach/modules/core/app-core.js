@@ -120,6 +120,7 @@ function shouldUsePageImageAsEntryImage(pages = []) {
   return !(Array.isArray(pages) && pages.some(page => (
     page?.castePage ||
     page?.courtPage ||
+    page?.bountyFilePage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||
@@ -257,7 +258,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -358,6 +359,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.courtPage) {
     next.court = sanitizeCourtData(page.court);
+  }
+
+  if (page.bountyFilePage) {
+    next.bountyFile = sanitizeBountyFileData(page.bountyFile);
   }
 
   if (page.hierarchyPage) {

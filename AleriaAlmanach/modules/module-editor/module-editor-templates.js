@@ -486,6 +486,73 @@ function createDefaultCourtPage(index = 0) {
   };
 }
 
+function createDefaultBountyFilePage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} - Kopfgeldakte`,
+    image: '',
+    bountyFilePage: true,
+    description: 'Offizielle Fahndungsakte mit Tatvorwuerfen, Sichtungen, Verbindungen und Gefaehrlichkeitsprofil.',
+    bountyFile: sanitizeBountyFileData({
+      archiveTitle: 'Kopfgeld / Fahndungsakte',
+      archiveSubtitle: 'Herausgegeben im Namen des Koenigreichs Cenyr',
+      targetName: 'Darian Voss',
+      aliases: 'Der Schattenfuchs - Voss der Graue - Nordwind',
+      status: 'Gesucht',
+      statusNote: 'Tot oder lebendig',
+      threatLevel: 4,
+      threatText: 'Aeusserst gefaehrlich',
+      bountyAmount: '5.000',
+      bountyCurrency: 'Goldtaler',
+      handoverNote: 'Bei Festnahme dem naechstgelegenen Richter oder einem Vertreter der Krone uebergeben. Eigenmaechtiges Handeln auf eigene Gefahr.',
+      charges: [
+        { icon: '', title: 'Hochverrat gegen die Krone', text: '' },
+        { icon: '', title: 'Raub & Ueberfall', text: '' },
+        { icon: '', title: 'Mord & Totschlag', text: '' },
+        { icon: '', title: 'Anstiftung zum Aufruhr', text: '' },
+        { icon: '', title: 'Schmuggel von Schwarzmagie', text: '' }
+      ],
+      descriptionRows: [
+        { label: 'Alter', value: '38-42 Jahre' },
+        { label: 'Groesse', value: 'ca. 1,86 Schritt' },
+        { label: 'Statur', value: 'Schlank, muskuloes' },
+        { label: 'Haarfarbe', value: 'Dunkelbraun' },
+        { label: 'Augenfarbe', value: 'Graugruen' }
+      ],
+      descriptionNote: 'Narbe ueber linker Augenbraue, Brandzeichen in Form eines Fuchses am rechten Schulterblatt.',
+      companions: [
+        { title: 'Marevan', subtitle: 'Ehem. Soeldner', text: 'Schwertkaempfer' },
+        { title: 'Lissa Maev', subtitle: 'Kundschafterin', text: 'Bogenschuetzin' },
+        { title: 'Torval', subtitle: 'Krieger', text: 'Helle Narbe am Kinn' }
+      ],
+      sightings: [
+        { place: 'Nordwacht-Festung', date: '3. Rondra 1247', observer: 'Wache H. Perdan' },
+        { place: 'Waldpass von Grelthor', date: '22. Praios 1247', observer: 'Haendler Jorim' },
+        { place: 'Hafenstadt Valmora', date: '18. Praios 1247', observer: 'Matrose R. Felan' },
+        { place: 'Ruinen von Drakemoor', date: '2. Ingerimm 1247', observer: 'Magerin E. Valmor' }
+      ],
+      factionName: 'Schattenbund',
+      factionText: 'Anfuehrer der Schattenfuechse.',
+      allies: [
+        { title: 'Verbindungen zu Schmugglern', text: 'Valmora und Nordwacht.' }
+      ],
+      enemies: [
+        { title: 'Ritterorden der Krone', text: 'Haendlergilde Valdorias, Magierzirkel von Cenyr.' }
+      ],
+      supporters: [
+        { title: 'Sympathisanten', text: 'Nutzen Korruption und Bestechung in den Grenzprovinzen.' }
+      ],
+      dangerProfiles: [
+        { icon: '', label: 'Kampfkraft', value: 5 },
+        { icon: '', label: 'Einfluss', value: 4 },
+        { icon: '', label: 'Magie', value: 2 },
+        { icon: '', label: 'Fluchtgefahr', value: 5 },
+        { icon: '', label: 'Brutalitaet', value: 5 }
+      ],
+      footer: 'Almanach-Archiv - Fahndungsakten'
+    })
+  };
+}
+
 function createDefaultBestiaryPage(index = 0) {
   return {
     pageTitle: `${getRomanPageLabel(index)} — Bestiarium`,
@@ -722,6 +789,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectWantedModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildWantedPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'wanted')
+  },
+  'bounty-file': {
+    id: 'bounty-file',
+    pageType: 'bounty-file',
+    pageFlag: 'bountyFilePage',
+    label: 'Kopfgeldakte - Template',
+    pageLabel: 'Kopfgeldakte - Template',
+    defaultTitle: 'Neue Kopfgeldakte',
+    defaultSubtitle: 'Fahndungsakte, Tatvorwuerfe und Verbindungen',
+    entryType: 'Kopfgeldakte',
+    typeMatchers: ['kopfgeldakte', 'fahndungsakte', 'fahndung'],
+    createPages: () => [createDefaultBountyFilePage(0)],
+    createPage: index => createDefaultBountyFilePage(index),
+    buildEditorFields: page => buildBountyFileModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectBountyFileModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildBountyFilePage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'bounty-file')
   },
   artifact: {
     id: 'artifact',
@@ -1072,6 +1156,7 @@ function createObjectProfileTemplatePages() {
         ['Status', 'Aktiv']
       ],
       biography: {
+        sideWidth: 100,
         biographyTitle: 'Biografie',
         biographyText: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
         abilitiesTitle: 'Fähigkeiten & Spezialgebiete',
@@ -1079,6 +1164,7 @@ function createObjectProfileTemplatePages() {
           { icon: '✦', title: 'Spezialgebiet', detail: 'Kurze Beschreibung der besonderen Fähigkeit.' },
           { icon: '✦', title: 'Einfluss', detail: 'Wo die Person sichtbar wirkt oder gefürchtet ist.' }
         ],
+        extraSections: [],
         historyTitle: 'Geschichte & Wirkung',
         historyText: 'Was hat diese Person geprägt, verändert oder ausgelöst? Welche Spuren bleiben?',
         worksTitle: 'Bekannte Werke',
@@ -1124,6 +1210,7 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     'Neues Profilmodul',
     'Neue Steckbrieftafel',
     'Neue Kopfgeldtafel',
+    'Neue Kopfgeldakte',
     'Neues Objektprofil',
     'Neue Biographie',
     'Neues Bestiarium',

@@ -67,6 +67,7 @@ let _archiveSectionMatchCount = 0;
 let _archiveEntrySectionMatchCount = 0;
 const _archiveEntrySearchCache = new Map();
 let _archiveManageMode = false;
+let _archiveToolsExpanded = false;
 const _archivePathByTab = new Map();
 
 function invalidateArchiveSearchCache() {
@@ -212,9 +213,21 @@ function handleArchiveActionClick(event) {
     openModuleStampDialog(trigger.dataset.sourceEntryId || '');
     return;
   }
+  if (action === 'toggle-archive-tools') {
+    event.preventDefault();
+    _archiveToolsExpanded = !_archiveToolsExpanded;
+    document.querySelectorAll('.gallery-tab-group-tools').forEach(group => {
+      group.classList.toggle('is-expanded', _archiveToolsExpanded);
+    });
+    document.querySelectorAll('[data-archive-action="toggle-archive-tools"]').forEach(button => {
+      button.classList.toggle('active', _archiveToolsExpanded);
+      button.setAttribute('aria-expanded', _archiveToolsExpanded ? 'true' : 'false');
+    });
+    return;
+  }
   if (action === 'create-module-section') {
     event.preventDefault();
-    openModuleSectionManager();
+    openModuleSectionManager({ createMode: 'root' });
     return;
   }
   if (action === 'toggle-archive-manage') {
@@ -526,7 +539,7 @@ function switchTab(tab, options = {}) {
     renderAll();
     return;
   }
-  document.querySelectorAll('.gallery-tab-btn').forEach(btn => {
+  document.querySelectorAll('.gallery-tab-group-main .gallery-tab-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tab);
   });
   document.querySelectorAll('[data-archive-dashboard]').forEach(dashboard => {
@@ -570,7 +583,7 @@ function renderAll() {
   tabGroup.className = 'gallery-tab-group gallery-tab-group-main';
   tabsNav.appendChild(tabGroup);
   const toolGroup = document.createElement('div');
-  toolGroup.className = 'gallery-tab-group gallery-tab-group-tools';
+  toolGroup.className = `gallery-tab-group gallery-tab-group-tools${_archiveToolsExpanded ? ' is-expanded' : ''}`;
   toolGroup.setAttribute('aria-label', 'Archivwerkzeuge');
   tabsNav.appendChild(toolGroup);
 
@@ -579,55 +592,71 @@ function renderAll() {
     const btn = document.createElement('button');
     btn.className = 'gallery-tab-btn' + (tab === 'Alle' ? ' active' : '');
     btn.dataset.tab = tab;
+    btn.dataset.tabTheme = getThemeMetaForTab(tab).slug;
     btn.dataset.archiveAction = 'switch-tab';
     btn.textContent = tab === 'Alle' ? 'Dashboard' : tab;
     tabGroup.appendChild(btn);
   });
 
+  const editToolsBtn = document.createElement('button');
+  editToolsBtn.className = `gallery-tab-btn gallery-tab-edit-toggle${_archiveToolsExpanded ? ' active' : ''}`;
+  editToolsBtn.type = 'button';
+  editToolsBtn.textContent = 'Bearbeiten';
+  editToolsBtn.title = 'Werkzeuge fuer Module, Import, Stempel und Reiter anzeigen';
+  editToolsBtn.dataset.archiveAction = 'toggle-archive-tools';
+  editToolsBtn.setAttribute('aria-label', editToolsBtn.title);
+  editToolsBtn.setAttribute('aria-expanded', _archiveToolsExpanded ? 'true' : 'false');
+  toolGroup.appendChild(editToolsBtn);
+
+  const toolActions = document.createElement('div');
+  toolActions.className = 'gallery-tab-tool-actions';
+  toolActions.setAttribute('aria-label', 'Bearbeitungswerkzeuge');
+  toolGroup.appendChild(toolActions);
+
   const addBtn = document.createElement('button');
-  addBtn.className = 'gallery-tab-btn gallery-tab-add';
+  addBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
   addBtn.type = 'button';
   addBtn.textContent = '+ Modul';
   addBtn.title = 'Neues Modul anlegen';
   addBtn.dataset.archiveAction = 'new-module';
   addBtn.setAttribute('aria-label', 'Neues Modul anlegen');
-  toolGroup.appendChild(addBtn);
+  toolActions.appendChild(addBtn);
 
   const importBtn = document.createElement('button');
-  importBtn.className = 'gallery-tab-btn gallery-tab-add';
+  importBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
   importBtn.type = 'button';
   importBtn.textContent = 'Import';
   importBtn.title = 'Modul importieren, exportieren oder Backup verwalten';
   importBtn.dataset.archiveAction = 'import-module';
   importBtn.setAttribute('aria-label', 'Modul importieren, exportieren oder Backup verwalten');
-  toolGroup.appendChild(importBtn);
+  toolActions.appendChild(importBtn);
 
   const stampBtn = document.createElement('button');
-  stampBtn.className = 'gallery-tab-btn gallery-tab-add';
+  stampBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
   stampBtn.type = 'button';
   stampBtn.textContent = 'Stempel';
   stampBtn.title = 'Bestehendes Modul kopieren und als eigenstaendige Kopie einsetzen';
   stampBtn.dataset.archiveAction = 'open-module-stamp';
   stampBtn.setAttribute('aria-label', stampBtn.title);
-  toolGroup.appendChild(stampBtn);
+  toolActions.appendChild(stampBtn);
 
   const sectionBtn = document.createElement('button');
-  sectionBtn.className = 'gallery-tab-btn gallery-tab-add';
+  sectionBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
   sectionBtn.type = 'button';
   sectionBtn.textContent = '+ Reiter';
   sectionBtn.title = 'Neuen großen Modul-Reiter erstellen';
   sectionBtn.dataset.archiveAction = 'create-module-section';
   sectionBtn.setAttribute('aria-label', 'Neuen großen Modul-Reiter erstellen');
-  toolGroup.appendChild(sectionBtn);
+  toolActions.appendChild(sectionBtn);
 
   const manageBtn = document.createElement('button');
-  manageBtn.className = 'gallery-tab-btn gallery-tab-add';
+  manageBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
   manageBtn.type = 'button';
   manageBtn.textContent = 'Verwalten';
   manageBtn.title = 'Reiter, Pfade und Modulpositionen verwalten';
   manageBtn.dataset.archiveAction = 'toggle-archive-manage';
   manageBtn.setAttribute('aria-label', manageBtn.title);
-  toolGroup.appendChild(manageBtn);
+  toolActions.appendChild(manageBtn);
 
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';

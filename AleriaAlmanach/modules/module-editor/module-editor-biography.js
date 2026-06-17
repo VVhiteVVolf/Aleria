@@ -5,6 +5,25 @@ function buildBiographyAbilityRows(abilities = [], mode = 'module') {
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-icon' : ''}" type="text" value="${escapeHtml(item.icon || '')}" placeholder="Icon" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="icon"` : ''}>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="title"` : ''}>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="detail"` : ''}>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-ability" data-biography-ability-index="${index}"` : 'data-module-editor-action="remove-biography-ability-row"'}>Loeschen</button>
+    </div>`).join('');
+}
+
+function buildBiographySectionRows(sections = [], mode = 'module') {
+  const rows = Array.isArray(sections) ? sections : [];
+  return rows.map((item, index) => `
+    <div class="biography-edit-section-row ${mode === 'inline' ? '' : 'module-biography-section-row'}" ${mode === 'inline' ? `data-biography-section-index="${index}"` : ''}>
+      <select class="inline-edit-input ${mode === 'module' ? 'me-biography-section-position' : ''}" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="position"` : ''}>
+        <option value="afterIntro"${item.position !== 'afterWorks' ? ' selected' : ''}>Nach Haupttext</option>
+        <option value="afterWorks"${item.position === 'afterWorks' ? ' selected' : ''}>Nach Abschnitt 3</option>
+      </select>
+      <select class="inline-edit-input ${mode === 'module' ? 'me-biography-section-mode' : ''}" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="mode"` : ''}>
+        <option value="text"${item.mode !== 'list' ? ' selected' : ''}>Text</option>
+        <option value="list"${item.mode === 'list' ? ' selected' : ''}>Bulletliste</option>
+      </select>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-section-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="title"` : ''}>
+      <textarea class="inline-edit-textarea ${mode === 'module' ? 'me-biography-section-text' : ''}" placeholder="Text oder je Zeile ein Listenpunkt" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="text"` : ''}>${escapeHtml(item.text || '')}</textarea>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-section" data-biography-section-index="${index}"` : 'data-module-editor-action="remove-biography-section-row"'}>Loeschen</button>
     </div>`).join('');
 }
 
@@ -56,6 +75,15 @@ function collectModuleBiographyAbilities(card) {
   })).filter(item => item.icon || item.title || item.detail);
 }
 
+function collectModuleBiographySections(card) {
+  return Array.from(card.querySelectorAll('.module-biography-section-row')).map(row => ({
+    position: getFormValue(row, '.me-biography-section-position'),
+    mode: getFormValue(row, '.me-biography-section-mode'),
+    title: getTrimmedFormValue(row, '.me-biography-section-title'),
+    text: getTrimmedFormValue(row, '.me-biography-section-text')
+  })).filter(item => item.title || item.text);
+}
+
 function collectModuleBiographyConnections(card) {
   return Array.from(card.querySelectorAll('.module-biography-connection-row')).map(row => ({
     image: getTrimmedFormValue(row, '.me-biography-connection-image'),
@@ -90,6 +118,53 @@ function removeModuleBiographyStatRow(button) {
   row.remove();
   if (!wrap.querySelector('.module-biography-stat-row')) {
     wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Infozeilen vorhanden.</div>';
+  }
+  syncModuleJsonPreview();
+}
+
+function addModuleBiographyAbilityRow(button) {
+  const pageCard = button.closest('.module-page-card');
+  const wrap = pageCard?.querySelector('.module-biography-abilities');
+  if (!pageCard || !wrap) return;
+  wrap.querySelector('.inline-placeholder-note')?.remove();
+  wrap.insertAdjacentHTML('beforeend', buildBiographyAbilityRows([{ icon: '*', title: 'Neuer Punkt', detail: '' }], 'module'));
+  syncModuleJsonPreview();
+}
+
+function removeModuleBiographyAbilityRow(button) {
+  const pageCard = button.closest('.module-page-card');
+  const row = button.closest('.module-biography-ability-row');
+  const wrap = pageCard?.querySelector('.module-biography-abilities');
+  if (!pageCard || !row || !wrap) return;
+  row.remove();
+  if (!wrap.querySelector('.module-biography-ability-row')) {
+    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>';
+  }
+  syncModuleJsonPreview();
+}
+
+function addModuleBiographySectionRow(button, position = 'afterIntro') {
+  const pageCard = button.closest('.module-page-card');
+  const wrap = pageCard?.querySelector('.module-biography-sections');
+  if (!pageCard || !wrap) return;
+  wrap.querySelector('.inline-placeholder-note')?.remove();
+  wrap.insertAdjacentHTML('beforeend', buildBiographySectionRows([{
+    position: position === 'afterWorks' ? 'afterWorks' : 'afterIntro',
+    mode: 'text',
+    title: 'Neue Ueberschrift',
+    text: ''
+  }], 'module'));
+  syncModuleJsonPreview();
+}
+
+function removeModuleBiographySectionRow(button) {
+  const pageCard = button.closest('.module-page-card');
+  const row = button.closest('.module-biography-section-row');
+  const wrap = pageCard?.querySelector('.module-biography-sections');
+  if (!pageCard || !row || !wrap) return;
+  row.remove();
+  if (!wrap.querySelector('.module-biography-section-row')) {
+    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>';
   }
   syncModuleJsonPreview();
 }
@@ -155,6 +230,11 @@ function buildBiographyModuleEditorFields(page) {
             <input type="text" class="me-biography-title" value="${escapeHtml(biography.biographyTitle)}">
           </div>
           <div class="module-editor-field">
+            <label>Linke Inhaltsbreite (%)</label>
+            <input type="number" class="me-biography-side-width" min="35" max="100" step="1" value="${escapeHtml(biography.sideWidth)}">
+            <div class="module-editor-help">Steuert Bild, Infotabelle und Zitatbox gemeinsam.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Fähigkeiten-Überschrift</label>
             <input type="text" class="me-biography-abilities-title" value="${escapeHtml(biography.abilitiesTitle)}">
           </div>
@@ -165,7 +245,12 @@ function buildBiographyModuleEditorFields(page) {
           </div>
           <div class="module-editor-field wide">
             <label>Fähigkeiten & Spezialgebiete</label>
-            <div class="biography-edit-list">${buildBiographyAbilityRows(biography.abilities, 'module')}</div>
+            <div class="module-editor-inline" style="justify-content:flex-end;">
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-ability-row">+ Punkt</button>
+            </div>
+            <div class="biography-edit-list module-biography-abilities">
+              ${biography.abilities.length ? buildBiographyAbilityRows(biography.abilities, 'module') : '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>'}
+            </div>
           </div>
           <div class="module-editor-field">
             <label>Geschichte-Überschrift</label>
@@ -186,6 +271,19 @@ function buildBiographyModuleEditorFields(page) {
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-simple-line-row" data-simple-line-list="biographyWorks">+ Werk</button>
             </div>
             ${buildModuleSimpleLineList(biography.works, 'biographyWorks')}
+          </div>
+          <div class="module-editor-field wide">
+            <div class="module-editor-inline" style="justify-content:space-between;">
+              <label>Zusatzabschnitte im Hauptbereich</label>
+              <span>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-section-row" data-biography-section-position="afterIntro">+ Nach Haupttext</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-section-row" data-biography-section-position="afterWorks">+ Nach Abschnitt 3</button>
+              </span>
+            </div>
+            <div class="module-editor-help">Fuer Textbloecke oder Bulletlisten zwischen den Hauptreitern der Biographie.</div>
+            <div class="biography-edit-list module-biography-sections">
+              ${biography.extraSections.length ? buildBiographySectionRows(biography.extraSections, 'module') : '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>'}
+            </div>
           </div>
           <div class="module-editor-field">
             <label>Trivia-Überschrift</label>
@@ -228,7 +326,7 @@ function buildBiographyModuleEditorFields(page) {
             </div>
           </div>
           <div class="module-editor-field wide">
-            <label>Dokumente & Aufzeichnungen</label>
+            <label>${escapeHtml(biography.documentsTitle || 'Dokumente & Aufzeichnungen')}</label>
             <div class="module-editor-inline" style="justify-content:space-between;">
               <span class="module-editor-help">Der Link öffnet den Dokumenttitel in einer neuen Seite.</span>
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-document-row">+ Dokument</button>
@@ -263,8 +361,10 @@ function collectBiographyModuleEditorPage(card, page) {
   page.biography = sanitizeBiographyData({
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),
+    sideWidth: getFormValue(card, '.me-biography-side-width'),
     abilitiesTitle: getTrimmedFormValue(card, '.me-biography-abilities-title'),
     abilities: collectModuleBiographyAbilities(card),
+    extraSections: collectModuleBiographySections(card),
     historyTitle: getTrimmedFormValue(card, '.me-biography-history-title'),
     historyText: getTrimmedFormValue(card, '.me-biography-history-text'),
     worksTitle: getTrimmedFormValue(card, '.me-biography-works-title'),

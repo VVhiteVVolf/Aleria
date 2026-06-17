@@ -1,5 +1,6 @@
 let _moduleSectionEditorSignature = '';
 let _moduleSectionEditorMode = 'edit';
+let _moduleSectionCreateMode = 'child';
 
 function getUniqueModuleSections() {
   const seen = new Set();
@@ -193,6 +194,18 @@ function ensureModuleSectionManagerDialog() {
             <span id="module-section-manager-status" class="module-section-manager-status" role="status"></span>
           </div>
           <div class="module-section-manager-form">
+            <fieldset class="module-section-manager-mode" aria-label="Art des neuen Bereichs">
+              <label>
+                <input type="radio" name="msm-create-mode" value="root" data-section-manager-action="set-create-mode">
+                <span>Hauptreiter</span>
+                <small>Neue oberste Kategorie wie Sport, Kultur oder Schiffe.</small>
+              </label>
+              <label>
+                <input type="radio" name="msm-create-mode" value="child" data-section-manager-action="set-create-mode">
+                <span>Unterreiter</span>
+                <small>Bereich innerhalb eines bestehenden Hauptreiters.</small>
+              </label>
+            </fieldset>
             <label>
               <span>Hauptreiter</span>
               <input id="msm-tab" type="text" list="msm-tab-options" placeholder="z.B. Völker & Kulturen" data-section-manager-field="tab">
@@ -265,6 +278,30 @@ function ensureModuleSectionManagerDialog() {
   return overlay;
 }
 
+function normalizeModuleSectionCreateMode(mode) {
+  return mode === 'root' ? 'root' : 'child';
+}
+
+function setModuleSectionCreateMode(mode, options = {}) {
+  _moduleSectionCreateMode = normalizeModuleSectionCreateMode(mode);
+  const overlay = document.getElementById('module-section-manager-overlay');
+  const tab = document.getElementById('msm-tab');
+  const path = document.getElementById('msm-path');
+  const tabLabel = tab?.closest('label')?.querySelector('span');
+  const pathRow = path?.closest('label');
+  document.querySelectorAll('input[name="msm-create-mode"]').forEach(input => {
+    input.checked = input.value === _moduleSectionCreateMode;
+  });
+  if (overlay) overlay.dataset.createMode = _moduleSectionCreateMode;
+  if (tabLabel) tabLabel.textContent = _moduleSectionCreateMode === 'root' ? 'Name des Hauptreiters' : 'Hauptreiter';
+  if (tab) tab.placeholder = _moduleSectionCreateMode === 'root' ? 'z.B. Sport' : 'z.B. Voelker & Kulturen';
+  if (pathRow) pathRow.hidden = _moduleSectionCreateMode === 'root';
+  if (path) {
+    path.disabled = _moduleSectionCreateMode === 'root';
+    if (_moduleSectionCreateMode === 'root' && options.clearPath !== false) path.value = '';
+  }
+}
+
 function setModuleSectionManagerStatus(message, type = 'info') {
   const status = document.getElementById('module-section-manager-status');
   if (!status) return;
@@ -272,14 +309,16 @@ function setModuleSectionManagerStatus(message, type = 'info') {
   status.textContent = message || '';
 }
 
-function clearModuleSectionManagerForm() {
-  const defaultTab = _activeTab && _activeTab !== 'Alle' && _activeTab !== 'Charaktere' ? _activeTab : '';
+function clearModuleSectionManagerForm(options = {}) {
+  const nextMode = normalizeModuleSectionCreateMode(options.mode || _moduleSectionCreateMode);
+  const defaultTab = nextMode === 'child' && _activeTab && _activeTab !== 'Alle' && _activeTab !== 'Charaktere' ? _activeTab : '';
   const tab = document.getElementById('msm-tab');
   const path = document.getElementById('msm-path');
   const desc = document.getElementById('msm-desc');
   if (tab) tab.value = defaultTab;
   if (path) path.value = '';
   if (desc) desc.value = '';
+  setModuleSectionCreateMode(nextMode);
   setModuleSectionManagerStatus('');
 }
 
@@ -453,14 +492,16 @@ function renderModuleSectionManager() {
   renderModuleSectionEditor();
 }
 
-function openModuleSectionManager() {
+function openModuleSectionManager(options = {}) {
   ensureModuleSectionManagerDialog();
   if (ensureKnownSectionHierarchy()) {
     saveModuleStore();
     renderAll();
   }
+  const createMode = normalizeModuleSectionCreateMode(options.createMode || _moduleSectionCreateMode);
+  setModuleSectionCreateMode(createMode);
   renderModuleSectionManager();
-  clearModuleSectionManagerForm();
+  clearModuleSectionManagerForm({ mode: createMode });
   activateDialog('module-section-manager-overlay', { initialFocus: '#msm-tab' });
 }
 
@@ -479,6 +520,7 @@ function prefillModuleSectionManagerForm(signature) {
   if (tab) tab.value = section.tab || section.key || '';
   if (path) path.value = getSectionPathLabel(section) || section.key || '';
   if (desc) desc.value = section.desc || '';
+  setModuleSectionCreateMode(getSectionPathParts(section).length ? 'child' : 'root', { clearPath: false });
   setModuleSectionManagerStatus('Bereich als Vorlage übernommen.', 'info');
 }
 
@@ -498,6 +540,7 @@ function prefillModuleSectionManagerChildForm(signature) {
     path.setSelectionRange(start, path.value.length);
   }
   if (desc) desc.value = '';
+  setModuleSectionCreateMode('child', { clearPath: false });
   setModuleSectionManagerStatus('Kindbereich vorbereitet. Namen im Pfad ersetzen und speichern.', 'info');
 }
 
@@ -668,32 +711,34 @@ function saveModuleSectionFromManager() {
   const tab = String(document.getElementById('msm-tab')?.value || '').trim();
   const path = parseSectionPathInput(document.getElementById('msm-path')?.value || '');
   const desc = String(document.getElementById('msm-desc')?.value || '').trim();
-  const key = path[path.length - 1] || '';
+  const isRootMode = _moduleSectionCreateMode === 'root';
+  const key = isRootMode ? tab : path[path.length - 1] || '';
 
   if (!tab) {
-    setModuleSectionManagerStatus('Bitte einen Hauptreiter eingeben.', 'error');
+    setModuleSectionManagerStatus(isRootMode ? 'Bitte einen Namen fuer den Hauptreiter eingeben.' : 'Bitte einen Hauptreiter eingeben.', 'error');
     document.getElementById('msm-tab')?.focus();
     return;
   }
-  if (!key) {
+  if (!isRootMode && !key) {
     setModuleSectionManagerStatus('Bitte einen Pfad eingeben.', 'error');
     document.getElementById('msm-path')?.focus();
     return;
   }
 
-  const section = cleanCustomSection({ key, tab, path, desc, entries: [] });
+  const section = cleanCustomSection({ key, tab, path: isRootMode ? [] : path, desc, entries: [] });
   const signature = makeSectionSignature(section);
   const existed = getUniqueModuleSections().some(existing => makeSectionSignature(existing) === signature);
   const result = ensureModuleSectionPath(section, { updateDesc: true });
   saveModuleStore();
   _activeTab = tab;
+  if (typeof setActiveArchivePath === 'function') setActiveArchivePath(tab, []);
   renderAll();
   renderModuleSectionManager();
-  clearModuleSectionManagerForm();
+  clearModuleSectionManagerForm({ mode: _moduleSectionCreateMode });
   setModuleSectionManagerStatus(
     existed && !result.created
-      ? `Bereich "${getSectionOptionLabel(section)}" aktualisiert.`
-      : `Bereich "${getSectionOptionLabel(section)}" gespeichert.`,
+      ? `${isRootMode ? 'Hauptreiter' : 'Bereich'} "${getSectionOptionLabel(section)}" aktualisiert.`
+      : `${isRootMode ? 'Hauptreiter' : 'Bereich'} "${getSectionOptionLabel(section)}" gespeichert.`,
     'success'
   );
 }
@@ -801,6 +846,10 @@ function handleModuleSectionManagerClick(event) {
   if (action === 'clear-form') {
     event.preventDefault();
     clearModuleSectionManagerForm();
+    return;
+  }
+  if (action === 'set-create-mode') {
+    setModuleSectionCreateMode(trigger.value);
     return;
   }
   if (action === 'save-section') {

@@ -43,6 +43,10 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-simple-line-row',
   'add-biography-stat-row',
   'remove-biography-stat-row',
+  'add-biography-ability-row',
+  'remove-biography-ability-row',
+  'add-biography-section-row',
+  'remove-biography-section-row',
   'add-bestiary-row',
   'remove-bestiary-row',
   'add-tournament-league-row',
@@ -59,6 +63,8 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-caste-row',
   'add-court-row',
   'remove-court-row',
+  'add-bounty-row',
+  'remove-bounty-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
@@ -260,6 +266,22 @@ function handleModuleEditorActionClick(event) {
     removeModuleBiographyStatRow(trigger);
     return;
   }
+  if (action === 'add-biography-ability-row') {
+    addModuleBiographyAbilityRow(trigger);
+    return;
+  }
+  if (action === 'remove-biography-ability-row') {
+    removeModuleBiographyAbilityRow(trigger);
+    return;
+  }
+  if (action === 'add-biography-section-row') {
+    addModuleBiographySectionRow(trigger, trigger.dataset.biographySectionPosition || 'afterIntro');
+    return;
+  }
+  if (action === 'remove-biography-section-row') {
+    removeModuleBiographySectionRow(trigger);
+    return;
+  }
   if (action === 'add-bestiary-row') {
     addModuleBestiaryRow(trigger, trigger.dataset.bestiaryList || '');
     return;
@@ -322,6 +344,14 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-court-row') {
     removeModuleCourtRow(trigger);
+    return;
+  }
+  if (action === 'add-bounty-row') {
+    addModuleBountyRow(trigger, trigger.dataset.bountyList || '');
+    return;
+  }
+  if (action === 'remove-bounty-row') {
+    removeModuleBountyRow(trigger);
     return;
   }
   if (action === 'add-hierarchy-detail') {

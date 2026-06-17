@@ -12,6 +12,137 @@ function parseJsonTextarea(text, fallbackValue, label) {
   }
 }
 
+function clampBountyNumber(value, fallback, min, max) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(min, Math.min(max, Math.round(safe)));
+}
+
+function sanitizeBountyImageItem(item = {}, index = 0, fallbackTitle = 'Eintrag') {
+  return {
+    image: String(item?.image || item?.img || item?.portrait || '').trim(),
+    imageScale: clampBountyNumber(item?.imageScale, 100, 50, 220),
+    imageX: clampBountyNumber(item?.imageX, 50, 0, 100),
+    imageY: clampBountyNumber(item?.imageY, 50, 0, 100),
+    title: String(item?.title || item?.name || `${fallbackTitle} ${index + 1}`).trim(),
+    subtitle: String(item?.subtitle || item?.role || '').trim(),
+    text: String(item?.text || item?.detail || item?.note || '').trim()
+  };
+}
+
+function sanitizeBountyCharges(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item, index) => ({
+      icon: String(item?.icon || '').trim(),
+      title: String(item?.title || item?.label || `Tatvorwurf ${index + 1}`).trim(),
+      text: String(item?.text || item?.detail || '').trim()
+    }))
+    .filter(item => item.icon || item.title || item.text)
+    .slice(0, 12);
+}
+
+function sanitizeBountyDescriptionRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      label: String(item?.label || item?.title || '').trim(),
+      value: String(item?.value || item?.text || '').trim()
+    }))
+    .filter(item => item.label || item.value)
+    .slice(0, 16);
+}
+
+function sanitizeBountySightings(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      place: String(item?.place || item?.ort || item?.location || '').trim(),
+      date: String(item?.date || item?.datum || '').trim(),
+      observer: String(item?.observer || item?.beobachter || '').trim()
+    }))
+    .filter(item => item.place || item.date || item.observer)
+    .slice(0, 20);
+}
+
+function sanitizeBountyProfileRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item, index) => ({
+      icon: String(item?.icon || '').trim(),
+      label: String(item?.label || item?.title || `Profilwert ${index + 1}`).trim(),
+      value: clampBountyNumber(item?.value, 3, 0, 5)
+    }))
+    .filter(item => item.icon || item.label || item.value)
+    .slice(0, 10);
+}
+
+function sanitizeBountyFileData(data = {}) {
+  const imageList = (items, fallbackTitle) => (Array.isArray(items) ? items : [])
+    .map((item, index) => sanitizeBountyImageItem(item, index, fallbackTitle))
+    .filter(item => item.image || item.title || item.subtitle || item.text)
+    .slice(0, 24);
+
+  return {
+    archiveTitle: String(data.archiveTitle || 'Kopfgeld / Fahndungsakte').trim(),
+    archiveSubtitle: String(data.archiveSubtitle || 'Herausgegeben im Namen des Koenigreichs Cenyr').trim(),
+    regionalBanner: String(data.regionalBanner || '').trim(),
+    regionalBannerScale: clampBountyNumber(data.regionalBannerScale, 100, 50, 220),
+    regionalBannerX: clampBountyNumber(data.regionalBannerX, 50, 0, 100),
+    regionalBannerY: clampBountyNumber(data.regionalBannerY, 50, 0, 100),
+    backgroundImage: String(data.backgroundImage || '').trim(),
+    portraitImage: String(data.portraitImage || '').trim(),
+    portraitScale: clampBountyNumber(data.portraitScale, 100, 50, 220),
+    portraitX: clampBountyNumber(data.portraitX, 50, 0, 100),
+    portraitY: clampBountyNumber(data.portraitY, 38, 0, 100),
+    sealImage: String(data.sealImage || '').trim(),
+    sealScale: clampBountyNumber(data.sealScale, 100, 50, 180),
+    sealX: clampBountyNumber(data.sealX, 50, 0, 100),
+    sealY: clampBountyNumber(data.sealY, 50, 0, 100),
+    coinImage: String(data.coinImage || '').trim(),
+    coinScale: clampBountyNumber(data.coinScale, 100, 50, 180),
+    coinX: clampBountyNumber(data.coinX, 50, 0, 100),
+    coinY: clampBountyNumber(data.coinY, 50, 0, 100),
+    nameLabel: String(data.nameLabel || 'Name').trim(),
+    targetName: String(data.targetName || '').trim(),
+    aliasesLabel: String(data.aliasesLabel || 'Aliasnamen').trim(),
+    aliases: String(data.aliases || '').trim(),
+    statusLabel: String(data.statusLabel || 'Status').trim(),
+    status: String(data.status || 'Gesucht').trim(),
+    statusNote: String(data.statusNote || 'Tot oder lebendig').trim(),
+    threatLabel: String(data.threatLabel || 'Gefaehrlichkeitsstufe').trim(),
+    threatLevel: clampBountyNumber(data.threatLevel, 4, 1, 5),
+    threatText: String(data.threatText || 'Aeusserst gefaehrlich').trim(),
+    bountyLabel: String(data.bountyLabel || 'Kopfgeld').trim(),
+    bountyAmount: String(data.bountyAmount || '').trim(),
+    bountyCurrency: String(data.bountyCurrency || 'Goldtaler').trim(),
+    handoverNote: String(data.handoverNote || '').trim(),
+    chargesTitle: String(data.chargesTitle || 'Tatvorwuerfe').trim(),
+    charges: sanitizeBountyCharges(data.charges),
+    descriptionTitle: String(data.descriptionTitle || 'Personenbeschreibung').trim(),
+    descriptionRows: sanitizeBountyDescriptionRows(data.descriptionRows),
+    descriptionNote: String(data.descriptionNote || '').trim(),
+    descriptionIcon: String(data.descriptionIcon || '').trim(),
+    companionsTitle: String(data.companionsTitle || 'Bekannte Begleiter').trim(),
+    companions: imageList(data.companions, 'Begleiter'),
+    sightingsTitle: String(data.sightingsTitle || 'Letzte Sichtungen').trim(),
+    sightings: sanitizeBountySightings(data.sightings),
+    connectionsTitle: String(data.connectionsTitle || 'Verbindungen & Zugehoerigkeiten').trim(),
+    factionTitle: String(data.factionTitle || 'Fraktion / Bande').trim(),
+    factionBanner: String(data.factionBanner || '').trim(),
+    factionBannerScale: clampBountyNumber(data.factionBannerScale, 100, 50, 220),
+    factionBannerX: clampBountyNumber(data.factionBannerX, 50, 0, 100),
+    factionBannerY: clampBountyNumber(data.factionBannerY, 50, 0, 100),
+    factionName: String(data.factionName || '').trim(),
+    factionText: String(data.factionText || '').trim(),
+    alliesTitle: String(data.alliesTitle || 'Verbuendete').trim(),
+    allies: imageList(data.allies, 'Verbuendeter'),
+    enemiesTitle: String(data.enemiesTitle || 'Feinde').trim(),
+    enemies: imageList(data.enemies, 'Feind'),
+    supportersTitle: String(data.supportersTitle || 'Moegliche Unterstuetzer').trim(),
+    supporters: imageList(data.supporters, 'Unterstuetzer'),
+    dangerTitle: String(data.dangerTitle || 'Gefaehrlichkeitsprofil').trim(),
+    dangerProfiles: sanitizeBountyProfileRows(data.dangerProfiles),
+    footer: String(data.footer || '').trim()
+  };
+}
+
 function normalizeTournamentSize(value) {
   const size = Number(value) || 16;
   if (size >= 32) return 32;
@@ -542,6 +673,28 @@ function sanitizeHierarchyData(data = {}) {
   };
 }
 
+function clampBiographyNumber(value, fallback, min, max) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(min, Math.min(max, Math.round(safe)));
+}
+
+function sanitizeBiographySections(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => {
+      const position = String(item?.position || '').trim() === 'afterWorks' ? 'afterWorks' : 'afterIntro';
+      const mode = String(item?.mode || '').trim() === 'list' ? 'list' : 'text';
+      return {
+        position,
+        mode,
+        title: String(item?.title || '').trim(),
+        text: String(item?.text || item?.body || '').trim()
+      };
+    })
+    .filter(item => item.title || item.text)
+    .slice(0, 16);
+}
+
 function sanitizeBiographyData(data = {}) {
   const lineArray = value => Array.isArray(value)
     ? value.map(item => String(item || '').trim()).filter(Boolean)
@@ -571,10 +724,12 @@ function sanitizeBiographyData(data = {}) {
     : [];
 
   return {
+    sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     biographyTitle: String(data.biographyTitle || 'Biografie').trim(),
     biographyText: String(data.biographyText || '').trim(),
     abilitiesTitle: String(data.abilitiesTitle || 'Fähigkeiten & Spezialgebiete').trim(),
     abilities: pairArray(data.abilities),
+    extraSections: sanitizeBiographySections(data.extraSections),
     historyTitle: String(data.historyTitle || 'Geschichte & Wirkung').trim(),
     historyText: String(data.historyText || '').trim(),
     worksTitle: String(data.worksTitle || 'Bekannte Werke').trim(),
