@@ -3,6 +3,7 @@
   /* ── BIOGRAPHY DOSSIER ── */
   .biography-page {
     --biography-side-width: 100%;
+    --biography-connection-height: 68px;
     flex: 1;
     min-height: 0;
     display: grid;
@@ -202,13 +203,14 @@
     display: grid;
     grid-template-columns: 2.7rem minmax(0,1fr);
     gap: 0.55rem;
-    align-items: center;
+    align-items: start;
   }
   .biography-connection img,
   .biography-connection-placeholder {
     width: 2.7rem;
-    height: 2.7rem;
+    height: var(--biography-connection-height);
     object-fit: cover;
+    object-position: center top;
     border: 1px solid rgba(139,105,20,0.35);
     background: rgba(80,50,20,0.12);
   }

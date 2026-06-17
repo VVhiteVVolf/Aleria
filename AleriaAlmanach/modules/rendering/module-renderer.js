@@ -434,6 +434,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
   const image = sanitizeImageSrc(page.image || '');
   const stats = Array.isArray(page.stats) ? page.stats : [];
   const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
+  const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
   const quote = page.quote ? `
     <div class="biography-quote-card">
       <div class="biography-quote-mark">“</div>
@@ -458,7 +459,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>` : '';
   return `
     ${nav}
-    <div class="biography-page" style="--biography-side-width:${sideWidth}%;">
+    <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;">
       <aside class="biography-left">
         ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
         ${stats.length ? `

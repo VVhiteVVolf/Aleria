@@ -725,6 +725,7 @@ function sanitizeBiographyData(data = {}) {
 
   return {
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
+    connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),
     biographyTitle: String(data.biographyTitle || 'Biografie').trim(),
     biographyText: String(data.biographyText || '').trim(),
     abilitiesTitle: String(data.abilitiesTitle || 'Fähigkeiten & Spezialgebiete').trim(),

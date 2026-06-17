@@ -1157,6 +1157,7 @@ function createObjectProfileTemplatePages() {
       ],
       biography: {
         sideWidth: 100,
+        connectionPortraitHeight: 68,
         biographyTitle: 'Biografie',
         biographyText: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
         abilitiesTitle: 'Fähigkeiten & Spezialgebiete',

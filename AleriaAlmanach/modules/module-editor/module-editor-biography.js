@@ -312,6 +312,11 @@ function buildBiographyModuleEditorFields(page) {
             <input type="text" class="me-biography-connections-title" value="${escapeHtml(biography.connectionsTitle)}">
           </div>
           <div class="module-editor-field">
+            <label>Verbindungsportrait-Hoehe (px)</label>
+            <input type="number" class="me-biography-connection-portrait-height" min="44" max="140" step="1" value="${escapeHtml(biography.connectionPortraitHeight)}">
+            <div class="module-editor-help">Macht die kleinen Portraitbilder in den Verbindungen hoeher oder kompakter.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Dokumente-Überschrift</label>
             <input type="text" class="me-biography-documents-title" value="${escapeHtml(biography.documentsTitle)}">
           </div>
@@ -374,6 +379,7 @@ function collectBiographyModuleEditorPage(card, page) {
     quotesTitle: getTrimmedFormValue(card, '.me-biography-quotes-title'),
     quotes: collectModuleSimpleLineRows(card, 'biographyQuotes'),
     connectionsTitle: getTrimmedFormValue(card, '.me-biography-connections-title'),
+    connectionPortraitHeight: getFormValue(card, '.me-biography-connection-portrait-height'),
     connections: collectModuleBiographyConnections(card),
     documentsTitle: getTrimmedFormValue(card, '.me-biography-documents-title'),
     documents: collectModuleBiographyDocuments(card),

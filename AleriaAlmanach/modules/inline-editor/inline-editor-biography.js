@@ -313,6 +313,10 @@ function buildInlineBiographyEditor(page) {
           <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="connectionsTitle" value="${escapeHtml(biography.connectionsTitle)}">
         </div>
         <div class="inline-edit-field">
+          <span class="inline-edit-label">Verbindungsportrait-Hoehe (px)</span>
+          <input class="inline-edit-input" type="number" min="44" max="140" step="1" data-inline-action="update-biography-field" data-biography-field="connectionPortraitHeight" value="${escapeHtml(biography.connectionPortraitHeight)}">
+        </div>
+        <div class="inline-edit-field">
           <span class="inline-edit-label">Dokumente-Ueberschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="documentsTitle" value="${escapeHtml(biography.documentsTitle)}">
         </div>
