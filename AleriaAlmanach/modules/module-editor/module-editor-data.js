@@ -697,7 +697,7 @@ function sanitizeBiographySections(items = []) {
 
 function sanitizeBiographyConnectionImageFormat(value) {
   const format = String(value || '').trim();
-  return format === 'landscape' ? 'landscape' : 'portrait';
+  return ['portrait', 'landscape', 'square'].includes(format) ? format : 'portrait';
 }
 
 function sanitizeBiographyData(data = {}) {
@@ -745,6 +745,7 @@ function sanitizeBiographyData(data = {}) {
   return {
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),
+    connectionTextOffset: clampBiographyNumber(data.connectionTextOffset, 0, 0, 80),
     biographyTitle: String(data.biographyTitle || 'Biografie').trim(),
     biographyText: String(data.biographyText || '').trim(),
     abilitiesTitle: String(data.abilitiesTitle || 'Fähigkeiten & Spezialgebiete').trim(),

@@ -115,8 +115,9 @@ function buildBiographyConnectionRows(connections = [], mode = 'module') {
       <input type="hidden" class="me-biography-connection-title" value="">
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="image"` : ''}>
       <select class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-image-format' : ''}" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="imageFormat"` : ''}>
-        <option value="portrait"${item.imageFormat !== 'landscape' ? ' selected' : ''}>Hochformat</option>
+        <option value="portrait"${item.imageFormat !== 'landscape' && item.imageFormat !== 'square' ? ' selected' : ''}>Hochformat</option>
         <option value="landscape"${item.imageFormat === 'landscape' ? ' selected' : ''}>Querformat</option>
+        <option value="square"${item.imageFormat === 'square' ? ' selected' : ''}>Quadrat</option>
       </select>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-name' : ''}" type="text" value="${escapeHtml(item.name || '')}" placeholder="Name" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="name"` : ''}>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
@@ -358,6 +359,11 @@ function buildBiographyModuleEditorFields(page) {
             <div class="module-editor-help">Macht die kleinen Portraitbilder in den Verbindungen hoeher oder kompakter.</div>
           </div>
           <div class="module-editor-field">
+            <label>Verbindungstext-Versatz <span>${escapeHtml(biography.connectionTextOffset)}px</span></label>
+            <input class="module-size-range me-biography-connection-text-offset" type="range" min="0" max="80" step="1" value="${escapeHtml(biography.connectionTextOffset)}" data-module-editor-action="update-range-percent-label">
+            <div class="module-editor-help">Rueckt den Text in den Verbindungen nach rechts.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Dokumente-Überschrift</label>
             <input type="text" class="me-biography-documents-title" value="${escapeHtml(biography.documentsTitle)}">
           </div>
@@ -424,6 +430,7 @@ function collectBiographyModuleEditorPage(card, page) {
     quotes: collectModuleSimpleLineRows(card, 'biographyQuotes'),
     connectionsTitle: getTrimmedFormValue(card, '.me-biography-connections-title'),
     connectionPortraitHeight: getFormValue(card, '.me-biography-connection-portrait-height'),
+    connectionTextOffset: getFormValue(card, '.me-biography-connection-text-offset'),
     connections: collectModuleBiographyConnections(card),
     documentsTitle: getTrimmedFormValue(card, '.me-biography-documents-title'),
     documents: collectModuleBiographyDocuments(card),

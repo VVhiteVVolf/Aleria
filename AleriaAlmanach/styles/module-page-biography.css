@@ -4,6 +4,7 @@
   .biography-page {
     --biography-side-width: 100%;
     --biography-connection-height: 68px;
+    --biography-connection-text-offset: 0px;
     flex: 1;
     min-height: 0;
     display: grid;
@@ -126,7 +127,7 @@
     background: linear-gradient(90deg, rgba(139,105,20,0.55), transparent);
   }
   .biography-copy {
-    max-width: 76ch;
+    max-width: none;
     color: var(--ink);
     font-size: 0.88rem;
     line-height: 1.72;
@@ -201,14 +202,20 @@
   }
   .biography-connection {
     display: grid;
-    grid-template-columns: 2.7rem minmax(0,1fr);
-    gap: 0.55rem;
+    grid-template-columns: 3.1rem minmax(0,1fr);
+    column-gap: calc(0.55rem + var(--biography-connection-text-offset));
     align-items: start;
+  }
+  .biography-connection.landscape {
+    grid-template-columns: 5.05rem minmax(0,1fr);
+  }
+  .biography-connection.square {
+    grid-template-columns: 3.65rem minmax(0,1fr);
   }
   .biography-connection img,
   .biography-connection-placeholder {
-    width: 2.7rem;
-    height: var(--biography-connection-height);
+    width: 3.1rem;
+    height: calc(var(--biography-connection-height) * 1.15);
     object-fit: cover;
     object-position: center top;
     border: 1px solid rgba(139,105,20,0.35);
@@ -216,8 +223,14 @@
   }
   .biography-connection img.landscape,
   .biography-connection-placeholder.landscape {
-    width: 4.4rem;
-    height: min(var(--biography-connection-height), 3rem);
+    width: 5.05rem;
+    height: min(calc(var(--biography-connection-height) * 0.8), 3.6rem);
+    object-position: center;
+  }
+  .biography-connection img.square,
+  .biography-connection-placeholder.square {
+    width: 3.65rem;
+    height: 3.65rem;
     object-position: center;
   }
   .biography-connection-placeholder {

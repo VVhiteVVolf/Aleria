@@ -436,9 +436,9 @@ function buildBiographyConnectionItem(item) {
           ${item.detail ? `<span>${escapeHtml(item.detail)}</span>` : ''}
         </div>`;
   }
-  const format = item?.imageFormat === 'landscape' ? 'landscape' : 'portrait';
+  const format = ['landscape', 'square'].includes(item?.imageFormat) ? item.imageFormat : 'portrait';
   return `
-        <div class="biography-connection">
+        <div class="biography-connection ${format}">
           ${item.image
             ? `<img class="${format}" src="${sanitizeImageSrc(item.image)}" alt="" loading="lazy" decoding="async">`
             : `<div class="biography-connection-placeholder ${format}">${getInitialChar(item.name)}</div>`}
@@ -453,6 +453,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
   const stats = Array.isArray(page.stats) ? page.stats : [];
   const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
   const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
+  const connectionTextOffset = Math.max(0, Math.min(80, Number(data.connectionTextOffset) || 0));
   const quote = page.quote ? `
     <div class="biography-quote-card">
       <div class="biography-quote-mark">“</div>
@@ -473,7 +474,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>` : '';
   return `
     ${nav}
-    <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;">
+    <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
       <aside class="biography-left">
         ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
         ${stats.length ? `
