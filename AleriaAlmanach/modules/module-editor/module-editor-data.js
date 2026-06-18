@@ -695,6 +695,11 @@ function sanitizeBiographySections(items = []) {
     .slice(0, 16);
 }
 
+function sanitizeBiographyConnectionImageFormat(value) {
+  const format = String(value || '').trim();
+  return format === 'landscape' ? 'landscape' : 'portrait';
+}
+
 function sanitizeBiographyData(data = {}) {
   const lineArray = value => Array.isArray(value)
     ? value.map(item => String(item || '').trim()).filter(Boolean)
@@ -707,11 +712,25 @@ function sanitizeBiographyData(data = {}) {
       })).filter(item => item.title || item.detail || item.icon)
     : [];
   const connectionArray = value => Array.isArray(value)
-    ? value.map(item => ({
-        name: String(item?.name || '').trim(),
-        detail: String(item?.detail || '').trim(),
-        image: String(item?.image || '').trim()
-      })).filter(item => item.name || item.detail || item.image)
+    ? value.map(item => {
+        const type = String(item?.type || '').trim() === 'heading' ? 'heading' : 'connection';
+        if (type === 'heading') {
+          return {
+            type,
+            title: String(item?.title || item?.name || '').trim(),
+            detail: String(item?.detail || item?.text || '').trim()
+          };
+        }
+        return {
+          type,
+          name: String(item?.name || '').trim(),
+          detail: String(item?.detail || '').trim(),
+          image: String(item?.image || '').trim(),
+          imageFormat: sanitizeBiographyConnectionImageFormat(item?.imageFormat)
+        };
+      }).filter(item => item.type === 'heading'
+        ? item.title || item.detail
+        : item.name || item.detail || item.image)
     : [];
   const documentArray = value => Array.isArray(value)
     ? value.map(item => {

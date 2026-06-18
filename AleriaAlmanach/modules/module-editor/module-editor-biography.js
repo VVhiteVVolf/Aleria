@@ -99,6 +99,43 @@ function collectModuleBiographyDocuments(card) {
   })).filter(item => item.text || item.link);
 }
 
+function buildBiographyConnectionRows(connections = [], mode = 'module') {
+  const rows = (Array.isArray(connections) && connections.length ? connections : [{ type: 'connection', image: '', imageFormat: 'portrait', name: '', detail: '' }]);
+  return rows.map((item, index) => {
+    if (item.type === 'heading') {
+      return `
+    <div class="biography-edit-row connection-heading ${mode === 'inline' ? '' : 'module-biography-connection-row'}" ${mode === 'inline' ? `data-biography-connection-index="${index}"` : ''} data-biography-connection-type="heading">
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="title"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Unterzeile optional" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-connection" data-biography-connection-index="${index}"` : 'data-module-editor-action="remove-biography-connection-row"'}>Loeschen</button>
+    </div>`;
+    }
+    return `
+    <div class="biography-edit-row connection ${mode === 'inline' ? '' : 'module-biography-connection-row'}" ${mode === 'inline' ? `data-biography-connection-index="${index}"` : ''} data-biography-connection-type="connection">
+      <input type="hidden" class="me-biography-connection-title" value="">
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="image"` : ''}>
+      <select class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-image-format' : ''}" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="imageFormat"` : ''}>
+        <option value="portrait"${item.imageFormat !== 'landscape' ? ' selected' : ''}>Hochformat</option>
+        <option value="landscape"${item.imageFormat === 'landscape' ? ' selected' : ''}>Querformat</option>
+      </select>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-name' : ''}" type="text" value="${escapeHtml(item.name || '')}" placeholder="Name" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="name"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-connection" data-biography-connection-index="${index}"` : 'data-module-editor-action="remove-biography-connection-row"'}>Loeschen</button>
+    </div>`;
+  }).join('');
+}
+
+function collectModuleBiographyConnections(card) {
+  return Array.from(card.querySelectorAll('.module-biography-connection-row')).map(row => ({
+    type: row.dataset.biographyConnectionType === 'heading' ? 'heading' : 'connection',
+    title: getTrimmedFormValue(row, '.me-biography-connection-title'),
+    image: getTrimmedFormValue(row, '.me-biography-connection-image'),
+    imageFormat: getFormValue(row, '.me-biography-connection-image-format'),
+    name: getTrimmedFormValue(row, '.me-biography-connection-name'),
+    detail: getTrimmedFormValue(row, '.me-biography-connection-detail')
+  })).filter(item => item.type === 'heading' ? item.title || item.detail : item.image || item.name || item.detail);
+}
+
 function addModuleBiographyStatRow(button) {
   const pageCard = button.closest('.module-page-card');
   const wrap = button.closest('.module-editor-field')?.querySelector('.module-biography-stats')
@@ -194,8 +231,12 @@ function addModuleBiographyConnectionRow(button) {
   const pageCard = button.closest('.module-page-card');
   const wrap = pageCard?.querySelector('.module-biography-connections');
   if (!pageCard || !wrap) return;
+  const kind = button.dataset.biographyConnectionKind === 'heading' ? 'heading' : 'connection';
   wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildBiographyConnectionRows([{ image: '', name: 'Neue Verbindung', detail: '' }], 'module'));
+  wrap.insertAdjacentHTML('beforeend', buildBiographyConnectionRows([kind === 'heading'
+    ? { type: 'heading', title: 'Neue Gruppe', detail: '' }
+    : { type: 'connection', image: '', imageFormat: 'portrait', name: 'Neue Verbindung', detail: '' }
+  ], 'module'));
   syncModuleJsonPreview();
 }
 
@@ -324,7 +365,10 @@ function buildBiographyModuleEditorFields(page) {
             <label>Verbindungen</label>
             <div class="module-editor-inline" style="justify-content:space-between;">
               <span class="module-editor-help">Bild, Name und Beziehung der verbundenen Person.</span>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-connection-row">+ Verbindung</button>
+              <span>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-connection-row" data-biography-connection-kind="heading">+ Trenner</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-connection-row" data-biography-connection-kind="connection">+ Verbindung</button>
+              </span>
             </div>
             <div class="biography-edit-list module-biography-connections">
               ${buildBiographyConnectionRows(biography.connections, 'module')}

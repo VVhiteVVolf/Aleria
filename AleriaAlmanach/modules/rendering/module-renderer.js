@@ -428,6 +428,24 @@ function buildBiographyExtraSections(items = [], position = 'afterIntro') {
   return list.map(buildBiographyExtraSection).join('');
 }
 
+function buildBiographyConnectionItem(item) {
+  if (item?.type === 'heading') {
+    return `
+        <div class="biography-connection-heading">
+          <strong>${escapeHtml(item.title || '')}</strong>
+          ${item.detail ? `<span>${escapeHtml(item.detail)}</span>` : ''}
+        </div>`;
+  }
+  const format = item?.imageFormat === 'landscape' ? 'landscape' : 'portrait';
+  return `
+        <div class="biography-connection">
+          ${item.image
+            ? `<img class="${format}" src="${sanitizeImageSrc(item.image)}" alt="" loading="lazy" decoding="async">`
+            : `<div class="biography-connection-placeholder ${format}">${getInitialChar(item.name)}</div>`}
+          <div><strong>${escapeHtml(item.name || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
+        </div>`;
+}
+
 function buildBiographyPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeBiographyData(page.biography || {});
@@ -451,11 +469,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>` : '';
   const connections = data.connections.length ? `
     <div class="biography-connections">
-      ${data.connections.map(item => `
-        <div class="biography-connection">
-          ${item.image ? `<img src="${sanitizeImageSrc(item.image)}" alt="" loading="lazy" decoding="async">` : `<div class="biography-connection-placeholder">${getInitialChar(item.name)}</div>`}
-          <div><strong>${escapeHtml(item.name || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
-        </div>`).join('')}
+      ${data.connections.map(buildBiographyConnectionItem).join('')}
     </div>` : '';
   return `
     ${nav}

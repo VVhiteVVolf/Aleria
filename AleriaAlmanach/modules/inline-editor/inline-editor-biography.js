@@ -199,19 +199,21 @@ function updateInlineBiographyConnectionField(input) {
   const field = input.dataset.biographyConnectionField;
   if (index < 0 || !field) return;
   const current = getInlineBiographyDataForEdit(page);
-  current.connections = current.connections.length ? current.connections : [{ image: '', name: '', detail: '' }];
-  const item = current.connections[index] || { image: '', name: '', detail: '' };
+  current.connections = current.connections.length ? current.connections : [{ type: 'connection', image: '', imageFormat: 'portrait', name: '', detail: '' }];
+  const item = current.connections[index] || { type: 'connection', image: '', imageFormat: 'portrait', name: '', detail: '' };
   item[field] = String(input.value || '').trim();
   current.connections[index] = item;
   page.biography = sanitizeBiographyData(current);
   scheduleInlineModuleLivePreviewRefresh();
 }
 
-function addInlineBiographyConnectionRow() {
+function addInlineBiographyConnectionRow(kind = 'connection') {
   const page = getInlineDraftPage();
   if (!page) return;
   const current = getInlineBiographyDataForEdit(page);
-  current.connections.push({ image: '', name: 'Neue Verbindung', detail: '' });
+  current.connections.push(kind === 'heading'
+    ? { type: 'heading', title: 'Neue Gruppe', detail: '' }
+    : { type: 'connection', image: '', imageFormat: 'portrait', name: 'Neue Verbindung', detail: '' });
   page.biography = sanitizeBiographyData(current);
   renderPage(currentPage, 0);
 }
@@ -303,8 +305,11 @@ function buildInlineBiographyEditor(page) {
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Verbindungen</span>
           <div class="inline-edit-head">
-            <div class="inline-placeholder-note">Bild, Name und Beziehung der verbundenen Person.</div>
-            <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-connection">+ Verbindung</button>
+            <div class="inline-placeholder-note">Trenner fuer Gruppen oder Bild, Name und Beziehung einer Verbindung.</div>
+            <span>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-connection" data-biography-connection-kind="heading">+ Trenner</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-connection" data-biography-connection-kind="connection">+ Verbindung</button>
+            </span>
           </div>
           <div class="biography-edit-list">${buildBiographyConnectionRows(biography.connections, 'inline')}</div>
         </div>

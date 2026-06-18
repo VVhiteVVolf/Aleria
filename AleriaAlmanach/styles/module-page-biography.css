@@ -214,12 +214,45 @@
     border: 1px solid rgba(139,105,20,0.35);
     background: rgba(80,50,20,0.12);
   }
+  .biography-connection img.landscape,
+  .biography-connection-placeholder.landscape {
+    width: 4.4rem;
+    height: min(var(--biography-connection-height), 3rem);
+    object-position: center;
+  }
   .biography-connection-placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--gold);
     font-family: 'Cinzel', serif;
+  }
+  .biography-connection-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0.65rem 0 0.1rem;
+    color: var(--gold);
+  }
+  .biography-connection-heading::before,
+  .biography-connection-heading::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, rgba(139,105,20,0.55), transparent);
+  }
+  .biography-connection-heading strong {
+    font: 700 0.62rem/1 'Cinzel', serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .biography-connection-heading span {
+    display: block;
+    margin-left: -0.35rem;
+    font-size: 0.68rem;
+    font-style: italic;
+    color: var(--ink-faded);
   }
   .biography-footer {
     grid-column: 1 / -1;
@@ -252,7 +285,10 @@
     min-height: 4.2rem;
   }
   .biography-edit-row.connection {
-    grid-template-columns: minmax(8rem, 1fr) minmax(7rem, 0.8fr) minmax(0, 1.2fr) auto;
+    grid-template-columns: minmax(8rem, 1fr) minmax(7rem, 0.55fr) minmax(7rem, 0.8fr) minmax(0, 1.2fr) auto;
+  }
+  .biography-edit-row.connection-heading {
+    grid-template-columns: minmax(9rem, 0.85fr) minmax(0, 1.3fr) auto;
   }
   .biography-edit-row.document {
     grid-template-columns: minmax(8rem, 0.9fr) minmax(10rem, 1.2fr) auto;

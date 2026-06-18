@@ -1368,7 +1368,8 @@ function createObjectProfileTemplatePages() {
         quotes: ['„Ein markantes Zitat der Person.“'],
         connectionsTitle: 'Verbindungen',
         connections: [
-          { name: 'Verbündete Person', detail: 'Rolle oder Beziehung', image: '' }
+          { type: 'heading', title: 'Personen', detail: '' },
+          { type: 'connection', name: 'Verbündete Person', detail: 'Rolle oder Beziehung', image: '', imageFormat: 'portrait' }
         ],
         documentsTitle: 'Dokumente & Aufzeichnungen',
         documents: ['Archivnotiz oder Dokument'],

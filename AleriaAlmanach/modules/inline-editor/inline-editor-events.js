@@ -153,7 +153,7 @@ function handleInlineEditorActionClick(event) {
     return;
   }
   if (action === 'add-biography-connection') {
-    addInlineBiographyConnectionRow();
+    addInlineBiographyConnectionRow(trigger.dataset.biographyConnectionKind || 'connection');
     return;
   }
   if (action === 'remove-biography-connection') {
