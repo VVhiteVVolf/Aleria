@@ -3,12 +3,18 @@ function getGoodsCategoryLabel(table, categoryId) {
   return category?.label || categoryId.replace(/-/g, ' ');
 }
 
-function buildGoodsImage(src, className, fallback = '', alt = '') {
+function buildGoodsImage(src, className, fallback = '', alt = '', options = {}) {
   const image = sanitizeImageSrc(src || '');
+  const classes = [
+    className,
+    options.format || '',
+    options.fit === 'cover' ? 'is-cover' : options.fit === 'contain' ? 'is-contain' : '',
+    options.position ? `position-${options.position}` : ''
+  ].filter(Boolean).join(' ');
   if (image) {
-    return `<span class="${className}"><img src="${image}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async"></span>`;
+    return `<span class="${escapeHtml(classes)}"><img src="${image}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async"></span>`;
   }
-  return `<span class="${className} placeholder">${escapeHtml(fallback || '+')}</span>`;
+  return `<span class="${escapeHtml(`${classes} placeholder`)}">${escapeHtml(fallback || '+')}</span>`;
 }
 
 function buildGoodsFilterControls(table, scopeId) {
@@ -26,13 +32,27 @@ function getGoodsRowCellValue(row, columnId) {
   return String(row?.values?.[columnId] || '').trim();
 }
 
+function getGoodsItemImageStyle(row) {
+  const size = Number(row?.imageSize);
+  const safeSize = Number.isFinite(size) ? Math.max(42, Math.min(132, Math.round(size))) : 72;
+  return `--goods-image-size:${safeSize}px;`;
+}
+
+function getGoodsItemImageOptions(row) {
+  return {
+    format: row?.imageFormat || 'landscape',
+    fit: row?.imageFit || 'contain',
+    position: row?.imagePosition || 'center'
+  };
+}
+
 function buildGoodsCell(row, column, goods, table, rowIndex) {
   const value = getGoodsRowCellValue(row, column.id);
   if (column.id === 'name') {
     const fallback = getInitialChar(value || rowIndex + 1);
     return `
-        <td class="goods-name-cell">
-          ${buildGoodsImage(row.image, 'goods-item-image', fallback, value)}
+        <td class="goods-name-cell" style="${escapeHtml(getGoodsItemImageStyle(row))}">
+          ${buildGoodsImage(row.image, 'goods-item-image', fallback, value, getGoodsItemImageOptions(row))}
           <strong>${escapeHtml(value || 'Ware')}</strong>
         </td>`;
   }

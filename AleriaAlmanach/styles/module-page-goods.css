@@ -187,8 +187,9 @@
 }
 
 .goods-name-cell {
+  --goods-image-size: 72px;
   display: grid;
-  grid-template-columns: 78px minmax(0, 1fr);
+  grid-template-columns: minmax(calc(var(--goods-image-size) + 12px), auto) minmax(0, 1fr);
   gap: 14px;
   align-items: center;
 }
@@ -200,8 +201,52 @@
 }
 
 .goods-item-image {
-  width: 72px;
-  height: 56px;
+  justify-self: center;
+  width: var(--goods-image-size);
+  height: calc(var(--goods-image-size) * 0.78);
+}
+
+.goods-item-image.square {
+  width: var(--goods-image-size);
+  height: var(--goods-image-size);
+}
+
+.goods-item-image.portrait {
+  width: calc(var(--goods-image-size) * 0.72);
+  height: calc(var(--goods-image-size) * 1.16);
+}
+
+.goods-item-image.landscape {
+  width: var(--goods-image-size);
+  height: calc(var(--goods-image-size) * 0.78);
+}
+
+.goods-item-image.is-contain img {
+  object-fit: contain;
+}
+
+.goods-item-image.is-cover img {
+  object-fit: cover;
+}
+
+.goods-item-image.position-top img {
+  object-position: center top;
+}
+
+.goods-item-image.position-center img {
+  object-position: center center;
+}
+
+.goods-item-image.position-bottom img {
+  object-position: center bottom;
+}
+
+.goods-item-image.position-left img {
+  object-position: left center;
+}
+
+.goods-item-image.position-right img {
+  object-position: right center;
 }
 
 .goods-kind {
@@ -498,6 +543,28 @@
   gap: 0.45rem;
 }
 
+.goods-row-image-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(7rem, 1fr));
+  gap: 0.45rem;
+  padding: 0.45rem;
+  border: 1px dashed rgba(93, 68, 42, 0.22);
+  background: rgba(255, 249, 229, 0.18);
+}
+
+.goods-row-image-controls label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.goods-row-image-controls span {
+  color: #8b6a33;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .goods-row-cell-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
@@ -536,7 +603,8 @@
   }
 
   .goods-table-editor-grid,
-  .goods-row-meta {
+  .goods-row-meta,
+  .goods-row-image-controls {
     grid-template-columns: 1fr;
   }
 }

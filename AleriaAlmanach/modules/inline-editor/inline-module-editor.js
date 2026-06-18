@@ -25,7 +25,9 @@ function getInlinePageDefaultImageFitForSync(page) {
 }
 
 function getInlinePageImageWidthMaxForSync(page) {
-  return page?.castePage ? 160 : 70;
+  if (page?.castePage) return 160;
+  if (page?.questFilePage || page?.biographyPage) return 100;
+  return 70;
 }
 
 function getInlinePageDefaultImagePositionForSync(page) {

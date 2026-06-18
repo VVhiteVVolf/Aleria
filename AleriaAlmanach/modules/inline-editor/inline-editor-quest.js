@@ -22,6 +22,8 @@ function addInlineQuestFileListRow(listName) {
   const current = getInlineQuestFileDataForEdit(page);
   if (listName === 'sectionThreeItems') {
     current.sectionThreeItems.push({ title: 'Neues Ziel', detail: '' });
+  } else if (listName === 'extraSections') {
+    current.extraSections.push({ position: 'afterSectionTwo', title: 'Neuer Abschnitt', text: '' });
   } else if (listName === 'contacts') {
     current.contacts.push({ image: '', name: 'Kontaktperson', title: '' });
   } else if (listName === 'trivia') {
@@ -56,6 +58,10 @@ function updateInlineQuestFileListField(input) {
     const item = current[listName][index] || { title: '', detail: '' };
     item[field] = value;
     current[listName][index] = item;
+  } else if (listName === 'extraSections') {
+    const item = current.extraSections[index] || { position: 'afterSectionTwo', title: '', text: '' };
+    item[field] = value;
+    current.extraSections[index] = item;
   } else if (listName === 'contacts') {
     const item = current.contacts[index] || { image: '', name: '', title: '' };
     item[field] = value;
@@ -68,6 +74,40 @@ function updateInlineQuestFileListField(input) {
 
   page.questFile = sanitizeQuestFileData(current);
   scheduleInlineModuleLivePreviewRefresh();
+}
+
+function buildInlineQuestFieldSelect(label, field, value, options = []) {
+  return `
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">${escapeHtml(label)}</span>
+          <select class="inline-edit-select" data-inline-action="update-quest-file-field" data-quest-file-field="${escapeHtml(field)}">
+            ${options.map(option => `<option value="${escapeHtml(option.value)}"${String(value || '') === option.value ? ' selected' : ''}>${escapeHtml(option.label)}</option>`).join('')}
+          </select>
+        </div>`;
+}
+
+function buildInlineQuestClientPortraitControls(questFile) {
+  return `
+        ${buildInlineQuestFieldSelect('Auftraggeber-Bildformat', 'clientPortraitFormat', questFile.clientPortraitFormat, [
+          { value: 'portrait', label: 'Hochformat' },
+          { value: 'landscape', label: 'Querformat' },
+          { value: 'square', label: 'Quadratisch' }
+        ])}
+        ${buildInlineQuestFieldSelect('Auftraggeber-Bildfuelle', 'clientPortraitFit', questFile.clientPortraitFit, [
+          { value: 'cover', label: 'Fuellen / croppen' },
+          { value: 'contain', label: 'Ganzes Bild' }
+        ])}
+        ${buildInlineQuestFieldSelect('Auftraggeber-Ausschnitt', 'clientPortraitPosition', questFile.clientPortraitPosition, [
+          { value: 'top', label: 'Oben' },
+          { value: 'center', label: 'Mitte' },
+          { value: 'bottom', label: 'Unten' },
+          { value: 'left', label: 'Links' },
+          { value: 'right', label: 'Rechts' }
+        ])}
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Auftraggeber-Groesse</span>
+          <input class="inline-edit-input" type="number" min="44" max="150" step="1" data-inline-action="update-quest-file-field" data-quest-file-field="clientPortraitSize" value="${escapeHtml(questFile.clientPortraitSize)}">
+        </div>`;
 }
 
 function buildInlineQuestFileEditor(entry, page) {
@@ -125,6 +165,7 @@ function buildInlineQuestFileEditor(entry, page) {
           <span class="inline-edit-label">Auftraggeber-Portrait</span>
           <input class="inline-edit-input" type="url" data-inline-action="update-quest-file-field" data-quest-file-field="clientPortrait" value="${escapeHtml(questFile.clientPortrait)}" placeholder="https://i.imgur.com/...">
         </div>
+        ${buildInlineQuestClientPortraitControls(questFile)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Auftraggeber-Name</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-quest-file-field" data-quest-file-field="clientName" value="${escapeHtml(questFile.clientName)}">
@@ -169,6 +210,14 @@ function buildInlineQuestFileEditor(entry, page) {
           <input class="inline-edit-input" type="url" data-inline-action="update-quest-file-field" data-quest-file-field="sketchImage" value="${escapeHtml(questFile.sketchImage)}" placeholder="https://i.imgur.com/...">
         </div>
       </div>
+    </div>
+    <div class="inline-edit-section">
+      <div class="inline-edit-head">
+        <div class="inline-edit-kicker">Zusatzabschnitte Mitte</div>
+        <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="extraSections">+ Abschnitt</button>
+      </div>
+      <div class="inline-placeholder-note">Abschnitte koennen nach Auftragsbeschreibung, nach Hintergrund oder direkt unter Ziele erscheinen.</div>
+      <div class="quest-file-edit-list">${buildQuestFileExtraSectionRows(questFile.extraSections, 'inline')}</div>
     </div>
     <div class="inline-edit-section">
       <div class="inline-edit-head">

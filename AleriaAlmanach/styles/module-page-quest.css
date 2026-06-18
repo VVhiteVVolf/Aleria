@@ -114,6 +114,7 @@
     padding: 1.05rem 1.5rem;
     display: grid;
     grid-auto-rows: auto;
+    justify-items: stretch;
     align-content: start;
     gap: 0.9rem;
   }
@@ -124,6 +125,21 @@
     box-shadow: 0 10px 22px rgba(80,50,20,0.14);
     background: rgba(255,255,255,0.16);
     overflow: hidden;
+  }
+  .quest-file-hero-image.default {
+    aspect-ratio: 1.4 / 1;
+  }
+  .quest-file-hero-image.square {
+    aspect-ratio: 1 / 1;
+  }
+  .quest-file-hero-image.landscape {
+    aspect-ratio: 16 / 9;
+  }
+  .quest-file-hero-image.semi {
+    aspect-ratio: 4 / 3;
+  }
+  .quest-file-hero-image.tall {
+    aspect-ratio: 4 / 5;
   }
   .quest-file-hero-image img {
     width: 100%;
@@ -161,25 +177,58 @@
   .quest-file-client-card { padding: 0.8rem; }
   .quest-file-client-head {
     display: grid;
-    grid-template-columns: 4.4rem minmax(0,1fr) auto;
+    grid-template-columns: auto minmax(0,1fr) auto;
     gap: 0.7rem;
-    align-items: center;
+    align-items: start;
     margin-bottom: 0.75rem;
   }
-  .quest-file-client-portrait,
-  .quest-file-client-portrait.placeholder {
-    width: 4.4rem;
-    height: 4.4rem;
-    object-fit: cover;
+  .quest-file-client-portrait-frame {
+    --quest-client-portrait-size: 72px;
+    display: grid;
+    place-items: center;
+    width: var(--quest-client-portrait-size);
+    height: var(--quest-client-portrait-size);
     border: 1px solid rgba(139,105,20,0.36);
     background: rgba(80,50,20,0.1);
+    overflow: hidden;
   }
-  .quest-file-client-portrait.placeholder,
-  .quest-file-contact-placeholder,
-  .quest-file-reward-placeholder {
+  .quest-file-client-portrait-frame.portrait {
+    width: calc(var(--quest-client-portrait-size) * 0.72);
+    height: calc(var(--quest-client-portrait-size) * 1.14);
+  }
+  .quest-file-client-portrait-frame.landscape {
+    width: calc(var(--quest-client-portrait-size) * 1.36);
+    height: calc(var(--quest-client-portrait-size) * 0.78);
+  }
+  .quest-file-client-portrait-frame.square {
+    width: var(--quest-client-portrait-size);
+    height: var(--quest-client-portrait-size);
+  }
+  .quest-file-client-portrait-frame img,
+  .quest-file-client-portrait-frame.placeholder > span {
+    width: 100%;
+    height: 100%;
+  }
+  .quest-file-client-portrait-frame img {
+    display: block;
+    object-fit: cover;
+  }
+  .quest-file-client-portrait-frame.is-contain img {
+    object-fit: contain;
+  }
+  .quest-file-client-portrait-frame.position-top img { object-position: center top; }
+  .quest-file-client-portrait-frame.position-center img { object-position: center center; }
+  .quest-file-client-portrait-frame.position-bottom img { object-position: center bottom; }
+  .quest-file-client-portrait-frame.position-left img { object-position: left center; }
+  .quest-file-client-portrait-frame.position-right img { object-position: right center; }
+  .quest-file-client-portrait-frame.placeholder > span {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .quest-file-client-portrait-frame.placeholder,
+  .quest-file-contact-image.placeholder,
+  .quest-file-reward-image.placeholder {
     color: var(--gold);
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -248,6 +297,10 @@
   }
   .quest-file-center-section {
     padding: 0.9rem 1rem;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    box-sizing: border-box;
     color: var(--ink);
     font-size: 0.88rem;
     line-height: 1.72;
@@ -266,6 +319,11 @@
   }
   .quest-file-center-section.objectives {
     background: rgba(255,255,255,0.12);
+  }
+  .quest-file-center-section.extra {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04)),
+      rgba(232,214,166,0.13);
   }
   .quest-file-sketch {
     margin: 0;
@@ -330,27 +388,63 @@
   .quest-file-contact,
   .quest-file-reward {
     display: grid;
-    grid-template-columns: 2.35rem minmax(0,1fr);
+    grid-template-columns: auto minmax(0,1fr);
     gap: 0.58rem;
-    align-items: center;
+    align-items: start;
     margin-bottom: 0.58rem;
   }
   .quest-file-contact:last-child,
   .quest-file-reward:last-child {
     margin-bottom: 0;
   }
-  .quest-file-contact img,
-  .quest-file-contact-placeholder,
-  .quest-file-reward img,
-  .quest-file-reward-placeholder {
-    width: 2.35rem;
-    height: 2.35rem;
-    object-fit: cover;
+  .quest-file-contact-image,
+  .quest-file-reward-image {
+    --quest-image-size: 56px;
+    display: grid;
+    place-items: center;
+    width: var(--quest-image-size);
+    height: var(--quest-image-size);
     border: 1px solid rgba(139,105,20,0.34);
     background: rgba(80,50,20,0.1);
+    overflow: hidden;
   }
-  .quest-file-reward img,
-  .quest-file-reward-placeholder {
+  .quest-file-contact-image.portrait,
+  .quest-file-reward-image.portrait {
+    width: calc(var(--quest-image-size) * 0.72);
+    height: calc(var(--quest-image-size) * 1.14);
+  }
+  .quest-file-contact-image.landscape,
+  .quest-file-reward-image.landscape {
+    width: calc(var(--quest-image-size) * 1.36);
+    height: calc(var(--quest-image-size) * 0.78);
+  }
+  .quest-file-contact-image.square,
+  .quest-file-reward-image.square {
+    width: var(--quest-image-size);
+    height: var(--quest-image-size);
+  }
+  .quest-file-contact-image img,
+  .quest-file-reward-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .quest-file-contact-image.is-contain img,
+  .quest-file-reward-image.is-contain img {
+    object-fit: contain;
+  }
+  .quest-file-contact-image.position-top img,
+  .quest-file-reward-image.position-top img { object-position: center top; }
+  .quest-file-contact-image.position-center img,
+  .quest-file-reward-image.position-center img { object-position: center center; }
+  .quest-file-contact-image.position-bottom img,
+  .quest-file-reward-image.position-bottom img { object-position: center bottom; }
+  .quest-file-contact-image.position-left img,
+  .quest-file-reward-image.position-left img { object-position: left center; }
+  .quest-file-contact-image.position-right img,
+  .quest-file-reward-image.position-right img { object-position: right center; }
+  .quest-file-reward-image {
     border-radius: 3px;
   }
   .quest-file-footer {
@@ -380,5 +474,48 @@
   .quest-file-edit-row.contact,
   .quest-file-edit-row.reward {
     grid-template-columns: minmax(9rem, 1fr) minmax(8rem, 0.9fr) minmax(10rem, 1.1fr) auto;
+  }
+  .quest-file-edit-row.extra {
+    grid-template-columns: minmax(10rem, 0.8fr) minmax(12rem, 1.1fr) auto;
+  }
+  .quest-file-edit-row.extra textarea {
+    grid-column: 1 / -1;
+    min-height: 5rem;
+  }
+  .quest-file-image-control-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(7rem, 1fr));
+    gap: 0.42rem;
+    padding: 0.45rem;
+    border: 1px solid rgba(139,105,20,0.18);
+    background: rgba(255,255,255,0.12);
+  }
+  .quest-file-image-control-grid label {
+    display: grid;
+    gap: 0.24rem;
+  }
+  .quest-file-image-control-grid span {
+    color: var(--gold);
+    font: 700 0.52rem/1.2 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1180px) {
+    .quest-file-image-control-grid {
+      grid-template-columns: repeat(2, minmax(7rem, 1fr));
+    }
+  }
+
+  @media (max-width: 980px) {
+    .quest-file-layout {
+      grid-template-columns: 1fr;
+    }
+    .quest-file-left-panel,
+    .quest-file-right-panel {
+      border: 0;
+      border-bottom: 1px solid rgba(139,105,20,0.22);
+    }
   }
 

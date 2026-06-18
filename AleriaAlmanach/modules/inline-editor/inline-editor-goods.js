@@ -69,7 +69,15 @@ function getInlineGoodsDefaultRow(listName, table = null, nextIndex = 0, categor
     (table?.columns || getDefaultGoodsColumns()).forEach(column => {
       values[column.id] = column.id === 'name' ? 'Neue Ware' : '';
     });
-    return { image: '', category: categoryId || 'allgemein', values };
+    return {
+      image: '',
+      imageFormat: 'landscape',
+      imageFit: 'contain',
+      imagePosition: 'center',
+      imageSize: 72,
+      category: categoryId || 'allgemein',
+      values
+    };
   }
   if (listName === 'infoRows') return { icon: '*', label: 'Neuer Punkt', value: '' };
   if (listName === 'offers') return { image: '', name: 'Neues Angebot', price: '' };

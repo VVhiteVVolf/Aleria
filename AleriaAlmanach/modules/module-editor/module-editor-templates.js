@@ -610,6 +610,7 @@ function createDefaultQuestFilePage(index = 0) {
   return {
     pageTitle: `${getRomanPageLabel(index)} — Questakte`,
     image: '',
+    imageWidth: 100,
     questFilePage: true,
     stats: [
       ['Status', 'Offen'],
@@ -625,6 +626,10 @@ function createDefaultQuestFilePage(index = 0) {
       clientName: 'Auftraggeber',
       clientTitle: 'Titel / Zugehörigkeit',
       clientPortrait: '',
+      clientPortraitFormat: 'portrait',
+      clientPortraitFit: 'cover',
+      clientPortraitPosition: 'top',
+      clientPortraitSize: 72,
       clientNote: 'Persönliche Bitte, Warnung oder Schreiben des Auftraggebers.',
       sectionOneTitle: 'Auftragsbeschreibung',
       sectionOneText: 'Beschreibe, was geschehen ist, warum die Quest begonnen hat und was auf dem Spiel steht.',
@@ -636,9 +641,10 @@ function createDefaultQuestFilePage(index = 0) {
         { title: 'Folgt der Spur.', detail: 'Nächster Schritt der Quest.' },
         { title: 'Trefft eine Entscheidung.', detail: 'Mögliche Konsequenzen oder Wahl.' }
       ],
+      extraSections: [],
       contactsTitle: 'Zugehörige Charaktere',
       contacts: [
-        { image: '', name: 'Kontaktperson', title: 'Rolle / Bezug zur Quest' }
+        { image: '', imageFormat: 'portrait', imageFit: 'cover', imagePosition: 'top', imageSize: 56, name: 'Kontaktperson', title: 'Rolle / Bezug zur Quest' }
       ],
       triviaTitle: 'Orte von Interesse',
       trivia: [
@@ -646,8 +652,8 @@ function createDefaultQuestFilePage(index = 0) {
       ],
       rewardsTitle: 'Belohnung',
       rewards: [
-        { image: '', title: 'Gold', detail: 'Betrag oder Wert' },
-        { image: '', title: 'Ansehen', detail: 'Fraktion oder Ort' }
+        { image: '', imageFormat: 'square', imageFit: 'contain', imagePosition: 'center', imageSize: 48, title: 'Gold', detail: 'Betrag oder Wert' },
+        { image: '', imageFormat: 'square', imageFit: 'contain', imagePosition: 'center', imageSize: 48, title: 'Ansehen', detail: 'Fraktion oder Ort' }
       ],
       noteTitle: 'Notizen des Auftraggebers',
       note: 'Abschließende Notiz, Warnung oder persönlicher Zusatz.',
@@ -679,6 +685,7 @@ function createDefaultHierarchyPage(index = 0) {
       layoutMode: 'vertical',
       cardFontScale: 92,
       portraitScale: 100,
+      chartScale: 100,
       eyebrow: 'Hierarchie',
       subtitle: 'Organisationsstruktur der Gilde',
       centerLabel: 'Gilde der Wahrheitswaage',

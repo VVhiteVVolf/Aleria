@@ -657,16 +657,83 @@ function buildQuestFileBulletRows(items = []) {
     </ul>`;
 }
 
+function getQuestFileHeroImageStyleClass(page) {
+  if (page?.imageTall) return 'tall';
+  if (page?.imageSquare) return 'square';
+  if (page?.imageLandscape) return 'landscape';
+  if (page?.imageSemiLandscape) return 'semi';
+  return 'default';
+}
+
+function getQuestFileImageFormatClass(value, fallback = 'portrait') {
+  const format = String(value || '').trim();
+  return ['portrait', 'landscape', 'square'].includes(format) ? format : fallback;
+}
+
+function getQuestFileImageFitClass(value, fallback = 'cover') {
+  const fit = String(value || '').trim();
+  return ['cover', 'contain'].includes(fit) ? fit : fallback;
+}
+
+function getQuestFileImagePositionClass(value, fallback = 'top') {
+  const position = String(value || '').trim();
+  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : fallback;
+}
+
+function getQuestFileImageSizeStyle(value, fallback = 56, min = 30, max = 150, cssVar = '--quest-image-size') {
+  const number = Number(value);
+  const size = Number.isFinite(number) ? Math.max(min, Math.min(max, Math.round(number))) : fallback;
+  return `${cssVar}:${size}px;`;
+}
+
+function buildQuestFileListImage(item, kind, fallbackText = '*') {
+  const image = sanitizeImageSrc(item.image || '');
+  const format = getQuestFileImageFormatClass(item.imageFormat, kind === 'reward' ? 'square' : 'portrait');
+  const fit = getQuestFileImageFitClass(item.imageFit, kind === 'reward' ? 'contain' : 'cover');
+  const position = getQuestFileImagePositionClass(item.imagePosition, kind === 'reward' ? 'center' : 'top');
+  const sizeStyle = getQuestFileImageSizeStyle(item.imageSize, kind === 'reward' ? 48 : 56);
+  const className = `quest-file-${kind}-image ${format} is-${fit} position-${position}`;
+  if (image) {
+    return `<span class="${className}" style="${sizeStyle}"><img src="${image}" alt="" loading="lazy" decoding="async"></span>`;
+  }
+  return `<span class="${className} placeholder" style="${sizeStyle}">${escapeHtml(getInitialChar(fallbackText))}</span>`;
+}
+
+function buildQuestFileClientPortrait(data, clientPortrait) {
+  const format = getQuestFileImageFormatClass(data.clientPortraitFormat, 'portrait');
+  const fit = getQuestFileImageFitClass(data.clientPortraitFit, 'cover');
+  const position = getQuestFileImagePositionClass(data.clientPortraitPosition, 'top');
+  const sizeStyle = getQuestFileImageSizeStyle(data.clientPortraitSize, 72, 44, 150, '--quest-client-portrait-size');
+  const className = `quest-file-client-portrait-frame ${format} is-${fit} position-${position}`;
+  if (clientPortrait) {
+    return `
+      <span class="${className}" style="${sizeStyle}">
+        <img class="quest-file-client-portrait" src="${clientPortrait}" alt="${escapeHtml(data.clientName || 'Auftraggeber')}" loading="lazy" decoding="async">
+      </span>`;
+  }
+  return `
+      <span class="${className} placeholder" style="${sizeStyle}">
+        <span>${escapeHtml(getInitialChar(data.clientName || 'A'))}</span>
+      </span>`;
+}
+
+function buildQuestFileExtraSections(items = [], position = '') {
+  const rows = sanitizeQuestExtraSections(items).filter(item => item.position === position);
+  if (!rows.length) return '';
+  return rows.map(section => `
+    <section class="quest-file-center-section extra">
+      ${section.title ? `<h3>${escapeHtml(section.title)}</h3>` : ''}
+      ${renderQuestFileText(section.text)}
+    </section>`).join('');
+}
+
 function buildQuestFileContacts(items = []) {
   const contacts = sanitizeQuestContacts(items);
   if (!contacts.length) return '';
   return contacts.map(contact => {
-    const image = sanitizeImageSrc(contact.image || '');
     return `
       <div class="quest-file-contact">
-        ${image
-          ? `<img src="${image}" alt="${escapeHtml(contact.name || 'Kontakt')}" loading="lazy" decoding="async">`
-          : `<div class="quest-file-contact-placeholder">${getInitialChar(contact.name || 'K')}</div>`}
+        ${buildQuestFileListImage(contact, 'contact', contact.name || 'K')}
         <div>
           <strong>${escapeHtml(contact.name || 'Unbenannt')}</strong>
           ${contact.title ? `<span>${escapeHtml(contact.title)}</span>` : ''}
@@ -679,12 +746,9 @@ function buildQuestFileRewards(items = []) {
   const rewards = sanitizeQuestRewards(items);
   if (!rewards.length) return '';
   return rewards.map(reward => {
-    const image = sanitizeImageSrc(reward.image || '');
     return `
       <div class="quest-file-reward">
-        ${image
-          ? `<img src="${image}" alt="" loading="lazy" decoding="async">`
-          : `<div class="quest-file-reward-placeholder">+</div>`}
+        ${buildQuestFileListImage(reward, 'reward', reward.title || '+')}
         <div>
           <strong>${escapeHtml(reward.title || 'Belohnung')}</strong>
           ${reward.detail ? `<span>${escapeHtml(reward.detail)}</span>` : ''}
@@ -730,7 +794,7 @@ function buildQuestFilePage(page, entry, pageIndex, total) {
       </header>
       <div class="quest-file-layout">
         <aside class="quest-file-left-panel">
-          <div class="quest-file-hero-image"${buildModuleImageFrameAttrs(page)}>
+          <div class="quest-file-hero-image ${getQuestFileHeroImageStyleClass(page)}"${buildModuleImageFrameAttrs(page)}>
             ${heroImage
               ? `<img src="${heroImage}" alt="${escapeHtml(entry.title || 'Questbild')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`
               : `<div class="quest-file-image-placeholder">Bildplatzhalter</div>`}
@@ -738,9 +802,7 @@ function buildQuestFilePage(page, entry, pageIndex, total) {
           <div class="quest-file-separator"></div>
           <section class="quest-file-client-card">
             <div class="quest-file-client-head">
-              ${clientPortrait
-                ? `<img class="quest-file-client-portrait" src="${clientPortrait}" alt="${escapeHtml(data.clientName || 'Auftraggeber')}" loading="lazy" decoding="async">`
-                : `<div class="quest-file-client-portrait placeholder">${getInitialChar(data.clientName || 'A')}</div>`}
+              ${buildQuestFileClientPortrait(data, clientPortrait)}
               <div class="quest-file-client-meta">
                 <strong>${escapeHtml(data.clientName || 'Auftraggeber')}</strong>
                 ${data.clientTitle ? `<span>${escapeHtml(data.clientTitle)}</span>` : ''}
@@ -756,6 +818,7 @@ function buildQuestFilePage(page, entry, pageIndex, total) {
             <h3>${escapeHtml(data.sectionOneTitle)}</h3>
             ${renderQuestFileText(data.sectionOneText)}
           </section>
+          ${buildQuestFileExtraSections(data.extraSections, 'afterSectionOne')}
           ${sketchImage ? `
             <figure class="quest-file-sketch">
               <img src="${sketchImage}" alt="" loading="lazy" decoding="async">
@@ -764,10 +827,12 @@ function buildQuestFilePage(page, entry, pageIndex, total) {
             <h3>${escapeHtml(data.sectionTwoTitle)}</h3>
             ${renderQuestFileText(data.sectionTwoText)}
           </section>
+          ${buildQuestFileExtraSections(data.extraSections, 'afterSectionTwo')}
           <section class="quest-file-center-section objectives">
             <h3>${escapeHtml(data.sectionThreeTitle)}</h3>
             ${buildQuestFileBulletRows(data.sectionThreeItems)}
           </section>
+          ${buildQuestFileExtraSections(data.extraSections, 'afterObjectives')}
         </main>
         <aside class="quest-file-right-panel">
           ${contactsBlock}

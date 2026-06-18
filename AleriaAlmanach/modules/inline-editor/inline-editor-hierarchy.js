@@ -108,7 +108,7 @@ function addInlineHierarchyNode(levelIndex) {
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
   const level = data.levels[levelIndex];
-  if (!level || level.nodes.length >= 4) return;
+  if (!level || level.nodes.length >= 6) return;
   level.nodes.push({ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' });
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
@@ -191,7 +191,7 @@ function buildInlineHierarchyLevelRows(levels = []) {
       <div class="module-card-layout-block-head">
         <div>
           <div class="inline-edit-kicker">Ebene ${levelIndex + 1}</div>
-          <div class="module-editor-help">Bis zu 4 Knoten pro Ebene.</div>
+          <div class="module-editor-help">Bis zu 6 Knoten pro Ebene.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="-1">Hoch</button>
@@ -231,6 +231,10 @@ function buildInlineHierarchyEditor(page) {
         <div class="inline-edit-field">
           <span class="inline-edit-label">Kartenbilder (%)</span>
           <input class="inline-edit-input" type="number" min="50" max="160" step="1" value="${escapeHtml(data.portraitScale)}" data-inline-action="update-hierarchy-field" data-hierarchy-field="portraitScale">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Aufbau-Groesse (%)</span>
+          <input class="inline-edit-input" type="range" min="65" max="135" step="1" value="${escapeHtml(data.chartScale)}" data-inline-action="update-hierarchy-field" data-hierarchy-field="chartScale">
         </div>
         ${[
           ['eyebrow', 'Kopfzeile'],

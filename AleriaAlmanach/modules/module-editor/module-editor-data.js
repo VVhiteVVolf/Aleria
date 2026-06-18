@@ -630,7 +630,7 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
   const nodes = (Array.isArray(level?.nodes) ? level.nodes : [])
     .map((node, nodeIndex) => sanitizeHierarchyNode(node, nodeIndex))
     .filter(node => node.portrait || node.title || node.subtitle || node.text)
-    .slice(0, 4);
+    .slice(0, 6);
   return {
     label: String(level?.label || '').trim(),
     nodes
@@ -649,6 +649,7 @@ function sanitizeHierarchyData(data = {}) {
     layoutMode: layoutMode === 'depth' ? 'depth' : 'vertical',
     cardFontScale: clampHierarchyScale(data.cardFontScale, 92, 65, 125),
     portraitScale: clampHierarchyScale(data.portraitScale, 100, 50, 160),
+    chartScale: clampHierarchyScale(data.chartScale, 100, 65, 135),
     eyebrow: String(data.eyebrow || 'Hierarchie').trim(),
     subtitle: String(data.subtitle || 'Organisationsstruktur').trim(),
     centerLabel: String(data.centerLabel || 'Gilde der Wahrheitswaage').trim(),
@@ -795,6 +796,27 @@ function getDefaultGoodsColumns() {
   ];
 }
 
+function sanitizeGoodsImageFormat(value) {
+  const format = String(value || '').trim();
+  return ['landscape', 'portrait', 'square'].includes(format) ? format : 'landscape';
+}
+
+function sanitizeGoodsImageFit(value) {
+  const fit = String(value || '').trim();
+  return ['cover', 'contain'].includes(fit) ? fit : 'contain';
+}
+
+function sanitizeGoodsImagePosition(value) {
+  const position = String(value || '').trim();
+  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : 'center';
+}
+
+function clampGoodsImageSize(value) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : 72;
+  return Math.max(42, Math.min(132, Math.round(safe)));
+}
+
 function sanitizeGoodsColumns(items = []) {
   const source = Array.isArray(items) && items.length ? items : getDefaultGoodsColumns();
   const used = new Set();
@@ -836,6 +858,10 @@ function sanitizeGoodsRows(items = [], columns = getDefaultGoodsColumns()) {
       });
       return {
         image: String(item?.image || item?.icon || '').trim(),
+        imageFormat: sanitizeGoodsImageFormat(item?.imageFormat),
+        imageFit: sanitizeGoodsImageFit(item?.imageFit),
+        imagePosition: sanitizeGoodsImagePosition(item?.imagePosition),
+        imageSize: clampGoodsImageSize(item?.imageSize),
         category: slugify(item?.category || item?.categoryId || getGoodsRowValue(item, 'kind') || 'sonstiges', 'sonstiges'),
         values
       };
@@ -848,6 +874,10 @@ function sanitizeGoodsItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map(item => ({
       image: String(item?.image || item?.icon || '').trim(),
+      imageFormat: sanitizeGoodsImageFormat(item?.imageFormat),
+      imageFit: sanitizeGoodsImageFit(item?.imageFit),
+      imagePosition: sanitizeGoodsImagePosition(item?.imagePosition),
+      imageSize: clampGoodsImageSize(item?.imageSize),
       name: String(item?.name || item?.title || '').trim(),
       kind: String(item?.kind || item?.type || '').trim(),
       category: slugify(item?.category || item?.categoryId || item?.kind || 'sonstiges', 'sonstiges'),
@@ -1171,10 +1201,50 @@ function sanitizeQuestFileRows(items = []) {
     .slice(0, 18);
 }
 
+function sanitizeQuestImageFormat(value) {
+  const format = String(value || '').trim();
+  return ['landscape', 'portrait', 'square'].includes(format) ? format : 'portrait';
+}
+
+function sanitizeQuestImageFit(value) {
+  const fit = String(value || '').trim();
+  return ['cover', 'contain'].includes(fit) ? fit : 'cover';
+}
+
+function sanitizeQuestImagePosition(value) {
+  const position = String(value || '').trim();
+  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : 'top';
+}
+
+function clampQuestImageSize(value, fallback = 68, min = 38, max = 150) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(min, Math.min(max, Math.round(safe)));
+}
+
+function sanitizeQuestExtraSections(items = []) {
+  const positions = ['afterSectionOne', 'afterSectionTwo', 'afterObjectives'];
+  return (Array.isArray(items) ? items : [])
+    .map(item => {
+      const position = String(item?.position || '').trim();
+      return {
+        position: positions.includes(position) ? position : 'afterSectionTwo',
+        title: String(item?.title || '').trim(),
+        text: String(item?.text || item?.body || '').trim()
+      };
+    })
+    .filter(item => item.title || item.text)
+    .slice(0, 16);
+}
+
 function sanitizeQuestContacts(items = []) {
   return (Array.isArray(items) ? items : [])
     .map(item => ({
       image: String(item?.image || item?.img || '').trim(),
+      imageFormat: sanitizeQuestImageFormat(item?.imageFormat),
+      imageFit: sanitizeQuestImageFit(item?.imageFit),
+      imagePosition: sanitizeQuestImagePosition(item?.imagePosition),
+      imageSize: clampQuestImageSize(item?.imageSize, 56, 34, 120),
       name: String(item?.name || '').trim(),
       title: String(item?.title || item?.role || '').trim()
     }))
@@ -1186,6 +1256,10 @@ function sanitizeQuestRewards(items = []) {
   return (Array.isArray(items) ? items : [])
     .map(item => ({
       image: String(item?.image || item?.img || '').trim(),
+      imageFormat: sanitizeQuestImageFormat(item?.imageFormat || 'square'),
+      imageFit: sanitizeQuestImageFit(item?.imageFit || 'contain'),
+      imagePosition: sanitizeQuestImagePosition(item?.imagePosition || 'center'),
+      imageSize: clampQuestImageSize(item?.imageSize, 48, 30, 110),
       title: String(item?.title || item?.name || '').trim(),
       detail: String(item?.detail || item?.text || '').trim()
     }))
@@ -1202,6 +1276,10 @@ function sanitizeQuestFileData(data = {}) {
     clientName: String(data.clientName || '').trim(),
     clientTitle: String(data.clientTitle || '').trim(),
     clientPortrait: String(data.clientPortrait || '').trim(),
+    clientPortraitFormat: sanitizeQuestImageFormat(data.clientPortraitFormat),
+    clientPortraitFit: sanitizeQuestImageFit(data.clientPortraitFit),
+    clientPortraitPosition: sanitizeQuestImagePosition(data.clientPortraitPosition),
+    clientPortraitSize: clampQuestImageSize(data.clientPortraitSize, 72, 44, 150),
     clientNote: String(data.clientNote || '').trim(),
     sectionOneTitle: String(data.sectionOneTitle || 'Auftragsbeschreibung').trim(),
     sectionOneText: String(data.sectionOneText || '').trim(),
@@ -1209,6 +1287,7 @@ function sanitizeQuestFileData(data = {}) {
     sectionTwoText: String(data.sectionTwoText || '').trim(),
     sectionThreeTitle: String(data.sectionThreeTitle || 'Ziele').trim(),
     sectionThreeItems: sanitizeQuestFileRows(data.sectionThreeItems),
+    extraSections: sanitizeQuestExtraSections(data.extraSections),
     contactsTitle: String(data.contactsTitle || 'Zugehörige Charaktere').trim(),
     contacts: sanitizeQuestContacts(data.contacts),
     triviaTitle: String(data.triviaTitle || 'Orte von Interesse').trim(),

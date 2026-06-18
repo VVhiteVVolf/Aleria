@@ -42,14 +42,14 @@ function buildHierarchyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0
 
 function buildHierarchyLevelEditorMarkup(level = {}, levelIndex = 0) {
   const nodes = Array.isArray(level.nodes) && level.nodes.length
-    ? level.nodes.slice(0, 4)
+    ? level.nodes.slice(0, 6)
     : [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }];
   return `
     <div class="module-card-layout-block hierarchy-editor-level-row">
       <div class="module-card-layout-block-head">
         <div>
           <div class="inline-edit-kicker">Ebene ${levelIndex + 1}</div>
-          <div class="module-editor-help">Maximal 4 Knoten pro Ebene. Die Ebenen werden im Modul von oben nach unten verbunden.</div>
+          <div class="module-editor-help">Maximal 6 Knoten pro Ebene. Bei breiten Ebenen bekommt der Aufbau im Modul eine eigene Scrollleiste.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-hierarchy-level" data-hierarchy-direction="-1">Hoch</button>
@@ -85,7 +85,7 @@ function collectHierarchyLevelsFromEditor(block) {
       title: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-title'),
       subtitle: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-subtitle'),
       text: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-text')
-    })).filter(node => node.portrait || node.title || node.subtitle || node.text).slice(0, 4)
+    })).filter(node => node.portrait || node.title || node.subtitle || node.text).slice(0, 6)
   })).filter(level => level.label || level.nodes.length);
 }
 
@@ -175,7 +175,7 @@ function moveModuleHierarchyLevel(button) {
 function addModuleHierarchyNode(button) {
   const levelRow = button.closest('.hierarchy-editor-level-row');
   const wrap = levelRow?.querySelector('.hierarchy-editor-node-list');
-  if (!wrap || wrap.querySelectorAll('.hierarchy-editor-node-row').length >= 4) return;
+  if (!wrap || wrap.querySelectorAll('.hierarchy-editor-node-row').length >= 6) return;
   wrap.insertAdjacentHTML('beforeend', buildHierarchyNodeEditorMarkup({ title: 'Neuer Rang' }, 0, wrap.querySelectorAll('.hierarchy-editor-node-row').length));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberHierarchyEditor(levelRow.parentElement);
@@ -217,6 +217,11 @@ function buildHierarchyModuleEditorFields(page) {
             <label>Kartenbilder</label>
             <input class="me-hierarchy-portrait-scale" type="number" min="50" max="160" step="1" value="${escapeHtml(hierarchy.portraitScale)}">
             <div class="module-editor-help">Prozent, Standard 100.</div>
+          </div>
+          <div class="module-editor-field">
+            <label>Aufbau-Groesse</label>
+            <input class="me-hierarchy-chart-scale" type="range" min="65" max="135" step="1" value="${escapeHtml(hierarchy.chartScale)}">
+            <div class="module-editor-help">Skaliert den fertigen Stammbaum. Standard 100.</div>
           </div>
           <div class="module-editor-field">
             <label>Kopfzeile</label>
@@ -308,6 +313,7 @@ function collectHierarchyModuleEditorPage(card, page) {
     layoutMode: getFormValue(block, '.me-hierarchy-layout-mode'),
     cardFontScale: getFormValue(block, '.me-hierarchy-card-font-scale'),
     portraitScale: getFormValue(block, '.me-hierarchy-portrait-scale'),
+    chartScale: getFormValue(block, '.me-hierarchy-chart-scale'),
     eyebrow: getTrimmedFormValue(block, '.me-hierarchy-eyebrow'),
     subtitle: getTrimmedFormValue(block, '.me-hierarchy-subtitle'),
     centerLabel: getTrimmedFormValue(block, '.me-hierarchy-center-label'),

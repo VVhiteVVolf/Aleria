@@ -20,7 +20,9 @@ function getModulePageEditorCommentThreadKey(page, index = 0) {
 }
 
 function getModulePageImageWidthMax(type = 'standard') {
-  return type === 'caste' ? 160 : 70;
+  if (type === 'caste') return 160;
+  if (type === 'quest-file' || type === 'biography') return 100;
+  return 70;
 }
 
 function normalizeModulePageImageWidth(value, max = 70) {

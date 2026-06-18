@@ -6,7 +6,9 @@ function getInlinePageDefaultImageFit(page) {
 }
 
 function getInlinePageImageWidthMax(page) {
-  return page?.castePage ? 160 : 70;
+  if (page?.castePage) return 160;
+  if (page?.questFilePage || page?.biographyPage) return 100;
+  return 70;
 }
 
 function getInlinePageDefaultImagePosition(page) {
@@ -72,6 +74,15 @@ function buildInlineImagePanel(page) {
     <div class="inline-image-panel">
       <div class="inline-edit-kicker">Questbild links oben</div>
       <input class="inline-edit-input" type="url" data-inline-action="sync-page-field" data-page-field="image" value="${escapeHtml(page.image || '')}" placeholder="Imgur-Link oder Bild-URL">
+      <div class="inline-edit-minirow">
+        <select class="inline-edit-select" data-inline-action="sync-page-field" data-page-field="imageStyle">
+          <option value="default"${getPageImageStyle(page) === 'default' ? ' selected' : ''}>Standard</option>
+          <option value="square"${getPageImageStyle(page) === 'square' ? ' selected' : ''}>Quadratisch</option>
+          <option value="landscape"${getPageImageStyle(page) === 'landscape' ? ' selected' : ''}>Breit</option>
+          <option value="semi"${getPageImageStyle(page) === 'semi' ? ' selected' : ''}>Halb-Breit</option>
+          <option value="tall"${getPageImageStyle(page) === 'tall' ? ' selected' : ''}>Hochformat</option>
+        </select>
+      </div>
       ${buildInlineImageFormatControls(page)}
       <div class="inline-placeholder-note">Dieses Bild sitzt oben links in der Akte. Weitere Bilder steuerst du im Questakten-Abschnitt.</div>
     </div>`;

@@ -22,15 +22,15 @@
 <link rel="stylesheet" href="./styles/characters.css?v=20260611-compact-character-grid-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260616-hierarchy-template-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/module-page-quest.css?v=20260520-cleanup-v1">
+<link rel="stylesheet" href="./styles/module-page-quest.css?v=20260618-quest-file-layout-images-v1">
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260618-biography-connection-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260616-card-hierarchy-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-tree-v1">
-<link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20260618-hierarchy-portrait-ratio-v1">
+<link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20260618-hierarchy-fullscreen-scroll-v1">
 <link rel="stylesheet" href="./styles/module-page-caste.css?v=20260604-caste-image-scale-v1">
 <link rel="stylesheet" href="./styles/module-page-court.css?v=20260617-court-dossier-v1">
 <link rel="stylesheet" href="./styles/module-page-bounty.css?v=20260617-bounty-lower-layout-v1">
-<link rel="stylesheet" href="./styles/module-page-goods.css?v=20260618-goods-editor-tabs-v1">
+<link rel="stylesheet" href="./styles/module-page-goods.css?v=20260618-goods-image-controls-v1">
 <link rel="stylesheet" href="./styles/module-page-trade-catalog.css?v=20260618-trade-catalog-v3">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
@@ -54,13 +54,13 @@
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-preview.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-data.js?v=20260618-biography-connection-layout-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-data.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260604-caste-fixes-v1" defer></script>
   <script src="./modules/court/court-editor-schema.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bounty.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-goods.js?v=20260618-goods-editor-tabs-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-goods.js?v=20260618-goods-image-controls-v1" defer></script>
   <script src="./modules/module-editor/module-editor-trade-catalog.js?v=20260618-trade-catalog-v3" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260618-biography-connection-layout-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260614-section-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260603-module-editor-fields-v2" defer></script>
@@ -75,41 +75,41 @@
   <script src="./modules/module-editor/module-editor-biography.js?v=20260618-biography-connection-layout-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bestiary.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-recipe.js?v=20260603-module-editor-fields-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-quest.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-quest.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/module-editor/module-editor-tournament.js?v=20260603-module-editor-fields-v1" defer></script>
   <script src="./modules/module-editor/module-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-hierarchy.js?v=20260617-hierarchy-controls-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-pages.js?v=20260611-editor-checkup-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-hierarchy.js?v=20260618-hierarchy-collapse-scale-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-pages.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260614-section-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-state.js?v=20260616-inline-scroll-restore-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-trade-catalog-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-wanted.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bounty.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-goods.js?v=20260618-goods-editor-tabs-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-goods.js?v=20260618-goods-image-controls-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-trade-catalog.js?v=20260618-trade-catalog-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament.js?v=20260603-inline-tournament-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-artifact-recipe.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260617-hierarchy-controls-v1" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20260618-trade-catalog-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260618-hierarchy-collapse-scale-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260618-biography-connection-layout-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-quest.js?v=20260603-inline-feature-extract-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-quest.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-events.js?v=20260618-biography-connection-groups-v1" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260617-court-dossier-v1" defer></script>
   <script src="./modules/bounty/bounty-renderer.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/goods/goods-renderer.js?v=20260617-goods-template-v3" defer></script>
+  <script src="./modules/goods/goods-renderer.js?v=20260618-goods-image-controls-v1" defer></script>
   <script src="./modules/trade-catalog/trade-catalog-renderer.js?v=20260618-trade-catalog-v3" defer></script>
-  <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260617-hierarchy-sidebar-flow-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260618-biography-connection-layout-v1" defer></script>
+  <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260618-hierarchy-fullscreen-scroll-v1" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20260616-archive-card-preview-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260616-folder-card-polish-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260616-dashboard-insights-v1" defer></script>

@@ -18,6 +18,24 @@ function buildGoodsColumnRows(columns = [], mode = 'module', tableIndex = 0) {
     </div>`).join('');
 }
 
+function buildGoodsImageSelect(label, field, value, rowIndex, mode, tableIndex, options = []) {
+  return `
+    <label>
+      <span>${escapeHtml(label)}</span>
+      <select class="inline-edit-select ${mode === 'module' ? `me-goods-item-${field}` : ''}" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="${escapeHtml(field)}"` : ''}>
+        ${options.map(option => `<option value="${escapeHtml(option.value)}"${String(value || '') === option.value ? ' selected' : ''}>${escapeHtml(option.label)}</option>`).join('')}
+      </select>
+    </label>`;
+}
+
+function buildGoodsImageSizeInput(value, rowIndex, mode, tableIndex) {
+  return `
+    <label>
+      <span>Icon-Groesse</span>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-imageSize' : ''}" type="number" min="42" max="132" step="1" value="${escapeHtml(value || 72)}" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="imageSize"` : ''}>
+    </label>`;
+}
+
 function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode = 'module', tableIndex = 0) {
   const safeColumns = sanitizeGoodsColumns(columns);
   const rows = Array.isArray(items) ? items : [];
@@ -30,6 +48,25 @@ function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Bild-URL" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="image"` : ''}>
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-category' : ''}" type="text" value="${escapeHtml(item.category || '')}" placeholder="Kategorie-ID" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="category"` : ''}>
         <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-goods-list-row" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}"` : 'data-module-editor-action="remove-goods-row" data-goods-list="goods"'}>Loeschen</button>
+      </div>
+      <div class="goods-row-image-controls">
+        ${buildGoodsImageSelect('Bildformat', 'imageFormat', item.imageFormat || 'landscape', rowIndex, mode, tableIndex, [
+          { value: 'landscape', label: 'Querformat' },
+          { value: 'portrait', label: 'Hochformat' },
+          { value: 'square', label: 'Quadratisch' }
+        ])}
+        ${buildGoodsImageSelect('Bildfuelle', 'imageFit', item.imageFit || 'contain', rowIndex, mode, tableIndex, [
+          { value: 'contain', label: 'Ganzes Bild' },
+          { value: 'cover', label: 'Fuellen / croppen' }
+        ])}
+        ${buildGoodsImageSelect('Ausschnitt', 'imagePosition', item.imagePosition || 'center', rowIndex, mode, tableIndex, [
+          { value: 'center', label: 'Mitte' },
+          { value: 'top', label: 'Oben' },
+          { value: 'bottom', label: 'Unten' },
+          { value: 'left', label: 'Links' },
+          { value: 'right', label: 'Rechts' }
+        ])}
+        ${buildGoodsImageSizeInput(item.imageSize || 72, rowIndex, mode, tableIndex)}
       </div>
       <div class="goods-row-cell-grid">
         ${safeColumns.map(column => `
@@ -47,7 +84,15 @@ function createDefaultGoodsRowForCategory(columns = getDefaultGoodsColumns(), ca
   sanitizeGoodsColumns(columns).forEach(column => {
     values[column.id] = column.id === 'name' ? 'Neue Ware' : '';
   });
-  return { image: '', category: categoryId || 'allgemein', values };
+  return {
+    image: '',
+    imageFormat: 'landscape',
+    imageFit: 'contain',
+    imagePosition: 'center',
+    imageSize: 72,
+    category: categoryId || 'allgemein',
+    values
+  };
 }
 
 function buildGoodsCategoryItemSections(table, mode = 'module', tableIndex = 0) {
@@ -278,6 +323,10 @@ function collectModuleGoodsItems(tableEditor) {
     });
     return {
       image: getTrimmedFormValue(row, '.me-goods-item-image'),
+      imageFormat: getTrimmedFormValue(row, '.me-goods-item-imageFormat'),
+      imageFit: getTrimmedFormValue(row, '.me-goods-item-imageFit'),
+      imagePosition: getTrimmedFormValue(row, '.me-goods-item-imagePosition'),
+      imageSize: getTrimmedFormValue(row, '.me-goods-item-imageSize'),
       category: getTrimmedFormValue(row, '.me-goods-item-category'),
       values
     };
