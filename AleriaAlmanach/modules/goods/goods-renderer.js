@@ -17,13 +17,19 @@ function buildGoodsImage(src, className, fallback = '', alt = '', options = {}) 
   return `<span class="${escapeHtml(`${classes} placeholder`)}">${escapeHtml(fallback || '+')}</span>`;
 }
 
-function buildGoodsFilterControls(table, scopeId) {
+function getGoodsInitialFilter(table) {
+  const categories = Array.isArray(table.categories) ? table.categories : [];
+  return categories[0]?.id || 'all';
+}
+
+function buildGoodsFilterControls(table, scopeId, activeCategory = getGoodsInitialFilter(table)) {
   const categories = Array.isArray(table.categories) ? table.categories : [];
   const buttons = [
-    `<button class="goods-filter-tab active" type="button" data-goods-filter="all">${escapeHtml(table.tableTitle || 'Alle Waren')}</button>`,
-    ...categories.map(category =>
-      `<button class="goods-filter-tab" type="button" data-goods-filter="${escapeHtml(category.id)}">${escapeHtml(category.label)}</button>`
-    )
+    ...categories.map(category => {
+      const activeClass = category.id === activeCategory ? ' active' : '';
+      return `<button class="goods-filter-tab${activeClass}" type="button" data-goods-filter="${escapeHtml(category.id)}">${escapeHtml(category.label)}</button>`;
+    }),
+    `<button class="goods-filter-tab${activeCategory === 'all' ? ' active' : ''}" type="button" data-goods-filter="all">${escapeHtml(table.tableTitle || 'Alle Waren')}</button>`
   ].join('');
   return `<div class="goods-filter-tabs" data-goods-filter-scope="${escapeHtml(scopeId)}">${buttons}</div>`;
 }
@@ -70,7 +76,7 @@ function buildGoodsCell(row, column, goods, table, rowIndex) {
   return `<td>${escapeHtml(value || '-')}</td>`;
 }
 
-function buildGoodsRows(table, goods) {
+function buildGoodsRows(table, goods, activeCategory = 'all') {
   const rows = Array.isArray(table.rows) ? table.rows : [];
   const columns = Array.isArray(table.columns) && table.columns.length ? table.columns : getDefaultGoodsColumns();
   if (!rows.length) {
@@ -78,8 +84,9 @@ function buildGoodsRows(table, goods) {
   }
   return rows.map((item, index) => {
     const category = slugify(item.category || 'sonstiges', 'sonstiges');
+    const hiddenAttr = activeCategory !== 'all' && category !== activeCategory ? ' hidden' : '';
     return `
-      <tr class="goods-category-${escapeHtml(category)}">
+      <tr class="goods-category-${escapeHtml(category)}"${hiddenAttr}>
         ${columns.map(column => buildGoodsCell(item, column, goods, table, index)).join('')}
       </tr>`;
   }).join('');
@@ -88,16 +95,17 @@ function buildGoodsRows(table, goods) {
 function buildGoodsTableBlock(table, goods, scopeId) {
   const columns = Array.isArray(table.columns) && table.columns.length ? table.columns : getDefaultGoodsColumns();
   const scrollClass = Array.isArray(table.rows) && table.rows.length > 8 ? ' scrollable' : '';
+  const activeCategory = getGoodsInitialFilter(table);
   return `
     <section class="goods-table-block" data-goods-table-scope="${escapeHtml(scopeId)}">
       ${table.title ? `<h3 class="goods-table-title">${escapeHtml(table.title)}</h3>` : ''}
-      ${buildGoodsFilterControls(table, scopeId)}
+      ${buildGoodsFilterControls(table, scopeId, activeCategory)}
       <div class="goods-table-wrap${scrollClass}">
         <table class="goods-table">
           <thead>
             <tr>${columns.map(column => `<th>${escapeHtml(column.label)}</th>`).join('')}</tr>
           </thead>
-          <tbody>${buildGoodsRows(table, goods)}</tbody>
+          <tbody>${buildGoodsRows(table, goods, activeCategory)}</tbody>
         </table>
       </div>
     </section>`;
