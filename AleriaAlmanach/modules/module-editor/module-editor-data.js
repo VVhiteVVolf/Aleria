@@ -1128,6 +1128,74 @@ function sanitizeTradeCatalogData(data = {}) {
   };
 }
 
+function sanitizeMapTemplateImageFit(value) {
+  const fit = String(value || '').trim();
+  return ['cover', 'contain'].includes(fit) ? fit : 'contain';
+}
+
+function sanitizeMapTemplateImagePosition(value) {
+  const position = String(value || '').trim();
+  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : 'center';
+}
+
+function sanitizeMapTemplateImageFormat(value) {
+  const format = String(value || '').trim();
+  return ['free', 'landscape', 'portrait', 'square'].includes(format) ? format : 'free';
+}
+
+function clampMapTemplateNumber(value, fallback, min, max) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(min, Math.min(max, Math.round(safe)));
+}
+
+function sanitizeMapTemplateTabs(items = []) {
+  const source = Array.isArray(items) && items.length ? items : [
+    { id: 'karte-1', label: 'Karte I' },
+    { id: 'karte-2', label: 'Karte II' },
+    { id: 'karte-3', label: 'Karte III' }
+  ];
+
+  return source.slice(0, 3).map((item, index) => {
+    const label = String(item?.label || item?.title || `Karte ${index + 1}`).trim();
+    return {
+      id: slugify(item?.id || label || `karte-${index + 1}`, `karte-${index + 1}`),
+      label,
+      image: String(item?.image || item?.src || '').trim(),
+      imageLink: String(item?.imageLink || item?.link || item?.target || '').trim(),
+      imageFormat: sanitizeMapTemplateImageFormat(item?.imageFormat),
+      imageFit: sanitizeMapTemplateImageFit(item?.imageFit),
+      imagePosition: sanitizeMapTemplateImagePosition(item?.imagePosition),
+      imageScale: clampMapTemplateNumber(item?.imageScale, 100, 35, 240)
+    };
+  });
+}
+
+function sanitizeMapTemplateSections(items = []) {
+  const defaults = [
+    { title: 'Ort', text: 'Kurze Einordnung der Karte.' },
+    { title: 'Markierungen', text: 'Wichtige Punkte, Ebenen oder Legende.' },
+    { title: 'Verlinkung', text: 'Hinweis, wohin ein Klick auf die Karte fuehrt.' }
+  ];
+  const source = Array.isArray(items) && items.length ? items : defaults;
+
+  return defaults.map((fallback, index) => {
+    const item = source[index] || {};
+    return {
+      title: String(item?.title || fallback.title).trim(),
+      text: String(item?.text || fallback.text).trim()
+    };
+  });
+}
+
+function sanitizeMapTemplateData(data = {}) {
+  return {
+    tabs: sanitizeMapTemplateTabs(data.tabs),
+    sections: sanitizeMapTemplateSections(data.sections),
+    sidebarDefaultCollapsed: Boolean(data.sidebarDefaultCollapsed)
+  };
+}
+
 function clampBestiaryNumber(value, fallback, min, max) {
   const number = Number(value);
   const safe = Number.isFinite(number) ? number : fallback;

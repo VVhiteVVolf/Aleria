@@ -529,6 +529,14 @@ function handleInlineEditorFieldChange(event) {
     updateInlineTradeCatalogListField(field);
     return;
   }
+  if (action === 'update-map-template-tab-field') {
+    updateInlineMapTemplateTabField(field);
+    return;
+  }
+  if (action === 'update-map-template-section-field') {
+    updateInlineMapTemplateSectionField(field);
+    return;
+  }
   if (action === 'update-hierarchy-field') {
     updateInlineHierarchyField(field);
     return;

@@ -405,6 +405,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'bounty-file') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineBountyFileEditor(page)}</div>`;
   if (type === 'goods') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineGoodsEditor(page)}</div>`;
   if (type === 'trade-catalog') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTradeCatalogEditor(page)}</div>`;
+  if (type === 'map-template') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineMapTemplateEditor(page)}</div>`;
   if (type === 'profiles') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineProfileEditor(page)}</div>`;
   if (type === 'artifact') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineArtifactEditor(page)}</div>`;
   if (type === 'recipe') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineRecipeEditor(page)}</div>`;

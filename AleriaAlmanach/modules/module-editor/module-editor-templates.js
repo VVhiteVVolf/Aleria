@@ -910,6 +910,54 @@ function createDefaultTradeCatalogPage(index = 0) {
   };
 }
 
+function createDefaultMapTemplatePage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} - KartenTemplate`,
+    image: '',
+    imageWidth: 100,
+    mapTemplatePage: true,
+    mapTemplate: sanitizeMapTemplateData({
+      tabs: [
+        {
+          label: 'Karte I',
+          image: '',
+          imageLink: '',
+          imageFormat: 'free',
+          imageFit: 'contain',
+          imagePosition: 'center',
+          imageScale: 100
+        },
+        {
+          label: 'Karte II',
+          image: '',
+          imageLink: '',
+          imageFormat: 'free',
+          imageFit: 'contain',
+          imagePosition: 'center',
+          imageScale: 100
+        },
+        {
+          label: 'Karte III',
+          image: '',
+          imageLink: '',
+          imageFormat: 'free',
+          imageFit: 'contain',
+          imagePosition: 'center',
+          imageScale: 100
+        }
+      ],
+      sections: [
+        { title: 'Ort', text: 'Kurze Einordnung der Karte.' },
+        { title: 'Markierungen', text: 'Wichtige Punkte, Ebenen oder Legende.' },
+        { title: 'Verlinkung', text: 'Hinweis, wohin ein Klick auf die Karte fuehrt.' }
+      ]
+    }),
+    stats: [],
+    commentDivider: false,
+    commentSequence: []
+  };
+}
+
 const MODULE_TEMPLATE_REGISTRY = {
   story: {
     id: 'story',
@@ -1005,6 +1053,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectTradeCatalogModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildTradeCatalogPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'trade-catalog')
+  },
+  'map-template': {
+    id: 'map-template',
+    pageType: 'map-template',
+    pageFlag: 'mapTemplatePage',
+    label: 'KartenTemplate',
+    pageLabel: 'KartenTemplate',
+    defaultTitle: 'Neues KartenTemplate',
+    defaultSubtitle: 'Karten, Orte und verlinkte Uebersichten',
+    entryType: 'KartenTemplate',
+    typeMatchers: ['kartentemplate', 'karte', 'karten', 'stadtkarte', 'ortskarte', 'poi'],
+    createPages: () => [createDefaultMapTemplatePage(0)],
+    createPage: index => createDefaultMapTemplatePage(index),
+    buildEditorFields: page => buildMapTemplateModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectMapTemplateModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildMapTemplatePage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'map-template')
   },
   artifact: {
     id: 'artifact',
@@ -1415,6 +1480,7 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     'Neue Kopfgeldakte',
     'Neues Objektprofil',
     'Neue Biographie',
+    'Neues KartenTemplate',
     'Neues Bestiarium',
     'Neue Questakte',
     'Neue interaktive Szene',
