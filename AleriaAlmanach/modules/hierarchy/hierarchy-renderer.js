@@ -101,6 +101,17 @@ document.addEventListener('click', event => {
   }
 });
 
+document.addEventListener('click', event => {
+  const trigger = event.target?.closest?.('[data-hierarchy-intro-toggle]');
+  if (!trigger) return;
+  const page = trigger.closest('.hierarchy-page');
+  if (!page) return;
+  const collapsed = !page.classList.contains('intro-collapsed');
+  page.classList.toggle('intro-collapsed', collapsed);
+  trigger.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+  trigger.textContent = collapsed ? 'Aufbau-Text anzeigen' : 'Aufbau-Text einklappen';
+});
+
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
   const page = document.querySelector('.hierarchy-page.fullscreen-active');
@@ -187,6 +198,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             ${data.chartIntro ? `<p>${sanitizeContentHtml(data.chartIntro)}</p>` : ''}
           </div>
           <div class="hierarchy-view-controls">
+            <button class="hierarchy-view-button" type="button" data-hierarchy-intro-toggle aria-expanded="true">Aufbau-Text einklappen</button>
             <label>
               <span>Ansicht</span>
               <input type="range" min="55" max="170" step="1" value="${escapeHtml(data.chartScale)}" data-hierarchy-scale-input>
