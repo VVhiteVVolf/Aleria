@@ -87,6 +87,7 @@ function getAleriaGptPageType(page) {
   if (page?.courtPage) return 'court';
   if (page?.bountyFilePage) return 'bounty-file';
   if (page?.goodsTablePage) return 'goods';
+  if (page?.tradeCatalogPage) return 'trade-catalog';
   return 'standard';
 }
 

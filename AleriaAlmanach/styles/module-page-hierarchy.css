@@ -445,8 +445,8 @@
 
 .hierarchy-node-portrait,
 .hierarchy-node-placeholder {
-  aspect-ratio: 0.8;
-  min-height: calc(4.3rem * var(--hierarchy-portrait-scale, 1));
+  aspect-ratio: 0.68;
+  min-height: calc(5.4rem * var(--hierarchy-portrait-scale, 1));
   min-width: 0;
   border: 1px solid rgba(139, 105, 45, 0.24);
   background: rgba(238, 215, 174, 0.35);
@@ -456,6 +456,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 18%;
   filter: sepia(18%) opacity(0.86);
 }
 
@@ -514,7 +515,7 @@
 
 .hierarchy-chart-level.cols-4 .hierarchy-node-portrait,
 .hierarchy-chart-level.cols-4 .hierarchy-node-placeholder {
-  min-height: 4.4rem;
+  min-height: calc(5.35rem * var(--hierarchy-portrait-scale, 1));
 }
 
 .hierarchy-footer {

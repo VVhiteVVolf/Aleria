@@ -364,7 +364,7 @@ function sanitizeCasteTextRows(items = [], limit = 12) {
         text: String(item?.text || item?.title || item?.value || '').trim()
       };
     })
-    .filter(item => item.icon || item.text)
+    .filter(item => item.text)
     .slice(0, limit);
 }
 
@@ -935,6 +935,146 @@ function sanitizeGoodsTableData(data = {}) {
     noteTitle: String(data.noteTitle || 'Hinweis').trim(),
     noteText: String(data.noteText || '').trim(),
     footer: String(data.footer || 'Almanach-Archiv - Warenregister').trim()
+  };
+}
+
+function sanitizeTradeCatalogTags(value = []) {
+  if (Array.isArray(value)) {
+    return value.map(item => String(typeof item === 'object' ? item?.label || item?.text : item || '').trim()).filter(Boolean).slice(0, 8);
+  }
+  return String(value || '')
+    .split(',')
+    .map(item => item.trim())
+    .filter(Boolean)
+    .slice(0, 8);
+}
+
+function sanitizeTradeCatalogFeatures(items = []) {
+  const source = Array.isArray(items) ? items : String(items || '').split('\n');
+  return source
+    .map(item => {
+      if (typeof item === 'object') {
+        return {
+          icon: String(item?.icon || '*').trim(),
+          text: String(item?.text || item?.label || '').trim()
+        };
+      }
+      const [icon, ...rest] = String(item || '').split('|');
+      const text = rest.length ? rest.join('|').trim() : String(item || '').trim();
+      return { icon: rest.length ? icon.trim() || '*' : '*', text };
+    })
+    .filter(item => item.text)
+    .slice(0, 10);
+}
+
+function sanitizeTradeCatalogImageFormat(value) {
+  const format = String(value || '').trim();
+  return ['landscape', 'portrait', 'square'].includes(format) ? format : 'landscape';
+}
+
+function sanitizeTradeCatalogImageFit(value) {
+  const fit = String(value || '').trim();
+  return ['cover', 'contain'].includes(fit) ? fit : 'cover';
+}
+
+function sanitizeTradeCatalogImagePosition(value) {
+  const position = String(value || '').trim();
+  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : 'center';
+}
+
+function clampTradeCatalogImageHeight(value) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : 220;
+  return Math.max(120, Math.min(520, Math.round(safe)));
+}
+
+function clampTradeCatalogPercent(value, fallback = 58) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(0, Math.min(100, Math.round(safe)));
+}
+
+function sanitizeTradeCatalogItems(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item, index) => ({
+      id: slugify(item?.id || item?.title || `handelsgut-${index + 1}`, `handelsgut-${index + 1}`),
+      category: slugify(item?.category || item?.categoryId || 'tiere', 'tiere'),
+      image: String(item?.image || '').trim(),
+      imageFormat: sanitizeTradeCatalogImageFormat(item?.imageFormat),
+      imageFit: sanitizeTradeCatalogImageFit(item?.imageFit),
+      imagePosition: sanitizeTradeCatalogImagePosition(item?.imagePosition),
+      imageHeight: clampTradeCatalogImageHeight(item?.imageHeight),
+      badge: String(item?.badge || '').trim(),
+      title: String(item?.title || item?.name || 'Neuer Eintrag').trim(),
+      subtitle: String(item?.subtitle || item?.kind || '').trim(),
+      tags: sanitizeTradeCatalogTags(item?.tags),
+      descriptionTitle: String(item?.descriptionTitle || 'Beschreibung').trim(),
+      description: String(item?.description || item?.text || '').trim(),
+      featuresTitle: String(item?.featuresTitle || 'Eigenschaften').trim(),
+      features: sanitizeTradeCatalogFeatures(item?.features),
+      originTitle: String(item?.originTitle || 'Herkunft').trim(),
+      origin: String(item?.origin || '').trim(),
+      usageTitle: String(item?.usageTitle || 'Verwendung').trim(),
+      usageTags: sanitizeTradeCatalogTags(item?.usageTags || item?.usage),
+      priceTitle: String(item?.priceTitle || 'Preisspanne').trim(),
+      priceFill: clampTradeCatalogPercent(item?.priceFill),
+      priceMin: String(item?.priceMin || '').trim(),
+      priceMax: String(item?.priceMax || '').trim(),
+      currencyCode: String(item?.currencyCode || 'KS').trim(),
+      currencyLabel: String(item?.currencyLabel || 'Kupferstueck').trim(),
+      currencyIcon: String(item?.currencyIcon || '*').trim(),
+      priceNote: String(item?.priceNote || '').trim(),
+      conditionsTitle: String(item?.conditionsTitle || 'Kaufbedingungen').trim(),
+      conditions: String(item?.conditions || item?.conditionsText || '').trim(),
+      sealImage: String(item?.sealImage || '').trim()
+    }))
+    .filter(item => item.image || item.title || item.description || item.origin || item.conditions)
+    .slice(0, 40);
+}
+
+function sanitizeTradeCatalogFooterCards(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => ({
+      icon: String(item?.icon || '*').trim(),
+      title: String(item?.title || '').trim(),
+      text: String(item?.text || '').trim()
+    }))
+    .filter(item => item.icon || item.title || item.text)
+    .slice(0, 6);
+}
+
+function sanitizeTradeCatalogData(data = {}) {
+  const categories = sanitizeGoodsCategories(data.categories || [
+    { id: 'tiere', label: 'Tiere' },
+    { id: 'fahrzeuge', label: 'Fahrzeuge' },
+    { id: 'ausruestung', label: 'Ausruestung' },
+    { id: 'spezialwaren', label: 'Spezialwaren' }
+  ]);
+  const knownCategories = new Set(categories.map(category => category.id));
+  const items = sanitizeTradeCatalogItems(data.items);
+  const derivedCategories = [];
+  items.forEach(item => {
+    if (!item.category || knownCategories.has(item.category)) return;
+    knownCategories.add(item.category);
+    derivedCategories.push({ id: item.category, label: item.category.replace(/-/g, ' ') });
+  });
+
+  return {
+    headerIcon: String(data.headerIcon || '').trim(),
+    title: String(data.title || 'Handelsgut & Tiere').trim(),
+    subtitle: String(data.subtitle || 'Auswahl besonderer Tiere und Waren').trim(),
+    noteIcon: String(data.noteIcon || '*').trim(),
+    noteTitle: String(data.noteTitle || 'Alle Preise in Kupferstuecken (KS)').trim(),
+    noteText: String(data.noteText || 'Preise koennen je nach Herkunft, Jahreszeit und Verfuegbarkeit variieren.').trim(),
+    allLabel: String(data.allLabel || 'Alle Waren').trim(),
+    searchPlaceholder: String(data.searchPlaceholder || 'Nach Waren suchen ...').trim(),
+    filterLabel: String(data.filterLabel || 'Filter').trim(),
+    categories: [...categories, ...derivedCategories].slice(0, 12),
+    items,
+    footerCards: sanitizeTradeCatalogFooterCards(data.footerCards),
+    advisorTitle: String(data.advisorTitle || '').trim(),
+    advisorText: String(data.advisorText || '').trim(),
+    advisorImage: String(data.advisorImage || '').trim()
   };
 }
 

@@ -67,6 +67,8 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-bounty-row',
   'add-goods-row',
   'remove-goods-row',
+  'add-trade-row',
+  'remove-trade-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
@@ -362,6 +364,14 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-goods-row') {
     removeModuleGoodsRow(trigger);
+    return;
+  }
+  if (action === 'add-trade-row') {
+    addModuleTradeCatalogRow(trigger, trigger.dataset.tradeList || '');
+    return;
+  }
+  if (action === 'remove-trade-row') {
+    removeModuleTradeCatalogRow(trigger);
     return;
   }
   if (action === 'add-hierarchy-detail') {

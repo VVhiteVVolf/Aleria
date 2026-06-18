@@ -43,6 +43,7 @@ function isCommentlessModulePage(page) {
     page?.courtPage ||
     page?.bountyFilePage ||
     page?.goodsTablePage ||
+    page?.tradeCatalogPage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||

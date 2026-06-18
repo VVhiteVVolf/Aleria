@@ -792,6 +792,117 @@ function createDefaultGoodsTablePage(index = 0) {
   };
 }
 
+function createDefaultTradeCatalogPage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} - Handelsgut & Tiere`,
+    image: '',
+    imageWidth: 38,
+    tradeCatalogPage: true,
+    tradeCatalog: sanitizeTradeCatalogData({
+      title: 'Handelsgut & Tiere',
+      subtitle: 'Auswahl besonderer Tiere und Waren',
+      headerIcon: '',
+      noteIcon: '*',
+      noteTitle: 'Alle Preise in Kupferstuecken (KS)',
+      noteText: 'Preise koennen je nach Herkunft, Jahreszeit und Verfuegbarkeit variieren.',
+      categories: [
+        { id: 'tiere', label: 'Tiere' },
+        { id: 'fahrzeuge', label: 'Fahrzeuge' },
+        { id: 'ausruestung', label: 'Ausruestung' },
+        { id: 'spezialwaren', label: 'Spezialwaren' }
+      ],
+      items: [
+        {
+          category: 'tiere',
+          image: '',
+          imageFormat: 'landscape',
+          imageFit: 'cover',
+          imagePosition: 'center',
+          imageHeight: 240,
+          badge: 'Empfohlen',
+          title: 'Thordis',
+          subtitle: 'Kriegspferd / Streittross',
+          tags: ['Stark', 'Ausdauernd', 'Kampferprobt'],
+          description: 'Thordis ist ein kraeftiger Streittross aus noerdlichen Zuchtlinien. Dieses Pferd ist fuer Ausdauer, Mut und Zuverlaessigkeit bekannt und bleibt auch in lauten Gefechten ruhig.',
+          features: [
+            { icon: '*', text: 'Erhoehte Tragkraft' },
+            { icon: '*', text: 'Resistenz gegen Einschuechterung' },
+            { icon: '*', text: 'Geeignet fuer schwere Ruestung' }
+          ],
+          origin: 'Nordpferde aus den Zuchtguten noerdlicher Marken.',
+          usageTags: ['Kavallerie', 'Kampf'],
+          priceFill: 35,
+          priceMin: '800',
+          priceMax: '2.000',
+          currencyCode: 'KS',
+          currencyLabel: 'Kupferstueck',
+          currencyIcon: '*',
+          conditions: 'Nur an vertrauenswuerdige Kundschaft.'
+        },
+        {
+          category: 'tiere',
+          image: '',
+          imageFormat: 'landscape',
+          imageFit: 'cover',
+          imagePosition: 'center',
+          imageHeight: 240,
+          title: 'Skoll',
+          subtitle: 'Grosser Kriegshund',
+          tags: ['Wachsam', 'Furchterregend', 'Treu'],
+          description: 'Ein aussergewoehnlicher Wach- und Kampfgefaehrte. Skoll braucht einen erfahrenen Halter mit ruhiger Hand und Wissen im Umgang mit grossen Tieren.',
+          features: [
+            { icon: '*', text: 'Hervorragender Geruchssinn' },
+            { icon: '*', text: 'Einschuechternde Praesenz' },
+            { icon: '*', text: 'Kaempft bis zum Tod fuer seinen Rudelfuehrer' }
+          ],
+          origin: 'Noerdliche Waelder.',
+          usageTags: ['Wachdienst', 'Jagd', 'Kampf'],
+          priceFill: 58,
+          priceMin: '1.500',
+          priceMax: '5.000',
+          currencyCode: 'KS',
+          currencyLabel: 'Kupferstueck',
+          currencyIcon: '*',
+          conditions: 'Nur fuer erfahrene Hundefuehrer. Haltungsbedingungen sind verbindlich einzuhalten.'
+        },
+        {
+          category: 'fahrzeuge',
+          image: '',
+          imageFormat: 'landscape',
+          imageFit: 'cover',
+          imagePosition: 'center',
+          imageHeight: 240,
+          title: 'Reisewagen "Valmora"',
+          subtitle: 'Grosser Planen- und Wohnwagen',
+          tags: ['Robust', 'Vielseitig', 'Langstrecke'],
+          description: 'Dieser geraeumige Reise- und Handelswagen bietet Platz fuer Waren, Ausruestung und bis zu vier Personen. Die stabile Konstruktion ist fuer lange Reisen geeignet.',
+          features: [
+            { icon: '*', text: 'Platz fuer Waren und Reisende' },
+            { icon: '*', text: 'Wetterfestes Dach und abschliessbare Truhe' },
+            { icon: '*', text: 'Geeignet fuer Zugtiere' }
+          ],
+          origin: 'Werkstaetten grosser Handelsstaedte.',
+          usageTags: ['Transport', 'Reisen', 'Handel'],
+          priceFill: 78,
+          priceMin: '2.000',
+          priceMax: '8.000',
+          currencyCode: 'KS',
+          currencyLabel: 'Kupferstueck',
+          currencyIcon: '*',
+          conditions: 'Anzahlung empfohlen. Lieferzeit und Sonderanfertigungen nach Absprache.'
+        }
+      ],
+      footerCards: [],
+      advisorTitle: '',
+      advisorText: '',
+      advisorImage: ''
+    }),
+    stats: [],
+    commentDivider: false,
+    commentSequence: []
+  };
+}
+
 const MODULE_TEMPLATE_REGISTRY = {
   story: {
     id: 'story',
@@ -870,6 +981,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectGoodsModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildGoodsTablePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'goods')
+  },
+  'trade-catalog': {
+    id: 'trade-catalog',
+    pageType: 'trade-catalog',
+    pageFlag: 'tradeCatalogPage',
+    label: 'Handelsgut & Tiere - Template',
+    pageLabel: 'Handelsgut & Tiere - Template',
+    defaultTitle: 'Neues Handelsgut-Register',
+    defaultSubtitle: 'Tiere, Gueter und Sonderwaren',
+    entryType: 'Handelsgut',
+    typeMatchers: ['handelsgut', 'tiere', 'tierhandel', 'gueter', 'gueterverzeichnis', 'waren-alternativ'],
+    createPages: () => [createDefaultTradeCatalogPage(0)],
+    createPage: index => createDefaultTradeCatalogPage(index),
+    buildEditorFields: page => buildTradeCatalogModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectTradeCatalogModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildTradeCatalogPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'trade-catalog')
   },
   artifact: {
     id: 'artifact',

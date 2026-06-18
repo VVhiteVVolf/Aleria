@@ -42,6 +42,8 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-bounty-list-row',
   'add-goods-list-row',
   'remove-goods-list-row',
+  'add-trade-list-row',
+  'remove-trade-list-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-level',
@@ -268,6 +270,18 @@ function handleInlineEditorActionClick(event) {
       trigger.dataset.goodsList || '',
       Number(trigger.dataset.goodsIndex) || 0,
       trigger
+    );
+    return;
+  }
+  if (action === 'add-trade-list-row') {
+    addInlineTradeCatalogRow(trigger.dataset.tradeList || '', Number(trigger.dataset.tradeIndex) || 0);
+    return;
+  }
+  if (action === 'remove-trade-list-row') {
+    removeInlineTradeCatalogRow(
+      trigger.dataset.tradeList || '',
+      Number(trigger.dataset.tradeIndex) || 0,
+      Number(trigger.dataset.tradeFeatureIndex) || 0
     );
     return;
   }
@@ -505,6 +519,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-goods-list-field') {
     updateInlineGoodsListField(field);
+    return;
+  }
+  if (action === 'update-trade-field') {
+    updateInlineTradeCatalogField(field);
+    return;
+  }
+  if (action === 'update-trade-list-field') {
+    updateInlineTradeCatalogListField(field);
     return;
   }
   if (action === 'update-hierarchy-field') {

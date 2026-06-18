@@ -122,6 +122,7 @@ function shouldUsePageImageAsEntryImage(pages = []) {
     page?.courtPage ||
     page?.bountyFilePage ||
     page?.goodsTablePage ||
+    page?.tradeCatalogPage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||
@@ -259,7 +260,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -368,6 +369,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.goodsTablePage) {
     next.goodsTable = sanitizeGoodsTableData(page.goodsTable);
+  }
+
+  if (page.tradeCatalogPage) {
+    next.tradeCatalog = sanitizeTradeCatalogData(page.tradeCatalog);
   }
 
   if (page.hierarchyPage) {

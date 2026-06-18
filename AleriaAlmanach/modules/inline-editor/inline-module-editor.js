@@ -29,7 +29,7 @@ function getInlinePageImageWidthMaxForSync(page) {
 }
 
 function getInlinePageDefaultImagePositionForSync(page) {
-  return (page?.artifactPage || page?.recipePage || !page?.questFilePage && !page?.castePage && !page?.courtPage && !page?.bountyFilePage && !page?.goodsTablePage && !page?.biographyPage)
+  return (page?.artifactPage || page?.recipePage || !page?.questFilePage && !page?.castePage && !page?.courtPage && !page?.bountyFilePage && !page?.goodsTablePage && !page?.tradeCatalogPage && !page?.biographyPage)
     ? 'center'
     : 'top';
 }
@@ -346,7 +346,7 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="rerender-entry-field" data-entry-field="subtitle" value="${escapeHtml(entry.subtitle || '')}">
         </div>
         ${buildInlineSectionPicker()}
-        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
+        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
         ${buildInlineModuleSizeControls(entry)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Typ</span>
@@ -402,6 +402,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'wanted') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineWantedEditor(page)}</div>`;
   if (type === 'bounty-file') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineBountyFileEditor(page)}</div>`;
   if (type === 'goods') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineGoodsEditor(page)}</div>`;
+  if (type === 'trade-catalog') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTradeCatalogEditor(page)}</div>`;
   if (type === 'profiles') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineProfileEditor(page)}</div>`;
   if (type === 'artifact') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineArtifactEditor(page)}</div>`;
   if (type === 'recipe') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineRecipeEditor(page)}</div>`;
