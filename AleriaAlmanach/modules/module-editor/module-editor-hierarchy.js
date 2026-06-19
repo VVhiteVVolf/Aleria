@@ -89,6 +89,44 @@ function collectHierarchyLevelsFromEditor(block) {
   })).filter(level => level.label || level.nodes.length);
 }
 
+function buildHierarchyTreeEditorMarkup(tree = {}, treeIndex = 0) {
+  const levels = Array.isArray(tree.levels) ? tree.levels : [];
+  return `
+    <div class="module-card-layout-block hierarchy-editor-tree-row">
+      <div class="module-card-layout-block-head">
+        <div>
+          <div class="inline-edit-kicker">Hierarchie-Baum ${treeIndex + 1}</div>
+          <div class="module-editor-help">Jeder Baum bekommt im fertigen Modul einen eigenen Reiter.</div>
+        </div>
+        <div class="module-editor-inline">
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-hierarchy-level">+ Ebene</button>
+          <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-hierarchy-tree">Baum loeschen</button>
+        </div>
+      </div>
+      <div class="module-editor-field">
+        <label>Reitername</label>
+        <input class="me-hierarchy-tree-label" type="text" value="${escapeHtml(tree.label || `Baum ${treeIndex + 1}`)}" placeholder="z.B. Hauptstruktur">
+      </div>
+      <div class="hierarchy-editor-level-list">
+        ${levels.length
+          ? levels.map((level, levelIndex) => buildHierarchyLevelEditorMarkup(level, levelIndex)).join('')
+          : '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>'}
+      </div>
+    </div>`;
+}
+
+function collectHierarchyTreesFromEditor(block) {
+  const trees = Array.from(block.querySelectorAll('.hierarchy-editor-tree-row')).map((treeRow, index) => ({
+    label: getTrimmedFormValue(treeRow, '.me-hierarchy-tree-label') || `Baum ${index + 1}`,
+    levels: collectHierarchyLevelsFromEditor(treeRow)
+  })).filter(tree => tree.label || tree.levels.length);
+  if (trees.length) return trees;
+  return [{
+    label: getTrimmedFormValue(block, '.me-hierarchy-chart-title') || 'Aufbau',
+    levels: collectHierarchyLevelsFromEditor(block)
+  }];
+}
+
 function renumberHierarchyEditor(levelList) {
   Array.from(levelList?.querySelectorAll('.hierarchy-editor-level-row') || []).forEach((levelRow, levelIndex) => {
     const levelKicker = levelRow.querySelector('.module-card-layout-block-head .inline-edit-kicker');
@@ -98,6 +136,44 @@ function renumberHierarchyEditor(levelList) {
       if (nodeKicker) nodeKicker.textContent = `Knoten ${nodeIndex + 1}`;
     });
   });
+}
+
+function renumberHierarchyTreeEditor(treeList) {
+  Array.from(treeList?.querySelectorAll('.hierarchy-editor-tree-row') || []).forEach((treeRow, treeIndex) => {
+    const kicker = treeRow.querySelector(':scope > .module-card-layout-block-head .inline-edit-kicker');
+    if (kicker) kicker.textContent = `Hierarchie-Baum ${treeIndex + 1}`;
+    renumberHierarchyEditor(treeRow.querySelector('.hierarchy-editor-level-list'));
+  });
+}
+
+function addModuleHierarchyTree(button) {
+  const pageCard = button.closest('.module-page-card');
+  const wrap = pageCard?.querySelector('.hierarchy-editor-tree-list');
+  if (!wrap) return;
+  wrap.querySelector('.inline-placeholder-note')?.remove();
+  wrap.insertAdjacentHTML('beforeend', buildHierarchyTreeEditorMarkup({
+    label: `Baum ${wrap.querySelectorAll('.hierarchy-editor-tree-row').length + 1}`,
+    levels: [{ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] }]
+  }, wrap.querySelectorAll('.hierarchy-editor-tree-row').length));
+  hydrateModuleRichEditors(wrap.lastElementChild || wrap);
+  renumberHierarchyTreeEditor(wrap);
+  syncModuleJsonPreview();
+}
+
+function removeModuleHierarchyTree(button) {
+  const row = button.closest('.hierarchy-editor-tree-row');
+  const wrap = row?.parentElement;
+  if (!row || !wrap) return;
+  row.remove();
+  if (!wrap.querySelector('.hierarchy-editor-tree-row')) {
+    wrap.innerHTML = buildHierarchyTreeEditorMarkup({
+      label: 'Aufbau',
+      levels: [{ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] }]
+    }, 0);
+    hydrateModuleRichEditors(wrap);
+  }
+  renumberHierarchyTreeEditor(wrap);
+  syncModuleJsonPreview();
 }
 
 function addModuleHierarchyDetail(button) {
@@ -122,7 +198,8 @@ function removeModuleHierarchyDetail(button) {
 
 function addModuleHierarchyLevel(button) {
   const pageCard = button.closest('.module-page-card');
-  const wrap = pageCard?.querySelector('.hierarchy-editor-level-list');
+  const wrap = button.closest('.hierarchy-editor-tree-row')?.querySelector('.hierarchy-editor-level-list')
+    || pageCard?.querySelector('.hierarchy-editor-level-list');
   if (!wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
   wrap.insertAdjacentHTML('beforeend', buildHierarchyLevelEditorMarkup({
@@ -131,6 +208,7 @@ function addModuleHierarchyLevel(button) {
   }, wrap.querySelectorAll('.hierarchy-editor-level-row').length));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberHierarchyEditor(wrap);
+  renumberHierarchyTreeEditor(pageCard?.querySelector('.hierarchy-editor-tree-list'));
   syncModuleJsonPreview();
 }
 
@@ -144,6 +222,7 @@ function addModuleHierarchyLevelAfter(button) {
   }, 0));
   hydrateModuleRichEditors(currentLevel.nextElementSibling || wrap);
   renumberHierarchyEditor(wrap);
+  renumberHierarchyTreeEditor(currentLevel.closest('.hierarchy-editor-tree-list'));
   syncModuleJsonPreview();
 }
 
@@ -156,6 +235,7 @@ function removeModuleHierarchyLevel(button) {
     wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>';
   }
   renumberHierarchyEditor(wrap);
+  renumberHierarchyTreeEditor(row.closest('.hierarchy-editor-tree-list'));
   syncModuleJsonPreview();
 }
 
@@ -169,6 +249,7 @@ function moveModuleHierarchyLevel(button) {
     row.parentElement.insertBefore(row.nextElementSibling, row);
   }
   renumberHierarchyEditor(row.parentElement);
+  renumberHierarchyTreeEditor(row.closest('.hierarchy-editor-tree-list'));
   syncModuleJsonPreview();
 }
 
@@ -289,13 +370,13 @@ function buildHierarchyModuleEditorFields(page) {
           </div>
           <div class="module-editor-field wide">
             <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Stammbaum-Ebenen</label>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-hierarchy-level">+ Ebene</button>
+              <label>Hierarchie-Baeume</label>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-hierarchy-tree">+ Baum</button>
             </div>
-            <div class="hierarchy-editor-level-list">
-              ${hierarchy.levels.length
-                ? hierarchy.levels.map((level, levelIndex) => buildHierarchyLevelEditorMarkup(level, levelIndex)).join('')
-                : '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>'}
+            <div class="hierarchy-editor-tree-list">
+              ${hierarchy.trees.length
+                ? hierarchy.trees.map((tree, treeIndex) => buildHierarchyTreeEditorMarkup(tree, treeIndex)).join('')
+                : buildHierarchyTreeEditorMarkup({ label: hierarchy.chartTitle || 'Aufbau', levels: hierarchy.levels }, 0)}
             </div>
           </div>
           <div class="module-editor-field wide">
@@ -308,6 +389,7 @@ function buildHierarchyModuleEditorFields(page) {
 
 function collectHierarchyModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="hierarchy"]') || card;
+  const trees = collectHierarchyTreesFromEditor(block);
   page.hierarchyPage = true;
   page.hierarchy = sanitizeHierarchyData({
     layoutMode: getFormValue(block, '.me-hierarchy-layout-mode'),
@@ -328,7 +410,8 @@ function collectHierarchyModuleEditorPage(card, page) {
     quote: getTrimmedFormValue(block, '.me-hierarchy-quote'),
     chartTitle: getTrimmedFormValue(block, '.me-hierarchy-chart-title'),
     chartIntro: getTrimmedFormValue(block, '.me-hierarchy-chart-intro'),
-    levels: collectHierarchyLevelsFromEditor(block),
+    trees,
+    levels: trees[0]?.levels || [],
     footerNote: getTrimmedFormValue(block, '.me-hierarchy-footer-note')
   });
   return page;

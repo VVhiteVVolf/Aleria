@@ -69,8 +69,12 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-goods-row',
   'add-trade-row',
   'remove-trade-row',
+  'stamp-trade-attributes',
+  'apply-trade-attributes-stamp',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
+  'add-hierarchy-tree',
+  'remove-hierarchy-tree',
   'add-hierarchy-level',
   'add-hierarchy-level-after',
   'remove-hierarchy-level',
@@ -374,12 +378,28 @@ function handleModuleEditorActionClick(event) {
     removeModuleTradeCatalogRow(trigger);
     return;
   }
+  if (action === 'stamp-trade-attributes') {
+    stampModuleTradeCatalogAttributes(trigger);
+    return;
+  }
+  if (action === 'apply-trade-attributes-stamp') {
+    applyModuleTradeCatalogAttributeStamp(trigger);
+    return;
+  }
   if (action === 'add-hierarchy-detail') {
     addModuleHierarchyDetail(trigger);
     return;
   }
   if (action === 'remove-hierarchy-detail') {
     removeModuleHierarchyDetail(trigger);
+    return;
+  }
+  if (action === 'add-hierarchy-tree') {
+    addModuleHierarchyTree(trigger);
+    return;
+  }
+  if (action === 'remove-hierarchy-tree') {
+    removeModuleHierarchyTree(trigger);
     return;
   }
   if (action === 'add-hierarchy-level') {

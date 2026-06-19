@@ -637,6 +637,34 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
   };
 }
 
+function sanitizeHierarchyLevels(levels = []) {
+  return (Array.isArray(levels) ? levels : [])
+    .map((level, index) => sanitizeHierarchyLevel(level, index))
+    .filter(level => level.label || level.nodes.length)
+    .slice(0, 12);
+}
+
+function sanitizeHierarchyTree(tree = {}, index = 0) {
+  return {
+    label: String(tree?.label || tree?.title || `Baum ${index + 1}`).trim(),
+    levels: sanitizeHierarchyLevels(tree?.levels)
+  };
+}
+
+function sanitizeHierarchyTrees(data = {}) {
+  const rawTrees = Array.isArray(data.trees) ? data.trees : [];
+  const sourceTrees = rawTrees.length
+    ? rawTrees
+    : [{
+        label: String(data.treeLabel || data.chartTitle || 'Aufbau').trim(),
+        levels: data.levels
+      }];
+  return sourceTrees
+    .map((tree, index) => sanitizeHierarchyTree(tree, index))
+    .filter(tree => tree.label || tree.levels.length)
+    .slice(0, 8);
+}
+
 function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
   const number = Number(value);
   const safe = Number.isFinite(number) ? number : fallback;
@@ -645,6 +673,8 @@ function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
 
 function sanitizeHierarchyData(data = {}) {
   const layoutMode = String(data.layoutMode || '').trim();
+  const trees = sanitizeHierarchyTrees(data);
+  const primaryLevels = trees[0]?.levels || sanitizeHierarchyLevels(data.levels);
   return {
     layoutMode: layoutMode === 'depth' ? 'depth' : 'vertical',
     cardFontScale: clampHierarchyScale(data.cardFontScale, 92, 65, 125),
@@ -664,10 +694,8 @@ function sanitizeHierarchyData(data = {}) {
     quote: String(data.quote || '').trim(),
     chartTitle: String(data.chartTitle || 'Aufbau & Raenge').trim(),
     chartIntro: String(data.chartIntro || '').trim(),
-    levels: (Array.isArray(data.levels) ? data.levels : [])
-      .map((level, index) => sanitizeHierarchyLevel(level, index))
-      .filter(level => level.label || level.nodes.length)
-      .slice(0, 12),
+    trees,
+    levels: primaryLevels,
     footerNote: String(data.footerNote || '').trim(),
     backLabel: String(data.backLabel || 'Zurueck zur Uebersicht').trim(),
     printLabel: String(data.printLabel || 'Akte drucken').trim()
@@ -1044,6 +1072,22 @@ function clampTradeCatalogPercent(value, fallback = 58) {
   return Math.max(0, Math.min(100, Math.round(safe)));
 }
 
+function clampTradeCatalogAttributeValue(value, fallback = 5) {
+  const number = Number(value);
+  const safe = Number.isFinite(number) ? number : fallback;
+  return Math.max(0, Math.min(10, Math.round(safe)));
+}
+
+function sanitizeTradeCatalogAttributeRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item, index) => ({
+      label: String(item?.label || item?.title || item?.name || `Attribut ${index + 1}`).trim(),
+      value: clampTradeCatalogAttributeValue(item?.value, 5)
+    }))
+    .filter(item => item.label)
+    .slice(0, 8);
+}
+
 function sanitizeTradeCatalogItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
@@ -1076,6 +1120,8 @@ function sanitizeTradeCatalogItems(items = []) {
       priceNote: String(item?.priceNote || '').trim(),
       conditionsTitle: String(item?.conditionsTitle || 'Kaufbedingungen').trim(),
       conditions: String(item?.conditions || item?.conditionsText || '').trim(),
+      attributesTitle: String(item?.attributesTitle || 'Attribute').trim(),
+      attributes: sanitizeTradeCatalogAttributeRows(item?.attributes),
       sealImage: String(item?.sealImage || '').trim()
     }))
     .filter(item => item.image || item.title || item.description || item.origin || item.conditions)

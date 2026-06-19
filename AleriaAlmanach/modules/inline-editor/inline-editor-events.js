@@ -44,8 +44,12 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-goods-list-row',
   'add-trade-list-row',
   'remove-trade-list-row',
+  'stamp-trade-attributes',
+  'apply-trade-attributes-stamp',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
+  'add-hierarchy-tree',
+  'remove-hierarchy-tree',
   'add-hierarchy-level',
   'add-hierarchy-level-after',
   'remove-hierarchy-level',
@@ -281,8 +285,17 @@ function handleInlineEditorActionClick(event) {
     removeInlineTradeCatalogRow(
       trigger.dataset.tradeList || '',
       Number(trigger.dataset.tradeIndex) || 0,
-      Number(trigger.dataset.tradeFeatureIndex) || 0
+      Number(trigger.dataset.tradeFeatureIndex) || 0,
+      Number(trigger.dataset.tradeAttributeIndex) || 0
     );
+    return;
+  }
+  if (action === 'stamp-trade-attributes') {
+    stampInlineTradeCatalogAttributes(Number(trigger.dataset.tradeIndex) || 0);
+    return;
+  }
+  if (action === 'apply-trade-attributes-stamp') {
+    applyInlineTradeCatalogAttributeStamp(Number(trigger.dataset.tradeIndex) || 0);
     return;
   }
   if (action === 'add-hierarchy-detail') {
@@ -293,31 +306,50 @@ function handleInlineEditorActionClick(event) {
     removeInlineHierarchyDetail(Number(trigger.dataset.hierarchyDetailIndex) || 0);
     return;
   }
+  if (action === 'add-hierarchy-tree') {
+    addInlineHierarchyTree();
+    return;
+  }
+  if (action === 'remove-hierarchy-tree') {
+    removeInlineHierarchyTree(Number(trigger.dataset.hierarchyTreeIndex) || 0);
+    return;
+  }
   if (action === 'add-hierarchy-level') {
-    addInlineHierarchyLevel();
+    addInlineHierarchyLevel(Number(trigger.dataset.hierarchyTreeIndex) || 0);
     return;
   }
   if (action === 'add-hierarchy-level-after') {
-    addInlineHierarchyLevelAfter(Number(trigger.dataset.hierarchyLevelIndex) || 0);
+    addInlineHierarchyLevelAfter(
+      Number(trigger.dataset.hierarchyTreeIndex) || 0,
+      Number(trigger.dataset.hierarchyLevelIndex) || 0
+    );
     return;
   }
   if (action === 'remove-hierarchy-level') {
-    removeInlineHierarchyLevel(Number(trigger.dataset.hierarchyLevelIndex) || 0);
+    removeInlineHierarchyLevel(
+      Number(trigger.dataset.hierarchyTreeIndex) || 0,
+      Number(trigger.dataset.hierarchyLevelIndex) || 0
+    );
     return;
   }
   if (action === 'move-hierarchy-level') {
     moveInlineHierarchyLevel(
+      Number(trigger.dataset.hierarchyTreeIndex) || 0,
       Number(trigger.dataset.hierarchyLevelIndex) || 0,
       Number(trigger.dataset.hierarchyDirection) || 0
     );
     return;
   }
   if (action === 'add-hierarchy-node') {
-    addInlineHierarchyNode(Number(trigger.dataset.hierarchyLevelIndex) || 0);
+    addInlineHierarchyNode(
+      Number(trigger.dataset.hierarchyTreeIndex) || 0,
+      Number(trigger.dataset.hierarchyLevelIndex) || 0
+    );
     return;
   }
   if (action === 'remove-hierarchy-node') {
     removeInlineHierarchyNode(
+      Number(trigger.dataset.hierarchyTreeIndex) || 0,
       Number(trigger.dataset.hierarchyLevelIndex) || 0,
       Number(trigger.dataset.hierarchyNodeIndex) || 0
     );
@@ -543,6 +575,10 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-hierarchy-detail-field') {
     updateInlineHierarchyDetailField(field);
+    return;
+  }
+  if (action === 'update-hierarchy-tree-field') {
+    updateInlineHierarchyTreeField(field);
     return;
   }
   if (action === 'update-hierarchy-level-field') {

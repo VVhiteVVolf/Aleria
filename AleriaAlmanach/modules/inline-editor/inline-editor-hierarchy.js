@@ -6,6 +6,15 @@ function getInlineHierarchyDataForEdit(page) {
   return page.hierarchy;
 }
 
+function getInlineHierarchyTree(data, treeIndex = 0) {
+  if (!Array.isArray(data.trees) || !data.trees.length) {
+    data.trees = [{ label: data.chartTitle || 'Aufbau', levels: Array.isArray(data.levels) ? data.levels : [] }];
+  }
+  const safeIndex = Math.max(0, Math.min(data.trees.length - 1, Number(treeIndex) || 0));
+  data.trees[safeIndex].levels = Array.isArray(data.trees[safeIndex].levels) ? data.trees[safeIndex].levels : [];
+  return data.trees[safeIndex];
+}
+
 function updateInlineHierarchyField(input) {
   const page = getInlineDraftPage();
   if (!page) return;
@@ -48,21 +57,61 @@ function updateInlineHierarchyDetailField(input) {
   scheduleInlineModuleLivePreviewRefresh();
 }
 
-function addInlineHierarchyLevel() {
+function addInlineHierarchyTree() {
   const page = getInlineDraftPage();
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
-  data.levels.push({ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] });
+  data.trees.push({
+    label: `Baum ${data.trees.length + 1}`,
+    levels: [{ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] }]
+  });
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
 }
 
-function addInlineHierarchyLevelAfter(index) {
+function removeInlineHierarchyTree(treeIndex) {
   const page = getInlineDraftPage();
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
-  const insertIndex = Math.max(0, Math.min(data.levels.length, index + 1));
-  data.levels.splice(insertIndex, 0, {
+  data.trees.splice(treeIndex, 1);
+  if (!data.trees.length) {
+    data.trees.push({
+      label: 'Aufbau',
+      levels: [{ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] }]
+    });
+  }
+  page.hierarchy = sanitizeHierarchyData(data);
+  renderPage(currentPage, 0);
+}
+
+function updateInlineHierarchyTreeField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.hierarchyTreeIndex || -1);
+  if (index < 0) return;
+  const data = getInlineHierarchyDataForEdit(page);
+  const tree = getInlineHierarchyTree(data, index);
+  tree.label = String(input.value || '').trim();
+  page.hierarchy = sanitizeHierarchyData(data);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function addInlineHierarchyLevel(treeIndex = 0) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const data = getInlineHierarchyDataForEdit(page);
+  getInlineHierarchyTree(data, treeIndex).levels.push({ label: '', nodes: [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }] });
+  page.hierarchy = sanitizeHierarchyData(data);
+  renderPage(currentPage, 0);
+}
+
+function addInlineHierarchyLevelAfter(treeIndex, index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const data = getInlineHierarchyDataForEdit(page);
+  const tree = getInlineHierarchyTree(data, treeIndex);
+  const insertIndex = Math.max(0, Math.min(tree.levels.length, index + 1));
+  tree.levels.splice(insertIndex, 0, {
     label: '',
     nodes: [{ portrait: '', title: 'Neuer Unterrang', subtitle: '', text: '' }]
   });
@@ -70,23 +119,24 @@ function addInlineHierarchyLevelAfter(index) {
   renderPage(currentPage, 0);
 }
 
-function removeInlineHierarchyLevel(index) {
+function removeInlineHierarchyLevel(treeIndex, index) {
   const page = getInlineDraftPage();
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
-  data.levels.splice(index, 1);
+  getInlineHierarchyTree(data, treeIndex).levels.splice(index, 1);
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
 }
 
-function moveInlineHierarchyLevel(index, direction) {
+function moveInlineHierarchyLevel(treeIndex, index, direction) {
   const page = getInlineDraftPage();
   if (!page || !direction) return;
   const data = getInlineHierarchyDataForEdit(page);
+  const tree = getInlineHierarchyTree(data, treeIndex);
   const nextIndex = index + direction;
-  if (index < 0 || nextIndex < 0 || nextIndex >= data.levels.length) return;
-  const [level] = data.levels.splice(index, 1);
-  data.levels.splice(nextIndex, 0, level);
+  if (index < 0 || nextIndex < 0 || nextIndex >= tree.levels.length) return;
+  const [level] = tree.levels.splice(index, 1);
+  tree.levels.splice(nextIndex, 0, level);
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
 }
@@ -94,31 +144,33 @@ function moveInlineHierarchyLevel(index, direction) {
 function updateInlineHierarchyLevelField(input) {
   const page = getInlineDraftPage();
   if (!page) return;
+  const treeIndex = Number(input.dataset.hierarchyTreeIndex || 0);
   const index = Number(input.dataset.hierarchyLevelIndex || -1);
   if (index < 0) return;
   const data = getInlineHierarchyDataForEdit(page);
-  data.levels[index] = data.levels[index] || { label: '', nodes: [] };
-  data.levels[index].label = String(input.value || '').trim();
+  const tree = getInlineHierarchyTree(data, treeIndex);
+  tree.levels[index] = tree.levels[index] || { label: '', nodes: [] };
+  tree.levels[index].label = String(input.value || '').trim();
   page.hierarchy = sanitizeHierarchyData(data);
   scheduleInlineModuleLivePreviewRefresh();
 }
 
-function addInlineHierarchyNode(levelIndex) {
+function addInlineHierarchyNode(treeIndex, levelIndex) {
   const page = getInlineDraftPage();
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
-  const level = data.levels[levelIndex];
+  const level = getInlineHierarchyTree(data, treeIndex).levels[levelIndex];
   if (!level || level.nodes.length >= 6) return;
   level.nodes.push({ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' });
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
 }
 
-function removeInlineHierarchyNode(levelIndex, nodeIndex) {
+function removeInlineHierarchyNode(treeIndex, levelIndex, nodeIndex) {
   const page = getInlineDraftPage();
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
-  const level = data.levels[levelIndex];
+  const level = getInlineHierarchyTree(data, treeIndex).levels[levelIndex];
   if (!level) return;
   level.nodes.splice(nodeIndex, 1);
   if (!level.nodes.length) level.nodes.push({ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' });
@@ -129,16 +181,18 @@ function removeInlineHierarchyNode(levelIndex, nodeIndex) {
 function updateInlineHierarchyNodeField(input) {
   const page = getInlineDraftPage();
   if (!page) return;
+  const treeIndex = Number(input.dataset.hierarchyTreeIndex || 0);
   const levelIndex = Number(input.dataset.hierarchyLevelIndex || -1);
   const nodeIndex = Number(input.dataset.hierarchyNodeIndex || -1);
   const field = input.dataset.hierarchyNodeField;
   if (levelIndex < 0 || nodeIndex < 0 || !field) return;
   const data = getInlineHierarchyDataForEdit(page);
-  const level = data.levels[levelIndex] || { label: '', nodes: [] };
+  const tree = getInlineHierarchyTree(data, treeIndex);
+  const level = tree.levels[levelIndex] || { label: '', nodes: [] };
   const node = level.nodes[nodeIndex] || { portrait: '', title: '', subtitle: '', text: '' };
   node[field] = String(input.value || '').trim();
   level.nodes[nodeIndex] = node;
-  data.levels[levelIndex] = level;
+  tree.levels[levelIndex] = level;
   page.hierarchy = sanitizeHierarchyData(data);
   scheduleInlineModuleLivePreviewRefresh();
 }
@@ -154,37 +208,37 @@ function buildInlineHierarchyDetailRows(details = []) {
     </div>`).join('') : '<div class="inline-placeholder-note">Noch keine Details vorhanden.</div>';
 }
 
-function buildInlineHierarchyNodeRows(level, levelIndex) {
+function buildInlineHierarchyNodeRows(level, treeIndex, levelIndex) {
   const nodes = Array.isArray(level.nodes) ? level.nodes : [];
   return nodes.map((node, nodeIndex) => `
     <div class="inline-profile-card hierarchy-inline-node-row">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">Knoten ${nodeIndex + 1}</div>
-        <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-node" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}">Loeschen</button>
+        <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-node" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}">Loeschen</button>
       </div>
       <div class="inline-edit-grid">
         <div class="inline-edit-field">
           <span class="inline-edit-label">Portrait-URL</span>
-          <input class="inline-edit-input" type="url" data-inline-action="update-hierarchy-node-field" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="portrait" value="${escapeHtml(node.portrait || '')}">
+          <input class="inline-edit-input" type="url" data-inline-action="update-hierarchy-node-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="portrait" value="${escapeHtml(node.portrait || '')}">
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Titel / Rang</span>
-          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-node-field" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="title" value="${escapeHtml(node.title || '')}">
+          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-node-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="title" value="${escapeHtml(node.title || '')}">
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Untertitel</span>
-          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-node-field" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="subtitle" value="${escapeHtml(node.subtitle || '')}">
+          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-node-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="subtitle" value="${escapeHtml(node.subtitle || '')}">
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Beschreibung</span>
           ${buildTextFormatToolbar()}
-          <textarea class="inline-edit-textarea" data-inline-action="update-hierarchy-node-field" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="text">${escapeHtml(node.text || '')}</textarea>
+          <textarea class="inline-edit-textarea" data-inline-action="update-hierarchy-node-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-node-index="${nodeIndex}" data-hierarchy-node-field="text">${escapeHtml(node.text || '')}</textarea>
         </div>
       </div>
     </div>`).join('');
 }
 
-function buildInlineHierarchyLevelRows(levels = []) {
+function buildInlineHierarchyLevelRows(levels = [], treeIndex = 0) {
   const rows = Array.isArray(levels) ? levels : [];
   return rows.length ? rows.map((level, levelIndex) => `
     <div class="module-card-layout-block hierarchy-inline-level-row">
@@ -194,21 +248,43 @@ function buildInlineHierarchyLevelRows(levels = []) {
           <div class="module-editor-help">Bis zu 6 Knoten pro Ebene.</div>
         </div>
         <div class="module-editor-inline">
-          <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="-1">Hoch</button>
-          <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="1">Runter</button>
-          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-node" data-hierarchy-level-index="${levelIndex}">+ Knoten</button>
-          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-level-after" data-hierarchy-level-index="${levelIndex}">+ Ebene darunter</button>
-          <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-level" data-hierarchy-level-index="${levelIndex}">Loeschen</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="-1">Hoch</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="1">Runter</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-node" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}">+ Knoten</button>
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-level-after" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}">+ Ebene darunter</button>
+          <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-level" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}">Loeschen</button>
         </div>
       </div>
       <div class="inline-edit-field">
         <span class="inline-edit-label">Ebenenlabel</span>
-        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-level-field" data-hierarchy-level-index="${levelIndex}" value="${escapeHtml(level.label || '')}">
+        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-level-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" value="${escapeHtml(level.label || '')}">
       </div>
       <div class="hierarchy-inline-node-list">
-        ${buildInlineHierarchyNodeRows(level, levelIndex)}
+        ${buildInlineHierarchyNodeRows(level, treeIndex, levelIndex)}
       </div>
     </div>`).join('') : '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>';
+}
+
+function buildInlineHierarchyTreeRows(trees = []) {
+  const rows = Array.isArray(trees) && trees.length ? trees : [{ label: 'Aufbau', levels: [] }];
+  return rows.map((tree, treeIndex) => `
+    <div class="module-card-layout-block hierarchy-inline-tree-row">
+      <div class="module-card-layout-block-head">
+        <div>
+          <div class="inline-edit-kicker">Hierarchie-Baum ${treeIndex + 1}</div>
+          <div class="module-editor-help">Dieser Name erscheint als Reiter in der fertigen Ansicht.</div>
+        </div>
+        <div class="module-editor-inline">
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-level" data-hierarchy-tree-index="${treeIndex}">+ Ebene</button>
+          <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-hierarchy-tree" data-hierarchy-tree-index="${treeIndex}">Baum loeschen</button>
+        </div>
+      </div>
+      <div class="inline-edit-field">
+        <span class="inline-edit-label">Reitername</span>
+        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-tree-field" data-hierarchy-tree-index="${treeIndex}" value="${escapeHtml(tree.label || `Baum ${treeIndex + 1}`)}">
+      </div>
+      <div class="module-card-layout-blocks">${buildInlineHierarchyLevelRows(tree.levels, treeIndex)}</div>
+    </div>`).join('');
 }
 
 function buildInlineHierarchyEditor(page) {
@@ -279,9 +355,9 @@ function buildInlineHierarchyEditor(page) {
     </div>
     <div class="inline-edit-section">
       <div class="inline-edit-head">
-        <div class="inline-edit-kicker">Stammbaum-Ebenen</div>
-        <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-level">+ Ebene</button>
+        <div class="inline-edit-kicker">Hierarchie-Baeume</div>
+        <button class="module-editor-mini-btn" type="button" data-inline-action="add-hierarchy-tree">+ Baum</button>
       </div>
-      <div class="module-card-layout-blocks">${buildInlineHierarchyLevelRows(data.levels)}</div>
+      <div class="module-card-layout-blocks">${buildInlineHierarchyTreeRows(data.trees)}</div>
     </div>`;
 }

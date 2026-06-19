@@ -29,6 +29,35 @@ function buildHierarchyLevel(level, index) {
     </section>`;
 }
 
+function buildHierarchyTreeTabs(trees = []) {
+  const safeTrees = Array.isArray(trees) ? trees : [];
+  if (!safeTrees.length) return '';
+  return `
+    <div class="hierarchy-tree-tabs" role="tablist" aria-label="Hierarchie-Baeume">
+      ${safeTrees.map((tree, index) => `
+        <button
+          class="hierarchy-tree-tab${index === 0 ? ' active' : ''}"
+          type="button"
+          role="tab"
+          aria-selected="${index === 0 ? 'true' : 'false'}"
+          data-hierarchy-tree-tab="${index}">
+          ${escapeHtml(tree.label || `Baum ${index + 1}`)}
+        </button>`).join('')}
+    </div>`;
+}
+
+function buildHierarchyTreePanel(tree, index, layoutMode) {
+  const levels = Array.isArray(tree?.levels) ? tree.levels : [];
+  return `
+    <div class="hierarchy-chart-panel${index === 0 ? ' active' : ''}" data-hierarchy-tree-panel="${index}">
+      <div class="hierarchy-chart mode-${escapeHtml(layoutMode)}">
+        ${levels.length
+          ? levels.map(buildHierarchyLevel).join('')
+          : '<div class="hierarchy-empty-tree">Noch keine Ebenen in diesem Hierarchie-Baum.</div>'}
+      </div>
+    </div>`;
+}
+
 function buildHierarchyDetailRow(row) {
   const icon = String(row.icon || '').trim();
   return `
@@ -40,6 +69,22 @@ function buildHierarchyDetailRow(row) {
       </div>
     </div>`;
 }
+
+document.addEventListener('click', event => {
+  const treeTrigger = event.target?.closest?.('[data-hierarchy-tree-tab]');
+  if (!treeTrigger) return;
+  const page = treeTrigger.closest('.hierarchy-page');
+  if (!page) return;
+  const index = treeTrigger.dataset.hierarchyTreeTab || '0';
+  page.querySelectorAll('[data-hierarchy-tree-tab]').forEach(button => {
+    const active = button.dataset.hierarchyTreeTab === index;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  page.querySelectorAll('[data-hierarchy-tree-panel]').forEach(panel => {
+    panel.classList.toggle('active', panel.dataset.hierarchyTreePanel === index);
+  });
+});
 
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-hierarchy-sidebar-toggle]');
@@ -140,7 +185,9 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
   const data = sanitizeHierarchyData(page.hierarchy || {});
   const emblem = sanitizeImageSrc(data.emblem || entry.symbol || '');
   const sideImage = sanitizeImageSrc(data.sideImage || page.image || '');
-  const levels = data.levels.length ? data.levels : sanitizeHierarchyData({}).levels;
+  const trees = data.trees.length
+    ? data.trees
+    : [{ label: data.chartTitle || 'Aufbau', levels: data.levels }];
   const chartScale = data.chartScale / 100;
   const style = [
     `--hierarchy-card-font-scale:${data.cardFontScale / 100}`,
@@ -198,6 +245,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             ${data.chartIntro ? `<p>${sanitizeContentHtml(data.chartIntro)}</p>` : ''}
           </div>
           <div class="hierarchy-view-controls">
+            ${buildHierarchyTreeTabs(trees)}
             <button class="hierarchy-view-button" type="button" data-hierarchy-intro-toggle aria-expanded="true">Aufbau-Text einklappen</button>
             <label>
               <span>Ansicht</span>
@@ -207,8 +255,8 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
           </div>
           <div class="hierarchy-ornament-line"></div>
           <div class="hierarchy-chart-viewport">
-            <div class="hierarchy-chart mode-${escapeHtml(data.layoutMode)}">
-              ${levels.map(buildHierarchyLevel).join('')}
+            <div class="hierarchy-chart-panels">
+              ${trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode)).join('')}
             </div>
           </div>
         </main>

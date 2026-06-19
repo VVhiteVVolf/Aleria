@@ -1,3 +1,14 @@
+function getTradeCatalogAttributeStamp() {
+  return window._tradeCatalogAttributeStamp || null;
+}
+
+function setTradeCatalogAttributeStamp(stamp) {
+  window._tradeCatalogAttributeStamp = {
+    attributesTitle: String(stamp?.attributesTitle || 'Attribute').trim() || 'Attribute',
+    attributes: sanitizeTradeCatalogAttributeRows(stamp?.attributes || [])
+  };
+}
+
 function buildTradeCatalogCategoryRows(categories = [], mode = 'module') {
   return (Array.isArray(categories) ? categories : []).map((category, index) => `
     <div class="trade-editor-row category ${mode === 'module' ? 'module-trade-category-row' : 'inline-trade-category-row'}">
@@ -42,6 +53,15 @@ function buildTradeCatalogFeatureRows(features = [], itemIndex = 0, mode = 'modu
     </div>`).join('');
 }
 
+function buildTradeCatalogAttributeRows(attributes = [], itemIndex = 0, mode = 'module') {
+  return (Array.isArray(attributes) ? attributes : []).map((attribute, attributeIndex) => `
+    <div class="trade-editor-row attribute ${mode === 'module' ? 'module-trade-attribute-row' : 'inline-trade-attribute-row'}">
+      <input class="inline-edit-input ${mode === 'module' ? 'me-trade-attribute-label' : ''}" type="text" value="${escapeHtml(attribute.label || '')}" placeholder="Attribut" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="attributes" data-trade-index="${itemIndex}" data-trade-attribute-index="${attributeIndex}" data-trade-field="label"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-trade-attribute-value' : ''}" type="number" min="0" max="10" step="1" value="${escapeHtml(attribute.value ?? 5)}" placeholder="Wert 0-10" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="attributes" data-trade-index="${itemIndex}" data-trade-attribute-index="${attributeIndex}" data-trade-field="value"` : ''}>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-trade-list-row" data-trade-list="attributes" data-trade-index="${itemIndex}" data-trade-attribute-index="${attributeIndex}"` : 'data-module-editor-action="remove-trade-row" data-trade-list="attributes"'}>Loeschen</button>
+    </div>`).join('');
+}
+
 function buildTradeCatalogFeatureEditor(item, index, mode = 'module') {
   return `
     <div class="trade-editor-feature-panel wide">
@@ -54,6 +74,36 @@ function buildTradeCatalogFeatureEditor(item, index, mode = 'module') {
       </div>
       <div class="trade-editor-list module-trade-features inline-trade-features">
         ${buildTradeCatalogFeatureRows(item.features, index, mode) || '<div class="inline-placeholder-note">Noch keine Eigenschaften.</div>'}
+      </div>
+    </div>`;
+}
+
+function buildTradeCatalogAttributeEditor(item, index, mode = 'module') {
+  const stampButton = mode === 'inline'
+    ? `data-inline-action="stamp-trade-attributes" data-trade-index="${index}"`
+    : 'data-module-editor-action="stamp-trade-attributes"';
+  const applyButton = mode === 'inline'
+    ? `data-inline-action="apply-trade-attributes-stamp" data-trade-index="${index}"`
+    : 'data-module-editor-action="apply-trade-attributes-stamp"';
+  return `
+    <div class="trade-editor-feature-panel trade-editor-attribute-panel wide">
+      <div class="trade-editor-item-head compact">
+        <div>
+          <span>Optionales Diagramm</span>
+          <small>Bleibt unsichtbar, solange weniger als drei Attribute eingetragen sind.</small>
+        </div>
+        <div class="trade-editor-stamp-actions">
+          <button class="module-editor-mini-btn" type="button" ${stampButton}>Diagramm stempeln</button>
+          <button class="module-editor-mini-btn" type="button" ${applyButton}>Stempel einsetzen</button>
+          <button class="module-editor-mini-btn" type="button" ${mode === 'inline' ? `data-inline-action="add-trade-list-row" data-trade-list="attributes" data-trade-index="${index}"` : 'data-module-editor-action="add-trade-row" data-trade-list="attributes"'}>+ Attribut</button>
+        </div>
+      </div>
+      <label>
+        <span>Diagramm-Titel</span>
+        <input class="inline-edit-input ${mode === 'module' ? 'me-trade-item-attributesTitle' : ''}" type="text" value="${escapeHtml(item.attributesTitle || 'Attribute')}" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="items" data-trade-index="${index}" data-trade-field="attributesTitle"` : ''}>
+      </label>
+      <div class="trade-editor-list module-trade-attributes inline-trade-attributes">
+        ${buildTradeCatalogAttributeRows(item.attributes, index, mode) || '<div class="inline-placeholder-note">Kein Diagramm fuer dieses Gut.</div>'}
       </div>
     </div>`;
 }
@@ -91,6 +141,7 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Tags, Komma-getrennt', 'tags', item.tags.join(', '), index, mode)}
         ${buildTradeCatalogTextarea('Beschreibung', 'description', item.description, index, mode)}
         ${buildTradeCatalogFeatureEditor(item, index, mode)}
+        ${buildTradeCatalogAttributeEditor(item, index, mode)}
         ${buildTradeCatalogTextarea('Herkunft', 'origin', item.origin, index, mode)}
         ${buildTradeCatalogInput('Verwendung, Komma-getrennt', 'usageTags', item.usageTags.join(', '), index, mode)}
         ${buildTradeCatalogInput('Preis von', 'priceMin', item.priceMin, index, mode)}
@@ -98,7 +149,6 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Preisbalken %', 'priceFill', item.priceFill, index, mode, 'range')}
         ${buildTradeCatalogInput('Waehrungsicon', 'currencyIcon', item.currencyIcon, index, mode)}
         ${buildTradeCatalogInput('Waehrungsname', 'currencyLabel', item.currencyLabel, index, mode)}
-        ${buildTradeCatalogTextarea('Kaufbedingungen', 'conditions', item.conditions, index, mode)}
         ${buildTradeCatalogInput('Siegelbild', 'sealImage', item.sealImage, index, mode, 'url')}
       </div>
     </section>`).join('');
@@ -108,18 +158,24 @@ function getDefaultTradeCatalogRow(listName) {
   if (listName === 'categories') return { id: 'neue-kategorie', label: 'Neue Kategorie' };
   if (listName === 'items') return sanitizeTradeCatalogItems([{ title: 'Neues Handelsgut', category: 'tiere', description: 'Ausfuehrliche Beschreibung.' }])[0];
   if (listName === 'features') return { icon: '*', text: 'Neue Eigenschaft' };
+  if (listName === 'attributes') return { label: 'Neues Attribut', value: 5 };
   if (listName === 'footerCards') return { icon: '*', title: 'Neuer Hinweis', text: 'Hinweistext.' };
   return {};
 }
 
 function addModuleTradeCatalogRow(button, listName) {
   const card = button.closest('.module-page-card');
-  if (listName === 'features') {
+  if (listName === 'features' || listName === 'attributes') {
     const item = button.closest('.module-trade-item-row');
-    const wrap = item?.querySelector('.module-trade-features');
+    const wrap = item?.querySelector(listName === 'features' ? '.module-trade-features' : '.module-trade-attributes');
     if (!wrap) return;
     wrap.querySelector('.inline-placeholder-note')?.remove();
-    wrap.insertAdjacentHTML('beforeend', buildTradeCatalogFeatureRows([getDefaultTradeCatalogRow('features')], 0, 'module'));
+    wrap.insertAdjacentHTML(
+      'beforeend',
+      listName === 'features'
+        ? buildTradeCatalogFeatureRows([getDefaultTradeCatalogRow('features')], 0, 'module')
+        : buildTradeCatalogAttributeRows([getDefaultTradeCatalogRow('attributes')], 0, 'module')
+    );
     syncModuleJsonPreview();
     return;
   }
@@ -147,6 +203,38 @@ function removeModuleTradeCatalogRow(button) {
   syncModuleJsonPreview();
 }
 
+function stampModuleTradeCatalogAttributes(button) {
+  const item = button.closest('.module-trade-item-row');
+  if (!item) return;
+  const stamp = {
+    attributesTitle: getTrimmedFormValue(item, '.me-trade-item-attributesTitle') || 'Attribute',
+    attributes: collectTradeCatalogAttributes(item)
+  };
+  if (!stamp.attributes.length) {
+    if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Dieses Gut hat noch keine Diagramm-Attribute.', true);
+    return;
+  }
+  setTradeCatalogAttributeStamp(stamp);
+  if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Diagramm als Stempel gemerkt.');
+}
+
+function applyModuleTradeCatalogAttributeStamp(button) {
+  const stamp = getTradeCatalogAttributeStamp();
+  const item = button.closest('.module-trade-item-row');
+  if (!stamp || !item) {
+    if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Noch kein Diagramm-Stempel vorhanden.', true);
+    return;
+  }
+  const titleInput = item.querySelector('.me-trade-item-attributesTitle');
+  if (titleInput) titleInput.value = stamp.attributesTitle || 'Attribute';
+  const wrap = item.querySelector('.module-trade-attributes');
+  if (wrap) {
+    wrap.innerHTML = buildTradeCatalogAttributeRows(stamp.attributes, 0, 'module') || '<div class="inline-placeholder-note">Kein Diagramm fuer dieses Gut.</div>';
+  }
+  syncModuleJsonPreview();
+  if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Diagramm-Stempel eingesetzt.');
+}
+
 function collectTradeCatalogCategories(block) {
   return Array.from(block.querySelectorAll('.module-trade-category-row')).map(row => ({
     id: getTrimmedFormValue(row, '.me-trade-category-id'),
@@ -158,6 +246,13 @@ function collectTradeCatalogFeatures(row) {
   return Array.from(row.querySelectorAll('.module-trade-feature-row')).map(featureRow => ({
     icon: getTrimmedFormValue(featureRow, '.me-trade-feature-icon'),
     text: getTrimmedFormValue(featureRow, '.me-trade-feature-text')
+  }));
+}
+
+function collectTradeCatalogAttributes(row) {
+  return Array.from(row.querySelectorAll('.module-trade-attribute-row')).map(attributeRow => ({
+    label: getTrimmedFormValue(attributeRow, '.me-trade-attribute-label'),
+    value: getTrimmedFormValue(attributeRow, '.me-trade-attribute-value')
   }));
 }
 
@@ -182,7 +277,8 @@ function collectTradeCatalogItems(block) {
     priceFill: getTrimmedFormValue(row, '.me-trade-item-priceFill'),
     currencyIcon: getTrimmedFormValue(row, '.me-trade-item-currencyIcon'),
     currencyLabel: getTrimmedFormValue(row, '.me-trade-item-currencyLabel'),
-    conditions: getTrimmedFormValue(row, '.me-trade-item-conditions'),
+    attributesTitle: getTrimmedFormValue(row, '.me-trade-item-attributesTitle'),
+    attributes: collectTradeCatalogAttributes(row),
     sealImage: getTrimmedFormValue(row, '.me-trade-item-sealImage')
   }));
 }

@@ -21,14 +21,18 @@ function updateInlineTradeCatalogListField(input) {
   const index = Number(input.dataset.tradeIndex || -1);
   if (!listName || !field || index < 0) return;
   const data = getInlineTradeCatalogDataForEdit(page);
-  if (listName === 'features') {
-    const featureIndex = Number(input.dataset.tradeFeatureIndex || -1);
+  if (listName === 'features' || listName === 'attributes') {
+    const nestedIndex = Number(
+      listName === 'features'
+        ? input.dataset.tradeFeatureIndex || -1
+        : input.dataset.tradeAttributeIndex || -1
+    );
     const item = { ...(data.items[index] || {}) };
-    const features = Array.isArray(item.features) ? [...item.features] : [];
-    const feature = { ...(features[featureIndex] || {}) };
-    feature[field] = input.value;
-    features[featureIndex] = feature;
-    item.features = features;
+    const rows = Array.isArray(item[listName]) ? [...item[listName]] : [];
+    const row = { ...(rows[nestedIndex] || {}) };
+    row[field] = input.value;
+    rows[nestedIndex] = row;
+    item[listName] = rows;
     data.items[index] = item;
     page.tradeCatalog = sanitizeTradeCatalogData(data);
     scheduleInlineModuleLivePreviewRefresh();
@@ -47,10 +51,10 @@ function addInlineTradeCatalogRow(listName, index = 0) {
   const page = getInlineDraftPage();
   if (!page || !listName) return;
   const data = getInlineTradeCatalogDataForEdit(page);
-  if (listName === 'features') {
+  if (listName === 'features' || listName === 'attributes') {
     const item = { ...(data.items[index] || {}) };
-    item.features = Array.isArray(item.features) ? [...item.features] : [];
-    item.features.push(getDefaultTradeCatalogRow('features'));
+    item[listName] = Array.isArray(item[listName]) ? [...item[listName]] : [];
+    item[listName].push(getDefaultTradeCatalogRow(listName));
     data.items[index] = item;
     page.tradeCatalog = sanitizeTradeCatalogData(data);
     renderPage(currentPage, 0);
@@ -63,14 +67,15 @@ function addInlineTradeCatalogRow(listName, index = 0) {
   renderPage(currentPage, 0);
 }
 
-function removeInlineTradeCatalogRow(listName, index, featureIndex = 0) {
+function removeInlineTradeCatalogRow(listName, index, featureIndex = 0, attributeIndex = 0) {
   const page = getInlineDraftPage();
   if (!page || !listName) return;
   const data = getInlineTradeCatalogDataForEdit(page);
-  if (listName === 'features') {
+  if (listName === 'features' || listName === 'attributes') {
     const item = { ...(data.items[index] || {}) };
-    item.features = Array.isArray(item.features) ? [...item.features] : [];
-    item.features.splice(featureIndex, 1);
+    const nestedIndex = listName === 'features' ? featureIndex : attributeIndex;
+    item[listName] = Array.isArray(item[listName]) ? [...item[listName]] : [];
+    item[listName].splice(nestedIndex, 1);
     data.items[index] = item;
     page.tradeCatalog = sanitizeTradeCatalogData(data);
     renderPage(currentPage, 0);
@@ -84,6 +89,33 @@ function removeInlineTradeCatalogRow(listName, index, featureIndex = 0) {
     const fallback = list[0]?.id || 'tiere';
     data.items = data.items.map(item => item.category === removed?.id ? { ...item, category: fallback } : item);
   }
+  page.tradeCatalog = sanitizeTradeCatalogData(data);
+  renderPage(currentPage, 0);
+}
+
+function stampInlineTradeCatalogAttributes(index = 0) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const data = getInlineTradeCatalogDataForEdit(page);
+  const item = data.items[index];
+  if (!item || !Array.isArray(item.attributes) || !item.attributes.length) return;
+  setTradeCatalogAttributeStamp({
+    attributesTitle: item.attributesTitle || 'Attribute',
+    attributes: item.attributes
+  });
+}
+
+function applyInlineTradeCatalogAttributeStamp(index = 0) {
+  const page = getInlineDraftPage();
+  const stamp = getTradeCatalogAttributeStamp();
+  if (!page || !stamp) return;
+  const data = getInlineTradeCatalogDataForEdit(page);
+  if (!data.items[index]) return;
+  data.items[index] = {
+    ...data.items[index],
+    attributesTitle: stamp.attributesTitle || 'Attribute',
+    attributes: stamp.attributes
+  };
   page.tradeCatalog = sanitizeTradeCatalogData(data);
   renderPage(currentPage, 0);
 }
