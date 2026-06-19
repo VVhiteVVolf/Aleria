@@ -9,6 +9,8 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'load-json-as-new',
   'export-module',
   'export-module-comments',
+  'export-template-transfer',
+  'open-template-transfer-import',
   'export-selected-comment-thread',
   'export-all-modules',
   'open-module-import-file',
@@ -136,6 +138,14 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'export-module-comments') {
     exportModuleCommentsFromEditor();
+    return;
+  }
+  if (action === 'export-template-transfer') {
+    exportModuleTemplateTransferFromEditor(trigger);
+    return;
+  }
+  if (action === 'open-template-transfer-import') {
+    openModuleTemplateTransferImport(trigger);
     return;
   }
   if (action === 'export-selected-comment-thread') {
@@ -565,6 +575,10 @@ function handleModuleEditorFileChange(event) {
 
   if (action === 'import-module-file') {
     handleModuleImportFile(field);
+    return;
+  }
+  if (action === 'import-template-transfer-file') {
+    handleModuleTemplateTransferImportFile(field);
     return;
   }
   if (action === 'import-comment-thread-file') {

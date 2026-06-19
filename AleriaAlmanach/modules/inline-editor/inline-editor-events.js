@@ -46,6 +46,8 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-trade-list-row',
   'stamp-trade-attributes',
   'apply-trade-attributes-stamp',
+  'export-template-transfer',
+  'open-template-transfer-import',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-tree',
@@ -298,6 +300,14 @@ function handleInlineEditorActionClick(event) {
     applyInlineTradeCatalogAttributeStamp(Number(trigger.dataset.tradeIndex) || 0);
     return;
   }
+  if (action === 'export-template-transfer') {
+    exportInlineModuleTemplateTransfer(trigger);
+    return;
+  }
+  if (action === 'open-template-transfer-import') {
+    openInlineModuleTemplateTransferImport(trigger);
+    return;
+  }
   if (action === 'add-hierarchy-detail') {
     addInlineHierarchyDetail();
     return;
@@ -413,6 +423,10 @@ function handleInlineEditorFieldChange(event) {
 
   if (action === 'sync-page-field') {
     syncInlinePageField(field);
+    return;
+  }
+  if (action === 'import-template-transfer-file') {
+    if (event.type === 'change') handleInlineModuleTemplateTransferImportFile(field);
     return;
   }
   if (action === 'rerender-entry-field') {

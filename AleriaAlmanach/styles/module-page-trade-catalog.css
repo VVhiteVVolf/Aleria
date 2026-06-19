@@ -387,7 +387,7 @@
 .trade-radar-labels text {
   fill: #79572b;
   font-family: "Cinzel", Georgia, serif;
-  font-size: 0.5rem;
+  font-size: 0.54rem;
   font-weight: 700;
   letter-spacing: 0.035em;
   dominant-baseline: middle;
@@ -457,7 +457,8 @@
 
 .trade-price-bar {
   height: 0.28rem;
-  background: rgba(98, 66, 30, 0.22);
+  overflow: hidden;
+  background: rgba(98, 66, 30, 0.18);
   margin-bottom: 0.35rem;
 }
 
@@ -465,7 +466,17 @@
   display: block;
   width: 58%;
   height: 100%;
-  background: #9c712e;
+  background:
+    linear-gradient(90deg,
+      #6d411b 0%,
+      #9a5928 22%,
+      #bf7235 33%,
+      #c8bfaa 75%,
+      #ffd85d 100%);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: var(--trade-price-gradient-size, 100%) 100%;
+  box-shadow: 0 0 0.35rem rgba(210, 150, 45, 0.22);
 }
 
 .trade-catalog-price strong {
@@ -476,19 +487,21 @@
 
 .trade-currency {
   display: flex;
-  gap: 0.35rem;
-  align-items: baseline;
+  gap: 0.45rem;
+  align-items: center;
   margin-top: 0.25rem;
 }
 
 .trade-currency-icon {
-  font-size: 0.95em;
+  flex: 0 0 auto;
+  font-size: 1em;
 }
 
 .trade-catalog-seal {
-  justify-self: end;
+  display: block;
   width: 5.4rem;
   height: 5.4rem;
+  margin: 0.75rem auto 0;
   object-fit: contain;
   opacity: 0.35;
 }

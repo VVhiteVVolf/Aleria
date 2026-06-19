@@ -226,6 +226,8 @@ function buildModulePageEditorMarkup(page, index) {
 
       ${buildRegisteredModuleEditorFields(page, type, index)}
 
+      ${typeof buildModuleTemplateTransferPanel === 'function' ? buildModuleTemplateTransferPanel(page, type, index) : ''}
+
     </div>`;
 }
 

@@ -284,6 +284,9 @@ function moveInlineCurrentPage(direction) {
 }
 
 function buildInlineStandardEditor(entry, page) {
+  const transferPanel = typeof buildInlineModuleTemplateTransferPanel === 'function'
+    ? buildInlineModuleTemplateTransferPanel(page, 'standard')
+    : '';
   return `
     <div class="inline-edit-shell">
       <div class="inline-edit-section">
@@ -331,10 +334,15 @@ function buildInlineStandardEditor(entry, page) {
       </div>
       ${buildInlineStatsEditor(page)}
       ${buildInlineCommentEditor(page)}
+      ${transferPanel}
     </div>`;
 }
 
 function buildInlineComplexEditor(entry, page, type) {
+  const transferPanel = typeof buildInlineModuleTemplateTransferPanel === 'function'
+    ? buildInlineModuleTemplateTransferPanel(page, type)
+    : '';
+  const wrapInlineEditor = content => `<div class="inline-edit-shell">${content}${transferPanel}</div>`;
   const moduleMeta = `
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Modultext</div>
@@ -376,8 +384,8 @@ function buildInlineComplexEditor(entry, page, type) {
       </div>
     </div>`;
 
-  if (type === 'scene') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineSceneEditor(page)}</div>`;
-  if (type === 'session') return `<div class="inline-edit-shell">${moduleMeta}
+  if (type === 'scene') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineSceneEditor(page)}`);
+  if (type === 'session') return wrapInlineEditor(`${moduleMeta}
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Sitzung</div>
       <div class="inline-edit-grid single">
@@ -400,22 +408,22 @@ function buildInlineComplexEditor(entry, page, type) {
           <textarea class="inline-edit-textarea" data-inline-action="sync-page-field" data-page-field="sessionEmptyText">${escapeHtml(page.sessionEmptyText || '')}</textarea>
         </div>
       </div>
-    </div></div>`;
-  if (type === 'wanted') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineWantedEditor(page)}</div>`;
-  if (type === 'bounty-file') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineBountyFileEditor(page)}</div>`;
-  if (type === 'goods') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineGoodsEditor(page)}</div>`;
-  if (type === 'trade-catalog') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTradeCatalogEditor(page)}</div>`;
-  if (type === 'map-template') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineMapTemplateEditor(page)}</div>`;
-  if (type === 'profiles') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineProfileEditor(page)}</div>`;
-  if (type === 'artifact') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineArtifactEditor(page)}</div>`;
-  if (type === 'recipe') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineRecipeEditor(page)}</div>`;
-  if (type === 'tournament') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTournamentEditor(page)}</div>`;
-  if (type === 'tournament-league') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineTournamentLeagueEditor(page)}</div>`;
-  if (type === 'caste') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineCasteEditor(page)}</div>`;
-  if (type === 'court') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineCourtEditor(page)}</div>`;
-  if (type === 'hierarchy') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineHierarchyEditor(page)}</div>`;
-  if (type === 'biography') return `<div class="inline-edit-shell">${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}</div>`;
-  if (type === 'bestiary') return `<div class="inline-edit-shell">${buildInlineBestiaryEditor(entry, page)}</div>`;
-  if (type === 'quest-file') return `<div class="inline-edit-shell">${buildInlineQuestFileEditor(entry, page)}</div>`;
-  return moduleMeta;
+    </div>`);
+  if (type === 'wanted') return wrapInlineEditor(`${moduleMeta}${buildInlineWantedEditor(page)}`);
+  if (type === 'bounty-file') return wrapInlineEditor(`${moduleMeta}${buildInlineBountyFileEditor(page)}`);
+  if (type === 'goods') return wrapInlineEditor(`${moduleMeta}${buildInlineGoodsEditor(page)}`);
+  if (type === 'trade-catalog') return wrapInlineEditor(`${moduleMeta}${buildInlineTradeCatalogEditor(page)}`);
+  if (type === 'map-template') return wrapInlineEditor(`${moduleMeta}${buildInlineMapTemplateEditor(page)}`);
+  if (type === 'profiles') return wrapInlineEditor(`${moduleMeta}${buildInlineProfileEditor(page)}`);
+  if (type === 'artifact') return wrapInlineEditor(`${moduleMeta}${buildInlineArtifactEditor(page)}`);
+  if (type === 'recipe') return wrapInlineEditor(`${moduleMeta}${buildInlineRecipeEditor(page)}`);
+  if (type === 'tournament') return wrapInlineEditor(`${moduleMeta}${buildInlineTournamentEditor(page)}`);
+  if (type === 'tournament-league') return wrapInlineEditor(`${moduleMeta}${buildInlineTournamentLeagueEditor(page)}`);
+  if (type === 'caste') return wrapInlineEditor(`${moduleMeta}${buildInlineCasteEditor(page)}`);
+  if (type === 'court') return wrapInlineEditor(`${moduleMeta}${buildInlineCourtEditor(page)}`);
+  if (type === 'hierarchy') return wrapInlineEditor(`${moduleMeta}${buildInlineHierarchyEditor(page)}`);
+  if (type === 'biography') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}`);
+  if (type === 'bestiary') return wrapInlineEditor(buildInlineBestiaryEditor(entry, page));
+  if (type === 'quest-file') return wrapInlineEditor(buildInlineQuestFileEditor(entry, page));
+  return wrapInlineEditor(moduleMeta);
 }

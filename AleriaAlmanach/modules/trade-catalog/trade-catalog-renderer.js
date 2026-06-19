@@ -67,21 +67,22 @@ function getTradeCatalogAttributeLabelPoint(index, total, center = 120) {
   const angle = (-90 + (360 / total) * index) * Math.PI / 180;
   const cos = Math.cos(angle);
   const sin = Math.sin(angle);
-  let x = center + cos * 86;
+  let x = center;
+  let y = center + sin * 58;
   let anchor = 'middle';
   if (cos > 0.35) {
-    x = 218;
-    anchor = 'end';
-  } else if (cos < -0.35) {
-    x = 22;
+    x = center + 56;
     anchor = 'start';
+  } else if (cos < -0.35) {
+    x = center - 56;
+    anchor = 'end';
   }
-  let y = center + sin * 82;
-  if (sin < -0.75) y = 20;
-  if (sin > 0.75) y = 200;
+  if (Math.abs(cos) <= 0.35) {
+    y = sin < 0 ? center - 72 : center + 76;
+  }
   return {
-    x: Math.max(22, Math.min(218, x)),
-    y: Math.max(20, Math.min(200, y)),
+    x: Math.max(16, Math.min(224, x)),
+    y: Math.max(28, Math.min(196, y)),
     anchor
   };
 }
@@ -143,10 +144,12 @@ function buildTradePrice(item) {
   const price = item.priceMin || item.priceMax
     ? `${escapeHtml(item.priceMin || '-')}${item.priceMax ? ` - ${escapeHtml(item.priceMax)}` : ''}`
     : '-';
+  const priceFill = Math.max(0, Math.min(100, Number(item.priceFill) || 0));
+  const gradientSize = priceFill > 0 ? 10000 / priceFill : 100;
   return `
     <section class="trade-catalog-meta-block trade-catalog-price">
       <h4>${escapeHtml(item.priceTitle)}</h4>
-      <div class="trade-price-bar"><span style="width:${escapeHtml(`${Number(item.priceFill) || 0}%`)}"></span></div>
+      <div class="trade-price-bar"><span style="width:${escapeHtml(`${priceFill}%`)};--trade-price-gradient-size:${escapeHtml(`${gradientSize}%`)}"></span></div>
       <strong>${price}</strong>
       <div class="trade-currency">${buildTradeCatalogSmallIcon(item.currencyIcon, 'trade-currency-icon')}<span>${escapeHtml(item.currencyLabel)}</span></div>
       ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
@@ -174,6 +177,7 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
         <h3>${escapeHtml(item.title)}</h3>
         ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ''}
         ${buildTradeTagList(item.tags)}
+        ${item.sealImage ? `<img class="trade-catalog-seal" src="${sanitizeImageSrc(item.sealImage)}" alt="" loading="lazy" decoding="async">` : ''}
       </aside>
       <section class="trade-catalog-description">
         <h4>${escapeHtml(item.descriptionTitle)}</h4>
@@ -187,7 +191,6 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
         </section>
         ${buildTradePrice(item)}
         ${buildTradeAttributeChart(item)}
-        ${item.sealImage ? `<img class="trade-catalog-seal" src="${sanitizeImageSrc(item.sealImage)}" alt="" loading="lazy" decoding="async">` : ''}
       </aside>
     </article>`;
 }
