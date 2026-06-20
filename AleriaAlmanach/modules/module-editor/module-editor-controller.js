@@ -267,12 +267,14 @@ async function saveModuleFromEditor() {
       } else {
         entry.id = context.sourceEntryId;
         _entryOverrides[context.sourceEntryId] = entry;
+        unhideModuleEntry(context.sourceEntryId);
         setModuleSectionMove(context.sourceEntryId, section);
       }
     } else if (builtin) {
       entry.id = builtin.entry.id;
       removeCustomModuleById(entry.id);
       _entryOverrides[entry.id] = entry;
+      unhideModuleEntry(entry.id);
       setModuleSectionMove(entry.id, section);
     } else {
       if (existingCustom && !confirm('Ein eigenes Modul mit dieser ID existiert bereits. Soll es überschrieben werden?')) {
@@ -318,7 +320,7 @@ async function saveModuleFromEditor() {
   }
 }
 
-function deleteModuleFromEditor() {
+function deleteModuleFromEditorLegacyUnused() {
   const context = _moduleEditorContext;
   if (!context || context.mode !== 'edit') return;
   if (!confirm(context.sourceKind === 'custom'
@@ -338,4 +340,19 @@ function deleteModuleFromEditor() {
   setModuleEditorDirtyState(false);
   closeModuleEditor();
   refreshAfterModuleChange(context.sourceEntryId);
+}
+
+function deleteModuleFromEditor() {
+  const context = _moduleEditorContext;
+  if (!context || context.mode !== 'edit') return;
+  const result = deleteModuleById(context.sourceEntryId, { requireCode: true, deferSave: true });
+  if (!result.ok) return;
+  saveModuleStore();
+  setModuleEditorDirtyState(false);
+  closeModuleEditor();
+  refreshAfterModuleChange(result.kind === 'builtin' ? '' : context.sourceEntryId);
+  showAppStatus(result.kind === 'builtin'
+    ? 'Basis-Modul wurde ausgeblendet.'
+    : 'Modul wurde geloescht.',
+    'success');
 }

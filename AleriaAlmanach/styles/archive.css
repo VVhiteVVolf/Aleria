@@ -1311,6 +1311,14 @@
   .module-section-manager-form label span {
     font-size: 0.52rem;
   }
+  .module-section-manager-help {
+    border-left: 3px solid rgba(139,105,20,0.38);
+    background: rgba(255,255,255,0.18);
+    color: var(--ink-faded);
+    font-size: 0.72rem;
+    line-height: 1.35;
+    padding: 0.55rem 0.65rem;
+  }
   .module-section-manager-form .module-section-manager-mode label {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.22rem 0.45rem;
@@ -1484,10 +1492,23 @@
   }
   .module-section-manager-module-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr) auto;
     gap: 0.65rem;
     align-items: center;
     padding: 0.55rem;
+  }
+  .module-section-manager-delete-btn {
+    min-height: 2rem;
+    border: 1px solid rgba(132,32,32,0.36);
+    background: rgba(255,255,255,0.24);
+    color: var(--red-wax);
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.38rem 0.58rem;
+    cursor: pointer;
   }
   .module-section-manager-empty {
     padding: 1rem;

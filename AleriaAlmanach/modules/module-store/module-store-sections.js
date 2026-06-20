@@ -51,6 +51,66 @@ function clearModuleSectionMove(entryId) {
   if (id) delete _moduleNodeAssignments[id];
 }
 
+const MODULE_DELETE_CONFIRM_CODE = '2603';
+
+function isModuleEntryHidden(entryId) {
+  const id = String(entryId || '').trim();
+  return !!(id && _hiddenModuleIds?.[id]);
+}
+
+function unhideModuleEntry(entryId) {
+  const id = String(entryId || '').trim();
+  if (id) delete _hiddenModuleIds[id];
+}
+
+function getModuleDeleteKind(entryId) {
+  const id = String(entryId || '').trim();
+  if (!id) return '';
+  if (findCustomSectionByEntryId(id)) return 'custom';
+  if (findBuiltinSectionByEntryId(id)) return 'builtin';
+  if (_entryOverrides[id] || _moduleSectionMoves[id]) return 'override';
+  return '';
+}
+
+function getModuleDeletePromptLabel(entryId) {
+  const current = findCurrentSectionByEntryId(entryId);
+  return current?.entry?.title || entryId || 'dieses Modul';
+}
+
+function confirmModuleDeleteCode(entryId, options = {}) {
+  const label = getModuleDeletePromptLabel(entryId);
+  const kind = options.kind || getModuleDeleteKind(entryId);
+  const action = kind === 'builtin'
+    ? 'ausblenden und lokale Bearbeitungen entfernen'
+    : (kind === 'override' ? 'lokale Bearbeitung entfernen' : 'loeschen');
+  const code = prompt(`Modul "${label}" ${action}?\n\nGib zur Bestaetigung den Code 2603 ein.`);
+  if (code === null) return false;
+  if (String(code || '').trim() !== MODULE_DELETE_CONFIRM_CODE) {
+    showAppStatus('Falscher Loeschcode. Modul wurde nicht geloescht.', 'error');
+    return false;
+  }
+  return confirm(`Endgueltig fortfahren?\n\nModul: ${label}\nAktion: ${action}`);
+}
+
+function deleteModuleById(entryId, options = {}) {
+  const id = String(entryId || '').trim();
+  if (!id) return { ok: false, reason: 'missing-id' };
+  const kind = getModuleDeleteKind(id);
+  if (!kind) return { ok: false, reason: 'not-found' };
+  if (options.requireCode !== false && !confirmModuleDeleteCode(id, { kind })) {
+    return { ok: false, reason: 'cancelled' };
+  }
+
+  removeCustomModuleById(id);
+  delete _entryOverrides[id];
+  clearModuleSectionMove(id);
+  if (kind === 'builtin') _hiddenModuleIds[id] = true;
+  else delete _hiddenModuleIds[id];
+
+  if (!options.deferSave) saveModuleStore();
+  return { ok: true, kind, entryId: id };
+}
+
 function findSectionBySignature(signature) {
   return getValidSections().find(section => makeSectionSignature(section) === signature) || null;
 }
@@ -64,6 +124,7 @@ function getAllSections() {
       ...deepClone(section),
       entries: (section.entries || []).map(entry => {
         if (!entry?.id) return deepClone(entry);
+        if (isModuleEntryHidden(entry.id)) return null;
         const nextEntry = _entryOverrides[entry.id]
           ? deepClone({ ..._entryOverrides[entry.id], id: entry.id })
           : deepClone(entry);
@@ -145,6 +206,7 @@ function findCurrentSectionByEntryId(entryId) {
 
 function upsertCustomModule(sectionInput, entry) {
   const nextEntry = sanitizeModuleEntry(entry);
+  unhideModuleEntry(nextEntry.id);
   clearModuleSectionMove(nextEntry.id);
   const targetNodeId = sectionInput?.nodeId || ensureModuleNodeForSection(sectionInput);
   const targetSection = cleanCustomSection({ ...sectionInput, nodeId: targetNodeId, entries: [] });

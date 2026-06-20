@@ -234,6 +234,34 @@ function ensureModuleSectionManagerDialog() {
           <div id="msm-section-list" class="module-section-manager-section-list"></div>
         </section>
 
+        <section class="module-section-manager-panel module-section-import-panel">
+          <div class="module-section-manager-panel-head">
+            <h3>Modul direkt einfuegen</h3>
+            <span>Importiertes Modul sofort einsortieren</span>
+          </div>
+          <div class="module-section-manager-form">
+            <label>
+              <span>Zielbereich</span>
+              <select id="msm-import-target"></select>
+            </label>
+            <label>
+              <span>Neuer Titel optional</span>
+              <input id="msm-import-title" type="text" placeholder="Leer lassen = Titel aus Datei">
+            </label>
+            <label>
+              <span>Neue Modul-ID optional</span>
+              <input id="msm-import-id" type="text" placeholder="Leer lassen = ID aus Datei">
+            </label>
+            <label>
+              <span>Moduldatei</span>
+              <input id="msm-module-import-file" type="file" accept=".json,application/json" data-section-manager-action="import-module-file">
+            </label>
+            <div class="module-section-manager-help">
+              Einzelne Modul-Exports und Modulpakete werden direkt gespeichert. Titel und ID koennen leer bleiben, wenn der Export wirklich ersetzt werden soll.
+            </div>
+          </div>
+        </section>
+
         <section class="module-section-manager-panel module-section-editor-panel" data-section-editor-panel hidden>
           <div class="module-section-manager-panel-head">
             <h3>Reiter bearbeiten</h3>
@@ -455,6 +483,26 @@ function renderModuleSectionManagerSections(sections) {
   }).join('') || '<div class="module-section-manager-empty">Noch keine Bereiche vorhanden.</div>';
 }
 
+function getDefaultModuleImportTargetSignature(sections) {
+  const current = typeof currentEntry !== 'undefined' && currentEntry?.id
+    ? findCurrentSectionByEntryId(currentEntry.id)?.section
+    : null;
+  if (current) return makeSectionSignature(current);
+  const activeSection = sections.find(section => (section.tab || section.key) === _activeTab);
+  if (activeSection) return makeSectionSignature(activeSection);
+  return sections[0] ? makeSectionSignature(sections[0]) : '';
+}
+
+function renderModuleSectionManagerImportTarget(sections) {
+  const select = document.getElementById('msm-import-target');
+  if (!select) return;
+  const previous = select.value;
+  const hasPrevious = previous && sections.some(section => makeSectionSignature(section) === previous);
+  const selected = hasPrevious ? previous : getDefaultModuleImportTargetSignature(sections);
+  select.innerHTML = buildModuleSectionTargetOptions(selected);
+  if (selected) select.value = selected;
+}
+
 function renderModuleSectionManagerModules(entries, filterValue = '') {
   const list = document.getElementById('msm-module-list');
   if (!list) return;
@@ -477,6 +525,7 @@ function renderModuleSectionManagerModules(entries, filterValue = '') {
       <select data-section-manager-action="move-module" data-entry-id="${escapeHtml(item.entry?.id || '')}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} verschieben">
         ${buildModuleSectionTargetOptions(item.sectionSignature)}
       </select>
+      <button class="module-section-manager-delete-btn" type="button" data-section-manager-action="delete-module" data-entry-id="${escapeHtml(item.entry?.id || '')}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} loeschen">Loeschen</button>
     </div>
   `).join('') || '<div class="module-section-manager-empty">Keine Module gefunden.</div>';
 }
@@ -488,6 +537,7 @@ function renderModuleSectionManager() {
   const filter = document.getElementById('msm-module-filter')?.value || '';
   renderModuleSectionManagerTabs(sections);
   renderModuleSectionManagerSections(sections);
+  renderModuleSectionManagerImportTarget(sections);
   renderModuleSectionManagerModules(entries, filter);
   renderModuleSectionEditor();
 }
@@ -770,6 +820,55 @@ function moveModuleToSection(entryId, targetSignature, options = {}) {
   return true;
 }
 
+async function handleModuleSectionManagerModuleImport(input) {
+  const file = input?.files?.[0];
+  if (!file) return;
+  const targetSignature = document.getElementById('msm-import-target')?.value || '';
+  const titleOverride = document.getElementById('msm-import-title')?.value || '';
+  const idOverride = document.getElementById('msm-import-id')?.value || '';
+  if (typeof importModuleFileIntoSection !== 'function') {
+    setModuleSectionManagerStatus('Modulimport ist noch nicht bereit.', 'error');
+    input.value = '';
+    return;
+  }
+
+  setModuleSectionManagerStatus('Modul wird importiert...', 'info');
+  try {
+    const result = await importModuleFileIntoSection(file, targetSignature, {
+      confirm: true,
+      titleOverride,
+      idOverride
+    });
+    if (result?.cancelled) {
+      setModuleSectionManagerStatus('Import abgebrochen.', 'info');
+      return;
+    }
+    renderModuleSectionManager();
+    const comments = result.commentCount ? `, ${result.commentCount} Kommentare` : '';
+    setModuleSectionManagerStatus(`"${result.entry.title || result.entry.id}" wurde in ${getSectionOptionLabel(result.section)} eingefuegt${comments}.`, 'success');
+    if (typeof showAppStatus === 'function') {
+      showAppStatus(`Modul "${result.entry.title || result.entry.id}" wurde eingefuegt.`, 'success');
+    }
+  } catch (error) {
+    console.error('section manager module import failed:', error);
+    setModuleSectionManagerStatus(getFriendlyErrorMessage(error, 'Modul konnte nicht importiert werden.'), 'error');
+  } finally {
+    input.value = '';
+  }
+}
+
+function deleteModuleFromSectionManager(entryId) {
+  const result = deleteModuleById(entryId, { requireCode: true, deferSave: true });
+  if (!result.ok) return;
+  saveModuleStore();
+  renderAll();
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(result.kind === 'builtin'
+    ? 'Basis-Modul wurde ausgeblendet.'
+    : 'Modul wurde geloescht.',
+    'success');
+}
+
 function releaseModuleSection(signature) {
   const target = findSectionBySignature(signature);
   if (!target) {
@@ -891,10 +990,20 @@ function handleModuleSectionManagerClick(event) {
   if (action === 'release-section') {
     event.preventDefault();
     releaseModuleSection(trigger.dataset.sectionSignature || '');
+    return;
+  }
+  if (action === 'delete-module') {
+    event.preventDefault();
+    deleteModuleFromSectionManager(trigger.dataset.entryId || '');
   }
 }
 
 function handleModuleSectionManagerChange(event) {
+  const importFileTrigger = event.target?.closest?.('[data-section-manager-action="import-module-file"]');
+  if (importFileTrigger?.closest?.('#module-section-manager-overlay')) {
+    handleModuleSectionManagerModuleImport(importFileTrigger);
+    return;
+  }
   const editorMoveTrigger = event.target?.closest?.('[data-section-manager-action="move-section-editor"]');
   if (editorMoveTrigger?.closest?.('#module-section-manager-overlay')) {
     const moved = moveModuleSectionToParent(_moduleSectionEditorSignature, editorMoveTrigger.value || '');

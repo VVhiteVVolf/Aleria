@@ -13,6 +13,11 @@ function normalizeModuleStorePayload(payload) {
     if (!id) return;
     entryOverrides[id] = sanitizeModuleEntry({ ...entry, id });
   });
+  const hiddenModuleIds = {};
+  Object.entries(payload?.hiddenModuleIds || {}).forEach(([entryId, hidden]) => {
+    const id = String(entryId || '').trim();
+    if (id && hidden) hiddenModuleIds[id] = true;
+  });
   const treeState = typeof normalizeModuleTreeState === 'function'
     ? normalizeModuleTreeState(payload || {})
     : { nodes: [], assignments: {} };
@@ -30,6 +35,7 @@ function normalizeModuleStorePayload(payload) {
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
         .filter(([entryId]) => entryId)
     ),
+    hiddenModuleIds,
     archiveDashboardInsights: normalizeArchiveDashboardInsights(payload?.archiveDashboardInsights),
     entryOverrides
   };
@@ -84,6 +90,11 @@ function getModuleStorePayload(updatedAtClient = Date.now()) {
       Object.entries(_moduleSectionMoves || {})
         .map(([entryId, section]) => [String(entryId || '').trim(), cleanModuleSectionMove(section)])
         .filter(([entryId]) => entryId)
+    ),
+    hiddenModuleIds: Object.fromEntries(
+      Object.entries(_hiddenModuleIds || {})
+        .map(([entryId, hidden]) => [String(entryId || '').trim(), !!hidden])
+        .filter(([entryId, hidden]) => entryId && hidden)
     ),
     archiveDashboardInsights: _archiveDashboardInsights,
     entryOverrides: Object.fromEntries(
@@ -350,6 +361,7 @@ function applyModuleStorePayload(payload) {
   _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;
   _moduleSectionMoves = normalized.moduleSectionMoves || {};
+  _hiddenModuleIds = normalized.hiddenModuleIds || {};
   _archiveDashboardInsights = normalized.archiveDashboardInsights || [];
   _entryOverrides = {};
   Object.entries(normalized.entryOverrides).forEach(([entryId, entry]) => {
@@ -382,6 +394,7 @@ function loadModuleStore() {
     _moduleNodeAssignments = {};
     _entryOverrides = {};
     _moduleSectionMoves = {};
+    _hiddenModuleIds = {};
     _archiveDashboardInsights = [];
     updateModuleStoreSizePanel();
   }

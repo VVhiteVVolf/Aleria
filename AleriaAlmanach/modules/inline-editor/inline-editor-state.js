@@ -301,6 +301,7 @@ function saveInlineModuleEdit() {
       } else {
         _entryOverrides[context.entryId] = { ...entry, id: context.entryId };
         entry.id = context.entryId;
+        unhideModuleEntry(context.entryId);
         setModuleSectionMove(context.entryId, section);
       }
     } else {
@@ -309,6 +310,7 @@ function saveInlineModuleEdit() {
       const builtin = findBuiltinSectionByEntryId(entry.id);
       if (builtin) {
         _entryOverrides[entry.id] = entry;
+        unhideModuleEntry(entry.id);
         setModuleSectionMove(entry.id, section);
       }
       else upsertCustomModule(section, entry);

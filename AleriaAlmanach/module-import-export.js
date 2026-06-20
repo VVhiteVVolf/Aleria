@@ -273,6 +273,7 @@ async function applyAllModulePackagesPayload(parsed) {
     removeCustomModuleById(entry.id);
     if (builtin) {
       _entryOverrides[entry.id] = entry;
+      unhideModuleEntry(entry.id);
       setModuleSectionMove(entry.id, section);
     } else {
       delete _entryOverrides[entry.id];
@@ -309,6 +310,113 @@ async function applyAllModulePackagesPayload(parsed) {
   warnIfModuleStoreSizeIsHigh(storePayload);
   updateFirebaseSyncStatus('synced', 'Masterpaket importiert.');
   showAppStatus('Modul-Masterpaket wurde importiert.', 'success');
+}
+
+function getDirectModuleImportTargetSection(sectionSignature) {
+  const signature = String(sectionSignature || '').trim();
+  const found = signature ? findSectionBySignature(signature) : null;
+  if (!found) throw new Error('Bitte waehle einen Zielbereich fuer den Modulimport.');
+  const target = cleanCustomSection({ ...found, entries: [] });
+  target.nodeId = target.nodeId || ensureModuleNodeForSection(target);
+  return cleanCustomSection(target);
+}
+
+function getDirectModuleImportOverwriteNotice(entryId) {
+  const id = String(entryId || '').trim();
+  if (!id) return '';
+  const existing = findCurrentSectionByEntryId(id);
+  if (!existing && !_entryOverrides[id]) return '';
+  const oldSection = existing?.section ? `\nBisheriger Bereich: ${getSectionOptionLabel(existing.section)}` : '';
+  return `\n\nAchtung: Die Modul-ID "${id}" existiert bereits und wird ersetzt.${oldSection}`;
+}
+
+async function applySingleModuleImportToSection(parsed, sectionSignature, options = {}) {
+  const imported = normalizeModuleImportPayload(parsed);
+  const targetSection = getDirectModuleImportTargetSection(sectionSignature);
+  const entryInput = sanitizeModuleEntry(imported.entry);
+  const titleOverride = String(options.titleOverride || '').trim();
+  const idOverride = slugify(options.idOverride || '').slice(0, 80);
+  if (titleOverride) entryInput.title = titleOverride;
+  if (idOverride) entryInput.id = idOverride;
+  const validation = assertValidModulePayload({
+    section: targetSection,
+    entry: entryInput
+  }, { skipIdConflict: true });
+  const entry = sanitizeModuleEntry(validation.entry);
+  const section = cleanCustomSection({ ...validation.section, entries: [] });
+  const commentSummary = getModuleImportCommentSummary(imported.commentBundle);
+  const overwriteNotice = getDirectModuleImportOverwriteNotice(entry.id);
+
+  if (options.confirm !== false) {
+    const details = [
+      `Modul: ${entry.title || entry.id}`,
+      `Zielbereich: ${getSectionOptionLabel(section)}`,
+      `Seiten: ${Array.isArray(entry.pages) ? entry.pages.length : 0}`,
+      `Kommentare: ${commentSummary.commentCount}`,
+      `Redestab-Staende: ${commentSummary.turnCount}`,
+    ].join('\n');
+    if (!confirm(`Modul direkt einfuegen?\n\n${details}${overwriteNotice}`)) {
+      return { cancelled: true, entry, section, commentCount: 0, turnCount: 0 };
+    }
+  }
+
+  const builtin = findBuiltinSectionByEntryId(entry.id);
+  removeCustomModuleById(entry.id);
+  if (builtin) {
+    _entryOverrides[entry.id] = entry;
+    unhideModuleEntry(entry.id);
+    setModuleSectionMove(entry.id, section);
+  } else {
+    delete _entryOverrides[entry.id];
+    upsertCustomModule(section, entry);
+  }
+
+  saveModuleStore();
+
+  let importedComments = { commentCount: 0, turnCount: 0 };
+  if (imported.commentBundle) {
+    importedComments = await importModuleCommentsBundle(imported.commentBundle, entry.id);
+  }
+
+  renderAll();
+  if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
+
+  return {
+    cancelled: false,
+    entry,
+    section,
+    commentCount: importedComments.commentCount || 0,
+    turnCount: importedComments.turnCount || 0
+  };
+}
+
+function importModuleFileIntoSection(file, sectionSignature, options = {}) {
+  return new Promise((resolve, reject) => {
+    if (!file) {
+      reject(new Error('Keine Moduldatei ausgewaehlt.'));
+      return;
+    }
+    if (file.size > MODULE_JSON_MAX_CHARS) {
+      reject(new Error(`Datei ist zu gross. Limit: ${Math.round(MODULE_JSON_MAX_CHARS / 1000)} KB.`));
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = async () => {
+      try {
+        const raw = String(reader.result || '');
+        validateModuleJsonSize(raw);
+        const parsed = JSON.parse(raw);
+        if (parsed?.type === 'aleria-module-master-package') {
+          throw new Error('Masterpakete bitte ueber den Masterimport laden. Dieser Direktimport ist fuer einzelne Module gedacht.');
+        }
+        resolve(await applySingleModuleImportToSection(parsed, sectionSignature, options));
+      } catch (error) {
+        reject(error);
+      }
+    };
+    reader.onerror = () => reject(new Error('Datei konnte nicht gelesen werden.'));
+    reader.readAsText(file, 'utf-8');
+  });
 }
 
 function applyModuleJsonToEditor() {
