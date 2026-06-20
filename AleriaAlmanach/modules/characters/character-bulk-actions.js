@@ -126,7 +126,10 @@ function buildStoredCharacterFromRecord(char, archived) {
     emotes: (cloned.emotes || [])
       .map(emote => ({ img: normalizeImageUrlForStorage(emote.img), label: emote.label || '' }))
       .filter(emote => emote.img),
-    emotesOverride: !!cloned.emotesOverride
+    emotesOverride: !!cloned.emotesOverride,
+    inventory: cloned.inventory && typeof cloned.inventory === 'object'
+      ? sanitizeCharacterInventoryData(cloned.inventory)
+      : undefined
   };
 }
 

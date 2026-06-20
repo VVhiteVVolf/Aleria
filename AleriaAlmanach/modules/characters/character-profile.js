@@ -25,6 +25,7 @@ function openCharProfile(id) {
   if (urlField) urlField.value = c.portrait || '';
 
   initEmoteSlots(c.emotes || []);
+  if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
 
   document.getElementById('cp-delete-btn').style.display = id ? 'inline-block' : 'none';
   document.getElementById('cp-delete-btn').textContent = isBuiltin ? 'Ausblenden' : 'Löschen';
@@ -88,12 +89,12 @@ function syncProfileLinkDisplay(profileLink, name) {
 }
 
 function switchCharTab(tab) {
-  document.querySelectorAll('.char-profile-tab').forEach((btn, i) => {
-    const tabs = ['info', 'bilder'];
-    btn.classList.toggle('active', tabs[i] === tab);
+  document.querySelectorAll('.char-profile-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.charProfileTab === tab);
   });
-  document.getElementById('cp-tab-info').classList.toggle('active', tab === 'info');
-  document.getElementById('cp-tab-bilder').classList.toggle('active', tab === 'bilder');
+  document.querySelectorAll('#char-profile-overlay .char-tab-panel').forEach(panel => {
+    panel.classList.toggle('active', panel.id === `cp-tab-${tab}`);
+  });
 }
 
 function closeCharProfile() {
@@ -211,7 +212,10 @@ function collectCharacterProfileDataFromForm() {
       .filter(Boolean)
       .map(e => ({ img: normalizeImageUrlForStorage(e.img), label: e.label || '' }))
       .filter(e => e.img),
-    emotesOverride: true
+    emotesOverride: true,
+    inventory: typeof collectCharacterInventoryProfileData === 'function'
+      ? collectCharacterInventoryProfileData()
+      : sanitizeCharacterInventoryData(existing.inventory || {})
   };
 }
 
@@ -276,7 +280,10 @@ async function saveCharacter() {
       .filter(Boolean)
       .map(e => ({ img: normalizeImageUrlForStorage(e.img), label: e.label || '' }))
       .filter(e => e.img),
-    emotesOverride: true
+    emotesOverride: true,
+    inventory: typeof collectCharacterInventoryProfileData === 'function'
+      ? collectCharacterInventoryProfileData()
+      : sanitizeCharacterInventoryData(existing.inventory || {})
   };
 
   status.style.color = 'var(--gold)';

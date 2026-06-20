@@ -190,6 +190,16 @@ function hasModuleComments(page) {
   );
 }
 
+function hasModuleGuestRegister(page) {
+  return Array.isArray(page?.guestRegister?.sections) && page.guestRegister.sections.some(section =>
+    !isBlank(section?.title)
+    || !isBlank(section?.subtitle)
+    || (Array.isArray(section?.guests) && section.guests.some(guest =>
+      !isBlank(guest?.name) || !isBlank(guest?.portrait) || !isBlank(guest?.description)
+    ))
+  );
+}
+
 function hasModulePageContent(page) {
   return !isBlank(page?.pageTitle)
     || !isBlank(page?.description)
@@ -200,10 +210,14 @@ function hasModulePageContent(page) {
     || !!page?.artifactPage
     || !!page?.recipePage
     || !!page?.tournamentLeaguePage
+    || !!page?.landingPage
+    || !!page?.characterInventoryPage
+    || !!page?.guestRegisterPage
     || hasModuleStats(page?.stats)
     || hasModuleSceneBlocks(page)
     || hasModuleWanted(page)
     || hasModuleProfiles(page)
+    || hasModuleGuestRegister(page)
     || hasModuleComments(page);
 }
 
@@ -218,6 +232,9 @@ function validateModulePageAssets(errors, page, index) {
   pushInvalidModuleAsset(errors, `${prefix} Questakte-Wappen`, page.questFile?.crestImage);
   pushInvalidModuleAsset(errors, `${prefix} Questakte-Auftraggeberportrait`, page.questFile?.clientPortrait);
   pushInvalidModuleAsset(errors, `${prefix} Questakte-Skizze`, page.questFile?.sketchImage);
+  pushInvalidModuleAsset(errors, `${prefix} Landing-Banner`, page.landing?.bannerImage);
+  pushInvalidModuleAsset(errors, `${prefix} Landing-Karte`, page.landing?.mapImage);
+  pushInvalidModuleAsset(errors, `${prefix} Charakter-Inventar Portrait`, page.characterInventory?.portrait);
 
   (page.sceneBlocks || []).forEach((block, blockIndex) => {
     pushInvalidModuleAsset(errors, `${prefix} Szene ${blockIndex + 1} Avatar`, block.avatar);
@@ -271,6 +288,24 @@ function validateModulePageAssets(errors, page, index) {
   });
   (page.questFile?.rewards || []).forEach((reward, rewardIndex) => {
     pushInvalidModuleAsset(errors, `${prefix} Questbelohnung ${rewardIndex + 1} Bild`, reward.image);
+  });
+  (page.landing?.members || []).forEach((member, memberIndex) => {
+    pushInvalidModuleAsset(errors, `${prefix} Landing-Abenteurer ${memberIndex + 1} Portrait`, member.portrait);
+  });
+  (page.landing?.quests || []).forEach((quest, questIndex) => {
+    pushInvalidModuleAsset(errors, `${prefix} Landing-Quest ${questIndex + 1} Bild`, quest.image);
+  });
+  (page.characterInventory?.items || []).forEach((item, itemIndex) => {
+    pushInvalidModuleAsset(errors, `${prefix} Inventar-Item ${itemIndex + 1} Icon`, item.icon);
+    pushInvalidModuleAsset(errors, `${prefix} Inventar-Item ${itemIndex + 1} Bild`, item.image);
+  });
+  (page.characterInventory?.companions || []).forEach((companion, companionIndex) => {
+    pushInvalidModuleAsset(errors, `${prefix} Gefaehrte ${companionIndex + 1} Bild`, companion.image);
+  });
+  (page.guestRegister?.sections || []).forEach((section, sectionIndex) => {
+    (section.guests || []).forEach((guest, guestIndex) => {
+      pushInvalidModuleAsset(errors, `${prefix} Gaesteverzeichnis ${sectionIndex + 1}.${guestIndex + 1} Portrait`, guest.portrait);
+    });
   });
 }
 

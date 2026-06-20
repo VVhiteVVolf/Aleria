@@ -26,13 +26,16 @@
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260618-biography-connection-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260616-card-hierarchy-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-tree-v1">
+<link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260620-character-inventory-v1">
 <link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20260619-hierarchy-trees-scroll-v1">
 <link rel="stylesheet" href="./styles/module-page-caste.css?v=20260604-caste-image-scale-v1">
 <link rel="stylesheet" href="./styles/module-page-court.css?v=20260617-court-dossier-v1">
 <link rel="stylesheet" href="./styles/module-page-bounty.css?v=20260617-bounty-lower-layout-v1">
-<link rel="stylesheet" href="./styles/module-page-goods.css?v=20260618-goods-image-controls-v1">
+<link rel="stylesheet" href="./styles/module-page-goods.css?v=20260620-goods-details-toggle-v1">
 <link rel="stylesheet" href="./styles/module-page-trade-catalog.css?v=20260619-trade-radar-price-v2">
 <link rel="stylesheet" href="./styles/module-page-map-template.css?v=20260619-map-space-v1">
+<link rel="stylesheet" href="./styles/module-page-landing.css?v=20260620-landing-template-v2">
+<link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260620-guest-register-scroll-room-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/scene-blocks.css?v=20260604-scene-comments-v1">
@@ -42,7 +45,7 @@
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260616-scene-time-v1"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20260620-module-delete-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260616-scene-time-v1" defer></script>
@@ -53,17 +56,19 @@
   <script src="./modules/module-store/module-store-sections.js?v=20260620-module-delete-v1" defer></script>
   <script src="./modules/module-store/module-section-management.js?v=20260620-module-delete-v1" defer></script>
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-preview.js?v=20260611-page-isolation-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-preview.js?v=20260620-preview-state-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-data.js?v=20260619-hierarchy-trees-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-data.js?v=20260620-goods-details-toggle-v1" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260604-caste-fixes-v1" defer></script>
   <script src="./modules/court/court-editor-schema.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bounty.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-goods.js?v=20260618-goods-image-controls-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-goods.js?v=20260620-goods-details-toggle-v1" defer></script>
   <script src="./modules/module-editor/module-editor-trade-catalog.js?v=20260619-trade-attributes-stamp-v1" defer></script>
   <script src="./modules/module-editor/module-editor-map-template.js?v=20260618-map-template-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260618-map-template-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-workflow.js?v=20260614-section-hierarchy-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-landing.js?v=20260620-landing-template-v2" defer></script>
+  <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-workflow.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260603-module-editor-fields-v2" defer></script>
   <script src="./modules/module-editor/module-editor-scene-blocks.js?v=20260604-scene-comments-v1" defer></script>
@@ -73,6 +78,7 @@
   <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20260618-biography-connection-layout-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bestiary.js?v=20260520-cleanup-v1" defer></script>
@@ -83,46 +89,51 @@
   <script src="./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-hierarchy.js?v=20260619-hierarchy-trees-v1" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-pages.js?v=20260619-template-transfer-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-pages.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260620-module-delete-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260619-template-transfer-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
-  <script src="./modules/inline-editor/inline-editor-state.js?v=20260620-module-delete-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-state.js?v=20260620-preview-state-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-wanted.js?v=20260616-inline-card-hierarchy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bounty.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-goods.js?v=20260618-goods-image-controls-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-goods.js?v=20260620-goods-details-toggle-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-trade-catalog.js?v=20260619-trade-attributes-stamp-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-map-template.js?v=20260618-map-template-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament.js?v=20260603-inline-tournament-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-artifact-recipe.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-caste.js?v=20260604-caste-image-scale-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260619-hierarchy-trees-v1" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20260619-template-transfer-inline-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260618-biography-connection-layout-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-quest.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-events.js?v=20260619-template-transfer-inline-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-events.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260617-court-dossier-v1" defer></script>
   <script src="./modules/bounty/bounty-renderer.js?v=20260617-bounty-file-v1" defer></script>
-  <script src="./modules/goods/goods-renderer.js?v=20260618-goods-tabs-default-v1" defer></script>
+  <script src="./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1" defer></script>
   <script src="./modules/trade-catalog/trade-catalog-renderer.js?v=20260619-trade-radar-price-v2" defer></script>
   <script src="./modules/map-template/map-template-renderer.js?v=20260618-map-template-v1" defer></script>
+  <script src="./modules/landing/landing-renderer.js?v=20260620-landing-template-v2" defer></script>
+  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260619-hierarchy-trees-scroll-v1" defer></script>
   <script src="./modules/rendering/module-renderer.js?v=20260618-quest-file-layout-images-v1" defer></script>
-  <script src="./modules/archive/archive-card-meta.js?v=20260616-archive-card-preview-v1" defer></script>
+  <script src="./modules/archive/archive-card-meta.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260616-folder-card-polish-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260616-dashboard-insights-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20260617-root-tabs-v1" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260602-character-subtabs-v1" defer></script>
   <script src="./modules/characters/character-tabs.js?v=20260603-character-hierarchy-v1" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260602-character-subtabs-v1" defer></script>
+  <script src="./modules/characters/character-inventory-profile.js?v=20260620-character-inventory-profile-v1" defer></script>
   <script src="./modules/characters/character-profile.js?v=20260602-character-subtabs-v1" defer></script>
   <script src="./modules/characters/character-bulk-actions.js?v=20260611-character-bulk-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260611-character-bulk-v1" defer></script>
@@ -741,6 +752,7 @@
       <div class="char-profile-tabs">
         <button class="char-profile-tab active" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="info">✦ Profil</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="bilder">⊞ Bilder &amp; Emotes</button>
+        <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="inventory">✦ Inventar</button>
       </div>
       <button class="char-profile-close" type="button" data-char-profile-action="close" aria-label="Charakterprofil schließen">✕</button>
     </div>
@@ -828,6 +840,26 @@
       </div>
     </div>
 
+    <!-- TAB 3: INVENTAR -->
+    <div class="char-tab-panel cp-inventory-tab" id="cp-tab-inventory">
+      <div class="cp-inventory-panel">
+        <div class="cp-inventory-toolbar">
+          <div>
+            <div class="cp-section-title">Charakter-Inventar</div>
+            <div class="char-field-hint">Fertige Ansicht zuerst. Bearbeiten öffnet den Inventar-Editor direkt im Charakterprofil.</div>
+          </div>
+          <div class="cp-inventory-actions">
+            <button class="comment-btn-cancel cp-inventory-edit-action" type="button" data-char-profile-action="edit-inventory-profile">Bearbeiten</button>
+            <button class="comment-btn-cancel cp-inventory-editing-action" type="button" data-char-profile-action="sync-inventory-profile">Aus Profil aktualisieren</button>
+            <button class="comment-btn-cancel cp-inventory-editing-action" type="button" data-char-profile-action="show-inventory-profile">Ansicht anzeigen</button>
+            <button class="comment-btn-cancel" type="button" data-char-profile-action="export-inventory-template">Vorlage exportieren</button>
+            <button class="comment-btn-cancel" type="button" data-char-profile-action="stamp-inventory-template">Auf alle stempeln</button>
+          </div>
+        </div>
+        <div id="cp-inventory-editor" class="cp-inventory-editor"></div>
+      </div>
+    </div>
+
     <!-- Actions -->
     <div class="char-profile-actions">
       <button class="char-delete-btn" id="cp-delete-btn" type="button" data-char-profile-action="delete" style="display:none">Löschen</button>
@@ -912,10 +944,13 @@
                 <select id="me-template">
                   <option value="story">Standard / Story</option>
                   <option value="profiles">Charakterprofil - Template</option>
+                  <option value="character-inventory">Charakter-Inventar - Template</option>
+                  <option value="guest-register">Gästeverzeichnis - Template</option>
                   <option value="wanted">Kopfgeld - Template</option>
                   <option value="bounty-file">Kopfgeldakte - Template</option>
                   <option value="goods">Warenverzeichnis - Template</option>
                   <option value="map-template">KartenTemplate</option>
+                  <option value="landing">Landing Page - Template</option>
                   <option value="artifact">Artefaktakte - Template</option>
                   <option value="recipe">Rezeptur & Ritual - Template</option>
                   <option value="scene">Abgeschlossenes Gespräch - Template</option>
@@ -982,10 +1017,13 @@
               <option value="">+ Seite hinzufügen</option>
               <option value="standard">Standard / Story</option>
               <option value="profile">Charakterprofil - Template</option>
+              <option value="character-inventory">Charakter-Inventar - Template</option>
+              <option value="guest-register">Gästeverzeichnis - Template</option>
               <option value="wanted">Kopfgeld - Template</option>
               <option value="bounty-file">Kopfgeldakte - Template</option>
               <option value="goods">Warenverzeichnis - Template</option>
               <option value="map-template">KartenTemplate</option>
+              <option value="landing">Landing Page - Template</option>
               <option value="artifact">Artefaktakte - Template</option>
               <option value="recipe">Rezeptur & Ritual - Template</option>
               <option value="scene">Abgeschlossenes Gespräch - Template</option>

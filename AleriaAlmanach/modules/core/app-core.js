@@ -124,6 +124,8 @@ function shouldUsePageImageAsEntryImage(pages = []) {
     page?.bountyFilePage ||
     page?.goodsTablePage ||
     page?.tradeCatalogPage ||
+    page?.landingPage ||
+    page?.characterInventoryPage ||
     page?.tournamentPage ||
     page?.tournamentLeaguePage ||
     page?.questFilePage ||
@@ -247,7 +249,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.image != null) next.image = String(page.image || '').trim() || null;
   if (page.imageWidth != null) {
     const width = Number(page.imageWidth);
-    const maxImageWidth = page.castePage ? 160 : 70;
+    const maxImageWidth = page.castePage || page.landingPage || page.characterInventoryPage ? 160 : 70;
     if (Number.isFinite(width)) next.imageWidth = Math.max(20, Math.min(maxImageWidth, width));
   }
   const imageFit = String(page.imageFit || '').trim();
@@ -261,7 +263,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -378,6 +380,18 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.mapTemplatePage) {
     next.mapTemplate = sanitizeMapTemplateData(page.mapTemplate);
+  }
+
+  if (page.landingPage) {
+    next.landing = sanitizeLandingData(page.landing);
+  }
+
+  if (page.characterInventoryPage) {
+    next.characterInventory = sanitizeCharacterInventoryData(page.characterInventory);
+  }
+
+  if (page.guestRegisterPage) {
+    next.guestRegister = sanitizeGuestRegisterData(page.guestRegister);
   }
 
   if (page.hierarchyPage) {

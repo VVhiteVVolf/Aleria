@@ -76,6 +76,7 @@ function getInlineGoodsDefaultRow(listName, table = null, nextIndex = 0, categor
       imagePosition: 'center',
       imageSize: 72,
       category: categoryId || 'allgemein',
+      details: '',
       values
     };
   }

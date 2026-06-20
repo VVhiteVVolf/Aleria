@@ -44,6 +44,14 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-goods-list-row',
   'add-trade-list-row',
   'remove-trade-list-row',
+  'add-guest-register-section',
+  'remove-guest-register-section',
+  'move-guest-register-section',
+  'add-guest-register-guest',
+  'remove-guest-register-guest',
+  'move-guest-register-guest',
+  'add-guest-register-row',
+  'remove-guest-register-row',
   'stamp-trade-attributes',
   'apply-trade-attributes-stamp',
   'export-template-transfer',
@@ -289,6 +297,59 @@ function handleInlineEditorActionClick(event) {
       Number(trigger.dataset.tradeIndex) || 0,
       Number(trigger.dataset.tradeFeatureIndex) || 0,
       Number(trigger.dataset.tradeAttributeIndex) || 0
+    );
+    return;
+  }
+  if (action === 'add-guest-register-section') {
+    addInlineGuestRegisterSection(
+      trigger.dataset.grSectionIndex != null ? Number(trigger.dataset.grSectionIndex) : -1
+    );
+    return;
+  }
+  if (action === 'remove-guest-register-section') {
+    removeInlineGuestRegisterSection(Number(trigger.dataset.grSectionIndex) || 0);
+    return;
+  }
+  if (action === 'move-guest-register-section') {
+    moveInlineGuestRegisterSection(
+      Number(trigger.dataset.grSectionIndex) || 0,
+      Number(trigger.dataset.grDirection) || 0
+    );
+    return;
+  }
+  if (action === 'add-guest-register-guest') {
+    addInlineGuestRegisterGuest(Number(trigger.dataset.grSectionIndex) || 0);
+    return;
+  }
+  if (action === 'remove-guest-register-guest') {
+    removeInlineGuestRegisterGuest(
+      Number(trigger.dataset.grSectionIndex) || 0,
+      Number(trigger.dataset.grGuestIndex) || 0
+    );
+    return;
+  }
+  if (action === 'move-guest-register-guest') {
+    moveInlineGuestRegisterGuest(
+      Number(trigger.dataset.grSectionIndex) || 0,
+      Number(trigger.dataset.grGuestIndex) || 0,
+      Number(trigger.dataset.grDirection) || 0
+    );
+    return;
+  }
+  if (action === 'add-guest-register-row') {
+    addInlineGuestRegisterRow(
+      Number(trigger.dataset.grSectionIndex) || 0,
+      Number(trigger.dataset.grGuestIndex) || 0,
+      trigger.dataset.grRowKind || 'info'
+    );
+    return;
+  }
+  if (action === 'remove-guest-register-row') {
+    removeInlineGuestRegisterRow(
+      Number(trigger.dataset.grSectionIndex) || 0,
+      Number(trigger.dataset.grGuestIndex) || 0,
+      Number(trigger.dataset.grRowIndex) || 0,
+      trigger.dataset.grRowKind || 'info'
     );
     return;
   }
@@ -575,12 +636,36 @@ function handleInlineEditorFieldChange(event) {
     updateInlineTradeCatalogListField(field);
     return;
   }
+  if (action === 'update-guest-register-field') {
+    updateInlineGuestRegisterField(field);
+    return;
+  }
+  if (action === 'update-guest-register-section-field') {
+    updateInlineGuestRegisterSectionField(field);
+    return;
+  }
+  if (action === 'update-guest-register-guest-field') {
+    updateInlineGuestRegisterGuestField(field);
+    return;
+  }
+  if (action === 'update-guest-register-row-field') {
+    updateInlineGuestRegisterRowField(field);
+    return;
+  }
   if (action === 'update-map-template-tab-field') {
     updateInlineMapTemplateTabField(field);
     return;
   }
   if (action === 'update-map-template-section-field') {
     updateInlineMapTemplateSectionField(field);
+    return;
+  }
+  if (action === 'update-landing-field') {
+    updateInlineLandingField(field);
+    return;
+  }
+  if (action === 'update-ci-field') {
+    updateInlineCharacterInventoryField(field);
     return;
   }
   if (action === 'update-hierarchy-field') {

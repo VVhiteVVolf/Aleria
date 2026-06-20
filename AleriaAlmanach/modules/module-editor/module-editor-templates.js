@@ -1003,6 +1003,40 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildWantedPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'wanted')
   },
+  'character-inventory': {
+    id: 'character-inventory',
+    pageType: 'character-inventory',
+    pageFlag: 'characterInventoryPage',
+    label: 'Charakter-Inventar - Template',
+    pageLabel: 'Charakter-Inventar',
+    defaultTitle: 'Neues Charakter-Inventar',
+    defaultSubtitle: 'Ausrustung, Gegenstaende und Gefaehrten',
+    entryType: 'Charakter-Inventar',
+    typeMatchers: ['charakter-inventar', 'inventar', 'ausruestung', 'gefaehrten'],
+    createPages: () => [createDefaultCharacterInventoryPage(0)],
+    createPage: index => createDefaultCharacterInventoryPage(index),
+    buildEditorFields: page => buildCharacterInventoryModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectCharacterInventoryModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildCharacterInventoryPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'character-inventory')
+  },
+  'guest-register': {
+    id: 'guest-register',
+    pageType: 'guest-register',
+    pageFlag: 'guestRegisterPage',
+    label: 'Gästeverzeichnis - Template',
+    pageLabel: 'Gästeverzeichnis',
+    defaultTitle: 'Neues Gästeverzeichnis',
+    defaultSubtitle: 'Gäste, Zimmer und Aufenthalte',
+    entryType: 'Gästeverzeichnis',
+    typeMatchers: ['gaesteverzeichnis', 'gaeste', 'gaesteakte', 'gasthaus', 'taverne', 'burggaeste', 'unterkunft'],
+    createPages: () => [createDefaultGuestRegisterPage(0)],
+    createPage: index => createDefaultGuestRegisterPage(index),
+    buildEditorFields: page => buildGuestRegisterModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectGuestRegisterModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildGuestRegisterPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'guest-register')
+  },
   'bounty-file': {
     id: 'bounty-file',
     pageType: 'bounty-file',
@@ -1070,6 +1104,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectMapTemplateModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildMapTemplatePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'map-template')
+  },
+  landing: {
+    id: 'landing',
+    pageType: 'landing',
+    pageFlag: 'landingPage',
+    label: 'Landing Page - Template',
+    pageLabel: 'Landing Page - Template',
+    defaultTitle: 'Neue Landing Page',
+    defaultSubtitle: 'Gruppe, Quests, Notizen und Kartenuebersicht',
+    entryType: 'Landing Page',
+    typeMatchers: ['landing', 'dashboard', 'gruppenuebersicht', 'abenteureruebersicht'],
+    createPages: () => [createDefaultLandingPage(0)],
+    createPage: index => createDefaultLandingPage(index),
+    buildEditorFields: page => buildLandingModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectLandingModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildLandingPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'landing')
   },
   artifact: {
     id: 'artifact',
@@ -1461,7 +1512,21 @@ function createQuestFileTemplatePages() {
 }
 
 function createProfileTemplatePages() {
-  return [createDefaultProfilePage(0)];
+  return [
+    {
+      ...createDefaultModulePage(0),
+      pageTitle: 'I. - Einordnung',
+      description: 'Lose Einordnung des Charakters: Herkunft, Rolle in der Gruppe, aktuelle Lage und offene Fragen.',
+      stats: [
+        ['Rolle', 'Noch festlegen'],
+        ['Aufenthalt', 'Noch festlegen'],
+        ['Status', 'Aktiv']
+      ],
+      commentSequence: []
+    },
+    createDefaultProfilePage(1),
+    createDefaultCharacterInventoryPage(2)
+  ];
 }
 
 function createWantedTemplatePages() {
@@ -1475,6 +1540,7 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     'Neues Story-Modul',
     'Neue Szene',
     'Neues Profilmodul',
+    'Neues Charakter-Inventar',
     'Neue Steckbrieftafel',
     'Neue Kopfgeldtafel',
     'Neue Kopfgeldakte',

@@ -36,6 +36,18 @@ function buildGoodsImageSizeInput(value, rowIndex, mode, tableIndex) {
     </label>`;
 }
 
+function buildGoodsItemDetailsEditor(item, rowIndex, mode, tableIndex) {
+  const inlineAttrs = mode === 'inline'
+    ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="details"`
+    : '';
+  return `
+    <div class="goods-row-details-editor ${mode === 'module' ? 'module-editor-field' : 'inline-edit-field'}">
+      <span>Ausklappbare Produktbeschreibung</span>
+      ${mode === 'module' ? buildTextFormatToolbar() : ''}
+      <textarea class="inline-edit-textarea ${mode === 'module' ? 'me-goods-item-details' : ''}" placeholder="Ausfuehrliche Beschreibung, die beim Klick auf die Ware aufklappt." ${inlineAttrs}>${escapeHtml(item.details || '')}</textarea>
+    </div>`;
+}
+
 function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode = 'module', tableIndex = 0) {
   const safeColumns = sanitizeGoodsColumns(columns);
   const rows = Array.isArray(items) ? items : [];
@@ -75,6 +87,7 @@ function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode
             <input class="inline-edit-input ${mode === 'module' ? 'me-goods-cell' : ''}" type="text" value="${escapeHtml(values[column.id] || '')}" data-goods-column-id="${escapeHtml(column.id)}" placeholder="${escapeHtml(column.label)}" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="value" data-goods-column-id="${escapeHtml(column.id)}"` : ''}>
           </label>`).join('')}
       </div>
+      ${buildGoodsItemDetailsEditor(item, rowIndex, mode, tableIndex)}
     </div>`;
   }).join('');
 }
@@ -91,6 +104,7 @@ function createDefaultGoodsRowForCategory(columns = getDefaultGoodsColumns(), ca
     imagePosition: 'center',
     imageSize: 72,
     category: categoryId || 'allgemein',
+    details: '',
     values
   };
 }
@@ -235,6 +249,7 @@ function addModuleGoodsRow(button, listName) {
   if (!wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
   wrap.insertAdjacentHTML('beforeend', definition.row(wrap));
+  hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   if (listName === 'categories' && tableEditor) {
     const categoryRows = tableEditor.querySelectorAll('.module-goods-category-row');
     const latestCategoryRow = categoryRows[categoryRows.length - 1];
@@ -328,6 +343,7 @@ function collectModuleGoodsItems(tableEditor) {
       imagePosition: getTrimmedFormValue(row, '.me-goods-item-imagePosition'),
       imageSize: getTrimmedFormValue(row, '.me-goods-item-imageSize'),
       category: getTrimmedFormValue(row, '.me-goods-item-category'),
+      details: getTrimmedFormValue(row, '.me-goods-item-details'),
       values
     };
   });

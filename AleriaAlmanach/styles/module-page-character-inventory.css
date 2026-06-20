@@ -1,0 +1,613 @@
+.character-inventory-page {
+  position: relative;
+  min-height: calc(var(--module-height, 100vh) - 7rem);
+  padding: 1rem;
+  border: 1px solid rgba(139,105,20,0.36);
+  background:
+    linear-gradient(135deg, rgba(255,250,232,0.9), rgba(221,184,106,0.3)),
+    var(--parchment);
+  color: var(--ink);
+}
+
+.ci-header {
+  display: flex;
+  align-items: center;
+  min-height: 4.8rem;
+  border-bottom: 1px solid rgba(139,105,20,0.26);
+  margin-bottom: 0.9rem;
+}
+
+.ci-header h2 {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  letter-spacing: 0.03em;
+}
+
+.ci-header p {
+  margin: 0.2rem 0 0;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.ci-layout {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.82fr) minmax(520px, 1.95fr) minmax(240px, 0.72fr);
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.ci-character,
+.ci-center,
+.ci-companions,
+.ci-box {
+  border: 1px solid rgba(139,105,20,0.22);
+  background: rgba(255,255,255,0.2);
+}
+
+.ci-character,
+.ci-companions,
+.ci-center {
+  padding: 0.75rem;
+}
+
+.ci-character-head {
+  display: grid;
+  gap: 0.15rem;
+  margin-bottom: 0.65rem;
+}
+
+.ci-character-head strong,
+.ci-companions h3,
+.ci-box h3,
+.ci-item-name strong,
+.ci-profile-modal h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.04em;
+}
+
+.ci-character-head span,
+.ci-companion-card span {
+  color: var(--ink-faded);
+  font-style: italic;
+}
+
+.ci-character-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 3.6;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(139,105,20,0.34);
+}
+
+.ci-img-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.ci-img-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ci-img-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.ci-img-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.ci-fit-cover {
+  object-fit: cover;
+}
+
+.ci-fit-contain {
+  object-fit: contain;
+}
+
+.ci-pos-top {
+  object-position: center top;
+}
+
+.ci-pos-center {
+  object-position: center center;
+}
+
+.ci-pos-bottom {
+  object-position: center bottom;
+}
+
+.ci-pos-left {
+  object-position: left center;
+}
+
+.ci-pos-right {
+  object-position: right center;
+}
+
+.ci-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--gold-dark);
+  background: rgba(255,255,255,0.18);
+}
+
+.ci-health {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 0.55rem 0 0.75rem;
+  border-bottom: 1px solid rgba(139,105,20,0.16);
+  padding-bottom: 0.45rem;
+}
+
+.ci-health span {
+  color: var(--ci-health);
+  font-weight: 700;
+}
+
+.ci-box {
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+}
+
+.ci-box h3,
+.ci-companions h3 {
+  margin: 0 0 0.55rem;
+  border-bottom: 1px solid rgba(139,105,20,0.2);
+  padding-bottom: 0.35rem;
+  color: var(--gold-dark);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.ci-info-row {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.22rem 0;
+}
+
+.ci-info-row span {
+  display: grid;
+  place-items: center;
+  color: var(--gold-dark);
+}
+
+.ci-info-row em {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ci-info-row strong {
+  font-weight: 600;
+}
+
+.ci-attribute-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.ci-attribute-chip {
+  border: 1px solid rgba(139,105,20,0.24);
+  background: rgba(255,255,255,0.18);
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.ci-attribute-chip span {
+  display: block;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ci-attribute-chip strong {
+  font-size: 0.95rem;
+}
+
+.ci-carry-row {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.ci-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(139,105,20,0.24);
+  margin-bottom: 0.75rem;
+}
+
+.ci-tabs button,
+.ci-item-row,
+.ci-companion-card {
+  border: 1px solid rgba(139,105,20,0.26);
+  background: rgba(255,255,255,0.2);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.ci-tabs button {
+  min-height: 2.7rem;
+  padding: 0.45rem 1rem;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ci-tabs button.active {
+  background: #2c1a08;
+  color: var(--gold-light);
+}
+
+.ci-tabs span {
+  margin-right: 0.45rem;
+}
+
+.ci-item-table {
+  overflow: hidden;
+  border: 1px solid rgba(139,105,20,0.22);
+}
+
+.ci-item-head,
+.ci-item-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.35fr) minmax(120px, 0.8fr) minmax(240px, 1.8fr) 5rem 4.2rem;
+  gap: 0;
+  align-items: center;
+}
+
+.ci-item-head {
+  background: rgba(139,105,20,0.12);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-item-head span,
+.ci-item-row > span {
+  min-width: 0;
+  border-right: 1px solid rgba(139,105,20,0.14);
+  padding: 0.55rem;
+}
+
+.ci-item-list {
+  max-height: 38rem;
+  overflow: auto;
+}
+
+.ci-item-row {
+  width: 100%;
+  min-height: 3.7rem;
+  border-width: 0 0 1px;
+  text-align: left;
+  font: inherit;
+}
+
+.ci-item-row:hover {
+  background: rgba(139,105,20,0.08);
+}
+
+.ci-item-name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ci-item-icon {
+  flex: 0 0 2.3rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid rgba(139,105,20,0.22);
+}
+
+.ci-companion-list {
+  display: grid;
+  gap: 0.75rem;
+  max-height: 42rem;
+  overflow-y: auto;
+}
+
+.ci-companion-card {
+  display: grid;
+  width: 100%;
+  gap: 0.45rem;
+  padding: 0.55rem;
+  text-align: left;
+}
+
+.ci-companion-image {
+  width: 100%;
+  aspect-ratio: 4 / 2.7;
+  border: 1px solid rgba(139,105,20,0.24);
+}
+
+.ci-companion-card dl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.25rem 0.5rem;
+  margin: 0;
+}
+
+.ci-companion-card dt {
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+.ci-companion-card dd {
+  margin: 0;
+  text-align: right;
+}
+
+.ci-companion-card dd[style] {
+  color: var(--ci-status);
+}
+
+.ci-profile-overlay {
+  position: absolute;
+  inset: 1rem;
+  z-index: 20;
+  display: none;
+  place-items: center;
+  background: rgba(42,25,8,0.42);
+}
+
+.ci-profile-overlay.active {
+  display: grid;
+}
+
+.ci-profile-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(300px, 1.15fr) minmax(260px, 0.85fr);
+  gap: 0.9rem;
+  width: min(1040px, 96%);
+  max-height: 86%;
+  overflow: auto;
+  border: 1px solid rgba(139,105,20,0.42);
+  background: var(--parchment);
+  padding: 0.9rem;
+  box-shadow: 0 16px 60px rgba(0,0,0,0.35);
+}
+
+.ci-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid rgba(139,105,20,0.36);
+  background: rgba(255,255,255,0.35);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.ci-profile-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+  border: 1px solid rgba(139,105,20,0.28);
+}
+
+.ci-profile-main h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+.ci-profile-main p,
+.ci-profile-media p {
+  line-height: 1.55;
+}
+
+.ci-tag-line {
+  margin-top: 0.75rem;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-radar svg {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.ci-radar text {
+  fill: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.ci-radar-bars {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.ci-radar-bar {
+  display: grid;
+  grid-template-columns: minmax(90px, 1fr) minmax(90px, 1fr) 1.8rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ci-radar-bar span {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ci-radar-bar i {
+  height: 0.25rem;
+  background: rgba(139,105,20,0.22);
+}
+
+.ci-radar-bar b {
+  display: block;
+  height: 100%;
+  background: #9b6b21;
+}
+
+.ci-full-editor {
+  display: grid;
+  grid-template-columns: minmax(360px, var(--ci-editor-width, 42%)) 0.45rem minmax(480px, 1fr);
+  gap: 0.65rem;
+  height: min(78vh, 980px);
+}
+
+.ci-editor-pane,
+.ci-preview-pane {
+  min-width: 0;
+  overflow: auto;
+  border: 1px solid rgba(139,105,20,0.22);
+  background: rgba(255,255,255,0.12);
+  padding: 0.75rem;
+}
+
+.ci-editor-splitter {
+  background: linear-gradient(180deg, transparent, rgba(139,105,20,0.5), transparent);
+  cursor: col-resize;
+}
+
+.ci-resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.ci-editor-section {
+  margin-top: 0.75rem;
+  border: 1px solid rgba(139,105,20,0.22);
+  padding: 0.65rem;
+  background: rgba(255,255,255,0.14);
+}
+
+.ci-editor-section h4,
+.ci-nested-editor h5,
+.ci-preview-head {
+  margin: 0 0 0.55rem;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-nested-editor {
+  margin-top: 0.65rem;
+  border-top: 1px solid rgba(139,105,20,0.18);
+  padding-top: 0.65rem;
+}
+
+.ci-nested-editor h5 {
+  margin: 0;
+  font-size: 0.62rem;
+}
+
+.ci-editor-section-head,
+.ci-editor-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.ci-editor-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.ci-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.ci-editor-grid label,
+.ci-editor-row label {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.ci-editor-grid label.wide {
+  grid-column: 1 / -1;
+}
+
+.ci-editor-grid span,
+.ci-editor-row span {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-editor-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.ci-editor-row {
+  display: grid;
+  grid-template-columns: 0.55fr 1fr 1fr auto;
+  gap: 0.45rem;
+  align-items: end;
+}
+
+.ci-editor-row.ci-category-row {
+  grid-template-columns: 0.7fr 1fr 0.45fr auto;
+}
+
+.ci-editor-row.compact {
+  grid-template-columns: 1fr 0.45fr auto;
+}
+
+.ci-editor-card {
+  border: 1px solid rgba(139,105,20,0.2);
+  padding: 0.6rem;
+  background: rgba(255,255,255,0.14);
+}
+
+.ci-preview-frame .modal-nav {
+  display: none;
+}
+
+.ci-preview-frame .character-inventory-page {
+  min-height: auto;
+  transform-origin: top left;
+}
+
+@media (max-width: 1180px) {
+  .ci-layout,
+  .ci-profile-modal,
+  .ci-full-editor {
+    grid-template-columns: 1fr;
+  }
+  .ci-editor-splitter {
+    display: none;
+  }
+}

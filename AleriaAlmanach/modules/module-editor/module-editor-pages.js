@@ -20,7 +20,7 @@ function getModulePageEditorCommentThreadKey(page, index = 0) {
 }
 
 function getModulePageImageWidthMax(type = 'standard') {
-  if (type === 'caste') return 160;
+  if (type === 'caste' || type === 'landing' || type === 'character-inventory') return 160;
   if (type === 'quest-file' || type === 'biography') return 100;
   return 70;
 }

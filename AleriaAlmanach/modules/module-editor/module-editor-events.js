@@ -73,6 +73,42 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-trade-row',
   'stamp-trade-attributes',
   'apply-trade-attributes-stamp',
+  'add-landing-member',
+  'remove-landing-member',
+  'add-landing-quest',
+  'remove-landing-quest',
+  'add-landing-note',
+  'remove-landing-note',
+  'add-landing-event',
+  'remove-landing-event',
+  'add-landing-info',
+  'remove-landing-info',
+  'add-ci-row',
+  'remove-ci-row',
+  'add-ci-attribute',
+  'remove-ci-attribute',
+  'add-ci-category',
+  'remove-ci-category',
+  'add-ci-item',
+  'remove-ci-item',
+  'move-ci-item',
+  'duplicate-ci-item',
+  'add-ci-item-row',
+  'add-ci-item-attribute',
+  'add-ci-companion',
+  'remove-ci-companion',
+  'move-ci-companion',
+  'duplicate-ci-companion',
+  'add-ci-companion-row',
+  'add-ci-companion-attribute',
+  'add-guest-register-section',
+  'remove-guest-register-section',
+  'move-guest-register-section',
+  'add-guest-register-guest',
+  'remove-guest-register-guest',
+  'move-guest-register-guest',
+  'add-guest-register-row',
+  'remove-guest-register-row',
   'add-hierarchy-detail',
   'remove-hierarchy-detail',
   'add-hierarchy-tree',
@@ -396,6 +432,150 @@ function handleModuleEditorActionClick(event) {
     applyModuleTradeCatalogAttributeStamp(trigger);
     return;
   }
+  if (action === 'add-landing-member') {
+    addLandingEditorItem(trigger, 'member');
+    return;
+  }
+  if (action === 'remove-landing-member') {
+    removeLandingEditorItem(trigger, 'member');
+    return;
+  }
+  if (action === 'add-landing-quest') {
+    addLandingEditorItem(trigger, 'quest');
+    return;
+  }
+  if (action === 'remove-landing-quest') {
+    removeLandingEditorItem(trigger, 'quest');
+    return;
+  }
+  if (action === 'add-landing-note') {
+    addLandingEditorItem(trigger, 'note');
+    return;
+  }
+  if (action === 'remove-landing-note') {
+    removeLandingEditorItem(trigger, 'note');
+    return;
+  }
+  if (action === 'add-landing-event') {
+    addLandingEditorItem(trigger, 'event');
+    return;
+  }
+  if (action === 'remove-landing-event') {
+    removeLandingEditorItem(trigger, 'event');
+    return;
+  }
+  if (action === 'add-landing-info') {
+    addLandingEditorItem(trigger, 'info');
+    return;
+  }
+  if (action === 'remove-landing-info') {
+    removeLandingEditorItem(trigger, 'info');
+    return;
+  }
+  if (action === 'add-ci-row') {
+    addCharacterInventoryRow(trigger);
+    return;
+  }
+  if (action === 'remove-ci-row') {
+    removeCharacterInventoryRow(trigger);
+    return;
+  }
+  if (action === 'add-ci-attribute') {
+    addCharacterInventoryAttribute(trigger);
+    return;
+  }
+  if (action === 'remove-ci-attribute') {
+    removeCharacterInventoryAttribute(trigger);
+    return;
+  }
+  if (action === 'add-ci-category') {
+    addCharacterInventoryCategory(trigger);
+    return;
+  }
+  if (action === 'remove-ci-category') {
+    removeCharacterInventoryCategory(trigger);
+    return;
+  }
+  if (action === 'add-ci-item') {
+    addCharacterInventoryItem(trigger);
+    return;
+  }
+  if (action === 'remove-ci-item') {
+    removeCharacterInventoryItem(trigger);
+    return;
+  }
+  if (action === 'move-ci-item') {
+    moveCharacterInventoryItem(trigger);
+    return;
+  }
+  if (action === 'duplicate-ci-item') {
+    duplicateCharacterInventoryItem(trigger);
+    return;
+  }
+  if (action === 'add-ci-item-row') {
+    addCharacterInventoryNestedRow(trigger, 'item');
+    return;
+  }
+  if (action === 'add-ci-item-attribute') {
+    addCharacterInventoryNestedAttribute(trigger, 'item');
+    return;
+  }
+  if (action === 'add-ci-companion') {
+    addCharacterInventoryCompanion(trigger);
+    return;
+  }
+  if (action === 'remove-ci-companion') {
+    removeCharacterInventoryCompanion(trigger);
+    return;
+  }
+  if (action === 'move-ci-companion') {
+    moveCharacterInventoryCompanion(trigger);
+    return;
+  }
+  if (action === 'duplicate-ci-companion') {
+    duplicateCharacterInventoryCompanion(trigger);
+    return;
+  }
+  if (action === 'add-ci-companion-row') {
+    addCharacterInventoryNestedRow(trigger, 'companion');
+    return;
+  }
+  if (action === 'add-ci-companion-attribute') {
+    addCharacterInventoryNestedAttribute(trigger, 'companion');
+    return;
+  }
+  if (action === 'add-guest-register-section') {
+    addGuestRegisterSection(trigger);
+    return;
+  }
+  if (action === 'remove-guest-register-section') {
+    removeGuestRegisterSection(trigger);
+    return;
+  }
+  if (action === 'move-guest-register-section') {
+    moveGuestRegisterSection(trigger);
+    return;
+  }
+  if (action === 'add-guest-register-guest') {
+    addGuestRegisterGuest(trigger);
+    return;
+  }
+  if (action === 'remove-guest-register-guest') {
+    removeGuestRegisterGuest(trigger);
+    return;
+  }
+  if (action === 'move-guest-register-guest') {
+    moveGuestRegisterGuest(trigger);
+    return;
+  }
+  if (action === 'add-guest-register-row') {
+    addGuestRegisterRow(trigger);
+    return;
+  }
+  if (action === 'remove-guest-register-row') {
+    removeGuestRegisterRow(trigger);
+    return;
+  }
   if (action === 'add-hierarchy-detail') {
     addModuleHierarchyDetail(trigger);
     return;
@@ -560,6 +740,10 @@ function handleModuleEditorFieldChange(event) {
   }
   if (action === 'rerender-tournament-grid') {
     rerenderModuleTournamentGrid(field);
+    return;
+  }
+  if (action === 'refresh-ci-preview') {
+    refreshCharacterInventoryEditorPreview(field);
     return;
   }
   if (action === 'add-page' && field.value) {

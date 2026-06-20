@@ -356,7 +356,7 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="rerender-entry-field" data-entry-field="subtitle" value="${escapeHtml(entry.subtitle || '')}">
         </div>
         ${buildInlineSectionPicker()}
-        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
+        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'character-inventory' ? 'character-inventory' : type === 'guest-register' ? 'guest-register' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'map-template' ? 'map-template' : type === 'landing' ? 'landing' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
         ${buildInlineModuleSizeControls(entry)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Typ</span>
@@ -414,6 +414,9 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'goods') return wrapInlineEditor(`${moduleMeta}${buildInlineGoodsEditor(page)}`);
   if (type === 'trade-catalog') return wrapInlineEditor(`${moduleMeta}${buildInlineTradeCatalogEditor(page)}`);
   if (type === 'map-template') return wrapInlineEditor(`${moduleMeta}${buildInlineMapTemplateEditor(page)}`);
+  if (type === 'landing') return wrapInlineEditor(`${moduleMeta}${buildInlineLandingEditor(page)}`);
+  if (type === 'character-inventory') return wrapInlineEditor(`${moduleMeta}${buildInlineCharacterInventoryEditor(page)}`);
+  if (type === 'guest-register') return wrapInlineEditor(`${moduleMeta}${buildInlineGuestRegisterEditor(page)}`);
   if (type === 'profiles') return wrapInlineEditor(`${moduleMeta}${buildInlineProfileEditor(page)}`);
   if (type === 'artifact') return wrapInlineEditor(`${moduleMeta}${buildInlineArtifactEditor(page)}`);
   if (type === 'recipe') return wrapInlineEditor(`${moduleMeta}${buildInlineRecipeEditor(page)}`);

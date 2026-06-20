@@ -76,6 +76,18 @@ function buildGoodsCell(row, column, goods, table, rowIndex) {
   return `<td>${escapeHtml(value || '-')}</td>`;
 }
 
+function renderGoodsDetailText(value) {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  const safeHtml = typeof sanitizeContentHtml === 'function' ? sanitizeContentHtml(text) : escapeHtml(text);
+  if (/<[a-z][\s\S]*>/i.test(safeHtml)) return safeHtml;
+
+  return text
+    .split(/\n{2,}/)
+    .map(part => `<p>${escapeHtml(part.trim()).replace(/\n/g, '<br>')}</p>`)
+    .join('');
+}
+
 function buildGoodsRows(table, goods, activeCategory = 'all') {
   const rows = Array.isArray(table.rows) ? table.rows : [];
   const columns = Array.isArray(table.columns) && table.columns.length ? table.columns : getDefaultGoodsColumns();
@@ -85,10 +97,21 @@ function buildGoodsRows(table, goods, activeCategory = 'all') {
   return rows.map((item, index) => {
     const category = slugify(item.category || 'sonstiges', 'sonstiges');
     const hiddenAttr = activeCategory !== 'all' && category !== activeCategory ? ' hidden' : '';
+    const details = renderGoodsDetailText(item.details);
+    const expandableClass = details ? ' is-expandable' : '';
+    const expandableAttrs = details ? ' data-goods-detail-trigger tabindex="0" aria-expanded="false"' : '';
     return `
-      <tr class="goods-category-${escapeHtml(category)}"${hiddenAttr}>
+      <tr class="goods-product-row goods-category-${escapeHtml(category)}${expandableClass}"${expandableAttrs}${hiddenAttr}>
         ${columns.map(column => buildGoodsCell(item, column, goods, table, index)).join('')}
-      </tr>`;
+      </tr>
+      ${details ? `
+        <tr class="goods-detail-row goods-category-${escapeHtml(category)}" aria-hidden="true"${hiddenAttr}>
+          <td colspan="${escapeHtml(columns.length)}">
+            <div class="goods-detail-panel">
+              <div class="goods-detail-content">${details}</div>
+            </div>
+          </td>
+        </tr>` : ''}`;
   }).join('');
 }
 
@@ -123,13 +146,41 @@ function applyGoodsTableFilter(tableBlock, categoryId) {
   });
 }
 
+function toggleGoodsDetailRow(row) {
+  if (!row) return;
+  const detailRow = row.nextElementSibling?.classList?.contains('goods-detail-row')
+    ? row.nextElementSibling
+    : null;
+  if (!detailRow) return;
+  const expanded = !row.classList.contains('expanded');
+  row.classList.toggle('expanded', expanded);
+  detailRow.classList.toggle('expanded', expanded);
+  row.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  detailRow.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+}
+
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('.goods-filter-tab[data-goods-filter]');
-  if (!trigger) return;
-  const tableBlock = trigger.closest('.goods-table-block');
-  if (!tableBlock) return;
+  if (trigger) {
+    const tableBlock = trigger.closest('.goods-table-block');
+    if (!tableBlock) return;
+    event.preventDefault();
+    applyGoodsTableFilter(tableBlock, trigger.dataset.goodsFilter || 'all');
+    return;
+  }
+
+  const detailTrigger = event.target?.closest?.('[data-goods-detail-trigger]');
+  if (!detailTrigger || !detailTrigger.closest('.goods-table-block')) return;
   event.preventDefault();
-  applyGoodsTableFilter(tableBlock, trigger.dataset.goodsFilter || 'all');
+  toggleGoodsDetailRow(detailTrigger);
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+  const detailTrigger = event.target?.closest?.('[data-goods-detail-trigger]');
+  if (!detailTrigger || !detailTrigger.closest('.goods-table-block')) return;
+  event.preventDefault();
+  toggleGoodsDetailRow(detailTrigger);
 });
 
 function buildGoodsInfoRows(goods) {

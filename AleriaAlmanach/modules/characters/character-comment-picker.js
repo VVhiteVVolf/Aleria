@@ -139,7 +139,10 @@ function buildCommentCharacterSaveData(char, emotes, portraitFallback = null) {
       .map(emote => ({ img: normalizeImageUrlForStorage(emote.img), label: emote.label || '' }))
       .filter(emote => emote.img)
       .slice(0, MAX_EMOTES),
-    emotesOverride: true
+    emotesOverride: true,
+    inventory: char.inventory && typeof char.inventory === 'object'
+      ? sanitizeCharacterInventoryData(char.inventory)
+      : undefined
   };
 }
 
@@ -285,4 +288,3 @@ function toggleManualMode() {
   updateCommentFormPreview();
   persistCommentDraft();
 }
-

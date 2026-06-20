@@ -5,16 +5,140 @@ let _inlineModuleEdit = null;
 let _inlinePreviewRefreshTimer = null;
 let _inlineEditorEventSource = null;
 
+function inlineEditorCssEscape(value) {
+  const raw = String(value ?? '');
+  if (typeof CSS !== 'undefined' && typeof CSS.escape === 'function') return CSS.escape(raw);
+  return raw.replace(/["\\]/g, '\\$&');
+}
+
+function captureInlinePreviewRuntimeState(root = document) {
+  const scope = root || document;
+  return {
+    goods: Array.from(scope.querySelectorAll('.goods-table-block[data-goods-table-scope]')).map((block, index) => ({
+      key: block.dataset.goodsTableScope || String(index),
+      filter: block.querySelector('.goods-filter-tab.active')?.dataset.goodsFilter || '',
+      expanded: Array.from(block.querySelectorAll('.goods-product-row.is-expandable'))
+        .map((row, rowIndex) => row.classList.contains('expanded') ? rowIndex : -1)
+        .filter(rowIndex => rowIndex >= 0)
+    })),
+    trade: Array.from(scope.querySelectorAll('.trade-catalog-sheet')).map((sheet, index) => ({
+      index,
+      filter: sheet.querySelector('.trade-catalog-tab.active')?.dataset.tradeFilter || '',
+      search: sheet.querySelector('[data-trade-search-input]')?.value || ''
+    })),
+    maps: Array.from(scope.querySelectorAll('.map-template-page[data-map-template-page]')).map((page, index) => ({
+      key: page.dataset.mapTemplatePage || String(index),
+      tab: Number(page.querySelector('.map-template-tab.active')?.dataset.mapTemplateTab || 0),
+      sidebarCollapsed: page.classList.contains('sidebar-collapsed')
+    })),
+    hierarchies: Array.from(scope.querySelectorAll('.hierarchy-page')).map((page, index) => {
+      const viewport = page.querySelector('.hierarchy-chart-viewport');
+      return {
+        index,
+        tree: page.querySelector('[data-hierarchy-tree-tab].active')?.dataset.hierarchyTreeTab || '0',
+        scale: page.querySelector('[data-hierarchy-scale-input]')?.value || '',
+        sidebarCollapsed: page.classList.contains('sidebar-collapsed'),
+        introCollapsed: page.classList.contains('intro-collapsed'),
+        fullscreen: page.classList.contains('fullscreen-active'),
+        chartTop: viewport?.scrollTop || 0,
+        chartLeft: viewport?.scrollLeft || 0
+      };
+    }),
+    inventories: Array.from(scope.querySelectorAll('.character-inventory-page')).map((page, index) => ({
+      index,
+      category: page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || ''
+    }))
+  };
+}
+
+function restoreInlinePreviewRuntimeState(state, root = document) {
+  if (!state) return;
+  const scope = root || document;
+
+  (state.goods || []).forEach((saved, index) => {
+    const block = saved.key
+      ? scope.querySelector(`.goods-table-block[data-goods-table-scope="${inlineEditorCssEscape(saved.key)}"]`)
+      : null;
+    const target = block || scope.querySelectorAll('.goods-table-block[data-goods-table-scope]')[index];
+    if (!target) return;
+    if (saved.filter && typeof applyGoodsTableFilter === 'function') applyGoodsTableFilter(target, saved.filter);
+    const rows = Array.from(target.querySelectorAll('.goods-product-row.is-expandable'));
+    (saved.expanded || []).forEach(rowIndex => {
+      const row = rows[rowIndex];
+      const detailRow = row?.nextElementSibling?.classList?.contains('goods-detail-row') ? row.nextElementSibling : null;
+      if (!row || !detailRow) return;
+      row.classList.add('expanded');
+      detailRow.classList.add('expanded');
+      row.setAttribute('aria-expanded', 'true');
+      detailRow.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  (state.trade || []).forEach(saved => {
+    const sheet = scope.querySelectorAll('.trade-catalog-sheet')[saved.index];
+    if (!sheet) return;
+    const tab = saved.filter ? sheet.querySelector(`.trade-catalog-tab[data-trade-filter="${inlineEditorCssEscape(saved.filter)}"]`) : null;
+    if (tab) sheet.querySelectorAll('.trade-catalog-tab').forEach(button => button.classList.toggle('active', button === tab));
+    const search = sheet.querySelector('[data-trade-search-input]');
+    if (search) search.value = saved.search || '';
+    if (typeof applyTradeCatalogFilters === 'function') applyTradeCatalogFilters(sheet);
+  });
+
+  (state.maps || []).forEach((saved, index) => {
+    const page = saved.key
+      ? scope.querySelector(`.map-template-page[data-map-template-page="${inlineEditorCssEscape(saved.key)}"]`)
+      : null;
+    const target = page || scope.querySelectorAll('.map-template-page[data-map-template-page]')[index];
+    if (!target) return;
+    if (typeof setMapTemplateActiveTab === 'function') setMapTemplateActiveTab(target, saved.tab || 0);
+    target.classList.toggle('sidebar-collapsed', !!saved.sidebarCollapsed);
+  });
+
+  (state.hierarchies || []).forEach(saved => {
+    const page = scope.querySelectorAll('.hierarchy-page')[saved.index];
+    if (!page) return;
+    page.querySelectorAll('[data-hierarchy-tree-tab]').forEach(button => {
+      const active = button.dataset.hierarchyTreeTab === String(saved.tree || '0');
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    page.querySelectorAll('[data-hierarchy-tree-panel]').forEach(panel => {
+      panel.classList.toggle('active', panel.dataset.hierarchyTreePanel === String(saved.tree || '0'));
+    });
+    page.classList.toggle('sidebar-collapsed', !!saved.sidebarCollapsed);
+    page.classList.toggle('intro-collapsed', !!saved.introCollapsed);
+    page.classList.toggle('fullscreen-active', !!saved.fullscreen);
+    if (saved.scale && typeof setHierarchyRuntimeScale === 'function') setHierarchyRuntimeScale(page, saved.scale);
+    const viewport = page.querySelector('.hierarchy-chart-viewport');
+    if (viewport) {
+      viewport.scrollTop = saved.chartTop || 0;
+      viewport.scrollLeft = saved.chartLeft || 0;
+    }
+  });
+
+  (state.inventories || []).forEach(saved => {
+    const page = scope.querySelectorAll('.character-inventory-page')[saved.index];
+    const tab = saved.category ? page?.querySelector(`[data-ci-action="filter-items"][data-ci-category="${inlineEditorCssEscape(saved.category)}"]`) : null;
+    if (!page || !tab) return;
+    page.querySelectorAll('[data-ci-action="filter-items"]').forEach(button => button.classList.toggle('active', button === tab));
+    page.querySelectorAll('.ci-item-row').forEach(row => {
+      row.hidden = saved.category !== 'all' && row.dataset.ciCategory !== saved.category;
+    });
+  });
+}
+
 function captureInlineModuleViewportState() {
   if (!_inlineModuleEdit?.active) return null;
   const editPane = document.querySelector('.inline-module-edit-pane');
   const previewStage = document.querySelector('.inline-module-preview-stage');
+  const previewFrame = document.querySelector('.inline-module-preview-frame');
   if (!editPane && !previewStage) return null;
   return {
     editTop: editPane?.scrollTop || 0,
     editLeft: editPane?.scrollLeft || 0,
     previewTop: previewStage?.scrollTop || 0,
-    previewLeft: previewStage?.scrollLeft || 0
+    previewLeft: previewStage?.scrollLeft || 0,
+    previewRuntime: captureInlinePreviewRuntimeState(previewFrame || previewStage || document)
   };
 }
 
@@ -31,6 +155,7 @@ function restoreInlineModuleViewportState(state) {
       previewStage.scrollTop = state.previewTop || 0;
       previewStage.scrollLeft = state.previewLeft || 0;
     }
+    restoreInlinePreviewRuntimeState(state.previewRuntime, document.querySelector('.inline-module-preview-frame') || document);
   });
 }
 
@@ -91,7 +216,9 @@ function refreshInlineModuleLivePreview() {
   const frame = document.querySelector('.inline-module-preview-frame');
   const page = getInlineDraftPage();
   if (!frame || !page || !_inlineModuleEdit.draft) return;
+  const runtimeState = captureInlinePreviewRuntimeState(frame);
   frame.innerHTML = buildInlineModulePreview(page, _inlineModuleEdit.draft, currentPage, getPages(_inlineModuleEdit.draft).length);
+  restoreInlinePreviewRuntimeState(runtimeState, frame);
 }
 
 function scheduleInlineModuleLivePreviewRefresh() {

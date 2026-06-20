@@ -36,6 +36,31 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'edit-inventory-profile') {
+    if (typeof editCharacterInventoryProfile === 'function') editCharacterInventoryProfile();
+    return;
+  }
+
+  if (action === 'show-inventory-profile') {
+    if (typeof showCharacterInventoryProfileView === 'function') showCharacterInventoryProfileView();
+    return;
+  }
+
+  if (action === 'sync-inventory-profile') {
+    if (typeof resetCharacterInventoryFromCurrentProfile === 'function') resetCharacterInventoryFromCurrentProfile();
+    return;
+  }
+
+  if (action === 'export-inventory-template') {
+    if (typeof exportCharacterInventoryProfileTemplate === 'function') exportCharacterInventoryProfileTemplate();
+    return;
+  }
+
+  if (action === 'stamp-inventory-template') {
+    if (typeof stampCharacterInventoryProfileTemplateToAll === 'function') stampCharacterInventoryProfileTemplateToAll();
+    return;
+  }
+
   if (action === 'open-emote-url') {
     openEmoteUrlInput(Number(actionTarget.dataset.emoteIndex));
     return;

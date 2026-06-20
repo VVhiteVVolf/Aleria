@@ -35,6 +35,9 @@ function getArchiveEntryPreviewImage(entry) {
       : '';
     if (profileImage) return profileImage;
 
+    const inventoryImage = sanitizeImageSrc(page.characterInventory?.portrait || '');
+    if (inventoryImage) return inventoryImage;
+
     const bestiaryImage = sanitizeImageSrc(page.bestiary?.image || page.bestiary?.portrait || '');
     if (bestiaryImage) return bestiaryImage;
   }

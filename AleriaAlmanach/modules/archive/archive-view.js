@@ -333,6 +333,22 @@ function buildEntrySearchText(entry, section) {
       parts.push(profile.name, profile.role, profile.banner, profile.stamp, profile.note);
       (profile.fields || []).forEach(field => parts.push(...field));
     });
+    if (page.characterInventory) {
+      const inventory = page.characterInventory;
+      parts.push(inventory.title, inventory.subtitle, inventory.name, inventory.role, inventory.level, inventory.status);
+      (inventory.infoRows || []).forEach(row => parts.push(row.label, row.value));
+      (inventory.attributes || []).forEach(row => parts.push(row.label, row.value));
+      (inventory.items || []).forEach(item => {
+        parts.push(item.name, item.type, item.description, item.tags, item.category);
+        (item.infoRows || []).forEach(row => parts.push(row.label, row.value));
+        (item.attributes || []).forEach(row => parts.push(row.label, row.value));
+      });
+      (inventory.companions || []).forEach(companion => {
+        parts.push(companion.name, companion.species, companion.role, companion.status, companion.summary, companion.description);
+        (companion.infoRows || []).forEach(row => parts.push(row.label, row.value));
+        (companion.attributes || []).forEach(row => parts.push(row.label, row.value));
+      });
+    }
   });
 
   const text = normalizeSearchText(parts.filter(Boolean).join(' '));

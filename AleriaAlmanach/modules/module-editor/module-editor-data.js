@@ -891,10 +891,11 @@ function sanitizeGoodsRows(items = [], columns = getDefaultGoodsColumns()) {
         imagePosition: sanitizeGoodsImagePosition(item?.imagePosition),
         imageSize: clampGoodsImageSize(item?.imageSize),
         category: slugify(item?.category || item?.categoryId || getGoodsRowValue(item, 'kind') || 'sonstiges', 'sonstiges'),
+        details: String(item?.details || item?.longDescription || item?.detailText || item?.fullDescription || '').trim(),
         values
       };
     })
-    .filter(item => item.image || Object.values(item.values).some(Boolean))
+    .filter(item => item.image || item.details || Object.values(item.values).some(Boolean))
     .slice(0, 120);
 }
 
@@ -910,10 +911,11 @@ function sanitizeGoodsItems(items = []) {
       kind: String(item?.kind || item?.type || '').trim(),
       category: slugify(item?.category || item?.categoryId || item?.kind || 'sonstiges', 'sonstiges'),
       description: String(item?.description || item?.text || '').trim(),
+      details: String(item?.details || item?.longDescription || item?.detailText || item?.fullDescription || '').trim(),
       price: String(item?.price || '').trim(),
       availability: String(item?.availability || item?.stock || '').trim()
     }))
-    .filter(item => item.image || item.name || item.kind || item.description || item.price || item.availability)
+    .filter(item => item.image || item.name || item.kind || item.description || item.details || item.price || item.availability)
     .slice(0, 80);
 }
 

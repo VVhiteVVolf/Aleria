@@ -99,6 +99,11 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
     pages
   });
   const rawLabel = getPageNavLabel(page, _moduleEditorPreviewPageIndex, pages.length);
+  const previousStageTop = stage.scrollTop || 0;
+  const previousStageLeft = stage.scrollLeft || 0;
+  const previousRuntimeState = typeof captureInlinePreviewRuntimeState === 'function'
+    ? captureInlinePreviewRuntimeState(frame)
+    : null;
 
   stage.hidden = false;
   empty.hidden = true;
@@ -107,6 +112,9 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   const previewWidth = Math.round(1280 * (previewSize.width / 100));
   const previewMinHeight = Math.round(960 * (previewSize.height / 100));
   frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry)}</div>`;
+  if (typeof restoreInlinePreviewRuntimeState === 'function') {
+    restoreInlinePreviewRuntimeState(previousRuntimeState, frame);
+  }
 
   requestAnimationFrame(() => {
     if (renderToken !== _moduleEditorPreviewRenderToken) return;
@@ -121,6 +129,8 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
     frame.style.transform = `scale(${scale})`;
     frame.style.width = `${Math.round(rawWidth * scale)}px`;
     frame.style.height = `${Math.round(rawHeight * scale)}px`;
+    stage.scrollTop = previousStageTop;
+    stage.scrollLeft = previousStageLeft;
   });
 }
 
