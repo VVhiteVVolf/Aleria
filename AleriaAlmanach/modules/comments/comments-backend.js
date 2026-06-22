@@ -44,6 +44,28 @@ function makeLocalTimestamp() {
   return { seconds: Math.floor(Date.now() / 1000), local: true };
 }
 
+function makeLocalSceneTransitionComment(entryId, text, deleteCode, metadata, nowClient) {
+  return {
+    id: makeLocalCommentId(),
+    entryId,
+    charName: 'Erzähler',
+    charTitle: '',
+    portrait: null,
+    text,
+    deleteCode: String(deleteCode || '').trim().toUpperCase(),
+    narrator: true,
+    commentMode: 'scene-transition',
+    commentKind: 'scene-transition-event',
+    sceneTransition: metadata.sceneTransition,
+    orderKey: nowClient,
+    createdAtClient: nowClient,
+    activityAtClient: nowClient,
+    ts: makeLocalTimestamp(),
+    schemaVersion: 2,
+    localOnly: true
+  };
+}
+
 function getLocalCommentBackend() {
   return {
     _localFallback: true,
@@ -76,6 +98,7 @@ function getLocalCommentBackend() {
         itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
         documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
         sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
+        sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
         orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
@@ -86,6 +109,27 @@ function getLocalCommentBackend() {
       store[key] = comments;
       writeLocalCommentStore(store);
       return { id: comments[comments.length - 1].id };
+    },
+    async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
+      const store = readLocalCommentStore();
+      const nowClient = Date.now();
+      new Set([sourceThreadId, targetThreadId].map(threadId => String(threadId || '').trim()).filter(Boolean)).forEach(threadId => {
+        const key = String(threadId || '');
+        const comments = Array.isArray(store[key]) ? store[key] : [];
+        comments.push(makeLocalSceneTransitionComment(key, text, deleteCode, metadata, nowClient));
+        store[key] = comments;
+      });
+      writeLocalCommentStore(store);
+    },
+    async deleteSceneTransition(docId, transitionId, deleteCode) {
+      await this.verifyCommentCode(docId, deleteCode);
+      const store = readLocalCommentStore();
+      Object.keys(store).forEach(key => {
+        store[key] = (store[key] || []).filter(comment => (
+          String(comment?.sceneTransition?.transitionId || '') !== String(transitionId || '')
+        ));
+      });
+      writeLocalCommentStore(store);
     },
     async loadCommentTurn(threadId) {
       const turns = readLocalCommentTurnStore();

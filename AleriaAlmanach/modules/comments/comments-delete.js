@@ -24,7 +24,15 @@ async function confirmDelete() {
   btn.textContent = 'Lösche…';
   try {
     const backend = await getCommentBackend({ timeoutMs: 1200 });
-    await backend.deleteComment(_deleteTargetId, code);
+    const targetComment = Object.values(_commentCache || {})
+      .flat()
+      .find(comment => comment?.id === _deleteTargetId);
+    const transitionId = String(targetComment?.sceneTransition?.transitionId || '').trim();
+    if (transitionId && typeof backend.deleteSceneTransition === 'function') {
+      await backend.deleteSceneTransition(_deleteTargetId, transitionId, code);
+    } else {
+      await backend.deleteComment(_deleteTargetId, code);
+    }
     closeDeleteConfirm();
     await loadCommentsIntoPage(getCurrentCommentThreadId(), true);
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();

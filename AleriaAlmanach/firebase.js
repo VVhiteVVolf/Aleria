@@ -1,5 +1,5 @@
 ﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc }
+    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
     const firebaseConfig = {
@@ -357,6 +357,7 @@
           itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
           documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
           sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
+          sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
           orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
           createdAtClient: nowClient,
           activityAtClient: nowClient,
@@ -364,6 +365,55 @@
           schemaVersion: 2,
           ts: serverTimestamp()
         });
+      },
+      async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const nowClient = Date.now();
+        const batch = writeBatch(db);
+        new Set([sourceThreadId, targetThreadId].map(threadId => String(threadId || '').trim()).filter(Boolean)).forEach(entryId => {
+          const ref = doc(collection(db, 'comments'));
+          batch.set(ref, {
+            entryId: String(entryId || ''),
+            charName: 'Erzähler',
+            charTitle: '',
+            portrait: null,
+            text,
+            deleteCodeHash,
+            deleteCodeVersion: 1,
+            narrator: true,
+            characterId: '',
+            emoteIndex: null,
+            avatarKind: '',
+            commentMode: 'scene-transition',
+            commentKind: 'scene-transition-event',
+            commentSegments: null,
+            itemShowcase: null,
+            documentAttachment: null,
+            sceneTimeEvent: null,
+            sceneTransition: metadata.sceneTransition,
+            orderKey: nowClient,
+            createdAtClient: nowClient,
+            activityAtClient: nowClient,
+            activityAt: serverTimestamp(),
+            schemaVersion: 2,
+            ts: serverTimestamp()
+          });
+        });
+        await batch.commit();
+      },
+      async deleteSceneTransition(docId, transitionId, deleteCode) {
+        const selectedRef = doc(db, 'comments', String(docId || ''));
+        const selected = await getDoc(selectedRef);
+        if (!selected.exists()) throw new Error('Nicht gefunden');
+        if (!(await isMatchingDeleteCode(selected.data(), deleteCode))) throw new Error('Falscher Code');
+        const transitionQuery = query(
+          collection(db, 'comments'),
+          where('sceneTransition.transitionId', '==', String(transitionId || ''))
+        );
+        const matches = await getDocs(transitionQuery);
+        const batch = writeBatch(db);
+        matches.docs.forEach(item => batch.delete(item.ref));
+        await batch.commit();
       },
       async loadCommentTurn(threadId) {
         try {

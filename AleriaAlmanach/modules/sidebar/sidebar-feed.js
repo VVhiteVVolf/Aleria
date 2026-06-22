@@ -180,10 +180,17 @@ function openEntryById(entryId) {
       const tab = section.tab || section.key;
       switchTab(tab);
       currentEntry = found;
-      const totalPages = getPages(found).length;
-      currentPage = location.pageIndex !== null
-        ? Math.max(0, Math.min(location.pageIndex, totalPages - 1))
-        : totalPages - 1;
+      const renderableEntry = typeof getRenderableEntry === 'function' ? getRenderableEntry(found) : found;
+      const entryPages = getPages(renderableEntry);
+      const totalPages = entryPages.length;
+      const matchingPageIndex = location.pageKey
+        ? entryPages.findIndex((page, index) => getPageCommentThreadKey(page, index) === location.pageKey)
+        : -1;
+      currentPage = matchingPageIndex >= 0
+        ? matchingPageIndex
+        : location.pageIndex !== null
+          ? Math.max(0, Math.min(location.pageIndex, totalPages - 1))
+          : totalPages - 1;
       renderPage(currentPage, 0);
       activateDialog('modal-overlay', { initialFocus: '.modal-close' });
       document.body.style.overflow = 'hidden';

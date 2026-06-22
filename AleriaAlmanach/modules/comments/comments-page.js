@@ -1,14 +1,31 @@
 // Comment page and embedded comment shell builders.
+const COMMENT_ACTION_ICONS = {
+  comment: 'https://i.imgur.com/II1nzyS.png',
+  object: 'https://i.imgur.com/4o2fpMy.png',
+  attachment: 'https://i.imgur.com/JAKyimG.png',
+  transition: 'https://i.imgur.com/MHOEe96.png',
+  time: 'https://i.imgur.com/Q9FVnjc.png'
+};
+
+function buildCommentActionIcon(iconKey) {
+  const src = COMMENT_ACTION_ICONS[iconKey] || '';
+  return `<img class="comments-action-icon" src="${sanitizeImageSrc(src)}" alt="" decoding="async">`;
+}
+
 function buildCommentActionBar(hintText, options = {}) {
   const sceneTimeButton = options.allowSceneTime
-    ? '<button class="comments-add-btn comments-time-event-btn" type="button" data-scene-time-action="open-event-dialog" title="Szenenzeit ankuendigen" aria-label="Szenenzeit ankuendigen">Zeit</button>'
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-time-event-btn" type="button" data-scene-time-action="open-event-dialog" title="Zeitsprung anlegen" aria-label="Zeitsprung anlegen">${buildCommentActionIcon('time')}</button>`
+    : '';
+  const sceneTransitionButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-transition-event-btn" type="button" data-scene-transition-action="open-dialog" title="Szenenwechsel anlegen" aria-label="Szenenwechsel anlegen">${buildCommentActionIcon('transition')}</button>`
     : '';
   return `
     <div class="comments-form-bar">
-      <button class="comments-add-btn" type="button" data-action="open-comment-form" title="Kommentar hinterlassen" aria-label="Kommentar hinterlassen">+</button>
+      <button class="comments-add-btn comments-action-icon-btn" type="button" data-action="open-comment-form" title="Kommentieren" aria-label="Kommentieren">${buildCommentActionIcon('comment')}</button>
       ${sceneTimeButton}
-      <button class="comments-add-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">◇</button>
-      <button class="comments-add-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">▤</button>
+      ${sceneTransitionButton}
+      <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>
+      <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>
       ${buildCommentQuickToolsToggle()}
       ${buildCommentToolsToggle()}
