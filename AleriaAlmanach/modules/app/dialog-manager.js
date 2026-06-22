@@ -10,6 +10,7 @@ const DIALOG_CONFIGS = {
   'module-editor-overlay': { label: 'Modul-Editor', initialFocus: '#me-code, #me-title, button, input, textarea, select' },
   'module-section-manager-overlay': { label: 'Reiter und Modulpositionen verwalten', initialFocus: '#msm-tab, button, input, textarea, select' },
   'scene-time-event-overlay': { label: 'Szenenzeit ankuendigen', initialFocus: '#ste-title, button, input, textarea, select' },
+  'scene-transition-overlay': { label: 'Szenenwechsel anlegen', initialFocus: '#scene-transition-target, button, input, textarea, select' },
 };
 
 const DIALOG_FOCUSABLE_SELECTOR = [

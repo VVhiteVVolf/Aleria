@@ -14,8 +14,9 @@
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/archive.css?v=20260620-module-delete-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260604-story-width-v1">
-<link rel="stylesheet" href="./styles/comments.css?v=20260616-scene-timeline-pages-v1">
-<link rel="stylesheet" href="./styles/scene-time.css?v=20260616-scene-time-icons-v1">
+<link rel="stylesheet" href="./styles/comments.css?v=20260622-comment-action-icons-v1">
+<link rel="stylesheet" href="./styles/scene-time.css?v=20260622-comment-action-icons-v1">
+<link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260520-cleanup-v1">
@@ -39,16 +40,17 @@
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/scene-blocks.css?v=20260604-scene-comments-v1">
-<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260520-cleanup-v1">
+<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260622-left-sidebar-v1">
+<link rel="stylesheet" href="./styles/item-database.css?v=20260622-item-management-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260611-main-redesign-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260520-cleanup-v1" media="(max-width: 760px)">
   <!-- Firebase -->
-  <script type="module" src="./firebase.js?v=20260616-scene-time-v1"></script>
+  <script type="module" src="./firebase.js?v=20260622-scene-transition-v2"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/core/app-core.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/app/dialog-manager.js?v=20260616-scene-time-v1" defer></script>
+  <script src="./modules/app/dialog-manager.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/session/session-focus.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20260616-section-editor-v1" defer></script>
@@ -59,6 +61,10 @@
   <script src="./modules/module-editor/module-editor-preview.js?v=20260620-preview-state-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-data.js?v=20260620-goods-details-toggle-v1" defer></script>
+  <script src="./modules/item-database/item-db-normalizer.js?v=20260620-item-database-market-v1" defer></script>
+  <script src="./modules/item-database/item-db-extractors.js?v=20260620-item-database-market-v1" defer></script>
+  <script src="./modules/item-database/item-db-store.js?v=20260622-item-management-v1" defer></script>
+  <script src="./modules/item-database/item-db-ui.js?v=20260622-item-management-v1" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260604-caste-fixes-v1" defer></script>
   <script src="./modules/court/court-editor-schema.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bounty.js?v=20260617-bounty-file-v1" defer></script>
@@ -141,13 +147,15 @@
   <script src="./modules/characters/character-profile-events.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/scene-time/scene-time-state.js?v=20260616-scene-timeline-pages-v1" defer></script>
   <script src="./modules/scene-time/scene-time-ui.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20260616-scene-time-v1" defer></script>
+  <script src="./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2" defer></script>
+  <script src="./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20260616-scene-time-v1" defer></script>
-  <script src="./modules/comments/comments-backend.js?v=20260616-scene-time-v1" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20260622-comment-action-icons-v1" defer></script>
+  <script src="./modules/comments/comments-backend.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-segment-base.js?v=20260604-scene-comments-v1" defer></script>
@@ -157,8 +165,9 @@
   <script src="./modules/comments/comments-draft.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/comments/comments-thread.js?v=20260616-scene-timeline-pages-v1" defer></script>
+  <script src="./modules/comments/comments-thread.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260616-scene-timeline-pages-v1" defer></script>
+  <script src="./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/comments/comments-jump.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -172,7 +181,7 @@
   <script src="./modules/comments/comments-edit.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/comments/comments-edit-character-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-delete.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
@@ -187,7 +196,8 @@
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/modal/modal-controller.js?v=20260616-inline-scroll-restore-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20260613-thread-rescue-v2" defer></script>
-  <script src="./modules/sidebar/sidebar-feed.js?v=20260613-sidebar-activity-v1" defer></script>
+  <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
+  <script src="./modules/sidebar/sidebar-registers.js?v=20260622-left-sidebar-v1" defer></script>
 </head>
 <body>
 
@@ -200,6 +210,13 @@
 
 <nav class="gallery-tabs" id="gallery-tabs"></nav>
 <div class="page-layout">
+  <aside id="left-sidebar" aria-label="Almanach-Register">
+    <div class="almanach-left-sidebar-head">
+      <span>Archivregister</span>
+      <strong>Almanach</strong>
+    </div>
+    <nav class="almanach-left-registers" data-almanach-left-registers aria-label="Almanach-Bereiche"></nav>
+  </aside>
   <main id="main-content"></main>
   <aside id="sidebar">
     <div class="sidebar-section sidebar-section-note">

@@ -7,7 +7,8 @@ const COMMENT_KIND_LABELS = {
   whisper: 'Zu Flüstern',
   shout: 'Rufen',
   narrator: 'Erzähler',
-  'scene-time-event': 'Szenenzeit'
+  'scene-time-event': 'Szenenzeit',
+  'scene-transition-event': 'Szenenwechsel'
 };
 
 function normalizeCommentKind(kind, narrator = false) {
@@ -62,6 +63,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (typeof isSceneTransitionComment === 'function' && isSceneTransitionComment(c)) {
+    return renderSceneTransitionComment(c, idx);
+  }
   const showcaseItem = getCommentShowcaseItem(c);
   if (showcaseItem) return renderCommentShowcase(c, idx, showcaseItem);
   const attachmentItem = getCommentAttachmentItem(c);

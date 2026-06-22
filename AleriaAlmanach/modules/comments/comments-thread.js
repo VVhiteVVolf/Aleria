@@ -216,7 +216,9 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
 }
 
 function renderCommentsToScroll(scroll, comments) {
-  const sortedComments = sortCommentsByTimeline(comments);
+  const sortedComments = typeof dedupeSceneTransitionComments === 'function'
+    ? dedupeSceneTransitionComments(sortCommentsByTimeline(comments))
+    : sortCommentsByTimeline(comments);
   const threadId = getCommentPaginationThreadId(scroll);
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
@@ -276,4 +278,3 @@ function findCachedCommentById(commentId) {
 // Comment edit logic lives in modules/comments/comments-edit.js.
 
 // Comment delete logic lives in modules/comments/comments-delete.js.
-

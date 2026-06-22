@@ -1,17 +1,5 @@
 /* Scene time events for interactive session threads. */
 
-.comments-time-event-btn {
-  width: auto;
-  min-width: 3.35rem;
-  border-radius: 999px;
-  padding-inline: 0.5rem;
-  font-size: 0.52rem;
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .scene-time-event {
   width: min(760px, 94%);
   margin: 0.9rem auto;
