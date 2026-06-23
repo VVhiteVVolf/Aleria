@@ -265,7 +265,30 @@
 }
 
 .family-page.fullscreen-active .family-chart-panels {
+  width: 100%;
+  min-width: 100%;
   min-height: 100%;
+}
+
+.family-page.fullscreen-active .family-chart-wrap,
+.family-page.fullscreen-active .family-chart {
+  width: 100%;
+  min-width: 100%;
+}
+
+.family-page.fullscreen-active .family-tree-mode-parallel {
+  width: max-content;
+  min-width: 100%;
+}
+
+.family-page.fullscreen-active .family-tree-mode-parallel .family-tree-panel {
+  min-width: min(100vw, 86rem);
+}
+
+.family-page.fullscreen-active .family-tree-mode-parallel .family-chart-wrap,
+.family-page.fullscreen-active .family-tree-mode-parallel .family-chart {
+  width: auto;
+  min-width: max-content;
 }
 
 .inline-module-preview-frame .family-page,

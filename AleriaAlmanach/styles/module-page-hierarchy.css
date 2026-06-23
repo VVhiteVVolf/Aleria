@@ -32,10 +32,10 @@
 
 .hierarchy-page.fullscreen-active {
   position: fixed;
-  inset: 0.65rem;
+  inset: 0;
   z-index: 10000;
   height: auto;
-  max-height: calc(100vh - 1.3rem);
+  max-height: 100dvh;
   grid-template-rows: auto minmax(0, 1fr);
   padding: clamp(0.55rem, 1vw, 0.95rem);
   background:
@@ -205,7 +205,7 @@
 
 .hierarchy-page.fullscreen-active .hierarchy-chart {
   width: 100%;
-  min-width: max-content;
+  min-width: 100%;
   min-height: 100%;
   justify-content: flex-start;
 }
@@ -215,7 +215,34 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+  max-width: none;
   padding: clamp(0.8rem, 1.2vw, 1.25rem);
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-chart-panels,
+.hierarchy-page.fullscreen-active .hierarchy-chart-panel.active {
+  width: 100%;
+  min-width: 100%;
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-parallel {
+  width: max-content;
+  min-width: 100%;
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-parallel .hierarchy-tree-panel {
+  min-width: min(100vw, 86rem);
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-chart-level {
+  width: 100%;
+  min-width: 100%;
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-level-nodes {
+  width: 100%;
+  min-width: max-content;
+  justify-content: space-evenly;
 }
 
 .hierarchy-page.fullscreen-active .hierarchy-view-controls {
