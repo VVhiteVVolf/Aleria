@@ -121,6 +121,18 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'move-hierarchy-level',
   'add-hierarchy-node',
   'remove-hierarchy-node',
+  'add-family-detail',
+  'remove-family-detail',
+  'add-family-tree',
+  'remove-family-tree',
+  'add-family-level',
+  'add-family-level-after',
+  'remove-family-level',
+  'move-family-level',
+  'add-family-node',
+  'remove-family-node',
+  'add-family-connection',
+  'remove-family-connection',
   'add-biography-connection-row',
   'remove-biography-connection-row',
   'add-biography-document-row',
@@ -624,6 +636,54 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-hierarchy-node') {
     removeModuleHierarchyNode(trigger);
+    return;
+  }
+  if (action === 'add-family-detail') {
+    addModuleFamilyDetail(trigger);
+    return;
+  }
+  if (action === 'remove-family-detail') {
+    removeModuleFamilyDetail(trigger);
+    return;
+  }
+  if (action === 'add-family-tree') {
+    addModuleFamilyTree(trigger);
+    return;
+  }
+  if (action === 'remove-family-tree') {
+    removeModuleFamilyTree(trigger);
+    return;
+  }
+  if (action === 'add-family-level') {
+    addModuleFamilyLevel(trigger);
+    return;
+  }
+  if (action === 'add-family-level-after') {
+    addModuleFamilyLevelAfter(trigger);
+    return;
+  }
+  if (action === 'remove-family-level') {
+    removeModuleFamilyLevel(trigger);
+    return;
+  }
+  if (action === 'move-family-level') {
+    moveModuleFamilyLevel(trigger);
+    return;
+  }
+  if (action === 'add-family-node') {
+    addModuleFamilyNode(trigger);
+    return;
+  }
+  if (action === 'remove-family-node') {
+    removeModuleFamilyNode(trigger);
+    return;
+  }
+  if (action === 'add-family-connection') {
+    addModuleFamilyConnection(trigger);
+    return;
+  }
+  if (action === 'remove-family-connection') {
+    removeModuleFamilyConnection(trigger);
     return;
   }
   if (action === 'add-biography-connection-row') {

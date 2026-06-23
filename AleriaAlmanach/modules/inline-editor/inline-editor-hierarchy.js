@@ -301,6 +301,13 @@ function buildInlineHierarchyEditor(page) {
           </select>
         </div>
         <div class="inline-edit-field">
+          <span class="inline-edit-label">Baumdarstellung</span>
+          <select class="inline-edit-select" data-inline-action="update-hierarchy-field" data-hierarchy-field="treeDisplayMode">
+            <option value="tabs"${data.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option>
+            <option value="parallel"${data.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option>
+          </select>
+        </div>
+        <div class="inline-edit-field">
           <span class="inline-edit-label">Kartenschrift (%)</span>
           <input class="inline-edit-input" type="number" min="65" max="125" step="1" value="${escapeHtml(data.cardFontScale)}" data-inline-action="update-hierarchy-field" data-hierarchy-field="cardFontScale">
         </div>

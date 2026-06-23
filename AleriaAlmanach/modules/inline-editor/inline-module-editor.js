@@ -356,7 +356,7 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="rerender-entry-field" data-entry-field="subtitle" value="${escapeHtml(entry.subtitle || '')}">
         </div>
         ${buildInlineSectionPicker()}
-        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'character-inventory' ? 'character-inventory' : type === 'guest-register' ? 'guest-register' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'map-template' ? 'map-template' : type === 'landing' ? 'landing' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
+        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'character-inventory' ? 'character-inventory' : type === 'guest-register' ? 'guest-register' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'map-template' ? 'map-template' : type === 'landing' ? 'landing' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'family' ? 'family' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
         ${buildInlineModuleSizeControls(entry)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Typ</span>
@@ -425,6 +425,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'caste') return wrapInlineEditor(`${moduleMeta}${buildInlineCasteEditor(page)}`);
   if (type === 'court') return wrapInlineEditor(`${moduleMeta}${buildInlineCourtEditor(page)}`);
   if (type === 'hierarchy') return wrapInlineEditor(`${moduleMeta}${buildInlineHierarchyEditor(page)}`);
+  if (type === 'family') return wrapInlineEditor(`${moduleMeta}${buildInlineFamilyEditor(page)}`);
   if (type === 'biography') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}`);
   if (type === 'bestiary') return wrapInlineEditor(buildInlineBestiaryEditor(entry, page));
   if (type === 'quest-file') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineQuestFileEditor(entry, page, { includeMeta: false, includeStats: false })}`);

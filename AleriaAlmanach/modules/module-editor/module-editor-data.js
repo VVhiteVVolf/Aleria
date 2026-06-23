@@ -671,12 +671,17 @@ function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
   return Math.max(min, Math.min(max, Math.round(safe)));
 }
 
+function getHierarchyTreeDisplayMode(value = '') {
+  return String(value || '').trim() === 'parallel' ? 'parallel' : 'tabs';
+}
+
 function sanitizeHierarchyData(data = {}) {
   const layoutMode = String(data.layoutMode || '').trim();
   const trees = sanitizeHierarchyTrees(data);
   const primaryLevels = trees[0]?.levels || sanitizeHierarchyLevels(data.levels);
   return {
     layoutMode: layoutMode === 'depth' ? 'depth' : 'vertical',
+    treeDisplayMode: getHierarchyTreeDisplayMode(data.treeDisplayMode || data.displayMode),
     cardFontScale: clampHierarchyScale(data.cardFontScale, 92, 65, 125),
     portraitScale: clampHierarchyScale(data.portraitScale, 100, 50, 160),
     chartScale: clampHierarchyScale(data.chartScale, 100, 65, 135),
@@ -699,6 +704,157 @@ function sanitizeHierarchyData(data = {}) {
     footerNote: String(data.footerNote || '').trim(),
     backLabel: String(data.backLabel || 'Zurueck zur Uebersicht').trim(),
     printLabel: String(data.printLabel || 'Akte drucken').trim()
+  };
+}
+
+const FAMILY_MEMBER_TYPES = {
+  direct: { label: 'Direktes Familienmitglied', shortLabel: 'Direkt' },
+  married: { label: 'Angeheiratete', shortLabel: 'Angeheiratet' },
+  affair: { label: 'Affairen', shortLabel: 'Affaire' },
+  bastard: { label: 'Bastarde', shortLabel: 'Bastard' },
+  ward: { label: 'M\u00fcndel', shortLabel: 'M\u00fcndel' },
+  forced: { label: 'Erzwungen', shortLabel: 'Erzwungen' }
+};
+
+function getFamilyMemberType(value = '') {
+  const key = String(value || '').trim();
+  return FAMILY_MEMBER_TYPES[key] ? key : 'direct';
+}
+
+function getFamilyMemberTypeLabel(value = '', short = false) {
+  const type = FAMILY_MEMBER_TYPES[getFamilyMemberType(value)];
+  return short ? type.shortLabel : type.label;
+}
+
+function makeFamilyNodeId(value, fallback = 'familienmitglied') {
+  const source = String(value || fallback || 'familienmitglied').trim().toLowerCase();
+  const normalized = source
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return normalized || 'familienmitglied';
+}
+
+function ensureUniqueFamilyNodeId(baseId, usedIds, fallbackIndex = 0) {
+  const cleanBase = makeFamilyNodeId(baseId, `familienmitglied-${fallbackIndex + 1}`);
+  let candidate = cleanBase;
+  let counter = 2;
+  while (usedIds.has(candidate)) {
+    candidate = `${cleanBase}-${counter}`;
+    counter += 1;
+  }
+  usedIds.add(candidate);
+  return candidate;
+}
+
+function sanitizeFamilyNode(item = {}, index = 0, usedIds = new Set()) {
+  const title = String(item?.title || item?.name || `Familienmitglied ${index + 1}`).trim();
+  return {
+    id: ensureUniqueFamilyNodeId(item?.id || title, usedIds, index),
+    familyType: getFamilyMemberType(item?.familyType || item?.memberType || item?.relationType),
+    portrait: String(item?.portrait || item?.image || item?.img || '').trim(),
+    title,
+    subtitle: String(item?.subtitle || item?.role || '').trim(),
+    text: String(item?.text || item?.description || item?.detail || '').trim()
+  };
+}
+
+function sanitizeFamilyLevel(level = {}, index = 0, usedIds = new Set()) {
+  const nodes = (Array.isArray(level?.nodes) ? level.nodes : [])
+    .map((node, nodeIndex) => sanitizeFamilyNode(node, nodeIndex, usedIds))
+    .filter(node => node.id || node.portrait || node.title || node.subtitle || node.text)
+    .slice(0, 8);
+  return {
+    label: String(level?.label || '').trim(),
+    nodes
+  };
+}
+
+function sanitizeFamilyLevels(levels = [], usedIds = new Set()) {
+  return (Array.isArray(levels) ? levels : [])
+    .map((level, index) => sanitizeFamilyLevel(level, index, usedIds))
+    .filter(level => level.label || level.nodes.length)
+    .slice(0, 14);
+}
+
+function sanitizeFamilyConnection(connection = {}, validNodeIds = new Set()) {
+  const from = String(connection?.from || connection?.source || '').trim();
+  const to = String(connection?.to || connection?.target || '').trim();
+  if (!from || !to || from === to || !validNodeIds.has(from) || !validNodeIds.has(to)) return null;
+  const relationType = String(connection?.relationType || connection?.type || 'blood').trim() || 'blood';
+  return {
+    from,
+    to,
+    relationType,
+    label: String(connection?.label || connection?.text || '').trim()
+  };
+}
+
+function sanitizeFamilyConnections(connections = [], validNodeIds = new Set()) {
+  const seen = new Set();
+  return (Array.isArray(connections) ? connections : [])
+    .map(connection => sanitizeFamilyConnection(connection, validNodeIds))
+    .filter(Boolean)
+    .filter(connection => {
+      const key = `${connection.from}>${connection.to}>${connection.relationType}>${connection.label}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 40);
+}
+
+function sanitizeFamilyTree(tree = {}, index = 0) {
+  const usedIds = new Set();
+  const levels = sanitizeFamilyLevels(tree?.levels, usedIds);
+  const validNodeIds = new Set(levels.flatMap(level => level.nodes.map(node => node.id)));
+  return {
+    label: String(tree?.label || tree?.title || `Familienbaum ${index + 1}`).trim(),
+    levels,
+    connections: sanitizeFamilyConnections(tree?.connections, validNodeIds)
+  };
+}
+
+function sanitizeFamilyTrees(data = {}) {
+  const rawTrees = Array.isArray(data.trees) ? data.trees : [];
+  const sourceTrees = rawTrees.length
+    ? rawTrees
+    : [{
+        label: String(data.treeLabel || data.chartTitle || 'Stammbaum').trim(),
+        levels: data.levels,
+        connections: data.connections
+      }];
+  return sourceTrees
+    .map((tree, index) => sanitizeFamilyTree(tree, index))
+    .filter(tree => tree.label || tree.levels.length)
+    .slice(0, 8);
+}
+
+function getFamilyTreeDisplayMode(value = '') {
+  return String(value || '').trim() === 'parallel' ? 'parallel' : 'tabs';
+}
+
+function sanitizeFamilyData(data = {}) {
+  const base = sanitizeHierarchyData({
+    ...data,
+    eyebrow: data.eyebrow || 'Familie',
+    subtitle: data.subtitle || 'Familienstruktur',
+    centerLabel: data.centerLabel || 'Haus & Blutlinie',
+    organizationTitle: data.organizationTitle || 'Familienhaus',
+    motto: data.motto || 'Blut. Namen. Bande.',
+    detailsTitle: data.detailsTitle || 'Familienakte',
+    quoteLabel: data.quoteLabel || 'Hauswort',
+    chartTitle: data.chartTitle || 'Stammbaum & Beziehungen',
+    chartIntro: data.chartIntro || 'Ordne Familienmitglieder nach Generationen und verbinde Ehepartner, Geschwister, Vettern oder Sonderbeziehungen ueber parallele Linien.'
+  });
+  const trees = sanitizeFamilyTrees(data);
+  const primaryLevels = trees[0]?.levels || [];
+  return {
+    ...base,
+    treeDisplayMode: getFamilyTreeDisplayMode(data.treeDisplayMode || data.displayMode),
+    trees,
+    levels: primaryLevels
   };
 }
 

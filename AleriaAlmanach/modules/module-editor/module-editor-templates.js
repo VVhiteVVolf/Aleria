@@ -683,6 +683,7 @@ function createDefaultHierarchyPage(index = 0) {
     hierarchyPage: true,
     hierarchy: {
       layoutMode: 'vertical',
+      treeDisplayMode: 'tabs',
       cardFontScale: 92,
       portraitScale: 100,
       chartScale: 100,
@@ -749,6 +750,101 @@ function createDefaultHierarchyPage(index = 0) {
       backLabel: 'Zurueck zur Uebersicht',
       printLabel: 'Akte drucken'
     }
+  };
+}
+
+function createDefaultFamilyPage(index = 0) {
+  const base = createDefaultHierarchyPage(index);
+  const family = sanitizeFamilyData({
+    ...base.hierarchy,
+    eyebrow: 'Familie',
+    subtitle: 'Stammbaum und Familienbindungen',
+    centerLabel: 'Haus Pendragon',
+    organizationTitle: 'Haus Pendragon',
+    motto: 'Blut verpflichtet. Namen bleiben.',
+    description: 'Diese Familienakte zeigt direkte Blutlinien, angeheiratete Personen, Affaeren, Bastarde, M\u00fcndel und erzwungene Bindungen. Parallele Verbindungslinien koennen Ehepartner, Geschwister, Vettern oder Sonderverhaeltnisse markieren.',
+    detailsTitle: 'Familienakte',
+    details: [
+      { icon: '*', label: 'Haus', value: 'Haus Pendragon' },
+      { icon: '*', label: 'Stammsitz', value: 'Noch festlegen' },
+      { icon: '*', label: 'Hauptlinie', value: 'Direkte Blutlinie' },
+      { icon: '*', label: 'Nebenlinien', value: 'Angeheiratete, Bastarde, M\u00fcndel' }
+    ],
+    quoteLabel: 'Hauswort',
+    quote: 'Blut schafft Bande, doch Namen schaffen Pflicht.',
+    chartTitle: 'Stammbaum & Beziehungen',
+    chartIntro: 'Lege Generationen als Ebenen an. Personen auf derselben Ebene koennen parallel stehen; Verbindungslinien verbinden beliebige Karten ueber ihre Karten-ID.',
+    treeDisplayMode: 'parallel',
+    trees: [
+      {
+        label: 'Hauptlinie',
+        levels: [
+          {
+            label: 'Elterngeneration',
+            nodes: [
+              { id: 'vater', familyType: 'direct', portrait: '', title: 'Vater des Hauses', subtitle: 'Direkte Linie', text: 'Oberhaupt oder Ursprung der dargestellten Linie.' },
+              { id: 'mutter', familyType: 'married', portrait: '', title: 'Mutter des Hauses', subtitle: 'Angeheiratet', text: 'Ehepartnerin oder eingeheiratete Verbindung.' },
+              { id: 'affaire', familyType: 'affair', portrait: '', title: 'Verborgene Affaire', subtitle: 'Affaire', text: 'Nicht offizielle Verbindung mit Einfluss auf die Linie.' }
+            ]
+          },
+          {
+            label: 'Kinder',
+            nodes: [
+              { id: 'erbe', familyType: 'direct', portrait: '', title: 'Rechtmaessiger Erbe', subtitle: 'Direktes Familienmitglied', text: 'Traegt Namen, Anspruch und Hauptlinie weiter.' },
+              { id: 'schwester', familyType: 'direct', portrait: '', title: 'Schwester des Erben', subtitle: 'Direktes Familienmitglied', text: 'Geschwisterliche Parallelposition innerhalb der Generation.' },
+              { id: 'bastard', familyType: 'bastard', portrait: '', title: 'Anerkannter Bastard', subtitle: 'Bastard', text: 'Kind ausserhalb der offiziellen Ehe.' }
+            ]
+          },
+          {
+            label: 'Hausbindung',
+            nodes: [
+              { id: 'ehepartner', familyType: 'married', portrait: '', title: 'Ehepartner des Erben', subtitle: 'Angeheiratet', text: 'Politische oder private Eheverbindung.' },
+              { id: 'muendel', familyType: 'ward', portrait: '', title: 'M\u00fcndel des Hauses', subtitle: 'M\u00fcndel', text: 'Unter Schutz oder Vormundschaft des Hauses.' },
+              { id: 'erzwungen', familyType: 'forced', portrait: '', title: 'Erzwungene Bindung', subtitle: 'Erzwungen', text: 'Bindung durch Zwang, Vertrag oder Geiselstellung.' }
+            ]
+          }
+        ],
+        connections: [
+          { from: 'vater', to: 'mutter', relationType: 'spouse', label: 'Ehe' },
+          { from: 'vater', to: 'affaire', relationType: 'affair', label: 'Affaire' },
+          { from: 'erbe', to: 'schwester', relationType: 'sibling', label: 'Geschwister' },
+          { from: 'erbe', to: 'ehepartner', relationType: 'spouse', label: 'Ehe' },
+          { from: 'bastard', to: 'muendel', relationType: 'cousin', label: 'Nebenlinie' }
+        ]
+      },
+      {
+        label: 'Nebenlinie',
+        levels: [
+          {
+            label: 'Vetternlinie',
+            nodes: [
+              { id: 'vetter', familyType: 'direct', portrait: '', title: 'Vetter des Hauses', subtitle: 'Direktes Familienmitglied', text: 'Parallel gefuehrte Seitenlinie mit eigenem Anspruch.' },
+              { id: 'angeheiratet-nebenlinie', familyType: 'married', portrait: '', title: 'Angeheiratete Nebenlinie', subtitle: 'Angeheiratet', text: 'Verbindet die Seitenlinie mit einem anderen Haus.' }
+            ]
+          },
+          {
+            label: 'Schutzverhaeltnis',
+            nodes: [
+              { id: 'muendel-nebenlinie', familyType: 'ward', portrait: '', title: 'M\u00fcndel der Nebenlinie', subtitle: 'M\u00fcndel', text: 'Steht unter Vormundschaft dieser Linie.' }
+            ]
+          }
+        ],
+        connections: [
+          { from: 'vetter', to: 'angeheiratet-nebenlinie', relationType: 'spouse', label: 'Ehe' },
+          { from: 'vetter', to: 'muendel-nebenlinie', relationType: 'ward', label: 'Schutz' }
+        ]
+      }
+    ],
+    footerNote: 'Familientypen faerben nur die Karten. Die eigentliche Beziehung wird ueber Beschreibung und Verbindungslinien gepflegt.'
+  });
+
+  return {
+    ...base,
+    pageTitle: `${getRomanPageLabel(index)} - Familie`,
+    familyPage: true,
+    family,
+    hierarchyPage: false,
+    hierarchy: undefined
   };
 }
 
@@ -1209,6 +1305,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildHierarchyPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'hierarchy')
   },
+  family: {
+    id: 'family',
+    pageType: 'family',
+    pageFlag: 'familyPage',
+    label: 'Familie - Template',
+    pageLabel: 'Familie - Template',
+    defaultTitle: 'Neue Familie',
+    defaultSubtitle: 'Stammbaum, Blutlinien und Familienbindungen',
+    entryType: 'Familie',
+    typeMatchers: ['familie', 'stammbaum', 'familienbaum', 'blutlinie', 'hauslinie'],
+    createPages: () => [createDefaultFamilyPage(0)],
+    createPage: index => createDefaultFamilyPage(index),
+    buildEditorFields: page => buildFamilyModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectFamilyModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildFamilyPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'family')
+  },
   'object-profile': {
     id: 'object-profile',
     pageType: 'biography',
@@ -1552,6 +1665,7 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     'Neue interaktive Szene',
     'Neues Turnier',
     'Neues Turnierregister',
+    'Neue Familie',
     'Neue Kaste',
     'Neue Kaste / Klasse',
     'Neue Gerichtsakte'

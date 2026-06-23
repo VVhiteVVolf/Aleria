@@ -1,0 +1,287 @@
+/* Aleria Almanach - family tree module page, built on the hierarchy layout. */
+
+.family-page {
+  --family-line: rgba(88, 64, 46, 0.58);
+  --family-tree-divider: rgba(91, 60, 32, 0.52);
+}
+
+.family-page .hierarchy-main {
+  overflow: hidden;
+}
+
+.family-page .hierarchy-chart-viewport {
+  flex: 1 1 0;
+  min-height: min(62vh, 44rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: clamp(0.9rem, 1.4vw, 1.5rem);
+}
+
+.family-page .hierarchy-chart-panels {
+  min-width: max(100%, 72rem);
+  min-height: max(100%, 38rem);
+}
+
+.family-page .family-chart-wrap {
+  position: relative;
+  min-width: max-content;
+  min-height: 100%;
+  padding: clamp(1.1rem, 1.6vw, 1.65rem);
+  box-sizing: border-box;
+}
+
+.family-page .family-chart {
+  position: relative;
+  z-index: 2;
+  gap: calc(3rem * var(--hierarchy-chart-scale, 1));
+  padding: calc(1.25rem * var(--hierarchy-chart-scale, 1));
+}
+
+.family-page .family-connection-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.family-connection-line {
+  fill: none;
+  stroke: var(--family-line);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0;
+}
+
+.family-connection-line.relation-spouse,
+.family-connection-line.relation-ehe,
+.family-connection-line.relation-ehepartner {
+  stroke-width: 1.7;
+}
+
+.family-connection-line.relation-affair,
+.family-connection-line.relation-affaire {
+  stroke-dasharray: 6 5;
+}
+
+.family-connection-line.relation-forced,
+.family-connection-line.relation-erzwungen {
+  stroke-dasharray: 2 4;
+}
+
+.family-connection-label {
+  fill: #654024;
+  paint-order: stroke;
+  stroke: rgba(245, 229, 191, 0.86);
+  stroke-width: 4;
+  font-family: 'Cinzel', serif;
+  font-size: calc(0.58rem * var(--hierarchy-effective-card-font-scale, 0.92));
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.family-node-card {
+  background: var(--family-card-bg, rgba(255, 248, 226, 0.28));
+  border-color: var(--family-card-border, rgba(113, 80, 36, 0.32));
+}
+
+.family-node-card.family-type-direct,
+.family-legend-item.family-type-direct {
+  --family-card-bg: #d8a09a;
+  --family-card-border: rgba(126, 55, 49, 0.44);
+}
+
+.family-node-card.family-type-married,
+.family-legend-item.family-type-married {
+  --family-card-bg: #adc8a2;
+  --family-card-border: rgba(71, 104, 62, 0.42);
+}
+
+.family-node-card.family-type-affair,
+.family-legend-item.family-type-affair {
+  --family-card-bg: #bea7c9;
+  --family-card-border: rgba(91, 68, 112, 0.42);
+}
+
+.family-node-card.family-type-bastard,
+.family-legend-item.family-type-bastard {
+  --family-card-bg: #b9b8b1;
+  --family-card-border: rgba(91, 88, 80, 0.44);
+}
+
+.family-node-card.family-type-ward,
+.family-legend-item.family-type-ward {
+  --family-card-bg: #a6b9cf;
+  --family-card-border: rgba(62, 82, 109, 0.42);
+}
+
+.family-node-card.family-type-forced,
+.family-legend-item.family-type-forced {
+  --family-card-bg: #d8c7a4;
+  --family-card-border: rgba(124, 101, 61, 0.42);
+}
+
+.family-node-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(86, 58, 33, 0.06));
+}
+
+.family-node-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.family-node-type {
+  display: inline-flex;
+  max-width: 100%;
+  margin-bottom: 0.18rem;
+  padding: 0.12rem 0.35rem;
+  border: 1px solid rgba(72, 42, 13, 0.22);
+  background: rgba(255, 248, 226, 0.28);
+  color: #4b301b;
+  font-family: 'Cinzel', serif;
+  font-size: calc(0.52rem * var(--hierarchy-effective-card-font-scale, 0.92));
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.family-legend {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.family-legend-item {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--family-card-border, rgba(113, 80, 36, 0.32));
+  background: var(--family-card-bg, rgba(255, 248, 226, 0.28));
+  color: #3f2b1b;
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.family-page .family-chart-level + .family-chart-level {
+  padding-top: calc(2.7rem * var(--hierarchy-chart-scale, 1));
+}
+
+.family-page .family-chart-level + .family-chart-level::before {
+  height: calc(2.7rem * var(--hierarchy-chart-scale, 1));
+}
+
+.family-page .family-chart-level + .family-chart-level::after {
+  top: calc(2.7rem * var(--hierarchy-chart-scale, 1));
+}
+
+.family-page .family-level-nodes {
+  gap: clamp(1.45rem, 2.1vw, 2.6rem);
+}
+
+.family-chart-panels.family-tree-mode-parallel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: stretch;
+  min-width: max-content;
+  min-height: max-content;
+}
+
+.family-chart-panels.family-tree-mode-parallel .family-tree-panel {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  padding-inline: clamp(1.4rem, 2vw, 2.4rem);
+}
+
+.family-chart-panels.family-tree-mode-parallel .family-tree-panel + .family-tree-panel {
+  border-left: 2px solid var(--family-tree-divider);
+  box-shadow: -1px 0 0 rgba(255, 248, 226, 0.28);
+}
+
+.family-chart-panels.family-tree-mode-parallel .family-tree-panel + .family-tree-panel::before {
+  content: '';
+  position: absolute;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: -0.55rem;
+  width: 0.95rem;
+  border-left: 1px solid rgba(91, 60, 32, 0.34);
+  border-right: 1px solid rgba(255, 248, 226, 0.34);
+  pointer-events: none;
+}
+
+.family-tree-heading {
+  position: relative;
+  z-index: 3;
+  margin: 0 0 0.7rem;
+  color: #4b301b;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.family-chart-panels.family-tree-mode-parallel .family-chart-wrap {
+  min-height: 100%;
+}
+
+.family-page .hierarchy-chart-level.cols-7,
+.family-page .hierarchy-chart-level.cols-8 {
+  --hierarchy-branch-left: 5%;
+  --hierarchy-branch-right: 5%;
+}
+
+.family-page .hierarchy-chart-level.cols-7 .hierarchy-level-nodes {
+  grid-template-columns: repeat(7, minmax(calc(7.75rem * var(--hierarchy-chart-scale, 1)), calc(12.8rem * var(--hierarchy-chart-scale, 1))));
+}
+
+.family-page .hierarchy-chart-level.cols-8 .hierarchy-level-nodes {
+  grid-template-columns: repeat(8, minmax(calc(7.35rem * var(--hierarchy-chart-scale, 1)), calc(12rem * var(--hierarchy-chart-scale, 1))));
+}
+
+.family-page .hierarchy-chart-level.cols-7 .hierarchy-node-card,
+.family-page .hierarchy-chart-level.cols-8 .hierarchy-node-card {
+  grid-template-columns: calc(3.4rem * var(--hierarchy-effective-portrait-scale, 1)) minmax(0, 1fr);
+  padding: calc(0.52rem * var(--hierarchy-chart-scale, 1));
+}
+
+.family-page .hierarchy-chart.mode-depth .family-connection-layer {
+  display: none;
+}
+
+.family-page.fullscreen-active .hierarchy-chart-viewport {
+  min-height: 0;
+}
+
+.family-page.fullscreen-active .family-chart-panels {
+  min-height: 100%;
+}
+
+.inline-module-preview-frame .family-page,
+.module-editor-preview-frame .family-page {
+  min-width: 88rem;
+  min-height: calc(100dvh - 142px);
+}
+
+.inline-module-preview-frame .family-page .hierarchy-chart-viewport,
+.module-editor-preview-frame .family-page .hierarchy-chart-viewport {
+  min-height: 34rem;
+  max-height: none;
+}
+
+@media (max-width: 640px) {
+  .family-page .family-connection-layer {
+    display: none;
+  }
+}

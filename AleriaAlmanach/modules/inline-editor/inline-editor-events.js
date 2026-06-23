@@ -68,6 +68,18 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'move-hierarchy-level',
   'add-hierarchy-node',
   'remove-hierarchy-node',
+  'add-family-detail',
+  'remove-family-detail',
+  'add-family-tree',
+  'remove-family-tree',
+  'add-family-level',
+  'add-family-level-after',
+  'remove-family-level',
+  'move-family-level',
+  'add-family-node',
+  'remove-family-node',
+  'add-family-connection',
+  'remove-family-connection',
   'add-tleague-row',
   'remove-tleague-row',
   'add-tournament-line-row',
@@ -436,6 +448,74 @@ function handleInlineEditorActionClick(event) {
     );
     return;
   }
+  if (action === 'add-family-detail') {
+    addInlineFamilyDetail();
+    return;
+  }
+  if (action === 'remove-family-detail') {
+    removeInlineFamilyDetail(Number(trigger.dataset.familyDetailIndex) || 0);
+    return;
+  }
+  if (action === 'add-family-tree') {
+    addInlineFamilyTree();
+    return;
+  }
+  if (action === 'remove-family-tree') {
+    removeInlineFamilyTree(Number(trigger.dataset.familyTreeIndex) || 0);
+    return;
+  }
+  if (action === 'add-family-level') {
+    addInlineFamilyLevel(Number(trigger.dataset.familyTreeIndex) || 0);
+    return;
+  }
+  if (action === 'add-family-level-after') {
+    addInlineFamilyLevelAfter(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyLevelIndex) || 0
+    );
+    return;
+  }
+  if (action === 'remove-family-level') {
+    removeInlineFamilyLevel(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyLevelIndex) || 0
+    );
+    return;
+  }
+  if (action === 'move-family-level') {
+    moveInlineFamilyLevel(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyLevelIndex) || 0,
+      Number(trigger.dataset.familyDirection) || 0
+    );
+    return;
+  }
+  if (action === 'add-family-node') {
+    addInlineFamilyNode(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyLevelIndex) || 0
+    );
+    return;
+  }
+  if (action === 'remove-family-node') {
+    removeInlineFamilyNode(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyLevelIndex) || 0,
+      Number(trigger.dataset.familyNodeIndex) || 0
+    );
+    return;
+  }
+  if (action === 'add-family-connection') {
+    addInlineFamilyConnection(Number(trigger.dataset.familyTreeIndex) || 0);
+    return;
+  }
+  if (action === 'remove-family-connection') {
+    removeInlineFamilyConnection(
+      Number(trigger.dataset.familyTreeIndex) || 0,
+      Number(trigger.dataset.familyConnectionIndex) || 0
+    );
+    return;
+  }
   if (action === 'add-tleague-row') {
     addInlineTournamentLeagueRow(trigger.dataset.tleagueList || '');
     return;
@@ -696,6 +776,30 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-hierarchy-node-field') {
     updateInlineHierarchyNodeField(field);
+    return;
+  }
+  if (action === 'update-family-field') {
+    updateInlineFamilyField(field);
+    return;
+  }
+  if (action === 'update-family-detail-field') {
+    updateInlineFamilyDetailField(field);
+    return;
+  }
+  if (action === 'update-family-tree-field') {
+    updateInlineFamilyTreeField(field);
+    return;
+  }
+  if (action === 'update-family-level-field') {
+    updateInlineFamilyLevelField(field);
+    return;
+  }
+  if (action === 'update-family-node-field') {
+    updateInlineFamilyNodeField(field);
+    return;
+  }
+  if (action === 'update-family-connection-field') {
+    updateInlineFamilyConnectionField(field);
     return;
   }
   if (action === 'update-tleague-field') {
