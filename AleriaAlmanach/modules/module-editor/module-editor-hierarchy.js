@@ -290,6 +290,14 @@ function buildHierarchyModuleEditorFields(page) {
             </select>
           </div>
           <div class="module-editor-field">
+            <label>Baumdarstellung</label>
+            <select class="me-hierarchy-tree-display-mode">
+              <option value="tabs"${hierarchy.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option>
+              <option value="parallel"${hierarchy.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option>
+            </select>
+            <div class="module-editor-help">Nebeneinander zeigt mehrere Baeume mit vertikalem Trenner.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Kartenschrift</label>
             <input class="me-hierarchy-card-font-scale" type="number" min="65" max="125" step="1" value="${escapeHtml(hierarchy.cardFontScale)}">
             <div class="module-editor-help">Prozent, Standard 92.</div>
@@ -393,6 +401,7 @@ function collectHierarchyModuleEditorPage(card, page) {
   page.hierarchyPage = true;
   page.hierarchy = sanitizeHierarchyData({
     layoutMode: getFormValue(block, '.me-hierarchy-layout-mode'),
+    treeDisplayMode: getFormValue(block, '.me-hierarchy-tree-display-mode'),
     cardFontScale: getFormValue(block, '.me-hierarchy-card-font-scale'),
     portraitScale: getFormValue(block, '.me-hierarchy-portrait-scale'),
     chartScale: getFormValue(block, '.me-hierarchy-chart-scale'),

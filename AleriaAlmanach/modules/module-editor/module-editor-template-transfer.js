@@ -20,6 +20,15 @@ const MODULE_TEMPLATE_TRANSFER_KINDS = {
     fileLabel: 'hierarchie',
     sanitize: data => sanitizeHierarchyData(data || {})
   },
+  family: {
+    templateId: 'family',
+    pageType: 'family',
+    pageFlag: 'familyPage',
+    dataKey: 'family',
+    label: 'Familie',
+    fileLabel: 'familie',
+    sanitize: data => sanitizeFamilyData(data || {})
+  },
   'trade-catalog': {
     templateId: 'trade-catalog',
     pageType: 'trade-catalog',

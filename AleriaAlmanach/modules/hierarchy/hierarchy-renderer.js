@@ -46,10 +46,12 @@ function buildHierarchyTreeTabs(trees = []) {
     </div>`;
 }
 
-function buildHierarchyTreePanel(tree, index, layoutMode) {
+function buildHierarchyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {
   const levels = Array.isArray(tree?.levels) ? tree.levels : [];
+  const active = displayMode === 'parallel' || index === 0;
   return `
-    <div class="hierarchy-chart-panel${index === 0 ? ' active' : ''}" data-hierarchy-tree-panel="${index}">
+    <div class="hierarchy-chart-panel hierarchy-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}">
+      ${displayMode === 'parallel' ? `<div class="hierarchy-tree-heading">${escapeHtml(tree?.label || `Baum ${index + 1}`)}</div>` : ''}
       <div class="hierarchy-chart mode-${escapeHtml(layoutMode)}">
         ${levels.length
           ? levels.map(buildHierarchyLevel).join('')
@@ -188,6 +190,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
   const trees = data.trees.length
     ? data.trees
     : [{ label: data.chartTitle || 'Aufbau', levels: data.levels }];
+  const displayMode = data.treeDisplayMode === 'parallel' ? 'parallel' : 'tabs';
   const chartScale = data.chartScale / 100;
   const style = [
     `--hierarchy-card-font-scale:${data.cardFontScale / 100}`,
@@ -245,7 +248,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             ${data.chartIntro ? `<p>${sanitizeContentHtml(data.chartIntro)}</p>` : ''}
           </div>
           <div class="hierarchy-view-controls">
-            ${buildHierarchyTreeTabs(trees)}
+            ${displayMode === 'tabs' ? buildHierarchyTreeTabs(trees) : ''}
             <button class="hierarchy-view-button" type="button" data-hierarchy-intro-toggle aria-expanded="true">Aufbau-Text einklappen</button>
             <label>
               <span>Ansicht</span>
@@ -255,8 +258,8 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
           </div>
           <div class="hierarchy-ornament-line"></div>
           <div class="hierarchy-chart-viewport">
-            <div class="hierarchy-chart-panels">
-              ${trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode)).join('')}
+            <div class="hierarchy-chart-panels hierarchy-tree-mode-${escapeHtml(displayMode)}">
+              ${trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
             </div>
           </div>
         </main>
