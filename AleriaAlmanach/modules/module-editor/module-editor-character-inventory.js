@@ -21,6 +21,71 @@ function sanitizeCharacterInventoryImageSettings(data = {}) {
   };
 }
 
+const CHARACTER_INVENTORY_DEFAULT_CATEGORIES = [
+  { id: 'weapon', label: 'Waffen', icon: 'https://i.imgur.com/YaUQREQ.png' },
+  { id: 'armor', label: 'Rüstung', icon: 'https://i.imgur.com/5qZtUiY.png' },
+  { id: 'equipment', label: 'Ausrüstung', icon: 'https://i.imgur.com/yMj2CQf.png' },
+  { id: 'potions', label: 'Trinkturen', icon: 'https://i.imgur.com/gwujEaL.png' },
+  { id: 'documents', label: 'Dokumente', icon: 'https://i.imgur.com/urdalGm.png' },
+  { id: 'other', label: 'Sonstiges', icon: 'https://i.imgur.com/lgeevvn.png' }
+];
+
+const CHARACTER_INVENTORY_CURRENCIES = [
+  { id: 'gold', label: 'Goldtaler', short: 'GT', value: 1000, icon: 'https://i.imgur.com/kH2Ry56.png' },
+  { id: 'silver', label: 'Silbertaler', short: 'ST', value: 100, icon: 'https://i.imgur.com/SqqS6XQ.png' },
+  { id: 'copper', label: 'Kupfertaler', short: 'KT', value: 1, icon: 'https://i.imgur.com/j2khSBE.png' }
+];
+
+const CHARACTER_INVENTORY_EQUIPMENT_QUIZ_QUESTIONS = [
+  'Welchem Stand oder welcher sozialen Schicht entstammt die Figur?',
+  'Welche Rolle, Arbeit oder Berufung prägt den Alltag der Figur?',
+  'Wie regelmäßig verdient die Figur Geld und wodurch?',
+  'Wie oft reist die Figur und über welche Strecken?',
+  'Wie kampferfahren ist die Figur und welche Waffen passen glaubwürdig?',
+  'Welchen Schutz braucht oder besitzt die Figur im Alltag?',
+  'Besitzt die Figur ein Reittier, Lasttier, Fahrzeug oder besondere Begleiter?',
+  'Welche Werkzeuge, Vorräte oder Verbrauchsgüter braucht sie regelmäßig?',
+  'Welche kulturellen, regionalen oder religiösen Gegenstände wären plausibel?',
+  'Gibt es Erbstücke, Schulden, Mäzene, militärische Ausrüstung oder besondere Privilegien?'
+];
+
+function normalizeCharacterInventoryText(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+function normalizeCharacterInventoryCategoryId(value) {
+  const normalized = normalizeCharacterInventoryText(value);
+  if (['weapon', 'weapons', 'waffe', 'waffen'].includes(normalized)) return 'weapon';
+  if (['armor', 'armour', 'ruestung', 'rustung', 'ruestungen', 'rustungen', 'schutz'].includes(normalized)) return 'armor';
+  if (['documents', 'document', 'dokument', 'dokumente', 'urkunde', 'urkunden', 'brief', 'briefe', 'schriftrolle', 'schriftrollen'].includes(normalized)) return 'documents';
+  if (['potions', 'potion', 'trinktur', 'trinkturen', 'tinktur', 'tinkturen', 'trank', 'traenke', 'tranke', 'elixier', 'elixiere', 'alchemie'].includes(normalized)) return 'potions';
+  if (['equipment', 'ausruestung', 'ausrustung', 'werkzeug', 'werkzeuge', 'verbrauchsgut', 'vorrat'].includes(normalized)) return 'equipment';
+  if (['money', 'geld', 'muenzen', 'munzen', 'waehrung', 'wahrung', 'geldbeutel', 'taler', 'pet', 'haustier', 'haustiere', 'tier', 'tiere', 'horse', 'pferd', 'pferde', 'reitpferd', 'reittier', 'ross', 'pony'].includes(normalized)) return 'other';
+  if (['all', 'alle'].includes(normalized)) return 'weapon';
+  return 'other';
+}
+
+function normalizeCharacterInventoryCategories(categories = []) {
+  const byId = new Map(CHARACTER_INVENTORY_DEFAULT_CATEGORIES.map(category => [category.id, { ...category }]));
+  (Array.isArray(categories) ? categories : []).forEach(category => {
+    const rawId = normalizeCharacterInventoryText(category?.id || category?.label);
+    if (rawId === 'all' || rawId === 'alle') return;
+    const id = normalizeCharacterInventoryCategoryId(category?.id || category?.label);
+    const defaults = byId.get(id) || CHARACTER_INVENTORY_DEFAULT_CATEGORIES.find(item => item.id === id);
+    if (!defaults) return;
+    byId.set(id, {
+      ...defaults,
+      label: String(category?.label || defaults.label).trim() || defaults.label,
+      icon: defaults.icon
+    });
+  });
+  return CHARACTER_INVENTORY_DEFAULT_CATEGORIES.map(category => byId.get(category.id) || category);
+}
+
 function sanitizeCharacterInventoryRows(rows = [], fallback = [], maxRows = 40) {
   const source = Array.isArray(rows) ? rows : fallback;
   return source
@@ -44,11 +109,79 @@ function sanitizeCharacterInventoryAttributes(items = [], fallback = []) {
     .slice(0, 8);
 }
 
+function parseCharacterInventoryInt(value, fallback = 0) {
+  if (typeof value === 'number') return Number.isFinite(value) ? Math.max(0, Math.floor(value)) : fallback;
+  const normalized = String(value ?? '').trim().replace(/\./g, '').replace(',', '.');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? Math.max(0, Math.floor(number)) : fallback;
+}
+
+function splitCharacterInventoryCopper(totalCopper = 0) {
+  let rest = parseCharacterInventoryInt(totalCopper);
+  const gold = Math.floor(rest / 1000);
+  rest %= 1000;
+  const silver = Math.floor(rest / 100);
+  const copper = rest % 100;
+  return {
+    gold,
+    silver,
+    copper,
+    totalCopper: gold * 1000 + silver * 100 + copper
+  };
+}
+
+function getCharacterInventoryMoneyTotal(money = {}) {
+  if (!money || typeof money !== 'object') return 0;
+  return CHARACTER_INVENTORY_CURRENCIES.reduce((sum, currency) => (
+    sum + parseCharacterInventoryInt(money[currency.id]) * currency.value
+  ), 0);
+}
+
+function parseCharacterInventoryMoneyText(text = '') {
+  const source = String(text || '').toLowerCase();
+  const readUnit = units => {
+    const pattern = new RegExp(`(\\d[\\d\\.,]*)\\s*(?:${units.join('|')})`, 'i');
+    const match = source.match(pattern);
+    return match ? parseCharacterInventoryInt(match[1]) : 0;
+  };
+  const gold = readUnit(['goldtaler', 'gold', 'gt', 'gm']);
+  const silver = readUnit(['silbertaler', 'silber', 'st', 'sm']);
+  const copper = readUnit(['kupfertaler', 'kupfer', 'kt', 'km']);
+  if (gold || silver || copper) return splitCharacterInventoryCopper(gold * 1000 + silver * 100 + copper);
+  return splitCharacterInventoryCopper(0);
+}
+
+function sanitizeCharacterInventoryMoney(value = {}) {
+  if (typeof value === 'string') return parseCharacterInventoryMoneyText(value);
+  if (!value || typeof value !== 'object') return splitCharacterInventoryCopper(0);
+  const total = value.totalCopper != null ? parseCharacterInventoryInt(value.totalCopper) : getCharacterInventoryMoneyTotal(value);
+  return splitCharacterInventoryCopper(total);
+}
+
+function formatCharacterInventoryMoney(value = {}) {
+  const money = sanitizeCharacterInventoryMoney(value);
+  return `${money.gold} Gold, ${money.silver} Silber, ${money.copper} Kupfer`;
+}
+
+function sanitizeCharacterInventoryEquipmentQuiz(data = {}) {
+  const source = data && typeof data === 'object' ? data : {};
+  const questions = CHARACTER_INVENTORY_EQUIPMENT_QUIZ_QUESTIONS;
+  const answers = Array.isArray(source.answers) ? source.answers : [];
+  return {
+    open: !!source.open,
+    step: Math.max(0, Math.min(questions.length - 1, parseCharacterInventoryInt(source.step, 0))),
+    answers: questions.map((_, index) => String(answers[index] || '').trim()).slice(0, questions.length),
+    resultText: String(source.resultText || '').trim(),
+    status: String(source.status || '').trim(),
+    updatedAt: String(source.updatedAt || '').trim()
+  };
+}
+
 function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('item', index),
-      category: String(item?.category || 'equipment').trim(),
+      category: normalizeCharacterInventoryCategoryId(item?.category || item?.type || 'equipment'),
       icon: String(item?.icon || '').trim(),
       image: String(item?.image || '').trim(),
       imageFormat: sanitizeCharacterInventoryImageSettings({
@@ -109,7 +242,7 @@ function sanitizeCharacterInventoryCompanions(items = []) {
         fit: item?.imageFit || 'cover',
         position: item?.imagePosition || 'top'
       }).position,
-      name: String(item?.name || `Gefaehrte ${index + 1}`).trim(),
+      name: String(item?.name || `Gefährte ${index + 1}`).trim(),
       species: String(item?.species || '').trim(),
       role: String(item?.role || '').trim(),
       status: String(item?.status || 'Gesund').trim(),
@@ -137,16 +270,24 @@ function sanitizeCharacterInventoryCompanions(items = []) {
 function sanitizeCharacterInventoryData(data = {}) {
   const categories = Array.isArray(data.categories) && data.categories.length
     ? data.categories
-    : [
-        { id: 'all', label: 'Alle', icon: '*' },
-        { id: 'weapon', label: 'Waffen', icon: 'X' },
-        { id: 'armor', label: 'Ruestung', icon: '#' },
-        { id: 'equipment', label: 'Ausruestung', icon: '+' },
-        { id: 'other', label: 'Sonstiges', icon: '?' }
-      ];
+    : CHARACTER_INVENTORY_DEFAULT_CATEGORIES;
+  const moneyState = sanitizeCharacterInventoryMoney(data.moneyState || data.money);
+  const moneyLabel = formatCharacterInventoryMoney(moneyState);
+  const infoRows = sanitizeCharacterInventoryRows(data.infoRows, [
+    { icon: '*', label: 'Status', value: String(data.status || 'Gesund').trim() },
+    { icon: '*', label: 'TP / Zustand', value: String(data.hitpoints || '48 / 52 TP').trim() },
+    { icon: '*', label: 'Geld', value: moneyLabel },
+    { icon: '*', label: 'Tragkapazität', value: `${String(data.carryLabel || 'Traglast').trim()} ${String(data.carryValue || '78,4 / 120 kg').trim()}`.trim() },
+    { icon: '*', label: 'Volk', value: 'Mensch' },
+    { icon: '*', label: 'Hintergrund', value: 'Noch festlegen' },
+    { icon: '*', label: 'Aufenthalt', value: 'Noch festlegen' },
+    { icon: '*', label: 'Ausrichtung', value: 'Neutral Gut' }
+  ], 8);
+  const moneyInfoRow = infoRows.find(row => normalizeCharacterInventoryText(row.label) === 'geld');
+  if (moneyInfoRow) moneyInfoRow.value = moneyLabel;
   return {
     title: String(data.title || 'Charakter-Inventar').trim(),
-    subtitle: String(data.subtitle || 'Ausrustung, Gegenstaende und Gefaehrten verwalten').trim(),
+    subtitle: String(data.subtitle || 'Ausrüstung, Gegenstände und Gefährten verwalten').trim(),
     portrait: String(data.portrait || '').trim(),
     portraitFormat: sanitizeCharacterInventoryImageSettings({
       format: data.portraitFormat || 'portrait',
@@ -169,24 +310,13 @@ function sanitizeCharacterInventoryData(data = {}) {
     status: String(data.status || 'Gesund').trim(),
     hitpoints: String(data.hitpoints || '48 / 52 TP').trim(),
     healthColor: String(data.healthColor || '#5c7f20').trim(),
-    money: String(data.money || '1.245 GM').trim(),
+    money: moneyLabel,
+    moneyState,
+    moneyNotice: String(data.moneyNotice || '').trim(),
     carryLabel: String(data.carryLabel || 'Traglast').trim(),
     carryValue: String(data.carryValue || '78,4 / 120 kg').trim(),
-    categories: categories.map((category, index) => ({
-      id: String(category?.id || `cat-${index}`).trim(),
-      label: String(category?.label || `Kategorie ${index + 1}`).trim(),
-      icon: String(category?.icon || '*').trim()
-    })).filter(category => category.id && category.label).slice(0, 12),
-    infoRows: sanitizeCharacterInventoryRows(data.infoRows, [
-      { icon: '*', label: 'Status', value: String(data.status || 'Gesund').trim() },
-      { icon: '*', label: 'TP / Zustand', value: String(data.hitpoints || '48 / 52 TP').trim() },
-      { icon: '*', label: 'Geld', value: String(data.money || '1.245 GM').trim() },
-      { icon: '*', label: 'Tragkapazitaet', value: `${String(data.carryLabel || 'Traglast').trim()} ${String(data.carryValue || '78,4 / 120 kg').trim()}`.trim() },
-      { icon: '*', label: 'Volk', value: 'Mensch' },
-      { icon: '*', label: 'Hintergrund', value: 'Noch festlegen' },
-      { icon: '*', label: 'Aufenthalt', value: 'Noch festlegen' },
-      { icon: '*', label: 'Ausrichtung', value: 'Neutral Gut' }
-    ], 8),
+    categories: normalizeCharacterInventoryCategories(categories),
+    infoRows,
     attributes: sanitizeCharacterInventoryAttributes(data.attributes, [
       { label: 'StA', value: 8 },
       { label: 'Ges', value: 6 },
@@ -196,7 +326,8 @@ function sanitizeCharacterInventoryData(data = {}) {
       { label: 'Cha', value: 5 }
     ]),
     items: sanitizeCharacterInventoryItems(data.items),
-    companions: sanitizeCharacterInventoryCompanions(data.companions)
+    companions: sanitizeCharacterInventoryCompanions(data.companions),
+    equipmentQuiz: sanitizeCharacterInventoryEquipmentQuiz(data.equipmentQuiz)
   };
 }
 
@@ -207,12 +338,13 @@ function createDefaultCharacterInventoryPage(index = 0) {
     characterInventory: sanitizeCharacterInventoryData({
       items: [
         { category: 'weapon', icon: '*', name: 'Langschwert +1', type: 'Waffe (Haupt)', description: 'Ein ausgewogenes Schwert aus gehaertetem Stahl.', weight: '1,5 kg', quantity: '1' },
-        { category: 'armor', icon: '*', name: 'Plattenruestung', type: 'Ruestung (Koerper)', description: 'Schwere Ruestung aus Stahlplatten.', weight: '25,0 kg', quantity: '1' },
-        { category: 'equipment', icon: '*', name: 'Heiltrank', type: 'Verbrauchsgut', description: 'Stellt Trefferpunkte wieder her.', weight: '0,3 kg', quantity: '3' }
+        { category: 'armor', icon: '*', name: 'Plattenrüstung', type: 'Rüstung (Körper)', description: 'Schwere Rüstung aus Stahlplatten.', weight: '25,0 kg', quantity: '1' },
+        { category: 'potions', icon: '*', name: 'Heiltrank', type: 'Trinktur', description: 'Stellt Trefferpunkte wieder her.', weight: '0,3 kg', quantity: '3' },
+        { category: 'documents', icon: '*', name: 'Reisebrief', type: 'Dokument', description: 'Ausweis, Empfehlung oder Passierschein.', weight: '0,1 kg', quantity: '1' }
       ],
       companions: [
         { name: 'Ardan', species: 'Kriegspferd', role: 'Reittier', summary: 'Treuer Begleiter auf langen Wegen.', status: 'Gesund' },
-        { name: 'Rask', species: 'Wachhund', role: 'Gefaehrte', summary: 'Wachsam und spurensicher.', status: 'Wachsam' }
+        { name: 'Rask', species: 'Wachhund', role: 'Gefährte', summary: 'Wachsam und spurensicher.', status: 'Wachsam' }
       ]
     }),
     stats: [],
@@ -353,7 +485,7 @@ function buildCharacterInventoryCompanionEditor(companion, index) {
     <section class="ci-editor-card" data-ci-companion-row>
       <input type="hidden" class="me-ci-companion-id" value="${escapeHtml(companion.id)}">
       <div class="ci-editor-card-head">
-        <strong>Gefaehrte ${index + 1}</strong>
+        <strong>Gefährte ${index + 1}</strong>
         <div class="ci-editor-card-actions">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-companion" data-ci-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-companion" data-ci-direction="1">Runter</button>
@@ -373,9 +505,9 @@ function buildCharacterInventoryCompanionEditor(companion, index) {
         ${buildCharacterInventoryTextarea('Profilbeschreibung', 'me-ci-companion-description', companion.description)}
       </div>
       <div class="ci-nested-editor">
-        <div class="ci-editor-section-head"><h5>Gefaehrten-Infobox</h5><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion-row">+ Zeile</button></div>
+        <div class="ci-editor-section-head"><h5>Gefährten-Infobox</h5><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion-row">+ Zeile</button></div>
         <div class="ci-editor-list">${buildCharacterInventoryRowEditor(companion.infoRows, 'companion-info')}</div>
-        <div class="ci-editor-section-head"><h5>Gefaehrten-Attribute</h5><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion-attribute">+ Attribut</button></div>
+        <div class="ci-editor-section-head"><h5>Gefährten-Attribute</h5><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion-attribute">+ Attribut</button></div>
         <div class="ci-editor-list">${buildCharacterInventoryAttributeEditor(companion.attributes, 'companion')}</div>
       </div>
     </section>`;
@@ -391,11 +523,12 @@ function buildCharacterInventoryModuleEditorFields(page) {
   return `
     <div class="module-page-type-block${inferModulePageType(page) === 'character-inventory' ? ' visible' : ''}" data-page-type="character-inventory">
       <div class="ci-full-editor" data-ci-editor>
+        <input type="hidden" class="me-ci-equipment-quiz" value="${escapeHtml(JSON.stringify(data.equipmentQuiz))}">
         <div class="ci-editor-pane">
           <div class="module-editor-grid">
             <div class="module-editor-field wide">
               <div class="module-editor-kicker">Charakter-Inventar</div>
-              <div class="module-editor-help">Bearbeite Charakterdaten, Inventar, Detailprofile und Gefaehrten. Rechts siehst du eine Live-Vorschau.</div>
+              <div class="module-editor-help">Bearbeite Charakterdaten, Inventar, Detailprofile und Gefährten. Rechts siehst du eine Live-Vorschau.</div>
             </div>
           </div>
           <section class="ci-editor-section">
@@ -433,7 +566,7 @@ function buildCharacterInventoryModuleEditorFields(page) {
             <div class="ci-editor-list">${data.items.map((item, index) => buildCharacterInventoryItemEditor(item, index, data.categories)).join('')}</div>
           </section>
           <section class="ci-editor-section">
-            <div class="ci-editor-section-head"><h4>Gefaehrten</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion">+ Gefaehrte</button></div>
+            <div class="ci-editor-section-head"><h4>Gefährten</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-companion">+ Gefährte</button></div>
             <div class="ci-editor-list">${data.companions.map((companion, index) => buildCharacterInventoryCompanionEditor(companion, index)).join('')}</div>
           </section>
         </div>
@@ -461,9 +594,18 @@ function collectCharacterInventoryRows(card, selector, mapper) {
   return Array.from(card.querySelectorAll(selector)).map(mapper);
 }
 
+function collectCharacterInventoryJsonField(card, selector, fallback = {}) {
+  try {
+    return JSON.parse(card.querySelector(selector)?.value || '');
+  } catch {
+    return fallback;
+  }
+}
+
 function collectCharacterInventoryModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="character-inventory"]') || card;
   page.characterInventoryPage = true;
+  const moneyValue = getTrimmedFormValue(block, '.me-ci-money');
   page.characterInventory = sanitizeCharacterInventoryData({
     title: getTrimmedFormValue(block, '.me-ci-title'),
     subtitle: getTrimmedFormValue(block, '.me-ci-subtitle'),
@@ -477,7 +619,9 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
     status: getTrimmedFormValue(block, '.me-ci-status'),
     hitpoints: getTrimmedFormValue(block, '.me-ci-hitpoints'),
     healthColor: getTrimmedFormValue(block, '.me-ci-healthColor'),
-    money: getTrimmedFormValue(block, '.me-ci-money'),
+    money: moneyValue,
+    moneyState: sanitizeCharacterInventoryMoney(moneyValue),
+    equipmentQuiz: collectCharacterInventoryJsonField(block, '.me-ci-equipment-quiz', {}),
     carryLabel: getTrimmedFormValue(block, '.me-ci-carryLabel'),
     carryValue: getTrimmedFormValue(block, '.me-ci-carryValue'),
     infoRows: collectCharacterInventoryRows(block, '[data-ci-row-kind="info"]', row => ({
@@ -556,7 +700,7 @@ function buildInlineCharacterInventoryEditor(page) {
         <div class="inline-edit-field"><span class="inline-edit-label">Name</span><input class="inline-edit-input" data-inline-action="update-ci-field" data-ci-field="name" value="${escapeHtml(data.name)}"></div>
         <div class="inline-edit-field wide"><span class="inline-edit-label">Portrait</span><input class="inline-edit-input" data-inline-action="update-ci-field" data-ci-field="portrait" value="${escapeHtml(data.portrait)}"></div>
       </div>
-      <div class="inline-placeholder-note">Items, Gefaehrten, Attribute und Detailprofile bearbeitest du im grossen Modul-Editor mit Live-Vorschau.</div>
+      <div class="inline-placeholder-note">Items, Gefährten, Attribute und Detailprofile bearbeitest du im großen Modul-Editor mit Live-Vorschau.</div>
     </div>`;
 }
 
@@ -763,7 +907,7 @@ function duplicateCharacterInventoryItem(button) {
 
 function addCharacterInventoryCompanion(button) {
   rerenderCharacterInventoryEditor(button, data => {
-    data.companions.push({ name: 'Neuer Gefaehrte', species: '', role: 'Begleiter', status: 'Gesund' });
+    data.companions.push({ name: 'Neuer Gefährte', species: '', role: 'Begleiter', status: 'Gesund' });
   });
 }
 
@@ -795,7 +939,7 @@ function duplicateCharacterInventoryCompanion(button) {
     if (!companion) return;
     const clone = JSON.parse(JSON.stringify(companion));
     clone.id = '';
-    clone.name = `${clone.name || 'Gefaehrte'} Kopie`;
+    clone.name = `${clone.name || 'Gefährte'} Kopie`;
     data.companions.splice(index + 1, 0, clone);
   });
 }

@@ -122,7 +122,7 @@ function restoreInlinePreviewRuntimeState(state, root = document) {
     if (!page || !tab) return;
     page.querySelectorAll('[data-ci-action="filter-items"]').forEach(button => button.classList.toggle('active', button === tab));
     page.querySelectorAll('.ci-item-row').forEach(row => {
-      row.hidden = saved.category !== 'all' && row.dataset.ciCategory !== saved.category;
+      row.hidden = row.dataset.ciCategory !== saved.category;
     });
   });
 }

@@ -226,8 +226,11 @@
 .ci-tabs {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(139,105,20,0.24);
-  margin-bottom: 0.75rem;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+  padding: 0.45rem;
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,250,232,0.26);
 }
 
 .ci-tabs button,
@@ -240,8 +243,12 @@
 }
 
 .ci-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
   min-height: 2.7rem;
-  padding: 0.45rem 1rem;
+  padding: 0.48rem 0.9rem;
+  border-radius: 0;
   color: var(--gold-dark);
   font-family: 'Cinzel', serif;
   font-size: 0.62rem;
@@ -251,12 +258,28 @@
 }
 
 .ci-tabs button.active {
-  background: #2c1a08;
+  border-color: rgba(44,26,8,0.8);
+  background: linear-gradient(135deg, #2c1a08, #5c3a12);
   color: var(--gold-light);
+  box-shadow: inset 0 -2px 0 rgba(221,184,106,0.55);
+}
+
+.ci-tabs span,
+.ci-tabs img {
+  display: inline-grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.72rem;
+  line-height: 1;
 }
 
 .ci-tabs span {
-  margin-right: 0.45rem;
+  border: 1px solid currentColor;
+}
+
+.ci-tabs img {
+  object-fit: contain;
 }
 
 .ci-item-table {
@@ -290,8 +313,9 @@
 }
 
 .ci-item-list {
-  max-height: 38rem;
-  overflow: auto;
+  max-height: min(26rem, 42vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .ci-item-row {
@@ -302,8 +326,17 @@
   font: inherit;
 }
 
+.character-inventory-page .ci-item-row[hidden] {
+  display: none !important;
+}
+
 .ci-item-row:hover {
-  background: rgba(139,105,20,0.08);
+  background: rgba(139,105,20,0.1);
+}
+
+.ci-item-row:focus-visible {
+  outline: 2px solid rgba(139,105,20,0.62);
+  outline-offset: -2px;
 }
 
 .ci-item-name {
@@ -317,6 +350,181 @@
   width: 2.3rem;
   height: 2.3rem;
   border: 1px solid rgba(139,105,20,0.22);
+}
+
+.ci-money-panel,
+.ci-equipment-quiz {
+  margin-top: 0.85rem;
+  border: 1px solid rgba(139,105,20,0.24);
+  background: rgba(255,250,232,0.34);
+  padding: 0.75rem;
+}
+
+.ci-money-head,
+.ci-equipment-quiz-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.ci-money-head h3,
+.ci-equipment-quiz-head h3 {
+  margin: 0;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-money-head p,
+.ci-equipment-quiz-head p,
+.ci-money-status,
+.ci-equipment-quiz-status {
+  margin: 0.18rem 0 0;
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.ci-money-head > strong {
+  white-space: nowrap;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.ci-money-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+}
+
+.ci-money-control {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 0.15rem 0.55rem;
+  align-items: center;
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.18);
+  padding: 0.45rem;
+}
+
+.ci-money-control img {
+  grid-row: span 2;
+  width: 2.35rem;
+  height: 2.35rem;
+  object-fit: contain;
+}
+
+.ci-money-control span,
+.ci-money-transaction span,
+.ci-equipment-question span {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-money-control input,
+.ci-money-transaction input,
+.ci-equipment-question textarea {
+  width: 100%;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,250,232,0.72);
+  color: var(--ink);
+  font: inherit;
+}
+
+.ci-money-control input,
+.ci-money-transaction input {
+  min-width: 0;
+  padding: 0.34rem 0.45rem;
+}
+
+.ci-money-transaction {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: end;
+  margin-top: 0.7rem;
+}
+
+.ci-money-transaction-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.ci-money-transaction label {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.ci-money-actions,
+.ci-equipment-quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ci-money-actions button,
+.ci-equipment-quiz-head button,
+.ci-equipment-quiz-actions button {
+  min-height: 2rem;
+  border: 1px solid rgba(139,105,20,0.34);
+  background: rgba(255,250,232,0.7);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.09em;
+  padding: 0.38rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.ci-money-actions button:last-child,
+.ci-equipment-quiz-actions button:last-child {
+  border-color: rgba(44,26,8,0.7);
+  background: #2c1a08;
+  color: var(--gold-light);
+}
+
+.ci-equipment-quiz-body {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.ci-equipment-question {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.ci-equipment-question strong {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.03em;
+}
+
+.ci-equipment-question textarea {
+  min-height: 5.8rem;
+  padding: 0.55rem;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.ci-equipment-quiz-result {
+  max-height: 14rem;
+  overflow-y: auto;
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.16);
+  padding: 0.65rem;
+  line-height: 1.5;
 }
 
 .ci-companion-list {
@@ -388,6 +596,10 @@
   box-shadow: 0 16px 60px rgba(0,0,0,0.35);
 }
 
+.ci-profile-modal-editing {
+  grid-template-columns: minmax(230px, 0.72fr) minmax(320px, 1.05fr) minmax(290px, 0.9fr);
+}
+
 .ci-modal-close {
   position: absolute;
   top: 0.5rem;
@@ -396,6 +608,37 @@
   background: rgba(255,255,255,0.35);
   color: var(--ink);
   cursor: pointer;
+}
+
+.ci-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.ci-modal-actions.floating {
+  position: absolute;
+  top: 0.5rem;
+  right: 2.6rem;
+}
+
+.ci-modal-actions button,
+.ci-modal-edit-head button,
+.ci-modal-edit-row button {
+  border: 1px solid rgba(139,105,20,0.34);
+  background: rgba(255,250,232,0.62);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-modal-actions button {
+  min-height: 2rem;
+  padding: 0.42rem 0.72rem;
 }
 
 .ci-profile-image {
@@ -407,6 +650,78 @@
 .ci-profile-main h3 {
   margin: 0 0 0.6rem;
   font-size: 1.35rem;
+}
+
+.ci-modal-edit-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.ci-modal-edit-form h3 {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.04em;
+}
+
+.ci-modal-edit-form label {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.ci-modal-edit-form label span,
+.ci-modal-edit-head strong {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-modal-edit-form input,
+.ci-modal-edit-form select,
+.ci-modal-edit-form textarea {
+  width: 100%;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,250,232,0.72);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+}
+
+.ci-modal-edit-form textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.ci-modal-edit-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.ci-modal-edit-list {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.ci-modal-edit-row {
+  display: grid;
+  grid-template-columns: 0.35fr 0.8fr 1fr auto;
+  gap: 0.35rem;
+}
+
+.ci-modal-edit-row.compact {
+  grid-template-columns: 1fr 0.35fr auto;
+}
+
+.ci-modal-live-preview {
+  min-width: 0;
+  border-left: 1px solid rgba(139,105,20,0.18);
+  padding-left: 0.85rem;
 }
 
 .ci-profile-main p,
@@ -605,6 +920,11 @@
   .ci-layout,
   .ci-profile-modal,
   .ci-full-editor {
+    grid-template-columns: 1fr;
+  }
+  .ci-money-grid,
+  .ci-money-transaction,
+  .ci-money-transaction-fields {
     grid-template-columns: 1fr;
   }
   .ci-editor-splitter {

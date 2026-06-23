@@ -260,7 +260,7 @@ function buildTournamentLeagueNoteList(items = [], className = '') {
         ${item.text ? `<span>${sanitizeContentHtml(item.text)}</span>` : ''}
       </div>
       ${item.meta ? `<em>${escapeHtml(item.meta)}</em>` : ''}
-    </div>`, 'wanted');
+    </div>`).join('');
 }
 
 function buildTournamentLeaguePage(page, entry, pageIndex, total) {

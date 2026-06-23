@@ -68,8 +68,10 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'add-bounty-row',
   'remove-bounty-row',
   'add-goods-row',
+  'import-goods-item',
   'remove-goods-row',
   'add-trade-row',
+  'import-trade-item',
   'remove-trade-row',
   'stamp-trade-attributes',
   'apply-trade-attributes-stamp',
@@ -412,12 +414,20 @@ function handleModuleEditorActionClick(event) {
     addModuleGoodsRow(trigger, trigger.dataset.goodsList || '');
     return;
   }
+  if (action === 'import-goods-item') {
+    importModuleGoodsItem(trigger);
+    return;
+  }
   if (action === 'remove-goods-row') {
     removeModuleGoodsRow(trigger);
     return;
   }
   if (action === 'add-trade-row') {
     addModuleTradeCatalogRow(trigger, trigger.dataset.tradeList || '');
+    return;
+  }
+  if (action === 'import-trade-item') {
+    importModuleTradeCatalogItem(trigger);
     return;
   }
   if (action === 'remove-trade-row') {

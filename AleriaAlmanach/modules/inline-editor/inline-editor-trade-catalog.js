@@ -67,6 +67,23 @@ function addInlineTradeCatalogRow(listName, index = 0) {
   renderPage(currentPage, 0);
 }
 
+function importInlineTradeCatalogItem() {
+  if (typeof openItemDbPicker !== 'function') return;
+  const page = getInlineDraftPage();
+  if (!page) return;
+  openItemDbPicker({
+    title: 'Handelsgut aus Itemdatenbank laden',
+    onSelect: item => {
+      const data = getInlineTradeCatalogDataForEdit(page);
+      const list = Array.isArray(data.items) ? [...data.items] : [];
+      list.push(createTradeCatalogItemFromItemDbItem(item, data.categories));
+      data.items = list;
+      page.tradeCatalog = sanitizeTradeCatalogData(data);
+      renderPage(currentPage, 0);
+    }
+  });
+}
+
 function removeInlineTradeCatalogRow(listName, index, featureIndex = 0, attributeIndex = 0) {
   const page = getInlineDraftPage();
   if (!page || !listName) return;
@@ -137,11 +154,17 @@ function buildInlineTradeTextarea(label, field, value) {
 }
 
 function buildInlineTradeListSection(listName, label, rowsHtml, addLabel) {
+  const importButton = listName === 'items'
+    ? '<button class="module-editor-mini-btn" type="button" data-inline-action="import-trade-item">Item laden</button>'
+    : '';
   return `
     <div class="inline-edit-field wide">
       <div class="inline-edit-head">
         <span class="inline-edit-label">${escapeHtml(label)}</span>
-        <button class="module-editor-mini-btn" type="button" data-inline-action="add-trade-list-row" data-trade-list="${escapeHtml(listName)}">+ ${escapeHtml(addLabel)}</button>
+        <div class="module-editor-inline">
+          ${importButton}
+          <button class="module-editor-mini-btn" type="button" data-inline-action="add-trade-list-row" data-trade-list="${escapeHtml(listName)}">+ ${escapeHtml(addLabel)}</button>
+        </div>
       </div>
       <div class="trade-editor-list">${rowsHtml}</div>
     </div>`;

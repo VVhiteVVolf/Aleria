@@ -116,8 +116,9 @@ function itemDbSaveOverride(canonicalKey, updates = {}) {
   const key = String(canonicalKey || '').trim();
   if (!key) return;
   const overrides = itemDbReadOverrides();
+  const existing = overrides[key] || {};
   overrides[key] = {
-    ...(overrides[key] || {}),
+    ...existing,
     title: String(updates.title || '').trim(),
     category: String(updates.category || ITEM_DB_DEFAULT_CATEGORY).trim(),
     type: String(updates.type || '').trim(),
@@ -127,6 +128,13 @@ function itemDbSaveOverride(canonicalKey, updates = {}) {
     currency: String(updates.currency || '').trim(),
     image: String(updates.image || '').trim(),
     tags: itemDbNormalizeTags(updates.tags),
+    attributes: Object.prototype.hasOwnProperty.call(updates, 'attributes')
+      ? itemDbNormalizeAttributes(updates.attributes)
+      : (existing.attributes || []),
+    hiddenMeta: {
+      ...(existing.hiddenMeta || {}),
+      ...(updates.hiddenMeta && typeof updates.hiddenMeta === 'object' ? updates.hiddenMeta : {})
+    },
     updatedAt: Date.now()
   };
   itemDbWriteOverrides(overrides);

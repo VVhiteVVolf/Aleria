@@ -14,6 +14,15 @@ function buildLandingImage(src, alt, className, fallback = '*') {
   return `<div class="${className} landing-placeholder">${escapeHtml(fallback || '*')}</div>`;
 }
 
+function buildLandingIcon(value, alt, className, fallback = '*') {
+  const raw = String(value || '').trim();
+  const image = sanitizeImageSrc(raw);
+  if (image) {
+    return `<span class="${className} landing-linked-icon"><img src="${image}" alt="${escapeHtml(alt || '')}" loading="lazy" decoding="async"></span>`;
+  }
+  return `<span class="${className}">${escapeHtml(raw || fallback)}</span>`;
+}
+
 function getLandingInternalTarget(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
@@ -34,13 +43,13 @@ function buildLandingMembers(data) {
         ${data.members.map(member => `
           <article class="landing-member-card">
             <div class="landing-member-media">
-              ${buildLandingImage(member.portrait, member.name, 'landing-member-portrait', member.badgeIcon)}
-              <span class="landing-member-badge">${escapeHtml(member.badgeIcon || '*')}</span>
+              ${buildLandingImage(member.portrait, member.name, 'landing-member-portrait', getInitialChar(member.name))}
+              ${buildLandingIcon(member.badgeIcon, `${member.name} Icon`, 'landing-member-badge')}
             </div>
             <div class="landing-member-body">
               <strong>${escapeHtml(member.name)}</strong>
               <em>${escapeHtml(member.role)}</em>
-              <span>${escapeHtml(member.level)}</span>
+              <span>${escapeHtml(member.className)}</span>
               <small style="--landing-status:${escapeHtml(member.statusColor || '#2c8a3d')}">${escapeHtml(member.status)}</small>
             </div>
           </article>`).join('')}
@@ -51,10 +60,10 @@ function buildLandingMembers(data) {
 function buildLandingQuestFilters() {
   return `
     <div class="landing-quest-filters">
-      <button type="button" class="active" data-landing-action="filter-quests" data-quest-filter="all">Alle</button>
-      <button type="button" data-landing-action="filter-quests" data-quest-filter="active">Aktiv</button>
-      <button type="button" data-landing-action="filter-quests" data-quest-filter="done">Abgeschlossen</button>
-      <button type="button" data-landing-action="filter-quests" data-quest-filter="failed">Fehlgeschlagen</button>
+      <button type="button" class="active" data-landing-action="filter-quests" data-quest-filter="all" aria-pressed="true">Alle</button>
+      <button type="button" data-landing-action="filter-quests" data-quest-filter="active" aria-pressed="false">Aktiv</button>
+      <button type="button" data-landing-action="filter-quests" data-quest-filter="done" aria-pressed="false">Abgeschlossen</button>
+      <button type="button" data-landing-action="filter-quests" data-quest-filter="failed" aria-pressed="false">Fehlgeschlagen</button>
     </div>`;
 }
 
@@ -100,12 +109,15 @@ function buildLandingNotes(data) {
       <div class="landing-note-list" data-member-options="${escapeHtml(memberOptions)}">
         ${data.notes.map(note => `
           <article class="landing-note-card" data-note-id="${escapeHtml(note.id)}">
-            <strong>${escapeHtml(note.title)}</strong>
-            <p>${landingParagraph(note.text)}</p>
-            <small>${escapeHtml(note.authorName || 'Unbekannt')} - ${escapeHtml(formatLandingDate(note.createdAt))}</small>
-            <div class="landing-note-actions">
-              <button type="button" data-landing-action="edit-note" data-note-id="${escapeHtml(note.id)}">Bearbeiten</button>
-              <button type="button" class="danger" data-landing-action="delete-note" data-note-id="${escapeHtml(note.id)}">Loeschen</button>
+            ${buildLandingIcon(note.icon, note.title, 'landing-note-icon')}
+            <div class="landing-note-main">
+              <strong>${escapeHtml(note.title)}</strong>
+              <p>${landingParagraph(note.text)}</p>
+              <small>${escapeHtml(note.authorName || 'Unbekannt')} - ${escapeHtml(formatLandingDate(note.createdAt))}</small>
+              <div class="landing-note-actions">
+                <button type="button" data-landing-action="edit-note" data-note-id="${escapeHtml(note.id)}">Bearbeiten</button>
+                <button type="button" class="danger" data-landing-action="delete-note" data-note-id="${escapeHtml(note.id)}">Loeschen</button>
+              </div>
             </div>
           </article>`).join('')}
       </div>
@@ -119,7 +131,7 @@ function buildLandingEvents(data) {
       <div class="landing-event-list">
         ${data.events.map(item => `
           <div class="landing-event-row">
-            <span>${escapeHtml(item.icon || '*')}</span>
+            ${buildLandingIcon(item.icon, item.title, 'landing-row-icon')}
             <div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.time)}</small></div>
           </div>`).join('')}
       </div>
@@ -147,7 +159,7 @@ function buildLandingInfo(data) {
       <div class="landing-info-list">
         ${data.info.map(item => `
           <div class="landing-info-row">
-            <span>${escapeHtml(item.icon || '*')}</span>
+            ${buildLandingIcon(item.icon, item.title, 'landing-row-icon')}
             <div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.text)}</small></div>
           </div>`).join('')}
       </div>
@@ -260,10 +272,10 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
         <div class="landing-settings-grid compact">
           ${landingSettingsInput('Name', 'name', item.name)}
           ${landingSettingsInput('Rolle', 'role', item.role)}
-          ${landingSettingsInput('Stufe', 'level', item.level)}
+          ${landingSettingsInput('Klasse', 'className', item.className)}
           ${landingSettingsInput('Status', 'status', item.status)}
           ${landingSettingsInput('Statusfarbe', 'statusColor', item.statusColor || '#2c8a3d')}
-          ${landingSettingsInput('Badge/Icon', 'badgeIcon', item.badgeIcon || '*')}
+          ${landingSettingsInput('Badge/Icon oder Bild-URL', 'badgeIcon', item.badgeIcon || '*')}
           ${landingSettingsInput('Portrait-URL', 'portrait', item.portrait, 'url')}
         </div>
       </section>`;
@@ -282,7 +294,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
             { value: 'failed', label: 'Fehlgeschlagen' }
           ])}
           ${landingSettingsInput('Fortschritt', 'progress', item.progress ?? 0, 'number')}
-          ${landingSettingsInput('Bild/Icon-URL', 'image', item.image, 'url')}
+          ${landingSettingsInput('Icon oder Bild-URL', 'image', item.image, 'url')}
           ${landingSettingsTextarea('Text', 'text', item.text)}
         </div>
       </section>`;
@@ -295,6 +307,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
         <input type="hidden" data-landing-settings-field="createdAt" value="${escapeHtml(item.createdAt || '')}">
         <div class="landing-settings-grid compact">
           ${landingSettingsInput('Titel', 'title', item.title)}
+          ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon)}
           ${landingSettingsInput('Verfasser', 'authorName', item.authorName)}
           ${landingSettingsInput('Verfasser-ID optional', 'authorId', item.authorId)}
           ${landingSettingsTextarea('Text', 'text', item.text)}
@@ -306,7 +319,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
       <section class="landing-settings-row" data-settings-kind="event">
         <div class="landing-settings-row-head"><strong>Ereignis ${index + 1}</strong>${removeButton}</div>
         <div class="landing-settings-grid compact">
-          ${landingSettingsInput('Icon', 'icon', item.icon || '*')}
+          ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
           ${landingSettingsInput('Titel', 'title', item.title)}
           ${landingSettingsInput('Zeit', 'time', item.time)}
         </div>
@@ -316,7 +329,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
     <section class="landing-settings-row" data-settings-kind="info">
       <div class="landing-settings-row-head"><strong>Information ${index + 1}</strong>${removeButton}</div>
       <div class="landing-settings-grid compact">
-        ${landingSettingsInput('Icon', 'icon', item.icon || '*')}
+        ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
         ${landingSettingsInput('Ueberschrift', 'title', item.title)}
         ${landingSettingsInput('Text', 'text', item.text)}
       </div>
@@ -412,7 +425,7 @@ function openLandingEditorDialog(element, kind, item = {}) {
   ].join('');
   body.innerHTML = kind === 'quest' ? `
     <label><span>Titel</span><input data-landing-editor-field="title" value="${escapeHtml(item.title || '')}"></label>
-    <label><span>Bild</span><input data-landing-editor-field="image" value="${escapeHtml(item.image || '')}"></label>
+    <label><span>Icon oder Bild-URL</span><input data-landing-editor-field="image" value="${escapeHtml(item.image || '')}"></label>
     <label><span>Art</span><input data-landing-editor-field="kind" value="${escapeHtml(item.kind || 'Quest')}"></label>
     <label><span>Status</span><select data-landing-editor-field="status">
       <option value="active"${item.status === 'active' ? ' selected' : ''}>Aktiv</option>
@@ -423,6 +436,7 @@ function openLandingEditorDialog(element, kind, item = {}) {
     <label class="wide"><span>Text</span><textarea data-landing-editor-field="text">${escapeHtml(item.text || '')}</textarea></label>`
     : `
     <label><span>Titel</span><input data-landing-editor-field="title" value="${escapeHtml(item.title || '')}"></label>
+    <label><span>Icon oder Bild-URL</span><input data-landing-editor-field="icon" value="${escapeHtml(item.icon || '')}"></label>
     <label><span>Verfasser</span><select data-landing-editor-field="authorName">${authorOptions || `<option value="${escapeHtml(item.authorName || 'Erzaehler')}" selected>${escapeHtml(item.authorName || 'Erzaehler')}</option>`}</select></label>
     <label class="wide"><span>Text</span><textarea data-landing-editor-field="text">${escapeHtml(item.text || '')}</textarea></label>`;
   overlay.classList.add('active');
@@ -473,7 +487,7 @@ function collectLandingSettingsData(root) {
       id: getLandingSettingsValue(row, 'id'),
       name: getLandingSettingsValue(row, 'name'),
       role: getLandingSettingsValue(row, 'role'),
-      level: getLandingSettingsValue(row, 'level'),
+      className: getLandingSettingsValue(row, 'className'),
       status: getLandingSettingsValue(row, 'status'),
       statusColor: getLandingSettingsValue(row, 'statusColor'),
       badgeIcon: getLandingSettingsValue(row, 'badgeIcon'),
@@ -491,6 +505,7 @@ function collectLandingSettingsData(root) {
     notes: collectLandingSettingsRows(root, 'note', row => ({
       id: getLandingSettingsValue(row, 'id'),
       title: getLandingSettingsValue(row, 'title'),
+      icon: getLandingSettingsValue(row, 'icon'),
       authorName: getLandingSettingsValue(row, 'authorName'),
       authorId: getLandingSettingsValue(row, 'authorId'),
       createdAt: getLandingSettingsValue(row, 'createdAt') || new Date().toISOString(),
@@ -515,9 +530,9 @@ function addLandingSettingsRow(button) {
   if (!list) return;
   const index = list.querySelectorAll(`[data-settings-kind="${kind}"]`).length;
   const defaults = {
-    member: { name: 'Neuer Abenteurer', role: '', level: '', status: 'Bereit', statusColor: '#2c8a3d', badgeIcon: '*' },
+    member: { name: 'Neuer Abenteurer', role: '', className: '', status: 'Bereit', statusColor: '#2c8a3d', badgeIcon: '*' },
     quest: { title: 'Neue Quest', kind: 'Quest', status: 'active', progress: 0 },
-    note: { title: 'Neue Notiz', authorName: 'Erzaehler', createdAt: new Date().toISOString() },
+    note: { title: 'Neue Notiz', icon: '', authorName: 'Erzaehler', createdAt: new Date().toISOString() },
     event: { icon: '*', title: 'Neues Ereignis', time: '' },
     info: { icon: '*', title: 'Neue Information', text: '' }
   };
@@ -574,6 +589,7 @@ function saveLandingEditorDialog() {
     const raw = {
       id: itemId,
       title: getLandingEditorField('title'),
+      icon: getLandingEditorField('icon'),
       authorName: getLandingEditorField('authorName'),
       text: getLandingEditorField('text'),
       createdAt: itemId
@@ -599,7 +615,7 @@ function openLandingQuestDialog(element, questId = '') {
 function openLandingNoteDialog(element, noteId = '') {
   const page = getLandingMutablePage(element);
   const data = sanitizeLandingData(page?.landing || {});
-  const note = data.notes.find(item => item.id === noteId) || { id: '', title: '', text: '', authorName: data.members[0]?.name || '', createdAt: new Date().toISOString() };
+  const note = data.notes.find(item => item.id === noteId) || { id: '', title: '', text: '', icon: '', authorName: data.members[0]?.name || '', createdAt: new Date().toISOString() };
   openLandingEditorDialog(element, 'note', note);
 }
 
@@ -624,7 +640,11 @@ document.addEventListener('click', event => {
 
   if (action === 'filter-quests') {
     const filter = trigger.dataset.questFilter || 'all';
-    page.querySelectorAll('[data-landing-action="filter-quests"]').forEach(button => button.classList.toggle('active', button === trigger));
+    page.querySelectorAll('[data-landing-action="filter-quests"]').forEach(button => {
+      const active = button === trigger;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
     page.querySelectorAll('.landing-quest-card').forEach(card => {
       card.hidden = filter !== 'all' && card.dataset.questStatus !== filter;
     });

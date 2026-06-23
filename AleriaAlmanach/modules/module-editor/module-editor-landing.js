@@ -8,12 +8,19 @@ function sanitizeLandingNumber(value, fallback = 0, min = 0, max = 100) {
   return Math.max(min, Math.min(max, Math.round(safe)));
 }
 
+function sanitizeLandingMemberClass(item = {}) {
+  const explicit = String(item.className || '').trim();
+  if (explicit) return explicit;
+  const legacyLevel = String(item.level || '').trim();
+  return /^stufe\b/i.test(legacyLevel) ? String(item.role || '').trim() : legacyLevel;
+}
+
 function sanitizeLandingMembers(items = []) {
   return (Array.isArray(items) ? items : []).map((item, index) => ({
     id: String(item?.id || '').trim() || makeLandingItemId('member', index),
     name: String(item?.name || `Abenteurer ${index + 1}`).trim(),
     role: String(item?.role || '').trim(),
-    level: String(item?.level || '').trim(),
+    className: sanitizeLandingMemberClass(item),
     status: String(item?.status || 'Bereit').trim(),
     statusColor: String(item?.statusColor || '#2c8a3d').trim(),
     portrait: String(item?.portrait || '').trim(),
@@ -38,6 +45,7 @@ function sanitizeLandingNotes(items = []) {
     id: String(item?.id || '').trim() || makeLandingItemId('note', index),
     authorId: String(item?.authorId || '').trim(),
     authorName: String(item?.authorName || '').trim(),
+    icon: String(item?.icon || '').trim(),
     title: String(item?.title || `Notiz ${index + 1}`).trim(),
     text: String(item?.text || '').trim(),
     createdAt: String(item?.createdAt || '').trim() || new Date().toISOString()
@@ -86,7 +94,7 @@ function createDefaultLandingPage(index = 0) {
   const members = Array.from({ length: 8 }, (_, i) => ({
     name: `Abenteurer ${i + 1}`,
     role: i % 2 ? 'Kundschafter' : 'Krieger',
-    level: `Stufe ${i < 4 ? 5 : 4}`,
+    className: i % 2 ? 'Kundschafter' : 'Krieger',
     status: i % 3 === 0 ? 'Erschoepft' : 'Gesund',
     statusColor: i % 3 === 0 ? '#1c7faf' : '#27853c',
     portrait: '',
@@ -152,10 +160,10 @@ function buildLandingMemberRows(members = [], mode = 'module') {
       <div class="trade-editor-grid">
         ${buildLandingInput('Name', 'me-landing-member-name', member.name)}
         ${buildLandingInput('Rolle', 'me-landing-member-role', member.role)}
-        ${buildLandingInput('Stufe', 'me-landing-member-level', member.level)}
+        ${buildLandingInput('Klasse', 'me-landing-member-className', member.className)}
         ${buildLandingInput('Status', 'me-landing-member-status', member.status)}
         ${buildLandingInput('Statusfarbe', 'me-landing-member-statusColor', member.statusColor)}
-        ${buildLandingInput('Badge/Icon', 'me-landing-member-badgeIcon', member.badgeIcon)}
+        ${buildLandingInput('Badge/Icon oder Bild-URL', 'me-landing-member-badgeIcon', member.badgeIcon)}
         ${buildLandingInput('Portrait', 'me-landing-member-portrait', member.portrait, 'url')}
       </div>
     </section>`).join('');
@@ -178,7 +186,7 @@ function buildLandingQuestRows(quests = [], mode = 'module') {
           <option value="failed"${quest.status === 'failed' ? ' selected' : ''}>Fehlgeschlagen</option>
         </select></label>
         ${buildLandingInput('Fortschritt', 'me-landing-quest-progress', quest.progress, 'number')}
-        ${buildLandingInput('Bild', 'me-landing-quest-image', quest.image, 'url')}
+        ${buildLandingInput('Icon oder Bild-URL', 'me-landing-quest-image', quest.image, 'url')}
         ${buildLandingTextarea('Text', 'me-landing-quest-text', quest.text)}
       </div>
     </section>`).join('');
@@ -194,6 +202,7 @@ function buildLandingNoteRows(notes = [], mode = 'module') {
       </div>
       <div class="trade-editor-grid">
         ${buildLandingInput('Titel', 'me-landing-note-title', note.title)}
+        ${buildLandingInput('Icon oder Bild-URL', 'me-landing-note-icon', note.icon)}
         ${buildLandingInput('Autor', 'me-landing-note-authorName', note.authorName)}
         ${buildLandingInput('Autor-ID optional', 'me-landing-note-authorId', note.authorId)}
         ${buildLandingInput('Zeitstempel', 'me-landing-note-createdAt', note.createdAt)}
@@ -210,7 +219,7 @@ function buildLandingSimpleRows(items = [], kind = 'event', mode = 'module') {
         <button class="module-editor-mini-btn module-editor-danger" type="button" data-${mode === 'inline' ? 'inline' : 'module-editor'}-action="remove-landing-${kind}" data-landing-index="${index}">Entfernen</button>
       </div>
       <div class="trade-editor-grid">
-        ${buildLandingInput('Icon', `me-landing-${kind}-icon`, item.icon)}
+        ${buildLandingInput('Icon oder Bild-URL', `me-landing-${kind}-icon`, item.icon)}
         ${buildLandingInput('Titel', `me-landing-${kind}-title`, item.title)}
         ${buildLandingInput(kind === 'event' ? 'Zeit' : 'Text', `me-landing-${kind}-${kind === 'event' ? 'time' : 'text'}`, kind === 'event' ? item.time : item.text)}
       </div>
@@ -239,7 +248,7 @@ function collectLandingDataFromBlock(block) {
       id: getTrimmedFormValue(row, '.me-landing-member-id'),
       name: getTrimmedFormValue(row, '.me-landing-member-name'),
       role: getTrimmedFormValue(row, '.me-landing-member-role'),
-      level: getTrimmedFormValue(row, '.me-landing-member-level'),
+      className: getTrimmedFormValue(row, '.me-landing-member-className'),
       status: getTrimmedFormValue(row, '.me-landing-member-status'),
       statusColor: getTrimmedFormValue(row, '.me-landing-member-statusColor'),
       badgeIcon: getTrimmedFormValue(row, '.me-landing-member-badgeIcon'),
@@ -257,6 +266,7 @@ function collectLandingDataFromBlock(block) {
     notes: collectLandingRows(block, '.landing-editor-note-row', row => ({
       id: getTrimmedFormValue(row, '.me-landing-note-id'),
       title: getTrimmedFormValue(row, '.me-landing-note-title'),
+      icon: getTrimmedFormValue(row, '.me-landing-note-icon'),
       authorName: getTrimmedFormValue(row, '.me-landing-note-authorName'),
       authorId: getTrimmedFormValue(row, '.me-landing-note-authorId'),
       createdAt: getTrimmedFormValue(row, '.me-landing-note-createdAt'),
@@ -323,9 +333,9 @@ function addLandingEditorItem(button, kind) {
   if (!card) return;
   const page = collectModulePageFromCard(card);
   const data = sanitizeLandingData(page.landing || {});
-  if (kind === 'member') data.members.push({ name: 'Neuer Abenteurer', role: '', level: '', status: 'Bereit' });
+  if (kind === 'member') data.members.push({ name: 'Neuer Abenteurer', role: '', className: '', status: 'Bereit' });
   if (kind === 'quest') data.quests.push({ title: 'Neue Quest', text: '', kind: 'Quest', status: 'active', progress: 0 });
-  if (kind === 'note') data.notes.push({ title: 'Neue Notiz', text: '', authorName: 'Erzaehler', createdAt: new Date().toISOString() });
+  if (kind === 'note') data.notes.push({ title: 'Neue Notiz', text: '', icon: '', authorName: 'Erzaehler', createdAt: new Date().toISOString() });
   if (kind === 'event') data.events.push({ icon: '*', title: 'Neues Ereignis', time: '' });
   if (kind === 'info') data.info.push({ icon: '*', title: 'Neue Information', text: '' });
   page.landing = sanitizeLandingData(data);

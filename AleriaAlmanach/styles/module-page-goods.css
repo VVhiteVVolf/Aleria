@@ -598,7 +598,7 @@
 
 .goods-row-meta {
   display: grid;
-  grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 0.45fr) auto;
+  grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 0.45fr) auto auto;
   gap: 0.45rem;
 }
 

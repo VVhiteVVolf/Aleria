@@ -118,6 +118,33 @@ function addInlineGoodsListRow(listName, source = null) {
   renderPage(currentPage, 0);
 }
 
+function importInlineGoodsItem(source = null) {
+  if (typeof openItemDbPicker !== 'function') return;
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const tableIndex = Number(source?.dataset?.goodsTableIndex || -1);
+  const rowIndex = Number(source?.dataset?.goodsIndex || -1);
+  const categoryId = String(source?.dataset?.goodsCategory || '').trim() || 'allgemein';
+  openItemDbPicker({
+    title: 'Ware aus Itemdatenbank laden',
+    onSelect: item => {
+      const current = getInlineGoodsDataForEdit(page);
+      if (tableIndex < 0 || !current.tables[tableIndex]) return;
+      const table = { ...current.tables[tableIndex] };
+      const rows = Array.isArray(table.rows) ? [...table.rows] : [];
+      if (rowIndex >= 0 && rows[rowIndex]) {
+        rows[rowIndex] = createGoodsRowFromItemDbItem(item, table.columns, rows[rowIndex].category || categoryId);
+      } else {
+        rows.push(createGoodsRowFromItemDbItem(item, table.columns, categoryId));
+      }
+      table.rows = rows;
+      current.tables[tableIndex] = table;
+      page.goodsTable = sanitizeGoodsTableData(current);
+      renderPage(currentPage, 0);
+    }
+  });
+}
+
 function removeInlineGoodsListRow(listName, index, source = null) {
   const page = getInlineDraftPage();
   if (!page || !listName) return;

@@ -139,6 +139,12 @@
   display: block;
 }
 
+.landing-member-portrait {
+  object-fit: contain;
+  object-position: center;
+  background: rgba(235, 218, 181, 0.42);
+}
+
 .landing-member-badge {
   position: absolute;
   left: 0.3rem;
@@ -151,6 +157,15 @@
   background: rgba(40,23,8,0.72);
   color: var(--gold-light);
   font-size: 0.72rem;
+  overflow: hidden;
+}
+
+.landing-member-badge img,
+.landing-linked-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .landing-member-body {
@@ -207,11 +222,17 @@
   padding: 0.55rem;
 }
 
+.landing-quest-card[hidden] {
+  display: none;
+}
+
 .landing-quest-icon {
   width: 3.4rem;
   height: 3.4rem;
   border-radius: 50%;
   border: 1px solid rgba(139,105,20,0.35);
+  object-fit: contain;
+  background: rgba(255,250,232,0.5);
 }
 
 .landing-quest-title-row {
@@ -261,9 +282,29 @@
 }
 
 .landing-note-card {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
   border: 1px solid rgba(139,105,20,0.22);
   background: rgba(255,255,255,0.18);
   padding: 0.75rem;
+}
+
+.landing-note-main {
+  min-width: 0;
+}
+
+.landing-note-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(139,105,20,0.28);
+  border-radius: 50%;
+  background: rgba(255,250,232,0.5);
+  color: var(--gold-dark);
 }
 
 .landing-note-card small {
@@ -302,6 +343,7 @@
   height: 2rem;
   border: 1px solid rgba(139,105,20,0.28);
   background: rgba(255,255,255,0.22);
+  overflow: hidden;
 }
 
 .landing-event-row small,

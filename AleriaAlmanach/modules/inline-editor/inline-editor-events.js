@@ -41,8 +41,10 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'add-bounty-list-row',
   'remove-bounty-list-row',
   'add-goods-list-row',
+  'import-goods-item',
   'remove-goods-list-row',
   'add-trade-list-row',
+  'import-trade-item',
   'remove-trade-list-row',
   'add-guest-register-section',
   'remove-guest-register-section',
@@ -279,6 +281,10 @@ function handleInlineEditorActionClick(event) {
     addInlineGoodsListRow(trigger.dataset.goodsList || '', trigger);
     return;
   }
+  if (action === 'import-goods-item') {
+    importInlineGoodsItem(trigger);
+    return;
+  }
   if (action === 'remove-goods-list-row') {
     removeInlineGoodsListRow(
       trigger.dataset.goodsList || '',
@@ -289,6 +295,10 @@ function handleInlineEditorActionClick(event) {
   }
   if (action === 'add-trade-list-row') {
     addInlineTradeCatalogRow(trigger.dataset.tradeList || '', Number(trigger.dataset.tradeIndex) || 0);
+    return;
+  }
+  if (action === 'import-trade-item') {
+    importInlineTradeCatalogItem();
     return;
   }
   if (action === 'remove-trade-list-row') {

@@ -4,38 +4,40 @@ let _characterInventoryEditMode = false;
 function getDefaultCharacterInventoryProfileItems() {
   return [
     { category: 'weapon', icon: '*', name: 'Hauptwaffe', type: 'Waffe', description: 'Beschreibe Material, Zustand und besondere Merkmale.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'armor', icon: '*', name: 'Ruestung / Schutz', type: 'Ruestung', description: 'Ruestung, Kleidung oder magischer Schutz.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'equipment', icon: '*', name: 'Reiseausruestung', type: 'Ausrustung', description: 'Werkzeuge, Vorrat oder nuetzliche Gegenstaende.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'equipment', icon: '*', name: 'Heil- oder Verbrauchsgut', type: 'Verbrauchsgut', description: 'Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'other', icon: '*', name: 'Persoenlicher Gegenstand', type: 'Sonstiges', description: 'Erbstueck, Andenken, Siegel oder wichtiger Besitz.', weight: 'Noch festlegen', quantity: '1' }
+    { category: 'armor', icon: '*', name: 'Rüstung / Schutz', type: 'Rüstung', description: 'Rüstung, Kleidung oder magischer Schutz.', weight: 'Noch festlegen', quantity: '1' },
+    { category: 'equipment', icon: '*', name: 'Reiseausrüstung', type: 'Ausrüstung', description: 'Werkzeuge, Vorrat oder nützliche Gegenstände.', weight: 'Noch festlegen', quantity: '1' },
+    { category: 'potions', icon: '*', name: 'Heil- oder Verbrauchsgut', type: 'Trinktur', description: 'Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.', weight: 'Noch festlegen', quantity: '1' },
+    { category: 'documents', icon: '*', name: 'Dokumente / Urkunden', type: 'Dokument', description: 'Passierschein, Brief, Vertrag, Siegel oder Lizenz.', weight: 'Noch festlegen', quantity: '1' },
+    { category: 'other', icon: '*', name: 'Persönlicher Gegenstand', type: 'Sonstiges', description: 'Erbstück, Andenken, Siegel oder wichtiger Besitz.', weight: 'Noch festlegen', quantity: '1' }
   ];
 }
 
 function getDefaultCharacterInventoryProfileCompanions() {
   return [
-    { name: 'Reittier / Gefaehrte', species: 'Tier oder Begleiter', role: 'Begleiter', summary: 'Kurzbeschreibung des Gefaehrten.', status: 'Gesund' },
-    { name: 'Treuer Begleiter', species: 'Tier / Person', role: 'Gefaehrte', summary: 'Besonderheit, Nutzen oder Bindung.', status: 'Noch festlegen' }
+    { name: 'Reittier / Gefährte', species: 'Tier oder Begleiter', role: 'Begleiter', summary: 'Kurzbeschreibung des Gefährten.', status: 'Gesund' },
+    { name: 'Treuer Begleiter', species: 'Tier / Person', role: 'Gefährte', summary: 'Besonderheit, Nutzen oder Bindung.', status: 'Noch festlegen' }
   ];
 }
 
 function createCharacterInventoryDataFromCharacter(char = {}) {
   return sanitizeCharacterInventoryData({
     title: 'Charakter-Inventar',
-    subtitle: 'Ausrustung, Gegenstaende und Gefaehrten verwalten',
+    subtitle: 'Ausrüstung, Gegenstände und Gefährten verwalten',
     portrait: char.portrait || '',
     name: char.name || 'Name des Charakters',
     role: char.title || char.fraktion || 'Rolle',
     level: char.fraktion || '',
     status: 'Gesund',
     hitpoints: 'TP / Zustand',
-    money: 'Geldbestand',
+    money: '0 Gold, 0 Silber, 0 Kupfer',
+    moneyState: { gold: 0, silver: 0, copper: 0, totalCopper: 0 },
     carryLabel: 'Traglast',
     carryValue: 'Noch festlegen',
     infoRows: [
       { icon: '*', label: 'Status', value: 'Gesund' },
       { icon: '*', label: 'TP / Zustand', value: 'Noch festlegen' },
       { icon: '*', label: 'Geld', value: 'Noch festlegen' },
-      { icon: '*', label: 'Tragkapazitaet', value: 'Noch festlegen' },
+      { icon: '*', label: 'Tragkapazität', value: 'Noch festlegen' },
       { icon: '*', label: 'Rolle', value: char.title || 'Noch festlegen' },
       { icon: '*', label: 'Fraktion', value: char.fraktion || 'Noch festlegen' },
       { icon: '*', label: 'Aufenthalt', value: 'Noch festlegen' },
@@ -123,11 +125,29 @@ function initCharacterInventoryProfile(char = {}) {
 function collectCharacterInventoryProfileData() {
   const card = document.querySelector('#cp-inventory-editor [data-ci-embedded-card]');
   if (!card || typeof collectCharacterInventoryModuleEditorPage !== 'function') {
+    const page = document.querySelector('#cp-inventory-editor .character-inventory-page');
+    if (page?.dataset?.ciData) {
+      try {
+        _characterInventoryDraft = sanitizeCharacterInventoryData(JSON.parse(page.dataset.ciData || '{}'));
+        return _characterInventoryDraft;
+      } catch (error) {
+        console.warn('Charakter-Inventar konnte nicht aus der Ansicht gelesen werden:', error);
+      }
+    }
     return sanitizeCharacterInventoryData(_characterInventoryDraft || {});
   }
   const page = collectCharacterInventoryModuleEditorPage(card, {});
   _characterInventoryDraft = sanitizeCharacterInventoryData(page.characterInventory || {});
   return _characterInventoryDraft;
+}
+
+function syncCharacterInventoryProfileDraftFromPage(page) {
+  if (!page?.closest?.('#cp-inventory-editor')) return;
+  try {
+    _characterInventoryDraft = sanitizeCharacterInventoryData(JSON.parse(page.dataset.ciData || '{}'));
+  } catch (error) {
+    console.warn('Charakter-Inventar konnte nicht aktualisiert werden:', error);
+  }
 }
 
 function editCharacterInventoryProfile() {
@@ -212,7 +232,7 @@ async function stampCharacterInventoryProfileTemplateToAll() {
     showAppStatus('Keine angelegten Charaktere gefunden.', 'error');
     return;
   }
-  if (!confirm(`Inventarvorlage wirklich auf ${targets.length} angelegte Charaktere anwenden?\n\nNamen, Portraits und Basisdaten bleiben erhalten. Inventar, Items, Gefaehrten, Kategorien und Attribute werden ersetzt.`)) {
+  if (!confirm(`Inventarvorlage wirklich auf ${targets.length} angelegte Charaktere anwenden?\n\nNamen, Portraits und Basisdaten bleiben erhalten. Inventar, Items, Gefährten, Kategorien und Attribute werden ersetzt.`)) {
     return;
   }
 

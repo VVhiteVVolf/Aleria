@@ -163,6 +163,70 @@ function getDefaultTradeCatalogRow(listName) {
   return {};
 }
 
+function normalizeTradeImportKey(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[\u00e4]/g, 'ae')
+    .replace(/[\u00f6]/g, 'oe')
+    .replace(/[\u00fc]/g, 'ue')
+    .replace(/[\u00df]/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function getTradeImportCategory(item = {}, categories = []) {
+  const wanted = [item.category, item.categoryLabel, item.type].map(normalizeTradeImportKey).filter(Boolean);
+  const match = (Array.isArray(categories) ? categories : []).find(category => {
+    const id = normalizeTradeImportKey(category?.id);
+    const label = normalizeTradeImportKey(category?.label);
+    return wanted.includes(id) || wanted.includes(label);
+  });
+  if (match?.id) return match.id;
+  return slugify(item.category || item.categoryLabel || item.type || 'spezialwaren', 'spezialwaren');
+}
+
+function splitTradeImportPrice(item = {}) {
+  const price = String(item.price || '').trim();
+  if (!price) return { priceMin: '', priceMax: '' };
+  const rangeMatch = price.match(/^(.+?)\s*(?:-|bis|to)\s*(.+)$/i);
+  if (!rangeMatch) return { priceMin: price, priceMax: '' };
+  return {
+    priceMin: rangeMatch[1].trim(),
+    priceMax: rangeMatch[2].trim()
+  };
+}
+
+function createTradeCatalogItemFromItemDbItem(item = {}, categories = []) {
+  const price = splitTradeImportPrice(item);
+  const description = String(item.description || item.details || '').trim();
+  const details = String(item.details || '').trim();
+  const features = details && details !== description
+    ? [{ icon: '*', text: details }]
+    : [];
+  return sanitizeTradeCatalogItems([{
+    title: item.title || 'Neues Handelsgut',
+    subtitle: item.type || item.categoryLabel || '',
+    category: getTradeImportCategory(item, categories),
+    image: item.image || '',
+    imageFormat: 'landscape',
+    imageFit: item.image ? 'cover' : 'contain',
+    imagePosition: 'center',
+    badge: item.hiddenMeta?.availability || '',
+    tags: item.tags || [],
+    description,
+    features,
+    origin: item.hiddenMeta?.origin || '',
+    usageTags: item.tags || [],
+    priceMin: price.priceMin,
+    priceMax: price.priceMax,
+    priceFill: 58,
+    currencyCode: item.hiddenMeta?.currencyCode || item.currency || 'KS',
+    currencyLabel: item.currency || item.hiddenMeta?.currencyLabel || '',
+    currencyIcon: item.hiddenMeta?.currencyIcon || '*',
+    attributes: item.attributes || [],
+    sealImage: item.hiddenMeta?.sealImage || ''
+  }])[0] || getDefaultTradeCatalogRow('items');
+}
+
 function addModuleTradeCatalogRow(button, listName) {
   const card = button.closest('.module-page-card');
   if (listName === 'features' || listName === 'attributes') {
@@ -190,6 +254,28 @@ function addModuleTradeCatalogRow(button, listName) {
   wrap.querySelector('.inline-placeholder-note')?.remove();
   wrap.insertAdjacentHTML('beforeend', definition.row(getDefaultTradeCatalogRow(listName)));
   syncModuleJsonPreview();
+}
+
+function importModuleTradeCatalogItem(button) {
+  if (typeof openItemDbPicker !== 'function') {
+    if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Itemdatenbank-Picker ist nicht geladen.', true);
+    return;
+  }
+  const card = button.closest('.module-page-card');
+  const block = button.closest('[data-page-type="trade-catalog"]') || card;
+  const wrap = block?.querySelector('.module-trade-items');
+  if (!wrap) return;
+  openItemDbPicker({
+    title: 'Handelsgut aus Itemdatenbank laden',
+    onSelect: item => {
+      const categories = collectTradeCatalogCategories(block);
+      const tradeItem = createTradeCatalogItemFromItemDbItem(item, categories);
+      wrap.querySelector('.inline-placeholder-note')?.remove();
+      wrap.insertAdjacentHTML('beforeend', buildTradeCatalogItemRows([tradeItem], 'module'));
+      syncModuleJsonPreview();
+      if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus(`Handelsgut "${item.title}" geladen.`);
+    }
+  });
 }
 
 function removeModuleTradeCatalogRow(button) {
@@ -302,7 +388,13 @@ function buildTradeCatalogModuleEditorFields(page) {
         </div>
 
         <div class="module-editor-field wide">
-          <div class="module-editor-inline" style="justify-content:space-between;"><label>Handelsgueter / Tiere</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-trade-row" data-trade-list="items">+ Eintrag</button></div>
+          <div class="module-editor-inline" style="justify-content:space-between;">
+            <label>Handelsgueter / Tiere</label>
+            <div class="module-editor-inline">
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="import-trade-item">Item laden</button>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-trade-row" data-trade-list="items">+ Eintrag</button>
+            </div>
+          </div>
           <div class="trade-editor-list module-trade-items">${buildTradeCatalogItemRows(data.items, 'module')}</div>
         </div>
       </div>

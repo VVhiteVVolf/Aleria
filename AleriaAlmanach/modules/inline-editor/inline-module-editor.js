@@ -427,6 +427,6 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'hierarchy') return wrapInlineEditor(`${moduleMeta}${buildInlineHierarchyEditor(page)}`);
   if (type === 'biography') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}`);
   if (type === 'bestiary') return wrapInlineEditor(buildInlineBestiaryEditor(entry, page));
-  if (type === 'quest-file') return wrapInlineEditor(buildInlineQuestFileEditor(entry, page));
+  if (type === 'quest-file') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineQuestFileEditor(entry, page, { includeMeta: false, includeStats: false })}`);
   return wrapInlineEditor(moduleMeta);
 }

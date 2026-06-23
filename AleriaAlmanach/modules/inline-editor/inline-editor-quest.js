@@ -110,9 +110,11 @@ function buildInlineQuestClientPortraitControls(questFile) {
         </div>`;
 }
 
-function buildInlineQuestFileEditor(entry, page) {
+function buildInlineQuestFileEditor(entry, page, options = {}) {
   const questFile = sanitizeQuestFileData(page.questFile || {});
-  const meta = `
+  const includeMeta = options.includeMeta !== false;
+  const includeStats = options.includeStats !== false;
+  const metaFields = includeMeta ? `
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Questakte</div>
       <div class="inline-edit-grid">
@@ -139,6 +141,19 @@ function buildInlineQuestFileEditor(entry, page) {
           <span class="inline-edit-label">Seitentitel</span>
           <input class="inline-edit-input" type="text" data-inline-action="rerender-page-field" data-page-field="pageTitle" value="${escapeHtml(page.pageTitle || '')}">
         </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Archivzeile</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-quest-file-field" data-quest-file-field="archiveLabel" value="${escapeHtml(questFile.archiveLabel)}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Vertraulichkeitsnotiz</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-quest-file-field" data-quest-file-field="confidentiality" value="${escapeHtml(questFile.confidentiality)}">
+        </div>
+      </div>
+    </div>` : `
+    <div class="inline-edit-section">
+      <div class="inline-edit-kicker">Questakte</div>
+      <div class="inline-edit-grid">
         <div class="inline-edit-field">
           <span class="inline-edit-label">Archivzeile</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-quest-file-field" data-quest-file-field="archiveLabel" value="${escapeHtml(questFile.archiveLabel)}">
@@ -176,12 +191,13 @@ function buildInlineQuestFileEditor(entry, page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Schreiben / Auftraggebernotiz</span>
+          ${buildTextFormatToolbar()}
           <textarea class="inline-edit-textarea" data-inline-action="update-quest-file-field" data-quest-file-field="clientNote">${escapeHtml(questFile.clientNote)}</textarea>
         </div>
       </div>
     </div>`;
   const center = `
-    ${buildInlineStatsEditor(page)}
+    ${includeStats ? buildInlineStatsEditor(page) : ''}
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Zentrale Sektoren</div>
       <div class="inline-edit-grid">
@@ -195,10 +211,12 @@ function buildInlineQuestFileEditor(entry, page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Sektor 1 Text</span>
+          ${buildTextFormatToolbar()}
           <textarea class="inline-edit-textarea" data-inline-action="update-quest-file-field" data-quest-file-field="sectionOneText">${escapeHtml(questFile.sectionOneText)}</textarea>
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Sektor 2 Text</span>
+          ${buildTextFormatToolbar()}
           <textarea class="inline-edit-textarea" data-inline-action="update-quest-file-field" data-quest-file-field="sectionTwoText">${escapeHtml(questFile.sectionTwoText)}</textarea>
         </div>
         <div class="inline-edit-field">
@@ -217,14 +235,14 @@ function buildInlineQuestFileEditor(entry, page) {
         <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="extraSections">+ Abschnitt</button>
       </div>
       <div class="inline-placeholder-note">Abschnitte koennen nach Auftragsbeschreibung, nach Hintergrund oder direkt unter Ziele erscheinen.</div>
-      <div class="quest-file-edit-list">${buildQuestFileExtraSectionRows(questFile.extraSections, 'inline')}</div>
+      <div class="quest-file-edit-list">${questFile.extraSections.length ? buildQuestFileExtraSectionRows(questFile.extraSections, 'inline') : buildQuestFileEditorPlaceholder('Noch keine Zusatzabschnitte vorhanden.')}</div>
     </div>
     <div class="inline-edit-section">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">Bullet-Liste / Ziele</div>
         <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="sectionThreeItems">+ Ziel</button>
       </div>
-      <div class="quest-file-edit-list">${buildQuestFileObjectiveRows(questFile.sectionThreeItems, 'inline')}</div>
+      <div class="quest-file-edit-list">${questFile.sectionThreeItems.length ? buildQuestFileObjectiveRows(questFile.sectionThreeItems, 'inline') : buildQuestFileEditorPlaceholder('Noch keine Ziele vorhanden.')}</div>
     </div>`;
   const sidebar = `
     <div class="inline-edit-section">
@@ -243,12 +261,12 @@ function buildInlineQuestFileEditor(entry, page) {
         <div class="inline-placeholder-note">Kontaktpersonen mit kleinem Imgur-Bild, Name und Titel.</div>
         <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="contacts">+ Kontakt</button>
       </div>
-      <div class="quest-file-edit-list">${buildQuestFileContactRows(questFile.contacts, 'inline')}</div>
+      <div class="quest-file-edit-list">${questFile.contacts.length ? buildQuestFileContactRows(questFile.contacts, 'inline') : buildQuestFileEditorPlaceholder('Noch keine Kontaktpersonen vorhanden.')}</div>
       <div class="inline-edit-head">
         <div class="inline-placeholder-note">Trivia, Orte oder knappe Zusatzhinweise.</div>
         <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="trivia">+ Eintrag</button>
       </div>
-      <div class="quest-file-edit-list">${buildQuestFileTriviaRows(questFile.trivia, 'inline')}</div>
+      <div class="quest-file-edit-list">${questFile.trivia.length ? buildQuestFileTriviaRows(questFile.trivia, 'inline') : buildQuestFileEditorPlaceholder('Noch keine Hinweise vorhanden.')}</div>
     </div>
     <div class="inline-edit-section">
       <div class="inline-edit-grid">
@@ -265,9 +283,10 @@ function buildInlineQuestFileEditor(entry, page) {
         <div class="inline-edit-kicker">Belohnungen</div>
         <button class="module-editor-mini-btn" type="button" data-inline-action="add-quest-list-row" data-quest-list="rewards">+ Belohnung</button>
       </div>
-      <div class="quest-file-edit-list">${buildQuestFileRewardRows(questFile.rewards, 'inline')}</div>
+      <div class="quest-file-edit-list">${questFile.rewards.length ? buildQuestFileRewardRows(questFile.rewards, 'inline') : buildQuestFileEditorPlaceholder('Noch keine Belohnungen vorhanden.')}</div>
       <div class="inline-edit-field">
         <span class="inline-edit-label">Notiz unten</span>
+        ${buildTextFormatToolbar()}
         <textarea class="inline-edit-textarea" data-inline-action="update-quest-file-field" data-quest-file-field="note">${escapeHtml(questFile.note)}</textarea>
       </div>
       <div class="inline-edit-field">
@@ -275,5 +294,5 @@ function buildInlineQuestFileEditor(entry, page) {
         <input class="inline-edit-input" type="text" data-inline-action="update-quest-file-field" data-quest-file-field="footer" value="${escapeHtml(questFile.footer)}">
       </div>
     </div>`;
-  return `${meta}${visuals}${center}${sidebar}`;
+  return `${metaFields}${visuals}${center}${sidebar}`;
 }

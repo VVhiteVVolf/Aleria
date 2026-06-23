@@ -1,5 +1,9 @@
+function buildQuestFileEditorPlaceholder(text = 'Noch keine Eintraege vorhanden.') {
+  return `<div class="inline-placeholder-note">${escapeHtml(text)}</div>`;
+}
+
 function buildQuestFileObjectiveRows(items = [], mode = 'module') {
-  const rows = sanitizeQuestFileRows(items).length ? sanitizeQuestFileRows(items) : [{ title: 'Neues Ziel', detail: '' }];
+  const rows = sanitizeQuestFileRows(items);
   return rows.map((item, index) => `
     <div class="quest-file-edit-row objective ${mode === 'module' ? 'module-quest-objective-row' : 'inline-quest-objective-row'}">
       <input class="inline-edit-input ${mode === 'module' ? 'me-quest-objective-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ziel" ${mode === 'inline' ? `data-inline-action="update-quest-list-field" data-quest-list="sectionThreeItems" data-quest-index="${index}" data-quest-field="title"` : ''}>
@@ -9,7 +13,7 @@ function buildQuestFileObjectiveRows(items = [], mode = 'module') {
 }
 
 function buildQuestFileTriviaRows(items = [], mode = 'module') {
-  const rows = sanitizeQuestFileRows(items).length ? sanitizeQuestFileRows(items) : [{ title: 'Eintrag', detail: '' }];
+  const rows = sanitizeQuestFileRows(items);
   return rows.map((item, index) => `
     <div class="quest-file-edit-row simple ${mode === 'module' ? 'module-quest-trivia-row' : 'inline-quest-trivia-row'}">
       <input class="inline-edit-input ${mode === 'module' ? 'me-quest-trivia-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-quest-list-field" data-quest-list="trivia" data-quest-index="${index}" data-quest-field="title"` : ''}>
@@ -95,7 +99,7 @@ function buildQuestFileClientPortraitControls(questFile) {
 }
 
 function buildQuestFileContactRows(items = [], mode = 'module') {
-  const rows = sanitizeQuestContacts(items).length ? sanitizeQuestContacts(items) : [{ image: '', name: 'Kontaktperson', title: '' }];
+  const rows = sanitizeQuestContacts(items);
   return rows.map((item, index) => `
     <div class="quest-file-edit-row contact ${mode === 'module' ? 'module-quest-contact-row' : 'inline-quest-contact-row'}">
       <input class="inline-edit-input ${mode === 'module' ? 'me-quest-contact-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild" ${mode === 'inline' ? `data-inline-action="update-quest-list-field" data-quest-list="contacts" data-quest-index="${index}" data-quest-field="image"` : ''}>
@@ -107,7 +111,7 @@ function buildQuestFileContactRows(items = [], mode = 'module') {
 }
 
 function buildQuestFileRewardRows(items = [], mode = 'module') {
-  const rows = sanitizeQuestRewards(items).length ? sanitizeQuestRewards(items) : [{ image: '', title: 'Belohnung', detail: '' }];
+  const rows = sanitizeQuestRewards(items);
   return rows.map((item, index) => `
     <div class="quest-file-edit-row reward ${mode === 'module' ? 'module-quest-reward-row' : 'inline-quest-reward-row'}">
       <input class="inline-edit-input ${mode === 'module' ? 'me-quest-reward-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild" ${mode === 'inline' ? `data-inline-action="update-quest-list-field" data-quest-list="rewards" data-quest-index="${index}" data-quest-field="image"` : ''}>
@@ -201,7 +205,9 @@ function removeModuleQuestFileRow(button) {
   if (!row || !wrap) return;
   row.remove();
   if (!wrap.querySelector('.quest-file-edit-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Einträge vorhanden.</div>';
+    wrap.innerHTML = buildQuestFileEditorPlaceholder();
+    syncModuleJsonPreview();
+    return;
   }
   syncModuleJsonPreview();
 }
@@ -251,6 +257,7 @@ function buildQuestFileModuleEditorFields(page) {
           </div>
           <div class="module-editor-field wide">
             <label>Schreiben / Auftraggebernotiz</label>
+            ${buildTextFormatToolbar()}
             <textarea class="me-quest-client-note small">${escapeHtml(questFile.clientNote)}</textarea>
           </div>
           <div class="module-editor-field">
@@ -263,10 +270,12 @@ function buildQuestFileModuleEditorFields(page) {
           </div>
           <div class="module-editor-field wide">
             <label>Sektor 1 Text</label>
+            ${buildTextFormatToolbar()}
             <textarea class="me-quest-section-one-text">${escapeHtml(questFile.sectionOneText)}</textarea>
           </div>
           <div class="module-editor-field wide">
             <label>Sektor 2 Text</label>
+            ${buildTextFormatToolbar()}
             <textarea class="me-quest-section-two-text">${escapeHtml(questFile.sectionTwoText)}</textarea>
           </div>
           <div class="module-editor-field wide">
@@ -276,7 +285,7 @@ function buildQuestFileModuleEditorFields(page) {
             </div>
             <div class="module-editor-help">Abschnitte koennen nach Auftragsbeschreibung, nach Hintergrund oder direkt unter Ziele erscheinen.</div>
             <div class="quest-file-edit-list module-quest-extraSections">
-              ${buildQuestFileExtraSectionRows(questFile.extraSections)}
+              ${questFile.extraSections.length ? buildQuestFileExtraSectionRows(questFile.extraSections) : buildQuestFileEditorPlaceholder('Noch keine Zusatzabschnitte vorhanden.')}
             </div>
           </div>
           <div class="module-editor-field">
@@ -293,7 +302,7 @@ function buildQuestFileModuleEditorFields(page) {
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-quest-file-row" data-quest-list="objectives">+ Ziel</button>
             </div>
             <div class="quest-file-edit-list module-quest-objectives">
-              ${buildQuestFileObjectiveRows(questFile.sectionThreeItems)}
+              ${questFile.sectionThreeItems.length ? buildQuestFileObjectiveRows(questFile.sectionThreeItems) : buildQuestFileEditorPlaceholder('Noch keine Ziele vorhanden.')}
             </div>
           </div>
           <div class="module-editor-field">
@@ -310,7 +319,7 @@ function buildQuestFileModuleEditorFields(page) {
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-quest-file-row" data-quest-list="contacts">+ Kontakt</button>
             </div>
             <div class="quest-file-edit-list module-quest-contacts">
-              ${buildQuestFileContactRows(questFile.contacts)}
+              ${questFile.contacts.length ? buildQuestFileContactRows(questFile.contacts) : buildQuestFileEditorPlaceholder('Noch keine Kontaktpersonen vorhanden.')}
             </div>
           </div>
           <div class="module-editor-field wide">
@@ -319,7 +328,7 @@ function buildQuestFileModuleEditorFields(page) {
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-quest-file-row" data-quest-list="trivia">+ Eintrag</button>
             </div>
             <div class="quest-file-edit-list module-quest-trivia">
-              ${buildQuestFileTriviaRows(questFile.trivia)}
+              ${questFile.trivia.length ? buildQuestFileTriviaRows(questFile.trivia) : buildQuestFileEditorPlaceholder('Noch keine Hinweise vorhanden.')}
             </div>
           </div>
           <div class="module-editor-field">
@@ -336,11 +345,12 @@ function buildQuestFileModuleEditorFields(page) {
               <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-quest-file-row" data-quest-list="rewards">+ Belohnung</button>
             </div>
             <div class="quest-file-edit-list module-quest-rewards">
-              ${buildQuestFileRewardRows(questFile.rewards)}
+              ${questFile.rewards.length ? buildQuestFileRewardRows(questFile.rewards) : buildQuestFileEditorPlaceholder('Noch keine Belohnungen vorhanden.')}
             </div>
           </div>
           <div class="module-editor-field wide">
             <label>Notiz unten</label>
+            ${buildTextFormatToolbar()}
             <textarea class="me-quest-note small">${escapeHtml(questFile.note)}</textarea>
           </div>
           <div class="module-editor-field wide">
@@ -356,35 +366,35 @@ function collectQuestFileModuleEditorPage(card, page) {
   page.questFilePage = true;
   page.stats = collectModuleBiographyStats(questBlock);
   page.questFile = sanitizeQuestFileData({
-    archiveLabel: getTrimmedFormValue(card, '.me-quest-archive-label'),
-    confidentiality: getTrimmedFormValue(card, '.me-quest-confidentiality'),
-    bannerImage: getTrimmedFormValue(card, '.me-quest-banner-image'),
-    crestImage: getTrimmedFormValue(card, '.me-quest-crest-image'),
-    clientName: getTrimmedFormValue(card, '.me-quest-client-name'),
-    clientTitle: getTrimmedFormValue(card, '.me-quest-client-title'),
-    clientPortrait: getTrimmedFormValue(card, '.me-quest-client-portrait'),
-    clientPortraitFormat: getTrimmedFormValue(card, '.me-quest-client-portrait-format'),
-    clientPortraitFit: getTrimmedFormValue(card, '.me-quest-client-portrait-fit'),
-    clientPortraitPosition: getTrimmedFormValue(card, '.me-quest-client-portrait-position'),
-    clientPortraitSize: getTrimmedFormValue(card, '.me-quest-client-portrait-size'),
-    clientNote: getTrimmedFormValue(card, '.me-quest-client-note'),
-    sectionOneTitle: getTrimmedFormValue(card, '.me-quest-section-one-title'),
-    sectionOneText: getTrimmedFormValue(card, '.me-quest-section-one-text'),
-    sectionTwoTitle: getTrimmedFormValue(card, '.me-quest-section-two-title'),
-    sectionTwoText: getTrimmedFormValue(card, '.me-quest-section-two-text'),
-    sectionThreeTitle: getTrimmedFormValue(card, '.me-quest-section-three-title'),
+    archiveLabel: getTrimmedFormValue(questBlock, '.me-quest-archive-label'),
+    confidentiality: getTrimmedFormValue(questBlock, '.me-quest-confidentiality'),
+    bannerImage: getTrimmedFormValue(questBlock, '.me-quest-banner-image'),
+    crestImage: getTrimmedFormValue(questBlock, '.me-quest-crest-image'),
+    clientName: getTrimmedFormValue(questBlock, '.me-quest-client-name'),
+    clientTitle: getTrimmedFormValue(questBlock, '.me-quest-client-title'),
+    clientPortrait: getTrimmedFormValue(questBlock, '.me-quest-client-portrait'),
+    clientPortraitFormat: getTrimmedFormValue(questBlock, '.me-quest-client-portrait-format'),
+    clientPortraitFit: getTrimmedFormValue(questBlock, '.me-quest-client-portrait-fit'),
+    clientPortraitPosition: getTrimmedFormValue(questBlock, '.me-quest-client-portrait-position'),
+    clientPortraitSize: getTrimmedFormValue(questBlock, '.me-quest-client-portrait-size'),
+    clientNote: getTrimmedFormValue(questBlock, '.me-quest-client-note'),
+    sectionOneTitle: getTrimmedFormValue(questBlock, '.me-quest-section-one-title'),
+    sectionOneText: getTrimmedFormValue(questBlock, '.me-quest-section-one-text'),
+    sectionTwoTitle: getTrimmedFormValue(questBlock, '.me-quest-section-two-title'),
+    sectionTwoText: getTrimmedFormValue(questBlock, '.me-quest-section-two-text'),
+    sectionThreeTitle: getTrimmedFormValue(questBlock, '.me-quest-section-three-title'),
     sectionThreeItems: collectModuleQuestObjectives(questBlock),
     extraSections: collectModuleQuestExtraSections(questBlock),
-    contactsTitle: getTrimmedFormValue(card, '.me-quest-contacts-title'),
+    contactsTitle: getTrimmedFormValue(questBlock, '.me-quest-contacts-title'),
     contacts: collectModuleQuestContacts(questBlock),
-    triviaTitle: getTrimmedFormValue(card, '.me-quest-trivia-title'),
+    triviaTitle: getTrimmedFormValue(questBlock, '.me-quest-trivia-title'),
     trivia: collectModuleQuestTrivia(questBlock),
-    rewardsTitle: getTrimmedFormValue(card, '.me-quest-rewards-title'),
+    rewardsTitle: getTrimmedFormValue(questBlock, '.me-quest-rewards-title'),
     rewards: collectModuleQuestRewards(questBlock),
-    noteTitle: getTrimmedFormValue(card, '.me-quest-note-title'),
-    note: getTrimmedFormValue(card, '.me-quest-note'),
-    sketchImage: getTrimmedFormValue(card, '.me-quest-sketch-image'),
-    footer: getTrimmedFormValue(card, '.me-quest-footer')
+    noteTitle: getTrimmedFormValue(questBlock, '.me-quest-note-title'),
+    note: getTrimmedFormValue(questBlock, '.me-quest-note'),
+    sketchImage: getTrimmedFormValue(questBlock, '.me-quest-sketch-image'),
+    footer: getTrimmedFormValue(questBlock, '.me-quest-footer')
   });
   return page;
 }

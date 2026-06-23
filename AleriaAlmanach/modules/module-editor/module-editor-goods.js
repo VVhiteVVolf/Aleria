@@ -59,6 +59,7 @@ function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode
       <div class="goods-row-meta">
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Bild-URL" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="image"` : ''}>
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-category' : ''}" type="text" value="${escapeHtml(item.category || '')}" placeholder="Kategorie-ID" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="category"` : ''}>
+        <button class="module-editor-mini-btn" type="button" ${mode === 'inline' ? `data-inline-action="import-goods-item" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}"` : 'data-module-editor-action="import-goods-item"'}>Item laden</button>
         <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-goods-list-row" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}"` : 'data-module-editor-action="remove-goods-row" data-goods-list="goods"'}>Loeschen</button>
       </div>
       <div class="goods-row-image-controls">
@@ -109,6 +110,87 @@ function createDefaultGoodsRowForCategory(columns = getDefaultGoodsColumns(), ca
   };
 }
 
+function normalizeGoodsImportKey(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[\u00e4]/g, 'ae')
+    .replace(/[\u00f6]/g, 'oe')
+    .replace(/[\u00fc]/g, 'ue')
+    .replace(/[\u00df]/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function findGoodsImportColumn(columns = [], candidates = []) {
+  const safeColumns = sanitizeGoodsColumns(columns);
+  const wanted = candidates.map(normalizeGoodsImportKey);
+  return safeColumns.find(column => {
+    const id = normalizeGoodsImportKey(column.id);
+    const label = normalizeGoodsImportKey(column.label);
+    return wanted.includes(id) || wanted.includes(label);
+  }) || null;
+}
+
+function formatGoodsImportPrice(item = {}) {
+  const price = String(item.price || '').trim();
+  const currency = String(item.currency || '').trim();
+  if (!price) return currency;
+  if (!currency || normalizeGoodsImportKey(price).includes(normalizeGoodsImportKey(currency))) return price;
+  return `${price} ${currency}`;
+}
+
+function setGoodsImportValue(values, column, value) {
+  if (!column) return;
+  values[column.id] = String(value || '').trim();
+}
+
+function createGoodsRowFromItemDbItem(item = {}, columns = getDefaultGoodsColumns(), categoryId = 'allgemein') {
+  const safeColumns = sanitizeGoodsColumns(columns);
+  const values = {};
+  safeColumns.forEach(column => { values[column.id] = ''; });
+  setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['name', 'titel', 'title']), item.title);
+  setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['kind', 'art', 'typ', 'type']), item.type || item.categoryLabel);
+  setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['description', 'beschreibung', 'text']), item.description || item.details);
+  setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['price', 'preis', 'kosten']), formatGoodsImportPrice(item));
+  setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['availability', 'verfuegbar', 'verfuegbarkeit', 'bestand']), item.hiddenMeta?.availability || item.availability);
+  if (!Object.values(values).some(Boolean) && safeColumns[0]) values[safeColumns[0].id] = String(item.title || '').trim();
+  return sanitizeGoodsRows([{
+    image: item.image || '',
+    imageFormat: 'landscape',
+    imageFit: 'contain',
+    imagePosition: 'center',
+    imageSize: 72,
+    category: categoryId || 'allgemein',
+    details: item.details || item.description || '',
+    values
+  }], safeColumns)[0] || createDefaultGoodsRowForCategory(safeColumns, categoryId);
+}
+
+function setModuleGoodsRowField(row, selector, value) {
+  const field = row?.querySelector(selector);
+  if (!field) return;
+  field.value = value ?? '';
+  field.dispatchEvent(new Event('input', { bubbles: true }));
+  field.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
+function fillModuleGoodsRowFromItem(row, item = {}, columns = getDefaultGoodsColumns()) {
+  if (!row) return;
+  const currentCategory = getTrimmedFormValue(row, '.me-goods-item-category') || row.closest('.goods-category-editor')?.dataset.goodsCategory || 'allgemein';
+  const imported = createGoodsRowFromItemDbItem(item, columns, currentCategory);
+  setModuleGoodsRowField(row, '.me-goods-item-image', imported.image);
+  setModuleGoodsRowField(row, '.me-goods-item-category', imported.category);
+  setModuleGoodsRowField(row, '.me-goods-item-imageFormat', imported.imageFormat);
+  setModuleGoodsRowField(row, '.me-goods-item-imageFit', imported.imageFit);
+  setModuleGoodsRowField(row, '.me-goods-item-imagePosition', imported.imagePosition);
+  setModuleGoodsRowField(row, '.me-goods-item-imageSize', imported.imageSize);
+  row.querySelectorAll('.me-goods-cell').forEach(input => {
+    const columnId = String(input.dataset.goodsColumnId || '').trim();
+    input.value = imported.values?.[columnId] || '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  setModuleGoodsRowField(row, '.me-goods-item-details', imported.details);
+}
+
 function buildGoodsCategoryItemSections(table, mode = 'module', tableIndex = 0) {
   const safeTable = sanitizeGoodsTableBlock(table, tableIndex);
   return safeTable.categories.map(category => {
@@ -122,7 +204,10 @@ function buildGoodsCategoryItemSections(table, mode = 'module', tableIndex = 0) 
             <strong>${escapeHtml(category.label)}</strong>
             <span>${escapeHtml(category.id)}</span>
           </div>
-          <button class="module-editor-mini-btn" type="button" ${mode === 'inline' ? 'data-inline-action="add-goods-list-row"' : 'data-module-editor-action="add-goods-row"'} data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-category="${escapeHtml(category.id)}">+ Ware</button>
+          <div class="module-editor-inline">
+            <button class="module-editor-mini-btn" type="button" ${mode === 'inline' ? 'data-inline-action="import-goods-item"' : 'data-module-editor-action="import-goods-item"'} data-goods-table-index="${tableIndex}" data-goods-category="${escapeHtml(category.id)}">Item laden</button>
+            <button class="module-editor-mini-btn" type="button" ${mode === 'inline' ? 'data-inline-action="add-goods-list-row"' : 'data-module-editor-action="add-goods-row"'} data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-category="${escapeHtml(category.id)}">+ Ware</button>
+          </div>
         </div>
         <div class="goods-edit-list goods-category-items">
           ${rows.length
@@ -263,6 +348,38 @@ function addModuleGoodsRow(button, listName) {
     }, 'module', Number(tableEditor.dataset.goodsTableIndex || 0)));
   }
   syncModuleJsonPreview();
+}
+
+function importModuleGoodsItem(button) {
+  if (typeof openItemDbPicker !== 'function') {
+    if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus('Itemdatenbank-Picker ist nicht geladen.', true);
+    return;
+  }
+  const tableEditor = button.closest('.goods-table-editor');
+  const itemRow = button.closest('.module-goods-item-row');
+  const categoryEditor = button.closest('.goods-category-editor');
+  const categoryId = String(button.dataset.goodsCategory || categoryEditor?.dataset.goodsCategory || '').trim() || 'allgemein';
+  const wrap = categoryEditor?.querySelector('.goods-category-items');
+  if (!tableEditor) return;
+  openItemDbPicker({
+    title: 'Ware aus Itemdatenbank laden',
+    onSelect: item => {
+      const columns = collectModuleGoodsColumns(tableEditor);
+      if (itemRow) {
+        fillModuleGoodsRowFromItem(itemRow, item, columns);
+        syncModuleJsonPreview();
+        if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus(`Ware "${item.title}" eingefuegt.`);
+        return;
+      }
+      if (!wrap) return;
+      const row = createGoodsRowFromItemDbItem(item, columns, categoryId);
+      wrap.querySelector('.inline-placeholder-note')?.remove();
+      wrap.insertAdjacentHTML('beforeend', buildGoodsItemRows([row], columns, 'module', Number(tableEditor.dataset.goodsTableIndex || 0)));
+      hydrateModuleRichEditors(wrap.lastElementChild || wrap);
+      syncModuleJsonPreview();
+      if (typeof setModuleEditorStatus === 'function') setModuleEditorStatus(`Ware "${item.title}" geladen.`);
+    }
+  });
 }
 
 function reassignGoodsFromRemovedCategory(categoryRow) {
