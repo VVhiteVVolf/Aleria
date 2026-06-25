@@ -44,7 +44,7 @@
   function initTextSpacing() {
     page.querySelectorAll("p").forEach((paragraph) => {
       const text = paragraph.textContent.replace(/\u00a0/g, "").trim();
-      const hasMedia = paragraph.querySelector("img, table, iframe, video, audio");
+      const hasMedia = paragraph.querySelector("img, table, iframe, video, audio, .orte-image-slot, [data-orte-image-key]");
       if (!text && !hasMedia) {
         paragraph.classList.add("place-spacer");
       }

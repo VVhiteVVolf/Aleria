@@ -7,6 +7,7 @@
   const pageId = getPageId();
   const CONTENT_SCHEMA_VERSION = 2;
   const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
+  const statusPositionKey = `aleria:orte:inline-status-position:${pageId}`;
   const state = { texts: {}, images: {}, ratings: {}, tables: {} };
   const textItems = [];
   const imageItems = [];
@@ -19,13 +20,25 @@
   let activeImageKey = "";
   let activeEditable = null;
   let savedSelection = null;
+  let pendingLocalPayload = null;
+  let pendingRemotePayload = null;
+  let statusPanelOpen = false;
+  let statusSuppressClick = false;
+  let statusDrag = null;
   const inlineActions = new Set([
     "toggle-orte-inline-edit",
     "save-orte-inline-edit",
     "hard-reset-orte-template",
+    "toggle-orte-status-panel",
+    "use-orte-local-version",
+    "use-orte-online-version",
+    "use-orte-latest-version",
     "close-orte-image-panel",
     "clear-orte-image",
     "add-orte-table-row",
+    "insert-orte-table-row-before",
+    "insert-orte-table-row-after",
+    "remove-orte-table-row",
     "format-orte-text",
     "apply-orte-tooltip"
   ]);
@@ -40,9 +53,11 @@
     ".orte-scene-host",
     ".place-template-toc",
     ".orte-inline-toolbar",
+    ".orte-inline-status-widget",
     ".orte-inline-image-panel",
     ".orte-inline-image-overlay",
-    ".orte-table-add-control"
+    ".orte-table-add-control",
+    ".orte-table-row-controls"
   ].join(", ");
 
   init();
@@ -54,6 +69,7 @@
     rebuildTargets();
     if (isCompatiblePayload(localPayload)) applyPayload(localPayload, { skipTables: true });
     renderToolbar();
+    renderStatusWidget();
     wireEvents();
     connectRemote();
   }
@@ -63,7 +79,7 @@
     toolbar.className = "orte-inline-toolbar";
     toolbar.innerHTML = `
       <strong>Direktbearbeitung</strong>
-      <span data-orte-inline-status>bereit</span>
+      <span class="orte-inline-status-text" data-orte-inline-status>bereit</span>
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
       <button type="button" data-action="hard-reset-orte-template" data-orte-inline-edit-only>Hard Reset</button>
@@ -75,7 +91,7 @@
           <span>Farbe</span>
           <input type="color" data-orte-format-color value="#3b220c">
         </label>
-        <label class="orte-inline-tooltip-tool" title="Tooltip fuer markierten Text">
+        <label class="orte-inline-tooltip-tool" title="Tooltip für markierten Text">
           <span>Tooltip</span>
           <input type="text" data-orte-format-tooltip placeholder="Hinweistext">
           <button type="button" data-action="apply-orte-tooltip">Setzen</button>
@@ -83,6 +99,37 @@
       </span>
     `;
     document.body.prepend(toolbar);
+  }
+
+  function renderStatusWidget() {
+    const existing = document.querySelector("[data-orte-status-widget]");
+    if (existing) existing.remove();
+
+    const widget = document.createElement("div");
+    widget.className = "orte-inline-status-widget";
+    widget.dataset.orteStatusWidget = "";
+    widget.dataset.state = "idle";
+    widget.innerHTML = `
+      <button type="button" class="orte-inline-status-dot" data-action="toggle-orte-status-panel" aria-expanded="false" title="Direktbearbeitung Status"></button>
+      <section class="orte-inline-status-panel" data-orte-status-panel hidden>
+        <div class="orte-inline-status-panel-head">
+          <strong>Direktbearbeitung</strong>
+          <span data-orte-inline-status-panel-state>bereit</span>
+        </div>
+        <p data-orte-status-message>bereit</p>
+        <div class="orte-inline-version-choice" data-orte-version-choice hidden>
+          <p>Lokale und Online-Version unterscheiden sich.</p>
+          <div class="orte-inline-version-actions">
+            <button type="button" data-action="use-orte-latest-version">Neueste wählen</button>
+            <button type="button" data-action="use-orte-online-version">Online laden</button>
+            <button type="button" data-action="use-orte-local-version">Lokal behalten</button>
+          </div>
+        </div>
+      </section>
+    `;
+    document.body.append(widget);
+    applyStatusWidgetPosition(widget);
+    wireStatusDrag(widget);
   }
 
   function wireEvents() {
@@ -164,6 +211,30 @@
       return;
     }
 
+    if (action === "toggle-orte-status-panel") {
+      if (!statusSuppressClick) setStatusPanelOpen(!statusPanelOpen);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "use-orte-local-version") {
+      useLocalVersion();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "use-orte-online-version") {
+      useOnlineVersion();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "use-orte-latest-version") {
+      useLatestVersion();
+      event.preventDefault();
+      return;
+    }
+
     if (action === "close-orte-image-panel") {
       closeImagePanel();
       event.preventDefault();
@@ -178,6 +249,18 @@
 
     if (action === "add-orte-table-row") {
       addTableRow(target);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "insert-orte-table-row-before" || action === "insert-orte-table-row-after") {
+      insertTableRowNear(target, action === "insert-orte-table-row-before" ? "before" : "after");
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "remove-orte-table-row") {
+      removeTableRowNear(target);
       event.preventDefault();
       return;
     }
@@ -228,9 +311,9 @@
 
     prepareTables();
     normalizeRawImages();
-    collectTextItems();
     collectImageItems();
     collectRatingItems();
+    collectTextItems();
     collectTableItems();
     renderImageSlots();
     renderRatings();
@@ -245,13 +328,23 @@
   }
 
   function collectTextItems() {
-    let index = 0;
+    let textIndex = 0;
+    let tableTextIndex = 0;
+    const activeTextIds = new Set();
     getEditableCandidates().forEach((node) => {
-      const id = `text-${String(index).padStart(4, "0")}`;
-      index += 1;
+      const table = node.closest("[data-orte-table-id]");
+      const id = table
+        ? `table-text-${String(tableTextIndex++).padStart(4, "0")}`
+        : `text-${String(textIndex++).padStart(4, "0")}`;
       node.dataset.orteInlineText = id;
-      if (state.texts[id] === undefined) state.texts[id] = node.innerHTML;
-      textItems.push({ id, node });
+      if (!table) {
+        activeTextIds.add(id);
+        if (state.texts[id] === undefined) state.texts[id] = node.innerHTML;
+      }
+      textItems.push({ id, node, inTable: !!table });
+    });
+    Object.keys(state.texts).forEach((id) => {
+      if (!activeTextIds.has(id)) delete state.texts[id];
     });
   }
 
@@ -283,6 +376,20 @@
 
   function collectRatingItems() {
     let index = 0;
+    const usedKeys = new Set();
+    const activeKeys = new Set();
+    const makeKey = () => {
+      let key = `rating-${String(index).padStart(4, "0")}`;
+      while (usedKeys.has(key)) {
+        index += 1;
+        key = `rating-${String(index).padStart(4, "0")}`;
+      }
+      index += 1;
+      usedKeys.add(key);
+      activeKeys.add(key);
+      return key;
+    };
+
     root.querySelectorAll("table.pt-s-0040 tr").forEach((row) => {
       const cells = Array.from(row.cells || []);
       if (cells.length < 8) return;
@@ -291,13 +398,21 @@
       [4, 5, 6].forEach((cellIndex) => {
         const cell = cells[cellIndex];
         if (!cell) return;
-        const key = cell.dataset.orteRatingKey || `rating-${String(index).padStart(4, "0")}`;
-        index += 1;
+        const existingKey = String(cell.dataset.orteRatingKey || "").trim();
+        const key = existingKey && !usedKeys.has(existingKey)
+          ? existingKey
+          : makeKey();
+        usedKeys.add(key);
+        activeKeys.add(key);
         cell.dataset.orteRatingKey = key;
         cell.dataset.orteRatingKind = cellIndex === 5 ? "ruf" : "stern";
         if (state.ratings[key] === undefined) state.ratings[key] = inferRatingValue(cell);
         ratingItems.push({ key, node: cell, kind: cell.dataset.orteRatingKind });
       });
+    });
+
+    Object.keys(state.ratings).forEach((key) => {
+      if (!activeKeys.has(key)) delete state.ratings[key];
     });
   }
 
@@ -349,17 +464,18 @@
     };
 
     root.querySelectorAll(".orte-image-slot:not([data-orte-image-key])").forEach((slot) => {
-      const key = makeKey("auto-slot");
+      const label = slot.dataset.orteImageLabel || getImageSlotContextLabel(slot);
+      const key = makeKey(getImageKeyPrefix(slot));
       slot.dataset.orteImageKey = key;
-      slot.dataset.orteImageLabel = slot.dataset.orteImageLabel || "Bildplatzhalter";
+      slot.dataset.orteImageLabel = label;
       slot.setAttribute("aria-label", slot.dataset.orteImageLabel);
     });
 
     root.querySelectorAll("img").forEach((image) => {
       if (image.closest("[data-orte-image-key]") || isInsideIgnoredSurface(image)) return;
 
-      const key = image.dataset.orteInlineImageKey || makeKey("auto-img");
       const label = getImageSlotLabel(image);
+      const key = image.dataset.orteInlineImageKey || makeKey(getImageKeyPrefix(image));
       const slot = document.createElement("span");
       slot.className = "orte-image-slot has-image";
       slot.dataset.orteImageKey = key;
@@ -425,12 +541,13 @@
   }
 
   function renderTableControls() {
-    document.querySelectorAll(".orte-table-add-control").forEach((control) => control.remove());
+    document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls").forEach((control) => control.remove());
     tableItems.forEach((item) => {
       const control = document.createElement("div");
       control.className = "orte-table-add-control";
       control.innerHTML = `<button type="button" data-action="add-orte-table-row" data-orte-table-target="${escapeAttr(item.id)}">+ Zeile</button>`;
       item.table.insertAdjacentElement("afterend", control);
+      renderRowControls(item.table, item.id);
     });
   }
 
@@ -449,7 +566,7 @@
       <div class="orte-inline-image-panel" role="dialog" aria-modal="true" aria-label="${escapeAttr(item.label)} bearbeiten">
         <div class="orte-inline-image-panel-head">
           <strong>${escapeHtml(item.label)}</strong>
-          <button type="button" data-action="close-orte-image-panel" aria-label="Schliessen">x</button>
+          <button type="button" data-action="close-orte-image-panel" aria-label="Schließen">x</button>
         </div>
         <label>
           <span>Bild-URL</span>
@@ -469,7 +586,7 @@
             <input type="range" min="20" max="100" step="5" data-orte-inline-image-field="width" value="${escapeAttr(image.width || 100)}">
           </label>
           <label>
-            <span>Hoehe</span>
+            <span>Höhe</span>
             <input type="range" min="80" max="720" step="20" data-orte-inline-image-field="maxHeight" value="${escapeAttr(image.maxHeight || 260)}">
           </label>
         </div>
@@ -488,7 +605,7 @@
             <span>Einpassung</span>
             <select data-orte-inline-image-field="fit">
               ${renderOption("contain", "Einpassen", image.fit)}
-              ${renderOption("cover", "Fuellen", image.fit)}
+              ${renderOption("cover", "Füllen", image.fit)}
             </select>
           </label>
         </div>
@@ -551,42 +668,144 @@
     markDirty();
   }
 
-  function addGenericTableRow(table) {
+  function insertTableRowNear(button, position) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    if (table.classList.contains("pt-s-0067")) {
+      addPersonalityRows(table, row, position);
+    } else {
+      addGenericTableRow(table, row, position);
+    }
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
+  function removeTableRowNear(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    if (table.classList.contains("pt-s-0067")) {
+      removePersonalityRows(table, row);
+    } else {
+      removeGenericTableRow(table, row);
+    }
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
+  function addGenericTableRow(table, referenceRow = null, position = "after") {
     const tbody = table.tBodies[0];
-    const candidate = Array.from(tbody.rows).reverse().find((row) => isCloneableDataRow(row, table));
+    const candidate = referenceRow && isCloneableDataRow(referenceRow, table)
+      ? referenceRow
+      : Array.from(tbody.rows).reverse().find((row) => isCloneableDataRow(row, table));
     if (!candidate) return;
 
     const clone = candidate.cloneNode(true);
     resetClonedFragment(clone);
-    candidate.insertAdjacentElement("afterend", clone);
+    candidate.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
   }
 
-  function addPersonalityRows(table) {
+  function addPersonalityRows(table, referenceRow = null, position = "after") {
     const tbody = table.tBodies[0];
-    const rows = Array.from(tbody.rows);
-    const startIndex = rows.map((row, index) => row.querySelector(".pt-s-0077") ? index : -1)
-      .filter((index) => index >= 0)
-      .pop();
-    if (startIndex === undefined) return;
+    const groups = getPersonalityGroups(table);
+    const group = getPersonalityGroupForRow(table, referenceRow) || groups[groups.length - 1];
+    if (!group?.length) return;
 
-    const group = rows.slice(startIndex, Math.min(startIndex + 4, rows.length));
     const clones = group.map((row) => {
       const clone = row.cloneNode(true);
       resetClonedFragment(clone);
       return clone;
     });
-    group[group.length - 1].after(...clones);
+    if (position === "before") {
+      group[0].before(...clones);
+    } else {
+      group[group.length - 1].after(...clones);
+    }
+  }
+
+  function removeGenericTableRow(table, row) {
+    const cloneableRows = Array.from(table.tBodies[0]?.rows || []).filter((candidate) => isCloneableDataRow(candidate, table));
+    if (cloneableRows.length <= 1 || !isCloneableDataRow(row, table)) return;
+    row.remove();
+  }
+
+  function removePersonalityRows(table, row) {
+    const groups = getPersonalityGroups(table);
+    const group = getPersonalityGroupForRow(table, row);
+    if (groups.length <= 1 || !group?.length) return;
+    group.forEach((groupRow) => groupRow.remove());
+  }
+
+  function renderRowControls(table, tableId) {
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    rows.forEach((row, index) => {
+      const canControl = table.classList.contains("pt-s-0067")
+        ? isPersonalityGroupStart(row)
+        : isCloneableDataRow(row, table);
+      if (!canControl) return;
+
+      const cell = row.cells?.[0];
+      if (!cell) return;
+      cell.classList.add("orte-table-control-cell");
+      const controls = document.createElement("span");
+      controls.className = "orte-table-row-controls";
+      controls.innerHTML = `
+        <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile davor einfügen">+</button>
+        <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile danach einfügen">+</button>
+        <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile entfernen">-</button>
+      `;
+      cell.prepend(controls);
+    });
+  }
+
+  function getTableRowByIndex(table, index) {
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    const number = Number(index);
+    return Number.isInteger(number) ? rows[number] || null : null;
+  }
+
+  function isPersonalityGroupStart(row) {
+    return !!row?.querySelector?.(".pt-s-0077");
+  }
+
+  function getPersonalityGroups(table) {
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    const startIndexes = rows
+      .map((row, index) => isPersonalityGroupStart(row) ? index : -1)
+      .filter((index) => index >= 0);
+    return startIndexes.map((startIndex, groupIndex) => {
+      const endIndex = startIndexes[groupIndex + 1] ?? Math.min(startIndex + 4, rows.length);
+      return rows.slice(startIndex, endIndex);
+    });
+  }
+
+  function getPersonalityGroupForRow(table, row) {
+    if (!row) return null;
+    return getPersonalityGroups(table).find((group) => group.includes(row)) || null;
   }
 
   function isCloneableDataRow(row, table) {
     const cells = Array.from(row.cells || []);
     if (cells.length <= 1) return false;
     if (row.querySelector("th")) return false;
+    if (table?.classList?.contains("pt-s-0040") && !cells[0]?.querySelector("[data-orte-image-key]")) return false;
     const tableWidth = table.rows[0]?.cells?.length || cells.length;
     return !cells.some((cell) => Number(cell.colSpan || 1) >= tableWidth && cells.length === 1);
   }
 
   function resetClonedFragment(fragment) {
+    fragment.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
     fragment.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
       node.removeAttribute("contenteditable");
       node.removeAttribute("data-orte-inline-text");
@@ -637,9 +856,10 @@
     }
 
     Object.entries(payload.texts || {}).forEach(([id, html]) => {
-      state.texts[id] = String(html || "");
       const item = textItems.find((entry) => entry.id === id);
-      if (item) item.node.innerHTML = state.texts[id];
+      if (!item || item.inTable) return;
+      state.texts[id] = String(html || "");
+      item.node.innerHTML = state.texts[id];
     });
 
     Object.entries(payload.images || {}).forEach(([key, image]) => {
@@ -674,8 +894,11 @@
 
   function persistEditable(editable) {
     if (!editable?.dataset?.orteInlineText) return;
+    if (editable.closest("[data-orte-table-id]")) {
+      updateOwningTable(editable);
+      return;
+    }
     state.texts[editable.dataset.orteInlineText] = editable.innerHTML;
-    updateOwningTable(editable);
   }
 
   function updateTableState(table) {
@@ -688,8 +911,11 @@
     const tbody = table.tBodies[0];
     if (!tbody) return "";
     const clone = tbody.cloneNode(true);
-    clone.querySelectorAll("[contenteditable]").forEach((node) => node.removeAttribute("contenteditable"));
-    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-inline-image-hint").forEach((node) => node.remove());
+    clone.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
+      node.removeAttribute("contenteditable");
+      node.removeAttribute("data-orte-inline-text");
+    });
+    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-inline-image-hint").forEach((node) => node.remove());
     clone.querySelectorAll("[data-orte-rating-key]").forEach((node) => {
       const key = node.dataset.orteRatingKey;
       const kind = node.dataset.orteRatingKind || "stern";
@@ -726,12 +952,12 @@
 
   async function hardResetTemplate() {
     const confirmed = window.confirm(
-      `Hard Reset fuer diese Orte-Vorlage?\n\nGeloescht werden nur Orte-Daten fuer "${pageId}": Direktbearbeitung, lokale Szenenliste und Orte-Szenendokumente. Almanach-Kommentare und AleriaAlmanach-Daten bleiben unangetastet.`
+      `Hard Reset für diese Orte-Vorlage?\n\nGelöscht werden nur Orte-Daten für "${pageId}": Direktbearbeitung, lokale Szenenliste und Orte-Szenendokumente. Almanach-Kommentare und AleriaAlmanach-Daten bleiben unangetastet.`
     );
     if (!confirmed) return;
 
     closeImagePanel();
-    setStatus("reset laeuft");
+    setStatus("Reset läuft");
 
     try {
       removeLocalTemplateKeys();
@@ -752,7 +978,9 @@
       `aleria:orte:inline-content:v1:${pageId}`,
       `aleria:orte:inline-content:v2:${pageId}`,
       `aleria:orte:scene-index:${pageId}`,
+      `aleria:orte:scene-index-meta:${pageId}`,
       `aleria:orte:session-module:${pageId}:`,
+      `aleria:orte:session-module-meta:${pageId}:`,
       `aleria:orte:comments:orte:${pageId}:`
     ];
     try {
@@ -769,16 +997,45 @@
     if (!store?.subscribe) return;
 
     store.subscribe(pageId, (payload) => {
-      if (!payload || dirty) return;
+      if (!payload) return;
       if (!isCompatiblePayload(payload)) {
         setStatus("alte Online-Daten ignoriert");
         return;
       }
+
+      if (dirty) {
+        pendingLocalPayload = clonePayload();
+        pendingRemotePayload = payload;
+        setStatus("Online-Version wartet", "warning");
+        updateVersionChoice();
+        return;
+      }
+
+      const currentPayload = clonePayload();
+      if (payloadSignature(payload) === payloadSignature(currentPayload)) {
+        saveLocal(payload);
+        pendingLocalPayload = null;
+        pendingRemotePayload = null;
+        setStatus("online synchronisiert", "ok");
+        updateVersionChoice();
+        return;
+      }
+
+      const localPayload = loadLocal();
+      if (isCompatiblePayload(localPayload) && payloadSignature(localPayload) !== payloadSignature(payload)) {
+        pendingLocalPayload = localPayload;
+        pendingRemotePayload = payload;
+        setStatus("Version wählen", "warning");
+        setStatusPanelOpen(true);
+        updateVersionChoice();
+        return;
+      }
+
       applyPayload(payload);
       saveLocal(payload);
-      setStatus("online geladen");
+      setStatus("online geladen", "ok");
     }, () => {
-      setStatus("online nicht erreichbar");
+      setStatus("online nicht erreichbar", "error");
     });
   }
 
@@ -820,6 +1077,7 @@
     tableItems.forEach((item) => updateTableState(item.table));
     return {
       contentSchemaVersion: CONTENT_SCHEMA_VERSION,
+      savedAtClient: Date.now(),
       texts: { ...state.texts },
       tables: { ...state.tables },
       ratings: { ...state.ratings },
@@ -916,11 +1174,73 @@
     return !!payload && Number(payload.contentSchemaVersion) === CONTENT_SCHEMA_VERSION;
   }
 
+  function payloadSignature(payload) {
+    const source = payload && typeof payload === "object" ? payload : {};
+    return JSON.stringify({
+      contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
+      texts: source.texts || {},
+      tables: source.tables || {},
+      ratings: source.ratings || {},
+      images: source.images || {}
+    });
+  }
+
+  function useOnlineVersion() {
+    if (!isCompatiblePayload(pendingRemotePayload)) return;
+    applyPayload(pendingRemotePayload);
+    saveLocal(pendingRemotePayload);
+    dirty = false;
+    pendingLocalPayload = null;
+    pendingRemotePayload = null;
+    updateVersionChoice();
+    setStatus("Online-Version geladen", "ok");
+  }
+
+  function useLocalVersion() {
+    if (!isCompatiblePayload(pendingLocalPayload)) return;
+    applyPayload(pendingLocalPayload);
+    saveLocal(pendingLocalPayload);
+    pendingRemotePayload = null;
+    pendingLocalPayload = null;
+    dirty = true;
+    updateVersionChoice();
+    setStatus("lokale Version behalten", "warning");
+    saveNow();
+  }
+
+  function useLatestVersion() {
+    if (!isCompatiblePayload(pendingLocalPayload) && !isCompatiblePayload(pendingRemotePayload)) return;
+    const localTime = getPayloadTime(pendingLocalPayload);
+    const remoteTime = getPayloadTime(pendingRemotePayload);
+    if (remoteTime >= localTime) {
+      useOnlineVersion();
+      return;
+    }
+    useLocalVersion();
+  }
+
+  function getPayloadTime(payload) {
+    const number = Number(payload?.savedAtClient || payload?.updatedAtClient);
+    return Number.isFinite(number) ? number : 0;
+  }
+
   function getImageSlotLabel(image) {
     if (image.closest(".portrait-cell")) return "Portrait";
     if (image.closest(".wappen")) return "Wappen/Symbol";
     const alt = image.getAttribute("alt") || "";
     return isPlaceholderSrc(alt) ? "Bildplatzhalter" : alt || "Bildplatzhalter";
+  }
+
+  function getImageSlotContextLabel(node) {
+    if (node.closest(".portrait-cell")) return "Portrait";
+    if (node.closest(".wappen")) return "Wappen/Symbol";
+    return "Bildplatzhalter";
+  }
+
+  function getImageKeyPrefix(node) {
+    if (node.closest(".portrait-cell")) return "portrait";
+    if (node.closest(".wappen")) return "symbol";
+    return "bild";
   }
 
   function getPlaceholderText(item) {
@@ -990,9 +1310,105 @@
     return String(window.AleriaOrteScenes?.ortId || window.ORTE_CONFIG?.docId || "grossstadt-vorlage");
   }
 
-  function setStatus(message) {
+  function setStatus(message, explicitState = "") {
     const status = document.querySelector("[data-orte-inline-status]");
     if (status) status.textContent = message;
+    const widget = document.querySelector("[data-orte-status-widget]");
+    const panelState = document.querySelector("[data-orte-inline-status-panel-state]");
+    const panelMessage = document.querySelector("[data-orte-status-message]");
+    const stateName = explicitState || inferStatusState(message);
+    if (widget) widget.dataset.state = stateName;
+    if (panelState) panelState.textContent = stateName === "ok" ? "synchronisiert" : stateName === "error" ? "Fehler" : stateName === "warning" ? "Hinweis" : "bereit";
+    if (panelMessage) panelMessage.textContent = message;
+  }
+
+  function inferStatusState(message) {
+    const value = String(message || "").toLowerCase();
+    if (value.includes("fehl") || value.includes("nicht erreichbar") || value.includes("ignoriert")) return "error";
+    if (value.includes("ungespeichert") || value.includes("reset") || value.includes("wählen") || value.includes("wartet")) return "warning";
+    if (value.includes("gespeichert") || value.includes("geladen") || value.includes("synchronisiert")) return "ok";
+    return "idle";
+  }
+
+  function setStatusPanelOpen(open) {
+    statusPanelOpen = !!open;
+    const panel = document.querySelector("[data-orte-status-panel]");
+    const button = document.querySelector("[data-action='toggle-orte-status-panel']");
+    if (panel) panel.hidden = !statusPanelOpen;
+    if (button) button.setAttribute("aria-expanded", String(statusPanelOpen));
+  }
+
+  function updateVersionChoice() {
+    const choice = document.querySelector("[data-orte-version-choice]");
+    if (!choice) return;
+    choice.hidden = !(isCompatiblePayload(pendingLocalPayload) && isCompatiblePayload(pendingRemotePayload));
+  }
+
+  function wireStatusDrag(widget) {
+    const handle = widget.querySelector("[data-action='toggle-orte-status-panel']");
+    if (!handle) return;
+    handle.addEventListener("pointerdown", (event) => {
+      statusDrag = {
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        left: widget.offsetLeft,
+        top: widget.offsetTop,
+        moved: false
+      };
+      handle.setPointerCapture(event.pointerId);
+    });
+
+    handle.addEventListener("pointermove", (event) => {
+      if (!statusDrag || statusDrag.pointerId !== event.pointerId) return;
+      const dx = event.clientX - statusDrag.startX;
+      const dy = event.clientY - statusDrag.startY;
+      if (Math.abs(dx) + Math.abs(dy) < 6 && !statusDrag.moved) return;
+      statusDrag.moved = true;
+      placeStatusWidget(widget, statusDrag.left + dx, statusDrag.top + dy);
+    });
+
+    handle.addEventListener("pointerup", (event) => {
+      if (!statusDrag || statusDrag.pointerId !== event.pointerId) return;
+      if (statusDrag.moved) {
+        saveStatusWidgetPosition(widget);
+        statusSuppressClick = true;
+        window.setTimeout(() => {
+          statusSuppressClick = false;
+        }, 0);
+      }
+      statusDrag = null;
+    });
+  }
+
+  function applyStatusWidgetPosition(widget) {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(statusPositionKey) || "null");
+      if (!saved || typeof saved !== "object") return;
+      placeStatusWidget(widget, Number(saved.left), Number(saved.top));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function saveStatusWidgetPosition(widget) {
+    try {
+      window.localStorage.setItem(statusPositionKey, JSON.stringify({
+        left: widget.offsetLeft,
+        top: widget.offsetTop
+      }));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function placeStatusWidget(widget, left, top) {
+    const safeLeft = clampNumber(left, 4, Math.max(4, window.innerWidth - widget.offsetWidth - 4), 14);
+    const safeTop = clampNumber(top, 4, Math.max(4, window.innerHeight - widget.offsetHeight - 4), window.innerHeight - 48);
+    widget.style.left = `${safeLeft}px`;
+    widget.style.top = `${safeTop}px`;
+    widget.style.right = "auto";
+    widget.style.bottom = "auto";
   }
 
   function normalizeWhitespace(value) {

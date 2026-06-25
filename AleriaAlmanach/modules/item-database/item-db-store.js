@@ -1,6 +1,8 @@
 const ITEM_DB_OVERRIDE_KEY = 'aleria-item-db-overrides-v1';
 const ITEM_DB_CUSTOM_KEY = 'aleria-item-db-custom-items-v1';
 const ITEM_DB_DELETED_KEY = 'aleria-item-db-deleted-items-v1';
+const ITEM_DB_SCAN_CACHE_KEY = 'aleria-item-db-scan-cache-v1';
+const ITEM_DB_CONFIG_KEY = 'aleria-item-db-config-v1';
 
 function itemDbReadJsonStore(key, fallback) {
   try {
@@ -50,6 +52,148 @@ function itemDbWriteDeletedKeys(keys) {
   itemDbWriteJsonStore(ITEM_DB_DELETED_KEY, Array.from(keys || []).filter(Boolean));
 }
 
+function itemDbReadScanCache() {
+  const items = itemDbReadJsonStore(ITEM_DB_SCAN_CACHE_KEY, []);
+  return Array.isArray(items) ? items.filter(item => item && typeof item === 'object') : [];
+}
+
+function itemDbWriteScanCache(items = []) {
+  itemDbWriteJsonStore(ITEM_DB_SCAN_CACHE_KEY, Array.isArray(items) ? items : []);
+}
+
+function itemDbReadConfig() {
+  const config = itemDbReadJsonStore(ITEM_DB_CONFIG_KEY, {});
+  return config && typeof config === 'object' ? {
+    customCategories: Array.isArray(config.customCategories) ? config.customCategories : [],
+    categorySettings: config.categorySettings && typeof config.categorySettings === 'object' ? config.categorySettings : {},
+    tags: Array.isArray(config.tags) ? config.tags : []
+  } : { customCategories: [], categorySettings: {}, tags: [] };
+}
+
+function itemDbWriteConfig(config = {}) {
+  itemDbWriteJsonStore(ITEM_DB_CONFIG_KEY, {
+    customCategories: Array.isArray(config.customCategories) ? config.customCategories : [],
+    categorySettings: config.categorySettings && typeof config.categorySettings === 'object' ? config.categorySettings : {},
+    tags: Array.isArray(config.tags) ? config.tags : []
+  });
+}
+
+function itemDbGetCategories() {
+  const config = itemDbReadConfig();
+  const defaults = Array.isArray(ITEM_DB_CATEGORIES) ? ITEM_DB_CATEGORIES : [];
+  const usedIds = new Set(defaults.map(category => category.id));
+  const customCategories = config.customCategories
+    .map(category => ({
+      id: itemDbSlugify(category?.id || category?.label || '', ''),
+      label: String(category?.label || '').trim()
+    }))
+    .filter(category => category.id && category.label && !usedIds.has(category.id));
+  return [...defaults, ...customCategories];
+}
+
+function itemDbGetCategorySettings(categoryId) {
+  const key = String(categoryId || '').trim();
+  const settings = itemDbReadConfig().categorySettings[key] || {};
+  return {
+    columns: itemDbNormalizeTags(settings.columns),
+    tags: itemDbNormalizeTags(settings.tags)
+  };
+}
+
+function itemDbGetDefinedTags() {
+  const config = itemDbReadConfig();
+  const configured = new Set(itemDbNormalizeTags(config.tags));
+  Object.values(config.categorySettings || {}).forEach(settings => {
+    itemDbNormalizeTags(settings?.tags).forEach(tag => configured.add(tag));
+  });
+  return Array.from(configured).sort((a, b) => a.localeCompare(b, 'de', { sensitivity: 'base' }));
+}
+
+function itemDbAddCustomCategory(values = {}) {
+  const label = String(values.label || '').trim();
+  if (!label) throw new Error('Ein Kategoriename ist erforderlich.');
+  const config = itemDbReadConfig();
+  const categories = itemDbGetCategories();
+  let id = itemDbSlugify(values.id || label, '');
+  if (!id) throw new Error('Aus diesem Kategorienamen kann keine ID gebildet werden.');
+  const usedIds = new Set(categories.map(category => category.id));
+  const baseId = id;
+  let index = 2;
+  while (usedIds.has(id)) {
+    id = `${baseId}-${index}`;
+    index += 1;
+  }
+  config.customCategories.push({ id, label });
+  config.categorySettings[id] = {
+    columns: itemDbNormalizeTags(values.columns),
+    tags: itemDbNormalizeTags(values.tags)
+  };
+  itemDbWriteConfig(config);
+  return id;
+}
+
+function itemDbSaveCategoryConfig(rows = [], tags = []) {
+  const config = itemDbReadConfig();
+  const defaultIds = new Set((Array.isArray(ITEM_DB_CATEGORIES) ? ITEM_DB_CATEGORIES : []).map(category => category.id));
+  const customCategories = [];
+  const categorySettings = {};
+
+  rows.forEach(row => {
+    const id = itemDbSlugify(row?.id || row?.label || '', '');
+    if (!id || id === 'alle') return;
+    const label = String(row?.label || '').trim();
+    if (!defaultIds.has(id) && label) customCategories.push({ id, label });
+    categorySettings[id] = {
+      columns: itemDbNormalizeTags(row?.columns),
+      tags: itemDbNormalizeTags(row?.tags)
+    };
+  });
+
+  itemDbWriteConfig({
+    customCategories,
+    categorySettings,
+    tags: itemDbNormalizeTags(tags)
+  });
+}
+
+function itemDbDeleteCustomCategory(categoryId) {
+  const id = String(categoryId || '').trim();
+  if (!id) return;
+  const config = itemDbReadConfig();
+  config.customCategories = config.customCategories.filter(category => String(category?.id || '') !== id);
+  delete config.categorySettings[id];
+  itemDbWriteConfig(config);
+}
+
+function itemDbGetSourceSnapshotItems() {
+  return itemDbReadScanCache()
+    .map(item => itemDbNormalizeItem(item))
+    .filter(Boolean);
+}
+
+function itemDbAppendScanCandidates(candidates = []) {
+  const cache = itemDbReadScanCache();
+  const existingKeys = new Set(cache.map(item => String(item?.canonicalKey || '').trim()).filter(Boolean));
+  let added = 0;
+
+  candidates.forEach(candidate => {
+    const normalized = itemDbNormalizeItem(candidate);
+    if (!normalized || existingKeys.has(normalized.canonicalKey)) return;
+    existingKeys.add(normalized.canonicalKey);
+    cache.push({
+      ...normalized,
+      canonicalKey: normalized.canonicalKey,
+      sourceRefs: normalized.sourceRefs || [],
+      hiddenMeta: normalized.hiddenMeta || {},
+      scannedAt: Date.now()
+    });
+    added += 1;
+  });
+
+  if (added) itemDbWriteScanCache(cache);
+  return { added, total: cache.length };
+}
+
 function itemDbApplyOverride(item, override = {}) {
   if (!item || !override || typeof override !== 'object') return item;
   const normalizedOverride = itemDbNormalizeItem({
@@ -71,7 +215,7 @@ function itemDbApplyOverride(item, override = {}) {
 
 function itemDbBuildIndex() {
   const merged = new Map();
-  itemDbCollectSourceCandidates().forEach(candidate => {
+  itemDbGetSourceSnapshotItems().forEach(candidate => {
     const normalized = itemDbNormalizeItem(candidate);
     if (!normalized) return;
     const existing = merged.get(normalized.canonicalKey);
@@ -187,4 +331,27 @@ function itemDbDeleteItem(canonicalKey) {
   const overrides = itemDbReadOverrides();
   delete overrides[key];
   itemDbWriteOverrides(overrides);
+}
+
+function itemDbExportDatabasePayload() {
+  return {
+    schema: 'aleria-item-db-export-v1',
+    exportedAt: new Date().toISOString(),
+    scanCache: itemDbReadScanCache(),
+    customItems: itemDbReadCustomItems(),
+    overrides: itemDbReadOverrides(),
+    deletedKeys: Array.from(itemDbReadDeletedKeys()),
+    config: itemDbReadConfig()
+  };
+}
+
+function itemDbImportDatabasePayload(payload = {}) {
+  if (!payload || typeof payload !== 'object' || payload.schema !== 'aleria-item-db-export-v1') {
+    throw new Error('Diese Datei ist kein gueltiger Items-und-Gueter-Datenbankexport.');
+  }
+  itemDbWriteScanCache(Array.isArray(payload.scanCache) ? payload.scanCache : []);
+  itemDbWriteCustomItems(Array.isArray(payload.customItems) ? payload.customItems : []);
+  itemDbWriteOverrides(payload.overrides && typeof payload.overrides === 'object' ? payload.overrides : {});
+  itemDbWriteDeletedKeys(new Set(Array.isArray(payload.deletedKeys) ? payload.deletedKeys : []));
+  itemDbWriteConfig(payload.config && typeof payload.config === 'object' ? payload.config : {});
 }

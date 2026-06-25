@@ -8,7 +8,8 @@ const COMMENT_KIND_LABELS = {
   shout: 'Rufen',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
-  'scene-transition-event': 'Szenenwechsel'
+  'scene-transition-event': 'Szenenwechsel',
+  'scene-poll-event': 'Abstimmung'
 };
 
 function normalizeCommentKind(kind, narrator = false) {
@@ -63,6 +64,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (typeof isScenePollComment === 'function' && isScenePollComment(c)) {
+    return renderScenePollComment(c, idx);
+  }
   if (typeof isSceneTransitionComment === 'function' && isSceneTransitionComment(c)) {
     return renderSceneTransitionComment(c, idx);
   }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "pageId": "grossstadt-vorlage",
-  "description": "Hard Reset fuer die Grossstadt-Vorlagenseite. Dieser Reset betrifft nur Orte-Vorlagendaten.",
+  "description": "Hard Reset für die Großstadt-Vorlagenseite. Dieser Reset betrifft nur Orte-Vorlagendaten.",
   "deletes": {
     "localStorage": [
       "aleria:orte:inline-content:v1:grossstadt-vorlage",

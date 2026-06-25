@@ -114,7 +114,7 @@ img {
   max-width: 100%;
 }
 
-.grossstadt-template .place-spacer {
+.grossstadt-template .place-spacer:not(:has(.orte-image-slot, [data-orte-image-key])) {
   display: none;
 }
 
@@ -238,6 +238,10 @@ img {
   display: none;
 }
 
+.orte-image-slot:not(.has-image):not(.is-compact-image):not(.is-portrait-image) {
+  min-width: min(100%, 260px);
+}
+
 .grossstadt-template .wappen .orte-image-slot,
 .grossstadt-template .portrait-cell .orte-image-slot {
   max-width: 220px;
@@ -268,6 +272,36 @@ img {
 .grossstadt-template .wappen .orte-image-slot img,
 .grossstadt-template .portrait-cell .orte-image-slot img {
   max-height: min(var(--orte-image-max-height, 210px), 420px);
+}
+
+.grossstadt-template td:is(
+  .pt-s-0050,
+  .pt-s-0062,
+  .pt-s-0073,
+  .pt-s-0081,
+  .pt-s-0082,
+  .pt-s-0083,
+  .region-s-0005
+)[colspan]:not(:has(.orte-image-slot, [data-orte-image-key], img)) {
+  height: 18px;
+  min-height: 18px;
+  padding: 2px 8px;
+  background:
+    linear-gradient(90deg, transparent, rgba(94, 63, 24, 0.18), transparent),
+    rgba(238, 217, 162, 0.64);
+  color: transparent;
+}
+
+.grossstadt-template td:is(
+  .pt-s-0050,
+  .pt-s-0062,
+  .pt-s-0073,
+  .pt-s-0081,
+  .pt-s-0082,
+  .pt-s-0083,
+  .region-s-0005
+)[colspan]:not(:has(.orte-image-slot, [data-orte-image-key], img)) > * {
+  display: none;
 }
 
 .place-template-toc {
@@ -373,6 +407,16 @@ img {
 
 .grossstadt-region-toggle > summary::marker {
   color: var(--place-text-light);
+}
+
+.grossstadt-template .orte-region-table .region-map-cell {
+  width: auto;
+  padding: 8px;
+}
+
+.grossstadt-template .orte-region-table .region-map-slot {
+  width: 100%;
+  min-height: 150px;
 }
 
 .grossstadt-template .pt-s-0040 {

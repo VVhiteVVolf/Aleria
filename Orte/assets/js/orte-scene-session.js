@@ -158,16 +158,21 @@ function openModuleEditorForCurrent() {
   const hostMap = new Map(hosts.map((host) => [String(host.dataset.orteScene || "").trim(), host]));
   const ortId = String(config.ortId || "ort-vorlage");
   const indexStorageKey = `aleria:orte:scene-index:${ortId}`;
+  const indexMetaStorageKey = `aleria:orte:scene-index-meta:${ortId}`;
   let sceneOrder = [];
   let sidebar = null;
   let sidebarOpen = false;
   let saveIndexTimer = 0;
   let runtimePromise = null;
+  let sceneIndexStatus = "";
 
   const stylePaths = [
     { href: "styles/modal.css?v=orte-almanach-session-v1" },
     { href: "styles/comments.css?v=orte-almanach-session-v1" },
     { href: "styles/comment-character-picker.css?v=orte-almanach-session-v1" },
+    { href: "styles/scene-time.css?v=orte-almanach-session-v1" },
+    { href: "styles/scene-transition.css?v=orte-almanach-session-v1" },
+    { href: "styles/scene-polls.css?v=orte-almanach-scene-polls-v1" },
     { href: "styles/module-editor.css?v=orte-almanach-editor-v1" },
     { href: "styles/module-page-boards.css?v=orte-almanach-editor-v1" },
     { href: "styles/session.css?v=orte-almanach-session-v1" },
@@ -184,6 +189,12 @@ function openModuleEditorForCurrent() {
     "modules/sync/firebase-sync-status.js?v=orte-almanach-session-v1",
     "modules/session/session-focus.js?v=orte-almanach-session-v1",
     "modules/modal/modal-layout.js?v=orte-almanach-session-v1",
+    "modules/scene-time/scene-time-state.js?v=orte-almanach-session-v1",
+    "modules/scene-time/scene-time-ui.js?v=orte-almanach-session-v1",
+    "modules/scene-transition/scene-transition-state.js?v=orte-almanach-session-v1",
+    "modules/scene-transition/scene-transition-ui.js?v=orte-almanach-session-v1",
+    "modules/scene-polls/scene-polls-state.js?v=orte-almanach-scene-polls-v1",
+    "modules/scene-polls/scene-polls-ui.js?v=orte-almanach-scene-polls-v1",
     "modules/comments/comments-render.js?v=orte-almanach-session-v1",
     "modules/comments/comments-showcase-render.js?v=orte-almanach-session-v1",
     "modules/comments/comments-attachment-render.js?v=orte-almanach-session-v1",
@@ -194,6 +205,7 @@ function openModuleEditorForCurrent() {
     "modules/comments/comments-backend.js?v=orte-almanach-session-v1",
     "modules/comments/comments-form-state.js?v=orte-almanach-session-v1",
     "modules/characters/character-data.js?v=orte-almanach-session-v1",
+    "modules/characters/character-profile.js?v=orte-almanach-session-v1",
     "modules/characters/character-comment-picker.js?v=orte-almanach-session-v1",
     "modules/comments/comments-form.js?v=orte-almanach-session-v1",
     "modules/comments/comments-segment-base.js?v=orte-almanach-session-v1",
@@ -204,6 +216,9 @@ function openModuleEditorForCurrent() {
     "modules/comments/comments-turn.js?v=orte-almanach-session-v1",
     "modules/comments/comments-pagination.js?v=orte-almanach-session-v1",
     "modules/comments/comments-thread.js?v=orte-almanach-session-v1",
+    "modules/scene-time/scene-time-events.js?v=orte-almanach-session-v1",
+    "modules/scene-transition/scene-transition-events.js?v=orte-almanach-session-v1",
+    "modules/scene-polls/scene-polls-events.js?v=orte-almanach-scene-polls-v1",
     "modules/comments/comments-jump.js?v=orte-almanach-session-v1",
     "modules/comments/comments-submit.js?v=orte-almanach-session-v1",
     "modules/comments/comments-showcase.js?v=orte-almanach-session-v1",
@@ -254,6 +269,8 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-court.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-pages.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-controller.js?v=orte-almanach-editor-v1",
+    "modules/backup/almanach-backup.js?v=orte-almanach-editor-v1",
+    "module-import-export.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-events.js?v=orte-almanach-editor-v1",
     "modules/modal/modal-events.js?v=orte-almanach-session-v1"
   ];
@@ -299,16 +316,20 @@ function openModuleEditorForCurrent() {
       return;
     }
 
-    if (action === "orte-scene-close-editor") {
+    if (action === "orte-scene-editor-use-remote") {
       event.preventDefault();
-      closeSceneEditor();
+      const state = window.AleriaOrteSceneEditor?.activeState;
+      if (state) refreshOpenSceneEditorFromState(state, "Online-Stand übernommen.");
       return;
     }
 
-    if (action === "orte-scene-save-editor") {
+    if (action === "orte-scene-editor-save-local") {
       event.preventDefault();
-      saveSceneEditor(trigger.closest("[data-orte-scene-editor]"));
+      const state = window.AleriaOrteSceneEditor?.activeState;
+      if (state) saveLocalEditorConflictVersion(state);
+      return;
     }
+
   });
 
   window.AleriaOrteSceneRuntime = {
@@ -330,6 +351,8 @@ function openModuleEditorForCurrent() {
 
   function init() {
     ensureSidebar();
+    const localIndexMeta = loadSceneIndexMeta();
+    persistSceneIndex.lastLocalUpdatedAtClient = Number(localIndexMeta.localUpdatedAtClient) || 0;
     const localOrder = loadSceneIndex();
     const configuredOrder = getConfiguredSceneIds();
     sceneOrder = localOrder.length ? localOrder : configuredOrder;
@@ -352,34 +375,65 @@ function openModuleEditorForCurrent() {
 
   function normalizeModule(source, sceneId) {
     const raw = source && typeof source === "object" ? source : {};
-    const page = raw.page && typeof raw.page === "object" ? raw.page : {};
     const title = String(raw.title || sceneId || "Interaktive Szene");
-    const pageTitle = String(page.pageTitle || raw.pageTitle || title);
+    const pageSources = Array.isArray(raw.pages) && raw.pages.length
+      ? raw.pages
+      : [raw.page && typeof raw.page === "object" ? raw.page : {}];
+    const pages = pageSources.map((page, index) => normalizeScenePage(page, raw, sceneId, index, title));
+    const firstPage = pages[0] || normalizeScenePage({}, raw, sceneId, 0, title);
 
     return {
       id: String(raw.id || sceneId || "szene"),
       title,
       subtitle: String(raw.subtitle || "Interaktive Szene mit Kommentarfortsetzung"),
       stamp: String(raw.stamp || "SZENE"),
-      image: String(raw.image || page.image || ""),
-      imageWidth: Number.isFinite(Number(raw.imageWidth ?? page.imageWidth)) ? Number(raw.imageWidth ?? page.imageWidth) : 36,
-      page: {
-        pageTitle,
-        image: String(page.image || raw.image || ""),
-        imageWidth: Number.isFinite(Number(page.imageWidth ?? raw.imageWidth)) ? Number(page.imageWidth ?? raw.imageWidth) : 36,
-        imageFit: normalizeImageFit(page.imageFit || raw.imageFit),
-        imagePosition: normalizeImagePosition(page.imagePosition || raw.imagePosition),
-        imageSquare: !!(page.imageSquare || raw.imageSquare),
-        imageLandscape: !!(page.imageLandscape || raw.imageLandscape),
-        imageSemiLandscape: !!(page.imageSemiLandscape || raw.imageSemiLandscape),
-        imageTall: !!(page.imageTall || raw.imageTall),
-        sessionIntro: String(page.sessionIntro || raw.sessionIntro || buildLegacySessionIntro(raw.blocks)),
-        sessionHint: String(page.sessionHint || raw.sessionHint || "Fuehre diese Szene als Kommentar fort."),
-        sessionEmptyTitle: String(page.sessionEmptyTitle || raw.sessionEmptyTitle || "Die Szene ist offen"),
-        sessionEmptyText: String(page.sessionEmptyText || raw.sessionEmptyText || "Noch ist kein Beitrag eingetragen."),
-        commentThreadKey: String(page.commentThreadKey || raw.commentThreadKey || sceneId || "szene")
-      }
+      image: String(raw.image || firstPage.image || ""),
+      imageWidth: Number.isFinite(Number(raw.imageWidth ?? firstPage.imageWidth)) ? Number(raw.imageWidth ?? firstPage.imageWidth) : 36,
+      sessionCast: Array.isArray(raw.sessionCast) ? raw.sessionCast : [],
+      sessionCastDetails: Array.isArray(raw.sessionCastDetails) ? raw.sessionCastDetails : [],
+      page: firstPage,
+      pages
     };
+  }
+
+  function normalizeScenePage(pageSource, rawSource, sceneId, index, moduleTitle) {
+    const page = pageSource && typeof pageSource === "object" ? pageSource : {};
+    const raw = rawSource && typeof rawSource === "object" ? rawSource : {};
+    const isFirst = index === 0;
+    const fallbackIntro = isFirst ? buildLegacySessionIntro(raw.blocks) : "";
+    const imageWidthSource = page.imageWidth ?? raw.imageWidth;
+    const imageWidth = Number.isFinite(Number(imageWidthSource)) ? Number(imageWidthSource) : 36;
+    const pageTitleSource = page.pageTitle ?? (isFirst ? raw.pageTitle : "");
+    const imageSource = page.image ?? (isFirst ? raw.image : "");
+    const sessionHintSource = page.sessionHint ?? (isFirst ? raw.sessionHint : "");
+    const sessionEmptyTitleSource = page.sessionEmptyTitle ?? (isFirst ? raw.sessionEmptyTitle : "");
+    const sessionEmptyTextSource = page.sessionEmptyText ?? (isFirst ? raw.sessionEmptyText : "");
+
+    return {
+      ...page,
+      schemaVersion: Number.isFinite(Number(page.schemaVersion)) ? Number(page.schemaVersion) : 1,
+      sessionPage: true,
+      pageTitle: String(pageTitleSource || moduleTitle || `Seite ${index + 1}`),
+      image: String(imageSource || ""),
+      imageWidth,
+      imageFit: normalizeImageFit(page.imageFit || raw.imageFit),
+      imagePosition: normalizeImagePosition(page.imagePosition || raw.imagePosition),
+      imageSquare: !!(page.imageSquare || raw.imageSquare),
+      imageLandscape: !!(page.imageLandscape || raw.imageLandscape),
+      imageSemiLandscape: !!(page.imageSemiLandscape || raw.imageSemiLandscape),
+      imageTall: !!(page.imageTall || raw.imageTall),
+      sessionIntro: String(page.sessionIntro ?? (isFirst ? raw.sessionIntro : "") ?? fallbackIntro ?? ""),
+      sessionHint: String(sessionHintSource || "Führe diese Szene als Kommentar fort."),
+      sessionEmptyTitle: String(sessionEmptyTitleSource || "Die Szene ist offen"),
+      sessionEmptyText: String(sessionEmptyTextSource || "Noch ist kein Beitrag eingetragen."),
+      commentThreadKey: String(page.commentThreadKey || (isFirst ? raw.commentThreadKey : "") || (isFirst ? sceneId : `${sceneId}-seite-${index + 1}`))
+    };
+  }
+
+  function getScenePages(module) {
+    if (Array.isArray(module?.pages) && module.pages.length) return module.pages;
+    if (module?.page) return [module.page];
+    return [];
   }
 
   function ensureState(sceneId, moduleSource = null) {
@@ -393,11 +447,14 @@ function openModuleEditorForCurrent() {
     }
 
     const localModule = loadLocalModule(id);
+    const localModuleMeta = loadLocalModuleMeta(id);
     const state = {
       host: hostMap.get(id) || null,
       sceneId: id,
       ortId,
       module: normalizeModule(moduleSource || localModule || getConfiguredModule(id), id),
+      localUpdatedAtClient: Number(localModuleMeta.localUpdatedAtClient) || 0,
+      remoteUpdatedAtClient: Number(localModuleMeta.remoteUpdatedAtClient) || 0,
       status: ""
     };
     states.set(id, state);
@@ -420,7 +477,7 @@ function openModuleEditorForCurrent() {
         <div class="orte-session-preview-kicker">Interaktive Szene</div>
         <h3>${escapeHtmlLocal(state.module.title)}</h3>
         <div class="orte-session-preview-actions">
-          <button class="orte-session-button" type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(state.sceneId)}">Oeffnen</button>
+          <button class="orte-session-button" type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(state.sceneId)}">Öffnen</button>
           <span>${escapeHtmlLocal(state.status)}</span>
         </div>
       </article>
@@ -432,14 +489,24 @@ function openModuleEditorForCurrent() {
     sidebar = document.createElement("aside");
     sidebar.className = "orte-scene-sidebar";
     sidebar.dataset.open = "false";
+    sidebar.setAttribute("aria-label", "Ortsszenen");
     sidebar.innerHTML = `
-      <button class="orte-scene-sidebar-toggle" type="button" data-action="orte-scene-toggle-sidebar">Szenen</button>
+      <button class="orte-scene-sidebar-toggle" type="button" data-action="orte-scene-toggle-sidebar" aria-label="Ortsszenen öffnen">
+        <span>Szenen</span>
+      </button>
       <div class="orte-scene-sidebar-panel">
         <div class="orte-scene-sidebar-head">
-          <strong>Ortsszenen</strong>
-          <button type="button" data-action="orte-scene-add">+ Szene</button>
+          <div>
+            <span>Interaktive Szenen</span>
+            <strong>Ortsszenen</strong>
+          </div>
+          <div class="orte-scene-sidebar-head-actions">
+            <span class="orte-scene-count" data-orte-scene-count>0</span>
+            <button type="button" data-action="orte-scene-add">+ Szene</button>
+          </div>
         </div>
         <div class="orte-scene-sidebar-list" data-orte-scene-list></div>
+        <div class="orte-scene-sidebar-status" data-orte-scene-index-status hidden></div>
       </div>
     `;
     document.body.appendChild(sidebar);
@@ -447,11 +514,21 @@ function openModuleEditorForCurrent() {
 
   function setSidebarOpen(open) {
     sidebarOpen = !!open;
-    if (sidebar) sidebar.dataset.open = sidebarOpen ? "true" : "false";
+    if (sidebar) {
+      sidebar.dataset.open = sidebarOpen ? "true" : "false";
+      sidebar.querySelector(".orte-scene-sidebar-toggle")?.setAttribute("aria-expanded", sidebarOpen ? "true" : "false");
+    }
   }
 
   function renderSidebar() {
     ensureSidebar();
+    const count = sidebar.querySelector("[data-orte-scene-count]");
+    if (count) count.textContent = String(sceneOrder.length);
+    const indexStatus = sidebar.querySelector("[data-orte-scene-index-status]");
+    if (indexStatus) {
+      indexStatus.textContent = sceneIndexStatus;
+      indexStatus.hidden = !sceneIndexStatus;
+    }
     const list = sidebar.querySelector("[data-orte-scene-list]");
     if (!list) return;
     if (!sceneOrder.length) {
@@ -462,16 +539,20 @@ function openModuleEditorForCurrent() {
     list.innerHTML = sceneOrder.map((sceneId, index) => {
       const state = ensureState(sceneId);
       if (!state) return "";
+      const pageTitle = state.module.page?.pageTitle || state.module.title || `Szene ${index + 1}`;
+      const isActive = currentEntry?.orteSceneId === sceneId;
       return `
-        <article class="orte-scene-sidebar-card">
-          <div>
-            <span>${escapeHtmlLocal(state.module.stamp || `SZENE ${index + 1}`)}</span>
+        <article class="orte-scene-sidebar-card${isActive ? " active" : ""}">
+          <div class="orte-scene-card-index">${index + 1}</div>
+          <div class="orte-scene-card-main">
+            <div class="orte-scene-card-kicker">${escapeHtmlLocal(state.module.stamp || `SZENE ${index + 1}`)}</div>
             <strong>${escapeHtmlLocal(state.module.title)}</strong>
+            <span>${escapeHtmlLocal(pageTitle)}</span>
           </div>
           <div class="orte-scene-sidebar-actions">
-            <button type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(sceneId)}">Oeffnen</button>
+            <button type="button" data-action="open-orte-session" data-scene-id="${escapeAttrLocal(sceneId)}">Öffnen</button>
             <button type="button" data-action="orte-scene-edit" data-scene-id="${escapeAttrLocal(sceneId)}">Bearbeiten</button>
-            <button type="button" data-action="orte-scene-delete" data-scene-id="${escapeAttrLocal(sceneId)}">Loeschen</button>
+            <button type="button" data-action="orte-scene-delete" data-scene-id="${escapeAttrLocal(sceneId)}">Löschen</button>
           </div>
         </article>
       `;
@@ -500,6 +581,15 @@ function openModuleEditorForCurrent() {
   }
 
   function createDefaultModule(sceneId, index) {
+    const page = {
+      pageTitle: `${index} - Interaktive Szene`,
+      sessionPage: true,
+      sessionIntro: "Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+      sessionHint: "Führe diese Szene als Kommentar fort.",
+      sessionEmptyTitle: "Die Szene ist offen",
+      sessionEmptyText: "Noch ist kein Beitrag eingetragen.",
+      commentThreadKey: sceneId
+    };
     return {
       id: sceneId,
       title: `Szene ${index}`,
@@ -508,20 +598,13 @@ function openModuleEditorForCurrent() {
       image: "",
       imageWidth: 36,
       threadId: `orte:${ortId}:${sceneId}`,
-      page: {
-        pageTitle: `${index} - Interaktive Szene`,
-        sessionPage: true,
-        sessionIntro: "Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht spaeter ueber Kommentare.",
-        sessionHint: "Fuehre diese Szene als Kommentar fort.",
-        sessionEmptyTitle: "Die Szene ist offen",
-        sessionEmptyText: "Noch ist kein Beitrag eingetragen.",
-        commentThreadKey: sceneId
-      }
+      page,
+      pages: [page]
     };
   }
 
   async function deleteScene(state) {
-    const confirmed = window.confirm(`Szene "${state.module.title}" aus dieser Orte-Vorlage loeschen? Almanach-Kommentare werden nicht geloescht.`);
+    const confirmed = window.confirm(`Szene "${state.module.title}" aus dieser Orte-Vorlage löschen? Almanach-Kommentare werden nicht gelöscht.`);
     if (!confirmed) return;
     sceneOrder = sceneOrder.filter((id) => id !== state.sceneId);
     if (state.unsubscribeScene) state.unsubscribeScene();
@@ -539,8 +622,10 @@ function openModuleEditorForCurrent() {
 
     currentEntry = buildAlmanachEntry(state);
     currentPage = 0;
+    renderSidebar();
     renderPage(0, 0);
     document.body.style.overflow = "hidden";
+    document.getElementById("modal-overlay")?.classList.add("orte-session-modal");
     if (typeof activateDialog === "function") {
       activateDialog("modal-overlay", { initialFocus: ".modal-close" });
     } else {
@@ -553,8 +638,25 @@ function openModuleEditorForCurrent() {
 
   function buildAlmanachEntry(state) {
     const module = state.module;
-    const page = module.page;
     const entryId = `orte:${state.ortId}:${state.sceneId}`;
+    const pages = getScenePages(module).map((page, index) => ({
+      ...page,
+      sessionPage: true,
+      pageTitle: page.pageTitle || module.title || `Seite ${index + 1}`,
+      image: page.image || module.image || "",
+      imageWidth: page.imageWidth || module.imageWidth,
+      imageFit: page.imageFit,
+      imagePosition: page.imagePosition,
+      imageSquare: page.imageSquare,
+      imageLandscape: page.imageLandscape,
+      imageSemiLandscape: page.imageSemiLandscape,
+      imageTall: page.imageTall,
+      commentThreadKey: page.commentThreadKey || (index === 0 ? state.sceneId : `${state.sceneId}-seite-${index + 1}`),
+      sessionIntro: page.sessionIntro,
+      sessionHint: page.sessionHint,
+      sessionEmptyTitle: page.sessionEmptyTitle,
+      sessionEmptyText: page.sessionEmptyText
+    }));
     return {
       id: entryId,
       orteSceneId: state.sceneId,
@@ -568,23 +670,7 @@ function openModuleEditorForCurrent() {
       multipage: true,
       moduleWidth: 100,
       moduleHeight: 100,
-      pages: [{
-        sessionPage: true,
-        pageTitle: page.pageTitle,
-        image: page.image || module.image || "",
-        imageWidth: page.imageWidth || module.imageWidth,
-        imageFit: page.imageFit,
-        imagePosition: page.imagePosition,
-        imageSquare: page.imageSquare,
-        imageLandscape: page.imageLandscape,
-        imageSemiLandscape: page.imageSemiLandscape,
-        imageTall: page.imageTall,
-        commentThreadKey: page.commentThreadKey || state.sceneId || "szene",
-        sessionIntro: page.sessionIntro,
-        sessionHint: page.sessionHint,
-        sessionEmptyTitle: page.sessionEmptyTitle,
-        sessionEmptyText: page.sessionEmptyText
-      }]
+      pages
     };
   }
 
@@ -593,7 +679,9 @@ function openModuleEditorForCurrent() {
     await loadAlmanachCharacters();
     ensureModuleEditorSessionDependencies();
     if (typeof openModuleEditor !== "function") {
-      openFallbackSceneEditor(state);
+      const message = "Der Almanach-Szeneneditor konnte nicht geladen werden.";
+      if (typeof showAppStatus === "function") showAppStatus(message, "error");
+      else window.alert(message);
       return;
     }
 
@@ -608,115 +696,12 @@ function openModuleEditorForCurrent() {
     decorateOrteModuleEditor(state);
   }
 
-  function openFallbackSceneEditor(state) {
-    closeSceneEditor();
-    const module = state.module;
-    const page = module.page || {};
-    const overlay = document.createElement("div");
-    overlay.className = "orte-scene-editor-overlay";
-    overlay.dataset.orteSceneEditor = state.sceneId;
-    overlay.innerHTML = `
-      <div class="orte-scene-editor-dialog" role="dialog" aria-modal="true" aria-label="Ortsszene bearbeiten">
-        <div class="orte-scene-editor-head">
-          <div>
-            <span>Ortsszene bearbeiten</span>
-            <strong>${escapeHtmlLocal(module.title)}</strong>
-          </div>
-          <button type="button" data-action="orte-scene-close-editor" aria-label="Schließen">x</button>
-        </div>
-        <div class="orte-scene-editor-body">
-          <div class="orte-scene-editor-grid">
-            <label>Titel<input class="ose-title" type="text" value="${escapeAttrLocal(module.title)}"></label>
-            <label>Registertitel<input class="ose-page-title" type="text" value="${escapeAttrLocal(page.pageTitle || module.title)}"></label>
-            <label>Untertitel<input class="ose-subtitle" type="text" value="${escapeAttrLocal(module.subtitle)}"></label>
-            <label>Stempel<input class="ose-stamp" type="text" value="${escapeAttrLocal(module.stamp)}"></label>
-            <label class="wide">Bild-URL<input class="ose-image" type="url" value="${escapeAttrLocal(module.image)}" placeholder="https://..."></label>
-            <label>Bildbreite %<input class="ose-image-width" type="range" min="20" max="55" step="1" value="${escapeAttrLocal(module.imageWidth)}"></label>
-            <label>Kommentar-Schlüssel<input class="ose-thread" type="text" value="${escapeAttrLocal(page.commentThreadKey || state.sceneId)}"></label>
-          </div>
-          <div class="orte-scene-editor-session-fields">
-            ${buildSessionEditorFields(page)}
-          </div>
-        </div>
-        <div class="orte-scene-editor-footer">
-          <button type="button" data-action="orte-scene-close-editor">Abbrechen</button>
-          <button type="button" data-action="orte-scene-save-editor">Speichern</button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-    overlay.querySelector("input, textarea")?.focus();
-  }
-
-  function closeSceneEditor() {
-    document.querySelectorAll("[data-orte-scene-editor]").forEach((node) => node.remove());
-  }
-
-  async function saveSceneEditor(editor) {
-    if (!editor) return;
-    const sceneId = editor.dataset.orteSceneEditor || "";
-    const state = states.get(sceneId);
-    if (!state) return;
-
-    const card = editor;
-    const page = {
-      pageTitle: getValue(card, ".ose-page-title") || state.module.title,
-      commentThreadKey: getValue(card, ".ose-thread") || sceneId,
-      sessionPage: true
-    };
-    if (typeof collectSessionModuleEditorPage === "function") {
-      collectSessionModuleEditorPage(card, page);
-    } else {
-      page.sessionIntro = getValue(card, ".me-page-session-intro");
-      page.sessionHint = getValue(card, ".me-page-session-hint");
-      page.sessionEmptyTitle = getValue(card, ".me-page-session-empty-title");
-      page.sessionEmptyText = getValue(card, ".me-page-session-empty-text");
-    }
-
-    state.module = normalizeModule({
-      id: sceneId,
-      title: getValue(card, ".ose-title") || state.module.title,
-      subtitle: getValue(card, ".ose-subtitle"),
-      stamp: getValue(card, ".ose-stamp") || "ORTSZENE",
-      image: getValue(card, ".ose-image"),
-      imageWidth: getValue(card, ".ose-image-width"),
-      threadId: `orte:${ortId}:${sceneId}`,
-      page
-    }, sceneId);
-
-    saveLocalModule(state);
-    renderPreview(state);
-    renderSidebar();
-    await saveScene(state);
-    if (currentEntry?.orteSceneId === state.sceneId) {
-      currentEntry = buildAlmanachEntry(state);
-      renderPage(0, 0);
-    }
-    closeSceneEditor();
-  }
-
   function buildModuleEditorPayloadFromScene(state) {
     const module = state.module;
-    const page = module.page || {};
+    const pages = getScenePages(module);
+    const firstPage = pages[0] || module.page || {};
     const entryId = slugifyLocal(`${ortId}-${state.sceneId}`, "orte-szene");
-    const editorPage = {
-      schemaVersion: 1,
-      sessionPage: true,
-      pageTitle: page.pageTitle || module.title || "Interaktive Szene",
-      image: page.image || module.image || "",
-      imageWidth: page.imageWidth || module.imageWidth || 36,
-      imageFit: page.imageFit || "cover",
-      imagePosition: page.imagePosition || "top",
-      commentThreadKey: page.commentThreadKey || state.sceneId,
-      sessionIntro: page.sessionIntro || "",
-      sessionHint: page.sessionHint || "Führe diese Szene als Kommentar fort.",
-      sessionEmptyTitle: page.sessionEmptyTitle || "Die Szene ist offen",
-      sessionEmptyText: page.sessionEmptyText || "Noch ist kein Beitrag eingetragen."
-    };
-    if (page.imageSquare) editorPage.imageSquare = true;
-    if (page.imageLandscape) editorPage.imageLandscape = true;
-    if (page.imageSemiLandscape) editorPage.imageSemiLandscape = true;
-    if (page.imageTall) editorPage.imageTall = true;
+    const editorPages = pages.map((page, index) => buildModuleEditorPageFromScene(page, module, state, index));
 
     return {
       section: {
@@ -733,7 +718,7 @@ function openModuleEditorForCurrent() {
         category: `Orte · ${config.ortName || ortId}`,
         moduleWidth: 100,
         moduleHeight: 100,
-        image: module.image || page.image || "",
+        image: module.image || firstPage.image || "",
         stamp: module.stamp || "ORTSZENE",
         icon: "✦",
         symbol: "",
@@ -743,42 +728,67 @@ function openModuleEditorForCurrent() {
         enablePageComments: false,
         sessionCast: Array.isArray(module.sessionCast) ? module.sessionCast : [],
         sessionCastDetails: Array.isArray(module.sessionCastDetails) ? module.sessionCastDetails : [],
-        pages: [editorPage]
+        pages: editorPages.length ? editorPages : [buildModuleEditorPageFromScene(firstPage, module, state, 0)]
       }
     };
   }
 
+  function buildModuleEditorPageFromScene(pageSource, module, state, index) {
+    const page = pageSource && typeof pageSource === "object" ? pageSource : {};
+    const editorPage = {
+      ...page,
+      schemaVersion: Number.isFinite(Number(page.schemaVersion)) ? Number(page.schemaVersion) : 1,
+      sessionPage: true,
+      pageTitle: page.pageTitle || module.title || `Seite ${index + 1}`,
+      image: page.image || module.image || "",
+      imageWidth: page.imageWidth || module.imageWidth || 36,
+      imageFit: page.imageFit || "cover",
+      imagePosition: page.imagePosition || "top",
+      commentThreadKey: page.commentThreadKey || (index === 0 ? state.sceneId : `${state.sceneId}-seite-${index + 1}`),
+      sessionIntro: page.sessionIntro || "",
+      sessionHint: page.sessionHint || "Führe diese Szene als Kommentar fort.",
+      sessionEmptyTitle: page.sessionEmptyTitle || "Die Szene ist offen",
+      sessionEmptyText: page.sessionEmptyText || "Noch ist kein Beitrag eingetragen."
+    };
+    if (page.imageSquare) editorPage.imageSquare = true;
+    if (page.imageLandscape) editorPage.imageLandscape = true;
+    if (page.imageSemiLandscape) editorPage.imageSemiLandscape = true;
+    if (page.imageTall) editorPage.imageTall = true;
+    return editorPage;
+  }
+
   function applyModuleEditorPayloadToScene(state, payload) {
     const entry = payload?.entry || {};
-    const page = Array.isArray(entry.pages) && entry.pages.length ? entry.pages[0] : {};
+    const pages = Array.isArray(entry.pages) && entry.pages.length ? entry.pages : [{}];
+    const firstPage = pages[0] || {};
     state.module = normalizeModule({
       id: state.sceneId,
       title: entry.title || state.module.title,
       subtitle: entry.subtitle || "",
       stamp: entry.stamp || "ORTSZENE",
-      image: entry.image || page.image || "",
-      imageWidth: page.imageWidth || 36,
+      image: entry.image || firstPage.image || "",
+      imageWidth: firstPage.imageWidth || 36,
       sessionCast: Array.isArray(entry.sessionCast) ? entry.sessionCast : [],
       sessionCastDetails: Array.isArray(entry.sessionCastDetails) ? entry.sessionCastDetails : [],
-      page: {
-        ...page,
-        pageTitle: page.pageTitle || entry.title || state.module.title,
-        sessionPage: true,
-        commentThreadKey: page.commentThreadKey || state.sceneId,
-        sessionIntro: page.sessionIntro || "",
-        sessionHint: page.sessionHint || "Führe diese Szene als Kommentar fort.",
-        sessionEmptyTitle: page.sessionEmptyTitle || "Die Szene ist offen",
-        sessionEmptyText: page.sessionEmptyText || "Noch ist kein Beitrag eingetragen."
-      }
+      page: normalizeScenePage(firstPage, entry, state.sceneId, 0, entry.title || state.module.title),
+      pages: pages.map((page, index) => normalizeScenePage(page, entry, state.sceneId, index, entry.title || state.module.title))
     }, state.sceneId);
   }
 
   async function saveSceneFromModuleEditor() {
     const state = window.AleriaOrteSceneEditor?.activeState;
     if (!state) return;
+    if (state.editorRemoteConflict && typeof hasUnsavedModuleEditorChanges === "function" && hasUnsavedModuleEditorChanges()) {
+      if (typeof setModuleEditorStatus === "function") {
+        setModuleEditorStatus("Online-Stand hat sich geändert. Wähle zuerst, welche Fassung behalten werden soll.", true);
+      }
+      renderEditorConflictPanel(state);
+      return;
+    }
     try {
       const payload = collectModuleEditorPayload();
       applyModuleEditorPayloadToScene(state, payload);
+      state.editorRemoteConflict = false;
       saveLocalModule(state);
       renderPreview(state);
       renderSidebar();
@@ -788,7 +798,20 @@ function openModuleEditorForCurrent() {
         renderPage(0, 0);
       }
       if (typeof setModuleEditorStatus === "function") setModuleEditorStatus("Ortsszene gespeichert ✓");
+      const pendingCommentImport = typeof _moduleEditorPendingCommentImport !== "undefined"
+        ? _moduleEditorPendingCommentImport
+        : null;
+      let importedCommentSummary = null;
+      if (pendingCommentImport && typeof importModuleCommentsBundle === "function") {
+        if (typeof setModuleEditorStatus === "function") setModuleEditorStatus("Ortsszene gespeichert. Kommentare werden importiert...");
+        importedCommentSummary = await importModuleCommentsBundle(pendingCommentImport, buildAlmanachEntry(state).id);
+        _moduleEditorPendingCommentImport = null;
+      }
+      if (importedCommentSummary && typeof setModuleEditorStatus === "function") {
+        setModuleEditorStatus(`Ortsszene gespeichert ✓ Kommentare importiert: ${importedCommentSummary.commentCount} Kommentare, ${importedCommentSummary.turnCount} Redestab-Stände.`);
+      }
       if (typeof setModuleEditorCleanBaseline === "function") setModuleEditorCleanBaseline();
+      clearEditorConflictPanel();
     } catch (error) {
       if (typeof setModuleEditorStatus === "function") {
         setModuleEditorStatus(error.message || "Ortsszene konnte nicht gespeichert werden.", true);
@@ -801,6 +824,7 @@ function openModuleEditorForCurrent() {
     if (!state) return;
     await deleteScene(state);
     window.AleriaOrteSceneEditor.activeState = null;
+    clearEditorConflictPanel();
     if (typeof deactivateDialog === "function") deactivateDialog("module-editor-overlay");
     else document.getElementById("module-editor-overlay")?.classList.remove("active");
   }
@@ -816,6 +840,8 @@ function openModuleEditorForCurrent() {
     if (deleteButton) deleteButton.textContent = "Szene löschen";
     const template = overlay.querySelector("#me-template");
     if (template) template.value = "session";
+    if (state.editorRemoteConflict) renderEditorConflictPanel(state);
+    else clearEditorConflictPanel();
   }
 
   function buildSessionEditorFields(page) {
@@ -862,6 +888,50 @@ function openModuleEditorForCurrent() {
     if (typeof window.refreshModuleCommentThreadIoOptions !== "function") {
       window.refreshModuleCommentThreadIoOptions = () => {};
     }
+    if (typeof window.createInlinePageByType !== "function") {
+      window.createInlinePageByType = (type = "standard", index = 0) => {
+        if (typeof getModuleTemplateForPageType === "function") {
+          const template = getModuleTemplateForPageType(type);
+          if (typeof template?.createPage === "function") return template.createPage(index);
+        }
+        if (type === "session" && typeof createDefaultSceneSessionPage === "function") {
+          return createDefaultSceneSessionPage(index);
+        }
+        if (typeof createDefaultModulePage === "function") return createDefaultModulePage(index);
+        return {
+          schemaVersion: 1,
+          sessionPage: type === "session",
+          pageTitle: `Seite ${index + 1}`,
+          commentThreadKey: `seite-${index + 1}`
+        };
+      };
+    }
+    if (typeof window.cleanCustomSection !== "function") {
+      window.cleanCustomSection = (section) => {
+        const rawKey = String(section?.key || "").trim();
+        const rawPath = Array.isArray(section?.path) ? section.path : [];
+        const path = rawPath.map((part) => String(part || "").trim()).filter(Boolean);
+        const key = path.length ? path[path.length - 1] : (rawKey || "Orte");
+        const nodeId = String(section?.nodeId || "").trim();
+        const next = {
+          key,
+          tab: String(section?.tab || "").trim() || key,
+          desc: String(section?.desc || "").trim(),
+          entries: []
+        };
+        if (path.length) next.path = path;
+        if (nodeId) next.nodeId = nodeId;
+        return next;
+      };
+    }
+    if (typeof window.ensureModuleNodeForSection !== "function") {
+      window.ensureModuleNodeForSection = (section) => {
+        const path = Array.isArray(section?.path) && section.path.length
+          ? section.path
+          : [section?.tab || section?.key || "Orte"];
+        return `orte-${path.map((part) => slugifyLocal(part, "abschnitt")).join("-")}`;
+      };
+    }
     if (typeof window.showFriendlyAppError !== "function") {
       window.showFriendlyAppError = (error, fallback) => {
         if (typeof showAppStatus === "function") showAppStatus(fallback || error?.message || "Aktion fehlgeschlagen.", "error");
@@ -870,17 +940,26 @@ function openModuleEditorForCurrent() {
   }
 
   async function saveScene(state) {
+    const savedAtClient = Date.now();
+    state.localUpdatedAtClient = savedAtClient;
     saveLocalModule(state);
     const store = await waitForSceneStore(900);
     if (store?.saveScene) await store.saveScene(ortId, state.sceneId, state.module);
   }
 
   function persistSceneIndex() {
+    persistSceneIndex.lastLocalUpdatedAtClient = Date.now();
+    sceneIndexStatus = "Szenenliste lokal geändert.";
     saveLocalIndex();
+    saveSceneIndexMeta();
     window.clearTimeout(saveIndexTimer);
     saveIndexTimer = window.setTimeout(async () => {
       const store = await waitForSceneStore(900);
-      if (store?.saveSceneIndex) await store.saveSceneIndex(ortId, { order: sceneOrder });
+      if (store?.saveSceneIndex) {
+        await store.saveSceneIndex(ortId, { order: sceneOrder });
+        sceneIndexStatus = "Szenenliste online gespeichert.";
+        renderSidebar();
+      }
     }, 250);
   }
 
@@ -889,9 +968,19 @@ function openModuleEditorForCurrent() {
     if (!store?.subscribeSceneIndex) return;
     store.subscribeSceneIndex(ortId, (remoteIndex) => {
       if (!remoteIndex?.order) return;
+      const remoteUpdatedAtClient = Number(remoteIndex._remoteUpdatedAtClient) || 0;
+      const localUpdatedAtClient = Number(persistSceneIndex.lastLocalUpdatedAtClient) || 0;
+      if (shouldIgnoreRemoteSceneIndex(localUpdatedAtClient, remoteUpdatedAtClient)) {
+        sceneIndexStatus = "Ältere Online-Szenenliste ignoriert.";
+        renderSidebar();
+        return;
+      }
       sceneOrder = remoteIndex.order;
+      persistSceneIndex.lastLocalUpdatedAtClient = 0;
+      sceneIndexStatus = "Online-Szenenliste geladen.";
       sceneOrder.forEach((sceneId) => ensureState(sceneId));
       saveLocalIndex();
+      saveSceneIndexMeta();
       renderAll();
     });
   }
@@ -937,6 +1026,17 @@ function openModuleEditorForCurrent() {
       };
     }
 
+    if (!editor.originalHandleModuleImportFile && typeof handleModuleImportFile === "function") {
+      editor.originalHandleModuleImportFile = handleModuleImportFile;
+      handleModuleImportFile = function (input, ...args) {
+        if (window.AleriaOrteSceneEditor?.activeState) {
+          handleOrteSceneModuleImportFile(input);
+          return;
+        }
+        return editor.originalHandleModuleImportFile.apply(this, [input, ...args]);
+      };
+    }
+
     if (!editor.originalCloseModuleEditor && typeof closeModuleEditor === "function") {
       editor.originalCloseModuleEditor = closeModuleEditor;
       closeModuleEditor = function (...args) {
@@ -950,6 +1050,40 @@ function openModuleEditorForCurrent() {
         return result;
       };
     }
+  }
+
+  function handleOrteSceneModuleImportFile(input) {
+    const file = input?.files?.[0];
+    if (!file) return;
+    if (file.size > MODULE_JSON_MAX_CHARS) {
+      setModuleEditorStatus(`Datei ist zu groß. Limit: ${Math.round(MODULE_JSON_MAX_CHARS / 1000)} KB.`, true);
+      input.value = "";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const raw = String(reader.result || "");
+        validateModuleJsonSize(raw);
+        const parsed = JSON.parse(raw);
+        if (parsed?.type === "aleria-module-master-package" || parsed?.type === "aleria-almanach-backup") {
+          throw new Error("Diese Datei ist ein Almanach-Gesamtpaket. Ortsszenen akzeptieren nur einzelne Module oder Modulpakete.");
+        }
+        const textarea = document.getElementById("me-json");
+        if (textarea) textarea.value = raw;
+        applyModuleJsonToEditor();
+      } catch (error) {
+        setModuleEditorStatus(error.message || "JSON konnte nicht geladen werden.", true);
+      } finally {
+        input.value = "";
+      }
+    };
+    reader.onerror = () => {
+      setModuleEditorStatus("Datei konnte nicht gelesen werden.", true);
+      input.value = "";
+    };
+    reader.readAsText(file, "utf-8");
   }
 
   function ensureAlmanachCssVariables() {
@@ -1031,7 +1165,7 @@ function openModuleEditorForCurrent() {
       <div class="modal-card">
         <span class="modal-deco tl">&#10087;</span>
         <span class="modal-deco br">&#10087;</span>
-        <button class="modal-close" type="button" data-modal-action="close" aria-label="Eintrag schliessen">&#10005;</button>
+        <button class="modal-close" type="button" data-modal-action="close" aria-label="Eintrag schließen">&#10005;</button>
         <div id="modal-body"></div>
       </div>
     `;
@@ -1119,9 +1253,19 @@ function openModuleEditorForCurrent() {
     if (!store?.subscribeScene) return;
     state.unsubscribeScene = store.subscribeScene(state.ortId, state.sceneId, (remoteModule) => {
       if (!remoteModule) return;
+      const remoteUpdatedAtClient = Number(remoteModule._remoteUpdatedAtClient) || 0;
+      if (shouldIgnoreRemoteScene(state, remoteUpdatedAtClient)) {
+        state.status = "Älterer Online-Stand ignoriert.";
+        renderPreview(state);
+        renderSidebar();
+        return;
+      }
       state.module = normalizeModule(remoteModule, state.sceneId);
+      state.localUpdatedAtClient = 0;
+      state.remoteUpdatedAtClient = remoteUpdatedAtClient;
       state.status = "Online geladen.";
       saveLocalModule(state);
+      handleActiveEditorRemoteUpdate(state);
       renderPreview(state);
       renderSidebar();
     }, () => {
@@ -1129,6 +1273,93 @@ function openModuleEditorForCurrent() {
       renderPreview(state);
       renderSidebar();
     });
+  }
+
+  function shouldIgnoreRemoteScene(state, remoteUpdatedAtClient) {
+    const localUpdatedAtClient = Number(state.localUpdatedAtClient) || 0;
+    if (!localUpdatedAtClient) return false;
+    if (!remoteUpdatedAtClient) return true;
+    return remoteUpdatedAtClient < localUpdatedAtClient;
+  }
+
+  function handleActiveEditorRemoteUpdate(state) {
+    if (window.AleriaOrteSceneEditor?.activeState !== state) return;
+    const overlay = document.getElementById("module-editor-overlay");
+    if (!overlay?.classList.contains("active")) return;
+
+    const editorHasChanges = typeof hasUnsavedModuleEditorChanges === "function" && hasUnsavedModuleEditorChanges();
+    if (editorHasChanges) {
+      state.editorRemoteConflict = true;
+      if (typeof setModuleEditorStatus === "function") {
+        setModuleEditorStatus("Online-Stand hat sich geändert. Deine offenen Änderungen wurden nicht überschrieben.", true);
+      }
+      renderEditorConflictPanel(state);
+      return;
+    }
+
+    refreshOpenSceneEditorFromState(state);
+  }
+
+  function refreshOpenSceneEditorFromState(state, statusMessage = "Online-Stand im Editor aktualisiert.") {
+    if (typeof populateModuleEditor !== "function") return;
+    const payload = buildModuleEditorPayloadFromScene(state);
+    populateModuleEditor(payload, {
+      mode: "edit",
+      sourceKind: "orte-scene",
+      sourceEntryId: payload.entry.id,
+      sectionSignature: "__new__"
+    });
+    window.AleriaOrteSceneEditor.activeState = state;
+    state.editorRemoteConflict = false;
+    decorateOrteModuleEditor(state);
+    clearEditorConflictPanel();
+    if (typeof setModuleEditorStatus === "function") {
+      setModuleEditorStatus(statusMessage);
+    }
+  }
+
+  async function saveLocalEditorConflictVersion(state) {
+    state.editorRemoteConflict = false;
+    clearEditorConflictPanel();
+    await saveSceneFromModuleEditor();
+  }
+
+  function renderEditorConflictPanel(state) {
+    const overlay = document.getElementById("module-editor-overlay");
+    if (!overlay?.classList.contains("active")) return;
+
+    let panel = overlay.querySelector("[data-orte-editor-conflict-panel]");
+    if (!panel) {
+      panel = document.createElement("div");
+      panel.className = "orte-editor-conflict-panel";
+      panel.dataset.orteEditorConflictPanel = "";
+      const status = overlay.querySelector("#me-status");
+      const body = overlay.querySelector("#module-editor-body");
+      if (status) status.insertAdjacentElement("afterend", panel);
+      else if (body) body.prepend(panel);
+      else overlay.append(panel);
+    }
+
+    panel.innerHTML = `
+      <strong>Online-Stand geändert</strong>
+      <p>Diese Ortsszene wurde in einem anderen Fenster aktualisiert. Deine offenen Änderungen wurden nicht überschrieben.</p>
+      <div class="orte-editor-conflict-actions">
+        <button type="button" data-action="orte-scene-editor-use-remote" data-scene-id="${escapeAttrLocal(state.sceneId)}">Online-Stand übernehmen</button>
+        <button type="button" data-action="orte-scene-editor-save-local" data-scene-id="${escapeAttrLocal(state.sceneId)}">Lokale Fassung speichern</button>
+      </div>
+    `;
+  }
+
+  function clearEditorConflictPanel() {
+    document.querySelector("[data-orte-editor-conflict-panel]")?.remove();
+  }
+
+  function shouldIgnoreRemoteSceneIndex(localUpdatedAtClient, remoteUpdatedAtClient) {
+    const localUpdated = Number(localUpdatedAtClient) || 0;
+    const remoteUpdated = Number(remoteUpdatedAtClient) || 0;
+    if (!localUpdated) return false;
+    if (!remoteUpdated) return true;
+    return remoteUpdated < localUpdated;
   }
 
   async function hardResetScenes() {
@@ -1157,6 +1388,17 @@ function openModuleEditorForCurrent() {
     }
   }
 
+  function saveSceneIndexMeta() {
+    try {
+      window.localStorage.setItem(indexMetaStorageKey, JSON.stringify({
+        schemaVersion: 1,
+        localUpdatedAtClient: Number(persistSceneIndex.lastLocalUpdatedAtClient) || 0
+      }));
+    } catch (error) {
+      return;
+    }
+  }
+
   function loadSceneIndex() {
     try {
       const payload = JSON.parse(window.localStorage.getItem(indexStorageKey) || "null");
@@ -1166,9 +1408,19 @@ function openModuleEditorForCurrent() {
     }
   }
 
+  function loadSceneIndexMeta() {
+    try {
+      const payload = JSON.parse(window.localStorage.getItem(indexMetaStorageKey) || "null");
+      return payload && typeof payload === "object" ? payload : {};
+    } catch (error) {
+      return {};
+    }
+  }
+
   function removeLocalIndex() {
     try {
       window.localStorage.removeItem(indexStorageKey);
+      window.localStorage.removeItem(indexMetaStorageKey);
     } catch (error) {
       return;
     }
@@ -1177,9 +1429,18 @@ function openModuleEditorForCurrent() {
   function saveLocalModule(state) {
     try {
       window.localStorage.setItem(getLocalModuleKey(state.sceneId), JSON.stringify(state.module));
+      saveLocalModuleMeta(state);
     } catch (error) {
       return;
     }
+  }
+
+  function saveLocalModuleMeta(state) {
+    window.localStorage.setItem(getLocalModuleMetaKey(state.sceneId), JSON.stringify({
+      schemaVersion: 1,
+      localUpdatedAtClient: Number(state.localUpdatedAtClient) || 0,
+      remoteUpdatedAtClient: Number(state.remoteUpdatedAtClient) || 0
+    }));
   }
 
   function loadLocalModule(sceneId) {
@@ -1190,9 +1451,19 @@ function openModuleEditorForCurrent() {
     }
   }
 
+  function loadLocalModuleMeta(sceneId) {
+    try {
+      const payload = JSON.parse(window.localStorage.getItem(getLocalModuleMetaKey(sceneId)) || "null");
+      return payload && typeof payload === "object" ? payload : {};
+    } catch (error) {
+      return {};
+    }
+  }
+
   function removeLocalModule(sceneId) {
     try {
       window.localStorage.removeItem(getLocalModuleKey(sceneId));
+      window.localStorage.removeItem(getLocalModuleMetaKey(sceneId));
       window.localStorage.removeItem(`aleria:orte:comments:orte:${ortId}:${sceneId}`);
     } catch (error) {
       return;
@@ -1201,6 +1472,10 @@ function openModuleEditorForCurrent() {
 
   function getLocalModuleKey(sceneId) {
     return `aleria:orte:session-module:${ortId}:${sceneId}`;
+  }
+
+  function getLocalModuleMetaKey(sceneId) {
+    return `aleria:orte:session-module-meta:${ortId}:${sceneId}`;
   }
 
   function getValue(scope, selector) {

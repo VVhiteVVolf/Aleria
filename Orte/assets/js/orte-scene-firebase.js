@@ -109,47 +109,71 @@ function normalizeIdPart(part) {
 
 function normalizeRemoteModule(data) {
   if (!data || typeof data !== "object") return null;
+  const remoteUpdatedAtClient = Number(data.updatedAtClient) || 0;
+  let modulePayload = null;
 
   if (typeof data.data === "string") {
     try {
-      return normalizeModulePayload(JSON.parse(data.data));
+      modulePayload = normalizeModulePayload(JSON.parse(data.data));
     } catch (error) {
       return null;
     }
+  } else {
+    modulePayload = normalizeModulePayload(data);
   }
 
-  return normalizeModulePayload(data);
+  return {
+    ...modulePayload,
+    _remoteUpdatedAtClient: remoteUpdatedAtClient
+  };
 }
 
 function normalizeModulePayload(payload) {
   const source = payload && typeof payload === "object" ? payload : {};
-  const page = source.page && typeof source.page === "object" ? source.page : {};
+  const pageSources = Array.isArray(source.pages) && source.pages.length
+    ? source.pages
+    : [source.page && typeof source.page === "object" ? source.page : {}];
+  const pages = pageSources.map((page, index) => normalizeModulePage(page, source, index));
+  const firstPage = pages[0] || normalizeModulePage({}, source, 0);
 
   return {
     id: String(source.id || ""),
     title: String(source.title || ""),
     subtitle: String(source.subtitle || ""),
     stamp: String(source.stamp || ""),
-    image: String(source.image || ""),
-    imageWidth: Number.isFinite(Number(source.imageWidth)) ? Number(source.imageWidth) : 36,
+    image: String(source.image || firstPage.image || ""),
+    imageWidth: Number.isFinite(Number(source.imageWidth ?? firstPage.imageWidth)) ? Number(source.imageWidth ?? firstPage.imageWidth) : 36,
     threadId: String(source.threadId || ""),
-    page: {
-      pageTitle: String(page.pageTitle || ""),
-      sessionPage: true,
-      image: String(page.image || source.image || ""),
-      imageWidth: Number.isFinite(Number(page.imageWidth ?? source.imageWidth)) ? Number(page.imageWidth ?? source.imageWidth) : 36,
-      imageFit: normalizeImageFit(page.imageFit || source.imageFit),
-      imagePosition: normalizeImagePosition(page.imagePosition || source.imagePosition),
-      imageSquare: !!(page.imageSquare || source.imageSquare),
-      imageLandscape: !!(page.imageLandscape || source.imageLandscape),
-      imageSemiLandscape: !!(page.imageSemiLandscape || source.imageSemiLandscape),
-      imageTall: !!(page.imageTall || source.imageTall),
-      sessionIntro: String(page.sessionIntro || buildLegacySessionIntro(source.blocks)),
-      sessionHint: String(page.sessionHint || ""),
-      sessionEmptyTitle: String(page.sessionEmptyTitle || ""),
-      sessionEmptyText: String(page.sessionEmptyText || ""),
-      commentThreadKey: String(page.commentThreadKey || source.commentThreadKey || source.sceneId || source.id || "")
-    }
+    sessionCast: Array.isArray(source.sessionCast) ? source.sessionCast : [],
+    sessionCastDetails: Array.isArray(source.sessionCastDetails) ? source.sessionCastDetails : [],
+    page: firstPage,
+    pages
+  };
+}
+
+function normalizeModulePage(pageSource, source, index) {
+  const page = pageSource && typeof pageSource === "object" ? pageSource : {};
+  const isFirst = index === 0;
+  const fallbackIntro = isFirst ? buildLegacySessionIntro(source.blocks) : "";
+  const imageWidthSource = page.imageWidth ?? source.imageWidth;
+
+  return {
+    ...page,
+    pageTitle: String(page.pageTitle || (isFirst ? source.pageTitle : "") || ""),
+    sessionPage: true,
+    image: String(page.image || (isFirst ? source.image : "") || ""),
+    imageWidth: Number.isFinite(Number(imageWidthSource)) ? Number(imageWidthSource) : 36,
+    imageFit: normalizeImageFit(page.imageFit || source.imageFit),
+    imagePosition: normalizeImagePosition(page.imagePosition || source.imagePosition),
+    imageSquare: !!(page.imageSquare || source.imageSquare),
+    imageLandscape: !!(page.imageLandscape || source.imageLandscape),
+    imageSemiLandscape: !!(page.imageSemiLandscape || source.imageSemiLandscape),
+    imageTall: !!(page.imageTall || source.imageTall),
+    sessionIntro: String(page.sessionIntro || (isFirst ? source.sessionIntro : "") || fallbackIntro),
+    sessionHint: String(page.sessionHint || (isFirst ? source.sessionHint : "")),
+    sessionEmptyTitle: String(page.sessionEmptyTitle || (isFirst ? source.sessionEmptyTitle : "")),
+    sessionEmptyText: String(page.sessionEmptyText || (isFirst ? source.sessionEmptyText : "")),
+    commentThreadKey: String(page.commentThreadKey || (isFirst ? source.commentThreadKey : "") || source.sceneId || source.id || "")
   };
 }
 
@@ -167,7 +191,9 @@ function normalizeSceneIndex(payload) {
   const source = payload && typeof payload === "object" ? payload : {};
   if (typeof source.data === "string") {
     try {
-      return normalizeSceneIndex(JSON.parse(source.data));
+      const parsed = normalizeSceneIndex(JSON.parse(source.data));
+      parsed._remoteUpdatedAtClient = Number(source.updatedAtClient) || 0;
+      return parsed;
     } catch (error) {
       return { schemaVersion: 1, order: [] };
     }
@@ -179,6 +205,7 @@ function normalizeSceneIndex(payload) {
   return {
     schemaVersion: 1,
     order: Array.from(new Set(order)),
+    _remoteUpdatedAtClient: Number(source.updatedAtClient) || 0,
   };
 }
 

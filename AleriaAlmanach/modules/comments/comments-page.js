@@ -4,7 +4,8 @@ const COMMENT_ACTION_ICONS = {
   object: 'https://i.imgur.com/4o2fpMy.png',
   attachment: 'https://i.imgur.com/JAKyimG.png',
   transition: 'https://i.imgur.com/MHOEe96.png',
-  time: 'https://i.imgur.com/Q9FVnjc.png'
+  time: 'https://i.imgur.com/Q9FVnjc.png',
+  poll: 'https://i.imgur.com/jeMqIr7.png'
 };
 
 function buildCommentActionIcon(iconKey) {
@@ -19,11 +20,15 @@ function buildCommentActionBar(hintText, options = {}) {
   const sceneTransitionButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-transition-event-btn" type="button" data-scene-transition-action="open-dialog" title="Szenenwechsel anlegen" aria-label="Szenenwechsel anlegen">${buildCommentActionIcon('transition')}</button>`
     : '';
+  const scenePollButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-poll-event-btn" type="button" data-scene-poll-action="open-dialog" title="Abstimmung anlegen" aria-label="Abstimmung anlegen">${buildCommentActionIcon('poll')}</button>`
+    : '';
   return `
     <div class="comments-form-bar">
       <button class="comments-add-btn comments-action-icon-btn" type="button" data-action="open-comment-form" title="Kommentieren" aria-label="Kommentieren">${buildCommentActionIcon('comment')}</button>
       ${sceneTimeButton}
       ${sceneTransitionButton}
+      ${scenePollButton}
       <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>
       <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>

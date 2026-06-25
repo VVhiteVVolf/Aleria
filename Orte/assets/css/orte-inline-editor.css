@@ -18,9 +18,13 @@
   font-size: 13px;
 }
 
-.orte-inline-toolbar > span:not(.orte-inline-format-tools) {
-  color: #dcc38a;
-  font-size: 12px;
+.orte-inline-status-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .orte-inline-toolbar button,
@@ -88,10 +92,108 @@
   padding: 3px 6px;
 }
 
+.orte-inline-status-widget {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 1015;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.orte-inline-status-dot {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 1px solid rgba(255, 246, 213, 0.92);
+  border-radius: 999px;
+  background: #7f7a56;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  cursor: grab;
+}
+
+.orte-inline-status-dot:active {
+  cursor: grabbing;
+}
+
+.orte-inline-status-widget[data-state="ok"] .orte-inline-status-dot {
+  background: #2d6d42;
+}
+
+.orte-inline-status-widget[data-state="warning"] .orte-inline-status-dot {
+  background: #b3892b;
+}
+
+.orte-inline-status-widget[data-state="error"] .orte-inline-status-dot {
+  background: #8f2e25;
+}
+
+.orte-inline-status-panel {
+  width: min(320px, calc(100vw - 56px));
+  padding: 10px;
+  color: #2a1908;
+  background: linear-gradient(135deg, #fff1c8, #dfc587);
+  border: 1px solid #7c5a22;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.orte-inline-status-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(124, 90, 34, 0.35);
+}
+
+.orte-inline-status-panel-head strong {
+  font-size: 13px;
+}
+
+.orte-inline-status-panel-head span,
+.orte-inline-status-panel p {
+  margin: 0;
+  color: #6d4e1e;
+  font-size: 12px;
+}
+
+.orte-inline-status-panel > p {
+  padding-top: 7px;
+}
+
+.orte-inline-version-choice {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(124, 90, 34, 0.45);
+}
+
+.orte-inline-version-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.orte-inline-version-actions button {
+  cursor: pointer;
+  border: 1px solid #7c5a22;
+  background: #f7e6ba;
+  color: #2c1b0b;
+  font: inherit;
+  min-height: 26px;
+  padding: 3px 8px;
+}
+
 .orte-inline-editing [data-orte-inline-text] {
   cursor: text;
   outline: 1px solid transparent;
   outline-offset: 2px;
+}
+
+.orte-inline-editing .place-document {
+  padding-left: 84px;
 }
 
 .orte-inline-editing [data-orte-inline-text]:hover {
@@ -203,6 +305,49 @@
   background: linear-gradient(180deg, #f4e3b8, #d5b56e);
   color: #2c1b0b;
   font: 700 13px Georgia, "Times New Roman", serif;
+}
+
+.orte-table-control-cell {
+  position: relative;
+}
+
+.orte-table-row-controls {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 8;
+  display: none;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgba(81, 49, 16, 0.58);
+  background:
+    linear-gradient(180deg, rgba(255, 244, 206, 0.96), rgba(219, 185, 113, 0.94)),
+    #e7cc8b;
+  box-shadow: 0 2px 7px rgba(35, 20, 7, 0.2);
+  transform: translate(calc(-100% - 6px), -50%);
+}
+
+.orte-inline-editing .orte-table-row-controls {
+  display: inline-flex;
+}
+
+.orte-table-row-controls button {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px dashed #8b6325;
+  background: rgba(255, 237, 188, 0.92);
+  color: #2c1b0b;
+  font: 700 14px Georgia, "Times New Roman", serif;
+  line-height: 1;
+}
+
+.orte-table-row-controls button[data-action="remove-orte-table-row"] {
+  border-color: #9d3728;
+  color: #6d1b11;
 }
 
 .orte-rating-cell {

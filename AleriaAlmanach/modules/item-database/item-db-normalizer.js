@@ -58,13 +58,18 @@ function itemDbSanitizeImage(value) {
   return String(value || '').trim();
 }
 
+function itemDbListCategoriesForNormalization() {
+  return typeof itemDbGetCategories === 'function' ? itemDbGetCategories() : ITEM_DB_CATEGORIES;
+}
+
 function itemDbGetCategoryLabel(categoryId) {
-  return ITEM_DB_CATEGORIES.find(category => category.id === categoryId)?.label || 'Sonstiges';
+  return itemDbListCategoriesForNormalization().find(category => category.id === categoryId)?.label || 'Sonstiges';
 }
 
 function itemDbInferCategory(candidate = {}) {
   const rawCategory = itemDbNormalizeText(candidate.category || candidate.categoryLabel || '');
-  const direct = ITEM_DB_CATEGORIES.find(category => itemDbNormalizeText(category.label) === rawCategory || category.id === rawCategory);
+  const categories = itemDbListCategoriesForNormalization();
+  const direct = categories.find(category => itemDbNormalizeText(category.label) === rawCategory || category.id === rawCategory);
   if (direct && direct.id !== 'alle') return direct.id;
 
   const haystack = itemDbNormalizeText([

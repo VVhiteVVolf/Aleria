@@ -326,3 +326,7 @@ function itemDbCollectSourceCandidates() {
     ...itemDbExtractFromLoadedMarketData()
   ];
 }
+
+function itemDbCollectMarketCandidates() {
+  return itemDbExtractFromLoadedMarketData();
+}

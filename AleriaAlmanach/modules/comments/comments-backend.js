@@ -99,6 +99,7 @@ function getLocalCommentBackend() {
         documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
         sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
         sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
+        scenePoll: metadata.scenePoll && typeof metadata.scenePoll === 'object' ? metadata.scenePoll : null,
         orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,

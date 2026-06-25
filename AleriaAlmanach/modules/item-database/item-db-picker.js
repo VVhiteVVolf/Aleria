@@ -42,7 +42,7 @@ function itemDbRenderPickerItems(items = []) {
       <span>
         <strong>${itemDbEscapeHtml(item.title)}</strong>
         <small>${itemDbEscapeHtml([item.categoryLabel, item.type].filter(Boolean).join(' - '))}</small>
-        <em>${itemDbEscapeHtml(item.description || item.details || item.price || 'Kein Beschreibungstext')}</em>
+        <em>${itemDbEscapeHtml(item.description || item.details || (typeof itemDbFormatPriceAsCopper === 'function' ? itemDbFormatPriceAsCopper(item) : item.price) || 'Kein Beschreibungstext')}</em>
       </span>
       <b>${itemDbEscapeHtml(itemDbRenderPickerSource(item))}</b>
     </button>`).join('');
@@ -84,6 +84,9 @@ async function openItemDbPicker(options = {}) {
   renderItemDbPickerPanel();
   if (typeof itemDbLoadMarketSources === 'function') {
     await itemDbLoadMarketSources();
+    if (typeof itemDbAppendScanCandidates === 'function' && typeof itemDbCollectSourceCandidates === 'function') {
+      itemDbAppendScanCandidates(itemDbCollectSourceCandidates());
+    }
     renderItemDbPickerPanel();
   }
   document.querySelector('#item-db-picker-panel [data-item-db-picker-action="search"]')?.focus();
@@ -108,6 +111,9 @@ async function handleItemDbPickerClick(event) {
   if (action === 'refresh') {
     event.preventDefault();
     if (typeof itemDbLoadMarketSources === 'function') await itemDbLoadMarketSources();
+    if (typeof itemDbAppendScanCandidates === 'function' && typeof itemDbCollectSourceCandidates === 'function') {
+      itemDbAppendScanCandidates(itemDbCollectSourceCandidates());
+    }
     renderItemDbPickerPanel();
     return;
   }
