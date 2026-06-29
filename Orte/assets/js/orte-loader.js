@@ -2,45 +2,35 @@
   "use strict";
 
   const registry = Array.isArray(window.ORTE_REGISTRY) ? window.ORTE_REGISTRY : [];
-  const baseDataPath = "data/grossstadt-vorlage.data.js";
-  const appPath = "assets/js/orte-grossstadt.js";
-  const root = document.querySelector("[data-orte-root]");
+  let root = document.querySelector("[data-orte-static-template], [data-orte-root]");
 
   start();
 
-  async function start() {
-    if (!root) return;
-
+  function start() {
     const requestedId = readRequestedId();
     const entry = findEntry(requestedId) || findDefaultEntry();
 
     if (!entry) {
-      renderMissingState(requestedId);
+      withRoot(() => renderMissingState(requestedId));
       return;
     }
 
-    try {
-      window.ORTE_CONFIG = {
-        ...(window.ORTE_CONFIG || {}),
-        registryEntry: entry,
-        docId: entry.docId || entry.id
-      };
-
-      await loadScript(baseDataPath);
-      if (entry.data && entry.data !== baseDataPath) {
-        await loadScript(entry.data);
-      }
-      document.title = `${entry.name || "Ort"} - Aleria`;
-      await loadScript(appPath);
-    } catch (error) {
-      console.error("Ort konnte nicht geladen werden:", error);
-      renderErrorState(entry, error);
-    }
+    const docId = normalizeId(entry.docId || entry.id);
+    window.ORTE_CONFIG = {
+      ...(window.ORTE_CONFIG || {}),
+      registryEntry: entry,
+      docId,
+      dataPath: entry.data || ""
+    };
+    window.AleriaOrteScenes = buildSceneConfig(entry, docId);
+    document.title = `${entry.name || "Ort"} - Aleria`;
+    withRoot(() => applyEntryShell(entry, docId));
+    loadDataScript(entry);
   }
 
   function readRequestedId() {
     const params = new URLSearchParams(window.location.search);
-    const fallbackId = root?.dataset.defaultId || "";
+    const fallbackId = getRoot()?.dataset.defaultId || "";
     return normalizeId(params.get("id") || params.get("ort") || window.location.hash.slice(1) || fallbackId);
   }
 
@@ -56,14 +46,67 @@
     return registry.find((entry) => entry.id === "grossstadt-vorlage") || registry[0] || null;
   }
 
-  function loadScript(path) {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement("script");
-      script.src = resolveOrtePath(path);
-      script.onload = resolve;
-      script.onerror = () => reject(new Error(`Script konnte nicht geladen werden: ${path}`));
-      document.head.appendChild(script);
-    });
+  function buildSceneConfig(entry, docId) {
+    return {
+      schemaVersion: 2,
+      ortId: docId,
+      ortName: entry.name || docId,
+      firebase: {
+        collection: entry.sceneCollection || "orte_scenes"
+      },
+      inlineFirebase: {
+        collection: entry.inlineCollection || "orte_inline_content"
+      },
+      modules: entry.defaultScenes || {}
+    };
+  }
+
+  function loadDataScript(entry) {
+    if (!entry.data) return;
+    const script = document.createElement("script");
+    script.src = resolveOrtePath(entry.data);
+    script.defer = true;
+    script.dataset.orteDataScript = entry.id || "";
+    script.onerror = () => {
+      console.warn(`Ortsdaten konnten nicht geladen werden: ${entry.data}`);
+    };
+    document.head.appendChild(script);
+  }
+
+  function applyEntryShell(entry, docId) {
+    const targetRoot = getRoot();
+    if (!targetRoot) return;
+
+    targetRoot.dataset.orteId = docId;
+    targetRoot.dataset.orteName = entry.name || docId;
+    targetRoot.dataset.orteType = entry.type || "";
+
+    if (entry.status === "template") return;
+
+    const primaryTitle = targetRoot.querySelector(".grossstadt-template-frame .pt-s-0004");
+    if (primaryTitle) {
+      primaryTitle.textContent = entry.name || docId;
+    }
+  }
+
+  function withRoot(callback) {
+    const targetRoot = getRoot();
+    if (targetRoot) {
+      callback(targetRoot);
+      return;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const readyRoot = getRoot();
+      if (readyRoot) callback(readyRoot);
+    }, { once: true });
+  }
+
+  function getRoot() {
+    if (!root) {
+      root = document.querySelector("[data-orte-static-template], [data-orte-root]");
+    }
+    return root;
   }
 
   function resolveOrtePath(path) {
@@ -72,10 +115,13 @@
   }
 
   function renderMissingState(requestedId) {
+    const targetRoot = getRoot();
+    if (!targetRoot) return;
+
     const message = requestedId
       ? `Kein Ort mit der ID "${escapeHtml(requestedId)}" gefunden.`
       : "Keine Orts-ID angegeben.";
-    root.innerHTML = `
+    targetRoot.innerHTML = `
       <main class="place-error">
         <h1>Ort nicht gefunden</h1>
         <p>${message}</p>
@@ -88,7 +134,10 @@
   }
 
   function renderErrorState(entry, error) {
-    root.innerHTML = `
+    const targetRoot = getRoot();
+    if (!targetRoot) return;
+
+    targetRoot.innerHTML = `
       <main class="place-error">
         <h1>${escapeHtml(entry.name || "Ort")}</h1>
         <p>Dieser Ort ist registriert, aber die Daten konnten nicht geladen werden.</p>
