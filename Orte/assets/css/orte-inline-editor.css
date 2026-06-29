@@ -431,6 +431,20 @@
   line-height: 1;
 }
 
+.orte-table-row-controls.is-personality-row-control {
+  flex-direction: column;
+  width: 116px;
+}
+
+.orte-table-row-controls.is-personality-row-control button {
+  width: 100%;
+  min-height: 22px;
+  padding: 2px 5px;
+  font-size: 11px;
+  line-height: 1.1;
+  white-space: normal;
+}
+
 .orte-table-row-controls button[data-action="remove-orte-table-row"] {
   border-color: #9d3728;
   color: #6d1b11;

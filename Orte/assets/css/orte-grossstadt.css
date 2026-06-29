@@ -388,35 +388,21 @@ img {
   padding-bottom: 10px !important;
 }
 
-.grossstadt-region-toggle {
+.grossstadt-region-block {
   margin-top: 0.75rem;
-}
-
-.grossstadt-region-toggle > summary {
-  display: block;
-  padding: 7px 9px;
-  color: var(--place-text-light);
-  background: linear-gradient(180deg, #755420, #3f2a11);
-  border: 1px solid var(--place-border-dark);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-}
-
-.grossstadt-region-toggle > summary::marker {
-  color: var(--place-text-light);
 }
 
 .grossstadt-template .orte-region-table .region-map-cell {
   width: auto;
-  padding: 8px;
+  padding: 10px;
 }
 
 .grossstadt-template .orte-region-table .region-map-slot {
-  width: 100%;
-  min-height: 150px;
+  width: 100% !important;
+  min-height: 320px;
+  aspect-ratio: 16 / 7;
+  --orte-image-width: 100%;
+  --orte-image-max-height: 520px;
 }
 
 .grossstadt-template .pt-s-0040 {
@@ -434,22 +420,25 @@ img {
 
 .grossstadt-template .pt-s-0007,
 .grossstadt-template .pt-s-0036 {
+  height: 1px;
   vertical-align: top;
 }
 
 .grossstadt-template .orte-balanced-text-panel {
-  max-height: var(--orte-balanced-text-max-height, 560px);
+  height: 100%;
+  min-height: var(--orte-balanced-text-min-height, 0);
+  max-height: 100%;
   overflow: auto;
   padding-right: 8px;
   scrollbar-color: rgba(77, 45, 14, 0.72) rgba(255, 246, 218, 0.42);
 }
 
 .grossstadt-template .orte-balanced-text-panel--background {
-  --orte-balanced-text-max-height: 600px;
+  --orte-balanced-text-min-height: 600px;
 }
 
 .grossstadt-template .orte-balanced-text-panel--conflicts {
-  --orte-balanced-text-max-height: 320px;
+  --orte-balanced-text-min-height: 320px;
 }
 
 .grossstadt-template .pt-s-0077 {

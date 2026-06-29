@@ -823,7 +823,11 @@
     if (!row) return;
 
     if (table.classList.contains("pt-s-0067")) {
-      addPersonalityRows(table, row, position);
+      if (isPersonalityDividerRow(row)) {
+        addPersonalityDividerRow(row, position);
+      } else {
+        addPersonalityRows(table, row, position);
+      }
     } else {
       addGenericTableRow(table, row, position);
     }
@@ -841,7 +845,11 @@
     if (!row) return;
 
     if (table.classList.contains("pt-s-0067")) {
-      removePersonalityRows(table, row);
+      if (isPersonalityDividerRow(row)) {
+        removePersonalityDividerRow(table, row);
+      } else {
+        removePersonalityRows(table, row);
+      }
     } else {
       removeGenericTableRow(table, row);
     }
@@ -880,6 +888,13 @@
     }
   }
 
+  function addPersonalityDividerRow(referenceRow, position = "after") {
+    if (!isPersonalityDividerRow(referenceRow)) return;
+    const clone = referenceRow.cloneNode(true);
+    resetPersonalityDividerRow(clone);
+    referenceRow.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
+  }
+
   function removeGenericTableRow(table, row) {
     const cloneableRows = Array.from(table.tBodies[0]?.rows || []).filter((candidate) => isCloneableDataRow(candidate, table));
     if (cloneableRows.length <= 1 || !isCloneableDataRow(row, table)) return;
@@ -893,11 +908,17 @@
     group.forEach((groupRow) => groupRow.remove());
   }
 
+  function removePersonalityDividerRow(table, row) {
+    const dividerRows = Array.from(table.tBodies[0]?.rows || []).filter(isPersonalityDividerRow);
+    if (dividerRows.length <= 1 || !isPersonalityDividerRow(row)) return;
+    row.remove();
+  }
+
   function renderRowControls(table, tableId) {
     const rows = Array.from(table.tBodies[0]?.rows || []);
     rows.forEach((row, index) => {
       const canControl = table.classList.contains("pt-s-0067")
-        ? isPersonalityGroupStart(row)
+        ? isPersonalityGroupStart(row) || isPersonalityDividerRow(row)
         : isCloneableDataRow(row, table);
       if (!canControl) return;
 
@@ -905,12 +926,23 @@
       if (!cell) return;
       cell.classList.add("orte-table-control-cell");
       const controls = document.createElement("span");
-      controls.className = "orte-table-row-controls";
-      controls.innerHTML = `
-        <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile davor einfügen">+</button>
-        <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile danach einfügen">+</button>
-        <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile entfernen">-</button>
-      `;
+      const isPersonalityTable = table.classList.contains("pt-s-0067");
+      const isDividerRow = isPersonalityDividerRow(row);
+      controls.className = [
+        "orte-table-row-controls",
+        isPersonalityTable ? "is-personality-row-control" : "",
+        isDividerRow ? "is-divider-row-control" : ""
+      ].filter(Boolean).join(" ");
+      controls.innerHTML = isPersonalityTable
+        ? `
+          <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile danach einfügen" : "Person danach einfügen"}">${isDividerRow ? "+ Zwischenzeile" : "+ Person"}</button>
+          <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile entfernen" : "Person entfernen"}">-</button>
+        `
+        : `
+          <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile davor einfügen">+</button>
+          <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile danach einfügen">+</button>
+          <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile entfernen">-</button>
+        `;
       cell.prepend(controls);
     });
   }
@@ -923,6 +955,17 @@
 
   function isPersonalityGroupStart(row) {
     return !!row?.querySelector?.(".pt-s-0077");
+  }
+
+  function isPersonalityDividerRow(row) {
+    const cells = Array.from(row?.cells || []);
+    if (cells.length !== 1) return false;
+    const cell = cells[0];
+    if (cell.tagName === "TH") return false;
+    if (Number(cell.colSpan || 1) < 4) return false;
+    if (row.querySelector("[data-orte-image-key], img, .pt-s-0077")) return false;
+    if (cell.matches(".pt-s-0069, .pt-s-0073, .pt-s-0081, .pt-s-0082, .pt-s-0083")) return false;
+    return !!normalizeWhitespace(cell.textContent);
   }
 
   function getPersonalityGroups(table) {
@@ -1015,6 +1058,18 @@
     if (cell?.classList.contains("pt-s-0076")) return "Rolle";
     if (cell?.classList.contains("pt-s-0080")) return "Name";
     return "....";
+  }
+
+  function resetPersonalityDividerRow(row) {
+    row.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
+    row.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
+      node.removeAttribute("contenteditable");
+      node.removeAttribute("data-orte-inline-text");
+    });
+
+    const cell = row.cells?.[0];
+    const label = cell?.querySelector("b, strong") || cell;
+    if (label) label.textContent = "Neue Zwischenzeile";
   }
 
   function applyPayload(payload, options = {}) {
