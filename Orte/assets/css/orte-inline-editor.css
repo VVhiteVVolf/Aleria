@@ -92,6 +92,76 @@
   color: #5c2b13;
 }
 
+.orte-section-controls {
+  position: relative;
+  color: #dcc38a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.orte-section-controls summary {
+  min-height: 26px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 1px solid #7c5a22;
+  background: #f3e3bd;
+  color: #2c1b0b;
+  list-style: none;
+}
+
+.orte-section-controls summary::-webkit-details-marker {
+  display: none;
+}
+
+.orte-section-controls[open] summary {
+  background: #d9bd78;
+}
+
+.orte-section-controls-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 1002;
+  display: grid;
+  gap: 4px;
+  width: min(280px, calc(100vw - 24px));
+  max-height: min(420px, calc(100vh - 88px));
+  overflow: auto;
+  padding: 8px;
+  color: #2c1b0b;
+  background: linear-gradient(180deg, #fff3cf, #e0c27c);
+  border: 1px solid #7c5a22;
+  box-shadow: 0 8px 22px rgba(18, 10, 3, 0.28);
+}
+
+.orte-section-toggle {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 6px;
+  align-items: start;
+  padding: 3px 2px;
+  color: #2c1b0b;
+  font-size: 12px;
+}
+
+.orte-section-toggle input {
+  margin-top: 2px;
+}
+
+.orte-section-controls > button {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 8px;
+  z-index: 1003;
+  min-height: 24px;
+  padding: 2px 7px;
+  font-size: 11px;
+}
+
+.orte-section-hidden {
+  display: none !important;
+}
+
 .orte-inline-tooltip-tool input {
   width: 150px;
   min-height: 26px;

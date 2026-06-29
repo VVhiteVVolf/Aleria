@@ -8,11 +8,12 @@
   const CONTENT_SCHEMA_VERSION = 2;
   const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
   const statusPositionKey = `aleria:orte:inline-status-position:${pageId}`;
-  const state = { texts: {}, images: {}, ratings: {}, tables: {} };
+  const state = { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {} };
   const textItems = [];
   const imageItems = [];
   const ratingItems = [];
   const tableItems = [];
+  const sectionItems = [];
 
   let editMode = false;
   let saveTimer = 0;
@@ -33,6 +34,8 @@
     "use-orte-local-version",
     "use-orte-online-version",
     "use-orte-latest-version",
+    "export-orte-inline-data",
+    "trigger-orte-inline-import",
     "close-orte-image-panel",
     "clear-orte-image",
     "add-orte-table-row",
@@ -41,6 +44,7 @@
     "remove-orte-table-row",
     "format-orte-text",
     "clear-orte-text-format",
+    "show-all-orte-sections",
     "apply-orte-tooltip"
   ]);
   const ignoredSurfaceSelector = [
@@ -58,7 +62,8 @@
     ".orte-inline-image-panel",
     ".orte-inline-image-overlay",
     ".orte-table-add-control",
-    ".orte-table-row-controls"
+    ".orte-table-row-controls",
+    ".orte-section-controls"
   ].join(", ");
 
   init();
@@ -83,7 +88,15 @@
       <span class="orte-inline-status-text" data-orte-inline-status>bereit</span>
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
+      <button type="button" data-action="export-orte-inline-data" data-orte-inline-edit-only>Export</button>
+      <button type="button" data-action="trigger-orte-inline-import" data-orte-inline-edit-only>Import</button>
       <button type="button" data-action="hard-reset-orte-template" data-orte-inline-edit-only>Hard Reset</button>
+      <input type="file" accept="application/json,.json" data-orte-import-file hidden>
+      <details class="orte-section-controls" data-orte-inline-edit-only>
+        <summary>Abschnitte</summary>
+        <div class="orte-section-controls-list" data-orte-section-list></div>
+        <button type="button" data-action="show-all-orte-sections">Alle anzeigen</button>
+      </details>
       <span class="orte-inline-format-tools" data-orte-inline-edit-only>
         <button type="button" data-action="format-orte-text" data-command="bold" title="Fett"><b>F</b></button>
         <button type="button" data-action="format-orte-text" data-command="italic" title="Kursiv"><i>K</i></button>
@@ -111,6 +124,7 @@
       </span>
     `;
     document.body.prepend(toolbar);
+    renderSectionControls();
   }
 
   function renderStatusWidget() {
@@ -187,6 +201,20 @@
       if (ratingInput) updateRatingField(ratingInput);
     });
 
+    document.addEventListener("change", (event) => {
+      const importInput = event.target.closest("[data-orte-import-file]");
+      if (importInput) {
+        importInlineData(importInput.files?.[0]);
+        importInput.value = "";
+        return;
+      }
+
+      const sectionInput = event.target.closest("[data-orte-section-toggle]");
+      if (sectionInput && editMode) {
+        setSectionHidden(sectionInput.dataset.orteSectionToggle, !sectionInput.checked);
+      }
+    });
+
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeImagePanel();
     });
@@ -219,6 +247,18 @@
 
     if (action === "save-orte-inline-edit") {
       saveNow();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "export-orte-inline-data") {
+      exportInlineData();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "trigger-orte-inline-import") {
+      document.querySelector("[data-orte-import-file]")?.click();
       event.preventDefault();
       return;
     }
@@ -295,6 +335,12 @@
       return;
     }
 
+    if (action === "show-all-orte-sections") {
+      showAllSections();
+      event.preventDefault();
+      return;
+    }
+
     if (action === "apply-orte-tooltip") {
       const input = document.querySelector("[data-orte-format-tooltip]");
       applyTooltip(input?.value || "");
@@ -329,6 +375,7 @@
     imageItems.length = 0;
     ratingItems.length = 0;
     tableItems.length = 0;
+    sectionItems.length = 0;
     root.querySelectorAll("[data-orte-inline-text]").forEach((node) => {
       node.removeAttribute("data-orte-inline-text");
       node.removeAttribute("contenteditable");
@@ -340,9 +387,12 @@
     collectRatingItems();
     collectTextItems();
     collectTableItems();
+    collectSectionItems();
     renderImageSlots();
     renderRatings();
     renderTableControls();
+    applySectionVisibility();
+    renderSectionControls();
 
     if (editMode) {
       textItems.forEach((item) => {
@@ -447,6 +497,36 @@
       if (!id) return;
       state.tables[id] = state.tables[id] || getTableHtml(table);
       tableItems.push({ id, table });
+    });
+  }
+
+  function collectSectionItems() {
+    const headings = Array.from(root.querySelectorAll(".grossstadt-template-frame h2"));
+    const activeIds = new Set();
+    headings.forEach((heading, index) => {
+      const row = heading.closest("tr");
+      const id = heading.id || `abschnitt-${String(index).padStart(2, "0")}`;
+      if (!row || activeIds.has(id)) return;
+
+      const rows = [];
+      let currentRow = row;
+      while (currentRow) {
+        if (currentRow !== row && currentRow.querySelector("h2")) break;
+        rows.push(currentRow);
+        currentRow = currentRow.nextElementSibling;
+      }
+
+      activeIds.add(id);
+      sectionItems.push({
+        id,
+        title: normalizeWhitespace(heading.textContent) || id,
+        heading,
+        rows
+      });
+    });
+
+    Object.keys(state.hiddenSections).forEach((id) => {
+      if (!activeIds.has(id)) delete state.hiddenSections[id];
     });
   }
 
@@ -902,6 +982,8 @@
       return;
     }
 
+    state.hiddenSections = normalizeHiddenSections(payload.hiddenSections);
+
     if (!options.skipTables && payload.tables) {
       applyTablePayload(payload.tables);
       rebuildTargets();
@@ -929,6 +1011,8 @@
 
     renderImageSlots();
     renderRatings();
+    applySectionVisibility();
+    renderSectionControls();
   }
 
   function applyTablePayload(tables) {
@@ -1002,7 +1086,66 @@
     }
   }
 
+  function exportInlineData() {
+    const payload = clonePayload();
+    const exportPayload = {
+      type: "aleria-orte-inline-export",
+      schemaVersion: 1,
+      pageId,
+      title: window.AleriaOrteScenes?.ortName || window.ORTE_CONFIG?.registryEntry?.name || document.title || pageId,
+      exportedAt: new Date().toISOString(),
+      data: payload
+    };
+    const filename = `aleria-ort-${slugifyFilePart(pageId)}-${new Date().toISOString().slice(0, 10)}.json`;
+    downloadJsonFile(exportPayload, filename);
+    setStatus("Export erstellt", "ok");
+  }
+
+  async function importInlineData(file) {
+    if (!file) return;
+
+    try {
+      const parsed = JSON.parse(await file.text());
+      const payload = extractImportedPayload(parsed);
+      if (!payload) {
+        setStatus("Import ungueltig", "error");
+        window.alert("Diese Datei ist kein gueltiger Orte-Direktbearbeitungs-Export.");
+        return;
+      }
+
+      const confirmed = window.confirm(
+        `Daten aus "${file.name}" importieren?\n\nDie aktuelle Direktbearbeitung dieser Seite wird dadurch ersetzt.`
+      );
+      if (!confirmed) return;
+
+      applyPayload(payload);
+      saveLocal(payload);
+      dirty = true;
+      await saveNow();
+      setStatus("Import abgeschlossen", "ok");
+    } catch (error) {
+      setStatus("Import fehlgeschlagen", "error");
+      window.alert("Die Importdatei konnte nicht gelesen werden.");
+    }
+  }
+
+  function extractImportedPayload(parsed) {
+    const source = parsed && typeof parsed === "object" && parsed.type === "aleria-orte-inline-export"
+      ? parsed.data
+      : parsed?.data && isCompatiblePayload(parsed.data)
+        ? parsed.data
+        : parsed;
+    if (!isCompatiblePayload(source)) return null;
+    return normalizeInlinePayload(source);
+  }
+
   async function hardResetTemplate() {
+    const password = window.prompt("Hard Reset ist geschuetzt. Passwort eingeben:");
+    if (password !== "2603") {
+      setStatus("Reset abgebrochen", "warning");
+      return;
+    }
+
     const confirmed = window.confirm(
       `Hard Reset für diese Orte-Vorlage?\n\nGelöscht werden nur Orte-Daten für "${pageId}": Direktbearbeitung, lokale Szenenliste und Orte-Szenendokumente. Almanach-Kommentare und AleriaAlmanach-Daten bleiben unangetastet.`
     );
@@ -1133,7 +1276,8 @@
       texts: { ...state.texts },
       tables: { ...state.tables },
       ratings: { ...state.ratings },
-      images: Object.fromEntries(Object.entries(state.images).map(([key, image]) => [key, normalizeImageState(image, key)]))
+      images: Object.fromEntries(Object.entries(state.images).map(([key, image]) => [key, normalizeImageState(image, key)])),
+      hiddenSections: normalizeHiddenSections(state.hiddenSections)
     };
   }
 
@@ -1161,6 +1305,53 @@
     persistEditable(editable);
     rememberSelection();
     markDirty();
+  }
+
+  function setSectionHidden(sectionId, hidden) {
+    if (!sectionId) return;
+    if (hidden) {
+      state.hiddenSections[sectionId] = true;
+    } else {
+      delete state.hiddenSections[sectionId];
+    }
+    applySectionVisibility();
+    renderSectionControls();
+    markDirty();
+  }
+
+  function showAllSections() {
+    state.hiddenSections = {};
+    applySectionVisibility();
+    renderSectionControls();
+    markDirty();
+  }
+
+  function applySectionVisibility() {
+    sectionItems.forEach((section) => {
+      const hidden = !!state.hiddenSections[section.id];
+      section.rows.forEach((row) => {
+        row.classList.toggle("orte-section-hidden", hidden);
+        row.hidden = hidden;
+      });
+      const tocItem = document.querySelector(`[data-toc-link="${cssEscape(section.id)}"]`)?.closest("li");
+      if (tocItem) tocItem.hidden = hidden;
+    });
+  }
+
+  function renderSectionControls() {
+    const list = document.querySelector("[data-orte-section-list]");
+    if (!list) return;
+    if (!sectionItems.length) {
+      list.innerHTML = `<p>Keine Abschnitte gefunden.</p>`;
+      return;
+    }
+
+    list.innerHTML = sectionItems.map((section) => `
+      <label class="orte-section-toggle">
+        <input type="checkbox" data-orte-section-toggle="${escapeAttr(section.id)}"${state.hiddenSections[section.id] ? "" : " checked"}>
+        <span>${escapeHtml(section.title)}</span>
+      </label>
+    `).join("");
   }
 
   function applyTooltip(text) {
@@ -1238,6 +1429,36 @@
     };
   }
 
+  function normalizeInlinePayload(payload) {
+    const source = payload && typeof payload === "object" ? payload : {};
+    return {
+      contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
+      savedAtClient: Number(source.savedAtClient || source.updatedAtClient) || 0,
+      texts: normalizeTextRecord(source.texts),
+      tables: normalizeTextRecord(source.tables),
+      ratings: normalizeRatingRecord(source.ratings),
+      images: Object.fromEntries(Object.entries(source.images && typeof source.images === "object" ? source.images : {})
+        .map(([key, image]) => [String(key), normalizeImageState(image, String(key))])),
+      hiddenSections: normalizeHiddenSections(source.hiddenSections)
+    };
+  }
+
+  function normalizeTextRecord(record) {
+    return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
+      .map(([key, value]) => [String(key), String(value ?? "")]));
+  }
+
+  function normalizeRatingRecord(record) {
+    return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
+      .map(([key, value]) => [String(key), clampRating(value)]));
+  }
+
+  function normalizeHiddenSections(record) {
+    return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
+      .filter(([, value]) => !!value)
+      .map(([key]) => [String(key), true]));
+  }
+
   function isCompatiblePayload(payload) {
     return !!payload && Number(payload.contentSchemaVersion) === CONTENT_SCHEMA_VERSION;
   }
@@ -1249,7 +1470,8 @@
       texts: source.texts || {},
       tables: source.tables || {},
       ratings: source.ratings || {},
-      images: source.images || {}
+      images: source.images || {},
+      hiddenSections: normalizeHiddenSections(source.hiddenSections)
     });
   }
 
@@ -1499,5 +1721,27 @@
 
   function escapeAttr(value) {
     return escapeHtml(value).replaceAll("`", "&#096;");
+  }
+
+  function slugifyFilePart(value) {
+    return String(value || "ort")
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "") || "ort";
+  }
+
+  function downloadJsonFile(payload, filename) {
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 })();

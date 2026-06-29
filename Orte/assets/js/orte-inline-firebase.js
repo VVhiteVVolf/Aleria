@@ -70,7 +70,7 @@ function normalizePayload(payload) {
     try {
       return normalizePayload(JSON.parse(source.data));
     } catch (error) {
-      return { texts: {}, images: {}, ratings: {}, tables: {} };
+      return { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {} };
     }
   }
 
@@ -81,6 +81,7 @@ function normalizePayload(payload) {
     images: normalizeImageRecord(source.images),
     ratings: normalizeRatingRecord(source.ratings),
     tables: normalizeTextRecord(source.tables),
+    hiddenSections: normalizeBooleanRecord(source.hiddenSections),
   };
 }
 
@@ -112,6 +113,12 @@ function normalizeRatingRecord(record) {
       const rating = Number.isFinite(number) ? Math.max(1, Math.min(5, Math.round(number))) : 3;
       return [String(key), rating];
     }));
+}
+
+function normalizeBooleanRecord(record) {
+  return Object.fromEntries(Object.entries(record && typeof record === "object" ? record : {})
+    .filter(([, value]) => !!value)
+    .map(([key]) => [String(key), true]));
 }
 
 function clampNumber(value, min, max, fallback) {
