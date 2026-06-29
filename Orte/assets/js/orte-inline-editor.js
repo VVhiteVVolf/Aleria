@@ -14,6 +14,13 @@
   const ratingItems = [];
   const tableItems = [];
   const sectionItems = [];
+  const history = {
+    undo: [],
+    redo: [],
+    lastSignature: "",
+    applying: false,
+    maxEntries: 60
+  };
 
   let editMode = false;
   let saveTimer = 0;
@@ -36,6 +43,8 @@
     "use-orte-latest-version",
     "export-orte-inline-data",
     "trigger-orte-inline-import",
+    "undo-orte-inline-change",
+    "redo-orte-inline-change",
     "close-orte-image-panel",
     "clear-orte-image",
     "add-orte-table-row",
@@ -76,6 +85,7 @@
     if (isCompatiblePayload(localPayload)) applyPayload(localPayload, { skipTables: true });
     renderToolbar();
     renderStatusWidget();
+    resetHistoryToCurrent();
     wireEvents();
     connectRemote();
   }
@@ -88,6 +98,8 @@
       <span class="orte-inline-status-text" data-orte-inline-status>bereit</span>
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
+      <button type="button" data-action="undo-orte-inline-change" data-orte-history-action="undo" data-orte-inline-edit-only title="Änderung zurück">Zurück</button>
+      <button type="button" data-action="redo-orte-inline-change" data-orte-history-action="redo" data-orte-inline-edit-only title="Änderung vor">Vor</button>
       <button type="button" data-action="export-orte-inline-data" data-orte-inline-edit-only>Export</button>
       <button type="button" data-action="trigger-orte-inline-import" data-orte-inline-edit-only>Import</button>
       <button type="button" data-action="hard-reset-orte-template" data-orte-inline-edit-only>Hard Reset</button>
@@ -125,6 +137,7 @@
     `;
     document.body.prepend(toolbar);
     renderSectionControls();
+    updateHistoryButtons();
   }
 
   function renderStatusWidget() {
@@ -159,6 +172,13 @@
   }
 
   function wireEvents() {
+    document.addEventListener("click", (event) => {
+      const summaryText = event.target.closest("summary [data-orte-inline-text]");
+      if (!editMode || !summaryText || !root.contains(summaryText)) return;
+      event.preventDefault();
+      event.stopPropagation();
+    }, true);
+
     document.addEventListener("click", (event) => {
       const actionTarget = event.target.closest("[data-action]");
       if (actionTarget && inlineActions.has(actionTarget.dataset.action)) {
@@ -216,6 +236,15 @@
     });
 
     document.addEventListener("keydown", (event) => {
+      const summaryText = event.target.closest("summary [data-orte-inline-text]");
+      if (editMode && summaryText && root.contains(summaryText) && event.key === "Enter") {
+        event.preventDefault();
+        summaryText.blur();
+        persistEditable(summaryText);
+        markDirty();
+        return;
+      }
+
       if (event.key === "Escape") closeImagePanel();
     });
 
@@ -259,6 +288,18 @@
 
     if (action === "trigger-orte-inline-import") {
       document.querySelector("[data-orte-import-file]")?.click();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "undo-orte-inline-change") {
+      undoInlineChange();
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "redo-orte-inline-change") {
+      redoInlineChange();
       event.preventDefault();
       return;
     }
@@ -366,6 +407,7 @@
     renderImageSlots();
     renderRatings();
     renderTableControls();
+    updateHistoryButtons();
     if (!editMode) closeImagePanel();
   }
 
@@ -531,7 +573,7 @@
   }
 
   function getEditableCandidates() {
-    return Array.from(root.querySelectorAll("h2, h3, summary, p, td, th, li"))
+    return Array.from(root.querySelectorAll("h2, h3, details > summary > span, p, td, th, li"))
       .filter((node) => !isInsideIgnoredSurface(node))
       .filter((node) => !node.closest("[data-orte-image-key], [data-orte-rating-key]"))
       .filter((node) => !node.matches(".place-spacer"))
@@ -1062,8 +1104,70 @@
     return clone.innerHTML;
   }
 
+  function resetHistoryToCurrent() {
+    const payload = clonePayload();
+    history.undo = [payload];
+    history.redo = [];
+    history.lastSignature = payloadSignature(payload);
+    updateHistoryButtons();
+  }
+
+  function captureHistorySnapshot() {
+    if (history.applying) return;
+    const payload = clonePayload();
+    const signature = payloadSignature(payload);
+    if (signature === history.lastSignature) {
+      updateHistoryButtons();
+      return;
+    }
+
+    history.undo.push(payload);
+    if (history.undo.length > history.maxEntries) history.undo.shift();
+    history.redo = [];
+    history.lastSignature = signature;
+    updateHistoryButtons();
+  }
+
+  function undoInlineChange() {
+    if (history.undo.length <= 1) return;
+    const current = history.undo.pop();
+    history.redo.push(current);
+    applyHistoryPayload(history.undo[history.undo.length - 1], "Änderung zurück");
+  }
+
+  function redoInlineChange() {
+    if (!history.redo.length) return;
+    const next = history.redo.pop();
+    history.undo.push(next);
+    if (history.undo.length > history.maxEntries) history.undo.shift();
+    applyHistoryPayload(next, "Änderung vor");
+  }
+
+  function applyHistoryPayload(payload, statusText) {
+    if (!isCompatiblePayload(payload)) return;
+    history.applying = true;
+    closeImagePanel();
+    applyPayload(payload);
+    saveLocal(payload);
+    dirty = true;
+    history.lastSignature = payloadSignature(payload);
+    history.applying = false;
+    updateHistoryButtons();
+    setStatus(statusText, "warning");
+    window.clearTimeout(saveTimer);
+    saveTimer = window.setTimeout(saveNow, 800);
+  }
+
+  function updateHistoryButtons() {
+    const undoButton = document.querySelector("[data-orte-history-action='undo']");
+    const redoButton = document.querySelector("[data-orte-history-action='redo']");
+    if (undoButton) undoButton.disabled = history.undo.length <= 1;
+    if (redoButton) redoButton.disabled = history.redo.length <= 0;
+  }
+
   function markDirty() {
     dirty = true;
+    captureHistorySnapshot();
     setStatus("ungespeichert");
     window.clearTimeout(saveTimer);
     saveTimer = window.setTimeout(saveNow, 800);
@@ -1120,6 +1224,7 @@
 
       applyPayload(payload);
       saveLocal(payload);
+      resetHistoryToCurrent();
       dirty = true;
       await saveNow();
       setStatus("Import abgeschlossen", "ok");
@@ -1209,6 +1314,7 @@
       const currentPayload = clonePayload();
       if (payloadSignature(payload) === payloadSignature(currentPayload)) {
         saveLocal(payload);
+        resetHistoryToCurrent();
         pendingLocalPayload = null;
         pendingRemotePayload = null;
         setStatus("online synchronisiert", "ok");
@@ -1228,6 +1334,7 @@
 
       applyPayload(payload);
       saveLocal(payload);
+      resetHistoryToCurrent();
       setStatus("online geladen", "ok");
     }, () => {
       setStatus("online nicht erreichbar", "error");
@@ -1479,6 +1586,7 @@
     if (!isCompatiblePayload(pendingRemotePayload)) return;
     applyPayload(pendingRemotePayload);
     saveLocal(pendingRemotePayload);
+    resetHistoryToCurrent();
     dirty = false;
     pendingLocalPayload = null;
     pendingRemotePayload = null;
@@ -1490,6 +1598,7 @@
     if (!isCompatiblePayload(pendingLocalPayload)) return;
     applyPayload(pendingLocalPayload);
     saveLocal(pendingLocalPayload);
+    resetHistoryToCurrent();
     pendingRemotePayload = null;
     pendingLocalPayload = null;
     dirty = true;

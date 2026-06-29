@@ -432,6 +432,26 @@ img {
   width: 1280px !important;
 }
 
+.grossstadt-template .pt-s-0007,
+.grossstadt-template .pt-s-0036 {
+  vertical-align: top;
+}
+
+.grossstadt-template .orte-balanced-text-panel {
+  max-height: var(--orte-balanced-text-max-height, 560px);
+  overflow: auto;
+  padding-right: 8px;
+  scrollbar-color: rgba(77, 45, 14, 0.72) rgba(255, 246, 218, 0.42);
+}
+
+.grossstadt-template .orte-balanced-text-panel--background {
+  --orte-balanced-text-max-height: 600px;
+}
+
+.grossstadt-template .orte-balanced-text-panel--conflicts {
+  --orte-balanced-text-max-height: 320px;
+}
+
 .grossstadt-template .pt-s-0077 {
   width: 987px !important;
   height: 420px;

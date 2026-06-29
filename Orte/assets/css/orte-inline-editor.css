@@ -44,6 +44,12 @@
   color: #3a120a;
 }
 
+.orte-inline-toolbar button:disabled,
+.orte-inline-image-panel button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
 .orte-inline-toolbar [data-orte-inline-edit-only] {
   display: none;
 }
