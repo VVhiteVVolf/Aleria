@@ -111,24 +111,6 @@ function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
     </button>`;
 }
 
-function getCommentDecorMarkup(kind) {
-  if (normalizeCommentKind(kind) !== 'flirt') return '';
-  return `
-    <span class="comment-flirt-float-hearts" aria-hidden="true">
-      <span class="comment-flirt-float-heart top big">♥</span>
-      <span class="comment-flirt-float-heart top small">♡</span>
-      <span class="comment-flirt-float-heart bottom big">♥</span>
-      <span class="comment-flirt-float-heart bottom small">♡</span>
-    </span>
-    <span class="comment-flirt-heart-burst" aria-hidden="true">
-      <span class="comment-flirt-heart particle p1">♥</span>
-      <span class="comment-flirt-heart particle p2">♡</span>
-      <span class="comment-flirt-heart particle p3">♥</span>
-      <span class="comment-flirt-heart particle p4">♡</span>
-      <span class="comment-flirt-heart particle p5">♥</span>
-    </span>`;
-}
-
 function getCommentCharacterForStoredComment(c) {
   if (typeof getAvailableCommentCharacterById === 'function' && c?.characterId) {
     const byId = getAvailableCommentCharacterById(c.characterId);
@@ -256,7 +238,6 @@ function renderCommentBubble(c, idx) {
             ${c.charTitle ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
           <div class="comment-body comment-kind-${commentKind}">
-            ${getCommentDecorMarkup(commentKind)}
             <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
             ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}

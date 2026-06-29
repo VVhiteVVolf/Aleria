@@ -1576,93 +1576,28 @@
   }
   .comment-body.comment-kind-flirt::before,
   .comment-body.comment-kind-flirt::after {
-    content: none;
-  }
-  .comment-flirt-float-hearts,
-  .comment-flirt-heart-burst {
     position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: visible;
-    pointer-events: none;
-  }
-  .comment-body.comment-kind-flirt > .comment-flirt-float-hearts,
-  .comment-body.comment-kind-flirt > .comment-flirt-heart-burst {
-    z-index: 1;
-  }
-  .comment-flirt-float-heart,
-  .comment-flirt-heart {
-    position: absolute;
-    display: inline-block;
-    line-height: 1;
     color: rgba(220,55,111,0.78);
+    line-height: 1;
     text-shadow:
       0 0 7px rgba(255,135,178,0.8),
       0 0 14px rgba(255,188,211,0.55);
-    will-change: transform, opacity;
+    pointer-events: none;
+    z-index: 3;
   }
-  .comment-flirt-float-heart.top.big {
-    left: -1.48rem;
-    top: 0.1rem;
-    font-size: 1.45rem;
-    animation: commentFlirtFloatHeartBig 3.8s ease-in-out infinite;
+  .comment-body.comment-kind-flirt::before {
+    content: '♥ ♡';
+    left: -1.35rem;
+    top: -0.45rem;
+    font-size: 1.15rem;
+    animation: commentFlirtCornerFloat 3.4s ease-in-out infinite;
   }
-  .comment-flirt-float-heart.top.small {
-    left: -0.72rem;
-    top: -0.08rem;
-    font-size: 0.86rem;
-    color: rgba(234,82,136,0.66);
-    animation: commentFlirtFloatHeartSmall 3.2s ease-in-out infinite;
-  }
-  .comment-flirt-float-heart.bottom.big {
-    right: -0.72rem;
-    bottom: 0.02rem;
-    font-size: 1.35rem;
-    animation: commentFlirtFloatHeartBig 3.6s ease-in-out infinite reverse;
-  }
-  .comment-flirt-float-heart.bottom.small {
-    right: 0.28rem;
-    bottom: -0.32rem;
-    font-size: 0.78rem;
-    color: rgba(234,82,136,0.66);
-    animation: commentFlirtFloatHeartSmall 3s ease-in-out infinite reverse;
-  }
-  .comment-flirt-heart {
-    right: 0.15rem;
-    bottom: 0.18rem;
-    font-size: 0.72rem;
-    opacity: 0;
-    animation: commentFlirtHeartShot 1.45s ease-out infinite;
-  }
-  .comment-flirt-heart.p1 {
-    --heart-x: -0.25rem;
-    --heart-y: -1.8rem;
-    --heart-rot: -18deg;
-    animation-delay: 0s;
-  }
-  .comment-flirt-heart.p2 {
-    --heart-x: -1rem;
-    --heart-y: -1.45rem;
-    --heart-rot: 16deg;
-    animation-delay: 0.18s;
-  }
-  .comment-flirt-heart.p3 {
-    --heart-x: -0.55rem;
-    --heart-y: -2.25rem;
-    --heart-rot: 28deg;
-    animation-delay: 0.36s;
-  }
-  .comment-flirt-heart.p4 {
-    --heart-x: -1.35rem;
-    --heart-y: -2rem;
-    --heart-rot: -32deg;
-    animation-delay: 0.54s;
-  }
-  .comment-flirt-heart.p5 {
-    --heart-x: 0.2rem;
-    --heart-y: -2.35rem;
-    --heart-rot: 12deg;
-    animation-delay: 0.72s;
+  .comment-body.comment-kind-flirt::after {
+    content: '♡ ♥';
+    right: 0.8rem;
+    bottom: -0.55rem;
+    font-size: 1.05rem;
+    animation: commentFlirtCornerFloat 3.9s ease-in-out infinite reverse;
   }
   .comment-kind-flirt .comment-kind-badge {
     border-color: rgba(225,83,132,0.45);
@@ -1838,34 +1773,9 @@
     0%, 100% { transform: scale(0.985); opacity: 0.68; filter: blur(7px); }
     50% { transform: scale(1.025); opacity: 0.9; filter: blur(9px); }
   }
-  @keyframes commentFlirtFloatHeartBig {
-    0%, 100% { transform: translate(0, 0) rotate(-8deg) scale(1); opacity: 0.78; }
-    50% { transform: translate(0.12rem, -0.2rem) rotate(6deg) scale(1.08); opacity: 1; }
-  }
-  @keyframes commentFlirtFloatHeartSmall {
-    0%, 100% { transform: translate(0, 0) rotate(8deg) scale(0.92); opacity: 0.58; }
-    50% { transform: translate(-0.1rem, 0.14rem) rotate(-10deg) scale(1.08); opacity: 0.9; }
-  }
-  @keyframes commentFlirtHeartShot {
-    0% {
-      transform: translate(0, 0) rotate(0deg) scale(0.35);
-      opacity: 0;
-      filter: blur(0.3px);
-    }
-    16% {
-      opacity: 1;
-      transform: translate(calc(var(--heart-x) * 0.24), calc(var(--heart-y) * 0.24)) rotate(calc(var(--heart-rot) * 0.35)) scale(0.85);
-      filter: blur(0);
-    }
-    58% {
-      opacity: 0.9;
-      transform: translate(calc(var(--heart-x) * 0.72), calc(var(--heart-y) * 0.72)) rotate(calc(var(--heart-rot) * 0.76)) scale(1.15);
-    }
-    100% {
-      transform: translate(var(--heart-x), var(--heart-y)) rotate(var(--heart-rot)) scale(1.38);
-      opacity: 0;
-      filter: blur(0.5px);
-    }
+  @keyframes commentFlirtCornerFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); opacity: 0.72; }
+    50% { transform: translateY(-0.28rem) rotate(6deg); opacity: 1; }
   }
   @keyframes commentRuneShimmer {
     0%, 100% { opacity: 0.34; color: rgba(38,104,116,0.48); filter: drop-shadow(0 0 0 rgba(232,255,255,0)); }
@@ -1936,8 +1846,8 @@
   @media (prefers-reduced-motion: reduce) {
     .comment-body.comment-kind-song::before,
     .comment-body.comment-kind-song::after,
-    .comment-flirt-float-heart,
-    .comment-flirt-heart,
+    .comment-body.comment-kind-flirt::before,
+    .comment-body.comment-kind-flirt::after,
     .comment-body.comment-kind-spell::before,
     .comment-body.comment-kind-spell::after,
     .comment-body.comment-kind-madness::before,
