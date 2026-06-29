@@ -55,7 +55,7 @@ Zielbild:
 
 Beobachtung:
 
-- In Dateien und UI tauchen kaputte Zeichen auf, z. B. `Gro?stadt`, `GroÃŸstadt`, `fuer`, `Loeschen`.
+- In Dateien und UI tauchten kaputte Zeichen und ASCII-Umschreibungen auf, z. B. falsch dekodierte Umlaute oder ersetzte Sonderzeichen.
 - Umlaute dürfen verwendet werden.
 
 Risiko:
