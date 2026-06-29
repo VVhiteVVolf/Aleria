@@ -82,7 +82,8 @@ function updateInlineFamilyTreeField(input) {
   if (!page) return;
   const data = getInlineFamilyDataForEdit(page);
   const tree = getInlineFamilyTree(data, Number(input.dataset.familyTreeIndex || 0));
-  tree.label = String(input.value || '').trim();
+  const field = input.dataset.familyTreeField || 'label';
+  tree[field] = String(input.value || '').trim();
   page.family = sanitizeFamilyData(data);
   scheduleInlineModuleLivePreviewRefresh();
 }
@@ -290,9 +291,14 @@ function buildInlineFamilyTreeRows(trees = []) {
         </div>
       </div>
       <div class="inline-edit-field"><span class="inline-edit-label">Reitername</span><input class="inline-edit-input" type="text" data-inline-action="update-family-tree-field" data-family-tree-index="${treeIndex}" value="${escapeHtml(tree.label || `Familienbaum ${treeIndex + 1}`)}"></div>
+      <div class="inline-edit-grid">
+        <div class="inline-edit-field"><span class="inline-edit-label">Baum-ID</span><input class="inline-edit-input" type="text" data-inline-action="update-family-tree-field" data-family-tree-index="${treeIndex}" data-family-tree-field="id" value="${escapeHtml(tree.id || `familienbaum-${treeIndex + 1}`)}"></div>
+        <div class="inline-edit-field"><span class="inline-edit-label">Elternbaum-ID</span><input class="inline-edit-input" type="text" data-inline-action="update-family-tree-field" data-family-tree-index="${treeIndex}" data-family-tree-field="parentTreeId" value="${escapeHtml(tree.parentTreeId || '')}"></div>
+      </div>
       <div class="module-card-layout-blocks">${buildInlineFamilyLevelRows(tree.levels, treeIndex)}</div>
       <div class="inline-edit-section">
         <div class="inline-edit-head"><div class="inline-edit-kicker">Verbindungslinien</div><button class="module-editor-mini-btn" type="button" data-inline-action="add-family-connection" data-family-tree-index="${treeIndex}">+ Verbindung</button></div>
+        <div class="module-editor-help">Von/Zu duerfen Karten-IDs aus jedem sichtbaren Familienbaum sein.</div>
         <div class="inline-stat-editor">${buildInlineFamilyConnectionRows(tree.connections, treeIndex)}</div>
       </div>
     </div>`).join('');
@@ -305,7 +311,7 @@ function buildInlineFamilyEditor(page) {
       <div class="inline-edit-kicker">Familienakte</div>
       <div class="inline-edit-grid">
         <div class="inline-edit-field"><span class="inline-edit-label">Layoutmodus</span><select class="inline-edit-select" data-inline-action="update-family-field" data-family-field="layoutMode"><option value="vertical"${data.layoutMode !== 'depth' ? ' selected' : ''}>Stammbaum</option><option value="depth"${data.layoutMode === 'depth' ? ' selected' : ''}>Tiefenlayout / Spalten</option></select></div>
-        <div class="inline-edit-field"><span class="inline-edit-label">Baumdarstellung</span><select class="inline-edit-select" data-inline-action="update-family-field" data-family-field="treeDisplayMode"><option value="tabs"${data.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option><option value="parallel"${data.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option></select></div>
+        <div class="inline-edit-field"><span class="inline-edit-label">Baumdarstellung</span><select class="inline-edit-select" data-inline-action="update-family-field" data-family-field="treeDisplayMode"><option value="tabs"${data.treeDisplayMode !== 'parallel' && data.treeDisplayMode !== 'groups' ? ' selected' : ''}>Ein Baum pro Reiter</option><option value="parallel"${data.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option><option value="groups"${data.treeDisplayMode === 'groups' ? ' selected' : ''}>Eltern-/Unterbaeume</option></select></div>
         <div class="inline-edit-field"><span class="inline-edit-label">Kartenschrift (%)</span><input class="inline-edit-input" type="number" min="65" max="125" step="1" value="${escapeHtml(data.cardFontScale)}" data-inline-action="update-family-field" data-family-field="cardFontScale"></div>
         <div class="inline-edit-field"><span class="inline-edit-label">Kartenbilder (%)</span><input class="inline-edit-input" type="number" min="50" max="160" step="1" value="${escapeHtml(data.portraitScale)}" data-inline-action="update-family-field" data-family-field="portraitScale"></div>
         <div class="inline-edit-field"><span class="inline-edit-label">Aufbau-Groesse (%)</span><input class="inline-edit-input" type="range" min="65" max="135" step="1" value="${escapeHtml(data.chartScale)}" data-inline-action="update-family-field" data-family-field="chartScale"></div>

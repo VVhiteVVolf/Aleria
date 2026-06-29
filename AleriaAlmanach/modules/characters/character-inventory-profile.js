@@ -21,6 +21,7 @@ function getDefaultCharacterInventoryProfileCompanions() {
 
 function createCharacterInventoryDataFromCharacter(char = {}) {
   return sanitizeCharacterInventoryData({
+    characterId: char.id || _editingChar || '',
     title: 'Charakter-Inventar',
     subtitle: 'Ausrüstung, Gegenstände und Gefährten verwalten',
     portrait: char.portrait || '',
@@ -33,6 +34,7 @@ function createCharacterInventoryDataFromCharacter(char = {}) {
     moneyState: { gold: 0, silver: 0, copper: 0, totalCopper: 0 },
     carryLabel: 'Traglast',
     carryValue: 'Noch festlegen',
+    showInfoTable: false,
     infoRows: [
       { icon: '*', label: 'Status', value: 'Gesund' },
       { icon: '*', label: 'TP / Zustand', value: 'Noch festlegen' },
@@ -52,6 +54,7 @@ function getCharacterInventoryProfileSource(char = {}) {
   if (char.inventory && typeof char.inventory === 'object') {
     return sanitizeCharacterInventoryData({
       ...char.inventory,
+      characterId: char.inventory.characterId || char.id || _editingChar || '',
       portrait: char.inventory.portrait || char.portrait || '',
       name: char.inventory.name || char.name || 'Name des Charakters',
       role: char.inventory.role || char.title || char.fraktion || 'Rolle'
@@ -95,6 +98,7 @@ function handleCharacterInventoryProfileEditorAction(trigger) {
   if (action === 'add-ci-category') return addCharacterInventoryCategory(trigger), true;
   if (action === 'remove-ci-category') return removeCharacterInventoryCategory(trigger), true;
   if (action === 'add-ci-item') return addCharacterInventoryItem(trigger), true;
+  if (action === 'add-ci-item-from-register') return addCharacterInventoryItemFromRegister(trigger), true;
   if (action === 'remove-ci-item') return removeCharacterInventoryItem(trigger), true;
   if (action === 'move-ci-item') return moveCharacterInventoryItem(trigger), true;
   if (action === 'duplicate-ci-item') return duplicateCharacterInventoryItem(trigger), true;

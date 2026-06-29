@@ -230,8 +230,17 @@
   min-width: 100%;
 }
 
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-groups {
+  width: max-content;
+  min-width: 100%;
+}
+
 .hierarchy-page.fullscreen-active .hierarchy-tree-mode-parallel .hierarchy-tree-panel {
   min-width: min(100vw, 86rem);
+}
+
+.hierarchy-page.fullscreen-active .hierarchy-tree-mode-groups .hierarchy-tree-panel {
+  min-width: min(100vw, 58rem);
 }
 
 .hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-chart-level {
@@ -527,19 +536,91 @@
 }
 
 .hierarchy-tree-mode-parallel .hierarchy-tree-panel + .hierarchy-tree-panel {
-  border-left: 2px solid rgba(91, 60, 32, 0.48);
-  box-shadow: -1px 0 0 rgba(255, 248, 226, 0.28);
+  border-left: 1px solid rgba(91, 60, 32, 0.18);
+  box-shadow: -1px 0 0 rgba(255, 248, 226, 0.18);
 }
 
 .hierarchy-tree-mode-parallel .hierarchy-tree-panel + .hierarchy-tree-panel::before {
   content: '';
   position: absolute;
-  top: 0.65rem;
-  bottom: 0.65rem;
-  left: -0.55rem;
-  width: 0.95rem;
-  border-left: 1px solid rgba(91, 60, 32, 0.32);
-  border-right: 1px solid rgba(255, 248, 226, 0.34);
+  top: 1.2rem;
+  bottom: 1.2rem;
+  left: -0.1rem;
+  width: 0.2rem;
+  border-left: 1px solid rgba(255, 248, 226, 0.22);
+  pointer-events: none;
+}
+
+.hierarchy-tree-mode-groups {
+  display: block;
+  min-width: max-content;
+  min-height: max-content;
+}
+
+.hierarchy-tree-groups {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: clamp(1.4rem, 2vw, 2.3rem);
+  align-items: start;
+  min-width: max-content;
+}
+
+.hierarchy-tree-group-node {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: calc(1.9rem * var(--hierarchy-chart-scale, 1));
+  min-width: max-content;
+}
+
+.hierarchy-tree-group-current {
+  position: relative;
+  z-index: 2;
+  min-width: max-content;
+}
+
+.hierarchy-tree-group-children {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: clamp(1.15rem, 1.8vw, 2rem);
+  align-items: start;
+  justify-content: center;
+  min-width: max-content;
+  padding-top: calc(1.65rem * var(--hierarchy-chart-scale, 1));
+}
+
+.hierarchy-tree-group-children::before,
+.hierarchy-tree-group-children::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.hierarchy-tree-group-children::before {
+  top: 0;
+  left: 50%;
+  height: calc(1.65rem * var(--hierarchy-chart-scale, 1));
+  border-left: 1px solid rgba(91, 60, 32, 0.26);
+}
+
+.hierarchy-tree-group-children::after {
+  top: calc(1.65rem * var(--hierarchy-chart-scale, 1));
+  left: clamp(4rem, 16%, 12rem);
+  right: clamp(4rem, 16%, 12rem);
+  border-top: 1px solid rgba(91, 60, 32, 0.22);
+}
+
+.hierarchy-tree-group-children > .hierarchy-tree-group-node::before {
+  content: '';
+  position: absolute;
+  top: calc(-1.65rem * var(--hierarchy-chart-scale, 1));
+  left: 50%;
+  height: calc(1.65rem * var(--hierarchy-chart-scale, 1));
+  border-left: 1px solid rgba(91, 60, 32, 0.22);
   pointer-events: none;
 }
 

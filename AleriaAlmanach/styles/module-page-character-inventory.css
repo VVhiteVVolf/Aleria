@@ -848,6 +848,13 @@
   align-items: center;
 }
 
+.ci-editor-section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
 .ci-editor-card-actions {
   display: flex;
   flex-wrap: wrap;
@@ -865,6 +872,19 @@
 .ci-editor-row label {
   display: grid;
   gap: 0.2rem;
+}
+
+.ci-editor-grid .ci-editor-check {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: end;
+  min-height: 2.4rem;
+}
+
+.ci-editor-grid .ci-editor-check input {
+  width: 1rem;
+  height: 1rem;
 }
 
 .ci-editor-grid label.wide {

@@ -6,23 +6,127 @@ const COMMENT_KIND_LABELS = {
   thought: 'Gedanke',
   whisper: 'Zu Flüstern',
   shout: 'Rufen',
+  animal: 'Tiersprache',
+  song: 'Gesang',
+  spell: 'Zauberformel',
+  madness: 'Wahnsinn',
+  telepathy: 'Telepathie',
+  prayer: 'Gebet',
+  flirt: 'Flirt',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
   'scene-transition-event': 'Szenenwechsel',
   'scene-poll-event': 'Abstimmung'
 };
 
+const COMMENT_KIND_ICONS = {
+  speech: '../IconOrdner/Buttom Icons/Rede.PNG',
+  thought: '../IconOrdner/Buttom Icons/Gedanke.PNG',
+  whisper: '../IconOrdner/Buttom Icons/Flüstern.PNG',
+  shout: '../IconOrdner/Buttom Icons/Rufen.PNG',
+  animal: '../IconOrdner/Buttom Icons/Tiersprache.PNG',
+  song: '../IconOrdner/Buttom Icons/Singen.PNG',
+  spell: '../IconOrdner/Buttom Icons/Zaubern.PNG',
+  madness: '../IconOrdner/Buttom Icons/Wahn.PNG',
+  telepathy: '../IconOrdner/Buttom Icons/Telepatie.PNG',
+  prayer: '../IconOrdner/Buttom Icons/Beten.PNG',
+  flirt: '../IconOrdner/Buttom Icons/Flirt.PNG'
+};
+
+const COMMENT_KIND_ALIASES = {
+  ooc: 'whisper',
+  fluestern: 'whisper',
+  flüstern: 'whisper',
+  rufen: 'shout',
+  tiersprache: 'animal',
+  tier: 'animal',
+  animal: 'animal',
+  gesang: 'song',
+  singen: 'song',
+  zauber: 'spell',
+  zauberformel: 'spell',
+  wahn: 'madness',
+  wahnsinn: 'madness',
+  telepathie: 'telepathy',
+  gebet: 'prayer',
+  beten: 'prayer',
+  flirty: 'flirt'
+};
+
 function normalizeCommentKind(kind, narrator = false) {
   if (narrator) return 'narrator';
   const value = String(kind || 'speech').toLowerCase();
-  if (value === 'ooc') return 'whisper';
-  return Object.prototype.hasOwnProperty.call(COMMENT_KIND_LABELS, value)
-    ? value
+  const normalized = COMMENT_KIND_ALIASES[value] || value;
+  return Object.prototype.hasOwnProperty.call(COMMENT_KIND_LABELS, normalized)
+    ? normalized
     : 'speech';
 }
 
 function getCommentKindLabel(kind) {
   return COMMENT_KIND_LABELS[normalizeCommentKind(kind)] || COMMENT_KIND_LABELS.speech;
+}
+
+function getCommentKindIconSrc(kind) {
+  return COMMENT_KIND_ICONS[normalizeCommentKind(kind)] || '';
+}
+
+function getCommentKindIconMarkup(kind, className = 'comment-kind-icon') {
+  const src = getCommentKindIconSrc(kind);
+  return src
+    ? `<img class="${escapeHtml(className)}" src="${sanitizeImageSrc(src)}" alt="" loading="lazy" decoding="async">`
+    : '';
+}
+
+function commentKindUsesQuoteMark(kind) {
+  return ['speech', 'shout', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
+}
+
+const COMMENT_ANIMAL_GLYPHS = ['#', '◇', '✶', '∥', '♧', '·', '❄', '☂', '⇆', '↟', 'Ⅱ', '✧', '⋄', '⟐', '※', '¤'];
+
+function hashCommentAnimalText(text = '') {
+  return Array.from(String(text || '')).reduce((hash, char) => {
+    hash = ((hash << 5) - hash) + char.charCodeAt(0);
+    return hash >>> 0;
+  }, 2166136261);
+}
+
+function scrambleAnimalCommentText(text = '') {
+  const source = String(text || '');
+  let seed = hashCommentAnimalText(source);
+  return Array.from(source).map(char => {
+    if (/\s/.test(char)) return char;
+    if (/[.,!?;:„“"'\-–—()[\]{}]/.test(char)) return char;
+    seed = (seed * 1664525 + 1013904223) >>> 0;
+    return COMMENT_ANIMAL_GLYPHS[seed % COMMENT_ANIMAL_GLYPHS.length];
+  }).join('');
+}
+
+function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
+  const safeId = escapeHtml(`${commentId}-animal-${partIdx}`);
+  const cipher = escapeHtml(scrambleAnimalCommentText(text));
+  return `
+    <button type="button" class="comment-animal-toggle" data-action="toggle-animal-comment" aria-expanded="false" aria-controls="${safeId}" title="Tiersprache entschlüsseln">
+      <span class="comment-animal-cipher" aria-hidden="false">${cipher}</span>
+      <span id="${safeId}" class="comment-animal-plain" aria-hidden="true">${parseCommentMarkup(text)}</span>
+    </button>`;
+}
+
+function getCommentDecorMarkup(kind) {
+  if (normalizeCommentKind(kind) !== 'flirt') return '';
+  return `
+    <span class="comment-flirt-float-hearts" aria-hidden="true">
+      <span class="comment-flirt-float-heart top big">♥</span>
+      <span class="comment-flirt-float-heart top small">♡</span>
+      <span class="comment-flirt-float-heart bottom big">♥</span>
+      <span class="comment-flirt-float-heart bottom small">♡</span>
+    </span>
+    <span class="comment-flirt-heart-burst" aria-hidden="true">
+      <span class="comment-flirt-heart particle p1">♥</span>
+      <span class="comment-flirt-heart particle p2">♡</span>
+      <span class="comment-flirt-heart particle p3">♥</span>
+      <span class="comment-flirt-heart particle p4">♡</span>
+      <span class="comment-flirt-heart particle p5">♥</span>
+    </span>`;
 }
 
 function getCommentCharacterForStoredComment(c) {
@@ -124,7 +228,7 @@ function renderCommentBubble(c, idx) {
     return `
       ${divider}
       <div class="comment-narrator comment-kind-${commentKind}" data-comment-id="${commentId}">
-        <div class="comment-kind-badge">${kindLabel}</div>
+        <div class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></div>
         <div class="comment-narrator-text">${parseCommentMarkup(c.text)}</div>
         ${narratorActions}
       </div>`;
@@ -139,6 +243,9 @@ function renderCommentBubble(c, idx) {
     const actions = !c._hideActions && partIdx === parts.length - 1
       ? `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
+    const textMarkup = commentKind === 'animal' && !c._commentPreview
+      ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
+      : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
 
     return `
       <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}" data-comment-id="${commentId}">
@@ -149,8 +256,9 @@ function renderCommentBubble(c, idx) {
             ${c.charTitle ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
           <div class="comment-body comment-kind-${commentKind}">
-            <span class="comment-kind-badge">${kindLabel}</span>
-            ${commentKind === 'speech' || commentKind === 'shout' ? '<span class="comment-quote-mark">"</span>' : ''}<span class="comment-text">${parseCommentMarkup(part.text)}</span>
+            ${getCommentDecorMarkup(commentKind)}
+            <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
+            ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}
           </div>
         </div>

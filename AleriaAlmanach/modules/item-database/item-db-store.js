@@ -3,6 +3,14 @@ const ITEM_DB_CUSTOM_KEY = 'aleria-item-db-custom-items-v1';
 const ITEM_DB_DELETED_KEY = 'aleria-item-db-deleted-items-v1';
 const ITEM_DB_SCAN_CACHE_KEY = 'aleria-item-db-scan-cache-v1';
 const ITEM_DB_CONFIG_KEY = 'aleria-item-db-config-v1';
+const ITEM_DB_META_KEY = 'aleria-item-db-meta-v1';
+const ITEM_DB_EXPORT_SCHEMA = 'aleria-item-db-export-v1';
+let _itemDbApplyingRemote = false;
+let _itemDbGlobalSyncReady = false;
+let _itemDbGlobalSyncStarted = false;
+let _itemDbGlobalUnsubscribe = null;
+let _itemDbGlobalSaveTimer = null;
+let _itemDbGlobalSavePromise = Promise.resolve();
 
 function itemDbReadJsonStore(key, fallback) {
   try {
@@ -15,8 +23,214 @@ function itemDbReadJsonStore(key, fallback) {
   }
 }
 
-function itemDbWriteJsonStore(key, value) {
+function itemDbReadMeta() {
+  const meta = itemDbReadJsonStore(ITEM_DB_META_KEY, {});
+  return meta && typeof meta === 'object' ? {
+    updatedAtClient: Number(meta.updatedAtClient) || 0,
+    remoteUpdatedAtClient: Number(meta.remoteUpdatedAtClient) || 0,
+    pendingSync: !!meta.pendingSync
+  } : { updatedAtClient: 0, remoteUpdatedAtClient: 0, pendingSync: false };
+}
+
+function itemDbWriteMeta(meta = {}) {
+  localStorage.setItem(ITEM_DB_META_KEY, JSON.stringify({
+    updatedAtClient: Number(meta.updatedAtClient) || 0,
+    remoteUpdatedAtClient: Number(meta.remoteUpdatedAtClient) || 0,
+    pendingSync: !!meta.pendingSync
+  }));
+}
+
+function itemDbMarkLocalChanged() {
+  if (_itemDbApplyingRemote) return;
+  const previous = itemDbReadMeta();
+  itemDbWriteMeta({
+    ...previous,
+    updatedAtClient: Date.now(),
+    pendingSync: true
+  });
+  itemDbScheduleGlobalSave('local-change');
+}
+
+function itemDbWriteJsonStore(key, value, options = {}) {
   localStorage.setItem(key, JSON.stringify(value));
+  if (options.markDirty !== false && key !== ITEM_DB_META_KEY) itemDbMarkLocalChanged();
+}
+
+function itemDbIsPayloadPopulated(payload = {}) {
+  if (!payload || typeof payload !== 'object') return false;
+  if (Array.isArray(payload.scanCache) && payload.scanCache.length) return true;
+  if (Array.isArray(payload.customItems) && payload.customItems.length) return true;
+  if (payload.overrides && typeof payload.overrides === 'object' && Object.keys(payload.overrides).length) return true;
+  if (Array.isArray(payload.deletedKeys) && payload.deletedKeys.length) return true;
+  const config = payload.config && typeof payload.config === 'object' ? payload.config : {};
+  return !!(
+    (Array.isArray(config.customCategories) && config.customCategories.length) ||
+    (config.categorySettings && typeof config.categorySettings === 'object' && Object.keys(config.categorySettings).length) ||
+    (Array.isArray(config.tags) && config.tags.length)
+  );
+}
+
+function itemDbNormalizeDatabasePayload(payload = {}) {
+  if (!payload || typeof payload !== 'object' || payload.schema !== ITEM_DB_EXPORT_SCHEMA) {
+    throw new Error('Diese Datei ist kein gueltiger Items-und-Gueter-Datenbankexport.');
+  }
+  return {
+    schema: ITEM_DB_EXPORT_SCHEMA,
+    exportedAt: payload.exportedAt || new Date().toISOString(),
+    updatedAtClient: Number(payload.updatedAtClient) || 0,
+    scanCache: Array.isArray(payload.scanCache) ? payload.scanCache : [],
+    customItems: Array.isArray(payload.customItems) ? payload.customItems : [],
+    overrides: payload.overrides && typeof payload.overrides === 'object' ? payload.overrides : {},
+    deletedKeys: Array.isArray(payload.deletedKeys) ? payload.deletedKeys : [],
+    config: payload.config && typeof payload.config === 'object' ? payload.config : {}
+  };
+}
+
+function itemDbApplyDatabasePayload(payload = {}, options = {}) {
+  const normalized = itemDbNormalizeDatabasePayload(payload);
+  const markDirty = options.markDirty === true;
+  itemDbWriteScanCache(normalized.scanCache, { markDirty });
+  itemDbWriteCustomItems(normalized.customItems, { markDirty });
+  itemDbWriteOverrides(normalized.overrides, { markDirty });
+  itemDbWriteDeletedKeys(new Set(normalized.deletedKeys), { markDirty });
+  itemDbWriteConfig(normalized.config, { markDirty });
+  return normalized;
+}
+
+function itemDbNotifyStoreUpdated(reason = 'store-updated') {
+  window.dispatchEvent(new CustomEvent('item-db-store-updated', { detail: { reason } }));
+}
+
+function itemDbGetFirebaseApi() {
+  return window._fb && typeof window._fb.loadItemDatabase === 'function' && typeof window._fb.saveItemDatabase === 'function'
+    ? window._fb
+    : null;
+}
+
+function itemDbWaitForFirebase(timeoutMs = 8000) {
+  if (itemDbGetFirebaseApi()) return Promise.resolve(itemDbGetFirebaseApi());
+  return new Promise(resolve => {
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      window.removeEventListener('fb-ready', handleReady);
+      resolve(itemDbGetFirebaseApi());
+    };
+    const handleReady = () => finish();
+    window.addEventListener('fb-ready', handleReady, { once: true });
+    window.setTimeout(finish, timeoutMs);
+  });
+}
+
+function itemDbBuildGlobalPayload() {
+  return {
+    ...itemDbExportDatabasePayload(),
+    updatedAtClient: Date.now()
+  };
+}
+
+function itemDbScheduleGlobalSave(reason = 'change') {
+  if (_itemDbApplyingRemote || !_itemDbGlobalSyncReady) return;
+  window.clearTimeout(_itemDbGlobalSaveTimer);
+  _itemDbGlobalSaveTimer = window.setTimeout(() => {
+    itemDbSaveGlobalDatabase(reason).catch(error => {
+      console.error('Item database global save failed:', error);
+    });
+  }, 700);
+}
+
+async function itemDbSaveGlobalDatabase(reason = 'manual') {
+  const fb = await itemDbWaitForFirebase();
+  if (!fb || typeof fb.saveItemDatabase !== 'function') return false;
+  const payload = itemDbBuildGlobalPayload();
+  _itemDbGlobalSavePromise = _itemDbGlobalSavePromise.then(async () => {
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('syncing', 'Item-Register wird gespeichert...');
+    await fb.saveItemDatabase(payload);
+    const meta = itemDbReadMeta();
+    itemDbWriteMeta({
+      ...meta,
+      updatedAtClient: payload.updatedAtClient,
+      remoteUpdatedAtClient: payload.updatedAtClient,
+      pendingSync: false
+    });
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('synced', 'Item-Register global gespeichert.');
+    return true;
+  }).catch(error => {
+    const meta = itemDbReadMeta();
+    itemDbWriteMeta({ ...meta, pendingSync: true });
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('error', 'Item-Register konnte nicht gespeichert werden.');
+    throw error;
+  });
+  return _itemDbGlobalSavePromise;
+}
+
+async function itemDbEnsureGlobalSync() {
+  if (_itemDbGlobalSyncStarted) return;
+  _itemDbGlobalSyncStarted = true;
+  const fb = await itemDbWaitForFirebase();
+  if (!fb || typeof fb.loadItemDatabase !== 'function') {
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('local', 'Item-Register bleibt lokal.');
+    return;
+  }
+
+  try {
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('syncing', 'Item-Register wird geladen...');
+    const remotePayload = await fb.loadItemDatabase();
+    const localPayload = itemDbExportDatabasePayload();
+    const localHasData = itemDbIsPayloadPopulated(localPayload);
+    if (remotePayload && itemDbIsPayloadPopulated(remotePayload)) {
+      _itemDbApplyingRemote = true;
+      const normalized = itemDbApplyDatabasePayload(remotePayload, { markDirty: false });
+      _itemDbApplyingRemote = false;
+      itemDbWriteMeta({
+        updatedAtClient: Number(normalized.updatedAtClient) || Date.now(),
+        remoteUpdatedAtClient: Number(normalized.updatedAtClient) || Date.now(),
+        pendingSync: false
+      });
+      itemDbNotifyStoreUpdated('remote-load');
+    } else if (localHasData) {
+      _itemDbGlobalSyncReady = true;
+      await itemDbSaveGlobalDatabase('bootstrap-local');
+    }
+
+    _itemDbGlobalSyncReady = true;
+    if (typeof fb.subscribeItemDatabase === 'function' && !_itemDbGlobalUnsubscribe) {
+      _itemDbGlobalUnsubscribe = fb.subscribeItemDatabase(payload => {
+        if (!payload || !itemDbIsPayloadPopulated(payload)) return;
+        const remoteUpdatedAt = Number(payload.updatedAtClient) || 0;
+        const meta = itemDbReadMeta();
+        if (remoteUpdatedAt && remoteUpdatedAt <= meta.remoteUpdatedAtClient) return;
+        if (meta.pendingSync && meta.updatedAtClient > remoteUpdatedAt) {
+          itemDbScheduleGlobalSave('local-newer-than-remote');
+          return;
+        }
+        try {
+          _itemDbApplyingRemote = true;
+          const normalized = itemDbApplyDatabasePayload(payload, { markDirty: false });
+          _itemDbApplyingRemote = false;
+          const appliedAt = Number(normalized.updatedAtClient) || Date.now();
+          itemDbWriteMeta({
+            updatedAtClient: appliedAt,
+            remoteUpdatedAtClient: appliedAt,
+            pendingSync: false
+          });
+          itemDbNotifyStoreUpdated('remote-update');
+        } catch (error) {
+          _itemDbApplyingRemote = false;
+          console.error('Item database remote update failed:', error);
+        }
+      }, error => {
+        console.error('Item database subscription failed:', error);
+      });
+    }
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('synced', 'Item-Register verbunden.');
+  } catch (error) {
+    _itemDbApplyingRemote = false;
+    _itemDbGlobalSyncReady = true;
+    if (typeof updateFirebaseSyncStatus === 'function') updateFirebaseSyncStatus('error', 'Item-Register-Sync fehlgeschlagen.');
+    throw error;
+  }
 }
 
 function itemDbReadOverrides() {
@@ -30,8 +244,8 @@ function itemDbReadOverrides() {
   }
 }
 
-function itemDbWriteOverrides(overrides = {}) {
-  localStorage.setItem(ITEM_DB_OVERRIDE_KEY, JSON.stringify(overrides));
+function itemDbWriteOverrides(overrides = {}, options = {}) {
+  itemDbWriteJsonStore(ITEM_DB_OVERRIDE_KEY, overrides, options);
 }
 
 function itemDbReadCustomItems() {
@@ -39,8 +253,8 @@ function itemDbReadCustomItems() {
   return Array.isArray(items) ? items.filter(item => item && typeof item === 'object') : [];
 }
 
-function itemDbWriteCustomItems(items = []) {
-  itemDbWriteJsonStore(ITEM_DB_CUSTOM_KEY, Array.isArray(items) ? items : []);
+function itemDbWriteCustomItems(items = [], options = {}) {
+  itemDbWriteJsonStore(ITEM_DB_CUSTOM_KEY, Array.isArray(items) ? items : [], options);
 }
 
 function itemDbReadDeletedKeys() {
@@ -48,8 +262,8 @@ function itemDbReadDeletedKeys() {
   return new Set(Array.isArray(keys) ? keys.map(key => String(key || '').trim()).filter(Boolean) : []);
 }
 
-function itemDbWriteDeletedKeys(keys) {
-  itemDbWriteJsonStore(ITEM_DB_DELETED_KEY, Array.from(keys || []).filter(Boolean));
+function itemDbWriteDeletedKeys(keys, options = {}) {
+  itemDbWriteJsonStore(ITEM_DB_DELETED_KEY, Array.from(keys || []).filter(Boolean), options);
 }
 
 function itemDbReadScanCache() {
@@ -57,8 +271,8 @@ function itemDbReadScanCache() {
   return Array.isArray(items) ? items.filter(item => item && typeof item === 'object') : [];
 }
 
-function itemDbWriteScanCache(items = []) {
-  itemDbWriteJsonStore(ITEM_DB_SCAN_CACHE_KEY, Array.isArray(items) ? items : []);
+function itemDbWriteScanCache(items = [], options = {}) {
+  itemDbWriteJsonStore(ITEM_DB_SCAN_CACHE_KEY, Array.isArray(items) ? items : [], options);
 }
 
 function itemDbReadConfig() {
@@ -70,12 +284,12 @@ function itemDbReadConfig() {
   } : { customCategories: [], categorySettings: {}, tags: [] };
 }
 
-function itemDbWriteConfig(config = {}) {
+function itemDbWriteConfig(config = {}, options = {}) {
   itemDbWriteJsonStore(ITEM_DB_CONFIG_KEY, {
     customCategories: Array.isArray(config.customCategories) ? config.customCategories : [],
     categorySettings: config.categorySettings && typeof config.categorySettings === 'object' ? config.categorySettings : {},
     tags: Array.isArray(config.tags) ? config.tags : []
-  });
+  }, options);
 }
 
 function itemDbGetCategories() {
@@ -335,8 +549,9 @@ function itemDbDeleteItem(canonicalKey) {
 
 function itemDbExportDatabasePayload() {
   return {
-    schema: 'aleria-item-db-export-v1',
+    schema: ITEM_DB_EXPORT_SCHEMA,
     exportedAt: new Date().toISOString(),
+    updatedAtClient: itemDbReadMeta().updatedAtClient || Date.now(),
     scanCache: itemDbReadScanCache(),
     customItems: itemDbReadCustomItems(),
     overrides: itemDbReadOverrides(),
@@ -346,12 +561,5 @@ function itemDbExportDatabasePayload() {
 }
 
 function itemDbImportDatabasePayload(payload = {}) {
-  if (!payload || typeof payload !== 'object' || payload.schema !== 'aleria-item-db-export-v1') {
-    throw new Error('Diese Datei ist kein gueltiger Items-und-Gueter-Datenbankexport.');
-  }
-  itemDbWriteScanCache(Array.isArray(payload.scanCache) ? payload.scanCache : []);
-  itemDbWriteCustomItems(Array.isArray(payload.customItems) ? payload.customItems : []);
-  itemDbWriteOverrides(payload.overrides && typeof payload.overrides === 'object' ? payload.overrides : {});
-  itemDbWriteDeletedKeys(new Set(Array.isArray(payload.deletedKeys) ? payload.deletedKeys : []));
-  itemDbWriteConfig(payload.config && typeof payload.config === 'object' ? payload.config : {});
+  itemDbApplyDatabasePayload(payload, { markDirty: true });
 }

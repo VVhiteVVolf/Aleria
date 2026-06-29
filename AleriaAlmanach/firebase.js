@@ -17,6 +17,8 @@
     const MODULE_STORE_DOC = 'config';
     const MODULE_STORE_ENTRY_COLLECTION = 'module_store_entries';
     const MODULE_STORE_SPLIT_FORMAT = 'split-v1';
+    const ITEM_DATABASE_COLLECTION = 'item_database';
+    const ITEM_DATABASE_DOC = 'global';
     const COMMENT_ADMIN_CODE = '7777';
 
     function notifyAppStatus(message, type = 'error') {
@@ -648,6 +650,44 @@
         }, error => {
           console.error('subscribeModuleStore:', error);
           notifyAppStatus(getFirebaseErrorMessage(error, 'Live-Synchronisation der Almanach-Module konnte nicht verbunden werden.'));
+          if (onError) onError(error);
+        });
+      },
+      async loadItemDatabase() {
+        try {
+          const snap = await getDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC));
+          if (!snap.exists()) return null;
+          const data = snap.data();
+          return data?.payload && typeof data.payload === 'object' ? data.payload : null;
+        } catch(e) {
+          console.error('loadItemDatabase:', e);
+          notifyAppStatus(getFirebaseErrorMessage(e, 'Item-Register konnte nicht geladen werden.'));
+          return null;
+        }
+      },
+      async saveItemDatabase(payload) {
+        try {
+          const safePayload = payload && typeof payload === 'object' ? payload : {};
+          await setDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC), {
+            itemDatabaseType: 'almanach-item-database',
+            schema: safePayload.schema || 'aleria-item-db-export-v1',
+            updatedAtClient: Number(safePayload.updatedAtClient) || Date.now(),
+            payload: safePayload,
+            updatedAt: serverTimestamp()
+          }, { merge: false });
+        } catch(e) {
+          console.error('saveItemDatabase:', e);
+          notifyAppStatus(getFirebaseErrorMessage(e, 'Item-Register konnte nicht online gespeichert werden.'));
+          throw e;
+        }
+      },
+      subscribeItemDatabase(onNext, onError) {
+        return onSnapshot(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC), snap => {
+          const data = snap.exists() ? snap.data() : null;
+          onNext(data?.payload && typeof data.payload === 'object' ? data.payload : null);
+        }, error => {
+          console.error('subscribeItemDatabase:', error);
+          notifyAppStatus(getFirebaseErrorMessage(error, 'Live-Synchronisation des Item-Registers konnte nicht verbunden werden.'));
           if (onError) onError(error);
         });
       }

@@ -129,6 +129,18 @@ function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0) {
         <label>Reitername</label>
         <input class="me-family-tree-label" type="text" value="${escapeHtml(tree.label || `Familienbaum ${treeIndex + 1}`)}" placeholder="z.B. Hauptlinie">
       </div>
+      <div class="module-editor-grid compact">
+        <div class="module-editor-field">
+          <label>Baum-ID</label>
+          <input class="me-family-tree-id" type="text" value="${escapeHtml(tree.id || `familienbaum-${treeIndex + 1}`)}" placeholder="z.B. hauptlinie">
+          <div class="module-editor-help">Wird fuer Gruppenlayout und baumuebergreifende Zuordnung benutzt.</div>
+        </div>
+        <div class="module-editor-field">
+          <label>Elternbaum-ID</label>
+          <input class="me-family-tree-parent-id" type="text" value="${escapeHtml(tree.parentTreeId || '')}" placeholder="leer = oberste Ebene">
+          <div class="module-editor-help">Optional. Baeume mit gleicher Eltern-ID stehen darunter nebeneinander.</div>
+        </div>
+      </div>
       <div class="family-editor-level-list">
         ${levels.length
           ? levels.map((level, levelIndex) => buildFamilyLevelEditorMarkup(level, levelIndex)).join('')
@@ -139,7 +151,7 @@ function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0) {
           <label>Parallele Verbindungslinien</label>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-family-connection">+ Verbindung</button>
         </div>
-        <div class="module-editor-help">Verbinde zwei Karten-IDs, z.B. Ehepartner, Geschwister, Vettern oder Sonderbeziehungen.</div>
+        <div class="module-editor-help">Verbinde zwei Karten-IDs, auch ueber mehrere sichtbare Familienbaeume hinweg.</div>
         <div class="family-editor-connection-list">${buildFamilyConnectionEditorRows(tree.connections)}</div>
       </div>
     </div>`;
@@ -178,6 +190,8 @@ function collectFamilyConnectionsFromEditor(block) {
 
 function collectFamilyTreesFromEditor(block) {
   const trees = Array.from(block.querySelectorAll('.family-editor-tree-row')).map((treeRow, index) => ({
+    id: getTrimmedFormValue(treeRow, '.me-family-tree-id') || `familienbaum-${index + 1}`,
+    parentTreeId: getTrimmedFormValue(treeRow, '.me-family-tree-parent-id'),
     label: getTrimmedFormValue(treeRow, '.me-family-tree-label') || `Familienbaum ${index + 1}`,
     levels: collectFamilyLevelsFromEditor(treeRow),
     connections: collectFamilyConnectionsFromEditor(treeRow)
@@ -363,8 +377,9 @@ function buildFamilyModuleEditorFields(page) {
           <div class="module-editor-field">
             <label>Baumdarstellung</label>
             <select class="me-family-tree-display-mode">
-              <option value="tabs"${family.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option>
+              <option value="tabs"${family.treeDisplayMode !== 'parallel' && family.treeDisplayMode !== 'groups' ? ' selected' : ''}>Ein Baum pro Reiter</option>
               <option value="parallel"${family.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option>
+              <option value="groups"${family.treeDisplayMode === 'groups' ? ' selected' : ''}>Eltern-/Unterbaeume</option>
             </select>
           </div>
           <div class="module-editor-field"><label>Kartenschrift</label><input class="me-family-card-font-scale" type="number" min="65" max="125" step="1" value="${escapeHtml(family.cardFontScale)}"></div>

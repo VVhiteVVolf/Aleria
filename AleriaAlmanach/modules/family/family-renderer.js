@@ -52,14 +52,18 @@ function buildFamilyConnectionData(connections = []) {
   return escapeHtml(JSON.stringify(Array.isArray(connections) ? connections : []));
 }
 
+function collectFamilyTreeConnections(trees = []) {
+  return (Array.isArray(trees) ? trees : [])
+    .flatMap(tree => Array.isArray(tree?.connections) ? tree.connections : []);
+}
+
 function buildFamilyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {
   const levels = Array.isArray(tree?.levels) ? tree.levels : [];
-  const active = displayMode === 'parallel' || index === 0;
+  const active = displayMode === 'parallel' || displayMode === 'groups' || index === 0;
   return `
-    <div class="hierarchy-chart-panel family-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}">
-      <div class="family-chart-wrap" data-family-connections="${buildFamilyConnectionData(tree?.connections)}">
-        ${displayMode === 'parallel' ? `<div class="family-tree-heading">${escapeHtml(tree?.label || `Familienbaum ${index + 1}`)}</div>` : ''}
-        <svg class="family-connection-layer" aria-hidden="true"></svg>
+    <div class="hierarchy-chart-panel family-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}" data-hierarchy-tree-id="${escapeHtml(getHierarchyTreeId(tree, index))}">
+      <div class="family-chart-wrap">
+        ${displayMode === 'parallel' || displayMode === 'groups' ? `<div class="family-tree-heading">${escapeHtml(tree?.label || `Familienbaum ${index + 1}`)}</div>` : ''}
         <div class="hierarchy-chart family-chart mode-${escapeHtml(layoutMode)}">
           ${levels.length
             ? levels.map(buildFamilyLevel).join('')
@@ -70,6 +74,7 @@ function buildFamilyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {
 }
 
 function getFamilyConnectionPoint(containerRect, node) {
+  if (!node.getClientRects().length) return null;
   const rect = node.getBoundingClientRect();
   return {
     x: rect.left - containerRect.left + rect.width / 2,
@@ -77,12 +82,16 @@ function getFamilyConnectionPoint(containerRect, node) {
   };
 }
 
-function drawFamilyConnectionsInWrap(wrap) {
-  if (!wrap) return;
-  const svg = wrap.querySelector('.family-connection-layer');
-  const chart = wrap.querySelector('.family-chart');
-  if (!svg || !chart) return;
-  const raw = wrap.dataset.familyConnections || '[]';
+function drawFamilyConnectionsInScope(scope) {
+  if (!scope) return;
+  const svg = scope.querySelector(':scope > .family-connection-layer');
+  const panels = scope.querySelector(':scope > .family-chart-panels');
+  if (!svg || !panels) return;
+  if (scope.querySelector('.family-chart.mode-depth')) {
+    svg.innerHTML = '';
+    return;
+  }
+  const raw = scope.dataset.familyConnections || '[]';
   let connections = [];
   try {
     connections = JSON.parse(raw);
@@ -90,8 +99,8 @@ function drawFamilyConnectionsInWrap(wrap) {
     connections = [];
   }
 
-  const width = Math.max(wrap.scrollWidth, chart.scrollWidth, wrap.clientWidth);
-  const height = Math.max(wrap.scrollHeight, chart.scrollHeight, wrap.clientHeight);
+  const width = Math.max(scope.scrollWidth, panels.scrollWidth, scope.clientWidth);
+  const height = Math.max(scope.scrollHeight, panels.scrollHeight, scope.clientHeight);
   svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
   svg.setAttribute('width', width);
   svg.setAttribute('height', height);
@@ -99,15 +108,16 @@ function drawFamilyConnectionsInWrap(wrap) {
 
   if (!connections.length) return;
 
-  const containerRect = wrap.getBoundingClientRect();
+  const containerRect = scope.getBoundingClientRect();
   const fragment = document.createDocumentFragment();
+  const escapeSelectorValue = value => window.CSS?.escape ? CSS.escape(value) : String(value || '').replace(/"/g, '\\"');
   connections.forEach(connection => {
-    const escapeSelectorValue = value => window.CSS?.escape ? CSS.escape(value) : String(value || '').replace(/"/g, '\\"');
-    const from = wrap.querySelector(`[data-family-node-id="${escapeSelectorValue(connection.from || '')}"]`);
-    const to = wrap.querySelector(`[data-family-node-id="${escapeSelectorValue(connection.to || '')}"]`);
+    const from = scope.querySelector(`[data-family-node-id="${escapeSelectorValue(connection.from || '')}"]`);
+    const to = scope.querySelector(`[data-family-node-id="${escapeSelectorValue(connection.to || '')}"]`);
     if (!from || !to) return;
     const start = getFamilyConnectionPoint(containerRect, from);
     const end = getFamilyConnectionPoint(containerRect, to);
+    if (!start || !end) return;
     const midX = (start.x + end.x) / 2;
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('class', `family-connection-line relation-${String(connection.relationType || 'blood').replace(/[^a-z0-9-]/gi, '').toLowerCase() || 'blood'}`);
@@ -128,11 +138,20 @@ function drawFamilyConnectionsInWrap(wrap) {
 }
 
 function redrawFamilyConnections(root = document) {
-  root.querySelectorAll?.('.family-chart-wrap').forEach(drawFamilyConnectionsInWrap);
+  root.querySelectorAll?.('.family-chart-connection-scope').forEach(drawFamilyConnectionsInScope);
 }
 
+let familyConnectionAnimationFrame = 0;
+const pendingFamilyConnectionRoots = new Set();
+
 function scheduleFamilyConnectionRedraw(root = document) {
-  requestAnimationFrame(() => redrawFamilyConnections(root));
+  pendingFamilyConnectionRoots.add(root || document);
+  if (familyConnectionAnimationFrame) return;
+  familyConnectionAnimationFrame = requestAnimationFrame(() => {
+    familyConnectionAnimationFrame = 0;
+    pendingFamilyConnectionRoots.forEach(nextRoot => redrawFamilyConnections(nextRoot));
+    pendingFamilyConnectionRoots.clear();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => scheduleFamilyConnectionRedraw());
@@ -171,7 +190,7 @@ function buildFamilyPage(page, entry, pageIndex, total) {
   const trees = data.trees.length
     ? data.trees
     : [{ label: data.chartTitle || 'Stammbaum', levels: data.levels, connections: [] }];
-  const displayMode = data.treeDisplayMode === 'parallel' ? 'parallel' : 'tabs';
+  const displayMode = ['parallel', 'groups'].includes(data.treeDisplayMode) ? data.treeDisplayMode : 'tabs';
   const chartScale = data.chartScale / 100;
   const style = [
     `--hierarchy-card-font-scale:${data.cardFontScale / 100}`,
@@ -243,8 +262,13 @@ function buildFamilyPage(page, entry, pageIndex, total) {
           </div>
           <div class="hierarchy-ornament-line"></div>
           <div class="hierarchy-chart-viewport">
-            <div class="hierarchy-chart-panels family-chart-panels family-tree-mode-${escapeHtml(displayMode)}">
-              ${trees.map((tree, treeIndex) => buildFamilyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
+            <div class="family-chart-connection-scope" data-family-connections="${buildFamilyConnectionData(collectFamilyTreeConnections(trees))}">
+              <svg class="family-connection-layer" aria-hidden="true"></svg>
+              <div class="hierarchy-chart-panels family-chart-panels family-tree-mode-${escapeHtml(displayMode)}">
+                ${displayMode === 'groups'
+                  ? buildHierarchyTreeGroups(trees, data.layoutMode, buildFamilyTreePanel)
+                  : trees.map((tree, treeIndex) => buildFamilyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
+              </div>
             </div>
           </div>
         </main>

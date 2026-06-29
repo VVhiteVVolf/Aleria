@@ -245,6 +245,33 @@
       rgba(245,218,207,0.74);
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24);
   }
+  .comment-segment-card.comment-segment-song,
+  .comment-segment-card.comment-segment-prayer {
+    border-color: rgba(90,132,154,0.34);
+    background:
+      radial-gradient(circle at 1rem 1rem, rgba(255,255,255,0.7), rgba(255,255,255,0) 4.5rem),
+      rgba(226,236,235,0.72);
+  }
+  .comment-segment-card.comment-segment-telepathy {
+    border-color: rgba(77,214,203,0.48);
+    background: linear-gradient(135deg, rgba(22,89,84,0.22), rgba(255,255,255,0.1)), rgba(212,241,235,0.62);
+  }
+  .comment-segment-card.comment-segment-animal {
+    border-color: rgba(82,101,66,0.42);
+    background: linear-gradient(135deg, rgba(82,101,66,0.18), rgba(255,255,255,0.12)), rgba(224,229,201,0.72);
+  }
+  .comment-segment-card.comment-segment-spell {
+    border-color: rgba(80,135,145,0.46);
+    background: linear-gradient(135deg, rgba(80,135,145,0.18), rgba(255,255,255,0.12)), rgba(217,231,224,0.74);
+  }
+  .comment-segment-card.comment-segment-madness {
+    border-color: rgba(119,28,20,0.5);
+    background: linear-gradient(135deg, rgba(119,28,20,0.22), rgba(255,255,255,0.08)), rgba(238,204,178,0.66);
+  }
+  .comment-segment-card.comment-segment-flirt {
+    border-color: rgba(220,77,126,0.45);
+    background: linear-gradient(135deg, rgba(220,77,126,0.18), rgba(255,255,255,0.2)), rgba(250,218,228,0.7);
+  }
   .comment-segment-card.comment-segment-thought .comment-segment-title {
     color: #416b91;
   }
@@ -253,6 +280,27 @@
   }
   .comment-segment-card.comment-segment-shout .comment-segment-title {
     color: #9a2d24;
+  }
+  .comment-segment-card.comment-segment-song .comment-segment-title {
+    color: #5d5b9d;
+  }
+  .comment-segment-card.comment-segment-prayer .comment-segment-title {
+    color: #9a6a18;
+  }
+  .comment-segment-card.comment-segment-telepathy .comment-segment-title {
+    color: #177d78;
+  }
+  .comment-segment-card.comment-segment-animal .comment-segment-title {
+    color: #526542;
+  }
+  .comment-segment-card.comment-segment-spell .comment-segment-title {
+    color: #3f7984;
+  }
+  .comment-segment-card.comment-segment-madness .comment-segment-title {
+    color: #7d221b;
+  }
+  .comment-segment-card.comment-segment-flirt .comment-segment-title {
+    color: #bd3e73;
   }
   .comment-segment-format-toolbar {
     margin: 0 0 -1px;
@@ -291,6 +339,27 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     padding: 0.28rem 0.45rem;
+  }
+  .comment-segment-type,
+  .comment-segment-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28rem;
+    min-height: 1.95rem;
+  }
+  .comment-segment-type-icon,
+  .comment-kind-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    object-fit: contain;
+    flex: 0 0 auto;
+  }
+  .comment-segment-type-icon {
+    filter: sepia(20%) saturate(0.85) opacity(0.86);
+  }
+  .comment-segment-type.active .comment-segment-type-icon,
+  .comment-segment-add:hover .comment-segment-type-icon {
+    filter: none;
   }
   .comment-segment-type.active {
     border-color: var(--gold);
@@ -748,6 +817,91 @@
     padding: 0.58rem 0.82rem;
     box-shadow: 0 4px 14px rgba(151,44,36,0.16);
   }
+  .comment-live-preview-body.comment-kind-song .comment-live-preview-text,
+  .comment-live-preview-body.comment-kind-flirt .comment-live-preview-text,
+  .comment-live-preview-body.comment-kind-prayer .comment-live-preview-text {
+    width: fit-content;
+    max-width: 100%;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    padding: 0.58rem 0.82rem;
+  }
+  .comment-live-preview-body.comment-kind-song .comment-live-preview-text {
+    border: 1px solid rgba(118,103,178,0.3);
+    border-radius: 0 20px 20px 20px;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(255,255,255,0.72), transparent 28%),
+      linear-gradient(135deg, rgba(237,232,251,0.9), rgba(205,217,241,0.74));
+    color: #29385b;
+  }
+  .comment-live-preview-body.comment-kind-telepathy .comment-live-preview-text {
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid rgba(113,255,237,0.48);
+    border-radius: 2px 22px 22px 2px;
+    background:
+      linear-gradient(90deg, rgba(113,255,237,0.18), transparent 12%, transparent 88%, rgba(113,255,237,0.16)),
+      linear-gradient(135deg, rgba(10,48,45,0.9), rgba(28,83,75,0.78));
+    color: #b8fff7;
+    padding: 0.58rem 0.82rem;
+    box-shadow: 0 0 14px rgba(113,255,237,0.18);
+  }
+  .comment-live-preview-body.comment-kind-animal .comment-live-preview-text {
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid rgba(69,85,55,0.38);
+    border-radius: 22px 18px 24px 16px;
+    background:
+      repeating-radial-gradient(circle at 30% 40%, rgba(245,235,190,0.08) 0 2px, transparent 2px 8px),
+      linear-gradient(135deg, rgba(91,111,73,0.9), rgba(56,70,47,0.82));
+    color: #f3e8bd;
+    padding: 0.58rem 0.82rem;
+  }
+  .comment-live-preview-body.comment-kind-flirt .comment-live-preview-text {
+    border: 1px solid rgba(232,72,130,0.34);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 96% 18%, rgba(255,255,255,0.72), transparent 22%),
+      linear-gradient(135deg, rgba(255,226,236,0.94), rgba(250,187,212,0.78));
+    color: #8d244f;
+    box-shadow: 0 0 14px rgba(232,72,130,0.14);
+  }
+  .comment-live-preview-body.comment-kind-spell .comment-live-preview-text {
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid rgba(104,170,179,0.46);
+    border-radius: 7px;
+    background:
+      linear-gradient(90deg, rgba(104,170,179,0.2), transparent 10%, transparent 90%, rgba(104,170,179,0.18)),
+      linear-gradient(135deg, rgba(202,224,219,0.92), rgba(166,197,191,0.78));
+    color: #164759;
+    padding: 0.74rem 0.82rem;
+    box-shadow: inset 0 0 0 2px rgba(132,195,202,0.28);
+  }
+  .comment-live-preview-body.comment-kind-madness .comment-live-preview-text {
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid rgba(100,14,10,0.56);
+    background:
+      radial-gradient(circle at 34% 32%, rgba(255,170,94,0.08), transparent 22%),
+      linear-gradient(176deg, rgba(113,27,20,0.92), rgba(69,12,10,0.88));
+    color: #e8b882;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.14em;
+    padding: 0.58rem 0.82rem;
+    clip-path: polygon(0 8%, 99% 0, 100% 90%, 1% 100%);
+  }
+  .comment-live-preview-body.comment-kind-prayer .comment-live-preview-text {
+    border: 1px solid rgba(217,169,72,0.38);
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at 50% -6%, rgba(255,255,255,0.92), transparent 28%),
+      linear-gradient(135deg, rgba(255,250,231,0.96), rgba(239,226,188,0.82));
+    color: #4c3a16;
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.68),
+      0 0 14px rgba(217,169,72,0.12);
+  }
   .comment-live-preview-placeholder {
     color: var(--ink-faded);
     opacity: 0.8;
@@ -1065,6 +1219,7 @@
   .comment-kind-badge {
     display: inline-flex;
     align-items: center;
+    gap: 0.28rem;
     width: max-content;
     max-width: 100%;
     margin: 0 0 0.38rem 0;
@@ -1194,6 +1349,608 @@
   .comment-kind-shout .c-bi {
     font-weight: 800;
   }
+  /* Enhanced interaction bubbles */
+  .comment-body.comment-kind-song,
+  .comment-body.comment-kind-telepathy,
+  .comment-body.comment-kind-animal,
+  .comment-body.comment-kind-flirt,
+  .comment-body.comment-kind-spell,
+  .comment-body.comment-kind-madness,
+  .comment-body.comment-kind-prayer {
+    overflow: visible;
+    isolation: isolate;
+  }
+  .comment-body.comment-kind-song > *,
+  .comment-body.comment-kind-telepathy > *,
+  .comment-body.comment-kind-animal > *,
+  .comment-body.comment-kind-flirt > *,
+  .comment-body.comment-kind-spell > *,
+  .comment-body.comment-kind-madness > *,
+  .comment-body.comment-kind-prayer > * {
+    position: relative;
+    z-index: 2;
+  }
+  .comment-body.comment-kind-song::before,
+  .comment-body.comment-kind-song::after,
+  .comment-body.comment-kind-flirt::before,
+  .comment-body.comment-kind-flirt::after {
+    position: absolute;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .comment-kind-song {
+    border-color: rgba(118,103,178,0.56);
+    border-radius: 0 34px 34px 34px;
+    background:
+      radial-gradient(circle at 8% 12%, rgba(255,255,255,0.76), rgba(255,255,255,0) 25%),
+      linear-gradient(90deg, rgba(118,103,178,0.2), transparent 5%, transparent 94%, rgba(118,103,178,0.16)),
+      radial-gradient(circle at 92% 88%, rgba(130,118,190,0.18), rgba(130,118,190,0) 28%),
+      linear-gradient(135deg, rgba(237,232,251,0.96), rgba(205,217,241,0.84));
+    color: #29385b;
+    font-style: italic;
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.62),
+      inset 0 0 0 3px rgba(118,103,178,0.08),
+      0 4px 18px rgba(92,93,158,0.16);
+  }
+  .comment-kind-song .comment-kind-badge {
+    border-color: rgba(118,103,178,0.42);
+    background: rgba(118,103,178,0.13);
+    color: #5d5b9d;
+  }
+  .comment-body.comment-kind-song::before {
+    content: '𝄞 ♪';
+    left: -1.6rem;
+    top: -0.8rem;
+    color: rgba(92,93,158,0.68);
+    font-size: 2.2rem;
+    text-shadow: 0 0 8px rgba(255,255,255,0.72);
+    animation: commentMusicFloat 3.8s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-song::after {
+    content: '♫ ♪';
+    right: 1rem;
+    bottom: -0.8rem;
+    color: rgba(92,93,158,0.58);
+    font-size: 1.8rem;
+    animation: commentMusicFloat 4.4s ease-in-out infinite reverse;
+  }
+
+  .comment-kind-telepathy {
+    overflow: hidden;
+    border-color: rgba(113,255,237,0.86);
+    border-radius: 2px 36px 36px 2px;
+    background:
+      linear-gradient(90deg, rgba(113,255,237,0.2), transparent 8%, transparent 92%, rgba(113,255,237,0.18)),
+      radial-gradient(circle at 11% 50%, rgba(113,255,237,0.18), rgba(113,255,237,0) 32%),
+      linear-gradient(135deg, rgba(10,48,45,0.98), rgba(28,83,75,0.9));
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    box-shadow:
+      0 0 28px rgba(113,255,237,0.38),
+      inset 0 0 30px rgba(113,255,237,0.16),
+      inset 0 0 0 2px rgba(113,255,237,0.32);
+    animation: commentTelepathyGlow 3.6s ease-in-out infinite, commentTelepathyBreath 7s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-telepathy {
+    overflow: hidden;
+  }
+  .comment-body.comment-kind-telepathy::before {
+    content: '';
+    position: absolute;
+    inset: 2px 4px;
+    z-index: 1;
+    border-radius: inherit;
+    background:
+      linear-gradient(105deg, transparent 0%, rgba(142,255,246,0) 30%, rgba(142,255,246,0.42) 47%, rgba(255,255,255,0.3) 50%, rgba(142,255,246,0.18) 54%, transparent 70%),
+      repeating-linear-gradient(90deg, transparent 0 12px, rgba(113,255,237,0.07) 13px 15px, transparent 16px 28px);
+    filter: blur(0.3px);
+    mix-blend-mode: screen;
+    opacity: 0.85;
+    transform: translateX(-115%);
+    animation: commentTelepathyPulseSweep 2.9s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .comment-body.comment-kind-telepathy::after {
+    content: '✧';
+    position: absolute;
+    left: 50%;
+    top: 0.12rem;
+    z-index: 3;
+    color: #8ffff4;
+    font-size: 1.2rem;
+    text-shadow: 0 0 9px rgba(103,242,229,0.9);
+    transform: translateX(-50%);
+    pointer-events: none;
+    animation: commentTelepathySigilBlink 2.4s ease-in-out infinite;
+  }
+  .comment-kind-telepathy .comment-kind-badge {
+    border-color: rgba(103,242,229,0.58);
+    background: rgba(12,53,50,0.75);
+    color: #9ffff7;
+  }
+
+  .comment-kind-animal {
+    border-color: rgba(69,85,55,0.12);
+    border-radius: 18px 22px 17px 24px / 20px 18px 23px 16px;
+    background:
+      radial-gradient(circle at 8% 18%, rgba(255,255,255,0.14), transparent 11%),
+      radial-gradient(ellipse at 0% 45%, rgba(43,55,34,0.92), rgba(43,55,34,0) 24%),
+      radial-gradient(circle at 10% 4%, rgba(112,130,82,0.72) 0 7px, transparent 8px),
+      radial-gradient(circle at 24% -2%, rgba(64,82,48,0.82) 0 10px, transparent 12px),
+      radial-gradient(circle at 38% 1%, rgba(120,136,88,0.62) 0 6px, transparent 8px),
+      radial-gradient(circle at 58% -3%, rgba(45,62,39,0.78) 0 12px, transparent 14px),
+      radial-gradient(circle at 77% 3%, rgba(120,136,88,0.62) 0 7px, transparent 9px),
+      radial-gradient(circle at 94% 1%, rgba(64,82,48,0.82) 0 11px, transparent 13px),
+      radial-gradient(circle at 98% 76%, rgba(121,92,44,0.22), transparent 21%),
+      radial-gradient(circle at 2% 88%, rgba(38,50,31,0.44), transparent 18%),
+      repeating-radial-gradient(circle at 30% 40%, rgba(245,235,190,0.08) 0 2px, transparent 2px 8px),
+      linear-gradient(135deg, rgba(91,111,73,0.98), rgba(56,70,47,0.95));
+    color: #f3e8bd;
+    box-shadow:
+      0 6px 18px rgba(37,48,29,0.24),
+      0 0 0 1px rgba(245,235,190,0.08),
+      inset 0 0 20px rgba(28,39,24,0.18);
+  }
+  .comment-body.comment-kind-animal::before {
+    content: '';
+    position: absolute;
+    left: -1.15rem;
+    top: 1.1rem;
+    z-index: 1;
+    border-top: 0.55rem solid transparent;
+    border-bottom: 0.55rem solid transparent;
+    border-right: 1.2rem solid rgba(69,85,55,0.95);
+    pointer-events: none;
+  }
+  .comment-body.comment-kind-animal::after {
+    content: '';
+    position: absolute;
+    inset: -0.55rem -0.75rem;
+    z-index: 0;
+    border-radius: 24px 32px 28px 30px / 30px 25px 32px 22px;
+    background:
+      radial-gradient(circle at 10% 16%, rgba(90,112,70,0.42), transparent 19%),
+      radial-gradient(circle at 92% 18%, rgba(43,55,34,0.34), transparent 17%),
+      radial-gradient(circle at 8% 92%, rgba(93,79,48,0.24), transparent 16%),
+      radial-gradient(circle at 84% 98%, rgba(90,112,70,0.28), transparent 20%);
+    filter: blur(7px);
+    opacity: 0.82;
+    animation: commentAnimalInkBleed 6.8s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .comment-entry.right .comment-body.comment-kind-animal::before {
+    left: auto;
+    right: -1.15rem;
+    border-right: 0;
+    border-left: 1.2rem solid rgba(69,85,55,0.95);
+  }
+  .comment-kind-animal .comment-kind-badge {
+    border-color: rgba(235,224,177,0.24);
+    background: rgba(28,39,24,0.28);
+    color: #e7dbad;
+  }
+  .comment-animal-toggle {
+    display: inline;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: inherit;
+    padding: 0;
+    text-align: left;
+  }
+  .comment-animal-cipher {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.36em;
+    word-spacing: 0.42em;
+    color: #efe5b9;
+    text-shadow: 0 0 5px rgba(245,235,190,0.22);
+  }
+  .comment-animal-plain {
+    display: none;
+    color: #fff0c9;
+  }
+  .comment-animal-toggle.revealed .comment-animal-cipher {
+    display: none;
+  }
+  .comment-animal-toggle.revealed .comment-animal-plain {
+    display: inline;
+  }
+
+  .comment-kind-flirt {
+    border-color: rgba(232,72,130,0.58);
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at 2% 50%, rgba(255,113,164,0.35), transparent 18%),
+      radial-gradient(circle at 18% 16%, rgba(255,99,153,0.18), transparent 10%),
+      radial-gradient(circle at 78% 72%, rgba(255,99,153,0.18), transparent 11%),
+      radial-gradient(circle at 96% 18%, rgba(255,255,255,0.72), transparent 22%),
+      linear-gradient(135deg, rgba(255,226,236,0.98), rgba(250,187,212,0.86));
+    box-shadow:
+      0 0 22px rgba(232,72,130,0.28),
+      inset 0 0 0 1px rgba(255,255,255,0.62);
+    color: #8d244f;
+    font-style: italic;
+  }
+  .comment-body.comment-kind-flirt::before,
+  .comment-body.comment-kind-flirt::after {
+    content: none;
+  }
+  .comment-flirt-float-hearts,
+  .comment-flirt-heart-burst {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .comment-body.comment-kind-flirt > .comment-flirt-float-hearts,
+  .comment-body.comment-kind-flirt > .comment-flirt-heart-burst {
+    z-index: 1;
+  }
+  .comment-flirt-float-heart,
+  .comment-flirt-heart {
+    position: absolute;
+    display: inline-block;
+    line-height: 1;
+    color: rgba(220,55,111,0.78);
+    text-shadow:
+      0 0 7px rgba(255,135,178,0.8),
+      0 0 14px rgba(255,188,211,0.55);
+    will-change: transform, opacity;
+  }
+  .comment-flirt-float-heart.top.big {
+    left: -1.15rem;
+    top: -1.05rem;
+    font-size: 1.75rem;
+    animation: commentFlirtFloatHeartBig 3.8s ease-in-out infinite;
+  }
+  .comment-flirt-float-heart.top.small {
+    left: -0.2rem;
+    top: -1.42rem;
+    font-size: 0.86rem;
+    color: rgba(234,82,136,0.66);
+    animation: commentFlirtFloatHeartSmall 3.2s ease-in-out infinite;
+  }
+  .comment-flirt-float-heart.bottom.big {
+    right: -0.95rem;
+    bottom: -1.05rem;
+    font-size: 1.35rem;
+    animation: commentFlirtFloatHeartBig 3.6s ease-in-out infinite reverse;
+  }
+  .comment-flirt-float-heart.bottom.small {
+    right: 0.15rem;
+    bottom: -1.45rem;
+    font-size: 0.78rem;
+    color: rgba(234,82,136,0.66);
+    animation: commentFlirtFloatHeartSmall 3s ease-in-out infinite reverse;
+  }
+  .comment-flirt-heart {
+    right: -0.15rem;
+    bottom: -0.2rem;
+    font-size: 0.72rem;
+    opacity: 0;
+    animation: commentFlirtHeartShot 1.45s ease-out infinite;
+  }
+  .comment-flirt-heart.p1 {
+    --heart-x: -0.25rem;
+    --heart-y: -1.8rem;
+    --heart-rot: -18deg;
+    animation-delay: 0s;
+  }
+  .comment-flirt-heart.p2 {
+    --heart-x: -1rem;
+    --heart-y: -1.45rem;
+    --heart-rot: 16deg;
+    animation-delay: 0.18s;
+  }
+  .comment-flirt-heart.p3 {
+    --heart-x: -0.55rem;
+    --heart-y: -2.25rem;
+    --heart-rot: 28deg;
+    animation-delay: 0.36s;
+  }
+  .comment-flirt-heart.p4 {
+    --heart-x: -1.35rem;
+    --heart-y: -2rem;
+    --heart-rot: -32deg;
+    animation-delay: 0.54s;
+  }
+  .comment-flirt-heart.p5 {
+    --heart-x: 0.2rem;
+    --heart-y: -2.35rem;
+    --heart-rot: 12deg;
+    animation-delay: 0.72s;
+  }
+  .comment-kind-flirt .comment-kind-badge {
+    border-color: rgba(225,83,132,0.45);
+    background: rgba(255,255,255,0.38);
+    color: #bd3e73;
+  }
+
+  .comment-kind-spell {
+    border-color: rgba(104,170,179,0.7);
+    border-radius: 8px;
+    background:
+      linear-gradient(90deg, rgba(104,170,179,0.28), transparent 9%, transparent 91%, rgba(104,170,179,0.25)),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 42%),
+      linear-gradient(135deg, rgba(202,224,219,0.96), rgba(166,197,191,0.84));
+    box-shadow:
+      inset 0 0 0 2px rgba(132,195,202,0.5),
+      inset 0 0 34px rgba(54,105,116,0.16),
+      0 0 18px rgba(104,170,179,0.18);
+    color: #164759;
+  }
+  .comment-body.comment-kind-spell {
+    padding-top: 1.15rem;
+    padding-bottom: 1.15rem;
+  }
+  .comment-body.comment-kind-spell::before,
+  .comment-body.comment-kind-spell::after {
+    position: absolute;
+    left: 0.55rem;
+    right: 0.55rem;
+    color: rgba(38,104,116,0.78);
+    font-family: 'Cinzel', serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    text-shadow:
+      0 0 5px rgba(232,255,255,0.66),
+      0 0 11px rgba(54,182,190,0.28);
+    animation: commentRuneShimmer 4.6s ease-in-out infinite, commentRuneCrawl 9s linear infinite;
+  }
+  .comment-body.comment-kind-spell::before {
+    content: '✧ ⋄ ⟐ ✦ ⋄ ⟐ ✧ ⋄ ⟐ ✦ ⋄ ⟐ ✧ ⋄ ⟐ ✦ ⋄ ⟐';
+    top: 0.22rem;
+  }
+  .comment-body.comment-kind-spell::after {
+    content: '⟐ ⋄ ✦ ⟐ ⋄ ✧ ⟐ ⋄ ✦ ⟐ ⋄ ✧ ⟐ ⋄ ✦ ⟐ ⋄';
+    bottom: 0.22rem;
+    animation-direction: reverse, reverse;
+  }
+  .comment-kind-spell .comment-kind-badge {
+    border-color: rgba(54,105,116,0.42);
+    background: rgba(83,141,150,0.16);
+    color: #2d6b78;
+  }
+
+  .comment-kind-madness {
+    border-color: rgba(100,14,10,0.18);
+    border-radius: 38% 28% 36% 31% / 30% 42% 26% 38%;
+    background:
+      radial-gradient(circle at 18% 50%, rgba(180,45,28,0.42), transparent 34%),
+      radial-gradient(circle at 74% 42%, rgba(91,9,8,0.82), transparent 42%),
+      radial-gradient(circle at 34% 32%, rgba(255,170,94,0.12), transparent 22%),
+      linear-gradient(176deg, rgba(113,27,20,0.92), rgba(48,7,7,0.9));
+    color: #e8b882;
+    box-shadow:
+      0 6px 24px rgba(70,8,5,0.38),
+      0 0 28px rgba(130,19,12,0.22),
+      inset 0 0 28px rgba(244,168,112,0.08);
+    clip-path: polygon(0 13%, 4% 6%, 10% 10%, 15% 2%, 21% 8%, 28% 4%, 35% 9%, 43% 3%, 50% 8%, 58% 2%, 66% 9%, 73% 4%, 81% 10%, 89% 3%, 96% 8%, 100% 16%, 98% 28%, 100% 43%, 96% 56%, 100% 70%, 97% 88%, 90% 95%, 82% 91%, 75% 99%, 67% 92%, 58% 97%, 50% 91%, 42% 98%, 34% 92%, 25% 97%, 18% 90%, 10% 96%, 3% 87%, 0 72%, 3% 58%, 0 43%, 2% 28%);
+    transform: rotate(-0.25deg);
+    animation: commentMadnessSmokeBody 3.8s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-madness {
+    padding: 0.9rem 1.15rem;
+  }
+  .comment-body.comment-kind-madness::before,
+  .comment-body.comment-kind-madness::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: -0.7rem -1rem;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 18% 48%, rgba(159,30,20,0.42), transparent 28%),
+      radial-gradient(circle at 50% 30%, rgba(96,10,9,0.48), transparent 32%),
+      radial-gradient(circle at 86% 56%, rgba(197,57,36,0.28), transparent 25%);
+    filter: blur(10px);
+    opacity: 0.75;
+    pointer-events: none;
+    animation: commentMadnessSmokeDrift 4.2s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-madness::after {
+    inset: -0.45rem -0.55rem;
+    opacity: 0.46;
+    animation-delay: -2.7s;
+    animation-direction: reverse;
+  }
+  .comment-kind-madness .comment-kind-badge {
+    border-color: rgba(244,77,58,0.48);
+    background: rgba(45,7,5,0.45);
+    color: #ff6b58;
+  }
+
+  .comment-kind-prayer {
+    border-color: rgba(224,174,68,0.84);
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 50% -6%, rgba(255,255,255,0.95), transparent 27%),
+      radial-gradient(circle at 50% 108%, rgba(255,232,165,0.6), transparent 27%),
+      linear-gradient(90deg, rgba(224,174,68,0.2), transparent 9%, transparent 91%, rgba(224,174,68,0.17)),
+      linear-gradient(135deg, rgba(255,252,238,0.99), rgba(240,225,181,0.92));
+    background-size: 100% 100%, 100% 100%, 220% 100%, 100% 100%;
+    color: #4c3a16;
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.72),
+      inset 0 0 0 3px rgba(224,174,68,0.12),
+      inset 0 0 28px rgba(217,169,72,0.15),
+      0 0 24px rgba(217,169,72,0.22);
+    font-style: italic;
+    animation: commentPrayerRadiance 4.6s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-prayer::before,
+  .comment-body.comment-kind-prayer::after {
+    content: '✶';
+    position: absolute;
+    left: 50%;
+    color: rgba(217,169,72,0.92);
+    font-size: 1.7rem;
+    text-shadow:
+      0 0 8px rgba(255,239,176,0.82),
+      0 0 16px rgba(217,169,72,0.5);
+    transform: translateX(-50%);
+    pointer-events: none;
+    animation: commentPrayerStarDance 2.8s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-prayer::before { top: -1rem; }
+  .comment-body.comment-kind-prayer::after {
+    bottom: -1rem;
+    animation-delay: -1.4s;
+  }
+  .comment-kind-prayer .comment-kind-badge {
+    border-color: rgba(217,169,72,0.52);
+    background: rgba(255,246,220,0.68);
+    color: #9a6a18;
+  }
+
+  @keyframes commentMusicFloat {
+    0%, 100% { transform: translateY(0) rotate(-4deg); opacity: 0.72; }
+    50% { transform: translateY(-0.32rem) rotate(4deg); opacity: 1; }
+  }
+  @keyframes commentTelepathyGlow {
+    0%, 100% { box-shadow: 0 0 22px rgba(113,255,237,0.28), inset 0 0 30px rgba(113,255,237,0.14), inset 0 0 0 2px rgba(113,255,237,0.3); }
+    50% { box-shadow: 0 0 34px rgba(113,255,237,0.48), inset 0 0 42px rgba(113,255,237,0.2), inset 0 0 0 2px rgba(113,255,237,0.45); }
+  }
+  @keyframes commentTelepathyBreath {
+    0%, 100% { background-position: 0 0, 0 0, 0 0; filter: saturate(1); }
+    50% { background-position: 26% 0, 0 0, 0 0; filter: saturate(1.22); }
+  }
+  @keyframes commentTelepathyPulseSweep {
+    0% { transform: translateX(-115%); opacity: 0; }
+    22% { opacity: 0.92; }
+    58% { opacity: 0.78; }
+    82%, 100% { transform: translateX(115%); opacity: 0; }
+  }
+  @keyframes commentTelepathySigilBlink {
+    0%, 100% { opacity: 0.62; transform: translateX(-50%) scale(0.92); }
+    45% { opacity: 1; transform: translateX(-50%) scale(1.12); }
+    66% { opacity: 0.38; }
+    74% { opacity: 1; }
+  }
+  @keyframes commentAnimalInkBleed {
+    0%, 100% { transform: scale(0.985); opacity: 0.68; filter: blur(7px); }
+    50% { transform: scale(1.025); opacity: 0.9; filter: blur(9px); }
+  }
+  @keyframes commentFlirtFloatHeartBig {
+    0%, 100% { transform: translate(0, 0) rotate(-8deg) scale(1); opacity: 0.78; }
+    50% { transform: translate(0.12rem, -0.2rem) rotate(6deg) scale(1.08); opacity: 1; }
+  }
+  @keyframes commentFlirtFloatHeartSmall {
+    0%, 100% { transform: translate(0, 0) rotate(8deg) scale(0.92); opacity: 0.58; }
+    50% { transform: translate(-0.1rem, 0.14rem) rotate(-10deg) scale(1.08); opacity: 0.9; }
+  }
+  @keyframes commentFlirtHeartShot {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(0.35);
+      opacity: 0;
+      filter: blur(0.3px);
+    }
+    16% {
+      opacity: 1;
+      transform: translate(calc(var(--heart-x) * 0.24), calc(var(--heart-y) * 0.24)) rotate(calc(var(--heart-rot) * 0.35)) scale(0.85);
+      filter: blur(0);
+    }
+    58% {
+      opacity: 0.9;
+      transform: translate(calc(var(--heart-x) * 0.72), calc(var(--heart-y) * 0.72)) rotate(calc(var(--heart-rot) * 0.76)) scale(1.15);
+    }
+    100% {
+      transform: translate(var(--heart-x), var(--heart-y)) rotate(var(--heart-rot)) scale(1.38);
+      opacity: 0;
+      filter: blur(0.5px);
+    }
+  }
+  @keyframes commentRuneShimmer {
+    0%, 100% { opacity: 0.34; color: rgba(38,104,116,0.48); filter: drop-shadow(0 0 0 rgba(232,255,255,0)); }
+    18% { opacity: 0.86; color: rgba(97,202,209,0.86); filter: drop-shadow(0 0 5px rgba(232,255,255,0.72)); }
+    37% { opacity: 0.2; color: rgba(38,104,116,0.38); }
+    52% { opacity: 1; color: rgba(230,255,246,0.92); filter: drop-shadow(0 0 7px rgba(116,241,232,0.78)); }
+    74% { opacity: 0.48; color: rgba(64,137,148,0.62); }
+  }
+  @keyframes commentRuneCrawl {
+    0% { transform: translateX(-0.25rem); }
+    100% { transform: translateX(0.75rem); }
+  }
+  @keyframes commentMadnessSmokeBody {
+    0%, 100% {
+      border-radius: 38% 28% 36% 31% / 30% 42% 26% 38%;
+      clip-path: polygon(0 13%, 4% 6%, 10% 10%, 15% 2%, 21% 8%, 28% 4%, 35% 9%, 43% 3%, 50% 8%, 58% 2%, 66% 9%, 73% 4%, 81% 10%, 89% 3%, 96% 8%, 100% 16%, 98% 28%, 100% 43%, 96% 56%, 100% 70%, 97% 88%, 90% 95%, 82% 91%, 75% 99%, 67% 92%, 58% 97%, 50% 91%, 42% 98%, 34% 92%, 25% 97%, 18% 90%, 10% 96%, 3% 87%, 0 72%, 3% 58%, 0 43%, 2% 28%);
+      filter: saturate(1) brightness(0.98);
+      transform: rotate(-0.25deg) scale(1);
+    }
+    32% {
+      border-radius: 28% 44% 24% 42% / 44% 26% 46% 25%;
+      clip-path: polygon(0 18%, 5% 4%, 11% 14%, 16% 1%, 24% 11%, 31% 3%, 38% 13%, 45% 2%, 53% 12%, 61% 1%, 69% 13%, 77% 2%, 84% 14%, 92% 3%, 99% 12%, 96% 25%, 100% 38%, 94% 51%, 100% 66%, 95% 84%, 88% 99%, 80% 89%, 72% 100%, 65% 88%, 56% 98%, 48% 89%, 39% 99%, 31% 88%, 22% 98%, 15% 87%, 7% 96%, 1% 82%, 4% 69%, 0 55%, 4% 39%, 0 28%);
+      filter: saturate(1.36) brightness(1.06);
+      transform: rotate(0.45deg) scale(1.012);
+    }
+    68% {
+      border-radius: 47% 25% 43% 22% / 24% 52% 29% 43%;
+      clip-path: polygon(0 10%, 6% 8%, 12% 2%, 19% 12%, 26% 3%, 33% 11%, 40% 4%, 48% 13%, 55% 2%, 63% 11%, 70% 4%, 78% 13%, 85% 2%, 93% 12%, 100% 7%, 97% 22%, 100% 35%, 95% 49%, 100% 63%, 96% 78%, 100% 91%, 91% 94%, 84% 100%, 76% 90%, 69% 98%, 60% 91%, 52% 100%, 44% 90%, 36% 98%, 28% 91%, 20% 100%, 13% 89%, 5% 96%, 0 85%, 3% 70%, 0 57%, 4% 41%, 0 24%);
+      filter: saturate(1.08) brightness(0.94);
+      transform: rotate(-0.65deg) scale(1.006);
+    }
+  }
+  @keyframes commentMadnessSmokeDrift {
+    0%, 100% { transform: translate(-0.28rem, 0.02rem) scale(0.96) rotate(-2deg); opacity: 0.48; filter: blur(9px); }
+    38% { transform: translate(0.36rem, -0.24rem) scale(1.09) rotate(2.2deg); opacity: 0.92; filter: blur(12px); }
+    68% { transform: translate(-0.18rem, 0.22rem) scale(1.04) rotate(-1deg); opacity: 0.7; filter: blur(10px); }
+  }
+  @keyframes commentPrayerRadiance {
+    0%, 100% {
+      background-position: 50% 0, 50% 100%, 0 0, 0 0;
+      filter: brightness(0.98) saturate(0.98);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.72), inset 0 0 0 3px rgba(224,174,68,0.1), inset 0 0 24px rgba(217,169,72,0.13), 0 0 18px rgba(217,169,72,0.14);
+    }
+    50% {
+      background-position: 50% 0, 50% 100%, 100% 0, 0 0;
+      filter: brightness(1.08) saturate(1.12);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.86), inset 0 0 0 3px rgba(224,174,68,0.18), inset 0 0 36px rgba(255,220,128,0.26), 0 0 32px rgba(217,169,72,0.3);
+    }
+  }
+  @keyframes commentPrayerStarDance {
+    0%, 100% {
+      opacity: 0.7;
+      transform: translateX(-50%) rotate(0deg) scale(0.92);
+      filter: drop-shadow(0 0 3px rgba(255,239,176,0.5));
+    }
+    40% {
+      opacity: 1;
+      transform: translateX(-50%) rotate(34deg) scale(1.22);
+      filter: drop-shadow(0 0 9px rgba(255,239,176,0.9));
+    }
+    68% {
+      opacity: 0.82;
+      transform: translateX(-50%) rotate(58deg) scale(1.02);
+      filter: drop-shadow(0 0 5px rgba(217,169,72,0.7));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .comment-body.comment-kind-song::before,
+    .comment-body.comment-kind-song::after,
+    .comment-flirt-float-heart,
+    .comment-flirt-heart,
+    .comment-body.comment-kind-spell::before,
+    .comment-body.comment-kind-spell::after,
+    .comment-body.comment-kind-madness::before,
+    .comment-body.comment-kind-madness::after,
+    .comment-body.comment-kind-prayer::before,
+    .comment-body.comment-kind-prayer::after,
+    .comment-kind-telepathy,
+    .comment-kind-animal,
+    .comment-kind-madness,
+    .comment-kind-prayer {
+      animation: none;
+    }
+  }
   .comment-inline-block {
     display: block;
     margin: 0.55rem 0;
@@ -1285,6 +2042,38 @@
     font-size: 0.92rem; line-height: 1.7;
     color: var(--ink); font-style: normal;
     display: inline;
+  }
+  .comment-kind-song .comment-text,
+  .comment-kind-flirt .comment-text,
+  .comment-kind-prayer .comment-text {
+    font-style: italic;
+  }
+  .comment-kind-song .comment-text {
+    color: #29385b;
+  }
+  .comment-kind-telepathy .comment-text {
+    color: #b8fff7;
+    text-shadow: 0 0 8px rgba(113,255,237,0.22);
+  }
+  .comment-kind-spell .comment-text {
+    color: #164759;
+  }
+  .comment-kind-madness .comment-text {
+    color: #e8b882;
+    font-family: 'Creepster', 'Nosifer', 'Cinzel Decorative', 'EB Garamond', serif;
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 8px rgba(244,168,112,0.36);
+  }
+  .comment-kind-prayer .comment-text {
+    color: #4c3a16;
+    text-shadow: 0 0 8px rgba(255,239,176,0.42);
+  }
+  .comment-kind-flirt .comment-text {
+    color: #8d244f;
+  }
+  .comment-animal-toggle:focus-visible {
+    outline: 1px solid rgba(245,235,190,0.7);
+    outline-offset: 0.16rem;
   }
   .comment-delete-btn {
     display: block; margin-top: 0.35rem;

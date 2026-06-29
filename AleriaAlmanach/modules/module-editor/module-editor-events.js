@@ -91,6 +91,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-ci-attribute',
   'add-ci-category',
   'remove-ci-category',
+  'add-ci-item-from-register',
   'add-ci-item',
   'remove-ci-item',
   'move-ci-item',
@@ -520,6 +521,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'add-ci-item') {
     addCharacterInventoryItem(trigger);
+    return;
+  }
+  if (action === 'add-ci-item-from-register') {
+    addCharacterInventoryItemFromRegister(trigger);
     return;
   }
   if (action === 'remove-ci-item') {

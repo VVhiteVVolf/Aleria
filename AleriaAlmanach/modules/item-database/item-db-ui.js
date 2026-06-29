@@ -598,6 +598,12 @@ async function itemDbRefreshSources(message = 'Marktquellen werden geladen...', 
 function itemDbOpen() {
   _itemDbState.open = true;
   renderItemDatabasePanel();
+  if (typeof itemDbEnsureGlobalSync === 'function') {
+    itemDbEnsureGlobalSync().catch(error => {
+      console.error('Item database global sync failed:', error);
+      if (typeof showAppStatus === 'function') showAppStatus('Item-Register konnte nicht global synchronisiert werden.', 'error');
+    });
+  }
   if (!itemDbReadScanCache().length) itemDbRefreshSources();
 }
 
@@ -659,13 +665,14 @@ function itemDbDownloadExport() {
 function itemDbImportFromFile(file) {
   if (!file) return;
   const reader = new FileReader();
-  reader.onload = () => {
+  reader.onload = async () => {
     try {
       itemDbImportDatabasePayload(JSON.parse(String(reader.result || '{}')));
+      if (typeof itemDbSaveGlobalDatabase === 'function') await itemDbSaveGlobalDatabase('import');
       _itemDbState.importError = '';
       _itemDbState.selectedKey = '';
       renderItemDatabasePanel();
-      if (typeof showAppStatus === 'function') showAppStatus('Items-und-Gueter-Datenbank importiert.', 'success');
+      if (typeof showAppStatus === 'function') showAppStatus('Items-und-Gueter-Datenbank importiert und global gespeichert.', 'success');
     } catch (error) {
       _itemDbState.importError = error.message || 'Import fehlgeschlagen.';
       renderItemDatabasePanel();
@@ -934,12 +941,19 @@ function handleItemDatabaseSubmit(event) {
   event.preventDefault();
 }
 
+function handleItemDatabaseStoreUpdated() {
+  if (!_itemDbState.open) return;
+  _itemDbState.selectedKey = '';
+  renderItemDatabasePanel();
+}
+
 function initItemDatabaseUi() {
   document.addEventListener('click', handleItemDatabaseClick);
   document.addEventListener('input', handleItemDatabaseInput);
   document.addEventListener('change', handleItemDatabaseInput);
   document.addEventListener('change', handleItemDatabaseImportChange);
   document.addEventListener('submit', handleItemDatabaseSubmit);
+  window.addEventListener('item-db-store-updated', handleItemDatabaseStoreUpdated);
 }
 
 if (document.readyState === 'loading') {

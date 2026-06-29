@@ -141,6 +141,9 @@
   .module-editor-grid.single {
     grid-template-columns: 1fr;
   }
+  .module-editor-grid.compact {
+    gap: 0.5rem;
+  }
   .module-editor-field {
     display: flex;
     flex-direction: column;

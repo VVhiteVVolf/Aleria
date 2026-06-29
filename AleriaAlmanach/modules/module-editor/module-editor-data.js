@@ -644,9 +644,39 @@ function sanitizeHierarchyLevels(levels = []) {
     .slice(0, 12);
 }
 
-function sanitizeHierarchyTree(tree = {}, index = 0) {
+function makeHierarchyTreeId(value, fallback = 'baum') {
+  const source = String(value || fallback || 'baum').trim().toLowerCase();
+  const normalized = source
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return normalized || 'baum';
+}
+
+function ensureUniqueHierarchyTreeId(baseId, usedIds, fallbackIndex = 0) {
+  const cleanBase = makeHierarchyTreeId(baseId, `baum-${fallbackIndex + 1}`);
+  let candidate = cleanBase;
+  let counter = 2;
+  while (usedIds.has(candidate)) {
+    candidate = `${cleanBase}-${counter}`;
+    counter += 1;
+  }
+  usedIds.add(candidate);
+  return candidate;
+}
+
+function sanitizeOptionalHierarchyTreeId(value = '') {
+  const raw = String(value || '').trim();
+  return raw ? makeHierarchyTreeId(raw) : '';
+}
+
+function sanitizeHierarchyTree(tree = {}, index = 0, usedIds = new Set()) {
+  const label = String(tree?.label || tree?.title || `Baum ${index + 1}`).trim();
   return {
-    label: String(tree?.label || tree?.title || `Baum ${index + 1}`).trim(),
+    id: ensureUniqueHierarchyTreeId(tree?.id || tree?.treeId || label, usedIds, index),
+    parentTreeId: sanitizeOptionalHierarchyTreeId(tree?.parentTreeId || tree?.parentId || ''),
+    label,
     levels: sanitizeHierarchyLevels(tree?.levels)
   };
 }
@@ -659,10 +689,17 @@ function sanitizeHierarchyTrees(data = {}) {
         label: String(data.treeLabel || data.chartTitle || 'Aufbau').trim(),
         levels: data.levels
       }];
-  return sourceTrees
-    .map((tree, index) => sanitizeHierarchyTree(tree, index))
+  const usedIds = new Set();
+  const trees = sourceTrees
+    .map((tree, index) => sanitizeHierarchyTree(tree, index, usedIds))
     .filter(tree => tree.label || tree.levels.length)
     .slice(0, 8);
+  const keptTreeIds = new Set(trees.map(tree => tree.id));
+  return trees
+    .map(tree => ({
+      ...tree,
+      parentTreeId: keptTreeIds.has(tree.parentTreeId) && tree.parentTreeId !== tree.id ? tree.parentTreeId : ''
+    }));
 }
 
 function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
@@ -672,7 +709,9 @@ function clampHierarchyScale(value, fallback = 100, min = 65, max = 140) {
 }
 
 function getHierarchyTreeDisplayMode(value = '') {
-  return String(value || '').trim() === 'parallel' ? 'parallel' : 'tabs';
+  const mode = String(value || '').trim();
+  if (mode === 'parallel' || mode === 'groups') return mode;
+  return 'tabs';
 }
 
 function sanitizeHierarchyData(data = {}) {
@@ -805,14 +844,30 @@ function sanitizeFamilyConnections(connections = [], validNodeIds = new Set()) {
     .slice(0, 40);
 }
 
-function sanitizeFamilyTree(tree = {}, index = 0) {
-  const usedIds = new Set();
-  const levels = sanitizeFamilyLevels(tree?.levels, usedIds);
-  const validNodeIds = new Set(levels.flatMap(level => level.nodes.map(node => node.id)));
+function sanitizeFamilyConnectionShape(connection = {}) {
+  const from = String(connection?.from || connection?.source || '').trim();
+  const to = String(connection?.to || connection?.target || '').trim();
+  const relationType = String(connection?.relationType || connection?.type || 'blood').trim() || 'blood';
   return {
-    label: String(tree?.label || tree?.title || `Familienbaum ${index + 1}`).trim(),
+    from,
+    to,
+    relationType,
+    label: String(connection?.label || connection?.text || '').trim()
+  };
+}
+
+function sanitizeFamilyTree(tree = {}, index = 0, usedTreeIds = new Set(), usedNodeIds = new Set()) {
+  const levels = sanitizeFamilyLevels(tree?.levels, usedNodeIds);
+  const label = String(tree?.label || tree?.title || `Familienbaum ${index + 1}`).trim();
+  return {
+    id: ensureUniqueHierarchyTreeId(tree?.id || tree?.treeId || label, usedTreeIds, index),
+    parentTreeId: sanitizeOptionalHierarchyTreeId(tree?.parentTreeId || tree?.parentId || ''),
+    label,
     levels,
-    connections: sanitizeFamilyConnections(tree?.connections, validNodeIds)
+    connections: (Array.isArray(tree?.connections) ? tree.connections : [])
+      .map(sanitizeFamilyConnectionShape)
+      .filter(connection => connection.from || connection.to || connection.label)
+      .slice(0, 40)
   };
 }
 
@@ -825,14 +880,25 @@ function sanitizeFamilyTrees(data = {}) {
         levels: data.levels,
         connections: data.connections
       }];
-  return sourceTrees
-    .map((tree, index) => sanitizeFamilyTree(tree, index))
+  const usedTreeIds = new Set();
+  const usedNodeIds = new Set();
+  const trees = sourceTrees
+    .map((tree, index) => sanitizeFamilyTree(tree, index, usedTreeIds, usedNodeIds))
     .filter(tree => tree.label || tree.levels.length)
     .slice(0, 8);
+  const keptTreeIds = new Set(trees.map(tree => tree.id));
+  const validNodeIds = new Set(trees.flatMap(tree => tree.levels.flatMap(level => level.nodes.map(node => node.id))));
+  return trees.map(tree => ({
+    ...tree,
+    parentTreeId: keptTreeIds.has(tree.parentTreeId) && tree.parentTreeId !== tree.id ? tree.parentTreeId : '',
+    connections: sanitizeFamilyConnections(tree.connections, validNodeIds)
+  }));
 }
 
 function getFamilyTreeDisplayMode(value = '') {
-  return String(value || '').trim() === 'parallel' ? 'parallel' : 'tabs';
+  const mode = String(value || '').trim();
+  if (mode === 'parallel' || mode === 'groups') return mode;
+  return 'tabs';
 }
 
 function sanitizeFamilyData(data = {}) {

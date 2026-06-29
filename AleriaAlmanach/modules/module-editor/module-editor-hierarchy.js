@@ -107,6 +107,18 @@ function buildHierarchyTreeEditorMarkup(tree = {}, treeIndex = 0) {
         <label>Reitername</label>
         <input class="me-hierarchy-tree-label" type="text" value="${escapeHtml(tree.label || `Baum ${treeIndex + 1}`)}" placeholder="z.B. Hauptstruktur">
       </div>
+      <div class="module-editor-grid compact">
+        <div class="module-editor-field">
+          <label>Baum-ID</label>
+          <input class="me-hierarchy-tree-id" type="text" value="${escapeHtml(tree.id || `baum-${treeIndex + 1}`)}" placeholder="z.B. hauptlinie">
+          <div class="module-editor-help">Wird fuer Gruppenlayout und Elternbaum-Zuordnung benutzt.</div>
+        </div>
+        <div class="module-editor-field">
+          <label>Elternbaum-ID</label>
+          <input class="me-hierarchy-tree-parent-id" type="text" value="${escapeHtml(tree.parentTreeId || '')}" placeholder="leer = oberste Ebene">
+          <div class="module-editor-help">Optional. Baeume mit gleicher Eltern-ID stehen darunter nebeneinander.</div>
+        </div>
+      </div>
       <div class="hierarchy-editor-level-list">
         ${levels.length
           ? levels.map((level, levelIndex) => buildHierarchyLevelEditorMarkup(level, levelIndex)).join('')
@@ -117,6 +129,8 @@ function buildHierarchyTreeEditorMarkup(tree = {}, treeIndex = 0) {
 
 function collectHierarchyTreesFromEditor(block) {
   const trees = Array.from(block.querySelectorAll('.hierarchy-editor-tree-row')).map((treeRow, index) => ({
+    id: getTrimmedFormValue(treeRow, '.me-hierarchy-tree-id') || `baum-${index + 1}`,
+    parentTreeId: getTrimmedFormValue(treeRow, '.me-hierarchy-tree-parent-id'),
     label: getTrimmedFormValue(treeRow, '.me-hierarchy-tree-label') || `Baum ${index + 1}`,
     levels: collectHierarchyLevelsFromEditor(treeRow)
   })).filter(tree => tree.label || tree.levels.length);
@@ -292,10 +306,11 @@ function buildHierarchyModuleEditorFields(page) {
           <div class="module-editor-field">
             <label>Baumdarstellung</label>
             <select class="me-hierarchy-tree-display-mode">
-              <option value="tabs"${hierarchy.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option>
+              <option value="tabs"${hierarchy.treeDisplayMode !== 'parallel' && hierarchy.treeDisplayMode !== 'groups' ? ' selected' : ''}>Ein Baum pro Reiter</option>
               <option value="parallel"${hierarchy.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option>
+              <option value="groups"${hierarchy.treeDisplayMode === 'groups' ? ' selected' : ''}>Eltern-/Unterbaeume</option>
             </select>
-            <div class="module-editor-help">Nebeneinander zeigt mehrere Baeume mit vertikalem Trenner.</div>
+            <div class="module-editor-help">Eltern-/Unterbaeume nutzt Baum-ID und Elternbaum-ID.</div>
           </div>
           <div class="module-editor-field">
             <label>Kartenschrift</label>

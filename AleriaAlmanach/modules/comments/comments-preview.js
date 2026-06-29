@@ -67,6 +67,7 @@ function updateCommentFormPreview() {
           id: `preview-${index}`,
           ...segment,
           _hideActions: true,
+          _commentPreview: true,
           commentSegments: null
         }, index)).join('')}
       </div>`;
@@ -91,7 +92,7 @@ function updateCommentFormPreview() {
       <div class="comment-live-preview-body narrator">
         <div class="comment-live-preview-copy">
           <div class="comment-live-preview-name">* Erzähler</div>
-          <div class="comment-kind-badge">${kindLabel}</div>
+          <div class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></div>
           <div class="comment-live-preview-text">${parsedText}</div>
         </div>
       </div>`;
@@ -109,9 +110,8 @@ function updateCommentFormPreview() {
       <div class="comment-live-preview-copy">
         <div class="comment-live-preview-name">${safeName}</div>
         ${safeTitle ? `<div class="comment-live-preview-title">${safeTitle}</div>` : ''}
-        <div class="comment-kind-badge">${kindLabel}</div>
+        <div class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></div>
         <div class="comment-live-preview-text">${parsedText}</div>
       </div>
     </div>`;
 }
-

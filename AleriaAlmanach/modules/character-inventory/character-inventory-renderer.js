@@ -48,15 +48,54 @@ function getCharacterInventoryItemDbCategory(item = {}) {
   return 'sonstiges';
 }
 
+function getCharacterInventoryCategoryFromItemDb(item = {}) {
+  const category = String(item.category || '').trim();
+  if (category === 'waffen') return 'weapon';
+  if (category === 'ruestungen') return 'armor';
+  if (category === 'alchemie' || category === 'getraenke') return 'potions';
+  if (category === 'werkzeuge') return 'equipment';
+  return 'other';
+}
+
+function getCharacterInventoryOwner(data = {}) {
+  return {
+    ownerCharacterId: String(data.characterId || data.ownerCharacterId || '').trim(),
+    ownerCharacterName: String(data.name || data.ownerCharacterName || '').trim()
+  };
+}
+
+function buildCharacterInventoryItemFromDbItem(dbItem = {}, data = {}) {
+  const meta = dbItem.hiddenMeta || {};
+  const owner = getCharacterInventoryOwner(data);
+  return sanitizeCharacterInventoryItems([{
+    id: makeCharacterInventoryId('item-db', 0),
+    itemDbKey: dbItem.canonicalKey,
+    itemStorageMode: 'linked',
+    ownerCharacterId: owner.ownerCharacterId,
+    ownerCharacterName: owner.ownerCharacterName,
+    acquiredAt: new Date().toISOString(),
+    category: meta.characterInventoryCategory || getCharacterInventoryCategoryFromItemDb(dbItem),
+    icon: meta.characterInventoryIcon || '',
+    image: dbItem.image || '',
+    imageFormat: 'square',
+    imageFit: 'contain',
+    imagePosition: 'center',
+    name: dbItem.title || 'Gegenstand',
+    type: dbItem.type || dbItem.categoryLabel || '',
+    description: dbItem.description || dbItem.details || '',
+    weight: meta.weight || '',
+    quantity: '1',
+    tags: (dbItem.tags || []).join(', '),
+    infoRows: Array.isArray(meta.characterInventoryInfoRows) ? meta.characterInventoryInfoRows : [],
+    attributes: dbItem.attributes || []
+  }])[0];
+}
+
 function getCharacterInventoryItemDbMatch(item = {}) {
-  if (typeof itemDbBuildIndex !== 'function' || typeof itemDbNormalizeText !== 'function') return null;
-  const title = itemDbNormalizeText(item.name || item.title || '');
-  if (!title) return null;
-  const wantedCategory = getCharacterInventoryItemDbCategory(item);
-  const items = itemDbBuildIndex();
-  return items.find(candidate =>
-    itemDbNormalizeText(candidate.title) === title && candidate.category === wantedCategory
-  ) || items.find(candidate => itemDbNormalizeText(candidate.title) === title) || null;
+  if (typeof itemDbBuildIndex !== 'function') return null;
+  const key = String(item.itemDbKey || '').trim();
+  if (!key) return null;
+  return itemDbBuildIndex().find(candidate => candidate.canonicalKey === key) || null;
 }
 
 function mergeCharacterInventoryItemWithDb(item = {}) {
@@ -67,6 +106,8 @@ function mergeCharacterInventoryItemWithDb(item = {}) {
     : item.infoRows;
   return sanitizeCharacterInventoryItems([{
     ...item,
+    itemDbKey: match.canonicalKey,
+    itemStorageMode: 'linked',
     icon: item.icon || match.hiddenMeta?.characterInventoryIcon || '',
     image: match.image || item.image,
     type: match.type || item.type,
@@ -81,7 +122,7 @@ function mergeCharacterInventoryDataWithItemDb(data = {}) {
   const safeData = sanitizeCharacterInventoryData(data);
   return {
     ...safeData,
-    items: safeData.items.map(mergeCharacterInventoryItemWithDb)
+    items: safeData.items.map(item => item.itemDbKey ? mergeCharacterInventoryItemWithDb(item) : item)
   };
 }
 
@@ -226,6 +267,9 @@ function buildCharacterInventoryEquipmentQuiz(data = {}) {
 function buildCharacterInventoryItems(data, activeCategory = '') {
   return `
     <section class="ci-center">
+      <div class="ci-item-tools">
+        <button type="button" data-ci-action="equip-item-from-register">Item aus Register ausruesten</button>
+      </div>
       ${buildCharacterInventoryCategories(data, activeCategory)}
       <div class="ci-item-table">
         <div class="ci-item-head">
@@ -278,6 +322,11 @@ function buildCharacterInventoryCompanions(data) {
 }
 
 function buildCharacterInventoryLeft(data) {
+  const infoBox = data.showInfoTable ? `
+      <section class="ci-box">
+        <h3>Infotabelle</h3>
+        ${buildCharacterInventoryInfoRows(data.infoRows)}
+      </section>` : '';
   return `
     <aside class="ci-character">
       <div class="ci-character-head">
@@ -289,10 +338,7 @@ function buildCharacterInventoryLeft(data) {
         fit: data.portraitFit || 'cover',
         position: data.portraitPosition || 'top'
       })}
-      <section class="ci-box">
-        <h3>Infotabelle</h3>
-        ${buildCharacterInventoryInfoRows(data.infoRows)}
-      </section>
+      ${infoBox}
     </aside>`;
 }
 
@@ -391,6 +437,7 @@ function buildCharacterInventoryItemEditModal(item) {
         </section>
         <div class="ci-modal-actions">
           <button type="button" data-ci-action="cancel-item-edit">Abbrechen</button>
+          <button type="button" data-ci-action="save-item-local">Im Charakter speichern</button>
           <button type="button" data-ci-action="save-item-global">Im Item-Verzeichnis speichern</button>
         </div>
       </div>
@@ -516,8 +563,13 @@ function collectCharacterInventoryModalItem(modal, fallback = {}) {
     label: String(row.querySelector('[data-ci-modal-field="attributeLabel"]')?.value || '').trim(),
     value: Number(row.querySelector('[data-ci-modal-field="attributeValue"]')?.value || 0)
   }));
+  const customized = !!fallback.itemDbKey;
   return sanitizeCharacterInventoryItems([{
     ...fallback,
+    itemDbKey: customized ? '' : fallback.itemDbKey,
+    originItemDbKey: customized ? fallback.itemDbKey : fallback.originItemDbKey,
+    itemStorageMode: 'character',
+    individualizedAt: customized ? new Date().toISOString() : fallback.individualizedAt,
     name: read('name') || fallback.name,
     type: read('type'),
     image: read('image'),
@@ -601,21 +653,25 @@ function getCharacterInventoryItemDbUpdates(item = {}) {
     hiddenMeta: {
       characterInventoryInfoRows: item.infoRows,
       characterInventoryCategory: item.category,
-      characterInventoryIcon: item.icon || ''
+      characterInventoryIcon: item.icon || '',
+      originItemDbKey: item.originItemDbKey || item.itemDbKey || '',
+      ownerCharacterId: item.ownerCharacterId || '',
+      ownerCharacterName: item.ownerCharacterName || ''
     }
   };
 }
 
 function saveCharacterInventoryItemToItemDb(item = {}) {
-  if (typeof itemDbSaveItem !== 'function' || typeof itemDbCreateCustomItem !== 'function') return item;
+  if (typeof itemDbCreateCustomItem !== 'function') return item;
   const updates = getCharacterInventoryItemDbUpdates(item);
-  const match = getCharacterInventoryItemDbMatch(item);
-  if (match?.canonicalKey) {
-    itemDbSaveItem(match.canonicalKey, updates);
-  } else {
-    itemDbCreateCustomItem(updates);
-  }
-  return mergeCharacterInventoryItemWithDb(item);
+  const key = itemDbCreateCustomItem(updates);
+  return sanitizeCharacterInventoryItems([{
+    ...item,
+    itemDbKey: key,
+    originItemDbKey: item.originItemDbKey || item.itemDbKey || '',
+    itemStorageMode: 'linked',
+    individualizedAt: item.individualizedAt || new Date().toISOString()
+  }])[0] || item;
 }
 
 function updateCharacterInventoryPageItem(page, item) {
@@ -630,6 +686,40 @@ function updateCharacterInventoryPageItem(page, item) {
   if (center) center.outerHTML = buildCharacterInventoryItems(merged, active);
   if (typeof syncCharacterInventoryProfileDraftFromPage === 'function') syncCharacterInventoryProfileDraftFromPage(page);
   return merged.items.find(entry => entry.id === item.id) || item;
+}
+
+function addCharacterInventoryPageItem(page, item) {
+  const data = getCharacterInventoryPageData(page);
+  const safeItem = sanitizeCharacterInventoryItems([{
+    ...item,
+    ownerCharacterId: item.ownerCharacterId || data.characterId || '',
+    ownerCharacterName: item.ownerCharacterName || data.name || ''
+  }])[0];
+  if (!safeItem) return null;
+  data.items.push(safeItem);
+  const merged = mergeCharacterInventoryDataWithItemDb(data);
+  page.dataset.ciData = JSON.stringify(merged);
+  const active = safeItem.category || page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || merged.categories[0]?.id || '';
+  const center = page.querySelector('.ci-center');
+  if (center) center.outerHTML = buildCharacterInventoryItems(merged, active);
+  if (typeof syncCharacterInventoryProfileDraftFromPage === 'function') syncCharacterInventoryProfileDraftFromPage(page);
+  return merged.items.find(entry => entry.id === safeItem.id) || safeItem;
+}
+
+function openCharacterInventoryItemRegisterPicker(page) {
+  if (typeof openItemDbPicker !== 'function') {
+    if (typeof showAppStatus === 'function') showAppStatus('Item-Register ist nicht verfuegbar.', 'error');
+    return;
+  }
+  const data = getCharacterInventoryPageData(page);
+  openItemDbPicker({
+    title: `${data.name || 'Charakter'} ausruesten`,
+    onSelect: item => {
+      const equipped = buildCharacterInventoryItemFromDbItem(item, data);
+      const added = addCharacterInventoryPageItem(page, equipped);
+      if (added && typeof showAppStatus === 'function') showAppStatus(`${added.name} aus dem Register ausgeruestet.`, 'success');
+    }
+  });
 }
 
 function updateCharacterInventoryPageCompanion(page, companion) {
@@ -830,6 +920,11 @@ document.addEventListener('click', async event => {
     );
     return;
   }
+  if (action === 'equip-item-from-register') {
+    event.preventDefault();
+    openCharacterInventoryItemRegisterPicker(page);
+    return;
+  }
   if (action === 'toggle-equipment-quiz') {
     event.preventDefault();
     updateCharacterInventoryQuiz(page, quiz => {
@@ -971,6 +1066,19 @@ document.addEventListener('click', async event => {
     const modal = trigger.closest('[data-ci-editing-companion]');
     trigger.closest('[data-ci-modal-attribute-row]')?.remove();
     updateCharacterInventoryModalPreview(modal);
+    return;
+  }
+  if (action === 'save-item-local') {
+    event.preventDefault();
+    const modal = trigger.closest('[data-ci-editing-item]');
+    const data = getCharacterInventoryPageData(page);
+    const fallback = data.items.find(entry => entry.id === modal?.dataset.ciEditingItem);
+    if (!modal || !fallback) return;
+    const edited = collectCharacterInventoryModalItem(modal, fallback);
+    const current = updateCharacterInventoryPageItem(page, edited);
+    const overlay = page.querySelector('.ci-profile-overlay');
+    if (overlay) overlay.innerHTML = buildCharacterInventoryItemModal(current);
+    if (typeof showAppStatus === 'function') showAppStatus('Item nur fuer diesen Charakter gespeichert.', 'success');
     return;
   }
   if (action === 'save-item-global') {

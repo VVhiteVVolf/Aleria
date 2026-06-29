@@ -181,6 +181,13 @@ function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('item', index),
+      itemDbKey: String(item?.itemDbKey || '').trim(),
+      originItemDbKey: String(item?.originItemDbKey || '').trim(),
+      itemStorageMode: String(item?.itemStorageMode || (item?.itemDbKey ? 'linked' : 'character')).trim(),
+      ownerCharacterId: String(item?.ownerCharacterId || '').trim(),
+      ownerCharacterName: String(item?.ownerCharacterName || '').trim(),
+      acquiredAt: String(item?.acquiredAt || '').trim(),
+      individualizedAt: String(item?.individualizedAt || '').trim(),
       category: normalizeCharacterInventoryCategoryId(item?.category || item?.type || 'equipment'),
       icon: String(item?.icon || '').trim(),
       image: String(item?.image || '').trim(),
@@ -286,6 +293,7 @@ function sanitizeCharacterInventoryData(data = {}) {
   const moneyInfoRow = infoRows.find(row => normalizeCharacterInventoryText(row.label) === 'geld');
   if (moneyInfoRow) moneyInfoRow.value = moneyLabel;
   return {
+    characterId: String(data.characterId || '').trim(),
     title: String(data.title || 'Charakter-Inventar').trim(),
     subtitle: String(data.subtitle || 'Ausrüstung, Gegenstände und Gefährten verwalten').trim(),
     portrait: String(data.portrait || '').trim(),
@@ -313,6 +321,7 @@ function sanitizeCharacterInventoryData(data = {}) {
     money: moneyLabel,
     moneyState,
     moneyNotice: String(data.moneyNotice || '').trim(),
+    showInfoTable: data.showInfoTable === true,
     carryLabel: String(data.carryLabel || 'Traglast').trim(),
     carryValue: String(data.carryValue || '78,4 / 120 kg').trim(),
     categories: normalizeCharacterInventoryCategories(categories),
@@ -336,6 +345,7 @@ function createDefaultCharacterInventoryPage(index = 0) {
     pageTitle: `${getRomanPageLabel(index)} - Charakter-Inventar`,
     characterInventoryPage: true,
     characterInventory: sanitizeCharacterInventoryData({
+      showInfoTable: false,
       items: [
         { category: 'weapon', icon: '*', name: 'Langschwert +1', type: 'Waffe (Haupt)', description: 'Ein ausgewogenes Schwert aus gehaertetem Stahl.', weight: '1,5 kg', quantity: '1' },
         { category: 'armor', icon: '*', name: 'Plattenrüstung', type: 'Rüstung (Körper)', description: 'Schwere Rüstung aus Stahlplatten.', weight: '25,0 kg', quantity: '1' },
@@ -358,6 +368,14 @@ function buildCharacterInventoryInput(label, className, value, type = 'text') {
     <label>
       <span>${escapeHtml(label)}</span>
       <input class="inline-edit-input ${className}" type="${escapeHtml(type)}" value="${escapeHtml(value || '')}" data-module-editor-action="refresh-ci-preview">
+    </label>`;
+}
+
+function buildCharacterInventoryCheckbox(label, className, checked = false) {
+  return `
+    <label class="ci-editor-check">
+      <input class="${escapeHtml(className)}" type="checkbox"${checked ? ' checked' : ''} data-module-editor-action="refresh-ci-preview">
+      <span>${escapeHtml(label)}</span>
     </label>`;
 }
 
@@ -425,6 +443,29 @@ function buildCharacterInventoryCategoryOptions(categories = [], current = '') {
   ).join('');
 }
 
+function getCharacterInventoryItemDbItemByKey(canonicalKey) {
+  const key = String(canonicalKey || '').trim();
+  if (!key || typeof itemDbBuildIndex !== 'function') return null;
+  return itemDbBuildIndex().find(item => item.canonicalKey === key) || null;
+}
+
+function isCharacterInventoryEditorItemModified(row, item = {}) {
+  const dbItem = getCharacterInventoryItemDbItemByKey(item.itemDbKey);
+  if (!dbItem) return false;
+  const current = {
+    name: getTrimmedFormValue(row, '.me-ci-item-name'),
+    type: getTrimmedFormValue(row, '.me-ci-item-type'),
+    image: getTrimmedFormValue(row, '.me-ci-item-image'),
+    description: getTrimmedFormValue(row, '.me-ci-item-description'),
+    tags: getTrimmedFormValue(row, '.me-ci-item-tags')
+  };
+  return current.name !== String(dbItem.title || '').trim()
+    || current.type !== String(dbItem.type || dbItem.categoryLabel || '').trim()
+    || current.image !== String(dbItem.image || '').trim()
+    || current.description !== String(dbItem.description || dbItem.details || '').trim()
+    || current.tags !== (dbItem.tags || []).join(', ');
+}
+
 function buildCharacterInventoryCategoryEditor(categories = []) {
   return categories.map((category, index) => `
     <div class="ci-editor-row ci-category-row" data-ci-category-row>
@@ -445,8 +486,15 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
   return `
     <section class="ci-editor-card" data-ci-item-row>
       <input type="hidden" class="me-ci-item-id" value="${escapeHtml(item.id)}">
+      <input type="hidden" class="me-ci-item-db-key" value="${escapeHtml(item.itemDbKey || '')}">
+      <input type="hidden" class="me-ci-item-origin-db-key" value="${escapeHtml(item.originItemDbKey || '')}">
+      <input type="hidden" class="me-ci-item-storage-mode" value="${escapeHtml(item.itemStorageMode || 'character')}">
+      <input type="hidden" class="me-ci-item-owner-id" value="${escapeHtml(item.ownerCharacterId || '')}">
+      <input type="hidden" class="me-ci-item-owner-name" value="${escapeHtml(item.ownerCharacterName || '')}">
+      <input type="hidden" class="me-ci-item-acquired-at" value="${escapeHtml(item.acquiredAt || '')}">
+      <input type="hidden" class="me-ci-item-individualized-at" value="${escapeHtml(item.individualizedAt || '')}">
       <div class="ci-editor-card-head">
-        <strong>Item ${index + 1}</strong>
+        <strong>Item ${index + 1}${item.itemDbKey ? ' - Registerlink' : item.originItemDbKey ? ' - Individuell' : ''}</strong>
         <div class="ci-editor-card-actions">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-item" data-ci-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-item" data-ci-direction="1">Runter</button>
@@ -523,6 +571,7 @@ function buildCharacterInventoryModuleEditorFields(page) {
   return `
     <div class="module-page-type-block${inferModulePageType(page) === 'character-inventory' ? ' visible' : ''}" data-page-type="character-inventory">
       <div class="ci-full-editor" data-ci-editor>
+        <input type="hidden" class="me-ci-character-id" value="${escapeHtml(data.characterId || '')}">
         <input type="hidden" class="me-ci-equipment-quiz" value="${escapeHtml(JSON.stringify(data.equipmentQuiz))}">
         <div class="ci-editor-pane">
           <div class="module-editor-grid">
@@ -547,6 +596,7 @@ function buildCharacterInventoryModuleEditorFields(page) {
               ${buildCharacterInventoryInput('Geld', 'me-ci-money', data.money)}
               ${buildCharacterInventoryInput('Traglast-Label', 'me-ci-carryLabel', data.carryLabel)}
               ${buildCharacterInventoryInput('Traglast-Wert', 'me-ci-carryValue', data.carryValue)}
+              ${buildCharacterInventoryCheckbox('Infotabelle anzeigen', 'me-ci-show-info-table', data.showInfoTable)}
             </div>
           </section>
           <section class="ci-editor-section">
@@ -562,7 +612,13 @@ function buildCharacterInventoryModuleEditorFields(page) {
             <div class="ci-editor-list">${buildCharacterInventoryCategoryEditor(data.categories)}</div>
           </section>
           <section class="ci-editor-section">
-            <div class="ci-editor-section-head"><h4>Items</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item">+ Item</button></div>
+            <div class="ci-editor-section-head">
+              <h4>Items</h4>
+              <div class="ci-editor-section-actions">
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item-from-register">Aus Register</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item">+ Item</button>
+              </div>
+            </div>
             <div class="ci-editor-list">${data.items.map((item, index) => buildCharacterInventoryItemEditor(item, index, data.categories)).join('')}</div>
           </section>
           <section class="ci-editor-section">
@@ -608,6 +664,7 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
   const moneyValue = getTrimmedFormValue(block, '.me-ci-money');
   page.characterInventory = sanitizeCharacterInventoryData({
     title: getTrimmedFormValue(block, '.me-ci-title'),
+    characterId: getTrimmedFormValue(block, '.me-ci-character-id'),
     subtitle: getTrimmedFormValue(block, '.me-ci-subtitle'),
     portrait: getTrimmedFormValue(block, '.me-ci-portrait'),
     portraitFormat: getTrimmedFormValue(block, '.me-ci-portrait-format'),
@@ -621,6 +678,7 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
     healthColor: getTrimmedFormValue(block, '.me-ci-healthColor'),
     money: moneyValue,
     moneyState: sanitizeCharacterInventoryMoney(moneyValue),
+    showInfoTable: !!block.querySelector('.me-ci-show-info-table')?.checked,
     equipmentQuiz: collectCharacterInventoryJsonField(block, '.me-ci-equipment-quiz', {}),
     carryLabel: getTrimmedFormValue(block, '.me-ci-carryLabel'),
     carryValue: getTrimmedFormValue(block, '.me-ci-carryValue'),
@@ -638,30 +696,43 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
       label: getTrimmedFormValue(row, '.me-ci-category-label'),
       icon: getTrimmedFormValue(row, '.me-ci-category-icon')
     })),
-    items: collectCharacterInventoryRows(block, '[data-ci-item-row]', row => ({
-      id: getTrimmedFormValue(row, '.me-ci-item-id'),
-      category: getTrimmedFormValue(row, '.me-ci-item-category'),
-      icon: getTrimmedFormValue(row, '.me-ci-item-icon'),
-      image: getTrimmedFormValue(row, '.me-ci-item-image'),
-      imageFormat: getTrimmedFormValue(row, '.me-ci-item-image-format'),
-      imageFit: getTrimmedFormValue(row, '.me-ci-item-image-fit'),
-      imagePosition: getTrimmedFormValue(row, '.me-ci-item-image-position'),
-      name: getTrimmedFormValue(row, '.me-ci-item-name'),
-      type: getTrimmedFormValue(row, '.me-ci-item-type'),
-      description: getTrimmedFormValue(row, '.me-ci-item-description'),
-      weight: getTrimmedFormValue(row, '.me-ci-item-weight'),
-      quantity: getTrimmedFormValue(row, '.me-ci-item-quantity'),
-      tags: getTrimmedFormValue(row, '.me-ci-item-tags'),
-      infoRows: collectCharacterInventoryRows(row, '[data-ci-row-kind="item-info"]', infoRow => ({
-        icon: getTrimmedFormValue(infoRow, '.me-ci-item-info-icon'),
-        label: getTrimmedFormValue(infoRow, '.me-ci-item-info-label'),
-        value: getTrimmedFormValue(infoRow, '.me-ci-item-info-value')
-      })),
-      attributes: collectCharacterInventoryRows(row, '[data-ci-attribute-kind="item"]', attributeRow => ({
-        label: getTrimmedFormValue(attributeRow, '.me-ci-item-attribute-label'),
-        value: getTrimmedFormValue(attributeRow, '.me-ci-item-attribute-value')
-      }))
-    })),
+    items: collectCharacterInventoryRows(block, '[data-ci-item-row]', row => {
+      const itemDbKey = getTrimmedFormValue(row, '.me-ci-item-db-key');
+      const originItemDbKey = getTrimmedFormValue(row, '.me-ci-item-origin-db-key');
+      const draftItem = { itemDbKey };
+      const individualized = itemDbKey && isCharacterInventoryEditorItemModified(row, draftItem);
+      return {
+        id: getTrimmedFormValue(row, '.me-ci-item-id'),
+        itemDbKey: individualized ? '' : itemDbKey,
+        originItemDbKey: individualized ? itemDbKey : originItemDbKey,
+        itemStorageMode: individualized ? 'character' : getTrimmedFormValue(row, '.me-ci-item-storage-mode'),
+        ownerCharacterId: getTrimmedFormValue(row, '.me-ci-item-owner-id'),
+        ownerCharacterName: getTrimmedFormValue(row, '.me-ci-item-owner-name'),
+        acquiredAt: getTrimmedFormValue(row, '.me-ci-item-acquired-at'),
+        individualizedAt: individualized ? new Date().toISOString() : getTrimmedFormValue(row, '.me-ci-item-individualized-at'),
+        category: getTrimmedFormValue(row, '.me-ci-item-category'),
+        icon: getTrimmedFormValue(row, '.me-ci-item-icon'),
+        image: getTrimmedFormValue(row, '.me-ci-item-image'),
+        imageFormat: getTrimmedFormValue(row, '.me-ci-item-image-format'),
+        imageFit: getTrimmedFormValue(row, '.me-ci-item-image-fit'),
+        imagePosition: getTrimmedFormValue(row, '.me-ci-item-image-position'),
+        name: getTrimmedFormValue(row, '.me-ci-item-name'),
+        type: getTrimmedFormValue(row, '.me-ci-item-type'),
+        description: getTrimmedFormValue(row, '.me-ci-item-description'),
+        weight: getTrimmedFormValue(row, '.me-ci-item-weight'),
+        quantity: getTrimmedFormValue(row, '.me-ci-item-quantity'),
+        tags: getTrimmedFormValue(row, '.me-ci-item-tags'),
+        infoRows: collectCharacterInventoryRows(row, '[data-ci-row-kind="item-info"]', infoRow => ({
+          icon: getTrimmedFormValue(infoRow, '.me-ci-item-info-icon'),
+          label: getTrimmedFormValue(infoRow, '.me-ci-item-info-label'),
+          value: getTrimmedFormValue(infoRow, '.me-ci-item-info-value')
+        })),
+        attributes: collectCharacterInventoryRows(row, '[data-ci-attribute-kind="item"]', attributeRow => ({
+          label: getTrimmedFormValue(attributeRow, '.me-ci-item-attribute-label'),
+          value: getTrimmedFormValue(attributeRow, '.me-ci-item-attribute-value')
+        }))
+      };
+    }),
     companions: collectCharacterInventoryRows(block, '[data-ci-companion-row]', row => ({
       id: getTrimmedFormValue(row, '.me-ci-companion-id'),
       image: getTrimmedFormValue(row, '.me-ci-companion-image'),
@@ -869,6 +940,37 @@ function addCharacterInventoryNestedAttribute(button, targetKind) {
 function addCharacterInventoryItem(button) {
   rerenderCharacterInventoryEditor(button, data => {
     data.items.push({ name: 'Neuer Gegenstand', category: 'equipment', type: '', description: '', quantity: '1' });
+  });
+}
+
+function addCharacterInventoryItemFromRegister(button) {
+  if (typeof openItemDbPicker !== 'function') {
+    if (typeof showAppStatus === 'function') showAppStatus('Item-Register ist nicht verfuegbar.', 'error');
+    return;
+  }
+  const card = button.closest('.module-page-card') || button.closest('[data-ci-embedded-card]');
+  if (!card) return;
+  openItemDbPicker({
+    title: 'Item aus Register ausruesten',
+    onSelect: item => {
+      const embedded = card.matches('[data-ci-embedded-card]');
+      const page = embedded
+        ? collectCharacterInventoryModuleEditorPage(card, {})
+        : collectModulePageFromCard(card);
+      const data = sanitizeCharacterInventoryData(page.characterInventory || {});
+      const equipped = typeof buildCharacterInventoryItemFromDbItem === 'function'
+        ? buildCharacterInventoryItemFromDbItem(item, data)
+        : null;
+      if (!equipped) return;
+      data.items.push(equipped);
+      page.characterInventoryPage = true;
+      page.characterInventory = sanitizeCharacterInventoryData(data);
+      card.outerHTML = embedded
+        ? buildCharacterInventoryEmbeddedEditorMarkup(page.characterInventory)
+        : buildModulePageEditorMarkup(page, Number(card.dataset.pageIndex || 0));
+      if (typeof syncModuleJsonPreview === 'function') syncModuleJsonPreview();
+      if (typeof showAppStatus === 'function') showAppStatus(`${equipped.name} aus dem Register ausgeruestet.`, 'success');
+    }
   });
 }
 

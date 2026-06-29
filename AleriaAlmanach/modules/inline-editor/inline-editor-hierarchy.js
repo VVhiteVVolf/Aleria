@@ -88,10 +88,11 @@ function updateInlineHierarchyTreeField(input) {
   const page = getInlineDraftPage();
   if (!page) return;
   const index = Number(input.dataset.hierarchyTreeIndex || -1);
+  const field = input.dataset.hierarchyTreeField || 'label';
   if (index < 0) return;
   const data = getInlineHierarchyDataForEdit(page);
   const tree = getInlineHierarchyTree(data, index);
-  tree.label = String(input.value || '').trim();
+  tree[field] = String(input.value || '').trim();
   page.hierarchy = sanitizeHierarchyData(data);
   scheduleInlineModuleLivePreviewRefresh();
 }
@@ -281,7 +282,17 @@ function buildInlineHierarchyTreeRows(trees = []) {
       </div>
       <div class="inline-edit-field">
         <span class="inline-edit-label">Reitername</span>
-        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-tree-field" data-hierarchy-tree-index="${treeIndex}" value="${escapeHtml(tree.label || `Baum ${treeIndex + 1}`)}">
+        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-tree-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-tree-field="label" value="${escapeHtml(tree.label || `Baum ${treeIndex + 1}`)}">
+      </div>
+      <div class="inline-edit-grid">
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Baum-ID</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-tree-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-tree-field="id" value="${escapeHtml(tree.id || `baum-${treeIndex + 1}`)}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Elternbaum-ID</span>
+          <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-tree-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-tree-field="parentTreeId" value="${escapeHtml(tree.parentTreeId || '')}">
+        </div>
       </div>
       <div class="module-card-layout-blocks">${buildInlineHierarchyLevelRows(tree.levels, treeIndex)}</div>
     </div>`).join('');
@@ -303,8 +314,9 @@ function buildInlineHierarchyEditor(page) {
         <div class="inline-edit-field">
           <span class="inline-edit-label">Baumdarstellung</span>
           <select class="inline-edit-select" data-inline-action="update-hierarchy-field" data-hierarchy-field="treeDisplayMode">
-            <option value="tabs"${data.treeDisplayMode !== 'parallel' ? ' selected' : ''}>Ein Baum pro Reiter</option>
+            <option value="tabs"${data.treeDisplayMode !== 'parallel' && data.treeDisplayMode !== 'groups' ? ' selected' : ''}>Ein Baum pro Reiter</option>
             <option value="parallel"${data.treeDisplayMode === 'parallel' ? ' selected' : ''}>Baeume nebeneinander</option>
+            <option value="groups"${data.treeDisplayMode === 'groups' ? ' selected' : ''}>Eltern-/Unterbaeume</option>
           </select>
         </div>
         <div class="inline-edit-field">

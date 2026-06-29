@@ -82,6 +82,11 @@ async function openItemDbPicker(options = {}) {
     search: String(options.search || '').trim()
   };
   renderItemDbPickerPanel();
+  if (typeof itemDbEnsureGlobalSync === 'function') {
+    itemDbEnsureGlobalSync().catch(error => {
+      console.error('Item picker global sync failed:', error);
+    });
+  }
   if (typeof itemDbLoadMarketSources === 'function') {
     await itemDbLoadMarketSources();
     if (typeof itemDbAppendScanCandidates === 'function' && typeof itemDbCollectSourceCandidates === 'function') {
@@ -138,9 +143,15 @@ function handleItemDbPickerInput(event) {
   }
 }
 
+function handleItemDbPickerStoreUpdated() {
+  if (!_itemDbPickerSession) return;
+  renderItemDbPickerPanel();
+}
+
 function initItemDbPicker() {
   document.addEventListener('click', handleItemDbPickerClick);
   document.addEventListener('input', handleItemDbPickerInput);
+  window.addEventListener('item-db-store-updated', handleItemDbPickerStoreUpdated);
 }
 
 if (document.readyState === 'loading') {

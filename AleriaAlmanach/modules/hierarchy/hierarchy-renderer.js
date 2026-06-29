@@ -46,17 +46,69 @@ function buildHierarchyTreeTabs(trees = []) {
     </div>`;
 }
 
+function getHierarchyTreeId(tree, index) {
+  return String(tree?.id || `baum-${index + 1}`).trim();
+}
+
 function buildHierarchyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {
   const levels = Array.isArray(tree?.levels) ? tree.levels : [];
-  const active = displayMode === 'parallel' || index === 0;
+  const active = displayMode === 'parallel' || displayMode === 'groups' || index === 0;
   return `
-    <div class="hierarchy-chart-panel hierarchy-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}">
-      ${displayMode === 'parallel' ? `<div class="hierarchy-tree-heading">${escapeHtml(tree?.label || `Baum ${index + 1}`)}</div>` : ''}
+    <div class="hierarchy-chart-panel hierarchy-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}" data-hierarchy-tree-id="${escapeHtml(getHierarchyTreeId(tree, index))}">
+      ${displayMode === 'parallel' || displayMode === 'groups' ? `<div class="hierarchy-tree-heading">${escapeHtml(tree?.label || `Baum ${index + 1}`)}</div>` : ''}
       <div class="hierarchy-chart mode-${escapeHtml(layoutMode)}">
         ${levels.length
           ? levels.map(buildHierarchyLevel).join('')
           : '<div class="hierarchy-empty-tree">Noch keine Ebenen in diesem Hierarchie-Baum.</div>'}
       </div>
+    </div>`;
+}
+
+function buildHierarchyTreeRelations(trees = []) {
+  const lookup = new Map();
+  const childrenByParent = new Map();
+  const roots = [];
+  trees.forEach((tree, index) => {
+    lookup.set(getHierarchyTreeId(tree, index), { tree, index });
+  });
+  trees.forEach((tree, index) => {
+    const id = getHierarchyTreeId(tree, index);
+    const parentId = String(tree?.parentTreeId || '').trim();
+    if (parentId && lookup.has(parentId) && parentId !== id) {
+      if (!childrenByParent.has(parentId)) childrenByParent.set(parentId, []);
+      childrenByParent.get(parentId).push({ tree, index });
+    } else {
+      roots.push({ tree, index });
+    }
+  });
+  return { childrenByParent, roots };
+}
+
+function buildHierarchyTreeGroupNode(item, relations, layoutMode, buildPanel, path = new Set()) {
+  const id = getHierarchyTreeId(item.tree, item.index);
+  if (path.has(id)) return '';
+  const nextPath = new Set(path);
+  nextPath.add(id);
+  const children = relations.childrenByParent.get(id) || [];
+  return `
+    <section class="hierarchy-tree-group-node" data-hierarchy-group-node="${escapeHtml(id)}">
+      <div class="hierarchy-tree-group-current">
+        ${buildPanel(item.tree, item.index, layoutMode, 'groups')}
+      </div>
+      ${children.length ? `
+        <div class="hierarchy-tree-group-children group-cols-${Math.min(4, Math.max(1, children.length))}">
+          ${children.map(child => buildHierarchyTreeGroupNode(child, relations, layoutMode, buildPanel, nextPath)).join('')}
+        </div>` : ''}
+    </section>`;
+}
+
+function buildHierarchyTreeGroups(trees = [], layoutMode = 'vertical', buildPanel = buildHierarchyTreePanel) {
+  const relations = buildHierarchyTreeRelations(trees);
+  return `
+    <div class="hierarchy-tree-groups">
+      ${(relations.roots.length ? relations.roots : trees.map((tree, index) => ({ tree, index })))
+        .map(item => buildHierarchyTreeGroupNode(item, relations, layoutMode, buildPanel))
+        .join('')}
     </div>`;
 }
 
@@ -113,12 +165,26 @@ function setHierarchyRuntimeScale(page, value) {
   });
 }
 
+let hierarchyScaleAnimationFrame = 0;
+const pendingHierarchyScaleInputs = new Map();
+
+function scheduleHierarchyRuntimeScale(page, value) {
+  if (!page) return;
+  pendingHierarchyScaleInputs.set(page, value);
+  if (hierarchyScaleAnimationFrame) return;
+  hierarchyScaleAnimationFrame = requestAnimationFrame(() => {
+    hierarchyScaleAnimationFrame = 0;
+    pendingHierarchyScaleInputs.forEach((nextValue, nextPage) => setHierarchyRuntimeScale(nextPage, nextValue));
+    pendingHierarchyScaleInputs.clear();
+  });
+}
+
 document.addEventListener('input', event => {
   const input = event.target?.closest?.('[data-hierarchy-scale-input]');
   if (!input) return;
   const page = input.closest('.hierarchy-page');
   if (!page) return;
-  setHierarchyRuntimeScale(page, input.value);
+  scheduleHierarchyRuntimeScale(page, input.value);
 });
 
 document.addEventListener('click', event => {
@@ -190,7 +256,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
   const trees = data.trees.length
     ? data.trees
     : [{ label: data.chartTitle || 'Aufbau', levels: data.levels }];
-  const displayMode = data.treeDisplayMode === 'parallel' ? 'parallel' : 'tabs';
+  const displayMode = ['parallel', 'groups'].includes(data.treeDisplayMode) ? data.treeDisplayMode : 'tabs';
   const chartScale = data.chartScale / 100;
   const style = [
     `--hierarchy-card-font-scale:${data.cardFontScale / 100}`,
@@ -259,7 +325,9 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
           <div class="hierarchy-ornament-line"></div>
           <div class="hierarchy-chart-viewport">
             <div class="hierarchy-chart-panels hierarchy-tree-mode-${escapeHtml(displayMode)}">
-              ${trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
+              ${displayMode === 'groups'
+                ? buildHierarchyTreeGroups(trees, data.layoutMode, buildHierarchyTreePanel)
+                : trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
             </div>
           </div>
         </main>

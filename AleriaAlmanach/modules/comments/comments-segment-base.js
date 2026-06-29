@@ -26,7 +26,7 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? ['action']
-    : ['speech', 'action', 'thought', 'whisper', 'shout'];
+    : ['speech', 'thought', 'whisper', 'shout', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'action'];
 }
 
 function coerceCommentSegmentsForMode(edit = false) {
@@ -54,7 +54,10 @@ function renderCommentSegmentActions(edit = false) {
   if (!actions) return;
   const action = edit ? 'add-edit-comment-segment' : 'add-comment-segment';
   const buttons = getAllowedCommentSegmentKinds(edit).map(kind => `
-    <button type="button" class="comment-segment-add" data-action="${action}" data-kind="${kind}">+ ${getCommentKindLabel(kind)}</button>
+    <button type="button" class="comment-segment-add" data-action="${action}" data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
+      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
+      <span>+ ${escapeHtml(getCommentKindLabel(kind))}</span>
+    </button>
   `);
   actions.innerHTML = buttons.join('');
 }
@@ -63,7 +66,10 @@ function getSegmentTypeButtons(segment, edit = false) {
   const action = edit ? 'set-edit-comment-segment-kind' : 'set-comment-segment-kind';
   const segmentId = escapeHtml(segment.id);
   return getAllowedCommentSegmentKinds(edit).map(kind => `
-    <button type="button" class="comment-segment-type ${segment.kind === kind ? 'active' : ''}" data-action="${action}" data-segment-id="${segmentId}" data-kind="${kind}">${getCommentKindLabel(kind)}</button>
+    <button type="button" class="comment-segment-type ${segment.kind === kind ? 'active' : ''}" data-action="${action}" data-segment-id="${segmentId}" data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
+      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
+      <span>${escapeHtml(getCommentKindLabel(kind))}</span>
+    </button>
   `).join('');
 }
 
@@ -115,6 +121,13 @@ function getCommentSegmentPlaceholder(kind) {
   if (normalized === 'thought') return 'Was denkt die Figur?';
   if (normalized === 'whisper') return 'Was wird geflüstert?';
   if (normalized === 'shout') return 'Was wird gerufen?';
+  if (normalized === 'song') return 'Was wird gesungen?';
+  if (normalized === 'telepathy') return 'Welche Gedanken werden gesendet?';
+  if (normalized === 'animal') return 'Was wird in Tiersprache geäußert?';
+  if (normalized === 'spell') return 'Welche Zauberformel wird gesprochen?';
+  if (normalized === 'madness') return 'Was bricht aus dem Wahn hervor?';
+  if (normalized === 'prayer') return 'Welches Gebet wird gesprochen?';
+  if (normalized === 'flirt') return 'Was wird charmant gesagt?';
   return 'Was wird gesagt?';
 }
 
