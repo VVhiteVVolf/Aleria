@@ -64,6 +64,11 @@
   border-left: 1px solid rgba(220, 195, 138, 0.36);
 }
 
+.orte-inline-format-tools button {
+  white-space: nowrap;
+  min-width: 30px;
+}
+
 .orte-inline-color-tool,
 .orte-inline-tooltip-tool {
   display: inline-flex;
@@ -80,6 +85,11 @@
   padding: 1px;
   border: 1px solid #7c5a22;
   background: #f3e3bd;
+}
+
+.orte-inline-format-tools [data-action="clear-orte-text-format"] {
+  border-style: dashed;
+  color: #5c2b13;
 }
 
 .orte-inline-tooltip-tool input {

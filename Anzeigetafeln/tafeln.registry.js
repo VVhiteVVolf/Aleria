@@ -46,6 +46,30 @@
       legacyLink: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/MorddynAnzeigetafel.html",
       reference: true,
     },
+    {
+      id: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
+      title: "Llysfaens Anzeigetafel",
+      status: TAFEL_STATUS.ACTIVE,
+      type: TAFEL_TYPES.SETTLEMENT,
+      hierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "llamrais-ankunft", title: "Llamrais Ankunft" },
+        { level: "lordship", slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+        { level: "settlement", slug: "llysfaen", title: "Llysfaen" },
+      ],
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen",
+      config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/tafel.config.js",
+      images: {},
+      firebase: {
+        collection: "anzeigetafeln",
+        docId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
+      },
+      link: "tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
+      legacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Llysfaens-Anzeigetafel.html",
+      editableDraft: true,
+      notes: "Konkrete Anzeigetafel fuer Llysfaen. Tafelbilder koennen im Editor als Bildlinks hinterlegt werden.",
+    },
   ].map(Object.freeze);
 
   function all() {

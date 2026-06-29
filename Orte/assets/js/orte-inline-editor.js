@@ -40,6 +40,7 @@
     "insert-orte-table-row-after",
     "remove-orte-table-row",
     "format-orte-text",
+    "clear-orte-text-format",
     "apply-orte-tooltip"
   ]);
   const ignoredSurfaceSelector = [
@@ -87,9 +88,20 @@
         <button type="button" data-action="format-orte-text" data-command="bold" title="Fett"><b>F</b></button>
         <button type="button" data-action="format-orte-text" data-command="italic" title="Kursiv"><i>K</i></button>
         <button type="button" data-action="format-orte-text" data-command="underline" title="Unterstrichen"><u>U</u></button>
+        <button type="button" data-action="format-orte-text" data-command="strikeThrough" title="Durchgestrichen"><s>S</s></button>
+        <button type="button" data-action="format-orte-text" data-command="insertUnorderedList" title="Aufzählung">• Liste</button>
+        <button type="button" data-action="format-orte-text" data-command="insertOrderedList" title="Nummerierte Liste">1. Liste</button>
+        <button type="button" data-action="format-orte-text" data-command="justifyLeft" title="Linksbündig">Links</button>
+        <button type="button" data-action="format-orte-text" data-command="justifyCenter" title="Zentriert">Mitte</button>
+        <button type="button" data-action="format-orte-text" data-command="justifyRight" title="Rechtsbündig">Rechts</button>
+        <button type="button" data-action="clear-orte-text-format" title="Formatierung entfernen">Format löschen</button>
         <label class="orte-inline-color-tool" title="Textfarbe">
           <span>Farbe</span>
           <input type="color" data-orte-format-color value="#3b220c">
+        </label>
+        <label class="orte-inline-color-tool" title="Hintergrundfarbe">
+          <span>Hintergrund</span>
+          <input type="color" data-orte-format-background value="#fff2c8">
         </label>
         <label class="orte-inline-tooltip-tool" title="Tooltip für markierten Text">
           <span>Tooltip</span>
@@ -149,6 +161,12 @@
       const colorInput = event.target.closest("[data-orte-format-color]");
       if (colorInput && editMode) {
         applyTextCommand("foreColor", colorInput.value);
+        return;
+      }
+
+      const backgroundInput = event.target.closest("[data-orte-format-background]");
+      if (backgroundInput && editMode) {
+        applyTextCommand("hiliteColor", backgroundInput.value);
         return;
       }
 
@@ -271,6 +289,12 @@
       return;
     }
 
+    if (action === "clear-orte-text-format") {
+      clearTextFormat();
+      event.preventDefault();
+      return;
+    }
+
     if (action === "apply-orte-tooltip") {
       const input = document.querySelector("[data-orte-format-tooltip]");
       applyTooltip(input?.value || "");
@@ -300,6 +324,7 @@
   }
 
   function rebuildTargets() {
+    removeInlineEditorControls();
     textItems.length = 0;
     imageItems.length = 0;
     ratingItems.length = 0;
@@ -541,7 +566,7 @@
   }
 
   function renderTableControls() {
-    document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls").forEach((control) => control.remove());
+    removeInlineEditorControls();
     tableItems.forEach((item) => {
       const control = document.createElement("div");
       control.className = "orte-table-add-control";
@@ -706,9 +731,8 @@
 
   function addGenericTableRow(table, referenceRow = null, position = "after") {
     const tbody = table.tBodies[0];
-    const candidate = referenceRow && isCloneableDataRow(referenceRow, table)
-      ? referenceRow
-      : Array.from(tbody.rows).reverse().find((row) => isCloneableDataRow(row, table));
+    const candidate = getCloneSourceRow(table, referenceRow, position)
+      || Array.from(tbody.rows).reverse().find((row) => isCloneableDataRow(row, table));
     if (!candidate) return;
 
     const clone = candidate.cloneNode(true);
@@ -799,9 +823,37 @@
     const cells = Array.from(row.cells || []);
     if (cells.length <= 1) return false;
     if (row.querySelector("th")) return false;
+    if (cells.some((cell) => Number(cell.rowSpan || 1) > 1)) return false;
     if (table?.classList?.contains("pt-s-0040") && !cells[0]?.querySelector("[data-orte-image-key]")) return false;
-    const tableWidth = table.rows[0]?.cells?.length || cells.length;
-    return !cells.some((cell) => Number(cell.colSpan || 1) >= tableWidth && cells.length === 1);
+    const tableWidth = getTableColumnCount(table) || cells.length;
+    const columnSpanTotal = cells.reduce((sum, cell) => sum + Number(cell.colSpan || 1), 0);
+    if (cells.length === 1 && columnSpanTotal >= tableWidth) return false;
+    return columnSpanTotal <= tableWidth;
+  }
+
+  function getTableColumnCount(table) {
+    return Math.max(0, ...Array.from(table?.rows || []).map((row) => (
+      Array.from(row.cells || []).reduce((sum, cell) => sum + Number(cell.colSpan || 1), 0)
+    )));
+  }
+
+  function getCloneSourceRow(table, referenceRow, position) {
+    if (!referenceRow) return null;
+    if (isCloneableDataRow(referenceRow, table)) return referenceRow;
+
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    const startIndex = rows.indexOf(referenceRow);
+    if (startIndex < 0) return null;
+
+    const step = position === "before" ? -1 : 1;
+    for (let index = startIndex + step; index >= 0 && index < rows.length; index += step) {
+      if (isCloneableDataRow(rows[index], table)) return rows[index];
+    }
+    return null;
+  }
+
+  function removeInlineEditorControls() {
+    document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls").forEach((control) => control.remove());
   }
 
   function resetClonedFragment(fragment) {
@@ -1089,7 +1141,23 @@
     if (!editMode || !command) return;
     const editable = restoreSelection();
     if (!editable) return;
-    document.execCommand(command, false, value);
+    if (command === "foreColor" || command === "hiliteColor" || command === "backColor") {
+      document.execCommand("styleWithCSS", false, true);
+    }
+    const commandName = command === "hiliteColor" && !document.queryCommandSupported?.("hiliteColor")
+      ? "backColor"
+      : command;
+    document.execCommand(commandName, false, value);
+    persistEditable(editable);
+    rememberSelection();
+    markDirty();
+  }
+
+  function clearTextFormat() {
+    if (!editMode) return;
+    const editable = restoreSelection();
+    if (!editable) return;
+    document.execCommand("removeFormat", false, null);
     persistEditable(editable);
     rememberSelection();
     markDirty();

@@ -230,6 +230,31 @@
       link: "karte.html?map=cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",
       notes: "Geplanter Stadt-Link fuer die spaetere Morddyn-Ortsseite.",
     },
+    {
+      id: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
+      title: "Llysfaens Stadtkarte",
+      status: MAP_STATUS.ACTIVE,
+      type: MAP_TYPES.LOCAL,
+      hierarchy: [
+        { level: "kingdom", slug: "cenyr", title: "Cenyr" },
+        { level: "county", slug: "celtigerns-wacht", title: "Celtigerns Wacht" },
+        { level: "barony", slug: "llamrais-ankunft", title: "Llamrais Ankunft" },
+        { level: "lordship", slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+        { level: "region", slug: "llysfaen-bannkreis", title: "Llysfaen Bannkreis" },
+        { level: "settlement", slug: "llysfaen", title: "Llysfaen" },
+      ],
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen",
+      config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/template.config.js",
+      images: {},
+      firebase: {
+        collection: "karten",
+        docId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
+      },
+      link: "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
+      legacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/Llysfaens-Stadtkarte.html",
+      editableDraft: true,
+      notes: "Konkrete Stadtkarte fuer Llysfaen. Kartenbilder koennen im Editor als Bildlinks hinterlegt werden.",
+    },
   ].map(Object.freeze);
 
   function all() {
