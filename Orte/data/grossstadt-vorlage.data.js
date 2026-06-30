@@ -173,6 +173,12 @@ window.ORT_DATA = {
           ]
         },
         {
+          title: "Barone",
+          items: [
+            { name: "Haus ...", type: "Baronie", note: "baroniale Macht" }
+          ]
+        },
+        {
           title: "Ritterfürsten",
           items: [
             { name: "Haus ...", type: "Ritterfürst", note: "Stadthalter oder Bezirksmacht" },

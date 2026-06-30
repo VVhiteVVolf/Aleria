@@ -206,6 +206,7 @@
 
       const editable = event.target.closest("[data-orte-inline-text]");
       if (editable && editMode) {
+        sanitizeEditableNode(editable);
         persistEditable(editable);
         markDirty();
         return;
@@ -245,7 +246,30 @@
         return;
       }
 
+      const editable = event.target.closest("[data-orte-inline-text]");
+      if (editMode && editable && root.contains(editable) && event.key === "Enter") {
+        event.preventDefault();
+        document.execCommand("insertLineBreak");
+        sanitizeEditableNode(editable);
+        persistEditable(editable);
+        markDirty();
+        return;
+      }
+
       if (event.key === "Escape") closeImagePanel();
+    });
+
+    document.addEventListener("paste", (event) => {
+      const editable = event.target.closest("[data-orte-inline-text]");
+      if (!editMode || !editable || !root.contains(editable)) return;
+
+      event.preventDefault();
+      const html = event.clipboardData?.getData("text/html") || "";
+      const text = event.clipboardData?.getData("text/plain") || "";
+      document.execCommand("insertHTML", false, sanitizePastedHtml(html || escapeHtml(text).replace(/\n/g, "<br>")));
+      sanitizeEditableNode(editable);
+      persistEditable(editable);
+      markDirty();
     });
 
     document.addEventListener("error", (event) => {
@@ -424,6 +448,7 @@
     });
 
     prepareTables();
+    ensureAristocracyBaroneGroup();
     normalizeRawImages();
     collectImageItems();
     collectRatingItems();
@@ -592,6 +617,52 @@
     getEditableTables().forEach((table, index) => {
       table.dataset.orteTableId = table.dataset.orteTableId || `table-${String(index).padStart(4, "0")}`;
     });
+  }
+
+  function ensureAristocracyBaroneGroup() {
+    root.querySelectorAll("table.pt-s-0040").forEach((table) => {
+      const tableText = normalizeWhitespace(table.textContent);
+      if (!tableText.includes("Grafenhaus") || !containsRitterfuersten(tableText) || tableText.includes("Barone")) return;
+
+      const ritterHeader = Array.from(table.rows || []).find((row) => {
+        const text = normalizeWhitespace(row.textContent);
+        return containsRitterfuersten(text) && row.querySelector("th, .rang-kopf");
+      });
+      if (!ritterHeader) return;
+
+      ritterHeader.before(...createBaroneRows());
+      updateTableState(table);
+    });
+  }
+
+  function containsRitterfuersten(text) {
+    return String(text || "").includes("Ritterfürsten") || String(text || "").includes("RitterfÃ¼rsten");
+  }
+
+  function createBaroneRows() {
+    const template = document.createElement("tbody");
+    template.innerHTML = `
+      <tr>
+        <th class="rang-kopf pt-s-0063" colspan="9" scope="colgroup"><b>Barone</b></th>
+      </tr>
+      <tr>
+        <td class="wappen pt-s-0050" colspan="9">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="wappen pt-s-0050"><b class="pt-s-0017"><img alt="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png" class="transparent pt-s-0052" src="https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"></b></td>
+        <td class="pt-s-0053"><b class="pt-s-0017">....</b></td>
+        <td class="pt-s-0054"><b>Barone</b></td>
+        <td class="pt-s-0055"><b class="pt-s-0017">&#9001;???&#9002;</b></td>
+        <td class="pt-s-0056"><b><span class="pt-s-0057">&#9733;&#9733;&#9733;&#9734;&#9734;</span></b></td>
+        <td class="pt-s-0058"><b><span class="pt-s-0059">&#10020;&#10020;&#10020;&#10023;&#10023;</span></b></td>
+        <td class="pt-s-0056"><b><span class="pt-s-0060">&#9733;&#9733;&#9733;&#9734;&#9734;</span></b></td>
+        <td class="pt-s-0061" colspan="2"><b class="pt-s-0017">&#9001;???&#9002;</b></td>
+      </tr>
+      <tr>
+        <td class="wappen pt-s-0062" colspan="9"><p>&nbsp;</p></td>
+      </tr>
+    `;
+    return Array.from(template.rows);
   }
 
   function normalizeRawImages() {
@@ -970,18 +1041,32 @@
 
   function getPersonalityGroups(table) {
     const rows = Array.from(table.tBodies[0]?.rows || []);
-    const startIndexes = rows
-      .map((row, index) => isPersonalityGroupStart(row) ? index : -1)
-      .filter((index) => index >= 0);
-    return startIndexes.map((startIndex, groupIndex) => {
-      const endIndex = startIndexes[groupIndex + 1] ?? Math.min(startIndex + 4, rows.length);
-      return rows.slice(startIndex, endIndex);
-    });
+    return rows
+      .map((row, index) => isPersonalityGroupStart(row) ? getPersonalityGroupRows(rows, index) : null)
+      .filter((group) => group?.length);
   }
 
   function getPersonalityGroupForRow(table, row) {
     if (!row) return null;
     return getPersonalityGroups(table).find((group) => group.includes(row)) || null;
+  }
+
+  function getPersonalityGroupRows(rows, startIndex) {
+    const group = rows.slice(startIndex, startIndex + 3);
+    if (group.length < 3) return [];
+    const spacer = rows[startIndex + 3];
+    if (isPersonalitySpacerRow(spacer)) group.push(spacer);
+    return group;
+  }
+
+  function isPersonalitySpacerRow(row) {
+    const cells = Array.from(row?.cells || []);
+    if (cells.length !== 1) return false;
+    const cell = cells[0];
+    if (cell.tagName === "TH") return false;
+    if (Number(cell.colSpan || 1) < 4) return false;
+    if (row.querySelector("[data-orte-image-key], img, .pt-s-0077")) return false;
+    return !normalizeWhitespace(cell.textContent);
   }
 
   function isCloneableDataRow(row, table) {
@@ -1089,8 +1174,9 @@
     Object.entries(payload.texts || {}).forEach(([id, html]) => {
       const item = textItems.find((entry) => entry.id === id);
       if (!item || item.inTable) return;
-      state.texts[id] = String(html || "");
+      state.texts[id] = sanitizePastedHtml(html || "");
       item.node.innerHTML = state.texts[id];
+      sanitizeEditableNode(item.node);
     });
 
     Object.entries(payload.images || {}).forEach(([key, image]) => {
@@ -1127,6 +1213,7 @@
 
   function persistEditable(editable) {
     if (!editable?.dataset?.orteInlineText) return;
+    sanitizeEditableNode(editable);
     if (editable.closest("[data-orte-table-id]")) {
       updateOwningTable(editable);
       return;
@@ -1138,6 +1225,64 @@
     const id = table?.dataset?.orteTableId;
     if (!id) return;
     state.tables[id] = getTableHtml(table);
+  }
+
+  function sanitizeEditableNode(editable, options = {}) {
+    if (!editable) return;
+    if (!options.allowDetached && !root.contains(editable)) return;
+
+    editable.querySelectorAll([
+      "script",
+      "style",
+      "link",
+      "meta",
+      "iframe",
+      "form",
+      "input",
+      "button",
+      "textarea",
+      "select",
+      "table",
+      "thead",
+      "tbody",
+      "tfoot",
+      "tr",
+      "td",
+      "th",
+      "details",
+      "summary",
+      "section",
+      "article",
+      "main",
+      "header",
+      "footer",
+      "aside",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "hr"
+    ].join(",")).forEach((node) => {
+      node.replaceWith(document.createTextNode(normalizeWhitespace(node.textContent)));
+    });
+
+    editable.querySelectorAll("div, p").forEach((block) => {
+      const fragment = document.createDocumentFragment();
+      while (block.firstChild) fragment.appendChild(block.firstChild);
+      fragment.appendChild(document.createElement("br"));
+      block.replaceWith(fragment);
+    });
+  }
+
+  function sanitizePastedHtml(html) {
+    const template = document.createElement("template");
+    template.innerHTML = String(html || "");
+    const container = document.createElement("span");
+    container.append(template.content.cloneNode(true));
+    sanitizeEditableNode(container, { allowDetached: true });
+    return container.innerHTML;
   }
 
   function getTableHtml(table) {
