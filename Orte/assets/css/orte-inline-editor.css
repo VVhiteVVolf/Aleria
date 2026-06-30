@@ -27,6 +27,27 @@
   white-space: nowrap;
 }
 
+.orte-inline-document-state {
+  padding: 3px 8px;
+  border: 1px solid rgba(220, 195, 138, 0.48);
+  background: rgba(255, 239, 190, 0.12);
+  color: #f5dfaa;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.orte-inline-document-state[data-state="locked"] {
+  border-color: #cfab4a;
+  background: rgba(108, 70, 16, 0.72);
+  color: #fff4cc;
+}
+
+.orte-document-locked .orte-inline-toolbar [data-action="toggle-orte-inline-edit"] {
+  border-color: #cfab4a;
+  background: #ead39b;
+}
+
 .orte-inline-toolbar button,
 .orte-inline-image-panel button {
   cursor: pointer;
@@ -276,6 +297,13 @@
   cursor: text;
   outline: 1px solid transparent;
   outline-offset: 2px;
+}
+
+.orte-cell-editable {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 1ch;
+  overflow-wrap: anywhere;
 }
 
 .orte-inline-editing .place-document {

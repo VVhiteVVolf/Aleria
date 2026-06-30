@@ -77,11 +77,25 @@ function normalizePayload(payload) {
   return {
     contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
     savedAtClient: Number(source.savedAtClient || source.updatedAtClient) || 0,
+    meta: normalizeDocumentMeta(source.meta),
     texts: normalizeTextRecord(source.texts),
     images: normalizeImageRecord(source.images),
     ratings: normalizeRatingRecord(source.ratings),
     tables: normalizeTextRecord(source.tables),
     hiddenSections: normalizeBooleanRecord(source.hiddenSections),
+  };
+}
+
+function normalizeDocumentMeta(meta) {
+  const source = meta && typeof meta === "object" ? meta : {};
+  const status = source.locked || source.status === "final" || source.status === "locked"
+    ? "final"
+    : "draft";
+  return {
+    status,
+    locked: status === "final",
+    lockedAtClient: status === "final" ? Number(source.lockedAtClient) || 0 : 0,
+    unlockedAtClient: Number(source.unlockedAtClient) || 0,
   };
 }
 

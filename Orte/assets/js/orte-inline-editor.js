@@ -8,7 +8,7 @@
   const CONTENT_SCHEMA_VERSION = 2;
   const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
   const statusPositionKey = `aleria:orte:inline-status-position:${pageId}`;
-  const state = { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {} };
+  const state = { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {}, meta: normalizeDocumentMeta(window.ORT_DATA?.meta || {}) };
   const textItems = [];
   const imageItems = [];
   const ratingItems = [];
@@ -35,6 +35,7 @@
   let statusDrag = null;
   const inlineActions = new Set([
     "toggle-orte-inline-edit",
+    "toggle-orte-final-status",
     "save-orte-inline-edit",
     "hard-reset-orte-template",
     "toggle-orte-status-panel",
@@ -96,7 +97,9 @@
     toolbar.innerHTML = `
       <strong>Direktbearbeitung</strong>
       <span class="orte-inline-status-text" data-orte-inline-status>bereit</span>
+      <span class="orte-inline-document-state" data-orte-document-status>Entwurf</span>
       <button type="button" data-action="toggle-orte-inline-edit">Bearbeiten</button>
+      <button type="button" data-action="toggle-orte-final-status" data-orte-final-action>Finalisieren</button>
       <button type="button" data-action="save-orte-inline-edit" data-orte-inline-edit-only>Speichern</button>
       <button type="button" data-action="undo-orte-inline-change" data-orte-history-action="undo" data-orte-inline-edit-only title="Änderung zurück">Zurück</button>
       <button type="button" data-action="redo-orte-inline-change" data-orte-history-action="redo" data-orte-inline-edit-only title="Änderung vor">Vor</button>
@@ -137,6 +140,7 @@
     `;
     document.body.prepend(toolbar);
     renderSectionControls();
+    updateDocumentStatusControls();
     updateHistoryButtons();
   }
 
@@ -266,7 +270,7 @@
       event.preventDefault();
       const html = event.clipboardData?.getData("text/html") || "";
       const text = event.clipboardData?.getData("text/plain") || "";
-      document.execCommand("insertHTML", false, sanitizePastedHtml(html || escapeHtml(text).replace(/\n/g, "<br>")));
+      document.execCommand("insertHTML", false, sanitizePastedHtml(html || escapePlainTextForPaste(text)));
       sanitizeEditableNode(editable);
       persistEditable(editable);
       markDirty();
@@ -294,6 +298,12 @@
     const action = target.dataset.action;
     if (action === "toggle-orte-inline-edit") {
       setEditMode(!editMode);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "toggle-orte-final-status") {
+      toggleFinalStatus();
       event.preventDefault();
       return;
     }
@@ -415,6 +425,17 @@
   }
 
   function setEditMode(enabled) {
+    if (enabled && state.meta.locked) {
+      const confirmed = window.confirm(
+        "Dieser Ort ist als final gesperrt.\n\nZum Nachbearbeiten wird der Ort wieder in den Status \"In Bearbeitung\" gesetzt. Fortfahren?"
+      );
+      if (!confirmed) return;
+      setDocumentLocked(false);
+      dirty = true;
+      window.clearTimeout(saveTimer);
+      saveTimer = window.setTimeout(saveNow, 300);
+    }
+
     editMode = enabled;
     document.body.classList.toggle("orte-inline-editing", editMode);
     document.querySelector("[data-action='toggle-orte-inline-edit']").textContent = editMode ? "Ansicht" : "Bearbeiten";
@@ -431,6 +452,7 @@
     renderImageSlots();
     renderRatings();
     renderTableControls();
+    updateDocumentStatusControls();
     updateHistoryButtons();
     if (!editMode) closeImagePanel();
   }
@@ -473,8 +495,10 @@
     let textIndex = 0;
     let tableTextIndex = 0;
     const activeTextIds = new Set();
-    getEditableCandidates().forEach((node) => {
-      const table = node.closest("[data-orte-table-id]");
+    getEditableCandidates().forEach((candidate) => {
+      const table = candidate.closest("[data-orte-table-id]");
+      const node = table ? normalizeTableEditableCandidate(candidate) : candidate;
+      if (!node) return;
       const id = table
         ? `table-text-${String(tableTextIndex++).padStart(4, "0")}`
         : `text-${String(textIndex++).padStart(4, "0")}`;
@@ -601,9 +625,33 @@
     return Array.from(root.querySelectorAll("h2, h3, details > summary > span, p, td, th, li"))
       .filter((node) => !isInsideIgnoredSurface(node))
       .filter((node) => !node.closest("[data-orte-image-key], [data-orte-rating-key]"))
+      .filter((node) => !node.closest(".orte-cell-editable"))
       .filter((node) => !node.matches(".place-spacer"))
       .filter((node) => !node.querySelector("table, h2, h3, summary, p, td, th, li, [data-orte-image-key], [data-orte-rating-key]"))
       .filter((node) => normalizeWhitespace(node.textContent));
+  }
+
+  function normalizeTableEditableCandidate(node) {
+    if (!isTableCellElement(node)) return node;
+    if (node.querySelector(".orte-table-row-controls")) return null;
+    return ensureCellEditableWrapper(node);
+  }
+
+  function isTableCellElement(node) {
+    return node?.matches?.("td, th");
+  }
+
+  function ensureCellEditableWrapper(cell) {
+    const existing = Array.from(cell.children || []).find((child) => (
+      child.classList?.contains("orte-cell-editable")
+    ));
+    if (existing) return existing;
+
+    const wrapper = document.createElement("span");
+    wrapper.className = "orte-cell-editable";
+    while (cell.firstChild) wrapper.appendChild(cell.firstChild);
+    cell.appendChild(wrapper);
+    return wrapper;
   }
 
   function getEditableTables() {
@@ -1164,6 +1212,7 @@
       return;
     }
 
+    state.meta = normalizeDocumentMeta(payload.meta);
     state.hiddenSections = normalizeHiddenSections(payload.hiddenSections);
 
     if (!options.skipTables && payload.tables) {
@@ -1196,13 +1245,17 @@
     renderRatings();
     applySectionVisibility();
     renderSectionControls();
+    updateDocumentStatusControls();
   }
 
   function applyTablePayload(tables) {
     if (!tables || typeof tables !== "object") return;
     Object.entries(tables).forEach(([id, html]) => {
       const table = root.querySelector(`[data-orte-table-id="${cssEscape(id)}"]`);
-      if (table?.tBodies[0]) table.tBodies[0].innerHTML = String(html || "");
+      if (table?.tBodies[0]) {
+        table.tBodies[0].innerHTML = String(html || "");
+        sanitizeLoadedTable(table);
+      }
     });
   }
 
@@ -1283,6 +1336,18 @@
     container.append(template.content.cloneNode(true));
     sanitizeEditableNode(container, { allowDetached: true });
     return container.innerHTML;
+  }
+
+  function escapePlainTextForPaste(text) {
+    return escapeHtml(String(text || ""))
+      .replace(/\t/g, " ")
+      .replace(/\r\n?/g, "\n")
+      .replace(/\n/g, "<br>");
+  }
+
+  function sanitizeLoadedTable(table) {
+    table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control").forEach((node) => node.remove());
+    table.querySelectorAll("td, th").forEach((cell) => sanitizeEditableNode(cell));
   }
 
   function getTableHtml(table) {
@@ -1524,6 +1589,18 @@
 
       const localPayload = loadLocal();
       if (isCompatiblePayload(localPayload) && payloadSignature(localPayload) !== payloadSignature(payload)) {
+        if (isPayloadLocked(payload)) {
+          applyPayload(payload);
+          saveLocal(payload);
+          resetHistoryToCurrent();
+          pendingLocalPayload = null;
+          pendingRemotePayload = null;
+          dirty = false;
+          setStatus("finaler Online-Stand geladen", "ok");
+          updateVersionChoice();
+          return;
+        }
+
         pendingLocalPayload = localPayload;
         pendingRemotePayload = payload;
         setStatus("Version wählen", "warning");
@@ -1580,12 +1657,69 @@
     return {
       contentSchemaVersion: CONTENT_SCHEMA_VERSION,
       savedAtClient: Date.now(),
+      meta: normalizeDocumentMeta(state.meta),
       texts: { ...state.texts },
       tables: { ...state.tables },
       ratings: { ...state.ratings },
       images: Object.fromEntries(Object.entries(state.images).map(([key, image]) => [key, normalizeImageState(image, key)])),
       hiddenSections: normalizeHiddenSections(state.hiddenSections)
     };
+  }
+
+  function toggleFinalStatus() {
+    if (state.meta.locked) {
+      const confirmed = window.confirm(
+        "Finale Sperre aufheben?\n\nDanach kann dieser Ort wieder bearbeitet und gespeichert werden."
+      );
+      if (!confirmed) return;
+      setDocumentLocked(false);
+      setEditMode(true);
+      markDirty();
+      return;
+    }
+
+    const confirmed = window.confirm(
+      "Diesen Ort als final markieren?\n\nDer aktuelle Stand wird gespeichert und künftig nicht mehr durch lokale Entwürfe ersetzt. Nachbearbeitung ist nur nach bewusster Entsperrung möglich."
+    );
+    if (!confirmed) return;
+    setDocumentLocked(true);
+    setEditMode(false);
+    dirty = true;
+    saveNow();
+  }
+
+  function setDocumentLocked(locked) {
+    const now = Date.now();
+    state.meta = {
+      ...normalizeDocumentMeta(state.meta),
+      status: locked ? "final" : "draft",
+      locked: !!locked,
+      lockedAtClient: locked ? now : 0,
+      unlockedAtClient: locked ? Number(state.meta.unlockedAtClient) || 0 : now
+    };
+    updateDocumentStatusControls();
+  }
+
+  function updateDocumentStatusControls() {
+    const status = document.querySelector("[data-orte-document-status]");
+    const action = document.querySelector("[data-orte-final-action]");
+    const editButton = document.querySelector("[data-action='toggle-orte-inline-edit']");
+    const locked = !!state.meta.locked;
+
+    document.body.classList.toggle("orte-document-locked", locked);
+    if (status) {
+      status.textContent = locked ? "Final gesperrt" : "In Bearbeitung";
+      status.dataset.state = locked ? "locked" : "draft";
+    }
+    if (action) {
+      action.textContent = locked ? "Nachbearbeiten" : "Finalisieren";
+      action.title = locked
+        ? "Finale Sperre bewusst aufheben"
+        : "Aktuellen Stand final speichern und sperren";
+    }
+    if (editButton && !editMode) {
+      editButton.textContent = locked ? "Nachbearbeiten" : "Bearbeiten";
+    }
   }
 
   function applyTextCommand(command, value = null) {
@@ -1741,6 +1875,7 @@
     return {
       contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
       savedAtClient: Number(source.savedAtClient || source.updatedAtClient) || 0,
+      meta: normalizeDocumentMeta(source.meta),
       texts: normalizeTextRecord(source.texts),
       tables: normalizeTextRecord(source.tables),
       ratings: normalizeRatingRecord(source.ratings),
@@ -1766,6 +1901,23 @@
       .map(([key]) => [String(key), true]));
   }
 
+  function normalizeDocumentMeta(meta) {
+    const source = meta && typeof meta === "object" ? meta : {};
+    const status = source.locked || source.status === "final" || source.status === "locked"
+      ? "final"
+      : "draft";
+    return {
+      status,
+      locked: status === "final",
+      lockedAtClient: status === "final" ? Number(source.lockedAtClient) || 0 : 0,
+      unlockedAtClient: Number(source.unlockedAtClient) || 0
+    };
+  }
+
+  function isPayloadLocked(payload) {
+    return !!normalizeDocumentMeta(payload?.meta).locked;
+  }
+
   function isCompatiblePayload(payload) {
     return !!payload && Number(payload.contentSchemaVersion) === CONTENT_SCHEMA_VERSION;
   }
@@ -1774,6 +1926,7 @@
     const source = payload && typeof payload === "object" ? payload : {};
     return JSON.stringify({
       contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
+      meta: normalizeDocumentMeta(source.meta),
       texts: source.texts || {},
       tables: source.tables || {},
       ratings: source.ratings || {},
