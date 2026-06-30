@@ -398,11 +398,26 @@ img {
 }
 
 .grossstadt-template .orte-region-table .region-map-slot {
-  width: 100% !important;
-  min-height: 320px;
+  display: block;
+  width: min(100%, var(--orte-image-width, 100%));
+  min-height: min(320px, var(--orte-image-max-height, 520px));
+  max-height: var(--orte-image-max-height, 520px);
+}
+
+.grossstadt-template .orte-region-table .region-map-slot[data-orte-image-format="auto"] {
   aspect-ratio: 16 / 7;
-  --orte-image-width: 100%;
-  --orte-image-max-height: 520px;
+}
+
+.grossstadt-template .orte-region-table .region-map-slot.has-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.grossstadt-template .orte-region-table .region-map-slot[data-orte-image-fit="cover"] img {
+  object-fit: cover;
 }
 
 .grossstadt-template .pt-s-0040 {
@@ -422,6 +437,34 @@ img {
 .grossstadt-template .pt-s-0036 {
   height: 1px;
   vertical-align: top;
+}
+
+.grossstadt-template-frame > tbody > tr > .pt-s-0023,
+.grossstadt-template-frame > tbody > tr > .pt-s-0037,
+.grossstadt-template-frame > tbody > tr > .pt-s-0038 {
+  width: 500px !important;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.grossstadt-template-frame > tbody > tr > .pt-s-0007,
+.grossstadt-template-frame > tbody > tr > .pt-s-0036 {
+  width: 800px !important;
+  max-width: 800px;
+}
+
+.grossstadt-template .pt-s-0024 {
+  width: 100% !important;
+  min-width: 100%;
+  table-layout: fixed;
+}
+
+.grossstadt-template .pt-s-0024 .pt-s-0032 {
+  width: 38%;
+}
+
+.grossstadt-template .pt-s-0024 .pt-s-0033 {
+  width: 62%;
 }
 
 .grossstadt-template .orte-balanced-text-panel {
