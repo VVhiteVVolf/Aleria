@@ -10,6 +10,7 @@
     '#1f5f36', '#24527a', '#6b3f7a', '#f8efd2',
     '#ead8a5', '#d6c083'
   ]);
+  const ALLOWED_TEXT_DECORATIONS = new Set(['underline', 'line-through']);
 
   function esc(value){
     return String(value || '').replace(/[&<>"']/g, c => ({
@@ -35,9 +36,20 @@
     String(styleText || '').split(';').forEach(part => {
       const [rawName, rawValue] = part.split(':');
       const name = String(rawName || '').trim().toLowerCase();
-      const value = normalizeColorValue(rawValue);
+      const raw = String(rawValue || '').trim().toLowerCase();
+      const value = normalizeColorValue(raw);
       if((name === 'color' || name === 'background-color') && ALLOWED_COLORS.has(value)){
         allowed.push(`${name}:${value}`);
+      }
+      if(name === 'font-weight' && (raw === 'bold' || raw === '700')){
+        allowed.push('font-weight:700');
+      }
+      if(name === 'font-style' && raw === 'italic'){
+        allowed.push('font-style:italic');
+      }
+      if((name === 'text-decoration' || name === 'text-decoration-line')){
+        const decorations = raw.split(/\s+/).filter(item => ALLOWED_TEXT_DECORATIONS.has(item));
+        if(decorations.length) allowed.push(`text-decoration:${decorations.join(' ')}`);
       }
     });
     return allowed.join(';');
@@ -73,14 +85,12 @@
         : 'span';
     const safeNode = documentRef.createElement(safeTag);
 
-    if(safeTag === 'span'){
-      const styleParts = [];
-      const style = sanitizeStyle(node.getAttribute('style'));
-      if(style) styleParts.push(style);
-      const fontColor = normalizeColorValue(node.getAttribute('color'));
-      if(tag === 'FONT' && ALLOWED_COLORS.has(fontColor)) styleParts.push(`color:${fontColor}`);
-      if(styleParts.length) safeNode.setAttribute('style', styleParts.join(';'));
-    }
+    const styleParts = [];
+    const style = sanitizeStyle(node.getAttribute('style'));
+    if(style) styleParts.push(style);
+    const fontColor = normalizeColorValue(node.getAttribute('color'));
+    if(tag === 'FONT' && ALLOWED_COLORS.has(fontColor)) styleParts.push(`color:${fontColor}`);
+    if(styleParts.length) safeNode.setAttribute('style', styleParts.join(';'));
 
     Array.from(node.childNodes).forEach(child => {
       safeNode.appendChild(sanitizeNode(child, documentRef));
@@ -123,7 +133,8 @@
   }
 
   function format(action, value){
-    document.execCommand('styleWithCSS', false, true);
+    const usesInlineStyle = action === 'color' || action === 'background';
+    document.execCommand('styleWithCSS', false, usesInlineStyle);
     if(action === 'bold') command('bold');
     if(action === 'italic') command('italic');
     if(action === 'underline') command('underline');
