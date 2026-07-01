@@ -91,9 +91,12 @@
         portrait: '',
         verfasser: '',
         verfasserName: '',
+        sideWidth: typeId === 'zeitung' ? 220 : 160,
+        imageFit: 'cover',
+        imagePosition: 'center',
         table: type ? type.table.map(row => ({...row})) : [],
         artikel: [{titel:'Artikel 1', text:''}],
-        personen: [{portrait:'', title:'', untertitel:'', text:'', table:[]}],
+        personen: [{portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:[]}],
         secret: false,
       };
     },

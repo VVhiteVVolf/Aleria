@@ -6,6 +6,7 @@
   function rt(){ return window.TafelRuntime; }
   function state(){ return rt().state(); }
   function esc(value){ return rt().esc(value); }
+  function rich(){ return window.TafelZettelRichText; }
   function currentZettel(){
     return state().zettel.find(z => z.id === activeZettelId);
   }
@@ -20,6 +21,62 @@
   }
   function typeById(id){
     return window.TafelZettelConfig.typeById(id);
+  }
+
+  function richTextEditor(id, inputAction, attrs, value){
+    return `${rich().toolbar(id)}
+      <div id="${esc(id)}" class="zettel-rich-editor" contenteditable="true" data-input-action="${inputAction}" ${attrs}>
+        ${rich().editorHtml(value || '')}
+      </div>`;
+  }
+
+  function option(value, label, selected){
+    return `<option value="${esc(value)}" ${String(selected || '') === value ? 'selected' : ''}>${esc(label)}</option>`;
+  }
+
+  function zettelLayoutControls(z){
+    const sideWidth = Number(z.sideWidth) || (z.typ === 'zeitung' ? 220 : 160);
+    return `<div class="zettel-layout-controls">
+      <label class="lml">Trenner: Info-/Bildspalte</label>
+      <div class="zettel-range-row">
+        <input type="range" min="120" max="420" step="10" value="${sideWidth}" data-input-action="zettel-field" data-field="sideWidth"/>
+        <span>${sideWidth}px</span>
+      </div>
+    </div>`;
+  }
+
+  function zettelImageControls(z){
+    return `<div class="zettel-image-controls">
+      <label class="lml">Bildformat</label>
+      <div class="zettel-control-grid">
+        <select class="e-sel" data-input-action="zettel-field" data-field="imageFit">
+          ${option('cover', 'Füllen / croppen', z.imageFit || 'cover')}
+          ${option('contain', 'Einpassen', z.imageFit || 'cover')}
+        </select>
+        <select class="e-sel" data-input-action="zettel-field" data-field="imagePosition">
+          ${option('top', 'Oben croppen', z.imagePosition || 'center')}
+          ${option('center', 'Mitte', z.imagePosition || 'center')}
+          ${option('bottom', 'Unten croppen', z.imagePosition || 'center')}
+        </select>
+      </div>
+    </div>`;
+  }
+
+  function personImageControls(personIndex, person){
+    return `<div class="zettel-image-controls">
+      <label class="lml">Portraitformat</label>
+      <div class="zettel-control-grid">
+        <select class="e-sel" data-input-action="person-field" data-person-index="${personIndex}" data-field="imageFit">
+          ${option('cover', 'Füllen / croppen', person.imageFit || 'cover')}
+          ${option('contain', 'Einpassen', person.imageFit || 'cover')}
+        </select>
+        <select class="e-sel" data-input-action="person-field" data-person-index="${personIndex}" data-field="imagePosition">
+          ${option('top', 'Oben croppen', person.imagePosition || 'center')}
+          ${option('center', 'Mitte', person.imagePosition || 'center')}
+          ${option('bottom', 'Unten croppen', person.imagePosition || 'center')}
+        </select>
+      </div>
+    </div>`;
   }
 
   function openZettelSidebar(id){
@@ -55,7 +112,7 @@
     <label class="lml">Überschrift ${i + 1}</label>
     <input class="e-inp" value="${esc(a.titel || '')}" placeholder="Überschrift..." data-input-action="zettel-article-field" data-article-index="${i}" data-field="titel"/>
     <label class="lml" style="margin-top:.3rem;">Text</label>
-    <textarea class="e-ta" rows="4" data-input-action="zettel-article-field" data-article-index="${i}" data-field="text">${esc(a.text || '')}</textarea>
+    ${richTextEditor(`zettel-article-${i}-text`, 'zettel-article-rich-field', `data-article-index="${i}" data-field="text"`, a.text || '')}
     ${i > 0 ? `<button class="s-btn s-cancel" style="padding:1px 8px;font-size:.7rem;margin-top:.2rem;" data-action="zettel-article-remove" data-article-index="${i}">✕ Entfernen</button>` : ''}
   </div>`).join('')}
   ${(z.artikel || []).length < 6 ? `<button class="s-btn" style="width:100%;padding:4px;margin-bottom:.4rem;" data-action="zettel-article-add">＋ Artikel</button>` : ''}
@@ -84,8 +141,10 @@
       <input class="e-inp" value="${esc(z.verlag || '')}" placeholder="Der Stadtbote" data-input-action="zettel-field" data-field="verlag"/></div>
     <div class="e-group"><label class="lml">Ausgaben-Datum</label>
       <input class="e-inp" value="${esc(z.datum || '')}" placeholder="3. Herbstmond 1423" data-input-action="zettel-field" data-field="datum"/></div>` : ''}
+    ${zettelLayoutControls(z)}
+    ${zettelImageControls(z)}
     ${z.typ !== 'zeitung' ? `<div class="e-group"><label class="lml">Text</label>
-      <textarea class="e-ta" rows="5" data-input-action="zettel-field" data-field="text">${esc(z.text || '')}</textarea></div>` : ''}
+      ${richTextEditor('zettel-main-text', 'zettel-rich-field', 'data-field="text"', z.text || '')}</div>` : ''}
     ${artikelHTML}
     ${z.typ === 'steckbrief' ? `
     <div class="lsb-sec-ttl" style="margin:.8rem 0 .3rem;border-top:1px solid var(--border2);padding-top:.6rem;">Gesuchte Personen</div>
@@ -120,6 +179,18 @@
     const z = currentZettel();
     if(!z) return;
     z[k] = v;
+    if(k === 'sideWidth'){
+      const slider = document.querySelector('[data-input-action="zettel-field"][data-field="sideWidth"]');
+      const label = slider?.closest('.zettel-range-row')?.querySelector('span');
+      if(label) label.textContent = `${v}px`;
+    }
+    renderBoard();
+    preview();
+  }
+  function zettelRichField(k, html){
+    const z = currentZettel();
+    if(!z) return;
+    z[k] = rich().sanitizeHtml(html || '');
     renderBoard();
     preview();
   }
@@ -153,6 +224,12 @@
     sp.querySelectorAll('span').forEach(s => s.classList.remove('hover'));
   }
   function zettelArtikel(i, k, v){ const z = currentZettel(); if(!z || !z.artikel) return; z.artikel[i][k] = v; preview(); }
+  function zettelArtikelRich(i, k, html){
+    const z = currentZettel();
+    if(!z || !z.artikel?.[i]) return;
+    z.artikel[i][k] = rich().sanitizeHtml(html || '');
+    preview();
+  }
   function zettelArtikelAdd(){
     const z = currentZettel();
     if(!z) return;
@@ -183,8 +260,9 @@
     <input class="e-inp" value="${esc(p.untertitel || '')}" placeholder="Alias, Beinamen…" data-input-action="person-field" data-person-index="${i}" data-field="untertitel"/>
     <label class="lml" style="margin-top:.3rem;">Portrait-URL</label>
     <input class="e-inp" value="${esc(p.portrait || '')}" placeholder="https://i.imgur.com/…" data-input-action="person-field" data-person-index="${i}" data-field="portrait"/>
+    ${personImageControls(i, p)}
     <label class="lml" style="margin-top:.3rem;">Beschreibungstext</label>
-    <textarea class="e-ta" rows="3" data-input-action="person-field" data-person-index="${i}" data-field="text">${esc(p.text || '')}</textarea>
+    ${richTextEditor(`zettel-person-${i}-text`, 'person-rich-field', `data-person-index="${i}" data-field="text"`, p.text || '')}
     <label class="lml" style="margin-top:.3rem;">Infotabelle</label>
     <div id="sb-pers-tbl-${i}">${renderPersonTable(p, i)}</div>
     <div style="display:flex;gap:.3rem;margin-top:.3rem;"><button class="add-row" style="flex:1;" data-action="person-table-add" data-person-index="${i}">＋ Zeile</button><button class="add-row" style="flex:1.6;border-style:solid;opacity:.8;" data-action="person-table-template" data-person-index="${i}">📋 Verbrechen &amp; Kopfgeld</button></div>
@@ -229,6 +307,13 @@
     sp.querySelectorAll('span').forEach(s => s.classList.remove('hover'));
   }
   function sbPersonField(pi, k, v){ const z = currentZettel(); if(!z || !z.personen) return; z.personen[pi][k] = v; renderBoard(); preview(); }
+  function sbPersonRichField(pi, k, html){
+    const z = currentZettel();
+    if(!z || !z.personen?.[pi]) return;
+    z.personen[pi][k] = rich().sanitizeHtml(html || '');
+    renderBoard();
+    preview();
+  }
   function sbPersonTableK(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]){z.personen[pi].table[ri].k = v; preview();} }
   function sbPersonTableV(pi, ri, v){ const z = currentZettel(); if(z?.personen?.[pi]?.table?.[ri]){z.personen[pi].table[ri].v = v; preview();} }
   function sbPersonTableDel(pi, ri){
@@ -266,7 +351,7 @@
     const z = currentZettel();
     if(!z) return;
     if(!z.personen) z.personen = [];
-    z.personen.push({portrait:'', title:'', untertitel:'', text:'', table:[]});
+    z.personen.push({portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:[]});
     document.getElementById('sb-personen-list').innerHTML = renderPersonenList(z);
   }
   function sbPersonRemove(pi){
@@ -298,6 +383,13 @@
   function clearActive(){
     activeZettelId = null;
   }
+  function zettelRichFormat(targetId, format, value){
+    const target = document.getElementById(targetId);
+    if(!target) return;
+    target.focus();
+    rich().format(format, value || '');
+    target.dispatchEvent(new Event('input', { bubbles: true }));
+  }
 
   window.TafelZettelEditor = {
     open: openZettelSidebar,
@@ -309,6 +401,8 @@
     openZettelSidebar,
     renderZettelSidebarEdit,
     zettelField,
+    zettelRichField,
+    zettelRichFormat,
     zettelTableK,
     zettelTableV,
     zettelTableDel,
@@ -318,9 +412,11 @@
     zettelStarHover,
     zettelStarOut,
     zettelArtikel,
+    zettelArtikelRich,
     zettelArtikelAdd,
     zettelArtikelRemove,
     sbPersonField,
+    sbPersonRichField,
     sbPersonTableK,
     sbPersonTableV,
     sbPersonTableDel,

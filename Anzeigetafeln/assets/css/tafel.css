@@ -689,6 +689,129 @@ body.editor-resizing *{
   text-align:center;
   padding:2rem;
 }
+.zettel-rt-toolbar{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  padding:5px;
+  border:1px solid var(--border2);
+  border-bottom:none;
+  background:linear-gradient(180deg,#ead8a5,#e2cf94);
+}
+.zettel-rt-toolbar .rt-btn,
+.zettel-rt-toolbar .rt-color{
+  min-width:28px;
+  height:26px;
+  border:1px solid #b89131;
+  background:#f8efd2;
+  color:#3a2304;
+  font-family:'Cinzel',serif;
+  font-size:.72rem;
+  line-height:1;
+  cursor:pointer;
+}
+.zettel-rt-toolbar .rt-btn:hover,
+.zettel-rt-toolbar .rt-color:hover{
+  border-color:#7a500a;
+  box-shadow:0 0 0 1px rgba(122,80,10,.25);
+}
+.zettel-rt-toolbar .rt-color{
+  width:22px;
+  min-width:22px;
+  padding:0;
+}
+.zettel-rt-toolbar .rt-sep{
+  width:1px;
+  height:22px;
+  background:rgba(122,80,10,.35);
+  margin:0 2px;
+}
+.zettel-rich-editor{
+  width:100%;
+  min-height:138px;
+  max-height:320px;
+  overflow:auto;
+  padding:8px 10px;
+  border:1px solid var(--border2);
+  background:rgba(255,252,238,.92);
+  color:#1f1608;
+  outline:none;
+  font-family:'EB Garamond',serif;
+  font-size:1rem;
+  line-height:1.55;
+}
+.zettel-rich-editor:focus{
+  border-color:var(--gold);
+  box-shadow:inset 0 0 0 1px rgba(138,100,31,.28);
+}
+.zettel-layout-controls,
+.zettel-image-controls{
+  margin:.55rem 0;
+  padding:.55rem;
+  border:1px solid var(--border2);
+  background:rgba(234,216,165,.42);
+}
+.zettel-range-row{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.zettel-range-row input{
+  flex:1;
+  accent-color:var(--gold);
+}
+.zettel-range-row span{
+  min-width:48px;
+  text-align:right;
+  font-family:'Cinzel',serif;
+  font-size:var(--fs-sm);
+  color:#5a3a08;
+}
+.zettel-control-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.45rem;
+}
+.zettel-rich-editor p,
+.zettel-rich-content p{
+  margin:.35rem 0 .75rem;
+}
+.zettel-rich-editor h2,
+.zettel-rich-editor h3,
+.zettel-rich-content h2,
+.zettel-rich-content h3{
+  font-family:'Cinzel',serif;
+  color:#1f1608;
+  line-height:1.25;
+  margin:.7rem 0 .35rem;
+}
+.zettel-rich-editor h2,
+.zettel-rich-content h2{
+  font-size:1.18rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.zettel-rich-editor h3,
+.zettel-rich-content h3{
+  font-size:1rem;
+  letter-spacing:.03em;
+}
+.zettel-rich-editor ul,
+.zettel-rich-editor ol,
+.zettel-rich-content ul,
+.zettel-rich-content ol{
+  margin:.35rem 0 .75rem 1.2rem;
+  padding-left:1rem;
+}
+.zettel-rich-editor blockquote,
+.zettel-rich-content blockquote{
+  margin:.55rem 0;
+  padding:.35rem .75rem;
+  border-left:3px solid #b89131;
+  background:rgba(234,216,165,.38);
+  font-style:italic;
+}
 @media(max-width:900px){
   #sidebar.editor-fullscreen #sb-main{grid-template-columns:1fr;}
   #sidebar.editor-fullscreen #sb-resizer{display:none;}

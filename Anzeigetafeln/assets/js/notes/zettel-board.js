@@ -75,10 +75,11 @@
     const tdef = typeById(z.typ);
     const tt = document.getElementById('pin-tooltip');
     if(!tt) return;
+    const previewText = window.TafelZettelRichText.textPreview(z.text || '', 200);
     tt.innerHTML = `<div class="pttt-top" style="background:#ead8a5;padding:.45rem .75rem;border-bottom:1px solid #d0bb7a;">
     <span style="font-family:'Cinzel',serif;font-size:.6rem;color:#6f5725;letter-spacing:.04em;">${tdef.icon} ${tdef.label}</span>
     <div style="font-family:'Cinzel Decorative',serif;font-size:.75rem;color:#1f1608;margin-top:.15rem;">${esc(z.title || tdef.label)}</div>
-  </div>${z.text ? `<div style="padding:.5rem .75rem;font-family:'EB Garamond',serif;font-size:.82rem;color:#1f1608;line-height:1.55;font-style:italic;">${esc(z.text).slice(0, 200)}</div>` : ''}`;
+  </div>${previewText ? `<div style="padding:.5rem .75rem;font-family:'EB Garamond',serif;font-size:.82rem;color:#1f1608;line-height:1.55;font-style:italic;">${esc(previewText)}</div>` : ''}`;
     tt.style.display = 'block';
     tt.classList.add('show');
     moveTooltip(cx, cy);

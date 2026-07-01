@@ -14,6 +14,27 @@
   function esc(value){
     return rt().esc(value);
   }
+  function richHtml(value){
+    return window.TafelZettelRichText.renderHtml(value || '');
+  }
+
+  function clampNumber(value, min, max, fallback){
+    const number = Number(value);
+    if(!Number.isFinite(number)) return fallback;
+    return Math.max(min, Math.min(max, Math.round(number)));
+  }
+
+  function sideWidth(source, fallback, min = 120, max = 420){
+    return clampNumber(source?.sideWidth, min, max, fallback);
+  }
+
+  function imageFit(source){
+    return source?.imageFit === 'contain' ? 'contain' : 'cover';
+  }
+
+  function imagePosition(source){
+    return ['top','center','bottom'].includes(source?.imagePosition) ? source.imagePosition : 'center';
+  }
 
   const PAPER = '#f8efd2';
   const PAPER_PANEL = '#f1e4bd';
@@ -32,20 +53,20 @@
   }
 
   function renderQuest(z){
-    let txt = esc(z.text || '');
-    txt = txt.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>').replace(/\n/g, '<br>');
+    const txt = richHtml(z.text || '');
     const hasPortrait = !!(z.verfasser || z.verfasserName);
     const hasTable = !!(z.table && z.table.some(r => r.k));
     const hasLeft = hasPortrait || hasTable;
-    return `<div style="background:${PAPER};min-height:400px;border-radius:4px;overflow:hidden;border:1px solid ${PAPER_BORDER};">
+    const infoWidth = sideWidth(z, 160, 120, 360);
+    return `<div class="zettel-rich-content" style="background:${PAPER};min-height:400px;border-radius:4px;overflow:hidden;border:1px solid ${PAPER_BORDER};">
   <div style="background:${PAPER_HEADER};padding:.7rem 1.4rem;text-align:center;border-bottom:2px solid ${PAPER_BORDER};">
     <div style="font-family:'Cinzel Decorative',serif;font-size:1.3rem;color:${PAPER_INK};">${esc(z.title || '')}</div>
     ${z.untertitel ? `<div style="font-family:'EB Garamond',serif;font-style:italic;color:${PAPER_MUTED};">${esc(z.untertitel)}</div>` : ''}
   </div>
   <div style="display:flex;min-height:280px;">
-    ${hasLeft ? `<div style="width:160px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};display:flex;flex-direction:column;align-items:center;padding:.8rem .6rem;gap:.5rem;background:${PAPER_PANEL};">
+    ${hasLeft ? `<div style="width:${infoWidth}px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};display:flex;flex-direction:column;align-items:center;padding:.8rem .6rem;gap:.5rem;background:${PAPER_PANEL};">
       ${hasPortrait ? `
-        ${z.verfasser ? `<img src="${esc(z.verfasser)}" style="width:110px;height:110px;border-radius:50%;border:2px solid ${PAPER_ACCENT};object-fit:cover;box-shadow:0 2px 5px rgba(0,0,0,.18);flex-shrink:0;" onerror="this.style.display='none'"/>` :
+        ${z.verfasser ? `<img src="${esc(z.verfasser)}" style="width:110px;height:110px;border-radius:50%;border:2px solid ${PAPER_ACCENT};object-fit:${imageFit(z)};object-position:${imagePosition(z)};box-shadow:0 2px 5px rgba(0,0,0,.18);flex-shrink:0;" onerror="this.style.display='none'"/>` :
           `<div style="width:110px;height:110px;border-radius:50%;border:2px dashed ${PAPER_BORDER};background:${PAPER};flex-shrink:0;"></div>`}
         ${z.verfasserName ? `<div style="font-family:'Georgia',serif;font-size:.88rem;color:${PAPER_INK};text-align:center;font-style:italic;line-height:1.3;">${esc(z.verfasserName)}</div>` : ''}
       ` : ''}
@@ -82,6 +103,7 @@
     const zid = z.id;
     const hasPortrait = !!p.portrait;
     const hasTable = !!(p.table && p.table.some(r => r.k));
+    const portraitWidth = sideWidth(z, 175, 130, 320);
     const tableHTML = hasTable ? `<div style="width:300px;flex-shrink:0;border-left:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};overflow-y:auto;">
     <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
       ${p.table.filter(r => r.k).map(r => `<tr>
@@ -90,18 +112,18 @@
       </tr>`).join('')}
     </table>
   </div>` : '';
-    return `<div style="background:${PAPER};min-height:420px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
+    return `<div class="zettel-rich-content" style="background:${PAPER};min-height:420px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
   <div style="background:${WANTED_HEADER};padding:.9rem 1.4rem;text-align:center;border-bottom:3px solid ${PAPER_BORDER};flex-shrink:0;">
     <div style="font-family:'Cinzel Decorative',serif;font-size:2.2rem;letter-spacing:.2em;color:#4a1608;">GESUCHT</div>
     <div style="font-family:'Cinzel',serif;font-size:1.05rem;color:${PAPER_INK};margin-top:.2rem;letter-spacing:.04em;">${esc(p.title || z.title || 'Unbekannte Person')}</div>
     ${p.untertitel ? `<div style="font-family:'EB Garamond',serif;font-style:italic;color:${PAPER_MUTED};font-size:.9rem;">${esc(p.untertitel)}</div>` : ''}
   </div>
   <div style="display:flex;flex:1;min-height:280px;">
-    ${hasPortrait ? `<div style="width:175px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
-      <img src="${esc(p.portrait)}" style="width:175px;height:100%;object-fit:cover;display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
+    ${hasPortrait ? `<div style="width:${portraitWidth}px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
+      <img src="${esc(p.portrait)}" style="width:${portraitWidth}px;height:100%;object-fit:${imageFit(p)};object-position:${imagePosition(p)};display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
     </div>` : ''}
     <div style="flex:1;padding:1.1rem 1.4rem;font-family:'EB Garamond',serif;font-size:1rem;line-height:1.9;color:${PAPER_INK};overflow-y:auto;">
-      ${p.text ? esc(p.text).replace(/\n/g, '<br>') : `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
+      ${richHtml(p.text) || `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
     </div>
     ${tableHTML}
   </div>
@@ -128,19 +150,20 @@
   function renderZeitung(z){
     const artikel = Array.isArray(z.artikel) && z.artikel.length ? z.artikel : [{titel:z.title || 'Artikel', text:z.text || ''}];
     const hasImage = !!z.bild;
-    return `<div style="background:${PAPER};min-height:420px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
+    const imageWidth = sideWidth(z, 220, 160, 420);
+    return `<div class="zettel-rich-content" style="background:${PAPER};min-height:420px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
   <div style="background:${NEWS_HEADER};padding:.75rem 1.4rem;text-align:center;border-bottom:2px solid ${PAPER_BORDER};flex-shrink:0;">
     <div style="font-family:'Cinzel Decorative',serif;font-size:1.3rem;color:${PAPER_INK};">${esc(z.verfasserName || z.title || 'Alerische Rundschau')}</div>
     ${z.untertitel ? `<div style="font-family:'EB Garamond',serif;font-style:italic;color:${PAPER_MUTED};">${esc(z.untertitel)}</div>` : ''}
   </div>
   <div style="display:flex;gap:1rem;padding:1rem 1.2rem;flex:1;min-height:300px;">
-    ${hasImage ? `<div style="width:220px;flex-shrink:0;border:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};padding:.35rem;height:max-content;">
-      <img src="${esc(z.bild)}" style="width:100%;max-height:260px;object-fit:cover;display:block;filter:sepia(12%);" onerror="this.parentElement.style.display='none'"/>
+    ${hasImage ? `<div style="width:${imageWidth}px;flex-shrink:0;border:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};padding:.35rem;height:max-content;">
+      <img src="${esc(z.bild)}" style="width:100%;height:260px;object-fit:${imageFit(z)};object-position:${imagePosition(z)};display:block;filter:sepia(12%);" onerror="this.parentElement.style.display='none'"/>
     </div>` : ''}
     <div style="flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;font-family:'EB Garamond',serif;color:${PAPER_INK};">
       ${artikel.map((a, i) => `<article style="border-left:${i ? `1px solid ${PAPER_BORDER}` : '0'};padding-left:${i ? '.9rem' : '0'};">
         <h3 style="font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.04em;margin:0 0 .45rem;color:${PAPER_INK};text-transform:uppercase;">${esc(a.titel || ('Artikel ' + (i + 1)))}</h3>
-        <div style="font-size:.98rem;line-height:1.75;text-align:justify;">${a.text ? esc(a.text).replace(/\n/g, '<br>') : `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}</div>
+        <div style="font-size:.98rem;line-height:1.75;text-align:justify;">${richHtml(a.text) || `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}</div>
       </article>`).join('')}
     </div>
   </div>
@@ -153,6 +176,7 @@
   function renderVermisst(z){
     const hasPortrait = !!z.portrait;
     const hasTable = !!(z.table && z.table.some(r => r.k));
+    const portraitWidth = sideWidth(z, 175, 130, 320);
     const tableHTML = hasTable ? `<div style="width:280px;flex-shrink:0;border-left:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};overflow-y:auto;">
     <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
       ${z.table.filter(r => r.k).map(r => `<tr>
@@ -161,17 +185,17 @@
       </tr>`).join('')}
     </table>
   </div>` : '';
-    return `<div style="background:${PAPER};min-height:380px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
+    return `<div class="zettel-rich-content" style="background:${PAPER};min-height:380px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
   <div style="background:${PAPER_HEADER};padding:.7rem 1.4rem;text-align:center;border-bottom:2px solid ${PAPER_BORDER};flex-shrink:0;">
     <div style="font-family:'Cinzel Decorative',serif;font-size:1.3rem;color:${PAPER_INK};">${esc(z.title || '')}</div>
     ${z.untertitel ? `<div style="font-family:'EB Garamond',serif;font-style:italic;color:${PAPER_MUTED};">${esc(z.untertitel)}</div>` : ''}
   </div>
   <div style="display:flex;flex:1;min-height:280px;">
-    ${hasPortrait ? `<div style="width:175px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
-      <img src="${esc(z.portrait)}" style="width:175px;height:100%;object-fit:cover;display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
+    ${hasPortrait ? `<div style="width:${portraitWidth}px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
+      <img src="${esc(z.portrait)}" style="width:${portraitWidth}px;height:100%;object-fit:${imageFit(z)};object-position:${imagePosition(z)};display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
     </div>` : ''}
     <div style="flex:1;padding:1.1rem 1.4rem;font-family:'EB Garamond',serif;font-size:1rem;line-height:1.9;color:${PAPER_INK};overflow-y:auto;">
-      ${z.text ? esc(z.text).replace(/\n/g, '<br>') : `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
+      ${richHtml(z.text) || `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
     </div>
     ${tableHTML}
   </div>
@@ -185,6 +209,7 @@
     const tdef = window.TafelZettelConfig.typeById(z.typ);
     const hasPortrait = !!z.portrait;
     const hasTable = !!(z.table && z.table.some(r => r.k));
+    const portraitWidth = sideWidth(z, 160, 130, 320);
     const tableHTML = hasTable ? `<div style="width:260px;flex-shrink:0;border-left:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};overflow-y:auto;">
     <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
       ${z.table.filter(r => r.k).map(r => `<tr>
@@ -193,17 +218,17 @@
       </tr>`).join('')}
     </table>
   </div>` : '';
-    return `<div style="background:${PAPER};min-height:300px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
+    return `<div class="zettel-rich-content" style="background:${PAPER};min-height:300px;border-radius:4px;overflow:hidden;border:2px solid ${PAPER_BORDER};display:flex;flex-direction:column;">
   <div style="background:${PAPER_HEADER};padding:.7rem 1.4rem;text-align:center;border-bottom:2px solid ${PAPER_BORDER};flex-shrink:0;">
     <div style="font-family:'Cinzel Decorative',serif;font-size:1.1rem;color:${PAPER_INK};">${esc(z.title || '')}</div>
     ${z.untertitel ? `<div style="font-family:'EB Garamond',serif;font-style:italic;color:${PAPER_MUTED};font-size:.9rem;">${esc(z.untertitel)}</div>` : ''}
   </div>
   <div style="display:flex;flex:1;min-height:200px;">
-    ${hasPortrait ? `<div style="width:160px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
-      <img src="${esc(z.portrait)}" style="width:160px;height:100%;object-fit:cover;display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
+    ${hasPortrait ? `<div style="width:${portraitWidth}px;flex-shrink:0;border-right:1px solid ${PAPER_BORDER};background:${PAPER_PANEL};">
+      <img src="${esc(z.portrait)}" style="width:${portraitWidth}px;height:100%;object-fit:${imageFit(z)};object-position:${imagePosition(z)};display:block;filter:sepia(15%);" onerror="this.style.display='none'"/>
     </div>` : ''}
     <div style="flex:1;padding:1rem 1.3rem;font-family:'EB Garamond',serif;font-size:.97rem;line-height:1.85;color:${PAPER_INK};overflow-y:auto;">
-      ${z.text ? esc(z.text).replace(/\n/g, '<br>') : `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
+      ${richHtml(z.text) || `<em style="opacity:.65;color:${PAPER_MUTED}">Kein Text eingetragen.</em>`}
     </div>
     ${tableHTML}
   </div>
