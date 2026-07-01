@@ -116,6 +116,7 @@ function normalizeImageRecord(record) {
         maxHeight: clampNumber(item.maxHeight, 80, 720, 260),
         format: ["auto", "square", "portrait", "landscape", "banner"].includes(item.format) ? item.format : "auto",
         fit: ["contain", "cover"].includes(item.fit) ? item.fit : "contain",
+        clearedAtClient: Number(item.clearedAtClient) || 0,
       }];
     }));
 }

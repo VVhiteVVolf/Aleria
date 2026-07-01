@@ -890,9 +890,15 @@
   function updateImageField(input) {
     if (!activeImageKey) return;
     const field = input.dataset.orteInlineImageField;
-    state.images[activeImageKey] = {
+    const nextImage = {
       ...(state.images[activeImageKey] || {}),
       [field]: input.value
+    };
+    if (field === "src") {
+      nextImage.clearedAtClient = String(input.value || "").trim() ? 0 : Date.now();
+    }
+    state.images[activeImageKey] = {
+      ...nextImage
     };
     const item = imageItems.find((entry) => entry.key === activeImageKey);
     state.images[activeImageKey] = normalizeImageState(state.images[activeImageKey], item?.label || "");
@@ -912,7 +918,12 @@
   function clearActiveImage() {
     if (!activeImageKey) return;
     const item = imageItems.find((entry) => entry.key === activeImageKey);
-    state.images[activeImageKey] = normalizeImageState({ src: "", href: "", alt: item?.label || "" }, item?.label || "");
+    state.images[activeImageKey] = normalizeImageState({
+      src: "",
+      href: "",
+      alt: item?.label || "",
+      clearedAtClient: Date.now()
+    }, item?.label || "");
     renderImageSlot(activeImageKey);
     closeImagePanel();
     updateOwningTable(item?.node);
@@ -1230,11 +1241,7 @@
 
     Object.entries(payload.images || {}).forEach(([key, image]) => {
       const item = imageItems.find((entry) => entry.key === key);
-      state.images[key] = {
-        ...(state.images[key] || {}),
-        ...(image || {})
-      };
-      state.images[key] = normalizeImageState(state.images[key], item?.label || key);
+      state.images[key] = mergeIncomingImageState(state.images[key], image, item?.label || key);
     });
 
     Object.entries(payload.ratings || {}).forEach(([key, value]) => {
@@ -1866,8 +1873,23 @@
       width: clampNumber(source.width, 20, 100, 100),
       maxHeight: clampNumber(source.maxHeight, 80, 720, 260),
       format: ["auto", "square", "portrait", "landscape", "banner"].includes(source.format) ? source.format : "auto",
-      fit: ["contain", "cover"].includes(source.fit) ? source.fit : "contain"
+      fit: ["contain", "cover"].includes(source.fit) ? source.fit : "contain",
+      clearedAtClient: Number(source.clearedAtClient) || 0
     };
+  }
+
+  function mergeIncomingImageState(currentImage, incomingImage, label) {
+    const current = normalizeImageState(currentImage, label);
+    const incoming = normalizeImageState(incomingImage, label);
+    const source = incomingImage && typeof incomingImage === "object" ? incomingImage : {};
+    const incomingSrc = normalizePlaceholderSrc(source.src);
+    const incomingIsLegacyEmpty = !incomingSrc && !Number(source.clearedAtClient);
+
+    if (current.src && incomingIsLegacyEmpty) {
+      return normalizeImageState({ ...incoming, ...current }, label);
+    }
+
+    return incoming;
   }
 
   function normalizeInlinePayload(payload) {
