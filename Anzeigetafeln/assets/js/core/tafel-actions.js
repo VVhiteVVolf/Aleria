@@ -92,6 +92,8 @@
       window.openZettelSidebar(el.dataset.zettelId, 'edit');
     },
     'zettel-set-page': el => window.TafelZettelViews.setSteckbriefPage(el.dataset.zettelId, Number(el.dataset.page)),
+    'zettel-comment-add': el => window.TafelZettelComments.add(el.dataset.zettelId),
+    'zettel-comment-delete': el => window.TafelZettelComments.remove(el.dataset.zettelId, el.dataset.commentId),
     'person-add': () => window.sbPersonAdd(),
     'person-remove': el => window.sbPersonRemove(Number(el.dataset.personIndex)),
     'person-table-add': el => window.sbPersonTableAdd(Number(el.dataset.personIndex)),

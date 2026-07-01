@@ -812,6 +812,115 @@ body.editor-resizing *{
   background:rgba(234,216,165,.38);
   font-style:italic;
 }
+.zettel-comments{
+  margin-top:.75rem;
+  border:1px solid #d0bb7a;
+  background:#f1e4bd;
+  color:#1f1608;
+}
+.zettel-comments-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:.6rem .9rem;
+  border-bottom:1px solid #d0bb7a;
+  background:#ead8a5;
+}
+.zettel-comments-head h3{
+  margin:0;
+  font-family:'Cinzel',serif;
+  font-size:.9rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.zettel-comments-head span{
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  color:#6f5725;
+}
+.zettel-comments-list{
+  padding:.75rem .9rem;
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+}
+.zettel-comments-empty{
+  margin:0;
+  font-family:'EB Garamond',serif;
+  color:#6f5725;
+  font-style:italic;
+}
+.zettel-comment{
+  display:grid;
+  grid-template-columns:44px minmax(0,1fr);
+  gap:.65rem;
+}
+.zettel-comment-avatar{
+  width:44px;
+  height:44px;
+  border:1px solid #8a641f;
+  border-radius:50%;
+  background:#f8efd2;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6f5725;
+  font-family:'Cinzel',serif;
+  font-weight:700;
+}
+.zettel-comment-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.zettel-comment-body{
+  min-width:0;
+  padding:.45rem .6rem;
+  border:1px solid rgba(208,187,122,.72);
+  background:rgba(248,239,210,.78);
+}
+.zettel-comment-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.45rem;
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  color:#6f5725;
+}
+.zettel-comment-meta strong{
+  color:#1f1608;
+}
+.zettel-comment-meta button{
+  margin-left:auto;
+  border:1px solid #b65b4a;
+  background:transparent;
+  color:#8b2f20;
+  font-family:'Cinzel',serif;
+  font-size:.62rem;
+  cursor:pointer;
+}
+.zettel-comment-body p{
+  margin:.35rem 0 0;
+  font-family:'EB Garamond',serif;
+  font-size:.98rem;
+  line-height:1.45;
+}
+.zettel-comment-compose{
+  display:grid;
+  grid-template-columns:minmax(160px,1fr) minmax(140px,.7fr);
+  gap:.45rem;
+  padding:.75rem .9rem .9rem;
+  border-top:1px solid #d0bb7a;
+  background:#ead8a5;
+}
+.zettel-comment-compose textarea,
+.zettel-comment-compose button{
+  grid-column:1 / -1;
+}
 @media(max-width:900px){
   #sidebar.editor-fullscreen #sb-main{grid-template-columns:1fr;}
   #sidebar.editor-fullscreen #sb-resizer{display:none;}

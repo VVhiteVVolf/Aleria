@@ -1023,14 +1023,7 @@ function openZettelScroll(id){
   const z=S.zettel.find(x=>x.id===id);if(!z)return;
   const sc=document.getElementById('scroll-content');
   const sa=document.getElementById('scroll-actions');
-  if(z.typ==='quest')sc.innerHTML=TafelZettelViews.renderQuest(z);
-  else if(z.typ==='steckbrief'){
-    if(!z.personen||!z.personen.length) z.personen=[{portrait:z.portrait||'',title:z.title||'',untertitel:z.untertitel||'',text:z.text||'',table:(z.table||[]).map(r=>({...r}))}];
-    sc.innerHTML=TafelZettelViews.renderSteckbrief(z);
-  }
-  else if(z.typ==='zeitung')sc.innerHTML=TafelZettelViews.renderZeitung(z);
-  else if(z.typ==='vermisst')sc.innerHTML=TafelZettelViews.renderVermisst(z);
-  else sc.innerHTML=TafelZettelViews.renderGeneric(z);
+  sc.innerHTML=TafelZettelViews.renderLive ? TafelZettelViews.renderLive(z) : TafelZettelViews.renderByType(z);
   sa.innerHTML=canEditZettel()?
     `<button class="s-btn s-edit" data-action="zettel-open-edit" data-zettel-id="${id}">✎ Bearbeiten</button>
     <button class="s-btn s-cancel" data-action="close-scroll">Schließen</button>`

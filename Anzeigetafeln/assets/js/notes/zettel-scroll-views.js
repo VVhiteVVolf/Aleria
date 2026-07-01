@@ -93,7 +93,7 @@
     if(!z) return;
     const pers = z.personen && z.personen.length ? z.personen : [{portrait:'', title:'', untertitel:'', text:'', table:[]}];
     steckbriefPage = Math.max(0, Math.min(pers.length - 1, page));
-    document.getElementById('scroll-content').innerHTML = steckbriefPageHTML(z, steckbriefPage);
+    document.getElementById('scroll-content').innerHTML = steckbriefPageHTML(z, steckbriefPage) + renderComments(z);
   }
 
   function steckbriefPageHTML(z, page){
@@ -238,12 +238,35 @@
 </div>`;
   }
 
+  function renderComments(z){
+    return window.TafelZettelComments ? window.TafelZettelComments.render(z) : '';
+  }
+
+  function renderByType(z){
+    if(z.typ === 'quest') return renderQuest(z);
+    if(z.typ === 'steckbrief'){
+      if(!z.personen || !z.personen.length){
+        z.personen = [{portrait:z.portrait || '', title:z.title || '', untertitel:z.untertitel || '', text:z.text || '', table:(z.table || []).map(r => ({...r}))}];
+      }
+      return renderSteckbrief(z);
+    }
+    if(z.typ === 'zeitung') return renderZeitung(z);
+    if(z.typ === 'vermisst') return renderVermisst(z);
+    return renderGeneric(z);
+  }
+
+  function renderLive(z){
+    return renderByType(z) + renderComments(z);
+  }
+
   window.TafelZettelViews = {
     renderQuest,
     renderSteckbrief,
     renderZeitung,
     renderVermisst,
     renderGeneric,
+    renderByType,
+    renderLive,
     setSteckbriefPage
   };
 })();
