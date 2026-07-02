@@ -1,0 +1,128 @@
+.zunft-template {
+  --place-max-width: 1500px;
+}
+
+.zunft-template-frame {
+  width: 1220px !important;
+}
+
+.zunft-template .zunft-hero {
+  padding: 14px 18px;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(231, 201, 128, 0.62), rgba(180, 139, 62, 0.38)),
+    var(--place-panel-muted);
+}
+
+.zunft-template .zunft-hero .pt-s-0004 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.zunft-template .zunft-quote,
+.zunft-template .zunft-quote-source {
+  font-size: 12px;
+  color: var(--place-muted);
+}
+
+.zunft-template .zunft-main-cell {
+  width: 700px;
+  padding: 10px;
+  vertical-align: top;
+  background: rgba(255, 246, 222, 0.62);
+}
+
+.zunft-template .zunft-side-image-cell,
+.zunft-template .zunft-infobox-cell {
+  width: 500px;
+  padding: 10px;
+  vertical-align: top;
+  background: linear-gradient(180deg, #c7a463, #b49155);
+}
+
+.zunft-template .zunft-info-table,
+.zunft-template .zunft-hierarchy-table,
+.zunft-template .zunft-people-table {
+  width: 100%;
+  table-layout: fixed;
+  background: var(--place-panel-light);
+}
+
+.zunft-template .zunft-info-table td,
+.zunft-template .zunft-hierarchy-table td,
+.zunft-template .zunft-people-table td {
+  padding: 8px;
+  vertical-align: top;
+}
+
+.zunft-template .zunft-table-title,
+.zunft-template .zunft-subhead,
+.zunft-template .zunft-section-row {
+  color: var(--place-text-light);
+  text-align: center;
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.zunft-template .zunft-logo-cell,
+.zunft-template .zunft-spacer-row {
+  text-align: center;
+  background: var(--place-panel-muted-light);
+}
+
+.zunft-template .zunft-info-table td:first-child:not([colspan]) {
+  width: 38%;
+  font-weight: 700;
+  background: rgba(197, 164, 99, 0.72);
+}
+
+.zunft-template .zunft-hierarchy-table tr:nth-child(n+4) td {
+  text-align: center;
+}
+
+.zunft-template .zunft-people-table .pt-s-0076 {
+  width: 250px;
+  color: var(--place-text-light);
+  text-align: center;
+  background: linear-gradient(180deg, #8a642b, #5b3a17);
+}
+
+.zunft-template .zunft-people-table .pt-s-0078,
+.zunft-template .zunft-people-table .pt-s-0080 {
+  width: 250px;
+  text-align: center;
+  background: var(--place-panel-muted);
+}
+
+.zunft-template .zunft-people-table .pt-s-0077 {
+  height: 380px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #e4cd91, #d2b36e);
+}
+
+.zunft-template .zunft-people-table .pt-s-0077 > p,
+.zunft-template .zunft-people-table .pt-s-0077 > .orte-cell-editable {
+  display: block;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.zunft-template details {
+  margin: 0.7rem 0;
+  padding: 8px 10px;
+  border: 1px dashed rgba(92, 74, 60, 0.7);
+  background: rgba(248, 240, 211, 0.56);
+}
+
+.zunft-template summary {
+  font-weight: 700;
+  color: #4b3621;
+}
+
+@media (max-width: 900px) {
+  .zunft-template-frame {
+    width: 1120px !important;
+  }
+}

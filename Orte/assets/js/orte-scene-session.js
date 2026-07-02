@@ -175,6 +175,8 @@ function openModuleEditorForCurrent() {
     { href: "styles/scene-polls.css?v=orte-almanach-scene-polls-v1" },
     { href: "styles/module-editor.css?v=orte-almanach-editor-v1" },
     { href: "styles/module-page-boards.css?v=orte-almanach-editor-v1" },
+    { href: "styles/module-page-goods.css?v=orte-almanach-market-v1" },
+    { href: "styles/module-page-trade-catalog.css?v=orte-almanach-market-v1" },
     { href: "styles/session.css?v=orte-almanach-session-v1" },
     { href: "styles/speaker-profile.css?v=orte-almanach-session-v1" },
     { href: "styles/scene-blocks.css?v=orte-almanach-session-v1" },
@@ -250,6 +252,10 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-dnd.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-data.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-templates.js?v=orte-almanach-editor-v1",
+    "module-richtext.js?v=orte-almanach-market-v1",
+    "modules/module-editor/module-editor-goods.js?v=orte-almanach-market-v1",
+    "modules/module-editor/module-editor-trade-catalog.js?v=orte-almanach-market-v1",
+    "modules/module-editor/module-editor-template-transfer.js?v=orte-almanach-market-v1",
     "modules/module-editor/module-editor-workflow.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-cast-picker.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-simple-lines.js?v=orte-almanach-editor-v1",
@@ -271,6 +277,12 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-controller.js?v=orte-almanach-editor-v1",
     "modules/backup/almanach-backup.js?v=orte-almanach-editor-v1",
     "module-import-export.js?v=orte-almanach-editor-v1",
+    "modules/goods/goods-renderer.js?v=orte-almanach-market-v1",
+    "modules/trade-catalog/trade-catalog-renderer.js?v=orte-almanach-market-v1",
+    "modules/inline-editor/inline-module-editor.js?v=orte-almanach-market-v1",
+    "modules/inline-editor/inline-editor-goods.js?v=orte-almanach-market-v1",
+    "modules/inline-editor/inline-editor-trade-catalog.js?v=orte-almanach-market-v1",
+    "modules/inline-editor/inline-editor-events.js?v=orte-almanach-market-v1",
     "modules/module-editor/module-editor-events.js?v=orte-almanach-editor-v1",
     "modules/modal/modal-events.js?v=orte-almanach-session-v1"
   ];
@@ -333,6 +345,9 @@ function openModuleEditorForCurrent() {
   });
 
   window.AleriaOrteSceneRuntime = {
+    ensureRuntime() {
+      return ensureRuntime();
+    },
     openEditorForCurrent() {
       const sceneId = currentEntry?.orteSceneId || "";
       const state = states.get(sceneId);

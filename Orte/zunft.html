@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zunfts-Vorlage - Aleria</title>
+  <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css?v=orte-zunft-template-20260701a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt-template-map.css?v=orte-info-width-20260701a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=orte-region-map-sizing-20260701a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-scene-session.css?v=orte-session-editor-conflict-20260624a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-inline-editor.css?v=orte-final-lock-20260701a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-zunft.css?v=orte-zunft-template-20260701a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-market-modules.css?v=orte-market-modules-20260701a">
+  <script src="/Orte/orte.registry.js?v=orte-zunft-template-20260701a"></script>
+  <script src="/Orte/assets/js/orte-loader.js?v=orte-zunft-template-20260701a"></script>
+  <script type="module" src="/AleriaAlmanach/firebase.js"></script>
+  <script type="module" src="/Orte/assets/js/orte-scene-firebase.js?v=orte-scene-meta-20260624a"></script>
+  <script type="module" src="/Orte/assets/js/orte-inline-firebase.js?v=orte-image-merge-20260701a"></script>
+  <script type="module" src="/Orte/assets/js/orte-market-firebase.js?v=orte-market-modules-20260701a"></script>
+  <script src="/Orte/assets/js/orte-grossstadt.js?v=orte-image-spacer-20260624a" defer></script>
+  <script src="/Orte/assets/js/orte-scene-session.js?v=orte-session-editor-conflict-20260624a" defer></script>
+  <script src="/Orte/assets/js/orte-market-modules.js?v=orte-market-modules-20260701a" defer></script>
+  <script src="/Orte/assets/js/orte-inline-editor.js?v=orte-image-merge-20260701a" defer></script>
+</head>
+<body>
+  <main class="place-page grossstadt-template zunft-template" data-orte-static-template data-default-id="zunfts-vorlage">
+    <div class="place-document">
+      <table class="grossstadt-template-frame zunft-template-frame" border="1" cellspacing="1">
+        <thead>
+          <tr>
+            <th class="zunft-hero" colspan="10">
+              <p><b class="pt-s-0004">Name der Einrichtung</b></p>
+              <p><i>Kurze Beschreibung oder Untertitel</i></p>
+              <p>&nbsp;</p>
+              <p><span class="orte-image-slot" data-orte-image-key="zunft-symbol" data-orte-image-label="Wappen, Symbol oder Logo" data-orte-image-format="square" data-orte-image-max-height="220" aria-label="Wappen, Symbol oder Logo"></span></p>
+              <p>&nbsp;</p>
+              <p class="zunft-quote">&bdquo;Zitat, Leitspruch oder Werbesatz.&ldquo;</p>
+              <p class="zunft-quote-source"><i>- Quelle des Zitats / Leitung</i></p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="zunft-main-cell" colspan="6">
+              <h2 id="einleitung">Einf&uuml;hrung</h2>
+              <p>&nbsp;</p>
+              <p>Allgemeine Einf&uuml;hrung: Zweck der Einrichtung, Stimmung, Zielpublikum und Lage im Stadtgef&uuml;ge.</p>
+              <p>&nbsp;</p>
+              <hr>
+              <p>&nbsp;</p>
+              <div class="orte-scene-host" data-orte-scenes-panel></div>
+            </td>
+            <td class="zunft-side-image-cell" colspan="4">
+              <span class="orte-image-slot" data-orte-image-key="gebaeude-bild" data-orte-image-label="Geb&auml;ude, Ladenfront oder Innenraum" data-orte-image-format="landscape" data-orte-image-max-height="380" aria-label="Geb&auml;ude, Ladenfront oder Innenraum"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="zunft-main-cell" colspan="6">
+              <h2 id="hintergrund">Hintergrund</h2>
+              <p>&nbsp;</p>
+              <p>Entstehungsgeschichte, Gr&uuml;nder, bedeutsame Ereignisse und Zugeh&ouml;rigkeit zu Z&uuml;nften, Orden oder Fraktionen.</p>
+              <p>&nbsp;</p>
+              <hr>
+
+              <h2 id="verwaltung">Verwaltung</h2>
+              <p>&nbsp;</p>
+              <p>Wie l&auml;uft der Betrieb? Wer f&uuml;hrt ihn, wer entscheidet, wem schuldet die Einrichtung Abgaben, Schutz oder Loyalit&auml;t?</p>
+              <p>&nbsp;</p>
+
+              <details>
+                <summary><span>Gilden- oder ordensspezifisches</span></summary>
+                <p>Vertragliche Stellung zur Siedlung, zum Adel, zu einer Zunft, einem Orden oder einer &uuml;bergeordneten Organisation.</p>
+              </details>
+              <p>&nbsp;</p>
+
+              <h2 id="aufbau">Aufbau</h2>
+              <p>&nbsp;</p>
+              <p>Innenleben, R&auml;ume, Werkst&auml;tten, Lager, Empfangsbereich, Hinterzimmer, Kontor, Hof oder Keller.</p>
+              <p>&nbsp;</p>
+
+              <h2 id="regeln-ethik">Regeln &amp; Ethik</h2>
+              <p>&nbsp;</p>
+              <p>Hausordnung, Kodex, Sicherheit, Diskretion, Qualit&auml;tsversprechen und Umgang mit Konflikten.</p>
+              <ul>
+                <li>Regel oder Grundsatz.</li>
+                <li>Ausnahme, Tabu oder bekannte Praxis.</li>
+                <li>Erwartung an Kundschaft, Mitglieder oder Personal.</li>
+              </ul>
+            </td>
+            <td class="zunft-infobox-cell" colspan="4">
+              <table class="zunft-info-table" border="1" cellspacing="1">
+                <tbody>
+                  <tr>
+                    <td class="zunft-table-title" colspan="2"><b>TITEL</b></td>
+                  </tr>
+                  <tr>
+                    <td class="zunft-logo-cell" colspan="2">
+                      <span class="orte-image-slot" data-orte-image-key="zunft-banner" data-orte-image-label="Wappen, Banner oder Untergruppen-Symbol" data-orte-image-format="banner" data-orte-image-max-height="220" aria-label="Wappen, Banner oder Untergruppen-Symbol"></span>
+                    </td>
+                  </tr>
+                  <tr><td class="zunft-subhead" colspan="2"><b>Allgemein</b></td></tr>
+                  <tr><td><b>Name</b></td><td><b>Offizieller Name</b></td></tr>
+                  <tr><td><b>Motto</b></td><td><i>&bdquo;Optionaler Leitspruch&ldquo;</i></td></tr>
+                  <tr><td><b>Typ</b></td><td><b>Taverne, Schmiede, Alchemie, Kontor, Gilde, Zunft, Theater, Badehaus...</b></td></tr>
+                  <tr><td><b>Ort</b></td><td><b>Adresse, Viertel oder Orientierungspunkt</b></td></tr>
+                  <tr><td><b>Leitung</b></td><td><b>Verantwortliche Person oder Gruppe</b></td></tr>
+                  <tr><td><b>Zugeh&ouml;rigkeit</b></td><td><b>Gilde, Zunft, Orden, Haus oder Fraktion</b></td></tr>
+                  <tr><td class="zunft-subhead" colspan="2"><b>Betrieb</b></td></tr>
+                  <tr><td><b>&Ouml;ffnungszeiten</b></td><td><b>Betriebszeiten, Ruhetage, Sondertage</b></td></tr>
+                  <tr><td><b>Ruf</b></td><td><b>Seri&ouml;s, beliebt, verrucht, gef&uuml;rchtet...</b></td></tr>
+                  <tr><td><b>Zugang / Regeln</b></td><td><b>Einlassbedingungen, Dresscode, Hausordnung</b></td></tr>
+                  <tr><td><b>Angestellte</b></td><td><b>Anzahl und Art des Personals</b></td></tr>
+                  <tr><td><b>Schutz</b></td><td><b>Wachen, S&ouml;ldner, Stadtwache, Schutzbrief</b></td></tr>
+                  <tr><td class="zunft-subhead" colspan="2"><b>Angebot / Leistungen</b></td></tr>
+                  <tr><td><b>Kernangebot</b></td><td><b>Waren oder Dienstleistungen</b></td></tr>
+                  <tr><td><b>Waren / Leistung</b></td><td><b>Sortiment, Dienste, Auftr&auml;ge</b></td></tr>
+                  <tr><td><b>Spezialit&auml;ten</b></td><td><b>Signature-Angebote, Meisterarbeiten, seltene Tinkturen, Sonderzimmer...</b></td></tr>
+                  <tr><td class="zunft-subhead" colspan="2"><b>Sonstiges</b></td></tr>
+                  <tr><td><b>Bedrohungen</b></td><td><b>Rivalen, Schulden, Schutzgeld, politische Risiken</b></td></tr>
+                  <tr><td><b>Ressourcen</b></td><td><b>Lager, Kontakte, Kapital, Patente, Rezepte</b></td></tr>
+                  <tr>
+                    <td class="zunft-logo-cell" colspan="2">
+                      <span class="orte-image-slot" data-orte-image-key="familien-oder-gildenseite" data-orte-image-label="Verlinkung zur Familien-, Gilden- oder Organisationsseite" data-orte-image-format="banner" data-orte-image-max-height="180" aria-label="Verlinkung zur Familien-, Gilden- oder Organisationsseite"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <h2 id="personal-struktur">Personal &amp; Struktur</h2>
+              <p>&nbsp;</p>
+              <p>Wichtige Personen: Leitung, Angestellte, Meister, Bedienstete, T&uuml;rsteher, Stammg&auml;ste oder Patrone.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10">
+              <table class="zunft-hierarchy-table" border="1" cellspacing="1">
+                <tbody>
+                  <tr><td class="zunft-table-title" colspan="9"><b>Gilden-Hierarchie</b></td></tr>
+                  <tr><td class="zunft-spacer-row" colspan="9">&nbsp;</td></tr>
+                  <tr>
+                    <td><b>Name</b></td>
+                    <td colspan="2"><b>Nachname</b></td>
+                    <td><b>Rolle</b></td>
+                    <td><b>Gildenrang</b></td>
+                    <td colspan="2"><b>Kurzbeschreibung</b></td>
+                    <td colspan="2"><b>Notiz / Link</b></td>
+                  </tr>
+                  <tr><td class="zunft-section-row" colspan="9"><b>F&uuml;hrung</b></td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td class="zunft-section-row" colspan="9"><b>Ordnung I.</b></td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td class="zunft-section-row" colspan="9"><b>Ordnung II.</b></td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td class="zunft-section-row" colspan="9"><b>Ordnung III.</b></td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td class="zunft-section-row" colspan="9"><b>Ordnung IV.</b></td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                  <tr><td>...</td><td colspan="2">...</td><td>...</td><td>...</td><td colspan="2">...</td><td colspan="2">...</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <h2 id="angebot-leistungen">Angebot &amp; Leistungen</h2>
+              <p>&nbsp;</p>
+              <p>Waren, Dienstleistungen, Preise, Besonderheiten, geheime Angebote oder saisonale Leistungen.</p>
+              <p>Hier k&ouml;nnen konkrete Waren, Dienstleistungen, Preise, Sonderangebote oder geheime Leistungen frei beschrieben werden.</p>
+              <ul>
+                <li>Hauptangebot oder Kernleistung.</li>
+                <li>Besonderheit, seltene Ware oder Spezialdienst.</li>
+                <li>Bedingung, Preisrahmen, Zugang oder Einschr&auml;nkung.</li>
+              </ul>
+              <div class="orte-market-module-host" data-orte-market-modules></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <h2 id="betrieb-alltag">Betrieb &amp; Alltag</h2>
+              <p>&nbsp;</p>
+              <p>Alltag, Kundschaft, Abl&auml;ufe, typische Ger&auml;usche, Ger&uuml;che, Rituale, Schichten und wiederkehrende Probleme.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10">
+              <h2 id="beziehungen-umfeld">Beziehungen &amp; Umfeld</h2>
+              <p>&nbsp;</p>
+              <p>Kundschaft, B&uuml;ndnisse, Rivalit&auml;ten, Schutzpatrone, st&auml;dtische Beh&ouml;rden, Schutzgelder und Gildenbeziehungen.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10">
+              <h2 id="sicherheit-konflikte">Sicherheit &amp; Konflikte</h2>
+              <p>&nbsp;</p>
+              <p>Konflikte, Sicherheit, Rivalen, Diebstahl, politische Einmischung, Verrat oder offene Bedrohungen.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <h2 id="personen">Pers&ouml;nlichkeiten von Relevanz</h2>
+              <table class="zunft-people-table pt-s-0067" border="1" cellspacing="1">
+                <tbody>
+                  <tr><td class="zunft-spacer-row" colspan="4">&nbsp;</td></tr>
+                  <tr><td class="pt-s-0084" colspan="4"><b>F&uuml;hrung</b></td></tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0076"><b>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077" colspan="3" rowspan="3"><p>......</p></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0078"><span class="orte-image-slot" data-orte-image-key="person-0001" data-orte-image-label="Portrait" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait"></span></td>
+                  </tr>
+                  <tr><td class="portrait-cell pt-s-0080"><b>Name</b></td></tr>
+                  <tr><td class="portrait-cell pt-s-0071" colspan="4">&nbsp;</td></tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0076"><b>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077" colspan="3" rowspan="3"><p>......</p></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0078"><span class="orte-image-slot" data-orte-image-key="person-0002" data-orte-image-label="Portrait" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait"></span></td>
+                  </tr>
+                  <tr><td class="portrait-cell pt-s-0080"><b>Name</b></td></tr>
+                  <tr><td class="portrait-cell pt-s-0071" colspan="4">&nbsp;</td></tr>
+                  <tr><td class="pt-s-0084" colspan="4"><b>Personal</b></td></tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0076"><b>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077" colspan="3" rowspan="3"><p>......</p></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell pt-s-0078"><span class="orte-image-slot" data-orte-image-key="person-0003" data-orte-image-label="Portrait" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait"></span></td>
+                  </tr>
+                  <tr><td class="portrait-cell pt-s-0080"><b>Name</b></td></tr>
+                  <tr><td class="portrait-cell pt-s-0071" colspan="4">&nbsp;</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="10">
+              <h2 id="trivia">Trivia</h2>
+              <ul>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
