@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gruppen-Vorlage - Aleria</title>
+  <link rel="stylesheet" href="../Orte/assets/css/orte-grossstadt.css?v=gruppen-orte-basis-20260702a">
+  <link rel="stylesheet" href="../Orte/assets/css/orte-inline-editor.css?v=gruppen-row-portrait-reset-20260702a">
+  <link rel="stylesheet" href="assets/css/gruppen.css?v=gruppen-vorlage-20260702d">
+  <script src="gruppen.registry.js?v=gruppen-vorlage-20260702c"></script>
+  <script src="assets/js/gruppen-loader.js?v=gruppen-vorlage-20260702c"></script>
+  <script type="module" src="../AleriaAlmanach/firebase.js"></script>
+  <script type="module" src="../Orte/assets/js/orte-inline-firebase.js?v=gruppen-row-portrait-reset-20260702a"></script>
+  <script src="assets/js/gruppen-page.js?v=gruppen-vorlage-20260702c" defer></script>
+  <script src="../Orte/assets/js/orte-inline-editor.js?v=gruppen-row-portrait-reset-20260702a" defer></script>
+</head>
+<body>
+  <main class="gruppen-page grossstadt-template" data-gruppen-root data-orte-static-template data-default-id="gruppen-vorlage">
+    <div class="gruppen-document place-document">
+      <table class="gruppen-template-frame grossstadt-template-frame" border="1" cellspacing="1">
+        <thead>
+          <tr>
+            <th class="gruppen-hero" colspan="10">
+              <p class="gruppen-title"><b data-gruppen-title>Gruppen-Vorlage</b></p>
+              <p class="gruppen-subtitle" data-gruppen-type>Gilde / Orden / Organisation / Kult / Banner / Trupp</p>
+              <nav class="gruppen-breadcrumbs" data-gruppen-breadcrumbs aria-label="Gruppen-Hierarchie"></nav>
+              <p>&nbsp;</p>
+              <p><span class="orte-image-slot gruppen-symbol-slot" data-orte-image-key="gruppe-symbol" data-orte-image-label="Wappen, Symbol oder Zeichen" data-orte-image-format="square" data-orte-image-max-height="220" aria-label="Wappen, Symbol oder Zeichen"></span></p>
+              <p>&nbsp;</p>
+              <p class="gruppen-quote">&bdquo;<span data-profile-field="motto">Optionaler Leitspruch</span>&ldquo;</p>
+              <p class="gruppen-quote-source"><i>- Führung / Chronist / Überlieferung</i></p>
+              <p class="gruppen-subtitle" data-gruppen-canonical-path>Organisationen und Gruppen &gt; Gilden / Orden / Organisationen / Kulte &gt; Gruppen-Vorlage</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gruppen-main-cell" colspan="6">
+              <h2 id="ueberblick">Überblick</h2>
+              <p data-section="overview">Kurzüberblick: Wofür steht diese Gruppe, warum kennt man sie und welche Stimmung soll sie am Spieltisch erzeugen?</p>
+              <hr>
+              <h3>Einordnung</h3>
+              <p>Diese Vorlage ist für übergeordnete Organisationen ebenso gedacht wie für untergeordnete Banner, Trupps, Zellen oder Zehnerschaften.</p>
+            </td>
+            <td class="gruppen-side-cell" colspan="4">
+              <span class="orte-image-slot gruppen-landscape-slot" data-orte-image-key="gruppe-hauptbild" data-orte-image-label="Gruppenbild, Banner, Hauptquartier oder Stimmungsmotiv" data-orte-image-format="landscape" data-orte-image-max-height="380" aria-label="Gruppenbild, Banner, Hauptquartier oder Stimmungsmotiv"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-main-cell" colspan="6">
+              <h2 id="geschichte">Geschichte</h2>
+              <p data-section="history">Entstehung, Gründer, Wendepunkte, Krisen, Spaltungen und wichtige Erfolge.</p>
+              <hr>
+              <h2 id="organisation-hierarchie">Organisation &amp; Hierarchie</h2>
+              <p data-section="organization">Innere Ordnung, Führungsmodell, Ränge, Befehlswege, Abstimmungen, Schwüre und Sanktionen.</p>
+            </td>
+            <td class="gruppen-infobox-cell" colspan="4">
+              <table class="gruppen-info-table" border="1" cellspacing="1">
+                <tbody>
+                  <tr><td class="gruppen-info-title" colspan="2"><b>Allgemein</b></td></tr>
+                  <tr>
+                    <td class="gruppen-info-title" colspan="2">
+                      <span class="orte-image-slot gruppen-banner-slot" data-orte-image-key="gruppe-banner" data-orte-image-label="Banner oder Langzeichen" data-orte-image-format="banner" data-orte-image-max-height="220" aria-label="Banner oder Langzeichen"></span>
+                    </td>
+                  </tr>
+                  <tr><td class="gruppen-info-label">Name</td><td class="gruppen-info-value" data-gruppen-title>Gruppen-Vorlage</td></tr>
+                  <tr><td class="gruppen-info-label">Motto</td><td class="gruppen-info-value" data-profile-field="motto">Optionaler Leitspruch</td></tr>
+                  <tr><td class="gruppen-info-label">Typ</td><td class="gruppen-info-value" data-profile-field="groupType">Gilde / Orden / Organisation / Kult / Banner / Trupp</td></tr>
+                  <tr><td class="gruppen-info-label">Standorte</td><td class="gruppen-info-value" data-profile-field="locations">Hauptsitz, Einflussbereich oder mobile Operationsorte</td></tr>
+                  <tr><td class="gruppen-info-label">Anführer</td><td class="gruppen-info-value" data-profile-field="leader">Führung oder Rat</td></tr>
+                  <tr><td class="gruppen-info-label">Symbol</td><td class="gruppen-info-value" data-profile-field="symbol">Wappen, Zeichen, Farbe oder Banner</td></tr>
+                  <tr><td class="gruppen-info-label">Patrongötter</td><td class="gruppen-info-value" data-profile-field="patronDeities">Patrongottheiten, Ideale oder Schutzmächte</td></tr>
+                  <tr><td class="gruppen-info-label">Zugehörigkeit</td><td class="gruppen-info-value" data-profile-field="affiliation">Übergeordnete Organisation, Haus, Reich oder Fraktion</td></tr>
+                  <tr><td class="gruppen-info-subhead" colspan="2">Mitglieder</td></tr>
+                  <tr><td class="gruppen-info-label">Mitgliederstärke</td><td class="gruppen-info-value" data-profile-field="memberStrength">Mitgliederstärke oder grobe Größenordnung</td></tr>
+                  <tr><td class="gruppen-info-label">Ruf</td><td class="gruppen-info-value" data-profile-field="reputation">Ruf, Legenden, bekannte Vorurteile</td></tr>
+                  <tr><td class="gruppen-info-label">Klassen</td><td class="gruppen-info-value" data-profile-field="classes">typische Professionen, Rollen oder Fähigkeiten</td></tr>
+                  <tr><td class="gruppen-info-subhead" colspan="2">Geschichte</td></tr>
+                  <tr><td class="gruppen-info-label">Jahr</td><td class="gruppen-info-value" data-profile-field="founding">Gründungsjahr oder Entstehungszeitraum</td></tr>
+                  <tr><td class="gruppen-info-subhead" colspan="2">Aufgabe</td></tr>
+                  <tr><td class="gruppen-info-label">Dienst</td><td class="gruppen-info-value" data-profile-field="duty">Dienst, Auftrag oder gesellschaftliche Funktion</td></tr>
+                  <tr><td class="gruppen-info-label">Verbündete</td><td class="gruppen-info-value" data-profile-field="allies">Verbündete, Förderer oder Schutzpatrone</td></tr>
+                  <tr><td class="gruppen-info-label">Feinde</td><td class="gruppen-info-value" data-profile-field="enemies">Feinde, Rivalen oder geächtete Gruppen</td></tr>
+                  <tr><td class="gruppen-info-label">Ziel</td><td class="gruppen-info-value" data-profile-field="goal">Kurzfristiges und langfristiges Ziel</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="gildenfuehrung">Gildenführung</h2>
+              <table class="gruppen-leadership-portrait-table" border="1" cellspacing="1" data-orte-table-id="gruppen-fuehrung-portraits" data-orte-portrait-layout="1,3,5">
+                <tbody>
+                  <tr><td class="gruppen-table-title gruppen-section-row" colspan="5"><b>Führung &amp; Stellvertretung</b></td></tr>
+                  <tr>
+                    <td class="portrait-cell gruppen-leader-card">
+                      <b>Führung</b>
+                      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-key="fuehrung-portrait-0001" data-orte-image-label="Portrait Führung" data-orte-image-format="portrait" data-orte-image-max-height="360" aria-label="Portrait Führung"></span>
+                      <b>Name / Titel</b>
+                      <p>Rolle, Rechte, Pflichten und politisches Gewicht.</p>
+                    </td>
+                    <td class="portrait-cell gruppen-leader-card">
+                      <b>Stellvertretung</b>
+                      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-key="fuehrung-portrait-0002" data-orte-image-label="Portrait Stellvertretung" data-orte-image-format="portrait" data-orte-image-max-height="360" aria-label="Portrait Stellvertretung"></span>
+                      <b>Name / Titel</b>
+                      <p>Vertretung, operative Leitung und Aufgabenbereich.</p>
+                    </td>
+                    <td class="portrait-cell gruppen-leader-card">
+                      <b>Rat / Amt</b>
+                      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-key="fuehrung-portrait-0003" data-orte-image-label="Portrait Rat oder Amt" data-orte-image-format="portrait" data-orte-image-max-height="360" aria-label="Portrait Rat oder Amt"></span>
+                      <b>Name / Titel</b>
+                      <p>Verwaltung, Ausbildung, Versorgung oder Geheimauftrag.</p>
+                    </td>
+                    <td class="portrait-cell gruppen-leader-card">
+                      <b>Einsatzleitung</b>
+                      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-key="fuehrung-portrait-0004" data-orte-image-label="Portrait Einsatzleitung" data-orte-image-format="portrait" data-orte-image-max-height="360" aria-label="Portrait Einsatzleitung"></span>
+                      <b>Name / Titel</b>
+                      <p>Feldbefehle, Einsätze, Wachen oder reisende Gruppen.</p>
+                    </td>
+                    <td class="portrait-cell gruppen-leader-card">
+                      <b>Verwaltung / Chronik</b>
+                      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-key="fuehrung-portrait-0005" data-orte-image-label="Portrait Verwaltung oder Chronik" data-orte-image-format="portrait" data-orte-image-max-height="360" aria-label="Portrait Verwaltung oder Chronik"></span>
+                      <b>Name / Titel</b>
+                      <p>Archive, Finanzen, Verträge, Versorgung oder Überlieferung.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="mitgliedschaft-rekrutierung">Mitgliedschaft &amp; Rekrutierung</h2>
+              <p data-section="membership">Wer darf beitreten, wie wird rekrutiert, welche Prüfungen gibt es und was kostet die Zugehörigkeit?</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="untergruppen">Untergruppen</h2>
+              <table class="gruppen-subgroup-table" border="1" cellspacing="1" data-orte-table-id="gruppen-untergruppen">
+                <thead>
+                  <tr>
+                    <th class="wappen">Wappen</th>
+                    <th>Name</th>
+                    <th>Ebene</th>
+                    <th>Führung</th>
+                    <th>Stärke</th>
+                    <th>Status</th>
+                    <th>Notiz / Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="untergruppe-wappen-0001" data-orte-image-label="Wappen Untergruppe" data-orte-image-format="square" data-orte-image-max-height="120" aria-label="Wappen Untergruppe"></span></td>
+                    <td>Übergeordnete Gilde</td>
+                    <td>Gilde / Orden / Organisation</td>
+                    <td>Name</td>
+                    <td>...</td>
+                    <td>aktiv</td>
+                    <td>Eigene Gruppenseite möglich.</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="untergruppe-wappen-0002" data-orte-image-label="Wappen Banner" data-orte-image-format="square" data-orte-image-max-height="120" aria-label="Wappen Banner"></span></td>
+                    <td>Banner / Zirkel</td>
+                    <td>Untergruppe</td>
+                    <td>Name</td>
+                    <td>...</td>
+                    <td>aktiv</td>
+                    <td>Eigene Gruppenseite möglich.</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="untergruppe-wappen-0003" data-orte-image-label="Wappen Trupp" data-orte-image-format="square" data-orte-image-max-height="120" aria-label="Wappen Trupp"></span></td>
+                    <td>Trupp / Zehnerschaft</td>
+                    <td>Letzte Instanz</td>
+                    <td>Name</td>
+                    <td>...</td>
+                    <td>aktiv</td>
+                    <td>Eigene Gruppenseite möglich.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="aufgabenbereich-leistungen">Aufgabenbereich &amp; Leistungen</h2>
+              <p data-section="duties">Aufgabenbereich, Leistungen, Pflichten, Dienste, Rechte und typische Aufträge.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="ordnung-hierarchie">Ordnung &amp; Hierarchie</h2>
+              <table class="gruppen-hierarchy-table" border="1" cellspacing="1" data-orte-table-id="gruppen-ordnung-hierarchie">
+                <thead>
+                  <tr>
+                    <th class="wappen">Icon</th>
+                    <th>Rang / Ordnung</th>
+                    <th>Funktion</th>
+                    <th>Rechte</th>
+                    <th>Pflichten</th>
+                    <th>Aufstieg / Zugang</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="hierarchie-icon-0001" data-orte-image-label="Icon Rang" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Rang"></span></td>
+                    <td>Führung</td>
+                    <td>Letzte Entscheidung, Diplomatie, Krieg und Satzung.</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="hierarchie-icon-0002" data-orte-image-label="Icon Rang" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Rang"></span></td>
+                    <td>Offiziere / Meister</td>
+                    <td>Leitung von Bannern, Ausbildung, Verwaltung.</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="hierarchie-icon-0003" data-orte-image-label="Icon Rang" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Rang"></span></td>
+                    <td>Mitglieder</td>
+                    <td>Ausführende Kräfte, Handwerker, Kämpfer oder Akolythen.</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="domaenen-standorte-einfluss">Domänen &amp; Einfluss</h2>
+              <p data-section="domains">Domänen, Einflusszonen, Niederlassungen, geheime Treffpunkte und Ressourcen.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="standorte">Standorte</h2>
+              <p data-section="locations">Standorte, Hauptsitze, Außenposten, mobile Lager, geheime Treffpunkte und Einflussorte.</p>
+              <table class="gruppen-location-table" border="1" cellspacing="1" data-orte-table-id="gruppen-standorte">
+                <thead>
+                  <tr>
+                    <th class="wappen">Icon</th>
+                    <th>Name</th>
+                    <th>Typ</th>
+                    <th>Region / Ort</th>
+                    <th>Kontrolle</th>
+                    <th>Zweck</th>
+                    <th>Notiz / Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="standort-icon-0001" data-orte-image-label="Icon Standort" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Standort"></span></td>
+                    <td>Hauptsitz</td>
+                    <td>Halle / Kontor / Ordensburg</td>
+                    <td>...</td>
+                    <td>direkt</td>
+                    <td>Führung, Archiv, Ausbildung</td>
+                    <td>...</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="standort-icon-0002" data-orte-image-label="Icon Standort" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Standort"></span></td>
+                    <td>Außenposten</td>
+                    <td>Lager / Wachhaus / Werkstatt</td>
+                    <td>...</td>
+                    <td>indirekt</td>
+                    <td>Versorgung, Beobachtung, Schutz</td>
+                    <td>...</td>
+                  </tr>
+                  <tr>
+                    <td class="wappen"><span class="orte-image-slot gruppen-icon-slot" data-orte-image-key="standort-icon-0003" data-orte-image-label="Icon Standort" data-orte-image-format="square" data-orte-image-max-height="96" aria-label="Icon Standort"></span></td>
+                    <td>Geheimer Treffpunkt</td>
+                    <td>Versteck / Hinterzimmer / Krypta</td>
+                    <td>...</td>
+                    <td>verdeckt</td>
+                    <td>Absprachen, Lager, Fluchtweg</td>
+                    <td>...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="beziehungen-politisches">Beziehungen &amp; Politisches</h2>
+              <p data-section="politics">Beziehungen, politische Rolle, Bündnisse, Rivalitäten, offene Konflikte und Abhängigkeiten.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="gruppen-section-cell" colspan="10">
+              <h2 id="trivia">Trivia</h2>
+              <ul data-gruppen-trivia>
+                <li>...</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

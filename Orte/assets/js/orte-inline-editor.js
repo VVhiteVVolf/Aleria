@@ -8,6 +8,7 @@
   const CONTENT_SCHEMA_VERSION = 2;
   const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
   const statusPositionKey = `aleria:orte:inline-status-position:${pageId}`;
+  const resetMarkerKey = `aleria:orte:inline-reset:${pageId}`;
   const state = { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {}, meta: normalizeDocumentMeta(window.ORT_DATA?.meta || {}) };
   const textItems = [];
   const imageItems = [];
@@ -49,6 +50,10 @@
     "close-orte-image-panel",
     "clear-orte-image",
     "add-orte-table-row",
+    "add-orte-table-heading-row",
+    "insert-orte-table-heading-row-after",
+    "pick-orte-table-heading-color",
+    "set-orte-portrait-column-count",
     "insert-orte-table-row-before",
     "insert-orte-table-row-after",
     "remove-orte-table-row",
@@ -224,6 +229,9 @@
 
       const ratingInput = event.target.closest("[data-orte-rating-field]");
       if (ratingInput) updateRatingField(ratingInput);
+
+      const headingColorInput = event.target.closest("[data-orte-table-heading-color]");
+      if (headingColorInput) updateTableHeadingColor(headingColorInput, headingColorInput.value);
     });
 
     document.addEventListener("change", (event) => {
@@ -339,7 +347,7 @@
     }
 
     if (action === "hard-reset-orte-template") {
-      hardResetTemplate();
+      hardResetInlineDocument();
       event.preventDefault();
       return;
     }
@@ -382,6 +390,30 @@
 
     if (action === "add-orte-table-row") {
       addTableRow(target);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "add-orte-table-heading-row") {
+      addTableHeadingRow(target);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "insert-orte-table-heading-row-after") {
+      insertTableHeadingRowNear(target, "after");
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "pick-orte-table-heading-color") {
+      pickTableHeadingColor(target);
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "set-orte-portrait-column-count") {
+      setPortraitColumnCount(target);
       event.preventDefault();
       return;
     }
@@ -470,6 +502,7 @@
     });
 
     prepareTables();
+    normalizePortraitLayoutTables();
     ensureAristocracyBaroneGroup();
     normalizeRawImages();
     collectImageItems();
@@ -811,10 +844,28 @@
     tableItems.forEach((item) => {
       const control = document.createElement("div");
       control.className = "orte-table-add-control";
-      control.innerHTML = `<button type="button" data-action="add-orte-table-row" data-orte-table-target="${escapeAttr(item.id)}">+ Zeile</button>`;
+      control.innerHTML = `
+        <button type="button" data-action="add-orte-table-row" data-orte-table-target="${escapeAttr(item.id)}">+ Zeile</button>
+        <button type="button" data-action="add-orte-table-heading-row" data-orte-table-target="${escapeAttr(item.id)}">+ Überschrift</button>
+      `;
       item.table.insertAdjacentElement("afterend", control);
       renderRowControls(item.table, item.id);
     });
+  }
+
+  function renderPortraitLayoutControls(table, tableId, rowIndex) {
+    const allowedCounts = getPortraitLayoutCounts(table);
+    if (!allowedCounts.length) return "";
+
+    const row = getTableRowByIndex(table, rowIndex);
+    const currentCount = getPortraitLayoutCells(row).length || Number(row?.dataset?.ortePortraitCount) || allowedCounts.at(-1);
+    return `
+      <span class="orte-table-layout-control" aria-label="Portrait-Spalten">
+        ${allowedCounts.map((count) => `
+          <button type="button" data-action="set-orte-portrait-column-count" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${escapeAttr(rowIndex)}" data-orte-portrait-count="${count}" aria-pressed="${count === currentCount ? "true" : "false"}">${count}</button>
+        `).join("")}
+      </span>
+    `;
   }
 
   function openImagePanel(key) {
@@ -945,6 +996,23 @@
     markDirty();
   }
 
+  function addTableHeadingRow(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    if (table.classList.contains("pt-s-0067")) {
+      const dividerRows = Array.from(table.tBodies[0]?.rows || []).filter(isPersonalityDividerRow);
+      const referenceRow = dividerRows[dividerRows.length - 1] || table.tBodies[0]?.rows?.[table.tBodies[0].rows.length - 1];
+      if (referenceRow) addPersonalityDividerRow(referenceRow, "after");
+    } else {
+      addGenericHeadingRow(table);
+    }
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
   function insertTableRowNear(button, position) {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
@@ -967,6 +1035,24 @@
     markDirty();
   }
 
+  function insertTableHeadingRowNear(button, position) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    if (table.classList.contains("pt-s-0067")) {
+      addPersonalityDividerRow(row, position);
+    } else {
+      addGenericHeadingRow(table, row, position);
+    }
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
   function removeTableRowNear(button) {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
@@ -980,6 +1066,8 @@
       } else {
         removePersonalityRows(table, row);
       }
+    } else if (isGenericHeadingRow(row, table)) {
+      removeGenericHeadingRow(table, row);
     } else {
       removeGenericTableRow(table, row);
     }
@@ -987,6 +1075,212 @@
     updateTableState(table);
     rebuildTargets();
     markDirty();
+  }
+
+  function setPortraitColumnCount(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const allowedCounts = getPortraitLayoutCounts(table);
+    const count = Number(button.dataset.ortePortraitCount);
+    if (!allowedCounts.includes(count)) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row || !isPortraitLayoutRow(row, table)) return;
+    if (!applyPortraitColumnCount(table, row, count, { persistChoice: true })) return;
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
+  function normalizePortraitLayoutTables() {
+    root.querySelectorAll("[data-orte-portrait-layout]").forEach((table) => {
+      const allowedCounts = getPortraitLayoutCounts(table);
+      if (!allowedCounts.length) return;
+
+      const titleCell = getPortraitLayoutTitleCell(table);
+      const legacyCount = Number(titleCell?.dataset?.ortePortraitCount || table.dataset.ortePortraitCount);
+      const hasLegacyCount = allowedCounts.includes(legacyCount);
+      ensurePortraitRowKeys(table);
+      getPortraitLayoutRows(table).forEach((row, rowIndex) => {
+        const persistedCount = Number(row.dataset.ortePortraitCount);
+        const hasPersistedCount = allowedCounts.includes(persistedCount);
+        const targetCount = hasPersistedCount ? persistedCount : hasLegacyCount && rowIndex === 0 ? legacyCount : allowedCounts.at(-1);
+        applyPortraitColumnCount(table, row, targetCount, { persistChoice: hasPersistedCount || hasLegacyCount && rowIndex === 0 });
+      });
+      if (titleCell) delete titleCell.dataset.ortePortraitCount;
+      delete table.dataset.ortePortraitCount;
+      updateTableState(table);
+    });
+  }
+
+  function applyPortraitColumnCount(table, row, count, options = {}) {
+    if (!row) return false;
+    ensurePortraitRowKeys(table);
+
+    let cells = getPortraitLayoutCells(row);
+    while (cells.length > count) {
+      const cell = cells.pop();
+      cell.remove();
+    }
+
+    while (cells.length < count) {
+      const source = cells[cells.length - 1] || createPortraitLayoutCell();
+      const clone = source.cloneNode(true);
+      resetClonedFragment(clone);
+      row.append(clone);
+      cells = getPortraitLayoutCells(row);
+    }
+
+    getPortraitLayoutCells(row).forEach((cell, index) => normalizePortraitLayoutCell(cell, index, row));
+    if (options.persistChoice) row.dataset.ortePortraitCount = String(count);
+    else delete row.dataset.ortePortraitCount;
+    return true;
+  }
+
+  function getPortraitLayoutCounts(table) {
+    return String(table?.dataset?.ortePortraitLayout || "")
+      .split(",")
+      .map((value) => Number(value.trim()))
+      .filter((value, index, values) => Number.isInteger(value) && value > 0 && values.indexOf(value) === index)
+      .sort((a, b) => a - b);
+  }
+
+  function getPortraitLayoutRows(table) {
+    return Array.from(table?.tBodies?.[0]?.rows || [])
+      .filter((row) => isPortraitLayoutRow(row, table));
+  }
+
+  function getPortraitLayoutCells(row) {
+    return Array.from(row?.cells || []).filter((cell) => (
+      cell.classList.contains("portrait-cell") || cell.classList.contains("gruppen-leader-card")
+    ));
+  }
+
+  function isPortraitLayoutRow(row, table) {
+    return !!table?.dataset?.ortePortraitLayout && getPortraitLayoutCells(row).length > 0;
+  }
+
+  function ensurePortraitRowKeys(table) {
+    const usedKeys = new Set();
+    getPortraitLayoutRows(table).forEach((row, index) => {
+      let key = normalizePortraitRowKey(row.dataset.ortePortraitRowKey);
+      if (!key || usedKeys.has(key)) {
+        key = index === 0 && !usedKeys.has("main") ? "main" : createPortraitRowKey(usedKeys);
+      }
+      row.dataset.ortePortraitRowKey = key;
+      usedKeys.add(key);
+    });
+  }
+
+  function createPortraitRowKey(usedKeys) {
+    for (let index = 1; index < 1000; index += 1) {
+      const key = `row-${String(index).padStart(4, "0")}`;
+      if (!usedKeys.has(key)) return key;
+    }
+    return `row-${Date.now()}`;
+  }
+
+  function normalizePortraitRowKey(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  function getPortraitLayoutTitleCell(table) {
+    return Array.from(table?.tBodies?.[0]?.rows || [])
+      .map((row) => row.cells?.length === 1 ? row.cells[0] : null)
+      .find((cell) => cell?.classList?.contains("gruppen-table-title") || cell?.classList?.contains("gruppen-section-row")) || null;
+  }
+
+  function createPortraitLayoutCell() {
+    const cell = document.createElement("td");
+    cell.className = "portrait-cell gruppen-leader-card";
+    cell.innerHTML = `
+      <b>Rolle</b>
+      <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-format="portrait" data-orte-image-max-height="360"></span>
+      <b>Name / Titel</b>
+      <p>Rolle, Rechte, Pflichten und politisches Gewicht.</p>
+    `;
+    return cell;
+  }
+
+  function normalizePortraitLayoutCell(cell, index, row) {
+    const labels = [
+      "Führung",
+      "Stellvertretung",
+      "Rat / Amt",
+      "Einsatzleitung",
+      "Verwaltung / Chronik"
+    ];
+    const descriptions = [
+      "Rolle, Rechte, Pflichten und politisches Gewicht.",
+      "Vertretung, operative Leitung und Aufgabenbereich.",
+      "Verwaltung, Ausbildung, Versorgung oder Geheimauftrag.",
+      "Feldbefehle, Einsätze, Wachen oder reisende Gruppen.",
+      "Archive, Finanzen, Verträge, Versorgung oder Überlieferung."
+    ];
+    const label = labels[index] || `Position ${index + 1}`;
+    const rowKey = normalizePortraitRowKey(row?.dataset?.ortePortraitRowKey) || "main";
+    const key = rowKey === "main"
+      ? `fuehrung-portrait-${String(index + 1).padStart(4, "0")}`
+      : `fuehrung-portrait-${rowKey}-${String(index + 1).padStart(2, "0")}`;
+
+    cell.colSpan = 1;
+    cell.classList.add("portrait-cell", "gruppen-leader-card");
+
+    let imageSlot = cell.querySelector(".orte-image-slot");
+    if (!imageSlot) {
+      imageSlot = document.createElement("span");
+      imageSlot.className = "orte-image-slot gruppen-portrait-slot";
+      cell.querySelector("b")?.insertAdjacentElement("afterend", imageSlot);
+      if (!imageSlot.parentElement) cell.prepend(imageSlot);
+    }
+
+    imageSlot.classList.add("gruppen-portrait-slot");
+    imageSlot.dataset.orteImageKey = key;
+    imageSlot.dataset.orteImageLabel = `Portrait ${label}`;
+    imageSlot.dataset.orteImageFormat = "portrait";
+    imageSlot.dataset.orteImageMaxHeight = "360";
+    imageSlot.setAttribute("aria-label", `Portrait ${label}`);
+
+    const bolds = Array.from(cell.querySelectorAll("b"));
+    if (bolds[0] && isResetPortraitText(bolds[0].textContent)) bolds[0].textContent = label;
+    if (bolds[1] && isResetPortraitText(bolds[1].textContent)) bolds[1].textContent = "Name / Titel";
+
+    const paragraph = cell.querySelector("p");
+    if (paragraph && isResetPortraitText(paragraph.textContent)) {
+      paragraph.textContent = descriptions[index] || descriptions[0];
+    }
+  }
+
+  function isResetPortraitText(text) {
+    const value = normalizeWhitespace(text);
+    return !value || value === "...." || value === "Rolle" || value === "Name" || value === "Name / Titel";
+  }
+
+  function addGenericHeadingRow(table, referenceRow = null, position = "after") {
+    const tbody = table.tBodies[0];
+    if (!tbody) return;
+
+    const row = document.createElement("tr");
+    row.dataset.orteGeneratedHeadingRow = "true";
+    const cell = document.createElement("td");
+    cell.colSpan = getTableColumnCount(table) || 1;
+    cell.className = getGenericHeadingCellClass(table);
+    cell.innerHTML = "<b>Neue Überschrift</b>";
+    applyHeadingColorToCell(cell, getDefaultHeadingColor(table));
+    row.append(cell);
+
+    const target = referenceRow || Array.from(tbody.rows).at(-1);
+    if (target) {
+      target.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", row);
+    } else {
+      tbody.append(row);
+    }
   }
 
   function addGenericTableRow(table, referenceRow = null, position = "after") {
@@ -1031,6 +1325,12 @@
     row.remove();
   }
 
+  function removeGenericHeadingRow(table, row) {
+    const headingRows = Array.from(table.tBodies[0]?.rows || []).filter((candidate) => isGenericHeadingRow(candidate, table));
+    if (headingRows.length <= 1 && row.dataset.orteGeneratedHeadingRow !== "true") return;
+    row.remove();
+  }
+
   function removePersonalityRows(table, row) {
     const groups = getPersonalityGroups(table);
     const group = getPersonalityGroupForRow(table, row);
@@ -1047,9 +1347,10 @@
   function renderRowControls(table, tableId) {
     const rows = Array.from(table.tBodies[0]?.rows || []);
     rows.forEach((row, index) => {
+      const isPortraitRow = isPortraitLayoutRow(row, table);
       const canControl = table.classList.contains("pt-s-0067")
         ? isPersonalityGroupStart(row) || isPersonalityDividerRow(row)
-        : isCloneableDataRow(row, table);
+        : isPortraitRow || isCloneableDataRow(row, table) || isGenericHeadingRow(row, table);
       if (!canControl) return;
 
       const cell = row.cells?.[0];
@@ -1058,19 +1359,38 @@
       const controls = document.createElement("span");
       const isPersonalityTable = table.classList.contains("pt-s-0067");
       const isDividerRow = isPersonalityDividerRow(row);
+      const isHeadingRow = !isPersonalityTable && isGenericHeadingRow(row, table);
       controls.className = [
         "orte-table-row-controls",
         isPersonalityTable ? "is-personality-row-control" : "",
-        isDividerRow ? "is-divider-row-control" : ""
+        isPortraitRow ? "is-portrait-layout-row-control" : "",
+        isDividerRow || isHeadingRow ? "is-divider-row-control" : ""
       ].filter(Boolean).join(" ");
       controls.innerHTML = isPersonalityTable
         ? `
           <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile danach einfügen" : "Person danach einfügen"}">${isDividerRow ? "+ Zwischenzeile" : "+ Person"}</button>
           <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile entfernen" : "Person entfernen"}">-</button>
         `
+        : isHeadingRow
+          ? `
+            <button type="button" data-action="insert-orte-table-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Überschrift danach einfügen">+ Überschrift</button>
+            <label class="orte-table-heading-color-tool" title="Überschriftsfarbe">
+              <input type="color" value="${escapeAttr(getHeadingColorValue(row, table))}" data-orte-table-heading-color data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}">
+            </label>
+            <button type="button" data-action="pick-orte-table-heading-color" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Farbe mit Pipette aufnehmen">Pipette</button>
+            <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Überschrift entfernen">-</button>
+          `
+        : isPortraitRow
+          ? `
+            <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile davor einfügen">+ davor</button>
+            <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile danach einfügen">+ danach</button>
+            ${renderPortraitLayoutControls(table, tableId, index)}
+            <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile entfernen">-</button>
+          `
         : `
           <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile davor einfügen">+</button>
           <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile danach einfügen">+</button>
+          <button type="button" data-action="insert-orte-table-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Überschrift danach einfügen">H</button>
           <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile entfernen">-</button>
         `;
       cell.prepend(controls);
@@ -1096,6 +1416,118 @@
     if (row.querySelector("[data-orte-image-key], img, .pt-s-0077")) return false;
     if (cell.matches(".pt-s-0069, .pt-s-0073, .pt-s-0081, .pt-s-0082, .pt-s-0083")) return false;
     return !!normalizeWhitespace(cell.textContent);
+  }
+
+  function isGenericHeadingRow(row, table) {
+    const cells = Array.from(row?.cells || []);
+    if (cells.length !== 1) return false;
+    const cell = cells[0];
+    if (cell.tagName === "TH") return false;
+    if (row.querySelector("[data-orte-image-key], [data-orte-rating-key], img")) return false;
+    const tableWidth = getTableColumnCount(table) || 1;
+    if (Number(cell.colSpan || 1) < tableWidth) return false;
+    return row.dataset.orteGeneratedHeadingRow === "true"
+      || cell.classList.contains("gruppen-section-row")
+      || cell.classList.contains("sub-header");
+  }
+
+  function getGenericHeadingCellClass(table) {
+    if (table.closest(".gruppen-template-frame")) return "gruppen-section-row";
+    return "sub-header";
+  }
+
+  function getDefaultHeadingColor(table) {
+    return table.closest(".gruppen-template-frame") ? "#755420" : "#755420";
+  }
+
+  function getHeadingColorValue(row, table) {
+    const cell = row?.cells?.[0];
+    return normalizeHexColor(cell?.dataset?.orteHeadingColor)
+      || normalizeCssColor(cell?.style?.backgroundColor)
+      || getDefaultHeadingColor(table);
+  }
+
+  function updateTableHeadingColor(input, color) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(input.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, input.dataset.orteTableRowIndex);
+    const cell = row?.cells?.[0];
+    if (!cell || !isGenericHeadingRow(row, table)) return;
+
+    applyHeadingColorToCell(cell, color);
+    updateTableState(table);
+    markDirty();
+  }
+
+  async function pickTableHeadingColor(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row || !isGenericHeadingRow(row, table)) return;
+
+    const input = row.querySelector("[data-orte-table-heading-color]");
+    let color = "";
+
+    if (window.EyeDropper) {
+      try {
+        const result = await new window.EyeDropper().open();
+        color = result?.sRGBHex || "";
+      } catch (error) {
+        return;
+      }
+    } else {
+      input?.click();
+      return;
+    }
+
+    if (!normalizeHexColor(color)) return;
+    if (input) input.value = color;
+    updateTableHeadingColor(button, color);
+  }
+
+  function applyHeadingColorToCell(cell, color) {
+    const normalized = normalizeHexColor(color) || "#755420";
+    cell.dataset.orteHeadingColor = normalized;
+    cell.style.background = normalized;
+    cell.style.color = getReadableTextColor(normalized);
+  }
+
+  function getReadableTextColor(hex) {
+    const normalized = normalizeHexColor(hex);
+    if (!normalized) return "#fff2cf";
+    const red = parseInt(normalized.slice(1, 3), 16) / 255;
+    const green = parseInt(normalized.slice(3, 5), 16) / 255;
+    const blue = parseInt(normalized.slice(5, 7), 16) / 255;
+    const luminance = 0.2126 * linearizeColor(red) + 0.7152 * linearizeColor(green) + 0.0722 * linearizeColor(blue);
+    return luminance > 0.46 ? "#25190d" : "#fff2cf";
+  }
+
+  function linearizeColor(value) {
+    return value <= 0.03928 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  }
+
+  function normalizeHexColor(color) {
+    const value = String(color || "").trim();
+    if (/^#[0-9a-f]{6}$/i.test(value)) return value.toLowerCase();
+    if (/^#[0-9a-f]{3}$/i.test(value)) {
+      return `#${value.slice(1).split("").map((char) => `${char}${char}`).join("")}`.toLowerCase();
+    }
+    return "";
+  }
+
+  function normalizeCssColor(color) {
+    const value = String(color || "").trim();
+    const hex = normalizeHexColor(value);
+    if (hex) return hex;
+
+    const match = value.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
+    if (!match) return "";
+    return `#${[match[1], match[2], match[3]].map((part) => {
+      const number = Math.max(0, Math.min(255, Number(part) || 0));
+      return number.toString(16).padStart(2, "0");
+    }).join("")}`;
   }
 
   function getPersonalityGroups(table) {
@@ -1455,6 +1887,7 @@
 
     try {
       await store.save(pageId, payload);
+      clearInlineResetPending();
       dirty = false;
       setStatus("online gespeichert");
     } catch (error) {
@@ -1516,6 +1949,101 @@
     return normalizeInlinePayload(source);
   }
 
+  async function hardResetInlineDocument() {
+    const password = window.prompt("Hard Reset ist geschützt. Passwort eingeben:");
+    if (password !== "2603") {
+      setStatus("Reset abgebrochen", "warning");
+      return;
+    }
+
+    const documentLabel = window.GRUPPEN_CONFIG ? "Gruppen-Vorlage" : "Orte-Vorlage";
+    const confirmed = window.confirm(
+      `Hard Reset für diese ${documentLabel}?\n\nGelöscht werden nur Daten für "${pageId}": Direktbearbeitung, lokale Szenenliste und Szenendokumente. Almanach-Kommentare und AleriaAlmanach-Daten bleiben unangetastet.`
+    );
+    if (!confirmed) return;
+
+    closeImagePanel();
+    setStatus("Reset läuft");
+    markInlineResetPending();
+    removeLocalTemplateKeys();
+
+    const resetResults = await Promise.allSettled([
+      resetRemoteInlineContent(),
+      resetRemoteScenes()
+    ]);
+    const failed = resetResults.some((result) => result.status === "rejected");
+
+    setStatus(failed ? "Reset lokal abgeschlossen, online prüfen" : "Reset abgeschlossen", failed ? "warning" : "ok");
+    window.setTimeout(() => window.location.reload(), 250);
+  }
+
+  async function resetRemoteInlineContent() {
+    const inlineStore = await waitForInlineStore(2500);
+    if (!inlineStore) return;
+
+    try {
+      if (inlineStore.reset) {
+        await inlineStore.reset(pageId);
+        clearInlineResetPending();
+        return;
+      }
+    } catch (error) {
+      if (!inlineStore.save) throw error;
+    }
+
+    if (inlineStore.save) {
+      await inlineStore.save(pageId, createResetPayload());
+      clearInlineResetPending();
+    }
+  }
+
+  async function resetRemoteScenes() {
+    if (window.AleriaOrteSceneRuntime?.hardReset) {
+      await window.AleriaOrteSceneRuntime.hardReset();
+    }
+  }
+
+  function createResetPayload() {
+    return {
+      contentSchemaVersion: CONTENT_SCHEMA_VERSION,
+      savedAtClient: Date.now(),
+      resetAtClient: Date.now(),
+      meta: normalizeDocumentMeta({}),
+      texts: {},
+      tables: {},
+      ratings: {},
+      images: {},
+      hiddenSections: {}
+    };
+  }
+
+  function markInlineResetPending() {
+    try {
+      window.localStorage.setItem(resetMarkerKey, JSON.stringify({
+        pageId,
+        resetAtClient: Date.now()
+      }));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function clearInlineResetPending() {
+    try {
+      window.localStorage.removeItem(resetMarkerKey);
+    } catch (error) {
+      return;
+    }
+  }
+
+  function hasInlineResetPending() {
+    try {
+      return !!window.localStorage.getItem(resetMarkerKey);
+    } catch (error) {
+      return false;
+    }
+  }
+
   async function hardResetTemplate() {
     const password = window.prompt("Hard Reset ist geschuetzt. Passwort eingeben:");
     if (password !== "2603") {
@@ -1547,6 +2075,7 @@
 
   function removeLocalTemplateKeys() {
     const prefixes = [
+      storageKey,
       `aleria:orte:inline-content:v1:${pageId}`,
       `aleria:orte:inline-content:v2:${pageId}`,
       `aleria:orte:scene-index:${pageId}`,
@@ -1569,11 +2098,19 @@
     if (!store?.subscribe) return;
 
     store.subscribe(pageId, (payload) => {
-      if (!payload) return;
+      if (!payload) {
+        clearInlineResetPending();
+        return;
+      }
       if (!isCompatiblePayload(payload)) {
         setStatus("alte Online-Daten ignoriert");
         return;
       }
+      if (hasInlineResetPending() && !payload.resetAtClient) {
+        setStatus("Reset lokal aktiv, alter Online-Stand ignoriert", "warning");
+        return;
+      }
+      if (payload.resetAtClient) clearInlineResetPending();
 
       if (dirty) {
         pendingLocalPayload = clonePayload();
@@ -1897,6 +2434,7 @@
     return {
       contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
       savedAtClient: Number(source.savedAtClient || source.updatedAtClient) || 0,
+      resetAtClient: Number(source.resetAtClient) || 0,
       meta: normalizeDocumentMeta(source.meta),
       texts: normalizeTextRecord(source.texts),
       tables: normalizeTextRecord(source.tables),

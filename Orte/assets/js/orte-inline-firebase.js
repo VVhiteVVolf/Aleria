@@ -77,6 +77,7 @@ function normalizePayload(payload) {
   return {
     contentSchemaVersion: Number(source.contentSchemaVersion) || 0,
     savedAtClient: Number(source.savedAtClient || source.updatedAtClient) || 0,
+    resetAtClient: Number(source.resetAtClient) || 0,
     meta: normalizeDocumentMeta(source.meta),
     texts: normalizeTextRecord(source.texts),
     images: normalizeImageRecord(source.images),

@@ -1,0 +1,370 @@
+:root {
+  --gruppen-page-bg: #21180f;
+  --gruppen-paper: #efe0c0;
+  --gruppen-paper-light: #fff6dd;
+  --gruppen-paper-strong: #d9bf83;
+  --gruppen-ink: #25190d;
+  --gruppen-muted: #5f4a2e;
+  --gruppen-line: #7d5a25;
+  --gruppen-line-soft: rgba(125, 90, 37, 0.5);
+  --gruppen-border-dark: rgba(55, 35, 15, 0.86);
+  --gruppen-text-light: #fff2cf;
+  --gruppen-panel-dark: #4c3517;
+  --gruppen-panel-mid: #8e682e;
+  --gruppen-panel-muted: #c9ad73;
+  --gruppen-panel-muted-light: #ddc690;
+  --gruppen-panel-light: #ead4a0;
+  --gruppen-gold: #c49a28;
+  --gruppen-max-width: 1580px;
+}
+
+body {
+  color: var(--gruppen-ink);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(196, 154, 40, 0.14), transparent 40rem),
+    linear-gradient(135deg, rgba(255, 244, 210, 0.04) 0 25%, transparent 25% 50%, rgba(255, 244, 210, 0.035) 50% 75%, transparent 75%) 0 0 / 26px 26px,
+    var(--gruppen-page-bg);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.gruppen-page {
+  width: min(100% - 18px, var(--gruppen-max-width));
+  margin: 18px auto;
+}
+
+.gruppen-document {
+  overflow-x: auto;
+  padding: 0 0 0.75rem;
+}
+
+.gruppen-template-frame {
+  width: 1320px !important;
+  max-width: none;
+  border-collapse: collapse;
+  color: var(--gruppen-ink);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 226, 0.62), rgba(222, 195, 142, 0.5)),
+    repeating-linear-gradient(-45deg, rgba(96, 62, 24, 0.025), rgba(96, 62, 24, 0.025) 1px, transparent 1px, transparent 18px),
+    var(--gruppen-paper);
+  border: 2px solid rgba(68, 43, 15, 0.92);
+  box-shadow: 0 20px 55px rgba(9, 6, 2, 0.48);
+}
+
+.gruppen-template-frame th,
+.gruppen-template-frame td {
+  border: 1px solid var(--gruppen-border-dark);
+  padding: 8px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.gruppen-template-frame h2 {
+  margin: 0 0 0.75rem;
+  padding: 6px 8px;
+  color: var(--gruppen-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  border: 1px solid var(--gruppen-border-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.25;
+  scroll-margin-top: 18px;
+}
+
+.gruppen-template-frame h2:target {
+  outline: 2px solid rgba(196, 154, 40, 0.72);
+  outline-offset: 3px;
+}
+
+.gruppen-template-frame h3 {
+  margin: 0.8rem 0 0.5rem;
+  padding: 4px 7px;
+  color: #2a1b0b;
+  background: linear-gradient(90deg, rgba(196, 154, 40, 0.26), rgba(196, 154, 40, 0.06));
+  border-left: 4px solid var(--gruppen-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.gruppen-template-frame p {
+  margin-top: 0;
+  margin-bottom: 0.38rem;
+}
+
+.gruppen-template-frame hr {
+  height: 0;
+  margin: 0.65rem 0;
+  border: 0;
+  border-top: 1px solid var(--gruppen-line-soft);
+}
+
+.gruppen-hero {
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 218, 0.74), rgba(217, 191, 131, 0.76)),
+    var(--gruppen-paper-strong);
+}
+
+.gruppen-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.gruppen-subtitle,
+.gruppen-quote,
+.gruppen-quote-source {
+  color: var(--gruppen-muted);
+}
+
+.gruppen-quote {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.gruppen-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 0.45rem auto 0;
+  color: var(--gruppen-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.gruppen-breadcrumb-separator {
+  color: var(--gruppen-gold);
+}
+
+.gruppen-main-cell {
+  width: 800px;
+  background: var(--gruppen-paper-light);
+}
+
+.gruppen-side-cell,
+.gruppen-infobox-cell {
+  width: 500px;
+  background: var(--gruppen-panel-muted);
+}
+
+.gruppen-section-cell {
+  background: var(--gruppen-paper-light);
+}
+
+.gruppen-info-table,
+.gruppen-hierarchy-table,
+.gruppen-leadership-portrait-table,
+.gruppen-location-table,
+.gruppen-subgroup-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--gruppen-paper-light);
+  table-layout: fixed;
+}
+
+.gruppen-info-table td,
+.gruppen-hierarchy-table td,
+.gruppen-leadership-portrait-table td,
+.gruppen-location-table td,
+.gruppen-subgroup-table td,
+.gruppen-hierarchy-table th,
+.gruppen-location-table th,
+.gruppen-subgroup-table th {
+  border: 1px solid var(--gruppen-border-dark);
+  padding: 7px;
+}
+
+.gruppen-info-title,
+.gruppen-table-title {
+  color: var(--gruppen-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  text-align: center;
+  font-weight: 700;
+}
+
+.gruppen-info-label {
+  width: 34%;
+  color: var(--gruppen-text-light);
+  background: var(--gruppen-panel-mid);
+  font-weight: 700;
+}
+
+.gruppen-info-value {
+  background: var(--gruppen-panel-light);
+  font-weight: 700;
+}
+
+.gruppen-info-subhead,
+.gruppen-section-row,
+.gruppen-hierarchy-table th,
+.gruppen-location-table th,
+.gruppen-subgroup-table th {
+  color: var(--gruppen-text-light);
+  background: linear-gradient(180deg, #755420, #3f2a11);
+  text-align: center;
+  font-weight: 700;
+}
+
+.gruppen-hierarchy-table td,
+.gruppen-location-table td,
+.gruppen-subgroup-table td,
+.gruppen-leadership-portrait-table td {
+  background: var(--gruppen-panel-light);
+}
+
+.gruppen-leadership-portrait-table {
+  table-layout: fixed;
+}
+
+.gruppen-leader-card {
+  text-align: center;
+}
+
+.gruppen-leader-card > b,
+.gruppen-leader-card > p {
+  display: block;
+  margin: 0.45rem 0;
+}
+
+.gruppen-subgroup-table .wappen,
+.gruppen-hierarchy-table .wappen,
+.gruppen-location-table .wappen {
+  width: 112px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.gruppen-symbol-slot {
+  width: 180px;
+  max-width: 180px;
+}
+
+.gruppen-landscape-slot {
+  width: 100%;
+  min-height: 340px;
+}
+
+.gruppen-banner-slot {
+  width: 100%;
+  min-height: 120px;
+}
+
+.gruppen-template-frame .portrait-cell .gruppen-portrait-slot {
+  width: 210px !important;
+  max-width: 210px !important;
+  aspect-ratio: 2 / 3 !important;
+  min-height: 315px !important;
+}
+
+.gruppen-template-frame .wappen .gruppen-icon-slot,
+.gruppen-template-frame .gruppen-icon-slot {
+  width: 82px !important;
+  max-width: 82px !important;
+  aspect-ratio: 1 / 1 !important;
+  min-height: 82px !important;
+}
+
+.gruppen-template-frame .orte-image-slot {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gruppen-template-frame .orte-image-slot img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.gruppen-template-frame .orte-image-slot:empty::before,
+.gruppen-template-frame .orte-image-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border: 1px dashed rgba(77, 45, 14, 0.62);
+  background:
+    linear-gradient(135deg, rgba(255, 244, 203, 0.72), rgba(191, 148, 72, 0.42)),
+    #dfc47f;
+  color: #3b220c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.gruppen-template-frame .orte-image-slot:empty::before {
+  content: attr(data-orte-image-label);
+}
+
+.gruppen-template-frame .wappen .orte-image-placeholder,
+.gruppen-template-frame .wappen .orte-image-slot:empty::before {
+  font-size: 11px;
+}
+
+.gruppen-back-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: var(--gruppen-text-light);
+  background: var(--gruppen-panel-dark);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.gruppen-back-top.is-visible {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gruppen-error {
+  width: min(100% - 32px, 920px);
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--gruppen-paper);
+  border: 1px solid var(--gruppen-border-dark);
+}
+
+.gruppen-error-card,
+.gruppen-registry-entry {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--gruppen-paper-light);
+  border: 1px solid var(--gruppen-line-soft);
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 12px;
+  }
+
+  .gruppen-page {
+    width: 100%;
+    margin: 0;
+  }
+
+  .gruppen-template-frame {
+    width: 1101px !important;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+}
