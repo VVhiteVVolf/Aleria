@@ -168,16 +168,11 @@ async function deleteSceneModuleInsertFromEditor(context = {}) {
   if (!context.commentId) return;
   if (!confirm('Dieses eingefuegte Modul wirklich aus der Szene loeschen?')) return;
   const threadId = context.threadId || getCurrentCommentThreadId();
-  let backend = null;
-  try {
-    backend = await getCommentBackend({ timeoutMs: 1200 });
-    await backend.deleteComment(context.commentId, COMMENT_DELETE_CODE);
-  } catch (error) {
-    if (!backend || backend._localFallback) throw error;
-    const localBackend = getLocalCommentBackend();
-    await localBackend.deleteComment(context.commentId, COMMENT_DELETE_CODE);
-    showCommentFallbackNotice();
+  const backend = await getCommentBackend({ timeoutMs: 1200, preferRemote: true });
+  if (backend?._localFallback) {
+    throw new Error('Firebase ist fuer Szenenmodule gerade nicht erreichbar. Bitte spaeter erneut loeschen, damit nichts nur lokal verschwindet.');
   }
+  await backend.deleteComment(context.commentId, COMMENT_DELETE_CODE);
   setModuleEditorDirtyState(false);
   closeModuleEditor();
   await loadCommentsIntoPage(threadId, true);
@@ -364,25 +359,16 @@ async function submitModuleInsertItem() {
 
   let backend = null;
   try {
-    backend = await getCommentBackend({ timeoutMs: 1200 });
+    backend = await getCommentBackend({ timeoutMs: 1200, preferRemote: true });
+    if (backend?._localFallback) {
+      throw new Error('Firebase ist fuer Szenenmodule gerade nicht erreichbar. Bitte spaeter erneut speichern, damit nichts nur lokal verschwindet.');
+    }
     await backend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
     closeModuleInsertForm();
     await loadCommentsIntoPage(threadId, true, _moduleInsertAfterId ? {} : { page: 'last' });
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
     loadSidebarFeed();
   } catch (error) {
-    if (backend && !backend._localFallback) {
-      try {
-        const localBackend = getLocalCommentBackend();
-        await localBackend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
-        showCommentFallbackNotice();
-        closeModuleInsertForm();
-        await loadCommentsIntoPage(threadId, true, _moduleInsertAfterId ? {} : { page: 'last' });
-        return;
-      } catch (localError) {
-        console.warn('local module insert fallback save failed:', localError);
-      }
-    }
     const message = getFriendlyErrorMessage(error, 'Modul konnte nicht gespeichert werden.');
     errEl.textContent = message;
     errEl.style.display = 'block';
@@ -408,35 +394,6 @@ function openEditModuleInsertForm(commentId) {
     sourceEntryId: item.entry?.id || '',
     narratorText: comment.text || ''
   }, item);
-  return;
-
-  ensureModuleInsertTemplateOptions(item.templateId);
-  setModuleInsertFormValue('mf-template', item.templateId);
-  setModuleInsertFormValue('mf-title', item.title);
-  setModuleInsertFormValue('mf-subtitle', item.subtitle);
-  setModuleInsertFormValue('mf-page-title', item.pageTitle);
-  setModuleInsertFormValue('mf-category', item.category);
-  setModuleInsertFormValue('mf-type', item.type);
-  setModuleInsertFormValue('mf-stamp', item.stamp);
-  setModuleInsertFormValue('mf-image', item.image);
-  setModuleInsertFormValue('mf-symbol', item.symbol);
-  setModuleInsertFormValue('mf-teaser', item.teaser);
-  setModuleInsertFormValue('mf-text', comment.text || '');
-
-  const note = document.getElementById('mf-note');
-  if (note) note.textContent = 'Bearbeitung des eingefuegten Moduls';
-  const error = document.getElementById('mf-error');
-  if (error) {
-    error.textContent = '';
-    error.style.display = 'none';
-  }
-  const submit = document.getElementById('mf-submit');
-  if (submit) {
-    submit.disabled = false;
-    submit.textContent = 'Aenderungen speichern';
-  }
-  updateModuleInsertPreview();
-  activateDialog('module-insert-form-overlay', { initialFocus: '#mf-title' });
 }
 
 async function submitEditModuleInsert() {
@@ -486,7 +443,10 @@ async function submitEditModuleInsert() {
 
   let backend = null;
   try {
-    backend = await getCommentBackend({ timeoutMs: 1200 });
+    backend = await getCommentBackend({ timeoutMs: 1200, preferRemote: true });
+    if (backend?._localFallback) {
+      throw new Error('Firebase ist fuer Szenenmodule gerade nicht erreichbar. Bitte spaeter erneut speichern, damit nichts nur lokal verschwindet.');
+    }
     await backend.updateComment(commentId, {
       text,
       charName: 'Erzaehler',
@@ -501,26 +461,6 @@ async function submitEditModuleInsert() {
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
     loadSidebarFeed();
   } catch (error) {
-    if (backend && !backend._localFallback) {
-      try {
-        const localBackend = getLocalCommentBackend();
-        await localBackend.updateComment(commentId, {
-          text,
-          charName: 'Erzaehler',
-          charTitle: '',
-          portrait: null,
-          narrator: true,
-          ...metadata
-        });
-        showCommentFallbackNotice();
-        closeModuleInsertForm();
-        _editingModuleInsertCommentId = null;
-        await loadCommentsIntoPage(threadId, true);
-        return;
-      } catch (localError) {
-        console.warn('local module insert edit fallback save failed:', localError);
-      }
-    }
     const message = getFriendlyErrorMessage(error, 'Aenderungen konnten nicht gespeichert werden.');
     errEl.textContent = message;
     errEl.style.display = 'block';

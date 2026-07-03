@@ -85,7 +85,9 @@ function normalizeCommentModuleInsertItem(item) {
 }
 
 function getCommentModuleInsertItem(comment) {
-  return normalizeCommentModuleInsertItem(comment?.moduleInsert || comment?.insertedModule || comment?.moduleInsertJson);
+  return normalizeCommentModuleInsertItem(comment?.moduleInsert)
+    || normalizeCommentModuleInsertItem(comment?.insertedModule)
+    || normalizeCommentModuleInsertItem(comment?.moduleInsertJson);
 }
 
 function buildCommentModuleEntry(item) {

@@ -37,7 +37,12 @@
 
     function normalizeCommentModuleInsertForFirestore(source = {}) {
       const next = { ...(source || {}) };
-      if (next.moduleInsert && typeof next.moduleInsert === 'object') {
+      if (typeof next.moduleInsert === 'string' && next.moduleInsert.trim()) {
+        next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
+          ? next.moduleInsertJson
+          : next.moduleInsert;
+        next.moduleInsert = null;
+      } else if (next.moduleInsert && typeof next.moduleInsert === 'object') {
         next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
           ? next.moduleInsertJson
           : JSON.stringify(next.moduleInsert);
@@ -56,12 +61,31 @@
         moduleSectionNodes: Array.isArray(data?.moduleSectionNodes) ? data.moduleSectionNodes : [],
         moduleNodeAssignments: data?.moduleNodeAssignments && typeof data.moduleNodeAssignments === 'object' ? data.moduleNodeAssignments : {},
         moduleSectionMoves: data?.moduleSectionMoves && typeof data.moduleSectionMoves === 'object' ? data.moduleSectionMoves : {},
+        hiddenModuleIds: data?.hiddenModuleIds && typeof data.hiddenModuleIds === 'object' ? data.hiddenModuleIds : {},
+        archiveDashboardInsights: Array.isArray(data?.archiveDashboardInsights) ? data.archiveDashboardInsights : [],
         entryOverrides: data?.entryOverrides && typeof data.entryOverrides === 'object' ? data.entryOverrides : {}
       };
     }
 
     function getModuleEntryDocId(entryId) {
       return encodeURIComponent(String(entryId || '').trim()).replace(/\./g, '%2E');
+    }
+
+    function serializeFirebaseModuleEntry(entry) {
+      return JSON.stringify(entry || null);
+    }
+
+    function readFirebaseModuleEntry(data) {
+      if (typeof data?.entryJson === 'string' && data.entryJson) {
+        try {
+          const parsed = JSON.parse(data.entryJson);
+          return parsed && typeof parsed === 'object' ? parsed : null;
+        } catch (error) {
+          console.warn('module store entry JSON parse failed:', error);
+          return null;
+        }
+      }
+      return data?.entry && typeof data.entry === 'object' ? data.entry : null;
     }
 
     function buildSplitModuleStore(data) {
@@ -88,7 +112,8 @@
               },
               sectionIndex,
               entryIndex,
-              entry,
+              entry: null,
+              entryJson: serializeFirebaseModuleEntry(entry),
               updatedAtClient: normalized.updatedAtClient,
               schemaVersion: 1
             }
@@ -114,7 +139,8 @@
           data: {
             entryId: safeId,
             moduleKind: 'override',
-            entry: { ...entry, id: safeId },
+            entry: null,
+            entryJson: serializeFirebaseModuleEntry({ ...entry, id: safeId }),
             updatedAtClient: normalized.updatedAtClient,
             schemaVersion: 1
           }
@@ -130,6 +156,8 @@
           moduleSectionNodes: normalized.moduleSectionNodes || [],
           moduleNodeAssignments: normalized.moduleNodeAssignments || {},
           moduleSectionMoves: normalized.moduleSectionMoves || {},
+          hiddenModuleIds: normalized.hiddenModuleIds || {},
+          archiveDashboardInsights: normalized.archiveDashboardInsights || [],
           entryOverrideIds
         },
         docs
@@ -144,8 +172,9 @@
       const docsByEntryId = new Map();
       snap.docs.forEach(item => {
         const data = item.data();
-        const entryId = String(data?.entryId || data?.entry?.id || '').trim();
-        if (entryId) docsByEntryId.set(entryId, data);
+        const entry = readFirebaseModuleEntry(data);
+        const entryId = String(data?.entryId || entry?.id || '').trim();
+        if (entryId && entry) docsByEntryId.set(entryId, { ...data, entry });
       });
 
       const customSections = (Array.isArray(manifest.customSections) ? manifest.customSections : [])
@@ -174,6 +203,8 @@
         moduleSectionNodes: Array.isArray(manifest.moduleSectionNodes) ? manifest.moduleSectionNodes : [],
         moduleNodeAssignments: manifest.moduleNodeAssignments || configData?.moduleNodeAssignments || {},
         moduleSectionMoves: manifest.moduleSectionMoves || configData?.moduleSectionMoves || {},
+        hiddenModuleIds: manifest.hiddenModuleIds || configData?.hiddenModuleIds || {},
+        archiveDashboardInsights: Array.isArray(manifest.archiveDashboardInsights) ? manifest.archiveDashboardInsights : [],
         entryOverrides
       };
     }
@@ -207,6 +238,8 @@
         moduleSectionNodes: normalized.moduleSectionNodes || [],
         moduleNodeAssignments: normalized.moduleNodeAssignments || {},
         moduleSectionMoves: normalized.moduleSectionMoves || {},
+        hiddenModuleIds: normalized.hiddenModuleIds || {},
+        archiveDashboardInsights: normalized.archiveDashboardInsights || [],
         moduleStoreUpdatedAtClient: normalized.updatedAtClient,
         moduleStoreUpdatedAt: serverTimestamp()
       }, { merge: true });
@@ -572,7 +605,7 @@
       async saveBackupComment(id, data) {
         const safeId = String(id || '').trim();
         if (!safeId) throw new Error('Kommentar ohne ID kann nicht importiert werden.');
-        await setDoc(doc(db, 'comments', safeId), data || {}, { merge: true });
+        await setDoc(doc(db, 'comments', safeId), normalizeCommentModuleInsertForFirestore(data), { merge: true });
       },
       async saveBackupCommentTurn(id, data) {
         const safeId = String(id || data?.threadId || '').trim();

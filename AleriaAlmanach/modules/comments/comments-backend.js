@@ -46,7 +46,12 @@ function makeLocalTimestamp() {
 
 function normalizeCommentModuleInsertForStorage(source = {}) {
   const next = { ...(source || {}) };
-  if (next.moduleInsert && typeof next.moduleInsert === 'object') {
+  if (typeof next.moduleInsert === 'string' && next.moduleInsert.trim()) {
+    next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
+      ? next.moduleInsertJson
+      : next.moduleInsert;
+    next.moduleInsert = null;
+  } else if (next.moduleInsert && typeof next.moduleInsert === 'object') {
     next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
       ? next.moduleInsertJson
       : JSON.stringify(next.moduleInsert);
@@ -220,7 +225,7 @@ function getLocalCommentBackend() {
       if (!key) throw new Error('Kommentar ohne Eintrag kann nicht lokal importiert werden.');
       const store = readLocalCommentStore();
       const comments = (store[key] || []).filter(comment => comment.id !== id);
-      comments.push({ ...(data || {}), id, localOnly: true });
+      comments.push({ ...normalizeCommentModuleInsertForStorage(data), id, localOnly: true });
       store[key] = comments;
       writeLocalCommentStore(store);
     },
