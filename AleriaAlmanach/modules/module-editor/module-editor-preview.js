@@ -68,8 +68,18 @@ function setModuleEditorPreviewPage(index) {
   syncModuleJsonPreview();
 }
 
-function buildModuleEditorPreviewHtml(page, entry) {
-  return buildPage(page, entry, 0, 1).replace(/\s(?:id|onclick)="[^"]*"/g, '');
+function buildModuleEditorPreviewHtml(page, entry, pageIndex = 0, total = 1) {
+  const previousPreviewContext = globalThis._moduleRenderPreviewContext;
+  globalThis._moduleRenderPreviewContext = { entry };
+  try {
+    return buildPage(page, entry, pageIndex, total).replace(/\s(?:id|onclick)="[^"]*"/g, '');
+  } finally {
+    if (previousPreviewContext) {
+      globalThis._moduleRenderPreviewContext = previousPreviewContext;
+    } else {
+      delete globalThis._moduleRenderPreviewContext;
+    }
+  }
 }
 
 function renderModuleEditorPreview(payload = null, errorMessage = '') {
@@ -111,7 +121,7 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   const previewSize = getModuleDisplaySize(previewEntry);
   const previewWidth = Math.round(1280 * (previewSize.width / 100));
   const previewMinHeight = Math.round(960 * (previewSize.height / 100));
-  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry)}</div>`;
+  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
   if (typeof restoreInlinePreviewRuntimeState === 'function') {
     restoreInlinePreviewRuntimeState(previousRuntimeState, frame);
   }

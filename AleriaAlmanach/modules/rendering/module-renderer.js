@@ -79,8 +79,18 @@ function buildInlineModulePreview(page, entry, pageIndex, total) {
     multipage: true
   });
   const previewPage = deepClone(page);
-  return buildPage(previewPage, previewEntry, pageIndex, total)
-    .replace(/\s(?:id|onclick)="[^"]*"/g, '');
+  const previousPreviewContext = globalThis._moduleRenderPreviewContext;
+  globalThis._moduleRenderPreviewContext = { entry: previewEntry };
+  try {
+    return buildPage(previewPage, previewEntry, pageIndex, total)
+      .replace(/\s(?:id|onclick)="[^"]*"/g, '');
+  } finally {
+    if (previousPreviewContext) {
+      globalThis._moduleRenderPreviewContext = previousPreviewContext;
+    } else {
+      delete globalThis._moduleRenderPreviewContext;
+    }
+  }
 }
 
 function buildInlineModuleWorkspace(editorHtml, page, entry, pageIndex, total, extraEditorHtml = '') {
@@ -1444,6 +1454,9 @@ function buildInlineComplexTemplatePage(page, entry, pageIndex, total, type, ext
 }
 
 function buildInlineSessionTemplatePage(page, entry, pageIndex, total) {
+  if (globalThis._moduleRenderPreviewContext?.entry) {
+    return buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'session', '');
+  }
   const commentsHtml = `
     <div class="modal-content-section">
       ${buildEmbeddedCommentsSection(getCommentThreadForPage(page, entry, pageIndex), page.sessionHint || 'Nutze unten den normalen Kommentiermodus, um direkt auf dieser Seite zu schreiben.')}
@@ -1539,14 +1552,18 @@ function buildPage(page, entry, pageIndex, total) {
 }
 
 function buildNav(page, pageIndex, total) {
-  const activeEntry = currentEntry ? getRenderableEntry(currentEntry) : null;
+  const previewContext = globalThis._moduleRenderPreviewContext;
+  const previewOnly = !!previewContext?.entry;
+  const activeEntry = previewOnly
+    ? getRenderableEntry(previewContext.entry)
+    : (currentEntry ? getRenderableEntry(currentEntry) : null);
   const pages = activeEntry ? getPages(activeEntry) : [];
-  const inlineEditing = isInlineEditingEntry(currentEntry);
+  const inlineEditing = !previewOnly && isInlineEditingEntry(currentEntry);
   const currentLabel = getPageNavLabel(page, pageIndex, total);
-  const currentThread = !inlineEditing && activeEntry
+  const currentThread = !previewOnly && !inlineEditing && activeEntry
     ? (getCommentThreadForPage(page, activeEntry, pageIndex) || getInlineCommentThreadForPage(page, activeEntry, pageIndex))
     : null;
-  const commentThreadActions = !inlineEditing ? `
+  const commentThreadActions = !previewOnly && !inlineEditing ? `
       <button class="modal-page-tool" type="button" data-modal-action="export-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare exportieren</button>
       <button class="modal-page-tool" type="button" data-modal-action="import-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare importieren</button>
       <button class="modal-page-tool" type="button" data-modal-action="rescue-current-comment-thread" ${currentThread?.threadId ? '' : 'disabled'}>Kommentare retten</button>` : '';
@@ -1568,7 +1585,9 @@ function buildNav(page, pageIndex, total) {
       <select class="modal-page-tool" title="Modulvorlage wählen" aria-label="Modulvorlage wählen" data-modal-action="apply-inline-template">
         ${buildModuleTemplateOptions(inferModuleTemplateType(activeEntry))}
       </select>` : '';
-  const actions = inlineEditing
+  const actions = previewOnly
+    ? ''
+    : (inlineEditing
     ? `
       ${templateSelect}
       <button class="modal-page-tool" type="button" data-modal-action="save-inline-edit">Speichern</button>
@@ -1579,7 +1598,7 @@ function buildNav(page, pageIndex, total) {
     : `
       <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Export</button>
       ${commentThreadActions}
-      <button class="modal-page-tool" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>`;
+      <button class="modal-page-tool" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>`);
   return `
     <div class="modal-page-header">
       <div class="modal-page-top">

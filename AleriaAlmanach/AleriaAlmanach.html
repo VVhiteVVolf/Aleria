@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/archive.css?v=20260620-module-delete-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260604-story-width-v1">
-<link rel="stylesheet" href="./styles/comments.css?v=20260629-comment-interactions-v8">
+<link rel="stylesheet" href="./styles/comments.css?v=20260703-module-insert-editor-v1">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260611-compact-character-grid-v1">
-<link rel="stylesheet" href="./styles/module-editor.css?v=20260629-hierarchy-groups-v1">
+<link rel="stylesheet" href="./styles/module-editor.css?v=20260703-scene-module-editor-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260618-quest-file-layout-images-v1">
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260618-biography-connection-layout-v1">
@@ -60,7 +60,7 @@
   <script src="./modules/module-store/module-store-sections.js?v=20260620-module-delete-v1" defer></script>
   <script src="./modules/module-store/module-section-management.js?v=20260620-module-delete-v1" defer></script>
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-preview.js?v=20260620-preview-state-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-preview.js?v=20260703-isolated-preview-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-data.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/item-database/item-db-normalizer.js?v=20260625-item-db-config-v1" defer></script>
@@ -100,7 +100,7 @@
   <script src="./modules/module-editor/module-editor-family.js?v=20260629-family-groups-v1" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260620-character-inventory-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20260620-module-delete-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20260703-scene-module-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260623-item-picker-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
@@ -136,7 +136,7 @@
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/family/family-renderer.js?v=20260629-family-groups-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260623-quest-editor-parity-v1" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260703-isolated-preview-v1" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260616-folder-card-polish-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260616-dashboard-insights-v1" defer></script>
@@ -160,7 +160,7 @@
   <script src="./modules/comments/comments-render.js?v=20260629-comment-interactions-v8" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-module-insert-render.js?v=20260703-module-insert-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert-render.js?v=20260703-scene-module-editor-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/comments/comments-page.js?v=20260622-comment-action-icons-v1" defer></script>
@@ -185,7 +185,7 @@
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-module-insert.js?v=20260703-module-insert-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert.js?v=20260703-scene-module-editor-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-segments.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260629-comment-interactions-v2" defer></script>
@@ -273,7 +273,7 @@
 
 <script src="./app.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
-<script src="./module-import-export.js?v=20260620-direct-module-import-v1" defer></script>
+<script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260520-cleanup-v1" defer></script>
 <script src="./modules/comments/comments-segment-events.js?v=20260604-scene-comments-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260613-comment-assistant-v1" defer></script>
@@ -999,7 +999,7 @@
 
     <div class="module-editor-body" id="module-editor-body">
       <div class="module-editor-main">
-        <div class="module-editor-section">
+        <div class="module-editor-section" data-module-editor-scope="global-store">
           <div class="module-editor-kicker">Bereich</div>
           <div class="module-editor-grid">
             <div class="module-editor-field wide">
@@ -1023,14 +1023,14 @@
           </div>
         </div>
 
-        <div class="module-editor-section">
-          <div class="module-editor-kicker">Modul</div>
+        <div class="module-editor-section" data-module-editor-scope="module-fields">
+          <div class="module-editor-kicker" id="me-module-section-kicker">Modul</div>
           <div class="module-editor-grid">
-            <div class="module-editor-field">
+            <div class="module-editor-field" data-module-editor-scene-hidden>
               <label>ID</label>
               <input type="text" id="me-entry-id" placeholder="modul-id">
             </div>
-            <div class="module-editor-field">
+            <div class="module-editor-field" data-module-editor-scene-hidden>
               <label>Icon</label>
               <input type="text" id="me-icon" placeholder="">
             </div>
@@ -1071,7 +1071,7 @@
                 </select>
                 <button class="module-editor-mini-btn" type="button" data-module-editor-action="apply-template">Vorlage anwenden</button>
               </div>
-              <div class="module-editor-help">Ersetzt die Seitenstruktur durch eine bearbeitbare Vorlage. ID, Bereich und Kommentar-Cast bleiben erhalten.</div>
+              <div class="module-editor-help" id="me-template-help">Ersetzt die Seitenstruktur durch eine bearbeitbare Vorlage. ID, Bereich und Kommentar-Cast bleiben erhalten.</div>
             </div>
             <div class="module-editor-field">
               <label>Typ</label>
@@ -1101,7 +1101,7 @@
               <label>Symbol (optional)</label>
               <input type="url" id="me-symbol" placeholder="https://i.imgur.com/...">
             </div>
-            <div class="module-editor-field wide me-cast-field">
+            <div class="module-editor-field wide me-cast-field" data-module-editor-scene-hidden>
               <label>Globaler Kommentar-Cast (optional)</label>
               <input type="text" id="me-session-cast-global" class="me-cast-input" placeholder="gwendolyn-draig, schreier-cw" data-module-editor-action="sync-cast-picker">
               <div class="module-editor-help">Wenn eine Seite keinen eigenen Kommentar-Cast hat, wird diese Standardliste im Kommentarformular verwendet.</div>
@@ -1109,13 +1109,13 @@
             </div>
           </div>
           <div class="module-editor-inline">
-            <label class="module-editor-check"><input type="checkbox" id="me-page-comments-enabled"> Kommentare direkt auf allen Seiten erlauben</label>
-            <label class="module-editor-check"><input type="checkbox" id="me-comments-page" checked> Zusätzliche Kommentarseite anhängen</label>
-            <label class="module-editor-check"><input type="checkbox" id="me-locked"> Als gesperrten Platzhalter behandeln</label>
+            <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-page-comments-enabled"> Kommentare direkt auf allen Seiten erlauben</label>
+            <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-comments-page" checked> Zusätzliche Kommentarseite anhängen</label>
+            <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-locked"> Als gesperrten Platzhalter behandeln</label>
           </div>
         </div>
 
-        <div class="module-editor-section">
+        <div class="module-editor-section" data-module-editor-scope="module-pages">
           <div class="module-editor-inline" style="justify-content:space-between;">
             <div class="module-editor-kicker">Seiten</div>
             <select class="module-editor-mini-btn" data-module-editor-action="add-page" aria-label="Seite hinzufügen">
@@ -1147,7 +1147,7 @@
           <div class="module-editor-pages" id="me-pages"></div>
         </div>
 
-        <div class="module-editor-section">
+        <div class="module-editor-section" data-module-editor-scope="global-store">
           <div class="module-editor-kicker">Import / Export</div>
           <div class="module-editor-help">Die JSON-Ansicht enthält Module oder Modulpakete. Downloads nehmen eingebettete Kommentare mit; Masterpakete enthalten alle Module auf einmal.</div>
           <div class="module-store-size-panel" id="me-module-store-size-panel">
@@ -1219,7 +1219,7 @@
             <button class="module-editor-mini-btn" type="button" id="me-undo-btn" style="display:none" data-module-editor-action="undo-import">Import rückgängig</button>
             <button class="module-editor-mini-btn module-editor-danger" type="button" id="me-delete-btn" style="display:none" data-module-editor-action="delete-module">Modul löschen</button>
             <button class="comment-btn-cancel" type="button" data-module-editor-action="close">Abbrechen</button>
-            <button class="char-save-btn" type="button" data-module-editor-action="save">Speichern</button>
+            <button class="char-save-btn" type="button" id="me-save-btn" data-module-editor-action="save">Speichern</button>
           </div>
         </div>
       </div>

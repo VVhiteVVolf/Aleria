@@ -76,6 +76,27 @@ function updateModuleSizeEditorLabels() {
   if (heightLabel) heightLabel.textContent = `${height}%`;
 }
 
+function applyModuleEditorContextChrome(context = {}) {
+  const isSceneCommentModule = context?.sourceKind === 'scene-comment-module';
+  const overlay = document.getElementById('module-editor-overlay');
+  if (overlay) overlay.dataset.editorContext = isSceneCommentModule ? 'scene-comment-module' : '';
+  const title = document.getElementById('module-editor-title');
+  if (title) title.textContent = isSceneCommentModule
+    ? (context?.mode === 'edit' ? 'Szenenmodul bearbeiten' : 'Szenenmodul einfuegen')
+    : 'Modul-Editor';
+  const saveButton = document.getElementById('me-save-btn');
+  if (saveButton) saveButton.textContent = isSceneCommentModule
+    ? (context?.mode === 'edit' ? 'In Szene speichern' : 'In Szene einfuegen')
+    : 'Speichern';
+  const moduleKicker = document.getElementById('me-module-section-kicker');
+  if (moduleKicker) moduleKicker.textContent = isSceneCommentModule ? 'Darstellung' : 'Modul';
+  const templateHelp = document.getElementById('me-template-help');
+  if (templateHelp) templateHelp.textContent = isSceneCommentModule
+    ? 'Ersetzt nur den Inhalt dieses eingebetteten Szenenmoduls. Bestehende Almanach-Module werden nicht beruehrt.'
+    : 'Ersetzt die Seitenstruktur durch eine bearbeitbare Vorlage. ID, Bereich und Kommentar-Cast bleiben erhalten.';
+  return isSceneCommentModule;
+}
+
 function syncModuleJsonPreview() {
   const output = document.getElementById('me-json');
   if (!output) return;
@@ -101,6 +122,7 @@ function syncModuleJsonPreview() {
 function populateModuleEditor(payload, context, options = {}) {
   _moduleEditorHydrating = true;
   _moduleEditorContext = context;
+  const isSceneCommentModule = applyModuleEditorContextChrome(context);
   const preferredSignature = makeSectionSignature(payload.section || getPreferredEditorSection());
   buildModuleEditorSectionOptions(context?.sectionSignature || preferredSignature);
 
@@ -142,6 +164,9 @@ function populateModuleEditor(payload, context, options = {}) {
   renderModuleEditorPages(payload.entry?.pages?.length ? payload.entry.pages : [createDefaultModulePage()]);
   document.getElementById('me-delete-btn').style.display = context?.mode === 'edit' ? 'inline-block' : 'none';
   document.getElementById('me-delete-btn').textContent = context?.sourceKind === 'custom' ? 'Modul löschen' : 'Änderungen verwerfen';
+  if (isSceneCommentModule) {
+    document.getElementById('me-delete-btn').textContent = 'Aus Szene loeschen';
+  }
   setModuleEditorStatus('');
   syncModuleJsonPreview();
   if (options.resetBaseline === false) {
@@ -162,6 +187,7 @@ function showModuleEditorForm() {
 
 function openModuleEditor(payload, context) {
   _moduleEditorContext = { ...context, payload };
+  applyModuleEditorContextChrome(_moduleEditorContext);
   _moduleEditorPendingCommentImport = null;
   clearModuleEditorUndoSnapshot();
   bindModuleEditorLiveSync();
@@ -253,6 +279,11 @@ async function saveModuleFromEditor() {
   try {
     const payload = collectModuleEditorPayload();
     const context = _moduleEditorContext || { mode: 'new', sourceKind: 'new', sourceEntryId: '' };
+    if (context.sourceKind === 'scene-comment-module') {
+      const validation = assertValidModulePayload(payload, { ...context, skipIdConflict: true });
+      await persistSceneModuleInsertFromEditor({ section: validation.section, entry: validation.entry }, context);
+      return;
+    }
     if (context.mode === 'edit' && context.sourceEntryId) payload.entry.id = context.sourceEntryId;
     const validation = assertValidModulePayload(payload, context);
     const { section, entry } = validation;
@@ -345,6 +376,12 @@ function deleteModuleFromEditorLegacyUnused() {
 function deleteModuleFromEditor() {
   const context = _moduleEditorContext;
   if (!context || context.mode !== 'edit') return;
+  if (context.sourceKind === 'scene-comment-module') {
+    deleteSceneModuleInsertFromEditor(context).catch(error => {
+      setModuleEditorStatus(error.message || 'Szenenmodul konnte nicht geloescht werden.', true);
+    });
+    return;
+  }
   const result = deleteModuleById(context.sourceEntryId, { requireCode: true, deferSave: true });
   if (!result.ok) return;
   saveModuleStore();

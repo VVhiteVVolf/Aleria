@@ -1,6 +1,194 @@
-// Form, preview, save, and edit flow for one-page modules inside scene comments.
+// Form, preview, save, and edit flow for modules embedded in scene comments.
 let _moduleInsertAfterId = null;
 let _editingModuleInsertCommentId = null;
+
+function getSceneModuleInsertSection() {
+  const preferred = typeof getPreferredEditorSection === 'function' ? getPreferredEditorSection() : null;
+  if (preferred) {
+    return {
+      key: preferred.key,
+      tab: preferred.tab || preferred.key,
+      desc: preferred.desc || '',
+      path: getSectionPathParts(preferred),
+      nodeId: preferred.nodeId || ensureModuleNodeForSection(preferred),
+      signature: preferred.signature || makeSectionSignature(preferred)
+    };
+  }
+  return {
+    key: 'Interaktive Szene',
+    tab: 'Interaktive Szene',
+    desc: 'Nur innerhalb der aktuellen interaktiven Szene sichtbar.',
+    path: ['Interaktive Szene']
+  };
+}
+
+function createSceneModuleInsertDraft(existing = {}) {
+  const preferred = getSceneModuleInsertSection();
+  const existingEntry = existing?.entry || existing || {};
+  const draft = existingEntry?.pages?.length
+    ? sanitizeModuleEntry(existingEntry)
+    : createModuleTemplateDraft('story', preferred, {
+        ...existingEntry,
+        id: existingEntry.id || `scene-module-${Date.now()}`,
+        category: existingEntry.category || preferred.key,
+        stamp: existingEntry.stamp || preferred.key,
+        appendCommentsPage: false,
+        enablePageComments: false
+      });
+  draft.id = String(draft.id || `scene-module-${Date.now()}`).trim();
+  draft.category = draft.category || preferred.key;
+  return draft;
+}
+
+function buildSceneModuleInsertEditorPayload(item = null) {
+  const section = getSceneModuleInsertSection();
+  const entry = item?.entry
+    ? createSceneModuleInsertDraft(item.entry)
+    : createSceneModuleInsertDraft();
+  return { section, entry };
+}
+
+function buildSceneModuleInsertContext(overrides = {}) {
+  return {
+    mode: overrides.mode || 'new',
+    sourceKind: 'scene-comment-module',
+    sourceEntryId: overrides.sourceEntryId || '',
+    commentId: overrides.commentId || '',
+    insertAfterId: overrides.insertAfterId || '',
+    threadId: getCurrentCommentThreadId(),
+    narratorText: overrides.narratorText || '',
+    sectionSignature: overrides.sectionSignature || '',
+    skipIdConflict: true
+  };
+}
+
+function openSceneModuleInsertEditor(contextOverrides = {}, item = null) {
+  const payload = buildSceneModuleInsertEditorPayload(item);
+  const context = buildSceneModuleInsertContext({
+    ...contextOverrides,
+    sectionSignature: contextOverrides.sectionSignature || makeSectionSignature(payload.section)
+  });
+  openModuleEditor(payload, context);
+  setModuleEditorStatus(context.mode === 'edit'
+    ? 'Dieses Modul ist nur in dieser interaktiven Szene verankert.'
+    : 'Neues Szenenmodul: Speicherung erfolgt nur in dieser interaktiven Szene.');
+}
+
+function buildSceneModuleInsertItemFromPayload(payload) {
+  const entry = sanitizeModuleEntry(payload?.entry || {});
+  const firstPage = getPages(entry)[0] || {};
+  delete entry.sessionCast;
+  delete entry.sessionCastDetails;
+  entry.locked = false;
+  entry.appendCommentsPage = false;
+  entry.enablePageComments = false;
+  return normalizeCommentModuleInsertItem({
+    entry: {
+      ...entry,
+      appendCommentsPage: false,
+      enablePageComments: false
+    },
+    templateId: inferModuleTemplateType(entry),
+    teaser: firstPage.pageTitle || entry.subtitle || '',
+    pageTitle: firstPage.pageTitle || '',
+    page: firstPage
+  });
+}
+
+function buildSceneModuleInsertMetadata(item, orderKey) {
+  const metadata = {
+    commentMode: 'module-insert',
+    commentKind: 'narrator',
+    avatarKind: 'narrator',
+    characterId: '',
+    emoteIndex: null,
+    commentSegments: null,
+    itemShowcase: null,
+    documentAttachment: null,
+    moduleInsert: item,
+    schemaVersion: 5
+  };
+  if (Number.isFinite(Number(orderKey))) metadata.orderKey = Number(orderKey);
+  return metadata;
+}
+
+async function persistSceneModuleInsertFromEditor(payload, context = {}) {
+  const threadId = context.threadId || getCurrentCommentThreadId();
+  const item = buildSceneModuleInsertItemFromPayload(payload);
+  if (!threadId) throw new Error('Das Modul konnte keiner Szene zugeordnet werden.');
+  if (!item) throw new Error('Bitte mindestens einen Modultitel eintragen.');
+
+  const text = String(context.narratorText || '').trim()
+    || `Der Erzaehler fuegt ein Modul ein: ${item.title}`;
+  if ((text + item.title + item.subtitle).length > COMMENT_MAX_LENGTH) {
+    throw new Error(`Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`);
+  }
+
+  const metadata = buildSceneModuleInsertMetadata(
+    item,
+    context.mode === 'edit' ? undefined : getNextCommentOrderKey(threadId, context.insertAfterId)
+  );
+
+  let backend = null;
+  try {
+    backend = await getCommentBackend({ timeoutMs: 1200 });
+    if (context.mode === 'edit' && context.commentId) {
+      await backend.updateComment(context.commentId, {
+        text,
+        charName: 'Erzaehler',
+        charTitle: '',
+        portrait: null,
+        narrator: true,
+        ...metadata
+      });
+    } else {
+      await backend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
+    }
+  } catch (error) {
+    if (!backend || backend._localFallback) throw error;
+    const localBackend = getLocalCommentBackend();
+    if (context.mode === 'edit' && context.commentId) {
+      await localBackend.updateComment(context.commentId, {
+        text,
+        charName: 'Erzaehler',
+        charTitle: '',
+        portrait: null,
+        narrator: true,
+        ...metadata
+      });
+    } else {
+      await localBackend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
+    }
+    showCommentFallbackNotice();
+  }
+
+  setModuleEditorDirtyState(false);
+  closeModuleEditor();
+  await loadCommentsIntoPage(threadId, true, context.insertAfterId ? {} : { page: 'last' });
+  if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
+  loadSidebarFeed();
+}
+
+async function deleteSceneModuleInsertFromEditor(context = {}) {
+  if (!context.commentId) return;
+  if (!confirm('Dieses eingefuegte Modul wirklich aus der Szene loeschen?')) return;
+  const threadId = context.threadId || getCurrentCommentThreadId();
+  let backend = null;
+  try {
+    backend = await getCommentBackend({ timeoutMs: 1200 });
+    await backend.deleteComment(context.commentId, COMMENT_DELETE_CODE);
+  } catch (error) {
+    if (!backend || backend._localFallback) throw error;
+    const localBackend = getLocalCommentBackend();
+    await localBackend.deleteComment(context.commentId, COMMENT_DELETE_CODE);
+    showCommentFallbackNotice();
+  }
+  setModuleEditorDirtyState(false);
+  closeModuleEditor();
+  await loadCommentsIntoPage(threadId, true);
+  if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
+  loadSidebarFeed();
+}
 
 function setModuleInsertFormValue(id, value) {
   const el = document.getElementById(id);
@@ -104,15 +292,13 @@ function resetModuleInsertForm() {
 function openModuleInsertForm() {
   _moduleInsertAfterId = null;
   _editingModuleInsertCommentId = null;
-  resetModuleInsertForm();
-  activateDialog('module-insert-form-overlay', { initialFocus: '#mf-title' });
+  openSceneModuleInsertEditor();
 }
 
 function openModuleInsertFormAfter(commentId) {
-  openModuleInsertForm();
   _moduleInsertAfterId = String(commentId || '');
-  const note = document.getElementById('mf-note');
-  if (note) note.textContent = 'Modul wird an der gewaehlten Stelle eingefuegt.';
+  _editingModuleInsertCommentId = null;
+  openSceneModuleInsertEditor({ insertAfterId: _moduleInsertAfterId });
 }
 
 function closeModuleInsertForm() {
@@ -220,6 +406,14 @@ function openEditModuleInsertForm(commentId) {
 
   _editingModuleInsertCommentId = String(commentId || '');
   _moduleInsertAfterId = null;
+  openSceneModuleInsertEditor({
+    mode: 'edit',
+    commentId: _editingModuleInsertCommentId,
+    sourceEntryId: item.entry?.id || '',
+    narratorText: comment.text || ''
+  }, item);
+  return;
+
   ensureModuleInsertTemplateOptions(item.templateId);
   setModuleInsertFormValue('mf-template', item.templateId);
   setModuleInsertFormValue('mf-title', item.title);

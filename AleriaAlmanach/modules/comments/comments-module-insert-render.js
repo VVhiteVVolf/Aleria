@@ -1,4 +1,4 @@
-// Rendering and normalization for one-page modules embedded in scene comments.
+// Rendering and normalization for modules embedded in scene comments.
 function getCommentModuleTemplate(templateId = 'story') {
   if (typeof getModuleTemplateDefinition !== 'function') return null;
   return getModuleTemplateDefinition(templateId || 'story');
@@ -16,6 +16,37 @@ function createCommentModuleDefaultPage(templateId = 'story', pageTitle = '') {
 function normalizeCommentModuleInsertItem(item) {
   if (!item || typeof item !== 'object') return null;
   const defaultSize = typeof MODULE_SIZE_DEFAULT === 'number' ? MODULE_SIZE_DEFAULT : 100;
+  if (item.entry && typeof item.entry === 'object') {
+    const entry = sanitizeModuleEntry(item.entry);
+    const pages = getPages(entry);
+    if (!entry.title || !pages.length) return null;
+    const firstPage = pages[0] || {};
+    const templateId = String(item.templateId || inferModuleTemplateType(entry) || 'story').trim();
+    return {
+      templateId,
+      title: String(entry.title || 'Neues Modul').trim(),
+      subtitle: String(entry.subtitle || '').trim(),
+      type: String(entry.type || 'Modul').trim(),
+      category: String(entry.category || 'Interaktive Szene').trim(),
+      stamp: String(entry.stamp || '').trim(),
+      image: String(entry.image || firstPage.image || '').trim(),
+      symbol: String(entry.symbol || '').trim(),
+      icon: String(entry.icon || '').trim(),
+      pageTitle: String(item.pageTitle || firstPage.pageTitle || '').trim(),
+      teaser: String(item.teaser || firstPage.pageTitle || entry.subtitle || '').trim(),
+      moduleWidth: Math.max(60, Math.min(100, Number(entry.moduleWidth) || defaultSize)),
+      moduleHeight: Math.max(60, Math.min(100, Number(entry.moduleHeight) || defaultSize)),
+      page: deepClone(firstPage),
+      entry: sanitizeModuleEntry({
+        ...entry,
+        locked: false,
+        appendCommentsPage: false,
+        enablePageComments: false,
+        sessionCast: [],
+        sessionCastDetails: []
+      })
+    };
+  }
   const template = getCommentModuleTemplate(item.templateId || item.template || 'story') || {};
   const templateId = template.id || 'story';
   const title = String(item.title || template.defaultTitle || 'Neues Modul').trim();
@@ -53,6 +84,16 @@ function getCommentModuleInsertItem(comment) {
 function buildCommentModuleEntry(item) {
   const normalized = normalizeCommentModuleInsertItem(item);
   if (!normalized) return null;
+  if (normalized.entry) {
+    return sanitizeModuleEntry({
+      ...deepClone(normalized.entry),
+      locked: false,
+      appendCommentsPage: false,
+      enablePageComments: false,
+      sessionCast: [],
+      sessionCastDetails: []
+    });
+  }
   return sanitizeModuleEntry({
     id: `scene-module-${Date.now()}`,
     title: normalized.title,
@@ -82,6 +123,7 @@ function renderCommentModuleThumbnail(item) {
 
 function renderCommentModuleInsertCard(item, options = {}) {
   const template = getCommentModuleTemplate(item.templateId) || {};
+  const pageCount = item.entry?.pages?.length || 1;
   const tag = options.interactive === false ? 'div' : 'button';
   const attrs = options.interactive === false
     ? ''
@@ -93,16 +135,23 @@ function renderCommentModuleInsertCard(item, options = {}) {
         <span class="comment-showcase-kicker">Modul · ${escapeHtml(template.label || item.type || 'Template')}</span>
         <span class="comment-showcase-title">${escapeHtml(item.title)}</span>
         ${item.subtitle ? `<span class="comment-showcase-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
-        <span class="comment-showcase-teaser">${escapeHtml(item.teaser || item.pageTitle || 'Einseitiges Modul aus vorhandener Vorlage')}</span>
+        <span class="comment-showcase-teaser">${escapeHtml(item.teaser || item.pageTitle || `${pageCount} Seite${pageCount === 1 ? '' : 'n'} aus vorhandener Vorlage`)}</span>
       </span>
     </${tag}>`;
+}
+
+function renderCommentModulePreviewPages(entry) {
+  const pages = getPages(entry);
+  return pages.map((page, index) => `
+    <div class="comment-module-preview-page">
+      ${pages.length > 1 ? `<div class="comment-module-preview-page-label">Seite ${index + 1} von ${pages.length}</div>` : ''}
+      <div class="comment-module-preview-frame">${buildInlineModulePreview(page, entry, index, pages.length)}</div>
+    </div>`).join('');
 }
 
 function renderCommentModuleInsertProfileContent(item, options = {}) {
   const entry = buildCommentModuleEntry(item);
   if (!entry) return '<div class="comment-module-insert-empty">Modul konnte nicht geladen werden.</div>';
-  const page = getPages(entry)[0];
-  const preview = buildInlineModulePreview(page, entry, 0, 1);
   return `
     <div class="comment-module-profile-card${options.preview ? ' comment-module-profile-preview' : ''}">
       <div class="comment-module-profile-head">
@@ -114,7 +163,7 @@ function renderCommentModuleInsertProfileContent(item, options = {}) {
         ${entry.stamp ? `<div class="showcase-profile-stamp">${escapeHtml(entry.stamp)}</div>` : ''}
       </div>
       <div class="comment-module-preview-stage">
-        <div class="comment-module-preview-frame">${preview}</div>
+        ${renderCommentModulePreviewPages(entry)}
       </div>
     </div>`;
 }

@@ -2764,6 +2764,22 @@
     min-height: 0;
     padding: 0 1.2rem 1.2rem;
   }
+  .comment-module-preview-page {
+    display: grid;
+    gap: 0.55rem;
+  }
+  .comment-module-preview-page + .comment-module-preview-page {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(139,105,20,0.2);
+  }
+  .comment-module-preview-page-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(70, 45, 20, 0.72);
+  }
   .comment-module-preview-frame {
     max-height: min(72vh, 760px);
     overflow: auto;

@@ -126,6 +126,15 @@
   }
   .module-editor-section:first-child { padding-top: 0; }
   .module-editor-section:last-child { border-bottom: none; padding-bottom: 0; }
+  #module-editor-overlay[data-editor-context="scene-comment-module"] [data-module-editor-scope="global-store"] {
+    display: none;
+  }
+  #module-editor-overlay[data-editor-context="scene-comment-module"] [data-module-editor-scene-hidden] {
+    display: none;
+  }
+  #module-editor-overlay[data-editor-context="scene-comment-module"] [data-module-editor-scope="module-fields"] {
+    padding-top: 0;
+  }
   .module-editor-kicker {
     font-family: 'Cinzel', serif;
     font-size: 0.56rem;

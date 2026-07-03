@@ -431,15 +431,22 @@ function applyModuleJsonToEditor() {
     try {
       setModuleEditorUndoSnapshot(collectModuleEditorPayload(), _moduleEditorContext || {}, 'JSON');
     } catch {}
-    _moduleEditorPendingCommentImport = imported.commentBundle;
+    const currentContext = _moduleEditorContext || { mode: 'new', sourceKind: 'new', sourceEntryId: '' };
+    const isSceneModuleContext = currentContext.sourceKind === 'scene-comment-module';
+    _moduleEditorPendingCommentImport = isSceneModuleContext ? null : imported.commentBundle;
+    const editorPayload = isSceneModuleContext
+      ? { section: getSceneModuleInsertSection(), entry: nextPayload.entry }
+      : nextPayload;
     populateModuleEditor({
-      section: nextPayload.section,
-      entry: nextPayload.entry
+      section: editorPayload.section,
+      entry: editorPayload.entry
     }, {
-      ...(_moduleEditorContext || { mode: 'new', sourceKind: 'new', sourceEntryId: '' }),
-      sectionSignature: imported.sectionSignature
+      ...currentContext,
+      sectionSignature: isSceneModuleContext
+        ? (currentContext.sectionSignature || makeSectionSignature(editorPayload.section))
+        : imported.sectionSignature
     }, { resetBaseline: false });
-    setModuleEditorStatus(imported.commentBundle
+    setModuleEditorStatus(!isSceneModuleContext && imported.commentBundle
       ? 'Modulpaket übernommen. Die eingebetteten Kommentare werden beim Speichern importiert.'
       : 'JSON übernommen.');
   } catch (error) {
@@ -459,14 +466,28 @@ function loadModuleJsonFromTextarea() {
     try {
       setModuleEditorUndoSnapshot(collectModuleEditorPayload(), _moduleEditorContext || {}, 'Import');
     } catch {}
-    _moduleEditorPendingCommentImport = imported.commentBundle;
-    populateModuleEditor(nextPayload, {
-      mode: 'new',
-      sourceKind: 'new',
-      sourceEntryId: '',
-      sectionSignature: imported.sectionSignature
-    }, { resetBaseline: false });
-    setModuleEditorStatus(imported.commentBundle
+    const currentContext = _moduleEditorContext || {};
+    const isSceneModuleContext = currentContext.sourceKind === 'scene-comment-module';
+    _moduleEditorPendingCommentImport = isSceneModuleContext ? null : imported.commentBundle;
+    const editorPayload = isSceneModuleContext
+      ? { section: getSceneModuleInsertSection(), entry: nextPayload.entry }
+      : nextPayload;
+    populateModuleEditor(editorPayload, isSceneModuleContext
+      ? {
+          ...currentContext,
+          mode: currentContext.commentId ? 'edit' : 'new',
+          sourceKind: 'scene-comment-module',
+          sectionSignature: currentContext.sectionSignature || makeSectionSignature(editorPayload.section),
+          skipIdConflict: true
+        }
+      : {
+          mode: 'new',
+          sourceKind: 'new',
+          sourceEntryId: '',
+          sectionSignature: imported.sectionSignature
+        },
+      { resetBaseline: false });
+    setModuleEditorStatus(!isSceneModuleContext && imported.commentBundle
       ? 'Modulpaket geladen. Die eingebetteten Kommentare werden beim Speichern importiert.'
       : 'JSON geladen.');
   } catch (error) {
