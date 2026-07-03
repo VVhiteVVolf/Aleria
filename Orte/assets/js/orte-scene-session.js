@@ -157,8 +157,10 @@ function openModuleEditorForCurrent() {
   const states = new Map();
   const hostMap = new Map(hosts.map((host) => [String(host.dataset.orteScene || "").trim(), host]));
   const ortId = String(config.ortId || "ort-vorlage");
-  const indexStorageKey = `aleria:orte:scene-index:${ortId}`;
-  const indexMetaStorageKey = `aleria:orte:scene-index-meta:${ortId}`;
+  const storageNamespace = normalizeStorageToken(config.localStorage?.namespace || "orte", "orte");
+  const commentsScope = normalizeStorageToken(config.localStorage?.commentsScope || storageNamespace, storageNamespace);
+  const indexStorageKey = `aleria:${storageNamespace}:scene-index:${ortId}`;
+  const indexMetaStorageKey = `aleria:${storageNamespace}:scene-index-meta:${ortId}`;
   let sceneOrder = [];
   let sidebar = null;
   let sidebarOpen = false;
@@ -1479,18 +1481,29 @@ function openModuleEditorForCurrent() {
     try {
       window.localStorage.removeItem(getLocalModuleKey(sceneId));
       window.localStorage.removeItem(getLocalModuleMetaKey(sceneId));
-      window.localStorage.removeItem(`aleria:orte:comments:orte:${ortId}:${sceneId}`);
+      window.localStorage.removeItem(`aleria:${storageNamespace}:comments:${commentsScope}:${ortId}:${sceneId}`);
     } catch (error) {
       return;
     }
   }
 
   function getLocalModuleKey(sceneId) {
-    return `aleria:orte:session-module:${ortId}:${sceneId}`;
+    return `aleria:${storageNamespace}:session-module:${ortId}:${sceneId}`;
   }
 
   function getLocalModuleMetaKey(sceneId) {
-    return `aleria:orte:session-module-meta:${ortId}:${sceneId}`;
+    return `aleria:${storageNamespace}:session-module-meta:${ortId}:${sceneId}`;
+  }
+
+  function normalizeStorageToken(value, fallback) {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+    return normalized || fallback;
   }
 
   function getValue(scope, selector) {

@@ -438,20 +438,42 @@
   position: relative;
 }
 
+.orte-inline-editing .orte-table-control-cell {
+  padding-top: max(40px, 0.45rem) !important;
+}
+
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-divider-row-control) {
+  padding-top: 96px !important;
+}
+
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-portrait-layout-row-control) {
+  padding-top: 154px !important;
+}
+
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-personality-row-control) {
+  padding-top: 66px !important;
+}
+
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-table-block-row-control) {
+  padding-top: 112px !important;
+}
+
 .orte-table-row-controls {
   position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 8;
+  left: 6px;
+  top: 6px;
+  z-index: 30;
   display: none;
+  flex-wrap: wrap;
   gap: 2px;
   padding: 2px;
+  max-width: min(260px, calc(100vw - 32px));
   border: 1px solid rgba(81, 49, 16, 0.58);
   background:
     linear-gradient(180deg, rgba(255, 244, 206, 0.96), rgba(219, 185, 113, 0.94)),
     #e7cc8b;
   box-shadow: 0 2px 7px rgba(35, 20, 7, 0.2);
-  transform: translate(calc(-100% - 6px), -50%);
+  transform: none;
 }
 
 .orte-inline-editing .orte-table-row-controls {
@@ -488,22 +510,23 @@
 
 .orte-table-row-controls.is-portrait-layout-row-control {
   flex-direction: column;
-  width: 124px;
+  width: 188px;
+  max-width: 188px;
 }
 
 .orte-table-row-controls.is-portrait-layout-row-control > button {
   width: 100%;
-  min-height: 22px;
-  padding: 2px 5px;
-  font-size: 11px;
+  min-height: 26px;
+  padding: 4px 7px;
+  font-size: 12px;
   line-height: 1.1;
   white-space: normal;
 }
 
 .orte-table-row-controls.is-portrait-layout-row-control .orte-table-layout-control {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
   margin-left: 0;
   padding-left: 0;
   border-left: 0;
@@ -512,13 +535,18 @@
 .orte-table-row-controls.is-portrait-layout-row-control .orte-table-layout-control button {
   width: 100%;
   min-width: 0;
-  height: 22px;
-  font-size: 11px;
+  height: 28px;
+  font-size: 12px;
 }
 
 .orte-table-row-controls.is-portrait-layout-row-control .orte-table-layout-control button[aria-pressed="true"] {
   background: #7c5a22;
   color: #fff2cf;
+}
+
+.orte-table-row-controls.is-portrait-gap-row-control {
+  flex-direction: column;
+  width: 138px;
 }
 
 .orte-table-row-controls.is-divider-row-control {
@@ -532,6 +560,11 @@
   font-size: 11px;
   line-height: 1.1;
   white-space: normal;
+}
+
+.orte-table-row-controls.is-table-block-row-control {
+  flex-direction: column;
+  width: 156px;
 }
 
 .orte-table-heading-color-tool {

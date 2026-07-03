@@ -26,6 +26,9 @@ Organisationen und Gruppen/
 - Neue konkrete Gruppen bekommen einen eigenen Ordner.
 - Die fachlichen Daten liegen im jeweiligen Ordner in `gruppe.data.js`.
 - Der Eintrag in `gruppen.registry.js` verweist auf diese Datendatei.
+- Grosse Organisationen nutzen standardmaessig `gruppe.html`.
+- Kleine Gruppierungen, Trupps, Zellen oder Einsatzgruppen koennen `page: "kleingruppe.html"` setzen.
+- Speicherorte und Firebase-Dokument-IDs sind in `gruppen-storage.md` dokumentiert.
 - Die `hierarchy` dokumentiert den fachlichen Pfad.
 - `classification.parentGroupId` verweist auf die direkte Obergruppe, wenn es eine gibt.
 - `classification.rootGroupId` verweist auf die oberste Gruppe der Kette.
@@ -40,6 +43,7 @@ Organisationen und Gruppen/
   name: "Schwarzfische I. Trupp",
   status: "draft",
   type: "troop",
+  page: "kleingruppe.html",
   data: "Gilden/Windreiter/Windreiter-Estryll/Schwarzfische/Schwarzfische_I_Trupp/gruppe.data.js",
   hierarchy: [
     { type: "Sammlung", name: "Organisationen und Gruppen", slug: "organisationen-und-gruppen" },

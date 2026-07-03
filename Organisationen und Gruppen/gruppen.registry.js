@@ -38,6 +38,27 @@
       ],
       tags: ["gruppen", "organisationen", "gilden", "orden", "kulte", "vorlage"],
     },
+    {
+      id: "kleingruppen-vorlage",
+      slug: "kleingruppen-vorlage",
+      aliases: [
+        "untergruppen-vorlage",
+        "kleine-gruppe-vorlage",
+        "trupp-zelle-banner-vorlage",
+      ],
+      name: "Kleingruppen-Vorlage",
+      status: GROUP_STATUS.TEMPLATE,
+      type: GROUP_TYPES.TROOP,
+      page: "kleingruppe.html",
+      data: "data/kleingruppen-vorlage.data.js",
+      inlineCollection: "organisationen_und_gruppen_inline_content",
+      sceneCollection: "organisationen_und_gruppen_scenes",
+      hierarchy: [
+        { type: "Sammlung", name: "Organisationen und Gruppen", slug: "organisationen-und-gruppen" },
+        { type: "Vorlage", name: "Kleine Gruppierungen / Trupps / Zellen", slug: "kleingruppen-vorlage" },
+      ],
+      tags: ["gruppen", "untergruppen", "trupps", "zellen", "banner", "vorlage"],
+    },
   ].map(Object.freeze);
 
   function all() {
@@ -58,7 +79,7 @@
 
   function linkFor(id) {
     const group = byId(id);
-    return group ? `gruppe.html?gruppe=${encodeURIComponent(group.id)}` : `gruppe.html?gruppe=${encodeURIComponent(id)}`;
+    return group ? `${group.page || "gruppe.html"}?gruppe=${encodeURIComponent(group.id)}` : `gruppe.html?gruppe=${encodeURIComponent(id)}`;
   }
 
   function normalizeId(value) {

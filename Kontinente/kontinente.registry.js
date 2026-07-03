@@ -1,0 +1,46 @@
+window.KONTINENTE_REGISTRY = [
+  {
+    id: "koenigreich-vorlage",
+    name: "Königreich-Vorlage",
+    type: "Königreich",
+    status: "template",
+    page: "_template/KoenigreichTemplate.html",
+    data: "data/koenigreich-vorlage.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Vorlage", name: "Königreich-Vorlage", slug: "koenigreich-vorlage" },
+    ],
+  },
+  {
+    id: "grafschaft-vorlage",
+    name: "Grafschaft-Vorlage",
+    type: "Grafschaft",
+    status: "template",
+    page: "_template/GrafschaftTemplate.html",
+    data: "data/grafschaft-vorlage.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Vorlage", name: "Grafschaft-Vorlage", slug: "grafschaft-vorlage" },
+    ],
+  },
+  {
+    id: "koenigreich-cenyr",
+    slug: "cenyr",
+    aliases: ["koenigreich-von-cenyr", "konigreich-cenyr", "cenyr"],
+    name: "Das Königreich von Cenyr",
+    type: "Königreich",
+    page: "Estryll/Königreich Cenyr/Königreich von Cenyr.html",
+    data: "Estryll/Königreich Cenyr/koenigreich.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Kontinent", name: "Estryll", slug: "estryll" },
+      { type: "Königreich", name: "Cenyr", slug: "cenyr" },
+    ],
+  },
+];

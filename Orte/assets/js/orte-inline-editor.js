@@ -6,9 +6,12 @@
 
   const pageId = getPageId();
   const CONTENT_SCHEMA_VERSION = 2;
-  const storageKey = `aleria:orte:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`;
-  const statusPositionKey = `aleria:orte:inline-status-position:${pageId}`;
-  const resetMarkerKey = `aleria:orte:inline-reset:${pageId}`;
+  const inlineStorageConfig = getInlineStorageConfig();
+  const storageNamespace = inlineStorageConfig.namespace;
+  const storageKey = getInlineContentStorageKey(storageNamespace, CONTENT_SCHEMA_VERSION);
+  const legacyStorageKeys = getLegacyInlineContentStorageKeys();
+  const statusPositionKey = `aleria:${storageNamespace}:inline-status-position:${pageId}`;
+  const resetMarkerKey = `aleria:${storageNamespace}:inline-reset:${pageId}`;
   const state = { texts: {}, images: {}, ratings: {}, tables: {}, hiddenSections: {}, meta: normalizeDocumentMeta(window.ORT_DATA?.meta || {}) };
   const textItems = [];
   const imageItems = [];
@@ -54,8 +57,11 @@
     "insert-orte-table-heading-row-after",
     "pick-orte-table-heading-color",
     "set-orte-portrait-column-count",
+    "insert-orte-table-empty-row-after",
     "insert-orte-table-row-before",
     "insert-orte-table-row-after",
+    "insert-orte-table-block-after",
+    "remove-orte-table-block",
     "remove-orte-table-row",
     "format-orte-text",
     "clear-orte-text-format",
@@ -418,8 +424,26 @@
       return;
     }
 
+    if (action === "insert-orte-table-empty-row-after") {
+      insertTableEmptyRowNear(target, "after");
+      event.preventDefault();
+      return;
+    }
+
     if (action === "insert-orte-table-row-before" || action === "insert-orte-table-row-after") {
       insertTableRowNear(target, action === "insert-orte-table-row-before" ? "before" : "after");
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "insert-orte-table-block-after") {
+      insertTableBlockNear(target, "after");
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "remove-orte-table-block") {
+      removeTableBlockNear(target);
       event.preventDefault();
       return;
     }
@@ -625,7 +649,8 @@
   }
 
   function collectSectionItems() {
-    const headings = Array.from(root.querySelectorAll(".grossstadt-template-frame h2"));
+    const sectionHeadingSelector = ".grossstadt-template-frame h2, .kingdom-section-heading";
+    const headings = Array.from(root.querySelectorAll(sectionHeadingSelector));
     const activeIds = new Set();
     headings.forEach((heading, index) => {
       const row = heading.closest("tr");
@@ -635,7 +660,7 @@
       const rows = [];
       let currentRow = row;
       while (currentRow) {
-        if (currentRow !== row && currentRow.querySelector("h2")) break;
+        if (currentRow !== row && currentRow.querySelector(sectionHeadingSelector)) break;
         rows.push(currentRow);
         currentRow = currentRow.nextElementSibling;
       }
@@ -655,11 +680,14 @@
   }
 
   function getEditableCandidates() {
-    return Array.from(root.querySelectorAll("h2, h3, details > summary > span, p, td, th, li"))
+    const explicitEditableSelector = "[data-orte-explicit-inline], [data-orte-portrait-field]";
+    return Array.from(root.querySelectorAll(`${explicitEditableSelector}, h2, h3, details > summary > span, p, td, th, li`))
       .filter((node) => !isInsideIgnoredSurface(node))
       .filter((node) => !node.closest("[data-orte-image-key], [data-orte-rating-key]"))
       .filter((node) => !node.closest(".orte-cell-editable"))
       .filter((node) => !node.matches(".place-spacer"))
+      .filter((node) => !node.matches(".orte-portrait-layout-spacer"))
+      .filter((node) => node.matches(explicitEditableSelector) || !node.querySelector(explicitEditableSelector))
       .filter((node) => !node.querySelector("table, h2, h3, summary, p, td, th, li, [data-orte-image-key], [data-orte-rating-key]"))
       .filter((node) => normalizeWhitespace(node.textContent));
   }
@@ -776,14 +804,15 @@
       const label = getImageSlotLabel(image);
       const key = image.dataset.orteInlineImageKey || makeKey(getImageKeyPrefix(image));
       const slot = document.createElement("span");
-      slot.className = "orte-image-slot has-image";
+      const source = image.getAttribute("src") || "";
+      slot.className = source && !isPlaceholderImage(image) ? "orte-image-slot has-image" : "orte-image-slot";
       slot.dataset.orteImageKey = key;
       slot.dataset.orteImageLabel = label;
       slot.setAttribute("aria-label", label);
       image.dataset.orteInlineImageKey = key;
       image.replaceWith(slot);
       slot.appendChild(image);
-      if (isPlaceholderImage(image)) {
+      if (!source || isPlaceholderImage(image)) {
         state.images[key] = normalizeImageState({ src: "", alt: label }, label);
       }
     });
@@ -851,6 +880,11 @@
       item.table.insertAdjacentElement("afterend", control);
       renderRowControls(item.table, item.id);
     });
+  }
+
+  function refreshTableControls() {
+    if (!editMode) return;
+    renderTableControls();
   }
 
   function renderPortraitLayoutControls(table, tableId, rowIndex) {
@@ -1053,6 +1087,24 @@
     markDirty();
   }
 
+  function insertTableEmptyRowNear(button, position) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    if (table.dataset.ortePortraitLayout) {
+      addPortraitGapRow(table, row, position);
+    } else {
+      addGenericEmptyRow(table, row, position);
+    }
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
   function removeTableRowNear(button) {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
@@ -1066,6 +1118,8 @@
       } else {
         removePersonalityRows(table, row);
       }
+    } else if (isPortraitGapRow(row, table)) {
+      row.remove();
     } else if (isGenericHeadingRow(row, table)) {
       removeGenericHeadingRow(table, row);
     } else {
@@ -1119,6 +1173,9 @@
     if (!row) return false;
     ensurePortraitRowKeys(table);
 
+    const columnCount = getPortraitLayoutColumnCount(table);
+    row.querySelectorAll("[data-orte-portrait-spacer]").forEach((cell) => cell.remove());
+
     let cells = getPortraitLayoutCells(row);
     while (cells.length > count) {
       const cell = cells.pop();
@@ -1128,15 +1185,85 @@
     while (cells.length < count) {
       const source = cells[cells.length - 1] || createPortraitLayoutCell();
       const clone = source.cloneNode(true);
-      resetClonedFragment(clone);
+      resetClonedTableBlockRow(clone);
       row.append(clone);
       cells = getPortraitLayoutCells(row);
     }
 
-    getPortraitLayoutCells(row).forEach((cell, index) => normalizePortraitLayoutCell(cell, index, row));
+    cells = getPortraitLayoutCells(row);
+    cells.forEach((cell, index) => normalizePortraitLayoutCell(cell, index, row));
+    distributePortraitCells(row, cells, getPortraitLayoutPositions(count, columnCount), columnCount);
+
+    const titleCell = getPortraitLayoutTitleCell(table);
+    if (titleCell) titleCell.colSpan = columnCount;
+
     if (options.persistChoice) row.dataset.ortePortraitCount = String(count);
     else delete row.dataset.ortePortraitCount;
     return true;
+  }
+
+  function getPortraitLayoutColumnCount(table) {
+    const counts = getPortraitLayoutCounts(table);
+    return counts.length ? counts[counts.length - 1] : 1;
+  }
+
+  function getPortraitLayoutPositions(count, columnCount) {
+    const columns = Math.max(1, Number(columnCount) || 1);
+    const amount = Math.max(1, Math.min(columns, Number(count) || 1));
+    if (amount === 1) return [Math.floor(columns / 2)];
+    if (amount === 2) return [0, columns - 1];
+    if (amount >= columns) return Array.from({ length: columns }, (_, index) => index);
+
+    const used = new Set();
+    return Array.from({ length: amount }, (_, index) => {
+      let position = Math.round(index * (columns - 1) / (amount - 1));
+      while (used.has(position) && position < columns - 1) position += 1;
+      while (used.has(position) && position > 0) position -= 1;
+      used.add(position);
+      return position;
+    }).sort((a, b) => a - b);
+  }
+
+  function distributePortraitCells(row, cells, positions, columnCount) {
+    const byPosition = new Map(positions.map((position, index) => [position, cells[index]]));
+    row.replaceChildren(...Array.from({ length: columnCount }, (_, index) => (
+      byPosition.get(index) || createPortraitSpacerCell()
+    )));
+  }
+
+  function createPortraitSpacerCell() {
+    const cell = document.createElement("td");
+    cell.className = "orte-portrait-layout-spacer gruppen-portrait-spacer";
+    cell.dataset.ortePortraitSpacer = "true";
+    cell.innerHTML = "&nbsp;";
+    return cell;
+  }
+
+  function addPortraitGapRow(table, referenceRow, position = "after") {
+    const row = document.createElement("tr");
+    row.dataset.ortePortraitGapRow = "true";
+    const cell = document.createElement("td");
+    cell.className = "orte-portrait-gap-cell gruppen-portrait-gap-cell";
+    cell.colSpan = getPortraitLayoutColumnCount(table);
+    cell.innerHTML = "&nbsp;";
+    row.append(cell);
+    referenceRow.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", row);
+  }
+
+  function addGenericEmptyRow(table, referenceRow, position = "after") {
+    const row = document.createElement("tr");
+    row.dataset.orteGeneratedEmptyRow = "true";
+    const cell = document.createElement("td");
+    cell.className = getGenericEmptyCellClass(table);
+    cell.colSpan = getTableColumnCount(table) || 1;
+    cell.innerHTML = "&nbsp;";
+    row.append(cell);
+    referenceRow.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", row);
+  }
+
+  function getGenericEmptyCellClass(table) {
+    if (table.closest(".gruppen-template-frame")) return "gruppen-table-empty-row";
+    return "orte-table-empty-row";
   }
 
   function getPortraitLayoutCounts(table) {
@@ -1160,6 +1287,18 @@
 
   function isPortraitLayoutRow(row, table) {
     return !!table?.dataset?.ortePortraitLayout && getPortraitLayoutCells(row).length > 0;
+  }
+
+  function isPortraitGapRow(row, table) {
+    if (!table?.dataset?.ortePortraitLayout) return false;
+    if (row?.dataset?.ortePortraitGapRow === "true") return true;
+    const cells = Array.from(row?.cells || []);
+    if (cells.length !== 1) return false;
+    const cell = cells[0];
+    if (cell.tagName === "TH") return false;
+    if (row.querySelector("[data-orte-image-key], [data-orte-rating-key], img")) return false;
+    if (Number(cell.colSpan || 1) < getPortraitLayoutColumnCount(table)) return false;
+    return !normalizeWhitespace(cell.textContent);
   }
 
   function ensurePortraitRowKeys(table) {
@@ -1196,14 +1335,86 @@
       .find((cell) => cell?.classList?.contains("gruppen-table-title") || cell?.classList?.contains("gruppen-section-row")) || null;
   }
 
+  function getContiguousTableBlockRows(table, referenceRow) {
+    if (!table || !referenceRow?.dataset?.orteTableBlock) return [];
+
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    const startIndex = rows.indexOf(referenceRow);
+    if (startIndex < 0) return [];
+
+    const blockId = referenceRow.dataset.orteTableBlock;
+    let firstIndex = startIndex;
+    let lastIndex = startIndex;
+
+    while (firstIndex > 0 && rows[firstIndex - 1]?.dataset?.orteTableBlock === blockId) {
+      firstIndex -= 1;
+    }
+    while (lastIndex < rows.length - 1 && rows[lastIndex + 1]?.dataset?.orteTableBlock === blockId) {
+      lastIndex += 1;
+    }
+
+    return rows.slice(firstIndex, lastIndex + 1);
+  }
+
+  function isTableBlockStart(row, table) {
+    if (!row?.dataset?.orteTableBlock || !table?.tBodies?.[0]) return false;
+    const blockRows = getContiguousTableBlockRows(table, row);
+    return blockRows[0] === row;
+  }
+
+  function getTableBlockStartRows(table) {
+    return Array.from(table?.tBodies?.[0]?.rows || [])
+      .filter((row) => isTableBlockStart(row, table));
+  }
+
+  function getTableBlockType(row) {
+    return row?.dataset?.orteTableBlockType || row?.dataset?.orteTableBlock || "";
+  }
+
+  function resetTableBlockKeys(rows) {
+    const oldToNew = new Map();
+    rows.forEach((row) => {
+      const oldKey = row.dataset.orteTableBlock;
+      if (!oldKey) return;
+      if (!oldToNew.has(oldKey)) {
+        const blockType = row.dataset.orteTableBlockType || oldKey.replace(/-\d+$/, "");
+        oldToNew.set(oldKey, `${blockType}-${Date.now().toString(36)}-${oldToNew.size + 1}`);
+      }
+      row.dataset.orteTableBlock = oldToNew.get(oldKey);
+    });
+  }
+
+  function resetClonedTableBlockRow(row) {
+    row.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
+    row.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
+      node.removeAttribute("contenteditable");
+      node.removeAttribute("data-orte-inline-text");
+    });
+    row.querySelectorAll("[data-orte-image-key]").forEach((node) => {
+      node.removeAttribute("data-orte-image-key");
+      node.removeAttribute("data-orte-image-label");
+      node.innerHTML = "";
+    });
+    row.querySelectorAll("[data-orte-rating-key], [data-orte-rating-kind]").forEach((node) => {
+      node.removeAttribute("data-orte-rating-key");
+      node.removeAttribute("data-orte-rating-kind");
+      node.textContent = "...";
+    });
+    row.querySelectorAll("img").forEach((image) => {
+      image.removeAttribute("data-orte-inline-image-key");
+      image.setAttribute("src", "");
+      image.setAttribute("alt", "Bildplatzhalter");
+    });
+  }
+
   function createPortraitLayoutCell() {
     const cell = document.createElement("td");
     cell.className = "portrait-cell gruppen-leader-card";
     cell.innerHTML = `
-      <b>Rolle</b>
+      <b data-orte-portrait-field="title">Rolle</b>
       <span class="orte-image-slot gruppen-portrait-slot" data-orte-image-format="portrait" data-orte-image-max-height="360"></span>
-      <b>Name / Titel</b>
-      <p>Rolle, Rechte, Pflichten und politisches Gewicht.</p>
+      <b data-orte-portrait-field="name">Name / Titel</b>
+      <p data-orte-portrait-field="description">Rolle, Rechte, Pflichten und politisches Gewicht.</p>
     `;
     return cell;
   }
@@ -1250,11 +1461,14 @@
     const bolds = Array.from(cell.querySelectorAll("b"));
     if (bolds[0] && isResetPortraitText(bolds[0].textContent)) bolds[0].textContent = label;
     if (bolds[1] && isResetPortraitText(bolds[1].textContent)) bolds[1].textContent = "Name / Titel";
+    if (bolds[0]) bolds[0].dataset.ortePortraitField = "title";
+    if (bolds[1]) bolds[1].dataset.ortePortraitField = "name";
 
     const paragraph = cell.querySelector("p");
     if (paragraph && isResetPortraitText(paragraph.textContent)) {
       paragraph.textContent = descriptions[index] || descriptions[0];
     }
+    if (paragraph) paragraph.dataset.ortePortraitField = "description";
   }
 
   function isResetPortraitText(text) {
@@ -1319,6 +1533,49 @@
     referenceRow.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
   }
 
+  function insertTableBlockNear(button, position = "after") {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    const blockRows = getContiguousTableBlockRows(table, row);
+    if (!blockRows.length) return;
+
+    const clones = blockRows.map((blockRow) => {
+      const clone = blockRow.cloneNode(true);
+      resetClonedFragment(clone);
+      return clone;
+    });
+    resetTableBlockKeys(clones);
+
+    if (position === "before") {
+      blockRows[0].before(...clones);
+    } else {
+      blockRows[blockRows.length - 1].after(...clones);
+    }
+    updateTableState(table);
+    refreshTableControls();
+  }
+
+  function removeTableBlockNear(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    const blockRows = getContiguousTableBlockRows(table, row);
+    if (!blockRows.length) return;
+
+    const blockType = getTableBlockType(row);
+    const blockCount = getTableBlockStartRows(table)
+      .filter((candidate) => getTableBlockType(candidate) === blockType)
+      .length;
+    if (blockCount <= 1) return;
+
+    blockRows.forEach((blockRow) => blockRow.remove());
+    updateTableState(table);
+    refreshTableControls();
+  }
+
   function removeGenericTableRow(table, row) {
     const cloneableRows = Array.from(table.tBodies[0]?.rows || []).filter((candidate) => isCloneableDataRow(candidate, table));
     if (cloneableRows.length <= 1 || !isCloneableDataRow(row, table)) return;
@@ -1348,9 +1605,11 @@
     const rows = Array.from(table.tBodies[0]?.rows || []);
     rows.forEach((row, index) => {
       const isPortraitRow = isPortraitLayoutRow(row, table);
+      const isPortraitGap = isPortraitGapRow(row, table);
+      const isTableBlock = isTableBlockStart(row, table);
       const canControl = table.classList.contains("pt-s-0067")
         ? isPersonalityGroupStart(row) || isPersonalityDividerRow(row)
-        : isPortraitRow || isCloneableDataRow(row, table) || isGenericHeadingRow(row, table);
+        : isTableBlock || isPortraitRow || isPortraitGap || isCloneableDataRow(row, table) || isGenericHeadingRow(row, table);
       if (!canControl) return;
 
       const cell = row.cells?.[0];
@@ -1363,14 +1622,22 @@
       controls.className = [
         "orte-table-row-controls",
         isPersonalityTable ? "is-personality-row-control" : "",
+        isTableBlock ? "is-table-block-row-control" : "",
         isPortraitRow ? "is-portrait-layout-row-control" : "",
-        isDividerRow || isHeadingRow ? "is-divider-row-control" : ""
+        isPortraitGap ? "is-portrait-gap-row-control" : "",
+        isDividerRow || isHeadingRow || isPortraitGap || isTableBlock ? "is-divider-row-control" : ""
       ].filter(Boolean).join(" ");
       controls.innerHTML = isPersonalityTable
         ? `
           <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile danach einfügen" : "Person danach einfügen"}">${isDividerRow ? "+ Zwischenzeile" : "+ Person"}</button>
           <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="${isDividerRow ? "Zwischenzeile entfernen" : "Person entfernen"}">-</button>
         `
+        : isTableBlock
+          ? `
+            <button type="button" data-action="insert-orte-table-block-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Komplette Sektion danach einfÃ¼gen">+ Sektion</button>
+            <button type="button" data-action="insert-orte-table-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Ãœberschrift danach einfÃ¼gen">+ Ãœberschrift</button>
+            <button type="button" data-action="remove-orte-table-block" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Komplette Sektion entfernen">- Sektion</button>
+          `
         : isHeadingRow
           ? `
             <button type="button" data-action="insert-orte-table-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Überschrift danach einfügen">+ Überschrift</button>
@@ -1384,8 +1651,15 @@
           ? `
             <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile davor einfügen">+ davor</button>
             <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile danach einfügen">+ danach</button>
+            <button type="button" data-action="insert-orte-table-empty-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Leerzeile danach einfügen">+ Leerzeile</button>
             ${renderPortraitLayoutControls(table, tableId, index)}
             <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile entfernen">-</button>
+          `
+        : isPortraitGap
+          ? `
+            <button type="button" data-action="insert-orte-table-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Portraitzeile danach einfügen">+ Portrait</button>
+            <button type="button" data-action="insert-orte-table-empty-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Weitere Leerzeile danach einfügen">+ Leerzeile</button>
+            <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Leerzeile entfernen">-</button>
           `
         : `
           <button type="button" data-action="insert-orte-table-row-before" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile davor einfügen">+</button>
@@ -1428,11 +1702,13 @@
     if (Number(cell.colSpan || 1) < tableWidth) return false;
     return row.dataset.orteGeneratedHeadingRow === "true"
       || cell.classList.contains("gruppen-section-row")
-      || cell.classList.contains("sub-header");
+      || cell.classList.contains("sub-header")
+      || (!!table?.closest?.(".kingdom-frame") && !!normalizeWhitespace(cell.textContent));
   }
 
   function getGenericHeadingCellClass(table) {
     if (table.closest(".gruppen-template-frame")) return "gruppen-section-row";
+    if (table.closest(".kingdom-frame")) return "kingdom-section-row";
     return "sub-header";
   }
 
@@ -2074,16 +2350,7 @@
   }
 
   function removeLocalTemplateKeys() {
-    const prefixes = [
-      storageKey,
-      `aleria:orte:inline-content:v1:${pageId}`,
-      `aleria:orte:inline-content:v2:${pageId}`,
-      `aleria:orte:scene-index:${pageId}`,
-      `aleria:orte:scene-index-meta:${pageId}`,
-      `aleria:orte:session-module:${pageId}:`,
-      `aleria:orte:session-module-meta:${pageId}:`,
-      `aleria:orte:comments:orte:${pageId}:`
-    ];
+    const prefixes = getLocalTemplateKeyPrefixes();
     try {
       Object.keys(window.localStorage)
         .filter((key) => prefixes.some((prefix) => key === prefix || key.startsWith(prefix)))
@@ -2183,6 +2450,7 @@
   function saveLocal(payload) {
     try {
       window.localStorage.setItem(storageKey, JSON.stringify(payload));
+      legacyStorageKeys.forEach((key) => window.localStorage.removeItem(key));
     } catch (error) {
       return;
     }
@@ -2190,7 +2458,13 @@
 
   function loadLocal() {
     try {
-      return JSON.parse(window.localStorage.getItem(storageKey) || "null");
+      const primary = window.localStorage.getItem(storageKey);
+      if (primary) return JSON.parse(primary);
+      for (const key of legacyStorageKeys) {
+        const legacy = window.localStorage.getItem(key);
+        if (legacy) return JSON.parse(legacy);
+      }
+      return null;
     } catch (error) {
       return null;
     }
@@ -2443,6 +2717,60 @@
         .map(([key, image]) => [String(key), normalizeImageState(image, String(key))])),
       hiddenSections: normalizeHiddenSections(source.hiddenSections)
     };
+  }
+
+  function getInlineStorageConfig() {
+    const config = window.AleriaOrteScenes?.localStorage || {};
+    const namespace = normalizeStorageToken(config.namespace || "orte", "orte");
+    const legacyNamespaces = Array.isArray(config.legacyNamespaces)
+      ? config.legacyNamespaces.map((item) => normalizeStorageToken(item, "")).filter(Boolean)
+      : [];
+    const commentsScope = normalizeStorageToken(config.commentsScope || namespace, namespace);
+    return {
+      namespace,
+      legacyNamespaces: Array.from(new Set(legacyNamespaces.filter((item) => item !== namespace))),
+      commentsScope
+    };
+  }
+
+  function getInlineContentStorageKey(namespace, schemaVersion) {
+    return `aleria:${namespace}:inline-content:v${schemaVersion}:${pageId}`;
+  }
+
+  function getLegacyInlineContentStorageKeys() {
+    return inlineStorageConfig.legacyNamespaces.flatMap((namespace) => [
+      getInlineContentStorageKey(namespace, 1),
+      getInlineContentStorageKey(namespace, CONTENT_SCHEMA_VERSION)
+    ]);
+  }
+
+  function getLocalTemplateKeyPrefixes() {
+    const namespaces = Array.from(new Set([storageNamespace, ...inlineStorageConfig.legacyNamespaces]));
+    return namespaces.flatMap((namespace) => {
+      const commentsScope = namespace === storageNamespace ? inlineStorageConfig.commentsScope : "orte";
+      return [
+        `aleria:${namespace}:inline-content:v1:${pageId}`,
+        `aleria:${namespace}:inline-content:v${CONTENT_SCHEMA_VERSION}:${pageId}`,
+        `aleria:${namespace}:inline-reset:${pageId}`,
+        `aleria:${namespace}:inline-status-position:${pageId}`,
+        `aleria:${namespace}:scene-index:${pageId}`,
+        `aleria:${namespace}:scene-index-meta:${pageId}`,
+        `aleria:${namespace}:session-module:${pageId}:`,
+        `aleria:${namespace}:session-module-meta:${pageId}:`,
+        `aleria:${namespace}:comments:${commentsScope}:${pageId}:`
+      ];
+    });
+  }
+
+  function normalizeStorageToken(value, fallback) {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+    return normalized || fallback;
   }
 
   function normalizeTextRecord(record) {

@@ -256,6 +256,30 @@ body {
   border: 2px solid rgba(90, 58, 20, 0.78) !important;
 }
 
+.kingdom-county-family-table,
+.kingdom-county-geography-table {
+  width: min(100%, 847px) !important;
+  table-layout: fixed !important;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 219, 0.55), rgba(207, 169, 88, 0.22)),
+    var(--kingdom-panel-light) !important;
+  border: 2px solid rgba(90, 58, 20, 0.78) !important;
+}
+
+.kingdom-county-family-table td,
+.kingdom-county-geography-table td {
+  padding: 0.35rem 0.45rem !important;
+  border-color: rgba(54, 34, 12, 0.76) !important;
+  text-align: center;
+  vertical-align: top;
+}
+
+.kingdom-county-family-table img,
+.kingdom-county-geography-table img {
+  display: inline-block;
+  object-fit: contain;
+}
+
 .kingdom-council-table tr > td:not([colspan]),
 .kingdom-council-table tr > td[colspan='1'],
 .kingdom-structure-table tr > td:not([colspan]),

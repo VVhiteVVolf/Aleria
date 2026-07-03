@@ -160,6 +160,7 @@
   <script src="./modules/comments/comments-render.js?v=20260629-comment-interactions-v8" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert-render.js?v=20260703-module-insert-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/comments/comments-page.js?v=20260622-comment-action-icons-v1" defer></script>
@@ -184,6 +185,7 @@
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert.js?v=20260703-module-insert-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-segments.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260629-comment-interactions-v2" defer></script>
@@ -564,6 +566,74 @@
   </div>
 </div>
 
+<!-- MODULE INSERT FORM OVERLAY -->
+<div id="module-insert-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="module-insert-form-title" tabindex="-1">
+  <div class="comment-form-card module-insert-form-card">
+    <div class="comment-form-title" id="module-insert-form-title">✦ &nbsp; Modul einfügen &nbsp; ✦</div>
+    <div class="module-insert-form-grid">
+      <div class="module-insert-form-fields">
+        <div>
+          <label>Template</label>
+          <select id="mf-template" data-action="update-module-insert-preview"></select>
+        </div>
+        <div class="comment-form-row">
+          <div style="flex:1;">
+            <label>Titel *</label>
+            <input type="text" id="mf-title" maxlength="90" data-action="update-module-insert-preview">
+          </div>
+          <div style="flex:1;">
+            <label>Seitentitel</label>
+            <input type="text" id="mf-page-title" maxlength="90" data-action="update-module-insert-preview">
+          </div>
+        </div>
+        <div>
+          <label>Untertitel</label>
+          <input type="text" id="mf-subtitle" maxlength="140" data-action="update-module-insert-preview">
+        </div>
+        <div class="comment-form-row">
+          <div style="flex:1;">
+            <label>Kategorie</label>
+            <input type="text" id="mf-category" maxlength="90" data-action="update-module-insert-preview">
+          </div>
+          <div style="flex:1;">
+            <label>Typ</label>
+            <input type="text" id="mf-type" maxlength="90" data-action="update-module-insert-preview">
+          </div>
+        </div>
+        <div>
+          <label>Kurztext für die Karte</label>
+          <textarea id="mf-teaser" rows="2" maxlength="280" placeholder="Kurze Einordnung in der Szene." data-action="update-module-insert-preview"></textarea>
+        </div>
+        <div>
+          <label>Erzählertext</label>
+          <textarea id="mf-text" rows="3" maxlength="1200" placeholder="Der Erzähler fügt ein Modul ein." data-action="update-module-insert-preview"></textarea>
+        </div>
+        <div>
+          <label>Bild-URL</label>
+          <input type="url" id="mf-image" placeholder="https://i.imgur.com/..." data-action="update-module-insert-preview">
+        </div>
+        <div>
+          <label>Symbol-URL</label>
+          <input type="url" id="mf-symbol" placeholder="https://i.imgur.com/..." data-action="update-module-insert-preview">
+        </div>
+        <div>
+          <label>Stempel</label>
+          <input type="text" id="mf-stamp" maxlength="90" placeholder="BEREICH · ORT · WELT" data-action="update-module-insert-preview">
+        </div>
+      </div>
+      <div class="module-insert-form-preview-col">
+        <div class="comment-live-preview" id="mf-preview"></div>
+        <div class="comment-form-draft" id="mf-note"></div>
+      </div>
+    </div>
+    <div id="mf-error" class="comment-form-error" style="display:none"></div>
+    <div class="comment-form-actions">
+      <button class="comment-btn-cancel" type="button" data-action="close-module-insert-form">Abbrechen</button>
+      <button class="comment-btn-submit" id="mf-submit" type="button" data-action="submit-module-insert">Modul einfügen</button>
+    </div>
+  </div>
+</div>
+
 <!-- ATTACHMENT FORM OVERLAY -->
 <div id="attachment-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="attachment-form-title" tabindex="-1">
   <div class="comment-form-card attachment-form-card">
@@ -597,6 +667,14 @@
       <button class="comment-btn-cancel" type="button" data-action="close-attachment-form">Abbrechen</button>
       <button class="comment-btn-submit" id="af-submit" type="button" data-action="submit-attachment">Anhang einfügen</button>
     </div>
+  </div>
+</div>
+
+<!-- MODULE INSERT PROFILE OVERLAY -->
+<div id="module-insert-profile-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Modulvorschau" tabindex="-1">
+  <div class="module-insert-profile-card">
+    <button class="modal-close module-insert-profile-close" type="button" data-action="close-comment-module-insert-profile" aria-label="Schließen">×</button>
+    <div id="mp-body" class="module-insert-profile-body"></div>
   </div>
 </div>
 

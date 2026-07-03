@@ -2,15 +2,19 @@
 const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-comment-form',
   'open-showcase-form',
+  'open-module-insert-form',
   'open-attachment-form',
   'open-comment-form-after',
   'open-showcase-form-after',
+  'open-module-insert-form-after',
   'open-attachment-form-after',
   'open-edit-comment',
   'open-edit-showcase-form',
+  'open-edit-module-insert-form',
   'open-edit-attachment-form',
   'open-delete-confirm',
   'open-comment-showcase-profile',
+  'open-comment-module-insert-profile',
   'set-comment-mode',
   'set-comment-player-filter',
   'set-comment-kind',
@@ -40,12 +44,15 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'reset-comment-reader-settings',
   'close-comment-form',
   'close-showcase-form',
+  'close-module-insert-form',
   'close-attachment-form',
   'close-edit-comment',
   'close-delete-confirm',
   'close-comment-showcase-profile',
+  'close-comment-module-insert-profile',
   'submit-comment',
   'submit-showcase',
+  'submit-module-insert',
   'submit-attachment',
   'submit-edit-comment',
   'confirm-delete-comment'
@@ -67,6 +74,10 @@ function handleCommentFormActionClick(event) {
     openShowcaseForm();
     return;
   }
+  if (action === 'open-module-insert-form') {
+    openModuleInsertForm();
+    return;
+  }
   if (action === 'open-attachment-form') {
     openAttachmentForm();
     return;
@@ -77,6 +88,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'open-showcase-form-after') {
     openShowcaseFormAfter(commentId);
+    return;
+  }
+  if (action === 'open-module-insert-form-after') {
+    openModuleInsertFormAfter(commentId);
     return;
   }
   if (action === 'open-attachment-form-after') {
@@ -91,6 +106,10 @@ function handleCommentFormActionClick(event) {
     openEditShowcaseForm(commentId);
     return;
   }
+  if (action === 'open-edit-module-insert-form') {
+    openEditModuleInsertForm(commentId);
+    return;
+  }
   if (action === 'open-edit-attachment-form') {
     openEditAttachmentForm(commentId);
     return;
@@ -101,6 +120,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'open-comment-showcase-profile') {
     openCommentShowcaseProfile(commentId);
+    return;
+  }
+  if (action === 'open-comment-module-insert-profile') {
+    openCommentModuleInsertProfile(commentId);
     return;
   }
   if (action === 'set-comment-mode') {
@@ -220,6 +243,10 @@ function handleCommentFormActionClick(event) {
     closeShowcaseForm();
     return;
   }
+  if (action === 'close-module-insert-form') {
+    closeModuleInsertForm();
+    return;
+  }
   if (action === 'close-attachment-form') {
     closeAttachmentForm();
     return;
@@ -236,12 +263,20 @@ function handleCommentFormActionClick(event) {
     closeCommentShowcaseProfile();
     return;
   }
+  if (action === 'close-comment-module-insert-profile') {
+    closeCommentModuleInsertProfile();
+    return;
+  }
   if (action === 'submit-comment') {
     submitComment();
     return;
   }
   if (action === 'submit-showcase') {
     submitEditShowcase();
+    return;
+  }
+  if (action === 'submit-module-insert') {
+    submitEditModuleInsert();
     return;
   }
   if (action === 'submit-attachment') {

@@ -2,6 +2,7 @@
 const COMMENT_ACTION_ICONS = {
   comment: 'https://i.imgur.com/II1nzyS.png',
   object: 'https://i.imgur.com/4o2fpMy.png',
+  module: '../IconOrdner/Buttom Icons/Modulicon.png',
   attachment: 'https://i.imgur.com/JAKyimG.png',
   transition: 'https://i.imgur.com/MHOEe96.png',
   time: 'https://i.imgur.com/Q9FVnjc.png',
@@ -23,6 +24,9 @@ function buildCommentActionBar(hintText, options = {}) {
   const scenePollButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-poll-event-btn" type="button" data-scene-poll-action="open-dialog" title="Abstimmung anlegen" aria-label="Abstimmung anlegen">${buildCommentActionIcon('poll')}</button>`
     : '';
+  const moduleInsertButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-module-insert-add-btn" type="button" data-action="open-module-insert-form" title="Modul einfuegen" aria-label="Modul einfuegen">${buildCommentActionIcon('module')}</button>`
+    : '';
   return `
     <div class="comments-form-bar">
       <button class="comments-add-btn comments-action-icon-btn" type="button" data-action="open-comment-form" title="Kommentieren" aria-label="Kommentieren">${buildCommentActionIcon('comment')}</button>
@@ -30,6 +34,7 @@ function buildCommentActionBar(hintText, options = {}) {
       ${sceneTransitionButton}
       ${scenePollButton}
       <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>
+      ${moduleInsertButton}
       <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>
       ${buildCommentQuickToolsToggle()}

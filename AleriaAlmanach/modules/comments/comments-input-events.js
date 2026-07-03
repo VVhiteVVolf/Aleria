@@ -5,6 +5,11 @@ function handleEditCommentInput(event) {
     updateShowcasePreview();
     return;
   }
+  if (field?.dataset?.action === 'update-module-insert-preview') {
+    if (field.id === 'mf-template') applyModuleInsertTemplateDefaults();
+    updateModuleInsertPreview();
+    return;
+  }
   if (field?.dataset?.action === 'update-attachment-preview') {
     updateAttachmentPreview();
     return;

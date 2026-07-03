@@ -96,6 +96,7 @@ function getLocalCommentBackend() {
           : normalizeCommentKind(metadata.commentKind, narrator),
         commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
         itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
+        moduleInsert: metadata.moduleInsert && typeof metadata.moduleInsert === 'object' ? metadata.moduleInsert : null,
         documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
         sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
         sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,

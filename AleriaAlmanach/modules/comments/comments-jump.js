@@ -14,7 +14,7 @@ function getCommentAuthorNames(comment) {
     names.push(name);
   };
 
-  if (comment?.narrator || getCommentShowcaseItem(comment) || getCommentAttachmentItem(comment)) addName('Erzähler');
+  if (comment?.narrator || getCommentShowcaseItem(comment) || getCommentModuleInsertItem(comment) || getCommentAttachmentItem(comment)) addName('Erzähler');
   addName(comment?.charName);
 
   if (Array.isArray(comment?.commentSegments)) {
@@ -155,5 +155,4 @@ function handleCommentJumpSearchKey(event) {
 window.scrollActiveComments = scrollActiveComments;
 window.jumpToLatestCommentByAuthor = jumpToLatestCommentByAuthor;
 window.handleCommentJumpSearchKey = handleCommentJumpSearchKey;
-
 

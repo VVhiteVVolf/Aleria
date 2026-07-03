@@ -15,17 +15,19 @@
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
+    { id: 'uebersicht', pattern: /^1\.\)\s*Übersicht/i },
     { id: 'geschichte', pattern: /^2\.\)\s*Geschichte/i },
     { id: 'kultur', pattern: /^3\.\)\s*Kultur/i },
     { id: 'religion', pattern: /^4\.\)\s*Religion/i },
-    { id: 'politik', pattern: /^5\.\)\s*Politik/i },
-    { id: 'verwaltung', pattern: /^6\.\)\s*Verwaltung/i },
+    { id: 'politik', pattern: /^[45]\.\)\s*Politik/i },
+    { id: 'verwaltung', pattern: /^[56]\.\)\s*Verwaltung/i },
+    { id: 'familien', pattern: /^6\.\)\s*Familien/i },
     { id: 'gesetze', pattern: /^7\.\)\s*Gesetze/i },
-    { id: 'geographie', pattern: /^8\.\)\s*Geographie/i },
+    { id: 'geographie', pattern: /^[78]\.\)\s*Geographie/i },
     { id: 'institutionen', pattern: /^9\.\)\s*Institutionen/i },
-    { id: 'flora-fauna', pattern: /^10\.\)\s*Flora/i },
+    { id: 'flora-fauna', pattern: /^(8|10)\.\)\s*Flora/i },
     { id: 'ahnengalerie', pattern: /^11\.\)\s*Ahneng/i },
-    { id: 'trivia', pattern: /^12\.\)\s*Trivia/i },
+    { id: 'trivia', pattern: /^(9|12)\.\)\s*Trivia/i },
   ];
 
   const headingCandidates = page.querySelectorAll('p');

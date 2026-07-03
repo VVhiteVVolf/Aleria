@@ -1,161 +1,888 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Neues Königreich</title>
-  <link rel="stylesheet" href="../assets/css/koenigreich.css">
+  <link rel="stylesheet" href="../assets/css/koenigreich.css?v=kontinente-inline-20260702b">
+  <link rel="stylesheet" href="../../Orte/assets/css/orte-inline-editor.css?v=inline-controls-20260702a">
+  <script src="../kontinente.registry.js?v=kontinente-inline-20260702b"></script>
+  <script src="../assets/js/kontinente-loader.js?v=kontinente-inline-20260702b"></script>
+  <script type="module" src="../../AleriaAlmanach/firebase.js"></script>
+  <script type="module" src="../../Orte/assets/js/orte-inline-firebase.js?v=kontinente-inline-20260702b"></script>
 </head>
 <body>
-  <main class="kingdom-page" data-page-type="kingdom" data-kingdom="">
-    <table class="kingdom-frame" border="0" cellspacing="5">
-      <caption class="kingdom-title"><span>Neues Königreich</span></caption>
-      <tbody>
-        <tr>
-          <td colspan="5" style="vertical-align:top;width:618px;text-align:center;">
-            <p style="vertical-align:top;"><img alt="Wappen oder Hauptbild" src="" style="height:200px; width:200px"></p>
-          </td>
-        </tr>
-        <tr>
-          <td class="kingdom-content-column" colspan="3" style="vertical-align:top;">
-            <table class="kingdom-toc" border="2" cellspacing="5" style="height:295px; table-layout:auto; width:344px">
-              <tbody>
-                <tr>
-                  <td style="vertical-align:top;">
-                    <p class="kingdom-toc-title">Inhalt</p>
-                    <ol>
-                      <li><a href="#einfuehrung">Einführung</a></li>
-                      <li><a href="#geschichte">Geschichte</a></li>
-                      <li><a href="#kultur">Kultur &amp; Gesellschaft</a></li>
-                      <li><a href="#religion">Religion</a></li>
-                      <li><a href="#politik">Politik</a></li>
-                      <li><a href="#verwaltung">Verwaltung</a></li>
-                      <li><a href="#gesetze">Gesetze</a></li>
-                      <li><a href="#geographie">Geographie</a></li>
-                      <li><a href="#institutionen">Institutionen, Gilden &amp; Orden</a></li>
-                      <li><a href="#flora-fauna">Flora &amp; Fauna</a></li>
-                      <li><a href="#ahnengalerie">Ahnengalerie</a></li>
-                      <li><a href="#trivia">Trivia</a></li>
-                    </ol>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+  <main class="kingdom-page" data-page-type="kingdom" data-kingdom="" data-kontinent-root data-orte-static-template data-default-id="koenigreich-vorlage">
+<table class="kingdom-frame" border="0" cellspacing="5">
+	<caption class="kingdom-title"><span style="font-size:20px; vertical-align:bottom" data-kontinent-title data-orte-explicit-inline>Neues Königreich</span></caption>
+	<tbody>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:618px;text-align:center;">
+			<div class="kingdom-crest-stage">
+				<img class="kingdom-heraldic-figure kingdom-heraldic-figure-left" alt="Bildplatzhalter" aria-hidden="true" src="" />
+				<img class="kingdom-main-crest" alt="Bildplatzhalter" src="" />
+				<img class="kingdom-heraldic-figure kingdom-heraldic-figure-right" alt="Bildplatzhalter" aria-hidden="true" src="" />
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="kingdom-content-column" colspan="3" style="vertical-align:top;">
+			<table class="kingdom-toc" border="2" cellspacing="5" style="height:295px; table-layout:auto; width:344px">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top;width:332px;">
+						<p class="kingdom-toc-title">Inhalt</p>
+						<ol>
+							<li><a href="#einfuehrung">Einf&uuml;hrung</a></li>
+							<li><a href="#geschichte">Geschichte</a></li>
+							<li><a href="#kultur">Kultur &amp; Gesellschaft</a></li>
+							<li><a href="#religion">Religion</a></li>
+							<li><a href="#politik">Politik</a></li>
+							<li><a href="#verwaltung">Verwaltung</a></li>
+							<li><a href="#gesetze">Gesetze</a></li>
+							<li><a href="#geographie">Geographie</a></li>
+							<li><a href="#institutionen">Institutionen, Gilden &amp; Orden</a></li>
+							<li><a href="#flora-fauna">Flora &amp; Fauna</a></li>
+							<li><a href="#ahnengalerie">Ahnengalerie</a></li>
+							<li><a href="#trivia">Trivia</a></li>
+						</ol>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
-            <hr class="kingdom-rule">
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>1.) Einführung</b></span></p>
-            <p>Text folgt.</p>
+			<hr class="kingdom-rule" /><p style="vertical-align:top;"><span style="font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">1.)</span></span><span style="font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">&nbsp;Einf&uuml;hrung</span></span></p>
+<p style="vertical-align:top;text-align:justify;">Text folgt.</p>
+<hr class="kingdom-rule" />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>2.) Geschichte</b></span></p>
-            <p>Text folgt.</p>
+			<p style="vertical-align:top;"><span style="font-size:18px"><span style="font-family:georgia,serif"><span style="font-weight:bolder">2.)</span></span><span style="font-family:georgia,serif"><span style="font-weight:bolder">&nbsp;Geschichte</span></span></span></p>
+<p style="vertical-align:top;">Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>3.) Kultur &amp; Gesellschaft</b></span></p>
-            <p>Text folgt.</p>
+			<p><b style="background-color:rgb(224,224,255); font-family:verdana,arial,helvetica,serif">2.a) Vorgeschichte</b></p>
+<p>Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>4.) Religion</b></span></p>
-            <p>Text folgt.</p>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);"><b>2.b) K&ouml;nigszeit</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);">Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>5.) Politik</b></span></p>
-            <table class="kingdom-council-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
-              <tbody>
-                <tr><td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>Rat des Königs</b></td></tr>
-                <tr>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Amt</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Amt</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Amt</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Amt</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Amt</td>
-                </tr>
-              </tbody>
-            </table>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);"><b>2.c) Kaiserzeit</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);">Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>6.) Verwaltung</b></span></p>
-            <table class="kingdom-structure-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
-              <tbody>
-                <tr><td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>Organisationsstruktur</b></td></tr>
-                <tr>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Bereich</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Bereich</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Bereich</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Bereich</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">Bereich</td>
-                </tr>
-              </tbody>
-            </table>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);"><b>2.a) Gegenwart</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);">Text folgt.</p>
+			</td>
+			<td class="kingdom-sidebar-column" colspan="2" style="vertical-align:top;">
+			<table class="kingdom-infobox" border="1" cellspacing="1" style="border-collapse:collapse; margin-left:auto; margin-right:auto; table-layout:auto; width:380px">
+				<tbody>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(51,51,51);"><span style="color:#ffffff"><span style="font-size:14px"><b>Neues Königreich</b></span></span></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(204,204,204);"><img alt="Bildplatzhalter" src="" style="height:475px; width:300px" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(51,51,51);"><span style="font-size:14px"><span><span style="color:rgb(255,255,255)"><b>Allgemein</b></span></span></span></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><span style="color:rgb(255,255,255)"><b>Name</b></span></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><span style="color:rgb(255,255,255)"><b>Typ</b></span></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Oberhaupt</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Hauptstadt</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:153px;background-color:rgb(51,51,51);text-align:center;"><span style="font-size:14px"><span><span style="color:rgb(255,255,255)"><b>Geographie</b></span></span></span></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><span style="color:rgb(255,255,255)"><b>Region</b></span></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Klima</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Fauna</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Flora</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:153px;background-color:rgb(51,51,51);text-align:center;"><span style="font-size:14px"><span><span style="color:rgb(255,255,255)"><b>Geschichte</b></span></span></span></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><span style="color:rgb(255,255,255)"><b>Jahr ???</b></span></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Jahr ???</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Jahr ???</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:153px;text-align:center;background-color:rgb(51,51,51);"><span style="font-size:14px"><span style="color:rgb(255,255,255)"><b>Kultur</b></span></span></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Volksgruppen</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Religion</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255); font-family:verdana,arial,helvetica,serif">Patrongott</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Bev&ouml;lkerungsdichte</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:125px;background-color:rgb(51,51,51);text-align:center;"><b style="color:rgb(255,255,255); font-size:14px">Handel</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Ressourcen</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:132px;background-color:rgb(102,102,102);"><b style="color:rgb(255,255,255)">Prim&auml;re-Handelspartner</b></td>
+						<td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);width:333px;background-color:rgb(204,204,204);"><b>-</b></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:1009px;"><p style="vertical-align:top;"><b style="font-family:georgia,serif; font-size:18px; font-weight:700">3.) Kultur &amp; Gesellschaft</b></p>
+<p style="vertical-align:top;"><b style="background-color:rgb(224,224,255); font-family:verdana,arial,helvetica,serif">5.a) Bev&ouml;lkerung</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>7.) Gesetze</b></span></p>
-            <p>Text folgt.</p>
+			<p style="vertical-align:top;"><b style="background-color:rgb(224,224,255); font-family:verdana,arial,helvetica,serif">3.b) Subkulturen <i>(Volksgruppen)</i></b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>8.) Geographie</b></span></p>
-            <table class="kingdom-region-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
-              <tbody>
-                <tr><td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>Grafschaften</b></td></tr>
-                <tr>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Region</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Region</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Region</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Region</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Region</td>
-                </tr>
-              </tbody>
-            </table>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>3.b) Nationalsport</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;">Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>9.) Institutionen, Gilden &amp; Orden</b></span></p>
-            <table class="kingdom-guild-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
-              <tbody>
-                <tr><td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>Gilden</b></td></tr>
-                <tr>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Name</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Name</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Name</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Name</td>
-                  <td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);">Name</td>
-                </tr>
-              </tbody>
-            </table>
+			<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>10.) Flora &amp; Fauna</b></span></p>
-            <p>Text folgt.</p>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>3.c) Rittertum</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>11.) Ahnengalerie</b></span></p>
-            <table class="kingdom-ancestor-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
-              <tbody>
-                <tr><td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>Ahnengalerie</b></td></tr>
-              </tbody>
-            </table>
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>3.d) Kunst</b></p>
+<p>Text folgt.</p>
 
-            <p><span style="font-family:georgia,serif; font-size:18px"><b>12.) Trivia</b></span></p>
-            <ul>
-              <li>&nbsp;</li>
-            </ul>
-          </td>
-          <td class="kingdom-sidebar-column" colspan="2" style="vertical-align:top;">
-            <table class="kingdom-infobox" border="1" cellspacing="1" style="border-collapse:collapse; margin-left:auto; margin-right:auto; table-layout:auto; width:380px">
-              <tbody>
-                <tr>
-                  <td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(51,51,51);"><span style="color:#ffffff"><b>Neues Königreich</b></span></td>
-                </tr>
-                <tr>
-                  <td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(204,204,204);"><img alt="Karte" src="" style="height:475px; width:300px"></td>
-                </tr>
-                <tr>
-                  <td colspan="2" style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);text-align:center;background-color:rgb(51,51,51);"><span style="color:#ffffff"><b>Allgemein</b></span></td>
-                </tr>
-                <tr>
-                  <td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);background-color:rgb(102,102,102);"><span style="color:#ffffff"><b>Name</b></span></td>
-                  <td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);background-color:rgb(204,204,204);"><b>-</b></td>
-                </tr>
-                <tr>
-                  <td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);background-color:rgb(102,102,102);"><span style="color:#ffffff"><b>Typ</b></span></td>
-                  <td style="padding:8px;vertical-align:top;border:1px solid rgb(0,0,0);background-color:rgb(204,204,204);"><b>Königreich</b></td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
-  <script src="../assets/js/koenigreich.js" defer></script>
+			<p>Text folgt.</p>
+
+			<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="vertical-align:top;"><b>3.e) Sprache</b></p>
+<p style="vertical-align:top;">Text folgt.</p>
+</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:1009px;"><p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b style="font-family:georgia,serif; font-size:18px; font-weight:700">4.) Religion</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>4.a) Geschichte</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr style="font-family:verdana, arial, helvetica, serif;" />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>4.b) Glaubenskultur</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>4.c) Patrongottheit</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>4.d) Pantheon</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>4.e) Unterschiede, Abweichungen</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:1009px;"><p style="vertical-align:top;"><span style="font-size:18px"><span style="font-family:georgia,serif"><span style="font-weight:bolder">5.)&nbsp;</span></span><span style="font-family:georgia,serif"><span style="font-weight:bolder">Politik</span></span></span></p>
+<div class="rpg_posting" style="vertical-align:top;font-family:Verdana, Arial, Helvetica, serif;">
+			<table class="kingdom-council-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
+				<tbody>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><span style="font-size:16px"><span style="color:rgb(255,255,255)"><span><b>Rat des K&ouml;nigs</b></span></span></span></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(51,51,51);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(51,51,51);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:105px; width:119px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(51,51,51);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:200px; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:200px; width:133px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p style="vertical-align:top;">Text folgt.</p>
+
+						<p style="vertical-align:top;">Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(51,51,51);width:176px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:166px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; vertical-align:top; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:166px;"><b>-</b></td>
+						<td rowspan="3" style="vertical-align:top;text-align:center;background-color:rgb(153,153,153);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:200px; text-align:center; width:133px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="font-family:verdana,arial,helvetica,serif; height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:195px; text-align:center; vertical-align:top; width:130px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:200px; width:133px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;width:176px;">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:1009px;">
+
+			<p style="vertical-align:top;"><span style="font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">6.)&nbsp;</span></span><span style="font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">Verwaltung</span></span></p>
+<p style="vertical-align:top;"><b>6.a) Verwaltungsstruktur</b></p>
+<table class="kingdom-structure-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
+				<tbody>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><span style="color:rgb(255,240,245)"><span style="font-size:14px"><b>Organisationsstruktur</b></span></span></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:120px; vertical-align:top; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+<hr class="kingdom-rule" />
+
+			<p style="vertical-align:top;"><b>6.b) Wirtschaft</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr class="kingdom-rule" />
+
+			<p style="vertical-align:top;"><b>6.c) Verteidigung</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>6.d) Feudalsystem (Knappe, Waffenknecht &amp; Stadtwache)</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr />
+
+			<p style="vertical-align:top;"><b style="font-family:verdana,arial,helvetica,serif">6.e) Heer</b></p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+
+			<ul>
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+			</ul>
+
+			<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:1009px;"><p><span style="background-color:rgb(224,224,255); font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">7.)&nbsp;</span></span><span style="background-color:rgb(224,224,255); font-family:georgia,serif; font-size:18px"><span style="font-weight:bolder">Gesetze</span></span></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>7.a) Zivilgesetze</b></p>
+
+			<ul>
+				<li style="padding:0px;margin:0px;font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;">&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+				</li>
+			</ul>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>7.b) Milit&auml;rgesetze</b></p>
+<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;">Text folgt.</p>
+
+			<ul style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);">
+				<li>&nbsp;</li>
+			</ul>
+<hr />
+
+			<p style="font-family:verdana, arial, helvetica, serif;background-color:rgb(224,224,255);vertical-align:top;"><b>7.a) Religionsgesetze</b></p>
+
+			<ul>
+				<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+				</li>
+				<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+				</li>
+				<li>&nbsp;</li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:255px;"><p style="vertical-align:top;"><span style="font-size:18px; font-weight:bolder"><span style="font-family:georgia,serif">8.) Geographie</span></span></p>
+<p style="vertical-align:top;"><b>8.a) Allgemein</b></p>
+<p style="vertical-align:top;">Text folgt.</p>
+<p style="vertical-align:top;"><b>8.b) Grafschaften</b></p>
+<table class="kingdom-region-table" border="1" cellspacing="1" style="background-color:rgb(224,224,255); font-family:verdana,arial,helvetica,serif; height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
+				<tbody>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:569px; width:365px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><span style="color:rgb(255,240,245)"><span style="font-size:14px"><b>Grafschaften</b></span></span></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:121px; width:118px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:121px; width:97px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:121px; width:111px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:121px; width:117px" /></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:121px; width:125px" /></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td colspan="1" rowspan="3" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b><img alt="Bildplatzhalter" src="" style="height:121px; width:112px" /></b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><b><img alt="Bildplatzhalter" src="" style="height:121px; width:118px" /></b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b><img alt="Bildplatzhalter" src="" style="background-color:rgb(153,0,0); font-family:verdana,arial,helvetica,serif; height:121px; text-align:center; width:121px" /></b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><b><img alt="Bildplatzhalter" src="" style="height:121px; width:109px" /></b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(204,204,204);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><b>-</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:120px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:120px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+
+						<p style="font-family:Verdana, Arial, Helvetica, serif;">Text folgt.</p>
+						</td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><p>Text folgt.</p>
+
+						<p>Text folgt.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:120px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:118px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:118px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:117px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:121px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+
+			</td>
+		</tr><tr>
+			<td colspan="8" style="vertical-align:top;width:618px;"><p><b style="font-family:georgia,serif; font-size:18px; font-weight:700">9.) Institutionen,&nbsp;Gilden &amp; Orden</b></p>
+<table class="kingdom-guild-table" border="1" cellspacing="1" style="height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
+				<tbody>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><span style="color:rgb(255,240,245)"><span style="font-size:14px"><b>Gilden</b></span></span></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:121px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);width:176px;"><b style="color:rgb(255,240,245); font-size:14px">Orden</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><b><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);width:176px;"><b style="color:rgb(255,240,245); font-size:14px">Institute &amp; Organisationen</b></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:176px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:170px;"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);"><b>-</b></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;"><b>-</b></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(102,102,102);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:176px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:170px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="height:122px; width:119px" /></td>
+						<td style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;"><img alt="Bildplatzhalter" src="" style="height:119px; width:100px" /></td>
+						<td colspan="1" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);width:166px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="vertical-align:top;width:255px;"><p style="padding:0px;margin:0px;vertical-align:top;"><b style="font-family:georgia,serif; font-size:18px; font-weight:700">10.) Flora &amp; Fauna</b></p>
+<p style="padding:0px;margin:0px;"><b>10.a) Flora</b></p>
+<p style="padding:0px;margin:0px;">Text folgt.</p>
+<hr class="kingdom-rule" />
+
+			<p style="padding:0px;margin:0px;"><b style="background-color:rgb(224,224,255); font-family:verdana,arial,helvetica,serif">10</b><b>.b) Fauna</b></p>
+<p style="padding:0px;margin:0px;">Text folgt.</p>
+<hr class="kingdom-rule" />
+
+			<p style="padding:0px;margin:0px;">Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<hr class="kingdom-rule" />
+
+			<p style="padding:0px;margin:0px;">Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+<p>Text folgt.</p>
+</td>
+		</tr>
+		<tr>
+			<td colspan="8" style="vertical-align:top;width:618px;"><p><b style="background-color:rgb(224,224,255); font-family:georgia,serif; font-size:18px; font-weight:700">11.) Ahnengalerie</b></p>
+<table class="kingdom-ancestor-table" border="1" cellspacing="1" style="font-family:verdana,arial,helvetica,serif; height:28px; margin-left:auto; margin-right:auto; table-layout:auto; width:847px">
+				<tbody>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(0,0,0);"><span style="color:rgb(255,255,255)"><span style="font-size:14px"><span style="font-weight:bolder">Ahnengalerie der K&ouml;nige</span></span></span></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);"><img alt="Bildplatzhalter" src="" style="border-style:none; height:119px; vertical-align:middle; width:119px" /></td>
+					</tr>
+					<tr>
+						<td colspan="5" style="vertical-align:top;text-align:center;background-color:rgb(153,0,0);">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+</td>
+		</tr>
+		<tr>
+			<td colspan="8" style="vertical-align:top;width:618px;"><p style="vertical-align:top;"><b style="font-family:georgia,serif; font-size:18px; font-weight:700">12.) Trivia</b></p>
+
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</main>
+  <script src="../assets/js/koenigreich.js?v=kontinente-inline-20260702b" defer></script>
+  <script src="../../Orte/assets/js/orte-inline-editor.js?v=inline-controls-20260702a" defer></script>
 </body>
 </html>

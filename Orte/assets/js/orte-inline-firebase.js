@@ -15,6 +15,7 @@ const firebaseConfig = fb.config || {
 
 const collectionName = fb.collection || "orte_inline_content";
 const appName = fb.appName || "orte-inline-content";
+const contentType = fb.contentType || "orte-inline-content";
 const app = getApps().some((item) => item.name === appName)
   ? getApp(appName)
   : initializeApp(firebaseConfig, appName);
@@ -30,7 +31,7 @@ window.OrteInlineFirebase = {
     const normalized = normalizePayload(payload);
     await setDoc(getRef(pageId), {
       id: getDocId(pageId),
-      type: "orte-inline-content",
+      type: contentType,
       schemaVersion: 1,
       data: JSON.stringify(normalized),
       updatedAtClient: Date.now(),

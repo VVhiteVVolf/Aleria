@@ -248,10 +248,17 @@ function renderCommentInsertControl(comment, idx, comments) {
   if (!id) return '';
   const label = idx < comments.length - 1 ? 'Hier nachträglich antworten' : 'Danach antworten';
   const safeId = escapeHtml(id);
+  const currentThreadKind = typeof parseCommentThreadLocation === 'function'
+    ? parseCommentThreadLocation(getCurrentCommentThreadId()).kind
+    : '';
+  const moduleInsertButton = currentThreadKind === 'session'
+    ? `<button type="button" data-action="open-module-insert-form-after" data-comment-id="${safeId}">Modul danach</button>`
+    : '';
   return `
     <div class="comment-insert-control">
       <button type="button" data-action="open-comment-form-after" data-comment-id="${safeId}">${label}</button>
       <button type="button" data-action="open-showcase-form-after" data-comment-id="${safeId}">Objekt danach</button>
+      ${moduleInsertButton}
       <button type="button" data-action="open-attachment-form-after" data-comment-id="${safeId}">Anhang danach</button>
     </div>`;
 }

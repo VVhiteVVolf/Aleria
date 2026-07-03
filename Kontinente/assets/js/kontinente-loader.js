@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  const registry = Array.isArray(window.GRUPPEN_REGISTRY) ? window.GRUPPEN_REGISTRY : [];
+  const registry = Array.isArray(window.KONTINENTE_REGISTRY) ? window.KONTINENTE_REGISTRY : [];
   const loaderScript = document.currentScript;
-  let root = document.querySelector("[data-gruppen-root]");
+  let root = document.querySelector("[data-kontinent-root], [data-page-type='kingdom']");
 
   start();
 
@@ -17,8 +17,8 @@
     }
 
     const docId = normalizeId(entry.docId || entry.id);
-    window.GRUPPEN_CONFIG = {
-      ...(window.GRUPPEN_CONFIG || {}),
+    window.KONTINENTE_CONFIG = {
+      ...(window.KONTINENTE_CONFIG || {}),
       registryEntry: entry,
       docId,
       dataPath: entry.data || "",
@@ -34,22 +34,22 @@
       ortId: docId,
       ortName: entry.name || docId,
       firebase: {
-        collection: entry.sceneCollection || "organisationen_und_gruppen_scenes",
+        collection: entry.sceneCollection || "kontinente_scenes",
       },
       inlineFirebase: {
-        collection: entry.inlineCollection || "organisationen_und_gruppen_inline_content",
-        appName: "gruppen-inline-content",
-        contentType: "gruppen-inline-content",
+        collection: entry.inlineCollection || "kontinente_inline_content",
+        appName: "kontinente-inline-content",
+        contentType: "kontinente-inline-content",
       },
       localStorage: {
-        namespace: "gruppen",
+        namespace: "kontinente",
         legacyNamespaces: ["orte"],
-        commentsScope: "gruppen",
+        commentsScope: "kontinente",
       },
       modules: entry.defaultScenes || {},
     };
 
-    document.title = `${entry.name || "Gruppe"} - Aleria`;
+    document.title = `${entry.name || "Kontinent"} - Aleria`;
     withRoot(() => applyEntryShell(entry, docId));
     loadDataScript(entry);
   }
@@ -57,7 +57,14 @@
   function readRequestedId() {
     const params = new URLSearchParams(window.location.search);
     const fallbackId = getRoot()?.dataset.defaultId || "";
-    return normalizeId(params.get("gruppe") || params.get("group") || params.get("id") || window.location.hash.slice(1) || fallbackId);
+    return normalizeId(
+      params.get("kontinent")
+      || params.get("reich")
+      || params.get("kingdom")
+      || params.get("id")
+      || window.location.hash.slice(1)
+      || fallbackId
+    );
   }
 
   function findEntry(id) {
@@ -69,7 +76,7 @@
   }
 
   function findDefaultEntry() {
-    return registry.find((entry) => entry.id === "gruppen-vorlage") || registry[0] || null;
+    return registry.find((entry) => entry.id === "koenigreich-vorlage") || registry[0] || null;
   }
 
   function loadDataScript(entry) {
@@ -81,19 +88,19 @@
     const script = document.createElement("script");
     script.src = resolveFeaturePath(entry.data);
     script.defer = true;
-    script.dataset.gruppenDataScript = entry.id || "";
-    script.onload = () => notifyDataReady(window.GRUPPEN_DATA || null);
+    script.dataset.kontinenteDataScript = entry.id || "";
+    script.onload = () => notifyDataReady(window.KONTINENTE_DATA || null);
     script.onerror = () => {
-      console.warn(`Gruppendaten konnten nicht geladen werden: ${entry.data}`);
+      console.warn(`Kontinentdaten konnten nicht geladen werden: ${entry.data}`);
       notifyDataReady(null);
     };
     document.head.appendChild(script);
   }
 
   function notifyDataReady(data) {
-    window.dispatchEvent(new CustomEvent("aleria:gruppen:data-ready", {
+    window.dispatchEvent(new CustomEvent("aleria:kontinente:data-ready", {
       detail: {
-        config: window.GRUPPEN_CONFIG,
+        config: window.KONTINENTE_CONFIG,
         data,
       },
     }));
@@ -103,12 +110,13 @@
     const targetRoot = getRoot();
     if (!targetRoot) return;
 
-    targetRoot.dataset.gruppenId = docId;
-    targetRoot.dataset.gruppenName = entry.name || docId;
-    targetRoot.dataset.gruppenType = entry.type || "";
+    targetRoot.dataset.kontinentId = docId;
+    targetRoot.dataset.kontinentName = entry.name || docId;
+    targetRoot.dataset.kontinentType = entry.type || "";
 
-    const title = targetRoot.querySelector("[data-gruppen-title]");
-    if (title) title.textContent = entry.name || docId;
+    targetRoot.querySelectorAll("[data-kontinent-title]").forEach((title) => {
+      title.textContent = entry.name || docId;
+    });
   }
 
   function withRoot(callback) {
@@ -125,7 +133,7 @@
   }
 
   function getRoot() {
-    if (!root) root = document.querySelector("[data-gruppen-root]");
+    if (!root) root = document.querySelector("[data-kontinent-root], [data-page-type='kingdom']");
     return root;
   }
 
@@ -140,15 +148,15 @@
     if (!targetRoot) return;
 
     const message = requestedId
-      ? `Keine Gruppe mit der ID "${escapeHtml(requestedId)}" gefunden.`
-      : "Keine Gruppen-ID angegeben.";
+      ? `Kein Kontinent- oder Reichseintrag mit der ID "${escapeHtml(requestedId)}" gefunden.`
+      : "Keine Kontinent-ID angegeben.";
     targetRoot.innerHTML = `
-      <main class="gruppen-error">
-        <h1>Gruppe nicht gefunden</h1>
+      <main class="kingdom-error">
+        <h1>Eintrag nicht gefunden</h1>
         <p>${message}</p>
-        <section class="gruppen-error-card">
-          <h2>Verfuegbare Gruppen</h2>
-          ${registry.map(renderRegistryLink).join("") || "<p>Keine Gruppen registriert.</p>"}
+        <section class="kingdom-error-card">
+          <h2>Verfügbare Einträge</h2>
+          ${registry.map(renderRegistryLink).join("") || "<p>Keine Kontinente registriert.</p>"}
         </section>
       </main>
     `;
@@ -156,10 +164,11 @@
 
   function renderRegistryLink(entry) {
     const hierarchy = (entry.hierarchy || []).map((item) => item.name).filter(Boolean).join(" / ");
-    const page = entry.page || "gruppe.html";
+    const page = entry.page || "_template/KoenigreichTemplate.html";
+    const href = `${resolveFeaturePath(page)}?kontinent=${encodeURIComponent(entry.id)}`;
     return `
-      <article class="gruppen-registry-entry">
-        <h3><a href="${escapeHtml(page)}?gruppe=${encodeURIComponent(entry.id)}">${escapeHtml(entry.name || entry.id)}</a></h3>
+      <article class="kingdom-registry-entry">
+        <h3><a href="${escapeHtml(href)}">${escapeHtml(entry.name || entry.id)}</a></h3>
         <p>${escapeHtml(hierarchy || "-")}</p>
       </article>
     `;
