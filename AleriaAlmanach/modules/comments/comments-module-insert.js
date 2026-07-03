@@ -95,6 +95,10 @@ function buildSceneModuleInsertItemFromPayload(payload) {
   });
 }
 
+function cloneSceneModuleInsertForStorage(item) {
+  return JSON.parse(JSON.stringify(item || null));
+}
+
 function buildSceneModuleInsertMetadata(item, orderKey) {
   const metadata = {
     commentMode: 'module-insert',
@@ -105,7 +109,7 @@ function buildSceneModuleInsertMetadata(item, orderKey) {
     commentSegments: null,
     itemShowcase: null,
     documentAttachment: null,
-    moduleInsert: item,
+    moduleInsert: cloneSceneModuleInsertForStorage(item),
     schemaVersion: 5
   };
   if (Number.isFinite(Number(orderKey))) metadata.orderKey = Number(orderKey);
@@ -132,6 +136,9 @@ async function persistSceneModuleInsertFromEditor(payload, context = {}) {
   let backend = null;
   try {
     backend = await getCommentBackend({ timeoutMs: 1200 });
+    if (backend?._localFallback) {
+      throw new Error('Firebase ist fuer Szenenmodule gerade nicht erreichbar. Bitte spaeter erneut speichern, damit nichts nur lokal verschwindet.');
+    }
     if (context.mode === 'edit' && context.commentId) {
       await backend.updateComment(context.commentId, {
         text,
@@ -145,21 +152,8 @@ async function persistSceneModuleInsertFromEditor(payload, context = {}) {
       await backend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
     }
   } catch (error) {
-    if (!backend || backend._localFallback) throw error;
-    const localBackend = getLocalCommentBackend();
-    if (context.mode === 'edit' && context.commentId) {
-      await localBackend.updateComment(context.commentId, {
-        text,
-        charName: 'Erzaehler',
-        charTitle: '',
-        portrait: null,
-        narrator: true,
-        ...metadata
-      });
-    } else {
-      await localBackend.addComment(threadId, 'Erzaehler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
-    }
-    showCommentFallbackNotice();
+    console.error('scene module insert remote save failed:', error);
+    throw error;
   }
 
   setModuleEditorDirtyState(false);
