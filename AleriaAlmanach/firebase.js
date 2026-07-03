@@ -35,6 +35,19 @@
       return fallback;
     }
 
+    function normalizeCommentModuleInsertForFirestore(source = {}) {
+      const next = { ...(source || {}) };
+      if (next.moduleInsert && typeof next.moduleInsert === 'object') {
+        next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
+          ? next.moduleInsertJson
+          : JSON.stringify(next.moduleInsert);
+        next.moduleInsert = null;
+      } else if (typeof next.moduleInsertJson !== 'string') {
+        next.moduleInsertJson = '';
+      }
+      return next;
+    }
+
     function normalizeFirebaseModuleStore(data) {
       return {
         version: data?.version || 1,
@@ -346,24 +359,25 @@
       async addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);
         const nowClient = Date.now();
+        const commentMetadata = normalizeCommentModuleInsertForFirestore(metadata);
         return addDoc(collection(db, 'comments'), {
           entryId, charName, charTitle, portrait, text,
           deleteCodeHash, deleteCodeVersion: 1,
           narrator: narrator || false,
-          characterId: metadata.characterId || '',
-          emoteIndex: Number.isInteger(metadata.emoteIndex) ? metadata.emoteIndex : null,
-          avatarKind: metadata.avatarKind || '',
-          commentMode: metadata.commentMode || (narrator ? 'narrator' : 'character'),
-          commentKind: metadata.commentKind || (narrator ? 'narrator' : 'speech'),
-          commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
-          itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
-          moduleInsert: metadata.moduleInsert && typeof metadata.moduleInsert === 'object' ? metadata.moduleInsert : null,
-          moduleInsertJson: typeof metadata.moduleInsertJson === 'string' ? metadata.moduleInsertJson : '',
-          documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
-          sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
-          sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
-          scenePoll: metadata.scenePoll && typeof metadata.scenePoll === 'object' ? metadata.scenePoll : null,
-          orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
+          characterId: commentMetadata.characterId || '',
+          emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
+          avatarKind: commentMetadata.avatarKind || '',
+          commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
+          commentKind: commentMetadata.commentKind || (narrator ? 'narrator' : 'speech'),
+          commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
+          itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
+          moduleInsert: null,
+          moduleInsertJson: commentMetadata.moduleInsertJson || '',
+          documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
+          sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
+          sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
+          scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
+          orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
           createdAtClient: nowClient,
           activityAtClient: nowClient,
           activityAt: serverTimestamp(),
@@ -509,8 +523,9 @@
       async updateComment(docId, updates) {
         const { setDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         const nowClient = Date.now();
+        const safeUpdates = normalizeCommentModuleInsertForFirestore(updates);
         await setDoc(doc(db, 'comments', docId), {
-          ...updates,
+          ...safeUpdates,
           updatedAtClient: nowClient,
           activityAtClient: nowClient,
           updatedAt: serverTimestamp(),

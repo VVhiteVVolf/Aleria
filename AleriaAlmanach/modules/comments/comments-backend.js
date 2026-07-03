@@ -44,6 +44,19 @@ function makeLocalTimestamp() {
   return { seconds: Math.floor(Date.now() / 1000), local: true };
 }
 
+function normalizeCommentModuleInsertForStorage(source = {}) {
+  const next = { ...(source || {}) };
+  if (next.moduleInsert && typeof next.moduleInsert === 'object') {
+    next.moduleInsertJson = typeof next.moduleInsertJson === 'string' && next.moduleInsertJson
+      ? next.moduleInsertJson
+      : JSON.stringify(next.moduleInsert);
+    next.moduleInsert = null;
+  } else if (typeof next.moduleInsertJson !== 'string') {
+    next.moduleInsertJson = '';
+  }
+  return next;
+}
+
 function makeLocalSceneTransitionComment(entryId, text, deleteCode, metadata, nowClient) {
   return {
     id: makeLocalCommentId(),
@@ -78,6 +91,7 @@ function getLocalCommentBackend() {
       const store = readLocalCommentStore();
       const comments = Array.isArray(store[key]) ? store[key] : [];
       const nowClient = Date.now();
+      const commentMetadata = normalizeCommentModuleInsertForStorage(metadata);
       comments.push({
         id: makeLocalCommentId(),
         entryId: key,
@@ -87,22 +101,22 @@ function getLocalCommentBackend() {
         text,
         deleteCode: String(deleteCode || '').trim().toUpperCase(),
         narrator: !!narrator,
-        characterId: metadata.characterId || '',
-        emoteIndex: Number.isInteger(metadata.emoteIndex) ? metadata.emoteIndex : null,
-        avatarKind: metadata.avatarKind || '',
-        commentMode: metadata.commentMode || (narrator ? 'narrator' : 'character'),
-        commentKind: metadata.commentKind === 'scene-time-event'
+        characterId: commentMetadata.characterId || '',
+        emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
+        avatarKind: commentMetadata.avatarKind || '',
+        commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
+        commentKind: commentMetadata.commentKind === 'scene-time-event'
           ? 'scene-time-event'
-          : normalizeCommentKind(metadata.commentKind, narrator),
-        commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
-        itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
-        moduleInsert: metadata.moduleInsert && typeof metadata.moduleInsert === 'object' ? metadata.moduleInsert : null,
-        moduleInsertJson: typeof metadata.moduleInsertJson === 'string' ? metadata.moduleInsertJson : '',
-        documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
-        sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
-        sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
-        scenePoll: metadata.scenePoll && typeof metadata.scenePoll === 'object' ? metadata.scenePoll : null,
-        orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : Date.now(),
+          : normalizeCommentKind(commentMetadata.commentKind, narrator),
+        commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
+        itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
+        moduleInsert: null,
+        moduleInsertJson: commentMetadata.moduleInsertJson || '',
+        documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
+        sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
+        sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
+        scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
+        orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
         ts: makeLocalTimestamp(),
@@ -159,6 +173,7 @@ function getLocalCommentBackend() {
     },
     async updateComment(docId, updates) {
       const store = readLocalCommentStore();
+      const safeUpdates = normalizeCommentModuleInsertForStorage(updates);
       let updated = false;
       Object.keys(store).forEach(key => {
         store[key] = (store[key] || []).map(comment => {
@@ -167,7 +182,7 @@ function getLocalCommentBackend() {
           const nowClient = Date.now();
           return {
             ...comment,
-            ...updates,
+            ...safeUpdates,
             editedAt: makeLocalTimestamp(),
             updatedAtClient: nowClient,
             activityAtClient: nowClient,
