@@ -14,6 +14,13 @@ function createCommentModuleDefaultPage(templateId = 'story', pageTitle = '') {
 }
 
 function normalizeCommentModuleInsertItem(item) {
+  if (typeof item === 'string') {
+    try {
+      return normalizeCommentModuleInsertItem(JSON.parse(item));
+    } catch {
+      return null;
+    }
+  }
   if (!item || typeof item !== 'object') return null;
   const defaultSize = typeof MODULE_SIZE_DEFAULT === 'number' ? MODULE_SIZE_DEFAULT : 100;
   if (item.entry && typeof item.entry === 'object') {
@@ -78,7 +85,7 @@ function normalizeCommentModuleInsertItem(item) {
 }
 
 function getCommentModuleInsertItem(comment) {
-  return normalizeCommentModuleInsertItem(comment?.moduleInsert || comment?.insertedModule);
+  return normalizeCommentModuleInsertItem(comment?.moduleInsert || comment?.insertedModule || comment?.moduleInsertJson);
 }
 
 function buildCommentModuleEntry(item) {
