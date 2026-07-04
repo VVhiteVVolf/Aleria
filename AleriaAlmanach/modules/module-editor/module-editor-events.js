@@ -47,6 +47,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-biography-stat-row',
   'add-biography-ability-row',
   'remove-biography-ability-row',
+  'pick-biography-ability-icon',
   'add-biography-section-row',
   'remove-biography-section-row',
   'add-bestiary-row',
@@ -341,6 +342,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-biography-ability-row') {
     removeModuleBiographyAbilityRow(trigger);
+    return;
+  }
+  if (action === 'pick-biography-ability-icon') {
+    openBiographyAbilityIconPicker(trigger);
     return;
   }
   if (action === 'add-biography-section-row') {

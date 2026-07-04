@@ -123,16 +123,14 @@ function buildCommentModuleEntry(item) {
 }
 
 function renderCommentModuleThumbnail(item) {
-  const image = sanitizeImageSrc(item.image || item.page?.image || '');
+  const image = sanitizeImageSrc(item.symbol || item.icon || item.image || item.page?.image || '');
   if (image) {
-    return `<img class="comment-showcase-img comment-module-insert-img" src="${image}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async">`;
+    return `<img class="comment-showcase-img comment-module-insert-img" src="${image}" alt="" loading="lazy" decoding="async">`;
   }
   return `<div class="comment-showcase-img comment-showcase-img-placeholder comment-module-insert-img">M</div>`;
 }
 
 function renderCommentModuleInsertCard(item, options = {}) {
-  const template = getCommentModuleTemplate(item.templateId) || {};
-  const pageCount = item.entry?.pages?.length || 1;
   const tag = options.interactive === false ? 'div' : 'button';
   const attrs = options.interactive === false
     ? ''
@@ -140,11 +138,9 @@ function renderCommentModuleInsertCard(item, options = {}) {
   return `
     <${tag} class="comment-showcase-card comment-module-insert-card"${attrs}>
       ${renderCommentModuleThumbnail(item)}
-      <span class="comment-showcase-copy">
-        <span class="comment-showcase-kicker">Modul · ${escapeHtml(template.label || item.type || 'Template')}</span>
+      <span class="comment-showcase-copy comment-module-insert-copy">
         <span class="comment-showcase-title">${escapeHtml(item.title)}</span>
         ${item.subtitle ? `<span class="comment-showcase-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
-        <span class="comment-showcase-teaser">${escapeHtml(item.teaser || item.pageTitle || `${pageCount} Seite${pageCount === 1 ? '' : 'n'} aus vorhandener Vorlage`)}</span>
       </span>
     </${tag}>`;
 }

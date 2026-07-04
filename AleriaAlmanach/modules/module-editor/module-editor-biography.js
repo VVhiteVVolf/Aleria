@@ -1,13 +1,64 @@
+let _biographyAbilityIconTarget = null;
+
+function buildBiographyAbilityIconField(item, index, mode) {
+  const iconInputAttrs = mode === 'inline'
+    ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="icon"`
+    : 'data-module-editor-action="sync-json-preview"';
+  const pickerAttrs = mode === 'inline'
+    ? `data-inline-action="pick-biography-ability-icon" data-biography-ability-index="${index}"`
+    : 'data-module-editor-action="pick-biography-ability-icon"';
+  return `
+      <span class="biography-ability-icon-field">
+        <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-icon' : ''}" type="text" value="${escapeHtml(item.icon || '')}" placeholder="Symbol oder Bild-URL" ${iconInputAttrs}>
+        <button class="module-editor-mini-btn biography-ability-icon-picker" type="button" ${pickerAttrs} title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
+      </span>`;
+}
+
+function openBiographyAbilityIconPicker(button) {
+  const row = button?.closest?.('.biography-edit-row');
+  const target = row?.querySelector?.('.me-biography-ability-icon, [data-biography-ability-field="icon"]');
+  if (!target) return;
+  _biographyAbilityIconTarget = target;
+  if (typeof openIconDirectory === 'function') {
+    openIconDirectory();
+    return;
+  }
+  _biographyAbilityIconTarget = null;
+}
+
+function handleBiographyAbilityIconSelected(event) {
+  const target = _biographyAbilityIconTarget;
+  const src = String(event?.detail?.src || '').trim();
+  if (!target || !target.isConnected || !src) {
+    _biographyAbilityIconTarget = null;
+    return;
+  }
+  target.value = src;
+  target.dispatchEvent(new Event('input', { bubbles: true }));
+  target.dispatchEvent(new Event('change', { bubbles: true }));
+  try {
+    target.focus({ preventScroll: true });
+  } catch {
+    target.focus();
+  }
+  if (typeof closeIconDirectory === 'function') {
+    closeIconDirectory();
+  }
+  _biographyAbilityIconTarget = null;
+}
+
 function buildBiographyAbilityRows(abilities = [], mode = 'module') {
-  const rows = (Array.isArray(abilities) && abilities.length ? abilities : [{ icon: '✦', title: '', detail: '' }]);
+  const rows = (Array.isArray(abilities) && abilities.length ? abilities : [{ icon: '*', title: '', detail: '' }]);
   return rows.map((item, index) => `
     <div class="biography-edit-row ${mode === 'inline' ? '' : 'module-biography-ability-row'}" ${mode === 'inline' ? `data-biography-ability-index="${index}"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-icon' : ''}" type="text" value="${escapeHtml(item.icon || '')}" placeholder="Icon" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="icon"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="title"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="detail"` : ''}>
+      ${buildBiographyAbilityIconField(item, index, mode)}
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="title"` : 'data-module-editor-action="sync-json-preview"'}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="detail"` : 'data-module-editor-action="sync-json-preview"'}>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-ability" data-biography-ability-index="${index}"` : 'data-module-editor-action="remove-biography-ability-row"'}>Loeschen</button>
     </div>`).join('');
 }
+
+document.addEventListener('almanach-icon-selected', handleBiographyAbilityIconSelected);
 
 function buildBiographySectionRows(sections = [], mode = 'module') {
   const rows = Array.isArray(sections) ? sections : [];

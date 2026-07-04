@@ -156,6 +156,13 @@
     background: rgba(255,255,255,0.18);
     font-family: 'Cinzel', serif;
   }
+  .biography-ability-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
   .biography-ability strong,
   .biography-connection strong {
     display: block;
@@ -285,8 +292,23 @@
   }
   .biography-edit-row {
     display: grid;
-    grid-template-columns: 4rem minmax(7rem, 0.8fr) minmax(0, 1.6fr) auto;
+    grid-template-columns: minmax(9.5rem, 0.8fr) minmax(7rem, 0.8fr) minmax(0, 1.6fr) auto;
     gap: 0.4rem;
+    align-items: stretch;
+  }
+  .biography-ability-icon-field {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem;
+    min-width: 0;
+    align-items: stretch;
+  }
+  .biography-ability-icon-field .inline-edit-input {
+    min-width: 0;
+  }
+  .biography-ability-icon-picker {
+    min-width: 3.8rem;
+    padding-inline: 0.45rem;
   }
   .biography-edit-section-row {
     display: grid;

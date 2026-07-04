@@ -136,7 +136,7 @@ function renderIconDirectoryGrid() {
     const ratioClass = normalizeIconDirectoryRatioClass(item.ratio);
     return `
       <article class="icon-directory-item" data-icon-ratio="${escapeHtml(ratioClass)}">
-        <button class="icon-directory-preview" type="button" data-icon-ratio="${escapeHtml(ratioClass)}" data-icon-directory-action="select" data-icon-src="${escapeHtml(item.path)}" title="Icon in aktives Reiterformular uebernehmen">
+        <button class="icon-directory-preview" type="button" data-icon-ratio="${escapeHtml(ratioClass)}" data-icon-directory-action="select" data-icon-src="${escapeHtml(item.path)}" title="Icon uebernehmen">
           ${src ? `<img src="${src}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async">` : ''}
         </button>
         <div class="icon-directory-item-copy">

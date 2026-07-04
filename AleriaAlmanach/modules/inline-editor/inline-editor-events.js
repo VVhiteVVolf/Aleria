@@ -24,6 +24,7 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-biography-document',
   'add-biography-ability',
   'remove-biography-ability',
+  'pick-biography-ability-icon',
   'add-biography-section',
   'remove-biography-section',
   'add-biography-line-row',
@@ -202,6 +203,10 @@ function handleInlineEditorActionClick(event) {
   }
   if (action === 'remove-biography-ability') {
     removeInlineBiographyAbilityRow(Number(trigger.dataset.biographyAbilityIndex) || 0);
+    return;
+  }
+  if (action === 'pick-biography-ability-icon') {
+    openBiographyAbilityIconPicker(trigger);
     return;
   }
   if (action === 'add-biography-section') {

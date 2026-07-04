@@ -456,6 +456,15 @@ function buildBiographyConnectionItem(item) {
         </div>`;
 }
 
+function renderBiographyAbilityIcon(icon) {
+  const value = String(icon || '').trim();
+  const image = sanitizeImageSrc(value);
+  if (image) {
+    return `<img src="${image}" alt="" loading="lazy" decoding="async">`;
+  }
+  return value ? escapeHtml(value) : '&#10022;';
+}
+
 function buildBiographyPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeBiographyData(page.biography || {});
@@ -474,7 +483,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     <div class="biography-ability-list">
       ${data.abilities.map(item => `
         <div class="biography-ability">
-          <div class="biography-ability-icon">${escapeHtml(item.icon || '✦')}</div>
+          <div class="biography-ability-icon">${renderBiographyAbilityIcon(item.icon)}</div>
           <div><strong>${escapeHtml(item.title || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
         </div>`).join('')}
     </div>` : '';

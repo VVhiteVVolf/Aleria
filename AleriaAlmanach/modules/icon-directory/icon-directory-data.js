@@ -1493,5 +1493,365 @@ const ALERIA_ICON_DIRECTORY = [
     "width": 1024,
     "height": 1024,
     "ratio": "square"
+  },
+  {
+    "name": "Ambitious",
+    "fileName": "Ambitious.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Ambitious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Arbitrary",
+    "fileName": "Arbitrary.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Arbitrary.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Brave",
+    "fileName": "Brave.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Brave.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Charitable",
+    "fileName": "Charitable.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Charitable.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Chaste",
+    "fileName": "Chaste.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Chaste.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Content",
+    "fileName": "Content.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Content.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Craven",
+    "fileName": "Craven.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Craven.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Cruel",
+    "fileName": "Cruel.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Cruel.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Cynical",
+    "fileName": "Cynical.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Cynical.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Deceitful",
+    "fileName": "Deceitful.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Deceitful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Diligent",
+    "fileName": "Diligent.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Diligent.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Disfigured",
+    "fileName": "Disfigured.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Disfigured.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Envious",
+    "fileName": "Envious.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Envious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Erudite",
+    "fileName": "Erudite.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Erudite.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Gluttonous",
+    "fileName": "Gluttonous.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Gluttonous.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Greedy",
+    "fileName": "Greedy.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Greedy.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Gregarious",
+    "fileName": "Gregarious.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Gregarious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Honest",
+    "fileName": "Honest.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Honest.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Horrifically_Scarred",
+    "fileName": "Horrifically_Scarred.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Horrifically_Scarred.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Humble",
+    "fileName": "Humble.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Humble.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Just",
+    "fileName": "Just.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Just.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Kind",
+    "fileName": "Kind.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Kind.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Lustful",
+    "fileName": "Lustful.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Lustful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Mangled",
+    "fileName": "Mangled.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Mangled.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "One-eyed",
+    "fileName": "One-eyed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/One-eyed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "One-handed",
+    "fileName": "One-handed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/One-handed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "One-legged",
+    "fileName": "One-legged.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/One-legged.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Paranoid",
+    "fileName": "Paranoid.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Paranoid.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Patient",
+    "fileName": "Patient.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Patient.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Proud",
+    "fileName": "Proud.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Proud.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Recently_maimed",
+    "fileName": "Recently_maimed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Recently_maimed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Scarred",
+    "fileName": "Scarred.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Scarred.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Shy",
+    "fileName": "Shy.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Shy.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Slothful",
+    "fileName": "Slothful.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Slothful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Stubborn",
+    "fileName": "Stubborn.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Stubborn.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Temperate",
+    "fileName": "Temperate.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Temperate.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Trusting",
+    "fileName": "Trusting.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Trusting.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Wounded",
+    "fileName": "Wounded.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Wounded.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Wroth",
+    "fileName": "Wroth.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Wroth.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Zealous",
+    "fileName": "Zealous.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Zealous.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
   }
 ];
