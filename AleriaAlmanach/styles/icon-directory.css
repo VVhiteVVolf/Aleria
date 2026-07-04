@@ -94,26 +94,31 @@
     min-height: 0;
     overflow: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: auto;
+    gap: 0.6rem;
     padding: 1rem;
-    align-items: start;
+    align-items: stretch;
   }
   .icon-directory-item {
     min-width: 0;
     display: grid;
-    grid-template-rows: auto auto auto;
-    gap: 0.55rem;
+    grid-template-columns: 4.4rem minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.5rem 0.65rem;
+    align-items: start;
     border: 1px solid rgba(139,105,20,0.24);
     background: rgba(255,255,255,0.22);
-    padding: 0.65rem;
+    padding: 0.55rem;
     overflow: hidden;
-    align-self: start;
-    contain: layout paint;
+    align-self: stretch;
+    min-height: 5.8rem;
   }
   .icon-directory-preview {
-    width: 100%;
-    height: clamp(7.25rem, 10vw, 8.75rem);
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 4.4rem;
+    height: 4.4rem;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -122,12 +127,12 @@
     background:
       linear-gradient(180deg, rgba(255,255,255,0.44), rgba(255,255,255,0.12)),
       rgba(255,255,255,0.24);
-    padding: 0.65rem;
+    padding: 0.35rem;
     overflow: hidden;
     line-height: 0;
     position: relative;
     isolation: isolate;
-    contain: strict;
+    contain: paint;
     cursor: pointer;
   }
   .icon-directory-preview img {
@@ -139,8 +144,8 @@
     height: auto !important;
     min-width: 0 !important;
     min-height: 0 !important;
-    max-width: 72% !important;
-    max-height: 72% !important;
+    max-width: 82% !important;
+    max-height: 82% !important;
     object-fit: contain !important;
     object-position: center center !important;
     transform: none !important;
@@ -149,24 +154,24 @@
     vertical-align: top;
   }
   .icon-directory-preview[data-icon-ratio="square"] img {
-    max-width: 76% !important;
-    max-height: 76% !important;
+    max-width: 84% !important;
+    max-height: 84% !important;
   }
   .icon-directory-preview[data-icon-ratio="portrait"] img {
-    max-width: 62% !important;
-    max-height: 88% !important;
+    max-width: 72% !important;
+    max-height: 92% !important;
   }
   .icon-directory-preview[data-icon-ratio="tall"] img {
-    max-width: 46% !important;
-    max-height: 90% !important;
+    max-width: 54% !important;
+    max-height: 94% !important;
   }
   .icon-directory-preview[data-icon-ratio="wide"] img {
-    max-width: 88% !important;
-    max-height: 64% !important;
+    max-width: 94% !important;
+    max-height: 72% !important;
   }
   .icon-directory-preview[data-icon-ratio="banner"] img {
-    max-width: 92% !important;
-    max-height: 46% !important;
+    max-width: 96% !important;
+    max-height: 52% !important;
   }
   .icon-directory-preview[data-icon-ratio="missing"]::after {
     content: 'Bild nicht ladbar';
@@ -175,14 +180,16 @@
     line-height: 1.2;
   }
   .icon-directory-item-copy {
+    grid-column: 2;
     min-width: 0;
     display: grid;
-    gap: 0.22rem;
+    gap: 0.18rem;
+    align-self: start;
   }
   .icon-directory-item-copy strong {
     color: var(--ink);
     font-family: 'Cinzel', serif;
-    font-size: 0.62rem;
+    font-size: 0.66rem;
     letter-spacing: 0.04em;
     overflow-wrap: anywhere;
   }
@@ -195,28 +202,30 @@
     display: block;
     min-width: 0;
     color: var(--ink-faded);
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .icon-directory-actions {
+    grid-column: 2;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.4rem;
+    align-self: end;
   }
   .icon-directory-actions button {
     min-width: 0;
-    min-height: 1.9rem;
+    min-height: 1.65rem;
     border: 1px solid rgba(139,105,20,0.3);
     background: rgba(255,255,255,0.28);
     color: var(--gold-dark);
     font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
+    font-size: 0.46rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.32rem 0.5rem;
+    padding: 0.25rem 0.45rem;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
@@ -247,11 +256,12 @@
       align-items: stretch;
     }
     .icon-directory-grid {
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: 1fr;
       padding: 0.75rem;
     }
     .icon-directory-preview {
-      height: 6.75rem;
+      width: 4rem;
+      height: 4rem;
     }
     .icon-directory-actions {
       grid-template-columns: 1fr;
