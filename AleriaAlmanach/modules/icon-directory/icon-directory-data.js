@@ -1495,6 +1495,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Administrator",
+    "fileName": "Administrator.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Administrator.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Adventurer",
+    "fileName": "Adventurer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Adventurer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Ambitious",
     "fileName": "Ambitious.png",
     "folder": "Traits Icon",
@@ -1513,12 +1531,84 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Architect",
+    "fileName": "Architect.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Architect.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Ares_own",
+    "fileName": "Ares_own.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Ares_own.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Attractive",
+    "fileName": "Attractive.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Attractive.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Augustus",
+    "fileName": "Augustus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Augustus.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Bastard",
+    "fileName": "Bastard.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Bastard.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Berserker",
+    "fileName": "Berserker.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Berserker.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Brave",
     "fileName": "Brave.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Brave.png",
     "width": 24,
     "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Business_focus",
+    "fileName": "Business_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Business_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Carousing_focus",
+    "fileName": "Carousing_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Carousing_focus.png",
+    "width": 32,
+    "height": 32,
     "ratio": "square"
   },
   {
@@ -1535,6 +1625,15 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Chaste.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Chaste.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Child_of_consort",
+    "fileName": "Child_of_consort.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Child_of_consort.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -1603,6 +1702,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Duelist",
+    "fileName": "Duelist.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Duelist.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Dynastic_Kinslayer",
+    "fileName": "Dynastic_Kinslayer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Dynastic_Kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Envious",
     "fileName": "Envious.png",
     "folder": "Traits Icon",
@@ -1616,6 +1733,60 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Erudite.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Erudite.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Familial_Kinslayer",
+    "fileName": "Familial_Kinslayer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Familial_Kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Family_focus",
+    "fileName": "Family_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Family_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Game_master",
+    "fileName": "Game_master.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Game_master.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Gardener",
+    "fileName": "Gardener.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Gardener.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Genius",
+    "fileName": "Genius.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Genius.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Gladiator",
+    "fileName": "Gladiator.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Gladiator.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -1666,12 +1837,57 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Horse",
+    "fileName": "Horse.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Horse.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Humble",
     "fileName": "Humble.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Humble.png",
     "width": 24,
     "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Hunter",
+    "fileName": "Hunter.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Hunter.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Imbecile",
+    "fileName": "Imbecile.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Imbecile.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Impaler",
+    "fileName": "Impaler.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Impaler.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Intrigue_focus",
+    "fileName": "Intrigue_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Intrigue_focus.png",
+    "width": 32,
+    "height": 32,
     "ratio": "square"
   },
   {
@@ -1693,6 +1909,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Kinslayer",
+    "fileName": "Kinslayer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Legitimized_bastard",
+    "fileName": "Legitimized_bastard.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Legitimized_bastard.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Lustful",
     "fileName": "Lustful.png",
     "folder": "Traits Icon",
@@ -1706,6 +1940,78 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Mangled.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Mangled.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_schemer",
+    "fileName": "Master_schemer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Master_schemer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_seducer",
+    "fileName": "Master_seducer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Master_seducer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_seductress",
+    "fileName": "Master_seductress.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Master_seductress.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Monk",
+    "fileName": "Monk.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Monk.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Mujahid",
+    "fileName": "Mujahid.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Mujahid.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Mystic",
+    "fileName": "Mystic.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Mystic.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Norse",
+    "fileName": "Norse.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Norse.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Nun",
+    "fileName": "Nun.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Nun.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -1756,10 +2062,46 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Peasant_Leader",
+    "fileName": "Peasant_Leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Peasant_Leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Pirate",
+    "fileName": "Pirate.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Pirate.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Proud",
     "fileName": "Proud.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Proud.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Quick",
+    "fileName": "Quick.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Quick.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Ravager",
+    "fileName": "Ravager.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Ravager.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -1774,10 +2116,82 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Reformed_Norse",
+    "fileName": "Reformed_Norse.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Reformed_Norse.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Saoshyant",
+    "fileName": "Saoshyant.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Saoshyant.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Scarred",
     "fileName": "Scarred.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Scarred.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Scholar",
+    "fileName": "Scholar.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Scholar.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Scholarship_focus",
+    "fileName": "Scholarship_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Scholarship_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Sea_King",
+    "fileName": "Sea_King.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Sea_King.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Sea_Queen",
+    "fileName": "Sea_Queen.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Sea_Queen.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Seduction_focus",
+    "fileName": "Seduction_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Seduction_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Shieldmaiden",
+    "fileName": "Shieldmaiden.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Shieldmaiden.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -1801,6 +2215,42 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Slow",
+    "fileName": "Slow.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Slow.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Socializer",
+    "fileName": "Socializer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Socializer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Strategist",
+    "fileName": "Strategist.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Strategist.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Strong",
+    "fileName": "Strong.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Strong.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Stubborn",
     "fileName": "Stubborn.png",
     "folder": "Traits Icon",
@@ -1819,10 +2269,91 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Theologian",
+    "fileName": "Theologian.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Theologian.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Theology_focus",
+    "fileName": "Theology_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Theology_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Tribal_kinslayer",
+    "fileName": "Tribal_kinslayer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Tribal_kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Trusting",
     "fileName": "Trusting.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Trusting.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Twin",
+    "fileName": "Twin.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Twin.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Ugly",
+    "fileName": "Ugly.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Ugly.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Varangian",
+    "fileName": "Varangian.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Varangian.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Viking",
+    "fileName": "Viking.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Viking.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "War_focus",
+    "fileName": "War_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/War_focus.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Weak",
+    "fileName": "Weak.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Weak.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
