@@ -235,6 +235,11 @@ function handleArchiveActionClick(event) {
     openModuleSectionManager();
     return;
   }
+  if (action === 'open-icon-directory') {
+    event.preventDefault();
+    openIconDirectory();
+    return;
+  }
   if (action === 'generate-dashboard-insights') {
     event.preventDefault();
     if (typeof generateArchiveDashboardInsights === 'function') {
@@ -521,6 +526,7 @@ function getArchiveChildFolders(tabSections = [], currentPath = []) {
       groups.set(key, {
         label,
         path: folderPath,
+        iconUrl: '',
         moduleCount: 0,
         childKeys: new Set()
       });
@@ -531,6 +537,9 @@ function getArchiveChildFolders(tabSections = [], currentPath = []) {
     tabSections.forEach(section => {
       const path = getSectionPathParts(section);
       if (!archivePathHasPrefix(path, folder.path)) return;
+      if (!folder.iconUrl && archivePathsEqual(path, folder.path)) {
+        folder.iconUrl = section.iconUrl || '';
+      }
       folder.moduleCount += (section.entries || []).length;
       if (path.length > folder.path.length) {
         folder.childKeys.add(normalizeArchivePathPart(path[folder.path.length]));
@@ -542,6 +551,7 @@ function getArchiveChildFolders(tabSections = [], currentPath = []) {
     .map(folder => ({
       label: folder.label,
       path: folder.path,
+      iconUrl: folder.iconUrl,
       moduleCount: folder.moduleCount,
       childCount: folder.childKeys.size
     }))
@@ -673,6 +683,15 @@ function renderAll() {
   manageBtn.dataset.archiveAction = 'toggle-archive-manage';
   manageBtn.setAttribute('aria-label', manageBtn.title);
   toolActions.appendChild(manageBtn);
+
+  const iconDirectoryBtn = document.createElement('button');
+  iconDirectoryBtn.className = 'gallery-tab-btn gallery-tab-add gallery-tab-tool';
+  iconDirectoryBtn.type = 'button';
+  iconDirectoryBtn.textContent = 'Icons';
+  iconDirectoryBtn.title = 'Icon-Verzeichnis aus dem Projektordner oeffnen';
+  iconDirectoryBtn.dataset.archiveAction = 'open-icon-directory';
+  iconDirectoryBtn.setAttribute('aria-label', iconDirectoryBtn.title);
+  toolActions.appendChild(iconDirectoryBtn);
 
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';

@@ -49,6 +49,7 @@ function ensureCustomModuleSection(sectionInput, options = {}) {
   existing.tab = section.tab;
   existing.path = getSectionPathParts(section);
   existing.nodeId = section.nodeId;
+  existing.iconUrl = section.iconUrl || existing.iconUrl || '';
   if (options.updateDesc || !String(existing.desc || '').trim()) existing.desc = section.desc || existing.desc || '';
   return { section: existing, created: false };
 }
@@ -219,6 +220,13 @@ function ensureModuleSectionManagerDialog() {
               <span>Beschreibung</span>
               <input id="msm-desc" type="text" placeholder="Kurze Beschreibung für die Bereichsüberschrift" data-section-manager-field="desc">
             </label>
+            <label class="wide">
+              <span>Icon URL / Pfad</span>
+              <span class="module-section-icon-picker-row">
+                <input id="msm-icon" type="text" placeholder="../IconOrdner/ReiterIcons/Markt.png oder https://i.imgur.com/..." data-section-manager-field="icon">
+                <button type="button" data-section-manager-action="open-icon-directory">Aus Liste wählen</button>
+              </span>
+            </label>
             <div class="module-section-manager-actions">
               <button type="button" data-section-manager-action="clear-form">Leeren</button>
               <button type="button" class="primary" data-section-manager-action="save-section">Bereich speichern</button>
@@ -276,6 +284,13 @@ function ensureModuleSectionManagerDialog() {
             <label>
               <span>Beschreibung</span>
               <input id="msm-edit-desc" type="text" data-section-editor-field="desc">
+            </label>
+            <label>
+              <span>Icon URL / Pfad</span>
+              <span class="module-section-icon-picker-row">
+                <input id="msm-edit-icon" type="text" placeholder="../IconOrdner/... oder https://i.imgur.com/..." data-section-editor-field="icon">
+                <button type="button" data-section-manager-action="open-icon-directory">Aus Liste wählen</button>
+              </span>
             </label>
             <label>
               <span>Unterreiter</span>
@@ -343,9 +358,11 @@ function clearModuleSectionManagerForm(options = {}) {
   const tab = document.getElementById('msm-tab');
   const path = document.getElementById('msm-path');
   const desc = document.getElementById('msm-desc');
+  const icon = document.getElementById('msm-icon');
   if (tab) tab.value = defaultTab;
   if (path) path.value = '';
   if (desc) desc.value = '';
+  if (icon) icon.value = '';
   setModuleSectionCreateMode(nextMode);
   setModuleSectionManagerStatus('');
 }
@@ -356,6 +373,7 @@ function getModuleSectionEditorElements() {
     summary: document.querySelector('[data-section-editor-summary]'),
     title: document.getElementById('msm-edit-title'),
     desc: document.getElementById('msm-edit-desc'),
+    icon: document.getElementById('msm-edit-icon'),
     childTitle: document.getElementById('msm-edit-child-title'),
     parent: document.getElementById('msm-edit-parent'),
   };
@@ -374,7 +392,7 @@ function closeModuleSectionEditor() {
 }
 
 function renderModuleSectionEditor() {
-  const { panel, summary, title, desc, childTitle, parent } = getModuleSectionEditorElements();
+  const { panel, summary, title, desc, icon, childTitle, parent } = getModuleSectionEditorElements();
   if (!panel) return;
 
   const section = getModuleSectionEditorSection();
@@ -406,6 +424,10 @@ function renderModuleSectionEditor() {
   if (desc) {
     desc.value = section.desc || node?.desc || '';
     desc.disabled = isVoid;
+  }
+  if (icon) {
+    icon.value = section.iconUrl || node?.iconUrl || '';
+    icon.disabled = isVoid;
   }
   if (childTitle) {
     if (_moduleSectionEditorMode === 'child') childTitle.value = '';
@@ -463,9 +485,13 @@ function renderModuleSectionManagerSections(sections) {
     const isVoid = makeSectionSignature(section) === makeSectionSignature(getVoidModuleSection());
     const isRootNode = section.nodeId && !String(findModuleSectionNodeById(section.nodeId)?.parentId || '').trim();
     const isSelected = signature === _moduleSectionEditorSignature;
+    const iconSrc = sanitizeImageSrc(section.iconUrl || findModuleSectionNodeById(section.nodeId)?.iconUrl || '');
     return `
       <div class="module-section-manager-section-row${isSelected ? ' is-selected' : ''}" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
         <button class="module-section-manager-section-main" type="button" data-section-manager-action="prefill-section" data-section-signature="${escapeHtml(signature)}">
+          <span class="module-section-manager-section-icon${iconSrc ? '' : ' empty'}">
+            ${iconSrc ? `<img src="${iconSrc}" alt="" loading="lazy" decoding="async">` : ''}
+          </span>
           <span>
             <strong>${escapeHtml(getSectionLeafLabel(section))}</strong>
             <small>${escapeHtml(path ? `${section.tab || section.key} > ${path}` : getSectionOptionLabel(section))}</small>
@@ -567,9 +593,11 @@ function prefillModuleSectionManagerForm(signature) {
   const tab = document.getElementById('msm-tab');
   const path = document.getElementById('msm-path');
   const desc = document.getElementById('msm-desc');
+  const icon = document.getElementById('msm-icon');
   if (tab) tab.value = section.tab || section.key || '';
   if (path) path.value = getSectionPathLabel(section) || section.key || '';
   if (desc) desc.value = section.desc || '';
+  if (icon) icon.value = section.iconUrl || '';
   setModuleSectionCreateMode(getSectionPathParts(section).length ? 'child' : 'root', { clearPath: false });
   setModuleSectionManagerStatus('Bereich als Vorlage übernommen.', 'info');
 }
@@ -602,6 +630,7 @@ function syncModuleSectionNodeEdits(nodeId, patch = {}) {
     const next = { ...section };
     if (typeof patch.title === 'string') next.key = patch.title;
     if (typeof patch.desc === 'string') next.desc = patch.desc;
+    if (typeof patch.iconUrl === 'string') next.iconUrl = patch.iconUrl;
     return cleanCustomSection(next);
   };
 
@@ -612,6 +641,7 @@ function syncModuleSectionNodeEdits(nodeId, patch = {}) {
         SECTIONS[index] = { ...section };
         if (typeof patch.title === 'string') SECTIONS[index].key = patch.title;
         if (typeof patch.desc === 'string') SECTIONS[index].desc = patch.desc;
+        if (typeof patch.iconUrl === 'string') SECTIONS[index].iconUrl = patch.iconUrl;
       }
     });
   }
@@ -629,6 +659,7 @@ function saveModuleSectionEditor() {
 
   const title = String(document.getElementById('msm-edit-title')?.value || '').trim();
   const desc = String(document.getElementById('msm-edit-desc')?.value || '').trim();
+  const iconUrl = String(document.getElementById('msm-edit-icon')?.value || '').trim();
   if (!title) {
     setModuleSectionManagerStatus('Bitte einen Reiternamen eingeben.', 'error');
     document.getElementById('msm-edit-title')?.focus();
@@ -639,10 +670,10 @@ function saveModuleSectionEditor() {
   const node = findModuleSectionNodeById(nodeId);
   if (node) {
     _moduleSectionNodes = _moduleSectionNodes.map(item =>
-      item.id === nodeId ? { ...item, title, desc } : item
+      item.id === nodeId ? cleanModuleSectionNode({ ...item, title, desc, iconUrl }) : item
     );
   }
-  syncModuleSectionNodeEdits(nodeId, { title, desc });
+  syncModuleSectionNodeEdits(nodeId, { title, desc, iconUrl });
 
   saveModuleStore();
   _activeTab = section.tab || section.key;
@@ -665,6 +696,7 @@ function createChildModuleSectionUnderParent(parent, name) {
     tab: parent.tab || parent.key,
     path: childPath,
     desc: '',
+    iconUrl: '',
     entries: []
   });
   const nodeId = ensureModuleNodeForSection({
@@ -761,6 +793,7 @@ function saveModuleSectionFromManager() {
   const tab = String(document.getElementById('msm-tab')?.value || '').trim();
   const path = parseSectionPathInput(document.getElementById('msm-path')?.value || '');
   const desc = String(document.getElementById('msm-desc')?.value || '').trim();
+  const iconUrl = String(document.getElementById('msm-icon')?.value || '').trim();
   const isRootMode = _moduleSectionCreateMode === 'root';
   const key = isRootMode ? tab : path[path.length - 1] || '';
 
@@ -775,7 +808,7 @@ function saveModuleSectionFromManager() {
     return;
   }
 
-  const section = cleanCustomSection({ key, tab, path: isRootMode ? [] : path, desc, entries: [] });
+  const section = cleanCustomSection({ key, tab, path: isRootMode ? [] : path, desc, iconUrl, entries: [] });
   const signature = makeSectionSignature(section);
   const existed = getUniqueModuleSections().some(existing => makeSectionSignature(existing) === signature);
   const result = ensureModuleSectionPath(section, { updateDesc: true });
@@ -956,6 +989,15 @@ function handleModuleSectionManagerClick(event) {
     saveModuleSectionFromManager();
     return;
   }
+  if (action === 'open-icon-directory') {
+    event.preventDefault();
+    if (typeof openIconDirectory === 'function') {
+      openIconDirectory();
+    } else {
+      setModuleSectionManagerStatus('Icon-Verzeichnis ist noch nicht bereit.', 'error');
+    }
+    return;
+  }
   if (action === 'prefill-section') {
     event.preventDefault();
     prefillModuleSectionManagerForm(trigger.dataset.sectionSignature || '');
@@ -1029,6 +1071,27 @@ function handleModuleSectionManagerInput(event) {
   }
 }
 
+function handleModuleSectionIconSelected(event) {
+  const iconUrl = String(event.detail?.src || '').trim();
+  if (!iconUrl) return;
+  const overlay = document.getElementById('module-section-manager-overlay');
+  const editorPanel = document.querySelector('[data-section-editor-panel]');
+  const editorActive = overlay?.classList.contains('active') && editorPanel && !editorPanel.hidden && _moduleSectionEditorSignature;
+  const target = editorActive
+    ? document.getElementById('msm-edit-icon')
+    : document.getElementById('msm-icon');
+  if (!target) return;
+  target.value = iconUrl;
+  target.dispatchEvent(new Event('input', { bubbles: true }));
+  setModuleSectionManagerStatus(
+    editorActive
+      ? 'Icon-Pfad in den ausgewählten Reiter übernommen.'
+      : 'Icon-Pfad in den neuen Bereich übernommen.',
+    'success'
+  );
+}
+
 document.addEventListener('click', handleModuleSectionManagerClick);
 document.addEventListener('change', handleModuleSectionManagerChange);
 document.addEventListener('input', handleModuleSectionManagerInput);
+document.addEventListener('almanach-icon-selected', handleModuleSectionIconSelected);

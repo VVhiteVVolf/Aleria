@@ -113,15 +113,25 @@ function assignSelectedCharactersToGroup(trigger) {
 
 function buildStoredCharacterFromRecord(char, archived) {
   const cloned = cloneCharacterRecord(char || {});
+  const now = new Date().toISOString();
   return {
     name: cloned.name || '',
     title: cloned.title || '',
     fraktion: cloned.fraktion || cloned.faction || '',
+    role: cloned.role || '',
+    status: getCharacterStatusValue(cloned.status),
+    relevance: getCharacterRelevanceValue(cloned.relevance),
+    taxonomyPath: cloned.taxonomyPath || '',
+    currentLocation: cloned.currentLocation || '',
+    origin: cloned.origin || '',
+    plotNode: cloned.plotNode || '',
     profileLink: cloned.profileLink || '',
     playerOwner: normalizeCharacterPlayerOwner(cloned.playerOwner),
     bio: cloned.bio || '',
     aliases: cloned.aliases || [],
     archived: !!archived,
+    createdAt: cloned.createdAt || now,
+    updatedAt: now,
     portrait: normalizeImageUrlForStorage(cloned.portrait) || null,
     emotes: (cloned.emotes || [])
       .map(emote => ({ img: normalizeImageUrlForStorage(emote.img), label: emote.label || '' }))

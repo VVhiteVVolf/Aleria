@@ -12,12 +12,19 @@ function openCharProfile(id) {
   document.getElementById('cp-name').value     = c.name     || '';
   document.getElementById('cp-title').value    = c.title    || '';
   document.getElementById('cp-fraktion').value = c.fraktion || '';
+  document.getElementById('cp-role').value = c.role || '';
+  document.getElementById('cp-status').value = getCharacterStatusValue(c.status);
+  document.getElementById('cp-relevance').value = getCharacterRelevanceValue(c.relevance);
+  document.getElementById('cp-taxonomy-path').value = c.taxonomyPath || '';
+  document.getElementById('cp-current-location').value = c.currentLocation || '';
+  document.getElementById('cp-origin').value = c.origin || '';
+  document.getElementById('cp-plot-node').value = c.plotNode || '';
   document.getElementById('cp-profile-link-url').value = c.profileLink || '';
   document.getElementById('cp-player-owner').value = normalizeCharacterPlayerOwner(c.playerOwner);
   document.getElementById('cp-bio').value      = c.bio      || '';
   document.getElementById('cp-aliases').value  = (c.aliases || []).join(', ');
   document.getElementById('cp-archived').checked = !!c.archived;
-  document.getElementById('cp-status').textContent = '';
+  document.getElementById('cp-save-status').textContent = '';
 
   syncPortraitDisplay(c.portrait || null, c.name || '?');
   syncProfileLinkDisplay(c.profileLink || '', c.name || '');
@@ -197,16 +204,26 @@ function removeEmote(i) {
 function collectCharacterProfileDataFromForm() {
   const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
   const profileLink = normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || '');
+  const now = new Date().toISOString();
   return {
     id: _editingChar || '',
     name: document.getElementById('cp-name')?.value.trim() || existing.name || '',
     title: document.getElementById('cp-title')?.value.trim() || '',
     fraktion: document.getElementById('cp-fraktion')?.value.trim() || '',
+    role: document.getElementById('cp-role')?.value.trim() || '',
+    status: getCharacterStatusValue(document.getElementById('cp-status')?.value || ''),
+    relevance: getCharacterRelevanceValue(document.getElementById('cp-relevance')?.value || ''),
+    taxonomyPath: document.getElementById('cp-taxonomy-path')?.value.trim() || '',
+    currentLocation: document.getElementById('cp-current-location')?.value.trim() || '',
+    origin: document.getElementById('cp-origin')?.value.trim() || '',
+    plotNode: document.getElementById('cp-plot-node')?.value.trim() || '',
     profileLink,
     playerOwner: normalizeCharacterPlayerOwner(document.getElementById('cp-player-owner')?.value || ''),
     bio: document.getElementById('cp-bio')?.value.trim() || '',
     aliases: parseAliasInput(document.getElementById('cp-aliases')?.value || ''),
     archived: !!document.getElementById('cp-archived')?.checked,
+    createdAt: existing.createdAt || now,
+    updatedAt: now,
     portrait: normalizeImageUrlForStorage(document.getElementById('cp-portrait-url')?.value || '') || normalizeImageUrlForStorage(existing.portrait) || null,
     emotes: (_emoteSlots || [])
       .filter(Boolean)
@@ -246,13 +263,20 @@ async function saveCharacter() {
   const name     = document.getElementById('cp-name').value.trim();
   const title    = document.getElementById('cp-title').value.trim();
   const fraktion = document.getElementById('cp-fraktion').value.trim();
+  const role = document.getElementById('cp-role')?.value.trim() || '';
+  const characterStatus = getCharacterStatusValue(document.getElementById('cp-status')?.value || '');
+  const relevance = getCharacterRelevanceValue(document.getElementById('cp-relevance')?.value || '');
+  const taxonomyPath = document.getElementById('cp-taxonomy-path')?.value.trim() || '';
+  const currentLocation = document.getElementById('cp-current-location')?.value.trim() || '';
+  const origin = document.getElementById('cp-origin')?.value.trim() || '';
+  const plotNode = document.getElementById('cp-plot-node')?.value.trim() || '';
   const profileLinkInput = document.getElementById('cp-profile-link-url')?.value || '';
   const profileLink = normalizeCharacterProfileLinkForStorage(profileLinkInput);
   const playerOwner = normalizeCharacterPlayerOwner(document.getElementById('cp-player-owner')?.value || '');
   const bio      = document.getElementById('cp-bio').value.trim();
   const aliases  = parseAliasInput(document.getElementById('cp-aliases')?.value || '');
   const archived = !!document.getElementById('cp-archived')?.checked;
-  const status   = document.getElementById('cp-status');
+  const status   = document.getElementById('cp-save-status');
   const sourceId = _editingChar;
   const isBuiltin = isBuiltinCharacterId(sourceId);
 
@@ -270,11 +294,15 @@ async function saveCharacter() {
 
   const existing = sourceId ? (getCharacterById(sourceId) || {}) : {};
   const saveTargetId = isBuiltin ? null : sourceId;
+  const now = new Date().toISOString();
 
   const data = {
-    name, title, fraktion, profileLink, playerOwner, bio,
+    name, title, fraktion, role, status: characterStatus, relevance,
+    taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
     aliases,
     archived,
+    createdAt: existing.createdAt || now,
+    updatedAt: now,
     portrait: normalizeImageUrlForStorage(document.getElementById('cp-portrait-url').value) || normalizeImageUrlForStorage(existing.portrait) || null,
     emotes: _emoteSlots
       .filter(Boolean)
@@ -360,7 +388,7 @@ async function deleteCharacter() {
     closeCharProfile();
   } catch(e) {
     const message = getFriendlyErrorMessage(e, 'Charakter konnte nicht gelöscht werden.');
-    document.getElementById('cp-status').textContent = message;
+    document.getElementById('cp-save-status').textContent = message;
     showAppStatus(message, 'error');
   }
 }

@@ -12,6 +12,7 @@ function toggleCharacterOrganizeMode() {
   if (!_charOrganizeMode && typeof clearCharacterBulkSelection === 'function') {
     clearCharacterBulkSelection({ render: false });
   }
+  renderCharSubtabs();
   renderCharGrid();
 }
 
@@ -291,12 +292,17 @@ function renderCharGrid() {
     toolbar.className = 'char-group-toolbar';
     toolbar.innerHTML = `
       <div class="char-group-toolbar-title">${escapeHtml(_activeCharTab)}${_activeCharSubtab !== 'Alle' ? ` / ${escapeHtml(_activeCharSubtab)}` : ''}</div>
-      <button type="button" data-character-grid-action="rename-active-tab">Umbenennen</button>
-      <button type="button" data-character-grid-action="clear-active-group">Leeren</button>`;
+      ${_charOrganizeMode ? `
+        <button type="button" data-character-grid-action="rename-active-tab">Umbenennen</button>
+        <button type="button" data-character-grid-action="clear-active-group">Leeren</button>` : ''}`;
     grid.appendChild(toolbar);
   }
 
-  const chars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  const unfilteredChars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, unfilteredChars);
+  const chars = typeof filterCharactersForDashboard === 'function'
+    ? filterCharactersForDashboard(unfilteredChars, _activeCharTab)
+    : unfilteredChars;
   if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
   if (_activeCharTab === 'Alle') {
     const groups = buildCharacterGroupBuckets(chars);

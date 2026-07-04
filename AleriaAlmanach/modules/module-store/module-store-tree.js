@@ -17,12 +17,13 @@ function cleanModuleSectionNode(node = {}) {
   const tab = normalizeModuleTreeLabel(node.tab || node.title || node.key, 'Archiv');
   const title = normalizeModuleTreeLabel(node.title || node.key || tab, tab);
   const parentId = String(node.parentId || '').trim();
+  const iconUrl = String(node.iconUrl || '').trim().slice(0, 900);
   const path = Array.isArray(node.path)
     ? node.path.map(part => String(part || '').trim()).filter(Boolean)
     : [];
   const id = String(node.id || '').trim()
     || (path.length ? getModulePathNodeId(tab, path) : getModuleRootNodeId(tab));
-  return {
+  const clean = {
     id,
     parentId,
     tab,
@@ -30,6 +31,8 @@ function cleanModuleSectionNode(node = {}) {
     desc: String(node.desc || '').trim(),
     sortOrder: Number.isFinite(Number(node.sortOrder)) ? Number(node.sortOrder) : 0
   };
+  if (iconUrl) clean.iconUrl = iconUrl;
+  return clean;
 }
 
 function findModuleSectionNodeById(nodeId) {
@@ -78,6 +81,7 @@ function getModuleSectionFromNode(node, entries = []) {
     key: path[path.length - 1] || clean.title,
     tab: clean.tab,
     desc: clean.desc,
+    iconUrl: clean.iconUrl || '',
     path,
     nodeId: clean.id,
     entries
@@ -118,6 +122,7 @@ function ensureModuleNodeForSection(sectionInput, options = {}) {
       tab: section.tab || section.key,
       title: getSectionLeafLabel({ ...section, nodeId: '' }),
       desc: section.desc,
+      iconUrl: section.iconUrl || existing?.iconUrl || '',
       path
     });
     return node.id;
@@ -131,7 +136,8 @@ function ensureModuleNodeForSection(sectionInput, options = {}) {
     parentId: '',
     tab,
     title: findModuleSectionNodeById(rootId)?.title || rootTitle,
-    desc: findModuleSectionNodeById(rootId)?.desc || (!getSectionPathParts(section).length ? section.desc : '')
+    desc: findModuleSectionNodeById(rootId)?.desc || (!getSectionPathParts(section).length ? section.desc : ''),
+    iconUrl: findModuleSectionNodeById(rootId)?.iconUrl || (!getSectionPathParts(section).length ? section.iconUrl : '')
   });
 
   let parentId = rootId;
@@ -146,6 +152,7 @@ function ensureModuleNodeForSection(sectionInput, options = {}) {
       tab,
       title: existing?.title || part,
       desc: existing?.desc || (index === path.length - 1 ? section.desc : ''),
+      iconUrl: existing?.iconUrl || (index === path.length - 1 ? section.iconUrl : ''),
       path: existing?.path?.length ? existing.path : prefix
     });
     parentId = id;

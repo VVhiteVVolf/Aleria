@@ -126,14 +126,24 @@ function selectCharForComment(id) {
 let _selectedEmoteIdx = null;
 
 function buildCommentCharacterSaveData(char, emotes, portraitFallback = null) {
+  const now = new Date().toISOString();
   return {
     name: char.name || 'Unbenannt',
     title: char.title || '',
     fraktion: char.fraktion || char.faction || '',
+    role: char.role || '',
+    status: getCharacterStatusValue(char.status),
+    relevance: getCharacterRelevanceValue(char.relevance),
+    taxonomyPath: char.taxonomyPath || '',
+    currentLocation: char.currentLocation || '',
+    origin: char.origin || '',
+    plotNode: char.plotNode || '',
     playerOwner: normalizeCharacterPlayerOwner(char.playerOwner || char.playedBy || char.player),
     bio: char.bio || '',
     aliases: Array.isArray(char.aliases) ? char.aliases : [],
     archived: !!char.archived,
+    createdAt: char.createdAt || now,
+    updatedAt: now,
     portrait: normalizeImageUrlForStorage(char.portrait) || normalizeImageUrlForStorage(portraitFallback) || null,
     emotes: (Array.isArray(emotes) ? emotes : [])
       .map(emote => ({ img: normalizeImageUrlForStorage(emote.img), label: emote.label || '' }))

@@ -3,12 +3,14 @@ function cleanCustomSection(section) {
   const path = getSectionPathParts(section);
   const derivedPath = path.length ? path : (/>/.test(rawKey) ? parseSectionPathInput(rawKey) : []);
   const key = derivedPath.length ? derivedPath[derivedPath.length - 1] : (rawKey || 'Neuer Bereich');
+  const iconUrl = String(section?.iconUrl || '').trim().slice(0, 900);
   const next = {
     key,
     tab: String(section?.tab || '').trim() || key,
     desc: String(section?.desc || '').trim(),
     entries: Array.isArray(section?.entries) ? section.entries.map(entry => sanitizeModuleEntry(entry)).filter(Boolean) : [],
   };
+  if (iconUrl) next.iconUrl = iconUrl;
   const nodeId = String(section?.nodeId || '').trim();
   if (nodeId) next.nodeId = nodeId;
   if (derivedPath.length) next.path = derivedPath;
@@ -22,7 +24,8 @@ function cleanModuleSectionMove(section) {
     tab: cleaned.tab,
     desc: cleaned.desc,
     path: getSectionPathParts(cleaned),
-    nodeId: cleaned.nodeId || ensureModuleNodeForSection(cleaned)
+    nodeId: cleaned.nodeId || ensureModuleNodeForSection(cleaned),
+    iconUrl: cleaned.iconUrl || ''
   };
 }
 
@@ -248,7 +251,8 @@ function buildModuleExportPayload(entryId) {
       tab: current.section.tab || current.section.key,
       desc: current.section.desc || '',
       path: getSectionPathParts(current.section),
-      nodeId: current.section.nodeId || ''
+      nodeId: current.section.nodeId || '',
+      iconUrl: current.section.iconUrl || ''
     },
     entry: sanitizeModuleEntry(current.entry)
   };

@@ -347,8 +347,10 @@ function createCharacterTabButton(tab) {
   del.dataset.charTab = tab;
 
   btn.appendChild(label);
-  btn.appendChild(rename);
-  btn.appendChild(del);
+  if (_charOrganizeMode) {
+    btn.appendChild(rename);
+    btn.appendChild(del);
+  }
   btn.addEventListener('dragover', event => {
     event.preventDefault();
     btn.classList.add('drag-over');
@@ -401,7 +403,7 @@ function renderCharacterSubtabRow(parent) {
     label.textContent = `${subtab === 'Alle' ? 'Alle Untergruppen' : subtab} (${count})`;
     btn.appendChild(label);
 
-    if (subtab !== 'Alle') {
+    if (_charOrganizeMode && subtab !== 'Alle') {
       const rename = document.createElement('span');
       rename.className = 'char-subtab-action';
       rename.textContent = 'Bearbeiten';
@@ -449,6 +451,13 @@ function renderCharSubtabs() {
   const bar = document.getElementById('char-subtabs-bar');
   if (!bar) return;
   bar.innerHTML = '';
+
+  if (typeof createCharacterTaxonomyNavigator === 'function') {
+    bar.appendChild(createCharacterTaxonomyNavigator());
+    const childRow = renderCharacterSubtabRow(_activeCharTab);
+    if (childRow) bar.appendChild(childRow);
+    return;
+  }
 
   _charTabs.forEach(tab => {
     bar.appendChild(createCharacterTabButton(tab));

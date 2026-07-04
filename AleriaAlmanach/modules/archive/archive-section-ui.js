@@ -24,6 +24,19 @@ function getArchiveSectionStats(section, entries = []) {
   return { moduleCount, pageCount, commentEnabledCount };
 }
 
+function getArchiveSectionIconSrc(section) {
+  return sanitizeImageSrc(section?.iconUrl || '');
+}
+
+function renderArchiveSectionIcon(section, className = 'archive-section-icon') {
+  const iconSrc = getArchiveSectionIconSrc(section);
+  if (!iconSrc) return '';
+  return `
+    <span class="${className}" aria-hidden="true">
+      <img src="${iconSrc}" alt="" loading="lazy" decoding="async">
+    </span>`;
+}
+
 function renderArchiveSectionBand(section, entries = [], options = {}) {
   const stats = getArchiveSectionStats(section, entries);
   const title = getSectionLeafLabel(section);
@@ -31,8 +44,10 @@ function renderArchiveSectionBand(section, entries = [], options = {}) {
   const isEmpty = stats.moduleCount === 0;
   const path = getSectionPathParts(section);
   const breadcrumbs = path.length > 1 ? path.slice(0, -1) : [];
+  const hasIcon = !!getArchiveSectionIconSrc(section);
   return `
-    <div class="archive-section-band">
+    <div class="archive-section-band${hasIcon ? ' has-icon' : ''}">
+      ${renderArchiveSectionIcon(section)}
       <div class="archive-section-band-main">
         ${breadcrumbs.length ? `<div class="archive-section-breadcrumbs">${breadcrumbs.map(part => `<span>${escapeHtml(part)}</span>`).join('<span class="archive-section-breadcrumb-separator">&rsaquo;</span>')}</div>` : ''}
         <div class="archive-section-title-row">
@@ -68,9 +83,11 @@ function renderArchiveFolderGrid(folders = []) {
   if (!folders.length) return '';
   return `
     <div class="archive-folder-grid" aria-label="Unterbereiche">
-      ${folders.map(folder => `
-        <button class="archive-folder-card" type="button" data-archive-action="enter-section-folder" data-section-path="${escapeHtml(encodeArchivePathData(folder.path))}">
-          <span class="archive-folder-mark" aria-hidden="true"></span>
+      ${folders.map(folder => {
+        const hasIcon = !!getArchiveSectionIconSrc(folder);
+        return `
+        <button class="archive-folder-card${hasIcon ? ' has-icon' : ''}" type="button" data-archive-action="enter-section-folder" data-section-path="${escapeHtml(encodeArchivePathData(folder.path))}">
+          ${hasIcon ? renderArchiveSectionIcon(folder, 'archive-folder-icon') : '<span class="archive-folder-mark" aria-hidden="true"></span>'}
           <span class="archive-folder-copy">
             <span class="archive-folder-kicker">Unterbereich</span>
             <strong>${escapeHtml(folder.label)}</strong>
@@ -79,8 +96,8 @@ function renderArchiveFolderGrid(folders = []) {
               <span>${folder.childCount} Unterreiter</span>
             </small>
           </span>
-        </button>
-      `).join('')}
+        </button>`;
+      }).join('')}
     </div>`;
 }
 

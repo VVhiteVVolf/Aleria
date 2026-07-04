@@ -9,6 +9,7 @@ const DIALOG_CONFIGS = {
   'char-profile-overlay': { label: 'Charakterprofil', initialFocus: '#cp-name, button, input, textarea, select' },
   'module-editor-overlay': { label: 'Modul-Editor', initialFocus: '#me-code, #me-title, button, input, textarea, select' },
   'module-section-manager-overlay': { label: 'Reiter und Modulpositionen verwalten', initialFocus: '#msm-tab, button, input, textarea, select' },
+  'icon-directory-overlay': { label: 'Icon-Verzeichnis', initialFocus: '#icon-directory-search, button, input, select' },
   'scene-time-event-overlay': { label: 'Szenenzeit ankuendigen', initialFocus: '#ste-title, button, input, textarea, select' },
   'scene-transition-overlay': { label: 'Szenenwechsel anlegen', initialFocus: '#scene-transition-target, button, input, textarea, select' },
 };

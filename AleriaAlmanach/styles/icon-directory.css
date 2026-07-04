@@ -1,0 +1,259 @@
+  .icon-directory-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2800;
+    display: none;
+    align-items: stretch;
+    justify-content: center;
+    padding: clamp(0.75rem, 2vw, 1.4rem);
+    background: rgba(24, 13, 4, 0.72);
+  }
+  .icon-directory-overlay.active {
+    display: flex;
+  }
+  .icon-directory-card {
+    width: min(1180px, 100%);
+    min-height: 0;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    border: 1px solid rgba(139,105,20,0.42);
+    background: var(--parchment-dark);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.38);
+  }
+  .icon-directory-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.95rem 1.1rem;
+    border-bottom: 1px solid rgba(139,105,20,0.28);
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04)), var(--parchment);
+  }
+  .icon-directory-kicker,
+  .icon-directory-toolbar label span {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .icon-directory-kicker {
+    font-size: 0.56rem;
+    margin-bottom: 0.2rem;
+  }
+  .icon-directory-head h2 {
+    margin: 0;
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.98rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .icon-directory-close {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid rgba(139,105,20,0.34);
+    background: rgba(255,255,255,0.22);
+    color: var(--gold-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .icon-directory-toolbar {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(180px, 0.45fr) auto;
+    gap: 0.75rem;
+    align-items: end;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(139,105,20,0.22);
+    background: rgba(255,255,255,0.16);
+  }
+  .icon-directory-toolbar label {
+    display: grid;
+    gap: 0.28rem;
+  }
+  .icon-directory-toolbar label span {
+    font-size: 0.52rem;
+  }
+  .icon-directory-toolbar input,
+  .icon-directory-toolbar select {
+    width: 100%;
+    min-height: 2.1rem;
+    border: 1px solid rgba(139,105,20,0.34);
+    background: rgba(255,255,255,0.42);
+    color: var(--ink);
+    padding: 0.38rem 0.5rem;
+    font: inherit;
+  }
+  .icon-directory-status {
+    min-height: 2.1rem;
+    display: flex;
+    align-items: center;
+    color: var(--ink-faded);
+    font-size: 0.78rem;
+  }
+  .icon-directory-grid {
+    min-height: 0;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+    align-items: start;
+  }
+  .icon-directory-item {
+    min-width: 0;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0.55rem;
+    border: 1px solid rgba(139,105,20,0.24);
+    background: rgba(255,255,255,0.22);
+    padding: 0.65rem;
+    overflow: hidden;
+    align-self: start;
+    contain: layout paint;
+  }
+  .icon-directory-preview {
+    width: 100%;
+    height: clamp(7.25rem, 10vw, 8.75rem);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(139,105,20,0.24);
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.44), rgba(255,255,255,0.12)),
+      rgba(255,255,255,0.24);
+    padding: 0.65rem;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    isolation: isolate;
+    contain: strict;
+    cursor: pointer;
+  }
+  .icon-directory-preview img {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    flex: 0 0 auto;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 72% !important;
+    max-height: 72% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1;
+    vertical-align: top;
+  }
+  .icon-directory-preview[data-icon-ratio="square"] img {
+    max-width: 76% !important;
+    max-height: 76% !important;
+  }
+  .icon-directory-preview[data-icon-ratio="portrait"] img {
+    max-width: 62% !important;
+    max-height: 88% !important;
+  }
+  .icon-directory-preview[data-icon-ratio="tall"] img {
+    max-width: 46% !important;
+    max-height: 90% !important;
+  }
+  .icon-directory-preview[data-icon-ratio="wide"] img {
+    max-width: 88% !important;
+    max-height: 64% !important;
+  }
+  .icon-directory-preview[data-icon-ratio="banner"] img {
+    max-width: 92% !important;
+    max-height: 46% !important;
+  }
+  .icon-directory-preview[data-icon-ratio="missing"]::after {
+    content: 'Bild nicht ladbar';
+    color: var(--ink-faded);
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+  .icon-directory-item-copy {
+    min-width: 0;
+    display: grid;
+    gap: 0.22rem;
+  }
+  .icon-directory-item-copy strong {
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
+  }
+  .icon-directory-item-copy span {
+    color: var(--gold-dark);
+    font-size: 0.66rem;
+    overflow-wrap: anywhere;
+  }
+  .icon-directory-item-copy code {
+    display: block;
+    min-width: 0;
+    color: var(--ink-faded);
+    font-size: 0.62rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .icon-directory-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  .icon-directory-actions button {
+    min-width: 0;
+    min-height: 1.9rem;
+    border: 1px solid rgba(139,105,20,0.3);
+    background: rgba(255,255,255,0.28);
+    color: var(--gold-dark);
+    font-family: 'Cinzel', serif;
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.32rem 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .icon-directory-actions button:hover,
+  .icon-directory-preview:hover {
+    border-color: var(--gold);
+  }
+  .icon-directory-empty {
+    grid-column: 1 / -1;
+    padding: 1.4rem 1rem;
+    border: 1px dashed rgba(139,105,20,0.3);
+    color: var(--ink-faded);
+    text-align: center;
+    font-style: italic;
+  }
+
+  @media (max-width: 760px) {
+    .icon-directory-overlay {
+      padding: 0;
+    }
+    .icon-directory-card {
+      width: 100%;
+      height: 100%;
+    }
+    .icon-directory-toolbar {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+    }
+    .icon-directory-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      padding: 0.75rem;
+    }
+    .icon-directory-preview {
+      height: 6.75rem;
+    }
+    .icon-directory-actions {
+      grid-template-columns: 1fr;
+    }
+  }
