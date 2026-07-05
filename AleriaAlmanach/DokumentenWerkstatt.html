@@ -18,13 +18,13 @@
     </div>
     <div class="status" id="status">Bereit.</div>
     <div class="topbar-actions">
-      <button class="btn" type="button" onclick="newDocument()">Neu</button>
-      <button class="btn" type="button" onclick="saveDraft()">Entwurf speichern</button>
-      <button class="btn" type="button" onclick="loadDraft()">Entwurf laden</button>
-      <button class="btn" type="button" onclick="exportJson()">JSON</button>
+      <button class="btn" type="button" data-workshop-action="new-document">Neu</button>
+      <button class="btn" type="button" data-workshop-action="save-draft">Entwurf speichern</button>
+      <button class="btn" type="button" data-workshop-action="load-draft">Entwurf laden</button>
+      <button class="btn" type="button" data-workshop-action="export-json">JSON</button>
       <label class="btn" for="json-import">Import</label>
-      <input id="json-import" type="file" accept="application/json" hidden onchange="importJson(this)">
-      <button class="btn primary" type="button" onclick="exportHtml()">HTML exportieren</button>
+      <input id="json-import" type="file" accept="application/json" hidden data-workshop-action="import-json">
+      <button class="btn primary" type="button" data-workshop-action="export-html">HTML exportieren</button>
     </div>
   </header>
 
@@ -32,11 +32,11 @@
     <section class="editor-pane">
       <div class="editor-inner">
         <nav class="editor-tabs" aria-label="Werkzeugbereiche">
-          <button class="tab-btn active" type="button" data-tab="document" onclick="switchEditorTab('document')">Dokument</button>
-          <button class="tab-btn" type="button" data-tab="style" onclick="switchEditorTab('style')">Schrift</button>
-          <button class="tab-btn" type="button" data-tab="paper" onclick="switchEditorTab('paper')">Papier</button>
-          <button class="tab-btn" type="button" data-tab="text" onclick="switchEditorTab('text')">Text</button>
-          <button class="tab-btn" type="button" data-tab="export" onclick="switchEditorTab('export')">Export</button>
+          <button class="tab-btn active" type="button" data-tab="document" data-workshop-action="switch-editor-tab">Dokument</button>
+          <button class="tab-btn" type="button" data-tab="style" data-workshop-action="switch-editor-tab">Schrift</button>
+          <button class="tab-btn" type="button" data-tab="paper" data-workshop-action="switch-editor-tab">Papier</button>
+          <button class="tab-btn" type="button" data-tab="text" data-workshop-action="switch-editor-tab">Text</button>
+          <button class="tab-btn" type="button" data-tab="export" data-workshop-action="switch-editor-tab">Export</button>
         </nav>
 
         <section class="section editor-panel active" data-panel="document">
@@ -46,7 +46,7 @@
           <div class="grid">
             <div class="field" data-field-key="template">
               <label for="doc-template">Vorlage</label>
-              <select id="doc-template" onchange="setTemplate(this.value)">
+              <select id="doc-template" data-workshop-action="set-template">
                 <option value="letter">Brief</option>
                 <option value="book">Buch / Seiten</option>
                 <option value="note">Zerrissene Notiz</option>
@@ -121,7 +121,7 @@
             </div>
             <div class="media-preview-card" data-field-key="image-options">
               <div class="media-preview" data-media-preview="main"><span>Kein Hauptbild</span></div>
-              <button class="btn" type="button" onclick="clearMediaSlot('main')">Hauptbild entfernen</button>
+              <button class="btn" type="button" data-workshop-action="clear-media-slot" data-slot-key="main">Hauptbild entfernen</button>
             </div>
           </div>
 
@@ -129,7 +129,7 @@
             <div class="media-slot" data-media-slot="signature">
               <div class="media-slot-head">
                 <div class="media-slot-title">Signatur</div>
-                <button class="btn" type="button" onclick="clearMediaSlot('signature')">Entfernen</button>
+                <button class="btn" type="button" data-workshop-action="clear-media-slot" data-slot-key="signature">Entfernen</button>
               </div>
               <div class="grid compact">
                 <div class="field wide">
@@ -163,7 +163,7 @@
             <div class="media-slot" data-media-slot="emblem">
               <div class="media-slot-head">
                 <div class="media-slot-title">Siegel / Emblem</div>
-                <button class="btn" type="button" onclick="clearMediaSlot('emblem')">Entfernen</button>
+                <button class="btn" type="button" data-workshop-action="clear-media-slot" data-slot-key="emblem">Entfernen</button>
               </div>
               <div class="grid compact">
                 <div class="field wide">
@@ -197,7 +197,7 @@
             <div class="media-slot" data-media-slot="watermark">
               <div class="media-slot-head">
                 <div class="media-slot-title">Wasserzeichen</div>
-                <button class="btn" type="button" onclick="clearMediaSlot('watermark')">Entfernen</button>
+                <button class="btn" type="button" data-workshop-action="clear-media-slot" data-slot-key="watermark">Entfernen</button>
               </div>
               <div class="grid compact">
                 <div class="field wide">
@@ -292,27 +292,27 @@
             <div class="section-title">Text</div>
             <div class="book-pages" id="book-pages"></div>
           </div>
-          <div class="toolbar" onmousedown="event.preventDefault()">
-            <select id="block-format" title="Absatzformat" onchange="formatBlock(this.value)">
+          <div class="toolbar" data-workshop-role="format-toolbar">
+            <select id="block-format" title="Absatzformat" data-workshop-action="format-block">
               <option value="p">Absatz</option>
               <option value="h2">Kapitel</option>
               <option value="h3">Zwischenruf</option>
               <option value="blockquote">Zitat</option>
             </select>
-            <button class="icon-btn" type="button" title="Rückgängig" onclick="formatText('undo')">↶</button>
-            <button class="icon-btn" type="button" title="Wiederholen" onclick="formatText('redo')">↷</button>
-            <button class="icon-btn" type="button" title="Fett" onclick="formatText('bold')"><b>F</b></button>
-            <button class="icon-btn" type="button" title="Kursiv" onclick="formatText('italic')"><i>I</i></button>
-            <button class="icon-btn" type="button" title="Unterstrichen" onclick="formatText('underline')"><u>U</u></button>
-            <button class="icon-btn" type="button" title="Liste" onclick="formatText('insertUnorderedList')">•</button>
-            <button class="icon-btn" type="button" title="Links" onclick="formatText('justifyLeft')">↤</button>
-            <button class="icon-btn" type="button" title="Mitte" onclick="formatText('justifyCenter')">↔</button>
-            <button class="icon-btn" type="button" title="Rechts" onclick="formatText('justifyRight')">↦</button>
-            <button class="icon-btn" type="button" title="Trenner" onclick="insertDivider()">―</button>
-            <button class="btn" type="button" onclick="insertLink()">Link</button>
-            <button class="btn" type="button" onclick="clearFormatting()">Format entfernen</button>
-            <button class="btn" type="button" id="add-page-btn" onclick="addBookPage()">+ Seite</button>
-            <button class="btn" type="button" id="remove-page-btn" onclick="removeBookPage()">Seite löschen</button>
+            <button class="icon-btn" type="button" title="Rückgängig" data-workshop-action="format-text" data-command="undo">↶</button>
+            <button class="icon-btn" type="button" title="Wiederholen" data-workshop-action="format-text" data-command="redo">↷</button>
+            <button class="icon-btn" type="button" title="Fett" data-workshop-action="format-text" data-command="bold"><b>F</b></button>
+            <button class="icon-btn" type="button" title="Kursiv" data-workshop-action="format-text" data-command="italic"><i>I</i></button>
+            <button class="icon-btn" type="button" title="Unterstrichen" data-workshop-action="format-text" data-command="underline"><u>U</u></button>
+            <button class="icon-btn" type="button" title="Liste" data-workshop-action="format-text" data-command="insertUnorderedList">•</button>
+            <button class="icon-btn" type="button" title="Links" data-workshop-action="format-text" data-command="justifyLeft">↤</button>
+            <button class="icon-btn" type="button" title="Mitte" data-workshop-action="format-text" data-command="justifyCenter">↔</button>
+            <button class="icon-btn" type="button" title="Rechts" data-workshop-action="format-text" data-command="justifyRight">↦</button>
+            <button class="icon-btn" type="button" title="Trenner" data-workshop-action="insert-divider">―</button>
+            <button class="btn" type="button" data-workshop-action="insert-link">Link</button>
+            <button class="btn" type="button" data-workshop-action="clear-formatting">Format entfernen</button>
+            <button class="btn" type="button" id="add-page-btn" data-workshop-action="add-book-page">+ Seite</button>
+            <button class="btn" type="button" id="remove-page-btn" data-workshop-action="remove-book-page">Seite löschen</button>
           </div>
           <div class="book-manager" id="book-manager" aria-label="Buchseiten verwalten"></div>
           <div id="doc-editor" class="rich-editor" contenteditable="true" spellcheck="true"></div>
@@ -324,18 +324,18 @@
             <div class="section-title">Export & Entwuerfe</div>
           </div>
           <div class="export-grid">
-            <button class="btn" type="button" onclick="saveDraft()">Entwurf speichern</button>
-            <button class="btn" type="button" onclick="loadDraft()">Entwurf laden</button>
-            <button class="btn" type="button" onclick="loadAutoSave()">Autosave laden</button>
-            <button class="btn" type="button" onclick="exportJson()">JSON exportieren</button>
+            <button class="btn" type="button" data-workshop-action="save-draft">Entwurf speichern</button>
+            <button class="btn" type="button" data-workshop-action="load-draft">Entwurf laden</button>
+            <button class="btn" type="button" data-workshop-action="load-autosave">Autosave laden</button>
+            <button class="btn" type="button" data-workshop-action="export-json">JSON exportieren</button>
             <label class="btn" for="json-import-panel">JSON importieren</label>
-            <input id="json-import-panel" type="file" accept="application/json" hidden onchange="importJson(this)">
-            <button class="btn primary" type="button" onclick="exportHtml()">HTML exportieren</button>
+            <input id="json-import-panel" type="file" accept="application/json" hidden data-workshop-action="import-json">
+            <button class="btn primary" type="button" data-workshop-action="export-html">HTML exportieren</button>
           </div>
           <div class="snippet-box">
             <label for="snippet-output">Almanach-Link</label>
             <textarea id="snippet-output" readonly spellcheck="false"></textarea>
-            <button class="btn" type="button" onclick="copySnippet()">Snippet kopieren</button>
+            <button class="btn" type="button" data-workshop-action="copy-snippet">Snippet kopieren</button>
           </div>
           <div class="hint">Der HTML-Export bettet die Werkstatt-CSS ein, damit das Dokument auch ausserhalb des Editors seine Gestaltung behaelt.</div>
         </section>
@@ -347,9 +347,9 @@
         <div class="preview-tools">
           <span>Vorschau</span>
           <div class="preview-zoom">
-            <button class="icon-btn" type="button" title="Verkleinern" onclick="setPreviewZoom(-0.1)">-</button>
-            <button class="btn" type="button" onclick="resetPreviewZoom()">Fit</button>
-            <button class="icon-btn" type="button" title="Vergroessern" onclick="setPreviewZoom(0.1)">+</button>
+            <button class="icon-btn" type="button" title="Verkleinern" data-workshop-action="set-preview-zoom" data-delta="-0.1">-</button>
+            <button class="btn" type="button" data-workshop-action="reset-preview-zoom">Fit</button>
+            <button class="icon-btn" type="button" title="Vergroessern" data-workshop-action="set-preview-zoom" data-delta="0.1">+</button>
           </div>
         </div>
         <div class="preview-scroll">
@@ -361,6 +361,6 @@
 </div>
 
 <script src="DokumentenWerkstatt/js/export-css.js"></script>
-<script src="DokumentenWerkstatt/js/werkstatt.js?v=20260602-mojibake-fix-v1"></script>
+<script src="DokumentenWerkstatt/js/werkstatt.js?v=20260705-event-delegation-v1"></script>
 </body>
 </html>

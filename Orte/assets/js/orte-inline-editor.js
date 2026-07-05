@@ -18,6 +18,7 @@
   const ratingItems = [];
   const tableItems = [];
   const sectionItems = [];
+  const expandedTableControlKeys = new Set();
   const history = {
     undo: [],
     redo: [],
@@ -37,6 +38,7 @@
   let statusPanelOpen = false;
   let statusSuppressClick = false;
   let statusDrag = null;
+  let rowControlPositionTimer = 0;
   const inlineActions = new Set([
     "toggle-orte-inline-edit",
     "toggle-orte-final-status",
@@ -55,11 +57,17 @@
     "add-orte-table-row",
     "add-orte-table-heading-row",
     "insert-orte-table-heading-row-after",
+    "insert-orte-table-primary-heading-row-after",
+    "insert-orte-table-secondary-heading-row-after",
     "pick-orte-table-heading-color",
     "set-orte-portrait-column-count",
     "insert-orte-table-empty-row-after",
+    "insert-orte-table-portrait-row-after",
     "insert-orte-table-row-before",
     "insert-orte-table-row-after",
+    "move-orte-table-row-up",
+    "move-orte-table-row-down",
+    "toggle-orte-table-row-controls",
     "insert-orte-table-block-after",
     "remove-orte-table-block",
     "remove-orte-table-row",
@@ -306,6 +314,8 @@
       if (!editMode) return;
       rememberSelection();
     });
+
+    window.addEventListener("resize", scheduleTableRowControlReposition, { passive: true });
   }
 
   function handleAction(event, target) {
@@ -407,7 +417,13 @@
     }
 
     if (action === "insert-orte-table-heading-row-after") {
-      insertTableHeadingRowNear(target, "after");
+      insertTableHeadingRowNear(target, "after", getRequestedHeadingLevel(target));
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "insert-orte-table-primary-heading-row-after" || action === "insert-orte-table-secondary-heading-row-after") {
+      insertTableHeadingRowNear(target, "after", action === "insert-orte-table-secondary-heading-row-after" ? "secondary" : "primary");
       event.preventDefault();
       return;
     }
@@ -424,14 +440,32 @@
       return;
     }
 
+    if (action === "toggle-orte-table-row-controls") {
+      toggleTableRowControls(target);
+      event.preventDefault();
+      return;
+    }
+
     if (action === "insert-orte-table-empty-row-after") {
       insertTableEmptyRowNear(target, "after");
       event.preventDefault();
       return;
     }
 
+    if (action === "insert-orte-table-portrait-row-after") {
+      insertPortraitRowNear(target, "after");
+      event.preventDefault();
+      return;
+    }
+
     if (action === "insert-orte-table-row-before" || action === "insert-orte-table-row-after") {
       insertTableRowNear(target, action === "insert-orte-table-row-before" ? "before" : "after");
+      event.preventDefault();
+      return;
+    }
+
+    if (action === "move-orte-table-row-up" || action === "move-orte-table-row-down") {
+      moveTableRowNear(target, action === "move-orte-table-row-up" ? "up" : "down");
       event.preventDefault();
       return;
     }
@@ -715,6 +749,13 @@
     return wrapper;
   }
 
+  function unwrapElement(node) {
+    const parent = node?.parentNode;
+    if (!parent) return;
+    while (node.firstChild) parent.insertBefore(node.firstChild, node);
+    node.remove();
+  }
+
   function getEditableTables() {
     return Array.from(root.querySelectorAll("table"))
       .filter((table) => !table.querySelector("table"))
@@ -870,6 +911,7 @@
 
   function renderTableControls() {
     removeInlineEditorControls();
+    const activeControlKeys = new Set();
     tableItems.forEach((item) => {
       const control = document.createElement("div");
       control.className = "orte-table-add-control";
@@ -877,8 +919,12 @@
         <button type="button" data-action="add-orte-table-row" data-orte-table-target="${escapeAttr(item.id)}">+ Zeile</button>
         <button type="button" data-action="add-orte-table-heading-row" data-orte-table-target="${escapeAttr(item.id)}">+ Überschrift</button>
       `;
+      insertTableAddHeadingControls(control, item.id);
       item.table.insertAdjacentElement("afterend", control);
-      renderRowControls(item.table, item.id);
+      renderRowControls(item.table, item.id, activeControlKeys);
+    });
+    Array.from(expandedTableControlKeys).forEach((key) => {
+      if (!activeControlKeys.has(key)) expandedTableControlKeys.delete(key);
     });
   }
 
@@ -892,7 +938,8 @@
     if (!allowedCounts.length) return "";
 
     const row = getTableRowByIndex(table, rowIndex);
-    const currentCount = getPortraitLayoutCells(row).length || Number(row?.dataset?.ortePortraitCount) || allowedCounts.at(-1);
+    const persistedCount = Number(row?.dataset?.ortePortraitCount);
+    const currentCount = allowedCounts.includes(persistedCount) ? persistedCount : getPortraitLayoutCells(row).length;
     return `
       <span class="orte-table-layout-control" aria-label="Portrait-Spalten">
         ${allowedCounts.map((count) => `
@@ -900,6 +947,96 @@
         `).join("")}
       </span>
     `;
+  }
+
+  function insertPortraitRowControl(controls, table, tableId, rowIndex) {
+    if (!controls || !table?.dataset?.ortePortraitLayout) return;
+
+    const existingPortraitButton = Array.from(controls.querySelectorAll('button[data-action="insert-orte-table-row-after"]'))
+      .find((button) => /portrait/i.test(button.textContent + " " + button.title));
+    if (existingPortraitButton) {
+      existingPortraitButton.dataset.action = "insert-orte-table-portrait-row-after";
+      existingPortraitButton.textContent = "+ Portraitreihe";
+      existingPortraitButton.title = "Portraitreihe danach einfuegen";
+      return;
+    }
+
+    if (controls.querySelector('[data-action="insert-orte-table-portrait-row-after"]')) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.action = "insert-orte-table-portrait-row-after";
+    button.dataset.orteTableTarget = tableId;
+    button.dataset.orteTableRowIndex = String(rowIndex);
+    button.title = "Portraitreihe danach einfuegen";
+    button.textContent = "+ Portraitreihe";
+
+    const removeButton = controls.querySelector('[data-action="remove-orte-table-row"], [data-action="remove-orte-table-block"]');
+    if (removeButton) removeButton.before(button);
+    else controls.append(button);
+  }
+
+  function insertPersonalityEmptyRowControl(controls, isPersonalityTable, tableId, rowIndex) {
+    if (!controls || !isPersonalityTable) return;
+    if (controls.querySelector('[data-action="insert-orte-table-empty-row-after"]')) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.action = "insert-orte-table-empty-row-after";
+    button.dataset.orteTableTarget = tableId;
+    button.dataset.orteTableRowIndex = String(rowIndex);
+    button.title = "Leerzeile danach einfuegen";
+    button.textContent = "+ Leerzeile";
+
+    const removeButton = controls.querySelector('[data-action="remove-orte-table-row"]');
+    if (removeButton) removeButton.before(button);
+    else controls.append(button);
+  }
+
+  function renderTableHeadingInsertControls(tableId, rowIndex) {
+    return `
+      <button type="button" data-action="insert-orte-table-primary-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${escapeAttr(rowIndex)}" title="Prim&auml;re &Uuml;berschriftszeile danach einf&uuml;gen">+ &Uuml;berschrift 1</button>
+      <button type="button" data-action="insert-orte-table-secondary-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${escapeAttr(rowIndex)}" title="Sekund&auml;re &Uuml;berschriftszeile danach einf&uuml;gen">+ &Uuml;berschrift 2</button>
+    `;
+  }
+
+  function getRequestedHeadingLevel(button) {
+    return button?.dataset?.orteHeadingLevel === "secondary" ? "secondary" : "primary";
+  }
+
+  function insertRowHeadingControls(controls, tableId, rowIndex, controlKey, expanded = false) {
+    if (!controls) return;
+    controls.querySelectorAll('[data-action="insert-orte-table-heading-row-after"]').forEach((button) => button.remove());
+    controls.querySelectorAll('[data-action="move-orte-table-row-up"], [data-action="move-orte-table-row-down"], [data-action="toggle-orte-table-row-controls"]').forEach((button) => button.remove());
+    controls.dataset.orteTableControlKey = controlKey || "";
+    controls.classList.toggle("is-expanded", !!expanded);
+
+    controls.insertAdjacentHTML("afterbegin", `
+      <button type="button" class="orte-table-row-toggle" data-action="toggle-orte-table-row-controls" aria-expanded="${expanded ? "true" : "false"}" title="Zeilenwerkzeuge anzeigen">[...]</button>
+    `);
+
+    const headingTemplate = document.createElement("template");
+    headingTemplate.innerHTML = renderTableHeadingInsertControls(tableId, rowIndex).trim();
+    const headingButtons = Array.from(headingTemplate.content.childNodes);
+    const moveTemplate = document.createElement("template");
+    moveTemplate.innerHTML = `
+      <button type="button" data-action="move-orte-table-row-up" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${escapeAttr(rowIndex)}" title="Zeile nach oben verschieben">&uarr;</button>
+      <button type="button" data-action="move-orte-table-row-down" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${escapeAttr(rowIndex)}" title="Zeile nach unten verschieben">&darr;</button>
+    `.trim();
+    const moveButtons = Array.from(moveTemplate.content.childNodes);
+    const removeButton = controls.querySelector('[data-action="remove-orte-table-row"], [data-action="remove-orte-table-block"]');
+
+    if (removeButton) removeButton.before(...moveButtons, ...headingButtons);
+    else controls.append(...moveButtons, ...headingButtons);
+  }
+
+  function insertTableAddHeadingControls(control, tableId) {
+    if (!control) return;
+    control.querySelectorAll('[data-action="add-orte-table-heading-row"]').forEach((button) => button.remove());
+    control.insertAdjacentHTML("beforeend", `
+      <button type="button" data-action="add-orte-table-heading-row" data-orte-heading-level="primary" data-orte-table-target="${escapeAttr(tableId)}">+ &Uuml;berschrift 1</button>
+      <button type="button" data-action="add-orte-table-heading-row" data-orte-heading-level="secondary" data-orte-table-target="${escapeAttr(tableId)}">+ &Uuml;berschrift 2</button>
+    `);
   }
 
   function openImagePanel(key) {
@@ -1033,13 +1170,14 @@
   function addTableHeadingRow(button) {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
+    const headingLevel = getRequestedHeadingLevel(button);
 
     if (table.classList.contains("pt-s-0067")) {
       const dividerRows = Array.from(table.tBodies[0]?.rows || []).filter(isPersonalityDividerRow);
       const referenceRow = dividerRows[dividerRows.length - 1] || table.tBodies[0]?.rows?.[table.tBodies[0].rows.length - 1];
-      if (referenceRow) addPersonalityDividerRow(referenceRow, "after");
+      if (referenceRow) addPersonalityDividerRow(referenceRow, "after", headingLevel);
     } else {
-      addGenericHeadingRow(table);
+      addGenericHeadingRow(table, null, "after", headingLevel);
     }
 
     updateTableState(table);
@@ -1069,7 +1207,7 @@
     markDirty();
   }
 
-  function insertTableHeadingRowNear(button, position) {
+  function insertTableHeadingRowNear(button, position, headingLevel = "primary") {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
 
@@ -1077,9 +1215,9 @@
     if (!row) return;
 
     if (table.classList.contains("pt-s-0067")) {
-      addPersonalityDividerRow(row, position);
+      insertPersonalityDividerNear(table, row, position, headingLevel);
     } else {
-      addGenericHeadingRow(table, row, position);
+      addGenericHeadingRow(table, row, position, headingLevel);
     }
 
     updateTableState(table);
@@ -1105,6 +1243,42 @@
     markDirty();
   }
 
+  function insertPortraitRowNear(button, position = "after") {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table?.dataset?.ortePortraitLayout) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    const source = isPortraitLayoutRow(row, table) ? row : getNearestPortraitLayoutRow(table, row);
+    const allowedCounts = getPortraitLayoutCounts(table);
+    const fallbackCount = allowedCounts.includes(1) ? 1 : allowedCounts[0] || 1;
+    const count = source
+      ? getPortraitLayoutRowCount(source, table)
+      : fallbackCount;
+    const portraitRow = source ? source.cloneNode(true) : createPortraitLayoutRow(table, count);
+    resetClonedFragment(portraitRow);
+
+    const rowsToInsert = [portraitRow];
+    if (table.classList.contains("haeuser-court-table") && source && isCourtNameRow(source.nextElementSibling)) {
+      const nameRow = source.nextElementSibling.cloneNode(true);
+      resetClonedFragment(nameRow);
+      rowsToInsert.push(nameRow);
+    }
+
+    const insertTarget = position === "after" && table.classList.contains("haeuser-court-table") && isCourtNameRow(row.nextElementSibling)
+      ? row.nextElementSibling
+      : row;
+    insertTarget.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", rowsToInsert[0]);
+    rowsToInsert.slice(1).forEach((extraRow) => rowsToInsert[0].after(extraRow));
+    applyPortraitColumnCount(table, portraitRow, count, { persistChoice: true });
+    syncCourtNameRowToPortraitCount(table, portraitRow, count);
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
   function removeTableRowNear(button) {
     const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
     if (!table) return;
@@ -1118,6 +1292,8 @@
       } else {
         removePersonalityRows(table, row);
       }
+    } else if (isPortraitLayoutRow(row, table)) {
+      removePortraitLayoutRow(table, row);
     } else if (isPortraitGapRow(row, table)) {
       row.remove();
     } else if (isGenericHeadingRow(row, table)) {
@@ -1142,6 +1318,7 @@
     const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
     if (!row || !isPortraitLayoutRow(row, table)) return;
     if (!applyPortraitColumnCount(table, row, count, { persistChoice: true })) return;
+    syncCourtNameRowToPortraitCount(table, row, count);
 
     updateTableState(table);
     rebuildTargets();
@@ -1161,8 +1338,15 @@
         const persistedCount = Number(row.dataset.ortePortraitCount);
         const hasPersistedCount = allowedCounts.includes(persistedCount);
         const targetCount = hasPersistedCount ? persistedCount : hasLegacyCount && rowIndex === 0 ? legacyCount : allowedCounts.at(-1);
-        applyPortraitColumnCount(table, row, targetCount, { persistChoice: hasPersistedCount || hasLegacyCount && rowIndex === 0 });
+        if (applyPortraitColumnCount(table, row, targetCount, { persistChoice: hasPersistedCount || hasLegacyCount && rowIndex === 0 })) {
+          syncCourtNameRowToPortraitCount(table, row, targetCount);
+        }
       });
+      Array.from(table.tBodies[0]?.rows || [])
+        .filter((row) => isPortraitGapRow(row, table))
+        .forEach((row) => {
+          if (row.cells?.length === 1) row.cells[0].colSpan = getPortraitLayoutColumnCount(table);
+        });
       if (titleCell) delete titleCell.dataset.ortePortraitCount;
       delete table.dataset.ortePortraitCount;
       updateTableState(table);
@@ -1183,7 +1367,7 @@
     }
 
     while (cells.length < count) {
-      const source = cells[cells.length - 1] || createPortraitLayoutCell();
+      const source = cells[cells.length - 1] || createPortraitLayoutCell(table);
       const clone = source.cloneNode(true);
       resetClonedTableBlockRow(clone);
       row.append(clone);
@@ -1192,7 +1376,7 @@
 
     cells = getPortraitLayoutCells(row);
     cells.forEach((cell, index) => normalizePortraitLayoutCell(cell, index, row));
-    distributePortraitCells(row, cells, getPortraitLayoutPositions(count, columnCount), columnCount);
+    distributePortraitCells(row, cells, getPortraitLayoutPositions(count, columnCount, table), columnCount);
 
     const titleCell = getPortraitLayoutTitleCell(table);
     if (titleCell) titleCell.colSpan = columnCount;
@@ -1204,12 +1388,29 @@
 
   function getPortraitLayoutColumnCount(table) {
     const counts = getPortraitLayoutCounts(table);
-    return counts.length ? counts[counts.length - 1] : 1;
+    return counts.length ? Math.max(1, counts[counts.length - 1]) : 1;
   }
 
-  function getPortraitLayoutPositions(count, columnCount) {
+  function getPortraitLayoutPositions(count, columnCount, table = null) {
     const columns = Math.max(1, Number(columnCount) || 1);
-    const amount = Math.max(1, Math.min(columns, Number(count) || 1));
+    const amount = Math.max(0, Math.min(columns, Number(count) || 0));
+    if (table?.dataset?.ortePortraitFill === "left") {
+      return Array.from({ length: amount }, (_, index) => index);
+    }
+    if (columns === 7) {
+      const fixedPositions = {
+        0: [],
+        1: [3],
+        2: [1, 5],
+        3: [0, 3, 6],
+        4: [0, 2, 4, 6],
+        5: [0, 1, 3, 5, 6],
+        6: [0, 1, 2, 4, 5, 6],
+        7: [0, 1, 2, 3, 4, 5, 6],
+      };
+      return fixedPositions[amount] || fixedPositions[7];
+    }
+    if (amount === 0) return [];
     if (amount === 1) return [Math.floor(columns / 2)];
     if (amount === 2) return [0, columns - 1];
     if (amount >= columns) return Array.from({ length: columns }, (_, index) => index);
@@ -1262,6 +1463,7 @@
   }
 
   function getGenericEmptyCellClass(table) {
+    if (table.closest(".haeuser-template-frame")) return "haeuser-table-empty-row";
     if (table.closest(".gruppen-template-frame")) return "gruppen-table-empty-row";
     return "orte-table-empty-row";
   }
@@ -1270,7 +1472,7 @@
     return String(table?.dataset?.ortePortraitLayout || "")
       .split(",")
       .map((value) => Number(value.trim()))
-      .filter((value, index, values) => Number.isInteger(value) && value > 0 && values.indexOf(value) === index)
+      .filter((value, index, values) => Number.isInteger(value) && value >= 0 && values.indexOf(value) === index)
       .sort((a, b) => a - b);
   }
 
@@ -1279,14 +1481,58 @@
       .filter((row) => isPortraitLayoutRow(row, table));
   }
 
+  function getNearestPortraitLayoutRow(table, referenceRow) {
+    const rows = Array.from(table?.tBodies?.[0]?.rows || []);
+    const startIndex = rows.indexOf(referenceRow);
+    if (startIndex < 0) return getPortraitLayoutRows(table)[0] || null;
+
+    for (let distance = 1; distance < rows.length; distance += 1) {
+      const next = rows[startIndex + distance];
+      if (isPortraitLayoutRow(next, table)) return next;
+      const previous = rows[startIndex - distance];
+      if (isPortraitLayoutRow(previous, table)) return previous;
+    }
+    return null;
+  }
+
+  function getPortraitLayoutRowCount(row, table) {
+    const allowedCounts = getPortraitLayoutCounts(table);
+    const persistedCount = Number(row?.dataset?.ortePortraitCount);
+    if (allowedCounts.includes(persistedCount)) return persistedCount;
+    const cellCount = getPortraitLayoutCells(row).length;
+    return allowedCounts.includes(cellCount) ? cellCount : allowedCounts.at(-1) || Math.max(1, cellCount);
+  }
+
+  function getPortraitLayoutCompanionRows(table, row) {
+    if (!table?.classList?.contains("haeuser-court-table")) return [row];
+    const nameRow = row?.nextElementSibling;
+    return isCourtNameRow(nameRow) ? [row, nameRow] : [row];
+  }
+
+  function createPortraitLayoutRow(table, count) {
+    const row = document.createElement("tr");
+    row.dataset.ortePortraitCount = String(count);
+    const amount = Math.max(1, Number(count) || 1);
+    for (let index = 0; index < amount; index += 1) {
+      row.append(createPortraitLayoutCell(table));
+    }
+    return row;
+  }
+
   function getPortraitLayoutCells(row) {
+    const isMarkedCourtPortraitRow = !!row?.closest?.(".haeuser-court-table")
+      && (!!row?.dataset?.ortePortraitCount || !!row?.dataset?.ortePortraitRowKey);
     return Array.from(row?.cells || []).filter((cell) => (
       cell.classList.contains("portrait-cell") || cell.classList.contains("gruppen-leader-card")
+      || isMarkedCourtPortraitRow && cell.classList.contains("haeuser-court-portrait") && cell.dataset.ortePortraitSpacer !== "true"
     ));
   }
 
   function isPortraitLayoutRow(row, table) {
-    return !!table?.dataset?.ortePortraitLayout && getPortraitLayoutCells(row).length > 0;
+    if (!table?.dataset?.ortePortraitLayout) return false;
+    if (getPortraitLayoutCells(row).length > 0) return true;
+    const persistedCount = Number(row?.dataset?.ortePortraitCount);
+    return getPortraitLayoutCounts(table).includes(persistedCount);
   }
 
   function isPortraitGapRow(row, table) {
@@ -1332,7 +1578,13 @@
   function getPortraitLayoutTitleCell(table) {
     return Array.from(table?.tBodies?.[0]?.rows || [])
       .map((row) => row.cells?.length === 1 ? row.cells[0] : null)
-      .find((cell) => cell?.classList?.contains("gruppen-table-title") || cell?.classList?.contains("gruppen-section-row")) || null;
+      .find((cell) => (
+        cell?.classList?.contains("gruppen-table-title")
+        || cell?.classList?.contains("gruppen-section-row")
+        || cell?.classList?.contains("haeuser-court-title")
+        || cell?.classList?.contains("haeuser-genealogy-title")
+        || cell?.classList?.contains("haeuser-table-primary-heading")
+      )) || null;
   }
 
   function getContiguousTableBlockRows(table, referenceRow) {
@@ -1386,6 +1638,8 @@
 
   function resetClonedTableBlockRow(row) {
     row.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
+    row.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
+    row.removeAttribute("data-orte-table-control-key");
     row.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
       node.removeAttribute("contenteditable");
       node.removeAttribute("data-orte-inline-text");
@@ -1407,7 +1661,14 @@
     });
   }
 
-  function createPortraitLayoutCell() {
+  function createPortraitLayoutCell(table = null) {
+    if (table?.classList?.contains("haeuser-court-table")) {
+      const cell = document.createElement("td");
+      cell.className = "portrait-cell haeuser-court-portrait";
+      cell.innerHTML = `<span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-format="portrait" data-orte-image-max-height="210"></span>`;
+      return cell;
+    }
+
     const cell = document.createElement("td");
     cell.className = "portrait-cell gruppen-leader-card";
     cell.innerHTML = `
@@ -1420,7 +1681,11 @@
   }
 
   function normalizePortraitLayoutCell(cell, index, row) {
-    const labels = [
+    const table = row?.closest?.("[data-orte-table-id]");
+    const isHouseLayout = !!row?.closest?.(".haeuser-genealogy-table");
+    const isCourtLayout = !!table?.classList?.contains("haeuser-court-table");
+    const rowKey = normalizePortraitRowKey(row?.dataset?.ortePortraitRowKey) || "main";
+    const labels = isCourtLayout ? getCourtPortraitLabels(rowKey) : [
       "Führung",
       "Stellvertretung",
       "Rat / Amt",
@@ -1435,27 +1700,38 @@
       "Archive, Finanzen, Verträge, Versorgung oder Überlieferung."
     ];
     const label = labels[index] || `Position ${index + 1}`;
-    const rowKey = normalizePortraitRowKey(row?.dataset?.ortePortraitRowKey) || "main";
-    const key = rowKey === "main"
+    const key = isCourtLayout
+      ? `hof-${rowKey}-portrait-${String(index + 1).padStart(4, "0")}`
+      : rowKey === "main"
       ? `fuehrung-portrait-${String(index + 1).padStart(4, "0")}`
       : `fuehrung-portrait-${rowKey}-${String(index + 1).padStart(2, "0")}`;
 
     cell.colSpan = 1;
-    cell.classList.add("portrait-cell", "gruppen-leader-card");
+    cell.classList.add("portrait-cell");
+    if (isCourtLayout) {
+      cell.classList.remove("gruppen-leader-card", "haeuser-genealogy-card");
+      cell.classList.add("haeuser-court-portrait");
+    } else {
+      cell.classList.add("gruppen-leader-card");
+    }
+    if (isHouseLayout) cell.classList.add("haeuser-genealogy-card");
 
     let imageSlot = cell.querySelector(".orte-image-slot");
     if (!imageSlot) {
       imageSlot = document.createElement("span");
-      imageSlot.className = "orte-image-slot gruppen-portrait-slot";
+      imageSlot.className = isCourtLayout ? "orte-image-slot haeuser-court-portrait-slot" : "orte-image-slot gruppen-portrait-slot";
       cell.querySelector("b")?.insertAdjacentElement("afterend", imageSlot);
       if (!imageSlot.parentElement) cell.prepend(imageSlot);
     }
 
-    imageSlot.classList.add("gruppen-portrait-slot");
+    if (isCourtLayout) imageSlot.classList.add("haeuser-court-portrait-slot");
+    else imageSlot.classList.add("gruppen-portrait-slot");
+    if (isHouseLayout) imageSlot.classList.add("haeuser-genealogy-portrait-slot");
     imageSlot.dataset.orteImageKey = key;
     imageSlot.dataset.orteImageLabel = `Portrait ${label}`;
     imageSlot.dataset.orteImageFormat = "portrait";
-    imageSlot.dataset.orteImageMaxHeight = "360";
+    imageSlot.dataset.orteImageMaxHeight = isCourtLayout ? "210" : "360";
+    if (isHouseLayout) imageSlot.dataset.orteImageMaxHeight = "220";
     imageSlot.setAttribute("aria-label", `Portrait ${label}`);
 
     const bolds = Array.from(cell.querySelectorAll("b"));
@@ -1471,22 +1747,102 @@
     if (paragraph) paragraph.dataset.ortePortraitField = "description";
   }
 
+  function getCourtPortraitLabels(rowKey) {
+    if (rowKey === "oberhaupt") {
+      return [
+        "Oberhaupt",
+        "Stellvertretung",
+        "Hausrat",
+        "Waffenfuehrung",
+        "Position 5",
+        "Position 6",
+        "Position 7"
+      ];
+    }
+    if (rowKey === "erbfolge") {
+      return [
+        "Erbfolge 1",
+        "Erbfolge 2",
+        "Erbfolge 3",
+        "Erbfolge 4",
+        "Erbfolge 5",
+        "Erbfolge 6",
+        "Erbfolge 7"
+      ];
+    }
+    return [
+      "Position 1",
+      "Position 2",
+      "Position 3",
+      "Position 4",
+      "Position 5",
+      "Position 6",
+      "Position 7"
+    ];
+  }
+
+  function syncCourtNameRowToPortraitCount(table, portraitRow, count) {
+    if (!table?.classList?.contains("haeuser-court-table")) return;
+
+    const nameRow = portraitRow?.nextElementSibling;
+    if (!isCourtNameRow(nameRow)) return;
+
+    const columnCount = getPortraitLayoutColumnCount(table);
+    while (nameRow.cells.length < columnCount) {
+      nameRow.append(createCourtNameCell());
+    }
+    while (nameRow.cells.length > columnCount) {
+      nameRow.deleteCell(nameRow.cells.length - 1);
+    }
+
+    const rowKey = normalizePortraitRowKey(portraitRow?.dataset?.ortePortraitRowKey);
+    Array.from(nameRow.cells || []).forEach((cell, index) => {
+      cell.colSpan = 1;
+      cell.classList.add("haeuser-court-name");
+      if (index >= count) {
+        cell.innerHTML = "&nbsp;";
+        return;
+      }
+      if (!normalizeWhitespace(cell.textContent)) {
+        cell.innerHTML = getDefaultCourtNameHtml(rowKey);
+      }
+    });
+  }
+
+  function isCourtNameRow(row) {
+    const cells = Array.from(row?.cells || []);
+    return cells.length > 0 && cells.every((cell) => cell.classList.contains("haeuser-court-name"));
+  }
+
+  function createCourtNameCell() {
+    const cell = document.createElement("td");
+    cell.className = "haeuser-court-name";
+    cell.innerHTML = "&nbsp;";
+    return cell;
+  }
+
+  function getDefaultCourtNameHtml(rowKey) {
+    return rowKey === "oberhaupt" ? "<b>&dagger; ??? &dagger;</b><br><b>(???? - ????)</b>" : "<b>??</b>";
+  }
+
   function isResetPortraitText(text) {
     const value = normalizeWhitespace(text);
     return !value || value === "...." || value === "Rolle" || value === "Name" || value === "Name / Titel";
   }
 
-  function addGenericHeadingRow(table, referenceRow = null, position = "after") {
+  function addGenericHeadingRow(table, referenceRow = null, position = "after", headingLevel = "primary") {
     const tbody = table.tBodies[0];
     if (!tbody) return;
 
     const row = document.createElement("tr");
     row.dataset.orteGeneratedHeadingRow = "true";
+    row.dataset.orteHeadingLevel = headingLevel === "secondary" ? "secondary" : "primary";
     const cell = document.createElement("td");
     cell.colSpan = getTableColumnCount(table) || 1;
-    cell.className = getGenericHeadingCellClass(table);
+    cell.className = getGenericHeadingCellClass(table, row.dataset.orteHeadingLevel);
     cell.innerHTML = "<b>Neue Überschrift</b>";
-    applyHeadingColorToCell(cell, getDefaultHeadingColor(table));
+    applyHeadingColorToCell(cell, getDefaultHeadingColor(table, row.dataset.orteHeadingLevel));
+    cell.innerHTML = row.dataset.orteHeadingLevel === "secondary" ? "<b>Neue Unterueberschrift</b>" : "<b>Neue Ueberschrift</b>";
     row.append(cell);
 
     const target = referenceRow || Array.from(tbody.rows).at(-1);
@@ -1505,7 +1861,8 @@
 
     const clone = candidate.cloneNode(true);
     resetClonedFragment(clone);
-    candidate.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
+    const target = referenceRow || candidate;
+    target.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
   }
 
   function addPersonalityRows(table, referenceRow = null, position = "after") {
@@ -1526,11 +1883,28 @@
     }
   }
 
-  function addPersonalityDividerRow(referenceRow, position = "after") {
+  function addPersonalityDividerRow(referenceRow, position = "after", headingLevel = "primary") {
     if (!isPersonalityDividerRow(referenceRow)) return;
     const clone = referenceRow.cloneNode(true);
-    resetPersonalityDividerRow(clone);
+    resetPersonalityDividerRow(clone, headingLevel);
     referenceRow.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
+  }
+
+  function insertPersonalityDividerNear(table, row, position = "after", headingLevel = "primary") {
+    const source = isPersonalityDividerRow(row)
+      ? row
+      : Array.from(table?.tBodies?.[0]?.rows || []).find(isPersonalityDividerRow);
+    if (!source || !row) return;
+
+    const group = getPersonalityGroupForRow(table, row);
+    const target = group?.length
+      ? (position === "before" ? group[0] : group[group.length - 1])
+      : row;
+    if (!target) return;
+
+    const clone = source.cloneNode(true);
+    resetPersonalityDividerRow(clone, headingLevel);
+    target.insertAdjacentElement(position === "before" ? "beforebegin" : "afterend", clone);
   }
 
   function insertTableBlockNear(button, position = "after") {
@@ -1555,6 +1929,91 @@
     }
     updateTableState(table);
     refreshTableControls();
+  }
+
+  function moveTableRowNear(button, direction) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    if (!row) return;
+
+    const movingRows = getMovableTableRows(table, row);
+    if (!movingRows.length) return;
+
+    const adjacentRows = getAdjacentMovableTableRows(table, movingRows, direction);
+    if (!adjacentRows.length) return;
+
+    const movingParent = movingRows[0].parentElement;
+    if (!movingParent || adjacentRows.some((adjacentRow) => adjacentRow.parentElement !== movingParent)) return;
+
+    if (direction === "up") adjacentRows[0].before(...movingRows);
+    else adjacentRows[adjacentRows.length - 1].after(...movingRows);
+
+    updateTableState(table);
+    rebuildTargets();
+    markDirty();
+  }
+
+  function getMovableTableRows(table, row) {
+    if (table.classList.contains("pt-s-0067")) {
+      const group = getPersonalityGroupForRow(table, row);
+      if (group?.length) return group;
+      return [row];
+    }
+    if (isPortraitLayoutRow(row, table)) return getPortraitLayoutCompanionRows(table, row);
+    if (row?.dataset?.orteTableBlock) return getContiguousTableBlockRows(table, row);
+    return [row];
+  }
+
+  function getAdjacentMovableTableRows(table, movingRows, direction) {
+    const first = movingRows[0];
+    const last = movingRows[movingRows.length - 1];
+    let adjacentRow = direction === "up" ? first.previousElementSibling : last.nextElementSibling;
+    const bridgeRows = [];
+
+    while (adjacentRow && isSkippableMoveSpacer(table, adjacentRow)) {
+      bridgeRows.push(adjacentRow);
+      adjacentRow = direction === "up" ? adjacentRow.previousElementSibling : adjacentRow.nextElementSibling;
+    }
+
+    if (!adjacentRow) return direction === "up" ? bridgeRows.reverse() : bridgeRows;
+
+    const adjacentRows = getMovableTableRows(table, adjacentRow);
+    const movableAdjacentRows = adjacentRows.length ? adjacentRows : [adjacentRow];
+    return direction === "up"
+      ? [...movableAdjacentRows, ...bridgeRows.reverse()]
+      : [...bridgeRows, ...movableAdjacentRows];
+  }
+
+  function isSkippableMoveSpacer(table, row) {
+    if (!row) return false;
+    if (table?.classList?.contains("pt-s-0067")) return isPersonalitySpacerRow(row);
+    if (table?.dataset?.ortePortraitLayout && isPortraitGapRow(row, table)) return true;
+    return isGenericEmptySpacerRow(row, table);
+  }
+
+  function isGenericEmptySpacerRow(row, table) {
+    const cells = Array.from(row?.cells || []);
+    if (cells.length !== 1) return false;
+    const cell = cells[0];
+    if (cell.tagName === "TH") return false;
+    if (row.querySelector("[data-orte-image-key], [data-orte-rating-key], img")) return false;
+    if (Number(cell.colSpan || 1) < (getTableColumnCount(table) || 1)) return false;
+    return !normalizeWhitespace(cell.textContent);
+  }
+
+  function toggleTableRowControls(button) {
+    const controls = button.closest(".orte-table-row-controls");
+    if (!controls) return;
+    const controlKey = controls.dataset.orteTableControlKey || "";
+    const expanded = !controls.classList.contains("is-expanded");
+    controls.classList.toggle("is-expanded", expanded);
+    button.setAttribute("aria-expanded", String(expanded));
+    if (controlKey) {
+      if (expanded) expandedTableControlKeys.add(controlKey);
+      else expandedTableControlKeys.delete(controlKey);
+    }
   }
 
   function removeTableBlockNear(button) {
@@ -1601,7 +2060,13 @@
     row.remove();
   }
 
-  function renderRowControls(table, tableId) {
+  function removePortraitLayoutRow(table, row) {
+    const portraitRows = getPortraitLayoutRows(table);
+    if (portraitRows.length <= 1 || !isPortraitLayoutRow(row, table)) return;
+    getPortraitLayoutCompanionRows(table, row).reverse().forEach((item) => item.remove());
+  }
+
+  function renderRowControls(table, tableId, activeControlKeys = null) {
     const rows = Array.from(table.tBodies[0]?.rows || []);
     rows.forEach((row, index) => {
       const isPortraitRow = isPortraitLayoutRow(row, table);
@@ -1616,6 +2081,9 @@
       if (!cell) return;
       cell.classList.add("orte-table-control-cell");
       const controls = document.createElement("span");
+      const controlKey = getTableControlKey(tableId, row);
+      activeControlKeys?.add(controlKey);
+      const isExpanded = expandedTableControlKeys.has(controlKey);
       const isPersonalityTable = table.classList.contains("pt-s-0067");
       const isDividerRow = isPersonalityDividerRow(row);
       const isHeadingRow = !isPersonalityTable && isGenericHeadingRow(row, table);
@@ -1667,8 +2135,59 @@
           <button type="button" data-action="insert-orte-table-heading-row-after" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Überschrift danach einfügen">H</button>
           <button type="button" data-action="remove-orte-table-row" data-orte-table-target="${escapeAttr(tableId)}" data-orte-table-row-index="${index}" title="Zeile entfernen">-</button>
         `;
+      insertPersonalityEmptyRowControl(controls, isPersonalityTable, tableId, index);
+      insertPortraitRowControl(controls, table, tableId, index);
+      insertRowHeadingControls(controls, tableId, index, controlKey, isExpanded);
       cell.prepend(controls);
+      placeTableRowControlsOutsideFrame(controls, cell, table);
     });
+  }
+
+  function placeTableRowControlsOutsideFrame(controls, cell, table) {
+    const frame = getTableControlFrame(table);
+    if (!frame || !controls || !cell) return;
+
+    const frameRect = frame.getBoundingClientRect();
+    const cellRect = cell.getBoundingClientRect();
+    if (!Number.isFinite(frameRect.left) || !Number.isFinite(cellRect.left)) return;
+
+    controls.classList.add("is-frame-external-control");
+    controls.style.setProperty("--orte-row-control-frame-offset-x", `${frameRect.left - cellRect.left}px`);
+  }
+
+  function getTableControlFrame(table) {
+    return table?.closest?.(".haeuser-template-frame, .gruppen-template-frame, .grossstadt-template-frame, .kingdom-frame") || null;
+  }
+
+  function scheduleTableRowControlReposition() {
+    if (!editMode) return;
+    window.clearTimeout(rowControlPositionTimer);
+    rowControlPositionTimer = window.setTimeout(repositionTableRowControls, 120);
+  }
+
+  function repositionTableRowControls() {
+    document.querySelectorAll(".orte-table-row-controls.is-frame-external-control").forEach((controls) => {
+      const cell = controls.closest("td, th");
+      const table = cell?.closest?.("[data-orte-table-id]");
+      if (cell && table) placeTableRowControlsOutsideFrame(controls, cell, table);
+    });
+  }
+
+  function getTableControlKey(tableId, row) {
+    return `${tableId}:${ensureTableRowControlKey(row)}`;
+  }
+
+  function ensureTableRowControlKey(row) {
+    if (!row) return "missing";
+    const normalized = normalizePortraitRowKey(row.dataset.orteTableControlKey);
+    if (normalized) {
+      row.dataset.orteTableControlKey = normalized;
+      return normalized;
+    }
+
+    const key = `control-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+    row.dataset.orteTableControlKey = key;
+    return key;
   }
 
   function getTableRowByIndex(table, index) {
@@ -1702,17 +2221,24 @@
     if (Number(cell.colSpan || 1) < tableWidth) return false;
     return row.dataset.orteGeneratedHeadingRow === "true"
       || cell.classList.contains("gruppen-section-row")
+      || cell.classList.contains("haeuser-table-primary-heading")
+      || cell.classList.contains("haeuser-table-secondary-heading")
+      || cell.classList.contains("haeuser-genealogy-heading")
       || cell.classList.contains("sub-header")
       || (!!table?.closest?.(".kingdom-frame") && !!normalizeWhitespace(cell.textContent));
   }
 
-  function getGenericHeadingCellClass(table) {
-    if (table.closest(".gruppen-template-frame")) return "gruppen-section-row";
+  function getGenericHeadingCellClass(table, headingLevel = "primary") {
+    if (table.closest(".haeuser-template-frame")) {
+      return headingLevel === "secondary" ? "haeuser-table-secondary-heading" : "haeuser-table-primary-heading";
+    }
+    if (table.closest(".gruppen-template-frame")) return headingLevel === "secondary" ? "sub-header" : "gruppen-section-row";
     if (table.closest(".kingdom-frame")) return "kingdom-section-row";
     return "sub-header";
   }
 
-  function getDefaultHeadingColor(table) {
+  function getDefaultHeadingColor(table, headingLevel = "primary") {
+    if (table.closest(".haeuser-template-frame")) return headingLevel === "secondary" ? "#b98f42" : "#7f5a24";
     return table.closest(".gruppen-template-frame") ? "#755420" : "#755420";
   }
 
@@ -1720,7 +2246,7 @@
     const cell = row?.cells?.[0];
     return normalizeHexColor(cell?.dataset?.orteHeadingColor)
       || normalizeCssColor(cell?.style?.backgroundColor)
-      || getDefaultHeadingColor(table);
+      || getDefaultHeadingColor(table, row?.dataset?.orteHeadingLevel);
   }
 
   function updateTableHeadingColor(input, color) {
@@ -1875,6 +2401,9 @@
 
   function resetClonedFragment(fragment) {
     fragment.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
+    fragment.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
+    if (fragment instanceof Element) fragment.removeAttribute("data-orte-table-control-key");
+    fragment.querySelectorAll("[data-orte-table-control-key]").forEach((node) => node.removeAttribute("data-orte-table-control-key"));
     fragment.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
       node.removeAttribute("contenteditable");
       node.removeAttribute("data-orte-inline-text");
@@ -1912,7 +2441,7 @@
     return "....";
   }
 
-  function resetPersonalityDividerRow(row) {
+  function resetPersonalityDividerRow(row, headingLevel = "primary") {
     row.querySelectorAll(".orte-table-row-controls").forEach((node) => node.remove());
     row.querySelectorAll("[contenteditable], [data-orte-inline-text]").forEach((node) => {
       node.removeAttribute("contenteditable");
@@ -1920,8 +2449,9 @@
     });
 
     const cell = row.cells?.[0];
+    row.dataset.orteHeadingLevel = headingLevel === "secondary" ? "secondary" : "primary";
     const label = cell?.querySelector("b, strong") || cell;
-    if (label) label.textContent = "Neue Zwischenzeile";
+    if (label) label.textContent = row.dataset.orteHeadingLevel === "secondary" ? "Neue Unterueberschrift" : "Neue Ueberschrift";
   }
 
   function applyPayload(payload, options = {}) {
@@ -2062,6 +2592,7 @@
 
   function sanitizeLoadedTable(table) {
     table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control").forEach((node) => node.remove());
+    table.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
     table.querySelectorAll("td, th").forEach((cell) => sanitizeEditableNode(cell));
   }
 
@@ -2073,6 +2604,7 @@
       node.removeAttribute("contenteditable");
       node.removeAttribute("data-orte-inline-text");
     });
+    clone.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
     clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-inline-image-hint").forEach((node) => node.remove());
     clone.querySelectorAll("[data-orte-rating-key]").forEach((node) => {
       const key = node.dataset.orteRatingKey;

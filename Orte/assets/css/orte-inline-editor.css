@@ -306,8 +306,10 @@
   overflow-wrap: anywhere;
 }
 
-.orte-inline-editing .place-document {
-  padding-left: 84px;
+.orte-inline-editing .place-document,
+.orte-inline-editing .gruppen-document,
+.orte-inline-editing .haeuser-document {
+  overflow: visible;
 }
 
 .orte-inline-editing [data-orte-inline-text]:hover {
@@ -442,23 +444,26 @@
   padding-top: max(40px, 0.45rem) !important;
 }
 
-.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-divider-row-control) {
-  padding-top: 96px !important;
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-expanded.is-divider-row-control:not(.is-frame-external-control)) {
+  padding-top: 132px !important;
 }
 
-.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-portrait-layout-row-control) {
-  padding-top: 154px !important;
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-expanded.is-portrait-layout-row-control:not(.is-frame-external-control)) {
+  padding-top: 224px !important;
 }
 
-.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-personality-row-control) {
-  padding-top: 66px !important;
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-expanded.is-personality-row-control:not(.is-frame-external-control)) {
+  padding-top: 118px !important;
 }
 
-.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-table-block-row-control) {
-  padding-top: 112px !important;
+.orte-inline-editing .orte-table-control-cell:has(> .orte-table-row-controls.is-expanded.is-table-block-row-control:not(.is-frame-external-control)) {
+  padding-top: 150px !important;
 }
 
 .orte-table-row-controls {
+  --orte-row-control-collapsed-width: 66px;
+  --orte-row-control-expanded-width: 260px;
+  --orte-row-control-external-gap: 12px;
   position: absolute;
   left: 6px;
   top: 6px;
@@ -476,6 +481,18 @@
   transform: none;
 }
 
+.orte-table-row-controls.is-frame-external-control {
+  left: calc(var(--orte-row-control-frame-offset-x, 0px) - var(--orte-row-control-collapsed-width) - var(--orte-row-control-external-gap));
+  right: auto;
+  top: 0;
+}
+
+.orte-table-row-controls.is-frame-external-control.is-expanded {
+  left: calc(var(--orte-row-control-frame-offset-x, 0px) - var(--orte-row-control-collapsed-width) - var(--orte-row-control-expanded-width) - var(--orte-row-control-external-gap) * 2);
+  width: var(--orte-row-control-expanded-width);
+  max-width: var(--orte-row-control-expanded-width);
+}
+
 .orte-inline-editing .orte-table-row-controls {
   display: inline-flex;
 }
@@ -483,8 +500,8 @@
 .orte-table-row-controls button {
   display: grid;
   place-items: center;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   cursor: pointer;
   border: 1px dashed #8b6325;
@@ -494,29 +511,55 @@
   line-height: 1;
 }
 
+.orte-table-row-controls:not(.is-expanded) {
+  width: 66px !important;
+  max-width: 66px !important;
+}
+
+.orte-table-row-controls:not(.is-expanded) > :not(.orte-table-row-toggle) {
+  display: none !important;
+}
+
+.orte-table-row-controls .orte-table-row-toggle {
+  width: 100% !important;
+  min-width: 56px;
+  min-height: 32px;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.orte-table-row-controls.is-expanded .orte-table-row-toggle {
+  border-style: solid;
+  background: #7c5a22;
+  color: #fff2cf;
+}
+
 .orte-table-row-controls.is-personality-row-control {
   flex-direction: column;
-  width: 116px;
+  width: 196px;
 }
 
 .orte-table-row-controls.is-personality-row-control button {
   width: 100%;
-  min-height: 22px;
-  padding: 2px 5px;
-  font-size: 11px;
+  min-height: 30px;
+  padding: 4px 7px;
+  font-size: 12px;
   line-height: 1.1;
   white-space: normal;
 }
 
 .orte-table-row-controls.is-portrait-layout-row-control {
   flex-direction: column;
-  width: 188px;
-  max-width: 188px;
+  width: 244px;
+  max-width: 244px;
 }
 
 .orte-table-row-controls.is-portrait-layout-row-control > button {
   width: 100%;
-  min-height: 26px;
+  min-height: 32px;
   padding: 4px 7px;
   font-size: 12px;
   line-height: 1.1;
@@ -535,7 +578,7 @@
 .orte-table-row-controls.is-portrait-layout-row-control .orte-table-layout-control button {
   width: 100%;
   min-width: 0;
-  height: 28px;
+  height: 34px;
   font-size: 12px;
 }
 
@@ -546,25 +589,35 @@
 
 .orte-table-row-controls.is-portrait-gap-row-control {
   flex-direction: column;
-  width: 138px;
+  width: 196px;
 }
 
 .orte-table-row-controls.is-divider-row-control {
-  width: 152px;
+  width: 196px;
 }
 
 .orte-table-row-controls.is-divider-row-control button {
   width: 100%;
-  min-height: 22px;
-  padding: 2px 5px;
-  font-size: 11px;
+  min-height: 30px;
+  padding: 4px 7px;
+  font-size: 12px;
   line-height: 1.1;
   white-space: normal;
 }
 
 .orte-table-row-controls.is-table-block-row-control {
   flex-direction: column;
-  width: 156px;
+  width: 216px;
+}
+
+.orte-table-row-controls.is-table-block-row-control button,
+.orte-table-row-controls.is-portrait-gap-row-control button {
+  width: 100%;
+  min-height: 30px;
+  padding: 4px 7px;
+  font-size: 12px;
+  line-height: 1.1;
+  white-space: normal;
 }
 
 .orte-table-heading-color-tool {

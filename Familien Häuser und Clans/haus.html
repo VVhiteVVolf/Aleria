@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Häuser-Vorlage - Aleria</title>
+  <link rel="stylesheet" href="../Orte/assets/css/orte-grossstadt.css?v=haeuser-orte-basis-20260705a">
+  <link rel="stylesheet" href="../Orte/assets/css/orte-inline-editor.css?v=inline-controls-20260705e">
+  <link rel="stylesheet" href="assets/css/haeuser.css?v=haeuser-vorlage-20260705f">
+  <script src="haeuser.registry.js?v=haeuser-vorlage-20260705f"></script>
+  <script src="assets/js/haeuser-loader.js?v=haeuser-vorlage-20260705f"></script>
+  <script type="module" src="../AleriaAlmanach/firebase.js"></script>
+  <script type="module" src="../Orte/assets/js/orte-inline-firebase.js?v=haeuser-vorlage-20260705f"></script>
+  <script src="assets/js/haeuser-page.js?v=haeuser-vorlage-20260705f" defer></script>
+  <script src="../Orte/assets/js/orte-inline-editor.js?v=inline-controls-20260705e" defer></script>
+</head>
+<body>
+  <main class="haeuser-page grossstadt-template" data-haeuser-root data-orte-static-template data-default-id="haeuser-vorlage">
+    <div class="haeuser-document place-document">
+      <table class="haeuser-template-frame grossstadt-template-frame" border="1" cellspacing="1">
+        <thead>
+          <tr>
+            <th class="haeuser-hero" colspan="10">
+              <p class="haeuser-title"><b data-haeuser-title data-orte-explicit-inline>Häuser-Vorlage</b></p>
+              <p class="haeuser-subtitle" data-haeuser-type data-orte-explicit-inline>Haus / Familie / Clan / Kadettenzweig</p>
+              <p><span class="orte-image-slot haeuser-crest-slot" data-orte-image-key="haus-wappen" data-orte-image-label="Wappen, Zeichen oder Clan-Symbol" data-orte-image-format="square" data-orte-image-max-height="220" aria-label="Wappen, Zeichen oder Clan-Symbol"></span></p>
+              <p class="haeuser-quote">&bdquo;<span data-profile-field="motto" data-orte-explicit-inline>Optionaler Leitspruch</span>&ldquo;</p>
+              <p class="haeuser-quote-source"><i>- <span data-profile-field="quoteAuthor" data-orte-explicit-inline>Chronist / Familienoberhaupt / Überlieferung</span></i></p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="haeuser-main-cell" colspan="6">
+              <h2 id="uebersicht">1. Übersicht</h2>
+              <p data-section="overview">Kurzüberblick: Wofür steht dieses Haus, diese Familie oder dieser Clan, wo ist er verankert und warum ist er politisch, kulturell oder erzählerisch wichtig?</p>
+            </td>
+            <td class="haeuser-side-cell" colspan="4">
+              <span class="orte-image-slot haeuser-landscape-slot" data-orte-image-key="haus-hauptbild" data-orte-image-label="Hauptbild, Stammsitz, Bannerhalle oder Stimmungsmotiv" data-orte-image-format="landscape" data-orte-image-max-height="380" aria-label="Hauptbild, Stammsitz, Bannerhalle oder Stimmungsmotiv"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-main-cell" colspan="6">
+              <h2 id="geschichte">2. Geschichte</h2>
+              <p data-section="history">Entstehung, Ahnherren, Gründungsmythen, Kriege, Heiratsbündnisse, Stürze, Exile und prägende Wendepunkte.</p>
+              <hr>
+              <h2 id="traditionen">3. Traditionen</h2>
+              <p data-section="traditions">Riten, Schwoere, Feste, Erziehungsformen, Bestattungen, Namensregeln und andere wiederkehrende Gewohnheiten des Hauses.</p>
+            </td>
+            <td class="haeuser-infobox-cell" colspan="4">
+              <table class="haeuser-info-table" border="1" cellspacing="1">
+                <tbody>
+                  <tr><td class="haeuser-info-title" colspan="2"><b>Herrschaftsbanner</b></td></tr>
+                  <tr>
+                    <td class="haeuser-info-title" colspan="2">
+                      <span class="orte-image-slot haeuser-banner-slot" data-orte-image-key="haus-banner" data-orte-image-label="Banner oder Herrschaftszeichen" data-orte-image-format="banner" data-orte-image-max-height="220" aria-label="Banner oder Herrschaftszeichen"></span>
+                    </td>
+                  </tr>
+                  <tr><td class="haeuser-info-title" colspan="2"><b>Allgemein</b></td></tr>
+                  <tr><td class="haeuser-info-label">Name</td><td class="haeuser-info-value" data-haeuser-title>Häuser-Vorlage</td></tr>
+                  <tr><td class="haeuser-info-label">Höchster Titel</td><td class="haeuser-info-value" data-profile-field="highestTitle">Höchster Titel oder Rang</td></tr>
+                  <tr><td class="haeuser-info-label">Typ</td><td class="haeuser-info-value" data-profile-field="houseType">Haus / Familie / Clan / Kadettenzweig</td></tr>
+                  <tr><td class="haeuser-info-label">Motto</td><td class="haeuser-info-value"><i data-profile-field="motto">Optionaler Leitspruch</i></td></tr>
+                  <tr><td class="haeuser-info-label">Sitz</td><td class="haeuser-info-value" data-profile-field="seat">Sitz, Burg, Hof oder Wandergebiet</td></tr>
+                  <tr><td class="haeuser-info-label">Zugehörigkeit</td><td class="haeuser-info-value" data-profile-field="affiliation">Lehnsherr, Reich, Clanbund oder Fraktion</td></tr>
+                  <tr><td class="haeuser-info-subhead" colspan="2">Militär</td></tr>
+                  <tr><td class="haeuser-info-label">Truppenstärke</td><td class="haeuser-info-value" data-profile-field="troopStrength">Aufgebot, Haushaltswache oder ungefähre Stärke</td></tr>
+                  <tr><td class="haeuser-info-label">Tiarna</td><td class="haeuser-info-value" data-profile-field="tiarna">Tiarna, Ritter oder führende Krieger</td></tr>
+                  <tr><td class="haeuser-info-label">Kerns</td><td class="haeuser-info-value" data-profile-field="kerns">Kerns, Gefolgsleute oder Haushaltswache</td></tr>
+                  <tr><td class="haeuser-info-label">Flotte</td><td class="haeuser-info-value" data-profile-field="fleet">Flotte, Boote oder sonstige Mobilität</td></tr>
+                  <tr><td class="haeuser-info-subhead" colspan="2">Geschichte</td></tr>
+                  <tr><td class="haeuser-info-label">Gründung</td><td class="haeuser-info-value" data-profile-field="founding">Gründungsjahr oder Entstehungszeitraum</td></tr>
+                  <tr><td class="haeuser-info-label">Wendepunkt</td><td class="haeuser-info-value" data-profile-field="milestoneOne">Prägender Wendepunkt</td></tr>
+                  <tr><td class="haeuser-info-label">Zäsur</td><td class="haeuser-info-value" data-profile-field="milestoneTwo">Weitere historische Zäsur</td></tr>
+                  <tr><td class="haeuser-info-subhead" colspan="2">Kultur</td></tr>
+                  <tr><td class="haeuser-info-label">Volksgruppe</td><td class="haeuser-info-value" data-profile-field="people">Volksgruppe, Kulturkreis oder Herkunft</td></tr>
+                  <tr><td class="haeuser-info-label">Wohlstand</td><td class="haeuser-info-value" data-profile-field="wealth">Wohlstand, Ressourcen und Einkommen</td></tr>
+                  <tr><td class="haeuser-info-label">Religion</td><td class="haeuser-info-value" data-profile-field="religion">Religion, Kulte oder Hausglauben</td></tr>
+                  <tr><td class="haeuser-info-label">Hauptpatrone</td><td class="haeuser-info-value" data-profile-field="patronDeities">Hauptpatrone, Ideale oder Schutzmächte</td></tr>
+                  <tr><td class="haeuser-info-subhead" colspan="2">Beziehungen</td></tr>
+                  <tr><td class="haeuser-info-label">Ursprung</td><td class="haeuser-info-value" data-profile-field="origin">Ursprungshaus, Ahnherr oder Gruendungsmythos</td></tr>
+                  <tr><td class="haeuser-info-label">Kadetten</td><td class="haeuser-info-value" data-profile-field="cadetBranches">Kadettenzweige, Seitenlinien oder abhängige Familien</td></tr>
+                  <tr><td class="haeuser-info-label">Freunde</td><td class="haeuser-info-value" data-profile-field="allies">Freunde, Heiratsbündnisse oder Schutzverträge</td></tr>
+                  <tr><td class="haeuser-info-label">Feinde</td><td class="haeuser-info-value" data-profile-field="enemies">Feinde, Fehden oder Rivalen</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="rittertum">4. Rittertum / Tiarnatum</h2>
+              <p data-section="knighthood">Kriegerische Ideale, Ritterpflichten, Tiarna-Traditionen, Ausbildung, Ehre, Schutzpflicht und die Rolle bewaffneter Gefolgsleute.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="erbfolge">5. Erbfolgeregelung</h2>
+              <p data-section="succession">Erbfolge, Anerkennung von Erben, Nebenlinien, Vormundschaften, Bastarde, Adoptionen, Heiratsrecht und typische Konflikte um Nachfolge.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="besitztum">6. Besitztum</h2>
+              <p data-section="holdings">Besitz, Stammsitze, Land, Rechte, Pachthoefe, Handelsanteile, Weiderechte, Schiffe, Minen oder andere wirtschaftliche Grundlagen.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="kultur-religion">7. Kultur / Religion</h2>
+              <p data-section="cultureReligion">Sprache, Kleidung, Speisen, Hausriten, Patronatskulte, Grabkultur, Tabus, Feiertage und der Umgang mit Fremden.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="konflikte-allianzen">8. Konflikte &amp; Allianzen</h2>
+              <p data-section="conflictsAlliances">Fehden, Buendnisse, Vasallenbindungen, Heiratsnetze, alte Schulden, Protektion, Rivalitaeten und offene politische Spannungen.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="werte">9. Werte</h2>
+              <p data-section="values">Hauswerte, Ideale, Sitten, verbotene Handlungen, Erwartungen an Kinder und Gefolgsleute sowie der Unterschied zwischen Selbstbild und Fremdbild.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="hof">10. Hof</h2>
+              <p data-section="court">Hofstruktur, Oberhaupt, Erbfolge und Hofämter.</p>
+              <table class="haeuser-court-table" border="1" cellspacing="1" data-orte-table-id="haeuser-hof" data-orte-portrait-layout="0,1,2,3,4,5,6,7" data-orte-portrait-fill="left">
+                <tbody>
+                  <tr><td class="haeuser-court-title" colspan="7"><b>Struktur</b></td></tr>
+                  <tr><td class="haeuser-court-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-court-heading" colspan="7"><b>Gründer</b></td></tr>
+                  <tr>
+                    <td class="haeuser-court-portrait" colspan="7">
+                      <span class="orte-image-slot haeuser-court-founder-slot" data-orte-image-key="hof-gruender-portrait" data-orte-image-label="Portrait Gründer" data-orte-image-format="portrait" data-orte-image-max-height="230" aria-label="Portrait Gründer"></span>
+                    </td>
+                  </tr>
+                  <tr><td class="haeuser-court-name" colspan="7"><b>† ??? †</b><br><b>(???? - ????)</b></td></tr>
+                  <tr><td class="haeuser-court-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-court-heading" colspan="7"><b>Oberhaupt / Hausführung</b></td></tr>
+                  <tr data-orte-portrait-count="4" data-orte-portrait-row-key="oberhaupt">
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-oberhaupt-portrait-0001" data-orte-image-label="Portrait Oberhaupt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Oberhaupt"></span></td>
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-oberhaupt-portrait-0002" data-orte-image-label="Portrait Stellvertretung" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Stellvertretung"></span></td>
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-oberhaupt-portrait-0003" data-orte-image-label="Portrait Hausrat" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hausrat"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-oberhaupt-portrait-0004" data-orte-image-label="Portrait Waffenführung" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Waffenführung"></span></td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-name"><b>† ??? †</b><br><b>(???? - ????)</b></td>
+                    <td class="haeuser-court-name"><b>† ??? †</b><br><b>(???? - ????)</b></td>
+                    <td class="haeuser-court-name"><b>† ??? †</b><br><b>(???? - ????)</b></td>
+                    <td class="haeuser-court-name"><b>† ??? †</b><br><b>(???? - ????)</b></td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                  </tr>
+                  <tr><td class="haeuser-court-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-court-heading" colspan="7"><b>Erbfolge</b></td></tr>
+                  <tr data-orte-portrait-count="3" data-orte-portrait-row-key="erbfolge">
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-erbfolge-portrait-0001" data-orte-image-label="Portrait Erbfolge" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Erbfolge"></span></td>
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-erbfolge-portrait-0002" data-orte-image-label="Portrait Erbfolge" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Erbfolge"></span></td>
+                    <td class="portrait-cell haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-erbfolge-portrait-0003" data-orte-image-label="Portrait Erbfolge" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Erbfolge"></span></td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                    <td class="haeuser-court-portrait">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                    <td class="haeuser-court-name">&nbsp;</td>
+                  </tr>
+                  <tr><td class="haeuser-court-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-court-heading" colspan="7"><b>Hof / Hof&auml;mter</b></td></tr>
+                  <tr>
+                    <td class="haeuser-court-office"><b>Vogt</b></td>
+                    <td class="haeuser-court-office"><b>Schatzmeister</b></td>
+                    <td class="haeuser-court-office"><b>Kommandant</b></td>
+                    <td class="haeuser-court-office"><b>Zeremonienmeister</b></td>
+                    <td class="haeuser-court-office"><b>Mundschenk</b></td>
+                    <td class="haeuser-court-office"><b>Waffenmeister</b></td>
+                    <td class="haeuser-court-office"><b>Stallmeister</b></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0001" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0002" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0003" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0004" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0005" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0006" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0007" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-office"><b>Kerkermeister</b></td>
+                    <td class="haeuser-court-office"><b>Jagdmeister</b></td>
+                    <td class="haeuser-court-office"><b>Hafenmeister</b></td>
+                    <td class="haeuser-court-office"><b>K&uuml;chenmeister</b></td>
+                    <td class="haeuser-court-office"><b>Brotmeister</b></td>
+                    <td class="haeuser-court-office"><b>Handwerksmeister</b></td>
+                    <td class="haeuser-court-office"><b>Gartenmeister</b></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0008" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0009" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0010" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0011" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0012" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0013" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0014" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-office"><b>Hofkaplan</b></td>
+                    <td class="haeuser-court-office"><b>Hofmeister</b></td>
+                    <td class="haeuser-court-office"><b>Hofdame</b></td>
+                    <td class="haeuser-court-office"><b>Archivar</b></td>
+                    <td class="haeuser-court-office"><b>Hoffalkner</b></td>
+                    <td class="haeuser-court-office"><b>Zwingermeister</b></td>
+                    <td class="haeuser-court-office"><b>Narr</b></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0015" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0016" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0017" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0018" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0019" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0020" data-orte-image-label="Portrait Hofamt" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Hofamt"></span></td>
+                    <td class="haeuser-court-portrait"><span class="orte-image-slot haeuser-court-portrait-slot" data-orte-image-key="hof-amt-portrait-0021" data-orte-image-label="Portrait Narr" data-orte-image-format="portrait" data-orte-image-max-height="210" aria-label="Portrait Narr"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                    <td class="haeuser-court-name"><b>??</b></td>
+                  </tr>
+                  <tr><td class="haeuser-court-gap" colspan="7">&nbsp;</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="hierarchie">10. Hierarchie</h2>
+              <p data-section="hierarchy">Tabellarische Stammbaum-Hierarchie: oben die &auml;ltesten Generationen und der Gr&uuml;nder, darunter absteigend j&uuml;ngere Generationen, Ehepartner, Kinder und Nebenlinien.</p>
+              <table class="haeuser-genealogy-table" border="1" cellspacing="1" data-orte-table-id="haeuser-hierarchie-stammbaum" data-orte-portrait-layout="0,1,2,3,4,5,6,7">
+                <tbody>
+                  <tr><td class="haeuser-genealogy-title" colspan="7"><b>Stammlinie</b></td></tr>
+                  <tr><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-genealogy-heading" colspan="7"><b>Gr&uuml;nder</b></td></tr>
+                  <tr data-orte-portrait-count="1" data-orte-portrait-row-key="gruender">
+                    <td class="portrait-cell haeuser-genealogy-card" colspan="7">
+                      <b>Gr&uuml;nder</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-gruender-portrait" data-orte-image-label="Portrait Gruender" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Gruender"></span>
+                      <b>&dagger; ??? &dagger;</b>
+                      <p>(???? - ????)</p>
+                    </td>
+                  </tr>
+                  <tr data-orte-portrait-gap-row="true"><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-genealogy-heading" colspan="7"><b>Ehefrau / Ehemann</b></td></tr>
+                  <tr data-orte-portrait-count="1" data-orte-portrait-row-key="gruender-ehepartner">
+                    <td class="portrait-cell haeuser-genealogy-card" colspan="7">
+                      <b>Ehepartner</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-ehepartner-portrait" data-orte-image-label="Portrait Ehepartner" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Ehepartner"></span>
+                      <b>???</b>
+                      <p>(???? - ????)</p>
+                    </td>
+                  </tr>
+                  <tr data-orte-portrait-gap-row="true"><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-genealogy-heading" colspan="7"><b>Kinder / Erste Generation</b></td></tr>
+                  <tr data-orte-portrait-count="3" data-orte-portrait-row-key="kinder-erste-generation">
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Kind</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-kind-portrait-0001" data-orte-image-label="Portrait Kind" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Kind"></span>
+                      <b>???</b>
+                      <p>Hauptlinie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Kind</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-kind-portrait-0002" data-orte-image-label="Portrait Kind" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Kind"></span>
+                      <b>???</b>
+                      <p>Nebenlinie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Kind</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-kind-portrait-0003" data-orte-image-label="Portrait Kind" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Kind"></span>
+                      <b>???</b>
+                      <p>Verbindung</p>
+                    </td>
+                  </tr>
+                  <tr data-orte-portrait-gap-row="true"><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-genealogy-heading" colspan="7"><b>Enkel / Zweite Generation</b></td></tr>
+                  <tr data-orte-portrait-count="5" data-orte-portrait-row-key="enkel-zweite-generation">
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Enkel</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-enkel-portrait-0001" data-orte-image-label="Portrait Enkel" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Enkel"></span>
+                      <b>???</b>
+                      <p>Linie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Enkel</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-enkel-portrait-0002" data-orte-image-label="Portrait Enkel" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Enkel"></span>
+                      <b>???</b>
+                      <p>Linie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Enkel</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-enkel-portrait-0003" data-orte-image-label="Portrait Enkel" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Enkel"></span>
+                      <b>???</b>
+                      <p>Linie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Enkel</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-enkel-portrait-0004" data-orte-image-label="Portrait Enkel" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Enkel"></span>
+                      <b>???</b>
+                      <p>Linie</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Enkel</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-enkel-portrait-0005" data-orte-image-label="Portrait Enkel" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Enkel"></span>
+                      <b>???</b>
+                      <p>Linie</p>
+                    </td>
+                  </tr>
+                  <tr data-orte-portrait-gap-row="true"><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                  <tr><td class="haeuser-genealogy-heading" colspan="7"><b>Verlobte / Verlobter</b></td></tr>
+                  <tr data-orte-portrait-count="5" data-orte-portrait-row-key="verlobte">
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Verlobung</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-verlobte-portrait-0001" data-orte-image-label="Portrait Verlobung" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Verlobung"></span>
+                      <b>???</b>
+                      <p>B&uuml;ndnis</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Verlobung</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-verlobte-portrait-0002" data-orte-image-label="Portrait Verlobung" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Verlobung"></span>
+                      <b>???</b>
+                      <p>B&uuml;ndnis</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Verlobung</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-verlobte-portrait-0003" data-orte-image-label="Portrait Verlobung" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Verlobung"></span>
+                      <b>???</b>
+                      <p>B&uuml;ndnis</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Verlobung</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-verlobte-portrait-0004" data-orte-image-label="Portrait Verlobung" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Verlobung"></span>
+                      <b>???</b>
+                      <p>B&uuml;ndnis</p>
+                    </td>
+                    <td class="portrait-cell haeuser-genealogy-card">
+                      <b>Verlobung</b>
+                      <span class="orte-image-slot haeuser-genealogy-portrait-slot" data-orte-image-key="hierarchie-verlobte-portrait-0005" data-orte-image-label="Portrait Verlobung" data-orte-image-format="portrait" data-orte-image-max-height="220" aria-label="Portrait Verlobung"></span>
+                      <b>???</b>
+                      <p>B&uuml;ndnis</p>
+                    </td>
+                  </tr>
+                  <tr data-orte-portrait-gap-row="true"><td class="haeuser-genealogy-gap" colspan="7">&nbsp;</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="stammbaum">11. Stammbaum</h2>
+              <p data-section="familyTree">Stammbaum, Hauptlinie, Nebenlinien, Eheverbindungen, ausgestorbene Aeste und unklare Verwandtschaften.</p>
+              <p class="haeuser-tree-image">
+                <span class="orte-image-slot haeuser-tree-slot" data-orte-image-key="stammbaum-bild" data-orte-image-label="Stammbaum oder genealogische Uebersicht" data-orte-image-format="landscape" data-orte-image-max-height="520" aria-label="Stammbaum oder genealogische Uebersicht"></span>
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="historische-figuren">12. Historische Figuren</h2>
+              <p data-section="historicalFigures">Ahnen, Gruender, Verrater, Heilige, Heerfuehrer, tragische Figuren und andere Personen, die das Haus langfristig gepraegt haben.</p>
+              <table class="haeuser-historical-table pt-s-0067" border="5" cellspacing="1" data-orte-table-id="haeuser-historische-figuren">
+                <tbody>
+                  <tr><th class="haeuser-table-title" colspan="4">Historische Personen und Figuren des Hauses</th></tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr class="sub-header haeuser-history-header">
+                    <td class="haeuser-history-heading-name">Name &amp; Titel</td>
+                    <td class="haeuser-history-heading-desc" colspan="3">Beschreibung</td>
+                  </tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr><td class="haeuser-history-divider" colspan="4"><b>Gr&uuml;nder &amp; Ahnen</b></td></tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-role"><b data-orte-explicit-inline>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077 haeuser-history-desc" colspan="3" rowspan="3" data-orte-explicit-inline>Beschreibung, Verm&auml;chtnis, Konflikt oder Legende.</td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-portrait"><span class="orte-image-slot haeuser-history-portrait-slot" data-orte-image-key="historische-figur-portrait-0001" data-orte-image-label="Portrait historische Figur" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait historische Figur"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-name"><b data-orte-explicit-inline>Name</b></td>
+                  </tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-role"><b data-orte-explicit-inline>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077 haeuser-history-desc" colspan="3" rowspan="3" data-orte-explicit-inline>Beschreibung, Verm&auml;chtnis, Konflikt oder Legende.</td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-portrait"><span class="orte-image-slot haeuser-history-portrait-slot" data-orte-image-key="historische-figur-portrait-0002" data-orte-image-label="Portrait historische Figur" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait historische Figur"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-name"><b data-orte-explicit-inline>Name</b></td>
+                  </tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr><td class="haeuser-history-divider" colspan="4"><b>Gefallene, Verr&auml;ter und Legenden</b></td></tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-role"><b data-orte-explicit-inline>Rolle</b></td>
+                    <td class="desc-cell pt-s-0077 haeuser-history-desc" colspan="3" rowspan="3" data-orte-explicit-inline>Beschreibung, Verm&auml;chtnis, Konflikt oder Legende.</td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-portrait"><span class="orte-image-slot haeuser-history-portrait-slot" data-orte-image-key="historische-figur-portrait-0003" data-orte-image-label="Portrait historische Figur" data-orte-image-format="portrait" data-orte-image-max-height="260" aria-label="Portrait historische Figur"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="portrait-cell haeuser-history-name"><b data-orte-explicit-inline>Name</b></td>
+                  </tr>
+                  <tr><td class="haeuser-table-empty-row" colspan="4">&nbsp;</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="haeuser-section-cell" colspan="10">
+              <h2 id="trivia">13. Trivia</h2>
+              <ul data-haeuser-trivia>
+                <li>...</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

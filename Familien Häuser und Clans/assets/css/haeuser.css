@@ -1,0 +1,570 @@
+:root {
+  --haeuser-page-bg: #1d1f25;
+  --haeuser-paper: #efe3ca;
+  --haeuser-paper-light: #fff7e5;
+  --haeuser-paper-strong: #d9c18d;
+  --haeuser-ink: #211a14;
+  --haeuser-muted: #65543f;
+  --haeuser-line: #7f6739;
+  --haeuser-line-soft: rgba(127, 103, 57, 0.5);
+  --haeuser-border-dark: rgba(38, 29, 22, 0.88);
+  --haeuser-text-light: #fff4d6;
+  --haeuser-panel-dark: #2d3038;
+  --haeuser-panel-red: #762637;
+  --haeuser-panel-blue: #35465e;
+  --haeuser-panel-muted: #c9b47c;
+  --haeuser-panel-light: #ead7a6;
+  --haeuser-gold: #c49a28;
+  --haeuser-green: #526b52;
+  --haeuser-max-width: 1580px;
+}
+
+body {
+  color: var(--haeuser-ink);
+  background:
+    linear-gradient(135deg, rgba(196, 154, 40, 0.10), transparent 34rem),
+    linear-gradient(180deg, rgba(118, 38, 55, 0.16), transparent 30rem),
+    var(--haeuser-page-bg);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.haeuser-page {
+  width: min(100% - 18px, var(--haeuser-max-width));
+  margin: 18px auto;
+}
+
+.haeuser-document {
+  overflow-x: auto;
+  padding: 0 0 0.75rem;
+}
+
+.orte-inline-editing .haeuser-template-frame .orte-table-control-cell {
+  padding-top: 7px !important;
+}
+
+.haeuser-template-frame {
+  width: 1320px !important;
+  max-width: none;
+  border-collapse: collapse;
+  color: var(--haeuser-ink);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 226, 0.68), rgba(218, 195, 145, 0.48)),
+    repeating-linear-gradient(-45deg, rgba(54, 45, 36, 0.025), rgba(54, 45, 36, 0.025) 1px, transparent 1px, transparent 18px),
+    var(--haeuser-paper);
+  border: 2px solid var(--haeuser-border-dark);
+  box-shadow: 0 20px 55px rgba(8, 7, 6, 0.5);
+}
+
+.haeuser-template-frame th,
+.haeuser-template-frame td {
+  border: 1px solid var(--haeuser-border-dark);
+  padding: 8px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.haeuser-template-frame h2 {
+  margin: 0 0 0.75rem;
+  padding: 6px 8px;
+  color: var(--haeuser-text-light);
+  background: linear-gradient(180deg, var(--haeuser-panel-red), #3a1720);
+  border: 1px solid var(--haeuser-border-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.25;
+  scroll-margin-top: 18px;
+}
+
+.haeuser-template-frame h2:target {
+  outline: 2px solid rgba(196, 154, 40, 0.72);
+  outline-offset: 3px;
+}
+
+.haeuser-template-frame h3 {
+  margin: 0.8rem 0 0.5rem;
+  padding: 4px 7px;
+  color: #251a10;
+  background: linear-gradient(90deg, rgba(196, 154, 40, 0.26), rgba(82, 107, 82, 0.10));
+  border-left: 4px solid var(--haeuser-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.haeuser-template-frame p {
+  margin-top: 0;
+  margin-bottom: 0.38rem;
+}
+
+.haeuser-template-frame hr {
+  height: 0;
+  margin: 0.65rem 0;
+  border: 0;
+  border-top: 1px solid var(--haeuser-line-soft);
+}
+
+.haeuser-hero {
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 218, 0.76), rgba(217, 193, 141, 0.8)),
+    var(--haeuser-paper-strong);
+}
+
+.haeuser-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.haeuser-subtitle,
+.haeuser-quote,
+.haeuser-quote-source {
+  color: var(--haeuser-muted);
+}
+
+.haeuser-quote {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.haeuser-main-cell {
+  width: 800px;
+  background: var(--haeuser-paper-light);
+}
+
+.haeuser-side-cell,
+.haeuser-infobox-cell {
+  width: 500px;
+  background: var(--haeuser-panel-muted);
+}
+
+.haeuser-section-cell {
+  background: var(--haeuser-paper-light);
+}
+
+.haeuser-info-table,
+.haeuser-portrait-table,
+.haeuser-court-table,
+.haeuser-genealogy-table,
+.haeuser-historical-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--haeuser-paper-light);
+  table-layout: fixed;
+}
+
+.haeuser-info-table td,
+.haeuser-portrait-table td,
+.haeuser-court-table td,
+.haeuser-court-table th,
+.haeuser-genealogy-table td,
+.haeuser-genealogy-table th,
+.haeuser-historical-table td,
+.haeuser-historical-table th {
+  border: 1px solid var(--haeuser-border-dark);
+  padding: 7px;
+}
+
+.haeuser-info-title,
+.haeuser-table-title {
+  color: var(--haeuser-text-light);
+  background: linear-gradient(180deg, var(--haeuser-panel-blue), var(--haeuser-panel-dark));
+  text-align: center;
+  font-weight: 700;
+}
+
+.haeuser-info-label {
+  width: 34%;
+  color: var(--haeuser-text-light);
+  background: var(--haeuser-panel-red);
+  font-weight: 700;
+}
+
+.haeuser-info-value {
+  background: var(--haeuser-panel-light);
+  font-weight: 700;
+}
+
+.haeuser-info-subhead,
+.haeuser-section-row {
+  color: var(--haeuser-text-light);
+  background: linear-gradient(180deg, var(--haeuser-panel-blue), var(--haeuser-panel-dark));
+  text-align: center;
+  font-weight: 700;
+}
+
+.haeuser-portrait-table td,
+.haeuser-historical-table td {
+  background: var(--haeuser-panel-light);
+}
+
+.haeuser-court-table,
+.haeuser-genealogy-table {
+  width: 1120px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #e2c98f;
+  border-collapse: collapse;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.35;
+}
+
+.haeuser-court-table td,
+.haeuser-genealogy-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.haeuser-court-title,
+.haeuser-genealogy-title {
+  color: #fff4d6;
+  background: linear-gradient(180deg, #7a5722, #4b3214);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.haeuser-court-heading,
+.haeuser-genealogy-heading,
+.haeuser-table-primary-heading {
+  color: #28190b;
+  background: linear-gradient(180deg, #c79e55, #a87b35) !important;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.haeuser-table-secondary-heading {
+  color: #2e2010;
+  background: linear-gradient(180deg, #dbc17f, #c6a661) !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.haeuser-court-gap,
+.haeuser-genealogy-gap,
+.haeuser-court-table .orte-portrait-gap-cell,
+.haeuser-court-table .gruppen-portrait-gap-cell,
+.haeuser-genealogy-table .orte-portrait-gap-cell,
+.haeuser-genealogy-table .gruppen-portrait-gap-cell {
+  height: 22px;
+  min-height: 22px;
+  padding: 0 !important;
+  background: #d3b777 !important;
+}
+
+.haeuser-court-office,
+.haeuser-court-name,
+.haeuser-court-portrait,
+.haeuser-genealogy-card,
+.haeuser-genealogy-table .orte-portrait-layout-spacer,
+.haeuser-genealogy-table .gruppen-portrait-spacer {
+  background: #e8d19a !important;
+}
+
+.haeuser-court-office {
+  color: #2e2010;
+  background: #d6b56d !important;
+  font-size: 13px;
+}
+
+.haeuser-court-name,
+.haeuser-genealogy-card {
+  color: #23150f;
+  background: #ead7a6 !important;
+  font-weight: 700;
+}
+
+.haeuser-court-portrait,
+.haeuser-court-table .orte-portrait-layout-spacer,
+.haeuser-court-table .gruppen-portrait-spacer,
+.haeuser-genealogy-table .orte-portrait-layout-spacer,
+.haeuser-genealogy-table .gruppen-portrait-spacer {
+  background: #d9bd7e !important;
+}
+
+.haeuser-court-portrait,
+.haeuser-genealogy-card {
+  min-height: 250px;
+}
+
+.haeuser-genealogy-card {
+  padding: 8px;
+  border: 1px solid rgba(82, 52, 19, 0.68);
+  background:
+    linear-gradient(180deg, rgba(255, 241, 190, 0.68), rgba(213, 178, 105, 0.54)),
+    #ead7a6 !important;
+}
+
+.haeuser-genealogy-card > b,
+.haeuser-genealogy-card > .orte-cell-editable > b {
+  display: block;
+  margin: 0;
+}
+
+.haeuser-genealogy-card > b:first-of-type,
+.haeuser-genealogy-card > .orte-cell-editable > b:first-of-type {
+  margin: -2px -2px 7px;
+  padding: 4px 5px;
+  color: #2b1a0a;
+  background: rgba(198, 166, 97, 0.72);
+  border: 1px solid rgba(122, 87, 34, 0.55);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.haeuser-genealogy-card > b:nth-of-type(2),
+.haeuser-genealogy-card > .orte-cell-editable > b:nth-of-type(2) {
+  margin-top: 6px;
+  color: #4a2110;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.haeuser-genealogy-card > p,
+.haeuser-genealogy-card > .orte-cell-editable > p {
+  display: inline-block;
+  margin: 5px 0 0;
+  padding: 2px 6px;
+  color: #3b2814;
+  background: rgba(243, 224, 170, 0.78);
+  border: 1px solid rgba(122, 87, 34, 0.42);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.haeuser-genealogy-card > .orte-image-slot,
+.haeuser-genealogy-card > .orte-cell-editable > .orte-image-slot {
+  border: 2px dashed rgba(122, 87, 34, 0.62);
+  background:
+    linear-gradient(180deg, rgba(255, 238, 184, 0.92), rgba(214, 181, 109, 0.55)),
+    #e8d19a;
+}
+
+.haeuser-portrait-table {
+  table-layout: fixed;
+}
+
+.haeuser-person-card {
+  text-align: center;
+}
+
+.haeuser-person-card > b,
+.haeuser-person-card > p {
+  display: block;
+  margin: 0.45rem 0;
+}
+
+.haeuser-table-empty-row {
+  height: 22px;
+  min-height: 22px;
+  padding: 0 !important;
+  background: rgba(234, 215, 166, 0.62) !important;
+}
+
+.haeuser-crest-slot {
+  width: 180px;
+  max-width: 180px;
+}
+
+.haeuser-landscape-slot {
+  width: 100%;
+  min-height: 340px;
+}
+
+.haeuser-banner-slot {
+  width: 100%;
+  min-height: 120px;
+}
+
+.haeuser-tree-slot {
+  width: min(100%, 980px);
+  min-height: 300px;
+}
+
+.haeuser-tree-image {
+  text-align: center;
+}
+
+.haeuser-template-frame .portrait-cell .haeuser-portrait-slot {
+  width: 210px !important;
+  max-width: 210px !important;
+  aspect-ratio: 2 / 3 !important;
+  min-height: 315px !important;
+}
+
+.haeuser-template-frame .haeuser-court-founder-slot {
+  width: 150px !important;
+  max-width: 150px !important;
+  aspect-ratio: 2 / 3 !important;
+  min-height: 225px !important;
+}
+
+.haeuser-template-frame .haeuser-court-portrait-slot,
+.haeuser-template-frame .haeuser-genealogy-portrait-slot {
+  width: 118px !important;
+  max-width: 118px !important;
+  aspect-ratio: 2 / 3 !important;
+  min-height: 177px !important;
+}
+
+.haeuser-template-frame .haeuser-genealogy-card[colspan="7"] .haeuser-genealogy-portrait-slot {
+  width: 150px !important;
+  max-width: 150px !important;
+  min-height: 225px !important;
+}
+
+.haeuser-history-header td {
+  color: var(--haeuser-text-light);
+  background: linear-gradient(180deg, var(--haeuser-panel-blue), var(--haeuser-panel-dark)) !important;
+  text-align: center;
+  font-weight: 700;
+}
+
+.haeuser-history-divider {
+  color: var(--haeuser-text-light);
+  background: linear-gradient(180deg, var(--haeuser-panel-red), #3a1720) !important;
+  text-align: center;
+  font-weight: 700;
+}
+
+.haeuser-history-role {
+  width: 190px;
+  text-align: center;
+  background: #b44d50 !important;
+  color: #fff4d6;
+}
+
+.haeuser-history-name {
+  width: 190px;
+  text-align: center;
+  background: #c7b178 !important;
+}
+
+.haeuser-history-portrait {
+  width: 190px;
+  text-align: center;
+  background: #c7b178 !important;
+}
+
+.haeuser-history-desc {
+  min-height: 180px;
+  background: #ddc990 !important;
+}
+
+.haeuser-history-portrait-slot {
+  width: 150px !important;
+  max-width: 150px !important;
+  aspect-ratio: 2 / 3 !important;
+  min-height: 225px !important;
+}
+
+.haeuser-template-frame .wappen .haeuser-icon-slot,
+.haeuser-template-frame .haeuser-icon-slot {
+  width: 82px !important;
+  max-width: 82px !important;
+  aspect-ratio: 1 / 1 !important;
+  min-height: 82px !important;
+}
+
+.haeuser-template-frame .orte-image-slot {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.haeuser-template-frame .orte-image-slot img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.haeuser-template-frame .orte-image-slot:empty::before,
+.haeuser-template-frame .orte-image-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border: 1px dashed rgba(77, 45, 14, 0.62);
+  background:
+    linear-gradient(135deg, rgba(255, 244, 203, 0.76), rgba(117, 38, 55, 0.18)),
+    #dfc47f;
+  color: #2d1d13;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.haeuser-template-frame .orte-image-slot:empty::before {
+  content: attr(data-orte-image-label);
+}
+
+.haeuser-template-frame .wappen .orte-image-placeholder,
+.haeuser-template-frame .wappen .orte-image-slot:empty::before {
+  font-size: 11px;
+}
+
+.haeuser-back-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: var(--haeuser-text-light);
+  background: var(--haeuser-panel-dark);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.haeuser-back-top.is-visible {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.haeuser-error {
+  width: min(100% - 32px, 920px);
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--haeuser-paper);
+  border: 1px solid var(--haeuser-border-dark);
+}
+
+.haeuser-error-card,
+.haeuser-registry-entry {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--haeuser-paper-light);
+  border: 1px solid var(--haeuser-line-soft);
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 12px;
+  }
+
+  .haeuser-page {
+    width: 100%;
+    margin: 0;
+  }
+
+  .haeuser-template-frame {
+    width: 1101px !important;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+}

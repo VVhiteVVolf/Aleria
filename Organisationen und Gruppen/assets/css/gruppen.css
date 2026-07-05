@@ -39,11 +39,6 @@ body {
   padding: 0 0 0.75rem;
 }
 
-.orte-inline-editing .gruppen-document {
-  margin-left: -180px;
-  padding-left: 180px;
-}
-
 .gruppen-template-frame {
   width: 1320px !important;
   max-width: none;
@@ -251,9 +246,44 @@ body {
 }
 
 .gruppen-leader-card > b,
-.gruppen-leader-card > p {
+.gruppen-leader-card > p,
+.gruppen-leader-card > .orte-cell-editable > b,
+.gruppen-leader-card > .orte-cell-editable > p {
   display: block;
   margin: 0.45rem 0;
+}
+
+.gruppen-leader-card > b:first-of-type,
+.gruppen-leader-card > .orte-cell-editable > b:first-of-type {
+  margin: 0 0 0.5rem;
+  padding: 4px 6px;
+  color: #2b1a0a;
+  background: rgba(196, 154, 40, 0.34);
+  border: 1px solid rgba(125, 90, 37, 0.48);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.gruppen-leader-card > b:nth-of-type(2),
+.gruppen-leader-card > .orte-cell-editable > b:nth-of-type(2) {
+  margin-top: 0.45rem;
+  color: #4a2110;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.gruppen-leader-card > p,
+.gruppen-leader-card > .orte-cell-editable > p {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 3px 6px;
+  color: #3b2814;
+  background: rgba(255, 246, 221, 0.58);
+  border: 1px solid rgba(125, 90, 37, 0.36);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .gruppen-subgroup-table .wappen,

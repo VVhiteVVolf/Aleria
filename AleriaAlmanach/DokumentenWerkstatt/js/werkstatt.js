@@ -459,6 +459,145 @@ function switchEditorTab(tab) {
   });
 }
 
+function getWorkshopActionTarget(event) {
+  return event.target instanceof Element
+    ? event.target.closest("[data-workshop-action]")
+    : null;
+}
+
+function getWorkshopNumber(value, fallback = 0) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : fallback;
+}
+
+function handleWorkshopClick(event) {
+  const control = getWorkshopActionTarget(event);
+  if (!control || control.matches("input, select")) return;
+
+  const action = control.dataset.workshopAction;
+  let handled = true;
+
+  switch (action) {
+    case "new-document":
+      newDocument();
+      break;
+    case "save-draft":
+      saveDraft();
+      break;
+    case "load-draft":
+      loadDraft();
+      break;
+    case "load-autosave":
+      loadAutoSave();
+      break;
+    case "export-json":
+      exportJson();
+      break;
+    case "export-html":
+      exportHtml();
+      break;
+    case "switch-editor-tab":
+      switchEditorTab(control.dataset.tab || "document");
+      break;
+    case "clear-media-slot":
+      clearMediaSlot(control.dataset.slotKey);
+      break;
+    case "format-text":
+      formatText(control.dataset.command);
+      break;
+    case "insert-divider":
+      insertDivider();
+      break;
+    case "insert-link":
+      insertLink();
+      break;
+    case "clear-formatting":
+      clearFormatting();
+      break;
+    case "add-book-page":
+      addBookPage();
+      break;
+    case "remove-book-page":
+      removeBookPage(getWorkshopNumber(control.dataset.pageIndex, state.currentPage));
+      break;
+    case "switch-book-page":
+      switchBookPage(getWorkshopNumber(control.dataset.pageIndex, state.currentPage));
+      break;
+    case "move-book-page":
+      moveBookPage(
+        getWorkshopNumber(control.dataset.pageIndex, state.currentPage),
+        getWorkshopNumber(control.dataset.direction, 0)
+      );
+      break;
+    case "duplicate-book-page":
+      duplicateBookPage(getWorkshopNumber(control.dataset.pageIndex, state.currentPage));
+      break;
+    case "turn-book-spread":
+      turnBookSpread(control, getWorkshopNumber(control.dataset.direction, 0));
+      break;
+    case "copy-snippet":
+      copySnippet();
+      break;
+    case "set-preview-zoom":
+      setPreviewZoom(getWorkshopNumber(control.dataset.delta, 0));
+      break;
+    case "reset-preview-zoom":
+      resetPreviewZoom();
+      break;
+    default:
+      handled = false;
+      break;
+  }
+
+  if (handled) event.preventDefault();
+}
+
+function handleWorkshopChange(event) {
+  const control = getWorkshopActionTarget(event);
+  if (!control) return;
+
+  switch (control.dataset.workshopAction) {
+    case "import-json":
+      importJson(control);
+      break;
+    case "set-template":
+      setTemplate(control.value);
+      break;
+    case "format-block":
+      formatBlock(control.value);
+      break;
+  }
+}
+
+function handleWorkshopToolbarMouseDown(event) {
+  if (!(event.target instanceof Element)) return;
+  const toolbar = event.target.closest('[data-workshop-role="format-toolbar"]');
+  if (!toolbar) return;
+  if (event.target.closest("button")) event.preventDefault();
+}
+
+function initWorkshopEvents() {
+  document.addEventListener("click", handleWorkshopClick);
+  document.addEventListener("change", handleWorkshopChange);
+  document.addEventListener("mousedown", handleWorkshopToolbarMouseDown);
+
+  fields.forEach(id => {
+    const el = $(id);
+    if (!el) return;
+    el.addEventListener("input", () => {
+      renderPreview();
+      scheduleAutoSave();
+    });
+    el.addEventListener("change", () => {
+      renderPreview();
+      scheduleAutoSave();
+    });
+  });
+
+  $("doc-preset").addEventListener("change", event => applyPreset(event.target.value));
+  $("doc-editor").addEventListener("input", syncEditorToPage);
+}
+
 function applyPreset(key) {
   if (!key || !PRESETS[key]) {
     renderPreview();
@@ -620,7 +759,7 @@ function renderBookPages() {
   const wrap = $("book-pages");
   wrap.classList.toggle("active", $("doc-template").value === "book");
   wrap.innerHTML = state.pages.map((_, index) =>
-    `<button class="page-pill${index === state.currentPage ? " active" : ""}" type="button" onclick="switchBookPage(${index})">Seite ${index + 1}</button>`
+    `<button class="page-pill${index === state.currentPage ? " active" : ""}" type="button" data-workshop-action="switch-book-page" data-page-index="${index}">Seite ${index + 1}</button>`
   ).join("");
   $("add-page-btn").style.display = $("doc-template").value === "book" ? "" : "none";
   $("remove-page-btn").style.display = $("doc-template").value === "book" ? "" : "none";
@@ -638,22 +777,22 @@ function renderBookManager() {
     const preview = stripHtml(page).slice(0, 86) || "Leere Seite";
     return `
       <div class="book-page-row${index === state.currentPage ? " active" : ""}">
-        <button class="book-page-row-main" type="button" onclick="switchBookPage(${index})">
+        <button class="book-page-row-main" type="button" data-workshop-action="switch-book-page" data-page-index="${index}">
           <span class="book-page-row-title">Seite ${index + 1}</span>
           <span class="book-page-row-preview">${escapeHtml(preview)}</span>
         </button>
         <div class="book-page-actions">
-          <button class="icon-btn" type="button" title="Nach oben" onclick="moveBookPage(${index}, -1)" ${index === 0 ? "disabled" : ""}>↑</button>
-          <button class="icon-btn" type="button" title="Nach unten" onclick="moveBookPage(${index}, 1)" ${index === state.pages.length - 1 ? "disabled" : ""}>↓</button>
-          <button class="icon-btn" type="button" title="Duplizieren" onclick="duplicateBookPage(${index})">⧉</button>
-          <button class="icon-btn" type="button" title="Löschen" onclick="removeBookPage(${index})" ${state.pages.length <= 1 ? "disabled" : ""}>×</button>
+          <button class="icon-btn" type="button" title="Nach oben" data-workshop-action="move-book-page" data-page-index="${index}" data-direction="-1" ${index === 0 ? "disabled" : ""}>↑</button>
+          <button class="icon-btn" type="button" title="Nach unten" data-workshop-action="move-book-page" data-page-index="${index}" data-direction="1" ${index === state.pages.length - 1 ? "disabled" : ""}>↓</button>
+          <button class="icon-btn" type="button" title="Duplizieren" data-workshop-action="duplicate-book-page" data-page-index="${index}">⧉</button>
+          <button class="icon-btn" type="button" title="Löschen" data-workshop-action="remove-book-page" data-page-index="${index}" ${state.pages.length <= 1 ? "disabled" : ""}>×</button>
         </div>
       </div>`;
   }).join("");
   manager.innerHTML = `
     <div class="book-manager-head">
       <div class="book-manager-title">Seitenverwaltung</div>
-      <button class="btn" type="button" onclick="addBookPage()">+ Seite</button>
+      <button class="btn" type="button" data-workshop-action="add-book-page">+ Seite</button>
     </div>
     <div class="book-page-list">${rows}</div>`;
 }
@@ -756,7 +895,12 @@ function buildDocumentMedia(meta, keys = ["main", "signature", "emblem", "waterm
   return keys.map(key => buildFilledImageSlot(meta.media?.[key], labels[key], `slot-${key}`)).join("");
 }
 
-function buildBookSpreads(meta, head) {
+function buildBookTurnAttributes(direction, options = {}) {
+  if (options.standalone) return `onclick="turnBookSpread(this, ${direction})"`;
+  return `data-workshop-action="turn-book-spread" data-direction="${direction}"`;
+}
+
+function buildBookSpreads(meta, head, options = {}) {
   const pageTotal = Math.max(1, meta.pages.length);
   const spreadCount = Math.max(1, Math.ceil(pageTotal / 2));
   const activeSpread = Math.max(0, Math.min(spreadCount - 1, Math.floor((meta.currentPage || 0) / 2)));
@@ -787,14 +931,14 @@ function buildBookSpreads(meta, head) {
           ${spreads}
         </div>
         <div class="book-controls">
-          <button type="button" onclick="turnBookSpread(this, -1)" ${activeSpread === 0 ? "disabled" : ""} aria-label="Zurueck">&lsaquo;</button>
+          <button type="button" ${buildBookTurnAttributes(-1, options)} ${activeSpread === 0 ? "disabled" : ""} aria-label="Zurueck">&lsaquo;</button>
           <span class="book-counter">Seite ${firstVisible}${lastVisible !== firstVisible ? `-${lastVisible}` : ""} / ${pageTotal}</span>
-          <button type="button" onclick="turnBookSpread(this, 1)" ${activeSpread >= spreadCount - 1 ? "disabled" : ""} aria-label="Weiter">&rsaquo;</button>
+          <button type="button" ${buildBookTurnAttributes(1, options)} ${activeSpread >= spreadCount - 1 ? "disabled" : ""} aria-label="Weiter">&rsaquo;</button>
         </div>
       </div>`;
 }
 
-function buildDocumentBody(meta) {
+function buildDocumentBody(meta, options = {}) {
   const metaLine = buildMetaLine(meta);
   const head = meta.template === "note" ? "" : `
     <div class="doc-meta">${metaLine}</div>
@@ -803,7 +947,7 @@ function buildDocumentBody(meta) {
     ${meta.subtitle ? `<div class="doc-subtitle">${escapeHtml(meta.subtitle)}</div>` : ""}
     <div class="doc-divider"></div>`;
   if (meta.template === "book") {
-    return buildBookSpreads(meta, head);
+    return buildBookSpreads(meta, head, options);
   }
   const topMedia = meta.template === "wanted" ? buildDocumentMedia(meta, ["main"]) : "";
   const bottomMedia = meta.template === "note" ? "" : meta.template === "wanted"
@@ -843,7 +987,7 @@ function collectWorkshopCss() {
 }
 
 function buildDocumentHtml(meta, options = {}) {
-  const body = `<div class="doc-shell" style="${escapeHtml(buildShellStyle(meta))}">${buildDocumentBody(meta)}</div>`;
+  const body = `<div class="doc-shell" style="${escapeHtml(buildShellStyle(meta))}">${buildDocumentBody(meta, options)}</div>`;
   if (!options.standalone) return body;
   const workshopCss = collectWorkshopCss();
   const exportedBookScript = `<script>
@@ -1000,21 +1144,7 @@ function setStatus(text) {
   $("status").textContent = text;
 }
 
-fields.forEach(id => {
-  const el = $(id);
-  if (!el) return;
-  el.addEventListener("input", () => {
-    renderPreview();
-    scheduleAutoSave();
-  });
-  el.addEventListener("change", () => {
-    renderPreview();
-    scheduleAutoSave();
-  });
-});
-$("doc-preset").addEventListener("change", event => applyPreset(event.target.value));
-$("doc-editor").addEventListener("input", syncEditorToPage);
-
+initWorkshopEvents();
 setMeta({
   template: "letter",
   title: "Archivnotiz oder Dokument",
