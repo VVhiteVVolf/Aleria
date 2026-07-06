@@ -5,6 +5,7 @@ Dieses Dokument beschreibt, wie Familien, Häuser und Clans lokal und in Firebas
 ## Grundregel
 
 Jedes Haus braucht eine eindeutige `id` in `haeuser.registry.js`.
+Die Vorlage bestimmt nur die Shell: `haus.html` fuer groessere Haeuser, `kleinehaeuser.html` fuer kleinere Haeuser und Clans. Die Speicher-ID bleibt immer die jeweilige Registry-ID.
 
 Beispiel:
 

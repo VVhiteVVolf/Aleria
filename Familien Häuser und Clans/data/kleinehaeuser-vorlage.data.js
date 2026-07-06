@@ -1,0 +1,117 @@
+window.HAEUSER_DATA = {
+  meta: {
+    id: "kleinehaeuser-vorlage",
+    title: "Kleineh\u00e4user-Vorlage - Aleria",
+    type: "Kleines Haus / Familie / Clan",
+    status: "Template",
+    editorVersion: 1,
+    template: "kleinehaeuser",
+    storage: {
+      document: "kleinehaeuser-vorlage",
+      firebaseCollections: {
+        houses: "familien_haeuser_und_clans",
+        inlineContent: "familien_haeuser_und_clans_inline_content",
+        scenes: "familien_haeuser_und_clans_scenes",
+      },
+      imageStorage: {
+        currentMode: "inline-url-or-base64",
+        plannedProvider: "firebase-storage",
+        plannedRoot: "haeuser/kleinehaeuser-vorlage/images",
+        plannedFirestoreMode: "reference",
+      },
+      tableStorage: {
+        currentMode: "html",
+        plannedStructuredMode: "optional",
+      },
+      localStoragePrefixes: [
+        "aleria:haeuser:inline-content:v2:kleinehaeuser-vorlage",
+        "aleria:haeuser:inline-reset:kleinehaeuser-vorlage",
+        "aleria:haeuser:inline-status-position:kleinehaeuser-vorlage",
+        "aleria:haeuser:scene-index:kleinehaeuser-vorlage",
+        "aleria:haeuser:scene-index-meta:kleinehaeuser-vorlage",
+        "aleria:haeuser:session-module:kleinehaeuser-vorlage:",
+        "aleria:haeuser:session-module-meta:kleinehaeuser-vorlage:",
+        "aleria:haeuser:comments:haeuser:kleinehaeuser-vorlage:",
+      ],
+    },
+  },
+
+  name: "Kleineh\u00e4user-Vorlage",
+  hierarchy: [
+    { type: "Sammlung", name: "Familien Haeuser und Clans", slug: "familien-haeuser-und-clans" },
+    { type: "Kategorie", name: "Kleine Haeuser / kleinere Clans", slug: "kleinehaeuser" },
+    { type: "Vorlage", name: "Kleinehaeuser-Vorlage", slug: "kleinehaeuser-vorlage" },
+  ],
+
+  classification: {
+    category: "Familien Haeuser und Clans",
+    houseType: "Kleines Haus, Buergerhaus, Familie oder kleiner Clan",
+    scale: "klein bis mittel",
+    parentHouseId: null,
+    rootHouseId: "kleinehaeuser-vorlage",
+    territoryId: null,
+  },
+
+  nesting: {
+    supportsNestedHouses: true,
+    note: "Diese Vorlage ist fuer kleinere Haeuser, Buergerfamilien, Nebenlinien und lokale Clans gedacht.",
+    examplePath: [
+      "Familien Haeuser und Clans",
+      "Estryll",
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Kleiner Clan oder Nebenhaus",
+    ],
+    intendedChildTypes: [
+      "Kleines Haus",
+      "Buergerhaus",
+      "Familie",
+      "Clan",
+      "Nebenlinie",
+      "Haushalt",
+      "Gefolgsfamilie",
+    ],
+  },
+
+  profile: {
+    motto: "Optionaler Leitspruch",
+    quoteAuthor: "Chronist / Familienoberhaupt / Ueberlieferung",
+    rank: "Rang des Ritterhauses, Buergerhauses oder Clans",
+    houseType: "Kleines Haus / Familie / Clan",
+    seat: "Heimat, Sitz, Hof oder Wandergebiet",
+    affiliation: "Lehnsherr, Reich, Clanbund oder Fraktion",
+    liege: "Wem dient dieses Haus?",
+    patron: "Wem genau dient dieses Haus?",
+    knightingPatron: "Wenn adlig: von wem zum Adel erhoben?",
+    founding: "Gruendungsjahr oder Entstehungszeitraum",
+    milestoneOne: "Praegender Wendepunkt",
+    milestoneTwo: "Weitere historische Zaesur",
+    people: "Volksgruppe, Kulturkreis oder Herkunft",
+    wealth: "Wohlstand, Ressourcen und Einkommen",
+    religion: "Religion, Kulte oder Hausglauben",
+    patronDeities: "Hauptpatrone, Ideale oder Schutzmaechte",
+    origin: "Ursprung, Abstammung oder Herkunft",
+    allies: "Freunde, Heiratsbuendnisse oder Schutzvertraege",
+    enemies: "Feinde, Fehden oder Rivalen",
+  },
+
+  sections: {
+    overview: "Platzhalter: Ueberblick ueber Herkunft, Groesse, Ruf und aktuelle Lage.",
+    history: "Platzhalter: Gruendung, Epochen, Wendepunkte und wichtige Ueberlieferungen.",
+    traditions: "Platzhalter: Feste, Riten, Erbbraeuche und wiederkehrende Gewohnheiten.",
+    holdings: "Platzhalter: Laendereien, Hof, Werkstaetten, Schiffe, Rechte, Einnahmen oder andere Grundlagen.",
+    cultureReligion: "Platzhalter: Wertekanon, Glauben, Heilige, Kulte, Sprache, Kleidung und Tabus.",
+    conflictsAlliances: "Platzhalter: Rivalen, Verbuendete, Fehden, Schutzvertraege und alte Schulden.",
+    values: "Platzhalter: Ehrenkodex, Leitprinzipien, Selbstbild und Erwartungen an Mitglieder.",
+    court: "Hofstruktur, Oberhaupt, Erbfolge und Hofaemter nach der Haeuser-Vorlage.",
+    hierarchy: "Tabellarische Stammbaum-Hierarchie: oben die aeltesten Generationen und der Gruender, darunter absteigend juengere Generationen.",
+    familyTree: "Stammbaum, Hauptlinie, Nebenlinien, Eheverbindungen und unklare Verwandtschaften.",
+    historicalFigures: "Ahnen, Gruender, Verrater, Heilige, Heerfuehrer, tragische Figuren und andere praegende Personen.",
+  },
+
+  trivia: [
+    "...",
+    "...",
+    "...",
+  ],
+};

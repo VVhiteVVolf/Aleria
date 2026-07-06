@@ -10,6 +10,12 @@ Die zentrale Seite ist:
 /Familien Häuser und Clans/haus.html?haus=HAUS-ID
 ```
 
+Für kleinere Häuser, Bürgerfamilien, Nebenlinien und kleinere Clans gibt es zusätzlich die sekundäre Vorlage:
+
+```text
+/Familien Häuser und Clans/kleinehaeuser.html?haus=HAUS-ID
+```
+
 Ein konkretes Haus bekommt:
 
 - einen fachlichen Ordnerpfad
@@ -72,7 +78,7 @@ Familien Häuser und Clans/
 
 ## Datendatei
 
-Die Datendatei setzt `window.HAEUSER_DATA`. Für ein konkretes Haus wird `data/haeuser-vorlage.data.js` kopiert und fachlich angepasst.
+Die Datendatei setzt `window.HAEUSER_DATA`. Für ein konkretes größeres Haus wird `data/haeuser-vorlage.data.js` kopiert und fachlich angepasst. Für kleine Häuser und kleinere Clans wird `data/kleinehaeuser-vorlage.data.js` kopiert.
 
 Wichtig:
 
@@ -84,10 +90,11 @@ Wichtig:
 
 ## Keine HTML-Kopien
 
-Neue konkrete Familien brauchen standardmaessig keine eigene HTML-Datei. Der Link bleibt:
+Neue konkrete Familien brauchen standardmaessig keine eigene HTML-Datei. Der Link bleibt je nach Vorlage:
 
 ```text
 haus.html?haus=familie-jernigan
+kleinehaeuser.html?haus=familie-jernigan
 ```
 
 Nur bei einem bewusst abweichenden Layout sollte ein eigener Shell-Page-Typ ergaenzt werden.

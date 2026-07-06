@@ -6,6 +6,9 @@
 
   const pageId = getPageId();
   const CONTENT_SCHEMA_VERSION = 2;
+  const PORTRAIT_PLACEHOLDER_SRC = "https://i.imgur.com/Bpo3Pzn.png";
+  const TABLE_EDITOR_VERSION = "table-editor-20260706b";
+  const inlineEditorScript = document.currentScript;
   const inlineStorageConfig = getInlineStorageConfig();
   const storageNamespace = inlineStorageConfig.namespace;
   const storageKey = getInlineContentStorageKey(storageNamespace, CONTENT_SCHEMA_VERSION);
@@ -39,6 +42,7 @@
   let statusSuppressClick = false;
   let statusDrag = null;
   let rowControlPositionTimer = 0;
+  let tableEditor = null;
   const inlineActions = new Set([
     "toggle-orte-inline-edit",
     "toggle-orte-final-status",
@@ -92,10 +96,11 @@
     ".orte-inline-image-overlay",
     ".orte-table-add-control",
     ".orte-table-row-controls",
+    ".table-editor-toolbar",
     ".orte-section-controls"
   ].join(", ");
 
-  init();
+  loadTableEditorAssets().finally(init);
 
   function init() {
     const localPayload = loadLocal();
@@ -108,6 +113,64 @@
     resetHistoryToCurrent();
     wireEvents();
     connectRemote();
+    mountTableEditor();
+  }
+
+  function loadTableEditorAssets() {
+    injectTableEditorStyles();
+    if (window.AleriaTableEditor) return Promise.resolve();
+    return new Promise((resolve) => {
+      const existing = document.querySelector("script[data-aleria-table-editor]");
+      if (existing) {
+        existing.addEventListener("load", () => resolve(), { once: true });
+        existing.addEventListener("error", () => resolve(), { once: true });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = resolveTableEditorAsset("table-editor.js");
+      script.defer = true;
+      script.dataset.aleriaTableEditor = TABLE_EDITOR_VERSION;
+      script.onload = () => resolve();
+      script.onerror = () => {
+        console.warn("Aleria Tabelleneditor konnte nicht geladen werden.");
+        resolve();
+      };
+      document.head.append(script);
+    });
+  }
+
+  function injectTableEditorStyles() {
+    if (document.querySelector("link[data-aleria-table-editor-style]")) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = resolveTableEditorAsset("table-editor.css");
+    link.dataset.aleriaTableEditorStyle = TABLE_EDITOR_VERSION;
+    document.head.append(link);
+  }
+
+  function resolveTableEditorAsset(fileName) {
+    const base = inlineEditorScript?.src || new URL("Orte/assets/js/orte-inline-editor.js", document.baseURI).toString();
+    return new URL(`../../../AleriaAlmanach/modules/table-editor/${fileName}?v=${TABLE_EDITOR_VERSION}`, base).toString();
+  }
+
+  function mountTableEditor() {
+    if (tableEditor || !window.AleriaTableEditor?.mount) return;
+    tableEditor = window.AleriaTableEditor.mount({
+      root,
+      getEditMode: () => editMode,
+      isIgnoredSurface: isInsideIgnoredSurface,
+      onCellInput: ({ table }) => {
+        updateTableState(table);
+        markDirty();
+      },
+      onTableChanged: ({ table }) => {
+        updateTableState(table);
+        rebuildTargets();
+        markDirty();
+      }
+    });
+    tableEditor.setEditMode(editMode);
   }
 
   function renderToolbar() {
@@ -544,6 +607,7 @@
     renderTableControls();
     updateDocumentStatusControls();
     updateHistoryButtons();
+    tableEditor?.setEditMode(editMode);
     if (!editMode) closeImagePanel();
   }
 
@@ -573,6 +637,7 @@
     renderTableControls();
     applySectionVisibility();
     renderSectionControls();
+    tableEditor?.refresh();
 
     if (editMode) {
       textItems.forEach((item) => {
@@ -870,7 +935,9 @@
     const image = normalizeImageState(state.images[key] || {}, item.label);
     state.images[key] = image;
     const alt = image.alt || item.label;
+    const usesPortraitPlaceholder = !image.src && shouldRenderPortraitPlaceholder(item, image);
     item.node.classList.toggle("has-image", !!image.src);
+    item.node.classList.toggle("has-portrait-placeholder", usesPortraitPlaceholder);
     item.node.dataset.orteImageFormat = image.format;
     item.node.dataset.orteImageFit = image.fit;
     item.node.dataset.orteImageWidth = String(image.width);
@@ -880,6 +947,10 @@
 
     const editHint = editMode ? `<span class="orte-inline-image-hint">Bild bearbeiten</span>` : "";
     if (!image.src) {
+      if (usesPortraitPlaceholder) {
+        item.node.innerHTML = `<img class="orte-image-placeholder-media" src="${PORTRAIT_PLACEHOLDER_SRC}" alt="${escapeAttr(item.label || "Portrait Platzhalter")}" loading="lazy" decoding="async">${editHint}`;
+        return;
+      }
       item.node.innerHTML = `<span class="orte-image-placeholder" role="img" aria-label="${escapeAttr(item.label)}">${escapeHtml(getPlaceholderText(item))}</span>${editHint}`;
       return;
     }
@@ -2591,7 +2662,13 @@
   }
 
   function sanitizeLoadedTable(table) {
-    table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control").forEach((node) => node.remove());
+    table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control, .table-editor-toolbar").forEach((node) => node.remove());
+    table.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
+      node.classList.remove("table-editor-active-cell", "table-editor-active-table");
+    });
+    table.querySelectorAll("[data-table-editor-cell]").forEach((node) => {
+      node.removeAttribute("data-table-editor-cell");
+    });
     table.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
     table.querySelectorAll("td, th").forEach((cell) => sanitizeEditableNode(cell));
   }
@@ -2605,7 +2682,13 @@
       node.removeAttribute("data-orte-inline-text");
     });
     clone.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
-    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-inline-image-hint").forEach((node) => node.remove());
+    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-inline-image-hint, .orte-image-placeholder-media, .table-editor-toolbar").forEach((node) => node.remove());
+    clone.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
+      node.classList.remove("table-editor-active-cell", "table-editor-active-table");
+    });
+    clone.querySelectorAll("[data-table-editor-cell]").forEach((node) => {
+      node.removeAttribute("data-table-editor-cell");
+    });
     clone.querySelectorAll("[data-orte-rating-key]").forEach((node) => {
       const key = node.dataset.orteRatingKey;
       const kind = node.dataset.orteRatingKind || "stern";
@@ -3424,6 +3507,13 @@
       .trim() || "Bild";
   }
 
+  function shouldRenderPortraitPlaceholder(item, image) {
+    return image?.format === "portrait"
+      || item?.node?.dataset?.orteImageFormat === "portrait"
+      || item?.node?.classList?.contains("is-portrait-image")
+      || !!item?.node?.closest(".portrait-cell");
+  }
+
   function isPlaceholderImage(image) {
     if (!image) return false;
     const src = image.getAttribute("src") || "";
@@ -3443,6 +3533,7 @@
     if (!value) return false;
     return value.includes("tumblr_otwjgn7mfu1wwqdobo1_1280")
       || value.includes("66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10")
+      || value.includes("i.imgur.com/bpo3pzn.png")
       || value.endsWith("/w5rerk3.png");
   }
 

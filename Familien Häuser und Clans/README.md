@@ -6,13 +6,16 @@ Startpunkt:
 
 ```text
 haus.html?haus=haeuser-vorlage
+kleinehaeuser.html?haus=kleinehaeuser-vorlage
 ```
 
 Wichtige Dateien:
 
-- `haus.html` ist die zentrale Vorlagenseite.
+- `haus.html` ist die zentrale Vorlagenseite für größere Häuser, Familien und Clans.
+- `kleinehaeuser.html` ist die sekundäre Vorlage für kleinere Häuser, Bürgerfamilien, Nebenlinien und kleinere Clans.
 - `haeuser.registry.js` registriert konkrete Häuser, Familien und Clans.
 - `data/haeuser-vorlage.data.js` ist die Datenbasis für die Vorlage.
+- `data/kleinehaeuser-vorlage.data.js` ist die Datenbasis für die kleine Vorlage.
 - `assets/js/haeuser-loader.js` lädt Registry und Datendatei.
 - `assets/js/haeuser-page.js` rendert strukturierte Vorlagendaten.
 - `assets/css/haeuser.css` enthält die featurebezogenen Styles.

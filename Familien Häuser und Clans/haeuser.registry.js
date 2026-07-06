@@ -38,6 +38,33 @@
       ],
       tags: ["haeuser", "familien", "clans", "adel", "vorlage"],
     },
+    {
+      id: "kleinehaeuser-vorlage",
+      slug: "kleinehaeuser-vorlage",
+      aliases: [
+        "kleinehauser-vorlage",
+        "kleine-haeuser-vorlage",
+        "kleine-hauser-vorlage",
+        "kleinehaeuser",
+        "kleinehauser",
+        "kleine-haeuser",
+        "kleine-hauser",
+        "kleine-clans-vorlage",
+        "kleine-haeuser-clans-vorlage",
+      ],
+      name: "Kleineh\u00e4user-Vorlage",
+      status: HOUSE_STATUS.TEMPLATE,
+      type: HOUSE_TYPES.HOUSE,
+      page: "kleinehaeuser.html",
+      data: "data/kleinehaeuser-vorlage.data.js",
+      inlineCollection: "familien_haeuser_und_clans_inline_content",
+      sceneCollection: "familien_haeuser_und_clans_scenes",
+      hierarchy: [
+        { type: "Sammlung", name: "Familien H\u00e4user und Clans", slug: "familien-haeuser-und-clans" },
+        { type: "Vorlage", name: "Kleine H\u00e4user / kleinere Clans", slug: "kleinehaeuser-vorlage" },
+      ],
+      tags: ["kleine-haeuser", "kleine-clans", "familien", "nebenlinien", "vorlage"],
+    },
   ].map(Object.freeze);
 
   function all() {
