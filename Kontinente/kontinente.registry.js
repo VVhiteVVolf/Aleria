@@ -73,4 +73,21 @@ window.KONTINENTE_REGISTRY = [
       { type: "Königreich", name: "Cenyr", slug: "cenyr" },
     ],
   },
+  {
+    id: "grafschaft-celtigerns-wacht",
+    slug: "celtigerns-wacht",
+    aliases: ["celtigerns-wacht", "gwyl-celtigern", "grafschaft-celtigerns-wacht"],
+    name: "Grafschaft Celtigerns Wacht",
+    type: "Grafschaft",
+    page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Kontinent", name: "Estryll", slug: "estryll" },
+      { type: "Königreich", name: "Cenyr", slug: "cenyr" },
+      { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },
+    ],
+  },
 ];

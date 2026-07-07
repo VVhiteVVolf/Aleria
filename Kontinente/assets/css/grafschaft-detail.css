@@ -1,0 +1,521 @@
+.county-page {
+  --county-accent: #8f5d25;
+  --county-accent-dark: #3f250c;
+  --county-accent-mid: #7c551f;
+  --county-gold: #c89b35;
+  --county-paper: #f2dfb1;
+  --county-paper-soft: #fff3d0;
+  --county-ink: #221408;
+  --county-muted: #684c2a;
+  --county-line: rgba(82, 47, 13, 0.42);
+  --county-line-strong: rgba(72, 41, 12, 0.72);
+  --county-shadow: rgba(20, 10, 2, 0.22);
+}
+
+.county-page .county-parchment {
+  display: grid;
+  gap: clamp(20px, 2.6vw, 34px);
+}
+
+.county-page .county-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 310px);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(22px, 4vw, 46px);
+  overflow: hidden;
+  color: #fff4d2;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(224, 172, 61, 0.22), transparent 14rem),
+    linear-gradient(135deg, rgba(72, 43, 12, 0.98), rgba(30, 17, 6, 0.98));
+  border: 1px solid rgba(45, 25, 7, 0.86);
+  border-radius: 8px;
+  box-shadow:
+    0 16px 34px rgba(42, 24, 7, 0.28),
+    inset 0 0 0 1px rgba(255, 235, 170, 0.18);
+}
+
+.county-page .county-hero-copy {
+  min-width: 0;
+}
+
+.county-page .county-kicker,
+.county-page .county-subtitle {
+  margin: 0;
+  color: #efd58b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.county-page .county-kicker {
+  font-size: 0.82rem;
+}
+
+.county-page .county-subtitle {
+  margin-top: 0.35rem;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  text-transform: none;
+}
+
+.county-page .county-hero h1 {
+  max-width: 760px;
+  margin: 0.18em 0 0;
+  color: #fff4d2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 6vw, 5.1rem);
+  line-height: 0.98;
+  text-shadow:
+    0 2px 0 rgba(20, 10, 2, 0.9),
+    0 0 18px rgba(234, 208, 128, 0.24);
+}
+
+.county-page .county-lead {
+  max-width: 820px;
+  margin: clamp(16px, 2.2vw, 24px) 0 0;
+  color: #f9e8b7;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.county-page .county-hero-media {
+  display: grid;
+  justify-items: center;
+}
+
+.county-page .county-main-crest {
+  width: min(100%, 260px);
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+}
+
+.county-page .county-main-crest img {
+  display: block;
+  width: min(100%, 240px);
+  max-height: 270px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 18px rgba(10, 5, 1, 0.34));
+}
+
+.county-page .county-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+  gap: clamp(18px, 2.8vw, 30px);
+  align-items: start;
+}
+
+.county-page .county-sidebar {
+  display: grid;
+  gap: 16px;
+  position: sticky;
+  top: 16px;
+}
+
+.county-page .county-sidebar-panel {
+  padding: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 221, 0.88), rgba(226, 190, 112, 0.5)),
+    var(--county-paper);
+  border: 1px solid var(--county-line-strong);
+  border-radius: 8px;
+  box-shadow:
+    0 12px 24px var(--county-shadow),
+    inset 0 0 0 1px rgba(255, 248, 226, 0.44);
+}
+
+.county-page .county-sidebar-panel h2,
+.county-page .county-sidebar-panel h3 {
+  margin: 0 0 0.8rem;
+  color: var(--county-accent-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+}
+
+.county-page .county-toc ol {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.county-page .county-toc a,
+.county-page .county-external-link {
+  color: #58310d;
+  font-weight: 700;
+  text-decoration-color: rgba(88, 49, 13, 0.42);
+  text-underline-offset: 0.16em;
+}
+
+.county-page .county-toc a:hover,
+.county-page .county-external-link:hover {
+  color: #231306;
+}
+
+.county-page .county-facts {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.county-page .county-fact-row {
+  display: grid;
+  gap: 0.16rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(82, 47, 13, 0.22);
+}
+
+.county-page .county-fact-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.county-page .county-fact-row dt {
+  color: var(--county-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.county-page .county-fact-row dd {
+  margin: 0;
+  color: var(--county-ink);
+  font-weight: 700;
+}
+
+.county-page .county-map-slot {
+  display: block;
+}
+
+.county-page .county-map-slot a,
+.county-page .county-map-slot img {
+  display: block;
+}
+
+.county-page .county-map-slot img {
+  width: 100%;
+  border: 1px solid rgba(83, 49, 15, 0.46);
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(37, 20, 6, 0.2);
+}
+
+.county-page .county-content {
+  min-width: 0;
+  display: grid;
+  gap: clamp(20px, 2.4vw, 30px);
+}
+
+.county-page .county-section {
+  padding-bottom: clamp(18px, 2.4vw, 30px);
+  border-bottom: 1px solid rgba(82, 47, 13, 0.3);
+}
+
+.county-page .county-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.county-page .county-section-head {
+  display: grid;
+  gap: 0.24rem;
+  margin-bottom: 1rem;
+}
+
+.county-page .county-section-kicker {
+  color: var(--county-accent-mid);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.county-page .county-section h2,
+.county-page .county-section h3 {
+  color: var(--county-accent-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+}
+
+.county-page .county-section h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+}
+
+.county-page .county-section h3 {
+  margin: 1.35rem 0 0.65rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.county-page .county-text-flow {
+  max-width: 880px;
+}
+
+.county-page .county-text-flow p,
+.county-page .county-note {
+  margin: 0 0 0.85rem;
+}
+
+.county-page .county-text-flow p:last-child,
+.county-page .county-note:last-child {
+  margin-bottom: 0;
+}
+
+.county-page .county-text-flow strong,
+.county-page .county-card strong {
+  color: #1c1006;
+}
+
+.county-page .county-note {
+  padding: 0.85rem 1rem;
+  color: var(--county-muted);
+  background: rgba(255, 246, 219, 0.58);
+  border: 1px dashed rgba(82, 47, 13, 0.42);
+  border-radius: 8px;
+}
+
+.county-page .county-card-grid,
+.county-page .county-org-grid,
+.county-page .county-threat-grid,
+.county-page .county-place-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.county-page .county-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.county-page .county-card-grid--wide {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.county-page .county-org-grid {
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+}
+
+.county-page .county-threat-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.county-page .county-card,
+.county-page .county-org-item,
+.county-page .county-threat {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+  padding: 13px;
+  color: var(--county-ink);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(200, 155, 53, 0.16), transparent 7rem),
+    linear-gradient(180deg, rgba(255, 247, 221, 0.9), rgba(224, 188, 110, 0.54));
+  border: 1px solid rgba(82, 47, 13, 0.48);
+  border-radius: 8px;
+  box-shadow:
+    0 12px 22px rgba(40, 22, 6, 0.16),
+    inset 0 0 0 1px rgba(255, 248, 226, 0.32);
+}
+
+.county-page .county-card {
+  justify-items: center;
+  text-align: center;
+}
+
+.county-page .county-card-image,
+.county-page .county-org-image,
+.county-page .county-domain-image,
+.county-page .county-place-image {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.county-page .county-card-image a,
+.county-page .county-card-image img,
+.county-page .county-org-image a,
+.county-page .county-org-image img,
+.county-page .county-domain-image a,
+.county-page .county-domain-image img,
+.county-page .county-place-image a,
+.county-page .county-place-image img {
+  display: block;
+}
+
+.county-page .county-card-image img {
+  max-width: min(100%, 150px);
+  max-height: 210px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(35, 19, 5, 0.18));
+}
+
+.county-page .county-card-image--crest img {
+  max-width: min(100%, 120px);
+  max-height: 120px;
+}
+
+.county-page .county-card-title,
+.county-page .county-card-role,
+.county-page .county-card-name {
+  margin: 0;
+}
+
+.county-page .county-card-role {
+  color: var(--county-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.county-page .county-card-name {
+  color: var(--county-accent-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.county-page .county-card-meta {
+  margin: 0;
+  color: var(--county-muted);
+  font-size: 0.86rem;
+}
+
+.county-page .county-org-item {
+  justify-items: center;
+  text-align: center;
+}
+
+.county-page .county-org-image img {
+  max-width: 94px;
+  max-height: 94px;
+  object-fit: contain;
+}
+
+.county-page .county-org-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.county-page .county-domain-list {
+  display: grid;
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
+.county-page .county-domain {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(255, 246, 219, 0.42);
+  border: 1px solid rgba(82, 47, 13, 0.34);
+  border-radius: 8px;
+}
+
+.county-page .county-domain-head {
+  display: grid;
+  grid-template-columns: minmax(92px, 140px) minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.county-page .county-domain-image img {
+  max-width: 140px;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(35, 19, 5, 0.16));
+}
+
+.county-page .county-domain h3 {
+  margin: 0 0 0.28rem;
+}
+
+.county-page .county-domain-meta {
+  margin: 0;
+  color: var(--county-muted);
+  font-weight: 700;
+}
+
+.county-page .county-place-grid {
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+}
+
+.county-page .county-place {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  padding: 9px 8px;
+  text-align: center;
+  background: rgba(255, 248, 226, 0.64);
+  border: 1px solid rgba(82, 47, 13, 0.24);
+  border-radius: 7px;
+}
+
+.county-page .county-place-image img {
+  max-width: 72px;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.county-page .county-place-type,
+.county-page .county-place-name {
+  margin: 0;
+}
+
+.county-page .county-place-type {
+  color: var(--county-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.county-page .county-place-name {
+  color: var(--county-accent-dark);
+  font-weight: 700;
+}
+
+.county-page .county-threat {
+  gap: 0.7rem;
+}
+
+.county-page .county-threat h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.county-page .county-threat p {
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .county-page .county-hero,
+  .county-page .county-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .county-page .county-sidebar {
+    position: static;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .county-page .county-hero {
+    padding: 20px;
+  }
+
+  .county-page .county-domain-head {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .county-page .county-place-grid,
+  .county-page .county-card-grid,
+  .county-page .county-org-grid,
+  .county-page .county-threat-grid {
+    grid-template-columns: 1fr;
+  }
+}
