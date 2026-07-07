@@ -367,11 +367,17 @@
       if (!(image instanceof HTMLImageElement)) return;
       const slot = image.closest("[data-orte-image-key]");
       if (!slot) return;
-      const key = slot.dataset.orteImageKey;
-      if (!key) return;
-      state.images[key] = normalizeImageState({ ...(state.images[key] || {}), src: "" }, slot.dataset.orteImageLabel || key);
-      renderImageSlot(key);
-      markDirty();
+      slot.classList.add("has-image-load-error");
+      slot.dataset.orteImageLoadState = "error";
+    }, true);
+
+    document.addEventListener("load", (event) => {
+      const image = event.target;
+      if (!(image instanceof HTMLImageElement)) return;
+      const slot = image.closest("[data-orte-image-key]");
+      if (!slot) return;
+      slot.classList.remove("has-image-load-error");
+      delete slot.dataset.orteImageLoadState;
     }, true);
 
     document.addEventListener("selectionchange", () => {
@@ -692,7 +698,7 @@
         format: node.dataset.orteImageFormat || "",
         fit: node.dataset.orteImageFit || ""
       };
-      state.images[key] = normalizeImageState({ ...initialImage, ...(state.images[key] || {}) }, label);
+      state.images[key] = mergeInitialImageState(initialImage, state.images[key], label);
       imageItems.push({ key, label, node });
     });
   }
@@ -3303,6 +3309,26 @@
       fit: ["contain", "cover"].includes(source.fit) ? source.fit : "contain",
       clearedAtClient: Number(source.clearedAtClient) || 0
     };
+  }
+
+  function mergeInitialImageState(initialImage, currentImage, label) {
+    const initial = normalizeImageState(initialImage, label);
+    if (!currentImage || typeof currentImage !== "object") return initial;
+
+    const current = normalizeImageState(currentImage, label);
+    const currentSrc = normalizePlaceholderSrc(currentImage.src);
+    const currentIsLegacyEmpty = !currentSrc && !Number(currentImage.clearedAtClient);
+
+    if (initial.src && currentIsLegacyEmpty) {
+      return normalizeImageState({
+        ...current,
+        src: initial.src,
+        href: current.href || initial.href,
+        alt: current.alt && current.alt !== label ? current.alt : initial.alt
+      }, label);
+    }
+
+    return current;
   }
 
   function mergeIncomingImageState(currentImage, incomingImage, label) {
