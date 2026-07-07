@@ -120,7 +120,7 @@
 
     table.classList.add('is-county-card-source');
     if (wrapper) wrapper.classList.add('is-county-card-source-wrapper');
-    anchor.insertAdjacentElement('afterend', view);
+    anchor.insertAdjacentElement('beforebegin', view);
     countyCardViews.set(table, view);
     if (window.location.hash) window.setTimeout(scrollToCurrentHash, 40);
   }
@@ -278,7 +278,7 @@
 
     table.classList.add('is-family-card-source');
     if (wrapper) wrapper.classList.add('is-family-card-source-wrapper');
-    anchor.insertAdjacentElement('afterend', view);
+    anchor.insertAdjacentElement('beforebegin', view);
     familyCardViews.set(table, view);
   }
 

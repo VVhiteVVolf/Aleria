@@ -949,6 +949,17 @@
   function normalizeTableImageCells(scope) {
     const rootNode = scope || root;
     rootNode.querySelectorAll?.("td, th").forEach((cell) => {
+      const seenSlotKeys = new Set();
+      Array.from(cell.querySelectorAll(".orte-image-slot[data-orte-image-key]")).forEach((slot) => {
+        if (isInsideIgnoredSurface(slot)) return;
+        const key = normalizeWhitespace(slot.dataset.orteImageKey);
+        if (!key || !seenSlotKeys.has(key)) {
+          if (key) seenSlotKeys.add(key);
+          return;
+        }
+        removeImageSlotUnit(slot, cell);
+      });
+
       const imagesBySource = new Map();
       Array.from(cell.querySelectorAll("img")).forEach((image) => {
         if (isInsideIgnoredSurface(image)) return;
@@ -981,10 +992,14 @@
     return String(image.getAttribute("src") || "").trim();
   }
 
+  function removeImageSlotUnit(slot, cell) {
+    if (slot && cell.contains(slot)) slot.remove();
+  }
+
   function removeImageUnit(image, cell) {
     const slot = image.closest(".orte-image-slot");
     if (slot && cell.contains(slot)) {
-      slot.remove();
+      removeImageSlotUnit(slot, cell);
       return;
     }
 
@@ -1050,6 +1065,14 @@
       format: slot?.dataset?.orteImageFormat || "",
       fit: slot?.dataset?.orteImageFit || ""
     }, label);
+  }
+
+  function stripSerializedImageSlotContent(scope) {
+    scope.querySelectorAll?.("[data-orte-image-key]").forEach((slot) => {
+      slot.classList.remove("has-image", "has-portrait-placeholder", "has-image-load-error");
+      slot.removeAttribute("data-orte-image-load-state");
+      slot.innerHTML = "";
+    });
   }
 
   function captureTemplateImageFallbacks() {
@@ -2954,6 +2977,7 @@
     });
     normalizeTableImageCells(clone);
     normalizeImageSlotKeys(clone);
+    stripSerializedImageSlotContent(clone);
     clone.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
       node.classList.remove("table-editor-active-cell", "table-editor-active-table");
     });

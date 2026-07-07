@@ -306,9 +306,56 @@ body:not(.orte-inline-editing) .kingdom-table-scroll.is-family-card-source-wrapp
   display: none;
 }
 
+body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper,
+body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
+  display: block;
+  width: min(100%, 980px);
+  margin: 0.25rem auto 1.5rem;
+  padding: 0.85rem;
+  border: 1px dashed rgba(107, 72, 29, 0.62);
+  border-radius: 7px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 220, 0.74), rgba(224, 193, 118, 0.5)),
+    rgba(255, 248, 225, 0.56);
+  box-shadow: inset 0 0 0 1px rgba(255, 252, 234, 0.5);
+}
+
+body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper::before,
+body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper::before {
+  content: "Bearbeitungsdaten fuer die Ansicht oben";
+  display: block;
+  margin: 0 0 0.55rem;
+  color: #5d3210;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 body.orte-inline-editing .kingdom-county-card-view,
 body.orte-inline-editing .kingdom-family-card-view {
-  display: none;
+  position: relative;
+  padding-top: 1.75rem;
+}
+
+body.orte-inline-editing .kingdom-county-card-view::before,
+body.orte-inline-editing .kingdom-family-card-view::before {
+  content: "Live-Vorschau";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.18rem 0.62rem;
+  color: #fff4d0;
+  border: 1px solid rgba(255, 246, 213, 0.36);
+  border-radius: 999px;
+  background: rgba(62, 36, 10, 0.86);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
 }
 
 .kingdom-county-card-view {
