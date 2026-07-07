@@ -22,6 +22,7 @@
   const tableItems = [];
   const sectionItems = [];
   const templateImageFallbacks = new Map();
+  const templateImageFallbacksByContext = new Map();
   const imageKeyAliases = new Map();
   const expandedTableControlKeys = new Set();
   const history = {
@@ -49,6 +50,11 @@
     getImage(key) {
       const image = state.images[String(key || "")];
       return image ? { ...normalizeImageState(image, key) } : null;
+    },
+    getTableImage(tableId, rowIndex, cellIndex, imageIndex = 0) {
+      const contextKey = `${String(tableId || "")}:${Number(rowIndex)}:${Number(cellIndex)}:${Number(imageIndex) || 0}`;
+      const image = templateImageFallbacksByContext.get(contextKey);
+      return image ? { ...normalizeImageState(image, contextKey) } : null;
     }
   };
   window.AleriaInlineEditor = {
@@ -69,6 +75,9 @@
         : slotOrKey;
       const key = slot?.dataset?.orteImageKey;
       if (key) openImagePanel(key);
+    },
+    syncTableState(table) {
+      if (table) updateTableState(table);
     }
   };
   let tableEditor = null;
@@ -747,7 +756,7 @@
         format: node.dataset.orteImageFormat || "",
         fit: node.dataset.orteImageFit || ""
       };
-      state.images[key] = mergeInitialImageState(resolveTemplateImageFallback(key, initialImage, label), state.images[key], label);
+      state.images[key] = mergeInitialImageState(resolveTemplateImageFallback(key, initialImage, label, node), state.images[key], label);
       imageItems.push({ key, label, node });
     });
   }
@@ -971,6 +980,13 @@
       slot.dataset.orteImageKey = key;
       slot.dataset.orteImageLabel = label;
       slot.setAttribute("aria-label", label);
+      if (source && !isPlaceholderImage(image)) {
+        storeTemplateImageFallbackOnSlot(slot, {
+          src: source,
+          href: image.closest("a[href]")?.getAttribute("href") || "",
+          alt: image.getAttribute("alt") || label
+        }, label);
+      }
       image.dataset.orteInlineImageKey = key;
       image.replaceWith(slot);
       slot.appendChild(image);
@@ -1091,10 +1107,11 @@
       ? image.getAttribute("src") || ""
       : "";
     const link = image?.closest?.("a[href]");
+    const fallback = getTemplateImageFallbackFromSlot(slot, label) || {};
     return normalizeImageState({
-      src: source,
-      href: link?.getAttribute("href") || "",
-      alt: image?.getAttribute("alt") || label,
+      src: source || fallback.src,
+      href: link?.getAttribute("href") || fallback.href,
+      alt: source ? image?.getAttribute("alt") || label : fallback.alt || label,
       width: slot?.dataset?.orteImageWidth || "",
       maxHeight: slot?.dataset?.orteImageMaxHeight || "",
       format: slot?.dataset?.orteImageFormat || "",
@@ -1128,6 +1145,7 @@
 
   function captureTemplateImageFallbacks() {
     templateImageFallbacks.clear();
+    templateImageFallbacksByContext.clear();
     const virtualSlotKeys = new WeakMap();
 
     const usedKeys = new Set([
@@ -1167,7 +1185,7 @@
       const label = keyedSlot?.dataset?.orteImageLabel
         || unkeyedSlot?.dataset?.orteImageLabel
         || getImageSlotLabel(image);
-      templateImageFallbacks.set(key, normalizeImageState({
+      rememberTemplateImageFallback(key, getImageFallbackContextKey(image), normalizeImageState({
         src: source,
         href: link?.getAttribute("href") || "",
         alt: image.getAttribute("alt") || label,
@@ -1177,13 +1195,24 @@
         fit: keyedSlot?.dataset?.orteImageFit || unkeyedSlot?.dataset?.orteImageFit || ""
       }, label));
     });
+
+    root.querySelectorAll(".orte-image-slot[data-orte-template-image-src]").forEach((slot) => {
+      if (isInsideIgnoredSurface(slot)) return;
+      const key = slot.dataset.orteImageKey || virtualSlotKeys.get(slot) || "";
+      const label = slot.dataset.orteImageLabel || getImageSlotContextLabel(slot);
+      const fallback = getTemplateImageFallbackFromSlot(slot, label);
+      if (fallback?.src) rememberTemplateImageFallback(key, getImageFallbackContextKey(slot), fallback);
+    });
   }
 
-  function resolveTemplateImageFallback(key, initialImage, label) {
+  function resolveTemplateImageFallback(key, initialImage, label, node) {
     const initial = normalizeImageState(initialImage, label);
     if (initial.src) return initial;
 
-    const fallback = templateImageFallbacks.get(key);
+    const itemNode = node || imageItems.find((entry) => entry.key === key)?.node;
+    const fallback = templateImageFallbacks.get(key)
+      || getTemplateImageFallbackFromSlot(itemNode, label)
+      || templateImageFallbacksByContext.get(getImageFallbackContextKey(itemNode));
     if (!fallback?.src) return initial;
 
     return normalizeImageState({
@@ -1219,6 +1248,7 @@
     const editHint = editMode ? `<span class="orte-inline-image-hint">Bild bearbeiten</span>` : "";
     if (!image.src) {
       clearRuntimeImageSlotData(item.node);
+      if (image.clearedAtClient) clearTemplateImageSlotData(item.node);
       if (usesPortraitPlaceholder) {
         item.node.innerHTML = `<img class="orte-image-placeholder-media" src="${PORTRAIT_PLACEHOLDER_SRC}" alt="${escapeAttr(item.label || "Portrait Platzhalter")}" loading="lazy" decoding="async">${editHint}`;
         return;
@@ -1230,6 +1260,7 @@
     item.node.dataset.orteRenderedImageSrc = image.src;
     item.node.dataset.orteRenderedImageHref = image.href || "";
     item.node.dataset.orteRenderedImageAlt = alt;
+    storeTemplateImageFallbackOnSlot(item.node, image, item.label);
     const imageHtml = `<img src="${escapeAttr(image.src)}" alt="${escapeAttr(alt)}" loading="lazy" decoding="async">`;
     item.node.innerHTML = image.href
       ? `<a href="${escapeAttr(image.href)}" target="_blank" rel="noopener">${imageHtml}</a>${editHint}`
@@ -1246,6 +1277,63 @@
     delete slot.dataset.orteRenderedImageSrc;
     delete slot.dataset.orteRenderedImageHref;
     delete slot.dataset.orteRenderedImageAlt;
+  }
+
+  function storeTemplateImageFallbackOnSlot(slot, image, label) {
+    if (!slot || !image?.src) return;
+    const normalized = normalizeImageState(image, label);
+    if (!normalized.src) return;
+    slot.dataset.orteTemplateImageSrc = normalized.src;
+    slot.dataset.orteTemplateImageHref = normalized.href || "";
+    slot.dataset.orteTemplateImageAlt = normalized.alt || label || "";
+  }
+
+  function clearTemplateImageSlotData(slot) {
+    if (!slot?.dataset) return;
+    delete slot.dataset.orteTemplateImageSrc;
+    delete slot.dataset.orteTemplateImageHref;
+    delete slot.dataset.orteTemplateImageAlt;
+  }
+
+  function getTemplateImageFallbackFromSlot(slot, label) {
+    const source = slot?.dataset?.orteTemplateImageSrc || "";
+    if (!source) return null;
+    return normalizeImageState({
+      src: source,
+      href: slot.dataset.orteTemplateImageHref || "",
+      alt: slot.dataset.orteTemplateImageAlt || label,
+      width: slot.dataset.orteImageWidth || "",
+      maxHeight: slot.dataset.orteImageMaxHeight || "",
+      format: slot.dataset.orteImageFormat || "",
+      fit: slot.dataset.orteImageFit || ""
+    }, label);
+  }
+
+  function rememberTemplateImageFallback(key, contextKey, image) {
+    if (!image?.src) return;
+    if (key && !templateImageFallbacks.has(key)) templateImageFallbacks.set(key, image);
+    if (contextKey && !templateImageFallbacksByContext.has(contextKey)) {
+      templateImageFallbacksByContext.set(contextKey, image);
+    }
+  }
+
+  function getImageFallbackContextKey(node) {
+    const element = getClosestElement(node);
+    const table = element?.closest?.("[data-orte-table-id]");
+    const cell = element?.closest?.("td, th");
+    const row = cell?.parentElement;
+    if (!table || !cell || !row) return "";
+
+    const rowIndex = Array.from(table.tBodies?.[0]?.rows || table.rows || []).indexOf(row);
+    const cellIndex = Array.from(row.cells || []).indexOf(cell);
+    if (rowIndex < 0 || cellIndex < 0) return "";
+
+    const unit = element.closest?.(".orte-image-slot") || element;
+    const imageUnits = Array.from(cell.querySelectorAll(".orte-image-slot, img"))
+      .filter((entry) => !isInsideIgnoredSurface(entry))
+      .filter((entry) => entry.tagName !== "IMG" || !entry.closest(".orte-image-slot"));
+    const imageIndex = Math.max(0, imageUnits.indexOf(unit));
+    return `${table.dataset.orteTableId || ""}:${rowIndex}:${cellIndex}:${imageIndex}`;
   }
 
   function renderRatings() {
@@ -3968,10 +4056,7 @@
   function isPlaceholderSrc(src) {
     const value = String(src || "").toLowerCase();
     if (!value) return false;
-    return value.includes("tumblr_otwjgn7mfu1wwqdobo1_1280")
-      || value.includes("66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10")
-      || value.includes("i.imgur.com/bpo3pzn.png")
-      || value.endsWith("/w5rerk3.png");
+    return value.includes("i.imgur.com/bpo3pzn.png");
   }
 
   function renderOption(value, label, current) {

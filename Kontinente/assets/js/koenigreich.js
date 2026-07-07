@@ -17,11 +17,14 @@
   const countyObservers = new WeakMap();
   const familyCardViews = new WeakMap();
   const familyObservers = new WeakMap();
+  let geographySourceIndex = 0;
   let familySourceIndex = 0;
 
   enhanceCountyGeographyTables();
   enhanceCountyFamilyTables();
   window.addEventListener('aleria-inline-images-rendered', scheduleCountyViewsRefresh);
+  document.addEventListener('click', handleCountyGeographyAction);
+  document.addEventListener('focusout', handleCountyGeographyTextCommit);
   document.addEventListener('click', handleCountyFamilyAction);
 
   const sectionMap = [
@@ -118,6 +121,15 @@
     countyObservers.set(table, observer);
   }
 
+  function ensureGeographySourceId(table) {
+    if (!table) return '';
+    if (!table.dataset.kingdomGeographySourceId) {
+      geographySourceIndex += 1;
+      table.dataset.kingdomGeographySourceId = `geography-source-${geographySourceIndex}`;
+    }
+    return table.dataset.kingdomGeographySourceId;
+  }
+
   function renderCountyGeographyView(table) {
     const existing = countyCardViews.get(table);
     if (existing) existing.remove();
@@ -131,6 +143,7 @@
     const anchor = wrapper || table;
 
     table.classList.add('is-county-card-source');
+    ensureGeographySourceId(table);
     if (wrapper) wrapper.classList.add('is-county-card-source-wrapper');
     anchor.insertAdjacentElement('beforebegin', view);
     countyCardViews.set(table, view);
@@ -140,10 +153,14 @@
   function syncCountyViewMode() {
     const editing = document.body.classList.contains('orte-inline-editing');
     page.querySelectorAll('.kingdom-county-geography-table.is-county-card-source').forEach((table) => {
-      table.setAttribute('aria-hidden', editing ? 'false' : 'true');
+      table.setAttribute('aria-hidden', 'true');
     });
     page.querySelectorAll('.kingdom-county-family-table.is-family-card-source').forEach((table) => {
       table.setAttribute('aria-hidden', editing ? 'false' : 'true');
+    });
+    page.querySelectorAll('[data-kingdom-geography-edit]').forEach((node) => {
+      node.contentEditable = String(editing);
+      node.spellcheck = true;
     });
   }
 
@@ -157,9 +174,12 @@
     if (!rows.length) return null;
 
     const columnCount = getTableColumnCount(table);
-    const data = { title: '', mapCell: null, domains: [] };
+    ensureGeographySourceId(table);
+
+    const data = { title: '', titleSource: null, mapCell: null, mapSource: null, domains: [] };
     let currentDomain = null;
     let currentGroupLabel = '';
+    let repairedImageCells = false;
 
     for (let index = 0; index < rows.length; index += 1) {
       const row = rows[index];
@@ -174,11 +194,14 @@
 
         if (isCountyMap) {
           data.mapCell = imageCell;
+          data.mapSource = createGeographySource(table, 'map-image', index, 0);
         } else if (currentDomain) {
           if (currentDomain.center && !currentDomain.centerCell && !currentDomain.expectsCenter) {
             currentDomain.centerCell = imageCell;
+            currentDomain.centerImageSource = createGeographySource(table, 'center-image', index, 0);
           } else {
             currentDomain.crestCell = imageCell;
+            currentDomain.crestSource = createGeographySource(table, 'domain-crest', index, 0);
             currentDomain.expectsCenter = true;
           }
         }
@@ -188,11 +211,13 @@
       if (isFullTextRow(row, columnCount)) {
         if (!data.title) {
           data.title = text;
+          data.titleSource = createGeographySource(table, 'map-title', index, 0);
           continue;
         }
 
         if (currentDomain?.expectsCenter && isCenterLabelRow(row)) {
           currentDomain.center = text;
+          currentDomain.centerSource = createGeographySource(table, 'domain-center', index, 0);
           currentDomain.expectsCenter = false;
           continue;
         }
@@ -214,6 +239,10 @@
           center: '',
           crestCell: null,
           centerCell: null,
+          titleSource: createGeographySource(table, 'domain-title', index, 0),
+          crestSource: null,
+          centerSource: null,
+          centerImageSource: null,
           places: [],
           expectsCenter: false,
         };
@@ -222,7 +251,8 @@
         continue;
       }
 
-      if (!currentDomain || !rowHasImages(row)) continue;
+      const hasImageContent = rowHasImages(row) || rowHasImageFallbacks(table, row, index);
+      if (!currentDomain || !hasImageContent) continue;
 
       const previousRow = rows[index - 1];
       const nextRow = rows[index + 1];
@@ -230,7 +260,12 @@
       const nameRow = nextRow && isPlaceNameRow(nextRow, columnCount) ? nextRow : null;
       if (!nameRow) continue;
 
-      currentDomain.places.push(...extractPlaceCards(typeRow, row, nameRow, currentGroupLabel));
+      repairedImageCells = repairGeographyImageRow(table, row, index) || repairedImageCells;
+      currentDomain.places.push(...extractPlaceCards(table, typeRow, row, nameRow, currentGroupLabel, {
+        typeRowIndex: typeRow ? rows.indexOf(typeRow) : -1,
+        imageRowIndex: index,
+        nameRowIndex: index + 1
+      }));
       index += 1;
     }
 
@@ -240,7 +275,13 @@
     if (data.mapCell) {
       const mapPanel = document.createElement('section');
       mapPanel.className = 'kingdom-county-map-panel';
-      mapPanel.innerHTML = `<h3>${escapeHtml(data.title || 'Karte der Grafschaft')}</h3>`;
+      applyGeographySourceDataset(mapPanel, data.mapSource);
+      mapPanel.append(renderGeographyControls(data.mapSource, [{ action: 'edit-image', label: 'Bild' }]));
+      const title = document.createElement('h3');
+      title.textContent = data.title || 'Karte der Grafschaft';
+      applyGeographySourceDataset(title, data.titleSource);
+      title.dataset.kingdomGeographyEdit = 'text';
+      mapPanel.append(title);
       const mapImage = cloneLinkedImage(data.mapCell);
       if (mapImage) mapPanel.append(mapImage);
       view.append(mapPanel);
@@ -249,6 +290,10 @@
     data.domains
       .filter((domain) => domain.title || domain.crestCell || domain.center || domain.places.length)
       .forEach((domain) => view.append(renderDomainCard(domain)));
+
+    if (repairedImageCells) {
+      window.AleriaInlineEditor?.syncTableState?.(table);
+    }
 
     return view.children.length ? view : null;
   }
@@ -784,24 +829,36 @@
     const placeCount = domain.places.filter((place) => place.kind !== 'separator').length;
     const section = document.createElement('section');
     section.className = `kingdom-domain-card${placeCount === 1 ? ' kingdom-domain-card-compact' : ''}`;
+    applyGeographySourceDataset(section, domain.titleSource);
 
     const header = document.createElement('header');
     header.className = 'kingdom-domain-header';
 
-    const crest = cloneLinkedImage(domain.crestCell);
+    const crest = cloneLinkedImage(domain.crestCell, getGeographyTableImage(domain.crestSource));
     if (crest) {
       const crestWrap = document.createElement('div');
       crestWrap.className = 'kingdom-domain-crest';
+      applyGeographySourceDataset(crestWrap, domain.crestSource);
+      crestWrap.append(renderGeographyControls(domain.crestSource, [{ action: 'edit-image', label: 'Bild' }]));
       crestWrap.append(crest);
       header.append(crestWrap);
     }
 
     const titleWrap = document.createElement('div');
     titleWrap.className = 'kingdom-domain-title';
-    titleWrap.innerHTML = `<h3>${escapeHtml(domain.title || 'Herrschaft')}</h3>`;
+    const title = document.createElement('h3');
+    title.textContent = domain.title || 'Herrschaft';
+    applyGeographySourceDataset(title, domain.titleSource);
+    title.dataset.kingdomGeographyEdit = 'text';
+    titleWrap.append(title);
     if (domain.center && domain.places.length) {
       const center = document.createElement('p');
-      center.textContent = `Zentrum: ${domain.center}`;
+      center.append(document.createTextNode('Zentrum: '));
+      const centerValue = document.createElement('strong');
+      centerValue.textContent = domain.center;
+      applyGeographySourceDataset(centerValue, domain.centerSource);
+      centerValue.dataset.kingdomGeographyEdit = 'text';
+      center.append(centerValue);
       titleWrap.append(center);
     }
     header.append(titleWrap);
@@ -815,11 +872,13 @@
     } else if (domain.center) {
       const centerPanel = document.createElement('div');
       centerPanel.className = 'kingdom-domain-center-panel';
-      const centerImage = cloneImage(domain.centerCell);
+      const centerImage = cloneImage(domain.centerCell, getGeographyTableImage(domain.centerImageSource));
       centerPanel.classList.toggle('has-center-icon', !!centerImage);
       if (centerImage) {
         const imageFrame = document.createElement('span');
         imageFrame.className = 'kingdom-domain-center-icon';
+        applyGeographySourceDataset(imageFrame, domain.centerImageSource);
+        imageFrame.append(renderGeographyControls(domain.centerImageSource, [{ action: 'edit-image', label: 'Bild' }]));
         imageFrame.append(centerImage);
         centerPanel.append(imageFrame);
       }
@@ -829,6 +888,8 @@
       const value = document.createElement('strong');
       value.className = 'kingdom-domain-center-name';
       value.textContent = domain.center;
+      applyGeographySourceDataset(value, domain.centerSource);
+      value.dataset.kingdomGeographyEdit = 'text';
       centerPanel.append(label, value);
       section.append(centerPanel);
     }
@@ -844,45 +905,206 @@
       return separator;
     }
 
-    const card = document.createElement(place.href ? 'a' : 'div');
+    const card = document.createElement('article');
     card.className = 'kingdom-place-card';
-    if (place.href) {
-      card.href = place.href;
-      card.rel = 'noopener noreferrer';
-      card.target = '_blank';
-    }
+    applyGeographySourceDataset(card, place.source);
+    card.append(renderGeographyControls(place.source, [{ action: 'edit-image', label: 'Bild' }]));
 
     const iconFrame = document.createElement('span');
     iconFrame.className = 'kingdom-place-icon-frame';
-    if (place.image) iconFrame.append(place.image);
+    if (place.image && place.href) {
+      const link = document.createElement('a');
+      link.href = place.href;
+      link.rel = 'noopener noreferrer';
+      link.target = '_blank';
+      link.append(place.image);
+      iconFrame.append(link);
+    } else if (place.image) {
+      iconFrame.append(place.image);
+    }
     card.append(iconFrame);
 
-    const type = document.createElement('span');
-    type.className = 'kingdom-place-type';
-    type.textContent = place.type || 'Ort';
-    card.append(type);
+      const type = document.createElement('span');
+      type.className = 'kingdom-place-type';
+      type.textContent = place.type || 'Ort';
+      applyGeographySourceDataset(type, place.typeSource);
+      if (place.typeSource) type.dataset.kingdomGeographyEdit = 'text';
+      card.append(type);
 
     const name = document.createElement('strong');
-    name.className = 'kingdom-place-name';
-    name.textContent = place.name || 'Unbenannter Ort';
-    card.append(name);
+      name.className = 'kingdom-place-name';
+      name.textContent = place.name || 'Unbenannter Ort';
+      applyGeographySourceDataset(name, place.nameSource);
+      if (place.nameSource) name.dataset.kingdomGeographyEdit = 'text';
+      card.append(name);
 
     return card;
   }
 
-  function extractPlaceCards(typeRow, imageRow, nameRow, groupLabel) {
+  function extractPlaceCards(table, typeRow, imageRow, nameRow, groupLabel, rowSource) {
     const typeCells = typeRow ? Array.from(typeRow.cells || []) : [];
     const imageCells = Array.from(imageRow.cells || []);
     const nameCells = Array.from(nameRow.cells || []);
     const fallbackType = normalizePlaceGroupLabel(groupLabel);
 
     return imageCells.map((cell, index) => {
-      const image = cloneImage(cell);
+      const source = createGeographySource(table, 'place-image', rowSource.imageRowIndex, index);
+      const fallbackImage = getGeographyTableImage(source);
+      const image = cloneImage(cell, fallbackImage);
       const name = getCleanText(nameCells[index]);
       const type = getCleanText(typeCells[index]) || fallbackType;
-      const href = getImageHref(cell);
-      return { image, name, type, href };
+      const href = getImageHref(cell) || fallbackImage?.href || '';
+      return {
+        image,
+        name,
+        type,
+        href,
+        source,
+        typeSource: typeCells[index]
+          ? createGeographySource(table, 'place-type', rowSource.typeRowIndex, index)
+          : null,
+        nameSource: nameCells[index]
+          ? createGeographySource(table, 'place-name', rowSource.nameRowIndex, index)
+          : null
+      };
     }).filter((place) => place.image || place.name);
+  }
+
+  function rowHasImageFallbacks(table, row, rowIndex) {
+    return Array.from(row?.cells || []).some((cell, cellIndex) => (
+      !!getGeographyTableImage(createGeographySource(table, 'place-image', rowIndex, cellIndex))?.src
+    ));
+  }
+
+  function repairGeographyImageRow(table, row, rowIndex) {
+    let repaired = false;
+    Array.from(row?.cells || []).forEach((cell, cellIndex) => {
+      if (cell.querySelector('img[src], .orte-image-slot')) return;
+
+      const image = getGeographyTableImage(createGeographySource(table, 'place-image', rowIndex, cellIndex));
+      if (!image?.src) return;
+
+      const slot = document.createElement('span');
+      slot.className = 'orte-image-slot has-image';
+      slot.dataset.orteImageLabel = image.alt || 'Bildplatzhalter';
+      slot.dataset.orteTemplateImageSrc = image.src;
+      slot.dataset.orteTemplateImageHref = image.href || '';
+      slot.dataset.orteTemplateImageAlt = image.alt || '';
+      slot.setAttribute('aria-label', image.alt || 'Bildplatzhalter');
+      cell.append(slot);
+      repaired = true;
+    });
+    return repaired;
+  }
+
+  function getGeographyTableImage(source) {
+    if (!source?.table) return null;
+    const tableId = source.table.dataset.orteTableId || '';
+    return window.AleriaInlineImages?.getTableImage?.(tableId, source.rowIndex, source.cellIndex, 0) || null;
+  }
+
+  function createGeographySource(table, kind, rowIndex, cellIndex) {
+    if (!table || rowIndex < 0 || cellIndex < 0) return null;
+    return {
+      table,
+      kind,
+      rowIndex,
+      cellIndex
+    };
+  }
+
+  function applyGeographySourceDataset(element, source) {
+    if (!element || !source?.table) return;
+    element.dataset.kingdomGeographySourceId = source.table.dataset.kingdomGeographySourceId || '';
+    element.dataset.kingdomGeographyKind = source.kind || '';
+    element.dataset.kingdomGeographyRow = String(source.rowIndex ?? -1);
+    element.dataset.kingdomGeographyCell = String(source.cellIndex ?? -1);
+  }
+
+  function renderGeographyControls(source, actions) {
+    const controls = document.createElement('div');
+    controls.className = 'kingdom-geography-controls';
+    applyGeographySourceDataset(controls, source);
+    controls.innerHTML = (actions || [])
+      .map((item) => `<button type="button" data-kingdom-geography-action="${escapeHtml(item.action)}">${escapeHtml(item.label)}</button>`)
+      .join('');
+    return controls;
+  }
+
+  function handleCountyGeographyAction(event) {
+    const button = event.target.closest('[data-kingdom-geography-action]');
+    if (!button || !page.contains(button) || !document.body.classList.contains('orte-inline-editing')) return;
+
+    const sourceElement = button.closest('[data-kingdom-geography-source-id]') || button;
+    const source = getGeographyActionSource(sourceElement);
+    if (!source.table) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (button.dataset.kingdomGeographyAction === 'edit-image') {
+      editGeographyImage(source);
+    }
+  }
+
+  function handleCountyGeographyTextCommit(event) {
+    const editable = event.target.closest('[data-kingdom-geography-edit]');
+    if (!editable || !page.contains(editable) || !document.body.classList.contains('orte-inline-editing')) return;
+
+    const source = getGeographyActionSource(editable);
+    const cell = getGeographySourceCell(source);
+    if (!cell) return;
+
+    const value = getCleanText(editable) || '...';
+    cell.innerHTML = `<b>${escapeHtml(value)}</b>`;
+    notifyGeographyTableChanged(source.table);
+  }
+
+  function getGeographyActionSource(element) {
+    const sourceId = element?.dataset?.kingdomGeographySourceId || '';
+    const table = sourceId ? page.querySelector(`table[data-kingdom-geography-source-id="${cssEscape(sourceId)}"]`) : null;
+    return {
+      table,
+      kind: element?.dataset?.kingdomGeographyKind || '',
+      rowIndex: Number(element?.dataset?.kingdomGeographyRow),
+      cellIndex: Number(element?.dataset?.kingdomGeographyCell)
+    };
+  }
+
+  function getGeographySourceCell(source) {
+    const rows = Array.from(source?.table?.tBodies?.[0]?.rows || []);
+    return source?.rowIndex >= 0 ? rows[source.rowIndex]?.cells?.[source.cellIndex] || null : null;
+  }
+
+  function editGeographyImage(source) {
+    const cell = getGeographySourceCell(source);
+    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key], .orte-image-slot');
+    if (slot?.dataset?.orteImageKey) {
+      window.AleriaInlineEditor?.editImageSlot?.(slot);
+      return;
+    }
+
+    if (slot) {
+      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
+      window.setTimeout(() => {
+        const normalizedSlot = cell.querySelector('.orte-image-slot[data-orte-image-key]');
+        window.AleriaInlineEditor?.editImageSlot?.(normalizedSlot || slot);
+      }, 60);
+      return;
+    }
+
+    if (cell) {
+      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
+      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
+      const nextSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
+      window.setTimeout(() => window.AleriaInlineEditor?.editImageSlot?.(nextSlot), 60);
+    }
+  }
+
+  function notifyGeographyTableChanged(table) {
+    window.AleriaInlineEditor?.notifyTableChanged?.(table, { rebuild: false });
+    renderCountyGeographyView(table);
+    syncCountyViewMode();
   }
 
   function getImageHref(cell) {
@@ -901,26 +1123,26 @@
     domain.places.push({ kind: 'separator', title: normalizedTitle });
   }
 
-  function cloneLinkedImage(cell) {
+  function cloneLinkedImage(cell, fallbackImage = null) {
     if (!cell) return null;
-    const image = cloneImage(cell);
+    const image = cloneImage(cell, fallbackImage);
     if (!image) return null;
 
     const link = cell.querySelector('img')?.closest('a[href]');
-    if (!link) return image;
+    if (!link && !fallbackImage?.href) return image;
 
     const anchor = document.createElement('a');
-    anchor.href = link.getAttribute('href');
-    anchor.rel = link.getAttribute('rel') || 'noopener noreferrer';
-    anchor.target = link.getAttribute('target') || '_blank';
+    anchor.href = link?.getAttribute('href') || fallbackImage.href;
+    anchor.rel = link?.getAttribute('rel') || 'noopener noreferrer';
+    anchor.target = link?.getAttribute('target') || '_blank';
     anchor.append(image);
     return anchor;
   }
 
-  function cloneImage(cell) {
+  function cloneImage(cell, fallbackImage = null) {
     const source = cell?.querySelector?.('img[src]');
     const slotImage = !source ? getInlineSlotImage(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]')) : null;
-    const src = source?.getAttribute('src') || slotImage?.src || '';
+    const src = source?.getAttribute('src') || slotImage?.src || fallbackImage?.src || '';
     if (!src) {
       const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
       const label = slot?.getAttribute?.('aria-label') || getCleanText(slot);
@@ -934,7 +1156,7 @@
 
     const image = document.createElement('img');
     image.src = src;
-    image.alt = source?.getAttribute('alt') || slotImage?.alt || '';
+    image.alt = source?.getAttribute('alt') || slotImage?.alt || fallbackImage?.alt || '';
     image.loading = 'lazy';
     image.decoding = 'async';
     return image;
@@ -954,7 +1176,15 @@
 
     const key = slot.dataset?.orteImageKey || '';
     const image = window.AleriaInlineImages?.getImage?.(key);
-    return image?.src ? image : null;
+    if (image?.src) return image;
+
+    const fallbackSrc = slot.dataset?.orteTemplateImageSrc || '';
+    if (!fallbackSrc) return null;
+    return {
+      src: fallbackSrc,
+      href: slot.dataset.orteTemplateImageHref || '',
+      alt: slot.dataset.orteTemplateImageAlt || slot.getAttribute('aria-label') || ''
+    };
   }
 
   function getTableColumnCount(table) {

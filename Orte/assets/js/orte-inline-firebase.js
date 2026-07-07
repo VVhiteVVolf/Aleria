@@ -147,8 +147,6 @@ function clampNumber(value, min, max, fallback) {
 function normalizePlaceholderSrc(src) {
   const value = String(src || "");
   const lower = value.toLowerCase();
-  if (lower.includes("tumblr_otwjgn7mfu1wwqdobo1_1280")) return "";
-  if (lower.includes("66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10")) return "";
-  if (lower.endsWith("/w5rerk3.png")) return "";
+  if (lower.includes("i.imgur.com/bpo3pzn.png")) return "";
   return value;
 }

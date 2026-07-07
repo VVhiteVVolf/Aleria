@@ -320,6 +320,7 @@ body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
   box-shadow: inset 0 0 0 1px rgba(255, 252, 234, 0.5);
 }
 
+body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper,
 body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
   display: none;
 }
@@ -338,13 +339,11 @@ body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper::be
   text-transform: uppercase;
 }
 
-body.orte-inline-editing .kingdom-county-card-view,
 body.orte-inline-editing .kingdom-family-card-view {
   position: relative;
   padding-top: 1.75rem;
 }
 
-body.orte-inline-editing .kingdom-county-card-view::before,
 body.orte-inline-editing .kingdom-family-card-view::before {
   content: "Live-Vorschau";
   position: absolute;
@@ -406,9 +405,67 @@ body.orte-inline-editing .kingdom-family-card-view::before {
 
 .kingdom-county-map-panel a,
 .kingdom-domain-crest a,
-.kingdom-place-card {
+.kingdom-place-card,
+.kingdom-place-card a {
   color: inherit;
   text-decoration: none;
+}
+
+.kingdom-geography-controls {
+  display: none;
+}
+
+body.orte-inline-editing .kingdom-geography-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+  margin: 0 0 0.55rem;
+}
+
+.kingdom-domain-crest .kingdom-geography-controls,
+.kingdom-domain-center-icon .kingdom-geography-controls {
+  position: absolute;
+  z-index: 3;
+  top: -0.55rem;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.kingdom-place-card > .kingdom-geography-controls {
+  align-self: start;
+  order: -1;
+  margin: -0.18rem 0 0.3rem;
+}
+
+.kingdom-geography-controls button {
+  min-height: 25px;
+  padding: 0.18rem 0.52rem;
+  cursor: pointer;
+  border: 1px solid rgba(109, 76, 34, 0.58);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7e6ba, #d4b067);
+  color: #2d1b09;
+  font: 700 0.76rem Georgia, 'Times New Roman', serif;
+}
+
+.kingdom-geography-controls button:hover,
+.kingdom-geography-controls button:focus-visible {
+  border-color: #5f370c;
+  background: #fff4cf;
+}
+
+body.orte-inline-editing [data-kingdom-geography-edit] {
+  cursor: text;
+  border-radius: 5px;
+  outline: 1px dashed rgba(126, 82, 25, 0.38);
+  outline-offset: 3px;
+}
+
+body.orte-inline-editing [data-kingdom-geography-edit]:focus {
+  background: rgba(255, 247, 220, 0.75);
+  outline-color: rgba(94, 52, 12, 0.85);
 }
 
 .kingdom-county-map-panel img {
@@ -436,6 +493,7 @@ body.orte-inline-editing .kingdom-family-card-view::before {
 .kingdom-domain-crest {
   display: grid;
   place-items: center;
+  position: relative;
   width: clamp(118px, 18vw, 160px);
   min-height: 118px;
   border-radius: 999px;
@@ -494,6 +552,7 @@ body.orte-inline-editing .kingdom-family-card-view::before {
   display: grid;
   grid-row: 1 / span 2;
   place-items: center;
+  position: relative;
   width: 58px;
   height: 58px;
   border-radius: 999px;
@@ -580,8 +639,8 @@ body.orte-inline-editing .kingdom-family-card-view::before {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-a.kingdom-place-card:hover,
-a.kingdom-place-card:focus-visible {
+.kingdom-place-card:hover,
+.kingdom-place-card:focus-within {
   transform: translateY(-2px);
   border-color: rgba(106, 61, 18, 0.62);
   box-shadow:
@@ -589,8 +648,8 @@ a.kingdom-place-card:focus-visible {
     inset 0 0 0 1px rgba(255, 254, 242, 0.55);
 }
 
-a.kingdom-place-card:hover::before,
-a.kingdom-place-card:focus-visible::before {
+.kingdom-place-card:hover::before,
+.kingdom-place-card:focus-within::before {
   opacity: 1;
   transform: translateX(-50%) scale(1.1);
 }
@@ -620,8 +679,8 @@ a.kingdom-place-card:focus-visible::before {
   transition: filter 180ms ease, transform 180ms ease;
 }
 
-a.kingdom-place-card:hover .kingdom-place-icon-frame img,
-a.kingdom-place-card:focus-visible .kingdom-place-icon-frame img {
+.kingdom-place-card:hover .kingdom-place-icon-frame img,
+.kingdom-place-card:focus-within .kingdom-place-icon-frame img {
   filter:
     drop-shadow(0 6px 8px rgba(46, 29, 10, 0.3))
     drop-shadow(0 0 13px rgba(255, 224, 120, 0.72));
