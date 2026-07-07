@@ -97,7 +97,8 @@
     ".orte-table-add-control",
     ".orte-table-row-controls",
     ".table-editor-toolbar",
-    ".orte-section-controls"
+    ".orte-section-controls",
+    ".kingdom-county-card-view"
   ].join(", ");
 
   loadTableEditorAssets().finally(init);

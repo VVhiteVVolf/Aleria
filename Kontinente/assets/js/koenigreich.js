@@ -1,5 +1,5 @@
 ﻿(function () {
-  const page = document.querySelector('[data-page-type="kingdom"]');
+  const page = document.querySelector('[data-page-type="kingdom"], [data-page-type="county"]');
   if (!page) return;
 
   page.querySelectorAll('table').forEach((table) => {
@@ -12,6 +12,11 @@
     table.parentNode.insertBefore(wrapper, table);
     wrapper.appendChild(table);
   });
+
+  const countyCardViews = new WeakMap();
+  const countyObservers = new WeakMap();
+
+  enhanceCountyGeographyTables();
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
@@ -43,13 +48,10 @@
   });
 
   if (window.location.hash) {
-    const target = document.getElementById(window.location.hash.slice(1));
-    if (target) {
-      window.setTimeout(() => {
-        target.scrollIntoView({ block: 'start' });
-      }, 50);
-    }
+    [50, 350, 900, 1500, 2500, 4000].forEach((delay) => window.setTimeout(scrollToCurrentHash, delay));
+    window.addEventListener('load', () => window.setTimeout(scrollToCurrentHash, 120), { once: true });
   }
+  window.addEventListener('hashchange', () => window.setTimeout(scrollToCurrentHash, 40));
 
   const button = document.createElement('button');
   button.type = 'button';
@@ -68,4 +70,390 @@
 
   window.addEventListener('scroll', toggleButton, { passive: true });
   toggleButton();
+
+  function scrollToCurrentHash() {
+    const id = decodeURIComponent(window.location.hash.slice(1) || '');
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    const offset = document.querySelector('.orte-inline-toolbar')?.offsetHeight || 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+  }
+
+  function enhanceCountyGeographyTables() {
+    page.querySelectorAll('.kingdom-county-geography-table').forEach((table) => {
+      renderCountyGeographyView(table);
+      observeCountyGeographyTable(table);
+    });
+    syncCountyViewMode();
+  }
+
+  function observeCountyGeographyTable(table) {
+    if (countyObservers.has(table) || !table.tBodies[0]) return;
+
+    let timer = 0;
+    const observer = new MutationObserver(() => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        renderCountyGeographyView(table);
+        syncCountyViewMode();
+      }, 80);
+    });
+    observer.observe(table.tBodies[0], { childList: true, subtree: true, characterData: true });
+    countyObservers.set(table, observer);
+  }
+
+  function renderCountyGeographyView(table) {
+    const existing = countyCardViews.get(table);
+    if (existing) existing.remove();
+
+    const view = buildCountyGeographyView(table);
+    if (!view) return;
+
+    const wrapper = table.parentElement && table.parentElement.classList.contains('kingdom-table-scroll')
+      ? table.parentElement
+      : null;
+    const anchor = wrapper || table;
+
+    table.classList.add('is-county-card-source');
+    if (wrapper) wrapper.classList.add('is-county-card-source-wrapper');
+    anchor.insertAdjacentElement('afterend', view);
+    countyCardViews.set(table, view);
+    if (window.location.hash) window.setTimeout(scrollToCurrentHash, 40);
+  }
+
+  function syncCountyViewMode() {
+    const editing = document.body.classList.contains('orte-inline-editing');
+    page.querySelectorAll('.kingdom-county-geography-table.is-county-card-source').forEach((table) => {
+      table.setAttribute('aria-hidden', editing ? 'false' : 'true');
+    });
+  }
+
+  new MutationObserver(syncCountyViewMode).observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class'],
+  });
+
+  function buildCountyGeographyView(table) {
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    if (!rows.length) return null;
+
+    const columnCount = getTableColumnCount(table);
+    const data = { title: '', mapCell: null, domains: [] };
+    let currentDomain = null;
+    let currentGroupLabel = '';
+
+    for (let index = 0; index < rows.length; index += 1) {
+      const row = rows[index];
+      const text = getCleanText(row);
+
+      if (isEmptyRow(row)) continue;
+
+      if (isFullImageRow(row, columnCount)) {
+        const imageCell = row.cells[0];
+        const isCountyMap = isMapCell(imageCell) || (!data.mapCell && !currentDomain);
+        imageCell.classList.toggle('kingdom-county-map-cell', isCountyMap);
+
+        if (isCountyMap) {
+          data.mapCell = imageCell;
+        } else if (currentDomain) {
+          currentDomain.crestCell = imageCell;
+          currentDomain.expectsCenter = true;
+        }
+        continue;
+      }
+
+      if (isFullTextRow(row, columnCount)) {
+        if (!data.title) {
+          data.title = text;
+          continue;
+        }
+
+        if (currentDomain?.expectsCenter && isCenterLabelRow(row)) {
+          currentDomain.center = text;
+          currentDomain.expectsCenter = false;
+          continue;
+        }
+
+        if (isPlaceGroupLabel(text)) {
+          currentGroupLabel = text;
+          continue;
+        }
+
+        currentDomain = {
+          title: text,
+          center: '',
+          crestCell: null,
+          places: [],
+          expectsCenter: false,
+        };
+        data.domains.push(currentDomain);
+        currentGroupLabel = '';
+        continue;
+      }
+
+      if (!currentDomain || !rowHasImages(row)) continue;
+
+      const previousRow = rows[index - 1];
+      const nextRow = rows[index + 1];
+      const typeRow = previousRow && isPlaceTypeRow(previousRow, columnCount) ? previousRow : null;
+      const nameRow = nextRow && isPlaceNameRow(nextRow, columnCount) ? nextRow : null;
+      if (!nameRow) continue;
+
+      currentDomain.places.push(...extractPlaceCards(typeRow, row, nameRow, currentGroupLabel));
+      index += 1;
+    }
+
+    const view = document.createElement('div');
+    view.className = 'kingdom-county-card-view';
+
+    if (data.mapCell) {
+      const mapPanel = document.createElement('section');
+      mapPanel.className = 'kingdom-county-map-panel';
+      mapPanel.innerHTML = `<h3>${escapeHtml(data.title || 'Karte der Grafschaft')}</h3>`;
+      const mapImage = cloneLinkedImage(data.mapCell);
+      if (mapImage) mapPanel.append(mapImage);
+      view.append(mapPanel);
+    }
+
+    data.domains
+      .filter((domain) => domain.title || domain.crestCell || domain.center || domain.places.length)
+      .forEach((domain) => view.append(renderDomainCard(domain)));
+
+    return view.children.length ? view : null;
+  }
+
+  function renderDomainCard(domain) {
+    const section = document.createElement('section');
+    section.className = `kingdom-domain-card${domain.places.length === 1 ? ' kingdom-domain-card-compact' : ''}`;
+
+    const header = document.createElement('header');
+    header.className = 'kingdom-domain-header';
+
+    const crest = cloneLinkedImage(domain.crestCell);
+    if (crest) {
+      const crestWrap = document.createElement('div');
+      crestWrap.className = 'kingdom-domain-crest';
+      crestWrap.append(crest);
+      header.append(crestWrap);
+    }
+
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'kingdom-domain-title';
+    titleWrap.innerHTML = `<h3>${escapeHtml(domain.title || 'Herrschaft')}</h3>`;
+    if (domain.center) {
+      const center = document.createElement('p');
+      center.textContent = `Zentrum: ${domain.center}`;
+      titleWrap.append(center);
+    }
+    header.append(titleWrap);
+    section.append(header);
+
+    if (domain.places.length) {
+      const grid = document.createElement('div');
+      grid.className = 'kingdom-place-grid';
+      domain.places.forEach((place) => grid.append(renderPlaceCard(place)));
+      section.append(grid);
+    } else if (domain.center) {
+      const centerPanel = document.createElement('div');
+      centerPanel.className = 'kingdom-domain-center-panel';
+      centerPanel.innerHTML = `<span>Zentrum</span><strong>${escapeHtml(domain.center)}</strong>`;
+      section.append(centerPanel);
+    }
+
+    return section;
+  }
+
+  function renderPlaceCard(place) {
+    const card = document.createElement(place.href ? 'a' : 'div');
+    card.className = 'kingdom-place-card';
+    if (place.href) {
+      card.href = place.href;
+      card.rel = 'noopener noreferrer';
+      card.target = '_blank';
+    }
+
+    const iconFrame = document.createElement('span');
+    iconFrame.className = 'kingdom-place-icon-frame';
+    if (place.image) iconFrame.append(place.image);
+    card.append(iconFrame);
+
+    const type = document.createElement('span');
+    type.className = 'kingdom-place-type';
+    type.textContent = place.type || 'Ort';
+    card.append(type);
+
+    const name = document.createElement('strong');
+    name.className = 'kingdom-place-name';
+    name.textContent = place.name || 'Unbenannter Ort';
+    card.append(name);
+
+    return card;
+  }
+
+  function extractPlaceCards(typeRow, imageRow, nameRow, groupLabel) {
+    const typeCells = typeRow ? Array.from(typeRow.cells || []) : [];
+    const imageCells = Array.from(imageRow.cells || []);
+    const nameCells = Array.from(nameRow.cells || []);
+    const fallbackType = normalizePlaceGroupLabel(groupLabel);
+
+    return imageCells.map((cell, index) => {
+      const image = cloneImage(cell);
+      const name = getCleanText(nameCells[index]);
+      const type = getCleanText(typeCells[index]) || fallbackType;
+      const href = cell.querySelector('img')?.closest('a[href]')?.getAttribute('href') || '';
+      return { image, name, type, href };
+    }).filter((place) => place.image || place.name);
+  }
+
+  function cloneLinkedImage(cell) {
+    if (!cell) return null;
+    const image = cloneImage(cell);
+    if (!image) return null;
+
+    const link = cell.querySelector('img')?.closest('a[href]');
+    if (!link) return image;
+
+    const anchor = document.createElement('a');
+    anchor.href = link.getAttribute('href');
+    anchor.rel = link.getAttribute('rel') || 'noopener noreferrer';
+    anchor.target = link.getAttribute('target') || '_blank';
+    anchor.append(image);
+    return anchor;
+  }
+
+  function cloneImage(cell) {
+    const source = cell?.querySelector?.('img[src]');
+    const src = source?.getAttribute('src') || '';
+    if (!src) {
+      const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
+      const label = slot?.getAttribute?.('aria-label') || getCleanText(slot);
+      if (!label) return null;
+
+      const placeholder = document.createElement('span');
+      placeholder.className = 'kingdom-card-image-placeholder';
+      placeholder.textContent = label;
+      return placeholder;
+    }
+
+    const image = document.createElement('img');
+    image.src = src;
+    image.alt = source.getAttribute('alt') || '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    return image;
+  }
+
+  function getTableColumnCount(table) {
+    return Math.max(1, ...Array.from(table.rows || []).map((row) => (
+      Array.from(row.cells || []).reduce((sum, cell) => sum + (Number(cell.colSpan) || 1), 0)
+    )));
+  }
+
+  function isFullTextRow(row, columnCount) {
+    return row.cells.length === 1
+      && Number(row.cells[0].colSpan || 1) >= columnCount
+      && !rowHasImages(row)
+      && !!getCleanText(row);
+  }
+
+  function isFullImageRow(row, columnCount) {
+    return row.cells.length === 1
+      && Number(row.cells[0].colSpan || 1) >= columnCount
+      && rowHasImages(row);
+  }
+
+  function isPlaceTypeRow(row, columnCount) {
+    return row
+      && !isFullTextRow(row, columnCount)
+      && !rowHasImages(row)
+      && Array.from(row.cells || []).some((cell) => getCleanText(cell));
+  }
+
+  function isPlaceNameRow(row, columnCount) {
+    return isPlaceTypeRow(row, columnCount);
+  }
+
+  function rowHasImages(row) {
+    return !!row?.querySelector?.('img[src], .orte-image-slot, .orte-image-placeholder');
+  }
+
+  function isEmptyRow(row) {
+    return !rowHasImages(row) && !getCleanText(row);
+  }
+
+  function isMapCell(cell) {
+    const image = cell?.querySelector?.('img');
+    if (!image && cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder')) {
+      const label = getImageSlotLabel(cell).toLowerCase();
+      return label.includes('karte') || label.includes('map');
+    }
+    if (!image) return false;
+    const width = parseCssPixels(image.style.width || image.getAttribute('width'));
+    const height = parseCssPixels(image.style.height || image.getAttribute('height'));
+    const alt = `${image.getAttribute('alt') || ''} ${image.src || ''}`.toLowerCase();
+    return width >= 500 || height >= 300 || alt.includes('karte') || alt.includes('map');
+  }
+
+  function isCenterLabelRow(row) {
+    const text = getCleanText(row);
+    if (!text || isPlaceGroupLabel(text)) return false;
+    const cell = row.cells[0];
+    const style = cell?.getAttribute('style') || '';
+    return style.includes('153,0,0') || style.includes('153, 0, 0');
+  }
+
+  function isPlaceGroupLabel(text) {
+    return /siedlungen?\s*\/\s*orte/i.test(text)
+      || /nicht\s+zugeteilte\s+orte/i.test(text)
+      || /zentraler\s+ort/i.test(text);
+  }
+
+  function normalizePlaceGroupLabel(text) {
+    if (/nicht\s+zugeteilte\s+orte/i.test(text)) return 'Nicht zugeteilt';
+    if (/zentraler\s+ort/i.test(text)) return 'Zentrum';
+    if (/siedlungen?\s*\/\s*orte/i.test(text)) return 'Siedlung/Ort';
+    return getCleanText({ textContent: text }) || 'Ort';
+  }
+
+  function parseCssPixels(value) {
+    const number = Number.parseFloat(String(value || '').replace(',', '.'));
+    return Number.isFinite(number) ? number : 0;
+  }
+
+  function getCleanText(node) {
+    const clone = node?.cloneNode?.(true);
+    const source = clone || node;
+    clone?.querySelectorAll?.([
+      '.orte-table-add-control',
+      '.orte-table-row-controls',
+      '.table-editor-toolbar',
+      '.orte-inline-image-hint',
+      '.orte-image-slot',
+      '.orte-image-placeholder',
+      '.orte-image-placeholder-media'
+    ].join(',')).forEach((item) => item.remove());
+
+    return String(source?.textContent || '')
+      .replace(/\u00a0/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function getImageSlotLabel(cell) {
+    const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
+    return slot?.dataset?.orteImageLabel
+      || slot?.getAttribute?.('aria-label')
+      || slot?.textContent
+      || '';
+  }
+
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
 })();

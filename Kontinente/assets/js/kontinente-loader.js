@@ -57,14 +57,18 @@
   function readRequestedId() {
     const params = new URLSearchParams(window.location.search);
     const fallbackId = getRoot()?.dataset.defaultId || loaderScript?.dataset.defaultId || "";
-    return normalizeId(
+    const explicitId = normalizeId(
       params.get("kontinent")
       || params.get("reich")
       || params.get("kingdom")
       || params.get("id")
-      || window.location.hash.slice(1)
-      || fallbackId
     );
+    if (explicitId) return explicitId;
+
+    const hashId = normalizeId(window.location.hash.slice(1));
+    if (findEntry(hashId)) return hashId;
+
+    return normalizeId(fallbackId);
   }
 
   function findEntry(id) {

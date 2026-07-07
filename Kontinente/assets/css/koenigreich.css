@@ -280,6 +280,249 @@ body {
   object-fit: contain;
 }
 
+.kingdom-county-family-table img {
+  width: 120px !important;
+  height: 120px !important;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.kingdom-county-family-table td[colspan='5'] img {
+  width: 144px !important;
+  height: 144px !important;
+  max-width: 144px;
+  max-height: 144px;
+}
+
+.kingdom-county-geography-table .kingdom-county-map-cell img {
+  width: min(100%, 820px) !important;
+  max-width: min(100%, 820px);
+  height: auto !important;
+  max-height: none;
+}
+
+body:not(.orte-inline-editing) .kingdom-table-scroll.is-county-card-source-wrapper {
+  display: none;
+}
+
+body.orte-inline-editing .kingdom-county-card-view {
+  display: none;
+}
+
+.kingdom-county-card-view {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 980px);
+  margin: 0.85rem auto 1.25rem;
+}
+
+.kingdom-county-map-panel,
+.kingdom-domain-card {
+  overflow: hidden;
+  color: #2a1708;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255, 247, 217, 0.74), transparent 15rem),
+    repeating-linear-gradient(45deg, rgba(96, 62, 24, 0.026), rgba(96, 62, 24, 0.026) 1px, transparent 1px, transparent 17px),
+    linear-gradient(180deg, rgba(255, 244, 206, 0.92), rgba(233, 205, 138, 0.82));
+  border: 1px solid rgba(109, 76, 34, 0.58);
+  border-radius: 7px;
+  box-shadow:
+    0 12px 28px rgba(46, 28, 8, 0.18),
+    inset 0 0 0 1px rgba(255, 250, 229, 0.5);
+}
+
+.kingdom-county-map-panel {
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+  text-align: center;
+}
+
+.kingdom-county-map-panel h3,
+.kingdom-domain-title h3 {
+  margin: 0;
+  color: #321b06;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 246, 213, 0.88);
+}
+
+.kingdom-county-map-panel h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+}
+
+.kingdom-county-map-panel a,
+.kingdom-domain-crest a,
+.kingdom-place-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.kingdom-county-map-panel img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid rgba(77, 47, 16, 0.46);
+  border-radius: 5px;
+  box-shadow: 0 12px 28px rgba(44, 27, 9, 0.24);
+}
+
+.kingdom-domain-card {
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.kingdom-domain-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(0.85rem, 2.5vw, 1.6rem);
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.kingdom-domain-crest {
+  display: grid;
+  place-items: center;
+  width: clamp(118px, 18vw, 160px);
+  min-height: 118px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 248, 223, 0.52), rgba(177, 135, 61, 0.14) 64%, transparent 66%);
+}
+
+.kingdom-domain-crest img {
+  display: block;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 155px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 11px rgba(45, 29, 10, 0.28));
+}
+
+.kingdom-domain-title h3 {
+  font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+  line-height: 1.18;
+}
+
+.kingdom-domain-title p {
+  margin: 0.3rem 0 0 !important;
+  color: #5d3a14;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 700 !important;
+}
+
+.kingdom-domain-center-panel {
+  display: grid;
+  place-items: center;
+  gap: 0.2rem;
+  min-height: 88px;
+  margin-top: 0.45rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(126, 91, 41, 0.28);
+  border-radius: 5px;
+  background: rgba(255, 249, 228, 0.5);
+}
+
+.kingdom-domain-center-panel span,
+.kingdom-place-type {
+  color: #6a3d12;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.kingdom-domain-center-panel strong,
+.kingdom-place-name {
+  color: #1f1206;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.kingdom-place-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 0.8rem 0.9rem;
+}
+
+.kingdom-domain-card-compact .kingdom-place-grid {
+  grid-template-columns: minmax(210px, 1fr);
+}
+
+.kingdom-place-card {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-height: 148px;
+  padding: 0.58rem 0.5rem 0.68rem;
+  border: 1px solid rgba(119, 82, 33, 0.32);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 232, 0.78), rgba(240, 219, 166, 0.72)),
+    rgba(255, 247, 222, 0.64);
+  box-shadow: inset 0 0 0 1px rgba(255, 254, 242, 0.45);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+a.kingdom-place-card:hover,
+a.kingdom-place-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(106, 61, 18, 0.62);
+  box-shadow:
+    0 7px 18px rgba(54, 32, 10, 0.2),
+    inset 0 0 0 1px rgba(255, 254, 242, 0.55);
+}
+
+.kingdom-place-icon-frame {
+  display: grid;
+  place-items: center;
+  width: min(100%, 120px);
+  height: 58px;
+  margin-bottom: 0.42rem;
+  border: 1px solid rgba(111, 82, 38, 0.24);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 251, 232, 0.8), rgba(201, 174, 109, 0.24) 68%, rgba(129, 91, 36, 0.16));
+  box-shadow: inset 0 -10px 18px rgba(69, 44, 14, 0.14);
+}
+
+.kingdom-place-icon-frame img {
+  display: block;
+  width: auto;
+  max-width: 82px;
+  height: auto;
+  max-height: 92px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 6px rgba(46, 29, 10, 0.28));
+}
+
+.kingdom-card-image-placeholder {
+  display: grid;
+  place-items: center;
+  max-width: 92px;
+  min-height: 42px;
+  padding: 0.25rem 0.35rem;
+  color: #6a3d12;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.kingdom-place-type {
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+.kingdom-place-name {
+  display: block;
+  margin-top: 0.34rem;
+  text-align: center;
+}
+
 .kingdom-council-table tr > td:not([colspan]),
 .kingdom-council-table tr > td[colspan='1'],
 .kingdom-structure-table tr > td:not([colspan]),
@@ -717,6 +960,37 @@ body {
     max-width: calc(100vw - 18px) !important;
     margin: 0 auto !important;
     table-layout: fixed !important;
+  }
+
+  .kingdom-county-card-view {
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .kingdom-county-map-panel,
+  .kingdom-domain-card {
+    border-radius: 5px;
+  }
+
+  .kingdom-domain-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .kingdom-domain-crest {
+    width: 130px;
+    min-height: 110px;
+  }
+
+  .kingdom-domain-crest img {
+    max-width: 125px;
+    max-height: 135px;
+  }
+
+  .kingdom-place-grid {
+    grid-template-columns: repeat(auto-fit, minmax(124px, 1fr));
+    gap: 0.65rem;
   }
 
   .kingdom-infobox td {
