@@ -645,7 +645,9 @@
     prepareTables();
     normalizePortraitLayoutTables();
     ensureAristocracyBaroneGroup();
+    normalizeTableImageCells(root);
     normalizeRawImages();
+    normalizeImageSlotKeys(root);
     collectImageItems();
     collectRatingItems();
     collectTextItems();
@@ -942,6 +944,112 @@
         state.images[key] = normalizeImageState({ src: "", alt: label }, label);
       }
     });
+  }
+
+  function normalizeTableImageCells(scope) {
+    const rootNode = scope || root;
+    rootNode.querySelectorAll?.("td, th").forEach((cell) => {
+      const imagesBySource = new Map();
+      Array.from(cell.querySelectorAll("img")).forEach((image) => {
+        if (isInsideIgnoredSurface(image)) return;
+        const source = getImageDedupeSource(image);
+        if (!source) return;
+
+        const current = {
+          image,
+          hasEditorSlot: !!image.closest("[data-orte-image-key]")
+        };
+        const previous = imagesBySource.get(source);
+        if (!previous) {
+          imagesBySource.set(source, current);
+          return;
+        }
+
+        if (!previous.hasEditorSlot && current.hasEditorSlot) {
+          removeImageUnit(previous.image, cell);
+          imagesBySource.set(source, current);
+          return;
+        }
+
+        removeImageUnit(image, cell);
+      });
+    });
+  }
+
+  function getImageDedupeSource(image) {
+    if (!image || isPlaceholderImage(image)) return "";
+    return String(image.getAttribute("src") || "").trim();
+  }
+
+  function removeImageUnit(image, cell) {
+    const slot = image.closest(".orte-image-slot");
+    if (slot && cell.contains(slot)) {
+      slot.remove();
+      return;
+    }
+
+    const link = image.closest("a[href]");
+    if (link && cell.contains(link) && link.querySelectorAll("img").length === 1 && !normalizeWhitespace(link.textContent)) {
+      link.remove();
+      return;
+    }
+
+    image.remove();
+  }
+
+  function normalizeImageSlotKeys(scope) {
+    const rootNode = scope || root;
+    const seenKeys = new Set();
+    const reservedKeys = new Set(Object.keys(state.images));
+
+    rootNode.querySelectorAll?.("[data-orte-image-key]").forEach((slot) => {
+      const currentKey = normalizeWhitespace(slot.dataset.orteImageKey);
+      if (currentKey && !seenKeys.has(currentKey)) {
+        seenKeys.add(currentKey);
+        return;
+      }
+
+      const label = slot.dataset.orteImageLabel || getImageSlotContextLabel(slot);
+      const nextKey = createUniqueImageKey(getImageKeyPrefix(slot), new Set([...reservedKeys, ...seenKeys]));
+      slot.dataset.orteImageKey = nextKey;
+      slot.dataset.orteImageLabel = label;
+      slot.setAttribute("aria-label", label);
+      seenKeys.add(nextKey);
+      reservedKeys.add(nextKey);
+
+      if (currentKey && state.images[currentKey] && !state.images[nextKey]) {
+        const initialImage = getInitialImageStateFromSlot(slot, label);
+        state.images[nextKey] = normalizeImageState(initialImage.src ? initialImage : state.images[currentKey], label);
+      }
+    });
+  }
+
+  function createUniqueImageKey(prefix, usedKeys) {
+    const normalizedPrefix = normalizeStorageToken(prefix || "bild", "bild");
+    let index = 0;
+    let key = `${normalizedPrefix}-${String(index).padStart(4, "0")}`;
+    while (usedKeys.has(key)) {
+      index += 1;
+      key = `${normalizedPrefix}-${String(index).padStart(4, "0")}`;
+    }
+    return key;
+  }
+
+  function getInitialImageStateFromSlot(slot, label) {
+    const image = slot?.querySelector?.("img");
+    const source = image && !isPlaceholderImage(image)
+      ? image.getAttribute("src") || ""
+      : "";
+    const link = image?.closest?.("a[href]");
+    return normalizeImageState({
+      src: source,
+      href: link?.getAttribute("href") || "",
+      alt: image?.getAttribute("alt") || label,
+      width: slot?.dataset?.orteImageWidth || "",
+      maxHeight: slot?.dataset?.orteImageMaxHeight || "",
+      format: slot?.dataset?.orteImageFormat || "",
+      fit: slot?.dataset?.orteImageFit || ""
+    }, label);
   }
 
   function captureTemplateImageFallbacks() {
@@ -2818,6 +2926,8 @@
   function sanitizeLoadedTable(table) {
     table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control, .orte-cell-image-insert, .table-editor-toolbar").forEach((node) => node.remove());
     table.querySelectorAll(".orte-image-insert-cell").forEach((node) => node.classList.remove("orte-image-insert-cell"));
+    normalizeTableImageCells(table);
+    normalizeImageSlotKeys(table);
     table.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
       node.classList.remove("table-editor-active-cell", "table-editor-active-table");
     });
@@ -2842,6 +2952,8 @@
     clone.querySelectorAll("[data-orte-pending-image-open]").forEach((node) => {
       node.removeAttribute("data-orte-pending-image-open");
     });
+    normalizeTableImageCells(clone);
+    normalizeImageSlotKeys(clone);
     clone.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
       node.classList.remove("table-editor-active-cell", "table-editor-active-table");
     });
