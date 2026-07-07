@@ -1,5 +1,35 @@
 window.KONTINENTE_REGISTRY = [
   {
+    id: "kontinente-startseite",
+    slug: "kontinente",
+    aliases: ["kontinente-uebersicht", "kontinente-start"],
+    name: "Kontinente",
+    type: "Uebersicht",
+    page: "index.html",
+    data: "data/kontinente-startseite.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Uebersicht", name: "Kontinente", slug: "kontinente" },
+    ],
+  },
+  {
+    id: "kontinent-estryll",
+    slug: "estryll",
+    aliases: ["estryll", "kontinent-estryll"],
+    name: "Kontinent Estryll",
+    type: "Kontinent",
+    page: "Estryll/Estryll.html",
+    data: "Estryll/kontinent.data.js",
+    inlineCollection: "kontinente_inline_content",
+    sceneCollection: "kontinente_scenes",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Kontinent", name: "Estryll", slug: "estryll" },
+    ],
+  },
+  {
     id: "koenigreich-vorlage",
     name: "Königreich-Vorlage",
     type: "Königreich",

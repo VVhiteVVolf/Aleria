@@ -1,0 +1,575 @@
+.continent-page {
+  --continent-paper: #efe0c0;
+  --continent-paper-soft: #fff4d4;
+  --continent-paper-deep: #d6b46d;
+  --continent-ink: #211409;
+  --continent-muted: #5f4322;
+  --continent-line: rgba(83, 49, 15, 0.78);
+  --continent-line-soft: rgba(83, 49, 15, 0.28);
+  --continent-leather: #2b1a0b;
+  --continent-panel-dark: #4f3011;
+  --continent-panel-mid: #8b6426;
+  --continent-gold: #c79b32;
+  --continent-bright-gold: #ead080;
+  --continent-shadow: rgba(8, 5, 2, 0.46);
+  --continent-card-accent: #9a6a28;
+  --continent-max-width: 1420px;
+  width: min(100% - 24px, var(--continent-max-width));
+  margin: clamp(18px, 2.4vw, 34px) auto;
+  color: var(--continent-ink);
+  isolation: isolate;
+  position: relative;
+}
+
+.continent-page .continent-parchment {
+  position: relative;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding: clamp(18px, 3vw, 38px);
+  color: var(--continent-ink);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 248, 220, 0.64), transparent 21rem),
+    radial-gradient(circle at 83% 0%, rgba(183, 124, 41, 0.2), transparent 24rem),
+    linear-gradient(120deg, rgba(255, 247, 219, 0.86), rgba(219, 185, 112, 0.7)),
+    repeating-linear-gradient(-38deg, rgba(92, 55, 18, 0.04) 0 1px, transparent 1px 19px),
+    var(--continent-paper);
+  border: 2px solid var(--continent-line);
+  border-radius: 8px;
+  box-shadow:
+    0 28px 70px var(--continent-shadow),
+    inset 0 0 0 1px rgba(255, 248, 225, 0.55),
+    inset 0 0 48px rgba(91, 52, 12, 0.16);
+}
+
+.continent-page .continent-parchment::before,
+.continent-page .continent-parchment::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.continent-page .continent-parchment::before {
+  inset: 10px;
+  border: 1px solid rgba(78, 45, 13, 0.34);
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 248, 224, 0.28),
+    inset 0 0 32px rgba(62, 36, 10, 0.1);
+}
+
+.continent-page .continent-parchment::after {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(50, 29, 8, 0.16), transparent 7%, transparent 93%, rgba(50, 29, 8, 0.16)),
+    linear-gradient(180deg, rgba(50, 29, 8, 0.13), transparent 12%, transparent 88%, rgba(50, 29, 8, 0.12));
+  opacity: 0.62;
+}
+
+.continent-page .continent-parchment > * {
+  position: relative;
+  z-index: 1;
+}
+
+.continent-page .continent-parchment--centered {
+  max-width: 1260px;
+}
+
+.continent-page .continent-page-header {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  margin-bottom: clamp(20px, 3vw, 34px);
+  padding: clamp(16px, 2.8vw, 28px);
+  overflow: hidden;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(69, 41, 13, 0.95), rgba(38, 22, 7, 0.97)),
+    repeating-linear-gradient(90deg, rgba(255, 235, 177, 0.04) 0 1px, transparent 1px 24px);
+  border: 1px solid rgba(42, 24, 8, 0.86);
+  border-radius: 8px;
+  box-shadow:
+    0 14px 30px rgba(39, 23, 7, 0.25),
+    inset 0 0 0 1px rgba(255, 231, 165, 0.18);
+}
+
+.continent-page .continent-page-header::before,
+.continent-page .continent-page-header::after {
+  content: "";
+  position: absolute;
+  left: clamp(18px, 3vw, 42px);
+  right: clamp(18px, 3vw, 42px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(234, 208, 128, 0.72), transparent);
+  pointer-events: none;
+}
+
+.continent-page .continent-page-header::before {
+  top: 13px;
+}
+
+.continent-page .continent-page-header::after {
+  bottom: 13px;
+}
+
+.continent-page .continent-page-header h1 {
+  position: relative;
+  margin: 0;
+  padding: 0.18em 0.42em 0.28em;
+  color: #fff4d2;
+  border: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5.2vw, 4.35rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-shadow:
+    0 2px 0 rgba(26, 13, 3, 0.9),
+    0 0 18px rgba(234, 208, 128, 0.24);
+}
+
+.continent-page .continent-page-header h1::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--continent-bright-gold), transparent);
+  border-radius: 999px;
+}
+
+.continent-page .continent-page-header--detail {
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 330px);
+  align-items: center;
+  justify-items: stretch;
+  min-height: 320px;
+  padding: clamp(22px, 4vw, 46px);
+  text-align: left;
+}
+
+.continent-page .continent-page-header--detail h1 {
+  justify-self: start;
+  max-width: 640px;
+  padding-left: 0;
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+}
+
+.continent-page .continent-grid,
+.continent-page .realm-grid {
+  display: grid;
+  align-items: stretch;
+}
+
+.continent-page .continent-grid--overview {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  align-items: stretch;
+}
+
+.continent-page .realm-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.continent-page .realm-grid--two {
+  grid-template-columns: repeat(2, minmax(220px, 330px));
+  justify-content: center;
+}
+
+.continent-page .realm-grid--three {
+  grid-template-columns: repeat(3, minmax(190px, 1fr));
+}
+
+.continent-page .realm-grid--featured {
+  grid-template-columns: minmax(240px, 420px);
+  justify-content: center;
+  margin-bottom: clamp(16px, 2.4vw, 24px);
+}
+
+.continent-page .continent-card,
+.continent-page .realm-card {
+  --continent-card-accent: #9a6a28;
+  position: relative;
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 12px;
+  overflow: hidden;
+  padding: 14px 13px 18px;
+  border: 1px solid color-mix(in srgb, var(--continent-card-accent) 48%, #321c07);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 12%, color-mix(in srgb, var(--continent-card-accent) 16%, transparent), transparent 9rem),
+    linear-gradient(180deg, rgba(255, 247, 219, 0.88), rgba(218, 183, 106, 0.54)),
+    rgba(242, 223, 177, 0.94);
+  box-shadow:
+    0 16px 28px rgba(39, 23, 7, 0.22),
+    inset 0 0 0 1px rgba(255, 248, 226, 0.34);
+  text-align: center;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.continent-page .continent-card::before,
+.continent-page .realm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--continent-card-accent) 24%, transparent), transparent 5.4rem),
+    repeating-linear-gradient(45deg, rgba(66, 39, 11, 0.035) 0 1px, transparent 1px 16px);
+  pointer-events: none;
+}
+
+.continent-page .continent-card::after,
+.continent-page .realm-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 14px 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--continent-card-accent) 70%, transparent), transparent);
+  pointer-events: none;
+}
+
+.continent-page .continent-card:hover,
+.continent-page .realm-card:hover {
+  border-color: color-mix(in srgb, var(--continent-card-accent) 74%, #f0d27b);
+  box-shadow:
+    0 22px 38px rgba(31, 18, 5, 0.3),
+    inset 0 0 0 1px rgba(255, 248, 226, 0.46);
+  transform: translateY(-3px);
+}
+
+.continent-page .continent-grid--overview .continent-card:nth-child(1) { --continent-card-accent: #3f7a43; }
+.continent-page .continent-grid--overview .continent-card:nth-child(2) { --continent-card-accent: #9b3e2d; }
+.continent-page .continent-grid--overview .continent-card:nth-child(3) { --continent-card-accent: #d39a18; }
+.continent-page .continent-grid--overview .continent-card:nth-child(4) { --continent-card-accent: #2d6f82; }
+.continent-page .continent-grid--overview .continent-card:nth-child(5) { --continent-card-accent: #8d4f1b; }
+.continent-page .continent-grid--overview .continent-card:nth-child(6) { --continent-card-accent: #ad231f; }
+.continent-page .continent-grid--overview .continent-card:nth-child(7) { --continent-card-accent: #2f8585; }
+.continent-page .continent-grid--overview .continent-card:nth-child(8) { --continent-card-accent: #6f3f9b; }
+
+.continent-page .continent-card h2,
+.continent-page .realm-card h3 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 8px 10px;
+  color: #fff2cf;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 236, 168, 0.18), transparent),
+    linear-gradient(180deg, color-mix(in srgb, var(--continent-card-accent) 36%, #9a7534), #4c2f12);
+  border: 1px solid rgba(39, 22, 7, 0.72);
+  border-radius: 6px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 238, 184, 0.24),
+    0 7px 14px rgba(38, 22, 7, 0.16);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.06rem;
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 0 rgba(19, 10, 2, 0.55);
+}
+
+.continent-page .realm-card h3 {
+  font-size: 1rem;
+}
+
+.continent-page .realm-card-meta {
+  position: relative;
+  z-index: 1;
+  margin: -4px 0 2px;
+  color: var(--continent-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.continent-page .realm-card--wide {
+  min-height: 290px;
+}
+
+.continent-page .realm-card--faded {
+  --continent-card-accent: #74613d;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(130, 106, 63, 0.18), transparent 9rem),
+    linear-gradient(180deg, rgba(255, 247, 219, 0.76), rgba(184, 158, 100, 0.56)),
+    rgba(220, 199, 151, 0.9);
+}
+
+.continent-page .realm-card--ancient {
+  --continent-card-accent: #7b6e48;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(123, 110, 72, 0.2), transparent 9rem),
+    linear-gradient(180deg, rgba(255, 244, 211, 0.78), rgba(197, 170, 110, 0.58)),
+    rgba(226, 207, 163, 0.92);
+}
+
+.continent-page .orte-image-slot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.continent-page .orte-image-slot::before {
+  content: "";
+  position: absolute;
+  inset: 11% 8% 5%;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 70%, rgba(38, 22, 7, 0.22), transparent 62%),
+    linear-gradient(180deg, rgba(255, 246, 214, 0.3), rgba(123, 76, 21, 0.14));
+  border: 1px solid rgba(95, 57, 16, 0.2);
+  border-radius: 999px;
+  filter: blur(0.1px);
+}
+
+.continent-page .orte-image-slot a {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.continent-page .orte-image-slot img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: var(--orte-image-width, 100%);
+  max-width: 100%;
+  max-height: var(--orte-image-max-height, 280px);
+  object-fit: contain;
+  filter:
+    drop-shadow(0 12px 15px rgba(43, 27, 8, 0.36))
+    saturate(1.05)
+    contrast(1.03);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.continent-page .continent-card:hover .orte-image-slot img,
+.continent-page .realm-card:hover .orte-image-slot img {
+  filter:
+    drop-shadow(0 15px 19px rgba(43, 27, 8, 0.42))
+    saturate(1.1)
+    contrast(1.04);
+  transform: scale(1.025);
+}
+
+.continent-page .continent-card-link:focus-visible {
+  outline: 2px solid var(--continent-bright-gold);
+  outline-offset: 4px;
+}
+
+.continent-page .continent-banner-slot {
+  width: min(100%, 235px);
+  min-height: 286px;
+  padding: 6px 0 0;
+}
+
+.continent-page .continent-grid--overview .continent-card {
+  grid-template-rows: 38px minmax(286px, 1fr);
+  align-content: stretch;
+  min-height: 392px;
+}
+
+.continent-page .continent-grid--overview .continent-card h2 {
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  padding-block: 6px;
+}
+
+.continent-page .continent-grid--overview .continent-banner-slot {
+  align-self: stretch;
+  min-height: 286px;
+  place-items: start center;
+  padding-top: 22px;
+}
+
+.continent-page .continent-grid--overview .continent-banner-slot a {
+  height: auto;
+  place-items: start center;
+}
+
+.continent-page .continent-grid--overview .continent-banner-slot img {
+  align-self: start;
+  justify-self: center;
+}
+
+.continent-page .continent-hero-slot {
+  justify-self: center;
+  width: min(100%, 310px);
+  min-height: 270px;
+  padding: 12px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 246, 210, 0.46), transparent 8.5rem),
+    linear-gradient(180deg, rgba(239, 209, 138, 0.42), rgba(88, 52, 14, 0.22));
+  border: 1px solid rgba(234, 208, 128, 0.34);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 248, 226, 0.16),
+    0 18px 30px rgba(16, 9, 3, 0.24);
+}
+
+.continent-page .realm-icon-slot {
+  width: min(100%, 184px);
+  min-height: 184px;
+  padding-top: 4px;
+}
+
+.continent-page .realm-icon-slot--large {
+  width: min(100%, 230px);
+  min-height: 230px;
+}
+
+.continent-page .continent-realm-section {
+  position: relative;
+  margin-top: clamp(22px, 3.2vw, 38px);
+  padding-top: 2px;
+}
+
+.continent-page .continent-realm-section > h2 {
+  position: relative;
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  padding: 10px 16px;
+  overflow: hidden;
+  color: #fff2cf;
+  background:
+    linear-gradient(90deg, rgba(40, 22, 6, 0.94), rgba(132, 93, 34, 0.96), rgba(40, 22, 6, 0.94));
+  border: 1px solid rgba(54, 34, 12, 0.82);
+  border-radius: 6px;
+  box-shadow:
+    0 10px 20px rgba(45, 27, 8, 0.18),
+    inset 0 1px 0 rgba(255, 238, 184, 0.18);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.16rem, 2.4vw, 1.56rem);
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(19, 10, 2, 0.58);
+}
+
+.continent-page .continent-realm-section > h2::before,
+.continent-page .continent-realm-section > h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 24%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(234, 208, 128, 0.72));
+}
+
+.continent-page .continent-realm-section > h2::before {
+  left: 18px;
+  transform: translateY(-50%);
+}
+
+.continent-page .continent-realm-section > h2::after {
+  right: 18px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.continent-page .orte-image-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: inherit;
+  padding: 12px;
+  color: var(--continent-muted);
+  background:
+    linear-gradient(135deg, rgba(255, 244, 203, 0.86), rgba(196, 154, 40, 0.18)),
+    rgba(231, 204, 139, 0.9);
+  border: 1px dashed rgba(93, 59, 20, 0.6);
+  border-radius: 7px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1120px) {
+  .continent-page .continent-grid--overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .continent-page .realm-grid--three {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .continent-page {
+    width: min(100% - 16px, var(--continent-max-width));
+  }
+
+  .continent-page .continent-page-header--detail {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    text-align: center;
+  }
+
+  .continent-page .continent-page-header--detail h1 {
+    justify-self: center;
+    padding-right: 0;
+  }
+
+  .continent-page .continent-grid--overview,
+  .continent-page .realm-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .continent-page .continent-banner-slot {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 560px) {
+  .continent-page {
+    width: 100%;
+    margin: 0;
+  }
+
+  .continent-page .continent-parchment {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .continent-page .continent-grid--overview,
+  .continent-page .realm-grid,
+  .continent-page .realm-grid--two,
+  .continent-page .realm-grid--three,
+  .continent-page .realm-grid--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .continent-page .continent-card,
+  .continent-page .realm-card {
+    padding-inline: 10px;
+  }
+
+  .continent-page .continent-realm-section > h2::before,
+  .continent-page .continent-realm-section > h2::after {
+    width: 14%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .continent-page .continent-card,
+  .continent-page .realm-card,
+  .continent-page .orte-image-slot img {
+    transition: none;
+  }
+}

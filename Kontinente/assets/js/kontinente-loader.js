@@ -56,7 +56,7 @@
 
   function readRequestedId() {
     const params = new URLSearchParams(window.location.search);
-    const fallbackId = getRoot()?.dataset.defaultId || "";
+    const fallbackId = getRoot()?.dataset.defaultId || loaderScript?.dataset.defaultId || "";
     return normalizeId(
       params.get("kontinent")
       || params.get("reich")

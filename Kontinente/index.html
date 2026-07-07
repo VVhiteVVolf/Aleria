@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontinente - Aleria</title>
+  <link rel="stylesheet" href="assets/css/koenigreich.css?v=kontinente-inline-20260702b">
+  <link rel="stylesheet" href="../Orte/assets/css/orte-inline-editor.css?v=inline-controls-20260706c">
+  <link rel="stylesheet" href="assets/css/kontinente-overview.css?v=kontinente-pages-20260707d">
+  <script src="kontinente.registry.js?v=kontinente-pages-20260707b"></script>
+  <script src="assets/js/kontinente-loader.js?v=kontinente-pages-20260707b" data-default-id="kontinente-startseite"></script>
+  <script type="module" src="../AleriaAlmanach/firebase.js"></script>
+  <script type="module" src="../Orte/assets/js/orte-inline-firebase.js?v=kontinente-pages-20260707b"></script>
+  <script src="../Orte/assets/js/orte-inline-editor.js?v=inline-controls-20260706c" defer></script>
+</head>
+<body>
+  <main class="kingdom-page continent-page continent-start-page" data-page-type="continent-overview" data-kontinent-root data-orte-static-template data-default-id="kontinente-startseite">
+    <section class="continent-parchment continent-parchment--centered" aria-labelledby="kontinente-title">
+      <header class="continent-page-header">
+        <h1 id="kontinente-title" data-kontinent-title data-orte-explicit-inline>Kontinente</h1>
+      </header>
+
+      <div class="continent-grid continent-grid--overview" role="list">
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Estryll</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-estryll-banner" data-orte-image-label="Banner Estryll" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Estryll">
+            <a class="continent-card-link" href="Estryll/Estryll.html" aria-label="Kontinent Estryll öffnen">
+              <img src="../IconOrdner/L%C3%A4nder%20Icons/Estryll%20Kontinent.png" alt="Banner Estryll">
+            </a>
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Lothir</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-lothir-banner" data-orte-image-label="Banner Lothir" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Lothir">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Lothir%20Kontinent.png" alt="Banner Lothir">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Tirnara</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-tirnara-banner" data-orte-image-label="Banner Tirnara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Tirnara">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Tirnara%20Kontinent.png" alt="Banner Tirnara">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Aldervan</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-aldervan-banner" data-orte-image-label="Banner Aldervan" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Aldervan">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Aldervan%20Kontinent.png" alt="Banner Aldervan">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Sundara</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-sundara-banner" data-orte-image-label="Banner Sundara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Sundara">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Sundara%20Kontinent.png" alt="Banner Sundara">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Emberon</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-emberon-banner" data-orte-image-label="Banner Emberon" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Emberon">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Emberon%20Kontinent.png" alt="Banner Emberon">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Yrmandrall</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yrmandrall-banner" data-orte-image-label="Banner Yrmandrall" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yrmandrall">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Yrmandrall%20Kontinent.png" alt="Banner Yrmandrall">
+          </span>
+        </article>
+
+        <article class="continent-card" role="listitem">
+          <h2 data-orte-explicit-inline>Yanokuro</h2>
+          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yanokuro-banner" data-orte-image-label="Banner Yanokuro" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yanokuro">
+            <img src="../IconOrdner/L%C3%A4nder%20Icons/Yanokuro%20Kontinent.png" alt="Banner Yanokuro">
+          </span>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -91,6 +91,7 @@
     color: var(--ink);
     font: inherit;
     text-align: left;
+    text-decoration: none;
   }
 
   .almanach-left-register[aria-disabled="true"] {
