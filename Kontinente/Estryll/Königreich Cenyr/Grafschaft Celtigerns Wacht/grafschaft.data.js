@@ -1,11 +1,11 @@
 window.KONTINENTE_DATA = {
   meta: {
     id: "grafschaft-celtigerns-wacht",
-    title: "Grafschaft Celtigerns Wacht - Aleria",
+    title: "Grafschaft Celtigerns Wacht - Gwyl Celtigern - Aleria",
     type: "Grafschaft",
     status: "Entwurf",
     editorVersion: 1,
-    template: "grafschaft-detail",
+    template: "grafschaft",
     storage: {
       document: "grafschaft-celtigerns-wacht",
       firebaseCollections: {

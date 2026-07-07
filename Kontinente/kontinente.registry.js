@@ -77,7 +77,7 @@ window.KONTINENTE_REGISTRY = [
     id: "grafschaft-celtigerns-wacht",
     slug: "celtigerns-wacht",
     aliases: ["celtigerns-wacht", "gwyl-celtigern", "grafschaft-celtigerns-wacht"],
-    name: "Grafschaft Celtigerns Wacht",
+    name: "Grafschaft Celtigerns Wacht - Gwyl Celtigern",
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
     data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js",
