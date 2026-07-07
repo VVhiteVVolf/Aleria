@@ -20,6 +20,7 @@
       this.onTableChanged = typeof options.onTableChanged === "function" ? options.onTableChanged : () => {};
       this.onCellInput = typeof options.onCellInput === "function" ? options.onCellInput : () => {};
       this.isIgnoredSurface = typeof options.isIgnoredSurface === "function" ? options.isIgnoredSurface : () => false;
+      this.decorateToolbar = typeof options.decorateToolbar === "function" ? options.decorateToolbar : () => {};
       this.activeCell = null;
       this.selectedCells = new Set();
       this.selectionAnchorCell = null;
@@ -548,6 +549,7 @@
       });
       this.toolbar.querySelector('[data-table-editor-action="remove-row"]').disabled = this.isProtectedTable(table) || (table.tBodies[0]?.rows.length || 0) <= 1;
       this.toolbar.querySelector('[data-table-editor-action="merge-selected-cells"]').disabled = !this.canMergeSelectedCells();
+      this.decorateToolbar({ toolbar: this.toolbar, activeCell: this.activeCell, table, editor: this });
 
       if (window.innerWidth <= 720) {
         this.toolbar.style.top = "";

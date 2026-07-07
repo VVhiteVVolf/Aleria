@@ -17,10 +17,12 @@
   const countyObservers = new WeakMap();
   const familyCardViews = new WeakMap();
   const familyObservers = new WeakMap();
+  let familySourceIndex = 0;
 
   enhanceCountyGeographyTables();
   enhanceCountyFamilyTables();
   window.addEventListener('aleria-inline-images-rendered', scheduleCountyViewsRefresh);
+  document.addEventListener('click', handleCountyFamilyAction);
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
@@ -274,6 +276,15 @@
     familyObservers.set(table, observer);
   }
 
+  function ensureFamilySourceId(table) {
+    if (!table) return '';
+    if (!table.dataset.kingdomFamilySourceId) {
+      familySourceIndex += 1;
+      table.dataset.kingdomFamilySourceId = `family-source-${familySourceIndex}`;
+    }
+    return table.dataset.kingdomFamilySourceId;
+  }
+
   function renderCountyFamilyView(table) {
     const existing = familyCardViews.get(table);
     if (existing) existing.remove();
@@ -300,10 +311,13 @@
     const sections = [];
     let currentSection = null;
     let pendingLiegeCells = null;
+    let pendingLiegeRowIndex = -1;
 
-    const ensureSection = (title = 'Adelshaeuser') => {
+    ensureFamilySourceId(table);
+
+    const ensureSection = (title = 'Adelshaeuser', titleRowIndex = -1) => {
       if (currentSection) return currentSection;
-      currentSection = { title, cards: [] };
+      currentSection = { title, titleRowIndex, table, cards: [] };
       sections.push(currentSection);
       return currentSection;
     };
@@ -322,22 +336,34 @@
             seat: text,
             image: cloneImage(rows[index + 1]?.cells?.[0]),
             href: getImageHref(rows[index + 1]?.cells?.[0]),
-            name: getCleanText(rows[index + 2])
+            name: getCleanText(rows[index + 2]),
+            source: {
+              table,
+              kind: 'single',
+              cellIndex: 0,
+              seatRowIndex: index,
+              imageRowIndex: index + 1,
+              nameRowIndex: index + 2,
+              liegeRowIndex: -1,
+              titleRowIndex: section.titleRowIndex
+            }
           });
           index += 2;
           continue;
         }
 
         if (isFamilySectionTitle(row, text)) {
-          currentSection = { title: text, cards: [] };
+          currentSection = { title: text, titleRowIndex: index, table, cards: [] };
           sections.push(currentSection);
           pendingLiegeCells = null;
+          pendingLiegeRowIndex = -1;
         }
         continue;
       }
 
       if (isFamilyLiegeRow(row)) {
         pendingLiegeCells = Array.from(row.cells || []);
+        pendingLiegeRowIndex = index;
         continue;
       }
 
@@ -353,6 +379,15 @@
       const nameCells = Array.from(nameRow.cells || []);
 
       imageCells.forEach((cell, cellIndex) => {
+        if (
+          isFamilyDeletedCell(cell)
+          || isFamilyDeletedCell(seatCells[cellIndex])
+          || isFamilyDeletedCell(nameCells[cellIndex])
+          || isFamilyDeletedCell(pendingLiegeCells?.[cellIndex])
+        ) {
+          return;
+        }
+
         const image = cloneImage(cell);
         const name = getCleanText(nameCells[cellIndex]);
         const seat = getCleanText(seatCells[cellIndex]);
@@ -364,11 +399,22 @@
           seat,
           image,
           href: getImageHref(cell),
-          name
+          name,
+          source: {
+            table,
+            kind: 'grid',
+            cellIndex,
+            seatRowIndex: index,
+            imageRowIndex: index + 1,
+            nameRowIndex: index + 2,
+            liegeRowIndex: pendingLiegeRowIndex,
+            titleRowIndex: section.titleRowIndex
+          }
         });
       });
 
       pendingLiegeCells = null;
+      pendingLiegeRowIndex = -1;
       index += 2;
     }
 
@@ -391,6 +437,8 @@
     title.textContent = section.title || 'Adelshaeuser';
     block.append(title);
 
+    block.append(renderFamilySectionControls(section));
+
     const grid = document.createElement('div');
     grid.className = 'kingdom-family-grid';
     const featuredCards = section.cards.filter((card) => card.featured);
@@ -409,13 +457,11 @@
   }
 
   function renderFamilyCard(card, featured = false) {
-    const element = document.createElement(card.href ? 'a' : 'article');
+    const element = document.createElement('article');
     element.className = `kingdom-family-card${featured ? ' is-family-featured' : ''}`;
-    if (card.href) {
-      element.href = card.href;
-      element.rel = 'noopener noreferrer';
-      element.target = '_blank';
-    }
+    applyFamilySourceDataset(element, card.source);
+
+    element.append(renderFamilyCardControls(card.source));
 
     const meta = document.createElement('div');
     meta.className = 'kingdom-family-meta';
@@ -425,7 +471,16 @@
 
     const crest = document.createElement('div');
     crest.className = 'kingdom-family-crest';
-    if (card.image) crest.append(card.image);
+    if (card.image && card.href) {
+      const link = document.createElement('a');
+      link.href = card.href;
+      link.rel = 'noopener noreferrer';
+      link.target = '_blank';
+      link.append(card.image);
+      crest.append(link);
+    } else if (card.image) {
+      crest.append(card.image);
+    }
     element.append(crest);
 
     const name = document.createElement('strong');
@@ -433,6 +488,288 @@
     name.textContent = card.name || 'Unbenanntes Haus';
     element.append(name);
     return element;
+  }
+
+  function renderFamilySectionControls(section) {
+    const controls = document.createElement('div');
+    controls.className = 'kingdom-family-section-controls';
+    controls.dataset.kingdomFamilySourceId = section.table?.dataset?.kingdomFamilySourceId || '';
+    controls.dataset.kingdomFamilyTitleRow = String(section.titleRowIndex);
+    controls.innerHTML = `
+      <button type="button" data-kingdom-family-action="add-row">+ Reihe</button>
+      <button type="button" data-kingdom-family-action="add-card">+ Haus</button>
+    `;
+    return controls;
+  }
+
+  function renderFamilyCardControls(source) {
+    const controls = document.createElement('div');
+    controls.className = 'kingdom-family-card-controls';
+    applyFamilySourceDataset(controls, source);
+    if (source?.kind === 'single') {
+      controls.innerHTML = '<button type="button" data-kingdom-family-action="edit-image" title="Bild bearbeiten">Bild</button>';
+      return controls;
+    }
+
+    controls.innerHTML = `
+      <button type="button" data-kingdom-family-action="edit-image" title="Bild bearbeiten">Bild</button>
+      <button type="button" data-kingdom-family-action="add-after" title="Haus danach einfuegen">+</button>
+      <button type="button" data-kingdom-family-action="move-left" title="Nach links verschieben">&larr;</button>
+      <button type="button" data-kingdom-family-action="move-right" title="Nach rechts verschieben">&rarr;</button>
+      <button type="button" data-kingdom-family-action="remove" title="Haus entfernen">-</button>
+    `;
+    return controls;
+  }
+
+  function applyFamilySourceDataset(element, source) {
+    if (!element || !source?.table) return;
+    element.dataset.kingdomFamilySourceId = source.table.dataset.kingdomFamilySourceId || '';
+    element.dataset.kingdomFamilyKind = source.kind || 'grid';
+    element.dataset.kingdomFamilyCell = String(source.cellIndex ?? 0);
+    element.dataset.kingdomFamilySeatRow = String(source.seatRowIndex ?? -1);
+    element.dataset.kingdomFamilyImageRow = String(source.imageRowIndex ?? -1);
+    element.dataset.kingdomFamilyNameRow = String(source.nameRowIndex ?? -1);
+    element.dataset.kingdomFamilyLiegeRow = String(source.liegeRowIndex ?? -1);
+    element.dataset.kingdomFamilyTitleRow = String(source.titleRowIndex ?? -1);
+  }
+
+  function handleCountyFamilyAction(event) {
+    const button = event.target.closest('[data-kingdom-family-action]');
+    if (!button || !page.contains(button) || !document.body.classList.contains('orte-inline-editing')) return;
+
+    const action = button.dataset.kingdomFamilyAction;
+    const sourceElement = button.closest('[data-kingdom-family-source-id]') || button;
+    const source = getFamilyActionSource(sourceElement);
+    if (!source.table) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (action === 'edit-image') editFamilyCardImage(source);
+    if (action === 'add-after') addFamilyCardAfter(source);
+    if (action === 'remove') removeFamilyCard(source);
+    if (action === 'move-left') moveFamilyCard(source, -1);
+    if (action === 'move-right') moveFamilyCard(source, 1);
+    if (action === 'add-row') addFamilyRowToSection(source);
+    if (action === 'add-card') addFamilyCardToSection(source);
+
+    notifyFamilyTableChanged(source.table);
+  }
+
+  function getFamilyActionSource(element) {
+    const sourceId = element?.dataset?.kingdomFamilySourceId || '';
+    const table = sourceId ? page.querySelector(`table[data-kingdom-family-source-id="${cssEscape(sourceId)}"]`) : null;
+    return {
+      table,
+      kind: element?.dataset?.kingdomFamilyKind || 'grid',
+      cellIndex: Number(element?.dataset?.kingdomFamilyCell) || 0,
+      titleRowIndex: Number(element?.dataset?.kingdomFamilyTitleRow),
+      seatRowIndex: Number(element?.dataset?.kingdomFamilySeatRow),
+      imageRowIndex: Number(element?.dataset?.kingdomFamilyImageRow),
+      nameRowIndex: Number(element?.dataset?.kingdomFamilyNameRow),
+      liegeRowIndex: Number(element?.dataset?.kingdomFamilyLiegeRow)
+    };
+  }
+
+  function editFamilyCardImage(source) {
+    const cell = getFamilySourceCell(source.table, source.imageRowIndex, source.cellIndex);
+    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key]');
+    if (slot) {
+      window.AleriaInlineEditor?.editImageSlot?.(slot);
+      return;
+    }
+
+    if (cell) {
+      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
+      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
+      const nextSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
+      window.setTimeout(() => window.AleriaInlineEditor?.editImageSlot?.(nextSlot), 60);
+    }
+  }
+
+  function addFamilyCardAfter(source) {
+    const sourceRows = getFamilySourceRows(source);
+    const currentColumnCount = Math.max(0, ...sourceRows.map(({ row }) => row?.cells?.length || 0));
+    if (currentColumnCount >= getFamilyColumnLimit(source.table)) {
+      addFamilyRowToSection(source, 1);
+      return;
+    }
+
+    const nextIndex = Math.max(0, source.cellIndex + 1);
+    sourceRows.forEach(({ row, role }) => {
+      if (!row) return;
+      const reference = row.cells[Math.min(source.cellIndex, row.cells.length - 1)] || row.cells[row.cells.length - 1];
+      const cell = cloneFamilyCell(reference, role);
+      row.insertBefore(cell, row.cells[nextIndex] || null);
+    });
+  }
+
+  function addFamilyCardToSection(source) {
+    const rowSet = getLastFamilyGridRowSet(source.table, source.titleRowIndex);
+    if (!rowSet?.seatRow || !rowSet?.imageRow || !rowSet?.nameRow) {
+      addFamilyRowToSection(source);
+      return;
+    }
+
+    const nextIndex = rowSet.seatRow.cells.length;
+    if (nextIndex >= getFamilyColumnLimit(source.table)) {
+      addFamilyRowToSection(source, 1);
+      return;
+    }
+
+    [
+      { row: rowSet.liegeRow, role: 'liege' },
+      { row: rowSet.seatRow, role: 'seat' },
+      { row: rowSet.imageRow, role: 'image' },
+      { row: rowSet.nameRow, role: 'name' }
+    ].forEach(({ row, role }) => {
+      if (!row) return;
+      const reference = row.cells[row.cells.length - 1];
+      const cell = cloneFamilyCell(reference, role);
+      row.insertBefore(cell, row.cells[nextIndex] || null);
+    });
+  }
+
+  function addFamilyRowToSection(source, requestedColumnCount = 0) {
+    const table = source.table;
+    const rows = Array.from(table?.tBodies[0]?.rows || []);
+    if (!table || !rows.length) return;
+
+    const insertBefore = getNextFamilySectionRow(table, source.titleRowIndex);
+    const columnCount = requestedColumnCount > 0 ? requestedColumnCount : getFamilyColumnLimit(table);
+    const rowSet = getLastFamilyGridRowSet(table, source.titleRowIndex);
+    const seatRow = createFamilyTableRow(rowSet?.seatRow, 'seat', columnCount);
+    const imageRow = createFamilyTableRow(rowSet?.imageRow, 'image', columnCount);
+    const nameRow = createFamilyTableRow(rowSet?.nameRow, 'name', columnCount);
+    const tbody = table.tBodies[0];
+
+    tbody.insertBefore(seatRow, insertBefore);
+    tbody.insertBefore(imageRow, insertBefore);
+    tbody.insertBefore(nameRow, insertBefore);
+  }
+
+  function removeFamilyCard(source) {
+    if (source.kind === 'grid') {
+      getFamilySourceRows(source).forEach(({ row, role }) => {
+        const cell = row?.cells?.[source.cellIndex];
+        if (!cell) return;
+        resetFamilyCell(cell, role);
+        cell.dataset.kingdomFamilyDeleted = '1';
+      });
+      return;
+    }
+
+    getFamilySourceRows(source).forEach(({ row, role }) => {
+      const cell = row?.cells?.[source.cellIndex];
+      if (!cell) return;
+      resetFamilyCell(cell, role);
+    });
+  }
+
+  function moveFamilyCard(source, direction) {
+    const targetIndex = source.cellIndex + direction;
+    if (targetIndex < 0) return;
+
+    getFamilySourceRows(source).forEach(({ row }) => {
+      const cells = row?.cells || [];
+      if (!cells[source.cellIndex] || !cells[targetIndex]) return;
+      swapFamilyCells(cells[source.cellIndex], cells[targetIndex]);
+    });
+  }
+
+  function getFamilySourceRows(source) {
+    return [
+      { row: getFamilySourceRow(source.table, source.liegeRowIndex), role: 'liege' },
+      { row: getFamilySourceRow(source.table, source.seatRowIndex), role: 'seat' },
+      { row: getFamilySourceRow(source.table, source.imageRowIndex), role: 'image' },
+      { row: getFamilySourceRow(source.table, source.nameRowIndex), role: 'name' }
+    ].filter((item) => item.row);
+  }
+
+  function getFamilySourceRow(table, rowIndex) {
+    const rows = Array.from(table?.tBodies[0]?.rows || []);
+    return rowIndex >= 0 ? rows[rowIndex] || null : null;
+  }
+
+  function getFamilySourceCell(table, rowIndex, cellIndex) {
+    return getFamilySourceRow(table, rowIndex)?.cells?.[cellIndex] || null;
+  }
+
+  function getFamilyColumnLimit(table) {
+    return Math.max(1, getTableColumnCount(table));
+  }
+
+  function cloneFamilyCell(reference, role) {
+    const cell = reference ? reference.cloneNode(false) : document.createElement('td');
+    cell.colSpan = 1;
+    resetFamilyCell(cell, role);
+    return cell;
+  }
+
+  function resetFamilyCell(cell, role) {
+    if (!cell) return;
+    cell.removeAttribute('data-orte-inline-text');
+    delete cell.dataset.kingdomFamilyDeleted;
+    cell.removeAttribute('contenteditable');
+    if (role === 'image') {
+      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
+      return;
+    }
+    cell.innerHTML = role === 'name' || role === 'seat' ? '<b>...</b>' : '&nbsp;';
+  }
+
+  function swapFamilyCells(first, second) {
+    const firstHtml = first.innerHTML;
+    first.innerHTML = second.innerHTML;
+    second.innerHTML = firstHtml;
+  }
+
+  function createFamilyTableRow(templateRow, role, columnCount) {
+    const row = templateRow ? templateRow.cloneNode(false) : document.createElement('tr');
+    row.innerHTML = '';
+    for (let index = 0; index < columnCount; index += 1) {
+      row.append(cloneFamilyCell(templateRow?.cells?.[Math.min(index, templateRow.cells.length - 1)], role));
+    }
+    return row;
+  }
+
+  function getLastFamilyGridRowSet(table, titleRowIndex) {
+    const rows = Array.from(table?.tBodies[0]?.rows || []);
+    let last = null;
+    const start = Number.isFinite(titleRowIndex) && titleRowIndex >= 0 ? titleRowIndex + 1 : 0;
+
+    for (let index = start; index < rows.length - 2; index += 1) {
+      const text = getCleanText(rows[index]);
+      if (index > start && isFamilySectionTitle(rows[index], text)) break;
+      if (!isFamilySeatRow(rows[index])) continue;
+
+      const imageRow = rows[index + 1];
+      const nameRow = rows[index + 2];
+      if (!imageRow || !nameRow || !rowHasImages(imageRow) || !isPlaceNameRow(nameRow, getTableColumnCount(table))) continue;
+      last = {
+        liegeRow: isFamilyLiegeRow(rows[index - 1]) ? rows[index - 1] : null,
+        seatRow: rows[index],
+        imageRow,
+        nameRow
+      };
+    }
+    return last;
+  }
+
+  function getNextFamilySectionRow(table, titleRowIndex) {
+    const rows = Array.from(table?.tBodies[0]?.rows || []);
+    const start = Number.isFinite(titleRowIndex) && titleRowIndex >= 0 ? titleRowIndex + 1 : 0;
+    for (let index = start; index < rows.length; index += 1) {
+      const text = getCleanText(rows[index]);
+      if (index > start && isFamilySectionTitle(rows[index], text)) return rows[index];
+    }
+    return null;
+  }
+
+  function notifyFamilyTableChanged(table) {
+    window.AleriaInlineEditor?.notifyTableChanged?.(table, { rebuild: false });
+    renderCountyFamilyView(table);
+    syncCountyViewMode();
   }
 
   function renderFamilyMetaItem(label, value) {
@@ -654,6 +991,10 @@
     return !!row?.querySelector?.('img[src], .orte-image-slot, .orte-image-placeholder');
   }
 
+  function isFamilyDeletedCell(cell) {
+    return cell?.dataset?.kingdomFamilyDeleted === '1';
+  }
+
   function isEmptyRow(row) {
     return !rowHasImages(row) && !getCleanText(row);
   }
@@ -717,7 +1058,7 @@
   }
 
   function isFamilySeatRow(row) {
-    return row?.cells?.length > 1
+    return row?.cells?.length >= 1
       && hasRowText(row)
       && hasRowColor(row, ['153,153,153', '153, 153, 153']);
   }
@@ -790,5 +1131,10 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+
+  function cssEscape(value) {
+    if (window.CSS?.escape) return window.CSS.escape(String(value || ''));
+    return String(value || '').replace(/["\\]/g, '\\$&');
   }
 })();

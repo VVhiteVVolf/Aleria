@@ -7,7 +7,7 @@
   const pageId = getPageId();
   const CONTENT_SCHEMA_VERSION = 2;
   const PORTRAIT_PLACEHOLDER_SRC = "https://i.imgur.com/Bpo3Pzn.png";
-  const TABLE_EDITOR_VERSION = "table-editor-20260706b";
+  const TABLE_EDITOR_VERSION = "table-editor-20260707a";
   const inlineEditorScript = document.currentScript;
   const inlineStorageConfig = getInlineStorageConfig();
   const storageNamespace = inlineStorageConfig.namespace;
@@ -49,6 +49,26 @@
     getImage(key) {
       const image = state.images[String(key || "")];
       return image ? { ...normalizeImageState(image, key) } : null;
+    }
+  };
+  window.AleriaInlineEditor = {
+    notifyTableChanged(table, options = {}) {
+      if (!table) return;
+      updateTableState(table);
+      if (options.rebuild !== false) {
+        rebuildTargets();
+      } else {
+        renderTableImagePlaceholderControls();
+        tableEditor?.refresh();
+      }
+      markDirty();
+    },
+    editImageSlot(slotOrKey) {
+      const slot = typeof slotOrKey === "string"
+        ? root.querySelector(`[data-orte-image-key="${cssEscape(slotOrKey)}"]`)
+        : slotOrKey;
+      const key = slot?.dataset?.orteImageKey;
+      if (key) openImagePanel(key);
     }
   };
   let tableEditor = null;
@@ -182,6 +202,9 @@
         updateTableState(table);
         rebuildTargets();
         markDirty();
+      },
+      decorateToolbar: ({ toolbar, activeCell }) => {
+        renderTableCellContextActions(activeCell, toolbar);
       }
     });
     tableEditor.setEditMode(editMode);
@@ -290,6 +313,8 @@
       event.preventDefault();
       openImagePanel(imageSlot.dataset.orteImageKey);
     });
+
+    document.addEventListener("contextmenu", handleTableCellContextMenu);
 
     document.addEventListener("input", (event) => {
       const colorInput = event.target.closest("[data-orte-format-color]");
@@ -1262,28 +1287,14 @@
   }
 
   function renderTableImagePlaceholderControls() {
+    document.querySelectorAll(".orte-cell-image-insert").forEach((button) => button.remove());
+    document.querySelectorAll(".orte-image-insert-cell").forEach((cell) => cell.classList.remove("orte-image-insert-cell"));
     if (!editMode) return;
 
     tableItems.forEach((item) => {
       Array.from(item.table.querySelectorAll("td, th")).forEach((cell) => {
-        if (!canInsertImagePlaceholder(cell)) return;
-
-        const row = cell.parentElement;
-        const rowIndex = Array.from(item.table.tBodies[0]?.rows || []).indexOf(row);
-        const cellIndex = Array.from(row?.cells || []).indexOf(cell);
-        if (rowIndex < 0 || cellIndex < 0) return;
-
-        cell.classList.add("orte-image-insert-cell");
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "orte-cell-image-insert";
-        button.dataset.action = "insert-orte-image-placeholder";
-        button.dataset.orteTableTarget = item.id;
-        button.dataset.orteTableRowIndex = String(rowIndex);
-        button.dataset.orteTableCellIndex = String(cellIndex);
-        button.title = "Bildplatzhalter in diese Zelle setzen";
-        button.textContent = "+ Bild";
-        cell.append(button);
+        if (canInsertImagePlaceholder(cell)) cell.classList.add("orte-image-context-cell");
+        else cell.classList.remove("orte-image-context-cell");
       });
     });
   }
@@ -1293,6 +1304,61 @@
     if (cell.querySelector("table, img, [data-orte-image-key], [data-orte-rating-key], .orte-cell-image-insert")) return false;
     const text = normalizeWhitespace(cell.textContent).replace(/\u00c2/g, "");
     return !text || /^bildplatzhalter$/i.test(text);
+  }
+
+  function handleTableCellContextMenu(event) {
+    if (!editMode) return;
+    const cell = event.target.closest("td, th");
+    if (!cell || !root.contains(cell) || isInsideIgnoredSurface(cell)) return;
+    if (event.target.closest("[data-orte-image-key], [data-orte-rating-key], button, input, select, textarea, a")) return;
+
+    const table = cell.closest("[data-orte-table-id]");
+    if (!table) return;
+
+    event.preventDefault();
+    tableEditor?.selectCell?.(cell);
+    window.setTimeout(() => renderTableCellContextActions(cell), 0);
+  }
+
+  function renderTableCellContextActions(cell, providedToolbar = null) {
+    const toolbar = providedToolbar || document.querySelector(".table-editor-toolbar");
+    if (!toolbar) return;
+
+    toolbar.querySelectorAll(".orte-table-image-context-action").forEach((button) => button.remove());
+    if (!cell || !document.contains(cell)) return;
+    if (!canInsertImagePlaceholder(cell)) return;
+
+    const position = getTableCellPosition(cell);
+    if (!position) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "orte-table-image-context-action";
+    button.dataset.action = "insert-orte-image-placeholder";
+    button.dataset.orteTableTarget = position.tableId;
+    button.dataset.orteTableRowIndex = String(position.rowIndex);
+    button.dataset.orteTableCellIndex = String(position.cellIndex);
+    button.title = "Bildplatzhalter in diese Zelle setzen";
+    button.textContent = "+ Bild";
+
+    const hint = toolbar.querySelector(".table-editor-hint");
+    if (hint) hint.before(button);
+    else toolbar.append(button);
+  }
+
+  function getTableCellPosition(cell) {
+    const table = cell?.closest?.("[data-orte-table-id]");
+    const row = cell?.parentElement;
+    if (!table || !row) return null;
+    const rowIndex = Array.from(table.tBodies[0]?.rows || []).indexOf(row);
+    const cellIndex = Array.from(row.cells || []).indexOf(cell);
+    if (rowIndex < 0 || cellIndex < 0) return null;
+    return {
+      table,
+      tableId: table.dataset.orteTableId,
+      rowIndex,
+      cellIndex
+    };
   }
 
   function refreshTableControls() {
@@ -2795,7 +2861,9 @@
 
   function removeInlineEditorControls() {
     document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls, .orte-cell-image-insert").forEach((control) => control.remove());
-    document.querySelectorAll(".orte-image-insert-cell").forEach((cell) => cell.classList.remove("orte-image-insert-cell"));
+    document.querySelectorAll(".orte-image-insert-cell, .orte-image-context-cell").forEach((cell) => {
+      cell.classList.remove("orte-image-insert-cell", "orte-image-context-cell");
+    });
   }
 
   function resetClonedFragment(fragment) {
@@ -2992,7 +3060,9 @@
 
   function sanitizeLoadedTable(table) {
     table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control, .orte-cell-image-insert, .table-editor-toolbar").forEach((node) => node.remove());
-    table.querySelectorAll(".orte-image-insert-cell").forEach((node) => node.classList.remove("orte-image-insert-cell"));
+    table.querySelectorAll(".orte-image-insert-cell, .orte-image-context-cell").forEach((node) => {
+      node.classList.remove("orte-image-insert-cell", "orte-image-context-cell");
+    });
     normalizeTableImageCells(table);
     normalizeImageSlotKeys(table);
     table.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
@@ -3015,7 +3085,9 @@
     });
     clone.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
     clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-cell-image-insert, .orte-inline-image-hint, .orte-image-placeholder-media, .table-editor-toolbar").forEach((node) => node.remove());
-    clone.querySelectorAll(".orte-image-insert-cell").forEach((node) => node.classList.remove("orte-image-insert-cell"));
+    clone.querySelectorAll(".orte-image-insert-cell, .orte-image-context-cell").forEach((node) => {
+      node.classList.remove("orte-image-insert-cell", "orte-image-context-cell");
+    });
     clone.querySelectorAll("[data-orte-pending-image-open]").forEach((node) => {
       node.removeAttribute("data-orte-pending-image-open");
     });
@@ -3885,10 +3957,7 @@
   function isPlaceholderImage(image) {
     if (!image) return false;
     const src = image.getAttribute("src") || "";
-    return image.classList.contains("transparent")
-      || image.classList.contains("pt-s-0052")
-      || image.classList.contains("pt-s-0079")
-      || isPlaceholderSrc(src);
+    return isPlaceholderSrc(src);
   }
 
   function normalizePlaceholderSrc(src) {

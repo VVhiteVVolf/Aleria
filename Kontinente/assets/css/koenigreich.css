@@ -320,6 +320,10 @@ body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
   box-shadow: inset 0 0 0 1px rgba(255, 252, 234, 0.5);
 }
 
+body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper {
+  display: none;
+}
+
 body.orte-inline-editing .kingdom-table-scroll.is-county-card-source-wrapper::before,
 body.orte-inline-editing .kingdom-table-scroll.is-family-card-source-wrapper::before {
   content: "Bearbeitungsdaten fuer die Ansicht oben";
@@ -710,6 +714,52 @@ a.kingdom-place-card:focus-visible .kingdom-place-icon-frame img {
   text-shadow: 0 1px 0 rgba(255, 246, 213, 0.88);
 }
 
+.kingdom-family-section-controls,
+.kingdom-family-card-controls {
+  display: none;
+}
+
+body.orte-inline-editing .kingdom-family-section-controls,
+body.orte-inline-editing .kingdom-family-card-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.kingdom-family-section-controls {
+  margin: -0.3rem 0 0.85rem;
+}
+
+.kingdom-family-card-controls {
+  align-self: start;
+  order: -1;
+  padding: 0.25rem;
+  border: 1px dashed rgba(109, 76, 34, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 247, 220, 0.58);
+}
+
+.kingdom-family-section-controls button,
+.kingdom-family-card-controls button {
+  min-height: 25px;
+  padding: 0.18rem 0.52rem;
+  cursor: pointer;
+  border: 1px solid rgba(109, 76, 34, 0.58);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7e6ba, #d4b067);
+  color: #2d1b09;
+  font: 700 0.76rem Georgia, 'Times New Roman', serif;
+}
+
+.kingdom-family-section-controls button:hover,
+.kingdom-family-section-controls button:focus-visible,
+.kingdom-family-card-controls button:hover,
+.kingdom-family-card-controls button:focus-visible {
+  border-color: #5f370c;
+  background: #fff4cf;
+}
+
 .kingdom-family-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -752,8 +802,8 @@ a.kingdom-place-card:focus-visible .kingdom-place-icon-frame img {
     inset 0 0 0 1px rgba(255, 254, 242, 0.58);
 }
 
-a.kingdom-family-card:hover,
-a.kingdom-family-card:focus-visible {
+.kingdom-family-card:hover,
+.kingdom-family-card:focus-within {
   transform: translateY(-2px);
   border-color: rgba(106, 61, 18, 0.62);
   box-shadow:

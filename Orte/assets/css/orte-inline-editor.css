@@ -428,6 +428,15 @@
   min-height: 46px;
 }
 
+.orte-inline-editing .orte-image-context-cell {
+  cursor: context-menu;
+}
+
+.orte-inline-editing .orte-image-context-cell:hover {
+  outline: 1px dashed rgba(126, 82, 25, 0.38);
+  outline-offset: -4px;
+}
+
 .orte-cell-image-insert {
   display: none;
   position: absolute;
