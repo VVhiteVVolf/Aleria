@@ -3501,46 +3501,29 @@
         return;
       }
 
-      const currentPayload = clonePayload();
-      if (payloadSignature(payload) === payloadSignature(currentPayload)) {
-        saveLocal(payload);
-        resetHistoryToCurrent();
-        pendingLocalPayload = null;
-        pendingRemotePayload = null;
-        setStatus("online synchronisiert", "ok");
-        updateVersionChoice();
-        return;
-      }
+      const statusText = payloadSignature(payload) === payloadSignature(clonePayload())
+        ? "online synchronisiert"
+        : isPayloadLocked(payload)
+          ? "finaler Online-Stand geladen"
+          : "online geladen";
+      acceptRemotePayload(payload, statusText);
+      return;
 
-      const localPayload = loadLocal();
-      if (isCompatiblePayload(localPayload) && payloadSignature(localPayload) !== payloadSignature(payload)) {
-        if (isPayloadLocked(payload)) {
-          applyPayload(payload);
-          saveLocal(payload);
-          resetHistoryToCurrent();
-          pendingLocalPayload = null;
-          pendingRemotePayload = null;
-          dirty = false;
-          setStatus("finaler Online-Stand geladen", "ok");
-          updateVersionChoice();
-          return;
-        }
-
-        pendingLocalPayload = localPayload;
-        pendingRemotePayload = payload;
-        setStatus("Version wählen", "warning");
-        setStatusPanelOpen(true);
-        updateVersionChoice();
-        return;
-      }
-
-      applyPayload(payload);
-      saveLocal(payload);
-      resetHistoryToCurrent();
-      setStatus("online geladen", "ok");
     }, () => {
       setStatus("online nicht erreichbar", "error");
     });
+  }
+
+  function acceptRemotePayload(payload, statusText = "online geladen") {
+    if (!isCompatiblePayload(payload)) return;
+    applyPayload(payload);
+    saveLocal(clonePayload());
+    resetHistoryToCurrent();
+    pendingLocalPayload = null;
+    pendingRemotePayload = null;
+    dirty = false;
+    setStatus(statusText, "ok");
+    updateVersionChoice();
   }
 
   function waitForInlineStore(timeout = 5000) {

@@ -949,7 +949,7 @@
 
     return imageCells.map((cell, index) => {
       const source = createGeographySource(table, 'place-image', rowSource.imageRowIndex, index);
-      const fallbackImage = getGeographyTableImage(source);
+      const fallbackImage = isInlineImageCleared(cell) ? null : getGeographyTableImage(source);
       const image = cloneImage(cell, fallbackImage);
       const name = getCleanText(nameCells[index]);
       const type = getCleanText(typeCells[index]) || fallbackType;
@@ -979,28 +979,76 @@
   function repairGeographyImageRow(table, row, rowIndex) {
     let repaired = false;
     Array.from(row?.cells || []).forEach((cell, cellIndex) => {
-      if (cell.querySelector('img[src], .orte-image-slot')) return;
-
       const image = getGeographyTableImage(createGeographySource(table, 'place-image', rowIndex, cellIndex));
       if (!image?.src) return;
 
+      const existingSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
+      if (existingSlot) {
+        if (shouldRepairLegacyGeographySlot(existingSlot, image)) {
+          applyGeographyFallbackSlot(table, existingSlot, image, rowIndex, cellIndex);
+          repaired = true;
+        }
+        return;
+      }
+
+      if (cell.querySelector('img[src]')) return;
+
       const slot = document.createElement('span');
       slot.className = 'orte-image-slot has-image';
-      slot.dataset.orteImageLabel = image.alt || 'Bildplatzhalter';
-      slot.dataset.orteTemplateImageSrc = image.src;
-      slot.dataset.orteTemplateImageHref = image.href || '';
-      slot.dataset.orteTemplateImageAlt = image.alt || '';
-      slot.setAttribute('aria-label', image.alt || 'Bildplatzhalter');
+      applyGeographyFallbackSlot(table, slot, image, rowIndex, cellIndex);
       cell.append(slot);
       repaired = true;
     });
     return repaired;
   }
 
+  function shouldRepairLegacyGeographySlot(slot, fallbackImage) {
+    if (!slot || !fallbackImage?.src || isInlineSlotCleared(slot)) return false;
+    const key = slot.dataset?.orteImageKey || '';
+    if (key.startsWith('geography-')) return false;
+
+    const currentSrc = slot.dataset?.orteRenderedImageSrc
+      || slot.querySelector?.('img[src]')?.getAttribute('src')
+      || (key ? window.AleriaInlineImages?.getImage?.(key)?.src : '')
+      || '';
+    if (!currentSrc || currentSrc === fallbackImage.src) return false;
+
+    return key.startsWith('bild-') || !key;
+  }
+
+  function applyGeographyFallbackSlot(table, slot, image, rowIndex, cellIndex) {
+    slot.dataset.orteImageKey = createGeographyRepairImageKey(table, rowIndex, cellIndex);
+    slot.dataset.orteImageLabel = image.alt || getImageFileName(image.src) || 'Bildplatzhalter';
+    slot.dataset.orteTemplateImageSrc = image.src;
+    slot.dataset.orteTemplateImageHref = image.href || '';
+    slot.dataset.orteTemplateImageAlt = image.alt || '';
+    slot.setAttribute('aria-label', image.alt || 'Bildplatzhalter');
+    delete slot.dataset.orteRenderedImageSrc;
+    delete slot.dataset.orteRenderedImageHref;
+    delete slot.dataset.orteRenderedImageAlt;
+    slot.innerHTML = '';
+  }
+
   function getGeographyTableImage(source) {
     if (!source?.table) return null;
     const tableId = source.table.dataset.orteTableId || '';
     return window.AleriaInlineImages?.getTableImage?.(tableId, source.rowIndex, source.cellIndex, 0) || null;
+  }
+
+  function createGeographyRepairImageKey(table, rowIndex, cellIndex) {
+    const tableId = String(table?.dataset?.orteTableId || 'table')
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, '-')
+      .replace(/^-|-$/g, '') || 'table';
+    return `geography-${tableId}-r${rowIndex}-c${cellIndex}`;
+  }
+
+  function getImageFileName(src) {
+    try {
+      return new URL(src, document.baseURI).pathname.split('/').pop() || '';
+    } catch (error) {
+      return String(src || '').split('/').pop() || '';
+    }
   }
 
   function createGeographySource(table, kind, rowIndex, cellIndex) {
@@ -1141,8 +1189,10 @@
 
   function cloneImage(cell, fallbackImage = null) {
     const source = cell?.querySelector?.('img[src]');
-    const slotImage = !source ? getInlineSlotImage(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]')) : null;
-    const src = source?.getAttribute('src') || slotImage?.src || fallbackImage?.src || '';
+    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key]');
+    const isCleared = isInlineSlotCleared(slot);
+    const slotImage = !source && !isCleared ? getInlineSlotImage(slot) : null;
+    const src = source?.getAttribute('src') || slotImage?.src || (!isCleared ? fallbackImage?.src : '') || '';
     if (!src) {
       const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
       const label = slot?.getAttribute?.('aria-label') || getCleanText(slot);
@@ -1177,6 +1227,7 @@
     const key = slot.dataset?.orteImageKey || '';
     const image = window.AleriaInlineImages?.getImage?.(key);
     if (image?.src) return image;
+    if (image?.clearedAtClient) return null;
 
     const fallbackSrc = slot.dataset?.orteTemplateImageSrc || '';
     if (!fallbackSrc) return null;
@@ -1185,6 +1236,16 @@
       href: slot.dataset.orteTemplateImageHref || '',
       alt: slot.dataset.orteTemplateImageAlt || slot.getAttribute('aria-label') || ''
     };
+  }
+
+  function isInlineImageCleared(cell) {
+    return isInlineSlotCleared(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]'));
+  }
+
+  function isInlineSlotCleared(slot) {
+    const key = slot?.dataset?.orteImageKey || '';
+    if (!key) return false;
+    return !!window.AleriaInlineImages?.getImage?.(key)?.clearedAtClient;
   }
 
   function getTableColumnCount(table) {
