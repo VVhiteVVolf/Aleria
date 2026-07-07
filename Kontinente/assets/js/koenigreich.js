@@ -20,6 +20,7 @@
 
   enhanceCountyGeographyTables();
   enhanceCountyFamilyTables();
+  window.addEventListener('aleria-inline-images-rendered', scheduleCountyViewsRefresh);
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
@@ -89,6 +90,15 @@
       observeCountyGeographyTable(table);
     });
     syncCountyViewMode();
+  }
+
+  let countyViewsRefreshTimer = 0;
+  function scheduleCountyViewsRefresh() {
+    window.clearTimeout(countyViewsRefreshTimer);
+    countyViewsRefreshTimer = window.setTimeout(() => {
+      enhanceCountyGeographyTables();
+      enhanceCountyFamilyTables();
+    }, 40);
   }
 
   function observeCountyGeographyTable(table) {
@@ -539,7 +549,11 @@
   }
 
   function getImageHref(cell) {
-    return cell?.querySelector?.('img')?.closest('a[href]')?.getAttribute('href') || '';
+    const imageLink = cell?.querySelector?.('img')?.closest('a[href]')?.getAttribute('href');
+    if (imageLink) return imageLink;
+
+    const slotImage = getInlineSlotImage(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]'));
+    return slotImage?.href || '';
   }
 
   function appendPlaceSeparator(domain, title) {
@@ -568,7 +582,8 @@
 
   function cloneImage(cell) {
     const source = cell?.querySelector?.('img[src]');
-    const src = source?.getAttribute('src') || '';
+    const slotImage = !source ? getInlineSlotImage(cell?.querySelector?.('.orte-image-slot[data-orte-image-key]')) : null;
+    const src = source?.getAttribute('src') || slotImage?.src || '';
     if (!src) {
       const slot = cell?.querySelector?.('.orte-image-slot, .orte-image-placeholder');
       const label = slot?.getAttribute?.('aria-label') || getCleanText(slot);
@@ -582,10 +597,27 @@
 
     const image = document.createElement('img');
     image.src = src;
-    image.alt = source.getAttribute('alt') || '';
+    image.alt = source?.getAttribute('alt') || slotImage?.alt || '';
     image.loading = 'lazy';
     image.decoding = 'async';
     return image;
+  }
+
+  function getInlineSlotImage(slot) {
+    if (!slot) return null;
+
+    const runtimeSrc = slot.dataset?.orteRenderedImageSrc || '';
+    if (runtimeSrc) {
+      return {
+        src: runtimeSrc,
+        href: slot.dataset.orteRenderedImageHref || '',
+        alt: slot.dataset.orteRenderedImageAlt || slot.getAttribute('aria-label') || ''
+      };
+    }
+
+    const key = slot.dataset?.orteImageKey || '';
+    const image = window.AleriaInlineImages?.getImage?.(key);
+    return image?.src ? image : null;
   }
 
   function getTableColumnCount(table) {

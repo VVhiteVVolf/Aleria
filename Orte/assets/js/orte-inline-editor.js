@@ -22,6 +22,7 @@
   const tableItems = [];
   const sectionItems = [];
   const templateImageFallbacks = new Map();
+  const imageKeyAliases = new Map();
   const expandedTableControlKeys = new Set();
   const history = {
     undo: [],
@@ -43,6 +44,13 @@
   let statusSuppressClick = false;
   let statusDrag = null;
   let rowControlPositionTimer = 0;
+
+  window.AleriaInlineImages = {
+    getImage(key) {
+      const image = state.images[String(key || "")];
+      return image ? { ...normalizeImageState(image, key) } : null;
+    }
+  };
   let tableEditor = null;
   const inlineActions = new Set([
     "toggle-orte-inline-edit",
@@ -653,6 +661,7 @@
     collectTextItems();
     collectTableItems();
     collectSectionItems();
+    applyImageKeyAliases();
     renderImageSlots();
     renderRatings();
     renderTableControls();
@@ -1031,6 +1040,7 @@
       slot.setAttribute("aria-label", label);
       seenKeys.add(nextKey);
       reservedKeys.add(nextKey);
+      imageKeyAliases.set(nextKey, currentKey);
 
       if (currentKey && state.images[currentKey] && !state.images[nextKey]) {
         const initialImage = getInitialImageStateFromSlot(slot, label);
@@ -1071,7 +1081,23 @@
     scope.querySelectorAll?.("[data-orte-image-key]").forEach((slot) => {
       slot.classList.remove("has-image", "has-portrait-placeholder", "has-image-load-error");
       slot.removeAttribute("data-orte-image-load-state");
+      slot.removeAttribute("data-orte-rendered-image-src");
+      slot.removeAttribute("data-orte-rendered-image-href");
+      slot.removeAttribute("data-orte-rendered-image-alt");
       slot.innerHTML = "";
+    });
+  }
+
+  function applyImageKeyAliases() {
+    imageKeyAliases.forEach((sourceKey, targetKey) => {
+      const sourceImage = state.images[sourceKey];
+      if (!sourceImage) return;
+
+      const currentImage = state.images[targetKey];
+      if (currentImage?.src) return;
+
+      const label = imageItems.find((item) => item.key === targetKey)?.label || targetKey;
+      state.images[targetKey] = normalizeImageState(sourceImage, label);
     });
   }
 
@@ -1145,6 +1171,7 @@
 
   function renderImageSlots() {
     imageItems.forEach((item) => renderImageSlot(item.key));
+    notifyInlineImagesRendered();
   }
 
   function renderImageSlot(key) {
@@ -1166,6 +1193,7 @@
 
     const editHint = editMode ? `<span class="orte-inline-image-hint">Bild bearbeiten</span>` : "";
     if (!image.src) {
+      clearRuntimeImageSlotData(item.node);
       if (usesPortraitPlaceholder) {
         item.node.innerHTML = `<img class="orte-image-placeholder-media" src="${PORTRAIT_PLACEHOLDER_SRC}" alt="${escapeAttr(item.label || "Portrait Platzhalter")}" loading="lazy" decoding="async">${editHint}`;
         return;
@@ -1174,10 +1202,25 @@
       return;
     }
 
+    item.node.dataset.orteRenderedImageSrc = image.src;
+    item.node.dataset.orteRenderedImageHref = image.href || "";
+    item.node.dataset.orteRenderedImageAlt = alt;
     const imageHtml = `<img src="${escapeAttr(image.src)}" alt="${escapeAttr(alt)}" loading="lazy" decoding="async">`;
     item.node.innerHTML = image.href
       ? `<a href="${escapeAttr(image.href)}" target="_blank" rel="noopener">${imageHtml}</a>${editHint}`
       : `${imageHtml}${editHint}`;
+  }
+
+  function notifyInlineImagesRendered() {
+    window.dispatchEvent(new CustomEvent("aleria-inline-images-rendered", {
+      detail: { pageId, root }
+    }));
+  }
+
+  function clearRuntimeImageSlotData(slot) {
+    delete slot.dataset.orteRenderedImageSrc;
+    delete slot.dataset.orteRenderedImageHref;
+    delete slot.dataset.orteRenderedImageAlt;
   }
 
   function renderRatings() {
@@ -2837,6 +2880,7 @@
       const item = imageItems.find((entry) => entry.key === key);
       state.images[key] = mergeIncomingImageState(state.images[key], image, item?.label || key);
     });
+    applyImageKeyAliases();
 
     Object.entries(payload.ratings || {}).forEach(([key, value]) => {
       state.ratings[key] = clampRating(value);
