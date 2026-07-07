@@ -21,6 +21,7 @@
   const ratingItems = [];
   const tableItems = [];
   const sectionItems = [];
+  const templateImageFallbacks = new Map();
   const expandedTableControlKeys = new Set();
   const history = {
     undo: [],
@@ -106,6 +107,7 @@
   function init() {
     const localPayload = loadLocal();
     prepareTables();
+    captureTemplateImageFallbacks();
     if (isCompatiblePayload(localPayload)) applyTablePayload(localPayload?.tables);
     rebuildTargets();
     if (isCompatiblePayload(localPayload)) applyPayload(localPayload, { skipTables: true });
@@ -698,7 +700,7 @@
         format: node.dataset.orteImageFormat || "",
         fit: node.dataset.orteImageFit || ""
       };
-      state.images[key] = mergeInitialImageState(initialImage, state.images[key], label);
+      state.images[key] = mergeInitialImageState(resolveTemplateImageFallback(key, initialImage, label), state.images[key], label);
       imageItems.push({ key, label, node });
     });
   }
@@ -929,6 +931,74 @@
         state.images[key] = normalizeImageState({ src: "", alt: label }, label);
       }
     });
+  }
+
+  function captureTemplateImageFallbacks() {
+    templateImageFallbacks.clear();
+    const virtualSlotKeys = new WeakMap();
+
+    const usedKeys = new Set([
+      ...Object.keys(state.images),
+      ...Array.from(root.querySelectorAll("[data-orte-image-key]")).map((node) => node.dataset.orteImageKey)
+    ].filter(Boolean));
+    const makeKey = (prefix) => {
+      let index = 0;
+      let key = `${prefix}-${String(index).padStart(4, "0")}`;
+      while (usedKeys.has(key)) {
+        index += 1;
+        key = `${prefix}-${String(index).padStart(4, "0")}`;
+      }
+      usedKeys.add(key);
+      return key;
+    };
+
+    root.querySelectorAll(".orte-image-slot:not([data-orte-image-key])").forEach((slot) => {
+      virtualSlotKeys.set(slot, makeKey(getImageKeyPrefix(slot)));
+    });
+
+    root.querySelectorAll("img").forEach((image) => {
+      if (isInsideIgnoredSurface(image)) return;
+
+      const keyedSlot = image.closest("[data-orte-image-key]");
+      const unkeyedSlot = image.closest(".orte-image-slot:not([data-orte-image-key])");
+      const key = keyedSlot?.dataset?.orteImageKey
+        || (unkeyedSlot ? virtualSlotKeys.get(unkeyedSlot) : "")
+        || image.dataset.orteInlineImageKey
+        || makeKey(getImageKeyPrefix(image));
+      if (!key) return;
+
+      const source = image.getAttribute("src") || "";
+      if (!source || isPlaceholderImage(image)) return;
+
+      const link = image.closest("a[href]");
+      const label = keyedSlot?.dataset?.orteImageLabel
+        || unkeyedSlot?.dataset?.orteImageLabel
+        || getImageSlotLabel(image);
+      templateImageFallbacks.set(key, normalizeImageState({
+        src: source,
+        href: link?.getAttribute("href") || "",
+        alt: image.getAttribute("alt") || label,
+        width: keyedSlot?.dataset?.orteImageWidth || unkeyedSlot?.dataset?.orteImageWidth || "",
+        maxHeight: keyedSlot?.dataset?.orteImageMaxHeight || unkeyedSlot?.dataset?.orteImageMaxHeight || "",
+        format: keyedSlot?.dataset?.orteImageFormat || unkeyedSlot?.dataset?.orteImageFormat || "",
+        fit: keyedSlot?.dataset?.orteImageFit || unkeyedSlot?.dataset?.orteImageFit || ""
+      }, label));
+    });
+  }
+
+  function resolveTemplateImageFallback(key, initialImage, label) {
+    const initial = normalizeImageState(initialImage, label);
+    if (initial.src) return initial;
+
+    const fallback = templateImageFallbacks.get(key);
+    if (!fallback?.src) return initial;
+
+    return normalizeImageState({
+      ...initial,
+      src: fallback.src,
+      href: initial.href || fallback.href,
+      alt: initial.alt && initial.alt !== label ? initial.alt : fallback.alt
+    }, label);
   }
 
   function renderImageSlots() {
@@ -3340,6 +3410,15 @@
 
     if (current.src && incomingIsLegacyEmpty) {
       return normalizeImageState({ ...incoming, ...current }, label);
+    }
+
+    if (current.src && !incomingSrc && String(source.href || "").trim()) {
+      return normalizeImageState({
+        ...incoming,
+        src: current.src,
+        href: incoming.href || current.href,
+        alt: incoming.alt && incoming.alt !== label ? incoming.alt : current.alt
+      }, label);
     }
 
     return incoming;
