@@ -1389,9 +1389,28 @@
 
   function canInsertImagePlaceholder(cell) {
     if (!cell || isInsideIgnoredSurface(cell)) return false;
-    if (cell.querySelector("table, img, [data-orte-image-key], [data-orte-rating-key], .orte-cell-image-insert")) return false;
-    const text = normalizeWhitespace(cell.textContent).replace(/\u00c2/g, "");
+    if (cell.querySelector("table, img, .orte-image-slot, [data-orte-image-key], [data-orte-rating-key], .orte-cell-image-insert")) return false;
+    const text = getCellUserText(cell);
     return !text || /^bildplatzhalter$/i.test(text);
+  }
+
+  function getCellUserText(cell) {
+    const clone = cell?.cloneNode?.(true);
+    if (!clone) return "";
+    clone.querySelectorAll([
+      ".orte-table-add-control",
+      ".orte-table-row-controls",
+      ".orte-cell-image-insert",
+      ".table-editor-toolbar",
+      ".orte-inline-image-hint",
+      ".orte-inline-image-panel",
+      ".orte-image-placeholder-media"
+    ].join(",")).forEach((node) => node.remove());
+
+    return normalizeWhitespace(clone.textContent)
+      .replace(/\u00c2/g, "")
+      .replace(/\u00a0/g, " ")
+      .trim();
   }
 
   function handleTableCellContextMenu(event) {
@@ -3056,6 +3075,7 @@
       if (table?.tBodies[0]) {
         table.tBodies[0].innerHTML = String(html || "");
         sanitizeLoadedTable(table);
+        state.tables[id] = getTableHtml(table);
       }
     });
   }
@@ -3161,6 +3181,42 @@
     });
     table.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
     table.querySelectorAll("td, th").forEach((cell) => sanitizeEditableNode(cell));
+    repairLegacyTemplateImageCells(table);
+  }
+
+  function repairLegacyTemplateImageCells(table) {
+    if (!table?.tBodies?.[0]) return;
+    Array.from(table.tBodies[0].rows || []).forEach((row, rowIndex) => {
+      Array.from(row.cells || []).forEach((cell, cellIndex) => {
+        if (!canRestoreTemplateImageFallback(cell)) return;
+
+        const image = getTemplateImageFallbackForCell(table, rowIndex, cellIndex);
+        if (!image?.src) return;
+
+        const slot = document.createElement("span");
+        const label = image.alt || "Bildplatzhalter";
+        slot.className = "orte-image-slot has-image";
+        slot.dataset.orteImageLabel = label;
+        slot.dataset.orteTemplateImageSrc = image.src;
+        slot.dataset.orteTemplateImageHref = image.href || "";
+        slot.dataset.orteTemplateImageAlt = image.alt || label;
+        slot.setAttribute("aria-label", label);
+        cell.textContent = "";
+        cell.append(slot);
+      });
+    });
+  }
+
+  function canRestoreTemplateImageFallback(cell) {
+    if (!cell || isInsideIgnoredSurface(cell)) return false;
+    if (cell.querySelector("table, img, .orte-image-slot, [data-orte-image-key], [data-orte-rating-key]")) return false;
+    const text = getCellUserText(cell);
+    return !text || /^bildplatzhalter$/i.test(text);
+  }
+
+  function getTemplateImageFallbackForCell(table, rowIndex, cellIndex, imageIndex = 0) {
+    const contextKey = `${table?.dataset?.orteTableId || ""}:${Number(rowIndex)}:${Number(cellIndex)}:${Number(imageIndex) || 0}`;
+    return templateImageFallbacksByContext.get(contextKey) || null;
   }
 
   function getTableHtml(table) {

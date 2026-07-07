@@ -416,7 +416,7 @@
 
       const imageRow = rows[index + 1];
       const nameRow = rows[index + 2];
-      if (!imageRow || !nameRow || !rowHasImages(imageRow) || !isPlaceNameRow(nameRow, columnCount)) continue;
+      if (!imageRow || !nameRow || !isPlaceNameRow(nameRow, columnCount)) continue;
 
       const section = ensureSection();
       const seatCells = Array.from(row.cells || []);
@@ -497,8 +497,20 @@
     }
 
     regularCards.forEach((card) => grid.append(renderFamilyCard(card)));
-    if (regularCards.length) block.append(grid);
+    grid.append(renderFamilyAddCard(section));
+    block.append(grid);
     return block;
+  }
+
+  function renderFamilyAddCard(section) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'kingdom-family-card kingdom-family-add-card';
+    button.dataset.kingdomFamilyAction = 'add-card';
+    button.dataset.kingdomFamilySourceId = section.table?.dataset?.kingdomFamilySourceId || '';
+    button.dataset.kingdomFamilyTitleRow = String(section.titleRowIndex);
+    button.innerHTML = '<span aria-hidden="true">+</span><strong>Haus hinzufuegen</strong>';
+    return button;
   }
 
   function renderFamilyCard(card, featured = false) {
@@ -516,15 +528,18 @@
 
     const crest = document.createElement('div');
     crest.className = 'kingdom-family-crest';
-    if (card.image && card.href) {
+    const hasRealImage = card.image && !card.image.classList?.contains('kingdom-card-image-placeholder');
+    if (hasRealImage && card.href) {
       const link = document.createElement('a');
       link.href = card.href;
       link.rel = 'noopener noreferrer';
       link.target = '_blank';
       link.append(card.image);
       crest.append(link);
-    } else if (card.image) {
+    } else if (hasRealImage) {
       crest.append(card.image);
+    } else {
+      crest.append(renderFamilyCrestPlaceholder(card.source));
     }
     element.append(crest);
 
@@ -533,6 +548,16 @@
     name.textContent = card.name || 'Unbenanntes Haus';
     element.append(name);
     return element;
+  }
+
+  function renderFamilyCrestPlaceholder(source) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'kingdom-family-crest-placeholder';
+    button.dataset.kingdomFamilyAction = 'edit-image';
+    button.textContent = '+ Bild';
+    applyFamilySourceDataset(button, source);
+    return button;
   }
 
   function renderFamilySectionControls(section) {
@@ -618,14 +643,23 @@
 
   function editFamilyCardImage(source) {
     const cell = getFamilySourceCell(source.table, source.imageRowIndex, source.cellIndex);
-    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key]');
-    if (slot) {
+    const slot = cell?.querySelector?.('.orte-image-slot[data-orte-image-key], .orte-image-slot');
+    if (slot?.dataset?.orteImageKey) {
       window.AleriaInlineEditor?.editImageSlot?.(slot);
       return;
     }
 
+    if (slot) {
+      window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
+      window.setTimeout(() => {
+        const normalizedSlot = cell.querySelector('.orte-image-slot[data-orte-image-key]');
+        window.AleriaInlineEditor?.editImageSlot?.(normalizedSlot || slot);
+      }, 60);
+      return;
+    }
+
     if (cell) {
-      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
+      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Hauswappen" aria-label="Hauswappen"></span>';
       window.AleriaInlineEditor?.notifyTableChanged?.(source.table);
       const nextSlot = cell.querySelector('.orte-image-slot[data-orte-image-key], .orte-image-slot');
       window.setTimeout(() => window.AleriaInlineEditor?.editImageSlot?.(nextSlot), 60);
@@ -757,7 +791,7 @@
     delete cell.dataset.kingdomFamilyDeleted;
     cell.removeAttribute('contenteditable');
     if (role === 'image') {
-      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Bildplatzhalter" aria-label="Bildplatzhalter"></span>';
+      cell.innerHTML = '<span class="orte-image-slot" data-orte-image-label="Hauswappen" aria-label="Hauswappen"></span>';
       return;
     }
     cell.innerHTML = role === 'name' || role === 'seat' ? '<b>...</b>' : '&nbsp;';
@@ -790,7 +824,7 @@
 
       const imageRow = rows[index + 1];
       const nameRow = rows[index + 2];
-      if (!imageRow || !nameRow || !rowHasImages(imageRow) || !isPlaceNameRow(nameRow, getTableColumnCount(table))) continue;
+      if (!imageRow || !nameRow || !isPlaceNameRow(nameRow, getTableColumnCount(table))) continue;
       last = {
         liegeRow: isFamilyLiegeRow(rows[index - 1]) ? rows[index - 1] : null,
         seatRow: rows[index],
