@@ -15,8 +15,11 @@
 
   const countyCardViews = new WeakMap();
   const countyObservers = new WeakMap();
+  const familyCardViews = new WeakMap();
+  const familyObservers = new WeakMap();
 
   enhanceCountyGeographyTables();
+  enhanceCountyFamilyTables();
 
   const sectionMap = [
     { id: 'einfuehrung', pattern: /^1\.\)\s*Einführung/i },
@@ -127,6 +130,9 @@
     page.querySelectorAll('.kingdom-county-geography-table.is-county-card-source').forEach((table) => {
       table.setAttribute('aria-hidden', editing ? 'false' : 'true');
     });
+    page.querySelectorAll('.kingdom-county-family-table.is-family-card-source').forEach((table) => {
+      table.setAttribute('aria-hidden', editing ? 'false' : 'true');
+    });
   }
 
   new MutationObserver(syncCountyViewMode).observe(document.body, {
@@ -157,8 +163,12 @@
         if (isCountyMap) {
           data.mapCell = imageCell;
         } else if (currentDomain) {
-          currentDomain.crestCell = imageCell;
-          currentDomain.expectsCenter = true;
+          if (currentDomain.center && !currentDomain.centerCell && !currentDomain.expectsCenter) {
+            currentDomain.centerCell = imageCell;
+          } else {
+            currentDomain.crestCell = imageCell;
+            currentDomain.expectsCenter = true;
+          }
         }
         continue;
       }
@@ -177,6 +187,13 @@
 
         if (isPlaceGroupLabel(text)) {
           currentGroupLabel = text;
+          if (currentDomain) appendPlaceSeparator(currentDomain, text);
+          continue;
+        }
+
+        if (currentDomain && isPlaceSeparatorRow(row, text)) {
+          currentGroupLabel = text;
+          appendPlaceSeparator(currentDomain, text);
           continue;
         }
 
@@ -184,6 +201,7 @@
           title: text,
           center: '',
           crestCell: null,
+          centerCell: null,
           places: [],
           expectsCenter: false,
         };
@@ -223,9 +241,190 @@
     return view.children.length ? view : null;
   }
 
+  function enhanceCountyFamilyTables() {
+    page.querySelectorAll('.kingdom-county-family-table').forEach((table) => {
+      renderCountyFamilyView(table);
+      observeCountyFamilyTable(table);
+    });
+    syncCountyViewMode();
+  }
+
+  function observeCountyFamilyTable(table) {
+    if (familyObservers.has(table) || !table.tBodies[0]) return;
+
+    let timer = 0;
+    const observer = new MutationObserver(() => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        renderCountyFamilyView(table);
+        syncCountyViewMode();
+      }, 80);
+    });
+    observer.observe(table.tBodies[0], { childList: true, subtree: true, characterData: true });
+    familyObservers.set(table, observer);
+  }
+
+  function renderCountyFamilyView(table) {
+    const existing = familyCardViews.get(table);
+    if (existing) existing.remove();
+
+    const view = buildCountyFamilyView(table);
+    if (!view) return;
+
+    const wrapper = table.parentElement && table.parentElement.classList.contains('kingdom-table-scroll')
+      ? table.parentElement
+      : null;
+    const anchor = wrapper || table;
+
+    table.classList.add('is-family-card-source');
+    if (wrapper) wrapper.classList.add('is-family-card-source-wrapper');
+    anchor.insertAdjacentElement('afterend', view);
+    familyCardViews.set(table, view);
+  }
+
+  function buildCountyFamilyView(table) {
+    const rows = Array.from(table.tBodies[0]?.rows || []);
+    if (!rows.length) return null;
+
+    const columnCount = getTableColumnCount(table);
+    const sections = [];
+    let currentSection = null;
+    let pendingLiegeCells = null;
+
+    const ensureSection = (title = 'Adelshaeuser') => {
+      if (currentSection) return currentSection;
+      currentSection = { title, cards: [] };
+      sections.push(currentSection);
+      return currentSection;
+    };
+
+    for (let index = 0; index < rows.length; index += 1) {
+      const row = rows[index];
+      const text = getCleanText(row);
+      if (isEmptyRow(row)) continue;
+
+      if (isFullTextRow(row, columnCount)) {
+        if (isFamilySingleCardStart(row, rows[index + 1], rows[index + 2], columnCount)) {
+          const section = ensureSection();
+          section.cards.push({
+            liege: '',
+            seat: text,
+            image: cloneImage(rows[index + 1]?.cells?.[0]),
+            href: getImageHref(rows[index + 1]?.cells?.[0]),
+            name: getCleanText(rows[index + 2])
+          });
+          index += 2;
+          continue;
+        }
+
+        if (isFamilySectionTitle(row, text)) {
+          currentSection = { title: text, cards: [] };
+          sections.push(currentSection);
+          pendingLiegeCells = null;
+        }
+        continue;
+      }
+
+      if (isFamilyLiegeRow(row)) {
+        pendingLiegeCells = Array.from(row.cells || []);
+        continue;
+      }
+
+      if (!isFamilySeatRow(row)) continue;
+
+      const imageRow = rows[index + 1];
+      const nameRow = rows[index + 2];
+      if (!imageRow || !nameRow || !rowHasImages(imageRow) || !isPlaceNameRow(nameRow, columnCount)) continue;
+
+      const section = ensureSection();
+      const seatCells = Array.from(row.cells || []);
+      const imageCells = Array.from(imageRow.cells || []);
+      const nameCells = Array.from(nameRow.cells || []);
+
+      imageCells.forEach((cell, cellIndex) => {
+        const image = cloneImage(cell);
+        const name = getCleanText(nameCells[cellIndex]);
+        const seat = getCleanText(seatCells[cellIndex]);
+        const liege = getCleanText(pendingLiegeCells?.[cellIndex]);
+        if (!image && !name && !seat && !liege) return;
+
+        section.cards.push({
+          liege,
+          seat,
+          image,
+          href: getImageHref(cell),
+          name
+        });
+      });
+
+      pendingLiegeCells = null;
+      index += 2;
+    }
+
+    const filledSections = sections
+      .map((section) => ({ ...section, cards: section.cards.filter((card) => card.image || card.name || card.seat || card.liege) }))
+      .filter((section) => section.cards.length);
+    if (!filledSections.length) return null;
+
+    const view = document.createElement('div');
+    view.className = 'kingdom-family-card-view';
+    filledSections.forEach((section) => view.append(renderFamilySection(section)));
+    return view;
+  }
+
+  function renderFamilySection(section) {
+    const block = document.createElement('section');
+    block.className = 'kingdom-family-section';
+
+    const title = document.createElement('h3');
+    title.textContent = section.title || 'Adelshaeuser';
+    block.append(title);
+
+    const grid = document.createElement('div');
+    grid.className = 'kingdom-family-grid';
+    section.cards.forEach((card) => grid.append(renderFamilyCard(card)));
+    block.append(grid);
+    return block;
+  }
+
+  function renderFamilyCard(card) {
+    const element = document.createElement(card.href ? 'a' : 'article');
+    element.className = 'kingdom-family-card';
+    if (card.href) {
+      element.href = card.href;
+      element.rel = 'noopener noreferrer';
+      element.target = '_blank';
+    }
+
+    const meta = document.createElement('div');
+    meta.className = 'kingdom-family-meta';
+    if (card.liege) meta.append(renderFamilyMetaItem('Lehenstreue', card.liege));
+    if (card.seat) meta.append(renderFamilyMetaItem('Sitz', card.seat));
+    element.append(meta);
+
+    const crest = document.createElement('div');
+    crest.className = 'kingdom-family-crest';
+    if (card.image) crest.append(card.image);
+    element.append(crest);
+
+    const name = document.createElement('strong');
+    name.className = 'kingdom-family-name';
+    name.textContent = card.name || 'Unbenanntes Haus';
+    element.append(name);
+    return element;
+  }
+
+  function renderFamilyMetaItem(label, value) {
+    const item = document.createElement('span');
+    item.className = `kingdom-family-meta-item kingdom-family-meta-${label === 'Lehenstreue' ? 'liege' : 'seat'}`;
+    item.innerHTML = `<span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>`;
+    return item;
+  }
+
   function renderDomainCard(domain) {
+    const placeCount = domain.places.filter((place) => place.kind !== 'separator').length;
     const section = document.createElement('section');
-    section.className = `kingdom-domain-card${domain.places.length === 1 ? ' kingdom-domain-card-compact' : ''}`;
+    section.className = `kingdom-domain-card${placeCount === 1 ? ' kingdom-domain-card-compact' : ''}`;
 
     const header = document.createElement('header');
     header.className = 'kingdom-domain-header';
@@ -241,7 +440,7 @@
     const titleWrap = document.createElement('div');
     titleWrap.className = 'kingdom-domain-title';
     titleWrap.innerHTML = `<h3>${escapeHtml(domain.title || 'Herrschaft')}</h3>`;
-    if (domain.center) {
+    if (domain.center && domain.places.length) {
       const center = document.createElement('p');
       center.textContent = `Zentrum: ${domain.center}`;
       titleWrap.append(center);
@@ -257,7 +456,21 @@
     } else if (domain.center) {
       const centerPanel = document.createElement('div');
       centerPanel.className = 'kingdom-domain-center-panel';
-      centerPanel.innerHTML = `<span>Zentrum</span><strong>${escapeHtml(domain.center)}</strong>`;
+      const centerImage = cloneImage(domain.centerCell);
+      centerPanel.classList.toggle('has-center-icon', !!centerImage);
+      if (centerImage) {
+        const imageFrame = document.createElement('span');
+        imageFrame.className = 'kingdom-domain-center-icon';
+        imageFrame.append(centerImage);
+        centerPanel.append(imageFrame);
+      }
+      const label = document.createElement('span');
+      label.className = 'kingdom-domain-center-label';
+      label.textContent = 'Zentrum';
+      const value = document.createElement('strong');
+      value.className = 'kingdom-domain-center-name';
+      value.textContent = domain.center;
+      centerPanel.append(label, value);
       section.append(centerPanel);
     }
 
@@ -265,6 +478,13 @@
   }
 
   function renderPlaceCard(place) {
+    if (place.kind === 'separator') {
+      const separator = document.createElement('div');
+      separator.className = 'kingdom-place-separator';
+      separator.textContent = place.title || 'Abschnitt';
+      return separator;
+    }
+
     const card = document.createElement(place.href ? 'a' : 'div');
     card.className = 'kingdom-place-card';
     if (place.href) {
@@ -301,9 +521,21 @@
       const image = cloneImage(cell);
       const name = getCleanText(nameCells[index]);
       const type = getCleanText(typeCells[index]) || fallbackType;
-      const href = cell.querySelector('img')?.closest('a[href]')?.getAttribute('href') || '';
+      const href = getImageHref(cell);
       return { image, name, type, href };
     }).filter((place) => place.image || place.name);
+  }
+
+  function getImageHref(cell) {
+    return cell?.querySelector?.('img')?.closest('a[href]')?.getAttribute('href') || '';
+  }
+
+  function appendPlaceSeparator(domain, title) {
+    const normalizedTitle = getCleanText({ textContent: title });
+    if (!normalizedTitle || !domain?.places) return;
+    const last = domain.places[domain.places.length - 1];
+    if (last?.kind === 'separator' && last.title === normalizedTitle) return;
+    domain.places.push({ kind: 'separator', title: normalizedTitle });
   }
 
   function cloneLinkedImage(cell) {
@@ -351,14 +583,14 @@
   }
 
   function isFullTextRow(row, columnCount) {
-    return row.cells.length === 1
+    return row?.cells?.length === 1
       && Number(row.cells[0].colSpan || 1) >= columnCount
       && !rowHasImages(row)
       && !!getCleanText(row);
   }
 
   function isFullImageRow(row, columnCount) {
-    return row.cells.length === 1
+    return row?.cells?.length === 1
       && Number(row.cells[0].colSpan || 1) >= columnCount
       && rowHasImages(row);
   }
@@ -400,7 +632,64 @@
     if (!text || isPlaceGroupLabel(text)) return false;
     const cell = row.cells[0];
     const style = cell?.getAttribute('style') || '';
-    return style.includes('153,0,0') || style.includes('153, 0, 0');
+    return style.includes('153,0,0')
+      || style.includes('153, 0, 0')
+      || style.includes('51,51,51')
+      || style.includes('51, 51, 51');
+  }
+
+  function isPlaceSeparatorRow(row, text) {
+    if (!row || !text || isDomainTitle(text)) return false;
+    const cell = row.cells?.[0];
+    const style = cell?.getAttribute('style') || '';
+    return style.includes('102,102,102')
+      || style.includes('102, 102, 102')
+      || style.includes('153,153,153')
+      || style.includes('153, 153, 153');
+  }
+
+  function isDomainTitle(text) {
+    return /^(herrschaft|baronie|gr[aä]fische\s+baronie|region)\b/i.test(text);
+  }
+
+  function isFamilySingleCardStart(row, imageRow, nameRow, columnCount) {
+    const text = getCleanText(row);
+    return !!text
+      && !isFamilySectionTitle(row, text)
+      && isFamilySeatLabelRow(row)
+      && isFullImageRow(imageRow, columnCount)
+      && isFullTextRow(nameRow, columnCount);
+  }
+
+  function isFamilySectionTitle(row, text) {
+    if (!text) return false;
+    return /h[aä]user|ritterh[aä]user|adel/i.test(text) && hasRowColor(row, ['0,0,0', '0, 0, 0', '51,51,51', '51, 51, 51']);
+  }
+
+  function isFamilyLiegeRow(row) {
+    return row?.cells?.length > 1
+      && hasRowText(row)
+      && hasRowColor(row, ['102,102,102', '102, 102, 102']);
+  }
+
+  function isFamilySeatRow(row) {
+    return row?.cells?.length > 1
+      && hasRowText(row)
+      && hasRowColor(row, ['153,153,153', '153, 153, 153']);
+  }
+
+  function isFamilySeatLabelRow(row) {
+    return hasRowText(row)
+      && hasRowColor(row, ['153,153,153', '153, 153, 153']);
+  }
+
+  function hasRowText(row) {
+    return Array.from(row?.cells || []).some((cell) => getCleanText(cell));
+  }
+
+  function hasRowColor(row, tokens) {
+    const values = Array.from(row?.cells || []).map((cell) => cell.getAttribute('style') || '');
+    return values.some((style) => tokens.some((token) => style.includes(token)));
   }
 
   function isPlaceGroupLabel(text) {
@@ -427,6 +716,7 @@
     clone?.querySelectorAll?.([
       '.orte-table-add-control',
       '.orte-table-row-controls',
+      '.orte-cell-image-insert',
       '.table-editor-toolbar',
       '.orte-inline-image-hint',
       '.orte-image-slot',
@@ -435,6 +725,7 @@
     ].join(',')).forEach((item) => item.remove());
 
     return String(source?.textContent || '')
+      .replace(/\u00c2/g, '')
       .replace(/\u00a0/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();

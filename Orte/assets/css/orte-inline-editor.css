@@ -423,6 +423,44 @@
   font: 700 13px Georgia, "Times New Roman", serif;
 }
 
+.orte-image-insert-cell {
+  position: relative;
+  min-height: 46px;
+}
+
+.orte-cell-image-insert {
+  display: none;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 28;
+  min-width: 74px;
+  min-height: 28px;
+  padding: 4px 9px;
+  cursor: pointer;
+  border: 1px dashed #8b6325;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 244, 206, 0.96), rgba(219, 185, 113, 0.94)),
+    #e7cc8b;
+  color: #2c1b0b;
+  font: 700 12px Georgia, "Times New Roman", serif;
+  box-shadow: 0 2px 7px rgba(35, 20, 7, 0.18);
+  transform: translate(-50%, -50%);
+}
+
+.orte-inline-editing .orte-image-insert-cell .orte-cell-image-insert {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orte-cell-image-insert:hover,
+.orte-cell-image-insert:focus-visible {
+  border-style: solid;
+  background: #7c5a22;
+  color: #fff2cf;
+}
+
 .orte-table-layout-control {
   display: inline-flex;
   gap: 3px;

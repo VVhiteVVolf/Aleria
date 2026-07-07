@@ -67,6 +67,7 @@
     "pick-orte-table-heading-color",
     "set-orte-portrait-column-count",
     "insert-orte-table-empty-row-after",
+    "insert-orte-image-placeholder",
     "insert-orte-table-portrait-row-after",
     "insert-orte-table-row-before",
     "insert-orte-table-row-after",
@@ -97,9 +98,11 @@
     ".orte-inline-image-overlay",
     ".orte-table-add-control",
     ".orte-table-row-controls",
+    ".orte-cell-image-insert",
     ".table-editor-toolbar",
     ".orte-section-controls",
-    ".kingdom-county-card-view"
+    ".kingdom-county-card-view",
+    ".kingdom-family-card-view"
   ].join(", ");
 
   loadTableEditorAssets().finally(init);
@@ -524,6 +527,12 @@
       return;
     }
 
+    if (action === "insert-orte-image-placeholder") {
+      insertImagePlaceholderIntoCell(target);
+      event.preventDefault();
+      return;
+    }
+
     if (action === "insert-orte-table-portrait-row-after") {
       insertPortraitRowNear(target, "after");
       event.preventDefault();
@@ -614,6 +623,7 @@
     renderImageSlots();
     renderRatings();
     renderTableControls();
+    renderTableImagePlaceholderControls();
     updateDocumentStatusControls();
     updateHistoryButtons();
     tableEditor?.setEditMode(editMode);
@@ -644,6 +654,7 @@
     renderImageSlots();
     renderRatings();
     renderTableControls();
+    renderTableImagePlaceholderControls();
     applySectionVisibility();
     renderSectionControls();
     tableEditor?.refresh();
@@ -1076,9 +1087,44 @@
     });
   }
 
+  function renderTableImagePlaceholderControls() {
+    if (!editMode) return;
+
+    tableItems.forEach((item) => {
+      Array.from(item.table.querySelectorAll("td, th")).forEach((cell) => {
+        if (!canInsertImagePlaceholder(cell)) return;
+
+        const row = cell.parentElement;
+        const rowIndex = Array.from(item.table.tBodies[0]?.rows || []).indexOf(row);
+        const cellIndex = Array.from(row?.cells || []).indexOf(cell);
+        if (rowIndex < 0 || cellIndex < 0) return;
+
+        cell.classList.add("orte-image-insert-cell");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "orte-cell-image-insert";
+        button.dataset.action = "insert-orte-image-placeholder";
+        button.dataset.orteTableTarget = item.id;
+        button.dataset.orteTableRowIndex = String(rowIndex);
+        button.dataset.orteTableCellIndex = String(cellIndex);
+        button.title = "Bildplatzhalter in diese Zelle setzen";
+        button.textContent = "+ Bild";
+        cell.append(button);
+      });
+    });
+  }
+
+  function canInsertImagePlaceholder(cell) {
+    if (!cell || isInsideIgnoredSurface(cell)) return false;
+    if (cell.querySelector("table, img, [data-orte-image-key], [data-orte-rating-key], .orte-cell-image-insert")) return false;
+    const text = normalizeWhitespace(cell.textContent).replace(/\u00c2/g, "");
+    return !text || /^bildplatzhalter$/i.test(text);
+  }
+
   function refreshTableControls() {
     if (!editMode) return;
     renderTableControls();
+    renderTableImagePlaceholderControls();
   }
 
   function renderPortraitLayoutControls(table, tableId, rowIndex) {
@@ -1388,6 +1434,36 @@
 
     updateTableState(table);
     rebuildTargets();
+    markDirty();
+  }
+
+  function insertImagePlaceholderIntoCell(button) {
+    const table = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (!table) return;
+
+    const row = getTableRowByIndex(table, button.dataset.orteTableRowIndex);
+    const cell = row?.cells?.[Number(button.dataset.orteTableCellIndex)];
+    if (!cell || !canInsertImagePlaceholder(cell)) return;
+
+    cell.innerHTML = "";
+    const slot = document.createElement("span");
+    slot.className = "orte-image-slot";
+    slot.dataset.orteImageLabel = "Bildplatzhalter";
+    slot.dataset.ortePendingImageOpen = "1";
+    slot.setAttribute("aria-label", "Bildplatzhalter");
+    cell.append(slot);
+
+    rebuildTargets();
+
+    const refreshedTable = root.querySelector(`[data-orte-table-id="${cssEscape(button.dataset.orteTableTarget)}"]`);
+    if (refreshedTable) updateTableState(refreshedTable);
+
+    const pendingSlot = root.querySelector("[data-orte-pending-image-open='1']");
+    if (pendingSlot?.dataset?.orteImageKey) {
+      delete pendingSlot.dataset.ortePendingImageOpen;
+      window.setTimeout(() => openImagePanel(pendingSlot.dataset.orteImageKey), 0);
+    }
+
     markDirty();
   }
 
@@ -2544,7 +2620,8 @@
   }
 
   function removeInlineEditorControls() {
-    document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls").forEach((control) => control.remove());
+    document.querySelectorAll(".orte-table-add-control, .orte-table-row-controls, .orte-cell-image-insert").forEach((control) => control.remove());
+    document.querySelectorAll(".orte-image-insert-cell").forEach((cell) => cell.classList.remove("orte-image-insert-cell"));
   }
 
   function resetClonedFragment(fragment) {
@@ -2739,7 +2816,8 @@
   }
 
   function sanitizeLoadedTable(table) {
-    table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control, .table-editor-toolbar").forEach((node) => node.remove());
+    table.querySelectorAll(".orte-table-row-controls, .orte-table-add-control, .orte-cell-image-insert, .table-editor-toolbar").forEach((node) => node.remove());
+    table.querySelectorAll(".orte-image-insert-cell").forEach((node) => node.classList.remove("orte-image-insert-cell"));
     table.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
       node.classList.remove("table-editor-active-cell", "table-editor-active-table");
     });
@@ -2759,7 +2837,11 @@
       node.removeAttribute("data-orte-inline-text");
     });
     clone.querySelectorAll(".orte-cell-editable").forEach(unwrapElement);
-    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-inline-image-hint, .orte-image-placeholder-media, .table-editor-toolbar").forEach((node) => node.remove());
+    clone.querySelectorAll(".orte-inline-image-panel, .orte-table-add-control, .orte-table-row-controls, .orte-cell-image-insert, .orte-inline-image-hint, .orte-image-placeholder-media, .table-editor-toolbar").forEach((node) => node.remove());
+    clone.querySelectorAll(".orte-image-insert-cell").forEach((node) => node.classList.remove("orte-image-insert-cell"));
+    clone.querySelectorAll("[data-orte-pending-image-open]").forEach((node) => {
+      node.removeAttribute("data-orte-pending-image-open");
+    });
     clone.querySelectorAll(".table-editor-active-cell, .table-editor-active-table").forEach((node) => {
       node.classList.remove("table-editor-active-cell", "table-editor-active-table");
     });
