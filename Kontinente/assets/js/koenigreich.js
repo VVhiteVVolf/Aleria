@@ -307,6 +307,7 @@
         if (isFamilySingleCardStart(row, rows[index + 1], rows[index + 2], columnCount)) {
           const section = ensureSection();
           section.cards.push({
+            featured: true,
             liege: '',
             seat: text,
             image: cloneImage(rows[index + 1]?.cells?.[0]),
@@ -382,14 +383,24 @@
 
     const grid = document.createElement('div');
     grid.className = 'kingdom-family-grid';
-    section.cards.forEach((card) => grid.append(renderFamilyCard(card)));
-    block.append(grid);
+    const featuredCards = section.cards.filter((card) => card.featured);
+    const regularCards = section.cards.filter((card) => !card.featured);
+
+    if (featuredCards.length) {
+      const featuredGrid = document.createElement('div');
+      featuredGrid.className = 'kingdom-family-featured';
+      featuredCards.forEach((card) => featuredGrid.append(renderFamilyCard(card, true)));
+      block.append(featuredGrid);
+    }
+
+    regularCards.forEach((card) => grid.append(renderFamilyCard(card)));
+    if (regularCards.length) block.append(grid);
     return block;
   }
 
-  function renderFamilyCard(card) {
+  function renderFamilyCard(card, featured = false) {
     const element = document.createElement(card.href ? 'a' : 'article');
-    element.className = 'kingdom-family-card';
+    element.className = `kingdom-family-card${featured ? ' is-family-featured' : ''}`;
     if (card.href) {
       element.href = card.href;
       element.rel = 'noopener noreferrer';
@@ -417,7 +428,8 @@
   function renderFamilyMetaItem(label, value) {
     const item = document.createElement('span');
     item.className = `kingdom-family-meta-item kingdom-family-meta-${label === 'Lehenstreue' ? 'liege' : 'seat'}`;
-    item.innerHTML = `<span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>`;
+    item.setAttribute('aria-label', `${label}: ${value}`);
+    item.innerHTML = `<strong>${escapeHtml(value)}</strong>`;
     return item;
   }
 

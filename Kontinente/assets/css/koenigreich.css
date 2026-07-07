@@ -669,6 +669,12 @@ a.kingdom-place-card:focus-visible .kingdom-place-icon-frame img {
   gap: 0.9rem;
 }
 
+.kingdom-family-featured {
+  display: grid;
+  justify-items: center;
+  margin: 0.15rem 0 1.1rem;
+}
+
 .kingdom-family-card {
   display: grid;
   grid-template-rows: auto minmax(112px, auto) auto;
@@ -686,6 +692,19 @@ a.kingdom-place-card:focus-visible .kingdom-place-icon-frame img {
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
+.kingdom-family-card.is-family-featured {
+  width: min(100%, 360px);
+  min-height: 306px;
+  padding: 0.85rem 0.85rem 0.95rem;
+  border-color: rgba(106, 61, 18, 0.5);
+  background:
+    radial-gradient(circle at 50% 34%, rgba(255, 240, 162, 0.28), transparent 9rem),
+    linear-gradient(180deg, rgba(255, 250, 232, 0.92), rgba(237, 211, 145, 0.84));
+  box-shadow:
+    0 12px 26px rgba(54, 32, 10, 0.18),
+    inset 0 0 0 1px rgba(255, 254, 242, 0.58);
+}
+
 a.kingdom-family-card:hover,
 a.kingdom-family-card:focus-visible {
   transform: translateY(-2px);
@@ -698,13 +717,14 @@ a.kingdom-family-card:focus-visible {
 .kingdom-family-meta {
   display: grid;
   gap: 0.3rem;
-  min-height: 3.4rem;
+  min-height: 2.72rem;
 }
 
 .kingdom-family-meta-item {
   display: grid;
-  gap: 0.08rem;
-  padding: 0.34rem 0.45rem;
+  place-items: center;
+  min-height: 2.2rem;
+  padding: 0.28rem 0.45rem;
   border-radius: 4px;
   background: linear-gradient(180deg, #a87833, #7a5523);
   color: #fff2cf;
@@ -720,18 +740,15 @@ a.kingdom-family-card:focus-visible {
   color: #241305;
 }
 
-.kingdom-family-meta-item span {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .kingdom-family-meta-item strong {
   color: inherit;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   line-height: 1.14;
+}
+
+.kingdom-family-card.is-family-featured .kingdom-family-meta {
+  width: min(100%, 250px);
+  justify-self: center;
 }
 
 .kingdom-family-crest {
@@ -740,6 +757,11 @@ a.kingdom-family-card:focus-visible {
   min-height: 112px;
   border-radius: 999px;
   background: radial-gradient(circle, rgba(255, 248, 223, 0.72), rgba(177, 135, 61, 0.16) 64%, transparent 67%);
+}
+
+.kingdom-family-card.is-family-featured .kingdom-family-crest {
+  min-height: 154px;
+  background: radial-gradient(circle, rgba(255, 248, 223, 0.82), rgba(177, 135, 61, 0.22) 65%, transparent 68%);
 }
 
 .kingdom-family-crest img {
@@ -752,6 +774,12 @@ a.kingdom-family-card:focus-visible {
   filter: drop-shadow(0 6px 8px rgba(45, 29, 10, 0.26));
 }
 
+.kingdom-family-card.is-family-featured .kingdom-family-crest img {
+  max-width: 154px;
+  max-height: 154px;
+  filter: drop-shadow(0 9px 12px rgba(45, 29, 10, 0.3));
+}
+
 .kingdom-family-name {
   display: block;
   align-self: end;
@@ -759,6 +787,10 @@ a.kingdom-family-card:focus-visible {
   font-size: 1rem;
   line-height: 1.2;
   text-align: center;
+}
+
+.kingdom-family-card.is-family-featured .kingdom-family-name {
+  font-size: 1.28rem;
 }
 
 .kingdom-council-table tr > td:not([colspan]),
