@@ -84,6 +84,31 @@ function normalizeCommentModuleInsertItem(item) {
   };
 }
 
+function getCommentModuleInsertDisplaySize(item) {
+  const normalized = normalizeCommentModuleInsertItem(item);
+  if (!normalized) {
+    return typeof getModuleDisplaySize === 'function'
+      ? getModuleDisplaySize({})
+      : { width: 100, height: 100 };
+  }
+  if (typeof getModuleDisplaySize === 'function') {
+    return getModuleDisplaySize(normalized.entry || normalized);
+  }
+  const defaultSize = typeof MODULE_SIZE_DEFAULT === 'number' ? MODULE_SIZE_DEFAULT : 100;
+  const clamp = value => Math.max(60, Math.min(100, Math.round(Number(value) || defaultSize)));
+  return {
+    width: clamp(normalized.entry?.moduleWidth || normalized.moduleWidth),
+    height: clamp(normalized.entry?.moduleHeight || normalized.moduleHeight)
+  };
+}
+
+function applyCommentModuleInsertProfileSize(card, item) {
+  if (!card) return;
+  const size = getCommentModuleInsertDisplaySize(item);
+  card.style.setProperty('--comment-module-profile-width', `${size.width}vw`);
+  card.style.setProperty('--comment-module-profile-height', `${size.height}vh`);
+}
+
 function getCommentModuleInsertItem(comment) {
   return normalizeCommentModuleInsertItem(comment?.moduleInsert)
     || normalizeCommentModuleInsertItem(comment?.insertedModule)
@@ -145,13 +170,34 @@ function renderCommentModuleInsertCard(item, options = {}) {
     </${tag}>`;
 }
 
-function renderCommentModulePreviewPages(entry) {
+function clampCommentModulePreviewPageIndex(pages, pageIndex = 0) {
+  if (!Array.isArray(pages) || !pages.length) return 0;
+  const index = Number(pageIndex);
+  return Math.max(0, Math.min(pages.length - 1, Number.isFinite(index) ? index : 0));
+}
+
+function renderCommentModulePreviewPage(entry, pageIndex = 0) {
   const pages = getPages(entry);
-  return pages.map((page, index) => `
+  if (!pages.length) return '';
+  const index = clampCommentModulePreviewPageIndex(pages, pageIndex);
+  const page = pages[index];
+  return `
     <div class="comment-module-preview-page">
       ${pages.length > 1 ? `<div class="comment-module-preview-page-label">Seite ${index + 1} von ${pages.length}</div>` : ''}
       <div class="comment-module-preview-frame">${buildInlineModulePreview(page, entry, index, pages.length)}</div>
-    </div>`).join('');
+    </div>`;
+}
+
+function renderCommentModulePreviewPages(entry, options = {}) {
+  const pages = getPages(entry);
+  if (options.stacked) {
+    return pages.map((page, index) => `
+      <div class="comment-module-preview-page">
+        ${pages.length > 1 ? `<div class="comment-module-preview-page-label">Seite ${index + 1} von ${pages.length}</div>` : ''}
+        <div class="comment-module-preview-frame">${buildInlineModulePreview(page, entry, index, pages.length)}</div>
+      </div>`).join('');
+  }
+  return renderCommentModulePreviewPage(entry, options.pageIndex);
 }
 
 function renderCommentModuleInsertProfileContent(item, options = {}) {
@@ -168,7 +214,10 @@ function renderCommentModuleInsertProfileContent(item, options = {}) {
         ${entry.stamp ? `<div class="showcase-profile-stamp">${escapeHtml(entry.stamp)}</div>` : ''}
       </div>
       <div class="comment-module-preview-stage">
-        ${renderCommentModulePreviewPages(entry)}
+        ${renderCommentModulePreviewPages(entry, {
+          pageIndex: options.pageIndex,
+          stacked: !!options.preview
+        })}
       </div>
     </div>`;
 }

@@ -1,6 +1,8 @@
 // Form, preview, save, and edit flow for modules embedded in scene comments.
 let _moduleInsertAfterId = null;
 let _editingModuleInsertCommentId = null;
+let _moduleInsertProfileItem = null;
+let _moduleInsertProfilePageIndex = 0;
 
 function getSceneModuleInsertSection() {
   const preferred = typeof getPreferredEditorSection === 'function' ? getPreferredEditorSection() : null;
@@ -297,19 +299,106 @@ function closeModuleInsertForm() {
   _editingModuleInsertCommentId = null;
 }
 
+function getModuleInsertProfilePageCount(item = _moduleInsertProfileItem) {
+  const entry = buildCommentModuleEntry(item);
+  return entry ? getPages(entry).length : 0;
+}
+
+function clampModuleInsertProfilePageIndex(index, item = _moduleInsertProfileItem) {
+  const pageCount = getModuleInsertProfilePageCount(item);
+  if (!pageCount) return 0;
+  const numericIndex = Number(index);
+  return Math.max(0, Math.min(pageCount - 1, Number.isFinite(numericIndex) ? numericIndex : 0));
+}
+
+function renderOpenCommentModuleInsertProfile() {
+  const body = document.getElementById('mp-body');
+  if (!body || !_moduleInsertProfileItem) return;
+  _moduleInsertProfilePageIndex = clampModuleInsertProfilePageIndex(_moduleInsertProfilePageIndex);
+  body.innerHTML = renderCommentModuleInsertProfileContent(_moduleInsertProfileItem, {
+    pageIndex: _moduleInsertProfilePageIndex
+  });
+  const card = document.querySelector('#module-insert-profile-overlay .module-insert-profile-card');
+  if (card) card.scrollTop = 0;
+}
+
 function openCommentModuleInsertProfile(commentId) {
   const comment = findCachedCommentById(commentId);
   const item = getCommentModuleInsertItem(comment);
   const overlay = document.getElementById('module-insert-profile-overlay');
   const body = document.getElementById('mp-body');
   if (!overlay || !body || !item) return;
-  body.innerHTML = renderCommentModuleInsertProfileContent(item);
+  _moduleInsertProfileItem = item;
+  _moduleInsertProfilePageIndex = 0;
+  if (typeof applyCommentModuleInsertProfileSize === 'function') {
+    applyCommentModuleInsertProfileSize(overlay.querySelector('.module-insert-profile-card'), item);
+  }
+  renderOpenCommentModuleInsertProfile();
   activateDialog('module-insert-profile-overlay', { initialFocus: '.module-insert-profile-close' });
 }
 
 function closeCommentModuleInsertProfile() {
+  const card = document.querySelector('#module-insert-profile-overlay .module-insert-profile-card');
+  if (card) {
+    card.style.removeProperty('--comment-module-profile-width');
+    card.style.removeProperty('--comment-module-profile-height');
+  }
+  _moduleInsertProfileItem = null;
+  _moduleInsertProfilePageIndex = 0;
   deactivateDialog('module-insert-profile-overlay');
 }
+
+function setCommentModuleInsertProfilePage(index) {
+  if (!_moduleInsertProfileItem) return;
+  _moduleInsertProfilePageIndex = clampModuleInsertProfilePageIndex(index);
+  renderOpenCommentModuleInsertProfile();
+}
+
+function flipCommentModuleInsertProfilePage(direction) {
+  const delta = Number(direction) || 0;
+  if (!delta) return;
+  setCommentModuleInsertProfilePage(_moduleInsertProfilePageIndex + delta);
+}
+
+function handleCommentModuleInsertProfilePageAction(event) {
+  const trigger = event.target?.closest?.('[data-modal-action]');
+  if (!trigger || !trigger.closest('#module-insert-profile-overlay')) return;
+  const action = trigger.dataset.modalAction;
+  if (action !== 'jump-page' && action !== 'flip-page') return;
+  event.preventDefault();
+  event.stopPropagation();
+  if (action === 'jump-page') {
+    setCommentModuleInsertProfilePage(Number(trigger.dataset.pageIndex) || 0);
+    return;
+  }
+  flipCommentModuleInsertProfilePage(Number(trigger.dataset.direction) || 0);
+}
+
+function isModuleInsertProfileTypingTarget(target) {
+  return !!target && (
+    target.tagName === 'INPUT' ||
+    target.tagName === 'TEXTAREA' ||
+    target.tagName === 'SELECT' ||
+    target.isContentEditable
+  );
+}
+
+function handleCommentModuleInsertProfileKeyboard(event) {
+  const overlay = document.getElementById('module-insert-profile-overlay');
+  if (!overlay?.classList.contains('active') || !_moduleInsertProfileItem) return;
+  if (isModuleInsertProfileTypingTarget(event.target)) return;
+  if (event.key === 'ArrowRight') {
+    event.preventDefault();
+    flipCommentModuleInsertProfilePage(1);
+  }
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault();
+    flipCommentModuleInsertProfilePage(-1);
+  }
+}
+
+document.addEventListener('click', handleCommentModuleInsertProfilePageAction);
+document.addEventListener('keydown', handleCommentModuleInsertProfileKeyboard);
 
 async function submitModuleInsertItem() {
   const errEl = document.getElementById('mf-error');

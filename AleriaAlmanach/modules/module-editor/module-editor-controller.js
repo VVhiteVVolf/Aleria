@@ -94,6 +94,14 @@ function applyModuleEditorContextChrome(context = {}) {
   if (templateHelp) templateHelp.textContent = isSceneCommentModule
     ? 'Ersetzt nur den Inhalt dieses eingebetteten Szenenmoduls. Bestehende Almanach-Module werden nicht beruehrt.'
     : 'Ersetzt die Seitenstruktur durch eine bearbeitbare Vorlage. ID, Bereich und Kommentar-Cast bleiben erhalten.';
+  const widthTitle = document.getElementById('me-module-width-title');
+  if (widthTitle) widthTitle.textContent = isSceneCommentModule ? 'Fensterbreite' : 'Breite';
+  const heightTitle = document.getElementById('me-module-height-title');
+  if (heightTitle) heightTitle.textContent = isSceneCommentModule ? 'Fensterhöhe / Länge' : 'Höhe / Länge';
+  const sizeHelp = document.getElementById('me-module-size-help');
+  if (sizeHelp) sizeHelp.textContent = isSceneCommentModule
+    ? 'Steuert die Größe des Modulfensters, das beim Anklicken in der interaktiven Szene geöffnet wird.'
+    : 'Bestimmt die Anzeigegröße des Modalfensters.';
   return isSceneCommentModule;
 }
 

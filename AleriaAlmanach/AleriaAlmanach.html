@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/archive.css?v=20260703-icon-picker-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260703-larger-module-modal-v1">
-<link rel="stylesheet" href="./styles/comments.css?v=20260704-compact-module-preview-v1">
+<link rel="stylesheet" href="./styles/comments.css?v=20260708-scene-module-window-size-v2">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260703-character-dashboard-v1">
-<link rel="stylesheet" href="./styles/module-editor.css?v=20260703-scene-module-editor-v1">
+<link rel="stylesheet" href="./styles/module-editor.css?v=20260708-scene-module-window-size-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260618-quest-file-layout-images-v1">
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260708-house-template-v1">
@@ -106,7 +106,7 @@
   <script src="./modules/module-editor/module-editor-family.js?v=20260629-family-groups-v1" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260620-character-inventory-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20260703-scene-module-editor-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20260708-scene-module-window-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260708-house-template-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
@@ -169,7 +169,7 @@
   <script src="./modules/comments/comments-render.js?v=20260629-comment-interactions-v8" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-module-insert-render.js?v=20260704-compact-module-preview-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert-render.js?v=20260708-scene-module-window-size-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/comments/comments-page.js?v=20260622-comment-action-icons-v1" defer></script>
@@ -194,7 +194,7 @@
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-module-insert.js?v=20260703-module-insert-json-v4" defer></script>
+  <script src="./modules/comments/comments-module-insert.js?v=20260708-scene-module-window-size-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-segments.js?v=20260604-scene-comments-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260629-comment-interactions-v2" defer></script>
@@ -1135,13 +1135,14 @@
               <input type="text" id="me-category" placeholder="z.B. Celtigerns Wacht · Anhörung">
             </div>
             <div class="module-editor-field">
-              <label>Breite <span id="me-module-width-label">100%</span></label>
+              <label><span id="me-module-width-title">Breite</span> <span id="me-module-width-label">100%</span></label>
               <input class="module-size-range" type="range" id="me-module-width" min="60" max="100" step="1" value="100" data-module-editor-action="update-size-labels">
             </div>
             <div class="module-editor-field">
-              <label>Höhe / Länge <span id="me-module-height-label">100%</span></label>
+              <label><span id="me-module-height-title">Höhe / Länge</span> <span id="me-module-height-label">100%</span></label>
               <input class="module-size-range" type="range" id="me-module-height" min="60" max="100" step="1" value="100" data-module-editor-action="update-size-labels">
             </div>
+            <div class="module-editor-help wide" id="me-module-size-help">Bestimmt die Anzeigegröße des Modalfensters.</div>
             <div class="module-editor-field wide">
               <label>Kartenbild</label>
               <input type="url" id="me-image" placeholder="https://i.imgur.com/...">

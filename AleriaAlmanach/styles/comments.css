@@ -2912,8 +2912,8 @@
   }
   .module-insert-profile-card {
     position: relative;
-    width: min(1320px, calc(100vw - 32px));
-    max-height: min(94vh, 940px);
+    width: min(1840px, calc(100vw - 16px), var(--comment-module-profile-width, 100vw));
+    max-height: min(calc(100vh - 16px), var(--comment-module-profile-height, 94vh));
     overflow: auto;
     background: var(--parchment);
     border: 2px solid var(--gold);
@@ -3094,6 +3094,12 @@
     background: rgba(255,255,255,0.14);
   }
   .comment-module-preview-frame .modal-page-header {
+    display: none;
+  }
+  .comment-module-profile-card:not(.comment-module-profile-preview) .comment-module-preview-frame .modal-page-header {
+    display: flex;
+  }
+  .comment-module-profile-card:not(.comment-module-profile-preview) .comment-module-preview-page-label {
     display: none;
   }
   .comment-module-preview-frame .modal-symbol {
