@@ -696,6 +696,7 @@
     display: flex;
     align-items: flex-start;
     gap: 0.8rem;
+    position: relative;
   }
   .comment-live-preview-body.comment-kind-thought {
     padding: 0.58rem 0.68rem;
@@ -940,6 +941,17 @@
     overflow-y: auto;
     padding: 1.2rem 1.4rem 0.5rem;
     gap: 1rem;
+  }
+  /* Keyed diff wrapper around each rendered comment — invisible to layout,
+     its children participate directly in the .comments-scroll flex/gap context. */
+  .comment-unit {
+    display: contents;
+  }
+  /* Pause all animations on comments scrolled out of view to cut idle GPU/compositing cost */
+  .comment-entry:not(.comment-in-view) *,
+  .comment-entry:not(.comment-in-view) *::before,
+  .comment-entry:not(.comment-in-view) *::after {
+    animation-play-state: paused;
   }
   /* ── KOMMENTAR SEITE ── */
   .comment-empty {
@@ -1251,47 +1263,62 @@
     color: #6f5634;
   }
   .comment-kind-thought {
-    border-color: rgba(75,112,150,0.38);
+    overflow: visible;
+    isolation: isolate;
+    border-color: rgba(75,112,150,0.34);
     background:
-      radial-gradient(circle at 16% 12%, rgba(255,255,255,0.82), rgba(255,255,255,0) 26%),
-      linear-gradient(135deg, rgba(207,226,241,0.88), rgba(231,239,247,0.76));
-    border-radius: 22px;
+      radial-gradient(circle at 20% 18%, rgba(255,255,255,0.92), rgba(255,255,255,0) 30%),
+      radial-gradient(circle at 82% 12%, rgba(255,255,255,0.55), rgba(255,255,255,0) 26%),
+      linear-gradient(135deg, rgba(214,231,246,0.92), rgba(235,242,250,0.82));
+    border-radius: 20px;
     box-shadow:
-      inset 0 0 0 1px rgba(255,255,255,0.58),
-      0 4px 14px rgba(75,112,150,0.14);
+      inset 0 0 0 1px rgba(255,255,255,0.62),
+      0 6px 20px rgba(75,112,150,0.16);
     color: #23384a;
+    animation: commentThoughtCloudMorph 7.5s ease-in-out infinite;
+  }
+  .comment-kind-thought > * {
+    position: relative;
+    z-index: 2;
   }
   .comment-body.comment-kind-thought {
     padding: 0.86rem 1.05rem;
   }
-  .comment-body.comment-kind-thought::before,
+  /* Soft bloom halo drifting behind the cloud */
   .comment-body.comment-kind-thought::after {
     content: '';
     position: absolute;
+    inset: -1.3rem;
+    z-index: 0;
     border-radius: 50%;
-    border: 1px solid rgba(75,112,150,0.34);
-    background: rgba(224,238,248,0.86);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.42);
+    background: radial-gradient(circle, rgba(150,190,230,0.4) 0%, rgba(150,190,230,0) 68%);
+    filter: blur(11px);
+    pointer-events: none;
+    animation: commentThoughtBloomPulse 4.4s ease-in-out infinite;
   }
+  /* Dotted trail of shrinking thought-bubbles toward the speaker */
   .comment-body.comment-kind-thought::before {
-    width: 0.72rem;
-    height: 0.72rem;
-    left: -0.86rem;
-    bottom: 0.48rem;
+    content: '';
+    position: absolute;
+    top: 58%;
+    width: 0.34rem;
+    height: 0.34rem;
+    border-radius: 50%;
+    background: rgba(75,112,150,0.62);
+    box-shadow:
+      0.55rem 0.32rem 0 -0.05rem rgba(75,112,150,0.5),
+      1.02rem 0.6rem 0 -0.12rem rgba(75,112,150,0.36);
+    z-index: 1;
+    pointer-events: none;
+    animation: commentThoughtDotsFloat 3.6s ease-in-out infinite;
   }
-  .comment-body.comment-kind-thought::after {
-    width: 0.42rem;
-    height: 0.42rem;
-    left: -1.38rem;
-    bottom: -0.02rem;
-  }
+  .comment-entry.left .comment-body.comment-kind-thought::before { left: -1.5rem; }
   .comment-entry.right .comment-body.comment-kind-thought::before {
     left: auto;
-    right: -0.86rem;
-  }
-  .comment-entry.right .comment-body.comment-kind-thought::after {
-    left: auto;
-    right: -1.38rem;
+    right: -1.5rem;
+    box-shadow:
+      -0.55rem 0.32rem 0 -0.05rem rgba(75,112,150,0.5),
+      -1.02rem 0.6rem 0 -0.12rem rgba(75,112,150,0.36);
   }
   .comment-kind-thought .comment-kind-badge {
     border-color: rgba(75,112,150,0.42);
@@ -1843,6 +1870,234 @@
     }
   }
 
+  /* Ornamental corner frame — shared across all comment kinds */
+  .comment-kind-speech    { --frame-color: rgba(139,105,20,0.55); --frame-ink: #8a6a1f; --frame-glyph: '❖'; }
+  .comment-kind-action    { --frame-color: rgba(107,87,57,0.55);  --frame-ink: #6f5634; --frame-glyph: '✦'; }
+  .comment-kind-thought   { --frame-color: rgba(75,112,150,0.55); --frame-ink: #3f6f9c; --frame-glyph: '✧'; }
+  .comment-kind-whisper   { --frame-color: rgba(122,73,142,0.55); --frame-ink: #8a4fa3; --frame-glyph: '❋'; --frame-duration: 4.4s; }
+  .comment-kind-shout     { --frame-color: rgba(151,44,36,0.72);  --frame-ink: #c53a2c; --frame-glyph: '▲'; --frame-duration: 1.5s; }
+  .comment-kind-animal    { --frame-color: rgba(112,130,82,0.62); --frame-ink: #7c9457; --frame-glyph: '❧'; }
+  .comment-kind-song      { --frame-color: rgba(118,103,178,0.6); --frame-ink: #7c72c9; --frame-glyph: '✦'; }
+  .comment-kind-spell     { --frame-color: rgba(104,170,179,0.72);--frame-ink: #3f97a6; --frame-glyph: '✧'; }
+  .comment-kind-madness   { --frame-color: rgba(197,57,36,0.6);   --frame-ink: #e8593d; --frame-glyph: '✺'; --frame-duration: 2.1s; }
+  .comment-kind-telepathy { --frame-color: rgba(113,255,237,0.85);--frame-ink: #4dede0; --frame-glyph: '✦'; }
+  .comment-kind-prayer    { --frame-color: rgba(224,174,68,0.82); --frame-ink: #d9a944; --frame-glyph: '✦'; }
+  .comment-kind-flirt     { --frame-color: rgba(232,72,130,0.65); --frame-ink: #ef3d80; --frame-glyph: '❤'; --frame-duration: 2.8s; }
+  .comment-kind-secretaction { --frame-color: rgba(58,26,20,0.75);   --frame-ink: #c79a3f; --frame-glyph: '❖'; }
+  .comment-kind-combataction { --frame-color: rgba(199,90,38,0.75);  --frame-ink: #e8703a; --frame-glyph: '✦'; --frame-duration: 1.8s; }
+
+  .comment-body,
+  .comment-live-preview-body {
+    outline: 1px solid var(--frame-color, transparent);
+    outline-offset: 3px;
+  }
+  /* Madness and thought keep their own organic silhouettes — a rectangular frame would get clipped or look out of place */
+  .comment-body.comment-kind-madness,
+  .comment-body.comment-kind-thought {
+    outline: none;
+  }
+  .comment-kind-madness .comment-frame-corner,
+  .comment-kind-thought .comment-frame-corner,
+  .comment-kind-secretaction .comment-frame-corner,
+  .comment-kind-combataction .comment-frame-corner {
+    display: none;
+  }
+
+  .comment-frame-corner {
+    position: absolute;
+    z-index: 4;
+    width: 1.2rem;
+    height: 1.2rem;
+    pointer-events: none;
+  }
+  .comment-frame-corner::before {
+    content: var(--frame-glyph, '');
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--frame-color, transparent) 0%, transparent 68%);
+    color: var(--frame-ink, #fff);
+    text-shadow: 0 0 6px var(--frame-ink, transparent), 0 1px 2px rgba(0,0,0,0.55);
+    animation: commentFrameTwinkle var(--frame-duration, 3.2s) ease-in-out infinite;
+  }
+  .comment-frame-corner--tl { top: -0.55rem; left: -0.55rem; }
+  .comment-frame-corner--tr { top: -0.55rem; right: -0.55rem; }
+  .comment-frame-corner--bl { bottom: -0.55rem; left: -0.55rem; }
+  .comment-frame-corner--br { bottom: -0.55rem; right: -0.55rem; }
+  .comment-frame-corner--tr::before { animation-delay: -0.8s; }
+  .comment-frame-corner--bl::before { animation-delay: -1.6s; }
+  .comment-frame-corner--br::before { animation-delay: -2.4s; }
+
+  @keyframes commentFrameTwinkle {
+    0%, 100% { opacity: 0.62; transform: scale(0.88) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.15) rotate(8deg); }
+  }
+
+  @keyframes commentThoughtCloudMorph {
+    0%, 100% { border-radius: 20px; }
+    50% { border-radius: 26px; }
+  }
+  @keyframes commentThoughtBloomPulse {
+    0%, 100% { opacity: 0.5; transform: scale(0.92); }
+    50% { opacity: 0.9; transform: scale(1.1); }
+  }
+  @keyframes commentThoughtDotsFloat {
+    0%, 100% { opacity: 0.4; transform: translateY(0); }
+    50% { opacity: 0.95; transform: translateY(-0.16rem); }
+  }
+
+  /* Geheimaktion & Kampfhandlung — figure-driven actions fused with their portrait */
+  .comment-entry-fused {
+    gap: 0;
+  }
+  .comment-entry-fused.left .comment-portrait,
+  .comment-entry-fused.left .comment-portrait-placeholder {
+    margin-right: -3.2rem;
+    z-index: 3;
+  }
+  .comment-entry-fused.right .comment-portrait,
+  .comment-entry-fused.right .comment-portrait-placeholder {
+    margin-left: -3.2rem;
+    z-index: 3;
+  }
+  .comment-entry-fused .comment-content {
+    z-index: 1;
+  }
+  .comment-entry-fused.left .comment-char-header,
+  .comment-entry-fused.left .comment-body.comment-kind-secretaction,
+  .comment-entry-fused.left .comment-body.comment-kind-combataction {
+    padding-left: 3.6rem;
+  }
+  .comment-entry-fused.right .comment-char-header,
+  .comment-entry-fused.right .comment-body.comment-kind-secretaction,
+  .comment-entry-fused.right .comment-body.comment-kind-combataction {
+    padding-right: 3.6rem;
+  }
+  .comment-kind-secretaction,
+  .comment-kind-combataction {
+    overflow: visible;
+    isolation: isolate;
+  }
+  .comment-kind-secretaction > *,
+  .comment-kind-combataction > * {
+    position: relative;
+    z-index: 2;
+  }
+  /* Glow bridge bleeding from the bubble edge toward the overlapping portrait */
+  .comment-body.comment-kind-secretaction::before,
+  .comment-body.comment-kind-combataction::before {
+    content: '';
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    width: 4.4rem;
+    z-index: 0;
+    filter: blur(13px);
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, var(--frame-color) 0%, transparent 72%);
+    animation: commentFusionGlowPulse var(--frame-duration, 3.4s) ease-in-out infinite;
+  }
+  .comment-entry-fused.left .comment-body::before { left: -2.1rem; }
+  .comment-entry-fused.right .comment-body::before { right: -2.1rem; }
+
+  .comment-kind-secretaction {
+    border-color: rgba(58,26,20,0.6);
+    background:
+      radial-gradient(circle at 80% 12%, rgba(199,154,63,0.14), transparent 30%),
+      linear-gradient(150deg, rgba(28,14,12,0.96), rgba(12,6,6,0.98));
+    color: #d9c393;
+    font-style: italic;
+    box-shadow:
+      inset 0 0 0 1px rgba(199,154,63,0.28),
+      inset 0 0 30px rgba(0,0,0,0.5),
+      0 8px 22px rgba(0,0,0,0.4);
+  }
+  .comment-body.comment-kind-secretaction::after {
+    content: '';
+    position: absolute;
+    inset: -8%;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 30% 40%, rgba(199,154,63,0.22), transparent 48%);
+    filter: blur(14px);
+    animation: commentSecretVeilDrift 6.5s ease-in-out infinite;
+  }
+  /* Gold glow reads better than the near-black frame color against this bubble's dark surface */
+  .comment-body.comment-kind-secretaction::before {
+    background: radial-gradient(ellipse at center, var(--frame-ink) 0%, transparent 72%);
+    opacity: 0.5;
+  }
+  .comment-kind-secretaction .comment-kind-badge {
+    border-color: rgba(199,154,63,0.5);
+    background: rgba(199,154,63,0.12);
+    color: #c79a3f;
+  }
+  .comment-portrait-silhouette {
+    filter: brightness(0);
+    border-color: #c79a3f !important;
+    box-shadow:
+      0 0 0 3px rgba(199,154,63,0.18),
+      0 0 22px rgba(199,154,63,0.55),
+      0 4px 16px rgba(0,0,0,0.5) !important;
+    animation: commentSecretAuraPulse 3.6s ease-in-out infinite;
+  }
+
+  .comment-kind-combataction {
+    border-color: rgba(199,90,38,0.55);
+    background:
+      linear-gradient(135deg, rgba(199,90,38,0.24), rgba(255,255,255,0.08)),
+      linear-gradient(150deg, rgba(78,44,30,0.95), rgba(46,26,20,0.95));
+    color: #f4d9c2;
+    font-weight: 700;
+    box-shadow:
+      inset 0 0 0 1px rgba(232,112,58,0.4),
+      0 6px 20px rgba(140,58,20,0.32);
+    animation: commentCombatPulse 2.1s ease-in-out infinite;
+  }
+  .comment-body.comment-kind-combataction::after {
+    content: '';
+    position: absolute;
+    top: 12%;
+    width: 2.6rem;
+    height: 2px;
+    z-index: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(90deg, rgba(77,237,224,0.55) 0 6px, transparent 6px 12px);
+    animation: commentCombatStreak 1.4s linear infinite;
+  }
+  .comment-entry-fused.left .comment-body.comment-kind-combataction::after { left: -2.1rem; }
+  .comment-entry-fused.right .comment-body.comment-kind-combataction::after { right: -2.1rem; }
+  .comment-kind-combataction .comment-kind-badge {
+    border-color: rgba(232,112,58,0.5);
+    background: rgba(232,112,58,0.16);
+    color: #e8703a;
+  }
+
+  @keyframes commentFusionGlowPulse {
+    0%, 100% { opacity: 0.55; }
+    50% { opacity: 0.95; }
+  }
+  @keyframes commentSecretVeilDrift {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(4%, -3%) scale(1.08); opacity: 1; }
+  }
+  @keyframes commentSecretAuraPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(199,154,63,0.16), 0 0 16px rgba(199,154,63,0.42), 0 4px 16px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0 0 0 3px rgba(199,154,63,0.3), 0 0 28px rgba(199,154,63,0.7), 0 4px 16px rgba(0,0,0,0.5); }
+  }
+  @keyframes commentCombatPulse {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.012); filter: brightness(1.08); }
+  }
+  @keyframes commentCombatStreak {
+    0% { background-position: 0 0; }
+    100% { background-position: -24px 0; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .comment-body.comment-kind-song::before,
     .comment-body.comment-kind-song::after,
@@ -1854,10 +2109,21 @@
     .comment-body.comment-kind-madness::after,
     .comment-body.comment-kind-prayer::before,
     .comment-body.comment-kind-prayer::after,
+    .comment-body.comment-kind-thought::before,
+    .comment-body.comment-kind-thought::after,
+    .comment-body.comment-kind-secretaction::before,
+    .comment-body.comment-kind-secretaction::after,
+    .comment-body.comment-kind-combataction::before,
+    .comment-body.comment-kind-combataction::after,
+    .comment-portrait-silhouette,
     .comment-kind-telepathy,
     .comment-kind-animal,
     .comment-kind-madness,
-    .comment-kind-prayer {
+    .comment-kind-thought,
+    .comment-kind-prayer,
+    .comment-kind-secretaction,
+    .comment-kind-combataction,
+    .comment-frame-corner::before {
       animation: none;
     }
   }
@@ -1980,6 +2246,13 @@
   }
   .comment-kind-flirt .comment-text {
     color: #8d244f;
+  }
+  .comment-kind-secretaction .comment-text {
+    color: #d9c393;
+    text-shadow: 0 0 6px rgba(199,154,63,0.28);
+  }
+  .comment-kind-combataction .comment-text {
+    color: #f4d9c2;
   }
   .comment-animal-toggle:focus-visible {
     outline: 1px solid rgba(245,235,190,0.7);
@@ -3643,6 +3916,25 @@
     .comment-entry.right .comment-body {
       border-right-width: 1px;
       border-left: 3px solid rgba(139,105,20,0.58);
+    }
+
+    .comment-entry-fused.left .comment-portrait,
+    .comment-entry-fused.left .comment-portrait-placeholder {
+      margin-right: -1.4rem;
+    }
+    .comment-entry-fused.right .comment-portrait,
+    .comment-entry-fused.right .comment-portrait-placeholder {
+      margin-left: -1.4rem;
+    }
+    .comment-entry-fused.left .comment-char-header,
+    .comment-entry-fused.left .comment-body.comment-kind-secretaction,
+    .comment-entry-fused.left .comment-body.comment-kind-combataction {
+      padding-left: 1.7rem;
+    }
+    .comment-entry-fused.right .comment-char-header,
+    .comment-entry-fused.right .comment-body.comment-kind-secretaction,
+    .comment-entry-fused.right .comment-body.comment-kind-combataction {
+      padding-right: 1.7rem;
     }
 
     .comment-quick-tools {

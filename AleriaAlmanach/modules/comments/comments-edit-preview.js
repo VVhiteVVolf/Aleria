@@ -97,6 +97,10 @@ function updateEditFormPreview() {
       <div class="comment-live-preview-kicker">Live-Vorschau</div>
     </div>
     <div class="comment-live-preview-body comment-kind-${commentKind}">
+      <span class="comment-frame-corner comment-frame-corner--tl" aria-hidden="true"></span>
+      <span class="comment-frame-corner comment-frame-corner--tr" aria-hidden="true"></span>
+      <span class="comment-frame-corner comment-frame-corner--bl" aria-hidden="true"></span>
+      <span class="comment-frame-corner comment-frame-corner--br" aria-hidden="true"></span>
       ${portraitSrc
         ? `<img class="comment-live-preview-avatar" src="${portraitSrc}" alt="${safeName}" loading="lazy" decoding="async">`
         : `<div class="comment-live-preview-avatar-ph">${getInitialChar(state.name)}</div>`}

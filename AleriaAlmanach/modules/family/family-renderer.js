@@ -52,9 +52,19 @@ function buildFamilyConnectionData(connections = []) {
   return escapeHtml(JSON.stringify(Array.isArray(connections) ? connections : []));
 }
 
+function collectFamilyTreeDescentConnections(tree = {}) {
+  return (Array.isArray(tree?.levels) ? tree.levels : [])
+    .flatMap(level => Array.isArray(level?.nodes) ? level.nodes : [])
+    .flatMap(node => (Array.isArray(node?.parentIds) ? node.parentIds : [])
+      .map(parentId => ({ from: parentId, to: node.id, relationType: 'parent', label: '' })));
+}
+
 function collectFamilyTreeConnections(trees = []) {
   return (Array.isArray(trees) ? trees : [])
-    .flatMap(tree => Array.isArray(tree?.connections) ? tree.connections : []);
+    .flatMap(tree => [
+      ...collectFamilyTreeDescentConnections(tree),
+      ...(Array.isArray(tree?.connections) ? tree.connections : [])
+    ]);
 }
 
 function buildFamilyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {

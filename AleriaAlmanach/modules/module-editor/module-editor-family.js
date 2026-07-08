@@ -14,8 +14,45 @@ function createDefaultFamilyNode(index = 0) {
     portrait: '',
     title: index === 0 ? 'Familienoberhaupt' : 'Neues Familienmitglied',
     subtitle: '',
-    text: ''
+    text: '',
+    parentIds: []
   };
+}
+
+// Every family editor block gets one <datalist> of all currently known card-IDs in that
+// module page, so "Von ID" / "Zu ID" / "Eltern" fields can autocomplete instead of relying
+// on the author to type (and not typo) IDs defined elsewhere in the form by hand.
+function getFamilyEditorBlockFromNode(node) {
+  return node?.closest?.('[data-page-type="family"]') || null;
+}
+
+function getFamilyDatalistId(scopeEl) {
+  return getFamilyEditorBlockFromNode(scopeEl)?.dataset?.familyNodeDatalist || '';
+}
+
+function buildFamilyNodeOptionMarkup(id, title) {
+  const safeId = String(id || '').trim();
+  return safeId ? `<option value="${escapeHtml(safeId)}">${escapeHtml(title || '')}</option>` : '';
+}
+
+function buildFamilyNodeOptionsMarkupFromTrees(trees = []) {
+  return (Array.isArray(trees) ? trees : [])
+    .flatMap(tree => Array.isArray(tree?.levels) ? tree.levels : [])
+    .flatMap(level => Array.isArray(level?.nodes) ? level.nodes : [])
+    .map(node => buildFamilyNodeOptionMarkup(node?.id, node?.title))
+    .join('');
+}
+
+function refreshFamilyNodeDatalist(scopeEl) {
+  const block = getFamilyEditorBlockFromNode(scopeEl);
+  const datalistId = block?.dataset?.familyNodeDatalist;
+  const datalist = datalistId ? document.getElementById(datalistId) : null;
+  if (!block || !datalist) return;
+  datalist.innerHTML = Array.from(block.querySelectorAll('.family-editor-node-row')).map(row => {
+    const id = row.querySelector('.me-family-node-id')?.value || '';
+    const title = row.querySelector('.me-family-node-title')?.value || '';
+    return buildFamilyNodeOptionMarkup(id, title);
+  }).join('');
 }
 
 function buildFamilyDetailEditorRows(details = []) {
@@ -29,19 +66,24 @@ function buildFamilyDetailEditorRows(details = []) {
     </div>`).join('');
 }
 
-function buildFamilyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0) {
+function buildFamilyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0, datalistId = '') {
   const fallback = createDefaultFamilyNode(nodeIndex);
+  const parentIdsValue = (Array.isArray(node.parentIds) ? node.parentIds : []).join(', ');
+  const listAttr = datalistId ? ` list="${escapeHtml(datalistId)}"` : '';
   return `
     <div class="family-editor-node-row">
       <div class="module-card-layout-block-head">
         <div class="inline-edit-kicker">Person ${nodeIndex + 1}</div>
-        <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-family-node">Loeschen</button>
+        <div class="module-editor-inline">
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-family-sibling" title="Neue Person in derselben Ebene, mit denselben Eltern und einer Geschwister-Verbindung">+ Geschwister</button>
+          <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-family-node">Loeschen</button>
+        </div>
       </div>
       <div class="module-editor-grid">
         <div class="module-editor-field">
           <label>Karten-ID</label>
-          <input class="me-family-node-id" type="text" value="${escapeHtml(node.id || fallback.id)}" placeholder="z.B. gwendolyn-draig">
-          <div class="module-editor-help">Diese ID wird fuer Verbindungslinien benutzt.</div>
+          <input class="me-family-node-id" type="text" value="${escapeHtml(node.id || fallback.id)}" placeholder="z.B. gwendolyn-draig" data-module-editor-action="refresh-family-node-options">
+          <div class="module-editor-help">Diese ID wird fuer Verbindungslinien und Eltern-Zuordnung benutzt.</div>
         </div>
         <div class="module-editor-field">
           <label>Familientyp</label>
@@ -53,11 +95,16 @@ function buildFamilyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0) {
         </div>
         <div class="module-editor-field">
           <label>Name / Titel</label>
-          <input class="me-family-node-title" type="text" value="${escapeHtml(node.title || fallback.title)}" placeholder="Name">
+          <input class="me-family-node-title" type="text" value="${escapeHtml(node.title || fallback.title)}" placeholder="Name" data-module-editor-action="refresh-family-node-options">
         </div>
         <div class="module-editor-field">
           <label>Beziehung / Rang</label>
           <input class="me-family-node-subtitle" type="text" value="${escapeHtml(node.subtitle || '')}" placeholder="z.B. Bruder, Ehefrau, Vetter">
+        </div>
+        <div class="module-editor-field">
+          <label>Eltern (Karten-IDs)</label>
+          <input class="me-family-node-parents" type="text" value="${escapeHtml(parentIdsValue)}" placeholder="z.B. vater, mutter"${listAttr}>
+          <div class="module-editor-help">Bis zu zwei IDs, kommagetrennt. Zeichnet automatisch eine eigene Abstammungslinie.</div>
         </div>
         <div class="module-editor-field wide">
           <label>Beschreibung</label>
@@ -68,7 +115,7 @@ function buildFamilyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0) {
     </div>`;
 }
 
-function buildFamilyLevelEditorMarkup(level = {}, levelIndex = 0) {
+function buildFamilyLevelEditorMarkup(level = {}, levelIndex = 0, datalistId = '') {
   const nodes = Array.isArray(level.nodes) && level.nodes.length
     ? level.nodes.slice(0, 8)
     : [createDefaultFamilyNode(0)];
@@ -92,26 +139,27 @@ function buildFamilyLevelEditorMarkup(level = {}, levelIndex = 0) {
         <input class="me-family-level-label" type="text" value="${escapeHtml(level.label || '')}" placeholder="z.B. Eltern, Kinder, Nebenlinie">
       </div>
       <div class="family-editor-node-list">
-        ${nodes.map((node, nodeIndex) => buildFamilyNodeEditorMarkup(node, levelIndex, nodeIndex)).join('')}
+        ${nodes.map((node, nodeIndex) => buildFamilyNodeEditorMarkup(node, levelIndex, nodeIndex, datalistId)).join('')}
       </div>
     </div>`;
 }
 
-function buildFamilyConnectionEditorRows(connections = []) {
+function buildFamilyConnectionEditorRows(connections = [], datalistId = '') {
   const rows = Array.isArray(connections) && connections.length
     ? connections
     : [{ from: '', to: '', relationType: 'blood', label: 'Beziehung' }];
+  const listAttr = datalistId ? ` list="${escapeHtml(datalistId)}"` : '';
   return rows.map(row => `
     <div class="family-editor-connection-row">
-      <input class="inline-edit-input me-family-connection-from" type="text" value="${escapeHtml(row.from || '')}" placeholder="Von ID">
-      <input class="inline-edit-input me-family-connection-to" type="text" value="${escapeHtml(row.to || '')}" placeholder="Zu ID">
+      <input class="inline-edit-input me-family-connection-from" type="text" value="${escapeHtml(row.from || '')}" placeholder="Von ID"${listAttr}>
+      <input class="inline-edit-input me-family-connection-to" type="text" value="${escapeHtml(row.to || '')}" placeholder="Zu ID"${listAttr}>
       <input class="inline-edit-input me-family-connection-type" type="text" value="${escapeHtml(row.relationType || 'blood')}" placeholder="Typ">
       <input class="inline-edit-input me-family-connection-label" type="text" value="${escapeHtml(row.label || '')}" placeholder="Label">
       <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-family-connection">Loeschen</button>
     </div>`).join('');
 }
 
-function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0) {
+function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0, datalistId = '') {
   const levels = Array.isArray(tree.levels) ? tree.levels : [];
   return `
     <div class="module-card-layout-block family-editor-tree-row">
@@ -143,7 +191,7 @@ function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0) {
       </div>
       <div class="family-editor-level-list">
         ${levels.length
-          ? levels.map((level, levelIndex) => buildFamilyLevelEditorMarkup(level, levelIndex)).join('')
+          ? levels.map((level, levelIndex) => buildFamilyLevelEditorMarkup(level, levelIndex, datalistId)).join('')
           : '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>'}
       </div>
       <div class="module-editor-field wide">
@@ -151,8 +199,8 @@ function buildFamilyTreeEditorMarkup(tree = {}, treeIndex = 0) {
           <label>Parallele Verbindungslinien</label>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-family-connection">+ Verbindung</button>
         </div>
-        <div class="module-editor-help">Verbinde zwei Karten-IDs, auch ueber mehrere sichtbare Familienbaeume hinweg.</div>
-        <div class="family-editor-connection-list">${buildFamilyConnectionEditorRows(tree.connections)}</div>
+        <div class="module-editor-help">Verbinde zwei Karten-IDs, auch ueber mehrere sichtbare Familienbaeume hinweg. Eltern-Kind-Linien werden automatisch aus dem Eltern-Feld einer Person gezeichnet.</div>
+        <div class="family-editor-connection-list">${buildFamilyConnectionEditorRows(tree.connections, datalistId)}</div>
       </div>
     </div>`;
 }
@@ -174,7 +222,8 @@ function collectFamilyLevelsFromEditor(block) {
       portrait: getTrimmedFormValue(nodeRow, '.me-family-node-portrait'),
       title: getTrimmedFormValue(nodeRow, '.me-family-node-title'),
       subtitle: getTrimmedFormValue(nodeRow, '.me-family-node-subtitle'),
-      text: getTrimmedFormValue(nodeRow, '.me-family-node-text')
+      text: getTrimmedFormValue(nodeRow, '.me-family-node-text'),
+      parentIds: getTrimmedFormValue(nodeRow, '.me-family-node-parents').split(',').map(id => id.trim()).filter(Boolean)
     })).filter(node => node.id || node.portrait || node.title || node.subtitle || node.text).slice(0, 8)
   })).filter(level => level.label || level.nodes.length);
 }
@@ -226,14 +275,16 @@ function renumberFamilyTreeEditor(treeList) {
 function addModuleFamilyTree(button) {
   const wrap = button.closest('.module-page-card')?.querySelector('.family-editor-tree-list');
   if (!wrap) return;
+  const datalistId = getFamilyDatalistId(wrap);
   wrap.querySelector('.inline-placeholder-note')?.remove();
   wrap.insertAdjacentHTML('beforeend', buildFamilyTreeEditorMarkup({
     label: `Familienbaum ${wrap.querySelectorAll('.family-editor-tree-row').length + 1}`,
     levels: [{ label: '', nodes: [createDefaultFamilyNode(0)] }],
     connections: []
-  }, wrap.querySelectorAll('.family-editor-tree-row').length));
+  }, wrap.querySelectorAll('.family-editor-tree-row').length, datalistId));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberFamilyTreeEditor(wrap);
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -241,12 +292,14 @@ function removeModuleFamilyTree(button) {
   const row = button.closest('.family-editor-tree-row');
   const wrap = row?.parentElement;
   if (!row || !wrap) return;
+  const datalistId = getFamilyDatalistId(wrap);
   row.remove();
   if (!wrap.querySelector('.family-editor-tree-row')) {
-    wrap.innerHTML = buildFamilyTreeEditorMarkup({ label: 'Stammbaum', levels: [{ label: '', nodes: [createDefaultFamilyNode(0)] }], connections: [] }, 0);
+    wrap.innerHTML = buildFamilyTreeEditorMarkup({ label: 'Stammbaum', levels: [{ label: '', nodes: [createDefaultFamilyNode(0)] }], connections: [] }, 0, datalistId);
     hydrateModuleRichEditors(wrap);
   }
   renumberFamilyTreeEditor(wrap);
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -272,11 +325,13 @@ function addModuleFamilyLevel(button) {
   const wrap = button.closest('.family-editor-tree-row')?.querySelector('.family-editor-level-list')
     || pageCard?.querySelector('.family-editor-level-list');
   if (!wrap) return;
+  const datalistId = getFamilyDatalistId(wrap);
   wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildFamilyLevelEditorMarkup({ label: '', nodes: [createDefaultFamilyNode(0)] }, wrap.querySelectorAll('.family-editor-level-row').length));
+  wrap.insertAdjacentHTML('beforeend', buildFamilyLevelEditorMarkup({ label: '', nodes: [createDefaultFamilyNode(0)] }, wrap.querySelectorAll('.family-editor-level-row').length, datalistId));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberFamilyEditor(wrap);
   renumberFamilyTreeEditor(pageCard?.querySelector('.family-editor-tree-list'));
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -284,10 +339,12 @@ function addModuleFamilyLevelAfter(button) {
   const currentLevel = button.closest('.family-editor-level-row');
   const wrap = currentLevel?.parentElement;
   if (!currentLevel || !wrap) return;
-  currentLevel.insertAdjacentHTML('afterend', buildFamilyLevelEditorMarkup({ label: '', nodes: [createDefaultFamilyNode(0)] }, 0));
+  const datalistId = getFamilyDatalistId(wrap);
+  currentLevel.insertAdjacentHTML('afterend', buildFamilyLevelEditorMarkup({ label: '', nodes: [createDefaultFamilyNode(0)] }, 0, datalistId));
   hydrateModuleRichEditors(currentLevel.nextElementSibling || wrap);
   renumberFamilyEditor(wrap);
   renumberFamilyTreeEditor(currentLevel.closest('.family-editor-tree-list'));
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -299,6 +356,7 @@ function removeModuleFamilyLevel(button) {
   if (!wrap.querySelector('.family-editor-level-row')) wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Ebenen vorhanden.</div>';
   renumberFamilyEditor(wrap);
   renumberFamilyTreeEditor(row.closest('.family-editor-tree-list'));
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -317,9 +375,11 @@ function addModuleFamilyNode(button) {
   const levelRow = button.closest('.family-editor-level-row');
   const wrap = levelRow?.querySelector('.family-editor-node-list');
   if (!wrap || wrap.querySelectorAll('.family-editor-node-row').length >= 8) return;
-  wrap.insertAdjacentHTML('beforeend', buildFamilyNodeEditorMarkup(createDefaultFamilyNode(wrap.querySelectorAll('.family-editor-node-row').length), 0, wrap.querySelectorAll('.family-editor-node-row').length));
+  const datalistId = getFamilyDatalistId(wrap);
+  wrap.insertAdjacentHTML('beforeend', buildFamilyNodeEditorMarkup(createDefaultFamilyNode(wrap.querySelectorAll('.family-editor-node-row').length), 0, wrap.querySelectorAll('.family-editor-node-row').length, datalistId));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberFamilyEditor(levelRow.parentElement);
+  refreshFamilyNodeDatalist(wrap);
   syncModuleJsonPreview();
 }
 
@@ -328,12 +388,52 @@ function removeModuleFamilyNode(button) {
   const wrap = node?.parentElement;
   const levelList = node?.closest('.family-editor-level-list');
   if (!node || !wrap) return;
+  const datalistId = getFamilyDatalistId(wrap);
   node.remove();
   if (!wrap.querySelector('.family-editor-node-row')) {
-    wrap.innerHTML = buildFamilyNodeEditorMarkup(createDefaultFamilyNode(0), 0, 0);
+    wrap.innerHTML = buildFamilyNodeEditorMarkup(createDefaultFamilyNode(0), 0, 0, datalistId);
     hydrateModuleRichEditors(wrap);
   }
   renumberFamilyEditor(levelList);
+  refreshFamilyNodeDatalist(wrap);
+  syncModuleJsonPreview();
+}
+
+// "+ Geschwister": adds a new person in the same level, inheriting the reference person's
+// parentIds so the whole sibling group stays wired to the same parents, and immediately adds
+// a labelled "Geschwister" connection between the two so the relation is visible right away.
+function addModuleFamilySibling(button) {
+  const referenceNode = button.closest('.family-editor-node-row');
+  const wrap = referenceNode?.parentElement;
+  const treeRow = button.closest('.family-editor-tree-row');
+  if (!wrap || wrap.querySelectorAll('.family-editor-node-row').length >= 8) return;
+  const datalistId = getFamilyDatalistId(wrap);
+
+  const referenceId = getTrimmedFormValue(referenceNode, '.me-family-node-id');
+  const parentIds = getTrimmedFormValue(referenceNode, '.me-family-node-parents');
+  const newIndex = wrap.querySelectorAll('.family-editor-node-row').length;
+  const sibling = {
+    ...createDefaultFamilyNode(newIndex),
+    id: `familienmitglied-${Date.now().toString(36)}`,
+    title: 'Neues Geschwister',
+    subtitle: 'Geschwister',
+    parentIds: parentIds ? parentIds.split(',').map(id => id.trim()).filter(Boolean) : []
+  };
+  referenceNode.insertAdjacentHTML('afterend', buildFamilyNodeEditorMarkup(sibling, 0, newIndex, datalistId));
+  const siblingRow = referenceNode.nextElementSibling;
+  hydrateModuleRichEditors(siblingRow || wrap);
+  renumberFamilyEditor(wrap.closest('.family-editor-level-list'));
+  refreshFamilyNodeDatalist(wrap);
+
+  if (referenceId && treeRow) {
+    const connectionWrap = treeRow.querySelector('.family-editor-connection-list');
+    if (connectionWrap) {
+      connectionWrap.querySelector('.inline-placeholder-note')?.remove();
+      connectionWrap.insertAdjacentHTML('beforeend', buildFamilyConnectionEditorRows([
+        { from: referenceId, to: sibling.id, relationType: 'sibling', label: 'Geschwister' }
+      ], datalistId));
+    }
+  }
   syncModuleJsonPreview();
 }
 
@@ -348,8 +448,9 @@ function addModuleFamilyConnection(button) {
   const wrap = treeRow?.querySelector('.family-editor-connection-list');
   if (!wrap) return;
   const ids = getFamilyEditorNodeIds(treeRow);
+  const datalistId = getFamilyDatalistId(wrap);
   wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildFamilyConnectionEditorRows([{ from: ids[0] || '', to: ids[1] || '', relationType: 'blood', label: 'Beziehung' }]));
+  wrap.insertAdjacentHTML('beforeend', buildFamilyConnectionEditorRows([{ from: ids[0] || '', to: ids[1] || '', relationType: 'blood', label: 'Beziehung' }], datalistId));
   syncModuleJsonPreview();
 }
 
@@ -364,8 +465,10 @@ function removeModuleFamilyConnection(button) {
 
 function buildFamilyModuleEditorFields(page) {
   const family = sanitizeFamilyData(page?.family || {});
+  const datalistId = `family-node-ids-${Math.random().toString(36).slice(2, 9)}`;
   return `
-      <div class="module-page-type-block${inferModulePageType(page) === 'family' ? ' visible' : ''}" data-page-type="family">
+      <div class="module-page-type-block${inferModulePageType(page) === 'family' ? ' visible' : ''}" data-page-type="family" data-family-node-datalist="${escapeHtml(datalistId)}">
+        <datalist id="${escapeHtml(datalistId)}">${buildFamilyNodeOptionsMarkupFromTrees(family.trees)}</datalist>
         <div class="module-editor-grid">
           <div class="module-editor-field">
             <label>Layoutmodus</label>
@@ -410,7 +513,7 @@ function buildFamilyModuleEditorFields(page) {
           <div class="module-editor-field wide"><label>Baum-Einleitung</label>${buildTextFormatToolbar()}<textarea class="me-family-chartIntro small">${escapeHtml(family.chartIntro)}</textarea></div>
           <div class="module-editor-field wide">
             <div class="module-editor-inline" style="justify-content:space-between;"><label>Familienbaeume</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-family-tree">+ Baum</button></div>
-            <div class="family-editor-tree-list">${family.trees.map((tree, treeIndex) => buildFamilyTreeEditorMarkup(tree, treeIndex)).join('')}</div>
+            <div class="family-editor-tree-list">${family.trees.map((tree, treeIndex) => buildFamilyTreeEditorMarkup(tree, treeIndex, datalistId)).join('')}</div>
           </div>
           <div class="module-editor-field wide"><label>Footer-Notiz</label><input type="text" class="me-family-footerNote" value="${escapeHtml(family.footerNote)}"></div>
         </div>

@@ -195,8 +195,30 @@ function buildCharacterInventoryCategories(data, activeCategory = '') {
     </div>`;
 }
 
-function buildCharacterInventoryMoneyPanel(data = {}) {
+function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
   const money = sanitizeCharacterInventoryMoney(data.moneyState || data.money);
+  const readOnly = options.readOnly === true;
+  if (readOnly) {
+    return `
+    <section class="ci-money-panel ci-money-panel-readonly" aria-label="Geldbeutel">
+      <div class="ci-money-head">
+        <div>
+          <h3>Geldbeutel</h3>
+          <p>1 Gold = 10 Silber = 1.000 Kupfer</p>
+        </div>
+        <strong>${escapeHtml(String(money.totalCopper))} Kupfer</strong>
+      </div>
+      <div class="ci-money-summary">
+        ${CHARACTER_INVENTORY_CURRENCIES.map(currency => `
+          <div class="ci-money-summary-item">
+            <img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">
+            <span>${escapeHtml(currency.label)}</span>
+            <strong>${escapeHtml(String(money[currency.id] || 0))}</strong>
+          </div>`).join('')}
+      </div>
+      ${data.moneyNotice ? `<p class="ci-money-status">${escapeHtml(data.moneyNotice)}</p>` : ''}
+    </section>`;
+  }
   return `
     <section class="ci-money-panel" aria-label="Geldbeutel">
       <div class="ci-money-head">
@@ -264,12 +286,25 @@ function buildCharacterInventoryEquipmentQuiz(data = {}) {
     </section>`;
 }
 
-function buildCharacterInventoryItems(data, activeCategory = '') {
+function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
+  const readOnly = options.readOnly === true;
+  const tools = readOnly ? '' : `
+      <div class="ci-item-tools">
+        <div>
+          <h3>Inventar</h3>
+          <p>Gegenstände aus dem Register übernehmen oder direkt im Editor pflegen.</p>
+        </div>
+        <button class="ci-register-action" type="button" data-ci-action="equip-item-from-register">
+          <span class="ci-register-action-icon" aria-hidden="true">+</span>
+          <span>
+            <strong>Item aus Register</strong>
+            <small>zum Charakter hinzufügen</small>
+          </span>
+        </button>
+      </div>`;
   return `
     <section class="ci-center">
-      <div class="ci-item-tools">
-        <button type="button" data-ci-action="equip-item-from-register">Item aus Register ausruesten</button>
-      </div>
+      ${tools}
       ${buildCharacterInventoryCategories(data, activeCategory)}
       <div class="ci-item-table">
         <div class="ci-item-head">
@@ -290,8 +325,8 @@ function buildCharacterInventoryItems(data, activeCategory = '') {
             </button>`).join('')}
         </div>
       </div>
-      ${buildCharacterInventoryMoneyPanel(data)}
-      ${buildCharacterInventoryEquipmentQuiz(data)}
+      ${buildCharacterInventoryMoneyPanel(data, { readOnly })}
+      ${readOnly ? '' : buildCharacterInventoryEquipmentQuiz(data)}
     </section>`;
 }
 
@@ -447,13 +482,15 @@ function buildCharacterInventoryItemEditModal(item) {
     </article>`;
 }
 
-function buildCharacterInventoryItemModal(item) {
+function buildCharacterInventoryItemModal(item, options = {}) {
+  const actions = options.readOnly ? '' : `
+      <div class="ci-modal-actions floating">
+        <button type="button" data-ci-action="edit-item">Bearbeiten</button>
+      </div>`;
   return `
     <article class="ci-profile-modal" data-ci-item-id="${escapeHtml(item.id)}">
       <button class="ci-modal-close" type="button" data-ci-action="close-profile">x</button>
-      <div class="ci-modal-actions floating">
-        <button type="button" data-ci-action="edit-item">Bearbeiten</button>
-      </div>
+      ${actions}
       <div class="ci-profile-media">
         ${buildCharacterInventoryImage(item.image || item.icon, item.name, 'ci-profile-image', '*', {
           format: item.imageFormat || 'square',
@@ -466,13 +503,15 @@ function buildCharacterInventoryItemModal(item) {
     </article>`;
 }
 
-function buildCharacterInventoryCompanionModal(companion) {
+function buildCharacterInventoryCompanionModal(companion, options = {}) {
+  const actions = options.readOnly ? '' : `
+      <div class="ci-modal-actions floating">
+        <button type="button" data-ci-action="edit-companion">Bearbeiten</button>
+      </div>`;
   return `
     <article class="ci-profile-modal companion" data-ci-companion-id="${escapeHtml(companion.id)}">
       <button class="ci-modal-close" type="button" data-ci-action="close-profile">x</button>
-      <div class="ci-modal-actions floating">
-        <button type="button" data-ci-action="edit-companion">Bearbeiten</button>
-      </div>
+      ${actions}
       <div class="ci-profile-media">
         ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-profile-image', getInitialChar(companion.name), {
           format: companion.imageFormat || 'portrait',
@@ -683,7 +722,7 @@ function updateCharacterInventoryPageItem(page, item) {
   page.dataset.ciData = JSON.stringify(merged);
   const active = page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || merged.categories[0]?.id || '';
   const center = page.querySelector('.ci-center');
-  if (center) center.outerHTML = buildCharacterInventoryItems(merged, active);
+  if (center) center.outerHTML = buildCharacterInventoryItems(merged, active, { readOnly: page.dataset.ciReadonly === 'true' });
   if (typeof syncCharacterInventoryProfileDraftFromPage === 'function') syncCharacterInventoryProfileDraftFromPage(page);
   return merged.items.find(entry => entry.id === item.id) || item;
 }
@@ -701,7 +740,7 @@ function addCharacterInventoryPageItem(page, item) {
   page.dataset.ciData = JSON.stringify(merged);
   const active = safeItem.category || page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || merged.categories[0]?.id || '';
   const center = page.querySelector('.ci-center');
-  if (center) center.outerHTML = buildCharacterInventoryItems(merged, active);
+  if (center) center.outerHTML = buildCharacterInventoryItems(merged, active, { readOnly: page.dataset.ciReadonly === 'true' });
   if (typeof syncCharacterInventoryProfileDraftFromPage === 'function') syncCharacterInventoryProfileDraftFromPage(page);
   return merged.items.find(entry => entry.id === safeItem.id) || safeItem;
 }
@@ -713,11 +752,11 @@ function openCharacterInventoryItemRegisterPicker(page) {
   }
   const data = getCharacterInventoryPageData(page);
   openItemDbPicker({
-    title: `${data.name || 'Charakter'} ausruesten`,
+    title: `Item für ${data.name || 'Charakter'} hinzufügen`,
     onSelect: item => {
       const equipped = buildCharacterInventoryItemFromDbItem(item, data);
       const added = addCharacterInventoryPageItem(page, equipped);
-      if (added && typeof showAppStatus === 'function') showAppStatus(`${added.name} aus dem Register ausgeruestet.`, 'success');
+      if (added && typeof showAppStatus === 'function') showAppStatus(`${added.name} aus dem Register hinzugefügt.`, 'success');
     }
   });
 }
@@ -901,6 +940,19 @@ document.addEventListener('click', async event => {
   const page = trigger.closest('.character-inventory-page');
   if (!page) return;
   const action = trigger.dataset.ciAction;
+  const pageReadOnly = page.dataset.ciReadonly === 'true';
+  if (pageReadOnly && [
+    'apply-money-transaction',
+    'equip-item-from-register',
+    'toggle-equipment-quiz',
+    'quiz-prev',
+    'quiz-next',
+    'quiz-save-answer',
+    'quiz-run-ai'
+  ].includes(action)) {
+    event.preventDefault();
+    return;
+  }
   if (action === 'apply-money-transaction') {
     event.preventDefault();
     const data = getCharacterInventoryPageData(page);
@@ -968,16 +1020,17 @@ document.addEventListener('click', async event => {
     if (!overlay) return;
     if (action === 'show-item') {
       const item = data.items.find(entry => entry.id === trigger.dataset.ciItemId);
-      overlay.innerHTML = item ? buildCharacterInventoryItemModal(item) : '';
+      overlay.innerHTML = item ? buildCharacterInventoryItemModal(item, { readOnly: pageReadOnly }) : '';
     } else {
       const companion = data.companions.find(entry => entry.id === trigger.dataset.ciCompanionId);
-      overlay.innerHTML = companion ? buildCharacterInventoryCompanionModal(companion) : '';
+      overlay.innerHTML = companion ? buildCharacterInventoryCompanionModal(companion, { readOnly: pageReadOnly }) : '';
     }
     overlay.classList.toggle('active', !!overlay.innerHTML);
     return;
   }
   if (action === 'edit-item') {
     event.preventDefault();
+    if (pageReadOnly) return;
     const modal = trigger.closest('.ci-profile-modal');
     const overlay = page.querySelector('.ci-profile-overlay');
     const data = mergeCharacterInventoryDataWithItemDb(getCharacterInventoryPageData(page));
@@ -987,6 +1040,7 @@ document.addEventListener('click', async event => {
   }
   if (action === 'edit-companion') {
     event.preventDefault();
+    if (pageReadOnly) return;
     const modal = trigger.closest('.ci-profile-modal');
     const overlay = page.querySelector('.ci-profile-overlay');
     const data = mergeCharacterInventoryDataWithItemDb(getCharacterInventoryPageData(page));
@@ -1124,6 +1178,7 @@ document.addEventListener('input', event => {
     const page = moneyField.closest('.character-inventory-page');
     const panel = moneyField.closest('.ci-money-panel');
     if (!page || !panel) return;
+    if (page.dataset.ciReadonly === 'true') return;
     const data = getCharacterInventoryPageData(page);
     const money = sanitizeCharacterInventoryMoney(getCharacterInventoryMoneyInputs(panel));
     data.moneyState = money;
@@ -1142,6 +1197,7 @@ document.addEventListener('input', event => {
   if (quizAnswer) {
     const page = quizAnswer.closest('.character-inventory-page');
     if (!page) return;
+    if (page.dataset.ciReadonly === 'true') return;
     saveCharacterInventoryQuizAnswer(page);
     return;
   }
@@ -1159,11 +1215,12 @@ document.addEventListener('change', event => {
 function buildCharacterInventoryPage(page, entry, pageIndex, total) {
   const nav = page?.hideNav ? '' : buildNav(page, pageIndex, total);
   const data = mergeCharacterInventoryDataWithItemDb(page.characterInventory || {});
+  const readOnly = page?.characterInventoryReadOnly === true;
   const activeCategory = data.categories[0]?.id || '';
   const encoded = escapeHtml(JSON.stringify(data));
   return `
     ${nav}
-    <div class="character-inventory-page" data-ci-data="${encoded}">
+    <div class="character-inventory-page${readOnly ? ' read-only' : ''}" data-ci-data="${encoded}" data-ci-readonly="${readOnly ? 'true' : 'false'}">
       <header class="ci-header">
         <div>
           <h2>${escapeHtml(data.title)}</h2>
@@ -1172,7 +1229,7 @@ function buildCharacterInventoryPage(page, entry, pageIndex, total) {
       </header>
       <div class="ci-layout">
         ${buildCharacterInventoryLeft(data)}
-        ${buildCharacterInventoryItems(data, activeCategory)}
+        ${buildCharacterInventoryItems(data, activeCategory, { readOnly })}
         ${buildCharacterInventoryCompanions(data)}
       </div>
       <div class="ci-profile-overlay" aria-live="polite"></div>

@@ -66,6 +66,13 @@
   stroke-width: 1.7;
 }
 
+/* Descent (parent -> child), auto-derived from parentIds — visually distinct
+   "backbone" line so it can't be confused with marriage/sibling/side connections. */
+.family-connection-line.relation-parent {
+  stroke: rgba(120, 78, 40, 0.8);
+  stroke-width: 2.1;
+}
+
 .family-connection-line.relation-affair,
 .family-connection-line.relation-affaire {
   stroke-dasharray: 6 5;

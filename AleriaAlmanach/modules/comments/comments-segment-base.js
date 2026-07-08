@@ -26,7 +26,7 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? ['action']
-    : ['speech', 'thought', 'whisper', 'shout', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'action'];
+    : ['speech', 'thought', 'whisper', 'shout', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'combataction', 'secretaction', 'action'];
 }
 
 function coerceCommentSegmentsForMode(edit = false) {
@@ -128,6 +128,8 @@ function getCommentSegmentPlaceholder(kind) {
   if (normalized === 'madness') return 'Was bricht aus dem Wahn hervor?';
   if (normalized === 'prayer') return 'Welches Gebet wird gesprochen?';
   if (normalized === 'flirt') return 'Was wird charmant gesagt?';
+  if (normalized === 'combataction') return 'Welche Kampfhandlung geschieht?';
+  if (normalized === 'secretaction') return 'Welche geheime Handlung geschieht, verborgen vor allen Blicken?';
   return 'Was wird gesagt?';
 }
 

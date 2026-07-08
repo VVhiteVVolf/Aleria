@@ -259,9 +259,10 @@
 }
 
 .item-db-row {
-  width: 100%;
+  width: max(100%, var(--item-db-table-min-width, 760px));
+  min-width: var(--item-db-table-min-width, 760px);
   display: grid;
-  grid-template-columns: minmax(230px, 1.35fr) repeat(5, minmax(105px, 0.72fr));
+  grid-template-columns: var(--item-db-grid-template, minmax(260px, 1.7fr) repeat(5, minmax(105px, 0.72fr)));
   align-items: stretch;
   border: 0;
   border-bottom: 1px solid rgba(139, 105, 20, 0.15);
@@ -273,6 +274,7 @@
 .item-db-row > div,
 .item-db-head > button {
   min-width: 0;
+  overflow: hidden;
   padding: 0.58rem 0.66rem;
   border: 0;
   border-right: 1px solid rgba(139, 105, 20, 0.12);
@@ -280,6 +282,7 @@
   color: inherit;
   font: inherit;
   text-align: left;
+  overflow-wrap: anywhere;
 }
 
 .item-db-head {
@@ -318,6 +321,7 @@
   display: flex;
   align-items: center;
   gap: 0.72rem;
+  min-width: 0;
 }
 
 .item-db-title-cell > span:last-child {
@@ -401,16 +405,38 @@
 .item-db-rarity[data-rarity="legendaer"]::before { background: #bd7b16; }
 
 .item-db-money {
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: minmax(0, auto) 1rem;
   align-items: center;
   gap: 0.28rem;
+  max-width: 100%;
   white-space: nowrap;
 }
 
+.item-db-money > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .item-db-money img {
+  flex: 0 0 auto;
   width: 1rem;
   height: 1rem;
   object-fit: contain;
+}
+
+.item-db-cell-price {
+  text-align: right;
+}
+
+.item-db-cell-price .item-db-money {
+  justify-content: end;
+}
+
+.item-db-cell-stock,
+.item-db-cell-weight {
+  white-space: normal;
 }
 
 .item-db-detail {
@@ -761,8 +787,8 @@
 }
 
 .item-db-picker-shell {
-  width: min(980px, 100%);
-  max-height: min(780px, 92vh);
+  width: min(1280px, 100%);
+  max-height: min(920px, 92vh);
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(112, 75, 19, 0.72);
@@ -834,7 +860,7 @@
 .item-db-picker-item {
   width: 100%;
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr) minmax(120px, 180px);
+  grid-template-columns: 76px minmax(0, 1fr) minmax(120px, 210px);
   gap: 0.85rem;
   align-items: center;
   padding: 0.65rem;
@@ -915,10 +941,6 @@
   .item-db-filter {
     border-right: 0;
     border-bottom: 1px solid rgba(139, 105, 20, 0.26);
-  }
-
-  .item-db-row {
-    grid-template-columns: minmax(210px, 1fr) repeat(5, minmax(96px, 0.64fr));
   }
 
   .item-db-edit-form {

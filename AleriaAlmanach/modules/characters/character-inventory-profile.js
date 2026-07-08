@@ -66,7 +66,7 @@ function getCharacterInventoryProfileSource(char = {}) {
 function renderCharacterInventoryProfileView(target, data) {
   target.innerHTML = `
     <div class="cp-inventory-view">
-      ${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: data, hideNav: true }, {}, 0, 1)}
+      ${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: data, characterInventoryReadOnly: true, hideNav: true }, {}, 0, 1)}
     </div>`;
 }
 

@@ -50,6 +50,17 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'pick-biography-ability-icon',
   'add-biography-section-row',
   'remove-biography-section-row',
+  'add-house-stat-row',
+  'remove-house-stat-row',
+  'add-house-influence-row',
+  'remove-house-influence-row',
+  'pick-house-influence-icon',
+  'add-house-section-row',
+  'remove-house-section-row',
+  'add-house-connection-row',
+  'remove-house-connection-row',
+  'add-house-document-row',
+  'remove-house-document-row',
   'add-bestiary-row',
   'remove-bestiary-row',
   'add-tournament-league-row',
@@ -133,6 +144,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'move-family-level',
   'add-family-node',
   'remove-family-node',
+  'add-family-sibling',
   'add-family-connection',
   'remove-family-connection',
   'add-biography-connection-row',
@@ -354,6 +366,50 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-biography-section-row') {
     removeModuleBiographySectionRow(trigger);
+    return;
+  }
+  if (action === 'add-house-stat-row') {
+    addModuleHouseStatRow(trigger);
+    return;
+  }
+  if (action === 'remove-house-stat-row') {
+    removeModuleHouseStatRow(trigger);
+    return;
+  }
+  if (action === 'add-house-influence-row') {
+    addModuleHouseInfluenceRow(trigger);
+    return;
+  }
+  if (action === 'remove-house-influence-row') {
+    removeModuleHouseInfluenceRow(trigger);
+    return;
+  }
+  if (action === 'pick-house-influence-icon') {
+    openHouseInfluenceIconPicker(trigger);
+    return;
+  }
+  if (action === 'add-house-section-row') {
+    addModuleHouseSectionRow(trigger, trigger.dataset.houseSectionPosition || 'afterIntro');
+    return;
+  }
+  if (action === 'remove-house-section-row') {
+    removeModuleHouseSectionRow(trigger);
+    return;
+  }
+  if (action === 'add-house-connection-row') {
+    addModuleHouseConnectionRow(trigger);
+    return;
+  }
+  if (action === 'remove-house-connection-row') {
+    removeModuleHouseConnectionRow(trigger);
+    return;
+  }
+  if (action === 'add-house-document-row') {
+    addModuleHouseDocumentRow(trigger);
+    return;
+  }
+  if (action === 'remove-house-document-row') {
+    removeModuleHouseDocumentRow(trigger);
     return;
   }
   if (action === 'add-bestiary-row') {
@@ -688,6 +744,10 @@ function handleModuleEditorActionClick(event) {
     removeModuleFamilyNode(trigger);
     return;
   }
+  if (action === 'add-family-sibling') {
+    addModuleFamilySibling(trigger);
+    return;
+  }
   if (action === 'add-family-connection') {
     addModuleFamilyConnection(trigger);
     return;
@@ -824,6 +884,10 @@ function handleModuleEditorFieldChange(event) {
   }
   if (action === 'refresh-ci-preview') {
     refreshCharacterInventoryEditorPreview(field);
+    return;
+  }
+  if (action === 'refresh-family-node-options') {
+    refreshFamilyNodeDatalist(field);
     return;
   }
   if (action === 'add-page' && field.value) {

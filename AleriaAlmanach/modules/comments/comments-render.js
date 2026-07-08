@@ -13,6 +13,8 @@ const COMMENT_KIND_LABELS = {
   telepathy: 'Telepathie',
   prayer: 'Gebet',
   flirt: 'Flirt',
+  secretaction: 'Geheimaktion',
+  combataction: 'Kampfhandlung',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
   'scene-transition-event': 'Szenenwechsel',
@@ -30,7 +32,9 @@ const COMMENT_KIND_ICONS = {
   madness: '../IconOrdner/Buttom Icons/Wahn.PNG',
   telepathy: '../IconOrdner/Buttom Icons/Telepatie.PNG',
   prayer: '../IconOrdner/Buttom Icons/Beten.PNG',
-  flirt: '../IconOrdner/Buttom Icons/Flirt.PNG'
+  flirt: '../IconOrdner/Buttom Icons/Flirt.PNG',
+  secretaction: '../IconOrdner/Buttom Icons/Geheimaktion.PNG',
+  combataction: '../IconOrdner/Buttom Icons/Kampfhandlung.PNG'
 };
 
 const COMMENT_KIND_ALIASES = {
@@ -50,7 +54,13 @@ const COMMENT_KIND_ALIASES = {
   telepathie: 'telepathy',
   gebet: 'prayer',
   beten: 'prayer',
-  flirty: 'flirt'
+  flirty: 'flirt',
+  geheimaktion: 'secretaction',
+  geheimhandlung: 'secretaction',
+  secret: 'secretaction',
+  kampfhandlung: 'combataction',
+  kampf: 'combataction',
+  combat: 'combataction'
 };
 
 function normalizeCommentKind(kind, narrator = false) {
@@ -219,11 +229,15 @@ function renderCommentBubble(c, idx) {
   }
 
   const side = ['left', 'right'].includes(String(c.side || '')) ? String(c.side) : (idx % 2 === 0 ? 'left' : 'right');
+  const isSecretAction = commentKind === 'secretaction';
+  const isFusedAction = isSecretAction || commentKind === 'combataction';
+  const displayCharName = isSecretAction ? 'Unbekannte Gestalt' : charName;
+  const safeDisplayCharName = escapeHtml(displayCharName);
   const parts = splitCommentByEmoteMarkers(c);
   const entries = parts.map((part, partIdx) => {
     const portrait = part.portrait
-      ? `<img class="comment-portrait" src="${part.portrait}" alt="${safeCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
-      : `<button type="button" class="comment-portrait-placeholder" ${speakerProfileAttrs}>${getInitialChar(charName)}</button>`;
+      ? `<img class="comment-portrait${isSecretAction ? ' comment-portrait-silhouette' : ''}" src="${part.portrait}" alt="${safeDisplayCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
+      : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
     const actions = !c._hideActions && partIdx === parts.length - 1
       ? `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
@@ -232,14 +246,18 @@ function renderCommentBubble(c, idx) {
       : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
 
     return `
-      <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}" data-comment-id="${commentId}">
+      <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}${isFusedAction ? ' comment-entry-fused' : ''}" data-comment-id="${commentId}">
         ${portrait}
         <div class="comment-content">
           <div class="comment-char-header">
-            <button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeCharName}</button>
-            ${c.charTitle ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
+            <button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
+            ${(c.charTitle && !isSecretAction) ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
           <div class="comment-body comment-kind-${commentKind}">
+            <span class="comment-frame-corner comment-frame-corner--tl" aria-hidden="true"></span>
+            <span class="comment-frame-corner comment-frame-corner--tr" aria-hidden="true"></span>
+            <span class="comment-frame-corner comment-frame-corner--bl" aria-hidden="true"></span>
+            <span class="comment-frame-corner comment-frame-corner--br" aria-hidden="true"></span>
             <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
             ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}

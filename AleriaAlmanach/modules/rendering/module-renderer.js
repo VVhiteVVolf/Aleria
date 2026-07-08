@@ -530,6 +530,13 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>`;
 }
 
+// Häuser-Template shares the biography layout/CSS 1:1 — only the underlying data (page.house,
+// sanitized with house-appropriate default labels) differs, so it renders through the same
+// function rather than duplicating the whole markup.
+function buildHousePage(page, entry, pageIndex, total) {
+  return buildBiographyPage({ ...page, biography: page.house }, entry, pageIndex, total);
+}
+
 function buildBestiaryPanel(title, body, className = '') {
   if (!String(body || '').trim()) return '';
   return `

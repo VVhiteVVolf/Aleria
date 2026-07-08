@@ -789,13 +789,18 @@ function ensureUniqueFamilyNodeId(baseId, usedIds, fallbackIndex = 0) {
 
 function sanitizeFamilyNode(item = {}, index = 0, usedIds = new Set()) {
   const title = String(item?.title || item?.name || `Familienmitglied ${index + 1}`).trim();
+  const parentIds = (Array.isArray(item?.parentIds) ? item.parentIds : [])
+    .map(id => String(id || '').trim())
+    .filter(Boolean)
+    .slice(0, 2);
   return {
     id: ensureUniqueFamilyNodeId(item?.id || title, usedIds, index),
     familyType: getFamilyMemberType(item?.familyType || item?.memberType || item?.relationType),
     portrait: String(item?.portrait || item?.image || item?.img || '').trim(),
     title,
     subtitle: String(item?.subtitle || item?.role || '').trim(),
-    text: String(item?.text || item?.description || item?.detail || '').trim()
+    text: String(item?.text || item?.description || item?.detail || '').trim(),
+    parentIds
   };
 }
 
@@ -891,6 +896,13 @@ function sanitizeFamilyTrees(data = {}) {
   return trees.map(tree => ({
     ...tree,
     parentTreeId: keptTreeIds.has(tree.parentTreeId) && tree.parentTreeId !== tree.id ? tree.parentTreeId : '',
+    levels: tree.levels.map(level => ({
+      ...level,
+      nodes: level.nodes.map(node => ({
+        ...node,
+        parentIds: (node.parentIds || []).filter(id => validNodeIds.has(id) && id !== node.id)
+      }))
+    })),
     connections: sanitizeFamilyConnections(tree.connections, validNodeIds)
   }));
 }
@@ -1016,6 +1028,23 @@ function sanitizeBiographyData(data = {}) {
     documents: documentArray(data.documents),
     footer: String(data.footer || '').trim()
   };
+}
+
+// Häuser-Template — same mechanics as the biography template (portrait/stats/quote shell,
+// icon+text point list, extra sections, connections, documents), just re-labelled for a
+// noble house instead of a person. Defaults only apply where the author hasn't set their own.
+function sanitizeHouseData(data = {}) {
+  return sanitizeBiographyData({
+    ...data,
+    biographyTitle: data.biographyTitle || 'Über dieses Haus',
+    abilitiesTitle: data.abilitiesTitle || 'Einflussbereiche & Zuständigkeiten',
+    historyTitle: data.historyTitle || 'Geschichte des Hauses',
+    worksTitle: data.worksTitle || 'Bekannte Taten & Ereignisse',
+    triviaTitle: data.triviaTitle || 'Besonderheiten',
+    quotesTitle: data.quotesTitle || 'Hausworte & Zitate',
+    connectionsTitle: data.connectionsTitle || 'Verbündete, Rivalen & Vasallen',
+    documentsTitle: data.documentsTitle || 'Dokumente & Urkunden'
+  });
 }
 
 function sanitizeGoodsCategories(items = []) {

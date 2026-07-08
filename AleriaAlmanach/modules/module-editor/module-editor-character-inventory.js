@@ -573,12 +573,21 @@ function buildCharacterInventoryModuleEditorFields(page) {
       <div class="ci-full-editor" data-ci-editor>
         <input type="hidden" class="me-ci-character-id" value="${escapeHtml(data.characterId || '')}">
         <input type="hidden" class="me-ci-equipment-quiz" value="${escapeHtml(JSON.stringify(data.equipmentQuiz))}">
+        <input type="hidden" class="me-ci-info-rows-json" value="${escapeHtml(JSON.stringify(data.infoRows || []))}">
+        <input type="hidden" class="me-ci-character-attributes-json" value="${escapeHtml(JSON.stringify(data.attributes || []))}">
         <div class="ci-editor-pane">
           <div class="module-editor-grid">
             <div class="module-editor-field wide">
               <div class="module-editor-kicker">Charakter-Inventar</div>
               <div class="module-editor-help">Bearbeite Charakterdaten, Inventar, Detailprofile und Gefährten. Rechts siehst du eine Live-Vorschau.</div>
             </div>
+          </div>
+          <div class="ci-editor-quick-actions">
+            <div>
+              <strong>Item aus Register</strong>
+              <span>Ein vorhandenes Register-Item direkt in dieses Charakterinventar übernehmen.</span>
+            </div>
+            <button class="ci-editor-register-btn" type="button" data-module-editor-action="add-ci-item-from-register">Item aus Register hinzufügen</button>
           </div>
           <section class="ci-editor-section">
             <h4>Kopf & Charakter</h4>
@@ -596,16 +605,8 @@ function buildCharacterInventoryModuleEditorFields(page) {
               ${buildCharacterInventoryInput('Geld', 'me-ci-money', data.money)}
               ${buildCharacterInventoryInput('Traglast-Label', 'me-ci-carryLabel', data.carryLabel)}
               ${buildCharacterInventoryInput('Traglast-Wert', 'me-ci-carryValue', data.carryValue)}
-              ${buildCharacterInventoryCheckbox('Infotabelle anzeigen', 'me-ci-show-info-table', data.showInfoTable)}
+              <div class="ci-editor-note wide">Infobox und Charakterattribute werden in diesem Inventar-Menü nicht mehr direkt gepflegt.</div>
             </div>
-          </section>
-          <section class="ci-editor-section">
-            <div class="ci-editor-section-head"><h4>Infobox</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-row" data-ci-kind="info">+ Zeile</button></div>
-            <div class="ci-editor-list">${buildCharacterInventoryRowEditor(data.infoRows, 'info')}</div>
-          </section>
-          <section class="ci-editor-section">
-            <div class="ci-editor-section-head"><h4>Charakterattribute</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-attribute" data-ci-kind="character">+ Attribut</button></div>
-            <div class="ci-editor-list">${buildCharacterInventoryAttributeEditor(data.attributes, 'character')}</div>
           </section>
           <section class="ci-editor-section">
             <div class="ci-editor-section-head"><h4>Inventar-Reiter</h4><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-category">+ Reiter</button></div>
@@ -615,7 +616,7 @@ function buildCharacterInventoryModuleEditorFields(page) {
             <div class="ci-editor-section-head">
               <h4>Items</h4>
               <div class="ci-editor-section-actions">
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item-from-register">Aus Register</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item-from-register">Item aus Register hinzufügen</button>
                 <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-ci-item">+ Item</button>
               </div>
             </div>
@@ -629,7 +630,7 @@ function buildCharacterInventoryModuleEditorFields(page) {
         <div class="ci-editor-splitter" aria-hidden="true"></div>
         <div class="ci-preview-pane">
           <div class="ci-preview-head">Live-Vorschau</div>
-          <div class="ci-preview-frame">${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: data }, {}, 0, 1)}</div>
+          <div class="ci-preview-frame">${buildCharacterInventoryPage({ characterInventoryPage: true, characterInventory: data, characterInventoryReadOnly: true }, {}, 0, 1)}</div>
         </div>
       </div>
     </div>`;
@@ -660,6 +661,15 @@ function collectCharacterInventoryJsonField(card, selector, fallback = {}) {
 
 function collectCharacterInventoryModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="character-inventory"]') || card;
+  const editedInfoRows = collectCharacterInventoryRows(block, '[data-ci-row-kind="info"]', row => ({
+    icon: getTrimmedFormValue(row, '.me-ci-info-icon'),
+    label: getTrimmedFormValue(row, '.me-ci-info-label'),
+    value: getTrimmedFormValue(row, '.me-ci-info-value')
+  }));
+  const editedCharacterAttributes = collectCharacterInventoryRows(block, '[data-ci-attribute-kind="character"]', row => ({
+    label: getTrimmedFormValue(row, '.me-ci-character-attribute-label'),
+    value: getTrimmedFormValue(row, '.me-ci-character-attribute-value')
+  }));
   page.characterInventoryPage = true;
   const moneyValue = getTrimmedFormValue(block, '.me-ci-money');
   page.characterInventory = sanitizeCharacterInventoryData({
@@ -682,15 +692,8 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
     equipmentQuiz: collectCharacterInventoryJsonField(block, '.me-ci-equipment-quiz', {}),
     carryLabel: getTrimmedFormValue(block, '.me-ci-carryLabel'),
     carryValue: getTrimmedFormValue(block, '.me-ci-carryValue'),
-    infoRows: collectCharacterInventoryRows(block, '[data-ci-row-kind="info"]', row => ({
-      icon: getTrimmedFormValue(row, '.me-ci-info-icon'),
-      label: getTrimmedFormValue(row, '.me-ci-info-label'),
-      value: getTrimmedFormValue(row, '.me-ci-info-value')
-    })),
-    attributes: collectCharacterInventoryRows(block, '[data-ci-attribute-kind="character"]', row => ({
-      label: getTrimmedFormValue(row, '.me-ci-character-attribute-label'),
-      value: getTrimmedFormValue(row, '.me-ci-character-attribute-value')
-    })),
+    infoRows: editedInfoRows.length ? editedInfoRows : collectCharacterInventoryJsonField(block, '.me-ci-info-rows-json', []),
+    attributes: editedCharacterAttributes.length ? editedCharacterAttributes : collectCharacterInventoryJsonField(block, '.me-ci-character-attributes-json', []),
     categories: collectCharacterInventoryRows(block, '[data-ci-category-row]', row => ({
       id: getTrimmedFormValue(row, '.me-ci-category-id'),
       label: getTrimmedFormValue(row, '.me-ci-category-label'),
@@ -771,7 +774,7 @@ function buildInlineCharacterInventoryEditor(page) {
         <div class="inline-edit-field"><span class="inline-edit-label">Name</span><input class="inline-edit-input" data-inline-action="update-ci-field" data-ci-field="name" value="${escapeHtml(data.name)}"></div>
         <div class="inline-edit-field wide"><span class="inline-edit-label">Portrait</span><input class="inline-edit-input" data-inline-action="update-ci-field" data-ci-field="portrait" value="${escapeHtml(data.portrait)}"></div>
       </div>
-      <div class="inline-placeholder-note">Items, Gefährten, Attribute und Detailprofile bearbeitest du im großen Modul-Editor mit Live-Vorschau.</div>
+      <div class="inline-placeholder-note">Items, Gefährten und Detailprofile bearbeitest du im großen Modul-Editor mit Live-Vorschau.</div>
     </div>`;
 }
 
@@ -794,7 +797,7 @@ function refreshCharacterInventoryEditorPreview(source) {
   const page = card.matches('[data-ci-embedded-card]')
     ? collectCharacterInventoryModuleEditorPage(card, {})
     : collectModulePageFromCard(card);
-  frame.innerHTML = buildCharacterInventoryPage(page, {}, 0, 1);
+  frame.innerHTML = buildCharacterInventoryPage({ ...page, characterInventoryReadOnly: true }, {}, 0, 1);
   if (typeof syncModuleJsonPreview === 'function') syncModuleJsonPreview();
 }
 
@@ -951,7 +954,7 @@ function addCharacterInventoryItemFromRegister(button) {
   const card = button.closest('.module-page-card') || button.closest('[data-ci-embedded-card]');
   if (!card) return;
   openItemDbPicker({
-    title: 'Item aus Register ausruesten',
+    title: 'Item aus Register hinzufügen',
     onSelect: item => {
       const embedded = card.matches('[data-ci-embedded-card]');
       const page = embedded
@@ -969,7 +972,7 @@ function addCharacterInventoryItemFromRegister(button) {
         ? buildCharacterInventoryEmbeddedEditorMarkup(page.characterInventory)
         : buildModulePageEditorMarkup(page, Number(card.dataset.pageIndex || 0));
       if (typeof syncModuleJsonPreview === 'function') syncModuleJsonPreview();
-      if (typeof showAppStatus === 'function') showAppStatus(`${equipped.name} aus dem Register ausgeruestet.`, 'success');
+      if (typeof showAppStatus === 'function') showAppStatus(`${equipped.name} aus dem Register hinzugefügt.`, 'success');
     }
   });
 }

@@ -23,6 +23,21 @@ const MODULE_SIMPLE_LINE_CONFIGS = {
     placeholder: 'Zitat',
     fallback: 'Neues Zitat',
     empty: 'Noch keine Zitate vorhanden.'
+  },
+  houseDeeds: {
+    placeholder: 'Tat / Ereignis',
+    fallback: 'Neue Tat',
+    empty: 'Noch keine Taten oder Ereignisse vorhanden.'
+  },
+  houseTrivia: {
+    placeholder: 'Besonderheit / Notiz',
+    fallback: 'Neue Notiz',
+    empty: 'Noch keine Besonderheiten vorhanden.'
+  },
+  houseQuotes: {
+    placeholder: 'Hauswort / Zitat',
+    fallback: 'Neues Zitat',
+    empty: 'Noch keine Hausworte vorhanden.'
   }
 };
 

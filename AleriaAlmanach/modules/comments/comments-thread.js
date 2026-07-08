@@ -225,6 +225,7 @@ function renderCommentsToScroll(scroll, comments) {
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);
   const paginationBottom = renderCommentPaginationControls(threadId, pageInfo);
   if (sortedComments.length === 0) {
+    detachCommentAnimObserver(scroll);
     const emptyTitle = escapeHtml(scroll.dataset.emptyTitle || 'Noch keine Stimmen');
     const emptyText = escapeHtml(scroll.dataset.emptyText || 'Sei der Erste.');
     scroll.innerHTML = `
@@ -233,14 +234,96 @@ function renderCommentsToScroll(scroll, comments) {
         <div class="comment-empty-sub">${emptyText}</div>
       </div>`;
   } else {
-    const renderedComments = visibleComments.map((c, i) => {
+    const units = visibleComments.map((c, i) => {
       const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;
-      return `${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
-    }).join('');
-    scroll.innerHTML = `${paginationTop}${renderedComments}${paginationBottom}`;
+      const key = String(c?.id ?? `idx-${absoluteIndex}`);
+      const html = `${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
+      return { key, html };
+    });
+    patchCommentScroll(scroll, paginationTop, units, paginationBottom);
   }
   syncCommentJumpTools(scroll, sortedComments);
   applyCommentToolsVisibility();
+  observeCommentEntriesForAnimation(scroll);
+}
+
+// Keyed reconciliation: only comments whose rendered HTML actually changed get their
+// DOM touched. Untouched comments keep their live animations, loaded images and any
+// in-progress interaction instead of being torn down and rebuilt on every snapshot.
+function patchCommentScroll(scroll, paginationTopHtml, units, paginationBottomHtml) {
+  let topEl = scroll.querySelector(':scope > [data-comment-pagination="top"]');
+  let bottomEl = scroll.querySelector(':scope > [data-comment-pagination="bottom"]');
+  if (!topEl || !bottomEl) {
+    scroll.innerHTML = '';
+    topEl = document.createElement('div');
+    topEl.dataset.commentPagination = 'top';
+    bottomEl = document.createElement('div');
+    bottomEl.dataset.commentPagination = 'bottom';
+    scroll.appendChild(topEl);
+    scroll.appendChild(bottomEl);
+  }
+  if (topEl.__commentHtml !== paginationTopHtml) {
+    topEl.innerHTML = paginationTopHtml;
+    topEl.__commentHtml = paginationTopHtml;
+  }
+  if (bottomEl.__commentHtml !== paginationBottomHtml) {
+    bottomEl.innerHTML = paginationBottomHtml;
+    bottomEl.__commentHtml = paginationBottomHtml;
+  }
+
+  const existingUnits = Array.from(scroll.querySelectorAll(':scope > .comment-unit'));
+  const existingByKey = new Map(existingUnits.map(el => [el.dataset.commentKey, el]));
+  const seen = new Set();
+  // `cursor` is the node the next correctly-placed unit must precede. As long as units
+  // already sit in the right order we only ever advance the cursor — no DOM writes at all.
+  let cursor = topEl.nextSibling;
+
+  units.forEach(({ key, html }) => {
+    seen.add(key);
+    let el = existingByKey.get(key);
+    if (el) {
+      if (el.__commentHtml !== html) {
+        el.innerHTML = html;
+        el.__commentHtml = html;
+      }
+    } else {
+      el = document.createElement('div');
+      el.className = 'comment-unit';
+      el.dataset.commentKey = key;
+      el.innerHTML = html;
+      el.__commentHtml = html;
+    }
+    if (el === cursor) {
+      cursor = cursor.nextSibling;
+    } else {
+      scroll.insertBefore(el, cursor);
+    }
+  });
+
+  existingUnits.forEach(el => {
+    if (!seen.has(el.dataset.commentKey)) el.remove();
+  });
+}
+
+// Off-screen comments have their CSS animations paused (see .comment-in-view in
+// comments.css) so long threads don't keep dozens of invisible bubbles animating.
+function observeCommentEntriesForAnimation(scroll) {
+  if (typeof IntersectionObserver === 'undefined') return;
+  detachCommentAnimObserver(scroll);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('comment-in-view', entry.isIntersecting);
+    });
+  }, { rootMargin: '200px 0px', threshold: 0 });
+  scroll.querySelectorAll('.comment-entry').forEach(el => observer.observe(el));
+  scroll._commentAnimObserver = observer;
+}
+
+function detachCommentAnimObserver(scroll) {
+  if (scroll._commentAnimObserver) {
+    scroll._commentAnimObserver.disconnect();
+    scroll._commentAnimObserver = null;
+  }
 }
 
 function renderCommentInsertControl(comment, idx, comments) {

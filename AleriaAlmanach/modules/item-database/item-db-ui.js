@@ -192,6 +192,13 @@ function itemDbFormatPriceAsCopper(item) {
   return `${unique.map(itemDbFormatCopperValue).join(' - ')} Kupfertaler`;
 }
 
+function itemDbFormatPriceCopperAmount(item) {
+  const values = itemDbParsePriceToCopperValues(item);
+  if (!values.length) return '';
+  const unique = values.filter((value, index) => index === 0 || value !== values[index - 1]);
+  return unique.map(itemDbFormatCopperValue).join(' - ');
+}
+
 function itemDbGetRarityId(item) {
   const rarity = itemDbNormalizeText(itemDbGetField(item, 'rarity'));
   if (rarity.includes('legend')) return 'legendaer';
@@ -284,9 +291,9 @@ function itemDbRenderImage(item, className = 'item-db-image') {
 
 function itemDbRenderMoney(itemOrValue) {
   const item = itemOrValue && typeof itemOrValue === 'object' ? itemOrValue : { price: itemOrValue };
-  const text = itemDbFormatPriceAsCopper(item);
+  const text = itemDbFormatPriceCopperAmount(item);
   if (!text) return '-';
-  return `<span class="item-db-money">${itemDbEscapeHtml(text)} <img src="${ITEM_DB_CURRENCY_ICONS.copper}" alt="" loading="lazy" decoding="async"></span>`;
+  return `<span class="item-db-money"><span>${itemDbEscapeHtml(text)}</span><img src="${ITEM_DB_CURRENCY_ICONS.copper}" alt="Kupfertaler" title="Kupfertaler" loading="lazy" decoding="async"></span>`;
 }
 
 function itemDbRenderFilterSidebar(items) {
@@ -336,6 +343,33 @@ function itemDbGetActiveColumns() {
   return itemDbGetCategoryColumns(_itemDbState.activeCategory);
 }
 
+const ITEM_DB_COLUMN_GRID = {
+  item: { width: 'minmax(260px, 1.7fr)', min: 260 },
+  category: { width: 'minmax(120px, 0.72fr)', min: 120 },
+  rarity: { width: 'minmax(125px, 0.72fr)', min: 125 },
+  origin: { width: 'minmax(130px, 0.78fr)', min: 130 },
+  type: { width: 'minmax(120px, 0.72fr)', min: 120 },
+  material: { width: 'minmax(120px, 0.72fr)', min: 120 },
+  weight: { width: 'minmax(95px, 0.52fr)', min: 95 },
+  condition: { width: 'minmax(115px, 0.66fr)', min: 115 },
+  availability: { width: 'minmax(125px, 0.72fr)', min: 125 },
+  magical: { width: 'minmax(105px, 0.58fr)', min: 105 },
+  price: { width: 'minmax(112px, 0.52fr)', min: 112 },
+  stock: { width: 'minmax(88px, 0.42fr)', min: 88 },
+  source: { width: 'minmax(140px, 0.82fr)', min: 140 }
+};
+
+function itemDbGetColumnGridStyle(columns = []) {
+  const specs = columns.map(column => ITEM_DB_COLUMN_GRID[column] || { width: 'minmax(110px, 0.68fr)', min: 110 });
+  const template = specs.map(spec => spec.width).join(' ');
+  const minWidth = specs.reduce((sum, spec) => sum + spec.min, 0);
+  return [
+    `--item-db-grid-template:${template}`,
+    `--item-db-table-min-width:${Math.max(minWidth, 620)}px`,
+    `--item-db-col-count:${columns.length}`
+  ].join(';');
+}
+
 function itemDbRenderTableCell(item, column) {
   if (column === 'item') {
     return `<div class="item-db-title-cell">${itemDbRenderImage(item)}<span><strong>${itemDbEscapeHtml(item.title)}</strong><small>${itemDbEscapeHtml(item.type || item.categoryLabel)}</small></span></div>`;
@@ -351,21 +385,22 @@ function itemDbRenderTableCell(item, column) {
 
 function itemDbRenderTable(items) {
   const columns = itemDbGetActiveColumns();
+  const gridStyle = itemDbGetColumnGridStyle(columns);
   if (!items.length) {
     return `<div class="item-db-empty">Keine Items fuer diesen Filter gefunden.</div>`;
   }
 
-  return `<div class="item-db-table" role="table" aria-label="Items und Gueter" style="--item-db-col-count:${columns.length};">
+  return `<div class="item-db-table" role="table" aria-label="Items und Gueter" style="${itemDbEscapeHtml(gridStyle)}">
     <div class="item-db-row item-db-head" role="row">
       ${columns.map(column => {
         const active = _itemDbState.sortColumn === column ? ` data-sort="${_itemDbState.sortDirection}"` : '';
-        return `<button type="button" role="columnheader" data-item-db-action="sort" data-column="${itemDbEscapeHtml(column)}"${active}>${itemDbEscapeHtml(ITEM_DB_COLUMN_LABELS[column] || column)}</button>`;
+        return `<button class="item-db-cell item-db-cell-${itemDbEscapeHtml(column)}" type="button" role="columnheader" data-item-db-action="sort" data-column="${itemDbEscapeHtml(column)}"${active}>${itemDbEscapeHtml(ITEM_DB_COLUMN_LABELS[column] || column)}</button>`;
       }).join('')}
     </div>
     ${items.map(item => {
       const selected = item.canonicalKey === _itemDbState.selectedKey ? ' selected' : '';
       return `<button class="item-db-row item-db-item${selected}" type="button" role="row" data-item-db-action="select-item" data-item-key="${itemDbEscapeHtml(item.canonicalKey)}">
-        ${columns.map(column => `<div>${itemDbRenderTableCell(item, column)}</div>`).join('')}
+        ${columns.map(column => `<div class="item-db-cell item-db-cell-${itemDbEscapeHtml(column)}">${itemDbRenderTableCell(item, column)}</div>`).join('')}
       </button>`;
     }).join('')}
   </div>`;

@@ -754,9 +754,9 @@ function createDefaultHierarchyPage(index = 0) {
 }
 
 function createDefaultFamilyPage(index = 0) {
-  const base = createDefaultHierarchyPage(index);
+  const { hierarchy: baseHierarchy, hierarchyPage: _baseHierarchyPage, ...base } = createDefaultHierarchyPage(index);
   const family = sanitizeFamilyData({
-    ...base.hierarchy,
+    ...baseHierarchy,
     eyebrow: 'Familie',
     subtitle: 'Stammbaum und Familienbindungen',
     centerLabel: 'Haus Pendragon',
@@ -780,9 +780,16 @@ function createDefaultFamilyPage(index = 0) {
         label: 'Hauptlinie',
         levels: [
           {
+            label: 'Grosselterngeneration',
+            nodes: [
+              { id: 'grossvater', familyType: 'direct', portrait: '', title: 'Grossvater des Hauses', subtitle: 'Direkte Linie', text: 'Ursprung der dargestellten Hauptlinie.' },
+              { id: 'grossonkel', familyType: 'direct', portrait: '', title: 'Grossonkel', subtitle: 'Bruder des Grossvaters', text: 'Geschwister des Grossvaters, eigene Seitenlinie moeglich.' }
+            ]
+          },
+          {
             label: 'Elterngeneration',
             nodes: [
-              { id: 'vater', familyType: 'direct', portrait: '', title: 'Vater des Hauses', subtitle: 'Direkte Linie', text: 'Oberhaupt oder Ursprung der dargestellten Linie.' },
+              { id: 'vater', familyType: 'direct', portrait: '', title: 'Vater des Hauses', subtitle: 'Direkte Linie', parentIds: ['grossvater'], text: 'Oberhaupt oder Ursprung der dargestellten Linie.' },
               { id: 'mutter', familyType: 'married', portrait: '', title: 'Mutter des Hauses', subtitle: 'Angeheiratet', text: 'Ehepartnerin oder eingeheiratete Verbindung.' },
               { id: 'affaire', familyType: 'affair', portrait: '', title: 'Verborgene Affaire', subtitle: 'Affaire', text: 'Nicht offizielle Verbindung mit Einfluss auf die Linie.' }
             ]
@@ -790,9 +797,9 @@ function createDefaultFamilyPage(index = 0) {
           {
             label: 'Kinder',
             nodes: [
-              { id: 'erbe', familyType: 'direct', portrait: '', title: 'Rechtmaessiger Erbe', subtitle: 'Direktes Familienmitglied', text: 'Traegt Namen, Anspruch und Hauptlinie weiter.' },
-              { id: 'schwester', familyType: 'direct', portrait: '', title: 'Schwester des Erben', subtitle: 'Direktes Familienmitglied', text: 'Geschwisterliche Parallelposition innerhalb der Generation.' },
-              { id: 'bastard', familyType: 'bastard', portrait: '', title: 'Anerkannter Bastard', subtitle: 'Bastard', text: 'Kind ausserhalb der offiziellen Ehe.' }
+              { id: 'erbe', familyType: 'direct', portrait: '', title: 'Rechtmaessiger Erbe', subtitle: 'Direktes Familienmitglied', parentIds: ['vater', 'mutter'], text: 'Traegt Namen, Anspruch und Hauptlinie weiter.' },
+              { id: 'schwester', familyType: 'direct', portrait: '', title: 'Schwester des Erben', subtitle: 'Direktes Familienmitglied', parentIds: ['vater', 'mutter'], text: 'Geschwisterliche Parallelposition innerhalb der Generation.' },
+              { id: 'bastard', familyType: 'bastard', portrait: '', title: 'Anerkannter Bastard', subtitle: 'Bastard', parentIds: ['vater', 'affaire'], text: 'Kind ausserhalb der offiziellen Ehe.' }
             ]
           },
           {
@@ -800,15 +807,19 @@ function createDefaultFamilyPage(index = 0) {
             nodes: [
               { id: 'ehepartner', familyType: 'married', portrait: '', title: 'Ehepartner des Erben', subtitle: 'Angeheiratet', text: 'Politische oder private Eheverbindung.' },
               { id: 'muendel', familyType: 'ward', portrait: '', title: 'M\u00fcndel des Hauses', subtitle: 'M\u00fcndel', text: 'Unter Schutz oder Vormundschaft des Hauses.' },
+              { id: 'schwager', familyType: 'married', portrait: '', title: 'Schwager des Erben', subtitle: 'Bruder der Ehefrau', text: 'Bruder des angeheirateten Ehepartners - Verschwaegerung, keine Blutsverwandtschaft.' },
               { id: 'erzwungen', familyType: 'forced', portrait: '', title: 'Erzwungene Bindung', subtitle: 'Erzwungen', text: 'Bindung durch Zwang, Vertrag oder Geiselstellung.' }
             ]
           }
         ],
         connections: [
+          { from: 'grossvater', to: 'grossonkel', relationType: 'sibling', label: 'Geschwister' },
           { from: 'vater', to: 'mutter', relationType: 'spouse', label: 'Ehe' },
           { from: 'vater', to: 'affaire', relationType: 'affair', label: 'Affaire' },
           { from: 'erbe', to: 'schwester', relationType: 'sibling', label: 'Geschwister' },
           { from: 'erbe', to: 'ehepartner', relationType: 'spouse', label: 'Ehe' },
+          { from: 'ehepartner', to: 'schwager', relationType: 'sibling', label: 'Geschwister' },
+          { from: 'erbe', to: 'schwager', relationType: 'in-law', label: 'Schwager' },
           { from: 'bastard', to: 'muendel', relationType: 'cousin', label: 'Nebenlinie' }
         ]
       },
@@ -842,9 +853,7 @@ function createDefaultFamilyPage(index = 0) {
     ...base,
     pageTitle: `${getRomanPageLabel(index)} - Familie`,
     familyPage: true,
-    family,
-    hierarchyPage: false,
-    hierarchy: undefined
+    family
   };
 }
 
@@ -1449,6 +1458,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectCourtModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildCourtPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'court')
+  },
+  houses: {
+    id: 'houses',
+    pageType: 'house',
+    pageFlag: 'housePage',
+    label: 'Häuser-Template',
+    pageLabel: 'Häuser-Template',
+    defaultTitle: 'Neues Haus',
+    defaultSubtitle: 'Adelshaus, Dynastie oder Familiensitz',
+    entryType: 'Haus',
+    typeMatchers: ['adelshaus', 'herrscherhaus', 'hausakte', 'dynastie'],
+    createPages: () => createHouseTemplatePages(),
+    createPage: index => createDefaultHousePage(index),
+    buildEditorFields: page => buildHouseModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectHouseModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildHousePage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'house')
   }
 };
 
@@ -1496,10 +1522,20 @@ function buildModuleTemplateOptions(selected = 'story') {
 function inferModuleTemplateType(entry) {
   const pages = Array.isArray(entry?.pages) ? entry.pages : [];
   const type = String(entry?.type || '').toLowerCase();
-  const byType = Object.values(MODULE_TEMPLATE_REGISTRY).find(template =>
-    (template.typeMatchers || []).some(marker => type.includes(marker))
-  );
-  if (byType) return byType.id;
+  // Pick the longest matching marker across all templates, not just the first template whose
+  // list contains any match — otherwise a generic marker (e.g. "turnier") that happens to be a
+  // substring of a more specific one (e.g. "turnierregister") wins purely by registry order.
+  let bestTemplate = null;
+  let bestMarkerLength = -1;
+  Object.values(MODULE_TEMPLATE_REGISTRY).forEach(template => {
+    (template.typeMatchers || []).forEach(marker => {
+      if (marker.length > bestMarkerLength && type.includes(marker)) {
+        bestMarkerLength = marker.length;
+        bestTemplate = template;
+      }
+    });
+  });
+  if (bestTemplate) return bestTemplate.id;
   const byPage = pages.map(page => getModuleTemplateForPage(page)).find(template => template.id !== 'story');
   if (byPage) return byPage.id;
   return 'story';
@@ -1624,6 +1660,68 @@ function createQuestFileTemplatePages() {
   return [createDefaultQuestFilePage(0)];
 }
 
+// Häuser-Template — built on the biography template's mechanics (portrait/stats/quote shell,
+// icon+text point list, extra sections, connections, documents) but re-labelled for a noble
+// house, dynasty or family seat instead of a single person.
+function createDefaultHousePage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} — Haus`,
+    image: '',
+    imageWidth: 30,
+    imageSquare: true,
+    housePage: true,
+    description: 'Kurzer Einstieg: Ursprung des Hauses, aktuelle Bedeutung und warum es im Almanach gefuehrt wird.',
+    stats: [
+      ['Vollständiger Name', 'Haus Noch festlegen'],
+      ['Sitz', 'Noch festlegen'],
+      ['Gegründet', 'Noch festlegen'],
+      ['Oberhaupt', 'Noch festlegen'],
+      ['Rang', 'Noch festlegen'],
+      ['Status', 'Aktiv']
+    ],
+    house: {
+      sideWidth: 100,
+      connectionPortraitHeight: 68,
+      connectionTextOffset: 0,
+      biographyTitle: 'Über dieses Haus',
+      biographyText: 'Beschreibe Ursprung, Werte und die gesellschaftliche Stellung dieses Hauses.',
+      abilitiesTitle: 'Einflussbereiche & Zuständigkeiten',
+      abilities: [
+        { icon: '../IconOrdner/Organisationsicons/Militär.png', title: 'Militär', detail: 'Streitmacht, Wehrpflicht oder Rittergefolge des Hauses.' },
+        { icon: '../IconOrdner/Organisationsicons/Diplomatie.png', title: 'Diplomatie', detail: 'Bündnisse, Handelsabkommen und Beziehungen zu anderen Häusern.' },
+        { icon: '../IconOrdner/Organisationsicons/Magie.png', title: 'Magie', detail: 'Arkane Tradition, Hofmagier oder magisches Erbe des Hauses.' }
+      ],
+      extraSections: [],
+      historyTitle: 'Geschichte des Hauses',
+      historyText: 'Was hat dieses Haus geprägt, welche Wendepunkte gab es, welche Spuren bleiben?',
+      worksTitle: 'Bekannte Taten & Ereignisse',
+      works: ['Erstes bekanntes Ereignis in der Geschichte des Hauses.', 'Zweites bedeutendes Ereignis.'],
+      triviaTitle: 'Besonderheiten',
+      trivia: ['Ein prägnantes Detail über das Haus.', 'Ein Gerücht oder eine Eigenheit.'],
+      quotesTitle: 'Hausworte & Zitate',
+      quotes: ['„Ein Leitsatz oder Hauswort.“'],
+      connectionsTitle: 'Verbündete, Rivalen & Vasallen',
+      connections: [
+        { type: 'heading', title: 'Verbündete Häuser', detail: '' },
+        { type: 'connection', name: 'Verbündetes Haus', detail: 'Art des Bündnisses', image: '', imageFormat: 'square' },
+        { type: 'heading', title: 'Rivalen', detail: '' },
+        { type: 'connection', name: 'Rivalisierendes Haus', detail: 'Grund der Rivalität', image: '', imageFormat: 'square' }
+      ],
+      documentsTitle: 'Dokumente & Urkunden',
+      documents: ['Gründungsurkunde oder Wappenbrief'],
+      footer: 'Blut, Ehre und das Wort des Hauses.'
+    },
+    commentDivider: true,
+    commentSequence: [],
+    quote: '„Ein Leitsatz oder Hauswort dieses Hauses.“',
+    quoteBy: '— Hauschronik'
+  };
+}
+
+function createHouseTemplatePages() {
+  return [createDefaultHousePage(0)];
+}
+
 function createProfileTemplatePages() {
   return [
     {
@@ -1668,7 +1766,8 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     'Neue Familie',
     'Neue Kaste',
     'Neue Kaste / Klasse',
-    'Neue Gerichtsakte'
+    'Neue Gerichtsakte',
+    'Neues Haus'
   ]);
   const baseTitle = existing.title && !genericTitles.has(existing.title)
     ? existing.title

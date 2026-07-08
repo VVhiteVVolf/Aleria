@@ -36,7 +36,7 @@
 
 .ci-layout {
   display: grid;
-  grid-template-columns: minmax(270px, 0.82fr) minmax(520px, 1.95fr) minmax(240px, 0.72fr);
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 2.1fr) minmax(230px, 0.72fr);
   gap: 0.8rem;
   align-items: start;
 }
@@ -52,6 +52,7 @@
 .ci-character,
 .ci-companions,
 .ci-center {
+  min-width: 0;
   padding: 0.75rem;
 }
 
@@ -223,6 +224,84 @@
   gap: 0.25rem;
 }
 
+.ci-item-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(139,105,20,0.2);
+  background: rgba(255,250,232,0.32);
+}
+
+.ci-item-tools h3 {
+  margin: 0;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-item-tools p {
+  margin: 0.16rem 0 0;
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.ci-register-action {
+  flex: 0 0 auto;
+  min-width: min(15rem, 100%);
+  min-height: 2.7rem;
+  display: inline-grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(44,26,8,0.72);
+  background: linear-gradient(135deg, #2c1a08, #5c3a12);
+  color: var(--gold-light);
+  cursor: pointer;
+  padding: 0.42rem 0.7rem;
+  text-align: left;
+}
+
+.ci-register-action-icon {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid rgba(221,184,106,0.56);
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ci-register-action strong,
+.ci-register-action small {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ci-register-action strong {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-register-action small {
+  margin-top: 0.08rem;
+  color: rgba(245,225,174,0.78);
+  font-size: 0.68rem;
+  font-style: italic;
+}
+
 .ci-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -283,16 +362,18 @@
 }
 
 .ci-item-table {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid rgba(139,105,20,0.22);
 }
 
 .ci-item-head,
 .ci-item-row {
   display: grid;
-  grid-template-columns: minmax(180px, 1.35fr) minmax(120px, 0.8fr) minmax(240px, 1.8fr) 5rem 4.2rem;
+  grid-template-columns: minmax(170px, 1.25fr) minmax(105px, 0.72fr) minmax(220px, 1.8fr) minmax(4.8rem, 0.45fr) minmax(4rem, 0.36fr);
   gap: 0;
   align-items: center;
+  min-width: 660px;
 }
 
 .ci-item-head {
@@ -310,11 +391,13 @@
   min-width: 0;
   border-right: 1px solid rgba(139,105,20,0.14);
   padding: 0.55rem;
+  overflow-wrap: anywhere;
 }
 
 .ci-item-list {
   max-height: min(26rem, 42vh);
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
 }
 
@@ -343,6 +426,12 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  min-width: 0;
+}
+
+.ci-item-name strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .ci-item-icon {
@@ -403,11 +492,29 @@
   margin-top: 0.7rem;
 }
 
+.ci-money-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+}
+
 .ci-money-control {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
   gap: 0.15rem 0.55rem;
   align-items: center;
+  border: 1px solid rgba(139,105,20,0.18);
+  background: rgba(255,255,255,0.18);
+  padding: 0.45rem;
+}
+
+.ci-money-summary-item {
+  display: grid;
+  grid-template-columns: 2.35rem minmax(0, 1fr);
+  gap: 0.1rem 0.55rem;
+  align-items: center;
+  min-width: 0;
   border: 1px solid rgba(139,105,20,0.18);
   background: rgba(255,255,255,0.18);
   padding: 0.45rem;
@@ -420,7 +527,15 @@
   object-fit: contain;
 }
 
+.ci-money-summary-item img {
+  grid-row: span 2;
+  width: 2.35rem;
+  height: 2.35rem;
+  object-fit: contain;
+}
+
 .ci-money-control span,
+.ci-money-summary-item span,
 .ci-money-transaction span,
 .ci-equipment-question span {
   color: var(--gold);
@@ -429,6 +544,13 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.ci-money-summary-item strong {
+  min-width: 0;
+  color: var(--ink);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
 }
 
 .ci-money-control input,
@@ -537,9 +659,17 @@
 .ci-companion-card {
   display: grid;
   width: 100%;
+  min-width: 0;
   gap: 0.45rem;
   padding: 0.55rem;
   text-align: left;
+}
+
+.ci-companion-card strong,
+.ci-companion-card span,
+.ci-companion-card dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .ci-companion-image {
@@ -585,10 +715,10 @@
 .ci-profile-modal {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(220px, 0.78fr) minmax(300px, 1.15fr) minmax(260px, 0.85fr);
+  grid-template-columns: minmax(230px, 0.72fr) minmax(320px, 1.2fr) minmax(280px, 0.86fr);
   gap: 0.9rem;
-  width: min(1040px, 96%);
-  max-height: 86%;
+  width: min(1320px, 98%);
+  max-height: 92%;
   overflow: auto;
   border: 1px solid rgba(139,105,20,0.42);
   background: var(--parchment);
@@ -597,7 +727,7 @@
 }
 
 .ci-profile-modal-editing {
-  grid-template-columns: minmax(230px, 0.72fr) minmax(320px, 1.05fr) minmax(290px, 0.9fr);
+  grid-template-columns: minmax(240px, 0.68fr) minmax(360px, 1.08fr) minmax(310px, 0.88fr);
 }
 
 .ci-modal-close {
@@ -789,7 +919,7 @@
   display: grid;
   grid-template-columns: minmax(360px, var(--ci-editor-width, 42%)) 0.45rem minmax(480px, 1fr);
   gap: 0.65rem;
-  height: min(78vh, 980px);
+  height: min(86vh, 1180px);
 }
 
 .ci-editor-pane,
@@ -887,7 +1017,68 @@
   height: 1rem;
 }
 
+.ci-editor-quick-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.75rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: linear-gradient(135deg, rgba(255,250,232,0.54), rgba(221,184,106,0.22));
+  padding: 0.7rem;
+}
+
+.ci-editor-quick-actions > div {
+  min-width: 0;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.ci-editor-quick-actions strong {
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ci-editor-quick-actions span {
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.ci-editor-register-btn {
+  flex: 0 0 auto;
+  min-height: 2.35rem;
+  border: 1px solid rgba(44,26,8,0.72);
+  background: linear-gradient(135deg, #2c1a08, #5c3a12);
+  color: var(--gold-light);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.09em;
+  padding: 0.48rem 0.8rem;
+  text-transform: uppercase;
+}
+
 .ci-editor-grid label.wide {
+  grid-column: 1 / -1;
+}
+
+.ci-editor-note {
+  min-width: 0;
+  border: 1px dashed rgba(139,105,20,0.24);
+  background: rgba(255,250,232,0.26);
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.45;
+  padding: 0.55rem 0.65rem;
+}
+
+.ci-editor-note.wide {
   grid-column: 1 / -1;
 }
 
@@ -942,7 +1133,22 @@
   .ci-full-editor {
     grid-template-columns: 1fr;
   }
+  .ci-item-tools {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .ci-editor-quick-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .ci-register-action {
+    width: 100%;
+  }
+  .ci-editor-register-btn {
+    width: 100%;
+  }
   .ci-money-grid,
+  .ci-money-summary,
   .ci-money-transaction,
   .ci-money-transaction-fields {
     grid-template-columns: 1fr;
