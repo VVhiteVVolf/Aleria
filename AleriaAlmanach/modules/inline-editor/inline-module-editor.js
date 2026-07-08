@@ -283,6 +283,35 @@ function moveInlineCurrentPage(direction) {
   renderPage(currentPage, 0);
 }
 
+function getInlineTemplatePickerType(type, entry) {
+  const templateByPageType = {
+    profiles: 'profiles',
+    'character-inventory': 'character-inventory',
+    'guest-register': 'guest-register',
+    wanted: 'wanted',
+    'bounty-file': 'bounty-file',
+    goods: 'goods',
+    'trade-catalog': 'trade-catalog',
+    'map-template': 'map-template',
+    landing: 'landing',
+    artifact: 'artifact',
+    recipe: 'recipe',
+    scene: 'scene',
+    session: 'session',
+    tournament: 'tournament',
+    'tournament-league': 'tournament-league',
+    caste: 'caste',
+    court: 'court',
+    hierarchy: 'hierarchy',
+    family: 'family',
+    house: 'houses',
+    biography: 'object-profile',
+    bestiary: 'bestiary',
+    'quest-file': 'quest-file'
+  };
+  return templateByPageType[String(type || '').trim()] || inferModuleTemplateType(entry);
+}
+
 function buildInlineStandardEditor(entry, page) {
   const transferPanel = typeof buildInlineModuleTemplateTransferPanel === 'function'
     ? buildInlineModuleTemplateTransferPanel(page, 'standard')
@@ -356,7 +385,7 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="rerender-entry-field" data-entry-field="subtitle" value="${escapeHtml(entry.subtitle || '')}">
         </div>
         ${buildInlineSectionPicker()}
-        ${buildInlineTemplatePicker(type === 'profiles' ? 'profiles' : type === 'character-inventory' ? 'character-inventory' : type === 'guest-register' ? 'guest-register' : type === 'wanted' ? 'wanted' : type === 'bounty-file' ? 'bounty-file' : type === 'goods' ? 'goods' : type === 'trade-catalog' ? 'trade-catalog' : type === 'map-template' ? 'map-template' : type === 'landing' ? 'landing' : type === 'artifact' ? 'artifact' : type === 'recipe' ? 'recipe' : type === 'scene' ? 'scene' : type === 'session' ? 'session' : type === 'tournament' ? 'tournament' : type === 'tournament-league' ? 'tournament-league' : type === 'caste' ? 'caste' : type === 'court' ? 'court' : type === 'hierarchy' ? 'hierarchy' : type === 'family' ? 'family' : type === 'biography' ? 'object-profile' : type === 'bestiary' ? 'bestiary' : type === 'quest-file' ? 'quest-file' : inferModuleTemplateType(entry))}
+        ${buildInlineTemplatePicker(getInlineTemplatePickerType(type, entry))}
         ${buildInlineModuleSizeControls(entry)}
         <div class="inline-edit-field">
           <span class="inline-edit-label">Typ</span>

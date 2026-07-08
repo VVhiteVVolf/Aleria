@@ -263,7 +263,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -400,6 +400,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.familyPage) {
     next.family = sanitizeFamilyData(page.family);
+  }
+
+  if (page.housePage) {
+    next.house = sanitizeHouseData(page.house);
   }
 
   if (page.biographyPage) {
