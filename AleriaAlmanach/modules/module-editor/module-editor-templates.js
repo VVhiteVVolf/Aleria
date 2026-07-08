@@ -1680,6 +1680,7 @@ function createDefaultHousePage(index = 0) {
       ['Status', 'Aktiv']
     ],
     house: {
+      crestImage: '',
       sideWidth: 100,
       connectionPortraitHeight: 68,
       connectionTextOffset: 0,

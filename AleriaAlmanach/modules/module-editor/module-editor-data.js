@@ -1033,18 +1033,23 @@ function sanitizeBiographyData(data = {}) {
 // Häuser-Template — same mechanics as the biography template (portrait/stats/quote shell,
 // icon+text point list, extra sections, connections, documents), just re-labelled for a
 // noble house instead of a person. Defaults only apply where the author hasn't set their own.
+// crestImage is House-only: a second, independent image slot (the house's coat of arms),
+// shown in the page header next to the title/motto instead of the left portrait slot.
 function sanitizeHouseData(data = {}) {
-  return sanitizeBiographyData({
-    ...data,
-    biographyTitle: data.biographyTitle || 'Über dieses Haus',
-    abilitiesTitle: data.abilitiesTitle || 'Einflussbereiche & Zuständigkeiten',
-    historyTitle: data.historyTitle || 'Geschichte des Hauses',
-    worksTitle: data.worksTitle || 'Bekannte Taten & Ereignisse',
-    triviaTitle: data.triviaTitle || 'Besonderheiten',
-    quotesTitle: data.quotesTitle || 'Hausworte & Zitate',
-    connectionsTitle: data.connectionsTitle || 'Verbündete, Rivalen & Vasallen',
-    documentsTitle: data.documentsTitle || 'Dokumente & Urkunden'
-  });
+  return {
+    ...sanitizeBiographyData({
+      ...data,
+      biographyTitle: data.biographyTitle || 'Über dieses Haus',
+      abilitiesTitle: data.abilitiesTitle || 'Einflussbereiche & Zuständigkeiten',
+      historyTitle: data.historyTitle || 'Geschichte des Hauses',
+      worksTitle: data.worksTitle || 'Bekannte Taten & Ereignisse',
+      triviaTitle: data.triviaTitle || 'Besonderheiten',
+      quotesTitle: data.quotesTitle || 'Hausworte & Zitate',
+      connectionsTitle: data.connectionsTitle || 'Verbündete, Rivalen & Vasallen',
+      documentsTitle: data.documentsTitle || 'Dokumente & Urkunden'
+    }),
+    crestImage: String(data.crestImage || '').trim()
+  };
 }
 
 function sanitizeGoodsCategories(items = []) {

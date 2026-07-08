@@ -233,6 +233,10 @@ function buildInlineHouseEditor(page) {
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Haus</div>
       <div class="inline-edit-grid">
+        <div class="inline-edit-field wide">
+          <span class="inline-edit-label">Wappen des Hauses (Header rechts)</span>
+          <input class="inline-edit-input" type="url" data-inline-action="update-house-field" data-house-field="crestImage" value="${escapeHtml(house.crestImage)}" placeholder="https://i.imgur.com/...">
+        </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Überschrift "Über dieses Haus"</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-house-field" data-house-field="biographyTitle" value="${escapeHtml(house.biographyTitle)}">
@@ -338,12 +342,12 @@ function buildInlineHouseEditor(page) {
           <div class="biography-edit-list">${buildHouseDocumentRows(house.documents, 'inline')}</div>
         </div>
         <div class="inline-edit-field wide">
-          <span class="inline-edit-label">Hauswort-Zitatbox links</span>
+          <span class="inline-edit-label">Hausmotto (erscheint im Header unter dem Titel)</span>
           ${buildTextFormatToolbar()}
           <textarea class="inline-edit-textarea" data-inline-action="update-house-field" data-house-field="quote">${escapeHtml(page.quote || '')}</textarea>
         </div>
         <div class="inline-edit-field">
-          <span class="inline-edit-label">Zitat von</span>
+          <span class="inline-edit-label">Motto zugeschrieben an</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-house-field" data-house-field="quoteBy" value="${escapeHtml(page.quoteBy || '')}">
         </div>
         <div class="inline-edit-field wide">

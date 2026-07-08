@@ -530,11 +530,36 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     </div>`;
 }
 
-// Häuser-Template shares the biography layout/CSS 1:1 — only the underlying data (page.house,
-// sanitized with house-appropriate default labels) differs, so it renders through the same
-// function rather than duplicating the whole markup.
+// House header: title + house motto (the same quote/quoteBy fields the biography sidebar
+// would otherwise show) on the left, coat of arms on the right. Sits above the reused
+// biography-page body; the sidebar quote card is suppressed for house pages since the motto
+// already lives up here instead.
+function buildHouseHeader(page, entry, house) {
+  const crest = sanitizeImageSrc(house.crestImage || '');
+  const title = escapeHtml(entry?.title || page?.pageTitle || 'Haus');
+  const motto = page?.quote ? sanitizeContentHtml(page.quote) : '';
+  return `
+    <div class="house-header">
+      <div class="house-header-copy">
+        <h2 class="house-header-title">${title}</h2>
+        ${motto ? `<p class="house-header-motto">${motto}${page.quoteBy ? ` <span>— ${escapeHtml(page.quoteBy)}</span>` : ''}</p>` : ''}
+      </div>
+      <div class="house-header-crest">
+        ${crest
+          ? `<img src="${crest}" alt="" loading="lazy" decoding="async">`
+          : '<div class="house-header-crest-placeholder"></div>'}
+      </div>
+    </div>`;
+}
+
+// Häuser-Template shares the biography layout/CSS for the 3-column body — only the underlying
+// data (page.house, sanitized with house-appropriate default labels) differs — but adds its
+// own header above it for the house title, motto and coat of arms.
 function buildHousePage(page, entry, pageIndex, total) {
-  return buildBiographyPage({ ...page, biography: page.house }, entry, pageIndex, total);
+  const house = sanitizeHouseData(page.house || {});
+  const body = buildBiographyPage({ ...page, biography: house, quote: '' }, entry, pageIndex, total);
+  const header = buildHouseHeader(page, entry, house);
+  return body.replace('<div class="biography-page"', `${header}<div class="biography-page"`);
 }
 
 function buildBestiaryPanel(title, body, className = '') {

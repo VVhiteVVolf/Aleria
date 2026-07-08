@@ -304,13 +304,18 @@ function buildHouseModuleEditorFields(page) {
             </div>
           </div>
           <div class="module-editor-field">
+            <label>Wappen des Hauses (Header rechts)</label>
+            <input type="url" class="me-house-crest-image" value="${escapeHtml(house.crestImage)}" placeholder="https://i.imgur.com/...">
+            <div class="module-editor-help">Eigenes, zweites Bildfeld für das Wappen im Kopfbereich — unabhängig vom Hauptbild links.</div>
+          </div>
+          <div class="module-editor-field">
             <label>Überschrift "Über dieses Haus"</label>
             <input type="text" class="me-house-title" value="${escapeHtml(house.biographyTitle)}">
           </div>
           <div class="module-editor-field">
             <label>Linke Inhaltsbreite (%)</label>
             <input type="number" class="me-house-side-width" min="35" max="100" step="1" value="${escapeHtml(house.sideWidth)}">
-            <div class="module-editor-help">Steuert Wappenbild, Infotabelle und Zitatbox gemeinsam.</div>
+            <div class="module-editor-help">Steuert Bild, Infotabelle und Zitatbox gemeinsam.</div>
           </div>
           <div class="module-editor-field">
             <label>Einflussbereiche-Überschrift</label>
@@ -428,12 +433,12 @@ function buildHouseModuleEditorFields(page) {
             </div>
           </div>
           <div class="module-editor-field wide">
-            <label>Hauswort-Zitatbox links</label>
+            <label>Hausmotto (erscheint im Header unter dem Titel)</label>
             ${buildTextFormatToolbar()}
             <textarea class="me-house-quote small">${escapeHtml(page?.quote || '')}</textarea>
           </div>
           <div class="module-editor-field">
-            <label>Zitat von</label>
+            <label>Motto zugeschrieben an</label>
             <input type="text" class="me-house-quote-by" value="${escapeHtml(page?.quoteBy || '')}">
           </div>
           <div class="module-editor-field wide">
@@ -451,6 +456,7 @@ function collectHouseModuleEditorPage(card, page) {
   page.quote = getTrimmedFormValue(card, '.me-house-quote');
   page.quoteBy = getTrimmedFormValue(card, '.me-house-quote-by');
   page.house = sanitizeHouseData({
+    crestImage: getTrimmedFormValue(card, '.me-house-crest-image'),
     biographyTitle: getTrimmedFormValue(card, '.me-house-title'),
     biographyText: getTrimmedFormValue(card, '.me-house-text'),
     sideWidth: getFormValue(card, '.me-house-side-width'),
