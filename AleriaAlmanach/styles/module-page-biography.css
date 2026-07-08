@@ -20,6 +20,8 @@
     min-height: 0;
     overflow: auto;
     padding: 1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .biography-left {
     border-right: 1px solid rgba(139,105,20,0.24);
