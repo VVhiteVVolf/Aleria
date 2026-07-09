@@ -361,6 +361,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Geheimaktion",
+    "fileName": "Geheimaktion.PNG",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Geheimaktion.PNG",
+    "width": 314,
+    "height": 314,
+    "ratio": "square"
+  },
+  {
+    "name": "Kampfhandlung",
+    "fileName": "Kampfhandlung.PNG",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Kampfhandlung.PNG",
+    "width": 320,
+    "height": 320,
+    "ratio": "square"
+  },
+  {
     "name": "Modulicon",
     "fileName": "Modulicon.png",
     "folder": "Buttom Icons",
@@ -430,6 +448,672 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Buttom Icons/Zaubern.PNG",
     "width": 295,
     "height": 295,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_adult_education",
+    "fileName": "Activity_adult_education.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_adult_education.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_gruesome_festival",
+    "fileName": "Activity_gruesome_festival.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_gruesome_festival.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_hunt",
+    "fileName": "Activity_hunt.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_hunt.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_pilgrimage",
+    "fileName": "Activity_pilgrimage.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_pilgrimage.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_roaming",
+    "fileName": "Activity_roaming.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_roaming.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_wedding",
+    "fileName": "Activity_wedding.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_wedding.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Activity_witch_ritual",
+    "fileName": "Activity_witch_ritual.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Activity_witch_ritual.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Arbitrary_arrests",
+    "fileName": "Arbitrary_arrests.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Arbitrary_arrests.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Archer_captain_camp_officer",
+    "fileName": "Archer_captain_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Archer_captain_camp_officer.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Armorer_camp_officer",
+    "fileName": "Armorer_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Armorer_camp_officer.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Aspect_of_serenity_small",
+    "fileName": "Aspect_of_serenity_small.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Aspect_of_serenity_small.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_priest_camp_officer",
+    "fileName": "Camp_priest_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_priest_camp_officer.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_brigands",
+    "fileName": "Camp_purpose_brigands.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_brigands.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_explorers",
+    "fileName": "Camp_purpose_explorers.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_explorers.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_legitimists",
+    "fileName": "Camp_purpose_legitimists.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_legitimists.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_mercenaries",
+    "fileName": "Camp_purpose_mercenaries.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_mercenaries.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_scholars",
+    "fileName": "Camp_purpose_scholars.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_scholars.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Camp_purpose_wanderers",
+    "fileName": "Camp_purpose_wanderers.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Camp_purpose_wanderers.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Capture_raid_intent",
+    "fileName": "Capture_raid_intent.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Capture_raid_intent.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Cautious",
+    "fileName": "Cautious.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Cautious.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Court_jester_court_position",
+    "fileName": "Court_jester_court_position.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Court_jester_court_position.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Court_musician_court_position",
+    "fileName": "Court_musician_court_position.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Court_musician_court_position.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Debt",
+    "fileName": "Debt.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Debt.png",
+    "width": 71,
+    "height": 71,
+    "ratio": "square"
+  },
+  {
+    "name": "Feast_type_murder_icon",
+    "fileName": "Feast_type_murder_icon.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Feast_type_murder_icon.png",
+    "width": 78,
+    "height": 78,
+    "ratio": "square"
+  },
+  {
+    "name": "Fort_icon",
+    "fileName": "Fort_icon.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Fort_icon.png",
+    "width": 90,
+    "height": 70,
+    "ratio": "wide"
+  },
+  {
+    "name": "Game_rule_extra_nomads_arabs",
+    "fileName": "Game_rule_extra_nomads_arabs.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Game_rule_extra_nomads_arabs.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Game_rule_extra_nomads_sahel",
+    "fileName": "Game_rule_extra_nomads_sahel.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Game_rule_extra_nomads_sahel.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Heavy_infantry_captain_camp_officer",
+    "fileName": "Heavy_infantry_captain_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Heavy_infantry_captain_camp_officer.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding_castle",
+    "fileName": "Holding_castle.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Holding_castle.png",
+    "width": 71,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding_church",
+    "fileName": "Holding_church.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Holding_church.png",
+    "width": 71,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding_city",
+    "fileName": "Holding_city.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Holding_city.png",
+    "width": 71,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding_temple_citadel",
+    "fileName": "Holding_temple_citadel.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Holding_temple_citadel.png",
+    "width": 70,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding_tribal",
+    "fileName": "Holding_tribal.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Holding_tribal.png",
+    "width": 71,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_00",
+    "fileName": "Icon_dynasty_prestige_00.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_00.png",
+    "width": 117,
+    "height": 116,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_01",
+    "fileName": "Icon_dynasty_prestige_01.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_01.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_02",
+    "fileName": "Icon_dynasty_prestige_02.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_02.png",
+    "width": 118,
+    "height": 118,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_03",
+    "fileName": "Icon_dynasty_prestige_03.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_03.png",
+    "width": 118,
+    "height": 118,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_04",
+    "fileName": "Icon_dynasty_prestige_04.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_04.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_dynasty_prestige_05",
+    "fileName": "Icon_dynasty_prestige_05.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_dynasty_prestige_05.png",
+    "width": 118,
+    "height": 118,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_game_concept_naval_administration",
+    "fileName": "Icon_game_concept_naval_administration.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_game_concept_naval_administration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_garrison",
+    "fileName": "Icon_garrison.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_garrison.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_gold",
+    "fileName": "Icon_gold.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_gold.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_imperial_treasury",
+    "fileName": "Icon_imperial_treasury.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_imperial_treasury.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_loot",
+    "fileName": "Icon_loot.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_loot.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_merit",
+    "fileName": "Icon_merit.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_merit.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_prestige_04",
+    "fileName": "Icon_prestige_04.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_prestige_04.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_raid",
+    "fileName": "Icon_raid.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_raid.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_soldier",
+    "fileName": "Icon_soldier.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_soldier.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_tax_collector",
+    "fileName": "Icon_tax_collector.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Icon_tax_collector.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Ironman",
+    "fileName": "Ironman.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Ironman.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Keeper_of_the_swans_court_position",
+    "fileName": "Keeper_of_the_swans_court_position.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Keeper_of_the_swans_court_position.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Kingdom",
+    "fileName": "Kingdom.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Kingdom.png",
+    "width": 104,
+    "height": 104,
+    "ratio": "square"
+  },
+  {
+    "name": "Knight",
+    "fileName": "Knight.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Knight.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "Map_icon_estate",
+    "fileName": "Map_icon_estate.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Map_icon_estate.png",
+    "width": 80,
+    "height": 80,
+    "ratio": "square"
+  },
+  {
+    "name": "Marriage",
+    "fileName": "Marriage.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Marriage.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Martial",
+    "fileName": "Martial.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Martial.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_of_arms_camp_officer",
+    "fileName": "Master_of_arms_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Master_of_arms_camp_officer.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_of_spoils_camp_officer",
+    "fileName": "Master_of_spoils_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Master_of_spoils_camp_officer.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_of_the_horse_court_position",
+    "fileName": "Master_of_the_horse_court_position.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Master_of_the_horse_court_position.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Master_of_the_hunt_court_position",
+    "fileName": "Master_of_the_hunt_court_position.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Master_of_the_hunt_court_position.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Nickname",
+    "fileName": "Nickname.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Nickname.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_diplomacy",
+    "fileName": "Node_diplomacy.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_diplomacy.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_intrigue",
+    "fileName": "Node_intrigue.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_intrigue.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_learning",
+    "fileName": "Node_learning.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_learning.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_martial",
+    "fileName": "Node_martial.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_martial.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_stewardship",
+    "fileName": "Node_stewardship.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_stewardship.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Node_wandering",
+    "fileName": "Node_wandering.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Node_wandering.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Pike_captain_camp_officer",
+    "fileName": "Pike_captain_camp_officer.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Pike_captain_camp_officer.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Retreat",
+    "fileName": "Retreat.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Retreat.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Scheme",
+    "fileName": "Scheme.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Scheme.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Secret_murder",
+    "fileName": "Secret_murder.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Secret_murder.png",
+    "width": 60,
+    "height": 60,
+    "ratio": "square"
+  },
+  {
+    "name": "Secret_raid",
+    "fileName": "Secret_raid.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Secret_raid.png",
+    "width": 120,
+    "height": 120,
+    "ratio": "square"
+  },
+  {
+    "name": "Secret",
+    "fileName": "Secret.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Secret.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Stewardship",
+    "fileName": "Stewardship.png",
+    "folder": "CK3 icons alt",
+    "path": "../IconOrdner/CK3 icons alt/Stewardship.png",
+    "width": 60,
+    "height": 61,
     "ratio": "square"
   },
   {
@@ -3727,6 +4411,105 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Baron",
+    "fileName": "Baron.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Baron.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Fahrender Ritter",
+    "fileName": "Fahrender Ritter.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Fahrender Ritter.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Graf",
+    "fileName": "Graf.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Graf.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Jungritter",
+    "fileName": "Jungritter.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Jungritter.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Knappe",
+    "fileName": "Knappe.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Knappe.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Page",
+    "fileName": "Page.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Page.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Paladin",
+    "fileName": "Paladin.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Paladin.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Ritter",
+    "fileName": "Ritter.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Ritter.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Ritter2",
+    "fileName": "Ritter2.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Ritter2.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Ritterfürst",
+    "fileName": "Ritterfürst.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Ritterfürst.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
+    "name": "Ritterherr",
+    "fileName": "Ritterherr.PNG",
+    "folder": "Icons für Stand",
+    "path": "../IconOrdner/Icons für Stand/Ritterherr.PNG",
+    "width": 312,
+    "height": 312,
+    "ratio": "square"
+  },
+  {
     "name": "aelthar_icon",
     "fileName": "aelthar_icon.png",
     "folder": "Icons",
@@ -5392,6 +6175,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Kontinente",
+    "fileName": "Kontinente.png",
+    "folder": "ReiterIcons",
+    "path": "../IconOrdner/ReiterIcons/Kontinente.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
     "name": "Kulte",
     "fileName": "Kulte.png",
     "folder": "ReiterIcons",
@@ -6067,6 +6859,438 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "wide"
   },
   {
+    "name": "Alliance",
+    "fileName": "Alliance.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Alliance.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Archers",
+    "fileName": "Archers.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Archers.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Arrange_a_divorce",
+    "fileName": "Arrange_a_divorce.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Arrange_a_divorce.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Arrange_betrothal",
+    "fileName": "Arrange_betrothal.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Arrange_betrothal.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Attrition",
+    "fileName": "Attrition.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Attrition.png",
+    "width": 16,
+    "height": 16,
+    "ratio": "square"
+  },
+  {
+    "name": "Away",
+    "fileName": "Away.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Away.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Betrothal",
+    "fileName": "Betrothal.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Betrothal.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Bloodlines_button",
+    "fileName": "Bloodlines_button.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Bloodlines_button.png",
+    "width": 30,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Break_betrothal",
+    "fileName": "Break_betrothal.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Break_betrothal.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Camel_cavalry",
+    "fileName": "Camel_cavalry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Camel_cavalry.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Concubinage",
+    "fileName": "Concubinage.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Concubinage.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Crown",
+    "fileName": "Crown.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Crown.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Declare_war",
+    "fileName": "Declare_war.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Declare_war.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Disable_alert",
+    "fileName": "Disable_alert.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Disable_alert.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Dismiss_alert",
+    "fileName": "Dismiss_alert.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Dismiss_alert.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Dynasty_bastard",
+    "fileName": "Dynasty_bastard.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Dynasty_bastard.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Dynasty_close_relative",
+    "fileName": "Dynasty_close_relative.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Dynasty_close_relative.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Dynasty_distant_relative",
+    "fileName": "Dynasty_distant_relative.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Dynasty_distant_relative.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Dynasty_player",
+    "fileName": "Dynasty_player.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Dynasty_player.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Educate_child",
+    "fileName": "Educate_child.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Educate_child.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Execute_imprisoned",
+    "fileName": "Execute_imprisoned.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Execute_imprisoned.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Fort_level",
+    "fileName": "Fort_level.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Fort_level.png",
+    "width": 28,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Garrison",
+    "fileName": "Garrison.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Garrison.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Heavy_cavalry",
+    "fileName": "Heavy_cavalry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Heavy_cavalry.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Heavy_infantry",
+    "fileName": "Heavy_infantry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Heavy_infantry.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Holding",
+    "fileName": "Holding.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Holding.png",
+    "width": 24,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Horse_archers",
+    "fileName": "Horse_archers.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Horse_archers.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_decadence",
+    "fileName": "Icon_decadence.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_decadence.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_intrigue",
+    "fileName": "Icon_intrigue.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_intrigue.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_learning",
+    "fileName": "Icon_learning.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_learning.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_prestige",
+    "fileName": "Icon_prestige.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_prestige.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_province_capital",
+    "fileName": "Icon_province_capital.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_province_capital.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_realm_hierarchy",
+    "fileName": "Icon_realm_hierarchy.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_realm_hierarchy.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_score",
+    "fileName": "Icon_score.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_score.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_stewardship",
+    "fileName": "Icon_stewardship.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_stewardship.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Icon_wealth",
+    "fileName": "Icon_wealth.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Icon_wealth.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Imprison",
+    "fileName": "Imprison.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Imprison.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Kill_list",
+    "fileName": "Kill_list.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Kill_list.png",
+    "width": 30,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Light_cavalry",
+    "fileName": "Light_cavalry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Light_cavalry.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Light_infantry",
+    "fileName": "Light_infantry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Light_infantry.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Marry",
+    "fileName": "Marry.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Marry.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Matrilineal_betrothal",
+    "fileName": "Matrilineal_betrothal.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Matrilineal_betrothal.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Matrilineal_marriage",
+    "fileName": "Matrilineal_marriage.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Matrilineal_marriage.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Military",
+    "fileName": "Military.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Military.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Offer_peace",
+    "fileName": "Offer_peace.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Offer_peace.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Pikemen",
+    "fileName": "Pikemen.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Pikemen.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Send_gift",
+    "fileName": "Send_gift.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Send_gift.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Ships",
+    "fileName": "Ships.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/Ships.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
     "name": "Trait_track_bandit",
     "fileName": "Trait_track_bandit.png",
     "folder": "Traits alternativ",
@@ -6256,6 +7480,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "War_elephants",
+    "fileName": "War_elephants.png",
+    "folder": "Traits alternativ",
+    "path": "../IconOrdner/Traits alternativ/War_elephants.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
     "name": "Administrator",
     "fileName": "Administrator.png",
     "folder": "Traits Icon",
@@ -6269,6 +7502,24 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Adventurer.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Adventurer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Affectionate",
+    "fileName": "Affectionate.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Affectionate.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Aggressive_leader",
+    "fileName": "Aggressive_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Aggressive_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6328,6 +7579,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Baltic_leader",
+    "fileName": "Baltic_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Baltic_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Bastard",
     "fileName": "Bastard.png",
     "folder": "Traits Icon",
@@ -6346,10 +7606,46 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Bon_leader",
+    "fileName": "Bon_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Bon_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Born_in_the_Purple",
+    "fileName": "Born_in_the_Purple.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Born_in_the_Purple.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Brave",
     "fileName": "Brave.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Brave.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Brawny",
+    "fileName": "Brawny.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Brawny.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Brooding",
+    "fileName": "Brooding.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Brooding.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6364,12 +7660,48 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Cannibal",
+    "fileName": "Cannibal.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Cannibal.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Carousing_focus",
     "fileName": "Carousing_focus.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Carousing_focus.png",
     "width": 32,
     "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Cat",
+    "fileName": "Cat.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Cat.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Cavalry_leader",
+    "fileName": "Cavalry_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Cavalry_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Charismatic_negotiator",
+    "fileName": "Charismatic_negotiator.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Charismatic_negotiator.png",
+    "width": 24,
+    "height": 24,
     "ratio": "square"
   },
   {
@@ -6400,10 +7732,28 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Conscientious",
+    "fileName": "Conscientious.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Conscientious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Content",
     "fileName": "Content.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Content.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Court_physician",
+    "fileName": "Court_physician.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Court_physician.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6427,6 +7777,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Crusader",
+    "fileName": "Crusader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Crusader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Curious",
+    "fileName": "Curious.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Curious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Cynical",
     "fileName": "Cynical.png",
     "folder": "Traits Icon",
@@ -6436,10 +7804,46 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Decadent",
+    "fileName": "Decadent.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Decadent.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Deceitful",
     "fileName": "Deceitful.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Deceitful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Defensive_leader",
+    "fileName": "Defensive_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Defensive_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Depressed",
+    "fileName": "Depressed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Depressed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Desert_terrain_leader",
+    "fileName": "Desert_terrain_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Desert_terrain_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6463,6 +7867,33 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "DLC_icon_Conclave",
+    "fileName": "DLC_icon_Conclave.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/DLC_icon_Conclave.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "DLC_icon_Reaper's_Due",
+    "fileName": "DLC_icon_Reaper's_Due.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/DLC_icon_Reaper's_Due.png",
+    "width": 28,
+    "height": 28,
+    "ratio": "square"
+  },
+  {
+    "name": "Drunkard",
+    "fileName": "Drunkard.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Drunkard.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Duelist",
     "fileName": "Duelist.png",
     "folder": "Traits Icon",
@@ -6472,10 +7903,28 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Dull",
+    "fileName": "Dull.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Dull.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Dynastic_Kinslayer",
     "fileName": "Dynastic_Kinslayer.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Dynastic_Kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Eagle_warrior",
+    "fileName": "Eagle_warrior.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Eagle_warrior.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6499,6 +7948,33 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Eunuch",
+    "fileName": "Eunuch.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Eunuch.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Experimenter",
+    "fileName": "Experimenter.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Experimenter.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Falconer",
+    "fileName": "Falconer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Falconer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Familial_Kinslayer",
     "fileName": "Familial_Kinslayer.png",
     "folder": "Traits Icon",
@@ -6514,6 +7990,51 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Traits Icon/Family_focus.png",
     "width": 32,
     "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Finnish_leader",
+    "fileName": "Finnish_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Finnish_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Flanker",
+    "fileName": "Flanker.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Flanker.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Flat_terrain_leader",
+    "fileName": "Flat_terrain_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Flat_terrain_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Frail",
+    "fileName": "Frail.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Frail.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Fussy",
+    "fileName": "Fussy.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Fussy.png",
+    "width": 24,
+    "height": 24,
     "ratio": "square"
   },
   {
@@ -6562,6 +8083,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Gondi_shahanshah",
+    "fileName": "Gondi_shahanshah.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Gondi_shahanshah.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Greedy",
     "fileName": "Greedy.png",
     "folder": "Traits Icon",
@@ -6575,6 +8105,96 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Gregarious.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Gregarious.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Grey_eminence",
+    "fileName": "Grey_eminence.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Grey_eminence.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Grievously_Scarred",
+    "fileName": "Grievously_Scarred.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Grievously_Scarred.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Groomed",
+    "fileName": "Groomed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Groomed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Haughty",
+    "fileName": "Haughty.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Haughty.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Heavy_infantry_leader",
+    "fileName": "Heavy_infantry_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Heavy_infantry_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Hellenic_leader",
+    "fileName": "Hellenic_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Hellenic_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Hellenic",
+    "fileName": "Hellenic.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Hellenic.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Heresiarch",
+    "fileName": "Heresiarch.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Heresiarch.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Holy_warrior",
+    "fileName": "Holy_warrior.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Holy_warrior.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Homosexual",
+    "fileName": "Homosexual.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Homosexual.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6625,6 +8245,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Idolizer",
+    "fileName": "Idolizer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Idolizer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Imbecile",
     "fileName": "Imbecile.png",
     "folder": "Traits Icon",
@@ -6634,10 +8263,73 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Immortal",
+    "fileName": "Immortal.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Immortal.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Impaler",
     "fileName": "Impaler.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Impaler.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "In_hiding",
+    "fileName": "In_hiding.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/In_hiding.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Incapable",
+    "fileName": "Incapable.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Incapable.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Indolent",
+    "fileName": "Indolent.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Indolent.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Infection",
+    "fileName": "Infection.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Infection.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Infirm",
+    "fileName": "Infirm.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Infirm.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Inspiring_leader",
+    "fileName": "Inspiring_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Inspiring_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6688,10 +8380,37 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Light_foot_leader",
+    "fileName": "Light_foot_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Light_foot_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Lunatic",
+    "fileName": "Lunatic.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Lunatic.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Lustful",
     "fileName": "Lustful.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Lustful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Maimed",
+    "fileName": "Maimed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Maimed.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6733,10 +8452,28 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Misguided_warrior",
+    "fileName": "Misguided_warrior.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Misguided_warrior.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Monk",
     "fileName": "Monk.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Monk.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Mountain_terrain_leader",
+    "fileName": "Mountain_terrain_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Mountain_terrain_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6755,6 +8492,33 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Mystic.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Mystic.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Naive_appeaser",
+    "fileName": "Naive_appeaser.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Naive_appeaser.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Narrow_flank_leader",
+    "fileName": "Narrow_flank_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Narrow_flank_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Norse_leader",
+    "fileName": "Norse_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Norse_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -6805,6 +8569,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Organizer",
+    "fileName": "Organizer.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Organizer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Paranoid",
     "fileName": "Paranoid.png",
     "folder": "Traits Icon",
@@ -6841,6 +8614,33 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Playful",
+    "fileName": "Playful.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Playful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Poet",
+    "fileName": "Poet.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Poet.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Possessed",
+    "fileName": "Possessed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Possessed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Proud",
     "fileName": "Proud.png",
     "folder": "Traits Icon",
@@ -6856,6 +8656,15 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Traits Icon/Quick.png",
     "width": 24,
     "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Raised",
+    "fileName": "Raised.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Raised.png",
+    "width": 32,
+    "height": 32,
     "ratio": "square"
   },
   {
@@ -6881,6 +8690,42 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Reformed_Norse.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Reformed_Norse.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Romuva",
+    "fileName": "Romuva.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Romuva.png",
+    "width": 32,
+    "height": 32,
+    "ratio": "square"
+  },
+  {
+    "name": "Rough_terrain_leader",
+    "fileName": "Rough_terrain_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Rough_terrain_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Rowdy",
+    "fileName": "Rowdy.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Rowdy.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Rulership_focus",
+    "fileName": "Rulership_focus.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Rulership_focus.png",
     "width": 32,
     "height": 32,
     "ratio": "square"
@@ -6958,10 +8803,37 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Shrewd",
+    "fileName": "Shrewd.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Shrewd.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Shy",
     "fileName": "Shy.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Shy.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Siege_leader",
+    "fileName": "Siege_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Siege_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Slavic_leader",
+    "fileName": "Slavic_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Slavic_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -7003,6 +8875,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Stressed",
+    "fileName": "Stressed.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Stressed.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Strong",
     "fileName": "Strong.png",
     "folder": "Traits Icon",
@@ -7021,10 +8902,37 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Sturdy",
+    "fileName": "Sturdy.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Sturdy.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Sun_warrior",
+    "fileName": "Sun_warrior.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Sun_warrior.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Temperate",
     "fileName": "Temperate.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Temperate.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Tengri_leader",
+    "fileName": "Tengri_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Tengri_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -7048,10 +8956,37 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Timid",
+    "fileName": "Timid.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Timid.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Tough_soldier",
+    "fileName": "Tough_soldier.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Tough_soldier.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Tribal_kinslayer",
     "fileName": "Tribal_kinslayer.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Tribal_kinslayer.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Trickster",
+    "fileName": "Trickster.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Trickster.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -7084,6 +9019,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Underhanded_rogue",
+    "fileName": "Underhanded_rogue.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Underhanded_rogue.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Unyielding_leader",
+    "fileName": "Unyielding_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Unyielding_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Varangian",
     "fileName": "Varangian.png",
     "folder": "Traits Icon",
@@ -7102,6 +9055,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "War_elephant_leader",
+    "fileName": "War_elephant_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/War_elephant_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "War_focus",
     "fileName": "War_focus.png",
     "folder": "Traits Icon",
@@ -7111,10 +9073,73 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Way_of_the_Dog",
+    "fileName": "Way_of_the_Dog.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Way_of_the_Dog.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Way_of_the_Dragon",
+    "fileName": "Way_of_the_Dragon.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Way_of_the_Dragon.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Way_of_the_Leopard",
+    "fileName": "Way_of_the_Leopard.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Way_of_the_Leopard.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Way_of_the_Tiger",
+    "fileName": "Way_of_the_Tiger.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Way_of_the_Tiger.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
     "name": "Weak",
     "fileName": "Weak.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Weak.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "West_african_leader",
+    "fileName": "West_african_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/West_african_leader.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Willful",
+    "fileName": "Willful.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Willful.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Winter_soldier",
+    "fileName": "Winter_soldier.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Winter_soldier.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
@@ -7142,6 +9167,15 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Zealous.png",
     "folder": "Traits Icon",
     "path": "../IconOrdner/Traits Icon/Zealous.png",
+    "width": 24,
+    "height": 24,
+    "ratio": "square"
+  },
+  {
+    "name": "Zun_leader",
+    "fileName": "Zun_leader.png",
+    "folder": "Traits Icon",
+    "path": "../IconOrdner/Traits Icon/Zun_leader.png",
     "width": 24,
     "height": 24,
     "ratio": "square"
