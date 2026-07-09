@@ -1,14 +1,14 @@
+// ============================================================================================
+// BACKUP — ausrangierter Code, wird NICHT mehr geladen (kein <script>-Tag verweist hierher).
+// Dies ist der komplette Stand von modules/inline-editor/inline-editor-house.js, BEVOR am
+// 2026-07-09 die vier Zeilen-Listen (Einflussbereiche, Zusatzabschnitte, Verbindungen,
+// Dokumente) auf den neuen, gemeinsamen Schema-Editor umgestellt wurden. Siehe
+// "Backup alter Code/RESTORE-ANLEITUNG.docx" für den Hintergrund und wie man das hier bei
+// Bedarf zurückspielt.
+// ============================================================================================
+
 // Inline editor house state and builder.
 // Owns only house-page editing behavior (Häuser-Template, built on the biography mechanics).
-//
-// The four row-lists (documents/sections/influences/connections) are schema-driven via
-// inline-editor-row-schemas.js. The "houseDeeds"/"houseTrivia"/"houseQuotes" simple-line lists
-// and the plain scalar fields (title, crest image, quote, etc.) were not part of that migration
-// and remain their own small hand-written implementation below.
-//
-// The hand-written editor this replaced (verified byte-identical against real data before
-// removal) is archived at "Backup alter Code/inline-editor-house.legacy.js" — not loaded, kept
-// only for reference/restore.
 
 function getInlineHouseDataForEdit(page) {
   return sanitizeHouseData(page?.house || {});
@@ -97,7 +97,146 @@ function buildInlineHouseLineRows(items = [], listName = 'works') {
     </div>`).join('') : '<div class="inline-placeholder-note">Noch keine Einträge vorhanden.</div>';
 }
 
-function buildInlineHouseEditor(page) {
+function addInlineHouseDocumentRow() {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.documents.push({ text: 'Neues Dokument', link: '' });
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineHouseDocumentRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.documents.splice(index, 1);
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function updateInlineHouseDocumentField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.houseDocumentIndex || -1);
+  const field = input.dataset.houseDocumentField;
+  if (index < 0 || !field) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.documents = current.documents.length ? current.documents : [{ text: '', link: '' }];
+  const item = current.documents[index] || { text: '', link: '' };
+  item[field] = String(input.value || '').trim();
+  current.documents[index] = item;
+  page.house = sanitizeHouseData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function updateInlineHouseInfluenceField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.houseInfluenceIndex || -1);
+  const field = input.dataset.houseInfluenceField;
+  if (index < 0 || !field) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.abilities = current.abilities.length ? current.abilities : [{ icon: '*', title: '', detail: '' }];
+  const item = current.abilities[index] || { icon: '*', title: '', detail: '' };
+  item[field] = String(input.value || '').trim();
+  current.abilities[index] = item;
+  page.house = sanitizeHouseData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function addInlineHouseInfluenceRow() {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.abilities.push({ icon: '*', title: 'Neuer Punkt', detail: '' });
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineHouseInfluenceRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.abilities.splice(index, 1);
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function addInlineHouseSectionRow(position = 'afterIntro') {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.extraSections.push({
+    position: position === 'afterWorks' ? 'afterWorks' : 'afterIntro',
+    mode: 'text',
+    title: 'Neue Ueberschrift',
+    text: ''
+  });
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineHouseSectionRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.extraSections.splice(index, 1);
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function updateInlineHouseSectionField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.houseSectionIndex || -1);
+  const field = input.dataset.houseSectionField;
+  if (index < 0 || !field) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.extraSections = current.extraSections.length ? current.extraSections : [];
+  const item = current.extraSections[index] || { position: 'afterIntro', mode: 'text', title: '', text: '' };
+  item[field] = String(input.value || '').trim();
+  current.extraSections[index] = item;
+  page.house = sanitizeHouseData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function updateInlineHouseConnectionField(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.houseConnectionIndex || -1);
+  const field = input.dataset.houseConnectionField;
+  if (index < 0 || !field) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.connections = current.connections.length ? current.connections : [{ type: 'connection', image: '', imageFormat: 'square', name: '', detail: '' }];
+  const item = current.connections[index] || { type: 'connection', image: '', imageFormat: 'square', name: '', detail: '' };
+  item[field] = String(input.value || '').trim();
+  current.connections[index] = item;
+  page.house = sanitizeHouseData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function addInlineHouseConnectionRow(kind = 'connection') {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.connections.push(kind === 'heading'
+    ? { type: 'heading', title: 'Neue Gruppe', detail: '' }
+    : { type: 'connection', image: '', imageFormat: 'square', name: 'Neue Verbindung', detail: '' });
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineHouseConnectionRow(index) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const current = getInlineHouseDataForEdit(page);
+  current.connections.splice(index, 1);
+  page.house = sanitizeHouseData(current);
+  renderPage(currentPage, 0);
+}
+
+function buildInlineHouseEditorLegacy(page) {
   const house = sanitizeHouseData(page.house || {});
   return `
     <div class="inline-edit-section">
@@ -127,9 +266,9 @@ function buildInlineHouseEditor(page) {
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Einflussbereiche & Zuständigkeiten</span>
           <div class="inline-edit-head">
-            <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.influences">+ Punkt</button>
+            <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-influence">+ Punkt</button>
           </div>
-          <div class="biography-edit-list">${buildSchemaList('house.influences', house.abilities, 'inline')}</div>
+          <div class="biography-edit-list">${house.abilities.length ? buildHouseInfluenceRows(house.abilities, 'inline') : '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>'}</div>
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Geschichte-Überschrift</span>
@@ -155,12 +294,12 @@ function buildInlineHouseEditor(page) {
           <div class="inline-edit-head">
             <span class="inline-edit-label">Zusatzabschnitte im Hauptbereich</span>
             <span>
-              <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.sections" data-schema-arg="afterIntro">+ Nach Haupttext</button>
-              <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.sections" data-schema-arg="afterWorks">+ Nach Abschnitt 3</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-section" data-house-section-position="afterIntro">+ Nach Haupttext</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-section" data-house-section-position="afterWorks">+ Nach Abschnitt 3</button>
             </span>
           </div>
           <div class="inline-placeholder-note">Textbloecke oder Bulletlisten im mittleren Haus-Bereich.</div>
-          <div class="biography-edit-list">${buildSchemaList('house.sections', house.extraSections, 'inline')}</div>
+          <div class="biography-edit-list">${house.extraSections.length ? buildHouseSectionRows(house.extraSections, 'inline') : '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>'}</div>
         </div>
         <div class="inline-edit-field wide">
           <div class="inline-edit-head">
@@ -181,11 +320,11 @@ function buildInlineHouseEditor(page) {
           <div class="inline-edit-head">
             <div class="inline-placeholder-note">Trenner fuer Gruppen oder Wappen/Portrait, Name und Beziehung.</div>
             <span>
-              <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.connections" data-schema-arg="heading">+ Trenner</button>
-              <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.connections" data-schema-arg="connection">+ Verbindung</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-connection" data-house-connection-kind="heading">+ Trenner</button>
+              <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-connection" data-house-connection-kind="connection">+ Verbindung</button>
             </span>
           </div>
-          <div class="biography-edit-list">${buildSchemaList('house.connections', house.connections, 'inline')}</div>
+          <div class="biography-edit-list">${buildHouseConnectionRows(house.connections, 'inline')}</div>
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Verbündete/Rivalen-Ueberschrift</span>
@@ -207,9 +346,9 @@ function buildInlineHouseEditor(page) {
           <span class="inline-edit-label">${escapeHtml(house.documentsTitle || 'Dokumente & Urkunden')}</span>
           <div class="inline-edit-head">
             <div class="inline-placeholder-note">Dokumenttitel werden anklickbar, sobald ein Link gesetzt ist.</div>
-            <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.documents">+ Dokument</button>
+            <button class="module-editor-mini-btn" type="button" data-inline-action="add-house-document">+ Dokument</button>
           </div>
-          <div class="biography-edit-list">${buildSchemaList('house.documents', house.documents, 'inline')}</div>
+          <div class="biography-edit-list">${buildHouseDocumentRows(house.documents, 'inline')}</div>
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Hausmotto (erscheint im Header unter dem Titel)</span>

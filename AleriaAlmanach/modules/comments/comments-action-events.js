@@ -12,6 +12,10 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-edit-showcase-form',
   'open-edit-module-insert-form',
   'open-edit-attachment-form',
+  'export-module-insert',
+  'choose-module-insert-create',
+  'choose-module-insert-import',
+  'close-module-insert-choice',
   'open-delete-confirm',
   'open-comment-showcase-profile',
   'open-comment-module-insert-profile',
@@ -75,7 +79,7 @@ function handleCommentFormActionClick(event) {
     return;
   }
   if (action === 'open-module-insert-form') {
-    openModuleInsertForm();
+    openModuleInsertChoice();
     return;
   }
   if (action === 'open-attachment-form') {
@@ -91,7 +95,7 @@ function handleCommentFormActionClick(event) {
     return;
   }
   if (action === 'open-module-insert-form-after') {
-    openModuleInsertFormAfter(commentId);
+    openModuleInsertChoice(commentId);
     return;
   }
   if (action === 'open-attachment-form-after') {
@@ -108,6 +112,22 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'open-edit-module-insert-form') {
     openEditModuleInsertForm(commentId);
+    return;
+  }
+  if (action === 'export-module-insert') {
+    exportSceneModuleInsert(commentId);
+    return;
+  }
+  if (action === 'choose-module-insert-create') {
+    chooseModuleInsertCreate();
+    return;
+  }
+  if (action === 'choose-module-insert-import') {
+    chooseModuleInsertImport();
+    return;
+  }
+  if (action === 'close-module-insert-choice') {
+    closeModuleInsertChoice();
     return;
   }
   if (action === 'open-edit-attachment-form') {

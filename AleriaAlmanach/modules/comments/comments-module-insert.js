@@ -3,6 +3,56 @@ let _moduleInsertAfterId = null;
 let _editingModuleInsertCommentId = null;
 let _moduleInsertProfileItem = null;
 let _moduleInsertProfilePageIndex = 0;
+let _moduleInsertChoiceAfterId = null;
+
+function openModuleInsertChoice(afterId = null) {
+  _moduleInsertChoiceAfterId = afterId ? String(afterId) : null;
+  activateDialog('module-insert-choice-overlay', { initialFocus: '.module-insert-choice-create' });
+}
+
+function closeModuleInsertChoice() {
+  deactivateDialog('module-insert-choice-overlay');
+}
+
+function chooseModuleInsertCreate() {
+  const afterId = _moduleInsertChoiceAfterId;
+  closeModuleInsertChoice();
+  if (afterId) openModuleInsertFormAfter(afterId);
+  else openModuleInsertForm();
+}
+
+function chooseModuleInsertImport() {
+  const afterId = _moduleInsertChoiceAfterId;
+  closeModuleInsertChoice();
+  if (afterId) openModuleInsertFormAfter(afterId);
+  else openModuleInsertForm();
+  window.setTimeout(() => {
+    document.getElementById('me-scene-module-import-file')?.click();
+  }, 60);
+}
+
+function exportSceneModuleInsert(commentId) {
+  const comment = findCachedCommentById(commentId);
+  const item = getCommentModuleInsertItem(comment);
+  const entry = buildCommentModuleEntry(item);
+  if (!entry) {
+    alert('Modul konnte nicht geladen werden.');
+    return;
+  }
+  try {
+    exportModulePayload({
+      section: getSceneModuleInsertSection(),
+      entry
+    }, true, { mode: 'edit', sourceEntryId: entry.id || '', skipIdConflict: true });
+  } catch (error) {
+    console.error('scene module export failed:', error);
+    const message = typeof getFriendlyErrorMessage === 'function'
+      ? getFriendlyErrorMessage(error, 'Export fehlgeschlagen.')
+      : 'Export fehlgeschlagen.';
+    if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
+    else alert(message);
+  }
+}
 
 function getSceneModuleInsertSection() {
   const preferred = typeof getPreferredEditorSection === 'function' ? getPreferredEditorSection() : null;

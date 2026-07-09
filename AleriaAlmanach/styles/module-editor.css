@@ -129,6 +129,12 @@
   #module-editor-overlay[data-editor-context="scene-comment-module"] [data-module-editor-scope="global-store"] {
     display: none;
   }
+  .module-editor-section[data-module-editor-scope="scene-store"] {
+    display: none;
+  }
+  #module-editor-overlay[data-editor-context="scene-comment-module"] .module-editor-section[data-module-editor-scope="scene-store"] {
+    display: flex;
+  }
   #module-editor-overlay[data-editor-context="scene-comment-module"] [data-module-editor-scene-hidden] {
     display: none;
   }

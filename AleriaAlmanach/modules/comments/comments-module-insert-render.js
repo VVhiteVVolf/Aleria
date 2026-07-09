@@ -231,6 +231,7 @@ function renderCommentModuleInsert(comment, idx, item) {
   const actions = comment?._hideActions ? '' : `
       <div class="comment-narrator-actions">
         <button type="button" class="comment-narrator-edit" data-action="open-edit-module-insert-form" data-comment-id="${safeCommentId}" title="Bearbeiten">Bearbeiten</button>
+        <button type="button" class="comment-narrator-edit" data-action="export-module-insert" data-comment-id="${safeCommentId}" title="Als Datei exportieren">Exportieren</button>
         <button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${safeCommentId}" title="Loeschen">Loeschen</button>
       </div>`;
   return `

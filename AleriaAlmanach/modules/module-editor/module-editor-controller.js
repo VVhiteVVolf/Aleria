@@ -185,10 +185,18 @@ function populateModuleEditor(payload, context, options = {}) {
   _moduleEditorHydrating = false;
 }
 
+function isModuleEditorAuthBypassed(context = _moduleEditorContext) {
+  // Scene-embedded modules are only ever stored inside one Firestore comment doc that
+  // the narrator already controls from within the scene, so the shared Redaktionscode
+  // gate (meant for the main archive) is just friction here.
+  return context?.sourceKind === 'scene-comment-module';
+}
+
 function showModuleEditorForm() {
-  document.getElementById('module-editor-gate').style.display = _moduleEditorAuthorized ? 'none' : 'flex';
-  document.getElementById('module-editor-body').classList.toggle('visible', _moduleEditorAuthorized);
-  if (_moduleEditorAuthorized && _moduleEditorContext?.payload) {
+  const authorized = _moduleEditorAuthorized || isModuleEditorAuthBypassed();
+  document.getElementById('module-editor-gate').style.display = authorized ? 'none' : 'flex';
+  document.getElementById('module-editor-body').classList.toggle('visible', authorized);
+  if (authorized && _moduleEditorContext?.payload) {
     populateModuleEditor(_moduleEditorContext.payload, _moduleEditorContext);
   }
 }
@@ -202,8 +210,9 @@ function openModuleEditor(payload, context) {
   document.getElementById('me-code').value = '';
   document.getElementById('me-code-error').style.display = 'none';
   showModuleEditorForm();
+  const authorized = _moduleEditorAuthorized || isModuleEditorAuthBypassed(_moduleEditorContext);
   activateDialog('module-editor-overlay', {
-    initialFocus: _moduleEditorAuthorized ? '#me-title, #me-json, button, input, textarea, select' : '#me-code'
+    initialFocus: authorized ? '#me-title, #me-json, button, input, textarea, select' : '#me-code'
   });
   scheduleModuleEditorPreviewRefresh();
 }

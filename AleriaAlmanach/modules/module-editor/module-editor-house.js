@@ -1,86 +1,14 @@
 // Static module editor fields for the Häuser-Template (built on the biography template's
 // mechanics: portrait/stats/quote shell, icon+text point list, extra sections, connections,
 // documents — re-labelled for a noble house instead of a person).
-
-let _houseInfluenceIconTarget = null;
-
-function buildHouseInfluenceIconField(item, index, mode) {
-  const iconInputAttrs = mode === 'inline'
-    ? `data-inline-action="update-house-influence-field" data-house-influence-index="${index}" data-house-influence-field="icon"`
-    : 'data-module-editor-action="sync-json-preview"';
-  const pickerAttrs = mode === 'inline'
-    ? `data-inline-action="pick-house-influence-icon" data-house-influence-index="${index}"`
-    : 'data-module-editor-action="pick-house-influence-icon"';
-  return `
-      <span class="biography-ability-icon-field">
-        <input class="inline-edit-input ${mode === 'module' ? 'me-house-influence-icon' : ''}" type="text" value="${escapeHtml(item.icon || '')}" placeholder="Symbol oder Bild-URL" ${iconInputAttrs}>
-        <button class="module-editor-mini-btn biography-ability-icon-picker" type="button" ${pickerAttrs} title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
-      </span>`;
-}
-
-function openHouseInfluenceIconPicker(button) {
-  const row = button?.closest?.('.biography-edit-row');
-  const target = row?.querySelector?.('.me-house-influence-icon, [data-house-influence-field="icon"]');
-  if (!target) return;
-  _houseInfluenceIconTarget = target;
-  if (typeof openIconDirectory === 'function') {
-    openIconDirectory();
-    return;
-  }
-  _houseInfluenceIconTarget = null;
-}
-
-function handleHouseInfluenceIconSelected(event) {
-  const target = _houseInfluenceIconTarget;
-  const src = String(event?.detail?.src || '').trim();
-  if (!target || !target.isConnected || !src) {
-    _houseInfluenceIconTarget = null;
-    return;
-  }
-  target.value = src;
-  target.dispatchEvent(new Event('input', { bubbles: true }));
-  target.dispatchEvent(new Event('change', { bubbles: true }));
-  try {
-    target.focus({ preventScroll: true });
-  } catch {
-    target.focus();
-  }
-  if (typeof closeIconDirectory === 'function') {
-    closeIconDirectory();
-  }
-  _houseInfluenceIconTarget = null;
-}
-
-document.addEventListener('almanach-icon-selected', handleHouseInfluenceIconSelected);
-
-function buildHouseInfluenceRows(influences = [], mode = 'module') {
-  const rows = (Array.isArray(influences) && influences.length ? influences : [{ icon: '*', title: '', detail: '' }]);
-  return rows.map((item, index) => `
-    <div class="biography-edit-row ${mode === 'inline' ? '' : 'module-house-influence-row'}" ${mode === 'inline' ? `data-house-influence-index="${index}"` : ''}>
-      ${buildHouseInfluenceIconField(item, index, mode)}
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-influence-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-house-influence-field" data-house-influence-index="${index}" data-house-influence-field="title"` : 'data-module-editor-action="sync-json-preview"'}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-influence-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-house-influence-field" data-house-influence-index="${index}" data-house-influence-field="detail"` : 'data-module-editor-action="sync-json-preview"'}>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-house-influence" data-house-influence-index="${index}"` : 'data-module-editor-action="remove-house-influence-row"'}>Loeschen</button>
-    </div>`).join('');
-}
-
-function buildHouseSectionRows(sections = [], mode = 'module') {
-  const rows = Array.isArray(sections) ? sections : [];
-  return rows.map((item, index) => `
-    <div class="biography-edit-section-row ${mode === 'inline' ? '' : 'module-house-section-row'}" ${mode === 'inline' ? `data-house-section-index="${index}"` : ''}>
-      <select class="inline-edit-input ${mode === 'module' ? 'me-house-section-position' : ''}" ${mode === 'inline' ? `data-inline-action="update-house-section-field" data-house-section-index="${index}" data-house-section-field="position"` : ''}>
-        <option value="afterIntro"${item.position !== 'afterWorks' ? ' selected' : ''}>Nach Haupttext</option>
-        <option value="afterWorks"${item.position === 'afterWorks' ? ' selected' : ''}>Nach Abschnitt 3</option>
-      </select>
-      <select class="inline-edit-input ${mode === 'module' ? 'me-house-section-mode' : ''}" ${mode === 'inline' ? `data-inline-action="update-house-section-field" data-house-section-index="${index}" data-house-section-field="mode"` : ''}>
-        <option value="text"${item.mode !== 'list' ? ' selected' : ''}>Text</option>
-        <option value="list"${item.mode === 'list' ? ' selected' : ''}>Bulletliste</option>
-      </select>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-section-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-house-section-field" data-house-section-index="${index}" data-house-section-field="title"` : ''}>
-      <textarea class="inline-edit-textarea ${mode === 'module' ? 'me-house-section-text' : ''}" placeholder="Text oder je Zeile ein Listenpunkt" ${mode === 'inline' ? `data-inline-action="update-house-section-field" data-house-section-index="${index}" data-house-section-field="text"` : ''}>${escapeHtml(item.text || '')}</textarea>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-house-section" data-house-section-index="${index}"` : 'data-module-editor-action="remove-house-section-row"'}>Loeschen</button>
-    </div>`).join('');
-}
+//
+// The four row-lists below (documents/sections/influences/connections) are schema-driven via
+// module-editor-row-schemas.js — see registerRowSchema calls below. The "Infotabelle" stat rows
+// were not part of that migration and remain their own small hand-written implementation.
+//
+// The hand-written editor this replaced (verified byte-identical against real data before
+// removal) is archived at "Backup alter Code/module-editor-house.legacy.js" — not loaded, kept
+// only for reference/restore.
 
 function buildModuleHouseStatRows(stats = []) {
   const rows = Array.isArray(stats) && stats.length ? stats : [['Neuer Eintrag', 'Wert']];
@@ -92,43 +20,6 @@ function buildModuleHouseStatRows(stats = []) {
     </div>`).join('');
 }
 
-function buildHouseDocumentRows(documents = [], mode = 'module') {
-  const rows = (Array.isArray(documents) && documents.length ? documents : [{ text: '', link: '' }]);
-  return rows.map((item, index) => `
-    <div class="biography-edit-row document ${mode === 'inline' ? 'inline-house-document-row' : 'module-house-document-row'}">
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-document-text' : ''}" type="text" value="${escapeHtml(item.text || '')}" placeholder="Dokumenttitel" ${mode === 'inline' ? `data-inline-action="update-house-document-field" data-house-document-index="${index}" data-house-document-field="text"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-document-link' : ''}" type="url" value="${escapeHtml(item.link || '')}" placeholder="Link zur Seite / URL" ${mode === 'inline' ? `data-inline-action="update-house-document-field" data-house-document-index="${index}" data-house-document-field="link"` : ''}>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-house-document" data-house-document-index="${index}"` : 'data-module-editor-action="remove-house-document-row"'}>Löschen</button>
-    </div>`).join('');
-}
-
-function buildHouseConnectionRows(connections = [], mode = 'module') {
-  const rows = (Array.isArray(connections) && connections.length ? connections : [{ type: 'connection', image: '', imageFormat: 'square', name: '', detail: '' }]);
-  return rows.map((item, index) => {
-    if (item.type === 'heading') {
-      return `
-    <div class="biography-edit-row connection-heading ${mode === 'inline' ? '' : 'module-house-connection-row'}" ${mode === 'inline' ? `data-house-connection-index="${index}"` : ''} data-house-connection-type="heading">
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-connection-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="title"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Unterzeile optional" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="detail"` : ''}>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-house-connection" data-house-connection-index="${index}"` : 'data-module-editor-action="remove-house-connection-row"'}>Loeschen</button>
-    </div>`;
-    }
-    return `
-    <div class="biography-edit-row connection ${mode === 'inline' ? '' : 'module-house-connection-row'}" ${mode === 'inline' ? `data-house-connection-index="${index}"` : ''} data-house-connection-type="connection">
-      <input type="hidden" class="me-house-connection-title" value="">
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-connection-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild (Wappen/Portrait)" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="image"` : ''}>
-      <select class="inline-edit-input ${mode === 'module' ? 'me-house-connection-image-format' : ''}" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="imageFormat"` : ''}>
-        <option value="portrait"${item.imageFormat !== 'landscape' && item.imageFormat !== 'square' ? ' selected' : ''}>Hochformat</option>
-        <option value="landscape"${item.imageFormat === 'landscape' ? ' selected' : ''}>Querformat</option>
-        <option value="square"${item.imageFormat === 'square' ? ' selected' : ''}>Quadrat (Wappen)</option>
-      </select>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-connection-name' : ''}" type="text" value="${escapeHtml(item.name || '')}" placeholder="Name des Hauses" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="name"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-house-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-house-connection-field" data-house-connection-index="${index}" data-house-connection-field="detail"` : ''}>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-house-connection" data-house-connection-index="${index}"` : 'data-module-editor-action="remove-house-connection-row"'}>Loeschen</button>
-    </div>`;
-  }).join('');
-}
-
 function collectModuleHouseStats(card) {
   return Array.from(card.querySelectorAll('.module-house-stat-row'))
     .map(row => [
@@ -136,41 +27,6 @@ function collectModuleHouseStats(card) {
       getTrimmedFormValue(row, '.me-house-stat-value')
     ])
     .filter(([label, value]) => label || value);
-}
-
-function collectModuleHouseInfluences(card) {
-  return Array.from(card.querySelectorAll('.module-house-influence-row')).map(row => ({
-    icon: getTrimmedFormValue(row, '.me-house-influence-icon'),
-    title: getTrimmedFormValue(row, '.me-house-influence-title'),
-    detail: getTrimmedFormValue(row, '.me-house-influence-detail')
-  })).filter(item => item.icon || item.title || item.detail);
-}
-
-function collectModuleHouseSections(card) {
-  return Array.from(card.querySelectorAll('.module-house-section-row')).map(row => ({
-    position: getFormValue(row, '.me-house-section-position'),
-    mode: getFormValue(row, '.me-house-section-mode'),
-    title: getTrimmedFormValue(row, '.me-house-section-title'),
-    text: getTrimmedFormValue(row, '.me-house-section-text')
-  })).filter(item => item.title || item.text);
-}
-
-function collectModuleHouseConnections(card) {
-  return Array.from(card.querySelectorAll('.module-house-connection-row')).map(row => ({
-    type: row.dataset.houseConnectionType === 'heading' ? 'heading' : 'connection',
-    title: getTrimmedFormValue(row, '.me-house-connection-title'),
-    image: getTrimmedFormValue(row, '.me-house-connection-image'),
-    imageFormat: getFormValue(row, '.me-house-connection-image-format'),
-    name: getTrimmedFormValue(row, '.me-house-connection-name'),
-    detail: getTrimmedFormValue(row, '.me-house-connection-detail')
-  })).filter(item => item.type === 'heading' ? item.title || item.detail : item.image || item.name || item.detail);
-}
-
-function collectModuleHouseDocuments(card) {
-  return Array.from(card.querySelectorAll('.module-house-document-row')).map(row => ({
-    text: getTrimmedFormValue(row, '.me-house-document-text'),
-    link: getTrimmedFormValue(row, '.me-house-document-link')
-  })).filter(item => item.text || item.link);
 }
 
 function addModuleHouseStatRow(button) {
@@ -196,98 +52,101 @@ function removeModuleHouseStatRow(button) {
   syncModuleJsonPreview();
 }
 
-function addModuleHouseInfluenceRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const wrap = pageCard?.querySelector('.module-house-influences');
-  if (!pageCard || !wrap) return;
-  wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildHouseInfluenceRows([{ icon: '*', title: 'Neuer Punkt', detail: '' }], 'module'));
-  syncModuleJsonPreview();
-}
+registerRowSchema('house.documents', {
+  itemsKey: 'documents',
+  dataNamespace: 'house',
+  sanitizeFn: sanitizeHouseData,
+  rowClass: 'biography-edit-row document',
+  rowSelectorClass: 'module-house-document-row',
+  listWrapClass: 'module-house-documents',
+  emptyFallbackItem: () => ({ text: '', link: '' }),
+  emptyMessage: 'Noch keine Dokumente vorhanden.',
+  fields: [
+    { key: 'text', kind: 'text', placeholder: 'Dokumenttitel', modalClass: 'me-house-document-text' },
+    { key: 'link', kind: 'url', placeholder: 'Link zur Seite / URL', modalClass: 'me-house-document-link' }
+  ],
+  keepRow: item => item.text || item.link,
+  newItem: () => ({ text: 'Neues Dokument', link: '' })
+});
 
-function removeModuleHouseInfluenceRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const row = button.closest('.module-house-influence-row');
-  const wrap = pageCard?.querySelector('.module-house-influences');
-  if (!pageCard || !row || !wrap) return;
-  row.remove();
-  if (!wrap.querySelector('.module-house-influence-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>';
-  }
-  syncModuleJsonPreview();
-}
-
-function addModuleHouseSectionRow(button, position = 'afterIntro') {
-  const pageCard = button.closest('.module-page-card');
-  const wrap = pageCard?.querySelector('.module-house-sections');
-  if (!pageCard || !wrap) return;
-  wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildHouseSectionRows([{
+registerRowSchema('house.sections', {
+  itemsKey: 'extraSections',
+  dataNamespace: 'house',
+  sanitizeFn: sanitizeHouseData,
+  rowClass: 'biography-edit-section-row',
+  rowSelectorClass: 'module-house-section-row',
+  listWrapClass: 'module-house-sections',
+  emptyFallbackItem: null, // unlike the other three lists, an empty section list renders no row at all
+  emptyMessage: 'Noch keine Zusatzabschnitte vorhanden.',
+  fields: [
+    { key: 'position', kind: 'select', modalClass: 'me-house-section-position', default: 'afterIntro', options: [['afterIntro', 'Nach Haupttext'], ['afterWorks', 'Nach Abschnitt 3']] },
+    { key: 'mode', kind: 'select', modalClass: 'me-house-section-mode', default: 'text', options: [['text', 'Text'], ['list', 'Bulletliste']] },
+    { key: 'title', kind: 'text', placeholder: 'Ueberschrift', modalClass: 'me-house-section-title' },
+    { key: 'text', kind: 'textarea', placeholder: 'Text oder je Zeile ein Listenpunkt', modalClass: 'me-house-section-text' }
+  ],
+  keepRow: item => item.title || item.text,
+  newItem: (position) => ({
     position: position === 'afterWorks' ? 'afterWorks' : 'afterIntro',
     mode: 'text',
     title: 'Neue Ueberschrift',
     text: ''
-  }], 'module'));
-  syncModuleJsonPreview();
-}
+  })
+});
 
-function removeModuleHouseSectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const row = button.closest('.module-house-section-row');
-  const wrap = pageCard?.querySelector('.module-house-sections');
-  if (!pageCard || !row || !wrap) return;
-  row.remove();
-  if (!wrap.querySelector('.module-house-section-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>';
+registerRowSchema('house.influences', {
+  itemsKey: 'abilities', // UI label is "Einflussbereiche", but sanitizeHouseData/sanitizeBiographyData
+                         // store this list under the field name "abilities" — verified in
+                         // module-editor-data.js. Must stay "abilities", not "influences".
+  dataNamespace: 'house',
+  sanitizeFn: sanitizeHouseData,
+  rowClass: 'biography-edit-row',
+  rowSelectorClass: 'module-house-influence-row',
+  listWrapClass: 'module-house-influences',
+  emptyFallbackItem: null,
+  emptyMessage: 'Noch keine Punkte vorhanden.',
+  fields: [
+    { key: 'icon', kind: 'icon', placeholder: 'Symbol oder Bild-URL', modalClass: 'me-house-influence-icon' },
+    { key: 'title', kind: 'text', placeholder: 'Titel', modalClass: 'me-house-influence-title' },
+    { key: 'detail', kind: 'text', placeholder: 'Beschreibung', modalClass: 'me-house-influence-detail' }
+  ],
+  keepRow: item => item.icon || item.title || item.detail,
+  newItem: () => ({ icon: '*', title: 'Neuer Punkt', detail: '' })
+});
+
+registerRowSchema('house.connections', {
+  itemsKey: 'connections',
+  dataNamespace: 'house',
+  sanitizeFn: sanitizeHouseData,
+  rowClass: 'biography-edit-row',
+  rowSelectorClass: 'module-house-connection-row',
+  listWrapClass: 'module-house-connections',
+  discriminatorKey: 'type',
+  defaultVariant: 'connection',
+  emptyFallbackItem: () => ({ type: 'connection', image: '', imageFormat: 'square', name: '', detail: '' }),
+  emptyMessage: 'Noch keine Verbindungen vorhanden.',
+  variants: {
+    heading: {
+      rowClass: 'connection-heading',
+      fields: [
+        { key: 'title', kind: 'text', placeholder: 'Ueberschrift', modalClass: 'me-house-connection-title' },
+        { key: 'detail', kind: 'text', placeholder: 'Unterzeile optional', modalClass: 'me-house-connection-detail' }
+      ],
+      keepRow: item => item.title || item.detail,
+      newItem: () => ({ type: 'heading', title: 'Neue Gruppe', detail: '' })
+    },
+    connection: {
+      rowClass: 'connection',
+      fields: [
+        { key: 'image', kind: 'url', placeholder: 'Imgur-Bild (Wappen/Portrait)', modalClass: 'me-house-connection-image' },
+        { key: 'imageFormat', kind: 'select', modalClass: 'me-house-connection-image-format', default: 'portrait', options: [['portrait', 'Hochformat'], ['landscape', 'Querformat'], ['square', 'Quadrat (Wappen)']] },
+        { key: 'name', kind: 'text', placeholder: 'Name des Hauses', modalClass: 'me-house-connection-name' },
+        { key: 'detail', kind: 'text', placeholder: 'Beziehung', modalClass: 'me-house-connection-detail' }
+      ],
+      keepRow: item => item.image || item.name || item.detail,
+      newItem: () => ({ type: 'connection', image: '', imageFormat: 'square', name: 'Neue Verbindung', detail: '' })
+    }
   }
-  syncModuleJsonPreview();
-}
-
-function addModuleHouseDocumentRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const wrap = pageCard?.querySelector('.module-house-documents');
-  if (!pageCard || !wrap) return;
-  wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildHouseDocumentRows([{ text: 'Neues Dokument', link: '' }], 'module'));
-  syncModuleJsonPreview();
-}
-
-function removeModuleHouseDocumentRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const row = button.closest('.module-house-document-row');
-  const wrap = pageCard?.querySelector('.module-house-documents');
-  if (!pageCard || !row || !wrap) return;
-  row.remove();
-  if (!wrap.querySelector('.module-house-document-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Dokumente vorhanden.</div>';
-  }
-  syncModuleJsonPreview();
-}
-
-function addModuleHouseConnectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const wrap = pageCard?.querySelector('.module-house-connections');
-  if (!pageCard || !wrap) return;
-  const kind = button.dataset.houseConnectionKind === 'heading' ? 'heading' : 'connection';
-  wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildHouseConnectionRows([kind === 'heading'
-    ? { type: 'heading', title: 'Neue Gruppe', detail: '' }
-    : { type: 'connection', image: '', imageFormat: 'square', name: 'Neue Verbindung', detail: '' }
-  ], 'module'));
-  syncModuleJsonPreview();
-}
-
-function removeModuleHouseConnectionRow(button) {
-  const pageCard = button.closest('.module-page-card');
-  const row = button.closest('.module-house-connection-row');
-  const wrap = pageCard?.querySelector('.module-house-connections');
-  if (!pageCard || !row || !wrap) return;
-  row.remove();
-  if (!wrap.querySelector('.module-house-connection-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Verbindungen vorhanden.</div>';
-  }
-  syncModuleJsonPreview();
-}
+});
 
 function buildHouseModuleEditorFields(page) {
   const house = sanitizeHouseData(page?.house || {});
@@ -330,10 +189,10 @@ function buildHouseModuleEditorFields(page) {
             <label>Einflussbereiche & Zuständigkeiten</label>
             <div class="module-editor-help">Icon per Bild-URL oder aus dem Icon-Verzeichnis (z.B. Organisationsicons: Militär, Diplomatie, Magie, Klerus, Spionage ...). Jederzeit ersetzbar.</div>
             <div class="module-editor-inline" style="justify-content:flex-end;">
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-influence-row">+ Punkt</button>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.influences">+ Punkt</button>
             </div>
             <div class="biography-edit-list module-house-influences">
-              ${house.abilities.length ? buildHouseInfluenceRows(house.abilities, 'module') : '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>'}
+              ${buildSchemaList('house.influences', house.abilities, 'module')}
             </div>
           </div>
           <div class="module-editor-field">
@@ -360,13 +219,13 @@ function buildHouseModuleEditorFields(page) {
             <div class="module-editor-inline" style="justify-content:space-between;">
               <label>Zusatzabschnitte im Hauptbereich</label>
               <span>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-section-row" data-house-section-position="afterIntro">+ Nach Haupttext</button>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-section-row" data-house-section-position="afterWorks">+ Nach Abschnitt 3</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.sections" data-schema-arg="afterIntro">+ Nach Haupttext</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.sections" data-schema-arg="afterWorks">+ Nach Abschnitt 3</button>
               </span>
             </div>
             <div class="module-editor-help">Fuer Textbloecke oder Bulletlisten zwischen den Hauptreitern (z.B. Wappenkunde, Sitz &amp; Ländereien, Titel &amp; Ränge).</div>
             <div class="biography-edit-list module-house-sections">
-              ${house.extraSections.length ? buildHouseSectionRows(house.extraSections, 'module') : '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>'}
+              ${buildSchemaList('house.sections', house.extraSections, 'module')}
             </div>
           </div>
           <div class="module-editor-field">
@@ -414,22 +273,22 @@ function buildHouseModuleEditorFields(page) {
             <div class="module-editor-inline" style="justify-content:space-between;">
               <span class="module-editor-help">Wappen/Portrait, Name des anderen Hauses und Art der Beziehung.</span>
               <span>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-connection-row" data-house-connection-kind="heading">+ Trenner</button>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-connection-row" data-house-connection-kind="connection">+ Verbindung</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.connections" data-schema-arg="heading">+ Trenner</button>
+                <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.connections" data-schema-arg="connection">+ Verbindung</button>
               </span>
             </div>
             <div class="biography-edit-list module-house-connections">
-              ${buildHouseConnectionRows(house.connections, 'module')}
+              ${buildSchemaList('house.connections', house.connections, 'module')}
             </div>
           </div>
           <div class="module-editor-field wide">
             <label>${escapeHtml(house.documentsTitle || 'Dokumente & Urkunden')}</label>
             <div class="module-editor-inline" style="justify-content:space-between;">
               <span class="module-editor-help">Der Link öffnet den Dokumenttitel in einer neuen Seite.</span>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-house-document-row">+ Dokument</button>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.documents">+ Dokument</button>
             </div>
             <div class="biography-edit-list module-house-documents">
-              ${buildHouseDocumentRows(house.documents, 'module')}
+              ${buildSchemaList('house.documents', house.documents, 'module')}
             </div>
           </div>
           <div class="module-editor-field wide">
@@ -461,8 +320,8 @@ function collectHouseModuleEditorPage(card, page) {
     biographyText: getTrimmedFormValue(card, '.me-house-text'),
     sideWidth: getFormValue(card, '.me-house-side-width'),
     abilitiesTitle: getTrimmedFormValue(card, '.me-house-influences-title'),
-    abilities: collectModuleHouseInfluences(card),
-    extraSections: collectModuleHouseSections(card),
+    abilities: collectSchemaRows(card, 'house.influences'),
+    extraSections: collectSchemaRows(card, 'house.sections'),
     historyTitle: getTrimmedFormValue(card, '.me-house-history-title'),
     historyText: getTrimmedFormValue(card, '.me-house-history-text'),
     worksTitle: getTrimmedFormValue(card, '.me-house-works-title'),
@@ -474,9 +333,9 @@ function collectHouseModuleEditorPage(card, page) {
     connectionsTitle: getTrimmedFormValue(card, '.me-house-connections-title'),
     connectionPortraitHeight: getFormValue(card, '.me-house-connection-portrait-height'),
     connectionTextOffset: getFormValue(card, '.me-house-connection-text-offset'),
-    connections: collectModuleHouseConnections(card),
+    connections: collectSchemaRows(card, 'house.connections'),
     documentsTitle: getTrimmedFormValue(card, '.me-house-documents-title'),
-    documents: collectModuleHouseDocuments(card),
+    documents: collectSchemaRows(card, 'house.documents'),
     footer: getTrimmedFormValue(card, '.me-house-footer')
   });
   return page;

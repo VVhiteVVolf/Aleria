@@ -29,17 +29,11 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-biography-section',
   'add-biography-line-row',
   'remove-biography-line-row',
-  'add-house-connection',
-  'remove-house-connection',
-  'add-house-document',
-  'remove-house-document',
-  'add-house-influence',
-  'remove-house-influence',
-  'pick-house-influence-icon',
-  'add-house-section',
-  'remove-house-section',
   'add-house-line-row',
   'remove-house-line-row',
+  'schema-add-row',
+  'schema-remove-row',
+  'schema-pick-icon',
   'add-bestiary-list-row',
   'remove-bestiary-list-row',
   'add-artifact-list-row',
@@ -239,42 +233,6 @@ function handleInlineEditorActionClick(event) {
     );
     return;
   }
-  if (action === 'add-house-connection') {
-    addInlineHouseConnectionRow(trigger.dataset.houseConnectionKind || 'connection');
-    return;
-  }
-  if (action === 'remove-house-connection') {
-    removeInlineHouseConnectionRow(Number(trigger.dataset.houseConnectionIndex) || 0);
-    return;
-  }
-  if (action === 'add-house-document') {
-    addInlineHouseDocumentRow();
-    return;
-  }
-  if (action === 'remove-house-document') {
-    removeInlineHouseDocumentRow(Number(trigger.dataset.houseDocumentIndex) || 0);
-    return;
-  }
-  if (action === 'add-house-influence') {
-    addInlineHouseInfluenceRow();
-    return;
-  }
-  if (action === 'remove-house-influence') {
-    removeInlineHouseInfluenceRow(Number(trigger.dataset.houseInfluenceIndex) || 0);
-    return;
-  }
-  if (action === 'pick-house-influence-icon') {
-    openHouseInfluenceIconPicker(trigger);
-    return;
-  }
-  if (action === 'add-house-section') {
-    addInlineHouseSectionRow(trigger.dataset.houseSectionPosition || 'afterIntro');
-    return;
-  }
-  if (action === 'remove-house-section') {
-    removeInlineHouseSectionRow(Number(trigger.dataset.houseSectionIndex) || 0);
-    return;
-  }
   if (action === 'add-house-line-row') {
     addInlineHouseLineRow(trigger.dataset.houseLineList || '');
     return;
@@ -284,6 +242,18 @@ function handleInlineEditorActionClick(event) {
       trigger.dataset.houseLineList || '',
       Number(trigger.dataset.houseLineIndex) || 0
     );
+    return;
+  }
+  if (action === 'schema-add-row') {
+    addInlineSchemaRow(trigger.dataset.schemaKey, trigger.dataset.schemaArg || '');
+    return;
+  }
+  if (action === 'schema-remove-row') {
+    removeInlineSchemaRow(trigger.dataset.schemaKey, Number(trigger.dataset.schemaIndex) || 0);
+    return;
+  }
+  if (action === 'schema-pick-icon') {
+    openSchemaIconPicker(trigger);
     return;
   }
   if (action === 'add-bestiary-list-row') {
@@ -733,20 +703,8 @@ function handleInlineEditorFieldChange(event) {
     updateInlineHouseLineField(field);
     return;
   }
-  if (action === 'update-house-influence-field') {
-    updateInlineHouseInfluenceField(field);
-    return;
-  }
-  if (action === 'update-house-section-field') {
-    updateInlineHouseSectionField(field);
-    return;
-  }
-  if (action === 'update-house-connection-field') {
-    updateInlineHouseConnectionField(field);
-    return;
-  }
-  if (action === 'update-house-document-field') {
-    updateInlineHouseDocumentField(field);
+  if (action === 'schema-update-field') {
+    updateInlineSchemaField(field);
     return;
   }
   if (action === 'update-bestiary-field') {
