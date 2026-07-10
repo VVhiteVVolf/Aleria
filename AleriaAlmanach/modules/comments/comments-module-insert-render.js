@@ -147,25 +147,86 @@ function buildCommentModuleEntry(item) {
   });
 }
 
-function renderCommentModuleThumbnail(item) {
-  const image = sanitizeImageSrc(item.symbol || item.icon || item.image || item.page?.image || '');
-  if (image) {
-    return `<img class="comment-showcase-img comment-module-insert-img" src="${image}" alt="" loading="lazy" decoding="async">`;
-  }
-  return `<div class="comment-showcase-img comment-showcase-img-placeholder comment-module-insert-img">M</div>`;
+const COMMENT_MODULE_REVEAL_VARIANTS = {
+  character: { className: 'dossier', action: 'Akte öffnen' },
+  biography: { className: 'dossier', action: 'Akte öffnen' },
+  profile: { className: 'dossier', action: 'Akte öffnen' },
+  map: { className: 'map', action: 'Karte entfalten' },
+  quest: { className: 'notice', action: 'Auftrag prüfen' },
+  bounty: { className: 'notice', action: 'Aushang prüfen' },
+  artifact: { className: 'relic', action: 'Fundstück betrachten' },
+  recipe: { className: 'relic', action: 'Rezept studieren' },
+  bestiary: { className: 'bestiary', action: 'Kreatur studieren' },
+  house: { className: 'house', action: 'Siegelbuch öffnen' },
+  session: { className: 'scene', action: 'Szene betreten' },
+  story: { className: 'chronicle', action: 'Kapitel aufschlagen' }
+};
+
+function getCommentModuleRevealVariant(item = {}) {
+  const source = [item.templateId, item.type, item.category].map(value => String(value || '').toLowerCase()).join(' ');
+  const key = Object.keys(COMMENT_MODULE_REVEAL_VARIANTS).find(candidate => source.includes(candidate));
+  return COMMENT_MODULE_REVEAL_VARIANTS[key] || COMMENT_MODULE_REVEAL_VARIANTS.story;
+}
+
+function getCommentModuleRevealText(value = '') {
+  return String(value || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/__(.*?)__/g, '$1')
+    .replace(/\|\|(.*?)\|\|/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getCommentModuleRevealTeaser(item = {}) {
+  const page = item.page || item.entry?.pages?.[0] || {};
+  const sceneText = Array.isArray(page.sceneBlocks) ? page.sceneBlocks.map(block => block?.text || '').find(Boolean) : '';
+  const source = [item.teaser, page.description, page.sessionIntro, page.quote, page.commentText, sceneText, item.subtitle]
+    .map(getCommentModuleRevealText)
+    .find(text => text.length >= 24) || '';
+  return source.length > 210 ? `${source.slice(0, 207).trim()}…` : source;
+}
+
+function getCommentModuleRevealPageCount(item = {}) {
+  const entryPages = item.entry ? getPages(item.entry) : [];
+  return Math.max(1, entryPages.length || (item.page ? 1 : 0));
+}
+
+function renderCommentModuleRevealMedia(item = {}) {
+  const hero = sanitizeImageSrc(item.image || item.page?.image || item.entry?.image || '');
+  const emblem = sanitizeImageSrc(item.symbol || item.icon || '');
+  return `
+    <span class="comment-module-reveal-media${hero ? ' has-image' : ''}">
+      ${hero ? `<img class="comment-module-reveal-hero" src="${hero}" alt="" loading="lazy" decoding="async">` : ''}
+      <span class="comment-module-reveal-wash" aria-hidden="true"></span>
+      ${item.stamp ? `<span class="comment-module-reveal-stamp">${escapeHtml(item.stamp)}</span>` : ''}
+      <span class="comment-module-reveal-emblem${emblem ? ' has-image' : ''}">
+        ${emblem ? `<img src="${emblem}" alt="" loading="lazy" decoding="async">` : escapeHtml(getInitialChar(item.title || 'Modul'))}
+      </span>
+    </span>`;
 }
 
 function renderCommentModuleInsertCard(item, options = {}) {
+  const variant = getCommentModuleRevealVariant(item);
+  const teaser = getCommentModuleRevealTeaser(item);
+  const pageCount = getCommentModuleRevealPageCount(item);
   const tag = options.interactive === false ? 'div' : 'button';
   const attrs = options.interactive === false
     ? ''
     : ` type="button" data-action="open-comment-module-insert-profile" data-comment-id="${escapeHtml(options.commentId || '')}"`;
   return `
-    <${tag} class="comment-showcase-card comment-module-insert-card"${attrs}>
-      ${renderCommentModuleThumbnail(item)}
-      <span class="comment-showcase-copy comment-module-insert-copy">
-        <span class="comment-showcase-title">${escapeHtml(item.title)}</span>
-        ${item.subtitle ? `<span class="comment-showcase-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
+    <${tag} class="comment-module-reveal-card comment-module-reveal-${variant.className}${options.interactive === false ? ' is-preview' : ''}"${attrs}>
+      ${renderCommentModuleRevealMedia(item)}
+      <span class="comment-module-reveal-content">
+        <span class="comment-module-reveal-meta">${escapeHtml(item.type || 'Almanach-Eintrag')}${item.category ? ` · ${escapeHtml(item.category)}` : ''}</span>
+        <span class="comment-module-reveal-title">${escapeHtml(item.title)}</span>
+        ${item.subtitle ? `<span class="comment-module-reveal-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
+        ${teaser ? `<span class="comment-module-reveal-teaser">${escapeHtml(teaser)}</span>` : ''}
+        <span class="comment-module-reveal-foot">
+          <span>${pageCount} ${pageCount === 1 ? 'Seite' : 'Seiten'}</span>
+          <strong>${escapeHtml(variant.action)} <span aria-hidden="true">→</span></strong>
+        </span>
       </span>
     </${tag}>`;
 }
@@ -237,8 +298,8 @@ function renderCommentModuleInsert(comment, idx, item) {
   return `
     ${divider}
     <div class="comment-narrator comment-module-insert-entry" data-comment-id="${safeCommentId}">
-      <div class="comment-kind-badge">Erzaehler · Modul</div>
-      ${comment.text ? `<div class="comment-attachment-narration">${parseCommentMarkup(comment.text)}</div>` : ''}
+      <div class="comment-module-reveal-divider"><span>Ein neuer Eintrag wird enthüllt</span></div>
+      ${comment.text ? `<div class="comment-attachment-narration comment-module-reveal-narration">${parseCommentMarkup(comment.text)}</div>` : ''}
       ${renderCommentModuleInsertCard(item, { commentId: safeCommentId })}
       ${actions}
     </div>`;

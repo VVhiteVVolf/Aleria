@@ -83,7 +83,7 @@ function buildArchiveDashboardTriviaCards(sections = []) {
       commentator: getArchiveDashboardCommentator(item.entry)
     }))
     .filter(item => item.text && item.entry?.id)
-    .slice(0, 5);
+    .slice(0, 3);
 
   if (!items.length) {
     return '<div class="archive-dashboard-empty">Noch keine verwertbaren Fakten gefunden.</div>';
@@ -125,6 +125,37 @@ function buildArchiveDashboardSceneCards(sections = []) {
   }).join('');
 }
 
+function getArchiveDashboardPrimaryScene(sections = []) {
+  return getArchiveDashboardEntries(sections)
+    .find(item => (item.entry?.pages || []).some(page => page?.sessionPage)) || null;
+}
+
+function getArchiveDashboardPrimarySection(sections = []) {
+  return sections.find(section => (section.entries || []).length) || sections[0] || null;
+}
+
+function buildArchiveDashboardHeroActions(sections = []) {
+  const primarySection = getArchiveDashboardPrimarySection(sections);
+  const primaryScene = getArchiveDashboardPrimaryScene(sections);
+  const sectionLabel = primarySection?.tab || primarySection?.key || '';
+  return `
+    <div class="archive-dashboard-hero-actions" aria-label="Schnelleinstiege">
+      ${sectionLabel ? `
+        <button class="archive-dashboard-primary-action" type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(sectionLabel)}">
+          <span>Welt erkunden</span>
+          <small>Register und Weltwissen öffnen</small>
+        </button>` : ''}
+      ${primaryScene ? `
+        <button class="archive-dashboard-primary-action" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(primaryScene.entry.id)}">
+          <span>Szene öffnen</span>
+          <small>${escapeHtml(primaryScene.entry.title || 'Interaktive Szene')}</small>
+        </button>` : ''}
+      <button class="archive-dashboard-secondary-action" type="button" data-archive-action="focus-dashboard-search">
+        Im Almanach suchen
+      </button>
+    </div>`;
+}
+
 function buildArchiveDashboardQuickCards(sections = []) {
   return buildArchiveDashboardSectionCards(sections);
 }
@@ -136,8 +167,10 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const existing = grouped.get(label) || {
       label,
       theme: getThemeMetaForSection(section),
+      iconUrl: '',
       entries: []
     };
+    if (!existing.iconUrl) existing.iconUrl = sanitizeImageSrc(section.iconUrl || '');
     existing.entries.push(...(Array.isArray(section.entries) ? section.entries : []));
     grouped.set(label, existing);
   });
@@ -148,8 +181,12 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const stats = getArchiveSectionStats(section, entries);
     return `
       <button class="archive-dashboard-section" type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(group.label)}" data-section-theme="${escapeHtml(group.theme.slug)}">
-        <span class="archive-dashboard-section-name">${escapeHtml(group.label)}</span>
-        <span class="archive-dashboard-section-meta">${stats.moduleCount} Module &middot; ${stats.pageCount} Seiten</span>
+        ${group.iconUrl ? `<img class="archive-dashboard-section-icon" src="${escapeHtml(group.iconUrl)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-section-mark" aria-hidden="true">✦</span>'}
+        <span class="archive-dashboard-section-copy">
+          <span class="archive-dashboard-section-name">${escapeHtml(group.label)}</span>
+          <span class="archive-dashboard-section-meta">${stats.moduleCount} Module &middot; ${stats.pageCount} Seiten</span>
+        </span>
+        <span class="archive-dashboard-section-arrow" aria-hidden="true">→</span>
       </button>`;
   }).join('');
 }
@@ -159,10 +196,11 @@ function renderArchiveDashboard(sections = []) {
   return `
     <section class="archive-dashboard" aria-label="Archivuebersicht">
       <div class="archive-dashboard-hero">
-        <div>
+        <div class="archive-dashboard-hero-copy">
           <div class="archive-dashboard-kicker">Almanach-Dashboard</div>
-          <h2>Startpunkt fuer Szenen, Weltwissen und offene Register</h2>
-          <p>Hier liegen die wichtigsten Einstiegspunkte, lebendige Archivfunde und aktuelle Aktivitaeten zusammen.</p>
+          <h2>Willkommen im Aleria Almanach</h2>
+          <p>Erkunde die Welt, kehre in eine Szene zurück oder finde gezielt den nächsten Archivpfad.</p>
+          ${buildArchiveDashboardHeroActions(sections)}
         </div>
         <div class="archive-dashboard-stats">
           <span><strong>${stats.moduleCount}</strong> Module</span>
@@ -172,13 +210,24 @@ function renderArchiveDashboard(sections = []) {
         </div>
       </div>
       <div class="archive-dashboard-grid">
+        <section class="archive-dashboard-panel archive-dashboard-panel-paths archive-dashboard-panel-full">
+          <div class="archive-dashboard-panel-head">
+            <div>
+              <div class="archive-dashboard-kicker">Welt erkunden</div>
+              <h3>Weltpfade</h3>
+            </div>
+          </div>
+          <div class="archive-dashboard-sections">
+            ${buildArchiveDashboardQuickCards(sections)}
+          </div>
+        </section>
         <section class="archive-dashboard-panel archive-dashboard-panel-wide" data-dashboard-insights-panel>
           <div class="archive-dashboard-panel-head">
             <div>
               <div class="archive-dashboard-kicker">Archivfunken</div>
               <h3>Wusstest du das?</h3>
             </div>
-            <button class="archive-dashboard-ai-btn" type="button" data-archive-action="generate-dashboard-insights">Neue Archivfunken finden</button>
+            <button class="archive-dashboard-ai-btn" type="button" data-archive-action="generate-dashboard-insights">Neue Entdeckungen</button>
           </div>
           <div class="archive-dashboard-insight-status" data-dashboard-insights-status>
             ${typeof getArchiveDashboardInsights === 'function' && getArchiveDashboardInsights().length
@@ -202,79 +251,6 @@ function renderArchiveDashboard(sections = []) {
             ${buildArchiveDashboardSceneCards(sections)}
           </div>
         </section>
-        <section class="archive-dashboard-panel">
-          <div class="archive-dashboard-panel-head">
-            <div>
-              <div class="archive-dashboard-kicker">Aktivitaet</div>
-              <h3>Letzte Stimmen</h3>
-            </div>
-          </div>
-          <div class="archive-dashboard-activity" data-dashboard-activity>
-            <div class="archive-dashboard-empty">Aktivitaeten werden geladen...</div>
-          </div>
-        </section>
-        <section class="archive-dashboard-panel archive-dashboard-panel-wide">
-          <div class="archive-dashboard-panel-head">
-            <div>
-              <div class="archive-dashboard-kicker">Schnellzugriff</div>
-              <h3>Weltpfade</h3>
-            </div>
-          </div>
-          <div class="archive-dashboard-sections">
-            ${buildArchiveDashboardQuickCards(sections)}
-          </div>
-        </section>
       </div>
     </section>`;
-}
-
-async function hydrateArchiveDashboardActivity() {
-  const target = document.querySelector('[data-dashboard-activity]');
-  if (!target) return;
-  try {
-    const backend = typeof getCommentBackend === 'function'
-      ? await getCommentBackend({ timeoutMs: 1200 })
-      : (await waitForFirebaseReady(1200), window._fb);
-    if (!backend?.loadRecentComments) return;
-    const rawComments = await backend.loadRecentComments(8);
-    const comments = (typeof sortSidebarFeedComments === 'function'
-      ? sortSidebarFeedComments(rawComments)
-      : (Array.isArray(rawComments) ? rawComments : [])
-    ).slice(0, 4);
-    const sections = getValidSections();
-    const items = comments.map(comment => {
-      const threadId = String(comment?.entryId || '');
-      const location = typeof parseCommentThreadLocation === 'function'
-        ? parseCommentThreadLocation(threadId)
-        : { baseEntryId: threadId };
-      let entry = null;
-      let section = null;
-      for (const candidate of sections) {
-        const found = (candidate.entries || []).find(item => item.id === location.baseEntryId);
-        if (found) {
-          entry = found;
-          section = candidate;
-          break;
-        }
-      }
-      if (!entry) return '';
-      const name = comment?.narrator ? 'Erzaehler' : (comment?.charName || 'Unbekannt');
-      const portrait = sanitizeImageSrc(comment?.portrait || '');
-      const avatar = portrait
-        ? `<img src="${escapeHtml(portrait)}" alt="${escapeHtml(name)}" loading="lazy" decoding="async">`
-        : `<span>${escapeHtml(getInitialChar(name))}</span>`;
-      return `
-        <button class="archive-dashboard-activity-item" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry.id)}">
-          <span class="archive-dashboard-activity-avatar">${avatar}</span>
-          <span>
-            <strong>${escapeHtml(name)}</strong>
-            <small>${escapeHtml(entry.title || entry.id)} / ${escapeHtml(typeof formatTimeAgo === 'function' ? formatTimeAgo(comment) : '')}</small>
-          </span>
-        </button>`;
-    }).filter(Boolean);
-    target.innerHTML = items.length ? items.join('') : '<div class="archive-dashboard-empty">Noch keine Aktivitaeten.</div>';
-  } catch (error) {
-    console.warn('dashboard activity failed:', error);
-    target.innerHTML = '<div class="archive-dashboard-empty">Aktivitaeten konnten nicht geladen werden.</div>';
-  }
 }

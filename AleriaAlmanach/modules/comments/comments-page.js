@@ -83,6 +83,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
   const imgW = page.imageWidth != null && page.imageWidth !== ''
     ? `${Math.max(20, Math.min(70, Number(page.imageWidth) || 38))}%`
     : 'clamp(380px, 36vw, 560px)';
+  const threadId = getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex));
   return `
     ${nav}
     <div class="session-page${focusMode ? ' session-focus-mode' : ''}">
@@ -99,6 +100,9 @@ function buildSessionPage(page, entry, pageIndex, total) {
               <div class="session-stage-kicker">Interaktive Szene</div>
               <div class="session-stage-title">${escapeHtml(page.pageTitle || 'Anhörung')}</div>
             </div>
+            <div class="session-stage-actions">
+              ${buildSceneDiceControl(threadId)}
+              ${buildSessionStatusControl(page, entry, threadId)}
             <button
               class="session-focus-toggle"
               type="button"
@@ -106,6 +110,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
               title="${focusMode ? 'Lesemodus verlassen' : 'Lesebereich maximieren'}"
               aria-label="${focusMode ? 'Lesemodus verlassen' : 'Lesebereich maximieren'}"
               aria-pressed="${focusMode ? 'true' : 'false'}">${focusMode ? '↙' : '⛶'}</button>
+            </div>
           </div>
           ${intro}
         </div>
@@ -117,7 +122,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
           <div class="comment-empty" id="comments-loading">Lade Sitzung…</div>
         </div>
         ${buildCommentQuickTools()}
-        ${buildCommentTurnBar(getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex)))}
+        ${buildCommentTurnBar(threadId)}
         ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.', { allowSceneTime: true })}
       </div>
     </div>`;

@@ -80,6 +80,140 @@
     flex-direction: column;
     gap: 0.3rem;
   }
+  .session-stage-actions {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .session-status {
+    position: relative;
+  }
+  .session-status-toggle {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(139,105,20,0.65);
+    background: linear-gradient(180deg, rgba(255,249,235,0.78), rgba(205,184,128,0.32));
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.52), 0 1px 2px rgba(45,27,8,0.12);
+  }
+  .session-status-toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .session-status-toggle:hover,
+  .session-status-toggle[aria-expanded="true"] {
+    border-color: var(--gold);
+    background: rgba(139,105,20,0.16);
+    transform: translateY(-1px);
+  }
+  .session-status-toggle:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+  .session-status-dot {
+    position: absolute;
+    right: 1px;
+    bottom: 2px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--parchment);
+    border-radius: 50%;
+    background: #527a57;
+  }
+  .session-status[data-session-state="paused"] .session-status-dot { background: #a77c2f; }
+  .session-status[data-session-state="ended"] .session-status-dot { background: #875149; }
+  .session-status-panel {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    width: min(390px, calc(100vw - 2rem));
+    padding: 0.85rem;
+    border: 1px solid rgba(139,105,20,0.48);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.32), rgba(139,105,20,0.06)),
+      var(--parchment);
+    box-shadow: 0 16px 38px rgba(45,27,8,0.28);
+  }
+  .session-status-panel[hidden] { display: none; }
+  .session-status-panel::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid rgba(139,105,20,0.48);
+    border-top: 1px solid rgba(139,105,20,0.48);
+    background: var(--parchment);
+    transform: rotate(45deg);
+  }
+  .session-status-panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(139,105,20,0.2);
+  }
+  .session-status-panel-head > div {
+    min-width: 0;
+    display: grid;
+    gap: 0.2rem;
+  }
+  .session-status-panel-head span,
+  .session-status-grid dt {
+    color: var(--gold-dark);
+    font: 700 0.56rem/1.25 'Cinzel', serif;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+  .session-status-panel-head strong {
+    color: var(--ink);
+    font: 700 0.88rem/1.35 'Cinzel', serif;
+  }
+  .session-status-badge {
+    flex: 0 0 auto;
+    padding: 0.26rem 0.42rem;
+    border: 1px solid rgba(82,122,87,0.36);
+    background: rgba(82,122,87,0.1);
+    color: #3f6845 !important;
+  }
+  .session-status[data-session-state="paused"] .session-status-badge { color: #806021 !important; }
+  .session-status[data-session-state="ended"] .session-status-badge { color: #7e4039 !important; }
+  .session-status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0.7rem 0 0;
+  }
+  .session-status-grid > div {
+    min-width: 0;
+    padding: 0.5rem 0.55rem;
+    border-bottom: 1px dashed rgba(139,105,20,0.16);
+  }
+  .session-status-grid > div:nth-child(odd) { padding-left: 0; }
+  .session-status-grid > div.wide { grid-column: 1 / -1; padding-inline: 0; }
+  .session-status-grid dt,
+  .session-status-grid dd { margin: 0; }
+  .session-status-grid dd {
+    margin-top: 0.24rem;
+    color: var(--ink-faded);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
   .session-focus-toggle {
     width: 34px;
     height: 34px;

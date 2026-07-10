@@ -342,7 +342,7 @@
   .archive-dashboard-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1.2rem;
+    gap: 1.8rem;
     align-items: start;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -365,7 +365,7 @@
   }
   .archive-dashboard h2 {
     font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
     line-height: 1.25;
     color: var(--ink);
     letter-spacing: 0.04em;
@@ -374,7 +374,7 @@
   .archive-dashboard h3 {
     margin: 0;
     font-family: 'Cinzel', serif;
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink);
@@ -398,7 +398,7 @@
     background: rgba(255,255,255,0.3);
     color: var(--ink-faded);
     font-family: 'Cinzel', serif;
-    font-size: 0.5rem;
+    font-size: 0.66rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.32rem 0.45rem;
@@ -415,13 +415,16 @@
   }
   .archive-dashboard-section {
     display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
     gap: 0.35rem;
+    align-items: center;
     min-width: 0;
     text-align: left;
     border: 1px solid rgba(139,105,20,0.22);
     background: rgba(255,255,255,0.28);
     color: var(--ink);
-    padding: 0.72rem 0.78rem;
+    min-height: 4.5rem;
+    padding: 0.62rem 0.72rem;
     cursor: pointer;
   }
   .archive-dashboard-section:hover {
@@ -430,7 +433,7 @@
   }
   .archive-dashboard-section-name {
     font-family: 'Cinzel', serif;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--theme-accent);
@@ -447,6 +450,97 @@
     display: grid;
     grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.85fr);
     gap: 0.85rem;
+  }
+  .archive-dashboard-section:focus-visible,
+  .archive-dashboard-primary-action:focus-visible,
+  .archive-dashboard-secondary-action:focus-visible,
+  .archive-dashboard-ai-btn:focus-visible,
+  .archive-dashboard-scene-card:focus-visible,
+  .archive-dashboard-trivia-card button:focus-visible {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 2px;
+  }
+  .archive-dashboard-section-icon,
+  .archive-dashboard-section-mark {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    object-fit: contain;
+  }
+  .archive-dashboard-section-mark {
+    border: 1px solid color-mix(in srgb, var(--theme-accent) 28%, transparent);
+    background: var(--theme-accent-soft);
+    color: var(--theme-accent);
+  }
+  .archive-dashboard-section-copy {
+    min-width: 0;
+    display: grid;
+    gap: 0.28rem;
+  }
+  .archive-dashboard-section-arrow {
+    color: var(--theme-accent);
+    font-size: 1rem;
+    transition: transform 0.18s ease;
+  }
+  .archive-dashboard-section:hover .archive-dashboard-section-arrow {
+    transform: translateX(3px);
+  }
+  .archive-dashboard-panel-full {
+    grid-column: 1 / -1;
+  }
+  .archive-dashboard-panel-paths {
+    background: rgba(255,255,255,0.3);
+    border-color: color-mix(in srgb, var(--theme-accent) 38%, transparent);
+  }
+  .archive-dashboard-hero-copy {
+    max-width: 52rem;
+  }
+  .archive-dashboard-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+  .archive-dashboard-primary-action,
+  .archive-dashboard-secondary-action {
+    min-height: 3.2rem;
+    border: 1px solid color-mix(in srgb, var(--theme-accent) 46%, transparent);
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    text-align: left;
+  }
+  .archive-dashboard-primary-action {
+    display: grid;
+    gap: 0.15rem;
+    min-width: min(15rem, 100%);
+    padding: 0.62rem 0.8rem;
+    background: #2c1a08;
+    color: var(--gold-light);
+  }
+  .archive-dashboard-primary-action span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .archive-dashboard-primary-action small {
+    color: rgba(255,249,239,0.68);
+    font: 0.78rem/1.3 'EB Garamond', serif;
+  }
+  .archive-dashboard-secondary-action {
+    padding: 0.62rem 0.9rem;
+    background: rgba(255,255,255,0.34);
+    color: var(--gold-dark);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .archive-dashboard-primary-action:hover,
+  .archive-dashboard-secondary-action:hover {
+    border-color: var(--theme-accent);
+    transform: translateY(-1px);
   }
   .archive-dashboard-panel {
     min-width: 0;
@@ -635,8 +729,7 @@
     border-color: var(--gold);
   }
   .archive-dashboard-trivia-grid,
-  .archive-dashboard-scene-list,
-  .archive-dashboard-activity {
+  .archive-dashboard-scene-list {
     display: grid;
     gap: 0.65rem;
   }
@@ -648,8 +741,7 @@
     background: rgba(255,255,255,0.24);
     padding: 0.72rem;
   }
-  .archive-dashboard-trivia-avatar,
-  .archive-dashboard-activity-avatar {
+  .archive-dashboard-trivia-avatar {
     width: 2.45rem;
     height: 2.45rem;
     display: grid;
@@ -661,8 +753,7 @@
     font-family: 'Cinzel', serif;
     font-size: 0.72rem;
   }
-  .archive-dashboard-trivia-avatar img,
-  .archive-dashboard-activity-avatar img {
+  .archive-dashboard-trivia-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -671,7 +762,7 @@
   .archive-dashboard-card-kicker {
     color: var(--gold-dark);
     font-family: 'Cinzel', serif;
-    font-size: 0.48rem;
+    font-size: 0.64rem;
     letter-spacing: 0.13em;
     text-transform: uppercase;
   }
@@ -681,13 +772,12 @@
     font-size: 0.9rem;
   }
   .archive-dashboard-trivia-card button,
-  .archive-dashboard-scene-card,
-  .archive-dashboard-activity-item {
+  .archive-dashboard-scene-card {
     border: 0;
     background: transparent;
     color: var(--gold-dark);
     font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
+    font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -696,13 +786,11 @@
     cursor: pointer;
   }
   .archive-dashboard-trivia-card button:hover,
-  .archive-dashboard-scene-card:hover strong,
-  .archive-dashboard-activity-item:hover strong {
+  .archive-dashboard-scene-card:hover strong {
     color: var(--theme-accent);
   }
   .archive-dashboard-trivia-card small,
-  .archive-dashboard-scene-card small,
-  .archive-dashboard-activity-item small {
+  .archive-dashboard-scene-card small {
     display: block;
     margin-top: 0.18rem;
     color: var(--ink-faded);
@@ -710,8 +798,7 @@
     line-height: 1.35;
     overflow-wrap: anywhere;
   }
-  .archive-dashboard-scene-card,
-  .archive-dashboard-activity-item {
+  .archive-dashboard-scene-card {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.6rem;
@@ -748,13 +835,12 @@
     grid-column: 2;
     align-self: start;
   }
-  .archive-dashboard-scene-card strong,
-  .archive-dashboard-activity-item strong {
+  .archive-dashboard-scene-card strong {
     display: block;
     min-width: 0;
     color: var(--ink);
     font-family: 'Cinzel', serif;
-    font-size: 0.64rem;
+    font-size: 0.76rem;
     line-height: 1.25;
     overflow-wrap: anywhere;
   }
@@ -1767,6 +1853,17 @@
       white-space: normal;
     }
 
+    .archive-dashboard-hero-actions,
+    .archive-dashboard-primary-action,
+    .archive-dashboard-secondary-action {
+      width: 100%;
+    }
+
+    .archive-dashboard-primary-action,
+    .archive-dashboard-secondary-action {
+      min-width: 0;
+    }
+
     .module-stamp-overlay {
       align-items: stretch;
       padding: 0;
@@ -1786,8 +1883,7 @@
     }
 
     .archive-dashboard-trivia-card,
-    .archive-dashboard-scene-card,
-    .archive-dashboard-activity-item {
+    .archive-dashboard-scene-card {
       grid-template-columns: auto minmax(0, 1fr);
     }
 

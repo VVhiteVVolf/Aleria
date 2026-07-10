@@ -36,6 +36,7 @@ function renderCommentTurnState(threadId, state) {
       btn.classList.toggle('active', btn.dataset.turnValue === current);
     });
   });
+  if (typeof refreshSessionStatusTurn === 'function') refreshSessionStatusTurn(threadId, state);
   applyCommentToolsVisibility();
 }
 

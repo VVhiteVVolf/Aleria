@@ -410,6 +410,7 @@
           sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
           sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
           scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
+          sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
           orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
           createdAtClient: nowClient,
           activityAtClient: nowClient,

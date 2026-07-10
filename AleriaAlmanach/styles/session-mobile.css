@@ -75,6 +75,31 @@
     font-size: 1.08rem;
   }
 
+  .session-page .session-status-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .session-page .session-status-panel {
+    position: fixed;
+    top: auto;
+    right: 0.7rem;
+    bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    left: 0.7rem;
+    width: auto;
+    max-height: min(70dvh, 520px);
+    overflow-y: auto;
+  }
+
+  .session-page .session-status-panel::before { display: none; }
+
+  .session-page .session-status-grid { grid-template-columns: 1fr; }
+
+  .session-page .session-status-grid > div,
+  .session-page .session-status-grid > div:nth-child(odd) {
+    padding-inline: 0;
+  }
+
   .session-page .comments-scroll {
     padding: 0.72rem 0.72rem 0.28rem;
     gap: 0.7rem;

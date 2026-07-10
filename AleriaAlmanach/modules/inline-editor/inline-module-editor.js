@@ -428,6 +428,26 @@ function buildInlineComplexEditor(entry, page, type) {
           <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionHint" value="${escapeHtml(page.sessionHint || '')}">
         </div>
         <div class="inline-edit-field">
+          <span class="inline-edit-label">Ort</span>
+          <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionLocation" value="${escapeHtml(page.sessionLocation || '')}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Aktuelle Phase</span>
+          <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionPhase" value="${escapeHtml(page.sessionPhase || '')}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Anwesende Figuren</span>
+          <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionParticipants" value="${escapeHtml(normalizeSessionStatusParticipants(page.sessionParticipants).join(', '))}">
+        </div>
+        <div class="inline-edit-field">
+          <span class="inline-edit-label">Szenenstatus</span>
+          <select class="inline-edit-input" data-inline-action="sync-page-field" data-page-field="sessionStatus">
+            <option value="active"${page.sessionStatus !== 'paused' && page.sessionStatus !== 'ended' ? ' selected' : ''}>Aktiv</option>
+            <option value="paused"${page.sessionStatus === 'paused' ? ' selected' : ''}>Pausiert</option>
+            <option value="ended"${page.sessionStatus === 'ended' ? ' selected' : ''}>Beendet</option>
+          </select>
+        </div>
+        <div class="inline-edit-field">
           <span class="inline-edit-label">Leertitel</span>
           <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionEmptyTitle" value="${escapeHtml(page.sessionEmptyTitle || '')}">
         </div>

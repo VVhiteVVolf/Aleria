@@ -160,6 +160,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (typeof isSceneDiceEventComment === 'function' && isSceneDiceEventComment(c)) {
+    return renderSceneDiceEventComment(c, idx);
+  }
   if (typeof isScenePollComment === 'function' && isScenePollComment(c)) {
     return renderScenePollComment(c, idx);
   }
@@ -254,10 +257,6 @@ function renderCommentBubble(c, idx) {
             ${(c.charTitle && !isSecretAction) ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
           <div class="comment-body comment-kind-${commentKind}">
-            <span class="comment-frame-corner comment-frame-corner--tl" aria-hidden="true"></span>
-            <span class="comment-frame-corner comment-frame-corner--tr" aria-hidden="true"></span>
-            <span class="comment-frame-corner comment-frame-corner--bl" aria-hidden="true"></span>
-            <span class="comment-frame-corner comment-frame-corner--br" aria-hidden="true"></span>
             <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
             ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}

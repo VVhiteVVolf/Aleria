@@ -247,6 +247,13 @@ function handleArchiveActionClick(event) {
     }
     return;
   }
+  if (action === 'focus-dashboard-search') {
+    event.preventDefault();
+    const input = document.getElementById('archive-search-input');
+    input?.focus();
+    input?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
   if (action === 'toggle-section-expanded') {
     event.preventDefault();
     toggleArchiveSectionExpanded(trigger.dataset.sectionKey || '');
@@ -708,9 +715,6 @@ function renderAll() {
   dashboard.dataset.archiveDashboard = 'true';
   dashboard.innerHTML = renderArchiveDashboard(sections);
   main.appendChild(dashboard);
-  window.setTimeout(() => {
-    if (typeof hydrateArchiveDashboardActivity === 'function') hydrateArchiveDashboardActivity();
-  }, 0);
 
   const searchInput = toolbar.querySelector('#archive-search-input');
   const clearBtn = toolbar.querySelector('#archive-search-clear');
