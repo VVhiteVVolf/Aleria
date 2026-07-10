@@ -43,7 +43,7 @@ function setSessionStatusText(panel, selector, value) {
 }
 
 function isSessionStatusSystemComment(comment = {}) {
-  return !!(comment.sceneTimeEvent || comment.sceneTransition || comment.scenePoll || comment.sceneDiceRoll || comment.commentMode === 'scene-time' || comment.commentMode === 'scene-dice');
+  return !!(comment.sceneTimeEvent || comment.sceneTransition || comment.scenePoll || comment.sceneDiceRoll || comment.sceneInventoryTransfer || comment.commentMode === 'scene-time' || comment.commentMode === 'scene-dice' || comment.commentMode === 'scene-inventory-transfer');
 }
 
 function refreshSessionStatusFromComments(threadId, comments = []) {

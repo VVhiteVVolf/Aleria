@@ -23,10 +23,10 @@ function collectAttachmentFormPayload() {
 function updateAttachmentPreview() {
   const preview = document.getElementById('af-preview');
   if (!preview) return;
-  const title = String(document.getElementById('af-title')?.value || '').trim() || 'Unbenannter Anhang';
-  const url = String(document.getElementById('af-url')?.value || '').trim() || './DokumentenWerkstatt.html';
-  const text = String(document.getElementById('af-preview-text')?.value || '').trim() || 'Dokument aus der Werkstatt öffnen.';
-  const narratorText = String(document.getElementById('af-text')?.value || '').trim() || 'Der Erzähler legt einen Anhang vor.';
+  const title = String(document.getElementById('af-title')?.value || '').trim() || 'Unbenannte Illustration';
+  const url = String(document.getElementById('af-url')?.value || '').trim();
+  const text = String(document.getElementById('af-preview-text')?.value || '').trim() || 'Eine Illustration aus den Aufzeichnungen.';
+  const narratorText = String(document.getElementById('af-text')?.value || '').trim() || 'Der Erzähler breitet eine Illustration auf dem Tisch aus.';
   preview.innerHTML = `
     <div class="comment-live-preview-head">
       <div class="comment-live-preview-kicker">Vorschau in der Szene</div>
@@ -55,7 +55,7 @@ function resetAttachmentForm() {
   const submit = document.getElementById('af-submit');
   if (submit) {
     submit.disabled = false;
-    submit.textContent = 'Anhang einfügen';
+    submit.textContent = 'Bildanhang einfügen';
   }
   updateAttachmentPreview();
 }
@@ -71,7 +71,7 @@ function openAttachmentFormAfter(commentId) {
   openAttachmentForm();
   _attachmentInsertAfterId = String(commentId || '');
   const note = document.getElementById('af-note');
-  if (note) note.textContent = 'Anhang wird an der gewählten Stelle eingefügt.';
+  if (note) note.textContent = 'Bildanhang wird an der gewählten Stelle eingefügt.';
 }
 
 function closeAttachmentForm() {
@@ -88,7 +88,7 @@ async function submitAttachmentItem() {
   const narratorText = String(document.getElementById('af-text')?.value || '').trim();
 
   if (!attachment) {
-    errEl.textContent = 'Bitte Titel und gültigen Dokument-Link eintragen.';
+    errEl.textContent = 'Bitte Titel und einen gültigen Imgur-Bildlink eintragen.';
     errEl.style.display = 'block';
     return;
   }
@@ -99,7 +99,7 @@ async function submitAttachmentItem() {
     return;
   }
   if (!threadId) {
-    errEl.textContent = 'Der Anhang konnte keiner Szene zugeordnet werden.';
+    errEl.textContent = 'Der Bildanhang konnte keiner Szene zugeordnet werden.';
     errEl.style.display = 'block';
     return;
   }
@@ -140,12 +140,12 @@ async function submitAttachmentItem() {
         console.warn('local attachment fallback save failed:', localError);
       }
     }
-    const message = getFriendlyErrorMessage(error, 'Anhang konnte nicht gespeichert werden.');
+    const message = getFriendlyErrorMessage(error, 'Bildanhang konnte nicht gespeichert werden.');
     errEl.textContent = message;
     errEl.style.display = 'block';
     if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
     btn.disabled = false;
-    btn.textContent = 'Anhang einfügen';
+    btn.textContent = 'Bildanhang einfügen';
   }
 }
 
@@ -153,7 +153,7 @@ function openEditAttachmentForm(commentId) {
   const comment = findCachedCommentById(commentId);
   const attachment = getCommentAttachmentItem(comment);
   if (!comment || !attachment) {
-    alert('Anhang konnte nicht geladen werden.');
+    alert('Bildanhang konnte nicht geladen werden.');
     return;
   }
 
@@ -190,7 +190,7 @@ async function submitEditAttachment() {
   const narratorText = String(document.getElementById('af-text')?.value || '').trim();
 
   if (!attachment) {
-    errEl.textContent = 'Bitte Titel und gültigen Dokument-Link eintragen.';
+    errEl.textContent = 'Bitte Titel und einen gültigen Imgur-Bildlink eintragen.';
     errEl.style.display = 'block';
     return;
   }
@@ -201,7 +201,7 @@ async function submitEditAttachment() {
     return;
   }
   if (!threadId) {
-    errEl.textContent = 'Der Anhang konnte keiner Szene zugeordnet werden.';
+    errEl.textContent = 'Der Bildanhang konnte keiner Szene zugeordnet werden.';
     errEl.style.display = 'block';
     return;
   }

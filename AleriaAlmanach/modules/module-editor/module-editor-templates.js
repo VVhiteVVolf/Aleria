@@ -1608,7 +1608,7 @@ function createObjectProfileTemplatePages() {
       imageWidth: 30,
       imageSquare: true,
       biographyPage: true,
-      description: 'Biographischer Einstieg: Herkunft, Prägung, Rang und die Frage, warum diese Person im Almanach geführt wird.',
+      description: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
       stats: [
         ['Vollständiger Name', 'Noch festlegen'],
         ['Titel', 'Noch festlegen'],
@@ -1648,7 +1648,6 @@ function createObjectProfileTemplatePages() {
         documents: ['Archivnotiz oder Dokument'],
         footer: 'Disziplin ist unser Schild. Wissen ist unsere Waffe.'
       },
-      commentDivider: true,
       commentSequence: [],
       quote: '„Ein Leitsatz oder persönliches Zitat.“',
       quoteBy: '— Name'
@@ -1670,7 +1669,7 @@ function createDefaultHousePage(index = 0) {
     imageWidth: 30,
     imageSquare: true,
     housePage: true,
-    description: 'Kurzer Einstieg: Ursprung des Hauses, aktuelle Bedeutung und warum es im Almanach gefuehrt wird.',
+    description: 'Beschreibe Ursprung, Werte und die gesellschaftliche Stellung dieses Hauses.',
     stats: [
       ['Vollständiger Name', 'Haus Noch festlegen'],
       ['Sitz', 'Noch festlegen'],
@@ -1712,7 +1711,6 @@ function createDefaultHousePage(index = 0) {
       documents: ['Gründungsurkunde oder Wappenbrief'],
       footer: 'Blut, Ehre und das Wort des Hauses.'
     },
-    commentDivider: true,
     commentSequence: [],
     quote: '„Ein Leitsatz oder Hauswort dieses Hauses.“',
     quoteBy: '— Hauschronik'

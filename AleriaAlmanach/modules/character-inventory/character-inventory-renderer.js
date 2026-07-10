@@ -186,11 +186,15 @@ function buildCharacterInventoryCategoryIcon(category = {}) {
 }
 
 function buildCharacterInventoryCategories(data, activeCategory = '') {
+  const counts = {};
+  (data.items || []).forEach(item => {
+    counts[item.category] = (counts[item.category] || 0) + 1;
+  });
   return `
     <div class="ci-tabs" role="tablist">
       ${data.categories.map(category => `
         <button type="button" class="${category.id === activeCategory ? 'active' : ''}" data-ci-action="filter-items" data-ci-category="${escapeHtml(category.id)}" aria-selected="${category.id === activeCategory ? 'true' : 'false'}">
-          ${buildCharacterInventoryCategoryIcon(category)}${escapeHtml(category.label)}
+          ${buildCharacterInventoryCategoryIcon(category)}${escapeHtml(category.label)}<em class="ci-tab-count">${counts[category.id] || 0}</em>
         </button>`).join('')}
     </div>`;
 }
@@ -210,7 +214,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
       </div>
       <div class="ci-money-summary">
         ${CHARACTER_INVENTORY_CURRENCIES.map(currency => `
-          <div class="ci-money-summary-item">
+          <div class="ci-money-summary-item ci-coin-${escapeHtml(currency.id)}">
             <img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">
             <span>${escapeHtml(currency.label)}</span>
             <strong>${escapeHtml(String(money[currency.id] || 0))}</strong>
@@ -230,7 +234,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
       </div>
       <div class="ci-money-grid">
         ${CHARACTER_INVENTORY_CURRENCIES.map(currency => `
-          <label class="ci-money-control">
+          <label class="ci-money-control ci-coin-${escapeHtml(currency.id)}">
             <img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">
             <span>${escapeHtml(currency.label)}</span>
             <input type="number" min="0" step="1" inputmode="numeric" data-ci-money-field="${escapeHtml(currency.id)}" value="${escapeHtml(String(money[currency.id] || 0))}">
@@ -324,6 +328,7 @@ function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
               <span>${escapeHtml(item.quantity)}</span>
             </button>`).join('')}
         </div>
+        <div class="ci-item-empty" data-ci-empty${data.items.some(item => item.category === activeCategory) ? ' hidden' : ''}>Keine Gegenstände in dieser Kategorie.</div>
       </div>
       ${buildCharacterInventoryMoneyPanel(data, { readOnly })}
       ${readOnly ? '' : buildCharacterInventoryEquipmentQuiz(data)}
@@ -1008,9 +1013,13 @@ document.addEventListener('click', async event => {
       button.classList.toggle('active', active);
       button.setAttribute('aria-selected', active ? 'true' : 'false');
     });
+    let anyVisible = false;
     page.querySelectorAll('.ci-item-row').forEach(row => {
       row.hidden = row.dataset.ciCategory !== category;
+      if (!row.hidden) anyVisible = true;
     });
+    const emptyNote = page.querySelector('[data-ci-empty]');
+    if (emptyNote) emptyNote.hidden = anyVisible;
     return;
   }
   if (action === 'show-item' || action === 'show-companion') {

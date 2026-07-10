@@ -1530,13 +1530,55 @@
   .module-section-manager-section-row {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.6rem;
     padding: 0.45rem;
     padding-left: calc(0.45rem + var(--section-indent, 0rem));
     color: inherit;
     text-align: left;
+  }
+  .module-section-manager-tree-actions {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .module-section-manager-tree-actions button {
+    min-height: 1.7rem;
+    border: 1px solid rgba(139,105,20,0.26);
+    background: rgba(255,255,255,0.24);
+    color: var(--gold-dark);
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+  }
+  .module-section-manager-tree-actions button:hover {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.4);
+  }
+  .module-section-manager-collapse-btn,
+  .module-section-manager-collapse-spacer {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .module-section-manager-collapse-btn {
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(139,105,20,0.26);
+    background: rgba(255,255,255,0.28);
+    color: var(--gold-dark);
+    font-size: 0.62rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+  }
+  .module-section-manager-collapse-btn:hover {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.44);
   }
   .module-section-manager-section-row.is-selected {
     border-color: rgba(139,105,20,0.58);
@@ -1653,10 +1695,87 @@
   }
   .module-section-manager-module-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) minmax(220px, 0.75fr) auto;
     gap: 0.65rem;
     align-items: center;
     padding: 0.55rem;
+  }
+  .module-section-manager-module-select {
+    display: grid;
+    place-items: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    cursor: pointer;
+  }
+  .module-section-manager-module-select input {
+    width: auto;
+    min-height: 0;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+  .module-section-manager-bulk-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .module-section-manager-select-all {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--ink-faded);
+    font-size: 0.72rem;
+    cursor: pointer;
+  }
+  .module-section-manager-select-all input {
+    width: auto;
+    min-height: 0;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+  .module-section-manager-bulk-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    border: 1px solid rgba(139,105,20,0.3);
+    background: rgba(255,255,255,0.3);
+    padding: 0.35rem 0.5rem;
+  }
+  .module-section-manager-bulk-bar[hidden] {
+    display: none;
+  }
+  .module-section-manager-bulk-bar span {
+    color: var(--ink);
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  .module-section-manager-bulk-bar select {
+    min-height: 1.8rem;
+    border: 1px solid rgba(139,105,20,0.3);
+    background: rgba(255,255,255,0.4);
+    color: var(--ink);
+    font: inherit;
+    padding: 0.25rem 0.4rem;
+  }
+  .module-section-manager-bulk-bar button {
+    min-height: 1.8rem;
+    border: 1px solid rgba(139,105,20,0.3);
+    background: rgba(255,255,255,0.28);
+    color: var(--gold-dark);
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+  }
+  .module-section-manager-bulk-bar button.danger {
+    color: var(--red-wax);
+    border-color: rgba(132,32,32,0.36);
   }
   .module-section-manager-delete-btn {
     min-height: 2rem;
@@ -1953,12 +2072,35 @@
     }
 
     .module-section-manager-section-row {
-      grid-template-columns: 1fr;
+      grid-template-columns: auto 1fr;
       padding-left: 0.55rem;
     }
 
     .module-section-manager-section-main {
       grid-template-columns: 1fr;
+      grid-column: 2;
+    }
+
+    .module-section-manager-row-actions {
+      grid-column: 1 / -1;
+    }
+
+    .module-section-manager-module-row {
+      grid-template-columns: auto 1fr;
+    }
+
+    .module-section-manager-module-main {
+      grid-column: 2;
+    }
+
+    .module-section-manager-module-row select,
+    .module-section-manager-module-row .module-section-manager-delete-btn {
+      grid-column: 1 / -1;
+    }
+
+    .module-section-manager-bulk-row {
+      flex-direction: column;
+      align-items: stretch;
     }
 
     .module-section-icon-picker-row {

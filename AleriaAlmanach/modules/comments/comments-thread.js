@@ -237,7 +237,8 @@ function renderCommentsToScroll(scroll, comments) {
     const units = visibleComments.map((c, i) => {
       const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;
       const key = String(c?.id ?? `idx-${absoluteIndex}`);
-      const html = `${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
+      const unreadDivider = typeof renderSceneUnreadDivider === 'function' ? renderSceneUnreadDivider(threadId, c, sortedComments) : '';
+      const html = `${unreadDivider}${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
       return { key, html };
     });
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);
@@ -248,6 +249,9 @@ function renderCommentsToScroll(scroll, comments) {
   }
   applyCommentToolsVisibility();
   observeCommentEntriesForAnimation(scroll);
+  if (typeof scheduleSceneReadStateUpdate === 'function' && pageInfo.currentPage === pageInfo.pageCount) {
+    scheduleSceneReadStateUpdate(threadId, sortedComments);
+  }
 }
 
 // Keyed reconciliation: only comments whose rendered HTML actually changed get their

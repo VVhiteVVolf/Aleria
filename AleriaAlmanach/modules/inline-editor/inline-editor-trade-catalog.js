@@ -185,6 +185,10 @@ function buildInlineTradeCatalogEditor(page) {
         ${buildInlineTradeTextarea('Preisnotiz-Text', 'noteText', data.noteText)}
         ${buildInlineTradeListSection('categories', 'Kategorien / Reiter', buildTradeCatalogCategoryRows(data.categories, 'inline'), 'Kategorie')}
         ${buildInlineTradeListSection('items', 'Handelsgueter / Tiere', buildTradeCatalogItemRows(data.items, 'inline'), 'Eintrag')}
+        ${buildInlineTradeListSection('footerCards', 'Fusskarten / Hinweise', buildTradeCatalogFooterCardRows(data.footerCards, 'inline'), 'Hinweis')}
+        ${buildInlineTradeField('Berater-Titel', 'advisorTitle', data.advisorTitle)}
+        ${buildInlineTradeField('Berater-Bild', 'advisorImage', data.advisorImage, 'url')}
+        ${buildInlineTradeTextarea('Berater-Text', 'advisorText', data.advisorText)}
       </div>
     </div>`;
 }

@@ -212,6 +212,9 @@ function buildModulePageEditorMarkup(page, index) {
               ${commentSequence.map((block, blockIndex) => buildModuleCommentBlockMarkup(block, blockIndex)).join('')}
             </div>
           </div>
+          <div class="module-editor-inline">
+            <label class="module-editor-check"><input type="checkbox" class="me-page-comment-divider"${page?.commentDivider ? ' checked' : ''}> Trennlinie über dem Kommentarbereich</label>
+          </div>
           <div class="module-editor-field wide">
             <label>Zitat</label>
             ${buildTextFormatToolbar()}
@@ -382,6 +385,7 @@ function collectModulePageFromCard(card) {
       page.commentText = getTrimmedFormValue(card, '.me-page-commentator-text');
     }
     page.commentSequence = collectModuleCommentBlocksFromCard(card);
+    if (card.querySelector('.me-page-comment-divider')?.checked) page.commentDivider = true;
     page.quote = getTrimmedFormValue(card, '.me-page-quote');
     page.quoteBy = getTrimmedFormValue(card, '.me-page-quote-by');
   }

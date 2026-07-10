@@ -14,6 +14,23 @@ function normalizeAttachmentUrlForStorage(value) {
   return getSafeAttachmentHref(raw) ? raw : null;
 }
 
+function getCommentAttachmentImageUrl(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  let candidate = raw;
+  try {
+    const parsed = new URL(raw, window.location.href);
+    const host = parsed.hostname.toLowerCase();
+    const match = parsed.pathname.match(/^\/([a-z0-9]+)(\.(?:png|jpe?g|gif|webp))?\/?$/i);
+    if ((host === 'imgur.com' || host === 'www.imgur.com') && match) {
+      candidate = `https://i.imgur.com/${match[1]}${match[2] || '.jpg'}`;
+    }
+  } catch {
+    // Relative image paths remain supported for older scene attachments.
+  }
+  return typeof sanitizeImageSrc === 'function' ? sanitizeImageSrc(candidate) : '';
+}
+
 function normalizeCommentAttachmentItem(item) {
   if (!item || typeof item !== 'object') return null;
   const url = String(item.url || item.href || item.documentUrl || '').trim();
@@ -32,20 +49,24 @@ function getCommentAttachmentItem(comment) {
 
 function renderCommentAttachmentCard(item) {
   const safeHref = getSafeAttachmentHref(item.url);
-  const tag = safeHref ? 'a' : 'div';
-  const attrs = safeHref
-    ? ` href="${safeHref}" target="_blank" rel="noopener noreferrer"`
-    : '';
   const previewText = item.text
     ? parseCommentMarkup(item.text)
-    : '<em>Dokument aus der Werkstatt öffnen.</em>';
+    : '<em>Eine Illustration aus den Aufzeichnungen.</em>';
+  const image = getCommentAttachmentImageUrl(item.url);
   return `
-    <${tag} class="comment-attachment-card"${attrs}>
-      <span class="comment-attachment-kicker">Anhang</span>
-      <span class="comment-attachment-title">${escapeHtml(item.title)}</span>
-      <span class="comment-attachment-preview">${previewText}</span>
-      <span class="comment-attachment-url">${escapeHtml(item.url)}</span>
-    </${tag}>`;
+    <article class="comment-attachment-card${image ? '' : ' is-unavailable'}">
+      <button class="comment-attachment-image-stage" type="button" data-attachment-viewer-action="open" data-attachment-src="${escapeHtml(item.url)}" data-attachment-title="${escapeHtml(item.title)}" aria-label="${escapeHtml(item.title)} vergrößern"${image ? '' : ' disabled'}>
+        ${image ? `<img src="${image}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async">` : ''}
+        <span class="comment-attachment-image-fallback" aria-hidden="true"><b>Bild nicht verfügbar</b><small>Originalquelle öffnen</small></span>
+        <span class="comment-attachment-corner" aria-hidden="true"></span>
+      </button>
+      <div class="comment-attachment-caption">
+        <span class="comment-attachment-kicker">Bildanhang · Archivillustration</span>
+        <strong class="comment-attachment-title">${escapeHtml(item.title)}</strong>
+        <span class="comment-attachment-preview">${previewText}</span>
+        ${safeHref ? `<a class="comment-attachment-original" href="${safeHref}" target="_blank" rel="noopener noreferrer">Original ansehen <span aria-hidden="true">→</span></a>` : ''}
+      </div>
+    </article>`;
 }
 
 function renderCommentAttachment(comment, idx, item) {
@@ -62,10 +83,9 @@ function renderCommentAttachment(comment, idx, item) {
   return `
     ${divider}
     <div class="comment-narrator comment-attachment-entry" data-comment-id="${safeCommentId}">
-      <div class="comment-kind-badge">Erzähler · Anhang</div>
+      <div class="comment-kind-badge">Erzähler · Bildanhang</div>
       ${comment.text ? `<div class="comment-attachment-narration">${parseCommentMarkup(comment.text)}</div>` : ''}
       ${renderCommentAttachmentCard(item)}
       ${actions}
     </div>`;
 }
-

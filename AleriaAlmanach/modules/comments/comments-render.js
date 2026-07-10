@@ -160,6 +160,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (typeof isSceneInventoryTransferComment === 'function' && isSceneInventoryTransferComment(c)) {
+    return renderSceneInventoryTransferComment(c, idx);
+  }
   if (typeof isSceneDiceEventComment === 'function' && isSceneDiceEventComment(c)) {
     return renderSceneDiceEventComment(c, idx);
   }

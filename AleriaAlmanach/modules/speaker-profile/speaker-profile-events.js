@@ -64,7 +64,7 @@ document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-action="open-speaker-profile"]');
   if (!trigger) return;
   event.preventDefault();
-  openSpeakerProfileFromTrigger(trigger).catch(error => {
+  Promise.resolve(openSpeakerProfileChoice(trigger)).catch(error => {
     console.warn('speaker profile open failed:', error);
     showSpeakerProfileOverlay(`
       <div class="speaker-profile-empty">

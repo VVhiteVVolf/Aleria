@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260710-bubble-redesign-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260710-module-reveal-v1">
 <link rel="stylesheet" href="./styles/scene-dice.css?v=20260710-scene-dice-v1">
+<link rel="stylesheet" href="./styles/scene-inventory.css?v=20260710-scene-inventory-v2">
+<link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
@@ -166,6 +168,10 @@
   <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-comment-picker.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/characters/character-profile-events.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
+  <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
+  <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
+  <script src="./modules/scene-inventory/scene-inventory-renderer.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-dice/scene-dice-state.js?v=20260710-scene-dice-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-ui.js?v=20260710-scene-dice-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260710-scene-dice-v1" defer></script>
@@ -177,7 +183,8 @@
   <script src="./modules/scene-polls/scene-polls-ui.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/comments/comments-render.js?v=20260710-bubble-redesign-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-attachment-render.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
+  <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert-render.js?v=20260710-module-reveal-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
@@ -196,6 +203,7 @@
   <script src="./modules/comments/comments-thread.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260616-scene-timeline-pages-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-events.js?v=20260710-scene-dice-v1" defer></script>
+  <script src="./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-polls/scene-polls-events.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/comments/comments-jump.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -204,7 +212,7 @@
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-attachments.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-segments.js?v=20260604-scene-comments-v1" defer></script>
@@ -222,7 +230,8 @@
   <script src="./modules/speaker-profile/speaker-profile-stats.js?v=20260605-ai-context-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-render.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-ai.js?v=20260606-ai-context-controls-v1" defer></script>
-  <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260606-ai-context-controls-v1" defer></script>
+  <script src="./modules/speaker-profile/speaker-profile-choice.js?v=20260710-speaker-choice-v1" defer></script>
+  <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1" defer></script>
   <script src="./modules/modal/modal-layout.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/modal/modal-controller.js?v=20260616-inline-scroll-restore-v1" defer></script>
@@ -670,24 +679,24 @@
 <!-- ATTACHMENT FORM OVERLAY -->
 <div id="attachment-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="attachment-form-title" tabindex="-1">
   <div class="comment-form-card attachment-form-card">
-    <div class="comment-form-title" id="attachment-form-title">✦ &nbsp; Anhang präsentieren &nbsp; ✦</div>
+    <div class="comment-form-title" id="attachment-form-title">✦ &nbsp; Bildanhang präsentieren &nbsp; ✦</div>
     <div class="attachment-form-grid">
       <div class="attachment-form-fields">
         <div>
-          <label>Linktitel *</label>
-          <input type="text" id="af-title" maxlength="90" placeholder="z.B. Der versiegelte Befehl" data-action="update-attachment-preview">
+          <label>Bildtitel *</label>
+          <input type="text" id="af-title" maxlength="90" placeholder="z.B. Die Karte von Llysfaen" data-action="update-attachment-preview">
         </div>
         <div>
-          <label>Dokument-Link *</label>
-          <input type="text" id="af-url" placeholder="./DokumentenWerkstatt.html oder https://..." data-action="update-attachment-preview">
+          <label>Imgur-Bildlink *</label>
+          <input type="url" id="af-url" placeholder="https://i.imgur.com/…" data-action="update-attachment-preview">
         </div>
         <div>
           <label>Erzählertext</label>
-          <textarea id="af-text" rows="3" maxlength="1200" placeholder="Der Erzähler legt ein Dokument vor." data-action="update-attachment-preview"></textarea>
+          <textarea id="af-text" rows="3" maxlength="1200" placeholder="Der Erzähler breitet eine Illustration auf dem Tisch aus." data-action="update-attachment-preview"></textarea>
         </div>
         <div>
-          <label>Seitenvorschau</label>
-          <textarea id="af-preview-text" rows="3" maxlength="1200" placeholder="Kurze Vorschau auf das Dokument." data-action="update-attachment-preview"></textarea>
+          <label>Bildunterschrift</label>
+          <textarea id="af-preview-text" rows="3" maxlength="1200" placeholder="Kurze Beschreibung oder Herkunft der Illustration." data-action="update-attachment-preview"></textarea>
         </div>
       </div>
       <div class="attachment-form-preview-col">
@@ -698,7 +707,7 @@
     <div id="af-error" class="comment-form-error" style="display:none"></div>
     <div class="comment-form-actions">
       <button class="comment-btn-cancel" type="button" data-action="close-attachment-form">Abbrechen</button>
-      <button class="comment-btn-submit" id="af-submit" type="button" data-action="submit-attachment">Anhang einfügen</button>
+      <button class="comment-btn-submit" id="af-submit" type="button" data-action="submit-attachment">Bildanhang einfügen</button>
     </div>
   </div>
 </div>

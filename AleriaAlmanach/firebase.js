@@ -608,6 +608,47 @@
         if (!safeId) throw new Error('Kommentar ohne ID kann nicht importiert werden.');
         await setDoc(doc(db, 'comments', safeId), normalizeCommentModuleInsertForFirestore(data), { merge: true });
       },
+      async transferCharacterInventories(giverId, giverInventory, receiverId, receiverInventory, threadId, sceneEvent, deleteCode) {
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const nowClient = Date.now();
+        const batch = writeBatch(db);
+        batch.set(doc(db, 'characters', giverId), { inventory: giverInventory, updatedAt: new Date().toISOString() }, { merge: true });
+        batch.set(doc(db, 'characters', receiverId), { inventory: receiverInventory, updatedAt: new Date().toISOString() }, { merge: true });
+        const commentRef = doc(collection(db, 'comments'));
+        batch.set(commentRef, {
+          entryId: threadId,
+          charName: 'Erzähler',
+          charTitle: '',
+          portrait: null,
+          text: sceneEvent.text,
+          deleteCodeHash,
+          deleteCodeVersion: 1,
+          narrator: true,
+          characterId: '',
+          emoteIndex: null,
+          avatarKind: '',
+          commentMode: 'scene-inventory-transfer',
+          commentKind: 'scene-inventory-transfer-event',
+          commentSegments: null,
+          itemShowcase: null,
+          moduleInsert: null,
+          moduleInsertJson: '',
+          documentAttachment: null,
+          sceneTimeEvent: null,
+          sceneTransition: null,
+          scenePoll: null,
+          sceneDiceRoll: null,
+          sceneInventoryTransfer: sceneEvent.transfer,
+          orderKey: sceneEvent.orderKey,
+          createdAtClient: nowClient,
+          activityAtClient: nowClient,
+          activityAt: serverTimestamp(),
+          schemaVersion: 2,
+          ts: serverTimestamp()
+        });
+        await batch.commit();
+        return commentRef.id;
+      },
       async saveBackupCommentTurn(id, data) {
         const safeId = String(id || data?.threadId || '').trim();
         if (!safeId) throw new Error('Redestab-Datensatz ohne ID kann nicht importiert werden.');

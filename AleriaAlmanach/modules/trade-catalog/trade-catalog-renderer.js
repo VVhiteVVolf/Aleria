@@ -185,11 +185,21 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
         ${buildTradeDescriptionLower(item)}
       </section>
       <aside class="trade-catalog-meta">
+        ${item.origin ? `
+        <section class="trade-catalog-meta-block trade-catalog-origin">
+          <h4>${escapeHtml(item.originTitle)}</h4>
+          <p>${sanitizeContentHtml(item.origin)}</p>
+        </section>` : ''}
         <section class="trade-catalog-meta-block">
           <h4>${escapeHtml(item.usageTitle)}</h4>
           ${buildTradeTagList(item.usageTags, 'trade-catalog-use-tags')}
         </section>
         ${buildTradePrice(item)}
+        ${item.conditions ? `
+        <section class="trade-catalog-meta-block trade-catalog-conditions">
+          <h4>${escapeHtml(item.conditionsTitle)}</h4>
+          <p>${sanitizeContentHtml(item.conditions)}</p>
+        </section>` : ''}
         ${buildTradeAttributeChart(item)}
       </aside>
     </article>`;

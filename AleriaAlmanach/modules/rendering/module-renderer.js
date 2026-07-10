@@ -974,6 +974,16 @@ function buildCasteTextList(items) {
   }).join('')}</ul>`;
 }
 
+function buildCasteTitledTextList(items) {
+  const list = sanitizeCasteCards(items || []);
+  if (!list.length) return '';
+  return `<ul class="caste-text-list">${list.map(item => {
+    const icon = sanitizeImageSrc(item.icon || '');
+    const title = item.title ? `<strong>${escapeHtml(item.title)}.</strong> ` : '';
+    return `<li>${icon ? `<img src="${icon}" alt="" loading="lazy" decoding="async">` : '<span aria-hidden="true">-</span>'}<p>${title}${sanitizeContentHtml(item.text)}</p></li>`;
+  }).join('')}</ul>`;
+}
+
 function buildCasteOrganizationRows(rows) {
   const list = sanitizeCasteOrganizationRows(rows || []);
   if (!list.length) return '';
@@ -1060,7 +1070,7 @@ function buildCastePage(page, entry, pageIndex, total) {
           ${introText ? `<section class="caste-intro">${sanitizeContentHtml(introText)}</section>` : ''}
           ${buildCastePanel(data.rolesTitle, buildCasteRoleCards(data.roles), 'caste-roles-panel')}
           <div class="caste-panel-grid">
-            ${buildCastePanel(data.skillsTitle, buildCasteTextList(data.skills), 'caste-list-panel')}
+            ${buildCastePanel(data.skillsTitle, buildCasteTitledTextList(data.skills), 'caste-list-panel')}
             ${buildCastePanel(data.privilegesTitle, buildCasteTextList(data.privileges), 'caste-list-panel')}
             ${buildCastePanel(data.restrictionsTitle, buildCasteTextList(data.restrictions), 'caste-list-panel')}
             ${buildCastePanel(data.organizationTitle, buildCasteOrganizationRows(data.organizationRows), 'caste-organization-panel')}

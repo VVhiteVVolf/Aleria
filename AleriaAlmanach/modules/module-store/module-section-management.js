@@ -1,6 +1,8 @@
 let _moduleSectionEditorSignature = '';
 let _moduleSectionEditorMode = 'edit';
 let _moduleSectionCreateMode = 'child';
+let _collapsedModuleSectionNodeIds = new Set();
+let _selectedModuleSectionManagerIds = new Set();
 
 function getUniqueModuleSections() {
   const seen = new Set();
@@ -237,7 +239,12 @@ function ensureModuleSectionManagerDialog() {
         <section class="module-section-manager-panel">
           <div class="module-section-manager-panel-head">
             <h3>Bestehende Bereiche</h3>
+            <input id="msm-section-filter" type="search" placeholder="Reiter filtern" data-section-manager-field="section-filter">
             <span id="msm-section-count"></span>
+          </div>
+          <div class="module-section-manager-tree-actions">
+            <button type="button" data-section-manager-action="expand-all-sections">Alle ausklappen</button>
+            <button type="button" data-section-manager-action="collapse-all-sections">Alle einklappen</button>
           </div>
           <div id="msm-section-list" class="module-section-manager-section-list"></div>
         </section>
@@ -312,6 +319,19 @@ function ensureModuleSectionManagerDialog() {
           <div class="module-section-manager-panel-head">
             <h3>Module verschieben</h3>
             <input id="msm-module-filter" type="search" placeholder="Module filtern" data-section-manager-field="filter">
+          </div>
+          <div class="module-section-manager-bulk-row">
+            <label class="module-section-manager-select-all">
+              <input type="checkbox" id="msm-module-select-all">
+              <span>Sichtbare auswählen</span>
+            </label>
+            <div id="msm-module-bulk-bar" class="module-section-manager-bulk-bar" hidden>
+              <span id="msm-module-bulk-count"></span>
+              <select id="msm-module-bulk-target" aria-label="Zielbereich für Auswahl"></select>
+              <button type="button" data-section-manager-action="bulk-move-modules">Verschieben</button>
+              <button type="button" class="danger" data-section-manager-action="bulk-delete-modules">Löschen</button>
+              <button type="button" data-section-manager-action="clear-module-selection">Auswahl aufheben</button>
+            </div>
           </div>
           <div id="msm-module-list" class="module-section-manager-module-list"></div>
         </section>
@@ -472,12 +492,51 @@ function renderModuleSectionManagerTabs(sections) {
   datalist.innerHTML = tabs.map(tab => `<option value="${escapeHtml(tab)}"></option>`).join('');
 }
 
+function getModuleSectionParentNodeIds(sections = []) {
+  const parentIds = new Set();
+  sections.forEach(section => {
+    if (!section.nodeId) return;
+    const node = findModuleSectionNodeById(section.nodeId);
+    if (node?.parentId) parentIds.add(node.parentId);
+  });
+  return parentIds;
+}
+
+function isModuleSectionNodeCollapsed(nodeId) {
+  return _collapsedModuleSectionNodeIds.has(String(nodeId || '').trim());
+}
+
+function toggleModuleSectionNodeCollapsed(nodeId) {
+  const id = String(nodeId || '').trim();
+  if (!id) return;
+  if (_collapsedModuleSectionNodeIds.has(id)) _collapsedModuleSectionNodeIds.delete(id);
+  else _collapsedModuleSectionNodeIds.add(id);
+  renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
+}
+
+function setAllModuleSectionsCollapsed(collapsed) {
+  const sections = sortModuleSectionsByHierarchy(getUniqueModuleSections());
+  _collapsedModuleSectionNodeIds = collapsed ? new Set(getModuleSectionParentNodeIds(sections)) : new Set();
+  renderModuleSectionManagerSections(sections);
+}
+
 function renderModuleSectionManagerSections(sections) {
   const list = document.getElementById('msm-section-list');
   const count = document.getElementById('msm-section-count');
   if (!list) return;
-  if (count) count.textContent = `${sections.length} Bereiche`;
-  list.innerHTML = sections.map(section => {
+  const filterValue = document.getElementById('msm-section-filter')?.value || '';
+  const needle = normalizeSearchText(filterValue);
+  const parentNodeIds = getModuleSectionParentNodeIds(sections);
+  const visible = sections.filter(section => {
+    if (needle) {
+      const haystack = normalizeSearchText([getSectionLeafLabel(section), getSectionOptionLabel(section)].filter(Boolean).join(' '));
+      return haystack.includes(needle);
+    }
+    const ancestorIds = section.nodeId ? getModuleNodeAncestors(section.nodeId).map(ancestor => ancestor.id) : [];
+    return !ancestorIds.some(id => _collapsedModuleSectionNodeIds.has(id));
+  });
+  if (count) count.textContent = needle ? `${visible.length} von ${sections.length} Bereichen` : `${sections.length} Bereiche`;
+  list.innerHTML = visible.map(section => {
     const signature = makeSectionSignature(section);
     const entryCount = findSectionBySignature(signature)?.entries?.length || 0;
     const path = getSectionPathLabel(section);
@@ -486,8 +545,14 @@ function renderModuleSectionManagerSections(sections) {
     const isRootNode = section.nodeId && !String(findModuleSectionNodeById(section.nodeId)?.parentId || '').trim();
     const isSelected = signature === _moduleSectionEditorSignature;
     const iconSrc = sanitizeImageSrc(section.iconUrl || findModuleSectionNodeById(section.nodeId)?.iconUrl || '');
+    const hasChildren = !!(section.nodeId && parentNodeIds.has(section.nodeId));
+    const collapsed = hasChildren && isModuleSectionNodeCollapsed(section.nodeId);
+    const toggleHtml = hasChildren
+      ? `<button class="module-section-manager-collapse-btn" type="button" data-section-manager-action="toggle-section-collapse" data-node-id="${escapeHtml(section.nodeId)}" aria-expanded="${collapsed ? 'false' : 'true'}" aria-label="${collapsed ? 'Unterreiter einblenden' : 'Unterreiter ausblenden'}">${collapsed ? '▸' : '▾'}</button>`
+      : `<span class="module-section-manager-collapse-spacer" aria-hidden="true"></span>`;
     return `
       <div class="module-section-manager-section-row${isSelected ? ' is-selected' : ''}" style="--section-indent:${Math.max(0, depth - 1) * 0.75}rem">
+        ${toggleHtml}
         <button class="module-section-manager-section-main" type="button" data-section-manager-action="prefill-section" data-section-signature="${escapeHtml(signature)}">
           <span class="module-section-manager-section-icon${iconSrc ? '' : ' empty'}">
             ${iconSrc ? `<img src="${iconSrc}" alt="" loading="lazy" decoding="async">` : ''}
@@ -506,7 +571,7 @@ function renderModuleSectionManagerSections(sections) {
           </select>
         </div>
       </div>`;
-  }).join('') || '<div class="module-section-manager-empty">Noch keine Bereiche vorhanden.</div>';
+  }).join('') || '<div class="module-section-manager-empty">Keine Bereiche gefunden.</div>';
 }
 
 function getDefaultModuleImportTargetSignature(sections) {
@@ -529,11 +594,9 @@ function renderModuleSectionManagerImportTarget(sections) {
   if (selected) select.value = selected;
 }
 
-function renderModuleSectionManagerModules(entries, filterValue = '') {
-  const list = document.getElementById('msm-module-list');
-  if (!list) return;
+function getVisibleModuleSectionManagerEntries(entries, filterValue = '') {
   const needle = normalizeSearchText(filterValue);
-  const visible = entries.filter(item => {
+  return entries.filter(item => {
     if (!needle) return true;
     return normalizeSearchText([
       item.entry?.title,
@@ -542,18 +605,112 @@ function renderModuleSectionManagerModules(entries, filterValue = '') {
       getSectionOptionLabel(item.section)
     ].filter(Boolean).join(' ')).includes(needle);
   });
-  list.innerHTML = visible.map(item => `
+}
+
+function pruneModuleSectionManagerSelection(entries) {
+  const validIds = new Set(entries.map(item => String(item.entry?.id || '')).filter(Boolean));
+  Array.from(_selectedModuleSectionManagerIds).forEach(id => {
+    if (!validIds.has(id)) _selectedModuleSectionManagerIds.delete(id);
+  });
+}
+
+function renderModuleSectionManagerBulkBar(visibleEntries) {
+  const bar = document.getElementById('msm-module-bulk-bar');
+  const countEl = document.getElementById('msm-module-bulk-count');
+  const targetSelect = document.getElementById('msm-module-bulk-target');
+  const selectAll = document.getElementById('msm-module-select-all');
+  const selectedCount = _selectedModuleSectionManagerIds.size;
+  if (bar) bar.hidden = selectedCount === 0;
+  if (countEl) countEl.textContent = `${selectedCount} ausgewählt`;
+  if (targetSelect) {
+    const previous = targetSelect.value;
+    targetSelect.innerHTML = buildModuleSectionTargetOptions(previous);
+    if (previous) targetSelect.value = previous;
+  }
+  if (selectAll) {
+    const visibleIds = visibleEntries.map(item => String(item.entry?.id || '')).filter(Boolean);
+    const allSelected = visibleIds.length > 0 && visibleIds.every(id => _selectedModuleSectionManagerIds.has(id));
+    selectAll.checked = allSelected;
+    selectAll.indeterminate = !allSelected && visibleIds.some(id => _selectedModuleSectionManagerIds.has(id));
+  }
+}
+
+function renderModuleSectionManagerModules(entries, filterValue = '') {
+  const list = document.getElementById('msm-module-list');
+  if (!list) return;
+  pruneModuleSectionManagerSelection(entries);
+  const visible = getVisibleModuleSectionManagerEntries(entries, filterValue);
+  list.innerHTML = visible.map(item => {
+    const entryId = String(item.entry?.id || '');
+    const checked = entryId && _selectedModuleSectionManagerIds.has(entryId);
+    return `
     <div class="module-section-manager-module-row">
+      <label class="module-section-manager-module-select">
+        <input type="checkbox" data-section-manager-action="select-module" data-entry-id="${escapeHtml(entryId)}"${checked ? ' checked' : ''} aria-label="${escapeHtml(item.entry?.title || 'Modul')} auswählen">
+      </label>
       <div class="module-section-manager-module-main">
         <strong>${escapeHtml(item.entry?.title || item.entry?.id || 'Unbenanntes Modul')}</strong>
         <span>${escapeHtml(getSectionOptionLabel(item.section))}</span>
       </div>
-      <select data-section-manager-action="move-module" data-entry-id="${escapeHtml(item.entry?.id || '')}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} verschieben">
+      <select data-section-manager-action="move-module" data-entry-id="${escapeHtml(entryId)}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} verschieben">
         ${buildModuleSectionTargetOptions(item.sectionSignature)}
       </select>
-      <button class="module-section-manager-delete-btn" type="button" data-section-manager-action="delete-module" data-entry-id="${escapeHtml(item.entry?.id || '')}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} loeschen">Loeschen</button>
+      <button class="module-section-manager-delete-btn" type="button" data-section-manager-action="delete-module" data-entry-id="${escapeHtml(entryId)}" aria-label="${escapeHtml(item.entry?.title || 'Modul')} loeschen">Loeschen</button>
     </div>
-  `).join('') || '<div class="module-section-manager-empty">Keine Module gefunden.</div>';
+  `;
+  }).join('') || '<div class="module-section-manager-empty">Keine Module gefunden.</div>';
+  renderModuleSectionManagerBulkBar(visible);
+}
+
+function bulkMoveModuleSectionManagerSelection() {
+  const targetSignature = document.getElementById('msm-module-bulk-target')?.value || '';
+  const ids = Array.from(_selectedModuleSectionManagerIds);
+  if (!ids.length) {
+    setModuleSectionManagerStatus('Keine Module ausgewählt.', 'error');
+    return;
+  }
+  if (!targetSignature) {
+    setModuleSectionManagerStatus('Bitte einen Zielbereich wählen.', 'error');
+    return;
+  }
+  let movedCount = 0;
+  ids.forEach(id => {
+    if (moveModuleToSection(id, targetSignature, { silent: true, deferSave: true, deferRender: true })) movedCount++;
+  });
+  _selectedModuleSectionManagerIds.clear();
+  saveModuleStore();
+  renderAll();
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(
+    movedCount ? `${movedCount} Module verschoben.` : 'Keine Module wurden verschoben.',
+    movedCount ? 'success' : 'info'
+  );
+}
+
+function bulkDeleteModuleSectionManagerSelection() {
+  const ids = Array.from(_selectedModuleSectionManagerIds);
+  if (!ids.length) {
+    setModuleSectionManagerStatus('Keine Module ausgewählt.', 'error');
+    return;
+  }
+  const code = prompt(`${ids.length} Module wirklich löschen/ausblenden?\n\nGib zur Bestätigung den Code ${MODULE_DELETE_CONFIRM_CODE} ein.`);
+  if (code === null) return;
+  if (String(code || '').trim() !== MODULE_DELETE_CONFIRM_CODE) {
+    setModuleSectionManagerStatus('Falscher Löschcode. Es wurde nichts gelöscht.', 'error');
+    return;
+  }
+  let deletedCount = 0;
+  ids.forEach(id => {
+    if (deleteModuleById(id, { requireCode: false, deferSave: true }).ok) deletedCount++;
+  });
+  _selectedModuleSectionManagerIds.clear();
+  saveModuleStore();
+  renderAll();
+  renderModuleSectionManager();
+  setModuleSectionManagerStatus(
+    deletedCount ? `${deletedCount} Module gelöscht.` : 'Keine Module wurden gelöscht.',
+    deletedCount ? 'success' : 'info'
+  );
 }
 
 function renderModuleSectionManager() {
@@ -576,6 +733,9 @@ function openModuleSectionManager(options = {}) {
   }
   const createMode = normalizeModuleSectionCreateMode(options.createMode || _moduleSectionCreateMode);
   setModuleSectionCreateMode(createMode);
+  _selectedModuleSectionManagerIds.clear();
+  const sectionFilter = document.getElementById('msm-section-filter');
+  if (sectionFilter) sectionFilter.value = '';
   renderModuleSectionManager();
   clearModuleSectionManagerForm({ mode: createMode });
   activateDialog('module-section-manager-overlay', { initialFocus: '#msm-tab' });
@@ -1037,6 +1197,37 @@ function handleModuleSectionManagerClick(event) {
   if (action === 'delete-module') {
     event.preventDefault();
     deleteModuleFromSectionManager(trigger.dataset.entryId || '');
+    return;
+  }
+  if (action === 'toggle-section-collapse') {
+    event.preventDefault();
+    toggleModuleSectionNodeCollapsed(trigger.dataset.nodeId || '');
+    return;
+  }
+  if (action === 'expand-all-sections') {
+    event.preventDefault();
+    setAllModuleSectionsCollapsed(false);
+    return;
+  }
+  if (action === 'collapse-all-sections') {
+    event.preventDefault();
+    setAllModuleSectionsCollapsed(true);
+    return;
+  }
+  if (action === 'bulk-move-modules') {
+    event.preventDefault();
+    bulkMoveModuleSectionManagerSelection();
+    return;
+  }
+  if (action === 'bulk-delete-modules') {
+    event.preventDefault();
+    bulkDeleteModuleSectionManagerSelection();
+    return;
+  }
+  if (action === 'clear-module-selection') {
+    event.preventDefault();
+    _selectedModuleSectionManagerIds.clear();
+    renderModuleSectionManagerModules(getModuleSectionManagerEntries(), document.getElementById('msm-module-filter')?.value || '');
   }
 }
 
@@ -1057,6 +1248,29 @@ function handleModuleSectionManagerChange(event) {
     moveModuleSectionToParent(sectionMoveTrigger.dataset.sectionSignature || '', sectionMoveTrigger.value || '');
     return;
   }
+  const selectAllTrigger = event.target?.closest?.('#msm-module-select-all');
+  if (selectAllTrigger?.closest?.('#module-section-manager-overlay')) {
+    const entries = getModuleSectionManagerEntries();
+    const filterValue = document.getElementById('msm-module-filter')?.value || '';
+    const visible = getVisibleModuleSectionManagerEntries(entries, filterValue);
+    const ids = visible.map(item => String(item.entry?.id || '')).filter(Boolean);
+    if (selectAllTrigger.checked) ids.forEach(id => _selectedModuleSectionManagerIds.add(id));
+    else ids.forEach(id => _selectedModuleSectionManagerIds.delete(id));
+    renderModuleSectionManagerModules(entries, filterValue);
+    return;
+  }
+  const selectTrigger = event.target?.closest?.('[data-section-manager-action="select-module"]');
+  if (selectTrigger?.closest?.('#module-section-manager-overlay')) {
+    const id = String(selectTrigger.dataset.entryId || '');
+    if (id) {
+      if (selectTrigger.checked) _selectedModuleSectionManagerIds.add(id);
+      else _selectedModuleSectionManagerIds.delete(id);
+    }
+    const entries = getModuleSectionManagerEntries();
+    const filterValue = document.getElementById('msm-module-filter')?.value || '';
+    renderModuleSectionManagerBulkBar(getVisibleModuleSectionManagerEntries(entries, filterValue));
+    return;
+  }
   const trigger = event.target?.closest?.('[data-section-manager-action="move-module"]');
   if (!trigger || !trigger.closest('#module-section-manager-overlay')) return;
   const moved = moveModuleToSection(trigger.dataset.entryId || '', trigger.value || '', { silent: true });
@@ -1068,6 +1282,9 @@ function handleModuleSectionManagerInput(event) {
   if (!event.target?.closest?.('#module-section-manager-overlay')) return;
   if (event.target?.dataset?.sectionManagerField === 'filter') {
     renderModuleSectionManagerModules(getModuleSectionManagerEntries(), event.target.value || '');
+  }
+  if (event.target?.dataset?.sectionManagerField === 'section-filter') {
+    renderModuleSectionManagerSections(sortModuleSectionsByHierarchy(getUniqueModuleSections()));
   }
 }
 

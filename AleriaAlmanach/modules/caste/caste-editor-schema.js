@@ -37,9 +37,10 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
     titleField: 'skillsTitle',
     label: 'Faehigkeiten & Kenntnisse',
     addLabel: 'Eintrag',
-    fallback: { icon: '', text: 'Faehigkeit oder Wissen' },
+    fallback: { icon: '', title: '', text: 'Faehigkeit oder Wissen' },
     fields: [
       ['icon', 'Icon-URL', 'url'],
+      ['title', 'Titel (optional)', 'text'],
       ['text', 'Text', 'textarea']
     ]
   },

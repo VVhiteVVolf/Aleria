@@ -108,9 +108,24 @@ function buildTradeCatalogAttributeEditor(item, index, mode = 'module') {
     </div>`;
 }
 
+function buildTradeCatalogItemHiddenMeta(item = {}) {
+  const meta = {
+    id: item.id || '',
+    descriptionTitle: item.descriptionTitle || '',
+    featuresTitle: item.featuresTitle || '',
+    originTitle: item.originTitle || '',
+    usageTitle: item.usageTitle || '',
+    priceTitle: item.priceTitle || '',
+    conditionsTitle: item.conditionsTitle || '',
+    currencyCode: item.currencyCode || ''
+  };
+  return `<input type="hidden" class="me-trade-item-hidden-meta" value="${escapeHtml(JSON.stringify(meta))}">`;
+}
+
 function buildTradeCatalogItemRows(items = [], mode = 'module') {
   return (Array.isArray(items) ? items : []).map((item, index) => `
     <section class="trade-editor-item ${mode === 'module' ? 'module-trade-item-row' : 'inline-trade-item-row'}">
+      ${mode === 'module' ? buildTradeCatalogItemHiddenMeta(item) : ''}
       <div class="trade-editor-item-head">
         <div class="module-editor-kicker">Eintrag ${index + 1}</div>
         <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-trade-list-row" data-trade-list="items" data-trade-index="${index}"` : 'data-module-editor-action="remove-trade-row" data-trade-list="items"'}>Eintrag loeschen</button>
@@ -149,9 +164,21 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Preisbalken %', 'priceFill', item.priceFill, index, mode, 'range')}
         ${buildTradeCatalogInput('Waehrungsicon', 'currencyIcon', item.currencyIcon, index, mode)}
         ${buildTradeCatalogInput('Waehrungsname', 'currencyLabel', item.currencyLabel, index, mode)}
+        ${buildTradeCatalogInput('Preisnotiz', 'priceNote', item.priceNote, index, mode)}
+        ${buildTradeCatalogTextarea('Kaufbedingungen', 'conditions', item.conditions, index, mode)}
         ${buildTradeCatalogInput('Siegelbild', 'sealImage', item.sealImage, index, mode, 'url')}
       </div>
     </section>`).join('');
+}
+
+function buildTradeCatalogFooterCardRows(cards = [], mode = 'module') {
+  return (Array.isArray(cards) ? cards : []).map((card, index) => `
+    <div class="trade-editor-row footer-card ${mode === 'module' ? 'module-trade-footer-card-row' : 'inline-trade-footer-card-row'}">
+      <input class="inline-edit-input ${mode === 'module' ? 'me-trade-footer-icon' : ''}" type="text" value="${escapeHtml(card.icon || '')}" placeholder="Icon" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="footerCards" data-trade-index="${index}" data-trade-field="icon"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-trade-footer-title' : ''}" type="text" value="${escapeHtml(card.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="footerCards" data-trade-index="${index}" data-trade-field="title"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-trade-footer-text' : ''}" type="text" value="${escapeHtml(card.text || '')}" placeholder="Hinweistext" ${mode === 'inline' ? `data-inline-action="update-trade-list-field" data-trade-list="footerCards" data-trade-index="${index}" data-trade-field="text"` : ''}>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-trade-list-row" data-trade-list="footerCards" data-trade-index="${index}"` : 'data-module-editor-action="remove-trade-row" data-trade-list="footerCards"'}>Loeschen</button>
+    </div>`).join('');
 }
 
 function getDefaultTradeCatalogRow(listName) {
@@ -246,7 +273,8 @@ function addModuleTradeCatalogRow(button, listName) {
 
   const map = {
     categories: { selector: '.module-trade-categories', row: item => buildTradeCatalogCategoryRows([item], 'module') },
-    items: { selector: '.module-trade-items', row: item => buildTradeCatalogItemRows([item], 'module') }
+    items: { selector: '.module-trade-items', row: item => buildTradeCatalogItemRows([item], 'module') },
+    footerCards: { selector: '.module-trade-footer-cards', row: item => buildTradeCatalogFooterCardRows([item], 'module') }
   };
   const definition = map[listName];
   const wrap = definition ? card?.querySelector(definition.selector) : null;
@@ -342,8 +370,17 @@ function collectTradeCatalogAttributes(row) {
   }));
 }
 
+function parseTradeCatalogItemHiddenMeta(row) {
+  try {
+    return JSON.parse(row.querySelector('.me-trade-item-hidden-meta')?.value || '{}') || {};
+  } catch (error) {
+    return {};
+  }
+}
+
 function collectTradeCatalogItems(block) {
   return Array.from(block.querySelectorAll('.module-trade-item-row')).map(row => ({
+    ...parseTradeCatalogItemHiddenMeta(row),
     title: getTrimmedFormValue(row, '.me-trade-item-title'),
     subtitle: getTrimmedFormValue(row, '.me-trade-item-subtitle'),
     category: getTrimmedFormValue(row, '.me-trade-item-category'),
@@ -363,6 +400,8 @@ function collectTradeCatalogItems(block) {
     priceFill: getTrimmedFormValue(row, '.me-trade-item-priceFill'),
     currencyIcon: getTrimmedFormValue(row, '.me-trade-item-currencyIcon'),
     currencyLabel: getTrimmedFormValue(row, '.me-trade-item-currencyLabel'),
+    priceNote: getTrimmedFormValue(row, '.me-trade-item-priceNote'),
+    conditions: getTrimmedFormValue(row, '.me-trade-item-conditions'),
     attributesTitle: getTrimmedFormValue(row, '.me-trade-item-attributesTitle'),
     attributes: collectTradeCatalogAttributes(row),
     sealImage: getTrimmedFormValue(row, '.me-trade-item-sealImage')
@@ -397,6 +436,14 @@ function buildTradeCatalogModuleEditorFields(page) {
           </div>
           <div class="trade-editor-list module-trade-items">${buildTradeCatalogItemRows(data.items, 'module')}</div>
         </div>
+
+        <div class="module-editor-field wide">
+          <div class="module-editor-inline" style="justify-content:space-between;"><label>Fusskarten / Hinweise</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-trade-row" data-trade-list="footerCards">+ Hinweis</button></div>
+          <div class="trade-editor-list module-trade-footer-cards">${buildTradeCatalogFooterCardRows(data.footerCards, 'module')}</div>
+        </div>
+        <div class="module-editor-field"><label>Berater-Titel</label><input class="me-trade-advisor-title" type="text" value="${escapeHtml(data.advisorTitle)}"></div>
+        <div class="module-editor-field"><label>Berater-Bild</label><input class="me-trade-advisor-image" type="url" value="${escapeHtml(data.advisorImage)}"></div>
+        <div class="module-editor-field wide"><label>Berater-Text</label><textarea class="me-trade-advisor-text">${escapeHtml(data.advisorText)}</textarea></div>
       </div>
     </div>`;
 }
@@ -414,10 +461,18 @@ function collectTradeCatalogModuleEditorPage(card, page) {
     allLabel: getTrimmedFormValue(block, '.me-trade-all-label'),
     categories: collectTradeCatalogCategories(block),
     items: collectTradeCatalogItems(block),
-    footerCards: [],
-    advisorTitle: '',
-    advisorText: '',
-    advisorImage: ''
+    footerCards: collectTradeCatalogFooterCards(block),
+    advisorTitle: getTrimmedFormValue(block, '.me-trade-advisor-title'),
+    advisorText: getTrimmedFormValue(block, '.me-trade-advisor-text'),
+    advisorImage: getTrimmedFormValue(block, '.me-trade-advisor-image')
   });
   return page;
+}
+
+function collectTradeCatalogFooterCards(block) {
+  return Array.from(block.querySelectorAll('.module-trade-footer-card-row')).map(row => ({
+    icon: getTrimmedFormValue(row, '.me-trade-footer-icon'),
+    title: getTrimmedFormValue(row, '.me-trade-footer-title'),
+    text: getTrimmedFormValue(row, '.me-trade-footer-text')
+  }));
 }
