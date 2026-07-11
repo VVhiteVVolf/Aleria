@@ -58,6 +58,35 @@ function coerceCommentSegmentsForMode(edit = false) {
   });
 }
 
+const PRIMARY_COMMENT_SEGMENT_KINDS = ['speech', 'action', 'thought', 'whisper', 'shout'];
+
+function splitCommentSegmentKinds(edit = false) {
+  const allowed = getAllowedCommentSegmentKinds(edit);
+  return {
+    primary: allowed.filter(kind => PRIMARY_COMMENT_SEGMENT_KINDS.includes(kind)),
+    additional: allowed.filter(kind => !PRIMARY_COMMENT_SEGMENT_KINDS.includes(kind))
+  };
+}
+
+function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false } = {}) {
+  const segmentAttr = segmentId ? ` data-segment-id="${segmentId}"` : '';
+  return `
+    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
+      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
+      <span>${add ? '+ ' : ''}${escapeHtml(getCommentKindLabel(kind))}</span>
+    </button>`;
+}
+
+function buildCommentSegmentMoreMenu(kinds, buttons, activeKind = '') {
+  if (!kinds.length) return '';
+  const activeLabel = kinds.includes(activeKind) ? getCommentKindLabel(activeKind) : '';
+  return `
+    <details class="comment-segment-more${activeLabel ? ' has-active' : ''}">
+      <summary>${activeLabel ? escapeHtml(activeLabel) : 'Weitere'} <span aria-hidden="true">⌄</span></summary>
+      <div class="comment-segment-more-menu">${buttons.join('')}</div>
+    </details>`;
+}
+
 function renderCommentSegmentActions(edit = false) {
   const selector = edit
     ? '#ec-segment-list + .comment-segment-actions'
@@ -65,24 +94,27 @@ function renderCommentSegmentActions(edit = false) {
   const actions = document.querySelector(selector);
   if (!actions) return;
   const action = edit ? 'add-edit-comment-segment' : 'add-comment-segment';
-  const buttons = getAllowedCommentSegmentKinds(edit).map(kind => `
-    <button type="button" class="comment-segment-add" data-action="${action}" data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
-      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
-      <span>+ ${escapeHtml(getCommentKindLabel(kind))}</span>
-    </button>
-  `);
-  actions.innerHTML = buttons.join('');
+  const kinds = splitCommentSegmentKinds(edit);
+  const primary = kinds.primary.map(kind => buildCommentSegmentKindButton(kind, { action, add: true }));
+  const additional = kinds.additional.map(kind => buildCommentSegmentKindButton(kind, { action, add: true }));
+  actions.innerHTML = primary.join('') + buildCommentSegmentMoreMenu(kinds.additional, additional);
 }
 
 function getSegmentTypeButtons(segment, edit = false) {
   const action = edit ? 'set-edit-comment-segment-kind' : 'set-comment-segment-kind';
   const segmentId = escapeHtml(segment.id);
-  return getAllowedCommentSegmentKinds(edit).map(kind => `
-    <button type="button" class="comment-segment-type ${segment.kind === kind ? 'active' : ''}" data-action="${action}" data-segment-id="${segmentId}" data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
-      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
-      <span>${escapeHtml(getCommentKindLabel(kind))}</span>
-    </button>
-  `).join('');
+  const kinds = splitCommentSegmentKinds(edit);
+  const primary = kinds.primary.map(kind => buildCommentSegmentKindButton(kind, {
+    action,
+    segmentId,
+    active: segment.kind === kind
+  }));
+  const additional = kinds.additional.map(kind => buildCommentSegmentKindButton(kind, {
+    action,
+    segmentId,
+    active: segment.kind === kind
+  }));
+  return primary.join('') + buildCommentSegmentMoreMenu(kinds.additional, additional, segment.kind);
 }
 
 function renderSegmentAvatarThumb(src, fallbackName, label) {

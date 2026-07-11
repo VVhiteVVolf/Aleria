@@ -25,12 +25,15 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'add-biography-ability',
   'remove-biography-ability',
   'pick-biography-ability-icon',
+  'pick-biography-document-icon',
   'add-biography-section',
   'remove-biography-section',
   'add-biography-line-row',
   'remove-biography-line-row',
   'add-house-line-row',
   'remove-house-line-row',
+  'add-guild-line-row',
+  'remove-guild-line-row',
   'schema-add-row',
   'schema-remove-row',
   'schema-pick-icon',
@@ -214,6 +217,10 @@ function handleInlineEditorActionClick(event) {
     openBiographyAbilityIconPicker(trigger);
     return;
   }
+  if (action === 'pick-biography-document-icon') {
+    openBiographyDocumentIconPicker(trigger);
+    return;
+  }
   if (action === 'add-biography-section') {
     addInlineBiographySectionRow(trigger.dataset.biographySectionPosition || 'afterIntro');
     return;
@@ -241,6 +248,17 @@ function handleInlineEditorActionClick(event) {
     removeInlineHouseLineRow(
       trigger.dataset.houseLineList || '',
       Number(trigger.dataset.houseLineIndex) || 0
+    );
+    return;
+  }
+  if (action === 'add-guild-line-row') {
+    addInlineGuildLineRow(trigger.dataset.guildLineList || '');
+    return;
+  }
+  if (action === 'remove-guild-line-row') {
+    removeInlineGuildLineRow(
+      trigger.dataset.guildLineList || '',
+      Number(trigger.dataset.guildLineIndex) || 0
     );
     return;
   }
@@ -701,6 +719,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-house-line-field') {
     updateInlineHouseLineField(field);
+    return;
+  }
+  if (action === 'update-guild-field') {
+    updateInlineGuildField(field);
+    return;
+  }
+  if (action === 'update-guild-line-field') {
+    updateInlineGuildLineField(field);
     return;
   }
   if (action === 'schema-update-field') {

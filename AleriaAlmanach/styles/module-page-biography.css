@@ -190,14 +190,30 @@
   .biography-list li { margin-bottom: 0.45rem; }
   .biography-list.compact li { margin-bottom: 0.2rem; }
   .biography-list.quotes { list-style: none; padding-left: 0; font-style: italic; }
-  .biography-list.documents { list-style: none; padding-left: 0; }
-  .biography-list.documents li::before { content: '▧'; color: var(--gold); margin-right: 0.45rem; }
-  .biography-list.documents a {
+  /* Inline-Bearbeitung: Live-Vorschau auf Stage-Höhe begrenzen, damit die drei
+     Dossier-Spalten wie im Modal intern scrollen statt die Vorschau endlos zu strecken. */
+  .inline-module-preview-frame:has(.biography-page) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+  .module-editor-preview-card .biography-page,
+  .inline-module-preview-frame .biography-page {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .biography-ability-list.documents .biography-ability-icon img {
+    padding: 0.18rem;
+    object-fit: contain;
+  }
+  .biography-ability strong a {
     color: var(--ink);
     text-decoration: none;
     border-bottom: 1px dotted rgba(139,105,20,0.55);
   }
-  .biography-list.documents a:hover {
+  .biography-ability strong a:hover {
     color: var(--gold);
     border-bottom-style: solid;
   }
@@ -328,7 +344,7 @@
     grid-template-columns: minmax(9rem, 0.85fr) minmax(0, 1.3fr) auto;
   }
   .biography-edit-row.document {
-    grid-template-columns: minmax(8rem, 0.9fr) minmax(10rem, 1.2fr) auto;
+    grid-template-columns: minmax(9.5rem, 0.7fr) minmax(7rem, 0.65fr) minmax(8rem, 0.85fr) minmax(0, 1fr) auto;
   }
   .bestiary-edit-list {
     display: flex;

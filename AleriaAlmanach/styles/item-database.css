@@ -251,6 +251,12 @@
   color: var(--red-wax);
 }
 
+.item-db-header .item-db-storage-summary {
+  margin-top: 0.2rem;
+  color: #725414;
+  font-weight: 600;
+}
+
 .item-db-table {
   min-height: 0;
   overflow: auto;

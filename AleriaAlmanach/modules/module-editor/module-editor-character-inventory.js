@@ -57,7 +57,7 @@ function normalizeCharacterInventoryText(value) {
     .trim();
 }
 
-function normalizeCharacterInventoryCategoryId(value) {
+function normalizeCharacterInventoryCategoryId(value, { allowCustom = false } = {}) {
   const normalized = normalizeCharacterInventoryText(value);
   if (['weapon', 'weapons', 'waffe', 'waffen'].includes(normalized)) return 'weapon';
   if (['armor', 'armour', 'ruestung', 'rustung', 'ruestungen', 'rustungen', 'schutz'].includes(normalized)) return 'armor';
@@ -66,6 +66,10 @@ function normalizeCharacterInventoryCategoryId(value) {
   if (['equipment', 'ausruestung', 'ausrustung', 'werkzeug', 'werkzeuge', 'verbrauchsgut', 'vorrat'].includes(normalized)) return 'equipment';
   if (['money', 'geld', 'muenzen', 'munzen', 'waehrung', 'wahrung', 'geldbeutel', 'taler', 'pet', 'haustier', 'haustiere', 'tier', 'tiere', 'horse', 'pferd', 'pferde', 'reitpferd', 'reittier', 'ross', 'pony'].includes(normalized)) return 'other';
   if (['all', 'alle'].includes(normalized)) return 'weapon';
+  if (allowCustom) {
+    const customId = normalized.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    if (customId) return customId.slice(0, 48);
+  }
   return 'other';
 }
 
@@ -74,16 +78,19 @@ function normalizeCharacterInventoryCategories(categories = []) {
   (Array.isArray(categories) ? categories : []).forEach(category => {
     const rawId = normalizeCharacterInventoryText(category?.id || category?.label);
     if (rawId === 'all' || rawId === 'alle') return;
-    const id = normalizeCharacterInventoryCategoryId(category?.id || category?.label);
-    const defaults = byId.get(id) || CHARACTER_INVENTORY_DEFAULT_CATEGORIES.find(item => item.id === id);
-    if (!defaults) return;
+    const id = normalizeCharacterInventoryCategoryId(category?.id || category?.label, { allowCustom: true });
+    const defaults = byId.get(id) || CHARACTER_INVENTORY_DEFAULT_CATEGORIES.find(item => item.id === id) || {
+      id,
+      label: String(category?.label || id).trim() || id,
+      icon: String(category?.icon || '*').trim() || '*'
+    };
     byId.set(id, {
       ...defaults,
       label: String(category?.label || defaults.label).trim() || defaults.label,
-      icon: defaults.icon
+      icon: String(category?.icon || defaults.icon).trim() || defaults.icon
     });
   });
-  return CHARACTER_INVENTORY_DEFAULT_CATEGORIES.map(category => byId.get(category.id) || category);
+  return [...byId.values()].slice(0, 16);
 }
 
 function sanitizeCharacterInventoryRows(rows = [], fallback = [], maxRows = 40) {
@@ -188,7 +195,7 @@ function sanitizeCharacterInventoryItems(items = []) {
       ownerCharacterName: String(item?.ownerCharacterName || '').trim(),
       acquiredAt: String(item?.acquiredAt || '').trim(),
       individualizedAt: String(item?.individualizedAt || '').trim(),
-      category: normalizeCharacterInventoryCategoryId(item?.category || item?.type || 'equipment'),
+      category: normalizeCharacterInventoryCategoryId(item?.category || item?.type || 'equipment', { allowCustom: true }),
       icon: String(item?.icon || '').trim(),
       image: String(item?.image || '').trim(),
       imageFormat: sanitizeCharacterInventoryImageSettings({
@@ -292,6 +299,12 @@ function sanitizeCharacterInventoryData(data = {}) {
   ], 8);
   const moneyInfoRow = infoRows.find(row => normalizeCharacterInventoryText(row.label) === 'geld');
   if (moneyInfoRow) moneyInfoRow.value = moneyLabel;
+  const normalizedCategories = normalizeCharacterInventoryCategories(categories);
+  const categoryIds = new Set(normalizedCategories.map(category => category.id));
+  const items = sanitizeCharacterInventoryItems(data.items).map(item => ({
+    ...item,
+    category: categoryIds.has(item.category) ? item.category : 'other'
+  }));
   return {
     characterId: String(data.characterId || '').trim(),
     title: String(data.title || 'Charakter-Inventar').trim(),
@@ -324,7 +337,7 @@ function sanitizeCharacterInventoryData(data = {}) {
     showInfoTable: data.showInfoTable === true,
     carryLabel: String(data.carryLabel || 'Traglast').trim(),
     carryValue: String(data.carryValue || '78,4 / 120 kg').trim(),
-    categories: normalizeCharacterInventoryCategories(categories),
+    categories: normalizedCategories,
     infoRows,
     attributes: sanitizeCharacterInventoryAttributes(data.attributes, [
       { label: 'StA', value: 8 },
@@ -334,7 +347,7 @@ function sanitizeCharacterInventoryData(data = {}) {
       { label: 'Wei', value: 6 },
       { label: 'Cha', value: 5 }
     ]),
-    items: sanitizeCharacterInventoryItems(data.items),
+    items,
     companions: sanitizeCharacterInventoryCompanions(data.companions),
     equipmentQuiz: sanitizeCharacterInventoryEquipmentQuiz(data.equipmentQuiz)
   };

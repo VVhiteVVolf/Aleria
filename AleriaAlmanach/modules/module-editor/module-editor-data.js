@@ -997,12 +997,14 @@ function sanitizeBiographyData(data = {}) {
     : [];
   const documentArray = value => Array.isArray(value)
     ? value.map(item => {
-        if (typeof item === 'string') return { text: item.trim(), link: '' };
+        if (typeof item === 'string') return { icon: '', title: '', text: item.trim(), link: '' };
         return {
-          text: String(item?.text || item?.title || item?.name || '').trim(),
+          icon: String(item?.icon || item?.image || '').trim(),
+          title: String(item?.title || item?.name || '').trim(),
+          text: String(item?.text || '').trim(),
           link: String(item?.link || item?.url || item?.href || '').trim()
         };
-      }).filter(item => item.text || item.link)
+      }).filter(item => item.icon || item.title || item.text || item.link)
     : [];
 
   return {
@@ -1011,10 +1013,10 @@ function sanitizeBiographyData(data = {}) {
     connectionTextOffset: clampBiographyNumber(data.connectionTextOffset, 0, 0, 80),
     biographyTitle: String(data.biographyTitle || 'Biografie').trim(),
     biographyText: String(data.biographyText || '').trim(),
-    abilitiesTitle: String(data.abilitiesTitle || 'Fähigkeiten & Spezialgebiete').trim(),
+    abilitiesTitle: String(data.abilitiesTitle || 'Persönlichkeit').trim(),
     abilities: pairArray(data.abilities),
     extraSections: sanitizeBiographySections(data.extraSections),
-    historyTitle: String(data.historyTitle || 'Geschichte & Wirkung').trim(),
+    historyTitle: String(data.historyTitle || 'Hintergrund').trim(),
     historyText: String(data.historyText || '').trim(),
     worksTitle: String(data.worksTitle || 'Bekannte Werke').trim(),
     works: lineArray(data.works),
@@ -1024,7 +1026,7 @@ function sanitizeBiographyData(data = {}) {
     quotes: lineArray(data.quotes),
     connectionsTitle: String(data.connectionsTitle || 'Verbindungen').trim(),
     connections: connectionArray(data.connections),
-    documentsTitle: String(data.documentsTitle || 'Dokumente & Aufzeichnungen').trim(),
+    documentsTitle: String(data.documentsTitle || 'Eigentum & Besitz').trim(),
     documents: documentArray(data.documents),
     footer: String(data.footer || '').trim()
   };
@@ -1046,9 +1048,49 @@ function sanitizeHouseData(data = {}) {
       triviaTitle: data.triviaTitle || 'Besonderheiten',
       quotesTitle: data.quotesTitle || 'Hausworte & Zitate',
       connectionsTitle: data.connectionsTitle || 'Verbündete, Rivalen & Vasallen',
-      documentsTitle: data.documentsTitle || 'Dokumente & Urkunden'
+      documentsTitle: data.documentsTitle || 'Eigentum & Besitz'
     }),
     crestImage: String(data.crestImage || '').trim()
+  };
+}
+
+// Gilden-Template — same mechanics as the houses template (biography shell plus own header
+// with motto and emblem), re-labelled for a guild/organisation. Guild-only additions:
+// a portrait format switch (2:3 or 1:1) for the left image and a second document-style
+// list "Verträge" between the relations block and the property list.
+function sanitizeGuildContractRows(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map(item => {
+      if (typeof item === 'string') return { icon: '', title: '', text: item.trim(), link: '' };
+      return {
+        icon: String(item?.icon || item?.image || '').trim(),
+        title: String(item?.title || item?.name || '').trim(),
+        text: String(item?.text || '').trim(),
+        link: String(item?.link || item?.url || item?.href || '').trim()
+      };
+    })
+    .filter(item => item.icon || item.title || item.text || item.link);
+}
+
+function sanitizeGuildData(data = {}) {
+  const portraitFormat = ['portrait', 'square'].includes(String(data.portraitFormat || '').trim())
+    ? String(data.portraitFormat).trim()
+    : 'portrait';
+  return {
+    ...sanitizeBiographyData({
+      ...data,
+      biographyTitle: data.biographyTitle || 'Übersicht',
+      abilitiesTitle: data.abilitiesTitle || 'Eigenschaften',
+      historyTitle: data.historyTitle || 'Geschichte',
+      worksTitle: data.worksTitle || 'Sonstiges',
+      triviaTitle: data.triviaTitle || 'Trivia',
+      connectionsTitle: data.connectionsTitle || 'Führung & Beziehungen',
+      documentsTitle: data.documentsTitle || 'Eigentum & Besitz'
+    }),
+    crestImage: String(data.crestImage || '').trim(),
+    portraitFormat,
+    contractsTitle: String(data.contractsTitle || 'Verträge').trim(),
+    contracts: sanitizeGuildContractRows(data.contracts)
   };
 }
 

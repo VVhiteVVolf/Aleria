@@ -99,12 +99,65 @@ function buildModuleBiographyStatRows(stats = []) {
     </div>`).join('');
 }
 
+let _biographyDocumentIconTarget = null;
+
+function buildBiographyDocumentIconField(item, index, mode) {
+  const iconInputAttrs = mode === 'inline'
+    ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="icon"`
+    : 'data-module-editor-action="sync-json-preview"';
+  const pickerAttrs = mode === 'inline'
+    ? `data-inline-action="pick-biography-document-icon" data-biography-document-index="${index}"`
+    : 'data-module-editor-action="pick-biography-document-icon"';
+  return `
+      <span class="biography-ability-icon-field">
+        <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-icon' : ''}" type="text" value="${escapeHtml(item.icon || '')}" placeholder="Icon-URL oder Zeichen" ${iconInputAttrs}>
+        <button class="module-editor-mini-btn biography-ability-icon-picker" type="button" ${pickerAttrs} title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
+      </span>`;
+}
+
+function openBiographyDocumentIconPicker(button) {
+  const row = button?.closest?.('.biography-edit-row');
+  const target = row?.querySelector?.('.me-biography-document-icon, [data-biography-document-field="icon"]');
+  if (!target) return;
+  _biographyDocumentIconTarget = target;
+  if (typeof openIconDirectory === 'function') {
+    openIconDirectory();
+    return;
+  }
+  _biographyDocumentIconTarget = null;
+}
+
+function handleBiographyDocumentIconSelected(event) {
+  const target = _biographyDocumentIconTarget;
+  const src = String(event?.detail?.src || '').trim();
+  if (!target || !target.isConnected || !src) {
+    _biographyDocumentIconTarget = null;
+    return;
+  }
+  target.value = src;
+  target.dispatchEvent(new Event('input', { bubbles: true }));
+  target.dispatchEvent(new Event('change', { bubbles: true }));
+  try {
+    target.focus({ preventScroll: true });
+  } catch {
+    target.focus();
+  }
+  if (typeof closeIconDirectory === 'function') {
+    closeIconDirectory();
+  }
+  _biographyDocumentIconTarget = null;
+}
+
+document.addEventListener('almanach-icon-selected', handleBiographyDocumentIconSelected);
+
 function buildBiographyDocumentRows(documents = [], mode = 'module') {
-  const rows = (Array.isArray(documents) && documents.length ? documents : [{ text: '', link: '' }]);
+  const rows = (Array.isArray(documents) && documents.length ? documents : [{ icon: '', title: '', text: '', link: '' }]);
   return rows.map((item, index) => `
     <div class="biography-edit-row document ${mode === 'inline' ? 'inline-biography-document-row' : 'module-biography-document-row'}">
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-text' : ''}" type="text" value="${escapeHtml(item.text || '')}" placeholder="Dokumenttitel" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="text"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-link' : ''}" type="url" value="${escapeHtml(item.link || '')}" placeholder="Link zur Seite / URL" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="link"` : ''}>
+      ${buildBiographyDocumentIconField(item, index, mode)}
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Überschrift" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="title"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-text' : ''}" type="text" value="${escapeHtml(item.text || '')}" placeholder="Untertext" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="text"` : ''}>
+      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-link' : ''}" type="url" value="${escapeHtml(item.link || '')}" placeholder="Link zur Seite / URL (optional)" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="link"` : ''}>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-document" data-biography-document-index="${index}"` : 'data-module-editor-action="remove-biography-document-row"'}>Löschen</button>
     </div>`).join('');
 }
@@ -145,9 +198,11 @@ function collectModuleBiographyConnections(card) {
 
 function collectModuleBiographyDocuments(card) {
   return Array.from(card.querySelectorAll('.module-biography-document-row')).map(row => ({
+    icon: getTrimmedFormValue(row, '.me-biography-document-icon'),
+    title: getTrimmedFormValue(row, '.me-biography-document-title'),
     text: getTrimmedFormValue(row, '.me-biography-document-text'),
     link: getTrimmedFormValue(row, '.me-biography-document-link')
-  })).filter(item => item.text || item.link);
+  })).filter(item => item.icon || item.title || item.text || item.link);
 }
 
 function buildBiographyConnectionRows(connections = [], mode = 'module') {
@@ -263,7 +318,7 @@ function addModuleBiographyDocumentRow(button) {
   const wrap = pageCard?.querySelector('.module-biography-documents');
   if (!pageCard || !wrap) return;
   wrap.querySelector('.inline-placeholder-note')?.remove();
-  wrap.insertAdjacentHTML('beforeend', buildBiographyDocumentRows([{ text: 'Neues Dokument', link: '' }], 'module'));
+  wrap.insertAdjacentHTML('beforeend', buildBiographyDocumentRows([{ icon: '', text: 'Neuer Eintrag', link: '' }], 'module'));
   syncModuleJsonPreview();
 }
 
@@ -415,7 +470,7 @@ function buildBiographyModuleEditorFields(page) {
             <div class="module-editor-help">Rueckt den Text in den Verbindungen nach rechts.</div>
           </div>
           <div class="module-editor-field">
-            <label>Dokumente-Überschrift</label>
+            <label>Besitz-/Dokumente-Überschrift</label>
             <input type="text" class="me-biography-documents-title" value="${escapeHtml(biography.documentsTitle)}">
           </div>
           <div class="module-editor-field wide">
@@ -432,10 +487,10 @@ function buildBiographyModuleEditorFields(page) {
             </div>
           </div>
           <div class="module-editor-field wide">
-            <label>${escapeHtml(biography.documentsTitle || 'Dokumente & Aufzeichnungen')}</label>
+            <label>${escapeHtml(biography.documentsTitle || 'Eigentum & Besitz')}</label>
             <div class="module-editor-inline" style="justify-content:space-between;">
-              <span class="module-editor-help">Der Link öffnet den Dokumenttitel in einer neuen Seite.</span>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-document-row">+ Dokument</button>
+              <span class="module-editor-help">Icon per Bild-URL oder Zeichen; der optionale Link öffnet den Eintrag in einer neuen Seite.</span>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-document-row">+ Eintrag</button>
             </div>
             <div class="biography-edit-list module-biography-documents">
               ${buildBiographyDocumentRows(biography.documents, 'module')}

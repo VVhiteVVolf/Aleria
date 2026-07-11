@@ -197,12 +197,22 @@ function showModuleEditorForm() {
   document.getElementById('module-editor-gate').style.display = authorized ? 'none' : 'flex';
   document.getElementById('module-editor-body').classList.toggle('visible', authorized);
   if (authorized && _moduleEditorContext?.payload) {
-    populateModuleEditor(_moduleEditorContext.payload, _moduleEditorContext);
+    if (_moduleEditorContext.restoredRecoveryDraft && _moduleEditorContext.recoveryBasePayload) {
+      populateModuleEditor(_moduleEditorContext.recoveryBasePayload, _moduleEditorContext);
+      populateModuleEditor(_moduleEditorContext.payload, _moduleEditorContext, { resetBaseline: false });
+      _moduleEditorContext.restoredRecoveryDraft = false;
+      setModuleEditorStatus('Lokaler Entwurf wiederhergestellt. Speichern bestaetigt die Aenderungen.');
+    } else {
+      populateModuleEditor(_moduleEditorContext.payload, _moduleEditorContext);
+    }
   }
 }
 
 function openModuleEditor(payload, context) {
-  _moduleEditorContext = { ...context, payload };
+  const recovery = typeof resolveModuleEditorRecoveryDraft === 'function'
+    ? resolveModuleEditorRecoveryDraft(payload, context)
+    : { payload, context: { ...context, payload } };
+  _moduleEditorContext = { ...recovery.context, payload: recovery.payload };
   applyModuleEditorContextChrome(_moduleEditorContext);
   _moduleEditorPendingCommentImport = null;
   clearModuleEditorUndoSnapshot();
@@ -337,6 +347,7 @@ async function saveModuleFromEditor() {
     }
 
     saveModuleStore();
+    if (typeof clearModuleEditorRecoveryDraft === 'function') clearModuleEditorRecoveryDraft(context);
     const pendingCommentImport = _moduleEditorPendingCommentImport;
     let importedCommentSummary = null;
     if (pendingCommentImport) {
@@ -401,6 +412,7 @@ function deleteModuleFromEditor() {
   }
   const result = deleteModuleById(context.sourceEntryId, { requireCode: true, deferSave: true });
   if (!result.ok) return;
+  if (typeof clearModuleEditorRecoveryDraft === 'function') clearModuleEditorRecoveryDraft(context);
   saveModuleStore();
   setModuleEditorDirtyState(false);
   closeModuleEditor();

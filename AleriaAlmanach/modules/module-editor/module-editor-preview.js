@@ -121,7 +121,13 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   const previewSize = getModuleDisplaySize(previewEntry);
   const previewWidth = Math.round(1280 * (previewSize.width / 100));
   const previewMinHeight = Math.round(960 * (previewSize.height / 100));
-  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
+  // Biography/house dossiers cap the card height so their three columns scroll
+  // internally (like in the modal) instead of shrinking the whole preview scale.
+  const previewTemplateId = typeof getModuleTemplateForPage === 'function' ? getModuleTemplateForPage(page).id : '';
+  const fixedHeightStyle = previewTemplateId === 'object-profile' || previewTemplateId === 'houses'
+    ? `height:${previewMinHeight}px;`
+    : '';
+  frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;${fixedHeightStyle}">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
   if (typeof restoreInlinePreviewRuntimeState === 'function') {
     restoreInlinePreviewRuntimeState(previousRuntimeState, frame);
   }

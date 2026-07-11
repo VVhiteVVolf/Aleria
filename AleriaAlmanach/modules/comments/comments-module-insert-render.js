@@ -157,6 +157,7 @@ const COMMENT_MODULE_REVEAL_VARIANTS = {
   artifact: { className: 'relic', action: 'Fundstück betrachten' },
   recipe: { className: 'relic', action: 'Rezept studieren' },
   bestiary: { className: 'bestiary', action: 'Kreatur studieren' },
+  guild: { className: 'house', action: 'Gildenbuch öffnen' },
   house: { className: 'house', action: 'Siegelbuch öffnen' },
   session: { className: 'scene', action: 'Szene betreten' },
   story: { className: 'chronicle', action: 'Kapitel aufschlagen' }

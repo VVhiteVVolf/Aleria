@@ -1,6 +1,6 @@
 # Modul-Editor-Coverage
 
-Stand: 2026-06-03
+Stand: 2026-07-11
 
 Ziel: Jede Live-Darstellung eines Modultyps muss im Bearbeitungsmodus deckend und organisch bearbeitbar sein. Sichtbare Felder duerfen nicht nur ueber Rohdaten, JSON, Pipe-Listen oder versteckte Sonderwege erreichbar sein.
 
@@ -32,6 +32,31 @@ Ziel: Jede Live-Darstellung eines Modultyps muss im Bearbeitungsmodus deckend un
 | Turnierliga | Tabelle, Matchups, Sidebarlisten, Wetter, Chronik | strukturiert, eigener Inline-Editor | niedrig | Visuelle Feinkontrolle mit voller Liga |
 | Kaste / Klasse | Kopf, Bilder, Intro, Informationen, Symbolik, Rollen, Faehigkeiten, Privilegien, Pflichten, Organisation, Vertreter, Links, Zitat, Footer | strukturiert, eigener grosser Editor und eigener Inline-Editor | niedrig | Visuelle Feinkontrolle mit echten Wappen/Bildern |
 | Gerichtsakte | Aktenkopf, Falluebersicht, Zusammenfassung, Anklagepunkte, Daten, Beteiligte, Beweise, Zeugen, Chronologie, offene Fragen, Links, Aktennotiz | strukturiert, eigener Renderer, grosser Editor und Inline-Editor; Export/Import- und Layout-Smokes bestanden | niedrig | Visuelle Feinkontrolle mit echten Aktenbildern |
+| Kopfgeldakte | Aktenkopf, Zielperson, Delikte, Hinweise, Belohnung, Bildsteuerung | grosser und Inline-Editor vorhanden | mittel | Roundtrip- und Browser-Smoke ergaenzen |
+| Warenverzeichnis | Tabellen, Kategorien, Spalten, Waren, Infobloecke, Angebote | grosser und Inline-Editor vorhanden | mittel | Kategorie- und Referenzintegritaet automatisieren |
+| Handelskatalog | Kategorien, Artikel, Eigenschaften, Attribute, Fusskarten | grosser und Inline-Editor vorhanden | mittel | Roundtrip mit maximalen Listen pruefen |
+| Kartenmodul | Reiter, Bereiche und Kartenreferenz | grosser und Inline-Editor vorhanden | mittel | Fehlerzustand fuer ungueltige Kartenreferenz pruefen |
+| Landingpage | Kopfbereich, Mitglieder, Quests, Notizen und Listen | grosser und Inline-Editor vorhanden | mittel | lange Inhalte und leere Sektionen pruefen |
+| Gaesteregister | Sektionen, Gaeste, Bilder und Registerzeilen | grosser und Inline-Editor vorhanden | mittel | Grenzwerte und Sortierung pruefen |
+| Charakterinventar | Charakterdaten, Kategorien, Gegenstaende und Gefaehrten | grosser und Inline-Editor vorhanden; Item-Datenbank angebunden | hoch | Referenzintegritaet und vollstaendigen Roundtrip priorisieren |
+| Hierarchie | Baeume, Ebenen, Knoten und Details | grosser und Inline-Editor vorhanden | hoch | Knotenreferenzen beim Loeschen absichern |
+| Familie | Stammbaueme, Ebenen, Personen und Verbindungen | grosser und Inline-Editor vorhanden | hoch | Verbindungen und geloeschte Personen absichern |
+| Haus | Hausdaten, Infotabelle, Listen und Beziehungen | schema-basierte Zeilen in grossem und Inline-Editor | mittel | Schema-Roundtrip und visuelle Regression ergaenzen |
+
+## Technische Absicherung 2026-07-11
+
+- Der Orte-Loader ist mit allen Modul-/Inline-Editor-Skripten, Spezialrenderern und `module-page-*`-Styles des Hauptalmanachs synchronisiert.
+- Die Registry validiert 24 Templates und ihre Editor-/Renderer-Vertraege zur Laufzeit.
+- 69 konkrete Laufzeitabhaengigkeiten werden auf Verfuegbarkeit geprueft.
+- `scripts/check-module-template-assets.js` prueft Loader-Paritaet, Dateipfade, Duplikate, Registry-/Abhaengigkeitsdeckung und Funktionsdeklarationen.
+- `scripts/check-module-template-roundtrip.js` prueft 24 vollstaendige Modul-JSON-Roundtrips, 27 Defaultseiten, Typmarker, Sanitizer-Idempotenz sowie Referenzintegritaet fuer Familie, Hierarchie und Charakterinventar.
+- Benutzerdefinierte Charakterinventar-Kategorien und ihre Item-Zuordnungen bleiben nach Sanitizer/JSON-Roundtrip erhalten; verwaiste Zuordnungen fallen kontrolliert auf `other` zurueck.
+- Die Leerseitenpruefung verwendet die zentrale Template-Registry und erkennt auch neuere spezialisierte Seitentypen als Inhalt.
+- Die Assetvalidierung deckt jetzt auch Kopfgeldakte, Kaste, Gerichtsakte, Hierarchie, Familie, Haus, Biografie, Waren, Handelskatalog und Kartenreiter ab.
+- Der grosse Modul-Editor speichert ungespeicherte lokale Entwuerfe verzoegert und pro Modul isoliert. Entwuerfe koennen beim erneuten Oeffnen wiederhergestellt werden, verfallen nach sieben Tagen und werden nach erfolgreichem Speichern oder Loeschen entfernt. Szenenkommentar-Module sind davon ausgenommen.
+- Der bestehende Undo-Snapshot gilt neben Import und Templatewechsel jetzt auch fuer alle delegierten `remove-*`-Aktionen des grossen Editors.
+- Der Asset-/Registry-Check gleicht jetzt auch alle Registry-Seitentypen mit dem Inline-Dispatcher ab und prueft die Existenz der aufgerufenen Inline-Builder.
+- Ein Headless-Chrome-Smoke ueber einen lokalen HTTP-Server ist bestanden: HTTP 200, vollstaendiger DOM-Aufbau, Almanach-Titel und Modul-Editor-Overlay vorhanden, keine erkannten Lade-, Reference- oder Syntaxfehler. Eine manuelle visuelle Screenshot-Regression bleibt optional.
 
 ## Aktueller Arbeitsabschnitt
 

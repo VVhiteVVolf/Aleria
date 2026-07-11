@@ -48,10 +48,13 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'add-biography-ability-row',
   'remove-biography-ability-row',
   'pick-biography-ability-icon',
+  'pick-biography-document-icon',
   'add-biography-section-row',
   'remove-biography-section-row',
   'add-house-stat-row',
   'remove-house-stat-row',
+  'add-guild-stat-row',
+  'remove-guild-stat-row',
   'schema-add-row',
   'schema-remove-row',
   'schema-pick-icon',
@@ -166,6 +169,10 @@ function handleModuleEditorActionClick(event) {
 
   event.preventDefault();
 
+  if (action.startsWith('remove-')) {
+    captureModuleEditorUndoSnapshot('Löschen');
+  }
+
   if (action === 'close') {
     closeModuleEditor();
     return;
@@ -239,7 +246,7 @@ function handleModuleEditorActionClick(event) {
     return;
   }
   if (action === 'undo-import') {
-    undoLastModuleEditorImport();
+    undoLastModuleEditorChange();
     return;
   }
   if (action === 'delete-module') {
@@ -354,6 +361,10 @@ function handleModuleEditorActionClick(event) {
     openBiographyAbilityIconPicker(trigger);
     return;
   }
+  if (action === 'pick-biography-document-icon') {
+    openBiographyDocumentIconPicker(trigger);
+    return;
+  }
   if (action === 'add-biography-section-row') {
     addModuleBiographySectionRow(trigger, trigger.dataset.biographySectionPosition || 'afterIntro');
     return;
@@ -368,6 +379,14 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-house-stat-row') {
     removeModuleHouseStatRow(trigger);
+    return;
+  }
+  if (action === 'add-guild-stat-row') {
+    addModuleGuildStatRow(trigger);
+    return;
+  }
+  if (action === 'remove-guild-stat-row') {
+    removeModuleGuildStatRow(trigger);
     return;
   }
   if (action === 'schema-add-row') {

@@ -130,6 +130,39 @@ function itemDbBuildGlobalPayload() {
   };
 }
 
+function itemDbGetUtf8Bytes(value) {
+  const text = typeof value === 'string' ? value : JSON.stringify(value ?? null);
+  return typeof TextEncoder !== 'undefined'
+    ? new TextEncoder().encode(text).length
+    : unescape(encodeURIComponent(text)).length;
+}
+
+function itemDbFormatBytes(bytes) {
+  const value = Number(bytes) || 0;
+  if (value >= 1024 * 1024) return `${(value / 1024 / 1024).toFixed(2)} MB`;
+  if (value >= 1024) return `${Math.round(value / 1024)} KB`;
+  return `${value} B`;
+}
+
+function itemDbGetStorageMetrics(payload = itemDbExportDatabasePayload()) {
+  const records = [];
+  (payload.scanCache || []).forEach((item, index) => records.push({ label: item?.title || item?.canonicalKey || `Scan ${index + 1}`, value: item }));
+  (payload.customItems || []).forEach((item, index) => records.push({ label: item?.title || item?.canonicalKey || `Eigenes Item ${index + 1}`, value: item }));
+  Object.entries(payload.overrides || {}).forEach(([key, value]) => records.push({ label: `Überschreibung ${key}`, value }));
+  records.push({
+    label: 'Konfiguration',
+    value: { deletedKeys: payload.deletedKeys || [], config: payload.config || {} }
+  });
+  const measured = records.map(record => ({ ...record, bytes: itemDbGetUtf8Bytes(record.value) }));
+  const largest = measured.reduce((current, record) => record.bytes > (current?.bytes || 0) ? record : current, null);
+  return {
+    totalBytes: itemDbGetUtf8Bytes(payload),
+    largestEntryBytes: largest?.bytes || 0,
+    largestEntryLabel: largest?.label || 'Keine Einträge',
+    documentCount: measured.length
+  };
+}
+
 function itemDbScheduleGlobalSave(reason = 'change') {
   if (_itemDbApplyingRemote || !_itemDbGlobalSyncReady) return;
   window.clearTimeout(_itemDbGlobalSaveTimer);

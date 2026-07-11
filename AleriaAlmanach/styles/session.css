@@ -195,22 +195,25 @@
   .session-status-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
+    gap: 0.55rem;
     margin: 0.7rem 0 0;
   }
   .session-status-grid > div {
     min-width: 0;
-    padding: 0.5rem 0.55rem;
-    border-bottom: 1px dashed rgba(139,105,20,0.16);
+    padding: 0.55rem 0.65rem;
+    border: 1px solid rgba(116,78,15,0.52);
+    background: linear-gradient(180deg, #e3cc95, #d2b474);
+    box-shadow: 2px 2px 0 rgba(48,29,7,0.18), inset 0 1px 0 rgba(255,248,224,0.46);
   }
-  .session-status-grid > div:nth-child(odd) { padding-left: 0; }
-  .session-status-grid > div.wide { grid-column: 1 / -1; padding-inline: 0; }
+  .session-status-grid > div:nth-child(odd) { padding-left: 0.65rem; }
+  .session-status-grid > div.wide { grid-column: 1 / -1; padding-inline: 0.65rem; }
   .session-status-grid dt,
   .session-status-grid dd { margin: 0; }
   .session-status-grid dd {
     margin-top: 0.24rem;
-    color: var(--ink-faded);
-    font-size: 0.8rem;
+    color: #34230a;
+    font-size: 0.82rem;
+    font-weight: 600;
     line-height: 1.35;
     overflow-wrap: anywhere;
   }

@@ -1475,11 +1475,104 @@ const MODULE_TEMPLATE_REGISTRY = {
     collectEditorPage: (card, page) => collectHouseModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildHousePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'house')
+  },
+  guild: {
+    id: 'guild',
+    pageType: 'guild',
+    pageFlag: 'guildPage',
+    label: 'Gilden-Template',
+    pageLabel: 'Gilden-Template',
+    defaultTitle: 'Neue Gilde',
+    defaultSubtitle: 'Gilde, Orden oder Organisation',
+    entryType: 'Gilde',
+    typeMatchers: ['gilde', 'gilden', 'gildenakte', 'zunft', 'bruderschaft', 'syndikat'],
+    createPages: () => createGuildTemplatePages(),
+    createPage: index => createDefaultGuildPage(index),
+    buildEditorFields: page => buildGuildModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectGuildModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildGuildPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'guild')
   }
 };
 
 const MODULE_TEMPLATE_OPTIONS = Object.values(MODULE_TEMPLATE_REGISTRY)
   .map(({ id, label }) => ({ id, label }));
+
+const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
+  story: [],
+  profiles: ['buildProfilesModuleEditorFields', 'collectProfilesModuleEditorPage', 'buildProfilesPage'],
+  wanted: ['buildWantedModuleEditorFields', 'collectWantedModuleEditorPage', 'buildWantedPage'],
+  'character-inventory': ['buildCharacterInventoryModuleEditorFields', 'collectCharacterInventoryModuleEditorPage', 'buildCharacterInventoryPage'],
+  'guest-register': ['buildGuestRegisterModuleEditorFields', 'collectGuestRegisterModuleEditorPage', 'buildGuestRegisterPage'],
+  'bounty-file': ['buildBountyFileModuleEditorFields', 'collectBountyFileModuleEditorPage', 'buildBountyFilePage'],
+  goods: ['buildGoodsModuleEditorFields', 'collectGoodsModuleEditorPage', 'buildGoodsTablePage'],
+  'trade-catalog': ['buildTradeCatalogModuleEditorFields', 'collectTradeCatalogModuleEditorPage', 'buildTradeCatalogPage'],
+  'map-template': ['buildMapTemplateModuleEditorFields', 'collectMapTemplateModuleEditorPage', 'buildMapTemplatePage'],
+  landing: ['buildLandingModuleEditorFields', 'collectLandingModuleEditorPage', 'buildLandingPage'],
+  artifact: ['buildArtifactModuleEditorFields', 'collectArtifactModuleEditorPage', 'buildArtifactPage'],
+  recipe: ['buildRecipeModuleEditorFields', 'collectRecipeModuleEditorPage', 'buildRecipePage'],
+  scene: ['buildSceneModuleEditorFields', 'collectSceneModuleEditorPage', 'buildSceneBlocksPage'],
+  session: ['buildSessionModuleEditorFields', 'collectSessionModuleEditorPage', 'buildSessionPage'],
+  hierarchy: ['buildHierarchyModuleEditorFields', 'collectHierarchyModuleEditorPage', 'buildHierarchyPage'],
+  family: ['buildFamilyModuleEditorFields', 'collectFamilyModuleEditorPage', 'buildFamilyPage'],
+  'object-profile': ['buildBiographyModuleEditorFields', 'collectBiographyModuleEditorPage', 'buildBiographyPage'],
+  bestiary: ['buildBestiaryModuleEditorFields', 'collectBestiaryModuleEditorPage', 'buildBestiaryPage'],
+  'quest-file': ['buildQuestFileModuleEditorFields', 'collectQuestFileModuleEditorPage', 'buildQuestFilePage'],
+  tournament: ['buildTournamentModuleEditorFields', 'collectTournamentModuleEditorPage', 'buildTournamentPage'],
+  'tournament-league': ['buildTournamentLeagueModuleEditorFields', 'collectTournamentLeagueModuleEditorPage', 'buildTournamentLeaguePage'],
+  caste: ['buildCasteModuleEditorFields', 'collectCasteModuleEditorPage', 'buildCastePage'],
+  court: ['buildCourtModuleEditorFields', 'collectCourtModuleEditorPage', 'buildCourtPage'],
+  houses: ['buildHouseModuleEditorFields', 'collectHouseModuleEditorPage', 'buildHousePage'],
+  guild: ['buildGuildModuleEditorFields', 'collectGuildModuleEditorPage', 'buildGuildPage']
+};
+
+function validateModuleTemplateRegistry({ report = true } = {}) {
+  const errors = [];
+  const ids = new Set();
+  const pageTypes = new Map();
+
+  Object.entries(MODULE_TEMPLATE_REGISTRY).forEach(([registryKey, template]) => {
+    const label = `Template "${registryKey}"`;
+    if (!template || typeof template !== 'object') {
+      errors.push(`${label} ist keine gueltige Definition.`);
+      return;
+    }
+    if (!template.id || template.id !== registryKey) errors.push(`${label} besitzt keine passende ID.`);
+    if (ids.has(template.id)) errors.push(`${label} verwendet eine doppelte ID.`);
+    ids.add(template.id);
+
+    if (!template.pageType) {
+      errors.push(`${label} besitzt keinen Seitentyp.`);
+    } else {
+      const owner = pageTypes.get(template.pageType);
+      if (owner && owner !== registryKey) errors.push(`${label} teilt den Seitentyp "${template.pageType}" mit "${owner}".`);
+      pageTypes.set(template.pageType, registryKey);
+    }
+
+    const contracts = registryKey === 'story'
+      ? ['createPages', 'createPage']
+      : ['createPages', 'createPage', 'buildEditorFields', 'collectEditorPage', 'renderPage', 'renderInlinePage'];
+    contracts.forEach(contract => {
+        if (typeof template[contract] !== 'function') errors.push(`${label}: ${contract} fehlt.`);
+      });
+
+    (MODULE_TEMPLATE_RUNTIME_DEPENDENCIES[registryKey] || []).forEach(dependency => {
+      if (typeof globalThis[dependency] !== 'function') errors.push(`${label}: Laufzeitabhaengigkeit ${dependency} fehlt.`);
+    });
+  });
+
+  Object.keys(MODULE_TEMPLATE_RUNTIME_DEPENDENCIES).forEach(templateId => {
+    if (!MODULE_TEMPLATE_REGISTRY[templateId]) errors.push(`Abhaengigkeiten fuer unbekanntes Template "${templateId}" hinterlegt.`);
+  });
+
+  const result = { ok: errors.length === 0, templateCount: ids.size, errors };
+  if (report && errors.length) console.error('Modultemplate-Registry ist unvollstaendig.', result);
+  return result;
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => validateModuleTemplateRegistry(), { once: true });
+}
 
 function getModuleTemplateDefinition(templateId = 'story') {
   return MODULE_TEMPLATE_REGISTRY[templateId] || MODULE_TEMPLATE_REGISTRY.story;
@@ -1610,13 +1703,17 @@ function createObjectProfileTemplatePages() {
       biographyPage: true,
       description: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
       stats: [
-        ['Vollständiger Name', 'Noch festlegen'],
+        ['Voller Name', 'Noch festlegen'],
         ['Titel', 'Noch festlegen'],
-        ['Haus', 'Noch festlegen'],
-        ['Geburt', 'Noch festlegen'],
         ['Alter', 'Noch festlegen'],
+        ['Geburtsjahr', 'Noch festlegen'],
+        ['Herkunft', 'Noch festlegen'],
+        ['Eltern', 'Noch festlegen'],
+        ['Klasse', 'Noch festlegen'],
         ['Spezialisierung', 'Noch festlegen'],
-        ['Rang', 'Noch festlegen'],
+        ['Rolle', 'Noch festlegen'],
+        ['Lehensherr', 'Noch festlegen'],
+        ['Zugehörigkeit', 'Noch festlegen'],
         ['Status', 'Aktiv']
       ],
       biography: {
@@ -1625,13 +1722,13 @@ function createObjectProfileTemplatePages() {
         connectionTextOffset: 0,
         biographyTitle: 'Biografie',
         biographyText: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
-        abilitiesTitle: 'Fähigkeiten & Spezialgebiete',
+        abilitiesTitle: 'Persönlichkeit',
         abilities: [
-          { icon: '✦', title: 'Spezialgebiet', detail: 'Kurze Beschreibung der besonderen Fähigkeit.' },
-          { icon: '✦', title: 'Einfluss', detail: 'Wo die Person sichtbar wirkt oder gefürchtet ist.' }
+          { icon: '✦', title: 'Wesenszug', detail: 'Prägender Charakterzug der Person.' },
+          { icon: '✦', title: 'Stärken & Schwächen', detail: 'Was die Person auszeichnet und wo sie verwundbar ist.' }
         ],
         extraSections: [],
-        historyTitle: 'Geschichte & Wirkung',
+        historyTitle: 'Hintergrund',
         historyText: 'Was hat diese Person geprägt, verändert oder ausgelöst? Welche Spuren bleiben?',
         worksTitle: 'Bekannte Werke',
         works: ['Erstes bekanntes Werk oder Ereignis', 'Zweites bekanntes Werk oder Ereignis'],
@@ -1644,8 +1741,11 @@ function createObjectProfileTemplatePages() {
           { type: 'heading', title: 'Personen', detail: '' },
           { type: 'connection', name: 'Verbündete Person', detail: 'Rolle oder Beziehung', image: '', imageFormat: 'portrait' }
         ],
-        documentsTitle: 'Dokumente & Aufzeichnungen',
-        documents: ['Archivnotiz oder Dokument'],
+        documentsTitle: 'Eigentum & Besitz',
+        documents: [
+          { icon: '', title: 'Erbstück', text: 'Ein Gegenstand mit Geschichte oder besonderer Bedeutung.', link: '' },
+          { icon: '', title: 'Urkunde', text: 'Landrecht, Schuldschein oder Freibrief.', link: '' }
+        ],
         footer: 'Disziplin ist unser Schild. Wissen ist unsere Waffe.'
       },
       commentSequence: [],
@@ -1671,10 +1771,16 @@ function createDefaultHousePage(index = 0) {
     housePage: true,
     description: 'Beschreibe Ursprung, Werte und die gesellschaftliche Stellung dieses Hauses.',
     stats: [
-      ['Vollständiger Name', 'Haus Noch festlegen'],
-      ['Sitz', 'Noch festlegen'],
+      ['Voller Name', 'Haus Noch festlegen'],
+      ['Stammsitz', 'Noch festlegen'],
       ['Gegründet', 'Noch festlegen'],
       ['Oberhaupt', 'Noch festlegen'],
+      ['Erbe', 'Noch festlegen'],
+      ['Lehensherr', 'Noch festlegen'],
+      ['Vasallen', 'Noch festlegen'],
+      ['Ländereien', 'Noch festlegen'],
+      ['Wappen', 'Noch festlegen'],
+      ['Hausfarben', 'Noch festlegen'],
       ['Rang', 'Noch festlegen'],
       ['Status', 'Aktiv']
     ],
@@ -1707,8 +1813,11 @@ function createDefaultHousePage(index = 0) {
         { type: 'heading', title: 'Rivalen', detail: '' },
         { type: 'connection', name: 'Rivalisierendes Haus', detail: 'Grund der Rivalität', image: '', imageFormat: 'square' }
       ],
-      documentsTitle: 'Dokumente & Urkunden',
-      documents: ['Gründungsurkunde oder Wappenbrief'],
+      documentsTitle: 'Eigentum & Besitz',
+      documents: [
+        { icon: '', title: 'Stammsitz', text: 'Ländereien, Burg und Einkünfte des Hauses.', link: '' },
+        { icon: '', title: 'Wappenbrief', text: 'Gründungsurkunde und verbriefte Rechte.', link: '' }
+      ],
       footer: 'Blut, Ehre und das Wort des Hauses.'
     },
     commentSequence: [],
@@ -1719,6 +1828,84 @@ function createDefaultHousePage(index = 0) {
 
 function createHouseTemplatePages() {
   return [createDefaultHousePage(0)];
+}
+
+// Gilden-Template — built on the houses template mechanics (biography shell + header with
+// motto and emblem) but tailored to a guild/organisation: guild info table, "Führung &
+// Beziehungen" with heading separators, a contracts list between relations and property,
+// and a switchable 2:3 / 1:1 left portrait.
+function createDefaultGuildPage(index = 0) {
+  return {
+    pageTitle: `${getRomanPageLabel(index)} — Gilde`,
+    image: '',
+    imageWidth: 30,
+    imageSquare: true,
+    guildPage: true,
+    description: 'Beschreibe Zweck, Wirkungsfeld und den Ruf dieser Gilde.',
+    stats: [
+      ['Voller Name', 'Noch festlegen'],
+      ['Art', 'Gilde / Orden / Bund'],
+      ['Hauptsitz', 'Noch festlegen'],
+      ['Gegründet', 'Noch festlegen'],
+      ['Anführer', 'Noch festlegen'],
+      ['Mitglieder', 'Noch festlegen'],
+      ['Aufnahme', 'Noch festlegen'],
+      ['Einflussgebiet', 'Noch festlegen'],
+      ['Schutzherr', 'Noch festlegen'],
+      ['Rivalen', 'Noch festlegen'],
+      ['Ruf', 'Noch festlegen'],
+      ['Status', 'Aktiv']
+    ],
+    guild: {
+      crestImage: '',
+      portraitFormat: 'portrait',
+      sideWidth: 100,
+      connectionPortraitHeight: 68,
+      connectionTextOffset: 0,
+      biographyTitle: 'Übersicht',
+      biographyText: 'Beschreibe Zweck, Wirkungsfeld und den Ruf dieser Gilde.',
+      abilitiesTitle: 'Eigenschaften',
+      abilities: [
+        { icon: '../IconOrdner/Organisationsicons/Diplomatie.png', title: 'Einfluss', detail: 'Wo die Gilde wirkt und wessen Ohr sie hat.' },
+        { icon: '../IconOrdner/Organisationsicons/Militär.png', title: 'Mittel', detail: 'Womit die Gilde ihre Ziele durchsetzt.' },
+        { icon: '✦', title: 'Besonderheit', detail: 'Was diese Gilde von anderen unterscheidet.' }
+      ],
+      extraSections: [],
+      historyTitle: 'Geschichte',
+      historyText: 'Wie die Gilde entstand, welche Wendepunkte sie prägten und welche Spuren sie hinterlässt.',
+      worksTitle: 'Sonstiges',
+      works: ['Ein bekanntes Werk, Ritual oder Ereignis der Gilde.', 'Ein zweiter erwähnenswerter Punkt.'],
+      triviaTitle: 'Trivia',
+      trivia: ['Ein prägnantes Detail über die Gilde.', 'Ein Gerücht oder eine Eigenheit.'],
+      connectionsTitle: 'Führung & Beziehungen',
+      connections: [
+        { type: 'heading', title: 'Führung', detail: '' },
+        { type: 'connection', name: 'Gildenmeister', detail: 'Führt die Gilde', image: '', imageFormat: 'portrait' },
+        { type: 'connection', name: 'Rechte Hand', detail: 'Stellvertretung und Alltagsgeschäft', image: '', imageFormat: 'portrait' },
+        { type: 'heading', title: 'Beziehungen', detail: '' },
+        { type: 'connection', name: 'Verbündete Organisation', detail: 'Art des Bündnisses', image: '', imageFormat: 'square' },
+        { type: 'connection', name: 'Rivalisierende Gilde', detail: 'Grund der Rivalität', image: '', imageFormat: 'square' }
+      ],
+      contractsTitle: 'Verträge',
+      contracts: [
+        { icon: '', title: 'Abkommen', text: 'Vereinbarung mit einer Stadt, einem Haus oder einer Krone.', link: '' },
+        { icon: '', title: 'Laufender Auftrag', text: 'Aktuelle Verpflichtung oder offener Dienst der Gilde.', link: '' }
+      ],
+      documentsTitle: 'Eigentum & Besitz',
+      documents: [
+        { icon: '', title: 'Gildenhaus', text: 'Werkstätten, Kontore oder Lager der Gilde.', link: '' },
+        { icon: '', title: 'Siegel & Kasse', text: 'Gildensiegel, Archiv und gemeinsames Vermögen.', link: '' }
+      ],
+      footer: 'Die Gilde gibt. Die Gilde nimmt. Die Gilde bleibt.'
+    },
+    commentSequence: [],
+    quote: '„Ein Leitsatz oder Motto dieser Gilde.“',
+    quoteBy: 'Gildenbuch'
+  };
+}
+
+function createGuildTemplatePages() {
+  return [createDefaultGuildPage(0)];
 }
 
 function createProfileTemplatePages() {

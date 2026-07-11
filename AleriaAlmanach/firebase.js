@@ -19,6 +19,8 @@
     const MODULE_STORE_SPLIT_FORMAT = 'split-v1';
     const ITEM_DATABASE_COLLECTION = 'item_database';
     const ITEM_DATABASE_DOC = 'global';
+    const ITEM_DATABASE_ENTRY_COLLECTION = 'item_database_entries';
+    const ITEM_DATABASE_SPLIT_FORMAT = 'split-v1';
     const COMMENT_ADMIN_CODE = '7777';
 
     function notifyAppStatus(message, type = 'error') {
@@ -86,6 +88,116 @@
         }
       }
       return data?.entry && typeof data.entry === 'object' ? data.entry : null;
+    }
+
+    function getItemDatabaseEntryDocId(kind, key) {
+      const safeKind = String(kind || 'item').replace(/[^a-z0-9-]/gi, '-');
+      const safeKey = encodeURIComponent(String(key || '').trim()).replace(/\./g, '%2E');
+      return `${safeKind}--${safeKey}`;
+    }
+
+    function buildSplitItemDatabase(payload = {}) {
+      const docs = [];
+      const addEntries = (kind, items, getKey) => {
+        (Array.isArray(items) ? items : []).forEach((item, index) => {
+          const key = String(getKey(item, index) || '').trim();
+          if (!key) return;
+          docs.push({
+            id: getItemDatabaseEntryDocId(kind, key),
+            data: {
+              kind,
+              key,
+              valueJson: JSON.stringify(item),
+              updatedAtClient: Number(payload.updatedAtClient) || Date.now(),
+              schemaVersion: 1
+            }
+          });
+        });
+      };
+      addEntries('scan', payload.scanCache, (item, index) => item?.canonicalKey || item?.id || `scan-${index + 1}`);
+      addEntries('custom', payload.customItems, (item, index) => item?.canonicalKey || item?.id || `custom-${index + 1}`);
+      Object.entries(payload.overrides || {}).forEach(([key, value]) => {
+        docs.push({
+          id: getItemDatabaseEntryDocId('override', key),
+          data: {
+            kind: 'override',
+            key,
+            valueJson: JSON.stringify(value || {}),
+            updatedAtClient: Number(payload.updatedAtClient) || Date.now(),
+            schemaVersion: 1
+          }
+        });
+      });
+      return {
+        docs,
+        manifest: {
+          format: ITEM_DATABASE_SPLIT_FORMAT,
+          schema: payload.schema || 'aleria-item-db-export-v1',
+          exportedAt: payload.exportedAt || new Date().toISOString(),
+          updatedAtClient: Number(payload.updatedAtClient) || Date.now(),
+          entryIds: docs.map(item => item.id),
+          deletedKeys: Array.isArray(payload.deletedKeys) ? payload.deletedKeys : [],
+          config: payload.config && typeof payload.config === 'object' ? payload.config : {}
+        }
+      };
+    }
+
+    function readSplitItemDatabaseValue(data) {
+      try {
+        return JSON.parse(String(data?.valueJson || 'null'));
+      } catch(error) {
+        console.warn('item database entry JSON parse failed:', data?.key, error);
+        return null;
+      }
+    }
+
+    async function loadSplitItemDatabase(data = {}) {
+      const manifest = data?.itemDatabaseManifest;
+      if (!manifest || manifest.format !== ITEM_DATABASE_SPLIT_FORMAT) return null;
+      const ids = new Set(Array.isArray(manifest.entryIds) ? manifest.entryIds : []);
+      const snap = await getDocs(collection(db, ITEM_DATABASE_ENTRY_COLLECTION));
+      const scanCache = [];
+      const customItems = [];
+      const overrides = {};
+      snap.docs.forEach(item => {
+        if (!ids.has(item.id)) return;
+        const entry = item.data();
+        const value = readSplitItemDatabaseValue(entry);
+        if (!value) return;
+        if (entry.kind === 'scan') scanCache.push(value);
+        else if (entry.kind === 'custom') customItems.push(value);
+        else if (entry.kind === 'override' && entry.key) overrides[String(entry.key)] = value;
+      });
+      return {
+        schema: manifest.schema || 'aleria-item-db-export-v1',
+        exportedAt: manifest.exportedAt || new Date().toISOString(),
+        updatedAtClient: Number(manifest.updatedAtClient) || 0,
+        scanCache,
+        customItems,
+        overrides,
+        deletedKeys: Array.isArray(manifest.deletedKeys) ? manifest.deletedKeys : [],
+        config: manifest.config && typeof manifest.config === 'object' ? manifest.config : {}
+      };
+    }
+
+    async function saveSplitItemDatabase(payload = {}) {
+      const split = buildSplitItemDatabase(payload);
+      const nextIds = new Set(split.docs.map(item => item.id));
+      const existing = await getDocs(collection(db, ITEM_DATABASE_ENTRY_COLLECTION));
+      await Promise.all(split.docs.map(item => setDoc(doc(db, ITEM_DATABASE_ENTRY_COLLECTION, item.id), {
+        ...item.data,
+        updatedAt: serverTimestamp()
+      }, { merge: false })));
+      await setDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC), {
+        itemDatabaseType: 'almanach-item-database',
+        itemDatabaseMode: ITEM_DATABASE_SPLIT_FORMAT,
+        itemDatabaseManifest: split.manifest,
+        updatedAtClient: split.manifest.updatedAtClient,
+        updatedAt: serverTimestamp()
+      }, { merge: true });
+      await Promise.all(existing.docs
+        .filter(item => !nextIds.has(item.id))
+        .map(item => deleteDoc(doc(db, ITEM_DATABASE_ENTRY_COLLECTION, item.id))));
     }
 
     function buildSplitModuleStore(data) {
@@ -752,6 +864,12 @@
           const snap = await getDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC));
           if (!snap.exists()) return null;
           const data = snap.data();
+          try {
+            const splitPayload = await loadSplitItemDatabase(data);
+            if (splitPayload) return splitPayload;
+          } catch(splitError) {
+            console.warn('loadItemDatabase split fallback:', splitError);
+          }
           return data?.payload && typeof data.payload === 'object' ? data.payload : null;
         } catch(e) {
           console.error('loadItemDatabase:', e);
@@ -762,6 +880,13 @@
       async saveItemDatabase(payload) {
         try {
           const safePayload = payload && typeof payload === 'object' ? payload : {};
+          try {
+            await saveSplitItemDatabase(safePayload);
+            return;
+          } catch(splitError) {
+            console.warn('saveItemDatabase split fallback:', splitError);
+            notifyAppStatus('Geteilte Item-Speicherung nicht erreichbar. Der bisherige Speicher wird weiterverwendet.', 'error');
+          }
           await setDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC), {
             itemDatabaseType: 'almanach-item-database',
             schema: safePayload.schema || 'aleria-item-db-export-v1',
@@ -778,7 +903,15 @@
       subscribeItemDatabase(onNext, onError) {
         return onSnapshot(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC), snap => {
           const data = snap.exists() ? snap.data() : null;
-          onNext(data?.payload && typeof data.payload === 'object' ? data.payload : null);
+          (async () => {
+            try {
+              const splitPayload = await loadSplitItemDatabase(data);
+              onNext(splitPayload || (data?.payload && typeof data.payload === 'object' ? data.payload : null));
+            } catch(error) {
+              console.error('subscribeItemDatabase split load:', error);
+              if (onError) onError(error);
+            }
+          })();
         }, error => {
           console.error('subscribeItemDatabase:', error);
           notifyAppStatus(getFirebaseErrorMessage(error, 'Live-Synchronisation des Item-Registers konnte nicht verbunden werden.'));

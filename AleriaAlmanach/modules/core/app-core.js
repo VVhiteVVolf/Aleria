@@ -246,7 +246,9 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   const commentThreadKey = String(page.commentThreadKey || '').trim();
   if (/^[a-z0-9-]{1,64}$/i.test(commentThreadKey)) next.commentThreadKey = commentThreadKey;
 
-  if (page.image != null) next.image = String(page.image || '').trim() || null;
+  if (Object.prototype.hasOwnProperty.call(page, 'image')) {
+    next.image = String(page.image || '').trim() || null;
+  }
   if (page.imageWidth != null) {
     const width = Number(page.imageWidth);
     const maxImageWidth = page.castePage || page.landingPage || page.characterInventoryPage ? 160 : 70;
@@ -263,7 +265,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -404,6 +406,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.housePage) {
     next.house = sanitizeHouseData(page.house);
+  }
+
+  if (page.guildPage) {
+    next.guild = sanitizeGuildData(page.guild);
   }
 
   if (page.biographyPage) {

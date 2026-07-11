@@ -402,17 +402,25 @@ function buildBiographyLines(items = [], className = '') {
   return `<ul class="biography-list ${className}">${list.map(item => `<li>${sanitizeContentHtml(item)}</li>`).join('')}</ul>`;
 }
 
+// Property/contract entries render like the abilities list: framed icon plus
+// heading and detail line. Legacy entries that only carry `text` show it as the
+// heading; the optional link makes the heading clickable.
 function buildBiographyDocuments(items = []) {
   const list = Array.isArray(items) ? items : [];
   if (!list.length) return '';
-  return `<ul class="biography-list documents">${list.map(item => {
-    const text = item?.text || '';
+  return `<div class="biography-ability-list documents">${list.map(item => {
     const link = sanitizeHref(item?.link || '');
-    const content = link
-      ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${escapeHtml(text || link)}</a>`
-      : escapeHtml(text);
-    return `<li>${content}</li>`;
-  }).join('')}</ul>`;
+    const heading = item?.title || item?.text || link || '';
+    const detail = item?.title ? (item?.text || '') : '';
+    const headingHtml = link
+      ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${escapeHtml(heading)}</a>`
+      : escapeHtml(heading);
+    return `
+    <div class="biography-ability document">
+      <div class="biography-ability-icon">${renderBiographyAbilityIcon(item?.icon || '▧')}</div>
+      <div><strong>${headingHtml}</strong>${detail ? `<span>${escapeHtml(detail)}</span>` : ''}</div>
+    </div>`;
+  }).join('')}</div>`;
 }
 
 function buildBiographyExtraSection(section) {
@@ -560,6 +568,71 @@ function buildHousePage(page, entry, pageIndex, total) {
   const body = buildBiographyPage({ ...page, biography: house, quote: '' }, entry, pageIndex, total);
   const header = buildHouseHeader(page, entry, house);
   return body.replace('<div class="biography-page"', `${header}<div class="biography-page"`);
+}
+
+// Gilden-Template: biography shell with a guild-specific column plan. Header shows title,
+// motto and emblem (house-header mechanics). Right column runs Trivia → Führung & Beziehungen
+// (connections with heading separators) → Verträge (own document-style list) → Eigentum &
+// Besitz. No quotes section — the motto lives in the header. The left portrait switches
+// between 2:3 and 1:1 via data.portraitFormat.
+function buildGuildPage(page, entry, pageIndex, total) {
+  const nav = buildNav(page, pageIndex, total);
+  const data = sanitizeGuildData(page.guild || {});
+  const image = sanitizeImageSrc(page.image || '');
+  const stats = Array.isArray(page.stats) ? page.stats : [];
+  const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
+  const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
+  const connectionTextOffset = Math.max(0, Math.min(80, Number(data.connectionTextOffset) || 0));
+  const header = buildHouseHeader(page, entry, data);
+  const abilities = data.abilities.length ? `
+    <div class="biography-ability-list">
+      ${data.abilities.map(item => `
+        <div class="biography-ability">
+          <div class="biography-ability-icon">${renderBiographyAbilityIcon(item.icon)}</div>
+          <div><strong>${escapeHtml(item.title || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
+        </div>`).join('')}
+    </div>` : '';
+  const connections = data.connections.length ? `
+    <div class="biography-connections">
+      ${data.connections.map(buildBiographyConnectionItem).join('')}
+    </div>` : '';
+  return `
+    ${nav}
+    ${header}
+    <div class="biography-page guild-page guild-portrait-${escapeHtml(data.portraitFormat)}" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
+      <aside class="biography-left">
+        ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
+        ${stats.length ? `
+          <div class="biography-info-table">
+            <div class="biography-side-label">Infotabelle</div>
+            ${stats.map(([label, value]) => `
+              <div class="biography-info-row"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join('')}
+          </div>` : ''}
+      </aside>
+      <main class="biography-main">
+        ${buildBiographyHeading(data.biographyTitle)}
+        <div class="biography-copy">${sanitizeContentHtml(data.biographyText || page.description || '')}</div>
+        ${buildBiographyExtraSections(data.extraSections, 'afterIntro')}
+        ${buildBiographyHeading(data.abilitiesTitle)}
+        ${abilities}
+        ${buildBiographyHeading(data.historyTitle)}
+        <div class="biography-copy">${sanitizeContentHtml(data.historyText || '')}</div>
+        ${buildBiographyHeading(data.worksTitle)}
+        ${buildBiographyLines(data.works, 'compact')}
+        ${buildBiographyExtraSections(data.extraSections, 'afterWorks')}
+      </main>
+      <aside class="biography-right">
+        ${buildBiographyHeading(data.triviaTitle)}
+        ${buildBiographyLines(data.trivia)}
+        ${buildBiographyHeading(data.connectionsTitle)}
+        ${connections}
+        ${buildBiographyHeading(data.contractsTitle)}
+        ${buildBiographyDocuments(data.contracts)}
+        ${buildBiographyHeading(data.documentsTitle)}
+        ${buildBiographyDocuments(data.documents)}
+      </aside>
+      ${data.footer ? `<div class="biography-footer">${escapeHtml(data.footer)}</div>` : ''}
+    </div>`;
 }
 
 function buildBestiaryPanel(title, body, className = '') {

@@ -55,6 +55,16 @@
   box-shadow: inset 0 0 0 0.6rem rgba(139,105,20,0.1);
 }
 
+/* Gilden-Template — reuses the house header and the biography shell; guild-only
+   override: the left portrait switches between 2:3 and 1:1. */
+.guild-page .biography-portrait {
+  aspect-ratio: 2 / 3;
+}
+
+.guild-page.guild-portrait-square .biography-portrait {
+  aspect-ratio: 1 / 1;
+}
+
 @media (max-width: 720px) {
   .house-header {
     flex-direction: column;

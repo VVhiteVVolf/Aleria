@@ -26,13 +26,14 @@
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
+<link rel="stylesheet" href="./styles/comment-composer.css?v=20260711-section-composer-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260703-character-dashboard-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260709-scene-module-import-export-v1">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260618-quest-file-layout-images-v1">
-<link rel="stylesheet" href="./styles/module-page-biography.css?v=20260708-house-template-v1">
-<link rel="stylesheet" href="./styles/module-page-house.css?v=20260709-house-header-v1">
+<link rel="stylesheet" href="./styles/module-page-biography.css?v=20260711-doc-title-v1">
+<link rel="stylesheet" href="./styles/module-page-house.css?v=20260711-guild-template-v1">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260616-card-hierarchy-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-tree-v1">
 <link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260625-character-inventory-itemdb-v1">
@@ -57,7 +58,7 @@
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260703-module-insert-json-v4"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20260708-house-template-v2" defer></script>
+  <script src="./modules/core/app-core.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260703-category-icons-v1" defer></script>
@@ -70,9 +71,9 @@
   <script src="./modules/icon-directory/icon-directory.js?v=20260704-trait-icons-v1" defer></script>
   <script src="./modules/module-store/module-section-management.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-preview.js?v=20260703-isolated-preview-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-preview.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-data.js?v=20260708-house-template-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-data.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/item-database/item-db-normalizer.js?v=20260625-item-db-config-v1" defer></script>
   <script src="./modules/item-database/item-db-extractors.js?v=20260625-item-db-market-folder-v1" defer></script>
   <script src="./modules/item-database/item-db-store.js?v=20260629-item-db-global-v1" defer></script>
@@ -86,8 +87,9 @@
   <script src="./modules/module-editor/module-editor-map-template.js?v=20260618-map-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-landing.js?v=20260623-landing-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260708-house-template-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260708-house-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-scene-blocks.js?v=20260604-scene-comments-v1" defer></script>
@@ -99,11 +101,12 @@
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260625-character-inventory-itemdb-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-biography.js?v=20260704-biography-icon-picker-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-biography.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-house.js?v=20260711-doc-title-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-guild.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bestiary.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-recipe.js?v=20260603-module-editor-fields-v1" defer></script>
   <script src="./modules/module-editor/module-editor-quest.js?v=20260623-quest-editor-parity-v1" defer></script>
@@ -115,7 +118,7 @@
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260709-scene-module-import-export-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260709-row-schema-cutover-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20260711-doc-icon-picker-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-state.js?v=20260623-character-inventory-items-v1" defer></script>
@@ -134,13 +137,14 @@
   <script src="./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260629-family-groups-v1" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-biography.js?v=20260618-biography-connection-layout-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20260711-guild-template-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-quest.js?v=20260623-quest-editor-parity-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-events.js?v=20260709-row-schema-cutover-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-events.js?v=20260711-doc-icon-picker-v1" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260617-court-dossier-v1" defer></script>
   <script src="./modules/bounty/bounty-renderer.js?v=20260617-bounty-file-v1" defer></script>
   <script src="./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1" defer></script>
@@ -151,7 +155,7 @@
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/family/family-renderer.js?v=20260629-family-groups-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260708-house-template-v1" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260710-dashboard-hierarchy-v1" defer></script>
@@ -185,7 +189,7 @@
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
-  <script src="./modules/comments/comments-module-insert-render.js?v=20260710-module-reveal-v1" defer></script>
+  <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
@@ -193,7 +197,7 @@
   <script src="./modules/comments/comments-backend.js?v=20260703-module-insert-json-v4" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20260711-section-types-v1" defer></script>
   <script src="./modules/comments/comments-segments.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260710-bubble-redesign-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -325,7 +329,14 @@
     <div class="comment-compose-layout">
       <div class="comment-compose-editor">
     <!-- CHARAKTER-BEREICH (versteckt im Erzählermodus) -->
-    <div id="cf-char-section">
+    <section id="cf-char-section" class="comment-compose-section comment-actor-section" aria-labelledby="cf-actor-heading">
+      <div class="comment-compose-section-head">
+        <div>
+          <div class="comment-compose-section-kicker">Beitragsstimme</div>
+          <h2 id="cf-actor-heading">Charakter &amp; Ausdruck</h2>
+        </div>
+        <span class="comment-compose-section-hint">Vorgabe für neue Abschnitte</span>
+      </div>
       <!-- Charakter auswählen -->
       <div>
         <label>Charakter wählen</label>
@@ -355,7 +366,7 @@
         <label>Ausdruck wählen</label>
         <div class="cf-emote-picker" id="cf-emote-picker"></div>
       </div>
-    </div>
+    </section>
 
     <!-- ERZÄHLER-HINWEIS -->
     <div id="cf-narrator-hint" style="display:none;text-align:center;padding:0.8rem 0.5rem 0.4rem;">
@@ -382,8 +393,7 @@
       </div>
     </div>
 
-    <div>
-      <label>Kommentar *</label>
+    <section class="comment-compose-section comment-content-section" aria-labelledby="cf-sections-heading">
       <section class="comment-assistant" data-comment-assistant>
         <div class="comment-assistant-head">
           <div>
@@ -402,6 +412,13 @@
           <div class="comment-assistant-result" data-comment-assistant-result hidden></div>
         </div>
       </section>
+      <div class="comment-compose-section-head comment-sections-head">
+        <div>
+          <div class="comment-compose-section-kicker">Beitragsaufbau</div>
+          <h2 id="cf-sections-heading">Abschnitte</h2>
+        </div>
+        <span class="comment-compose-section-hint">Typ, Emote, Seite und Dauer je Abschnitt</span>
+      </div>
       <div id="cf-segment-list" class="comment-segment-list"></div>
       <div class="comment-segment-actions">
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="speech">+ Rede</button>
@@ -449,7 +466,7 @@
         <div class="comment-form-counter" id="cf-counter">0 / 250000 Zeichen</div>
         <div class="comment-form-draft" id="cf-draft-note"></div>
       </div>
-    </div>
+    </section>
       </div>
       <div class="comment-compose-splitter" role="separator" aria-orientation="vertical" aria-label="Vorschau-Breite anpassen" tabindex="0"></div>
       <aside class="comment-compose-preview">

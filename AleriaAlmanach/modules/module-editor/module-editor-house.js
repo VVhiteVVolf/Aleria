@@ -59,14 +59,16 @@ registerRowSchema('house.documents', {
   rowClass: 'biography-edit-row document',
   rowSelectorClass: 'module-house-document-row',
   listWrapClass: 'module-house-documents',
-  emptyFallbackItem: () => ({ text: '', link: '' }),
-  emptyMessage: 'Noch keine Dokumente vorhanden.',
+  emptyFallbackItem: () => ({ icon: '', title: '', text: '', link: '' }),
+  emptyMessage: 'Noch keine Einträge vorhanden.',
   fields: [
-    { key: 'text', kind: 'text', placeholder: 'Dokumenttitel', modalClass: 'me-house-document-text' },
-    { key: 'link', kind: 'url', placeholder: 'Link zur Seite / URL', modalClass: 'me-house-document-link' }
+    { key: 'icon', kind: 'icon', placeholder: 'Icon-URL oder Zeichen', modalClass: 'me-house-document-icon' },
+    { key: 'title', kind: 'text', placeholder: 'Überschrift', modalClass: 'me-house-document-title' },
+    { key: 'text', kind: 'text', placeholder: 'Untertext', modalClass: 'me-house-document-text' },
+    { key: 'link', kind: 'url', placeholder: 'Link zur Seite / URL (optional)', modalClass: 'me-house-document-link' }
   ],
-  keepRow: item => item.text || item.link,
-  newItem: () => ({ text: 'Neues Dokument', link: '' })
+  keepRow: item => item.icon || item.title || item.text || item.link,
+  newItem: () => ({ icon: '', title: 'Neuer Eintrag', text: '', link: '' })
 });
 
 registerRowSchema('house.sections', {
@@ -265,7 +267,7 @@ function buildHouseModuleEditorFields(page) {
             <div class="module-editor-help">Rueckt den Text bei Verbündeten und Rivalen nach rechts.</div>
           </div>
           <div class="module-editor-field">
-            <label>Dokumente-Überschrift</label>
+            <label>Besitz-/Dokumente-Überschrift</label>
             <input type="text" class="me-house-documents-title" value="${escapeHtml(house.documentsTitle)}">
           </div>
           <div class="module-editor-field wide">
@@ -282,10 +284,10 @@ function buildHouseModuleEditorFields(page) {
             </div>
           </div>
           <div class="module-editor-field wide">
-            <label>${escapeHtml(house.documentsTitle || 'Dokumente & Urkunden')}</label>
+            <label>${escapeHtml(house.documentsTitle || 'Eigentum & Besitz')}</label>
             <div class="module-editor-inline" style="justify-content:space-between;">
-              <span class="module-editor-help">Der Link öffnet den Dokumenttitel in einer neuen Seite.</span>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.documents">+ Dokument</button>
+              <span class="module-editor-help">Icon per Bild-URL oder Zeichen; der optionale Link öffnet den Eintrag in einer neuen Seite.</span>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="schema-add-row" data-schema-key="house.documents">+ Eintrag</button>
             </div>
             <div class="biography-edit-list module-house-documents">
               ${buildSchemaList('house.documents', house.documents, 'module')}

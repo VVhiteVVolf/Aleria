@@ -61,6 +61,7 @@ function updateModuleEditorDirtyState() {
   if (_moduleEditorHydrating) return;
   const signature = getModuleEditorDraftSignature();
   setModuleEditorDirtyState(!!signature && !!_moduleEditorInitialSignature && signature !== _moduleEditorInitialSignature);
+  if (typeof scheduleModuleEditorRecoveryDraft === 'function') scheduleModuleEditorRecoveryDraft();
 }
 
 function hasUnsavedModuleEditorChanges() {
@@ -97,13 +98,26 @@ function clearModuleEditorUndoSnapshot() {
   if (button) button.style.display = 'none';
 }
 
-function undoLastModuleEditorImport() {
+function undoLastModuleEditorChange() {
   if (!_moduleEditorUndoSnapshot) return;
   const snapshot = _moduleEditorUndoSnapshot;
   clearModuleEditorUndoSnapshot();
   _moduleEditorPendingCommentImport = null;
   populateModuleEditor(snapshot.payload, snapshot.context);
   setModuleEditorStatus(`${snapshot.label} rückgängig gemacht.`);
+}
+
+function undoLastModuleEditorImport() {
+  undoLastModuleEditorChange();
+}
+
+function captureModuleEditorUndoSnapshot(label = 'Änderung') {
+  try {
+    setModuleEditorUndoSnapshot(collectModuleEditorPayload(), _moduleEditorContext || {}, label);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function getModuleImportCommentSummary(bundle) {
@@ -162,6 +176,14 @@ function pushInvalidModuleAsset(errors, label, src) {
   }
 }
 
+function validateModuleAssetRows(errors, prefix, rows, fields) {
+  (Array.isArray(rows) ? rows : []).forEach((row, rowIndex) => {
+    fields.forEach(([field, label]) => {
+      pushInvalidModuleAsset(errors, `${prefix} ${rowIndex + 1} ${label}`, row?.[field]);
+    });
+  });
+}
+
 function hasModuleStats(stats) {
   return Array.isArray(stats) && stats.some(item => Array.isArray(item) && (String(item[0] || '').trim() || String(item[1] || '').trim()));
 }
@@ -201,6 +223,9 @@ function hasModuleGuestRegister(page) {
 }
 
 function hasModulePageContent(page) {
+  const registeredTemplate = typeof getModuleTemplateForPage === 'function'
+    ? getModuleTemplateForPage(page)
+    : null;
   return !isBlank(page?.pageTitle)
     || !isBlank(page?.description)
     || !isBlank(page?.image)
@@ -213,6 +238,7 @@ function hasModulePageContent(page) {
     || !!page?.landingPage
     || !!page?.characterInventoryPage
     || !!page?.guestRegisterPage
+    || (!!registeredTemplate && registeredTemplate.id !== 'story')
     || hasModuleStats(page?.stats)
     || hasModuleSceneBlocks(page)
     || hasModuleWanted(page)
@@ -235,6 +261,54 @@ function validateModulePageAssets(errors, page, index) {
   pushInvalidModuleAsset(errors, `${prefix} Landing-Banner`, page.landing?.bannerImage);
   pushInvalidModuleAsset(errors, `${prefix} Landing-Karte`, page.landing?.mapImage);
   pushInvalidModuleAsset(errors, `${prefix} Charakter-Inventar Portrait`, page.characterInventory?.portrait);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Hintergrund`, page.bountyFile?.backgroundImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Portrait`, page.bountyFile?.portraitImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Siegel`, page.bountyFile?.sealImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Muenze`, page.bountyFile?.coinImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Regionalbanner`, page.bountyFile?.regionalBanner);
+  pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Fraktionsbanner`, page.bountyFile?.factionBanner);
+  ['companions', 'allies', 'enemies', 'supporters'].forEach(listName => {
+    validateModuleAssetRows(errors, `${prefix} Kopfgeldakte ${listName}`, page.bountyFile?.[listName], [['image', 'Bild']]);
+  });
+
+  pushInvalidModuleAsset(errors, `${prefix} Kaste Siegel`, page.caste?.sealImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kaste Banner`, page.caste?.bannerImage);
+  pushInvalidModuleAsset(errors, `${prefix} Kaste Hintergrund`, page.caste?.backgroundImage);
+  validateModuleAssetRows(errors, `${prefix} Kaste Vertreter`, page.caste?.representatives, [['portrait', 'Portrait'], ['crest', 'Wappen']]);
+
+  pushInvalidModuleAsset(errors, `${prefix} Gerichtsakte Siegel`, page.court?.sealImage);
+  pushInvalidModuleAsset(errors, `${prefix} Gerichtsakte Banner`, page.court?.bannerImage);
+  pushInvalidModuleAsset(errors, `${prefix} Gerichtsakte Hintergrund`, page.court?.backgroundImage);
+  validateModuleAssetRows(errors, `${prefix} Gerichtsakte Beteiligter`, page.court?.parties, [['portrait', 'Portrait'], ['crest', 'Wappen']]);
+  validateModuleAssetRows(errors, `${prefix} Gerichtsakte Zeuge`, page.court?.witnesses, [['portrait', 'Portrait']]);
+
+  pushInvalidModuleAsset(errors, `${prefix} Hierarchie Emblem`, page.hierarchy?.emblem);
+  pushInvalidModuleAsset(errors, `${prefix} Hierarchie Seitenbild`, page.hierarchy?.sideImage);
+  (page.hierarchy?.trees || []).forEach((tree, treeIndex) => {
+    (tree.levels || []).forEach((level, levelIndex) => {
+      validateModuleAssetRows(errors, `${prefix} Hierarchie ${treeIndex + 1}.${levelIndex + 1}`, level.nodes, [['portrait', 'Portrait']]);
+    });
+  });
+  pushInvalidModuleAsset(errors, `${prefix} Familie Emblem`, page.family?.emblem);
+  pushInvalidModuleAsset(errors, `${prefix} Familie Seitenbild`, page.family?.sideImage);
+  (page.family?.trees || []).forEach((tree, treeIndex) => {
+    (tree.levels || []).forEach((level, levelIndex) => {
+      validateModuleAssetRows(errors, `${prefix} Familie ${treeIndex + 1}.${levelIndex + 1}`, level.nodes, [['portrait', 'Portrait']]);
+    });
+  });
+
+  pushInvalidModuleAsset(errors, `${prefix} Hauswappen`, page.house?.crestImage);
+  validateModuleAssetRows(errors, `${prefix} Hausverbindung`, page.house?.connections, [['image', 'Bild']]);
+  validateModuleAssetRows(errors, `${prefix} Biografieverbindung`, page.biography?.connections, [['image', 'Bild']]);
+
+  pushInvalidModuleAsset(errors, `${prefix} Warenverzeichnis Seitenbild`, page.goodsTable?.sideImage);
+  (page.goodsTable?.tables || []).forEach((table, tableIndex) => {
+    validateModuleAssetRows(errors, `${prefix} Warentabelle ${tableIndex + 1}`, table.rows, [['image', 'Bild']]);
+  });
+  validateModuleAssetRows(errors, `${prefix} Warenangebot`, page.goodsTable?.offers, [['image', 'Bild']]);
+  pushInvalidModuleAsset(errors, `${prefix} Handelskatalog Beraterbild`, page.tradeCatalog?.advisorImage);
+  validateModuleAssetRows(errors, `${prefix} Handelsgut`, page.tradeCatalog?.items, [['image', 'Bild'], ['sealImage', 'Siegel']]);
+  validateModuleAssetRows(errors, `${prefix} Kartenreiter`, page.mapTemplate?.tabs, [['image', 'Bild']]);
 
   (page.sceneBlocks || []).forEach((block, blockIndex) => {
     pushInvalidModuleAsset(errors, `${prefix} Szene ${blockIndex + 1} Avatar`, block.avatar);

@@ -569,6 +569,7 @@ function renderItemDatabasePanel() {
   const selected = allItems.find(item => item.canonicalKey === _itemDbState.selectedKey) || visibleItems[0] || null;
   if (selected && !_itemDbState.selectedKey) _itemDbState.selectedKey = selected.canonicalKey;
   const summary = itemDbGetSummary(allItems);
+  const storage = itemDbGetStorageMetrics();
 
   panel.hidden = !_itemDbState.open;
   panel.innerHTML = `
@@ -579,6 +580,7 @@ function renderItemDatabasePanel() {
           <div class="item-db-kicker">Inventar-Register</div>
           <h2>Items und Gueter</h2>
           <p>${summary.itemCount} Eintraege aus ${summary.sourceCount} Quellen · ${summary.duplicateCount} zusammengefuehrte Dubletten</p>
+          <p class="item-db-storage-summary">Firebase gesplittet: ${storage.documentCount} Dokumente · Gesamt ${itemDbFormatBytes(storage.totalBytes)} · Größtes Dokument ${itemDbFormatBytes(storage.largestEntryBytes)}</p>
         </div>
         <div class="item-db-header-actions">
           <button type="button" data-item-db-action="start-create">Neuer Eintrag</button>

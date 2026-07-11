@@ -92,7 +92,7 @@ function addInlineBiographyDocumentRow() {
   const page = getInlineDraftPage();
   if (!page) return;
   const current = getInlineBiographyDataForEdit(page);
-  current.documents.push({ text: 'Neues Dokument', link: '' });
+  current.documents.push({ icon: '', title: 'Neuer Eintrag', text: '', link: '' });
   page.biography = sanitizeBiographyData(current);
   renderPage(currentPage, 0);
 }
@@ -113,8 +113,8 @@ function updateInlineBiographyDocumentField(input) {
   const field = input.dataset.biographyDocumentField;
   if (index < 0 || !field) return;
   const current = getInlineBiographyDataForEdit(page);
-  current.documents = current.documents.length ? current.documents : [{ text: '', link: '' }];
-  const item = current.documents[index] || { text: '', link: '' };
+  current.documents = current.documents.length ? current.documents : [{ icon: '', title: '', text: '', link: '' }];
+  const item = current.documents[index] || { icon: '', title: '', text: '', link: '' };
   item[field] = String(input.value || '').trim();
   current.documents[index] = item;
   page.biography = sanitizeBiographyData(current);
@@ -326,14 +326,14 @@ function buildInlineBiographyEditor(page) {
           <input class="inline-image-range" type="range" min="0" max="80" step="1" data-inline-action="update-biography-field" data-biography-field="connectionTextOffset" value="${escapeHtml(biography.connectionTextOffset)}">
         </div>
         <div class="inline-edit-field">
-          <span class="inline-edit-label">Dokumente-Ueberschrift</span>
+          <span class="inline-edit-label">Besitz-/Dokumente-Ueberschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="documentsTitle" value="${escapeHtml(biography.documentsTitle)}">
         </div>
         <div class="inline-edit-field wide">
-          <span class="inline-edit-label">${escapeHtml(biography.documentsTitle || 'Dokumente & Aufzeichnungen')}</span>
+          <span class="inline-edit-label">${escapeHtml(biography.documentsTitle || 'Eigentum & Besitz')}</span>
           <div class="inline-edit-head">
-            <div class="inline-placeholder-note">Dokumenttitel werden anklickbar, sobald ein Link gesetzt ist.</div>
-            <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-document">+ Dokument</button>
+            <div class="inline-placeholder-note">Icon per Bild-URL oder Zeichen; Einträge werden anklickbar, sobald ein Link gesetzt ist.</div>
+            <button class="module-editor-mini-btn" type="button" data-inline-action="add-biography-document">+ Eintrag</button>
           </div>
           <div class="biography-edit-list">${buildBiographyDocumentRows(biography.documents, 'inline')}</div>
         </div>

@@ -200,14 +200,14 @@ function buildInlineHouseEditor(page) {
           <input class="inline-image-range" type="range" min="0" max="80" step="1" data-inline-action="update-house-field" data-house-field="connectionTextOffset" value="${escapeHtml(house.connectionTextOffset)}">
         </div>
         <div class="inline-edit-field">
-          <span class="inline-edit-label">Dokumente-Ueberschrift</span>
+          <span class="inline-edit-label">Besitz-/Dokumente-Ueberschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-house-field" data-house-field="documentsTitle" value="${escapeHtml(house.documentsTitle)}">
         </div>
         <div class="inline-edit-field wide">
-          <span class="inline-edit-label">${escapeHtml(house.documentsTitle || 'Dokumente & Urkunden')}</span>
+          <span class="inline-edit-label">${escapeHtml(house.documentsTitle || 'Eigentum & Besitz')}</span>
           <div class="inline-edit-head">
-            <div class="inline-placeholder-note">Dokumenttitel werden anklickbar, sobald ein Link gesetzt ist.</div>
-            <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.documents">+ Dokument</button>
+            <div class="inline-placeholder-note">Icon per Bild-URL oder Zeichen; Einträge werden anklickbar, sobald ein Link gesetzt ist.</div>
+            <button class="module-editor-mini-btn" type="button" data-inline-action="schema-add-row" data-schema-key="house.documents">+ Eintrag</button>
           </div>
           <div class="biography-edit-list">${buildSchemaList('house.documents', house.documents, 'inline')}</div>
         </div>
