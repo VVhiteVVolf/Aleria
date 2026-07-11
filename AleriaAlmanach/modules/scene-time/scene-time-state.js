@@ -1,4 +1,5 @@
 const SCENE_TIME_EVENT_KIND = 'scene-time-event';
+const SCENE_TIME_DEFAULT_SEGMENT_SECONDS = 5;
 const SCENE_TIME_SEGMENT_BREAK_PRESETS = new Set(['next-day', 'time-skip']);
 
 const SCENE_TIME_EVENT_PRESETS = [
@@ -113,6 +114,11 @@ function normalizeSceneTimeIconUrl(value) {
 
 function normalizeSceneTimeEvent(input = {}) {
   const preset = getSceneTimeEventPreset(input.presetKey || input.preset || '');
+  const describedAnchorSeconds = normalizeSceneTimeAnchorSeconds(
+    null,
+    [input.timeLabel, input.body, input.text, input.title].filter(Boolean).join(' ')
+  );
+  const storedAnchorSeconds = normalizeSceneTimeAnchorSeconds(input.anchorSeconds, input.anchorTime);
   const segmentBreak = input.segmentBreak != null
     ? !!input.segmentBreak
     : isSceneTimeSegmentBreakPreset(preset.key);
@@ -125,11 +131,66 @@ function normalizeSceneTimeEvent(input = {}) {
     segmentBreak,
     segmentLabel: normalizeSceneTimeText(input.segmentLabel, input.dayLabel || ''),
     timeLabel: normalizeSceneTimeText(input.timeLabel, preset.timeLabel),
+    anchorDay: Math.max(1, Math.floor(Number(input.anchorDay) || 1)),
+    anchorSeconds: Number.isFinite(describedAnchorSeconds) ? describedAnchorSeconds : storedAnchorSeconds,
     body: normalizeSceneTimeText(input.body || input.text, ''),
     iconMark: normalizeSceneTimeText(input.iconMark, preset.iconMark),
     iconUrl: normalizeSceneTimeIconUrl(preset.iconUrl),
-    schemaVersion: 2
+    schemaVersion: 3
   };
+}
+
+function normalizeSceneTimeAnchorSeconds(value, fallback = '') {
+  const numeric = value !== null && value !== undefined && value !== '' ? Number(value) : NaN;
+  if (Number.isFinite(numeric)) return Math.max(0, Math.min(86399, Math.floor(numeric)));
+  const match = String(fallback || '').match(/(?:^|\s)([01]?\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?/);
+  if (!match) return null;
+  return (Number(match[1]) * 3600) + (Number(match[2]) * 60) + Number(match[3] || 0);
+}
+
+function normalizeSceneTimeDurationSeconds(value) {
+  const seconds = Number(value);
+  return Number.isFinite(seconds) ? Math.max(0, Math.min(86400, Math.round(seconds))) : SCENE_TIME_DEFAULT_SEGMENT_SECONDS;
+}
+
+function getSceneTimeSegmentDuration(segment = {}) {
+  return normalizeSceneTimeDurationSeconds(segment.durationSeconds);
+}
+
+function getSceneTimeCommentDuration(comment = {}) {
+  if (isSceneTimeEventComment(comment)) return 0;
+  const segments = Array.isArray(comment.commentSegments)
+    ? comment.commentSegments.filter(segment => String(segment?.text || '').trim())
+    : [];
+  if (segments.length) return segments.reduce((sum, segment) => sum + getSceneTimeSegmentDuration(segment), 0);
+  const mode = String(comment.commentMode || (comment.narrator ? 'narrator' : 'character'));
+  if (!['character', 'charakter', 'manual', 'narrator'].includes(mode)) return 0;
+  return String(comment.text || '').trim() ? SCENE_TIME_DEFAULT_SEGMENT_SECONDS : 0;
+}
+
+function formatSceneClock(totalSeconds, includeDay = true) {
+  if (!Number.isFinite(totalSeconds)) return 'Zeit nicht gesetzt';
+  const day = Math.floor(totalSeconds / 86400) + 1;
+  const seconds = ((Math.floor(totalSeconds) % 86400) + 86400) % 86400;
+  const hh = String(Math.floor(seconds / 3600)).padStart(2, '0');
+  const mm = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+  const ss = String(seconds % 60).padStart(2, '0');
+  return `${includeDay ? `Tag ${day} · ` : ''}${hh}:${mm}:${ss}`;
+}
+
+function buildSceneTimeline(comments = []) {
+  let cursor = null;
+  return (typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(comments) : comments).map(comment => {
+    if (isSceneTimeEventComment(comment)) {
+      const event = normalizeSceneTimeEvent(comment.sceneTimeEvent || comment);
+      if (Number.isFinite(event.anchorSeconds)) cursor = ((event.anchorDay - 1) * 86400) + event.anchorSeconds;
+      return { comment, startSeconds: cursor, endSeconds: cursor, durationSeconds: 0, anchor: true };
+    }
+    const durationSeconds = getSceneTimeCommentDuration(comment);
+    const startSeconds = cursor;
+    if (Number.isFinite(cursor)) cursor += durationSeconds;
+    return { comment, startSeconds, endSeconds: cursor, durationSeconds, anchor: false };
+  });
 }
 
 function isSceneTimeSegmentBreakEvent(input = {}) {

@@ -56,6 +56,11 @@ async function submitSceneTimeEvent() {
     document.getElementById('ste-title')?.focus();
     return;
   }
+  if (!Number.isFinite(event.anchorSeconds)) {
+    setSceneTimeEventStatus('Bitte eine verbindliche Uhrzeit angeben.', 'error');
+    document.getElementById('ste-anchor-time')?.focus();
+    return;
+  }
 
   const submit = document.querySelector('[data-scene-time-action="submit-event"]');
   if (submit) {
@@ -148,6 +153,7 @@ function handleSceneTimeEventInput(event) {
   if (event.target.id === 'ste-title' || event.target.id === 'ste-time-label') {
     event.target.dataset.userEdited = 'true';
   }
+  if (event.target.id === 'ste-time-label') syncSceneTimeAnchorFromLabel();
   renderSceneTimeDialogPreview();
 }
 

@@ -15,6 +15,7 @@ function renderEditCommentSegmentList() {
       <div class="comment-segment-card comment-segment-${segment.kind}" data-segment-id="${segment.id}">
         <div class="comment-segment-head">
           <div class="comment-segment-title">Abschnitt ${idx + 1}</div>
+          ${getCommentSegmentDurationControl(segment, true)}
           <div class="comment-segment-types">${getSegmentTypeButtons(segment, true)}</div>
           ${_editCommentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-edit-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">&times;</button>` : ''}
         </div>
@@ -25,8 +26,16 @@ function renderEditCommentSegmentList() {
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-edit-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
       </div>`;
-  }).join('');
+  }).join('') + renderCommentDurationTotal(true);
   syncEditCommentSegmentsToLegacyText();
+}
+
+function setEditCommentSegmentDuration(id, value) {
+  const segment = _editCommentSegments.find(item => item.id === id);
+  if (!segment) return;
+  segment.durationSeconds = normalizeSceneTimeDurationSeconds(value);
+  renderEditCommentSegmentList();
+  updateEditFormPreview();
 }
 
 function syncEditCommentSegmentsToLegacyText() {
@@ -143,6 +152,7 @@ function buildEditCommentSegmentsForSave() {
           emoteIndex: null,
           avatarKind: 'narrator',
           side: ''
+          ,durationSeconds: getSceneTimeSegmentDuration(segment)
         };
       }
       const emote = base.char?.emotes?.[segment.emoteIndex] || null;
@@ -158,6 +168,7 @@ function buildEditCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : base.avatarKind,
         side: normalizeCommentSegmentSide(segment.side)
+        ,durationSeconds: getSceneTimeSegmentDuration(segment)
       };
     });
 }

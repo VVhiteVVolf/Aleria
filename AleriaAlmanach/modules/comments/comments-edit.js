@@ -67,7 +67,8 @@ async function verifyEditCode() {
         segment.commentKind || segment.kind || (segment.narrator ? 'action' : 'speech'),
         segment.text || '',
         Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
-        segment.side || 'left'
+        segment.side || 'left',
+        segment.durationSeconds
       ));
     } else {
       _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null)];
@@ -123,4 +124,3 @@ async function verifyEditCode() {
     btn.textContent = 'Weiter ->';
   }
 }
-

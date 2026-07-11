@@ -10,7 +10,7 @@ function commentSegmentUsesSide(kind, edit = false) {
   return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
 }
 
-function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left') {
+function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS) {
   const normalizedKind = normalizeCommentKind(kind);
   _commentSegmentSeq += 1;
   return {
@@ -18,8 +18,20 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     kind: normalizedKind,
     text: String(text || ''),
     emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
-    side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side)
+    side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
+    durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds)
   };
+}
+
+function getCommentSegmentDurationControl(segment, edit = false) {
+  const action = edit ? 'set-edit-comment-segment-duration' : 'set-comment-segment-duration';
+  return `<label class="comment-segment-duration"><span>Dauer</span><input type="number" min="0" max="86400" step="1" value="${getSceneTimeSegmentDuration(segment)}" data-action="${action}" data-segment-id="${escapeHtml(segment.id)}"><span>Sek.</span></label>`;
+}
+
+function renderCommentDurationTotal(edit = false) {
+  const segments = edit ? _editCommentSegments : _commentSegments;
+  const total = segments.reduce((sum, segment) => sum + getSceneTimeSegmentDuration(segment), 0);
+  return `<div class="comment-duration-total">Beitragsdauer: <strong>${total} Sek.</strong></div>`;
 }
 
 function getAllowedCommentSegmentKinds(edit = false) {

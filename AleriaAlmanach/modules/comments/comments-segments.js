@@ -12,6 +12,7 @@
       <div class="comment-segment-card comment-segment-${segment.kind}" data-segment-id="${segment.id}">
         <div class="comment-segment-head">
           <div class="comment-segment-title">Abschnitt ${idx + 1}</div>
+          ${getCommentSegmentDurationControl(segment, false)}
           <div class="comment-segment-types">${getSegmentTypeButtons(segment)}</div>
           ${_commentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
         </div>
@@ -22,8 +23,17 @@
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
       </div>`;
-  }).join('');
+  }).join('') + renderCommentDurationTotal(false);
   syncCommentSegmentsToLegacyText();
+}
+
+function setCommentSegmentDuration(id, value) {
+  const segment = _commentSegments.find(item => item.id === id);
+  if (!segment) return;
+  segment.durationSeconds = normalizeSceneTimeDurationSeconds(value);
+  renderCommentSegmentList();
+  updateCommentFormPreview();
+  persistCommentDraft();
 }
 
 function syncCommentSegmentsToLegacyText() {
@@ -146,6 +156,7 @@ function buildCommentSegmentsForSave() {
           emoteIndex: null,
           avatarKind: 'narrator',
           side: ''
+          ,durationSeconds: getSceneTimeSegmentDuration(segment)
         };
       }
       const emote = base.char?.emotes?.[segment.emoteIndex] || null;
@@ -161,6 +172,7 @@ function buildCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : base.avatarKind,
         side: normalizeCommentSegmentSide(segment.side)
+        ,durationSeconds: getSceneTimeSegmentDuration(segment)
       };
     });
 }

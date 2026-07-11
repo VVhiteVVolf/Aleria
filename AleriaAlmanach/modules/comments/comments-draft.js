@@ -15,7 +15,8 @@ function getCommentDraftPayload() {
       kind: segment.kind,
       text: segment.text,
       emoteIndex: Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
-      side: commentSegmentUsesSide(segment.kind, false) ? normalizeCommentSegmentSide(segment.side) : ''
+      side: commentSegmentUsesSide(segment.kind, false) ? normalizeCommentSegmentSide(segment.side) : '',
+      durationSeconds: getSceneTimeSegmentDuration(segment)
     })),
     portraitUrl: _portraitUrl || '',
     charSearch: '',
@@ -104,7 +105,8 @@ function restoreCommentDraft() {
         segment.kind || 'speech',
         segment.text || '',
         Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
-        segment.side || 'left'
+        segment.side || 'left',
+        segment.durationSeconds
       ));
     } else {
       _commentSegments = [makeCommentSegment(draft.commentKind || 'speech', String(draft.text || ''), Number.isInteger(draft.selectedEmoteIdx) ? draft.selectedEmoteIdx : null)];

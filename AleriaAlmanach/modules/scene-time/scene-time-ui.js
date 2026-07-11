@@ -50,6 +50,16 @@ function renderSceneTimeEventComment(comment, index = 0) {
   return `${divider}${renderSceneTimeEventBlock(comment, { commentId: comment?.id || '' })}`;
 }
 
+function buildSceneClockControl(threadId) {
+  return `<div class="scene-clock" data-scene-clock data-scene-thread-id="${escapeHtml(threadId)}" title="Zeit dieser Szenenseite"><span class="scene-clock-icon" aria-hidden="true"><img src="../IconOrdner/Etablissement Icons/Sanduhr.PNG" alt="" decoding="async"></span><span class="scene-clock-copy"><span class="scene-clock-label">Szenenzeit</span><strong data-scene-clock-value>Zeit nicht gesetzt</strong></span><button type="button" data-scene-time-action="open-event-dialog" aria-label="Szenenzeit einstellen" title="Szenenzeit einstellen">✎</button></div>`;
+}
+
+function renderSceneCommentTime(entry) {
+  if (!entry || !Number.isFinite(entry.startSeconds)) return '';
+  const end = Number.isFinite(entry.endSeconds) ? entry.endSeconds : entry.startSeconds;
+  return `<div class="scene-comment-time" title="Dauer dieses Beitrags: ${entry.durationSeconds || 0} Sekunden">${escapeHtml(formatSceneClock(entry.startSeconds))}${end !== entry.startSeconds ? ` → ${escapeHtml(formatSceneClock(end, false))}` : ''}</div>`;
+}
+
 function buildSceneTimePresetButtons(selectedKey = 'evening') {
   return getSceneTimeEventPresets().map(preset => `
     <button
@@ -107,6 +117,14 @@ function ensureSceneTimeEventDialog() {
               <span>Zeitangabe</span>
               <input id="ste-time-label" type="text" placeholder="18:30 Uhr, Abend, mehrere Stunden spaeter">
             </label>
+            <label>
+              <span>Tag der Zeitlinie</span>
+              <input id="ste-anchor-day" type="number" min="1" step="1" value="1">
+            </label>
+            <label>
+              <span>Verbindliche Uhrzeit</span>
+              <input id="ste-anchor-time" type="text" inputmode="numeric" value="18:30:00" placeholder="HH:MM:SS" pattern="(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d)?" maxlength="8" autocomplete="off" required>
+            </label>
             <label class="wide">
               <span>Ankuendigungstext</span>
               <textarea id="ste-body" rows="4" placeholder="Die Sonne verschwindet hinter den Mauern, und in der Szene vergeht Zeit."></textarea>
@@ -132,12 +150,15 @@ function ensureSceneTimeEventDialog() {
 }
 
 function getSceneTimeDialogPayload() {
+  const anchorTime = document.getElementById('ste-anchor-time')?.value || '';
   return normalizeSceneTimeEvent({
     presetKey: document.getElementById('ste-preset')?.value || 'evening',
     title: document.getElementById('ste-title')?.value || '',
     dayLabel: document.getElementById('ste-day-label')?.value || '',
     timeLabel: document.getElementById('ste-time-label')?.value || '',
-    body: document.getElementById('ste-body')?.value || ''
+    body: document.getElementById('ste-body')?.value || '',
+    anchorDay: document.getElementById('ste-anchor-day')?.value || 1,
+    anchorTime
   });
 }
 
@@ -145,6 +166,17 @@ function renderSceneTimeDialogPreview() {
   const preview = document.querySelector('[data-scene-time-preview]');
   if (!preview) return;
   preview.innerHTML = renderSceneTimeEventBlock(getSceneTimeDialogPayload(), { hideActions: true });
+}
+
+function syncSceneTimeAnchorFromLabel() {
+  const label = document.getElementById('ste-time-label')?.value || '';
+  const anchorInput = document.getElementById('ste-anchor-time');
+  const seconds = normalizeSceneTimeAnchorSeconds(null, label);
+  if (!anchorInput || !Number.isFinite(seconds)) return;
+  const hh = String(Math.floor(seconds / 3600)).padStart(2, '0');
+  const mm = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+  const ss = String(seconds % 60).padStart(2, '0');
+  anchorInput.value = `${hh}:${mm}:${ss}`;
 }
 
 function setSceneTimeEventStatus(message = '', type = 'info') {

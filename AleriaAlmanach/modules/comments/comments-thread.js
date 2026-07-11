@@ -222,6 +222,11 @@ function renderCommentsToScroll(scroll, comments) {
   const threadId = getCommentPaginationThreadId(scroll);
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
+  const sceneTimeline = typeof buildSceneTimeline === 'function' ? buildSceneTimeline(sortedComments) : [];
+  const sceneTimelineById = new Map(sceneTimeline.map(entry => [String(entry.comment?.id || ''), entry]));
+  const clockValue = document.querySelector(`[data-scene-clock][data-scene-thread-id="${getCommentThreadSelectorValue(threadId)}"] [data-scene-clock-value]`);
+  const lastTimedEntry = sceneTimeline.slice().reverse().find(entry => Number.isFinite(entry.endSeconds));
+  if (clockValue) clockValue.textContent = lastTimedEntry ? formatSceneClock(lastTimedEntry.endSeconds) : 'Zeit nicht gesetzt';
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);
   const paginationBottom = renderCommentPaginationControls(threadId, pageInfo);
   if (sortedComments.length === 0) {
@@ -238,7 +243,9 @@ function renderCommentsToScroll(scroll, comments) {
       const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;
       const key = String(c?.id ?? `idx-${absoluteIndex}`);
       const unreadDivider = typeof renderSceneUnreadDivider === 'function' ? renderSceneUnreadDivider(threadId, c, sortedComments) : '';
-      const html = `${unreadDivider}${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
+      const timeEntry = sceneTimelineById.get(String(c?.id || ''));
+      const timeMarkup = typeof renderSceneCommentTime === 'function' ? renderSceneCommentTime(timeEntry) : '';
+      const html = `${unreadDivider}${timeMarkup}${renderCommentBubble(c, absoluteIndex)}${renderCommentInsertControl(c, absoluteIndex, sortedComments)}`;
       return { key, html };
     });
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);

@@ -86,6 +86,14 @@ function handleCommentSegmentActionMouseDown(event) {
 
 function handleCommentSegmentTextInput(event) {
   const field = event.target;
+  if (field?.matches?.('[data-action="set-comment-segment-duration"]')) {
+    setCommentSegmentDuration(field.dataset.segmentId || '', field.value);
+    return;
+  }
+  if (field?.matches?.('[data-action="set-edit-comment-segment-duration"]')) {
+    setEditCommentSegmentDuration(field.dataset.segmentId || '', field.value);
+    return;
+  }
   if (!field?.matches?.('.comment-segment-textarea[data-action]')) return;
   rememberCommentTextareaSelection(field);
 

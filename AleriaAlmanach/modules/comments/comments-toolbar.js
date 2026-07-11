@@ -99,6 +99,9 @@ function applyCommentToolsVisibility() {
   document.querySelectorAll('.comment-turn-bar').forEach(bar => {
     bar.classList.toggle('comment-tools-visible', _commentToolsVisible);
   });
+  document.querySelectorAll('[data-scene-clock]').forEach(clock => {
+    clock.classList.toggle('comment-tools-visible', _commentToolsVisible);
+  });
   document.querySelectorAll('[data-comment-quick-tools]').forEach(bar => {
     bar.classList.toggle('collapsed', !quickToolsVisible);
     bar.hidden = !quickToolsVisible;

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="./styles/scene-dice.css?v=20260710-scene-dice-v1">
 <link rel="stylesheet" href="./styles/scene-inventory.css?v=20260710-scene-inventory-v2">
 <link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
-<link rel="stylesheet" href="./styles/scene-time.css?v=20260622-comment-action-icons-v1">
+<link rel="stylesheet" href="./styles/scene-time.css?v=20260711-scene-clock-v3">
 <link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
@@ -175,8 +175,8 @@
   <script src="./modules/scene-dice/scene-dice-state.js?v=20260710-scene-dice-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-ui.js?v=20260710-scene-dice-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260710-scene-dice-v1" defer></script>
-  <script src="./modules/scene-time/scene-time-state.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/scene-time/scene-time-ui.js?v=20260616-scene-timeline-pages-v1" defer></script>
+  <script src="./modules/scene-time/scene-time-state.js?v=20260711-scene-clock-v3" defer></script>
+  <script src="./modules/scene-time/scene-time-ui.js?v=20260711-scene-clock-v5" defer></script>
   <script src="./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3" defer></script>
   <script src="./modules/scene-polls/scene-polls-state.js?v=20260625-scene-polls-v1" defer></script>
@@ -189,19 +189,19 @@
   <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20260710-session-status-v1" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20260703-module-insert-json-v4" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20260629-comment-interactions-v2" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20260604-scene-comments-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260710-bubble-redesign-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20260604-scene-comments-v1" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/comments/comments-thread.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/scene-time/scene-time-events.js?v=20260616-scene-timeline-pages-v1" defer></script>
+  <script src="./modules/comments/comments-thread.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/scene-time/scene-time-events.js?v=20260711-scene-clock-v2" defer></script>
   <script src="./modules/scene-dice/scene-dice-events.js?v=20260710-scene-dice-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2" defer></script>
@@ -215,9 +215,9 @@
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20260604-scene-comments-v1" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260710-bubble-redesign-v1" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20260604-scene-comments-v1" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20260711-scene-clock-v1" defer></script>
   <script src="./modules/comments/comments-edit-character-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
@@ -304,7 +304,7 @@
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260520-cleanup-v1" defer></script>
-<script src="./modules/comments/comments-segment-events.js?v=20260604-scene-comments-v1" defer></script>
+<script src="./modules/comments/comments-segment-events.js?v=20260711-scene-clock-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260613-comment-assistant-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-action-events.js?v=20260709-scene-module-import-export-v1" defer></script>
