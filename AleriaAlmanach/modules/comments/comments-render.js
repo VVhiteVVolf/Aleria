@@ -91,33 +91,13 @@ function commentKindUsesQuoteMark(kind) {
   return ['speech', 'shout', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
 
-const COMMENT_ANIMAL_GLYPHS = ['#', '◇', '✶', '∥', '♧', '·', '❄', '☂', '⇆', '↟', 'Ⅱ', '✧', '⋄', '⟐', '※', '¤'];
-
-function hashCommentAnimalText(text = '') {
-  return Array.from(String(text || '')).reduce((hash, char) => {
-    hash = ((hash << 5) - hash) + char.charCodeAt(0);
-    return hash >>> 0;
-  }, 2166136261);
-}
-
-function scrambleAnimalCommentText(text = '') {
-  const source = String(text || '');
-  let seed = hashCommentAnimalText(source);
-  return Array.from(source).map(char => {
-    if (/\s/.test(char)) return char;
-    if (/[.,!?;:„“"'\-–—()[\]{}]/.test(char)) return char;
-    seed = (seed * 1664525 + 1013904223) >>> 0;
-    return COMMENT_ANIMAL_GLYPHS[seed % COMMENT_ANIMAL_GLYPHS.length];
-  }).join('');
-}
-
 function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
   const safeId = escapeHtml(`${commentId}-animal-${partIdx}`);
-  const cipher = escapeHtml(scrambleAnimalCommentText(text));
+  const animalText = parseCommentMarkup(text);
   return `
-    <button type="button" class="comment-animal-toggle" data-action="toggle-animal-comment" aria-expanded="false" aria-controls="${safeId}" title="Tiersprache entschlüsseln">
-      <span class="comment-animal-cipher" aria-hidden="false">${cipher}</span>
-      <span id="${safeId}" class="comment-animal-plain" aria-hidden="true">${parseCommentMarkup(text)}</span>
+    <button type="button" class="comment-animal-toggle" data-action="toggle-animal-comment" aria-expanded="false" aria-controls="${safeId}" title="Zum Übersetzen mit der Maus darüberfahren, antippen oder fokussieren">
+      <span class="comment-animal-cipher" aria-hidden="true">${animalText}</span>
+      <span id="${safeId}" class="comment-animal-plain">${animalText}</span>
     </button>`;
 }
 
@@ -247,7 +227,7 @@ function renderCommentBubble(c, idx) {
     const actions = !c._hideActions && partIdx === parts.length - 1
       ? `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
-    const textMarkup = commentKind === 'animal' && !c._commentPreview
+    const textMarkup = commentKind === 'animal'
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
       : commentKind === 'spell'
         ? buildSpellCommentTextMarkup(part.text, c.spellFont)

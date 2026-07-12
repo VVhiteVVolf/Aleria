@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fährtenlaut Fonttest</title>
+  <link rel="stylesheet" href="faehrtenlaut.css">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #213f34;
+      background: #d9d1bf;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 36px 18px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255,255,255,.68), transparent 38%),
+        linear-gradient(135deg, #e9e2d1, #cfc4b0);
+    }
+    main {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 54px);
+      border: 1px solid rgba(49, 76, 61, .3);
+      border-radius: 18px;
+      background: rgba(249, 246, 237, .94);
+      box-shadow: 0 22px 70px rgba(38, 49, 45, .18);
+    }
+    h1 { margin: 0; font-size: clamp(34px, 6vw, 68px); }
+    p { line-height: 1.55; }
+    label { display: block; margin: 28px 0 8px; font-weight: 700; }
+    textarea {
+      width: 100%;
+      min-height: 105px;
+      resize: vertical;
+      padding: 15px;
+      border: 1px solid #9aae9e;
+      border-radius: 10px;
+      color: #213f34;
+      background: #fffdf7;
+      font: 18px/1.45 system-ui, sans-serif;
+    }
+    .preview {
+      min-height: 150px;
+      margin-top: 18px;
+      padding: 28px 22px;
+      overflow-wrap: anywhere;
+      border-radius: 12px;
+      background: #ece8dd;
+      font-size: clamp(44px, 8vw, 92px);
+      line-height: 1.35;
+    }
+    .mapping {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .mapping article {
+      display: grid;
+      place-items: center;
+      min-height: 125px;
+      padding: 10px;
+      border: 1px solid rgba(49, 76, 61, .22);
+      border-radius: 9px;
+      background: rgba(255,255,255,.68);
+      text-align: center;
+    }
+    .mapping b { display: block; font-size: 62px; line-height: 1; }
+    .mapping small { display: block; margin-top: 6px; color: #637f70; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Fährtenlaut</h1>
+    <p>Normalen Text eingeben. Jeder Buchstabe wird als Spur eines anderen Tieres dargestellt.</p>
+    <label for="source">Tiersprache</label>
+    <textarea id="source">Fremder! Fort. Junges hier?
+Der Wald hört jeden Schritt.</textarea>
+    <div id="preview" class="preview tiersprache-spur" aria-live="polite"></div>
+    <section class="mapping" id="mapping" aria-label="Zeichenzuordnung"></section>
+  </main>
+  <script>
+    const animals = {
+      A:"Wolf", B:"Hirsch", C:"Rabe", D:"Luchs", E:"Bär", F:"Hase", G:"Echse",
+      H:"Ente", I:"Pferd", J:"Fuchs", K:"Wildschwein", L:"Eule", M:"Maus",
+      N:"Schlange", O:"Frosch", P:"Biber", Q:"Dachs", R:"Ziege", S:"Eichhörnchen",
+      T:"Truthahn", U:"Otter", V:"Waschbär", W:"Hund", X:"Krabbe", Y:"Elefant",
+      Z:"Spinne", Ä:"Huhn", Ö:"Robbe", Ü:"Rind", ß:"Maulwurf"
+    };
+    const source = document.querySelector("#source");
+    const preview = document.querySelector("#preview");
+    const mapping = document.querySelector("#mapping");
+    function update() { preview.textContent = source.value; }
+    mapping.innerHTML = Object.entries(animals).map(([letter, animal]) =>
+      `<article><b class="tiersprache-spur">${letter}</b><span>${letter}</span><small>${animal}</small></article>`
+    ).join("");
+    source.addEventListener("input", update);
+    update();
+  </script>
+</body>
+</html>

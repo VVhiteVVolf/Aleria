@@ -9,8 +9,6 @@ function toggleAnimalCommentReveal(trigger) {
   const expanded = trigger.getAttribute('aria-expanded') === 'true';
   trigger.classList.toggle('revealed', !expanded);
   trigger.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  trigger.querySelector('.comment-animal-cipher')?.setAttribute('aria-hidden', expanded ? 'false' : 'true');
-  trigger.querySelector('.comment-animal-plain')?.setAttribute('aria-hidden', expanded ? 'true' : 'false');
 }
 
 function handleCommentReaderClick(event) {

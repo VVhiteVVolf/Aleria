@@ -170,8 +170,8 @@ function openModuleEditorForCurrent() {
 
   const stylePaths = [
     { href: "styles/modal.css?v=orte-almanach-session-v1" },
-    { href: "styles/comments.css?v=orte-spell-font-picker-v1" },
-    { href: "styles/comment-bubbles.css?v=orte-spell-font-picker-v1" },
+    { href: "styles/comments.css?v=orte-animal-font-v1" },
+    { href: "styles/comment-bubbles.css?v=orte-animal-font-v1" },
     { href: "styles/comment-character-picker.css?v=orte-almanach-session-v1" },
     { href: "styles/scene-time.css?v=orte-almanach-session-v1" },
     { href: "styles/scene-transition.css?v=orte-almanach-session-v1" },
@@ -217,7 +217,7 @@ function openModuleEditorForCurrent() {
     "modules/scene-polls/scene-polls-state.js?v=orte-almanach-scene-polls-v1",
     "modules/scene-polls/scene-polls-ui.js?v=orte-almanach-scene-polls-v1",
     "modules/comments/comments-spell-fonts.js?v=orte-spell-font-picker-v1",
-    "modules/comments/comments-render.js?v=orte-spell-font-picker-v1",
+    "modules/comments/comments-render.js?v=orte-animal-font-v1",
     "modules/comments/comments-showcase-render.js?v=orte-almanach-session-v1",
     "modules/comments/comments-attachment-render.js?v=orte-almanach-session-v1",
     "modules/comments/comments-routing.js?v=orte-almanach-session-v1",

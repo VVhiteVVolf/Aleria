@@ -398,6 +398,10 @@
 
 .comment-kind-animal .comment-animal-cipher {
   color: #35512c;
+  font-family: "Faehrtenlaut", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   text-shadow: none;
 }
 
@@ -675,6 +679,16 @@
 @font-face {
   font-family: "Noto Sans Egyptian Hieroglyphs";
   src: url("../../Fonts/Noto-Historic-Scripts/NotoSansEgyptianHieroglyphs-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faehrtenlaut";
+  src:
+    url("../../Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff2") format("woff2"),
+    url("../../Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

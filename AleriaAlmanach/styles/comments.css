@@ -1594,9 +1594,11 @@
     text-align: left;
   }
   .comment-animal-cipher {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 0.36em;
-    word-spacing: 0.42em;
+    font-family: 'Faehrtenlaut', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    word-spacing: 0.2em;
     color: #efe5b9;
     text-shadow: 0 0 5px rgba(245,235,190,0.22);
   }
@@ -1608,6 +1610,14 @@
     display: none;
   }
   .comment-animal-toggle.revealed .comment-animal-plain {
+    display: inline;
+  }
+  .comment-animal-toggle:hover .comment-animal-cipher,
+  .comment-animal-toggle:focus .comment-animal-cipher {
+    display: none;
+  }
+  .comment-animal-toggle:hover .comment-animal-plain,
+  .comment-animal-toggle:focus .comment-animal-plain {
     display: inline;
   }
 

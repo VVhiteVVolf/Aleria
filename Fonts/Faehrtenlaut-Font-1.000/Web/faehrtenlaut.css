@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Faehrtenlaut";
+  src:
+    url("Faehrtenlaut-Regular.woff2") format("woff2"),
+    url("Faehrtenlaut-Regular.woff") format("woff"),
+    url("Faehrtenlaut-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.tiersprache {
+  font-family: "Faehrtenlaut", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.tiersprache-spur {
+  font-family: "Faehrtenlaut", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #405e4d;
+  background: linear-gradient(155deg, #839b86 5%, #526f60 38%, #29473b 94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0.045em 0.06em 0.04em rgba(11, 23, 17, 0.24));
+}
