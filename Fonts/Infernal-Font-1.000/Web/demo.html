@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nharazim Fonttest</title>
+  <link rel="stylesheet" href="nharazim.css">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #edd8c9;
+      background: #0d0708;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 38px 18px;
+      background:
+        radial-gradient(circle at 50% -20%, rgba(137, 31, 28, .34), transparent 46%),
+        linear-gradient(145deg, #13090b, #070405);
+    }
+    main {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 54px);
+      border: 1px solid rgba(153, 48, 40, .38);
+      border-radius: 16px;
+      background: rgba(29, 11, 14, .93);
+      box-shadow: 0 26px 80px rgba(0,0,0,.58);
+    }
+    h1 { margin: 0; font-size: clamp(36px, 6vw, 70px); color: #d88863; }
+    p { line-height: 1.55; color: #c9aaa0; }
+    label { display: block; margin: 28px 0 8px; font-weight: 700; color: #d7a087; }
+    textarea {
+      width: 100%;
+      min-height: 105px;
+      resize: vertical;
+      padding: 15px;
+      border: 1px solid #71302f;
+      border-radius: 9px;
+      color: #f1ded1;
+      background: #12090a;
+      font: 18px/1.45 system-ui, sans-serif;
+    }
+    .preview {
+      min-height: 150px;
+      margin-top: 18px;
+      padding: 30px 24px;
+      overflow-wrap: anywhere;
+      border: 1px solid rgba(128, 36, 32, .34);
+      border-radius: 10px;
+      background: #ede1d4;
+      font-size: clamp(44px, 8vw, 92px);
+      line-height: 1.35;
+    }
+    .mapping {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .mapping article {
+      display: grid;
+      place-items: center;
+      min-height: 142px;
+      padding: 10px;
+      border: 1px solid rgba(130, 41, 36, .34);
+      border-radius: 8px;
+      background: rgba(8,3,4,.48);
+      text-align: center;
+    }
+    .mapping b { display: block; font-size: 66px; line-height: 1; }
+    .mapping strong { margin-top: 5px; color: #d29a80; }
+    .mapping small { display: block; margin-top: 4px; color: #9e6d63; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nharazim</h1>
+    <p>Lateinischen Text eingeben. Der Font setzt ihn als infernale Brand- und Vertragssigillen.</p>
+    <label for="source">Text des Vertrages</label>
+    <textarea id="source">Der Preis wird entrichtet.
+Der Eid bindet Blut und Namen!</textarea>
+    <div id="preview" class="preview infernales-glut" aria-live="polite"></div>
+    <section class="mapping" id="mapping" aria-label="Zeichenzuordnung"></section>
+  </main>
+  <script>
+    const sigils = {
+      A:["Ashra","Asche, Ursprung"], B:["Belkhar","Bindung, Vertrag"], C:["Cyrrek","Befehl, Zwang"],
+      D:["Drazhun","Schuld, Tribut"], E:["Eshra","Glut, Wille"], F:["Fhaur","Flamme, Hunger"],
+      G:["Ghol","Tor, Beschwörung"], H:["Hekraz","Rang, Herrschaft"], I:["Ish","Wahrer Name, Selbst"],
+      J:["Jhazel","Urteil"], K:["Khar","Fessel"], L:["Lazeth","Lüge"], M:["Mordrak","Bosheit"],
+      N:["Nhal","Entzug"], O:["Ovrun","Eid, Siegel"], P:["Phaeg","Schmerz"], Q:["Qezhar","Preis"],
+      R:["Rhaz","Ruin"], S:["Ssarakh","Sünde"], T:["Thurvek","Qual"], U:["Urzhal","Besitz"],
+      V:["Veyrakh","Rache"], W:["Wexir","Zeuge"], X:["Xarth","Auslöschung"], Y:["Ygrem","Unterwerfung"],
+      Z:["Zhaur","Vollstreckung"], Ä:["Aeshra","Verdorbene Herkunft"], Ö:["Othrum","Gebrochener Vertrag"],
+      Ü:["Uzhrek","Besessenheit"], ß:["Ssevr","Meineid"]
+    };
+    const source = document.querySelector("#source");
+    const preview = document.querySelector("#preview");
+    const mapping = document.querySelector("#mapping");
+    function update() { preview.textContent = source.value; }
+    mapping.innerHTML = Object.entries(sigils).map(([letter, data]) =>
+      `<article><b class="infernales-glut">${letter}</b><strong>${letter} · ${data[0]}</strong><small>${data[1]}</small></article>`
+    ).join("");
+    source.addEventListener("input", update);
+    update();
+  </script>
+</body>
+</html>

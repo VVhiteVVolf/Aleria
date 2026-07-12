@@ -4,6 +4,7 @@
 const COMMENT_SPELL_FONT_DEFAULT = 'rheunwaith';
 const COMMENT_SPELL_FONTS = Object.freeze({
   rheunwaith: { label: 'Rheunwaith', cssFamily: 'Rheunwaith', transliterator: text => String(text || '') },
+  infernal: { label: 'Infernale Schrift (Nharazim)', cssFamily: 'Nharazim', transliterator: text => String(text || '') },
   runic: { label: 'Elder Futhark', cssFamily: 'Noto Sans Runic', transliterator: transliterateElderFuthark },
   ogham: { label: 'Irisches Ogham', cssFamily: 'Noto Sans Ogham', transliterator: transliterateOgham },
   hieroglyphs: { label: 'Hieroglyphen', cssFamily: 'Noto Sans Egyptian Hieroglyphs', transliterator: transliterateEgyptian }

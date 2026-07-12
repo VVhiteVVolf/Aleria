@@ -233,6 +233,7 @@
 .comment-kind-spell[data-spell-font="runic"] { --spell-script-font: "Noto Sans Runic", serif; }
 .comment-kind-spell[data-spell-font="ogham"] { --spell-script-font: "Noto Sans Ogham", serif; }
 .comment-kind-spell[data-spell-font="hieroglyphs"] { --spell-script-font: "Noto Sans Egyptian Hieroglyphs", serif; }
+.comment-kind-spell[data-spell-font="infernal"] { --spell-script-font: "Nharazim", serif; }
 
 .comment-body.comment-kind-spell .comment-text,
 .comment-live-preview-body.comment-kind-spell .comment-live-preview-text {
@@ -689,6 +690,16 @@
   src:
     url("../../Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff2") format("woff2"),
     url("../../Fonts/Faehrtenlaut-Font-1.000/Web/Faehrtenlaut-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nharazim";
+  src:
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2") format("woff2"),
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Nharazim";
+  src:
+    url("Nharazim-Regular.woff2") format("woff2"),
+    url("Nharazim-Regular.woff") format("woff"),
+    url("Nharazim-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.infernales {
+  font-family: "Nharazim", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.infernales-glut {
+  font-family: "Nharazim", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #541018;
+  background: linear-gradient(165deg, #190609 3%, #64131a 45%, #d54824 72%, #3a0910 98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.012em rgba(20, 4, 7, 0.76);
+  filter: drop-shadow(0.045em 0.06em 0.04em rgba(5, 1, 2, 0.38));
+}
+
+.infernales-vertrag {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
