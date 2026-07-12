@@ -249,7 +249,9 @@ function renderCommentBubble(c, idx) {
       : '';
     const textMarkup = commentKind === 'animal' && !c._commentPreview
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
-      : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
+      : commentKind === 'spell'
+        ? buildSpellCommentTextMarkup(part.text, c.spellFont)
+        : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
 
     return `
       <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}${isFusedAction ? ' comment-entry-fused' : ''}" data-comment-id="${commentId}">
@@ -259,7 +261,7 @@ function renderCommentBubble(c, idx) {
             <button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
             ${(c.charTitle && !isSecretAction) ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
-          <div class="comment-body comment-kind-${commentKind}">
+          <div class="comment-body comment-kind-${commentKind}"${commentKind === 'spell' ? ` data-spell-font="${normalizeCommentSpellFont(c.spellFont)}"` : ''}>
             <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
             ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}

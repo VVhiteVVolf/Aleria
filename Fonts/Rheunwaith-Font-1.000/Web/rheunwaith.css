@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Rheunwaith";
+  src:
+    url("Rheunwaith-Regular.woff2") format("woff2"),
+    url("Rheunwaith-Regular.woff") format("woff"),
+    url("Rheunwaith-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.rheunwaith {
+  font-family: "Rheunwaith", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+  letter-spacing: 0.08em;
+}
+
+.rheunwaith-water {
+  font-family: "Rheunwaith", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+  letter-spacing: 0.08em;
+  color: #286f82;
+  background: linear-gradient(160deg, #d8f4f1 4%, #75bdc2 28%, #286f82 60%, #123b55 96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.018em rgba(212, 238, 238, 0.92);
+  filter: drop-shadow(0.04em 0.055em 0.045em rgba(7, 26, 37, 0.28));
+}

@@ -20,6 +20,7 @@ function renderEditCommentSegmentList() {
           ${_editCommentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-edit-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">&times;</button>` : ''}
         </div>
         ${getSegmentSideControl(segment, true)}
+        ${getCommentSpellFontControl(segment, true)}
         ${canUseEmote ? getSegmentEmotePalette(segment, true) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -65,6 +66,13 @@ function setEditCommentSegmentText(id, value) {
   if (!segment) return;
   segment.text = String(value || '');
   syncEditCommentSegmentsToLegacyText();
+  updateEditFormPreview();
+}
+
+function setEditCommentSegmentSpellFont(id, value) {
+  const segment = _editCommentSegments.find(item => item.id === id);
+  if (!segment || segment.kind !== 'spell') return;
+  segment.spellFont = normalizeCommentSpellFont(value);
   updateEditFormPreview();
 }
 
@@ -168,6 +176,7 @@ function buildEditCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : base.avatarKind,
         side: normalizeCommentSegmentSide(segment.side)
+        ,spellFont: normalizeCommentSpellFont(segment.spellFont)
         ,durationSeconds: getSceneTimeSegmentDuration(segment)
       };
     });

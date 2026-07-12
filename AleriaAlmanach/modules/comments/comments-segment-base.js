@@ -10,7 +10,7 @@ function commentSegmentUsesSide(kind, edit = false) {
   return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
 }
 
-function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS) {
+function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, spellFont = COMMENT_SPELL_FONT_DEFAULT) {
   const normalizedKind = normalizeCommentKind(kind);
   _commentSegmentSeq += 1;
   return {
@@ -19,7 +19,8 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     text: String(text || ''),
     emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
     side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
-    durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds)
+    durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds),
+    spellFont: normalizeCommentSpellFont(spellFont)
   };
 }
 

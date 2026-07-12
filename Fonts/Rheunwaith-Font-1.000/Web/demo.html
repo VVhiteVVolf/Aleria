@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rheunwaith Fonttest</title>
+  <link rel="stylesheet" href="rheunwaith.css">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #183846;
+      background: #e7dfcf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 42px 20px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255,255,255,.68), transparent 38%),
+        linear-gradient(135deg, #ece4d3, #d7ccba);
+    }
+
+    main {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 56px);
+      border: 1px solid rgba(70, 91, 87, .35);
+      border-radius: 18px;
+      background: rgba(249, 246, 236, .92);
+      box-shadow: 0 22px 70px rgba(38, 49, 45, .18);
+    }
+
+    h1 { margin: 0 0 8px; font-size: clamp(32px, 6vw, 62px); }
+    p { line-height: 1.55; }
+
+    label {
+      display: block;
+      margin: 30px 0 8px;
+      font-weight: 700;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 112px;
+      resize: vertical;
+      padding: 16px;
+      border: 1px solid #9db3ae;
+      border-radius: 10px;
+      font: 18px/1.45 system-ui, sans-serif;
+      color: #173844;
+      background: #fffef9;
+    }
+
+    .preview-shell {
+      margin-top: 18px;
+      padding: 32px 24px;
+      overflow-wrap: anywhere;
+      border-radius: 12px;
+      background-color: #fff;
+      background-image:
+        linear-gradient(45deg, #eef1ef 25%, transparent 25%),
+        linear-gradient(-45deg, #eef1ef 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eef1ef 75%),
+        linear-gradient(-45deg, transparent 75%, #eef1ef 75%);
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      background-size: 16px 16px;
+    }
+
+    #preview {
+      min-height: 120px;
+      font-size: clamp(44px, 8vw, 92px);
+      line-height: 1.35;
+    }
+
+    .note {
+      color: #566f71;
+      font-size: 14px;
+    }
+
+    .mapping {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .mapping span {
+      display: grid;
+      place-items: center;
+      min-height: 90px;
+      padding: 10px;
+      border: 1px solid rgba(62, 105, 108, .25);
+      border-radius: 9px;
+      background: rgba(255,255,255,.72);
+      font-size: 15px;
+    }
+
+    .mapping b { display: block; font-size: 44px; line-height: 1; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="rheunwaith-water">Rheunwaith</h1>
+    <p>Tippe lateinische Buchstaben. Ch, Ll, Ng, Rh und Th werden automatisch zu einzelnen Rheunwaith-Zeichen verbunden.</p>
+
+    <label for="source">Testtext</label>
+    <textarea id="source">Rheunwaith
+Gawain Tristan
+Chwerw Llwyd Ngoll Rhyd Thal</textarea>
+
+    <div class="preview-shell">
+      <div id="preview" class="rheunwaith-water" aria-live="polite"></div>
+    </div>
+    <p class="note">Q besitzt absichtlich keine Rune und wird deshalb als lateinisches Fremdzeichen angezeigt.</p>
+
+    <div class="mapping" id="mapping"></div>
+  </main>
+
+  <script>
+    const source = document.querySelector("#source");
+    const preview = document.querySelector("#preview");
+    const mapping = document.querySelector("#mapping");
+    const keys = [
+      "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
+      "R","S","T","U","V","W","X","Y","Z","Ll","Ng","Ch","Rh","Ü"
+    ];
+
+    function updatePreview() {
+      preview.textContent = source.value;
+    }
+
+    mapping.innerHTML = keys
+      .map(key => `<span><b class="rheunwaith-water">${key}</b>${key}</span>`)
+      .join("");
+    source.addEventListener("input", updatePreview);
+    updatePreview();
+  </script>
+</body>
+</html>

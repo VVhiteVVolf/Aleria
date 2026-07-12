@@ -17,6 +17,7 @@
           ${_commentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
         </div>
         ${getSegmentSideControl(segment, false)}
+        ${getCommentSpellFontControl(segment, false)}
         ${canUseEmote ? getSegmentEmotePalette(segment, false) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -64,6 +65,14 @@ function setCommentSegmentText(id, value) {
   if (!segment) return;
   segment.text = String(value || '');
   syncCommentSegmentsToLegacyText();
+  updateCommentFormPreview();
+  persistCommentDraft();
+}
+
+function setCommentSegmentSpellFont(id, value) {
+  const segment = _commentSegments.find(item => item.id === id);
+  if (!segment || segment.kind !== 'spell') return;
+  segment.spellFont = normalizeCommentSpellFont(value);
   updateCommentFormPreview();
   persistCommentDraft();
 }
@@ -172,6 +181,7 @@ function buildCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : base.avatarKind,
         side: normalizeCommentSegmentSide(segment.side)
+        ,spellFont: normalizeCommentSpellFont(segment.spellFont)
         ,durationSeconds: getSceneTimeSegmentDuration(segment)
       };
     });
