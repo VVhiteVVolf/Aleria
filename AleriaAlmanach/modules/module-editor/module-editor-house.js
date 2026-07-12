@@ -169,6 +169,7 @@ function buildHouseModuleEditorFields(page) {
             <input type="url" class="me-house-crest-image" value="${escapeHtml(house.crestImage)}" placeholder="https://i.imgur.com/...">
             <div class="module-editor-help">Eigenes, zweites Bildfeld für das Wappen im Kopfbereich — unabhängig vom Hauptbild links.</div>
           </div>
+          ${buildModuleImageTabsEditor(page)}
           <div class="module-editor-field">
             <label>Überschrift "Über dieses Haus"</label>
             <input type="text" class="me-house-title" value="${escapeHtml(house.biographyTitle)}">
@@ -316,6 +317,7 @@ function collectHouseModuleEditorPage(card, page) {
   page.stats = collectModuleHouseStats(card.querySelector('[data-page-type="house"]') || card);
   page.quote = getTrimmedFormValue(card, '.me-house-quote');
   page.quoteBy = getTrimmedFormValue(card, '.me-house-quote-by');
+  collectModuleImageTabs(card, page);
   page.house = sanitizeHouseData({
     crestImage: getTrimmedFormValue(card, '.me-house-crest-image'),
     biographyTitle: getTrimmedFormValue(card, '.me-house-title'),

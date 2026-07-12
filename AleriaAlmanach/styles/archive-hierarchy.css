@@ -1,0 +1,477 @@
+/* Aleria Almanach - tree browser for nested archive registers. */
+
+.archive-hierarchy-browser {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(340px, 1.15fr) minmax(300px, 0.85fr);
+  min-height: 34rem;
+  margin-bottom: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--section-accent, var(--gold)) 28%, transparent);
+  background: rgba(255, 250, 238, 0.26);
+  box-shadow: 0 16px 34px rgba(80, 50, 20, 0.08);
+}
+
+.archive-hierarchy-tree {
+  min-width: 0;
+  padding: 1rem 0.9rem 1rem 1rem;
+  border-right: 1px solid rgba(139, 105, 20, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.06)),
+    rgba(245, 231, 202, 0.3);
+}
+
+.archive-hierarchy-tree-kicker,
+.archive-hierarchy-preview-kicker,
+.archive-hierarchy-content-heading > div > span {
+  color: var(--section-accent, var(--gold));
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.archive-hierarchy-tree-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.75rem 0.35rem;
+}
+
+.archive-hierarchy-tree-head button {
+  border: 0;
+  background: transparent;
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.archive-hierarchy-tree-head button:hover,
+.archive-hierarchy-tree-head button:focus-visible {
+  color: var(--section-accent, var(--gold));
+  outline: none;
+}
+
+.archive-hierarchy-tree-scroll {
+  max-height: 38rem;
+  overflow: auto;
+  padding-right: 0.2rem;
+  scrollbar-width: thin;
+}
+
+.archive-hierarchy-node {
+  position: relative;
+}
+
+.archive-hierarchy-row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  margin: 0.28rem 0;
+  border: 1px solid rgba(139,105,20,0.22);
+  background:
+    linear-gradient(90deg, var(--section-accent-soft, rgba(139,105,20,0.1)), rgba(255,255,255,0.26)),
+    rgba(238, 217, 178, 0.3);
+}
+
+.archive-hierarchy-node.is-selected > .archive-hierarchy-row {
+  border-color: color-mix(in srgb, var(--section-accent, var(--gold)) 62%, transparent);
+  box-shadow: inset 3px 0 0 var(--section-accent, var(--gold));
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--section-accent-soft, rgba(139,105,20,0.12)) 82%, rgba(255,255,255,0.34)), rgba(255,255,255,0.38)),
+    rgba(238, 217, 178, 0.42);
+}
+
+.archive-hierarchy-toggle,
+.archive-hierarchy-select,
+.archive-hierarchy-entry,
+.archive-hierarchy-show {
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.archive-hierarchy-toggle {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+  padding: 0;
+  background: transparent;
+  color: var(--gold-dark);
+  font-size: 1rem;
+}
+
+.archive-hierarchy-toggle:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+.archive-hierarchy-select {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.45rem 0.65rem 0.45rem 0.2rem;
+  background: transparent;
+  text-align: left;
+}
+
+.archive-hierarchy-row-icon,
+.archive-hierarchy-entry-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(139,105,20,0.26);
+  background: rgba(255,255,255,0.3);
+  color: var(--gold-dark);
+}
+
+.archive-hierarchy-row-icon img,
+.archive-hierarchy-entry-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.archive-hierarchy-row-mark {
+  font-size: 0.72rem;
+}
+
+.archive-hierarchy-row-title,
+.archive-hierarchy-entry-title {
+  min-width: 0;
+  color: var(--ink);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.archive-hierarchy-row-meta,
+.archive-hierarchy-entry-meta {
+  color: var(--ink-faded);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+.archive-hierarchy-children {
+  position: relative;
+  margin-left: 1.35rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(139,105,20,0.24);
+}
+
+.archive-hierarchy-entry {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
+  min-height: 2.7rem;
+  padding: 0.34rem 0.55rem;
+  border-bottom: 1px solid rgba(139,105,20,0.16);
+  background: rgba(255,255,255,0.14);
+  text-align: left;
+}
+
+.archive-hierarchy-entry:hover,
+.archive-hierarchy-select:hover {
+  background: rgba(255,255,255,0.34);
+}
+
+.archive-hierarchy-entry-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.archive-hierarchy-entry-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.archive-hierarchy-entry-meta {
+  display: flex;
+  gap: 0.55rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.54rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.archive-hierarchy-preview {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: minmax(13rem, 0.9fr) auto;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.22), rgba(237,216,177,0.22)),
+    rgba(249,241,222,0.32);
+}
+
+.archive-hierarchy-preview-image {
+  position: relative;
+  min-height: 13rem;
+  overflow: hidden;
+  border: 3px double rgba(92, 61, 24, 0.58);
+  background:
+    radial-gradient(circle at 50% 42%, var(--section-accent-soft, rgba(139,105,20,0.18)), transparent 42%),
+    linear-gradient(135deg, rgba(210,183,132,0.68), rgba(238,222,191,0.48));
+}
+
+.archive-hierarchy-preview-image > img:not(.archive-hierarchy-preview-emblem) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: sepia(18%) saturate(0.88);
+}
+
+.archive-hierarchy-preview-image > span {
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(139,105,20,0.24);
+  background: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,0.1) 14px 15px);
+}
+
+.archive-hierarchy-preview-emblem {
+  position: absolute;
+  right: 1rem;
+  bottom: -0.1rem;
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  padding: 0.35rem;
+  border: 1px solid rgba(92,61,24,0.46);
+  border-radius: 50%;
+  background: rgba(53, 32, 10, 0.82);
+  box-shadow: 0 8px 18px rgba(45,27,8,0.32);
+}
+
+.archive-hierarchy-preview-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 1rem 0.25rem 0.15rem;
+}
+
+.archive-hierarchy-preview-copy h3,
+.archive-hierarchy-content-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.archive-hierarchy-preview-copy p {
+  margin: 0.25rem 0 0.35rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.52;
+}
+
+.archive-hierarchy-preview-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0.2rem 0 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(139,105,20,0.2);
+}
+
+.archive-hierarchy-preview-stats div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.archive-hierarchy-preview-stats dt {
+  color: var(--ink-faded);
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archive-hierarchy-preview-stats dd {
+  margin: 0;
+  color: var(--section-accent, var(--gold));
+  font-weight: 700;
+}
+
+.archive-hierarchy-show {
+  min-height: 3.2rem;
+  border: 1px solid color-mix(in srgb, var(--section-accent, var(--gold)) 62%, #5c3d18 38%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.32), rgba(139,105,20,0.12)),
+    rgba(213, 184, 129, 0.52);
+  color: var(--ink);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 7px 16px rgba(80,50,20,0.12);
+}
+
+.archive-hierarchy-show:hover {
+  border-color: var(--section-accent, var(--gold));
+  background-color: rgba(226, 202, 157, 0.66);
+}
+
+.archive-hierarchy-toggle:focus-visible,
+.archive-hierarchy-select:focus-visible,
+.archive-hierarchy-entry:focus-visible,
+.archive-hierarchy-show:focus-visible {
+  position: relative;
+  z-index: 2;
+  outline: 2px solid var(--section-accent, var(--gold));
+  outline-offset: -2px;
+}
+
+.archive-hierarchy-content-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.3rem 0 1rem;
+  padding: 0.8rem 0.2rem 0.65rem;
+  border-bottom: 1px solid rgba(139,105,20,0.24);
+}
+
+.archive-hierarchy-content-heading h3 {
+  margin-top: 0.18rem;
+  font-size: 1rem;
+}
+
+.archive-hierarchy-content-heading small {
+  color: var(--ink-faded);
+  font-size: 0.78rem;
+}
+
+.archive-hierarchy-empty {
+  padding: 1rem;
+  border: 1px dashed rgba(139,105,20,0.24);
+  color: var(--ink-faded);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .archive-hierarchy-browser {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-hierarchy-tree {
+    border-right: 0;
+    border-bottom: 1px solid rgba(139,105,20,0.22);
+  }
+
+  .archive-hierarchy-tree-scroll {
+    max-height: 28rem;
+  }
+
+  .archive-hierarchy-preview {
+    grid-template-columns: minmax(14rem, 0.9fr) minmax(0, 1.1fr);
+    grid-template-rows: auto;
+  }
+
+  .archive-hierarchy-preview-copy {
+    padding: 0.35rem 0 0.15rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .archive-hierarchy-browser {
+    min-height: 0;
+    margin-inline: -0.15rem;
+  }
+
+  .archive-hierarchy-tree {
+    padding: 0.8rem 0.55rem;
+  }
+
+  .archive-hierarchy-tree-scroll {
+    max-height: 24rem;
+  }
+
+  .archive-hierarchy-children {
+    margin-left: 0.55rem;
+    padding-left: 0.35rem;
+  }
+
+  .archive-hierarchy-select {
+    grid-template-columns: 1.9rem minmax(0, 1fr);
+    gap: 0.45rem;
+    padding-right: 0.45rem;
+  }
+
+  .archive-hierarchy-row-icon {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .archive-hierarchy-row-meta {
+    grid-column: 2;
+    white-space: normal;
+  }
+
+  .archive-hierarchy-entry {
+    width: 100%;
+    grid-template-columns: 1.65rem minmax(0, 1fr);
+  }
+
+  .archive-hierarchy-entry-meta {
+    grid-column: 2;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .archive-hierarchy-preview {
+    display: block;
+    padding: 0.7rem;
+  }
+
+  .archive-hierarchy-preview-image {
+    min-height: 10.5rem;
+    max-height: 14rem;
+  }
+
+  .archive-hierarchy-preview-copy {
+    padding: 0.85rem 0.15rem 0.1rem;
+  }
+
+  .archive-hierarchy-preview-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-hierarchy-content-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-hierarchy-browser * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

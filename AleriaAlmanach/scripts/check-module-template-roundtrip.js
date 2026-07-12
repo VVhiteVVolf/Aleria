@@ -7,6 +7,7 @@ const almanachRoot = path.resolve(__dirname, '..');
 const sources = [
   'data/sections.js',
   'modules/core/content-safety.js',
+  'modules/house-warriors/house-warriors-data.js',
   'modules/core/app-core.js',
   'modules/module-editor/module-editor-data.js',
   'modules/module-editor/module-editor-cast-picker.js',
@@ -177,6 +178,7 @@ const assetValidationChecks = vm.runInContext(`
       court: { parties: [{ portrait: 'data:image/png;base64,invalid' }] },
       family: { trees: [{ levels: [{ nodes: [{ portrait: 'data:image/png;base64,invalid' }] }] }] },
       house: { crestImage: 'data:image/png;base64,invalid' },
+      houseWarriors: { crest: 'data:image/png;base64,invalid' },
       biography: { connections: [{ image: 'data:image/png;base64,invalid' }] },
       goodsTable: { tables: [{ rows: [{ image: 'data:image/png;base64,invalid' }] }] },
       tradeCatalog: { items: [{ sealImage: 'data:image/png;base64,invalid' }] },
@@ -192,7 +194,7 @@ if (!referenceChecks.invalidAssignmentRepaired) failures.push('character-invento
 if (JSON.stringify(referenceChecks.familyParents) !== JSON.stringify(['parent'])) failures.push('family: Ungueltige Elternreferenzen wurden nicht entfernt.');
 if (referenceChecks.familyConnectionCount !== 1) failures.push('family: Ungueltige Verbindungen wurden nicht entfernt.');
 if (referenceChecks.hierarchyParents.some(Boolean)) failures.push('hierarchy: Ungueltige Baumreferenzen wurden nicht entfernt.');
-['Kopfgeldakte Portrait', 'Gerichtsakte Beteiligter', 'Familie 1.1', 'Hauswappen', 'Biografieverbindung', 'Warentabelle', 'Handelsgut', 'Kartenreiter']
+['Kopfgeldakte Portrait', 'Gerichtsakte Beteiligter', 'Familie 1.1', 'Hauswappen', 'Hauskrieger Wappen', 'Biografieverbindung', 'Warentabelle', 'Handelsgut', 'Kartenreiter']
   .forEach(label => {
     if (!assetValidationChecks.some(error => error.includes(label))) failures.push(`Assetvalidierung fehlt fuer ${label}.`);
   });

@@ -43,6 +43,11 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-comment-block',
   'add-simple-line-row',
   'remove-simple-line-row',
+  'add-image-tab-row',
+  'remove-image-tab-row',
+  'add-house-warrior-card',
+  'remove-house-warrior-card',
+  'move-house-warrior-card',
   'add-biography-stat-row',
   'remove-biography-stat-row',
   'add-biography-ability-row',
@@ -339,6 +344,26 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-simple-line-row') {
     removeModuleSimpleLineRow(trigger);
+    return;
+  }
+  if (action === 'add-image-tab-row') {
+    addModuleImageTabRow(trigger);
+    return;
+  }
+  if (action === 'remove-image-tab-row') {
+    removeModuleImageTabRow(trigger);
+    return;
+  }
+  if (action === 'add-house-warrior-card') {
+    addModuleHouseWarriorCard(trigger);
+    return;
+  }
+  if (action === 'remove-house-warrior-card') {
+    removeModuleHouseWarriorCard(trigger);
+    return;
+  }
+  if (action === 'move-house-warrior-card') {
+    moveModuleHouseWarriorCard(trigger);
     return;
   }
   if (action === 'add-biography-stat-row') {

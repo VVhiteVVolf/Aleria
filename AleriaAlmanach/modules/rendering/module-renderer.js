@@ -71,6 +71,58 @@ function buildModuleImageFrameAttrs(page) {
   return ` style="width:${width}%;max-width:${maxWidthRule};margin-inline:auto;"`;
 }
 
+// Hauptbild-Reiter: page.imageTabs ([{label, image}]) ergänzt das Hauptbild um weitere Bilder.
+// Ab zwei Bildern insgesamt bekommt der Hauptbild-Bereich eine klickbare Tab-Leiste; das
+// Hauptbild (page.image) ist immer der erste Reiter (Label über page.imageTabLabel steuerbar).
+// Der delegierte Click-Handler am Dateiende schaltet die Panes rein im DOM um, damit die
+// Reiter im Modal, in der Editor-Vorschau und in der Inline-Vorschau gleichermaßen reagieren.
+function getModulePortraitTabs(page) {
+  const extra = (Array.isArray(page?.imageTabs) ? page.imageTabs : [])
+    .map(item => ({
+      label: String(item?.label || '').trim(),
+      image: sanitizeImageSrc(item?.image || '')
+    }))
+    .filter(item => item.image);
+  if (!extra.length) return [];
+  const main = sanitizeImageSrc(page?.image || '');
+  const tabs = main
+    ? [{ label: String(page?.imageTabLabel || '').trim() || 'Hauptbild', image: main }, ...extra]
+    : extra;
+  return tabs.map((tab, index) => ({ ...tab, label: tab.label || `Bild ${index + 1}` }));
+}
+
+function buildModulePortraitTabBar(tabs) {
+  return `
+    <div class="module-portrait-tab-bar" role="tablist">
+      ${tabs.map((tab, index) => `
+      <button class="module-portrait-tab${index === 0 ? ' active' : ''}" type="button" role="tab" aria-selected="${index === 0 ? 'true' : 'false'}" data-portrait-tab="${index}" title="${escapeHtml(tab.label)}">${escapeHtml(tab.label)}</button>`).join('')}
+    </div>`;
+}
+
+function buildModulePortraitPaneImage(page, tab, index, extraClass = '') {
+  const loadingAttrs = index === 0
+    ? 'loading="eager" decoding="async" fetchpriority="high"'
+    : 'loading="lazy" decoding="async"';
+  return `<img class="${extraClass ? `${extraClass} ` : ''}module-portrait-pane${index === 0 ? ' active' : ''}" data-portrait-pane="${index}" src="${tab.image}" alt="${escapeHtml(tab.label)}" ${loadingAttrs}${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`;
+}
+
+// Hauptbild-Spalte der Biographie-/Häuser-/Gilden-Seiten: ohne Bild-Reiter das bisherige
+// Einzelbild, mit Reitern die Tab-Leiste über den umschaltbaren Bildern.
+function buildBiographyPortrait(page, entry) {
+  const tabs = getModulePortraitTabs(page);
+  if (tabs.length < 2) {
+    const image = tabs.length === 1 ? tabs[0].image : sanitizeImageSrc(page.image || '');
+    return image
+      ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`
+      : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`;
+  }
+  return `
+        <div class="module-portrait-tabs biography-portrait-tabs" data-portrait-tabs>
+          ${buildModulePortraitTabBar(tabs)}
+          ${tabs.map((tab, index) => buildModulePortraitPaneImage(page, tab, index, 'biography-portrait')).join('')}
+        </div>`;
+}
+
 function buildInlineModulePreview(page, entry, pageIndex, total) {
   const previewEntry = sanitizeModuleEntry({
     ...deepClone(entry),
@@ -476,7 +528,6 @@ function renderBiographyAbilityIcon(icon) {
 function buildBiographyPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeBiographyData(page.biography || {});
-  const image = sanitizeImageSrc(page.image || '');
   const stats = Array.isArray(page.stats) ? page.stats : [];
   const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
   const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
@@ -503,7 +554,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
     ${nav}
     <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
       <aside class="biography-left">
-        ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
+        ${buildBiographyPortrait(page, entry)}
         ${stats.length ? `
           <div class="biography-info-table">
             <div class="biography-side-label">Infotabelle</div>
@@ -578,7 +629,6 @@ function buildHousePage(page, entry, pageIndex, total) {
 function buildGuildPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeGuildData(page.guild || {});
-  const image = sanitizeImageSrc(page.image || '');
   const stats = Array.isArray(page.stats) ? page.stats : [];
   const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
   const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
@@ -601,7 +651,7 @@ function buildGuildPage(page, entry, pageIndex, total) {
     ${header}
     <div class="biography-page guild-page guild-portrait-${escapeHtml(data.portraitFormat)}" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
       <aside class="biography-left">
-        ${image ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`}
+        ${buildBiographyPortrait(page, entry)}
         ${stats.length ? `
           <div class="biography-info-table">
             <div class="biography-side-label">Infotabelle</div>
@@ -1090,6 +1140,24 @@ function buildCasteRelatedEntries(items) {
       `, 'caste-related-row')).join('')}</div>`;
 }
 
+// Hauptbild der Kasten-/Klassenseite: ohne Bild-Reiter das bisherige Einzelbild in der Figur,
+// mit Reitern die Tab-Leiste über den umschaltbaren Bildern (gleiche Mechanik wie Biographie).
+function buildCastePortrait(page, entry, heroImage) {
+  const tabs = getModulePortraitTabs(page);
+  if (tabs.length < 2) {
+    const image = tabs.length === 1 ? tabs[0].image : heroImage;
+    return `
+          <figure class="caste-portrait"${buildModuleImageFrameAttrs(page)}>
+            ${image ? `<img src="${image}" alt="${escapeHtml(entry.title || 'Kaste')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="caste-portrait-placeholder">${getInitialChar(entry.title || 'K')}</div>`}
+          </figure>`;
+  }
+  return `
+          <figure class="caste-portrait module-portrait-tabs" data-portrait-tabs${buildModuleImageFrameAttrs(page)}>
+            ${buildModulePortraitTabBar(tabs)}
+            ${tabs.map((tab, index) => buildModulePortraitPaneImage(page, tab, index)).join('')}
+          </figure>`;
+}
+
 function buildCastePage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeCasteData(page.caste || {});
@@ -1126,9 +1194,7 @@ function buildCastePage(page, entry, pageIndex, total) {
 
       <div class="caste-dossier">
         <aside class="caste-column caste-column-left">
-          <figure class="caste-portrait"${buildModuleImageFrameAttrs(page)}>
-            ${heroImage ? `<img src="${heroImage}" alt="${escapeHtml(entry.title || 'Kaste')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="caste-portrait-placeholder">${getInitialChar(entry.title || 'K')}</div>`}
-          </figure>
+          ${buildCastePortrait(page, entry, heroImage)}
           ${buildCastePanel(data.infoTitle, buildCasteInfoRows(data.infoRows), 'caste-info-panel')}
           ${data.quote ? `<blockquote class="caste-quote">${sanitizeContentHtml(data.quote)}${data.quoteBy ? `<cite>${escapeHtml(data.quoteBy)}</cite>` : ''}</blockquote>` : ''}
         </aside>
@@ -1759,3 +1825,21 @@ function getPageTabLabel(page, pageIndex, total) {
   }
   return title;
 }
+
+// Klick-Umschaltung der Hauptbild-Reiter (siehe getModulePortraitTabs). Delegiert am Dokument,
+// damit Modal, Editor-Vorschau und Inline-Vorschau ohne eigenes Rebinding funktionieren.
+document.addEventListener('click', event => {
+  const tab = event.target?.closest?.('[data-portrait-tab]');
+  const wrap = tab?.closest('[data-portrait-tabs]');
+  if (!tab || !wrap) return;
+  event.preventDefault();
+  const index = String(tab.dataset.portraitTab || '0');
+  wrap.querySelectorAll('[data-portrait-tab]').forEach(button => {
+    const active = button === tab;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  wrap.querySelectorAll('[data-portrait-pane]').forEach(pane => {
+    pane.classList.toggle('active', String(pane.dataset.portraitPane) === index);
+  });
+});

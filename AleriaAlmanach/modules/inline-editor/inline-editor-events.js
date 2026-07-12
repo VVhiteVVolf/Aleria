@@ -14,6 +14,9 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-profile-stat',
   'add-wanted-card',
   'remove-wanted-card',
+  'add-house-warrior-card',
+  'remove-house-warrior-card',
+  'move-house-warrior-card',
   'add-card-layout-heading',
   'add-card-layout-row',
   'remove-card-layout-block',
@@ -167,6 +170,25 @@ function handleInlineEditorActionClick(event) {
   }
   if (action === 'remove-wanted-card') {
     removeInlineWantedCard(Number(trigger.dataset.wantedIndex) || 0);
+    return;
+  }
+  if (action === 'add-house-warrior-card') {
+    addInlineHouseWarriorCard(trigger.dataset.houseWarriorKind || 'knight');
+    return;
+  }
+  if (action === 'remove-house-warrior-card') {
+    removeInlineHouseWarriorCard(
+      trigger.dataset.houseWarriorKind || 'knight',
+      Number(trigger.dataset.houseWarriorIndex) || 0
+    );
+    return;
+  }
+  if (action === 'move-house-warrior-card') {
+    moveInlineHouseWarriorCard(
+      trigger.dataset.houseWarriorKind || 'knight',
+      Number(trigger.dataset.houseWarriorIndex) || 0,
+      Number(trigger.dataset.houseWarriorDirection) || 0
+    );
     return;
   }
   if (action === 'add-card-layout-heading') {
@@ -679,6 +701,14 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-wanted-card-field') {
     updateInlineWantedCardField(field);
+    return;
+  }
+  if (action === 'update-house-warriors-field') {
+    updateInlineHouseWarriorsField(field, event.type === 'change');
+    return;
+  }
+  if (action === 'update-house-warrior-card-field') {
+    updateInlineHouseWarriorCardField(field, event.type === 'change');
     return;
   }
   if (action === 'update-card-layout-heading') {

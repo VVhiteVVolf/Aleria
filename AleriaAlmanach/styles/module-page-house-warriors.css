@@ -1,0 +1,401 @@
+.house-warriors-page {
+  --hw-ink: #2d1b12;
+  --hw-muted: #735f4b;
+  --hw-gold: #9a7137;
+  --hw-line: rgba(116, 79, 35, 0.32);
+  --hw-paper: #eee0c2;
+  color: var(--hw-ink);
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.45), transparent 31rem),
+    linear-gradient(135deg, rgba(93, 56, 21, 0.06), transparent 35%),
+    var(--hw-paper);
+  border: 1px solid rgba(98, 66, 30, 0.46);
+  box-shadow: inset 0 0 3rem rgba(90, 55, 20, 0.12), 0 0.8rem 2.4rem rgba(21, 12, 5, 0.18);
+  font-family: Georgia, 'Times New Roman', serif;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.house-warriors-hero {
+  isolation: isolate;
+  min-height: 19rem;
+  padding: clamp(2.2rem, 5vw, 4.4rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 15rem);
+  align-items: end;
+  gap: 2rem;
+  position: relative;
+  background:
+    linear-gradient(115deg, rgba(52, 28, 14, 0.08), transparent 65%),
+    #e1c99e;
+  border-bottom: 1px solid var(--hw-line);
+}
+
+.house-warriors-hero.has-banner {
+  background-image: var(--house-warriors-banner);
+  background-size: cover;
+  background-position: center 32%;
+  color: #fff4db;
+  text-shadow: 0 2px 7px rgba(20, 9, 2, 0.86);
+}
+
+.house-warriors-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(28, 13, 5, 0.9) 0%, rgba(35, 17, 8, 0.67) 53%, rgba(26, 13, 6, 0.18) 100%);
+  opacity: 0;
+}
+
+.house-warriors-hero.has-banner .house-warriors-hero-shade {
+  opacity: 1;
+}
+
+.house-warriors-hero-copy {
+  max-width: 52rem;
+}
+
+.house-warriors-eyebrow,
+.house-warriors-section-heading span,
+.house-warriors-card-badge {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.house-warriors-eyebrow {
+  color: var(--hw-gold);
+  margin-bottom: 0.7rem;
+}
+
+.house-warriors-hero.has-banner .house-warriors-eyebrow {
+  color: #e5c689;
+}
+
+.house-warriors-hero h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 0.98;
+}
+
+.house-warriors-motto {
+  margin: 1rem 0 0;
+  color: var(--hw-gold);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-style: italic;
+}
+
+.house-warriors-hero.has-banner .house-warriors-motto {
+  color: #f0dcae;
+}
+
+.house-warriors-introduction {
+  max-width: 47rem;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.house-warriors-introduction > :first-child { margin-top: 0; }
+.house-warriors-introduction > :last-child { margin-bottom: 0; }
+
+.house-warriors-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+}
+
+.house-warriors-counts span {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid currentColor;
+  background: rgba(250, 236, 205, 0.12);
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.house-warriors-counts strong {
+  font-size: 0.95rem;
+}
+
+.house-warriors-crest {
+  width: min(100%, 13rem);
+  aspect-ratio: 1;
+  place-self: center;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 0.7rem 0.8rem rgba(20, 10, 2, 0.38));
+}
+
+.house-warriors-crest img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.house-warriors-crest.is-placeholder {
+  border: 1px solid rgba(130, 88, 37, 0.45);
+  border-radius: 50%;
+  background: rgba(245, 225, 185, 0.34);
+  color: var(--hw-gold);
+  font-size: 4rem;
+}
+
+.house-warriors-content {
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.house-warriors-section-heading {
+  margin-bottom: 1.65rem;
+  text-align: center;
+}
+
+.house-warriors-section-heading span {
+  color: var(--hw-gold);
+}
+
+.house-warriors-section-heading h3 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: 0.035em;
+}
+
+.house-warriors-section-heading h3 b {
+  color: var(--hw-gold);
+  font-weight: 400;
+  padding: 0 0.35em;
+}
+
+.house-warriors-knights {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.house-warriors-knight-row {
+  display: grid;
+  grid-template-columns: repeat(var(--house-warriors-columns), minmax(0, 1fr));
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.house-warriors-card {
+  min-width: 0;
+  background: rgba(248, 237, 214, 0.68);
+  border: 1px solid var(--hw-line);
+  box-shadow: 0 0.45rem 1.25rem rgba(61, 35, 14, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.house-warriors-card::after {
+  content: '';
+  position: absolute;
+  inset: 0.32rem;
+  border: 1px solid rgba(135, 94, 45, 0.18);
+  pointer-events: none;
+}
+
+.house-warriors-card-image {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: linear-gradient(145deg, #d2b986, #a88a58);
+}
+
+.house-warriors-card-image.image-portrait { aspect-ratio: 4 / 5; }
+.house-warriors-card-image.image-square { aspect-ratio: 1; }
+.house-warriors-card-image.image-landscape { aspect-ratio: 16 / 10; }
+
+.house-warriors-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.house-warriors-card-image.fit-cover img { object-fit: cover; }
+.house-warriors-card-image.position-top img { object-position: center top; }
+.house-warriors-card-image.position-bottom img { object-position: center bottom; }
+
+.house-warriors-card-image.is-placeholder {
+  display: grid;
+  place-items: center;
+  color: rgba(73, 45, 20, 0.46);
+  font-size: 2.6rem;
+}
+
+.house-warriors-card-body {
+  padding: 1.2rem 1.2rem 1.35rem;
+}
+
+.house-warriors-card-badge {
+  color: var(--hw-gold);
+  margin-bottom: 0.4rem;
+}
+
+.house-warriors-card h4 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.house-warriors-card-subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--hw-muted);
+  font-size: 0.86rem;
+  font-style: italic;
+}
+
+.house-warriors-card-description {
+  margin-top: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.house-warriors-card-description > :first-child { margin-top: 0; }
+.house-warriors-card-description > :last-child { margin-bottom: 0; }
+
+.house-warriors-facts {
+  margin: 1rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--hw-line);
+}
+
+.house-warriors-facts div {
+  display: grid;
+  grid-template-columns: minmax(4.8rem, 0.38fr) minmax(0, 1fr);
+  gap: 0.5rem;
+  padding: 0.24rem 0;
+}
+
+.house-warriors-facts dt {
+  color: var(--hw-gold);
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.house-warriors-facts dd {
+  margin: 0;
+  color: var(--hw-muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.house-warriors-divider {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) auto auto auto minmax(1rem, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  margin: clamp(2.4rem, 6vw, 5rem) 0;
+  color: var(--hw-gold);
+}
+
+.house-warriors-divider span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hw-line));
+}
+
+.house-warriors-divider span:last-child {
+  background: linear-gradient(90deg, var(--hw-line), transparent);
+}
+
+.house-warriors-divider i {
+  font-size: 0.55rem;
+  font-style: normal;
+}
+
+.house-warriors-divider strong {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.house-warriors-training-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.house-warriors-card-training {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.72fr) minmax(0, 1fr);
+}
+
+.house-warriors-card-training .house-warriors-card-image {
+  height: auto;
+  align-self: start;
+}
+
+.house-warriors-men-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--house-warriors-men-columns), minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.house-warriors-card-man-at-arms .house-warriors-card-image {
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 900px) {
+  .house-warriors-knight-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .house-warriors-knight-row > :only-child {
+    grid-column: 1 / -1;
+    width: min(100%, 24rem);
+    justify-self: center;
+  }
+
+  .house-warriors-training-grid,
+  .house-warriors-men-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .house-warriors-hero {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .house-warriors-crest {
+    width: 7.5rem;
+    grid-row: 1;
+    place-self: start;
+  }
+
+  .house-warriors-knight-row,
+  .house-warriors-training-grid,
+  .house-warriors-men-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .house-warriors-knight-row > :only-child {
+    width: 100%;
+  }
+
+  .house-warriors-card-training {
+    grid-template-columns: 1fr;
+  }
+
+  .house-warriors-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}

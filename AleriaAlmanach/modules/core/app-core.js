@@ -130,6 +130,7 @@ function shouldUsePageImageAsEntryImage(pages = []) {
     page?.tournamentLeaguePage ||
     page?.questFilePage ||
     page?.biographyPage ||
+    page?.houseWarriorsPage ||
     page?.artifactPage ||
     page?.recipePage
   )));
@@ -249,6 +250,15 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (Object.prototype.hasOwnProperty.call(page, 'image')) {
     next.image = String(page.image || '').trim() || null;
   }
+  const imageTabs = (Array.isArray(page.imageTabs) ? page.imageTabs : [])
+    .map(item => ({
+      label: String(item?.label || '').trim(),
+      image: String(item?.image || '').trim()
+    }))
+    .filter(item => item.image);
+  if (imageTabs.length) next.imageTabs = imageTabs;
+  const imageTabLabel = String(page.imageTabLabel || '').trim();
+  if (imageTabLabel) next.imageTabLabel = imageTabLabel;
   if (page.imageWidth != null) {
     const width = Number(page.imageWidth);
     const maxImageWidth = page.castePage || page.landingPage || page.characterInventoryPage ? 160 : 70;
@@ -265,7 +275,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -350,6 +360,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
       : [];
     const profileLayout = sanitizeModuleCardLayoutBlocks(page.profileLayout, next.profiles.map(profile => profile.id));
     if (profileLayout.length) next.profileLayout = profileLayout;
+  }
+
+  if (page.houseWarriorsPage) {
+    next.houseWarriors = HouseWarriorsData.sanitize(page.houseWarriors);
   }
 
   if (page.tournamentPage) {

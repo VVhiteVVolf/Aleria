@@ -61,11 +61,11 @@ function renderArchiveEntryMeta(entry, section, options = {}) {
   const items = buildArchiveEntryMetaItems(entry, section, options);
   if (!items.length) return '';
   return `
-    <div class="entry-card-meta">
+    <span class="entry-card-meta">
       ${items.map(item => `
         <span class="entry-card-meta-chip${item.wide ? ' wide' : ''}">
           <span>${escapeHtml(item.label)}</span>
           <strong>${escapeHtml(item.value)}</strong>
         </span>`).join('')}
-    </div>`;
+    </span>`;
 }

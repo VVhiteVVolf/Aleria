@@ -13,8 +13,9 @@
 <link rel="dns-prefetch" href="//imgur.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/archive.css?v=20260710-dashboard-hierarchy-v1">
-<link rel="stylesheet" href="./styles/modal.css?v=20260703-larger-module-modal-v1">
+<link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
+<link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
+<link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
 <link rel="stylesheet" href="./styles/comments.css?v=20260712-animal-font-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260712-infernal-font-v1">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
@@ -34,6 +35,7 @@
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260618-quest-file-layout-images-v1">
 <link rel="stylesheet" href="./styles/module-page-biography.css?v=20260711-doc-title-v1">
 <link rel="stylesheet" href="./styles/module-page-house.css?v=20260711-guild-template-v1">
+<link rel="stylesheet" href="./styles/module-page-house-warriors.css?v=20260712-house-warriors-scroll-v3">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260616-card-hierarchy-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260616-card-tree-v1">
 <link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260625-character-inventory-itemdb-v1">
@@ -49,16 +51,17 @@
 <link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260620-guest-register-scroll-room-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/scene-blocks.css?v=20260604-scene-comments-v1">
-<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260707-kontinente-register-v1">
+<link rel="stylesheet" href="./styles/scene-blocks.css?v=20260712-layout-ownership-v1">
+<link rel="stylesheet" href="./styles/layout-sidebar.css?v=20260712-dashboard-responsive-v1">
 <link rel="stylesheet" href="./styles/item-database.css?v=20260625-item-db-register-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
-<link rel="stylesheet" href="./styles/mobile.css?v=20260611-main-redesign-v1" media="(max-width: 640px)">
+<link rel="stylesheet" href="./styles/mobile.css?v=20260712-dashboard-readable-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260703-module-insert-json-v4"></script>
   <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20260711-guild-template-v1" defer></script>
+  <script src="./modules/house-warriors/house-warriors-data.js?v=20260712-house-warriors-images-v2" defer></script>
+  <script src="./modules/core/app-core.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260703-category-icons-v1" defer></script>
@@ -87,6 +90,7 @@
   <script src="./modules/module-editor/module-editor-map-template.js?v=20260618-map-template-v1" defer></script>
   <script src="./modules/module-editor/module-editor-landing.js?v=20260623-landing-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/module-editor/module-editor-templates.js?v=20260712-bounty-traits-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260620-character-inventory-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
@@ -101,24 +105,24 @@
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260625-character-inventory-itemdb-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-biography.js?v=20260711-doc-title-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-biography.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-house.js?v=20260711-doc-title-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-guild.js?v=20260711-doc-title-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-house.js?v=20260712-image-tabs-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-guild.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/module-editor/module-editor-bestiary.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-recipe.js?v=20260603-module-editor-fields-v1" defer></script>
   <script src="./modules/module-editor/module-editor-quest.js?v=20260623-quest-editor-parity-v1" defer></script>
   <script src="./modules/module-editor/module-editor-tournament.js?v=20260603-module-editor-fields-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-caste.js?v=20260712-caste-dossier-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-caste.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-hierarchy.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/module-editor/module-editor-family.js?v=20260629-family-groups-v1" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-pages.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-pages.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260709-scene-module-import-export-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260711-doc-icon-picker-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-state.js?v=20260623-character-inventory-items-v1" defer></script>
@@ -137,6 +141,7 @@
   <script src="./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260629-family-groups-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/inline-editor/inline-module-editor.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
@@ -155,12 +160,15 @@
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/family/family-renderer.js?v=20260629-family-groups-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20260712-caste-dossier-v1" defer></script>
-  <script src="./modules/archive/archive-card-meta.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20260712-image-tabs-v1" defer></script>
+  <script src="./modules/archive/archive-card-meta.js?v=20260712-card-semantics-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
-  <script src="./modules/archive/archive-dashboard.js?v=20260710-dashboard-hierarchy-v1" defer></script>
+  <script src="./modules/archive/archive-hierarchy-browser.js?v=20260712-hierarchy-browser-v1" defer></script>
+  <script src="./modules/dashboard/dashboard-state.js?v=20260712-continuation-v1" defer></script>
+  <script src="./modules/archive/archive-dashboard.js?v=20260712-dashboard-continuation-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20260710-dashboard-hierarchy-v1" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20260712-hierarchy-browser-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-tabs.js?v=20260703-character-dashboard-v1" defer></script>
@@ -239,7 +247,7 @@
   <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1" defer></script>
   <script src="./modules/modal/modal-layout.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
-  <script src="./modules/modal/modal-controller.js?v=20260616-inline-scroll-restore-v1" defer></script>
+  <script src="./modules/modal/modal-controller.js?v=20260712-dashboard-continuation-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20260707-kontinente-register-v1" defer></script>
@@ -253,7 +261,7 @@
   <div class="header-divider"></div>
 </header>
 
-<nav class="gallery-tabs" id="gallery-tabs"></nav>
+<nav class="gallery-tabs" id="gallery-tabs" aria-label="Almanach-Bereiche"></nav>
 <div class="page-layout">
   <aside id="left-sidebar" aria-label="Almanach-Register">
     <div class="almanach-left-sidebar-head">

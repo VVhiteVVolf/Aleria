@@ -183,6 +183,7 @@ function buildGuildModuleEditorFields(page) {
             <input type="url" class="me-guild-crest-image" value="${escapeHtml(guild.crestImage)}" placeholder="https://i.imgur.com/...">
             <div class="module-editor-help">Eigenes, zweites Bildfeld für das Emblem im Kopfbereich — unabhängig vom Hauptbild links.</div>
           </div>
+          ${buildModuleImageTabsEditor(page)}
           <div class="module-editor-field">
             <label>Bildformat links</label>
             <select class="me-guild-portrait-format">
@@ -338,6 +339,7 @@ function collectGuildModuleEditorPage(card, page) {
   page.stats = collectModuleGuildStats(card.querySelector('[data-page-type="guild"]') || card);
   page.quote = getTrimmedFormValue(card, '.me-guild-quote');
   page.quoteBy = getTrimmedFormValue(card, '.me-guild-quote-by');
+  collectModuleImageTabs(card, page);
   page.guild = sanitizeGuildData({
     crestImage: getTrimmedFormValue(card, '.me-guild-crest-image'),
     portraitFormat: getFormValue(card, '.me-guild-portrait-format'),

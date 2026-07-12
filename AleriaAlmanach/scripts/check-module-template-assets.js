@@ -33,7 +33,7 @@ const orteLoader = read(orteLoaderPath);
 const templates = read(templatesPath);
 const inlineEditorPath = path.join(almanachRoot, 'modules', 'inline-editor', 'inline-module-editor.js');
 const inlineEditor = read(inlineEditorPath);
-const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|landing|character-inventory|guest-register|hierarchy|family)\\/[^"?]+\\.js';
+const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|landing|character-inventory|guest-register|hierarchy|family|house-warriors)\\/[^"?]+\\.js';
 const mainScripts = collect(mainHtml, new RegExp(`src="\\.\\/(${moduleAssetPattern})`, 'g'));
 const orteScripts = collect(orteLoader, new RegExp(`"(${moduleAssetPattern})(?:\\?[^" ]*)?"`, 'g'));
 const mainStyles = collect(mainHtml, /href="\.\/(styles\/module-page-[^"?]+\.css)/g);

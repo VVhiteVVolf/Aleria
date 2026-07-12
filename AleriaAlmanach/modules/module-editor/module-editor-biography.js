@@ -373,6 +373,7 @@ function buildBiographyModuleEditorFields(page) {
               ${buildModuleBiographyStatRows(page?.stats || [])}
             </div>
           </div>
+          ${buildModuleImageTabsEditor(page)}
           <div class="module-editor-field">
             <label>Biografie-Überschrift</label>
             <input type="text" class="me-biography-title" value="${escapeHtml(biography.biographyTitle)}">
@@ -519,6 +520,7 @@ function collectBiographyModuleEditorPage(card, page) {
   page.stats = collectModuleBiographyStats(card.querySelector('[data-page-type="biography"]') || card);
   page.quote = getTrimmedFormValue(card, '.me-biography-quote');
   page.quoteBy = getTrimmedFormValue(card, '.me-biography-quote-by');
+  collectModuleImageTabs(card, page);
   page.biography = sanitizeBiographyData({
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),

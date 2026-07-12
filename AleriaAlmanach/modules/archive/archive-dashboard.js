@@ -3,14 +3,12 @@ function getArchiveDashboardStats(sections = []) {
   const tabCount = new Set(sections.map(section => section.tab || section.key).filter(Boolean)).size;
   const moduleCount = allEntries.length;
   const pageCount = allEntries.reduce((sum, entry) => sum + getArchiveEntryPageCount(entry), 0);
-  const commentReadyCount = allEntries.filter(entry => entry?.appendCommentsPage !== false || hasArchiveEntryPageComments(entry)).length;
-  const customSectionCount = _customSections.length;
+  const sceneCount = allEntries.filter(entry => (entry?.pages || []).some(page => page?.sessionPage)).length;
   return {
     moduleCount,
     pageCount,
-    commentReadyCount,
-    sectionCount: tabCount,
-    customSectionCount
+    sceneCount,
+    sectionCount: tabCount
   };
 }
 
@@ -137,15 +135,22 @@ function getArchiveDashboardPrimarySection(sections = []) {
 function buildArchiveDashboardHeroActions(sections = []) {
   const primarySection = getArchiveDashboardPrimarySection(sections);
   const primaryScene = getArchiveDashboardPrimaryScene(sections);
+  const continuation = typeof getAlmanachDashboardContinuation === 'function'
+    ? getAlmanachDashboardContinuation(sections)
+    : null;
   const sectionLabel = primarySection?.tab || primarySection?.key || '';
   return `
-    <div class="archive-dashboard-hero-actions" aria-label="Schnelleinstiege">
-      ${sectionLabel ? `
+    <div class="archive-dashboard-hero-actions" role="group" aria-label="Schnelleinstiege" data-dashboard-hero-actions>
+      ${continuation ? `
+        <button class="archive-dashboard-primary-action" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(continuation.entry.id)}" data-page-index="${continuation.pageIndex}">
+          <span>Weiterlesen</span>
+          <small>${escapeHtml(continuation.entry.title || continuation.entry.id)}${continuation.pageLabel ? ` · ${escapeHtml(continuation.pageLabel)}` : ''}</small>
+        </button>` : sectionLabel ? `
         <button class="archive-dashboard-primary-action" type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(sectionLabel)}">
           <span>Welt erkunden</span>
           <small>Register und Weltwissen öffnen</small>
         </button>` : ''}
-      ${primaryScene ? `
+      ${primaryScene && primaryScene.entry.id !== continuation?.entry?.id ? `
         <button class="archive-dashboard-primary-action" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(primaryScene.entry.id)}">
           <span>Szene öffnen</span>
           <small>${escapeHtml(primaryScene.entry.title || 'Interaktive Szene')}</small>
@@ -155,6 +160,14 @@ function buildArchiveDashboardHeroActions(sections = []) {
       </button>
     </div>`;
 }
+
+function refreshArchiveDashboardHeroActions() {
+  const current = document.querySelector('[data-dashboard-hero-actions]');
+  if (!current) return;
+  current.outerHTML = buildArchiveDashboardHeroActions(getValidSections());
+}
+
+document.addEventListener('almanach:dashboard-history-changed', refreshArchiveDashboardHeroActions);
 
 function buildArchiveDashboardQuickCards(sections = []) {
   return buildArchiveDashboardSectionCards(sections);
@@ -205,8 +218,8 @@ function renderArchiveDashboard(sections = []) {
         <div class="archive-dashboard-stats">
           <span><strong>${stats.moduleCount}</strong> Module</span>
           <span><strong>${stats.pageCount}</strong> Seiten</span>
-          <span><strong>${stats.commentReadyCount}</strong> Dialogbereit</span>
-          <span><strong>${stats.customSectionCount}</strong> Eigene Reiter</span>
+          <span><strong>${stats.sectionCount}</strong> Bereiche</span>
+          <span><strong>${stats.sceneCount}</strong> Szenen</span>
         </div>
       </div>
       <div class="archive-dashboard-grid">

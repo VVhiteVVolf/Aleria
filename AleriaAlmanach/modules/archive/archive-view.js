@@ -104,11 +104,6 @@ function archivePathsEqual(a = [], b = []) {
   return a.every((part, index) => normalizeArchivePathPart(part) === normalizeArchivePathPart(b[index]));
 }
 
-function archivePathHasPrefix(path = [], prefix = []) {
-  if (path.length < prefix.length) return false;
-  return prefix.every((part, index) => normalizeArchivePathPart(part) === normalizeArchivePathPart(path[index]));
-}
-
 function getSectionThemeMeta(sectionKey) {
   return SECTION_THEME_META[sectionKey] || SECTION_THEME_META.Archive;
 }
@@ -169,10 +164,10 @@ function applyModalTheme(entry) {
   card.style.setProperty('--module-height', `${size.height}vh`);
 }
 
-function openArchiveEntryById(entryId) {
+function openArchiveEntryById(entryId, options = {}) {
   const found = findCurrentSectionByEntryId(String(entryId || ''));
   if (!found?.entry) return;
-  openModal(found.entry);
+  openModal(found.entry, { pageIndex: options.pageIndex });
 }
 
 function preloadArchiveEntryById(entryId) {
@@ -189,13 +184,6 @@ function handleArchiveActionClick(event) {
   if (action === 'switch-tab') {
     event.preventDefault();
     switchTab(trigger.dataset.tab || 'Alle', { resetPath: true, render: true });
-    return;
-  }
-  if (action === 'enter-section-folder' || action === 'set-section-path') {
-    event.preventDefault();
-    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
-    setActiveArchivePath(_activeTab, decodeArchivePathData(trigger.dataset.sectionPath || ''));
-    renderAll();
     return;
   }
   if (action === 'new-module') {
@@ -247,6 +235,36 @@ function handleArchiveActionClick(event) {
     }
     return;
   }
+  if (action === 'toggle-hierarchy-node') {
+    event.preventDefault();
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    toggleArchiveHierarchyNode(_activeTab, decodeArchivePathData(trigger.dataset.sectionPath || ''));
+    renderAll();
+    return;
+  }
+  if (action === 'select-hierarchy-node') {
+    event.preventDefault();
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
+    setActiveArchivePath(_activeTab, path);
+    expandArchiveHierarchyPath(_activeTab, path);
+    renderAll();
+    return;
+  }
+  if (action === 'show-hierarchy-content') {
+    event.preventDefault();
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
+    const pathChanged = !archivePathsEqual(getActiveArchivePath(_activeTab), path);
+    if (pathChanged) {
+      setActiveArchivePath(_activeTab, path);
+      renderAll();
+    }
+    window.requestAnimationFrame(() => {
+      document.getElementById('archive-hierarchy-content')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return;
+  }
   if (action === 'focus-dashboard-search') {
     event.preventDefault();
     const input = document.getElementById('archive-search-input');
@@ -262,7 +280,9 @@ function handleArchiveActionClick(event) {
   if (action === 'open-entry') {
     if (event.target?.closest?.('.entry-card-admin')) return;
     event.preventDefault();
-    openArchiveEntryById(trigger.dataset.entryId || '');
+    openArchiveEntryById(trigger.dataset.entryId || '', {
+      pageIndex: Number.parseInt(trigger.dataset.pageIndex || '0', 10)
+    });
   }
 }
 
@@ -271,14 +291,6 @@ function handleArchiveActionChange(event) {
   if (!trigger) return;
   event.preventDefault();
   moveModuleToSection(trigger.dataset.entryId || '', trigger.value || '');
-}
-
-function handleArchiveActionKeydown(event) {
-  const trigger = event.target?.closest?.('[data-archive-action="open-entry"]');
-  if (!trigger) return;
-  if (event.key !== 'Enter' && event.key !== ' ') return;
-  event.preventDefault();
-  openArchiveEntryById(trigger.dataset.entryId || '');
 }
 
 function handleArchiveEntryPreload(event) {
@@ -504,67 +516,6 @@ function getArchiveRootSection(tabSections = [], tab = _activeTab) {
   };
 }
 
-function getArchiveDisplaySection(tabSections = [], tab = _activeTab, path = []) {
-  if (!path.length) return getArchiveRootSection(tabSections, tab);
-  const exact = tabSections.find(section => archivePathsEqual(getSectionPathParts(section), path));
-  if (exact) return exact;
-  return {
-    key: path[path.length - 1] || tab || 'Archiv',
-    tab: tab || 'Archiv',
-    path,
-    desc: '',
-    entries: []
-  };
-}
-
-function getArchiveSectionsAtPath(tabSections = [], path = []) {
-  return tabSections.filter(section => archivePathsEqual(getSectionPathParts(section), path));
-}
-
-function getArchiveChildFolders(tabSections = [], currentPath = []) {
-  const groups = new Map();
-  tabSections.forEach(section => {
-    const path = getSectionPathParts(section);
-    if (path.length <= currentPath.length || !archivePathHasPrefix(path, currentPath)) return;
-    const label = path[currentPath.length];
-    const folderPath = path.slice(0, currentPath.length + 1);
-    const key = folderPath.map(normalizeArchivePathPart).join('>');
-    if (!groups.has(key)) {
-      groups.set(key, {
-        label,
-        path: folderPath,
-        iconUrl: '',
-        moduleCount: 0,
-        childKeys: new Set()
-      });
-    }
-  });
-
-  groups.forEach(folder => {
-    tabSections.forEach(section => {
-      const path = getSectionPathParts(section);
-      if (!archivePathHasPrefix(path, folder.path)) return;
-      if (!folder.iconUrl && archivePathsEqual(path, folder.path)) {
-        folder.iconUrl = section.iconUrl || '';
-      }
-      folder.moduleCount += (section.entries || []).length;
-      if (path.length > folder.path.length) {
-        folder.childKeys.add(normalizeArchivePathPart(path[folder.path.length]));
-      }
-    });
-  });
-
-  return Array.from(groups.values())
-    .map(folder => ({
-      label: folder.label,
-      path: folder.path,
-      iconUrl: folder.iconUrl,
-      moduleCount: folder.moduleCount,
-      childCount: folder.childKeys.size
-    }))
-    .sort((a, b) => a.label.localeCompare(b.label, 'de'));
-}
-
 function switchTab(tab, options = {}) {
   _activeTab = tab;
   if (options.resetPath) setActiveArchivePath(tab, []);
@@ -573,7 +524,10 @@ function switchTab(tab, options = {}) {
     return;
   }
   document.querySelectorAll('.gallery-tab-group-main .gallery-tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.tab === tab);
+    const isActive = btn.dataset.tab === tab;
+    btn.classList.toggle('active', isActive);
+    if (isActive) btn.setAttribute('aria-current', 'page');
+    else btn.removeAttribute('aria-current');
   });
   document.querySelectorAll('[data-archive-dashboard]').forEach(dashboard => {
     dashboard.hidden = tab !== 'Alle' || !!_archiveSearchNeedle;
@@ -592,9 +546,18 @@ function renderAll() {
   const main    = document.getElementById('main-content');
   const tabsNav = document.getElementById('gallery-tabs');
   if (!main || !tabsNav) return;
+  const previousHierarchy = main.querySelector('[data-archive-hierarchy-tab]');
+  const previousHierarchyTab = previousHierarchy?.dataset.archiveHierarchyTab || '';
+  const previousHierarchyScroll = previousHierarchy?.querySelector('.archive-hierarchy-tree-scroll')?.scrollTop || 0;
   clearTimeout(_archiveSearchRenderTimer);
   _archiveSearchRenderTimer = null;
   const sections = getValidSections();
+  const sectionByEntryId = new Map();
+  sections.forEach(section => {
+    (section.entries || []).forEach(entry => {
+      if (entry?.id && !sectionByEntryId.has(entry.id)) sectionByEntryId.set(entry.id, section);
+    });
+  });
   const customSectionSignatures = new Set(_customSections.map(section => makeSectionSignature(section)));
   let entryMatchCount = 0;
   let sectionMatchCount = 0;
@@ -627,6 +590,7 @@ function renderAll() {
     btn.dataset.tab = tab;
     btn.dataset.tabTheme = getThemeMetaForTab(tab).slug;
     btn.dataset.archiveAction = 'switch-tab';
+    btn.type = 'button';
     btn.textContent = tab === 'Alle' ? 'Dashboard' : tab;
     tabGroup.appendChild(btn);
   });
@@ -703,7 +667,7 @@ function renderAll() {
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
   toolbar.innerHTML = `
-    <div class="archive-toolbar-label">Archivsuche</div>
+    <label class="archive-toolbar-label" for="archive-search-input">Archivsuche</label>
     <div class="archive-search-wrap">
       <input class="archive-search-input" id="archive-search-input" name="aleria-archive-search-${Date.now()}" type="search" placeholder="Titel, Kategorie, Person oder Stichwort eingeben" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-lpignore="true" data-form-type="other">
       <button class="archive-search-clear" id="archive-search-clear" type="button">Leeren</button>
@@ -739,20 +703,26 @@ function renderAll() {
   main.appendChild(emptyState);
 
   let renderSections = sections;
-  const drillFoldersBySignature = new Map();
-  const drillPathNavBySignature = new Map();
+  const hierarchyBySignature = new Map();
   if (shouldRenderArchiveDrilldown(_activeTab)) {
     const currentPath = getActiveArchivePath(_activeTab);
     const tabSections = getArchiveTabSections(sections, _activeTab);
-    const displaySection = getArchiveDisplaySection(tabSections, _activeTab, currentPath);
-    const currentSections = getArchiveSectionsAtPath(tabSections, currentPath);
-    const folders = getArchiveChildFolders(tabSections, currentPath);
-    const directEntries = currentSections.flatMap(section => section.entries || []);
-    const renderSection = { ...displaySection, entries: directEntries };
+    const hierarchyModel = buildArchiveHierarchyModel(tabSections, _activeTab);
+    const defaultChild = !currentPath.length && !hierarchyModel.root.directEntries.length
+      ? hierarchyModel.root.children[0]
+      : null;
+    const selectedNode = defaultChild
+      || findArchiveHierarchyNode(hierarchyModel.root, currentPath)
+      || hierarchyModel.root;
+    if (defaultChild) setActiveArchivePath(_activeTab, defaultChild.path);
+    const renderSection = getArchiveHierarchySection(selectedNode, _activeTab);
     const renderSignature = makeSectionSignature(renderSection);
     renderSections = [renderSection];
-    drillFoldersBySignature.set(renderSignature, folders);
-    drillPathNavBySignature.set(renderSignature, renderArchivePathNav(getArchiveRootSection(tabSections, _activeTab), currentPath));
+    hierarchyBySignature.set(renderSignature, {
+      model: hierarchyModel,
+      selectedNode,
+      rootSection: getArchiveHierarchySection(hierarchyModel.root, _activeTab)
+    });
   }
 
   // Build section blocks
@@ -760,9 +730,9 @@ function renderAll() {
     const filteredEntries = section.entries.filter(entry => matchesArchiveSearch(buildEntrySearchText(entry, section)));
     entryMatchCount += filteredEntries.length;
     const sectionSignature = makeSectionSignature(section);
-    const drillFolders = drillFoldersBySignature.get(sectionSignature) || [];
-    const showEmptySection = !_archiveSearchNeedle && !section.entries.length && !drillFolders.length;
-    if (filteredEntries.length || showEmptySection || drillFolders.length) sectionMatchCount++;
+    const hierarchy = hierarchyBySignature.get(sectionSignature) || null;
+    const showEmptySection = !_archiveSearchNeedle && !section.entries.length && !hierarchy;
+    if (filteredEntries.length || showEmptySection || hierarchy) sectionMatchCount++;
     const theme = getThemeMetaForSection(section);
     const sectionDepth = getSectionPathParts(section).length;
     const block = document.createElement('div');
@@ -770,15 +740,21 @@ function renderAll() {
     block.dataset.tab = section.tab || section.key;
     block.dataset.sectionTheme = theme.slug;
     block.dataset.sectionDepth = String(sectionDepth);
-    block.dataset.hasMatches = filteredEntries.length || showEmptySection || drillFolders.length ? 'true' : 'false';
+    block.dataset.hasMatches = filteredEntries.length || showEmptySection || hierarchy ? 'true' : 'false';
     block.innerHTML = `
-      ${drillPathNavBySignature.get(sectionSignature) || ''}
-      ${renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}
-      ${renderArchiveFolderGrid(drillFolders)}
+      ${hierarchy
+        ? renderArchiveSectionBand(
+            hierarchy.rootSection,
+            hierarchy.model.root.entries,
+            { isCustom: customSectionSignatures.has(makeSectionSignature(hierarchy.rootSection)) }
+          )
+        : renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}
+      ${hierarchy ? renderArchiveHierarchyBrowser(hierarchy.model, hierarchy.selectedNode.path) : ''}
+      ${hierarchy ? renderArchiveHierarchyContentHeading(hierarchy.selectedNode) : ''}
       <div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');
-    if (showEmptySection) {
+    if (showEmptySection || (hierarchy && !filteredEntries.length)) {
       const hint = document.createElement('div');
       hint.className = 'archive-section-empty-hint';
       hint.textContent = 'Noch keine Module in diesem Reiter.';
@@ -786,41 +762,48 @@ function renderAll() {
     }
     const visibleEntries = getArchiveSectionVisibleEntries(section, filteredEntries, { searchActive: !!_archiveSearchNeedle });
     visibleEntries.forEach((entry, i) => {
-      const card = document.createElement('div');
+      const cardSection = hierarchy
+        ? (sectionByEntryId.get(entry.id) || section)
+        : section;
+      const cardSectionSignature = makeSectionSignature(cardSection);
+      const card = document.createElement('article');
       card.className = 'entry-card' + (entry.locked ? ' card-locked' : '');
       card.style.animationDelay = `${i * 0.07}s`;
       card.dataset.searchKind = 'entry';
-      card.dataset.archiveAction = 'open-entry';
-      card.dataset.entryId = entry.id || '';
-      card.setAttribute('role', 'button');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('aria-label', `${entry.title} öffnen`);
       const previewImage = getArchiveEntryPreviewImage(entry);
       const usePriorityImage = !!previewImage && priorityCardImageBudget > 0;
       const imageLoadingAttrs = usePriorityImage
         ? 'loading="eager" decoding="async" fetchpriority="high"'
         : 'loading="lazy" decoding="async" fetchpriority="low"';
       card.innerHTML = `
-        <div class="card-image-wrap">
-          ${previewImage ? `<img src="${previewImage}" alt="${escapeHtml(entry.title)}" ${imageLoadingAttrs}>` : `<div class="card-placeholder-inner">${escapeHtml(entry.icon || '')}</div>`}
-          <div class="card-image-overlay"></div>
-          ${entry.locked ? `<div class="lock-icon">🔒</div>` : ''}
-          <div class="card-label"><h3>${escapeHtml(entry.title)}</h3><div class="card-type-tag">${escapeHtml(entry.type)}</div></div>
-        </div>
-        ${renderArchiveEntryMeta(entry, section, { showLocation: _archiveSearchNeedle || _activeTab === 'Alle' })}
+        <button class="entry-card-open" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} öffnen">
+          <span class="card-image-wrap">
+            ${previewImage ? `<img src="${previewImage}" alt="" ${imageLoadingAttrs}>` : `<span class="card-placeholder-inner">${escapeHtml(entry.icon || '')}</span>`}
+            <span class="card-image-overlay"></span>
+            ${entry.locked ? `<span class="lock-icon" aria-hidden="true">🔒</span>` : ''}
+            <span class="card-label"><span class="entry-card-title">${escapeHtml(entry.title)}</span><span class="card-type-tag">${escapeHtml(entry.type)}</span></span>
+          </span>
+          ${renderArchiveEntryMeta(entry, cardSection, { showLocation: _archiveSearchNeedle || _activeTab === 'Alle' })}
+          <span class="card-corner" aria-hidden="true"></span><span class="card-corner-bl" aria-hidden="true"></span>
+        </button>
         ${_archiveManageMode ? `<div class="entry-card-admin">
           <label>Verschieben nach</label>
           <select data-archive-action="move-entry-section" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(entry.title || 'Modul')} verschieben">
-            ${buildModuleSectionTargetOptions(sectionSignature)}
+            ${buildModuleSectionTargetOptions(cardSectionSignature)}
           </select>
           <button type="button" data-archive-action="open-module-stamp" data-source-entry-id="${escapeHtml(entry.id || '')}">Kopieren</button>
-        </div>` : ''}
-        <div class="card-corner"></div><div class="card-corner-bl"></div>`;
+        </div>` : ''}`;
       if (usePriorityImage) priorityCardImageBudget--;
       grid.appendChild(card);
     });
     grid.insertAdjacentHTML('beforeend', renderArchiveSectionMoreControl(section, filteredEntries, visibleEntries, { searchActive: !!_archiveSearchNeedle }));
   });
+
+  const nextHierarchy = main.querySelector('[data-archive-hierarchy-tab]');
+  if (nextHierarchy?.dataset.archiveHierarchyTab === previousHierarchyTab) {
+    const nextTreeScroll = nextHierarchy.querySelector('.archive-hierarchy-tree-scroll');
+    if (nextTreeScroll) nextTreeScroll.scrollTop = previousHierarchyScroll;
+  }
 
   // Charaktere Sektion
   const charBlock = document.createElement('div');
@@ -857,7 +840,6 @@ function initPage() {
   _appInitialized = true;
   document.addEventListener('click', handleArchiveActionClick);
   document.addEventListener('change', handleArchiveActionChange);
-  document.addEventListener('keydown', handleArchiveActionKeydown);
   document.addEventListener('pointerover', handleArchiveEntryPreload);
   document.addEventListener('focusin', handleArchiveEntryPreload);
   cleanupLocalAlmanachStorage();
