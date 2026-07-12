@@ -191,7 +191,7 @@ function openModuleEditorForCurrent() {
     { href: "styles/module-page-guest-register.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-hierarchy.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-house.css?v=orte-module-templates-v2" },
-    { href: "styles/module-page-house-warriors.css?v=orte-house-warriors-images-v2" },
+    { href: "styles/module-page-house-warriors.css?v=orte-house-warriors-scroll-v3" },
     { href: "styles/module-page-landing.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-map-template.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-profiles.css?v=orte-module-templates-v2" },
