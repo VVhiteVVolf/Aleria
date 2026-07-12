@@ -1,6 +1,24 @@
 // Generated from ../IconOrdner. Refresh with: node ./AleriaAlmanach/tools/update-icon-directory.mjs
 const ALERIA_ICON_DIRECTORY = [
   {
+    "name": "Legend_Banner_Map_Icon",
+    "fileName": "Legend_Banner_Map_Icon.png",
+    "folder": "Banner",
+    "path": "../IconOrdner/Banner/Legend_Banner_Map_Icon.png",
+    "width": 580,
+    "height": 144,
+    "ratio": "banner"
+  },
+  {
+    "name": "Location_Banner_Map_Icon",
+    "fileName": "Location_Banner_Map_Icon.png",
+    "folder": "Banner",
+    "path": "../IconOrdner/Banner/Location_Banner_Map_Icon.png",
+    "width": 560,
+    "height": 136,
+    "ratio": "banner"
+  },
+  {
     "name": "Trait_ambitious",
     "fileName": "Trait_ambitious.png",
     "folder": "Big Traits",
@@ -3493,15 +3511,6 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "wide"
   },
   {
-    "name": "acht",
-    "fileName": "acht.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/acht.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
     "name": "AusrüstungInventar",
     "fileName": "AusrüstungInventar.PNG",
     "folder": "IconOrdner",
@@ -3655,24 +3664,6 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
-    "name": "drei",
-    "fileName": "drei.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/drei.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
-    "name": "Eins",
-    "fileName": "Eins.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/Eins.PNG",
-    "width": 102,
-    "height": 102,
-    "ratio": "square"
-  },
-  {
     "name": "Feder",
     "fileName": "Feder.PNG",
     "folder": "IconOrdner",
@@ -3724,15 +3715,6 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Fliegenpilz.PNG",
     "width": 125,
     "height": 125,
-    "ratio": "square"
-  },
-  {
-    "name": "fünf",
-    "fileName": "fünf.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/fünf.PNG",
-    "width": 96,
-    "height": 96,
     "ratio": "square"
   },
   {
@@ -3943,24 +3925,6 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
-    "name": "Neun",
-    "fileName": "Neun.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/Neun.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
-    "name": "Null",
-    "fileName": "Null.png",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/Null.png",
-    "width": 105,
-    "height": 105,
-    "ratio": "square"
-  },
-  {
     "name": "Objekt einführen",
     "fileName": "Objekt einführen.PNG",
     "folder": "IconOrdner",
@@ -4159,24 +4123,6 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
-    "name": "sechs",
-    "fileName": "sechs.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/sechs.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
-    "name": "sieben",
-    "fileName": "sieben.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/sieben.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
     "name": "Silbertaler",
     "fileName": "Silbertaler.PNG",
     "folder": "IconOrdner",
@@ -4303,15 +4249,6 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
-    "name": "vier",
-    "fileName": "vier.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/vier.PNG",
-    "width": 96,
-    "height": 96,
-    "ratio": "square"
-  },
-  {
     "name": "Violette Blume",
     "fileName": "Violette Blume.PNG",
     "folder": "IconOrdner",
@@ -4400,15 +4337,6 @@ const ALERIA_ICON_DIRECTORY = [
     "width": 166,
     "height": 111,
     "ratio": "wide"
-  },
-  {
-    "name": "zwei",
-    "fileName": "zwei.PNG",
-    "folder": "IconOrdner",
-    "path": "../IconOrdner/zwei.PNG",
-    "width": 95,
-    "height": 95,
-    "ratio": "square"
   },
   {
     "name": "Baron",
@@ -5041,6 +4969,168 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Beschwörung1",
+    "fileName": "Beschwörung1.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Beschwörung1.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Blitze",
+    "fileName": "Blitze.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Blitze.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Darkseducer",
+    "fileName": "Darkseducer.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Darkseducer.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Eisatronach",
+    "fileName": "Eisatronach.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Eisatronach.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Feuer",
+    "fileName": "Feuer.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Feuer.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Fleischatronach",
+    "fileName": "Fleischatronach.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Fleischatronach.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Geist",
+    "fileName": "Geist.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Geist.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Genie",
+    "fileName": "Genie.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Genie.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Gewitter",
+    "fileName": "Gewitter.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Gewitter.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Goblin",
+    "fileName": "Goblin.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Goblin.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Golden Saint",
+    "fileName": "Golden Saint.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Golden Saint.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Male Saint",
+    "fileName": "Male Saint.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Male Saint.PNG",
+    "width": 212,
+    "height": 212,
+    "ratio": "square"
+  },
+  {
+    "name": "Nekromantie",
+    "fileName": "Nekromantie.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Nekromantie.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Rüstung",
+    "fileName": "Rüstung.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Rüstung.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Schloss knacken",
+    "fileName": "Schloss knacken.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Schloss knacken.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Skeleton Archer",
+    "fileName": "Skeleton Archer.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Skeleton Archer.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "Skeleton Warrior",
+    "fileName": "Skeleton Warrior.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/Skeleton Warrior.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
+    "name": "WIdow",
+    "fileName": "WIdow.PNG",
+    "folder": "Magie",
+    "path": "../IconOrdner/Magie/WIdow.PNG",
+    "width": 206,
+    "height": 206,
+    "ratio": "square"
+  },
+  {
     "name": "Neutrales Adelswappen",
     "fileName": "Neutrales Adelswappen.png",
     "folder": "Neutrale Wappen",
@@ -5056,6 +5146,6513 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Neutrale Wappen/Neutrales Bürgerwappen.png",
     "width": 1024,
     "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "acht",
+    "fileName": "acht.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/acht.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "drei",
+    "fileName": "drei.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/drei.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "Eins",
+    "fileName": "Eins.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Eins.PNG",
+    "width": 102,
+    "height": 102,
+    "ratio": "square"
+  },
+  {
+    "name": "fünf",
+    "fileName": "fünf.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/fünf.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "Ico_classCantrip",
+    "fileName": "Ico_classCantrip.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_classCantrip.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_01",
+    "fileName": "Ico_knownSpells_lvl_01.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_01.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_02",
+    "fileName": "Ico_knownSpells_lvl_02.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_02.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_03",
+    "fileName": "Ico_knownSpells_lvl_03.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_03.png",
+    "width": 48,
+    "height": 36,
+    "ratio": "wide"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_04",
+    "fileName": "Ico_knownSpells_lvl_04.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_04.png",
+    "width": 48,
+    "height": 36,
+    "ratio": "wide"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_05",
+    "fileName": "Ico_knownSpells_lvl_05.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_05.png",
+    "width": 36,
+    "height": 36,
+    "ratio": "square"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_06",
+    "fileName": "Ico_knownSpells_lvl_06.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_06.png",
+    "width": 48,
+    "height": 36,
+    "ratio": "wide"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_07",
+    "fileName": "Ico_knownSpells_lvl_07.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_07.png",
+    "width": 56,
+    "height": 36,
+    "ratio": "wide"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_08",
+    "fileName": "Ico_knownSpells_lvl_08.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_08.png",
+    "width": 68,
+    "height": 36,
+    "ratio": "banner"
+  },
+  {
+    "name": "Ico_knownSpells_lvl_09",
+    "fileName": "Ico_knownSpells_lvl_09.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Ico_knownSpells_lvl_09.png",
+    "width": 48,
+    "height": 36,
+    "ratio": "wide"
+  },
+  {
+    "name": "Neun",
+    "fileName": "Neun.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Neun.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "Null",
+    "fileName": "Null.png",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/Null.png",
+    "width": 105,
+    "height": 105,
+    "ratio": "square"
+  },
+  {
+    "name": "sechs",
+    "fileName": "sechs.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/sechs.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "sieben",
+    "fileName": "sieben.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/sieben.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "vier",
+    "fileName": "vier.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/vier.PNG",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "zwei",
+    "fileName": "zwei.PNG",
+    "folder": "Nummern",
+    "path": "../IconOrdner/Nummern/zwei.PNG",
+    "width": 95,
+    "height": 95,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-Guild_arena_challenger.bmp",
+    "fileName": "100px-Guild_arena_challenger.bmp.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-Guild_arena_challenger.bmp.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-KnightsOfTheWhiteStallion",
+    "fileName": "100px-KnightsOfTheWhiteStallion.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-KnightsOfTheWhiteStallion.gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-MythicDawn",
+    "fileName": "100px-MythicDawn.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-MythicDawn.gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Agility_(title)",
+    "fileName": "100px-OB-icon-Agility_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Agility_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Endurance_(title)",
+    "fileName": "100px-OB-icon-Endurance_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Endurance_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Bloody_Hand",
+    "fileName": "100px-OB-icon-Goblin-Bloody_Hand.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Bloody_Hand.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Dust_Eater",
+    "fileName": "100px-OB-icon-Goblin-Dust_Eater.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Dust_Eater.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Rock_Biter",
+    "fileName": "100px-OB-icon-Goblin-Rock_Biter.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Rock_Biter.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Sharp_Tooth",
+    "fileName": "100px-OB-icon-Goblin-Sharp_Tooth.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Sharp_Tooth.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Skull_Breaker",
+    "fileName": "100px-OB-icon-Goblin-Skull_Breaker.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Skull_Breaker.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-Three_Feather",
+    "fileName": "100px-OB-icon-Goblin-Three_Feather.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-Three_Feather.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Goblin-White_Skin",
+    "fileName": "100px-OB-icon-Goblin-White_Skin.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Goblin-White_Skin.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Intelligence_(title)",
+    "fileName": "100px-OB-icon-Intelligence_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Intelligence_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Luck_(title)",
+    "fileName": "100px-OB-icon-Luck_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Luck_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Personality_(title)",
+    "fileName": "100px-OB-icon-Personality_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Personality_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Speed_(title)",
+    "fileName": "100px-OB-icon-Speed_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Speed_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Strength_(title)",
+    "fileName": "100px-OB-icon-Strength_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Strength_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-icon-Willpower_(title)",
+    "fileName": "100px-OB-icon-Willpower_(title).gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-icon-Willpower_(title).gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OB-nobilityfactionicon",
+    "fileName": "100px-OB-nobilityfactionicon.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OB-nobilityfactionicon.jpg",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-OrderOfTheVirtuousBlood",
+    "fileName": "100px-OrderOfTheVirtuousBlood.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-OrderOfTheVirtuousBlood.gif",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "100px-SI-icon-Court_of_Madness",
+    "fileName": "100px-SI-icon-Court_of_Madness.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/100px-SI-icon-Court_of_Madness.jpg",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "99px-BlackwoodCompany",
+    "fileName": "99px-BlackwoodCompany.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/99px-BlackwoodCompany.gif",
+    "width": 99,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "99px-KnightsOfTheThorn",
+    "fileName": "99px-KnightsOfTheThorn.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/99px-KnightsOfTheThorn.gif",
+    "width": 99,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "99px-OrderOfTheDragon",
+    "fileName": "99px-OrderOfTheDragon.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/99px-OrderOfTheDragon.gif",
+    "width": 99,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "99px-TheBlades",
+    "fileName": "99px-TheBlades.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/99px-TheBlades.gif",
+    "width": 99,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "Fenceicon_small",
+    "fileName": "Fenceicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Fenceicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Horseicon_small",
+    "fileName": "Horseicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Horseicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Merchanticon_small",
+    "fileName": "Merchanticon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Merchanticon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Absorb",
+    "fileName": "OB-icon-Absorb.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Absorb.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Absorbspell",
+    "fileName": "OB-icon-Absorbspell.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Absorbspell.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Bloodletter",
+    "fileName": "OB-icon-Arena-Bloodletter.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Bloodletter.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Brawler",
+    "fileName": "OB-icon-Arena-Brawler.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Brawler.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Champion",
+    "fileName": "OB-icon-Arena-Champion.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Champion.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Gladiator",
+    "fileName": "OB-icon-Arena-Gladiator.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Gladiator.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Grand_Champion",
+    "fileName": "OB-icon-Arena-Grand_Champion.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Grand_Champion.png",
+    "width": 87,
+    "height": 82,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Hero",
+    "fileName": "OB-icon-Arena-Hero.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Hero.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Myrmidon",
+    "fileName": "OB-icon-Arena-Myrmidon.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Myrmidon.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Pit_Dog",
+    "fileName": "OB-icon-Arena-Pit_Dog.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Pit_Dog.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Arena-Warrior",
+    "fileName": "OB-icon-Arena-Warrior.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Arena-Warrior.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodBoots",
+    "fileName": "OB-icon-armor-BlackwoodBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodCuirass",
+    "fileName": "OB-icon-armor-BlackwoodCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodGauntlets",
+    "fileName": "OB-icon-armor-BlackwoodGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodGreaves",
+    "fileName": "OB-icon-armor-BlackwoodGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodHelmet",
+    "fileName": "OB-icon-armor-BlackwoodHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BlackwoodShield",
+    "fileName": "OB-icon-armor-BlackwoodShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BlackwoodShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesBoots",
+    "fileName": "OB-icon-armor-BladesBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesCuirass",
+    "fileName": "OB-icon-armor-BladesCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesGauntlets",
+    "fileName": "OB-icon-armor-BladesGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesGreaves",
+    "fileName": "OB-icon-armor-BladesGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesHelmet",
+    "fileName": "OB-icon-armor-BladesHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BladesShield",
+    "fileName": "OB-icon-armor-BladesShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BladesShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sBoots(f)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sBoots(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sBoots(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sBoots(m)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sBoots(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sBoots(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sCuirass(f)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sCuirass(m)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sGauntlets",
+    "fileName": "OB-icon-armor-BrusefAmelion'sGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sGreaves",
+    "fileName": "OB-icon-armor-BrusefAmelion'sGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sHelmet(f)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sHelmet(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sHelmet(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sHelmet(m)",
+    "fileName": "OB-icon-armor-BrusefAmelion'sHelmet(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sHelmet(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-BrusefAmelion'sShield",
+    "fileName": "OB-icon-armor-BrusefAmelion'sShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-BrusefAmelion'sShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailBoots",
+    "fileName": "OB-icon-armor-ChainmailBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailCuirass(f)",
+    "fileName": "OB-icon-armor-ChainmailCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailCuirass(m)",
+    "fileName": "OB-icon-armor-ChainmailCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailGauntlets",
+    "fileName": "OB-icon-armor-ChainmailGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailGreaves(f)",
+    "fileName": "OB-icon-armor-ChainmailGreaves(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailGreaves(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailGreaves(m)",
+    "fileName": "OB-icon-armor-ChainmailGreaves(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailGreaves(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailHelmet(f)",
+    "fileName": "OB-icon-armor-ChainmailHelmet(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailHelmet(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ChainmailHelmet(m)",
+    "fileName": "OB-icon-armor-ChainmailHelmet(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ChainmailHelmet(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricBoots",
+    "fileName": "OB-icon-armor-DaedricBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricCuirass(f)",
+    "fileName": "OB-icon-armor-DaedricCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricCuirass(m)",
+    "fileName": "OB-icon-armor-DaedricCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricGauntlets",
+    "fileName": "OB-icon-armor-DaedricGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricGreaves(f)",
+    "fileName": "OB-icon-armor-DaedricGreaves(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricGreaves(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricGreaves(m)",
+    "fileName": "OB-icon-armor-DaedricGreaves(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricGreaves(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricHelmet(f)",
+    "fileName": "OB-icon-armor-DaedricHelmet(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricHelmet(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricHelmet(m)",
+    "fileName": "OB-icon-armor-DaedricHelmet(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricHelmet(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DaedricShield",
+    "fileName": "OB-icon-armor-DaedricShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DaedricShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenBoots",
+    "fileName": "OB-icon-armor-DwarvenBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenCuirass",
+    "fileName": "OB-icon-armor-DwarvenCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenGauntlets",
+    "fileName": "OB-icon-armor-DwarvenGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenGreaves",
+    "fileName": "OB-icon-armor-DwarvenGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenHelmet",
+    "fileName": "OB-icon-armor-DwarvenHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-DwarvenShield",
+    "fileName": "OB-icon-armor-DwarvenShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-DwarvenShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyBoots(f)",
+    "fileName": "OB-icon-armor-EbonyBoots(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyBoots(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyBoots(m)",
+    "fileName": "OB-icon-armor-EbonyBoots(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyBoots(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyCuirass(f)",
+    "fileName": "OB-icon-armor-EbonyCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyCuirass(m)",
+    "fileName": "OB-icon-armor-EbonyCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyGauntlets",
+    "fileName": "OB-icon-armor-EbonyGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyGreaves",
+    "fileName": "OB-icon-armor-EbonyGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyHelmet(f)",
+    "fileName": "OB-icon-armor-EbonyHelmet(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyHelmet(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyHelmet(m)",
+    "fileName": "OB-icon-armor-EbonyHelmet(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyHelmet(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-EbonyShield",
+    "fileName": "OB-icon-armor-EbonyShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-EbonyShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenBoots",
+    "fileName": "OB-icon-armor-ElvenBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenCuirass",
+    "fileName": "OB-icon-armor-ElvenCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenGauntlets",
+    "fileName": "OB-icon-armor-ElvenGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenGreaves",
+    "fileName": "OB-icon-armor-ElvenGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenHelmet",
+    "fileName": "OB-icon-armor-ElvenHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ElvenShield",
+    "fileName": "OB-icon-armor-ElvenShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ElvenShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurBoots(f)",
+    "fileName": "OB-icon-armor-FurBoots(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurBoots(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurBoots(m)",
+    "fileName": "OB-icon-armor-FurBoots(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurBoots(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurCuirass(f)",
+    "fileName": "OB-icon-armor-FurCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurCuirass(m)",
+    "fileName": "OB-icon-armor-FurCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurGauntlets(f)",
+    "fileName": "OB-icon-armor-FurGauntlets(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurGauntlets(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurGauntlets(m)",
+    "fileName": "OB-icon-armor-FurGauntlets(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurGauntlets(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurGreaves(f)",
+    "fileName": "OB-icon-armor-FurGreaves(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurGreaves(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurGreaves(m)",
+    "fileName": "OB-icon-armor-FurGreaves(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurGreaves(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurHelmet(f)",
+    "fileName": "OB-icon-armor-FurHelmet(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurHelmet(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurHelmet(m)",
+    "fileName": "OB-icon-armor-FurHelmet(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurHelmet(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-FurShield",
+    "fileName": "OB-icon-armor-FurShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-FurShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassBoots",
+    "fileName": "OB-icon-armor-GlassBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassCuirass(f)",
+    "fileName": "OB-icon-armor-GlassCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassCuirass(m)",
+    "fileName": "OB-icon-armor-GlassCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassGauntlets",
+    "fileName": "OB-icon-armor-GlassGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassGreaves(f)",
+    "fileName": "OB-icon-armor-GlassGreaves(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassGreaves(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassGreaves(m)",
+    "fileName": "OB-icon-armor-GlassGreaves(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassGreaves(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassHelmet",
+    "fileName": "OB-icon-armor-GlassHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-GlassShield",
+    "fileName": "OB-icon-armor-GlassShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-GlassShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ImperialDragonBoots",
+    "fileName": "OB-icon-armor-ImperialDragonBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ImperialDragonBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ImperialDragonCuirass",
+    "fileName": "OB-icon-armor-ImperialDragonCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ImperialDragonCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ImperialDragonGauntlets",
+    "fileName": "OB-icon-armor-ImperialDragonGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ImperialDragonGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ImperialDragonGreaves",
+    "fileName": "OB-icon-armor-ImperialDragonGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ImperialDragonGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ImperialDragonHelmet",
+    "fileName": "OB-icon-armor-ImperialDragonHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ImperialDragonHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronBoots",
+    "fileName": "OB-icon-armor-IronBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronCuirass(f)",
+    "fileName": "OB-icon-armor-IronCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronCuirass(m)",
+    "fileName": "OB-icon-armor-IronCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronGauntlets(f)",
+    "fileName": "OB-icon-armor-IronGauntlets(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronGauntlets(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronGauntlets(m)",
+    "fileName": "OB-icon-armor-IronGauntlets(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronGauntlets(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronGreaves(f)",
+    "fileName": "OB-icon-armor-IronGreaves(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronGreaves(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronGreaves(m)",
+    "fileName": "OB-icon-armor-IronGreaves(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronGreaves(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronHelmet",
+    "fileName": "OB-icon-armor-IronHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-IronShield",
+    "fileName": "OB-icon-armor-IronShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-IronShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherBoots",
+    "fileName": "OB-icon-armor-LeatherBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherBracer",
+    "fileName": "OB-icon-armor-LeatherBracer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherBracer.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherCuirass(f)",
+    "fileName": "OB-icon-armor-LeatherCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherCuirass(m)",
+    "fileName": "OB-icon-armor-LeatherCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherGauntlets",
+    "fileName": "OB-icon-armor-LeatherGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherGreaves",
+    "fileName": "OB-icon-armor-LeatherGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherHelmet",
+    "fileName": "OB-icon-armor-LeatherHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LeatherShield",
+    "fileName": "OB-icon-armor-LeatherShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LeatherShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-LightIronShield",
+    "fileName": "OB-icon-armor-LightIronShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-LightIronShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilBoots",
+    "fileName": "OB-icon-armor-MithrilBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilCuirass(f)",
+    "fileName": "OB-icon-armor-MithrilCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilCuirass(m)",
+    "fileName": "OB-icon-armor-MithrilCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilGauntlets",
+    "fileName": "OB-icon-armor-MithrilGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilGreaves",
+    "fileName": "OB-icon-armor-MithrilGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilHelmet",
+    "fileName": "OB-icon-armor-MithrilHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-MithrilShield",
+    "fileName": "OB-icon-armor-MithrilShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-MithrilShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishBoots",
+    "fileName": "OB-icon-armor-OrcishBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishCuirass(f)",
+    "fileName": "OB-icon-armor-OrcishCuirass(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishCuirass(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishCuirass(m)",
+    "fileName": "OB-icon-armor-OrcishCuirass(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishCuirass(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishGauntlets",
+    "fileName": "OB-icon-armor-OrcishGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishGreaves",
+    "fileName": "OB-icon-armor-OrcishGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishHelmet",
+    "fileName": "OB-icon-armor-OrcishHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-OrcishShield",
+    "fileName": "OB-icon-armor-OrcishShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-OrcishShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ShroudedArmor(f)",
+    "fileName": "OB-icon-armor-ShroudedArmor(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ShroudedArmor(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ShroudedArmor(m)",
+    "fileName": "OB-icon-armor-ShroudedArmor(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ShroudedArmor(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ShroudedHood(f)",
+    "fileName": "OB-icon-armor-ShroudedHood(f).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ShroudedHood(f).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-ShroudedHood(m)",
+    "fileName": "OB-icon-armor-ShroudedHood(m).png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-ShroudedHood(m).png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelBoots",
+    "fileName": "OB-icon-armor-SteelBoots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelBoots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelCuirass",
+    "fileName": "OB-icon-armor-SteelCuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelCuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelGauntlets",
+    "fileName": "OB-icon-armor-SteelGauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelGauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelGreaves",
+    "fileName": "OB-icon-armor-SteelGreaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelGreaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelHelmet",
+    "fileName": "OB-icon-armor-SteelHelmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelHelmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-armor-SteelShield",
+    "fileName": "OB-icon-armor-SteelShield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-armor-SteelShield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Boundarmor",
+    "fileName": "OB-icon-Boundarmor.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Boundarmor.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Boundweapon",
+    "fileName": "OB-icon-Boundweapon.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Boundweapon.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Burden",
+    "fileName": "OB-icon-Burden.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Burden.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Calm",
+    "fileName": "OB-icon-Calm.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Calm.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Chameleon",
+    "fileName": "OB-icon-Chameleon.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Chameleon.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Charm",
+    "fileName": "OB-icon-Charm.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Charm.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Command",
+    "fileName": "OB-icon-Command.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Command.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Cure",
+    "fileName": "OB-icon-Cure.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Cure.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Damage",
+    "fileName": "OB-icon-Damage.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Assassin",
+    "fileName": "OB-icon-Dark_Brotherhood-Assassin.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Assassin.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Eliminator",
+    "fileName": "OB-icon-Dark_Brotherhood-Eliminator.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Eliminator.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Executioner",
+    "fileName": "OB-icon-Dark_Brotherhood-Executioner.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Executioner.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Listener",
+    "fileName": "OB-icon-Dark_Brotherhood-Listener.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Listener.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Murderer",
+    "fileName": "OB-icon-Dark_Brotherhood-Murderer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Murderer.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Silencer",
+    "fileName": "OB-icon-Dark_Brotherhood-Silencer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Silencer.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Slayer",
+    "fileName": "OB-icon-Dark_Brotherhood-Slayer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Slayer.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dark_Brotherhood-Speaker",
+    "fileName": "OB-icon-Dark_Brotherhood-Speaker.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dark_Brotherhood-Speaker.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Darkness",
+    "fileName": "OB-icon-Darkness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Darkness.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Demoralize",
+    "fileName": "OB-icon-Demoralize.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Demoralize.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Detectlife",
+    "fileName": "OB-icon-Detectlife.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Detectlife.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Disintegrate",
+    "fileName": "OB-icon-Disintegrate.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Disintegrate.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Dispel",
+    "fileName": "OB-icon-Dispel.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Dispel.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Drain",
+    "fileName": "OB-icon-Drain.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Drain.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Feather",
+    "fileName": "OB-icon-Feather.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Feather.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Apprentice",
+    "fileName": "OB-icon-Fighters_Guild-Apprentice.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Apprentice.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Associate",
+    "fileName": "OB-icon-Fighters_Guild-Associate.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Associate.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Champion",
+    "fileName": "OB-icon-Fighters_Guild-Champion.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Champion.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Defender",
+    "fileName": "OB-icon-Fighters_Guild-Defender.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Defender.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Guardian",
+    "fileName": "OB-icon-Fighters_Guild-Guardian.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Guardian.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Journeyman",
+    "fileName": "OB-icon-Fighters_Guild-Journeyman.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Journeyman.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Master",
+    "fileName": "OB-icon-Fighters_Guild-Master.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Master.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Protector",
+    "fileName": "OB-icon-Fighters_Guild-Protector.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Protector.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Swordsman",
+    "fileName": "OB-icon-Fighters_Guild-Swordsman.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Swordsman.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fighters_Guild-Warder",
+    "fileName": "OB-icon-Fighters_Guild-Warder.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fighters_Guild-Warder.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fire",
+    "fileName": "OB-icon-Fire.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fire.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fireshield",
+    "fileName": "OB-icon-Fireshield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fireshield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fortify",
+    "fileName": "OB-icon-Fortify.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fortify.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Fortifymagic",
+    "fileName": "OB-icon-Fortifymagic.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Fortifymagic.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Frenzy",
+    "fileName": "OB-icon-Frenzy.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Frenzy.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Frost",
+    "fileName": "OB-icon-Frost.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Frost.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Frostshield",
+    "fileName": "OB-icon-Frostshield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Frostshield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Invisibility",
+    "fileName": "OB-icon-Invisibility.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Invisibility.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Light",
+    "fileName": "OB-icon-Light.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Light.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Lock",
+    "fileName": "OB-icon-Lock.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Lock.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Apprentice",
+    "fileName": "OB-icon-Mages_Guild-Apprentice.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Apprentice.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Arch-Mage",
+    "fileName": "OB-icon-Mages_Guild-Arch-Mage.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Arch-Mage.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Associate",
+    "fileName": "OB-icon-Mages_Guild-Associate.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Associate.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Conjurer",
+    "fileName": "OB-icon-Mages_Guild-Conjurer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Conjurer.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Evoker",
+    "fileName": "OB-icon-Mages_Guild-Evoker.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Evoker.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Journeyman",
+    "fileName": "OB-icon-Mages_Guild-Journeyman.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Journeyman.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Magician",
+    "fileName": "OB-icon-Mages_Guild-Magician.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Magician.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Master-Wizard",
+    "fileName": "OB-icon-Mages_Guild-Master-Wizard.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Master-Wizard.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Warlock",
+    "fileName": "OB-icon-Mages_Guild-Warlock.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Warlock.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Mages_Guild-Wizard",
+    "fileName": "OB-icon-Mages_Guild-Wizard.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Mages_Guild-Wizard.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Nighteye",
+    "fileName": "OB-icon-Nighteye.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Nighteye.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Paralyze",
+    "fileName": "OB-icon-Paralyze.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Paralyze.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Poisonweakness",
+    "fileName": "OB-icon-Poisonweakness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Poisonweakness.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Rally",
+    "fileName": "OB-icon-Rally.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Rally.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Reflectdamage",
+    "fileName": "OB-icon-Reflectdamage.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Reflectdamage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Reflectspell",
+    "fileName": "OB-icon-Reflectspell.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Reflectspell.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Resist",
+    "fileName": "OB-icon-Resist.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Resist.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Restore",
+    "fileName": "OB-icon-Restore.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Restore.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Shield",
+    "fileName": "OB-icon-Shield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Shield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Shock",
+    "fileName": "OB-icon-Shock.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Shock.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Shockshield",
+    "fileName": "OB-icon-Shockshield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Shockshield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Silence",
+    "fileName": "OB-icon-Silence.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Silence.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Soultrap",
+    "fileName": "OB-icon-Soultrap.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Soultrap.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Stuntedmagicka",
+    "fileName": "OB-icon-Stuntedmagicka.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Stuntedmagicka.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonatronach",
+    "fileName": "OB-icon-Summonatronach.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonatronach.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonclannfear",
+    "fileName": "OB-icon-Summonclannfear.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonclannfear.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summondaedroth",
+    "fileName": "OB-icon-Summondaedroth.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summondaedroth.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summondremora",
+    "fileName": "OB-icon-Summondremora.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summondremora.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summondremoralord",
+    "fileName": "OB-icon-Summondremoralord.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summondremoralord.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonfadedwraith",
+    "fileName": "OB-icon-Summonfadedwraith.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonfadedwraith.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonflameatronach",
+    "fileName": "OB-icon-Summonflameatronach.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonflameatronach.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonfrostatronach",
+    "fileName": "OB-icon-Summonfrostatronach.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonfrostatronach.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonghost",
+    "fileName": "OB-icon-Summonghost.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonghost.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summongloomwraith",
+    "fileName": "OB-icon-Summongloomwraith.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summongloomwraith.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonheadlesszombie",
+    "fileName": "OB-icon-Summonheadlesszombie.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonheadlesszombie.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonlich",
+    "fileName": "OB-icon-Summonlich.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonlich.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonscamp",
+    "fileName": "OB-icon-Summonscamp.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonscamp.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonskeleton",
+    "fileName": "OB-icon-Summonskeleton.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonskeleton.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-SummonSkeletonGuardian",
+    "fileName": "OB-icon-SummonSkeletonGuardian.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-SummonSkeletonGuardian.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonspiderdaedra",
+    "fileName": "OB-icon-Summonspiderdaedra.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonspiderdaedra.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonxivilai",
+    "fileName": "OB-icon-Summonxivilai.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonxivilai.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Summonzombie",
+    "fileName": "OB-icon-Summonzombie.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Summonzombie.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Sundamage",
+    "fileName": "OB-icon-Sundamage.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Sundamage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Telekinesis",
+    "fileName": "OB-icon-Telekinesis.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Telekinesis.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Bandit",
+    "fileName": "OB-icon-Thieves_Guild-Bandit.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Bandit.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Cat_Burglar",
+    "fileName": "OB-icon-Thieves_Guild-Cat_Burglar.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Cat_Burglar.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Footpad",
+    "fileName": "OB-icon-Thieves_Guild-Footpad.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Footpad.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Gray_Fox",
+    "fileName": "OB-icon-Thieves_Guild-Gray_Fox.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Gray_Fox.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Master_Thief",
+    "fileName": "OB-icon-Thieves_Guild-Master_Thief.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Master_Thief.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Pickpocket",
+    "fileName": "OB-icon-Thieves_Guild-Pickpocket.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Pickpocket.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Prowler",
+    "fileName": "OB-icon-Thieves_Guild-Prowler.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Prowler.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Thieves_Guild-Shadowfoot",
+    "fileName": "OB-icon-Thieves_Guild-Shadowfoot.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Thieves_Guild-Shadowfoot.png",
+    "width": 87,
+    "height": 83,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Turnundead",
+    "fileName": "OB-icon-Turnundead.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Turnundead.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Unlock",
+    "fileName": "OB-icon-Unlock.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Unlock.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Waterbreath",
+    "fileName": "OB-icon-Waterbreath.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Waterbreath.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Waterwalk",
+    "fileName": "OB-icon-Waterwalk.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Waterwalk.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-icon-Weakness",
+    "fileName": "OB-icon-Weakness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-icon-Weakness.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-KotN-DivineCrusaderIcon",
+    "fileName": "OB-KotN-DivineCrusaderIcon.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-KotN-DivineCrusaderIcon.jpg",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-KotN-KnightCommanderIcon",
+    "fileName": "OB-KotN-KnightCommanderIcon.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-KotN-KnightCommanderIcon.jpg",
+    "width": 97,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-KotN-KnightErrantIcon",
+    "fileName": "OB-KotN-KnightErrantIcon.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-KotN-KnightErrantIcon.jpg",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-KotN-PilgrimIcon",
+    "fileName": "OB-KotN-PilgrimIcon.jpg",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-KotN-PilgrimIcon.jpg",
+    "width": 96,
+    "height": 96,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-AlliesforBruma",
+    "fileName": "OB-qico-AlliesforBruma.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-AlliesforBruma.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Arena",
+    "fileName": "OB-qico-Arena.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Arena.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-BloodoftheDivines",
+    "fileName": "OB-qico-BloodoftheDivines.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-BloodoftheDivines.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Daedric",
+    "fileName": "OB-qico-Daedric.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Daedric.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-DagonShrine",
+    "fileName": "OB-qico-DagonShrine.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-DagonShrine.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-DarkBrotherhood",
+    "fileName": "OB-qico-DarkBrotherhood.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-DarkBrotherhood.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-DeliverTheAmulet",
+    "fileName": "OB-qico-DeliverTheAmulet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-DeliverTheAmulet.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Dragonfires",
+    "fileName": "OB-qico-Dragonfires.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Dragonfires.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-FightersGuild",
+    "fileName": "OB-qico-FightersGuild.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-FightersGuild.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-FindTheHeir",
+    "fileName": "OB-qico-FindTheHeir.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-FindTheHeir.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-General1",
+    "fileName": "OB-qico-General1.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-General1.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-General2",
+    "fileName": "OB-qico-General2.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-General2.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-KOTN",
+    "fileName": "OB-qico-KOTN.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-KOTN.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Leyawiin",
+    "fileName": "OB-qico-Leyawiin.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Leyawiin.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-MagesGuild",
+    "fileName": "OB-qico-MagesGuild.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-MagesGuild.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Miscarcand",
+    "fileName": "OB-qico-Miscarcand.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Miscarcand.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-OblivionGate",
+    "fileName": "OB-qico-OblivionGate.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-OblivionGate.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Paradise",
+    "fileName": "OB-qico-Paradise.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Paradise.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-PathOfDawn",
+    "fileName": "OB-qico-PathOfDawn.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-PathOfDawn.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-ThievesGuild",
+    "fileName": "OB-qico-ThievesGuild.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-ThievesGuild.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-Training",
+    "fileName": "OB-qico-Training.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-Training.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "OB-qico-WeynonPriory",
+    "fileName": "OB-qico-WeynonPriory.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/OB-qico-WeynonPriory.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "Rechargeicon_small",
+    "fileName": "Rechargeicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Rechargeicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Repairicon_small",
+    "fileName": "Repairicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Repairicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-bringstormsconjuration",
+    "fileName": "SI-bringstormsconjuration.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-bringstormsconjuration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-calllightningconjuration",
+    "fileName": "SI-calllightningconjuration.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-calllightningconjuration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-ico-Summon_Dark_Seducer",
+    "fileName": "SI-ico-Summon_Dark_Seducer.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-ico-Summon_Dark_Seducer.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-ico-Summon_Flesh_Atronach",
+    "fileName": "SI-ico-Summon_Flesh_Atronach.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-ico-Summon_Flesh_Atronach.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-ico-Summon_Golden_Saint",
+    "fileName": "SI-ico-Summon_Golden_Saint.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-ico-Summon_Golden_Saint.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-ico-Summon_Haskill",
+    "fileName": "SI-ico-Summon_Haskill.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-ico-Summon_Haskill.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Boots",
+    "fileName": "SI-icon-armor-Amber_Boots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Boots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Cuirass",
+    "fileName": "SI-icon-armor-Amber_Cuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Cuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Gauntlets",
+    "fileName": "SI-icon-armor-Amber_Gauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Gauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Greaves",
+    "fileName": "SI-icon-armor-Amber_Greaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Greaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Helmet",
+    "fileName": "SI-icon-armor-Amber_Helmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Helmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Amber_Shield",
+    "fileName": "SI-icon-armor-Amber_Shield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Amber_Shield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Dark_Seducer_Armor",
+    "fileName": "SI-icon-armor-Dark_Seducer_Armor.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Dark_Seducer_Armor.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Dark_Seducer_Helmet",
+    "fileName": "SI-icon-armor-Dark_Seducer_Helmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Dark_Seducer_Helmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Dark_Seducer_Shield",
+    "fileName": "SI-icon-armor-Dark_Seducer_Shield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Dark_Seducer_Shield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Golden_Saint_Armor",
+    "fileName": "SI-icon-armor-Golden_Saint_Armor.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Golden_Saint_Armor.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Golden_Saint_Helmet",
+    "fileName": "SI-icon-armor-Golden_Saint_Helmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Golden_Saint_Helmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Golden_Saint_Shield",
+    "fileName": "SI-icon-armor-Golden_Saint_Shield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Golden_Saint_Shield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Boots",
+    "fileName": "SI-icon-armor-Madness_Boots.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Boots.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Cuirass",
+    "fileName": "SI-icon-armor-Madness_Cuirass.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Cuirass.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Gauntlets",
+    "fileName": "SI-icon-armor-Madness_Gauntlets.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Gauntlets.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Greaves",
+    "fileName": "SI-icon-armor-Madness_Greaves.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Greaves.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Helmet",
+    "fileName": "SI-icon-armor-Madness_Helmet.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Helmet.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-icon-armor-Madness_Shield",
+    "fileName": "SI-icon-armor-Madness_Shield.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-icon-armor-Madness_Shield.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-newwabbajackconjuration",
+    "fileName": "SI-newwabbajackconjuration.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-newwabbajackconjuration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-ADoorInNibenBay",
+    "fileName": "SI-qico-ADoorInNibenBay.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-ADoorInNibenBay.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-BetterMousetrap",
+    "fileName": "SI-qico-BetterMousetrap.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-BetterMousetrap.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-ColdFlameOfAgnon",
+    "fileName": "SI-qico-ColdFlameOfAgnon.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-ColdFlameOfAgnon.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-General1",
+    "fileName": "SI-qico-General1.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-General1.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-LadyOfParanoia",
+    "fileName": "SI-qico-LadyOfParanoia.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-LadyOfParanoia.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-RebuildingTheGatekeeper",
+    "fileName": "SI-qico-RebuildingTheGatekeeper.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-RebuildingTheGatekeeper.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-RetakingTheFringe",
+    "fileName": "SI-qico-RetakingTheFringe.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-RetakingTheFringe.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-RitualOfMania",
+    "fileName": "SI-qico-RitualOfMania.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-RitualOfMania.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-SymbolsOfOffice",
+    "fileName": "SI-qico-SymbolsOfOffice.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-SymbolsOfOffice.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-TheEndOfOrder",
+    "fileName": "SI-qico-TheEndOfOrder.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-TheEndOfOrder.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-TheHelplessArmy",
+    "fileName": "SI-qico-TheHelplessArmy.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-TheHelplessArmy.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-TheRootsOfMadness",
+    "fileName": "SI-qico-TheRootsOfMadness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-TheRootsOfMadness.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-ThroughTheFringeOfMadness",
+    "fileName": "SI-qico-ThroughTheFringeOfMadness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-ThroughTheFringeOfMadness.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-qico-UnderstandingMadness",
+    "fileName": "SI-qico-UnderstandingMadness.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-qico-UnderstandingMadness.png",
+    "width": 70,
+    "height": 70,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-sheogorathsfrenzyconjuration",
+    "fileName": "SI-sheogorathsfrenzyconjuration.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-sheogorathsfrenzyconjuration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-sheogorathsprotectionconjuration",
+    "fileName": "SI-sheogorathsprotectionconjuration.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-sheogorathsprotectionconjuration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-summonhunger",
+    "fileName": "SI-summonhunger.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-summonhunger.gif",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "SI-summonshambles",
+    "fileName": "SI-summonshambles.gif",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/SI-summonshambles.gif",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "Sleepicon_small",
+    "fileName": "Sleepicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Sleepicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Spellsicon_small",
+    "fileName": "Spellsicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Spellsicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Trainicon_small",
+    "fileName": "Trainicon_small.png",
+    "folder": "Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/Trainicon_small.png",
+    "width": 22,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-book-Scroll2",
+    "fileName": "40px-OB-icon-book-Scroll2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-book-Scroll2.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-Burden",
+    "fileName": "40px-OB-icon-Burden.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-Burden.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Alkanet_Flower",
+    "fileName": "40px-OB-icon-ingredient-Alkanet_Flower.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Alkanet_Flower.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Aloe_Vera_Leaves",
+    "fileName": "40px-OB-icon-ingredient-Aloe_Vera_Leaves.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Aloe_Vera_Leaves.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Ambrosia",
+    "fileName": "40px-OB-icon-ingredient-Ambrosia.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Ambrosia.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Apple",
+    "fileName": "40px-OB-icon-ingredient-Apple.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Apple.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Arrowroot",
+    "fileName": "40px-OB-icon-ingredient-Arrowroot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Arrowroot.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Black_Seed_Pod",
+    "fileName": "40px-OB-icon-ingredient-Black_Seed_Pod.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Black_Seed_Pod.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Blackberry",
+    "fileName": "40px-OB-icon-ingredient-Blackberry.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Blackberry.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Bloodgrass",
+    "fileName": "40px-OB-icon-ingredient-Bloodgrass.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Bloodgrass.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Bog_Beacon_Cap",
+    "fileName": "40px-OB-icon-ingredient-Bog_Beacon_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Bog_Beacon_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Bonemeal",
+    "fileName": "40px-OB-icon-ingredient-Bonemeal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Bonemeal.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Bread",
+    "fileName": "40px-OB-icon-ingredient-Bread.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Bread.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Cairn_Bolete_Cap",
+    "fileName": "40px-OB-icon-ingredient-Cairn_Bolete_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Cairn_Bolete_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Carrot",
+    "fileName": "40px-OB-icon-ingredient-Carrot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Carrot.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Cheese_Wheel",
+    "fileName": "40px-OB-icon-ingredient-Cheese_Wheel.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Cheese_Wheel.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Cheese",
+    "fileName": "40px-OB-icon-ingredient-Cheese.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Cheese.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Cinnabar_Polypore_Red_Cap",
+    "fileName": "40px-OB-icon-ingredient-Cinnabar_Polypore_Red_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Cinnabar_Polypore_Red_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Cinnabar_Polypore_Yellow_Cap",
+    "fileName": "40px-OB-icon-ingredient-Cinnabar_Polypore_Yellow_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Cinnabar_Polypore_Yellow_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Clannfear_Claws",
+    "fileName": "40px-OB-icon-ingredient-Clannfear_Claws.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Clannfear_Claws.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Clouded_Funnel_Cap",
+    "fileName": "40px-OB-icon-ingredient-Clouded_Funnel_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Clouded_Funnel_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Corn",
+    "fileName": "40px-OB-icon-ingredient-Corn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Corn.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Crab_Meat",
+    "fileName": "40px-OB-icon-ingredient-Crab_Meat.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Crab_Meat.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Daedra_Heart",
+    "fileName": "40px-OB-icon-ingredient-Daedra_Heart.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Daedra_Heart.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Daedra_Silk",
+    "fileName": "40px-OB-icon-ingredient-Daedra_Silk.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Daedra_Silk.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Daedra_Venin",
+    "fileName": "40px-OB-icon-ingredient-Daedra_Venin.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Daedra_Venin.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Daedroth_Teeth",
+    "fileName": "40px-OB-icon-ingredient-Daedroth_Teeth.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Daedroth_Teeth.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Dragon_Tongue",
+    "fileName": "40px-OB-icon-ingredient-Dragon_Tongue.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Dragon_Tongue.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Dryad_Saddle_Polypore_Cap",
+    "fileName": "40px-OB-icon-ingredient-Dryad_Saddle_Polypore_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Dryad_Saddle_Polypore_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Elf_Cup",
+    "fileName": "40px-OB-icon-ingredient-Elf_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Elf_Cup.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Mandrake",
+    "fileName": "40px-OB-icon-ingredient-Mandrake.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Mandrake.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Nightshade",
+    "fileName": "40px-OB-icon-ingredient-Nightshade.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Nightshade.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Pear",
+    "fileName": "40px-OB-icon-ingredient-Pear.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Pear.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-ingredient-Venison_Steak",
+    "fileName": "40px-OB-icon-ingredient-Venison_Steak.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-ingredient-Venison_Steak.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-Azura'sStar",
+    "fileName": "40px-OB-icon-misc-Azura'sStar.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-Azura'sStar.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-Diamond",
+    "fileName": "40px-OB-icon-misc-Diamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-Diamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-ElementOfCourage",
+    "fileName": "40px-OB-icon-misc-ElementOfCourage.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-ElementOfCourage.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-ElementOfPatience",
+    "fileName": "40px-OB-icon-misc-ElementOfPatience.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-ElementOfPatience.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-ElementOfPerception",
+    "fileName": "40px-OB-icon-misc-ElementOfPerception.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-ElementOfPerception.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-ElementOfResolve",
+    "fileName": "40px-OB-icon-misc-ElementOfResolve.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-ElementOfResolve.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-FlawedDiamond",
+    "fileName": "40px-OB-icon-misc-FlawedDiamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-FlawedDiamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-FlawedPearl",
+    "fileName": "40px-OB-icon-misc-FlawedPearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-FlawedPearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-FlawlessDiamond",
+    "fileName": "40px-OB-icon-misc-FlawlessDiamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-FlawlessDiamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-FlawlessPearl",
+    "fileName": "40px-OB-icon-misc-FlawlessPearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-FlawlessPearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-Garridan'sTear",
+    "fileName": "40px-OB-icon-misc-Garridan'sTear.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-Garridan'sTear.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-GoldNugget",
+    "fileName": "40px-OB-icon-misc-GoldNugget.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-GoldNugget.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-GreatWelkyndStone",
+    "fileName": "40px-OB-icon-misc-GreatWelkyndStone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-GreatWelkyndStone.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-PaintPalette",
+    "fileName": "40px-OB-icon-misc-PaintPalette.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-PaintPalette.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-Pearl",
+    "fileName": "40px-OB-icon-misc-Pearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-Pearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-SigilStone",
+    "fileName": "40px-OB-icon-misc-SigilStone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-SigilStone.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-SilverNugget",
+    "fileName": "40px-OB-icon-misc-SilverNugget.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-SilverNugget.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-StoneBrick",
+    "fileName": "40px-OB-icon-misc-StoneBrick.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-StoneBrick.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OB-icon-misc-Torch",
+    "fileName": "40px-OB-icon-misc-Torch.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OB-icon-misc-Torch.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-effect-Script_Effect",
+    "fileName": "40px-OBR-icon-effect-Script_Effect.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-effect-Script_Effect.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Alkanet_Flower",
+    "fileName": "40px-OBR-icon-ingredient-Alkanet_Flower.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Alkanet_Flower.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Alocasia_Fruit",
+    "fileName": "40px-OBR-icon-ingredient-Alocasia_Fruit.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Alocasia_Fruit.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Aloe_Vera_Leaves",
+    "fileName": "40px-OBR-icon-ingredient-Aloe_Vera_Leaves.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Aloe_Vera_Leaves.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Ambrosia",
+    "fileName": "40px-OBR-icon-ingredient-Ambrosia.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Ambrosia.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Apple",
+    "fileName": "40px-OBR-icon-ingredient-Apple.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Apple.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Arrowroot",
+    "fileName": "40px-OBR-icon-ingredient-Arrowroot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Arrowroot.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Aster_Bloom_Core",
+    "fileName": "40px-OBR-icon-ingredient-Aster_Bloom_Core.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Aster_Bloom_Core.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Azure_Giant_Spore",
+    "fileName": "40px-OBR-icon-ingredient-Azure_Giant_Spore.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Azure_Giant_Spore.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Black_Seed_Pod",
+    "fileName": "40px-OBR-icon-ingredient-Black_Seed_Pod.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Black_Seed_Pod.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Black_Tar",
+    "fileName": "40px-OBR-icon-ingredient-Black_Tar.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Black_Tar.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Blackberry",
+    "fileName": "40px-OBR-icon-ingredient-Blackberry.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Blackberry.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Blister_Pod_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Blister_Pod_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Blister_Pod_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bloodgrass",
+    "fileName": "40px-OBR-icon-ingredient-Bloodgrass.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bloodgrass.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bog_Beacon_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Bog_Beacon_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bog_Beacon_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bone_Marrow",
+    "fileName": "40px-OBR-icon-ingredient-Bone_Marrow.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bone_Marrow.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bone_Shard",
+    "fileName": "40px-OBR-icon-ingredient-Bone_Shard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bone_Shard.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bonemeal",
+    "fileName": "40px-OBR-icon-ingredient-Bonemeal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bonemeal.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Bread_Loaf",
+    "fileName": "40px-OBR-icon-ingredient-Bread_Loaf.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Bread_Loaf.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Cairne_Bolete_Cup",
+    "fileName": "40px-OBR-icon-ingredient-Cairne_Bolete_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Cairne_Bolete_Cup.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Carrot",
+    "fileName": "40px-OBR-icon-ingredient-Carrot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Carrot.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Cheese_Wedge",
+    "fileName": "40px-OBR-icon-ingredient-Cheese_Wedge.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Cheese_Wedge.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Cheese_Wheel",
+    "fileName": "40px-OBR-icon-ingredient-Cheese_Wheel.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Cheese_Wheel.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Cinnabar_Polypore_Red_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Cinnabar_Polypore_Red_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Cinnabar_Polypore_Red_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Cinnabar_Polypore_Yellow_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Cinnabar_Polypore_Yellow_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Cinnabar_Polypore_Yellow_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Clannfear_Claws",
+    "fileName": "40px-OBR-icon-ingredient-Clannfear_Claws.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Clannfear_Claws.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Clouded_Funnel_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Clouded_Funnel_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Clouded_Funnel_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Congealed_Putrescence",
+    "fileName": "40px-OBR-icon-ingredient-Congealed_Putrescence.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Congealed_Putrescence.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Corn",
+    "fileName": "40px-OBR-icon-ingredient-Corn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Corn.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Crab_Meat",
+    "fileName": "40px-OBR-icon-ingredient-Crab_Meat.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Crab_Meat.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Daedra_Heart",
+    "fileName": "40px-OBR-icon-ingredient-Daedra_Heart.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Daedra_Heart.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Daedra_Silk",
+    "fileName": "40px-OBR-icon-ingredient-Daedra_Silk.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Daedra_Silk.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Daedra_Venin",
+    "fileName": "40px-OBR-icon-ingredient-Daedra_Venin.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Daedra_Venin.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Daedroth_Teeth",
+    "fileName": "40px-OBR-icon-ingredient-Daedroth_Teeth.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Daedroth_Teeth.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Digestive_Slime",
+    "fileName": "40px-OBR-icon-ingredient-Digestive_Slime.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Digestive_Slime.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Dragon's_Tongue",
+    "fileName": "40px-OBR-icon-ingredient-Dragon's_Tongue.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Dragon's_Tongue.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Dryad_Saddle_Polypore_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Dryad_Saddle_Polypore_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Dryad_Saddle_Polypore_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Elf_Cup_Cap",
+    "fileName": "40px-OBR-icon-ingredient-Elf_Cup_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Elf_Cup_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Mandrake_Root",
+    "fileName": "40px-OBR-icon-ingredient-Mandrake_Root.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Mandrake_Root.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Nightshade",
+    "fileName": "40px-OBR-icon-ingredient-Nightshade.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Nightshade.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Pear",
+    "fileName": "40px-OBR-icon-ingredient-Pear.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Pear.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Red_Kelp_Gas_Bladder",
+    "fileName": "40px-OBR-icon-ingredient-Red_Kelp_Gas_Bladder.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Red_Kelp_Gas_Bladder.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Scalon_Fin",
+    "fileName": "40px-OBR-icon-ingredient-Scalon_Fin.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Scalon_Fin.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Venison",
+    "fileName": "40px-OBR-icon-ingredient-Venison.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Venison.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-ingredient-Water_Root_Pod_Pit",
+    "fileName": "40px-OBR-icon-ingredient-Water_Root_Pod_Pit.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-ingredient-Water_Root_Pod_Pit.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Amber_Matrix_(armor)",
+    "fileName": "40px-OBR-icon-misc-Amber_Matrix_(armor).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Amber_Matrix_(armor).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Amber_Matrix_(weapon)",
+    "fileName": "40px-OBR-icon-misc-Amber_Matrix_(weapon).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Amber_Matrix_(weapon).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Azura's_Star",
+    "fileName": "40px-OBR-icon-misc-Azura's_Star.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Azura's_Star.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Chalice_of_Reversal",
+    "fileName": "40px-OBR-icon-misc-Chalice_of_Reversal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Chalice_of_Reversal.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Diamond",
+    "fileName": "40px-OBR-icon-misc-Diamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Diamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Elder_Scroll",
+    "fileName": "40px-OBR-icon-misc-Elder_Scroll.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Elder_Scroll.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Element_of_Courage",
+    "fileName": "40px-OBR-icon-misc-Element_of_Courage.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Element_of_Courage.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Element_of_Patience",
+    "fileName": "40px-OBR-icon-misc-Element_of_Patience.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Element_of_Patience.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Element_of_Perception",
+    "fileName": "40px-OBR-icon-misc-Element_of_Perception.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Element_of_Perception.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Element_of_Resolve",
+    "fileName": "40px-OBR-icon-misc-Element_of_Resolve.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Element_of_Resolve.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Flawed_Diamond",
+    "fileName": "40px-OBR-icon-misc-Flawed_Diamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Flawed_Diamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Flawed_Pearl",
+    "fileName": "40px-OBR-icon-misc-Flawed_Pearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Flawed_Pearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Flawless_Diamond",
+    "fileName": "40px-OBR-icon-misc-Flawless_Diamond.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Flawless_Diamond.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Flawless_Pearl",
+    "fileName": "40px-OBR-icon-misc-Flawless_Pearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Flawless_Pearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Garridan's_Tear",
+    "fileName": "40px-OBR-icon-misc-Garridan's_Tear.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Garridan's_Tear.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Gold_Nugget",
+    "fileName": "40px-OBR-icon-misc-Gold_Nugget.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Gold_Nugget.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Great_Welkynd_Stone",
+    "fileName": "40px-OBR-icon-misc-Great_Welkynd_Stone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Great_Welkynd_Stone.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Madness_Matrix_(armor)",
+    "fileName": "40px-OBR-icon-misc-Madness_Matrix_(armor).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Madness_Matrix_(armor).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Madness_Matrix_(weapon)",
+    "fileName": "40px-OBR-icon-misc-Madness_Matrix_(weapon).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Madness_Matrix_(weapon).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Madness_Ore",
+    "fileName": "40px-OBR-icon-misc-Madness_Ore.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Madness_Ore.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Magetallow_Candles_Box",
+    "fileName": "40px-OBR-icon-misc-Magetallow_Candles_Box.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Magetallow_Candles_Box.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Paint_Palette",
+    "fileName": "40px-OBR-icon-misc-Paint_Palette.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Paint_Palette.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Pearl",
+    "fileName": "40px-OBR-icon-misc-Pearl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Pearl.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Betrothed_Doll",
+    "fileName": "40px-OBR-icon-misc-SI_Betrothed_Doll.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Betrothed_Doll.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Clirta's_Eye_(Blue)",
+    "fileName": "40px-OBR-icon-misc-SI_Clirta's_Eye_(Blue).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Clirta's_Eye_(Blue).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Clirta's_Eye_(Green)",
+    "fileName": "40px-OBR-icon-misc-SI_Clirta's_Eye_(Green).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Clirta's_Eye_(Green).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Dementia_Key",
+    "fileName": "40px-OBR-icon-misc-SI_Dementia_Key.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Dementia_Key.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Mania_Key",
+    "fileName": "40px-OBR-icon-misc-SI_Mania_Key.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Mania_Key.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Syl's_Heart",
+    "fileName": "40px-OBR-icon-misc-SI_Syl's_Heart.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Syl's_Heart.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Thadon's_Blood",
+    "fileName": "40px-OBR-icon-misc-SI_Thadon's_Blood.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Thadon's_Blood.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-SI_Thadon's_Decanter",
+    "fileName": "40px-OBR-icon-misc-SI_Thadon's_Decanter.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-SI_Thadon's_Decanter.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Sigil_Stone",
+    "fileName": "40px-OBR-icon-misc-Sigil_Stone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Sigil_Stone.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Silver_Nugget",
+    "fileName": "40px-OBR-icon-misc-Silver_Nugget.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Silver_Nugget.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-OBR-icon-misc-Torch",
+    "fileName": "40px-OBR-icon-misc-Torch.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-OBR-icon-misc-Torch.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Alocasia_Fruit",
+    "fileName": "40px-SI-icon-ingredient-Alocasia_Fruit.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Alocasia_Fruit.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Aster_Bloom_Core",
+    "fileName": "40px-SI-icon-ingredient-Aster_Bloom_Core.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Aster_Bloom_Core.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Azure_Giant_Spore",
+    "fileName": "40px-SI-icon-ingredient-Azure_Giant_Spore.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Azure_Giant_Spore.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Black_Tar",
+    "fileName": "40px-SI-icon-ingredient-Black_Tar.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Black_Tar.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Blister_Pod_Cap",
+    "fileName": "40px-SI-icon-ingredient-Blister_Pod_Cap.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Blister_Pod_Cap.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Bone_Marrow",
+    "fileName": "40px-SI-icon-ingredient-Bone_Marrow.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Bone_Marrow.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Bone_Shard",
+    "fileName": "40px-SI-icon-ingredient-Bone_Shard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Bone_Shard.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Digestive_Slime",
+    "fileName": "40px-SI-icon-ingredient-Digestive_Slime.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Digestive_Slime.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Gas_Bladder",
+    "fileName": "40px-SI-icon-ingredient-Gas_Bladder.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Gas_Bladder.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Pod_Pit",
+    "fileName": "40px-SI-icon-ingredient-Pod_Pit.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Pod_Pit.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Putrescence",
+    "fileName": "40px-SI-icon-ingredient-Putrescence.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Putrescence.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-ingredient-Scalon_Fin",
+    "fileName": "40px-SI-icon-ingredient-Scalon_Fin.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-ingredient-Scalon_Fin.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Amber_Matrix_(armor)",
+    "fileName": "40px-SI-icon-misc-Amber_Matrix_(armor).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Amber_Matrix_(armor).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Amber_Matrix_(weapon)",
+    "fileName": "40px-SI-icon-misc-Amber_Matrix_(weapon).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Amber_Matrix_(weapon).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Chalice_of_Reversal",
+    "fileName": "40px-SI-icon-misc-Chalice_of_Reversal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Chalice_of_Reversal.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Ciirta's_Eye_(green)",
+    "fileName": "40px-SI-icon-misc-Ciirta's_Eye_(green).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Ciirta's_Eye_(green).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Ciirta's_Eye",
+    "fileName": "40px-SI-icon-misc-Ciirta's_Eye.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Ciirta's_Eye.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Decanter",
+    "fileName": "40px-SI-icon-misc-Decanter.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Decanter.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Desideratus'_Doll",
+    "fileName": "40px-SI-icon-misc-Desideratus'_Doll.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Desideratus'_Doll.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Key_to_Dementia",
+    "fileName": "40px-SI-icon-misc-Key_to_Dementia.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Key_to_Dementia.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Key_to_Mania",
+    "fileName": "40px-SI-icon-misc-Key_to_Mania.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Key_to_Mania.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Madness_Matrix_(armor)",
+    "fileName": "40px-SI-icon-misc-Madness_Matrix_(armor).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Madness_Matrix_(armor).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Madness_Matrix_(weapon)",
+    "fileName": "40px-SI-icon-misc-Madness_Matrix_(weapon).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Madness_Matrix_(weapon).png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Madness_Ore",
+    "fileName": "40px-SI-icon-misc-Madness_Ore.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Madness_Ore.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Syl's_Heart",
+    "fileName": "40px-SI-icon-misc-Syl's_Heart.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Syl's_Heart.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "40px-SI-icon-misc-Thadon's_Blood",
+    "fileName": "40px-SI-icon-misc-Thadon's_Blood.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/40px-SI-icon-misc-Thadon's_Blood.png",
+    "width": 40,
+    "height": 40,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Boots_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Boots_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Boots_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Cuirass_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Cuirass_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Cuirass_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Gauntlets_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Gauntlets_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Gauntlets_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-GrayCowlOfNocturnal",
+    "fileName": "48px-OB-icon-armor-GrayCowlOfNocturnal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-GrayCowlOfNocturnal.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Greaves_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Greaves_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Greaves_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Helm_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Helm_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Helm_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Knights_of_the_Nine_Cuirass",
+    "fileName": "48px-OB-icon-armor-Knights_of_the_Nine_Cuirass.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Knights_of_the_Nine_Cuirass.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Knights_of_the_Nine_Shield",
+    "fileName": "48px-OB-icon-armor-Knights_of_the_Nine_Shield.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Knights_of_the_Nine_Shield.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-armor-Shield_of_the_Crusader",
+    "fileName": "48px-OB-icon-armor-Shield_of_the_Crusader.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-armor-Shield_of_the_Crusader.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Bowl1",
+    "fileName": "48px-OB-icon-dish-Bowl1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Bowl1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Bowl2",
+    "fileName": "48px-OB-icon-dish-Bowl2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Bowl2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Bowl3",
+    "fileName": "48px-OB-icon-dish-Bowl3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Bowl3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Bowl4",
+    "fileName": "48px-OB-icon-dish-Bowl4.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Bowl4.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CeramicBowl",
+    "fileName": "48px-OB-icon-dish-CeramicBowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CeramicBowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CeramicGoblet",
+    "fileName": "48px-OB-icon-dish-CeramicGoblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CeramicGoblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CeramicPlate",
+    "fileName": "48px-OB-icon-dish-CeramicPlate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CeramicPlate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CeramicUrn",
+    "fileName": "48px-OB-icon-dish-CeramicUrn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CeramicUrn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CeramicVase",
+    "fileName": "48px-OB-icon-dish-CeramicVase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CeramicVase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayBowl1",
+    "fileName": "48px-OB-icon-dish-ClayBowl1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayBowl1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayBowl2",
+    "fileName": "48px-OB-icon-dish-ClayBowl2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayBowl2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayBowl3",
+    "fileName": "48px-OB-icon-dish-ClayBowl3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayBowl3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayCup1",
+    "fileName": "48px-OB-icon-dish-ClayCup1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayCup1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayCup2",
+    "fileName": "48px-OB-icon-dish-ClayCup2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayCup2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayGoblet",
+    "fileName": "48px-OB-icon-dish-ClayGoblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayGoblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayPitcher1",
+    "fileName": "48px-OB-icon-dish-ClayPitcher1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayPitcher1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayPitcher2",
+    "fileName": "48px-OB-icon-dish-ClayPitcher2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayPitcher2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayPitcher3",
+    "fileName": "48px-OB-icon-dish-ClayPitcher3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayPitcher3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayPlate1",
+    "fileName": "48px-OB-icon-dish-ClayPlate1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayPlate1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayPlate2",
+    "fileName": "48px-OB-icon-dish-ClayPlate2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayPlate2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayTankard",
+    "fileName": "48px-OB-icon-dish-ClayTankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayTankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayUrn",
+    "fileName": "48px-OB-icon-dish-ClayUrn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayUrn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-ClayVase",
+    "fileName": "48px-OB-icon-dish-ClayVase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-ClayVase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-CoveredPot",
+    "fileName": "48px-OB-icon-dish-CoveredPot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-CoveredPot.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Fork",
+    "fileName": "48px-OB-icon-dish-Fork.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Fork.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Knife",
+    "fileName": "48px-OB-icon-dish-Knife.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Knife.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Ladle",
+    "fileName": "48px-OB-icon-dish-Ladle.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Ladle.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalBowl",
+    "fileName": "48px-OB-icon-dish-MetalBowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalBowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalGoblet",
+    "fileName": "48px-OB-icon-dish-MetalGoblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalGoblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalPlate",
+    "fileName": "48px-OB-icon-dish-MetalPlate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalPlate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalTankard1",
+    "fileName": "48px-OB-icon-dish-MetalTankard1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalTankard1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalTankard2",
+    "fileName": "48px-OB-icon-dish-MetalTankard2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalTankard2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalTankard3",
+    "fileName": "48px-OB-icon-dish-MetalTankard3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalTankard3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-MetalUrn",
+    "fileName": "48px-OB-icon-dish-MetalUrn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-MetalUrn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterBowl",
+    "fileName": "48px-OB-icon-dish-PewterBowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterBowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterCup1",
+    "fileName": "48px-OB-icon-dish-PewterCup1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterCup1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterCup2",
+    "fileName": "48px-OB-icon-dish-PewterCup2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterCup2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterMug",
+    "fileName": "48px-OB-icon-dish-PewterMug.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterMug.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterPitcher",
+    "fileName": "48px-OB-icon-dish-PewterPitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterPitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterPlate",
+    "fileName": "48px-OB-icon-dish-PewterPlate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterPlate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-PewterPot",
+    "fileName": "48px-OB-icon-dish-PewterPot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-PewterPot.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Planter",
+    "fileName": "48px-OB-icon-dish-Planter.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Planter.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Planter1",
+    "fileName": "48px-OB-icon-dish-Planter1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Planter1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Planter2",
+    "fileName": "48px-OB-icon-dish-Planter2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Planter2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Plate",
+    "fileName": "48px-OB-icon-dish-Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-RedBowl",
+    "fileName": "48px-OB-icon-dish-RedBowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-RedBowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverBowl1",
+    "fileName": "48px-OB-icon-dish-SilverBowl1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverBowl1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverBowl2",
+    "fileName": "48px-OB-icon-dish-SilverBowl2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverBowl2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverCarafe",
+    "fileName": "48px-OB-icon-dish-SilverCarafe.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverCarafe.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverFork",
+    "fileName": "48px-OB-icon-dish-SilverFork.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverFork.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverGoblet",
+    "fileName": "48px-OB-icon-dish-SilverGoblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverGoblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverPitcher",
+    "fileName": "48px-OB-icon-dish-SilverPitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverPitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverPlate",
+    "fileName": "48px-OB-icon-dish-SilverPlate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverPlate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverTankard",
+    "fileName": "48px-OB-icon-dish-SilverTankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverTankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverUrn1",
+    "fileName": "48px-OB-icon-dish-SilverUrn1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverUrn1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverUrn2",
+    "fileName": "48px-OB-icon-dish-SilverUrn2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverUrn2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-SilverVase",
+    "fileName": "48px-OB-icon-dish-SilverVase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-SilverVase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Spoon",
+    "fileName": "48px-OB-icon-dish-Spoon.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Spoon.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-StoneCup",
+    "fileName": "48px-OB-icon-dish-StoneCup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-StoneCup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-StoneMug",
+    "fileName": "48px-OB-icon-dish-StoneMug.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-StoneMug.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-StonePitcher",
+    "fileName": "48px-OB-icon-dish-StonePitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-StonePitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanBowl(covered)",
+    "fileName": "48px-OB-icon-dish-TanBowl(covered).png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanBowl(covered).png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanBowl1",
+    "fileName": "48px-OB-icon-dish-TanBowl1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanBowl1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanBowl2",
+    "fileName": "48px-OB-icon-dish-TanBowl2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanBowl2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanBowl3",
+    "fileName": "48px-OB-icon-dish-TanBowl3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanBowl3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanCup",
+    "fileName": "48px-OB-icon-dish-TanCup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanCup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanCup1",
+    "fileName": "48px-OB-icon-dish-TanCup1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanCup1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanCup2",
+    "fileName": "48px-OB-icon-dish-TanCup2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanCup2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanGoblet",
+    "fileName": "48px-OB-icon-dish-TanGoblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanGoblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanJug1",
+    "fileName": "48px-OB-icon-dish-TanJug1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanJug1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanJug2",
+    "fileName": "48px-OB-icon-dish-TanJug2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanJug2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanJug3",
+    "fileName": "48px-OB-icon-dish-TanJug3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanJug3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanJug4",
+    "fileName": "48px-OB-icon-dish-TanJug4.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanJug4.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanPitcher1",
+    "fileName": "48px-OB-icon-dish-TanPitcher1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanPitcher1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanPitcher2",
+    "fileName": "48px-OB-icon-dish-TanPitcher2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanPitcher2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanPitcher3",
+    "fileName": "48px-OB-icon-dish-TanPitcher3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanPitcher3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanPlate1",
+    "fileName": "48px-OB-icon-dish-TanPlate1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanPlate1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanPlate2",
+    "fileName": "48px-OB-icon-dish-TanPlate2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanPlate2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanTankard",
+    "fileName": "48px-OB-icon-dish-TanTankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanTankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanUrn1",
+    "fileName": "48px-OB-icon-dish-TanUrn1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanUrn1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanUrn2",
+    "fileName": "48px-OB-icon-dish-TanUrn2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanUrn2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanUrn3",
+    "fileName": "48px-OB-icon-dish-TanUrn3.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanUrn3.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-TanVase",
+    "fileName": "48px-OB-icon-dish-TanVase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-TanVase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Urn1",
+    "fileName": "48px-OB-icon-dish-Urn1.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Urn1.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-dish-Urn2",
+    "fileName": "48px-OB-icon-dish-Urn2.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-dish-Urn2.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-Amulet",
+    "fileName": "48px-OB-icon-jewelry-Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-Amulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-AmuletOfKings",
+    "fileName": "48px-OB-icon-jewelry-AmuletOfKings.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-AmuletOfKings.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-Arnora'sAmulet",
+    "fileName": "48px-OB-icon-jewelry-Arnora'sAmulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-Arnora'sAmulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-Arnora'sTrueAmulet",
+    "fileName": "48px-OB-icon-jewelry-Arnora'sTrueAmulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-Arnora'sTrueAmulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-Blackheart'sRing",
+    "fileName": "48px-OB-icon-jewelry-Blackheart'sRing.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-Blackheart'sRing.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-BronzeAmulet",
+    "fileName": "48px-OB-icon-jewelry-BronzeAmulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-BronzeAmulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-CopperAmulet",
+    "fileName": "48px-OB-icon-jewelry-CopperAmulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-CopperAmulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-DraconianMadstone",
+    "fileName": "48px-OB-icon-jewelry-DraconianMadstone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-DraconianMadstone.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OB-icon-jewelry-DreamworldAmulet",
+    "fileName": "48px-OB-icon-jewelry-DreamworldAmulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OB-icon-jewelry-DreamworldAmulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Gray_Cowl_of_Nocturnal",
+    "fileName": "48px-OBR-icon-armor-Gray_Cowl_of_Nocturnal.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Gray_Cowl_of_Nocturnal.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Boots",
+    "fileName": "48px-OBR-icon-armor-Knight_Boots.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Boots.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Cuirass_Heavy",
+    "fileName": "48px-OBR-icon-armor-Knight_Cuirass_Heavy.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Cuirass_Heavy.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Cuirass",
+    "fileName": "48px-OBR-icon-armor-Knight_Cuirass.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Cuirass.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Gauntlets",
+    "fileName": "48px-OBR-icon-armor-Knight_Gauntlets.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Gauntlets.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Greaves",
+    "fileName": "48px-OBR-icon-armor-Knight_Greaves.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Greaves.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Helmet",
+    "fileName": "48px-OBR-icon-armor-Knight_Helmet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Helmet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Shield_Heavy",
+    "fileName": "48px-OBR-icon-armor-Knight_Shield_Heavy.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Shield_Heavy.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-armor-Knight_Shield",
+    "fileName": "48px-OBR-icon-armor-Knight_Shield.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-armor-Knight_Shield.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Bowl_02",
+    "fileName": "48px-OBR-icon-dish-Bowl_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Bowl_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Bowl_03",
+    "fileName": "48px-OBR-icon-dish-Bowl_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Bowl_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Bowl_04",
+    "fileName": "48px-OBR-icon-dish-Bowl_04.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Bowl_04.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Bowl",
+    "fileName": "48px-OBR-icon-dish-Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ceramic_Bowl",
+    "fileName": "48px-OBR-icon-dish-Ceramic_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ceramic_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ceramic_Goblet",
+    "fileName": "48px-OBR-icon-dish-Ceramic_Goblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ceramic_Goblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ceramic_Plate",
+    "fileName": "48px-OBR-icon-dish-Ceramic_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ceramic_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ceramic_Urn",
+    "fileName": "48px-OBR-icon-dish-Ceramic_Urn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ceramic_Urn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ceramic_Vase",
+    "fileName": "48px-OBR-icon-dish-Ceramic_Vase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ceramic_Vase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Bowl_02",
+    "fileName": "48px-OBR-icon-dish-Clay_Bowl_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Bowl_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Bowl_03",
+    "fileName": "48px-OBR-icon-dish-Clay_Bowl_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Bowl_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Bowl",
+    "fileName": "48px-OBR-icon-dish-Clay_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Cup_02",
+    "fileName": "48px-OBR-icon-dish-Clay_Cup_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Cup_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Cup",
+    "fileName": "48px-OBR-icon-dish-Clay_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Cup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Goblet",
+    "fileName": "48px-OBR-icon-dish-Clay_Goblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Goblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Pitcher_02",
+    "fileName": "48px-OBR-icon-dish-Clay_Pitcher_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Pitcher_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Pitcher_03",
+    "fileName": "48px-OBR-icon-dish-Clay_Pitcher_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Pitcher_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Pitcher",
+    "fileName": "48px-OBR-icon-dish-Clay_Pitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Pitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Plate_02",
+    "fileName": "48px-OBR-icon-dish-Clay_Plate_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Plate_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Plate",
+    "fileName": "48px-OBR-icon-dish-Clay_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Tankard",
+    "fileName": "48px-OBR-icon-dish-Clay_Tankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Tankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Urn_02",
+    "fileName": "48px-OBR-icon-dish-Clay_Urn_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Urn_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Urn_03",
+    "fileName": "48px-OBR-icon-dish-Clay_Urn_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Urn_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Urn",
+    "fileName": "48px-OBR-icon-dish-Clay_Urn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Urn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Clay_Vase",
+    "fileName": "48px-OBR-icon-dish-Clay_Vase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Clay_Vase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Covered_Pot",
+    "fileName": "48px-OBR-icon-dish-Covered_Pot.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Covered_Pot.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Fork_Lower",
+    "fileName": "48px-OBR-icon-dish-Fork_Lower.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Fork_Lower.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Fork",
+    "fileName": "48px-OBR-icon-dish-Fork.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Fork.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Knife_Lower",
+    "fileName": "48px-OBR-icon-dish-Knife_Lower.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Knife_Lower.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Ladle_Lower",
+    "fileName": "48px-OBR-icon-dish-Ladle_Lower.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Ladle_Lower.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Bowl",
+    "fileName": "48px-OBR-icon-dish-Metal_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Goblet",
+    "fileName": "48px-OBR-icon-dish-Metal_Goblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Goblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Plate",
+    "fileName": "48px-OBR-icon-dish-Metal_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Tankard_02",
+    "fileName": "48px-OBR-icon-dish-Metal_Tankard_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Tankard_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Tankard_03",
+    "fileName": "48px-OBR-icon-dish-Metal_Tankard_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Tankard_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Tankard",
+    "fileName": "48px-OBR-icon-dish-Metal_Tankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Tankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Metal_Urn",
+    "fileName": "48px-OBR-icon-dish-Metal_Urn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Metal_Urn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Bowl",
+    "fileName": "48px-OBR-icon-dish-Pewter_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Cup_02",
+    "fileName": "48px-OBR-icon-dish-Pewter_Cup_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Cup_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Cup",
+    "fileName": "48px-OBR-icon-dish-Pewter_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Cup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Mug",
+    "fileName": "48px-OBR-icon-dish-Pewter_Mug.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Mug.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Pitcher",
+    "fileName": "48px-OBR-icon-dish-Pewter_Pitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Pitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Plate",
+    "fileName": "48px-OBR-icon-dish-Pewter_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Pewter_Vase",
+    "fileName": "48px-OBR-icon-dish-Pewter_Vase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Pewter_Vase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Planter_02",
+    "fileName": "48px-OBR-icon-dish-Planter_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Planter_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Planter_03",
+    "fileName": "48px-OBR-icon-dish-Planter_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Planter_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Planter",
+    "fileName": "48px-OBR-icon-dish-Planter.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Planter.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Plate",
+    "fileName": "48px-OBR-icon-dish-Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Red_Bowl",
+    "fileName": "48px-OBR-icon-dish-Red_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Red_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Bowl_02",
+    "fileName": "48px-OBR-icon-dish-Silver_Bowl_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Bowl_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Bowl",
+    "fileName": "48px-OBR-icon-dish-Silver_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Carafe",
+    "fileName": "48px-OBR-icon-dish-Silver_Carafe.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Carafe.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Goblet",
+    "fileName": "48px-OBR-icon-dish-Silver_Goblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Goblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Pitcher",
+    "fileName": "48px-OBR-icon-dish-Silver_Pitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Pitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Plate",
+    "fileName": "48px-OBR-icon-dish-Silver_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Tankard",
+    "fileName": "48px-OBR-icon-dish-Silver_Tankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Tankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Urn_02",
+    "fileName": "48px-OBR-icon-dish-Silver_Urn_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Urn_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Urn",
+    "fileName": "48px-OBR-icon-dish-Silver_Urn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Urn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Silver_Vase",
+    "fileName": "48px-OBR-icon-dish-Silver_Vase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Silver_Vase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Spoon",
+    "fileName": "48px-OBR-icon-dish-Spoon.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Spoon.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Stone_Cup_02",
+    "fileName": "48px-OBR-icon-dish-Stone_Cup_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Stone_Cup_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Stone_Cup",
+    "fileName": "48px-OBR-icon-dish-Stone_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Stone_Cup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Stone_Mug",
+    "fileName": "48px-OBR-icon-dish-Stone_Mug.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Stone_Mug.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Stone_Pitcher",
+    "fileName": "48px-OBR-icon-dish-Stone_Pitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Stone_Pitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Bowl_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Bowl_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Bowl_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Bowl_03",
+    "fileName": "48px-OBR-icon-dish-Tan_Bowl_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Bowl_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Bowl_Covered",
+    "fileName": "48px-OBR-icon-dish-Tan_Bowl_Covered.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Bowl_Covered.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Bowl",
+    "fileName": "48px-OBR-icon-dish-Tan_Bowl.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Bowl.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Cup_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Cup_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Cup_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Cup",
+    "fileName": "48px-OBR-icon-dish-Tan_Cup.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Cup.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Goblet",
+    "fileName": "48px-OBR-icon-dish-Tan_Goblet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Goblet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Jug_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Jug_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Jug_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Jug_03",
+    "fileName": "48px-OBR-icon-dish-Tan_Jug_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Jug_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Jug_04",
+    "fileName": "48px-OBR-icon-dish-Tan_Jug_04.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Jug_04.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Jug",
+    "fileName": "48px-OBR-icon-dish-Tan_Jug.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Jug.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Pitcher_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Pitcher_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Pitcher_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Pitcher_03",
+    "fileName": "48px-OBR-icon-dish-Tan_Pitcher_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Pitcher_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Pitcher",
+    "fileName": "48px-OBR-icon-dish-Tan_Pitcher.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Pitcher.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Plate_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Plate_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Plate_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Plate",
+    "fileName": "48px-OBR-icon-dish-Tan_Plate.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Plate.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Tankard",
+    "fileName": "48px-OBR-icon-dish-Tan_Tankard.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Tankard.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Urn_02",
+    "fileName": "48px-OBR-icon-dish-Tan_Urn_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Urn_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Urn_03",
+    "fileName": "48px-OBR-icon-dish-Tan_Urn_03.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Urn_03.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Urn",
+    "fileName": "48px-OBR-icon-dish-Tan_Urn.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Urn.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-dish-Tan_Vase",
+    "fileName": "48px-OBR-icon-dish-Tan_Vase.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-dish-Tan_Vase.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Amulet_of_Kings_02",
+    "fileName": "48px-OBR-icon-jewelry-Amulet_of_Kings_02.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Amulet_of_Kings_02.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Amulet_of_Kings",
+    "fileName": "48px-OBR-icon-jewelry-Amulet_of_Kings.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Amulet_of_Kings.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Arnora's_Fake_Amulet",
+    "fileName": "48px-OBR-icon-jewelry-Arnora's_Fake_Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Arnora's_Fake_Amulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Arnora's_Real_Amulet",
+    "fileName": "48px-OBR-icon-jewelry-Arnora's_Real_Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Arnora's_Real_Amulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Blackheart's_Ring",
+    "fileName": "48px-OBR-icon-jewelry-Blackheart's_Ring.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Blackheart's_Ring.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Bronze_Amulet",
+    "fileName": "48px-OBR-icon-jewelry-Bronze_Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Bronze_Amulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Copper_Amulet",
+    "fileName": "48px-OBR-icon-jewelry-Copper_Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Copper_Amulet.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Draconian_Madstone",
+    "fileName": "48px-OBR-icon-jewelry-Draconian_Madstone.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Draconian_Madstone.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "48px-OBR-icon-jewelry-Dreamworld_Amulet",
+    "fileName": "48px-OBR-icon-jewelry-Dreamworld_Amulet.png",
+    "folder": "Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files",
+    "path": "../IconOrdner/Oblivion_Remastered Icons - UESP Wiki - The Unofficial Elder Scrolls Pages_files/48px-OBR-icon-jewelry-Dreamworld_Amulet.png",
+    "width": 48,
+    "height": 48,
     "ratio": "square"
   },
   {
@@ -6121,6 +12718,267 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_01_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_01_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_01_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_02_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_02_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_02_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_03_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_03_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_03_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_04_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_04_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_04_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_05_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_05_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_05_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_06_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_06_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_06_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_07_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_07_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_07_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_08_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_08_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_08_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_09_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_09_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_09_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_10_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_10_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_10_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_11_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_11_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_11_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_12_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_12_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_12_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_14_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_14_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_14_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_15_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_15_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_15_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_16_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_16_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_16_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_17_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_17_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_17_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_18_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_18_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_18_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_19_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_19_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_19_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_20_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_20_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_20_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_21_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_21_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_21_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_22_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_22_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_22_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_23_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_23_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_23_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_24_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_24_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_24_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_25_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_25_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_25_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_26_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_26_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_26_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_28_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_28_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_28_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_30_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_30_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_30_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Custom_31_BM.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Custom_31_BM.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Custom_31_BM.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
+    "name": "180px-Helper_PortraitGeneration_Background_Gradient_A.png",
+    "fileName": "180px-Helper_PortraitGeneration_Background_Gradient_A.png.webp",
+    "folder": "Portrait Hintergründe",
+    "path": "../IconOrdner/Portrait Hintergründe/180px-Helper_PortraitGeneration_Background_Gradient_A.png.webp",
+    "width": 180,
+    "height": 180,
+    "ratio": "square"
+  },
+  {
     "name": "Bestiarium",
     "fileName": "Bestiarium.png",
     "folder": "ReiterIcons",
@@ -6263,6 +13121,78 @@ const ALERIA_ICON_DIRECTORY = [
     "width": 1024,
     "height": 1024,
     "ratio": "square"
+  },
+  {
+    "name": "Fragezeichen",
+    "fileName": "Fragezeichen.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Fragezeichen.png",
+    "width": 626,
+    "height": 626,
+    "ratio": "square"
+  },
+  {
+    "name": "Kind",
+    "fileName": "Kind.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Kind.png",
+    "width": 408,
+    "height": 612,
+    "ratio": "portrait"
+  },
+  {
+    "name": "Männliche Siluette",
+    "fileName": "Männliche Siluette.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Männliche Siluette.png",
+    "width": 408,
+    "height": 612,
+    "ratio": "portrait"
+  },
+  {
+    "name": "Männliche Siluette2",
+    "fileName": "Männliche Siluette2.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Männliche Siluette2.png",
+    "width": 152,
+    "height": 152,
+    "ratio": "square"
+  },
+  {
+    "name": "Neutrales Adelswappen",
+    "fileName": "Neutrales Adelswappen.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Neutrales Adelswappen.png",
+    "width": 500,
+    "height": 500,
+    "ratio": "square"
+  },
+  {
+    "name": "Neutrales Bürgerwappen",
+    "fileName": "Neutrales Bürgerwappen.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Neutrales Bürgerwappen.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "Unbekannt",
+    "fileName": "Unbekannt.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Unbekannt.png",
+    "width": 385,
+    "height": 577,
+    "ratio": "portrait"
+  },
+  {
+    "name": "Weibliche Siluette",
+    "fileName": "Weibliche Siluette.png",
+    "folder": "Siluetten",
+    "path": "../IconOrdner/Siluetten/Weibliche Siluette.png",
+    "width": 408,
+    "height": 612,
+    "ratio": "portrait"
   },
   {
     "name": "Abtrünnige",
@@ -10276,6 +17206,69 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Welt Pins/Zoll - Grenzposten.png",
     "width": 502,
     "height": 497,
+    "ratio": "square"
+  },
+  {
+    "name": "+1d10_Physical",
+    "fileName": "+1d10_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/+1d10_Physical.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "+1d6_Physical",
+    "fileName": "+1d6_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/+1d6_Physical.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "+1d8_Physical",
+    "fileName": "+1d8_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/+1d8_Physical.png",
+    "width": 100,
+    "height": 100,
+    "ratio": "square"
+  },
+  {
+    "name": "D10_Physical",
+    "fileName": "D10_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/D10_Physical.png",
+    "width": 72,
+    "height": 74,
+    "ratio": "square"
+  },
+  {
+    "name": "D12_Physical",
+    "fileName": "D12_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/D12_Physical.png",
+    "width": 76,
+    "height": 79,
+    "ratio": "square"
+  },
+  {
+    "name": "D20",
+    "fileName": "D20.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/D20.png",
+    "width": 78,
+    "height": 86,
+    "ratio": "square"
+  },
+  {
+    "name": "D4_Physical",
+    "fileName": "D4_Physical.png",
+    "folder": "Würfel",
+    "path": "../IconOrdner/Würfel/D4_Physical.png",
+    "width": 76,
+    "height": 74,
     "ratio": "square"
   },
   {
