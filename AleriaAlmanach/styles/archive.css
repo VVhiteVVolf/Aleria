@@ -58,7 +58,8 @@
     --tab-accent-strong: #6f5210;
     --tab-accent-soft: rgba(139,105,20,0.12);
     font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
+    min-height: 2.75rem;
+    font-size: 0.64rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: color-mix(in srgb, var(--ink-faded) 72%, var(--tab-accent-strong) 28%);
@@ -357,7 +358,7 @@
   }
   .archive-dashboard-kicker {
     font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
+    font-size: 0.65rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--theme-accent);
@@ -398,7 +399,7 @@
     background: rgba(255,255,255,0.3);
     color: var(--ink-faded);
     font-family: 'Cinzel', serif;
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.32rem 0.45rem;
@@ -570,12 +571,12 @@
     white-space: nowrap;
   }
   .archive-dashboard-ai-btn {
-    min-height: 2rem;
+    min-height: 2.75rem;
     border: 1px solid rgba(139,105,20,0.34);
     background: #2c1a08;
     color: var(--gold-light);
     font-family: 'Cinzel', serif;
-    font-size: 0.52rem;
+    font-size: 0.62rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1156,7 +1157,7 @@
     font-style: italic;
     text-align: center;
   }
-  .entry-card { cursor:pointer; position:relative; border:1px solid color-mix(in srgb, var(--section-accent, var(--gold)) 82%, #2a1605 18%); overflow:hidden; background:var(--parchment-dark); box-shadow:0 7px 24px rgba(70,42,13,0.18); transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s; animation:cardIn 0.5s ease both; }
+  .entry-card { position:relative; border:1px solid color-mix(in srgb, var(--section-accent, var(--gold)) 82%, #2a1605 18%); overflow:hidden; background:var(--parchment-dark); box-shadow:0 7px 24px rgba(70,42,13,0.18); transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s; animation:cardIn 0.5s ease both; }
   .entry-card::before {
     content:'';
     position:absolute;
@@ -1170,14 +1171,30 @@
   }
   .entry-card:hover { transform:translateY(-5px) scale(1.015); box-shadow:0 16px 44px rgba(55,31,8,0.28),0 0 0 1px var(--gold-light); }
   @keyframes cardIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
-  .card-image-wrap { width:100%; aspect-ratio:3/4; overflow:hidden; position:relative; }
+  .entry-card-open {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .entry-card-open:focus-visible {
+    outline: 3px solid var(--section-accent, var(--gold));
+    outline-offset: -3px;
+  }
+  .card-image-wrap { display:block; width:100%; aspect-ratio:3/4; overflow:hidden; position:relative; }
   .card-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; filter:sepia(15%); transition:filter 0.3s,transform 0.35s; }
   .entry-card:hover .card-image-wrap img { filter:sepia(0%); transform:scale(1.05); }
   .card-placeholder-inner { width:100%; height:100%; background:linear-gradient(135deg,#c8a96e 0%,#b89050 100%); display:flex; align-items:center; justify-content:center; font-size:3rem; color:var(--gold); opacity:0.25; }
   .card-image-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(15,10,3,0.92) 0%,rgba(15,10,3,0.58) 24%,rgba(15,10,3,0.06) 62%,transparent 100%); }
-  .card-label { position:absolute; bottom:0; left:0; right:0; padding:1.05rem 0.85rem 0.82rem; }
-  .card-label h3 { font-family:'Cinzel',serif; font-size:0.78rem; font-weight:600; color:color-mix(in srgb, var(--section-accent, var(--gold-light)) 82%, #fff 18%); line-height:1.32; text-shadow:0 1px 5px rgba(0,0,0,0.9); }
-  .card-type-tag { font-style:italic; font-size:0.68rem; color:var(--parchment-deeper); margin-top:0.22rem; text-shadow:0 1px 4px rgba(0,0,0,0.9); }
+  .card-label { display:block; position:absolute; bottom:0; left:0; right:0; padding:1.05rem 0.85rem 0.82rem; }
+  .entry-card-title { display:block; font-family:'Cinzel',serif; font-size:0.78rem; font-weight:600; color:color-mix(in srgb, var(--section-accent, var(--gold-light)) 82%, #fff 18%); line-height:1.32; text-shadow:0 1px 5px rgba(0,0,0,0.9); }
+  .card-type-tag { display:block; font-style:italic; font-size:0.68rem; color:var(--parchment-deeper); margin-top:0.22rem; text-shadow:0 1px 4px rgba(0,0,0,0.9); }
   .entry-card-meta {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1195,7 +1212,7 @@
     gap: 0.1rem;
     max-width: 100%;
     padding: 0.28rem 0.32rem;
-    font-size: 0.4rem;
+    font-size: 0.62rem;
     letter-spacing: 0.05em;
     text-align: center;
     line-height: 1.2;
@@ -1263,6 +1280,25 @@
     text-transform: uppercase;
     padding: 0.55rem 0.85rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 860px) {
+    .archive-toolbar {
+      align-items: stretch;
+    }
+
+    .archive-toolbar-label,
+    .archive-search-meta {
+      flex: 1 1 100%;
+    }
+
+    .archive-search-wrap {
+      flex-basis: 100%;
+    }
+
+    .archive-search-clear {
+      min-width: 88px;
+    }
   }
   .archive-section-more button:hover {
     border-color: var(--section-accent, var(--gold));
@@ -2031,7 +2067,7 @@
     }
 
     .entry-card-meta-chip {
-      font-size: 0.4rem;
+      font-size: 0.6rem;
       letter-spacing: 0.04em;
       white-space: normal;
     }
@@ -2118,6 +2154,22 @@
     .module-section-manager-parent-select {
       width: 100%;
       max-width: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .entry-card,
+    .entry-card *,
+    .archive-dashboard-section-arrow,
+    .archive-dashboard-primary-action,
+    .archive-dashboard-secondary-action {
+      animation: none !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .entry-card:hover {
+      transform: none;
     }
   }
 

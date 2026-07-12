@@ -65,42 +65,6 @@ function renderArchiveSectionBand(section, entries = [], options = {}) {
     </div>`;
 }
 
-function renderArchivePathNav(rootSection, path = []) {
-  const rootLabel = getSectionLeafLabel(rootSection);
-  const steps = [[], ...path.map((_, index) => path.slice(0, index + 1))];
-  const labels = [rootLabel, ...path];
-  return `
-    <nav class="archive-path-nav" aria-label="Archivpfad">
-      ${steps.map((step, index) => `
-        <button type="button" data-archive-action="set-section-path" data-section-path="${escapeHtml(encodeArchivePathData(step))}"${index === steps.length - 1 ? ' aria-current="page"' : ''}>
-          ${escapeHtml(labels[index] || rootLabel)}
-        </button>
-      `).join('<span class="archive-path-separator">&rsaquo;</span>')}
-    </nav>`;
-}
-
-function renderArchiveFolderGrid(folders = []) {
-  if (!folders.length) return '';
-  return `
-    <div class="archive-folder-grid" aria-label="Unterbereiche">
-      ${folders.map(folder => {
-        const hasIcon = !!getArchiveSectionIconSrc(folder);
-        return `
-        <button class="archive-folder-card${hasIcon ? ' has-icon' : ''}" type="button" data-archive-action="enter-section-folder" data-section-path="${escapeHtml(encodeArchivePathData(folder.path))}">
-          ${hasIcon ? renderArchiveSectionIcon(folder, 'archive-folder-icon') : '<span class="archive-folder-mark" aria-hidden="true"></span>'}
-          <span class="archive-folder-copy">
-            <span class="archive-folder-kicker">Unterbereich</span>
-            <strong>${escapeHtml(folder.label)}</strong>
-            <small>
-              <span>${folder.moduleCount} Module</span>
-              <span>${folder.childCount} Unterreiter</span>
-            </small>
-          </span>
-        </button>`;
-      }).join('')}
-    </div>`;
-}
-
 function getArchiveSectionVisibleEntries(section, entries = [], options = {}) {
   if (options.searchActive) return entries;
   if (isArchiveSectionExpanded(section)) return entries;

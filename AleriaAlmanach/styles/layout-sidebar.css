@@ -178,6 +178,7 @@
       font-size: 0.48rem;
       white-space: normal;
     }
+
   }
 
   @media (max-width: 1100px) {
@@ -448,6 +449,38 @@
   #sidebar::-webkit-scrollbar { width: 3px; }
   #sidebar::-webkit-scrollbar-track { background: transparent; }
   #sidebar::-webkit-scrollbar-thumb { background: rgba(139,105,20,0.3); }
+
+  @media (max-width: 860px) {
+    .page-layout {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    #main-content {
+      width: 100%;
+      padding: 2rem 1rem 1.25rem;
+    }
+
+    #sidebar {
+      width: auto;
+      max-width: none;
+      position: static;
+      max-height: none;
+      align-self: stretch;
+      margin: 0 1rem 1.4rem;
+      border-left: none;
+      border-top: 1px solid color-mix(in srgb, var(--theme-accent) 28%, transparent);
+    }
+
+    #sidebar::before {
+      display: none;
+    }
+
+    .sidebar-section {
+      margin-left: 0;
+      transform: none !important;
+    }
+  }
 
     ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--parchment-dark); }

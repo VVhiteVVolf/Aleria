@@ -4,12 +4,14 @@ let currentPage = 0;
 let _autoScrollCommentsOnNextRender = false;
 let _modalRenderToken = 0;
 
-function openModal(entry) {
+function openModal(entry, options = {}) {
   preloadEntryImages(entry, 3);
   currentEntry = entry;
-  currentPage = 0;
+  const pages = getPages(getRenderableEntry(entry));
+  const requestedPage = Math.trunc(Number(options.pageIndex) || 0);
+  currentPage = Math.max(0, Math.min(requestedPage, Math.max(0, pages.length - 1)));
   _autoScrollCommentsOnNextRender = true;
-  renderPage(0, 0);
+  renderPage(currentPage, 0);
   document.body.style.overflow = 'hidden';
   activateDialog('modal-overlay', { initialFocus: '.modal-close' });
 }
@@ -63,6 +65,9 @@ function renderPage(idx, dir) {
   const entry = getRenderableEntry(currentEntry);
   const pages = getPages(entry);
   const page = pages[idx];
+  if (typeof recordAlmanachDashboardVisit === 'function') {
+    recordAlmanachDashboardVisit(entry, idx);
+  }
   const body = document.getElementById('modal-body');
   const html = buildPage(page, entry, idx, pages.length);
   const inlineViewportState = dir === 0 && typeof captureInlineModuleViewportState === 'function'

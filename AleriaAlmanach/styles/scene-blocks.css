@@ -99,41 +99,6 @@
   }
 
   @media (max-width: 860px) {
-    .page-layout {
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    #main-content {
-      padding: 2rem 1rem 1.25rem;
-    }
-    #sidebar {
-      width: auto;
-      position: static;
-      max-height: none;
-      margin: 0 1rem 1.4rem;
-      border-left: none;
-      border-top: 1px solid color-mix(in srgb, var(--theme-accent) 28%, transparent);
-    }
-    #sidebar::before {
-      display: none;
-    }
-    .sidebar-section {
-      margin-left: 0;
-      transform: none !important;
-    }
-    .archive-toolbar {
-      align-items: stretch;
-    }
-    .archive-toolbar-label,
-    .archive-search-meta {
-      flex: 1 1 100%;
-    }
-    .archive-search-wrap {
-      flex-basis: 100%;
-    }
-    .archive-search-clear {
-      min-width: 88px;
-    }
     #modal-overlay {
       padding: 0;
     }

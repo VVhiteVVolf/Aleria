@@ -149,15 +149,27 @@
       padding: 0.75rem 0.65rem 0.6rem;
     }
 
-    .card-label h3,
+    .entry-card-title,
     .char-card-name {
-      font-size: 0.68rem;
+      font-size: 0.78rem;
       line-height: 1.32;
     }
 
     .card-type-tag,
     .char-card-title {
-      font-size: 0.62rem;
+      font-size: 0.7rem;
+    }
+
+    .entry-card-meta {
+      grid-template-columns: 1fr;
+    }
+
+    .entry-card-meta-chip,
+    .entry-card-meta-chip.wide {
+      grid-template-columns: minmax(3.5rem, auto) minmax(0, 1fr);
+      gap: 0.35rem;
+      font-size: 0.68rem;
+      text-align: left;
     }
 
     #sidebar {
