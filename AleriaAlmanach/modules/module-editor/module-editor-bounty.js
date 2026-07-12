@@ -1,6 +1,6 @@
 const BOUNTY_EDITOR_LISTS = {
   charges: {
-    label: 'Tatvorwuerfe',
+    label: 'Tatvorwürfe',
     titleField: 'chargesTitle',
     addLabel: 'Tatvorwurf',
     wrapClass: 'module-bounty-charges',
@@ -10,6 +10,20 @@ const BOUNTY_EDITOR_LISTS = {
     fields: [
       ['icon', 'Icon-URL', 'url'],
       ['title', 'Tatvorwurf', 'text'],
+      ['text', 'Zusatztext', 'textarea']
+    ]
+  },
+  traits: {
+    label: 'Eigenschaften',
+    titleField: 'traitsTitle',
+    addLabel: 'Eigenschaft',
+    wrapClass: 'module-bounty-traits',
+    rowClass: 'module-bounty-trait-row',
+    prefix: 'me-bounty-trait',
+    fallback: { icon: '', title: 'Neue Eigenschaft', text: '' },
+    fields: [
+      ['icon', 'Icon-URL', 'url'],
+      ['title', 'Eigenschaft', 'text'],
       ['text', 'Zusatztext', 'textarea']
     ]
   },
@@ -57,7 +71,7 @@ const BOUNTY_EDITOR_LISTS = {
     ]
   },
   allies: {
-    label: 'Verbuendete',
+    label: 'Verbündete',
     titleField: 'alliesTitle',
     addLabel: 'Verbindung',
     wrapClass: 'module-bounty-allies',
@@ -89,13 +103,13 @@ const BOUNTY_EDITOR_LISTS = {
     ]
   },
   supporters: {
-    label: 'Moegliche Unterstuetzer',
+    label: 'Mögliche Unterstützer',
     titleField: 'supportersTitle',
-    addLabel: 'Unterstuetzer',
+    addLabel: 'Unterstützer',
     wrapClass: 'module-bounty-supporters',
     rowClass: 'module-bounty-image-row',
     prefix: 'me-bounty-supporter',
-    fallback: { image: '', imageScale: 100, imageX: 50, imageY: 50, title: 'Unterstuetzer', subtitle: '', text: '' },
+    fallback: { image: '', imageScale: 100, imageX: 50, imageY: 50, title: 'Unterstützer', subtitle: '', text: '' },
     imageFields: true,
     fields: [
       ['image', 'Bild-URL', 'url'],
@@ -105,7 +119,7 @@ const BOUNTY_EDITOR_LISTS = {
     ]
   },
   dangerProfiles: {
-    label: 'Gefaehrlichkeitsprofil',
+    label: 'Gefährlichkeitsprofil',
     titleField: 'dangerTitle',
     addLabel: 'Profilwert',
     wrapClass: 'module-bounty-danger-profiles',
@@ -127,7 +141,7 @@ function getBountyEditorListConfig(listName) {
 function buildBountyImageTransformControls(item, prefix) {
   return `
     <div class="module-editor-field">
-      <label>Bildgroesse <span>${escapeHtml(item.imageScale || 100)}%</span></label>
+      <label>Bildgröße <span>${escapeHtml(item.imageScale || 100)}%</span></label>
       <input class="module-size-range ${prefix}-imageScale" type="range" min="50" max="220" step="1" value="${escapeHtml(item.imageScale || 100)}" data-module-editor-action="update-range-percent-label">
     </div>
     <div class="module-editor-field">
@@ -155,7 +169,7 @@ function buildBountyEditorRows(items = [], listName = 'charges') {
         return `<input class="inline-edit-input ${className}" type="${type}"${extra} value="${value}" placeholder="${escapeHtml(placeholder)}">`;
       }).join('')}
       ${config.imageFields ? buildBountyImageTransformControls(item, config.prefix) : ''}
-      <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-bounty-row">Loeschen</button>
+      <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-bounty-row">Löschen</button>
     </div>`).join('');
 }
 
@@ -194,7 +208,7 @@ function removeModuleBountyRow(button) {
   if (!row || !wrap) return;
   row.remove();
   if (!wrap.querySelector('.bounty-edit-row')) {
-    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Eintraege vorhanden.</div>';
+    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine Einträge vorhanden.</div>';
   }
   syncModuleJsonPreview();
 }
@@ -233,7 +247,7 @@ function buildBountyFileModuleEditorFields(page) {
             <textarea class="me-bounty-description">${escapeHtml(page?.description || '')}</textarea>
           </div>
           <div class="module-editor-field">
-            <label>Aktenueberschrift</label>
+            <label>Aktenüberschrift</label>
             <input type="text" class="me-bounty-archive-title" value="${escapeHtml(data.archiveTitle)}">
           </div>
           <div class="module-editor-field">
@@ -244,7 +258,7 @@ function buildBountyFileModuleEditorFields(page) {
             <label>Regionales Banner</label>
             <input type="url" class="me-bounty-regional-banner" value="${escapeHtml(data.regionalBanner)}" placeholder="https://i.imgur.com/...">
           </div>
-          ${buildBountyScaleField('Banner-Groesse', 'me-bounty-regional-banner-scale', data.regionalBannerScale)}
+          ${buildBountyScaleField('Banner-Größe', 'me-bounty-regional-banner-scale', data.regionalBannerScale)}
           ${buildBountyScaleField('Banner X', 'me-bounty-regional-banner-x', data.regionalBannerX, 0, 100)}
           ${buildBountyScaleField('Banner Y', 'me-bounty-regional-banner-y', data.regionalBannerY, 0, 100)}
           <div class="module-editor-field">
@@ -255,23 +269,23 @@ function buildBountyFileModuleEditorFields(page) {
             <label>Portraitbild</label>
             <input type="url" class="me-bounty-portrait-image" value="${escapeHtml(data.portraitImage)}" placeholder="https://i.imgur.com/...">
           </div>
-          ${buildBountyScaleField('Portrait-Groesse', 'me-bounty-portrait-scale', data.portraitScale)}
+          ${buildBountyScaleField('Portrait-Größe', 'me-bounty-portrait-scale', data.portraitScale)}
           ${buildBountyScaleField('Portrait X', 'me-bounty-portrait-x', data.portraitX, 0, 100)}
           ${buildBountyScaleField('Portrait Y', 'me-bounty-portrait-y', data.portraitY, 0, 100)}
           <div class="module-editor-field">
             <label>Wachssiegel</label>
             <input type="url" class="me-bounty-seal-image" value="${escapeHtml(data.sealImage)}" placeholder="https://i.imgur.com/...">
           </div>
-          ${buildBountyScaleField('Siegel-Groesse', 'me-bounty-seal-scale', data.sealScale, 50, 180)}
+          ${buildBountyScaleField('Siegel-Größe', 'me-bounty-seal-scale', data.sealScale, 50, 180)}
           ${buildBountyScaleField('Siegel X', 'me-bounty-seal-x', data.sealX, 0, 100)}
           ${buildBountyScaleField('Siegel Y', 'me-bounty-seal-y', data.sealY, 0, 100)}
           <div class="module-editor-field">
-            <label>Muenzen-Icon</label>
+            <label>Münzen-Icon</label>
             <input type="url" class="me-bounty-coin-image" value="${escapeHtml(data.coinImage)}" placeholder="https://i.imgur.com/...">
           </div>
-          ${buildBountyScaleField('Muenzen-Groesse', 'me-bounty-coin-scale', data.coinScale, 50, 180)}
-          ${buildBountyScaleField('Muenze X', 'me-bounty-coin-x', data.coinX, 0, 100)}
-          ${buildBountyScaleField('Muenze Y', 'me-bounty-coin-y', data.coinY, 0, 100)}
+          ${buildBountyScaleField('Münzen-Größe', 'me-bounty-coin-scale', data.coinScale, 50, 180)}
+          ${buildBountyScaleField('Münze X', 'me-bounty-coin-x', data.coinX, 0, 100)}
+          ${buildBountyScaleField('Münze Y', 'me-bounty-coin-y', data.coinY, 0, 100)}
           <div class="module-editor-field">
             <label>Name-Label</label>
             <input type="text" class="me-bounty-name-label" value="${escapeHtml(data.nameLabel)}">
@@ -317,15 +331,16 @@ function buildBountyFileModuleEditorFields(page) {
             <input type="text" class="me-bounty-amount" value="${escapeHtml(data.bountyAmount)}">
           </div>
           <div class="module-editor-field">
-            <label>Waehrung</label>
+            <label>Währung</label>
             <input type="text" class="me-bounty-currency" value="${escapeHtml(data.bountyCurrency)}">
           </div>
           <div class="module-editor-field wide">
-            <label>Uebergabehinweis</label>
+            <label>Übergabehinweis</label>
             ${buildTextFormatToolbar()}
             <textarea class="me-bounty-handover-note small">${escapeHtml(data.handoverNote)}</textarea>
           </div>
           ${buildBountyEditorListBlock(data, 'charges')}
+          ${buildBountyEditorListBlock(data, 'traits')}
           ${buildBountyEditorListBlock(data, 'descriptionRows')}
           <div class="module-editor-field wide">
             <label>Beschreibung - Zusatztext</label>
@@ -339,7 +354,7 @@ function buildBountyFileModuleEditorFields(page) {
           ${buildBountyEditorListBlock(data, 'companions')}
           ${buildBountyEditorListBlock(data, 'sightings')}
           <div class="module-editor-field">
-            <label>Verbindungen-Ueberschrift</label>
+            <label>Verbindungen-Überschrift</label>
             <input type="text" class="me-bounty-connections-title" value="${escapeHtml(data.connectionsTitle)}">
           </div>
           <div class="module-editor-field">
@@ -350,7 +365,7 @@ function buildBountyFileModuleEditorFields(page) {
             <label>Fraktionsbanner</label>
             <input type="url" class="me-bounty-faction-banner" value="${escapeHtml(data.factionBanner)}" placeholder="https://i.imgur.com/...">
           </div>
-          ${buildBountyScaleField('Fraktionsbanner-Groesse', 'me-bounty-faction-banner-scale', data.factionBannerScale)}
+          ${buildBountyScaleField('Fraktionsbanner-Größe', 'me-bounty-faction-banner-scale', data.factionBannerScale)}
           ${buildBountyScaleField('Fraktionsbanner X', 'me-bounty-faction-banner-x', data.factionBannerX, 0, 100)}
           ${buildBountyScaleField('Fraktionsbanner Y', 'me-bounty-faction-banner-y', data.factionBannerY, 0, 100)}
           <div class="module-editor-field">
@@ -412,6 +427,8 @@ function collectBountyFileModuleEditorPage(card, page) {
     handoverNote: getTrimmedFormValue(card, '.me-bounty-handover-note'),
     chargesTitle: getTrimmedFormValue(card, '.me-bounty-chargesTitle'),
     charges: collectBountyEditorRows(block, 'charges'),
+    traitsTitle: getTrimmedFormValue(card, '.me-bounty-traitsTitle'),
+    traits: collectBountyEditorRows(block, 'traits'),
     descriptionTitle: getTrimmedFormValue(card, '.me-bounty-descriptionTitle'),
     descriptionRows: collectBountyEditorRows(block, 'descriptionRows'),
     descriptionNote: getTrimmedFormValue(card, '.me-bounty-description-note'),

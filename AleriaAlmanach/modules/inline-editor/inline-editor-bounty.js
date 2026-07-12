@@ -74,12 +74,12 @@ function buildInlineBountyRowRange(listName, index, label, field, value, min = 0
 function buildInlineBountyListRows(items = [], listName = 'charges') {
   const config = getBountyEditorListConfig(listName);
   const rows = Array.isArray(items) && items.length ? items : [];
-  if (!rows.length) return '<div class="inline-placeholder-note">Noch keine Eintraege vorhanden.</div>';
+  if (!rows.length) return '<div class="inline-placeholder-note">Noch keine Einträge vorhanden.</div>';
   return rows.map((item, index) => `
     <div class="inline-profile-card">
       <div class="inline-edit-head">
         <div class="inline-edit-kicker">${escapeHtml(config.label)} ${index + 1}</div>
-        <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-bounty-list-row" data-bounty-list="${escapeHtml(listName)}" data-bounty-index="${escapeHtml(index)}">Loeschen</button>
+        <button class="module-editor-mini-btn module-editor-danger" type="button" data-inline-action="remove-bounty-list-row" data-bounty-list="${escapeHtml(listName)}" data-bounty-index="${escapeHtml(index)}">Löschen</button>
       </div>
       <div class="inline-edit-grid">
         ${config.fields.map(([field, placeholder, type]) => {
@@ -92,7 +92,7 @@ function buildInlineBountyListRows(items = [], listName = 'charges') {
           return `<div class="inline-edit-field"><span class="inline-edit-label">${escapeHtml(placeholder)}</span><input class="inline-edit-input" type="${escapeHtml(type)}"${extra} ${attrs} value="${value}"></div>`;
         }).join('')}
         ${config.imageFields ? `
-          ${buildInlineBountyRowRange(listName, index, 'Bildgroesse', 'imageScale', item.imageScale || 100, 50, 220)}
+          ${buildInlineBountyRowRange(listName, index, 'Bildgröße', 'imageScale', item.imageScale || 100, 50, 220)}
           ${buildInlineBountyRowRange(listName, index, 'Bild X', 'imageX', item.imageX || 50)}
           ${buildInlineBountyRowRange(listName, index, 'Bild Y', 'imageY', item.imageY || 50)}
         ` : ''}
@@ -110,7 +110,7 @@ function buildInlineBountyListBlock(data, listName) {
       </div>
       <div class="inline-edit-grid single">
         <div class="inline-edit-field">
-          <span class="inline-edit-label">Ueberschrift</span>
+          <span class="inline-edit-label">Überschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-bounty-field" data-bounty-field="${escapeHtml(config.titleField)}" value="${escapeHtml(data[config.titleField] || '')}">
         </div>
       </div>
@@ -130,13 +130,13 @@ function buildInlineBountyFileEditor(page) {
           <textarea class="inline-edit-textarea" data-inline-action="update-bounty-field" data-bounty-field="description">${escapeHtml(page.description || '')}</textarea>
         </div>
         ${[
-          ['Aktenueberschrift', 'archiveTitle', 'text'],
+          ['Aktenüberschrift', 'archiveTitle', 'text'],
           ['Unterzeile', 'archiveSubtitle', 'text'],
           ['Regionales Banner', 'regionalBanner', 'url'],
           ['Hintergrundbild', 'backgroundImage', 'url'],
           ['Portraitbild', 'portraitImage', 'url'],
           ['Wachssiegel', 'sealImage', 'url'],
-          ['Muenzen-Icon', 'coinImage', 'url'],
+          ['Münzen-Icon', 'coinImage', 'url'],
           ['Name-Label', 'nameLabel', 'text'],
           ['Name', 'targetName', 'text'],
           ['Alias-Label', 'aliasesLabel', 'text'],
@@ -147,9 +147,9 @@ function buildInlineBountyFileEditor(page) {
           ['Gefahrentext', 'threatText', 'text'],
           ['Kopfgeld-Label', 'bountyLabel', 'text'],
           ['Kopfgeld', 'bountyAmount', 'text'],
-          ['Waehrung', 'bountyCurrency', 'text'],
+          ['Währung', 'bountyCurrency', 'text'],
           ['Beschreibung-Icon', 'descriptionIcon', 'url'],
-          ['Verbindungen-Ueberschrift', 'connectionsTitle', 'text'],
+          ['Verbindungen-Überschrift', 'connectionsTitle', 'text'],
           ['Fraktion-Titel', 'factionTitle', 'text'],
           ['Fraktionsbanner', 'factionBanner', 'url'],
           ['Fraktion / Bande', 'factionName', 'text'],
@@ -163,23 +163,23 @@ function buildInlineBountyFileEditor(page) {
           <span class="inline-edit-label">Gefahrenstufe</span>
           <input class="inline-edit-input" type="number" min="1" max="5" step="1" data-inline-action="update-bounty-field" data-bounty-field="threatLevel" value="${escapeHtml(data.threatLevel)}">
         </div>
-        ${buildInlineBountyRange('Banner-Groesse', 'regionalBannerScale', data.regionalBannerScale, 50, 220)}
+        ${buildInlineBountyRange('Banner-Größe', 'regionalBannerScale', data.regionalBannerScale, 50, 220)}
         ${buildInlineBountyRange('Banner X', 'regionalBannerX', data.regionalBannerX)}
         ${buildInlineBountyRange('Banner Y', 'regionalBannerY', data.regionalBannerY)}
-        ${buildInlineBountyRange('Portrait-Groesse', 'portraitScale', data.portraitScale, 50, 220)}
+        ${buildInlineBountyRange('Portrait-Größe', 'portraitScale', data.portraitScale, 50, 220)}
         ${buildInlineBountyRange('Portrait X', 'portraitX', data.portraitX)}
         ${buildInlineBountyRange('Portrait Y', 'portraitY', data.portraitY)}
-        ${buildInlineBountyRange('Siegel-Groesse', 'sealScale', data.sealScale, 50, 180)}
+        ${buildInlineBountyRange('Siegel-Größe', 'sealScale', data.sealScale, 50, 180)}
         ${buildInlineBountyRange('Siegel X', 'sealX', data.sealX)}
         ${buildInlineBountyRange('Siegel Y', 'sealY', data.sealY)}
-        ${buildInlineBountyRange('Muenzen-Groesse', 'coinScale', data.coinScale, 50, 180)}
-        ${buildInlineBountyRange('Muenze X', 'coinX', data.coinX)}
-        ${buildInlineBountyRange('Muenze Y', 'coinY', data.coinY)}
-        ${buildInlineBountyRange('Fraktionsbanner-Groesse', 'factionBannerScale', data.factionBannerScale, 50, 220)}
+        ${buildInlineBountyRange('Münzen-Größe', 'coinScale', data.coinScale, 50, 180)}
+        ${buildInlineBountyRange('Münze X', 'coinX', data.coinX)}
+        ${buildInlineBountyRange('Münze Y', 'coinY', data.coinY)}
+        ${buildInlineBountyRange('Fraktionsbanner-Größe', 'factionBannerScale', data.factionBannerScale, 50, 220)}
         ${buildInlineBountyRange('Fraktionsbanner X', 'factionBannerX', data.factionBannerX)}
         ${buildInlineBountyRange('Fraktionsbanner Y', 'factionBannerY', data.factionBannerY)}
         <div class="inline-edit-field wide">
-          <span class="inline-edit-label">Uebergabehinweis</span>
+          <span class="inline-edit-label">Übergabehinweis</span>
           ${buildTextFormatToolbar()}
           <textarea class="inline-edit-textarea" data-inline-action="update-bounty-field" data-bounty-field="handoverNote">${escapeHtml(data.handoverNote)}</textarea>
         </div>
@@ -193,5 +193,5 @@ function buildInlineBountyFileEditor(page) {
         </div>
       </div>
     </div>
-    ${['charges', 'descriptionRows', 'companions', 'sightings', 'allies', 'enemies', 'supporters', 'dangerProfiles'].map(listName => buildInlineBountyListBlock(data, listName)).join('')}`;
+    ${['charges', 'traits', 'descriptionRows', 'companions', 'sightings', 'allies', 'enemies', 'supporters', 'dangerProfiles'].map(listName => buildInlineBountyListBlock(data, listName)).join('')}`;
 }

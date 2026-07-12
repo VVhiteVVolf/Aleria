@@ -159,13 +159,15 @@ function buildBountyFilePage(page, entry, pageIndex, total) {
                 ${buildBountyImage(data.coinImage, 'bounty-coin', 'M', `--bounty-img-scale:${data.coinScale / 100};--bounty-img-x:${data.coinX}%;--bounty-img-y:${data.coinY}%;`, data.bountyCurrency)}
               </div>
             </div>
+            ${page.description ? `<div class="bounty-profile-text">${sanitizeContentHtml(page.description)}</div>` : ''}
             ${buildBountyPanel(data.chargesTitle, buildBountyChargeList(data.charges), 'bounty-charges-panel')}
+            ${buildBountyPanel(data.traitsTitle, buildBountyChargeList(data.traits), 'bounty-charges-panel bounty-traits-panel')}
+            ${buildBountyPanel(data.companionsTitle, buildBountyCompanions(data.companions), 'bounty-companions-panel')}
             ${buildBountyPanel(data.sightingsTitle, buildBountySightings(data.sightings), 'bounty-sightings-panel')}
           </main>
 
           <aside class="bounty-column bounty-column-right">
             ${buildBountyPanel(data.dangerTitle, buildBountyDangerProfile(data.dangerProfiles), 'bounty-danger-panel')}
-            ${buildBountyPanel(data.companionsTitle, buildBountyCompanions(data.companions), 'bounty-companions-panel')}
             ${buildBountyPanel(data.connectionsTitle, `
             <div class="bounty-connections-grid">
               <section>

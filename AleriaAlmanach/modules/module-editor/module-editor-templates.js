@@ -491,52 +491,57 @@ function createDefaultBountyFilePage(index = 0) {
     pageTitle: `${getRomanPageLabel(index)} - Kopfgeldakte`,
     image: '',
     bountyFilePage: true,
-    description: 'Offizielle Fahndungsakte mit Tatvorwuerfen, Sichtungen, Verbindungen und Gefaehrlichkeitsprofil.',
+    description: 'Zuletzt in den Grenzprovinzen gesehen. Gilt als wortgewandt, skrupellos und bestens vernetzt — Annäherung nur mit Verstärkung.',
     bountyFile: sanitizeBountyFileData({
       archiveTitle: 'Kopfgeld / Fahndungsakte',
-      archiveSubtitle: 'Herausgegeben im Namen des Koenigreichs Cenyr',
+      archiveSubtitle: 'Herausgegeben im Namen des Königreichs Cenyr',
       targetName: 'Darian Voss',
       aliases: 'Der Schattenfuchs - Voss der Graue - Nordwind',
       status: 'Gesucht',
       statusNote: 'Tot oder lebendig',
       threatLevel: 4,
-      threatText: 'Aeusserst gefaehrlich',
+      threatText: 'Äußerst gefährlich',
       bountyAmount: '5.000',
       bountyCurrency: 'Goldtaler',
-      handoverNote: 'Bei Festnahme dem naechstgelegenen Richter oder einem Vertreter der Krone uebergeben. Eigenmaechtiges Handeln auf eigene Gefahr.',
+      handoverNote: 'Bei Festnahme dem nächstgelegenen Richter oder einem Vertreter der Krone übergeben. Eigenmächtiges Handeln auf eigene Gefahr.',
       charges: [
         { icon: '', title: 'Hochverrat gegen die Krone', text: '' },
-        { icon: '', title: 'Raub & Ueberfall', text: '' },
+        { icon: '', title: 'Raub & Überfall', text: '' },
         { icon: '', title: 'Mord & Totschlag', text: '' },
         { icon: '', title: 'Anstiftung zum Aufruhr', text: '' },
         { icon: '', title: 'Schmuggel von Schwarzmagie', text: '' }
       ],
+      traits: [
+        { icon: '', title: 'Wortgewandt & täuschend', text: 'Gibt sich als Händler, Bote oder Amtsträger aus.' },
+        { icon: '', title: 'Meister der Verkleidung', text: 'Wechselt Erscheinung und Namen zwischen den Provinzen.' },
+        { icon: '', title: 'Skrupellos gegenüber Zeugen', text: '' }
+      ],
       descriptionRows: [
         { label: 'Alter', value: '38-42 Jahre' },
-        { label: 'Groesse', value: 'ca. 1,86 Schritt' },
-        { label: 'Statur', value: 'Schlank, muskuloes' },
+        { label: 'Größe', value: 'ca. 1,86 Schritt' },
+        { label: 'Statur', value: 'Schlank, muskulös' },
         { label: 'Haarfarbe', value: 'Dunkelbraun' },
-        { label: 'Augenfarbe', value: 'Graugruen' }
+        { label: 'Augenfarbe', value: 'Graugrün' }
       ],
-      descriptionNote: 'Narbe ueber linker Augenbraue, Brandzeichen in Form eines Fuchses am rechten Schulterblatt.',
+      descriptionNote: 'Narbe über linker Augenbraue, Brandzeichen in Form eines Fuchses am rechten Schulterblatt.',
       companions: [
-        { title: 'Marevan', subtitle: 'Ehem. Soeldner', text: 'Schwertkaempfer' },
-        { title: 'Lissa Maev', subtitle: 'Kundschafterin', text: 'Bogenschuetzin' },
+        { title: 'Marevan', subtitle: 'Ehem. Söldner', text: 'Schwertkämpfer' },
+        { title: 'Lissa Maev', subtitle: 'Kundschafterin', text: 'Bogenschützin' },
         { title: 'Torval', subtitle: 'Krieger', text: 'Helle Narbe am Kinn' }
       ],
       sightings: [
         { place: 'Nordwacht-Festung', date: '3. Rondra 1247', observer: 'Wache H. Perdan' },
-        { place: 'Waldpass von Grelthor', date: '22. Praios 1247', observer: 'Haendler Jorim' },
+        { place: 'Waldpass von Grelthor', date: '22. Praios 1247', observer: 'Händler Jorim' },
         { place: 'Hafenstadt Valmora', date: '18. Praios 1247', observer: 'Matrose R. Felan' },
         { place: 'Ruinen von Drakemoor', date: '2. Ingerimm 1247', observer: 'Magerin E. Valmor' }
       ],
       factionName: 'Schattenbund',
-      factionText: 'Anfuehrer der Schattenfuechse.',
+      factionText: 'Anführer der Schattenfüchse.',
       allies: [
         { title: 'Verbindungen zu Schmugglern', text: 'Valmora und Nordwacht.' }
       ],
       enemies: [
-        { title: 'Ritterorden der Krone', text: 'Haendlergilde Valdorias, Magierzirkel von Cenyr.' }
+        { title: 'Ritterorden der Krone', text: 'Händlergilde Valdorias, Magierzirkel von Cenyr.' }
       ],
       supporters: [
         { title: 'Sympathisanten', text: 'Nutzen Korruption und Bestechung in den Grenzprovinzen.' }
@@ -546,7 +551,7 @@ function createDefaultBountyFilePage(index = 0) {
         { icon: '', label: 'Einfluss', value: 4 },
         { icon: '', label: 'Magie', value: 2 },
         { icon: '', label: 'Fluchtgefahr', value: 5 },
-        { icon: '', label: 'Brutalitaet', value: 5 }
+        { icon: '', label: 'Brutalität', value: 5 }
       ],
       footer: 'Almanach-Archiv - Fahndungsakten'
     })
