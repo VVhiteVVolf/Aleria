@@ -2,6 +2,23 @@
 // this single normalized shape so limits and fallbacks cannot drift apart.
 (function registerHouseWarriorsData(global) {
   const LIMITS = Object.freeze({ knightlyClasses: 8, menAtArms: 4 });
+  const IMAGE_OPTIONS = Object.freeze({
+    fits: Object.freeze([
+      Object.freeze({ value: 'contain', label: 'Vollständig anzeigen (kein Crop)' }),
+      Object.freeze({ value: 'cover', label: 'Fläche füllen (Crop)' })
+    ]),
+    formats: Object.freeze([
+      Object.freeze({ value: 'tall', label: 'Hochformat 2:3' }),
+      Object.freeze({ value: 'portrait', label: 'Hochformat 4:5' }),
+      Object.freeze({ value: 'square', label: 'Quadratisch 1:1' }),
+      Object.freeze({ value: 'landscape', label: 'Querformat 16:10' })
+    ]),
+    positions: Object.freeze([
+      Object.freeze({ value: 'top', label: 'Oben' }),
+      Object.freeze({ value: 'center', label: 'Mittig' }),
+      Object.freeze({ value: 'bottom', label: 'Unten' })
+    ])
+  });
 
   function text(value) {
     return String(value || '').trim();
@@ -14,11 +31,19 @@
   function sanitizeCard(card, kind, index) {
     const source = card && typeof card === 'object' ? card : {};
     const rawId = text(source.id).toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
+    const imageFit = ['contain', 'cover'].includes(source.imageFit) ? source.imageFit : 'contain';
+    const imageFormat = ['tall', 'portrait', 'square', 'landscape'].includes(source.imageFormat)
+      ? source.imageFormat
+      : (kind === 'man-at-arms' ? 'landscape' : 'tall');
+    const imagePosition = ['top', 'center', 'bottom'].includes(source.imagePosition) ? source.imagePosition : 'center';
     return {
       id: rawId || createId(kind, index),
       name: text(source.name),
       subtitle: text(source.subtitle),
       image: text(source.image),
+      imageFit,
+      imageFormat,
+      imagePosition,
       badge: text(source.badge),
       description: text(source.description),
       duty: text(source.duty),
@@ -148,6 +173,7 @@
 
   global.HouseWarriorsData = Object.freeze({
     limits: LIMITS,
+    imageOptions: IMAGE_OPTIONS,
     sanitize,
     sanitizeCard,
     defaultCard,

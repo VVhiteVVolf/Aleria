@@ -202,17 +202,26 @@
 }
 
 .house-warriors-card-image {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   background: linear-gradient(145deg, #d2b986, #a88a58);
 }
+
+.house-warriors-card-image.image-portrait { aspect-ratio: 4 / 5; }
+.house-warriors-card-image.image-square { aspect-ratio: 1; }
+.house-warriors-card-image.image-landscape { aspect-ratio: 16 / 10; }
 
 .house-warriors-card-image img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
+
+.house-warriors-card-image.fit-cover img { object-fit: cover; }
+.house-warriors-card-image.position-top img { object-position: center top; }
+.house-warriors-card-image.position-bottom img { object-position: center bottom; }
 
 .house-warriors-card-image.is-placeholder {
   display: grid;
@@ -324,8 +333,8 @@
 }
 
 .house-warriors-card-training .house-warriors-card-image {
-  height: 100%;
-  aspect-ratio: auto;
+  height: auto;
+  align-self: start;
 }
 
 .house-warriors-men-grid {
@@ -380,10 +389,6 @@
 
   .house-warriors-card-training {
     grid-template-columns: 1fr;
-  }
-
-  .house-warriors-card-training .house-warriors-card-image {
-    aspect-ratio: 16 / 10;
   }
 
   .house-warriors-facts div {

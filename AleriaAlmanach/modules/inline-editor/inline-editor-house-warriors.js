@@ -85,11 +85,22 @@ function buildInlineHouseWarriorCard(card, options = {}) {
         <span class="inline-edit-label">${escapeHtml(label)}</span>
         <input class="inline-edit-input" type="${type}" data-inline-action="update-house-warrior-card-field" ${identityAttributes} data-house-warrior-field="${name}" value="${escapeHtml(value)}">
       </div>`;
+  const selectField = (label, name, value, options, help = '') => `
+      <div class="inline-edit-field">
+        <span class="inline-edit-label">${escapeHtml(label)}</span>
+        <select class="inline-edit-input" data-inline-action="update-house-warrior-card-field" ${identityAttributes} data-house-warrior-field="${name}">
+          ${options.map(option => `<option value="${escapeHtml(option.value)}"${option.value === value ? ' selected' : ''}>${escapeHtml(option.label)}</option>`).join('')}
+        </select>
+        ${help ? `<span class="inline-placeholder-note">${escapeHtml(help)}</span>` : ''}
+      </div>`;
   return `
     <div class="inline-profile-card">
       <div class="inline-edit-head"><div class="inline-edit-kicker">${escapeHtml(title)}${fixed ? '' : ` ${index + 1}`}</div>${controls}</div>
       <div class="inline-edit-grid">
         ${field('Bild', 'image', safe.image, 'url', true)}
+        ${selectField('Bilddarstellung', 'imageFit', safe.imageFit, HouseWarriorsData.imageOptions.fits, '„Vollständig“ zeigt das ganze Motiv ohne Crop.')}
+        ${selectField('Bildformat', 'imageFormat', safe.imageFormat, HouseWarriorsData.imageOptions.formats)}
+        ${selectField('Bildausrichtung', 'imagePosition', safe.imagePosition, HouseWarriorsData.imageOptions.positions)}
         ${field('Name', 'name', safe.name)}
         ${field('Untertitel / Rang', 'subtitle', safe.subtitle)}
         ${field('Kennzeichnung', 'badge', safe.badge)}

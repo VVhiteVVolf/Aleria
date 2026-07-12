@@ -6,6 +6,10 @@ function getModuleHouseWarriorListConfig(kind = 'knight') {
     : { selector: '.module-house-warrior-knights', max: HouseWarriorsData.limits.knightlyClasses, label: 'Ritterliche Gattung' };
 }
 
+function buildModuleHouseWarriorImageOptions(options, selected) {
+  return options.map(option => `<option value="${escapeHtml(option.value)}"${option.value === selected ? ' selected' : ''}>${escapeHtml(option.label)}</option>`).join('');
+}
+
 function buildModuleHouseWarriorCardMarkup(card, kind = 'knight', index = 0, fixed = false) {
   const safe = HouseWarriorsData.sanitizeCard(card, kind, index);
   const label = kind === 'page' ? 'Page' : kind === 'squire' ? 'Knappe' : getModuleHouseWarriorListConfig(kind).label;
@@ -26,6 +30,19 @@ function buildModuleHouseWarriorCardMarkup(card, kind = 'knight', index = 0, fix
         <div class="module-editor-field wide">
           <label>Bild</label>
           <input type="url" class="me-house-warrior-image" value="${escapeHtml(safe.image)}" placeholder="https://i.imgur.com/...">
+        </div>
+        <div class="module-editor-field">
+          <label>Bilddarstellung</label>
+          <select class="me-house-warrior-image-fit">${buildModuleHouseWarriorImageOptions(HouseWarriorsData.imageOptions.fits, safe.imageFit)}</select>
+          <div class="module-editor-help">„Vollständig“ zeigt immer das ganze Motiv und beschneidet nichts.</div>
+        </div>
+        <div class="module-editor-field">
+          <label>Bildformat</label>
+          <select class="me-house-warrior-image-format">${buildModuleHouseWarriorImageOptions(HouseWarriorsData.imageOptions.formats, safe.imageFormat)}</select>
+        </div>
+        <div class="module-editor-field">
+          <label>Bildausrichtung</label>
+          <select class="me-house-warrior-image-position">${buildModuleHouseWarriorImageOptions(HouseWarriorsData.imageOptions.positions, safe.imagePosition)}</select>
         </div>
         <div class="module-editor-field">
           <label>Name</label>
@@ -66,6 +83,9 @@ function collectModuleHouseWarriorCard(card, kind = 'knight', index = 0) {
     name: getTrimmedFormValue(card, '.me-house-warrior-name'),
     subtitle: getTrimmedFormValue(card, '.me-house-warrior-subtitle'),
     image: getTrimmedFormValue(card, '.me-house-warrior-image'),
+    imageFit: getTrimmedFormValue(card, '.me-house-warrior-image-fit'),
+    imageFormat: getTrimmedFormValue(card, '.me-house-warrior-image-format'),
+    imagePosition: getTrimmedFormValue(card, '.me-house-warrior-image-position'),
     badge: getTrimmedFormValue(card, '.me-house-warrior-badge'),
     description: getTrimmedFormValue(card, '.me-house-warrior-description'),
     duty: getTrimmedFormValue(card, '.me-house-warrior-duty'),

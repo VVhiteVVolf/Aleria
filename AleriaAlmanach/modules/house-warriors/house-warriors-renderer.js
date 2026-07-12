@@ -3,10 +3,11 @@
 (function registerHouseWarriorsRenderer(global) {
   function renderImage(card, className) {
     const image = sanitizeImageSrc(card.image || '');
+    const imageClass = `${className} image-${card.imageFormat} fit-${card.imageFit} position-${card.imagePosition}`;
     if (image) {
-      return `<div class="${className}"><img src="${image}" alt="${escapeHtml(card.name || '')}" loading="lazy" decoding="async"></div>`;
+      return `<div class="${imageClass}"><img src="${image}" alt="${escapeHtml(card.name || '')}" loading="lazy" decoding="async"></div>`;
     }
-    return `<div class="${className} is-placeholder" aria-hidden="true"><span>✦</span></div>`;
+    return `<div class="${imageClass} is-placeholder" aria-hidden="true"><span>✦</span></div>`;
   }
 
   function renderFacts(card) {
