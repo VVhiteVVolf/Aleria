@@ -66,6 +66,74 @@ function buildModuleImagePositionOptions(selected, fallback = 'top') {
     <option value="right"${value === 'right' ? ' selected' : ''}>Rechts</option>`;
 }
 
+// Bild-Reiter für den Hauptbild-Bereich (Häuser-, Gilden-, Biographie- und Kasten-Template):
+// zusätzliche Bilder mit Reitername, die auf der Seite als klickbare Tabs über dem Hauptbild
+// erscheinen. Gespeichert top-level als page.imageTabs / page.imageTabLabel (siehe
+// sanitizeModulePage in app-core.js); gerendert über getModulePortraitTabs im module-renderer.
+function buildModuleImageTabRows(items = []) {
+  const rows = Array.isArray(items) ? items : [];
+  return rows.map(item => `
+    <div class="inline-stat-row module-image-tab-row">
+      <input class="inline-edit-input me-image-tab-label" type="text" value="${escapeHtml(item?.label || '')}" placeholder="Reitername (z.B. Wappen)">
+      <input class="inline-edit-input me-image-tab-url" type="url" value="${escapeHtml(item?.image || '')}" placeholder="https://i.imgur.com/...">
+      <button class="module-editor-mini-btn module-editor-danger" type="button" data-module-editor-action="remove-image-tab-row">Löschen</button>
+    </div>`).join('');
+}
+
+function buildModuleImageTabsEditor(page) {
+  const tabs = Array.isArray(page?.imageTabs) ? page.imageTabs : [];
+  return `
+          <div class="module-editor-field wide">
+            <div class="module-editor-inline" style="justify-content:space-between;">
+              <label>Bild-Reiter (Hauptbild-Tabs)</label>
+              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-image-tab-row">+ Bild</button>
+            </div>
+            <div class="module-editor-help">Zusätzliche Bilder für den Hauptbild-Bereich: Sobald Einträge vorhanden sind, erscheinen über dem Bild klickbare Reiter und das Bild wechselt je nach Auswahl. Das Hauptbild (Bild-URL oben) ist immer der erste Reiter.</div>
+            <div class="inline-stat-editor module-image-tabs">
+              ${buildModuleImageTabRows(tabs) || '<div class="inline-placeholder-note">Noch keine zusätzlichen Bilder vorhanden.</div>'}
+            </div>
+          </div>
+          <div class="module-editor-field">
+            <label>Reitername des Hauptbilds</label>
+            <input type="text" class="me-image-tab-main-label" value="${escapeHtml(page?.imageTabLabel || '')}" placeholder="Hauptbild">
+            <div class="module-editor-help">Beschriftet den ersten Reiter, wenn Bild-Reiter aktiv sind.</div>
+          </div>`;
+}
+
+function collectModuleImageTabs(card, page) {
+  const tabs = Array.from(card.querySelectorAll('.module-image-tab-row'))
+    .map(row => ({
+      label: getTrimmedFormValue(row, '.me-image-tab-label'),
+      image: getTrimmedFormValue(row, '.me-image-tab-url')
+    }))
+    .filter(item => item.image);
+  if (tabs.length) page.imageTabs = tabs;
+  const mainLabel = getTrimmedFormValue(card, '.me-image-tab-main-label');
+  if (mainLabel) page.imageTabLabel = mainLabel;
+  return page;
+}
+
+function addModuleImageTabRow(button) {
+  const pageCard = button.closest('.module-page-card');
+  const wrap = pageCard?.querySelector('.module-image-tabs');
+  if (!pageCard || !wrap) return;
+  wrap.querySelector('.inline-placeholder-note')?.remove();
+  wrap.insertAdjacentHTML('beforeend', buildModuleImageTabRows([{ label: '', image: '' }]));
+  syncModuleJsonPreview();
+}
+
+function removeModuleImageTabRow(button) {
+  const pageCard = button.closest('.module-page-card');
+  const row = button.closest('.module-image-tab-row');
+  const wrap = row?.parentElement;
+  if (!pageCard || !row || !wrap) return;
+  row.remove();
+  if (!wrap.querySelector('.module-image-tab-row')) {
+    wrap.innerHTML = '<div class="inline-placeholder-note">Noch keine zusätzlichen Bilder vorhanden.</div>';
+  }
+  syncModuleJsonPreview();
+}
+
 function buildModulePageEditorMarkup(page, index) {
   const type = inferModulePageType(page);
   const style = getPageImageStyle(page);

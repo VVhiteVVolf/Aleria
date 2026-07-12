@@ -1464,6 +1464,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildCourtPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'court')
   },
+  'house-warriors': {
+    id: 'house-warriors',
+    pageType: 'house-warriors',
+    pageFlag: 'houseWarriorsPage',
+    label: 'Hauskrieger-Template',
+    pageLabel: 'Hauskrieger-Template',
+    defaultTitle: 'Kriegerische Traditionen',
+    defaultSubtitle: 'Ritterliche Gattungen, Ausbildung und Waffenknechte',
+    entryType: 'Hauskrieger',
+    typeMatchers: ['hauskrieger', 'kriegerische tradition', 'rittergattungen'],
+    createPages: () => [HouseWarriorsData.createDefaultPage(0)],
+    createPage: index => HouseWarriorsData.createDefaultPage(index),
+    buildEditorFields: page => buildHouseWarriorsModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectHouseWarriorsModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildHouseWarriorsPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'house-warriors')
+  },
   houses: {
     id: 'houses',
     pageType: 'house',
@@ -1527,6 +1544,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   'tournament-league': ['buildTournamentLeagueModuleEditorFields', 'collectTournamentLeagueModuleEditorPage', 'buildTournamentLeaguePage'],
   caste: ['buildCasteModuleEditorFields', 'collectCasteModuleEditorPage', 'buildCastePage'],
   court: ['buildCourtModuleEditorFields', 'collectCourtModuleEditorPage', 'buildCourtPage'],
+  'house-warriors': ['buildHouseWarriorsModuleEditorFields', 'collectHouseWarriorsModuleEditorPage', 'buildHouseWarriorsPage'],
   houses: ['buildHouseModuleEditorFields', 'collectHouseModuleEditorPage', 'buildHousePage'],
   guild: ['buildGuildModuleEditorFields', 'collectGuildModuleEditorPage', 'buildGuildPage']
 };

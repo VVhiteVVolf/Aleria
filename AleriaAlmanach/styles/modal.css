@@ -399,3 +399,41 @@
   .entry-quote::before { content:'\201C'; position:absolute; top:-4px; left:8px; font-size:3rem; color:var(--red-wax); opacity:0.18; font-family:'EB Garamond',serif; line-height:1; }
   .quote-attribution { margin-top:0.3rem; font-style:normal; font-size:0.7rem; color:var(--gold); font-family:'Cinzel',serif; letter-spacing:0.08em; }
 
+
+  /* ── HAUPTBILD-REITER (Bild-Tabs der Häuser-/Gilden-/Biographie-/Kasten-Templates) ── */
+  .module-portrait-tabs { display: flex; flex-direction: column; min-width: 0; }
+  .module-portrait-tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0 0 0.5rem;
+  }
+  .module-portrait-tab {
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid rgba(139,105,20,0.42);
+    background: rgba(255,255,255,0.28);
+    color: var(--ink-faded);
+    font: 700 0.58rem/1 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.42rem 0.62rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  }
+  .module-portrait-tab:hover { border-color: var(--gold); color: var(--ink); }
+  .module-portrait-tab.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #f7ecd7;
+    box-shadow: 0 4px 10px rgba(80,50,20,0.22);
+  }
+  .module-portrait-tabs .module-portrait-pane { display: none; }
+  .module-portrait-tabs .module-portrait-pane.active { display: block; }
+  /* Breitensteuerung wandert vom Einzelbild auf den Reiter-Block; die Bilder füllen ihn. */
+  .biography-portrait-tabs { width: var(--biography-side-width); max-width: 100%; }
+  .module-portrait-tabs .biography-portrait { width: 100%; }

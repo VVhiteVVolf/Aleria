@@ -127,6 +127,7 @@ function buildCasteModuleEditorFields(page) {
             <label>Banner-URL</label>
             <input type="url" class="me-caste-banner-image" value="${escapeHtml(caste.bannerImage)}" placeholder="https://i.imgur.com/...">
           </div>
+          ${buildModuleImageTabsEditor(page)}
           <div class="module-editor-field">
             <label>Kastenbilder <span>${escapeHtml(caste.imageScale)}%</span></label>
             <input class="module-size-range me-caste-image-scale" type="range" min="60" max="220" step="1" value="${escapeHtml(caste.imageScale)}" data-module-editor-action="update-range-percent-label">
@@ -166,6 +167,7 @@ function collectCasteModuleEditorPage(card, page) {
   const casteBlock = card.querySelector('[data-page-type="caste"]') || card;
   page.castePage = true;
   page.description = getTrimmedFormValue(card, '.me-caste-description');
+  collectModuleImageTabs(card, page);
   page.caste = sanitizeCasteData({
     archiveLabel: getTrimmedFormValue(card, '.me-caste-archive-label'),
     documentCode: getTrimmedFormValue(card, '.me-caste-document-code'),

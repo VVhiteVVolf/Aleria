@@ -299,6 +299,12 @@ function validateModulePageAssets(errors, page, index) {
 
   pushInvalidModuleAsset(errors, `${prefix} Hauswappen`, page.house?.crestImage);
   validateModuleAssetRows(errors, `${prefix} Hausverbindung`, page.house?.connections, [['image', 'Bild']]);
+  pushInvalidModuleAsset(errors, `${prefix} Hauskrieger Wappen`, page.houseWarriors?.crest);
+  pushInvalidModuleAsset(errors, `${prefix} Hauskrieger Kopfbild`, page.houseWarriors?.bannerImage);
+  validateModuleAssetRows(errors, `${prefix} Rittergattung`, page.houseWarriors?.knightlyClasses, [['image', 'Bild']]);
+  validateModuleAssetRows(errors, `${prefix} Waffenknecht`, page.houseWarriors?.menAtArms, [['image', 'Bild']]);
+  pushInvalidModuleAsset(errors, `${prefix} Page Bild`, page.houseWarriors?.trainingRanks?.page?.image);
+  pushInvalidModuleAsset(errors, `${prefix} Knappe Bild`, page.houseWarriors?.trainingRanks?.squire?.image);
   validateModuleAssetRows(errors, `${prefix} Biografieverbindung`, page.biography?.connections, [['image', 'Bild']]);
 
   pushInvalidModuleAsset(errors, `${prefix} Warenverzeichnis Seitenbild`, page.goodsTable?.sideImage);
