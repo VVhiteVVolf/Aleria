@@ -1108,52 +1108,49 @@ function buildCastePage(page, entry, pageIndex, total) {
   return `
     ${nav}
     <div class="caste-page"${styleAttr}>
-      <header class="caste-archive-head">
-        <span>${escapeHtml(data.archiveLabel)}</span>
-        <div>
-          ${data.categoryLabel ? `<strong>${escapeHtml(data.categoryLabel)}</strong>` : ''}
-          ${data.documentCode ? `<em>${escapeHtml(data.documentCode)}</em>` : ''}
-          ${sealImage ? `<img src="${sealImage}" alt="" loading="lazy" decoding="async">` : ''}
-        </div>
-      </header>
-
-      <section class="caste-hero">
-        <div class="caste-title-row">
-          ${headerSymbol ? `<img class="caste-header-symbol" src="${headerSymbol}" alt="" loading="lazy" decoding="async">` : '<div class="caste-header-symbol placeholder">*</div>'}
+      <header class="caste-dossier-header">
+        <div class="caste-dossier-identity">
+          ${headerSymbol ? `<img class="caste-header-symbol" src="${headerSymbol}" alt="" loading="lazy" decoding="async">` : '<div class="caste-header-symbol placeholder">K</div>'}
           <div>
-            ${data.introTitle ? `<span class="caste-kicker">${escapeHtml(data.introTitle)}</span>` : ''}
+            <span class="caste-kicker">${escapeHtml(data.archiveLabel)}${data.documentCode ? ` · ${escapeHtml(data.documentCode)}` : ''}</span>
             <h2>${escapeHtml(entry.title || 'Kaste')}</h2>
             ${entry.subtitle ? `<p>${escapeHtml(entry.subtitle)}</p>` : ''}
           </div>
         </div>
-        ${bannerImage ? `<img class="caste-banner" src="${bannerImage}" alt="" loading="lazy" decoding="async">` : ''}
-      </section>
+        <div class="caste-dossier-marks">
+          ${data.categoryLabel ? `<strong>${escapeHtml(data.categoryLabel)}</strong>` : ''}
+          ${bannerImage ? `<img class="caste-banner" src="${bannerImage}" alt="" loading="lazy" decoding="async">` : ''}
+          ${sealImage ? `<img class="caste-seal" src="${sealImage}" alt="" loading="lazy" decoding="async">` : ''}
+        </div>
+      </header>
 
-      <div class="caste-layout">
-        <aside class="caste-left">
+      <div class="caste-dossier">
+        <aside class="caste-column caste-column-left">
           <figure class="caste-portrait"${buildModuleImageFrameAttrs(page)}>
             ${heroImage ? `<img src="${heroImage}" alt="${escapeHtml(entry.title || 'Kaste')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>` : `<div class="caste-portrait-placeholder">${getInitialChar(entry.title || 'K')}</div>`}
           </figure>
           ${buildCastePanel(data.infoTitle, buildCasteInfoRows(data.infoRows), 'caste-info-panel')}
-          ${buildCastePanel(data.symbolsTitle, buildCasteSymbolCards(data.symbols), 'caste-symbol-panel')}
-          ${buildCastePanel(data.relatedTitle, buildCasteRelatedEntries(data.relatedEntries), 'caste-related-panel')}
+          ${data.quote ? `<blockquote class="caste-quote">${sanitizeContentHtml(data.quote)}${data.quoteBy ? `<cite>${escapeHtml(data.quoteBy)}</cite>` : ''}</blockquote>` : ''}
         </aside>
 
-        <main class="caste-main">
-          ${introText ? `<section class="caste-intro">${sanitizeContentHtml(introText)}</section>` : ''}
+        <main class="caste-column caste-column-main">
+          ${introText ? `<section class="caste-intro"><h3>${escapeHtml(data.introTitle || 'Definition der Kaste')}</h3>${sanitizeContentHtml(introText)}</section>` : ''}
+          ${descriptionText ? `<section class="caste-description"><h3>Gesellschaftliche Einordnung</h3>${sanitizeContentHtml(descriptionText)}</section>` : ''}
           ${buildCastePanel(data.rolesTitle, buildCasteRoleCards(data.roles), 'caste-roles-panel')}
-          <div class="caste-panel-grid">
-            ${buildCastePanel(data.skillsTitle, buildCasteTitledTextList(data.skills), 'caste-list-panel')}
-            ${buildCastePanel(data.privilegesTitle, buildCasteTextList(data.privileges), 'caste-list-panel')}
-            ${buildCastePanel(data.restrictionsTitle, buildCasteTextList(data.restrictions), 'caste-list-panel')}
-            ${buildCastePanel(data.organizationTitle, buildCasteOrganizationRows(data.organizationRows), 'caste-organization-panel')}
+          ${buildCastePanel(data.skillsTitle, buildCasteTitledTextList(data.skills), 'caste-list-panel')}
+          <div class="caste-rights-grid">
+            ${buildCastePanel(data.privilegesTitle, buildCasteTextList(data.privileges), 'caste-list-panel caste-privileges')}
+            ${buildCastePanel(data.restrictionsTitle, buildCasteTextList(data.restrictions), 'caste-list-panel caste-duties')}
           </div>
-          ${buildCastePanel(data.representativesTitle, buildCasteRepresentatives(data.representatives), 'caste-representatives-panel')}
         </main>
-      </div>
 
-      ${descriptionText ? `<section class="caste-description"><h3>Beschreibung</h3>${sanitizeContentHtml(descriptionText)}</section>` : ''}
-      ${data.quote ? `<blockquote class="caste-quote">${sanitizeContentHtml(data.quote)}${data.quoteBy ? `<cite>${escapeHtml(data.quoteBy)}</cite>` : ''}</blockquote>` : ''}
+        <aside class="caste-column caste-column-right">
+          ${buildCastePanel(data.organizationTitle, buildCasteOrganizationRows(data.organizationRows), 'caste-organization-panel')}
+          ${buildCastePanel(data.symbolsTitle, buildCasteSymbolCards(data.symbols), 'caste-symbol-panel')}
+          ${buildCastePanel(data.representativesTitle, buildCasteRepresentatives(data.representatives), 'caste-representatives-panel')}
+          ${buildCastePanel(data.relatedTitle, buildCasteRelatedEntries(data.relatedEntries), 'caste-related-panel')}
+        </aside>
+      </div>
       ${data.footer ? `<footer class="caste-footer">${escapeHtml(data.footer)}</footer>` : ''}
     </div>
     ${sym}`;

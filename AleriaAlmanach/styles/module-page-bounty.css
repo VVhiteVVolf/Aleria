@@ -1,78 +1,54 @@
+/* Kopfgeldakte: official dossier header + biography-style three-column shell. */
 .bounty-file-page {
   position: relative;
   flex: 1;
   min-height: 0;
   height: 100%;
-  overflow: auto;
-  padding: clamp(14px, 2vw, 28px);
-  color: #24180e;
-  font-family: "EB Garamond", Georgia, serif;
-  background:
-    linear-gradient(135deg, rgba(255, 249, 229, 0.96), rgba(225, 197, 143, 0.86)),
-    var(--parchment-dark, #e9d5a3);
+  overflow: hidden;
+  color: #281b10;
+  font-family: 'EB Garamond', Georgia, serif;
+  background: radial-gradient(circle at 48% 8%, rgba(255,255,255,.28), transparent 32%), var(--parchment);
+  isolation: isolate;
 }
-
 .bounty-file-page::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
+  z-index: -1;
   background-image: var(--bounty-bg, none);
-  background-size: cover;
   background-position: center;
-  opacity: 0.12;
-  mix-blend-mode: multiply;
+  background-size: cover;
+  opacity: .1;
   pointer-events: none;
 }
+.bounty-file-sheet { height: 100%; min-height: 0; display: flex; flex-direction: column; }
 
-.bounty-file-sheet {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 14px;
-  width: min(1320px, 100%);
-  margin-inline: auto;
-  padding: clamp(12px, 1.6vw, 22px);
-  border: 3px double rgba(96, 67, 36, 0.45);
-  background: rgba(255, 247, 222, 0.68);
-  box-shadow: 0 18px 34px rgba(45, 26, 10, 0.16), inset 0 0 30px rgba(121, 82, 34, 0.08);
-}
-
-.bounty-file-header {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  gap: 16px;
+.bounty-dossier-header {
+  flex: 0 0 auto;
+  display: flex;
   align-items: center;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(96, 67, 36, 0.28);
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 1.3rem;
+  border-bottom: 1px solid rgba(111,70,30,.3);
+  background: linear-gradient(90deg, rgba(255,255,255,.2), rgba(130,56,38,.08));
 }
-
-.bounty-file-header h2,
-.bounty-identity h1,
-.bounty-panel h3,
-.bounty-connections-grid h4,
-.bounty-core-grid span,
-.bounty-info-row span,
-.bounty-danger-row strong,
-.bounty-companion-card strong {
-  font-family: "Cinzel", Georgia, serif;
-  letter-spacing: 0.04em;
+.bounty-dossier-heading { display: flex; align-items: center; min-width: 0; gap: .85rem; }
+.bounty-dossier-heading > div { min-width: 0; }
+.bounty-dossier-heading span {
+  display: block;
+  margin-bottom: .15rem;
+  color: #8a2b22;
+  font: 700 .54rem/1.2 'Cinzel', serif;
+  letter-spacing: .17em;
   text-transform: uppercase;
 }
-
-.bounty-file-header h2 {
-  margin: 0;
-  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
-  line-height: 1.05;
-}
-
-.bounty-file-header p {
-  margin: 2px 0 0;
-  color: #5c4024;
-  font-size: 1.05rem;
-  font-style: italic;
-}
+.bounty-dossier-heading h2 { margin: 0; font: 700 clamp(1.2rem,1.8vw,1.75rem)/1.15 'Cinzel', serif; letter-spacing: .025em; }
+.bounty-dossier-heading p { margin: .22rem 0 0; color: #65482d; font-size: .84rem; font-style: italic; }
+.bounty-dossier-seal { flex: 0 0 auto; }
 
 .bounty-regional-banner,
+.bounty-seal,
 .bounty-portrait,
 .bounty-charge-icon,
 .bounty-companion-img,
@@ -80,17 +56,16 @@
 .bounty-faction-banner,
 .bounty-description-mark,
 .bounty-danger-icon,
-.bounty-coin,
-.bounty-seal {
+.bounty-coin {
   display: grid;
   place-items: center;
   overflow: hidden;
-  border: 1px solid rgba(96, 67, 36, 0.36);
-  background: rgba(255, 249, 229, 0.54);
-  color: #7b572c;
+  border: 1px solid rgba(111,70,30,.36);
+  background: rgba(255,249,229,.45);
+  color: #7d2a21;
 }
-
 .bounty-regional-banner img,
+.bounty-seal img,
 .bounty-portrait img,
 .bounty-charge-icon img,
 .bounty-companion-img img,
@@ -98,456 +73,122 @@
 .bounty-faction-banner img,
 .bounty-description-mark img,
 .bounty-danger-icon img,
-.bounty-coin img,
-.bounty-seal img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: var(--bounty-img-x, 50%) var(--bounty-img-y, 50%);
-  transform: scale(var(--bounty-img-scale, 1));
-  transform-origin: var(--bounty-img-x, 50%) var(--bounty-img-y, 50%);
+.bounty-coin img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: var(--bounty-img-x,50%) var(--bounty-img-y,50%);
+  transform: scale(var(--bounty-img-scale,1));
+  transform-origin: var(--bounty-img-x,50%) var(--bounty-img-y,50%);
 }
+.bounty-regional-banner { width: 3.8rem; height: 4.6rem; }
+.bounty-seal { width: 4.2rem; height: 4.2rem; border-radius: 50%; }
 
-.bounty-regional-banner {
-  width: 64px;
-  height: 82px;
-}
-
-.bounty-file-hero {
+.bounty-dossier {
+  flex: 1;
+  min-height: 0;
   display: grid;
-  grid-template-columns: minmax(240px, 0.82fr) minmax(360px, 1.45fr) minmax(280px, 0.95fr);
-  gap: 18px;
-  align-items: stretch;
+  grid-template-columns: minmax(235px,27%) minmax(0,1fr) minmax(250px,25%);
+  overflow: hidden;
 }
+.bounty-column { min-width: 0; min-height: 0; overflow: auto; padding: 1rem; overflow-wrap: anywhere; }
+.bounty-column-left { border-right: 1px solid rgba(111,70,30,.22); background: rgba(255,255,255,.1); }
+.bounty-column-main { padding: 1.2rem 1.4rem; }
+.bounty-column-right { border-left: 1px solid rgba(111,70,30,.22); background: rgba(130,56,38,.055); }
 
-.bounty-portrait-frame {
-  min-width: 0;
+.bounty-portrait { width: 100%; aspect-ratio: 4/5; margin-bottom: 1rem; color: #8a2b22; font: 700 1.3rem/1 'Cinzel', serif; }
+.bounty-panel { margin: 0 0 1.15rem; }
+.bounty-panel h3 {
+  display: flex; align-items: center; gap: .55rem;
+  margin: 0 0 .68rem;
+  color: #7d2a21;
+  font: 700 .66rem/1.25 'Cinzel', serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
-
-.bounty-portrait {
-  width: 100%;
-  height: 100%;
-  min-height: 330px;
-  border: 4px double rgba(96, 67, 36, 0.52);
-  color: #7b1e18;
-  font: 1.6rem "Cinzel", Georgia, serif;
-}
-
-.bounty-identity {
-  display: grid;
-  align-content: center;
-  gap: 10px;
-  min-width: 0;
-}
+.bounty-panel h3::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg,rgba(125,42,33,.45),transparent); }
 
 .bounty-identity > span,
-.bounty-core-grid span {
-  color: #76562f;
-  font-size: 0.72rem;
-}
-
-.bounty-identity h1 {
-  margin: 0;
-  font-size: clamp(2.2rem, 4.2vw, 4.2rem);
-  line-height: 0.95;
-  text-transform: none;
-}
-
-.bounty-identity p {
-  margin: 0;
-  color: #3c2a19;
-  font-size: 1.04rem;
-}
-
-.bounty-core-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid rgba(96, 67, 36, 0.22);
-  border-bottom: 1px solid rgba(96, 67, 36, 0.22);
-}
-
-.bounty-core-grid > div {
-  position: relative;
-  min-width: 0;
-  padding: 13px 16px;
-  border-right: 1px solid rgba(96, 67, 36, 0.18);
-}
-
-.bounty-core-grid > div:last-child {
-  border-right: 0;
-}
-
-.bounty-status {
-  display: block;
-  margin: 6px 0 2px;
-  color: #7a211a;
-  font: 1.12rem "Cinzel", Georgia, serif;
-}
-
-.bounty-threat {
-  display: flex;
-  gap: 5px;
-  margin: 7px 0 4px;
-  color: rgba(71, 48, 25, 0.25);
-  font-size: 1.3rem;
-}
-
-.bounty-threat .filled {
-  color: #523417;
-}
-
-.bounty-amount {
-  display: block;
-  color: #8d2119;
-  font: 2rem "Cinzel", Georgia, serif;
-  line-height: 1;
-}
-
-.bounty-coin {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-}
-
-.bounty-handover {
-  padding-top: 10px;
-  border-top: 1px solid rgba(96, 67, 36, 0.18);
-  font-style: italic;
-}
-
-.bounty-panel {
-  position: relative;
-  min-width: 0;
-  padding: clamp(14px, 1.3vw, 18px);
-  border: 1px solid rgba(96, 67, 36, 0.24);
-  background: rgba(255, 249, 229, 0.44);
-  box-shadow: inset 0 0 20px rgba(104, 72, 31, 0.06);
-}
-
-.bounty-panel h3 {
-  margin: 0 0 13px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(96, 67, 36, 0.18);
-  font-size: 1.08rem;
-}
-
-.bounty-seal {
-  position: absolute;
-  top: -32px;
-  right: -24px;
-  z-index: 2;
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  border: 0;
-  background: transparent;
-  filter: drop-shadow(0 8px 8px rgba(45, 23, 9, 0.25));
-}
-
-.bounty-charge-list,
-.bounty-danger-list {
-  display: grid;
-  gap: 12px;
-}
-
-.bounty-charge-row {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 12px;
-  align-items: center;
-}
-
-.bounty-charge-icon,
-.bounty-danger-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-}
-
-.bounty-charge-row strong,
-.bounty-connection-card strong,
-.bounty-faction-card strong {
-  font-family: "Cinzel", Georgia, serif;
-}
-
-.bounty-charge-row p,
-.bounty-connection-card p,
-.bounty-faction-card p,
-.bounty-companion-card p {
-  margin: 2px 0 0;
-  color: #4d3821;
-  line-height: 1.35;
-}
-
-.bounty-file-midgrid {
-  display: grid;
-  grid-template-columns: minmax(250px, 0.9fr) minmax(300px, 1fr) minmax(340px, 1.2fr);
-  gap: 14px;
-}
-
-.bounty-info-row {
-  display: grid;
-  grid-template-columns: minmax(90px, 0.55fr) minmax(0, 1fr);
-  gap: 12px;
-  padding: 6px 0;
-}
-
+.bounty-aliases span,
+.bounty-core-grid span,
 .bounty-info-row span {
-  color: #7a572c;
-  font-size: 0.68rem;
-}
-
-.bounty-info-note {
-  margin: 12px 0 0;
-  line-height: 1.45;
-}
-
-.bounty-description-mark {
-  float: right;
-  width: 74px;
-  height: 74px;
-  margin: 6px 0 0 12px;
-  border: 0;
-  opacity: 0.7;
-}
-
-.bounty-companion-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.bounty-companion-card {
-  text-align: center;
-  min-width: 0;
-}
-
-.bounty-companion-img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  margin-bottom: 8px;
-}
-
-.bounty-companion-card strong,
-.bounty-companion-card span {
-  display: block;
-}
-
-.bounty-companion-card span {
-  color: #6b4d29;
-  font-size: 0.88rem;
-}
-
-.bounty-sightings {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-.bounty-sightings th {
-  color: #76562f;
-  font: 0.7rem "Cinzel", Georgia, serif;
-  letter-spacing: 0.06em;
-  text-align: left;
+  color: #795934;
+  font: 700 .54rem/1.2 'Cinzel', serif;
+  letter-spacing: .11em;
   text-transform: uppercase;
 }
+.bounty-identity h1 { margin: .15rem 0 .5rem; font: 700 clamp(1.8rem,3.5vw,3.5rem)/1 'Cinzel', serif; letter-spacing: .015em; }
+.bounty-aliases { margin-bottom: .9rem; }
+.bounty-aliases p { margin: .2rem 0 0; color: #513923; font-size: .9rem; font-style: italic; }
 
-.bounty-sightings td,
-.bounty-sightings th {
-  padding: 8px 6px;
-  border-bottom: 1px solid rgba(96, 67, 36, 0.14);
-}
+.bounty-core-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-bottom: 1.15rem; border-block: 1px solid rgba(111,70,30,.22); }
+.bounty-core-grid > div { position: relative; min-width: 0; padding: .75rem; border-right: 1px solid rgba(111,70,30,.17); }
+.bounty-core-grid > div:last-child { border-right: 0; }
+.bounty-core-grid p { margin: .24rem 0 0; color: #59402a; font-size: .76rem; line-height: 1.35; }
+.bounty-status { display: block; margin-top: .32rem; color: #8a251d; font: 700 .95rem/1.2 'Cinzel', serif; }
+.bounty-threat { display: flex; gap: .2rem; margin-top: .3rem; color: rgba(71,48,25,.2); }
+.bounty-threat .filled { color: #5b371b; }
+.bounty-amount { display: block; margin-top: .25rem; color: #8a251d; font: 700 1.45rem/1 'Cinzel', serif; }
+.bounty-coin { position: absolute; right: .4rem; bottom: .4rem; width: 2rem; height: 2rem; border-radius: 50%; opacity: .76; }
 
-.bounty-file-lower {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
-  gap: 14px;
-  align-items: start;
-}
+.bounty-info-row { display: grid; grid-template-columns: minmax(5rem,.72fr) minmax(0,1fr); gap: .45rem; padding: .42rem .5rem; border-bottom: 1px solid rgba(111,70,30,.13); }
+.bounty-info-row strong { font-size: .78rem; font-weight: 500; }
+.bounty-info-note { margin: .65rem 0 0; color: #513923; font-size: .78rem; line-height: 1.45; }
+.bounty-description-mark { width: 2.3rem; height: 2.3rem; margin-top: .55rem; }
+.bounty-handover { margin: 0; padding: .85rem 1rem; border: 1px solid rgba(111,70,30,.23); background: rgba(255,255,255,.14); color: #5e4026; font-size: .8rem; font-style: italic; line-height: 1.5; }
 
-.bounty-connections-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(130px, 1fr));
-  gap: 0;
-}
+.bounty-charge-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem; }
+.bounty-charge-row { display: grid; grid-template-columns: 2rem minmax(0,1fr); gap: .55rem; padding: .58rem; border: 1px solid rgba(125,42,33,.2); background: rgba(125,42,33,.035); }
+.bounty-charge-icon { width: 1.9rem; height: 1.9rem; border-radius: 50%; }
+.bounty-charge-row strong { font: 700 .69rem/1.3 'Cinzel', serif; }
+.bounty-charge-row p { margin: .2rem 0 0; color: #65482d; font-size: .74rem; line-height: 1.4; }
 
-.bounty-connections-grid > section {
-  min-width: 0;
-  display: grid;
-  align-content: start;
-  justify-items: center;
-  padding: 0 14px;
-  text-align: center;
-}
+.bounty-sightings { width: 100%; border-collapse: collapse; font-size: .76rem; }
+.bounty-sightings th { padding: .42rem; color: #795934; font: 700 .5rem/1.2 'Cinzel', serif; letter-spacing: .1em; text-align: left; text-transform: uppercase; }
+.bounty-sightings td { padding: .45rem; border-top: 1px solid rgba(111,70,30,.14); }
 
-.bounty-connections-grid > section + section {
-  border-left: 1px solid rgba(96, 67, 36, 0.16);
-}
+.bounty-danger-list { display: grid; gap: .38rem; }
+.bounty-danger-row { display: grid; grid-template-columns: 1.45rem minmax(0,1fr) auto; align-items: center; gap: .45rem; }
+.bounty-danger-icon { width: 1.35rem; height: 1.35rem; border-radius: 50%; }
+.bounty-danger-row strong { font: 700 .56rem/1.2 'Cinzel',serif; }
+.bounty-rating { display: flex; gap: .15rem; }
+.bounty-rating i { width: .42rem; height: .42rem; border-radius: 50%; background: rgba(111,70,30,.18); }
+.bounty-rating i.filled { background: #8a2b22; }
 
-.bounty-connections-grid h4 {
-  margin: 0 0 12px;
-  color: #5b3f22;
-  font-size: 0.78rem;
-  line-height: 1.25;
-  overflow-wrap: anywhere;
-  text-align: center;
-}
+.bounty-companion-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .5rem; }
+.bounty-companion-card { min-width: 0; padding: .48rem; border: 1px solid rgba(111,70,30,.2); background: rgba(255,255,255,.13); }
+.bounty-companion-img { width: 100%; aspect-ratio: 1; margin-bottom: .35rem; }
+.bounty-companion-card strong { display: block; font: 700 .63rem/1.25 'Cinzel',serif; }
+.bounty-companion-card span { color: #8a2b22; font-size: .65rem; font-style: italic; }
+.bounty-companion-card p { margin: .18rem 0 0; color: #65482d; font-size: .69rem; }
 
+.bounty-connections-grid { display: grid; gap: .75rem; }
+.bounty-connections-grid h4 { margin: 0 0 .4rem; color: #795934; font: 700 .55rem/1.2 'Cinzel',serif; letter-spacing: .1em; text-transform: uppercase; }
 .bounty-faction-card,
-.bounty-connection-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  justify-items: center;
-  gap: 8px;
-  width: 100%;
-  min-width: 0;
-  align-items: start;
-  text-align: center;
-}
-
-.bounty-faction-banner {
-  width: min(86px, 100%);
-  height: 104px;
-}
-
-.bounty-connection-card + .bounty-connection-card {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(96, 67, 36, 0.14);
-}
-
-.bounty-connection-img {
-  width: 58px;
-  height: 58px;
-}
-
-.bounty-faction-card > div,
-.bounty-connection-card > div {
-  min-width: 0;
-  width: 100%;
-}
-
+.bounty-connection-card { display: grid; grid-template-columns: 2.8rem minmax(0,1fr); gap: .5rem; align-items: center; }
+.bounty-faction-banner,
+.bounty-connection-img { width: 2.65rem; height: 2.65rem; }
+.bounty-connection-stack { display: grid; gap: .45rem; }
 .bounty-faction-card strong,
-.bounty-connection-card strong {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.25;
-  overflow-wrap: anywhere;
-}
-
+.bounty-connection-card strong { display: block; font: 700 .65rem/1.25 'Cinzel',serif; }
 .bounty-faction-card p,
-.bounty-connection-card p {
-  font-size: 0.96rem;
-  line-height: 1.32;
-  overflow-wrap: anywhere;
+.bounty-connection-card p { margin: .15rem 0 0; color: #65482d; font-size: .7rem; line-height: 1.35; }
+.bounty-connection-card span { color: #8a2b22; font-size: .64rem; font-style: italic; }
+
+.bounty-file-footer { flex: 0 0 auto; padding: .48rem 1rem; border-top: 1px solid rgba(111,70,30,.22); color: #705238; font: 600 .5rem/1.3 'Cinzel',serif; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
+.inline-module-preview-frame:has(.bounty-file-page),
+.module-editor-preview-card:has(.bounty-file-page) { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+
+@media (max-width: 980px) {
+  .bounty-file-page { overflow: auto; }
+  .bounty-dossier { grid-template-columns: minmax(220px,31%) minmax(0,1fr); overflow: visible; }
+  .bounty-column { overflow: visible; }
+  .bounty-column-right { grid-column: 1/-1; border-left: 0; border-top: 1px solid rgba(111,70,30,.22); display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
 }
-
-.bounty-danger-row {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
-  gap: 12px;
-  align-items: center;
-}
-
-.bounty-rating {
-  display: inline-flex;
-  gap: 7px;
-  align-items: center;
-}
-
-.bounty-rating i {
-  width: 14px;
-  height: 14px;
-  border: 1px solid rgba(70, 54, 25, 0.42);
-  border-radius: 50%;
-  background: rgba(90, 75, 38, 0.16);
-}
-
-.bounty-rating i.filled {
-  background: #70612f;
-  box-shadow: inset 0 0 0 2px rgba(255, 242, 194, 0.18);
-}
-
-.bounty-file-footer {
-  padding-top: 10px;
-  border-top: 1px solid rgba(96, 67, 36, 0.22);
-  color: #76562f;
-  font: 0.68rem "Cinzel", Georgia, serif;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.bounty-edit-list {
-  display: grid;
-  gap: 0.55rem;
-  margin-top: 0.55rem;
-}
-
-.bounty-edit-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)) auto;
-  gap: 0.45rem;
-  align-items: start;
-  padding: 0.5rem;
-  border: 1px solid rgba(93, 68, 42, 0.18);
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.bounty-edit-row textarea {
-  min-height: 68px;
-}
-
-@media (max-width: 1100px) {
-  .bounty-file-hero,
-  .bounty-file-midgrid,
-  .bounty-file-lower {
-    grid-template-columns: 1fr;
-  }
-
-  .bounty-connections-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .bounty-portrait {
-    min-height: 420px;
-  }
-}
-
-@media (max-width: 720px) {
-  .bounty-file-header,
+@media (max-width: 680px) {
+  .bounty-dossier-header { align-items: flex-start; }
+  .bounty-dossier { display: block; }
+  .bounty-column { border: 0; border-bottom: 1px solid rgba(111,70,30,.2); }
+  .bounty-column-right { display: block; }
   .bounty-core-grid,
-  .bounty-info-row,
-  .bounty-faction-card,
-  .bounty-connection-card,
-  .bounty-danger-row {
-    grid-template-columns: 1fr;
-  }
-
-  .bounty-companion-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .bounty-seal {
-    position: static;
-    width: 64px;
-    height: 64px;
-    margin-left: auto;
-  }
-
-  .bounty-connections-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bounty-connections-grid > section {
-    padding: 14px 0 0;
-  }
-
-  .bounty-connections-grid > section + section {
-    border-top: 1px solid rgba(96, 67, 36, 0.16);
-    border-left: 0;
-  }
+  .bounty-charge-list { grid-template-columns: 1fr; }
+  .bounty-core-grid > div { border-right: 0; border-bottom: 1px solid rgba(111,70,30,.14); }
 }

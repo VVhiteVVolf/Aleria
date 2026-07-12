@@ -1,7 +1,7 @@
 const CASTE_EDITOR_LIST_DEFINITIONS = {
   infoRows: {
     titleField: 'infoTitle',
-    label: 'Allgemeine Informationen',
+    label: 'Identität & Status',
     addLabel: 'Zeile',
     fallback: { icon: '', label: 'Typ', value: 'Kulturelle Kaste' },
     fields: [
@@ -24,7 +24,7 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
   },
   roles: {
     titleField: 'rolesTitle',
-    label: 'Aufgaben & Rollen',
+    label: 'Gesellschaftliche Funktion & Rollen',
     addLabel: 'Rolle',
     fallback: { icon: '', title: 'Rolle', text: 'Beschreibung der Aufgabe.' },
     fields: [
@@ -35,7 +35,7 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
   },
   skills: {
     titleField: 'skillsTitle',
-    label: 'Faehigkeiten & Kenntnisse',
+    label: 'Ausbildung, Fähigkeiten & Wissen',
     addLabel: 'Eintrag',
     fallback: { icon: '', title: '', text: 'Faehigkeit oder Wissen' },
     fields: [
@@ -56,7 +56,7 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
   },
   restrictions: {
     titleField: 'restrictionsTitle',
-    label: 'Einschraenkungen / Pflichten',
+    label: 'Pflichten, Verbote & Sanktionen',
     addLabel: 'Eintrag',
     fallback: { icon: '', text: 'Pflicht oder Einschraenkung' },
     fields: [
@@ -66,7 +66,7 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
   },
   organizationRows: {
     titleField: 'organizationTitle',
-    label: 'Organisation / Raenge',
+    label: 'Hierarchie & Zugehörigkeit',
     addLabel: 'Zeile',
     fallback: { label: 'Rang', value: 'Novize, Adept, Meister' },
     fields: [
@@ -76,7 +76,7 @@ const CASTE_EDITOR_LIST_DEFINITIONS = {
   },
   representatives: {
     titleField: 'representativesTitle',
-    label: 'Bekannte Vertreter',
+    label: 'Bekannte Angehörige',
     addLabel: 'Vertreter',
     fallback: { portrait: '', name: 'Vertreter', role: 'Rolle', note: 'Kurze Notiz' },
     fields: [

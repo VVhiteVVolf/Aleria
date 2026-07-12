@@ -116,23 +116,31 @@ function buildBountyFilePage(page, entry, pageIndex, total) {
     ${nav}
     <div class="bounty-file-page"${styleAttr}>
       <article class="bounty-file-sheet">
-        <header class="bounty-file-header">
-          ${buildBountyImage(data.regionalBanner, 'bounty-regional-banner', 'B', getBountyImageStyle(data, 'regionalBanner'), data.archiveTitle)}
-          <div>
-            <h2>${escapeHtml(data.archiveTitle)}</h2>
-            <p>${escapeHtml(data.archiveSubtitle)}</p>
+        <header class="bounty-dossier-header">
+          <div class="bounty-dossier-heading">
+            ${buildBountyImage(data.regionalBanner, 'bounty-regional-banner', 'A', getBountyImageStyle(data, 'regionalBanner'), data.archiveTitle)}
+            <div>
+              <span>Amtliches Fahndungsdossier</span>
+              <h2>${escapeHtml(data.archiveTitle)}</h2>
+              <p>${escapeHtml(data.archiveSubtitle)}</p>
+            </div>
           </div>
+          <div class="bounty-dossier-seal">${data.sealImage ? buildBountyImage(data.sealImage, 'bounty-seal', '', `--bounty-img-scale:${data.sealScale / 100};--bounty-img-x:${data.sealX}%;--bounty-img-y:${data.sealY}%;`, 'Siegel') : ''}</div>
         </header>
 
-        <section class="bounty-file-hero">
-          <div class="bounty-portrait-frame">
+        <div class="bounty-dossier">
+          <aside class="bounty-column bounty-column-left">
             ${buildBountyImage(data.portraitImage || page.image, 'bounty-portrait', 'Gesucht', `--bounty-img-scale:${data.portraitScale / 100};--bounty-img-x:${data.portraitX}%;--bounty-img-y:${data.portraitY}%;`, data.targetName || entry.title)}
-          </div>
-          <div class="bounty-identity">
-            <span>${escapeHtml(data.nameLabel)}</span>
-            <h1>${escapeHtml(data.targetName || entry.title || 'Unbekannt')}</h1>
-            <span>${escapeHtml(data.aliasesLabel)}</span>
-            <p>${escapeHtml(data.aliases)}</p>
+            ${buildBountyPanel(data.descriptionTitle, buildBountyDescription(data), 'bounty-description-panel')}
+            ${data.handoverNote ? `<blockquote class="bounty-handover">${sanitizeContentHtml(data.handoverNote)}</blockquote>` : ''}
+          </aside>
+
+          <main class="bounty-column bounty-column-main">
+            <section class="bounty-identity">
+              <span>${escapeHtml(data.nameLabel)}</span>
+              <h1>${escapeHtml(data.targetName || entry.title || 'Unbekannt')}</h1>
+              ${data.aliases ? `<div class="bounty-aliases"><span>${escapeHtml(data.aliasesLabel)}</span><p>${escapeHtml(data.aliases)}</p></div>` : ''}
+            </section>
             <div class="bounty-core-grid">
               <div>
                 <span>${escapeHtml(data.statusLabel)}</span>
@@ -151,19 +159,14 @@ function buildBountyFilePage(page, entry, pageIndex, total) {
                 ${buildBountyImage(data.coinImage, 'bounty-coin', 'M', `--bounty-img-scale:${data.coinScale / 100};--bounty-img-x:${data.coinX}%;--bounty-img-y:${data.coinY}%;`, data.bountyCurrency)}
               </div>
             </div>
-            ${data.handoverNote ? `<p class="bounty-handover">${sanitizeContentHtml(data.handoverNote)}</p>` : ''}
-          </div>
-          ${buildBountyPanel(data.chargesTitle, `${data.sealImage ? buildBountyImage(data.sealImage, 'bounty-seal', '', `--bounty-img-scale:${data.sealScale / 100};--bounty-img-x:${data.sealX}%;--bounty-img-y:${data.sealY}%;`, 'Siegel') : ''}${buildBountyChargeList(data.charges)}`, 'bounty-charges-panel')}
-        </section>
+            ${buildBountyPanel(data.chargesTitle, buildBountyChargeList(data.charges), 'bounty-charges-panel')}
+            ${buildBountyPanel(data.sightingsTitle, buildBountySightings(data.sightings), 'bounty-sightings-panel')}
+          </main>
 
-        <div class="bounty-file-midgrid">
-          ${buildBountyPanel(data.descriptionTitle, buildBountyDescription(data), 'bounty-description-panel')}
-          ${buildBountyPanel(data.companionsTitle, buildBountyCompanions(data.companions), 'bounty-companions-panel')}
-          ${buildBountyPanel(data.sightingsTitle, buildBountySightings(data.sightings), 'bounty-sightings-panel')}
-        </div>
-
-        <div class="bounty-file-lower">
-          ${buildBountyPanel(data.connectionsTitle, `
+          <aside class="bounty-column bounty-column-right">
+            ${buildBountyPanel(data.dangerTitle, buildBountyDangerProfile(data.dangerProfiles), 'bounty-danger-panel')}
+            ${buildBountyPanel(data.companionsTitle, buildBountyCompanions(data.companions), 'bounty-companions-panel')}
+            ${buildBountyPanel(data.connectionsTitle, `
             <div class="bounty-connections-grid">
               <section>
                 <h4>${escapeHtml(data.factionTitle)}</h4>
@@ -176,7 +179,7 @@ function buildBountyFilePage(page, entry, pageIndex, total) {
               <section><h4>${escapeHtml(data.enemiesTitle)}</h4>${buildBountyConnectionCards(data.enemies, 'enemies')}</section>
               <section><h4>${escapeHtml(data.supportersTitle)}</h4>${buildBountyConnectionCards(data.supporters, 'supporters')}</section>
             </div>`, 'bounty-connections-panel')}
-          ${buildBountyPanel(data.dangerTitle, buildBountyDangerProfile(data.dangerProfiles), 'bounty-danger-panel')}
+          </aside>
         </div>
 
         ${data.footer ? `<footer class="bounty-file-footer">${escapeHtml(data.footer)}</footer>` : ''}

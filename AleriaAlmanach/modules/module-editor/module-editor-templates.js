@@ -328,29 +328,29 @@ function createDefaultTournamentLeaguePage(index = 0) {
 
 function createDefaultCastePage(index = 0) {
   return {
-    pageTitle: `${getRomanPageLabel(index)} - Kaste / Klasse`,
+    pageTitle: `${getRomanPageLabel(index)} - Kastendossier`,
     image: '',
     imageWidth: 34,
     castePage: true,
-    description: 'Beschreibe Ursprung, Aufgabe, Selbstverstaendnis und gesellschaftliche Wirkung dieser Kaste oder Klasse.',
+    description: 'Beschreibe Stellung, Fremdwahrnehmung, gesellschaftliche Wirkung und Konflikte dieser Kaste.',
     caste: {
-      archiveLabel: 'Kasten & Klassen',
-      documentCode: 'Dokument Nr. KK-000',
-      categoryLabel: 'Kaste / Klasse',
+      archiveLabel: 'Kastenregister',
+      documentCode: 'Dossier K-000',
+      categoryLabel: 'Gesellschaftliche Kaste',
       headerSymbol: '',
       sealImage: '',
       bannerImage: '',
       backgroundImage: '',
-      introTitle: 'Ueber diese Kaste',
-      introText: 'Fasse in wenigen Saetzen zusammen, warum diese Gruppe existiert, wem sie dient und wodurch sie sich von anderen Staenden unterscheidet.',
-      infoTitle: 'Allgemeine Informationen',
+      introTitle: 'Definition & Selbstverständnis',
+      introText: 'Definiere Ursprung, Zweck, Selbstverständnis und die Merkmale, durch welche Angehörige dieser Kaste erkannt werden.',
+      infoTitle: 'Identität & Status',
       infoRows: [
-        { icon: '', label: 'Typ', value: 'Kulturelle Kaste' },
-        { icon: '', label: 'Hauptsitz', value: 'Noch festlegen' },
-        { icon: '', label: 'Einflussgebiet', value: 'Noch festlegen' },
-        { icon: '', label: 'Anerkennung', value: 'Noch festlegen' },
-        { icon: '', label: 'Mitglieder', value: 'Noch festlegen' },
-        { icon: '', label: 'Ausrichtung', value: 'Neutral' }
+        { icon: '', label: 'Art', value: 'Erblich / erworben / berufen' },
+        { icon: '', label: 'Gesellschaftlicher Rang', value: 'Noch festlegen' },
+        { icon: '', label: 'Verbreitung', value: 'Noch festlegen' },
+        { icon: '', label: 'Zugang', value: 'Geburt, Prüfung oder Ernennung' },
+        { icon: '', label: 'Austritt', value: 'Möglichkeit und Folgen festlegen' },
+        { icon: '', label: 'Rechtsstatus', value: 'Anerkannt / geduldet / verboten' }
       ],
       symbolsTitle: 'Symbolik',
       symbols: [
@@ -358,14 +358,14 @@ function createDefaultCastePage(index = 0) {
         { image: '', title: 'Die Farbe', subtitle: 'Tracht / Banner', detail: 'Welche Farben oder Materialien die Kaste repraesentieren.' },
         { image: '', title: 'Das Werkzeug', subtitle: 'Amtssymbol', detail: 'Objekt, Reliquie oder Insignie der Zugehoerigkeit.' }
       ],
-      rolesTitle: 'Aufgaben & Rollen',
+      rolesTitle: 'Gesellschaftliche Funktion & Rollen',
       roles: [
         { icon: '', title: 'Wahrung', text: 'Welche Pflicht oder welches Wissen diese Kaste bewahrt.' },
         { icon: '', title: 'Dienst', text: 'Wem die Kaste dient und in welcher Form.' },
         { icon: '', title: 'Lehre', text: 'Wie Mitglieder ausgebildet oder weitergegebenes Wissen gepflegt wird.' },
         { icon: '', title: 'Beratung', text: 'Welche Instanzen oder Personen auf diese Kaste hoeren.' }
       ],
-      skillsTitle: 'Faehigkeiten & Kenntnisse',
+      skillsTitle: 'Ausbildung, Fähigkeiten & Wissen',
       skills: [
         { icon: '', title: 'Fachwissen', text: 'Spezialisierte Kenntnis oder Disziplin.' },
         { icon: '', title: 'Ritual / Technik', text: 'Besondere Praxis, Kampfweise oder Handwerk.' },
@@ -377,20 +377,20 @@ function createDefaultCastePage(index = 0) {
         { text: 'Anerkennung durch Adel, Kirche, Orden oder Stadt.' },
         { text: 'Recht zum Tragen bestimmter Zeichen oder Insignien.' }
       ],
-      restrictionsTitle: 'Einschraenkungen',
+      restrictionsTitle: 'Pflichten, Verbote & Sanktionen',
       restrictions: [
         { text: 'Eid, Geluebde oder Dienstpflicht.' },
         { text: 'Verbot bestimmter Handlungen, Magien oder Kontakte.' },
         { text: 'Aufnahmepruefung, Herkunftspflicht oder soziale Grenze.' }
       ],
-      organizationTitle: 'Angehoerige & Organisation',
+      organizationTitle: 'Hierarchie & Zugehörigkeit',
       organizationRows: [
         { label: 'Mitglieder', value: 'Noch festlegen' },
         { label: 'Raenge', value: 'Novize - Adept - Meister' },
         { label: 'Fuehrung', value: 'Noch festlegen' },
         { label: 'Niederlassungen', value: 'Noch festlegen' }
       ],
-      representativesTitle: 'Bekannte Vertreter',
+      representativesTitle: 'Bekannte Angehörige',
       representatives: [
         { portrait: '', crest: '', name: 'Name des Vertreters', title: 'Rang / Rolle', text: 'Kurze Einordnung dieser Person innerhalb der Kaste.' }
       ],
@@ -402,7 +402,7 @@ function createDefaultCastePage(index = 0) {
       ],
       quote: 'Ein Leitsatz dieser Kaste.',
       quoteBy: 'Ueberlieferung / Quelle',
-      footer: 'Almanach-Archiv - Kasten & Klassen'
+      footer: 'Almanach · Kastenregister'
     }
   };
 }
@@ -1429,12 +1429,12 @@ const MODULE_TEMPLATE_REGISTRY = {
     id: 'caste',
     pageType: 'caste',
     pageFlag: 'castePage',
-    label: 'Kaste / Klasse - Template',
-    pageLabel: 'Kaste / Klasse - Template',
+    label: 'Kasten-Template',
+    pageLabel: 'Kasten-Template',
     defaultTitle: 'Neue Kaste',
-    defaultSubtitle: 'Orden, Stand, Kaste oder institutionelle Gruppe',
-    entryType: 'Kaste / Klasse',
-    typeMatchers: ['kaste', 'klasse', 'orden', 'stand', 'ritterorden', 'tempeltyp'],
+    defaultSubtitle: 'Gesellschaftliche Stellung, Rechte, Pflichten und Zugehörigkeit',
+    entryType: 'Kaste',
+    typeMatchers: ['kaste', 'kastensystem', 'gesellschaftskaste', 'stand'],
     createPages: () => [createDefaultCastePage(0)],
     createPage: index => createDefaultCastePage(index),
     buildEditorFields: page => buildCasteModuleEditorFields(page),
