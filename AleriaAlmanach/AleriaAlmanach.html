@@ -16,8 +16,8 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-<link rel="stylesheet" href="./styles/comments.css?v=20260712-animal-font-v1">
-<link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260712-infernal-font-v1">
+<link rel="stylesheet" href="./styles/comments.css?v=20260713-language-bubbles-v1">
+<link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
 <link rel="stylesheet" href="./styles/scene-dice.css?v=20260710-scene-dice-v1">
 <link rel="stylesheet" href="./styles/scene-inventory.css?v=20260710-scene-inventory-v2">
@@ -47,6 +47,9 @@
 <link rel="stylesheet" href="./styles/module-page-goods.css?v=20260623-goods-row-item-picker-v1">
 <link rel="stylesheet" href="./styles/module-page-trade-catalog.css?v=20260619-trade-radar-price-v2">
 <link rel="stylesheet" href="./styles/module-page-map-template.css?v=20260619-map-space-v1">
+<link rel="stylesheet" href="./styles/module-page-language.css?v=20260712-language-template-v3">
+<link rel="stylesheet" href="./styles/module-page-name-list.css?v=20260713-argenti-stoicheia-v1">
+<link rel="stylesheet" href="./styles/module-page-script-table.css?v=20260713-argenti-stoicheia-v1">
 <link rel="stylesheet" href="./styles/module-page-landing.css?v=20260623-landing-editor-v1">
 <link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260620-guest-register-scroll-room-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260520-cleanup-v1">
@@ -59,9 +62,13 @@
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260703-module-insert-json-v4"></script>
-  <script src="./data/sections.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
+  <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
+  <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
+  <script src="./data/sections.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/house-warriors/house-warriors-data.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/core/app-core.js?v=20260712-image-tabs-v1" defer></script>
+  <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/app/dialog-manager.js?v=20260703-category-icons-v1" defer></script>
@@ -88,11 +95,14 @@
   <script src="./modules/module-editor/module-editor-goods.js?v=20260623-goods-row-item-picker-v1" defer></script>
   <script src="./modules/module-editor/module-editor-trade-catalog.js?v=20260623-item-picker-v1" defer></script>
   <script src="./modules/module-editor/module-editor-map-template.js?v=20260618-map-template-v1" defer></script>
+  <script src="./modules/language/language-module-editor.js?v=20260712-language-template-v1" defer></script>
+  <script src="./modules/name-list/name-list-module-editor.js?v=20260712-name-list-v2" defer></script>
+  <script src="./modules/script-table/script-table-module-editor.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/module-editor/module-editor-landing.js?v=20260623-landing-editor-v1" defer></script>
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260712-bounty-traits-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-workflow.js?v=20260620-character-inventory-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20260712-script-table-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-workflow.js?v=20260712-name-list-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260708-house-template-v1" defer></script>
@@ -134,6 +144,9 @@
   <script src="./modules/inline-editor/inline-editor-goods.js?v=20260623-goods-row-item-picker-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-trade-catalog.js?v=20260623-item-picker-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-map-template.js?v=20260618-map-template-v1" defer></script>
+  <script src="./modules/language/language-inline-editor.js?v=20260712-language-template-v1" defer></script>
+  <script src="./modules/name-list/name-list-inline-editor.js?v=20260712-name-list-v2" defer></script>
+  <script src="./modules/script-table/script-table-inline-editor.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament.js?v=20260603-inline-tournament-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-artifact-recipe.js?v=20260520-cleanup-v1" defer></script>
@@ -142,7 +155,7 @@
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20260629-hierarchy-groups-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260629-family-groups-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20260711-guild-template-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
@@ -155,6 +168,9 @@
   <script src="./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1" defer></script>
   <script src="./modules/trade-catalog/trade-catalog-renderer.js?v=20260619-trade-radar-price-v2" defer></script>
   <script src="./modules/map-template/map-template-renderer.js?v=20260618-map-template-v1" defer></script>
+  <script src="./modules/language/language-renderer.js?v=20260712-language-template-v1" defer></script>
+  <script src="./modules/name-list/name-list-renderer.js?v=20260712-name-list-v2" defer></script>
+  <script src="./modules/script-table/script-table-renderer.js?v=20260712-script-table-v1" defer></script>
   <script src="./modules/landing/landing-renderer.js?v=20260623-landing-editor-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-renderer.js?v=20260625-character-inventory-itemdb-v1" defer></script>
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
@@ -162,11 +178,11 @@
   <script src="./modules/family/family-renderer.js?v=20260629-family-groups-v1" defer></script>
   <script src="./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/rendering/module-renderer.js?v=20260712-image-tabs-v1" defer></script>
-  <script src="./modules/archive/archive-card-meta.js?v=20260712-card-semantics-v1" defer></script>
+  <script src="./modules/archive/archive-card-meta.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/archive/archive-hierarchy-browser.js?v=20260712-hierarchy-browser-v1" defer></script>
   <script src="./modules/dashboard/dashboard-state.js?v=20260712-continuation-v1" defer></script>
-  <script src="./modules/archive/archive-dashboard.js?v=20260712-dashboard-continuation-v1" defer></script>
+  <script src="./modules/archive/archive-dashboard.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
   <script src="./modules/archive/archive-view.js?v=20260712-hierarchy-browser-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260703-character-dashboard-v1" defer></script>
@@ -193,8 +209,8 @@
   <script src="./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3" defer></script>
   <script src="./modules/scene-polls/scene-polls-state.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/scene-polls/scene-polls-ui.js?v=20260625-scene-polls-v1" defer></script>
-  <script src="./modules/comments/comments-spell-fonts.js?v=20260712-infernal-font-v1" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20260712-animal-font-v1" defer></script>
+  <script src="./modules/comments/comments-spell-fonts.js?v=20260713-language-bubbles-v2" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20260713-language-bubbles-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
@@ -206,11 +222,11 @@
   <script src="./modules/comments/comments-backend.js?v=20260703-module-insert-json-v4" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20260711-section-types-v1" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20260713-language-bubbles-v1" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20260713-language-bubbles-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260710-bubble-redesign-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20260713-language-bubbles-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
   <script src="./modules/comments/comments-thread.js?v=20260711-scene-clock-v1" defer></script>
@@ -228,9 +244,9 @@
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20260713-language-bubbles-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260710-bubble-redesign-v1" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20260713-language-bubbles-v1" defer></script>
   <script src="./modules/comments/comments-edit-character-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
@@ -317,11 +333,11 @@
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260520-cleanup-v1" defer></script>
-<script src="./modules/comments/comments-segment-events.js?v=20260711-scene-clock-v1" defer></script>
+<script src="./modules/comments/comments-segment-events.js?v=20260713-language-bubbles-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260613-comment-assistant-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-action-events.js?v=20260709-scene-module-import-export-v1" defer></script>
-<script src="./modules/comments/comments-reader-events.js?v=20260629-comment-interactions-v2" defer></script>
+<script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
 <script src="./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1" defer></script>
 
 <!-- COMMENT FORM OVERLAY -->
@@ -1165,6 +1181,9 @@
                   <option value="bounty-file">Kopfgeldakte - Template</option>
                   <option value="goods">Warenverzeichnis - Template</option>
                   <option value="map-template">KartenTemplate</option>
+                  <option value="language">Sprachen-Template</option>
+                  <option value="name-list">Namenslisten-Template</option>
+                  <option value="script-table">Schriftzeichen-Tabelle</option>
                   <option value="landing">Landing Page - Template</option>
                   <option value="artifact">Artefaktakte - Template</option>
                   <option value="recipe">Rezeptur & Ritual - Template</option>
@@ -1241,6 +1260,9 @@
               <option value="bounty-file">Kopfgeldakte - Template</option>
               <option value="goods">Warenverzeichnis - Template</option>
               <option value="map-template">KartenTemplate</option>
+              <option value="language">Sprachen-Template</option>
+              <option value="name-list">Namenslisten-Template</option>
+              <option value="script-table">Schriftzeichen-Tabelle</option>
               <option value="landing">Landing Page - Template</option>
               <option value="artifact">Artefaktakte - Template</option>
               <option value="recipe">Rezeptur & Ritual - Template</option>

@@ -27,10 +27,7 @@ function getArchiveDashboardEntries(sections = []) {
 }
 
 function getArchiveDashboardEntryImage(entry) {
-  const direct = sanitizeImageSrc(entry?.image || '');
-  if (direct) return direct;
-  const pageImage = (entry?.pages || []).map(page => sanitizeImageSrc(page?.image || '')).find(Boolean);
-  return pageImage || '';
+  return getArchiveEntryPreviewImage(entry);
 }
 
 function getArchiveDashboardCommentator(entry) {

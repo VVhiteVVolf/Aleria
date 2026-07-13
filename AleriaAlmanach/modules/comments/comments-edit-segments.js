@@ -20,7 +20,7 @@ function renderEditCommentSegmentList() {
           ${_editCommentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-edit-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">&times;</button>` : ''}
         </div>
         ${getSegmentSideControl(segment, true)}
-        ${getCommentSpellFontControl(segment, true)}
+        ${getCommentLanguageControls(segment, true)}
         ${canUseEmote ? getSegmentEmotePalette(segment, true) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -69,10 +69,17 @@ function setEditCommentSegmentText(id, value) {
   updateEditFormPreview();
 }
 
-function setEditCommentSegmentSpellFont(id, value) {
+function setEditCommentSegmentLanguage(id, value) {
   const segment = _editCommentSegments.find(item => item.id === id);
-  if (!segment || segment.kind !== 'spell') return;
-  segment.spellFont = normalizeCommentSpellFont(value);
+  if (!segment || !commentKindUsesLanguage(segment.kind)) return;
+  segment.language = normalizeCommentLanguage(value);
+  updateEditFormPreview();
+}
+
+function setEditCommentSegmentLanguageColor(id, value) {
+  const segment = _editCommentSegments.find(item => item.id === id);
+  if (!segment || !commentKindUsesLanguage(segment.kind)) return;
+  segment.languageColor = normalizeCommentLanguageColor(value, segment.kind);
   updateEditFormPreview();
 }
 
@@ -175,9 +182,12 @@ function buildEditCommentSegmentsForSave() {
         characterId: base.characterId || '',
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : base.avatarKind,
-        side: normalizeCommentSegmentSide(segment.side)
-        ,spellFont: normalizeCommentSpellFont(segment.spellFont)
-        ,durationSeconds: getSceneTimeSegmentDuration(segment)
+        side: normalizeCommentSegmentSide(segment.side),
+        ...(commentKindUsesLanguage(segment.kind) ? {
+          language: getCommentLanguage(segment),
+          languageColor: getCommentLanguageColor(segment, segment.kind)
+        } : {}),
+        durationSeconds: getSceneTimeSegmentDuration(segment)
       };
     });
 }

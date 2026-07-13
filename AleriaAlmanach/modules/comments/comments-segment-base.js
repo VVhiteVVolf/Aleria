@@ -10,7 +10,7 @@ function commentSegmentUsesSide(kind, edit = false) {
   return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
 }
 
-function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, spellFont = COMMENT_SPELL_FONT_DEFAULT) {
+function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, language = COMMENT_LANGUAGE_DEFAULT, languageColor = '') {
   const normalizedKind = normalizeCommentKind(kind);
   _commentSegmentSeq += 1;
   return {
@@ -20,7 +20,10 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
     side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
     durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds),
-    spellFont: normalizeCommentSpellFont(spellFont)
+    language: normalizeCommentLanguage(language),
+    languageColor: commentKindUsesLanguage(normalizedKind)
+      ? normalizeCommentLanguageColor(languageColor, normalizedKind)
+      : ''
   };
 }
 
@@ -39,7 +42,7 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? ['action']
-    : ['speech', 'thought', 'whisper', 'shout', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'combataction', 'secretaction', 'action'];
+    : ['speech', 'thought', 'whisper', 'shout', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'combataction', 'secretaction', 'action'];
 }
 
 function coerceCommentSegmentsForMode(edit = false) {
@@ -169,6 +172,7 @@ function getCommentSegmentPlaceholder(kind) {
   if (normalized === 'song') return 'Was wird gesungen?';
   if (normalized === 'telepathy') return 'Welche Gedanken werden gesendet?';
   if (normalized === 'animal') return 'Was wird in Tiersprache geäußert?';
+  if (normalized === 'foreign') return 'Was wird in der gewählten Fremdsprache gesagt?';
   if (normalized === 'spell') return 'Welche Zauberformel wird gesprochen?';
   if (normalized === 'madness') return 'Was bricht aus dem Wahn hervor?';
   if (normalized === 'prayer') return 'Welches Gebet wird gesprochen?';

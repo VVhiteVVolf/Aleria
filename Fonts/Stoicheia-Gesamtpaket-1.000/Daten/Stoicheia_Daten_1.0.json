@@ -1,0 +1,2607 @@
+{
+  "sprache": "Stoicheia",
+  "kulturen": [
+    "Phalantier",
+    "Klythesier"
+  ],
+  "alphabet": [
+    [
+      "Α",
+      "Alpha",
+      "A",
+      "Anführer, erste Kraft, Ursprung aller Ordnung",
+      "Polis"
+    ],
+    [
+      "Β",
+      "Beta",
+      "B",
+      "Wurf, Geschoss, erster Schlag",
+      "Ares"
+    ],
+    [
+      "Γ",
+      "Gamma",
+      "G",
+      "Heimatboden, Erde unter den Füßen",
+      "Physis"
+    ],
+    [
+      "Δ",
+      "Delta",
+      "D",
+      "Volk, Gemeinschaft, Masse der Bürger",
+      "Demos"
+    ],
+    [
+      "Ε",
+      "Epsilon",
+      "E",
+      "Ruf in die Schlacht",
+      "Ares"
+    ],
+    [
+      "Ζ",
+      "Zeta",
+      "Z",
+      "Leben und Lebensatem",
+      "Kosmos"
+    ],
+    [
+      "Η",
+      "Eta",
+      "Ē",
+      "Sonne und ewiges Auge der Götter",
+      "Kosmos"
+    ],
+    [
+      "Θ",
+      "Theta",
+      "Th",
+      "Tod und unausweichliches Ende",
+      "Kosmos"
+    ],
+    [
+      "Ι",
+      "Iota",
+      "I",
+      "gespannte Kraft, Bogen und Präzision",
+      "Ares"
+    ],
+    [
+      "Κ",
+      "Kappa",
+      "K",
+      "Herrschaft und rohe Macht",
+      "Polis"
+    ],
+    [
+      "Λ",
+      "Lambda",
+      "L",
+      "aufgebotenes Heer",
+      "Ares"
+    ],
+    [
+      "Μ",
+      "My",
+      "M",
+      "Schicksal und Zuteilung",
+      "Kosmos"
+    ],
+    [
+      "Ν",
+      "Ny",
+      "N",
+      "Tempel und heiliger Ort",
+      "Polis"
+    ],
+    [
+      "Ξ",
+      "Xi",
+      "Ks",
+      "Fremder und äußere Gefahr",
+      "Demos"
+    ],
+    [
+      "Ο",
+      "Omikron",
+      "O",
+      "Berg, Grenze, Unüberwindbares",
+      "Physis"
+    ],
+    [
+      "Π",
+      "Pi",
+      "P",
+      "Stadt, Schutzwall, organisiertes Leben",
+      "Polis"
+    ],
+    [
+      "Ρ",
+      "Rho",
+      "R",
+      "Strömung und Unaufhaltsames",
+      "Physis"
+    ],
+    [
+      "Σ",
+      "Sigma",
+      "S",
+      "Körperkraft und Überlegenheit",
+      "Ares"
+    ],
+    [
+      "Τ",
+      "Tau",
+      "T",
+      "Ordnung und Schlachtreihe",
+      "Polis"
+    ],
+    [
+      "Υ",
+      "Ypsilon",
+      "Y/U",
+      "Wasser, Meer und Weite",
+      "Physis"
+    ],
+    [
+      "Φ",
+      "Phi",
+      "Ph",
+      "Fackel und Signalfeuer",
+      "Ares"
+    ],
+    [
+      "Χ",
+      "Chi",
+      "Ch/Kh",
+      "Gnade und Gunst der Götter",
+      "Kosmos"
+    ],
+    [
+      "Ψ",
+      "Psi",
+      "Ps",
+      "Seele und innerer Geist",
+      "Kosmos"
+    ],
+    [
+      "Ω",
+      "Omega",
+      "Ō",
+      "Eid und bindendes Wort",
+      "Polis"
+    ]
+  ],
+  "rhemata": [
+    [
+      "Ares",
+      "Ar-",
+      "Beginn",
+      "Ursprung und Gründung"
+    ],
+    [
+      "Ares",
+      "Sthen-",
+      "Stärke",
+      "Körper, Kampfkraft, Ausdauer"
+    ],
+    [
+      "Ares",
+      "-mach-",
+      "Kampf",
+      "Ringen und direkter Konflikt"
+    ],
+    [
+      "Ares",
+      "-nik-",
+      "Sieg",
+      "Triumph und Niederwerfung"
+    ],
+    [
+      "Ares",
+      "-strat-",
+      "Heer",
+      "Feldheer und Strategie"
+    ],
+    [
+      "Ares",
+      "Dory-",
+      "Speer",
+      "gezielter Angriff"
+    ],
+    [
+      "Ares",
+      "-erg-",
+      "Tat",
+      "vollbrachtes Werk"
+    ],
+    [
+      "Ares",
+      "Oxy-",
+      "Schärfe",
+      "Schnelligkeit und Präzision"
+    ],
+    [
+      "Ares",
+      "Nyk-",
+      "Nacht",
+      "Verborgenheit und Geheimplan"
+    ],
+    [
+      "Ares",
+      "Pyro-",
+      "Feuer",
+      "Zerstörung und Reinigung"
+    ],
+    [
+      "Polis",
+      "Pol-",
+      "Kollektiv",
+      "Gemeinschaft und Mauer"
+    ],
+    [
+      "Polis",
+      "-krat-",
+      "Herrschaft",
+      "Regieren und Unterwerfen"
+    ],
+    [
+      "Polis",
+      "-nom-",
+      "Gesetz",
+      "Regel und geltende Ordnung"
+    ],
+    [
+      "Polis",
+      "-arch-",
+      "Amt",
+      "Rang und Herrschaft"
+    ],
+    [
+      "Polis",
+      "Iso-",
+      "Gleichheit",
+      "gerechtes Maß"
+    ],
+    [
+      "Polis",
+      "-phyl-",
+      "Wächter",
+      "Hüter und Wachtposten"
+    ],
+    [
+      "Polis",
+      "-krit-",
+      "Urteil",
+      "Gericht und Entscheidung"
+    ],
+    [
+      "Kosmos",
+      "Mir-",
+      "Schicksal",
+      "Bestimmung und Verhängnis"
+    ],
+    [
+      "Kosmos",
+      "-than-",
+      "Ende",
+      "Tod und letztes Urteil"
+    ],
+    [
+      "Kosmos",
+      "-the-",
+      "Göttliches",
+      "heilige Nähe"
+    ],
+    [
+      "Kosmos",
+      "-dor-",
+      "Gabe",
+      "Talent und göttliche Zuteilung"
+    ],
+    [
+      "Kosmos",
+      "Apo-",
+      "Ferne",
+      "Abkehr und Verbannung"
+    ],
+    [
+      "Kosmos",
+      "-mne-",
+      "Erinnerung",
+      "Gedenken und Nachruhm"
+    ],
+    [
+      "Kosmos",
+      "Nekro-",
+      "Totenreich",
+      "Schwelle zur Unterwelt"
+    ],
+    [
+      "Kosmos",
+      "-dox-",
+      "Ruhm",
+      "dauerhafter Glanz"
+    ],
+    [
+      "Kosmos",
+      "-phor-",
+      "Tragen",
+      "Bürde, Ehre und Botschaft"
+    ],
+    [
+      "Physis",
+      "Geo-",
+      "Erde",
+      "Boden und Heimatland"
+    ],
+    [
+      "Physis",
+      "Hydro-",
+      "Wasser",
+      "Flut und Reinigung"
+    ],
+    [
+      "Physis",
+      "-lith-",
+      "Stein",
+      "Dauer und Substanz"
+    ],
+    [
+      "Physis",
+      "Aero-",
+      "Wind",
+      "Atem und flüchtiger Geist"
+    ],
+    [
+      "Physis",
+      "-phy-",
+      "Wachstum",
+      "organische Kraft"
+    ],
+    [
+      "Demos",
+      "-nym-",
+      "Name",
+      "Identität, Ruhm oder Schande"
+    ],
+    [
+      "Demos",
+      "-gen-",
+      "Abstammung",
+      "Blutlinie und Herkunft"
+    ],
+    [
+      "Demos",
+      "-log-",
+      "Wort",
+      "Rede und Gesetz durch Sprache"
+    ],
+    [
+      "Demos",
+      "-xen-",
+      "Fremder",
+      "Gast oder äußere Gefahr"
+    ],
+    [
+      "Demos",
+      "-tim-",
+      "Ehre",
+      "Würde und Ansehen"
+    ],
+    [
+      "Demos",
+      "Demo-",
+      "Volk",
+      "Stimme und Kraft der Vielen"
+    ]
+  ],
+  "praefixe": [
+    [
+      "Amphi-",
+      "beidseitig, umfassend"
+    ],
+    [
+      "Ana-",
+      "empor, erneut"
+    ],
+    [
+      "Anti-",
+      "gegen, entgegen"
+    ],
+    [
+      "Apo-",
+      "fort, fern"
+    ],
+    [
+      "Dia-",
+      "durch, hindurch"
+    ],
+    [
+      "Epi-",
+      "auf, über"
+    ],
+    [
+      "Hyper-",
+      "übermäßig, oberhalb"
+    ],
+    [
+      "Hypo-",
+      "untergeordnet, darunter"
+    ],
+    [
+      "Kata-",
+      "herab, vollständig"
+    ],
+    [
+      "Meta-",
+      "Wandel, jenseits"
+    ],
+    [
+      "Para-",
+      "neben, abweichend"
+    ],
+    [
+      "Peri-",
+      "ringsum, schützend"
+    ]
+  ],
+  "suffixe": [
+    [
+      "-os",
+      "männlicher Träger"
+    ],
+    [
+      "-on",
+      "Werk, Ort oder neutrales Ding"
+    ],
+    [
+      "-es",
+      "Amtsträger"
+    ],
+    [
+      "-ios",
+      "Zugehöriger einer Linie"
+    ],
+    [
+      "-ides",
+      "Sohn oder Nachkomme"
+    ],
+    [
+      "-ia",
+      "weibliche Trägerin"
+    ],
+    [
+      "-eia",
+      "Zustand oder Lehre"
+    ],
+    [
+      "-is",
+      "wirkende Kraft"
+    ],
+    [
+      "-ikon",
+      "Werkzeug oder Abbild"
+    ],
+    [
+      "-ion",
+      "Institution oder Handlung"
+    ],
+    [
+      "-ikos",
+      "zugehörig, fachlich"
+    ],
+    [
+      "-archos",
+      "führender Amtsträger"
+    ]
+  ],
+  "namen_maennlich": [
+    [
+      "Aros",
+      "Ar",
+      "os",
+      "Ursprung",
+      "Träger"
+    ],
+    [
+      "Arion",
+      "Ar",
+      "ion",
+      "Ursprung",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Arides",
+      "Ar",
+      "ides",
+      "Ursprung",
+      "Nachkomme"
+    ],
+    [
+      "Ararchos",
+      "Ar",
+      "archos",
+      "Ursprung",
+      "führender Träger"
+    ],
+    [
+      "Arandros",
+      "Ar",
+      "andros",
+      "Ursprung",
+      "wehrhafter Mann"
+    ],
+    [
+      "Sthenos",
+      "Sthen",
+      "os",
+      "Stärke",
+      "Träger"
+    ],
+    [
+      "Sthenion",
+      "Sthen",
+      "ion",
+      "Stärke",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Sthenides",
+      "Sthen",
+      "ides",
+      "Stärke",
+      "Nachkomme"
+    ],
+    [
+      "Sthenarchos",
+      "Sthen",
+      "archos",
+      "Stärke",
+      "führender Träger"
+    ],
+    [
+      "Sthenandros",
+      "Sthen",
+      "andros",
+      "Stärke",
+      "wehrhafter Mann"
+    ],
+    [
+      "Machos",
+      "Mach",
+      "os",
+      "Kampf",
+      "Träger"
+    ],
+    [
+      "Machion",
+      "Mach",
+      "ion",
+      "Kampf",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Machides",
+      "Mach",
+      "ides",
+      "Kampf",
+      "Nachkomme"
+    ],
+    [
+      "Macharchos",
+      "Mach",
+      "archos",
+      "Kampf",
+      "führender Träger"
+    ],
+    [
+      "Machandros",
+      "Mach",
+      "andros",
+      "Kampf",
+      "wehrhafter Mann"
+    ],
+    [
+      "Nikos",
+      "Nik",
+      "os",
+      "Sieg",
+      "Träger"
+    ],
+    [
+      "Nikion",
+      "Nik",
+      "ion",
+      "Sieg",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Nikides",
+      "Nik",
+      "ides",
+      "Sieg",
+      "Nachkomme"
+    ],
+    [
+      "Nikarchos",
+      "Nik",
+      "archos",
+      "Sieg",
+      "führender Träger"
+    ],
+    [
+      "Nikandros",
+      "Nik",
+      "andros",
+      "Sieg",
+      "wehrhafter Mann"
+    ],
+    [
+      "Stratos",
+      "Strat",
+      "os",
+      "Heer",
+      "Träger"
+    ],
+    [
+      "Stration",
+      "Strat",
+      "ion",
+      "Heer",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Stratides",
+      "Strat",
+      "ides",
+      "Heer",
+      "Nachkomme"
+    ],
+    [
+      "Stratarchos",
+      "Strat",
+      "archos",
+      "Heer",
+      "führender Träger"
+    ],
+    [
+      "Stratandros",
+      "Strat",
+      "andros",
+      "Heer",
+      "wehrhafter Mann"
+    ],
+    [
+      "Doryos",
+      "Dory",
+      "os",
+      "Speer",
+      "Träger"
+    ],
+    [
+      "Doryion",
+      "Dory",
+      "ion",
+      "Speer",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Doryides",
+      "Dory",
+      "ides",
+      "Speer",
+      "Nachkomme"
+    ],
+    [
+      "Doryarchos",
+      "Dory",
+      "archos",
+      "Speer",
+      "führender Träger"
+    ],
+    [
+      "Doryandros",
+      "Dory",
+      "andros",
+      "Speer",
+      "wehrhafter Mann"
+    ],
+    [
+      "Ergos",
+      "Erg",
+      "os",
+      "Tat",
+      "Träger"
+    ],
+    [
+      "Ergion",
+      "Erg",
+      "ion",
+      "Tat",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Ergides",
+      "Erg",
+      "ides",
+      "Tat",
+      "Nachkomme"
+    ],
+    [
+      "Ergarchos",
+      "Erg",
+      "archos",
+      "Tat",
+      "führender Träger"
+    ],
+    [
+      "Ergandros",
+      "Erg",
+      "andros",
+      "Tat",
+      "wehrhafter Mann"
+    ],
+    [
+      "Oxyos",
+      "Oxy",
+      "os",
+      "Schärfe",
+      "Träger"
+    ],
+    [
+      "Oxyion",
+      "Oxy",
+      "ion",
+      "Schärfe",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Oxyides",
+      "Oxy",
+      "ides",
+      "Schärfe",
+      "Nachkomme"
+    ],
+    [
+      "Oxyarchos",
+      "Oxy",
+      "archos",
+      "Schärfe",
+      "führender Träger"
+    ],
+    [
+      "Oxyandros",
+      "Oxy",
+      "andros",
+      "Schärfe",
+      "wehrhafter Mann"
+    ],
+    [
+      "Nykos",
+      "Nyk",
+      "os",
+      "Nacht",
+      "Träger"
+    ],
+    [
+      "Nykion",
+      "Nyk",
+      "ion",
+      "Nacht",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Nykides",
+      "Nyk",
+      "ides",
+      "Nacht",
+      "Nachkomme"
+    ],
+    [
+      "Nykarchos",
+      "Nyk",
+      "archos",
+      "Nacht",
+      "führender Träger"
+    ],
+    [
+      "Nykandros",
+      "Nyk",
+      "andros",
+      "Nacht",
+      "wehrhafter Mann"
+    ],
+    [
+      "Pyros",
+      "Pyr",
+      "os",
+      "Feuer",
+      "Träger"
+    ],
+    [
+      "Pyrion",
+      "Pyr",
+      "ion",
+      "Feuer",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Pyrides",
+      "Pyr",
+      "ides",
+      "Feuer",
+      "Nachkomme"
+    ],
+    [
+      "Pyrarchos",
+      "Pyr",
+      "archos",
+      "Feuer",
+      "führender Träger"
+    ],
+    [
+      "Pyrandros",
+      "Pyr",
+      "andros",
+      "Feuer",
+      "wehrhafter Mann"
+    ],
+    [
+      "Polos",
+      "Pol",
+      "os",
+      "Polis",
+      "Träger"
+    ],
+    [
+      "Polion",
+      "Pol",
+      "ion",
+      "Polis",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Polides",
+      "Pol",
+      "ides",
+      "Polis",
+      "Nachkomme"
+    ],
+    [
+      "Polarchos",
+      "Pol",
+      "archos",
+      "Polis",
+      "führender Träger"
+    ],
+    [
+      "Polandros",
+      "Pol",
+      "andros",
+      "Polis",
+      "wehrhafter Mann"
+    ],
+    [
+      "Kratos",
+      "Krat",
+      "os",
+      "Herrschaft",
+      "Träger"
+    ],
+    [
+      "Kration",
+      "Krat",
+      "ion",
+      "Herrschaft",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Kratides",
+      "Krat",
+      "ides",
+      "Herrschaft",
+      "Nachkomme"
+    ],
+    [
+      "Kratarchos",
+      "Krat",
+      "archos",
+      "Herrschaft",
+      "führender Träger"
+    ],
+    [
+      "Kratandros",
+      "Krat",
+      "andros",
+      "Herrschaft",
+      "wehrhafter Mann"
+    ],
+    [
+      "Nomos",
+      "Nom",
+      "os",
+      "Gesetz",
+      "Träger"
+    ],
+    [
+      "Nomion",
+      "Nom",
+      "ion",
+      "Gesetz",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Nomides",
+      "Nom",
+      "ides",
+      "Gesetz",
+      "Nachkomme"
+    ],
+    [
+      "Nomarchos",
+      "Nom",
+      "archos",
+      "Gesetz",
+      "führender Träger"
+    ],
+    [
+      "Nomandros",
+      "Nom",
+      "andros",
+      "Gesetz",
+      "wehrhafter Mann"
+    ],
+    [
+      "Archos",
+      "Arch",
+      "os",
+      "Amt",
+      "Träger"
+    ],
+    [
+      "Archion",
+      "Arch",
+      "ion",
+      "Amt",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Archides",
+      "Arch",
+      "ides",
+      "Amt",
+      "Nachkomme"
+    ],
+    [
+      "Archarchos",
+      "Arch",
+      "archos",
+      "Amt",
+      "führender Träger"
+    ],
+    [
+      "Archandros",
+      "Arch",
+      "andros",
+      "Amt",
+      "wehrhafter Mann"
+    ],
+    [
+      "Isoos",
+      "Iso",
+      "os",
+      "Gleichheit",
+      "Träger"
+    ],
+    [
+      "Isoion",
+      "Iso",
+      "ion",
+      "Gleichheit",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Isoides",
+      "Iso",
+      "ides",
+      "Gleichheit",
+      "Nachkomme"
+    ],
+    [
+      "Isoarchos",
+      "Iso",
+      "archos",
+      "Gleichheit",
+      "führender Träger"
+    ],
+    [
+      "Isoandros",
+      "Iso",
+      "andros",
+      "Gleichheit",
+      "wehrhafter Mann"
+    ],
+    [
+      "Phylos",
+      "Phyl",
+      "os",
+      "Wacht",
+      "Träger"
+    ],
+    [
+      "Phylion",
+      "Phyl",
+      "ion",
+      "Wacht",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Phylides",
+      "Phyl",
+      "ides",
+      "Wacht",
+      "Nachkomme"
+    ],
+    [
+      "Phylarchos",
+      "Phyl",
+      "archos",
+      "Wacht",
+      "führender Träger"
+    ],
+    [
+      "Phylandros",
+      "Phyl",
+      "andros",
+      "Wacht",
+      "wehrhafter Mann"
+    ],
+    [
+      "Kritos",
+      "Krit",
+      "os",
+      "Urteil",
+      "Träger"
+    ],
+    [
+      "Krition",
+      "Krit",
+      "ion",
+      "Urteil",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Kritides",
+      "Krit",
+      "ides",
+      "Urteil",
+      "Nachkomme"
+    ],
+    [
+      "Kritarchos",
+      "Krit",
+      "archos",
+      "Urteil",
+      "führender Träger"
+    ],
+    [
+      "Kritandros",
+      "Krit",
+      "andros",
+      "Urteil",
+      "wehrhafter Mann"
+    ],
+    [
+      "Miros",
+      "Mir",
+      "os",
+      "Schicksal",
+      "Träger"
+    ],
+    [
+      "Mirion",
+      "Mir",
+      "ion",
+      "Schicksal",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Mirides",
+      "Mir",
+      "ides",
+      "Schicksal",
+      "Nachkomme"
+    ],
+    [
+      "Mirarchos",
+      "Mir",
+      "archos",
+      "Schicksal",
+      "führender Träger"
+    ],
+    [
+      "Mirandros",
+      "Mir",
+      "andros",
+      "Schicksal",
+      "wehrhafter Mann"
+    ],
+    [
+      "Theos",
+      "The",
+      "os",
+      "Göttliches",
+      "Träger"
+    ],
+    [
+      "Theion",
+      "The",
+      "ion",
+      "Göttliches",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Theides",
+      "The",
+      "ides",
+      "Göttliches",
+      "Nachkomme"
+    ],
+    [
+      "Thearchos",
+      "The",
+      "archos",
+      "Göttliches",
+      "führender Träger"
+    ],
+    [
+      "Theandros",
+      "The",
+      "andros",
+      "Göttliches",
+      "wehrhafter Mann"
+    ],
+    [
+      "Doros",
+      "Dor",
+      "os",
+      "Gabe",
+      "Träger"
+    ],
+    [
+      "Dorion",
+      "Dor",
+      "ion",
+      "Gabe",
+      "Sohn der Bedeutung"
+    ],
+    [
+      "Dorides",
+      "Dor",
+      "ides",
+      "Gabe",
+      "Nachkomme"
+    ],
+    [
+      "Dorarchos",
+      "Dor",
+      "archos",
+      "Gabe",
+      "führender Träger"
+    ],
+    [
+      "Dorandros",
+      "Dor",
+      "andros",
+      "Gabe",
+      "wehrhafter Mann"
+    ]
+  ],
+  "namen_weiblich": [
+    [
+      "Aria",
+      "Ar",
+      "ia",
+      "Ursprung",
+      "Trägerin"
+    ],
+    [
+      "Areia",
+      "Ar",
+      "eia",
+      "Ursprung",
+      "Verkörperung"
+    ],
+    [
+      "Aris",
+      "Ar",
+      "is",
+      "Ursprung",
+      "wirkende Kraft"
+    ],
+    [
+      "Arandra",
+      "Ar",
+      "andra",
+      "Ursprung",
+      "wehrhafte Frau"
+    ],
+    [
+      "Arthea",
+      "Ar",
+      "thea",
+      "Ursprung",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Sthenia",
+      "Sthen",
+      "ia",
+      "Stärke",
+      "Trägerin"
+    ],
+    [
+      "Stheneia",
+      "Sthen",
+      "eia",
+      "Stärke",
+      "Verkörperung"
+    ],
+    [
+      "Sthenis",
+      "Sthen",
+      "is",
+      "Stärke",
+      "wirkende Kraft"
+    ],
+    [
+      "Sthenandra",
+      "Sthen",
+      "andra",
+      "Stärke",
+      "wehrhafte Frau"
+    ],
+    [
+      "Sthenthea",
+      "Sthen",
+      "thea",
+      "Stärke",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Machia",
+      "Mach",
+      "ia",
+      "Kampf",
+      "Trägerin"
+    ],
+    [
+      "Macheia",
+      "Mach",
+      "eia",
+      "Kampf",
+      "Verkörperung"
+    ],
+    [
+      "Machis",
+      "Mach",
+      "is",
+      "Kampf",
+      "wirkende Kraft"
+    ],
+    [
+      "Machandra",
+      "Mach",
+      "andra",
+      "Kampf",
+      "wehrhafte Frau"
+    ],
+    [
+      "Machthea",
+      "Mach",
+      "thea",
+      "Kampf",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Nikia",
+      "Nik",
+      "ia",
+      "Sieg",
+      "Trägerin"
+    ],
+    [
+      "Nikeia",
+      "Nik",
+      "eia",
+      "Sieg",
+      "Verkörperung"
+    ],
+    [
+      "Nikis",
+      "Nik",
+      "is",
+      "Sieg",
+      "wirkende Kraft"
+    ],
+    [
+      "Nikandra",
+      "Nik",
+      "andra",
+      "Sieg",
+      "wehrhafte Frau"
+    ],
+    [
+      "Nikthea",
+      "Nik",
+      "thea",
+      "Sieg",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Stratia",
+      "Strat",
+      "ia",
+      "Heer",
+      "Trägerin"
+    ],
+    [
+      "Strateia",
+      "Strat",
+      "eia",
+      "Heer",
+      "Verkörperung"
+    ],
+    [
+      "Stratis",
+      "Strat",
+      "is",
+      "Heer",
+      "wirkende Kraft"
+    ],
+    [
+      "Stratandra",
+      "Strat",
+      "andra",
+      "Heer",
+      "wehrhafte Frau"
+    ],
+    [
+      "Stratthea",
+      "Strat",
+      "thea",
+      "Heer",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Doryia",
+      "Dory",
+      "ia",
+      "Speer",
+      "Trägerin"
+    ],
+    [
+      "Doryeia",
+      "Dory",
+      "eia",
+      "Speer",
+      "Verkörperung"
+    ],
+    [
+      "Doryis",
+      "Dory",
+      "is",
+      "Speer",
+      "wirkende Kraft"
+    ],
+    [
+      "Doryandra",
+      "Dory",
+      "andra",
+      "Speer",
+      "wehrhafte Frau"
+    ],
+    [
+      "Dorythea",
+      "Dory",
+      "thea",
+      "Speer",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Ergia",
+      "Erg",
+      "ia",
+      "Tat",
+      "Trägerin"
+    ],
+    [
+      "Ergeia",
+      "Erg",
+      "eia",
+      "Tat",
+      "Verkörperung"
+    ],
+    [
+      "Ergis",
+      "Erg",
+      "is",
+      "Tat",
+      "wirkende Kraft"
+    ],
+    [
+      "Ergandra",
+      "Erg",
+      "andra",
+      "Tat",
+      "wehrhafte Frau"
+    ],
+    [
+      "Ergthea",
+      "Erg",
+      "thea",
+      "Tat",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Oxyia",
+      "Oxy",
+      "ia",
+      "Schärfe",
+      "Trägerin"
+    ],
+    [
+      "Oxyeia",
+      "Oxy",
+      "eia",
+      "Schärfe",
+      "Verkörperung"
+    ],
+    [
+      "Oxyis",
+      "Oxy",
+      "is",
+      "Schärfe",
+      "wirkende Kraft"
+    ],
+    [
+      "Oxyandra",
+      "Oxy",
+      "andra",
+      "Schärfe",
+      "wehrhafte Frau"
+    ],
+    [
+      "Oxythea",
+      "Oxy",
+      "thea",
+      "Schärfe",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Nykia",
+      "Nyk",
+      "ia",
+      "Nacht",
+      "Trägerin"
+    ],
+    [
+      "Nykeia",
+      "Nyk",
+      "eia",
+      "Nacht",
+      "Verkörperung"
+    ],
+    [
+      "Nykis",
+      "Nyk",
+      "is",
+      "Nacht",
+      "wirkende Kraft"
+    ],
+    [
+      "Nykandra",
+      "Nyk",
+      "andra",
+      "Nacht",
+      "wehrhafte Frau"
+    ],
+    [
+      "Nykthea",
+      "Nyk",
+      "thea",
+      "Nacht",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Pyria",
+      "Pyr",
+      "ia",
+      "Feuer",
+      "Trägerin"
+    ],
+    [
+      "Pyreia",
+      "Pyr",
+      "eia",
+      "Feuer",
+      "Verkörperung"
+    ],
+    [
+      "Pyris",
+      "Pyr",
+      "is",
+      "Feuer",
+      "wirkende Kraft"
+    ],
+    [
+      "Pyrandra",
+      "Pyr",
+      "andra",
+      "Feuer",
+      "wehrhafte Frau"
+    ],
+    [
+      "Pyrthea",
+      "Pyr",
+      "thea",
+      "Feuer",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Polia",
+      "Pol",
+      "ia",
+      "Polis",
+      "Trägerin"
+    ],
+    [
+      "Poleia",
+      "Pol",
+      "eia",
+      "Polis",
+      "Verkörperung"
+    ],
+    [
+      "Polis",
+      "Pol",
+      "is",
+      "Polis",
+      "wirkende Kraft"
+    ],
+    [
+      "Polandra",
+      "Pol",
+      "andra",
+      "Polis",
+      "wehrhafte Frau"
+    ],
+    [
+      "Polthea",
+      "Pol",
+      "thea",
+      "Polis",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Kratia",
+      "Krat",
+      "ia",
+      "Herrschaft",
+      "Trägerin"
+    ],
+    [
+      "Krateia",
+      "Krat",
+      "eia",
+      "Herrschaft",
+      "Verkörperung"
+    ],
+    [
+      "Kratis",
+      "Krat",
+      "is",
+      "Herrschaft",
+      "wirkende Kraft"
+    ],
+    [
+      "Kratandra",
+      "Krat",
+      "andra",
+      "Herrschaft",
+      "wehrhafte Frau"
+    ],
+    [
+      "Kratthea",
+      "Krat",
+      "thea",
+      "Herrschaft",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Nomia",
+      "Nom",
+      "ia",
+      "Gesetz",
+      "Trägerin"
+    ],
+    [
+      "Nomeia",
+      "Nom",
+      "eia",
+      "Gesetz",
+      "Verkörperung"
+    ],
+    [
+      "Nomis",
+      "Nom",
+      "is",
+      "Gesetz",
+      "wirkende Kraft"
+    ],
+    [
+      "Nomandra",
+      "Nom",
+      "andra",
+      "Gesetz",
+      "wehrhafte Frau"
+    ],
+    [
+      "Nomthea",
+      "Nom",
+      "thea",
+      "Gesetz",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Archia",
+      "Arch",
+      "ia",
+      "Amt",
+      "Trägerin"
+    ],
+    [
+      "Archeia",
+      "Arch",
+      "eia",
+      "Amt",
+      "Verkörperung"
+    ],
+    [
+      "Archis",
+      "Arch",
+      "is",
+      "Amt",
+      "wirkende Kraft"
+    ],
+    [
+      "Archandra",
+      "Arch",
+      "andra",
+      "Amt",
+      "wehrhafte Frau"
+    ],
+    [
+      "Archthea",
+      "Arch",
+      "thea",
+      "Amt",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Isoia",
+      "Iso",
+      "ia",
+      "Gleichheit",
+      "Trägerin"
+    ],
+    [
+      "Isoeia",
+      "Iso",
+      "eia",
+      "Gleichheit",
+      "Verkörperung"
+    ],
+    [
+      "Isois",
+      "Iso",
+      "is",
+      "Gleichheit",
+      "wirkende Kraft"
+    ],
+    [
+      "Isoandra",
+      "Iso",
+      "andra",
+      "Gleichheit",
+      "wehrhafte Frau"
+    ],
+    [
+      "Isothea",
+      "Iso",
+      "thea",
+      "Gleichheit",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Phylia",
+      "Phyl",
+      "ia",
+      "Wacht",
+      "Trägerin"
+    ],
+    [
+      "Phyleia",
+      "Phyl",
+      "eia",
+      "Wacht",
+      "Verkörperung"
+    ],
+    [
+      "Phylis",
+      "Phyl",
+      "is",
+      "Wacht",
+      "wirkende Kraft"
+    ],
+    [
+      "Phylandra",
+      "Phyl",
+      "andra",
+      "Wacht",
+      "wehrhafte Frau"
+    ],
+    [
+      "Phylthea",
+      "Phyl",
+      "thea",
+      "Wacht",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Kritia",
+      "Krit",
+      "ia",
+      "Urteil",
+      "Trägerin"
+    ],
+    [
+      "Kriteia",
+      "Krit",
+      "eia",
+      "Urteil",
+      "Verkörperung"
+    ],
+    [
+      "Kritis",
+      "Krit",
+      "is",
+      "Urteil",
+      "wirkende Kraft"
+    ],
+    [
+      "Kritandra",
+      "Krit",
+      "andra",
+      "Urteil",
+      "wehrhafte Frau"
+    ],
+    [
+      "Kritthea",
+      "Krit",
+      "thea",
+      "Urteil",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Miria",
+      "Mir",
+      "ia",
+      "Schicksal",
+      "Trägerin"
+    ],
+    [
+      "Mireia",
+      "Mir",
+      "eia",
+      "Schicksal",
+      "Verkörperung"
+    ],
+    [
+      "Miris",
+      "Mir",
+      "is",
+      "Schicksal",
+      "wirkende Kraft"
+    ],
+    [
+      "Mirandra",
+      "Mir",
+      "andra",
+      "Schicksal",
+      "wehrhafte Frau"
+    ],
+    [
+      "Mirthea",
+      "Mir",
+      "thea",
+      "Schicksal",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Theia",
+      "The",
+      "ia",
+      "Göttliches",
+      "Trägerin"
+    ],
+    [
+      "Theeia",
+      "The",
+      "eia",
+      "Göttliches",
+      "Verkörperung"
+    ],
+    [
+      "Theis",
+      "The",
+      "is",
+      "Göttliches",
+      "wirkende Kraft"
+    ],
+    [
+      "Theandra",
+      "The",
+      "andra",
+      "Göttliches",
+      "wehrhafte Frau"
+    ],
+    [
+      "Thethea",
+      "The",
+      "thea",
+      "Göttliches",
+      "göttlich berufene Frau"
+    ],
+    [
+      "Doria",
+      "Dor",
+      "ia",
+      "Gabe",
+      "Trägerin"
+    ],
+    [
+      "Doreia",
+      "Dor",
+      "eia",
+      "Gabe",
+      "Verkörperung"
+    ],
+    [
+      "Doris",
+      "Dor",
+      "is",
+      "Gabe",
+      "wirkende Kraft"
+    ],
+    [
+      "Dorandra",
+      "Dor",
+      "andra",
+      "Gabe",
+      "wehrhafte Frau"
+    ],
+    [
+      "Dorthea",
+      "Dor",
+      "thea",
+      "Gabe",
+      "göttlich berufene Frau"
+    ]
+  ],
+  "lexikon": [
+    [
+      "Polis und Recht",
+      "Polis",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Stadtstaat"
+    ],
+    [
+      "Polis und Recht",
+      "Nomos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Gesetz"
+    ],
+    [
+      "Polis und Recht",
+      "Archon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Amtsherr"
+    ],
+    [
+      "Polis und Recht",
+      "Bouleion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Ratshaus"
+    ],
+    [
+      "Polis und Recht",
+      "Demosia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Bürgerschaft"
+    ],
+    [
+      "Polis und Recht",
+      "Kriterion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Gericht"
+    ],
+    [
+      "Polis und Recht",
+      "Isnomia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Rechtsgleichheit"
+    ],
+    [
+      "Polis und Recht",
+      "Nomophylax",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Gesetzeshüter"
+    ],
+    [
+      "Polis und Recht",
+      "Polikrat",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Stadtherrscher"
+    ],
+    [
+      "Polis und Recht",
+      "Omegion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Eidesurkunde"
+    ],
+    [
+      "Krieg",
+      "Strategos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Heerführer"
+    ],
+    [
+      "Krieg",
+      "Sthenmachos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Schwerkrieger"
+    ],
+    [
+      "Krieg",
+      "Doryphylax",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Speerwächter"
+    ],
+    [
+      "Krieg",
+      "Nikator",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Sieger"
+    ],
+    [
+      "Krieg",
+      "Taxis",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Schlachtreihe"
+    ],
+    [
+      "Krieg",
+      "Phalangion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Phalanxverband"
+    ],
+    [
+      "Krieg",
+      "Oxybelos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Schnellgeschoss"
+    ],
+    [
+      "Krieg",
+      "Pyromachos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Feuerkämpfer"
+    ],
+    [
+      "Krieg",
+      "Nykstratos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Nachtaufgebot"
+    ],
+    [
+      "Krieg",
+      "Ergdoxa",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Kriegsruhm"
+    ],
+    [
+      "Kult",
+      "Theion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Heiligtum"
+    ],
+    [
+      "Kult",
+      "Theophoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Götterträger"
+    ],
+    [
+      "Kult",
+      "Moirion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Schicksalsspruch"
+    ],
+    [
+      "Kult",
+      "Nekrologos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Totenrede"
+    ],
+    [
+      "Kult",
+      "Mnemeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Gedenkstätte"
+    ],
+    [
+      "Kult",
+      "Chareia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Göttergnade"
+    ],
+    [
+      "Kult",
+      "Psychion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Seelensiegel"
+    ],
+    [
+      "Kult",
+      "Thanatos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Tod"
+    ],
+    [
+      "Kult",
+      "Apotheia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Entrückung"
+    ],
+    [
+      "Kult",
+      "Hieronomos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "heiliges Gesetz"
+    ],
+    [
+      "Natur",
+      "Geion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Ackerland"
+    ],
+    [
+      "Natur",
+      "Hydrion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Wasserbecken"
+    ],
+    [
+      "Natur",
+      "Lithos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Stein"
+    ],
+    [
+      "Natur",
+      "Aerion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Wind"
+    ],
+    [
+      "Natur",
+      "Physis",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Naturkraft"
+    ],
+    [
+      "Natur",
+      "Oros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Berg"
+    ],
+    [
+      "Natur",
+      "Rhoea",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Flusslauf"
+    ],
+    [
+      "Natur",
+      "Pelagion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "offenes Meer"
+    ],
+    [
+      "Natur",
+      "Pyrion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Herdfeuer"
+    ],
+    [
+      "Natur",
+      "Helion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Sonnenlicht"
+    ],
+    [
+      "Gesellschaft",
+      "Onyma",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Name"
+    ],
+    [
+      "Gesellschaft",
+      "Geneia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Abstammung"
+    ],
+    [
+      "Gesellschaft",
+      "Logos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "öffentliche Rede"
+    ],
+    [
+      "Gesellschaft",
+      "Xenos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Fremder oder Gast"
+    ],
+    [
+      "Gesellschaft",
+      "Timeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Ehrenrang"
+    ],
+    [
+      "Gesellschaft",
+      "Demarchos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Volksvorsteher"
+    ],
+    [
+      "Gesellschaft",
+      "Oikia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Haushalt"
+    ],
+    [
+      "Gesellschaft",
+      "Agora",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Marktplatz"
+    ],
+    [
+      "Gesellschaft",
+      "Tekton",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Handwerker"
+    ],
+    [
+      "Gesellschaft",
+      "Emporos",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Händler"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Arikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Ursprung und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Arion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Ursprung und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Areia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Ursprung und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Arphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Ursprung und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Arlogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Ursprung und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Sthenikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Kraft und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Sthenion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Kraft und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Stheneia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Kraft und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Sthenphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Kraft und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Sthenlogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Kraft und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nikikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Sieg und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nikion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Sieg und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nikeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Sieg und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nikphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Sieg und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Niklogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Sieg und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Stratikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Heer und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Stration",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Heer und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Strateia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Heer und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Stratphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Heer und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Stratlogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Heer und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Doryikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Speer und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Doryion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Speer und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Doryeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Speer und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Doryphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Speer und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Dorylogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Speer und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Polikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Stadt und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Polion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Stadt und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Poleia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Stadt und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Polphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Stadt und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Pollogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Stadt und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nomikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gesetz und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nomion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gesetz und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nomeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gesetz und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nomphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gesetz und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Nomlogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gesetz und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Isoikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gleichmaß und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Isoion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gleichmaß und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Isoeia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gleichmaß und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Isophoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gleichmaß und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Isologion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Gleichmaß und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Phylikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Wacht und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Phylion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Wacht und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Phyleia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Wacht und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Phylphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Wacht und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Phyllogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Wacht und Spruch"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Mirikon",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Schicksal und Zeichen"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Mirion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Schicksal und Institution"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Mireia",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Schicksal und Lehre"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Mirphoros",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Schicksal und Träger"
+    ],
+    [
+      "Gebildete Begriffe",
+      "Mirlogion",
+      "Substantiv",
+      "Rhemata-Kompositum",
+      "Verbindung aus Schicksal und Spruch"
+    ]
+  ]
+}

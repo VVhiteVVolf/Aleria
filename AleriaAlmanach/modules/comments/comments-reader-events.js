@@ -11,10 +11,20 @@ function toggleAnimalCommentReveal(trigger) {
   trigger.setAttribute('aria-expanded', expanded ? 'false' : 'true');
 }
 
+function toggleCommentLanguageReveal(trigger) {
+  const expanded = trigger.getAttribute('aria-expanded') === 'true';
+  trigger.classList.toggle('revealed', !expanded);
+  trigger.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+}
+
 function handleCommentReaderClick(event) {
-  const trigger = event.target?.closest?.('[data-action="toggle-animal-comment"]');
+  const trigger = event.target?.closest?.('[data-action="toggle-animal-comment"], [data-action="toggle-comment-language"]');
   if (!trigger) return;
   event.preventDefault();
+  if (trigger.dataset.action === 'toggle-comment-language') {
+    toggleCommentLanguageReveal(trigger);
+    return;
+  }
   toggleAnimalCommentReveal(trigger);
 }
 

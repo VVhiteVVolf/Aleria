@@ -7,6 +7,7 @@ const COMMENT_KIND_LABELS = {
   whisper: 'Zu Flüstern',
   shout: 'Rufen',
   animal: 'Tiersprache',
+  foreign: 'Fremdsprache',
   song: 'Gesang',
   spell: 'Zauberformel',
   madness: 'Wahnsinn',
@@ -27,6 +28,7 @@ const COMMENT_KIND_ICONS = {
   whisper: '../IconOrdner/Buttom Icons/Flüstern.PNG',
   shout: '../IconOrdner/Buttom Icons/Rufen.PNG',
   animal: '../IconOrdner/Buttom Icons/Tiersprache.PNG',
+  foreign: '../IconOrdner/Buttom Icons/Rede.PNG',
   song: '../IconOrdner/Buttom Icons/Singen.PNG',
   spell: '../IconOrdner/Buttom Icons/Zaubern.PNG',
   madness: '../IconOrdner/Buttom Icons/Wahn.PNG',
@@ -45,6 +47,9 @@ const COMMENT_KIND_ALIASES = {
   tiersprache: 'animal',
   tier: 'animal',
   animal: 'animal',
+  fremdsprache: 'foreign',
+  fremd: 'foreign',
+  foreign: 'foreign',
   gesang: 'song',
   singen: 'song',
   zauber: 'spell',
@@ -88,7 +93,7 @@ function getCommentKindIconMarkup(kind, className = 'comment-kind-icon') {
 }
 
 function commentKindUsesQuoteMark(kind) {
-  return ['speech', 'shout', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
+  return ['speech', 'foreign', 'shout', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
 
 function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
@@ -229,8 +234,8 @@ function renderCommentBubble(c, idx) {
       : '';
     const textMarkup = commentKind === 'animal'
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
-      : commentKind === 'spell'
-        ? buildSpellCommentTextMarkup(part.text, c.spellFont)
+      : commentKindUsesLanguage(commentKind)
+        ? buildCommentLanguageTextMarkup(part.text, c, commentKind, commentId, partIdx)
         : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
 
     return `
@@ -241,7 +246,7 @@ function renderCommentBubble(c, idx) {
             <button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
             ${(c.charTitle && !isSecretAction) ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
-          <div class="comment-body comment-kind-${commentKind}"${commentKind === 'spell' ? ` data-spell-font="${normalizeCommentSpellFont(c.spellFont)}"` : ''}>
+          <div class="comment-body comment-kind-${commentKind}"${getCommentLanguageBubbleAttributes(c, commentKind)}>
             <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
             ${commentKindUsesQuoteMark(commentKind) ? '<span class="comment-quote-mark">"</span>' : ''}${textMarkup}
             ${actions}

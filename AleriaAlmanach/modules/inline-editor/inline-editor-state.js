@@ -31,6 +31,10 @@ function captureInlinePreviewRuntimeState(root = document) {
       tab: Number(page.querySelector('.map-template-tab.active')?.dataset.mapTemplateTab || 0),
       sidebarCollapsed: page.classList.contains('sidebar-collapsed')
     })),
+    languages: Array.from(scope.querySelectorAll('.language-page[data-language-page]')).map((page, index) => ({
+      key: page.dataset.languagePage || String(index),
+      layer: Number(page.querySelector('.language-layer-tab.active')?.dataset.languageLayerTab || 0)
+    })),
     hierarchies: Array.from(scope.querySelectorAll('.hierarchy-page')).map((page, index) => {
       const viewport = page.querySelector('.hierarchy-chart-viewport');
       return {
@@ -92,6 +96,14 @@ function restoreInlinePreviewRuntimeState(state, root = document) {
     if (!target) return;
     if (typeof setMapTemplateActiveTab === 'function') setMapTemplateActiveTab(target, saved.tab || 0);
     target.classList.toggle('sidebar-collapsed', !!saved.sidebarCollapsed);
+  });
+
+  (state.languages || []).forEach((saved, index) => {
+    const page = saved.key
+      ? scope.querySelector(`.language-page[data-language-page="${inlineEditorCssEscape(saved.key)}"]`)
+      : null;
+    const target = page || scope.querySelectorAll('.language-page[data-language-page]')[index];
+    if (target && typeof setLanguageActiveLayer === 'function') setLanguageActiveLayer(target, saved.layer || 0);
   });
 
   (state.hierarchies || []).forEach(saved => {

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048">
+  <defs>
+    <filter id="shadow" x="-35%" y="-35%" width="180%" height="190%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="b"/>
+      <feOffset in="b" dx="4" dy="7" result="o"/>
+      <feFlood flood-color="#000000" flood-opacity=".24" result="c"/>
+      <feComposite in="c" in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22282a"/>
+      <stop offset=".55" stop-color="#4d5658"/>
+      <stop offset="1" stop-color="#171b1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="2048" height="2048" fill="#eee9df"/>
+  <text x="1024" y="82" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="54" font-weight="800" letter-spacing="10" fill="#2b3032">KARNRITH HOCHSCHNITT</text>
+  <text x="1024" y="127" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="5" fill="#8b5b34">ZWERGISCH-MONUMENTALE NEUFASSUNG · VERSION 2.000</text>
+  <line x1="120" y1="166" x2="1928" y2="166" stroke="#8b5b34" stroke-width="3"/>
+  <g>
+    <path d="M54 135V825L27 837L0 825V135L27 123ZM14 716 274 546 297 558 300 584 40 754 17 742ZM13 426 213 281 237 293 241 319 41 464 17 452ZM41 117 186 227 182 252 158 263 13 153 17 128Z" transform="translate(197.75 427.48) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="224.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">A · Ard</text>
+    <text x="224.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F1 · ERDE · STOFF · GRUND</text>
+  </g>
+  <line x1="384" y1="210" x2="384" y2="527" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M50 124 360 814 340 836H310L0 146L20 124ZM229 590 369 510 390 524 391 550 251 630 230 616ZM153 435 308 345 330 359 332 385 177 475 155 461ZM78 276 218 186 240 199 242 224 102 314 80 301Z" transform="translate(509.79 428.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="544.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">K · Karn</text>
+    <text x="544.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F2 · STEIN · FORM · DAUER</text>
+  </g>
+  <line x1="704" y1="210" x2="704" y2="527" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M219 135V825L191 837L163 825V135L191 123ZM180 725 0 625 1 599 22 585 202 685 201 711ZM202 540 372 635 371 661 350 675 180 580 181 554ZM180 310 25 225V199L47 185L202 270V296ZM167 455 191 427 215 455 191 483Z" transform="translate(831.45 428.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="864.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">G · Gor</text>
+    <text x="864.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F3 · ERZ · METALL · WERT</text>
+  </g>
+  <line x1="1024" y1="210" x2="1024" y2="527" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M50 139 345 804 325 826H295L0 161L20 139ZM307 834 122 709 125 683 148 671 333 796 330 822ZM193 536 368 426 390 439 392 464 217 574 195 561ZM112 366 272 261 295 273 298 299 138 404 115 392Z" transform="translate(1149.70 429.14) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1184.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">F · Faurn</text>
+    <text x="1184.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F4 · FEUER · HITZE · SCHMIEDE</text>
+  </g>
+  <line x1="1344" y1="210" x2="1344" y2="527" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M0 772 190 542 219 551 232 578 42 808 13 799ZM383 805 193 575 203 551 229 545 419 775 409 799ZM188 560V135L211 123L234 135V560L211 572ZM199 330 354 240 376 254 378 280 223 370 201 356Z" transform="translate(1467.34 425.46) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1504.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">U · Urd</text>
+    <text x="1504.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F5 · WASSER · MASSE · FÜLLE</text>
+  </g>
+  <line x1="1664" y1="210" x2="1664" y2="527" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M200 135V645L172 657L144 645V135L172 123ZM189 660 34 835 9 829 0 805 155 630 180 636ZM189 630 344 805 335 829 310 835 155 660 164 636ZM183 410 383 515V541L361 555L161 450V424ZM162 224 312 149 333 165 332 191 182 266 161 250Z" transform="translate(1790.49 427.82) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1824.0" y="460" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">V · Veth</text>
+    <text x="1824.0" y="492" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">F6 · LUFT · WETTER · BEWEGUNG</text>
+  </g>
+  <g>
+    <path d="M44 132 349 482 336 509 307 518 2 168 15 141ZM345 516 40 831 15 824 6 799 311 484 336 491ZM46 150V815L23 827L0 815V150L23 138Z" transform="translate(193.46 776.26) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="224.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">O · Orn</text>
+    <text x="224.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R1 · GANZES · AMT · TRÄGER</text>
+  </g>
+  <line x1="384" y1="558" x2="384" y2="875" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M54 135V825L27 837L0 825V135L27 123ZM18 724 298 599 318 615 316 641 36 766 16 750ZM17 499 262 384 283 400 282 426 37 541 16 525ZM17 275 222 170 243 185 242 210 37 315 16 300Z" transform="translate(516.17 776.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="544.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">D · Dorn</text>
+    <text x="544.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R2 · GRENZE · MAUER · TRENNUNG</text>
+  </g>
+  <line x1="704" y1="558" x2="704" y2="875" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M54 135V825L27 837L0 825V135L27 123ZM15 805 295 640 317 654 319 680 39 845 17 831ZM295 679 15 499 17 474 39 461 319 641 317 666ZM14 461 244 306 267 318 270 344 40 499 17 487Z" transform="translate(836.09 776.70) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="864.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">H · Hald</text>
+    <text x="864.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R3 · HAUS · HALT · OBHUT</text>
+  </g>
+  <line x1="1024" y1="558" x2="1024" y2="875" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M54 135V825L27 837L0 825V135L27 123ZM360 135V825L337 837L314 825V135L337 123ZM15 670 325 485 347 499 349 525 39 710 17 696ZM39 265 349 450 347 476 325 490 15 305 17 279Z" transform="translate(1152.50 776.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1184.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">L · Lann</text>
+    <text x="1184.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R4 · LAND · FELD · GEBIET</text>
+  </g>
+  <line x1="1344" y1="558" x2="1344" y2="875" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M12 708H312L324 735L312 762H12L0 735ZM296 751 121 571 129 546 153 539 328 719 320 744ZM121 539 321 344 346 352 353 376 153 571 128 563ZM337 383H37L25 360L37 337H337L349 360ZM114 555V135L137 123L160 135V555L137 567Z" transform="translate(1473.11 769.44) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1504.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">T · Targ</text>
+    <text x="1504.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R5 · WEG · RICHTUNG · REISE</text>
+  </g>
+  <line x1="1664" y1="558" x2="1664" y2="875" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M303 135V555L275 567L247 555V135L275 123ZM293 569 103 819 78 815 67 791 257 541 282 545ZM293 541 483 791 472 815 447 819 257 569 268 545ZM65 816 0 701 14 680 40 679 105 794 91 815ZM445 794 510 679 536 680 550 701 485 816 459 815Z" transform="translate(1775.88 774.42) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1824.0" y="808" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">W · Warg</text>
+    <text x="1824.0" y="840" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">R6 · TIER · WILDNIS · HERDE</text>
+  </g>
+  <g>
+    <path d="M240 135V825L212 837L184 825V135L212 123ZM224 705 24 830 2 816 0 790 200 665 222 679ZM224 665 424 790 422 816 400 830 200 705 202 679ZM198 323 33 198 37 173 61 162 226 287 222 312ZM198 287 363 162 387 173 391 198 226 323 202 312Z" transform="translate(186.90 1124.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="224.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">B · Bram</text>
+    <text x="224.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B1 · LEIB · FLEISCH · GEWICHT</text>
+  </g>
+  <line x1="384" y1="906" x2="384" y2="1223" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M54 135V825L27 837L0 825V135L27 123ZM10 809 345 454 370 461 379 486 44 841 19 834ZM346 486 11 151 19 127 43 119 378 454 370 478ZM385 135V825L362 837L339 825V135L362 123Z" transform="translate(510.31 1124.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="544.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">M · Morn</text>
+    <text x="544.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B2 · MENSCH · VOLK · ARBEIT</text>
+  </g>
+  <line x1="704" y1="906" x2="704" y2="1223" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M50 125 335 815 315 836 285 835 0 145 20 124ZM146 370 341 480 340 506 319 520 124 410 125 384ZM206 515 391 615V641L369 655L184 555V529ZM266 655 431 750 430 776 409 790 244 695 245 669Z" transform="translate(826.29 1124.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="864.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">N · Nair</text>
+    <text x="864.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B3 · ATEM · LEBEN · STIMME</text>
+  </g>
+  <line x1="1024" y1="906" x2="1024" y2="1223" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M48 132 418 802 400 826 370 828 0 158 18 134ZM414 156 44 826H18L4 804L374 134H400ZM232 300V665L209 677L186 665V300L209 288ZM54 457H364L376 480L364 503H54L42 480Z" transform="translate(1147.42 1124.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1184.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">R · Rann</text>
+    <text x="1184.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B4 · SIPPE · BUND · VERSAMMLUNG</text>
+  </g>
+  <line x1="1344" y1="906" x2="1344" y2="1223" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M199 175V675L171 687L143 675V175L171 163ZM187 692 32 837 7 828 0 803 155 658 180 667ZM187 658 342 803 335 828 310 837 155 692 162 667ZM184 194 39 299 16 287 13 261 158 156 181 168ZM184 156 329 261 326 287 303 299 158 194 161 168ZM123 120 171 65 219 120 171 175ZM171 149 193 120 171 91 149 120Z" transform="translate(1474.08 1118.92) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1504.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">Y · Yrn</text>
+    <text x="1504.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B5 · AHNE · SAAT · FORTGANG</text>
+  </g>
+  <line x1="1664" y1="906" x2="1664" y2="1223" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M12 762H422L434 790L422 818H12L0 790ZM64 790V430L87 418L110 430V790L87 802ZM324 790V430L347 418L370 430V790L347 802ZM66 420 196 135 222 134 238 155 108 440 82 441ZM326 440 196 155 212 134 238 135 368 420 352 441Z" transform="translate(1786.03 1123.30) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1824.0" y="1156" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">NG · Ngrum</text>
+    <text x="1824.0" y="1188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">B6 · TOD · SCHWEIGEN · RUHE</text>
+  </g>
+  <g>
+    <path d="M48 132 393 802 374 826 345 828 0 158 19 134ZM121 328 361 238 380 256 377 282 137 372 118 354ZM196 478 426 393 445 411 442 437 212 522 193 504Z" transform="translate(185.06 1472.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="224.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">E · Erd</text>
+    <text x="224.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H1 · TAT · VORGANG · TAUSCH</text>
+  </g>
+  <line x1="384" y1="1254" x2="384" y2="1571" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M56 135V825L28 837L0 825V135L28 123ZM35 708 290 793 294 819 276 837 21 752 17 726ZM33 567 323 627 330 652 313 673 23 613 16 588ZM27 422 297 407 310 429 299 453 29 468 16 446ZM20 278 245 193 264 211 261 237 36 322 17 304Z" transform="translate(515.12 1472.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="544.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">P · Parg</text>
+    <text x="544.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H2 · HAND · WERK · MACHEN</text>
+  </g>
+  <line x1="704" y1="1254" x2="704" y2="1571" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M48 132 418 802 400 826 370 828 0 158 18 134ZM414 156 44 826H18L4 804L374 134H400ZM39 492H379L391 515L379 538H39L27 515Z" transform="translate(827.42 1472.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="864.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">S · Skar</text>
+    <text x="864.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H3 · SCHNITT · WAFFE · STREIT</text>
+  </g>
+  <line x1="1024" y1="1254" x2="1024" y2="1571" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M238 135V825L210 837L182 825V135L210 123ZM0 662 195 497 219 507 225 533 30 698 6 688ZM390 698 195 533 201 507 225 497 420 662 414 688ZM30 332 225 497 219 523 195 533 0 368 6 342ZM420 368 225 533 201 523 195 497 390 332 414 342Z" transform="translate(1147.25 1472.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1184.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">TH · Tharn</text>
+    <text x="1184.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H4 · EID · RECHT · BINDUNG</text>
+  </g>
+  <line x1="1344" y1="1254" x2="1344" y2="1571" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M93 135V390L66 402L39 390V135L66 123ZM75 369 370 499 372 525 352 541 57 411 55 385ZM384 520V825L361 837L338 825V520L361 508ZM0 690 350 500 372 514V540L22 730L0 716ZM56 369 406 194 427 210 426 236 76 411 55 395Z" transform="translate(1466.64 1472.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1504.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">KH · Khorr</text>
+    <text x="1504.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H5 · BRUCH · WANDEL · PRÜFUNG</text>
+  </g>
+  <line x1="1664" y1="1254" x2="1664" y2="1571" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M198 135V825L170 837L142 825V135L170 123ZM155 842 0 707 6 682 30 673 185 808 179 833ZM155 808 310 673 334 682 340 707 185 842 161 833ZM15 307H325L337 330L325 353H15L3 330ZM122 330 170 275 218 330 170 385ZM170 359 192 330 170 301 148 330Z" transform="translate(1794.25 1472.44) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1824.0" y="1504" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">Z · Zarn</text>
+    <text x="1824.0" y="1536" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">H6 · SCHIRM · WACHT · ERHALT</text>
+  </g>
+  <g>
+    <path d="M54 143 234 803 210 822 180 817 0 157 24 138ZM409 156 229 816 204 822 185 804 365 144 390 138ZM27 127H387L399 150L387 173H27L15 150ZM102 387H312L324 410L312 433H102L90 410Z" transform="translate(188.21 1819.04) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="224.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">I · Irin</text>
+    <text x="224.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G1 · WERKZEUG · TEIL · GENAUIGKEIT</text>
+  </g>
+  <line x1="384" y1="1602" x2="384" y2="1919" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M56 135V825L28 837L0 825V135L28 123ZM18 709 298 574 319 590 318 616 38 751 17 735ZM18 434 253 324 274 340 273 366 38 476 17 460ZM19 219 209 134 229 150 227 176 37 261 17 245ZM260 595 308 540 356 595 308 650ZM308 624 330 595 308 566 286 595Z" transform="translate(512.85 1820.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="544.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">GH · Ghair</text>
+    <text x="544.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G2 · WORT · NAME · WAHRHEIT</text>
+  </g>
+  <line x1="704" y1="1602" x2="704" y2="1919" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M48 132 408 802 390 826 360 828 0 158 18 134ZM404 156 44 826H18L4 804L364 134H390ZM14 457H394L406 480L394 503H14L2 480ZM156 680 204 625 252 680 204 735ZM204 709 226 680 204 651 182 680ZM156 280 204 225 252 280 204 335ZM204 309 226 280 204 251 182 280Z" transform="translate(828.30 1820.00) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="864.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">SH · Shenn</text>
+    <text x="864.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G3 · GEDÄCHTNIS · WISSEN · ERZÄHLUNG</text>
+  </g>
+  <line x1="1024" y1="1602" x2="1024" y2="1919" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M221 135V580L193 592L165 580V135L193 123ZM211 594 36 824 11 820 0 796 175 566 200 570ZM211 566 386 796 375 820 350 824 175 594 186 570ZM180 319 30 214 33 188 56 176 206 281 203 307ZM206 116 356 221 353 247 330 259 180 154 183 128Z" transform="translate(1150.22 1818.25) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1184.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">CH · Chor</text>
+    <text x="1184.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G4 · WILLE · EHRE · ABSICHT</text>
+  </g>
+  <line x1="1344" y1="1602" x2="1344" y2="1919" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M225 135V825L197 837L169 825V135L197 123ZM12 542H382L394 565L382 588H12L0 565ZM57 242H337L349 265L337 288H57L45 265ZM41 248 181 118 206 127 213 152 73 282 48 273ZM321 282 181 152 188 127 213 118 353 248 346 273ZM149 825 197 770 245 825 197 880ZM197 854 219 825 197 796 175 825Z" transform="translate(1469.53 1823.33) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1504.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">DH · Dhair</text>
+    <text x="1504.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G5 · GOTT · SCHICKSAL · JENSEITS</text>
+  </g>
+  <line x1="1664" y1="1602" x2="1664" y2="1919" stroke="#c7b9a7" stroke-width="1" opacity=".65"/>
+  <g>
+    <path d="M115 486 295 801 277 825 247 829 67 514 85 490ZM251 804 431 489 457 490 471 511 291 826 265 825ZM431 511 251 176 265 154H291L471 489L457 511ZM291 176 111 511H85L71 489L251 154H277ZM70 510 0 360 16 339 42 340 112 490 96 511ZM430 490 500 340 526 339 542 360 472 510 446 511ZM223 500 271 445 319 500 271 555ZM271 529 293 500 271 471 249 500Z" transform="translate(1776.58 1822.01) scale(0.1750 -0.1750)" fill="url(#ink)" filter="url(#shadow)"/>
+    <text x="1824.0" y="1852" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="800" fill="#2b3032">Q · Qarn</text>
+    <text x="1824.0" y="1884" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="12" font-weight="700" letter-spacing=".7" fill="#8b5b34">G6 · MAGIE · VERBORGENES · GEIST</text>
+  </g>
+  <line x1="120" y1="1990" x2="1928" y2="1990" stroke="#8b5b34" stroke-width="3"/>
+  <text x="1024" y="2022" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#8b5b34">MORGAR · STEINGRAT · KERBE · BEDEUTUNG</text>
+</svg>

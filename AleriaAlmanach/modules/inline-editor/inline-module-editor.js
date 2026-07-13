@@ -293,6 +293,9 @@ function getInlineTemplatePickerType(type, entry) {
     goods: 'goods',
     'trade-catalog': 'trade-catalog',
     'map-template': 'map-template',
+    language: 'language',
+    'name-list': 'name-list',
+    'script-table': 'script-table',
     landing: 'landing',
     artifact: 'artifact',
     recipe: 'recipe',
@@ -463,6 +466,9 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'goods') return wrapInlineEditor(`${moduleMeta}${buildInlineGoodsEditor(page)}`);
   if (type === 'trade-catalog') return wrapInlineEditor(`${moduleMeta}${buildInlineTradeCatalogEditor(page)}`);
   if (type === 'map-template') return wrapInlineEditor(`${moduleMeta}${buildInlineMapTemplateEditor(page)}`);
+  if (type === 'language') return wrapInlineEditor(`${moduleMeta}${buildInlineLanguageEditor(page)}`);
+  if (type === 'name-list') return wrapInlineEditor(`${moduleMeta}${buildInlineNameListEditor(page)}`);
+  if (type === 'script-table') return wrapInlineEditor(`${moduleMeta}${buildInlineScriptTableEditor(page)}`);
   if (type === 'landing') return wrapInlineEditor(`${moduleMeta}${buildInlineLandingEditor(page)}`);
   if (type === 'character-inventory') return wrapInlineEditor(`${moduleMeta}${buildInlineCharacterInventoryEditor(page)}`);
   if (type === 'guest-register') return wrapInlineEditor(`${moduleMeta}${buildInlineGuestRegisterEditor(page)}`);

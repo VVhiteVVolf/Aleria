@@ -17,11 +17,14 @@ function getArchiveEntryCommentLabel(entry) {
 }
 
 function getArchiveEntryPreviewImage(entry) {
+  const pages = Array.isArray(entry?.pages) ? entry.pages.filter(page => page && !page._commentsPage) : [];
+  const firstPageImage = sanitizeImageSrc(pages[0]?.image || '');
+  if (firstPageImage) return firstPageImage;
+
   const directImage = sanitizeImageSrc(entry?.image || '');
   if (directImage) return directImage;
 
-  const pages = Array.isArray(entry?.pages) ? entry.pages.filter(page => page && !page._commentsPage) : [];
-  for (const page of pages) {
+  for (const page of pages.slice(1)) {
     const pageImage = sanitizeImageSrc(page.image || '');
     if (pageImage) return pageImage;
 

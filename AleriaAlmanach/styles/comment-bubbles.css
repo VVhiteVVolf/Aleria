@@ -29,6 +29,29 @@
   border-radius: 14px 5px 14px 14px;
 }
 
+/* Fremdsprache keeps the ordinary speech silhouette and adds only a selectable hue. */
+.comment-body.comment-kind-foreign,
+.comment-live-preview-body.comment-kind-foreign {
+  --bubble-accent: var(--comment-language-color, #526f91);
+  --language-script-font: "Rheunwaith", "EB Garamond", serif;
+  border: 1px solid rgba(var(--comment-language-rgb, 82, 111, 145), 0.42);
+  border-radius: 5px 14px 14px 14px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.3), rgba(var(--comment-language-rgb, 82, 111, 145), 0.12)),
+    var(--parchment);
+  box-shadow: 0 3px 12px rgba(var(--comment-language-rgb, 82, 111, 145), 0.13);
+  color: var(--bubble-text);
+  animation: none;
+}
+
+.comment-entry.left .comment-body.comment-kind-foreign {
+  border-left: 3px solid rgba(var(--comment-language-rgb, 82, 111, 145), 0.72);
+}
+.comment-entry.right .comment-body.comment-kind-foreign {
+  border-right: 3px solid rgba(var(--comment-language-rgb, 82, 111, 145), 0.72);
+  border-radius: 14px 5px 14px 14px;
+}
+
 .comment-body.comment-kind-whisper,
 .comment-live-preview-body.comment-kind-whisper {
   --bubble-accent: #7a498e;
@@ -214,44 +237,62 @@
 
 .comment-body.comment-kind-spell,
 .comment-live-preview-body.comment-kind-spell {
-  --bubble-accent: #2d6b78;
-  --spell-script-font: "Rheunwaith", "EB Garamond", serif;
+  --bubble-accent: var(--comment-language-color, #2d6b78);
+  --language-script-font: "Rheunwaith", "EB Garamond", serif;
   overflow: hidden;
-  border: 1px solid rgba(69,139,151,0.62);
+  border: 1px solid rgba(var(--comment-language-rgb, 45, 107, 120), 0.62);
   border-radius: 8px;
   padding-block: 1.12rem;
   background:
     radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3), transparent 52%),
-    linear-gradient(135deg, rgba(214,231,226,0.98), rgba(180,207,201,0.9));
-  box-shadow: inset 0 0 24px rgba(54,105,116,0.12), 0 4px 15px rgba(54,105,116,0.14);
-  color: #164759;
+    linear-gradient(135deg, rgba(255,255,255,0.78), rgba(var(--comment-language-rgb, 45, 107, 120), 0.28));
+  box-shadow: inset 0 0 24px rgba(var(--comment-language-rgb, 45, 107, 120), 0.14), 0 4px 15px rgba(var(--comment-language-rgb, 45, 107, 120), 0.16);
+  color: var(--comment-language-color, #164759);
   animation: none;
   filter: none;
   transform: none;
 }
 
-.comment-kind-spell[data-spell-font="runic"] { --spell-script-font: "Noto Sans Runic", serif; }
-.comment-kind-spell[data-spell-font="ogham"] { --spell-script-font: "Noto Sans Ogham", serif; }
-.comment-kind-spell[data-spell-font="hieroglyphs"] { --spell-script-font: "Noto Sans Egyptian Hieroglyphs", serif; }
-.comment-kind-spell[data-spell-font="infernal"] { --spell-script-font: "Nharazim", serif; }
+.comment-kind-spell[data-comment-language="rheunwaith"], .comment-kind-foreign[data-comment-language="rheunwaith"] { --language-script-font: "Rheunwaith", serif; }
+.comment-kind-spell[data-comment-language="karnrith"], .comment-kind-foreign[data-comment-language="karnrith"] { --language-script-font: "Karnrith Hochschnitt", serif; }
+.comment-kind-spell[data-comment-language="infernal"], .comment-kind-foreign[data-comment-language="infernal"] { --language-script-font: "Nharazim", serif; }
+.comment-kind-spell[data-comment-language="kanaanith"], .comment-kind-foreign[data-comment-language="kanaanith"] { --language-script-font: "Kanaanith Monumental", serif; }
+.comment-kind-spell[data-comment-language="argenti"], .comment-kind-foreign[data-comment-language="argenti"] { --language-script-font: "Lingua Argenti", serif; }
+.comment-kind-spell[data-comment-language="stoicheia"], .comment-kind-foreign[data-comment-language="stoicheia"] { --language-script-font: "Stoicheia", serif; }
+.comment-kind-spell[data-comment-language="runic"], .comment-kind-foreign[data-comment-language="runic"] { --language-script-font: "Noto Sans Runic", serif; }
+.comment-kind-spell[data-comment-language="ogham"], .comment-kind-foreign[data-comment-language="ogham"] { --language-script-font: "Noto Sans Ogham", serif; }
+.comment-kind-spell[data-comment-language="faehrtenlaut"], .comment-kind-foreign[data-comment-language="faehrtenlaut"] { --language-script-font: "Faehrtenlaut", sans-serif; }
+.comment-kind-spell[data-comment-language="hieroglyphs"], .comment-kind-foreign[data-comment-language="hieroglyphs"] { --language-script-font: "Noto Sans Egyptian Hieroglyphs", serif; }
 
-.comment-body.comment-kind-spell .comment-text,
-.comment-live-preview-body.comment-kind-spell .comment-live-preview-text {
-  font-family: var(--spell-script-font);
+.comment-language-toggle {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  cursor: help;
+}
+
+.comment-language-script {
+  font-family: var(--language-script-font);
   font-weight: 400;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "liga" 1;
   letter-spacing: 0.075em;
   line-height: 1.65;
-  cursor: help;
   transition: color 0.18s ease, letter-spacing 0.18s ease, text-shadow 0.18s ease;
 }
 
-.comment-spell-text .comment-spell-plain { display: none; }
-.comment-spell-text:hover .comment-spell-script,
-.comment-spell-text:focus .comment-spell-script { display: none; }
-.comment-spell-text:hover .comment-spell-plain,
-.comment-spell-text:focus .comment-spell-plain {
+.comment-language-plain { display: none; }
+.comment-language-toggle:hover .comment-language-script,
+.comment-language-toggle:focus-visible .comment-language-script,
+.comment-language-toggle.revealed .comment-language-script { display: none; }
+.comment-language-toggle:hover .comment-language-plain,
+.comment-language-toggle:focus-visible .comment-language-plain,
+.comment-language-toggle.revealed .comment-language-plain {
   display: inline;
   font-family: "EB Garamond", Georgia, serif;
   font-weight: 600;
@@ -259,9 +300,20 @@
   text-shadow: none;
 }
 
-.comment-body.comment-kind-spell .comment-text:focus-visible,
-.comment-live-preview-body.comment-kind-spell .comment-live-preview-text:focus-visible {
-  outline: 2px solid rgba(45,107,120,0.58);
+.comment-kind-spell .comment-language-toggle {
+  color: var(--comment-language-color, #2d6b78);
+}
+
+.comment-kind-foreign .comment-language-script {
+  color: var(--comment-language-color, #526f91);
+}
+
+.comment-kind-foreign .comment-language-plain {
+  color: var(--bubble-text);
+}
+
+.comment-language-toggle:focus-visible {
+  outline: 2px solid rgba(var(--comment-language-rgb, 45, 107, 120), 0.58);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -274,8 +326,8 @@
   left: 0.75rem;
   right: 0.75rem;
   height: auto;
-  color: rgba(44,112,123,0.76);
-  font-family: var(--spell-script-font);
+  color: rgba(var(--comment-language-rgb, 45, 107, 120), 0.76);
+  font-family: var(--language-script-font);
   font-size: 0.66rem;
   font-weight: 400;
   font-variant-ligatures: common-ligatures;
@@ -300,12 +352,12 @@
   animation-delay: -3.4s;
 }
 
-.comment-kind-spell[data-spell-font="runic"]::before { content: 'ᚨᛚᛖᚱᛁᚨ  ᚱᚺᛖᚢᚾᚹᚨᛁᚦ  ᚨᛚᛖᚱᛁᚨ'; }
-.comment-kind-spell[data-spell-font="runic"]::after { content: 'ᚱᚺᛖᚢᚾᚹᚨᛁᚦ  ᚨᛚᛖᚱᛁᚨ  ᚱᚺᛖᚢᚾᚹᚨᛁᚦ'; }
-.comment-kind-spell[data-spell-font="ogham"]::before { content: 'ᚐᚂᚓᚏᚔᚐ  ᚏᚆᚓᚒᚅᚒᚐᚔᚈ  ᚐᚂᚓᚏᚔᚐ'; }
-.comment-kind-spell[data-spell-font="ogham"]::after { content: 'ᚏᚆᚓᚒᚅᚒᚐᚔᚈ  ᚐᚂᚓᚏᚔᚐ  ᚏᚆᚓᚒᚅᚒᚐᚔᚈ'; }
-.comment-kind-spell[data-spell-font="hieroglyphs"]::before { content: '𓄿𓃭𓇋𓂋𓇋𓄿  𓂋𓉔𓇋𓅱𓈖𓅱𓄿𓇋𓏏'; }
-.comment-kind-spell[data-spell-font="hieroglyphs"]::after { content: '𓂋𓉔𓇋𓅱𓈖𓅱𓄿𓇋𓏏  𓄿𓃭𓇋𓂋𓇋𓄿'; }
+.comment-kind-spell[data-comment-language="runic"]::before { content: 'ᚨᛚᛖᚱᛁᚨ  ᚱᚺᛖᚢᚾᚹᚨᛁᚦ  ᚨᛚᛖᚱᛁᚨ'; }
+.comment-kind-spell[data-comment-language="runic"]::after { content: 'ᚱᚺᛖᚢᚾᚹᚨᛁᚦ  ᚨᛚᛖᚱᛁᚨ  ᚱᚺᛖᚢᚾᚹᚨᛁᚦ'; }
+.comment-kind-spell[data-comment-language="ogham"]::before { content: 'ᚐᚂᚓᚏᚔᚐ  ᚏᚆᚓᚒᚅᚒᚐᚔᚈ  ᚐᚂᚓᚏᚔᚐ'; }
+.comment-kind-spell[data-comment-language="ogham"]::after { content: 'ᚏᚆᚓᚒᚅᚒᚐᚔᚈ  ᚐᚂᚓᚏᚔᚐ  ᚏᚆᚓᚒᚅᚒᚐᚔᚈ'; }
+.comment-kind-spell[data-comment-language="hieroglyphs"]::before { content: '𓄿𓃭𓇋𓂋𓇋𓄿  𓂋𓉔𓇋𓅱𓈖𓅱𓄿𓇋𓏏'; }
+.comment-kind-spell[data-comment-language="hieroglyphs"]::after { content: '𓂋𓉔𓇋𓅱𓈖𓅱𓄿𓇋𓏏  𓄿𓃭𓇋𓂋𓇋𓄿'; }
 
 .comment-body.comment-kind-telepathy,
 .comment-live-preview-body.comment-kind-telepathy {
@@ -495,11 +547,17 @@
 .comment-kind-song .comment-kind-badge,
 .comment-kind-flirt .comment-kind-badge,
 .comment-kind-prayer .comment-kind-badge,
+.comment-kind-foreign .comment-kind-badge,
 .comment-kind-spell .comment-kind-badge,
 .comment-kind-telepathy .comment-kind-badge,
 .comment-kind-animal .comment-kind-badge,
 .comment-kind-madness .comment-kind-badge {
   color: var(--bubble-accent);
+}
+
+.comment-kind-foreign .comment-kind-badge {
+  border-color: rgba(var(--comment-language-rgb, 82, 111, 145), 0.42);
+  background: rgba(var(--comment-language-rgb, 82, 111, 145), 0.1);
 }
 
 @keyframes bubbleThoughtDots {
@@ -700,6 +758,46 @@
   src:
     url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2") format("woff2"),
     url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karnrith Hochschnitt";
+  src:
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2") format("woff2"),
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kanaanith Monumental";
+  src:
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lingua Argenti";
+  src:
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stoicheia";
+  src:
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff2") format("woff2"),
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

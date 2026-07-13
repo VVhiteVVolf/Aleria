@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "Rheunwaith Table";
+  src:
+    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2") format("woff2"),
+    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ogham Table";
+  src: url("../../Fonts/Noto-Historic-Scripts/NotoSansOgham-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karnrith Table";
+  src:
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2") format("woff2"),
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nharazim Table";
+  src:
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2") format("woff2"),
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futhark Table";
+  src: url("../../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kanaanith Table";
+  src:
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lingua Argenti Table";
+  src:
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stoicheia Table";
+  src:
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff2") format("woff2"),
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.flip-page > .script-table-page {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.script-table-page {
+  --script-ink: #352516;
+  --script-muted: #725b3f;
+  --script-gold: #94702c;
+  --script-line: rgba(112, 77, 29, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--script-ink);
+  background: linear-gradient(180deg, #f7eed5, #e7d5aa);
+}
+
+.script-table-header {
+  padding: 1.2rem clamp(0.8rem, 3vw, 2.5rem) 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--script-line);
+}
+
+.script-table-archive-label,
+.script-table-footer {
+  font-family: var(--ui-font, "Cinzel", serif);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.script-table-archive-label {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  color: #f6e7bb;
+  background: #3b2919;
+}
+
+.script-table-ornament {
+  margin: 0.6rem 0 0.35rem;
+  color: #397c87;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: 0.13em;
+  opacity: 0.78;
+}
+
+.script-style-rheunwaith {
+  font-family: "Rheunwaith Table", serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+
+.script-style-ogham {
+  font-family: "Ogham Table", "Segoe UI Historic", serif;
+}
+
+.script-style-karnrith {
+  color: #70451f;
+  font-family: "Karnrith Table", serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+
+.script-style-infernal {
+  color: #68131b;
+  font-family: "Nharazim Table", serif;
+  text-shadow: 0.04em 0.05em 0.07em rgba(55, 4, 10, 0.28);
+}
+
+.script-style-futhark {
+  color: #5e472c;
+  font-family: "Futhark Table", "Segoe UI Historic", serif;
+}
+
+.script-style-kanaanith {
+  color: #176276;
+  direction: rtl;
+  font-family: "Kanaanith Table", serif;
+  unicode-bidi: isolate;
+}
+
+.script-style-argenti {
+  color: #53687d;
+  font-family: "Lingua Argenti Table", serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+
+.script-style-stoicheia {
+  color: #845c2d;
+  font-family: "Stoicheia Table", serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+
+.script-style-plain { font-family: Georgia, serif; }
+
+.script-table-header h2 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 550;
+}
+
+.script-table-header > p {
+  margin: 0.3rem 0 0;
+  color: var(--script-muted);
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.script-table-content {
+  display: grid;
+  gap: 1.3rem;
+  padding: 1rem clamp(0.55rem, 2vw, 1.6rem) 1.5rem;
+}
+
+.script-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--script-line);
+}
+
+.script-table-grid {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.script-table-grid th,
+.script-table-grid td {
+  padding: 0.5rem 0.75rem;
+  border-right: 1px solid rgba(112, 77, 29, 0.14);
+  border-bottom: 1px solid rgba(112, 77, 29, 0.14);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.script-table-grid th {
+  color: #f7e8bd;
+  background: #49331e;
+  font: 700 0.68rem/1.2 var(--ui-font, "Cinzel", serif);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.script-table-grid tbody tr:nth-child(odd) { background: rgba(255, 252, 240, 0.7); }
+.script-table-grid tbody tr:nth-child(even) { background: rgba(220, 202, 160, 0.48); }
+.script-table-grid tbody tr:hover { background: rgba(203, 178, 117, 0.48); }
+
+.script-table-grid th:nth-child(1),
+.script-table-grid td:nth-child(1) { width: 11%; }
+.script-table-grid th:nth-child(2),
+.script-table-grid td:nth-child(2) { width: 20%; }
+.script-table-grid th:nth-child(3),
+.script-table-grid td:nth-child(3) { width: 13%; }
+.script-table-grid th:nth-child(4),
+.script-table-grid td:nth-child(4) { width: 56%; }
+
+.script-table-symbol {
+  color: #245f70;
+  font-size: 1.45rem;
+  text-align: center;
+}
+
+.script-table-syllable-section > header {
+  padding: 0.2rem 0 0.6rem;
+  text-align: center;
+}
+
+.script-table-syllable-section h3 {
+  margin: 0;
+  color: #604419;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.script-table-syllable-section header p {
+  margin: 0.25rem 0 0;
+  color: var(--script-muted);
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.script-table-syllables th:nth-child(1),
+.script-table-syllables td:nth-child(1) { width: 18%; }
+.script-table-syllables th:nth-child(2),
+.script-table-syllables td:nth-child(2) { width: 34%; }
+.script-table-syllables th:nth-child(3),
+.script-table-syllables td:nth-child(3) { width: 48%; }
+
+.script-table-syllables td:first-child {
+  color: #5d421d;
+  font-weight: 700;
+}
+
+.script-table-footer {
+  padding: 0.8rem 1rem;
+  color: var(--script-muted);
+  border-top: 1px solid var(--script-line);
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .script-table-grid th,
+  .script-table-grid td { padding: 0.42rem 0.55rem; }
+}

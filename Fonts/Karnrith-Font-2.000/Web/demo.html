@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karnrith Hochschnitt 2.000 Font Demo</title>
+  <link rel="stylesheet" href="karnrith-hochschnitt.css">
+  <style>
+    :root { color-scheme: dark; --stone:#d8c9b5; --iron:#202627; --bronze:#b67a43; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; font-family:system-ui,sans-serif; color:var(--stone); background:#111617; }
+    main { width:min(1100px,92vw); margin:auto; padding:56px 0 80px; }
+    h1 { margin:0; font-size:clamp(2.3rem,8vw,5rem); letter-spacing:.13em; color:#f1e9dd; }
+    .lead { color:#b5aaa0; max-width:72ch; line-height:1.6; }
+    .panel { margin-top:30px; padding:26px; border:1px solid #4b4036; border-radius:14px; background:#1c2223; box-shadow:0 18px 50px #0008; }
+    label { display:block; margin-bottom:8px; color:var(--bronze); font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
+    textarea { width:100%; min-height:110px; resize:vertical; padding:16px; border:1px solid #665345; border-radius:8px; color:#efe7db; background:#101516; font:1.05rem/1.5 ui-monospace,monospace; }
+    .controls { display:flex; align-items:center; gap:12px; margin:18px 0; color:#a99e94; }
+    input[type="range"] { flex:1; accent-color:var(--bronze); }
+    #output { min-height:260px; display:flex; align-items:center; justify-content:center; padding:30px 18px; overflow-wrap:anywhere; white-space:pre-wrap; text-align:center; color:#e8dfd1; background:linear-gradient(145deg,#2b3233,#161c1d); border-radius:10px; text-shadow:4px 7px 8px #000a; }
+    .mapping { margin-top:24px; color:#a99e94; line-height:1.7; }
+    code { color:#e2b17c; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>KARNRITH HOCHSCHNITT</h1>
+    <p class="lead">Die vollständig neu gezeichnete schmale Runenschrift der Morgorner. Schreibe Morgar-Wörter oder lateinischen Text. Die Folgen NG, TH, KH, GH, SH, CH und DH werden automatisch zu eigenen Karnrith-Zeichen.</p>
+    <section class="panel">
+      <label for="source">Eingabe</label>
+      <textarea id="source" spellcheck="false">MORGAR KARNRITH
+URORTHARN FAURPARGOR
+GHARQARN YRNGRUM</textarea>
+      <div class="controls">
+        <span>Größe</span>
+        <input id="size" type="range" min="42" max="180" value="100">
+        <output id="sizeValue">100 px</output>
+      </div>
+      <div id="output" class="karnrith-hochschnitt" aria-live="polite">MORGAR KARNRITH
+URORTHARN FAURPARGOR
+GHARQARN YRNGRUM</div>
+      <p class="mapping"><strong>Tastatur:</strong> A–Z, Ä, Ö, Ü, ß und 0–9. <code>C</code>, <code>J</code> und <code>X</code> sind praktische Eingabealiasse; die kanonischen Lautzeichen entstehen über die Ligaturen.</p>
+    </section>
+  </main>
+  <script>
+    const source = document.querySelector('#source');
+    const output = document.querySelector('#output');
+    const size = document.querySelector('#size');
+    const sizeValue = document.querySelector('#sizeValue');
+    function update() {
+      output.textContent = source.value;
+      output.style.fontSize = size.value + 'px';
+      output.style.lineHeight = '1.35';
+      sizeValue.value = size.value + ' px';
+    }
+    source.addEventListener('input', update);
+    size.addEventListener('input', update);
+    update();
+  </script>
+</body>
+</html>

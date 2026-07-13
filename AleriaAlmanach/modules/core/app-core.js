@@ -124,6 +124,9 @@ function shouldUsePageImageAsEntryImage(pages = []) {
     page?.bountyFilePage ||
     page?.goodsTablePage ||
     page?.tradeCatalogPage ||
+    page?.languagePage ||
+    page?.nameListPage ||
+    page?.scriptTablePage ||
     page?.landingPage ||
     page?.characterInventoryPage ||
     page?.tournamentPage ||
@@ -275,7 +278,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.enableComments) next.enableComments = true;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'languagePage', 'nameListPage', 'scriptTablePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -396,6 +399,18 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 
   if (page.mapTemplatePage) {
     next.mapTemplate = sanitizeMapTemplateData(page.mapTemplate);
+  }
+
+  if (page.languagePage) {
+    next.language = sanitizeLanguageData(page.language);
+  }
+
+  if (page.nameListPage) {
+    next.nameList = sanitizeNameListData(page.nameList);
+  }
+
+  if (page.scriptTablePage) {
+    next.scriptTable = sanitizeScriptTableData(page.scriptTable);
   }
 
   if (page.landingPage) {

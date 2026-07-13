@@ -1,0 +1,2552 @@
+{
+  "language": "Kana'anith",
+  "writing_direction": "rtl",
+  "alphabet": [
+    {
+      "glyph": "𐤀",
+      "name": "Aleph",
+      "sound": "ʾ",
+      "image_meaning": "Ochse, Stier",
+      "semantic_field": "Kraft, Führung, Last, Ursprung",
+      "root": "al"
+    },
+    {
+      "glyph": "𐤁",
+      "name": "Beth",
+      "sound": "b",
+      "image_meaning": "Haus",
+      "semantic_field": "Familie, Schutz, Innenraum, Besitz",
+      "root": "bet"
+    },
+    {
+      "glyph": "𐤂",
+      "name": "Gimel",
+      "sound": "g",
+      "image_meaning": "Kamel",
+      "semantic_field": "Reise, Karawane, Ausdauer, Fernhandel",
+      "root": "gam"
+    },
+    {
+      "glyph": "𐤃",
+      "name": "Daleth",
+      "sound": "d",
+      "image_meaning": "Tür",
+      "semantic_field": "Zugang, Übergang, Aufnahme, Beginn",
+      "root": "dal"
+    },
+    {
+      "glyph": "𐤄",
+      "name": "He",
+      "sound": "h",
+      "image_meaning": "Fenster",
+      "semantic_field": "Licht, Atem, Offenbarung, Sichtbarkeit",
+      "root": "hen"
+    },
+    {
+      "glyph": "𐤅",
+      "name": "Waw",
+      "sound": "w",
+      "image_meaning": "Haken, Nagel",
+      "semantic_field": "Bindung, Verbindung, Befestigung, Vertrag",
+      "root": "war"
+    },
+    {
+      "glyph": "𐤆",
+      "name": "Zayin",
+      "sound": "z",
+      "image_meaning": "Waffe, Schwert",
+      "semantic_field": "Verteidigung, Krieg, Entscheidung, Schneide",
+      "root": "zay"
+    },
+    {
+      "glyph": "𐤇",
+      "name": "Heth",
+      "sound": "ḥ",
+      "image_meaning": "Zaun, Mauer",
+      "semantic_field": "Grenze, Schutz, Stadt, Einschluss",
+      "root": "het"
+    },
+    {
+      "glyph": "𐤈",
+      "name": "Teth",
+      "sound": "ṭ",
+      "image_meaning": "Rad",
+      "semantic_field": "Zyklus, Zeit, Schicksal, Wiederkehr",
+      "root": "tar"
+    },
+    {
+      "glyph": "𐤉",
+      "name": "Yodh",
+      "sound": "y",
+      "image_meaning": "Hand, Arm",
+      "semantic_field": "Tat, Arbeit, Macht, Ausführung",
+      "root": "yad"
+    },
+    {
+      "glyph": "𐤊",
+      "name": "Kaph",
+      "sound": "k",
+      "image_meaning": "Handfläche",
+      "semantic_field": "Empfang, Besitz, Gabe, Handwerk",
+      "root": "kaf"
+    },
+    {
+      "glyph": "𐤋",
+      "name": "Lamedh",
+      "sound": "l",
+      "image_meaning": "Ochsenstachel",
+      "semantic_field": "Führung, Lehre, Antrieb, Befehl",
+      "root": "lam"
+    },
+    {
+      "glyph": "𐤌",
+      "name": "Mem",
+      "sound": "m",
+      "image_meaning": "Wasser",
+      "semantic_field": "Leben, Reinigung, Fluss, Tiefe",
+      "root": "mer"
+    },
+    {
+      "glyph": "𐤍",
+      "name": "Nun",
+      "sound": "n",
+      "image_meaning": "Fisch",
+      "semantic_field": "Fruchtbarkeit, Nahrung, Fülle, Fortbestand",
+      "root": "nun"
+    },
+    {
+      "glyph": "𐤎",
+      "name": "Samekh",
+      "sound": "s",
+      "image_meaning": "Stütze, Pfeiler",
+      "semantic_field": "Stabilität, Tempel, Beistand, Ordnung",
+      "root": "sam"
+    },
+    {
+      "glyph": "𐤏",
+      "name": "Ayin",
+      "sound": "ʿ",
+      "image_meaning": "Auge",
+      "semantic_field": "Sicht, Wacht, Wissen, Urteil",
+      "root": "ayen"
+    },
+    {
+      "glyph": "𐤐",
+      "name": "Pe",
+      "sound": "p",
+      "image_meaning": "Mund",
+      "semantic_field": "Sprache, Verkündung, Befehl, Name",
+      "root": "par"
+    },
+    {
+      "glyph": "𐤑",
+      "name": "Sade",
+      "sound": "ṣ",
+      "image_meaning": "Angelhaken",
+      "semantic_field": "Fang, Auswahl, Jagd, Zugriff",
+      "root": "sad"
+    },
+    {
+      "glyph": "𐤒",
+      "name": "Qoph",
+      "sound": "q",
+      "image_meaning": "Nadel, Ahle",
+      "semantic_field": "Genauigkeit, Maß, Schrift, feines Handwerk",
+      "root": "qen"
+    },
+    {
+      "glyph": "𐤓",
+      "name": "Resh",
+      "sound": "r",
+      "image_meaning": "Kopf",
+      "semantic_field": "Herrschaft, Anfang, Leitung, Rang",
+      "root": "resh"
+    },
+    {
+      "glyph": "𐤔",
+      "name": "Shin",
+      "sound": "š",
+      "image_meaning": "Zahn",
+      "semantic_field": "Kraft, Verzehr, Hunger, Durchsetzung",
+      "root": "shen"
+    },
+    {
+      "glyph": "𐤕",
+      "name": "Taw",
+      "sound": "t",
+      "image_meaning": "Zeichen, Markierung",
+      "semantic_field": "Eid, Vollendung, Siegel, festgehaltenes Recht",
+      "root": "tav"
+    }
+  ],
+  "prefixes": [
+    {
+      "form": "a-",
+      "meaning": "belebt, handelnd",
+      "usage": "Macht einen Begriff zu einem aktiven Wesen oder Träger."
+    },
+    {
+      "form": "ba-",
+      "meaning": "Ort, Innenraum",
+      "usage": "Bezeichnet einen umschlossenen oder bewohnten Ort."
+    },
+    {
+      "form": "da-",
+      "meaning": "Übergang, Beginn",
+      "usage": "Markiert Eintritt, Öffnung oder den Beginn eines Vorgangs."
+    },
+    {
+      "form": "ha-",
+      "meaning": "sichtbar, offen, erhellt",
+      "usage": "Bezeichnet Offenlegung, Licht oder öffentliche Geltung."
+    },
+    {
+      "form": "ka-",
+      "meaning": "gemacht, beherrscht",
+      "usage": "Markiert absichtlich hergestellte oder kontrollierte Dinge."
+    },
+    {
+      "form": "ma-",
+      "meaning": "Kollektiv, Institution",
+      "usage": "Fasst Personen oder Dinge zu einer geordneten Einheit."
+    },
+    {
+      "form": "mi-",
+      "meaning": "am Wasser, fließend",
+      "usage": "Kennzeichnet Fluss, Küste, Hafen oder Bewässerung."
+    },
+    {
+      "form": "na-",
+      "meaning": "lebend, wachsend",
+      "usage": "Bezeichnet Wachstum, Fruchtbarkeit oder Ernährung."
+    },
+    {
+      "form": "ra-",
+      "meaning": "königlich, amtlich",
+      "usage": "Kennzeichnet Herrschaft, Verwaltung und offiziellen Rang."
+    },
+    {
+      "form": "sa-",
+      "meaning": "verursacht, erzwungen",
+      "usage": "Bildet befohlene oder herbeigeführte Handlungen."
+    },
+    {
+      "form": "ta-",
+      "meaning": "Ergebnis, Niederschrift",
+      "usage": "Bezeichnet das festgehaltene Ergebnis einer Handlung."
+    },
+    {
+      "form": "du-",
+      "meaning": "verborgen, unterirdisch",
+      "usage": "Kennzeichnet Grab, Nacht, Geheimnis und Jenseits."
+    },
+    {
+      "form": "ur-",
+      "meaning": "groß, hoch, heilig",
+      "usage": "Steigert Rang, Umfang oder sakrale Bedeutung."
+    },
+    {
+      "form": "aya-",
+      "meaning": "gesehen, erkannt",
+      "usage": "Markiert beobachtetes, geprüftes oder gelehrtes Wissen."
+    }
+  ],
+  "suffixes": [
+    {
+      "form": "-u",
+      "meaning": "einzelne Person oder Sache",
+      "usage": "Unmarkierter greifbarer Singular."
+    },
+    {
+      "form": "-at",
+      "meaning": "weibliche Person oder Institution",
+      "usage": "Traditionelle Personen- und Amtsform; außerdem Institutionen."
+    },
+    {
+      "form": "-ir",
+      "meaning": "Beruf oder handelnde Person",
+      "usage": "Bildet Berufe und regelmäßige Tätigkeiten."
+    },
+    {
+      "form": "-or",
+      "meaning": "Amt oder Würdenträger",
+      "usage": "Kennzeichnet einen offiziellen Träger einer Funktion."
+    },
+    {
+      "form": "-im",
+      "meaning": "Kollektiv oder Mehrzahl",
+      "usage": "Fasst mehrere Dinge oder Personen zusammen."
+    },
+    {
+      "form": "-um",
+      "meaning": "Ort oder Gebiet",
+      "usage": "Bildet Siedlungen, Räume und Landschaftsbegriffe."
+    },
+    {
+      "form": "-an",
+      "meaning": "Vorgang oder Zustand",
+      "usage": "Bildet Handlungen und andauernde Zustände."
+    },
+    {
+      "form": "-et",
+      "meaning": "kleines oder genaues Einzelstück",
+      "usage": "Verkleinerung, Werkzeugteil oder Maßeinheit."
+    },
+    {
+      "form": "-esh",
+      "meaning": "Werkzeug oder greifbares Objekt",
+      "usage": "Bildet Gebrauchsgegenstände."
+    },
+    {
+      "form": "-aya",
+      "meaning": "Abstammung oder Traditionslinie",
+      "usage": "Bezeichnet Nachkommen, Dynastien und Schulen."
+    },
+    {
+      "form": "-en",
+      "meaning": "zugehörig, stammend aus",
+      "usage": "Adjektivische Herkunftsform."
+    },
+    {
+      "form": "-i",
+      "meaning": "Eigenschaft",
+      "usage": "Kurze Adjektivendung."
+    },
+    {
+      "form": "-em",
+      "meaning": "Material oder Substanz",
+      "usage": "Bildet Stoff- und Rohmaterialbegriffe."
+    },
+    {
+      "form": "-ut",
+      "meaning": "abstrakte Eigenschaft",
+      "usage": "Bildet kulturelle und religiöse Abstrakta."
+    },
+    {
+      "form": "-ka",
+      "meaning": "Gefäß oder Behältnis",
+      "usage": "Bezeichnet etwas, das aufnimmt oder bewahrt."
+    },
+    {
+      "form": "-ra",
+      "meaning": "geehrt, erhöht",
+      "usage": "Ehrenform für Personen, Orte und Gegenstände."
+    },
+    {
+      "form": "-ni",
+      "meaning": "Fluss-, Meer- oder Küstenbezug",
+      "usage": "Spezialendung der Wasser- und Hafenmundarten."
+    },
+    {
+      "form": "-tav",
+      "meaning": "vereidigt, versiegelt, vollendet",
+      "usage": "Macht eine Handlung oder Sache rechtlich bindend."
+    }
+  ],
+  "male_names": [
+    {
+      "name": "Arubar",
+      "first": "Aru",
+      "ending": "bar",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Aruzan",
+      "first": "Aru",
+      "ending": "zan",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Arumer",
+      "first": "Aru",
+      "ending": "mer",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Arutav",
+      "first": "Aru",
+      "ending": "tav",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Arudar",
+      "first": "Aru",
+      "ending": "dar",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Betizan",
+      "first": "Beti",
+      "ending": "zan",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Betimer",
+      "first": "Beti",
+      "ending": "mer",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Betitav",
+      "first": "Beti",
+      "ending": "tav",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Betidar",
+      "first": "Beti",
+      "ending": "dar",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Betilam",
+      "first": "Beti",
+      "ending": "lam",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Gamumer",
+      "first": "Gamu",
+      "ending": "mer",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Gamutav",
+      "first": "Gamu",
+      "ending": "tav",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Gamudar",
+      "first": "Gamu",
+      "ending": "dar",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Gamulam",
+      "first": "Gamu",
+      "ending": "lam",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Gamuresh",
+      "first": "Gamu",
+      "ending": "resh",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Dalutav",
+      "first": "Dalu",
+      "ending": "tav",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Daludar",
+      "first": "Dalu",
+      "ending": "dar",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Dalulam",
+      "first": "Dalu",
+      "ending": "lam",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Daluresh",
+      "first": "Dalu",
+      "ending": "resh",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Dalugam",
+      "first": "Dalu",
+      "ending": "gam",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Henudar",
+      "first": "Henu",
+      "ending": "dar",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Henulam",
+      "first": "Henu",
+      "ending": "lam",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Henuresh",
+      "first": "Henu",
+      "ending": "resh",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Henugam",
+      "first": "Henu",
+      "ending": "gam",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Henuyad",
+      "first": "Henu",
+      "ending": "yad",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Warulam",
+      "first": "Waru",
+      "ending": "lam",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Waruresh",
+      "first": "Waru",
+      "ending": "resh",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Warugam",
+      "first": "Waru",
+      "ending": "gam",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Waruyad",
+      "first": "Waru",
+      "ending": "yad",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Warusam",
+      "first": "Waru",
+      "ending": "sam",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Zayiresh",
+      "first": "Zayi",
+      "ending": "resh",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Zayigam",
+      "first": "Zayi",
+      "ending": "gam",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Zayiyad",
+      "first": "Zayi",
+      "ending": "yad",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Zayisam",
+      "first": "Zayi",
+      "ending": "sam",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Zayibar",
+      "first": "Zayi",
+      "ending": "bar",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Hetugam",
+      "first": "Hetu",
+      "ending": "gam",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Hetuyad",
+      "first": "Hetu",
+      "ending": "yad",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Hetusam",
+      "first": "Hetu",
+      "ending": "sam",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Hetubar",
+      "first": "Hetu",
+      "ending": "bar",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Hetuzan",
+      "first": "Hetu",
+      "ending": "zan",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Tariyad",
+      "first": "Tari",
+      "ending": "yad",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Tarisam",
+      "first": "Tari",
+      "ending": "sam",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Taribar",
+      "first": "Tari",
+      "ending": "bar",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Tarizan",
+      "first": "Tari",
+      "ending": "zan",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Tarimer",
+      "first": "Tari",
+      "ending": "mer",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Yadisam",
+      "first": "Yadi",
+      "ending": "sam",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Yadibar",
+      "first": "Yadi",
+      "ending": "bar",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Yadizan",
+      "first": "Yadi",
+      "ending": "zan",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Yadimer",
+      "first": "Yadi",
+      "ending": "mer",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Yaditav",
+      "first": "Yadi",
+      "ending": "tav",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Kafubar",
+      "first": "Kafu",
+      "ending": "bar",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Kafuzan",
+      "first": "Kafu",
+      "ending": "zan",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Kafumer",
+      "first": "Kafu",
+      "ending": "mer",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Kafutav",
+      "first": "Kafu",
+      "ending": "tav",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Kafudar",
+      "first": "Kafu",
+      "ending": "dar",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Lamuzan",
+      "first": "Lamu",
+      "ending": "zan",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Lamumer",
+      "first": "Lamu",
+      "ending": "mer",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Lamutav",
+      "first": "Lamu",
+      "ending": "tav",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Lamudar",
+      "first": "Lamu",
+      "ending": "dar",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Lamulam",
+      "first": "Lamu",
+      "ending": "lam",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Merumer",
+      "first": "Meru",
+      "ending": "mer",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Merutav",
+      "first": "Meru",
+      "ending": "tav",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Merudar",
+      "first": "Meru",
+      "ending": "dar",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Merulam",
+      "first": "Meru",
+      "ending": "lam",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Meruresh",
+      "first": "Meru",
+      "ending": "resh",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Nunitav",
+      "first": "Nuni",
+      "ending": "tav",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Nunidar",
+      "first": "Nuni",
+      "ending": "dar",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Nunilam",
+      "first": "Nuni",
+      "ending": "lam",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Nuniresh",
+      "first": "Nuni",
+      "ending": "resh",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Nunigam",
+      "first": "Nuni",
+      "ending": "gam",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Samudar",
+      "first": "Samu",
+      "ending": "dar",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Samulam",
+      "first": "Samu",
+      "ending": "lam",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Samuresh",
+      "first": "Samu",
+      "ending": "resh",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Samugam",
+      "first": "Samu",
+      "ending": "gam",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Samuyad",
+      "first": "Samu",
+      "ending": "yad",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Aynulam",
+      "first": "Aynu",
+      "ending": "lam",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Aynuresh",
+      "first": "Aynu",
+      "ending": "resh",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Aynugam",
+      "first": "Aynu",
+      "ending": "gam",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Aynuyad",
+      "first": "Aynu",
+      "ending": "yad",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Aynusam",
+      "first": "Aynu",
+      "ending": "sam",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Paruresh",
+      "first": "Paru",
+      "ending": "resh",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Parugam",
+      "first": "Paru",
+      "ending": "gam",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Paruyad",
+      "first": "Paru",
+      "ending": "yad",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Parusam",
+      "first": "Paru",
+      "ending": "sam",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Parubar",
+      "first": "Paru",
+      "ending": "bar",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Sadugam",
+      "first": "Sadu",
+      "ending": "gam",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Saduyad",
+      "first": "Sadu",
+      "ending": "yad",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Sadusam",
+      "first": "Sadu",
+      "ending": "sam",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Sadubar",
+      "first": "Sadu",
+      "ending": "bar",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Saduzan",
+      "first": "Sadu",
+      "ending": "zan",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Qenuyad",
+      "first": "Qenu",
+      "ending": "yad",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Qenusam",
+      "first": "Qenu",
+      "ending": "sam",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Qenubar",
+      "first": "Qenu",
+      "ending": "bar",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Qenuzan",
+      "first": "Qenu",
+      "ending": "zan",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Qenumer",
+      "first": "Qenu",
+      "ending": "mer",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Reshusam",
+      "first": "Reshu",
+      "ending": "sam",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Reshubar",
+      "first": "Reshu",
+      "ending": "bar",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Reshuzan",
+      "first": "Reshu",
+      "ending": "zan",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Reshumer",
+      "first": "Reshu",
+      "ending": "mer",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Reshutav",
+      "first": "Reshu",
+      "ending": "tav",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Zeichen und Eid"
+    }
+  ],
+  "female_names": [
+    {
+      "name": "Arugama",
+      "first": "Aru",
+      "ending": "gama",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Aruresha",
+      "first": "Aru",
+      "ending": "resha",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Arulama",
+      "first": "Aru",
+      "ending": "lama",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Arudara",
+      "first": "Aru",
+      "ending": "dara",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Arutava",
+      "first": "Aru",
+      "ending": "tava",
+      "first_meaning": "Kraft und Führung",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Betiyada",
+      "first": "Beti",
+      "ending": "yada",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Betigama",
+      "first": "Beti",
+      "ending": "gama",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Betiresha",
+      "first": "Beti",
+      "ending": "resha",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Betilama",
+      "first": "Beti",
+      "ending": "lama",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Betidara",
+      "first": "Beti",
+      "ending": "dara",
+      "first_meaning": "Haus und Schutz",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Gamusama",
+      "first": "Gamu",
+      "ending": "sama",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Gamuyada",
+      "first": "Gamu",
+      "ending": "yada",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Gamugama",
+      "first": "Gamu",
+      "ending": "gama",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Gamuresha",
+      "first": "Gamu",
+      "ending": "resha",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Gamulama",
+      "first": "Gamu",
+      "ending": "lama",
+      "first_meaning": "Reise und Ausdauer",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Dalubara",
+      "first": "Dalu",
+      "ending": "bara",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Dalusama",
+      "first": "Dalu",
+      "ending": "sama",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Daluyada",
+      "first": "Dalu",
+      "ending": "yada",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Dalugama",
+      "first": "Dalu",
+      "ending": "gama",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Daluresha",
+      "first": "Dalu",
+      "ending": "resha",
+      "first_meaning": "Tor und Neubeginn",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Henuzana",
+      "first": "Henu",
+      "ending": "zana",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Henubara",
+      "first": "Henu",
+      "ending": "bara",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Henusama",
+      "first": "Henu",
+      "ending": "sama",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Henuyada",
+      "first": "Henu",
+      "ending": "yada",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Henugama",
+      "first": "Henu",
+      "ending": "gama",
+      "first_meaning": "Licht und Offenbarung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Warumera",
+      "first": "Waru",
+      "ending": "mera",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Waruzana",
+      "first": "Waru",
+      "ending": "zana",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Warubara",
+      "first": "Waru",
+      "ending": "bara",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Warusama",
+      "first": "Waru",
+      "ending": "sama",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Waruyada",
+      "first": "Waru",
+      "ending": "yada",
+      "first_meaning": "Bindung und Treue",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Zayitava",
+      "first": "Zayi",
+      "ending": "tava",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Zayimera",
+      "first": "Zayi",
+      "ending": "mera",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Zayizana",
+      "first": "Zayi",
+      "ending": "zana",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Zayibara",
+      "first": "Zayi",
+      "ending": "bara",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Zayisama",
+      "first": "Zayi",
+      "ending": "sama",
+      "first_meaning": "Schwert und Entschlossenheit",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Hetudara",
+      "first": "Hetu",
+      "ending": "dara",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Hetutava",
+      "first": "Hetu",
+      "ending": "tava",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Hetumera",
+      "first": "Hetu",
+      "ending": "mera",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Hetuzana",
+      "first": "Hetu",
+      "ending": "zana",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Hetubara",
+      "first": "Hetu",
+      "ending": "bara",
+      "first_meaning": "Mauer und Bewahrung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Tarilama",
+      "first": "Tari",
+      "ending": "lama",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Taridara",
+      "first": "Tari",
+      "ending": "dara",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Taritava",
+      "first": "Tari",
+      "ending": "tava",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Tarimera",
+      "first": "Tari",
+      "ending": "mera",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Tarizana",
+      "first": "Tari",
+      "ending": "zana",
+      "first_meaning": "Zyklus und Schicksal",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Yadiresha",
+      "first": "Yadi",
+      "ending": "resha",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Yadilama",
+      "first": "Yadi",
+      "ending": "lama",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Yadidara",
+      "first": "Yadi",
+      "ending": "dara",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Yaditava",
+      "first": "Yadi",
+      "ending": "tava",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Yadimera",
+      "first": "Yadi",
+      "ending": "mera",
+      "first_meaning": "Hand und Tat",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Kafugama",
+      "first": "Kafu",
+      "ending": "gama",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Kafuresha",
+      "first": "Kafu",
+      "ending": "resha",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Kafulama",
+      "first": "Kafu",
+      "ending": "lama",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Kafudara",
+      "first": "Kafu",
+      "ending": "dara",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Kafutava",
+      "first": "Kafu",
+      "ending": "tava",
+      "first_meaning": "Gabe und Handwerk",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Lamuyada",
+      "first": "Lamu",
+      "ending": "yada",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Lamugama",
+      "first": "Lamu",
+      "ending": "gama",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Lamuresha",
+      "first": "Lamu",
+      "ending": "resha",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Lamulama",
+      "first": "Lamu",
+      "ending": "lama",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Lamudara",
+      "first": "Lamu",
+      "ending": "dara",
+      "first_meaning": "Führung und Lehre",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Merusama",
+      "first": "Meru",
+      "ending": "sama",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Meruyada",
+      "first": "Meru",
+      "ending": "yada",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Merugama",
+      "first": "Meru",
+      "ending": "gama",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Meruresha",
+      "first": "Meru",
+      "ending": "resha",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Merulama",
+      "first": "Meru",
+      "ending": "lama",
+      "first_meaning": "Wasser und Leben",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Nunibara",
+      "first": "Nuni",
+      "ending": "bara",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Nunisama",
+      "first": "Nuni",
+      "ending": "sama",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Nuniyada",
+      "first": "Nuni",
+      "ending": "yada",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Nunigama",
+      "first": "Nuni",
+      "ending": "gama",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Nuniresha",
+      "first": "Nuni",
+      "ending": "resha",
+      "first_meaning": "Fülle und Fortbestand",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Samuzana",
+      "first": "Samu",
+      "ending": "zana",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Samubara",
+      "first": "Samu",
+      "ending": "bara",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Samusama",
+      "first": "Samu",
+      "ending": "sama",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Samuyada",
+      "first": "Samu",
+      "ending": "yada",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Samugama",
+      "first": "Samu",
+      "ending": "gama",
+      "first_meaning": "Pfeiler und Ordnung",
+      "ending_meaning": "Reise und Ausdauer"
+    },
+    {
+      "name": "Aynumera",
+      "first": "Aynu",
+      "ending": "mera",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Aynuzana",
+      "first": "Aynu",
+      "ending": "zana",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Aynubara",
+      "first": "Aynu",
+      "ending": "bara",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Aynusama",
+      "first": "Aynu",
+      "ending": "sama",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Aynuyada",
+      "first": "Aynu",
+      "ending": "yada",
+      "first_meaning": "Auge und Wissen",
+      "ending_meaning": "Tat und Hand"
+    },
+    {
+      "name": "Parutava",
+      "first": "Paru",
+      "ending": "tava",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Parumera",
+      "first": "Paru",
+      "ending": "mera",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Paruzana",
+      "first": "Paru",
+      "ending": "zana",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Parubara",
+      "first": "Paru",
+      "ending": "bara",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Parusama",
+      "first": "Paru",
+      "ending": "sama",
+      "first_meaning": "Mund und Verkündung",
+      "ending_meaning": "Pfeiler und Beständigkeit"
+    },
+    {
+      "name": "Sadudara",
+      "first": "Sadu",
+      "ending": "dara",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Sadutava",
+      "first": "Sadu",
+      "ending": "tava",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Sadumera",
+      "first": "Sadu",
+      "ending": "mera",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Saduzana",
+      "first": "Sadu",
+      "ending": "zana",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Sadubara",
+      "first": "Sadu",
+      "ending": "bara",
+      "first_meaning": "Fang und Auswahl",
+      "ending_meaning": "Haus und Familie"
+    },
+    {
+      "name": "Qenulama",
+      "first": "Qenu",
+      "ending": "lama",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Qenudara",
+      "first": "Qenu",
+      "ending": "dara",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Qenutava",
+      "first": "Qenu",
+      "ending": "tava",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Qenumera",
+      "first": "Qenu",
+      "ending": "mera",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Wasser und Leben"
+    },
+    {
+      "name": "Qenuzana",
+      "first": "Qenu",
+      "ending": "zana",
+      "first_meaning": "Maß und Genauigkeit",
+      "ending_meaning": "Schutz und Schwert"
+    },
+    {
+      "name": "Reshuresha",
+      "first": "Reshu",
+      "ending": "resha",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Herrschaft und Rang"
+    },
+    {
+      "name": "Reshulama",
+      "first": "Reshu",
+      "ending": "lama",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Führung und Lehre"
+    },
+    {
+      "name": "Reshudara",
+      "first": "Reshu",
+      "ending": "dara",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Tor und Gelegenheit"
+    },
+    {
+      "name": "Reshutava",
+      "first": "Reshu",
+      "ending": "tava",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Zeichen und Eid"
+    },
+    {
+      "name": "Reshumera",
+      "first": "Reshu",
+      "ending": "mera",
+      "first_meaning": "Kopf und Herrschaft",
+      "ending_meaning": "Wasser und Leben"
+    }
+  ],
+  "lexicon": [
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Rareshor",
+      "part_of_speech": "Substantiv",
+      "derivation": "RA- + RESH + -OR",
+      "literal": "königlicher Amtsträger des Kopfes",
+      "german": "König; oberster weltlicher Herrscher"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Urrareshor",
+      "part_of_speech": "Substantiv",
+      "derivation": "UR- + RARESHOR",
+      "literal": "erhöhter König",
+      "german": "Hochkönig; Großherrscher"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Rareshat",
+      "part_of_speech": "Substantiv",
+      "derivation": "RA- + RESH + -AT",
+      "literal": "königliche Trägerin der Herrschaft",
+      "german": "Königin; souveräne Herrscherin"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Reshir",
+      "part_of_speech": "Substantiv",
+      "derivation": "RESH + -IR",
+      "literal": "beruflicher Leiter",
+      "german": "Statthalter; Provinzverwalter"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Paror",
+      "part_of_speech": "Substantiv",
+      "derivation": "PAR + -OR",
+      "literal": "Amt des Mundes",
+      "german": "Herold; offizieller Sprecher"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Lamor",
+      "part_of_speech": "Substantiv",
+      "derivation": "LAM + -OR",
+      "literal": "Amt der Führung",
+      "german": "Kanzler; leitender Ratgeber"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Tayad",
+      "part_of_speech": "Substantiv",
+      "derivation": "TA- + YAD",
+      "literal": "festgehaltene Tat",
+      "german": "Erlass; ausgeführter königlicher Befehl"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Tatav",
+      "part_of_speech": "Substantiv",
+      "derivation": "TA- + TAV",
+      "literal": "aufgezeichnetes Zeichen",
+      "german": "Gesetz; Rechtskodex"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Wartav",
+      "part_of_speech": "Substantiv",
+      "derivation": "WAR + TAV",
+      "literal": "versiegelte Bindung",
+      "german": "Vertrag; rechtskräftiger Bund"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Ayenor",
+      "part_of_speech": "Substantiv",
+      "derivation": "AYEN + -OR",
+      "literal": "Amt des Auges",
+      "german": "Richter; königlicher Prüfer"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Sadir",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAD + -IR",
+      "literal": "beruflicher Ergreifer",
+      "german": "Gerichtsdiener; Steuereinnehmer"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Betim",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + -IM",
+      "literal": "Gesamtheit eines Hauses",
+      "german": "Adelshaus; Dynastie"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Reshaya",
+      "part_of_speech": "Substantiv",
+      "derivation": "RESH + -AYA",
+      "literal": "Linie des Hauptes",
+      "german": "Königsdynastie; Thronfolge"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Rahetum",
+      "part_of_speech": "Substantiv",
+      "derivation": "RA- + HET + -UM",
+      "literal": "königlich umgrenztes Gebiet",
+      "german": "Provinz; Verwaltungsbezirk"
+    },
+    {
+      "category": "Herrschaft und Recht",
+      "word": "Samor",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAM + -OR",
+      "literal": "Amt des tragenden Pfeilers",
+      "german": "Großhofmeister; oberster Verwalter"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Uralor",
+      "part_of_speech": "Substantiv",
+      "derivation": "UR- + AL + -OR",
+      "literal": "erhöhte Kraftperson",
+      "german": "Gott; hohe göttliche Macht"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Uralat",
+      "part_of_speech": "Substantiv",
+      "derivation": "UR- + AL + -AT",
+      "literal": "erhöhte weibliche Kraft",
+      "german": "Göttin; hohe göttliche Macht"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Ursamor",
+      "part_of_speech": "Substantiv",
+      "derivation": "UR- + SAM + -OR",
+      "literal": "hoher Träger des Tempelpfeilers",
+      "german": "Hohepriester"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Samir",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAM + -IR",
+      "literal": "Diener des Pfeilers",
+      "german": "Priester; Tempeldiener"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Basamum",
+      "part_of_speech": "Substantiv",
+      "derivation": "BA- + SAM + -UM",
+      "literal": "Ort der heiligen Pfeiler",
+      "german": "Tempel; großes Heiligtum"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Duhetum",
+      "part_of_speech": "Substantiv",
+      "derivation": "DU- + HET + -UM",
+      "literal": "verborgener ummauerter Ort",
+      "german": "Grabkammer; Gruft"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Mertav",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER + TAV",
+      "literal": "Zeichen des reinigenden Wassers",
+      "german": "Reinigungsritus"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Hanun",
+      "part_of_speech": "Substantiv",
+      "derivation": "HA- + NUN",
+      "literal": "sichtbar gemachte Fülle",
+      "german": "Segen; Fruchtbarkeitsgabe"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Ayenpar",
+      "part_of_speech": "Substantiv",
+      "derivation": "AYEN + PAR",
+      "literal": "sprechendes Auge",
+      "german": "Orakel; Weissagung"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Qentav",
+      "part_of_speech": "Substantiv",
+      "derivation": "QEN + TAV",
+      "literal": "genau gearbeitetes Machtzeichen",
+      "german": "Amulett; magisches Siegel"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Tartav",
+      "part_of_speech": "Substantiv",
+      "derivation": "TAR + TAV",
+      "literal": "Markierung des Zyklus",
+      "german": "Ritualkalender; heilige Zeitrechnung"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Mamerim",
+      "part_of_speech": "Substantiv",
+      "derivation": "MA- + MER + -IM",
+      "literal": "Gemeinschaft der Reinigung",
+      "german": "Priesterschaft eines Wasserkultes"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Dumeran",
+      "part_of_speech": "Substantiv",
+      "derivation": "DU- + MER + -AN",
+      "literal": "verborgener Lebensstrom",
+      "german": "Jenseitsreise; Weg der Seele"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Shenut",
+      "part_of_speech": "Substantiv",
+      "derivation": "SHEN + -UT",
+      "literal": "Eigenschaft des Zahnes",
+      "german": "heilige Durchsetzungskraft; göttliche Macht"
+    },
+    {
+      "category": "Tempel, Götter und Magie",
+      "word": "Tavaya",
+      "part_of_speech": "Substantiv",
+      "derivation": "TAV + -AYA",
+      "literal": "Linie des heiligen Zeichens",
+      "german": "Kulttradition; geweihte Schule"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Bet",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET",
+      "literal": "Haus",
+      "german": "Haus; Wohnraum"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Mabetim",
+      "part_of_speech": "Substantiv",
+      "derivation": "MA- + BET + -IM",
+      "literal": "geordnete Häusergemeinschaft",
+      "german": "Stadtviertel"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Bahetum",
+      "part_of_speech": "Substantiv",
+      "derivation": "BA- + HET + -UM",
+      "literal": "ummauerter bewohnter Ort",
+      "german": "Stadt; befestigte Siedlung"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Dalet",
+      "part_of_speech": "Substantiv",
+      "derivation": "DAL + -ET",
+      "literal": "kleiner genauer Zugang",
+      "german": "Tür; Torflügel"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Hebet",
+      "part_of_speech": "Substantiv",
+      "derivation": "HEN + BET",
+      "literal": "Lichtöffnung des Hauses",
+      "german": "Fenster; Lichtschacht"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Samet",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAM + -ET",
+      "literal": "einzelnes Stützstück",
+      "german": "Säule; Pfeiler"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Samum",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAM + -UM",
+      "literal": "Ort der Pfeiler",
+      "german": "Säulenhalle; Audienzhalle"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Merdal",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER + DAL",
+      "literal": "Tor des Wassers",
+      "german": "Schleuse; Kanaltor"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Qenbet",
+      "part_of_speech": "Substantiv",
+      "derivation": "QEN + BET",
+      "literal": "Haus der feinen Arbeit",
+      "german": "Werkstatt; Schreibstube"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Qenet",
+      "part_of_speech": "Substantiv",
+      "derivation": "QEN + -ET",
+      "literal": "genaues kleines Bauteil",
+      "german": "Ziegel; geschnittener Baustein"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Hetan",
+      "part_of_speech": "Substantiv",
+      "derivation": "HET + -AN",
+      "literal": "Zustand des Umschließens",
+      "german": "Mauerwerk; Befestigung"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Tardal",
+      "part_of_speech": "Substantiv",
+      "derivation": "TAR + DAL",
+      "literal": "kreisender Zugang",
+      "german": "Straßenkreuzung; großer Platz"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Reshbet",
+      "part_of_speech": "Substantiv",
+      "derivation": "RESH + BET",
+      "literal": "Haus des Herrschers",
+      "german": "Palast"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Nabet",
+      "part_of_speech": "Substantiv",
+      "derivation": "NA- + BET",
+      "literal": "Haus des Wachstums",
+      "german": "Speicherhaus; Kornkammer"
+    },
+    {
+      "category": "Stadt und Architektur",
+      "word": "Dabetum",
+      "part_of_speech": "Substantiv",
+      "derivation": "DA- + BET + -UM",
+      "literal": "Ort vor dem Eintritt ins Haus",
+      "german": "Vorhof; Vestibül"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Magamim",
+      "part_of_speech": "Substantiv",
+      "derivation": "MA- + GAM + -IM",
+      "literal": "geordnete Reisegemeinschaft",
+      "german": "Karawane"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Gamir",
+      "part_of_speech": "Substantiv",
+      "derivation": "GAM + -IR",
+      "literal": "beruflicher Reisender",
+      "german": "Karawanenführer; Fernhändler"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Gaman",
+      "part_of_speech": "Substantiv",
+      "derivation": "GAM + -AN",
+      "literal": "andauernde Reise",
+      "german": "Reise; Handelszug"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Waran",
+      "part_of_speech": "Substantiv",
+      "derivation": "WAR + -AN",
+      "literal": "Zustand der Bindung",
+      "german": "Handelspakt; Geschäftsbeziehung"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Kafwar",
+      "part_of_speech": "Substantiv",
+      "derivation": "KAF + WAR",
+      "literal": "gebundener Handschlag",
+      "german": "Tausch; Kaufgeschäft"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Kafir",
+      "part_of_speech": "Substantiv",
+      "derivation": "KAF + -IR",
+      "literal": "beruflicher Empfänger und Geber",
+      "german": "Kaufmann; Händler"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Kafet",
+      "part_of_speech": "Substantiv",
+      "derivation": "KAF + -ET",
+      "literal": "kleines empfangenes Wertstück",
+      "german": "Münze; Handelsgewicht"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Tavqen",
+      "part_of_speech": "Substantiv",
+      "derivation": "TAV + QEN",
+      "literal": "genaues Handelszeichen",
+      "german": "Buchhaltung; Kerbregister"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Tavqenir",
+      "part_of_speech": "Substantiv",
+      "derivation": "TAV + QEN + -IR",
+      "literal": "Beruf des genauen Zeichens",
+      "german": "Schreiber; Buchhalter"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Mimerum",
+      "part_of_speech": "Substantiv",
+      "derivation": "MI- + MER + -UM",
+      "literal": "Ort am Wasser",
+      "german": "Hafen"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Mergam",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER + GAM",
+      "literal": "Reise über Wasser",
+      "german": "Seefahrt; Überfahrt"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Nunir",
+      "part_of_speech": "Substantiv",
+      "derivation": "NUN + -IR",
+      "literal": "Beruf des Fisches",
+      "german": "Fischer"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Sadnunesh",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAD + NUN + -ESH",
+      "literal": "Werkzeug zum Fischfang",
+      "german": "Fischernetz; Fanggerät"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Betmer",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + MER",
+      "literal": "Haus auf dem Wasser",
+      "german": "Schiff; größeres Boot"
+    },
+    {
+      "category": "Handel und Seefahrt",
+      "word": "Betmerim",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + MER + -IM",
+      "literal": "Gemeinschaft der Wasserhäuser",
+      "german": "Flotte"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Mer",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER",
+      "literal": "Wasser",
+      "german": "Wasser; lebensspendende Flüssigkeit"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Mimeran",
+      "part_of_speech": "Substantiv",
+      "derivation": "MI- + MER + -AN",
+      "literal": "fließender Wasserzustand",
+      "german": "Fluss; großer Kanal"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Merum",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER + -UM",
+      "literal": "Ort des Wassers",
+      "german": "Brunnen; Zisterne"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Nun",
+      "part_of_speech": "Substantiv",
+      "derivation": "NUN",
+      "literal": "Fisch und Fülle",
+      "german": "Fisch; essbares Wassertier"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Nunim",
+      "part_of_speech": "Substantiv",
+      "derivation": "NUN + -IM",
+      "literal": "Menge von Fisch und Fülle",
+      "german": "Fischfang; Nahrungsvorrat"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Al",
+      "part_of_speech": "Substantiv",
+      "derivation": "AL",
+      "literal": "starkes Rind",
+      "german": "Rind; Zugochse"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Alim",
+      "part_of_speech": "Substantiv",
+      "derivation": "AL + -IM",
+      "literal": "Gemeinschaft der Rinder",
+      "german": "Herde"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Lamir",
+      "part_of_speech": "Substantiv",
+      "derivation": "LAM + -IR",
+      "literal": "Beruf des Treibens und Führens",
+      "german": "Hirte; Viehtreiber"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Namerum",
+      "part_of_speech": "Substantiv",
+      "derivation": "NA- + MER + -UM",
+      "literal": "wachsender Ort durch Wasser",
+      "german": "bewässertes Feld; Gartenland"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Mertar",
+      "part_of_speech": "Substantiv",
+      "derivation": "MER + TAR",
+      "literal": "Zyklus des Wassers",
+      "german": "jährliche Flut; Hochwasserzeit"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Betnun",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + NUN",
+      "literal": "Haus des Fisches",
+      "german": "Fischteich; Fischerei"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Shenun",
+      "part_of_speech": "Substantiv",
+      "derivation": "SHEN + NUN",
+      "literal": "was Zahn und Fülle verbindet",
+      "german": "Speise; Mahlzeit"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Shenan",
+      "part_of_speech": "Substantiv",
+      "derivation": "SHEN + -AN",
+      "literal": "Zustand des Verzehrens",
+      "german": "Hunger; Appetit"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Kafmerka",
+      "part_of_speech": "Substantiv",
+      "derivation": "KAF + MER + -KA",
+      "literal": "Gefäß für gehaltenes Wasser",
+      "german": "Krug; Schale"
+    },
+    {
+      "category": "Land, Wasser und Nahrung",
+      "word": "Gammer",
+      "part_of_speech": "Substantiv",
+      "derivation": "GAM + MER",
+      "literal": "Wasser der Reisenden",
+      "german": "Oase; Karawanenbrunnen"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Zay",
+      "part_of_speech": "Substantiv",
+      "derivation": "ZAY",
+      "literal": "Waffe und Schneide",
+      "german": "Waffe; Schwert"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Zayir",
+      "part_of_speech": "Substantiv",
+      "derivation": "ZAY + -IR",
+      "literal": "Beruf der Waffe",
+      "german": "Soldat; Krieger"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Razayor",
+      "part_of_speech": "Substantiv",
+      "derivation": "RA- + ZAY + -OR",
+      "literal": "königliches Waffenamt",
+      "german": "Heerführer; General"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Hetzay",
+      "part_of_speech": "Substantiv",
+      "derivation": "HET + ZAY",
+      "literal": "Mauer gegen Waffen",
+      "german": "Schild; große Schutzwand"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Mahetim",
+      "part_of_speech": "Substantiv",
+      "derivation": "MA- + HET + -IM",
+      "literal": "geordnete Gemeinschaft der Mauer",
+      "german": "Garnison; Stadtwache"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Zayesh",
+      "part_of_speech": "Substantiv",
+      "derivation": "ZAY + -ESH",
+      "literal": "greifbares Waffenwerkzeug",
+      "german": "Klinge; Dolch"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Qenir",
+      "part_of_speech": "Substantiv",
+      "derivation": "QEN + -IR",
+      "literal": "Beruf der Genauigkeit",
+      "german": "Feinhandwerker; Juwelier"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Yadir",
+      "part_of_speech": "Substantiv",
+      "derivation": "YAD + -IR",
+      "literal": "Beruf der Hand",
+      "german": "Arbeiter; Bauhandwerker"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Kayadan",
+      "part_of_speech": "Substantiv",
+      "derivation": "KA- + YAD + -AN",
+      "literal": "beherrschte Arbeit der Hand",
+      "german": "Handwerk; Herstellung"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Qenesh",
+      "part_of_speech": "Substantiv",
+      "derivation": "QEN + -ESH",
+      "literal": "Werkzeug der Genauigkeit",
+      "german": "Meißel; Ahle"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Waresh",
+      "part_of_speech": "Substantiv",
+      "derivation": "WAR + -ESH",
+      "literal": "Werkzeug der Befestigung",
+      "german": "Nagel; Haken; Klammer"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Kafesh",
+      "part_of_speech": "Substantiv",
+      "derivation": "KAF + -ESH",
+      "literal": "Werkzeug der Handfläche",
+      "german": "Hammer; Handwerkzeug"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Sadzay",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAD + ZAY",
+      "literal": "fangende Waffe",
+      "german": "Bogen; Jagdwaffe"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Zayem",
+      "part_of_speech": "Substantiv",
+      "derivation": "ZAY + -EM",
+      "literal": "Stoff der Waffe",
+      "german": "Metall; Bronze"
+    },
+    {
+      "category": "Krieg und Handwerk",
+      "word": "Samyad",
+      "part_of_speech": "Substantiv",
+      "derivation": "SAM + YAD",
+      "literal": "tragende Handarbeit",
+      "german": "Baukunst; Steinsetzen"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Betaya",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + -AYA",
+      "literal": "Linie des Hauses",
+      "german": "Familie; Abstammungslinie"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Nunu",
+      "part_of_speech": "Substantiv",
+      "derivation": "NUN + -U",
+      "literal": "einzelner Fortbestand",
+      "german": "Kind; Nachkomme"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Nunat",
+      "part_of_speech": "Substantiv",
+      "derivation": "NUN + -AT",
+      "literal": "weiblicher Fortbestand",
+      "german": "Tochter; junge Frau der Linie"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Alor",
+      "part_of_speech": "Substantiv",
+      "derivation": "AL + -OR",
+      "literal": "Träger von Kraft und Führung",
+      "german": "Vater; Familienoberhaupt"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Betat",
+      "part_of_speech": "Substantiv",
+      "derivation": "BET + -AT",
+      "literal": "Trägerin des Hauses",
+      "german": "Mutter; Hausherrin"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Warim",
+      "part_of_speech": "Substantiv",
+      "derivation": "WAR + -IM",
+      "literal": "Gemeinschaft der Gebundenen",
+      "german": "Verwandtschaft; Sippe"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Paran",
+      "part_of_speech": "Substantiv",
+      "derivation": "PAR + -AN",
+      "literal": "Zustand des Sprechens",
+      "german": "Rede; Sprache"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Parir",
+      "part_of_speech": "Substantiv",
+      "derivation": "PAR + -IR",
+      "literal": "Beruf des Mundes",
+      "german": "Erzähler; Sänger; öffentlicher Sprecher"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Hayen",
+      "part_of_speech": "Substantiv",
+      "derivation": "HA- + AYEN",
+      "literal": "erhelltes Auge",
+      "german": "Wissen; Verständnis"
+    },
+    {
+      "category": "Volk, Familie und Alltag",
+      "word": "Shenesh",
+      "part_of_speech": "Substantiv",
+      "derivation": "SHEN + -ESH",
+      "literal": "greifbare Nahrung für den Zahn",
+      "german": "Brot; feste Speise"
+    }
+  ]
+}

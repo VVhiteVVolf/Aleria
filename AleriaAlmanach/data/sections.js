@@ -1463,6 +1463,657 @@ const SECTIONS = [
   }
 ,
   {
+    key: "Sprachen", desc: "Sprachen, Alphabete & überlieferte Schriftsysteme", tab: "Sprachen",
+    entries: [
+      {
+        id: "rheunwaith",
+        title: "Rheunwaith",
+        subtitle: "Die Wassersprache der Avallornier",
+        type: "Sprache · Runenschrift",
+        category: "Sprachen · Avallornisch",
+        image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Alphabet_1x1.png",
+        stamp: "AVALLORN · WESTVOLK · SPRACHARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "📜",
+        symbol: null,
+        pages: [
+          {
+            image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Font_Render_Test.png",
+            imageFit: "contain",
+            imagePosition: "center",
+            imageWidth: 42,
+            pageTitle: "I. — Die Wassersprache der Avallornier",
+            description: "Das <strong>Rheunwaith</strong> ist mehr als ein Alphabet. Es ist ein Fluss aus Laut, Sinn und Form — geschaffen von den Avallorniern, die den westlichen Meeren folgten und ihre Sprache an Nebel, Gezeiten und salzgetränkten Wind banden.<br><br>Wo andere proto-albische Völker ihre Zeichen in Stein meißelten oder an Bäumen ausrichteten, verstanden die Avallornier Schrift als etwas Bewegliches. Ein Zeichen trägt nicht nur einen Laut, sondern zugleich Richtung, Stimmung und eine tiefere <em>Essenz</em>. Namen können dadurch Lied, Gelöbnis oder Warnung sein.<br><br>Die ältesten Überlieferungen schreiben die ersten Zeichen <strong>Nimue, der Dame der See</strong>, zu. Sie soll die Schrift in die Sandsteine der Küstenklippen gezeichnet haben, während das Meer ihre Worte mit Salz segnete.",
+            stats: [
+              ["Eigenname", "Rheunwaith — das Werk der Geheimnisse"],
+              ["Sprecher", "Avallornier · das alte Westvolk"],
+              ["Sprachfamilie", "Proto-albische Sprachfamilie"],
+              ["Schriftsystem", "30 Zeichen · drei Llyfynnau"],
+              ["Schreibrichtung", "Vertikal · spiralförmig · diagonal fließend"],
+              ["Überlieferung", "Llifweir · Lieder · Verträge · Prophezeiungen"]
+            ],
+            quote: "Kein Zeichen steht allein. Erst im Strom der anderen offenbart es seine Tiefe.",
+            quoteBy: "— Lehrsatz der Llifweir"
+          },
+          {
+            pageTitle: "II. — Alphabet, Essenz & Anwendung",
+            languagePage: true,
+            quote: "Worte sind Wasser: Sie tragen, spiegeln und verschlingen.",
+            quoteBy: "— Avallornische Überlieferung",
+            language: {
+              archiveLabel: "Sprachkunde · Avallornisches Schriftarchiv",
+              nativeName: "Rheunwaith · Das Werk der Geheimnisse",
+              family: "Proto-albische Sprachfamilie",
+              speakers: "Avallornier · Llifweir und Bewahrer alter Überlieferungen",
+              regions: "Westliche Inselreiche · avallornische Küsten und Heiligtümer",
+              scriptType: "Runenähnliches Alphabet · 30 Zeichen in drei Zeichenfamilien",
+              writingDirection: "Von oben nach unten · spiralförmig · diagonal fließend",
+              introduction: "Rheunwaith verbindet Lautung und Bedeutung. Jedes Zeichen bezeichnet einen Klang, trägt jedoch zugleich eine Essenz — eine Strömung aus Erinnerung, Absicht und spiritueller Kraft. Deshalb wird die Schrift nicht nur gelesen, sondern im Zusammenhang gedeutet.",
+              alphabetTitle: "Das Alphabet des Rheunwaith",
+              alphabetLayers: [
+                {
+                  label: "Alphabet",
+                  image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Alphabet_1x1.png",
+                  alt: "Das vollständige Rheunwaith-Alphabet mit 30 Zeichen, Lauten und Zeichennamen",
+                  caption: "Die 30 überlieferten Zeichen des Rheunwaith mit ihrer Lautzuordnung und ihren avallornischen Namen."
+                },
+                {
+                  label: "Schriftprobe",
+                  image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Font_Render_Test.png",
+                  alt: "Eine Schriftprobe des Rheunwaith mit einzelnen Runen, Wörtern und vollständigem Alphabet",
+                  caption: "Eine moderne Schriftprobe: Einzelzeichen, verbundene Wörter und die vollständige Zeichenfolge."
+                },
+                {
+                  label: "Ebene 3",
+                  image: "",
+                  alt: "",
+                  caption: "Für eine weitere Fassung oder historische Variante vorbereitet."
+                }
+              ],
+              sections: [
+                {
+                  title: "Einführung",
+                  text: "Das <strong>Rheunwaith</strong> ist ein Fluss aus Laut, Sinn und Form. Die Avallornier entwickelten es nicht als starres Werkzeug, sondern als lebendige Schrift, deren Linien Strömungen gleichen. Wer Rheunwaith liest, erfasst daher nicht nur Buchstaben, sondern auch Richtung, Absicht und Stimmung eines Wortes."
+                },
+                {
+                  title: "Hintergrund & Ursprung",
+                  text: "Als sich die Avallornier von den proto-albischen Völkern lösten und gen Westen zogen, formte das Meer ihre Kultur neu. Während Futhark an Stein und Ogham an Baum gebunden blieb, wählten sie den <em>Weg des Wassers</em>.<br><br>Im Zentrum der Überlieferung steht <strong>Nimue, die Dame der See</strong>. Ihr werden die ersten Zeichen zugeschrieben. Die Schrift wurde nicht gemeißelt, sondern mit Tinten aus Algen, tierischen Stoffen und zerstoßenen Schalen auf Stoff, Ton oder geglätteten Stein aufgetragen."
+                },
+                {
+                  title: "Aufbau & Struktur",
+                  text: "Das Alphabet umfasst <strong>30 Zeichen</strong> und gliedert sich in drei sogenannte <em>Llyfynnau</em>:<br><br><strong>Llyfyn y Don — Welle:</strong> Bewegung, Klang und Kommunikation.<br><strong>Llyfyn y Pwll — Teich:</strong> Tiefe, Seele und Geheimnisse.<br><strong>Llyfyn y Rhaeadr — Wasserfall:</strong> Kraft, Offenbarung und Entladung.<br><br>Mehrere Zeichen können durch Flussbögen verbunden werden. Solche Lautbündnisse und Bedeutungsketten verändern oder vertiefen den Sinn einer Zeichenfolge."
+                },
+                {
+                  title: "Bedeutungslehre",
+                  text: "Jedes Zeichen besitzt neben seiner Lautung eine <strong>Essenz</strong>. Diese Bedeutungen werden drei Sphären zugeordnet: <em>Ffrydiau</em>, den Strömen von Bewegung und Wandel; <em>Dyfnderoedd</em>, den Tiefen von Seele und Geheimnis; sowie <em>Goleudy</em>, den Lichtern von Erkenntnis und Absicht.<br><br>Ein Name ist dadurch niemals nur ein Name. Je nach Zusammenhang kann dieselbe Folge Segen, Fluch, Gelöbnis oder poetische Wahrheit ausdrücken."
+                },
+                {
+                  title: "Anwendung",
+                  text: "Der Name <strong>Rheunwaith</strong> wird traditionell aus drei Bedeutungsträgern gelesen: <em>Rhe</em> für Fluss, <em>Un</em> für Bindung und <em>Waith</em> für Geheimnis oder Absicht. Gemeinsam entsteht daraus das »Werk der Geheimnisse« — eine gebundene Strömung von Sinn.<br><br>In Namen, Zaubern und Prophezeiungen zählt deshalb nicht nur die korrekte Zeichenfolge. Entscheidend ist der Kontextfluss: die Stellung der Zeichen, ihre Verbindung und die Absicht der schreibenden Person."
+                },
+                {
+                  title: "Rituale & Überlieferung",
+                  text: "Rituelle Texte werden bevorzugt vertikal oder spiralförmig geschrieben; weltliche Dokumente verlaufen häufig diagonal von links unten nach rechts oben. Diese Bewegung symbolisiert den Aufstieg aus der Tiefe.<br><br>Die älteste rituelle Verwendung war den <strong>Llifweir</strong> vorbehalten — den »Hütern des Stromes«, einer avallornischen Kaste aus Gezeitenpriestern und Bewahrern des Schriftwissens. Sie nutzten Rheunwaith für Lieder, Verträge, Namen, Segnungen und Prophezeiungen."
+                }
+              ],
+              footer: "Aleria Almanach · Rheunwaith · Avallornisches Spracharchiv"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Rheunwaith",
+            nameListPage: true,
+            nameList: createRheunwaithNameListData()
+          },
+          {
+            pageTitle: "IV. — Zeichen, Laute & Silben",
+            scriptTablePage: true,
+            scriptTable: createRheunwaithScriptTableData()
+          }
+        ]
+      },
+      {
+        id: "ogham",
+        title: "Ogham",
+        subtitle: "Die heilige Baumschrift der frühen Alben und Druiden",
+        type: "Sprache · Baumschrift",
+        category: "Sprachen · Albisch",
+        image: "",
+        stamp: "ALBISCHE ÜBERLIEFERUNG · DRUIDENARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "🌿",
+        symbol: null,
+        pages: [
+          {
+            image: "",
+            pageTitle: "I. — Die heilige Struktur des Ogham",
+            description: "Das <strong>Ogham</strong> ist weit mehr als ein Alphabet. In der albischen und druidischen Überlieferung gilt es als heilige Struktur, in der Laut, Zahl und Bedeutung untrennbar miteinander verwoben sind. Jedes Zeichen steht zugleich für einen Klang, einen Baum oder ein Gewächs und einen Aspekt der natürlichen Ordnung.<br><br>Der Mythos schreibt seine Offenbarung <strong>Oghma</strong> zu, dem Gott der Weisheit, der Logik und des Namens. Der erste Druide soll die Zeichen nicht als gesprochenes Wort empfangen haben, sondern als innere Bilder: jeder Strich ein Zweig, jede Kerbe ein Pfad und jede Richtung eine Entscheidung.<br><br>In Ogham wurden Verträge gebunden, Namen geflochten, Orakel verkündet und Bannungen vollzogen. Wer die Zeichen liest, entziffert nach druidischer Lehre nicht nur Sprache — er liest die Beziehungen zwischen Körper, Geist, Seele und Welt.",
+            stats: [
+              ["Name", "Ogham · heilige Baumschrift"],
+              ["Offenbarer", "Oghma · Gott der Weisheit, Logik und Sprache"],
+              ["Bewahrer", "Druiden · Weisen des Oghma"],
+              ["Grundzeichen", "20 Zeichen · vier Aicmí"],
+              ["Erweiterung", "Fünftes Aicme · Sonderlaute und geheime Konzepte"],
+              ["Leseachse", "Von unten nach oben · alternativ links nach rechts"]
+            ],
+            quote: "Ein wahrer Name beschreibt nicht, wer du bist. Er bindet, was du werden kannst.",
+            quoteBy: "— Lehrsatz der Weisen des Oghma"
+          },
+          {
+            pageTitle: "II. — Zeichen, Bäume & Bedeutungsflechten",
+            languagePage: true,
+            quote: "Jeder Strich ist ein Zweig, jede Kerbe ein Pfad, jede Rune ein Urteil.",
+            quoteBy: "— Druidische Überlieferung",
+            language: {
+              archiveLabel: "Sprachkunde · Albisches Druidenarchiv",
+              nativeName: "Ogham · Die Sprache der Weltzeichen",
+              family: "Frühalbische Sprach- und Schrifttradition",
+              speakers: "Alben · Druiden · Weisen und Hüter alter Haine",
+              regions: "Alte albische Reiche · Druidenhaine · Kult- und Grenzsteine",
+              scriptType: "Baum- und Kerbschrift · 20 Grundzeichen in vier Aicmí",
+              writingDirection: "Entlang einer Stammachse · unten nach oben oder links nach rechts",
+              introduction: "Ogham ist Sprache, Symbolsystem und magische Ordnung zugleich. Ein Zeichen besitzt Lautwert, Zahlenwert, Pflanzenbezug und eine dreifache Wirkung auf Körper, Geist und Seele. Erst die Stellung innerhalb einer Zeichenfolge bestimmt, welche dieser Ebenen hervortritt.",
+              alphabetTitle: "Das Ogham-Alphabet",
+              alphabetLayers: [
+                { label: "Grundzeichen", image: "", alt: "", caption: "Für eine spätere Übersicht der 20 Grundzeichen vorbereitet." },
+                { label: "Fünftes Aicme", image: "", alt: "", caption: "Für Sonderzeichen und verlorene Zwischenklänge vorbereitet." },
+                { label: "Ritualformen", image: "", alt: "", caption: "Für vertikale, horizontale und rituelle Schreibweisen vorbereitet." }
+              ],
+              sections: [
+                {
+                  title: "Einführung",
+                  text: "Das <strong>Ogham</strong> wurde nicht zur bloßen Verständigung geschaffen, sondern zur Wirkung. Jedes Zeichen trägt einen Laut, einen Zahlenwert, eine Pflanze und einen Archetyp. Geschriebene Namen konnten Wahrheiten binden; Runenfolgen konnten schützen, warnen, erinnern oder einen Lebensweg ausrichten."
+                },
+                {
+                  title: "Hintergrund & Ursprung",
+                  text: "Nach der ältesten Überlieferung offenbarte <strong>Oghma</strong> dem ersten Druiden die Ordnung der Zeichen. Er lehrte keine willkürlichen Buchstaben, sondern Linien, die dem Wachstum von Ästen, Wurzeln und Stämmen folgen.<br><br>Die frühesten Inschriften wurden in Baumrinde geritzt oder entlang der Kanten heiliger Steine geschlagen. Dadurch galt Schrift als gewachsene Sprache: ein sichtbarer Teil derselben Ordnung, die Jahreszeiten, Geburt, Verfall und Erneuerung lenkt."
+                },
+                {
+                  title: "Aufbau & Struktur",
+                  text: "Das klassische Ogham besitzt <strong>20 Grundzeichen</strong>, die als Pfade Oghmas verstanden und in vier <em>Aicmí</em> gegliedert werden. Die Zeichenfamilien unterscheiden sich durch Richtung und Lage ihrer Kerben an einer Stammachse.<br><br>Das erste Aicme steht für Ursprung und Wachstum, das zweite für Verbindung und Schutz, das dritte für Konflikt und Herausforderung, das vierte für Wandlung, Tod und Wiedergeburt. Ein späteres fünftes Aicme ergänzt magische Laute, Sonderzeichen und verlorene Zwischenklänge."
+                },
+                {
+                  title: "Bedeutungslehre",
+                  text: "Jede Rune wirkt nach druidischer Lehre auf <strong>Körper, Geist und Seele</strong>. <em>Beith</em>, die Birke, bedeutet körperlich Reinigung, geistig Neubeginn und seelisch Erneuerung. <em>Duir</em>, die Eiche, bezeichnet Kraft und zugleich das Tor zwischen den Welten. <em>Idad</em>, die Eibe, trägt Tod und Wiedergeburt.<br><br>Mehrere Zeichen bilden ein Bedeutungsfeld. Saille, die Weide, verbindet Intuition und Traum; zusammen mit Muin, der Rebe, entsteht daraus die Vision durch Sprache."
+                },
+                {
+                  title: "Anwendung & Namensflechten",
+                  text: "Ein wahrer Name galt als Prophezeiung. Druiden bildeten Namen aus Runenfolgen, den sogenannten <strong>Namensflechten</strong>, und achteten neben Klang und Bedeutung auch auf die Zahlenwerte der Zeichen.<br><br>So kann ein Name Schutz, Prüfung, Herrschaft oder Wandel in sich tragen. Die überlieferten Namen Rathuin, Luirán, Aedhon, Sualtaim und Mogh Ruith gelten nicht als zufällige Lautfolgen, sondern als verdichtete Aussagen über Herkunft und mögliches Schicksal."
+                },
+                {
+                  title: "Ritual, Orakel & Prophetie",
+                  text: "Ogham-Zeichen können allein, als Inschrift oder in einem <strong>Flechtband</strong> verwendet werden. Reihenfolge, Achse und Bindungsfolge bestimmen, ob daraus ein Sinngefäß, ein Bannsiegel oder ein Seelenbild entsteht.<br><br>Bei Namensgebungen und Orakeln deuteten Druiden Naturzeichen gemeinsam mit den Runen. Der Name eines Kindes war daher weder Wunsch noch Schmuck, sondern Absicht und Urteil — eine Warnung vor dem Kommenden oder ein Anker für den Weg, den es beschreiten sollte."
+                }
+              ],
+              footer: "Aleria Almanach · Ogham · Albisches Druidenarchiv"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Ogham",
+            nameListPage: true,
+            nameList: createOghamNameListData()
+          },
+          {
+            pageTitle: "IV. — Zeichen, Lautwerte & Namensstämme",
+            scriptTablePage: true,
+            scriptTable: createOghamScriptTableData()
+          }
+        ]
+      },
+      {
+        id: "morgar-karnrith",
+        title: "Morgar",
+        subtitle: "Die Sprache der Morgorner · gemeißelt in Karnrith",
+        type: "Sprache · Bedeutungs- und Steinschrift",
+        category: "Sprachen · Morgornisch",
+        image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.png",
+        stamp: "MORGORN · KARNRITH · STEINGRATARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "⛏️",
+        symbol: null,
+        pages: [
+          {
+            image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Schriftprobe_2.000.png",
+            imageFit: "contain",
+            imagePosition: "center",
+            imageWidth: 46,
+            pageTitle: "I. — Die Rede des morgornischen Volkes",
+            description: "<strong>Morgar</strong> ist die bodenständige Gebirgssprache der Morgorner: kurz, hart und auf sichtbare Folgen ausgerichtet. Ihre Wörter benennen keine losgelösten Ideen, sondern Dinge und Handlungen — tragen, bauen, brechen, wachen, schwören und erinnern. Selbst Ehre wird als sichtbarer Wille verstanden, Recht als gehaltener Eid und Magie als verborgene Ursache.<br><br>Geschrieben wird Morgar in <strong>Karnrith</strong>, der »in Stein geritzten Schrift«. Dreißig Zeichen verbinden Laut und Bedeutungskeim. Ein einzelnes gerahmtes Zeichen kann als Sinnbild stehen; in einer fortlaufenden Zeichenkette trägt es seinen Lautwert. So bleibt jede Inschrift zugleich lesbarer Satz und verdichtete Aussage.<br><br>Germanische Anfangsbetonung und klare Zusammensetzungen geben Morgar sein Gewicht. Raue, gälisch anmutende Reibelaute wie <em>gh, dh, th</em> und <em>kh</em> halten die Sprache dennoch beweglich. Das Ergebnis ist für Hammer, Meißel, Knochenstichel und die Erinnerung eines Bergvolkes geschaffen.",
+            stats: [
+              ["Sprache", "Morgar · aus MOR + GHAIR · Rede des Volkes"],
+              ["Schrift", "Karnrith · aus KARN + -RITH · Steinschrift"],
+              ["Sprecher", "Morgorner · Sippen, Hallen und Bergreiche"],
+              ["Grundzeichen", "30 Zeichen · fünf Klüfte zu je sechs Stufen"],
+              ["Wortbildung", "Bedeutungsstämme · 12 Präfixe · 21 Suffixe"],
+              ["Schreibrichtung", "Alltag links nach rechts · monumental vertikal"]
+            ],
+            quote: "Ein Wort gilt erst dann, wenn sein Träger es mit Tat, Stein oder Eid beschwert.",
+            quoteBy: "— Morgornischer Lehrsatz"
+          },
+          {
+            pageTitle: "II. — Morgar, Karnrith & die fünf Klüfte",
+            languagePage: true,
+            quote: "Der letzte Stamm sagt, was ein Ding ist. Alles davor sagt, welche Last es trägt.",
+            quoteBy: "— Regel morgornischer Wortfügung",
+            language: {
+              archiveLabel: "Sprachkunde · Morgornisches Steingratarchiv",
+              nativeName: "Morgar · geschrieben in Karnrith",
+              family: "Eigenständige Gebirgssprache · germanische Härte und gälische Lautbewegung",
+              speakers: "Morgorner · Sippenräte · Handwerker · Rechts- und Erinnerungsbewahrer",
+              regions: "Morgornische Bergreiche · Hallen · Minen · Grenzfesten",
+              scriptType: "Monumentale Bedeutungs- und Lautschrift · 30 Zeichen in fünf Klüften",
+              writingDirection: "Alltag links nach rechts · Monumental von oben nach unten an Pfeilern und Türstürzen",
+              introduction: "Morgar und Karnrith sind zwei Seiten derselben Überlieferung: Morgar ist die gesprochene Sprache, Karnrith ihr geschnittenes Zeichensystem. Jeder der 30 Buchstaben besitzt Lautwert, Namen, Bedeutungsfeld und einen produktiven Wortstamm. Dadurch können Wörter gesprochen, zerlegt und zugleich als semantische Inschrift gelesen werden.",
+              alphabetTitle: "Karnrith Hochschnitt · 30 Zeichen",
+              alphabetLayers: [
+                {
+                  label: "Zeichentafel",
+                  image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.png",
+                  alt: "Vollständige Zeichentafel des Karnrith Hochschnitt mit 30 Zeichen, Lauten, Namen und Kernbedeutungen",
+                  caption: "Die fünf Klüfte des Karnrith: Fels, Raum, Blut, Hand und Geist — jeweils mit sechs Kerbstufen."
+                },
+                {
+                  label: "Schriftprobe",
+                  image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Schriftprobe_2.000.png",
+                  alt: "Karnrith-Schriftprobe mit Morgar, Karnrith, Urortharn, Faurpargor, Gharqarn und Yrngrum",
+                  caption: "Schriftprobe mit Grundwörtern, Zusammensetzungen und den sieben kanonischen Ligaturzeichen."
+                },
+                {
+                  label: "Historischer Schnitt",
+                  image: "",
+                  alt: "",
+                  caption: "Für eine spätere historische oder regionale Schnittvariante vorbereitet."
+                }
+              ],
+              sections: [
+                {
+                  title: "Sprache und Schrift",
+                  text: "Der Eigenname <strong>Morgar</strong> ist aus <em>mor-</em> »Mensch, Volk, Arbeit« und <em>ghar-</em> »Wort, Name, Wahrheit« entstanden; die ältere Fuge wurde im schnellen Sprechen zu Morgar zusammengezogen. <strong>Karnrith</strong> verbindet <em>karn</em> »Stein, Form, Dauer« mit <em>-rith</em> »geritztes Zeichen, Inschrift«.<br><br>Ein freistehendes, gerahmtes KARN-Zeichen kann Stein, Dauer oder Festigkeit bedeuten. In einer fortlaufenden Kette wird dasselbe Zeichen als K gelesen. Diese Doppelfunktion macht Karnrith zugleich alphabetisch und ideographisch."
+                },
+                {
+                  title: "Lautung, Silben & Betonung",
+                  text: "Morgar bevorzugt die Silbenformen <strong>CV, CVC, CCVC und CVCC</strong>; drei Konsonanten am Wortanfang werden vermieden. Die Vokale <em>a, e, i, o, u</em> bleiben kurz und voll, <em>y</em> klingt wie deutsches Ü und markiert häufig Ahnisches oder Ererbtes. Das R wird auch in Gruppen wie <em>kr, gr</em> und <em>rn</em> gerollt.<br><br>Die Betonung liegt gewöhnlich auf dem ersten Bedeutungsstamm: <strong>KÁR-hald</strong>, <strong>THÁR-ghair</strong>, <strong>FÁUR-par-gor</strong>. Die Digraphen NG, TH, KH, GH, SH, CH und DH zählen jeweils als ein Zeichen; Q bezeichnet einen tiefen, seltenen Laut des Magischen und Verborgenen."
+                },
+                {
+                  title: "Wortbau & Kopfregel",
+                  text: "Morgar bildet Wörter nach der Folge <strong>[Lage oder Menge] + [bestimmender Stamm] + [Hauptstamm] + [Ableitung]</strong>. Der letzte Stamm ist der Kopf und sagt, was ein Ding grundsätzlich ist: <em>Lanorn</em> ist ein ORN, also ein Amtsträger, der zum Land gehört; <em>Dorzarn</em> ist ein ZARN, also eine Wacht an der Grenze.<br><br>Treffen drei harte Konsonanten aufeinander, kann ein unbetontes Fugen-<em>a</em> eingeschoben werden; vor Endungen der Feinarbeit erscheint bisweilen <em>i</em>. Gleiche Fugenlaute verschmelzen, und nach einem vokalischen Stamm können b, d, g, k, s oder t in der Alltagssprache zu v, dh, gh, kh, sh oder th erweichen."
+                },
+                {
+                  title: "Die sechs Vokalstufen",
+                  text: "Der Vokal einer Ableitung zeigt ihre Funktion. Die <strong>A-Stufe</strong> bezeichnet Gegenstand, Stoff oder greifbare Grundlage; <strong>E</strong> Handlung, Vorgang oder Tausch; <strong>I</strong> Werkzeug, Einzelteil und Genauigkeit; <strong>O</strong> Person, Träger oder Amt; <strong>U</strong> Menge, Kollektiv oder Gebiet; <strong>Y</strong> Ahne, Erbe, Weihung und Fortbestand.<br><br>Darum ist <em>Pargor</em> die Person des Werkes, <em>Morur</em> die Menge der Menschen und <em>Choryr</em> die weitergetragene Ahnenehre. Die Stufen ersetzen keine Grammatik, sondern machen Ableitungen sichtbar und merkbar."
+                },
+                {
+                  title: "Die fünf Klüfte des Karnrith",
+                  text: "Die Zeichen folgen einer gedachten Felsrippe und einer strengen 5×7-Schnittmatrix. Jede der fünf <strong>Klüfte</strong> besitzt einen Grundgrat und sechs Kerbstufen: eine Kerbe links, zwei links, eine rechts, zwei rechts, eine Kreuzkerbe und schließlich einen gespaltenen Kopf.<br><br><strong>Felskluft:</strong> Stoff, Element, Naturkraft. <strong>Raumkluft:</strong> Ort, Grenze, Haus, Land und Weg. <strong>Blutkluft:</strong> Leib, Mensch, Sippe, Fortgang und Tod. <strong>Handkluft:</strong> Tat, Werk, Schnitt, Recht, Bruch und Schutz. <strong>Geistkluft:</strong> Maß, Wort, Wissen, Wille, Gott und Magie."
+                },
+                {
+                  title: "Schnitt, Leserichtung & Ligaturen",
+                  text: "Karnrith wurde für Hammer und Meißel, Knochenstichel und gekerbtes Holz entworfen. Rundungen fehlen; volle schmale Stämme, 30- bis 45-gradige Äste, Spiegelungen, gebrochene Achsen und Bindungsrauten geben dem Hochschnitt seine monumentale Form. Im Alltag läuft die Schrift links nach rechts. An Pfeilern und Türstürzen kann sie monumental von oben nach unten geführt werden.<br><br>Die sieben Digraphen besitzen eigene Ligaturen: <strong>NG · Ngrum</strong>, <strong>TH · Tharn</strong>, <strong>KH · Khorr</strong>, <strong>GH · Ghair</strong>, <strong>SH · Shenn</strong>, <strong>CH · Chor</strong> und <strong>DH · Dhair</strong>. Sie bleiben beim Zerlegen eines Wortes stets ein Zeichen."
+                },
+                {
+                  title: "Kultur, Namen & Prüfung neuer Wörter",
+                  text: "Morgornische Sprache bevorzugt Amt, Sippe, Arbeit, Land, Schutz und Erinnerung. Ein Traditionsname verbindet zwei Wurzeln: Die Familie spricht damit Wunsch oder Gedenken aus, keine unabwendbare Prophezeiung. Weibliche Namen verwenden alte weichere Endformen wie <em>-karna, -helda, -rena, -thera, -terga</em> und <em>-chora</em>.<br><br>Ein neues Wort gilt nur dann als stimmig, wenn jeder Stamm im Zeichen- oder Affixbestand erklärbar ist, der letzte Stamm den Wortkopf bildet, die Abstraktion körperlich oder sozial nachvollziehbar bleibt, die Lautung ohne Vierfachcluster auskommt und die Form eindeutig in Karnrith zerlegt werden kann."
+                },
+                {
+                  title: "Belegte Bildungen",
+                  text: "<strong>Urortharn</strong> — UR + OR + THARN: oberster Amtsträger des Eides, Hochkönig.<br><strong>Faurpargor</strong> — FAUR + PARG + OR: Person des Feuerwerks, Schmied.<br><strong>Gharqarn</strong> — GHAR + QARN: Magie des wahren Namens, Namenszauber.<br><strong>Yrngrum</strong> — YR + NGRUM: Ruhe der Ahnenlinie, Ahnengruft.<br><strong>Karhald</strong> — KAR + HALD: Steinhaus oder dauerhafte Steinhalle.<br><strong>Tharghair</strong> — THAR + GHAIR: Eidwort, Erlass oder verkündeter Gesetzestext."
+                }
+              ],
+              footer: "Aleria Almanach · Morgar · Karnrith · Morgornisches Spracharchiv"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Morgar",
+            nameListPage: true,
+            nameList: createKarnrithNameListData()
+          },
+          {
+            pageTitle: "IV. — Zeichen, Wortstämme & Ableitungen",
+            scriptTablePage: true,
+            scriptTable: createKarnrithScriptTableData()
+          }
+        ]
+      },
+      {
+        id: "infernal-nharazim",
+        title: "Infernal",
+        subtitle: "Die Machtsprache der infernalen Götter und Wesen",
+        type: "Sprache · Brand-, Beschwörungs- und Vertragsschrift",
+        category: "Sprachen · Infernal",
+        image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Zeichentafel.png",
+        stamp: "INFERNALE SPHÄREN · NHARAZIM · VERBOTENES ARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "🔥",
+        symbol: null,
+        pages: [
+          {
+            image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Render_Test.png",
+            imageFit: "contain",
+            imagePosition: "center",
+            imageWidth: 46,
+            pageTitle: "I. — Die Sprache unter dem gebrochenen Himmel",
+            description: "<strong>Infernal</strong> ist die Sprache der infernalen Götter und jener Wesen, die ihrer Ordnung, ihrem Hunger oder ihren Pakten entstammen. Sie steht den <strong>neun celestialen Göttern</strong> und den <strong>fünf elementaren Souveränen</strong> nicht bloß sprachlich, sondern metaphysisch entgegen. Wo Celestial ordnet, erhebt und heiligt, zwingt Infernal, enteignet und verkehrt; wo die elementaren Stimmen Stoff und Natur bewegen, greift Infernal nach Wille, Schuld und Namen.<br><br>Die Schrift dieser Sprache heißt <strong>Nharazim</strong>. Ihre dreißig Hauptsigillen wurden für Brandmale, Beschwörungen und Verträge geschaffen. Jedes Zeichen besitzt einen Laut, einen Sigillennamen und ein Wirkungsfeld. Ein geschriebenes Wort kann dadurch zugleich Aussage, Forderung und magischer Mechanismus sein.<br><br>Unter allen bekannten Sprachen gilt Infernal als das machtvollste Mittel, um Kontakt mit dem Infernalen aufzunehmen. Diese Stärke beruht nicht auf Reichweite allein: Nharazim benennt Tor, Preis, Zeuge und Bindung in genau jener Ordnung, die infernale Mächte als gültig anerkennen. Wer es verwendet, spricht deshalb selten nur <em>über</em> einen Pakt — die Sprache beginnt bereits, ihn zu formen.",
+            stats: [
+              ["Sprache", "Infernal · Machtsprache infernaler Götter und Wesen"],
+              ["Schrift", "Nharazim · 30 Brand-, Beschwörungs- und Vertragssigillen"],
+              ["Gegenordnung", "Neun Celestiale Götter · fünf elementare Souveräne"],
+              ["Wirkungsfelder", "Zerstörung · Unterwerfung · Macht · Besitz · Schuld"],
+              ["Höchste Eignung", "Kontakt, Anrufung und Bindung infernaler Mächte"],
+              ["Schreibrichtung", "Alltag horizontal · Verträge in senkrechten Siegelsäulen"]
+            ],
+            quote: "Ein celestiales Wort verheißt Ordnung. Ein infernales Wort verlangt einen Preis.",
+            quoteBy: "— Warnsatz aus dem Verbotenen Archiv"
+          },
+          {
+            pageTitle: "II. — Nharazim, Macht & infernale Verträge",
+            languagePage: true,
+            quote: "Sprich nicht den Namen, wenn du den Preis nicht kennst.",
+            quoteBy: "— Erste Regel infernaler Kontaktmagie",
+            language: {
+              archiveLabel: "Sprachkunde · Verbotenes Archiv infernaler Mächte",
+              nativeName: "Infernal · geschrieben in Nharazim",
+              family: "Überweltliche Machtsprache · infernale Gegenordnung zum Celestialen und Elementaren",
+              speakers: "Infernale Götter · infernale Wesen · Paktgeber · sterbliche Beschwörer und Vertragskundige",
+              regions: "Infernale Sphären · Pfortenräume · entweihte Heiligtümer · gebundene Beschwörungskreise",
+              scriptType: "Sigillenalphabet · 30 Hauptzeichen mit Lautwert, Namen und Wirkungsfeld",
+              writingDirection: "Gewöhnlich links nach rechts · Vertragssäulen senkrecht und siegelwärts",
+              introduction: "Infernal ist keine neutrale Verkehrssprache. Laut, Zeichen und Absicht bilden gemeinsam einen Wirkungsanspruch. Nharazim macht diesen Anspruch sichtbar: Dreißig Sigillen benennen Ursprung, Befehl, Preis, Fessel, Zeugen und Vollstreckung. In der richtigen Folge ist eine Inschrift nicht nur lesbar, sondern bereits die Architektur eines Paktes oder einer Anrufung.",
+              alphabetTitle: "Nharazim · Die 30 Hauptsigillen",
+              alphabetLayers: [
+                {
+                  label: "Zeichentafel",
+                  image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Zeichentafel.png",
+                  alt: "Vollständige Nharazim-Zeichentafel mit 30 infernalen Sigillen, ihren Namen und Bedeutungen",
+                  caption: "Die 26 Grundlaute sowie Ä, Ö, Ü und ß als eigenständige Sigillen verderbter Herkunft, gebrochenen Vertrages, Besessenheit und Meineids."
+                },
+                {
+                  label: "Schriftprobe",
+                  image: "../Fonts/Infernal-Font-1.000/Vorschau/Nharazim_Render_Test.png",
+                  alt: "Schriftprobe des Nharazim mit Grundsigillen, Sonderzeichen und infernalen Sigillennamen",
+                  caption: "Horizontale Brand- und Beschwörungsschrift mit eigener Zeichensetzung; Vertragstexte können zusätzlich senkrecht gesetzt werden."
+                },
+                {
+                  label: "Vertragssäule",
+                  image: "",
+                  alt: "",
+                  caption: "Für eine spätere Darstellung senkrechter Pakt- und Siegelsäulen vorbereitet."
+                }
+              ],
+              sections: [
+                {
+                  title: "Kosmische Gegenordnung",
+                  text: "Die infernalen Götter und Wesen stehen den <strong>neun celestialen Göttern</strong> und den <strong>fünf elementaren Souveränen</strong> als eigene Machtordnung gegenüber. Celestiale Sprache benennt höhere Ordnung, Gesetz und Erhebung; elementare Sprachen sprechen unmittelbar zu Feuer, Wasser, Erde, Luft und ihren souveränen Kräften. Infernal richtet sich stattdessen auf Herrschaft über Willen, Schuld, Besitz, Schmerz und Unterwerfung.<br><br>Diese Gegnerschaft macht Infernal nicht zu einer bloßen Umkehrung des Celestialen. Beide sind mythische Machtsprachen, doch sie begründen Gültigkeit verschieden: Celestial durch übergeordnete Wahrheit, Infernal durch Anspruch, Gegenleistung und vollstreckbare Bindung."
+                },
+                {
+                  title: "Sprache als wirkende Macht",
+                  text: "Ein infernaler Satz beschreibt seine Wirkung nicht nur — er beansprucht sie. Entscheidend sind <strong>Laut, Sigill, Absicht und Preis</strong>. Fehlt einer dieser Träger, bleibt die Formel schwächer oder mehrdeutig. Stimmen alle vier überein, kann Sprache ein Tor kennzeichnen, einen Namen erreichen, eine Schuld beziffern oder ein Wesen an die Bedingungen eines Paktes binden.<br><br>Darum ist Infernal die stärkste bekannte Kontaktsprache für das Infernale. Die Sigillen Ghol, Ish, Qezhar, Wexir und Ovrun bilden genau jene Begriffe ab, die eine Anrufung benötigt: Tor, Identität, Gegenleistung, Zeugnis und Siegel."
+                },
+                {
+                  title: "Lautung & Sprechgestalt",
+                  text: "Infernal bevorzugt harte Anlaute und deutlich getrennte Machtstämme. Häufig sind <em>kh, zh, rh, ss, th</em> und dunkle Verbindungen aus R, Z und V. Die Betonung fällt auf den Stamm, der den Anspruch trägt; ein abschließendes Siegelwort wird langsamer und tiefer gesprochen. Doppelkonsonanten wie in <em>Ssarakh</em> oder <em>Ssevr</em> werden hörbar gehalten, weil ihre Verkürzung den Wirkungsbereich verändern kann.<br><br>Groß- und Kleinbuchstaben verwenden dasselbe Sigill. Interpunktion besitzt eigene infernale Formen: Punkt und Doppelpunkt schließen Glieder, Ausrufezeichen vollstreckt einen Befehl, Fragezeichen markiert eine unbestätigte Forderung."
+                },
+                {
+                  title: "Die 30 Sigillen",
+                  text: "Nharazim umfasst <strong>30 Hauptsigillen</strong>: die 26 Grundlaute A bis Z sowie vier eigenständige Zeichen für Ä, Ö, Ü und ß. Diese Sonderzeichen sind keine bloßen Lautvarianten. <strong>Aeshra</strong> bezeichnet verdorbene Herkunft, <strong>Othrum</strong> den gebrochenen Vertrag, <strong>Uzhrek</strong> Besessenheit oder fremden Willen und <strong>Ssevr</strong> Doppelzunge und Meineid.<br><br>Jedes Sigill besitzt drei Schichten: den gesprochenen Laut, den überlieferten Namen und das Wirkungsfeld. Ashra ist A und zugleich Asche/Ursprung; Belkhar ist B und Bindung/Vertrag; Xarth ist X und Auslöschung/Leere."
+                },
+                {
+                  title: "Brandmal, Beschwörung & Vertrag",
+                  text: "Nharazim kennt drei Hauptformen. Ein <strong>Brandmal</strong> ist kurz und zielgebunden; es bezeichnet Besitz, Strafe, Rang oder bleibenden Anspruch. Eine <strong>Beschwörung</strong> öffnet mit Ghol ein Tor, bestimmt über Ish oder einen Dienstnamen das Ziel und nennt mit Qezhar den Preis. Ein <strong>Vertrag</strong> ordnet Leistung, Zeugen, Dauer und Folgen des Bruchs, bevor Ovrun die Kette versiegelt.<br><br>Dieselben Sigillen können in allen drei Formen auftreten. Ihre Stellung entscheidet jedoch, ob Ygrem Unterwerfung fordert, eine bereits erfolgte Unterwerfung festhält oder sie als Preis eines Paktes benennt."
+                },
+                {
+                  title: "Wirkungsketten & Wortbildung",
+                  text: "Infernale Formeln folgen gewöhnlich der Kette <strong>[angerufene Macht] + [Befehl oder Anspruch] + [Ziel] + [Preis] + [Zeuge] + [Siegel]</strong>. Nicht jedes Glied muss ausgesprochen werden, doch ausgelassene Teile gelten als offen und können vom stärkeren Vertragspartner ausgelegt werden. Das letzte Sigill bestimmt den Abschluss: Ovrun besiegelt, Zhaur vollstreckt, Xarth löscht aus.<br><br>Namen verbinden einen gekürzten Sigillenstamm mit einer Rang- oder Dienstendung. Der Anfang benennt die herrschende Kraft, das Ende die Funktion. <em>Belkhar</em> kann so zugleich Sigillenname und Personenname sein; <em>Rhazor</em> bezeichnet einen Herrn des Ruins, <em>Gholira</em> eine Herrin der Tore."
+                },
+                {
+                  title: "Wahre Namen & Dienstnamen",
+                  text: "Das Sigill <strong>Ish</strong> steht für den wahren Namen und das unverhüllte Selbst. Ein infernales Wesen gibt diesen Namen nur preis, wenn ein Pakt es zwingt, ein übergeordnetes Wesen ihn ausspricht oder die Offenbarung Teil eines größeren Handels ist. Sterbliche kennen daher meist Dienstnamen, Rangnamen und Titel.<br><br>Ein Dienstname ist keine wertlose Maske. Wird er mit Wexir bezeugt und durch Ovrun gesiegelt, kann auch er einen begrenzten Zugriff schaffen. Der wahre Name reicht tiefer, bindet aber zugleich den Rufenden enger an Preis und Folgen."
+                },
+                {
+                  title: "Kontaktmagie, Preis & Vertragsbruch",
+                  text: "Jede infernale Kontaktaufnahme schafft zumindest einen möglichen Anspruch. Eine sichere Formel benennt deshalb Ziel, Grenze, Gegenleistung und Ende, bevor das Tor geöffnet wird. <strong>Qezhar</strong> lässt den Preis nicht verschwinden; es macht ihn sichtbar. <strong>Wexir</strong> bewahrt das Geschehene, <strong>Ovrun</strong> schließt es, und <strong>Othrum</strong> bezeichnet den Moment, in dem ein Vertrag bricht und seine zurückgehaltenen Folgen freisetzt.<br><br>Die gefährlichsten Inschriften enden nicht mit Ovrun, sondern mit Zhaur oder Xarth. Sie suchen keinen fortdauernden Ausgleich, sondern Vollstreckung oder Auslöschung — und entsprechen damit dem tiefsten Zweck infernaler Sprache: Macht durch einen Anspruch, dem Widerstand und Ausweg genommen wurden."
+                }
+              ],
+              footer: "Aleria Almanach · Infernal · Nharazim · Verbotenes Spracharchiv"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Infernal",
+            nameListPage: true,
+            nameList: createInfernalNameListData()
+          },
+          {
+            pageTitle: "IV. — Sigillen, Wirkungsfelder & Ritualketten",
+            scriptTablePage: true,
+            scriptTable: createInfernalScriptTableData()
+          }
+        ]
+      },
+      {
+        id: "futhark",
+        title: "Futhark",
+        subtitle: "Die Steinrunen und Machtsprache der Nordstämme",
+        type: "Sprache · Runen- und Steinschrift",
+        category: "Sprachen · Nordvölkisch",
+        image: "",
+        stamp: "NORDSTÄMME · DREI ÆTTIR · RUNENARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "🪨",
+        symbol: null,
+        pages: [
+          {
+            image: "",
+            pageTitle: "I. — Worte mit Wille",
+            description: "Die Runen des <strong>Futhark</strong> sind mehr als Zeichen. Für die Nordstämme sind sie Worte mit Wille — eingebrannt in Stein, Knochen, Holz, Metall und bisweilen Fleisch. Ihr Ursprung liegt im Nebel der Vorzeit, an jener Grenze, an der Sprache, Schöpfung und göttliche Macht noch nicht voneinander getrennt waren.<br><br>Ihre fernste Wurzel reicht zur Ursprache der Proto-Alben und zur alten Oghma-Tradition zurück. Doch Meer, Zeit und Schuld trennten die nördlichen Sippen von den Wäldern, flüsternden Bäumen und Liedern ihrer Herkunft. Unter fremden Sternen und in rauerem Klima fror ihre Sprache gleichsam zu Stein: härter im Klang, kantiger in der Form und stärker auf Recht, Opfer und bindende Tat gerichtet.<br><br>Die Runenlehre wurde als <strong>Kreis aus Feuer und Schwur</strong> weitergegeben. Wissen lag nicht nur auf Pergament, sondern in Träumen, Runensteinen, Klingen und den Narben der Eingeweihten. Wer eine Rune sprach oder schnitt, setzte deshalb niemals bloß einen Buchstaben. Er berührte ein Bild, eine Wirkung und eine mögliche Schuld.",
+            stats: [
+              ["Name", "Futhark · nach Fehu, Uruz, Thurisaz, Ansuz, Raido und Kaunan"],
+              ["Sprecher", "Nordstämme · Runensänger · Runenmeißler · Runenpriester"],
+              ["Herkunft", "Nördlicher Zweig der proto-albischen Oghma- und Ogham-Tradition"],
+              ["Zeichenbestand", "24 Runen · drei Ættir zu je acht Zeichen"],
+              ["Trägermaterial", "Holz · Knochen · Stein · Metall · geweihte Waffen"],
+              ["Wirkung", "Laut · Bild · Kraft · Weissagung · Eid · Namensbindung"]
+            ],
+            quote: "Wer die Rune in seine Haut brennt, weiß: Die Rune blickt zurück.",
+            quoteBy: "— Lehrsatz der nordischen Runenpriester"
+          },
+          {
+            pageTitle: "II. — Die drei Ættir & der Kodex aus Kraft",
+            languagePage: true,
+            quote: "Der Laut trifft das Herz, bevor der Verstand die Rune liest.",
+            quoteBy: "— Überlieferung des Feuerkreises",
+            language: {
+              archiveLabel: "Sprachkunde · Nordisches Runenarchiv",
+              nativeName: "Futhark · Worte mit Wille",
+              family: "Nördlicher Zweig der proto-albischen Zeichen- und Lauttradition",
+              speakers: "Nordstämme · Runensänger · Meißler · Priester und Schwurkundige",
+              regions: "Nördliche Reiche · Küsten · Opferstätten · Grabhügel · Runensteine",
+              scriptType: "Älteres Futhark · 24 Runen in drei Ættir",
+              writingDirection: "Meist links nach rechts · auf Steinen und Stäben auch vertikal oder umlaufend",
+              introduction: "Futhark verbindet Laut, Bild und Wirkung. Jede Rune kann als Buchstabe gelesen, als Begriff gedeutet oder als Kraftträger geschnitten werden. Die vierundzwanzig Zeichen bilden drei Ættir und damit einen runischen Weltkodex: Wachstum und Bindung, Prüfung und Offenbarung, schließlich Recht, Sippe, Erbe und Sühne.",
+              alphabetTitle: "Das ältere Futhark · 24 Steinrunen",
+              alphabetLayers: [
+                { label: "Vollständiges Futhark", image: "", alt: "", caption: "Für eine spätere Bildtafel der 24 Runen vorbereitet." },
+                { label: "Die drei Ættir", image: "", alt: "", caption: "Für eine gegliederte Übersicht der Reihen Eiris, Runor und Tyrdras vorbereitet." },
+                { label: "Ritz- und Bindformen", image: "", alt: "", caption: "Für historische Ritzungen, Runenstäbe und Bindrunen vorbereitet." }
+              ],
+              sections: [
+                {
+                  title: "Ursprung & Abspaltung",
+                  text: "Die Runen der Nordvölker sind ein entfernter Seitentrieb des alten proto-albischen Wurzelwerks. Als die großen Wasserscheiden frühe Sippen voneinander trennten, zerschnitt das Meer nicht nur Land, sondern auch Klang, Geist und Glauben. Die nördlichen Linien verloren den unmittelbaren Zugang zum grünen Lied und entwickelten aus der Oghma- und Ogham-Tradition eine eigene Steinschrift.<br><br>Ihre Druiden und späteren Runenpriester wandten sich einer strengeren Lehre zu. Ordnung, Disziplin, Opfer, Recht und die wortgetreue Erfüllung eines Schwures wurden wichtiger als das fließende Naturbild. Die Verwandtschaft blieb in der Bedeutungslehre erhalten; die Form wurde jedoch hartkantig und für den Schnitt geschaffen."
+                },
+                {
+                  title: "Name & Zeichenfolge",
+                  text: "Der Name <strong>Futhark</strong> entsteht aus den Lauten der ersten sechs Runen: <strong>Fehu ᚠ, Uruz ᚢ, Thurisaz ᚦ, Ansuz ᚨ, Raido ᚱ</strong> und <strong>Kaunan ᚲ</strong>. Insgesamt umfasst das ältere Futhark vierundzwanzig Zeichen.<br><br>Eine Rune kann im fortlaufenden Text einen Laut tragen und zugleich allein für ein ganzes Bedeutungsfeld stehen. Fehu ist F, aber auch Vieh, beweglicher Besitz, Gewinn und die Verantwortung des Reichtums. Dagaz ist D, der Tag und jener Augenblick, in dem eine Nacht oder ein Schicksal kippt."
+                },
+                {
+                  title: "Erstes Ætt · Eiris",
+                  text: "Das erste Ætt umfasst <strong>ᚠ bis ᚹ</strong>: Fehu, Uruz, Thurisaz, Ansuz, Raido, Kaunan, Gebo und Wunjo. Es wird <strong>Eiris</strong> zugeordnet, der Göttin von Sinnlichkeit, Verlangen und fleischlicher Magie.<br><br>Seine Runen sprechen von Besitz und Gabe, körperlicher Kraft, gefährlichem Durchbruch, göttlichem Wort, Reise, Feuer, Bündnis und Freude. Gemeinsam beschreiben sie die Kräfte, durch die ein Leben beginnt, begehrt, wächst und sich mit anderen verbindet."
+                },
+                {
+                  title: "Zweites Ætt · Runor",
+                  text: "Das zweite Ætt umfasst <strong>ᚺ bis ᛋ</strong>: Hagalaz, Nauthiz, Isa, Jera, Eiwaz, Perthro, Algiz und Sowilo. Es steht unter <strong>Runor</strong>, dem Gott des Wissens, der List und des verborgenen Netzes.<br><br>Diese Reihe führt durch Umbruch, Not und Starre zu Reife, Tod und Wiedergeburt, verborgenem Los, Schutz und sieghafter Klarheit. Sie ist das Ætt der Prüfungen: Was unter Hagalaz zerbricht, wird durch Jera geerntet und unter Sowilo offenbar."
+                },
+                {
+                  title: "Drittes Ætt · Tyrdras",
+                  text: "Das dritte Ætt umfasst <strong>ᛏ bis ᛟ</strong>: Tiwaz, Berkano, Ehwaz, Mannaz, Laguz, Ingwaz, Dagaz und Othala. Es ist <strong>Tyrdras</strong> zugeordnet, dem Gott der Gerechtigkeit, des Opfers und der aufrechten Ehre.<br><br>Seine Runen ordnen Recht, Geburt, Vertrauen, Menschsein, Wasser, Fruchtbarkeit, Wende und Erbe. Hier wird persönliche Kraft zur Pflicht gegenüber Sippe und Weltordnung. Tiwaz verlangt das Opfer, Othala bewahrt, wofür es gebracht wurde."
+                },
+                {
+                  title: "Ritzung, Träger & Leserichtung",
+                  text: "Futhark ist linear, geradlinig und fast frei von Rundungen. Die Zeichen lassen sich mit Messer oder Meißel in Holz, Knochen, Stein und Metall schneiden, ohne dass die Faser oder Kante ihre Gestalt zerstört. Alltägliche Inschriften laufen meist von links nach rechts; auf Stäben können sie senkrecht, auf Steinen umlaufend gesetzt werden.<br><br>Runen erschienen auf Speeren, Klingen, Amuletten, Grabsteinen und Türpfosten. Der Träger gehört zur Aussage: Algiz auf einem Schild schützt anders als auf einer Grabstele; Raido auf einem Wagen spricht anders als am Eingang eines Tempels."
+                },
+                {
+                  title: "Laut, Bild & Wirkung",
+                  text: "Runenpriester unterschieden drei Ebenen. <strong>Der Laut</strong> ist das hörbare Zeichen. <strong>Das Bild</strong> ist der dargestellte Begriff — Vieh, Hagel, Eis, Sonne, Mensch oder Erbe. <strong>Die Wirkung</strong> ist der Einfluss, den die Rune im richtigen Zusammenhang auf Geist, Schicksal oder Handlung nehmen kann.<br><br>Keine Wirkung ist eindimensional. Fehu kann Wohlstand rufen und zugleich Gier oder Räuber anziehen. Hagalaz zerstört, kann aber auch reinigen. Isa bewahrt durch Starre und verhindert dadurch Bewegung. Eine Runenbindung wird daher nach Zeichen, Reihenfolge, Träger und Zweck beurteilt."
+                },
+                {
+                  title: "Namen, Sünde & Überlieferungen",
+                  text: "Nordische Namen bestehen meist aus zwei oder drei Runenstämmen und gelten als gebundene Aussagen. <strong>Sigurd</strong> verbindet Sieg und Licht mit urtümlicher Kraft und dem gewordenen Schicksal. Der Titel <strong>Jarl</strong> wird als Folge aus Jera, Ansuz und Laguz gedeutet: Reife, göttliche Weisung und fließende Führung.<br><br><strong>Tarnil</strong>, das geächtete Wort für Sünde, bezeichnet keinen bloßen moralischen Makel, sondern einen Bruch der runisch-kosmischen Ordnung: verdrehtes Recht, missbrauchtes Wort, verlassener Pfad, daraus erwachsende Not und verunreinigter Geist. Geschichten vom Tempel des Tyrdras und vom Runenstein des Fjolnir warnen deshalb vor derselben Wahrheit: Eine Rune kann Fluch und Eid zugleich sein."
+                }
+              ],
+              footer: "Aleria Almanach · Futhark · Nordisches Runenarchiv"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Futhark",
+            nameListPage: true,
+            nameList: createFutharkNameListData()
+          },
+          {
+            pageTitle: "IV. — Runen, Bedeutungen & Bindungen",
+            scriptTablePage: true,
+            scriptTable: createFutharkScriptTableData()
+          }
+        ]
+      },
+      {
+        id: "kanaanith",
+        title: "Kana’anith",
+        subtitle: "Konsonantensprache und Monumentalschrift Südost-Tirnaras",
+        type: "Sprache · RTL-Abjad · Monumentalschrift",
+        category: "Sprachen · Tirnarisch",
+        image: "../Fonts/Kanaanith-Gesamtpaket-1.000/Specimen/Kanaanith_Zeichentafel_1.000.png",
+        stamp: "SÜDOST-TIRNARA · KANA’ANITH · TEMPEL- UND HANDELSARCHIV",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "🏺",
+        symbol: null,
+        pages: [
+          {
+            image: "../Fonts/Kanaanith-Gesamtpaket-1.000/Specimen/Kanaanith_Schriftprobe_1.000.png",
+            imageFit: "contain",
+            imagePosition: "center",
+            imageWidth: 46,
+            pageTitle: "I. — Die Schrift der Städte, Tempel und Karawanen",
+            description: "<strong>Kana’anith</strong> ist die konsonantengetragene Sprache und Monumentalschrift Südost-Tirnaras. Ihre zweiundzwanzig Zeichen laufen von rechts nach links und verbinden Laut, Bildbedeutung und produktiven Wortstamm. Ein Buchstabe ist daher zugleich Schriftzeichen, Erinnerungshilfe und Baustein der kana’anithischen Denkweise.<br><br>Die älteste Überlieferung führt Kana’anith auf das Ogham der Proto-Alben zurück. Als Tirnara durch die Kontinentaltrennung isoliert wurde, wandelten die Menschen des Südostens die vertikale Baum- und Kerbschrift in ein horizontales Abjad um. Die neue Schrift passte zu Stein, gebranntem Ton, Metall, Papyrus, Handelstafeln und den monumentalen Fassaden wachsender Städte.<br><br>Die Umwelt Südost-Tirnaras lebt in jedem Zeichen fort: Ochse, Haus, Kamel, Tür, Fenster, Schwert, Mauer, Rad, Hand, Wasser, Fisch, Pfeiler, Auge und Mund. Aus diesen Bildern entstand ein Wortschatz für Herrschaft und Recht, Tempel und Magie, Architektur, Karawanen, Seefahrt, Bewässerung, Handwerk und Familie.",
+            stats: [
+              ["Eigenname", "Kana’anith · Sprache und Schrift Südost-Tirnaras"],
+              ["Herkunft", "Tirnarischer Zweig des proto-albischen Ogham"],
+              ["Schriftsystem", "Abjad · 22 bedeutungstragende Konsonanten"],
+              ["Schreibrichtung", "Von rechts nach links · horizontal"],
+              ["Wortbildung", "22 Wurzeln · 14 Präfixe · 18 Suffixe · sechs Vokalmuster"],
+              ["Kulturfelder", "Herrschaft · Tempel · Stadt · Handel · Wasser · Handwerk · Familie"]
+            ],
+            quote: "Ein Zeichen nennt den Laut. Seine Wurzel nennt die Welt, die darin getragen wird.",
+            quoteBy: "— Tirnarische Schreiberregel"
+          },
+          {
+            pageTitle: "II. — Abjad, Wurzeln & monumentale Form",
+            languagePage: true,
+            quote: "Was rechts beginnt, wird links vollendet und durch Taw besiegelt.",
+            quoteBy: "— Formel der kana’anithischen Schreiber",
+            language: {
+              archiveLabel: "Sprachkunde · Archiv Südost-Tirnaras",
+              nativeName: "Kana’anith · Monumentalschrift der 22 Wurzeln",
+              family: "Tirnarischer Zweig der proto-albischen Ogham-Tradition",
+              speakers: "Bewohner Südost-Tirnaras · Händler · Schreiber · Priesterschaften · Stadtverwaltungen",
+              regions: "Südost-Tirnara · Flussstädte · Hafenreiche · Karawanenwege · Tempelzentren",
+              scriptType: "Rechts-nach-links-Abjad · 22 Konsonanten mit Bild- und Wurzelbedeutung",
+              writingDirection: "Horizontal von rechts nach links · Vokale durch Kontext und Lesehilfen",
+              introduction: "Kana’anith besitzt einen bedeutungstragenden Konsonantenkern. Die Schrift hält vor allem diese Wurzeln fest; Vokale bestimmen in der gesprochenen Sprache Aussprache, Wortart und grammatische Form. Dadurch kann dieselbe Zeichenfolge als Grundbegriff, Amt, Beruf, Ort, Kollektiv oder rituelle Erhöhung erscheinen.",
+              alphabetTitle: "Die 22 Zeichen des Kana’anith",
+              alphabetLayers: [
+                {
+                  label: "Zeichentafel",
+                  image: "../Fonts/Kanaanith-Gesamtpaket-1.000/Specimen/Kanaanith_Zeichentafel_1.000.png",
+                  alt: "Vollständige Kana’anith-Zeichentafel mit 22 Zeichen, Namen und Bedeutungsfeldern",
+                  caption: "Die 22 Konsonantenzeichen mit Bildbedeutung und kulturellem Bedeutungsraum — gelesen von rechts nach links."
+                },
+                {
+                  label: "Schriftprobe",
+                  image: "../Fonts/Kanaanith-Gesamtpaket-1.000/Specimen/Kanaanith_Schriftprobe_1.000.png",
+                  alt: "Kana’anith-Schriftprobe mit den Wörtern Rareshor, Basamum, Mimerum, Magamim, Ayenpar und Betmerim",
+                  caption: "Belegte Kulturwörter für König, Tempel, Hafen, Karawane, Orakel und Flotte im monumentalen Tempelschnitt."
+                },
+                {
+                  label: "Kursive Hand",
+                  image: "",
+                  alt: "",
+                  caption: "Für eine spätere Tafel der alltäglichen kursiven Handels- und Schreibhand vorbereitet."
+                }
+              ],
+              sections: [
+                {
+                  title: "Ursprung in Tirnara",
+                  text: "Kana’anith entwickelte sich aus dem <strong>Ogham der Proto-Alben</strong>, nachdem Tirnara durch die Kontinentaltrennung von den übrigen Landmassen isoliert worden war. Die Menschen des Südostens übernahmen nicht einfach die alte Baumordnung. Sie passten Schrift und Sprache an neue Materialien, Städte, Tempel, Handelswege und Flusskulturen an.<br><br>Aus vertikalen Kerblinien wurde eine horizontale Rechts-nach-links-Schrift. Die alten Naturbilder verwandelten sich in Zeichen einer urbanen und reisenden Welt: Beth wurde Haus und Besitz, Gimel Kamel und Karawane, Mem Wasser und Lebensstrom, Samekh Pfeiler und geordnete Institution."
+                },
+                {
+                  title: "Sprachcharakter & Lautung",
+                  text: "Kana’anith ist konsonantengetragen. Meist bilden drei Konsonanten den eigentlichen Wortkern; alte Amts- und Alltagswörter bewahren auch zweikonsonantige Wurzeln. Bevorzugt werden die Silben <strong>CV, CVC, CVV und CVVC</strong>; Wörter beginnen gewöhnlich nicht mit zwei Konsonanten.<br><br>Die Grundvokale sind <em>a, i</em> und <em>u</em> sowie ihre langen Formen ā, ī und ū. E und O gelten als jüngere Küsten- und Handelsvarianten. Die Betonung liegt meist auf der vorletzten Silbe; eine lange Endsilbe zieht sie an sich. Harte Kultlaute sind ḥ, ṭ, ṣ, q, ʾ und ʿ."
+                },
+                {
+                  title: "Abjad & Rechts-nach-links-Schrift",
+                  text: "Die Monumentalschrift notiert vor allem <strong>22 Konsonanten</strong>. Vokale werden aus Kontext und Wortform erschlossen oder durch Aleph, Ayin, Yodh und Waw als Lesehilfen angedeutet. In der lateinischen Arbeitsumschrift erscheinen sie dagegen vollständig.<br><br>Geschrieben wird von rechts nach links. Die echten Unicode-Zeichen U+10900 bis U+10915 tragen diese Laufrichtung selbst. Für die praktische Eingabe gelten SH für Shin/š, HH für Heth/ḥ, TT für Teth/ṭ und SS für Sade/ṣ. Der lokale Font setzt diese Folgen zusätzlich als Ligaturen."
+                },
+                {
+                  title: "Bildzeichen & Wurzelsilben",
+                  text: "Jedes Zeichen besitzt Name, Laut, Bildbedeutung und eine produktive Wurzelsilbe. <strong>Aleph</strong> zeigt den Ochsen und bildet AL für Kraft, Führung, Last und Ursprung. <strong>Beth</strong> wird zu BET für Haus, Familie, Innenraum und Besitz. <strong>Gimel</strong> liefert GAM für Reise, Karawane und Fernhandel.<br><br>Diese Wurzeln sind keine bloßen Buchstabennamen. Sie bilden Wörter: MER bezeichnet Wasser, RESH Herrschaft, PAR Rede und Verkündung, QEN Maß und Feinarbeit, TAV Zeichen, Eid und vollendetes Recht."
+                },
+                {
+                  title: "Vokalmuster & Formenlehre",
+                  text: "Der Konsonantenkern bleibt erkennbar, während Vokale und Endungen seine Funktion bestimmen. <strong>CaCaC</strong> bildet greifbare Grundwörter wie <em>Gaman</em>, Reise. <strong>CiCiC</strong> bezeichnet Berufe wie <em>Gamir</em>, Karawanenführer. <strong>CuCaC</strong> erhöht oder ritualisiert einen Begriff, etwa <em>Uralor</em>, Gottheit.<br><br><strong>CaCāt</strong> bildet weibliche oder institutionelle Formen wie <em>Rareshat</em>, Königin. <strong>ma-CaC-im</strong> schafft geordnete Kollektive wie <em>Magamim</em>, Karawane. <strong>CaC-um</strong> bezeichnet Orte und Gebiete wie <em>Merum</em>, Brunnen oder Zisterne."
+                },
+                {
+                  title: "Präfixe & Suffixe",
+                  text: "Vierzehn Präfixe ordnen Lage, Rang und Wirkung. <em>Ba-</em> bezeichnet Innenraum oder bewohnten Ort, <em>ma-</em> ein geordnetes Kollektiv, <em>mi-</em> Wasser- und Küstenbezug, <em>ra-</em> königliche oder amtliche Geltung, <em>du-</em> Verborgenes und Unterirdisches und <em>ur-</em> hohe oder heilige Erhöhung.<br><br>Achtzehn Suffixe bestimmen Person, Amt, Zahl, Ort und Beschaffenheit. <em>-ir</em> bildet Berufe, <em>-or</em> Würdenträger, <em>-im</em> Kollektive, <em>-um</em> Orte, <em>-aya</em> Traditionslinien, <em>-ka</em> Gefäße und <em>-tav</em> vereidigte, versiegelte oder vollendete Formen."
+                },
+                {
+                  title: "Kultur in 100 Wörtern",
+                  text: "Der belegte Grundwortschatz gliedert sich in sieben Lebensbereiche. Herrschaft und Recht kennen <em>Rareshor</em>, König, <em>Tatav</em>, Gesetz, und <em>Wartav</em>, Vertrag. Tempel und Magie kennen <em>Basamum</em>, Heiligtum, <em>Ayenpar</em>, Orakel, und <em>Qentav</em>, magisches Siegel.<br><br>Stadt und Architektur benennen Palast, Mauern, Werkstätten und Säulenhallen; Handel und Seefahrt Karawanen, Häfen, Schiffe und Buchhaltung; Land und Wasser Flut, Oase und Bewässerung; Krieg und Handwerk Waffen, Garnisonen und Meißel; Familie und Alltag Sippe, Kind, Eltern, Sprache und Brot."
+                },
+                {
+                  title: "Namen, Schriftstile & Monumentalfont",
+                  text: "Ein Personenname verbindet eine gewünschte Grundanlage mit Aufgabe, Schutz oder Vermächtnis. <em>Aru-</em> steht für Kraft und Führung, <em>Beti-</em> für Haus und Schutz, <em>Gamu-</em> für Reise und Ausdauer, <em>Meru-</em> für Wasser und Leben und <em>Qenu-</em> für Maß und Genauigkeit. Weibliche Traditionsformen verwenden weichere Endungen auf -a.<br><br>Historisch kennt Kana’anith monumentale, formale und kursive Hände. Der archivierte Font bildet den eigenständigen tirnarischen Tempelschnitt ab. Seine echten RTL-Codepunkte bewahren die Laufrichtung; lateinische Aliaszeichen und der mitgelieferte Transliterator dienen der Eingabe in modernen Werkzeugen."
+                }
+              ],
+              footer: "Aleria Almanach · Kana’anith · Spracharchiv Südost-Tirnaras"
+            }
+          },
+          {
+            pageTitle: "III. — 400 Namen aus dem Kana’anith",
+            nameListPage: true,
+            nameList: createKanaanithNameListData()
+          },
+          {
+            pageTitle: "IV. — Zeichen, Wurzeln & Formenlehre",
+            scriptTablePage: true,
+            scriptTable: createKanaanithScriptTableData()
+          }
+        ]
+      },
+      createLinguaArgentiModuleEntry(),
+      createStoicheiaModuleEntry()
+    ]
+  },
+  {
     key: "Chroniken", desc: "Szenen, Ereignisse & Geschichten aus Aleria", tab: "Chroniken",
     entries: [
       {

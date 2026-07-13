@@ -315,6 +315,7 @@ function validateModulePageAssets(errors, page, index) {
   pushInvalidModuleAsset(errors, `${prefix} Handelskatalog Beraterbild`, page.tradeCatalog?.advisorImage);
   validateModuleAssetRows(errors, `${prefix} Handelsgut`, page.tradeCatalog?.items, [['image', 'Bild'], ['sealImage', 'Siegel']]);
   validateModuleAssetRows(errors, `${prefix} Kartenreiter`, page.mapTemplate?.tabs, [['image', 'Bild']]);
+  validateModuleAssetRows(errors, `${prefix} Sprache Alphabet`, page.language?.alphabetLayers, [['image', 'Bild']]);
 
   (page.sceneBlocks || []).forEach((block, blockIndex) => {
     pushInvalidModuleAsset(errors, `${prefix} Szene ${blockIndex + 1} Avatar`, block.avatar);

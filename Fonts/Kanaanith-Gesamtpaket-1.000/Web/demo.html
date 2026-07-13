@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kana'anith Monumental 1.000</title>
+  <link rel="stylesheet" href="kanaanith.css">
+  <style>
+    :root { color-scheme: dark; --papyrus:#e8d9ad; --lapis:#1d6076; --gold:#c59a49; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:#102127; color:var(--papyrus); font-family:system-ui,sans-serif; }
+    main { width:min(1100px,92vw); margin:auto; padding:54px 0 80px; }
+    h1 { margin:0; font-size:clamp(2.3rem,7vw,4.8rem); letter-spacing:.12em; color:#f2e6c4; }
+    .lead { max-width:75ch; color:#bdb397; line-height:1.6; }
+    .panel { margin-top:28px; padding:26px; border:1px solid #75643f; border-radius:14px; background:#172e35; box-shadow:0 18px 50px #0008; }
+    label { display:block; margin-bottom:8px; color:var(--gold); font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    textarea { width:100%; min-height:115px; resize:vertical; padding:16px; border:1px solid #75643f; border-radius:8px; background:#0c1a1f; color:#f2e6c4; font:1rem/1.5 ui-monospace,monospace; }
+    .controls { display:flex; gap:12px; align-items:center; margin:18px 0; color:#bdb397; }
+    input { flex:1; accent-color:var(--gold); }
+    #output { min-height:280px; display:flex; align-items:center; justify-content:center; padding:32px; white-space:pre-wrap; overflow-wrap:anywhere; text-align:center; color:#d6f1f4; background:linear-gradient(145deg,#21444d,#10272e); border-radius:10px; text-shadow:4px 7px 8px #0009; }
+    .note { color:#bdb397; line-height:1.7; }
+    code { color:#e7ba69; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>KANA’ANITH</h1>
+    <p class="lead">Monumentalschrift Südost-Tirnaras. Die Eingabe wird in die 22 kana’anithischen Unicode-Zeichen übertragen und anschließend korrekt von rechts nach links dargestellt.</p>
+    <section class="panel">
+      <label for="source">Lateinische Umschrift</label>
+      <textarea id="source" spellcheck="false">RARESHOR BASAMUM
+MIMERUM MAGAMIM
+AYENPAR BETMERIM</textarea>
+      <div class="controls"><span>Größe</span><input id="size" type="range" min="42" max="180" value="100"><output id="sizeValue">100 px</output></div>
+      <div id="output" class="kanaanith" dir="rtl" aria-live="polite"></div>
+      <p class="note"><strong>Sonderfolgen:</strong> <code>SH</code> = Shin, <code>HH</code> = Heth, <code>TT</code> = Teth, <code>SS</code> = Sade. Vokale werden in der praktischen Umschrift durch Aleph, Ayin, Yodh und Waw als Lesehilfen wiedergegeben.</p>
+    </section>
+  </main>
+  <script src="transliterator.js"></script>
+  <script>
+    const source=document.querySelector('#source'), output=document.querySelector('#output'), size=document.querySelector('#size'), sizeValue=document.querySelector('#sizeValue');
+    function update(){ output.textContent=toKanaanith(source.value); output.style.fontSize=size.value+'px'; output.style.lineHeight='1.4'; sizeValue.value=size.value+' px'; }
+    source.addEventListener('input',update); size.addEventListener('input',update); update();
+  </script>
+</body>
+</html>

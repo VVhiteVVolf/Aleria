@@ -69,7 +69,8 @@ async function verifyEditCode() {
         Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
         segment.side || 'left',
         segment.durationSeconds,
-        segment.spellFont
+        segment.language || segment.spellFont,
+        segment.languageColor
       ));
     } else {
       _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null)];

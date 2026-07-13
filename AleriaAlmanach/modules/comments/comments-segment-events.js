@@ -86,12 +86,20 @@ function handleCommentSegmentActionMouseDown(event) {
 
 function handleCommentSegmentTextInput(event) {
   const field = event.target;
-  if (field?.matches?.('[data-action="set-comment-segment-spell-font"]')) {
-    setCommentSegmentSpellFont(field.dataset.segmentId || '', field.value);
+  if (field?.matches?.('[data-action="set-comment-segment-language"]')) {
+    setCommentSegmentLanguage(field.dataset.segmentId || '', field.value);
     return;
   }
-  if (field?.matches?.('[data-action="set-edit-comment-segment-spell-font"]')) {
-    setEditCommentSegmentSpellFont(field.dataset.segmentId || '', field.value);
+  if (field?.matches?.('[data-action="set-edit-comment-segment-language"]')) {
+    setEditCommentSegmentLanguage(field.dataset.segmentId || '', field.value);
+    return;
+  }
+  if (field?.matches?.('[data-action="set-comment-segment-language-color"]')) {
+    setCommentSegmentLanguageColor(field.dataset.segmentId || '', field.value);
+    return;
+  }
+  if (field?.matches?.('[data-action="set-edit-comment-segment-language-color"]')) {
+    setEditCommentSegmentLanguageColor(field.dataset.segmentId || '', field.value);
     return;
   }
   if (field?.matches?.('[data-action="set-comment-segment-duration"]')) {

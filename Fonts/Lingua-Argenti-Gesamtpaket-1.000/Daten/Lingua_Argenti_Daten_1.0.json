@@ -1,0 +1,2659 @@
+{
+  "sprache": "Lingua Argenti",
+  "version": "1.0",
+  "alphabet": [
+    [
+      "A",
+      "Auctoritas",
+      "a",
+      "Ansehen, gesellschaftliches Gewicht, Recht zu sprechen",
+      "Ordo Primus"
+    ],
+    [
+      "B",
+      "Bellum",
+      "b",
+      "Krieg als organisiertes Mittel der Staatsgewalt",
+      "Ordo Secundus"
+    ],
+    [
+      "C",
+      "Civitas",
+      "k / z",
+      "Bürgerschaft und Zugehörigkeit zum Reich",
+      "Ordo Primus"
+    ],
+    [
+      "D",
+      "Disciplina",
+      "d",
+      "militärische und geistige Zucht",
+      "Ordo Secundus"
+    ],
+    [
+      "E",
+      "Eloquentia",
+      "e",
+      "Beredsamkeit und Macht des Wortes",
+      "Ordo Tertius"
+    ],
+    [
+      "F",
+      "Fides",
+      "f",
+      "Treue, Eid und gegebenes Wort",
+      "Ordo Secundus"
+    ],
+    [
+      "G",
+      "Gloria",
+      "g",
+      "durch Taten erworbener Ruhm",
+      "Ordo Secundus"
+    ],
+    [
+      "H",
+      "Harmonia",
+      "h",
+      "Gleichgewicht von Geist und Staat",
+      "Ordo Tertius"
+    ],
+    [
+      "I",
+      "Imperium",
+      "i / j",
+      "Befehlsgewalt und höchstes Herrschaftsrecht",
+      "Ordo Primus"
+    ],
+    [
+      "L",
+      "Lex",
+      "l",
+      "Gesetz und unverbrüchliche Regel",
+      "Ordo Primus"
+    ],
+    [
+      "M",
+      "Mars",
+      "m",
+      "Kriegsgott und rohe Kampfkraft",
+      "Ordo Secundus"
+    ],
+    [
+      "N",
+      "Nobilitas",
+      "n",
+      "Adel, ererbtes Blut und Geburtsstand",
+      "Ordo Primus"
+    ],
+    [
+      "O",
+      "Ordo",
+      "o",
+      "Ordnung und Struktur des Reiches",
+      "Ordo Primus"
+    ],
+    [
+      "P",
+      "Potestas",
+      "p",
+      "verliehene Amtsgewalt",
+      "Ordo Secundus"
+    ],
+    [
+      "Q",
+      "Quaestio",
+      "qu",
+      "Frage, Wissensdurst und Gelehrsamkeit",
+      "Ordo Tertius"
+    ],
+    [
+      "R",
+      "Ratio",
+      "r",
+      "Vernunft und ordnendes Denken",
+      "Ordo Primus"
+    ],
+    [
+      "S",
+      "Senatus",
+      "s",
+      "Senat und kollektive Stimme der Macht",
+      "Ordo Primus"
+    ],
+    [
+      "T",
+      "Triumphus",
+      "t",
+      "öffentlicher Sieg und Recht auf Ehrung",
+      "Ordo Secundus"
+    ],
+    [
+      "U",
+      "Unitas",
+      "u / v",
+      "Einheit und Band der Bürger",
+      "Ordo Tertius"
+    ],
+    [
+      "V",
+      "Virtus",
+      "v / w",
+      "Tugend und innere Kraft",
+      "Ordo Primus"
+    ],
+    [
+      "X",
+      "Xenium",
+      "ks",
+      "Gastgeschenk, Fremde und Nutzen des Unbekannten",
+      "Ordo Tertius"
+    ],
+    [
+      "Y",
+      "Zephyrus",
+      "ü / y",
+      "Wind des Denkens, Freiheit und Schutzgottheit",
+      "Ordo Tertius"
+    ],
+    [
+      "Z",
+      "Zelus",
+      "z / ts",
+      "Eifer und brennendes Streben",
+      "Ordo Tertius"
+    ]
+  ],
+  "silben": [
+    [
+      "-val-",
+      "Stärke",
+      "Tugend, Ansehen und Gesetz in einem"
+    ],
+    [
+      "-lex-",
+      "Gesetz",
+      "unverbrüchliches Recht und Bindung durch Ordnung"
+    ],
+    [
+      "sen-",
+      "Rat",
+      "kollektive Weisheit und Stimme der Versammlung"
+    ],
+    [
+      "-civ-",
+      "Bürgerschaft",
+      "Zugehörigkeit und Recht auf Schutz des Reiches"
+    ],
+    [
+      "-hon-",
+      "Ehre",
+      "gesellschaftliches Ansehen, das nicht erkauft werden kann"
+    ],
+    [
+      "-nob-",
+      "Adel",
+      "ererbter Stand und Gewicht der Vorfahren"
+    ],
+    [
+      "-ord-",
+      "Ordnung",
+      "Struktur, Rang und tragendes System"
+    ],
+    [
+      "-pot-",
+      "Amtsgewalt",
+      "verliehene Macht und Amt als Werkzeug des Staates"
+    ],
+    [
+      "-bell-",
+      "Krieg",
+      "organisierter Kampf und Schwert des Staates"
+    ],
+    [
+      "-vict-",
+      "Sieg",
+      "Triumph, Niederwerfung und errungener Ruhm"
+    ],
+    [
+      "-leg-",
+      "Legion",
+      "geordnetes Heer und Disziplin in Formation"
+    ],
+    [
+      "-fort-",
+      "Kraft",
+      "Körperkraft, Standhaftigkeit und das Ungebrochene"
+    ],
+    [
+      "-glo-",
+      "Ruhm",
+      "öffentliche Ehrung und ewiges Andenken"
+    ],
+    [
+      "-fid-",
+      "Treue",
+      "Eid und unverbrüchliches Band zum Reich"
+    ],
+    [
+      "-disc-",
+      "Zucht",
+      "militärische Disziplin und geformtes Werkzeug"
+    ],
+    [
+      "-rat-",
+      "Vernunft",
+      "ordnendes Denken und Logik als Herrschaftsmittel"
+    ],
+    [
+      "-sap-",
+      "Weisheit",
+      "gewonnene Erkenntnis und Wissen der Alten"
+    ],
+    [
+      "-arg-",
+      "Silber",
+      "Reinheit, Wert und geistiger Glanz"
+    ],
+    [
+      "-vent-",
+      "Wind",
+      "Freiheit, Gedankenfluss und Atem des Zephyr"
+    ],
+    [
+      "-lib-",
+      "Freiheit",
+      "Recht auf eigene Meinung"
+    ],
+    [
+      "-scrib-",
+      "Schrift",
+      "niedergeschriebenes und überdauerndes Wissen"
+    ],
+    [
+      "-zel-",
+      "Eifer",
+      "Wissensdurst und unermüdlicher Antrieb"
+    ],
+    [
+      "-navig-",
+      "Seefahrt",
+      "Erkundung und Wagnis auf unbekanntem Wasser"
+    ],
+    [
+      "-spir-",
+      "Atem",
+      "Lebensatem, Inspiration und Götterhauch"
+    ]
+  ],
+  "praefixe": [
+    [
+      "prae-",
+      "voran, ober-, vorher",
+      "Vorrang in Zeit, Rang oder Formation"
+    ],
+    [
+      "sub-",
+      "unter, nachgeordnet",
+      "Unterordnung oder Stellvertretung"
+    ],
+    [
+      "con-",
+      "gemeinsam, verbunden",
+      "Zusammenwirken mehrerer Personen oder Institutionen"
+    ],
+    [
+      "re-",
+      "wieder, zurück",
+      "Wiederholung oder Rückführung"
+    ],
+    [
+      "in-",
+      "innen, hinein",
+      "innerer Zustand oder Eintritt"
+    ],
+    [
+      "ex-",
+      "hinaus, ehemalig",
+      "Austritt, Herkunft oder beendetes Amt"
+    ],
+    [
+      "pro-",
+      "für, anstelle, vorwärts",
+      "Vertretung oder Förderung"
+    ],
+    [
+      "contra-",
+      "gegen, entgegen",
+      "Widerspruch oder Gegenmaßnahme"
+    ],
+    [
+      "magna-",
+      "groß, hoch",
+      "Steigerung von Rang und Umfang"
+    ],
+    [
+      "min-",
+      "klein, geringer",
+      "Verkleinerung oder niedriger Rang"
+    ],
+    [
+      "civ-",
+      "bürgerlich, reichszugehörig",
+      "Bezug auf Bürgerschaft und Stadt"
+    ],
+    [
+      "sen-",
+      "senatorisch, beratend",
+      "Bezug auf Rat und Senat"
+    ],
+    [
+      "legi-",
+      "gesetzlich oder legionär",
+      "Geordnete staatliche Ausführung"
+    ],
+    [
+      "arg-",
+      "silbern, rein, gelehrt",
+      "Materieller oder geistiger Bezug auf Silber"
+    ]
+  ],
+  "suffixe": [
+    [
+      "-ius",
+      "männlicher Träger",
+      "Personen- und Namensendung"
+    ],
+    [
+      "-ia",
+      "weibliche Trägerin oder Fachgebiet",
+      "Personen-, Länder- und Disziplinform"
+    ],
+    [
+      "-ian",
+      "Abstammung",
+      "Zugehörigkeit zu einer Linie"
+    ],
+    [
+      "-inus",
+      "geprägt oder gebildet durch",
+      "Herkunfts- und Eigenschaftsform"
+    ],
+    [
+      "-atus",
+      "Amt, Körperschaft oder Ergebnis",
+      "Institutionelle Form"
+    ],
+    [
+      "-ellus",
+      "jüngere oder geehrte Form",
+      "Verkleinernde Namensform"
+    ],
+    [
+      "-or",
+      "Amtsträger oder Handelnder",
+      "Berufs- und Amtsendung"
+    ],
+    [
+      "-rix",
+      "weibliche Amtsträgerin",
+      "Weibliche Amtsendung"
+    ],
+    [
+      "-arius",
+      "Beruf oder regelmäßige Funktion",
+      "Berufsbezeichnung"
+    ],
+    [
+      "-alis",
+      "zugehörige Eigenschaft",
+      "Adjektivische Form"
+    ],
+    [
+      "-ium",
+      "Institution, Ort oder Stoff",
+      "Sächliche Sammel- und Ortsform"
+    ],
+    [
+      "-itas",
+      "abstrakte Eigenschaft",
+      "Tugend, Zustand oder Rechtsbegriff"
+    ],
+    [
+      "-ica",
+      "Wissenschaft oder Lehre",
+      "Systematisches Wissensgebiet"
+    ],
+    [
+      "-mentum",
+      "Werkzeug oder Ergebnis",
+      "Instrumentelle Form"
+    ],
+    [
+      "-torium",
+      "Funktionsort",
+      "Gebäude oder zweckgebundener Raum"
+    ],
+    [
+      "-ensis",
+      "stammend aus",
+      "Regionale oder institutionelle Herkunft"
+    ],
+    [
+      "-culus",
+      "kleines Einzelstück",
+      "Verkleinerung und Fachsprache"
+    ],
+    [
+      "-um",
+      "greifbarer Gegenstand",
+      "Neutrale Sachform"
+    ]
+  ],
+  "namen_maennlich": [
+    [
+      "Valerius",
+      "Valer",
+      "ius",
+      "Stärke, Tugend und Gesetz",
+      "persönlicher Träger"
+    ],
+    [
+      "Valerian",
+      "Valer",
+      "ian",
+      "Stärke, Tugend und Gesetz",
+      "Erbe einer Linie"
+    ],
+    [
+      "Valerinus",
+      "Valer",
+      "inus",
+      "Stärke, Tugend und Gesetz",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Valeratus",
+      "Valer",
+      "atus",
+      "Stärke, Tugend und Gesetz",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Valerellus",
+      "Valer",
+      "ellus",
+      "Stärke, Tugend und Gesetz",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Lexarius",
+      "Lexar",
+      "ius",
+      "Gesetz und Rechtsbindung",
+      "persönlicher Träger"
+    ],
+    [
+      "Lexarian",
+      "Lexar",
+      "ian",
+      "Gesetz und Rechtsbindung",
+      "Erbe einer Linie"
+    ],
+    [
+      "Lexarinus",
+      "Lexar",
+      "inus",
+      "Gesetz und Rechtsbindung",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Lexaratus",
+      "Lexar",
+      "atus",
+      "Gesetz und Rechtsbindung",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Lexarellus",
+      "Lexar",
+      "ellus",
+      "Gesetz und Rechtsbindung",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Senarius",
+      "Senar",
+      "ius",
+      "Rat und kollektive Weisheit",
+      "persönlicher Träger"
+    ],
+    [
+      "Senarian",
+      "Senar",
+      "ian",
+      "Rat und kollektive Weisheit",
+      "Erbe einer Linie"
+    ],
+    [
+      "Senarinus",
+      "Senar",
+      "inus",
+      "Rat und kollektive Weisheit",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Senaratus",
+      "Senar",
+      "atus",
+      "Rat und kollektive Weisheit",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Senarellus",
+      "Senar",
+      "ellus",
+      "Rat und kollektive Weisheit",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Civerius",
+      "Civer",
+      "ius",
+      "Bürgerschaft und Zugehörigkeit",
+      "persönlicher Träger"
+    ],
+    [
+      "Civerian",
+      "Civer",
+      "ian",
+      "Bürgerschaft und Zugehörigkeit",
+      "Erbe einer Linie"
+    ],
+    [
+      "Civerinus",
+      "Civer",
+      "inus",
+      "Bürgerschaft und Zugehörigkeit",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Civeratus",
+      "Civer",
+      "atus",
+      "Bürgerschaft und Zugehörigkeit",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Civerellus",
+      "Civer",
+      "ellus",
+      "Bürgerschaft und Zugehörigkeit",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Honorius",
+      "Honor",
+      "ius",
+      "Ehre und Ansehen",
+      "persönlicher Träger"
+    ],
+    [
+      "Honorian",
+      "Honor",
+      "ian",
+      "Ehre und Ansehen",
+      "Erbe einer Linie"
+    ],
+    [
+      "Honorinus",
+      "Honor",
+      "inus",
+      "Ehre und Ansehen",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Honoratus",
+      "Honor",
+      "atus",
+      "Ehre und Ansehen",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Honorellus",
+      "Honor",
+      "ellus",
+      "Ehre und Ansehen",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Nobilius",
+      "Nobil",
+      "ius",
+      "Adel und Blutlinie",
+      "persönlicher Träger"
+    ],
+    [
+      "Nobilian",
+      "Nobil",
+      "ian",
+      "Adel und Blutlinie",
+      "Erbe einer Linie"
+    ],
+    [
+      "Nobilinus",
+      "Nobil",
+      "inus",
+      "Adel und Blutlinie",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Nobilatus",
+      "Nobil",
+      "atus",
+      "Adel und Blutlinie",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Nobilellus",
+      "Nobil",
+      "ellus",
+      "Adel und Blutlinie",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Ordinius",
+      "Ordin",
+      "ius",
+      "Ordnung und Rang",
+      "persönlicher Träger"
+    ],
+    [
+      "Ordinian",
+      "Ordin",
+      "ian",
+      "Ordnung und Rang",
+      "Erbe einer Linie"
+    ],
+    [
+      "Ordininus",
+      "Ordin",
+      "inus",
+      "Ordnung und Rang",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Ordinatus",
+      "Ordin",
+      "atus",
+      "Ordnung und Rang",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Ordinellus",
+      "Ordin",
+      "ellus",
+      "Ordnung und Rang",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Potenius",
+      "Poten",
+      "ius",
+      "Amt und verliehene Macht",
+      "persönlicher Träger"
+    ],
+    [
+      "Potenian",
+      "Poten",
+      "ian",
+      "Amt und verliehene Macht",
+      "Erbe einer Linie"
+    ],
+    [
+      "Poteninus",
+      "Poten",
+      "inus",
+      "Amt und verliehene Macht",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Potenatus",
+      "Poten",
+      "atus",
+      "Amt und verliehene Macht",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Potenellus",
+      "Poten",
+      "ellus",
+      "Amt und verliehene Macht",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Bellarius",
+      "Bellar",
+      "ius",
+      "Krieg und staatliche Gewalt",
+      "persönlicher Träger"
+    ],
+    [
+      "Bellarian",
+      "Bellar",
+      "ian",
+      "Krieg und staatliche Gewalt",
+      "Erbe einer Linie"
+    ],
+    [
+      "Bellarinus",
+      "Bellar",
+      "inus",
+      "Krieg und staatliche Gewalt",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Bellaratus",
+      "Bellar",
+      "atus",
+      "Krieg und staatliche Gewalt",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Bellarellus",
+      "Bellar",
+      "ellus",
+      "Krieg und staatliche Gewalt",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Victorius",
+      "Victor",
+      "ius",
+      "Sieg und Triumph",
+      "persönlicher Träger"
+    ],
+    [
+      "Victorian",
+      "Victor",
+      "ian",
+      "Sieg und Triumph",
+      "Erbe einer Linie"
+    ],
+    [
+      "Victorinus",
+      "Victor",
+      "inus",
+      "Sieg und Triumph",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Victoratus",
+      "Victor",
+      "atus",
+      "Sieg und Triumph",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Victorellus",
+      "Victor",
+      "ellus",
+      "Sieg und Triumph",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Legarius",
+      "Legar",
+      "ius",
+      "Legion und Formation",
+      "persönlicher Träger"
+    ],
+    [
+      "Legarian",
+      "Legar",
+      "ian",
+      "Legion und Formation",
+      "Erbe einer Linie"
+    ],
+    [
+      "Legarinus",
+      "Legar",
+      "inus",
+      "Legion und Formation",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Legaratus",
+      "Legar",
+      "atus",
+      "Legion und Formation",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Legarellus",
+      "Legar",
+      "ellus",
+      "Legion und Formation",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Fortenius",
+      "Forten",
+      "ius",
+      "Standhaftigkeit und Kraft",
+      "persönlicher Träger"
+    ],
+    [
+      "Fortenian",
+      "Forten",
+      "ian",
+      "Standhaftigkeit und Kraft",
+      "Erbe einer Linie"
+    ],
+    [
+      "Forteninus",
+      "Forten",
+      "inus",
+      "Standhaftigkeit und Kraft",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Fortenatus",
+      "Forten",
+      "atus",
+      "Standhaftigkeit und Kraft",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Fortenellus",
+      "Forten",
+      "ellus",
+      "Standhaftigkeit und Kraft",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Gloriius",
+      "Glori",
+      "ius",
+      "Ruhm und öffentliches Andenken",
+      "persönlicher Träger"
+    ],
+    [
+      "Gloriian",
+      "Glori",
+      "ian",
+      "Ruhm und öffentliches Andenken",
+      "Erbe einer Linie"
+    ],
+    [
+      "Gloriinus",
+      "Glori",
+      "inus",
+      "Ruhm und öffentliches Andenken",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Gloriatus",
+      "Glori",
+      "atus",
+      "Ruhm und öffentliches Andenken",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Gloriellus",
+      "Glori",
+      "ellus",
+      "Ruhm und öffentliches Andenken",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Fidelius",
+      "Fidel",
+      "ius",
+      "Treue und Eid",
+      "persönlicher Träger"
+    ],
+    [
+      "Fidelian",
+      "Fidel",
+      "ian",
+      "Treue und Eid",
+      "Erbe einer Linie"
+    ],
+    [
+      "Fidelinus",
+      "Fidel",
+      "inus",
+      "Treue und Eid",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Fidelatus",
+      "Fidel",
+      "atus",
+      "Treue und Eid",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Fidelellus",
+      "Fidel",
+      "ellus",
+      "Treue und Eid",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Discipius",
+      "Discip",
+      "ius",
+      "Zucht und Selbstbeherrschung",
+      "persönlicher Träger"
+    ],
+    [
+      "Discipian",
+      "Discip",
+      "ian",
+      "Zucht und Selbstbeherrschung",
+      "Erbe einer Linie"
+    ],
+    [
+      "Discipinus",
+      "Discip",
+      "inus",
+      "Zucht und Selbstbeherrschung",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Discipatus",
+      "Discip",
+      "atus",
+      "Zucht und Selbstbeherrschung",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Discipellus",
+      "Discip",
+      "ellus",
+      "Zucht und Selbstbeherrschung",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Rationius",
+      "Ration",
+      "ius",
+      "Vernunft und Logik",
+      "persönlicher Träger"
+    ],
+    [
+      "Rationian",
+      "Ration",
+      "ian",
+      "Vernunft und Logik",
+      "Erbe einer Linie"
+    ],
+    [
+      "Rationinus",
+      "Ration",
+      "inus",
+      "Vernunft und Logik",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Rationatus",
+      "Ration",
+      "atus",
+      "Vernunft und Logik",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Rationellus",
+      "Ration",
+      "ellus",
+      "Vernunft und Logik",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Sapienius",
+      "Sapien",
+      "ius",
+      "Weisheit und Erkenntnis",
+      "persönlicher Träger"
+    ],
+    [
+      "Sapienian",
+      "Sapien",
+      "ian",
+      "Weisheit und Erkenntnis",
+      "Erbe einer Linie"
+    ],
+    [
+      "Sapieninus",
+      "Sapien",
+      "inus",
+      "Weisheit und Erkenntnis",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Sapienatus",
+      "Sapien",
+      "atus",
+      "Weisheit und Erkenntnis",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Sapienellus",
+      "Sapien",
+      "ellus",
+      "Weisheit und Erkenntnis",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Argentius",
+      "Argent",
+      "ius",
+      "Silber, Reinheit und Wert",
+      "persönlicher Träger"
+    ],
+    [
+      "Argentian",
+      "Argent",
+      "ian",
+      "Silber, Reinheit und Wert",
+      "Erbe einer Linie"
+    ],
+    [
+      "Argentinus",
+      "Argent",
+      "inus",
+      "Silber, Reinheit und Wert",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Argentatus",
+      "Argent",
+      "atus",
+      "Silber, Reinheit und Wert",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Argentellus",
+      "Argent",
+      "ellus",
+      "Silber, Reinheit und Wert",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Venturius",
+      "Ventur",
+      "ius",
+      "Wind, Freiheit und Gedankenfluss",
+      "persönlicher Träger"
+    ],
+    [
+      "Venturian",
+      "Ventur",
+      "ian",
+      "Wind, Freiheit und Gedankenfluss",
+      "Erbe einer Linie"
+    ],
+    [
+      "Venturinus",
+      "Ventur",
+      "inus",
+      "Wind, Freiheit und Gedankenfluss",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Venturatus",
+      "Ventur",
+      "atus",
+      "Wind, Freiheit und Gedankenfluss",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Venturellus",
+      "Ventur",
+      "ellus",
+      "Wind, Freiheit und Gedankenfluss",
+      "jüngerer oder besonders geschätzter Träger"
+    ],
+    [
+      "Liberius",
+      "Liber",
+      "ius",
+      "Freiheit und eigenes Urteil",
+      "persönlicher Träger"
+    ],
+    [
+      "Liberian",
+      "Liber",
+      "ian",
+      "Freiheit und eigenes Urteil",
+      "Erbe einer Linie"
+    ],
+    [
+      "Liberinus",
+      "Liber",
+      "inus",
+      "Freiheit und eigenes Urteil",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Liberatus",
+      "Liber",
+      "atus",
+      "Freiheit und eigenes Urteil",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Liberellus",
+      "Liber",
+      "ellus",
+      "Freiheit und eigenes Urteil",
+      "jüngerer oder besonders geschätzter Träger"
+    ]
+  ],
+  "namen_weiblich": [
+    [
+      "Valeria",
+      "Valer",
+      "ia",
+      "Stärke, Tugend und Gesetz",
+      "persönliche Trägerin"
+    ],
+    [
+      "Valeriana",
+      "Valer",
+      "iana",
+      "Stärke, Tugend und Gesetz",
+      "Erbin einer Linie"
+    ],
+    [
+      "Valerina",
+      "Valer",
+      "ina",
+      "Stärke, Tugend und Gesetz",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Valerata",
+      "Valer",
+      "ata",
+      "Stärke, Tugend und Gesetz",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Valerella",
+      "Valer",
+      "ella",
+      "Stärke, Tugend und Gesetz",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Lexaria",
+      "Lexar",
+      "ia",
+      "Gesetz und Rechtsbindung",
+      "persönliche Trägerin"
+    ],
+    [
+      "Lexariana",
+      "Lexar",
+      "iana",
+      "Gesetz und Rechtsbindung",
+      "Erbin einer Linie"
+    ],
+    [
+      "Lexarina",
+      "Lexar",
+      "ina",
+      "Gesetz und Rechtsbindung",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Lexarata",
+      "Lexar",
+      "ata",
+      "Gesetz und Rechtsbindung",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Lexarella",
+      "Lexar",
+      "ella",
+      "Gesetz und Rechtsbindung",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Senaria",
+      "Senar",
+      "ia",
+      "Rat und kollektive Weisheit",
+      "persönliche Trägerin"
+    ],
+    [
+      "Senariana",
+      "Senar",
+      "iana",
+      "Rat und kollektive Weisheit",
+      "Erbin einer Linie"
+    ],
+    [
+      "Senarina",
+      "Senar",
+      "ina",
+      "Rat und kollektive Weisheit",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Senarata",
+      "Senar",
+      "ata",
+      "Rat und kollektive Weisheit",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Senarella",
+      "Senar",
+      "ella",
+      "Rat und kollektive Weisheit",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Civeria",
+      "Civer",
+      "ia",
+      "Bürgerschaft und Zugehörigkeit",
+      "persönliche Trägerin"
+    ],
+    [
+      "Civeriana",
+      "Civer",
+      "iana",
+      "Bürgerschaft und Zugehörigkeit",
+      "Erbin einer Linie"
+    ],
+    [
+      "Civerina",
+      "Civer",
+      "ina",
+      "Bürgerschaft und Zugehörigkeit",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Civerata",
+      "Civer",
+      "ata",
+      "Bürgerschaft und Zugehörigkeit",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Civerella",
+      "Civer",
+      "ella",
+      "Bürgerschaft und Zugehörigkeit",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Honoria",
+      "Honor",
+      "ia",
+      "Ehre und Ansehen",
+      "persönliche Trägerin"
+    ],
+    [
+      "Honoriana",
+      "Honor",
+      "iana",
+      "Ehre und Ansehen",
+      "Erbin einer Linie"
+    ],
+    [
+      "Honorina",
+      "Honor",
+      "ina",
+      "Ehre und Ansehen",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Honorata",
+      "Honor",
+      "ata",
+      "Ehre und Ansehen",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Honorella",
+      "Honor",
+      "ella",
+      "Ehre und Ansehen",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Nobilia",
+      "Nobil",
+      "ia",
+      "Adel und Blutlinie",
+      "persönliche Trägerin"
+    ],
+    [
+      "Nobiliana",
+      "Nobil",
+      "iana",
+      "Adel und Blutlinie",
+      "Erbin einer Linie"
+    ],
+    [
+      "Nobilina",
+      "Nobil",
+      "ina",
+      "Adel und Blutlinie",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Nobilata",
+      "Nobil",
+      "ata",
+      "Adel und Blutlinie",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Nobilella",
+      "Nobil",
+      "ella",
+      "Adel und Blutlinie",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Ordinia",
+      "Ordin",
+      "ia",
+      "Ordnung und Rang",
+      "persönliche Trägerin"
+    ],
+    [
+      "Ordiniana",
+      "Ordin",
+      "iana",
+      "Ordnung und Rang",
+      "Erbin einer Linie"
+    ],
+    [
+      "Ordinina",
+      "Ordin",
+      "ina",
+      "Ordnung und Rang",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Ordinata",
+      "Ordin",
+      "ata",
+      "Ordnung und Rang",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Ordinella",
+      "Ordin",
+      "ella",
+      "Ordnung und Rang",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Potenia",
+      "Poten",
+      "ia",
+      "Amt und verliehene Macht",
+      "persönliche Trägerin"
+    ],
+    [
+      "Poteniana",
+      "Poten",
+      "iana",
+      "Amt und verliehene Macht",
+      "Erbin einer Linie"
+    ],
+    [
+      "Potenina",
+      "Poten",
+      "ina",
+      "Amt und verliehene Macht",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Potenata",
+      "Poten",
+      "ata",
+      "Amt und verliehene Macht",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Potenella",
+      "Poten",
+      "ella",
+      "Amt und verliehene Macht",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Bellaria",
+      "Bellar",
+      "ia",
+      "Krieg und staatliche Gewalt",
+      "persönliche Trägerin"
+    ],
+    [
+      "Bellariana",
+      "Bellar",
+      "iana",
+      "Krieg und staatliche Gewalt",
+      "Erbin einer Linie"
+    ],
+    [
+      "Bellarina",
+      "Bellar",
+      "ina",
+      "Krieg und staatliche Gewalt",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Bellarata",
+      "Bellar",
+      "ata",
+      "Krieg und staatliche Gewalt",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Bellarella",
+      "Bellar",
+      "ella",
+      "Krieg und staatliche Gewalt",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Victoria",
+      "Victor",
+      "ia",
+      "Sieg und Triumph",
+      "persönliche Trägerin"
+    ],
+    [
+      "Victoriana",
+      "Victor",
+      "iana",
+      "Sieg und Triumph",
+      "Erbin einer Linie"
+    ],
+    [
+      "Victorina",
+      "Victor",
+      "ina",
+      "Sieg und Triumph",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Victorata",
+      "Victor",
+      "ata",
+      "Sieg und Triumph",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Victorella",
+      "Victor",
+      "ella",
+      "Sieg und Triumph",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Legaria",
+      "Legar",
+      "ia",
+      "Legion und Formation",
+      "persönliche Trägerin"
+    ],
+    [
+      "Legariana",
+      "Legar",
+      "iana",
+      "Legion und Formation",
+      "Erbin einer Linie"
+    ],
+    [
+      "Legarina",
+      "Legar",
+      "ina",
+      "Legion und Formation",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Legarata",
+      "Legar",
+      "ata",
+      "Legion und Formation",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Legarella",
+      "Legar",
+      "ella",
+      "Legion und Formation",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Fortenia",
+      "Forten",
+      "ia",
+      "Standhaftigkeit und Kraft",
+      "persönliche Trägerin"
+    ],
+    [
+      "Forteniana",
+      "Forten",
+      "iana",
+      "Standhaftigkeit und Kraft",
+      "Erbin einer Linie"
+    ],
+    [
+      "Fortenina",
+      "Forten",
+      "ina",
+      "Standhaftigkeit und Kraft",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Fortenata",
+      "Forten",
+      "ata",
+      "Standhaftigkeit und Kraft",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Fortenella",
+      "Forten",
+      "ella",
+      "Standhaftigkeit und Kraft",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Gloriia",
+      "Glori",
+      "ia",
+      "Ruhm und öffentliches Andenken",
+      "persönliche Trägerin"
+    ],
+    [
+      "Gloriiana",
+      "Glori",
+      "iana",
+      "Ruhm und öffentliches Andenken",
+      "Erbin einer Linie"
+    ],
+    [
+      "Gloriina",
+      "Glori",
+      "ina",
+      "Ruhm und öffentliches Andenken",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Gloriata",
+      "Glori",
+      "ata",
+      "Ruhm und öffentliches Andenken",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Gloriella",
+      "Glori",
+      "ella",
+      "Ruhm und öffentliches Andenken",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Fidelia",
+      "Fidel",
+      "ia",
+      "Treue und Eid",
+      "persönliche Trägerin"
+    ],
+    [
+      "Fideliana",
+      "Fidel",
+      "iana",
+      "Treue und Eid",
+      "Erbin einer Linie"
+    ],
+    [
+      "Fidelina",
+      "Fidel",
+      "ina",
+      "Treue und Eid",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Fidelata",
+      "Fidel",
+      "ata",
+      "Treue und Eid",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Fidelella",
+      "Fidel",
+      "ella",
+      "Treue und Eid",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Discipia",
+      "Discip",
+      "ia",
+      "Zucht und Selbstbeherrschung",
+      "persönliche Trägerin"
+    ],
+    [
+      "Discipiana",
+      "Discip",
+      "iana",
+      "Zucht und Selbstbeherrschung",
+      "Erbin einer Linie"
+    ],
+    [
+      "Discipina",
+      "Discip",
+      "ina",
+      "Zucht und Selbstbeherrschung",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Discipata",
+      "Discip",
+      "ata",
+      "Zucht und Selbstbeherrschung",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Discipella",
+      "Discip",
+      "ella",
+      "Zucht und Selbstbeherrschung",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Rationia",
+      "Ration",
+      "ia",
+      "Vernunft und Logik",
+      "persönliche Trägerin"
+    ],
+    [
+      "Rationiana",
+      "Ration",
+      "iana",
+      "Vernunft und Logik",
+      "Erbin einer Linie"
+    ],
+    [
+      "Rationina",
+      "Ration",
+      "ina",
+      "Vernunft und Logik",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Rationata",
+      "Ration",
+      "ata",
+      "Vernunft und Logik",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Rationella",
+      "Ration",
+      "ella",
+      "Vernunft und Logik",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Sapienia",
+      "Sapien",
+      "ia",
+      "Weisheit und Erkenntnis",
+      "persönliche Trägerin"
+    ],
+    [
+      "Sapieniana",
+      "Sapien",
+      "iana",
+      "Weisheit und Erkenntnis",
+      "Erbin einer Linie"
+    ],
+    [
+      "Sapienina",
+      "Sapien",
+      "ina",
+      "Weisheit und Erkenntnis",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Sapienata",
+      "Sapien",
+      "ata",
+      "Weisheit und Erkenntnis",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Sapienella",
+      "Sapien",
+      "ella",
+      "Weisheit und Erkenntnis",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Argentia",
+      "Argent",
+      "ia",
+      "Silber, Reinheit und Wert",
+      "persönliche Trägerin"
+    ],
+    [
+      "Argentiana",
+      "Argent",
+      "iana",
+      "Silber, Reinheit und Wert",
+      "Erbin einer Linie"
+    ],
+    [
+      "Argentina",
+      "Argent",
+      "ina",
+      "Silber, Reinheit und Wert",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Argentata",
+      "Argent",
+      "ata",
+      "Silber, Reinheit und Wert",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Argentella",
+      "Argent",
+      "ella",
+      "Silber, Reinheit und Wert",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Venturia",
+      "Ventur",
+      "ia",
+      "Wind, Freiheit und Gedankenfluss",
+      "persönliche Trägerin"
+    ],
+    [
+      "Venturiana",
+      "Ventur",
+      "iana",
+      "Wind, Freiheit und Gedankenfluss",
+      "Erbin einer Linie"
+    ],
+    [
+      "Venturina",
+      "Ventur",
+      "ina",
+      "Wind, Freiheit und Gedankenfluss",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Venturata",
+      "Ventur",
+      "ata",
+      "Wind, Freiheit und Gedankenfluss",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Venturella",
+      "Ventur",
+      "ella",
+      "Wind, Freiheit und Gedankenfluss",
+      "jüngere oder besonders geschätzte Trägerin"
+    ],
+    [
+      "Liberia",
+      "Liber",
+      "ia",
+      "Freiheit und eigenes Urteil",
+      "persönliche Trägerin"
+    ],
+    [
+      "Liberiana",
+      "Liber",
+      "iana",
+      "Freiheit und eigenes Urteil",
+      "Erbin einer Linie"
+    ],
+    [
+      "Liberina",
+      "Liber",
+      "ina",
+      "Freiheit und eigenes Urteil",
+      "durch die Bedeutung geprägt"
+    ],
+    [
+      "Liberata",
+      "Liber",
+      "ata",
+      "Freiheit und eigenes Urteil",
+      "für Amt oder Pflicht bestimmt"
+    ],
+    [
+      "Liberella",
+      "Liber",
+      "ella",
+      "Freiheit und eigenes Urteil",
+      "jüngere oder besonders geschätzte Trägerin"
+    ]
+  ],
+  "lexikon": [
+    [
+      "Staat und Recht",
+      "Imperius",
+      "Substantiv",
+      "IMPERIUM + -IUS",
+      "persönlicher Träger der Befehlsgewalt",
+      "Kaiser; oberster Herrscher"
+    ],
+    [
+      "Staat und Recht",
+      "Imperatrix",
+      "Substantiv",
+      "IMPERIUM + -RIX",
+      "weibliche Trägerin der Befehlsgewalt",
+      "Kaiserin"
+    ],
+    [
+      "Staat und Recht",
+      "Senatus",
+      "Substantiv",
+      "SEN + -ATUS",
+      "Körperschaft des Rates",
+      "Senat"
+    ],
+    [
+      "Staat und Recht",
+      "Senor",
+      "Substantiv",
+      "SEN + -OR",
+      "Amtsträger des Rates",
+      "Senator"
+    ],
+    [
+      "Staat und Recht",
+      "Civitas",
+      "Substantiv",
+      "CIV + -ITAS",
+      "Eigenschaft der Bürgerschaft",
+      "Bürgerrecht; Staatsbürgerschaft"
+    ],
+    [
+      "Staat und Recht",
+      "Civarius",
+      "Substantiv",
+      "CIV + -ARIUS",
+      "regelmäßiger Träger des Bürgerrechts",
+      "Bürger"
+    ],
+    [
+      "Staat und Recht",
+      "Lexium",
+      "Substantiv",
+      "LEX + -IUM",
+      "Institution des Gesetzes",
+      "Gesetzbuch; Rechtskodex"
+    ],
+    [
+      "Staat und Recht",
+      "Lexor",
+      "Substantiv",
+      "LEX + -OR",
+      "Amtsträger des Gesetzes",
+      "Richter"
+    ],
+    [
+      "Staat und Recht",
+      "Potestor",
+      "Substantiv",
+      "POT + -OR",
+      "Träger verliehener Amtsgewalt",
+      "Magistrat; Amtmann"
+    ],
+    [
+      "Staat und Recht",
+      "Ordinator",
+      "Substantiv",
+      "ORD + -OR",
+      "Handelnder der Ordnung",
+      "Verwalter; Organisator"
+    ],
+    [
+      "Staat und Recht",
+      "Praepotestor",
+      "Substantiv",
+      "PRAE- + POT + -OR",
+      "vorrangiger Amtsträger",
+      "Präfekt; Provinzvorsteher"
+    ],
+    [
+      "Staat und Recht",
+      "Subpotestor",
+      "Substantiv",
+      "SUB- + POT + -OR",
+      "nachgeordneter Amtsträger",
+      "Stellvertreter; Unterpräfekt"
+    ],
+    [
+      "Staat und Recht",
+      "Consenium",
+      "Substantiv",
+      "CON- + SEN + -IUM",
+      "Institution gemeinsamen Rates",
+      "Staatsrat; Beratungskammer"
+    ],
+    [
+      "Staat und Recht",
+      "Auctorium",
+      "Substantiv",
+      "AUCTORITAS + -IUM",
+      "greifbare staatliche Autorität",
+      "Vollmacht; amtliche Urkunde"
+    ],
+    [
+      "Staat und Recht",
+      "Fidamentum",
+      "Substantiv",
+      "FID + -MENTUM",
+      "Werkzeug der Treue",
+      "Eidesurkunde; Treuevertrag"
+    ],
+    [
+      "Staat und Recht",
+      "Nobilatus",
+      "Substantiv",
+      "NOB + -ATUS",
+      "Körperschaft des Adels",
+      "Adelsstand; Patriziat"
+    ],
+    [
+      "Staat und Recht",
+      "Civarium",
+      "Substantiv",
+      "CIV + -ARIUM",
+      "Ort der Bürgerschaft",
+      "Bürgerregister; Meldeamt"
+    ],
+    [
+      "Staat und Recht",
+      "Senalex",
+      "Substantiv",
+      "SEN + LEX",
+      "Gesetz des Senats",
+      "Senatsbeschluss"
+    ],
+    [
+      "Staat und Recht",
+      "Argentarium",
+      "Substantiv",
+      "ARG + -ARIUM",
+      "Ort des Silbers",
+      "Staatskasse; Schatzamt"
+    ],
+    [
+      "Staat und Recht",
+      "Unitarium",
+      "Substantiv",
+      "UNITAS + -ARIUM",
+      "Institution der Einheit",
+      "Reichsbund; föderale Körperschaft"
+    ],
+    [
+      "Militär und Triumph",
+      "Bellator",
+      "Substantiv",
+      "BELL + -OR",
+      "Handelnder des Krieges",
+      "Soldat; Krieger"
+    ],
+    [
+      "Militär und Triumph",
+      "Bellatrix",
+      "Substantiv",
+      "BELL + -RIX",
+      "weibliche Handelnde des Krieges",
+      "Kriegerin"
+    ],
+    [
+      "Militär und Triumph",
+      "Legatus",
+      "Substantiv",
+      "LEG + -ATUS",
+      "Amt der Legion",
+      "Legat; Legionskommandeur"
+    ],
+    [
+      "Militär und Triumph",
+      "Legionum",
+      "Substantiv",
+      "LEG + -UM",
+      "greifbare geordnete Formation",
+      "Legion"
+    ],
+    [
+      "Militär und Triumph",
+      "Sublegatus",
+      "Substantiv",
+      "SUB- + LEG + -ATUS",
+      "nachgeordnetes Legionsamt",
+      "Tribun; stellvertretender Kommandeur"
+    ],
+    [
+      "Militär und Triumph",
+      "Fortarium",
+      "Substantiv",
+      "FORT + -ARIUM",
+      "Ort der Standhaftigkeit",
+      "Festung; befestigtes Lager"
+    ],
+    [
+      "Militär und Triumph",
+      "Victorius",
+      "Substantiv",
+      "VICT + -IUS",
+      "persönlicher Träger des Sieges",
+      "Sieger; Ehrentitel"
+    ],
+    [
+      "Militär und Triumph",
+      "Disciplinium",
+      "Substantiv",
+      "DISC + -IUM",
+      "Institution militärischer Zucht",
+      "Drill; Dienstordnung"
+    ],
+    [
+      "Militär und Triumph",
+      "Martor",
+      "Substantiv",
+      "MARS + -OR",
+      "Amtsträger der Kampfkraft",
+      "Schlachthauptmann"
+    ],
+    [
+      "Militär und Triumph",
+      "Gloriatus",
+      "Substantiv",
+      "GLO + -ATUS",
+      "öffentlich bestätigter Ruhm",
+      "militärische Auszeichnung"
+    ],
+    [
+      "Militär und Triumph",
+      "Fidlegius",
+      "Substantiv",
+      "FID + LEG + -IUS",
+      "treuer Träger der Legion",
+      "Legionär auf Lebenszeit"
+    ],
+    [
+      "Militär und Triumph",
+      "Praebellum",
+      "Substantiv",
+      "PRAE- + BELL + -UM",
+      "vorbereiteter Krieg",
+      "Mobilmachung"
+    ],
+    [
+      "Militär und Triumph",
+      "Bellatorium",
+      "Substantiv",
+      "BELL + -TORIUM",
+      "Funktionsort des Krieges",
+      "Kaserne; Waffenhof"
+    ],
+    [
+      "Militär und Triumph",
+      "Potestbellum",
+      "Substantiv",
+      "POT + BELL",
+      "Amtsgewalt über Krieg",
+      "Oberbefehl"
+    ],
+    [
+      "Militär und Triumph",
+      "Triumphum",
+      "Substantiv",
+      "TRIUMPH + -UM",
+      "greifbarer öffentlicher Sieg",
+      "Triumphzug"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Quaestica",
+      "Substantiv",
+      "QUAEST + -ICA",
+      "Lehre des Fragens",
+      "Forschung; wissenschaftliche Methode"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Ratica",
+      "Substantiv",
+      "RAT + -ICA",
+      "Lehre der Vernunft",
+      "Logik"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Sapientia",
+      "Substantiv",
+      "SAP + -IA",
+      "Fachgebiet der Weisheit",
+      "Gelehrsamkeit; Philosophie"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Scribarium",
+      "Substantiv",
+      "SCRIB + -ARIUM",
+      "Ort der Schrift",
+      "Archiv; Skriptorium"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Scribarius",
+      "Substantiv",
+      "SCRIB + -ARIUS",
+      "Beruf der Schrift",
+      "Schreiber; Kopist"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Argentica",
+      "Substantiv",
+      "ARG + -ICA",
+      "Lehre des Silbers",
+      "Metallkunde; Silberchemie"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Argentometria",
+      "Substantiv",
+      "ARG + METRIA",
+      "Messung des Silbers",
+      "Wert- und Reinheitsprüfung"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Spirica",
+      "Substantiv",
+      "SPIR + -ICA",
+      "Lehre des Atems",
+      "Atemkunde; Pneumatik"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Ventica",
+      "Substantiv",
+      "VENT + -ICA",
+      "Lehre des Windes",
+      "Meteorologie; Windkunde"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Navigica",
+      "Substantiv",
+      "NAVIG + -ICA",
+      "Lehre der Seefahrt",
+      "Navigation"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Zelarius",
+      "Substantiv",
+      "ZEL + -ARIUS",
+      "Beruf des Eifers",
+      "Forscher; gelehrter Assistent"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Quaestorium",
+      "Substantiv",
+      "QUAEST + -TORIUM",
+      "Ort des Fragens",
+      "Akademie; Forschungsstätte"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Ratiomentum",
+      "Substantiv",
+      "RAT + -MENTUM",
+      "Werkzeug der Vernunft",
+      "Berechnung; Beweisführung"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Sapicodex",
+      "Substantiv",
+      "SAP + CODEX",
+      "Niederschrift der Weisheit",
+      "Lehrbuch; wissenschaftlicher Kodex"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Xenica",
+      "Substantiv",
+      "XEN + -ICA",
+      "Lehre des Fremden",
+      "Ethnographie; Fremdkunde"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Harmonometrium",
+      "Substantiv",
+      "HARMONIA + METRIUM",
+      "Messgerät des Gleichgewichts",
+      "Waage; Präzisionsinstrument"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Requaestio",
+      "Substantiv",
+      "RE- + QUAESTIO",
+      "erneute Frage",
+      "Überprüfung; Revision"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Conratio",
+      "Substantiv",
+      "CON- + RATIO",
+      "gemeinsame Vernunft",
+      "wissenschaftlicher Konsens"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Praesapientor",
+      "Substantiv",
+      "PRAE- + SAP + -OR",
+      "vorrangiger Träger des Wissens",
+      "Akademieleiter"
+    ],
+    [
+      "Wissen und Wissenschaft",
+      "Liberscriba",
+      "Substantiv",
+      "LIB + SCRIB",
+      "freie Schrift",
+      "Essay; nichtamtliche Abhandlung"
+    ],
+    [
+      "Medizin und Biologie",
+      "Medica",
+      "Substantiv",
+      "MED + -ICA",
+      "Lehre des Heilens",
+      "Medizin"
+    ],
+    [
+      "Medizin und Biologie",
+      "Medicarius",
+      "Substantiv",
+      "MED + -ARIUS",
+      "Beruf des Heilens",
+      "Arzt; Heiler"
+    ],
+    [
+      "Medizin und Biologie",
+      "Corpusica",
+      "Substantiv",
+      "CORPUS + -ICA",
+      "Lehre des Körpers",
+      "Anatomie"
+    ],
+    [
+      "Medizin und Biologie",
+      "Sanguinica",
+      "Substantiv",
+      "SANGUIN + -ICA",
+      "Lehre des Blutes",
+      "Hämatologie"
+    ],
+    [
+      "Medizin und Biologie",
+      "Ossiculum",
+      "Substantiv",
+      "OSS + -CULUS",
+      "kleines Knochenstück",
+      "Knöchelchen; kleiner Knochen"
+    ],
+    [
+      "Medizin und Biologie",
+      "Nervarium",
+      "Substantiv",
+      "NERV + -ARIUM",
+      "System der Nerven",
+      "Nervensystem"
+    ],
+    [
+      "Medizin und Biologie",
+      "Herbica",
+      "Substantiv",
+      "HERB + -ICA",
+      "Lehre der Pflanzen",
+      "Botanik; Kräuterkunde"
+    ],
+    [
+      "Medizin und Biologie",
+      "Animalica",
+      "Substantiv",
+      "ANIMAL + -ICA",
+      "Lehre der Lebewesen",
+      "Zoologie; Biologie"
+    ],
+    [
+      "Medizin und Biologie",
+      "Spiramentum",
+      "Substantiv",
+      "SPIR + -MENTUM",
+      "Werkzeug des Atems",
+      "Atemmaske; Beatmungsgerät"
+    ],
+    [
+      "Medizin und Biologie",
+      "Mortalis",
+      "Adjektiv",
+      "MORT + -ALIS",
+      "zum Tod gehörig",
+      "tödlich; sterblich"
+    ],
+    [
+      "Medizin und Biologie",
+      "Vitalis",
+      "Adjektiv",
+      "VITA + -ALIS",
+      "zum Leben gehörig",
+      "lebendig; lebensnotwendig"
+    ],
+    [
+      "Medizin und Biologie",
+      "Remedium",
+      "Substantiv",
+      "RE- + MED + -IUM",
+      "wiederherstellendes Heilmittel",
+      "Arznei; Heilmittel"
+    ],
+    [
+      "Medizin und Biologie",
+      "Incorporia",
+      "Substantiv",
+      "IN- + CORPUS + -IA",
+      "Zustand innerhalb des Körpers",
+      "inneres Organwesen"
+    ],
+    [
+      "Medizin und Biologie",
+      "Exsanguinatio",
+      "Substantiv",
+      "EX- + SANGUIN + -ATIO",
+      "Heraustreten des Blutes",
+      "Blutverlust"
+    ],
+    [
+      "Medizin und Biologie",
+      "Harmoniavita",
+      "Substantiv",
+      "HARMONIA + VITA",
+      "Gleichgewicht des Lebens",
+      "Gesundheit; körperliche Balance"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Argentum",
+      "Substantiv",
+      "ARG + -UM",
+      "greifbares Silber",
+      "Silber; Reichswährung"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Mercarium",
+      "Substantiv",
+      "MERC + -ARIUM",
+      "Ort des Handels",
+      "Markt; Kontor"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Mercarius",
+      "Substantiv",
+      "MERC + -ARIUS",
+      "Beruf des Handels",
+      "Kaufmann"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Civitorium",
+      "Substantiv",
+      "CIV + -TORIUM",
+      "Funktionsort der Bürger",
+      "Rathaus; Bürgerhalle"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Urbanium",
+      "Substantiv",
+      "URB + -ANIUM",
+      "geordneter Stadtraum",
+      "Stadtgebiet"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Viarium",
+      "Substantiv",
+      "VIA + -ARIUM",
+      "Ort und System der Wege",
+      "Straßennetz"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Aquarium",
+      "Substantiv",
+      "AQUA + -ARIUM",
+      "Ort des Wassers",
+      "Zisterne; Wasserbecken"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Terrarium",
+      "Substantiv",
+      "TERRA + -ARIUM",
+      "abgegrenzter Landraum",
+      "Landgut; Domäne"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Navigium",
+      "Substantiv",
+      "NAVIG + -IUM",
+      "Mittel der Seefahrt",
+      "Schiff"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Connavigium",
+      "Substantiv",
+      "CON- + NAVIG + -IUM",
+      "Verbund von Schiffen",
+      "Flotte; Konvoi"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Argentarius",
+      "Substantiv",
+      "ARG + -ARIUS",
+      "Beruf des Silbers",
+      "Silberschmied; Geldwechsler"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Xenarium",
+      "Substantiv",
+      "XEN + -ARIUM",
+      "Ort für Fremde und Geschenke",
+      "Gästehaus; Gesandtenhof"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Civpanium",
+      "Substantiv",
+      "CIV + PAN + -IUM",
+      "Brotinstitution der Bürger",
+      "öffentliche Bäckerei; Kornamt"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Ordohora",
+      "Substantiv",
+      "ORD + HORA",
+      "geordnete Zeit",
+      "Amtsstunde; offizieller Zeitabschnitt"
+    ],
+    [
+      "Reichsalltag und Handel",
+      "Unitafestum",
+      "Substantiv",
+      "UNITAS + FESTUM",
+      "Fest der Einheit",
+      "Reichsfeiertag"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Zephyrium",
+      "Substantiv",
+      "ZEPHYRUS + -IUM",
+      "Ort oder Gegenstand des Zephyrs",
+      "Windheiligtum"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Spiratus",
+      "Substantiv",
+      "SPIR + -ATUS",
+      "Körperschaft des Atems",
+      "Priesterschaft des Zephyrs"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Libertas",
+      "Substantiv",
+      "LIB + -ITAS",
+      "Eigenschaft der Freiheit",
+      "Freiheit; Rederecht"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Virtuitas",
+      "Substantiv",
+      "VIRTUS + -ITAS",
+      "Eigenschaft der Tugend",
+      "moralische Tüchtigkeit"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Harmonia",
+      "Substantiv",
+      "HARMONIA",
+      "ausgewogene Ordnung",
+      "Harmonie; gesellschaftliches Gleichgewicht"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Auctoritas",
+      "Substantiv",
+      "AUCTORITAS",
+      "Gewicht des Wortes",
+      "Ansehen; legitime Autorität"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Gloriamen",
+      "Substantiv",
+      "GLO + -MENTUM",
+      "Werkzeug des Ruhms",
+      "Denkmal; Ehreninschrift"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Honoratus",
+      "Substantiv",
+      "HON + -ATUS",
+      "öffentlich bestätigte Ehre",
+      "Ehrenstand; Auszeichnung"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Argensapientia",
+      "Substantiv",
+      "ARG + SAPIENTIA",
+      "silberne Weisheit",
+      "argentische Staatsphilosophie"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Ventlibertas",
+      "Substantiv",
+      "VENT + LIBERTAS",
+      "Freiheit des Windes",
+      "geistige Unabhängigkeit"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Sencantum",
+      "Substantiv",
+      "SEN + CANT + -UM",
+      "Gesang des Rates",
+      "Senatshymne"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Triumphalis",
+      "Adjektiv",
+      "TRIUMPH + -ALIS",
+      "zum öffentlichen Sieg gehörig",
+      "triumphal; siegeswürdig"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Nobilensis",
+      "Adjektiv",
+      "NOB + -ENSIS",
+      "aus dem Adel stammend",
+      "patrizisch; adlig"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Civhonor",
+      "Substantiv",
+      "CIV + HON",
+      "Ehre der Bürgerschaft",
+      "Bürgerverdienst"
+    ],
+    [
+      "Philosophie und Kultur",
+      "Scriptoria",
+      "Substantiv",
+      "SCRIB + -TORIA",
+      "Kultur der Schriftorte",
+      "Schriftwesen; Literatur"
+    ]
+  ]
+}

@@ -1,0 +1,292 @@
+@font-face {
+  font-family: "Rheunwaith Ornament";
+  src:
+    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2") format("woff2"),
+    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karnrith Ornament";
+  src:
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2") format("woff2"),
+    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nharazim Ornament";
+  src:
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2") format("woff2"),
+    url("../../Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futhark Ornament";
+  src: url("../../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kanaanith Ornament";
+  src:
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lingua Argenti Ornament";
+  src:
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff2") format("woff2"),
+    url("../../Fonts/Lingua-Argenti-Gesamtpaket-1.000/Fonts/LinguaArgentiMonumental-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stoicheia Ornament";
+  src:
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff2") format("woff2"),
+    url("../../Fonts/Stoicheia-Gesamtpaket-1.000/Fonts/StoicheiaPolis-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.flip-page > .name-list-page {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.name-list-page {
+  --name-list-ink: #302317;
+  --name-list-muted: #715c43;
+  --name-list-gold: #97702b;
+  --name-list-line: rgba(116, 80, 30, 0.27);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: var(--name-list-ink);
+  background:
+    linear-gradient(90deg, rgba(78, 44, 13, 0.07), transparent 6%, transparent 94%, rgba(78, 44, 13, 0.07)),
+    linear-gradient(180deg, #fbf4df, #e9d8ad);
+  border-inline: 1px solid var(--name-list-line);
+}
+
+.name-list-header {
+  padding: 1.5rem clamp(1rem, 5vw, 4rem) 1.25rem;
+  text-align: center;
+  border-bottom: 1px solid var(--name-list-line);
+}
+
+.name-list-archive-label,
+.name-list-header > p,
+.name-list-footer {
+  font-family: var(--ui-font, "Cinzel", serif);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.name-list-archive-label {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  color: #f7e8bd;
+  background: #392719;
+  font-size: 0.6rem;
+}
+
+.name-list-ornament {
+  margin: 0.65rem auto;
+  color: #28798a;
+  font-family: "Rheunwaith Ornament", serif;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-variant-ligatures: common-ligatures;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-align: center;
+  opacity: 0.72;
+}
+
+.name-list-ornament.ornament-ogham {
+  font-family: "Segoe UI Historic", "Noto Sans Ogham", serif;
+  font-variant-ligatures: normal;
+  letter-spacing: 0.18em;
+}
+
+.name-list-ornament.ornament-karnrith {
+  color: #70451f;
+  font-family: "Karnrith Ornament", serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+  letter-spacing: 0.18em;
+}
+
+.name-list-ornament.ornament-infernal {
+  color: #68131b;
+  font-family: "Nharazim Ornament", serif;
+  letter-spacing: 0.16em;
+  text-shadow: 0.04em 0.06em 0.08em rgba(55, 4, 10, 0.3);
+}
+
+.name-list-ornament.ornament-futhark {
+  color: #5e472c;
+  font-family: "Futhark Ornament", "Segoe UI Historic", serif;
+  letter-spacing: 0.17em;
+}
+
+.name-list-ornament.ornament-kanaanith {
+  color: #176276;
+  direction: rtl;
+  font-family: "Kanaanith Ornament", serif;
+  letter-spacing: 0.14em;
+  unicode-bidi: isolate;
+}
+
+.name-list-ornament.ornament-argenti {
+  color: #53687d;
+  font-family: "Lingua Argenti Ornament", serif;
+  letter-spacing: 0.16em;
+  text-shadow: 0 0.05em 0.08em rgba(54, 72, 91, 0.2);
+}
+
+.name-list-ornament.ornament-stoicheia {
+  color: #845c2d;
+  font-family: "Stoicheia Ornament", serif;
+  letter-spacing: 0.14em;
+}
+
+.name-list-ornament.ornament-plain {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.name-list-header > p {
+  margin: 0.45rem 0 0;
+  color: var(--name-list-gold);
+  font-size: 0.6rem;
+}
+
+.name-list-header h2 {
+  margin: 0.25rem 0 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.7rem);
+  font-weight: 500;
+}
+
+.name-list-introduction {
+  width: min(100%, 48rem);
+  margin: 0.75rem auto 0;
+  color: var(--name-list-muted);
+  font-family: Georgia, serif;
+  line-height: 1.55;
+}
+
+.name-list-content {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.25rem clamp(0.8rem, 4vw, 3rem);
+}
+
+.name-list-group {
+  border: 1px solid var(--name-list-line);
+  background: rgba(255, 251, 236, 0.5);
+}
+
+.name-list-group > header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--name-list-line);
+}
+
+.name-list-group-number {
+  color: rgba(151, 112, 43, 0.55);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.name-list-group h3 {
+  margin: 0;
+  color: #604419;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.name-list-group header p {
+  margin: 0.15rem 0 0;
+  color: var(--name-list-muted);
+  font: 0.75rem/1.3 var(--ui-font, serif);
+}
+
+.name-list-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: name-list;
+}
+
+.name-list-names li {
+  counter-increment: name-list;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  min-width: 0;
+  padding: 0.48rem 0.65rem;
+  border-right: 1px solid rgba(116, 80, 30, 0.12);
+  border-bottom: 1px solid rgba(116, 80, 30, 0.12);
+}
+
+.name-list-names li::before {
+  content: counter(name-list, decimal-leading-zero);
+  flex: 0 0 auto;
+  color: rgba(151, 112, 43, 0.62);
+  font: 0.58rem/1 var(--ui-font, serif);
+}
+
+.name-list-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--name-list-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.name-list-page > .name-list-ornament {
+  margin-block: 0.3rem 0.6rem;
+  font-size: 1.6rem;
+}
+
+.name-list-footer {
+  padding: 0.8rem 1rem;
+  color: var(--name-list-muted);
+  border-top: 1px solid var(--name-list-line);
+  font-size: 0.56rem;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .name-list-header { padding-inline: 0.8rem; }
+  .name-list-content { padding-inline: 0.55rem; }
+  .name-list-names { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
