@@ -227,7 +227,11 @@ function createFakeLibrary(calls) {
         },
         setAfterUpdate(value) { this.afterUpdate = value; calls.push(['setAfterUpdate']); return this; },
         updateMainId(value) { calls.push(['updateMainId', value]); return this; },
-        updateTree(value) { calls.push(['updateTree', value.tree_position]); return this; },
+        updateTree(value) {
+          calls.push(['updateTree', value.tree_position]);
+          this.afterUpdate?.({ tree_position: value.tree_position });
+          return this;
+        },
         updateData(value) { calls.push(['updateData', value.length]); return this; }
       };
     }

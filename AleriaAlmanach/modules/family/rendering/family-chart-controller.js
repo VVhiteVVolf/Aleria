@@ -54,6 +54,7 @@
   }
 
   function setStatusFromSession(pageElement, record) {
+    if (!record?.session) return;
     const state = record.session.getState();
     const warningCount = state.diagnostics.filter(item => item.severity !== 'info').length
       + record.migrationReport.filter(item => item.severity !== 'info').length;

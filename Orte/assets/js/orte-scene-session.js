@@ -354,7 +354,7 @@ function openModuleEditorForCurrent() {
     "modules/family/compatibility/family-legacy-bridge.js?v=orte-family-chart-v1",
     "modules/family/migration/family-migration-service.js?v=orte-family-migration-v1",
     "modules/family/adapters/family-chart-adapter.js?v=orte-family-editor-v1",
-    "modules/family/rendering/family-chart-controller.js?v=orte-family-chart-v1",
+    "modules/family/rendering/family-chart-controller.js?v=orte-family-preview-mount-v1",
     "modules/family/family-renderer.js?v=orte-family-chart-v1",
     "modules/house-warriors/house-warriors-renderer.js?v=orte-house-warriors-images-v2",
     "modules/inline-editor/inline-editor-state.js?v=orte-module-templates-v2",
