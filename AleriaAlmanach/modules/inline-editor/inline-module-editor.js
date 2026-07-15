@@ -306,6 +306,7 @@ function getInlineTemplatePickerType(type, entry) {
     caste: 'caste',
     court: 'court',
     hierarchy: 'hierarchy',
+    'family-tree': 'family-tree',
     family: 'family',
     house: 'houses',
     biography: 'object-profile',
@@ -481,6 +482,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'court') return wrapInlineEditor(`${moduleMeta}${buildInlineCourtEditor(page)}`);
   if (type === 'house-warriors') return wrapInlineEditor(`${moduleMeta}${buildInlineHouseWarriorsEditor(page)}`);
   if (type === 'hierarchy') return wrapInlineEditor(`${moduleMeta}${buildInlineHierarchyEditor(page)}`);
+  if (type === 'family-tree') return wrapInlineEditor(`${moduleMeta}${buildInlineFamilyTreeEmbedEditor(page)}`);
   if (type === 'family') return wrapInlineEditor(`${moduleMeta}${buildInlineFamilyEditor(page)}`);
   if (type === 'biography') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineBiographyEditor(page)}`);
   if (type === 'house') return wrapInlineEditor(`${moduleMeta}${buildInlineStatsEditor(page)}${buildInlineHouseEditor(page)}`);

@@ -1,0 +1,113 @@
+/* Almanach shell for the independently developed application in /Stammbäume. */
+
+.family-tree-embed-page {
+  --family-tree-frame-height: 760px;
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: clamp(0.65rem, 1.6vw, 1.15rem);
+  color: #3f2b1e;
+  background:
+    radial-gradient(circle at 50% 0, rgba(255, 249, 228, 0.8), transparent 48%),
+    linear-gradient(180deg, #ead8b4, #d8bc8b);
+}
+
+.family-tree-embed-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(101, 67, 35, 0.34);
+  border-radius: 0.35rem;
+  background: rgba(255, 249, 231, 0.64);
+  box-shadow: 0 0.35rem 1.2rem rgba(67, 42, 20, 0.12);
+}
+
+.family-tree-embed-eyebrow {
+  color: #8a6237;
+  font: 700 0.62rem 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.family-tree-embed-header h2 {
+  margin: 0.18rem 0 0.28rem;
+  color: #4b2f1d;
+  font: 700 clamp(1.15rem, 2vw, 1.65rem) 'Cinzel', serif;
+}
+
+.family-tree-embed-header p {
+  max-width: 62rem;
+  margin: 0;
+  color: #705338;
+  font: 0.9rem/1.45 'EB Garamond', serif;
+}
+
+.family-tree-embed-open,
+.family-tree-editor-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.72rem;
+  border: 1px solid rgba(119, 78, 37, 0.48);
+  border-radius: 0.28rem;
+  background: linear-gradient(180deg, #75502f, #4e321f);
+  color: #fff1d1;
+  font: 700 0.64rem 'Cinzel', serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.family-tree-embed-frame-shell {
+  min-width: 0;
+  height: min(var(--family-tree-frame-height), 78vh);
+  min-height: 32rem;
+  overflow: hidden;
+  border: 1px solid rgba(65, 42, 24, 0.58);
+  border-radius: 0.42rem;
+  background: #13110f;
+  box-shadow: 0 0.7rem 2rem rgba(48, 29, 14, 0.24);
+}
+
+.family-tree-embed-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #161411;
+}
+
+.family-tree-embed-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: rgba(75, 47, 29, 0.72);
+  font: 0.66rem 'Cinzel', serif;
+}
+
+.family-tree-embed-footer code {
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .family-tree-embed-header,
+  .family-tree-embed-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .family-tree-embed-open {
+    align-self: flex-start;
+  }
+
+  .family-tree-embed-frame-shell {
+    height: min(var(--family-tree-frame-height), 72vh);
+    min-height: 27rem;
+  }
+}

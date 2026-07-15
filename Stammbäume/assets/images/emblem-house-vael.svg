@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-labelledby="title">
+  <title id="title">Wappen von Haus Vael</title>
+  <defs>
+    <linearGradient id="shield" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#9b2f2a"/>
+      <stop offset="1" stop-color="#491412"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#f1d487"/>
+      <stop offset="1" stop-color="#a87725"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#shield)" stroke="url(#gold)" stroke-width="5" d="M60 5 108 22v43c0 34-20 55-48 69C32 120 12 99 12 65V22Z"/>
+  <path fill="none" stroke="#e4c16a" stroke-width="3" d="M60 14 98 27v37c0 27-14 46-38 59-24-13-38-32-38-59V27Z" opacity=".75"/>
+  <path fill="url(#gold)" d="M59 27c9 13 10 24 3 34 16-7 25 0 28 11-10-5-18-3-24 6 9 2 15 8 17 18-9-4-17-2-24 7-4-10-12-13-23-9 4-10 10-15 19-16-7-9-15-11-25-7 4-11 13-17 28-11-6-11-5-21 1-33Z"/>
+  <path fill="#6a1c19" d="M60 47c4 10 2 18-6 25 10-2 16 2 18 9-8-2-13 2-16 11-4-8-9-11-17-7 3-7 8-11 16-12-4-8-3-17 5-26Z"/>
+</svg>
+

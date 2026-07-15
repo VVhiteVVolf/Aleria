@@ -6,6 +6,17 @@ function getInlineFamilyDataForEdit(page) {
   return page.family;
 }
 
+function handleInlineFamilyWorkbenchChange(event) {
+  if (!event.target?.closest?.('.inline-module-edit-pane')) return;
+  const page = getInlineDraftPage();
+  const family = event.detail?.family;
+  if (!page || !globalThis.AleriaFamily?.editor?.model?.isVersioned(family)) return;
+  page.family = sanitizeFamilyData(family);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+document.addEventListener('family-workbench-change', handleInlineFamilyWorkbenchChange);
+
 function updateInlineFamilyV2Field(input) {
   const page = getInlineDraftPage();
   const model = globalThis.AleriaFamily?.editor?.model;

@@ -1,0 +1,80 @@
+import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
+import { listFamilyRecords } from './services/family-library.js';
+import { escapeHtml } from './ui/dom.js';
+
+function createFolderNode(name = '') {
+  return { name, folders: new Map(), records: [] };
+}
+
+function buildFolderTree(records) {
+  const root = createFolderNode();
+  records.forEach(record => {
+    const path = record.folderPath?.length ? record.folderPath : ['Nicht einsortiert'];
+    let node = root;
+    path.forEach(segment => {
+      if (!node.folders.has(segment)) node.folders.set(segment, createFolderNode(segment));
+      node = node.folders.get(segment);
+    });
+    node.records.push(record);
+  });
+  return root;
+}
+
+function countRecords(node) {
+  return node.records.length + [...node.folders.values()].reduce((sum, child) => sum + countRecords(child), 0);
+}
+
+function renderFamilyCard(record) {
+  const emblem = record.family.document.emblem || record.family.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
+  const people = record.family.persons.length;
+  return `
+    <a class="registry-family-card" href="${escapeHtml(record.link || `index.html?family=${encodeURIComponent(record.id)}&mode=view`)}">
+      <img class="registry-family-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
+      <div>
+        <h3>${escapeHtml(record.title)}</h3>
+        <p>${escapeHtml(record.family.document.motto || record.family.document.description || 'Familienakte öffnen')}</p>
+      </div>
+      <span class="registry-family-meta">
+        <span>${people} Personen</span>
+        <span class="${record.source === 'local' ? 'registry-source-local' : ''}">${record.source === 'local' ? 'Lokal gespeichert' : 'Projekt-Registry'}</span>
+      </span>
+    </a>
+  `;
+}
+
+function renderFolder(node, depth = 0) {
+  const folders = [...node.folders.values()]
+    .sort((first, second) => first.name.localeCompare(second.name, 'de'))
+    .map(child => renderFolder(child, depth + 1))
+    .join('');
+  const records = [...node.records]
+    .sort((first, second) => first.title.localeCompare(second.title, 'de'))
+    .map(renderFamilyCard)
+    .join('');
+  if (!node.name) return `${folders}${records}`;
+  return `
+    <details class="registry-folder" ${depth <= 2 ? 'open' : ''}>
+      <summary>${escapeHtml(node.name)} <span class="registry-folder-count">${countRecords(node)}</span></summary>
+      <div class="registry-folder-children">${folders}${records}</div>
+    </details>
+  `;
+}
+
+const allRecords = listFamilyRecords();
+const treeContainer = document.getElementById('registry-tree');
+const empty = document.getElementById('registry-empty');
+const search = document.getElementById('registry-search');
+document.getElementById('registry-count').textContent = String(allRecords.length);
+
+function render(query = '') {
+  const needle = query.trim().toLocaleLowerCase('de');
+  const records = needle
+    ? allRecords.filter(record => [record.title, record.id, ...(record.folderPath || [])]
+      .some(value => String(value).toLocaleLowerCase('de').includes(needle)))
+    : allRecords;
+  treeContainer.innerHTML = renderFolder(buildFolderTree(records));
+  empty.hidden = records.length > 0;
+}
+
+search.addEventListener('input', () => render(search.value));
+render();

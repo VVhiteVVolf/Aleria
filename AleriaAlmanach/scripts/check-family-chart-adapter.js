@@ -29,6 +29,9 @@ vm.createContext(context);
 
 const adapter = context.AleriaFamily.adapters.familyChart;
 const compatibility = context.AleriaFamily.compatibility;
+const familyCss = fs.readFileSync(path.join(almanachRoot, 'styles/module-page-family.css'), 'utf8');
+assert.match(familyCss, /\.family-chart-host\.f3 div\.card-image-rect div\.card-label\s*\{[^}]*position:\s*static;/s);
+assert.match(familyCss, /\.family-chart-host\.f3 div\.card-image-rect > img,[^{]+\{[^}]*aspect-ratio:\s*2\s*\/\s*3;/s);
 const family = {
   schema: 'aleria.family',
   schemaVersion: 2,
@@ -199,12 +202,17 @@ function createFakeLibrary(calls) {
     createChart(container, data) {
       calls.push(['createChart', data.length]);
       const card = {
+        setCardImageField(value) { calls.push(['setCardImageField', value]); return this; },
+        setStyle(value) { calls.push(['setStyle', value]); return this; },
+        setCardDim(value) { calls.push(['setCardDim', value]); return this; },
         setCardDisplay(value) { calls.push(['setCardDisplay', value.length]); return this; },
         setOnCardClick(value) { this.onClick = value; calls.push(['setOnCardClick']); return this; }
       };
       return {
         personSearch: null,
         setTransitionTime(value) { calls.push(['setTransitionTime', value]); return this; },
+        setCardXSpacing(value) { calls.push(['setCardXSpacing', value]); return this; },
+        setCardYSpacing(value) { calls.push(['setCardYSpacing', value]); return this; },
         setShowSiblingsOfMain(value) { calls.push(['setShowSiblingsOfMain', value]); return this; },
         setAncestryDepth(value) { calls.push(['setAncestryDepth', value]); return this; },
         setProgenyDepth(value) { calls.push(['setProgenyDepth', value]); return this; },
@@ -277,7 +285,14 @@ session.fit();
 assert.strictEqual(session.update(family, { initialFocusPersonId: 'parent-b', orientation: 'vertical' }), true);
 assert.ok(calls.some(call => call[0] === 'createChart'));
 assert.ok(calls.some(call => call[0] === 'setCardHtml'));
+assert.ok(calls.some(call => call[0] === 'setCardImageField' && call[1] === 'portrait'));
+assert.ok(calls.some(call => call[0] === 'setStyle' && call[1] === 'imageRect'));
+const cardDimCall = calls.find(call => call[0] === 'setCardDim');
+assert.strictEqual(cardDimCall[1].width / cardDimCall[1].height, 232 / 108);
+assert.strictEqual(cardDimCall[1].img_width / cardDimCall[1].img_height, 2 / 3);
 assert.ok(calls.some(call => call[0] === 'setCardDisplay' && call[1] === 4));
+assert.ok(calls.some(call => call[0] === 'setCardXSpacing' && call[1] === 272));
+assert.ok(calls.some(call => call[0] === 'setCardYSpacing' && call[1] === 176));
 assert.ok(calls.some(call => call[0] === 'setPersonDropdown'
   && call[1] === 'Person finden'
   && call[2] === sessionSearchHost));

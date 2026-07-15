@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Navigation und Bearbeitungswerkstatt für die Stammbäume des Aleria Almanachs">
+  <title>Aleria · Stammbaum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/family-chart/0.9.0/family-chart.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/family-chart-theme.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <div class="app-shell" id="family-app" data-workspace-mode="view">
+    <header class="app-header">
+      <div class="brand-block">
+        <img class="brand-emblem" id="family-emblem" src="assets/images/emblem-house-vael.svg" alt="Wappen des Hauses">
+        <div>
+          <p class="eyebrow" id="workspace-eyebrow">Aleria Almanach · Stammbaum</p>
+          <h1 id="family-title">Haus Vael</h1>
+          <p class="house-motto" id="family-motto">Blut erinnert sich.</p>
+        </div>
+      </div>
+
+      <div class="header-tools">
+        <div class="header-stats" aria-label="Statistik">
+          <span><strong id="person-count">0</strong> Personen</span>
+          <span><strong id="generation-count">0</strong> Generationen</span>
+          <span><strong data-current-year>1740</strong> Gegenwart</span>
+        </div>
+        <div class="workspace-mode-switch" aria-label="Arbeitsmodus">
+          <span class="workspace-mode-label" id="workspace-mode-label">Ansichtsmodus</span>
+          <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
+          <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
+          <a class="button button--quiet" id="view-mode-link" href="?mode=view" target="_blank" rel="noopener" data-edit-only>Ansicht öffnen</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="Werkzeuge" data-edit-only>
+      <div class="search-field">
+        <label class="sr-only" for="person-search">Person suchen</label>
+        <span aria-hidden="true">⌕</span>
+        <input id="person-search" type="search" autocomplete="off" placeholder="Person, Titel oder Haus suchen …">
+        <div class="search-results" id="search-results" hidden></div>
+      </div>
+
+      <div class="toolbar-group">
+        <button class="button button--quiet" type="button" data-action="undo" title="Rückgängig" disabled>↶ <span>Rückgängig</span></button>
+        <button class="button button--quiet" type="button" data-action="redo" title="Wiederholen" disabled>↷ <span>Wiederholen</span></button>
+      </div>
+
+      <div class="toolbar-group">
+        <button class="button button--quiet" type="button" data-action="fit-chart">⌖ <span>Einpassen</span></button>
+        <button class="button button--quiet" type="button" data-action="show-default-view">◎ <span>Gesamtansicht</span></button>
+        <button class="button button--quiet" type="button" data-action="toggle-orientation">⇄ <span>Ausrichtung</span></button>
+        <button class="button button--quiet" type="button" data-action="open-lineage-settings">⌂ <span>Baumaufbau</span></button>
+        <button class="button button--quiet" type="button" data-action="open-line-colors">⌁ <span>Linienfarben</span></button>
+      </div>
+
+      <div class="toolbar-group toolbar-group--end">
+        <button class="button" type="button" data-action="start-new-family">＋ Neue Familie</button>
+        <a class="button button--quiet" href="register.html">Familienregister</a>
+        <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
+        <button class="button button--quiet" type="button" data-action="open-person-create">＋ Person</button>
+        <button class="button button--quiet" type="button" data-action="open-cadet-create">＋ Hausverknüpfung</button>
+        <button class="button button--quiet" type="button" data-action="open-time-jump-create">＋ Zeitsprung</button>
+        <button class="button button--quiet" type="button" data-action="export-png">PNG · hohe Auflösung</button>
+        <button class="button button--quiet" type="button" data-action="export-family">JSON exportieren</button>
+        <button class="button button--quiet" type="button" data-action="trigger-import">JSON importieren</button>
+        <input class="sr-only" id="family-import" type="file" accept="application/json,.json">
+      </div>
+    </section>
+
+    <section class="legend" aria-label="Farblegende" id="family-legend" data-edit-only></section>
+
+    <main class="workspace">
+      <section class="chart-panel" aria-labelledby="chart-heading">
+        <div class="chart-heading-row">
+          <div>
+            <p class="eyebrow">Geöffnete Familienakte</p>
+            <h2 id="chart-heading">Stammbaum ansehen</h2>
+          </div>
+          <p class="chart-hint">Ziehen zum Verschieben · Mausrad zum Zoomen · Karte wählen für Details</p>
+        </div>
+        <div class="chart-stage">
+          <div class="family-chart-host f3 f3-cont" id="family-chart" aria-label="Interaktiver Stammbaum"></div>
+          <div class="chart-status" id="chart-status" role="status" hidden></div>
+        </div>
+      </section>
+
+      <aside class="inspector" id="person-inspector" aria-live="polite" data-edit-only></aside>
+    </main>
+
+    <footer class="app-footer">
+      <span id="save-status" data-edit-only>Lokal gespeichert</span>
+      <span>Gegenwart <span data-current-year>1740</span> · Family Chart 0.9.0 · Aleria-Datenmodell v1</span>
+    </footer>
+  </div>
+
+  <dialog class="dialog dialog--wide" id="new-family-dialog">
+    <form method="dialog" id="new-family-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Neue unabhängige Familienakte</p>
+          <h2>Familie mit Gründerpaar beginnen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-new-family-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <h3 class="form-section-title field--wide">Haus und Familienakte</h3>
+        <label class="field">Name der Familie
+          <input name="documentTitle" required maxlength="120" placeholder="Haus Sgrechwyr" autocomplete="off">
+        </label>
+        <label class="field">Familien-ID
+          <input name="documentId" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-sgrechwyr">
+        </label>
+        <label class="field">Hauswort / Motto
+          <input name="motto" maxlength="180" placeholder="Im Schatten wächst die Klinge.">
+        </label>
+        <label class="field">Rahmen des Wappens
+          <select name="crestFrame"></select>
+        </label>
+        <label class="field">Wappen-URL oder lokaler Pfad (1:1)
+          <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
+        </label>
+        <label class="field field--wide">Untertitel am Wappenknoten
+          <input name="crestSubtitle" maxlength="160" placeholder="optional">
+        </label>
+
+        <h3 class="form-section-title field--wide">Gründer-Ehepaar</h3>
+        <div class="founder-form-card founder-form-card--core field--wide">
+          <p class="eyebrow">Mann · Kernlinie</p>
+          <div class="form-grid">
+            <label class="field">Name
+              <input name="founderManName" required maxlength="120" placeholder="Lorcan Sgrechwyr">
+            </label>
+            <label class="field">Titel
+              <input name="founderManTitle" maxlength="120" placeholder="Gründer des Hauses">
+            </label>
+            <label class="field">Geburt
+              <input name="founderManBirth" maxlength="40" placeholder="1688">
+            </label>
+            <label class="field">Tod
+              <input name="founderManDeath" maxlength="40" placeholder="leer = lebend">
+            </label>
+          </div>
+        </div>
+        <div class="founder-form-card founder-form-card--married field--wide">
+          <p class="eyebrow">Frau · angeheiratet</p>
+          <div class="form-grid">
+            <label class="field">Name
+              <input name="founderWomanName" required maxlength="120" placeholder="Líadan Uroquhart">
+            </label>
+            <label class="field">Titel
+              <input name="founderWomanTitle" maxlength="120" placeholder="Gründerin des Hauses">
+            </label>
+            <label class="field">Geburt
+              <input name="founderWomanBirth" maxlength="40" placeholder="1692">
+            </label>
+            <label class="field">Tod
+              <input name="founderWomanDeath" maxlength="40" placeholder="leer = lebend">
+            </label>
+          </div>
+        </div>
+        <label class="field field--wide">Jahr der Eheschließung
+          <input name="marriageYear" maxlength="40" placeholder="1712">
+        </label>
+
+        <h3 class="form-section-title field--wide">Erstes Kind unter dem Wappen <span>optional</span></h3>
+        <label class="field">Name
+          <input name="firstChildName" maxlength="120" placeholder="Kann später ergänzt werden">
+        </label>
+        <label class="field">Titel
+          <input name="firstChildTitle" maxlength="120">
+        </label>
+        <label class="field">Geschlecht
+          <select name="firstChildSex">
+            <option value="unknown">Unbekannt</option>
+            <option value="female">Weiblich</option>
+            <option value="male">Männlich</option>
+          </select>
+        </label>
+        <label class="field">Geburt
+          <input name="firstChildBirth" maxlength="40">
+        </label>
+        <label class="field">Tod
+          <input name="firstChildDeath" maxlength="40" placeholder="leer = lebend">
+        </label>
+        <label class="checkbox-field field--wide">
+          <input type="checkbox" name="openSaveAfterCreate" checked>
+          <span>Nach dem Anlegen direkt den Speicherdialog für das Familienregister öffnen</span>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="start-empty-family">Ganz leer beginnen</button>
+        <button class="button button--quiet" type="button" data-action="close-new-family-dialog">Abbrechen</button>
+        <button class="button" value="default" type="submit">Gründerfamilie anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="person-dialog">
+    <form method="dialog" id="person-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Personenakte</p>
+          <h2 id="person-dialog-title">Person anlegen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-person-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <input type="hidden" name="id">
+        <label class="field field--wide">Name
+          <input name="name" required maxlength="120" autocomplete="off">
+        </label>
+        <label class="field">Titel
+          <input name="title" maxlength="120" autocomplete="off">
+        </label>
+        <label class="field">Haus
+          <select name="houseId" id="person-house"></select>
+        </label>
+        <label class="field">Geschlecht
+          <select name="sex">
+            <option value="female">Weiblich</option>
+            <option value="male">Männlich</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Farbschema / Rolle
+          <select name="familyRole" id="person-family-role"></select>
+        </label>
+        <label class="field">Geburt
+          <input name="birth" maxlength="40" placeholder="z. B. 1218">
+        </label>
+        <label class="field">Tod
+          <input name="death" maxlength="40" placeholder="leer = lebend/unbekannt">
+        </label>
+        <label class="field">Status
+          <select name="status">
+            <option value="alive">Lebend</option>
+            <option value="dead">Verstorben</option>
+            <option value="missing">Verschollen</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Portrait-URL oder lokaler Pfad
+          <input name="portrait" type="text" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
+        </label>
+        <label class="field">Platzhalter ohne Portrait
+          <select name="portraitPlaceholder">
+            <option value="auto">Automatisch nach Geschlecht</option>
+            <option value="male">Männliche Silhouette</option>
+            <option value="female">Weibliche Silhouette</option>
+            <option value="child">Kind-Silhouette</option>
+            <option value="unknown">Unbekannte Silhouette</option>
+          </select>
+        </label>
+        <label class="field field--wide">Notizen
+          <textarea name="notes" rows="4" maxlength="2000"></textarea>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-person-dialog">Abbrechen</button>
+        <button class="button" value="default" type="submit">Person speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="related-person-dialog">
+    <form method="dialog" id="related-person-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Person & Verbindung gemeinsam anlegen</p>
+          <h2 id="related-person-heading">Neue verbundene Person</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-related-person-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <input type="hidden" name="referencePersonId">
+        <input type="hidden" name="timeJumpId">
+        <label class="field field--wide">Beziehung zur ausgewählten Person
+          <select name="relationKind">
+            <option value="partnership">Partnerin / Partner</option>
+            <option value="child">Kind</option>
+            <option value="parent">Elternteil</option>
+            <option value="time-jump-child" disabled>Erste bekannte Person nach Zeitsprung</option>
+          </select>
+        </label>
+
+        <div class="relationship-fields field--wide" data-related-fields="partnership">
+          <label class="field">Art der Partnerschaft
+            <select name="partnershipType">
+              <option value="marriage">Ehe</option>
+              <option value="engagement">Verlobung</option>
+              <option value="union">Verbindung</option>
+              <option value="affair">Affäre</option>
+              <option value="concubinage">Konkubinat</option>
+              <option value="political">Politische Verbindung</option>
+              <option value="forced">Erzwungene Verbindung</option>
+            </select>
+          </label>
+          <label class="field">Status
+            <select name="partnershipStatus">
+              <option value="active">Aktiv</option>
+              <option value="ended">Beendet</option>
+              <option value="divorced">Geschieden</option>
+              <option value="widowed">Verwitwet</option>
+              <option value="secret">Geheim</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="relationship-fields field--wide" data-related-fields="child parent" hidden>
+          <label class="field field--wide">Weiteres Elternteil
+            <select name="secondParentId"></select>
+          </label>
+        </div>
+
+        <div class="relationship-fields field--wide" data-related-fields="child parent time-jump-child" hidden>
+          <label class="field">Abstammungsart
+            <select name="parentageType">
+              <option value="biological">Biologisch</option>
+              <option value="adoptive">Adoptiert</option>
+              <option value="foster">Pflege / Mündel</option>
+              <option value="step">Stiefbeziehung</option>
+              <option value="magical">Magisch</option>
+              <option value="claimed">Beansprucht / überliefert</option>
+            </select>
+          </label>
+          <label class="field">Legitimität
+            <select name="legitimacy">
+              <option value="legitimate">Legitim</option>
+              <option value="illegitimate">Außerhalb der Ehe</option>
+              <option value="legitimized">Legitimiert</option>
+              <option value="disputed">Umstritten</option>
+              <option value="unknown">Unbekannt</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field field--wide">Name
+          <input name="name" required maxlength="120" autocomplete="off">
+        </label>
+        <label class="field">Titel
+          <input name="title" maxlength="120" autocomplete="off">
+        </label>
+        <label class="field">Haus
+          <select name="houseId"></select>
+        </label>
+        <label class="field">Geschlecht
+          <select name="sex">
+            <option value="female">Weiblich</option>
+            <option value="male">Männlich</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Farbschema / Rolle
+          <select name="familyRole"></select>
+        </label>
+        <label class="field">Geburt
+          <input name="birth" maxlength="40" placeholder="z. B. 1740">
+        </label>
+        <label class="field">Tod
+          <input name="death" maxlength="40" placeholder="leer = lebend/unbekannt">
+        </label>
+        <label class="field">Status
+          <select name="status">
+            <option value="alive">Lebend</option>
+            <option value="dead">Verstorben</option>
+            <option value="missing">Verschollen</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Portrait-URL oder lokaler Pfad
+          <input name="portrait" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
+        </label>
+        <label class="field">Platzhalter ohne Portrait
+          <select name="portraitPlaceholder">
+            <option value="auto">Automatisch</option>
+            <option value="male">Männliche Silhouette</option>
+            <option value="female">Weibliche Silhouette</option>
+            <option value="child">Kind-Silhouette</option>
+            <option value="unknown">Unbekannte Silhouette</option>
+          </select>
+        </label>
+        <label class="field">Gewissheit
+          <select name="certainty">
+            <option value="confirmed">Bestätigt</option>
+            <option value="probable">Wahrscheinlich</option>
+            <option value="rumored">Gerücht</option>
+            <option value="disputed">Umstritten</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Sichtbarkeit
+          <select name="visibility">
+            <option value="public">Öffentlich</option>
+            <option value="restricted">Eingeschränkt</option>
+            <option value="secret">Geheim</option>
+          </select>
+        </label>
+        <label class="field field--wide">Notizen
+          <textarea name="notes" rows="3" maxlength="2000"></textarea>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-related-person-dialog">Abbrechen</button>
+        <button class="button" value="default" type="submit">Person und Verbindung anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="relationship-dialog">
+    <form method="dialog" id="relationship-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Genealogische Verbindung</p>
+          <h2>Beziehung verknüpfen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-relationship-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <input type="hidden" name="referencePersonId">
+        <label class="field">Beziehungsgruppe
+          <select name="recordType" data-role="relationship-record-type">
+            <option value="partnership">Partnerschaft</option>
+            <option value="parentage">Abstammung</option>
+          </select>
+        </label>
+        <label class="field">Andere Person
+          <select name="otherPersonId" id="relationship-person" required></select>
+        </label>
+
+        <div class="relationship-fields field--wide" data-relationship-fields="partnership">
+          <label class="field">Art der Partnerschaft
+            <select name="partnershipType">
+              <option value="marriage">Ehe</option>
+              <option value="engagement">Verlobung</option>
+              <option value="union">Verbindung</option>
+              <option value="affair">Affäre</option>
+              <option value="concubinage">Konkubinat</option>
+              <option value="political">Politische Verbindung</option>
+              <option value="forced">Erzwungene Verbindung</option>
+            </select>
+          </label>
+          <label class="field">Status
+            <select name="partnershipStatus">
+              <option value="active">Aktiv</option>
+              <option value="ended">Beendet</option>
+              <option value="divorced">Geschieden</option>
+              <option value="widowed">Verwitwet</option>
+              <option value="secret">Geheim</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="relationship-fields field--wide" data-relationship-fields="parentage" hidden>
+          <label class="field">Richtung
+            <select name="parentageDirection">
+              <option value="reference-is-parent">Ausgewählte Person ist Elternteil</option>
+              <option value="reference-is-child">Ausgewählte Person ist das Kind</option>
+            </select>
+          </label>
+          <label class="field">Weiteres Elternteil
+            <select name="secondParentId" id="relationship-second-parent"></select>
+          </label>
+          <label class="field">Abstammungsart
+            <select name="parentageType">
+              <option value="biological">Biologisch</option>
+              <option value="adoptive">Adoptiert</option>
+              <option value="foster">Pflege</option>
+              <option value="step">Stiefbeziehung</option>
+              <option value="magical">Magisch</option>
+              <option value="claimed">Beansprucht</option>
+            </select>
+          </label>
+          <label class="field">Legitimität
+            <select name="legitimacy">
+              <option value="legitimate">Legitim</option>
+              <option value="illegitimate">Unehelich</option>
+              <option value="legitimized">Legitimiert</option>
+              <option value="disputed">Umstritten</option>
+              <option value="unknown">Unbekannt</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">Gewissheit
+          <select name="certainty">
+            <option value="confirmed">Bestätigt</option>
+            <option value="probable">Wahrscheinlich</option>
+            <option value="rumored">Gerücht</option>
+            <option value="disputed">Umstritten</option>
+            <option value="unknown">Unbekannt</option>
+          </select>
+        </label>
+        <label class="field">Sichtbarkeit
+          <select name="visibility">
+            <option value="public">Öffentlich</option>
+            <option value="restricted">Eingeschränkt</option>
+            <option value="secret">Geheim</option>
+          </select>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-relationship-dialog">Abbrechen</button>
+        <button class="button" value="default" type="submit">Verbindung speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="line-colors-dialog">
+    <form method="dialog" id="line-colors-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Darstellung</p>
+          <h2>Farben der Verbindungslinien</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-line-colors" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body color-field-grid" id="relationship-color-fields"></div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="reset-line-colors">Standardfarben</button>
+        <button class="button" value="default" type="submit">Farben übernehmen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="lineage-dialog">
+    <form method="dialog" id="lineage-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Aufbau der Linie</p>
+          <h2>Gründerpaar, Wappen & Zeitsprung</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-lineage-settings" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field field--wide">Gründerpaar
+          <select name="founderPartnershipId" id="lineage-founder-partnership"></select>
+        </label>
+        <label class="field field--wide">Hauswappen unter dem Gründerpaar
+          <select name="houseId" id="lineage-house"></select>
+        </label>
+        <label class="field field--wide">Rahmen des Wappens
+          <select name="crestFrame"></select>
+        </label>
+        <label class="field field--wide">Untertitel unter dem Wappen
+          <input name="crestSubtitle" maxlength="160" placeholder="optional">
+        </label>
+        <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
+          <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
+        </label>
+        <label class="checkbox-field field--wide">
+          <input type="checkbox" name="timeGapEnabled">
+          <span>Zeitsprung zwischen Wappen und belegten Nachkommen anzeigen</span>
+        </label>
+        <label class="field">Jahr (von)
+          <input name="timeGapFromYear" maxlength="40" placeholder="z. B. 1252">
+        </label>
+        <label class="field">Jahr (bis)
+          <input name="timeGapToYear" maxlength="40" placeholder="z. B. 1704">
+        </label>
+        <label class="field">Zeitraum in Jahren
+          <input type="number" name="timeGapYears" min="0" max="10000" step="1" placeholder="500">
+        </label>
+        <label class="field">Beschriftung
+          <input name="timeGapLabel" maxlength="160" placeholder="Nach Jahrhunderten beginnt die belegte Linie">
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="open-lineage-child-from-editor">Nachkommen anlegen</button>
+        <button class="button button--quiet" type="button" data-action="close-lineage-settings">Abbrechen</button>
+        <button class="button" value="default" type="submit">Baumaufbau speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="cadet-dialog">
+    <form method="dialog" id="cadet-form">
+      <input type="hidden" name="id">
+      <input type="hidden" name="houseId">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Verknüpfung zu einer anderen Familienakte</p>
+          <h2 id="cadet-dialog-title">Hausknoten anlegen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-cadet-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field field--wide">Gründerpaar / Elternpaar
+          <select name="parentPartnershipId" id="cadet-parent-partnership" required></select>
+        </label>
+        <label class="field">Art der Verknüpfung
+          <select name="linkType">
+            <option value="cadet-house">Gegründetes Kadettenhaus</option>
+            <option value="married-away">Wegverheiratete Linie</option>
+          </select>
+        </label>
+        <label class="field">Name des Zielhauses
+          <input name="name" required maxlength="120" placeholder="Haus Sgrechwyr">
+        </label>
+        <label class="field field--wide">Untertitel
+          <input name="subtitle" maxlength="160" placeholder="z. B. Wegverheiratete Linie">
+        </label>
+        <label class="field">Gründungsjahr
+          <input name="founded" maxlength="40" placeholder="1764">
+        </label>
+        <label class="field field--wide">Rahmen des Wappens
+          <select name="crestFrame"></select>
+        </label>
+        <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
+          <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
+        </label>
+        <label class="field field--wide">Ziel-Familien-ID im Register
+          <input name="targetFamilyId" required maxlength="120" placeholder="haus-sgrechwyr">
+        </label>
+        <label class="field field--wide">Notiz
+          <textarea name="notes" rows="3" maxlength="1000"></textarea>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--danger" id="cadet-dialog-delete" type="button" data-action="delete-current-cadet" hidden>Verknüpfung löschen</button>
+        <button class="button button--quiet" type="button" data-action="close-cadet-dialog">Abbrechen</button>
+        <button class="button" id="cadet-dialog-submit" value="default" type="submit">Verknüpfung anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="time-jump-dialog">
+    <form method="dialog" id="time-jump-form">
+      <input type="hidden" name="id">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Unterbrochene Überlieferung</p>
+          <h2 id="time-jump-dialog-title">Zeitsprungknoten anlegen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-time-jump-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field field--wide">Paar vor dem Zeitsprung
+          <select name="parentPartnershipId" required></select>
+        </label>
+        <label class="field">Jahr (von)
+          <input name="fromYear" maxlength="40" placeholder="automatisch oder z. B. 1252">
+        </label>
+        <label class="field">Jahr (bis)
+          <input name="toYear" maxlength="40" placeholder="automatisch oder z. B. 1704">
+        </label>
+        <label class="field">Übersprungene Jahre
+          <input type="number" name="years" min="0" max="10000" step="1">
+        </label>
+        <label class="field">Beschriftung
+          <input name="label" maxlength="160" placeholder="Nach Jahrhunderten setzt die belegte Linie wieder ein">
+        </label>
+        <label class="field field--wide">Bereits vorhandene erste bekannte Person
+          <select name="childId"></select>
+        </label>
+        <p class="form-hint field--wide">Der Knoten kann zunächst ohne Nachkommen angelegt werden. Über die Personenakte des Paares lässt sich später direkt eine neue Person dahinter ergänzen.</p>
+        <label class="field field--wide">Notiz
+          <textarea name="notes" rows="3" maxlength="1000"></textarea>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--danger" id="time-jump-dialog-delete" type="button" data-action="delete-current-time-jump" hidden>Zeitsprung löschen</button>
+        <button class="button button--quiet" id="time-jump-dialog-add-child" type="button" data-action="open-time-jump-child-from-editor" hidden>Nachkommen anlegen</button>
+        <button class="button button--quiet" type="button" data-action="close-time-jump-dialog">Abbrechen</button>
+        <button class="button" id="time-jump-dialog-submit" value="default" type="submit">Zeitsprungknoten anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="family-save-dialog">
+    <form method="dialog" id="family-save-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Familienregister</p>
+          <h2>Familie einspeichern</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-family-save" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field">Familien-ID
+          <input name="id" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-sgrechwyr">
+        </label>
+        <label class="field">Anzeigename
+          <input name="title" required maxlength="120" placeholder="Haus Sgrechwyr">
+        </label>
+        <label class="field field--wide">Ordnerpfad
+          <input name="folderPath" required maxlength="500" placeholder="Cenyr > Celtigerns Wacht > Llamrais Ankunft > Haus Sgrechwyr">
+        </label>
+        <p class="form-hint field--wide">Der Pfad wird im Familienregister als verschachtelte Ordnerstruktur angelegt. Gespeicherte Familien öffnen sich über eine eigene URL.</p>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-family-save">Abbrechen</button>
+        <button class="button" value="default" type="submit">Im Register speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="edit-access-dialog">
+    <form method="dialog" id="edit-access-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Geschützter Arbeitsbereich</p>
+          <h2>Bearbeitungsmodus öffnen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-edit-access" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field field--wide">Passwort
+          <input type="password" name="password" required autocomplete="current-password" inputmode="numeric">
+        </label>
+        <p class="form-error field--wide" id="edit-access-error" hidden>Das Passwort ist nicht korrekt.</p>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-edit-access">Abbrechen</button>
+        <button class="button" value="default" type="submit">Bearbeitungsmodus öffnen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="app-toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/d3/7.9.0/d3.min.js"></script>
+  <script src="vendor/family-chart/0.9.0/family-chart.min.js"></script>
+  <script src="vendor/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

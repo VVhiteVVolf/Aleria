@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Verschachteltes Familienregister des Aleria Almanachs">
+  <title>Aleria · Familienregister</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/registry.css">
+</head>
+<body class="registry-body">
+  <main class="registry-shell">
+    <header class="registry-header">
+      <div>
+        <p class="eyebrow">Aleria Almanach · Genealogische Archive</p>
+        <h1>Familienregister</h1>
+        <p>Dynastien, Häuser und Nebenlinien nach Regionen und Herrschaftsgebieten geordnet.</p>
+      </div>
+      <a class="button" href="index.html?mode=view">Stammbaum öffnen</a>
+    </header>
+
+    <section class="registry-toolbar" aria-label="Register durchsuchen">
+      <label class="registry-search">
+        <span aria-hidden="true">⌕</span>
+        <span class="sr-only">Familien suchen</span>
+        <input type="search" id="registry-search" placeholder="Familie oder Ordner suchen …" autocomplete="off">
+      </label>
+      <p><strong id="registry-count">0</strong> Familienakten</p>
+    </section>
+
+    <section class="registry-content" aria-labelledby="registry-tree-title">
+      <div class="registry-intro">
+        <p class="eyebrow">Ordnerstruktur</p>
+        <h2 id="registry-tree-title">Länder, Regionen & Häuser</h2>
+      </div>
+      <div class="registry-tree" id="registry-tree"></div>
+      <div class="registry-empty" id="registry-empty" hidden>Keine passende Familie gefunden.</div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/registry-app.js"></script>
+</body>
+</html>

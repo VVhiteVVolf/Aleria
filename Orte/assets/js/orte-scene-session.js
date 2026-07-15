@@ -49,6 +49,8 @@ function getModuleCastIdsFromSource(source) {
 
 function closeModal() {
   const overlay = document.getElementById("modal-overlay");
+  const body = document.getElementById("modal-body");
+  if (body) globalThis.AleriaFamily?.workbench?.unmount?.({ root: body });
   if (typeof deactivateDialog === "function") deactivateDialog("modal-overlay");
   else overlay?.classList.remove("active");
   document.body.style.overflow = "";
@@ -87,8 +89,11 @@ function renderPage(pageIndex, direction) {
 
   applyOrteSessionModalTheme(entry);
   const html = buildSessionPage(page, entry, pageIndex, pages.length);
+  globalThis.AleriaFamily?.workbench?.unmount?.({ root: body });
   body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
 
+  if (typeof hydrateModuleRichEditors === "function") hydrateModuleRichEditors(body);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: body });
   if (typeof applyCommentReaderSettings === "function") applyCommentReaderSettings();
   if (typeof initResizer === "function") initResizer();
   if (typeof resetScroll === "function") resetScroll();
@@ -177,7 +182,8 @@ function openModuleEditorForCurrent() {
     { href: "styles/scene-transition.css?v=orte-almanach-session-v1" },
     { href: "styles/scene-polls.css?v=orte-almanach-scene-polls-v1" },
     { href: "styles/module-editor.css?v=orte-almanach-editor-v1" },
-    { href: "styles/family-editor.css?v=orte-family-migration-v1" },
+    { href: "styles/family-editor.css?v=orte-family-workbench-v1" },
+    { href: "styles/family-workbench.css?v=orte-family-workbench-v2" },
     { href: "styles/comment-composer.css?v=orte-comment-composer-v1" },
     { href: "styles/module-page-boards.css?v=orte-almanach-editor-v1" },
     { href: "styles/module-page-artifact-recipe.css?v=orte-module-templates-v2" },
@@ -188,7 +194,8 @@ function openModuleEditorForCurrent() {
     { href: "styles/module-page-character-inventory.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-court.css?v=orte-module-templates-v2" },
     { href: "vendor/family-chart/0.9.0/family-chart.css?v=orte-family-chart-v1" },
-    { href: "styles/module-page-family.css?v=orte-family-editor-v1" },
+    { href: "styles/module-page-family.css?v=orte-family-card-portrait-v1" },
+    { href: "styles/module-page-family-tree.css?v=orte-family-tree-embed-v1" },
     { href: "styles/module-page-goods.css?v=orte-almanach-market-v1" },
     { href: "styles/module-page-guest-register.css?v=orte-module-templates-v2" },
     { href: "styles/module-page-hierarchy.css?v=orte-module-templates-v2" },
@@ -215,6 +222,7 @@ function openModuleEditorForCurrent() {
     "modules/name-list/name-list-data.js?v=orte-argenti-stoicheia-v1",
     "modules/script-table/script-table-data.js?v=orte-argenti-stoicheia-v1",
     "modules/language/language-reference-entries.js?v=orte-argenti-stoicheia-v1",
+    "modules/family-tree-embed/family-tree-embed-data.js?v=orte-family-tree-embed-v1",
     "modules/core/app-core.js?v=orte-script-table-v1",
     "modules/app/app-status.js?v=orte-almanach-session-v1",
     "modules/app/dialog-manager.js?v=orte-almanach-session-v1",
@@ -284,7 +292,9 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-data.js?v=orte-family-editor-v1",
     "modules/family/family-api.js?v=orte-family-editor-v1",
     "modules/family/editor/family-editor-model.js?v=orte-family-editor-v1",
-    "modules/family/editor/family-editor-ui.js?v=orte-family-migration-v1",
+    "modules/family/workbench/family-workbench-state.js?v=orte-family-workbench-v2",
+    "modules/family/workbench/family-workbench-ui.js?v=orte-family-workbench-v2",
+    "modules/family/editor/family-editor-ui.js?v=orte-family-workbench-v2",
     "modules/family/services/family-presentation-service.js?v=orte-family-editor-v1",
     "modules/item-database/item-db-normalizer.js?v=orte-module-templates-v2",
     "modules/item-database/item-db-extractors.js?v=orte-module-templates-v2",
@@ -301,6 +311,7 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-landing.js?v=orte-module-templates-v2",
     "modules/module-editor/module-editor-guest-register.js?v=orte-module-templates-v2",
     "modules/module-editor/module-editor-house-warriors.js?v=orte-house-warriors-images-v2",
+    "modules/family-tree-embed/family-tree-embed-editor.js?v=orte-family-tree-embed-v1",
     "modules/module-editor/module-editor-templates.js?v=orte-family-editor-v1",
     "module-richtext.js?v=orte-almanach-market-v1",
     "modules/module-editor/module-editor-goods.js?v=orte-almanach-market-v1",
@@ -312,7 +323,7 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-simple-lines.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-scene-blocks.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-comment-blocks.js?v=orte-almanach-editor-v1",
-    "modules/module-editor/module-editor-page-cards.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-page-cards.js?v=orte-family-workbench-v1",
     "modules/module-editor/module-editor-artifact.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-card-layout.js?v=orte-module-templates-v2",
     "modules/module-editor/module-editor-profiles.js?v=orte-almanach-editor-v1",
@@ -332,9 +343,9 @@ function openModuleEditorForCurrent() {
     "modules/module-editor/module-editor-caste.js?v=orte-caste-dossier-v1",
     "modules/module-editor/module-editor-court.js?v=orte-almanach-editor-v1",
     "modules/module-editor/module-editor-hierarchy.js?v=orte-module-templates-v2",
-    "modules/module-editor/module-editor-family.js?v=orte-family-migration-v1",
-    "modules/module-editor/module-editor-pages.js?v=orte-almanach-editor-v1",
-    "modules/module-editor/module-editor-controller.js?v=orte-almanach-editor-v1",
+    "modules/module-editor/module-editor-family.js?v=orte-family-workbench-v2",
+    "modules/module-editor/module-editor-pages.js?v=orte-family-workbench-v1",
+    "modules/module-editor/module-editor-controller.js?v=orte-family-workbench-v1",
     "modules/backup/almanach-backup.js?v=orte-almanach-editor-v1",
     "module-import-export.js?v=orte-almanach-editor-v1",
     "modules/court/court-renderer.js?v=orte-module-templates-v2",
@@ -353,11 +364,13 @@ function openModuleEditorForCurrent() {
     "vendor/family-chart/0.9.0/family-chart.min.js?v=orte-family-chart-v1",
     "modules/family/compatibility/family-legacy-bridge.js?v=orte-family-chart-v1",
     "modules/family/migration/family-migration-service.js?v=orte-family-migration-v1",
-    "modules/family/adapters/family-chart-adapter.js?v=orte-family-editor-v1",
+    "modules/family/adapters/family-chart-adapter.js?v=orte-family-card-portrait-v1",
+    "modules/family/workbench/family-workbench-controller.js?v=orte-family-workbench-v2",
     "modules/family/rendering/family-chart-controller.js?v=orte-family-preview-mount-v1",
     "modules/family/family-renderer.js?v=orte-family-chart-v1",
+    "modules/family-tree-embed/family-tree-embed-renderer.js?v=orte-family-tree-embed-v1",
     "modules/house-warriors/house-warriors-renderer.js?v=orte-house-warriors-images-v2",
-    "modules/inline-editor/inline-editor-state.js?v=orte-module-templates-v2",
+    "modules/inline-editor/inline-editor-state.js?v=orte-family-workbench-v1",
     "modules/inline-editor/inline-editor-panels.js?v=orte-module-templates-v2",
     "modules/inline-editor/inline-editor-card-layout.js?v=orte-module-templates-v2",
     "modules/inline-editor/inline-editor-profiles.js?v=orte-module-templates-v2",
@@ -376,7 +389,7 @@ function openModuleEditorForCurrent() {
     "modules/inline-editor/inline-editor-caste.js?v=orte-caste-dossier-v1",
     "modules/inline-editor/inline-editor-court.js?v=orte-module-templates-v2",
     "modules/inline-editor/inline-editor-hierarchy.js?v=orte-module-templates-v2",
-    "modules/inline-editor/inline-editor-family.js?v=orte-family-migration-v1",
+    "modules/inline-editor/inline-editor-family.js?v=orte-family-workbench-v2",
     "modules/inline-editor/inline-editor-house-warriors.js?v=orte-house-warriors-images-v2",
     "modules/inline-editor/inline-editor-biography.js?v=orte-module-templates-v2",
     "modules/inline-editor/inline-editor-house.js?v=orte-module-templates-v2",

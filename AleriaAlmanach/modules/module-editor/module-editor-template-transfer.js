@@ -27,6 +27,7 @@ const MODULE_TEMPLATE_TRANSFER_KINDS = {
     dataKey: 'family',
     label: 'Familie',
     fileLabel: 'familie',
+    listed: false,
     sanitize: data => sanitizeFamilyData(data || {})
   },
   'trade-catalog': {
@@ -70,7 +71,7 @@ function hasModuleTemplateTransferData(page, config) {
 }
 
 function buildModuleTemplateTransferPanel(page, type = 'standard') {
-  const rows = Object.entries(MODULE_TEMPLATE_TRANSFER_KINDS).map(([kind, config]) => {
+  const rows = Object.entries(MODULE_TEMPLATE_TRANSFER_KINDS).filter(([, config]) => config.listed !== false).map(([kind, config]) => {
     const canExport = type === config.pageType || hasModuleTemplateTransferData(page, config);
     return `
       <div class="module-template-transfer-row">
@@ -94,7 +95,7 @@ function buildModuleTemplateTransferPanel(page, type = 'standard') {
 }
 
 function buildInlineModuleTemplateTransferPanel(page, type = 'standard') {
-  const rows = Object.entries(MODULE_TEMPLATE_TRANSFER_KINDS).map(([kind, config]) => {
+  const rows = Object.entries(MODULE_TEMPLATE_TRANSFER_KINDS).filter(([, config]) => config.listed !== false).map(([kind, config]) => {
     const canExport = type === config.pageType || hasModuleTemplateTransferData(page, config);
     return `
       <div class="module-template-transfer-row">

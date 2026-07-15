@@ -5,6 +5,14 @@
 
   const ADAPTER_ID = 'family-chart';
   const LIBRARY_VERSION = '0.9.0';
+  const CARD_LAYOUT = Object.freeze({
+    width: 232,
+    height: 108,
+    portraitWidth: 64,
+    portraitHeight: 96,
+    horizontalSpacing: 272,
+    verticalSpacing: 176
+  });
   const DEFAULT_PARENTAGE_KINDS = Object.freeze([
     'biological',
     'adoptive',
@@ -49,6 +57,8 @@
       generationDepth: true,
       personSearch: true,
       htmlCards: true,
+      cardDimensions: true,
+      cardSpacing: true,
       spouseLinkText: true
     },
     translated: {
@@ -620,6 +630,8 @@
         ? Math.max(0, sessionOptions.transitionTime)
         : 300;
       chart.setTransitionTime?.(transitionTime);
+      chart.setCardXSpacing?.(CARD_LAYOUT.horizontalSpacing);
+      chart.setCardYSpacing?.(CARD_LAYOUT.verticalSpacing);
       chart.setShowSiblingsOfMain?.(nextView.showSiblings !== false);
       if (Number.isInteger(nextView.ancestorDepth) && nextView.ancestorDepth >= 0) {
         chart.setAncestryDepth?.(nextView.ancestorDepth);
@@ -667,6 +679,12 @@
       const card = chart.setCardHtml?.();
       card?.setCardImageField?.('portrait');
       card?.setStyle?.('imageRect');
+      card?.setCardDim?.({
+        width: CARD_LAYOUT.width,
+        height: CARD_LAYOUT.height,
+        img_width: CARD_LAYOUT.portraitWidth,
+        img_height: CARD_LAYOUT.portraitHeight
+      });
       card?.setCardDisplay?.([
         datum => datum.data.displayNameHtml || 'Unbenannte Person',
         datum => datum.data.taglineHtml || '',

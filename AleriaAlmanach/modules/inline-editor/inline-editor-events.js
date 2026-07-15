@@ -899,6 +899,10 @@ function handleInlineEditorFieldChange(event) {
     updateInlineHierarchyNodeField(field);
     return;
   }
+  if (action === 'update-family-tree-embed-field') {
+    updateInlineFamilyTreeEmbedField(field);
+    return;
+  }
   if (action === 'update-family-v2-field') {
     updateInlineFamilyV2Field(field);
     return;

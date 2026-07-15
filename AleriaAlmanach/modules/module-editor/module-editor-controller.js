@@ -229,6 +229,8 @@ function openModuleEditor(payload, context) {
 
 function closeModuleEditor() {
   if (!confirmDiscardModuleEditorChanges('schließen')) return;
+  const pages = document.getElementById('me-pages');
+  if (pages) globalThis.AleriaFamily?.workbench?.unmount?.({ root: pages });
   deactivateDialog('module-editor-overlay');
   setModuleEditorStatus('');
   clearModuleDragMarkers();

@@ -1,0 +1,94 @@
+export const FAMILY_CHART_CARD_LAYOUT = Object.freeze({
+  width: 320,
+  height: 213,
+  horizontalSpacing: 458,
+  verticalSpacing: 356
+});
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function marker(data) {
+  const role = escapeHtml(data.role || 'core');
+  const nodeKind = escapeHtml(data.nodeKind || 'person');
+  return `<span class="family-card-marker family-card-marker--${role} family-node-marker--${nodeKind}"></span>`;
+}
+
+function optionalImage(source, className) {
+  return source
+    ? `<img class="${className}" src="${escapeHtml(source)}" alt="" draggable="false">`
+    : '';
+}
+
+function crestPositionStyle(position = {}) {
+  const declarations = [
+    ['--card-crest-left', position.left],
+    ['--card-crest-top', position.top],
+    ['--card-crest-width', position.width],
+    ['--card-crest-height', position.height]
+  ].filter(([, value]) => value);
+  return declarations.length
+    ? ` style="${declarations.map(([name, value]) => `${name}:${escapeHtml(value)}`).join(';')}"`
+    : '';
+}
+
+function personCard(data) {
+  const role = escapeHtml(data.role || 'core');
+  return `
+    <div class="card-inner aleria-chart-card aleria-person-card role-${role}"${crestPositionStyle(data.crestPosition)}>
+      ${marker(data)}
+      <div class="aleria-person-card__fill" aria-hidden="true"></div>
+      ${optionalImage(data.portrait, 'aleria-person-card__portrait')}
+      <div class="aleria-person-card__text">
+        <span class="family-card-name">${escapeHtml(data.name)}</span>
+        ${data.title ? `<span class="family-card-title">${escapeHtml(data.title)}</span>` : ''}
+        ${data.house ? `<span class="family-card-house">${escapeHtml(data.house)}</span>` : ''}
+        ${data.life ? `<span class="family-card-life">${escapeHtml(data.life)}</span>` : ''}
+      </div>
+      ${optionalImage(data.frameAsset, 'aleria-person-card__frame')}
+      ${optionalImage(data.crest, 'aleria-person-card__crest')}
+    </div>`;
+}
+
+function crestNode(data) {
+  const isLinkedHouse = data.nodeKind === 'cadet-house';
+  return `
+    <div class="card-inner aleria-chart-card aleria-crest-node${isLinkedHouse ? ' aleria-crest-node--linked' : ''}">
+      ${marker(data)}
+      <div class="aleria-crest-node__seal">
+        ${optionalImage(data.portrait, 'aleria-crest-node__emblem')}
+        ${optionalImage(data.crestFrameAsset, 'aleria-crest-node__frame')}
+      </div>
+      <div class="aleria-crest-node__caption">
+        <span class="family-card-name">${escapeHtml(data.name)}</span>
+        ${data.title ? `<span class="family-card-title">${escapeHtml(data.title)}</span>` : ''}
+      </div>
+    </div>`;
+}
+
+function timeNode(data) {
+  const fromYear = data.fromYear || '????';
+  const toYear = data.toYear || '????';
+  return `
+    <div class="card-inner aleria-chart-card aleria-time-node aleria-time-node--interactive">
+      ${marker(data)}
+      ${optionalImage(data.frameAsset, 'aleria-time-node__frame')}
+      <div class="aleria-time-node__text">
+        <span class="aleria-time-node__year aleria-time-node__year--from">${escapeHtml(fromYear)}</span>
+        <span class="aleria-time-node__year aleria-time-node__year--to">${escapeHtml(toYear)}</span>
+      </div>
+    </div>`;
+}
+
+export function createFamilyChartCardHtml(hierarchyDatum) {
+  const data = hierarchyDatum?.data?.data || hierarchyDatum?.data || {};
+  if (data.nodeKind === 'house-crest' || data.nodeKind === 'cadet-house') return crestNode(data);
+  if (data.nodeKind === 'time-gap' || data.nodeKind === 'time-jump') return timeNode(data);
+  return personCard(data);
+}

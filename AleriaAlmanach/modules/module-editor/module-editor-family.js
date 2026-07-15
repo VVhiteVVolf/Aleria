@@ -466,12 +466,22 @@ function removeModuleFamilyConnection(button) {
 function replaceModuleFamilyEditor(card, family) {
   const block = card?.querySelector('[data-page-type="family"]');
   if (!block) return false;
+  globalThis.AleriaFamily?.workbench?.unmount?.({ root: block });
   block.outerHTML = buildFamilyModuleEditorFields({ familyPage: true, family });
   const nextBlock = card.querySelector('[data-page-type="family"]');
   if (typeof hydrateModuleRichEditors === 'function') hydrateModuleRichEditors(nextBlock || card);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: nextBlock || card });
   syncModuleJsonPreview();
   return true;
 }
+
+function handleModuleFamilyWorkbenchChange(event) {
+  if (!event.target?.closest?.('#module-editor-overlay')) return;
+  if (event.detail?.mode !== 'module') return;
+  if (typeof syncModuleJsonPreview === 'function') syncModuleJsonPreview();
+}
+
+document.addEventListener('family-workbench-change', handleModuleFamilyWorkbenchChange);
 
 function migrateModuleFamilyToV2(button) {
   const card = button?.closest('.module-page-card');

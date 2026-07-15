@@ -1379,16 +1379,34 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildHierarchyPage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'hierarchy')
   },
+  'family-tree': {
+    id: 'family-tree',
+    pageType: 'family-tree',
+    pageFlag: 'familyTreePage',
+    label: 'Stammbaum',
+    pageLabel: 'Stammbaum',
+    defaultTitle: 'Neuer Stammbaum',
+    defaultSubtitle: 'Interaktive genealogische Darstellung',
+    entryType: 'Stammbaum',
+    typeMatchers: ['stammbaum', 'stammbäume', 'stammbaeume'],
+    createPages: () => [createDefaultFamilyTreeEmbedPage(0)],
+    createPage: index => createDefaultFamilyTreeEmbedPage(index),
+    buildEditorFields: page => buildFamilyTreeEmbedModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectFamilyTreeEmbedModuleEditorPage(card, page),
+    renderPage: (page, entry, pageIndex, total) => buildFamilyTreeEmbedPage(page, entry, pageIndex, total),
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'family-tree')
+  },
   family: {
     id: 'family',
     pageType: 'family',
     pageFlag: 'familyPage',
+    listed: false,
     label: 'Familie - Template',
     pageLabel: 'Familie - Template',
     defaultTitle: 'Neue Familie',
     defaultSubtitle: 'Stammbaum, Blutlinien und Familienbindungen',
     entryType: 'Familie',
-    typeMatchers: ['familie', 'stammbaum', 'familienbaum', 'blutlinie', 'hauslinie'],
+    typeMatchers: ['familie', 'familienbaum', 'blutlinie', 'hauslinie'],
     createPages: () => [createDefaultFamilyPage(0)],
     createPage: index => createDefaultFamilyPage(index),
     buildEditorFields: page => buildFamilyModuleEditorFields(page),
@@ -1580,6 +1598,7 @@ const MODULE_TEMPLATE_REGISTRY = {
 };
 
 const MODULE_TEMPLATE_OPTIONS = Object.values(MODULE_TEMPLATE_REGISTRY)
+  .filter(template => template.listed !== false)
   .map(({ id, label }) => ({ id, label }));
 
 const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
@@ -1601,6 +1620,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   scene: ['buildSceneModuleEditorFields', 'collectSceneModuleEditorPage', 'buildSceneBlocksPage'],
   session: ['buildSessionModuleEditorFields', 'collectSessionModuleEditorPage', 'buildSessionPage'],
   hierarchy: ['buildHierarchyModuleEditorFields', 'collectHierarchyModuleEditorPage', 'buildHierarchyPage'],
+  'family-tree': ['buildFamilyTreeEmbedModuleEditorFields', 'collectFamilyTreeEmbedModuleEditorPage', 'buildFamilyTreeEmbedPage'],
   family: ['buildFamilyModuleEditorFields', 'collectFamilyModuleEditorPage', 'buildFamilyPage'],
   'object-profile': ['buildBiographyModuleEditorFields', 'collectBiographyModuleEditorPage', 'buildBiographyPage'],
   bestiary: ['buildBestiaryModuleEditorFields', 'collectBestiaryModuleEditorPage', 'buildBestiaryPage'],
@@ -1683,8 +1703,13 @@ function getModuleTemplateForPage(page) {
 
 function buildModulePageTypeOptions(selected = 'standard') {
   const hasSelected = !!String(selected || '').trim();
-  const current = hasSelected ? getModuleTemplateForPageType(selected).pageType : '';
-  return Object.values(MODULE_TEMPLATE_REGISTRY)
+  const currentTemplate = hasSelected ? getModuleTemplateForPageType(selected) : null;
+  const current = currentTemplate?.pageType || '';
+  const retainedLegacyOption = currentTemplate?.listed === false
+    ? `<option value="${escapeHtml(current)}" selected disabled hidden>${escapeHtml(currentTemplate.pageLabel || currentTemplate.label)} · ausgeklammert</option>`
+    : '';
+  return retainedLegacyOption + Object.values(MODULE_TEMPLATE_REGISTRY)
+    .filter(template => template.listed !== false)
     .map(template => `<option value="${template.pageType}"${hasSelected && template.pageType === current ? ' selected' : ''}>${escapeHtml(template.pageLabel || template.label)}</option>`)
     .join('');
 }
@@ -1694,8 +1719,12 @@ function getModuleTemplateLabel(templateId) {
 }
 
 function buildModuleTemplateOptions(selected = 'story') {
-  const current = getModuleTemplateDefinition(selected).id;
-  return MODULE_TEMPLATE_OPTIONS
+  const currentTemplate = getModuleTemplateDefinition(selected);
+  const current = currentTemplate.id;
+  const retainedLegacyOption = currentTemplate.listed === false
+    ? `<option value="${escapeHtml(current)}" selected disabled hidden>${escapeHtml(currentTemplate.label)} · ausgeklammert</option>`
+    : '';
+  return retainedLegacyOption + MODULE_TEMPLATE_OPTIONS
     .map(option => `<option value="${option.id}"${option.id === current ? ' selected' : ''}>${escapeHtml(option.label)}</option>`)
     .join('');
 }

@@ -1,0 +1,173 @@
+@media (max-width: 78rem) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 19rem;
+  }
+
+  .toolbar .button span {
+    display: none;
+  }
+
+  .search-field {
+    width: min(21rem, 31vw);
+  }
+}
+
+@media (max-width: 58rem) {
+  .app-shell {
+    min-height: auto;
+  }
+
+  .app-header {
+    align-items: flex-start;
+  }
+
+  .header-tools {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .header-stats {
+    display: none;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .search-field {
+    width: 100%;
+    order: -1;
+  }
+
+  .toolbar-group--end {
+    margin-left: 0;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-panel {
+    grid-template-rows: auto 36rem;
+  }
+
+  .inspector {
+    max-height: none;
+    border-top: 1px solid rgba(73, 48, 28, 0.28);
+    border-left: 0;
+  }
+
+  .inspector-person {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inspector-hero,
+  .inspector-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 38rem) {
+  .app-header {
+    flex-direction: column;
+    padding: 0.8rem;
+  }
+
+  .header-tools,
+  .workspace-mode-switch {
+    width: 100%;
+  }
+
+  .workspace-mode-switch {
+    flex-wrap: wrap;
+  }
+
+  .brand-emblem {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .toolbar {
+    padding-inline: 0.6rem;
+  }
+
+  .toolbar-group {
+    flex: 1 1 auto;
+  }
+
+  .toolbar-group .button {
+    flex: 1 1 auto;
+    padding-inline: 0.5rem;
+  }
+
+  .legend {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chart-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chart-hint {
+    display: none;
+  }
+
+  .chart-panel {
+    grid-template-rows: auto 31rem;
+    padding: 0.55rem;
+  }
+
+  .inspector-person {
+    display: block;
+  }
+
+  .form-grid,
+  .relationship-fields,
+  .color-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field--wide {
+    grid-column: auto;
+  }
+
+  .app-footer {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .app-shell {
+    display: block;
+    box-shadow: none;
+  }
+
+  .toolbar,
+  .legend,
+  .inspector,
+  .app-footer {
+    display: none;
+  }
+
+  .chart-stage,
+  .family-chart-host {
+    height: 80vh;
+  }
+}

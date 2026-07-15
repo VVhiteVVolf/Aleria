@@ -12,10 +12,13 @@ const sources = [
   'modules/core/content-safety.js',
   'modules/house-warriors/house-warriors-data.js',
   'modules/language/language-data.js',
+  'modules/family-tree-embed/family-tree-embed-data.js',
   'modules/core/app-core.js',
   'modules/module-editor/module-editor-data.js',
   'modules/family/family-api.js',
   'modules/family/editor/family-editor-model.js',
+  'modules/family/workbench/family-workbench-state.js',
+  'modules/family/workbench/family-workbench-ui.js',
   'modules/family/editor/family-editor-ui.js',
   'modules/module-editor/module-editor-cast-picker.js',
   'modules/module-editor/module-editor-scene-blocks.js',
@@ -47,6 +50,7 @@ const sources = [
   'modules/module-editor/module-editor-icon-field.js',
   'modules/module-editor/module-editor-row-schemas.js',
   'modules/module-editor/module-editor-house.js',
+  'modules/family-tree-embed/family-tree-embed-editor.js',
   'modules/module-editor/module-editor-templates.js',
   'modules/module-editor/module-editor-workflow.js'
 ];
@@ -141,6 +145,19 @@ for (const result of results) {
     failures.push(`${result.id}: Kein eigener Typmarker blieb erhalten (${result.recognizedTypes.join(', ')}).`);
   }
 }
+
+const templateListChecks = vm.runInContext(`(() => {
+  const values = markup => [...markup.matchAll(/<option value="([^"]+)"/g)].map(match => match[1]);
+  return {
+    templates: values(buildModuleTemplateOptions('story')),
+    pageTypes: values(buildModulePageTypeOptions('standard')),
+    registryOptions: MODULE_TEMPLATE_OPTIONS.map(option => option.id)
+  };
+})()`, context);
+['templates', 'pageTypes', 'registryOptions'].forEach(listName => {
+  if (templateListChecks[listName].includes('family')) failures.push(`family: Ausgeklammertes Template erscheint weiterhin in ${listName}.`);
+  if (!templateListChecks[listName].includes('family-tree')) failures.push(`family-tree: Stammbaum fehlt in ${listName}.`);
+});
 
 const referenceChecks = vm.runInContext(`
   (() => {

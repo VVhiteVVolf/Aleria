@@ -41,11 +41,13 @@ function updateModulePageType(selectEl) {
   const templatePage = createInlinePageByType(type, nextIndex);
   const nextPage = sanitizeModulePage({ ...templatePage, ...shared }, shared.pageTitle || templatePage.pageTitle || '') || templatePage;
 
+  globalThis.AleriaFamily?.workbench?.unmount?.({ root: card });
   card.insertAdjacentHTML('afterend', buildModulePageEditorMarkup(nextPage, nextIndex));
   const nextCard = card.nextElementSibling;
   card.remove();
 
   hydrateModuleRichEditors(nextCard || document.getElementById('me-pages'));
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: nextCard || document.getElementById('me-pages') });
   refreshAllModuleCastPickers();
   renumberModulePageCards();
   bindModuleEditorDnD();

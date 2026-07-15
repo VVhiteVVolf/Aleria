@@ -305,8 +305,10 @@ function buildModulePageEditorMarkup(page, index) {
 function renderModuleEditorPages(pages) {
   const wrap = document.getElementById('me-pages');
   if (!wrap) return;
+  globalThis.AleriaFamily?.workbench?.unmount?.({ root: wrap });
   wrap.innerHTML = pages.map((page, index) => buildModulePageEditorMarkup(page, index)).join('');
   hydrateModuleRichEditors(wrap);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: wrap });
   refreshAllModuleCastPickers();
   renumberModulePageCards();
   bindModuleEditorDnD();
@@ -320,7 +322,9 @@ function addModulePage(type = 'standard') {
   const page = createInlinePageByType(type, index);
   page.commentThreadKey = createModulePageCommentThreadKey(existingKeys);
   wrap.insertAdjacentHTML('beforeend', buildModulePageEditorMarkup(page, index));
-  hydrateModuleRichEditors(wrap.lastElementChild || wrap);
+  const nextCard = wrap.lastElementChild || wrap;
+  hydrateModuleRichEditors(nextCard);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: nextCard });
   refreshAllModuleCastPickers();
   renumberModulePageCards();
   bindModuleEditorDnD();
@@ -355,6 +359,8 @@ function duplicateModulePage(button) {
   );
   card.insertAdjacentHTML('afterend', buildModulePageEditorMarkup(page, 0));
   const newCard = card.nextElementSibling;
+  hydrateModuleRichEditors(newCard);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: newCard });
   renumberModulePageCards();
   bindModuleEditorDnD();
   const index = getModulePageCards().indexOf(newCard);
@@ -386,6 +392,7 @@ function removeModulePage(button) {
   const card = button.closest('.module-page-card');
   if (!wrap || !card) return;
   const removedIndex = getModulePageCards().indexOf(card);
+  globalThis.AleriaFamily?.workbench?.unmount?.({ root: card });
   card.remove();
   if (!wrap.querySelector('.module-page-card')) addModulePage('standard');
   renumberModulePageCards();

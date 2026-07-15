@@ -1,0 +1,410 @@
+.family-chart-host.f3.f3-cont {
+  --female-color: #b68c68;
+  --male-color: #b68c68;
+  --genderless-color: #b68c68;
+  --background-color: transparent;
+  --text-color: #fff8e9;
+  max-height: none;
+  color: var(--ink-800);
+  background: transparent;
+  font-family: var(--font-body);
+  touch-action: none;
+}
+
+.family-chart-host .f3-nav-cont {
+  pointer-events: none;
+}
+
+.family-chart-host.f3 .aleria-chart-card {
+  position: relative;
+  display: block;
+  width: 20rem;
+  height: 13.3125rem;
+  min-height: 13.3125rem;
+  overflow: visible;
+  border: 0;
+  outline: 0;
+  color: #fff7e8;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.family-chart-host.f3 div.card .aleria-chart-card {
+  background: transparent;
+}
+
+.family-chart-host.f3 div.card-main .aleria-chart-card,
+.family-chart-host.f3 div.card:hover .aleria-chart-card,
+.family-chart-host.f3 .aleria-chart-card.f3-path-to-main {
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#family-app[data-workspace-mode="view"] .aleria-person-card,
+#family-app[data-workspace-mode="view"] .aleria-time-node,
+#family-app[data-workspace-mode="view"] .aleria-crest-node:not(.aleria-crest-node--linked) {
+  cursor: grab;
+}
+
+#family-app[data-workspace-mode="view"] .aleria-crest-node--linked {
+  cursor: pointer;
+}
+
+.family-card-marker {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.aleria-person-card {
+  --card-fill: #7b3632;
+  --card-text: #fff7e8;
+  --card-subtle: #efd8b7;
+  --card-crest-left: 44.75%;
+  --card-crest-top: 4.3%;
+  --card-crest-width: 10.5%;
+  --card-crest-height: 15.8%;
+  filter: drop-shadow(0 0.65rem 0.62rem rgba(45, 27, 15, 0.34));
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.aleria-person-card.role-married {
+  --card-fill: #355f48;
+  --card-subtle: #d5e2d4;
+}
+
+.aleria-person-card.role-bastard {
+  --card-fill: #50504f;
+  --card-subtle: #d8d5cd;
+}
+
+.aleria-person-card.role-affair {
+  --card-fill: #604969;
+  --card-subtle: #e1d1e4;
+}
+
+.aleria-person-card.role-forced {
+  --card-fill: #d4c096;
+  --card-text: #332618;
+  --card-subtle: #6f5432;
+}
+
+.aleria-person-card.role-ward {
+  --card-fill: #294f72;
+  --card-subtle: #d0e0ed;
+}
+
+.aleria-person-card.role-ward-away {
+  --card-fill: #b6ced8;
+  --card-text: #253642;
+  --card-subtle: #4f6d7d;
+}
+
+.aleria-person-card.role-adopted {
+  --card-fill: #a4552b;
+  --card-subtle: #f1d1ae;
+}
+
+.aleria-person-card__fill {
+  position: absolute;
+  z-index: 0;
+  inset: 17.2% 6.8% 10.8% 35.8%;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(255, 255, 255, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 55%),
+    var(--card-fill);
+  clip-path: polygon(0 0, 94% 0, 100% 8%, 100% 91%, 94% 100%, 0 100%);
+}
+
+.aleria-person-card__portrait {
+  position: absolute;
+  z-index: 1;
+  top: 17.4%;
+  left: 7.25%;
+  width: 26.5%;
+  height: 72.2%;
+  border-radius: 50%;
+  background: #c6a173;
+  object-fit: cover;
+  object-position: center top;
+  clip-path: ellipse(48% 49% at 50% 50%);
+  pointer-events: none;
+}
+
+.aleria-person-card__text {
+  position: absolute;
+  z-index: 2;
+  top: 24%;
+  right: 8.2%;
+  bottom: 14.5%;
+  left: 40.5%;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--card-text);
+  font-weight: 600;
+  line-height: 1.13;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(28, 17, 10, 0.42);
+}
+
+.role-forced .aleria-person-card__text,
+.role-ward-away .aleria-person-card__text {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.36);
+}
+
+.aleria-person-card__frame {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+}
+
+.aleria-person-card__crest {
+  position: absolute;
+  z-index: 4;
+  top: var(--card-crest-top);
+  left: var(--card-crest-left);
+  width: var(--card-crest-width);
+  height: var(--card-crest-height);
+  border-radius: 50%;
+  background: rgba(244, 223, 174, 0.38);
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.family-card-name,
+.family-card-title,
+.family-card-house,
+.family-card-life {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aleria-person-card .family-card-name {
+  display: -webkit-box;
+  font-family: var(--font-display);
+  font-size: 0.91rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.035em;
+  line-height: 1.08;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.aleria-person-card .family-card-title,
+.aleria-person-card .family-card-house,
+.aleria-person-card .family-card-life {
+  margin-top: 0.26rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.aleria-person-card .family-card-house {
+  color: var(--card-subtle);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.aleria-person-card .family-card-life {
+  color: var(--card-subtle);
+  font-size: 0.66rem;
+  font-style: italic;
+}
+
+.family-chart-host div.card:hover .aleria-person-card,
+.family-chart-host div.card-main .aleria-person-card {
+  filter:
+    drop-shadow(0 0 0.22rem rgba(255, 232, 165, 0.95))
+    drop-shadow(0 0.8rem 0.75rem rgba(45, 27, 15, 0.4));
+  transform: translateY(-2px);
+}
+
+.aleria-crest-node {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: #3b281b !important;
+}
+
+.aleria-crest-node__seal {
+  position: relative;
+  width: 7.65rem;
+  height: 7.65rem;
+  flex: 0 0 7.65rem;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f4ead4;
+  filter: drop-shadow(0 0.45rem 0.38rem rgba(54, 34, 20, 0.34));
+  transition: filter 140ms ease, transform 140ms ease;
+}
+
+.aleria-crest-node__emblem {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) scale(1.2);
+  pointer-events: none;
+}
+
+.aleria-crest-node__frame {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  clip-path: circle(49% at 50% 50%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+}
+
+.aleria-crest-node__caption {
+  position: relative;
+  display: grid;
+  width: 10.9rem;
+  min-height: 2.35rem;
+  place-items: center;
+  padding: 0.42rem 0.75rem;
+  border: 1px solid #9b7139;
+  border-radius: 0.28rem;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent),
+    linear-gradient(180deg, #f7e9c7, #dfc590);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 249, 226, 0.72),
+    0 0.35rem 0.7rem rgba(56, 35, 18, 0.22);
+  text-align: center;
+  text-shadow: none;
+}
+
+.aleria-crest-node__caption .family-card-name {
+  display: -webkit-box;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.aleria-crest-node__caption .family-card-title {
+  display: -webkit-box;
+  margin-top: 0.18rem;
+  color: #6a4930;
+  font-size: 0.58rem;
+  font-style: italic;
+  line-height: 1.15;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.aleria-crest-node--linked .aleria-crest-node__caption::after {
+  position: absolute;
+  top: 50%;
+  right: 0.38rem;
+  content: '↗';
+  color: #82592f;
+  font-size: 0.68rem;
+  transform: translateY(-50%);
+}
+
+.family-chart-host div.card:hover .aleria-crest-node__seal {
+  filter:
+    brightness(1.06)
+    drop-shadow(0 0.55rem 0.48rem rgba(54, 34, 20, 0.38));
+  transform: translateY(-2px);
+}
+
+.aleria-time-node {
+  display: grid !important;
+  place-items: center;
+  color: #422f20 !important;
+}
+
+.aleria-time-node__frame {
+  position: absolute;
+  z-index: 1;
+  top: 4.16rem;
+  left: 0.6rem;
+  width: 18.8rem;
+  height: 5rem;
+  object-fit: fill;
+  filter: drop-shadow(0 0.35rem 0.32rem rgba(54, 34, 20, 0.3));
+  pointer-events: none;
+}
+
+.aleria-time-node__text {
+  position: absolute;
+  z-index: 2;
+  top: 3.82rem;
+  left: 3.125rem;
+  display: grid;
+  width: 13.75rem;
+  height: 1.65rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 3.75rem;
+  text-align: center;
+  text-shadow: none;
+}
+
+.aleria-time-node__year {
+  display: block;
+  overflow: hidden;
+  color: #4c341f;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aleria-time-node--interactive:hover .aleria-time-node__frame {
+  filter: brightness(1.05) drop-shadow(0 0.42rem 0.38rem rgba(54, 34, 20, 0.34));
+}
+
+.family-chart-host .link {
+  stroke: rgba(76, 52, 32, 0.65);
+  stroke-width: 3px;
+}
+
+.family-chart-host .link.f3-path-to-main {
+  stroke-width: 5px !important;
+}
+
+.family-chart-host .link-text {
+  display: none !important;
+}

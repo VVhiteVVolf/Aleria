@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light;
+  --ink-950: #1b130d;
+  --ink-800: #3e2d20;
+  --ink-650: #654d38;
+  --ink-500: #88705a;
+  --paper-50: #fbf5e8;
+  --paper-100: #f4ead4;
+  --paper-200: #ead9b9;
+  --paper-300: #d7bf95;
+  --paper-500: #aa855a;
+  --night-950: #17100d;
+  --night-900: #231813;
+  --gold-300: #e0bd6c;
+  --gold-500: #b88b37;
+  --danger: #8e2d28;
+  --focus: #ba8132;
+  --shadow: 0 1.2rem 3rem rgba(39, 25, 15, 0.2);
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'EB Garamond', Georgia, serif;
+
+  --family-core: #8e2724;
+  --family-core-border: #5c1715;
+  --family-married: #326c4a;
+  --family-married-border: #1f4730;
+  --family-bastard: #62615e;
+  --family-bastard-border: #3c3b39;
+  --family-affair: #704485;
+  --family-affair-border: #472655;
+  --family-forced: #c7a974;
+  --family-forced-border: #82673c;
+  --family-ward: #2f75a8;
+  --family-ward-border: #1d4d70;
+  --family-ward-away: #7eb4d7;
+  --family-ward-away-border: #476f8a;
+  --family-adopted: #a75a2d;
+  --family-adopted-border: #703817;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--night-950);
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink-950);
+  background:
+    radial-gradient(circle at 12% -5%, rgba(214, 173, 96, 0.18), transparent 28rem),
+    linear-gradient(145deg, #1f1611 0%, #100c0a 70%);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(186, 129, 50, 0.36);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+.eyebrow {
+  margin-bottom: 0.3rem;
+  color: var(--gold-500);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}

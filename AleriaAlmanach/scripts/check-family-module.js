@@ -12,10 +12,14 @@ const sources = [
   'modules/module-editor/module-editor-data.js',
   'modules/family/family-api.js',
   'modules/family/editor/family-editor-model.js',
+  'modules/family/workbench/family-workbench-state.js',
+  'modules/family/workbench/family-workbench-ui.js',
   'modules/family/editor/family-editor-ui.js',
   'modules/family/services/family-presentation-service.js',
   'modules/family/compatibility/family-legacy-bridge.js',
-  'modules/family/migration/family-migration-service.js'
+  'modules/family/migration/family-migration-service.js',
+  'modules/family/adapters/family-chart-adapter.js',
+  'modules/family/workbench/family-workbench-controller.js'
 ];
 const context = vm.createContext({ console, structuredClone });
 
@@ -43,13 +47,98 @@ assert.equal(family.genealogy.parentages.length, 1);
 const moduleMarkup = ui.buildFields(family, 'module');
 const inlineMarkup = ui.buildFields(family, 'inline');
 assert.match(moduleMarkup, /data-family-editor-version="2"/);
+assert.match(moduleMarkup, /family-direct-workbench/);
 assert.match(moduleMarkup, /family-v2-source-data/);
-assert.match(moduleMarkup, /data-module-editor-action="add-family-v2-record"/);
-assert.match(inlineMarkup, /data-inline-action="add-family-v2-record"/);
-assert.doesNotMatch(inlineMarkup, /family-v2-source-data/);
-model.collections.forEach(definition => {
-  assert.match(moduleMarkup, new RegExp(`data-family-v2-collection="${definition.path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`));
+assert.match(moduleMarkup, /data-family-workbench-chart/);
+assert.match(moduleMarkup, /data-family-workbench-action="add-person"/);
+['partner', 'child', 'parent', 'association'].forEach(relationType => {
+  assert.match(moduleMarkup, new RegExp(`data-family-relation-type="${relationType}"`));
 });
+['document', 'fantasy', 'view'].forEach(manager => {
+  assert.match(moduleMarkup, new RegExp(`data-family-manager="${manager}"`));
+});
+assert.match(moduleMarkup, /data-family-workbench-orientation/);
+assert.doesNotMatch(moduleMarkup, /data-module-editor-action="add-family-v2-record"/);
+assert.doesNotMatch(moduleMarkup, /family-v2-panel/);
+assert.match(inlineMarkup, /family-direct-workbench/);
+assert.match(inlineMarkup, /family-v2-source-data/);
+
+const personInspector = familyApi.workbench.ui.buildPersonInspector(family, 'cassian-vael');
+assert.match(personInspector, /data-family-person-field="identity\.displayName"/);
+assert.match(personInspector, /data-family-person-field="profile\.portrait\.src"/);
+assert.match(personInspector, /data-family-person-field="recordType"/);
+assert.match(personInspector, /data-family-workbench-action="edit-relation"/);
+
+const relativeEditor = familyApi.workbench.ui.buildRelativeEditor(family, 'cassian-vael', 'partner');
+assert.match(relativeEditor, /data-family-relative-target="true"/);
+assert.match(relativeEditor, /Neue Person anlegen/);
+assert.match(relativeEditor, /data-family-relative-field="kind"/);
+assert.doesNotMatch(relativeEditor, /Personen-ID/);
+
+const documentManager = familyApi.workbench.ui.buildManager(family, 'document');
+assert.match(documentManager, /data-family-collection="document\.facts"/);
+assert.match(documentManager, /data-family-collection="genealogy\.sources"/);
+assert.match(documentManager, /data-family-record-id="@0"/);
+const fantasyManager = familyApi.workbench.ui.buildManager(family, 'fantasy');
+model.collections.filter(definition => definition.group === 'fantasy').forEach(definition => {
+  assert.match(fantasyManager, new RegExp(`data-family-collection="${definition.path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`));
+});
+
+const directState = familyApi.workbench.state;
+const editedFact = directState.updateCollectionRecord(family, 'document.facts', '@0', 'value', 'Südturm');
+assert.equal(editedFact.document.facts[0].value, 'Südturm');
+const removedFact = directState.removeCollectionRecord(editedFact, 'document.facts', '@0');
+assert.equal(removedFact.document.facts.length, 0);
+const removedHouse = directState.removeCollectionRecord(family, 'genealogy.fantasy.houses', 'haus-vael');
+assert.equal(removedHouse.genealogy.fantasy.houses.length, 0);
+assert.equal(removedHouse.genealogy.fantasy.lineages[0].houseId, null);
+assert.equal(removedHouse.genealogy.fantasy.titles[0].houseId, null);
+const addedPartner = directState.addRelative(family, {
+  anchorId: 'cassian-vael',
+  relationType: 'partner',
+  personValues: { 'identity.displayName': 'Mira Vael', 'profile.tagline': 'Diplomatin' },
+  relationValues: { kind: 'engagement', status: 'active' }
+});
+assert.equal(addedPartner.family.genealogy.persons.length, 4);
+assert.equal(addedPartner.family.genealogy.partnerships.length, 2, 'Mehrere Partnerschaften bleiben getrennte Beziehungen.');
+assert.equal(directState.findPerson(addedPartner.family, addedPartner.personId).identity.displayName, 'Mira Vael');
+assert.equal(addedPartner.family.genealogy.partnerships.at(-1).kind, 'engagement');
+
+const addedChild = directState.addRelative(addedPartner.family, {
+  anchorId: 'cassian-vael',
+  relationType: 'child',
+  personValues: { 'identity.displayName': 'Tavian Vael' },
+  coParentId: addedPartner.personId,
+  relationValues: { kind: 'adoptive', 'legitimacy.status': 'legitimized' }
+});
+assert.deepEqual(JSON.parse(JSON.stringify(addedChild.family.genealogy.parentages.at(-1).parentIds)), ['cassian-vael', addedPartner.personId]);
+assert.equal(addedChild.family.genealogy.parentages.at(-1).kind, 'adoptive');
+assert.equal(addedChild.family.genealogy.parentages.at(-1).legitimacy.status, 'legitimized');
+
+const addedAssociation = directState.addRelative(addedChild.family, {
+  anchorId: 'cassian-vael',
+  relationType: 'association',
+  personId: addedPartner.personId,
+  anchorRole: 'guardian',
+  relativeRole: 'ward',
+  relationValues: { kind: 'guardianship', label: 'Vormundschaft' }
+});
+assert.equal(addedAssociation.family.genealogy.associations.at(-1).participants[0].role, 'guardian');
+const renamed = directState.updatePerson(addedAssociation.family, addedPartner.personId, 'identity.displayName', 'Mira von Vael');
+assert.equal(directState.findPerson(renamed, addedPartner.personId).identity.displayName, 'Mira von Vael');
+const cleaned = directState.removePerson(renamed, addedPartner.personId);
+assert.equal(directState.findPerson(cleaned, addedPartner.personId), null);
+assert.equal(cleaned.genealogy.associations.some(item => item.id === addedAssociation.relationId), false);
+
+const directEditor = {
+  matches: selector => selector === '.family-workbench',
+  querySelector: selector => selector === '.family-v2-source-data' ? { value: JSON.stringify(addedChild.family) } : null
+};
+const directBlock = { querySelector: selector => selector === '.family-v2-editor' ? directEditor : null };
+const directlyCollected = ui.collect(directBlock, undefined);
+assert.equal(directlyCollected.genealogy.persons.length, 5);
+assert.equal(directlyCollected.genealogy.partnerships.length, 2);
+assert.equal(directlyCollected.genealogy.parentages.length, 2);
 
 const editable = model.clone(family);
 editable.extensions['test.top-level'] = { retained: true };
@@ -184,9 +273,15 @@ const migrationSource = fs.readFileSync(path.join(root, 'modules/family/migratio
 assert.doesNotMatch(migrationSource, /\blocalStorage\b|\bsessionStorage\b|\bfirebase\b|\bsetDoc\b|\bupdateDoc\b/i);
 const moduleEvents = fs.readFileSync(path.join(root, 'modules/module-editor/module-editor-events.js'), 'utf8');
 const inlineEvents = fs.readFileSync(path.join(root, 'modules/inline-editor/inline-editor-events.js'), 'utf8');
+const workbenchController = fs.readFileSync(path.join(root, 'modules/family/workbench/family-workbench-controller.js'), 'utf8');
 assert.match(moduleEvents, /'migrate-family-v2'/);
 assert.match(moduleEvents, /'restore-family-legacy'/);
 assert.match(inlineEvents, /'migrate-family-v2'/);
 assert.match(inlineEvents, /'restore-family-legacy'/);
+assert.equal(typeof familyApi.workbench.mount, 'function');
+assert.equal(typeof familyApi.workbench.unmount, 'function');
+assert.equal(typeof familyApi.workbench.getState, 'function');
+assert.equal(typeof familyApi.workbench.restore, 'function');
+assert.doesNotMatch(workbenchController, /global\.f3|\.createChart\s*\(/, 'Nur der Family-Chart-Adapter darf die Library kennen.');
 
-console.log(`Family-Modulvertrag OK: ${model.collections.length} Editor-Sammlungen, reversible Legacy-Migration und verlustfreie Erweiterungsfelder.`);
+console.log(`Family-Modulvertrag OK: interaktive Workbench, ${model.collections.length} Editor-Sammlungen, reversible Legacy-Migration und verlustfreie Erweiterungsfelder.`);

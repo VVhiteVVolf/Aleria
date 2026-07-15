@@ -50,6 +50,7 @@ function afterModalPageRender(entry, page, pageIndex, scope) {
   syncSessionFocusShell(!!page?.sessionPage && isSessionFocusModeEnabled());
   applyCommentReaderSettings();
   hydrateModuleRichEditors(scope);
+  globalThis.AleriaFamily?.workbench?.mount?.({ root: scope });
   initResizer();
   initInlineModuleSplitter(scope);
   resetScroll();
@@ -79,6 +80,7 @@ function renderPage(idx, dir) {
 
   if (dir === 0) {
     if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
+    globalThis.AleriaFamily?.workbench?.unmount?.({ root: body });
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
     if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
@@ -90,6 +92,7 @@ function renderPage(idx, dir) {
 
   if (!oldPage) {
     if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
+    globalThis.AleriaFamily?.workbench?.unmount?.({ root: body });
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
     if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
@@ -104,6 +107,7 @@ function renderPage(idx, dir) {
   setTimeout(() => {
     if (renderToken !== _modalRenderToken) return;
     if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(scene);
+    globalThis.AleriaFamily?.workbench?.unmount?.({ root: scene });
     scene.innerHTML = `<div class="flip-page ${inClass}">${html}</div>`;
     afterModalPageRender(entry, page, idx, scene);
   }, 200);
@@ -132,6 +136,7 @@ function closeModal() {
   if (typeof cancelCurlInteraction === 'function') cancelCurlInteraction();
   const body = document.getElementById('modal-body');
   if (body && typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
+  if (body) globalThis.AleriaFamily?.workbench?.unmount?.({ root: body });
   deactivateDialog('modal-overlay');
   document.body.style.overflow = '';
   syncSessionFocusShell(false);

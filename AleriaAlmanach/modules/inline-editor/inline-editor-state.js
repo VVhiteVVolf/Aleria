@@ -150,6 +150,7 @@ function captureInlineModuleViewportState() {
     editLeft: editPane?.scrollLeft || 0,
     previewTop: previewStage?.scrollTop || 0,
     previewLeft: previewStage?.scrollLeft || 0,
+    familyWorkbench: editPane ? globalThis.AleriaFamily?.workbench?.getState?.(editPane) : null,
     previewRuntime: captureInlinePreviewRuntimeState(previewFrame || previewStage || document)
   };
 }
@@ -162,6 +163,7 @@ function restoreInlineModuleViewportState(state) {
     if (editPane) {
       editPane.scrollTop = state.editTop || 0;
       editPane.scrollLeft = state.editLeft || 0;
+      globalThis.AleriaFamily?.workbench?.restore?.(editPane, state.familyWorkbench);
     }
     if (previewStage) {
       previewStage.scrollTop = state.previewTop || 0;

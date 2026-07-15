@@ -100,8 +100,9 @@
 
   function buildFieldGroup(group, family, mode, groupIndex) {
     const model = getModel();
+    const workbenchGroup = group.id === 'presentation' || group.id === 'view' ? 'view' : group.id;
     return `
-      <details class="family-v2-panel"${groupIndex === 0 ? ' open' : ''}>
+      <details class="family-v2-panel" data-family-workbench-group="${escapeHtml(workbenchGroup)}"${groupIndex === 0 ? ' open' : ''}>
         <summary>${escapeHtml(group.label)}</summary>
         <div class="family-v2-grid">
           ${group.fields.map(field => buildField(field, model.getPath(family, field.path, ''), { mode })).join('')}
@@ -162,7 +163,7 @@
     const definitions = model.collections.filter(definition => definition.group === group.id);
     if (!definitions.length) return '';
     return `
-      <details class="family-v2-panel family-v2-collection-group"${group.open ? ' open' : ''}>
+      <details class="family-v2-panel family-v2-collection-group" data-family-workbench-group="${escapeHtml(group.id)}"${group.open ? ' open' : ''}>
         <summary>${escapeHtml(group.label)}</summary>
         <div class="family-v2-collections">
           ${definitions.map(definition => buildCollection(definition, family, mode)).join('')}
@@ -174,33 +175,32 @@
     const model = getModel();
     if (!model?.isVersioned(family)) return '';
     const value = model.normalize(family);
-    const personCount = model.getPath(value, 'genealogy.persons', []).length;
-    const relationshipCount = model.getPath(value, 'genealogy.partnerships', []).length
-      + model.getPath(value, 'genealogy.parentages', []).length
-      + model.getPath(value, 'genealogy.associations', []).length;
     const migration = value.extensions?.['aleria.migration'];
     const migrationReportCount = Array.isArray(migration?.report) ? migration.report.length : 0;
-    return `
-      <div class="family-v2-editor" data-family-editor-version="2">
-        ${mode === 'module' ? `<textarea class="family-v2-source-data" hidden aria-hidden="true">${escapeHtml(JSON.stringify(value))}</textarea>` : ''}
-        <header class="family-v2-editor-intro">
-          <div>
-            <span>Professionelle Genealogie · Schema v${escapeHtml(value.schemaVersion)}</span>
-            <h3>${escapeHtml(value.document?.title || 'Familienakte')}</h3>
-            <p>Personen und direkte Beziehungen werden gespeichert; abgeleitete Verwandtschaften entstehen erst aus dem Graphen.</p>
-          </div>
-          <div class="family-v2-editor-counts"><strong>${personCount}</strong> Personen <strong>${relationshipCount}</strong> Beziehungen</div>
-        </header>
-        ${migration?.explicit ? `
+    const migrationMarkup = migration?.explicit ? `
           <div class="family-v2-migration-note" role="status">
             <div>
               <strong>Explizit aus dem Legacy-Format migriert</strong>
               <span>Der Entwurf enthält den ursprünglichen Datensatz${migrationReportCount ? ` und ${migrationReportCount} Migrationshinweise` : ''}. Gespeichert wird erst über den normalen Modul-Workflow.</span>
             </div>
             ${migration.legacySnapshot ? `<button class="module-editor-mini-btn" type="button" ${buildActionAttribute(mode, 'restore-family-legacy')}>Legacy-Entwurf wiederherstellen</button>` : ''}
-          </div>` : ''}
-        ${model.fieldGroups.map((group, index) => buildFieldGroup(group, value, mode, index)).join('')}
-        ${COLLECTION_GROUPS.map(group => buildCollectionGroup(group, value, mode)).join('')}
+          </div>` : '';
+    const workbenchUi = global.AleriaFamily?.workbench?.ui;
+    if (workbenchUi?.buildShell) {
+      return workbenchUi.buildShell({
+        mode,
+        family: value,
+        migrationMarkup
+      });
+    }
+    const panelsMarkup = `
+      ${model.fieldGroups.map((group, index) => buildFieldGroup(group, value, mode, index)).join('')}
+      ${COLLECTION_GROUPS.map(group => buildCollectionGroup(group, value, mode)).join('')}`;
+    return `
+      <div class="family-v2-editor" data-family-editor-version="2">
+        <textarea class="family-v2-source-data" hidden aria-hidden="true">${escapeHtml(JSON.stringify(value))}</textarea>
+        ${migrationMarkup}
+        ${panelsMarkup}
       </div>`;
   }
 
@@ -220,6 +220,9 @@
       }
     }
     if (!editor || !model?.isVersioned(sourceFamily)) return originalFamily;
+    if (editor.matches?.('.family-workbench')) {
+      return typeof global.sanitizeFamilyData === 'function' ? global.sanitizeFamilyData(sourceFamily) : model.normalize(sourceFamily);
+    }
     const next = model.normalize(sourceFamily);
     editor.querySelectorAll('.me-family-v2-top-field').forEach(input => {
       model.setPath(next, input.dataset.familyPath, model.readFieldValue(input));
