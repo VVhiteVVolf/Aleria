@@ -229,7 +229,11 @@ function refreshInlineModuleLivePreview() {
   const page = getInlineDraftPage();
   if (!frame || !page || !_inlineModuleEdit.draft) return;
   const runtimeState = captureInlinePreviewRuntimeState(frame);
+  if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(frame);
   frame.innerHTML = buildInlineModulePreview(page, _inlineModuleEdit.draft, currentPage, getPages(_inlineModuleEdit.draft).length);
+  if (typeof mountRegisteredModuleTemplatePage === 'function') {
+    mountRegisteredModuleTemplatePage(page, _inlineModuleEdit.draft, currentPage, frame, { preview: true });
+  }
   restoreInlinePreviewRuntimeState(runtimeState, frame);
 }
 

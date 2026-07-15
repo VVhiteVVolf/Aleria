@@ -463,12 +463,66 @@ function removeModuleFamilyConnection(button) {
   syncModuleJsonPreview();
 }
 
+function replaceModuleFamilyEditor(card, family) {
+  const block = card?.querySelector('[data-page-type="family"]');
+  if (!block) return false;
+  block.outerHTML = buildFamilyModuleEditorFields({ familyPage: true, family });
+  const nextBlock = card.querySelector('[data-page-type="family"]');
+  if (typeof hydrateModuleRichEditors === 'function') hydrateModuleRichEditors(nextBlock || card);
+  syncModuleJsonPreview();
+  return true;
+}
+
+function migrateModuleFamilyToV2(button) {
+  const card = button?.closest('.module-page-card');
+  const migration = globalThis.AleriaFamily?.migration;
+  if (!card || !migration) return;
+  const legacyPage = collectFamilyModuleEditorPage(card, {});
+  if (!migration.canMigrate(legacyPage.family)) return;
+  const accepted = typeof confirm !== 'function' || confirm(
+    'Den Legacy-Stammbaum in einen versionierten v2-Entwurf umwandeln? Der ursprüngliche Datensatz wird im Entwurf hinterlegt und gespeichert wird erst über den normalen Speichern-Button.'
+  );
+  if (!accepted) return;
+  if (typeof captureModuleEditorUndoSnapshot === 'function') captureModuleEditorUndoSnapshot('Family-Migration');
+  replaceModuleFamilyEditor(card, migration.migrate(legacyPage.family).family);
+}
+
+function restoreModuleFamilyLegacy(button) {
+  const card = button?.closest('.module-page-card');
+  const block = card?.querySelector('[data-page-type="family"]');
+  const familyEditor = globalThis.AleriaFamily?.editor;
+  const migration = globalThis.AleriaFamily?.migration;
+  if (!card || !block || !familyEditor?.ui?.collect || !migration) return;
+  const family = familyEditor.ui.collect(block, undefined);
+  if (!migration.canRestore(family)) return;
+  const accepted = typeof confirm !== 'function' || confirm(
+    'Den v2-Entwurf verwerfen und den hinterlegten Legacy-Stammbaum wiederherstellen?'
+  );
+  if (!accepted) return;
+  if (typeof captureModuleEditorUndoSnapshot === 'function') captureModuleEditorUndoSnapshot('Family-Migration zurücknehmen');
+  replaceModuleFamilyEditor(card, migration.restore(family));
+}
+
 function buildFamilyModuleEditorFields(page) {
   const family = sanitizeFamilyData(page?.family || {});
+  const familyEditor = globalThis.AleriaFamily?.editor;
+  if (familyEditor?.model?.isVersioned(family) && familyEditor?.ui?.buildFields) {
+    return `
+      <div class="module-page-type-block${inferModulePageType(page) === 'family' ? ' visible' : ''}" data-page-type="family" data-family-editor-version="2">
+        ${familyEditor.ui.buildFields(family, 'module')}
+      </div>`;
+  }
   const datalistId = `family-node-ids-${Math.random().toString(36).slice(2, 9)}`;
   return `
       <div class="module-page-type-block${inferModulePageType(page) === 'family' ? ' visible' : ''}" data-page-type="family" data-family-node-datalist="${escapeHtml(datalistId)}">
         <datalist id="${escapeHtml(datalistId)}">${buildFamilyNodeOptionsMarkupFromTrees(family.trees)}</datalist>
+        <div class="family-legacy-migration">
+          <div>
+            <strong>Legacy-Familienformat</strong>
+            <span>Die bestehende Seite bleibt unverändert, bis du die Migration ausdrücklich auslöst und das Modul anschließend speicherst.</span>
+          </div>
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="migrate-family-v2">In v2-Entwurf umwandeln</button>
+        </div>
         <div class="module-editor-grid">
           <div class="module-editor-field">
             <label>Layoutmodus</label>
@@ -522,6 +576,12 @@ function buildFamilyModuleEditorFields(page) {
 
 function collectFamilyModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="family"]') || card;
+  const familyEditor = globalThis.AleriaFamily?.editor;
+  if (block.querySelector('.family-v2-editor') && familyEditor?.ui?.collect) {
+    page.familyPage = true;
+    page.family = familyEditor.ui.collect(block, page.family);
+    return page;
+  }
   const trees = collectFamilyTreesFromEditor(block);
   page.familyPage = true;
   page.family = sanitizeFamilyData({

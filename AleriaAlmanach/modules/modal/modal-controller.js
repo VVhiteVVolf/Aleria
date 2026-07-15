@@ -58,6 +58,9 @@ function afterModalPageRender(entry, page, pageIndex, scope) {
   if (thread) loadCommentsIntoPage(thread.threadId);
   else if (typeof stopCommentLiveUpdates === 'function') stopCommentLiveUpdates();
   syncCurlForRenderedPage(entry);
+  if (typeof mountRegisteredModuleTemplatePage === 'function') {
+    mountRegisteredModuleTemplatePage(page, entry, pageIndex, scope);
+  }
 }
 
 function renderPage(idx, dir) {
@@ -75,6 +78,7 @@ function renderPage(idx, dir) {
     : null;
 
   if (dir === 0) {
+    if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
     if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
@@ -85,6 +89,7 @@ function renderPage(idx, dir) {
   const oldPage = scene ? scene.querySelector('.flip-page') : null;
 
   if (!oldPage) {
+    if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
     body.innerHTML = `<div class="flip-scene"><div class="flip-page">${html}</div></div>`;
     afterModalPageRender(entry, page, idx, body);
     if (typeof restoreInlineModuleViewportState === 'function') restoreInlineModuleViewportState(inlineViewportState);
@@ -98,6 +103,7 @@ function renderPage(idx, dir) {
 
   setTimeout(() => {
     if (renderToken !== _modalRenderToken) return;
+    if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(scene);
     scene.innerHTML = `<div class="flip-page ${inClass}">${html}</div>`;
     afterModalPageRender(entry, page, idx, scene);
   }, 200);
@@ -124,6 +130,8 @@ function jumpToPage(targetPage) {
 function closeModal() {
   if (!confirmDiscardInlineModuleEditChanges('schließen')) return;
   if (typeof cancelCurlInteraction === 'function') cancelCurlInteraction();
+  const body = document.getElementById('modal-body');
+  if (body && typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(body);
   deactivateDialog('modal-overlay');
   document.body.style.overflow = '';
   syncSessionFocusShell(false);

@@ -760,6 +760,15 @@ function createDefaultHierarchyPage(index = 0) {
 
 function createDefaultFamilyPage(index = 0) {
   const { hierarchy: baseHierarchy, hierarchyPage: _baseHierarchyPage, ...base } = createDefaultHierarchyPage(index);
+  const createVersionedFamily = globalThis.AleriaFamily?.editor?.model?.createDefaultFamily;
+  if (typeof createVersionedFamily === 'function') {
+    return {
+      ...base,
+      pageTitle: `${getRomanPageLabel(index)} - Familie`,
+      familyPage: true,
+      family: sanitizeFamilyData(createVersionedFamily(index))
+    };
+  }
   const family = sanitizeFamilyData({
     ...baseHierarchy,
     eyebrow: 'Familie',
@@ -1385,7 +1394,9 @@ const MODULE_TEMPLATE_REGISTRY = {
     buildEditorFields: page => buildFamilyModuleEditorFields(page),
     collectEditorPage: (card, page) => collectFamilyModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildFamilyPage(page, entry, pageIndex, total),
-    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'family')
+    renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'family'),
+    mountPage: context => globalThis.AleriaFamily?.page?.mount(context),
+    unmountPage: context => globalThis.AleriaFamily?.page?.unmount(context)
   },
   'object-profile': {
     id: 'object-profile',

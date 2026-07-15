@@ -92,6 +92,10 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-family-node',
   'add-family-connection',
   'remove-family-connection',
+  'migrate-family-v2',
+  'restore-family-legacy',
+  'add-family-v2-record',
+  'remove-family-v2-record',
   'add-tleague-row',
   'remove-tleague-row',
   'add-tournament-line-row',
@@ -521,6 +525,22 @@ function handleInlineEditorActionClick(event) {
     );
     return;
   }
+  if (action === 'migrate-family-v2') {
+    migrateInlineFamilyToV2();
+    return;
+  }
+  if (action === 'restore-family-legacy') {
+    restoreInlineFamilyLegacy();
+    return;
+  }
+  if (action === 'add-family-v2-record') {
+    addInlineFamilyV2Record(trigger);
+    return;
+  }
+  if (action === 'remove-family-v2-record') {
+    removeInlineFamilyV2Record(trigger);
+    return;
+  }
   if (action === 'add-family-detail') {
     addInlineFamilyDetail();
     return;
@@ -877,6 +897,10 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-hierarchy-node-field') {
     updateInlineHierarchyNodeField(field);
+    return;
+  }
+  if (action === 'update-family-v2-field') {
+    updateInlineFamilyV2Field(field);
     return;
   }
   if (action === 'update-family-field') {

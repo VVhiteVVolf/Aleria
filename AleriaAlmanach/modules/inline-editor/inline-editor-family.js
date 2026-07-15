@@ -6,6 +6,72 @@ function getInlineFamilyDataForEdit(page) {
   return page.family;
 }
 
+function updateInlineFamilyV2Field(input) {
+  const page = getInlineDraftPage();
+  const model = globalThis.AleriaFamily?.editor?.model;
+  const path = input?.dataset?.familyPath || '';
+  if (!page || !model || !path) return;
+  const family = getInlineFamilyDataForEdit(page);
+  if (!model.isVersioned(family)) return;
+  model.setPath(family, path, model.readFieldValue(input));
+  page.family = sanitizeFamilyData(family);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function addInlineFamilyV2Record(trigger) {
+  const page = getInlineDraftPage();
+  const model = globalThis.AleriaFamily?.editor?.model;
+  const collectionPath = trigger?.dataset?.familyCollection || '';
+  if (!page || !model?.getCollection(collectionPath)) return;
+  const family = getInlineFamilyDataForEdit(page);
+  if (!model.isVersioned(family)) return;
+  const records = model.getPath(family, collectionPath, []);
+  const usedIds = records.map(record => String(record?.id || '')).filter(Boolean);
+  records.push(model.createRecord(collectionPath, records.length, usedIds));
+  model.setPath(family, collectionPath, records);
+  page.family = sanitizeFamilyData(family);
+  renderPage(currentPage, 0);
+}
+
+function removeInlineFamilyV2Record(trigger) {
+  const page = getInlineDraftPage();
+  const model = globalThis.AleriaFamily?.editor?.model;
+  const collectionPath = trigger?.dataset?.familyCollection || '';
+  const index = Number(trigger?.dataset?.familyRecordIndex);
+  if (!page || !model?.getCollection(collectionPath) || !Number.isInteger(index) || index < 0) return;
+  const family = getInlineFamilyDataForEdit(page);
+  if (!model.isVersioned(family)) return;
+  const records = model.getPath(family, collectionPath, []);
+  records.splice(index, 1);
+  model.setPath(family, collectionPath, records);
+  page.family = sanitizeFamilyData(family);
+  renderPage(currentPage, 0);
+}
+
+function migrateInlineFamilyToV2() {
+  const page = getInlineDraftPage();
+  const migration = globalThis.AleriaFamily?.migration;
+  if (!page || !migration?.canMigrate(page.family)) return;
+  const accepted = typeof confirm !== 'function' || confirm(
+    'Den Legacy-Stammbaum in einen versionierten v2-Entwurf umwandeln? Der ursprüngliche Datensatz wird im Entwurf hinterlegt und gespeichert wird erst über den normalen Speichern-Button.'
+  );
+  if (!accepted) return;
+  page.family = migration.migrate(page.family).family;
+  renderPage(currentPage, 0);
+}
+
+function restoreInlineFamilyLegacy() {
+  const page = getInlineDraftPage();
+  const migration = globalThis.AleriaFamily?.migration;
+  if (!page || !migration?.canRestore(page.family)) return;
+  const accepted = typeof confirm !== 'function' || confirm(
+    'Den v2-Entwurf verwerfen und den hinterlegten Legacy-Stammbaum wiederherstellen?'
+  );
+  if (!accepted) return;
+  page.family = migration.restore(page.family);
+  renderPage(currentPage, 0);
+}
+
 function getInlineFamilyTree(data, treeIndex = 0) {
   if (!Array.isArray(data.trees) || !data.trees.length) {
     data.trees = [{ label: data.chartTitle || 'Stammbaum', levels: Array.isArray(data.levels) ? data.levels : [], connections: [] }];
@@ -306,7 +372,18 @@ function buildInlineFamilyTreeRows(trees = []) {
 
 function buildInlineFamilyEditor(page) {
   const data = getInlineFamilyDataForEdit(page);
+  const familyEditor = globalThis.AleriaFamily?.editor;
+  if (familyEditor?.model?.isVersioned(data) && familyEditor?.ui?.buildFields) {
+    return familyEditor.ui.buildFields(data, 'inline');
+  }
   return `
+    <div class="family-legacy-migration">
+      <div>
+        <strong>Legacy-Familienformat</strong>
+        <span>Die bestehende Seite bleibt unverändert, bis du die Migration ausdrücklich auslöst und das Modul anschließend speicherst.</span>
+      </div>
+      <button class="module-editor-mini-btn" type="button" data-inline-action="migrate-family-v2">In v2-Entwurf umwandeln</button>
+    </div>
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Familienakte</div>
       <div class="inline-edit-grid">

@@ -149,6 +149,10 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'add-family-sibling',
   'add-family-connection',
   'remove-family-connection',
+  'migrate-family-v2',
+  'restore-family-legacy',
+  'add-family-v2-record',
+  'remove-family-v2-record',
   'add-biography-connection-row',
   'remove-biography-connection-row',
   'add-biography-document-row',
@@ -718,6 +722,18 @@ function handleModuleEditorActionClick(event) {
     removeModuleHierarchyNode(trigger);
     return;
   }
+  if (action === 'migrate-family-v2') {
+    migrateModuleFamilyToV2(trigger);
+    return;
+  }
+  if (action === 'restore-family-legacy') {
+    restoreModuleFamilyLegacy(trigger);
+    return;
+  }
+  if (action === 'add-family-v2-record' || action === 'remove-family-v2-record') {
+    globalThis.AleriaFamily?.editor?.ui?.handleModuleAction(action, trigger);
+    return;
+  }
   if (action === 'add-family-detail') {
     addModuleFamilyDetail(trigger);
     return;
@@ -857,6 +873,10 @@ function handleModuleEditorFieldChange(event) {
     return;
   }
   if (action === 'sync-json-preview') {
+    syncModuleJsonPreview();
+    return;
+  }
+  if (action === 'sync-family-v2-field') {
     syncModuleJsonPreview();
     return;
   }

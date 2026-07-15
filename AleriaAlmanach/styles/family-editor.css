@@ -1,0 +1,295 @@
+/* Structured editor for the versioned Aleria family domain. */
+
+.family-v2-editor {
+  --family-editor-border: rgba(173, 139, 83, 0.3);
+  --family-editor-border-strong: rgba(196, 157, 92, 0.52);
+  --family-editor-paper: rgba(25, 24, 24, 0.82);
+  --family-editor-paper-raised: rgba(38, 34, 30, 0.9);
+  --family-editor-ink: #eee3ca;
+  --family-editor-muted: #b9aa8d;
+  display: grid;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.family-v2-editor-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--family-editor-border-strong);
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(135deg, rgba(121, 83, 38, 0.22), transparent 58%),
+    var(--family-editor-paper-raised);
+  box-shadow: inset 0 0 0 1px rgba(255, 239, 204, 0.04);
+}
+
+.family-v2-editor-intro span,
+.family-v2-record-head span {
+  color: #cfad73;
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.family-v2-editor-intro h3 {
+  margin: 0.18rem 0 0.3rem;
+  color: var(--family-editor-ink);
+  font: 700 1.05rem 'Cinzel', serif;
+}
+
+.family-v2-editor-intro p,
+.family-v2-collection-head p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--family-editor-muted);
+  font: 0.8rem/1.45 'EB Garamond', serif;
+}
+
+.family-v2-editor-counts {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--family-editor-border);
+  border-radius: 999px;
+  color: var(--family-editor-muted);
+  font: 0.72rem 'EB Garamond', serif;
+  white-space: nowrap;
+}
+
+.family-v2-editor-counts strong {
+  color: #e0bd7f;
+  font-family: 'Cinzel', serif;
+}
+
+.family-v2-migration-note,
+.family-legacy-migration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(193, 145, 67, 0.42);
+  border-radius: 0.4rem;
+  background: rgba(116, 79, 36, 0.16);
+  color: var(--family-editor-muted, #b9aa8d);
+  font: 0.76rem/1.4 'EB Garamond', serif;
+}
+
+.family-v2-migration-note > div,
+.family-legacy-migration > div {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.family-v2-migration-note strong,
+.family-legacy-migration strong {
+  color: #dfc89f;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+}
+
+.family-v2-migration-note span,
+.family-legacy-migration span {
+  color: var(--family-editor-muted, #b9aa8d);
+}
+
+.family-v2-panel {
+  overflow: clip;
+  border: 1px solid var(--family-editor-border);
+  border-radius: 0.4rem;
+  background: var(--family-editor-paper);
+}
+
+.family-v2-panel > summary {
+  position: relative;
+  padding: 0.72rem 2.25rem 0.72rem 0.9rem;
+  color: var(--family-editor-ink);
+  cursor: pointer;
+  font: 700 0.75rem 'Cinzel', serif;
+  letter-spacing: 0.05em;
+  list-style: none;
+  user-select: none;
+}
+
+.family-v2-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+.family-v2-panel > summary::after {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  content: '+';
+  color: #cfad73;
+  font-size: 1rem;
+  transform: translateY(-50%);
+}
+
+.family-v2-panel[open] > summary {
+  border-bottom: 1px solid var(--family-editor-border);
+  background: rgba(116, 79, 36, 0.12);
+}
+
+.family-v2-panel[open] > summary::after {
+  content: '−';
+}
+
+.family-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+
+.family-v2-field {
+  display: grid;
+  min-width: 0;
+  gap: 0.28rem;
+}
+
+.family-v2-field.wide {
+  grid-column: 1 / -1;
+}
+
+.family-v2-field > label {
+  color: #cdbd9e;
+  font: 600 0.67rem 'Cinzel', serif;
+  letter-spacing: 0.025em;
+}
+
+.family-v2-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.15rem;
+  padding: 0.44rem 0.55rem;
+  border: 1px solid rgba(183, 147, 88, 0.3);
+  border-radius: 0.25rem;
+  background: rgba(8, 9, 10, 0.62);
+  color: #f0e5cf;
+  font: 0.78rem 'EB Garamond', serif;
+}
+
+textarea.family-v2-input {
+  min-height: 4.8rem;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+.family-v2-input:focus-visible {
+  border-color: rgba(218, 177, 108, 0.72);
+  outline: 2px solid rgba(201, 154, 77, 0.25);
+  outline-offset: 1px;
+}
+
+.family-v2-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.15rem;
+  color: var(--family-editor-muted);
+  font: 0.78rem 'EB Garamond', serif;
+}
+
+.family-v2-check input {
+  accent-color: #a87a3e;
+}
+
+.family-v2-collections {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.85rem;
+}
+
+.family-v2-collection {
+  min-width: 0;
+  border: 1px solid rgba(173, 139, 83, 0.2);
+  border-radius: 0.35rem;
+  background: rgba(8, 9, 10, 0.28);
+}
+
+.family-v2-collection-head,
+.family-v2-record-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.family-v2-collection-head {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid rgba(173, 139, 83, 0.16);
+}
+
+.family-v2-collection-head h4 {
+  margin: 0 0 0.14rem;
+  color: #dfc89f;
+  font: 700 0.76rem 'Cinzel', serif;
+}
+
+.family-v2-record-list {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.7rem;
+}
+
+.family-v2-record {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(173, 139, 83, 0.24);
+  border-radius: 0.3rem;
+  background: rgba(38, 34, 30, 0.52);
+}
+
+.family-v2-record-head {
+  align-items: center;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid rgba(173, 139, 83, 0.18);
+}
+
+.family-v2-record-head > div {
+  display: grid;
+  min-width: 0;
+  gap: 0.08rem;
+}
+
+.family-v2-record-head strong {
+  overflow: hidden;
+  color: var(--family-editor-ink);
+  font: 600 0.83rem 'EB Garamond', serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.family-v2-empty {
+  padding: 0.75rem;
+  color: var(--family-editor-muted);
+  font: italic 0.76rem 'EB Garamond', serif;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .family-v2-editor-intro,
+  .family-v2-collection-head,
+  .family-v2-migration-note,
+  .family-legacy-migration {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .family-v2-editor-counts {
+    align-self: flex-start;
+  }
+
+  .family-v2-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .family-v2-field.wide {
+    grid-column: auto;
+  }
+}

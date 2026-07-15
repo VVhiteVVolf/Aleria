@@ -14,6 +14,9 @@ const sources = [
   'modules/language/language-data.js',
   'modules/core/app-core.js',
   'modules/module-editor/module-editor-data.js',
+  'modules/family/family-api.js',
+  'modules/family/editor/family-editor-model.js',
+  'modules/family/editor/family-editor-ui.js',
   'modules/module-editor/module-editor-cast-picker.js',
   'modules/module-editor/module-editor-scene-blocks.js',
   'modules/module-editor/module-editor-bounty.js',
@@ -163,6 +166,24 @@ const referenceChecks = vm.runInContext(`
         ]
       }]
     });
+    const familyV2 = sanitizeFamilyData({
+      schema: 'aleria.family',
+      schemaVersion: 2,
+      id: 'family-v2',
+      document: { title: 'Haus V2', facts: [{ label: 'Sitz', value: 'Nordturm' }] },
+      genealogy: {
+        persons: [{ id: 'v2-person', identity: { displayName: 'V2 Person' } }],
+        partnerships: [],
+        parentages: [],
+        associations: [],
+        sources: [],
+        fantasy: {}
+      },
+      view: { initialFocusPersonId: 'v2-person', orientation: 'horizontal' },
+      extensions: { 'aleria.test': { kept: true } }
+    });
+    const familyV2DefaultPage = MODULE_TEMPLATE_REGISTRY.family.createPage(0);
+    const familyV2DefaultEditor = buildFamilyModuleEditorFields(familyV2DefaultPage);
     const hierarchy = sanitizeHierarchyData({
       trees: [
         { id: 'root', parentTreeId: 'root', label: 'Root', levels: [] },
@@ -226,6 +247,15 @@ const referenceChecks = vm.runInContext(`
       invalidAssignmentRepaired: inventory.items.find(item => item.id === 'invalid')?.category === 'other',
       familyParents: family.trees[0].levels[0].nodes.find(node => node.id === 'child')?.parentIds || [],
       familyConnectionCount: family.trees[0].connections.length,
+      familyV2SchemaVersion: familyV2.schemaVersion,
+      familyV2PersonId: familyV2.genealogy.persons[0]?.id || '',
+      familyV2FocusId: familyV2.view.initialFocusPersonId || '',
+      familyV2ExtensionKept: familyV2.extensions?.['aleria.test']?.kept === true,
+      familyV2LayoutMode: familyV2.layoutMode,
+      familyV2DefaultSchemaVersion: familyV2DefaultPage.family?.schemaVersion,
+      familyV2DefaultPersonCount: familyV2DefaultPage.family?.genealogy?.persons?.length || 0,
+      familyV2DefaultEditorStructured: familyV2DefaultEditor.includes('data-family-editor-version="2"')
+        && familyV2DefaultEditor.includes('family-v2-source-data'),
       hierarchyParents: hierarchy.trees.map(tree => tree.parentTreeId),
       languageLayerCount: languageLayers.length,
       languageTabCount: (languageTabs.match(/data-language-layer-tab=/g) || []).length,
@@ -400,6 +430,8 @@ if (!referenceChecks.customAssignmentKept) failures.push('character-inventory: G
 if (!referenceChecks.invalidAssignmentRepaired) failures.push('character-inventory: Verwaiste Kategoriezuordnung wurde nicht repariert.');
 if (JSON.stringify(referenceChecks.familyParents) !== JSON.stringify(['parent'])) failures.push('family: Ungueltige Elternreferenzen wurden nicht entfernt.');
 if (referenceChecks.familyConnectionCount !== 1) failures.push('family: Ungueltige Verbindungen wurden nicht entfernt.');
+if (referenceChecks.familyV2SchemaVersion !== 2 || referenceChecks.familyV2PersonId !== 'v2-person' || referenceChecks.familyV2FocusId !== 'v2-person' || !referenceChecks.familyV2ExtensionKept || referenceChecks.familyV2LayoutMode !== 'depth') failures.push('family: Das versionierte v2-Dokument bleibt beim Sanitizen nicht vollstaendig erhalten.');
+if (referenceChecks.familyV2DefaultSchemaVersion !== 2 || referenceChecks.familyV2DefaultPersonCount < 3 || !referenceChecks.familyV2DefaultEditorStructured) failures.push('family: Neue Family-Seiten starten nicht mit dem strukturierten v2-Editor.');
 if (referenceChecks.hierarchyParents.some(Boolean)) failures.push('hierarchy: Ungueltige Baumreferenzen wurden nicht entfernt.');
 if (referenceChecks.languageLayerCount !== 2 || referenceChecks.languageTabCount !== 2 || referenceChecks.languagePanelCount !== 2) failures.push('language: Alphabet-Ebenen werden nicht passend zu den hinterlegten Bildern gerendert.');
 if (!referenceChecks.languageEmptySectionsKept) failures.push('language: Bewusst geleerte Textabschnitte wurden wiederhergestellt.');

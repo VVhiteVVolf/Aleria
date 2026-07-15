@@ -915,7 +915,86 @@ function getFamilyTreeDisplayMode(value = '') {
   return 'tabs';
 }
 
+function isVersionedFamilyData(data = {}) {
+  return data?.schema === 'aleria.family'
+    && Number(data?.schemaVersion) >= 2
+    && data?.genealogy
+    && typeof data.genealogy === 'object'
+    && !Array.isArray(data.genealogy);
+}
+
+function cloneFamilyDocumentValue(value, fallback) {
+  if (value == null) return fallback;
+  try {
+    return typeof structuredClone === 'function'
+      ? structuredClone(value)
+      : JSON.parse(JSON.stringify(value));
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function sanitizeVersionedFamilyData(data = {}) {
+  const documentData = data.document && typeof data.document === 'object' && !Array.isArray(data.document)
+    ? data.document
+    : {};
+  const view = cloneFamilyDocumentValue(data.view, {});
+  const presentation = data.presentation && typeof data.presentation === 'object' && !Array.isArray(data.presentation)
+    ? data.presentation
+    : {};
+  const base = sanitizeHierarchyData({
+    layoutMode: view.orientation === 'horizontal' ? 'depth' : 'vertical',
+    cardFontScale: presentation.cardFontScale,
+    portraitScale: presentation.portraitScale,
+    eyebrow: documentData.eyebrow || 'Familie',
+    subtitle: documentData.subtitle || 'Familienstruktur',
+    centerLabel: presentation.centerLabel || 'Haus & Blutlinie',
+    emblem: presentation.emblem || '',
+    sideImage: presentation.sideImage || '',
+    organizationTitle: documentData.title || 'Familienhaus',
+    motto: presentation.motto || 'Blut. Namen. Bande.',
+    description: documentData.summary || '',
+    detailsTitle: presentation.detailsTitle || 'Familienakte',
+    details: documentData.facts,
+    quoteLabel: presentation.quoteLabel || 'Hauswort',
+    quote: documentData.quote || '',
+    chartTitle: presentation.chartTitle || documentData.title || 'Stammbaum & Beziehungen',
+    chartIntro: presentation.chartIntro || '',
+    footerNote: presentation.footerNote || ''
+  });
+  return {
+    ...base,
+    schema: 'aleria.family',
+    schemaVersion: Math.max(2, Math.trunc(Number(data.schemaVersion) || 2)),
+    id: String(data.id || '').trim(),
+    document: {
+      ...cloneFamilyDocumentValue(documentData, {}),
+      eyebrow: String(documentData.eyebrow || '').trim(),
+      title: String(documentData.title || '').trim(),
+      subtitle: String(documentData.subtitle || '').trim(),
+      summary: String(documentData.summary || '').trim(),
+      quote: String(documentData.quote || '').trim(),
+      facts: sanitizeHierarchyDetailRows(documentData.facts)
+    },
+    genealogy: cloneFamilyDocumentValue(data.genealogy, {
+      persons: [],
+      partnerships: [],
+      parentages: [],
+      associations: [],
+      sources: [],
+      fantasy: {}
+    }),
+    view,
+    presentation: cloneFamilyDocumentValue(presentation, {}),
+    extensions: cloneFamilyDocumentValue(data.extensions, {}),
+    treeDisplayMode: 'tabs',
+    trees: [],
+    levels: []
+  };
+}
+
 function sanitizeFamilyData(data = {}) {
+  if (isVersionedFamilyData(data)) return sanitizeVersionedFamilyData(data);
   const base = sanitizeHierarchyData({
     ...data,
     eyebrow: data.eyebrow || 'Familie',

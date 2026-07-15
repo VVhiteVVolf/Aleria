@@ -93,6 +93,7 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   const pages = Array.isArray(payload?.entry?.pages) ? payload.entry.pages : [];
   if (!pages.length) {
     stage.hidden = true;
+    if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(frame);
     frame.innerHTML = '';
     empty.hidden = false;
     empty.textContent = errorMessage || 'Noch keine Seite zum Vorschauen vorhanden.';
@@ -127,7 +128,11 @@ function renderModuleEditorPreview(payload = null, errorMessage = '') {
   const fixedHeightStyle = previewTemplateId === 'object-profile' || previewTemplateId === 'houses'
     ? `height:${previewMinHeight}px;`
     : '';
+  if (typeof unmountRegisteredModuleTemplatePages === 'function') unmountRegisteredModuleTemplatePages(frame);
   frame.innerHTML = `<div class="module-editor-preview-card" style="width:${previewWidth}px;min-height:${previewMinHeight}px;${fixedHeightStyle}">${buildModuleEditorPreviewHtml(page, previewEntry, _moduleEditorPreviewPageIndex, pages.length)}</div>`;
+  if (typeof mountRegisteredModuleTemplatePage === 'function') {
+    mountRegisteredModuleTemplatePage(page, previewEntry, _moduleEditorPreviewPageIndex, frame, { preview: true });
+  }
   if (typeof restoreInlinePreviewRuntimeState === 'function') {
     restoreInlinePreviewRuntimeState(previousRuntimeState, frame);
   }

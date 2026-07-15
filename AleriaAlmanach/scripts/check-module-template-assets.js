@@ -36,8 +36,20 @@ const inlineEditor = read(inlineEditorPath);
 const moduleAssetPattern = 'modules\\/(?:module-editor|inline-editor|bounty|court|goods|trade-catalog|map-template|language|name-list|script-table|landing|character-inventory|guest-register|hierarchy|family|house-warriors)\\/[^"?]+\\.js';
 const mainScripts = collect(mainHtml, new RegExp(`src="\\.\\/(${moduleAssetPattern})`, 'g'));
 const orteScripts = collect(orteLoader, new RegExp(`"(${moduleAssetPattern})(?:\\?[^" ]*)?"`, 'g'));
-const mainStyles = collect(mainHtml, /href="\.\/(styles\/module-page-[^"?]+\.css)/g);
-const orteStyles = collect(orteLoader, /"(styles\/module-page-[^"?]+\.css)(?:\?[^" ]*)?"/g);
+const mainStyles = collect(mainHtml, /href="\.\/(styles\/(?:module-page-[^"?]+|family-editor)\.css)/g);
+const orteStyles = collect(orteLoader, /"(styles\/(?:module-page-[^"?]+|family-editor)\.css)(?:\?[^" ]*)?"/g);
+const mainVendorAssets = [
+  ...collect(mainHtml, /src="\.\/(vendor\/[^"?]+\.(?:js))(?:\?[^" ]*)?"/g),
+  ...collect(mainHtml, /href="\.\/(vendor\/[^"?]+\.(?:css))(?:\?[^" ]*)?"/g)
+];
+const orteVendorAssets = collect(orteLoader, /"(vendor\/[^"?]+\.(?:js|css))(?:\?[^" ]*)?"/g);
+const requiredVendorFiles = [
+  'vendor/d3/7.9.0/LICENSE',
+  'vendor/d3/7.9.0/d3.min.js',
+  'vendor/family-chart/0.9.0/LICENSE.txt',
+  'vendor/family-chart/0.9.0/family-chart.css',
+  'vendor/family-chart/0.9.0/family-chart.min.js'
+];
 const dependencyBlock = templates.match(/const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = \{([\s\S]*?)\n\};/)?.[1] || '';
 const registryBlock = templates.match(/const MODULE_TEMPLATE_REGISTRY = \{([\s\S]*?)\r?\n\};\r?\n\r?\nconst MODULE_TEMPLATE_OPTIONS/)?.[1] || '';
 const registryIds = [...registryBlock.matchAll(/^  (?:'([^']+)'|([a-z][a-z-]*)):\s*\{/gm)]
@@ -54,7 +66,8 @@ const inlineBuilderNames = collect(inlineEditor, /return wrapInlineEditor\([^;]*
 const failures = {
   missingOrteScripts: mainScripts.filter(asset => !orteScripts.includes(asset)),
   missingOrteStyles: mainStyles.filter(asset => !orteStyles.includes(asset)),
-  missingFiles: [...orteScripts, ...orteStyles].filter(asset => !fs.existsSync(path.join(almanachRoot, asset))),
+  missingOrteVendorAssets: mainVendorAssets.filter(asset => !orteVendorAssets.includes(asset)),
+  missingFiles: [...orteScripts, ...orteStyles, ...requiredVendorFiles].filter(asset => !fs.existsSync(path.join(almanachRoot, asset))),
   duplicateOrteScripts: findDuplicates(orteScripts),
   duplicateOrteStyles: findDuplicates(orteStyles),
   templatesWithoutDependencyContract: registryIds.filter(id => !dependencyTemplateIds.includes(id)),
@@ -75,5 +88,5 @@ if (messages.length) {
   console.error(`Modultemplate-Asset-Pruefung fehlgeschlagen.\n\n${messages.join('\n\n')}`);
   process.exitCode = 1;
 } else {
-  console.log(`Modultemplate-Assets OK: ${registryIds.length} Templates, ${mainScripts.length} Scripts, ${mainStyles.length} Styles, ${dependencyNames.length} Laufzeitabhaengigkeiten, Inline-Coverage vollstaendig.`);
+  console.log(`Modultemplate-Assets OK: ${registryIds.length} Templates, ${mainScripts.length} Scripts, ${mainStyles.length} Styles, ${mainVendorAssets.length} Vendorassets, ${dependencyNames.length} Laufzeitabhaengigkeiten, Inline-Coverage vollstaendig.`);
 }

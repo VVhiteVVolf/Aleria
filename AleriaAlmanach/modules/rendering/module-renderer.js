@@ -1663,6 +1663,27 @@ function buildRegisteredModuleTemplatePage(page, entry, pageIndex, total, inline
   return '';
 }
 
+function mountRegisteredModuleTemplatePage(page, entry, pageIndex, root, options = {}) {
+  const template = getModuleTemplateForPage(page);
+  if (!template || typeof template.mountPage !== 'function') return;
+  template.mountPage({
+    root: root || document,
+    page,
+    entry,
+    pageIndex,
+    preview: options.preview === true
+  });
+}
+
+function unmountRegisteredModuleTemplatePages(root = document) {
+  const seen = new Set();
+  Object.values(MODULE_TEMPLATE_REGISTRY || {}).forEach(template => {
+    if (typeof template?.unmountPage !== 'function' || seen.has(template.unmountPage)) return;
+    seen.add(template.unmountPage);
+    template.unmountPage({ root });
+  });
+}
+
 function buildPage(page, entry, pageIndex, total) {
   const effectiveEntry = getRenderableEntry(entry);
   const inlineEditing = isInlineEditingEntry(entry);
