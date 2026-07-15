@@ -1,6 +1,6 @@
 # Anzeigetafeln
 
-Der alte Ordner `Neocities/Anzeigetafeln` bleibt unveraendert.
+Neocities wird nicht mehr als Laufzeit- oder Veröffentlichungsziel verwendet. Aktuelle Anzeigetafeln liegen ausschließlich in diesem Verzeichnis.
 
 Neue Anzeigetafeln liegen hierarchisch unter `Anzeigetafeln/`, z. B.:
 

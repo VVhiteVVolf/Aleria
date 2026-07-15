@@ -127,9 +127,7 @@ window.BESTIARIUM_DATA = {
       { label: "Lichtalben - Celestialer", href: "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1893" },
       { label: "Dunkelalben - Infernaler", href: "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2180" }
     ],
-    other: [
-      { label: "Pferdekreuzungsmatrix", href: "https://dieweltvonaleria.neocities.org/Pferdematrix" }
-    ],
+    other: [],
     literature: [
       { label: "Das Wesen des Infernalen", href: "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2644" },
       { label: "Dämonologie Band I. - X.", href: "#" },
