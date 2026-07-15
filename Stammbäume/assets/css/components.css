@@ -14,10 +14,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.38rem;
   min-height: 2.25rem;
   padding: 0.55rem 0.8rem;
   border-radius: 0.14rem;
   text-decoration: none;
+}
+
+.toolbar-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: sepia(0.18) saturate(0.82) drop-shadow(0 0.06rem 0.05rem rgba(55, 34, 18, 0.22));
+}
+
+.toolbar-icon--undo {
+  transform: rotate(180deg);
 }
 
 .button:hover:not(:disabled) {

@@ -5,6 +5,7 @@ import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
 } from '../assets/js/adapters/family-chart-card-renderer.js';
+import { createRoundedOrthogonalPath } from '../assets/js/adapters/family-chart-link-renderer.js';
 import { getCrestFrame, getPersonCardFrame } from '../assets/js/config/chart-frames.js';
 import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
 import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
@@ -36,6 +37,12 @@ import {
   WORKSPACE_MODE
 } from '../assets/js/services/workspace-access.js';
 import { createFamilyStore } from '../assets/js/state/family-store.js';
+import {
+  createFamilyChangeSet,
+  familyFromRepositoryRecords,
+  familyRootRecord,
+  isValidFirestoreRecordId
+} from '../assets/js/modules/family-sync/family-change-set.js';
 
 const tests = [];
 
@@ -239,6 +246,18 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
   assert.equal(family.document.emblem, 'https://i.imgur.com/I6OEMqq.png');
   assert.equal(family.view.focusPersonId, 'idwalladr-arwydd');
   assert.deepEqual(
+    Object.fromEntries(family.houses.filter(house => house.emblem).map(house => [house.id, house.emblem])),
+    {
+      'house-arwydd': 'https://i.imgur.com/I6OEMqq.png',
+      'house-saethwyr': 'assets/images/houses/haus-saethwyr.png',
+      'house-wyrm': 'assets/images/houses/haus-wyrm.png',
+      'house-draig': 'assets/images/houses/haus-draig.png',
+      'house-gafyr': 'assets/images/houses/haus-gafyr.png',
+      'house-gwefrydd': 'assets/images/houses/haus-gwefrydd.png',
+      'house-gwywern': 'assets/images/houses/haus-gwyvern.png'
+    }
+  );
+  assert.deepEqual(
     new Set(graph.getChildren('idwalladr-arwydd').map(person => person.name)),
     new Set(['Imogen', 'Idris', 'Iseult'])
   );
@@ -264,6 +283,28 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
     assert.ok(node, `${branch.name} muss als verlinkter Endknoten erscheinen.`);
     assert.equal(node.data.title, 'Wegverheiratete Linie');
   });
+  assert.equal(chartById.get('breandan-saethwyr').data.crest, 'assets/images/houses/haus-saethwyr.png');
+  assert.equal(chartById.get('eiddon-wym').data.crest, 'assets/images/houses/haus-wyrm.png');
+  assert.equal(chartById.get('tecwyn-draig').data.crest, 'assets/images/houses/haus-draig.png');
+  assert.equal(chartById.get('kelyddon-gafyr').data.crest, 'assets/images/houses/haus-gafyr.png');
+  assert.equal(chartById.get('myrcella-gwefrydd').data.crest, 'assets/images/houses/haus-gwefrydd.png');
+  assert.equal(chartById.get('gwynnan-gwywern').data.crest, 'assets/images/houses/haus-gwyvern.png');
+  assert.equal(family.cadetBranches.find(branch => branch.id === 'married-away-wym').targetFamilyId, 'haus-wyrm');
+});
+
+test('führt überlagerungsarme Verbindungslinien über gemeinsame rechtwinklige Stämme', () => {
+  assert.equal(
+    createRoundedOrthogonalPath([
+      [0, 0],
+      [0, 50],
+      [0, 50],
+      [100, 50],
+      [100, 50],
+      [100, 100]
+    ]),
+    'M 0 0 L 0 32 Q 0 50 18 50 L 82 50 Q 100 50 100 68 L 100 100'
+  );
+  assert.equal(createRoundedOrthogonalPath([[10, 5], [10, 40], [10, 80]]), 'M 10 5 L 10 80');
 });
 
 test('hält für Wappen- und Zeitknoten zusätzlichen Generationsabstand frei', () => {
@@ -306,7 +347,30 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /id="family-app" data-workspace-mode="view"/);
   assert.match(html, /class="toolbar"[^>]*data-edit-only/);
   assert.match(html, /id="edit-access-dialog"/);
+  assert.equal((html.match(/class="toolbar-icon/g) || []).length, 7);
+  assert.match(html, /assets\/images\/toolbar\/fit-chart\.png/);
+  assert.match(html, /assets\/images\/toolbar\/lineage\.png/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
+});
+
+test('liefert alle lokalen Toolbar-Motive und vereinheitlichte Linienkonturen aus', async () => {
+  const toolbarAssets = [
+    'history-arrow.png',
+    'fit-chart.png',
+    'overview.png',
+    'orientation.png',
+    'lineage.png',
+    'line-colors.png'
+  ];
+  const files = await Promise.all(toolbarAssets.map(name => (
+    readFile(new URL(`../assets/images/toolbar/${name}`, import.meta.url))
+  )));
+  assert.ok(files.every(file => file.length > 0));
+
+  const css = await readFile(new URL('../assets/css/family-chart-theme.css', import.meta.url), 'utf8');
+  assert.match(css, /stroke-linecap: round;/);
+  assert.match(css, /stroke-linejoin: round;/);
+  assert.match(css, /\.link\.f3-path-to-main\s*\{\s*stroke-width: 3\.25px !important;/);
 });
 
 test('migriert das alte persons/couples-Format ohne Render-Abhängigkeit', () => {
@@ -571,7 +635,37 @@ test('speichert Familien unter verschachtelten Registerpfaden', () => {
   const loaded = loadFamilyById('haus-test', storage);
   assert.equal(saved.id, 'haus-test');
   assert.deepEqual(loaded.folderPath, folderPath);
+  assert.deepEqual(loaded.family.extensions.registry.folderPath, folderPath);
   assert.equal(loaded.family.document.title, 'Haus Test');
+});
+
+test('zerlegt Cloud-Änderungen nach Entität und setzt sie verlustfrei zusammen', () => {
+  const before = normalizeFamily(SAMPLE_FAMILY);
+  const after = normalizeFamily({
+    ...before,
+    document: { ...before.document, motto: 'Neue Devise' },
+    persons: before.persons.map(person => person.id === before.persons[0].id
+      ? { ...person, title: 'Neuer Titel' }
+      : person),
+    timeJumps: []
+  });
+  const changes = createFamilyChangeSet(before, after);
+  assert.equal(changes.rootChanged, true);
+  assert.deepEqual(changes.collections.persons.upsert.map(person => person.id), [before.persons[0].id]);
+  assert.deepEqual(changes.collections.timeJumps.remove, before.timeJumps.map(item => item.id));
+  const restored = familyFromRepositoryRecords(familyRootRecord(after), Object.fromEntries([
+    'persons', 'partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps'
+  ].map(name => [name, after[name]])));
+  assert.deepEqual(restored, after);
+});
+
+test('weist unsichere Firebase-Record-IDs vor dem Speichern zurück', () => {
+  assert.equal(isValidFirestoreRecordId('person-1.a'), true);
+  assert.equal(isValidFirestoreRecordId('person/1'), false);
+  assert.throws(() => createFamilyChangeSet(null, {
+    ...SAMPLE_FAMILY,
+    persons: SAMPLE_FAMILY.persons.map((person, index) => index === 0 ? { ...person, id: 'person/unsafe' } : person)
+  }));
 });
 
 test('öffnet Haus Arwydd als eigenständige Registerfamilie', () => {

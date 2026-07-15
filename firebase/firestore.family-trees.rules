@@ -1,0 +1,199 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function hasGlobalRole(roles) {
+      return signedIn()
+        && request.auth.token.keys().hasAll(['aleriaRole'])
+        && request.auth.token.aleriaRole is string
+        && request.auth.token.aleriaRole in roles;
+    }
+
+    function memberPath(familyId) {
+      return /databases/$(database)/documents/familyWorkspaces/$(familyId)/members/$(request.auth.uid);
+    }
+
+    function memberRole(familyId) {
+      return signedIn() && exists(memberPath(familyId))
+        ? get(memberPath(familyId)).data.role
+        : null;
+    }
+
+    function hasFamilyRole(familyId, roles) {
+      return hasGlobalRole(['admin', 'archivist']) || memberRole(familyId) in roles;
+    }
+
+    function canReadDraft(familyId) {
+      return hasFamilyRole(familyId, ['viewer', 'editor', 'reviewer', 'admin']);
+    }
+
+    function canEditDraft(familyId) {
+      return hasFamilyRole(familyId, ['editor', 'reviewer', 'admin']) || (
+        signedIn()
+        && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)).data.createdBy == request.auth.uid
+        && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)/members/$(request.auth.uid)).data.role == 'admin'
+      );
+    }
+
+    function advancesRevision(familyId) {
+      let workspace = /databases/$(database)/documents/familyWorkspaces/$(familyId);
+      return (!exists(workspace) && getAfter(workspace).data.revision == 1)
+        || (exists(workspace) && getAfter(workspace).data.revision == get(workspace).data.revision + 1);
+    }
+
+    function validWorkspace(data, familyId) {
+      return data.familyId == familyId
+        && data.schema == 'aleria.family-tree'
+        && data.schemaVersion == 1
+        && data.title is string
+        && data.title.size() > 0
+        && data.title.size() <= 120
+        && data.revision is int
+        && data.revision > 0;
+    }
+
+    function validEntityId(data, entityId) {
+      return data.id == entityId && entityId.size() > 0 && entityId.size() <= 160;
+    }
+
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || hasGlobalRole(['admin', 'archivist']));
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['displayName', 'locale', 'lastSeenAt', 'createdAt']);
+      allow update: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['displayName', 'locale', 'lastSeenAt', 'createdAt']);
+      allow delete: if false;
+    }
+
+    match /familyWorkspaces/{familyId} {
+      allow read: if canReadDraft(familyId);
+      allow create: if signedIn()
+        && validWorkspace(request.resource.data, familyId)
+        && request.resource.data.createdBy == request.auth.uid
+        && request.resource.data.updatedBy == request.auth.uid
+        && request.resource.data.revision == 1
+        && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)/members/$(request.auth.uid)).data.role == 'admin';
+      allow update: if canEditDraft(familyId)
+        && validWorkspace(request.resource.data, familyId)
+        && request.resource.data.createdBy == resource.data.createdBy
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.revision == resource.data.revision + 1
+        && request.resource.data.updatedBy == request.auth.uid;
+      allow delete: if false;
+
+      match /members/{uid} {
+        allow read: if canReadDraft(familyId);
+        allow create: if (
+          signedIn()
+          && request.auth.uid == uid
+          && request.resource.data.uid == uid
+          && request.resource.data.role == 'admin'
+          && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)).data.createdBy == uid
+        ) || hasFamilyRole(familyId, ['admin']);
+        allow update, delete: if hasFamilyRole(familyId, ['admin'])
+          && request.auth.uid != uid;
+      }
+
+      match /persons/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /partnerships/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /parentages/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /houses/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /cadetBranches/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /timeJumps/{entityId} {
+        allow read: if canReadDraft(familyId);
+        allow create, update: if canEditDraft(familyId) && advancesRevision(familyId) && validEntityId(request.resource.data, entityId);
+        allow delete: if canEditDraft(familyId) && advancesRevision(familyId);
+      }
+
+      match /changeSets/{revisionId} {
+        allow read: if canReadDraft(familyId);
+        allow create: if canEditDraft(familyId)
+          && advancesRevision(familyId)
+          && request.resource.data.actorId == request.auth.uid
+          && request.resource.data.revision is int;
+        allow update, delete: if false;
+      }
+    }
+
+    match /registryDraftNodes/{nodeId} {
+      allow read: if signedIn() && (
+        hasGlobalRole(['admin', 'archivist'])
+        || (resource.data.familyId is string && canReadDraft(resource.data.familyId))
+      );
+      allow create, update: if signedIn() && (
+        hasGlobalRole(['admin', 'archivist'])
+        || (request.resource.data.familyId is string && hasFamilyRole(request.resource.data.familyId, ['reviewer', 'admin']))
+      );
+      allow delete: if hasGlobalRole(['admin', 'archivist']);
+    }
+
+    match /publishedFamilies/{familyId} {
+      allow read: if true;
+      allow write: if false;
+
+      match /releases/{releaseId} {
+        allow read: if true;
+        allow write: if false;
+
+        match /{entityCollection}/{entityId} {
+          allow read: if entityCollection in ['persons', 'partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps'];
+          allow write: if false;
+        }
+      }
+    }
+
+    match /publishedRegistryNodes/{nodeId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /familyAssets/{assetId} {
+      allow read: if resource.data.visibility == 'public'
+        || (resource.data.familyId is string && canReadDraft(resource.data.familyId));
+      allow create, update: if request.resource.data.familyId is string
+        && canEditDraft(request.resource.data.familyId);
+      allow delete: if resource.data.familyId is string && canEditDraft(resource.data.familyId);
+    }
+
+    match /auditEvents/{eventId} {
+      allow read: if hasGlobalRole(['admin', 'archivist']);
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

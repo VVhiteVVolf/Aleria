@@ -11,6 +11,7 @@ import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
 } from './family-chart-card-renderer.js';
+import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 
 const ADAPTER_ID = 'family-chart';
 const LIBRARY_VERSION = '0.9.0';
@@ -462,23 +463,15 @@ export function createFamilyChartSession(config) {
     if (destroyed) throw new Error('Die Family-Chart-Sitzung wurde bereits beendet.');
   }
 
-  function decorateRelationshipLines() {
-    container.querySelectorAll('.link-text').forEach(element => element.remove());
-    container.querySelectorAll('.links_view path.link').forEach(path => {
-      const link = path.__data__;
-      let metadata = null;
+  const linkRenderer = createFamilyChartLinkRenderer({
+    container,
+    resolveMetadata(link) {
       if (link?.spouse) {
-        metadata = converted.getPartnershipLine(hierarchyNodeId(link.source), hierarchyNodeId(link.target));
-      } else {
-        metadata = converted.getParentageLine(childIdFromLink(link));
+        return converted.getPartnershipLine(hierarchyNodeId(link.source), hierarchyNodeId(link.target));
       }
-      if (!metadata) return;
-      path.style.stroke = metadata.color;
-      path.style.strokeWidth = '3px';
-      path.style.strokeDasharray = metadata.dashed ? '8 6' : '';
-      path.dataset.relationshipType = metadata.type;
-    });
-  }
+      return converted.getParentageLine(childIdFromLink(link));
+    }
+  });
 
   function applyView(render = false) {
     chart.setTransitionTime?.(260);
@@ -584,6 +577,7 @@ export function createFamilyChartSession(config) {
 
   function destroy() {
     if (destroyed) return;
+    linkRenderer.destroy();
     container.replaceChildren();
     container.classList.remove('f3', 'f3-cont');
     destroyed = true;
@@ -591,7 +585,7 @@ export function createFamilyChartSession(config) {
 
   configureCard();
   applyView(false);
-  chart.setAfterUpdate?.(decorateRelationshipLines);
+  chart.setAfterUpdate?.(options => linkRenderer.refresh(options?.transition_time));
   chart.updateMainId?.(focusPersonId);
   chart.updateTree?.({ initial: true, tree_position: 'fit', transition_time: 0 });
 

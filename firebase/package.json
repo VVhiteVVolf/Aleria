@@ -1,0 +1,20 @@
+{
+  "name": "aleria-firebase-infrastructure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:rules:run": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "seed:families:dry": "node scripts/seed-family-workspaces.mjs",
+    "seed:families": "node scripts/seed-family-workspaces.mjs --commit"
+  },
+  "dependencies": {
+    "firebase-admin": "14.1.0"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "5.0.1",
+    "firebase": "12.15.0"
+  },
+  "overrides": {
+    "uuid": "11.1.1"
+  }
+}

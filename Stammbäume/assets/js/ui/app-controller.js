@@ -9,7 +9,6 @@ import {
   saveFamilyToLibrary
 } from '../services/family-library.js';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
-import { persistFamily } from '../services/family-persistence.js';
 import {
   createWorkspaceModeUrl,
   grantWorkspaceEditAccess,
@@ -212,13 +211,6 @@ export function createAppController({
       renderPersonInspector(inspector, graph, state.selectedPersonId);
     }
     updateChart(state, event);
-    if (isEditing && event?.affectsFamily) {
-      const saved = persistFamily(state.family);
-      const saveStatus = documentRef.getElementById('save-status');
-      saveStatus.textContent = saved
-        ? `Lokal gespeichert · ${new Date().toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })}`
-        : 'Lokale Speicherung nicht verfügbar';
-    }
   }
 
   function closeSearchResults() {

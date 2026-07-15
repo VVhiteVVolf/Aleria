@@ -101,11 +101,15 @@ Stammbäume/
 18. Die gelieferten Personen-, Wappen- und Zeitfassungen als gekapseltes Ebenensystem integrieren; Gold als Standard der gespeicherten Wappenrahmen festlegen.
 19. Abweichende Wappenpositionen je Personenfassung kalibrieren, Zeitrahmen auf Von-/Bis-Jahre umstellen und Haus Arwydd als vollständige Registerfamilie erfassen.
 20. Wappen und Fassungen unabhängig skalierbar machen, verlinkte Hausknoten zwischen den Generationen positionieren und die Registry um die leeren Gwynthor-Häuser ergänzen.
+21. Firebase-Plattform, Repository-Grenze, Auth-Status und lokalen Rückfallpfad einführen.
+22. Private Arbeitsfassungen in entitätsbezogene Subcollections zerlegen und revisionsgebundene Konflikterkennung ergänzen.
+23. Rollenregeln, Emulator-Tests, öffentliche Releases, Registry-Synchronisierung und funktionsvermittelte Bild-Assets bereitstellen.
+24. Wiederholbare Dry-Run-Migration für Haus Arwydd und die vier Gwynthor-Häuser vorbereiten.
+25. Die Werkzeuge mit lokalen Aleria-Icons ausstatten, vorhandene Arwydd-Nebenwappen zuordnen und Generationsteilungen über einen gekapselten SVG-Linienrouter entzerren.
 
 ## Bewusst nicht Teil dieses ersten Fundaments
 
-- Firebase-Synchronisation: Sie soll später als eigener Repository-/Sync-Service ergänzt werden.
 - Automatische Erbfolgeberechnung: Dafür fehlen noch projektspezifische Regeln.
 - Automatischer Stammbaumgenerator: Das Datenmodell ist vorbereitet; Regeln für Struktur, Größe und Zufallsverteilung werden später separat definiert.
 - Vollständiger Kinship-Text für beliebig entfernte Verwandtschaft: Der Graph stellt bereits die erforderlichen Traversierungsprimitiven bereit.
-- Lazy Loading aus einer Datenbank: Der Store und Adapter sind dafür vorbereitet, benötigen aber eine konkrete Persistenzquelle.
+- Produktionsaktivierung von Firebase: Code, Rules, Functions und Migration sind vorbereitet; Datenbankregion, Firebase-Login, Auth-Benutzer, Staging-Projekt, App Check und Backup-Richtlinien benötigen noch die externen Projektentscheidungen.

@@ -1,6 +1,14 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 
 const ARWYDD_EMBLEM = 'https://i.imgur.com/I6OEMqq.png';
+const ARWYDD_HOUSE_EMBLEMS = Object.freeze({
+  saethwyr: 'assets/images/houses/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/haus-wyrm.png',
+  draig: 'assets/images/houses/haus-draig.png',
+  gafyr: 'assets/images/houses/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
+  gwywern: 'assets/images/houses/haus-gwyvern.png'
+});
 
 function person(id, name, sex, familyRole, houseId = '') {
   return {
@@ -68,13 +76,13 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
   },
   houses: [
     { id: 'house-arwydd', name: 'Haus Arwydd', motto: '', emblem: ARWYDD_EMBLEM, status: 'active' },
-    { id: 'house-saethwyr', name: 'Haus Saethwyr', motto: '', emblem: '', status: 'active' },
+    { id: 'house-saethwyr', name: 'Haus Saethwyr', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.saethwyr, status: 'active' },
     { id: 'house-mwyalchen', name: 'Haus Mwyalchen', motto: '', emblem: '', status: 'active' },
-    { id: 'house-wym', name: 'Haus Wym', motto: '', emblem: '', status: 'active' },
-    { id: 'house-draig', name: 'Haus Draig', motto: '', emblem: '', status: 'active' },
-    { id: 'house-gafyr', name: 'Haus Gafyr', motto: '', emblem: '', status: 'active' },
-    { id: 'house-gwefrydd', name: 'Haus Gwefrydd', motto: '', emblem: '', status: 'active' },
-    { id: 'house-gwywern', name: 'Haus Gwywern', motto: '', emblem: '', status: 'active' },
+    { id: 'house-wyrm', name: 'Haus Wyrm', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.wyrm, status: 'active' },
+    { id: 'house-draig', name: 'Haus Draig', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.draig, status: 'active' },
+    { id: 'house-gafyr', name: 'Haus Gafyr', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gafyr, status: 'active' },
+    { id: 'house-gwefrydd', name: 'Haus Gwefrydd', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gwefrydd, status: 'active' },
+    { id: 'house-gwywern', name: 'Haus Gwywern', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gwywern, status: 'active' },
     { id: 'house-dyngwn', name: 'Haus Dyngwn', motto: '', emblem: '', status: 'active' }
   ],
   persons: [
@@ -86,7 +94,7 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     person('idris-arwydd', 'Idris', 'male', 'core', 'house-arwydd'),
     person('deliah-mwyalchen', 'Deliah Mwyalchen', 'female', 'married', 'house-mwyalchen'),
     person('iseult-arwydd', 'Iseult', 'female', 'core', 'house-arwydd'),
-    person('eiddon-wym', 'Eiddon Wym', 'male', 'married', 'house-wym'),
+    person('eiddon-wym', 'Eiddon Wym', 'male', 'married', 'house-wyrm'),
 
     person('ianto-arwydd', 'Ianto', 'male', 'core', 'house-arwydd'),
     person('tecwyn-draig', 'Tecwyn Draig', 'unknown', 'married', 'house-draig'),
@@ -169,15 +177,15 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     },
     {
       id: 'married-away-wym',
-      name: 'Haus Wym',
+      name: 'Haus Wyrm',
       subtitle: 'Wegverheiratete Linie',
       linkType: 'married-away',
       parentPartnershipId: 'marriage-iseult-eiddon',
-      houseId: 'house-wym',
+      houseId: 'house-wyrm',
       emblem: '',
       crestFrame: 'gold',
       founded: '',
-      targetFamilyId: 'haus-wym',
+      targetFamilyId: 'haus-wyrm',
       notes: '',
       extensions: {}
     },

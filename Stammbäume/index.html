@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Navigation und Bearbeitungswerkstatt für die Stammbäume des Aleria Almanachs">
+  <meta name="aleria-firebase-enabled" content="true">
   <title>Aleria · Stammbaum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/family-chart-theme.css">
+  <link rel="stylesheet" href="assets/css/family-sync.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
@@ -35,6 +37,9 @@
         </div>
         <div class="workspace-mode-switch" aria-label="Arbeitsmodus">
           <span class="workspace-mode-label" id="workspace-mode-label">Ansichtsmodus</span>
+          <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur lokal</span>
+          <button class="button button--quiet" type="button" data-action="open-cloud-login" data-edit-only>Cloud anmelden</button>
+          <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>Cloud-Konto</button>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
           <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
           <a class="button button--quiet" id="view-mode-link" href="?mode=view" target="_blank" rel="noopener" data-edit-only>Ansicht öffnen</a>
@@ -51,16 +56,37 @@
       </div>
 
       <div class="toolbar-group">
-        <button class="button button--quiet" type="button" data-action="undo" title="Rückgängig" disabled>↶ <span>Rückgängig</span></button>
-        <button class="button button--quiet" type="button" data-action="redo" title="Wiederholen" disabled>↷ <span>Wiederholen</span></button>
+        <button class="button button--quiet" type="button" data-action="undo" title="Rückgängig" disabled>
+          <img class="toolbar-icon toolbar-icon--undo" src="assets/images/toolbar/history-arrow.png" alt="" aria-hidden="true">
+          <span>Rückgängig</span>
+        </button>
+        <button class="button button--quiet" type="button" data-action="redo" title="Wiederholen" disabled>
+          <img class="toolbar-icon" src="assets/images/toolbar/history-arrow.png" alt="" aria-hidden="true">
+          <span>Wiederholen</span>
+        </button>
       </div>
 
       <div class="toolbar-group">
-        <button class="button button--quiet" type="button" data-action="fit-chart">⌖ <span>Einpassen</span></button>
-        <button class="button button--quiet" type="button" data-action="show-default-view">◎ <span>Gesamtansicht</span></button>
-        <button class="button button--quiet" type="button" data-action="toggle-orientation">⇄ <span>Ausrichtung</span></button>
-        <button class="button button--quiet" type="button" data-action="open-lineage-settings">⌂ <span>Baumaufbau</span></button>
-        <button class="button button--quiet" type="button" data-action="open-line-colors">⌁ <span>Linienfarben</span></button>
+        <button class="button button--quiet" type="button" data-action="fit-chart">
+          <img class="toolbar-icon" src="assets/images/toolbar/fit-chart.png" alt="" aria-hidden="true">
+          <span>Einpassen</span>
+        </button>
+        <button class="button button--quiet" type="button" data-action="show-default-view">
+          <img class="toolbar-icon" src="assets/images/toolbar/overview.png" alt="" aria-hidden="true">
+          <span>Gesamtansicht</span>
+        </button>
+        <button class="button button--quiet" type="button" data-action="toggle-orientation">
+          <img class="toolbar-icon" src="assets/images/toolbar/orientation.png" alt="" aria-hidden="true">
+          <span>Ausrichtung</span>
+        </button>
+        <button class="button button--quiet" type="button" data-action="open-lineage-settings">
+          <img class="toolbar-icon" src="assets/images/toolbar/lineage.png" alt="" aria-hidden="true">
+          <span>Baumaufbau</span>
+        </button>
+        <button class="button button--quiet" type="button" data-action="open-line-colors">
+          <img class="toolbar-icon" src="assets/images/toolbar/line-colors.png" alt="" aria-hidden="true">
+          <span>Linienfarben</span>
+        </button>
       </div>
 
       <div class="toolbar-group toolbar-group--end">
@@ -128,6 +154,10 @@
         </label>
         <label class="field">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
+        </label>
+        <label class="field" data-cloud-asset-field>Wappen über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
+          <span class="asset-upload-status" data-asset-upload-status>Cloud-Anmeldung erforderlich · maximal 8 MB</span>
         </label>
         <label class="field field--wide">Untertitel am Wappenknoten
           <input name="crestSubtitle" maxlength="160" placeholder="optional">
@@ -251,6 +281,10 @@
         </label>
         <label class="field">Portrait-URL oder lokaler Pfad
           <input name="portrait" type="text" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
+        </label>
+        <label class="field" data-cloud-asset-field>Portrait über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
+          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
         </label>
         <label class="field">Platzhalter ohne Portrait
           <select name="portraitPlaceholder">
@@ -379,6 +413,10 @@
         </label>
         <label class="field">Portrait-URL oder lokaler Pfad
           <input name="portrait" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
+        </label>
+        <label class="field" data-cloud-asset-field>Portrait über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
+          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
         </label>
         <label class="field">Platzhalter ohne Portrait
           <select name="portraitPlaceholder">
@@ -563,6 +601,10 @@
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
         </label>
+        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
+          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+        </label>
         <label class="checkbox-field field--wide">
           <input type="checkbox" name="timeGapEnabled">
           <span>Zeitsprung zwischen Wappen und belegten Nachkommen anzeigen</span>
@@ -629,6 +671,10 @@
         </label>
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
+        </label>
+        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
+          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
         </label>
         <label class="field field--wide">Ziel-Familien-ID im Register
           <input name="targetFamilyId" required maxlength="120" placeholder="haus-morgenrot">
@@ -735,6 +781,59 @@
         <button class="button button--quiet" type="button" data-action="close-edit-access">Abbrechen</button>
         <button class="button" value="default" type="submit">Bearbeitungsmodus öffnen</button>
       </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="cloud-account-dialog">
+    <div class="cloud-account-panel" id="cloud-signed-in" hidden>
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Firebase-Synchronisierung</p>
+          <h2>Cloud-Konto</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body">
+        <p>Angemeldet als <strong id="cloud-account-email">Firebase-Konto</strong>.</p>
+        <p class="form-help">Lokale Änderungen werden revisionssicher mit der privaten Arbeitsfassung synchronisiert.</p>
+        <div class="cloud-conflict-actions" id="cloud-conflict-actions" hidden>
+          <h3>Fassungen unterscheiden sich</h3>
+          <p>Wähle bewusst, welche Fassung weitergeführt werden soll.</p>
+          <button class="button" type="button" data-action="use-cloud-version">Cloud-Fassung übernehmen</button>
+          <button class="button button--quiet" type="button" data-action="overwrite-cloud-version">Lokale Fassung als neue Revision speichern</button>
+        </div>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="cloud-logout">Abmelden</button>
+        <button class="button" type="button" data-action="retry-cloud-sync">Neu verbinden</button>
+        <button class="button" type="button" data-action="cloud-publish">Öffentliche Fassung veröffentlichen</button>
+      </footer>
+    </div>
+
+    <form method="dialog" id="cloud-login-form">
+      <div id="cloud-signed-out">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Private Arbeitsfassungen</p>
+            <h2>Bei Firebase anmelden</h2>
+          </div>
+          <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
+        </header>
+        <div class="dialog-body form-grid">
+          <label class="field field--wide">E-Mail-Adresse
+            <input name="email" type="email" autocomplete="username" required>
+          </label>
+          <label class="field field--wide">Passwort
+            <input name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <p class="form-error field--wide" id="cloud-login-error" role="alert" hidden></p>
+          <p class="form-help field--wide">Das bisherige Werkstatt-Passwort öffnet nur den lokalen Bearbeitungsmodus. Cloud-Schreibrechte werden ausschließlich über dieses Firebase-Konto vergeben.</p>
+        </div>
+        <footer class="dialog-footer">
+          <button class="button button--quiet" type="button" data-action="close-cloud-account">Abbrechen</button>
+          <button class="button" value="default" type="submit">Anmelden</button>
+        </footer>
+      </div>
     </form>
   </dialog>
 

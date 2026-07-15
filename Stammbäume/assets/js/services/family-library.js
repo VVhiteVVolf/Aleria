@@ -48,18 +48,26 @@ export function loadFamilyById(familyId, storage = globalThis.localStorage) {
 export function saveFamilyToLibrary({ family, id, title, folderPath }, storage = globalThis.localStorage) {
   const normalizedId = normalizeFamilyId(id || title);
   if (!normalizedId) throw new Error('Die Familie benötigt eine gültige ID.');
+  const normalizedFolderPath = Array.isArray(folderPath) ? folderPath.map(String).filter(Boolean) : parseFolderPath(folderPath);
   const nextFamily = normalizeFamily({
     ...family,
     document: {
       ...family.document,
       id: normalizedId,
       title: String(title || family.document.title).trim()
+    },
+    extensions: {
+      ...family.extensions,
+      registry: {
+        ...(family.extensions?.registry || {}),
+        folderPath: normalizedFolderPath
+      }
     }
   });
   return saveFamilyRecord({
     id: normalizedId,
     title: nextFamily.document.title,
-    folderPath: Array.isArray(folderPath) ? folderPath : parseFolderPath(folderPath),
+    folderPath: normalizedFolderPath,
     family: nextFamily
   }, storage);
 }

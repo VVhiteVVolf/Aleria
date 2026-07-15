@@ -1,0 +1,72 @@
+.cloud-sync-status {
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--gold-500) 34%, transparent);
+  border-radius: 999px;
+  color: var(--paper-100);
+  display: inline-flex;
+  font-size: 0.78rem;
+  gap: 0.45rem;
+  padding: 0.42rem 0.72rem;
+  white-space: nowrap;
+}
+
+.cloud-sync-status::before {
+  background: #a39a85;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgb(163 154 133 / 14%);
+  content: '';
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.cloud-sync-status[data-phase='synced']::before {
+  background: #75b88b;
+  box-shadow: 0 0 0 3px rgb(117 184 139 / 18%);
+}
+
+.cloud-sync-status[data-phase='saving']::before,
+.cloud-sync-status[data-phase='loading']::before,
+.cloud-sync-status[data-phase='pending']::before {
+  background: #d3a84e;
+  box-shadow: 0 0 0 3px rgb(211 168 78 / 18%);
+}
+
+.cloud-sync-status[data-phase='conflict']::before,
+.cloud-sync-status[data-phase='error']::before,
+.cloud-sync-status[data-phase='offline']::before {
+  background: #c86a62;
+  box-shadow: 0 0 0 3px rgb(200 106 98 / 18%);
+}
+
+.cloud-account-panel[hidden] {
+  display: none;
+}
+
+.cloud-conflict-actions {
+  background: rgb(121 62 47 / 12%);
+  border: 1px solid rgb(151 88 63 / 35%);
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.cloud-conflict-actions h3,
+.cloud-conflict-actions p {
+  margin-top: 0;
+}
+
+.cloud-conflict-actions .button {
+  margin: 0.35rem 0.35rem 0 0;
+}
+
+.asset-upload-status {
+  color: var(--ink-500);
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  margin-top: 0.35rem;
+}
+
+.asset-upload-status.is-error {
+  color: #9d3f38;
+}

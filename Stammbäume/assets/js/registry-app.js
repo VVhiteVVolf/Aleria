@@ -1,4 +1,6 @@
 import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
+import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
+import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
 import { listFamilyRecords } from './services/family-library.js';
 import { escapeHtml } from './ui/dom.js';
 
@@ -25,18 +27,19 @@ function countRecords(node) {
 }
 
 function renderFamilyCard(record) {
-  const emblem = record.family.document.emblem || record.family.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
-  const people = record.family.persons.length;
+  const emblem = record.emblem || record.family?.document.emblem || record.family?.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
+  const people = Number(record.personCount ?? record.family?.persons.length ?? 0);
+  const description = record.motto || record.family?.document.motto || record.family?.document.description || 'Familienakte öffnen';
   return `
     <a class="registry-family-card" href="${escapeHtml(record.link || `index.html?family=${encodeURIComponent(record.id)}&mode=view`)}">
       <img class="registry-family-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
       <div>
         <h3>${escapeHtml(record.title)}</h3>
-        <p>${escapeHtml(record.family.document.motto || record.family.document.description || 'Familienakte öffnen')}</p>
+        <p>${escapeHtml(description)}</p>
       </div>
       <span class="registry-family-meta">
         <span>${people} Personen</span>
-        <span class="${record.source === 'local' ? 'registry-source-local' : ''}">${record.source === 'local' ? 'Lokal gespeichert' : 'Projekt-Registry'}</span>
+        <span class="${record.source === 'local' ? 'registry-source-local' : ''}">${record.source === 'local' ? 'Lokal gespeichert' : record.source === 'firebase' ? 'Veröffentlicht' : 'Projekt-Registry'}</span>
       </span>
     </a>
   `;
@@ -60,7 +63,7 @@ function renderFolder(node, depth = 0) {
   `;
 }
 
-const allRecords = listFamilyRecords();
+let allRecords = listFamilyRecords();
 const treeContainer = document.getElementById('registry-tree');
 const empty = document.getElementById('registry-empty');
 const search = document.getElementById('registry-search');
@@ -78,3 +81,29 @@ function render(query = '') {
 
 search.addEventListener('input', () => render(search.value));
 render();
+
+async function loadPublishedRegistry() {
+  try {
+    const repository = createFirestoreFamilyRepository(createFirebaseClient());
+    const published = await repository.listPublishedRegistry();
+    const records = new Map(allRecords.map(record => [record.id, record]));
+    published.forEach(record => {
+      const id = String(record.familyId || record.id);
+      records.set(id, {
+        ...record,
+        id,
+        title: String(record.title || id),
+        folderPath: Array.isArray(record.folderPath) ? record.folderPath.map(String).filter(Boolean) : [],
+        link: record.link || `index.html?family=${encodeURIComponent(id)}&mode=view`,
+        source: 'firebase'
+      });
+    });
+    allRecords = [...records.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
+    document.getElementById('registry-count').textContent = String(allRecords.length);
+    render(search.value);
+  } catch (error) {
+    console.info('Das veröffentlichte Firebase-Register ist derzeit nicht erreichbar.', error);
+  }
+}
+
+void loadPublishedRegistry();
