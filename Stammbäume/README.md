@@ -12,7 +12,7 @@ ES-Module benötigen einen lokalen Webserver. Vom Repository-Stamm aus:
 python -m http.server 8080
 ```
 
-Danach `http://localhost:8080/Stammb%C3%A4ume/` öffnen.
+Danach `http://localhost:8080/Stammb%C3%A4ume/Stammbaum.html?mode=view` öffnen.
 
 ## Tests
 

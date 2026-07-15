@@ -2,6 +2,13 @@
 
 const FAMILY_TREE_EMBED_DEFAULT_SOURCE = '../Stammb%C3%A4ume/Stammbaum.html?mode=view';
 
+function migrateLegacyFamilyTreeEmbedSource(source) {
+  return source.replace(
+    /((?:Stammbäume|Stammb%C3%A4ume)\/)index\.html(?=[?#]|$)/giu,
+    '$1Stammbaum.html'
+  );
+}
+
 function forceFamilyTreeViewMode(source) {
   const hashIndex = source.indexOf('#');
   const pathAndQuery = hashIndex >= 0 ? source.slice(0, hashIndex) : source;
@@ -17,7 +24,9 @@ function sanitizeFamilyTreeEmbedSource(value = '') {
   const source = String(value || '').trim().replace(/\\/g, '/');
   if (!source) return FAMILY_TREE_EMBED_DEFAULT_SOURCE;
   const isSameOriginPath = /^(?:\.\.?\/|\/(?!\/))[^\u0000-\u001f<>"'`]+$/u.test(source);
-  return isSameOriginPath ? forceFamilyTreeViewMode(source) : FAMILY_TREE_EMBED_DEFAULT_SOURCE;
+  return isSameOriginPath
+    ? forceFamilyTreeViewMode(migrateLegacyFamilyTreeEmbedSource(source))
+    : FAMILY_TREE_EMBED_DEFAULT_SOURCE;
 }
 
 function sanitizeFamilyTreeEmbedData(value = {}) {

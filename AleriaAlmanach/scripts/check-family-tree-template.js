@@ -43,10 +43,14 @@ const context = vm.createContext({
 const checks = vm.runInContext(`(() => {
   const defaults = createDefaultFamilyTreeEmbedPage(0);
   const safe = sanitizeFamilyTreeEmbedData({ source: '../Stammb%C3%A4ume/Stammbaum.html?family=haus-arwydd&mode=edit', height: 880 });
+  const migratedEncoded = sanitizeFamilyTreeEmbedData({ source: '../Stammb%C3%A4ume/index.html?family=haus-arwydd&mode=edit' });
+  const migratedUnicode = sanitizeFamilyTreeEmbedData({ source: '../Stammbäume/index.html?family=haus-draig#linie' });
   const rejected = sanitizeFamilyTreeEmbedData({ source: 'https://example.com/tree', height: 9999 });
   return {
     defaults,
     safe,
+    migratedEncoded,
+    migratedUnicode,
     rejected,
     moduleEditor: buildFamilyTreeEmbedModuleEditorFields(defaults),
     inlineEditor: buildInlineFamilyTreeEmbedEditor(defaults),
@@ -57,6 +61,8 @@ const checks = vm.runInContext(`(() => {
 assert.equal(checks.defaults.familyTreePage, true);
 assert.equal(checks.safe.source, '../Stammb%C3%A4ume/Stammbaum.html?family=haus-arwydd&mode=view');
 assert.equal(checks.safe.height, 880);
+assert.equal(checks.migratedEncoded.source, '../Stammb%C3%A4ume/Stammbaum.html?family=haus-arwydd&mode=view');
+assert.equal(checks.migratedUnicode.source, '../Stammbäume/Stammbaum.html?family=haus-draig&mode=view#linie');
 assert.equal(checks.rejected.source, '../Stammb%C3%A4ume/Stammbaum.html?mode=view', 'Externe Frame-Ziele dürfen nicht übernommen werden.');
 assert.equal(checks.rejected.height, 1200);
 assert.match(checks.moduleEditor, /data-page-type="family-tree"/);

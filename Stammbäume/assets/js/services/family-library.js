@@ -5,6 +5,7 @@ import {
 } from '../data/families.registry.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { loadSavedFamilyRecords, saveFamilyRecord } from './family-persistence.js';
+import { createFamilyViewLink } from './family-links.js';
 
 export function normalizeFamilyId(value) {
   return String(value || '')
@@ -30,7 +31,7 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
     if (retiredIds.has(record.id)) return;
     byId.set(record.id, {
       ...record,
-      link: `Stammbaum.html?family=${encodeURIComponent(record.id)}&mode=view`
+      link: createFamilyViewLink(record.id)
     });
   });
   return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));

@@ -29,6 +29,7 @@ import {
   parseFolderPath,
   saveFamilyToLibrary
 } from '../assets/js/services/family-library.js';
+import { createFamilyViewLink, normalizeFamilyViewLink } from '../assets/js/services/family-links.js';
 import { migrateLegacyFamily, parseFamilyJson, serializeFamily } from '../assets/js/services/family-transfer.js';
 import {
   createWorkspaceModeUrl,
@@ -340,6 +341,16 @@ test('erzeugt explizite und familienbezogene Ansichts-URLs', () => {
   );
   const arwydd = listFamilyRecords(createMemoryStorage()).find(record => record.id === 'haus-arwydd');
   assert.equal(arwydd.link, 'Stammbaum.html?family=haus-arwydd&mode=view');
+  assert.equal(createFamilyViewLink('haus-draig'), 'Stammbaum.html?family=haus-draig&mode=view');
+  assert.equal(
+    normalizeFamilyViewLink('index.html?family=haus-arwydd&mode=edit', 'haus-arwydd'),
+    'Stammbaum.html?family=haus-arwydd&mode=view'
+  );
+  assert.equal(
+    normalizeFamilyViewLink('javascript:alert(1)', 'haus-wyrm'),
+    'Stammbaum.html?family=haus-wyrm&mode=view',
+    'Veröffentlichte Registry-Links dürfen keine fremden Ziele einschleusen.'
+  );
 });
 
 test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-Handler aus', async () => {
