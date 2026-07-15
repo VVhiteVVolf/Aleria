@@ -14,7 +14,7 @@ export const SAMPLE_FAMILY = Object.freeze({
     { id: 'house-vael', name: 'Haus Vael', motto: 'Blut erinnert sich.', emblem: 'assets/images/emblem-house-vael.svg', status: 'active' },
     { id: 'house-thorne', name: 'Haus Thorne', motto: 'Wurzeln brechen Stein.', emblem: '', status: 'active' },
     { id: 'house-marr', name: 'Haus Marr', motto: 'Der Eid überdauert.', emblem: '', status: 'active' },
-    { id: 'house-sgrechwyr', name: 'Haus Sgrechwyr', motto: 'Im Schatten wächst die Klinge.', emblem: '../IconOrdner/Siluetten/Neutrales Adelswappen.png', status: 'active' }
+    { id: 'house-sgrechwyr', name: 'Haus Sgrechwyr', motto: 'Im Schatten wächst die Klinge.', emblem: 'assets/images/placeholders/neutral-crest.png', status: 'active' }
   ],
   persons: [
     { id: 'aeron-vael', name: 'Aeron Vael', title: 'Gründer des Nordturms', sex: 'male', status: 'dead', birth: '1178', death: '1244', portrait: '', houseId: 'house-vael', familyRole: 'core', tags: ['Gründer'], notes: 'Legendärer Begründer der überlieferten Hauptlinie.' },
@@ -63,7 +63,7 @@ export const SAMPLE_FAMILY = Object.freeze({
       linkType: 'cadet-house',
       parentPartnershipId: 'marriage-cassian-seraphine',
       houseId: 'house-sgrechwyr',
-      emblem: '../IconOrdner/Siluetten/Neutrales Adelswappen.png',
+      emblem: 'assets/images/placeholders/neutral-crest.png',
       crestFrame: 'silver',
       founded: '1738',
       targetFamilyId: 'haus-sgrechwyr',

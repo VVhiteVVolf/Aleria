@@ -1,8 +1,8 @@
 export const FAMILY_CHART_CARD_LAYOUT = Object.freeze({
   width: 320,
   height: 213,
-  horizontalSpacing: 458,
-  verticalSpacing: 356
+  horizontalSpacing: 430,
+  verticalSpacing: 326
 });
 
 function escapeHtml(value) {
@@ -38,12 +38,19 @@ function crestPositionStyle(position = {}) {
     : '';
 }
 
+function crestScaleStyle(data = {}) {
+  const emblemScale = Number.isFinite(Number(data.emblemScale)) ? Number(data.emblemScale) : 0.86;
+  const frameScale = Number.isFinite(Number(data.frameScale)) ? Number(data.frameScale) : 1;
+  return ` style="--crest-emblem-scale:${escapeHtml(emblemScale)};--crest-frame-scale:${escapeHtml(frameScale)}"`;
+}
+
 function personCard(data) {
   const role = escapeHtml(data.role || 'core');
   return `
     <div class="card-inner aleria-chart-card aleria-person-card role-${role}"${crestPositionStyle(data.crestPosition)}>
       ${marker(data)}
       <div class="aleria-person-card__fill" aria-hidden="true"></div>
+      <div class="aleria-person-card__portrait-backdrop" aria-hidden="true"></div>
       ${optionalImage(data.portrait, 'aleria-person-card__portrait')}
       <div class="aleria-person-card__text">
         <span class="family-card-name">${escapeHtml(data.name)}</span>
@@ -61,8 +68,10 @@ function crestNode(data) {
   return `
     <div class="card-inner aleria-chart-card aleria-crest-node${isLinkedHouse ? ' aleria-crest-node--linked' : ''}">
       ${marker(data)}
-      <div class="aleria-crest-node__seal">
-        ${optionalImage(data.portrait, 'aleria-crest-node__emblem')}
+      <div class="aleria-crest-node__seal"${crestScaleStyle(data)}>
+        <div class="aleria-crest-node__emblem-clip">
+          ${optionalImage(data.portrait, 'aleria-crest-node__emblem')}
+        </div>
         ${optionalImage(data.crestFrameAsset, 'aleria-crest-node__frame')}
       </div>
       <div class="aleria-crest-node__caption">

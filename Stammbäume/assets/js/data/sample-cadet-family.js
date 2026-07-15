@@ -8,10 +8,10 @@ export const SAMPLE_CADET_FAMILY = Object.freeze({
     title: 'Haus Sgrechwyr',
     motto: 'Im Schatten wächst die Klinge.',
     description: 'Eine junge Kadettenlinie von Haus Vael.',
-    emblem: '../IconOrdner/Siluetten/Neutrales Adelswappen.png'
+    emblem: 'assets/images/placeholders/neutral-crest.png'
   },
   houses: [
-    { id: 'house-sgrechwyr', name: 'Haus Sgrechwyr', motto: 'Im Schatten wächst die Klinge.', emblem: '../IconOrdner/Siluetten/Neutrales Adelswappen.png', status: 'active' }
+    { id: 'house-sgrechwyr', name: 'Haus Sgrechwyr', motto: 'Im Schatten wächst die Klinge.', emblem: 'assets/images/placeholders/neutral-crest.png', status: 'active' }
   ],
   persons: [
     { id: 'rhys-sgrechwyr', name: 'Rhys Sgrechwyr', title: 'Gründer der Kadettenlinie', sex: 'male', status: 'dead', birth: '1688', death: '1735', portrait: '', houseId: 'house-sgrechwyr', familyRole: 'core', tags: ['Gründer'], notes: '' },

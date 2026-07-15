@@ -147,7 +147,9 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     founderPartnershipId: 'marriage-idwalladr-carys',
     houseId: 'house-arwydd',
     crestSubtitle: '',
+    crestEmblemScale: 0.8,
     crestFrame: 'gold',
+    crestFrameScale: 1,
     timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
   },
   cadetBranches: [

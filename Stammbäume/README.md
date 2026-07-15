@@ -25,7 +25,7 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 
 ## Daten und Speicherung
 
-- Der Beispieldatensatz wird beim ersten Start geladen.
+- Haus Arwydd wird beim ersten Start geladen; gespeicherte Arbeitsstände bleiben davon unberührt.
 - Änderungen werden lokal im Browser gespeichert.
 - „Familie speichern“ legt eine benannte Familienakte mit frei verschachtelbarem Ordnerpfad im lokalen Familienregister an.
 - „＋ Neue Familie“ öffnet einen Gründungsassistenten für eine unabhängige Akte mit eigenem Haus, Gründer-Ehepaar und Wappen. Ein erstes Kind unter dem Wappen ist optional.
@@ -41,23 +41,24 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Eine ausgewählte Person erhält in der Seitenakte den Arbeitsgang „Person mit Beziehung“. Neue Partner, Kinder oder Eltern werden atomar angelegt und unmittelbar in den Baum eingegliedert.
 - Eine Auswahl verändert die Baumwurzel nicht mehr automatisch. „Im Baum zentrieren“ fokussiert gezielt, „Gesamtansicht“ stellt den ursprünglichen Aufbau wieder her.
 - „Neu beginnen“ erzeugt einen leeren Arbeitsstand, ohne gespeicherte Registerfamilien zu löschen.
-- Leere Portraits verwenden die vorhandenen Silhouetten aus `IconOrdner/Siluetten`; externe Portraits können als direkte Imgur-Bild-URL im Seitenverhältnis 2:3 hinterlegt werden.
+- Leere Portraits verwenden lokal mitausgelieferte Silhouetten unter `assets/images/placeholders/`; externe Portraits können als direkte Imgur-Bild-URL im Seitenverhältnis 2:3 hinterlegt werden.
 - Die neuen Personenfassungen aus `assets/images/frames/` werden automatisch nach Familienrolle gewählt. Portrait, matte Farbfläche, Text, Rahmen und Hauswappen liegen als getrennte Ebenen übereinander.
 - Jede Personenfassung besitzt eine eigene gespeicherte Wappenposition; die abweichenden runden Fassungen werden nicht mehr mit einer gemeinsamen Standardkoordinate ausgerichtet.
 - Kartenfarben bilden acht Familienrollen ab: Kernmitglied, angeheiratet, außerhalb der Ehe gezeugt, Affäre, erzwungene Verbindung, Mündel, fortgegebenes Mündel und adoptiert.
 - Beziehungstexte werden im Baum nicht eingeblendet. Stattdessen sind Ehe-, Affären-, Abstammungs- und Pflegelinien farblich konfigurierbar.
 - Gründerpaar, Hauswappen, frei platzierbare Zeitsprünge und verlinkte Hausknoten sind eigene Elemente des Stammbaums. Zeitrahmen zeigen nur die Jahreszahlen links und rechts oberhalb ihrer Linien; fehlende Grenzen werden aus den angrenzenden Generationen ermittelt, soweit Lebensdaten vorhanden sind.
 - Der interne Stammwappenknoten besitzt einen optionalen, frei editierbaren Untertitel. Dieser lässt sich beim Gründen oder später unter „Baumaufbau“ ändern; ohne Eingabe wird kein Ersatztext erfunden.
-- Wappenknoten verwenden wählbare Fassungen: Gold, Silber, Bronze oder Eisen. Gold ist der Standard; die Auswahl wird sowohl für das Gründerwappen als auch für verlinkte Hausknoten gespeichert.
+- Wappenknoten verwenden wählbare Fassungen: Gold, Silber, Bronze oder Eisen. Gold ist der Standard; Fassung und Wappen liegen auf getrennten Ebenen und ihre Größen sind im Bearbeitungsmodus pro Knoten justierbar.
 - Ein Klick auf das Stammwappen öffnet direkt die Anlage eines Nachkommen; beide Personen des darüberliegenden Paares und das zugehörige Haus sind bereits vorausgewählt.
 - Hausknoten bilden Kadettenhäuser oder wegverheiratete Linien ab und benötigen immer eine Ziel-Familien-ID im Register.
 - Wegverheiratete Paare ohne fortgeführte Nachkommen enden in einem eigenen `married-away`-Wappenknoten. Dieser verweist auf die Familienakte des Zielhauses, sobald sie im Register existiert.
 - Hausknoten werden als kompakte, gerahmte Siegel mit eigenem Namensschild dargestellt, damit lange Bezeichnungen nicht mit dem Wappen überlappen.
 - Stammwappen, Zeitsprünge und verlinkte Hausknoten lassen sich im Bearbeitungsmodus direkt anklicken. Die jeweiligen Dialoge bearbeiten Beschriftung, Bild, Rahmen, Zielverknüpfung und zeitliche Angaben am bestehenden Knoten.
-- Die horizontalen und vertikalen Kartenabstände sind für Wappen- und Zeitknoten vergrößert, damit zusätzliche Abschlüsse nicht mit der folgenden Generation kollidieren.
+- Die Kartenabstände lassen Wappen- und Zeitknoten frei, ohne die Generationen unnötig weit auseinanderzuziehen. Verlinkte Endknoten stehen optisch zwischen Paar und Kindgeneration.
 - Zeitsprungknoten können zunächst leer bleiben; neue bekannte Nachkommen lassen sich später direkt über den Knoten oder die Akte des vorausgehenden Paares ergänzen.
 - „PNG · hohe Auflösung“ exportiert die gesamte Baumfläche mit zwei- bis vierfacher Auflösung (bis maximal 12.000 Pixel Kantenlänge).
 - Haus Arwydd ist unter `index.html?family=haus-arwydd&mode=view` als eigene Registerfamilie angelegt. Der Gründer Idwalladr ist der Startfokus, damit alle eingetragenen Partnerzweige in der Gesamtansicht erscheinen. Unbekannte Titel, Jahreszahlen und Nebenwappen bleiben absichtlich offen beziehungsweise verwenden Platzhalter.
+- Haus Arwydd liegt im Register unter `Cenyr > Celtigerns Wacht > Rhonwens Tränen > Castellbryn`. Unter `Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor` sind Haus Draig, Wyrm, Saethwyr und Gafyr als leere, direkt bearbeitbare Familienakten mit lokalen Wappen vorbereitet.
 
 ## Abhängigkeiten
 

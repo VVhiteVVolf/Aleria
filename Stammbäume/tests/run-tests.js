@@ -8,6 +8,12 @@ import {
 import { getCrestFrame, getPersonCardFrame } from '../assets/js/config/chart-frames.js';
 import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
 import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
+import {
+  HOUSE_DRAIG_FAMILY,
+  HOUSE_GAFYR_FAMILY,
+  HOUSE_SAETHWYR_FAMILY,
+  HOUSE_WYRM_FAMILY
+} from '../assets/js/data/blank-house-families.js';
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
 import { createEmptyFamily, createFoundingFamily } from '../assets/js/domain/family-factory.js';
 import { calculateAge, formatLifeLine } from '../assets/js/domain/person-presentation.js';
@@ -63,7 +69,11 @@ test('normalisiert Rollen, Gründerlinie und Kadettenhäuser', () => {
   assert.equal(family.lineage.timeGap.toYear, '1704');
   assert.equal(family.lineage.crestSubtitle, 'Stammwappen des Nordturms');
   assert.equal(family.lineage.crestFrame, 'gold');
+  assert.equal(family.lineage.crestEmblemScale, 0.86);
+  assert.equal(family.lineage.crestFrameScale, 1);
   assert.equal(family.cadetBranches[0].crestFrame, 'silver');
+  assert.equal(family.cadetBranches[0].emblemScale, 0.86);
+  assert.equal(family.cadetBranches[0].frameScale, 1);
   assert.equal(family.cadetBranches[0].targetFamilyId, 'haus-sgrechwyr');
   assert.ok(family.persons.some(person => person.familyRole === 'ward-away'));
 });
@@ -109,7 +119,7 @@ test('übersetzt Gründerwappen, Zeitsprung und Kadettenhaus im Adapter', () => 
   assert.ok(gap.rels.children.includes('maelis-vael'));
   assert.deepEqual(cadet.rels.parents, ['cassian-vael', 'seraphine-thorne']);
   assert.equal(cadet.data.aleria.targetFamilyId, 'haus-sgrechwyr');
-  assert.match(cassian.data.portrait, /Männliche Siluette\.png$/);
+  assert.equal(cassian.data.portrait, 'assets/images/placeholders/male.png');
   assert.equal(cassian.data.frameAsset, getPersonCardFrame('core').asset);
   assert.equal(cassian.data.crest, 'assets/images/emblem-house-vael.svg');
   assert.equal(crest.data.crestFrameAsset, getCrestFrame('gold').asset);
@@ -126,6 +136,7 @@ test('baut Personenkarten in der vorgegebenen Ebenenfolge auf', () => {
   const html = createFamilyChartCardHtml({ data: person });
   const layers = [
     'aleria-person-card__fill',
+    'aleria-person-card__portrait-backdrop',
     'aleria-person-card__portrait',
     'aleria-person-card__text',
     'aleria-person-card__frame',
@@ -151,9 +162,9 @@ test('berücksichtigt die eigene Wappenposition jeder Personenfassung', () => {
   });
   const person = converted.data.find(entry => entry.id === 'aeron-vael');
   const html = createFamilyChartCardHtml({ data: person });
-  assert.match(html, /--card-crest-left:41\.1%/);
-  assert.match(html, /--card-crest-top:1\.45%/);
-  assert.match(html, /--card-crest-width:13\.4%/);
+  assert.match(html, /--card-crest-left:40\.7%/);
+  assert.match(html, /--card-crest-top:1\.3%/);
+  assert.match(html, /--card-crest-width:14\.2%/);
 });
 
 test('setzt beide Jahreszahlen ohne Von/Bis über die Linien des Zeitrahmens', () => {
@@ -170,9 +181,9 @@ test('setzt beide Jahreszahlen ohne Von/Bis über die Linien des Zeitrahmens', (
 test('unterdrückt den rechteckigen Family-Chart-Hintergrund für alle Ebenenkarten', async () => {
   const css = await readFile(new URL('../assets/css/family-chart-theme.css', import.meta.url), 'utf8');
   assert.match(css, /\.family-chart-host\.f3 div\.card \.aleria-chart-card\s*\{\s*background: transparent;/);
-  assert.match(css, /\.aleria-crest-node__emblem\s*\{[\s\S]*?z-index: 1;/);
-  assert.match(css, /\.aleria-crest-node__emblem\s*\{[\s\S]*?scale\(1\.2\);/);
-  assert.match(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?z-index: 3;/);
+  assert.match(css, /\.aleria-crest-node__emblem-clip\s*\{[\s\S]*?z-index: 1;/);
+  assert.match(css, /\.aleria-crest-node__emblem\s*\{[\s\S]*?scale\(var\(--crest-emblem-scale, 0\.86\)\);/);
+  assert.match(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?z-index: 4;/);
 });
 
 test('rendert Wappenknoten ohne eingeblendeten Aktions- oder Standardtext', () => {
@@ -252,8 +263,8 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
 });
 
 test('hält für Wappen- und Zeitknoten zusätzlichen Generationsabstand frei', () => {
-  assert.ok(FAMILY_CHART_CARD_LAYOUT.horizontalSpacing >= 450);
-  assert.ok(FAMILY_CHART_CARD_LAYOUT.verticalSpacing >= 350);
+  assert.equal(FAMILY_CHART_CARD_LAYOUT.horizontalSpacing, 430);
+  assert.equal(FAMILY_CHART_CARD_LAYOUT.verticalSpacing, 326);
 });
 
 test('schützt den Bearbeitungsmodus mit einer sitzungsgebundenen Freigabe', () => {
@@ -351,11 +362,15 @@ test('verwaltet Darstellungsoptionen und Kadettenhäuser im Store', () => {
     name: 'Haus Testzweig',
     parentPartnershipId: 'marriage-cassian-seraphine',
     targetFamilyId: 'haus-testzweig',
-    crestFrame: 'bronze'
+    crestFrame: 'bronze',
+    emblemScale: 0.72,
+    frameScale: 1.08
   });
   assert.equal(store.getState().family.presentation.relationshipColors.affair, '#123456');
   assert.equal(store.getState().family.lineage.timeGap.years, 800);
   assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).crestFrame, 'bronze');
+  assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).emblemScale, 0.72);
+  assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).frameScale, 1.08);
   store.updateCadetBranch(branchId, {
     name: 'Haus Neuer Zweig',
     subtitle: 'Wegverheiratete Linie',
@@ -364,6 +379,8 @@ test('verwaltet Darstellungsoptionen und Kadettenhäuser im Store', () => {
     houseId: '',
     emblem: 'https://i.imgur.com/wappen.png',
     crestFrame: 'silver',
+    emblemScale: 0.79,
+    frameScale: 1.04,
     founded: '',
     targetFamilyId: 'haus-neuer-zweig',
     notes: 'Direkt bearbeitet.'
@@ -372,6 +389,8 @@ test('verwaltet Darstellungsoptionen und Kadettenhäuser im Store', () => {
   assert.equal(updatedBranch.subtitle, 'Wegverheiratete Linie');
   assert.equal(updatedBranch.targetFamilyId, 'haus-neuer-zweig');
   assert.equal(updatedBranch.emblem, 'https://i.imgur.com/wappen.png');
+  assert.equal(updatedBranch.emblemScale, 0.79);
+  assert.equal(updatedBranch.frameScale, 1.04);
   store.deleteCadetBranch(branchId);
   assert.ok(!store.getState().family.cadetBranches.some(branch => branch.id === branchId));
 });
@@ -437,10 +456,14 @@ test('bearbeitet Bild und Untertitel des Stammwappenknotens gemeinsam', () => {
   store.setLineage({
     ...store.getState().family.lineage,
     crestSubtitle: 'Neu beschriftetes Stammwappen',
-    emblem: 'https://i.imgur.com/neues-wappen.png'
+    emblem: 'https://i.imgur.com/neues-wappen.png',
+    crestEmblemScale: 0.74,
+    crestFrameScale: 1.12
   });
   const family = store.getState().family;
   assert.equal(family.lineage.crestSubtitle, 'Neu beschriftetes Stammwappen');
+  assert.equal(family.lineage.crestEmblemScale, 0.74);
+  assert.equal(family.lineage.crestFrameScale, 1.12);
   assert.equal(
     family.houses.find(house => house.id === family.lineage.houseId).emblem,
     'https://i.imgur.com/neues-wappen.png'
@@ -550,8 +573,29 @@ test('speichert Familien unter verschachtelten Registerpfaden', () => {
 test('öffnet Haus Arwydd als eigenständige Registerfamilie', () => {
   const loaded = loadFamilyById('haus-arwydd', createMemoryStorage());
   assert.equal(loaded.title, 'Haus Arwydd');
-  assert.deepEqual(loaded.folderPath, ['Cenyr', 'Haus Arwydd']);
+  assert.deepEqual(loaded.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn']);
   assert.equal(loaded.family.lineage.houseId, 'house-arwydd');
+});
+
+test('liefert die vier vorbereiteten Gwynthor-Häuser mit lokalen Wappen aus', () => {
+  const storage = createMemoryStorage();
+  const expectedPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
+  const blankFamilies = [
+    HOUSE_DRAIG_FAMILY,
+    HOUSE_WYRM_FAMILY,
+    HOUSE_SAETHWYR_FAMILY,
+    HOUSE_GAFYR_FAMILY
+  ];
+
+  assert.equal(listFamilyRecords(storage).length, 5);
+  blankFamilies.forEach(family => {
+    const loaded = loadFamilyById(family.document.id, storage);
+    assert.deepEqual(loaded.folderPath, expectedPath);
+    assert.equal(loaded.family.persons.length, 0);
+    assert.match(loaded.family.document.emblem, /^assets\/images\/houses\/haus-/);
+  });
+  assert.equal(loadFamilyById('haus-vael', storage), null);
+  assert.equal(loadFamilyById('haus-sgrechwyr', storage), null);
 });
 
 let failures = 0;

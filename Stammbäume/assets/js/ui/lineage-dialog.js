@@ -36,6 +36,8 @@ export function createLineageDialog(documentRef = document) {
     partnershipSelect.value = family.lineage.founderPartnershipId;
     houseSelect.value = family.lineage.houseId;
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), family.lineage.crestFrame);
+    form.elements.namedItem('crestEmblemScale').value = String(Math.round(family.lineage.crestEmblemScale * 100));
+    form.elements.namedItem('crestFrameScale').value = String(Math.round(family.lineage.crestFrameScale * 100));
     form.elements.namedItem('crestSubtitle').value = family.lineage.crestSubtitle;
     emblemInput.value = selectedEmblem();
     form.elements.namedItem('timeGapEnabled').checked = family.lineage.timeGap.enabled;
@@ -54,6 +56,8 @@ export function createLineageDialog(documentRef = document) {
       houseId: form.elements.namedItem('houseId').value,
       crestSubtitle: form.elements.namedItem('crestSubtitle').value.trim(),
       crestFrame: form.elements.namedItem('crestFrame').value,
+      crestEmblemScale: Number(form.elements.namedItem('crestEmblemScale').value || 86) / 100,
+      crestFrameScale: Number(form.elements.namedItem('crestFrameScale').value || 100) / 100,
       emblem: emblemInput.value.trim(),
       timeGap: {
         enabled: form.elements.namedItem('timeGapEnabled').checked,

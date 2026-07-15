@@ -66,7 +66,7 @@ Stammbäume/
 ├── register.html             verschachteltes Familienregister
 ├── assets/
 │   ├── css/                 Grundlayout, Komponenten, Chart-Theme, Responsive
-│   ├── images/              lokale Wappen; Portrait-Platzhalter kommen aus `IconOrdner/Siluetten`
+│   ├── images/              lokale Wappen, Fassungen und mitausgelieferte Silhouetten
 │   └── js/
 │       ├── adapters/        einzige Family-Chart-Abhängigkeit
 │       ├── config/          Farbsystem und Labels
@@ -100,6 +100,7 @@ Stammbäume/
 17. Stammwappenknoten mit editierbarer Untertitelbox und direkter Nachkommenanlage ausstatten.
 18. Die gelieferten Personen-, Wappen- und Zeitfassungen als gekapseltes Ebenensystem integrieren; Gold als Standard der gespeicherten Wappenrahmen festlegen.
 19. Abweichende Wappenpositionen je Personenfassung kalibrieren, Zeitrahmen auf Von-/Bis-Jahre umstellen und Haus Arwydd als vollständige Registerfamilie erfassen.
+20. Wappen und Fassungen unabhängig skalierbar machen, verlinkte Hausknoten zwischen den Generationen positionieren und die Registry um die leeren Gwynthor-Häuser ergänzen.
 
 ## Bewusst nicht Teil dieses ersten Fundaments
 

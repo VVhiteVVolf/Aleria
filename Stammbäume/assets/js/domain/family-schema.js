@@ -45,6 +45,13 @@ function enumValue(value, allowed, fallback) {
   return allowed.has(normalized) ? normalized : fallback;
 }
 
+function boundedNumber(value, fallback, minimum, maximum) {
+  if (value === '' || value === null || value === undefined) return fallback;
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) return fallback;
+  return Math.max(minimum, Math.min(maximum, numericValue));
+}
+
 export function createRecordId(prefix, existingIds = []) {
   const used = new Set(existingIds);
   const randomPart = globalThis.crypto?.randomUUID?.().slice(0, 8)
@@ -127,7 +134,9 @@ function normalizeCadetBranch(branch = {}, index = 0) {
     parentPartnershipId: text(branch.parentPartnershipId),
     houseId: text(branch.houseId),
     emblem: text(branch.emblem),
+    emblemScale: boundedNumber(branch.emblemScale, 0.86, 0.5, 1.6),
     crestFrame: isCrestFrameId(branch.crestFrame) ? branch.crestFrame : DEFAULT_CREST_FRAME,
+    frameScale: boundedNumber(branch.frameScale, 1, 0.6, 1.5),
     founded: text(String(branch.founded ?? '')),
     targetFamilyId: text(branch.targetFamilyId),
     notes: text(branch.notes),
@@ -198,9 +207,11 @@ export function normalizeFamily(input = {}) {
       founderPartnershipId: text(source.lineage?.founderPartnershipId),
       houseId: text(source.lineage?.houseId),
       crestSubtitle: text(source.lineage?.crestSubtitle),
+      crestEmblemScale: boundedNumber(source.lineage?.crestEmblemScale, 0.86, 0.5, 1.6),
       crestFrame: isCrestFrameId(source.lineage?.crestFrame)
         ? source.lineage.crestFrame
         : DEFAULT_CREST_FRAME,
+      crestFrameScale: boundedNumber(source.lineage?.crestFrameScale, 1, 0.6, 1.5),
       timeGap: normalizeTimeGap(source.lineage?.timeGap)
     },
     presentation: {

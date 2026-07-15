@@ -149,7 +149,9 @@ export function createFoundingFamily(values = {}) {
       founderPartnershipId: partnershipId,
       houseId,
       crestSubtitle: String(values.crestSubtitle || '').trim(),
+      crestEmblemScale: Number(values.crestEmblemScale || 0.86),
       crestFrame: String(values.crestFrame || DEFAULT_CREST_FRAME),
+      crestFrameScale: Number(values.crestFrameScale || 1),
       timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
     },
     cadetBranches: [],

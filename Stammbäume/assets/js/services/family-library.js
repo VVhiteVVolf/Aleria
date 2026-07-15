@@ -1,4 +1,8 @@
-import { FAMILY_REGISTRY, getRegisteredFamily } from '../data/families.registry.js';
+import {
+  FAMILY_REGISTRY,
+  getRegisteredFamily,
+  RETIRED_FAMILY_IDS
+} from '../data/families.registry.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { loadSavedFamilyRecords, saveFamilyRecord } from './family-persistence.js';
 
@@ -20,8 +24,10 @@ export function parseFolderPath(value) {
 }
 
 export function listFamilyRecords(storage = globalThis.localStorage) {
+  const retiredIds = new Set(RETIRED_FAMILY_IDS);
   const byId = new Map(FAMILY_REGISTRY.map(record => [record.id, { ...record, source: 'registry' }]));
   loadSavedFamilyRecords(storage).forEach(record => {
+    if (retiredIds.has(record.id)) return;
     byId.set(record.id, {
       ...record,
       link: `index.html?family=${encodeURIComponent(record.id)}&mode=view`
@@ -32,6 +38,7 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
 
 export function loadFamilyById(familyId, storage = globalThis.localStorage) {
   const normalizedId = normalizeFamilyId(familyId);
+  if (RETIRED_FAMILY_IDS.includes(normalizedId)) return null;
   const local = loadSavedFamilyRecords(storage).find(record => record.id === normalizedId);
   if (local) return local;
   const registered = getRegisteredFamily(normalizedId);

@@ -1,50 +1,71 @@
-import { SAMPLE_CADET_FAMILY } from './sample-cadet-family.js';
-import { SAMPLE_FAMILY } from './sample-family.js';
+import {
+  HOUSE_DRAIG_FAMILY,
+  HOUSE_GAFYR_FAMILY,
+  HOUSE_SAETHWYR_FAMILY,
+  HOUSE_WYRM_FAMILY
+} from './blank-house-families.js';
 import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js';
 
-export const FAMILY_REGISTRY = Object.freeze([
-  Object.freeze({
-    id: 'haus-vael',
-    title: 'Haus Vael',
+export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
+
+const ARWYDD_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn']);
+const GWYNTHOR_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
+
+function hierarchyFor(path, familyId, familyTitle) {
+  const levels = ['kingdom', 'county', 'barony', 'holding'];
+  return Object.freeze([
+    ...path.map((title, index) => Object.freeze({
+      level: levels[index] || 'folder',
+      slug: title.toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+      title
+    })),
+    Object.freeze({ level: 'family', slug: familyId, title: familyTitle })
+  ]);
+}
+
+function familyRecord({ id, title, family, folderPath, type = 'dynasty' }) {
+  return Object.freeze({
+    id,
+    title,
     status: 'active',
-    type: 'dynasty',
-    folderPath: Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamrais Ankunft', 'Haus Vael']),
-    hierarchy: Object.freeze([
-      Object.freeze({ level: 'kingdom', slug: 'cenyr', title: 'Cenyr' }),
-      Object.freeze({ level: 'county', slug: 'celtigerns-wacht', title: 'Celtigerns Wacht' }),
-      Object.freeze({ level: 'barony', slug: 'llamrais-ankunft', title: 'Llamrais Ankunft' }),
-      Object.freeze({ level: 'family', slug: 'haus-vael', title: 'Haus Vael' })
-    ]),
-    link: 'index.html?family=haus-vael&mode=view',
-    family: SAMPLE_FAMILY
-  }),
-  Object.freeze({
+    type,
+    folderPath,
+    hierarchy: hierarchyFor(folderPath, id, title),
+    link: `index.html?family=${encodeURIComponent(id)}&mode=view`,
+    family
+  });
+}
+
+export const FAMILY_REGISTRY = Object.freeze([
+  familyRecord({
     id: 'haus-arwydd',
     title: 'Haus Arwydd',
-    status: 'active',
-    type: 'dynasty',
-    folderPath: Object.freeze(['Cenyr', 'Haus Arwydd']),
-    hierarchy: Object.freeze([
-      Object.freeze({ level: 'kingdom', slug: 'cenyr', title: 'Cenyr' }),
-      Object.freeze({ level: 'family', slug: 'haus-arwydd', title: 'Haus Arwydd' })
-    ]),
-    link: 'index.html?family=haus-arwydd&mode=view',
-    family: HOUSE_ARWYDD_FAMILY
+    family: HOUSE_ARWYDD_FAMILY,
+    folderPath: ARWYDD_PATH
   }),
-  Object.freeze({
-    id: 'haus-sgrechwyr',
-    title: 'Haus Sgrechwyr',
-    status: 'active',
-    type: 'cadet-house',
-    folderPath: Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamrais Ankunft', 'Haus Sgrechwyr']),
-    hierarchy: Object.freeze([
-      Object.freeze({ level: 'kingdom', slug: 'cenyr', title: 'Cenyr' }),
-      Object.freeze({ level: 'county', slug: 'celtigerns-wacht', title: 'Celtigerns Wacht' }),
-      Object.freeze({ level: 'barony', slug: 'llamrais-ankunft', title: 'Llamrais Ankunft' }),
-      Object.freeze({ level: 'family', slug: 'haus-sgrechwyr', title: 'Haus Sgrechwyr' })
-    ]),
-    link: 'index.html?family=haus-sgrechwyr&mode=view',
-    family: SAMPLE_CADET_FAMILY
+  familyRecord({
+    id: 'haus-draig',
+    title: 'Haus Draig',
+    family: HOUSE_DRAIG_FAMILY,
+    folderPath: GWYNTHOR_PATH
+  }),
+  familyRecord({
+    id: 'haus-wyrm',
+    title: 'Haus Wyrm',
+    family: HOUSE_WYRM_FAMILY,
+    folderPath: GWYNTHOR_PATH
+  }),
+  familyRecord({
+    id: 'haus-saethwyr',
+    title: 'Haus Saethwyr',
+    family: HOUSE_SAETHWYR_FAMILY,
+    folderPath: GWYNTHOR_PATH
+  }),
+  familyRecord({
+    id: 'haus-gafyr',
+    title: 'Haus Gafyr',
+    family: HOUSE_GAFYR_FAMILY,
+    folderPath: GWYNTHOR_PATH
   })
 ]);
 

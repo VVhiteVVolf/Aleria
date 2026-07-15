@@ -1,9 +1,9 @@
 export const PORTRAIT_PLACEHOLDERS = Object.freeze({
-  male: '../IconOrdner/Siluetten/Männliche Siluette.png',
-  female: '../IconOrdner/Siluetten/Weibliche Siluette.png',
-  child: '../IconOrdner/Siluetten/Kind.png',
-  unknown: '../IconOrdner/Siluetten/Unbekannt.png',
-  crest: '../IconOrdner/Siluetten/Neutrales Adelswappen.png'
+  male: 'assets/images/placeholders/male.png',
+  female: 'assets/images/placeholders/female.png',
+  child: 'assets/images/placeholders/child.png',
+  unknown: 'assets/images/placeholders/unknown.png',
+  crest: 'assets/images/placeholders/neutral-crest.png'
 });
 
 export function resolvePortraitSource(person) {
@@ -16,4 +16,3 @@ export function resolvePortraitSource(person) {
   if (person?.sex === 'female') return PORTRAIT_PLACEHOLDERS.female;
   return PORTRAIT_PLACEHOLDERS.unknown;
 }
-

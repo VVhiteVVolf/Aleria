@@ -29,6 +29,8 @@ export function createCadetDialog(documentRef = document) {
   function openCreate(family, preferredPartnershipId = '') {
     form.reset();
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), DEFAULT_CREST_FRAME);
+    form.elements.namedItem('emblemScale').value = '86';
+    form.elements.namedItem('frameScale').value = '100';
     populatePartnerships(family, preferredPartnershipId);
     title.textContent = 'Hausknoten anlegen';
     submitButton.textContent = 'Verknüpfung anlegen';
@@ -45,6 +47,8 @@ export function createCadetDialog(documentRef = document) {
     ['id', 'houseId', 'linkType', 'name', 'subtitle', 'founded', 'emblem', 'targetFamilyId', 'notes'].forEach(fieldName => {
       form.elements.namedItem(fieldName).value = branch[fieldName] || '';
     });
+    form.elements.namedItem('emblemScale').value = String(Math.round(branch.emblemScale * 100));
+    form.elements.namedItem('frameScale').value = String(Math.round(branch.frameScale * 100));
     title.textContent = 'Hausknoten bearbeiten';
     submitButton.textContent = 'Verknüpfung speichern';
     deleteButton.hidden = false;
@@ -52,7 +56,12 @@ export function createCadetDialog(documentRef = document) {
   }
 
   function read() {
-    return Object.fromEntries(new FormData(form).entries());
+    const values = Object.fromEntries(new FormData(form).entries());
+    return {
+      ...values,
+      emblemScale: Number(values.emblemScale || 86) / 100,
+      frameScale: Number(values.frameScale || 100) / 100
+    };
   }
 
   function getCurrentId() {

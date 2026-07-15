@@ -113,6 +113,8 @@ function createVirtualNode({
   timeJumpId = '',
   sourcePartnershipId = '',
   crestFrame = '',
+  emblemScale = 0.86,
+  frameScale = 1,
   frameAsset = '',
   fromYear = '',
   toYear = ''
@@ -127,6 +129,8 @@ function createVirtualNode({
       life: '',
       portrait,
       crestFrameAsset: crestFrame ? getCrestFrame(crestFrame).asset : '',
+      emblemScale,
+      frameScale,
       frameAsset,
       fromYear,
       toYear,
@@ -173,7 +177,9 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
     portrait: house?.emblem || family.document.emblem || PORTRAIT_PLACEHOLDERS.crest,
     nodeKind: 'house-crest',
     sourcePartnershipId: partnershipId,
-    crestFrame: family.lineage.crestFrame
+    crestFrame: family.lineage.crestFrame,
+    emblemScale: family.lineage.crestEmblemScale,
+    frameScale: family.lineage.crestFrameScale
   });
   crest.rels.parents = [...founderIds];
   founderIds.forEach(founderId => addUnique(chartById.get(founderId).rels.children, crestId));
@@ -255,7 +261,9 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
       nodeKind: 'cadet-house',
       targetFamilyId: branch.targetFamilyId,
       cadetBranchId: branch.id,
-      crestFrame: branch.crestFrame
+      crestFrame: branch.crestFrame,
+      emblemScale: branch.emblemScale,
+      frameScale: branch.frameScale
     });
     node.rels.parents = [...parentIds];
     parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));

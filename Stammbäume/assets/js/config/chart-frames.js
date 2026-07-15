@@ -3,8 +3,8 @@ const FRAME_ASSET_ROOT = 'assets/images/frames';
 export const DEFAULT_CREST_FRAME = 'gold';
 
 function personFrame(asset, crestCenterX, crestCenterY) {
-  const width = 13.4;
-  const height = 20.1;
+  const width = 14.2;
+  const height = 21.3;
   const percent = value => `${Number(value.toFixed(3))}%`;
   return Object.freeze({
     asset: `${FRAME_ASSET_ROOT}/${asset}`,
@@ -18,14 +18,14 @@ function personFrame(asset, crestCenterX, crestCenterY) {
 }
 
 export const PERSON_CARD_FRAMES = Object.freeze({
-  core: personFrame('person-core.png', 50, 12.15),
-  married: personFrame('person-married.png', 50.07, 13.05),
-  bastard: personFrame('person-bastard.png', 49.85, 13.05),
-  affair: personFrame('person-affair.png', 50.07, 13.05),
-  forced: personFrame('person-forced.png', 47.8, 11.5),
-  ward: personFrame('person-ward.png', 48.4, 11.8),
-  'ward-away': personFrame('person-ward-away.png', 47.8, 11.8),
-  adopted: personFrame('person-adopted.png', 47.8, 12.25)
+  core: personFrame('person-core.png', 50, 12.6),
+  married: personFrame('person-married.png', 50.07, 13.5),
+  bastard: personFrame('person-bastard.png', 49.85, 13.5),
+  affair: personFrame('person-affair.png', 50.07, 13.5),
+  forced: personFrame('person-forced.png', 47.8, 11.95),
+  ward: personFrame('person-ward.png', 48.4, 12.25),
+  'ward-away': personFrame('person-ward-away.png', 47.8, 12.25),
+  adopted: personFrame('person-adopted.png', 47.8, 12.7)
 });
 
 export const CREST_FRAMES = Object.freeze({

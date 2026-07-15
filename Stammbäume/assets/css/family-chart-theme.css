@@ -121,19 +121,24 @@
   clip-path: polygon(0 0, 94% 0, 100% 8%, 100% 91%, 94% 100%, 0 100%);
 }
 
+.aleria-person-card__portrait-backdrop,
 .aleria-person-card__portrait {
   position: absolute;
   z-index: 1;
-  top: 17.4%;
-  left: 7.25%;
-  width: 26.5%;
-  height: 72.2%;
+  top: 15.8%;
+  left: 6.4%;
+  width: 28.3%;
+  height: 75.8%;
   border-radius: 50%;
   background: #c6a173;
-  object-fit: cover;
-  object-position: center top;
   clip-path: ellipse(48% 49% at 50% 50%);
   pointer-events: none;
+}
+
+.aleria-person-card__portrait {
+  z-index: 2;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .aleria-person-card__text {
@@ -253,35 +258,45 @@
   width: 7.65rem;
   height: 7.65rem;
   flex: 0 0 7.65rem;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 50%;
   background: #f4ead4;
   filter: drop-shadow(0 0.45rem 0.38rem rgba(54, 34, 20, 0.34));
   transition: filter 140ms ease, transform 140ms ease;
 }
 
-.aleria-crest-node__emblem {
+.aleria-crest-node__emblem-clip {
   position: absolute;
   z-index: 1;
-  top: 50%;
-  left: 50%;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f4ead4;
+}
+
+.aleria-crest-node__emblem {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: scale(var(--crest-emblem-scale, 0.86));
+  transform-origin: center;
   pointer-events: none;
 }
 
 .aleria-crest-node__frame {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
   clip-path: circle(49% at 50% 50%);
   mix-blend-mode: multiply;
+  transform: scale(var(--crest-frame-scale, 1));
+  transform-origin: center;
   pointer-events: none;
   user-select: none;
 }
@@ -340,6 +355,10 @@
   transform: translateY(-50%);
 }
 
+.aleria-crest-node--linked {
+  transform: translateY(-3.25rem);
+}
+
 .family-chart-host div.card:hover .aleria-crest-node__seal {
   filter:
     brightness(1.06)
@@ -368,7 +387,7 @@
 .aleria-time-node__text {
   position: absolute;
   z-index: 2;
-  top: 3.82rem;
+  top: 5.02rem;
   left: 3.125rem;
   display: grid;
   width: 13.75rem;

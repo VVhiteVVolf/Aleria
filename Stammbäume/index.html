@@ -19,11 +19,11 @@
   <div class="app-shell" id="family-app" data-workspace-mode="view">
     <header class="app-header">
       <div class="brand-block">
-        <img class="brand-emblem" id="family-emblem" src="assets/images/emblem-house-vael.svg" alt="Wappen des Hauses">
+        <img class="brand-emblem" id="family-emblem" src="assets/images/placeholders/neutral-crest.png" alt="Wappen des Hauses">
         <div>
           <p class="eyebrow" id="workspace-eyebrow">Aleria Almanach · Stammbaum</p>
-          <h1 id="family-title">Haus Vael</h1>
-          <p class="house-motto" id="family-motto">Blut erinnert sich.</p>
+          <h1 id="family-title">Familienregister</h1>
+          <p class="house-motto" id="family-motto">—</p>
         </div>
       </div>
 
@@ -115,10 +115,10 @@
       <div class="dialog-body form-grid">
         <h3 class="form-section-title field--wide">Haus und Familienakte</h3>
         <label class="field">Name der Familie
-          <input name="documentTitle" required maxlength="120" placeholder="Haus Sgrechwyr" autocomplete="off">
+          <input name="documentTitle" required maxlength="120" placeholder="Haus Morgenrot" autocomplete="off">
         </label>
         <label class="field">Familien-ID
-          <input name="documentId" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-sgrechwyr">
+          <input name="documentId" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-morgenrot">
         </label>
         <label class="field">Hauswort / Motto
           <input name="motto" maxlength="180" placeholder="Im Schatten wächst die Klinge.">
@@ -138,7 +138,7 @@
           <p class="eyebrow">Mann · Kernlinie</p>
           <div class="form-grid">
             <label class="field">Name
-              <input name="founderManName" required maxlength="120" placeholder="Lorcan Sgrechwyr">
+              <input name="founderManName" required maxlength="120" placeholder="Lorcan Morgenrot">
             </label>
             <label class="field">Titel
               <input name="founderManTitle" maxlength="120" placeholder="Gründer des Hauses">
@@ -551,6 +551,12 @@
         <label class="field field--wide">Rahmen des Wappens
           <select name="crestFrame"></select>
         </label>
+        <label class="field">Wappengröße (%)
+          <input type="number" name="crestEmblemScale" min="50" max="160" step="1" value="86">
+        </label>
+        <label class="field">Rahmengröße (%)
+          <input type="number" name="crestFrameScale" min="60" max="150" step="1" value="100">
+        </label>
         <label class="field field--wide">Untertitel unter dem Wappen
           <input name="crestSubtitle" maxlength="160" placeholder="optional">
         </label>
@@ -604,7 +610,7 @@
           </select>
         </label>
         <label class="field">Name des Zielhauses
-          <input name="name" required maxlength="120" placeholder="Haus Sgrechwyr">
+          <input name="name" required maxlength="120" placeholder="Haus Morgenrot">
         </label>
         <label class="field field--wide">Untertitel
           <input name="subtitle" maxlength="160" placeholder="z. B. Wegverheiratete Linie">
@@ -615,11 +621,17 @@
         <label class="field field--wide">Rahmen des Wappens
           <select name="crestFrame"></select>
         </label>
+        <label class="field">Wappengröße (%)
+          <input type="number" name="emblemScale" min="50" max="160" step="1" value="86">
+        </label>
+        <label class="field">Rahmengröße (%)
+          <input type="number" name="frameScale" min="60" max="150" step="1" value="100">
+        </label>
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
         </label>
         <label class="field field--wide">Ziel-Familien-ID im Register
-          <input name="targetFamilyId" required maxlength="120" placeholder="haus-sgrechwyr">
+          <input name="targetFamilyId" required maxlength="120" placeholder="haus-morgenrot">
         </label>
         <label class="field field--wide">Notiz
           <textarea name="notes" rows="3" maxlength="1000"></textarea>
@@ -687,13 +699,13 @@
       </header>
       <div class="dialog-body form-grid">
         <label class="field">Familien-ID
-          <input name="id" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-sgrechwyr">
+          <input name="id" required maxlength="120" pattern="[a-z0-9-]+" placeholder="haus-morgenrot">
         </label>
         <label class="field">Anzeigename
-          <input name="title" required maxlength="120" placeholder="Haus Sgrechwyr">
+          <input name="title" required maxlength="120" placeholder="Haus Morgenrot">
         </label>
         <label class="field field--wide">Ordnerpfad
-          <input name="folderPath" required maxlength="500" placeholder="Cenyr > Celtigerns Wacht > Llamrais Ankunft > Haus Sgrechwyr">
+          <input name="folderPath" required maxlength="500" placeholder="Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor">
         </label>
         <p class="form-hint field--wide">Der Pfad wird im Familienregister als verschachtelte Ordnerstruktur angelegt. Gespeicherte Familien öffnen sich über eine eigene URL.</p>
       </div>
