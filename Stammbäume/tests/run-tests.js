@@ -180,10 +180,14 @@ test('setzt beide Jahreszahlen ohne Von/Bis über die Linien des Zeitrahmens', (
 
 test('unterdrückt den rechteckigen Family-Chart-Hintergrund für alle Ebenenkarten', async () => {
   const css = await readFile(new URL('../assets/css/family-chart-theme.css', import.meta.url), 'utf8');
+  const goldFrame = await readFile(new URL('../assets/images/frames/crest-gold.png', import.meta.url));
   assert.match(css, /\.family-chart-host\.f3 div\.card \.aleria-chart-card\s*\{\s*background: transparent;/);
   assert.match(css, /\.aleria-crest-node__emblem-clip\s*\{[\s\S]*?z-index: 1;/);
   assert.match(css, /\.aleria-crest-node__emblem\s*\{[\s\S]*?scale\(var\(--crest-emblem-scale, 0\.86\)\);/);
   assert.match(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?z-index: 4;/);
+  assert.doesNotMatch(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?mix-blend-mode:/);
+  assert.match(css, /\.aleria-person-card__portrait-backdrop\s*\{[\s\S]*?width: 30\.6%;[\s\S]*?height: 80%;/);
+  assert.equal(goldFrame[25], 6, 'Der Goldrahmen muss als RGBA-PNG echte Transparenz besitzen.');
 });
 
 test('rendert Wappenknoten ohne eingeblendeten Aktions- oder Standardtext', () => {
