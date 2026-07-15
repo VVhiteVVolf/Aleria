@@ -314,19 +314,19 @@ test('hält für Wappen- und Zeitknoten zusätzlichen Generationsabstand frei', 
 
 test('schützt den Bearbeitungsmodus mit einer sitzungsgebundenen Freigabe', () => {
   const storage = createMemoryStorage();
-  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/index.html?family=haus-arwydd', storage), {
+  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/Stammbaum.html?family=haus-arwydd', storage), {
     mode: WORKSPACE_MODE.view,
     requestedMode: WORKSPACE_MODE.view,
     shouldRequestPassword: false
   });
-  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/index.html?family=haus-arwydd&mode=edit', storage), {
+  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/Stammbaum.html?family=haus-arwydd&mode=edit', storage), {
     mode: WORKSPACE_MODE.view,
     requestedMode: WORKSPACE_MODE.edit,
     shouldRequestPassword: true
   });
   assert.equal(grantWorkspaceEditAccess('falsch', storage), false);
   assert.equal(grantWorkspaceEditAccess('7777', storage), true);
-  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/index.html?family=haus-arwydd&mode=edit', storage), {
+  assert.deepEqual(resolveWorkspaceAccess('https://aleria.local/Stammbaum.html?family=haus-arwydd&mode=edit', storage), {
     mode: WORKSPACE_MODE.edit,
     requestedMode: WORKSPACE_MODE.edit,
     shouldRequestPassword: false
@@ -335,15 +335,15 @@ test('schützt den Bearbeitungsmodus mit einer sitzungsgebundenen Freigabe', () 
 
 test('erzeugt explizite und familienbezogene Ansichts-URLs', () => {
   assert.equal(
-    createWorkspaceModeUrl('https://aleria.local/index.html?family=haus-arwydd&mode=edit', WORKSPACE_MODE.view),
-    'https://aleria.local/index.html?family=haus-arwydd&mode=view'
+    createWorkspaceModeUrl('https://aleria.local/Stammbaum.html?family=haus-arwydd&mode=edit', WORKSPACE_MODE.view),
+    'https://aleria.local/Stammbaum.html?family=haus-arwydd&mode=view'
   );
   const arwydd = listFamilyRecords(createMemoryStorage()).find(record => record.id === 'haus-arwydd');
-  assert.equal(arwydd.link, 'index.html?family=haus-arwydd&mode=view');
+  assert.equal(arwydd.link, 'Stammbaum.html?family=haus-arwydd&mode=view');
 });
 
 test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-Handler aus', async () => {
-  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const html = await readFile(new URL('../Stammbaum.html', import.meta.url), 'utf8');
   assert.match(html, /id="family-app" data-workspace-mode="view"/);
   assert.match(html, /class="toolbar"[^>]*data-edit-only/);
   assert.match(html, /id="edit-access-dialog"/);

@@ -31,7 +31,7 @@ function renderFamilyCard(record) {
   const people = Number(record.personCount ?? record.family?.persons.length ?? 0);
   const description = record.motto || record.family?.document.motto || record.family?.document.description || 'Familienakte öffnen';
   return `
-    <a class="registry-family-card" href="${escapeHtml(record.link || `index.html?family=${encodeURIComponent(record.id)}&mode=view`)}">
+    <a class="registry-family-card" href="${escapeHtml(record.link || `Stammbaum.html?family=${encodeURIComponent(record.id)}&mode=view`)}">
       <img class="registry-family-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
       <div>
         <h3>${escapeHtml(record.title)}</h3>
@@ -94,7 +94,7 @@ async function loadPublishedRegistry() {
         id,
         title: String(record.title || id),
         folderPath: Array.isArray(record.folderPath) ? record.folderPath.map(String).filter(Boolean) : [],
-        link: record.link || `index.html?family=${encodeURIComponent(id)}&mode=view`,
+        link: record.link || `Stammbaum.html?family=${encodeURIComponent(id)}&mode=view`,
         source: 'firebase'
       });
     });

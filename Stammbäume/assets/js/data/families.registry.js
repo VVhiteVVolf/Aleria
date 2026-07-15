@@ -31,7 +31,7 @@ function familyRecord({ id, title, family, folderPath, type = 'dynasty' }) {
     type,
     folderPath,
     hierarchy: hierarchyFor(folderPath, id, title),
-    link: `index.html?family=${encodeURIComponent(id)}&mode=view`,
+    link: `Stammbaum.html?family=${encodeURIComponent(id)}&mode=view`,
     family
   });
 }

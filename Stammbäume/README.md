@@ -2,7 +2,7 @@
 
 Eine modulare Genealogie-Workbench für den Aleria Almanach. Die Anwendung nutzt Family Chart 0.9.0 nur als Rendering-Engine; das Aleria-Datenmodell, die Validierung und die Beziehungslogik sind davon unabhängig.
 
-`index.html` ist die zentrale Navigation für alle Familienakten. Ohne Modusangabe öffnet sie den schreibgeschützten Ansichtsmodus. Der Bearbeitungsmodus ist über `?mode=edit` und das Passwort `7777` erreichbar.
+`Stammbaum.html` ist die zentrale Navigation für alle Familienakten. Ohne Modusangabe öffnet sie den schreibgeschützten Ansichtsmodus. Der Bearbeitungsmodus ist über `?mode=edit` und das Passwort `7777` erreichbar.
 
 ## Start
 
@@ -31,7 +31,7 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - „Familie speichern“ legt eine benannte Familienakte mit frei verschachtelbarem Ordnerpfad im lokalen Familienregister an.
 - „＋ Neue Familie“ öffnet einen Gründungsassistenten für eine unabhängige Akte mit eigenem Haus, Gründer-Ehepaar und Wappen. Ein erstes Kind unter dem Wappen ist optional.
 - Nach der Gründung kann der Register-Speicherdialog automatisch geöffnet werden; alternativ lässt sich jederzeit über „Familie speichern“ sichern.
-- `register.html` führt Projekt-Registry und lokal gespeicherte Familien zusammen; jede Akte öffnet sich über `index.html?family=<familien-id>&mode=view`.
+- `register.html` führt Projekt-Registry und lokal gespeicherte Familien zusammen; jede Akte öffnet sich über `Stammbaum.html?family=<familien-id>&mode=view`.
 - Das Register ergänzt veröffentlichte Firebase-Releases, sobald das Backend erreichbar ist, und fällt andernfalls auf Projekt-Registry und lokale Datensätze zurück.
 - Veröffentlichungen werden serverseitig erneut validiert und bereinigt. Private Notizen, Extensions und geheime Beziehungen erscheinen nicht in der öffentlichen Fassung.
 - Portraits und Wappen können weiterhin als Imgur-URL eingetragen werden. Nach Cloud-Anmeldung lassen sie sich alternativ als PNG, JPEG oder WebP bis 8 MB über eine autorisierte Function hochladen; direkte Browser-Schreibrechte auf den Storage-Bucket existieren nicht.
@@ -63,7 +63,7 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Die Kartenabstände lassen Wappen- und Zeitknoten frei, ohne die Generationen unnötig weit auseinanderzuziehen. Verlinkte Endknoten stehen optisch zwischen Paar und Kindgeneration.
 - Zeitsprungknoten können zunächst leer bleiben; neue bekannte Nachkommen lassen sich später direkt über den Knoten oder die Akte des vorausgehenden Paares ergänzen.
 - „PNG · hohe Auflösung“ exportiert die gesamte Baumfläche mit zwei- bis vierfacher Auflösung (bis maximal 12.000 Pixel Kantenlänge).
-- Haus Arwydd ist unter `index.html?family=haus-arwydd&mode=view` als eigene Registerfamilie angelegt. Der Gründer Idwalladr ist der Startfokus, damit alle eingetragenen Partnerzweige in der Gesamtansicht erscheinen. Die vorhandenen lokalen Wappen von Saethwyr, Wyrm, Draig, Gafyr, Gwefrydd und Gwywern sind zugeordnet; nur nicht vorhandene Nebenwappen bleiben neutral.
+- Haus Arwydd ist unter `Stammbaum.html?family=haus-arwydd&mode=view` als eigene Registerfamilie angelegt. Der Gründer Idwalladr ist der Startfokus, damit alle eingetragenen Partnerzweige in der Gesamtansicht erscheinen. Die vorhandenen lokalen Wappen von Saethwyr, Wyrm, Draig, Gafyr, Gwefrydd und Gwywern sind zugeordnet; nur nicht vorhandene Nebenwappen bleiben neutral.
 - Haus Arwydd liegt im Register unter `Cenyr > Celtigerns Wacht > Rhonwens Tränen > Castellbryn`. Unter `Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor` sind Haus Draig, Wyrm, Saethwyr und Gafyr als leere, direkt bearbeitbare Familienakten mit lokalen Wappen vorbereitet.
 
 ## Abhängigkeiten

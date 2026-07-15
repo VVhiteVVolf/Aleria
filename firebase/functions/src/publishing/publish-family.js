@@ -72,7 +72,7 @@ export const publishFamily = onCall({
     folderPath,
     personCount: publicFamily.collections.persons.length,
     activeReleaseId: releaseId,
-    link: `index.html?family=${encodeURIComponent(familyId)}&mode=view`,
+    link: `Stammbaum.html?family=${encodeURIComponent(familyId)}&mode=view`,
     parentId: folderPath.at(-1)?.toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-') || '',
     sortOrder: publicFamily.root.document.title,
     publishedAt: now

@@ -1,6 +1,6 @@
 // Data boundary for the standalone family-tree application embedded by the Almanach.
 
-const FAMILY_TREE_EMBED_DEFAULT_SOURCE = '../Stammb%C3%A4ume/index.html?mode=view';
+const FAMILY_TREE_EMBED_DEFAULT_SOURCE = '../Stammb%C3%A4ume/Stammbaum.html?mode=view';
 
 function forceFamilyTreeViewMode(source) {
   const hashIndex = source.indexOf('#');

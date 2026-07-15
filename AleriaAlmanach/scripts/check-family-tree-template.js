@@ -42,7 +42,7 @@ const context = vm.createContext({
 
 const checks = vm.runInContext(`(() => {
   const defaults = createDefaultFamilyTreeEmbedPage(0);
-  const safe = sanitizeFamilyTreeEmbedData({ source: '../Stammb%C3%A4ume/index.html?family=haus-arwydd&mode=edit', height: 880 });
+  const safe = sanitizeFamilyTreeEmbedData({ source: '../Stammb%C3%A4ume/Stammbaum.html?family=haus-arwydd&mode=edit', height: 880 });
   const rejected = sanitizeFamilyTreeEmbedData({ source: 'https://example.com/tree', height: 9999 });
   return {
     defaults,
@@ -55,16 +55,16 @@ const checks = vm.runInContext(`(() => {
 })()`, context);
 
 assert.equal(checks.defaults.familyTreePage, true);
-assert.equal(checks.safe.source, '../Stammb%C3%A4ume/index.html?family=haus-arwydd&mode=view');
+assert.equal(checks.safe.source, '../Stammb%C3%A4ume/Stammbaum.html?family=haus-arwydd&mode=view');
 assert.equal(checks.safe.height, 880);
-assert.equal(checks.rejected.source, '../Stammb%C3%A4ume/index.html?mode=view', 'Externe Frame-Ziele dürfen nicht übernommen werden.');
+assert.equal(checks.rejected.source, '../Stammb%C3%A4ume/Stammbaum.html?mode=view', 'Externe Frame-Ziele dürfen nicht übernommen werden.');
 assert.equal(checks.rejected.height, 1200);
 assert.match(checks.moduleEditor, /data-page-type="family-tree"/);
 assert.match(checks.moduleEditor, /E:\\Aleria\\Stammbäume/);
 assert.match(checks.inlineEditor, /data-inline-action="update-family-tree-embed-field"/);
 assert.match(checks.rendered, /<iframe/);
 assert.match(checks.rendered, /sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-modals"/);
-assert.match(checks.rendered, /src="\.\.\/Stammb%C3%A4ume\/index\.html\?mode=view"/);
+assert.match(checks.rendered, /src="\.\.\/Stammb%C3%A4ume\/Stammbaum\.html\?mode=view"/);
 
 assert.match(templatesSource, /'family-tree':\s*\{/);
 assert.match(templatesSource, /family:\s*\{[\s\S]*?listed:\s*false,/);
@@ -72,6 +72,6 @@ assert.match(templatesSource, /MODULE_TEMPLATE_OPTIONS[\s\S]*?filter\(template =
 assert.match(transferSource, /family:\s*\{[\s\S]*?listed:\s*false,/);
 assert.doesNotMatch(html, /<option value="family">/);
 assert.equal((html.match(/<option value="family-tree">Stammbaum<\/option>/g) || []).length, 2);
-assert.ok(fs.existsSync(path.join(projectRoot, 'Stammbäume', 'index.html')), 'Die eingebettete Stammbäume-Anwendung fehlt.');
+assert.ok(fs.existsSync(path.join(projectRoot, 'Stammbäume', 'Stammbaum.html')), 'Die eingebettete Stammbäume-Anwendung fehlt.');
 
 console.log('Stammbaum-Template OK: Family ausgeklammert, neue Einbettung registriert, same-origin Quelle und getrennte Anwendung geprüft.');

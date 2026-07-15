@@ -10,7 +10,7 @@ Die Referenz bleibt unverändert. Die neue Anwendung entsteht eigenständig in `
 
 Der Aleria-Datensatz ist die Quelle der Wahrheit. Family Chart 0.9.0 wird ausschließlich als austauschbare Darstellungs-Engine hinter einem Adapter verwendet.
 
-`index.html` besitzt die Verantwortung einer Werkstatt und Navigation. Eine geladene Familie ist die aktuell geöffnete Akte, nicht die Identität der Seite selbst.
+`Stammbaum.html` besitzt die Verantwortung einer Werkstatt und Navigation. Eine geladene Familie ist die aktuell geöffnete Akte, nicht die Identität der Seite selbst.
 
 ```text
 UI / Workbench
@@ -62,7 +62,7 @@ Die Rolle beeinflusst die Personenkarte. Abstammungsart und Legitimität bleiben
 
 ```text
 Stammbäume/
-├── index.html
+├── Stammbaum.html
 ├── register.html             verschachteltes Familienregister
 ├── assets/
 │   ├── css/                 Grundlayout, Komponenten, Chart-Theme, Responsive

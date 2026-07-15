@@ -30,7 +30,7 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
     if (retiredIds.has(record.id)) return;
     byId.set(record.id, {
       ...record,
-      link: `index.html?family=${encodeURIComponent(record.id)}&mode=view`
+      link: `Stammbaum.html?family=${encodeURIComponent(record.id)}&mode=view`
     });
   });
   return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
