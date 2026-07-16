@@ -98,7 +98,7 @@ window.HAEUSER_DATA = {
       src: "assets/images/banners/rhonwens-traenen.png",
       alt: "Herrschaftsbanner Rhonwens Tränen",
       format: "banner",
-      maxHeight: 220,
+      maxHeight: 320,
     },
     "hof-gruender-portrait": {
       src: "assets/images/portraits/haus-arwydd/idwalladr-arwydd.jpg",

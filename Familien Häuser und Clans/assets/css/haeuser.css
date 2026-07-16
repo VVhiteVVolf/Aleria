@@ -375,7 +375,13 @@ body {
 
 .haeuser-banner-slot {
   width: 100%;
-  min-height: 120px;
+  min-height: 300px;
+}
+
+.haeuser-template-frame .haeuser-banner-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 [data-haeuser-content] {
