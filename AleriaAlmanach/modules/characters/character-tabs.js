@@ -62,6 +62,23 @@ async function loadCharacters() {
   refreshAllModuleCastPickers();
 }
 
+function handleExternallySavedCharacter(event) {
+  const record = event?.detail?.record;
+  const id = String(record?.id || '').trim();
+  if (!id) return;
+  const normalized = cloneCharacterRecord({ ...record, id });
+  const index = _characters.findIndex(character => String(character.id || '') === id);
+  if (index >= 0) _characters[index] = normalized;
+  else _characters.push(normalized);
+  _charactersLoaded = true;
+  renderCharSubtabs();
+  renderCharGrid();
+  renderCharPickerInForm();
+  refreshAllModuleCastPickers();
+}
+
+document.addEventListener('aleria:character-saved', handleExternallySavedCharacter);
+
 function saveCharTabs() {
   if (!window._fb?.saveCharTabs) {
     showAppStatus('Charakter-Reiter konnten nicht online gespeichert werden.', 'error');

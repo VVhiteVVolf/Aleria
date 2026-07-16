@@ -152,7 +152,9 @@ function buildCommentCharacterSaveData(char, emotes, portraitFallback = null) {
     emotesOverride: true,
     inventory: char.inventory && typeof char.inventory === 'object'
       ? sanitizeCharacterInventoryData(char.inventory)
-      : undefined
+      : undefined,
+    identity: normalizeCharacterIdentityRecord(char.identity),
+    genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
   };
 }
 

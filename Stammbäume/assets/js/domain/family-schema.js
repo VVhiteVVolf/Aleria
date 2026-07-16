@@ -65,10 +65,24 @@ export function createRecordId(prefix, existingIds = []) {
   return candidate;
 }
 
+function identitySlug(value, fallback) {
+  return text(value, fallback)
+    .toLocaleLowerCase('de')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || fallback;
+}
+
+export function createWorldPersonId(familyId, personId) {
+  return `person--${identitySlug(familyId, 'family-tree')}--${identitySlug(personId, 'person')}`;
+}
+
 function normalizePerson(person = {}, index = 0) {
   const id = text(person.id, `person-${index + 1}`);
   return {
     id,
+    worldPersonId: text(person.worldPersonId),
     name: text(person.name, 'Unbenannte Person'),
     title: text(person.title),
     sex: enumValue(person.sex, SEX_VALUES, 'unknown'),
@@ -187,17 +201,22 @@ export function normalizeFamily(input = {}) {
   const source = input && typeof input === 'object' ? input : {};
   const document = source.document && typeof source.document === 'object' ? source.document : {};
   const view = source.view && typeof source.view === 'object' ? source.view : {};
+  const familyId = text(document.id, 'family-tree');
+  const persons = array(source.persons).map(normalizePerson).map(person => ({
+    ...person,
+    worldPersonId: person.worldPersonId || createWorldPersonId(familyId, person.id)
+  }));
   return {
     schema: FAMILY_SCHEMA,
     schemaVersion: FAMILY_SCHEMA_VERSION,
     document: {
-      id: text(document.id, 'family-tree'),
+      id: familyId,
       title: text(document.title, 'Unbenannte Familie'),
       motto: text(document.motto),
       description: text(document.description),
       emblem: text(document.emblem)
     },
-    persons: array(source.persons).map(normalizePerson),
+    persons,
     partnerships: array(source.partnerships).map(normalizePartnership),
     parentages: array(source.parentages).map(normalizeParentage),
     houses: array(source.houses).map(normalizeHouse),
@@ -289,6 +308,19 @@ export function validateFamily(input) {
   findDuplicateIds(family.houses, 'Haus', diagnostics);
   findDuplicateIds(family.cadetBranches, 'Kadettenhaus', diagnostics);
   findDuplicateIds(family.timeJumps, 'Zeitsprungknoten', diagnostics);
+
+  const personByWorldId = new Map();
+  family.persons.forEach(person => {
+    const existingPersonId = personByWorldId.get(person.worldPersonId);
+    if (existingPersonId) {
+      diagnostics.push(diagnostic('error', 'DUPLICATE_WORLD_PERSON_ID', 'Eine feste Personen-ID darf im Stammbaum nur einmal vorkommen.', {
+        worldPersonId: person.worldPersonId,
+        personIds: [existingPersonId, person.id]
+      }));
+      return;
+    }
+    personByWorldId.set(person.worldPersonId, person.id);
+  });
 
   const personIds = new Set(family.persons.map(person => person.id));
   const partnershipIds = new Set(family.partnerships.map(partnership => partnership.id));

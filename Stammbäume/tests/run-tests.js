@@ -21,7 +21,8 @@ import { calculateAge, formatLifeLine } from '../assets/js/domain/person-present
 import {
   FamilyValidationError,
   assertValidFamily,
-  normalizeFamily
+  normalizeFamily,
+  validateFamily
 } from '../assets/js/domain/family-schema.js';
 import {
   loadFamilyById,
@@ -31,6 +32,10 @@ import {
 } from '../assets/js/services/family-library.js';
 import { createFamilyViewLink, normalizeFamilyViewLink } from '../assets/js/services/family-links.js';
 import { migrateLegacyFamily, parseFamilyJson, serializeFamily } from '../assets/js/services/family-transfer.js';
+import {
+  createAlmanachHouseCandidates,
+  createTreePersonFromAlmanach
+} from '../assets/js/modules/almanach-bridge/almanach-character-bridge.js';
 import {
   createWorkspaceModeUrl,
   grantWorkspaceEditAccess,
@@ -109,6 +114,71 @@ test('findet Personen über Name, Titel und Haus', () => {
   const graph = createFamilyGraph(SAMPLE_FAMILY);
   assert.equal(graph.search('Aschegarde')[0]?.id, 'oryn-ash');
   assert.ok(graph.search('Thorne').some(person => person.id === 'seraphine-thorne'));
+});
+
+test('erkennt vorhandene Almanach-Charaktere rückwärts für ein Haus', () => {
+  const family = {
+    document: { id: 'haus-draig', title: 'Haus Draig' },
+    lineage: { houseId: 'house-draig' },
+    houses: [{ id: 'house-draig', name: 'Haus Draig' }],
+    persons: [{
+      id: 'gawain-draig',
+      worldPersonId: 'person--haus-draig--gawain-draig',
+      name: 'Gawain',
+      birth: '1722',
+      houseId: 'house-draig'
+    }]
+  };
+  const candidates = createAlmanachHouseCandidates(family, [{
+    id: 'almanach-gawain',
+    name: 'Gawain Draig',
+    genealogy: { birth: '1722' }
+  }, {
+    id: 'almanach-maelin',
+    name: 'Maelin Draig',
+    title: 'Hüterin der Flamme',
+    status: 'active',
+    genealogy: { birth: '1701', sex: 'female' }
+  }, {
+    id: 'almanach-idris',
+    name: 'Idris Arwydd',
+    genealogy: { birth: '1687', houseName: 'Haus Arwydd' }
+  }]);
+  const gawain = candidates.find(candidate => candidate.character.id === 'almanach-gawain');
+  const maelin = candidates.find(candidate => candidate.character.id === 'almanach-maelin');
+  const idris = candidates.find(candidate => candidate.character.id === 'almanach-idris');
+
+  assert.equal(gawain.isHouseRelevant, true);
+  assert.equal(gawain.match.kind, 'probable');
+  assert.equal(gawain.match.character.treePerson.id, 'gawain-draig');
+  assert.equal(maelin.isHouseRelevant, true);
+  assert.equal(maelin.match, null);
+  assert.equal(idris.isHouseRelevant, false);
+
+  const mappedMaelin = createTreePersonFromAlmanach(family, maelin);
+  assert.equal(mappedMaelin.name, 'Maelin Draig');
+  assert.equal(mappedMaelin.birth, '1701');
+  assert.equal(mappedMaelin.sex, 'female');
+  assert.equal(mappedMaelin.status, 'alive');
+  assert.equal(mappedMaelin.houseId, 'house-draig');
+  assert.equal(mappedMaelin.familyRole, 'core');
+  assert.equal(mappedMaelin.worldPersonId, 'person--almanach--almanach-maelin');
+
+  const linked = createAlmanachHouseCandidates(family, [{
+    id: 'linked-gawain',
+    name: 'Gawain Draig',
+    identity: { worldPersonId: 'person--haus-draig--gawain-draig' },
+    genealogy: { birth: '1722' }
+  }])[0];
+  assert.equal(linked.match.kind, 'linked');
+
+  const identityConflict = createAlmanachHouseCandidates(family, [{
+    id: 'other-gawain',
+    name: 'Gawain Draig',
+    identity: { worldPersonId: 'person--anderer-gawain' },
+    genealogy: { birth: '1722' }
+  }])[0];
+  assert.equal(identityConflict.match.kind, 'conflict');
 });
 
 test('übersetzt Gründerwappen, Zeitsprung und Kadettenhaus im Adapter', () => {
@@ -361,6 +431,9 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.equal((html.match(/class="toolbar-icon/g) || []).length, 7);
   assert.match(html, /assets\/images\/toolbar\/fit-chart\.png/);
   assert.match(html, /assets\/images\/toolbar\/lineage\.png/);
+  assert.match(html, /data-action="open-almanach-characters"/);
+  assert.match(html, /id="almanach-character-dialog"/);
+  assert.match(html, /assets\/css\/almanach-bridge\.css/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
 });
 
@@ -420,6 +493,14 @@ test('weist zyklische Abstammung zurück', () => {
   assert.throws(() => assertValidFamily(invalid), FamilyValidationError);
 });
 
+test('weist doppelte feste Personen-IDs zurück', () => {
+  const invalid = normalizeFamily(SAMPLE_FAMILY);
+  invalid.persons[1].worldPersonId = invalid.persons[0].worldPersonId;
+  const result = validateFamily(invalid);
+  assert.ok(result.diagnostics.some(item => item.code === 'DUPLICATE_WORLD_PERSON_ID'));
+  assert.throws(() => assertValidFamily(invalid), FamilyValidationError);
+});
+
 test('kapselt Mutationen und unterstützt Undo/Redo', () => {
   const store = createFamilyStore(SAMPLE_FAMILY);
   const personId = store.addPerson({
@@ -427,6 +508,10 @@ test('kapselt Mutationen und unterstützt Undo/Redo', () => {
     portraitPlaceholder: 'auto', houseId: '', familyRole: 'core', notes: ''
   });
   assert.ok(store.getState().family.persons.some(person => person.id === personId));
+  assert.equal(
+    store.getState().family.persons.find(person => person.id === personId)?.worldPersonId,
+    `person--${store.getState().family.document.id}--${personId}`
+  );
   assert.equal(store.undo(), true);
   assert.ok(!store.getState().family.persons.some(person => person.id === personId));
   assert.equal(store.redo(), true);

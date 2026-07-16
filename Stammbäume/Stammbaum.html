@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/family-chart-theme.css">
   <link rel="stylesheet" href="assets/css/family-sync.css">
+  <link rel="stylesheet" href="assets/css/almanach-bridge.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
@@ -94,6 +95,7 @@
         <a class="button button--quiet" href="register.html">Familienregister</a>
         <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
         <button class="button button--quiet" type="button" data-action="open-person-create">＋ Person</button>
+        <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Abgleich</button>
         <button class="button button--quiet" type="button" data-action="open-cadet-create">＋ Hausverknüpfung</button>
         <button class="button button--quiet" type="button" data-action="open-time-jump-create">＋ Zeitsprung</button>
         <button class="button button--quiet" type="button" data-action="export-png">PNG · hohe Auflösung</button>
@@ -730,6 +732,59 @@
         <button class="button button--quiet" id="time-jump-dialog-add-child" type="button" data-action="open-time-jump-child-from-editor" hidden>Nachkommen anlegen</button>
         <button class="button button--quiet" type="button" data-action="close-time-jump-dialog">Abbrechen</button>
         <button class="button" id="time-jump-dialog-submit" value="default" type="submit">Zeitsprungknoten anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--wide almanach-bridge-dialog" id="almanach-character-dialog">
+    <form method="dialog" id="almanach-character-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Rückwärtsverknüpfung</p>
+          <h2>Vorhandene Almanach-Charaktere abgleichen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-almanach-character-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="almanach-bridge-toolbar">
+        <label class="field">Charakter suchen
+          <input name="search" type="search" autocomplete="off" placeholder="Name, Haus oder Geburtsjahr">
+        </label>
+        <label class="checkbox-field">
+          <input name="showAll" type="checkbox">
+          <span>Auch Charaktere anderer Häuser anzeigen</span>
+        </label>
+      </div>
+      <div class="almanach-bridge-body">
+        <div class="almanach-bridge-list" id="almanach-character-list"></div>
+        <section class="almanach-bridge-preview" id="almanach-character-preview"></section>
+        <aside class="almanach-placement">
+          <label class="checkbox-field" id="almanach-force-separate-field" hidden>
+            <input name="forceSeparate" type="checkbox">
+            <span>Trotz Treffer als getrennte Person anlegen</span>
+          </label>
+          <div class="form-grid" id="almanach-placement-fields">
+            <label class="field">Platzierung
+              <select name="placementKind">
+                <option value="standalone">Zunächst ohne Beziehung</option>
+                <option value="child">Kind einer vorhandenen Person</option>
+                <option value="partnership">Partner einer vorhandenen Person</option>
+                <option value="parent">Elternteil einer vorhandenen Person</option>
+              </select>
+            </label>
+            <label class="field">Bezugsperson im Stammbaum
+              <select name="referencePersonId"></select>
+            </label>
+            <label class="field field--wide">Optionales zweites Elternteil
+              <select name="secondParentId"></select>
+            </label>
+            <p class="form-hint field--wide">Das System erkennt Haus, Namen und Lebensdaten. Die genaue Abstammung wird bewusst von dir bestätigt.</p>
+          </div>
+        </aside>
+      </div>
+      <footer class="dialog-footer">
+        <span class="almanach-bridge-status" id="almanach-character-status"></span>
+        <button class="button button--quiet" type="button" data-action="close-almanach-character-dialog">Abbrechen</button>
+        <button class="button" id="almanach-character-submit" value="default" type="submit">In Stammbaum übernehmen</button>
       </footer>
     </form>
   </dialog>

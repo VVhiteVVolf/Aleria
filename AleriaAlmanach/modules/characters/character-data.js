@@ -1,6 +1,41 @@
 let _currentModuleCommenterEntryId = '';
 let _currentModuleCommenterNames = new Set();
 
+function cloneCharacterStructuredValue(value, fallback) {
+  if (!value || typeof value !== 'object') return fallback;
+  if (typeof structuredClone === 'function') return structuredClone(value);
+  return JSON.parse(JSON.stringify(value));
+}
+
+function normalizeCharacterIdentityRecord(value) {
+  const normalizer = window.AleriaCharacterGenealogy?.normalizeCharacterIdentity;
+  return typeof normalizer === 'function'
+    ? normalizer(value)
+    : cloneCharacterStructuredValue(value, { worldPersonId: '' });
+}
+
+function normalizeCharacterGenealogyRecord(value) {
+  const normalizer = window.AleriaCharacterGenealogy?.normalizeCharacterGenealogy;
+  return typeof normalizer === 'function'
+    ? normalizer(value)
+    : cloneCharacterStructuredValue(value, {
+        worldPersonId: '', sex: '', status: '', birth: '', death: '', houseId: '', houseName: '', familyRole: '', portraitPlaceholder: '', tags: [], sources: [], relationships: {}
+      });
+}
+
+function hasCharacterGenealogyData(value) {
+  const genealogy = normalizeCharacterGenealogyRecord(value);
+  return !!(
+    genealogy.worldPersonId
+    || genealogy.birth
+    || genealogy.death
+    || genealogy.houseId
+    || genealogy.houseName
+    || genealogy.tags?.length
+    || genealogy.sources?.length
+  );
+}
+
 function getCharacterNameKeys(char) {
   return new Set([
     char?.name,
@@ -33,6 +68,8 @@ function getCharacterPlayerOwnerLabel(value) {
 function cloneCharacterRecord(char) {
   return {
     ...char,
+    identity: normalizeCharacterIdentityRecord(char?.identity),
+    genealogy: normalizeCharacterGenealogyRecord(char?.genealogy),
     playerOwner: normalizeCharacterPlayerOwner(char?.playerOwner || char?.playedBy || char?.player),
     aliases: Array.isArray(char?.aliases)
       ? char.aliases.map(alias => String(alias || '').trim()).filter(Boolean)
@@ -69,6 +106,8 @@ function mergeCharacterRecords(primary, fallback) {
     playerOwner: first.playerOwner || second.playerOwner || '',
     createdAt: first.createdAt || second.createdAt || '',
     updatedAt: first.updatedAt || second.updatedAt || '',
+    identity: normalizeCharacterIdentityRecord(first.identity?.worldPersonId ? first.identity : second.identity),
+    genealogy: normalizeCharacterGenealogyRecord(hasCharacterGenealogyData(first.genealogy) ? first.genealogy : second.genealogy),
     _builtin: !!(first._builtin || second._builtin),
     emotesOverride: !!first.emotesOverride,
   };
@@ -367,6 +406,11 @@ function buildCharacterSearchText(char) {
     char.bio,
     char.note,
     char.notes,
+    char.identity?.worldPersonId,
+    char.genealogy?.birth,
+    char.genealogy?.death,
+    char.genealogy?.houseName,
+    ...(char.genealogy?.sources || []).flatMap(source => [source.familyId, source.personId]),
   ];
 
   (char.emotes || []).forEach(emote => parts.push(emote.label, emote.name));

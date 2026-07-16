@@ -2,6 +2,7 @@ import { createFamilyChartSession } from '../adapters/family-chart-adapter.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
 import { createFamilyGraph } from '../domain/family-graph.js';
+import { createAlmanachCharacterController } from '../modules/almanach-bridge/almanach-character-controller.js';
 import { exportChartAsPng } from '../services/chart-png-export.js';
 import {
   loadFamilyById,
@@ -46,6 +47,7 @@ function findPartnershipId(family, participantIds) {
 
 export function createAppController({
   store,
+  almanachCharacterRepository = null,
   documentRef = document,
   runtime = globalThis,
   workspaceMode = WORKSPACE_MODE.view,
@@ -61,6 +63,16 @@ export function createAppController({
   const searchResults = documentRef.getElementById('search-results');
   const importInput = documentRef.getElementById('family-import');
   const toast = createToast(documentRef.getElementById('app-toast'));
+  let chartSession = null;
+  const almanachCharacterController = createAlmanachCharacterController({
+    store,
+    repository: almanachCharacterRepository,
+    documentRef,
+    notify: toast,
+    focusPerson(personId) {
+      chartSession?.focus(personId, { fit: true });
+    }
+  });
   const personDialog = createPersonDialog(documentRef);
   const relatedPersonDialog = createRelatedPersonDialog(documentRef);
   const relationshipDialog = createRelationshipDialog(documentRef);
@@ -71,7 +83,6 @@ export function createAppController({
   const timeJumpDialog = createTimeJumpDialog(documentRef);
   const familySaveDialog = createFamilySaveDialog(documentRef);
   const editAccessDialog = createEditAccessDialog(documentRef);
-  let chartSession = null;
   let graph = createFamilyGraph(store.getState().family);
   let unsubscribe = null;
 
@@ -278,6 +289,12 @@ export function createAppController({
         break;
       case 'open-related-person':
         if (selected) relatedPersonDialog.open(selected.id, state.family);
+        break;
+      case 'open-almanach-characters':
+        await almanachCharacterController.open();
+        break;
+      case 'close-almanach-character-dialog':
+        almanachCharacterController.close();
         break;
       case 'close-related-person-dialog':
         relatedPersonDialog.close();
@@ -611,6 +628,13 @@ export function createAppController({
       return;
     }
     if (!isEditing) return;
+    if (event.target === almanachCharacterController.form) {
+      event.preventDefault();
+      void almanachCharacterController.submit().catch(error => {
+        toast(error.message, { error: true, duration: 5000 });
+      });
+      return;
+    }
     if (event.target === newFamilyDialog.form) {
       event.preventDefault();
       try {

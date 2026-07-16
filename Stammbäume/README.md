@@ -38,6 +38,9 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Projektweit auslieferbare Familien werden zentral in `assets/js/data/families.registry.js` registriert.
 - JSON-Export verwendet `aleria.family-tree` Schema-Version 1.
 - Der Import akzeptiert außerdem das alte Format der temporären `Stammbaum.html` mit `persons` und `couples`.
+- Jede Baumperson erhält eine dauerhafte `worldPersonId`. Der Almanach speichert dieselbe ID unter `identity.worldPersonId` und `genealogy.worldPersonId`; dadurch bleibt die Verbindung auch bei späteren Namens- oder Hausänderungen eindeutig.
+- Der Bearbeitungswerkzeugpunkt „Almanach-Abgleich“ liest bestehende Charakterprofile aus der normalen Almanach-Datenbank und schlägt sie passend zum aktiven Haus vor. Vor- und Nachname plus identisches Geburtsjahr gelten als sehr wahrscheinlicher Treffer, werden aber erst nach Bestätigung verknüpft. Widersprüchliche feste IDs werden nie automatisch zusammengeführt.
+- Noch nicht platzierte Almanach-Charaktere können zunächst frei oder gezielt als Kind, Partner oder Elternteil einer vorhandenen Baumperson übernommen werden. Die genealogische Position wird nicht aus einem Nachnamen erfunden.
 
 ## Darstellung
 

@@ -2,6 +2,7 @@ import {
   assertValidFamily,
   cloneValue,
   createRecordId,
+  createWorldPersonId,
   normalizeFamily
 } from '../domain/family-schema.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
@@ -12,9 +13,10 @@ function createSnapshot(family) {
   return cloneValue(family);
 }
 
-function createPersonRecord(values, id) {
+function createPersonRecord(values, id, familyId) {
   return {
     id,
+    worldPersonId: values.worldPersonId || createWorldPersonId(familyId, id),
     name: values.name,
     title: values.title,
     sex: values.sex,
@@ -100,7 +102,7 @@ export function createFamilyStore(initialFamily, options = {}) {
   function addPerson(values) {
     const id = values.id || createRecordId('person', family.persons.map(person => person.id));
     commit('person-added', draft => {
-      draft.persons.push(createPersonRecord(values, id));
+      draft.persons.push(createPersonRecord(values, id, draft.document.id));
       if (!draft.view.focusPersonId) draft.view.focusPersonId = id;
     }, { personId: id });
     selectedPersonId = id;
@@ -118,7 +120,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     const personId = personValues.id || createRecordId('person', family.persons.map(person => person.id));
     const relationKind = relationValues.relationKind;
     commit('related-person-added', draft => {
-      draft.persons.push(createPersonRecord(personValues, personId));
+      draft.persons.push(createPersonRecord(personValues, personId, draft.document.id));
 
       if (relationKind === 'partnership') {
         draft.partnerships.push({

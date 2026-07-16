@@ -13,6 +13,15 @@
 
     const app = initializeApp(firebaseConfig);
     const db  = getFirestore(app);
+    const familyTreeDb = getFirestore(app, 'family-trees');
+    const FAMILY_TREE_ENTITY_COLLECTIONS = Object.freeze([
+      'persons',
+      'partnerships',
+      'parentages',
+      'houses',
+      'cadetBranches',
+      'timeJumps'
+    ]);
     const MODULE_STORE_COLLECTION = 'char_tabs';
     const MODULE_STORE_DOC = 'config';
     const MODULE_STORE_ENTRY_COLLECTION = 'module_store_entries';
@@ -629,6 +638,31 @@
           notifyAppStatus(getFirebaseErrorMessage(e, 'Charaktere konnten nicht geladen werden.'));
           return [];
         }
+      },
+      async listPublishedFamilyRegistry() {
+        const snap = await getDocs(collection(familyTreeDb, 'publishedRegistryNodes'));
+        return snap.docs.map(item => ({ id: item.id, ...item.data() }));
+      },
+      async loadPublishedFamily(familyId) {
+        const safeFamilyId = String(familyId || '').trim();
+        if (!/^[a-z0-9-]{2,120}$/.test(safeFamilyId)) {
+          throw new Error('Die Familien-ID ist ungültig.');
+        }
+        const published = await getDoc(doc(familyTreeDb, 'publishedFamilies', safeFamilyId));
+        const activeReleaseId = published.exists() ? String(published.data().activeReleaseId || '') : '';
+        if (!activeReleaseId) return null;
+        const releaseRef = doc(familyTreeDb, 'publishedFamilies', safeFamilyId, 'releases', activeReleaseId);
+        const release = await getDoc(releaseRef);
+        if (!release.exists()) return null;
+        const entries = await Promise.all(FAMILY_TREE_ENTITY_COLLECTIONS.map(async collectionName => {
+          const snapshot = await getDocs(collection(releaseRef, collectionName));
+          return [collectionName, snapshot.docs.map(item => item.data())];
+        }));
+        return {
+          family: { ...release.data(), ...Object.fromEntries(entries) },
+          releaseId: activeReleaseId,
+          publishedAt: published.data().publishedAt?.toDate?.()?.toISOString?.() || ''
+        };
       },
       async saveCharacter(id, data) {
         const { setDoc, doc, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");

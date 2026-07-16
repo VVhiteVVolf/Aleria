@@ -28,6 +28,7 @@ function openCharProfile(id) {
 
   syncPortraitDisplay(c.portrait || null, c.name || '?');
   syncProfileLinkDisplay(c.profileLink || '', c.name || '');
+  syncCharacterGenealogyFields(c);
   const urlField = document.getElementById('cp-portrait-url');
   if (urlField) urlField.value = c.portrait || '';
 
@@ -93,6 +94,53 @@ function syncProfileLinkDisplay(profileLink, name) {
   anchor.setAttribute('aria-disabled', 'true');
   anchor.removeAttribute('aria-label');
   anchor.removeAttribute('title');
+}
+
+function getCharacterGenealogyFormData(existing = {}) {
+  const genealogy = normalizeCharacterGenealogyRecord(existing.genealogy);
+  return normalizeCharacterGenealogyRecord({
+    ...genealogy,
+    worldPersonId: genealogy.worldPersonId || existing.identity?.worldPersonId || '',
+    birth: document.getElementById('cp-genealogy-birth')?.value || '',
+    death: document.getElementById('cp-genealogy-death')?.value || '',
+    sex: document.getElementById('cp-genealogy-sex')?.value || 'unknown',
+    houseName: document.getElementById('cp-genealogy-house')?.value || ''
+  });
+}
+
+function syncCharacterGenealogyFields(character = {}) {
+  const genealogy = normalizeCharacterGenealogyRecord(character.genealogy);
+  document.getElementById('cp-genealogy-birth').value = genealogy.birth || '';
+  document.getElementById('cp-genealogy-death').value = genealogy.death || '';
+  document.getElementById('cp-genealogy-sex').value = ['female', 'male', 'unknown'].includes(genealogy.sex)
+    ? genealogy.sex
+    : 'unknown';
+  document.getElementById('cp-genealogy-house').value = genealogy.houseName || '';
+
+  const source = genealogy.sources[0] || null;
+  const sourceLink = document.getElementById('cp-genealogy-source-link');
+  const safeSourceUrl = sanitizeHref(source?.url || '');
+  sourceLink.hidden = !safeSourceUrl;
+  if (safeSourceUrl) sourceLink.href = source.url;
+  else sourceLink.removeAttribute('href');
+
+  const sourceStatus = document.getElementById('cp-genealogy-source-status');
+  sourceStatus.hidden = !source;
+  sourceStatus.textContent = source
+    ? `Verknüpft mit ${source.familyId} / ${source.personId}${source.releaseId ? ` · Fassung ${source.releaseId}` : ''}`
+    : '';
+
+  const relations = genealogy.relationships || {};
+  const relationGroups = [
+    ['Eltern', relations.parents],
+    ['Partner', relations.partners],
+    ['Kinder', relations.children]
+  ].filter(([, people]) => Array.isArray(people) && people.length);
+  const relationBox = document.getElementById('cp-genealogy-relations');
+  relationBox.hidden = relationGroups.length === 0;
+  relationBox.innerHTML = relationGroups.map(([label, people]) => `
+    <div><strong>${escapeHtml(label)}:</strong> ${people.map(person => escapeHtml(person.name || '')).filter(Boolean).join(', ')}</div>
+  `).join('');
 }
 
 function switchCharTab(tab) {
@@ -205,6 +253,7 @@ function collectCharacterProfileDataFromForm() {
   const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
   const profileLink = normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || '');
   const now = new Date().toISOString();
+  const genealogy = getCharacterGenealogyFormData(existing);
   return {
     id: _editingChar || '',
     name: document.getElementById('cp-name')?.value.trim() || existing.name || '',
@@ -232,7 +281,11 @@ function collectCharacterProfileDataFromForm() {
     emotesOverride: true,
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
-      : sanitizeCharacterInventoryData(existing.inventory || {})
+      : sanitizeCharacterInventoryData(existing.inventory || {}),
+    identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
+      ? existing.identity
+      : { worldPersonId: genealogy.worldPersonId }),
+    genealogy
   };
 }
 
@@ -296,6 +349,7 @@ async function saveCharacter() {
   const saveTargetId = isBuiltin ? null : sourceId;
   const now = new Date().toISOString();
 
+  const genealogy = getCharacterGenealogyFormData(existing);
   const data = {
     name, title, fraktion, role, status: characterStatus, relevance,
     taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
@@ -311,7 +365,11 @@ async function saveCharacter() {
     emotesOverride: true,
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
-      : sanitizeCharacterInventoryData(existing.inventory || {})
+      : sanitizeCharacterInventoryData(existing.inventory || {}),
+    identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
+      ? existing.identity
+      : { worldPersonId: genealogy.worldPersonId }),
+    genealogy
   };
 
   status.style.color = 'var(--gold)';

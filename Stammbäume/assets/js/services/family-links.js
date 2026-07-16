@@ -1,9 +1,12 @@
 const FAMILY_WORKSPACE_DOCUMENT = 'Stammbaum.html';
 
-export function createFamilyViewLink(familyId = '') {
+export function createFamilyViewLink(familyId = '', personId = '') {
   const normalizedId = String(familyId || '').trim();
-  const familyQuery = normalizedId ? `family=${encodeURIComponent(normalizedId)}&` : '';
-  return `${FAMILY_WORKSPACE_DOCUMENT}?${familyQuery}mode=view`;
+  const query = new URLSearchParams();
+  if (normalizedId) query.set('family', normalizedId);
+  query.set('mode', 'view');
+  if (String(personId || '').trim()) query.set('person', String(personId).trim());
+  return `${FAMILY_WORKSPACE_DOCUMENT}?${query.toString()}`;
 }
 
 export function normalizeFamilyViewLink(_value, familyId = '') {

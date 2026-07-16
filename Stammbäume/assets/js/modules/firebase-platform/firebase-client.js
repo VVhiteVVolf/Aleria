@@ -28,12 +28,15 @@ import { FIREBASE_PLATFORM_CONFIG, readFirebaseRuntimeOptions } from './firebase
 
 function initializeDatabase(app, databaseId) {
   try {
-    return initializeFirestore(app, {
+    const settings = {
       localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() })
-    }, databaseId);
+    };
+    return databaseId
+      ? initializeFirestore(app, settings, databaseId)
+      : initializeFirestore(app, settings);
   } catch (error) {
     if (error?.code !== 'failed-precondition') throw error;
-    return getFirestore(app, databaseId);
+    return databaseId ? getFirestore(app, databaseId) : getFirestore(app);
   }
 }
 
@@ -52,6 +55,7 @@ export function createFirebaseClient({
         : initializeApp(config.app, config.appName);
       const auth = getAuth(app);
       const db = initializeDatabase(app, config.databaseId);
+      const almanachDb = initializeDatabase(app);
       const storage = getStorage(app);
       const functions = getFunctions(app, config.functionsRegion);
 
@@ -60,6 +64,7 @@ export function createFirebaseClient({
       if (runtimeOptions.useEmulators) {
         connectAuthEmulator(auth, runtimeOptions.authEmulatorUrl, { disableWarnings: true });
         connectFirestoreEmulator(db, runtimeOptions.firestoreEmulatorHost, runtimeOptions.firestoreEmulatorPort);
+        connectFirestoreEmulator(almanachDb, runtimeOptions.firestoreEmulatorHost, runtimeOptions.firestoreEmulatorPort);
         connectStorageEmulator(storage, runtimeOptions.storageEmulatorHost, runtimeOptions.storageEmulatorPort);
         connectFunctionsEmulator(functions, runtimeOptions.functionsEmulatorHost, runtimeOptions.functionsEmulatorPort);
       } else if (runtimeOptions.appCheckSiteKey) {
@@ -69,7 +74,7 @@ export function createFirebaseClient({
         });
       }
 
-      return Object.freeze({ app, auth, db, storage, functions, config, runtimeOptions });
+      return Object.freeze({ app, auth, db, almanachDb, storage, functions, config, runtimeOptions });
     });
     return servicesPromise;
   }

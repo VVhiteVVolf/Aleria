@@ -275,7 +275,8 @@ function renderCharGrid() {
   actions.innerHTML = `
     <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${_charOrganizeMode ? 'Ansicht' : 'Organisieren'}</button>
     <button type="button" data-character-grid-action="export-archive">Charakterarchiv exportieren</button>
-    <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>`;
+    <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>
+    <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>`;
   grid.appendChild(actions);
 
   if (_activeCharTab === 'Alle' && _hiddenBuiltinCharacterIds.size) {

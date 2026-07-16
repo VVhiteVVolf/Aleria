@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260715-comment-wrap-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260703-character-dashboard-v1">
+<link rel="stylesheet" href="./styles/character-genealogy.css?v=20260716-genealogy-import-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260709-scene-module-import-export-v1">
 <link rel="stylesheet" href="./styles/family-editor.css?v=20260715-family-workbench-v1">
 <link rel="stylesheet" href="./styles/family-workbench.css?v=20260715-family-workbench-v2">
@@ -66,6 +67,7 @@
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
   <!-- Firebase -->
   <script type="module" src="./firebase.js?v=20260703-module-insert-json-v4"></script>
+  <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260716-genealogy-import-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
@@ -988,6 +990,39 @@
           <label class="char-field-label">Fraktion / Zugehörigkeit</label>
           <input class="char-field-input" type="text" id="cp-fraktion" placeholder="z.B. Orden des Goldenen Schwerts" maxlength="100">
         </div>
+        <section class="cp-genealogy-section" aria-labelledby="cp-genealogy-heading">
+          <div class="cp-genealogy-head">
+            <div>
+              <div class="char-field-label" id="cp-genealogy-heading">Genealogische Daten</div>
+              <div class="char-field-hint">Diese Angaben dienen auch der Erkennung gleicher Personen in Stammbäumen.</div>
+            </div>
+            <a id="cp-genealogy-source-link" class="cp-genealogy-source-link" target="_blank" rel="noopener noreferrer" hidden>Im Stammbaum öffnen</a>
+          </div>
+          <div class="char-profile-meta-grid">
+            <div class="char-field-group">
+              <label class="char-field-label" for="cp-genealogy-birth">Geburt / Geburtsjahr</label>
+              <input class="char-field-input" type="text" id="cp-genealogy-birth" placeholder="z.B. 1687" maxlength="40">
+            </div>
+            <div class="char-field-group">
+              <label class="char-field-label" for="cp-genealogy-death">Tod / Todesjahr</label>
+              <input class="char-field-input" type="text" id="cp-genealogy-death" placeholder="z.B. 1734 oder lebend" maxlength="40">
+            </div>
+            <div class="char-field-group">
+              <label class="char-field-label" for="cp-genealogy-sex">Geschlecht</label>
+              <select class="char-field-input" id="cp-genealogy-sex">
+                <option value="unknown">Unbekannt</option>
+                <option value="female">Weiblich</option>
+                <option value="male">Männlich</option>
+              </select>
+            </div>
+            <div class="char-field-group">
+              <label class="char-field-label" for="cp-genealogy-house">Haus</label>
+              <input class="char-field-input" type="text" id="cp-genealogy-house" placeholder="z.B. Haus Arwydd" maxlength="120">
+            </div>
+          </div>
+          <div id="cp-genealogy-source-status" class="cp-genealogy-source-status" hidden></div>
+          <div id="cp-genealogy-relations" class="cp-genealogy-relations" hidden></div>
+        </section>
         <div class="char-profile-meta-grid">
           <div class="char-field-group">
             <label class="char-field-label">Rolle</label>

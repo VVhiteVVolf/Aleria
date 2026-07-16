@@ -139,7 +139,9 @@ function buildStoredCharacterFromRecord(char, archived) {
     emotesOverride: !!cloned.emotesOverride,
     inventory: cloned.inventory && typeof cloned.inventory === 'object'
       ? sanitizeCharacterInventoryData(cloned.inventory)
-      : undefined
+      : undefined,
+    identity: normalizeCharacterIdentityRecord(cloned.identity),
+    genealogy: normalizeCharacterGenealogyRecord(cloned.genealogy)
   };
 }
 
