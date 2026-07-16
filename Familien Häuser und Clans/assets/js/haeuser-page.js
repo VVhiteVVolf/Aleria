@@ -4,9 +4,14 @@
   const root = document.querySelector("[data-haeuser-root]");
   if (!root) return;
 
+  let currentHouseData = null;
+
   initStaticPage();
   window.addEventListener("aleria:haeuser:data-ready", (event) => {
     renderHouseData(event.detail?.data || null);
+  });
+  window.addEventListener("aleria-inline-images-rendered", () => {
+    if (currentHouseData) renderImages(currentHouseData.images || {});
   });
   if (window.HAEUSER_DATA) {
     renderHouseData(window.HAEUSER_DATA);
@@ -20,6 +25,7 @@
   function renderHouseData(data) {
     if (!data) return;
 
+    currentHouseData = data;
     document.title = data.meta?.title || `${data.name || "Haus"} - Aleria`;
     setText("[data-haeuser-title]", data.name);
     setText("[data-haeuser-type]", data.classification?.houseType || data.meta?.type);
@@ -57,7 +63,11 @@
       if (image.width) slot.dataset.orteImageWidth = String(image.width);
       if (image.maxHeight) slot.dataset.orteImageMaxHeight = String(image.maxHeight);
 
-      if (!slot.querySelector("img")) {
+      const existingImage = slot.querySelector("img");
+      const hasPlaceholder = !!slot.querySelector(".orte-image-placeholder, .orte-image-placeholder-media");
+      const renderedSource = slot.dataset.orteRenderedImageSrc || existingImage?.getAttribute("src") || "";
+
+      if (!existingImage || hasPlaceholder || !renderedSource) {
         slot.classList.add("has-image");
         slot.innerHTML = renderImageMarkup({
           src: image.src,
