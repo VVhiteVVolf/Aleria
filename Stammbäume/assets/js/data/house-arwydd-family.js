@@ -42,6 +42,14 @@ const ARWYDD_LIFE_DATES = Object.freeze({
   'ilaria-arwydd': ['1728', '']
 });
 
+const HOUSE_HEAD_IDS = new Set(['idris-arwydd']);
+const MAIN_LINE_IDS = new Set(['ianto-arwydd', 'ifor-arwydd', 'ivor-arwydd']);
+
+function lineageRoleFor(personId) {
+  if (HOUSE_HEAD_IDS.has(personId)) return 'head';
+  return MAIN_LINE_IDS.has(personId) ? 'mainline' : 'branch';
+}
+
 function person(id, name, sex, familyRole, houseId = '', details = {}) {
   const [birth, death] = ARWYDD_LIFE_DATES[id] || ['', ''];
   return {
@@ -56,6 +64,7 @@ function person(id, name, sex, familyRole, houseId = '', details = {}) {
     portraitPlaceholder: 'auto',
     houseId,
     familyRole,
+    lineageRole: details.lineageRole || lineageRoleFor(id),
     tags: [],
     notes: '',
     ...details

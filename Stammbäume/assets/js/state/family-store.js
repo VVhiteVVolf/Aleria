@@ -27,6 +27,7 @@ function createPersonRecord(values, id, familyId) {
     portraitPlaceholder: values.portraitPlaceholder,
     houseId: values.houseId,
     familyRole: values.familyRole,
+    lineageRole: values.lineageRole,
     tags: values.tags || [],
     notes: values.notes,
     extensions: {}

@@ -19,6 +19,22 @@ const HOUSE_EMBLEMS = Object.freeze({
 });
 
 const SAETHWYR_HOUSE_ID = 'house-saethwyr';
+const HOUSE_HEAD_IDS = new Set([
+  'kynwrig-draig',
+  'odyar-saethwyr',
+  'limwris-saethwyr',
+  'llawvrodedd-saethwyr',
+  'drudwas-saethwyr',
+  'gruffyd-saethwyr',
+  'gallgoid-saethwyr',
+  'huw-saethwyr'
+]);
+const MAIN_LINE_IDS = new Set(['marmaduke-saethwyr', 'arian-saethwyr']);
+
+function lineageRoleFor(personId) {
+  if (HOUSE_HEAD_IDS.has(personId)) return 'head';
+  return MAIN_LINE_IDS.has(personId) ? 'mainline' : 'branch';
+}
 
 function person(id, name, sex, birth = '', death = '', houseId = SAETHWYR_HOUSE_ID, options = {}) {
   return createFamilyPerson({
@@ -30,6 +46,7 @@ function person(id, name, sex, birth = '', death = '', houseId = SAETHWYR_HOUSE_
     houseId,
     portrait: HOUSE_SAETHWYR_PORTRAITS[id] || '',
     familyRole: options.familyRole || (houseId === SAETHWYR_HOUSE_ID ? 'core' : 'married'),
+    lineageRole: options.lineageRole || lineageRoleFor(id),
     ...options
   });
 }

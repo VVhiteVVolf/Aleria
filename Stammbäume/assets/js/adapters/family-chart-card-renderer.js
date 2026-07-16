@@ -46,10 +46,13 @@ function crestScaleStyle(data = {}) {
 
 function personCard(data) {
   const role = escapeHtml(data.role || 'core');
+  const lineageRole = escapeHtml(data.lineageRole || 'branch');
+  const frameVariant = escapeHtml(data.frameVariant || 'standard');
   return `
-    <div class="card-inner aleria-chart-card aleria-person-card role-${role}"${crestPositionStyle(data.crestPosition)}>
+    <div class="card-inner aleria-chart-card aleria-person-card role-${role} lineage-${lineageRole} frame-${frameVariant}" data-lineage-role="${lineageRole}"${crestPositionStyle(data.crestPosition)}>
       ${marker(data)}
       <div class="aleria-person-card__fill" aria-hidden="true"></div>
+      <div class="aleria-person-card__portrait-backdrop" aria-hidden="true"></div>
       ${optionalImage(data.portrait, 'aleria-person-card__portrait')}
       <div class="aleria-person-card__text">
         <span class="family-card-name">${escapeHtml(data.name)}</span>

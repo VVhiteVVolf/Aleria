@@ -16,6 +16,7 @@ export function createFamilyPerson({
   portrait = '',
   houseId,
   familyRole = 'core',
+  lineageRole = 'branch',
   title = '',
   worldPersonId = '',
   portraitPlaceholder = 'auto',
@@ -36,6 +37,7 @@ export function createFamilyPerson({
     portraitPlaceholder,
     houseId,
     familyRole,
+    lineageRole,
     tags: [...tags],
     notes,
     extensions: { ...extensions }

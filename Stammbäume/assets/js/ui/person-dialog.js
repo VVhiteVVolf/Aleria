@@ -1,4 +1,5 @@
 import { FAMILY_ROLES } from '../config/family-colors.js';
+import { DEFAULT_PERSON_LINEAGE_ROLE, PERSON_LINEAGE_ROLES } from '../config/person-lineage.js';
 
 function setField(form, name, value) {
   const field = form.elements.namedItem(name);
@@ -10,9 +11,12 @@ export function createPersonDialog(documentRef = document) {
   const form = documentRef.getElementById('person-form');
   const title = documentRef.getElementById('person-dialog-title');
   const roleSelect = documentRef.getElementById('person-family-role');
+  const lineageRoleSelect = documentRef.getElementById('person-lineage-role');
   const houseSelect = documentRef.getElementById('person-house');
 
   roleSelect.replaceChildren(...Object.values(FAMILY_ROLES).map(role => new Option(role.label, role.id)));
+  lineageRoleSelect.replaceChildren(...Object.values(PERSON_LINEAGE_ROLES)
+    .map(role => new Option(role.label, role.id)));
 
   function populateHouses(houses, selectedId = '') {
     houseSelect.replaceChildren(new Option('— Kein Haus —', ''));
@@ -27,6 +31,7 @@ export function createPersonDialog(documentRef = document) {
     setField(form, 'sex', 'unknown');
     setField(form, 'status', 'alive');
     setField(form, 'familyRole', 'core');
+    setField(form, 'lineageRole', DEFAULT_PERSON_LINEAGE_ROLE);
     populateHouses(family.houses);
     dialog.showModal();
     form.elements.namedItem('name')?.focus();
@@ -35,7 +40,7 @@ export function createPersonDialog(documentRef = document) {
   function openEdit(person, family) {
     title.textContent = 'Person bearbeiten';
     populateHouses(family.houses, person.houseId);
-    ['id', 'name', 'title', 'sex', 'status', 'birth', 'death', 'portrait', 'portraitPlaceholder', 'houseId', 'familyRole', 'notes']
+    ['id', 'name', 'title', 'sex', 'status', 'birth', 'death', 'portrait', 'portraitPlaceholder', 'houseId', 'familyRole', 'lineageRole', 'notes']
       .forEach(name => setField(form, name, person[name]));
     dialog.showModal();
     form.elements.namedItem('name')?.focus();
@@ -59,6 +64,7 @@ export function createPersonDialog(documentRef = document) {
       portraitPlaceholder: values.portraitPlaceholder,
       houseId: values.houseId,
       familyRole: values.familyRole,
+      lineageRole: values.lineageRole,
       notes: String(values.notes || '').trim()
     };
   }

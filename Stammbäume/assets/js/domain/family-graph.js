@@ -72,21 +72,24 @@ export function createFamilyGraph(input) {
     return peopleFromIds(ids);
   }
 
-  function getSiblings(personId) {
-    const ownParentIds = new Set(getParentages(personId).flatMap(parentage => parentage.parentIds));
+  function getSiblings(personId, options = {}) {
+    const allowedTypes = Array.isArray(options.types) ? new Set(options.types) : null;
+    const relevantParentages = personIdToCheck => getParentages(personIdToCheck)
+      .filter(parentage => !allowedTypes || allowedTypes.has(parentage.type));
+    const ownParentIds = new Set(relevantParentages(personId).flatMap(parentage => parentage.parentIds));
     const siblingIds = new Set();
     ownParentIds.forEach(parentId => {
       (parentagesByParent.get(parentId) || []).forEach(parentage => {
+        if (allowedTypes && !allowedTypes.has(parentage.type)) return;
         if (parentage.childId !== personId) siblingIds.add(parentage.childId);
       });
     });
     return peopleFromIds([...siblingIds]).map(person => {
-      const siblingParentIds = new Set(getParentages(person.id).flatMap(parentage => parentage.parentIds));
+      const siblingParentIds = new Set(relevantParentages(person.id).flatMap(parentage => parentage.parentIds));
       const commonParentCount = [...ownParentIds].filter(id => siblingParentIds.has(id)).length;
       return Object.freeze({ person, kind: commonParentCount >= 2 ? 'full' : 'half' });
     });
-  }
-
+}
   function traverse(startId, nextPeople, maximumDepth = Infinity) {
     const result = [];
     const queue = [{ personId: startId, depth: 0 }];
@@ -184,4 +187,3 @@ export function createFamilyGraph(input) {
     search
   });
 }
-

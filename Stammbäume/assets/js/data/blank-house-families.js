@@ -1,13 +1,6 @@
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 
-export const HOUSE_DRAIG_FAMILY = createBlankHouseFamily({
-  id: 'haus-draig',
-  title: 'Haus Draig',
-  emblem: 'assets/images/houses/haus-draig.png',
-  houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.draig
-});
-
 export const HOUSE_GWEFRYDD_FAMILY = createBlankHouseFamily({
   id: 'haus-gwefrydd',
   title: 'Haus Gwefrydd',

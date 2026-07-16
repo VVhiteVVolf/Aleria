@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS, FAMILY_ROLES } from '../config/family-colors.js';
 import { DEFAULT_CREST_FRAME, isCrestFrameId } from '../config/chart-frames.js';
+import { DEFAULT_PERSON_LINEAGE_ROLE, isPersonLineageRole } from '../config/person-lineage.js';
 import { normalizeHouseProfile } from './house-profile.js';
 
 export const FAMILY_SCHEMA = 'aleria.family-tree';
@@ -94,6 +95,9 @@ function normalizePerson(person = {}, index = 0) {
     portraitPlaceholder: enumValue(person.portraitPlaceholder, PORTRAIT_PLACEHOLDERS, 'auto'),
     houseId: text(person.houseId),
     familyRole: Object.hasOwn(FAMILY_ROLES, person.familyRole) ? person.familyRole : 'core',
+    lineageRole: isPersonLineageRole(person.lineageRole)
+      ? person.lineageRole
+      : DEFAULT_PERSON_LINEAGE_ROLE,
     tags: uniqueText(person.tags),
     notes: text(person.notes),
     extensions: person.extensions && typeof person.extensions === 'object' ? cloneValue(person.extensions) : {}

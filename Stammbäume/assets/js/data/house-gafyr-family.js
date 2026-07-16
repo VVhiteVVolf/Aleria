@@ -19,6 +19,21 @@ const HOUSE_EMBLEMS = Object.freeze({
 });
 
 const GAFYR_HOUSE_ID = 'house-gafyr';
+const HOUSE_HEAD_IDS = new Set([
+  'kynwrig-gafyr',
+  'rheidwyn-gafyr',
+  'maldwyn-gafyr',
+  'mathonwy-gafyr',
+  'hwyvel-gafyr',
+  'gerwyn-gafyr',
+  'duncan-gafyr'
+]);
+const MAIN_LINE_IDS = new Set(['egon-gafyr', 'alwyn-gafyr', 'rhys-gafyr']);
+
+function lineageRoleFor(personId) {
+  if (HOUSE_HEAD_IDS.has(personId)) return 'head';
+  return MAIN_LINE_IDS.has(personId) ? 'mainline' : 'branch';
+}
 
 function person(id, name, sex, birth = '', death = '', houseId = GAFYR_HOUSE_ID, options = {}) {
   return createFamilyPerson({
@@ -30,6 +45,7 @@ function person(id, name, sex, birth = '', death = '', houseId = GAFYR_HOUSE_ID,
     houseId,
     portrait: HOUSE_GAFYR_PORTRAITS[id] || '',
     familyRole: options.familyRole || (houseId === GAFYR_HOUSE_ID ? 'core' : 'married'),
+    lineageRole: options.lineageRole || lineageRoleFor(id),
     ...options
   });
 }

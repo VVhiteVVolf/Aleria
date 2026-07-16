@@ -1,4 +1,5 @@
 import { FAMILY_ROLES } from '../config/family-colors.js';
+import { DEFAULT_PERSON_LINEAGE_ROLE, PERSON_LINEAGE_ROLES } from '../config/person-lineage.js';
 
 function addPeople(select, people, emptyLabel) {
   select.replaceChildren(new Option(emptyLabel, ''));
@@ -17,10 +18,13 @@ export function createRelatedPersonDialog(documentRef = document) {
   const parentageType = form.elements.namedItem('parentageType');
   const legitimacy = form.elements.namedItem('legitimacy');
   const roleSelect = form.elements.namedItem('familyRole');
+  const lineageRoleSelect = form.elements.namedItem('lineageRole');
   const houseSelect = form.elements.namedItem('houseId');
   const secondParentSelect = form.elements.namedItem('secondParentId');
 
   roleSelect.replaceChildren(...Object.values(FAMILY_ROLES).map(role => new Option(role.label, role.id)));
+  lineageRoleSelect.replaceChildren(...Object.values(PERSON_LINEAGE_ROLES)
+    .map(role => new Option(role.label, role.id)));
 
   function inferRole() {
     if (relationSelect.value === 'partnership') {
@@ -80,6 +84,7 @@ export function createRelatedPersonDialog(documentRef = document) {
     form.elements.namedItem('sex').value = 'unknown';
     form.elements.namedItem('status').value = 'alive';
     form.elements.namedItem('portraitPlaceholder').value = 'auto';
+    lineageRoleSelect.value = DEFAULT_PERSON_LINEAGE_ROLE;
     form.elements.namedItem('certainty').value = 'confirmed';
     form.elements.namedItem('visibility').value = 'public';
     syncFields();
@@ -102,6 +107,7 @@ export function createRelatedPersonDialog(documentRef = document) {
         portraitPlaceholder: values.portraitPlaceholder,
         houseId: values.houseId,
         familyRole: values.familyRole,
+        lineageRole: values.lineageRole,
         notes: String(values.notes || '').trim()
       },
       relation: {

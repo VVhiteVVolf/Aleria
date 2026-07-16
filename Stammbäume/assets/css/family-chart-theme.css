@@ -73,6 +73,14 @@
   transition: filter 150ms ease, transform 150ms ease;
 }
 
+.aleria-person-card.lineage-mainline,
+.aleria-person-card.lineage-head {
+  filter:
+    drop-shadow(0 0 0.24rem rgba(255, 225, 132, 0.94))
+    drop-shadow(0 0 0.72rem rgba(220, 164, 54, 0.72))
+    drop-shadow(0 0.65rem 0.62rem rgba(45, 27, 15, 0.34));
+}
+
 .aleria-person-card.role-married {
   --card-fill: #355f48;
   --card-subtle: #d5e2d4;
@@ -121,13 +129,23 @@
   clip-path: polygon(0 0, 94% 0, 100% 8%, 100% 91%, 94% 100%, 0 100%);
 }
 
+.aleria-person-card__portrait-backdrop,
 .aleria-person-card__portrait {
   position: absolute;
   z-index: 1;
   top: 12.8%;
-  left: 7.4%;
+  left: 6.6%;
   width: 30.5%;
   height: 82.6%;
+}
+
+.aleria-person-card__portrait-backdrop {
+  background: #c9b184 url('../images/portraits/backgrounds/portrait-archway.webp') center / cover no-repeat;
+  pointer-events: none;
+}
+
+.aleria-person-card__portrait {
+  z-index: 2;
   background: transparent;
   object-fit: cover;
   object-position: center top;
@@ -137,7 +155,7 @@
 
 .aleria-person-card__text {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 24%;
   right: 8.2%;
   bottom: 14.5%;
@@ -162,7 +180,7 @@
 
 .aleria-person-card__frame {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -173,7 +191,7 @@
 
 .aleria-person-card__crest {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   top: var(--card-crest-top);
   left: var(--card-crest-left);
   width: var(--card-crest-width);
@@ -236,6 +254,50 @@
     drop-shadow(0 0 0.22rem rgba(255, 232, 165, 0.95))
     drop-shadow(0 0.8rem 0.75rem rgba(45, 27, 15, 0.4));
   transform: translateY(-2px);
+}
+
+.family-chart-host div.card:hover .aleria-person-card.lineage-mainline,
+.family-chart-host div.card-main .aleria-person-card.lineage-mainline,
+.family-chart-host div.card:hover .aleria-person-card.lineage-head,
+.family-chart-host div.card-main .aleria-person-card.lineage-head {
+  filter:
+    drop-shadow(0 0 0.32rem rgba(255, 237, 171, 1))
+    drop-shadow(0 0 0.92rem rgba(224, 170, 61, 0.88))
+    drop-shadow(0 0.8rem 0.75rem rgba(45, 27, 15, 0.4));
+}
+
+.aleria-person-card.frame-head .aleria-person-card__fill {
+  inset: 10.5% 5.4% 13.8% 39.4%;
+}
+
+.aleria-person-card.frame-head {
+  --card-fill: #7b3632;
+  --card-text: #fff7e8;
+  --card-subtle: #efd8b7;
+}
+
+.aleria-person-card.frame-head .aleria-person-card__portrait-backdrop,
+.aleria-person-card.frame-head .aleria-person-card__portrait {
+  top: 6%;
+  left: 10.4%;
+  width: 25.2%;
+  height: 80.2%;
+}
+
+.aleria-person-card.frame-head .aleria-person-card__text {
+  top: 12%;
+  right: 6.2%;
+  bottom: 14.5%;
+  left: 40%;
+}
+
+.aleria-person-card.frame-head .aleria-person-card__frame {
+  top: -12.7%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: 112.7%;
 }
 
 .aleria-crest-node {

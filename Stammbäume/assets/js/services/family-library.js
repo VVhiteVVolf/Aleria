@@ -7,6 +7,11 @@ import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { loadSavedFamilyRecords, saveFamilyRecord } from './family-persistence.js';
 import { createFamilyViewLink } from './family-links.js';
+import {
+  isUntouchedBlankFamily,
+  needsRegisteredFamilyUpgrade,
+  resolveRegisteredFamilyUpgrade
+} from './family-registry-upgrade.js';
 
 export function normalizeFamilyId(value) {
   return String(value || '')
@@ -30,20 +35,21 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
   const byId = new Map(FAMILY_REGISTRY.map(record => [record.id, { ...record, source: 'registry' }]));
   loadSavedFamilyRecords(storage).forEach(record => {
     if (retiredIds.has(record.id)) return;
+    const registered = byId.get(record.id);
+    const needsUpgrade = registered
+      && !isUntouchedBlankFamily(record)
+      && needsRegisteredFamilyUpgrade(registered.family, record.family);
+    const family = needsUpgrade
+      ? resolveRegisteredFamilyUpgrade(registered.family, record.family)
+      : record.family;
     byId.set(record.id, {
       ...record,
+      family,
+      source: needsUpgrade ? 'registry-upgrade' : record.source,
       link: createFamilyViewLink(record.id)
     });
   });
   return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
-}
-
-function isUntouchedBlankFamily(record) {
-  const family = record?.family;
-  return family?.extensions?.blankFamily === true
-    && (family.persons || []).length === 0
-    && (family.partnerships || []).length === 0
-    && (family.parentages || []).length === 0;
 }
 
 export function loadFamilyById(familyId, storage = globalThis.localStorage) {
@@ -51,6 +57,17 @@ export function loadFamilyById(familyId, storage = globalThis.localStorage) {
   if (RETIRED_FAMILY_IDS.includes(normalizedId)) return null;
   const local = loadSavedFamilyRecords(storage).find(record => record.id === normalizedId);
   const registered = getRegisteredFamily(normalizedId);
+  if (local && registered && !isUntouchedBlankFamily(local)) {
+    const needsUpgrade = needsRegisteredFamilyUpgrade(registered.family, local.family);
+    const family = needsUpgrade
+      ? resolveRegisteredFamilyUpgrade(registered.family, local.family)
+      : local.family;
+    return {
+      ...local,
+      family,
+      source: needsUpgrade ? 'registry-upgrade' : local.source
+    };
+  }
   if (local && !(registered && isUntouchedBlankFamily(local) && registered.family.persons.length)) return local;
   return registered ? { ...registered, source: 'registry' } : null;
 }

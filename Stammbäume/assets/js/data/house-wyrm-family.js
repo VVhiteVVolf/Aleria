@@ -12,6 +12,21 @@ const HOUSE_EMBLEMS = Object.freeze({
   wyrm: 'assets/images/houses/haus-wyrm.png'
 });
 
+const HOUSE_HEAD_IDS = new Set([
+  'tryffin-draig',
+  'gwastad-wyrm',
+  'rhydderch-wyrm',
+  'gallgoid-wyrm',
+  'gwlyddyn-wyrm',
+  'mailgwin-wyrm'
+]);
+const MAIN_LINE_IDS = new Set(['shan-wyrm', 'gavin-wyrm']);
+
+function lineageRoleFor(personId) {
+  if (HOUSE_HEAD_IDS.has(personId)) return 'head';
+  return MAIN_LINE_IDS.has(personId) ? 'mainline' : 'branch';
+}
+
 function worldPersonId(houseId, personId) {
   const familyId = String(houseId || 'house-wyrm').replace(/^house-/, 'haus-');
   return `person--${familyId}--${personId}`;
@@ -32,6 +47,7 @@ function member(id, name, sex, birth, death = '', options = {}) {
     portraitPlaceholder: 'auto',
     houseId,
     familyRole: options.familyRole || 'core',
+    lineageRole: options.lineageRole || lineageRoleFor(id),
     tags: [],
     notes: options.notes || ''
   };

@@ -1,4 +1,5 @@
 import { STATUS_LABELS, getFamilyRole } from '../config/family-colors.js';
+import { getPersonLineageRole } from '../config/person-lineage.js';
 import { resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { formatAge, formatLifeLine } from '../domain/person-presentation.js';
 import { escapeHtml } from './dom.js';
@@ -82,6 +83,7 @@ export function renderPersonInspector(container, graph, personId) {
   }
 
   const role = getFamilyRole(person.familyRole);
+  const lineageRole = getPersonLineageRole(person.lineageRole);
   const house = graph.getHouse(person.houseId);
   const parents = graph.getParents(person.id);
   const children = graph.getChildren(person.id);
@@ -111,6 +113,7 @@ export function renderPersonInspector(container, graph, personId) {
         <dl class="inspector-facts">
           <div><dt>Haus</dt><dd>${escapeHtml(house?.name || 'Nicht zugeordnet')}</dd></div>
           <div><dt>Status</dt><dd>${escapeHtml(STATUS_LABELS[person.status] || person.status)}</dd></div>
+          <div><dt>Hauslinie</dt><dd>${escapeHtml(lineageRole.label)}</dd></div>
           <div><dt>Alter zur Gegenwart</dt><dd>${escapeHtml(formatAge(person))}</dd></div>
           <div><dt>Eltern</dt><dd>${parents.length}</dd></div>
           <div><dt>Nachkommen</dt><dd>${descendants.length}</dd></div>

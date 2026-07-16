@@ -4,6 +4,7 @@ import {
 } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS, resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { getCrestFrame, getPersonCardFrame, TIME_JUMP_FRAME } from '../config/chart-frames.js';
+import { getPersonLineageRole } from '../config/person-lineage.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { formatLifeLine } from '../domain/person-presentation.js';
 import { earliestKnownBirthYear, latestKnownPersonYear } from '../domain/time-boundaries.js';
@@ -78,7 +79,8 @@ function selectPrimaryParentage(parentages) {
 
 function createChartPerson(person, house, diagnostics) {
   const role = getFamilyRole(person.familyRole);
-  const frame = getPersonCardFrame(role.id);
+  const lineageRole = getPersonLineageRole(person.lineageRole);
+  const frame = getPersonCardFrame(role.id, lineageRole.id);
   return {
     id: person.id,
     data: {
@@ -88,11 +90,14 @@ function createChartPerson(person, house, diagnostics) {
       house: house?.name || '',
       life: formatLifeLine(person),
       portrait: resolvePortraitSource(person),
-      crest: house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+      crest: lineageRole.isHouseHead ? '' : (house?.emblem || PORTRAIT_PLACEHOLDERS.crest),
       frameAsset: frame.asset,
+      frameVariant: frame.variant,
       crestPosition: frame.crestPosition,
       role: role.id,
       roleLabel: role.label,
+      lineageRole: lineageRole.id,
+      lineageRoleLabel: lineageRole.label,
       nodeKind: 'person',
       aleria: {
         personId: person.id,

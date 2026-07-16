@@ -86,6 +86,23 @@ const EGON = {
 const MYRDDIN = {
   name: "Myrddin Draig",
   title: "Ratszauberer des Königreiches Cenyr",
+  identity: {
+    worldPersonId: "person--haus-draig--myrddin-draig",
+  },
+  genealogy: {
+    worldPersonId: "person--haus-draig--myrddin-draig",
+    sex: "male",
+    status: "alive",
+    birth: "1119",
+    death: "",
+    houseId: "house-draig",
+    houseName: "Haus Draig",
+    familyRole: "core",
+    portraitPlaceholder: "auto",
+    tags: ["Almanach-Charakter", "Ratszauberer"],
+    sources: [],
+    relationships: { parents: [], partners: [], children: [] },
+  },
   avatars: {
     ernst:      "https://i.imgur.com/suUCqAX.png",
     erklarend:  "https://i.imgur.com/TDKcCfG.png",
@@ -152,6 +169,23 @@ const SKADI = {
 const GWENDOLYN = {
   name: "Gwendolyn Draig",
   title: "Gräfin von Celtigerns Wacht · geb. Aderyn",
+  identity: {
+    worldPersonId: "person--haus-aderyn--gwendolyn-aderyn",
+  },
+  genealogy: {
+    worldPersonId: "person--haus-aderyn--gwendolyn-aderyn",
+    sex: "female",
+    status: "alive",
+    birth: "1695",
+    death: "",
+    houseId: "house-aderyn",
+    houseName: "Haus Aderyn",
+    familyRole: "married",
+    portraitPlaceholder: "auto",
+    tags: ["Almanach-Charakter", "Gräfin"],
+    sources: [],
+    relationships: { parents: [], partners: [], children: [] },
+  },
   avatars: {
     kalt:       "https://i.imgur.com/ZX7jU9h.png",
     amuesiert:  "https://i.imgur.com/ZX7jU9h.png",
@@ -162,6 +196,23 @@ const GWENDOLYN = {
 const MEURIG = {
   name: "Meurig Draig",
   title: "Justiziar der Grafschaft Celtigerns Wacht",
+  identity: {
+    worldPersonId: "person--haus-draig--meurig-draig",
+  },
+  genealogy: {
+    worldPersonId: "person--haus-draig--meurig-draig",
+    sex: "male",
+    status: "alive",
+    birth: "1668",
+    death: "",
+    houseId: "house-draig",
+    houseName: "Haus Draig",
+    familyRole: "core",
+    portraitPlaceholder: "auto",
+    tags: ["Almanach-Charakter", "Justiziar"],
+    sources: [],
+    relationships: { parents: [], partners: [], children: [] },
+  },
   avatars: {
     stoisch:    "https://64.media.tumblr.com/f2e763e4d73a5e0d145ca5eaddc9eeee/18fb17b5724618d9-15/s250x400/369a883e07c647469ae13f5c4536e069a2156eb2.pnj",
     mahnend:    "https://64.media.tumblr.com/f2e763e4d73a5e0d145ca5eaddc9eeee/18fb17b5724618d9-15/s250x400/369a883e07c647469ae13f5c4536e069a2156eb2.pnj",
@@ -171,6 +222,23 @@ const MEURIG = {
 const ODYAR = {
   name: "Odyar Draig",
   title: "Kämmerer der Grafschaft Celtigerns Wacht",
+  identity: {
+    worldPersonId: "person--haus-draig--odyar-draig",
+  },
+  genealogy: {
+    worldPersonId: "person--haus-draig--odyar-draig",
+    sex: "male",
+    status: "alive",
+    birth: "1668",
+    death: "",
+    houseId: "house-draig",
+    houseName: "Haus Draig",
+    familyRole: "core",
+    portraitPlaceholder: "auto",
+    tags: ["Almanach-Charakter", "Kämmerer"],
+    sources: [],
+    relationships: { parents: [], partners: [], children: [] },
+  },
   avatars: {
     ernst:      "https://64.media.tumblr.com/b368d25817cb316df6cb6528a614f2fa/5009d73b71942c23-eb/s250x400/25600023b1659593d1efdb0104950b558bc33518.pnj",
     numerisch:  "https://64.media.tumblr.com/b368d25817cb316df6cb6528a614f2fa/5009d73b71942c23-eb/s250x400/25600023b1659593d1efdb0104950b558bc33518.pnj",
@@ -229,6 +297,11 @@ function buildAvatarEmotes(figure) {
     }));
 }
 
+function cloneGenealogy(genealogy) {
+  if (!genealogy) return undefined;
+  return JSON.parse(JSON.stringify(genealogy));
+}
+
 function buildBuiltinCommentCharacter(id, figure, preferredMood, overrides = {}) {
   return {
     id: `builtin:${id}`,
@@ -236,6 +309,8 @@ function buildBuiltinCommentCharacter(id, figure, preferredMood, overrides = {})
     title: overrides.title || figure?.title || '',
     portrait: overrides.portrait || getPrimaryAvatar(figure, preferredMood),
     emotes: overrides.emotes || buildAvatarEmotes(figure),
+    identity: figure?.identity ? { ...figure.identity } : undefined,
+    genealogy: cloneGenealogy(figure?.genealogy),
   };
 }
 
