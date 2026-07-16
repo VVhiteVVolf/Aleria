@@ -97,32 +97,17 @@ window.HAEUSER_DATA = {
     "haus-banner": {
       src: "assets/images/banners/rhonwens-traenen.png",
       alt: "Herrschaftsbanner Rhonwens Tränen",
-      format: "banner",
-      maxHeight: 320,
+      format: "square",
+      maxHeight: 520,
     },
     "hof-gruender-portrait": {
-      src: "assets/images/portraits/haus-arwydd/idwalladr-arwydd.jpg",
-      alt: "Idwalladr Arwydd",
+      src: "assets/images/portraits/haus-arwydd/idris-arwydd.jpg",
+      alt: "Idris Arwydd",
       format: "portrait",
     },
     "hof-oberhaupt-portrait-0001": {
       src: "assets/images/portraits/haus-arwydd/idris-arwydd.jpg",
       alt: "Idris Arwydd",
-      format: "portrait",
-    },
-    "hof-oberhaupt-portrait-0002": {
-      src: "assets/images/portraits/haus-arwydd/ianto-arwydd.jpg",
-      alt: "Ianto Arwydd",
-      format: "portrait",
-    },
-    "hof-oberhaupt-portrait-0003": {
-      src: "assets/images/portraits/haus-arwydd/ieuan-arwydd.jpg",
-      alt: "Ieuan Arwydd",
-      format: "portrait",
-    },
-    "hof-oberhaupt-portrait-0004": {
-      src: "assets/images/portraits/haus-arwydd/iorwerth-arwydd.jpg",
-      alt: "Iorwerth Arwydd",
       format: "portrait",
     },
     "hof-erbfolge-portrait-0001": {
@@ -140,89 +125,14 @@ window.HAEUSER_DATA = {
       alt: "Ivor Arwydd",
       format: "portrait",
     },
-    "hof-amt-portrait-0001": {
-      src: "assets/images/portraits/haus-arwydd/imogen-arwydd.jpg",
-      alt: "Imogen Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0002": {
-      src: "assets/images/portraits/haus-arwydd/izolda-arwydd.jpg",
-      alt: "Izolda Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0003": {
-      src: "assets/images/portraits/haus-arwydd/izobel-arwydd.jpg",
-      alt: "Izobel Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0004": {
-      src: "assets/images/portraits/haus-arwydd/idelle-arwydd.jpg",
-      alt: "Idelle Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0005": {
-      src: "assets/images/portraits/haus-arwydd/isolde-arwydd.jpg",
-      alt: "Isolde Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0006": {
-      src: "assets/images/portraits/haus-arwydd/ioan-arwydd.jpg",
-      alt: "Ioan Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0007": {
-      src: "assets/images/portraits/haus-arwydd/ida-arwydd.jpg",
-      alt: "Ida Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0008": {
-      src: "assets/images/portraits/haus-arwydd/iwan-arwydd.jpg",
-      alt: "Iwan Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0009": {
-      src: "assets/images/portraits/haus-arwydd/isaac-arwydd.jpg",
-      alt: "Isaac Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0010": {
-      src: "assets/images/portraits/haus-arwydd/ilaria-arwydd.jpg",
-      alt: "Ilaria Arwydd",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0011": {
-      src: "assets/images/portraits/haus-arwydd/deliah-mwyalchen.jpg",
-      alt: "Deliah Mwyalchen",
-      format: "portrait",
-    },
-    "hof-amt-portrait-0012": {
-      src: "assets/images/portraits/haus-arwydd/breandan-saethwyr.jpg",
-      alt: "Breandan Saethwyr",
-      format: "portrait",
-    },
   },
 
   contentTargets: {
-    courtFounder: "† Idwalladr Arwydd †\n(1653 - 1720)",
+    courtFounder: "Idris\n(1720 - ???? )",
     courtHead: "Idris Arwydd\n(1672 - ???? )",
-    courtDeputy: "Ianto Arwydd\n(1700 - ???? )",
-    courtCouncilOne: "Ieuan Arwydd\n(1702 - ???? )",
-    courtCouncilTwo: "Iorwerth Arwydd\n(1704 - ???? )",
     successionOne: "Ianto Arwydd",
     successionTwo: "Ifor Arwydd",
     successionThree: "Ivor Arwydd",
-    courtOfficeOne: "Imogen Arwydd",
-    courtOfficeTwo: "Izolda Arwydd",
-    courtOfficeThree: "Izobel Arwydd",
-    courtOfficeFour: "Idelle Arwydd",
-    courtOfficeFive: "Isolde Arwydd",
-    courtOfficeSix: "Ioan Arwydd",
-    courtOfficeSeven: "Ida Arwydd",
-    courtOfficeEight: "Iwan Arwydd",
-    courtOfficeNine: "Isaac Arwydd",
-    courtOfficeTen: "Ilaria Arwydd",
-    courtOfficeEleven: "Deliah Mwyalchen",
-    courtOfficeTwelve: "Breandan Saethwyr",
   },
 
   familyTreeEmbed: {

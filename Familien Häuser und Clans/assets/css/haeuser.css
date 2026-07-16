@@ -375,7 +375,8 @@ body {
 
 .haeuser-banner-slot {
   width: 100%;
-  min-height: 300px;
+  aspect-ratio: 1 / 1;
+  min-height: 460px;
 }
 
 .haeuser-template-frame .haeuser-banner-slot img {
