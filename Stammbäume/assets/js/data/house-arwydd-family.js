@@ -125,7 +125,9 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     person('carys', 'Carys', 'female', 'married'),
 
     person('imogen-arwydd', 'Imogen', 'female', 'core', 'house-arwydd'),
-    person('breandan-saethwyr', 'Breandan Saethwyr', 'male', 'married', 'house-saethwyr'),
+    person('breandan-saethwyr', 'Breandan Saethwyr', 'male', 'married', 'house-saethwyr', {
+      worldPersonId: 'person--haus-saethwyr--breandan-saethwyr'
+    }),
     person('idris-arwydd', 'Idris', 'male', 'core', 'house-arwydd'),
     person('deliah-mwyalchen', 'Deliah Mwyalchen', 'female', 'married', 'house-mwyalchen'),
     person('iseult-arwydd', 'Iseult', 'female', 'core', 'house-arwydd', {

@@ -17,13 +17,14 @@ import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits
 import {
   HOUSE_DRAIG_FAMILY,
   HOUSE_GWEFRYDD_FAMILY,
-  HOUSE_GWYVERN_FAMILY,
-  HOUSE_SAETHWYR_FAMILY
+  HOUSE_GWYVERN_FAMILY
 } from '../assets/js/data/blank-house-families.js';
 import { HOUSE_GAFYR_FAMILY } from '../assets/js/data/house-gafyr-family.js';
 import { HOUSE_GAFYR_PORTRAITS } from '../assets/js/data/house-gafyr-portraits.js';
 import { HOUSE_WYRM_FAMILY } from '../assets/js/data/house-wyrm-family.js';
 import { HOUSE_WYRM_PORTRAITS } from '../assets/js/data/house-wyrm-portraits.js';
+import { HOUSE_SAETHWYR_FAMILY } from '../assets/js/data/house-saethwyr-family.js';
+import { HOUSE_SAETHWYR_PORTRAITS } from '../assets/js/data/house-saethwyr-portraits.js';
 import {
   LOWER_KNIGHT_HOUSE_DEFINITIONS,
   LOWER_KNIGHT_HOUSE_FAMILIES
@@ -1184,7 +1185,7 @@ test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zw
 
 test('verwendet für namens- und jahresgleiche Personen hausübergreifend dieselbe Weltpersonen-ID', () => {
   const identitiesByNameAndBirth = new Map();
-  [HOUSE_ARWYDD_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY].map(normalizeFamily).forEach(family => {
+  [HOUSE_ARWYDD_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY, HOUSE_SAETHWYR_FAMILY].map(normalizeFamily).forEach(family => {
     family.persons.forEach(person => {
       if (!/^\d{4}$/.test(person.birth || '')) return;
       const displayName = buildFamilyPersonDisplayName(family, person);
@@ -1229,7 +1230,109 @@ test('liefert für Haus Gafyr echte Portraits lokal und Platzhalter nur für unb
   }));
 });
 
-test('ersetzt nur eine unberührte lokale Wyrm-Leerakte durch die neue Registerfassung', () => {
+test('bildet Haus Saethwyr mit beiden Überlieferungssprüngen und allen belegten Zweigen ab', () => {
+  const family = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+  const wyrm = normalizeFamily(HOUSE_WYRM_FAMILY);
+  const gafyr = normalizeFamily(HOUSE_GAFYR_FAMILY);
+  const arwydd = normalizeFamily(HOUSE_ARWYDD_FAMILY);
+
+  assert.equal(family.persons.length, 59);
+  assert.equal(family.partnerships.length, 26);
+  assert.equal(family.parentages.length, 32);
+  assert.equal(family.cadetBranches.length, 12);
+  assert.equal(family.timeJumps.length, 2);
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-kynwrig-sianwyn');
+  assert.deepEqual(graph.getChildren('kynwrig-draig').map(person => person.id), ['odyar-saethwyr', 'rhianwyn-saethwyr']);
+  assert.deepEqual(graph.getChildren('odyar-saethwyr').map(person => person.id), ['limwris-saethwyr', 'myfanwy-saethwyr']);
+  assert.deepEqual(graph.getChildren('limwris-saethwyr').map(person => person.id), ['llawvrodedd-saethwyr', 'owena-saethwyr']);
+  assert.deepEqual(
+    graph.getChildren('gruffyd-saethwyr').map(person => person.id),
+    ['dolena-saethwyr', 'gallgoid-saethwyr', 'gwenllian-saethwyr', 'padrig-saethwyr']
+  );
+  assert.deepEqual(graph.getParents('cadoc-saethwyr').map(person => person.id), ['caradog-saethwyr', 'jenniffer-marwolaeth']);
+  assert.equal(
+    family.cadetBranches.find(branch => branch.parentPartnershipId === 'marriage-rhianwyn-tryffin')?.targetFamilyId,
+    'haus-wyrm'
+  );
+  assert.equal(
+    family.cadetBranches.find(branch => branch.parentPartnershipId === 'marriage-elaine-derwen')?.targetFamilyId,
+    'haus-wyrm'
+  );
+
+  [
+    [family, 'kynwrig-draig', gafyr, 'kynwrig-draig'],
+    [family, 'sianwyn-gafyr', gafyr, 'sianwyn-gafyr'],
+    [family, 'limwris-saethwyr', gafyr, 'limwris-saethwyr'],
+    [family, 'mairwyn-gafyr', gafyr, 'mairwyn-gafyr'],
+    [family, 'tryffin-draig', wyrm, 'tryffin-draig'],
+    [family, 'rhianwyn-saethwyr', wyrm, 'rhianwyn-saethwyr'],
+    [family, 'gwastad-wyrm', wyrm, 'gwastad-wyrm'],
+    [family, 'elaine-saethwyr', wyrm, 'elaine-saethwyr'],
+    [family, 'derwen-wyrm', wyrm, 'derwen-wyrm'],
+    [family, 'marmaduke-saethwyr', wyrm, 'marmaduke-saethwyr'],
+    [family, 'bronwyn-wyrm', wyrm, 'bronwyn-wyrm'],
+    [family, 'breandan-saethwyr', arwydd, 'breandan-saethwyr'],
+    [family, 'imogen-arwydd', arwydd, 'imogen-arwydd']
+  ].forEach(([firstFamily, firstId, secondFamily, secondId]) => {
+    assert.equal(
+      firstFamily.persons.find(person => person.id === firstId).worldPersonId,
+      secondFamily.persons.find(person => person.id === secondId).worldPersonId,
+      `${firstId} muss hausübergreifend dieselbe Weltperson bleiben.`
+    );
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 2);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['kynwrig-draig']);
+  const pendingIds = ['kynwrig-draig'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Saethwyr-Partner oder Knoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('liefert für Haus Saethwyr belegte Portraits lokal und wiederverwendet gemeinsame Personenbilder', async () => {
+  const family = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-saethwyr/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_SAETHWYR_PORTRAITS).length, 49);
+  assert.equal(Object.keys(sourceManifest).length, 38);
+  assert.equal(picturedPeople.length, 49);
+  assert.equal(placeholderPeople.length, 10);
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+  assert.equal(HOUSE_SAETHWYR_PORTRAITS['breandan-saethwyr'], HOUSE_ARWYDD_PORTRAITS['breandan-saethwyr']);
+  assert.equal(HOUSE_SAETHWYR_PORTRAITS['marmaduke-saethwyr'], HOUSE_WYRM_PORTRAITS['marmaduke-saethwyr']);
+
+  await Promise.all(Object.entries(HOUSE_SAETHWYR_PORTRAITS).map(async ([personId, portrait]) => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitzuordnung ohne Saethwyr-Person: ${personId}`);
+    assert.equal(person.portrait, portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    const isPng = portrait.toLocaleLowerCase('de').endsWith('.png');
+    assert.deepEqual(
+      [...image.subarray(0, isPng ? 4 : 3)],
+      isPng ? [0x89, 0x50, 0x4e, 0x47] : [0xff, 0xd8, 0xff]
+    );
+  }));
+});
+
+test('ersetzt nur unberührte lokale Leerakten durch ausgearbeitete Registerfassungen', () => {
   const storage = createMemoryStorage();
   const blankWyrm = {
     ...HOUSE_WYRM_FAMILY,
@@ -1261,6 +1364,28 @@ test('ersetzt nur eine unberührte lokale Wyrm-Leerakte durch die neue Registerf
     folderPath: ['Eigene Fassung']
   }, editedStorage);
   assert.equal(loadFamilyById('haus-wyrm', editedStorage).family.persons.length, 1);
+
+  const blankSaethwyr = {
+    ...HOUSE_SAETHWYR_FAMILY,
+    persons: [],
+    partnerships: [],
+    parentages: [],
+    cadetBranches: [],
+    timeJumps: [],
+    lineage: {
+      ...HOUSE_SAETHWYR_FAMILY.lineage,
+      founderPartnershipId: '',
+      timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    },
+    extensions: { blankFamily: true }
+  };
+  saveFamilyToLibrary({
+    family: blankSaethwyr,
+    id: 'haus-saethwyr',
+    title: 'Haus Saethwyr',
+    folderPath: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']
+  }, storage);
+  assert.equal(loadFamilyById('haus-saethwyr', storage).family.persons.length, 59);
 });
 
 test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hierarchie', async () => {
@@ -1274,7 +1399,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
   ]);
-  const blankFamilies = [HOUSE_DRAIG_FAMILY, HOUSE_GWEFRYDD_FAMILY, HOUSE_GWYVERN_FAMILY, HOUSE_SAETHWYR_FAMILY];
+  const blankFamilies = [HOUSE_DRAIG_FAMILY, HOUSE_GWEFRYDD_FAMILY, HOUSE_GWYVERN_FAMILY];
 
   assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length);
   expected.forEach(({ rankId, path }, familyId) => {

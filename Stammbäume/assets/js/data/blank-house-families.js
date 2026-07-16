@@ -8,13 +8,6 @@ export const HOUSE_DRAIG_FAMILY = createBlankHouseFamily({
   houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.draig
 });
 
-export const HOUSE_SAETHWYR_FAMILY = createBlankHouseFamily({
-  id: 'haus-saethwyr',
-  title: 'Haus Saethwyr',
-  emblem: 'assets/images/houses/haus-saethwyr.png',
-  houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.saethwyr
-});
-
 export const HOUSE_GWEFRYDD_FAMILY = createBlankHouseFamily({
   id: 'haus-gwefrydd',
   title: 'Haus Gwefrydd',
