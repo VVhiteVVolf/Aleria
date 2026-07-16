@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
+import {
+  isPortraitCardEvent,
+  toFamilyChartData
+} from '../assets/js/adapters/family-chart-adapter.js';
 import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
@@ -8,16 +11,32 @@ import {
 import { createRoundedOrthogonalPath } from '../assets/js/adapters/family-chart-link-renderer.js';
 import { getCrestFrame, getPersonCardFrame } from '../assets/js/config/chart-frames.js';
 import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
+import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
+import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits.js';
 import {
   HOUSE_DRAIG_FAMILY,
-  HOUSE_GAFYR_FAMILY,
-  HOUSE_SAETHWYR_FAMILY,
-  HOUSE_WYRM_FAMILY
+  HOUSE_GWEFRYDD_FAMILY,
+  HOUSE_GWYVERN_FAMILY,
+  HOUSE_SAETHWYR_FAMILY
 } from '../assets/js/data/blank-house-families.js';
+import { HOUSE_GAFYR_FAMILY } from '../assets/js/data/house-gafyr-family.js';
+import { HOUSE_GAFYR_PORTRAITS } from '../assets/js/data/house-gafyr-portraits.js';
+import { HOUSE_WYRM_FAMILY } from '../assets/js/data/house-wyrm-family.js';
+import { HOUSE_WYRM_PORTRAITS } from '../assets/js/data/house-wyrm-portraits.js';
+import {
+  LOWER_KNIGHT_HOUSE_DEFINITIONS,
+  LOWER_KNIGHT_HOUSE_FAMILIES
+} from '../assets/js/data/lower-knight-house-families.js';
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
 import { createEmptyFamily, createFoundingFamily } from '../assets/js/domain/family-factory.js';
+import {
+  createFolderPathFromHouseProfile,
+  formatHouseProfile,
+  getHouseRank
+} from '../assets/js/domain/house-profile.js';
 import { calculateAge, formatLifeLine } from '../assets/js/domain/person-presentation.js';
+import { buildRegistryFolderTree } from '../assets/js/modules/family-registry/registry-folder-tree.js';
 import {
   FamilyValidationError,
   assertValidFamily,
@@ -37,6 +56,16 @@ import {
   createTreePersonFromAlmanach
 } from '../assets/js/modules/almanach-bridge/almanach-character-bridge.js';
 import {
+  createPersonBiographyModule,
+  createPersonBiographyStats,
+  getPersonBiographyModule,
+  normalizePersonBiographyModule,
+  PERSON_BIOGRAPHY_EXTENSION_ID
+} from '../assets/js/modules/person-biography/person-biography-model.js';
+import { renderPersonBiography } from '../assets/js/modules/person-biography/person-biography-renderer.js';
+import { buildRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-model.js';
+import { renderRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-renderer.js';
+import {
   createWorkspaceModeUrl,
   grantWorkspaceEditAccess,
   resolveWorkspaceAccess,
@@ -49,6 +78,8 @@ import {
   familyRootRecord,
   isValidFirestoreRecordId
 } from '../assets/js/modules/family-sync/family-change-set.js';
+import { buildFamilyPersonDisplayName } from '../../js/world-identity/family-person-names.js';
+import { normalizePersonName } from '../../js/world-identity/person-identity.js';
 
 const tests = [];
 
@@ -214,7 +245,6 @@ test('baut Personenkarten in der vorgegebenen Ebenenfolge auf', () => {
   const html = createFamilyChartCardHtml({ data: person });
   const layers = [
     'aleria-person-card__fill',
-    'aleria-person-card__portrait-backdrop',
     'aleria-person-card__portrait',
     'aleria-person-card__text',
     'aleria-person-card__frame',
@@ -222,6 +252,7 @@ test('baut Personenkarten in der vorgegebenen Ebenenfolge auf', () => {
   ].map(className => html.indexOf(className));
   assert.ok(layers.every(index => index >= 0));
   assert.deepEqual(layers, [...layers].sort((first, second) => first - second));
+  assert.doesNotMatch(html, /aleria-person-card__portrait-backdrop/);
   assert.match(html, /person-core\.png/);
 });
 
@@ -264,7 +295,11 @@ test('unterdrückt den rechteckigen Family-Chart-Hintergrund für alle Ebenenkar
   assert.match(css, /\.aleria-crest-node__emblem\s*\{[\s\S]*?scale\(var\(--crest-emblem-scale, 0\.86\)\);/);
   assert.match(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?z-index: 4;/);
   assert.doesNotMatch(css, /\.aleria-crest-node__frame\s*\{[\s\S]*?mix-blend-mode:/);
-  assert.match(css, /\.aleria-person-card__portrait-backdrop\s*\{[\s\S]*?width: 30\.6%;[\s\S]*?height: 80%;/);
+  const portraitRule = css.match(/\.aleria-person-card__portrait\s*\{([\s\S]*?)\}/)?.[1] || '';
+  assert.match(portraitRule, /left: 7\.4%;/);
+  assert.match(portraitRule, /width: 30\.5%;/);
+  assert.doesNotMatch(portraitRule, /border-radius|clip-path/);
+  assert.doesNotMatch(css, /\.aleria-person-card__portrait-backdrop\s*\{/);
   assert.equal(goldFrame[25], 6, 'Der Goldrahmen muss als RGBA-PNG echte Transparenz besitzen.');
 });
 
@@ -314,12 +349,16 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
   assert.equal(family.persons.length, 27);
   assert.equal(family.partnerships.length, 9);
   assert.equal(family.parentages.length, 17);
-  assert.equal(family.document.emblem, 'https://i.imgur.com/I6OEMqq.png');
+  assert.equal(family.document.emblem, 'assets/images/houses/haus-arwydd.png');
   assert.equal(family.view.focusPersonId, 'idwalladr-arwydd');
+  assert.equal(graph.getPerson('idwalladr-arwydd').birth, '1653');
+  assert.equal(graph.getPerson('idwalladr-arwydd').death, '1720');
+  assert.equal(graph.getPerson('breandan-saethwyr').death, '1730');
+  assert.equal(graph.getPerson('ilaria-arwydd').birth, '1728');
   assert.deepEqual(
     Object.fromEntries(family.houses.filter(house => house.emblem).map(house => [house.id, house.emblem])),
     {
-      'house-arwydd': 'https://i.imgur.com/I6OEMqq.png',
+      'house-arwydd': 'assets/images/houses/haus-arwydd.png',
       'house-saethwyr': 'assets/images/houses/haus-saethwyr.png',
       'house-wyrm': 'assets/images/houses/haus-wyrm.png',
       'house-draig': 'assets/images/houses/haus-draig.png',
@@ -361,6 +400,24 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
   assert.equal(chartById.get('myrcella-gwefrydd').data.crest, 'assets/images/houses/haus-gwefrydd.png');
   assert.equal(chartById.get('gwynnan-gwywern').data.crest, 'assets/images/houses/haus-gwyvern.png');
   assert.equal(family.cadetBranches.find(branch => branch.id === 'married-away-wym').targetFamilyId, 'haus-wyrm');
+});
+
+test('liefert für Haus Arwydd sämtliche Portraits als lokale Projektdateien aus', async () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-arwydd/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_ARWYDD_PORTRAITS).length, 27);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_ARWYDD_PORTRAITS).sort());
+  assert.ok(family.persons.every(person => person.portrait === HOUSE_ARWYDD_PORTRAITS[person.id]));
+
+  await Promise.all(family.persons.map(async person => {
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
 });
 
 test('führt überlagerungsarme Verbindungslinien über gemeinsame rechtwinklige Stämme', () => {
@@ -425,6 +482,8 @@ test('erzeugt explizite und familienbezogene Ansichts-URLs', () => {
 
 test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-Handler aus', async () => {
   const html = await readFile(new URL('../Stammbaum.html', import.meta.url), 'utf8');
+  const inspectorScript = await readFile(new URL('../assets/js/ui/person-inspector.js', import.meta.url), 'utf8');
+  const appController = await readFile(new URL('../assets/js/ui/app-controller.js', import.meta.url), 'utf8');
   assert.match(html, /id="family-app" data-workspace-mode="view"/);
   assert.match(html, /class="toolbar"[^>]*data-edit-only/);
   assert.match(html, /id="edit-access-dialog"/);
@@ -434,7 +493,141 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /data-action="open-almanach-characters"/);
   assert.match(html, /id="almanach-character-dialog"/);
   assert.match(html, /assets\/css\/almanach-bridge\.css/);
+  assert.match(html, /\.\.\/AleriaAlmanach\/styles\/module-page-biography\.css/);
+  assert.match(html, /\.\.\/AleriaAlmanach\/styles\/icon-directory\.css/);
+  assert.match(html, /\.\.\/AleriaAlmanach\/modules\/icon-directory\/icon-directory-data\.js/);
+  assert.match(html, /id="person-biography-dialog"/);
+  assert.match(html, /id="relationship-matrix-dialog"/);
+  assert.match(html, /assets\/css\/relationship-matrix\.css/);
+  assert.match(html, /id="living-count"/);
+  assert.match(html, /id="partnership-count"/);
+  assert.match(inspectorScript, /data-action="open-time-jump-after-person"/);
+  assert.match(appController, /relationshipMatrixDialog\.open\(store\.getState\(\)\.family, personId\)/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
+});
+
+test('übernimmt den Biographie-Vertrag des Almanachs als Personen-Erweiterung', () => {
+  const module = normalizePersonBiographyModule({
+    stats: [{ label: 'Haus', value: 'Haus Arwydd' }],
+    quote: 'Ein <strong>Zitat</strong>',
+    biography: {
+      sideWidth: 120,
+      connectionPortraitHeight: 20,
+      connectionTextOffset: 99,
+      abilities: [{ title: 'Geduld', detail: 'Ausdauernd', icon: '✦' }],
+      extraSections: [{ position: 'afterWorks', mode: 'list', title: 'Spuren', text: 'Eine\nZwei' }],
+      connections: [{ name: 'Iseult', detail: 'Schwester', imageFormat: 'square' }],
+      documents: [{ title: 'Siegelring', text: 'Familienbesitz', link: './ring.html' }]
+    }
+  });
+
+  assert.equal(module.schema, 'aleria.biography-module');
+  assert.equal(module.schemaVersion, 1);
+  assert.deepEqual(module.stats, [['Haus', 'Haus Arwydd']]);
+  assert.equal(module.biography.sideWidth, 100);
+  assert.equal(module.biography.connectionPortraitHeight, 44);
+  assert.equal(module.biography.connectionTextOffset, 80);
+  assert.equal(module.biography.abilities[0].title, 'Geduld');
+  assert.equal(module.biography.extraSections[0].position, 'afterWorks');
+  assert.equal(module.biography.connections[0].imageFormat, 'square');
+  assert.equal(module.biography.documents[0].link, './ring.html');
+});
+
+test('legt neue Biographien mit zwölf sinnvollen Infotabellenzeilen an', () => {
+  const person = HOUSE_ARWYDD_FAMILY.persons.find(item => item.id === 'idris-arwydd');
+  const house = HOUSE_ARWYDD_FAMILY.houses.find(item => item.id === person.houseId);
+  const stats = createPersonBiographyStats(person, house);
+
+  assert.equal(stats.length, 12);
+  assert.deepEqual(stats.map(([label]) => label), [
+    'Vollständiger Name',
+    'Haus',
+    'Titel / Anrede',
+    'Geboren',
+    'Geburtsort',
+    'Gestorben',
+    'Alter im Jahr 1740',
+    'Geschlecht',
+    'Familienstand',
+    'Rang / Stand',
+    'Tätigkeit',
+    'Wohnsitz'
+  ]);
+  assert.equal(stats[0][1], person.name);
+  assert.equal(stats[1][1], house.name);
+  assert.match(stats[6][1], /Jahre$/);
+  assert.equal(createPersonBiographyModule(person, house).stats.length, 12);
+});
+
+test('bindet Almanach-Icons und auswahlstabile Rich-Text-Werkzeuge an', async () => {
+  const [dialogSource, iconDataSource, css] = await Promise.all([
+    readFile(new URL('../assets/js/modules/person-biography/person-biography-dialog.js', import.meta.url), 'utf8'),
+    readFile(new URL('../../AleriaAlmanach/modules/icon-directory/icon-directory-data.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/css/person-biography.css', import.meta.url), 'utf8')
+  ]);
+
+  assert.match(dialogSource, /person-biography-dialog__divider/);
+  assert.match(dialogSource, /data-biography-action="pick-ability-icon"/);
+  assert.match(dialogSource, /rememberRichTextRange/);
+  assert.match(dialogSource, /addEventListener\('mousedown', onMouseDown\)/);
+  assert.match(iconDataSource, /globalThis\.ALERIA_ICON_DIRECTORY = ALERIA_ICON_DIRECTORY/);
+  assert.match(css, /width:\s*100vw/);
+  assert.match(css, /height:\s*100dvh/);
+});
+
+test('speichert Biographien mit Undo und Redo direkt an der Stammbaum-Person', () => {
+  const store = createFamilyStore(SAMPLE_FAMILY);
+  const person = store.getState().family.persons[0];
+  const module = createPersonBiographyModule(person, SAMPLE_FAMILY.houses[0]);
+  module.biography.biographyText = 'Chronik der Person';
+
+  store.setPersonExtension(person.id, PERSON_BIOGRAPHY_EXTENSION_ID, module);
+  assert.equal(getPersonBiographyModule(store.getState().family.persons[0]).biography.biographyText, 'Chronik der Person');
+  assert.equal(store.undo(), true);
+  assert.equal(getPersonBiographyModule(store.getState().family.persons[0]), null);
+  assert.equal(store.redo(), true);
+  assert.equal(getPersonBiographyModule(store.getState().family.persons[0]).biography.biographyText, 'Chronik der Person');
+
+  store.setPersonExtension(person.id, PERSON_BIOGRAPHY_EXTENSION_ID, null);
+  assert.equal(getPersonBiographyModule(store.getState().family.persons[0]), null);
+});
+
+test('rendert die Almanach-Biographie vollständig und erkennt Portraitklicks getrennt', () => {
+  const person = HOUSE_ARWYDD_FAMILY.persons.find(item => item.id === 'idris-arwydd');
+  const biographyModule = normalizePersonBiographyModule({
+    stats: [['Haus', 'Haus Arwydd']],
+    quote: 'Die Linie besteht.',
+    quoteBy: 'Idris',
+    biography: {
+      portraitStages: ['https://i.imgur.com/idris-jung.png', '', 'https://i.imgur.com/idris-alt.png'],
+      biographyText: 'Haupttext',
+      abilities: [{ title: 'Führung', detail: 'Besonnen', icon: '✦' }],
+      works: ['Castellbryn'],
+      trivia: ['Schildkröte'],
+      connections: [{ name: 'Deliah', detail: 'Gemahlin', imageFormat: 'portrait' }],
+      documents: [{ title: 'Wappen', text: 'Hauszeichen', link: './wappen.html' }]
+    }
+  });
+  const html = renderPersonBiography({ person, biographyModule });
+
+  assert.match(html, /class="biography-page"/);
+  assert.match(html, /class="biography-portrait(?:\s|")/);
+  assert.deepEqual(biographyModule.biography.portraitStages, [
+    'https://i.imgur.com/idris-jung.png',
+    '',
+    'https://i.imgur.com/idris-alt.png',
+    ''
+  ]);
+  assert.match(html, />\[1\]<\/button>/);
+  assert.match(html, />\[2\]<\/button>/);
+  assert.match(html, />\[4\]<\/button>/);
+  assert.doesNotMatch(html, />\[3\]<\/button>/);
+  assert.match(html, /Haus Arwydd/);
+  assert.match(html, /Führung/);
+  assert.match(html, /biography-connections/);
+  assert.match(html, /href="\.\/wappen\.html"/);
+  assert.equal(isPortraitCardEvent({ target: { closest: selector => selector === '.aleria-person-card__portrait' } }), true);
+  assert.equal(isPortraitCardEvent({ target: { closest: () => null } }), false);
 });
 
 test('liefert alle lokalen Toolbar-Motive und vereinheitlichte Linienkonturen aus', async () => {
@@ -615,6 +808,37 @@ test('ordnet neue Nachkommen hinter einem frei gesetzten Zeitsprungknoten ein', 
   assert.deepEqual(converted.data.find(person => person.id === childId).rels.parents, [timeJumpNode.id]);
 });
 
+test('setzt einen Zeitsprung direkt nach einer einzelnen Person ohne Partnerschaft', () => {
+  const store = createFamilyStore(SAMPLE_FAMILY);
+  const timeJumpId = store.addTimeJump({
+    parentPersonId: 'cassian-vael',
+    childIds: [],
+    fromYear: '1739',
+    toYear: '1740',
+    years: 1,
+    label: 'Ein Jahr später'
+  });
+  const childId = store.addRelatedPerson('cassian-vael', {
+    name: 'Einzeln überlieferter Erbe', title: '', sex: 'male', status: 'alive', birth: '1740', death: '',
+    portrait: '', portraitPlaceholder: 'auto', houseId: 'house-vael', familyRole: 'core', notes: ''
+  }, {
+    relationKind: 'time-jump-child', timeJumpId, parentageType: 'claimed', legitimacy: 'unknown',
+    certainty: 'probable', visibility: 'public'
+  });
+  const family = store.getState().family;
+  const timeJump = family.timeJumps.find(item => item.id === timeJumpId);
+  const parentage = family.parentages.find(item => item.childId === childId);
+  assert.equal(timeJump.parentPartnershipId, '');
+  assert.equal(timeJump.parentPersonId, 'cassian-vael');
+  assert.deepEqual(parentage.parentIds, ['cassian-vael']);
+  assert.equal(parentage.partnershipId, '');
+
+  const converted = toFamilyChartData(family);
+  const timeJumpNode = converted.data.find(entry => entry.data.aleria.timeJumpId === timeJumpId);
+  assert.deepEqual(timeJumpNode.rels.parents, ['cassian-vael']);
+  assert.deepEqual(converted.data.find(entry => entry.id === childId).rels.parents, [timeJumpNode.id]);
+});
+
 test('bearbeitet Bild und Untertitel des Stammwappenknotens gemeinsam', () => {
   const store = createFamilyStore(SAMPLE_FAMILY);
   store.setLineage({
@@ -721,17 +945,29 @@ test('bereinigt Gründer- und Kadettenverweise beim Löschen von Personen', () =
 
 test('speichert Familien unter verschachtelten Registerpfaden', () => {
   const storage = createMemoryStorage();
-  const folderPath = parseFolderPath('Cenyr > Celtigerns Wacht > Haus Test');
+  const folderPath = parseFolderPath('Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor');
   const saved = saveFamilyToLibrary({
     family: SAMPLE_FAMILY,
     id: 'Haus Test',
     title: 'Haus Test',
-    folderPath
+    folderPath,
+    rankId: 'knight-prince'
   }, storage);
   const loaded = loadFamilyById('haus-test', storage);
   assert.equal(saved.id, 'haus-test');
   assert.deepEqual(loaded.folderPath, folderPath);
   assert.deepEqual(loaded.family.extensions.registry.folderPath, folderPath);
+  assert.deepEqual(loaded.family.document.houseProfile, {
+    rankId: 'knight-prince',
+    seat: 'Gwynthor',
+    barony: 'Llamreis Ankunft',
+    county: 'Celtigerns Wacht',
+    kingdom: 'Cenyr',
+    secondarySeats: [],
+    liegeHouseId: '',
+    liegeHouseName: '',
+    regionEmblems: { seat: '', barony: '', county: '', kingdom: '' }
+  });
   assert.equal(loaded.family.document.title, 'Haus Test');
 });
 
@@ -771,25 +1007,402 @@ test('öffnet Haus Arwydd als eigenständige Registerfamilie', () => {
   assert.equal(loaded.family.lineage.houseId, 'house-arwydd');
 });
 
-test('liefert die vier vorbereiteten Gwynthor-Häuser mit lokalen Wappen aus', () => {
-  const storage = createMemoryStorage();
-  const expectedPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
-  const blankFamilies = [
-    HOUSE_DRAIG_FAMILY,
-    HOUSE_WYRM_FAMILY,
-    HOUSE_SAETHWYR_FAMILY,
-    HOUSE_GAFYR_FAMILY
-  ];
+test('bildet Haus Wyrm mit beiden Überlieferungslücken und allen belegten Zweigen ab', () => {
+  const family = assertValidFamily(HOUSE_WYRM_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const arwydd = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const converted = toFamilyChartData(family);
 
-  assert.equal(listFamilyRecords(storage).length, 5);
-  blankFamilies.forEach(family => {
-    const loaded = loadFamilyById(family.document.id, storage);
-    assert.deepEqual(loaded.folderPath, expectedPath);
-    assert.equal(loaded.family.persons.length, 0);
-    assert.match(loaded.family.document.emblem, /^assets\/images\/houses\/haus-/);
+  assert.equal(family.persons.length, 62);
+  assert.equal(family.partnerships.length, 26);
+  assert.equal(family.parentages.length, 35);
+  assert.equal(family.cadetBranches.length, 12);
+  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-away-saethwyr').targetFamilyId,
+    'haus-saethwyr'
+  );
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.fromYear, '1177');
+  assert.equal(family.lineage.timeGap.toYear, '1249');
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.timeJumps[0].fromYear, '1311');
+  assert.equal(family.timeJumps[0].toYear, '1598');
+
+  assert.deepEqual(
+    graph.getParents('gavin-wyrm').map(person => person.id).sort(),
+    ['neala-wylan', 'shan-wyrm']
+  );
+  assert.deepEqual(
+    graph.getParents('gais-wyrm').map(person => person.id).sort(),
+    ['padrig-wyrm', 'sorcha-cein']
+  );
+  assert.deepEqual(graph.getChildren('eiddon-wyrm').map(person => person.id).sort(), [
+    'bronwyn-wyrm',
+    'meriel-wyrm',
+    'padrig-wyrm'
+  ]);
+  assert.equal(graph.getPerson('jeannae-wyrm').death, '1704');
+  assert.equal(graph.getPerson('fotor-wyrm').birth, '1729?');
+  assert.equal(graph.getPerson('tryffin-draig').familyRole, 'core');
+  assert.equal(graph.getPerson('rhianwyn-saethwyr').familyRole, 'married');
+
+  assert.equal(
+    graph.getPerson('eiddon-wyrm').worldPersonId,
+    arwydd.persons.find(person => person.id === 'eiddon-wym').worldPersonId
+  );
+  assert.equal(
+    graph.getPerson('eiddon-wyrm').portrait,
+    arwydd.persons.find(person => person.id === 'eiddon-wym').portrait
+  );
+  assert.equal(
+    graph.getPerson('iseult-arwydd').worldPersonId,
+    arwydd.persons.find(person => person.id === 'iseult-arwydd').worldPersonId
+  );
+  assert.equal(
+    graph.getPerson('iseult-arwydd').portrait,
+    arwydd.persons.find(person => person.id === 'iseult-arwydd').portrait
+  );
+  assert.ok(converted.data.some(entry => entry.data.nodeKind === 'time-gap'));
+  assert.ok(converted.data.some(entry => entry.data.nodeKind === 'time-jump'));
+});
+
+test('liefert für Haus Wyrm alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_WYRM_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-wyrm/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_WYRM_PORTRAITS).length, 50);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_WYRM_PORTRAITS).sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 50);
+  assert.equal(placeholderPeople.length, 12);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_WYRM_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
+test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
+  const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const wyrm = assertValidFamily(HOUSE_WYRM_FAMILY).family;
+  const arwydd = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 57);
+  assert.equal(family.partnerships.length, 23);
+  assert.equal(family.parentages.length, 33);
+  assert.equal(family.cadetBranches.length, 8);
+  assert.equal(family.timeJumps.length, 2);
+  const earlyGap = family.timeJumps.find(timeJump => timeJump.id === 'gap-rheidwyn-maldwyn');
+  const longGap = family.timeJumps.find(timeJump => timeJump.id === 'gap-maldwyn-mathonwy');
+  assert.deepEqual(earlyGap.childIds, ['maldwyn-gafyr', 'mairwyn-gafyr']);
+  assert.equal(earlyGap.parentPartnershipId, 'marriage-rheidwyn-heulwen');
+  assert.equal(longGap.fromYear, '1312');
+  assert.equal(longGap.toYear, '1593');
+  assert.equal(longGap.parentPartnershipId, 'marriage-maldwyn-eurolwyn');
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-kynwrig-elinowyn');
+
+  assert.deepEqual(
+    graph.getParents('mathonwy-gafyr').map(person => person.id).sort(),
+    ['eurolwyn-draig', 'maldwyn-gafyr']
+  );
+  assert.equal(
+    family.cadetBranches.find(branch => branch.parentPartnershipId === 'marriage-mairwyn-limwris')?.targetFamilyId,
+    'haus-saethwyr'
+  );
+  assert.equal(
+    family.cadetBranches.some(branch => branch.parentPartnershipId === 'marriage-maldwyn-eurolwyn'),
+    false
+  );
+  assert.deepEqual(
+    graph.getChildren('egon-gafyr').map(person => person.id).sort(),
+    ['alwyn-gafyr', 'gwenna-crafanc', 'rhys-gafyr', 'skywyn-gafyr']
+  );
+  assert.deepEqual(
+    graph.getParents('gildas-gafyr').map(person => person.id).sort(),
+    ['izolda-arwydd', 'kelyddon-gafyr']
+  );
+  assert.equal(graph.getPerson('gwenna-crafanc').familyRole, 'ward');
+  assert.equal(
+    family.parentages.find(parentage => parentage.childId === 'gwenna-crafanc').type,
+    'foster'
+  );
+
+  assert.equal(
+    graph.getPerson('mathonwy-gafyr').worldPersonId,
+    wyrm.persons.find(person => person.id === 'mathonwy-gafyr').worldPersonId
+  );
+  assert.equal(
+    graph.getPerson('lynesse-wyrm-1598').death,
+    wyrm.persons.find(person => person.id === 'lynesse-wyrm-1598').death
+  );
+  assert.equal(
+    graph.getPerson('kelyddon-gafyr').worldPersonId,
+    arwydd.persons.find(person => person.id === 'kelyddon-gafyr').worldPersonId
+  );
+  assert.equal(
+    graph.getPerson('izolda-arwydd').worldPersonId,
+    arwydd.persons.find(person => person.id === 'izolda-arwydd').worldPersonId
+  );
+  assert.equal(
+    graph.getPerson('mathonwy-gafyr').portrait,
+    wyrm.persons.find(person => person.id === 'mathonwy-gafyr').portrait
+  );
+  assert.equal(
+    graph.getPerson('kelyddon-gafyr').portrait,
+    arwydd.persons.find(person => person.id === 'kelyddon-gafyr').portrait
+  );
+
+  assert.ok(converted.data.some(entry => entry.data.nodeKind === 'house-crest'));
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 2);
+  assert.equal(converted.getParentageLine('gwenna-crafanc').color, '#2f75a8');
+  assert.equal(converted.getParentageLine('gwenna-crafanc').dashed, true);
+
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['garym-gafyr']);
+  const pendingIds = ['garym-gafyr'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Partner oder Knoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('verwendet für namens- und jahresgleiche Personen hausübergreifend dieselbe Weltpersonen-ID', () => {
+  const identitiesByNameAndBirth = new Map();
+  [HOUSE_ARWYDD_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY].map(normalizeFamily).forEach(family => {
+    family.persons.forEach(person => {
+      if (!/^\d{4}$/.test(person.birth || '')) return;
+      const displayName = buildFamilyPersonDisplayName(family, person);
+      const identityKey = `${normalizePersonName(displayName)}|${person.birth}`;
+      const existing = identitiesByNameAndBirth.get(identityKey);
+      if (existing) {
+        assert.equal(
+          person.worldPersonId,
+          existing.worldPersonId,
+          `${displayName} (${person.birth}) besitzt widersprüchliche Weltpersonen-IDs.`
+        );
+      } else {
+        identitiesByNameAndBirth.set(identityKey, person);
+      }
+    });
   });
+});
+
+test('liefert für Haus Gafyr echte Portraits lokal und Platzhalter nur für unbelegte Bilder aus', async () => {
+  const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-gafyr/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_GAFYR_PORTRAITS).length, 44);
+  assert.equal(Object.keys(sourceManifest).length, 41);
+  assert.equal(picturedPeople.length, 44);
+  assert.equal(placeholderPeople.length, 13);
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(Object.keys(sourceManifest).map(async personId => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitquelle ohne Gafyr-Person: ${personId}`);
+    assert.equal(person.portrait, HOUSE_GAFYR_PORTRAITS[personId]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
+test('ersetzt nur eine unberührte lokale Wyrm-Leerakte durch die neue Registerfassung', () => {
+  const storage = createMemoryStorage();
+  const blankWyrm = {
+    ...HOUSE_WYRM_FAMILY,
+    persons: [],
+    partnerships: [],
+    parentages: [],
+    cadetBranches: [],
+    timeJumps: [],
+    lineage: {
+      ...HOUSE_WYRM_FAMILY.lineage,
+      founderPartnershipId: '',
+      timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    },
+    extensions: { blankFamily: true }
+  };
+  saveFamilyToLibrary({
+    family: blankWyrm,
+    id: 'haus-wyrm',
+    title: 'Haus Wyrm',
+    folderPath: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']
+  }, storage);
+  assert.equal(loadFamilyById('haus-wyrm', storage).family.persons.length, 62);
+
+  const editedStorage = createMemoryStorage();
+  saveFamilyToLibrary({
+    family: { ...blankWyrm, persons: [HOUSE_WYRM_FAMILY.persons[0]] },
+    id: 'haus-wyrm',
+    title: 'Haus Wyrm',
+    folderPath: ['Eigene Fassung']
+  }, editedStorage);
+  assert.equal(loadFamilyById('haus-wyrm', editedStorage).family.persons.length, 1);
+});
+
+test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hierarchie', async () => {
+  const storage = createMemoryStorage();
+  const expected = new Map([
+    ['haus-arwydd', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn'] }],
+    ['haus-draig', { rankId: 'county', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
+    ['haus-gafyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
+    ['haus-gwefrydd', { rankId: 'barony', path: ['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere'] }],
+    ['haus-gwyvern', { rankId: 'barony', path: ['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Abergwint'] }],
+    ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
+    ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
+  ]);
+  const blankFamilies = [HOUSE_DRAIG_FAMILY, HOUSE_GWEFRYDD_FAMILY, HOUSE_GWYVERN_FAMILY, HOUSE_SAETHWYR_FAMILY];
+
+  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length);
+  expected.forEach(({ rankId, path }, familyId) => {
+    const loaded = loadFamilyById(familyId, storage);
+    const profile = loaded.family.document.houseProfile;
+    assert.deepEqual(loaded.folderPath, path);
+    assert.deepEqual(createFolderPathFromHouseProfile(profile), path);
+    assert.equal(profile.rankId, rankId);
+    assert.notEqual(getHouseRank(rankId).label, 'Nicht vermerkt');
+    assert.match(profile.regionEmblems.seat, /^assets\/images\/regions\//);
+    assert.match(profile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+    assert.match(profile.regionEmblems.county, /^assets\/images\/regions\//);
+    assert.match(profile.regionEmblems.barony, /^assets\/images\/regions\//);
+  });
+  blankFamilies.forEach(family => {
+    assert.equal(loadFamilyById(family.document.id, storage).family.persons.length, 0);
+    assert.match(family.document.emblem, /^assets\/images\/houses\/haus-/);
+  });
+  assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
+  LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
+    const definition = LOWER_KNIGHT_HOUSE_DEFINITIONS[index];
+    const loaded = loadFamilyById(family.document.id, storage);
+    assert.equal(loaded.family.persons.length, 0);
+    assert.equal(loaded.family.document.houseProfile.rankId, 'knight');
+    assert.equal(loaded.family.document.houseProfile.liegeHouseId, `haus-${definition.liege.toLocaleLowerCase('de')}`);
+    assert.equal(loaded.family.document.houseProfile.liegeHouseName, `Haus ${definition.liege}`);
+    assert.deepEqual(loaded.family.document.houseProfile.secondarySeats, definition.secondarySeats || []);
+    assert.deepEqual(loaded.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
+  });
+  assert.equal(getHouseRank('knight').label, 'Niederes Rittergeschlecht');
+  const registryTree = buildRegistryFolderTree(FAMILY_REGISTRY);
+  const cenyrFolder = registryTree.folders.get('Cenyr');
+  const countyFolder = cenyrFolder.folders.get('Celtigerns Wacht');
+  const llamreisFolder = countyFolder.folders.get('Llamreis Ankunft');
+  const gwynthorFolder = llamreisFolder.folders.get('Gwynthor');
+  assert.equal(cenyrFolder.icon, 'assets/images/regions/koenigreich-cenyr.png');
+  assert.equal(countyFolder.icon, 'assets/images/regions/celtigerns-wacht.png');
+  assert.equal(llamreisFolder.icon, 'assets/images/regions/llamreis-ankunft.png');
+  assert.equal(gwynthorFolder.icon, 'assets/images/regions/gwynthor.png');
+  await Promise.all([
+    'assets/images/houses/haus-arwydd.png',
+    'assets/images/houses/haus-gwefrydd.png',
+    'assets/images/houses/haus-gwyvern.png',
+    ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => family.document.emblem),
+    'assets/images/regions/artus-streben.png',
+    'assets/images/regions/castellbryn.png',
+    'assets/images/regions/gwendolyns-ufer.png',
+    'assets/images/regions/gwynthor.png',
+    'assets/images/regions/llamreis-ankunft.png',
+    'assets/images/regions/rhonwens-traenen.png',
+    'assets/images/regions/rhosmere.png',
+    'assets/images/regions/abergwint.png'
+  ].map(async path => {
+    const image = await readFile(new URL(`../${path}`, import.meta.url));
+    assert.ok(image.length > 100, `${path} ist leer.`);
+  }));
+  const gafyr = loadFamilyById('haus-gafyr', storage);
+  assert.equal(gafyr.family.persons.length, 57);
+  assert.equal(gafyr.family.extensions.blankFamily, false);
+  assert.equal(
+    formatHouseProfile(gafyr.family.document.houseProfile),
+    'Ritterfürstengeschlecht · Stammsitz: Gwynthor · Baronie: Llamreis Ankunft · Grafschaft: Celtigerns Wacht · Königreich: Cenyr'
+  );
   assert.equal(loadFamilyById('haus-vael', storage), null);
   assert.equal(loadFamilyById('haus-sgrechwyr', storage), null);
+});
+
+test('baut eine Beziehungsmatrix aus direkten Familien- und Schwiegerbeziehungen', () => {
+  const people = [
+    ['focus', 'Elis', 'female'], ['father', 'Aron', 'male'], ['mother', 'Mara', 'female'],
+    ['grandfather', 'Bryn', 'male'], ['grandmother', 'Carys', 'female'], ['aunt', 'Delyth', 'female'],
+    ['cousin', 'Evan', 'male'], ['brother', 'Fionn', 'male'], ['sister-in-law', 'Gwen', 'female'],
+    ['niece', 'Heda', 'female'], ['spouse', 'Idris', 'male'], ['spouse-father', 'Joran', 'male'],
+    ['spouse-mother', 'Kelda', 'female'], ['spouse-sister', 'Linn', 'female'], ['child', 'Mair', 'female'],
+    ['child-in-law', 'Nerin', 'male'], ['grandchild', 'Owen', 'male'], ['stepmother', 'Pyria', 'female'],
+    ['stepchild', 'Rhyd', 'male']
+  ].map(([id, name, sex]) => ({ id, name, sex, houseId: 'house-test' }));
+  const partnership = (id, participantIds, type = 'marriage') => ({ id, participantIds, type });
+  const parentage = (id, childId, parentIds) => ({ id, childId, parentIds, type: 'biological' });
+  const family = normalizeFamily({
+    document: { id: 'matrix-test', title: 'Matrix-Test' },
+    houses: [{ id: 'house-test', name: 'Haus Test' }],
+    persons: people,
+    partnerships: [
+      partnership('parents', ['father', 'mother']),
+      partnership('grandparents', ['grandfather', 'grandmother']),
+      partnership('focus-spouse', ['focus', 'spouse']),
+      partnership('brother-partner', ['brother', 'sister-in-law']),
+      partnership('child-partner', ['child', 'child-in-law']),
+      partnership('father-stepmother', ['father', 'stepmother']),
+      partnership('spouse-parents', ['spouse-father', 'spouse-mother'])
+    ],
+    parentages: [
+      parentage('mother-line', 'mother', ['grandfather', 'grandmother']),
+      parentage('aunt-line', 'aunt', ['grandfather', 'grandmother']),
+      parentage('focus-line', 'focus', ['father', 'mother']),
+      parentage('brother-line', 'brother', ['father', 'mother']),
+      parentage('cousin-line', 'cousin', ['aunt']),
+      parentage('niece-line', 'niece', ['brother', 'sister-in-law']),
+      parentage('spouse-line', 'spouse', ['spouse-father', 'spouse-mother']),
+      parentage('spouse-sister-line', 'spouse-sister', ['spouse-father', 'spouse-mother']),
+      parentage('child-line', 'child', ['focus', 'spouse']),
+      parentage('grandchild-line', 'grandchild', ['child', 'child-in-law']),
+      parentage('stepchild-line', 'stepchild', ['spouse'])
+    ]
+  });
+  const matrix = buildRelationshipMatrix(family, 'focus');
+  const entries = matrix.sections.flatMap(section => section.entries);
+  const labels = new Map(entries.map(entry => [entry.person.id, entry.labels]));
+
+  assert.equal(matrix.relationshipCount, entries.length);
+  assert.equal(new Set(entries.map(entry => entry.person.id)).size, entries.length);
+  assert.ok(labels.get('grandfather').includes('Großvater'));
+  assert.ok(labels.get('aunt').includes('Tante'));
+  assert.ok(labels.get('cousin').includes('Cousin'));
+  assert.ok(labels.get('spouse').includes('Ehemann'));
+  assert.ok(labels.get('spouse-father').includes('Schwiegervater'));
+  assert.ok(labels.get('spouse-sister').includes('Schwägerin'));
+  assert.ok(labels.get('sister-in-law').includes('Schwägerin'));
+  assert.ok(labels.get('niece').includes('Nichte'));
+  assert.ok(labels.get('grandchild').includes('Enkel'));
+  assert.ok(labels.get('stepmother').includes('Stiefmutter'));
+  assert.ok(labels.get('stepchild').includes('Stiefsohn'));
+
+  const html = renderRelationshipMatrix(matrix);
+  assert.match(html, /relationship-matrix-focus/);
+  assert.match(html, /data-matrix-person-id="spouse"/);
+  assert.doesNotMatch(html, /onclick=/i);
 });
 
 let failures = 0;

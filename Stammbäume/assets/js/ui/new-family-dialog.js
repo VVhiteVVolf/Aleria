@@ -2,6 +2,7 @@ import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { normalizeFamilyId } from '../services/family-library.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
 import { fillCrestFrameSelect } from './crest-frame-options.js';
+import { fillHouseRankSelect } from './house-profile-fields.js';
 
 export function createNewFamilyDialog(documentRef = document) {
   const dialog = documentRef.getElementById('new-family-dialog');
@@ -14,6 +15,7 @@ export function createNewFamilyDialog(documentRef = document) {
     form.reset();
     idWasEdited = false;
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), DEFAULT_CREST_FRAME);
+    fillHouseRankSelect(form.elements.namedItem('rankId'), 'unknown');
     form.elements.namedItem('emblem').value = PORTRAIT_PLACEHOLDERS.crest;
     form.elements.namedItem('openSaveAfterCreate').checked = true;
     dialog.showModal();
@@ -26,6 +28,7 @@ export function createNewFamilyDialog(documentRef = document) {
       documentTitle: String(values.documentTitle || '').trim(),
       documentId: normalizeFamilyId(values.documentId || values.documentTitle),
       motto: String(values.motto || '').trim(),
+      rankId: String(values.rankId || 'unknown'),
       emblem: String(values.emblem || '').trim(),
       crestSubtitle: String(values.crestSubtitle || '').trim(),
       crestFrame: String(values.crestFrame || DEFAULT_CREST_FRAME),

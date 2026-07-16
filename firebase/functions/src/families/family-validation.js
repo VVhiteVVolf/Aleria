@@ -68,7 +68,12 @@ export function validateWorkspaceForPublishing(workspace) {
     if (!branch.targetFamilyId) diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein Zielhaus.`);
   });
   collections.timeJumps.forEach(timeJump => {
-    if (!partnershipIds.has(timeJump.parentPartnershipId)) diagnostics.push(`Zeitsprung „${timeJump.id}“ hat kein gültiges Elternpaar.`);
+    const hasPartnership = timeJump.parentPartnershipId && partnershipIds.has(timeJump.parentPartnershipId);
+    const hasPerson = timeJump.parentPersonId && personIds.has(timeJump.parentPersonId);
+    if (timeJump.parentPartnershipId && !hasPartnership) diagnostics.push(`Zeitsprung „${timeJump.id}“ verweist auf ein unbekanntes Elternpaar.`);
+    if (timeJump.parentPersonId && !hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ verweist auf eine unbekannte Ausgangsperson.`);
+    if (!hasPartnership && !hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ hat keine gültige Ausgangsperson oder -verbindung.`);
+    if (hasPartnership && hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ hat mehrere Ausgangspunkte.`);
     (timeJump.childIds || []).forEach(id => {
       if (!personIds.has(id)) diagnostics.push(`Zeitsprung „${timeJump.id}“ verweist auf eine unbekannte Person.`);
     });

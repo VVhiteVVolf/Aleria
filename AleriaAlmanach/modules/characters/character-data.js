@@ -189,6 +189,8 @@ function buildLibraryCharacterFromCommentator(figure, preferredMood) {
     title: figure.title || '',
     portrait: getPrimaryAvatar(figure, preferredMood),
     emotes: buildAvatarEmotes(figure),
+    identity: normalizeCharacterIdentityRecord(figure.identity),
+    genealogy: normalizeCharacterGenealogyRecord(figure.genealogy),
     _builtin: true,
   };
 }

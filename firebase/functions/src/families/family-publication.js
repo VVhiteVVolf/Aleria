@@ -1,4 +1,5 @@
 import { FAMILY_COLLECTIONS } from './family-collections.js';
+import { createPublicPersonExtensions } from './person-biography-publication.js';
 
 function cleanText(value) {
   return typeof value === 'string' ? value.trim() : '';
@@ -48,7 +49,8 @@ export function createPublicFamily(workspace) {
     collections: {
       persons: workspace.collections.persons.map(record => ({
         ...withoutPrivateFields(record),
-        portrait: cleanImageUrl(record.portrait)
+        portrait: cleanImageUrl(record.portrait),
+        extensions: createPublicPersonExtensions(record.extensions)
       })),
       partnerships: publicPartnerships,
       parentages: publicParentages,

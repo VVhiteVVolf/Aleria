@@ -1,0 +1,353 @@
+.relationship-matrix-dialog {
+  width: min(96rem, calc(100vw - 1rem));
+  height: min(58rem, calc(100vh - 1rem));
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #9b6b2f;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 240, 191, 0.98) 0 14%, rgba(238, 211, 151, 0.96) 42%, rgba(199, 157, 88, 0.98) 100%);
+  box-shadow: 0 1.5rem 5rem rgba(42, 22, 8, 0.6), inset 0 0 0 0.25rem rgba(255, 239, 190, 0.5);
+  color: #38200f;
+}
+
+.relationship-matrix-dialog::backdrop {
+  background: rgba(22, 13, 9, 0.76);
+  backdrop-filter: blur(0.25rem);
+}
+
+.relationship-matrix-dialog__header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 5.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(112, 69, 25, 0.45);
+  background: linear-gradient(90deg, rgba(82, 31, 24, 0.97), rgba(124, 50, 38, 0.96) 55%, rgba(65, 72, 45, 0.96));
+  color: #fff0c8;
+}
+
+.relationship-matrix-dialog__header h2,
+.relationship-matrix-dialog__header p {
+  margin: 0;
+}
+
+.relationship-matrix-dialog__header h2 {
+  font-family: Cinzel, serif;
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+}
+
+.relationship-matrix-dialog__header [data-matrix-count] {
+  margin-top: 0.2rem;
+  color: rgba(255, 240, 200, 0.76);
+  font-family: "EB Garamond", serif;
+}
+
+.relationship-matrix-dialog__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.relationship-matrix-dialog__body {
+  height: calc(100% - 5.75rem);
+  overflow: auto;
+}
+
+.relationship-matrix-shell {
+  position: relative;
+  min-width: 72rem;
+  min-height: 100%;
+  padding: 1.25rem;
+  background-image:
+    linear-gradient(rgba(104, 71, 30, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(104, 71, 30, 0.035) 1px, transparent 1px);
+  background-size: 1rem 1rem;
+}
+
+.relationship-matrix-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(18rem, 1fr) minmax(18rem, 1.15fr) minmax(18rem, 1fr);
+  grid-template-rows: auto minmax(19rem, 1fr) auto;
+  grid-template-areas:
+    "ancestors ancestors ancestors"
+    "collateral focus bonds"
+    "descendants descendants descendants";
+  gap: 1.15rem;
+  min-height: 48rem;
+  isolation: isolate;
+}
+
+.relationship-matrix-grid::before,
+.relationship-matrix-grid::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 50% 8%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(125, 51, 35, 0.6) 20% 80%, transparent);
+  box-shadow: 0 0 0.6rem rgba(125, 51, 35, 0.3);
+}
+
+.relationship-matrix-grid::after {
+  inset: 8% auto 8% 50%;
+  width: 2px;
+  height: auto;
+  background: linear-gradient(transparent, rgba(125, 51, 35, 0.6) 20% 80%, transparent);
+}
+
+.relationship-matrix-sector {
+  position: relative;
+  z-index: 1;
+  padding: 0.85rem;
+  border: 1px solid rgba(126, 80, 31, 0.4);
+  border-radius: 0.65rem;
+  background: rgba(255, 247, 218, 0.77);
+  box-shadow: 0 0.55rem 1.5rem rgba(76, 42, 14, 0.13), inset 0 0 0 1px rgba(255, 251, 231, 0.7);
+}
+
+.relationship-matrix-sector--ancestors { grid-area: ancestors; }
+.relationship-matrix-sector--collateral { grid-area: collateral; }
+.relationship-matrix-sector--bonds { grid-area: bonds; }
+.relationship-matrix-sector--descendants { grid-area: descendants; }
+
+.relationship-matrix-sector > header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(126, 80, 31, 0.28);
+}
+
+.relationship-matrix-sector > header h3,
+.relationship-matrix-sector > header span {
+  margin: 0;
+}
+
+.relationship-matrix-sector > header h3 {
+  font-family: Cinzel, serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.relationship-matrix-sector > header span {
+  color: #765533;
+  font-family: "EB Garamond", serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  order: 2;
+}
+
+.relationship-matrix-sector__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.55rem;
+}
+
+.relationship-matrix-sector--collateral .relationship-matrix-sector__list,
+.relationship-matrix-sector--bonds .relationship-matrix-sector__list {
+  grid-template-columns: 1fr;
+}
+
+.relationship-matrix-card {
+  display: grid;
+  grid-template-columns: 3.35rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  padding: 0.45rem;
+  border: 1px solid rgba(115, 72, 27, 0.3);
+  border-radius: 0.35rem;
+  background: rgba(255, 252, 234, 0.86);
+  color: #3e240f;
+  text-align: left;
+  box-shadow: 0 0.18rem 0.55rem rgba(76, 42, 14, 0.1);
+  cursor: pointer;
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.relationship-matrix-card:hover,
+.relationship-matrix-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #9b5b2a;
+  box-shadow: 0 0.45rem 1rem rgba(76, 42, 14, 0.2);
+  outline: none;
+}
+
+.relationship-matrix-card__portrait {
+  width: 3.35rem;
+  height: 3.35rem;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid #b7843e;
+  border-radius: 50%;
+  background: #c7a273;
+}
+
+.relationship-matrix-card__copy {
+  display: grid;
+  min-width: 0;
+}
+
+.relationship-matrix-card__copy strong,
+.relationship-matrix-card__copy small,
+.relationship-matrix-card__relations {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.relationship-matrix-card__copy strong {
+  font-family: Cinzel, serif;
+  font-size: 0.82rem;
+}
+
+.relationship-matrix-card__copy small {
+  color: #765533;
+  font-family: "EB Garamond", serif;
+}
+
+.relationship-matrix-card__relations {
+  color: #8e2724;
+  font-family: Cinzel, serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.relationship-matrix-focus {
+  grid-area: focus;
+  place-self: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(19rem, 100%);
+  min-height: 18rem;
+  padding: 1.4rem;
+  border: 0.22rem double #d5a849;
+  border-radius: 50% 50% 46% 46%;
+  background: radial-gradient(circle at 50% 25%, #fff5cf, #dec084 72%, #9b6a32 100%);
+  box-shadow: 0 0 0 0.42rem rgba(90, 35, 27, 0.86), 0 1.2rem 2.4rem rgba(60, 29, 12, 0.35);
+  text-align: center;
+}
+
+.relationship-matrix-focus__orbit {
+  position: absolute;
+  inset: -1.4rem;
+  z-index: -1;
+  border: 1px solid rgba(129, 52, 37, 0.38);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.55rem rgba(245, 224, 170, 0.4), 0 0 0 0.65rem rgba(129, 52, 37, 0.18);
+}
+
+.relationship-matrix-focus__portrait {
+  width: 7.25rem;
+  height: 7.25rem;
+  padding: 0.25rem;
+  border: 2px solid #80502b;
+  border-radius: 50%;
+  background: #d1aa75;
+  box-shadow: inset 0 0 0 0.2rem #e9c873, 0 0.55rem 1.1rem rgba(62, 29, 10, 0.28);
+}
+
+.relationship-matrix-focus__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
+
+.relationship-matrix-focus__eyebrow {
+  margin-top: 0.65rem;
+  color: #8e2724;
+  font-family: Cinzel, serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.relationship-matrix-focus h3,
+.relationship-matrix-focus p,
+.relationship-matrix-focus small {
+  margin: 0;
+}
+
+.relationship-matrix-focus h3 {
+  margin-top: 0.2rem;
+  font-family: Cinzel, serif;
+  font-size: 1.25rem;
+}
+
+.relationship-matrix-focus p,
+.relationship-matrix-focus small {
+  font-family: "EB Garamond", serif;
+}
+
+.relationship-matrix-focus__count {
+  margin-top: 0.65rem;
+  padding: 0.22rem 0.65rem;
+  border: 1px solid rgba(113, 66, 26, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 245, 207, 0.55);
+  color: #6d4323;
+  font-size: 0.68rem;
+}
+
+.relationship-matrix-empty {
+  margin: 0;
+  color: #856847;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+}
+
+@media (max-width: 760px) {
+  .relationship-matrix-dialog__header {
+    align-items: flex-start;
+  }
+
+  .relationship-matrix-dialog__header [data-matrix-count] {
+    display: none;
+  }
+
+  .relationship-matrix-shell {
+    min-width: 0;
+    padding: 0.75rem;
+  }
+
+  .relationship-matrix-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .relationship-matrix-focus {
+    order: -1;
+    width: min(17rem, calc(100% - 2rem));
+    min-height: 16rem;
+    margin: 1rem auto;
+  }
+
+  .relationship-matrix-sector > header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .relationship-matrix-sector > header span {
+    order: initial;
+  }
+}

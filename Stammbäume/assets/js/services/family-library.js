@@ -4,6 +4,7 @@ import {
   RETIRED_FAMILY_IDS
 } from '../data/families.registry.js';
 import { normalizeFamily } from '../domain/family-schema.js';
+import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { loadSavedFamilyRecords, saveFamilyRecord } from './family-persistence.js';
 import { createFamilyViewLink } from './family-links.js';
 
@@ -37,16 +38,24 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
   return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
 }
 
+function isUntouchedBlankFamily(record) {
+  const family = record?.family;
+  return family?.extensions?.blankFamily === true
+    && (family.persons || []).length === 0
+    && (family.partnerships || []).length === 0
+    && (family.parentages || []).length === 0;
+}
+
 export function loadFamilyById(familyId, storage = globalThis.localStorage) {
   const normalizedId = normalizeFamilyId(familyId);
   if (RETIRED_FAMILY_IDS.includes(normalizedId)) return null;
   const local = loadSavedFamilyRecords(storage).find(record => record.id === normalizedId);
-  if (local) return local;
   const registered = getRegisteredFamily(normalizedId);
+  if (local && !(registered && isUntouchedBlankFamily(local) && registered.family.persons.length)) return local;
   return registered ? { ...registered, source: 'registry' } : null;
 }
 
-export function saveFamilyToLibrary({ family, id, title, folderPath }, storage = globalThis.localStorage) {
+export function saveFamilyToLibrary({ family, id, title, folderPath, rankId }, storage = globalThis.localStorage) {
   const normalizedId = normalizeFamilyId(id || title);
   if (!normalizedId) throw new Error('Die Familie benötigt eine gültige ID.');
   const normalizedFolderPath = Array.isArray(folderPath) ? folderPath.map(String).filter(Boolean) : parseFolderPath(folderPath);
@@ -55,7 +64,11 @@ export function saveFamilyToLibrary({ family, id, title, folderPath }, storage =
     document: {
       ...family.document,
       id: normalizedId,
-      title: String(title || family.document.title).trim()
+      title: String(title || family.document.title).trim(),
+      houseProfile: createHouseProfileFromFolderPath(normalizedFolderPath, {
+        ...family.document.houseProfile,
+        rankId: rankId || family.document.houseProfile?.rankId
+      })
     },
     extensions: {
       ...family.extensions,

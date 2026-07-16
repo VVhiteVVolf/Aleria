@@ -1,42 +1,31 @@
 import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
+import {
+  formatHouseProfile,
+  getHouseProfileSearchTerms
+} from './domain/house-profile.js';
+import {
+  buildRegistryFolderTree,
+  countRegistryRecords,
+  getRegistryRecordHouseProfile
+} from './modules/family-registry/registry-folder-tree.js';
 import { listFamilyRecords } from './services/family-library.js';
 import { createFamilyViewLink, normalizeFamilyViewLink } from './services/family-links.js';
 import { escapeHtml } from './ui/dom.js';
-
-function createFolderNode(name = '') {
-  return { name, folders: new Map(), records: [] };
-}
-
-function buildFolderTree(records) {
-  const root = createFolderNode();
-  records.forEach(record => {
-    const path = record.folderPath?.length ? record.folderPath : ['Nicht einsortiert'];
-    let node = root;
-    path.forEach(segment => {
-      if (!node.folders.has(segment)) node.folders.set(segment, createFolderNode(segment));
-      node = node.folders.get(segment);
-    });
-    node.records.push(record);
-  });
-  return root;
-}
-
-function countRecords(node) {
-  return node.records.length + [...node.folders.values()].reduce((sum, child) => sum + countRecords(child), 0);
-}
 
 function renderFamilyCard(record) {
   const emblem = record.emblem || record.family?.document.emblem || record.family?.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
   const people = Number(record.personCount ?? record.family?.persons.length ?? 0);
   const description = record.motto || record.family?.document.motto || record.family?.document.description || 'Familienakte öffnen';
+  const houseProfile = formatHouseProfile(getRegistryRecordHouseProfile(record));
   return `
     <a class="registry-family-card" href="${escapeHtml(createFamilyViewLink(record.id))}">
       <img class="registry-family-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
       <div>
         <h3>${escapeHtml(record.title)}</h3>
         <p>${escapeHtml(description)}</p>
+        ${houseProfile ? `<p class="registry-family-profile">${escapeHtml(houseProfile)}</p>` : ''}
       </div>
       <span class="registry-family-meta">
         <span>${people} Personen</span>
@@ -58,7 +47,11 @@ function renderFolder(node, depth = 0) {
   if (!node.name) return `${folders}${records}`;
   return `
     <details class="registry-folder" ${depth <= 2 ? 'open' : ''}>
-      <summary>${escapeHtml(node.name)} <span class="registry-folder-count">${countRecords(node)}</span></summary>
+      <summary>
+        ${node.icon ? `<img class="registry-folder-icon" src="${escapeHtml(node.icon)}" alt="" aria-hidden="true">` : ''}
+        <span>${escapeHtml(node.name)}</span>
+        <span class="registry-folder-count">${countRegistryRecords(node)}</span>
+      </summary>
       <div class="registry-folder-children">${folders}${records}</div>
     </details>
   `;
@@ -73,10 +66,15 @@ document.getElementById('registry-count').textContent = String(allRecords.length
 function render(query = '') {
   const needle = query.trim().toLocaleLowerCase('de');
   const records = needle
-    ? allRecords.filter(record => [record.title, record.id, ...(record.folderPath || [])]
+    ? allRecords.filter(record => [
+      record.title,
+      record.id,
+      ...(record.folderPath || []),
+      ...getHouseProfileSearchTerms(getRegistryRecordHouseProfile(record))
+    ]
       .some(value => String(value).toLocaleLowerCase('de').includes(needle)))
     : allRecords;
-  treeContainer.innerHTML = renderFolder(buildFolderTree(records));
+  treeContainer.innerHTML = renderFolder(buildRegistryFolderTree(records));
   empty.hidden = records.length > 0;
 }
 
@@ -90,11 +88,15 @@ async function loadPublishedRegistry() {
     const records = new Map(allRecords.map(record => [record.id, record]));
     published.forEach(record => {
       const id = String(record.familyId || record.id);
+      const projectFallback = records.get(id);
       records.set(id, {
+        ...projectFallback,
         ...record,
         id,
         title: String(record.title || id),
         folderPath: Array.isArray(record.folderPath) ? record.folderPath.map(String).filter(Boolean) : [],
+        houseProfile: record.houseProfile || projectFallback?.houseProfile || projectFallback?.family?.document.houseProfile,
+        family: projectFallback?.family,
         link: normalizeFamilyViewLink(record.link, id),
         source: 'firebase'
       });

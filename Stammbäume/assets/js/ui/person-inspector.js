@@ -49,7 +49,7 @@ function renderTimeJumps(timeJumps) {
   if (!timeJumps.length) return '';
   return `
     <section class="inspector-section">
-      <h3>Zeitsprünge dieses Paares</h3>
+      <h3>Zeitsprünge ab dieser Person</h3>
       <ul class="relationship-list">
         ${timeJumps.map(timeJump => `
           <li class="time-jump-row">
@@ -89,7 +89,9 @@ export function renderPersonInspector(container, graph, personId) {
   const groups = graph.getRelationshipGroups(person.id);
   const partnershipIds = new Set(graph.getPartnerships(person.id).map(partnership => partnership.id));
   const cadetBranches = graph.family.cadetBranches.filter(branch => partnershipIds.has(branch.parentPartnershipId));
-  const timeJumps = graph.family.timeJumps.filter(timeJump => partnershipIds.has(timeJump.parentPartnershipId));
+  const timeJumps = graph.family.timeJumps.filter(timeJump => (
+    partnershipIds.has(timeJump.parentPartnershipId) || timeJump.parentPersonId === person.id
+  ));
 
   container.innerHTML = `
     <article class="inspector-person ${role.cssClass}">
@@ -122,7 +124,9 @@ export function renderPersonInspector(container, graph, personId) {
 
       <footer class="inspector-actions">
         <button class="button button--quiet" type="button" data-action="open-person-edit">Person bearbeiten</button>
+        <button class="button button--quiet" type="button" data-action="open-person-biography">Biographie bearbeiten</button>
         <button class="button" type="button" data-action="open-related-person">＋ Person mit Beziehung</button>
+        <button class="button button--quiet" type="button" data-action="open-time-jump-after-person">＋ Zeitsprung nach dieser Person</button>
         <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Person zuordnen</button>
         <button class="button button--quiet" type="button" data-action="open-relationship">Beziehung verknüpfen</button>
         <button class="button button--quiet" type="button" data-action="focus-person">Im Baum zentrieren</button>

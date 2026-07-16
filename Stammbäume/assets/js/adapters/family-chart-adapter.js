@@ -40,6 +40,10 @@ const ROLE_LINE_COLORS = Object.freeze({
   'ward-away': '#7eb4d7'
 });
 
+export function isPortraitCardEvent(event) {
+  return Boolean(event?.target?.closest?.('.aleria-person-card__portrait'));
+}
+
 function addUnique(target, value) {
   if (value && !target.includes(value)) target.push(value);
 }
@@ -280,8 +284,8 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
 function applyTimeJumps({ family, chartById, parentageLines, personById }) {
   family.timeJumps.forEach(timeJump => {
     const partnership = family.partnerships.find(item => item.id === timeJump.parentPartnershipId);
-    if (!partnership) return;
-    const parentIds = partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2);
+    const anchorIds = partnership?.participantIds || (timeJump.parentPersonId ? [timeJump.parentPersonId] : []);
+    const parentIds = anchorIds.filter(personId => chartById.has(personId)).slice(0, 2);
     if (!parentIds.length) return;
     const nodeId = `__time-jump-${timeJump.id}`;
     const node = createVirtualNode({
@@ -517,6 +521,11 @@ export function createFamilyChartSession(config) {
         return;
       }
       if (metadata.virtualType) return;
+      if (isPortraitCardEvent(event)) {
+        const portraitHandled = typeof config.onPortraitClick === 'function'
+          && config.onPortraitClick({ personId, event }) === true;
+        if (portraitHandled) return;
+      }
       const handled = typeof config.onPersonClick === 'function'
         && config.onPersonClick({ personId, event }) === true;
       if (!handled) focus(personId, { fit: false });

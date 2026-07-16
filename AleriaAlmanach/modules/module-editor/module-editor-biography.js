@@ -1,5 +1,38 @@
 let _biographyAbilityIconTarget = null;
 
+function buildBiographyPortraitStagesEditor(biography = {}) {
+  const stages = Array.from(
+    { length: 4 },
+    (_, index) => String(Array.isArray(biography.portraitStages) ? biography.portraitStages[index] || '' : '')
+  );
+  return `
+          <div class="module-editor-field wide">
+            <label>Portrait-Altersstufen</label>
+            <div class="module-editor-help">[1] verwendet immer das Hauptportrait der Biographie. In [2] bis [5] können weitere Altersstadien hinterlegt werden.</div>
+            <div class="inline-stat-editor biography-portrait-stage-editor">
+              <div class="inline-stat-row biography-portrait-stage-row is-default">
+                <strong>[1]</strong>
+                <span>Hauptportrait (automatisch)</span>
+              </div>
+              ${stages.map((source, index) => `<label class="inline-stat-row biography-portrait-stage-row">
+                <strong>[${index + 2}]</strong>
+                <input class="inline-edit-input me-biography-portrait-stage" type="text" inputmode="url" data-biography-portrait-stage-index="${index}" value="${escapeHtml(source)}" placeholder="Optionale Portrait-URL für Altersstufe ${index + 2}">
+              </label>`).join('')}
+            </div>
+          </div>`;
+}
+
+function collectBiographyPortraitStages(card) {
+  const stages = Array(4).fill('');
+  card.querySelectorAll('.me-biography-portrait-stage').forEach(input => {
+    const index = Number(input.dataset.biographyPortraitStageIndex);
+    if (Number.isInteger(index) && index >= 0 && index < stages.length) {
+      stages[index] = String(input.value || '').trim();
+    }
+  });
+  return stages;
+}
+
 function buildBiographyAbilityIconField(item, index, mode) {
   const iconInputAttrs = mode === 'inline'
     ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="icon"`
@@ -361,6 +394,12 @@ function removeModuleBiographyConnectionRow(button) {
 
 function buildBiographyModuleEditorFields(page) {
   const biography = sanitizeBiographyData(page?.biography || {});
+  if (!biography.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
+    biography.portraitStages = Array.from(
+      { length: 4 },
+      (_, index) => String(page.imageTabs[index]?.image || '').trim()
+    );
+  }
   return `
       <div class="module-page-type-block${inferModulePageType(page) === 'biography' ? ' visible' : ''}" data-page-type="biography">
         <div class="module-editor-grid">
@@ -373,7 +412,7 @@ function buildBiographyModuleEditorFields(page) {
               ${buildModuleBiographyStatRows(page?.stats || [])}
             </div>
           </div>
-          ${buildModuleImageTabsEditor(page)}
+          ${buildBiographyPortraitStagesEditor(biography)}
           <div class="module-editor-field">
             <label>Biografie-Überschrift</label>
             <input type="text" class="me-biography-title" value="${escapeHtml(biography.biographyTitle)}">
@@ -520,8 +559,10 @@ function collectBiographyModuleEditorPage(card, page) {
   page.stats = collectModuleBiographyStats(card.querySelector('[data-page-type="biography"]') || card);
   page.quote = getTrimmedFormValue(card, '.me-biography-quote');
   page.quoteBy = getTrimmedFormValue(card, '.me-biography-quote-by');
-  collectModuleImageTabs(card, page);
+  delete page.imageTabs;
+  delete page.imageTabLabel;
   page.biography = sanitizeBiographyData({
+    portraitStages: collectBiographyPortraitStages(card),
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),
     sideWidth: getFormValue(card, '.me-biography-side-width'),

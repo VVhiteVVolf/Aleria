@@ -70,6 +70,7 @@ export const publishFamily = onCall({
     motto: publicFamily.root.document.motto || '',
     emblem: publicFamily.root.document.emblem || publicFamily.collections.houses[0]?.emblem || '',
     folderPath,
+    houseProfile: publicFamily.root.document.houseProfile || {},
     personCount: publicFamily.collections.persons.length,
     activeReleaseId: releaseId,
     link: `Stammbaum.html?family=${encodeURIComponent(familyId)}&mode=view`,

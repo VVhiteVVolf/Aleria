@@ -1,0 +1,21 @@
+.house-profile-summary {
+  margin: 0.2rem 0 0;
+  color: #d2b77f;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.075em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.house-profile-preview {
+  margin: 0;
+  padding: 0.72rem 0.8rem;
+  color: var(--ink-700);
+  border: 1px solid rgba(145, 103, 46, 0.28);
+  background: rgba(229, 202, 143, 0.15);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.045em;
+  line-height: 1.5;
+}

@@ -106,12 +106,32 @@ function buildModulePortraitPaneImage(page, tab, index, extraClass = '') {
   return `<img class="${extraClass ? `${extraClass} ` : ''}module-portrait-pane${index === 0 ? ' active' : ''}" data-portrait-pane="${index}" src="${tab.image}" alt="${escapeHtml(tab.label)}" ${loadingAttrs}${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`;
 }
 
+function getBiographyPortraitStages(page) {
+  const configuredStages = Array.isArray(page?.biography?.portraitStages)
+    ? page.biography.portraitStages
+    : [];
+  const stages = configuredStages.some(source => String(source || '').trim())
+    ? configuredStages
+    : (Array.isArray(page?.imageTabs) ? page.imageTabs.map(item => item?.image || '') : []);
+  return stages.map((source, index) => ({
+    label: `[${index + 2}]`,
+    image: sanitizeImageSrc(source || '')
+  })).filter(stage => stage.image);
+}
+
 // Hauptbild-Spalte der Biographie-/Häuser-/Gilden-Seiten: ohne Bild-Reiter das bisherige
 // Einzelbild, mit Reitern die Tab-Leiste über den umschaltbaren Bildern.
 function buildBiographyPortrait(page, entry) {
-  const tabs = getModulePortraitTabs(page);
+  const portraitStages = getBiographyPortraitStages(page);
+  const mainPortrait = sanitizeImageSrc(page.image || entry?.image || entry?.portrait || '');
+  const tabs = portraitStages.length
+    ? [
+        ...(mainPortrait ? [{ label: '[1]', image: mainPortrait }] : []),
+        ...portraitStages
+      ]
+    : getModulePortraitTabs(page);
   if (tabs.length < 2) {
-    const image = tabs.length === 1 ? tabs[0].image : sanitizeImageSrc(page.image || '');
+    const image = tabs.length === 1 ? tabs[0].image : mainPortrait;
     return image
       ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`
       : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`;

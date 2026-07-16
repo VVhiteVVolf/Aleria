@@ -17587,3 +17587,4 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   }
 ];
+globalThis.ALERIA_ICON_DIRECTORY = ALERIA_ICON_DIRECTORY;

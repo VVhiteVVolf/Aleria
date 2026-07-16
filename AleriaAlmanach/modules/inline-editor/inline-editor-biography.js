@@ -2,7 +2,14 @@
 // Owns only biography-page editing behavior.
 
 function getInlineBiographyDataForEdit(page) {
-  return sanitizeBiographyData(page?.biography || {});
+  const biography = sanitizeBiographyData(page?.biography || {});
+  if (!biography.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
+    biography.portraitStages = Array.from(
+      { length: 4 },
+      (_, index) => String(page.imageTabs[index]?.image || '').trim()
+    );
+  }
+  return biography;
 }
 
 function getInlineBiographyLineListName(listName) {
@@ -28,6 +35,24 @@ function updateInlineBiographyField(input) {
     if (field === 'biographyText') page.description = value;
   }
 
+  page.biography = sanitizeBiographyData(current);
+  scheduleInlineModuleLivePreviewRefresh();
+}
+
+function updateInlineBiographyPortraitStage(input) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const index = Number(input.dataset.biographyPortraitStageIndex);
+  if (!Number.isInteger(index) || index < 0 || index >= 4) return;
+  const current = getInlineBiographyDataForEdit(page);
+  const stages = Array.from(
+    { length: 4 },
+    (_, stageIndex) => String(current.portraitStages?.[stageIndex] || '').trim()
+  );
+  stages[index] = String(input.value || '').trim();
+  current.portraitStages = stages;
+  delete page.imageTabs;
+  delete page.imageTabLabel;
   page.biography = sanitizeBiographyData(current);
   scheduleInlineModuleLivePreviewRefresh();
 }
@@ -233,6 +258,20 @@ function buildInlineBiographyEditor(page) {
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Biographie</div>
       <div class="inline-edit-grid">
+        <div class="inline-edit-field wide">
+          <span class="inline-edit-label">Portrait-Altersstufen</span>
+          <div class="inline-placeholder-note">[1] verwendet immer das Hauptportrait der Biographie. [2] bis [5] sind optionale Altersstadien.</div>
+          <div class="inline-stat-editor biography-portrait-stage-editor">
+            <div class="inline-stat-row biography-portrait-stage-row is-default">
+              <strong>[1]</strong>
+              <span>Hauptportrait (automatisch)</span>
+            </div>
+            ${Array.from({ length: 4 }, (_, index) => `<label class="inline-stat-row biography-portrait-stage-row">
+              <strong>[${index + 2}]</strong>
+              <input class="inline-edit-input" type="text" inputmode="url" data-inline-action="update-biography-portrait-stage" data-biography-portrait-stage-index="${index}" value="${escapeHtml(biography.portraitStages[index] || '')}" placeholder="Optionale Portrait-URL für Altersstufe ${index + 2}">
+            </label>`).join('')}
+          </div>
+        </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Biografie-Überschrift</span>
           <input class="inline-edit-input" type="text" data-inline-action="update-biography-field" data-biography-field="biographyTitle" value="${escapeHtml(biography.biographyTitle)}">

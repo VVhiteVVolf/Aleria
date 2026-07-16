@@ -976,6 +976,21 @@
   .module-simple-line-row {
     grid-template-columns: minmax(0, 1fr) auto;
   }
+  .biography-portrait-stage-row {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+  .biography-portrait-stage-row strong {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.66rem;
+    text-align: center;
+  }
+  .biography-portrait-stage-row.is-default {
+    min-height: 2.25rem;
+    border: 1px solid rgba(139, 105, 20, 0.18);
+    color: rgba(83, 58, 27, 0.72);
+    background: rgba(255, 255, 255, 0.16);
+  }
   .inline-comment-editor,
   .inline-scene-editor {
     display: flex;

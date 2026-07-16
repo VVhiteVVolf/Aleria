@@ -95,7 +95,7 @@ if (!fs.existsSync(iconRoot)) {
 const icons = readIconFiles(iconRoot)
   .sort((a, b) => `${a.folder}/${a.fileName}`.localeCompare(`${b.folder}/${b.fileName}`, 'de'));
 
-const source = `// Generated from ../IconOrdner. Refresh with: node ./AleriaAlmanach/tools/update-icon-directory.mjs\nconst ALERIA_ICON_DIRECTORY = ${JSON.stringify(icons, null, 2)};\n`;
+const source = `// Generated from ../IconOrdner. Refresh with: node ./AleriaAlmanach/tools/update-icon-directory.mjs\nconst ALERIA_ICON_DIRECTORY = ${JSON.stringify(icons, null, 2)};\nglobalThis.ALERIA_ICON_DIRECTORY = ALERIA_ICON_DIRECTORY;\n`;
 
 fs.mkdirSync(path.dirname(outputFile), { recursive: true });
 fs.writeFileSync(outputFile, source, 'utf8');

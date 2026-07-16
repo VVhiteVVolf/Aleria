@@ -131,6 +131,20 @@ const results = vm.runInContext(`
 `, context);
 
 const failures = [];
+const biographyPortraitStageChecks = vm.runInContext(`(() => {
+  const biography = sanitizeBiographyData({
+    portraitStages: ['https://i.imgur.com/young.png', '', 'https://i.imgur.com/old.png']
+  });
+  const markup = buildBiographyPortraitStagesEditor(biography);
+  return {
+    stages: biography.portraitStages,
+    inputCount: (markup.match(/class="inline-edit-input me-biography-portrait-stage"/g) || []).length,
+    defaultPresent: markup.includes('Hauptportrait (automatisch)')
+  };
+})()`, context);
+if (biographyPortraitStageChecks.stages.length !== 4) failures.push('biography: Portrait-Altersstufen werden nicht auf vier optionale Felder normalisiert.');
+if (biographyPortraitStageChecks.stages[1] !== '' || biographyPortraitStageChecks.stages[2] !== 'https://i.imgur.com/old.png') failures.push('biography: Leere Altersstufen verschieben die folgenden Reiternummern.');
+if (biographyPortraitStageChecks.inputCount !== 4 || !biographyPortraitStageChecks.defaultPresent) failures.push('biography: Der Modul-Editor zeigt [1] bis [5] nicht vollstaendig an.');
 for (const result of results) {
   if (result.originalCount < 1) failures.push(`${result.id}: Defaultvorlage besitzt keine Seite.`);
   if (result.sanitizedCount !== result.originalCount) failures.push(`${result.id}: Beim Sanitizen gingen Seiten verloren.`);

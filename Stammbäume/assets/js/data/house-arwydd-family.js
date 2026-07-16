@@ -1,6 +1,8 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { HOUSE_ARWYDD_PORTRAITS } from './house-arwydd-portraits.js';
 
-const ARWYDD_EMBLEM = 'https://i.imgur.com/I6OEMqq.png';
+const ARWYDD_EMBLEM = 'assets/images/houses/haus-arwydd.png';
 const ARWYDD_HOUSE_EMBLEMS = Object.freeze({
   saethwyr: 'assets/images/houses/haus-saethwyr.png',
   wyrm: 'assets/images/houses/haus-wyrm.png',
@@ -10,21 +12,53 @@ const ARWYDD_HOUSE_EMBLEMS = Object.freeze({
   gwywern: 'assets/images/houses/haus-gwyvern.png'
 });
 
-function person(id, name, sex, familyRole, houseId = '') {
+const ARWYDD_LIFE_DATES = Object.freeze({
+  'idwalladr-arwydd': ['1653', '1720'],
+  carys: ['1654', ''],
+  'imogen-arwydd': ['1675', ''],
+  'breandan-saethwyr': ['1670', '1730'],
+  'idris-arwydd': ['1672', ''],
+  'deliah-mwyalchen': ['1675', ''],
+  'iseult-arwydd': ['1675', ''],
+  'eiddon-wym': ['1671', ''],
+  'ianto-arwydd': ['1700', ''],
+  'tecwyn-draig': ['1700', ''],
+  'izolda-arwydd': ['1701', ''],
+  'kelyddon-gafyr': ['1698', ''],
+  'ieuan-arwydd': ['1702', ''],
+  'myrcella-gwefrydd': ['1702', ''],
+  'izobel-arwydd': ['1703', ''],
+  'gwynnan-gwywern': ['1696', ''],
+  'iorwerth-arwydd': ['1704', ''],
+  'dyddi-dyngwn': ['1704', ''],
+  'ifor-arwydd': ['1722', ''],
+  'idelle-arwydd': ['1724', ''],
+  'ivor-arwydd': ['1726', ''],
+  'isolde-arwydd': ['1732', ''],
+  'ioan-arwydd': ['1721', ''],
+  'ida-arwydd': ['1722', ''],
+  'iwan-arwydd': ['1726', ''],
+  'isaac-arwydd': ['1723', ''],
+  'ilaria-arwydd': ['1728', '']
+});
+
+function person(id, name, sex, familyRole, houseId = '', details = {}) {
+  const [birth, death] = ARWYDD_LIFE_DATES[id] || ['', ''];
   return {
     id,
     name,
     title: '',
     sex,
-    status: 'unknown',
-    birth: '',
-    death: '',
-    portrait: '',
+    status: death ? 'dead' : birth ? 'alive' : 'unknown',
+    birth,
+    death,
+    portrait: HOUSE_ARWYDD_PORTRAITS[id] || '',
     portraitPlaceholder: 'auto',
     houseId,
     familyRole,
     tags: [],
-    notes: ''
+    notes: '',
+    ...details
   };
 }
 
@@ -72,7 +106,8 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     title: 'Haus Arwydd',
     motto: '',
     description: 'Familienlinie von Haus Arwydd nach der überlieferten Stammbaumvorlage.',
-    emblem: ARWYDD_EMBLEM
+    emblem: ARWYDD_EMBLEM,
+    houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.arwydd
   },
   houses: [
     { id: 'house-arwydd', name: 'Haus Arwydd', motto: '', emblem: ARWYDD_EMBLEM, status: 'active' },
@@ -93,13 +128,19 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     person('breandan-saethwyr', 'Breandan Saethwyr', 'male', 'married', 'house-saethwyr'),
     person('idris-arwydd', 'Idris', 'male', 'core', 'house-arwydd'),
     person('deliah-mwyalchen', 'Deliah Mwyalchen', 'female', 'married', 'house-mwyalchen'),
-    person('iseult-arwydd', 'Iseult', 'female', 'core', 'house-arwydd'),
-    person('eiddon-wym', 'Eiddon Wym', 'male', 'married', 'house-wyrm'),
+    person('iseult-arwydd', 'Iseult', 'female', 'core', 'house-arwydd', {
+      worldPersonId: 'person--haus-arwydd--iseult-arwydd'
+    }),
+    person('eiddon-wym', 'Eiddon Wyrm', 'male', 'married', 'house-wyrm', {
+      worldPersonId: 'person--haus-wyrm--eiddon-wyrm'
+    }),
 
     person('ianto-arwydd', 'Ianto', 'male', 'core', 'house-arwydd'),
     person('tecwyn-draig', 'Tecwyn Draig', 'unknown', 'married', 'house-draig'),
     person('izolda-arwydd', 'Izolda', 'female', 'core', 'house-arwydd'),
-    person('kelyddon-gafyr', 'Kelyddon Gafyr', 'male', 'married', 'house-gafyr'),
+    person('kelyddon-gafyr', 'Kelyddon Gafyr', 'male', 'married', 'house-gafyr', {
+      worldPersonId: 'person--haus-gafyr--kelyddon-gafyr'
+    }),
     person('ieuan-arwydd', 'Ieuan', 'male', 'core', 'house-arwydd'),
     person('myrcella-gwefrydd', 'Myrcella Gwefrydd', 'female', 'married', 'house-gwefrydd'),
     person('izobel-arwydd', 'Izobel', 'female', 'core', 'house-arwydd'),
@@ -228,6 +269,6 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Nach Screenshotvorlage; fehlende Jahreszahlen, Titel und Nebenwappen bleiben bewusst offen.'
+    sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Portraitquellen wurden als lokale Projektdateien gesichert; fehlende Titel und Nebenwappen bleiben bewusst offen.'
   }
 });

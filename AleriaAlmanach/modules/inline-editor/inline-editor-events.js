@@ -743,6 +743,10 @@ function handleInlineEditorFieldChange(event) {
     updateInlineBiographyField(field);
     return;
   }
+  if (action === 'update-biography-portrait-stage') {
+    updateInlineBiographyPortraitStage(field);
+    return;
+  }
   if (action === 'update-biography-line-field') {
     updateInlineBiographyLineField(field);
     return;

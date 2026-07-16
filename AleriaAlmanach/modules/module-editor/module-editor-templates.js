@@ -1834,6 +1834,7 @@ function createObjectProfileTemplatePages() {
         ['Status', 'Aktiv']
       ],
       biography: {
+        portraitStages: ['', '', '', ''],
         sideWidth: 100,
         connectionPortraitHeight: 68,
         connectionTextOffset: 0,

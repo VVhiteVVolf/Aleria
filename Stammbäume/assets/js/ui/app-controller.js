@@ -2,7 +2,11 @@ import { createFamilyChartSession } from '../adapters/family-chart-adapter.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
 import { createFamilyGraph } from '../domain/family-graph.js';
+import { formatHouseProfile, isHouseProfileEmpty } from '../domain/house-profile.js';
 import { createAlmanachCharacterController } from '../modules/almanach-bridge/almanach-character-controller.js';
+import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
+import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
+import { createRelationshipMatrixDialog } from '../modules/relationship-matrix/relationship-matrix-dialog.js';
 import { exportChartAsPng } from '../services/chart-png-export.js';
 import {
   loadFamilyById,
@@ -85,6 +89,19 @@ export function createAppController({
   const editAccessDialog = createEditAccessDialog(documentRef);
   let graph = createFamilyGraph(store.getState().family);
   let unsubscribe = null;
+  const personBiographyDialog = createPersonBiographyDialog({
+    documentRef,
+    runtime,
+    onSave(personId, biographyModule) {
+      store.setPersonExtension(personId, PERSON_BIOGRAPHY_EXTENSION_ID, biographyModule);
+      toast('Biographie wurde gespeichert.');
+    },
+    onRemove(personId) {
+      store.setPersonExtension(personId, PERSON_BIOGRAPHY_EXTENSION_ID, null);
+      toast('Biographie wurde entfernt.');
+    }
+  });
+  const relationshipMatrixDialog = createRelationshipMatrixDialog(documentRef);
 
   function emptyChartMessage() {
     return isEditing
@@ -107,10 +124,11 @@ export function createAppController({
     const state = store.getState();
     const timeJump = state.family.timeJumps.find(item => item.id === timeJumpId);
     const partnership = state.family.partnerships.find(item => item.id === timeJump?.parentPartnershipId);
-    if (!timeJump || !partnership) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
-    const referencePersonId = partnership.participantIds.includes(state.selectedPersonId)
+    const anchorPersonIds = partnership?.participantIds || (timeJump?.parentPersonId ? [timeJump.parentPersonId] : []);
+    if (!timeJump || !anchorPersonIds.length) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
+    const referencePersonId = anchorPersonIds.includes(state.selectedPersonId)
       ? state.selectedPersonId
-      : partnership.participantIds[0];
+      : anchorPersonIds[0];
     relatedPersonDialog.open(referencePersonId, state.family, { timeJumpId });
   }
 
@@ -125,6 +143,17 @@ export function createAppController({
       houseId: state.family.lineage.houseId,
       heading: 'Neuen Nachkommen unter dem Stammwappen anlegen'
     });
+  }
+
+  function openPersonBiography(personId) {
+    const person = graph.getPerson(personId);
+    if (!person) return false;
+    if (isEditing) store.selectPerson(personId);
+    personBiographyDialog.open(person, {
+      editable: isEditing,
+      house: graph.getHouse(person.houseId)
+    });
+    return true;
   }
 
   function createChart(family) {
@@ -142,8 +171,11 @@ export function createAppController({
         view: family.view,
         runtime,
         onPersonClick({ personId }) {
-          if (!isEditing) return true;
+          if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId);
           return store.selectPerson(personId);
+        },
+        onPortraitClick({ personId }) {
+          return openPersonBiography(personId);
         },
         onFamilyLinkClick({ familyId, branchId }) {
           if (!familyId) return;
@@ -197,8 +229,19 @@ export function createAppController({
   function renderHeader(family) {
     documentRef.getElementById('family-title').textContent = family.document.title;
     documentRef.getElementById('family-motto').textContent = family.document.motto || '—';
+    const houseProfile = documentRef.getElementById('family-house-profile');
+    houseProfile.hidden = isHouseProfileEmpty(family.document.houseProfile);
+    houseProfile.textContent = formatHouseProfile(family.document.houseProfile);
     documentRef.getElementById('person-count').textContent = String(family.persons.length);
     documentRef.getElementById('generation-count').textContent = String(graph.getGenerationCount());
+    const livingPeople = family.persons.filter(person => person.status === 'alive');
+    documentRef.getElementById('living-count').textContent = String(livingPeople.length);
+    const livingDescription = livingPeople.length
+      ? `Als lebend verzeichnet: ${livingPeople.map(person => person.name).join(', ')}`
+      : 'Keine Person ist ausdrücklich als lebend verzeichnet.';
+    documentRef.getElementById('living-stat').title = livingDescription;
+    documentRef.getElementById('living-stat').setAttribute('aria-label', livingDescription);
+    documentRef.getElementById('partnership-count').textContent = String(family.partnerships.length);
     const emblem = documentRef.getElementById('family-emblem');
     const source = family.document.emblem || family.houses[0]?.emblem;
     emblem.hidden = !source;
@@ -302,6 +345,9 @@ export function createAppController({
       case 'open-person-edit':
         if (selected) personDialog.openEdit(selected, state.family);
         break;
+      case 'open-person-biography':
+        if (selected) openPersonBiography(selected.id);
+        break;
       case 'close-person-dialog':
         personDialog.close();
         break;
@@ -352,12 +398,18 @@ export function createAppController({
         break;
       }
       case 'open-time-jump-create': {
-        if (!state.family.partnerships.length) {
-          toast('Für einen Zeitsprungknoten muss zuerst ein Paar angelegt werden.', { error: true });
+        if (!state.family.persons.length) {
+          toast('Für einen Zeitsprungknoten muss zuerst eine Person angelegt werden.', { error: true });
           break;
         }
         const preferredPartnershipId = selected ? graph.getPartnerships(selected.id)[0]?.id || '' : '';
-        timeJumpDialog.openCreate(state.family, preferredPartnershipId);
+        timeJumpDialog.openCreate(state.family, preferredPartnershipId, selected?.id || '');
+        break;
+      }
+      case 'open-time-jump-after-person': {
+        if (!selected) break;
+        const preferredPartnershipId = graph.getPartnerships(selected.id)[0]?.id || '';
+        timeJumpDialog.openCreate(state.family, preferredPartnershipId, selected.id);
         break;
       }
       case 'close-time-jump-dialog':
@@ -569,7 +621,9 @@ export function createAppController({
 
   function submitTimeJumpForm() {
     const values = timeJumpDialog.read();
-    if (!values.parentPartnershipId) throw new Error('Bitte das Paar vor dem Zeitsprung wählen.');
+    if (!values.parentPartnershipId && !values.parentPersonId) {
+      throw new Error('Bitte eine Person oder eine Verbindung vor dem Zeitsprung wählen.');
+    }
     if (values.id) store.updateTimeJump(values.id, values);
     else store.addTimeJump(values);
     timeJumpDialog.close();
@@ -584,7 +638,8 @@ export function createAppController({
       family: store.getState().family,
       id: values.id,
       title: values.title,
-      folderPath
+      folderPath,
+      rankId: values.rankId
     }, runtime.localStorage);
     store.replaceFamily(record.family, { source: 'family-library-save' });
     const target = new URL(runtime.location.href);
@@ -730,8 +785,8 @@ export function createAppController({
       ? 'Stammbaum bearbeiten'
       : 'Stammbaum ansehen';
     documentRef.querySelector('.chart-hint').textContent = isEditing
-      ? 'Ziehen zum Verschieben · Mausrad zum Zoomen · Karte wählen für Details'
-      : 'Ziehen zum Verschieben · Mausrad zum Zoomen · Verknüpfte Wappen öffnen weitere Häuser';
+      ? 'Ziehen zum Verschieben · Mausrad zum Zoomen · Portrait öffnet die Biographie'
+      : 'Ziehen zum Verschieben · Mausrad zum Zoomen · Portrait öffnet die Biographie · Wappen öffnen weitere Häuser';
     documentRef.querySelectorAll('[data-current-year]').forEach(element => {
       element.textContent = String(ALERIA_CURRENT_YEAR);
     });
@@ -755,6 +810,7 @@ export function createAppController({
     documentRef.removeEventListener('keydown', onKeydown);
     unsubscribe?.();
     chartSession?.destroy();
+    personBiographyDialog.destroy();
   }
 
   return Object.freeze({ init, destroy });

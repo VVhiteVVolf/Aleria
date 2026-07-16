@@ -1087,8 +1087,13 @@ function sanitizeBiographyData(data = {}) {
         };
       }).filter(item => item.icon || item.title || item.text || item.link)
     : [];
+  const portraitStages = Array.from(
+    { length: 4 },
+    (_, index) => String(Array.isArray(data.portraitStages) ? data.portraitStages[index] || '' : '').trim()
+  );
 
   return {
+    portraitStages,
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),
     connectionTextOffset: clampBiographyNumber(data.connectionTextOffset, 0, 0, 80),

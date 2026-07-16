@@ -41,6 +41,26 @@ function findPartnershipId(partnerships, participantIds) {
   ))?.id || '';
 }
 
+function resolveTimeJumpAnchor(draft, values) {
+  const partnership = values.parentPartnershipId
+    ? draft.partnerships.find(item => item.id === values.parentPartnershipId)
+    : null;
+  if (values.parentPartnershipId && !partnership) {
+    throw new Error('Das Paar vor dem Zeitsprung wurde nicht gefunden.');
+  }
+  const person = !partnership && values.parentPersonId
+    ? draft.persons.find(item => item.id === values.parentPersonId)
+    : null;
+  if (!partnership && !person) {
+    throw new Error('Bitte eine Person oder ein Paar vor dem Zeitsprung wählen.');
+  }
+  return {
+    parentIds: partnership ? partnership.participantIds.slice(0, 2) : [person.id],
+    parentPartnershipId: partnership?.id || '',
+    parentPersonId: partnership ? '' : person.id
+  };
+}
+
 export function createFamilyStore(initialFamily, options = {}) {
   const maximumHistory = Number.isInteger(options.maximumHistory) ? Math.max(1, options.maximumHistory) : 60;
   let family = assertValidFamily(initialFamily).family;
@@ -165,12 +185,12 @@ export function createFamilyStore(initialFamily, options = {}) {
       if (relationKind === 'time-jump-child') {
         const timeJump = draft.timeJumps.find(item => item.id === relationValues.timeJumpId);
         if (!timeJump) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
-        const partnership = draft.partnerships.find(item => item.id === timeJump.parentPartnershipId);
-        if (!partnership || !partnership.participantIds.includes(referencePersonId)) {
+        const anchor = resolveTimeJumpAnchor(draft, timeJump);
+        if (!anchor.parentIds.includes(referencePersonId)) {
           throw new Error('Der Zeitsprungknoten gehört nicht zur ausgewählten Person.');
         }
-        parentIds = partnership.participantIds.slice(0, 2);
-        partnershipId = partnership.id;
+        parentIds = anchor.parentIds;
+        partnershipId = anchor.parentPartnershipId;
         parentageType = 'claimed';
         timeJump.childIds.push(personId);
       }
@@ -201,6 +221,20 @@ export function createFamilyStore(initialFamily, options = {}) {
     }, { personId });
   }
 
+  function setPersonExtension(personId, extensionId, value) {
+    const key = String(extensionId || '').trim();
+    if (!key) throw new Error('Die Erweiterungs-ID darf nicht leer sein.');
+    return commit('person-extension-updated', draft => {
+      const person = draft.persons.find(item => item.id === personId);
+      if (!person) throw new Error('Die Person wurde nicht gefunden.');
+      person.extensions = person.extensions && typeof person.extensions === 'object'
+        ? { ...person.extensions }
+        : {};
+      if (value === null || value === undefined) delete person.extensions[key];
+      else person.extensions[key] = cloneValue(value);
+    }, { personId, extensionId: key, removed: value === null || value === undefined });
+  }
+
   function deletePerson(personId) {
     return commit('person-deleted', draft => {
       draft.persons = draft.persons.filter(person => person.id !== personId);
@@ -226,7 +260,11 @@ export function createFamilyStore(initialFamily, options = {}) {
         remainingPartnershipIds.has(branch.parentPartnershipId)
       ));
       draft.timeJumps = draft.timeJumps
-        .filter(timeJump => remainingPartnershipIds.has(timeJump.parentPartnershipId))
+        .filter(timeJump => (
+          timeJump.parentPartnershipId
+            ? remainingPartnershipIds.has(timeJump.parentPartnershipId)
+            : timeJump.parentPersonId !== personId
+        ))
         .map(timeJump => ({
           ...timeJump,
           childIds: timeJump.childIds.filter(childId => childId !== personId)
@@ -386,11 +424,11 @@ export function createFamilyStore(initialFamily, options = {}) {
   function addTimeJump(values) {
     const id = values.id || createRecordId('time-jump', family.timeJumps.map(item => item.id));
     commit('time-jump-added', draft => {
-      const partnership = draft.partnerships.find(item => item.id === values.parentPartnershipId);
-      if (!partnership) throw new Error('Das Paar vor dem Zeitsprung wurde nicht gefunden.');
+      const anchor = resolveTimeJumpAnchor(draft, values);
       draft.timeJumps.push({
         id,
-        parentPartnershipId: values.parentPartnershipId,
+        parentPartnershipId: anchor.parentPartnershipId,
+        parentPersonId: anchor.parentPersonId,
         childIds: [...new Set(values.childIds || [])],
         years: Number(values.years || 0),
         fromYear: values.fromYear || '',
@@ -401,14 +439,16 @@ export function createFamilyStore(initialFamily, options = {}) {
       });
       [...new Set(values.childIds || [])].forEach(childId => {
         const alreadyConnected = draft.parentages.some(parentage => (
-          parentage.childId === childId && parentage.partnershipId === partnership.id
+          parentage.childId === childId
+          && parentage.partnershipId === anchor.parentPartnershipId
+          && anchor.parentIds.every(parentId => parentage.parentIds.includes(parentId))
         ));
         if (alreadyConnected) return;
         draft.parentages.push({
           id: createRecordId('parentage', draft.parentages.map(item => item.id)),
           childId,
-          parentIds: partnership.participantIds.slice(0, 2),
-          partnershipId: partnership.id,
+          parentIds: anchor.parentIds,
+          partnershipId: anchor.parentPartnershipId,
           type: 'claimed',
           legitimacy: 'unknown',
           certainty: 'probable',
@@ -425,10 +465,10 @@ export function createFamilyStore(initialFamily, options = {}) {
     return commit('time-jump-updated', draft => {
       const timeJump = draft.timeJumps.find(item => item.id === timeJumpId);
       if (!timeJump) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
-      const partnership = draft.partnerships.find(item => item.id === values.parentPartnershipId);
-      if (!partnership) throw new Error('Das Paar vor dem Zeitsprung wurde nicht gefunden.');
+      const anchor = resolveTimeJumpAnchor(draft, values);
       Object.assign(timeJump, {
-        parentPartnershipId: values.parentPartnershipId,
+        parentPartnershipId: anchor.parentPartnershipId,
+        parentPersonId: anchor.parentPersonId,
         childIds: [...new Set(values.childIds || timeJump.childIds)],
         years: Number(values.years || 0),
         fromYear: values.fromYear || '',
@@ -439,8 +479,8 @@ export function createFamilyStore(initialFamily, options = {}) {
       draft.parentages
         .filter(parentage => parentage.extensions?.timeJumpId === timeJumpId)
         .forEach(parentage => {
-          parentage.parentIds = partnership.participantIds.slice(0, 2);
-          parentage.partnershipId = partnership.id;
+          parentage.parentIds = anchor.parentIds;
+          parentage.partnershipId = anchor.parentPartnershipId;
         });
     }, { timeJumpId });
   }
@@ -482,6 +522,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     addPerson,
     addRelatedPerson,
     updatePerson,
+    setPersonExtension,
     deletePerson,
     addPartnership,
     addParentage,

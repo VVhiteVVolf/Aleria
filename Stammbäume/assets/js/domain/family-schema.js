@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS, FAMILY_ROLES } from '../config/family-colors.js';
 import { DEFAULT_CREST_FRAME, isCrestFrameId } from '../config/chart-frames.js';
+import { normalizeHouseProfile } from './house-profile.js';
 
 export const FAMILY_SCHEMA = 'aleria.family-tree';
 export const FAMILY_SCHEMA_VERSION = 1;
@@ -167,6 +168,7 @@ function normalizeTimeJump(timeJump = {}, index = 0) {
   return {
     id: text(timeJump.id, `time-jump-${index + 1}`),
     parentPartnershipId: text(timeJump.parentPartnershipId),
+    parentPersonId: text(timeJump.parentPersonId),
     childIds: uniqueText(timeJump.childIds),
     years: Number.isFinite(Number(timeJump.years))
       ? Math.max(0, Math.min(10000, Number(timeJump.years)))
@@ -214,7 +216,8 @@ export function normalizeFamily(input = {}) {
       title: text(document.title, 'Unbenannte Familie'),
       motto: text(document.motto),
       description: text(document.description),
-      emblem: text(document.emblem)
+      emblem: text(document.emblem),
+      houseProfile: normalizeHouseProfile(document.houseProfile)
     },
     persons,
     partnerships: array(source.partnerships).map(normalizePartnership),
@@ -419,12 +422,31 @@ export function validateFamily(input) {
 
   const timeJumpChildIds = new Set();
   family.timeJumps.forEach(timeJump => {
-    if (!partnershipIds.has(timeJump.parentPartnershipId)) {
+    const partnership = partnershipById.get(timeJump.parentPartnershipId);
+    const hasPersonAnchor = personIds.has(timeJump.parentPersonId);
+    if (timeJump.parentPartnershipId && !partnership) {
       diagnostics.push(diagnostic('error', 'MISSING_TIME_JUMP_PARTNERSHIP', 'Der Zeitsprungknoten verweist auf ein unbekanntes Paar.', {
         timeJumpId: timeJump.id,
         partnershipId: timeJump.parentPartnershipId
       }));
     }
+    if (timeJump.parentPersonId && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'MISSING_TIME_JUMP_PERSON', 'Der Zeitsprungknoten verweist auf eine unbekannte Person.', {
+        timeJumpId: timeJump.id,
+        personId: timeJump.parentPersonId
+      }));
+    }
+    if (!partnership && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'MISSING_TIME_JUMP_ANCHOR', 'Ein Zeitsprungknoten benötigt eine Person oder ein Paar als Ausgangspunkt.', {
+        timeJumpId: timeJump.id
+      }));
+    }
+    if (partnership && hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'AMBIGUOUS_TIME_JUMP_ANCHOR', 'Ein Zeitsprungknoten darf nicht zugleich an einer Person und einem Paar hängen.', {
+        timeJumpId: timeJump.id
+      }));
+    }
+    const anchorPersonIds = partnership?.participantIds || (hasPersonAnchor ? [timeJump.parentPersonId] : []);
     timeJump.childIds.forEach(childId => {
       if (!personIds.has(childId)) {
         diagnostics.push(diagnostic('error', 'MISSING_TIME_JUMP_CHILD', 'Der Zeitsprungknoten verweist auf eine unbekannte Person.', {
@@ -432,7 +454,7 @@ export function validateFamily(input) {
           childId
         }));
       }
-      if (partnershipById.get(timeJump.parentPartnershipId)?.participantIds.includes(childId)) {
+      if (anchorPersonIds.includes(childId)) {
         diagnostics.push(diagnostic('error', 'TIME_JUMP_SELF_DESCENDANT', 'Eine Person vor dem Zeitsprung kann nicht zugleich dessen Nachkomme sein.', {
           timeJumpId: timeJump.id,
           childId

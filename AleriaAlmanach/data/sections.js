@@ -59,6 +59,23 @@ const DUGHALL = {
 const EGON = {
   name: "Sir Egon Gafyr",
   title: "Marschall der Grafschaft Celtigerns Wacht, Ritterfürstliches Geschlecht der Gafyr aus Gwynthor",
+  identity: {
+    worldPersonId: "person--haus-gafyr--egon-gafyr",
+  },
+  genealogy: {
+    worldPersonId: "person--haus-gafyr--egon-gafyr",
+    sex: "male",
+    status: "alive",
+    birth: "1694",
+    death: "",
+    houseId: "house-gafyr",
+    houseName: "Haus Gafyr",
+    familyRole: "core",
+    portraitPlaceholder: "auto",
+    tags: ["Almanach-Charakter", "Marschall"],
+    sources: [],
+    relationships: { parents: [], partners: [], children: [] },
+  },
   avatars: {
     erklarend:    "https://i.imgur.com/miyMrKV.png",
     nachdenklich: "https://i.imgur.com/7spxVet.png",

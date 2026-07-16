@@ -86,6 +86,7 @@ for (const record of FAMILY_REGISTRY) {
     familyId: record.id,
     title: record.title,
     folderPath: record.folderPath,
+    houseProfile: family.document.houseProfile,
     parentId: record.folderPath.at(-1)?.toLocaleLowerCase('de').replace(/[^a-z0-9]+/g, '-') || '',
     sortOrder: record.title,
     updatedAt: now,

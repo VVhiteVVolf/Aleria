@@ -132,6 +132,14 @@
   transform: rotate(90deg);
 }
 
+.registry-folder-icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0.15rem 0.18rem rgba(74, 48, 27, 0.2));
+}
+
 .registry-folder-count {
   margin-left: auto;
   color: var(--ink-500);
@@ -180,6 +188,16 @@
   font-size: 0.82rem;
 }
 
+.registry-family-card .registry-family-profile {
+  margin-top: 0.28rem;
+  color: #825e2d;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.035em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
 .registry-family-meta {
   display: grid;
   justify-items: end;
@@ -225,4 +243,3 @@
     display: none;
   }
 }
-

@@ -10,6 +10,7 @@ export function createTimeJumpDialog(documentRef = document) {
   const dialog = documentRef.getElementById('time-jump-dialog');
   const form = documentRef.getElementById('time-jump-form');
   const partnershipSelect = form.elements.namedItem('parentPartnershipId');
+  const personSelect = form.elements.namedItem('parentPersonId');
   const childSelect = form.elements.namedItem('childId');
   const fromYearInput = form.elements.namedItem('fromYear');
   const toYearInput = form.elements.namedItem('toYear');
@@ -26,7 +27,8 @@ export function createTimeJumpDialog(documentRef = document) {
 
   function suggestFromYear() {
     const partnership = currentFamily?.partnerships.find(item => item.id === partnershipSelect.value);
-    fromYearInput.value = latestKnownPersonYear(partnership?.participantIds || [], personIndex());
+    const anchorPersonIds = partnership?.participantIds || (personSelect.value ? [personSelect.value] : []);
+    fromYearInput.value = latestKnownPersonYear(anchorPersonIds, personIndex());
   }
 
   function suggestToYear() {
@@ -37,6 +39,7 @@ export function createTimeJumpDialog(documentRef = document) {
     const partnership = currentFamily?.partnerships.find(item => item.id === partnershipSelect.value);
     const excludedIds = new Set([
       ...(partnership?.participantIds || []),
+      ...(partnership ? [] : personSelect.value ? [personSelect.value] : []),
       ...(currentFamily?.timeJumps
         .filter(timeJump => timeJump.id !== currentTimeJump?.id)
         .flatMap(timeJump => timeJump.childIds) || [])
@@ -50,7 +53,7 @@ export function createTimeJumpDialog(documentRef = document) {
 
   function populatePartnerships(family, preferredPartnershipId = '') {
     const personById = new Map(family.persons.map(person => [person.id, person]));
-    partnershipSelect.replaceChildren();
+    partnershipSelect.replaceChildren(new Option('— Nur die ausgewählte Person —', ''));
     family.partnerships.forEach(partnership => {
       partnershipSelect.add(new Option(partnershipLabel(partnership, personById), partnership.id));
     });
@@ -59,11 +62,20 @@ export function createTimeJumpDialog(documentRef = document) {
     }
   }
 
-  function openCreate(family, preferredPartnershipId = '') {
+  function populatePeople(family, preferredPersonId = '') {
+    personSelect.replaceChildren(new Option('— Person wählen —', ''));
+    family.persons.forEach(person => personSelect.add(new Option(person.name, person.id)));
+    if (preferredPersonId && family.persons.some(person => person.id === preferredPersonId)) {
+      personSelect.value = preferredPersonId;
+    }
+  }
+
+  function openCreate(family, preferredPartnershipId = '', preferredPersonId = '') {
     form.reset();
     currentFamily = family;
     currentTimeJump = null;
     childSelect.disabled = false;
+    populatePeople(family, preferredPersonId);
     populatePartnerships(family, preferredPartnershipId);
     populateChildren();
     suggestFromYear();
@@ -81,6 +93,8 @@ export function createTimeJumpDialog(documentRef = document) {
     form.reset();
     currentFamily = family;
     currentTimeJump = timeJump;
+    const partnership = family.partnerships.find(item => item.id === timeJump.parentPartnershipId);
+    populatePeople(family, timeJump.parentPersonId || partnership?.participantIds[0] || '');
     populatePartnerships(family, timeJump.parentPartnershipId);
     populateChildren();
     form.elements.namedItem('id').value = timeJump.id;
@@ -107,7 +121,8 @@ export function createTimeJumpDialog(documentRef = document) {
       : 0;
     return {
       id: String(values.id || ''),
-      parentPartnershipId: values.parentPartnershipId,
+      parentPartnershipId: String(values.parentPartnershipId || ''),
+      parentPersonId: values.parentPartnershipId ? '' : String(values.parentPersonId || ''),
       childIds: currentTimeJump
         ? [...currentTimeJump.childIds]
         : values.childId ? [values.childId] : [],
@@ -120,6 +135,16 @@ export function createTimeJumpDialog(documentRef = document) {
   }
 
   partnershipSelect.addEventListener('change', () => {
+    const partnership = currentFamily?.partnerships.find(item => item.id === partnershipSelect.value);
+    if (partnership && !partnership.participantIds.includes(personSelect.value)) {
+      personSelect.value = partnership.participantIds[0] || '';
+    }
+    populateChildren();
+    suggestFromYear();
+  });
+  personSelect.addEventListener('change', () => {
+    const partnership = currentFamily?.partnerships.find(item => item.id === partnershipSelect.value);
+    if (partnership && !partnership.participantIds.includes(personSelect.value)) partnershipSelect.value = '';
     populateChildren();
     suggestFromYear();
   });

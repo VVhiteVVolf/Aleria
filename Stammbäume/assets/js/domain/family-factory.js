@@ -1,4 +1,5 @@
 import { normalizeFamily } from './family-schema.js';
+import { normalizeHouseProfile } from './house-profile.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
 
@@ -37,7 +38,8 @@ export function createEmptyFamily() {
       title: 'Neue Familie',
       motto: '',
       description: '',
-      emblem: ''
+      emblem: '',
+      houseProfile: normalizeHouseProfile()
     },
     persons: [],
     partnerships: [],
@@ -123,7 +125,8 @@ export function createFoundingFamily(values = {}) {
       title: documentTitle,
       motto: String(values.motto || '').trim(),
       description: 'In der Aleria-Stammbaum-Werkstatt angelegte Familienakte.',
-      emblem
+      emblem,
+      houseProfile: normalizeHouseProfile({ rankId: values.rankId })
     },
     houses: [{
       id: houseId,

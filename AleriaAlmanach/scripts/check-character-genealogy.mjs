@@ -2,6 +2,7 @@
 
 import assert from 'node:assert/strict';
 import { HOUSE_ARWYDD_FAMILY } from '../../Stammbäume/assets/js/data/house-arwydd-family.js';
+import { HOUSE_GAFYR_FAMILY } from '../../Stammbäume/assets/js/data/house-gafyr-family.js';
 import { normalizeFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
 import { createFamilyViewLink } from '../../Stammbäume/assets/js/services/family-links.js';
 import {
@@ -97,5 +98,31 @@ assert.equal(
   createFamilyViewLink('haus-arwydd', 'idris-arwydd'),
   'Stammbaum.html?family=haus-arwydd&mode=view&person=idris-arwydd'
 );
+
+const gafyrCandidates = createFamilyCandidates({
+  id: 'haus-gafyr',
+  title: 'Haus Gafyr',
+  folderPath: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'],
+  source: 'project',
+  family: normalizeFamily(HOUSE_GAFYR_FAMILY)
+});
+const egon = gafyrCandidates.find(candidate => candidate.personId === 'egon-gafyr');
+const mathonwy = gafyrCandidates.find(candidate => candidate.personId === 'mathonwy-gafyr');
+const kelyddon = gafyrCandidates.find(candidate => candidate.personId === 'kelyddon-gafyr');
+
+assert.equal(egon.displayName, 'Egon Gafyr');
+assert.equal(egon.birthYear, 1694);
+assert.equal(egon.worldPersonId, 'person--haus-gafyr--egon-gafyr');
+assert.equal(findBestCharacterMatch(egon, [{
+  id: 'builtin:character:sir-egon-gafyr',
+  name: 'Sir Egon Gafyr',
+  identity: { worldPersonId: 'person--haus-gafyr--egon-gafyr' },
+  genealogy: { birth: '1694', houseId: 'house-gafyr', houseName: 'Haus Gafyr' }
+}]).kind, 'linked');
+assert.equal(mathonwy.worldPersonId, 'person--haus-gafyr--mathonwy-gafyr');
+assert.deepEqual(mathonwy.relationships.partners.map(person => person.name), ['Lynesse Wyrm']);
+assert.equal(kelyddon.worldPersonId, 'person--haus-gafyr--kelyddon-gafyr');
+assert.deepEqual(kelyddon.relationships.partners.map(person => person.name), ['Izolda Arwydd']);
+assert.deepEqual(kelyddon.relationships.children.map(person => person.name), ['Gildas Gafyr', 'Uthyr Gafyr']);
 
 console.log('Character-genealogy checks passed.');

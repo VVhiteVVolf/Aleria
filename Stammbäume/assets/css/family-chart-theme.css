@@ -121,31 +121,18 @@
   clip-path: polygon(0 0, 94% 0, 100% 8%, 100% 91%, 94% 100%, 0 100%);
 }
 
-.aleria-person-card__portrait-backdrop {
-  position: absolute;
-  z-index: 1;
-  top: 13.5%;
-  left: 5.2%;
-  width: 30.6%;
-  height: 80%;
-  border-radius: 50%;
-  background: #c6a173;
-  pointer-events: none;
-}
-
 .aleria-person-card__portrait {
   position: absolute;
-  z-index: 2;
-  top: 15.8%;
-  left: 6.4%;
-  width: 28.3%;
-  height: 75.8%;
-  border-radius: 50%;
+  z-index: 1;
+  top: 12.8%;
+  left: 7.4%;
+  width: 30.5%;
+  height: 82.6%;
   background: transparent;
   object-fit: cover;
   object-position: center top;
-  clip-path: ellipse(48% 49% at 50% 50%);
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .aleria-person-card__text {
