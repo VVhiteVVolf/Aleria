@@ -4,7 +4,9 @@
   const root = document.querySelector("[data-haeuser-root]");
   if (!root) return;
 
+  const IMAGE_REFRESH_DELAYS = Object.freeze([0, 120, 350, 900, 1800, 3500]);
   let currentHouseData = null;
+  let imageRefreshToken = 0;
 
   initStaticPage();
   window.addEventListener("aleria:haeuser:data-ready", (event) => {
@@ -33,6 +35,7 @@
     renderProfile(data.profile || {});
     renderSections(data.sections || {});
     renderImages(data.images || {});
+    scheduleImageRefresh(data.images || {});
     renderContentTargets(data.contentTargets || {});
     renderFamilyTreeEmbed(data.familyTreeEmbed || null);
     renderTrivia(data.trivia || []);
@@ -65,16 +68,34 @@
 
       const existingImage = slot.querySelector("img");
       const hasPlaceholder = !!slot.querySelector(".orte-image-placeholder, .orte-image-placeholder-media");
+      const hasLoadError = slot.classList.contains("has-image-load-error");
       const renderedSource = slot.dataset.orteRenderedImageSrc || existingImage?.getAttribute("src") || "";
 
-      if (!existingImage || hasPlaceholder || !renderedSource) {
+      if (!existingImage || hasPlaceholder || hasLoadError || !renderedSource) {
         slot.classList.add("has-image");
+        slot.classList.remove("has-portrait-placeholder", "has-image-load-error");
+        slot.dataset.orteRenderedImageSrc = image.src;
+        slot.dataset.orteRenderedImageHref = image.href || "";
+        slot.dataset.orteRenderedImageAlt = image.alt || slot.dataset.orteImageLabel || key;
         slot.innerHTML = renderImageMarkup({
           src: image.src,
           href: image.href || "",
           alt: image.alt || slot.dataset.orteImageLabel || key,
         });
       }
+    });
+  }
+
+  function scheduleImageRefresh(images) {
+    if (!Object.keys(images).length) return;
+    imageRefreshToken += 1;
+    const token = imageRefreshToken;
+
+    IMAGE_REFRESH_DELAYS.forEach((delay) => {
+      window.setTimeout(() => {
+        if (token !== imageRefreshToken || currentHouseData?.images !== images) return;
+        renderImages(images);
+      }, delay);
     });
   }
 
@@ -151,7 +172,7 @@
   }
 
   function renderImageMarkup(image) {
-    const imageHtml = `<img src="${escapeAttr(image.src)}" alt="${escapeAttr(image.alt)}" loading="lazy" decoding="async">`;
+    const imageHtml = `<img src="${escapeAttr(image.src)}" alt="${escapeAttr(image.alt)}" loading="eager" decoding="async" fetchpriority="high">`;
     return image.href
       ? `<a href="${escapeAttr(image.href)}" target="_blank" rel="noopener">${imageHtml}</a>`
       : imageHtml;
