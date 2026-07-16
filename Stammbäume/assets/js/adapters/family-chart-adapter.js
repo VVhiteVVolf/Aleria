@@ -12,6 +12,7 @@ import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
 } from './family-chart-card-renderer.js';
+import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 
 const ADAPTER_ID = 'family-chart';
@@ -483,12 +484,13 @@ export function createFamilyChartSession(config) {
   });
 
   function applyView(render = false) {
+    const chartDepths = resolveFamilyChartViewDepths(converted.data, focusPersonId, view);
     chart.setTransitionTime?.(260);
     chart.setCardXSpacing?.(FAMILY_CHART_CARD_LAYOUT.horizontalSpacing);
     chart.setCardYSpacing?.(FAMILY_CHART_CARD_LAYOUT.verticalSpacing);
     chart.setShowSiblingsOfMain?.(view.showSiblings !== false);
-    chart.setAncestryDepth?.(view.ancestorDepth ?? 8);
-    chart.setProgenyDepth?.(view.descendantDepth ?? 8);
+    chart.setAncestryDepth?.(chartDepths.ancestorDepth);
+    chart.setProgenyDepth?.(chartDepths.descendantDepth);
     chart.setSingleParentEmptyCard?.(false, { label: 'Unbekannt' });
     if (view.orientation === 'horizontal') chart.setOrientationHorizontal?.();
     else chart.setOrientationVertical?.();
@@ -558,6 +560,7 @@ export function createFamilyChartSession(config) {
     const datum = converted.data.find(person => person.id === personId);
     if (!datum || datum.data.aleria.virtualType) return false;
     focusPersonId = personId;
+    applyView(false);
     chart.updateMainId?.(personId);
     chart.updateTree?.({
       initial: false,
@@ -578,6 +581,7 @@ export function createFamilyChartSession(config) {
       : family.persons[0]?.id;
     if (!defaultPersonId) return false;
     focusPersonId = defaultPersonId;
+    applyView(false);
     chart.updateMainId?.(defaultPersonId);
     chart.updateTree?.({ initial: false, tree_position: 'fit' });
     return true;

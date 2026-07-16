@@ -4,6 +4,7 @@ import {
   isPortraitCardEvent,
   toFamilyChartData
 } from '../assets/js/adapters/family-chart-adapter.js';
+import { resolveFamilyChartViewDepths } from '../assets/js/adapters/family-chart-depth.js';
 import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
@@ -1155,6 +1156,10 @@ test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn un
   });
 
   assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 6);
+  const chartDepths = resolveFamilyChartViewDepths(converted.data, 'celtigern-draig', family.view);
+  assert.equal(chartDepths.descendantDepth, 24, 'Virtuelle Wappen und Zeitsprünge dürfen jüngere Draigs nicht abschneiden.');
+  const youngestDepths = resolveFamilyChartViewDepths(converted.data, 'gawain-draig', family.view);
+  assert.equal(youngestDepths.ancestorDepth, 24, 'Beim Fokus auf die jüngste Generation müssen alle frühen Draigs erreichbar bleiben.');
   assert.equal(converted.data.some(entry => entry.id === 'gwyrthern-pendrag'), false);
   const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
   const connectedIds = new Set(['celtigern-draig']);
