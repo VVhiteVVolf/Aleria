@@ -65,6 +65,29 @@
       ],
       tags: ["kleine-haeuser", "kleine-clans", "familien", "nebenlinien", "vorlage"],
     },
+    {
+      id: "haus-arwydd",
+      slug: "haus-arwydd",
+      aliases: [
+        "arwydd",
+        "haus-arwydd-o-castellbryn",
+        "arwydd-o-castellbryn",
+      ],
+      name: "Haus Arwydd O'Castellbryn",
+      status: HOUSE_STATUS.ACTIVE,
+      type: HOUSE_TYPES.HOUSE,
+      data: "data/haus-arwydd.data.js",
+      inlineCollection: "familien_haeuser_und_clans_inline_content",
+      sceneCollection: "familien_haeuser_und_clans_scenes",
+      hierarchy: [
+        { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
+        { type: "Königreich", name: "Cenyr", slug: "cenyr" },
+        { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },
+        { type: "Baronie", name: "Rhonwens Tränen", slug: "rhonwens-traenen" },
+        { type: "Sitz", name: "Castellbryn", slug: "castellbryn" },
+      ],
+      tags: ["arwydd", "castellbryn", "cenyr", "ritterfuerst", "haus"],
+    },
   ].map(Object.freeze);
 
   function all() {

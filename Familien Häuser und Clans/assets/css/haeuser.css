@@ -378,13 +378,27 @@ body {
   min-height: 120px;
 }
 
-.haeuser-tree-slot {
-  width: min(100%, 980px);
-  min-height: 300px;
+[data-haeuser-content] {
+  white-space: pre-line;
 }
 
-.haeuser-tree-image {
+.haeuser-family-tree-embed {
+  margin: 0.75rem auto 0;
+  width: min(100%, 1180px);
+}
+
+.haeuser-family-tree-frame {
+  display: block;
+  width: 100%;
+  min-height: 760px;
+  border: 1px solid var(--haeuser-border-dark);
+  background: #111;
+}
+
+.haeuser-family-tree-link {
+  margin-top: 0.45rem;
   text-align: center;
+  font-weight: 700;
 }
 
 .haeuser-template-frame .portrait-cell .haeuser-portrait-slot {

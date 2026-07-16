@@ -26,6 +26,9 @@
 
     renderProfile(data.profile || {});
     renderSections(data.sections || {});
+    renderImages(data.images || {});
+    renderContentTargets(data.contentTargets || {});
+    renderFamilyTreeEmbed(data.familyTreeEmbed || null);
     renderTrivia(data.trivia || []);
   }
 
@@ -39,6 +42,55 @@
     Object.entries(sections).forEach(([key, value]) => {
       setText(`[data-section="${escapeSelector(key)}"]`, value);
     });
+  }
+
+  function renderImages(images) {
+    Object.entries(images).forEach(([key, image]) => {
+      const slot = root.querySelector(`[data-orte-image-key="${escapeSelector(key)}"]`);
+      if (!slot || !image?.src) return;
+
+      slot.dataset.orteTemplateImageSrc = image.src;
+      slot.dataset.orteTemplateImageHref = image.href || "";
+      slot.dataset.orteTemplateImageAlt = image.alt || slot.dataset.orteImageLabel || key;
+      slot.dataset.orteImageFit = image.fit || slot.dataset.orteImageFit || "contain";
+      if (image.format) slot.dataset.orteImageFormat = image.format;
+      if (image.width) slot.dataset.orteImageWidth = String(image.width);
+      if (image.maxHeight) slot.dataset.orteImageMaxHeight = String(image.maxHeight);
+
+      if (!slot.querySelector("img")) {
+        slot.classList.add("has-image");
+        slot.innerHTML = renderImageMarkup({
+          src: image.src,
+          href: image.href || "",
+          alt: image.alt || slot.dataset.orteImageLabel || key,
+        });
+      }
+    });
+  }
+
+  function renderContentTargets(targets) {
+    Object.entries(targets).forEach(([key, value]) => {
+      setText(`[data-haeuser-content="${escapeSelector(key)}"]`, value);
+    });
+  }
+
+  function renderFamilyTreeEmbed(embed) {
+    const target = root.querySelector("[data-haeuser-family-tree-embed]");
+    if (!target || !embed?.src) return;
+
+    const title = embed.title || "Interaktiver Stammbaum";
+    target.hidden = false;
+    target.innerHTML = `
+      <iframe
+        class="haeuser-family-tree-frame"
+        src="${escapeAttr(embed.src)}"
+        title="${escapeAttr(title)}"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <p class="haeuser-family-tree-link">
+        <a href="${escapeAttr(embed.src)}" target="_blank" rel="noopener">${escapeHtml(title)} öffnen</a>
+      </p>
+    `;
   }
 
   function renderTrivia(items) {
@@ -88,6 +140,13 @@
     });
   }
 
+  function renderImageMarkup(image) {
+    const imageHtml = `<img src="${escapeAttr(image.src)}" alt="${escapeAttr(image.alt)}" loading="lazy" decoding="async">`;
+    return image.href
+      ? `<a href="${escapeAttr(image.href)}" target="_blank" rel="noopener">${imageHtml}</a>`
+      : imageHtml;
+  }
+
   function uniqueId(base, usedIds) {
     const fallback = base || "abschnitt";
     let id = fallback;
@@ -125,5 +184,9 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  function escapeAttr(value) {
+    return escapeHtml(value).replaceAll("`", "&#096;");
   }
 })();
