@@ -1,5 +1,11 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { HOUSE_TLAWD_FAMILY } from './house-tlawd-family.js';
+
+// Bereits ausgearbeitete Ritterherrenhäuser ersetzen ihre vorbereitete Leerakte.
+const ELABORATED_KNIGHT_FAMILIES = Object.freeze({
+  tlawd: HOUSE_TLAWD_FAMILY
+});
 
 export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'tlawd', liege: 'Gafyr' }),
@@ -21,6 +27,7 @@ function titleFromSlug(slug) {
 
 export const LOWER_KNIGHT_HOUSE_FAMILIES = Object.freeze(
   LOWER_KNIGHT_HOUSE_DEFINITIONS.map(definition => {
+    if (ELABORATED_KNIGHT_FAMILIES[definition.slug]) return ELABORATED_KNIGHT_FAMILIES[definition.slug];
     const houseName = titleFromSlug(definition.slug);
     return createBlankHouseFamily({
       id: `haus-${definition.slug}`,

@@ -17,6 +17,8 @@ import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
 import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits.js';
 import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/house-gwefrydd-family.js';
 import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portraits.js';
+import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
+import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -1642,6 +1644,90 @@ test('liefert für Haus Gwefrydd alle belegten Portraits lokal aus', async () =>
   }));
 });
 
+test('bildet das Ritterherrenhaus Tlawd mit Überlieferungslücke und silbernem Wappenrahmen ab', () => {
+  const family = assertValidFamily(HOUSE_TLAWD_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 31);
+  assert.equal(family.partnerships.length, 11);
+  assert.equal(family.parentages.length, 19);
+  assert.equal(family.cadetBranches.length, 0);
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.timeJumps[0].toYear, '1618');
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-edric-anwen');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-gafyr');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 4);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['siarl-tlawd', 'rhyderch-tlawd', 'edric-tlawd-1716'],
+    'Siarl, Rhyderch und Edric bilden die Erbfolge.'
+  );
+  assert.equal(
+    graph.getPerson('cadfael-tlawd').title,
+    'Ritterherr des Hauses Tlawd',
+    'Das Oberhaupt eines Ritterherrenhauses trägt den Titel Ritterherr.'
+  );
+  assert.equal(graph.getPerson('cadfael-tlawd').status, 'alive');
+  assert.equal(graph.getPerson('edric-tlawd').title, 'Begründer des Ritterherrenhauses Tlawd');
+
+  assert.deepEqual(graph.getChildren('edric-tlawd').map(person => person.id).sort(), [
+    'mair-tlawd',
+    'owain-tlawd'
+  ]);
+  assert.deepEqual(graph.getChildren('owain-tlawd').map(person => person.id), ['gareth-tlawd']);
+  assert.deepEqual(graph.getChildren('cadfael-tlawd').map(person => person.id).sort(), [
+    'lloyd-tlawd',
+    'modlen-tlawd',
+    'nedri-tlawd',
+    'siarl-tlawd'
+  ]);
+  assert.deepEqual(graph.getChildren('lloyd-tlawd').map(person => person.id).sort(), [
+    'arwel-tlawd',
+    'caron-tlawd',
+    'lludd-tlawd'
+  ]);
+  assert.deepEqual(graph.getChildren('rhyderch-tlawd').map(person => person.id).sort(), [
+    'edric-tlawd-1716',
+    'haf-tlawd',
+    'taran-tlawd'
+  ]);
+  assert.ok(
+    family.persons.filter(person => person.familyRole === 'married').every(person => !person.houseId),
+    'Die eingeheirateten Ehepartner sind ohne Hausnamen überliefert.'
+  );
+
+  const tlawdCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(tlawdCrest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 1);
+});
+
+test('liefert für Haus Tlawd alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_TLAWD_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-tlawd/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_TLAWD_PORTRAITS).length, 19);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_TLAWD_PORTRAITS).sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 19);
+  assert.equal(placeholderPeople.length, 12);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_TLAWD_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2024,7 +2110,11 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
     const definition = LOWER_KNIGHT_HOUSE_DEFINITIONS[index];
     const loaded = loadFamilyById(family.document.id, storage);
-    assert.equal(loaded.family.persons.length, 0);
+    if (family.document.id === 'haus-tlawd') {
+      assert.equal(loaded.family.persons.length, 31, 'Haus Tlawd ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else {
+      assert.equal(loaded.family.persons.length, 0);
+    }
     assert.equal(loaded.family.document.houseProfile.rankId, 'knight');
     assert.equal(loaded.family.document.houseProfile.liegeHouseId, `haus-${definition.liege.toLocaleLowerCase('de')}`);
     assert.equal(loaded.family.document.houseProfile.liegeHouseName, `Haus ${definition.liege}`);
