@@ -649,6 +649,60 @@
     </form>
   </dialog>
 
+  <dialog class="dialog" id="lineage-origin-dialog">
+    <form method="dialog" id="lineage-origin-form">
+      <input type="hidden" name="id">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Vorgelagertes Ursprungshaus</p>
+          <h2>Hauswappen und anschließende Linien bearbeiten</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-lineage-origin-dialog" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <label class="field">Hausdatensatz
+          <select name="houseId"></select>
+        </label>
+        <label class="field">Anzeigename
+          <input name="name" required maxlength="120" placeholder="Haus Dreigiau">
+        </label>
+        <label class="field field--wide">Untertitel
+          <input name="subtitle" maxlength="160" placeholder="optional">
+        </label>
+        <label class="field field--wide">Direkt anschließende Personen
+          <select name="childIds" multiple size="8" required></select>
+          <small>Mehrfachauswahl mit Strg beziehungsweise Cmd. Nur Personen ohne eingetragene Eltern sind wählbar.</small>
+        </label>
+        <label class="field field--wide">Rahmen des Wappens
+          <select name="crestFrame"></select>
+        </label>
+        <label class="field">Wappengröße (%)
+          <input type="number" name="emblemScale" min="50" max="160" step="1" value="86">
+        </label>
+        <label class="field">Rahmengröße (%)
+          <input type="number" name="frameScale" min="60" max="150" step="1" value="100">
+        </label>
+        <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
+          <input name="emblem" placeholder="assets/images/placeholders/neutral-crest.png">
+        </label>
+        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+          <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
+          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+        </label>
+        <label class="field field--wide">Optionale Ziel-Familien-ID
+          <input name="targetFamilyId" maxlength="120" placeholder="Erst eintragen, sobald das Zielhaus im Register existiert">
+        </label>
+        <label class="field field--wide">Notiz
+          <textarea name="notes" rows="3" maxlength="1000"></textarea>
+        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-lineage-origin-dialog">Abbrechen</button>
+        <button class="button" value="default" type="submit">Ursprungshaus speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
   <dialog class="dialog" id="cadet-dialog">
     <form method="dialog" id="cadet-form">
       <input type="hidden" name="id">

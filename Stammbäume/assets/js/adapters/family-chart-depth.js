@@ -42,6 +42,9 @@ function calculateExpandedDepth(data, mainId, relationName, requestedPersonDepth
 }
 
 export function resolveFamilyChartViewDepths(data, mainId, view = {}) {
+  if (view.limitGenerations !== true) {
+    return Object.freeze({ ancestorDepth: undefined, descendantDepth: undefined });
+  }
   // Aleria zählt Personengenerationen; Family Chart zählt zusätzlich Wappen und Zeitsprünge.
   return Object.freeze({
     ancestorDepth: calculateExpandedDepth(data, mainId, 'parents', view.ancestorDepth),

@@ -203,6 +203,23 @@ function normalizeTimeGap(timeGap = {}) {
   };
 }
 
+function normalizeOriginHouse(originHouse = {}) {
+  return {
+    enabled: originHouse.enabled === true,
+    id: text(originHouse.id, 'lineage-origin-house'),
+    houseId: text(originHouse.houseId),
+    name: text(originHouse.name, 'Ursprungshaus'),
+    subtitle: text(originHouse.subtitle),
+    emblem: text(originHouse.emblem),
+    emblemScale: boundedNumber(originHouse.emblemScale, 0.86, 0.5, 1.6),
+    crestFrame: isCrestFrameId(originHouse.crestFrame) ? originHouse.crestFrame : DEFAULT_CREST_FRAME,
+    frameScale: boundedNumber(originHouse.frameScale, 1, 0.6, 1.5),
+    childIds: uniqueText(originHouse.childIds),
+    targetFamilyId: text(originHouse.targetFamilyId),
+    notes: text(originHouse.notes)
+  };
+}
+
 export function normalizeFamily(input = {}) {
   const source = input && typeof input === 'object' ? input : {};
   const document = source.document && typeof source.document === 'object' ? source.document : {};
@@ -238,7 +255,8 @@ export function normalizeFamily(input = {}) {
         ? source.lineage.crestFrame
         : DEFAULT_CREST_FRAME,
       crestFrameScale: boundedNumber(source.lineage?.crestFrameScale, 1, 0.6, 1.5),
-      timeGap: normalizeTimeGap(source.lineage?.timeGap)
+      timeGap: normalizeTimeGap(source.lineage?.timeGap),
+      originHouse: normalizeOriginHouse(source.lineage?.originHouse)
     },
     presentation: {
       relationshipColors: Object.fromEntries(
@@ -253,6 +271,7 @@ export function normalizeFamily(input = {}) {
       orientation: view.orientation === 'horizontal' ? 'horizontal' : 'vertical',
       ancestorDepth: Number.isInteger(view.ancestorDepth) ? Math.max(0, view.ancestorDepth) : 5,
       descendantDepth: Number.isInteger(view.descendantDepth) ? Math.max(0, view.descendantDepth) : 5,
+      limitGenerations: view.limitGenerations === true,
       showSiblings: view.showSiblings !== false
     },
     extensions: source.extensions && typeof source.extensions === 'object' ? cloneValue(source.extensions) : {}
@@ -402,6 +421,34 @@ export function validateFamily(input) {
     diagnostics.push(diagnostic('warning', 'MISSING_LINEAGE_HOUSE', 'Das Gründerwappen verweist auf ein unbekanntes Haus.', {
       houseId: family.lineage.houseId
     }));
+  }
+
+  const originHouse = family.lineage.originHouse;
+  if (originHouse.enabled) {
+    if (originHouse.houseId && !houseIds.has(originHouse.houseId)) {
+      diagnostics.push(diagnostic('warning', 'MISSING_ORIGIN_HOUSE', 'Das vorgelagerte Wappen verweist auf ein unbekanntes Haus.', {
+        houseId: originHouse.houseId
+      }));
+    }
+    if (!originHouse.childIds.length) {
+      diagnostics.push(diagnostic('error', 'MISSING_ORIGIN_HOUSE_CHILD', 'Ein vorgelagertes Hauswappen benötigt mindestens eine nachfolgende Person.', {
+        originHouseId: originHouse.id
+      }));
+    }
+    originHouse.childIds.forEach(childId => {
+      if (!personIds.has(childId)) {
+        diagnostics.push(diagnostic('error', 'UNKNOWN_ORIGIN_HOUSE_CHILD', 'Das vorgelagerte Hauswappen verweist auf eine unbekannte Person.', {
+          originHouseId: originHouse.id,
+          childId
+        }));
+      }
+      if (family.parentages.some(parentage => parentage.childId === childId)) {
+        diagnostics.push(diagnostic('error', 'ORIGIN_HOUSE_CHILD_HAS_PARENTS', 'Eine Person direkt unter dem Ursprungshaus darf keine weitere Abstammung besitzen.', {
+          originHouseId: originHouse.id,
+          childId
+        }));
+      }
+    });
   }
 
   family.cadetBranches.forEach(branch => {

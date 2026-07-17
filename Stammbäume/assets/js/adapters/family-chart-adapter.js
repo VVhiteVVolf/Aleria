@@ -78,10 +78,14 @@ function selectPrimaryParentage(parentages) {
   ))[0];
 }
 
-function createChartPerson(person, house, diagnostics) {
+function createChartPerson(person, house, diagnostics, legitimacy = 'unknown') {
   const role = getFamilyRole(person.familyRole);
   const lineageRole = getPersonLineageRole(person.lineageRole);
-  const frame = getPersonCardFrame(role.id, lineageRole.id);
+  const frame = getPersonCardFrame(role.id, lineageRole.id, legitimacy);
+  // Bastarde dürfen das Hauswappen nicht führen und tragen immer das neutrale Siegel.
+  const crest = role.id === 'bastard'
+    ? PORTRAIT_PLACEHOLDERS.crest
+    : (house?.emblem || PORTRAIT_PLACEHOLDERS.crest);
   return {
     id: person.id,
     data: {
@@ -91,12 +95,13 @@ function createChartPerson(person, house, diagnostics) {
       house: house?.name || '',
       life: formatLifeLine(person),
       portrait: resolvePortraitSource(person),
-      crest: lineageRole.isHouseHead ? '' : (house?.emblem || PORTRAIT_PLACEHOLDERS.crest),
+      crest: lineageRole.isHouseHead ? '' : crest,
       frameAsset: frame.asset,
       frameVariant: frame.variant,
       crestPosition: frame.crestPosition,
       role: role.id,
       roleLabel: role.label,
+      legitimacy,
       lineageRole: lineageRole.id,
       lineageRoleLabel: lineageRole.label,
       nodeKind: 'person',
@@ -105,6 +110,7 @@ function createChartPerson(person, house, diagnostics) {
         sex: person.sex,
         status: person.status,
         familyRole: person.familyRole,
+        legitimacy,
         virtualType: ''
       }
     },
@@ -121,6 +127,7 @@ function createVirtualNode({
   nodeKind,
   targetFamilyId = '',
   cadetBranchId = '',
+  lineageOriginId = '',
   timeJumpId = '',
   sourcePartnershipId = '',
   crestFrame = '',
@@ -153,6 +160,7 @@ function createVirtualNode({
         virtualType: nodeKind,
         targetFamilyId,
         cadetBranchId,
+        lineageOriginId,
         timeJumpId,
         sourcePartnershipId
       }
@@ -287,6 +295,44 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
   });
 }
 
+function applyOriginHouseStructure({ family, chartById, parentageLines, houseById }) {
+  const origin = family.lineage.originHouse;
+  if (!origin?.enabled) return;
+
+  const childIds = origin.childIds.filter(childId => chartById.has(childId));
+  if (!childIds.length) return;
+
+  const house = houseById.get(origin.houseId);
+  const nodeId = `__origin-house-${family.document.id}-${origin.id}`;
+  const node = createVirtualNode({
+    id: nodeId,
+    name: origin.name || house?.name || 'Ursprungshaus',
+    title: origin.subtitle,
+    house: house?.name || origin.name,
+    portrait: origin.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+    nodeKind: 'house-origin',
+    targetFamilyId: origin.targetFamilyId,
+    lineageOriginId: origin.id,
+    crestFrame: origin.crestFrame,
+    emblemScale: origin.emblemScale,
+    frameScale: origin.frameScale
+  });
+  node.rels.children = [...childIds];
+
+  childIds.forEach(childId => {
+    const child = chartById.get(childId);
+    child.rels.parents.forEach(parentId => removeValue(chartById.get(parentId)?.rels.children || [], childId));
+    child.rels.parents = [nodeId];
+    parentageLines.set(childId, {
+      type: 'biological',
+      color: relationColor(family, 'biological'),
+      dashed: false
+    });
+  });
+
+  chartById.set(nodeId, node);
+}
+
 function applyTimeJumps({ family, chartById, parentageLines, personById }) {
   family.timeJumps.forEach(timeJump => {
     const partnership = family.partnerships.find(item => item.id === timeJump.parentPartnershipId);
@@ -338,10 +384,34 @@ export function toFamilyChartData(input, options = {}) {
   const pairMetadata = new Map();
   const parentageLines = new Map();
   const selectedParentageByChild = new Map();
+  const parentagesByChild = new Map();
+
+  family.parentages.forEach(parentage => {
+    if (options.publicOnly && parentage.visibility !== 'public') return;
+    if (!parentagesByChild.has(parentage.childId)) parentagesByChild.set(parentage.childId, []);
+    parentagesByChild.get(parentage.childId).push(parentage);
+  });
+  parentagesByChild.forEach((parentages, childId) => {
+    selectedParentageByChild.set(childId, selectPrimaryParentage(parentages));
+  });
 
   family.persons.forEach(person => {
-    chartById.set(person.id, createChartPerson(person, houseById.get(person.houseId), diagnostics));
+    const primaryParentage = selectedParentageByChild.get(person.id);
+    chartById.set(person.id, createChartPerson(
+      person,
+      houseById.get(person.houseId),
+      diagnostics,
+      primaryParentage?.legitimacy || 'unknown'
+    ));
   });
+
+  const extraCoupleLines = [];
+
+  function shareChartParent(firstId, secondId) {
+    const firstParents = selectedParentageByChild.get(firstId)?.parentIds || [];
+    const secondParents = selectedParentageByChild.get(secondId)?.parentIds || [];
+    return firstParents.some(parentId => secondParents.includes(parentId));
+  }
 
   family.partnerships.forEach(partnership => {
     if (options.publicOnly && partnership.visibility !== 'public') return;
@@ -359,29 +429,34 @@ export function toFamilyChartData(input, options = {}) {
       for (let secondIndex = firstIndex + 1; secondIndex < validIds.length; secondIndex += 1) {
         const firstId = validIds[firstIndex];
         const secondId = validIds[secondIndex];
-        addUnique(chartById.get(firstId).rels.spouses, secondId);
-        addUnique(chartById.get(secondId).rels.spouses, firstId);
-        pairMetadata.set(pairKey(firstId, secondId), Object.freeze({
+        const metadata = Object.freeze({
           type: partnership.type,
           color: relationColor(family, partnership.type),
           dashed: partnership.type === 'affair' || partnership.type === 'forced'
-        }));
+        });
+        pairMetadata.set(pairKey(firstId, secondId), metadata);
+        if (shareChartParent(firstId, secondId)) {
+          // Partner im selben Geschwisterblock (z. B. Mündel und Verlobter) würden vom
+          // Layout dupliziert; ihre Linie zeichnet der Link-Renderer stattdessen direkt.
+          extraCoupleLines.push(Object.freeze({ firstId, secondId, ...metadata }));
+          diagnostics.push(Object.freeze({
+            severity: 'info',
+            code: 'SIBLING_PARTNERSHIP_EXTRA_LINE',
+            message: 'Eine Verbindung innerhalb desselben Geschwisterblocks wird als Zusatzlinie gezeichnet.',
+            details: Object.freeze({ partnershipId: partnership.id, participantIds: Object.freeze([firstId, secondId]) })
+          }));
+          continue;
+        }
+        addUnique(chartById.get(firstId).rels.spouses, secondId);
+        addUnique(chartById.get(secondId).rels.spouses, firstId);
       }
     }
-  });
-
-  const parentagesByChild = new Map();
-  family.parentages.forEach(parentage => {
-    if (options.publicOnly && parentage.visibility !== 'public') return;
-    if (!parentagesByChild.has(parentage.childId)) parentagesByChild.set(parentage.childId, []);
-    parentagesByChild.get(parentage.childId).push(parentage);
   });
 
   parentagesByChild.forEach((parentages, childId) => {
     const child = chartById.get(childId);
     if (!child) return;
-    const selected = selectPrimaryParentage(parentages);
-    selectedParentageByChild.set(childId, selected);
+    const selected = selectedParentageByChild.get(childId);
     if (parentages.length > 1) {
       diagnostics.push(Object.freeze({
         severity: 'info',
@@ -415,10 +490,12 @@ export function toFamilyChartData(input, options = {}) {
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
   applyTimeJumps({ family, chartById, parentageLines, personById });
   applyCadetBranches({ family, chartById, parentageLines, houseById });
+  applyOriginHouseStructure({ family, chartById, parentageLines, houseById });
 
   return Object.freeze({
     data: Object.freeze([...chartById.values()]),
     diagnostics: Object.freeze(diagnostics),
+    extraCoupleLines: Object.freeze([...extraCoupleLines]),
     getPartnershipLine(firstId, secondId) {
       return pairMetadata.get(pairKey(firstId, secondId)) || null;
     },
@@ -461,9 +538,25 @@ export function createFamilyChartSession(config) {
   let view = { ...family.view, ...(config.view || {}) };
   let converted = toFamilyChartData(family, config.options);
   if (!converted.data.length) throw new Error('Der Stammbaum enthält keine darstellbare Person.');
-  let focusPersonId = view.focusPersonId && converted.data.some(person => person.id === view.focusPersonId)
-    ? view.focusPersonId
-    : family.persons[0]?.id;
+
+  function originRootId() {
+    const origin = family.lineage?.originHouse;
+    if (!origin?.enabled) return '';
+    const nodeId = `__origin-house-${family.document.id}-${origin.id}`;
+    return converted.data.some(entry => entry.id === nodeId) ? nodeId : '';
+  }
+
+  // Mit dem Ursprungshaus als Wurzel rendert Family Chart die Generationen vor dem
+  // Gründerpaar als Nachkommen — samt Ehepartnern und Wappenknoten der Seitenlinien.
+  function resolveDefaultMainId() {
+    const rootId = originRootId();
+    if (rootId) return rootId;
+    return view.focusPersonId && converted.data.some(entry => entry.id === view.focusPersonId)
+      ? view.focusPersonId
+      : family.persons[0]?.id;
+  }
+
+  let focusPersonId = resolveDefaultMainId();
   let destroyed = false;
 
   container.classList.add('f3', 'f3-cont');
@@ -480,6 +573,9 @@ export function createFamilyChartSession(config) {
         return converted.getPartnershipLine(hierarchyNodeId(link.source), hierarchyNodeId(link.target));
       }
       return converted.getParentageLine(childIdFromLink(link));
+    },
+    resolveExtraLinks() {
+      return converted.extraCoupleLines;
     }
   });
 
@@ -507,6 +603,14 @@ export function createFamilyChartSession(config) {
     card?.setOnCardClick?.((event, datum) => {
       const metadata = datum?.data?.data?.aleria || datum?.data?.aleria || {};
       const personId = datum?.data?.id || datum?.id;
+      if (metadata.virtualType === 'house-origin') {
+        config.onLineageOriginClick?.({
+          lineageOriginId: metadata.lineageOriginId,
+          familyId: metadata.targetFamilyId,
+          event
+        });
+        return;
+      }
       if (metadata.virtualType === 'cadet-house' && metadata.targetFamilyId) {
         config.onFamilyLinkClick?.({
           familyId: metadata.targetFamilyId,
@@ -547,7 +651,7 @@ export function createFamilyChartSession(config) {
     view = { ...family.view, ...(nextView || {}) };
     converted = nextConverted;
     const actualPersonIds = new Set(family.persons.map(person => person.id));
-    if (!actualPersonIds.has(focusPersonId)) focusPersonId = view.focusPersonId || family.persons[0]?.id;
+    if (!actualPersonIds.has(focusPersonId)) focusPersonId = resolveDefaultMainId();
     chart.updateData?.(converted.data);
     applyView(false);
     chart.updateMainId?.(focusPersonId);
@@ -576,9 +680,7 @@ export function createFamilyChartSession(config) {
 
   function reset() {
     ensureActive();
-    const defaultPersonId = family.view.focusPersonId && family.persons.some(person => person.id === family.view.focusPersonId)
-      ? family.view.focusPersonId
-      : family.persons[0]?.id;
+    const defaultPersonId = resolveDefaultMainId();
     if (!defaultPersonId) return false;
     focusPersonId = defaultPersonId;
     applyView(false);

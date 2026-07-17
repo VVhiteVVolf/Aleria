@@ -302,12 +302,23 @@ test('persistiert Hauptlinie und Oberhaupt als eigene Personenstellung', async (
   assert.match(theme, /left:\s*6\.6%/);
 });
 
-test('berücksichtigt die eigene Wappenposition jeder Personenfassung', () => {
+test('berücksichtigt die eigene Wappenposition jeder Personenfassung', async () => {
   const core = getPersonCardFrame('core');
   const married = getPersonCardFrame('married');
   const forced = getPersonCardFrame('forced');
+  const adopted = getPersonCardFrame('adopted');
+  const legitimized = getPersonCardFrame('core', 'branch', 'legitimized');
   assert.notEqual(core.crestPosition.top, married.crestPosition.top);
   assert.notEqual(core.crestPosition.left, forced.crestPosition.left);
+  assert.equal(legitimized.variant, 'legitimized');
+  assert.notDeepEqual(legitimized.crestPosition, adopted.crestPosition, 'Das Legitimiert-Wappen sitzt kleiner mittig im Medaillonring.');
+  assert.deepEqual(legitimized.crestPosition, {
+    left: '41.05%',
+    top: '2.45%',
+    width: '13.5%',
+    height: '20.3%'
+  });
+  assert.ok((await readFile(new URL('../assets/images/frames/person-legitimiert.png', import.meta.url))).length > 1000);
 
   const converted = toFamilyChartData({
     ...SAMPLE_FAMILY,
@@ -545,6 +556,9 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /\.\.\/AleriaAlmanach\/modules\/icon-directory\/icon-directory-data\.js/);
   assert.match(html, /id="person-biography-dialog"/);
   assert.match(html, /id="relationship-matrix-dialog"/);
+  assert.match(html, /id="lineage-origin-dialog"/);
+  assert.match(html, /name="childIds" multiple/);
+  assert.match(html, /data-asset-target="emblem"/);
   assert.match(html, /id="person-lineage-role"/);
   assert.equal((html.match(/name="lineageRole"/g) || []).length, 2);
   assert.match(html, /assets\/css\/relationship-matrix\.css/);
@@ -743,6 +757,19 @@ test('weist doppelte feste Personen-IDs zurück', () => {
   assert.throws(() => assertValidFamily(invalid), FamilyValidationError);
 });
 
+test('weist reale Eltern an direkt unter einem Ursprungshaus geführten Personen zurück', () => {
+  const invalid = normalizeFamily(SAMPLE_FAMILY);
+  invalid.lineage.originHouse = {
+    ...invalid.lineage.originHouse,
+    enabled: true,
+    houseId: 'house-vael',
+    childIds: ['nyra-vael']
+  };
+  const result = validateFamily(invalid);
+  assert.ok(result.diagnostics.some(item => item.code === 'ORIGIN_HOUSE_CHILD_HAS_PARENTS'));
+  assert.throws(() => assertValidFamily(invalid), FamilyValidationError);
+});
+
 test('kapselt Mutationen und unterstützt Undo/Redo', () => {
   const store = createFamilyStore(SAMPLE_FAMILY);
   const personId = store.addPerson({
@@ -764,6 +791,15 @@ test('verwaltet Darstellungsoptionen und Kadettenhäuser im Store', () => {
   const store = createFamilyStore(SAMPLE_FAMILY);
   store.setRelationshipColors({ affair: '#123456' });
   store.setLineage({ timeGap: { enabled: true, years: 800, label: 'Acht Jahrhunderte später' } });
+  store.setLineageOrigin({
+    enabled: true,
+    id: 'vael-origin',
+    houseId: 'house-vael',
+    name: 'Älteres Haus Vael',
+    childIds: ['aeron-vael'],
+    emblemScale: 0.91,
+    frameScale: 1.04
+  });
   const branchId = store.addCadetBranch({
     name: 'Haus Testzweig',
     parentPartnershipId: 'marriage-cassian-seraphine',
@@ -774,6 +810,8 @@ test('verwaltet Darstellungsoptionen und Kadettenhäuser im Store', () => {
   });
   assert.equal(store.getState().family.presentation.relationshipColors.affair, '#123456');
   assert.equal(store.getState().family.lineage.timeGap.years, 800);
+  assert.equal(store.getState().family.lineage.originHouse.name, 'Älteres Haus Vael');
+  assert.deepEqual(store.getState().family.lineage.originHouse.childIds, ['aeron-vael']);
   assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).crestFrame, 'bronze');
   assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).emblemScale, 0.72);
   assert.equal(store.getState().family.cadetBranches.find(branch => branch.id === branchId).frameScale, 1.08);
@@ -1056,7 +1094,7 @@ test('öffnet Haus Arwydd als eigenständige Registerfamilie', () => {
   assert.equal(loaded.family.lineage.houseId, 'house-arwydd');
 });
 
-test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn und Rhiwallon ab', () => {
+test('bildet Haus Draig vom Ursprungshaus Dreigiau bis zur jüngsten Generation vollständig ab', () => {
   const family = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
   const graph = createFamilyGraph(family);
   const converted = toFamilyChartData(family);
@@ -1065,15 +1103,33 @@ test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn un
   const saethwyr = normalizeFamily(HOUSE_SAETHWYR_FAMILY);
   const wyrm = normalizeFamily(HOUSE_WYRM_FAMILY);
 
-  assert.equal(family.persons.length, 163);
-  assert.equal(family.partnerships.length, 74);
-  assert.equal(family.parentages.length, 88);
-  assert.equal(family.cadetBranches.length, 9);
+  assert.equal(family.persons.length, 177);
+  assert.equal(family.partnerships.length, 82);
+  assert.equal(family.parentages.length, 93);
+  assert.equal(family.cadetBranches.length, 33);
   assert.equal(family.timeJumps.length, 6);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-celtigern-findabhair');
+  assert.equal(family.lineage.originHouse.enabled, true);
+  assert.equal(family.lineage.originHouse.houseId, 'house-dreigiau');
+  assert.deepEqual(family.lineage.originHouse.childIds, [
+    'gwyrthern-dreigiau',
+    'rhonwen-dreigiau',
+    'kerrylin-dreigiau'
+  ]);
   assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 17);
   assert.equal(family.persons.filter(person => person.lineageRole === 'mainline').length, 5);
 
+  assert.deepEqual(graph.getParents('celtigern-draig').map(person => person.id).sort(), [
+    'gwendolyn-mwnci',
+    'gwyrthern-dreigiau'
+  ]);
+  assert.deepEqual(graph.getChildren('gwyrthern-dreigiau').map(person => person.id), [
+    'celtigern-draig',
+    'gwenhwyfar-dreigiau',
+    'morgaine-dreigiau',
+    'vortigern-pendrag',
+    'vortimer-dreigiau'
+  ]);
   assert.deepEqual(graph.getChildren('celtigern-draig').map(person => person.id), [
     'artus-draig',
     'elinowyn-draig',
@@ -1133,6 +1189,19 @@ test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn un
     'tudwal-draig'
   ]);
   assert.equal(family.parentages.find(parentage => parentage.childId === 'guinevere-neidr').type, 'foster');
+  assert.equal(family.partnerships.find(partnership => partnership.id === 'engagement-gawain-guinevere').type, 'engagement');
+  assert.equal(converted.extraCoupleLines.length, 1);
+  assert.deepEqual(
+    [converted.extraCoupleLines[0].firstId, converted.extraCoupleLines[0].secondId].sort(),
+    ['gawain-draig', 'guinevere-neidr'],
+    'Mündel und Verlobter im selben Geschwisterblock brauchen eine Zusatzlinie statt einer Layout-Ehe.'
+  );
+  assert.equal(converted.extraCoupleLines[0].type, 'engagement');
+  assert.ok(
+    converted.data.every(entry => !entry.rels.spouses.includes('guinevere-neidr')),
+    'Guinevere darf im Layout nicht als Ehepartnerin dupliziert werden.'
+  );
+  assert.ok(converted.getPartnershipLine('gawain-draig', 'guinevere-neidr'));
   assert.equal(family.partnerships.find(partnership => partnership.id === 'forced-rhonwen-nodawl').type, 'forced');
   assert.deepEqual(graph.getChildren('owain-draig').map(person => person.id), [
     'amadia-draig',
@@ -1142,6 +1211,14 @@ test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn un
     'siana-draig'
   ]);
   assert.ok(graph.getChildren('owain-draig').every(person => person.familyRole === 'bastard'));
+  assert.equal(
+    family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
+    'legitimate'
+  );
+  const gwyvernBranch = family.cadetBranches.find(branch => branch.id === 'cadet-gwyvern-bleddyn');
+  assert.equal(gwyvernBranch.parentPartnershipId, 'marriage-bleddyn-owena');
+  assert.equal(gwyvernBranch.targetFamilyId, 'haus-gwyvern');
+  assert.equal(gwyvernBranch.linkType, 'cadet-house');
 
   [
     [family, 'tecwyn-draig', arwydd, 'tecwyn-draig'],
@@ -1156,11 +1233,41 @@ test('bildet Haus Draig ab Celtigern mit der vollständigen Folge nach Merfyn un
   });
 
   assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 6);
+  const originNode = converted.data.find(entry => entry.data.nodeKind === 'house-origin');
+  assert.equal(originNode.data.name, 'Haus Dreigiau');
+  assert.deepEqual(originNode.rels.children, family.lineage.originHouse.childIds);
+  assert.match(originNode.data.portrait, /neutral-crest\.png$/);
+  assert.equal(converted.getParentageLine('gwyrthern-dreigiau').dashed, false);
+  const gwyvernNode = converted.data.find(entry => entry.data.aleria.cadetBranchId === 'cadet-gwyvern-bleddyn');
+  assert.deepEqual(gwyvernNode.rels.parents, ['bleddyn-draig', 'owena-saethwyr']);
+  assert.equal(gwyvernNode.data.aleria.targetFamilyId, 'haus-gwyvern');
+  const mairwenCard = converted.data.find(entry => entry.id === 'mairwen-draig');
+  assert.equal(mairwenCard.data.frameVariant, 'standard', 'Mairwen ist Kernmitglied und trägt den normalen Rahmen.');
+  assert.match(mairwenCard.data.frameAsset, /person-core\.png$/);
+  assert.equal(
+    family.parentages.find(parentage => parentage.childId === 'mair-draig').legitimacy,
+    'legitimized'
+  );
+  const mairCard = converted.data.find(entry => entry.id === 'mair-draig');
+  assert.equal(mairCard.data.frameVariant, 'legitimized');
+  assert.match(mairCard.data.frameAsset, /person-legitimiert\.png$/);
+  const bastardCards = converted.data.filter(entry => entry.data.role === 'bastard');
+  assert.ok(bastardCards.length >= 6);
+  assert.ok(
+    bastardCards.every(entry => /neutral-crest\.png$/.test(entry.data.crest)),
+    'Bastarde dürfen kein Hauswappen tragen, sondern nur das neutrale Siegel.'
+  );
   const chartDepths = resolveFamilyChartViewDepths(converted.data, 'celtigern-draig', family.view);
-  assert.equal(chartDepths.descendantDepth, 24, 'Virtuelle Wappen und Zeitsprünge dürfen jüngere Draigs nicht abschneiden.');
+  assert.equal(chartDepths.ancestorDepth, undefined);
+  assert.equal(chartDepths.descendantDepth, undefined, 'Standardmäßig darf keine Generation abgeschnitten werden.');
+  const limitedView = { ...family.view, limitGenerations: true };
+  const limitedDepths = resolveFamilyChartViewDepths(converted.data, 'celtigern-draig', limitedView);
+  assert.equal(limitedDepths.descendantDepth, 24, 'Explizite Limits müssen virtuelle Wappen und Zeitsprünge einrechnen.');
   const youngestDepths = resolveFamilyChartViewDepths(converted.data, 'gawain-draig', family.view);
-  assert.equal(youngestDepths.ancestorDepth, 24, 'Beim Fokus auf die jüngste Generation müssen alle frühen Draigs erreichbar bleiben.');
-  assert.equal(converted.data.some(entry => entry.id === 'gwyrthern-pendrag'), false);
+  assert.equal(youngestDepths.ancestorDepth, undefined);
+  const limitedYoungestDepths = resolveFamilyChartViewDepths(converted.data, 'gawain-draig', limitedView);
+  assert.equal(limitedYoungestDepths.ancestorDepth, 26, 'Beim begrenzten Fokus müssen Ursprungshaus und alle frühen Draigs erreichbar bleiben.');
+  assert.equal(converted.data.some(entry => entry.id === 'gwyrthern-dreigiau'), true);
   const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
   const connectedIds = new Set(['celtigern-draig']);
   const pendingIds = ['celtigern-draig'];
@@ -1184,10 +1291,10 @@ test('liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 127);
-  assert.equal(Object.keys(sourceManifest).length, 109);
-  assert.equal(picturedPeople.length, 127);
-  assert.equal(placeholderPeople.length, 36);
+  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 128);
+  assert.equal(Object.keys(sourceManifest).length, 110);
+  assert.equal(picturedPeople.length, 128);
+  assert.equal(placeholderPeople.length, 49);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
@@ -1586,14 +1693,27 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
     persons: HOUSE_DRAIG_FAMILY.persons
       .filter(person => person.id !== 'gawain-draig')
       .map(person => person.id === 'merfyn-draig' ? { ...person, title: 'Lokal ergänzter Titel' } : person),
-    parentages: HOUSE_DRAIG_FAMILY.parentages.filter(parentage => parentage.childId !== 'gawain-draig'),
+    partnerships: HOUSE_DRAIG_FAMILY.partnerships
+      .filter(partnership => !partnership.participantIds.includes('gawain-draig')),
+    parentages: HOUSE_DRAIG_FAMILY.parentages
+      .filter(parentage => parentage.childId !== 'gawain-draig')
+      .map(parentage => {
+        if (parentage.childId === 'mairwen-draig') return { ...parentage, legitimacy: 'legitimized', extensions: {} };
+        if (parentage.childId === 'mair-draig') return { ...parentage, legitimacy: 'unknown', extensions: {} };
+        return parentage;
+      }),
+    lineage: {
+      ...HOUSE_DRAIG_FAMILY.lineage,
+      originHouse: { ...HOUSE_DRAIG_FAMILY.lineage.originHouse, enabled: false }
+    },
     view: {
       ...HOUSE_DRAIG_FAMILY.view,
       ancestorDepth: 8,
       descendantDepth: 8
     },
     extensions: {
-      blankFamily: true
+      blankFamily: true,
+      sourceRevision: 2
     }
   };
   saveFamilyToLibrary({
@@ -1606,10 +1726,20 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
   const loaded = loadFamilyById('haus-draig', storage);
   const graph = createFamilyGraph(loaded.family);
   assert.equal(loaded.source, 'registry-upgrade');
-  assert.equal(loaded.family.persons.length, 163);
+  assert.equal(loaded.family.persons.length, 177);
   assert.equal(loaded.family.view.descendantDepth, 20);
-  assert.equal(loaded.family.extensions.sourceRevision, 2);
-  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 2 });
+  assert.equal(loaded.family.extensions.sourceRevision, 4);
+  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 4 });
+  assert.equal(loaded.family.lineage.originHouse.enabled, true);
+  assert.equal(
+    loaded.family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
+    'legitimate',
+    'Die versehentliche Legitimierung Mairwens muss beim Upgrade zurückgenommen werden.'
+  );
+  assert.equal(
+    loaded.family.parentages.find(parentage => parentage.childId === 'mair-draig').legitimacy,
+    'legitimized'
+  );
   assert.equal(loaded.family.persons.find(person => person.id === 'merfyn-draig').title, 'Lokal ergänzter Titel');
   assert.ok(graph.getChildren('galahad-draig').some(person => person.id === 'gawain-draig'));
 });

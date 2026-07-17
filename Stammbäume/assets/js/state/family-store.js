@@ -372,6 +372,16 @@ export function createFamilyStore(initialFamily, options = {}) {
     });
   }
 
+  function setLineageOrigin(values) {
+    return commit('lineage-origin-updated', draft => {
+      draft.lineage.originHouse = {
+        ...draft.lineage.originHouse,
+        ...values,
+        childIds: [...new Set(values.childIds || [])]
+      };
+    });
+  }
+
   function addCadetBranch(values) {
     const id = values.id || createRecordId('cadet-branch', family.cadetBranches.map(item => item.id));
     commit('cadet-branch-added', draft => {
@@ -531,6 +541,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     updateDocument,
     setRelationshipColors,
     setLineage,
+    setLineageOrigin,
     addCadetBranch,
     updateCadetBranch,
     deleteCadetBranch,

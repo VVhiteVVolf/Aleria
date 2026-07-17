@@ -2,13 +2,13 @@ const FRAME_ASSET_ROOT = 'assets/images/frames';
 
 export const DEFAULT_CREST_FRAME = 'gold';
 
-function personFrame(asset, crestCenterX, crestCenterY) {
-  const width = 14.2;
-  const height = 21.3;
+function personFrame(asset, crestCenterX, crestCenterY, variant = 'standard', crestSize = {}) {
+  const width = crestSize.width ?? 14.2;
+  const height = crestSize.height ?? 21.3;
   const percent = value => `${Number(value.toFixed(3))}%`;
   return Object.freeze({
     asset: `${FRAME_ASSET_ROOT}/${asset}`,
-    variant: 'standard',
+    variant,
     crestPosition: Object.freeze({
       left: percent(crestCenterX - (width / 2)),
       top: percent(crestCenterY - (height / 2)),
@@ -27,6 +27,13 @@ export const PERSON_CARD_FRAMES = Object.freeze({
   ward: personFrame('person-ward.png', 48.4, 12.25),
   'ward-away': personFrame('person-ward-away.png', 47.8, 12.25),
   adopted: personFrame('person-adopted.png', 47.8, 12.7)
+});
+
+// Ringmitte des Medaillons im Rahmenbild: 47,8 % / 12,6 %; Wappen etwas kleiner,
+// damit es den goldenen Ring nicht überdeckt (Ring-Innendurchmesser ≈ 13,5 % Kartenbreite).
+export const LEGITIMIZED_CARD_FRAME = personFrame('person-legitimiert.png', 47.8, 12.6, 'legitimized', {
+  width: 13.5,
+  height: 20.3
 });
 
 export const HOUSE_HEAD_CARD_FRAME = Object.freeze({
@@ -62,8 +69,9 @@ export const TIME_JUMP_FRAME = Object.freeze({
   asset: `${FRAME_ASSET_ROOT}/time-jump.png`
 });
 
-export function getPersonCardFrame(roleId, lineageRole = 'branch') {
+export function getPersonCardFrame(roleId, lineageRole = 'branch', legitimacy = 'unknown') {
   if (lineageRole === 'head') return HOUSE_HEAD_CARD_FRAME;
+  if (legitimacy === 'legitimized') return LEGITIMIZED_CARD_FRAME;
   return PERSON_CARD_FRAMES[roleId] || PERSON_CARD_FRAMES.core;
 }
 

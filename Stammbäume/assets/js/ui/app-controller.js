@@ -26,6 +26,7 @@ import { createFamilySaveDialog } from './family-save-dialog.js';
 import { renderFamilyLegend } from './legend-ui.js';
 import { createLineColorsDialog } from './line-colors-dialog.js';
 import { createLineageDialog } from './lineage-dialog.js';
+import { createLineageOriginDialog } from './lineage-origin-dialog.js';
 import { createNewFamilyDialog } from './new-family-dialog.js';
 import { createPersonDialog } from './person-dialog.js';
 import { renderPersonInspector } from './person-inspector.js';
@@ -82,6 +83,7 @@ export function createAppController({
   const relationshipDialog = createRelationshipDialog(documentRef);
   const lineColorsDialog = createLineColorsDialog(documentRef);
   const lineageDialog = createLineageDialog(documentRef);
+  const lineageOriginDialog = createLineageOriginDialog(documentRef);
   const newFamilyDialog = createNewFamilyDialog(documentRef);
   const cadetDialog = createCadetDialog(documentRef);
   const timeJumpDialog = createTimeJumpDialog(documentRef);
@@ -185,6 +187,21 @@ export function createAppController({
           }
           if (!loadFamilyById(familyId, runtime.localStorage)) {
             toast('Das verknüpfte Haus ist noch nicht im Familienregister angelegt.', { error: true });
+            return;
+          }
+          const target = new URL(runtime.location.href);
+          target.searchParams.set('family', familyId);
+          target.searchParams.set('mode', workspaceMode);
+          runtime.location.assign(target.href);
+        },
+        onLineageOriginClick({ familyId }) {
+          if (isEditing) {
+            lineageOriginDialog.open(store.getState().family);
+            return;
+          }
+          if (!familyId) return;
+          if (!loadFamilyById(familyId, runtime.localStorage)) {
+            toast('Das verknüpfte Ursprungshaus ist noch nicht im Familienregister angelegt.', { error: true });
             return;
           }
           const target = new URL(runtime.location.href);
@@ -372,6 +389,9 @@ export function createAppController({
         break;
       case 'close-lineage-settings':
         lineageDialog.close();
+        break;
+      case 'close-lineage-origin-dialog':
+        lineageOriginDialog.close();
         break;
       case 'open-cadet-create':
         if (state.family.partnerships.length) {
@@ -608,6 +628,15 @@ export function createAppController({
     toast('Gründerpaar und Linienaufbau wurden gespeichert.');
   }
 
+  function submitLineageOriginForm() {
+    const values = lineageOriginDialog.read();
+    if (!values.name.trim()) throw new Error('Bitte einen Namen für das Ursprungshaus eintragen.');
+    if (!values.childIds.length) throw new Error('Bitte mindestens eine anschließende Person auswählen.');
+    store.setLineageOrigin(values);
+    lineageOriginDialog.close();
+    toast('Das vorgelagerte Ursprungshaus wurde gespeichert.');
+  }
+
   function submitCadetForm() {
     const values = cadetDialog.read();
     if (!values.name.trim()) throw new Error('Bitte einen Namen für das Kadettenhaus eintragen.');
@@ -734,6 +763,14 @@ export function createAppController({
       event.preventDefault();
       try {
         submitLineageForm();
+      } catch (error) {
+        toast(error.message, { error: true, duration: 5000 });
+      }
+    }
+    if (event.target === lineageOriginDialog.form) {
+      event.preventDefault();
+      try {
+        submitLineageOriginForm();
       } catch (error) {
         toast(error.message, { error: true, duration: 5000 });
       }

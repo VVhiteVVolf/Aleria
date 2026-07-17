@@ -1,6 +1,8 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
+  createCadetHouseBranch,
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
@@ -11,6 +13,7 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 const HOUSE_EMBLEMS = Object.freeze({
   arwydd: 'assets/images/houses/haus-arwydd.png',
   draig: 'assets/images/houses/haus-draig.png',
+  dreigiau: PORTRAIT_PLACEHOLDERS.crest,
   gafyr: 'assets/images/houses/haus-gafyr.png',
   gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/haus-gwyvern.png',
@@ -86,6 +89,8 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
 }
 
 const FOUNDER_IDS = ['celtigern-draig', 'findabhair-cumhail'];
+const DREIGIAU_ROOT_IDS = ['gwyrthern-dreigiau', 'rhonwen-dreigiau', 'kerrylin-dreigiau'];
+const GWYRTHERN_IDS = ['gwyrthern-dreigiau', 'gwendolyn-mwnci'];
 const ARTUS_IDS = ['artus-draig', 'tanwen-pendrag'];
 const GODWYN_IDS = ['godwyn-draig', 'arianwyn-pendrag'];
 const MORHOLT_IDS = ['morholt-draig', 'gwyneira-pendrag'];
@@ -126,6 +131,10 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   },
   houses: [
     house(DRAIG_HOUSE_ID, 'Haus Draig', HOUSE_EMBLEMS.draig),
+    house('house-dreigiau', 'Haus Dreigiau', HOUSE_EMBLEMS.dreigiau),
+    house('house-mwnci', 'Haus Mwnci'),
+    house('house-paun', 'Haus Paun'),
+    house('house-teigr', 'Haus Teigr'),
     house('house-cumhail', 'Haus Cumhail'),
     house('house-pendrag', 'Haus Pendrag'),
     house('house-conbhron', 'Haus Conbhrón'),
@@ -165,6 +174,22 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-varulv', 'Haus Varulv')
   ],
   persons: [
+    // Ursprungshaus Dreigiau und Celtigerns unmittelbare Verwandtschaft
+    person('gwyrthern-dreigiau', 'Gwyrthern', 'male', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('gwendolyn-mwnci', 'Gwendolyn Mwnci', 'female', '????', '????', 'house-mwnci'),
+    person('rhonwen-dreigiau', 'Rhonwen', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('dyngannon-paun', 'Dyngannon Paun', 'male', '????', '????', 'house-paun'),
+    person('kerrylin-dreigiau', 'Kerrylin', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('mordred-blodyn', 'Mordred Blodyn', 'male', '????', '????', 'house-blodyn'),
+    person('vortimer-dreigiau', 'Vortimer', 'male', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('isolde-teigr', 'Isolde Teigr', 'female', '????', '????', 'house-teigr'),
+    person('vortigern-pendrag', 'Vortigern', 'male', '????', '????', 'house-pendrag', { familyRole: 'core' }),
+    person('rhiannon-aderyn', 'Rhiannon Aderyn', 'female', '????', '????', 'house-aderyn'),
+    person('gwenhwyfar-dreigiau', 'Gwenhwyfar', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('caradoc-arth', 'Caradoc Arth', 'male', '????', '????', 'house-arth'),
+    person('morgaine-dreigiau', 'Morgaine', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('gingalain-pysgod', 'Gingalain Pysgod', 'male', '????', '????', 'house-pysgod'),
+
     // Gründer und erste Generation
     person('celtigern-draig', 'Celtigern', 'male', '????', '????', DRAIG_HOUSE_ID, {
       title: 'Überlebender Avalons, Gründer des Hauses Draig'
@@ -238,7 +263,9 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('gawain-pendragon', 'Gawain Pendrag', 'male', '1551', '1623', 'house-pendrag'),
     person('cadwalladar-draig', 'Cadwalladar', 'male', '1579', '1654'),
     person('tudorwen-draig', 'Tudorwen', 'female', '1581', '1664'),
-    person('bleddyn-draig', 'Bleddyn', 'male', '1582', '1653'),
+    person('bleddyn-draig', 'Bleddyn', 'male', '1582', '1653', DRAIG_HOUSE_ID, {
+      title: 'Begründer des Baronenhauses Gwyvern'
+    }),
     person('talaith-draig', 'Talaith', 'female', '1584', '1670'),
     person('tuilelaith-duibhne', 'Tuilelaith Duibhne', 'female', '1580', '1697', 'house-duibhne'),
     person('domnall-cumhail', 'Domnall Cumhail', 'male', '1580', '1635', 'house-cumhail'),
@@ -347,7 +374,14 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('unknown-isobel-betrothed', 'Unbekannter Verlobter', 'male', '????', '', '', { status: 'unknown' })
   ],
   partnerships: [
+    createMarriage('marriage-gwyrthern-gwendolyn', ...GWYRTHERN_IDS),
+    createMarriage('marriage-rhonwen-dyngannon', 'rhonwen-dreigiau', 'dyngannon-paun'),
+    createMarriage('marriage-kerrylin-mordred', 'kerrylin-dreigiau', 'mordred-blodyn'),
+    createMarriage('marriage-vortimer-isolde', 'vortimer-dreigiau', 'isolde-teigr'),
+    createMarriage('marriage-vortigern-rhiannon', 'vortigern-pendrag', 'rhiannon-aderyn'),
     createMarriage('marriage-celtigern-findabhair', ...FOUNDER_IDS),
+    createMarriage('marriage-gwenhwyfar-caradoc', 'gwenhwyfar-dreigiau', 'caradoc-arth'),
+    createMarriage('marriage-morgaine-gingalain', 'morgaine-dreigiau', 'gingalain-pysgod'),
     createMarriage('marriage-artus-tanwen', ...ARTUS_IDS),
     createMarriage('marriage-llamrei-caireen', 'llamrei-draig', 'caireen-conbhron'),
     createMarriage('marriage-rhianu-uther', 'rhianu-draig', 'uther-pendrag'),
@@ -424,9 +458,18 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     createMarriage('engagement-idwal-unknown', 'idwal-draig', 'unknown-idwal-betrothed', { type: 'engagement' }),
     createMarriage('engagement-tudwal-revelyn', 'tudwal-draig', 'revelyn-penderyn', { type: 'engagement' }),
     createMarriage('engagement-neithon-alaweyn', 'neithon-1718-draig', 'alaweyn-grawn', { type: 'engagement' }),
-    createMarriage('engagement-isobel-unknown', 'isobel-1719-draig', 'unknown-isobel-betrothed', { type: 'engagement' })
+    createMarriage('engagement-isobel-unknown', 'isobel-1719-draig', 'unknown-isobel-betrothed', { type: 'engagement' }),
+    createMarriage('engagement-gawain-guinevere', 'gawain-draig', 'guinevere-neidr', {
+      type: 'engagement',
+      notes: 'Guinevere ist Galahads Mündel und zugleich Gawains Verlobte.'
+    })
   ],
   parentages: [
+    ...childrenOf(
+      ['vortimer-dreigiau', 'vortigern-pendrag', 'celtigern-draig', 'gwenhwyfar-dreigiau', 'morgaine-dreigiau'],
+      GWYRTHERN_IDS,
+      'marriage-gwyrthern-gwendolyn'
+    ),
     ...childrenOf(
       ['artus-draig', 'llamrei-draig', 'rhianu-draig', 'grugyn-draig', 'gwendolyn-ancient-draig', 'elinowyn-draig'],
       FOUNDER_IDS,
@@ -463,7 +506,13 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     ...childrenOf(['merfyn-draig', 'olwen-draig'], HOWELL_IDS, 'marriage-howell-gwyneth'),
     ...childrenOf(['rhiwallon-draig', 'hafwen-draig'], CADFAEL_IDS, 'marriage-cadfael-sioned'),
     ...childrenOf(['cahir-draig', 'maygan-draig', 'elenydd-draig', 'gethin-draig', 'arianwen-draig'], MERFYN_IDS, 'marriage-merfyn-llinos'),
-    ...childrenOf(['trahern-draig', 'mairwen-draig'], RHIWALLON_IDS, 'marriage-rhiwallon-fidelma'),
+    ...childrenOf(['trahern-draig'], RHIWALLON_IDS, 'marriage-rhiwallon-fidelma'),
+    ...childrenOf(['mairwen-draig'], RHIWALLON_IDS, 'marriage-rhiwallon-fidelma', {
+      // Kernmitglied mit regulärer ehelicher Abstammung; registryManagedFields korrigiert
+      // ältere lokale Fassungen, in denen Mairwen versehentlich als legitimiert geführt wurde.
+      legitimacy: 'legitimate',
+      extensions: { registryManagedFields: ['legitimacy'] }
+    }),
     ...childrenOf(['rhodri-draig', 'generis-draig', 'meurig-draig', 'ceridwen-draig', 'trayvon-draig'], CAHIR_IDS, 'marriage-cahir-alawen'),
     ...childrenOf(['odyar-draig', 'fflur-draig', 'seithved-draig'], GETHIN_IDS, 'marriage-gethin-gwenllian'),
     ...childrenOf(['maredudd-draig'], TRAHERN_IDS, 'marriage-trahern-cerys'),
@@ -477,7 +526,8 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
       type: 'foster', legitimacy: 'unknown', notes: 'Guinevere ist ein aufgenommener Mündel und keine leibliche Tochter.'
     }),
     ...childrenOf(['mair-draig'], ['rhonwen-draig', 'nodawl-illysywen'], 'forced-rhonwen-nodawl', {
-      legitimacy: 'unknown'
+      legitimacy: 'legitimized',
+      extensions: { registryManagedFields: ['legitimacy'] }
     }),
     ...childrenOf(['kane-draig', 'oweta-draig'], RHYS_IDS, 'marriage-rhys-brona'),
     ...childrenOf(['gethin-1722-draig', 'tegan-draig'], STEFFAN_IDS, 'marriage-steffan-branwen'),
@@ -495,15 +545,71 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     crestEmblemScale: 0.8,
     crestFrame: 'gold',
     crestFrameScale: 1,
-    timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' },
+    originHouse: {
+      enabled: true,
+      id: 'dreigiau-origin',
+      houseId: 'house-dreigiau',
+      name: 'Haus Dreigiau',
+      subtitle: '',
+      emblem: HOUSE_EMBLEMS.dreigiau,
+      emblemScale: 0.86,
+      crestFrame: 'gold',
+      frameScale: 1,
+      childIds: DREIGIAU_ROOT_IDS,
+      targetFamilyId: '',
+      notes: 'Vorgelagertes Ursprungshaus der in diesem Ausschnitt belegten Linie.'
+    }
   },
   cadetBranches: [
+    // Seitenlinien der Dreigiau-Generationen vor dem Gründerpaar
+    marriedAway('married-away-paun-rhonwen', 'Haus Paun', 'marriage-rhonwen-dyngannon', 'house-paun'),
+    marriedAway('married-away-blodyn-kerrylin', 'Haus Blodyn', 'marriage-kerrylin-mordred', 'house-blodyn'),
+    marriedAway('married-away-teigr-vortimer', 'Haus Teigr', 'marriage-vortimer-isolde', 'house-teigr'),
+    createCadetHouseBranch({
+      id: 'cadet-pendrag-vortigern',
+      name: 'Haus Pendrag',
+      subtitle: 'Begründetes Haus',
+      parentPartnershipId: 'marriage-vortigern-rhiannon',
+      houseId: 'house-pendrag',
+      targetFamilyId: 'haus-pendrag',
+      notes: 'Vortigern begründet mit Rhiannon Aderyn die Linie des Hauses Pendrag.'
+    }),
+    marriedAway('married-away-arth-gwenhwyfar', 'Haus Arth', 'marriage-gwenhwyfar-caradoc', 'house-arth'),
+    marriedAway('married-away-pysgod-morgaine', 'Haus Pysgod', 'marriage-morgaine-gingalain', 'house-pysgod'),
+    createCadetHouseBranch({
+      id: 'cadet-gwyvern-bleddyn',
+      name: 'Haus Gwyvern',
+      subtitle: 'Begründetes Baronenhaus',
+      parentPartnershipId: 'marriage-bleddyn-owena',
+      houseId: 'house-gwyvern',
+      targetFamilyId: 'haus-gwyvern',
+      emblem: HOUSE_EMBLEMS.gwyvern,
+      notes: 'Bleddyn und Owena begründen die baroniale Linie des Hauses Gwyvern.'
+    }),
+    marriedAway('married-away-pendrag-rhianu', 'Haus Pendrag', 'marriage-rhianu-uther', 'house-pendrag'),
+    marriedAway('married-away-illewod-gwendolyn', 'Haus Illewod', 'marriage-gwendolyn-kyvwlch', 'house-illewod'),
     marriedAway('married-away-gafyr-elinowyn', 'Haus Gafyr', 'marriage-elinowyn-kynwrig', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
+    marriedAway('married-away-pendrag-malltwyn', 'Haus Pendrag', 'marriage-malltwyn-trystan', 'house-pendrag'),
+    marriedAway('married-away-pendrag-isobel', 'Haus Pendrag', 'marriage-isobel-parzifal', 'house-pendrag'),
+    marriedAway('married-away-pendrag-isolde', 'Haus Pendrag', 'marriage-isolde-griflet', 'house-pendrag'),
+    marriedAway('married-away-grael-gwenalarch', 'Haus Grael', 'marriage-gwenalarch-ysgithyrwyn', 'house-grael'),
+    marriedAway('married-away-gwefrydd-tanwen', 'Haus Gwefrydd', 'marriage-tanwen-kenehyr', 'house-gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     marriedAway('married-away-saethwyr-tryffin', 'Haus Saethwyr', 'marriage-tryffin-rhianwyn', 'house-saethwyr', HOUSE_EMBLEMS.saethwyr),
     marriedAway('married-away-gafyr-eurolwyn', 'Haus Gafyr', 'marriage-eurolwyn-maldwyn', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
+    marriedAway('married-away-cumhail-tudorwen', 'Haus Cumhail', 'marriage-tudorwen-domnall', 'house-cumhail'),
+    marriedAway('married-away-grael-talaith', 'Haus Grael', 'marriage-talaith-greidyawl', 'house-grael'),
     marriedAway('married-away-wyrm-heulwen', 'Haus Wyrm', 'marriage-heulwen-rhydderch', 'house-wyrm', HOUSE_EMBLEMS.wyrm),
+    marriedAway('married-away-diulb-myfanwy', 'Haus Diulb', 'marriage-myfanwy-uaithne', 'house-diulb'),
     marriedAway('married-away-gafyr-olwen', 'Haus Gafyr', 'marriage-olwen-hwyvel', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
+    marriedAway('married-away-arth-hafwen', 'Haus Arth', 'marriage-hafwen-madoc', 'house-arth'),
+    marriedAway('married-away-illewod-maygan', 'Haus Illewod', 'marriage-maygan-selwyn', 'house-illewod'),
+    marriedAway('married-away-neidr-elenydd', 'Haus Neidr', 'marriage-elenydd-gaenor', 'house-neidr'),
+    marriedAway('married-away-ness-arianwen', 'Haus Ness', 'marriage-arianwen-turlough', 'house-ness'),
+    marriedAway('married-away-crefyddol-mairwen', 'Haus Crefyddol', 'marriage-mairwen-lywelyn', 'house-crefyddol'),
+    marriedAway('married-away-wylan-generis', 'Haus Wylan', 'marriage-generis-hewet', 'house-wylan'),
     marriedAway('married-away-wyrm-ceridwen', 'Haus Wyrm', 'marriage-ceridwen-mailgwin', 'house-wyrm', HOUSE_EMBLEMS.wyrm),
+    marriedAway('married-away-blodyn-fflur', 'Haus Blodyn', 'marriage-fflur-bleddyn', 'house-blodyn'),
     marriedAway('married-away-gafyr-alicyn', 'Haus Gafyr', 'marriage-alicyn-egon', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
     marriedAway('married-away-arwydd-tecwyn', 'Haus Arwydd', 'marriage-tecwyn-ianto', 'house-arwydd', HOUSE_EMBLEMS.arwydd),
     marriedAway('married-away-grael-dwynwen', 'Haus Grael', 'marriage-dwynwen-caswallon', 'house-grael')
@@ -540,11 +646,12 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     orientation: 'vertical',
     ancestorDepth: 20,
     descendantDepth: 20,
+    limitGenerations: false,
     showSiblings: true
   },
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 4
   }
 });

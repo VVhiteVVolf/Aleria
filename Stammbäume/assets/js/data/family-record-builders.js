@@ -77,30 +77,48 @@ export function createParentages(childIds, parentIds, partnershipId, options = {
   }));
 }
 
-export function createMarriedAwayBranch({
+function createHouseBranch({
   id,
   name,
   parentPartnershipId,
   houseId,
   targetFamilyId,
+  linkType,
   emblem = '',
-  subtitle = 'Wegverheiratete Linie',
+  subtitle,
+  founded = '',
   notes = ''
 }) {
   return {
     id,
     name,
     subtitle,
-    linkType: 'married-away',
+    linkType,
     parentPartnershipId,
     houseId,
     emblem,
     emblemScale: 0.86,
     crestFrame: 'gold',
     frameScale: 1,
-    founded: '',
+    founded,
     targetFamilyId,
     notes,
     extensions: {}
   };
+}
+
+export function createMarriedAwayBranch(options) {
+  return createHouseBranch({
+    ...options,
+    linkType: 'married-away',
+    subtitle: options.subtitle || 'Wegverheiratete Linie'
+  });
+}
+
+export function createCadetHouseBranch(options) {
+  return createHouseBranch({
+    ...options,
+    linkType: 'cadet-house',
+    subtitle: options.subtitle || 'Gegründetes Kadettenhaus'
+  });
 }

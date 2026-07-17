@@ -118,6 +118,19 @@
   --card-subtle: #f1d1ae;
 }
 
+.aleria-person-card.frame-legitimized {
+  --card-fill: #ad5c1e;
+  --card-subtle: #f6ddb4;
+}
+
+/* Das Legitimiert-Rahmenbild ist rechts neben dem Ovalfenster transparent;
+   das Portrait endet deshalb unter dem Ovalrand statt in der Lücke. */
+.aleria-person-card.frame-legitimized .aleria-person-card__portrait-backdrop,
+.aleria-person-card.frame-legitimized .aleria-person-card__portrait {
+  left: 6.6%;
+  width: 28.4%;
+}
+
 .aleria-person-card__fill {
   position: absolute;
   z-index: 0;

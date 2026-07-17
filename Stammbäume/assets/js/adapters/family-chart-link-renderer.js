@@ -92,9 +92,29 @@ export function createRoundedOrthogonalPath(points, cornerRadius = DEFAULT_CORNE
   return `${path} L ${pathPoint(route.at(-1))}`;
 }
 
+const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
+
+function cardLayoutPoint(cardContainer) {
+  const node = cardContainer?.__data__;
+  const x = Number(node?.x);
+  const y = Number(node?.y);
+  if (Number.isFinite(x) && Number.isFinite(y)) return { x, y };
+  const match = /translate\((-?[\d.]+)px,\s*(-?[\d.]+)px\)/.exec(cardContainer?.style?.transform || '');
+  if (!match) return null;
+  const parsedX = Number(match[1]);
+  const parsedY = Number(match[2]);
+  return Number.isFinite(parsedX) && Number.isFinite(parsedY) ? { x: parsedX, y: parsedY } : null;
+}
+
+function cardPersonId(cardContainer) {
+  const node = cardContainer?.__data__;
+  return node?.data?.id || cardContainer.querySelector('[data-id]')?.dataset.id || '';
+}
+
 export function createFamilyChartLinkRenderer({
   container,
   resolveMetadata,
+  resolveExtraLinks,
   schedule = globalThis.setTimeout?.bind(globalThis),
   cancel = globalThis.clearTimeout?.bind(globalThis)
 }) {
@@ -104,22 +124,51 @@ export function createFamilyChartLinkRenderer({
   let pendingRender = null;
   let destroyed = false;
 
+  function applyLineStyle(path, metadata) {
+    path.style.stroke = metadata.color;
+    path.style.strokeWidth = '3.25px';
+    path.style.strokeDasharray = metadata.dashed ? '8 6' : '';
+    path.dataset.relationshipType = metadata.type;
+  }
+
+  function renderExtraLinks() {
+    container.querySelectorAll('.links_view path.aleria-extra-link').forEach(element => element.remove());
+    const extraLinks = typeof resolveExtraLinks === 'function' ? resolveExtraLinks() || [] : [];
+    if (!extraLinks.length) return;
+    const linksView = container.querySelector('.links_view');
+    if (!linksView) return;
+    const cardPositions = new Map();
+    container.querySelectorAll('.card_cont').forEach(cardContainer => {
+      const personId = cardPersonId(cardContainer);
+      const point = cardLayoutPoint(cardContainer);
+      if (personId && point) cardPositions.set(personId, point);
+    });
+    extraLinks.forEach(extraLink => {
+      const first = cardPositions.get(extraLink.firstId);
+      const second = cardPositions.get(extraLink.secondId);
+      if (!first || !second) return;
+      const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
+      path.setAttribute('class', 'link aleria-link--routed aleria-extra-link');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('d', createRoundedOrthogonalPath([first, second]));
+      applyLineStyle(path, extraLink);
+      linksView.appendChild(path);
+    });
+  }
+
   function render() {
     if (destroyed) return;
     container.querySelectorAll('.link-text').forEach(element => element.remove());
-    container.querySelectorAll('.links_view path.link').forEach(path => {
+    container.querySelectorAll('.links_view path.link:not(.aleria-extra-link)').forEach(path => {
       const link = path.__data__;
       const metadata = resolveMetadata(link);
       const routedPath = createRoundedOrthogonalPath(link?.d);
       if (routedPath) path.setAttribute('d', routedPath);
       path.classList.add('aleria-link--routed');
       if (!metadata) return;
-
-      path.style.stroke = metadata.color;
-      path.style.strokeWidth = '3.25px';
-      path.style.strokeDasharray = metadata.dashed ? '8 6' : '';
-      path.dataset.relationshipType = metadata.type;
+      applyLineStyle(path, metadata);
     });
+    renderExtraLinks();
   }
 
   function refresh(transitionTime = 0) {

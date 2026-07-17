@@ -16,7 +16,28 @@ function sourceRevision(family) {
 
 function mergeEntities(registeredEntities = [], localEntities = []) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
-  const merged = registeredEntities.map(entity => localById.get(entity.id) || entity);
+  const merged = registeredEntities.map(entity => {
+    const localEntity = localById.get(entity.id);
+    if (!localEntity) return entity;
+
+    const registryManagedFields = Array.isArray(entity.extensions?.registryManagedFields)
+      ? entity.extensions.registryManagedFields
+      : [];
+    const result = {
+      ...entity,
+      ...localEntity,
+      extensions: {
+        ...(entity.extensions || {}),
+        ...(localEntity.extensions || {})
+      }
+    };
+    registryManagedFields.forEach(fieldName => {
+      if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {
+        result[fieldName] = entity[fieldName];
+      }
+    });
+    return result;
+  });
   const registeredIds = new Set(registeredEntities.map(entity => entity.id));
   localEntities.forEach(entity => {
     if (!registeredIds.has(entity.id)) merged.push(entity);
@@ -87,7 +108,13 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     },
     lineage: {
       ...registered.lineage,
-      ...local.lineage
+      ...local.lineage,
+      originHouse: registeredRevision > localRevision
+        ? registered.lineage.originHouse
+        : {
+            ...registered.lineage.originHouse,
+            ...local.lineage.originHouse
+          }
     },
     presentation: {
       ...registered.presentation,

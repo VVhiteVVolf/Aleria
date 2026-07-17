@@ -99,6 +99,7 @@ const LOCAL_PORTRAIT_IDS = Object.freeze([
   "isobel-1719-draig",
   "rhiannon-draig",
   "gawain-draig",
+  "guinevere-neidr",
   "amadia-draig",
   "rhygifarch-draig",
   "rollo-draig",

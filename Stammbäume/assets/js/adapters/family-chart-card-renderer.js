@@ -99,7 +99,7 @@ function timeNode(data) {
 
 export function createFamilyChartCardHtml(hierarchyDatum) {
   const data = hierarchyDatum?.data?.data || hierarchyDatum?.data || {};
-  if (data.nodeKind === 'house-crest' || data.nodeKind === 'cadet-house') return crestNode(data);
+  if (['house-crest', 'cadet-house', 'house-origin'].includes(data.nodeKind)) return crestNode(data);
   if (data.nodeKind === 'time-gap' || data.nodeKind === 'time-jump') return timeNode(data);
   return personCard(data);
 }
