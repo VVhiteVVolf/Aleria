@@ -1110,7 +1110,11 @@ test('bildet Haus Draig vom Ursprungshaus Dreigiau bis zur jüngsten Generation 
   assert.equal(family.persons.length, 177);
   assert.equal(family.partnerships.length, 82);
   assert.equal(family.parentages.length, 93);
-  assert.equal(family.cadetBranches.length, 33);
+  assert.equal(family.cadetBranches.length, 34);
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-away-pendrag-caitrin').parentPartnershipId,
+    'marriage-caitrin-gawain'
+  );
   assert.equal(family.timeJumps.length, 6);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-celtigern-findabhair');
   assert.equal(family.lineage.originHouse.enabled, true);
@@ -1295,10 +1299,10 @@ test('liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 130);
-  assert.equal(Object.keys(sourceManifest).length, 112);
-  assert.equal(picturedPeople.length, 130);
-  assert.equal(placeholderPeople.length, 47);
+  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 129);
+  assert.equal(Object.keys(sourceManifest).length, 111);
+  assert.equal(picturedPeople.length, 129);
+  assert.equal(placeholderPeople.length, 48);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
@@ -1626,12 +1630,12 @@ test('liefert für Haus Gwefrydd alle belegten Portraits lokal aus', async () =>
   const localPortraitIds = Object.keys(HOUSE_GWEFRYDD_PORTRAITS)
     .filter(personId => HOUSE_GWEFRYDD_PORTRAITS[personId].startsWith('assets/images/portraits/haus-gwefrydd/'));
 
-  assert.equal(Object.keys(HOUSE_GWEFRYDD_PORTRAITS).length, 46);
+  assert.equal(Object.keys(HOUSE_GWEFRYDD_PORTRAITS).length, 45);
   assert.equal(localPortraitIds.length, 30);
   assert.deepEqual(Object.keys(sourceManifest).sort(), localPortraitIds.sort());
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
-  assert.equal(picturedPeople.length, 46);
-  assert.equal(placeholderPeople.length, 15);
+  assert.equal(picturedPeople.length, 45);
+  assert.equal(placeholderPeople.length, 16);
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
   await Promise.all(picturedPeople.map(async person => {

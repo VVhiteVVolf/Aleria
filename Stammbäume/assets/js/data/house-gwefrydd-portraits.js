@@ -45,7 +45,6 @@ export const HOUSE_GWEFRYDD_PORTRAITS = Object.freeze({
     `${PORTRAIT_ROOT}/${personId}.jpg`
   ])),
   'kenehyr-gwefrydd': HOUSE_DRAIG_PORTRAITS['kenehyr-gwefrydd'],
-  'tanwen-draig': HOUSE_DRAIG_PORTRAITS['tanwen-draig'],
   'branwen-gwefrydd': HOUSE_DRAIG_PORTRAITS['branwen-gwefrydd'],
   'steffan-draig': HOUSE_DRAIG_PORTRAITS['steffan-draig'],
   'rheidwyn-gafyr': HOUSE_GAFYR_PORTRAITS['rheidwyn-gafyr'],

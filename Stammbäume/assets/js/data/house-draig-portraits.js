@@ -27,7 +27,6 @@ const LOCAL_PORTRAIT_IDS = Object.freeze([
   "gwyneira-pendrag",
   "ysgithyrwyn-grael",
   "marared-draig",
-  "tanwen-draig",
   "cerridwyn-pendrag",
   "kenehyr-gwefrydd",
   "gruffyd-draig",

@@ -597,6 +597,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     marriedAway('married-away-gwefrydd-tanwen', 'Haus Gwefrydd', 'marriage-tanwen-kenehyr', 'house-gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     marriedAway('married-away-saethwyr-tryffin', 'Haus Saethwyr', 'marriage-tryffin-rhianwyn', 'house-saethwyr', HOUSE_EMBLEMS.saethwyr),
     marriedAway('married-away-gafyr-eurolwyn', 'Haus Gafyr', 'marriage-eurolwyn-maldwyn', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
+    marriedAway('married-away-pendrag-caitrin', 'Haus Pendrag', 'marriage-caitrin-gawain', 'house-pendrag'),
     marriedAway('married-away-cumhail-tudorwen', 'Haus Cumhail', 'marriage-tudorwen-domnall', 'house-cumhail'),
     marriedAway('married-away-grael-talaith', 'Haus Grael', 'marriage-talaith-greidyawl', 'house-grael'),
     marriedAway('married-away-wyrm-heulwen', 'Haus Wyrm', 'marriage-heulwen-rhydderch', 'house-wyrm', HOUSE_EMBLEMS.wyrm),
