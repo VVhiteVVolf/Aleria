@@ -15,10 +15,9 @@ import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
 import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
 import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits.js';
-import {
-  HOUSE_GWEFRYDD_FAMILY,
-  HOUSE_GWYVERN_FAMILY
-} from '../assets/js/data/blank-house-families.js';
+import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/blank-house-families.js';
+import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
+import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
 import { HOUSE_DRAIG_PORTRAITS } from '../assets/js/data/house-draig-portraits.js';
 import { HOUSE_GAFYR_FAMILY } from '../assets/js/data/house-gafyr-family.js';
@@ -1390,6 +1389,126 @@ test('liefert für Haus Wyrm alle belegten Portraits lokal aus', async () => {
   }));
 });
 
+test('bildet Haus Gwyvern von Bleddyn und Owena bis zur jüngsten Generation ab', () => {
+  const family = assertValidFamily(HOUSE_GWYVERN_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+  const wyrm = assertValidFamily(HOUSE_WYRM_FAMILY).family;
+  const saethwyr = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const arwydd = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 44);
+  assert.equal(family.partnerships.length, 19);
+  assert.equal(family.parentages.length, 24);
+  assert.equal(family.cadetBranches.length, 10);
+  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-away-draig-heledd').targetFamilyId,
+    'haus-draig'
+  );
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-bleddyn-owena');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 6);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['trevor-gwyvern', 'huw-gwyvern'],
+    'Trevor und Huw bilden die Erbfolge.'
+  );
+
+  assert.deepEqual(graph.getChildren('bleddyn-draig').map(person => person.id).sort(), [
+    'endellion-gwyvern',
+    'gwrddnei-gwyvern'
+  ]);
+  assert.deepEqual(graph.getChildren('dyvynwal-gwyvern').map(person => person.id).sort(), [
+    'gwyneira-gwyvern',
+    'kimball-gwyvern',
+    'seithved-gwyvern',
+    'talaith-gwyvern'
+  ]);
+  assert.deepEqual(graph.getChildren('seithved-gwyvern').map(person => person.id).sort(), [
+    'delyth-gwyvern',
+    'heledd-gwyvern',
+    'maredudd-gwyvern'
+  ]);
+  assert.deepEqual(graph.getChildren('mervyn-gwyvern').map(person => person.id).sort(), [
+    'gwenfrewi-gwyvern',
+    'huw-gwyvern',
+    'tegwen-gwyvern',
+    'trevor-gwyvern'
+  ]);
+  assert.deepEqual(graph.getChildren('gwynnan-gwyvern').map(person => person.id).sort(), [
+    'brizio-gwyvern',
+    'bryn-gwyvern'
+  ]);
+  assert.equal(graph.getPerson('kenyon-taranvyr').status, 'dead');
+  assert.equal(graph.getPerson('afal-arth').status, 'dead');
+  assert.equal(graph.getPerson('heledd-gwyvern').status, 'alive');
+  assert.equal(graph.getPerson('bleddyn-draig').familyRole, 'core');
+  assert.equal(graph.getPerson('owena-saethwyr').familyRole, 'married');
+  assert.equal(
+    family.partnerships.some(partnership => partnership.participantIds.includes('tegwen-gwyvern')),
+    false,
+    'Tegwens Verlobung wurde auf Anweisung nicht übernommen.'
+  );
+
+  [
+    [family, 'bleddyn-draig', draig, 'bleddyn-draig'],
+    [family, 'meurig-draig', draig, 'meurig-draig'],
+    [family, 'heledd-gwyvern', draig, 'heledd-gwyvern'],
+    [family, 'cynwrig-wyrm', wyrm, 'cynwrig-wyrm'],
+    [family, 'angharad-gwyvern', wyrm, 'angharad-gwyvern'],
+    [family, 'olwen-wyrm', wyrm, 'olwen-wyrm'],
+    [family, 'maredudd-gwyvern', wyrm, 'maredudd-gwyvern'],
+    [family, 'owena-saethwyr', saethwyr, 'owena-saethwyr'],
+    [family, 'venora-saethwyr', saethwyr, 'venora-saethwyr'],
+    [family, 'huw-saethwyr', saethwyr, 'huw-saethwyr'],
+    [family, 'dyvynwal-gwyvern', saethwyr, 'dyvynwal-gwyvern'],
+    [family, 'morwenna-gwyvern', saethwyr, 'morwenna-gwyvern'],
+    [family, 'igraine-gafyr', gafyr, 'igraine-gafyr'],
+    [family, 'gwrddnei-gwyvern', gafyr, 'gwrddnei-gwyvern'],
+    [family, 'izobel-arwydd', arwydd, 'izobel-arwydd'],
+    [family, 'gwynnan-gwyvern', arwydd, 'gwynnan-gwywern']
+  ].forEach(([firstFamily, firstId, secondFamily, secondId]) => {
+    const first = firstFamily.persons.find(person => person.id === firstId);
+    const second = secondFamily.persons.find(person => person.id === secondId);
+    assert.equal(first.worldPersonId, second.worldPersonId, `${firstId} muss dieselbe Weltperson bleiben.`);
+    assert.equal(first.portrait, second.portrait, `${firstId} muss dasselbe lokale Portrait verwenden.`);
+  });
+
+  assert.ok(converted.data.every(entry => !['time-gap', 'time-jump'].includes(entry.data.nodeKind)));
+  assert.ok(converted.data.some(entry => entry.data.aleria.cadetBranchId === 'married-away-draig-heledd'));
+});
+
+test('liefert für Haus Gwyvern alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_GWYVERN_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-gwyvern/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+  const localPortraitIds = Object.keys(HOUSE_GWYVERN_PORTRAITS)
+    .filter(personId => HOUSE_GWYVERN_PORTRAITS[personId].startsWith('assets/images/portraits/haus-gwyvern/'));
+
+  assert.equal(Object.keys(HOUSE_GWYVERN_PORTRAITS).length, 37);
+  assert.equal(localPortraitIds.length, 24);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), localPortraitIds.sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 37);
+  assert.equal(placeholderPeople.length, 7);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_GWYVERN_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -1755,7 +1874,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
   ]);
-  const blankFamilies = [HOUSE_GWEFRYDD_FAMILY, HOUSE_GWYVERN_FAMILY];
+  const blankFamilies = [HOUSE_GWEFRYDD_FAMILY];
 
   assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length);
   expected.forEach(({ rankId, path }, familyId) => {

@@ -126,7 +126,7 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     { id: 'house-draig', name: 'Haus Draig', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.draig, status: 'active' },
     { id: 'house-gafyr', name: 'Haus Gafyr', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gafyr, status: 'active' },
     { id: 'house-gwefrydd', name: 'Haus Gwefrydd', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gwefrydd, status: 'active' },
-    { id: 'house-gwywern', name: 'Haus Gwywern', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gwywern, status: 'active' },
+    { id: 'house-gwywern', name: 'Haus Gwyvern', motto: '', emblem: ARWYDD_HOUSE_EMBLEMS.gwywern, status: 'active' },
     { id: 'house-dyngwn', name: 'Haus Dyngwn', motto: '', emblem: '', status: 'active' }
   ],
   persons: [
@@ -155,7 +155,7 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     person('ieuan-arwydd', 'Ieuan', 'male', 'core', 'house-arwydd'),
     person('myrcella-gwefrydd', 'Myrcella Gwefrydd', 'female', 'married', 'house-gwefrydd'),
     person('izobel-arwydd', 'Izobel', 'female', 'core', 'house-arwydd'),
-    person('gwynnan-gwywern', 'Gwynnan Gwywern', 'male', 'married', 'house-gwywern'),
+    person('gwynnan-gwywern', 'Gwynnan Gwyvern', 'male', 'married', 'house-gwywern'),
     person('iorwerth-arwydd', 'Iorwerth', 'male', 'core', 'house-arwydd'),
     person('dyddi-dyngwn', 'Dyddi Dyngwn', 'unknown', 'married', 'house-dyngwn'),
 
@@ -257,15 +257,15 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     },
     {
       id: 'married-away-gwywern',
-      name: 'Haus Gwywern',
+      name: 'Haus Gwyvern',
       subtitle: 'Wegverheiratete Linie',
       linkType: 'married-away',
       parentPartnershipId: 'marriage-izobel-gwynnan',
       houseId: 'house-gwywern',
-      emblem: '',
+      emblem: ARWYDD_HOUSE_EMBLEMS.gwywern,
       crestFrame: 'gold',
       founded: '',
-      targetFamilyId: 'haus-gwywern',
+      targetFamilyId: 'haus-gwyvern',
       notes: '',
       extensions: {}
     }

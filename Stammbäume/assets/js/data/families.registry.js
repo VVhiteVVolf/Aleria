@@ -1,8 +1,6 @@
-import {
-  HOUSE_GWEFRYDD_FAMILY,
-  HOUSE_GWYVERN_FAMILY
-} from './blank-house-families.js';
+import { HOUSE_GWEFRYDD_FAMILY } from './blank-house-families.js';
 import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js';
+import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js';
 import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
