@@ -229,7 +229,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('tanwen-draig', 'Tanwen', 'female', '1096', '1177'),
     person('tryffin-draig', 'Tryffin', 'male', '1098', '1171'),
     person('cerridwyn-pendrag', 'Cerridwyn Pendrag', 'female', '1097', '1144', 'house-pendrag'),
-    person('kenehyr-gwefrydd', 'Kenehyr Gwefrydd', 'male', '1096', '????', 'house-gwefrydd'),
+    person('kenehyr-gwefrydd', 'Kenehyr Gwefrydd', 'male', '1096', '1141', 'house-gwefrydd'),
     person('rhianwyn-saethwyr', 'Rhianwyn Saethwyr', 'female', '????', '????', 'house-saethwyr'),
     person('gruffyd-draig', 'Gruffyd', 'male', '1114', '1171'),
     person('myrddin-draig', 'Myrddin', 'male', '1119', ''),

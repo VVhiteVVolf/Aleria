@@ -15,7 +15,8 @@ import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
 import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
 import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits.js';
-import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/blank-house-families.js';
+import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/house-gwefrydd-family.js';
+import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -1290,10 +1291,10 @@ test('liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 128);
-  assert.equal(Object.keys(sourceManifest).length, 110);
-  assert.equal(picturedPeople.length, 128);
-  assert.equal(placeholderPeople.length, 49);
+  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 130);
+  assert.equal(Object.keys(sourceManifest).length, 112);
+  assert.equal(picturedPeople.length, 130);
+  assert.equal(placeholderPeople.length, 47);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
@@ -1506,6 +1507,126 @@ test('liefert für Haus Gwyvern alle belegten Portraits lokal aus', async () => 
     const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
     assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
+test('bildet Haus Gwefrydd mit drei Überlieferungslücken und allen belegten Zweigen ab', () => {
+  const family = assertValidFamily(HOUSE_GWEFRYDD_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+  const wyrm = assertValidFamily(HOUSE_WYRM_FAMILY).family;
+  const saethwyr = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const gwyvern = assertValidFamily(HOUSE_GWYVERN_FAMILY).family;
+  const arwydd = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 61);
+  assert.equal(family.partnerships.length, 28);
+  assert.equal(family.parentages.length, 32);
+  assert.equal(family.cadetBranches.length, 13);
+  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-away-gafyr-heulwen').targetFamilyId,
+    'haus-gafyr'
+  );
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-tallwch-clodagh');
+  assert.equal(family.timeJumps.length, 3);
+  assert.equal(family.timeJumps[1].toYear, '1096');
+  assert.equal(family.timeJumps[2].toYear, '1578');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 9);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['thomos-gwefrydd', 'iorwerth-gwefrydd', 'bethan-gwefrydd'],
+    'Thomos, Iorwerth und Bethan bilden die Erbfolge.'
+  );
+
+  assert.deepEqual(graph.getChildren('borros-gwefrydd').map(person => person.id).sort(), [
+    'ellyn-gwefrydd',
+    'greidyawl-gwefrydd',
+    'lyonel-gwefrydd'
+  ]);
+  assert.deepEqual(graph.getChildren('gwenhwyfar-gwefrydd').map(person => person.id), [
+    'ursyn-gwefrydd'
+  ], 'Ursyn folgt der Stammbaumgrafik als Sohn Gwenhwyfars und Dewylls.');
+  assert.deepEqual(graph.getChildren('stennis-gwefrydd').map(person => person.id).sort(), [
+    'branwen-gwefrydd',
+    'thomos-gwefrydd'
+  ]);
+  assert.deepEqual(graph.getChildren('thomos-gwefrydd').map(person => person.id).sort(), [
+    'bethan-gwefrydd',
+    'eira-gwefrydd',
+    'iorwerth-gwefrydd'
+  ]);
+  assert.deepEqual(graph.getChildren('tommen-gwefrydd').map(person => person.id).sort(), [
+    'floris-gwefrydd',
+    'petyr-gwefrydd'
+  ]);
+  assert.equal(graph.getPerson('kenehyr-gwefrydd').death, '1141');
+  assert.equal(graph.getPerson('stennis-gwefrydd').status, 'alive');
+  assert.equal(graph.getPerson('tallwch-gwefrydd').familyRole, 'core');
+  assert.equal(graph.getPerson('clodagh-ard-conbhron').familyRole, 'married');
+
+  [
+    [family, 'kenehyr-gwefrydd', draig, 'kenehyr-gwefrydd'],
+    [family, 'tanwen-draig', draig, 'tanwen-draig'],
+    [family, 'branwen-gwefrydd', draig, 'branwen-gwefrydd'],
+    [family, 'steffan-draig', draig, 'steffan-draig'],
+    [family, 'steffon-gwefrydd', wyrm, 'steffon-gwefrydd'],
+    [family, 'sulwen-wyrm', wyrm, 'sulwen-wyrm'],
+    [family, 'odyar-saethwyr', saethwyr, 'odyar-saethwyr'],
+    [family, 'morwenna-gwefrydd', saethwyr, 'morwenna-gwefrydd'],
+    [family, 'gallgoid-saethwyr', saethwyr, 'gallgoid-saethwyr'],
+    [family, 'selyse-gwefrydd', saethwyr, 'selyse-gwefrydd'],
+    [family, 'rheidwyn-gafyr', gafyr, 'rheidwyn-gafyr'],
+    [family, 'heulwen-gwefrydd', gafyr, 'heulwen-gwefrydd'],
+    [family, 'greidyawl-gwefrydd', gafyr, 'greidyawl-gwefrydd'],
+    [family, 'isotta-gafyr', gafyr, 'isotta-gafyr'],
+    [family, 'ffion-gwefrydd', gafyr, 'ffion-gwefrydd'],
+    [family, 'rheinallt-gafyr', gafyr, 'rheinallt-gafyr'],
+    [family, 'thomos-gwefrydd', gwyvern, 'thomos-gwefrydd'],
+    [family, 'alys-gwyvern', gwyvern, 'alys-gwyvern'],
+    [family, 'myrcella-gwefrydd', arwydd, 'myrcella-gwefrydd'],
+    [family, 'ieuan-arwydd', arwydd, 'ieuan-arwydd']
+  ].forEach(([firstFamily, firstId, secondFamily, secondId]) => {
+    const first = firstFamily.persons.find(person => person.id === firstId);
+    const second = secondFamily.persons.find(person => person.id === secondId);
+    assert.equal(first.worldPersonId, second.worldPersonId, `${firstId} muss dieselbe Weltperson bleiben.`);
+    assert.equal(first.portrait, second.portrait, `${firstId} muss dasselbe lokale Portrait verwenden.`);
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 3);
+  assert.ok(converted.data.some(entry => entry.data.aleria.cadetBranchId === 'married-away-draig-branwen'));
+});
+
+test('liefert für Haus Gwefrydd alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_GWEFRYDD_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-gwefrydd/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+  const localPortraitIds = Object.keys(HOUSE_GWEFRYDD_PORTRAITS)
+    .filter(personId => HOUSE_GWEFRYDD_PORTRAITS[personId].startsWith('assets/images/portraits/haus-gwefrydd/'));
+
+  assert.equal(Object.keys(HOUSE_GWEFRYDD_PORTRAITS).length, 46);
+  assert.equal(localPortraitIds.length, 30);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), localPortraitIds.sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 46);
+  assert.equal(placeholderPeople.length, 15);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_GWEFRYDD_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    const signature = [...image.subarray(0, 3)].join(',');
+    assert.ok(
+      signature === '255,216,255' || signature === '137,80,78',
+      `Portraitdatei für ${person.name} ist weder JPEG noch PNG.`
+    );
   }));
 });
 
@@ -1874,8 +1995,6 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
   ]);
-  const blankFamilies = [HOUSE_GWEFRYDD_FAMILY];
-
   assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length);
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
@@ -1888,10 +2007,6 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     assert.match(profile.regionEmblems.kingdom, /^assets\/images\/regions\//);
     assert.match(profile.regionEmblems.county, /^assets\/images\/regions\//);
     assert.match(profile.regionEmblems.barony, /^assets\/images\/regions\//);
-  });
-  blankFamilies.forEach(family => {
-    assert.equal(loadFamilyById(family.document.id, storage).family.persons.length, 0);
-    assert.match(family.document.emblem, /^assets\/images\/houses\/haus-/);
   });
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
