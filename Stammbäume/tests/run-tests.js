@@ -21,6 +21,8 @@ import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
+import { HOUSE_RHYDDID_FAMILY } from '../assets/js/data/house-rhyddid-family.js';
+import { HOUSE_RHYDDID_PORTRAITS } from '../assets/js/data/house-rhyddid-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -1836,6 +1838,131 @@ test('liefert für Haus Tlawd alle belegten Portraits lokal aus', async () => {
   }));
 });
 
+test('bildet das Ritterherrenhaus Rhyddid mit Gründerfamilie, Überlieferungslücke und Fremdhaus-Wappen ab', () => {
+  const family = assertValidFamily(HOUSE_RHYDDID_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 31);
+  assert.equal(family.partnerships.length, 11);
+  assert.equal(family.parentages.length, 19);
+  assert.equal(family.cadetBranches.length, 3);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-gwilym-evie');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.toYear, '1651');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-wyrm');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 3);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['arian-rhyddid', 'artie-rhyddid'],
+    'Arian und Artie bilden die Erbfolge.'
+  );
+  assert.equal(
+    graph.getPerson('taran-rhyddid').title,
+    'Ritterherr des Hauses Rhyddid',
+    'Das Oberhaupt eines Ritterherrenhauses trägt den Titel Ritterherr.'
+  );
+  assert.equal(graph.getPerson('taran-rhyddid').status, 'alive');
+  assert.equal(graph.getPerson('kerwin-rhyddid').status, 'dead');
+  assert.equal(graph.getPerson('gwilym-rhyddid').title, 'Begründer des Ritterherrenhauses Rhyddid');
+  assert.equal(graph.getPerson('yale-rhyddid').title, 'Hauptmann von Mwyncreig');
+
+  // Gwilym und Gwenifer stammen vom 1262 überfallenen Hof des namenlosen Schweinehirten.
+  assert.deepEqual(graph.getChildren('unknown-gwilym-father').map(person => person.id).sort(), [
+    'gwenifer-rhyddid',
+    'gwilym-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('gwilym-rhyddid').map(person => person.id).sort(), [
+    'evangelin-rhyddid',
+    'kerwin-rhyddid',
+    'yale-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('kerwin-rhyddid').map(person => person.id), ['taran-rhyddid']);
+  assert.deepEqual(graph.getChildren('yale-rhyddid').map(person => person.id), ['rhain-rhyddid']);
+  assert.deepEqual(graph.getChildren('taran-rhyddid').map(person => person.id).sort(), [
+    'arian-rhyddid',
+    'gwydion-rhyddid',
+    'ronda-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('rhain-rhyddid').map(person => person.id).sort(), [
+    'bevan-rhyddid',
+    'eelin-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('arian-rhyddid').map(person => person.id).sort(), [
+    'artie-rhyddid',
+    'evie-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('bevan-rhyddid').map(person => person.id).sort(), [
+    'mal-rhyddid',
+    'meggie-rhyddid',
+    'nel-rhyddid'
+  ]);
+  assert.deepEqual(graph.getChildren('eelin-rhyddid').map(person => person.id).sort(), [
+    'barry-rhyddid',
+    'glinda-rhyddid'
+  ]);
+  assert.deepEqual(graph.getParents('taran-rhyddid').map(person => person.id).sort(), [
+    'arianwen-chwedlonol',
+    'kerwin-rhyddid'
+  ]);
+
+  // Ehepartner aus benannten Ritterhäusern behalten Haus und geteilte Identität.
+  assert.equal(graph.getPerson('arianwen-chwedlonol').worldPersonId, 'person--haus-chwedlonol--arianwen-chwedlonol');
+  assert.equal(graph.getPerson('godwyn-cludwyr').worldPersonId, 'person--haus-cludwyr--godwyn-cludwyr');
+  assert.equal(graph.getPerson('avan-balchder').worldPersonId, 'person--haus-balchder--avan-balchder');
+  assert.ok(
+    family.persons
+      .filter(person => person.familyRole === 'married' && !person.houseId)
+      .every(person => !person.portrait || person.portrait.startsWith('assets/images/portraits/haus-rhyddid/'))
+  );
+
+  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
+  assert.ok(
+    family.cadetBranches.every(branch => branch.crestFrame === 'silver'),
+    'Fremdhaus-Wappenknoten der Ritterherrenhäuser führen den Silberrahmen.'
+  );
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-in-chwedlonol-arianwen')?.subtitle,
+    'Herkunftshaus der Braut'
+  );
+  assert.deepEqual(
+    family.cadetBranches.map(branch => branch.targetFamilyId).sort(),
+    ['haus-balchder', 'haus-chwedlonol', 'haus-cludwyr']
+  );
+
+  const rhyddidCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(rhyddidCrest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 3);
+});
+
+test('liefert für Haus Rhyddid alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_RHYDDID_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-rhyddid/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_RHYDDID_PORTRAITS).length, 24);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_RHYDDID_PORTRAITS).sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 24);
+  assert.equal(placeholderPeople.length, 7);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_RHYDDID_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2221,6 +2348,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     const loaded = loadFamilyById(family.document.id, storage);
     if (family.document.id === 'haus-tlawd') {
       assert.equal(loaded.family.persons.length, 31, 'Haus Tlawd ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else if (family.document.id === 'haus-rhyddid') {
+      assert.equal(loaded.family.persons.length, 31, 'Haus Rhyddid ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }

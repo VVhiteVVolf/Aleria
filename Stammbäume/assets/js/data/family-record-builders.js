@@ -87,7 +87,9 @@ function createHouseBranch({
   emblem = '',
   subtitle,
   founded = '',
-  notes = ''
+  notes = '',
+  // Ritterherrenhäuser als Zielhaus führen den silbernen Wappenrahmen.
+  crestFrame = 'gold'
 }) {
   return {
     id,
@@ -98,7 +100,7 @@ function createHouseBranch({
     houseId,
     emblem,
     emblemScale: 0.86,
-    crestFrame: 'gold',
+    crestFrame,
     frameScale: 1,
     founded,
     targetFamilyId,
