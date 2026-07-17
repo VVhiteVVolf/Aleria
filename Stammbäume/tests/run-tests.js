@@ -23,6 +23,8 @@ import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
 import { HOUSE_RHYDDID_FAMILY } from '../assets/js/data/house-rhyddid-family.js';
 import { HOUSE_RHYDDID_PORTRAITS } from '../assets/js/data/house-rhyddid-portraits.js';
+import { HOUSE_GELYN_FAMILY } from '../assets/js/data/house-gelyn-family.js';
+import { HOUSE_GELYN_PORTRAITS } from '../assets/js/data/house-gelyn-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -1963,6 +1965,102 @@ test('liefert für Haus Rhyddid alle belegten Portraits lokal aus', async () => 
   }));
 });
 
+test('bildet das junge Ritterherrenhaus Gelyn ohne Überlieferungslücke ab', () => {
+  const family = assertValidFamily(HOUSE_GELYN_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 24);
+  assert.equal(family.partnerships.length, 7);
+  assert.equal(family.parentages.length, 16);
+  assert.equal(family.cadetBranches.length, 1);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-cadoc-aliza');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, false, 'Das junge Haus kennt keine Überlieferungslücke.');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 1);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['brannoc-gelyn', 'rhon-gelyn', 'fflam-gelyn'],
+    'Brannoc, Rhon und Fflam bilden die Erbfolge.'
+  );
+  assert.equal(
+    graph.getPerson('cadoc-gelyn').title,
+    'Begründer und Ritterherr des Hauses Gelyn',
+    'Der Gründer ist zugleich amtierender Ritterherr.'
+  );
+  assert.equal(graph.getPerson('cadoc-gelyn').status, 'alive');
+  assert.equal(graph.getPerson('unknown-cadoc-father').status, 'unknown');
+
+  // Cadoc und Dehlia entstammen einer nicht überlieferten Familie.
+  assert.deepEqual(graph.getChildren('unknown-cadoc-father').map(person => person.id).sort(), [
+    'cadoc-gelyn',
+    'dehlia-gelyn'
+  ]);
+  assert.deepEqual(graph.getChildren('cadoc-gelyn').map(person => person.id).sort(), [
+    'brannoc-gelyn',
+    'gwawr-gelyn',
+    'gwyron-gelyn',
+    'madoc-gelyn',
+    'senara-gelyn'
+  ]);
+  assert.deepEqual(graph.getChildren('brannoc-gelyn').map(person => person.id).sort(), [
+    'fflam-gelyn',
+    'gwion-gelyn',
+    'rhon-gelyn',
+    'torri-gelyn'
+  ]);
+  assert.deepEqual(graph.getChildren('madoc-gelyn').map(person => person.id).sort(), [
+    'garym-gelyn',
+    'reece-gelyn'
+  ]);
+  assert.deepEqual(graph.getChildren('gwyron-gelyn').map(person => person.id), ['llew-gelyn']);
+  assert.deepEqual(graph.getChildren('gwawr-gelyn').map(person => person.id).sort(), [
+    'meic-gelyn',
+    'teleri-gelyn'
+  ]);
+  assert.deepEqual(graph.getChildren('senara-gelyn').map(person => person.id), []);
+
+  // Kamber stammt aus dem Ritterherrenhaus Balchder und teilt dessen Weltpersonen-ID.
+  assert.equal(graph.getPerson('kamber-balchder').worldPersonId, 'person--haus-balchder--kamber-balchder');
+  const balchderBranch = family.cadetBranches[0];
+  assert.equal(balchderBranch.linkType, 'married-away');
+  assert.equal(balchderBranch.crestFrame, 'silver');
+  assert.equal(balchderBranch.parentPartnershipId, 'marriage-senara-kamber');
+  assert.equal(balchderBranch.targetFamilyId, 'haus-balchder');
+
+  const gelynCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(gelynCrest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+  assert.ok(converted.data.every(entry => !['time-gap', 'time-jump'].includes(entry.data.nodeKind)));
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 1);
+});
+
+test('liefert für Haus Gelyn alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_GELYN_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-gelyn/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_GELYN_PORTRAITS).length, 22);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_GELYN_PORTRAITS).sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 22);
+  assert.equal(placeholderPeople.length, 2);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_GELYN_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2350,6 +2448,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       assert.equal(loaded.family.persons.length, 31, 'Haus Tlawd ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-rhyddid') {
       assert.equal(loaded.family.persons.length, 31, 'Haus Rhyddid ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else if (family.document.id === 'haus-gelyn') {
+      assert.equal(loaded.family.persons.length, 24, 'Haus Gelyn ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }
