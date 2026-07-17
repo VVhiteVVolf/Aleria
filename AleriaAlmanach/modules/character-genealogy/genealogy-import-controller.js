@@ -1,5 +1,10 @@
 import { createFamilyCandidates, buildImportedCharacter } from './genealogy-mapping.js';
-import { listGenealogyFamilies, loadGenealogyFamily } from './genealogy-source-repository.js';
+import {
+  listGenealogyFamilies,
+  loadGenealogyFamily,
+  loadPublishedGenealogyFamily,
+  refreshGenealogyRegistry
+} from './genealogy-source-repository.js';
 import {
   findBestCharacterMatch,
   normalizeCharacterGenealogy,
@@ -14,7 +19,9 @@ const state = {
   selectedPersonId: '',
   search: '',
   loading: false,
-  error: ''
+  syncing: false,
+  error: '',
+  loadToken: 0
 };
 
 window.AleriaCharacterGenealogy = Object.freeze({
@@ -221,9 +228,14 @@ function renderPreview() {
 
 function renderStatus() {
   const status = getDialogRole('status');
-  status.textContent = state.loading
-    ? 'Lade Daten…'
-    : `${getVisibleCandidates().length} von ${state.candidates.length} Personen sichtbar`;
+  if (state.loading) {
+    status.textContent = 'Lade Daten…';
+    return;
+  }
+  const visible = `${getVisibleCandidates().length} von ${state.candidates.length} Personen sichtbar`;
+  status.textContent = state.syncing
+    ? `${visible} · gleiche veröffentlichte Fassung ab…`
+    : visible;
 }
 
 function render() {
@@ -233,53 +245,93 @@ function render() {
   renderStatus();
 }
 
-async function selectFamily(familyId) {
-  const record = state.families.find(item => item.id === familyId);
-  if (!record) return;
-  state.activeFamily = record;
-  state.loading = true;
-  state.error = '';
-  state.candidates = [];
-  state.selectedPersonId = '';
-  render();
-  try {
-    const loaded = await loadGenealogyFamily(record);
-    state.activeFamily = loaded;
-    state.candidates = createFamilyCandidates(loaded);
-    state.selectedPersonId = state.candidates.find(candidate => candidate.personId === 'idris-arwydd')?.personId
-      || state.candidates[0]?.personId
-      || '';
-  } catch (error) {
-    state.error = error.message || 'Der Stammbaum konnte nicht geladen werden.';
-  } finally {
-    state.loading = false;
-    render();
+function applyLoadedFamily(loaded) {
+  state.activeFamily = loaded;
+  state.candidates = createFamilyCandidates(loaded);
+  if (!state.candidates.some(candidate => candidate.personId === state.selectedPersonId)) {
+    state.selectedPersonId = state.candidates[0]?.personId || '';
   }
 }
 
-async function openImportDialog() {
-  ensureDialog();
+// Die veröffentlichte Fassung kann lokale Projektdaten überholen; sie wird im
+// Hintergrund nachgeladen, damit der Dialog sofort mit den Projektdaten arbeitet.
+function refreshPublishedFamily(record, token) {
+  state.syncing = true;
+  renderStatus();
+  void loadPublishedGenealogyFamily(record)
+    .then(published => {
+      if (token !== state.loadToken) return;
+      if (published) applyLoadedFamily(published);
+    })
+    .finally(() => {
+      if (token !== state.loadToken) return;
+      state.syncing = false;
+      render();
+    });
+}
+
+function selectFamily(familyId) {
+  const record = state.families.find(item => item.id === familyId);
+  if (!record) return;
+  const token = ++state.loadToken;
+  state.activeFamily = record;
+  state.error = '';
+  state.candidates = [];
+  state.selectedPersonId = '';
+  state.syncing = false;
+  if (record.family) {
+    state.loading = false;
+    try {
+      applyLoadedFamily(loadGenealogyFamily(record));
+    } catch (error) {
+      state.error = error.message || 'Der Stammbaum konnte nicht geladen werden.';
+      render();
+      return;
+    }
+    render();
+    refreshPublishedFamily(record, token);
+    return;
+  }
+  // Nur in der Cloud veröffentlichte Familien besitzen keine Projektfassung.
   state.loading = true;
+  render();
+  void loadPublishedGenealogyFamily(record).then(published => {
+    if (token !== state.loadToken) return;
+    if (published) applyLoadedFamily(published);
+    else state.error = 'Für diese Familie ist noch keine lesbare Fassung verfügbar.';
+    state.loading = false;
+    render();
+  });
+}
+
+function openImportDialog() {
+  ensureDialog();
   state.error = '';
   state.search = '';
   getDialogRole('search').value = '';
-  render();
   if (typeof window.activateDialog === 'function') {
     window.activateDialog(DIALOG_ID, { initialFocus: '[data-character-genealogy-role="family-select"]' });
   } else {
     ensureDialog().classList.add('active');
     ensureDialog().setAttribute('aria-hidden', 'false');
   }
-  try {
-    state.families = await listGenealogyFamilies();
-    const preferred = state.families.find(record => record.id === 'haus-arwydd') || state.families[0];
-    if (!preferred) throw new Error('Im Stammbaum-Register sind noch keine Familien vorhanden.');
-    await selectFamily(preferred.id);
-  } catch (error) {
-    state.loading = false;
-    state.error = error.message || 'Das Stammbaum-Register konnte nicht geladen werden.';
+  state.families = listGenealogyFamilies();
+  const preferred = state.families.find(record => record.id === 'haus-arwydd') || state.families[0];
+  if (!preferred) {
+    state.error = 'Im Stammbaum-Register sind noch keine Familien vorhanden.';
     render();
+    return;
   }
+  selectFamily(preferred.id);
+  void refreshGenealogyRegistry(state.families).then(merged => {
+    if (!merged) return;
+    const activeId = state.activeFamily?.id;
+    state.families = merged;
+    if (activeId && !merged.some(record => record.id === activeId)) {
+      state.activeFamily = null;
+    }
+    renderFamilyOptions();
+  });
 }
 
 function closeImportDialog() {
@@ -329,7 +381,7 @@ async function saveCandidate({ existing = null, forceSeparate = false } = {}) {
 async function handleAction(trigger) {
   const action = trigger.dataset.characterGenealogyAction;
   if (action === 'open-import') {
-    await openImportDialog();
+    openImportDialog();
     return;
   }
   if (action === 'close') {

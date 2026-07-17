@@ -13,6 +13,15 @@ function cleanText(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+// Portraitpfade der Stammbaumdaten sind relativ zum Stammbäume-Ordner hinterlegt
+// und müssen für den Almanach auf dessen Nachbarpfad umgebogen werden.
+function resolveTreeAssetPath(value) {
+  const source = cleanText(value);
+  if (!source) return '';
+  if (/^assets\//i.test(source)) return `../Stammbäume/${source}`;
+  return source;
+}
+
 function identitySlug(value, fallback) {
   return normalizePersonName(value).replace(/\s+/g, '-') || fallback;
 }
@@ -106,7 +115,7 @@ export function createFamilyPersonCandidate(record, person) {
     status: cleanText(person?.status) || 'unknown',
     birth: cleanText(String(person?.birth ?? '')),
     death: cleanText(String(person?.death ?? '')),
-    portrait: cleanText(person?.portrait),
+    portrait: resolveTreeAssetPath(person?.portrait),
     portraitPlaceholder: cleanText(person?.portraitPlaceholder),
     houseId: cleanText(person?.houseId),
     houseName: cleanText(house?.name),

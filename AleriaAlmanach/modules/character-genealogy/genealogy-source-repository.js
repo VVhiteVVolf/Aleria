@@ -53,38 +53,50 @@ function mergeRegistryRecords(localRecords, cloudRecords) {
   });
 }
 
-export async function listGenealogyFamilies() {
-  const local = FAMILY_REGISTRY.map(localFamilyRecord);
+// Die Projektfassungen sind statisch eingebunden und stehen sofort bereit;
+// veröffentlichte Fassungen werden separat im Hintergrund nachgeladen.
+export function listGenealogyFamilies() {
+  return FAMILY_REGISTRY
+    .filter(record => !RETIRED_FAMILY_IDS.includes(record.id))
+    .map(localFamilyRecord);
+}
+
+export async function refreshGenealogyRegistry(localRecords) {
   const gateway = await waitForFirebaseGateway();
-  if (!gateway?.listPublishedFamilyRegistry) return local;
+  if (!gateway?.listPublishedFamilyRegistry) return null;
   try {
     const cloud = await gateway.listPublishedFamilyRegistry();
-    return mergeRegistryRecords(local, Array.isArray(cloud) ? cloud : [])
+    if (!Array.isArray(cloud) || !cloud.length) return null;
+    return mergeRegistryRecords(localRecords, cloud)
       .filter(record => !RETIRED_FAMILY_IDS.includes(record.id));
   } catch (error) {
     console.info('Veröffentlichte Stammbaum-Registry ist derzeit nicht erreichbar.', error);
-    return local;
+    return null;
   }
 }
 
-export async function loadGenealogyFamily(registryRecord) {
+export function loadGenealogyFamily(registryRecord) {
   if (!registryRecord?.id) throw new Error('Die ausgewählte Familie besitzt keine gültige ID.');
-  const gateway = await waitForFirebaseGateway();
-  if (gateway?.loadPublishedFamily) {
-    try {
-      const published = await gateway.loadPublishedFamily(registryRecord.id);
-      if (published?.family) {
-        return {
-          ...registryRecord,
-          ...published,
-          folderPath: registryRecord.folderPath || [],
-          source: 'firebase'
-        };
-      }
-    } catch (error) {
-      console.info(`Veröffentlichter Stammbaum ${registryRecord.id} ist derzeit nicht erreichbar.`, error);
-    }
-  }
   if (!registryRecord.family) throw new Error('Für diese Familie ist noch keine lesbare Fassung verfügbar.');
-  return { ...registryRecord, source: 'project' };
+  return { ...registryRecord, source: registryRecord.source || 'project' };
+}
+
+export async function loadPublishedGenealogyFamily(registryRecord) {
+  if (!registryRecord?.id) return null;
+  const gateway = await waitForFirebaseGateway();
+  if (!gateway?.loadPublishedFamily) return null;
+  try {
+    const published = await gateway.loadPublishedFamily(registryRecord.id);
+    if (published?.family) {
+      return {
+        ...registryRecord,
+        ...published,
+        folderPath: registryRecord.folderPath || [],
+        source: 'firebase'
+      };
+    }
+  } catch (error) {
+    console.info(`Veröffentlichter Stammbaum ${registryRecord.id} ist derzeit nicht erreichbar.`, error);
+  }
+  return null;
 }
