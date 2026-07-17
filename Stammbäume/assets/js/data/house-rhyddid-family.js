@@ -224,6 +224,6 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Rhyddid-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Gwilym und Gwenifer entstammen dem 1262 überfallenen Hof eines namenlosen Schweinehirten; die Linie der belegten Generationen setzt 1651 wieder ein. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Rhyddid den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

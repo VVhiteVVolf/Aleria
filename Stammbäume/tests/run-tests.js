@@ -25,6 +25,8 @@ import { HOUSE_RHYDDID_FAMILY } from '../assets/js/data/house-rhyddid-family.js'
 import { HOUSE_RHYDDID_PORTRAITS } from '../assets/js/data/house-rhyddid-portraits.js';
 import { HOUSE_GELYN_FAMILY } from '../assets/js/data/house-gelyn-family.js';
 import { HOUSE_GELYN_PORTRAITS } from '../assets/js/data/house-gelyn-portraits.js';
+import { HOUSE_CLUDWYR_FAMILY } from '../assets/js/data/house-cludwyr-family.js';
+import { HOUSE_CLUDWYR_PORTRAITS } from '../assets/js/data/house-cludwyr-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -1950,11 +1952,14 @@ test('liefert für Haus Rhyddid alle belegten Portraits lokal aus', async () => 
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_RHYDDID_PORTRAITS).length, 24);
-  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_RHYDDID_PORTRAITS).sort());
+  // Godwyns Portrait wird vom Cludwyr-Stammbaum gehostet und hier nur wiederverwendet.
+  assert.equal(Object.keys(HOUSE_RHYDDID_PORTRAITS).length, 25);
+  assert.equal(Object.keys(sourceManifest).length, 24);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_RHYDDID_PORTRAITS[personId]));
+  assert.equal(HOUSE_RHYDDID_PORTRAITS['godwyn-cludwyr'], 'assets/images/portraits/haus-cludwyr/godwyn-cludwyr.jpg');
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
-  assert.equal(picturedPeople.length, 24);
-  assert.equal(placeholderPeople.length, 7);
+  assert.equal(picturedPeople.length, 25);
+  assert.equal(placeholderPeople.length, 6);
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
   await Promise.all(picturedPeople.map(async person => {
@@ -2061,6 +2066,130 @@ test('liefert für Haus Gelyn alle belegten Portraits lokal aus', async () => {
   }));
 });
 
+test('bildet das Ritterherrenhaus Cludwyr mit geteiltem Rhyddid-Paar und Herkunfts-Wappen ab', () => {
+  const family = assertValidFamily(HOUSE_CLUDWYR_FAMILY).family;
+  const rhyddid = assertValidFamily(HOUSE_RHYDDID_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 32);
+  assert.equal(family.partnerships.length, 11);
+  assert.equal(family.parentages.length, 20);
+  assert.equal(family.cadetBranches.length, 2);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-saith-tirion');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.toYear, '1651');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-wyrm');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 3);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['slevin-cludwyr', 'aled-cludwyr'],
+    'Slevin und Aled bilden die Erbfolge.'
+  );
+  assert.equal(
+    graph.getPerson('rhain-cludwyr').title,
+    'Ritterherr des Hauses Cludwyr',
+    'Das Oberhaupt eines Ritterherrenhauses trägt den Titel Ritterherr.'
+  );
+  assert.equal(graph.getPerson('rhain-cludwyr').status, 'alive');
+  assert.equal(graph.getPerson('saith-cludwyr').title, 'Begründer des Ritterherrenhauses Cludwyr');
+  assert.equal(graph.getPerson('saith-cludwyr').status, 'dead');
+
+  assert.deepEqual(graph.getChildren('saith-cludwyr').map(person => person.id).sort(), [
+    'enfys-cludwyr',
+    'godwyn-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('godwyn-cludwyr').map(person => person.id).sort(), [
+    'rhain-cludwyr',
+    'tigris-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('enfys-cludwyr').map(person => person.id), ['parzifal-cludwyr']);
+  assert.deepEqual(graph.getChildren('rhain-cludwyr').map(person => person.id).sort(), [
+    'glaw-cludwyr',
+    'iestyn-cludwyr',
+    'slevin-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('tigris-cludwyr').map(person => person.id), ['winnifred-cludwyr']);
+  assert.deepEqual(graph.getChildren('parzifal-cludwyr').map(person => person.id), ['selwyn-cludwyr']);
+  assert.deepEqual(graph.getChildren('slevin-cludwyr').map(person => person.id).sort(), [
+    'aled-cludwyr',
+    'sian-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('glaw-cludwyr').map(person => person.id).sort(), [
+    'bogus-cludwyr',
+    'brac-cludwyr',
+    'cady-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('iestyn-cludwyr').map(person => person.id).sort(), [
+    'ellis-cludwyr',
+    'gildas-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('winnifred-cludwyr').map(person => person.id).sort(), [
+    'dee-cludwyr',
+    'eira-cludwyr'
+  ]);
+  assert.deepEqual(graph.getChildren('selwyn-cludwyr').map(person => person.id), ['dewi-cludwyr']);
+
+  // Godwyn und Evangelin sind mit dem Rhyddid-Stammbaum geteilte Personen.
+  const godwynHere = graph.getPerson('godwyn-cludwyr');
+  const evangelinHere = graph.getPerson('evangelin-rhyddid');
+  const godwynThere = rhyddid.persons.find(person => person.id === 'godwyn-cludwyr');
+  const evangelinThere = rhyddid.persons.find(person => person.id === 'evangelin-rhyddid');
+  assert.equal(godwynHere.worldPersonId, godwynThere.worldPersonId);
+  assert.equal(evangelinHere.worldPersonId, evangelinThere.worldPersonId);
+  assert.equal(godwynHere.portrait, godwynThere.portrait, 'Godwyns Portrait ist in beiden Stammbäumen dieselbe Datei.');
+  assert.equal(godwynHere.birth, godwynThere.birth);
+  assert.equal(godwynHere.death, godwynThere.death);
+  assert.equal(evangelinHere.birth, evangelinThere.birth);
+  assert.equal(evangelinHere.death, evangelinThere.death);
+  assert.equal(graph.getPerson('klervi-balchder').worldPersonId, 'person--haus-balchder--klervi-balchder');
+  assert.equal(
+    graph.getPerson('gavin-1702').worldPersonId,
+    'person--family-tree--gavin-1702',
+    'Der Cludwyr-Gavin kollidiert nicht mit dem hauslosen Tlawd-Gavin.'
+  );
+
+  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
+  assert.ok(family.cadetBranches.every(branch => branch.crestFrame === 'silver'));
+  assert.ok(family.cadetBranches.every(branch => branch.subtitle === 'Herkunftshaus der Braut'));
+  assert.deepEqual(
+    family.cadetBranches.map(branch => branch.targetFamilyId).sort(),
+    ['haus-balchder', 'haus-rhyddid']
+  );
+
+  const cludwyrCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(cludwyrCrest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 2);
+});
+
+test('liefert für Haus Cludwyr alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_CLUDWYR_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-cludwyr/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_CLUDWYR_PORTRAITS).length, 27);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), Object.keys(HOUSE_CLUDWYR_PORTRAITS).sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 27);
+  assert.equal(placeholderPeople.length, 5);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_CLUDWYR_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2154,7 +2283,10 @@ test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zw
 
 test('verwendet für namens- und jahresgleiche Personen hausübergreifend dieselbe Weltpersonen-ID', () => {
   const identitiesByNameAndBirth = new Map();
-  [HOUSE_ARWYDD_FAMILY, HOUSE_DRAIG_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY, HOUSE_SAETHWYR_FAMILY].map(normalizeFamily).forEach(family => {
+  [
+    HOUSE_ARWYDD_FAMILY, HOUSE_DRAIG_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY, HOUSE_SAETHWYR_FAMILY,
+    HOUSE_TLAWD_FAMILY, HOUSE_RHYDDID_FAMILY, HOUSE_GELYN_FAMILY, HOUSE_CLUDWYR_FAMILY
+  ].map(normalizeFamily).forEach(family => {
     family.persons.forEach(person => {
       if (!/^\d{4}$/.test(person.birth || '')) return;
       const displayName = buildFamilyPersonDisplayName(family, person);
@@ -2450,6 +2582,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       assert.equal(loaded.family.persons.length, 31, 'Haus Rhyddid ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-gelyn') {
       assert.equal(loaded.family.persons.length, 24, 'Haus Gelyn ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else if (family.document.id === 'haus-cludwyr') {
+      assert.equal(loaded.family.persons.length, 32, 'Haus Cludwyr ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }

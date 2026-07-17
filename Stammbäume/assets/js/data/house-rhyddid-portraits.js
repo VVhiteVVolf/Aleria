@@ -1,3 +1,5 @@
+import { HOUSE_CLUDWYR_PORTRAITS } from './house-cludwyr-portraits.js';
+
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-rhyddid';
 const LOCAL_PORTRAIT_IDS = Object.freeze([
   'gwilym-rhyddid',
@@ -26,9 +28,11 @@ const LOCAL_PORTRAIT_IDS = Object.freeze([
   'barry-rhyddid'
 ]);
 
-export const HOUSE_RHYDDID_PORTRAITS = Object.freeze(
-  Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
+export const HOUSE_RHYDDID_PORTRAITS = Object.freeze({
+  ...Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
     personId,
     `${PORTRAIT_ROOT}/${personId}.jpg`
-  ]))
-);
+  ])),
+  // Godwyns Portrait wird vom Cludwyr-Stammbaum gehostet.
+  'godwyn-cludwyr': HOUSE_CLUDWYR_PORTRAITS['godwyn-cludwyr']
+});

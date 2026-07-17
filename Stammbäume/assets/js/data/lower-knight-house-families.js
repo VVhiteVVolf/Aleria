@@ -1,5 +1,6 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { HOUSE_CLUDWYR_FAMILY } from './house-cludwyr-family.js';
 import { HOUSE_GELYN_FAMILY } from './house-gelyn-family.js';
 import { HOUSE_RHYDDID_FAMILY } from './house-rhyddid-family.js';
 import { HOUSE_TLAWD_FAMILY } from './house-tlawd-family.js';
@@ -8,7 +9,8 @@ import { HOUSE_TLAWD_FAMILY } from './house-tlawd-family.js';
 const ELABORATED_KNIGHT_FAMILIES = Object.freeze({
   tlawd: HOUSE_TLAWD_FAMILY,
   rhyddid: HOUSE_RHYDDID_FAMILY,
-  gelyn: HOUSE_GELYN_FAMILY
+  gelyn: HOUSE_GELYN_FAMILY,
+  cludwyr: HOUSE_CLUDWYR_FAMILY
 });
 
 export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
