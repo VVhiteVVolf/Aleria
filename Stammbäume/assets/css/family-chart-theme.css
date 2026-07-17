@@ -433,6 +433,59 @@
   transform: translateY(-2px);
 }
 
+.aleria-line-end {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: #3b281b !important;
+}
+
+.aleria-line-end__medallion {
+  width: 6.4rem;
+  height: 6.4rem;
+  flex: 0 0 6.4rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0.45rem 0.5rem rgba(40, 28, 16, 0.4));
+  user-select: none;
+  pointer-events: none;
+}
+
+.aleria-line-end__caption {
+  position: relative;
+  display: grid;
+  width: 9.8rem;
+  min-height: 2.1rem;
+  place-items: center;
+  padding: 0.36rem 0.7rem;
+  border: 1px solid #6f665c;
+  border-radius: 0.28rem;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent),
+    linear-gradient(180deg, #e6ddcc, #c9bda6);
+  box-shadow:
+    inset 0 0 0 2px rgba(250, 245, 231, 0.6),
+    0 0.32rem 0.6rem rgba(45, 36, 24, 0.24);
+  text-align: center;
+  text-shadow: none;
+}
+
+.aleria-line-end__caption .family-card-name {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: #4a4239;
+}
+
+.aleria-line-end__caption .family-card-title {
+  font-size: 0.55rem;
+  font-style: italic;
+  color: #6d6355;
+}
+
 .aleria-time-node {
   display: grid !important;
   place-items: center;

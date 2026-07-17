@@ -15,7 +15,7 @@ const LEGITIMACY_VALUES = new Set(['legitimate', 'illegitimate', 'legitimized', 
 const CERTAINTY_VALUES = new Set(['confirmed', 'probable', 'rumored', 'disputed', 'unknown']);
 const VISIBILITY_VALUES = new Set(['public', 'restricted', 'secret']);
 const PORTRAIT_PLACEHOLDERS = new Set(['auto', 'male', 'female', 'child', 'unknown']);
-const HOUSE_LINK_TYPES = new Set(['cadet-house', 'married-away']);
+const HOUSE_LINK_TYPES = new Set(['cadet-house', 'married-away', 'line-extinct']);
 
 export class FamilyValidationError extends Error {
   constructor(diagnostics) {
@@ -464,7 +464,7 @@ export function validateFamily(input) {
         houseId: branch.houseId
       }));
     }
-    if (!branch.targetFamilyId) {
+    if (!branch.targetFamilyId && branch.linkType !== 'line-extinct') {
       diagnostics.push(diagnostic('error', 'MISSING_HOUSE_LINK_TARGET', 'Eine Hausverknüpfung benötigt eine Ziel-Familien-ID.', {
         branchId: branch.id
       }));

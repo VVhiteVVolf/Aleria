@@ -99,7 +99,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     house('house-dyngwn', 'Haus Dyngwn'),
     house('house-airgid', 'Haus Airgid'),
     house('house-taranvyr', 'Haus Taranvyr'),
-    house('house-illyswen', 'Haus Illyswen'),
+    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/haus-illysywen.png'),
     house('house-arth', 'Haus Arth'),
     house('house-airt', 'Haus Airt'),
     house('house-hebog', 'Haus Hebog'),

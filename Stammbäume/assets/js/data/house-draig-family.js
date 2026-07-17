@@ -165,7 +165,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-ceirwynn', 'Haus Ceirwynn'),
     house('house-eirce', 'Haus Eirce'),
     house('house-grawn', 'Haus Grawn'),
-    house('house-illysywen', 'Haus Illysywen'),
+    house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/haus-illysywen.png'),
     house('house-eisenherz', 'Haus Eisenherz'),
     house('house-cenyr', 'Haus Cenyr'),
     house('house-argall', 'Haus Argall'),

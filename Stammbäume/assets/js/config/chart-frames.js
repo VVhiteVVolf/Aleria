@@ -69,6 +69,10 @@ export const TIME_JUMP_FRAME = Object.freeze({
   asset: `${FRAME_ASSET_ROOT}/time-jump.png`
 });
 
+export const EXTINCT_LINE_FRAME = Object.freeze({
+  asset: `${FRAME_ASSET_ROOT}/AusgestorbenKnotenendpunkt.png`
+});
+
 export function getPersonCardFrame(roleId, lineageRole = 'branch', legitimacy = 'unknown') {
   if (lineageRole === 'head') return HOUSE_HEAD_CARD_FRAME;
   if (legitimacy === 'legitimized') return LEGITIMIZED_CARD_FRAME;

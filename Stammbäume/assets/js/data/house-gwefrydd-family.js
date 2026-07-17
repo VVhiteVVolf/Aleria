@@ -110,7 +110,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-draenog', 'Haus Draenog'),
     house('house-gwarchod', 'Haus Gwarchod'),
     house('house-gortach', 'Haus Gortach'),
-    house('house-illyswen', 'Haus Illyswen'),
+    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/haus-illysywen.png'),
     house('house-grawn', 'Haus Grawn'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
     house('house-dyngwn', 'Haus Dyngwn'),

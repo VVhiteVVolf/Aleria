@@ -40,6 +40,7 @@ function profile(rankId, folderPath, options = {}) {
 
 export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   arwydd: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn']),
+  illysywen: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn']),
   draig: profile('county', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']),
   gafyr: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']),
   gwefrydd: profile('barony', ['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere']),

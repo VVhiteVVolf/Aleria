@@ -3,7 +3,7 @@ import {
   getFamilyRole
 } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS, resolvePortraitSource } from '../config/portrait-placeholders.js';
-import { getCrestFrame, getPersonCardFrame, TIME_JUMP_FRAME } from '../config/chart-frames.js';
+import { EXTINCT_LINE_FRAME, getCrestFrame, getPersonCardFrame, TIME_JUMP_FRAME } from '../config/chart-frames.js';
 import { getPersonLineageRole } from '../config/person-lineage.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { formatLifeLine } from '../domain/person-presentation.js';
@@ -267,6 +267,26 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
     if (!partnership) return;
     const parentIds = partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2);
     if (!parentIds.length) return;
+    if (branch.linkType === 'line-extinct') {
+      const endNodeId = `__line-end-${branch.id}`;
+      const endNode = createVirtualNode({
+        id: endNodeId,
+        name: branch.name || 'Ausgestorben',
+        title: branch.subtitle,
+        nodeKind: 'line-end',
+        cadetBranchId: branch.id,
+        frameAsset: EXTINCT_LINE_FRAME.asset
+      });
+      endNode.rels.parents = [...parentIds];
+      parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, endNodeId));
+      chartById.set(endNodeId, endNode);
+      parentageLines.set(endNodeId, {
+        type: 'line-extinct',
+        color: '#5b544c',
+        dashed: false
+      });
+      return;
+    }
     const house = houseById.get(branch.houseId);
     const nodeId = `__cadet-${branch.id}`;
     const node = createVirtualNode({

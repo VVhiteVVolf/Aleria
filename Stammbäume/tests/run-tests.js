@@ -17,6 +17,8 @@ import { HOUSE_ARWYDD_FAMILY } from '../assets/js/data/house-arwydd-family.js';
 import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits.js';
 import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/house-gwefrydd-family.js';
 import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portraits.js';
+import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family.js';
+import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
@@ -1644,6 +1646,108 @@ test('liefert für Haus Gwefrydd alle belegten Portraits lokal aus', async () =>
   }));
 });
 
+test('bildet das erloschene Ritterfürstenhaus Illysywen mit Ausgestorben-Knoten ab', () => {
+  const family = assertValidFamily(HOUSE_ILLYSYWEN_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+  const gwefrydd = assertValidFamily(HOUSE_GWEFRYDD_FAMILY).family;
+  const gwyvern = assertValidFamily(HOUSE_GWYVERN_FAMILY).family;
+  const saethwyr = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 30);
+  assert.equal(family.partnerships.length, 14);
+  assert.equal(family.parentages.length, 15);
+  assert.equal(family.cadetBranches.length, 6);
+  assert.ok(
+    !family.cadetBranches.some(branch => branch.parentPartnershipId === 'forced-nodawl-rhonwen'),
+    'Ein außereheliches Kind begründet keine wegverheiratete Linie.'
+  );
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.crestFrame, 'gold', 'Ritterfürstenhäuser führen den goldenen Wappenrahmen.');
+  assert.equal(family.document.houseProfile.rankId, 'knight-prince');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 4);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['nodawl-illysywen', 'hugwan-illysywen']
+  );
+  assert.equal(graph.getPerson('ercwlff-illysywen').title, 'Letzter Ritterfürst des Hauses Illysywen');
+
+  const extinctBranches = family.cadetBranches.filter(branch => branch.linkType === 'line-extinct');
+  assert.equal(extinctBranches.length, 2, 'Unter Hugwan und Sior endet die Linie.');
+  assert.deepEqual(
+    extinctBranches.map(branch => branch.parentPartnershipId).sort(),
+    ['engagement-hugwan-nasuada', 'engagement-sior-innogen']
+  );
+  const lineEndNodes = converted.data.filter(entry => entry.data.nodeKind === 'line-end');
+  assert.equal(lineEndNodes.length, 2);
+  assert.ok(lineEndNodes.every(entry => /AusgestorbenKnotenendpunkt\.png$/.test(entry.data.frameAsset)));
+  assert.ok(lineEndNodes.some(entry => entry.rels.parents.includes('hugwan-illysywen')));
+  assert.ok(lineEndNodes.some(entry => entry.rels.parents.includes('sior-illysywen')));
+  assert.ok(
+    graph.getChildren('hugwan-illysywen').length === 0 && graph.getChildren('sior-illysywen').length === 0,
+    'Die Linie wird nicht über Bastarde oder Töchter fortgeführt.'
+  );
+
+  assert.equal(family.partnerships.find(partnership => partnership.id === 'forced-nodawl-rhonwen').type, 'forced');
+  assert.equal(family.partnerships.find(partnership => partnership.id === 'engagement-hugwan-nasuada').type, 'engagement');
+  assert.equal(family.partnerships.find(partnership => partnership.id === 'engagement-sior-innogen').type, 'engagement');
+  assert.equal(family.parentages.find(parentage => parentage.childId === 'mair-draig').legitimacy, 'legitimized');
+  assert.equal(family.parentages.find(parentage => parentage.childId === 'iwan-illysywen').legitimacy, 'illegitimate');
+  assert.equal(graph.getPerson('iwan-illysywen').familyRole, 'bastard');
+  assert.deepEqual(graph.getChildren('ercwlff-illysywen').map(person => person.id).sort(), [
+    'einion-illysywen',
+    'morwen-illysywen',
+    'nodawl-illysywen'
+  ]);
+
+  [
+    [family, 'nodawl-illysywen', draig, 'nodawl-illysywen'],
+    [family, 'rhonwen-draig', draig, 'rhonwen-draig'],
+    [family, 'mair-draig', draig, 'mair-draig'],
+    [family, 'ysbail-illyswen', gwefrydd, 'ysbail-illyswen'],
+    [family, 'ormund-gwefrydd', gwefrydd, 'ormund-gwefrydd'],
+    [family, 'dajenne-illyswen', gwyvern, 'dajenne-illyswen'],
+    [family, 'kimball-gwyvern', gwyvern, 'kimball-gwyvern'],
+    [family, 'wenna-saethwyr', saethwyr, 'wenna-saethwyr']
+  ].forEach(([firstFamily, firstId, secondFamily, secondId]) => {
+    const first = firstFamily.persons.find(person => person.id === firstId);
+    const second = secondFamily.persons.find(person => person.id === secondId);
+    assert.equal(first.worldPersonId, second.worldPersonId, `${firstId} muss dieselbe Weltperson bleiben.`);
+    assert.equal(first.portrait, second.portrait, `${firstId} muss dasselbe lokale Portrait verwenden.`);
+  });
+
+  assert.ok(converted.data.some(entry => entry.data.nodeKind === 'time-gap'));
+});
+
+test('liefert für Haus Illysywen alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_ILLYSYWEN_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-illysywen/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+  const localPortraitIds = Object.keys(HOUSE_ILLYSYWEN_PORTRAITS)
+    .filter(personId => HOUSE_ILLYSYWEN_PORTRAITS[personId].startsWith('assets/images/portraits/haus-illysywen/'));
+
+  assert.equal(Object.keys(HOUSE_ILLYSYWEN_PORTRAITS).length, 24);
+  assert.equal(localPortraitIds.length, 18);
+  assert.deepEqual(Object.keys(sourceManifest).sort(), localPortraitIds.sort());
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 24);
+  assert.equal(placeholderPeople.length, 6);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_ILLYSYWEN_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet das Ritterherrenhaus Tlawd mit Überlieferungslücke und silbernem Wappenrahmen ab', () => {
   const family = assertValidFamily(HOUSE_TLAWD_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2090,6 +2194,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     ['haus-gafyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-gwefrydd', { rankId: 'barony', path: ['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere'] }],
     ['haus-gwyvern', { rankId: 'barony', path: ['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Abergwint'] }],
+    ['haus-illysywen', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn'] }],
     ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
   ]);

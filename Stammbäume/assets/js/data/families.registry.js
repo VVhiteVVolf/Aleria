@@ -1,6 +1,7 @@
 import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js';
 import { HOUSE_GWEFRYDD_FAMILY } from './house-gwefrydd-family.js';
 import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js';
+import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js';
 import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
@@ -72,6 +73,11 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: 'haus-gwyvern',
     title: 'Haus Gwyvern',
     family: HOUSE_GWYVERN_FAMILY
+  }),
+  familyRecord({
+    id: 'haus-illysywen',
+    title: 'Haus Illysywen',
+    family: HOUSE_ILLYSYWEN_FAMILY
   }),
   ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

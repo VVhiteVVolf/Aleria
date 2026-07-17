@@ -12,6 +12,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'organisationen', label: 'Organisationen', icon: 'Organisationen.png' },
   { key: 'platzhalter', label: 'Platzhalter', icon: 'Platzhalter.png' },
   { key: 'religion', label: 'Religion', icon: 'Religion.png' },
+  { key: 'stammbaeume', label: 'Stammbäume', note: 'Familienregister der Häuser', icon: 'Stammbäume.png', href: '../Stammbäume/register.html' },
   { key: 'sternzeichen', label: 'Sternzeichen', icon: 'Sternzeichen.png' },
   { key: 'zauber', label: 'Zauber', icon: 'Zauber.png' },
   { key: 'zeitstrahl', label: 'Zeitstrahl', icon: 'Zeitstrahl.png' }

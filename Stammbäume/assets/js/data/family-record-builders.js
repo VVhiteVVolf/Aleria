@@ -122,3 +122,13 @@ export function createCadetHouseBranch(options) {
     subtitle: options.subtitle || 'Gegründetes Kadettenhaus'
   });
 }
+
+export function createExtinctBranch(options) {
+  return createHouseBranch({
+    targetFamilyId: '',
+    ...options,
+    name: options.name || 'Ausgestorben',
+    linkType: 'line-extinct',
+    subtitle: options.subtitle || 'Die Linie endet hier'
+  });
+}

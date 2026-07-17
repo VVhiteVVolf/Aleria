@@ -83,6 +83,18 @@ function crestNode(data) {
     </div>`;
 }
 
+function lineEndNode(data) {
+  return `
+    <div class="card-inner aleria-chart-card aleria-line-end">
+      ${marker(data)}
+      ${optionalImage(data.frameAsset, 'aleria-line-end__medallion')}
+      <div class="aleria-line-end__caption">
+        <span class="family-card-name">${escapeHtml(data.name)}</span>
+        ${data.title ? `<span class="family-card-title">${escapeHtml(data.title)}</span>` : ''}
+      </div>
+    </div>`;
+}
+
 function timeNode(data) {
   const fromYear = data.fromYear || '????';
   const toYear = data.toYear || '????';
@@ -100,6 +112,7 @@ function timeNode(data) {
 export function createFamilyChartCardHtml(hierarchyDatum) {
   const data = hierarchyDatum?.data?.data || hierarchyDatum?.data || {};
   if (['house-crest', 'cadet-house', 'house-origin'].includes(data.nodeKind)) return crestNode(data);
+  if (data.nodeKind === 'line-end') return lineEndNode(data);
   if (data.nodeKind === 'time-gap' || data.nodeKind === 'time-jump') return timeNode(data);
   return personCard(data);
 }
