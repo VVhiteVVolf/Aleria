@@ -18,6 +18,8 @@ const state = {
   candidates: [],
   selectedPersonId: '',
   search: '',
+  showDead: false,
+  showUnknown: false,
   loading: false,
   syncing: false,
   error: '',
@@ -79,6 +81,19 @@ function ensureDialog() {
           <span>Person suchen</span>
           <input type="search" data-character-genealogy-role="search" placeholder="Name, Haus oder Lebensdaten">
         </label>
+        <div class="genealogy-import-filters" role="group" aria-label="Personen filtern">
+          <span>Anzeigen</span>
+          <div class="genealogy-import-filter-toggles">
+            <label class="genealogy-import-filter-toggle">
+              <input type="checkbox" data-character-genealogy-role="show-dead">
+              <span>Tote anzeigen</span>
+            </label>
+            <label class="genealogy-import-filter-toggle">
+              <input type="checkbox" data-character-genealogy-role="show-unknown">
+              <span>„????“ anzeigen</span>
+            </label>
+          </div>
+        </div>
       </div>
       <div class="genealogy-import-body">
         <div class="genealogy-import-list" data-character-genealogy-role="person-list"></div>
@@ -108,9 +123,19 @@ function candidateSearchText(candidate) {
   ].join(' ').toLocaleLowerCase('de');
 }
 
+// Standardmäßig zeigt der Dialog nur lebende Personen; Verstorbene und
+// Personen ohne belegten Status („????“) werden per Schalter zugeschaltet.
+function statusVisible(candidate) {
+  if (candidate.status === 'alive') return true;
+  if (candidate.status === 'dead') return state.showDead;
+  return state.showUnknown;
+}
+
 function getVisibleCandidates() {
   const needle = state.search.trim().toLocaleLowerCase('de');
-  return state.candidates.filter(candidate => !needle || candidateSearchText(candidate).includes(needle));
+  return state.candidates.filter(candidate => (
+    statusVisible(candidate) && (!needle || candidateSearchText(candidate).includes(needle))
+  ));
 }
 
 function matchFor(candidate) {
@@ -245,12 +270,17 @@ function render() {
   renderStatus();
 }
 
+function ensureVisibleSelection() {
+  const visible = getVisibleCandidates();
+  if (!visible.some(candidate => candidate.personId === state.selectedPersonId)) {
+    state.selectedPersonId = visible[0]?.personId || '';
+  }
+}
+
 function applyLoadedFamily(loaded) {
   state.activeFamily = loaded;
   state.candidates = createFamilyCandidates(loaded);
-  if (!state.candidates.some(candidate => candidate.personId === state.selectedPersonId)) {
-    state.selectedPersonId = state.candidates[0]?.personId || '';
-  }
+  ensureVisibleSelection();
 }
 
 // Die veröffentlichte Fassung kann lokale Projektdaten überholen; sie wird im
@@ -308,7 +338,11 @@ function openImportDialog() {
   ensureDialog();
   state.error = '';
   state.search = '';
+  state.showDead = false;
+  state.showUnknown = false;
   getDialogRole('search').value = '';
+  getDialogRole('show-dead').checked = false;
+  getDialogRole('show-unknown').checked = false;
   if (typeof window.activateDialog === 'function') {
     window.activateDialog(DIALOG_ID, { initialFocus: '[data-character-genealogy-role="family-select"]' });
   } else {
@@ -431,6 +465,17 @@ document.addEventListener('input', event => {
 });
 
 document.addEventListener('change', event => {
-  if (!event.target.matches?.('[data-character-genealogy-role="family-select"]')) return;
-  void selectFamily(event.target.value);
+  if (event.target.matches?.('[data-character-genealogy-role="family-select"]')) {
+    void selectFamily(event.target.value);
+    return;
+  }
+  const isDeadToggle = event.target.matches?.('[data-character-genealogy-role="show-dead"]');
+  const isUnknownToggle = event.target.matches?.('[data-character-genealogy-role="show-unknown"]');
+  if (!isDeadToggle && !isUnknownToggle) return;
+  if (isDeadToggle) state.showDead = event.target.checked;
+  if (isUnknownToggle) state.showUnknown = event.target.checked;
+  ensureVisibleSelection();
+  renderPersonList();
+  renderPreview();
+  renderStatus();
 });
