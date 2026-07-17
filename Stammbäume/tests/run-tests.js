@@ -1531,9 +1531,10 @@ test('bildet Haus Gwefrydd mit drei Überlieferungslücken und allen belegten Zw
     'haus-gafyr'
   );
   assert.equal(family.lineage.founderPartnershipId, 'marriage-tallwch-clodagh');
-  assert.equal(family.timeJumps.length, 3);
-  assert.equal(family.timeJumps[1].toYear, '1096');
-  assert.equal(family.timeJumps[2].toYear, '1578');
+  assert.equal(family.lineage.timeGap.enabled, true, 'Die Gründerlücke hängt als Zeitsprung unter dem Hauswappen.');
+  assert.equal(family.timeJumps.length, 2);
+  assert.equal(family.timeJumps[0].toYear, '1096');
+  assert.equal(family.timeJumps[1].toYear, '1578');
   assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 9);
   assert.deepEqual(
     family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
@@ -1546,9 +1547,14 @@ test('bildet Haus Gwefrydd mit drei Überlieferungslücken und allen belegten Zw
     'greidyawl-gwefrydd',
     'lyonel-gwefrydd'
   ]);
-  assert.deepEqual(graph.getChildren('gwenhwyfar-gwefrydd').map(person => person.id), [
+  assert.deepEqual(graph.getChildren('edric-gwefrydd').map(person => person.id), [
     'ursyn-gwefrydd'
-  ], 'Ursyn folgt der Stammbaumgrafik als Sohn Gwenhwyfars und Dewylls.');
+  ], 'Ursyn ist der Sohn Edrics und Luneds.');
+  assert.deepEqual(graph.getChildren('gwenhwyfar-gwefrydd'), [], 'Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet.');
+  assert.equal(
+    family.cadetBranches.find(branch => branch.id === 'married-away-dyngwn-gwenhwyfar').parentPartnershipId,
+    'marriage-gwenhwyfar-dewyll'
+  );
   assert.deepEqual(graph.getChildren('stennis-gwefrydd').map(person => person.id).sort(), [
     'branwen-gwefrydd',
     'thomos-gwefrydd'
@@ -1595,7 +1601,13 @@ test('bildet Haus Gwefrydd mit drei Überlieferungslücken und allen belegten Zw
     assert.equal(first.portrait, second.portrait, `${firstId} muss dasselbe lokale Portrait verwenden.`);
   });
 
-  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 3);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-jump').length, 2);
+  assert.ok(converted.data.some(entry => entry.data.nodeKind === 'time-gap'));
+  const gwefryddCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  const gwefryddGap = converted.data.find(entry => entry.data.nodeKind === 'time-gap');
+  assert.deepEqual(gwefryddGap.rels.parents, [gwefryddCrest.id], 'Der Gründer-Zeitsprung hängt direkt unter dem Hauswappen.');
+  assert.deepEqual(gwefryddCrest.rels.children, [gwefryddGap.id]);
+  assert.ok(gwefryddGap.rels.children.includes('wynfor-gwefrydd'));
   assert.ok(converted.data.some(entry => entry.data.aleria.cadetBranchId === 'married-away-draig-branwen'));
 });
 

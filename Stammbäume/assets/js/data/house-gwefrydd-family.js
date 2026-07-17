@@ -78,7 +78,7 @@ const BORROS_IDS = ['borros-gwefrydd', 'aisling-laoch'];
 const LYONEL_IDS = ['lyonel-gwefrydd', 'gwendolyn-gwarchod'];
 const GREIDYAWL_IDS = ['greidyawl-gwefrydd', 'isotta-gafyr'];
 const ORMUND_IDS = ['ormund-gwefrydd', 'ysbail-illyswen'];
-const GWENHWYFAR_IDS = ['gwenhwyfar-gwefrydd', 'dewyll-dyngwn'];
+const EDRIC_IDS = ['edric-gwefrydd', 'luned-marwolaeth'];
 const STEFFON_IDS = ['steffon-gwefrydd', 'sulwen-wyrm'];
 const URSYN_IDS = ['ursyn-gwefrydd', 'ythalia-pyrth'];
 const ROBYRT_IDS = ['robyrt-gwefrydd', 'dajena-tir-addawol'];
@@ -177,7 +177,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     person('sulwen-wyrm', 'Sulwen Wyrm', 'female', '1652', '1711', 'house-wyrm'),
     person('gallgoid-saethwyr', 'Gallgoid Saethwyr', 'male', '1648', '1720', 'house-saethwyr'),
 
-    // Sohn von Gwenhwyfar und Dewyll
+    // Sohn von Edric und Luned
     person('ursyn-gwefrydd', 'Ursyn', 'male', '1649', '1711'),
     person('ythalia-pyrth', 'Ythalia Pyrth', 'female', '1654', '1702', 'house-pyrth'),
 
@@ -235,7 +235,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     createMarriage('marriage-ormund-ysbail', ...ORMUND_IDS),
     createMarriage('marriage-efa-eifion', 'efa-gwefrydd', 'eifion-grawn'),
     createMarriage('marriage-edric-luned', 'edric-gwefrydd', 'luned-marwolaeth'),
-    createMarriage('marriage-gwenhwyfar-dewyll', ...GWENHWYFAR_IDS),
+    createMarriage('marriage-gwenhwyfar-dewyll', 'gwenhwyfar-gwefrydd', 'dewyll-dyngwn'),
     createMarriage('marriage-steffon-sulwen', ...STEFFON_IDS),
     createMarriage('marriage-selyse-gallgoid', 'selyse-gwefrydd', 'gallgoid-saethwyr'),
     createMarriage('marriage-ursyn-ythalia', ...URSYN_IDS),
@@ -252,7 +252,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
   ],
   parentages: [
     ...childrenOf(['wynfor-gwefrydd', 'heulwen-gwefrydd'], FOUNDER_IDS, 'marriage-tallwch-clodagh', {
-      type: 'claimed', certainty: 'probable', extensions: { timeJumpId: 'gap-tallwch-wynfor' }
+      type: 'claimed', certainty: 'probable'
     }),
     ...childrenOf(['kenehyr-gwefrydd', 'morwenna-gwefrydd'], WYNFOR_IDS, 'marriage-wynfor-beibhinn', {
       type: 'claimed', certainty: 'probable', extensions: { timeJumpId: 'gap-wynfor-kenehyr' }
@@ -264,9 +264,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     ...childrenOf(['ormund-gwefrydd', 'efa-gwefrydd'], LYONEL_IDS, 'marriage-lyonel-gwendolyn'),
     ...childrenOf(['edric-gwefrydd', 'gwenhwyfar-gwefrydd'], GREIDYAWL_IDS, 'marriage-greidyawl-isotta'),
     ...childrenOf(['steffon-gwefrydd', 'selyse-gwefrydd'], ORMUND_IDS, 'marriage-ormund-ysbail'),
-    ...childrenOf(['ursyn-gwefrydd'], GWENHWYFAR_IDS, 'marriage-gwenhwyfar-dewyll', {
-      notes: 'Die Stammbaumgrafik führt Ursyn als Sohn Gwenhwyfars und Dewylls; die Tabellenüberschrift nennt abweichend Edric und Luned.'
-    }),
+    ...childrenOf(['ursyn-gwefrydd'], EDRIC_IDS, 'marriage-edric-luned'),
     ...childrenOf(['robyrt-gwefrydd', 'stennis-gwefrydd', 'renly-gwefrydd'], STEFFON_IDS, 'marriage-steffon-sulwen'),
     ...childrenOf(['morwenna-gwefrydd-1669'], URSYN_IDS, 'marriage-ursyn-ythalia'),
     ...childrenOf(['gwendolen-gwefrydd', 'ffion-gwefrydd'], ROBYRT_IDS, 'marriage-robyrt-dajena'),
@@ -282,7 +280,13 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     crestEmblemScale: 0.8,
     crestFrame: 'gold',
     crestFrameScale: 1,
-    timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    timeGap: {
+      enabled: true,
+      years: 0,
+      fromYear: '????',
+      toYear: '????',
+      label: 'Nicht einzeln überlieferte Generationen'
+    }
   },
   cadetBranches: [
     marriedAway('married-away-gafyr-heulwen', 'Haus Gafyr', 'marriage-heulwen-rheidwyn', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
@@ -291,7 +295,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     marriedAway('married-away-draenog-gladdie', 'Haus Draenog', 'marriage-gladdie-llywellyn', 'house-draenog'),
     marriedAway('married-away-gortach-ellyn', 'Haus Gortach', 'marriage-ellyn-garvan', 'house-gortach'),
     marriedAway('married-away-grawn-efa', 'Haus Grawn', 'marriage-efa-eifion', 'house-grawn'),
-    marriedAway('married-away-marwolaeth-edric', 'Haus Marwolaeth', 'marriage-edric-luned', 'house-marwolaeth'),
+    marriedAway('married-away-dyngwn-gwenhwyfar', 'Haus Dyngwn', 'marriage-gwenhwyfar-dewyll', 'house-dyngwn'),
     marriedAway('married-away-saethwyr-selyse', 'Haus Saethwyr', 'marriage-selyse-gallgoid', 'house-saethwyr', HOUSE_EMBLEMS.saethwyr),
     marriedAway('married-away-creyr-morwenna', 'Haus Créyr', 'marriage-morwenna-glendower', 'house-creyr'),
     marriedAway('married-away-coedwig-gwendolen', 'Haus Coedwig', 'marriage-gwendolen-tyreke', 'house-coedwig'),
@@ -300,10 +304,6 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     marriedAway('married-away-arwydd-myrcella', 'Haus Arwydd', 'marriage-myrcella-ieuan', 'house-arwydd', HOUSE_EMBLEMS.arwydd)
   ],
   timeJumps: [
-    {
-      id: 'gap-tallwch-wynfor', parentPartnershipId: 'marriage-tallwch-clodagh', childIds: ['wynfor-gwefrydd', 'heulwen-gwefrydd'],
-      years: 0, fromYear: '????', toYear: '????', label: 'Nicht einzeln überlieferte Generationen', notes: '', extensions: {}
-    },
     {
       id: 'gap-wynfor-kenehyr', parentPartnershipId: 'marriage-wynfor-beibhinn', childIds: ['kenehyr-gwefrydd', 'morwenna-gwefrydd'],
       years: 0, fromYear: '????', toYear: '1096', label: 'Die datierte Überlieferung setzt 1096 wieder ein', notes: '', extensions: {}
@@ -322,7 +322,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn folgt der Stammbaumgrafik als Sohn Gwenhwyfars und Dewylls.',
+    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn ist gemäß Tabellenüberschrift der Sohn Edrics und Luneds; Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet.',
     blankFamily: false,
     sourceRevision: 1
   }
