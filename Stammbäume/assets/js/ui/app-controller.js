@@ -9,6 +9,8 @@ import { createPersonBiographyDialog } from '../modules/person-biography/person-
 import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
 import { createRelationshipMatrixDialog } from '../modules/relationship-matrix/relationship-matrix-dialog.js';
 import { exportChartAsPng } from '../services/chart-png-export.js';
+import { downloadFamilyBundle } from '../services/family-bundle-export.js';
+import { importFamilyBundle } from '../services/family-bundle-import.js';
 import {
   loadFamilyById,
   parseFolderPath,
@@ -16,6 +18,8 @@ import {
 } from '../services/family-library.js';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import {
+  clearPendingTreeGeneratorLaunch,
+  consumePendingTreeGeneratorLaunch,
   createWorkspaceModeUrl,
   grantWorkspaceEditAccess,
   WORKSPACE_MODE
@@ -68,10 +72,12 @@ function buildHouseLoreLink(runtime, houseId) {
 export function createAppController({
   store,
   almanachCharacterRepository = null,
+  assetRepository = null,
   documentRef = document,
   runtime = globalThis,
   workspaceMode = WORKSPACE_MODE.view,
-  requestEditOnInit = false
+  requestEditOnInit = false,
+  autoOpenTreeGenerator = false
 }) {
   const isEditing = workspaceMode === WORKSPACE_MODE.edit;
   const root = documentRef.getElementById('family-app');
@@ -82,6 +88,7 @@ export function createAppController({
   const searchInput = documentRef.getElementById('person-search');
   const searchResults = documentRef.getElementById('search-results');
   const importInput = documentRef.getElementById('family-import');
+  const bundleImportInput = documentRef.getElementById('family-bundle-import');
   const toast = createToast(documentRef.getElementById('app-toast'));
   let chartSession = null;
   const almanachCharacterController = createAlmanachCharacterController({
@@ -587,6 +594,11 @@ export function createAppController({
     }
     if (action === 'close-edit-access') {
       editAccessDialog.close();
+      // Der Passwort-Dialog wurde ohne Freigabe abgebrochen — ein zuvor über die
+      // Landingpage-CTA gesetzter Auto-Öffnen-Merker darf dann nicht bestehen
+      // bleiben, sonst würde ein später an ganz anderer Stelle gewährter
+      // Bearbeitungszugang unerwartet die dort offene Familie zurücksetzen.
+      clearPendingTreeGeneratorLaunch(runtime.sessionStorage);
       return;
     }
     if (!isEditing) return;
@@ -854,6 +866,24 @@ export function createAppController({
       case 'trigger-import':
         importInput.click();
         break;
+      case 'export-family-bundle': {
+        actionElement.disabled = true;
+        toast('Vollständiges Paket wird gepackt …', { duration: 20000 });
+        try {
+          const result = await downloadFamilyBundle(state.family, { documentRef, runtime });
+          toast(result.failedCount
+            ? `Paket exportiert · ${result.failedCount} von ${result.imageCount} Bildern konnten nicht mitexportiert werden.`
+            : `Paket exportiert · ${result.imageCount} Bilder enthalten.`, { duration: 6000 });
+        } catch (error) {
+          toast(error.message || 'Das Paket konnte nicht erzeugt werden.', { error: true, duration: 5000 });
+        } finally {
+          actionElement.disabled = false;
+        }
+        break;
+      }
+      case 'trigger-bundle-import':
+        bundleImportInput.click();
+        break;
       default:
         break;
     }
@@ -870,6 +900,17 @@ export function createAppController({
       toast(error.message || 'Die Datei konnte nicht importiert werden.', { error: true, duration: 5000 });
     } finally {
       importInput.value = '';
+    }
+  }
+
+  async function handleBundleImport(file) {
+    if (!file) return;
+    try {
+      await importFamilyBundle({ file, store, assetRepository, runtime, notify: toast });
+    } catch (error) {
+      toast(error.message || 'Das Paket konnte nicht importiert werden.', { error: true, duration: 5000 });
+    } finally {
+      bundleImportInput.value = '';
     }
   }
 
@@ -1022,6 +1063,7 @@ export function createAppController({
   function onChange(event) {
     if (!isEditing) return;
     if (event.target === importInput) handleImport(importInput.files?.[0]);
+    if (event.target === bundleImportInput) handleBundleImport(bundleImportInput.files?.[0]);
   }
 
   function onSubmit(event) {
@@ -1169,6 +1211,17 @@ export function createAppController({
     render(store.getState());
     root.dataset.ready = 'true';
     if (requestEditOnInit) runtime.setTimeout(() => editAccessDialog.open(), 0);
+    // Landingpage-CTA "＋ Neue Familie beginnen": startet immer mit einer leeren
+    // Familienakte (nicht mit der zuletzt geöffneten/zwischengespeicherten), damit
+    // der Generator garantiert bei Phase 1 beginnt statt mitten in einer fremden
+    // Generation fortzusetzen. Der Merker wird hier ein für alle Mal konsumiert.
+    if (autoOpenTreeGenerator && isEditing && consumePendingTreeGeneratorLaunch(runtime.sessionStorage)) {
+      runtime.setTimeout(() => {
+        store.replaceFamily(createEmptyFamily(), { source: 'tree-generator-cta' });
+        store.selectPerson('');
+        treeGeneratorController.open();
+      }, 0);
+    }
   }
 
   function destroy() {

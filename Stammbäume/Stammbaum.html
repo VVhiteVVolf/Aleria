@@ -54,6 +54,7 @@
           <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur lokal</span>
           <button class="button button--quiet" type="button" data-action="open-cloud-login" data-edit-only>Cloud anmelden</button>
           <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>Cloud-Konto</button>
+          <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
           <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
           <a class="button button--quiet" id="view-mode-link" href="?mode=view" target="_blank" rel="noopener" data-edit-only>Ansicht öffnen</a>
@@ -114,14 +115,18 @@
         <button class="button" type="button" data-action="start-new-family">＋ Neue Familie</button>
         <button class="button" type="button" data-action="open-tree-generator">Stammbaum-Generator</button>
         <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
+        <a class="button button--quiet" href="index.html">Startseite</a>
         <a class="button button--quiet" href="register.html">Familienregister</a>
       </div>
 
       <div class="toolbar-group toolbar-group--end" aria-label="Export und Import">
         <button class="button button--quiet" type="button" data-action="export-png">PNG · hohe Auflösung</button>
-        <button class="button button--quiet" type="button" data-action="export-family">JSON exportieren</button>
-        <button class="button button--quiet" type="button" data-action="trigger-import">JSON importieren</button>
+        <button class="button button--quiet" type="button" data-action="export-family" title="Nur die Rohdaten als JSON, ohne Bilder">JSON exportieren</button>
+        <button class="button button--quiet" type="button" data-action="trigger-import" title="Nur Rohdaten aus einer JSON-Datei importieren">JSON importieren</button>
         <input class="sr-only" id="family-import" type="file" accept="application/json,.json">
+        <button class="button button--quiet" type="button" data-action="export-family-bundle" title="Vollständiges Paket als .zip (Daten und alle Bilder)">Paket exportieren (.zip)</button>
+        <button class="button button--quiet" type="button" data-action="trigger-bundle-import" title="Vollständiges Paket aus einer .zip-Datei importieren">Paket importieren (.zip)</button>
+        <input class="sr-only" id="family-bundle-import" type="file" accept="application/zip,.zip">
       </div>
     </section>
 
@@ -1039,6 +1044,7 @@
   <script src="vendor/d3/7.9.0/d3.min.js"></script>
   <script src="vendor/family-chart/0.9.0/family-chart.min.js"></script>
   <script src="vendor/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="vendor/jszip/3.10.1/jszip.min.js"></script>
   <script src="../AleriaAlmanach/modules/icon-directory/icon-directory-data.js"></script>
   <script src="../Familien Häuser und Clans/haeuser.registry.js"></script>
   <script src="../AleriaAlmanach/modules/aleria-gpt/aleria-gpt-config.js"></script>

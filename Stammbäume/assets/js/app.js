@@ -10,13 +10,31 @@ import { createFirestoreFamilyRepository } from './modules/family-sync/firestore
 import { createLocalFamilyRepository } from './modules/family-sync/local-family-repository.js';
 import { loadFamilyById } from './services/family-library.js';
 import { loadPersistedFamily } from './services/family-persistence.js';
-import { resolveWorkspaceAccess } from './services/workspace-access.js';
+import {
+  hasPendingTreeGeneratorLaunch,
+  markPendingTreeGeneratorLaunch,
+  resolveWorkspaceAccess,
+  WORKSPACE_MODE
+} from './services/workspace-access.js';
 import { createFamilyStore } from './state/family-store.js';
 import { createAppController } from './ui/app-controller.js';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
 const requestedFamilyId = requestedQuery.get('family');
 const requestedPersonId = requestedQuery.get('person');
+
+// Die Landingpage-Kachel "＋ Neue Familie beginnen" verlinkt hierher mit
+// ?action=start-tree-generator. Der Parameter wird sofort aus der Adresszeile
+// entfernt (verhindert ein erneutes Auslösen beim späteren Aufruf derselben
+// Adresse aus der Historie) und stattdessen als Ein-Schuss-Merker in
+// sessionStorage abgelegt — er überlebt so den Seiten-Reload, den die
+// Passwort-Freigabe für den Bearbeitungsmodus auslöst (siehe app-controller.js).
+if (requestedQuery.get('action') === 'start-tree-generator') {
+  markPendingTreeGeneratorLaunch(globalThis.sessionStorage);
+  const cleanedUrl = new URL(globalThis.location.href);
+  cleanedUrl.searchParams.delete('action');
+  globalThis.history.replaceState({}, '', cleanedUrl.href);
+}
 const firebaseClient = createFirebaseClient();
 const cloudRepository = createFirestoreFamilyRepository(firebaseClient);
 const authService = createFirebaseAuthService(firebaseClient);
@@ -42,11 +60,15 @@ const initialFamily = requestedPersonId && loadedFamily.persons.some(person => p
   : loadedFamily;
 const workspaceAccess = resolveWorkspaceAccess(globalThis.location, globalThis.sessionStorage);
 const store = createFamilyStore(initialFamily);
+const autoOpenTreeGenerator = workspaceAccess.mode === WORKSPACE_MODE.edit
+  && hasPendingTreeGeneratorLaunch(globalThis.sessionStorage);
 const controller = createAppController({
   store,
   almanachCharacterRepository,
+  assetRepository,
   workspaceMode: workspaceAccess.mode,
-  requestEditOnInit: workspaceAccess.shouldRequestPassword
+  requestEditOnInit: workspaceAccess.shouldRequestPassword,
+  autoOpenTreeGenerator
 });
 const syncController = createFamilySyncController({
   store,

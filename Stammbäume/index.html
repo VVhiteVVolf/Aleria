@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Startseite der Aleria-Stammbäume: neue Familie beginnen oder bestehende Häuser entdecken">
+  <meta name="aleria-firebase-enabled" content="true">
+  <title>Aleria · Stammbäume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body class="landing-body">
+  <main class="landing-shell">
+    <header class="landing-hero">
+      <div class="landing-hero-text">
+        <p class="eyebrow">Aleria Almanach · Genealogische Archive</p>
+        <h1>Stammbäume</h1>
+        <p>Baue eine neue Dynastie von Grund auf oder entdecke, welche Häuser Aleria bereits bevölkern.</p>
+      </div>
+      <div class="landing-hero-actions">
+        <a class="button" href="Stammbaum.html?mode=edit&amp;action=start-tree-generator">＋ Neue Familie beginnen</a>
+        <a class="button button--quiet" href="register.html">Familienregister durchsuchen</a>
+      </div>
+    </header>
+
+    <section class="landing-content" aria-labelledby="landing-trivia-title">
+      <div class="landing-intro">
+        <p class="eyebrow">Aus den Archiven</p>
+        <h2 id="landing-trivia-title">Bereits verzeichnete Häuser</h2>
+        <p>Eine kleine, zufällige Auswahl — bei jedem Aufruf wechselt sie.</p>
+      </div>
+      <div class="landing-trivia-grid" id="landing-trivia-grid"></div>
+      <p class="landing-trivia-empty" id="landing-trivia-empty" hidden>Noch keine Familien mit verzeichneten Personen vorhanden.</p>
+    </section>
+
+    <footer class="landing-footer">
+      <span>Aleria Almanach · Stammbaum-Werkstatt</span>
+      <a href="register.html">Zum vollständigen Familienregister</a>
+    </footer>
+  </main>
+
+  <script src="../AleriaAlmanach/modules/aleria-gpt/aleria-gpt-config.js"></script>
+  <script src="../AleriaAlmanach/modules/aleria-gpt/aleria-gpt-client.js"></script>
+  <script type="module" src="assets/js/landing-app.js"></script>
+</body>
+</html>

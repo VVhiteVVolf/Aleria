@@ -117,11 +117,34 @@ import { renderPersonBiography } from '../assets/js/modules/person-biography/per
 import { buildRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-model.js';
 import { renderRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-renderer.js';
 import {
+  clearPendingTreeGeneratorLaunch,
+  consumePendingTreeGeneratorLaunch,
   createWorkspaceModeUrl,
   grantWorkspaceEditAccess,
+  hasPendingTreeGeneratorLaunch,
+  markPendingTreeGeneratorLaunch,
   resolveWorkspaceAccess,
   WORKSPACE_MODE
 } from '../assets/js/services/workspace-access.js';
+import { isAleriaGptAvailable, requestAleriaGptSuggestion } from '../assets/js/services/aleria-gpt-bridge.js';
+import * as treeGeneratorAiBridge from '../assets/js/modules/tree-generator/tree-generator-ai-bridge.js';
+import {
+  buildLandingTriviaPrompt,
+  buildLocalTriviaBlurb,
+  buildShortHouseProfile,
+  pickTriviaSample
+} from '../assets/js/services/landing-trivia.js';
+import {
+  buildFamilyBundleZip,
+  collectFamilyImageRefs,
+  extensionForContentType,
+  zipFilenameFor
+} from '../assets/js/services/family-bundle-export.js';
+import {
+  buildImageRefKey,
+  parseFamilyBundleZip,
+  rewriteFamilyImageRefs
+} from '../assets/js/services/family-bundle-import.js';
 import { createFamilyStore } from '../assets/js/state/family-store.js';
 import {
   createFamilyChangeSet,
@@ -4786,6 +4809,302 @@ test('übernimmt Oberhäupter und Erbfolgen aus den Haus-Hierarchien', () => {
     assert.deepEqual(heads, expectedHeads);
     assert.deepEqual(mainLine, expectedMainLine);
   });
+});
+
+test('pickTriviaSample wählt eine wiederholungsfreie, injizierbare Zufallsauswahl ohne Leerakten', () => {
+  const records = [
+    { id: 'a', title: 'A', personCount: 5 },
+    { id: 'b', title: 'B', personCount: 0 },
+    { id: 'c', title: 'C', personCount: 3 },
+    { id: 'd', title: 'D', personCount: 12 },
+    { id: 'e', title: 'E', personCount: 1 }
+  ];
+  const sequence = [0.1, 0.2, 0.3, 0.4];
+  let cursor = 0;
+  const sample = pickTriviaSample(records, { count: 3, randomFn: () => sequence[cursor++] ?? 0 });
+  assert.equal(sample.length, 3);
+  assert.equal(new Set(sample.map(record => record.id)).size, 3);
+  assert.ok(sample.every(record => record.personCount > 0));
+
+  const smallPool = pickTriviaSample([{ id: 'a', title: 'A', personCount: 1 }], { count: 4, randomFn: Math.random });
+  assert.equal(smallPool.length, 1);
+
+  assert.deepEqual(pickTriviaSample([], { count: 4 }), []);
+});
+
+test('buildShortHouseProfile degradiert graziös bei unvollständigem Hausprofil', () => {
+  assert.equal(buildShortHouseProfile(null), '');
+  assert.equal(buildShortHouseProfile({}), '');
+  const full = buildShortHouseProfile({ rankId: 'county', seat: 'Aldrimoor', kingdom: 'Cenyr' });
+  assert.match(full, /Grafengeschlecht/);
+  assert.match(full, /Aldrimoor/);
+  const seatOnly = buildShortHouseProfile({ seat: 'Nur-Sitz' });
+  assert.match(seatOnly, /Nur-Sitz/);
+});
+
+test('buildLocalTriviaBlurb degradiert graziös bei fehlenden Segmenten', () => {
+  const minimal = buildLocalTriviaBlurb({ title: 'Haus Ohne Alles' });
+  assert.equal(minimal, 'Haus Ohne Alles.');
+
+  const withProfile = buildLocalTriviaBlurb({
+    title: 'Haus Beispiel',
+    houseProfile: { rankId: 'barony', seat: 'Beispielburg' },
+    personCount: 8
+  }, { generationCount: 3 });
+  assert.match(withProfile, /Haus Beispiel —/);
+  assert.match(withProfile, /8 verzeichnete Personen über 3 Generationen/);
+
+  const singlePerson = buildLocalTriviaBlurb({ title: 'Haus Einzel', personCount: 1 });
+  assert.match(singlePerson, /1 verzeichnete Person\./);
+});
+
+test('buildLandingTriviaPrompt enthält Titel und bekannte Kennzahlen, erfindet aber keine neuen', () => {
+  const prompt = buildLandingTriviaPrompt({
+    title: 'Haus Beispiel',
+    profileSummary: 'Grafengeschlecht · Aldrimoor',
+    personCount: 12,
+    generationCount: 4
+  });
+  assert.match(prompt, /Haus Beispiel/);
+  assert.match(prompt, /12/);
+  assert.match(prompt, /4/);
+  assert.match(prompt, /Grafengeschlecht/);
+
+  const bare = buildLandingTriviaPrompt({ title: 'Haus Leer' });
+  assert.match(bare, /keine weiteren Angaben/);
+});
+
+test('tree-generator-ai-bridge.js reicht den gemeinsamen AleriaGPT-Wrapper unverändert weiter', () => {
+  assert.equal(treeGeneratorAiBridge.isAleriaGptAvailable, isAleriaGptAvailable);
+  assert.equal(treeGeneratorAiBridge.requestAleriaGptSuggestion, requestAleriaGptSuggestion);
+  assert.equal(isAleriaGptAvailable({}), false);
+});
+
+function createFakeSessionStorage() {
+  const store = new Map();
+  return {
+    getItem: key => (store.has(key) ? store.get(key) : null),
+    setItem: (key, value) => store.set(key, String(value)),
+    removeItem: key => store.delete(key)
+  };
+}
+
+test('Pending-Tree-Generator-Merker: markieren, prüfen, ein-für-alle-Mal konsumieren', () => {
+  const storage = createFakeSessionStorage();
+  assert.equal(hasPendingTreeGeneratorLaunch(storage), false);
+  markPendingTreeGeneratorLaunch(storage);
+  assert.equal(hasPendingTreeGeneratorLaunch(storage), true);
+  assert.equal(consumePendingTreeGeneratorLaunch(storage), true);
+  assert.equal(hasPendingTreeGeneratorLaunch(storage), false);
+  assert.equal(consumePendingTreeGeneratorLaunch(storage), false);
+
+  markPendingTreeGeneratorLaunch(storage);
+  clearPendingTreeGeneratorLaunch(storage);
+  assert.equal(hasPendingTreeGeneratorLaunch(storage), false);
+});
+
+test('collectFamilyImageRefs findet alle bild-tragenden Schema-Stellen und überspringt leere Felder', () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const refs = collectFamilyImageRefs(family);
+  const kinds = new Set(refs.map(ref => ref.kind));
+  assert.ok(kinds.has('document.emblem'));
+  assert.ok(kinds.has('person.portrait'));
+  assert.ok(kinds.has('house.emblem'));
+  assert.ok(kinds.has('cadetBranch.emblem'));
+
+  const emptyEmblemHouseIds = new Set(family.houses.filter(house => !house.emblem).map(house => house.id));
+  refs.filter(ref => ref.kind === 'house.emblem').forEach(ref => {
+    assert.equal(emptyEmblemHouseIds.has(ref.ownerId), false);
+  });
+  if (!family.lineage.originHouse.enabled) {
+    assert.equal(kinds.has('lineage.originHouse.emblem'), false);
+  }
+});
+
+test('extensionForContentType und zipFilenameFor liefern stabile, eindeutige Dateinamen', () => {
+  assert.equal(extensionForContentType('image/png'), '.png');
+  assert.equal(extensionForContentType('image/jpeg'), '.jpg');
+  assert.equal(extensionForContentType('image/webp'), '.webp');
+  assert.equal(extensionForContentType('', 'assets/images/foo.gif'), '.gif');
+  assert.equal(extensionForContentType('', 'https://example.com/no-extension'), '.png');
+
+  assert.equal(zipFilenameFor({ kind: 'document.emblem', ownerId: 'haus-arwydd' }, '.png'), 'images/document-emblem.png');
+  assert.equal(zipFilenameFor({ kind: 'person.portrait', ownerId: 'idris-arwydd' }, '.jpg'), 'images/person-idris-arwydd.jpg');
+  assert.equal(zipFilenameFor({ kind: 'house.emblem', ownerId: 'house-wyrm' }, '.png'), 'images/house-house-wyrm.png');
+  assert.equal(zipFilenameFor({ kind: 'cadetBranch.emblem', ownerId: 'cadet-1' }, '.png'), 'images/cadet-cadet-1.png');
+  assert.equal(zipFilenameFor({ kind: 'lineage.originHouse.emblem', ownerId: 'lineage-origin-house' }, '.png'), 'images/origin-house-emblem.png');
+});
+
+function createWritableFakeJSZipCtor() {
+  return class FakeJSZip {
+    constructor() {
+      this.files = new Map();
+    }
+
+    file(path, content) {
+      if (content === undefined) {
+        return this.files.has(path) ? { async: async () => this.files.get(path) } : null;
+      }
+      this.files.set(path, content);
+      return this;
+    }
+
+    async generateAsync() {
+      return { __fakeZip: true, files: this.files };
+    }
+  };
+}
+
+test('buildFamilyBundleZip packt erreichbare Bilder, überspringt fehlgeschlagene und schreibt ein vollständiges Manifest', async () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const refs = collectFamilyImageRefs(family);
+  assert.ok(refs.length > 1, 'Testfixtur benötigt mehrere Bildreferenzen');
+
+  let callIndex = 0;
+  const fetchImpl = async () => {
+    callIndex += 1;
+    if (callIndex === 2) throw new Error('Netzwerkfehler (simuliert)');
+    return {
+      ok: true,
+      status: 200,
+      headers: { get: () => 'image/png' },
+      blob: async () => ({ type: 'image/png' })
+    };
+  };
+
+  const { blob, failedCount, imageCount } = await buildFamilyBundleZip(family, {
+    runtime: {},
+    fetchImpl,
+    JSZipCtor: createWritableFakeJSZipCtor()
+  });
+
+  assert.equal(imageCount, refs.length);
+  assert.equal(failedCount, 1);
+  assert.ok(blob.files.has('family.json'));
+  assert.ok(blob.files.has('manifest.json'));
+
+  const manifest = JSON.parse(blob.files.get('manifest.json'));
+  assert.equal(manifest.images.length, refs.length);
+  assert.equal(manifest.images.filter(entry => entry.error).length, 1);
+  const failedEntry = manifest.images.find(entry => entry.error);
+  assert.equal(failedEntry.zipPath, '');
+  manifest.images.filter(entry => !entry.error).forEach(entry => {
+    assert.ok(blob.files.has(entry.zipPath), `Zip sollte ${entry.zipPath} enthalten`);
+  });
+});
+
+test('rewriteFamilyImageRefs lässt nicht aufgelöste Bildfelder unangetastet', () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const personWithPortrait = family.persons.find(person => person.portrait);
+  assert.ok(personWithPortrait, 'Testfixtur benötigt mindestens ein Portrait');
+
+  const resolvedByKey = new Map([
+    [buildImageRefKey('person.portrait', personWithPortrait.id), 'https://cdn.example/new-portrait.png']
+  ]);
+  const rewritten = rewriteFamilyImageRefs(family, resolvedByKey);
+
+  const rewrittenPerson = rewritten.persons.find(person => person.id === personWithPortrait.id);
+  assert.equal(rewrittenPerson.portrait, 'https://cdn.example/new-portrait.png');
+
+  assert.equal(rewritten.document.emblem, family.document.emblem);
+  assert.deepEqual(rewritten.document.houseProfile.regionEmblems, family.document.houseProfile.regionEmblems);
+  family.persons.filter(person => person.id !== personWithPortrait.id).forEach(person => {
+    const match = rewritten.persons.find(item => item.id === person.id);
+    assert.equal(match.portrait, person.portrait);
+  });
+  family.houses.forEach(house => {
+    const match = rewritten.houses.find(item => item.id === house.id);
+    assert.equal(match.emblem, house.emblem);
+  });
+  family.cadetBranches.forEach(branch => {
+    const match = rewritten.cadetBranches.find(item => item.id === branch.id);
+    assert.equal(match.emblem, branch.emblem);
+  });
+  assert.equal(rewritten.lineage.originHouse.emblem, family.lineage.originHouse.emblem);
+
+  assert.equal(family.persons.find(person => person.id === personWithPortrait.id).portrait !== 'https://cdn.example/new-portrait.png', true);
+  assert.equal(rewritten.persons.length, family.persons.length);
+});
+
+function createReadableFakeJSZipCtor(fileMap) {
+  return class FakeJSZip {
+    async loadAsync() {
+      return {
+        file(path) {
+          if (!fileMap.has(path)) return null;
+          const stored = fileMap.get(path);
+          return { async: async () => stored };
+        }
+      };
+    }
+  };
+}
+
+test('parseFamilyBundleZip: fehlende family.json wirft einen klaren Fehler', async () => {
+  const FakeJSZip = createReadableFakeJSZipCtor(new Map());
+  await assert.rejects(
+    () => parseFamilyBundleZip(new ArrayBuffer(0), { JSZipCtor: FakeJSZip }),
+    /family\.json/
+  );
+});
+
+test('parseFamilyBundleZip: fehlende manifest.json degradiert auf keine Bilder statt zu scheitern', async () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const fileMap = new Map([['family.json', serializeFamily(family)]]);
+  const FakeJSZip = createReadableFakeJSZipCtor(fileMap);
+  const result = await parseFamilyBundleZip(new ArrayBuffer(0), { JSZipCtor: FakeJSZip });
+  assert.equal(result.family.document.id, family.document.id);
+  assert.deepEqual(result.images, []);
+});
+
+test('parseFamilyBundleZip: liest referenzierte Bilder, überspringt fehlerhafte Manifest-Einträge', async () => {
+  const family = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  const fakeBlob = { type: 'image/png', __label: 'restored' };
+  const manifest = {
+    images: [
+      { kind: 'document.emblem', ownerId: family.document.id, source: 'x', zipPath: 'images/document-emblem.png', contentType: 'image/png' },
+      { kind: 'person.portrait', ownerId: 'ghost', source: 'y', zipPath: '', contentType: '', error: 'fehlgeschlagen' }
+    ]
+  };
+  const fileMap = new Map([
+    ['family.json', serializeFamily(family)],
+    ['manifest.json', JSON.stringify(manifest)],
+    ['images/document-emblem.png', fakeBlob]
+  ]);
+  const FakeJSZip = createReadableFakeJSZipCtor(fileMap);
+  const result = await parseFamilyBundleZip(new ArrayBuffer(0), { JSZipCtor: FakeJSZip });
+  assert.equal(result.images.length, 1);
+  assert.equal(result.images[0].blob, fakeBlob);
+});
+
+test('Landingpage verlinkt zur Generator-CTA und zum Familienregister, ohne Inline-Handler', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /href="Stammbaum\.html\?mode=edit&amp;action=start-tree-generator"/);
+  assert.match(html, /href="register\.html"/);
+  assert.match(html, /id="landing-trivia-grid"/);
+  assert.match(html, /id="landing-trivia-empty"/);
+  assert.match(html, /assets\/js\/landing-app\.js/);
+  assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
+});
+
+test('Familienregister verlinkt zurück zur Startseite', async () => {
+  const html = await readFile(new URL('../register.html', import.meta.url), 'utf8');
+  assert.match(html, /href="index\.html"/);
+});
+
+test('Stammbaum.html bindet JSZip ein und bietet Paket-Export/Import sowie Startseiten-Links', async () => {
+  const html = await readFile(new URL('../Stammbaum.html', import.meta.url), 'utf8');
+  assert.match(html, /vendor\/jszip\/3\.10\.1\/jszip\.min\.js/);
+  assert.match(html, /data-action="export-family-bundle"/);
+  assert.match(html, /data-action="trigger-bundle-import"/);
+  assert.match(html, /id="family-bundle-import"/);
+  assert.match(html, /href="index\.html"/);
+});
+
+test('netlify.toml leitet die Stammbäume-Startseite nicht mehr künstlich um', async () => {
+  const toml = await readFile(new URL('../../netlify.toml', import.meta.url), 'utf8');
+  assert.doesNotMatch(toml, /Stammb%C3%A4ume%2Findex\.html|Stammb%C3%A4ume\/index\.html/);
+  assert.doesNotMatch(toml, /from = "\/Stammb%C3%A4ume\/"/);
 });
 
 let failures = 0;

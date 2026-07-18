@@ -2,18 +2,6 @@
   publish = "."
 
 [[redirects]]
-  from = "/Stammb%C3%A4ume/index.html"
-  to = "/Stammb%C3%A4ume/Stammbaum.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/Stammb%C3%A4ume/"
-  to = "/Stammb%C3%A4ume/Stammbaum.html"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/firebase/*"
   to = "/not_found.html"
   status = 404

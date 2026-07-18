@@ -1,29 +1,4 @@
-// Dünner, immer optionaler Wrapper um window.AleriaGptClient (aus
-// ../../../../AleriaAlmanach/modules/aleria-gpt/). Wird das Skript nicht geladen,
-// ist der Endpunkt nicht konfiguriert oder schlägt der Aufruf fehl (Netzwerk/CORS),
-// liefert diese Funktion einfach {ok:false}, statt einen Fehler zu werfen — der
-// Generator fällt in diesem Fall lautlos auf die lokale Vorschlags-Engine
-// (tree-generator-suggestions.js) zurück.
-
-export function isAleriaGptAvailable(runtime = globalThis) {
-  return typeof runtime.AleriaGptClient?.sendChat === 'function'
-    && runtime.AleriaGptClient.isConfigured?.() !== false;
-}
-
-export async function requestAleriaGptSuggestion(promptText, { runtime = globalThis, timeoutMs = 20000 } = {}) {
-  if (!isAleriaGptAvailable(runtime)) return { ok: false, text: '' };
-  try {
-    const result = await runtime.AleriaGptClient.sendChat(
-      promptText,
-      { promptContext: promptText },
-      { responseMode: 'suggestion', answerStyle: 'short', timeoutMs }
-    );
-    const text = String(result?.text || '').trim();
-    return { ok: !!result?.ok && !!text, text };
-  } catch {
-    return { ok: false, text: '' };
-  }
-}
+export { isAleriaGptAvailable, requestAleriaGptSuggestion } from '../../services/aleria-gpt-bridge.js';
 
 function buildBaseContext(houseName) {
   return `Du hilfst bei der Ausarbeitung eines Fantasy-Stammbaums für "${houseName || 'ein Adelshaus'}" in der Welt Aleria (walisisch angehauchte Namensgebung).`;
