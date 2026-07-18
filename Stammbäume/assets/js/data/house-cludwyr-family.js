@@ -3,7 +3,6 @@ import { CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES } from './celtigerns-wacht-house
 import {
   createFamilyPerson,
   createMarriage,
-  createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_CLUDWYR_PORTRAITS } from './house-cludwyr-portraits.js';
@@ -183,21 +182,9 @@ export const HOUSE_CLUDWYR_FAMILY = Object.freeze({
       label: 'Nicht einzeln überlieferte Generationen'
     }
   },
-  cadetBranches: [
-    // Evangelins Herkunft ist bereits im Rhyddid-Stammbaum als Wegheirat vermerkt;
-    // ein Rückverweis-Medaillon ist hier nicht erwünscht.
-    createMarriedAwayBranch({
-      id: 'married-in-balchder-klervi',
-      name: 'Haus Balchder',
-      subtitle: 'Herkunftshaus der Braut',
-      parentPartnershipId: 'marriage-rhain-klervi',
-      houseId: 'house-balchder',
-      targetFamilyId: 'haus-balchder',
-      emblem: 'assets/images/houses/haus-balchder.png',
-      crestFrame: 'silver',
-      notes: 'Klervi heiratete aus dem Ritterherrenhaus Balchder in das Haus Cludwyr ein.'
-    })
-  ],
+  // Herkunftshaus-Medaillons für eingeheiratete Ehepartner sind nicht erwünscht;
+  // die Häuser der Bräute stehen bereits auf ihren Karten.
+  cadetBranches: [],
   timeJumps: [],
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
@@ -210,6 +197,6 @@ export const HOUSE_CLUDWYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Cludwyr-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Godwyn und Evangelin Rhyddid sind mit dem Rhyddid-Stammbaum geteilt; ihre Kinder führen die Cludwyr-Linie fort. Die eingeheirateten Ehepartner entstammen dem einfachen Volk und sind ohne Hausnamen überliefert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Cludwyr den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

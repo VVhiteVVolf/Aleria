@@ -180,17 +180,8 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
     }
   },
   cadetBranches: [
-    createMarriedAwayBranch({
-      id: 'married-in-chwedlonol-arianwen',
-      name: 'Haus Chwedlonol',
-      subtitle: 'Herkunftshaus der Braut',
-      parentPartnershipId: 'marriage-kerwin-arianwen',
-      houseId: 'house-chwedlonol',
-      targetFamilyId: 'haus-chwedlonol',
-      emblem: 'assets/images/houses/haus-chwedlonol.png',
-      crestFrame: 'silver',
-      notes: 'Arianwen heiratete aus dem Ritterherrenhaus Chwedlonol in das Haus Rhyddid ein.'
-    }),
+    // Herkunftshaus-Medaillons für eingeheiratete Ehepartner sind nicht erwünscht;
+    // Arianwens Haus Chwedlonol steht bereits auf ihrer Karte.
     createMarriedAwayBranch({
       id: 'married-away-cludwyr-evangelin',
       name: 'Haus Cludwyr',
@@ -224,6 +215,6 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Rhyddid-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Gwilym und Gwenifer entstammen dem 1262 überfallenen Hof eines namenlosen Schweinehirten; die Linie der belegten Generationen setzt 1651 wieder ein. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Rhyddid den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });
