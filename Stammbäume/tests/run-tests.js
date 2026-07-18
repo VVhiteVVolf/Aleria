@@ -3852,10 +3852,12 @@ test('bildet das bürgerliche Haus Sgrechiwr aus Lynthor mit fünfstufiger Erbfo
   assert.equal(new Set(unknownPartners.map(person => person.id)).size, 9);
 
   // Godwyn ist mit Aerona Balchder verheiratet, die bereits in Haus Balchders eigener Akte
-  // als Tochter Dalvins geführt wird (geteilte Person, Cludwyr/Rhyddid-Godwyn-Muster).
+  // als Tochter Dalvins geführt wird (geteilte Person, Cludwyr/Rhyddid-Godwyn-Muster); ihr
+  // dort bereits hinterlegtes Portrait wird hier per Import wiederverwendet.
   const aerona = graph.getPerson('aerona-balchder');
   assert.equal(aerona.houseId, 'house-balchder');
-  assert.equal(aerona.portrait, '');
+  assert.equal(aerona.portrait, HOUSE_BALCHDER_PORTRAITS['aerona-balchder']);
+  assert.ok(aerona.portrait);
 
   const unpartneredPeople = [
     'eluned-sgrechiwr', 'meinwen-sgrechiwr', 'euros-sgrechiwr', 'angwen-sgrechiwr',
@@ -3891,7 +3893,7 @@ test('bildet das bürgerliche Haus Sgrechiwr aus Lynthor mit fünfstufiger Erbfo
   assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
 });
 
-test('liefert für Haus Sgrechiwr alle 16 belegten Portraits lokal aus', async () => {
+test('liefert für Haus Sgrechiwr alle 16 lokalen und 1 wiederverwendetes Portrait aus', async () => {
   const family = assertValidFamily(HOUSE_SGRECHIWR_FAMILY).family;
   const picturedPeople = family.persons.filter(person => person.portrait);
   const placeholderPeople = family.persons.filter(person => !person.portrait);
@@ -3902,8 +3904,9 @@ test('liefert für Haus Sgrechiwr alle 16 belegten Portraits lokal aus', async (
 
   assert.equal(Object.keys(HOUSE_SGRECHIWR_PORTRAITS).length, 16);
   assert.equal(Object.keys(sourceManifest).length, 16);
-  assert.equal(picturedPeople.length, 16);
-  assert.equal(placeholderPeople.length, 16);
+  // Aerona Balchder zählt zusätzlich als wiederverwendetes Portrait aus Haus Balchder.
+  assert.equal(picturedPeople.length, 17);
+  assert.equal(placeholderPeople.length, 15);
   assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_SGRECHIWR_PORTRAITS[personId]));
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
