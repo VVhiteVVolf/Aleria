@@ -19,7 +19,9 @@ const RANK_ICONS = Object.freeze({
   barony: 'assets/images/ranks/baron.png',
   'knight-prince': 'assets/images/ranks/ritterfuerst.png',
   knight: 'assets/images/ranks/ritterherr.png',
-  'knight-simple': 'assets/images/ranks/ritter.png'
+  'knight-simple': 'assets/images/ranks/ritter.png',
+  // Platzhalter, bis ein eigenes Bürgerlich-Icon vorliegt.
+  commoner: 'assets/images/ranks/page.png'
 });
 
 export function getHouseRankIcon(rankId) {

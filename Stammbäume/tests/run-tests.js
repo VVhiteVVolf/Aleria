@@ -33,6 +33,8 @@ import { HOUSE_AWENOR_FAMILY } from '../assets/js/data/house-awenor-family.js';
 import { HOUSE_AWENOR_PORTRAITS } from '../assets/js/data/house-awenor-portraits.js';
 import { HOUSE_GARRAEL_FAMILY } from '../assets/js/data/house-garrael-family.js';
 import { HOUSE_GARRAEL_PORTRAITS } from '../assets/js/data/house-garrael-portraits.js';
+import { HOUSE_GWYLLACH_FAMILY } from '../assets/js/data/house-gwyllach-family.js';
+import { HOUSE_GWYLLACH_PORTRAITS } from '../assets/js/data/house-gwyllach-portraits.js';
 import { HOUSE_LOER_FAMILY } from '../assets/js/data/house-loer-family.js';
 import { HOUSE_LOER_PORTRAITS } from '../assets/js/data/house-loer-portraits.js';
 import { HOUSE_AWENYDD_FAMILY } from '../assets/js/data/house-awenydd-family.js';
@@ -3598,6 +3600,158 @@ test('liefert für Haus Garrael alle 15 belegten Portraits lokal aus', async () 
   assert.deepEqual([...camruisgeBanner.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
 
+test('bildet das bürgerliche Haus Gwyllach mit wechselnder Kopfschaft und vier Wegverheiratungen ab', () => {
+  const family = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 33);
+  assert.equal(family.partnerships.length, 12);
+  assert.equal(family.parentages.length, 20);
+  assert.equal(family.cadetBranches.length, 4);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-maelgoran-spouse');
+  assert.equal(family.lineage.crestFrame, 'iron', 'Bürgerliche Häuser führen den eisernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.fromYear, '????');
+  assert.equal(family.lineage.timeGap.toYear, '1627');
+  assert.equal(family.document.houseProfile.rankId, 'commoner');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+  assert.equal(family.document.houseProfile.liegeHouseName, 'Haus Draig');
+  // Gwyllach ist bürgerlich (kein Rittergeschlecht) und sitzt außerhalb der
+  // LOWER_KNIGHT_HOUSE_DEFINITIONS, nutzt aber deren generischen Gwynthor-Sitz.
+  assert.deepEqual(
+    createFolderPathFromHouseProfile(family.document.houseProfile),
+    ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']
+  );
+
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
+    ['maelgoran-gwyllach', 'tewrig-gwyllach', 'odrith-gwyllach', 'rhydderch-gwyllach', 'rhovan-gwyllach']
+  );
+
+  assert.equal(graph.getPerson('maelgoran-gwyllach').title, 'Begründer des bürgerlichen Hauses Gwyllach');
+  assert.equal(graph.getPerson('rhovan-gwyllach').title, 'Oberhaupt des Hauses Gwyllach');
+  assert.equal(graph.getPerson('maelgoran-gwyllach').status, 'dead');
+  assert.equal(graph.getPerson('rhovan-gwyllach').status, 'alive');
+
+  // Die Kopfschaft wechselt zwischen Tewrigs und Odriths Linien (Rhydderch/Rhovan sind Cousins).
+  const expectedChildren = new Map([
+    ['maelgoran-gwyllach', ['odrith-gwyllach', 'tewrig-gwyllach', 'unbekannte-tochter-gwyllach']],
+    ['tewrig-gwyllach', ['mablen-gwyllach', 'rhydderch-gwyllach']],
+    ['odrith-gwyllach', ['rhovan-gwyllach']],
+    ['rhydderch-gwyllach', ['efael-gwyllach', 'meredydd-gwyllach', 'talaneth-gwyllach']],
+    ['rhovan-gwyllach', ['anelen-gwyllach', 'drystan-gwyllach']],
+    ['efael-gwyllach', ['meirawen-gwyllach', 'morwella-gwyllach']],
+    ['meredydd-gwyllach', ['saerwyn-gwyllach', 'talyfer-gwyllach']],
+    ['drystan-gwyllach', ['eryndor-gwyllach', 'liora-gwyllach', 'meirion-gwyllach', 'olyndor-gwyllach', 'rhufaed-gwyllach']]
+  ]);
+  expectedChildren.forEach((childIds, personId) => {
+    assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
+  });
+
+  const founderParentages = family.parentages.filter(parentage => parentage.partnershipId === 'marriage-maelgoran-spouse');
+  assert.equal(founderParentages.length, 3);
+  assert.ok(founderParentages.every(parentage => parentage.type === 'claimed' && parentage.certainty === 'probable'));
+
+  // Rückwirkend/vorwärts berechnete Altersabstände zu den drei überlieferten Ankerjahren bleiben plausibel.
+  family.parentages.forEach(parentage => {
+    const childBirth = Number(graph.getPerson(parentage.childId)?.birth);
+    if (!Number.isInteger(childBirth)) return;
+    parentage.parentIds.forEach(parentId => {
+      const parentBirth = Number(graph.getPerson(parentId)?.birth);
+      if (!Number.isInteger(parentBirth)) return;
+      const ageAtBirth = childBirth - parentBirth;
+      assert.ok(ageAtBirth >= 18 && ageAtBirth <= 55, `${parentId} besitzt ein plausibles Alter bei der Geburt von ${parentage.childId}.`);
+    });
+  });
+
+  const peopleWithUnknownPartners = [
+    'tewrig-gwyllach', 'unbekannte-tochter-gwyllach', 'odrith-gwyllach', 'rhydderch-gwyllach',
+    'mablen-gwyllach', 'rhovan-gwyllach', 'efael-gwyllach', 'talaneth-gwyllach',
+    'meredydd-gwyllach', 'drystan-gwyllach', 'anelen-gwyllach'
+  ];
+  const unknownPartners = peopleWithUnknownPartners.map(personId => {
+    const partners = graph.getPartners(personId);
+    assert.equal(partners.length, 1, `${personId} besitzt genau den unbeschrifteten Partner aus der Quelltabelle.`);
+    assert.equal(partners[0].status, 'unknown');
+    assert.equal(partners[0].familyRole, 'married');
+    return partners[0];
+  });
+  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 11);
+
+  // Cyrelle (Maelgorans Frau) ist namentlich überliefert, bleibt aber ohne Portrait.
+  const cyrelle = graph.getPerson('cyrelle-gwyllach');
+  assert.equal(cyrelle.status, 'dead');
+  assert.equal(cyrelle.portrait, '');
+
+  // Jüngste Generation ist noch gänzlich unverpartnert.
+  const unpartneredPeople = [
+    'meirawen-gwyllach', 'morwella-gwyllach', 'talyfer-gwyllach', 'saerwyn-gwyllach',
+    'meirion-gwyllach', 'olyndor-gwyllach', 'rhufaed-gwyllach', 'eryndor-gwyllach', 'liora-gwyllach'
+  ];
+  assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
+
+  // Vier kinderlose Kernfrauen mit unbenanntem Partner gelten als wegverheiratet.
+  const branchByPartnership = new Map(family.cadetBranches.map(branch => [branch.parentPartnershipId, branch]));
+  ['marriage-tochter-spouse', 'marriage-mablen-spouse', 'marriage-talaneth-spouse', 'marriage-anelen-spouse'].forEach(partnershipId => {
+    const branch = branchByPartnership.get(partnershipId);
+    assert.equal(branch.name, 'Unbekanntes Haus');
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.crestFrame, 'gold');
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 4);
+  const crest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(crest.data.crestFrameAsset, /crest-iron\.png$/, 'Der Wappenknoten nutzt den eisernen Rahmen.');
+
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['maelgoran-gwyllach']);
+  const pendingIds = ['maelgoran-gwyllach'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    assert.ok(entry, 'Jeder verknüpfte Gwyllach-Knoten ist im Diagramm vorhanden.');
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('liefert für Haus Gwyllach alle 19 belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-gwyllach/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_GWYLLACH_PORTRAITS).length, 19);
+  assert.equal(Object.keys(sourceManifest).length, 19);
+  assert.equal(picturedPeople.length, 19);
+  assert.equal(placeholderPeople.length, 14);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_GWYLLACH_PORTRAITS[personId]));
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(Object.entries(HOUSE_GWYLLACH_PORTRAITS).map(async ([personId, portrait]) => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitzuordnung ohne Gwyllach-Person: ${personId}`);
+    assert.equal(person.portrait, portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+
+  const emblem = await readFile(new URL('../assets/images/houses/haus-gwyllach.png', import.meta.url));
+  assert.ok(emblem.length > 100);
+  assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -3971,7 +4125,9 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   ]);
   // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie
   // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
-  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 1);
+  // Gwyllach ist ein bürgerliches Haus außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS und wird
+  // ebenfalls gesondert geprüft (nutzt aber deren generischen Gwynthor-Sitz).
+  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 2);
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
     const profile = loaded.family.document.houseProfile;
@@ -3998,6 +4154,20 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.match(garraelProfile.regionEmblems.seat, /^assets\/images\/regions\//);
   assert.equal(garraelProfile.liegeHouseId, 'haus-draig');
   assert.equal(garraelProfile.liegeHouseName, 'Haus Draig');
+
+  const gwyllachLoaded = loadFamilyById('haus-gwyllach', storage);
+  const gwyllachProfile = gwyllachLoaded.family.document.houseProfile;
+  const gwyllachPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
+  assert.deepEqual(gwyllachLoaded.folderPath, gwyllachPath);
+  assert.deepEqual(createFolderPathFromHouseProfile(gwyllachProfile), gwyllachPath);
+  assert.equal(gwyllachProfile.rankId, 'commoner');
+  assert.equal(getHouseRank('commoner').label, 'Bürgerfamilie');
+  assert.match(gwyllachProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  assert.match(gwyllachProfile.regionEmblems.county, /^assets\/images\/regions\//);
+  assert.match(gwyllachProfile.regionEmblems.barony, /^assets\/images\/regions\//);
+  assert.match(gwyllachProfile.regionEmblems.seat, /^assets\/images\/regions\//);
+  assert.equal(gwyllachProfile.liegeHouseId, 'haus-draig');
+  assert.equal(gwyllachProfile.liegeHouseName, 'Haus Draig');
 
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
@@ -4049,6 +4219,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/houses/haus-gwefrydd.png',
     'assets/images/houses/haus-gwyvern.png',
     'assets/images/houses/haus-garrael.png',
+    'assets/images/houses/haus-gwyllach.png',
     ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => family.document.emblem),
     'assets/images/regions/artus-streben.png',
     'assets/images/regions/castellbryn.png',
