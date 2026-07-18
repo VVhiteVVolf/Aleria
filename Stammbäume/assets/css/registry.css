@@ -140,7 +140,7 @@
 
 .registry-tree-toggle {
   width: 1.8rem;
-  padding-left: calc(0.8rem + var(--registry-tree-depth, 0) * 1.1rem) !important;
+  padding-left: calc(0.8rem + var(--registry-tree-depth, 0) * 1.6rem) !important;
 }
 
 .registry-tree-toggle-btn {
@@ -161,7 +161,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding-left: var(--registry-tree-depth, 0) !important;
+  padding-left: calc(var(--registry-tree-depth, 0) * 1.6rem) !important;
 }
 
 .registry-folder-icon {
@@ -180,7 +180,7 @@
 }
 
 .registry-tree-row--records td {
-  padding: 0.65rem 0.6rem 0.9rem calc(0.8rem + var(--registry-tree-depth, 0) * 1.1rem + 1.8rem);
+  padding: 0.65rem 0.6rem 0.9rem calc(0.8rem + var(--registry-tree-depth, 0) * 1.6rem + 1.8rem);
 }
 
 .registry-family-card {
