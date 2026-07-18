@@ -97,7 +97,7 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
     person('yale-rhyddid', 'Yale', 'male', '1656', '1730', RHYDDID_HOUSE_ID, {
       title: 'Hauptmann von Mwyncreig'
     }),
-    person('arianwen-chwedlonol', 'Arianwen Chwedonol', 'female', '1656', '1725', 'house-chwedlonol', { familyRole: 'married' }),
+    person('arianwen-chwedlonol', 'Arianwen Chwedonol', 'female', '1654', '1725', 'house-chwedlonol', { familyRole: 'married' }),
     person('godwyn-cludwyr', 'Godwyn Cludwyr', 'male', '1651', '1720', 'house-cludwyr', { familyRole: 'married' }),
     spouse('blodwen', 'Blodwen', 'female', '1658', '1709'),
 
@@ -215,6 +215,6 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Rhyddid-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Gwilym und Gwenifer entstammen dem 1262 überfallenen Hof eines namenlosen Schweinehirten; die Linie der belegten Generationen setzt 1651 wieder ein. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Rhyddid den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 4
   }
 });

@@ -27,6 +27,8 @@ import { HOUSE_GELYN_FAMILY } from '../assets/js/data/house-gelyn-family.js';
 import { HOUSE_GELYN_PORTRAITS } from '../assets/js/data/house-gelyn-portraits.js';
 import { HOUSE_CLUDWYR_FAMILY } from '../assets/js/data/house-cludwyr-family.js';
 import { HOUSE_CLUDWYR_PORTRAITS } from '../assets/js/data/house-cludwyr-portraits.js';
+import { HOUSE_CHWEDLONOL_FAMILY } from '../assets/js/data/house-chwedlonol-family.js';
+import { HOUSE_CHWEDLONOL_PORTRAITS } from '../assets/js/data/house-chwedlonol-portraits.js';
 import {
   buildImportedPersonValues,
   findExistingImport,
@@ -2261,6 +2263,132 @@ test('verlobt eine Person registerübergreifend samt importierter Registerakte (
   assert.throws(() => relationForAction('unbekannt'), /keine Verbindungsart/);
 });
 
+test('bildet das matriarchale Ritterherrenhaus Chwedonol mit weiblicher Erbfolge und geteiltem Rhyddid-Paar ab', () => {
+  const family = assertValidFamily(HOUSE_CHWEDLONOL_FAMILY).family;
+  const rhyddid = assertValidFamily(HOUSE_RHYDDID_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 35);
+  assert.equal(family.partnerships.length, 13);
+  assert.equal(family.parentages.length, 21);
+  assert.equal(family.cadetBranches.length, 1);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-meredithe-ekmeleddin');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.toYear, '1652');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-saethwyr');
+  assert.equal(family.persons.filter(person => person.lineageRole === 'head').length, 2);
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['niniane-chwedlonol', 'morgaine-chwedlonol', 'eleyne-chwedlonol'],
+    'Die weibliche Erbfolge läuft über Niniane, Morgaine und Eleyne.'
+  );
+  assert.equal(
+    graph.getPerson('gwenhwyfar-chwedlonol').title,
+    'Ritterherrin des Hauses Chwedonol',
+    'Das matriarchale Oberhaupt trägt die weibliche Form des Titels.'
+  );
+  assert.equal(graph.getPerson('gwenhwyfar-chwedlonol').status, 'alive');
+  assert.equal(graph.getPerson('meredithe-chwedlonol').title, 'Begründerin des Ritterherrenhauses Chwedonol');
+
+  // Namensgleiche Personen in unterschiedlichen Generationen mit unterschiedlichem Geburtsjahr
+  // sind verschiedene Individuen (Meredithe/Meredithe 1677, Rhonwen 1681/Romney 1704).
+  assert.deepEqual(graph.getChildren('meredithe-chwedlonol').map(person => person.id).sort(), [
+    'arianwen-chwedlonol',
+    'gwenhwyfar-chwedlonol',
+    'rhiannon-chwedlonol'
+  ]);
+  assert.deepEqual(graph.getChildren('gwenhwyfar-chwedlonol').map(person => person.id).sort(), [
+    'meredithe-1677-chwedlonol',
+    'niniane-chwedlonol',
+    'rhonwen-chwedlonol'
+  ]);
+  assert.deepEqual(graph.getChildren('rhiannon-chwedlonol').map(person => person.id), ['angharad-chwedlonol']);
+  assert.deepEqual(graph.getChildren('niniane-chwedlonol').map(person => person.id).sort(), [
+    'glyndwr-chwedlonol',
+    'morgaine-chwedlonol'
+  ]);
+  assert.deepEqual(graph.getChildren('rhonwen-chwedlonol').map(person => person.id), ['romney-1704-chwedlonol']);
+  assert.deepEqual(graph.getChildren('angharad-chwedlonol').map(person => person.id).sort(), [
+    'eurin-chwedlonol',
+    'gwyneth-chwedlonol'
+  ]);
+  assert.deepEqual(
+    graph.getChildren('morgaine-chwedlonol').map(person => person.id).sort(),
+    ['cederic-chwedlonol', 'eleyne-chwedlonol', 'soffi-gwared'],
+    'Cederic und Eleyne sind leibliche Kinder, Soffi Gwared ist ein aufgenommenes Mündel.'
+  );
+  const soffiParentage = family.parentages.find(parentage => parentage.childId === 'soffi-gwared');
+  assert.equal(soffiParentage.type, 'foster');
+  assert.deepEqual(graph.getChildren('glyndwr-chwedlonol').map(person => person.id), ['caralyn-chwedlonol']);
+  assert.deepEqual(graph.getChildren('romney-1704-chwedlonol').map(person => person.id).sort(), [
+    'kyndra-chwedlonol',
+    'rhondia-chwedlonol'
+  ]);
+  assert.deepEqual(graph.getChildren('gwyneth-chwedlonol').map(person => person.id).sort(), [
+    'maxen-chwedlonol',
+    'meriel-chwedlonol'
+  ]);
+  assert.deepEqual(graph.getChildren('eurin-chwedlonol').map(person => person.id), ['hyrs-chwedlonol']);
+
+  // Söhne bleiben als Kernmitglieder im matriarchalen Haus (rot), ihre Ehefrauen heiraten ein.
+  assert.equal(graph.getPerson('glyndwr-chwedlonol').familyRole, 'core');
+  assert.equal(graph.getPerson('eurin-chwedlonol').familyRole, 'core');
+  assert.equal(graph.getPerson('kathleen').familyRole, 'married');
+
+  // Arianwen und Kerwin Rhyddid sind mit dem Rhyddid-Stammbaum geteilte Personen.
+  const arianwenHere = graph.getPerson('arianwen-chwedlonol');
+  const kerwinHere = graph.getPerson('kerwin-rhyddid');
+  const arianwenThere = rhyddid.persons.find(person => person.id === 'arianwen-chwedlonol');
+  const kerwinThere = rhyddid.persons.find(person => person.id === 'kerwin-rhyddid');
+  assert.equal(arianwenHere.worldPersonId, arianwenThere.worldPersonId);
+  assert.equal(kerwinHere.worldPersonId, kerwinThere.worldPersonId);
+  assert.equal(kerwinHere.portrait, kerwinThere.portrait, 'Kerwins Portrait ist in beiden Stammbäumen dieselbe Datei.');
+  assert.equal(arianwenHere.birth, arianwenThere.birth);
+  assert.equal(arianwenHere.death, arianwenThere.death);
+
+  const branch = family.cadetBranches[0];
+  assert.equal(branch.linkType, 'married-away');
+  assert.equal(branch.crestFrame, 'silver');
+  assert.equal(branch.parentPartnershipId, 'marriage-arianwen-kerwin');
+  assert.equal(branch.targetFamilyId, 'haus-rhyddid');
+
+  const crest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(crest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 1);
+});
+
+test('liefert für Haus Chwedonol alle belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_CHWEDLONOL_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-chwedlonol/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  // Kerwin Rhyddids Portrait wird vom Rhyddid-Stammbaum gehostet und hier nur wiederverwendet.
+  assert.equal(Object.keys(HOUSE_CHWEDLONOL_PORTRAITS).length, 26);
+  assert.equal(Object.keys(sourceManifest).length, 25);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_CHWEDLONOL_PORTRAITS[personId]));
+  assert.equal(HOUSE_CHWEDLONOL_PORTRAITS['kerwin-rhyddid'], 'assets/images/portraits/haus-rhyddid/kerwin-rhyddid.jpg');
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.equal(picturedPeople.length, 26);
+  assert.equal(placeholderPeople.length, 9);
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(picturedPeople.map(async person => {
+    assert.equal(person.portrait, HOUSE_CHWEDLONOL_PORTRAITS[person.id]);
+    const image = await readFile(new URL(`../${person.portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -2356,7 +2484,7 @@ test('verwendet für namens- und jahresgleiche Personen hausübergreifend diesel
   const identitiesByNameAndBirth = new Map();
   [
     HOUSE_ARWYDD_FAMILY, HOUSE_DRAIG_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY, HOUSE_SAETHWYR_FAMILY,
-    HOUSE_TLAWD_FAMILY, HOUSE_RHYDDID_FAMILY, HOUSE_GELYN_FAMILY, HOUSE_CLUDWYR_FAMILY
+    HOUSE_TLAWD_FAMILY, HOUSE_RHYDDID_FAMILY, HOUSE_GELYN_FAMILY, HOUSE_CLUDWYR_FAMILY, HOUSE_CHWEDLONOL_FAMILY
   ].map(normalizeFamily).forEach(family => {
     family.persons.forEach(person => {
       if (!/^\d{4}$/.test(person.birth || '')) return;
@@ -2655,6 +2783,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       assert.equal(loaded.family.persons.length, 24, 'Haus Gelyn ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-cludwyr') {
       assert.equal(loaded.family.persons.length, 32, 'Haus Cludwyr ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else if (family.document.id === 'haus-chwedlonol') {
+      assert.equal(loaded.family.persons.length, 35, 'Haus Chwedonol ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }
