@@ -3625,15 +3625,24 @@ test('bildet das bürgerliche Haus Gwyllach mit wechselnder Kopfschaft und vier 
     ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']
   );
 
+  // Bürgerliche Erbfolge nach Eignung statt Erstgeburt: die Kette reicht laut User-Vorgabe
+  // über den amtierenden Rhovan hinaus bis zu den vorgesehenen Erben Drystan und Meirion.
   assert.deepEqual(
     family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
-    ['maelgoran-gwyllach', 'tewrig-gwyllach', 'odrith-gwyllach', 'rhydderch-gwyllach', 'rhovan-gwyllach']
+    [
+      'maelgoran-gwyllach', 'tewrig-gwyllach', 'odrith-gwyllach', 'rhydderch-gwyllach',
+      'rhovan-gwyllach', 'drystan-gwyllach', 'meirion-gwyllach'
+    ]
   );
 
   assert.equal(graph.getPerson('maelgoran-gwyllach').title, 'Begründer des bürgerlichen Hauses Gwyllach');
   assert.equal(graph.getPerson('rhovan-gwyllach').title, 'Oberhaupt des Hauses Gwyllach');
+  assert.equal(graph.getPerson('drystan-gwyllach').title, 'Vorgesehener Erbe des Hauses Gwyllach');
+  assert.equal(graph.getPerson('meirion-gwyllach').title, 'Zweiter Erbe des Hauses Gwyllach');
   assert.equal(graph.getPerson('maelgoran-gwyllach').status, 'dead');
   assert.equal(graph.getPerson('rhovan-gwyllach').status, 'alive');
+  assert.equal(graph.getPerson('drystan-gwyllach').status, 'alive');
+  assert.equal(graph.getPerson('meirion-gwyllach').status, 'alive');
 
   // Die Kopfschaft wechselt zwischen Tewrigs und Odriths Linien (Rhydderch/Rhovan sind Cousins).
   const expectedChildren = new Map([

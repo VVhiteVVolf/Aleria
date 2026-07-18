@@ -10,14 +10,18 @@ import { HOUSE_GWYLLACH_PORTRAITS } from './house-gwyllach-portraits.js';
 
 const GWYLLACH_EMBLEM = 'assets/images/houses/haus-gwyllach.png';
 const GWYLLACH_HOUSE_ID = 'house-gwyllach';
-// Die Kopfschaft wechselt zwischen Maelgorans zwei Söhnelinien hin und her
+// Gwyllach ist bürgerlich und vererbt nach Eignung statt nach starrer Erstgeburt:
+// die Kopfschaft wechselt zwischen Maelgorans zwei Söhnelinien hin und her
 // (Tewrig -> Rhydderch, dann zurück auf Odriths Sohn Rhovan) statt gerade fortzuschreiten.
+// Laut User ist Rhovans vorgesehene Erbfolge Drystan, danach dessen Sohn Meirion.
 const HOUSE_HEAD_IDS = new Set([
   'maelgoran-gwyllach',
   'tewrig-gwyllach',
   'odrith-gwyllach',
   'rhydderch-gwyllach',
-  'rhovan-gwyllach'
+  'rhovan-gwyllach',
+  'drystan-gwyllach',
+  'meirion-gwyllach'
 ]);
 
 function lineageRoleFor(personId) {
@@ -120,7 +124,9 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     unnamedSpouse('unknown-meredydd-spouse', 'Unbekannte Ehefrau', 'female'),
 
     // Kinder Rhovans
-    person('drystan-gwyllach', 'Drystan Gwyllach', 'male', '1685', ''),
+    person('drystan-gwyllach', 'Drystan Gwyllach', 'male', '1685', '', GWYLLACH_HOUSE_ID, {
+      title: 'Vorgesehener Erbe des Hauses Gwyllach'
+    }),
     unnamedSpouse('unknown-drystan-spouse', 'Unbekannte Ehefrau', 'female'),
     person('anelen-gwyllach', 'Anelen Gwyllach', 'female', '1687', ''),
     unnamedSpouse('unknown-anelen-spouse', 'Unbekannter Ehemann', 'male'),
@@ -134,7 +140,9 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     person('saerwyn-gwyllach', 'Saerwyn Gwyllach', 'female', '1710', ''),
 
     // Jüngste Generation: Kinder Drystans
-    person('meirion-gwyllach', 'Meirion Gwyllach', 'male', '1710', ''),
+    person('meirion-gwyllach', 'Meirion Gwyllach', 'male', '1710', '', GWYLLACH_HOUSE_ID, {
+      title: 'Zweiter Erbe des Hauses Gwyllach'
+    }),
     person('olyndor-gwyllach', 'Olyndor Gwyllach', 'male', '1713', ''),
     person('rhufaed-gwyllach', 'Rhufaed Gwyllach', 'male', '1715', ''),
     person('eryndor-gwyllach', 'Eryndor Gwyllach', 'male', '1720', ''),
@@ -241,7 +249,7 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert drei feste Jahreszahlen (Rhydderch 1653, Mablen 1656, Rhovan 1659); alle übrigen Geburtsjahre wurden davon ausgehend mit einem gesunden Abstand von rund 25–30 Jahren zum jeweils ältesten Kind rückwärts (Elterngenerationen) bzw. vorwärts (jüngste, nach Aussehen datierte Generation) hochgerechnet. Die Kopfschaft wechselt ungewöhnlich zwischen zwei Söhnelinien Maelgorans hin und her: Tewrig und Odrith sind Geschwister, Rhydderch (Tewrigs Sohn) und Rhovan (Odriths Sohn) sind Cousins, dennoch folgen laut Hof-Tabelle beide unmittelbar aufeinander in der Erbfolge. Maelgorans dritter, namenloser Sohn/Tochter ist in der Quelle komplett ohne Namen und Portrait überliefert (nur ein unbeschriftetes „???"-Feld mit Dolch); das Geschlecht wurde mangels jeglicher Angabe angenommen. Cyrelle (Maelgorans Frau) und Mablen (Tewrigs Tochter) sind namentlich genannt, führen aber ebenfalls nur das unbeschriftete Platzhalterbild und bleiben daher portraitlos. Die beigefügte Grafik zeigt kein Baumdiagramm, sondern ein dekoratives Einzelporträt eines Familienmitglieds ohne Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Wie bei den übrigen niederen Häusern wurden alle weiblichen Kernmitglieder mit unbenanntem, kinderlosem Ehepartner (die namenlose Tochter, Mablen, Talaneth, Anelen) systematisch als Wegverheiratete Linie mit Platzhalter „Unbekanntes Haus" markiert. Haus Gwyllach ist ein bürgerliches Haus (kein Rittergeschlecht) und sitzt daher außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS, nutzt aber denselben generischen Gwynthor-Sitz wie die dortigen niederen Ritterhäuser. Es führt den eisernen Wappenrahmen; das Stand-Icon ist bis auf Weiteres ein Platzhalter (Page-Icon) laut ausdrücklicher User-Vorgabe. Externe Portraitquellen wurden als lokale Projektdateien gesichert.',
+    sourceNote: 'Die Quelltabelle überliefert drei feste Jahreszahlen (Rhydderch 1653, Mablen 1656, Rhovan 1659); alle übrigen Geburtsjahre wurden davon ausgehend mit einem gesunden Abstand von rund 25–30 Jahren zum jeweils ältesten Kind rückwärts (Elterngenerationen) bzw. vorwärts (jüngste, nach Aussehen datierte Generation) hochgerechnet. Anders als bei den Ritterhäusern vererbt sich die Kopfschaft bei diesem bürgerlichen Haus nicht nach starrer Erstgeburt, sondern nach Eignung (User-Vorgabe); daher wechselt sie zwischen Maelgorans zwei Söhnelinien hin und her: Tewrig und Odrith sind Geschwister, Rhydderch (Tewrigs Sohn) und Rhovan (Odriths Sohn) sind Cousins, dennoch folgen laut Hof-Tabelle beide unmittelbar aufeinander in der Erbfolge. Die Kette wurde per User-Vorgabe über die Quelltabelle hinaus fortgeschrieben: Rhovans vorgesehene Erbfolge ist Drystan, danach dessen Sohn Meirion (beide erhalten den Kopf-Kartenrahmen und einen entsprechenden Titel, obwohl Rhovan noch lebt und amtiert). Maelgorans dritter, namenloser Sohn/Tochter ist in der Quelle komplett ohne Namen und Portrait überliefert (nur ein unbeschriftetes „???"-Feld mit Dolch); das Geschlecht wurde mangels jeglicher Angabe angenommen. Cyrelle (Maelgorans Frau) und Mablen (Tewrigs Tochter) sind namentlich genannt, führen aber ebenfalls nur das unbeschriftete Platzhalterbild und bleiben daher portraitlos. Die beigefügte Grafik zeigt kein Baumdiagramm, sondern ein dekoratives Einzelporträt eines Familienmitglieds ohne Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Wie bei den übrigen niederen Häusern wurden alle weiblichen Kernmitglieder mit unbenanntem, kinderlosem Ehepartner (die namenlose Tochter, Mablen, Talaneth, Anelen) systematisch als Wegverheiratete Linie mit Platzhalter „Unbekanntes Haus" markiert. Haus Gwyllach ist ein bürgerliches Haus (kein Rittergeschlecht) und sitzt daher außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS, nutzt aber denselben generischen Gwynthor-Sitz wie die dortigen niederen Ritterhäuser. Es führt den eisernen Wappenrahmen; das Stand-Icon ist bis auf Weiteres ein Platzhalter (Page-Icon) laut ausdrücklicher User-Vorgabe. Externe Portraitquellen wurden als lokale Projektdateien gesichert.',
     blankFamily: false,
     sourceRevision: 1
   }
