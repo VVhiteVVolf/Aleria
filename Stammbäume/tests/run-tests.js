@@ -2075,7 +2075,7 @@ test('bildet das Ritterherrenhaus Cludwyr mit geteiltem Rhyddid-Paar und Herkunf
   assert.equal(family.persons.length, 32);
   assert.equal(family.partnerships.length, 11);
   assert.equal(family.parentages.length, 20);
-  assert.equal(family.cadetBranches.length, 2);
+  assert.equal(family.cadetBranches.length, 1, 'Nur Klervis Herkunfts-Medaillon; Evangelins Rückverweis ist unerwünscht.');
   assert.equal(family.timeJumps.length, 0);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-saith-tirion');
   assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
@@ -2152,18 +2152,17 @@ test('bildet das Ritterherrenhaus Cludwyr mit geteiltem Rhyddid-Paar und Herkunf
     'Der Cludwyr-Gavin kollidiert nicht mit dem hauslosen Tlawd-Gavin.'
   );
 
-  assert.ok(family.cadetBranches.every(branch => branch.linkType === 'married-away'));
-  assert.ok(family.cadetBranches.every(branch => branch.crestFrame === 'silver'));
-  assert.ok(family.cadetBranches.every(branch => branch.subtitle === 'Herkunftshaus der Braut'));
-  assert.deepEqual(
-    family.cadetBranches.map(branch => branch.targetFamilyId).sort(),
-    ['haus-balchder', 'haus-rhyddid']
-  );
+  const klerviBranch = family.cadetBranches[0];
+  assert.equal(klerviBranch.linkType, 'married-away');
+  assert.equal(klerviBranch.crestFrame, 'silver');
+  assert.equal(klerviBranch.subtitle, 'Herkunftshaus der Braut');
+  assert.equal(klerviBranch.parentPartnershipId, 'marriage-rhain-klervi');
+  assert.equal(klerviBranch.targetFamilyId, 'haus-balchder');
 
   const cludwyrCrest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
   assert.match(cludwyrCrest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
   assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
-  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 2);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 1);
 });
 
 test('liefert für Haus Cludwyr alle belegten Portraits lokal aus', async () => {

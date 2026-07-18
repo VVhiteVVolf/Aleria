@@ -184,17 +184,8 @@ export const HOUSE_CLUDWYR_FAMILY = Object.freeze({
     }
   },
   cadetBranches: [
-    createMarriedAwayBranch({
-      id: 'married-in-rhyddid-evangelin',
-      name: 'Haus Rhyddid',
-      subtitle: 'Herkunftshaus der Braut',
-      parentPartnershipId: 'marriage-godwyn-evangelin',
-      houseId: 'house-rhyddid',
-      targetFamilyId: 'haus-rhyddid',
-      emblem: 'assets/images/houses/haus-rhyddid.png',
-      crestFrame: 'silver',
-      notes: 'Evangelin heiratete aus dem Ritterherrenhaus Rhyddid in das Haus Cludwyr ein; im Rhyddid-Stammbaum ist die Ehe als Wegheirat vermerkt.'
-    }),
+    // Evangelins Herkunft ist bereits im Rhyddid-Stammbaum als Wegheirat vermerkt;
+    // ein Rückverweis-Medaillon ist hier nicht erwünscht.
     createMarriedAwayBranch({
       id: 'married-in-balchder-klervi',
       name: 'Haus Balchder',
@@ -219,6 +210,6 @@ export const HOUSE_CLUDWYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Cludwyr-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Godwyn und Evangelin Rhyddid sind mit dem Rhyddid-Stammbaum geteilt; ihre Kinder führen die Cludwyr-Linie fort. Die eingeheirateten Ehepartner entstammen dem einfachen Volk und sind ohne Hausnamen überliefert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Cludwyr den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });
