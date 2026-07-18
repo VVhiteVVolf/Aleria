@@ -126,7 +126,7 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
       title: 'Lehenswartin von Glastraeth'
     }),
     person('glyndwr-chwedlonol', 'Glyndwr Chwedonol', 'male', '1702', ''),
-    person('marven-balchder', 'Marven Balchder', 'male', '????', '', 'house-balchder', { familyRole: 'married' }),
+    person('marven-balchder', 'Marven Balchder', 'male', '1698', '', 'house-balchder', { familyRole: 'married' }),
     spouse('kathleen', 'Kathleen', 'female', '1706', ''),
 
     // Kind von Rhonwen und Cieran
@@ -247,6 +247,6 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Chwedonol-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Als matriarchales Haus vererben die Frauen die Führung (Erbfolge Meredithe–Gwenhwyfar–Niniane–Morgaine–Eleyne); Arianwen wurde an Haus Rhyddid wegverheiratet und teilt sich dort mit Kerwin Rhyddid. Soffi Gwared ist Morgaines aufgenommenes Mündel. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Chwedonol den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherrin.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

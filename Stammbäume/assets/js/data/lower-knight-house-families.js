@@ -1,18 +1,26 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { HOUSE_AWENYDD_FAMILY } from './house-awenydd-family.js';
+import { HOUSE_BALCHDER_FAMILY } from './house-balchder-family.js';
 import { HOUSE_CHWEDLONOL_FAMILY } from './house-chwedlonol-family.js';
 import { HOUSE_CLUDWYR_FAMILY } from './house-cludwyr-family.js';
+import { HOUSE_ENEINIOG_FAMILY } from './house-eneiniog-family.js';
 import { HOUSE_GELYN_FAMILY } from './house-gelyn-family.js';
+import { HOUSE_GOSTYN_FAMILY } from './house-gostyn-family.js';
 import { HOUSE_RHYDDID_FAMILY } from './house-rhyddid-family.js';
 import { HOUSE_TLAWD_FAMILY } from './house-tlawd-family.js';
 
 // Bereits ausgearbeitete Ritterherrenhäuser ersetzen ihre vorbereitete Leerakte.
 const ELABORATED_KNIGHT_FAMILIES = Object.freeze({
+  balchder: HOUSE_BALCHDER_FAMILY,
   tlawd: HOUSE_TLAWD_FAMILY,
   rhyddid: HOUSE_RHYDDID_FAMILY,
   gelyn: HOUSE_GELYN_FAMILY,
   cludwyr: HOUSE_CLUDWYR_FAMILY,
-  chwedlonol: HOUSE_CHWEDLONOL_FAMILY
+  chwedlonol: HOUSE_CHWEDLONOL_FAMILY,
+  eneiniog: HOUSE_ENEINIOG_FAMILY,
+  gostyn: HOUSE_GOSTYN_FAMILY,
+  awenydd: HOUSE_AWENYDD_FAMILY
 });
 
 export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
@@ -23,7 +31,7 @@ export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'chwedlonol', liege: 'Saethwyr', secondarySeats: Object.freeze(['Glastraeth']) }),
   Object.freeze({ slug: 'balchder', liege: 'Draig' }),
   Object.freeze({ slug: 'eneiniog', liege: 'Saethwyr' }),
-  Object.freeze({ slug: 'gostyn', liege: 'Gafyr' }),
+  Object.freeze({ slug: 'gostyn', liege: 'Gafyr', secondarySeats: Object.freeze(['Bronfelen']) }),
   Object.freeze({ slug: 'awenydd', liege: 'Draig' }),
   Object.freeze({ slug: 'awenor', liege: 'Draig' }),
   Object.freeze({ slug: 'loer', liege: 'Draig', secondarySeats: Object.freeze(['Craithglyn']) })
