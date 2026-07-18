@@ -35,6 +35,8 @@ import { HOUSE_GARRAEL_FAMILY } from '../assets/js/data/house-garrael-family.js'
 import { HOUSE_GARRAEL_PORTRAITS } from '../assets/js/data/house-garrael-portraits.js';
 import { HOUSE_GWYLLACH_FAMILY } from '../assets/js/data/house-gwyllach-family.js';
 import { HOUSE_GWYLLACH_PORTRAITS } from '../assets/js/data/house-gwyllach-portraits.js';
+import { HOUSE_SGRECHIWR_FAMILY } from '../assets/js/data/house-sgrechiwr-family.js';
+import { HOUSE_SGRECHIWR_PORTRAITS } from '../assets/js/data/house-sgrechiwr-portraits.js';
 import { HOUSE_LOER_FAMILY } from '../assets/js/data/house-loer-family.js';
 import { HOUSE_LOER_PORTRAITS } from '../assets/js/data/house-loer-portraits.js';
 import { HOUSE_AWENYDD_FAMILY } from '../assets/js/data/house-awenydd-family.js';
@@ -3761,6 +3763,165 @@ test('liefert für Haus Gwyllach alle 19 belegten Portraits lokal aus', async ()
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
 
+test('bildet das bürgerliche Haus Sgrechiwr aus Lynthor mit fünfstufiger Erbfolge nach Eignung ab', () => {
+  const family = assertValidFamily(HOUSE_SGRECHIWR_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 32);
+  assert.equal(family.partnerships.length, 11);
+  assert.equal(family.parentages.length, 20);
+  assert.equal(family.cadetBranches.length, 3);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-emrys-spouse');
+  assert.equal(family.lineage.crestFrame, 'iron', 'Bürgerliche Häuser führen den eisernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.fromYear, '????');
+  assert.equal(family.lineage.timeGap.toYear, '1638');
+  assert.equal(family.document.houseProfile.rankId, 'commoner');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+  assert.equal(family.document.houseProfile.liegeHouseName, 'Haus Draig');
+  // Sgrechiwr sitzt mit dem eigenen Sitz Lynthor abseits des generischen Gwynthor-Pfades.
+  assert.deepEqual(
+    createFolderPathFromHouseProfile(family.document.houseProfile),
+    ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Lynthor']
+  );
+
+  // Bürgerliche Erbfolge nach Eignung statt Erstgeburt: die Kette reicht vom Begründer über
+  // den amtierenden Gareth hinaus bis zu den vorgesehenen Erben Brân und Cadell (User-Vorgabe).
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
+    [
+      'emrys-sgrechiwr', 'dafydd-sgrechiwr', 'gareth-sgrechiwr', 'cadogan-sgrechiwr',
+      'colwyn-sgrechiwr', 'godwyn-sgrechiwr', 'bran-sgrechiwr', 'cadell-sgrechiwr'
+    ]
+  );
+
+  assert.equal(graph.getPerson('emrys-sgrechiwr').title, 'Begründer des bürgerlichen Hauses Sgrechiwr');
+  assert.equal(graph.getPerson('gareth-sgrechiwr').title, 'Oberhaupt des Hauses Sgrechiwr');
+  assert.equal(graph.getPerson('cadell-sgrechiwr').title, 'Fünfter Erbe des Hauses Sgrechiwr');
+  assert.equal(graph.getPerson('emrys-sgrechiwr').status, 'dead');
+  assert.equal(graph.getPerson('gareth-sgrechiwr').status, 'alive');
+  assert.equal(graph.getPerson('colwyn-sgrechiwr').status, 'alive');
+
+  const expectedChildren = new Map([
+    ['emrys-sgrechiwr', ['dafydd-sgrechiwr', 'rhisiart-sgrechiwr', 'wenna-sgrechiwr']],
+    ['dafydd-sgrechiwr', ['gareth-sgrechiwr', 'seren-sgrechiwr']],
+    ['rhisiart-sgrechiwr', ['gerallt-sgrechiwr']],
+    ['gareth-sgrechiwr', ['cadogan-sgrechiwr', 'colwyn-sgrechiwr', 'fflur-sgrechiwr']],
+    ['gerallt-sgrechiwr', ['amlodd-sgrechiwr', 'godwyn-sgrechiwr']],
+    ['cadogan-sgrechiwr', ['eluned-sgrechiwr', 'meinwen-sgrechiwr']],
+    ['amlodd-sgrechiwr', ['angwen-sgrechiwr', 'euros-sgrechiwr']],
+    ['godwyn-sgrechiwr', ['arial-sgrechiwr', 'bran-sgrechiwr', 'cadell-sgrechiwr', 'dylis-sgrechiwr', 'eirwen-sgrechiwr']]
+  ]);
+  expectedChildren.forEach((childIds, personId) => {
+    assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
+  });
+
+  // Colwyn bleibt laut ausdrücklicher Überlieferung unverheiratet und kinderlos, obwohl er
+  // in der Erbfolge steht.
+  assert.equal(graph.getPartners('colwyn-sgrechiwr').length, 0);
+  assert.equal(graph.getChildren('colwyn-sgrechiwr').length, 0);
+
+  const founderParentages = family.parentages.filter(parentage => parentage.partnershipId === 'marriage-emrys-spouse');
+  assert.equal(founderParentages.length, 3);
+  assert.ok(founderParentages.every(parentage => parentage.type === 'claimed' && parentage.certainty === 'probable'));
+
+  family.parentages.forEach(parentage => {
+    const childBirth = Number(graph.getPerson(parentage.childId)?.birth);
+    if (!Number.isInteger(childBirth)) return;
+    parentage.parentIds.forEach(parentId => {
+      const parentBirth = Number(graph.getPerson(parentId)?.birth);
+      if (!Number.isInteger(parentBirth)) return;
+      const ageAtBirth = childBirth - parentBirth;
+      assert.ok(ageAtBirth >= 18 && ageAtBirth <= 55, `${parentId} besitzt ein plausibles Alter bei der Geburt von ${parentage.childId}.`);
+    });
+  });
+
+  const peopleWithUnknownPartners = [
+    'dafydd-sgrechiwr', 'wenna-sgrechiwr', 'rhisiart-sgrechiwr', 'gareth-sgrechiwr',
+    'seren-sgrechiwr', 'gerallt-sgrechiwr', 'cadogan-sgrechiwr', 'fflur-sgrechiwr', 'amlodd-sgrechiwr'
+  ];
+  const unknownPartners = peopleWithUnknownPartners.map(personId => {
+    const partners = graph.getPartners(personId);
+    assert.equal(partners.length, 1, `${personId} besitzt genau den unbeschrifteten Partner aus der Quelltabelle.`);
+    assert.equal(partners[0].status, 'unknown');
+    assert.equal(partners[0].familyRole, 'married');
+    return partners[0];
+  });
+  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 9);
+
+  // Godwyn ist mit Aerona Balchder verheiratet, die bereits in Haus Balchders eigener Akte
+  // als Tochter Dalvins geführt wird (geteilte Person, Cludwyr/Rhyddid-Godwyn-Muster).
+  const aerona = graph.getPerson('aerona-balchder');
+  assert.equal(aerona.houseId, 'house-balchder');
+  assert.equal(aerona.portrait, '');
+
+  const unpartneredPeople = [
+    'eluned-sgrechiwr', 'meinwen-sgrechiwr', 'euros-sgrechiwr', 'angwen-sgrechiwr',
+    'eirwen-sgrechiwr', 'dylis-sgrechiwr', 'bran-sgrechiwr', 'arial-sgrechiwr', 'cadell-sgrechiwr'
+  ];
+  assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
+
+  const branchByPartnership = new Map(family.cadetBranches.map(branch => [branch.parentPartnershipId, branch]));
+  ['marriage-wenna-spouse', 'marriage-seren-spouse', 'marriage-fflur-spouse'].forEach(partnershipId => {
+    const branch = branchByPartnership.get(partnershipId);
+    assert.equal(branch.name, 'Unbekanntes Haus');
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.crestFrame, 'gold');
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 3);
+  const crest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(crest.data.crestFrameAsset, /crest-iron\.png$/, 'Der Wappenknoten nutzt den eisernen Rahmen.');
+
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['emrys-sgrechiwr']);
+  const pendingIds = ['emrys-sgrechiwr'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    assert.ok(entry, 'Jeder verknüpfte Sgrechiwr-Knoten ist im Diagramm vorhanden.');
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('liefert für Haus Sgrechiwr alle 16 belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_SGRECHIWR_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-sgrechiwr/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_SGRECHIWR_PORTRAITS).length, 16);
+  assert.equal(Object.keys(sourceManifest).length, 16);
+  assert.equal(picturedPeople.length, 16);
+  assert.equal(placeholderPeople.length, 16);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_SGRECHIWR_PORTRAITS[personId]));
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(Object.entries(HOUSE_SGRECHIWR_PORTRAITS).map(async ([personId, portrait]) => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitzuordnung ohne Sgrechiwr-Person: ${personId}`);
+    assert.equal(person.portrait, portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+
+  const emblem = await readFile(new URL('../assets/images/houses/haus-sgrechiwr.png', import.meta.url));
+  assert.ok(emblem.length > 100);
+  assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -4134,9 +4295,9 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   ]);
   // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie
   // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
-  // Gwyllach ist ein bürgerliches Haus außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS und wird
-  // ebenfalls gesondert geprüft (nutzt aber deren generischen Gwynthor-Sitz).
-  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 2);
+  // Gwyllach und Sgrechiwr sind bürgerliche Häuser außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS
+  // und werden ebenfalls gesondert geprüft.
+  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 3);
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
     const profile = loaded.family.document.houseProfile;
@@ -4177,6 +4338,19 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.match(gwyllachProfile.regionEmblems.seat, /^assets\/images\/regions\//);
   assert.equal(gwyllachProfile.liegeHouseId, 'haus-draig');
   assert.equal(gwyllachProfile.liegeHouseName, 'Haus Draig');
+
+  const sgrechiwrLoaded = loadFamilyById('haus-sgrechiwr', storage);
+  const sgrechiwrProfile = sgrechiwrLoaded.family.document.houseProfile;
+  const sgrechiwrPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Lynthor'];
+  assert.deepEqual(sgrechiwrLoaded.folderPath, sgrechiwrPath);
+  assert.deepEqual(createFolderPathFromHouseProfile(sgrechiwrProfile), sgrechiwrPath);
+  assert.equal(sgrechiwrProfile.rankId, 'commoner');
+  assert.match(sgrechiwrProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  assert.match(sgrechiwrProfile.regionEmblems.county, /^assets\/images\/regions\//);
+  assert.match(sgrechiwrProfile.regionEmblems.barony, /^assets\/images\/regions\//);
+  assert.match(sgrechiwrProfile.regionEmblems.seat, /^assets\/images\/regions\//);
+  assert.equal(sgrechiwrProfile.liegeHouseId, 'haus-draig');
+  assert.equal(sgrechiwrProfile.liegeHouseName, 'Haus Draig');
 
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
@@ -4229,6 +4403,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/houses/haus-gwyvern.png',
     'assets/images/houses/haus-garrael.png',
     'assets/images/houses/haus-gwyllach.png',
+    'assets/images/houses/haus-sgrechiwr.png',
     ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => family.document.emblem),
     'assets/images/regions/artus-streben.png',
     'assets/images/regions/castellbryn.png',
@@ -4239,7 +4414,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/regions/rhosmere.png',
     'assets/images/regions/abergwint.png',
     'assets/images/regions/camruisge.png',
-    'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png'
+    'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png',
+    'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png'
   ].map(async path => {
     const image = await readFile(new URL(`../${path}`, import.meta.url));
     assert.ok(image.length > 100, `${path} ist leer.`);

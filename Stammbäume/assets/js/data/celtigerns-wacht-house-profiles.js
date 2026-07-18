@@ -9,7 +9,8 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
     Gwynthor: 'assets/images/regions/gwynthor.png',
     Rhosmere: 'assets/images/regions/rhosmere.png',
     // Neue Sitz-Wappen liegen in einer nach der Orts-Hierarchie verschachtelten Ordnerstruktur.
-    Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png'
+    Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png',
+    Lynthor: 'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png'
   }),
   baronies: Object.freeze({
     'Artus Streben': 'assets/images/regions/artus-streben.png',
@@ -59,6 +60,12 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   // Bürgerliches Haus, kein Rittergeschlecht: sitzt im generischen Gwynthor-Pfad, aber
   // außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS (die ist strikt an rankId 'knight' gebunden).
   gwyllach: profile('commoner', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'], {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  }),
+  // Bürgerliches Haus aus Lynthor, einem eigenen Sitz direkt unter Llamreis Ankunft
+  // (Geschwister-Eintrag zu Gwynthor, nicht der generische Gwynthor-Pfad).
+  sgrechiwr: profile('commoner', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Lynthor'], {
     liegeHouseId: 'haus-draig',
     liegeHouseName: 'Haus Draig'
   })
