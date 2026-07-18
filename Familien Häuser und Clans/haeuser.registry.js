@@ -88,6 +88,25 @@
       ],
       tags: ["arwydd", "castellbryn", "cenyr", "ritterfuerst", "haus"],
     },
+    {
+      id: "haus-chwedonl",
+      slug: "haus-chwedonl",
+      aliases: [
+        "chwedonl",
+        "haus_chwedonl",
+        "haus-chwedonl",
+      ],
+      name: "Haus Chwedonl",
+      status: HOUSE_STATUS.ACTIVE,
+      type: HOUSE_TYPES.HOUSE,
+      data: "data/haus-chwedonl.data.js",
+      inlineCollection: "familien_haeuser_und_clans_inline_content",
+      sceneCollection: "familien_haeuser_und_clans_scenes",
+      hierarchy: [
+        { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
+      ],
+      tags: ["chwedonl", "haus"],
+    },
   ].map(Object.freeze);
 
   function all() {
