@@ -304,6 +304,43 @@ export function createFamilyStore(initialFamily, options = {}) {
     return id;
   }
 
+  function updatePartnership(partnershipId, values) {
+    return commit('partnership-updated', draft => {
+      const partnership = draft.partnerships.find(item => item.id === partnershipId);
+      if (!partnership) throw new Error('Die Verbindung wurde nicht gefunden.');
+      const allowed = ['type', 'status', 'start', 'end', 'certainty', 'visibility', 'notes'];
+      allowed.forEach(key => {
+        if (Object.hasOwn(values, key)) partnership[key] = values[key];
+      });
+    }, { partnershipId });
+  }
+
+  function updateParentage(parentageId, values) {
+    return commit('parentage-updated', draft => {
+      const parentage = draft.parentages.find(item => item.id === parentageId);
+      if (!parentage) throw new Error('Die Abstammung wurde nicht gefunden.');
+      const allowed = ['type', 'legitimacy', 'certainty', 'visibility', 'notes'];
+      allowed.forEach(key => {
+        if (Object.hasOwn(values, key)) parentage[key] = values[key];
+      });
+    }, { parentageId });
+  }
+
+  function ensureHouse(values) {
+    const houseId = String(values?.id || '').trim();
+    if (!houseId || family.houses.some(house => house.id === houseId)) return false;
+    commit('house-added', draft => {
+      draft.houses.push({
+        id: houseId,
+        name: String(values.name || houseId).trim(),
+        motto: String(values.motto || '').trim(),
+        emblem: String(values.emblem || '').trim(),
+        status: 'active'
+      });
+    }, { houseId });
+    return true;
+  }
+
   function addParentage(values) {
     const parentIds = [...new Set(values.parentIds || [])];
     const existing = family.parentages.find(parentage => (
@@ -536,7 +573,10 @@ export function createFamilyStore(initialFamily, options = {}) {
     setPersonExtension,
     deletePerson,
     addPartnership,
+    updatePartnership,
     addParentage,
+    updateParentage,
+    ensureHouse,
     setOrientation,
     updateDocument,
     setRelationshipColors,

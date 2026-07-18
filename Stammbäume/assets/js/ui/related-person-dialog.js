@@ -87,6 +87,10 @@ export function createRelatedPersonDialog(documentRef = document) {
     lineageRoleSelect.value = DEFAULT_PERSON_LINEAGE_ROLE;
     form.elements.namedItem('certainty').value = 'confirmed';
     form.elements.namedItem('visibility').value = 'public';
+    // Voreinstellungen aus „Beziehung modifizieren“ (z. B. Verlobung, Adoption, Mündel).
+    if (options.partnershipType) partnershipType.value = options.partnershipType;
+    if (options.parentageType) parentageType.value = options.parentageType;
+    if (options.legitimacy) legitimacy.value = options.legitimacy;
     syncFields();
     dialog.showModal();
     form.elements.namedItem('name').focus();

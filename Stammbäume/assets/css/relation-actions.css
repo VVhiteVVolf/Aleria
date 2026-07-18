@@ -1,0 +1,137 @@
+/* „Beziehung modifizieren“ – Aktionsmenü für die ausgewählte Person. */
+
+.relation-actions-dialog {
+  width: min(680px, calc(100vw - 2rem));
+}
+
+.relation-actions-header {
+  align-items: flex-start;
+}
+
+.relation-actions-hero {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.relation-actions-hero h2 {
+  margin: 0.1rem 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.relation-actions-portrait {
+  width: 56px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid var(--gold-500);
+  border-radius: 4px;
+  background: var(--paper-200);
+  box-shadow: 0 0.35rem 0.9rem rgba(39, 25, 15, 0.28);
+}
+
+.relation-actions-life {
+  margin: 0;
+  color: var(--ink-650);
+  font-size: 0.85rem;
+}
+
+.relation-actions-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 0.55rem;
+}
+
+.relation-action-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--paper-300);
+  border-radius: 6px;
+  background: linear-gradient(160deg, var(--paper-50), var(--paper-100));
+  color: var(--ink-800);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+}
+
+.relation-action-card:hover:not(:disabled),
+.relation-action-card:focus-visible {
+  border-color: var(--gold-500);
+  box-shadow: 0 0.4rem 1.1rem rgba(184, 139, 55, 0.28);
+  transform: translateY(-1px);
+}
+
+.relation-action-card:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.relation-action-glyph {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--gold-500);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f7ecd2, var(--paper-200));
+  color: var(--gold-500);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.relation-action-text {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.relation-action-text strong {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
+.relation-action-text small {
+  color: var(--ink-650);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.relation-actions-step {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.relation-step-lead {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.relation-step-note {
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border-left: 3px solid var(--gold-500);
+  background: var(--paper-100);
+  color: var(--ink-650);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.relation-step-checkbox {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  color: var(--ink-800);
+  font-size: 0.9rem;
+}
+
+.relation-actions-step [data-partner-source] {
+  display: grid;
+  gap: 0.75rem;
+}

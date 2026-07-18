@@ -27,6 +27,11 @@ import { HOUSE_GELYN_FAMILY } from '../assets/js/data/house-gelyn-family.js';
 import { HOUSE_GELYN_PORTRAITS } from '../assets/js/data/house-gelyn-portraits.js';
 import { HOUSE_CLUDWYR_FAMILY } from '../assets/js/data/house-cludwyr-family.js';
 import { HOUSE_CLUDWYR_PORTRAITS } from '../assets/js/data/house-cludwyr-portraits.js';
+import {
+  buildImportedPersonValues,
+  findExistingImport,
+  relationForAction
+} from '../assets/js/services/relation-actions.js';
 import { HOUSE_GWYVERN_FAMILY } from '../assets/js/data/house-gwyvern-family.js';
 import { HOUSE_GWYVERN_PORTRAITS } from '../assets/js/data/house-gwyvern-portraits.js';
 import { HOUSE_DRAIG_FAMILY } from '../assets/js/data/house-draig-family.js';
@@ -2180,6 +2185,73 @@ test('liefert für Haus Cludwyr alle belegten Portraits lokal aus', async () => 
     assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
+});
+
+test('modifiziert Beziehungen über den Store: Scheidung, Eheschluss aus Verlobung, Legitimierung, Hauszugang', () => {
+  const store = createFamilyStore(HOUSE_TLAWD_FAMILY);
+
+  store.updatePartnership('marriage-mair-gavin', { status: 'divorced', end: '1740' });
+  let family = store.getState().family;
+  const divorced = family.partnerships.find(item => item.id === 'marriage-mair-gavin');
+  assert.equal(divorced.status, 'divorced');
+  assert.equal(divorced.end, '1740');
+
+  store.updatePartnership('marriage-mair-gavin', { type: 'engagement', status: 'active' });
+  store.updatePartnership('marriage-mair-gavin', { type: 'marriage', status: 'active', start: '1740' });
+  family = store.getState().family;
+  assert.equal(family.partnerships.find(item => item.id === 'marriage-mair-gavin').type, 'marriage');
+
+  const parentageId = family.parentages.find(item => item.childId === 'owain-tlawd').id;
+  store.updateParentage(parentageId, { legitimacy: 'legitimized' });
+  family = store.getState().family;
+  assert.equal(family.parentages.find(item => item.id === parentageId).legitimacy, 'legitimized');
+
+  assert.equal(store.ensureHouse({ id: 'house-tlawd', name: 'Haus Tlawd' }), false, 'Bestehende Häuser werden nicht doppelt angelegt.');
+  assert.equal(store.ensureHouse({ id: 'house-draig', name: 'Haus Draig', emblem: 'assets/images/houses/haus-draig.png' }), true);
+  family = store.getState().family;
+  assert.equal(family.houses.filter(house => house.id === 'house-tlawd').length, 1);
+  assert.equal(family.houses.find(house => house.id === 'house-draig')?.name, 'Haus Draig');
+
+  assert.throws(() => store.updatePartnership('fehlt', { status: 'ended' }), /nicht gefunden/);
+  assert.throws(() => store.updateParentage('fehlt', { legitimacy: 'legitimized' }), /nicht gefunden/);
+});
+
+test('verlobt eine Person registerübergreifend samt importierter Registerakte (Idwal-Beispiel)', () => {
+  const store = createFamilyStore(HOUSE_DRAIG_FAMILY);
+  const sourceFamily = assertValidFamily(HOUSE_TLAWD_FAMILY).family;
+  const sourcePerson = sourceFamily.persons.find(person => person.id === 'taran-tlawd');
+
+  assert.equal(findExistingImport(store.getState().family, sourcePerson), null);
+  const imported = buildImportedPersonValues(sourceFamily, sourcePerson, {
+    targetFamily: store.getState().family,
+    familyRole: 'married'
+  });
+  assert.equal(imported.id, 'taran-tlawd');
+  assert.equal(imported.name, 'Taran Tlawd', 'Fremde Personen tragen im Zielbaum den vollen Hausnamen.');
+  assert.equal(imported.worldPersonId, 'person--haus-tlawd--taran-tlawd');
+  assert.equal(imported.portrait, HOUSE_TLAWD_PORTRAITS['taran-tlawd']);
+  assert.deepEqual(imported.house, { id: 'house-tlawd', name: 'Haus Tlawd', emblem: 'assets/images/houses/haus-tlawd.png' });
+
+  const { house, ...personValues } = imported;
+  store.ensureHouse(house);
+  store.addRelatedPerson('idwal-draig', personValues, relationForAction('betroth'));
+
+  const family = store.getState().family;
+  const importedPerson = family.persons.find(person => person.id === 'taran-tlawd');
+  assert.equal(importedPerson.worldPersonId, 'person--haus-tlawd--taran-tlawd');
+  assert.equal(importedPerson.houseId, 'house-tlawd');
+  assert.ok(family.houses.some(item => item.id === 'house-tlawd'));
+  const engagement = family.partnerships.find(partnership => (
+    partnership.type === 'engagement'
+    && partnership.participantIds.includes('idwal-draig')
+    && partnership.participantIds.includes('taran-tlawd')
+  ));
+  assert.ok(engagement, 'Idwal Draig und Taran Tlawd sind nun verlobt.');
+  assert.equal(engagement.status, 'active');
+
+  // Ein erneuter Import findet die bereits übernommene Person wieder.
+  assert.equal(findExistingImport(family, sourcePerson)?.id, 'taran-tlawd');
+  assert.throws(() => relationForAction('unbekannt'), /keine Verbindungsart/);
 });
 
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {

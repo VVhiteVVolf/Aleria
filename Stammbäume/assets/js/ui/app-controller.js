@@ -31,6 +31,12 @@ import { createNewFamilyDialog } from './new-family-dialog.js';
 import { createPersonDialog } from './person-dialog.js';
 import { renderPersonInspector } from './person-inspector.js';
 import { createRelatedPersonDialog } from './related-person-dialog.js';
+import { createRelationActionsDialog } from './relation-actions-dialog.js';
+import {
+  buildImportedPersonValues,
+  findExistingImport,
+  relationForAction
+} from '../services/relation-actions.js';
 import { createRelationshipDialog } from './relationship-dialog.js';
 import { createTimeJumpDialog } from './time-jump-dialog.js';
 import { createToast } from './toast.js';
@@ -80,6 +86,7 @@ export function createAppController({
   });
   const personDialog = createPersonDialog(documentRef);
   const relatedPersonDialog = createRelatedPersonDialog(documentRef);
+  const relationActionsDialog = createRelationActionsDialog(documentRef, runtime);
   const relationshipDialog = createRelationshipDialog(documentRef);
   const lineColorsDialog = createLineColorsDialog(documentRef);
   const lineageDialog = createLineageDialog(documentRef);
@@ -147,6 +154,217 @@ export function createAppController({
     });
   }
 
+  function firstSpouseId(family, personId) {
+    const preferred = family.partnerships.find(partnership => (
+      partnership.participantIds.includes(personId)
+      && ['marriage', 'union'].includes(partnership.type)
+      && ['active', 'widowed'].includes(partnership.status)
+    )) || family.partnerships.find(partnership => partnership.participantIds.includes(personId));
+    return preferred?.participantIds.find(id => id !== personId) || '';
+  }
+
+  function openRelationActions(personId) {
+    const state = store.getState();
+    const person = state.family.persons.find(item => item.id === personId);
+    if (!person) return false;
+    relationActionsDialog.open(person, state.family);
+    return true;
+  }
+
+  function performRelationAction(actionId) {
+    const state = store.getState();
+    const person = state.family.persons.find(item => item.id === relationActionsDialog.getPersonId());
+    if (!person) throw new Error('Die Person wurde nicht gefunden.');
+    switch (actionId) {
+      case 'revive':
+        relationActionsDialog.close();
+        store.updatePerson(person.id, { death: '', status: 'alive' });
+        toast(`${person.name} wird wieder als lebend geführt.`);
+        return;
+      case 'legitimize': {
+        const targets = state.family.parentages.filter(parentage => (
+          parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
+        ));
+        if (!targets.length) throw new Error('Für diese Person ist keine uneheliche Abstammung eingetragen.');
+        relationActionsDialog.close();
+        targets.forEach(parentage => store.updateParentage(parentage.id, { legitimacy: 'legitimized' }));
+        toast(`${person.name} wurde legitimiert.`);
+        return;
+      }
+      case 'beget-child':
+        relationActionsDialog.close();
+        relatedPersonDialog.open(person.id, state.family, {
+          relationKind: 'child',
+          secondParentId: firstSpouseId(state.family, person.id),
+          heading: `Kind von ${person.name} zeugen`
+        });
+        return;
+      case 'adopt':
+        relationActionsDialog.close();
+        relatedPersonDialog.open(person.id, state.family, {
+          relationKind: 'child',
+          parentageType: 'adoptive',
+          secondParentId: firstSpouseId(state.family, person.id),
+          heading: `Adoptivkind von ${person.name} anlegen`
+        });
+        return;
+      case 'marry-away': {
+        const partnership = graph.getPartnerships(person.id)[0];
+        if (!partnership) throw new Error('Für ein Wegverheiratet-Medaillon braucht die Person zuerst eine Verbindung.');
+        relationActionsDialog.close();
+        cadetDialog.openCreate(state.family, partnership.id);
+        return;
+      }
+      default:
+        if (!relationActionsDialog.showStep(actionId)) {
+          throw new Error('Diese Aktion ist noch nicht verfügbar.');
+        }
+    }
+  }
+
+  function toastPartnerSuccess(action, person, partnerName) {
+    if (action === 'marry') toast(`${person.name} und ${partnerName} sind nun verheiratet.`);
+    else if (action === 'betroth') toast(`${person.name} und ${partnerName} sind nun verlobt.`);
+    else toast(`${partnerName} wurde als Mündel bei ${person.name} aufgenommen.`);
+  }
+
+  function connectExistingPartner(action, person, partnerId, family) {
+    if (action === 'import-ward') {
+      const spouseId = firstSpouseId(family, person.id);
+      const parentIds = [person.id, spouseId].filter(Boolean).filter(id => id !== partnerId);
+      store.addParentage({
+        childId: partnerId,
+        parentIds,
+        partnershipId: findPartnershipId(family, parentIds),
+        type: 'foster',
+        legitimacy: 'unknown',
+        certainty: 'confirmed',
+        visibility: 'public'
+      });
+      const wardPerson = family.persons.find(item => item.id === partnerId);
+      if (wardPerson && wardPerson.familyRole !== 'ward') store.updatePerson(partnerId, { familyRole: 'ward' });
+      return;
+    }
+    store.addPartnership({
+      participantIds: [person.id, partnerId],
+      type: action === 'marry' ? 'marriage' : 'engagement',
+      status: 'active',
+      certainty: 'confirmed',
+      visibility: 'public'
+    });
+  }
+
+  function submitPartnerAction(values, state, person) {
+    const action = values.action;
+    if (values.partnerSource === 'new') {
+      relationActionsDialog.close();
+      if (action === 'import-ward') {
+        relatedPersonDialog.open(person.id, state.family, {
+          relationKind: 'child',
+          parentageType: 'foster',
+          secondParentId: firstSpouseId(state.family, person.id),
+          heading: `Mündel bei ${person.name} aufnehmen`
+        });
+        return;
+      }
+      relatedPersonDialog.open(person.id, state.family, {
+        relationKind: 'partnership',
+        partnershipType: action === 'marry' ? 'marriage' : 'engagement',
+        heading: action === 'marry' ? `${person.name} verheiraten` : `${person.name} verloben`
+      });
+      return;
+    }
+    if (values.partnerSource === 'tree') {
+      if (!values.partnerPersonId) throw new Error('Bitte eine Person aus dem Baum wählen.');
+      relationActionsDialog.close();
+      connectExistingPartner(action, person, values.partnerPersonId, state.family);
+      const partner = state.family.persons.find(item => item.id === values.partnerPersonId);
+      toastPartnerSuccess(action, person, partner?.name || 'die gewählte Person');
+      return;
+    }
+    if (!values.registryFamilyId || !values.registryPersonId) {
+      throw new Error('Bitte Haus und Person aus dem Register wählen.');
+    }
+    const record = loadFamilyById(values.registryFamilyId, runtime.localStorage);
+    const sourcePerson = record?.family.persons.find(item => item.id === values.registryPersonId);
+    if (!sourcePerson) throw new Error('Die Person wurde im Register nicht gefunden.');
+    relationActionsDialog.close();
+    const existing = findExistingImport(state.family, sourcePerson);
+    if (existing) {
+      connectExistingPartner(action, person, existing.id, state.family);
+      toastPartnerSuccess(action, person, existing.name);
+      return;
+    }
+    const imported = buildImportedPersonValues(record.family, sourcePerson, {
+      targetFamily: state.family,
+      familyRole: action === 'import-ward' ? 'ward' : 'married'
+    });
+    const { house, ...personValues } = imported;
+    if (house) store.ensureHouse(house);
+    const relation = relationForAction(action, action === 'import-ward' ? firstSpouseId(state.family, person.id) : '');
+    store.addRelatedPerson(person.id, personValues, relation);
+    toastPartnerSuccess(action, person, personValues.name);
+  }
+
+  function submitRelationActionsForm() {
+    const values = relationActionsDialog.read();
+    const state = store.getState();
+    const person = state.family.persons.find(item => item.id === values.personId);
+    if (!person) throw new Error('Die Person wurde nicht gefunden.');
+
+    if (values.action === 'die') {
+      const year = values.deathUnknown ? '????' : values.deathYear;
+      if (!year) throw new Error('Bitte ein Todesjahr eintragen oder „unbekannt“ wählen.');
+      relationActionsDialog.close();
+      store.updatePerson(person.id, { death: year, status: 'dead' });
+      toast(values.deathUnknown
+        ? `${person.name} wird nun als verstorben geführt (Jahr unbekannt).`
+        : `${person.name} ist im Jahr ${year} verstorben.`);
+      return;
+    }
+
+    if (values.action === 'send-ward') {
+      if (!values.targetFamilyId) throw new Error('Bitte ein Zielhaus wählen.');
+      const record = loadFamilyById(values.targetFamilyId, runtime.localStorage);
+      if (!record) throw new Error('Die Zielakte wurde im Register nicht gefunden.');
+      relationActionsDialog.close();
+      const note = `Als Mündel an ${record.title} gegeben.`;
+      store.updatePerson(person.id, {
+        tags: [...new Set([...(person.tags || []), 'muendel-weggegeben'])],
+        notes: person.notes && !person.notes.includes(note) ? `${person.notes} ${note}` : (person.notes || note)
+      });
+      toast(`${person.name} wurde als Mündel an ${record.title} gegeben. Im Zielbaum lässt sich die Person über „Mündel aufnehmen“ einbinden.`, { duration: 6500 });
+      return;
+    }
+
+    if (values.action === 'divorce') {
+      const partnership = state.family.partnerships.find(item => item.id === values.partnershipId);
+      if (!partnership) throw new Error('Bitte eine Verbindung wählen.');
+      relationActionsDialog.close();
+      store.updatePartnership(partnership.id, {
+        status: partnership.type === 'engagement' ? 'ended' : 'divorced',
+        end: String(ALERIA_CURRENT_YEAR)
+      });
+      toast(partnership.type === 'engagement' ? 'Das Verlöbnis wurde gelöst.' : 'Die Ehe wurde geschieden.');
+      return;
+    }
+
+    if (values.action === 'upgrade-engagement') {
+      const partnership = state.family.partnerships.find(item => item.id === values.partnershipId);
+      if (!partnership) throw new Error('Bitte ein Verlöbnis wählen.');
+      relationActionsDialog.close();
+      store.updatePartnership(partnership.id, { type: 'marriage', status: 'active', start: String(ALERIA_CURRENT_YEAR) });
+      toast('Aus dem Verlöbnis wurde eine Ehe.');
+      return;
+    }
+
+    if (['marry', 'betroth', 'import-ward'].includes(values.action)) {
+      submitPartnerAction(values, state, person);
+      return;
+    }
+    throw new Error('Diese Aktion ist noch nicht verfügbar.');
+  }
+
   function openPersonBiography(personId) {
     const person = graph.getPerson(personId);
     if (!person) return false;
@@ -174,7 +392,8 @@ export function createAppController({
         runtime,
         onPersonClick({ personId }) {
           if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId);
-          return store.selectPerson(personId);
+          store.selectPerson(personId);
+          return openRelationActions(personId);
         },
         onPortraitClick({ personId }) {
           return openPersonBiography(personId);
@@ -349,6 +568,19 @@ export function createAppController({
         break;
       case 'open-related-person':
         if (selected) relatedPersonDialog.open(selected.id, state.family);
+        break;
+      case 'open-relation-actions':
+        if (selected) openRelationActions(selected.id);
+        else toast('Bitte zuerst eine Person auswählen.', { error: true });
+        break;
+      case 'close-relation-actions':
+        relationActionsDialog.close();
+        break;
+      case 'relation-actions-back':
+        relationActionsDialog.showMenu();
+        break;
+      case 'relation-action':
+        performRelationAction(actionElement.dataset.relationAction);
         break;
       case 'open-almanach-characters':
         await almanachCharacterController.open();
@@ -739,6 +971,14 @@ export function createAppController({
       event.preventDefault();
       try {
         submitRelatedPersonForm();
+      } catch (error) {
+        toast(error.message, { error: true, duration: 5000 });
+      }
+    }
+    if (event.target === relationActionsDialog.form) {
+      event.preventDefault();
+      try {
+        submitRelationActionsForm();
       } catch (error) {
         toast(error.message, { error: true, duration: 5000 });
       }

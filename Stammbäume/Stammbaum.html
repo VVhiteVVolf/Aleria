@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../AleriaAlmanach/styles/icon-directory.css">
   <link rel="stylesheet" href="assets/css/person-biography.css">
   <link rel="stylesheet" href="assets/css/relationship-matrix.css">
+  <link rel="stylesheet" href="assets/css/relation-actions.css">
   <link rel="stylesheet" href="assets/css/house-profile.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -469,6 +470,25 @@
       <footer class="dialog-footer">
         <button class="button button--quiet" type="button" data-action="close-related-person-dialog">Abbrechen</button>
         <button class="button" value="default" type="submit">Person und Verbindung anlegen</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog relation-actions-dialog" id="relation-actions-dialog">
+    <form method="dialog" id="relation-actions-form">
+      <header class="dialog-header relation-actions-header">
+        <div class="relation-actions-hero" id="relation-actions-hero"></div>
+        <button class="icon-button" type="button" data-action="close-relation-actions" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body relation-actions-body">
+        <input type="hidden" name="personId">
+        <input type="hidden" name="relationAction">
+        <div class="relation-actions-menu" id="relation-actions-menu"></div>
+        <div class="relation-actions-step" id="relation-actions-step" hidden></div>
+      </div>
+      <footer class="dialog-footer" id="relation-actions-footer" hidden>
+        <button class="button button--quiet" type="button" data-action="relation-actions-back">‹ Zurück zum Menü</button>
+        <button class="button" value="default" type="submit" id="relation-actions-submit">Übernehmen</button>
       </footer>
     </form>
   </dialog>
