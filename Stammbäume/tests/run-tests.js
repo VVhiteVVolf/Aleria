@@ -31,6 +31,8 @@ import { HOUSE_CHWEDLONOL_FAMILY } from '../assets/js/data/house-chwedlonol-fami
 import { HOUSE_CHWEDLONOL_PORTRAITS } from '../assets/js/data/house-chwedlonol-portraits.js';
 import { HOUSE_AWENOR_FAMILY } from '../assets/js/data/house-awenor-family.js';
 import { HOUSE_AWENOR_PORTRAITS } from '../assets/js/data/house-awenor-portraits.js';
+import { HOUSE_GARRAEL_FAMILY } from '../assets/js/data/house-garrael-family.js';
+import { HOUSE_GARRAEL_PORTRAITS } from '../assets/js/data/house-garrael-portraits.js';
 import { HOUSE_LOER_FAMILY } from '../assets/js/data/house-loer-family.js';
 import { HOUSE_LOER_PORTRAITS } from '../assets/js/data/house-loer-portraits.js';
 import { HOUSE_AWENYDD_FAMILY } from '../assets/js/data/house-awenydd-family.js';
@@ -3448,6 +3450,154 @@ test('liefert für Haus Loer alle 14 belegten Portraits lokal aus', async () => 
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
 
+test('bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheiratungen ab', () => {
+  const family = assertValidFamily(HOUSE_GARRAEL_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 28);
+  assert.equal(family.partnerships.length, 13);
+  assert.equal(family.parentages.length, 14);
+  assert.equal(family.cadetBranches.length, 3);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-aledd-spouse');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.fromYear, '????');
+  assert.equal(family.lineage.timeGap.toYear, '1663');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+  assert.equal(family.document.houseProfile.liegeHouseName, 'Haus Draig');
+  // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie.
+  assert.deepEqual(
+    createFolderPathFromHouseProfile(family.document.houseProfile),
+    ['Cenyr', 'Celtigerns Wacht', 'Camruisge', 'Aberllan']
+  );
+  assert.match(family.document.houseProfile.regionEmblems.barony, /^assets\/images\/regions\//);
+  assert.equal(family.document.houseProfile.regionEmblems.seat, '', 'Für Aberllan liegt noch kein Wappenbild vor.');
+
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
+    ['aledd-garrael', 'lyonnel-garrael']
+  );
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['uther-garrael']
+  );
+
+  assert.equal(graph.getPerson('aledd-garrael').title, 'Begründer des Ritterherrenhauses Garrael');
+  assert.equal(graph.getPerson('lyonnel-garrael').title, 'Ritterherr des Hauses Garrael');
+  assert.equal(graph.getPerson('aledd-garrael').status, 'dead');
+  assert.equal(graph.getPerson('lyonnel-garrael').status, 'alive');
+
+  const expectedChildren = new Map([
+    ['aledd-garrael', ['bedwyr-garrael', 'carys-garrael', 'lyonnel-garrael']],
+    ['lyonnel-garrael', ['eithne-garrael', 'uther-garrael']],
+    ['bedwyr-garrael', ['elain-garrael', 'gavin-garrael']],
+    ['uther-garrael', ['emyr-garrael', 'gareth-garrael', 'heledd-garrael', 'lowri-garrael', 'megan-garrael']],
+    ['gavin-garrael', ['jac-garrael', 'marc-garrael']]
+  ]);
+  expectedChildren.forEach((childIds, personId) => {
+    assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
+  });
+
+  const founderParentages = family.parentages.filter(parentage => parentage.partnershipId === 'marriage-aledd-spouse');
+  assert.equal(founderParentages.length, 3);
+  assert.ok(founderParentages.every(parentage => parentage.type === 'claimed' && parentage.certainty === 'probable'));
+
+  // Rückwirkend berechnete Altersabstände zwischen Eltern und Kindern bleiben plausibel.
+  family.parentages.forEach(parentage => {
+    const childBirth = Number(graph.getPerson(parentage.childId)?.birth);
+    if (!Number.isInteger(childBirth)) return;
+    parentage.parentIds.forEach(parentId => {
+      const parentBirth = Number(graph.getPerson(parentId)?.birth);
+      if (!Number.isInteger(parentBirth)) return;
+      const ageAtBirth = childBirth - parentBirth;
+      assert.ok(ageAtBirth >= 18 && ageAtBirth <= 55, `${parentId} besitzt ein plausibles Alter bei der Geburt von ${parentage.childId}.`);
+    });
+  });
+
+  const peopleWithUnknownPartners = [
+    'aledd-garrael', 'lyonnel-garrael', 'carys-garrael', 'bedwyr-garrael',
+    'uther-garrael', 'eithne-garrael', 'elain-garrael', 'gavin-garrael',
+    'emyr-garrael', 'lowri-garrael', 'megan-garrael', 'gareth-garrael', 'heledd-garrael'
+  ];
+  const unknownPartners = peopleWithUnknownPartners.map(personId => {
+    const partners = graph.getPartners(personId);
+    assert.equal(partners.length, 1, `${personId} besitzt genau den unbeschrifteten Partner aus der Quelltabelle.`);
+    assert.equal(partners[0].status, 'unknown');
+    assert.equal(partners[0].familyRole, 'married');
+    return partners[0];
+  });
+  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 13);
+
+  const unpartneredPeople = ['jac-garrael', 'marc-garrael'];
+  assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
+
+  // Carys, Eithne und Elain sind laut Quelle ausdrücklich „wegverheiratet an" ein unbekanntes Haus.
+  const branchByPartnership = new Map(family.cadetBranches.map(branch => [branch.parentPartnershipId, branch]));
+  ['marriage-carys-spouse', 'marriage-eithne-spouse', 'marriage-elain-spouse'].forEach(partnershipId => {
+    const branch = branchByPartnership.get(partnershipId);
+    assert.equal(branch.name, 'Unbekanntes Haus');
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.crestFrame, 'gold');
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 3);
+  const crest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(crest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['aledd-garrael']);
+  const pendingIds = ['aledd-garrael'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    assert.ok(entry, 'Jeder verknüpfte Garrael-Knoten ist im Diagramm vorhanden.');
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('liefert für Haus Garrael alle 15 belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_GARRAEL_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-garrael/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_GARRAEL_PORTRAITS).length, 15);
+  assert.equal(Object.keys(sourceManifest).length, 15);
+  assert.equal(picturedPeople.length, 15);
+  assert.equal(placeholderPeople.length, 13);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_GARRAEL_PORTRAITS[personId]));
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  await Promise.all(Object.entries(HOUSE_GARRAEL_PORTRAITS).map(async ([personId, portrait]) => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitzuordnung ohne Garrael-Person: ${personId}`);
+    assert.equal(person.portrait, portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+
+  const emblem = await readFile(new URL('../assets/images/houses/haus-garrael.png', import.meta.url));
+  assert.ok(emblem.length > 100);
+  assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+
+  const camruisgeBanner = await readFile(new URL('../assets/images/regions/camruisge.png', import.meta.url));
+  assert.ok(camruisgeBanner.length > 100);
+  assert.deepEqual([...camruisgeBanner.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -3819,7 +3969,9 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     ['haus-saethwyr', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }],
     ['haus-wyrm', { rankId: 'knight-prince', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }]
   ]);
-  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length);
+  // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie
+  // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
+  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 1);
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
     const profile = loaded.family.document.houseProfile;
@@ -3832,6 +3984,21 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     assert.match(profile.regionEmblems.county, /^assets\/images\/regions\//);
     assert.match(profile.regionEmblems.barony, /^assets\/images\/regions\//);
   });
+
+  const garraelLoaded = loadFamilyById('haus-garrael', storage);
+  const garraelProfile = garraelLoaded.family.document.houseProfile;
+  const garraelPath = ['Cenyr', 'Celtigerns Wacht', 'Camruisge', 'Aberllan'];
+  assert.deepEqual(garraelLoaded.folderPath, garraelPath);
+  assert.deepEqual(createFolderPathFromHouseProfile(garraelProfile), garraelPath);
+  assert.equal(garraelProfile.rankId, 'knight');
+  assert.equal(getHouseRank('knight').label, 'Niederes Rittergeschlecht');
+  assert.match(garraelProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  assert.match(garraelProfile.regionEmblems.county, /^assets\/images\/regions\//);
+  assert.match(garraelProfile.regionEmblems.barony, /^assets\/images\/regions\//);
+  assert.equal(garraelProfile.regionEmblems.seat, '', 'Für Aberllan liegt noch kein Wappenbild vor.');
+  assert.equal(garraelProfile.liegeHouseId, 'haus-draig');
+  assert.equal(garraelProfile.liegeHouseName, 'Haus Draig');
+
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
     const definition = LOWER_KNIGHT_HOUSE_DEFINITIONS[index];
@@ -3881,6 +4048,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/houses/haus-arwydd.png',
     'assets/images/houses/haus-gwefrydd.png',
     'assets/images/houses/haus-gwyvern.png',
+    'assets/images/houses/haus-garrael.png',
     ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => family.document.emblem),
     'assets/images/regions/artus-streben.png',
     'assets/images/regions/castellbryn.png',
@@ -3889,7 +4057,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/regions/llamreis-ankunft.png',
     'assets/images/regions/rhonwens-traenen.png',
     'assets/images/regions/rhosmere.png',
-    'assets/images/regions/abergwint.png'
+    'assets/images/regions/abergwint.png',
+    'assets/images/regions/camruisge.png'
   ].map(async path => {
     const image = await readFile(new URL(`../${path}`, import.meta.url));
     assert.ok(image.length > 100, `${path} ist leer.`);

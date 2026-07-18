@@ -11,6 +11,7 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
   }),
   baronies: Object.freeze({
     'Artus Streben': 'assets/images/regions/artus-streben.png',
+    'Camruisge': 'assets/images/regions/camruisge.png',
     'Gwendolyns Ufer': 'assets/images/regions/gwendolyns-ufer.png',
     'Llamreis Ankunft': 'assets/images/regions/llamreis-ankunft.png',
     'Rhonwens Tränen': 'assets/images/regions/rhonwens-traenen.png'
@@ -46,7 +47,13 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   gwefrydd: profile('barony', ['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere']),
   gwyvern: profile('barony', ['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Abergwint']),
   saethwyr: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']),
-  wyrm: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'])
+  wyrm: profile('knight-prince', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']),
+  // Camruisge ist ein Herrschaftsgebiet direkt unter Celtigerns Wacht (wie Rhonwens Tränen);
+  // für den Sitz Aberllan liegt noch kein Wappenbild vor.
+  garrael: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Camruisge', 'Aberllan'], {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  })
 });
 
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
