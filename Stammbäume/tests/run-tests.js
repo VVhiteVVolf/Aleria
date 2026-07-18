@@ -3128,9 +3128,9 @@ test('bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Al
   const graph = createFamilyGraph(family);
   const converted = toFamilyChartData(family);
 
-  assert.equal(family.persons.length, 31);
+  assert.equal(family.persons.length, 34);
   assert.equal(family.partnerships.length, 12);
-  assert.equal(family.parentages.length, 18);
+  assert.equal(family.parentages.length, 21);
   assert.equal(family.cadetBranches.length, 4);
   assert.equal(family.timeJumps.length, 0);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-aergol-spouse');
@@ -3157,21 +3157,26 @@ test('bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Al
 
   const expectedChildren = new Map([
     ['aergol-awenor', ['creirwen-awenor', 'enidwen-awenor', 'glynfael-awenor', 'gwylan-awenor', 'heulwen-awenor']],
-    ['glynfael-awenor', ['ffraid-awenor', 'garan-1680-awenor', 'gethor-awenor']],
+    ['glynfael-awenor', ['ffraid-awenor', 'gethor-awenor']],
+    ['gwylan-awenor', ['gwaeron-awenor']],
     ['ffraid-awenor', ['derwain-awenor', 'nerwen-awenor']],
     ['gethor-awenor', ['garan-1695-awenor']],
-    ['garan-1680-awenor', ['rhyd-awenor', 'rhys-awenor']],
+    ['gwaeron-awenor', ['rhyd-awenor', 'rhys-awenor']],
+    ['garan-1695-awenor', ['cochan-awenor', 'elfael-awenor', 'telyn-awenor']],
     ['derwain-awenor', ['briallen-awenor', 'carys-awenor', 'erydd-awenor', 'isgar-awenor', 'urfael-awenor']]
   ]);
   expectedChildren.forEach((childIds, personId) => {
     assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
   });
 
-  // Zwei Personen tragen namensgleich „Garan“ in unterschiedlichen Generationen
-  // (Glynfaels Sohn 1680, dessen Neffe/Gethors Sohn 1695) und sind über die ID disambiguiert.
-  assert.equal(graph.getPerson('garan-1680-awenor').birth, '1680');
+  // Gwaeron ist in der Quelltabelle uneinheitlich beschriftet (einmal fälschlich „Garan“ neben
+  // Glynfaels Söhnen), gehört aber laut den Ehe-/Kinder-Kopfzeilen zu Gwylan, nicht zu Glynfael.
+  // Der echte Garan (Gethors Sohn) ist eine eigenständige, unabhängige Person.
+  assert.equal(graph.getPerson('gwaeron-awenor').name, 'Gwaeron Awenor');
+  assert.equal(graph.getPerson('gwaeron-awenor').birth, '1680');
+  assert.equal(graph.getPerson('garan-1695-awenor').name, 'Garan Awenor');
   assert.equal(graph.getPerson('garan-1695-awenor').birth, '1695');
-  assert.notEqual(graph.getPerson('garan-1680-awenor').worldPersonId, graph.getPerson('garan-1695-awenor').worldPersonId);
+  assert.notEqual(graph.getPerson('gwaeron-awenor').worldPersonId, graph.getPerson('garan-1695-awenor').worldPersonId);
 
   const founderParentages = family.parentages.filter(parentage => parentage.partnershipId === 'marriage-aergol-spouse');
   assert.equal(founderParentages.length, 5);
@@ -3198,7 +3203,7 @@ test('bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Al
 
   const peopleWithUnknownPartners = [
     'aergol-awenor', 'glynfael-awenor', 'heulwen-awenor', 'enidwen-awenor', 'creirwen-awenor',
-    'gwylan-awenor', 'ffraid-awenor', 'gethor-awenor', 'garan-1680-awenor',
+    'gwylan-awenor', 'ffraid-awenor', 'gethor-awenor', 'gwaeron-awenor',
     'derwain-awenor', 'nerwen-awenor', 'garan-1695-awenor'
   ];
   const unknownPartners = peopleWithUnknownPartners.map(personId => {
@@ -3210,7 +3215,10 @@ test('bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Al
   });
   assert.equal(new Set(unknownPartners.map(person => person.id)).size, 12);
 
-  const unpartneredPeople = ['rhyd-awenor', 'rhys-awenor', 'urfael-awenor', 'briallen-awenor', 'isgar-awenor', 'erydd-awenor', 'carys-awenor'];
+  const unpartneredPeople = [
+    'rhyd-awenor', 'rhys-awenor', 'elfael-awenor', 'telyn-awenor', 'cochan-awenor',
+    'urfael-awenor', 'briallen-awenor', 'isgar-awenor', 'erydd-awenor', 'carys-awenor'
+  ];
   assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
 
   // Heulwen, Enidwen, Creirwen und Nerwen sind an ein unbekanntes Zielhaus wegverheiratet.
@@ -3242,7 +3250,7 @@ test('bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Al
   assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
 });
 
-test('liefert für Haus Awenor alle 16 belegten Portraits lokal aus', async () => {
+test('liefert für Haus Awenor alle 19 belegten Portraits lokal aus', async () => {
   const family = assertValidFamily(HOUSE_AWENOR_FAMILY).family;
   const picturedPeople = family.persons.filter(person => person.portrait);
   const placeholderPeople = family.persons.filter(person => !person.portrait);
@@ -3251,9 +3259,9 @@ test('liefert für Haus Awenor alle 16 belegten Portraits lokal aus', async () =
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_AWENOR_PORTRAITS).length, 16);
-  assert.equal(Object.keys(sourceManifest).length, 16);
-  assert.equal(picturedPeople.length, 16);
+  assert.equal(Object.keys(HOUSE_AWENOR_PORTRAITS).length, 19);
+  assert.equal(Object.keys(sourceManifest).length, 19);
+  assert.equal(picturedPeople.length, 19);
   assert.equal(placeholderPeople.length, 15);
   assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_AWENOR_PORTRAITS[personId]));
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
@@ -3685,7 +3693,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     } else if (family.document.id === 'haus-awenydd') {
       assert.equal(loaded.family.persons.length, 34, 'Haus Awenydd ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-awenor') {
-      assert.equal(loaded.family.persons.length, 31, 'Haus Awenor ist als ausgearbeitetes Ritterherrenhaus registriert.');
+      assert.equal(loaded.family.persons.length, 34, 'Haus Awenor ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }

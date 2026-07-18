@@ -51,7 +51,7 @@ const CREIRWEN_IDS = ['creirwen-awenor', 'unknown-creirwen-spouse'];
 const GWYLAN_IDS = ['gwylan-awenor', 'unknown-gwylan-spouse'];
 const FFRAID_IDS = ['ffraid-awenor', 'unknown-ffraid-spouse'];
 const GETHOR_IDS = ['gethor-awenor', 'unknown-gethor-spouse'];
-const GARAN_1680_IDS = ['garan-1680-awenor', 'unknown-garan-1680-spouse'];
+const GWAERON_IDS = ['gwaeron-awenor', 'unknown-gwaeron-spouse'];
 const DERWAIN_IDS = ['derwain-awenor', 'unknown-derwain-spouse'];
 const NERWEN_IDS = ['nerwen-awenor', 'unknown-nerwen-spouse'];
 const GARAN_1695_IDS = ['garan-1695-awenor', 'unknown-garan-1695-spouse'];
@@ -105,8 +105,10 @@ export const HOUSE_AWENOR_FAMILY = Object.freeze({
     unnamedSpouse('unknown-ffraid-spouse', 'Unbekannte Ehefrau', 'female', '1667', ''),
     person('gethor-awenor', 'Gethor Awenor', 'male', '1670', ''),
     unnamedSpouse('unknown-gethor-spouse', 'Unbekannte Ehefrau', 'female', '1672', ''),
-    person('garan-1680-awenor', 'Garan Awenor', 'male', '1680', ''),
-    unnamedSpouse('unknown-garan-1680-spouse', 'Unbekannte Ehefrau', 'female', '1682', ''),
+
+    // Kind Gwylans
+    person('gwaeron-awenor', 'Gwaeron Awenor', 'male', '1680', ''),
+    unnamedSpouse('unknown-gwaeron-spouse', 'Unbekannte Ehefrau', 'female', '1682', ''),
 
     // Kinder Ffraids
     person('derwain-awenor', 'Derwain Awenor', 'male', '1690', ''),
@@ -118,13 +120,18 @@ export const HOUSE_AWENOR_FAMILY = Object.freeze({
     person('garan-1695-awenor', 'Garan Awenor', 'male', '1695', ''),
     unnamedSpouse('unknown-garan-1695-spouse', 'Unbekannte Ehefrau', 'female', '1697', ''),
 
-    // Kinder Garans (1680) — Zwillinge im Dienst des Ratsmagiers Myrddin
+    // Kinder Gwaerons — Zwillinge im Dienst des Ratsmagiers Myrddin
     person('rhyd-awenor', 'Rhyd Awenor', 'male', '1705', '', AWENOR_HOUSE_ID, {
       notes: 'Lehensritter des Ratsmagiers Myrddin; wortkarg, nüchtern und der Mürrischere der Zwillinge. Sorgt still dafür, dass Aufträge erledigt werden.'
     }),
     person('rhys-awenor', 'Rhys Awenor', 'male', '1705', '', AWENOR_HOUSE_ID, {
       notes: 'Rhyds Zwillingsbruder im Dienst des Ratsmagiers Myrddin; offener und zugänglicher als sein Bruder, das menschliche Gesicht der beiden.'
     }),
+
+    // Kinder Garans (1695)
+    person('elfael-awenor', 'Elfael Awenor', 'male', '1717', ''),
+    person('telyn-awenor', 'Telyn Awenor', 'female', '1720', ''),
+    person('cochan-awenor', 'Cochan Awenor', 'male', '1723', ''),
 
     // Jüngste Generation: Kinder Derwains
     person('urfael-awenor', 'Urfael Awenor', 'male', '1715', ''),
@@ -142,7 +149,7 @@ export const HOUSE_AWENOR_FAMILY = Object.freeze({
     createMarriage('marriage-gwylan-spouse', ...GWYLAN_IDS),
     createMarriage('marriage-ffraid-spouse', ...FFRAID_IDS),
     createMarriage('marriage-gethor-spouse', ...GETHOR_IDS),
-    createMarriage('marriage-garan-1680-spouse', ...GARAN_1680_IDS),
+    createMarriage('marriage-gwaeron-spouse', ...GWAERON_IDS),
     createMarriage('marriage-derwain-spouse', ...DERWAIN_IDS),
     createMarriage('marriage-nerwen-spouse', ...NERWEN_IDS),
     createMarriage('marriage-garan-1695-spouse', ...GARAN_1695_IDS)
@@ -154,15 +161,17 @@ export const HOUSE_AWENOR_FAMILY = Object.freeze({
       'marriage-aergol-spouse',
       { type: 'claimed', certainty: 'probable' }
     ),
-    ...childrenOf(['ffraid-awenor', 'gethor-awenor', 'garan-1680-awenor'], GLYNFAEL_IDS, 'marriage-glynfael-spouse'),
+    ...childrenOf(['ffraid-awenor', 'gethor-awenor'], GLYNFAEL_IDS, 'marriage-glynfael-spouse'),
+    ...childrenOf(['gwaeron-awenor'], GWYLAN_IDS, 'marriage-gwylan-spouse'),
     ...childrenOf(['derwain-awenor', 'nerwen-awenor'], FFRAID_IDS, 'marriage-ffraid-spouse'),
     ...childrenOf(['garan-1695-awenor'], GETHOR_IDS, 'marriage-gethor-spouse'),
-    ...childrenOf(['rhyd-awenor', 'rhys-awenor'], GARAN_1680_IDS, 'marriage-garan-1680-spouse'),
+    ...childrenOf(['rhyd-awenor', 'rhys-awenor'], GWAERON_IDS, 'marriage-gwaeron-spouse'),
     ...childrenOf(
       ['urfael-awenor', 'briallen-awenor', 'isgar-awenor', 'erydd-awenor', 'carys-awenor'],
       DERWAIN_IDS,
       'marriage-derwain-spouse'
-    )
+    ),
+    ...childrenOf(['elfael-awenor', 'telyn-awenor', 'cochan-awenor'], GARAN_1695_IDS, 'marriage-garan-1695-spouse')
   ],
   lineage: {
     founderPartnershipId: 'marriage-aergol-spouse',
@@ -228,7 +237,7 @@ export const HOUSE_AWENOR_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert nur wenige Lebensdaten (einzige harte Jahreszahl: Rhyd und Rhys, 1705); Geburtsjahre der jüngsten Generation (Urfael bis Carys) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Zwei Personen tragen namensgleich „Garan“ in unterschiedlichen Generationen (Glynfaels Sohn und dessen Neffe, Gethors Sohn) und sind über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Heulwen, Enidwen und Creirwen wurden an ein nicht näher überliefertes „Unbekanntes Haus“ wegverheiratet. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Awenor den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
+    sourceNote: 'Die Quelltabelle überliefert nur wenige Lebensdaten (einzige harte Jahreszahl: Rhyd und Rhys, 1705); Geburtsjahre der jüngsten Generationen wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Gwylans Sohn Gwaeron ist in der Quelltabelle uneinheitlich beschriftet (einmal fälschlich als „Garan“ neben Glynfaels Söhnen einsortiert); die Kopfzeilen seiner Ehe- und Kinder-Abschnitte nennen ihn zweimal korrekt „Gwaeron“, weshalb er hier als eigenständiger Sohn Gwylans (nicht Glynfaels) mit den Zwillingen Rhyd und Rhys geführt wird. Der echte Garan (Gethors Sohn) ist davon unabhängig und Vater von Elfael, Telyn und Cochan. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Heulwen, Enidwen, Creirwen und Nerwen wurden an ein nicht näher überliefertes „Unbekanntes Haus“ wegverheiratet. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Awenor den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
     sourceRevision: 1
   }
