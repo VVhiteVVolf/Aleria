@@ -1850,7 +1850,7 @@ test('bildet das Ritterherrenhaus Rhyddid mit Gründerfamilie, Überlieferungsl�
   assert.equal(family.persons.length, 31);
   assert.equal(family.partnerships.length, 11);
   assert.equal(family.parentages.length, 19);
-  assert.equal(family.cadetBranches.length, 3);
+  assert.equal(family.cadetBranches.length, 2, 'Nur Wegverheiratet-Medaillons; Herkunfts-Medaillons sind unerwünscht.');
   assert.equal(family.timeJumps.length, 0);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-gwilym-evie');
   assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
