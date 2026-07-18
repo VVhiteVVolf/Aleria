@@ -3331,7 +3331,8 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
     ['eurgain-loer', ['gwynan-loer', 'ynyrion-loer']],
     ['dwynarth-loer', ['garmon-loer', 'glenys-1695-loer']],
     ['ynyrion-loer', ['aeron-loer', 'gwallter-loer', 'gwion-loer', 'olwen-loer']],
-    ['garmon-loer', ['gwenfaen-loer', 'islwyna-loer', 'tesni-loer', 'tyne-loer']]
+    ['gwynan-loer', ['gwenfaen-loer', 'islwyna-loer']],
+    ['garmon-loer', ['tesni-loer', 'tyne-loer']]
   ]);
   expectedChildren.forEach((childIds, personId) => {
     assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);

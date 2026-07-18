@@ -116,10 +116,12 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     person('gwallter-loer', 'Gwallter Loer', 'male', '1717', ''),
     person('olwen-loer', 'Olwen Loer', 'female', '1720', ''),
 
-    // Jüngste Generation: Kinder Garmons
+    // Jüngste Generation: Kinder Gwynans
     person('gwenfaen-loer', 'Gwenfaen Loer', 'female', '1715', ''),
-    person('tyne-loer', 'Tyne Loer', 'female', '1717', ''),
     person('islwyna-loer', 'Islwyna Loer', 'female', '1720', ''),
+
+    // Jüngste Generation: Kinder Garmons
+    person('tyne-loer', 'Tyne Loer', 'female', '1717', ''),
     person('tesni-loer', 'Tesni Loer', 'female', '1722', '')
   ],
   partnerships: [
@@ -145,7 +147,8 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     ...childrenOf(['ynyrion-loer', 'gwynan-loer'], EURGAIN_IDS, 'marriage-eurgain-spouse'),
     ...childrenOf(['garmon-loer', 'glenys-1695-loer'], DWYNARTH_IDS, 'marriage-dwynarth-spouse'),
     ...childrenOf(['aeron-loer', 'gwion-loer', 'gwallter-loer', 'olwen-loer'], YNYRION_IDS, 'marriage-ynyrion-spouse'),
-    ...childrenOf(['gwenfaen-loer', 'tyne-loer', 'islwyna-loer', 'tesni-loer'], GARMON_IDS, 'marriage-garmon-spouse')
+    ...childrenOf(['gwenfaen-loer', 'islwyna-loer'], GWYNAN_IDS, 'marriage-gwynan-spouse'),
+    ...childrenOf(['tyne-loer', 'tesni-loer'], GARMON_IDS, 'marriage-garmon-spouse')
   ],
   lineage: {
     founderPartnershipId: 'marriage-cadfarch-spouse',
@@ -202,7 +205,7 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert für die frühen Generationen (Begründer und seine beiden Kinder) keine Namen, nur „..."-Platzhalter; sie wurden mit passenden walisischen Namen ergänzt (Cadfarch, Maddocc, Rhiannedd). Keine Generation trägt eine feste Jahreszahl; Geburtsjahre der jüngsten Generation (Ynyrions Kinder Aeron, Gwion, Gwallter, Olwen und Garmons Kinder Gwenfaen, Tyne, Islwyna, Tesni) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Eine weitere, in der Quelle nur als „???" geführte Schwester Eurgains und Dwynarths erhielt den Namen Glenys; da Dwynarths eigene Tochter unabhängig davon ebenfalls Glenys heißt (Namensgleichheit über eine Generation hinweg, kein Fehler), sind beide über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Rhiannedd und beide Glenys wurden an ein nicht näher überliefertes „Unbekanntes Haus" wegverheiratet. Die Quelle nennt als Lehnsherr durchgängig Haus Wyrm (nicht Draig); das Registry wurde entsprechend korrigiert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Loer den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
+    sourceNote: 'Die Quelltabelle überliefert für die frühen Generationen (Begründer und seine beiden Kinder) keine Namen, nur „..."-Platzhalter; sie wurden mit passenden walisischen Namen ergänzt (Cadfarch, Maddocc, Rhiannedd). Keine Generation trägt eine feste Jahreszahl; Geburtsjahre der jüngsten Generation (Ynyrions Kinder Aeron, Gwion, Gwallter, Olwen; Gwynans Kinder Gwenfaen, Islwyna; Garmons Kinder Tyne, Tesni) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Eine weitere, in der Quelle nur als „???" geführte Schwester Eurgains und Dwynarths erhielt den Namen Glenys; da Dwynarths eigene Tochter unabhängig davon ebenfalls Glenys heißt (Namensgleichheit über eine Generation hinweg, kein Fehler), sind beide über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Rhiannedd und beide Glenys wurden an ein nicht näher überliefertes „Unbekanntes Haus" wegverheiratet. Die Quelle nennt als Lehnsherr durchgängig Haus Wyrm (nicht Draig); das Registry wurde entsprechend korrigiert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Loer den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
     sourceRevision: 1
   }
