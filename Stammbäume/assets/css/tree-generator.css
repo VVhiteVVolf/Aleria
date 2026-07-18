@@ -1,0 +1,236 @@
+/* Stammbaum-Generator – etappenbasierter Aufbau-Assistent. */
+
+#tree-generator-dialog .dialog-header {
+  align-items: flex-start;
+}
+
+.tree-generator-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border-bottom: 1px solid rgba(74, 48, 27, 0.18);
+  background: rgba(232, 215, 182, 0.3);
+}
+
+.tree-generator-step {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(82, 55, 32, 0.25);
+  border-radius: 999px;
+  color: var(--ink-650);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tree-generator-step--current {
+  border-color: var(--gold-500);
+  background: linear-gradient(160deg, #f7ecd2, var(--paper-200));
+  color: var(--ink-950);
+}
+
+.tree-generator-step--done {
+  color: #35694a;
+  border-color: rgba(53, 105, 74, 0.4);
+}
+
+.tree-generator-step--upcoming {
+  opacity: 0.55;
+}
+
+.form-section-title span {
+  margin-left: 0.4rem;
+  color: var(--ink-650);
+  font-size: 0.62rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.tree-generator-summary-card {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid rgba(82, 55, 32, 0.2);
+  background: rgba(255, 250, 239, 0.5);
+}
+
+.tree-generator-summary-card strong {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.tree-generator-summary-card span {
+  color: var(--ink-650);
+  font-size: 0.8rem;
+}
+
+.tree-generator-choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.tree-generator-empty {
+  padding: 1.2rem;
+  color: var(--ink-650);
+  text-align: center;
+}
+
+/* Checkbox-/Parameter-Panel */
+.tree-generator-params {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(82, 55, 32, 0.22);
+  background: rgba(255, 250, 239, 0.4);
+}
+
+.tree-generator-params summary {
+  padding: 0.6rem 0.8rem;
+  color: var(--ink-800);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tree-generator-params-group {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.6rem 0.8rem;
+  border: 0;
+  border-top: 1px solid rgba(82, 55, 32, 0.14);
+}
+
+.tree-generator-params-group legend {
+  padding: 0;
+  color: var(--ink-650);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tree-generator-param {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink-800);
+  font-size: 0.82rem;
+}
+
+.tree-generator-param input[type='number'] {
+  width: 4.5rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.tree-generator-param small {
+  color: var(--ink-650);
+  font-style: italic;
+}
+
+.tree-generator-param--inert {
+  opacity: 0.55;
+}
+
+/* Arbeitsblatt der aktuellen Generation */
+.tree-generator-worklist {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.tree-generator-worklist-card {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(82, 55, 32, 0.2);
+  background: linear-gradient(160deg, var(--paper-50), var(--paper-100));
+}
+
+.tree-generator-worklist-card > img {
+  float: left;
+  width: 44px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  margin-right: 0.7rem;
+  border: 1px solid var(--gold-500);
+  border-radius: 4px;
+  background: var(--paper-200);
+}
+
+.tree-generator-worklist-info {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.tree-generator-worklist-info strong {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+}
+
+.tree-generator-worklist-info small {
+  color: var(--ink-650);
+  font-size: 0.76rem;
+}
+
+.tree-generator-worklist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tree-generator-child-form {
+  clear: both;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  border: 1px dashed rgba(82, 55, 32, 0.3);
+  background: rgba(255, 250, 239, 0.6);
+}
+
+.tree-generator-child-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.tree-generator-fertility-warning {
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.65rem;
+  border-left: 3px solid var(--gold-500);
+  background: var(--paper-100);
+  color: var(--ink-650);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+/* Vorschlags-Button (heuristisch, optional durch AleriaGPT ergänzt) */
+.ai-suggest-button {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.3rem;
+  border: 1px solid rgba(184, 139, 55, 0.4);
+  border-radius: 50%;
+  background: var(--paper-100);
+  color: var(--gold-500);
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.ai-suggest-button:hover {
+  box-shadow: 0 0.2rem 0.6rem rgba(184, 139, 55, 0.3);
+  transform: translateY(-1px);
+}
+
+.ai-suggest-button--busy {
+  opacity: 0.6;
+  pointer-events: none;
+}

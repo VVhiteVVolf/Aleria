@@ -4,6 +4,7 @@ import { createEmptyFamily, createFoundingFamily } from '../domain/family-factor
 import { createFamilyGraph } from '../domain/family-graph.js';
 import { formatHouseProfile, getHouseRank, getHouseRankIcon, isHouseProfileEmpty } from '../domain/house-profile.js';
 import { createAlmanachCharacterController } from '../modules/almanach-bridge/almanach-character-controller.js';
+import { createTreeGeneratorController } from '../modules/tree-generator/tree-generator-controller.js';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
 import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
 import { createRelationshipMatrixDialog } from '../modules/relationship-matrix/relationship-matrix-dialog.js';
@@ -102,6 +103,17 @@ export function createAppController({
   const newFamilyDialog = createNewFamilyDialog(documentRef);
   const cadetDialog = createCadetDialog(documentRef);
   const timeJumpDialog = createTimeJumpDialog(documentRef);
+  const treeGeneratorController = createTreeGeneratorController({
+    store,
+    documentRef,
+    runtime,
+    notify: toast,
+    relationActionsDialog,
+    cadetDialog,
+    focusPerson(personId) {
+      chartSession?.focus(personId, { fit: true });
+    }
+  });
   const familySaveDialog = createFamilySaveDialog(documentRef);
   const editAccessDialog = createEditAccessDialog(documentRef);
   let graph = createFamilyGraph(store.getState().family);
@@ -743,6 +755,50 @@ export function createAppController({
       case 'close-new-family-dialog':
         newFamilyDialog.close();
         break;
+      case 'open-tree-generator':
+        treeGeneratorController.open();
+        break;
+      case 'close-tree-generator':
+        treeGeneratorController.close();
+        break;
+      case 'tree-generator-commit-phase-1':
+        treeGeneratorController.commitPhaseOne();
+        break;
+      case 'tree-generator-commit-phase-2':
+        treeGeneratorController.commitPhaseTwo();
+        break;
+      case 'tree-generator-skip-time-jump':
+        treeGeneratorController.skipTimeJump();
+        break;
+      case 'tree-generator-commit-time-jump':
+        treeGeneratorController.commitTimeJump();
+        break;
+      case 'tree-generator-toggle-child-form':
+        treeGeneratorController.toggleChildForm(actionElement.dataset.personId);
+        break;
+      case 'tree-generator-cancel-child':
+        treeGeneratorController.cancelChildForm();
+        break;
+      case 'tree-generator-add-child':
+        treeGeneratorController.addChild(actionElement.dataset.personId);
+        break;
+      case 'tree-generator-delegate-marriage':
+        treeGeneratorController.delegateMarriage(actionElement.dataset.personId);
+        break;
+      case 'tree-generator-delegate-cadet':
+        treeGeneratorController.delegateCadet(actionElement.dataset.personId);
+        break;
+      case 'tree-generator-next-generation':
+        treeGeneratorController.nextGeneration();
+        break;
+      case 'tree-generator-ai-suggest': {
+        const field = actionElement.dataset.suggestField;
+        const targetInput = field ? treeGeneratorController.dialog.querySelector(`[name="${field}"]`) : null;
+        actionElement.classList.add('ai-suggest-button--busy');
+        await treeGeneratorController.requestAiSuggestion(actionElement.dataset.suggestKind, field, targetInput);
+        actionElement.classList.remove('ai-suggest-button--busy');
+        break;
+      }
       case 'start-empty-family': {
         const family = createEmptyFamily();
         store.replaceFamily(family, { source: 'new-empty-family' });

@@ -67,7 +67,20 @@ import {
   LOWER_KNIGHT_HOUSE_FAMILIES
 } from '../assets/js/data/lower-knight-house-families.js';
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
-import { createEmptyFamily, createFoundingFamily } from '../assets/js/domain/family-factory.js';
+import {
+  commitFounderCouple,
+  createEmptyFamily,
+  createFamilyProfileDraft,
+  createFoundingFamily
+} from '../assets/js/domain/family-factory.js';
+import { deriveTreeGeneratorPhase } from '../assets/js/domain/tree-generator-phase.js';
+import {
+  PLACEHOLDER_UNKNOWN,
+  suggestBirthYear,
+  suggestDeathYear,
+  suggestName
+} from '../assets/js/domain/tree-generator-suggestions.js';
+import { PLAUSIBLE_PARENT_AGE_AT_BIRTH } from '../assets/js/config/chronology.js';
 import {
   createFolderPathFromHouseProfile,
   formatHouseProfile,
@@ -1057,6 +1070,237 @@ test('gliedert einen später am Wappen angelegten Sprössling unter dem Wappenkn
   const converted = toFamilyChartData(store.getState().family);
   const crest = converted.data.find(person => person.data.nodeKind === 'house-crest');
   assert.deepEqual(converted.data.find(person => person.id === childId).rels.parents, [crest.id]);
+});
+
+test('Stammbaum-Generator Phase 1: createFamilyProfileDraft liefert eine gültige, personenlose Akte', () => {
+  const draft = createFamilyProfileDraft({
+    documentTitle: 'Haus Nebelklinge',
+    motto: 'Im Schatten wächst die Stärke.',
+    rankId: 'barony',
+    seat: 'Nebelfeste',
+    description: 'Ein junges Baronshaus.',
+    culture: 'Cenyri',
+    religion: 'Alerische Kirche',
+    governance: 'Erbbaronie',
+    foundingYear: '1680',
+    founderHouseName: 'Haus Sturmwacht',
+    houseColors: 'Grau und Silber',
+    specialTraits: 'Bekannt für Nebelweberei.'
+  });
+  assert.doesNotThrow(() => assertValidFamily(draft));
+  assert.equal(draft.persons.length, 0);
+  assert.equal(draft.document.title, 'Haus Nebelklinge');
+  assert.equal(draft.document.houseProfile.rankId, 'barony');
+  assert.equal(draft.document.houseProfile.seat, 'Nebelfeste');
+  assert.equal(draft.extensions.generatorProfile.culture, 'Cenyri');
+  assert.equal(draft.extensions.generatorProfile.governance, 'Erbbaronie');
+  assert.equal(draft.extensions.generatorProfile.foundingYear, '1680');
+
+  const blankDraft = createFamilyProfileDraft({ documentTitle: 'Haus Leer' });
+  assert.equal(blankDraft.extensions.generatorProfile.culture, '');
+  assert.equal(blankDraft.extensions.generatorProfile.houseColors, '');
+});
+
+test('Stammbaum-Generator Phase 2: commitFounderCouple baut auf einer Phase-1-Akte auf', () => {
+  const draft = createFamilyProfileDraft({
+    documentTitle: 'Haus Nebelklinge',
+    motto: 'Im Schatten wächst die Stärke.'
+  });
+  const family = commitFounderCouple(draft, {
+    founderManName: 'Torvin Nebelklinge',
+    founderManBirth: '1650',
+    founderWomanName: 'Yselda Grauhain',
+    founderWomanBirth: '1653',
+    marriageYear: '1672'
+  });
+  assert.doesNotThrow(() => assertValidFamily(family));
+  assert.equal(family.persons.length, 2);
+  assert.equal(family.partnerships.length, 1);
+  assert.ok(family.lineage.founderPartnershipId);
+  assert.equal(
+    family.partnerships.find(item => item.id === family.lineage.founderPartnershipId)?.id,
+    family.lineage.founderPartnershipId
+  );
+  assert.equal(family.houses.length, 1);
+  assert.equal(family.houses[0].name, 'Haus Nebelklinge');
+  assert.equal(family.houses[0].motto, 'Im Schatten wächst die Stärke.');
+});
+
+test('Stammbaum-Generator: deriveTreeGeneratorPhase folgt 1→2→3→4 dem tatsächlichen Baum', () => {
+  const emptyPhase = deriveTreeGeneratorPhase(createEmptyFamily());
+  assert.equal(emptyPhase.phase, 1);
+
+  const draft = createFamilyProfileDraft({ documentTitle: 'Haus Nebelklinge' });
+  const draftPhase = deriveTreeGeneratorPhase(draft);
+  assert.equal(draftPhase.phase, 2);
+
+  const founded = commitFounderCouple(draft, {
+    founderManName: 'Torvin Nebelklinge',
+    founderWomanName: 'Yselda Grauhain'
+  });
+  const foundedPhase = deriveTreeGeneratorPhase(founded);
+  assert.equal(foundedPhase.phase, 3);
+  assert.equal(foundedPhase.founderPartnershipId, founded.lineage.founderPartnershipId);
+
+  const store = createFamilyStore(founded);
+  store.addTimeJump({
+    parentPartnershipId: founded.lineage.founderPartnershipId,
+    fromYear: '1672',
+    toYear: '1700',
+    years: 28,
+    label: 'Zeitsprung'
+  });
+  const afterTimeJumpPhase = deriveTreeGeneratorPhase(store.getState().family);
+  assert.equal(afterTimeJumpPhase.phase, 4);
+  assert.equal(afterTimeJumpPhase.generationIndex, 1);
+  const timeJumpId = store.getState().family.timeJumps[0].id;
+  const [founderManId] = founded.partnerships[0].participantIds;
+  assert.ok(afterTimeJumpPhase.openLeaves.some(leaf => leaf.personId === founderManId && leaf.unresolvedTimeJumpId === timeJumpId));
+
+  store.addRelatedPerson(founderManId, {
+    name: 'Cael Nebelklinge', title: '', sex: 'male', status: 'alive', birth: '1700', death: '',
+    portrait: '', portraitPlaceholder: 'auto', houseId: founded.houses[0].id, familyRole: 'core', notes: ''
+  }, { relationKind: 'time-jump-child', timeJumpId, legitimacy: 'unknown', certainty: 'probable', visibility: 'public', parentageType: 'claimed' });
+  const afterChildPhase = deriveTreeGeneratorPhase(store.getState().family);
+  assert.equal(afterChildPhase.phase, 4);
+  assert.equal(afterChildPhase.generationIndex, 2);
+});
+
+test('Stammbaum-Generator: "Direkt beginnen" überspringt Phase 3 für die aktuelle Sitzung', () => {
+  const draft = createFamilyProfileDraft({ documentTitle: 'Haus Nebelklinge' });
+  const founded = commitFounderCouple(draft, {
+    founderManName: 'Torvin Nebelklinge',
+    founderWomanName: 'Yselda Grauhain'
+  });
+  // Ohne die Option bleibt Phase 3 bestehen (keine Datenänderung durch das Überspringen).
+  assert.equal(deriveTreeGeneratorPhase(founded).phase, 3);
+  const skipped = deriveTreeGeneratorPhase(founded, { skipTimeJumpOffer: true });
+  assert.equal(skipped.phase, 4);
+  assert.equal(skipped.generationIndex, 1);
+  // Ein erneuter Aufruf ohne die Option (z. B. beim nächsten Öffnen des Assistenten)
+  // bietet Phase 3 wieder an, solange kein Kind angelegt wurde.
+  assert.equal(deriveTreeGeneratorPhase(founded).phase, 3);
+});
+
+test('Stammbaum-Generator: Vorschlags-Engine respektiert Alters-Plausibilität und wiederholt keine Namen', () => {
+  const usedNames = [];
+  for (let index = 0; index < 100; index += 1) {
+    const name = suggestName('female', usedNames);
+    if (name !== PLACEHOLDER_UNKNOWN) {
+      assert.ok(!usedNames.includes(name), `Name „${name}“ wurde bereits vergeben.`);
+      usedNames.push(name);
+    }
+  }
+
+  for (let index = 0; index < 25; index += 1) {
+    const birthYear = suggestBirthYear({ anchorYear: 1700, role: 'child', params: {} });
+    assert.notEqual(birthYear, PLACEHOLDER_UNKNOWN);
+    const age = Number(birthYear) - 1700;
+    assert.ok(
+      age >= PLAUSIBLE_PARENT_AGE_AT_BIRTH.min && age <= PLAUSIBLE_PARENT_AGE_AT_BIRTH.max,
+      `Elternalter ${age} liegt außerhalb der plausiblen Spanne.`
+    );
+  }
+
+  assert.equal(suggestBirthYear({ anchorYear: '????', role: 'child' }), PLACEHOLDER_UNKNOWN);
+  assert.equal(suggestDeathYear({ birthYear: 1700, agingKind: 'druide' }), PLACEHOLDER_UNKNOWN);
+  const priesterDeath = Number(suggestDeathYear({ birthYear: 1700, agingKind: 'priester', params: { lifespan: 60 } }));
+  assert.ok(priesterDeath - 1700 > 60, 'Priester sollten deutlich länger als die Basis-Lebensdauer leben.');
+});
+
+test('Stammbaum-Generator: store.setFamilyExtension setzt und entfernt Erweiterungsdaten', () => {
+  const store = createFamilyStore(SAMPLE_FAMILY);
+  store.setFamilyExtension('generatorProfile', { culture: 'Cenyri' });
+  assert.deepEqual(store.getState().family.extensions.generatorProfile, { culture: 'Cenyri' });
+  assert.equal(store.getState().family.document.title, SAMPLE_FAMILY.document.title);
+  assert.equal(store.getState().family.persons.length, SAMPLE_FAMILY.persons.length);
+
+  store.setFamilyExtension('generatorProfile', null);
+  assert.equal('generatorProfile' in store.getState().family.extensions, false);
+});
+
+test('Stammbaum-Generator: eine vollständig simulierte Generation bleibt schemakonform', () => {
+  const draft = createFamilyProfileDraft({ documentTitle: 'Haus Windfeder' });
+  const founded = commitFounderCouple(draft, {
+    founderManName: 'Bran Windfeder',
+    founderManBirth: '1650',
+    founderWomanName: 'Sela Grauhain',
+    founderWomanBirth: '1653',
+    marriageYear: '1672'
+  });
+  const store = createFamilyStore(founded);
+  const [founderManId, founderWomanId] = founded.partnerships[0].participantIds;
+  const houseId = founded.houses[0].id;
+
+  function person(overrides) {
+    return {
+      name: 'Kind', title: '', sex: 'unknown', status: 'alive', birth: '1700', death: '',
+      portrait: '', portraitPlaceholder: 'auto', houseId, familyRole: 'core', notes: '', tags: [],
+      ...overrides
+    };
+  }
+
+  // Zwillingspaar
+  const twinAId = store.addRelatedPerson(founderManId, person({ name: 'Aeron Windfeder', sex: 'male', birth: '1700' }), {
+    relationKind: 'child', secondParentId: founderWomanId, legitimacy: 'legitimate', parentageType: 'biological', certainty: 'confirmed', visibility: 'public'
+  });
+  store.addRelatedPerson(founderManId, person({ name: 'Ronan Windfeder', sex: 'male', birth: '1700', tags: ['Zwilling von Aeron Windfeder'] }), {
+    relationKind: 'child', secondParentId: founderWomanId, legitimacy: 'legitimate', parentageType: 'biological', certainty: 'confirmed', visibility: 'public'
+  });
+  // Bastard
+  store.addRelatedPerson(founderManId, person({ name: 'Wyn Windfeder', sex: 'female', birth: '1702' }), {
+    relationKind: 'child', legitimacy: 'illegitimate', parentageType: 'biological', certainty: 'probable', visibility: 'public'
+  });
+  // Adoptiertes Kind
+  store.addRelatedPerson(founderManId, person({ name: 'Idris Windfeder', sex: 'male', birth: '1703' }), {
+    relationKind: 'child', secondParentId: founderWomanId, legitimacy: 'legitimate', parentageType: 'adoptive', certainty: 'confirmed', visibility: 'public'
+  });
+
+  // Zweite Ehe für den Zwilling Aeron
+  const secondSpouseId = store.addRelatedPerson(twinAId, person({ name: 'Nia Sturmwacht', sex: 'female', birth: '1702', familyRole: 'married' }), {
+    relationKind: 'partnership', partnershipType: 'marriage', partnershipStatus: 'active', certainty: 'confirmed', visibility: 'public'
+  });
+  assert.ok(secondSpouseId);
+
+  // Kinderlose Ehe (zweite Zwillingslinie)
+  store.addRelatedPerson(founderManId, person({ name: 'Elin Windfeder', sex: 'female', birth: '1704' }), {
+    relationKind: 'child', secondParentId: founderWomanId, legitimacy: 'legitimate', parentageType: 'biological', certainty: 'confirmed', visibility: 'public'
+  });
+  const childlessPartnerId = store.addRelatedPerson(
+    store.getState().family.persons.find(item => item.name === 'Elin Windfeder').id,
+    person({ name: 'Unbekannter Ehemann', sex: 'male', birth: '1701', familyRole: 'married' }),
+    { relationKind: 'partnership', partnershipType: 'marriage', partnershipStatus: 'active', certainty: 'confirmed', visibility: 'public' }
+  );
+  assert.ok(childlessPartnerId);
+
+  // Ausgestorbene Linie über Wyn
+  const wynId = store.getState().family.persons.find(item => item.name === 'Wyn Windfeder').id;
+  const wynSpouseId = store.addRelatedPerson(wynId, person({ name: 'Unbekannte Ehefrau', sex: 'female', birth: '1701', familyRole: 'married' }), {
+    relationKind: 'partnership', partnershipType: 'marriage', partnershipStatus: 'active', certainty: 'confirmed', visibility: 'public'
+  });
+  const wynPartnershipId = store.getState().family.partnerships.find(item => (
+    item.participantIds.includes(wynId) && item.participantIds.includes(wynSpouseId)
+  )).id;
+  store.addCadetBranch({
+    id: 'married-away-test-wyn',
+    name: 'Unbekanntes Haus',
+    linkType: 'line-extinct',
+    parentPartnershipId: wynPartnershipId,
+    houseId: '',
+    emblem: '',
+    emblemScale: 0.86,
+    crestFrame: 'gold',
+    frameScale: 1,
+    founded: '',
+    targetFamilyId: '',
+    notes: 'Testfall: ausgestorbene Linie.'
+  });
+
+  const finalFamily = store.getState().family;
+  const result = validateFamily(finalFamily);
+  const errors = result.diagnostics.filter(diagnostic => diagnostic.severity === 'error');
+  assert.deepEqual(errors, []);
+  assert.doesNotThrow(() => assertValidFamily(finalFamily));
 });
 
 test('bereinigt Gründer- und Kadettenverweise beim Löschen von Personen', () => {

@@ -236,6 +236,18 @@ export function createFamilyStore(initialFamily, options = {}) {
     }, { personId, extensionId: key, removed: value === null || value === undefined });
   }
 
+  function setFamilyExtension(extensionId, value) {
+    const key = String(extensionId || '').trim();
+    if (!key) throw new Error('Die Erweiterungs-ID darf nicht leer sein.');
+    return commit('family-extension-updated', draft => {
+      draft.extensions = draft.extensions && typeof draft.extensions === 'object'
+        ? { ...draft.extensions }
+        : {};
+      if (value === null || value === undefined) delete draft.extensions[key];
+      else draft.extensions[key] = cloneValue(value);
+    }, { extensionId: key, removed: value === null || value === undefined });
+  }
+
   function deletePerson(personId) {
     return commit('person-deleted', draft => {
       draft.persons = draft.persons.filter(person => person.id !== personId);
@@ -571,6 +583,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     addRelatedPerson,
     updatePerson,
     setPersonExtension,
+    setFamilyExtension,
     deletePerson,
     addPartnership,
     updatePartnership,

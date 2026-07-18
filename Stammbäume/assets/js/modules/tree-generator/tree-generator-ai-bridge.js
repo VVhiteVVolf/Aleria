@@ -1,0 +1,44 @@
+// Dünner, immer optionaler Wrapper um window.AleriaGptClient (aus
+// ../../../../AleriaAlmanach/modules/aleria-gpt/). Wird das Skript nicht geladen,
+// ist der Endpunkt nicht konfiguriert oder schlägt der Aufruf fehl (Netzwerk/CORS),
+// liefert diese Funktion einfach {ok:false}, statt einen Fehler zu werfen — der
+// Generator fällt in diesem Fall lautlos auf die lokale Vorschlags-Engine
+// (tree-generator-suggestions.js) zurück.
+
+export function isAleriaGptAvailable(runtime = globalThis) {
+  return typeof runtime.AleriaGptClient?.sendChat === 'function'
+    && runtime.AleriaGptClient.isConfigured?.() !== false;
+}
+
+export async function requestAleriaGptSuggestion(promptText, { runtime = globalThis, timeoutMs = 20000 } = {}) {
+  if (!isAleriaGptAvailable(runtime)) return { ok: false, text: '' };
+  try {
+    const result = await runtime.AleriaGptClient.sendChat(
+      promptText,
+      { promptContext: promptText },
+      { responseMode: 'suggestion', answerStyle: 'short', timeoutMs }
+    );
+    const text = String(result?.text || '').trim();
+    return { ok: !!result?.ok && !!text, text };
+  } catch {
+    return { ok: false, text: '' };
+  }
+}
+
+function buildBaseContext(houseName) {
+  return `Du hilfst bei der Ausarbeitung eines Fantasy-Stammbaums für "${houseName || 'ein Adelshaus'}" in der Welt Aleria (walisisch angehauchte Namensgebung).`;
+}
+
+export function buildNameSuggestionPrompt({ houseName, sex, usedNames = [] }) {
+  const rolle = sex === 'female' ? 'weiblichen' : sex === 'male' ? 'männlichen' : '';
+  const gemieden = usedNames.length ? ` Vermeide bereits vergebene Namen: ${usedNames.join(', ')}.` : '';
+  return `${buildBaseContext(houseName)} Schlage 3 passende, walisisch klingende ${rolle} Vornamen vor, durch Komma getrennt, ohne weitere Erklärung.${gemieden}`;
+}
+
+export function buildBirthYearPrompt({ houseName, anchorLabel, anchorYear }) {
+  return `${buildBaseContext(houseName)} ${anchorLabel} wurde im Jahr ${anchorYear} geboren. Schlage ein plausibles Geburtsjahr für die nächste Generation vor. Antworte nur mit der Jahreszahl.`;
+}
+
+export function buildDeathYearPrompt({ houseName, personName, birthYear }) {
+  return `${buildBaseContext(houseName)} ${personName} wurde ${birthYear} geboren. Schlage ein plausibles Sterbejahr vor. Antworte nur mit der Jahreszahl.`;
+}
