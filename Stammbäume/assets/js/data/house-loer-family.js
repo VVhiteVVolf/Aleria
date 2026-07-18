@@ -11,7 +11,7 @@ import { HOUSE_LOER_PORTRAITS } from './house-loer-portraits.js';
 const LOER_EMBLEM = 'assets/images/houses/haus-loer.png';
 const LOER_HOUSE_ID = 'house-loer';
 const HOUSE_HEAD_IDS = new Set(['cadfarch-loer', 'maddocc-loer', 'eurgain-loer']);
-const MAIN_LINE_IDS = new Set(['ynyrion-loer', 'olwen-loer']);
+const MAIN_LINE_IDS = new Set(['ynyrion-loer', 'aeron-loer']);
 
 function lineageRoleFor(personId) {
   if (HOUSE_HEAD_IDS.has(personId)) return 'head';
@@ -61,7 +61,7 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     id: 'haus-loer',
     title: 'Haus Loer',
     motto: '',
-    description: 'Die belegte Linie des wohlhabenden, im Edelsteinhandel führenden Ritterherrenhauses Loer unter Haus Wyrm: vom Begründer Cadfarch bis zur Generation von 1721.',
+    description: 'Die belegte Linie des wohlhabenden, im Edelsteinhandel führenden Ritterherrenhauses Loer unter Haus Wyrm: vom Begründer Cadfarch bis zur Generation von 1722.',
     emblem: LOER_EMBLEM,
     houseProfile: CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES.loer
   },
@@ -111,12 +111,16 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     unnamedSpouse('unknown-glenys-1695-spouse', 'Unbekannter Ehemann', 'male', '1693', ''),
 
     // Jüngste Generation: Kinder Ynyrions
-    person('olwen-loer', 'Olwen Loer', 'male', '1714', ''),
-    person('gwion-loer', 'Gwion Loer', 'male', '1718', ''),
+    person('aeron-loer', 'Aeron Loer', 'male', '1712', ''),
+    person('gwion-loer', 'Gwion Loer', 'male', '1715', ''),
+    person('gwallter-loer', 'Gwallter Loer', 'male', '1717', ''),
+    person('olwen-loer', 'Olwen Loer', 'female', '1720', ''),
 
     // Jüngste Generation: Kinder Garmons
+    person('gwenfaen-loer', 'Gwenfaen Loer', 'female', '1715', ''),
     person('tyne-loer', 'Tyne Loer', 'female', '1717', ''),
-    person('tesni-loer', 'Tesni Loer', 'female', '1721', '')
+    person('islwyna-loer', 'Islwyna Loer', 'female', '1720', ''),
+    person('tesni-loer', 'Tesni Loer', 'female', '1722', '')
   ],
   partnerships: [
     createMarriage('marriage-cadfarch-spouse', ...FOUNDER_IDS),
@@ -140,8 +144,8 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     ...childrenOf(['eurgain-loer', 'glenys-1667-loer', 'dwynarth-loer'], MADDOCC_IDS, 'marriage-maddocc-spouse'),
     ...childrenOf(['ynyrion-loer', 'gwynan-loer'], EURGAIN_IDS, 'marriage-eurgain-spouse'),
     ...childrenOf(['garmon-loer', 'glenys-1695-loer'], DWYNARTH_IDS, 'marriage-dwynarth-spouse'),
-    ...childrenOf(['olwen-loer', 'gwion-loer'], YNYRION_IDS, 'marriage-ynyrion-spouse'),
-    ...childrenOf(['tyne-loer', 'tesni-loer'], GARMON_IDS, 'marriage-garmon-spouse')
+    ...childrenOf(['aeron-loer', 'gwion-loer', 'gwallter-loer', 'olwen-loer'], YNYRION_IDS, 'marriage-ynyrion-spouse'),
+    ...childrenOf(['gwenfaen-loer', 'tyne-loer', 'islwyna-loer', 'tesni-loer'], GARMON_IDS, 'marriage-garmon-spouse')
   ],
   lineage: {
     founderPartnershipId: 'marriage-cadfarch-spouse',
@@ -198,7 +202,7 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert für die frühen Generationen (Begründer und seine beiden Kinder) keine Namen, nur „..."-Platzhalter; sie wurden mit passenden walisischen Namen ergänzt (Cadfarch, Maddocc, Rhiannedd). Keine Generation trägt eine feste Jahreszahl; Geburtsjahre der jüngsten Generation (Olwen, Gwion, Tyne, Tesni) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Eine weitere, in der Quelle nur als „???" geführte Schwester Eurgains und Dwynarths erhielt den Namen Glenys; da Dwynarths eigene Tochter unabhängig davon ebenfalls Glenys heißt (Namensgleichheit über eine Generation hinweg, kein Fehler), sind beide über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Rhiannedd und beide Glenys wurden an ein nicht näher überliefertes „Unbekanntes Haus" wegverheiratet. Die Quelle nennt als Lehnsherr durchgängig Haus Wyrm (nicht Draig); das Registry wurde entsprechend korrigiert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Loer den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
+    sourceNote: 'Die Quelltabelle überliefert für die frühen Generationen (Begründer und seine beiden Kinder) keine Namen, nur „..."-Platzhalter; sie wurden mit passenden walisischen Namen ergänzt (Cadfarch, Maddocc, Rhiannedd). Keine Generation trägt eine feste Jahreszahl; Geburtsjahre der jüngsten Generation (Ynyrions Kinder Aeron, Gwion, Gwallter, Olwen und Garmons Kinder Gwenfaen, Tyne, Islwyna, Tesni) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Eine weitere, in der Quelle nur als „???" geführte Schwester Eurgains und Dwynarths erhielt den Namen Glenys; da Dwynarths eigene Tochter unabhängig davon ebenfalls Glenys heißt (Namensgleichheit über eine Generation hinweg, kein Fehler), sind beide über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Rhiannedd und beide Glenys wurden an ein nicht näher überliefertes „Unbekanntes Haus" wegverheiratet. Die Quelle nennt als Lehnsherr durchgängig Haus Wyrm (nicht Draig); das Registry wurde entsprechend korrigiert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Loer den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
     sourceRevision: 1
   }

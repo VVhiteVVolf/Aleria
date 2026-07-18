@@ -3293,9 +3293,9 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   const graph = createFamilyGraph(family);
   const converted = toFamilyChartData(family);
 
-  assert.equal(family.persons.length, 24);
+  assert.equal(family.persons.length, 28);
   assert.equal(family.partnerships.length, 10);
-  assert.equal(family.parentages.length, 13);
+  assert.equal(family.parentages.length, 17);
   assert.equal(family.cadetBranches.length, 3);
   assert.equal(family.timeJumps.length, 0);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-cadfarch-spouse');
@@ -3313,7 +3313,7 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   );
   assert.deepEqual(
     family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
-    ['ynyrion-loer', 'olwen-loer']
+    ['ynyrion-loer', 'aeron-loer']
   );
 
   assert.equal(graph.getPerson('cadfarch-loer').title, 'Begründer des Ritterherrenhauses Loer');
@@ -3321,15 +3321,17 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   assert.equal(graph.getPerson('cadfarch-loer').status, 'dead');
   assert.equal(graph.getPerson('eurgain-loer').status, 'alive');
   assert.equal(graph.getPerson('eurgain-loer').sex, 'male');
-  assert.equal(graph.getPerson('olwen-loer').sex, 'male');
+  // Olwen und Eurgain sind traditionell weibliche/männliche walisische Namen, hier aber laut
+  // Portrait und Fließtext umgekehrt besetzt — Portrait/Grammatik entscheiden, nicht der Name.
+  assert.equal(graph.getPerson('olwen-loer').sex, 'female');
 
   const expectedChildren = new Map([
     ['cadfarch-loer', ['maddocc-loer', 'rhiannedd-loer']],
     ['maddocc-loer', ['dwynarth-loer', 'eurgain-loer', 'glenys-1667-loer']],
     ['eurgain-loer', ['gwynan-loer', 'ynyrion-loer']],
     ['dwynarth-loer', ['garmon-loer', 'glenys-1695-loer']],
-    ['ynyrion-loer', ['gwion-loer', 'olwen-loer']],
-    ['garmon-loer', ['tesni-loer', 'tyne-loer']]
+    ['ynyrion-loer', ['aeron-loer', 'gwallter-loer', 'gwion-loer', 'olwen-loer']],
+    ['garmon-loer', ['gwenfaen-loer', 'islwyna-loer', 'tesni-loer', 'tyne-loer']]
   ]);
   expectedChildren.forEach((childIds, personId) => {
     assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
@@ -3372,7 +3374,10 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   });
   assert.equal(new Set(unknownPartners.map(person => person.id)).size, 10);
 
-  const unpartneredPeople = ['olwen-loer', 'gwion-loer', 'tyne-loer', 'tesni-loer'];
+  const unpartneredPeople = [
+    'aeron-loer', 'gwallter-loer', 'gwion-loer', 'olwen-loer',
+    'gwenfaen-loer', 'tyne-loer', 'islwyna-loer', 'tesni-loer'
+  ];
   assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
 
   // Rhiannedd (Gründerskind) sowie beide Glenys (Eurgains/Dwynarths Schwester und Dwynarths Tochter)
@@ -3405,7 +3410,7 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
 });
 
-test('liefert für Haus Loer alle 10 belegten Portraits lokal aus', async () => {
+test('liefert für Haus Loer alle 14 belegten Portraits lokal aus', async () => {
   const family = assertValidFamily(HOUSE_LOER_FAMILY).family;
   const picturedPeople = family.persons.filter(person => person.portrait);
   const placeholderPeople = family.persons.filter(person => !person.portrait);
@@ -3414,9 +3419,9 @@ test('liefert für Haus Loer alle 10 belegten Portraits lokal aus', async () => 
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_LOER_PORTRAITS).length, 10);
-  assert.equal(Object.keys(sourceManifest).length, 10);
-  assert.equal(picturedPeople.length, 10);
+  assert.equal(Object.keys(HOUSE_LOER_PORTRAITS).length, 14);
+  assert.equal(Object.keys(sourceManifest).length, 14);
+  assert.equal(picturedPeople.length, 14);
   assert.equal(placeholderPeople.length, 14);
   assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_LOER_PORTRAITS[personId]));
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
@@ -3851,7 +3856,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     } else if (family.document.id === 'haus-awenor') {
       assert.equal(loaded.family.persons.length, 34, 'Haus Awenor ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-loer') {
-      assert.equal(loaded.family.persons.length, 24, 'Haus Loer ist als ausgearbeitetes Ritterherrenhaus registriert.');
+      assert.equal(loaded.family.persons.length, 28, 'Haus Loer ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }
