@@ -210,7 +210,7 @@ export function buildImportedCharacter(candidate, existing = null, now = new Dat
     portrait: cleanText(prior.portrait) || candidate.portrait || null,
     emotes: Array.isArray(prior.emotes) ? prior.emotes : [],
     emotesOverride: !!prior.emotesOverride,
-    inventory: prior.inventory && typeof prior.inventory === 'object' ? prior.inventory : undefined,
+    inventory: prior.inventory && typeof prior.inventory === 'object' ? prior.inventory : null,
     identity: normalizeCharacterIdentity({ worldPersonId: candidate.worldPersonId }),
     genealogy
   };
