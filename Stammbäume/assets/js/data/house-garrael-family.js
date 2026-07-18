@@ -51,11 +51,6 @@ const UTHER_IDS = ['uther-garrael', 'unknown-uther-spouse'];
 const EITHNE_IDS = ['eithne-garrael', 'unknown-eithne-spouse'];
 const ELAIN_IDS = ['elain-garrael', 'unknown-elain-spouse'];
 const GAVIN_IDS = ['gavin-garrael', 'unknown-gavin-spouse'];
-const EMYR_IDS = ['emyr-garrael', 'unknown-emyr-spouse'];
-const LOWRI_IDS = ['lowri-garrael', 'unknown-lowri-spouse'];
-const MEGAN_IDS = ['megan-garrael', 'unknown-megan-spouse'];
-const GARETH_IDS = ['gareth-garrael', 'unknown-gareth-spouse'];
-const HELEDD_IDS = ['heledd-garrael', 'unknown-heledd-spouse'];
 
 export const HOUSE_GARRAEL_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
@@ -105,17 +100,12 @@ export const HOUSE_GARRAEL_FAMILY = Object.freeze({
     person('gavin-garrael', 'Gavin Garrael', 'male', '1695', ''),
     unnamedSpouse('unknown-gavin-spouse', 'Unbekannte Ehefrau', 'female', '1697', ''),
 
-    // Kinder Uthers
+    // Kinder Uthers — noch unverlobt und unverheiratet
     person('emyr-garrael', 'Emyr Garrael', 'male', '1713', ''),
-    unnamedSpouse('unknown-emyr-spouse', 'Unbekannte Ehefrau', 'female', '1715', ''),
     person('lowri-garrael', 'Lowri Garrael', 'female', '1715', ''),
-    unnamedSpouse('unknown-lowri-spouse', 'Unbekannter Ehemann', 'male', '1713', ''),
     person('megan-garrael', 'Megan Garrael', 'female', '1718', ''),
-    unnamedSpouse('unknown-megan-spouse', 'Unbekannter Ehemann', 'male', '1716', ''),
     person('gareth-garrael', 'Gareth Garrael', 'male', '1725', ''),
-    unnamedSpouse('unknown-gareth-spouse', 'Unbekannte Ehefrau', 'female', '1727', ''),
     person('heledd-garrael', 'Heledd Garrael', 'female', '1727', ''),
-    unnamedSpouse('unknown-heledd-spouse', 'Unbekannter Ehemann', 'male', '1725', ''),
 
     // Jüngste Generation: Kinder Gavins
     person('jac-garrael', 'Jac Garrael', 'male', '1720', ''),
@@ -129,12 +119,7 @@ export const HOUSE_GARRAEL_FAMILY = Object.freeze({
     createMarriage('marriage-uther-spouse', ...UTHER_IDS),
     createMarriage('marriage-eithne-spouse', ...EITHNE_IDS),
     createMarriage('marriage-elain-spouse', ...ELAIN_IDS),
-    createMarriage('marriage-gavin-spouse', ...GAVIN_IDS),
-    createMarriage('marriage-emyr-spouse', ...EMYR_IDS),
-    createMarriage('marriage-lowri-spouse', ...LOWRI_IDS),
-    createMarriage('marriage-megan-spouse', ...MEGAN_IDS),
-    createMarriage('marriage-gareth-spouse', ...GARETH_IDS),
-    createMarriage('marriage-heledd-spouse', ...HELEDD_IDS)
+    createMarriage('marriage-gavin-spouse', ...GAVIN_IDS)
   ],
   parentages: [
     ...childrenOf(
@@ -207,7 +192,7 @@ export const HOUSE_GARRAEL_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert keine Jahreszahlen; Geburtsjahre der jüngsten Generation (Uthers Kinder Emyr, Lowri, Megan, Gareth, Heledd und Gavins Kinder Jac, Marc) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Anders als bei den meisten Ritterherrenhäusern markiert die Quelle Carys, Eithne und Elain ausdrücklich als „wegverheiratet an" ein nicht näher genanntes Haus; sie führen daher jeweils ein Wegverheiratete-Linie-Medaillon mit dem Platzhalter „Unbekanntes Haus". Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos. Die beigefügte Stammbaumgrafik ist ein unausgefülltes generisches Vorlagenraster ohne eigene Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Haus Garrael sitzt abseits der übrigen niederen Ritterhäuser direkt in der Ordnerstruktur Cenyr/Celtigerns Wacht/Camruisge/Aberllan; für den Sitz Aberllan liegt noch kein Wappenbild vor. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Garrael den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
+    sourceNote: 'Die Quelltabelle überliefert keine Jahreszahlen; Geburtsjahre der jüngsten Generation (Uthers Kinder Emyr, Lowri, Megan, Gareth, Heledd und Gavins Kinder Jac, Marc) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Uthers Kinder sind noch unverlobt und unverheiratet. Anders als bei den meisten Ritterherrenhäusern markiert die Quelle Carys, Eithne und Elain ausdrücklich als „wegverheiratet an" ein nicht näher genanntes Haus; sie führen daher jeweils ein Wegverheiratete-Linie-Medaillon mit dem Platzhalter „Unbekanntes Haus". Sämtliche übrigen Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos. Die beigefügte Stammbaumgrafik ist ein unausgefülltes generisches Vorlagenraster ohne eigene Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Haus Garrael sitzt abseits der übrigen niederen Ritterhäuser direkt in der Ordnerstruktur Cenyr/Celtigerns Wacht/Camruisge/Aberllan. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Garrael den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
     sourceRevision: 1
   }

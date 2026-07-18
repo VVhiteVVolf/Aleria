@@ -3455,8 +3455,8 @@ test('bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheir
   const graph = createFamilyGraph(family);
   const converted = toFamilyChartData(family);
 
-  assert.equal(family.persons.length, 28);
-  assert.equal(family.partnerships.length, 13);
+  assert.equal(family.persons.length, 23);
+  assert.equal(family.partnerships.length, 8);
   assert.equal(family.parentages.length, 14);
   assert.equal(family.cadetBranches.length, 3);
   assert.equal(family.timeJumps.length, 0);
@@ -3474,7 +3474,7 @@ test('bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheir
     ['Cenyr', 'Celtigerns Wacht', 'Camruisge', 'Aberllan']
   );
   assert.match(family.document.houseProfile.regionEmblems.barony, /^assets\/images\/regions\//);
-  assert.equal(family.document.houseProfile.regionEmblems.seat, '', 'Für Aberllan liegt noch kein Wappenbild vor.');
+  assert.match(family.document.houseProfile.regionEmblems.seat, /^assets\/images\/regions\//);
 
   assert.deepEqual(
     family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
@@ -3519,8 +3519,7 @@ test('bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheir
 
   const peopleWithUnknownPartners = [
     'aledd-garrael', 'lyonnel-garrael', 'carys-garrael', 'bedwyr-garrael',
-    'uther-garrael', 'eithne-garrael', 'elain-garrael', 'gavin-garrael',
-    'emyr-garrael', 'lowri-garrael', 'megan-garrael', 'gareth-garrael', 'heledd-garrael'
+    'uther-garrael', 'eithne-garrael', 'elain-garrael', 'gavin-garrael'
   ];
   const unknownPartners = peopleWithUnknownPartners.map(personId => {
     const partners = graph.getPartners(personId);
@@ -3529,9 +3528,10 @@ test('bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheir
     assert.equal(partners[0].familyRole, 'married');
     return partners[0];
   });
-  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 13);
+  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 8);
 
-  const unpartneredPeople = ['jac-garrael', 'marc-garrael'];
+  // Uthers Kinder sind noch unverlobt und unverheiratet, keine Platzhalter-Ehepartner.
+  const unpartneredPeople = ['emyr-garrael', 'lowri-garrael', 'megan-garrael', 'gareth-garrael', 'heledd-garrael', 'jac-garrael', 'marc-garrael'];
   assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
 
   // Carys, Eithne und Elain sind laut Quelle ausdrücklich „wegverheiratet an" ein unbekanntes Haus.
@@ -3575,7 +3575,7 @@ test('liefert für Haus Garrael alle 15 belegten Portraits lokal aus', async () 
   assert.equal(Object.keys(HOUSE_GARRAEL_PORTRAITS).length, 15);
   assert.equal(Object.keys(sourceManifest).length, 15);
   assert.equal(picturedPeople.length, 15);
-  assert.equal(placeholderPeople.length, 13);
+  assert.equal(placeholderPeople.length, 8);
   assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_GARRAEL_PORTRAITS[personId]));
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
@@ -3995,7 +3995,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.match(garraelProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
   assert.match(garraelProfile.regionEmblems.county, /^assets\/images\/regions\//);
   assert.match(garraelProfile.regionEmblems.barony, /^assets\/images\/regions\//);
-  assert.equal(garraelProfile.regionEmblems.seat, '', 'Für Aberllan liegt noch kein Wappenbild vor.');
+  assert.match(garraelProfile.regionEmblems.seat, /^assets\/images\/regions\//);
   assert.equal(garraelProfile.liegeHouseId, 'haus-draig');
   assert.equal(garraelProfile.liegeHouseName, 'Haus Draig');
 
@@ -4058,7 +4058,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
     'assets/images/regions/rhonwens-traenen.png',
     'assets/images/regions/rhosmere.png',
     'assets/images/regions/abergwint.png',
-    'assets/images/regions/camruisge.png'
+    'assets/images/regions/camruisge.png',
+    'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png'
   ].map(async path => {
     const image = await readFile(new URL(`../${path}`, import.meta.url));
     assert.ok(image.length > 100, `${path} ist leer.`);

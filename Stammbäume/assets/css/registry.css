@@ -95,41 +95,73 @@
 }
 
 .registry-tree {
-  display: grid;
-  gap: 0.65rem;
+  overflow-x: auto;
 }
 
-.registry-folder {
-  border-left: 2px solid rgba(145, 100, 48, 0.38);
+.registry-tree-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.registry-folder > summary {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 0.8rem;
-  color: var(--ink-800);
+.registry-tree-table thead th {
+  padding: 0.5rem 0.8rem;
+  color: var(--ink-500);
+  border-bottom: 1px solid rgba(145, 100, 48, 0.38);
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.registry-tree-table thead th:last-child {
+  text-align: right;
+}
+
+.registry-tree-row--folder {
+  border-bottom: 1px solid rgba(145, 100, 48, 0.16);
+  background: rgba(232, 215, 182, 0.22);
+}
+
+.registry-tree-row--folder:hover {
   background: rgba(232, 215, 182, 0.44);
+}
+
+.registry-tree-row--folder td {
+  padding: 0.55rem 0.8rem;
+  color: var(--ink-800);
   font-family: var(--font-display);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  list-style: none;
   text-transform: uppercase;
 }
 
-.registry-folder > summary::-webkit-details-marker {
-  display: none;
+.registry-tree-toggle {
+  width: 1.8rem;
+  padding-left: calc(0.8rem + var(--registry-tree-depth, 0) * 1.1rem) !important;
 }
 
-.registry-folder > summary::before {
-  content: '▸';
+.registry-tree-toggle-btn {
+  display: inline-flex;
+  width: 1.4rem;
+  height: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   color: var(--gold-500);
-  transition: transform 120ms ease;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
-.registry-folder[open] > summary::before {
-  transform: rotate(90deg);
+.registry-tree-name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-left: var(--registry-tree-depth, 0) !important;
 }
 
 .registry-folder-icon {
@@ -140,16 +172,15 @@
   filter: drop-shadow(0 0.15rem 0.18rem rgba(74, 48, 27, 0.2));
 }
 
-.registry-folder-count {
-  margin-left: auto;
+.registry-tree-count {
+  padding: 0.55rem 0.8rem;
   color: var(--ink-500);
   font-size: 0.58rem;
+  text-align: right;
 }
 
-.registry-folder-children {
-  display: grid;
-  gap: 0.55rem;
-  padding: 0.65rem 0 0.2rem 1.1rem;
+.registry-tree-row--records td {
+  padding: 0.65rem 0.6rem 0.9rem calc(0.8rem + var(--registry-tree-depth, 0) * 1.1rem + 1.8rem);
 }
 
 .registry-family-card {
@@ -261,6 +292,14 @@
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+}
+
+.registry-rank-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0.1rem 0.12rem rgba(74, 48, 27, 0.25));
 }
 
 .registry-rank-heading::after {

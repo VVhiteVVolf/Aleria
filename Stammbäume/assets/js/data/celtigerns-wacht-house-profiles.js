@@ -7,7 +7,9 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
     Abergwint: 'assets/images/regions/abergwint.png',
     Castellbryn: 'assets/images/regions/castellbryn.png',
     Gwynthor: 'assets/images/regions/gwynthor.png',
-    Rhosmere: 'assets/images/regions/rhosmere.png'
+    Rhosmere: 'assets/images/regions/rhosmere.png',
+    // Neue Sitz-Wappen liegen in einer nach der Orts-Hierarchie verschachtelten Ordnerstruktur.
+    Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png'
   }),
   baronies: Object.freeze({
     'Artus Streben': 'assets/images/regions/artus-streben.png',

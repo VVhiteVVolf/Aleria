@@ -1,4 +1,7 @@
 .house-profile-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
   margin: 0.2rem 0 0;
   color: #d2b77f;
   font-family: var(--font-display);
@@ -6,6 +9,14 @@
   letter-spacing: 0.075em;
   line-height: 1.45;
   text-transform: uppercase;
+}
+
+.house-rank-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0.1rem 0.14rem rgba(0, 0, 0, 0.35));
 }
 
 .house-profile-preview {

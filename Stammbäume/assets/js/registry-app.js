@@ -3,7 +3,8 @@ import { createFirebaseClient } from './modules/firebase-platform/firebase-clien
 import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
 import {
   getHouseProfileSearchTerms,
-  getHouseRank
+  getHouseRank,
+  getHouseRankIcon
 } from './domain/house-profile.js';
 import {
   buildRegistryFolderTree,
@@ -51,30 +52,90 @@ function renderRecordsGrid(records) {
     }
     section.tiles.push(renderFamilyTile(record));
   });
-  return sections.map(section => `
+  return sections.map(section => {
+    const icon = getHouseRankIcon(section.rankId);
+    return `
     <section class="registry-rank-section registry-rank--${escapeHtml(section.rankId)}">
-      <h4 class="registry-rank-heading"><span>${escapeHtml(section.label)}</span></h4>
+      <h4 class="registry-rank-heading">
+        ${icon ? `<img class="registry-rank-icon" src="${escapeHtml(icon)}" alt="" aria-hidden="true">` : ''}
+        <span>${escapeHtml(section.label)}</span>
+      </h4>
       <div class="registry-tile-grid">${section.tiles.join('')}</div>
     </section>
-  `).join('');
+  `;
+  }).join('');
 }
 
-function renderFolder(node, depth = 0) {
-  const folders = [...node.folders.values()]
+// Merkt sich pfadweise, ob ein Zweig manuell auf-/zugeklappt wurde (übersteht Suchfilter-Neuaufbauten).
+const treeOpenOverrides = new Map();
+
+function flattenFolderRows(node, depth, parentPath, rows) {
+  [...node.folders.values()]
     .sort((first, second) => first.name.localeCompare(second.name, 'de'))
-    .map(child => renderFolder(child, depth + 1))
-    .join('');
-  const records = renderRecordsGrid([...node.records]);
-  if (!node.name) return `${folders}${records}`;
+    .forEach(child => {
+      const path = `${parentPath}/${child.name}`;
+      const defaultOpen = depth < 2;
+      const open = treeOpenOverrides.has(path) ? treeOpenOverrides.get(path) : defaultOpen;
+      const hasChildren = child.folders.size > 0 || child.records.length > 0;
+      rows.push({ type: 'folder', path, parentPath, depth, node: child, open, hasChildren });
+      if (child.records.length) {
+        rows.push({ type: 'records', path: `${path}#records`, parentPath: path, depth: depth + 1, records: [...child.records] });
+      }
+      flattenFolderRows(child, depth + 1, path, rows);
+    });
+}
+
+// Eine Zeile ist sichtbar, wenn jeder Vorfahr im Pfad aufgeklappt ist.
+function isRowVisible(row, rowsByPath) {
+  let parentPath = row.parentPath;
+  while (parentPath) {
+    const parentRow = rowsByPath.get(parentPath);
+    if (!parentRow) break;
+    if (!parentRow.open) return false;
+    parentPath = parentRow.parentPath;
+  }
+  return true;
+}
+
+function renderTreeTable(root) {
+  const rows = [];
+  flattenFolderRows(root, 0, '', rows);
+  if (!rows.length) return '';
+  const rowsByPath = new Map(rows.filter(row => row.type === 'folder').map(row => [row.path, row]));
+  const body = rows.map(row => {
+    if (!isRowVisible(row, rowsByPath)) return '';
+    if (row.type === 'records') {
+      const grid = renderRecordsGrid(row.records);
+      if (!grid) return '';
+      return `
+        <tr class="registry-tree-row registry-tree-row--records">
+          <td colspan="3" style="--registry-tree-depth: ${row.depth}">${grid}</td>
+        </tr>
+      `;
+    }
+    const { node, path, depth, open, hasChildren } = row;
+    return `
+      <tr class="registry-tree-row registry-tree-row--folder" data-path="${escapeHtml(path)}">
+        <td class="registry-tree-toggle">
+          ${hasChildren
+            ? `<button type="button" class="registry-tree-toggle-btn" data-toggle-path="${escapeHtml(path)}" aria-expanded="${open}">${open ? '▾' : '▸'}</button>`
+            : ''}
+        </td>
+        <td class="registry-tree-name" style="--registry-tree-depth: ${depth}">
+          ${node.icon ? `<img class="registry-folder-icon" src="${escapeHtml(node.icon)}" alt="" aria-hidden="true">` : ''}
+          <span>${escapeHtml(node.name)}</span>
+        </td>
+        <td class="registry-tree-count">${countRegistryRecords(node)}</td>
+      </tr>
+    `;
+  }).join('');
   return `
-    <details class="registry-folder" ${depth <= 2 ? 'open' : ''}>
-      <summary>
-        ${node.icon ? `<img class="registry-folder-icon" src="${escapeHtml(node.icon)}" alt="" aria-hidden="true">` : ''}
-        <span>${escapeHtml(node.name)}</span>
-        <span class="registry-folder-count">${countRegistryRecords(node)}</span>
-      </summary>
-      <div class="registry-folder-children">${folders}${records}</div>
-    </details>
+    <table class="registry-tree-table">
+      <thead>
+        <tr><th></th><th>Name</th><th>Anzahl</th></tr>
+      </thead>
+      <tbody>${body}</tbody>
+    </table>
   `;
 }
 
@@ -95,9 +156,18 @@ function render(query = '') {
     ]
       .some(value => String(value).toLocaleLowerCase('de').includes(needle)))
     : allRecords;
-  treeContainer.innerHTML = renderFolder(buildRegistryFolderTree(records));
+  treeContainer.innerHTML = renderTreeTable(buildRegistryFolderTree(records));
   empty.hidden = records.length > 0;
 }
+
+treeContainer.addEventListener('click', event => {
+  const button = event.target.closest('.registry-tree-toggle-btn');
+  if (!button) return;
+  const path = button.dataset.togglePath;
+  const currentlyOpen = button.getAttribute('aria-expanded') === 'true';
+  treeOpenOverrides.set(path, !currentlyOpen);
+  render(search.value);
+});
 
 search.addEventListener('input', () => render(search.value));
 render();

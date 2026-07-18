@@ -13,6 +13,19 @@ const RANK_DEFINITIONS = Object.freeze({
 
 export const HOUSE_RANKS = RANK_DEFINITIONS;
 
+// Stand-Icons zeigen den Rang eines Hauses; nicht jeder Rang hat bislang ein eigenes Icon.
+const RANK_ICONS = Object.freeze({
+  county: 'assets/images/ranks/graf.png',
+  barony: 'assets/images/ranks/baron.png',
+  'knight-prince': 'assets/images/ranks/ritterfuerst.png',
+  knight: 'assets/images/ranks/ritterherr.png',
+  'knight-simple': 'assets/images/ranks/ritter.png'
+});
+
+export function getHouseRankIcon(rankId) {
+  return RANK_ICONS[getHouseRank(rankId).id] || '';
+}
+
 function cleanText(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
