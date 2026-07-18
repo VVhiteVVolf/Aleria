@@ -589,6 +589,7 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /\.\.\/AleriaAlmanach\/styles\/module-page-biography\.css/);
   assert.match(html, /\.\.\/AleriaAlmanach\/styles\/icon-directory\.css/);
   assert.match(html, /\.\.\/AleriaAlmanach\/modules\/icon-directory\/icon-directory-data\.js/);
+  assert.match(html, /\.\.\/Familien Häuser und Clans\/haeuser\.registry\.js/);
   assert.match(html, /id="person-biography-dialog"/);
   assert.match(html, /id="relationship-matrix-dialog"/);
   assert.match(html, /id="lineage-origin-dialog"/);

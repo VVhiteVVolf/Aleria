@@ -56,6 +56,14 @@ function findPartnershipId(family, participantIds) {
   ))?.id || '';
 }
 
+// Verlinkt das Stammwappen auf die zugehörige Lore-Seite unter "Familien Häuser und
+// Clans", sofern dort bereits ein Eintrag für dieses Haus existiert.
+function buildHouseLoreLink(runtime, houseId) {
+  const registry = runtime.HaeuserRegistry;
+  if (!registry || !houseId || !registry.byId(houseId)) return '';
+  return encodeURI(`../Familien Häuser und Clans/${registry.linkFor(houseId)}`);
+}
+
 export function createAppController({
   store,
   almanachCharacterRepository = null,
@@ -450,7 +458,12 @@ export function createAppController({
           if (isEditing) timeJumpDialog.openEdit(store.getState().family, timeJumpId);
         },
         onLineageCrestClick() {
-          if (isEditing) lineageDialog.open(store.getState().family);
+          if (isEditing) {
+            lineageDialog.open(store.getState().family);
+            return;
+          }
+          const link = buildHouseLoreLink(runtime, store.getState().family.document.id);
+          if (link) runtime.open?.(link, '_blank', 'noopener');
         },
         onLineageTimeGapClick() {
           if (isEditing) lineageDialog.open(store.getState().family);
