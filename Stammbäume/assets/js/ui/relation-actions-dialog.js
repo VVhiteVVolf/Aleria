@@ -8,18 +8,21 @@ const PARTNER_ACTIONS = new Set(['marry', 'betroth', 'import-ward']);
 const ACTION_DEFINITIONS = Object.freeze([
   {
     id: 'marry',
+    group: 'Bund & Ehe',
     glyph: '⚭',
     label: 'Verheiraten',
     hint: 'Ehe mit einer Person aus diesem Baum, dem Register oder einer neuen Person schließen'
   },
   {
     id: 'betroth',
+    group: 'Bund & Ehe',
     glyph: '⚯',
     label: 'Verloben',
     hint: 'Verlöbnis mit einer Person aus diesem Baum, dem Register oder einer neuen Person'
   },
   {
     id: 'upgrade-engagement',
+    group: 'Bund & Ehe',
     glyph: '✽',
     label: 'Verlobung in Ehe wandeln',
     hint: 'Ein bestehendes Verlöbnis wird zur Ehe',
@@ -27,6 +30,7 @@ const ACTION_DEFINITIONS = Object.freeze([
   },
   {
     id: 'divorce',
+    group: 'Bund & Ehe',
     glyph: '⚮',
     label: 'Verbindung lösen',
     hint: 'Eine bestehende Ehe scheiden oder ein Verlöbnis auflösen',
@@ -34,30 +38,42 @@ const ACTION_DEFINITIONS = Object.freeze([
   },
   {
     id: 'beget-child',
+    group: 'Familie & Obhut',
     glyph: '✚',
     label: 'Kind zeugen',
     hint: 'Neues leibliches Kind dieser Person anlegen'
   },
   {
     id: 'adopt',
+    group: 'Familie & Obhut',
     glyph: '❦',
     label: 'Adoptieren',
     hint: 'Neues Adoptivkind dieser Person anlegen'
   },
   {
+    id: 'add-parent',
+    group: 'Familie & Obhut',
+    glyph: '☩',
+    label: 'Elternteil ergänzen',
+    hint: 'Neues Elternteil über dieser Person anlegen'
+  },
+  {
     id: 'import-ward',
+    group: 'Familie & Obhut',
     glyph: '⇠',
     label: 'Mündel aufnehmen',
     hint: 'Eine Person als Mündel in die Obhut dieser Person geben'
   },
   {
     id: 'send-ward',
+    group: 'Familie & Obhut',
     glyph: '⇢',
     label: 'Als Mündel wegschicken',
     hint: 'Diese Person einem anderen Haus des Registers als Mündel anvertrauen'
   },
   {
     id: 'die',
+    group: 'Leben & Stand',
     glyph: '✝',
     label: 'Sterben lassen',
     hint: 'Todesjahr eintragen und die Person als verstorben führen',
@@ -65,6 +81,7 @@ const ACTION_DEFINITIONS = Object.freeze([
   },
   {
     id: 'revive',
+    group: 'Leben & Stand',
     glyph: '❁',
     label: 'Wiederbeleben',
     hint: 'Todesdatum entfernen und die Person wieder als lebend führen',
@@ -72,6 +89,7 @@ const ACTION_DEFINITIONS = Object.freeze([
   },
   {
     id: 'legitimize',
+    group: 'Leben & Stand',
     glyph: '◆',
     label: 'Legitimieren',
     hint: 'Uneheliche Abstammung dieser Person legitimieren',
@@ -79,10 +97,25 @@ const ACTION_DEFINITIONS = Object.freeze([
   },
   {
     id: 'marry-away',
+    group: 'Erweitert',
     glyph: '➳',
     label: 'Wegverheiraten (Wappenknoten)',
     hint: 'Wappen-Medaillon der wegverheirateten Linie unter der Ehe anlegen',
     requires: 'partnership'
+  },
+  {
+    id: 'add-related',
+    group: 'Erweitert',
+    glyph: '✦',
+    label: 'Neue Person mit freier Beziehung',
+    hint: 'Voller Dialog für alle Beziehungs- und Abstammungsarten'
+  },
+  {
+    id: 'link-existing',
+    group: 'Erweitert',
+    glyph: '∞',
+    label: 'Bestehende Personen verknüpfen',
+    hint: 'Zwei vorhandene Personen frei verbinden (auch Affäre, politisch, erzwungen …)'
   }
 ]);
 
@@ -151,10 +184,15 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
 
   function renderMenu(person) {
     const available = availability(person);
-    menu.innerHTML = ACTION_DEFINITIONS.map(definition => {
-      const requirement = definition.requires;
-      const enabled = !requirement || available[requirement];
-      return `
+    const groups = [];
+    ACTION_DEFINITIONS.forEach(definition => {
+      let group = groups.find(item => item.name === definition.group);
+      if (!group) {
+        group = { name: definition.group, cards: [] };
+        groups.push(group);
+      }
+      const enabled = !definition.requires || available[definition.requires];
+      group.cards.push(`
         <button class="relation-action-card" type="button"
           data-action="relation-action" data-relation-action="${definition.id}" ${enabled ? '' : 'disabled'}>
           <span class="relation-action-glyph" aria-hidden="true">${definition.glyph}</span>
@@ -163,8 +201,14 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
             <small>${escapeHtml(definition.hint)}</small>
           </span>
         </button>
-      `;
-    }).join('');
+      `);
+    });
+    menu.innerHTML = groups.map(group => `
+      <section class="relation-action-group">
+        <h3 class="relation-action-group-title">${escapeHtml(group.name)}</h3>
+        <div class="relation-action-group-grid">${group.cards.join('')}</div>
+      </section>
+    `).join('');
     menu.hidden = false;
     step.hidden = true;
     footer.hidden = true;

@@ -243,3 +243,100 @@
     display: none;
   }
 }
+
+/* Kompakte Wappenkacheln, nach Rang gruppiert – je nobler, desto weiter oben. */
+.registry-rank-section {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.registry-rank-heading {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0;
+  color: #6d4c1c;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.registry-rank-heading::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 139, 55, 0.55), transparent);
+}
+
+.registry-rank--royal .registry-rank-heading,
+.registry-rank--county .registry-rank-heading { color: #7c211b; }
+.registry-rank--barony .registry-rank-heading { color: #533063; }
+.registry-rank--knight-prince .registry-rank-heading { color: #7a5a1e; }
+.registry-rank--knight .registry-rank-heading,
+.registry-rank--knight-simple .registry-rank-heading { color: #565656; }
+.registry-rank--commoner .registry-rank-heading { color: #5c4c37; }
+.registry-rank--unknown .registry-rank-heading { opacity: 0.65; }
+
+.registry-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.6rem, 1fr));
+  gap: 0.45rem;
+}
+
+.registry-tile {
+  position: relative;
+  display: grid;
+  gap: 0.28rem;
+  justify-items: center;
+  padding: 0.6rem 0.45rem 0.55rem;
+  border: 1px solid rgba(82, 55, 32, 0.2);
+  background: rgba(255, 250, 239, 0.72);
+  color: var(--ink-800);
+  text-align: center;
+  text-decoration: none;
+  transition: 130ms ease;
+}
+
+.registry-tile:hover {
+  border-color: rgba(184, 139, 55, 0.75);
+  background: #fffaf0;
+  box-shadow: 0 0.35rem 1rem rgba(74, 48, 27, 0.16);
+  transform: translateY(-2px);
+}
+
+.registry-tile-emblem {
+  width: 3.1rem;
+  height: 3.1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0.15rem 0.2rem rgba(74, 48, 27, 0.22));
+}
+
+.registry-tile strong {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  line-height: 1.25;
+}
+
+.registry-tile:hover strong {
+  color: #8e2724;
+}
+
+.registry-tile small {
+  color: var(--ink-500);
+  font-size: 0.62rem;
+}
+
+.registry-tile-flag {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  padding: 0.08rem 0.32rem;
+  border: 1px solid rgba(50, 108, 74, 0.5);
+  border-radius: 999px;
+  color: #2c5c40;
+  font-size: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

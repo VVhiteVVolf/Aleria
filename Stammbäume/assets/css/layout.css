@@ -132,6 +132,12 @@
   gap: 0.35rem;
 }
 
+/* Zarte Trennlinien zwischen den Werkzeug-Clustern. */
+.toolbar-group + .toolbar-group {
+  padding-left: 0.75rem;
+  border-left: 1px solid rgba(145, 100, 48, 0.32);
+}
+
 .toolbar-group--end {
   margin-left: auto;
 }

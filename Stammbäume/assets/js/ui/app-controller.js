@@ -215,6 +215,24 @@ export function createAppController({
         cadetDialog.openCreate(state.family, partnership.id);
         return;
       }
+      case 'add-parent':
+        relationActionsDialog.close();
+        relatedPersonDialog.open(person.id, state.family, {
+          relationKind: 'parent',
+          heading: `Elternteil von ${person.name} ergänzen`
+        });
+        return;
+      case 'add-related':
+        relationActionsDialog.close();
+        relatedPersonDialog.open(person.id, state.family);
+        return;
+      case 'link-existing':
+        if (state.family.persons.length < 2) {
+          throw new Error('Für eine Verknüpfung werden mindestens zwei Personen benötigt.');
+        }
+        relationActionsDialog.close();
+        relationshipDialog.open(person.id, state.family);
+        return;
       default:
         if (!relationActionsDialog.showStep(actionId)) {
           throw new Error('Diese Aktion ist noch nicht verfügbar.');

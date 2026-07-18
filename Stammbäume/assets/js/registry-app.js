@@ -2,8 +2,8 @@ import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
 import {
-  formatHouseProfile,
-  getHouseProfileSearchTerms
+  getHouseProfileSearchTerms,
+  getHouseRank
 } from './domain/house-profile.js';
 import {
   buildRegistryFolderTree,
@@ -14,25 +14,49 @@ import { listFamilyRecords } from './services/family-library.js';
 import { createFamilyViewLink, normalizeFamilyViewLink } from './services/family-links.js';
 import { escapeHtml } from './ui/dom.js';
 
-function renderFamilyCard(record) {
+function recordRank(record) {
+  return getHouseRank(getRegistryRecordHouseProfile(record)?.rankId);
+}
+
+function renderFamilyTile(record) {
   const emblem = record.emblem || record.family?.document.emblem || record.family?.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
   const people = Number(record.personCount ?? record.family?.persons.length ?? 0);
-  const description = record.motto || record.family?.document.motto || record.family?.document.description || 'Familienakte öffnen';
-  const houseProfile = formatHouseProfile(getRegistryRecordHouseProfile(record));
+  const motto = record.motto || record.family?.document.motto || '';
+  const flag = record.source === 'local' ? 'Lokal' : record.source === 'firebase' ? 'Publiziert' : '';
   return `
-    <a class="registry-family-card" href="${escapeHtml(createFamilyViewLink(record.id))}">
-      <img class="registry-family-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
-      <div>
-        <h3>${escapeHtml(record.title)}</h3>
-        <p>${escapeHtml(description)}</p>
-        ${houseProfile ? `<p class="registry-family-profile">${escapeHtml(houseProfile)}</p>` : ''}
-      </div>
-      <span class="registry-family-meta">
-        <span>${people} Personen</span>
-        <span class="${record.source === 'local' ? 'registry-source-local' : ''}">${record.source === 'local' ? 'Lokal gespeichert' : record.source === 'firebase' ? 'Veröffentlicht' : 'Projekt-Registry'}</span>
-      </span>
+    <a class="registry-tile" href="${escapeHtml(createFamilyViewLink(record.id))}"
+      title="${escapeHtml(record.title)}${motto ? ` · ${escapeHtml(motto)}` : ''}">
+      ${flag ? `<span class="registry-tile-flag">${flag}</span>` : ''}
+      <img class="registry-tile-emblem" src="${escapeHtml(emblem)}" alt="Wappen von ${escapeHtml(record.title)}">
+      <strong>${escapeHtml(record.title)}</strong>
+      <small>${people ? `${people} Personen` : 'Leerakte'}</small>
     </a>
   `;
+}
+
+// Häuser stehen als kompakte Wappenkacheln nach Rang gruppiert – je nobler, desto weiter oben.
+function renderRecordsGrid(records) {
+  if (!records.length) return '';
+  const sorted = [...records].sort((first, second) => (
+    recordRank(first).order - recordRank(second).order
+    || first.title.localeCompare(second.title, 'de')
+  ));
+  const sections = [];
+  sorted.forEach(record => {
+    const rank = recordRank(record);
+    let section = sections.find(item => item.rankId === rank.id);
+    if (!section) {
+      section = { rankId: rank.id, label: rank.label, tiles: [] };
+      sections.push(section);
+    }
+    section.tiles.push(renderFamilyTile(record));
+  });
+  return sections.map(section => `
+    <section class="registry-rank-section registry-rank--${escapeHtml(section.rankId)}">
+      <h4 class="registry-rank-heading"><span>${escapeHtml(section.label)}</span></h4>
+      <div class="registry-tile-grid">${section.tiles.join('')}</div>
+    </section>
+  `).join('');
 }
 
 function renderFolder(node, depth = 0) {
@@ -40,10 +64,7 @@ function renderFolder(node, depth = 0) {
     .sort((first, second) => first.name.localeCompare(second.name, 'de'))
     .map(child => renderFolder(child, depth + 1))
     .join('');
-  const records = [...node.records]
-    .sort((first, second) => first.title.localeCompare(second.title, 'de'))
-    .map(renderFamilyCard)
-    .join('');
+  const records = renderRecordsGrid([...node.records]);
   if (!node.name) return `${folders}${records}`;
   return `
     <details class="registry-folder" ${depth <= 2 ? 'open' : ''}>

@@ -393,7 +393,8 @@
   padding: 1rem 1.2rem;
 }
 
-.inspector-actions .button:last-child {
+.inspector-actions .button:last-child,
+.inspector-actions .inspector-primary-action {
   grid-column: 1 / -1;
 }
 

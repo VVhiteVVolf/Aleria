@@ -1,3 +1,4 @@
+// Rangfolge in Cenyr: König > Graf > Baron > Ritterfürst > Ritterherr > einfacher Ritter > Bürger.
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
   royal: Object.freeze({ id: 'royal', label: 'Königsgeschlecht', order: 10 }),
@@ -5,7 +6,9 @@ const RANK_DEFINITIONS = Object.freeze({
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
-  knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 })
+  knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
+  'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
+  commoner: Object.freeze({ id: 'commoner', label: 'Bürgerfamilie', order: 80 })
 });
 
 export const HOUSE_RANKS = RANK_DEFINITIONS;

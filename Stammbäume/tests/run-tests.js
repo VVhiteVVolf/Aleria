@@ -579,7 +579,14 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(html, /assets\/css\/relationship-matrix\.css/);
   assert.match(html, /id="living-count"/);
   assert.match(html, /id="partnership-count"/);
-  assert.match(inspectorScript, /data-action="open-time-jump-after-person"/);
+  assert.match(inspectorScript, /data-action="open-relation-actions"/);
+  assert.doesNotMatch(
+    inspectorScript,
+    /open-time-jump-after-person|open-related-person|open-relationship/,
+    'Redundante Inspector-Aktionen sind in das Beziehungsmenü umgezogen.'
+  );
+  assert.match(html, /id="relation-actions-dialog"/);
+  assert.match(html, /assets\/css\/relation-actions\.css/);
   assert.match(appController, /relationshipMatrixDialog\.open\(store\.getState\(\)\.family, personId\)/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
 });

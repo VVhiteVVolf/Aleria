@@ -38,6 +38,28 @@
 
 .relation-actions-menu {
   display: grid;
+  gap: 0.9rem;
+}
+
+.relation-action-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.relation-action-group-title {
+  margin: 0;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(184, 139, 55, 0.35);
+  color: var(--ink-650);
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.relation-action-group-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   gap: 0.55rem;
 }

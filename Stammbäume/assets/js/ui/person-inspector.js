@@ -126,13 +126,10 @@ export function renderPersonInspector(container, graph, personId) {
       ${renderTimeJumps(timeJumps)}
 
       <footer class="inspector-actions">
-        <button class="button" type="button" data-action="open-relation-actions">⚭ Beziehung modifizieren</button>
+        <button class="button inspector-primary-action" type="button" data-action="open-relation-actions">⚭ Beziehung modifizieren</button>
         <button class="button button--quiet" type="button" data-action="open-person-edit">Person bearbeiten</button>
         <button class="button button--quiet" type="button" data-action="open-person-biography">Biographie bearbeiten</button>
-        <button class="button" type="button" data-action="open-related-person">＋ Person mit Beziehung</button>
-        <button class="button button--quiet" type="button" data-action="open-time-jump-after-person">＋ Zeitsprung nach dieser Person</button>
         <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Person zuordnen</button>
-        <button class="button button--quiet" type="button" data-action="open-relationship">Beziehung verknüpfen</button>
         <button class="button button--quiet" type="button" data-action="focus-person">Im Baum zentrieren</button>
         <button class="button button--danger" type="button" data-action="delete-person">Person löschen</button>
       </footer>

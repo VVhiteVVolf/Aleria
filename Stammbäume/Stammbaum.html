@@ -99,14 +99,20 @@
         </button>
       </div>
 
-      <div class="toolbar-group toolbar-group--end">
-        <button class="button" type="button" data-action="start-new-family">＋ Neue Familie</button>
-        <a class="button button--quiet" href="register.html">Familienregister</a>
-        <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
+      <div class="toolbar-group" aria-label="Baum ergänzen">
         <button class="button button--quiet" type="button" data-action="open-person-create">＋ Person</button>
-        <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Abgleich</button>
         <button class="button button--quiet" type="button" data-action="open-cadet-create">＋ Hausverknüpfung</button>
         <button class="button button--quiet" type="button" data-action="open-time-jump-create">＋ Zeitsprung</button>
+        <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Abgleich</button>
+      </div>
+
+      <div class="toolbar-group" aria-label="Familienakte">
+        <button class="button" type="button" data-action="start-new-family">＋ Neue Familie</button>
+        <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
+        <a class="button button--quiet" href="register.html">Familienregister</a>
+      </div>
+
+      <div class="toolbar-group toolbar-group--end" aria-label="Export und Import">
         <button class="button button--quiet" type="button" data-action="export-png">PNG · hohe Auflösung</button>
         <button class="button button--quiet" type="button" data-action="export-family">JSON exportieren</button>
         <button class="button button--quiet" type="button" data-action="trigger-import">JSON importieren</button>
