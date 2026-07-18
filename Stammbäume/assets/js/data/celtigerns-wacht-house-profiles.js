@@ -71,5 +71,5 @@ export const CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES = Object.freeze({
   gostyn: lowerKnightProfile('gafyr', ['Bronfelen']),
   awenydd: lowerKnightProfile('draig'),
   awenor: lowerKnightProfile('draig'),
-  loer: lowerKnightProfile('draig', ['Craithglyn'])
+  loer: lowerKnightProfile('wyrm', ['Craithglyn'])
 });

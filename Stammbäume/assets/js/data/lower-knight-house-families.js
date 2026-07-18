@@ -8,6 +8,7 @@ import { HOUSE_CLUDWYR_FAMILY } from './house-cludwyr-family.js';
 import { HOUSE_ENEINIOG_FAMILY } from './house-eneiniog-family.js';
 import { HOUSE_GELYN_FAMILY } from './house-gelyn-family.js';
 import { HOUSE_GOSTYN_FAMILY } from './house-gostyn-family.js';
+import { HOUSE_LOER_FAMILY } from './house-loer-family.js';
 import { HOUSE_RHYDDID_FAMILY } from './house-rhyddid-family.js';
 import { HOUSE_TLAWD_FAMILY } from './house-tlawd-family.js';
 
@@ -22,7 +23,8 @@ const ELABORATED_KNIGHT_FAMILIES = Object.freeze({
   eneiniog: HOUSE_ENEINIOG_FAMILY,
   gostyn: HOUSE_GOSTYN_FAMILY,
   awenydd: HOUSE_AWENYDD_FAMILY,
-  awenor: HOUSE_AWENOR_FAMILY
+  awenor: HOUSE_AWENOR_FAMILY,
+  loer: HOUSE_LOER_FAMILY
 });
 
 export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
@@ -36,7 +38,7 @@ export const LOWER_KNIGHT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'gostyn', liege: 'Gafyr', secondarySeats: Object.freeze(['Bronfelen']) }),
   Object.freeze({ slug: 'awenydd', liege: 'Draig' }),
   Object.freeze({ slug: 'awenor', liege: 'Draig' }),
-  Object.freeze({ slug: 'loer', liege: 'Draig', secondarySeats: Object.freeze(['Craithglyn']) })
+  Object.freeze({ slug: 'loer', liege: 'Wyrm', secondarySeats: Object.freeze(['Craithglyn']) })
 ]);
 
 function titleFromSlug(slug) {

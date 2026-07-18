@@ -31,6 +31,8 @@ import { HOUSE_CHWEDLONOL_FAMILY } from '../assets/js/data/house-chwedlonol-fami
 import { HOUSE_CHWEDLONOL_PORTRAITS } from '../assets/js/data/house-chwedlonol-portraits.js';
 import { HOUSE_AWENOR_FAMILY } from '../assets/js/data/house-awenor-family.js';
 import { HOUSE_AWENOR_PORTRAITS } from '../assets/js/data/house-awenor-portraits.js';
+import { HOUSE_LOER_FAMILY } from '../assets/js/data/house-loer-family.js';
+import { HOUSE_LOER_PORTRAITS } from '../assets/js/data/house-loer-portraits.js';
 import { HOUSE_AWENYDD_FAMILY } from '../assets/js/data/house-awenydd-family.js';
 import { HOUSE_AWENYDD_PORTRAITS } from '../assets/js/data/house-awenydd-portraits.js';
 import { HOUSE_BALCHDER_FAMILY } from '../assets/js/data/house-balchder-family.js';
@@ -3286,6 +3288,160 @@ test('liefert für Haus Awenor alle 19 belegten Portraits lokal aus', async () =
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
 
+test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Schwestern ab', () => {
+  const family = assertValidFamily(HOUSE_LOER_FAMILY).family;
+  const graph = createFamilyGraph(family);
+  const converted = toFamilyChartData(family);
+
+  assert.equal(family.persons.length, 24);
+  assert.equal(family.partnerships.length, 10);
+  assert.equal(family.parentages.length, 13);
+  assert.equal(family.cadetBranches.length, 3);
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-cadfarch-spouse');
+  assert.equal(family.lineage.crestFrame, 'silver', 'Ritterherrenhäuser führen den silbernen Wappenrahmen.');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.fromYear, '????');
+  assert.equal(family.lineage.timeGap.toYear, '1639');
+  assert.equal(family.document.houseProfile.rankId, 'knight');
+  // Die Quelle nennt Haus Wyrm als Lehnsherrn (nicht Draig, wie zuvor im Register verzeichnet).
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-wyrm');
+
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'head').map(person => person.id),
+    ['cadfarch-loer', 'maddocc-loer', 'eurgain-loer']
+  );
+  assert.deepEqual(
+    family.persons.filter(person => person.lineageRole === 'mainline').map(person => person.id),
+    ['ynyrion-loer', 'olwen-loer']
+  );
+
+  assert.equal(graph.getPerson('cadfarch-loer').title, 'Begründer des Ritterherrenhauses Loer');
+  assert.equal(graph.getPerson('eurgain-loer').title, 'Ritterherr des Hauses Loer');
+  assert.equal(graph.getPerson('cadfarch-loer').status, 'dead');
+  assert.equal(graph.getPerson('eurgain-loer').status, 'alive');
+  assert.equal(graph.getPerson('eurgain-loer').sex, 'male');
+  assert.equal(graph.getPerson('olwen-loer').sex, 'male');
+
+  const expectedChildren = new Map([
+    ['cadfarch-loer', ['maddocc-loer', 'rhiannedd-loer']],
+    ['maddocc-loer', ['dwynarth-loer', 'eurgain-loer', 'glenys-1667-loer']],
+    ['eurgain-loer', ['gwynan-loer', 'ynyrion-loer']],
+    ['dwynarth-loer', ['garmon-loer', 'glenys-1695-loer']],
+    ['ynyrion-loer', ['gwion-loer', 'olwen-loer']],
+    ['garmon-loer', ['tesni-loer', 'tyne-loer']]
+  ]);
+  expectedChildren.forEach((childIds, personId) => {
+    assert.deepEqual(graph.getChildren(personId).map(person => person.id).sort(), childIds);
+  });
+
+  // Glenys, die Schwester Eurgains und Dwynarths, und Glenys, Dwynarths eigene Tochter, sind
+  // namensgleich über eine Generation hinweg — kein Fehler, sondern über die ID disambiguiert.
+  assert.equal(graph.getPerson('glenys-1667-loer').name, 'Glenys Loer');
+  assert.equal(graph.getPerson('glenys-1695-loer').name, 'Glenys Loer');
+  assert.equal(graph.getPerson('glenys-1667-loer').birth, '1667');
+  assert.equal(graph.getPerson('glenys-1695-loer').birth, '1695');
+  assert.notEqual(graph.getPerson('glenys-1667-loer').worldPersonId, graph.getPerson('glenys-1695-loer').worldPersonId);
+
+  const founderParentages = family.parentages.filter(parentage => parentage.partnershipId === 'marriage-cadfarch-spouse');
+  assert.equal(founderParentages.length, 2);
+  assert.ok(founderParentages.every(parentage => parentage.type === 'claimed' && parentage.certainty === 'probable'));
+
+  // Rückwirkend berechnete Altersabstände zwischen Eltern und Kindern bleiben plausibel.
+  family.parentages.forEach(parentage => {
+    const childBirth = Number(graph.getPerson(parentage.childId)?.birth);
+    if (!Number.isInteger(childBirth)) return;
+    parentage.parentIds.forEach(parentId => {
+      const parentBirth = Number(graph.getPerson(parentId)?.birth);
+      if (!Number.isInteger(parentBirth)) return;
+      const ageAtBirth = childBirth - parentBirth;
+      assert.ok(ageAtBirth >= 18 && ageAtBirth <= 55, `${parentId} besitzt ein plausibles Alter bei der Geburt von ${parentage.childId}.`);
+    });
+  });
+
+  const peopleWithUnknownPartners = [
+    'cadfarch-loer', 'maddocc-loer', 'rhiannedd-loer', 'eurgain-loer', 'glenys-1667-loer',
+    'dwynarth-loer', 'ynyrion-loer', 'gwynan-loer', 'garmon-loer', 'glenys-1695-loer'
+  ];
+  const unknownPartners = peopleWithUnknownPartners.map(personId => {
+    const partners = graph.getPartners(personId);
+    assert.equal(partners.length, 1, `${personId} besitzt genau den unbeschrifteten Partner aus der Quelltabelle.`);
+    assert.equal(partners[0].status, 'unknown');
+    assert.equal(partners[0].familyRole, 'married');
+    return partners[0];
+  });
+  assert.equal(new Set(unknownPartners.map(person => person.id)).size, 10);
+
+  const unpartneredPeople = ['olwen-loer', 'gwion-loer', 'tyne-loer', 'tesni-loer'];
+  assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
+
+  // Rhiannedd (Gründerskind) sowie beide Glenys (Eurgains/Dwynarths Schwester und Dwynarths Tochter)
+  // sind an ein unbekanntes Zielhaus wegverheiratet.
+  const branchByPartnership = new Map(family.cadetBranches.map(branch => [branch.parentPartnershipId, branch]));
+  ['marriage-rhiannedd-spouse', 'marriage-glenys-1667-spouse', 'marriage-glenys-1695-spouse'].forEach(partnershipId => {
+    const branch = branchByPartnership.get(partnershipId);
+    assert.equal(branch.name, 'Unbekanntes Haus');
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.crestFrame, 'gold');
+  });
+
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'time-gap').length, 1);
+  assert.equal(converted.data.filter(entry => entry.data.nodeKind === 'cadet-house').length, 3);
+  const crest = converted.data.find(entry => entry.data.nodeKind === 'house-crest');
+  assert.match(crest.data.crestFrameAsset, /crest-silver\.png$/, 'Der Wappenknoten nutzt den Silberrahmen.');
+
+  const chartById = new Map(converted.data.map(entry => [entry.id, entry]));
+  const connectedIds = new Set(['cadfarch-loer']);
+  const pendingIds = ['cadfarch-loer'];
+  while (pendingIds.length) {
+    const entry = chartById.get(pendingIds.shift());
+    assert.ok(entry, 'Jeder verknüpfte Loer-Knoten ist im Diagramm vorhanden.');
+    [...entry.rels.parents, ...entry.rels.spouses, ...entry.rels.children].forEach(personId => {
+      if (connectedIds.has(personId)) return;
+      connectedIds.add(personId);
+      pendingIds.push(personId);
+    });
+  }
+  assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
+});
+
+test('liefert für Haus Loer alle 10 belegten Portraits lokal aus', async () => {
+  const family = assertValidFamily(HOUSE_LOER_FAMILY).family;
+  const picturedPeople = family.persons.filter(person => person.portrait);
+  const placeholderPeople = family.persons.filter(person => !person.portrait);
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-loer/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_LOER_PORTRAITS).length, 10);
+  assert.equal(Object.keys(sourceManifest).length, 10);
+  assert.equal(picturedPeople.length, 10);
+  assert.equal(placeholderPeople.length, 14);
+  assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_LOER_PORTRAITS[personId]));
+  assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
+  assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+
+  // Begründer, seine Kinder und die ältere Glenys bleiben trotz Namensnennung ohne Portrait
+  // (nur Platzhalterbilder in der Quelle).
+  ['cadfarch-loer', 'maddocc-loer', 'rhiannedd-loer', 'glenys-1667-loer'].forEach(personId => {
+    assert.equal(family.persons.find(person => person.id === personId).portrait, '');
+  });
+
+  await Promise.all(Object.entries(HOUSE_LOER_PORTRAITS).map(async ([personId, portrait]) => {
+    const person = family.persons.find(entry => entry.id === personId);
+    assert.ok(person, `Portraitzuordnung ohne Loer-Person: ${personId}`);
+    assert.equal(person.portrait, portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, `Portraitdatei für ${person.name} ist leer.`);
+    assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
+  }));
+
+  const emblem = await readFile(new URL('../assets/images/houses/haus-loer.png', import.meta.url));
+  assert.ok(emblem.length > 100);
+  assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
+});
+
 test('bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab', () => {
   const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const graph = createFamilyGraph(family);
@@ -3694,6 +3850,8 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       assert.equal(loaded.family.persons.length, 34, 'Haus Awenydd ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else if (family.document.id === 'haus-awenor') {
       assert.equal(loaded.family.persons.length, 34, 'Haus Awenor ist als ausgearbeitetes Ritterherrenhaus registriert.');
+    } else if (family.document.id === 'haus-loer') {
+      assert.equal(loaded.family.persons.length, 24, 'Haus Loer ist als ausgearbeitetes Ritterherrenhaus registriert.');
     } else {
       assert.equal(loaded.family.persons.length, 0);
     }
