@@ -5340,11 +5340,13 @@ test('Neue Vasallenhäuser (Artus Streben/Gwendolyns Ufer/Rhonwens Tränen): sch
 test('Ausgestorben-Häuser aus Rhonwens Tränen (Morveth, Skellor) tragen einen Ausgestorben-Knoten, lebende Häuser nicht', () => {
   const extinctIds = new Set(['haus-morveth', 'haus-skellor']);
   RHONWENS_TRAENEN_HOUSE_FAMILIES.forEach(family => {
+    const extinctBranches = family.cadetBranches.filter(branch => branch.linkType === 'line-extinct');
     if (extinctIds.has(family.document.id)) {
-      assert.equal(family.cadetBranches.length, 1, `${family.document.id} sollte einen Ausgestorben-Knoten tragen`);
-      assert.equal(family.cadetBranches[0].linkType, 'line-extinct');
+      assert.equal(extinctBranches.length, 1, `${family.document.id} sollte einen Ausgestorben-Knoten tragen`);
     } else {
-      assert.equal(family.cadetBranches.length, 0, `${family.document.id} sollte keinen Ausgestorben-Knoten tragen`);
+      // Nicht-erloschene Häuser dürfen andere Kadettenzweige haben (z. B. Gwareds
+      // Wegverheiratungen), nur keinen Ausgestorben-Knoten.
+      assert.equal(extinctBranches.length, 0, `${family.document.id} sollte keinen Ausgestorben-Knoten tragen`);
     }
   });
 });
@@ -5389,14 +5391,14 @@ test('Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/O
 
 test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysywens 1720 ab', () => {
   const family = assertValidFamily(HOUSE_GWARED_FAMILY).family;
-  assert.equal(family.persons.length, 36);
+  assert.equal(family.persons.length, 45);
   assert.equal(family.document.houseProfile.liegeHouseId, 'haus-arwydd');
   assert.equal(family.lineage.crestFrame, 'silver');
 
   const graph = createFamilyGraph(family);
 
-  // Die Illysywen-treue Linie erlischt 1720 mit Gwaedan und seiner Frau; ihre
-  // Kinder Sheev und Soffi sind unbeteiligte Waisen, keine Erben der Kopfschaft.
+  // Die Illysywen-treue Linie erlischt im Krieg von 1718-1720; ihre Kinder Sheev
+  // und Soffi sind unbeteiligte Waisen, keine Erben der Kopfschaft.
   const gwaedan = graph.getPerson('gwaedan-gwared');
   const perdena = graph.getPerson('perdena');
   assert.equal(gwaedan.death, '1720');
@@ -5405,6 +5407,34 @@ test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysy
   assert.deepEqual(gwaedansChildren, ['sheev-gwared', 'soffi-gwared']);
   assert.equal(family.persons.find(person => person.id === 'sheev-gwared').lineageRole, 'branch');
   assert.equal(family.persons.find(person => person.id === 'soffi-gwared').lineageRole, 'branch');
+
+  // Sheev und Soffi tragen den "als Mündel fortgegeben"-Rahmen und ihre echten
+  // Portraits (übernommen aus Balchder/Chwedonol, wo die volle Akte liegt).
+  const sheev = family.persons.find(person => person.id === 'sheev-gwared');
+  const soffi = family.persons.find(person => person.id === 'soffi-gwared');
+  assert.equal(sheev.familyRole, 'ward-away');
+  assert.equal(soffi.familyRole, 'ward-away');
+  assert.equal(sheev.portrait, 'assets/images/portraits/haus-balchder/sheev-gwared.jpg');
+  assert.equal(soffi.portrait, 'assets/images/portraits/haus-chwedlonol/soffi-gwared.jpg');
+
+  // Auf der linken (Illysywen-treuen) Seite ab Cyrwyn Gwared sind nur noch Sheev
+  // und Soffi am Leben; die meisten Todeszeiten fallen in den Krieg (1718-1720).
+  const leftBranchIds = [
+    'cyrwyn-gwared', 'nerella', 'dyrian-gwared', 'cyrena', 'ellor-gwared', 'firwen',
+    'firban-gwared', 'kyria', 'janor-gwared', 'dynwen',
+    'gwaedan-gwared', 'perdena', 'kyrban-gwared', 'sairyn'
+  ];
+  leftBranchIds.forEach(id => {
+    const leftPerson = family.persons.find(person => person.id === id);
+    assert.equal(leftPerson.status, 'dead', `${id} sollte auf der linken Seite nicht mehr leben`);
+  });
+  const warDeathIds = leftBranchIds.filter(id => id !== 'cyrwyn-gwared' && id !== 'nerella');
+  warDeathIds.forEach(id => {
+    const leftPerson = family.persons.find(person => person.id === id);
+    assert.ok(['1718', '1719', '1720'].includes(leftPerson.death), `${id} sollte 1718-1720 gestorben sein, war aber ${leftPerson.death}`);
+  });
+  assert.equal(family.persons.find(person => person.id === 'sheev-gwared').status, 'alive');
+  assert.equal(family.persons.find(person => person.id === 'soffi-gwared').status, 'alive');
 
   // Kopfschaft: erst die ältere (nun erloschene) Linie, dann die überlebende
   // Nebenlinie um Rhydor, die die heutige Kopfschaft (Ellric) stellt.
@@ -5419,9 +5449,30 @@ test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysy
   // eigene Vorfahren/Nachkommen, nicht die ganze verbundene Sippe).
   assert.equal(family.view.focusPersonId, 'uwchor-gwared');
 
-  // Zeitsprung zwischen dem sagenhaften Gründerpaar und den beiden Brüdern von 1618.
-  assert.equal(family.timeJumps.length, 1);
-  assert.deepEqual(family.timeJumps[0].childIds.slice().sort(), ['cyrwyn-gwared', 'rhydor-gwared']);
+  // Zeitsprung als lineage.timeGap (nicht als timeJumps-Knoten), damit die
+  // Reihenfolge im Chart stimmt: Gründerpaar -> Hauswappen -> Zeitsprung -> nächste
+  // Generation, statt Hauswappen und Zeitsprung parallel nebeneinander.
+  assert.equal(family.timeJumps.length, 0);
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.lineage.timeGap.toYear, '1618');
+
+  // Oenban (Nebenzweig) hat inzwischen einen Sohn.
+  assert.deepEqual(graph.getChildren('oenban-gwared').map(person => person.id), ['helric-gwared']);
+
+  // Eine weitere Generation: Ellric und Dyrwyn setzen die Linie fort, Maelwen und
+  // Nera werden wegverheiratet (Frauen des Hauses werden wegverheiratet).
+  assert.deepEqual(graph.getChildren('ellric-gwared').map(person => person.id).sort(), ['brenar-gwared', 'ellena-gwared']);
+  assert.deepEqual(graph.getChildren('dyrwyn-gwared').map(person => person.id).sort(), ['firena-gwared', 'neddan-gwared']);
+  assert.equal(family.persons.find(person => person.id === 'brenar-gwared').lineageRole, 'mainline');
+
+  const madrynBranch = family.cadetBranches.find(branch => branch.id === 'married-away-madryn-maelwen');
+  assert.ok(madrynBranch);
+  assert.equal(madrynBranch.linkType, 'married-away');
+  assert.equal(madrynBranch.targetFamilyId, 'haus-madryn');
+  const merekBranch = family.cadetBranches.find(branch => branch.id === 'married-away-merek-nera');
+  assert.ok(merekBranch);
+  assert.equal(merekBranch.linkType, 'married-away');
+  assert.equal(merekBranch.targetFamilyId, 'haus-merek');
 });
 
 test('Sheev und Soffi Gwared sind über Balchder/Chwedonol hinweg dieselben Weltpersonen wie in Haus Gwared', () => {
