@@ -74,7 +74,7 @@ function flattenFolderRows(node, depth, parentPath, rows) {
     .sort((first, second) => first.name.localeCompare(second.name, 'de'))
     .forEach(child => {
       const path = `${parentPath}/${child.name}`;
-      const defaultOpen = depth < 2;
+      const defaultOpen = false;
       const open = treeOpenOverrides.has(path) ? treeOpenOverrides.get(path) : defaultOpen;
       const hasChildren = child.folders.size > 0 || child.records.length > 0;
       rows.push({ type: 'folder', path, parentPath, depth, node: child, open, hasChildren });
