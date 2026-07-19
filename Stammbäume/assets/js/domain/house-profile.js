@@ -1,6 +1,8 @@
 // Rangfolge in Cenyr: König > Graf > Baron > Ritterfürst > Ritterherr > einfacher Ritter > Bürger.
-// Albische Clans (Crannath) verwenden eigene Titel; 'dun-tiarna' entspricht laut
-// Vorgabe dem Baron und teilt sich daher dessen Rangstufe (order: 40).
+// Albische Clans (Crannath) verwenden eigene Titel: Laird=Ritterfürst, Dún Tiarna=Baron,
+// Mor Tiarna=Graf, Ard Tiarna=Herzog/Fürst, Ri Tiarna=König/Kaiser. Bislang sind nur
+// 'dun-tiarna' und 'ard-tiarna' verdrahtet (je nach Bedarf); sie teilen sich die
+// Rangstufe (order) ihres Cenyr-Äquivalents.
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
   royal: Object.freeze({ id: 'royal', label: 'Königsgeschlecht', order: 10 }),
@@ -8,6 +10,7 @@ const RANK_DEFINITIONS = Object.freeze({
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
+  'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Herzog/Fürst)', order: 20 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),

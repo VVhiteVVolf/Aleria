@@ -20,6 +20,7 @@ import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portr
 import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family.js';
 import { HOUSE_GWARED_FAMILY } from '../assets/js/data/house-gwared-family.js';
 import { HOUSE_ARD_CONBHRON_FAMILY } from '../assets/js/data/house-ard-conbhron-family.js';
+import { HOUSE_UI_TALAMH_FAMILY } from '../assets/js/data/house-ui-talamh-family.js';
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
@@ -4594,15 +4595,15 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie
   // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
   // Gwyllach und Sgrechiwr sind bürgerliche Häuser außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS
-  // und werden ebenfalls gesondert geprüft. Ard Conbhrón sitzt als antiker Albenclan in einer
-  // eigenen Orts-Hierarchie (Antike Crannath Clans/Lycath, ohne Sitz-/Baronie-Wappen) und wird
-  // ebenfalls gesondert geprüft.
+  // und werden ebenfalls gesondert geprüft. Ard Conbhrón und Ui Talamh sitzen als antike
+  // Albenclans in einer eigenen Orts-Hierarchie (Antike Crannath Clans) und werden ebenfalls
+  // gesondert geprüft.
   const newVassalHouseCount = ARTUS_STREBEN_HOUSE_FAMILIES.length
     + GWENDOLYNS_UFER_HOUSE_FAMILIES.length
     + RHONWENS_TRAENEN_HOUSE_FAMILIES.length;
   assert.equal(
     listFamilyRecords(storage).length,
-    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 4 + newVassalHouseCount
+    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 5 + newVassalHouseCount
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
@@ -4671,6 +4672,20 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.equal(ardConbhronProfile.regionEmblems.barony, '');
   assert.equal(ardConbhronProfile.regionEmblems.seat, '');
   assert.equal(ardConbhronProfile.liegeHouseId, '');
+
+  const uiTalamhLoaded = loadFamilyById('haus-ui-talamh', storage);
+  const uiTalamhProfile = uiTalamhLoaded.family.document.houseProfile;
+  const uiTalamhPath = ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Gwynthor'];
+  assert.deepEqual(uiTalamhLoaded.folderPath, uiTalamhPath);
+  assert.deepEqual(createFolderPathFromHouseProfile(uiTalamhProfile), uiTalamhPath);
+  assert.equal(uiTalamhProfile.rankId, 'ard-tiarna');
+  assert.equal(getHouseRank('ard-tiarna').label, 'Ard Tiarna (Herzog/Fürst)');
+  assert.match(uiTalamhProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  assert.match(uiTalamhProfile.regionEmblems.county, /^assets\/images\/regions\//);
+  assert.equal(uiTalamhProfile.regionEmblems.barony, '');
+  // Der Sitz "Gwynthor" ist ein realer, bereits bebilderter Sitz (geteilt mit Draig/Gafyr).
+  assert.match(uiTalamhProfile.regionEmblems.seat, /^assets\/images\/regions\//);
+  assert.equal(uiTalamhProfile.liegeHouseId, '');
 
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
@@ -5541,12 +5556,12 @@ test('bildet den antiken Albenclan Ard Conbhrón mit zweiter Überlieferungslüc
 
   const graph = createFamilyGraph(family);
 
-  // Gründerpaar geteilt mit Haus Gafyr: Garym ist hier explizit 'core', obwohl sein
-  // houseId (für die hausübergreifende Weltpersonen-ID) bei Gafyr bleibt.
-  const garym = family.persons.find(person => person.id === 'garym-gafyr');
-  assert.equal(garym.houseId, 'house-gafyr');
-  assert.equal(garym.familyRole, 'core');
-  assert.deepEqual(graph.getChildren('garym-gafyr').map(person => person.id).sort(), [
+  // Gründerpaar ist nicht überliefert (Unbekannter Ahnherr/Unbekannte Ahnfrau).
+  const ahnherr = family.persons.find(person => person.id === 'ahnherr-ard-conbhron');
+  assert.equal(ahnherr.name, 'Unbekannter Ahnherr');
+  assert.equal(ahnherr.houseId, 'house-ard-conbhron');
+  assert.equal(ahnherr.familyRole, 'core');
+  assert.deepEqual(graph.getChildren('ahnherr-ard-conbhron').map(person => person.id).sort(), [
     'clodagh-ard-conbhron', 'donall-ard-conbhron', 'garbhan-ard-conbhron', 'liadan-ard-conbhron'
   ]);
 
@@ -5581,18 +5596,15 @@ test('bildet den antiken Albenclan Ard Conbhrón mit zweiter Überlieferungslüc
   assert.equal(family.persons.find(person => person.id === 'caireen-conbhron').houseId, 'house-ard-conbhron');
   assert.equal(family.persons.find(person => person.id === 'llamrei-draig').houseId, 'house-draig');
 
-  assert.equal(family.view.focusPersonId, 'garym-gafyr');
+  assert.equal(family.view.focusPersonId, 'ahnherr-ard-conbhron');
 });
 
-test('Garym, Fíodhna, Clodagh, Tallwch, Caireen und Llamrei sind über Gafyr/Gwefrydd/Draig hinweg dieselben Weltpersonen wie in Haus Ard Conbhrón', () => {
+test('Clodagh, Tallwch, Caireen und Llamrei sind über Gwefrydd/Draig hinweg dieselben Weltpersonen wie in Haus Ard Conbhrón', () => {
   const ardConbhron = assertValidFamily(HOUSE_ARD_CONBHRON_FAMILY).family;
-  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
   const gwefrydd = assertValidFamily(HOUSE_GWEFRYDD_FAMILY).family;
   const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
 
   [
-    ['garym-gafyr', gafyr],
-    ['fiodhna-talamh', gafyr],
     ['clodagh-ard-conbhron', gwefrydd],
     ['tallwch-gwefrydd', gwefrydd],
     ['caireen-conbhron', draig],
@@ -5605,7 +5617,6 @@ test('Garym, Fíodhna, Clodagh, Tallwch, Caireen und Llamrei sind über Gafyr/Gw
     assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
   });
 
-  assert.equal(gafyr.houses.find(house => house.id === 'house-ard-conbhron'), undefined);
   assert.equal(
     gwefrydd.houses.find(house => house.id === 'house-ard-conbhron').emblem,
     'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png'
@@ -5613,6 +5624,80 @@ test('Garym, Fíodhna, Clodagh, Tallwch, Caireen und Llamrei sind über Gafyr/Gw
   assert.equal(
     draig.houses.find(house => house.id === 'house-ard-conbhron').emblem,
     'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png'
+  );
+});
+
+test('bildet das antike Fürstengeschlecht Ui Talamh ab, das vollständig in andere Häuser eingeheiratet ist', () => {
+  const family = assertValidFamily(HOUSE_UI_TALAMH_FAMILY).family;
+  assert.equal(family.persons.length, 23);
+  assert.equal(family.document.houseProfile.rankId, 'ard-tiarna');
+
+  const graph = createFamilyGraph(family);
+
+  // Gründerpaar: Faolan ist die erste namentlich bekannte Generation, seine Frau
+  // Brónach Gormárd bleibt ohne eigenes Herkunftshaus.
+  const faolan = family.persons.find(person => person.id === 'faolan-talamh');
+  assert.equal(faolan.houseId, 'house-talamh');
+  assert.equal(faolan.familyRole, 'core');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.timeJumps.length, 0);
+
+  assert.deepEqual(graph.getChildren('faolan-talamh').map(person => person.id).sort(), [
+    'cathan-talamh', 'fiodhna-talamh', 'fionnuala-talamh', 'maoladh-talamh', 'roibeard-talamh'
+  ]);
+
+  // Alle fünf Kinder Faolans heiraten Partner mit bereits andernorts belegter Identität
+  // oder bleiben ohne Nachkommen; Ui Talamh besteht heute nicht mehr eigenständig fort.
+  assert.deepEqual(graph.getChildren('roibeard-talamh').map(person => person.id).sort(), ['blathnaid-talamh', 'cormac-talamh']);
+  assert.deepEqual(graph.getChildren('cormac-talamh').map(person => person.id).sort(), ['eibhlin-talamh', 'murchadh-talamh']);
+  assert.deepEqual(graph.getChildren('murchadh-talamh').map(person => person.id).sort(), ['fiona-talamh', 'mairin-talamh']);
+
+  // Ausnahmslos alle Ui Talamh sind verstorben; anders als Ard Conbhrón gibt es keine
+  // lebenden Nachfahren mehr, nur noch die Ehen in andere Häuser.
+  family.persons.forEach(person => {
+    assert.equal(person.status, 'dead', `${person.name} (${person.id}) sollte verstorben sein`);
+  });
+
+  assert.equal(family.view.focusPersonId, 'faolan-talamh');
+});
+
+test('Dónall, Fíodhna/Garym, Líadan, Blathnaid/Grugyn und Ragnailt sind über Ard Conbhrón/Gafyr/Draig hinweg dieselben Weltpersonen wie in Haus Ui Talamh', () => {
+  const uiTalamh = assertValidFamily(HOUSE_UI_TALAMH_FAMILY).family;
+  const ardConbhron = assertValidFamily(HOUSE_ARD_CONBHRON_FAMILY).family;
+  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+
+  [
+    ['donall-ard-conbhron', ardConbhron],
+    ['liadan-ard-conbhron', ardConbhron],
+    ['ragnailt-ard-conbhron', ardConbhron],
+    ['garym-gafyr', gafyr],
+    ['blathnaid-talamh', draig],
+    ['grugyn-draig', draig]
+  ].forEach(([personId, otherFamily]) => {
+    const here = uiTalamh.persons.find(person => person.id === personId);
+    const there = otherFamily.persons.find(person => person.id === personId);
+    assert.ok(here, `${personId} fehlt in Haus Ui Talamh`);
+    assert.ok(there, `${personId} fehlt in der Vergleichsfamilie`);
+    assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
+  });
+
+  // Blathnaid ist in Ui Talamh core (ihr Heimathaus), in Draig eine eingeheiratete Fremde.
+  assert.equal(uiTalamh.persons.find(person => person.id === 'blathnaid-talamh').houseId, 'house-talamh');
+  assert.equal(uiTalamh.persons.find(person => person.id === 'blathnaid-talamh').familyRole, 'core');
+  assert.equal(draig.persons.find(person => person.id === 'blathnaid-talamh').familyRole, 'married');
+
+  assert.equal(
+    ardConbhron.houses.find(house => house.id === 'house-talamh').emblem,
+    'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png'
+  );
+  assert.equal(
+    gafyr.houses.find(house => house.id === 'house-talamh').emblem,
+    'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png'
+  );
+  assert.equal(
+    draig.houses.find(house => house.id === 'house-talamh').emblem,
+    'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png'
   );
 });
 

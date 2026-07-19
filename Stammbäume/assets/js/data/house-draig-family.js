@@ -19,6 +19,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  talamh: 'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
@@ -139,7 +140,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-cumhail', 'Haus Cumhail'),
     house('house-pendrag', 'Haus Pendrag'),
     house('house-ard-conbhron', 'Haus Ard Conbhrón', HOUSE_EMBLEMS.ardConbhron),
-    house('house-talamh', 'Haus Talamh'),
+    house('house-talamh', 'Haus Ui Talamh', HOUSE_EMBLEMS.talamh),
     house('house-illewod', 'Haus Illewod'),
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),

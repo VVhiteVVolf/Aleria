@@ -79,7 +79,12 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   // Antikes, vorcenyrisches Albenclan-Geschlecht, kein Vasall eines modernen Lehnsherrn.
   // 'Antike Crannath Clans' ist ein eigenes Herrschaftsgebiet direkt unter Celtigerns
   // Wacht (wie Camruisge/Rhonwens Tränen), Sitz Lycath laut Vorlage.
-  ardConbhron: profile('dun-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Lycath'])
+  ardConbhron: profile('dun-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Lycath']),
+  // Einst das Fürstengeschlecht des vorcenyrischen "Fürstentums von Oseneach"; heute
+  // vollständig in andere Häuser eingeheiratet und ausgestorben. Sitz laut Vorlage
+  // "??? (Gwynthor)" — der genaue alte Name ist nicht überliefert, der Sitz entspricht
+  // ungefähr dem heutigen Gwynthor (bekommt dadurch dessen reales Sitz-Wappen).
+  uiTalamh: profile('ard-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Gwynthor'])
 });
 
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);

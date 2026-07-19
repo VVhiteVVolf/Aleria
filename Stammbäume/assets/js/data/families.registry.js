@@ -7,6 +7,7 @@ import { HOUSE_GWYVERN_FAMILY } from './house-gwyvern-family.js';
 import { HOUSE_ILLYSYWEN_FAMILY } from './house-illysywen-family.js';
 import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js';
 import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
+import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js';
@@ -90,6 +91,11 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: 'haus-ard-conbhron',
     title: 'Haus Ard Conbhrón',
     family: HOUSE_ARD_CONBHRON_FAMILY
+  }),
+  familyRecord({
+    id: 'haus-ui-talamh',
+    title: 'Haus Ui Talamh',
+    family: HOUSE_UI_TALAMH_FAMILY
   }),
   familyRecord({
     id: 'haus-garrael',

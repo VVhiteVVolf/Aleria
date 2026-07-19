@@ -9,16 +9,14 @@ import {
 const HOUSE_EMBLEMS = Object.freeze({
   ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
-  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png'
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  talamh: 'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png'
 });
 
 // Reale, bereits andernorts verwendete Portraits geteilter Weltpersonen. Alle übrigen
 // Ard-Conbhrón-Personen bleiben absichtlich ohne Portrait: die alten Bilder aus der
 // Forumsvorlage sind veraltet und werden hier nicht übernommen.
 const SHARED_PORTRAITS = Object.freeze({
-  'garym-gafyr': 'assets/images/portraits/haus-gafyr/garym-gafyr.jpg',
-  'fiodhna-talamh': 'assets/images/portraits/haus-gafyr/fiodhna-talamh.jpg',
   'clodagh-ard-conbhron': 'assets/images/portraits/haus-gwefrydd/clodagh-ard-conbhron.jpg',
   'tallwch-gwefrydd': 'assets/images/portraits/haus-gwefrydd/tallwch-gwefrydd.jpg',
   'caireen-conbhron': 'assets/images/portraits/haus-draig/caireen-conbhron.jpg',
@@ -27,11 +25,12 @@ const SHARED_PORTRAITS = Object.freeze({
 
 const ARD_CONBHRON_HOUSE_ID = 'house-ard-conbhron';
 
-// Die Kopflinie läuft von Garym über Dónall und den älteren Iarlaith bis zu Labhoise,
-// die (nach der zweiten Überlieferungslücke) den jüngeren Iarlaith als Nachfahren stellt.
-// Das Haus ist heute so gut wie erloschen; nur Scáthach, Tlachtga und Uathach leben noch.
+// Die Kopflinie läuft vom unbekannten Gründerpaar über Dónall und den älteren Iarlaith
+// bis zu Labhoise, die (nach der zweiten Überlieferungslücke) den jüngeren Iarlaith als
+// Nachfahren stellt. Das Haus ist heute so gut wie erloschen; nur Scáthach, Tlachtga und
+// Uathach leben noch.
 const HOUSE_HEAD_IDS = new Set([
-  'garym-gafyr',
+  'ahnherr-ard-conbhron',
   'donall-ard-conbhron',
   'iarlaith-donall-ard-conbhron',
   'labhoise-ard-conbhron',
@@ -67,7 +66,7 @@ function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
-const FOUNDER_IDS = ['garym-gafyr', 'fiodhna-talamh'];
+const FOUNDER_IDS = ['ahnherr-ard-conbhron', 'ahnfrau-ard-conbhron'];
 const DONALL_IDS = ['donall-ard-conbhron', 'fionnuala-talamh'];
 const GARBHAN_IDS = ['garbhan-ard-conbhron', 'muireen-riordain'];
 const CLODAGH_IDS = ['clodagh-ard-conbhron', 'tallwch-gwefrydd'];
@@ -86,25 +85,20 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     id: 'haus-ard-conbhron',
     title: 'Haus Ard Conbhrón',
     motto: '',
-    description: 'Ein antiker albischer Dún-Tiarna-Clan aus Celtigerns Wacht, Sitz Lycath, aus dem einst auch Haus Gafyr über Garyms Sohn Kynwrig hervorging. Heute ist der Clan so gut wie erloschen; nur Scáthach, Tlachtga und Uathach leben noch.',
+    description: 'Ein antiker albischer Dún-Tiarna-Clan aus Celtigerns Wacht, Sitz Lycath, dessen Gründerpaar nicht überliefert ist. Heute ist der Clan so gut wie erloschen; nur Scáthach, Tlachtga und Uathach leben noch.',
     emblem: HOUSE_EMBLEMS.ardConbhron,
     houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.ardConbhron
   },
   houses: [
     house(ARD_CONBHRON_HOUSE_ID, 'Haus Ard Conbhrón', HOUSE_EMBLEMS.ardConbhron),
-    house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
-    house('house-talamh', 'Haus Talamh'),
+    house('house-talamh', 'Haus Ui Talamh', HOUSE_EMBLEMS.talamh),
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig)
   ],
   persons: [
-    // Gründerpaar, geteilt mit Haus Gafyr: Garyms Sohn Kynwrig begründete dort die
-    // cenyrische Linie, während der Clan selbst als Ard Conbhrón fortbestand.
-    person('garym-gafyr', 'Garym der Gehörnte', 'male', '????', '????', 'house-gafyr', {
-      familyRole: 'core',
-      notes: 'Gemeinsamer Vorfahre mit Haus Gafyr; sein Sohn Kynwrig begründete dort die cenyrische Linie, während der Clan Ard Conbhrón den albischen Sitten treu blieb.'
-    }),
-    person('fiodhna-talamh', 'Fíodhna Talamh', 'female', '????', '????', 'house-talamh'),
+    // Gründerpaar nicht überliefert.
+    person('ahnherr-ard-conbhron', 'Unbekannter Ahnherr', 'male', '????', '????'),
+    person('ahnfrau-ard-conbhron', 'Unbekannte Ahnfrau', 'female', '????', '????', ''),
 
     // Erste namentlich überlieferte Generation nach der Überlieferungslücke
     person('donall-ard-conbhron', 'Dónall', 'male', '????', '????'),
@@ -164,7 +158,7 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     })
   ],
   partnerships: [
-    createMarriage('marriage-garym-fiodhna', ...FOUNDER_IDS),
+    createMarriage('marriage-ahnherr-ahnfrau', ...FOUNDER_IDS),
     createMarriage('marriage-donall-fionnuala', ...DONALL_IDS),
     createMarriage('marriage-garbhan-muireen', ...GARBHAN_IDS),
     createMarriage('marriage-clodagh-tallwch', ...CLODAGH_IDS),
@@ -180,7 +174,7 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     ...childrenOf(
       ['donall-ard-conbhron', 'garbhan-ard-conbhron', 'clodagh-ard-conbhron', 'liadan-ard-conbhron'],
       FOUNDER_IDS,
-      'marriage-garym-fiodhna',
+      'marriage-ahnherr-ahnfrau',
       {
         type: 'claimed',
         certainty: 'probable',
@@ -211,7 +205,7 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     }
   ],
   lineage: {
-    founderPartnershipId: 'marriage-garym-fiodhna',
+    founderPartnershipId: 'marriage-ahnherr-ahnfrau',
     houseId: ARD_CONBHRON_HOUSE_ID,
     crestSubtitle: '',
     crestEmblemScale: 0.86,
@@ -227,7 +221,7 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'garym-gafyr',
+    focusPersonId: 'ahnherr-ard-conbhron',
     orientation: 'vertical',
     ancestorDepth: 5,
     descendantDepth: 5,
