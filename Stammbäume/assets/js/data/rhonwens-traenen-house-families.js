@@ -3,6 +3,7 @@ import {
   createExtinctPlaceholderHouseFamily,
   createFounderPlaceholderHouseFamily
 } from './blank-house-family-factory.js';
+import { HOUSE_GWARED_FAMILY } from './house-gwared-family.js';
 
 // Vorbereitete Hausakten (Juli 2026) für die neu angelegten Wappen unter
 // assets/images/houses/Rhonwens Tränen/. Die lose Datei "Illysywen.png" (kein
@@ -11,6 +12,13 @@ import {
 // Morveth und Skellor liegen im "Ausgestorben"-Unterordner und bekommen daher sofort
 // einen Ausgestorben-Knoten an ihrer Gründerehe (siehe
 // createExtinctPlaceholderHouseFamily). "Bürgerliche" ist für diesen Sitz leer.
+//
+// Bereits ausgearbeitete Häuser ersetzen ihre vorbereitete Leerakte — analog zu
+// ELABORATED_KNIGHT_FAMILIES in lower-knight-house-families.js.
+const ELABORATED_RHONWENS_TRAENEN_FAMILIES = Object.freeze({
+  gwared: HOUSE_GWARED_FAMILY
+});
+
 export const RHONWENS_TRAENEN_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'gwared', file: 'Gwared', rankId: 'knight', folder: 'Ritterliche', extinct: false }),
   Object.freeze({ slug: 'madryn', file: 'Madryn', rankId: 'knight', folder: 'Ritterliche', extinct: false }),
@@ -23,6 +31,7 @@ export const RHONWENS_TRAENEN_HOUSE_DEFINITIONS = Object.freeze([
 
 export const RHONWENS_TRAENEN_HOUSE_FAMILIES = Object.freeze(
   RHONWENS_TRAENEN_HOUSE_DEFINITIONS.map(definition => {
+    if (ELABORATED_RHONWENS_TRAENEN_FAMILIES[definition.slug]) return ELABORATED_RHONWENS_TRAENEN_FAMILIES[definition.slug];
     const factory = definition.extinct ? createExtinctPlaceholderHouseFamily : createFounderPlaceholderHouseFamily;
     return factory({
       id: `haus-${definition.slug}`,

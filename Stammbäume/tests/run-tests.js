@@ -18,6 +18,7 @@ import { HOUSE_ARWYDD_PORTRAITS } from '../assets/js/data/house-arwydd-portraits
 import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/house-gwefrydd-family.js';
 import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portraits.js';
 import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family.js';
+import { HOUSE_GWARED_FAMILY } from '../assets/js/data/house-gwared-family.js';
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
@@ -4315,7 +4316,7 @@ test('verwendet für namens- und jahresgleiche Personen hausübergreifend diesel
     HOUSE_ARWYDD_FAMILY, HOUSE_DRAIG_FAMILY, HOUSE_WYRM_FAMILY, HOUSE_GAFYR_FAMILY, HOUSE_SAETHWYR_FAMILY,
     HOUSE_TLAWD_FAMILY, HOUSE_RHYDDID_FAMILY, HOUSE_GELYN_FAMILY, HOUSE_CLUDWYR_FAMILY,
     HOUSE_CHWEDLONOL_FAMILY, HOUSE_BALCHDER_FAMILY, HOUSE_ENEINIOG_FAMILY, HOUSE_GOSTYN_FAMILY,
-    HOUSE_AWENYDD_FAMILY
+    HOUSE_AWENYDD_FAMILY, HOUSE_GWARED_FAMILY
   ].map(normalizeFamily).forEach(family => {
     family.persons.forEach(person => {
       if (!/^\d{4}$/.test(person.birth || '')) return;
@@ -5369,14 +5370,71 @@ test('Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/O
   const caerlaen = loadFamilyById('haus-caerlaen', storage);
   assert.equal(caerlaen.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
 
+  // Gwared ist inzwischen ausgearbeitet und sitzt am Sitz seines neuen Lehnsherrn
+  // Arwydd (Castellbryn); die übrigen, noch nicht ausgearbeiteten Rhonwens-Tränen-
+  // Häuser bleiben weiterhin ohne festen Sitz.
   const gwared = loadFamilyById('haus-gwared', storage);
-  assert.equal(gwared.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Rhonwens Tränen', 'Rhonwens Tränen bleibt unverändert ohne festen Sitz');
+  assert.equal(gwared.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Rhonwens Tränen > Castellbryn');
+  assert.equal(gwared.family.document.houseProfile.liegeHouseId, 'haus-arwydd');
+
+  const madryn = loadFamilyById('haus-madryn', storage);
+  assert.equal(madryn.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Rhonwens Tränen', 'Rhonwens Tränen bleibt für die übrigen Platzhalterhäuser ohne festen Sitz');
 
   const records = listFamilyRecords(storage);
   const almarchRecord = records.find(record => record.id === 'haus-almarch');
   assert.equal(almarchRecord.type, 'lower-nobility');
   const bekabRecord = records.find(record => record.id === 'haus-bekab');
   assert.equal(bekabRecord.type, 'commoner');
+});
+
+test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysywens 1720 ab', () => {
+  const family = assertValidFamily(HOUSE_GWARED_FAMILY).family;
+  assert.equal(family.persons.length, 36);
+  assert.equal(family.document.houseProfile.liegeHouseId, 'haus-arwydd');
+  assert.equal(family.lineage.crestFrame, 'silver');
+
+  const graph = createFamilyGraph(family);
+
+  // Die Illysywen-treue Linie erlischt 1720 mit Gwaedan und seiner Frau; ihre
+  // Kinder Sheev und Soffi sind unbeteiligte Waisen, keine Erben der Kopfschaft.
+  const gwaedan = graph.getPerson('gwaedan-gwared');
+  const perdena = graph.getPerson('perdena');
+  assert.equal(gwaedan.death, '1720');
+  assert.equal(perdena.death, '1720');
+  const gwaedansChildren = graph.getChildren('gwaedan-gwared').map(person => person.id).sort();
+  assert.deepEqual(gwaedansChildren, ['sheev-gwared', 'soffi-gwared']);
+  assert.equal(family.persons.find(person => person.id === 'sheev-gwared').lineageRole, 'branch');
+  assert.equal(family.persons.find(person => person.id === 'soffi-gwared').lineageRole, 'branch');
+
+  // Kopfschaft: erst die ältere (nun erloschene) Linie, dann die überlebende
+  // Nebenlinie um Rhydor, die die heutige Kopfschaft (Ellric) stellt.
+  const extinctHeadIds = ['cyrwyn-gwared', 'dyrian-gwared', 'firban-gwared', 'gwaedan-gwared'];
+  extinctHeadIds.forEach(id => {
+    assert.equal(family.persons.find(person => person.id === id).lineageRole, 'head');
+  });
+  assert.equal(family.persons.find(person => person.id === 'ellric-gwared').lineageRole, 'head');
+  assert.equal(family.view.focusPersonId, 'ellric-gwared');
+
+  // Zeitsprung zwischen dem sagenhaften Gründerpaar und den beiden Brüdern von 1618.
+  assert.equal(family.timeJumps.length, 1);
+  assert.deepEqual(family.timeJumps[0].childIds.slice().sort(), ['cyrwyn-gwared', 'rhydor-gwared']);
+});
+
+test('Sheev und Soffi Gwared sind über Balchder/Chwedonol hinweg dieselben Weltpersonen wie in Haus Gwared', () => {
+  const gwared = assertValidFamily(HOUSE_GWARED_FAMILY).family;
+  const balchder = assertValidFamily(HOUSE_BALCHDER_FAMILY).family;
+  const chwedlonol = assertValidFamily(HOUSE_CHWEDLONOL_FAMILY).family;
+
+  const sheevInGwared = gwared.persons.find(person => person.id === 'sheev-gwared');
+  const sheevInBalchder = balchder.persons.find(person => person.id === 'sheev-gwared');
+  assert.equal(sheevInGwared.worldPersonId, sheevInBalchder.worldPersonId);
+
+  const soffiInGwared = gwared.persons.find(person => person.id === 'soffi-gwared');
+  const soffiInChwedlonol = chwedlonol.persons.find(person => person.id === 'soffi-gwared');
+  assert.equal(soffiInGwared.worldPersonId, soffiInChwedlonol.worldPersonId);
+
+  assert.equal(balchder.houses.find(house => house.id === 'house-gwared').emblem, 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png');
+  assert.equal(chwedlonol.houses.find(house => house.id === 'house-gwared').emblem, 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png');
 });
 
 let failures = 0;

@@ -68,6 +68,13 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   sgrechiwr: profile('commoner', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Lynthor'], {
     liegeHouseId: 'haus-draig',
     liegeHouseName: 'Haus Draig'
+  }),
+  // Sitzt seit dem Fall Illysywens (1720) am selben Sitz wie sein neuer Lehnsherr
+  // Haus Arwydd; ersetzt den generischen dreistufigen Platzhalterpfad aus
+  // RHONWENS_TRAENEN_VASSAL_PROFILES, sobald das Haus ausgearbeitet ist.
+  gwared: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn'], {
+    liegeHouseId: 'haus-arwydd',
+    liegeHouseName: 'Haus Arwydd'
   })
 });
 
@@ -131,8 +138,9 @@ export const GWENDOLYNS_UFER_VASSAL_PROFILES = Object.freeze({
 
 // Morveth und Skellor liegen im "Ausgestorben"-Unterordner (bereits erloschene Linien),
 // bekommen aber denselben Rang/Pfad wie die übrigen Rhonwens-Tränen-Rittergeschlechter.
+// Gwared ist inzwischen ausgearbeitet und hat einen eigenen Eintrag in
+// CELTIGERNS_WACHT_HOUSE_PROFILES (eigener Sitz, eigener Lehnsherr).
 export const RHONWENS_TRAENEN_VASSAL_PROFILES = Object.freeze({
-  gwared: profile('knight', RHONWENS_TRAENEN_PATH),
   madryn: profile('knight', RHONWENS_TRAENEN_PATH),
   merek: profile('knight', RHONWENS_TRAENEN_PATH),
   rhenna: profile('knight', RHONWENS_TRAENEN_PATH),

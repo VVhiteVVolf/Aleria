@@ -91,7 +91,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     house('house-barus', 'Haus Barus'),
     house('house-gelyn', 'Haus Gelyn', 'assets/images/houses/Llamreis Ankunft/haus-gelyn.png'),
     house('house-chwedlonol', 'Haus Chwedonol', 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png'),
-    house('house-gwared', 'Haus Gwared')
+    house('house-gwared', 'Haus Gwared', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png')
   ],
   persons: [
     // Gründerpaar

@@ -83,7 +83,8 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
   houses: [
     { id: CHWEDLONOL_HOUSE_ID, name: 'Haus Chwedonol', motto: 'Pflicht kennt keine Flaute.', emblem: CHWEDLONOL_EMBLEM, status: 'active' },
     house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png'),
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png'),
+    house('house-gwared', 'Haus Gwared', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png')
   ],
   persons: [
     // Gründerin und ihr Ehemann
@@ -144,9 +145,9 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
       notes: 'Dient als Vertrauter auf dem Schiff Idwal Draigs, des Grafensohnes.'
     }),
     person('eleyne-chwedlonol', 'Eleyne Chwedonol', 'female', '1720', ''),
-    person('soffi-gwared', 'Soffi Gwared', 'female', '1720', '', '', {
+    person('soffi-gwared', 'Soffi Gwared', 'female', '1720', '', 'house-gwared', {
       familyRole: 'ward',
-      notes: 'Aufgenommenes Mündel Morgaines, gemeinsam mit Eleyne aufgewachsen.'
+      notes: 'Aufgenommenes Mündel Morgaines, gemeinsam mit Eleyne aufgewachsen. Waise des 1720 erloschenen Zweigs des Hauses Gwared.'
     }),
 
     // Kind von Glyndwr und Kathleen
