@@ -1,5 +1,124 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 
+function placeholderFounder({ id, title, sex, houseId, familyRole }) {
+  return {
+    id,
+    name: '???',
+    title,
+    sex,
+    status: 'alive',
+    birth: '',
+    death: '',
+    portrait: '',
+    portraitPlaceholder: 'auto',
+    houseId,
+    familyRole,
+    tags: ['Gründerfamilie'],
+    notes: ''
+  };
+}
+
+// Wie createBlankHouseFamily(), legt aber zusätzlich ein Platzhalter-Gründerpaar
+// (Name "???", wie in tree-generator-suggestions.js) samt Gründerehe an, damit die
+// Hausakte nicht komplett personenleer ist. Der silberne/eiserne Wappenrahmen richtet
+// sich nach dem Rang (Ritterherr = Silber, Bürgerlich = Eisen), analog zu den bereits
+// ausgearbeiteten Häusern (z. B. Balchder vs. Gwyllach/Sgrechiwr).
+export function createFounderPlaceholderHouseFamily({
+  id,
+  title,
+  emblem,
+  houseProfile,
+  description = 'Vorbereitete Familienakte mit Platzhalter-Gründerpaar.'
+}) {
+  const houseId = `house-${id.replace(/^haus-/, '')}`;
+  const founderManId = `${id}-gruender`;
+  const founderWomanId = `${id}-gruenderin`;
+  const partnershipId = `marriage-${id}-founders`;
+  const crestFrame = houseProfile.rankId === 'commoner' ? 'iron' : 'silver';
+  return Object.freeze({
+    schema: 'aleria.family-tree',
+    schemaVersion: 1,
+    document: { id, title, motto: '', description, emblem, houseProfile },
+    houses: [
+      { id: houseId, name: title, motto: '', emblem, status: 'active' }
+    ],
+    persons: [
+      placeholderFounder({ id: founderManId, title: 'Gründer des Hauses', sex: 'male', houseId, familyRole: 'core' }),
+      placeholderFounder({ id: founderWomanId, title: 'Gründerin des Hauses', sex: 'female', houseId, familyRole: 'married' })
+    ],
+    partnerships: [
+      {
+        id: partnershipId,
+        participantIds: [founderManId, founderWomanId],
+        type: 'marriage',
+        status: 'active',
+        start: '',
+        end: '',
+        certainty: 'confirmed',
+        visibility: 'public',
+        notes: 'Gründerehe des Hauses.'
+      }
+    ],
+    parentages: [],
+    lineage: {
+      founderPartnershipId: partnershipId,
+      houseId,
+      crestSubtitle: '',
+      crestEmblemScale: 0.86,
+      crestFrame,
+      crestFrameScale: 1,
+      timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    },
+    cadetBranches: [],
+    timeJumps: [],
+    presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
+    view: {
+      focusPersonId: founderManId,
+      orientation: 'vertical',
+      ancestorDepth: 8,
+      descendantDepth: 8,
+      showSiblings: true
+    },
+    extensions: { blankFamily: true }
+  });
+}
+
+// Variante für bereits erloschene Häuser: dasselbe Platzhalter-Gründerpaar, aber mit
+// einem sofort angehängten Ausgestorben-Knoten (wie createExtinctBranch() in
+// family-record-builders.js) an der Gründerehe, damit das Erlöschen von Anfang an
+// sichtbar ist, statt es wie eine gewöhnliche noch fortbestehende Linie wirken zu lassen.
+export function createExtinctPlaceholderHouseFamily({
+  id,
+  title,
+  emblem,
+  houseProfile,
+  description = 'Vorbereitete Familienakte eines erloschenen Hauses.'
+}) {
+  const base = createFounderPlaceholderHouseFamily({ id, title, emblem, houseProfile, description });
+  const branchId = `extinct-${id}`;
+  return Object.freeze({
+    ...base,
+    cadetBranches: [
+      {
+        id: branchId,
+        name: 'Ausgestorben',
+        subtitle: 'Die Linie endet hier',
+        linkType: 'line-extinct',
+        parentPartnershipId: base.lineage.founderPartnershipId,
+        houseId: base.lineage.houseId,
+        emblem: '',
+        emblemScale: 0.86,
+        crestFrame: 'gold',
+        frameScale: 1,
+        founded: '',
+        targetFamilyId: '',
+        notes: 'Die Linie ist ohne bekannte Nachkommen erloschen.',
+        extensions: {}
+      }
+    ]
+  });
+}
+
 export function createBlankHouseFamily({
   id,
   title,

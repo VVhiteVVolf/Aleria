@@ -82,6 +82,64 @@ function lowerKnightProfile(liegeHouseId, secondarySeats = []) {
   });
 }
 
+// Neu angelegte, noch nicht ausgearbeitete Vasallenhäuser (Juli 2026): Sitz bewusst
+// noch offen (dreistufiger Pfad ohne vierte Ebene), da für die einzelnen Wappen noch
+// kein konkreter Orts-/Sitzname feststeht. Rittergeschlecht ("Niedere Ritterliche" und
+// "Ritterliche" sind laut Absprache dieselbe Rangstufe) = 'knight', Bürgerliche =
+// 'commoner'. Kein Lehnsherr zugewiesen, bis das politisch geklärt ist.
+const ARTUS_STREBEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Artus Streben']);
+const GWENDOLYNS_UFER_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer']);
+const RHONWENS_TRAENEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen']);
+
+export const ARTUS_STREBEN_VASSAL_PROFILES = Object.freeze({
+  almarch: profile('knight', ARTUS_STREBEN_PATH),
+  althin: profile('knight', ARTUS_STREBEN_PATH),
+  brinmarch: profile('knight', ARTUS_STREBEN_PATH),
+  coedvarn: profile('knight', ARTUS_STREBEN_PATH),
+  eirfael: profile('knight', ARTUS_STREBEN_PATH),
+  ghorswyn: profile('knight', ARTUS_STREBEN_PATH),
+  gwardin: profile('knight', ARTUS_STREBEN_PATH),
+  gwynrhos: profile('knight', ARTUS_STREBEN_PATH),
+  talmeirch: profile('knight', ARTUS_STREBEN_PATH),
+  tirwyn: profile('knight', ARTUS_STREBEN_PATH),
+  bekab: profile('commoner', ARTUS_STREBEN_PATH),
+  iorwen: profile('commoner', ARTUS_STREBEN_PATH),
+  maethan: profile('commoner', ARTUS_STREBEN_PATH),
+  rhen: profile('commoner', ARTUS_STREBEN_PATH)
+});
+
+export const GWENDOLYNS_UFER_VASSAL_PROFILES = Object.freeze({
+  annwyl: profile('knight', GWENDOLYNS_UFER_PATH),
+  barus: profile('knight', GWENDOLYNS_UFER_PATH),
+  cenfig: profile('knight', GWENDOLYNS_UFER_PATH),
+  cysgodion: profile('knight', GWENDOLYNS_UFER_PATH),
+  daran: profile('knight', GWENDOLYNS_UFER_PATH),
+  edmy: profile('knight', GWENDOLYNS_UFER_PATH),
+  gwyntog: profile('knight', GWENDOLYNS_UFER_PATH),
+  penwyn: profile('knight', GWENDOLYNS_UFER_PATH),
+  rhuddgar: profile('knight', GWENDOLYNS_UFER_PATH),
+  seldryn: profile('knight', GWENDOLYNS_UFER_PATH),
+  selog: profile('knight', GWENDOLYNS_UFER_PATH),
+  taranvyr: profile('knight', GWENDOLYNS_UFER_PATH),
+  tawelgar: profile('knight', GWENDOLYNS_UFER_PATH),
+  trydar: profile('knight', GWENDOLYNS_UFER_PATH),
+  ymladd: profile('knight', GWENDOLYNS_UFER_PATH),
+  caerlaen: profile('commoner', GWENDOLYNS_UFER_PATH),
+  caerthwyn: profile('commoner', GWENDOLYNS_UFER_PATH)
+});
+
+// Morveth und Skellor liegen im "Ausgestorben"-Unterordner (bereits erloschene Linien),
+// bekommen aber denselben Rang/Pfad wie die übrigen Rhonwens-Tränen-Rittergeschlechter.
+export const RHONWENS_TRAENEN_VASSAL_PROFILES = Object.freeze({
+  gwared: profile('knight', RHONWENS_TRAENEN_PATH),
+  madryn: profile('knight', RHONWENS_TRAENEN_PATH),
+  merek: profile('knight', RHONWENS_TRAENEN_PATH),
+  rhenna: profile('knight', RHONWENS_TRAENEN_PATH),
+  talinvyr: profile('knight', RHONWENS_TRAENEN_PATH),
+  morveth: profile('knight', RHONWENS_TRAENEN_PATH),
+  skellor: profile('knight', RHONWENS_TRAENEN_PATH)
+});
+
 export const CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES = Object.freeze({
   tlawd: lowerKnightProfile('gafyr'),
   rhyddid: lowerKnightProfile('wyrm', ['Mwyncraig']),

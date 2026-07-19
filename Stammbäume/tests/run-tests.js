@@ -66,6 +66,22 @@ import {
   LOWER_KNIGHT_HOUSE_DEFINITIONS,
   LOWER_KNIGHT_HOUSE_FAMILIES
 } from '../assets/js/data/lower-knight-house-families.js';
+import {
+  ARTUS_STREBEN_HOUSE_DEFINITIONS,
+  ARTUS_STREBEN_HOUSE_FAMILIES
+} from '../assets/js/data/artus-streben-house-families.js';
+import {
+  GWENDOLYNS_UFER_HOUSE_DEFINITIONS,
+  GWENDOLYNS_UFER_HOUSE_FAMILIES
+} from '../assets/js/data/gwendolyns-ufer-house-families.js';
+import {
+  RHONWENS_TRAENEN_HOUSE_DEFINITIONS,
+  RHONWENS_TRAENEN_HOUSE_FAMILIES
+} from '../assets/js/data/rhonwens-traenen-house-families.js';
+import {
+  createExtinctPlaceholderHouseFamily,
+  createFounderPlaceholderHouseFamily
+} from '../assets/js/data/blank-house-family-factory.js';
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
 import {
   commitFounderCouple,
@@ -4577,7 +4593,13 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
   // Gwyllach und Sgrechiwr sind bürgerliche Häuser außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS
   // und werden ebenfalls gesondert geprüft.
-  assert.equal(listFamilyRecords(storage).length, expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 3);
+  const newVassalHouseCount = ARTUS_STREBEN_HOUSE_FAMILIES.length
+    + GWENDOLYNS_UFER_HOUSE_FAMILIES.length
+    + RHONWENS_TRAENEN_HOUSE_FAMILIES.length;
+  assert.equal(
+    listFamilyRecords(storage).length,
+    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 3 + newVassalHouseCount
+  );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
     const profile = loaded.family.document.houseProfile;
@@ -5242,6 +5264,105 @@ test('Landingpage rendert "Wusstest du schon?"-Spotlight und Biografie-Vorschau 
   assert.match(html, /id="landing-spotlight-next"/);
   assert.match(html, /id="landing-bio-grid"/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
+});
+
+test('createFounderPlaceholderHouseFamily legt ein schemakonformes Platzhalter-Gründerpaar an', () => {
+  const family = createFounderPlaceholderHouseFamily({
+    id: 'haus-testling',
+    title: 'Haus Testling',
+    emblem: 'assets/images/houses/Testregion/Testling.png',
+    houseProfile: ARTUS_STREBEN_HOUSE_FAMILIES[0].document.houseProfile
+  });
+  assert.equal(family.persons.length, 2);
+  assert.ok(family.persons.every(person => person.name === '???'));
+  assert.equal(family.persons.find(person => person.sex === 'male').title, 'Gründer des Hauses');
+  assert.equal(family.persons.find(person => person.sex === 'female').title, 'Gründerin des Hauses');
+  assert.doesNotMatch(family.persons.find(person => person.sex === 'male').title, /Haus Haus/, 'Titel darf den Hausnamen nicht doppeln');
+  assert.equal(family.partnerships.length, 1);
+  assert.equal(family.lineage.founderPartnershipId, family.partnerships[0].id);
+  assert.equal(family.lineage.crestFrame, 'silver');
+  assert.equal(family.cadetBranches.length, 0);
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+
+  const commonerFamily = createFounderPlaceholderHouseFamily({
+    id: 'haus-buergertest',
+    title: 'Haus Bürgertest',
+    emblem: 'assets/images/houses/Testregion/Buergertest.png',
+    houseProfile: { ...ARTUS_STREBEN_HOUSE_FAMILIES[0].document.houseProfile, rankId: 'commoner' }
+  });
+  assert.equal(commonerFamily.lineage.crestFrame, 'iron');
+});
+
+test('createExtinctPlaceholderHouseFamily hängt sofort einen Ausgestorben-Knoten an die Gründerehe', () => {
+  const family = createExtinctPlaceholderHouseFamily({
+    id: 'haus-erloschentest',
+    title: 'Haus Erloschentest',
+    emblem: 'assets/images/houses/Testregion/Erloschentest.png',
+    houseProfile: RHONWENS_TRAENEN_HOUSE_FAMILIES[0].document.houseProfile
+  });
+  assert.equal(family.cadetBranches.length, 1);
+  assert.equal(family.cadetBranches[0].linkType, 'line-extinct');
+  assert.equal(family.cadetBranches[0].parentPartnershipId, family.lineage.founderPartnershipId);
+  assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
+});
+
+test('Neue Vasallenhäuser (Artus Streben/Gwendolyns Ufer/Rhonwens Tränen): schemakonform, eindeutige IDs, Gwefrydd/Illysywen bewusst ausgelassen', () => {
+  const allFamilies = [
+    ...ARTUS_STREBEN_HOUSE_FAMILIES,
+    ...GWENDOLYNS_UFER_HOUSE_FAMILIES,
+    ...RHONWENS_TRAENEN_HOUSE_FAMILIES
+  ];
+  assert.equal(allFamilies.length, 14 + 17 + 7);
+
+  allFamilies.forEach(family => {
+    assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0, `${family.document.id} sollte fehlerfrei sein`);
+    // Regressionsschutz: Hausname darf nirgends doppelt vorkommen (family.document.title
+    // enthält bereits "Haus X" — Personentitel dürfen das nicht noch einmal anhängen).
+    family.persons.forEach(person => {
+      assert.doesNotMatch(person.title, /Haus\s+Haus\s/, `${family.document.id}: Personentitel "${person.title}" verdoppelt den Hausnamen`);
+    });
+  });
+
+  const ids = allFamilies.map(family => family.document.id);
+  assert.equal(new Set(ids).size, ids.length, 'alle neuen Häuser brauchen eindeutige IDs');
+  assert.equal(ids.includes('haus-gwefrydd'), false, 'Gwefrydd.png in Artus Streben ist ein Dublett des bestehenden Baronenhauses und wurde bewusst übersprungen');
+  assert.equal(ids.includes('haus-illysywen'), false, 'die lose Illysywen.png in Rhonwens Tränen ist ein Dublett des bereits ausgearbeiteten Hauses');
+
+  assert.equal(ARTUS_STREBEN_HOUSE_DEFINITIONS.some(def => def.slug === 'gwefrydd'), false);
+  assert.equal(GWENDOLYNS_UFER_HOUSE_DEFINITIONS.length, 17);
+  assert.deepEqual(
+    RHONWENS_TRAENEN_HOUSE_DEFINITIONS.filter(def => def.extinct).map(def => def.slug).sort(),
+    ['morveth', 'skellor']
+  );
+});
+
+test('Ausgestorben-Häuser aus Rhonwens Tränen (Morveth, Skellor) tragen einen Ausgestorben-Knoten, lebende Häuser nicht', () => {
+  const extinctIds = new Set(['haus-morveth', 'haus-skellor']);
+  RHONWENS_TRAENEN_HOUSE_FAMILIES.forEach(family => {
+    if (extinctIds.has(family.document.id)) {
+      assert.equal(family.cadetBranches.length, 1, `${family.document.id} sollte einen Ausgestorben-Knoten tragen`);
+      assert.equal(family.cadetBranches[0].linkType, 'line-extinct');
+    } else {
+      assert.equal(family.cadetBranches.length, 0, `${family.document.id} sollte keinen Ausgestorben-Knoten tragen`);
+    }
+  });
+});
+
+test('Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/Orts-Hierarchie auffindbar', () => {
+  const storage = createMemoryStorage();
+  const almarch = loadFamilyById('haus-almarch', storage);
+  assert.ok(almarch, 'Haus Almarch sollte über das Register ladbar sein');
+  assert.equal(almarch.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Artus Streben');
+  assert.equal(almarch.family.document.houseProfile.rankId, 'knight');
+
+  const bekab = loadFamilyById('haus-bekab', storage);
+  assert.equal(bekab.family.document.houseProfile.rankId, 'commoner');
+
+  const records = listFamilyRecords(storage);
+  const almarchRecord = records.find(record => record.id === 'haus-almarch');
+  assert.equal(almarchRecord.type, 'lower-nobility');
+  const bekabRecord = records.find(record => record.id === 'haus-bekab');
+  assert.equal(bekabRecord.type, 'commoner');
 });
 
 let failures = 0;
