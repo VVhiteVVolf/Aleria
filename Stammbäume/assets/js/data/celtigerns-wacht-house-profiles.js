@@ -82,13 +82,14 @@ function lowerKnightProfile(liegeHouseId, secondarySeats = []) {
   });
 }
 
-// Neu angelegte, noch nicht ausgearbeitete Vasallenhäuser (Juli 2026): Sitz bewusst
-// noch offen (dreistufiger Pfad ohne vierte Ebene), da für die einzelnen Wappen noch
-// kein konkreter Orts-/Sitzname feststeht. Rittergeschlecht ("Niedere Ritterliche" und
-// "Ritterliche" sind laut Absprache dieselbe Rangstufe) = 'knight', Bürgerliche =
-// 'commoner'. Kein Lehnsherr zugewiesen, bis das politisch geklärt ist.
-const ARTUS_STREBEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Artus Streben']);
-const GWENDOLYNS_UFER_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer']);
+// Neu angelegte, noch nicht ausgearbeitete Vasallenhäuser (Juli 2026). Rittergeschlecht
+// ("Niedere Ritterliche" und "Ritterliche" sind laut Absprache dieselbe Rangstufe) =
+// 'knight', Bürgerliche = 'commoner'. Kein Lehnsherr zugewiesen, bis das politisch
+// geklärt ist. Artus Streben und Gwendolyns Ufer sitzen inzwischen (User-Vorgabe) am
+// selben Sitz wie ihr jeweiliger Baron — Rhosmere (Haus Gwefrydd) bzw. Abergwint
+// (Haus Gwyvern). Rhonwens Tränen bleibt vorerst ohne festen Sitz (dreistufiger Pfad).
+const ARTUS_STREBEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere']);
+const GWENDOLYNS_UFER_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Abergwint']);
 const RHONWENS_TRAENEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen']);
 
 export const ARTUS_STREBEN_VASSAL_PROFILES = Object.freeze({

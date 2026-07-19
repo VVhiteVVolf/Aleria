@@ -5352,11 +5352,25 @@ test('Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/O
   const storage = createMemoryStorage();
   const almarch = loadFamilyById('haus-almarch', storage);
   assert.ok(almarch, 'Haus Almarch sollte über das Register ladbar sein');
-  assert.equal(almarch.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Artus Streben');
+  // Artus Streben sitzt seit der User-Vorgabe am selben Ort wie sein Baron
+  // (Haus Gwefrydd, Rhosmere) — ebenso Gwendolyns Ufer bei Haus Gwyvern (Abergwint).
+  assert.equal(almarch.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere');
   assert.equal(almarch.family.document.houseProfile.rankId, 'knight');
+  assert.match(almarch.family.document.houseProfile.regionEmblems.seat, /^assets\/images\/regions\//);
 
   const bekab = loadFamilyById('haus-bekab', storage);
   assert.equal(bekab.family.document.houseProfile.rankId, 'commoner');
+  assert.equal(bekab.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere');
+
+  const annwyl = loadFamilyById('haus-annwyl', storage);
+  assert.equal(annwyl.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
+  assert.match(annwyl.family.document.houseProfile.regionEmblems.seat, /^assets\/images\/regions\//);
+
+  const caerlaen = loadFamilyById('haus-caerlaen', storage);
+  assert.equal(caerlaen.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint');
+
+  const gwared = loadFamilyById('haus-gwared', storage);
+  assert.equal(gwared.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Rhonwens Tränen', 'Rhonwens Tränen bleibt unverändert ohne festen Sitz');
 
   const records = listFamilyRecords(storage);
   const almarchRecord = records.find(record => record.id === 'haus-almarch');
