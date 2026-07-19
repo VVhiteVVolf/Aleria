@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_RHYDDID_PORTRAITS } from './house-rhyddid-portraits.js';
 
-const RHYDDID_EMBLEM = 'assets/images/houses/haus-rhyddid.png';
+const RHYDDID_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png';
 const RHYDDID_HOUSE_ID = 'house-rhyddid';
 const HOUSE_HEAD_IDS = new Set([
   'gwilym-rhyddid',
@@ -73,9 +73,9 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
   },
   houses: [
     { id: RHYDDID_HOUSE_ID, name: 'Haus Rhyddid', motto: 'Der Eid endet nicht.', emblem: RHYDDID_EMBLEM, status: 'active' },
-    house('house-chwedlonol', 'Haus Chwedlonol', 'assets/images/houses/haus-chwedlonol.png'),
-    house('house-cludwyr', 'Haus Cludwyr', 'assets/images/houses/haus-cludwyr.png'),
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/haus-balchder.png')
+    house('house-chwedlonol', 'Haus Chwedlonol', 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png'),
+    house('house-cludwyr', 'Haus Cludwyr', 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png'),
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
   ],
   persons: [
     // Der überfallene Hof nahe der Waldgrenze in Llamreis' Ankunft
@@ -188,7 +188,7 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-evangelin-godwyn',
       houseId: 'house-cludwyr',
       targetFamilyId: 'haus-cludwyr',
-      emblem: 'assets/images/houses/haus-cludwyr.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png',
       crestFrame: 'silver',
       notes: 'Evangelin wurde an das Ritterherrenhaus Cludwyr wegverheiratet.'
     }),
@@ -198,7 +198,7 @@ export const HOUSE_RHYDDID_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-ronda-avan',
       houseId: 'house-balchder',
       targetFamilyId: 'haus-balchder',
-      emblem: 'assets/images/houses/haus-balchder.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-balchder.png',
       crestFrame: 'silver',
       notes: 'Ronda wurde an das Ritterherrenhaus Balchder wegverheiratet.'
     })

@@ -7,7 +7,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_CLUDWYR_PORTRAITS } from './house-cludwyr-portraits.js';
 
-const CLUDWYR_EMBLEM = 'assets/images/houses/haus-cludwyr.png';
+const CLUDWYR_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png';
 const CLUDWYR_HOUSE_ID = 'house-cludwyr';
 const HOUSE_HEAD_IDS = new Set([
   'saith-cludwyr',
@@ -74,8 +74,8 @@ export const HOUSE_CLUDWYR_FAMILY = Object.freeze({
   },
   houses: [
     { id: CLUDWYR_HOUSE_ID, name: 'Haus Cludwyr', motto: 'Der Boden lügt nicht.', emblem: CLUDWYR_EMBLEM, status: 'active' },
-    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/haus-rhyddid.png'),
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/haus-balchder.png')
+    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png'),
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
   ],
   persons: [
     // Gründerpaar

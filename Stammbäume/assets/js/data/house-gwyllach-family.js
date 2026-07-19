@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_GWYLLACH_PORTRAITS } from './house-gwyllach-portraits.js';
 
-const GWYLLACH_EMBLEM = 'assets/images/houses/haus-gwyllach.png';
+const GWYLLACH_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-gwyllach.png';
 const GWYLLACH_HOUSE_ID = 'house-gwyllach';
 // Gwyllach ist bürgerlich und vererbt nach Eignung statt nach starrer Erstgeburt:
 // die Kopfschaft wechselt zwischen Maelgorans zwei Söhnelinien hin und her

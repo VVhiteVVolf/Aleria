@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
 
-const BALCHDER_EMBLEM = 'assets/images/houses/haus-balchder.png';
+const BALCHDER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-balchder.png';
 const BALCHDER_HOUSE_ID = 'house-balchder';
 const HOUSE_HEAD_IDS = new Set([
   'caedmon-balchder',
@@ -81,16 +81,16 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
   },
   houses: [
     { id: BALCHDER_HOUSE_ID, name: 'Haus Balchder', motto: 'Feder und Pflicht.', emblem: BALCHDER_EMBLEM, status: 'active' },
-    house('house-eneiniog', 'Haus Eneiniog', 'assets/images/houses/haus-eneiniog.png'),
+    house('house-eneiniog', 'Haus Eneiniog', 'assets/images/houses/Llamreis Ankunft/haus-eneiniog.png'),
     house('house-seldryn', 'Haus Seldryn'),
     house('house-caerlaen', 'Haus Caerlaen'),
     house('house-gwyntog', 'Haus Gwyntog'),
-    house('house-cludwyr', 'Haus Cludwyr', 'assets/images/houses/haus-cludwyr.png'),
-    house('house-sgrechiwr', 'Haus Sgrechiwr', 'assets/images/houses/haus-sgrechiwr.png'),
-    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/haus-rhyddid.png'),
+    house('house-cludwyr', 'Haus Cludwyr', 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png'),
+    house('house-sgrechiwr', 'Haus Sgrechiwr', 'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png'),
+    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png'),
     house('house-barus', 'Haus Barus'),
-    house('house-gelyn', 'Haus Gelyn', 'assets/images/houses/haus-gelyn.png'),
-    house('house-chwedlonol', 'Haus Chwedonol', 'assets/images/houses/haus-chwedlonol.png'),
+    house('house-gelyn', 'Haus Gelyn', 'assets/images/houses/Llamreis Ankunft/haus-gelyn.png'),
+    house('house-chwedlonol', 'Haus Chwedonol', 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png'),
     house('house-gwared', 'Haus Gwared')
   ],
   persons: [
@@ -236,7 +236,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-aerona-godwyn',
       houseId: 'house-sgrechiwr',
       targetFamilyId: 'haus-sgrechiwr',
-      emblem: 'assets/images/houses/haus-sgrechiwr.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png',
       crestFrame: 'gold',
       notes: 'Aerona wurde als älteste Tochter Dalvins an Godwyn Sgrechiwr wegverheiratet.'
     }),
@@ -255,7 +255,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-klervi-rhain',
       houseId: 'house-cludwyr',
       targetFamilyId: 'haus-cludwyr',
-      emblem: 'assets/images/houses/haus-cludwyr.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png',
       crestFrame: 'silver',
       notes: 'Klervi wurde an das Ritterherrenhaus Cludwyr wegverheiratet; dort führt sie mit Rhain die Linie fort.'
     }),
@@ -274,7 +274,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-marven-morgaine',
       houseId: 'house-chwedlonol',
       targetFamilyId: 'haus-chwedlonol',
-      emblem: 'assets/images/houses/haus-chwedlonol.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png',
       crestFrame: 'silver',
       notes: 'Marven heiratete in das matriarchal geführte Ritterherrenhaus Chwedonol ein; Morgaine führt dort die Linie fort.'
     })

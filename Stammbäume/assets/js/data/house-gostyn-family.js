@@ -7,7 +7,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_GOSTYN_PORTRAITS } from './house-gostyn-portraits.js';
 
-const GOSTYN_EMBLEM = 'assets/images/houses/haus-gostyn.png';
+const GOSTYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-gostyn.png';
 const GOSTYN_HOUSE_ID = 'house-gostyn';
 
 const HOUSE_HEAD_IDS = new Set([

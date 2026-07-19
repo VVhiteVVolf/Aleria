@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_GELYN_PORTRAITS } from './house-gelyn-portraits.js';
 
-const GELYN_EMBLEM = 'assets/images/houses/haus-gelyn.png';
+const GELYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-gelyn.png';
 const GELYN_HOUSE_ID = 'house-gelyn';
 const HOUSE_HEAD_IDS = new Set(['cadoc-gelyn']);
 const MAIN_LINE_IDS = new Set(['brannoc-gelyn', 'rhon-gelyn', 'fflam-gelyn']);
@@ -66,7 +66,7 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
   },
   houses: [
     { id: GELYN_HOUSE_ID, name: 'Haus Gelyn', motto: 'Im Feuer geprüft.', emblem: GELYN_EMBLEM, status: 'active' },
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/haus-balchder.png')
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
   ],
   persons: [
     // Die Herkunft Cadocs und Dehlias ist nicht überliefert
@@ -151,7 +151,7 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-senara-kamber',
       houseId: 'house-balchder',
       targetFamilyId: 'haus-balchder',
-      emblem: 'assets/images/houses/haus-balchder.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-balchder.png',
       crestFrame: 'silver',
       notes: 'Senara wurde an das Ritterherrenhaus Balchder wegverheiratet.'
     })

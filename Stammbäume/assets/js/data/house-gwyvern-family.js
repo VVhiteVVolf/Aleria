@@ -9,13 +9,13 @@ import {
 import { HOUSE_GWYVERN_PORTRAITS } from './house-gwyvern-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  arwydd: 'assets/images/houses/haus-arwydd.png',
-  draig: 'assets/images/houses/haus-draig.png',
-  gafyr: 'assets/images/houses/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwyvern: 'assets/images/houses/haus-gwyvern.png',
-  saethwyr: 'assets/images/houses/haus-saethwyr.png',
-  wyrm: 'assets/images/houses/haus-wyrm.png'
+  arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
 const GWYVERN_HOUSE_ID = 'house-gwyvern';
@@ -99,7 +99,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     house('house-dyngwn', 'Haus Dyngwn'),
     house('house-airgid', 'Haus Airgid'),
     house('house-taranvyr', 'Haus Taranvyr'),
-    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/haus-illysywen.png'),
+    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-arth', 'Haus Arth'),
     house('house-airt', 'Haus Airt'),
     house('house-hebog', 'Haus Hebog'),

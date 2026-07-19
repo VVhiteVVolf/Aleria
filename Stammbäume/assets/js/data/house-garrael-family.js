@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_GARRAEL_PORTRAITS } from './house-garrael-portraits.js';
 
-const GARRAEL_EMBLEM = 'assets/images/houses/haus-garrael.png';
+const GARRAEL_EMBLEM = 'assets/images/houses/Camruisge/haus-garrael.png';
 const GARRAEL_HOUSE_ID = 'house-garrael';
 const HOUSE_HEAD_IDS = new Set(['aledd-garrael', 'lyonnel-garrael']);
 const MAIN_LINE_IDS = new Set(['uther-garrael']);

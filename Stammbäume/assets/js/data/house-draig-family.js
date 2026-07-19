@@ -11,14 +11,14 @@ import {
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  arwydd: 'assets/images/houses/haus-arwydd.png',
-  draig: 'assets/images/houses/haus-draig.png',
+  arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   dreigiau: PORTRAIT_PLACEHOLDERS.crest,
-  gafyr: 'assets/images/houses/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwyvern: 'assets/images/houses/haus-gwyvern.png',
-  saethwyr: 'assets/images/houses/haus-saethwyr.png',
-  wyrm: 'assets/images/houses/haus-wyrm.png'
+  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
 const DRAIG_HOUSE_ID = 'house-draig';
@@ -165,7 +165,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-ceirwynn', 'Haus Ceirwynn'),
     house('house-eirce', 'Haus Eirce'),
     house('house-grawn', 'Haus Grawn'),
-    house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/haus-illysywen.png'),
+    house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-eisenherz', 'Haus Eisenherz'),
     house('house-cenyr', 'Haus Cenyr'),
     house('house-argall', 'Haus Argall'),

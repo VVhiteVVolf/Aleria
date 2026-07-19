@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_LOER_PORTRAITS } from './house-loer-portraits.js';
 
-const LOER_EMBLEM = 'assets/images/houses/haus-loer.png';
+const LOER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-loer.png';
 const LOER_HOUSE_ID = 'house-loer';
 const HOUSE_HEAD_IDS = new Set(['cadfarch-loer', 'maddocc-loer', 'eurgain-loer']);
 const MAIN_LINE_IDS = new Set(['ynyrion-loer', 'aeron-loer']);

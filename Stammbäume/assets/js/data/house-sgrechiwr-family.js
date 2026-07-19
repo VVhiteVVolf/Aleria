@@ -9,7 +9,7 @@ import {
 import { HOUSE_SGRECHIWR_PORTRAITS } from './house-sgrechiwr-portraits.js';
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
 
-const SGRECHIWR_EMBLEM = 'assets/images/houses/haus-sgrechiwr.png';
+const SGRECHIWR_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png';
 const SGRECHIWR_HOUSE_ID = 'house-sgrechiwr';
 // Bürgerliche Erbfolge nach Eignung statt Erstgeburt (User-Vorgabe): die Kette reicht vom
 // Begründer über den amtierenden Gareth hinaus bis zu den vorgesehenen Erben Brân und Cadell.
@@ -81,7 +81,7 @@ export const HOUSE_SGRECHIWR_FAMILY = Object.freeze({
   },
   houses: [
     { id: SGRECHIWR_HOUSE_ID, name: 'Haus Sgrechiwr', motto: '', emblem: SGRECHIWR_EMBLEM, status: 'active' },
-    { id: 'house-balchder', name: 'Haus Balchder', motto: '', emblem: 'assets/images/houses/haus-balchder.png', status: 'active' },
+    { id: 'house-balchder', name: 'Haus Balchder', motto: '', emblem: 'assets/images/houses/Llamreis Ankunft/haus-balchder.png', status: 'active' },
     { id: 'house-unbekannt-wenna', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' },
     { id: 'house-unbekannt-seren', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' },
     { id: 'house-unbekannt-fflur', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' }

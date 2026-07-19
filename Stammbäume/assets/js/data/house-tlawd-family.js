@@ -7,7 +7,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_TLAWD_PORTRAITS } from './house-tlawd-portraits.js';
 
-const TLAWD_EMBLEM = 'assets/images/houses/haus-tlawd.png';
+const TLAWD_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-tlawd.png';
 const TLAWD_HOUSE_ID = 'house-tlawd';
 const HOUSE_HEAD_IDS = new Set([
   'edric-tlawd',

@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_CHWEDLONOL_PORTRAITS } from './house-chwedlonol-portraits.js';
 
-const CHWEDLONOL_EMBLEM = 'assets/images/houses/haus-chwedlonol.png';
+const CHWEDLONOL_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png';
 const CHWEDLONOL_HOUSE_ID = 'house-chwedlonol';
 
 // Chwedonol ist matriarchal: die Frauen (meist die älteste Tochter) erben,
@@ -82,8 +82,8 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
   },
   houses: [
     { id: CHWEDLONOL_HOUSE_ID, name: 'Haus Chwedonol', motto: 'Pflicht kennt keine Flaute.', emblem: CHWEDLONOL_EMBLEM, status: 'active' },
-    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/haus-rhyddid.png'),
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/haus-balchder.png')
+    house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png'),
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
   ],
   persons: [
     // Gründerin und ihr Ehemann
@@ -230,7 +230,7 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-arianwen-kerwin',
       houseId: 'house-rhyddid',
       targetFamilyId: 'haus-rhyddid',
-      emblem: 'assets/images/houses/haus-rhyddid.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png',
       crestFrame: 'silver',
       notes: 'Arianwen wurde an das Ritterherrenhaus Rhyddid wegverheiratet; ihr Sohn Taran führt dort die Linie fort.'
     })

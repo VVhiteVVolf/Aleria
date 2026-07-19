@@ -52,7 +52,7 @@ export const LOWER_KNIGHT_HOUSE_FAMILIES = Object.freeze(
     return createBlankHouseFamily({
       id: `haus-${definition.slug}`,
       title: `Haus ${houseName}`,
-      emblem: `assets/images/houses/haus-${definition.slug}.png`,
+      emblem: `assets/images/houses/Llamreis Ankunft/haus-${definition.slug}.png`,
       houseProfile: CELTIGERNS_WACHT_LOWER_KNIGHT_PROFILES[definition.slug],
       description: `Vorbereitete Familienakte des niederen Rittergeschlechts unter Haus ${definition.liege}.`
     });

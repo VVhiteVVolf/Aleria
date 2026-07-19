@@ -10,11 +10,11 @@ import {
 import { HOUSE_ILLYSYWEN_PORTRAITS } from './house-illysywen-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  draig: 'assets/images/houses/haus-draig.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwyvern: 'assets/images/houses/haus-gwyvern.png',
-  illysywen: 'assets/images/houses/haus-illysywen.png',
-  saethwyr: 'assets/images/houses/haus-saethwyr.png'
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  illysywen: 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png',
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png'
 });
 
 const ILLYSYWEN_HOUSE_ID = 'house-illysywen';

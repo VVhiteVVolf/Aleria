@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_AWENYDD_PORTRAITS } from './house-awenydd-portraits.js';
 
-const AWENYDD_EMBLEM = 'assets/images/houses/haus-awenydd.png';
+const AWENYDD_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-awenydd.png';
 const AWENYDD_HOUSE_ID = 'house-awenydd';
 const HOUSE_HEAD_IDS = new Set([
   'aeddan-awenydd',

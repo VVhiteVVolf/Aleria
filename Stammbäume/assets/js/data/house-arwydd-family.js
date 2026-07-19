@@ -2,14 +2,14 @@ import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { HOUSE_ARWYDD_PORTRAITS } from './house-arwydd-portraits.js';
 
-const ARWYDD_EMBLEM = 'assets/images/houses/haus-arwydd.png';
+const ARWYDD_EMBLEM = 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png';
 const ARWYDD_HOUSE_EMBLEMS = Object.freeze({
-  saethwyr: 'assets/images/houses/haus-saethwyr.png',
-  wyrm: 'assets/images/houses/haus-wyrm.png',
-  draig: 'assets/images/houses/haus-draig.png',
-  gafyr: 'assets/images/houses/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwywern: 'assets/images/houses/haus-gwyvern.png'
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png',
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwywern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png'
 });
 
 const ARWYDD_LIFE_DATES = Object.freeze({

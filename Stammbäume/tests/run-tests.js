@@ -503,7 +503,7 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
   assert.equal(family.persons.length, 27);
   assert.equal(family.partnerships.length, 9);
   assert.equal(family.parentages.length, 17);
-  assert.equal(family.document.emblem, 'assets/images/houses/haus-arwydd.png');
+  assert.equal(family.document.emblem, 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png');
   assert.equal(family.view.focusPersonId, 'idwalladr-arwydd');
   assert.equal(graph.getPerson('idwalladr-arwydd').birth, '1653');
   assert.equal(graph.getPerson('idwalladr-arwydd').death, '1720');
@@ -512,13 +512,13 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
   assert.deepEqual(
     Object.fromEntries(family.houses.filter(house => house.emblem).map(house => [house.id, house.emblem])),
     {
-      'house-arwydd': 'assets/images/houses/haus-arwydd.png',
-      'house-saethwyr': 'assets/images/houses/haus-saethwyr.png',
-      'house-wyrm': 'assets/images/houses/haus-wyrm.png',
-      'house-draig': 'assets/images/houses/haus-draig.png',
-      'house-gafyr': 'assets/images/houses/haus-gafyr.png',
-      'house-gwefrydd': 'assets/images/houses/haus-gwefrydd.png',
-      'house-gwywern': 'assets/images/houses/haus-gwyvern.png'
+      'house-arwydd': 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+      'house-saethwyr': 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+      'house-wyrm': 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png',
+      'house-draig': 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+      'house-gafyr': 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+      'house-gwefrydd': 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+      'house-gwywern': 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png'
     }
   );
   assert.deepEqual(
@@ -547,12 +547,12 @@ test('bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab', () => {
     assert.ok(node, `${branch.name} muss als verlinkter Endknoten erscheinen.`);
     assert.equal(node.data.title, 'Wegverheiratete Linie');
   });
-  assert.equal(chartById.get('breandan-saethwyr').data.crest, 'assets/images/houses/haus-saethwyr.png');
-  assert.equal(chartById.get('eiddon-wym').data.crest, 'assets/images/houses/haus-wyrm.png');
-  assert.equal(chartById.get('tecwyn-draig').data.crest, 'assets/images/houses/haus-draig.png');
-  assert.equal(chartById.get('kelyddon-gafyr').data.crest, 'assets/images/houses/haus-gafyr.png');
-  assert.equal(chartById.get('myrcella-gwefrydd').data.crest, 'assets/images/houses/haus-gwefrydd.png');
-  assert.equal(chartById.get('gwynnan-gwywern').data.crest, 'assets/images/houses/haus-gwyvern.png');
+  assert.equal(chartById.get('breandan-saethwyr').data.crest, 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png');
+  assert.equal(chartById.get('eiddon-wym').data.crest, 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png');
+  assert.equal(chartById.get('tecwyn-draig').data.crest, 'assets/images/houses/Llamreis Ankunft/haus-draig.png');
+  assert.equal(chartById.get('kelyddon-gafyr').data.crest, 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png');
+  assert.equal(chartById.get('myrcella-gwefrydd').data.crest, 'assets/images/houses/Artus Streben/haus-gwefrydd.png');
+  assert.equal(chartById.get('gwynnan-gwywern').data.crest, 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png');
   assert.equal(family.cadetBranches.find(branch => branch.id === 'married-away-wym').targetFamilyId, 'haus-wyrm');
 });
 
@@ -2527,7 +2527,7 @@ test('modifiziert Beziehungen über den Store: Scheidung, Eheschluss aus Verlobu
   assert.equal(family.parentages.find(item => item.id === parentageId).legitimacy, 'legitimized');
 
   assert.equal(store.ensureHouse({ id: 'house-tlawd', name: 'Haus Tlawd' }), false, 'Bestehende Häuser werden nicht doppelt angelegt.');
-  assert.equal(store.ensureHouse({ id: 'house-draig', name: 'Haus Draig', emblem: 'assets/images/houses/haus-draig.png' }), true);
+  assert.equal(store.ensureHouse({ id: 'house-draig', name: 'Haus Draig', emblem: 'assets/images/houses/Llamreis Ankunft/haus-draig.png' }), true);
   family = store.getState().family;
   assert.equal(family.houses.filter(house => house.id === 'house-tlawd').length, 1);
   assert.equal(family.houses.find(house => house.id === 'house-draig')?.name, 'Haus Draig');
@@ -2550,7 +2550,7 @@ test('verlobt eine Person registerübergreifend samt importierter Registerakte (
   assert.equal(imported.name, 'Taran Tlawd', 'Fremde Personen tragen im Zielbaum den vollen Hausnamen.');
   assert.equal(imported.worldPersonId, 'person--haus-tlawd--taran-tlawd');
   assert.equal(imported.portrait, HOUSE_TLAWD_PORTRAITS['taran-tlawd']);
-  assert.deepEqual(imported.house, { id: 'house-tlawd', name: 'Haus Tlawd', emblem: 'assets/images/houses/haus-tlawd.png' });
+  assert.deepEqual(imported.house, { id: 'house-tlawd', name: 'Haus Tlawd', emblem: 'assets/images/houses/Llamreis Ankunft/haus-tlawd.png' });
 
   const { house, ...personValues } = imported;
   store.ensureHouse(house);
@@ -2780,7 +2780,7 @@ test('bildet Haus Balchder mit Silberrahmen, Hauptlinie und bestehenden Hausverb
   assert.equal(branchById.get('married-away-seldryn-bronwen').targetFamilyId, 'haus-seldryn');
   assert.equal(branchById.get('married-away-seldryn-bronwen').parentPartnershipId, 'marriage-bronwen-lugh');
   assert.equal(branchById.get('married-away-sgrechiwr-aerona').targetFamilyId, 'haus-sgrechiwr');
-  assert.equal(branchById.get('married-away-sgrechiwr-aerona').emblem, 'assets/images/houses/haus-sgrechiwr.png');
+  assert.equal(branchById.get('married-away-sgrechiwr-aerona').emblem, 'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png');
   assert.equal(branchById.get('married-away-gwyntog-genofeva').targetFamilyId, 'haus-gwyntog');
   assert.equal(branchById.get('married-away-gwyntog-genofeva').parentPartnershipId, 'marriage-genofeva-alastair');
   assert.equal(branchById.get('married-away-cludwyr-klervi').targetFamilyId, 'haus-cludwyr');
@@ -2868,8 +2868,8 @@ test('liefert für Haus Balchder alle belegten Portraits lokal oder über kanoni
   }));
 
   await Promise.all([
-    'assets/images/houses/haus-balchder.png',
-    'assets/images/houses/haus-sgrechiwr.png'
+    'assets/images/houses/Llamreis Ankunft/haus-balchder.png',
+    'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png'
   ].map(async path => {
     const image = await readFile(new URL(`../${path}`, import.meta.url));
     assert.ok(image.length > 100, `${path} ist leer.`);
@@ -3029,7 +3029,7 @@ test('bildet Haus Eneiniog mit unbekannten Ehepartnern, plausiblen Altersstufen 
   assert.equal(balchderBranch.targetFamilyId, 'haus-balchder');
   assert.equal(balchderBranch.parentPartnershipId, 'marriage-uther-millena');
   assert.equal(balchderBranch.crestFrame, 'silver');
-  assert.equal(balchderBranch.emblem, 'assets/images/houses/haus-balchder.png');
+  assert.equal(balchderBranch.emblem, 'assets/images/houses/Llamreis Ankunft/haus-balchder.png');
 
   assert.match(graph.getPerson('peredur-eneiniog').notes, /Priester des Vaters/);
   assert.match(graph.getPerson('lywell-eneiniog').notes, /Eid der Enthaltsamkeit/);
@@ -3084,7 +3084,7 @@ test('liefert für Haus Eneiniog alle 23 belegten Portraits lokal aus', async ()
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-eneiniog.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-eneiniog.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -3267,7 +3267,7 @@ test('liefert für Haus Gostyn alle 18 belegten Portraits lokal aus', async () =
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-gostyn.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-gostyn.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -3419,7 +3419,7 @@ test('liefert für Haus Awenydd alle 23 belegten Portraits lokal aus', async () 
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-awenydd.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-awenydd.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -3582,7 +3582,7 @@ test('liefert für Haus Awenor alle 19 belegten Portraits lokal aus', async () =
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-awenor.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-awenor.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -3742,7 +3742,7 @@ test('liefert für Haus Loer alle 14 belegten Portraits lokal aus', async () => 
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-loer.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-loer.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -3886,7 +3886,7 @@ test('liefert für Haus Garrael alle 15 belegten Portraits lokal aus', async () 
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-garrael.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Camruisge/haus-garrael.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 
@@ -4051,7 +4051,7 @@ test('liefert für Haus Gwyllach alle 19 belegten Portraits lokal aus', async ()
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-gwyllach.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-gwyllach.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -4213,7 +4213,7 @@ test('liefert für Haus Sgrechiwr alle 16 lokalen und 1 wiederverwendetes Portra
     assert.deepEqual([...image.subarray(0, 3)], [0xff, 0xd8, 0xff]);
   }));
 
-  const emblem = await readFile(new URL('../assets/images/houses/haus-sgrechiwr.png', import.meta.url));
+  const emblem = await readFile(new URL('../assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png', import.meta.url));
   assert.ok(emblem.length > 100);
   assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);
 });
@@ -4700,12 +4700,12 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.equal(llamreisFolder.icon, 'assets/images/regions/llamreis-ankunft.png');
   assert.equal(gwynthorFolder.icon, 'assets/images/regions/gwynthor.png');
   await Promise.all([
-    'assets/images/houses/haus-arwydd.png',
-    'assets/images/houses/haus-gwefrydd.png',
-    'assets/images/houses/haus-gwyvern.png',
-    'assets/images/houses/haus-garrael.png',
-    'assets/images/houses/haus-gwyllach.png',
-    'assets/images/houses/haus-sgrechiwr.png',
+    'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+    'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+    'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+    'assets/images/houses/Camruisge/haus-garrael.png',
+    'assets/images/houses/Llamreis Ankunft/haus-gwyllach.png',
+    'assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png',
     ...LOWER_KNIGHT_HOUSE_FAMILIES.map(family => family.document.emblem),
     'assets/images/regions/artus-streben.png',
     'assets/images/regions/castellbryn.png',

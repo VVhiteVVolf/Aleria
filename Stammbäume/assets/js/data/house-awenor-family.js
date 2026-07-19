@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_AWENOR_PORTRAITS } from './house-awenor-portraits.js';
 
-const AWENOR_EMBLEM = 'assets/images/houses/haus-awenor.png';
+const AWENOR_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-awenor.png';
 const AWENOR_HOUSE_ID = 'house-awenor';
 const HOUSE_HEAD_IDS = new Set(['aergol-awenor', 'glynfael-awenor', 'ffraid-awenor']);
 const MAIN_LINE_IDS = new Set(['derwain-awenor', 'urfael-awenor', 'isgar-awenor']);

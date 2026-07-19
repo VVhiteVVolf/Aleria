@@ -9,13 +9,13 @@ import {
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  arwydd: 'assets/images/houses/haus-arwydd.png',
-  draig: 'assets/images/houses/haus-draig.png',
-  gafyr: 'assets/images/houses/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwyvern: 'assets/images/houses/haus-gwyvern.png',
-  saethwyr: 'assets/images/houses/haus-saethwyr.png',
-  wyrm: 'assets/images/houses/haus-wyrm.png'
+  arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
 const GAFYR_HOUSE_ID = 'house-gafyr';

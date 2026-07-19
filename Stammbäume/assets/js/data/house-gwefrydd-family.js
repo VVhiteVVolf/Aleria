@@ -9,13 +9,13 @@ import {
 import { HOUSE_GWEFRYDD_PORTRAITS } from './house-gwefrydd-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  arwydd: 'assets/images/houses/haus-arwydd.png',
-  draig: 'assets/images/houses/haus-draig.png',
-  gafyr: 'assets/images/houses/haus-gafyr.png',
-  gwefrydd: 'assets/images/houses/haus-gwefrydd.png',
-  gwyvern: 'assets/images/houses/haus-gwyvern.png',
-  saethwyr: 'assets/images/houses/haus-saethwyr.png',
-  wyrm: 'assets/images/houses/haus-wyrm.png'
+  arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
 const GWEFRYDD_HOUSE_ID = 'house-gwefrydd';
@@ -110,7 +110,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-draenog', 'Haus Draenog'),
     house('house-gwarchod', 'Haus Gwarchod'),
     house('house-gortach', 'Haus Gortach'),
-    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/haus-illysywen.png'),
+    house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-grawn', 'Haus Grawn'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
     house('house-dyngwn', 'Haus Dyngwn'),

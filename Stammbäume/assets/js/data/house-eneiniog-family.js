@@ -8,7 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_ENEINIOG_PORTRAITS } from './house-eneiniog-portraits.js';
 
-const ENEINIOG_EMBLEM = 'assets/images/houses/haus-eneiniog.png';
+const ENEINIOG_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-eneiniog.png';
 const ENEINIOG_HOUSE_ID = 'house-eneiniog';
 
 const HOUSE_HEAD_IDS = new Set([
@@ -84,7 +84,7 @@ export const HOUSE_ENEINIOG_FAMILY = Object.freeze({
   },
   houses: [
     { id: ENEINIOG_HOUSE_ID, name: 'Haus Eneiniog', motto: '', emblem: ENEINIOG_EMBLEM, status: 'active' },
-    house('house-balchder', 'Haus Balchder', 'assets/images/houses/haus-balchder.png')
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png')
   ],
   persons: [
     // Gründerpaar; die folgenden Generationen sind nicht einzeln überliefert.
@@ -225,7 +225,7 @@ export const HOUSE_ENEINIOG_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-uther-millena',
       houseId: 'house-balchder',
       targetFamilyId: 'haus-balchder',
-      emblem: 'assets/images/houses/haus-balchder.png',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-balchder.png',
       crestFrame: 'silver',
       notes: 'Millena Eneiniog wurde an Uther Balchder wegverheiratet; ihre Nachkommen werden im Stammbaum des Hauses Balchder fortgeführt.'
     })
