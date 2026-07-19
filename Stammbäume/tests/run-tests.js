@@ -5596,6 +5596,24 @@ test('bildet den antiken Albenclan Ard Conbhrón mit zweiter Überlieferungslüc
   assert.equal(family.persons.find(person => person.id === 'caireen-conbhron').houseId, 'house-ard-conbhron');
   assert.equal(family.persons.find(person => person.id === 'llamrei-draig').houseId, 'house-draig');
 
+  // Jede core Ard-Conbhrón-Frau, deren eigene Kinder nicht hier verzeichnet sind
+  // (Labhoise ausgenommen, deren Sohn über den Zeitsprung hier fortlebt), heiratet
+  // sichtbar in ein anderes Haus weg.
+  const marriedAwayTargets = {
+    'married-away-gwefrydd-clodagh': 'haus-gwefrydd',
+    'married-away-talamh-liadan': 'haus-talamh',
+    'married-away-draig-caireen': 'haus-draig',
+    'married-away-searlait-grainne': 'haus-searlait',
+    'married-away-talamh-ragnailt': 'haus-talamh'
+  };
+  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length);
+  Object.entries(marriedAwayTargets).forEach(([branchId, targetFamilyId]) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId} fehlt`);
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+  });
+
   assert.equal(family.view.focusPersonId, 'ahnherr-ard-conbhron');
 });
 
@@ -5629,18 +5647,24 @@ test('Clodagh, Tallwch, Caireen und Llamrei sind über Gwefrydd/Draig hinweg die
 
 test('bildet das antike Fürstengeschlecht Ui Talamh ab, das vollständig in andere Häuser eingeheiratet ist', () => {
   const family = assertValidFamily(HOUSE_UI_TALAMH_FAMILY).family;
-  assert.equal(family.persons.length, 23);
+  assert.equal(family.persons.length, 25);
   assert.equal(family.document.houseProfile.rankId, 'ard-tiarna');
 
   const graph = createFamilyGraph(family);
 
-  // Gründerpaar: Faolan ist die erste namentlich bekannte Generation, seine Frau
-  // Brónach Gormárd bleibt ohne eigenes Herkunftshaus.
+  // Gründerpaar ist nicht überliefert (Unbekannter Ahnherr/Unbekannte Ahnfrau); erst
+  // nach dem Zeitsprung setzt Faolan als erste namentlich bekannte Generation fort.
+  const ahnherr = family.persons.find(person => person.id === 'ahnherr-talamh');
+  assert.equal(ahnherr.name, 'Unbekannter Ahnherr');
+  assert.equal(ahnherr.houseId, 'house-talamh');
+  assert.equal(ahnherr.familyRole, 'core');
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.timeJumps.length, 0);
+  assert.deepEqual(graph.getChildren('ahnherr-talamh').map(person => person.id), ['faolan-talamh']);
+
   const faolan = family.persons.find(person => person.id === 'faolan-talamh');
   assert.equal(faolan.houseId, 'house-talamh');
   assert.equal(faolan.familyRole, 'core');
-  assert.equal(family.lineage.timeGap.enabled, true);
-  assert.equal(family.timeJumps.length, 0);
 
   assert.deepEqual(graph.getChildren('faolan-talamh').map(person => person.id).sort(), [
     'cathan-talamh', 'fiodhna-talamh', 'fionnuala-talamh', 'maoladh-talamh', 'roibeard-talamh'
@@ -5658,7 +5682,25 @@ test('bildet das antike Fürstengeschlecht Ui Talamh ab, das vollständig in and
     assert.equal(person.status, 'dead', `${person.name} (${person.id}) sollte verstorben sein`);
   });
 
-  assert.equal(family.view.focusPersonId, 'faolan-talamh');
+  // Jede core Ui-Talamh-Frau, deren eigene Kinder nicht hier verzeichnet sind, heiratet
+  // sichtbar in ein anderes (bereits bekanntes) Haus weg.
+  const marriedAwayTargets = {
+    'married-away-ard-conbhron-fionnuala': 'haus-ard-conbhron',
+    'married-away-gafyr-fiodhna': 'haus-gafyr',
+    'married-away-draig-blathnaid': 'haus-draig',
+    'married-away-diulb-eibhlin': 'haus-diulb',
+    'married-away-searlait-fiona': 'haus-searlait',
+    'married-away-cumhail-mairin': 'haus-cumhail'
+  };
+  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length);
+  Object.entries(marriedAwayTargets).forEach(([branchId, targetFamilyId]) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId} fehlt`);
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+  });
+
+  assert.equal(family.view.focusPersonId, 'ahnherr-talamh');
 });
 
 test('Dónall, Fíodhna/Garym, Líadan, Blathnaid/Grugyn und Ragnailt sind über Ard Conbhrón/Gafyr/Draig hinweg dieselben Weltpersonen wie in Haus Ui Talamh', () => {

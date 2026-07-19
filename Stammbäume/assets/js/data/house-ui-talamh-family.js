@@ -3,6 +3,7 @@ import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profil
 import {
   createFamilyPerson,
   createMarriage,
+  createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
 
@@ -25,10 +26,10 @@ const SHARED_PORTRAITS = Object.freeze({
 
 const UI_TALAMH_HOUSE_ID = 'house-talamh';
 
-// Die Kopflinie läuft von Faolan über Roibeard und Cormac bis zu Murchadh, dessen
-// Töchter Fíona und Máirín die letzte Generation stellen. Das Haus besteht heute nicht
-// mehr eigenständig: alle Nachfahren sind in andere Häuser eingeheiratet.
-const HOUSE_HEAD_IDS = new Set(['faolan-talamh', 'roibeard-talamh', 'cormac-talamh', 'murchadh-talamh']);
+// Die Kopflinie läuft vom unbekannten Gründerpaar über Faolan, Roibeard und Cormac bis
+// zu Murchadh, dessen Töchter Fíona und Máirín die letzte Generation stellen. Das Haus
+// besteht heute nicht mehr eigenständig: alle Nachfahren sind in andere Häuser eingeheiratet.
+const HOUSE_HEAD_IDS = new Set(['ahnherr-talamh', 'faolan-talamh', 'roibeard-talamh', 'cormac-talamh', 'murchadh-talamh']);
 const MAIN_LINE_IDS = new Set(['fiona-talamh', 'mairin-talamh']);
 
 function lineageRoleFor(personId) {
@@ -59,7 +60,19 @@ function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
-const FOUNDER_IDS = ['faolan-talamh', 'bronach-gormard'];
+function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+  return createMarriedAwayBranch({
+    id,
+    name,
+    parentPartnershipId: partnershipId,
+    houseId,
+    targetFamilyId: houseId.replace(/^house-/, 'haus-'),
+    emblem
+  });
+}
+
+const FOUNDER_IDS = ['ahnherr-talamh', 'ahnfrau-talamh'];
+const FAOLAN_IDS = ['faolan-talamh', 'bronach-gormard'];
 const FIONNUALA_IDS = ['fionnuala-talamh', 'donall-ard-conbhron'];
 const FIODHNA_IDS = ['fiodhna-talamh', 'garym-gafyr'];
 const ROIBEARD_IDS = ['roibeard-talamh', 'liadan-ard-conbhron'];
@@ -88,17 +101,26 @@ export const HOUSE_UI_TALAMH_FAMILY = Object.freeze({
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-cumhail', 'Haus Cumhail'),
-    house('house-diulb', 'Haus Diulb')
+    house('house-diulb', 'Haus Diulb'),
+    house('house-searlait', 'Haus Searlait')
   ],
   persons: [
-    // Gründerpaar nicht einzeln überliefert; Faolan ist der erste namentlich bekannte Ahn.
+    // Gründerpaar nicht überliefert.
+    person('ahnherr-talamh', 'Unbekannter Ahnherr', 'male', '????', '????'),
+    person('ahnfrau-talamh', 'Unbekannte Ahnfrau', 'female', '????', '????', ''),
+
+    // Erste namentlich überlieferte Generation nach der Überlieferungslücke
     person('faolan-talamh', 'Faolan', 'male', '????', '????'),
     person('bronach-gormard', 'Brónach Gormárd', 'female', '????', '????', ''),
 
     // Faolans und Brónachs Kinder
-    person('fionnuala-talamh', 'Fionnuala', 'female', '????', '????'),
+    person('fionnuala-talamh', 'Fionnuala', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
+      notes: 'Verheiratet an Haus Ard Conbhrón.'
+    }),
     person('donall-ard-conbhron', 'Dónall Conbhrón', 'male', '????', '????', 'house-ard-conbhron'),
-    person('fiodhna-talamh', 'Fíodhna', 'female', '????', '????'),
+    person('fiodhna-talamh', 'Fíodhna', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
+      notes: 'Verheiratet an Garym den Gehörnten, den Vater Kynwrig Gafyrs.'
+    }),
     person('garym-gafyr', 'Garym der Gehörnte', 'male', '????', '????', 'house-gafyr'),
     person('roibeard-talamh', 'Roibeard', 'male', '????', '????'),
     person('liadan-ard-conbhron', 'Líadan Conbhrón', 'female', '????', '????', 'house-ard-conbhron'),
@@ -112,7 +134,7 @@ export const HOUSE_UI_TALAMH_FAMILY = Object.freeze({
 
     // Roibeards und Líadans Kinder
     person('cormac-talamh', 'Cormac', 'male', '????', '????'),
-    person('meabh-searlait', 'Méabh Searlait', 'female', '????', '????', ''),
+    person('meabh-searlait', 'Méabh Searlait', 'female', '????', '????', 'house-searlait'),
     person('blathnaid-talamh', 'Blathnaid', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
       notes: 'Verheiratet an Haus Draig, an Celtigerns Sohn Grugyn.'
     }),
@@ -122,19 +144,24 @@ export const HOUSE_UI_TALAMH_FAMILY = Object.freeze({
     person('murchadh-talamh', 'Murchadh', 'male', '????', '????'),
     person('ragnailt-ard-conbhron', 'Ragnailt Conbhrón', 'female', '????', '????', 'house-ard-conbhron'),
     person('eibhlin-talamh', 'Eibhlín', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
-      notes: 'Nebenzweig ohne überlieferte Nachkommen.'
+      notes: 'Verheiratet an Haus Diulb.'
     }),
     person('searlas-diulb', 'Séarlas Diulb', 'male', '????', '????', 'house-diulb'),
 
     // Murchadhs und Ragnailts Kinder: die letzte überlieferte Generation. Beide Töchter
     // heiraten in andere Häuser; danach besteht Ui Talamh nicht mehr eigenständig fort.
-    person('fiona-talamh', 'Fíona', 'female', '????', '????'),
-    person('ultan-searlait', 'Ultán Searlait', 'male', '????', '????', ''),
-    person('mairin-talamh', 'Máirín', 'female', '????', '????'),
+    person('fiona-talamh', 'Fíona', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
+      notes: 'Verheiratet an Haus Searlait.'
+    }),
+    person('ultan-searlait', 'Ultán Searlait', 'male', '????', '????', 'house-searlait'),
+    person('mairin-talamh', 'Máirín', 'female', '????', '????', UI_TALAMH_HOUSE_ID, {
+      notes: 'Verheiratet an Haus Cumhail.'
+    }),
     person('daithin-cumhail', 'Dáithín Mac Cumhail', 'male', '????', '????', 'house-cumhail')
   ],
   partnerships: [
-    createMarriage('marriage-faolan-bronach', ...FOUNDER_IDS),
+    createMarriage('marriage-ahnherr-ahnfrau-talamh', ...FOUNDER_IDS),
+    createMarriage('marriage-faolan-bronach', ...FAOLAN_IDS),
     createMarriage('marriage-fionnuala-donall', ...FIONNUALA_IDS),
     createMarriage('marriage-fiodhna-garym', ...FIODHNA_IDS),
     createMarriage('marriage-roibeard-liadan', ...ROIBEARD_IDS),
@@ -147,24 +174,31 @@ export const HOUSE_UI_TALAMH_FAMILY = Object.freeze({
     createMarriage('marriage-mairin-daithin', ...MAIRIN_IDS)
   ],
   parentages: [
+    ...childrenOf(['faolan-talamh'], FOUNDER_IDS, 'marriage-ahnherr-ahnfrau-talamh', {
+      type: 'claimed',
+      certainty: 'probable',
+      notes: 'Mehrere Generationen vor Faolan sind nicht überliefert.'
+    }),
     ...childrenOf(
       ['fionnuala-talamh', 'fiodhna-talamh', 'roibeard-talamh', 'maoladh-talamh', 'cathan-talamh'],
-      FOUNDER_IDS,
-      'marriage-faolan-bronach',
-      {
-        type: 'claimed',
-        certainty: 'probable',
-        notes: 'Mehrere Generationen vor Faolan sind nicht überliefert.'
-      }
+      FAOLAN_IDS,
+      'marriage-faolan-bronach'
     ),
     ...childrenOf(['cormac-talamh', 'blathnaid-talamh'], ROIBEARD_IDS, 'marriage-roibeard-liadan'),
     ...childrenOf(['murchadh-talamh', 'eibhlin-talamh'], CORMAC_IDS, 'marriage-cormac-meabh'),
     ...childrenOf(['fiona-talamh', 'mairin-talamh'], MURCHADH_IDS, 'marriage-murchadh-ragnailt')
   ],
-  cadetBranches: [],
+  cadetBranches: [
+    marriedAway('married-away-ard-conbhron-fionnuala', 'Haus Ard Conbhrón', 'marriage-fionnuala-donall', 'house-ard-conbhron', HOUSE_EMBLEMS.ardConbhron),
+    marriedAway('married-away-gafyr-fiodhna', 'Haus Gafyr', 'marriage-fiodhna-garym', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
+    marriedAway('married-away-draig-blathnaid', 'Haus Draig', 'marriage-blathnaid-grugyn', 'house-draig', HOUSE_EMBLEMS.draig),
+    marriedAway('married-away-diulb-eibhlin', 'Haus Diulb', 'marriage-eibhlin-searlas', 'house-diulb'),
+    marriedAway('married-away-searlait-fiona', 'Haus Searlait', 'marriage-fiona-ultan', 'house-searlait'),
+    marriedAway('married-away-cumhail-mairin', 'Haus Cumhail', 'marriage-mairin-daithin', 'house-cumhail')
+  ],
   timeJumps: [],
   lineage: {
-    founderPartnershipId: 'marriage-faolan-bronach',
+    founderPartnershipId: 'marriage-ahnherr-ahnfrau-talamh',
     houseId: UI_TALAMH_HOUSE_ID,
     crestSubtitle: '',
     crestEmblemScale: 0.86,
@@ -180,7 +214,7 @@ export const HOUSE_UI_TALAMH_FAMILY = Object.freeze({
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'faolan-talamh',
+    focusPersonId: 'ahnherr-talamh',
     orientation: 'vertical',
     ancestorDepth: 5,
     descendantDepth: 5,

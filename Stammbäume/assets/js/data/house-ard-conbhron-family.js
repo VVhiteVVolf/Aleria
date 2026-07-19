@@ -3,6 +3,7 @@ import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profil
 import {
   createFamilyPerson,
   createMarriage,
+  createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
 
@@ -66,6 +67,17 @@ function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
+function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+  return createMarriedAwayBranch({
+    id,
+    name,
+    parentPartnershipId: partnershipId,
+    houseId,
+    targetFamilyId: houseId.replace(/^house-/, 'haus-'),
+    emblem
+  });
+}
+
 const FOUNDER_IDS = ['ahnherr-ard-conbhron', 'ahnfrau-ard-conbhron'];
 const DONALL_IDS = ['donall-ard-conbhron', 'fionnuala-talamh'];
 const GARBHAN_IDS = ['garbhan-ard-conbhron', 'muireen-riordain'];
@@ -93,7 +105,8 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     house(ARD_CONBHRON_HOUSE_ID, 'Haus Ard Conbhrón', HOUSE_EMBLEMS.ardConbhron),
     house('house-talamh', 'Haus Ui Talamh', HOUSE_EMBLEMS.talamh),
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
-    house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig)
+    house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
+    house('house-searlait', 'Haus Searlait')
   ],
   persons: [
     // Gründerpaar nicht überliefert.
@@ -112,7 +125,7 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     }),
     person('tallwch-gwefrydd', 'Tallwch', 'male', '????', '????', 'house-gwefrydd'),
     person('liadan-ard-conbhron', 'Líadan', 'female', '????', '????', ARD_CONBHRON_HOUSE_ID, {
-      notes: 'Nebenzweig ohne überlieferte Nachkommen.'
+      notes: 'Verheiratet an Roibeard, den Kopf des Hauses Ui Talamh; ihre Kinder sind dort verzeichnet.'
     }),
     person('roibeard-talamh', 'Roibeard Talamh', 'male', '????', '????', 'house-talamh'),
 
@@ -124,13 +137,13 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     person('iarlaith-donall-ard-conbhron', 'Iarlaith', 'male', '????', '????'),
     person('ronnat-muirghin', 'Rónnat Muirghin', 'female', '????', '????', ''),
     person('grainne-ard-conbhron', 'Gráinne', 'female', '????', '????', ARD_CONBHRON_HOUSE_ID, {
-      notes: 'Nebenzweig ohne überlieferte Nachkommen.'
+      notes: 'Verheiratet an Haus Searlait.'
     }),
-    person('finbarr-searlait', 'Finbarr Searlait', 'male', '????', '????', ''),
+    person('finbarr-searlait', 'Finbarr Searlait', 'male', '????', '????', 'house-searlait'),
 
     // Iarlaiths und Rónnats Kinder
     person('ragnailt-ard-conbhron', 'Ragnailt', 'female', '????', '????', ARD_CONBHRON_HOUSE_ID, {
-      notes: 'Nebenzweig ohne überlieferte Nachkommen.'
+      notes: 'Verheiratet an Murchadh, den Kopf des Hauses Ui Talamh; ihre Kinder sind dort verzeichnet.'
     }),
     person('murchadh-talamh', 'Murchadh Talamh', 'male', '????', '????', 'house-talamh'),
     person('labhoise-ard-conbhron', 'Labhoise', 'female', '????', '????'),
@@ -190,7 +203,13 @@ export const HOUSE_ARD_CONBHRON_FAMILY = Object.freeze({
     }),
     ...childrenOf(['scathach-ard-conbhron', 'uathach-ard-conbhron'], IARLAITH2_IDS, 'marriage-iarlaith2-tlachtga')
   ],
-  cadetBranches: [],
+  cadetBranches: [
+    marriedAway('married-away-gwefrydd-clodagh', 'Haus Gwefrydd', 'marriage-clodagh-tallwch', 'house-gwefrydd', HOUSE_EMBLEMS.gwefrydd),
+    marriedAway('married-away-talamh-liadan', 'Haus Ui Talamh', 'marriage-liadan-roibeard', 'house-talamh', HOUSE_EMBLEMS.talamh),
+    marriedAway('married-away-draig-caireen', 'Haus Draig', 'marriage-caireen-llamrei', 'house-draig', HOUSE_EMBLEMS.draig),
+    marriedAway('married-away-searlait-grainne', 'Haus Searlait', 'marriage-grainne-finbarr', 'house-searlait'),
+    marriedAway('married-away-talamh-ragnailt', 'Haus Ui Talamh', 'marriage-ragnailt-murchadh', 'house-talamh', HOUSE_EMBLEMS.talamh)
+  ],
   timeJumps: [
     {
       id: 'gap-labhoise-iarlaith',
