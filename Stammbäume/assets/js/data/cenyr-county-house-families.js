@@ -1,6 +1,7 @@
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { HOUSE_PENDRAG_FAMILY } from './house-pendrag-family.js';
+import { HOUSE_ILLEWOD_FAMILY } from './house-illewod-family.js';
 
 // Vorbereitete Leerakten (Juli 2026) für die 8 übrigen großen Grafenhäuser Cenyrs
 // (Celtigerns Wacht/Haus Draig ist bereits ausgearbeitet). Anders als die Vasallenhaus-
@@ -18,7 +19,8 @@ import { HOUSE_PENDRAG_FAMILY } from './house-pendrag-family.js';
 // Bereits ausgearbeitete Häuser ersetzen ihre vorbereitete Leerakte — analog zu
 // ELABORATED_RHONWENS_TRAENEN_FAMILIES in rhonwens-traenen-house-families.js.
 const ELABORATED_CENYR_COUNTY_FAMILIES = Object.freeze({
-  pendrag: HOUSE_PENDRAG_FAMILY
+  pendrag: HOUSE_PENDRAG_FAMILY,
+  illewod: HOUSE_ILLEWOD_FAMILY
 });
 
 const CENYR_COUNTY_HOUSE_DEFINITIONS = Object.freeze([

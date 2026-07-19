@@ -22,6 +22,7 @@ import { HOUSE_GWARED_FAMILY } from '../assets/js/data/house-gwared-family.js';
 import { HOUSE_ARD_CONBHRON_FAMILY } from '../assets/js/data/house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from '../assets/js/data/house-ui-talamh-family.js';
 import { HOUSE_PENDRAG_FAMILY } from '../assets/js/data/house-pendrag-family.js';
+import { HOUSE_ILLEWOD_FAMILY } from '../assets/js/data/house-illewod-family.js';
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
@@ -1636,10 +1637,10 @@ test('liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 131);
-  assert.equal(Object.keys(sourceManifest).length, 113);
-  assert.equal(picturedPeople.length, 131);
-  assert.equal(placeholderPeople.length, 46);
+  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 132);
+  assert.equal(Object.keys(sourceManifest).length, 114);
+  assert.equal(picturedPeople.length, 132);
+  assert.equal(placeholderPeople.length, 45);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
@@ -5915,6 +5916,115 @@ test('Vortigerns Draig-eingeheiratete Verwandte (Rhianu, Artus, Isobel, Godwyn, 
   );
 });
 
+test('bildet die Grafenlinie Haus Illewod von Bedwyr bis zur Gegenwart 1740 ab', () => {
+  const family = assertValidFamily(HOUSE_ILLEWOD_FAMILY).family;
+  assert.equal(family.document.houseProfile.rankId, 'county');
+  assert.equal(family.lineage.crestFrame, 'gold');
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-bedwyr-athracht');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.view.focusPersonId, 'bedwyr-illewod');
+  assert.equal(family.timeJumps.length, 5);
+
+  const graph = createFamilyGraph(family);
+
+  const bedwyr = family.persons.find(person => person.id === 'bedwyr-illewod');
+  assert.equal(bedwyr.houseId, 'house-illewod');
+  assert.equal(bedwyr.familyRole, 'core');
+  assert.deepEqual(
+    graph.getChildren('bedwyr-illewod').map(person => person.id).sort(),
+    ['kyvwlch-illewod', 'sabria-illewod']
+  );
+
+  // Die 11 Grafen der Erbfolge (per Oberhaupt-Galerie der Vorlage bestätigt).
+  const grafSuccession = [
+    'bedwyr-illewod', 'kyvwlch-illewod', 'mathonwy-illewod', 'maldwyn-illewod', 'berwyn-illewod',
+    'penryn-illewod', 'keudawg-illewod', 'iorwerth-illewod', 'selwyn-illewod', 'arthgal-illewod',
+    'merwin-illewod'
+  ];
+  grafSuccession.forEach(personId => {
+    const graf = family.persons.find(person => person.id === personId);
+    assert.ok(graf, `${personId} fehlt`);
+    assert.equal(graf.lineageRole, 'head', `${personId} sollte als Oberhaupt markiert sein`);
+  });
+
+  // Dymphna/Deaglan Gallchobhair sind leibliche Kinder Analis & Tynans, aber als
+  // Mündel an Merwin gegeben (nur Merwin als Elternteil, keine Partnerschaft).
+  ['dymphna-gallchobhair', 'deaglan-gallchobhair'].forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.type, 'foster');
+    assert.deepEqual(parentage.parentIds, ['merwin-illewod']);
+    assert.equal(parentage.partnershipId, '');
+    assert.equal(family.persons.find(entry => entry.id === childId).familyRole, 'adopted');
+  });
+
+  // Sayres Illewod (Haus Saethwyr) und Keudawg Illewod (Haus Pendrag) sind bereits
+  // andernorts belegte Ehen; ihre Kinder Collen/Célyn bzw. die Kinder Keudawgs &
+  // Blodeuyns laufen über dieselben, dort schon vergebenen Partnerschafts-IDs.
+  assert.deepEqual(graph.getChildren('sayres-illewod').map(person => person.id).sort(), ['celyn-illewod', 'collen-illewod']);
+  assert.deepEqual(
+    graph.getChildren('keudawg-illewod').map(person => person.id).sort(),
+    ['gareth-illewod', 'gwales-illewod', 'iorwerth-illewod', 'karys-illewod', 'lowri-illewod']
+  );
+
+  // Jede core-Illewod-Frau, deren eigene Kinder nicht in dieser Datei verzeichnet
+  // sind, erhält eine sichtbare Wegverheiratet-Linie. Pebin "der Fuchs" hat kein
+  // eigenes Haus, daher bekommt Marwynne bewusst KEINEN Zweig.
+  const marriedAwayTargets = {
+    'married-away-neidr-sabria': 'haus-neidr',
+    'married-away-wylan-ysolde': 'haus-wylan',
+    'married-away-aderyn-ffion': 'haus-aderyn',
+    'married-away-eoghhainn-rhianu': 'haus-eoghhainn',
+    'married-away-teyrngarch-morgaine': 'haus-teyrngarch',
+    'married-away-neidr-karys': 'haus-neidr',
+    'married-away-blach-lowri': 'haus-blach',
+    'married-away-tylluan-evaine': 'haus-tylluan',
+    'married-away-llwynog-ehangwen': 'haus-llwynog',
+    'married-away-blach-carwyn': 'haus-blach',
+    'married-away-aderyn-mifawi': 'haus-aderyn',
+    'married-away-pysgod-mairwen': 'haus-pysgod',
+    'married-away-llwynog-kerris': 'haus-llwynog',
+    'married-away-gallchobhair-anali': 'haus-gallchobhair'
+  };
+  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length);
+  Object.entries(marriedAwayTargets).forEach(([branchId, targetFamilyId]) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId} fehlt`);
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+  });
+  assert.equal(family.cadetBranches.some(entry => entry.id.includes('marwynne')), false);
+});
+
+test('Kyvwlch/Selwyn (Haus Draig) und Sayres (Haus Saethwyr) sind über beide Häuser hinweg dieselben Weltpersonen wie in Haus Illewod', () => {
+  const illewod = assertValidFamily(HOUSE_ILLEWOD_FAMILY).family;
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+  const saethwyr = assertValidFamily(HOUSE_SAETHWYR_FAMILY).family;
+
+  [
+    ['kyvwlch-illewod', draig],
+    ['selwyn-illewod', draig],
+    ['gwendolyn-ancient-draig', draig],
+    ['maygan-draig', draig],
+    ['sayres-illewod', saethwyr],
+    ['gwawr-saethwyr', saethwyr]
+  ].forEach(([personId, otherFamily]) => {
+    const here = illewod.persons.find(person => person.id === personId);
+    const there = otherFamily.persons.find(person => person.id === personId);
+    assert.ok(here, `${personId} fehlt in Haus Illewod`);
+    assert.ok(there, `${personId} fehlt in der Vergleichsfamilie`);
+    assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
+  });
+
+  // Kyvwlch/Selwyn/Sayres sind in Illewod core, ihre eingeheirateten Partnerinnen
+  // (Gwendolyn/Maygan/Gwawr) sind dort eingeheiratet (married).
+  ['kyvwlch-illewod', 'selwyn-illewod', 'sayres-illewod'].forEach(personId => {
+    assert.equal(illewod.persons.find(person => person.id === personId).familyRole, 'core');
+  });
+  ['gwendolyn-ancient-draig', 'maygan-draig', 'gwawr-saethwyr'].forEach(personId => {
+    assert.equal(illewod.persons.find(person => person.id === personId).familyRole, 'married');
+  });
+});
+
 test('bereitet die Orts-Hierarchie der acht übrigen Grafschaften Cenyrs vor (Pendrag königlich, Blodyn bewusst ausgenommen)', async () => {
   const expected = {
     wylan: { rankId: 'county', path: ['Cenyr', 'Weidebucht', 'Cerrigarth'], countyEmblem: 'assets/images/regions/weidebucht.png' },
@@ -5969,9 +6079,9 @@ test('legt Platzhalter-Gründerpaare für die 8 übrigen Grafenhäuser Cenyrs an
 
   CENYR_COUNTY_HOUSE_FAMILIES.forEach(family => {
     assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0, `${family.document.id} sollte fehlerfrei sein`);
-    // Pendrag ist inzwischen ausgearbeitet (siehe eigener Test weiter unten) und hat
-    // daher kein bloßes Platzhalter-Gründerpaar mehr.
-    if (family.document.id !== 'haus-pendrag') {
+    // Pendrag und Illewod sind inzwischen ausgearbeitet (siehe eigene Tests weiter
+    // unten) und haben daher kein bloßes Platzhalter-Gründerpaar mehr.
+    if (family.document.id !== 'haus-pendrag' && family.document.id !== 'haus-illewod') {
       assert.equal(family.persons.length, 2, `${family.document.id}: Platzhalter-Gründerpaar`);
     }
     // Grafen-/Königsrang statt Ritterherr: goldener, nicht silberner Wappenrahmen.

@@ -7,6 +7,7 @@ const PORTRAIT_ROOT = 'assets/images/portraits/haus-draig';
 const LOCAL_PORTRAIT_IDS = Object.freeze([
   "vortigern-pendrag",
   "rhiannon-aderyn",
+  "kyvwlch-illewod",
   "celtigern-draig",
   "findabhair-cumhail",
   "artus-draig",
