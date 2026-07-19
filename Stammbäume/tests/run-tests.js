@@ -181,6 +181,7 @@ import {
   isValidFirestoreRecordId
 } from '../assets/js/modules/family-sync/family-change-set.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from '../assets/js/data/cenyr-county-house-profiles.js';
+import { CENYR_COUNTY_HOUSE_FAMILIES } from '../assets/js/data/cenyr-county-house-families.js';
 import { buildFamilyPersonDisplayName } from '../../js/world-identity/family-person-names.js';
 import { normalizePersonName } from '../../js/world-identity/person-identity.js';
 
@@ -4598,13 +4599,15 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   // Gwyllach und Sgrechiwr sind bürgerliche Häuser außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS
   // und werden ebenfalls gesondert geprüft. Ard Conbhrón und Ui Talamh sitzen als antike
   // Albenclans in einer eigenen Orts-Hierarchie (Antike Crannath Clans) und werden ebenfalls
-  // gesondert geprüft.
+  // gesondert geprüft. Die 8 übrigen Grafenhäuser Cenyrs (CENYR_COUNTY_HOUSE_FAMILIES)
+  // haben je ihre eigene, noch baronielose Orts-Hierarchie und werden in einem eigenen
+  // Test geprüft.
   const newVassalHouseCount = ARTUS_STREBEN_HOUSE_FAMILIES.length
     + GWENDOLYNS_UFER_HOUSE_FAMILIES.length
     + RHONWENS_TRAENEN_HOUSE_FAMILIES.length;
   assert.equal(
     listFamilyRecords(storage).length,
-    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 5 + newVassalHouseCount
+    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 5 + newVassalHouseCount + CENYR_COUNTY_HOUSE_FAMILIES.length
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
@@ -5793,6 +5796,35 @@ test('bereitet die Orts-Hierarchie der acht übrigen Grafschaften Cenyrs vor (Pe
     const image = await readFile(new URL(`../${path}`, import.meta.url));
     assert.ok(image.length > 100, `Wappenbild leer: ${path}`);
   }));
+});
+
+test('legt Platzhalter-Gründerpaare für die 8 übrigen Grafenhäuser Cenyrs an, mit goldenem statt silbernem Wappenrahmen', () => {
+  assert.equal(CENYR_COUNTY_HOUSE_FAMILIES.length, 8);
+
+  CENYR_COUNTY_HOUSE_FAMILIES.forEach(family => {
+    assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0, `${family.document.id} sollte fehlerfrei sein`);
+    assert.equal(family.persons.length, 2, `${family.document.id}: Platzhalter-Gründerpaar`);
+    // Grafen-/Königsrang statt Ritterherr: goldener, nicht silberner Wappenrahmen.
+    assert.equal(family.lineage.crestFrame, 'gold', `${family.document.id} sollte einen goldenen Wappenrahmen tragen`);
+    assert.match(family.document.emblem, /^assets\/images\/houses\//);
+  });
+
+  const ids = CENYR_COUNTY_HOUSE_FAMILIES.map(family => family.document.id);
+  assert.equal(new Set(ids).size, ids.length, 'alle 8 Häuser brauchen eindeutige IDs');
+  assert.equal(ids.includes('haus-draig'), false, 'Haus Draig/Celtigerns Wacht ist bereits ausgearbeitet');
+  assert.equal(ids.includes('haus-blodyn'), false, 'Blodyn O\'Llyndor hat laut Vorlage keine eigene Grafschaft und bleibt ausgenommen');
+
+  const pendrag = CENYR_COUNTY_HOUSE_FAMILIES.find(family => family.document.id === 'haus-pendrag');
+  assert.equal(pendrag.document.houseProfile.rankId, 'royal');
+  assert.equal(pendrag.document.title, 'Haus Pendrag');
+
+  const storage = createMemoryStorage();
+  const wylan = loadFamilyById('haus-wylan', storage);
+  assert.ok(wylan, 'Haus Wylan sollte über das Register ladbar sein');
+  assert.equal(wylan.folderPath.join(' > '), 'Cenyr > Weidebucht > Cerrigarth');
+  const pendragRecord = loadFamilyById('haus-pendrag', storage);
+  assert.equal(pendragRecord.folderPath.join(' > '), 'Cenyr > Vortigerns Ruh > Mathragon');
+  assert.equal(pendragRecord.family.document.houseProfile.rankId, 'royal');
 });
 
 let failures = 0;
