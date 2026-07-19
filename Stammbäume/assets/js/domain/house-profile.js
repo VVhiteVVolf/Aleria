@@ -1,10 +1,13 @@
 // Rangfolge in Cenyr: König > Graf > Baron > Ritterfürst > Ritterherr > einfacher Ritter > Bürger.
+// Albische Clans (Crannath) verwenden eigene Titel; 'dun-tiarna' entspricht laut
+// Vorgabe dem Baron und teilt sich daher dessen Rangstufe (order: 40).
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
   royal: Object.freeze({ id: 'royal', label: 'Königsgeschlecht', order: 10 }),
   ducal: Object.freeze({ id: 'ducal', label: 'Herzogsgeschlecht', order: 20 }),
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
+  'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
@@ -17,6 +20,8 @@ export const HOUSE_RANKS = RANK_DEFINITIONS;
 const RANK_ICONS = Object.freeze({
   county: 'assets/images/ranks/graf.png',
   barony: 'assets/images/ranks/baron.png',
+  // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.
+  'dun-tiarna': 'assets/images/ranks/baron.png',
   'knight-prince': 'assets/images/ranks/ritterfuerst.png',
   knight: 'assets/images/ranks/ritterherr.png',
   'knight-simple': 'assets/images/ranks/ritter.png',

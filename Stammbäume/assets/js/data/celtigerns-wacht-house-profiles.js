@@ -75,7 +75,11 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   gwared: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen', 'Castellbryn'], {
     liegeHouseId: 'haus-arwydd',
     liegeHouseName: 'Haus Arwydd'
-  })
+  }),
+  // Antikes, vorcenyrisches Albenclan-Geschlecht, kein Vasall eines modernen Lehnsherrn.
+  // 'Antike Crannath Clans' ist ein eigenes Herrschaftsgebiet direkt unter Celtigerns
+  // Wacht (wie Camruisge/Rhonwens Tränen), Sitz Lycath laut Vorlage.
+  ardConbhron: profile('dun-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Lycath'])
 });
 
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);

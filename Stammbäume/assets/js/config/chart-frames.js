@@ -26,7 +26,10 @@ export const PERSON_CARD_FRAMES = Object.freeze({
   forced: personFrame('person-forced.png', 47.8, 11.95),
   ward: personFrame('person-ward.png', 48.4, 12.25),
   'ward-away': personFrame('person-ward-away.png', 47.8, 12.25),
-  adopted: personFrame('person-adopted.png', 47.8, 12.7)
+  adopted: personFrame('person-adopted.png', 47.8, 12.7),
+  // Anders proportioniert als die übrigen Rahmen (Weltenbaum-Medaillon sitzt tiefer
+  // und schmaler als das Standard-Siegel), daher eigene Justierung statt der Defaults.
+  druid: personFrame('DruidischerRahmen.png', 50, 16, 'druid', { width: 13, height: 19.5 })
 });
 
 // Ringmitte des Medaillons im Rahmenbild: 47,8 % / 12,6 %; Wappen etwas kleiner,
@@ -73,8 +76,9 @@ export const EXTINCT_LINE_FRAME = Object.freeze({
   asset: `${FRAME_ASSET_ROOT}/AusgestorbenKnotenendpunkt.png`
 });
 
-export function getPersonCardFrame(roleId, lineageRole = 'branch', legitimacy = 'unknown') {
+export function getPersonCardFrame(roleId, lineageRole = 'branch', legitimacy = 'unknown', overrideFrameId = '') {
   if (lineageRole === 'head') return HOUSE_HEAD_CARD_FRAME;
+  if (overrideFrameId && PERSON_CARD_FRAMES[overrideFrameId]) return PERSON_CARD_FRAMES[overrideFrameId];
   if (legitimacy === 'legitimized') return LEGITIMIZED_CARD_FRAME;
   return PERSON_CARD_FRAMES[roleId] || PERSON_CARD_FRAMES.core;
 }

@@ -12,6 +12,7 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   dreigiau: PORTRAIT_PLACEHOLDERS.crest,
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
@@ -137,7 +138,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-teigr', 'Haus Teigr'),
     house('house-cumhail', 'Haus Cumhail'),
     house('house-pendrag', 'Haus Pendrag'),
-    house('house-conbhron', 'Haus Conbhrón'),
+    house('house-ard-conbhron', 'Haus Ard Conbhrón', HOUSE_EMBLEMS.ardConbhron),
     house('house-talamh', 'Haus Talamh'),
     house('house-illewod', 'Haus Illewod'),
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
@@ -202,7 +203,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('gwendolyn-ancient-draig', 'Gwendolyn', 'female', '????', '????'),
     person('elinowyn-draig', 'Elinowyn', 'female', '????', '????'),
     person('tanwen-pendrag', 'Tanwen Pendrag', 'female', '????', '????', 'house-pendrag'),
-    person('caireen-conbhron', 'Caireen Conbhrón', 'female', '????', '????', 'house-conbhron'),
+    person('caireen-conbhron', 'Caireen Conbhrón', 'female', '????', '????', 'house-ard-conbhron'),
     person('uther-pendrag', 'Uther Pendrag', 'male', '????', '????', 'house-pendrag'),
     person('blathnaid-talamh', 'Blathnaid Talamh', 'female', '????', '????', 'house-talamh'),
     person('kyvwlch-illewod', 'Kyvwlch Illewod', 'male', '????', '????', 'house-illewod'),

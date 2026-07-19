@@ -313,6 +313,29 @@
   height: 112.7%;
 }
 
+/* Der Druiden-Rahmen (Weltenbaum-Astwerk) hat eine schmalere Ovalöffnung und einen
+   deutlich dickeren unteren/rechten Rand als die übrigen Rahmenbilder und braucht
+   deshalb eigene Positionswerte statt der Standard-Prozentsätze. */
+.aleria-person-card.frame-druid .aleria-person-card__portrait-backdrop,
+.aleria-person-card.frame-druid .aleria-person-card__portrait {
+  top: 9%;
+  left: 5%;
+  width: 34%;
+  height: 74%;
+}
+
+.aleria-person-card.frame-druid .aleria-person-card__fill {
+  inset: 20% 4% 17% 44%;
+  clip-path: none;
+}
+
+.aleria-person-card.frame-druid .aleria-person-card__text {
+  top: 25%;
+  right: 6%;
+  bottom: 19%;
+  left: 46%;
+}
+
 .aleria-crest-node {
   display: flex !important;
   flex-direction: column;

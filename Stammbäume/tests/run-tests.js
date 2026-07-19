@@ -19,6 +19,7 @@ import { HOUSE_GWEFRYDD_FAMILY } from '../assets/js/data/house-gwefrydd-family.j
 import { HOUSE_GWEFRYDD_PORTRAITS } from '../assets/js/data/house-gwefrydd-portraits.js';
 import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family.js';
 import { HOUSE_GWARED_FAMILY } from '../assets/js/data/house-gwared-family.js';
+import { HOUSE_ARD_CONBHRON_FAMILY } from '../assets/js/data/house-ard-conbhron-family.js';
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
@@ -4593,13 +4594,15 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   // Garrael sitzt abseits der übrigen niederen Ritterhäuser in einer eigenen Orts-Hierarchie
   // (Camruisge/Aberllan statt Llamreis Ankunft/Gwynthor) und wird deshalb gesondert geprüft.
   // Gwyllach und Sgrechiwr sind bürgerliche Häuser außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS
-  // und werden ebenfalls gesondert geprüft.
+  // und werden ebenfalls gesondert geprüft. Ard Conbhrón sitzt als antiker Albenclan in einer
+  // eigenen Orts-Hierarchie (Antike Crannath Clans/Lycath, ohne Sitz-/Baronie-Wappen) und wird
+  // ebenfalls gesondert geprüft.
   const newVassalHouseCount = ARTUS_STREBEN_HOUSE_FAMILIES.length
     + GWENDOLYNS_UFER_HOUSE_FAMILIES.length
     + RHONWENS_TRAENEN_HOUSE_FAMILIES.length;
   assert.equal(
     listFamilyRecords(storage).length,
-    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 3 + newVassalHouseCount
+    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 4 + newVassalHouseCount
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
@@ -4654,6 +4657,20 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.match(sgrechiwrProfile.regionEmblems.seat, /^assets\/images\/regions\//);
   assert.equal(sgrechiwrProfile.liegeHouseId, 'haus-draig');
   assert.equal(sgrechiwrProfile.liegeHouseName, 'Haus Draig');
+
+  const ardConbhronLoaded = loadFamilyById('haus-ard-conbhron', storage);
+  const ardConbhronProfile = ardConbhronLoaded.family.document.houseProfile;
+  const ardConbhronPath = ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Lycath'];
+  assert.deepEqual(ardConbhronLoaded.folderPath, ardConbhronPath);
+  assert.deepEqual(createFolderPathFromHouseProfile(ardConbhronProfile), ardConbhronPath);
+  assert.equal(ardConbhronProfile.rankId, 'dun-tiarna');
+  assert.equal(getHouseRank('dun-tiarna').label, 'Dún Tiarna (Baron)');
+  assert.match(ardConbhronProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  assert.match(ardConbhronProfile.regionEmblems.county, /^assets\/images\/regions\//);
+  // Antike Crannath Clans/Lycath sind eine neue Orts-Hierarchie ohne eigene Baronie-/Sitz-Wappen.
+  assert.equal(ardConbhronProfile.regionEmblems.barony, '');
+  assert.equal(ardConbhronProfile.regionEmblems.seat, '');
+  assert.equal(ardConbhronProfile.liegeHouseId, '');
 
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);
   LOWER_KNIGHT_HOUSE_FAMILIES.forEach((family, index) => {
@@ -5514,6 +5531,89 @@ test('Sheev und Soffi Gwared sind über Balchder/Chwedonol hinweg dieselben Welt
 
   assert.equal(balchder.houses.find(house => house.id === 'house-gwared').emblem, 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png');
   assert.equal(chwedlonol.houses.find(house => house.id === 'house-gwared').emblem, 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png');
+});
+
+test('bildet den antiken Albenclan Ard Conbhrón mit zweiter Überlieferungslücke und drei lebenden Nachfahren ab', () => {
+  const family = assertValidFamily(HOUSE_ARD_CONBHRON_FAMILY).family;
+  assert.equal(family.persons.length, 24);
+  assert.equal(family.document.houseProfile.rankId, 'dun-tiarna');
+  assert.equal(family.lineage.crestFrame, 'gold');
+
+  const graph = createFamilyGraph(family);
+
+  // Gründerpaar geteilt mit Haus Gafyr: Garym ist hier explizit 'core', obwohl sein
+  // houseId (für die hausübergreifende Weltpersonen-ID) bei Gafyr bleibt.
+  const garym = family.persons.find(person => person.id === 'garym-gafyr');
+  assert.equal(garym.houseId, 'house-gafyr');
+  assert.equal(garym.familyRole, 'core');
+  assert.deepEqual(graph.getChildren('garym-gafyr').map(person => person.id).sort(), [
+    'clodagh-ard-conbhron', 'donall-ard-conbhron', 'garbhan-ard-conbhron', 'liadan-ard-conbhron'
+  ]);
+
+  // Erste Überlieferungslücke direkt nach dem Gründerpaar (lineage.timeGap), zweite
+  // Lücke tiefer im Baum zwischen Labhoise und dem jüngeren Iarlaith (timeJumps-Knoten).
+  assert.equal(family.lineage.timeGap.enabled, true);
+  assert.equal(family.timeJumps.length, 1);
+  assert.equal(family.timeJumps[0].parentPartnershipId, 'marriage-labhoise-odhran');
+  assert.deepEqual(family.timeJumps[0].childIds, ['iarlaith-descendant-ard-conbhron']);
+
+  // Nur Scáthach, Tlachtga und Uathach leben noch; alle anderen sind verstorben.
+  const survivorIds = ['scathach-ard-conbhron', 'tlachtga', 'uathach-ard-conbhron'];
+  survivorIds.forEach(id => {
+    const survivor = family.persons.find(person => person.id === id);
+    assert.equal(survivor.status, 'alive', `${id} sollte noch leben`);
+    assert.equal(survivor.extensions.cardFrameId, 'druid');
+  });
+  family.persons
+    .filter(person => !survivorIds.includes(person.id))
+    .forEach(person => {
+      assert.equal(person.status, 'dead', `${person.name} (${person.id}) sollte verstorben sein`);
+    });
+
+  assert.deepEqual(
+    graph.getChildren('iarlaith-descendant-ard-conbhron').map(person => person.id).sort(),
+    ['scathach-ard-conbhron', 'uathach-ard-conbhron']
+  );
+
+  // Frauen werden auch in diesem Clan wegverheiratet: Clodagh nach Gwefrydd, Caireen nach Draig.
+  assert.equal(family.persons.find(person => person.id === 'clodagh-ard-conbhron').houseId, 'house-ard-conbhron');
+  assert.equal(family.persons.find(person => person.id === 'tallwch-gwefrydd').houseId, 'house-gwefrydd');
+  assert.equal(family.persons.find(person => person.id === 'caireen-conbhron').houseId, 'house-ard-conbhron');
+  assert.equal(family.persons.find(person => person.id === 'llamrei-draig').houseId, 'house-draig');
+
+  assert.equal(family.view.focusPersonId, 'garym-gafyr');
+});
+
+test('Garym, Fíodhna, Clodagh, Tallwch, Caireen und Llamrei sind über Gafyr/Gwefrydd/Draig hinweg dieselben Weltpersonen wie in Haus Ard Conbhrón', () => {
+  const ardConbhron = assertValidFamily(HOUSE_ARD_CONBHRON_FAMILY).family;
+  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const gwefrydd = assertValidFamily(HOUSE_GWEFRYDD_FAMILY).family;
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+
+  [
+    ['garym-gafyr', gafyr],
+    ['fiodhna-talamh', gafyr],
+    ['clodagh-ard-conbhron', gwefrydd],
+    ['tallwch-gwefrydd', gwefrydd],
+    ['caireen-conbhron', draig],
+    ['llamrei-draig', draig]
+  ].forEach(([personId, otherFamily]) => {
+    const here = ardConbhron.persons.find(person => person.id === personId);
+    const there = otherFamily.persons.find(person => person.id === personId);
+    assert.ok(here, `${personId} fehlt in Haus Ard Conbhrón`);
+    assert.ok(there, `${personId} fehlt in der Vergleichsfamilie`);
+    assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
+  });
+
+  assert.equal(gafyr.houses.find(house => house.id === 'house-ard-conbhron'), undefined);
+  assert.equal(
+    gwefrydd.houses.find(house => house.id === 'house-ard-conbhron').emblem,
+    'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png'
+  );
+  assert.equal(
+    draig.houses.find(house => house.id === 'house-ard-conbhron').emblem,
+    'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png'
+  );
 });
 
 let failures = 0;

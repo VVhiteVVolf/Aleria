@@ -10,6 +10,7 @@ import { HOUSE_GWEFRYDD_PORTRAITS } from './house-gwefrydd-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
@@ -100,7 +101,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
   },
   houses: [
     house(GWEFRYDD_HOUSE_ID, 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
-    house('house-ard-conbhron', 'Haus Ard Conbhrón'),
+    house('house-ard-conbhron', 'Haus Ard Conbhrón', HOUSE_EMBLEMS.ardConbhron),
     house('house-choinnich', 'Haus Choinnich'),
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
