@@ -5413,7 +5413,11 @@ test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysy
     assert.equal(family.persons.find(person => person.id === id).lineageRole, 'head');
   });
   assert.equal(family.persons.find(person => person.id === 'ellric-gwared').lineageRole, 'head');
-  assert.equal(family.view.focusPersonId, 'ellric-gwared');
+  // Fokus liegt auf dem Gründer, nicht dem heutigen Oberhaupt, damit der
+  // Family-Chart standardmäßig BEIDE Linien zeigt statt nur Ellrics eigene
+  // Vorfahrenkette (der Chart zeigt bei einem Fokus mitten im Baum nur dessen
+  // eigene Vorfahren/Nachkommen, nicht die ganze verbundene Sippe).
+  assert.equal(family.view.focusPersonId, 'uwchor-gwared');
 
   // Zeitsprung zwischen dem sagenhaften Gründerpaar und den beiden Brüdern von 1618.
   assert.equal(family.timeJumps.length, 1);

@@ -248,7 +248,11 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
   ],
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'ellric-gwared',
+    // Fokus auf dem Gründer statt dem heutigen Oberhaupt, damit standardmäßig
+    // BEIDE Linien (die erloschene Cyrwyn-Linie und die überlebende Rhydor-Linie)
+    // sichtbar sind — der Family-Chart zeigt bei einem Fokus mitten im Baum nur
+    // dessen eigene Vorfahren/Nachkommen, nicht die ganze verbundene Sippe.
+    focusPersonId: 'uwchor-gwared',
     orientation: 'vertical',
     ancestorDepth: 10,
     descendantDepth: 10,
