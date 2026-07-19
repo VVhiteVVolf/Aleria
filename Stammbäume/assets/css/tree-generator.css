@@ -4,6 +4,17 @@
   align-items: flex-start;
 }
 
+/* Die geteilte .dialog-form-Grid-Vorlage (assets/css/components.css) geht von genau
+   drei Kindern aus (Kopf/Rumpf/Fuß) und weist die flexible mittlere Zeile dem
+   zweiten Kind zu. Der Stammbaum-Generator schiebt zusätzlich die Etappen-Leiste
+   zwischen Kopf und Rumpf ein — ohne eigene Zeilenvorlage würde die flexible Zeile
+   fälschlich der (kurzen) Etappen-Leiste zugewiesen, wodurch sich Etappen-Leiste und
+   Rumpf überlappen. Eigene vierzeilige Vorlage behebt das.
+*/
+#tree-generator-dialog form {
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+
 .tree-generator-steps {
   display: flex;
   flex-wrap: wrap;
