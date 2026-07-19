@@ -4668,23 +4668,25 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   assert.equal(getHouseRank('dun-tiarna').label, 'Dún Tiarna (Baron)');
   assert.match(ardConbhronProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
   assert.match(ardConbhronProfile.regionEmblems.county, /^assets\/images\/regions\//);
-  // Antike Crannath Clans/Lycath sind eine neue Orts-Hierarchie ohne eigene Baronie-/Sitz-Wappen.
-  assert.equal(ardConbhronProfile.regionEmblems.barony, '');
-  assert.equal(ardConbhronProfile.regionEmblems.seat, '');
+  // "Antike Crannath Clans" und die Ruinen-Sitze (Lycath, Antikes Gwynthor) tragen
+  // alle dasselbe Ruinen-Icon.
+  assert.equal(ardConbhronProfile.regionEmblems.barony, 'assets/images/regions/AntikeIcon.png');
+  assert.equal(ardConbhronProfile.regionEmblems.seat, 'assets/images/regions/AntikeIcon.png');
   assert.equal(ardConbhronProfile.liegeHouseId, '');
 
   const uiTalamhLoaded = loadFamilyById('haus-ui-talamh', storage);
   const uiTalamhProfile = uiTalamhLoaded.family.document.houseProfile;
-  const uiTalamhPath = ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Gwynthor'];
+  const uiTalamhPath = ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Antikes Gwynthor'];
   assert.deepEqual(uiTalamhLoaded.folderPath, uiTalamhPath);
   assert.deepEqual(createFolderPathFromHouseProfile(uiTalamhProfile), uiTalamhPath);
   assert.equal(uiTalamhProfile.rankId, 'ard-tiarna');
   assert.equal(getHouseRank('ard-tiarna').label, 'Ard Tiarna (Herzog/Fürst)');
   assert.match(uiTalamhProfile.regionEmblems.kingdom, /^assets\/images\/regions\//);
   assert.match(uiTalamhProfile.regionEmblems.county, /^assets\/images\/regions\//);
-  assert.equal(uiTalamhProfile.regionEmblems.barony, '');
-  // Der Sitz "Gwynthor" ist ein realer, bereits bebilderter Sitz (geteilt mit Draig/Gafyr).
-  assert.match(uiTalamhProfile.regionEmblems.seat, /^assets\/images\/regions\//);
+  assert.equal(uiTalamhProfile.regionEmblems.barony, 'assets/images/regions/AntikeIcon.png');
+  // "Antikes Gwynthor" ist eine eigene Ruinen-Version, getrennt vom heutigen, gleich-
+  // namigen Sitz unter Llamreis Ankunft (der das reale gwynthor.png-Wappen behält).
+  assert.equal(uiTalamhProfile.regionEmblems.seat, 'assets/images/regions/AntikeIcon.png');
   assert.equal(uiTalamhProfile.liegeHouseId, '');
 
   assert.equal(LOWER_KNIGHT_HOUSE_FAMILIES.length, 11);

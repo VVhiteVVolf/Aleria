@@ -10,14 +10,18 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
     Rhosmere: 'assets/images/regions/rhosmere.png',
     // Neue Sitz-Wappen liegen in einer nach der Orts-Hierarchie verschachtelten Ordnerstruktur.
     Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png',
-    Lynthor: 'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png'
+    Lynthor: 'assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png',
+    // Antike, längst verfallene Sitze der Crannath-Clans tragen dasselbe Ruinen-Icon.
+    Lycath: 'assets/images/regions/AntikeIcon.png',
+    'Antikes Gwynthor': 'assets/images/regions/AntikeIcon.png'
   }),
   baronies: Object.freeze({
     'Artus Streben': 'assets/images/regions/artus-streben.png',
     'Camruisge': 'assets/images/regions/camruisge.png',
     'Gwendolyns Ufer': 'assets/images/regions/gwendolyns-ufer.png',
     'Llamreis Ankunft': 'assets/images/regions/llamreis-ankunft.png',
-    'Rhonwens Tränen': 'assets/images/regions/rhonwens-traenen.png'
+    'Rhonwens Tränen': 'assets/images/regions/rhonwens-traenen.png',
+    'Antike Crannath Clans': 'assets/images/regions/AntikeIcon.png'
   })
 });
 
@@ -83,8 +87,9 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   // Einst das Fürstengeschlecht des vorcenyrischen "Fürstentums von Oseneach"; heute
   // vollständig in andere Häuser eingeheiratet und ausgestorben. Sitz laut Vorlage
   // "??? (Gwynthor)" — der genaue alte Name ist nicht überliefert, der Sitz entspricht
-  // ungefähr dem heutigen Gwynthor (bekommt dadurch dessen reales Sitz-Wappen).
-  uiTalamh: profile('ard-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Gwynthor'])
+  // ungefähr dem heutigen Gwynthor, ist aber selbst nur noch Ruine ("Antikes Gwynthor"),
+  // um ihn vom heutigen, gleichnamigen Sitz unter Llamreis Ankunft zu unterscheiden.
+  uiTalamh: profile('ard-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Antikes Gwynthor'])
 });
 
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
