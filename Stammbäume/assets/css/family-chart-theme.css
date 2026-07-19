@@ -318,22 +318,22 @@
    deshalb eigene Positionswerte statt der Standard-Prozentsätze. */
 .aleria-person-card.frame-druid .aleria-person-card__portrait-backdrop,
 .aleria-person-card.frame-druid .aleria-person-card__portrait {
-  top: 9%;
-  left: 5%;
-  width: 34%;
-  height: 74%;
+  top: 19%;
+  left: 9%;
+  width: 29%;
+  height: 64%;
 }
 
 .aleria-person-card.frame-druid .aleria-person-card__fill {
-  inset: 20% 4% 17% 44%;
+  inset: 19% 7% 16% 38%;
   clip-path: none;
 }
 
 .aleria-person-card.frame-druid .aleria-person-card__text {
-  top: 25%;
-  right: 6%;
-  bottom: 19%;
-  left: 46%;
+  top: 23%;
+  right: 9%;
+  bottom: 20%;
+  left: 41%;
 }
 
 .aleria-crest-node {
