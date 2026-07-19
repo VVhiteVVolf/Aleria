@@ -1,5 +1,6 @@
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import { createFounderPlaceholderHouseFamily } from './blank-house-family-factory.js';
+import { HOUSE_PENDRAG_FAMILY } from './house-pendrag-family.js';
 
 // Vorbereitete Leerakten (Juli 2026) für die 8 übrigen großen Grafenhäuser Cenyrs
 // (Celtigerns Wacht/Haus Draig ist bereits ausgearbeitet). Anders als die Vasallenhaus-
@@ -13,6 +14,13 @@ import { createFounderPlaceholderHouseFamily } from './blank-house-family-factor
 // cenyr-county-house-profiles.js) — die Platzhalter-Gründerpaare hier sind bewusst noch
 // NICHT damit verknüpft. Beim späteren Ausarbeiten jedes einzelnen Hauses zuerst diese
 // Fundliste konsultieren, statt neue Personen zu erfinden.
+//
+// Bereits ausgearbeitete Häuser ersetzen ihre vorbereitete Leerakte — analog zu
+// ELABORATED_RHONWENS_TRAENEN_FAMILIES in rhonwens-traenen-house-families.js.
+const ELABORATED_CENYR_COUNTY_FAMILIES = Object.freeze({
+  pendrag: HOUSE_PENDRAG_FAMILY
+});
+
 const CENYR_COUNTY_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'wylan', title: 'Wylan', folder: 'Weidebucht' }),
   Object.freeze({ slug: 'illewod', title: 'Illewod', folder: 'Sonnenküste' }),
@@ -42,5 +50,7 @@ function countyFounderPlaceholder(definition) {
 }
 
 export const CENYR_COUNTY_HOUSE_FAMILIES = Object.freeze(
-  CENYR_COUNTY_HOUSE_DEFINITIONS.map(countyFounderPlaceholder)
+  CENYR_COUNTY_HOUSE_DEFINITIONS.map(definition => (
+    ELABORATED_CENYR_COUNTY_FAMILIES[definition.slug] || countyFounderPlaceholder(definition)
+  ))
 );

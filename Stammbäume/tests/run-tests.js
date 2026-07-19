@@ -21,6 +21,7 @@ import { HOUSE_ILLYSYWEN_FAMILY } from '../assets/js/data/house-illysywen-family
 import { HOUSE_GWARED_FAMILY } from '../assets/js/data/house-gwared-family.js';
 import { HOUSE_ARD_CONBHRON_FAMILY } from '../assets/js/data/house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from '../assets/js/data/house-ui-talamh-family.js';
+import { HOUSE_PENDRAG_FAMILY } from '../assets/js/data/house-pendrag-family.js';
 import { HOUSE_ILLYSYWEN_PORTRAITS } from '../assets/js/data/house-illysywen-portraits.js';
 import { HOUSE_TLAWD_FAMILY } from '../assets/js/data/house-tlawd-family.js';
 import { HOUSE_TLAWD_PORTRAITS } from '../assets/js/data/house-tlawd-portraits.js';
@@ -5749,6 +5750,129 @@ test('Dónall, Fíodhna/Garym, Líadan, Blathnaid/Grugyn und Ragnailt sind über
   );
 });
 
+test('bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft König Tristans ab', () => {
+  const family = assertValidFamily(HOUSE_PENDRAG_FAMILY).family;
+  assert.equal(family.document.houseProfile.rankId, 'royal');
+  assert.equal(family.lineage.crestFrame, 'gold');
+  assert.equal(family.lineage.founderPartnershipId, 'marriage-vortigern-rhiannon');
+  assert.equal(family.lineage.timeGap.enabled, false);
+  assert.equal(family.view.focusPersonId, 'vortigern-pendrag');
+
+  const graph = createFamilyGraph(family);
+
+  const vortigern = family.persons.find(person => person.id === 'vortigern-pendrag');
+  assert.equal(vortigern.houseId, 'house-pendrag');
+  assert.equal(vortigern.familyRole, 'core');
+  assert.deepEqual(
+    graph.getChildren('vortigern-pendrag').map(person => person.id).sort(),
+    ['geraint-pendrag', 'malagant-pendrag', 'tanwen-pendrag', 'uther-pendrag']
+  );
+
+  // Die 15 Könige der Erbfolge (per Oberhaupt-Galerie der Vorlage bestätigt), von
+  // Vortigern I. bis zum regierenden König Tristan.
+  const kingSuccession = [
+    'vortigern-pendrag', 'uther-pendrag', 'parzifal-pendrag', 'malon-pendrag', 'melwas-pendrag',
+    'griflet-pendrag', 'galahad-pendrag', 'agravaine-pendrag', 'gawain-pendragon', 'gareth-pendrag',
+    'bors-pendrag', 'artus-1622-pendrag', 'uther-1643-pendrag', 'rywalyn-pendrag', 'tristan-pendrag'
+  ];
+  kingSuccession.forEach(personId => {
+    const king = family.persons.find(person => person.id === personId);
+    assert.ok(king, `${personId} fehlt`);
+    assert.equal(king.lineageRole, 'head', `${personId} sollte als Oberhaupt markiert sein`);
+  });
+
+  // König Agravaine blieb kinderlos; die Krone ging seitlich auf den Sohn seines
+  // (bereits vorverstorbenen) Bruders Rhodri über, nicht auf einen eigenen Erben.
+  const agravaine = family.persons.find(person => person.id === 'agravaine-pendrag');
+  assert.equal(agravaine.death, '1600');
+  assert.deepEqual(graph.getChildren('agravaine-pendrag'), []);
+  assert.deepEqual(graph.getChildren('rhodri-pendrag').map(person => person.id).sort(), [
+    'arianwen-pendragon', 'gawain-pendragon', 'tarwen-pendrag'
+  ]);
+
+  // Owain Draig (bereits mit fünf Affären in Haus Draig belegt) hat mit Ygraine Pendrag
+  // eine sechste Affäre, aus der zwei uneheliche Söhne hervorgehen.
+  const affair = family.partnerships.find(partnership => partnership.id === 'affair-ygraine-owain');
+  assert.equal(affair.type, 'affair');
+  assert.deepEqual(affair.participantIds, ['ygraine-pendrag', 'owain-draig']);
+  ['ector-1716-pendrag', 'melwas-1716-pendrag'].forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.legitimacy, 'illegitimate');
+    assert.equal(parentage.partnershipId, 'affair-ygraine-owain');
+  });
+
+  // Mündel (Lancelot Neidr bei Tristan, Khepri/Gekas bei Ygraine) sind über foster-
+  // Abstammungen ohne Partnerschaft angebunden, nicht als leibliche Kinder.
+  ['lancelot-neidr', 'khepri-pendrag', 'gekas-pendrag'].forEach(wardId => {
+    const parentage = family.parentages.find(entry => entry.childId === wardId);
+    assert.equal(parentage.type, 'foster');
+    assert.equal(parentage.partnershipId, '');
+  });
+
+  // Jede core-Pendrag-Frau, deren eigene Kinder nicht in dieser Datei verzeichnet sind
+  // (weil sie ins Haus ihres Mannes weggeheiratet ist), erhält eine sichtbare
+  // Wegverheiratet-Linie.
+  const marriedAwayTargets = {
+    'married-away-draig-tanwen': 'haus-draig',
+    'married-away-draig-arianwyn': 'haus-draig',
+    'married-away-draig-gwyneira': 'haus-draig',
+    'married-away-draig-cerridwyn': 'haus-draig',
+    'married-away-draig-arianwen': 'haus-draig',
+    'married-away-draig-angharad': 'haus-draig',
+    'married-away-ceirwyn-rhoslyn': 'haus-ceirwyn',
+    'married-away-pysgod-tarwen': 'haus-pysgod',
+    'married-away-wylan-iesin': 'haus-wylan',
+    'married-away-illewod-blodeuyn': 'haus-illewod',
+    'married-away-aderyn-caradwyn': 'haus-aderyn',
+    'married-away-urquhart-meeghan': 'haus-urquhart',
+    'married-away-grael-rhiannon': 'haus-grael'
+  };
+  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length);
+  Object.entries(marriedAwayTargets).forEach(([branchId, targetFamilyId]) => {
+    const branch = family.cadetBranches.find(entry => entry.id === branchId);
+    assert.ok(branch, `${branchId} fehlt`);
+    assert.equal(branch.linkType, 'married-away');
+    assert.equal(branch.targetFamilyId, targetFamilyId);
+  });
+});
+
+test('Vortigerns Draig-eingeheiratete Verwandte (Rhianu, Artus, Isobel, Godwyn, Isolde, Morholt, Marared, Caitrin, Cunedda, Rhodri, Owain) sind über Haus Draig hinweg dieselben Weltpersonen wie in Haus Pendrag', () => {
+  const pendrag = assertValidFamily(HOUSE_PENDRAG_FAMILY).family;
+  const draig = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+
+  [
+    'rhianu-draig', 'artus-draig', 'isobel-ancient-draig', 'godwyn-draig', 'malltwyn-draig',
+    'isolde-ancient-draig', 'morholt-draig', 'marared-draig', 'caitrin-draig', 'cunedda-draig',
+    'rhodri-draig', 'owain-draig'
+  ].forEach(personId => {
+    const here = pendrag.persons.find(person => person.id === personId);
+    const there = draig.persons.find(person => person.id === personId);
+    assert.ok(here, `${personId} fehlt in Haus Pendrag`);
+    assert.ok(there, `${personId} fehlt in Haus Draig`);
+    assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
+    assert.equal(here.houseId, 'house-draig');
+    assert.equal(here.familyRole, 'married', `${personId} sollte in Pendrag als eingeheiratet gelten`);
+  });
+
+  // Umgekehrt: Pendrag-Frauen, die nach Draig weggeheiratet sind, sind dort core.
+  [
+    'tanwen-pendrag', 'arianwyn-pendrag', 'gwyneira-pendrag', 'cerridwyn-pendrag',
+    'arianwen-pendragon', 'angharad-pendrag'
+  ].forEach(personId => {
+    const here = pendrag.persons.find(person => person.id === personId);
+    const there = draig.persons.find(person => person.id === personId);
+    assert.ok(there, `${personId} fehlt in Haus Draig`);
+    assert.equal(here.worldPersonId, there.worldPersonId, `${personId} besitzt widersprüchliche Weltpersonen-IDs.`);
+    assert.equal(here.houseId, 'house-pendrag');
+    assert.equal(here.familyRole, 'core');
+  });
+
+  assert.equal(
+    draig.houses.find(house => house.id === 'house-pendrag').name,
+    'Haus Pendrag'
+  );
+});
+
 test('bereitet die Orts-Hierarchie der acht übrigen Grafschaften Cenyrs vor (Pendrag königlich, Blodyn bewusst ausgenommen)', async () => {
   const expected = {
     wylan: { rankId: 'county', path: ['Cenyr', 'Weidebucht', 'Cerrigarth'], countyEmblem: 'assets/images/regions/weidebucht.png' },
@@ -5803,7 +5927,11 @@ test('legt Platzhalter-Gründerpaare für die 8 übrigen Grafenhäuser Cenyrs an
 
   CENYR_COUNTY_HOUSE_FAMILIES.forEach(family => {
     assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0, `${family.document.id} sollte fehlerfrei sein`);
-    assert.equal(family.persons.length, 2, `${family.document.id}: Platzhalter-Gründerpaar`);
+    // Pendrag ist inzwischen ausgearbeitet (siehe eigener Test weiter unten) und hat
+    // daher kein bloßes Platzhalter-Gründerpaar mehr.
+    if (family.document.id !== 'haus-pendrag') {
+      assert.equal(family.persons.length, 2, `${family.document.id}: Platzhalter-Gründerpaar`);
+    }
     // Grafen-/Königsrang statt Ritterherr: goldener, nicht silberner Wappenrahmen.
     assert.equal(family.lineage.crestFrame, 'gold', `${family.document.id} sollte einen goldenen Wappenrahmen tragen`);
     assert.match(family.document.emblem, /^assets\/images\/houses\//);
