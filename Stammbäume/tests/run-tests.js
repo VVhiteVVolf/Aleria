@@ -180,6 +180,7 @@ import {
   familyRootRecord,
   isValidFirestoreRecordId
 } from '../assets/js/modules/family-sync/family-change-set.js';
+import { CENYR_COUNTY_HOUSE_PROFILES } from '../assets/js/data/cenyr-county-house-profiles.js';
 import { buildFamilyPersonDisplayName } from '../../js/world-identity/family-person-names.js';
 import { normalizePersonName } from '../../js/world-identity/person-identity.js';
 
@@ -5743,6 +5744,55 @@ test('Dónall, Fíodhna/Garym, Líadan, Blathnaid/Grugyn und Ragnailt sind über
     draig.houses.find(house => house.id === 'house-talamh').emblem,
     'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png'
   );
+});
+
+test('bereitet die Orts-Hierarchie der acht übrigen Grafschaften Cenyrs vor (Pendrag königlich, Blodyn bewusst ausgenommen)', async () => {
+  const expected = {
+    wylan: { rankId: 'county', path: ['Cenyr', 'Weidebucht', 'Cerrigarth'], countyEmblem: 'assets/images/regions/weidebucht.png' },
+    illewod: { rankId: 'county', path: ['Cenyr', 'Sonnenküste', 'Aberon'], countyEmblem: 'assets/images/regions/sonnenkueste.png' },
+    pendrag: { rankId: 'royal', path: ['Cenyr', 'Vortigerns Ruh', 'Mathragon'], countyEmblem: 'assets/images/regions/vortigerns-ruh.png' },
+    grawn: { rankId: 'county', path: ['Cenyr', 'Ährental', 'Glyndraith'], countyEmblem: 'assets/images/regions/aehrental.png' },
+    neidr: { rankId: 'county', path: ['Cenyr', 'Silberinsel', 'Llanvane'], countyEmblem: 'assets/images/regions/silberinsel.png' },
+    pysgod: { rankId: 'county', path: ['Cenyr', 'Graue Weite', 'Tredegar'], countyEmblem: 'assets/images/regions/graue-weite.png' },
+    arth: { rankId: 'county', path: ['Cenyr', 'Klaueninsel', 'Talgarth'], countyEmblem: 'assets/images/regions/klaueninsel.png' },
+    aderyn: { rankId: 'county', path: ['Cenyr', 'Tal der Milane', 'Penbryn'], countyEmblem: 'assets/images/regions/tal-der-milane.png' }
+  };
+  assert.deepEqual(Object.keys(CENYR_COUNTY_HOUSE_PROFILES).sort(), Object.keys(expected).sort());
+  // Celtigerns Wacht/Draig und Blodyn (keine eigene Grafschaft) sind bewusst nicht enthalten.
+  assert.ok(!('draig' in CENYR_COUNTY_HOUSE_PROFILES));
+  assert.ok(!('blodyn' in CENYR_COUNTY_HOUSE_PROFILES));
+
+  Object.entries(expected).forEach(([key, { rankId, path, countyEmblem }]) => {
+    const profile = CENYR_COUNTY_HOUSE_PROFILES[key];
+    assert.deepEqual(createFolderPathFromHouseProfile(profile), path, `${key}: Orts-Pfad`);
+    assert.equal(profile.rankId, rankId, `${key}: Rang`);
+    assert.equal(profile.regionEmblems.county, countyEmblem, `${key}: Grafschafts-Wappen`);
+    // Keine erfundene Baronie-Ebene: die acht Grafschaften sind (noch) nicht unterteilt.
+    assert.equal(profile.barony, '');
+    assert.match(profile.regionEmblems.kingdom, /^assets\/images\/regions\//);
+  });
+  assert.equal(getHouseRank('royal').label, 'Königsgeschlecht');
+
+  // Alle heruntergeladenen Wappenbilder liegen tatsächlich im Projekt.
+  const countyEmblemFiles = Object.values(expected).map(entry => entry.countyEmblem);
+  await Promise.all(countyEmblemFiles.map(async path => {
+    const image = await readFile(new URL(`../${path}`, import.meta.url));
+    assert.ok(image.length > 100, `Wappenbild leer: ${path}`);
+  }));
+  const houseCrestFiles = [
+    'assets/images/houses/Weidebucht/haus-wylan.png',
+    'assets/images/houses/Sonnenküste/haus-illewod.png',
+    'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
+    'assets/images/houses/Ährental/haus-grawn.png',
+    'assets/images/houses/Silberinsel/haus-neidr.png',
+    'assets/images/houses/Graue Weite/haus-pysgod.png',
+    'assets/images/houses/Klaueninsel/haus-arth.png',
+    'assets/images/houses/Tal der Milane/haus-aderyn.png'
+  ];
+  await Promise.all(houseCrestFiles.map(async path => {
+    const image = await readFile(new URL(`../${path}`, import.meta.url));
+    assert.ok(image.length > 100, `Wappenbild leer: ${path}`);
+  }));
 });
 
 let failures = 0;
