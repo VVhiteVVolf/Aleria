@@ -83,6 +83,7 @@ const ELLRIC_IDS = ['ellric-gwared', 'lleira'];
 const DYRWYN_IDS = ['dyrwyn-gwared', 'perda'];
 const MAELWEN_IDS = ['maelwen-gwared', 'kyrar'];
 const NERA_IDS = ['nera-gwared', 'peror'];
+const HELRIC_AFFAIR_IDS = ['helric-gwared', 'oenwen'];
 
 export const HOUSE_GWARED_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
@@ -158,13 +159,30 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
     person('neddyr-gwared', 'Neddyr Gwared', 'male', '1671', '1730', GWARED_HOUSE_ID),
     spouse('cyrin', 'Cyrin', 'female', '1674', ''),
     person('peran-gwared', 'Peran Gwared', 'male', '1674', '', GWARED_HOUSE_ID, {
-      notes: 'Nebenzweig ohne überlieferte weitere Nachkommen.'
+      notes: 'Nebenzweig; beide Söhne fielen im Krieg.'
     }),
     spouse('rhewa', 'Rhewa', 'female', '1677', ''),
+    person('iwrian-gwared', 'Iwrian Gwared', 'male', '1697', '1719', GWARED_HOUSE_ID, {
+      notes: 'Fiel 1719 im Krieg gegen die Draig-treuen Kräfte.'
+    }),
+    person('janric-gwared', 'Janric Gwared', 'male', '1700', '1720', GWARED_HOUSE_ID, {
+      notes: 'Fiel 1720 im letzten Kriegsjahr, ein Jahr nach seinem Bruder Iwrian.'
+    }),
 
     // Oenbans Sohn
     person('helric-gwared', 'Helric Gwared', 'male', '1698', '', GWARED_HOUSE_ID, {
-      notes: 'Nebenzweig; keine weiteren Angaben überliefert.'
+      notes: 'Nebenzweig; unterhielt eine Affäre mit Oenwen, aus der zwei nicht legitimierte Kinder hervorgingen.'
+    }),
+    person('oenwen', 'Oenwen', 'female', '1700', '', '', {
+      familyRole: 'affair',
+      tags: ['Geheim'],
+      notes: 'Affäre Helrics.'
+    }),
+    person('dyryr-gwared', 'Dyryr Gwared', 'male', '1720', '', GWARED_HOUSE_ID, {
+      familyRole: 'bastard'
+    }),
+    person('ellyn-gwared', 'Ellyn Gwared', 'female', '1723', '', GWARED_HOUSE_ID, {
+      familyRole: 'bastard'
     }),
 
     // Firbans Kinder: Gwaedan und seine Frau sterben 1720 im letzten Kriegsjahr
@@ -184,12 +202,14 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
     // Details liegt in den jeweiligen Vormund-Häusern (Balchder/Chwedonol), deren
     // Portraits hier wiederverwendet werden.
     person('sheev-gwared', 'Sheev Gwared', 'male', '1720', '', GWARED_HOUSE_ID, {
+      title: 'Mündel bei Haus Balchder',
       portrait: 'assets/images/portraits/haus-balchder/sheev-gwared.jpg',
       familyRole: 'ward-away',
       tags: ['Fortgegebenes Mündel'],
       notes: 'Als Waise 1720 in die Vormundschaft Avan Balchders gegeben; die volle Personenakte liegt in Haus Balchder.'
     }),
     person('soffi-gwared', 'Soffi Gwared', 'female', '1720', '', GWARED_HOUSE_ID, {
+      title: 'Mündel bei Haus Chwedonol',
       portrait: 'assets/images/portraits/haus-chwedlonol/soffi-gwared.jpg',
       familyRole: 'ward-away',
       tags: ['Fortgegebenes Mündel'],
@@ -213,11 +233,14 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
     person('nera-gwared', 'Nera Gwared', 'female', '1699', '', GWARED_HOUSE_ID),
     person('peror', 'Peror', 'male', '1697', '', 'house-merek'),
 
-    // Ellrics Kinder mit Lleira
+    // Ellrics Kinder mit Lleira (fünf insgesamt, 24 bis 9 Jahre alt)
+    person('cyrella-gwared', 'Cyrella Gwared', 'female', '1716', '', GWARED_HOUSE_ID),
     person('brenar-gwared', 'Brenar Gwared', 'male', '1722', '', GWARED_HOUSE_ID, {
       title: 'Vorgesehener Erbe des Hauses Gwared'
     }),
     person('ellena-gwared', 'Ellena Gwared', 'female', '1725', '', GWARED_HOUSE_ID),
+    person('dyran-gwared', 'Dyran Gwared', 'male', '1728', '', GWARED_HOUSE_ID),
+    person('firella-gwared', 'Firella Gwared', 'female', '1731', '', GWARED_HOUSE_ID),
 
     // Dyrwyns Kinder mit Perda
     person('neddan-gwared', 'Neddan Gwared', 'male', '1724', '', GWARED_HOUSE_ID),
@@ -246,14 +269,27 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
     createMarriage('marriage-brenan-iwra', ...BRENAN_IDS),
     createMarriage('marriage-oenban-thalwen', ...OENBAN_IDS),
     createMarriage('marriage-neddyr-cyrin', ...NEDDYR_IDS),
-    createMarriage('marriage-peran-rhewa', ...PERAN_IDS),
+    createMarriage('marriage-peran-rhewa', ...PERAN_IDS, {
+      notes: 'Beide Söhne fielen im Krieg.'
+    }),
+    {
+      id: 'affair-helric-oenwen',
+      participantIds: [...HELRIC_AFFAIR_IDS],
+      type: 'affair',
+      status: 'ended',
+      start: '1719',
+      end: '1723',
+      certainty: 'probable',
+      visibility: 'restricted',
+      notes: ''
+    },
     createMarriage('marriage-gwaedan-perdena', ...GWAEDAN_IDS, {
       notes: 'Beide starben 1720 im letzten Kriegsjahr, ausgelöst durch Nodawls Schändung Rhonwen Draigs.'
     }),
     createMarriage('marriage-kyrban-sairyn', ...KYRBAN_IDS, {
       notes: 'Beide fielen 1720 im letzten Kriegsjahr.'
     }),
-    createMarriage('marriage-ellric-lleira', ...ELLRIC_IDS, { start: '1720' }),
+    createMarriage('marriage-ellric-lleira', ...ELLRIC_IDS, { start: '1715' }),
     createMarriage('marriage-dyrwyn-perda', ...DYRWYN_IDS, { start: '1722' }),
     createMarriage('marriage-maelwen-kyrar', ...MAELWEN_IDS, { start: '1719' }),
     createMarriage('marriage-nera-peror', ...NERA_IDS, { start: '1721' })
@@ -269,12 +305,16 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
     ...childrenOf(['firban-gwared', 'janor-gwared'], DYRIAN_IDS, 'marriage-dyrian-cyrena'),
     ...childrenOf(['brenan-gwared', 'oenban-gwared'], MAELRIC_IDS, 'marriage-maelric-gwena'),
     ...childrenOf(['neddyr-gwared', 'peran-gwared'], THALRIC_IDS, 'marriage-thalric-helyga'),
+    ...childrenOf(['iwrian-gwared', 'janric-gwared'], PERAN_IDS, 'marriage-peran-rhewa'),
     ...childrenOf(['helric-gwared'], OENBAN_IDS, 'marriage-oenban-thalwen'),
+    ...childrenOf(['dyryr-gwared', 'ellyn-gwared'], HELRIC_AFFAIR_IDS, 'affair-helric-oenwen', {
+      legitimacy: 'illegitimate'
+    }),
     ...childrenOf(['gwaedan-gwared', 'kyrban-gwared'], FIRBAN_IDS, 'marriage-firban-kyria'),
     ...childrenOf(['sheev-gwared', 'soffi-gwared'], GWAEDAN_IDS, 'marriage-gwaedan-perdena'),
     ...childrenOf(['ellric-gwared', 'maelwen-gwared'], BRENAN_IDS, 'marriage-brenan-iwra'),
     ...childrenOf(['dyrwyn-gwared', 'nera-gwared'], NEDDYR_IDS, 'marriage-neddyr-cyrin'),
-    ...childrenOf(['brenar-gwared', 'ellena-gwared'], ELLRIC_IDS, 'marriage-ellric-lleira'),
+    ...childrenOf(['cyrella-gwared', 'brenar-gwared', 'ellena-gwared', 'dyran-gwared', 'firella-gwared'], ELLRIC_IDS, 'marriage-ellric-lleira'),
     ...childrenOf(['neddan-gwared', 'firena-gwared'], DYRWYN_IDS, 'marriage-dyrwyn-perda')
   ],
   lineage: {

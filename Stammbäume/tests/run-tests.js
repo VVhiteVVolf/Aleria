@@ -5391,7 +5391,7 @@ test('Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/O
 
 test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysywens 1720 ab', () => {
   const family = assertValidFamily(HOUSE_GWARED_FAMILY).family;
-  assert.equal(family.persons.length, 45);
+  assert.equal(family.persons.length, 53);
   assert.equal(family.document.houseProfile.liegeHouseId, 'haus-arwydd');
   assert.equal(family.lineage.crestFrame, 'silver');
 
@@ -5416,6 +5416,11 @@ test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysy
   assert.equal(soffi.familyRole, 'ward-away');
   assert.equal(sheev.portrait, 'assets/images/portraits/haus-balchder/sheev-gwared.jpg');
   assert.equal(soffi.portrait, 'assets/images/portraits/haus-chwedlonol/soffi-gwared.jpg');
+  // Sichtbarer Indikator, bei welchem Haus die Mündel untergebracht wurden
+  // (kein Kadettenzweig-Medaillon möglich, da unverheiratete Mündel keine
+  // eigene Partnerschaft haben, an die createHouseBranch anknüpfen könnte).
+  assert.equal(sheev.title, 'Mündel bei Haus Balchder');
+  assert.equal(soffi.title, 'Mündel bei Haus Chwedonol');
 
   // Auf der linken (Illysywen-treuen) Seite ab Cyrwyn Gwared sind nur noch Sheev
   // und Soffi am Leben; die meisten Todeszeiten fallen in den Krieg (1718-1720).
@@ -5459,9 +5464,28 @@ test('bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysy
   // Oenban (Nebenzweig) hat inzwischen einen Sohn.
   assert.deepEqual(graph.getChildren('oenban-gwared').map(person => person.id), ['helric-gwared']);
 
+  // Helric unterhielt eine Affäre mit Oenwen; zwei nicht legitimierte Kinder.
+  const helricAffair = family.partnerships.find(partnership => partnership.id === 'affair-helric-oenwen');
+  assert.ok(helricAffair);
+  assert.equal(helricAffair.type, 'affair');
+  const oenwen = family.persons.find(person => person.id === 'oenwen');
+  assert.equal(oenwen.familyRole, 'affair');
+  assert.deepEqual(graph.getChildren('helric-gwared').map(person => person.id).sort(), ['dyryr-gwared', 'ellyn-gwared']);
+  ['dyryr-gwared', 'ellyn-gwared'].forEach(id => {
+    assert.equal(family.persons.find(person => person.id === id).familyRole, 'bastard');
+  });
+  const bastardParentage = family.parentages.find(parentage => parentage.partnershipId === 'affair-helric-oenwen');
+  assert.equal(bastardParentage.legitimacy, 'illegitimate');
+
+  // Peran und Rhewa hatten zwei Söhne, die im Krieg fielen.
+  assert.deepEqual(graph.getChildren('peran-gwared').map(person => person.id).sort(), ['iwrian-gwared', 'janric-gwared']);
+  assert.equal(family.persons.find(person => person.id === 'iwrian-gwared').death, '1719');
+  assert.equal(family.persons.find(person => person.id === 'janric-gwared').death, '1720');
+
   // Eine weitere Generation: Ellric und Dyrwyn setzen die Linie fort, Maelwen und
-  // Nera werden wegverheiratet (Frauen des Hauses werden wegverheiratet).
-  assert.deepEqual(graph.getChildren('ellric-gwared').map(person => person.id).sort(), ['brenar-gwared', 'ellena-gwared']);
+  // Nera werden wegverheiratet (Frauen des Hauses werden wegverheiratet). Ellric
+  // und Lleira haben inzwischen fünf Kinder (24 bis 9 Jahre alt).
+  assert.deepEqual(graph.getChildren('ellric-gwared').map(person => person.id).sort(), ['brenar-gwared', 'cyrella-gwared', 'dyran-gwared', 'ellena-gwared', 'firella-gwared']);
   assert.deepEqual(graph.getChildren('dyrwyn-gwared').map(person => person.id).sort(), ['firena-gwared', 'neddan-gwared']);
   assert.equal(family.persons.find(person => person.id === 'brenar-gwared').lineageRole, 'mainline');
 
