@@ -1,16 +1,20 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import {
+  createCadetHouseBranch,
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
-  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png'
+  draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  dreigiau: PORTRAIT_PLACEHOLDERS.crest
 });
 
 const PENDRAG_HOUSE_ID = 'house-pendrag';
@@ -52,7 +56,7 @@ function person(id, name, sex, birth = '????', death = '', houseId = PENDRAG_HOU
     birth,
     death,
     houseId,
-    portrait: HOUSE_DRAIG_PORTRAITS[id] || '',
+    portrait: HOUSE_PENDRAG_PORTRAITS[id] || HOUSE_DRAIG_PORTRAITS[id] || '',
     familyRole: options.familyRole || (houseId === PENDRAG_HOUSE_ID ? 'core' : 'married'),
     lineageRole: options.lineageRole || lineageRoleFor(id),
     ...options
@@ -78,6 +82,21 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
   });
 }
 
+function cadetHouse(id, name, partnershipId, houseId, notes, emblem = '') {
+  return createCadetHouseBranch({
+    id,
+    name,
+    parentPartnershipId: partnershipId,
+    houseId,
+    targetFamilyId: houseId.replace(/^house-/, 'haus-'),
+    emblem,
+    notes
+  });
+}
+
+const DREIGIAU_ROOT_IDS = ['gwyrthern-dreigiau', 'rhonwen-dreigiau', 'kerrylin-dreigiau'];
+const GWYRTHERN_IDS = ['gwyrthern-dreigiau', 'gwendolyn-mwnci'];
+
 const FOUNDER_IDS = ['vortigern-pendrag', 'rhiannon-aderyn'];
 const UTHER1_IDS = ['uther-pendrag', 'rhianu-draig'];
 const TANWEN_IDS = ['artus-draig', 'tanwen-pendrag'];
@@ -89,6 +108,7 @@ const TRYSTAN_IDS = ['malltwyn-draig', 'trystan-pendrag'];
 const MALON1_IDS = ['malon-pendrag', 'sinead-urquhart'];
 const MELWAS1_IDS = ['melwas-pendrag', 'rhonwen-dyngwn'];
 const RHOSLYN_IDS = ['rhoslyn-pendrag', 'ceirwyn-inlaw'];
+const SULWEN_IDS = ['sulwen-pendrag', 'howell-neidr'];
 const GRIFLET1_IDS = ['isolde-ancient-draig', 'griflet-pendrag'];
 const GWYNEIRA_IDS = ['morholt-draig', 'gwyneira-pendrag'];
 const GALAHAD1_IDS = ['galahad-pendrag', 'gailis-diulb'];
@@ -135,6 +155,11 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
   houses: [
     house(PENDRAG_HOUSE_ID, 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
+    house('house-dreigiau', 'Haus Dreigiau', HOUSE_EMBLEMS.dreigiau),
+    house('house-mwnci', 'Haus Mwnci'),
+    house('house-paun', 'Haus Paun'),
+    house('house-teigr', 'Haus Teigr'),
+    house('house-cumhail', 'Haus Cumhail'),
     house('house-aderyn', 'Haus Aderyn'),
     house('house-diulb', 'Haus Diulb'),
     house('house-fiachraoin', 'Haus Fiachraoin'),
@@ -159,6 +184,22 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-rochraide', 'Haus Rochraide')
   ],
   persons: [
+    // Ursprungshaus Dreigiau: Vortigern und Celtigern (Haus Draig) sind Brüder
+    person('gwyrthern-dreigiau', 'Gwyrthern', 'male', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('gwendolyn-mwnci', 'Gwendolyn Mwnci', 'female', '????', '????', 'house-mwnci'),
+    person('rhonwen-dreigiau', 'Rhonwen', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('dyngannon-paun', 'Dyngannon Paun', 'male', '????', '????', 'house-paun'),
+    person('kerrylin-dreigiau', 'Kerrylin', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('mordred-blodyn', 'Mordred Blodyn', 'male', '????', '????', 'house-blodyn'),
+    person('vortimer-dreigiau', 'Vortimer', 'male', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('isolde-teigr', 'Isolde Teigr', 'female', '????', '????', 'house-teigr'),
+    person('celtigern-draig', 'Celtigern', 'male', '????', '????', 'house-draig', { title: 'Überlebender Avalons, Gründer des Hauses Draig' }),
+    person('findabhair-cumhail', 'Findabhair Cumhail', 'female', '????', '????', 'house-cumhail'),
+    person('gwenhwyfar-dreigiau', 'Gwenhwyfar', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('caradoc-arth', 'Caradoc Arth', 'male', '????', '????', 'house-arth'),
+    person('morgaine-dreigiau', 'Morgaine', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
+    person('gingalain-pysgod', 'Gingalain Pysgod', 'male', '????', '????', 'house-pysgod'),
+
     // Gründerpaar
     person('vortigern-pendrag', 'Vortigern', 'male', '????', '????', PENDRAG_HOUSE_ID, { title: 'Erster König von Cenyr, Gründer des Hauses Pendrag' }),
     person('rhiannon-aderyn', 'Rhiannon Aderyn', 'female', '????', '????', 'house-aderyn'),
@@ -238,6 +279,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     person('parzifal-1630-pendrag', 'Parzifal Pendrag', 'male', '1630', '1655'),
     person('tor-pendrag', 'Tor Pendrag', 'male', '1632', '1701'),
     person('noirin-urquhart', 'Nóirin Urquhart', 'female', '1625', '1678', 'house-urquhart'),
+    person('howell-neidr', 'Howell Neidr', 'male', '1623', '1701', 'house-neidr'),
     person('telyn-grawn', 'Telyn Grawn', 'female', '1633', '1707', 'house-grawn'),
     person('hefin-dieniddiwr', 'Hefin Dieniddiwr', 'female', '1632', '1700', 'house-dieniddiwr'),
 
@@ -281,14 +323,28 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     person('elinor-pendrag', 'Elinor Pendrag', 'female', '1718', ''),
     person('rhodhri-1725-pendrag', 'Rhodhri Pendrag', 'male', '1725', '1730'),
     person('artus-1735-pendrag', 'Artus Pendrag', 'male', '1735', '1735'),
-    person('lancelot-neidr', 'Lancelot Neidr', 'male', '1730', '', 'house-neidr'),
-    person('ector-1716-pendrag', 'Ector Pendrag', 'male', '1716', '', PENDRAG_HOUSE_ID, { title: 'Unehelicher Sohn' }),
-    person('melwas-1716-pendrag', 'Melwas Pendrag', 'male', '1716', '', PENDRAG_HOUSE_ID, { title: 'Unehelicher Sohn' }),
-    person('khepri-pendrag', 'Khepri', 'male', '1718', '', PENDRAG_HOUSE_ID, { title: 'Mündel' }),
-    person('gekas-pendrag', 'Gekas', 'male', '1718', '', PENDRAG_HOUSE_ID, { title: 'Mündel' }),
+    person('lancelot-neidr', 'Lancelot Neidr', 'male', '1730', '', 'house-neidr', {
+      familyRole: 'ward',
+      title: 'Mündel des Hauses Neidr am Königshof'
+    }),
+    person('ector-1716-pendrag', 'Ector Pendrag', 'male', '1716', '', PENDRAG_HOUSE_ID, {
+      familyRole: 'bastard', title: 'Legitimierter unehelicher Sohn'
+    }),
+    person('melwas-1716-pendrag', 'Melwas Pendrag', 'male', '1716', '', PENDRAG_HOUSE_ID, {
+      familyRole: 'bastard', title: 'Legitimierter unehelicher Sohn'
+    }),
+    person('khepri-pendrag', 'Khepri', 'male', '1718', '', PENDRAG_HOUSE_ID, { familyRole: 'adopted', title: 'Von Ygraine adoptiert' }),
+    person('gekas-pendrag', 'Gekas', 'male', '1718', '', PENDRAG_HOUSE_ID, { familyRole: 'adopted', title: 'Von Ygraine adoptiert' }),
     person('malon-1725-pendrag', 'Malon Pendrag', 'male', '1725', '')
   ],
   partnerships: [
+    createMarriage('marriage-gwyrthern-gwendolyn', ...GWYRTHERN_IDS),
+    createMarriage('marriage-rhonwen-dyngannon', 'rhonwen-dreigiau', 'dyngannon-paun'),
+    createMarriage('marriage-kerrylin-mordred', 'kerrylin-dreigiau', 'mordred-blodyn'),
+    createMarriage('marriage-vortimer-isolde', 'vortimer-dreigiau', 'isolde-teigr'),
+    createMarriage('marriage-celtigern-findabhair', 'celtigern-draig', 'findabhair-cumhail'),
+    createMarriage('marriage-gwenhwyfar-caradoc', 'gwenhwyfar-dreigiau', 'caradoc-arth'),
+    createMarriage('marriage-morgaine-gingalain', 'morgaine-dreigiau', 'gingalain-pysgod'),
     createMarriage('marriage-vortigern-rhiannon', ...FOUNDER_IDS),
     createMarriage('marriage-rhianu-uther', ...UTHER1_IDS),
     createMarriage('marriage-artus-tanwen', ...TANWEN_IDS),
@@ -300,6 +356,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     createMarriage('marriage-malon-sinead', ...MALON1_IDS),
     createMarriage('marriage-melwas-rhonwen', ...MELWAS1_IDS),
     createMarriage('marriage-rhoslyn-ceirwyn', ...RHOSLYN_IDS),
+    createMarriage('marriage-sulwen-howell', ...SULWEN_IDS),
     createMarriage('marriage-isolde-griflet', ...GRIFLET1_IDS),
     createMarriage('marriage-morholt-gwyneira', ...GWYNEIRA_IDS),
     createMarriage('marriage-galahad-gailis', ...GALAHAD1_IDS),
@@ -333,6 +390,11 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     createMarriage('marriage-hoyer-siobhara', ...HOYER_IDS)
   ],
   parentages: [
+    ...childrenOf(
+      ['vortimer-dreigiau', 'vortigern-pendrag', 'celtigern-draig', 'gwenhwyfar-dreigiau', 'morgaine-dreigiau'],
+      GWYRTHERN_IDS,
+      'marriage-gwyrthern-gwendolyn'
+    ),
     ...childrenOf(['uther-pendrag', 'tanwen-pendrag', 'geraint-pendrag', 'malagant-pendrag'], FOUNDER_IDS, 'marriage-vortigern-rhiannon'),
     ...childrenOf(['parzifal-pendrag', 'arianwyn-pendrag', 'trystan-pendrag'], UTHER1_IDS, 'marriage-rhianu-uther'),
     ...childrenOf(['malon-pendrag'], PARZIFAL1_IDS, 'marriage-isobel-parzifal'),
@@ -347,17 +409,30 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     ...childrenOf(['uther-1643-pendrag', 'caradwyn-pendrag'], ARTUS2_IDS, 'marriage-artus1622-noirin'),
     ...childrenOf(['meeghan-pendrag', 'lamorak-pendrag'], ECTOR1_IDS, 'marriage-ector1629-telyn'),
     ...childrenOf(['bedivere-pendrag'], TOR_IDS, 'marriage-tor-hefin'),
-    ...childrenOf(['rywalyn-pendrag', 'angharad-pendrag', 'lucan-pendrag', 'pelleas-pendrag', 'rhiannon-1673-pendrag'], UTHER2_IDS, 'marriage-uther1643-igraine'),
-    ...childrenOf(['dystan-pendrag', 'tristan-pendrag', 'cei-pendrag'], RYWALYN_IDS, 'marriage-rywalyn-talla'),
+    ...childrenOf(['rywalyn-pendrag', 'angharad-pendrag'], UTHER2_IDS, 'marriage-uther1643-igraine'),
+    ...childrenOf(['lucan-pendrag'], LAMORAK_IDS, 'marriage-lamorak-lynfa'),
+    ...childrenOf(['pelleas-pendrag', 'rhiannon-1673-pendrag'], BEDIVERE_IDS, 'marriage-bedivere-fearchara'),
+    ...childrenOf(['dystan-pendrag', 'tristan-pendrag'], RYWALYN_IDS, 'marriage-rywalyn-talla'),
+    ...childrenOf(['cei-pendrag'], LUCAN_IDS, 'marriage-lucan-caoimhe'),
     ...childrenOf(['ygraine-pendrag'], LUCAN_IDS, 'marriage-lucan-caoimhe'),
     ...childrenOf(['hoyer-pendrag'], PELLEAS_IDS, 'marriage-pelleas-genyth'),
     ...childrenOf(['elinor-pendrag', 'rhodhri-1725-pendrag', 'artus-1735-pendrag'], TRISTAN_IDS, 'marriage-tristan-isolde'),
-    ...childrenOf(['lancelot-neidr'], TRISTAN_IDS, '', { type: 'foster', legitimacy: 'unknown', notes: 'Mündel am Königshof.' }),
-    ...childrenOf(['ector-1716-pendrag', 'melwas-1716-pendrag'], AFFAIR_YGRAINE_IDS, 'affair-ygraine-owain', { legitimacy: 'illegitimate' }),
-    ...childrenOf(['khepri-pendrag', 'gekas-pendrag'], ['ygraine-pendrag'], '', { type: 'foster', legitimacy: 'unknown', notes: 'Mündel Ygraines.' }),
+    ...childrenOf(['lancelot-neidr'], TRISTAN_IDS, '', {
+      type: 'foster', legitimacy: 'unknown', notes: 'Mündel, das Haus Neidr an Haus Pendrag gegeben hat.'
+    }),
+    ...childrenOf(['ector-1716-pendrag', 'melwas-1716-pendrag'], AFFAIR_YGRAINE_IDS, 'affair-ygraine-owain', {
+      legitimacy: 'legitimized', notes: 'Nachträglich legitimierte Bastarde aus Ygraines Affäre mit Owain Draig.'
+    }),
+    ...childrenOf(['khepri-pendrag', 'gekas-pendrag'], ['ygraine-pendrag'], '', {
+      type: 'adoptive', legitimacy: 'unknown', notes: 'Nur von Ygraine adoptiert, nicht leiblich.'
+    }),
     ...childrenOf(['malon-1725-pendrag'], HOYER_IDS, 'marriage-hoyer-siobhara')
   ],
   cadetBranches: [
+    cadetHouse(
+      'cadet-grael-trystan', 'Haus Grael', 'marriage-malltwyn-trystan', 'house-grael',
+      'Trystan Pendrag und Malltwyn Draig begründen das Kadettenhaus Grael.'
+    ),
     marriedAway('married-away-draig-tanwen', 'Haus Draig', 'marriage-artus-tanwen', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-arianwyn', 'Haus Draig', 'marriage-godwyn-arianwyn', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-gwyneira', 'Haus Draig', 'marriage-morholt-gwyneira', 'house-draig', HOUSE_EMBLEMS.draig),
@@ -365,6 +440,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     marriedAway('married-away-draig-arianwen', 'Haus Draig', 'marriage-cunedda-arianwen', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-angharad', 'Haus Draig', 'marriage-rhodri-angharad', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-ceirwyn-rhoslyn', 'Haus Ceirwyn', 'marriage-rhoslyn-ceirwyn', 'house-ceirwyn'),
+    marriedAway('married-away-neidr-sulwen', 'Haus Neidr', 'marriage-sulwen-howell', 'house-neidr'),
     marriedAway('married-away-pysgod-tarwen', 'Haus Pysgod', 'marriage-tarwen-gingalain', 'house-pysgod'),
     marriedAway('married-away-wylan-iesin', 'Haus Wylan', 'marriage-iesin-vorath', 'house-wylan'),
     marriedAway('married-away-illewod-blodeuyn', 'Haus Illewod', 'marriage-blodeuyn-keudawg', 'house-illewod'),
@@ -401,7 +477,21 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     crestEmblemScale: 0.86,
     crestFrame: 'gold',
     crestFrameScale: 1,
-    timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' }
+    timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' },
+    originHouse: {
+      enabled: true,
+      id: 'dreigiau-origin',
+      houseId: 'house-dreigiau',
+      name: 'Haus Dreigiau',
+      subtitle: '',
+      emblem: HOUSE_EMBLEMS.dreigiau,
+      emblemScale: 0.86,
+      crestFrame: 'gold',
+      frameScale: 1,
+      childIds: DREIGIAU_ROOT_IDS,
+      targetFamilyId: '',
+      notes: 'Vorgelagertes Ursprungshaus: Vortigern und Celtigern (Haus Draig) sind Brüder aus dieser Generation.'
+    }
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {

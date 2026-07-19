@@ -5,6 +5,8 @@ import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
 
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-draig';
 const LOCAL_PORTRAIT_IDS = Object.freeze([
+  "vortigern-pendrag",
+  "rhiannon-aderyn",
   "celtigern-draig",
   "findabhair-cumhail",
   "artus-draig",

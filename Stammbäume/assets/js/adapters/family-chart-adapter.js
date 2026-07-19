@@ -82,8 +82,9 @@ function createChartPerson(person, house, diagnostics, legitimacy = 'unknown') {
   const role = getFamilyRole(person.familyRole);
   const lineageRole = getPersonLineageRole(person.lineageRole);
   const frame = getPersonCardFrame(role.id, lineageRole.id, legitimacy, person.extensions.cardFrameId || '');
-  // Bastarde dürfen das Hauswappen nicht führen und tragen immer das neutrale Siegel.
-  const crest = role.id === 'bastard'
+  // Bastarde dürfen das Hauswappen nicht führen und tragen das neutrale Siegel –
+  // außer sie wurden nachträglich legitimiert, dann gilt das Hauswappen wieder.
+  const crest = role.id === 'bastard' && legitimacy !== 'legitimized'
     ? PORTRAIT_PLACEHOLDERS.crest
     : (house?.emblem || PORTRAIT_PLACEHOLDERS.crest);
   return {

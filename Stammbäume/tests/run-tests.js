@@ -1636,10 +1636,10 @@ test('liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal
     'utf8'
   ));
 
-  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 129);
-  assert.equal(Object.keys(sourceManifest).length, 111);
-  assert.equal(picturedPeople.length, 129);
-  assert.equal(placeholderPeople.length, 48);
+  assert.equal(Object.keys(HOUSE_DRAIG_PORTRAITS).length, 131);
+  assert.equal(Object.keys(sourceManifest).length, 113);
+  assert.equal(picturedPeople.length, 131);
+  assert.equal(placeholderPeople.length, 46);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
 
@@ -5760,6 +5760,16 @@ test('bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft
 
   const graph = createFamilyGraph(family);
 
+  // Ursprungshaus Dreigiau: Vortigern und Celtigern (Haus Draig) sind Brüder, Kinder
+  // Gwyrtherns und Gwendolyns, vorgelagert über einen originHouse-Ursprungsknoten.
+  assert.equal(family.lineage.originHouse.enabled, true);
+  assert.equal(family.lineage.originHouse.houseId, 'house-dreigiau');
+  assert.deepEqual(family.lineage.originHouse.childIds, ['gwyrthern-dreigiau', 'rhonwen-dreigiau', 'kerrylin-dreigiau']);
+  assert.deepEqual(
+    graph.getChildren('gwyrthern-dreigiau').map(person => person.id).sort(),
+    ['celtigern-draig', 'gwenhwyfar-dreigiau', 'morgaine-dreigiau', 'vortigern-pendrag', 'vortimer-dreigiau']
+  );
+
   const vortigern = family.persons.find(person => person.id === 'vortigern-pendrag');
   assert.equal(vortigern.houseId, 'house-pendrag');
   assert.equal(vortigern.familyRole, 'core');
@@ -5790,24 +5800,55 @@ test('bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft
     'arianwen-pendragon', 'gawain-pendragon', 'tarwen-pendrag'
   ]);
 
+  // Trystan Pendrag und Malltwyn Draig begründen das Kadettenhaus Grael.
+  const graelBranch = family.cadetBranches.find(entry => entry.id === 'cadet-grael-trystan');
+  assert.ok(graelBranch, 'cadet-grael-trystan fehlt');
+  assert.equal(graelBranch.linkType, 'cadet-house');
+  assert.equal(graelBranch.parentPartnershipId, 'marriage-malltwyn-trystan');
+  assert.equal(graelBranch.houseId, 'house-grael');
+
+  // Sulwen Pendrag heiratet Howell Neidr; Cei ist Lucans Sohn, Lucan wiederum
+  // Lamoraks Sohn (nicht Uthers 1643 Sohn); Pelleas und Rhiannon (1673) sind Bedivere
+  // und Fearcharas Kinder (nicht Uther 1643s).
+  assert.deepEqual(graph.getChildren('uther-1643-pendrag').map(person => person.id).sort(), [
+    'angharad-pendrag', 'rywalyn-pendrag'
+  ]);
+  assert.deepEqual(graph.getChildren('lamorak-pendrag').map(person => person.id), ['lucan-pendrag']);
+  assert.deepEqual(graph.getChildren('lucan-pendrag').map(person => person.id).sort(), ['cei-pendrag', 'ygraine-pendrag']);
+  assert.deepEqual(graph.getChildren('bedivere-pendrag').map(person => person.id).sort(), [
+    'pelleas-pendrag', 'rhiannon-1673-pendrag'
+  ]);
+  const sulwenBranch = family.cadetBranches.find(entry => entry.id === 'married-away-neidr-sulwen');
+  assert.ok(sulwenBranch, 'married-away-neidr-sulwen fehlt');
+  assert.equal(sulwenBranch.targetFamilyId, 'haus-neidr');
+
   // Owain Draig (bereits mit fünf Affären in Haus Draig belegt) hat mit Ygraine Pendrag
-  // eine sechste Affäre, aus der zwei uneheliche Söhne hervorgehen.
+  // eine sechste Affäre, aus der zwei nachträglich legitimierte Bastard-Söhne hervorgehen.
   const affair = family.partnerships.find(partnership => partnership.id === 'affair-ygraine-owain');
   assert.equal(affair.type, 'affair');
   assert.deepEqual(affair.participantIds, ['ygraine-pendrag', 'owain-draig']);
   ['ector-1716-pendrag', 'melwas-1716-pendrag'].forEach(childId => {
     const parentage = family.parentages.find(entry => entry.childId === childId);
-    assert.equal(parentage.legitimacy, 'illegitimate');
+    assert.equal(parentage.legitimacy, 'legitimized');
     assert.equal(parentage.partnershipId, 'affair-ygraine-owain');
+    const person = family.persons.find(entry => entry.id === childId);
+    assert.equal(person.familyRole, 'bastard');
   });
 
-  // Mündel (Lancelot Neidr bei Tristan, Khepri/Gekas bei Ygraine) sind über foster-
-  // Abstammungen ohne Partnerschaft angebunden, nicht als leibliche Kinder.
-  ['lancelot-neidr', 'khepri-pendrag', 'gekas-pendrag'].forEach(wardId => {
-    const parentage = family.parentages.find(entry => entry.childId === wardId);
-    assert.equal(parentage.type, 'foster');
+  // Khepri/Gekas sind nur von Ygraine adoptiert (adoptive, ein Elternteil, kein
+  // leibliches Kind); Lancelot Neidr ist ein von Haus Neidr gegebenes Mündel (foster).
+  ['khepri-pendrag', 'gekas-pendrag'].forEach(childId => {
+    const parentage = family.parentages.find(entry => entry.childId === childId);
+    assert.equal(parentage.type, 'adoptive');
+    assert.deepEqual(parentage.parentIds, ['ygraine-pendrag']);
     assert.equal(parentage.partnershipId, '');
+    const person = family.persons.find(entry => entry.id === childId);
+    assert.equal(person.familyRole, 'adopted');
   });
+  const lancelotParentage = family.parentages.find(entry => entry.childId === 'lancelot-neidr');
+  assert.equal(lancelotParentage.type, 'foster');
+  assert.equal(lancelotParentage.partnershipId, '');
+  assert.equal(family.persons.find(entry => entry.id === 'lancelot-neidr').familyRole, 'ward');
 
   // Jede core-Pendrag-Frau, deren eigene Kinder nicht in dieser Datei verzeichnet sind
   // (weil sie ins Haus ihres Mannes weggeheiratet ist), erhält eine sichtbare
@@ -5820,6 +5861,7 @@ test('bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft
     'married-away-draig-arianwen': 'haus-draig',
     'married-away-draig-angharad': 'haus-draig',
     'married-away-ceirwyn-rhoslyn': 'haus-ceirwyn',
+    'married-away-neidr-sulwen': 'haus-neidr',
     'married-away-pysgod-tarwen': 'haus-pysgod',
     'married-away-wylan-iesin': 'haus-wylan',
     'married-away-illewod-blodeuyn': 'haus-illewod',
@@ -5827,7 +5869,7 @@ test('bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft
     'married-away-urquhart-meeghan': 'haus-urquhart',
     'married-away-grael-rhiannon': 'haus-grael'
   };
-  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length);
+  assert.equal(family.cadetBranches.length, Object.keys(marriedAwayTargets).length + 1, 'Wegverheiratet-Zweige plus der eine Kadettenhaus-Zweig (Grael)');
   Object.entries(marriedAwayTargets).forEach(([branchId, targetFamilyId]) => {
     const branch = family.cadetBranches.find(entry => entry.id === branchId);
     assert.ok(branch, `${branchId} fehlt`);
