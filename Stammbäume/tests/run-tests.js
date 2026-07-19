@@ -145,6 +145,15 @@ import {
   parseFamilyBundleZip,
   rewriteFamilyImageRefs
 } from '../assets/js/services/family-bundle-import.js';
+import {
+  collectGlobalFacts,
+  collectHouseFacts,
+  pickFactSample
+} from '../assets/js/services/dashboard-facts.js';
+import {
+  collectBiographyPreviews,
+  pickBiographySample
+} from '../assets/js/services/dashboard-bio-preview.js';
 import { createFamilyStore } from '../assets/js/state/family-store.js';
 import {
   createFamilyChangeSet,
@@ -5105,6 +5114,134 @@ test('netlify.toml leitet die Stammbäume-Startseite nicht mehr künstlich um', 
   const toml = await readFile(new URL('../../netlify.toml', import.meta.url), 'utf8');
   assert.doesNotMatch(toml, /Stammb%C3%A4ume%2Findex\.html|Stammb%C3%A4ume\/index\.html/);
   assert.doesNotMatch(toml, /from = "\/Stammb%C3%A4ume\/"/);
+});
+
+test('collectHouseFacts findet erloschene Linien und ihre Archivnotiz bei Haus Illysywen', () => {
+  const family = assertValidFamily(HOUSE_ILLYSYWEN_FAMILY).family;
+  const facts = collectHouseFacts({ id: 'haus-illysywen', title: 'Haus Illysywen', family });
+  const extinctQuestion = facts.find(fact => fact.id.startsWith('extinct-count::'));
+  assert.ok(extinctQuestion, 'sollte einen erloschene-Linien-Fakt liefern');
+  assert.match(extinctQuestion.text, /erloschen/);
+  const archiveFacts = facts.filter(fact => fact.flavor === 'archive');
+  assert.ok(archiveFacts.some(fact => fact.text.includes('ohne Nachkommen')), 'sollte die Notiz "… ohne Nachkommen; die Linie endet hier." als Archiv-Fakt übernehmen');
+});
+
+test('collectHouseFacts erkennt Vormundschaften (Mündel) aus foster-Abstammungen', () => {
+  const family = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const facts = collectHouseFacts({ id: 'haus-gafyr', title: 'Haus Gafyr', family });
+  const wardFact = facts.find(fact => fact.id.startsWith('ward::'));
+  assert.ok(wardFact, 'sollte einen Mündel-Fakt liefern');
+  assert.match(wardFact.text, /als Mündel bei/);
+});
+
+test('collectHouseFacts erkennt matriarchale Erbfolge bei Haus Chwedlonol', () => {
+  const family = assertValidFamily(HOUSE_CHWEDLONOL_FAMILY).family;
+  const facts = collectHouseFacts({ id: 'haus-chwedlonol', title: 'Haus Chwedlonol', family });
+  const matriarchalFact = facts.find(fact => fact.id.startsWith('matriarchal::'));
+  assert.ok(matriarchalFact, 'sollte einen matriarchalen Fakt liefern');
+  assert.match(matriarchalFact.text, /ausschließlich von Frauen geführt/);
+});
+
+test('collectHouseFacts erkennt bürgerliche Erbfolge-nach-Eignung bei Haus Gwyllach', () => {
+  const family = assertValidFamily(HOUSE_GWYLLACH_FAMILY).family;
+  const facts = collectHouseFacts({ id: 'haus-gwyllach', title: 'Haus Gwyllach', family });
+  const meritFact = facts.find(fact => fact.id.startsWith('meritocratic::'));
+  assert.ok(meritFact, 'sollte einen Eignungs-Erbfolge-Fakt liefern');
+});
+
+test('collectHouseFacts findet Ursprungshaus und Legitimierung bei Haus Draig', () => {
+  const family = assertValidFamily(HOUSE_DRAIG_FAMILY).family;
+  const facts = collectHouseFacts({ id: 'haus-draig', title: 'Haus Draig', family });
+  assert.ok(facts.some(fact => fact.id.startsWith('origin-house::')), 'sollte einen Ursprungshaus-Fakt liefern');
+  assert.ok(facts.some(fact => fact.id.startsWith('legitimized::')), 'sollte einen Legitimierungs-Fakt liefern');
+});
+
+test('collectHouseFacts filtert Notizen heraus, die die Erzählebene durchbrechen (Bezug auf Vorlage/User)', () => {
+  const wordChar = '(?:[\\p{L}\\p{N}_])';
+  const standaloneUser = new RegExp(`(?<!${wordChar})Users?(?!${wordChar})`, 'iu');
+  const standaloneVorlage = new RegExp(`(?<!${wordChar})Vorlage(?!${wordChar})`, 'iu');
+
+  const sgrechiwr = assertValidFamily(HOUSE_SGRECHIWR_FAMILY).family;
+  const sgrechiwrFacts = collectHouseFacts({ id: 'haus-sgrechiwr', title: 'Haus Sgrechiwr', family: sgrechiwr });
+  assert.ok(
+    sgrechiwrFacts.every(fact => !standaloneUser.test(fact.text)),
+    'kein Archiv-Fakt darf "User" als eigenständiges Wort erwähnen'
+  );
+  // Regressionsschutz für die \b-Umlaut-Falle: ein legitimer Fakt, der zufällig
+  // "Häuser"/"Häusern" enthält, darf NICHT fälschlich herausgefiltert werden.
+  assert.ok(sgrechiwrFacts.some(fact => fact.id === 'married-away-count::haus-sgrechiwr'));
+
+  const gafyr = assertValidFamily(HOUSE_GAFYR_FAMILY).family;
+  const gafyrFacts = collectHouseFacts({ id: 'haus-gafyr', title: 'Haus Gafyr', family: gafyr });
+  assert.ok(
+    gafyrFacts.every(fact => !standaloneVorlage.test(fact.text)),
+    'kein Archiv-Fakt darf "Vorlage" als eigenständiges Wort erwähnen'
+  );
+});
+
+test('collectHouseFacts liefert nichts für eine Familie ohne Datensatz und kürzt lange Archivtexte', () => {
+  assert.deepEqual(collectHouseFacts({ id: 'x', title: 'X', family: null }), []);
+
+  const longText = 'A'.repeat(300);
+  const family = normalizeFamily({
+    document: { id: 'lang-haus', title: 'Haus Lang', description: longText }
+  });
+  const facts = collectHouseFacts({ id: 'lang-haus', title: 'Haus Lang', family });
+  const descriptionFact = facts.find(fact => fact.id === 'description::lang-haus');
+  assert.ok(descriptionFact);
+  assert.ok(descriptionFact.text.length <= 220);
+  assert.ok(descriptionFact.text.endsWith('…'));
+});
+
+test('collectGlobalFacts und pickFactSample liefern eine wiederholungsfreie, injizierbare Auswahl', () => {
+  const records = listFamilyRecords();
+  const globalFacts = collectGlobalFacts(records);
+  assert.ok(globalFacts.some(fact => fact.id === 'global-total-persons'));
+  assert.ok(globalFacts.some(fact => fact.id === 'global-largest-house'));
+
+  assert.deepEqual(collectGlobalFacts([]), []);
+
+  const sequence = [0.05, 0.15, 0.25, 0.35, 0.45];
+  let cursor = 0;
+  const sample = pickFactSample(records, { count: 5, randomFn: () => sequence[cursor++] ?? 0 });
+  assert.equal(sample.length, 5);
+  assert.equal(new Set(sample.map(fact => fact.id)).size, 5);
+});
+
+test('collectBiographyPreviews ignoriert Personen ohne ausgearbeitete Biografie und findet welche mit Freitext', () => {
+  const withoutBio = assertValidFamily(HOUSE_ARWYDD_FAMILY).family;
+  assert.deepEqual(collectBiographyPreviews([{ id: 'haus-arwydd', title: 'Haus Arwydd', family: withoutBio }]), []);
+
+  const longBiography = 'Eine ausführliche Lebensgeschichte voller Wendungen, die deutlich über die Kürzungsgrenze von hundertsechzig Zeichen hinausgeht, um den Abschneide-Mechanismus der Vorschau zuverlässig zu testen.';
+  const bioFamily = normalizeFamily({
+    document: { id: 'bio-test-haus', title: 'Haus Testbio' },
+    persons: [{
+      id: 'p1',
+      name: 'Testperson',
+      sex: 'female',
+      extensions: {
+        [PERSON_BIOGRAPHY_EXTENSION_ID]: normalizePersonBiographyModule({
+          biography: { biographyText: longBiography }
+        })
+      }
+    }]
+  });
+  const previews = collectBiographyPreviews([{ id: 'bio-test-haus', title: 'Haus Testbio', family: bioFamily }]);
+  assert.equal(previews.length, 1);
+  assert.equal(previews[0].personName, 'Testperson');
+  assert.ok(previews[0].excerpt.length <= 160);
+  assert.ok(previews[0].excerpt.endsWith('…'));
+
+  const sampled = pickBiographySample([{ id: 'bio-test-haus', title: 'Haus Testbio', family: bioFamily }], { count: 3, randomFn: () => 0 });
+  assert.equal(sampled.length, 1);
+});
+
+test('Landingpage rendert "Wusstest du schon?"-Spotlight und Biografie-Vorschau ohne Inline-Handler', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /id="landing-spotlight"/);
+  assert.match(html, /id="landing-spotlight-next"/);
+  assert.match(html, /id="landing-bio-grid"/);
+  assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
 });
 
 let failures = 0;

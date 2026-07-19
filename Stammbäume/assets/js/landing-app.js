@@ -1,5 +1,7 @@
-import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
+import { PORTRAIT_PLACEHOLDERS, resolvePortraitSource } from './config/portrait-placeholders.js';
 import { createFamilyGraph } from './domain/family-graph.js';
+import { pickBiographySample } from './services/dashboard-bio-preview.js';
+import { pickFactSample } from './services/dashboard-facts.js';
 import { isAleriaGptAvailable, requestAleriaGptSuggestion } from './services/aleria-gpt-bridge.js';
 import { createFamilyViewLink } from './services/family-links.js';
 import { listFamilyRecords } from './services/family-library.js';
@@ -49,6 +51,68 @@ async function enhanceCardWithAi(record, grid) {
   blurbNode.dataset.aiEnhanced = 'true';
 }
 
+function renderSpotlight(fact) {
+  const section = document.getElementById('landing-spotlight');
+  const eyebrow = document.getElementById('landing-spotlight-eyebrow');
+  const text = document.getElementById('landing-spotlight-text');
+  const source = document.getElementById('landing-spotlight-source');
+  if (!fact) {
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
+  const isArchive = fact.flavor === 'archive';
+  eyebrow.textContent = isArchive ? 'Aus den Aufzeichnungen' : 'Wusstest du schon?';
+  text.textContent = isArchive ? `„${fact.text}“` : fact.text;
+  if (fact.houseTitle) {
+    const label = isArchive && fact.source && fact.source !== fact.houseTitle
+      ? `${fact.source} · ${fact.houseTitle}`
+      : fact.houseTitle;
+    source.hidden = false;
+    source.textContent = `— ${label}`;
+  } else {
+    source.hidden = true;
+  }
+}
+
+function initSpotlight(records) {
+  const facts = pickFactSample(records, { count: 6 });
+  const nextButton = document.getElementById('landing-spotlight-next');
+  if (!facts.length) {
+    renderSpotlight(null);
+    return;
+  }
+  let index = 0;
+  renderSpotlight(facts[index]);
+  nextButton.hidden = facts.length <= 1;
+  nextButton.addEventListener('click', () => {
+    index = (index + 1) % facts.length;
+    renderSpotlight(facts[index]);
+  });
+}
+
+function renderBioCard(preview) {
+  const portrait = resolvePortraitSource(preview);
+  return `
+    <a class="landing-bio-card" href="${escapeHtml(createFamilyViewLink(preview.houseId, preview.personId))}">
+      <img class="landing-bio-portrait" src="${escapeHtml(portrait)}" alt="Portrait von ${escapeHtml(preview.personName)}">
+      <div>
+        <h3>${escapeHtml(preview.personName)}</h3>
+        <p>${escapeHtml(preview.excerpt)}</p>
+        <p class="landing-bio-house">${escapeHtml(preview.houseTitle)}</p>
+      </div>
+    </a>
+  `;
+}
+
+function initBioPreviews(records) {
+  const bioGrid = document.getElementById('landing-bio-grid');
+  const previews = pickBiographySample(records, { count: 3 });
+  bioGrid.innerHTML = previews.length
+    ? previews.map(renderBioCard).join('')
+    : '<p class="landing-bio-empty">Noch keine ausgearbeiteten Biografien — leg in der Stammbaum-Werkstatt die erste Personenakte an.</p>';
+}
+
 const grid = document.getElementById('landing-trivia-grid');
 const empty = document.getElementById('landing-trivia-empty');
 const records = listFamilyRecords();
@@ -62,3 +126,6 @@ if (!sample.length) {
     void enhanceCardWithAi(record, grid);
   });
 }
+
+initSpotlight(records);
+initBioPreviews(records);

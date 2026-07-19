@@ -74,6 +74,128 @@
   color: var(--ink-500);
 }
 
+.landing-spotlight {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.1rem;
+  margin: clamp(1.2rem, 3vw, 2.6rem) clamp(1.2rem, 3vw, 2.6rem) 0;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid rgba(184, 139, 55, 0.55);
+  border-radius: 0.3rem;
+  background:
+    linear-gradient(120deg, rgba(142, 39, 36, 0.08), transparent 60%),
+    #fffaf0;
+  box-shadow: 0 0.6rem 1.6rem rgba(74, 48, 27, 0.14);
+}
+
+.landing-spotlight-icon {
+  color: var(--gold-500);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.landing-spotlight-eyebrow {
+  margin: 0 0 0.35rem;
+  color: #8e2724;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.landing-spotlight-text {
+  margin: 0;
+  color: var(--ink-800);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.landing-spotlight-source {
+  margin: 0.35rem 0 0;
+  color: var(--ink-500);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.landing-spotlight-next {
+  white-space: nowrap;
+}
+
+@media (max-width: 42rem) {
+  .landing-spotlight {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+.landing-bio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.9rem;
+}
+
+.landing-bio-card {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr;
+  gap: 0.7rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(82, 55, 32, 0.2);
+  background: rgba(255, 250, 239, 0.72);
+  color: var(--ink-800);
+  text-decoration: none;
+  transition: 140ms ease;
+}
+
+.landing-bio-card:hover {
+  border-color: rgba(184, 139, 55, 0.75);
+  background: #fffaf0;
+  box-shadow: 0 0.35rem 1rem rgba(74, 48, 27, 0.16);
+  transform: translateY(-2px);
+}
+
+.landing-bio-portrait {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(184, 139, 55, 0.5);
+}
+
+.landing-bio-card h3 {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+
+.landing-bio-card p {
+  margin: 0;
+  color: var(--ink-500);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.landing-bio-house {
+  margin-top: 0.25rem !important;
+  color: #825e2d !important;
+  font-family: var(--font-display);
+  font-size: 0.58rem !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.landing-bio-empty {
+  padding: 1.6rem;
+  border: 1px dashed rgba(82, 55, 32, 0.3);
+  color: var(--ink-500);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
 .landing-trivia-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
