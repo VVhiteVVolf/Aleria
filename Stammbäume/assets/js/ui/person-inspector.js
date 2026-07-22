@@ -56,11 +56,10 @@ function renderTimeJumps(timeJumps) {
           <li class="time-jump-row">
             <span>
               <strong>${escapeHtml(timeJump.label)}</strong>
-              <small>${timeJump.years ? `${timeJump.years} Jahre · ` : ''}${timeJump.childIds.length} bekannte Nachkommen</small>
+              <small>${timeJump.years ? `${timeJump.years} Jahre · ` : ''}${timeJump.childIds.length} direkt zugeordnete Personen</small>
             </span>
             <span class="time-jump-row__actions">
-              <button class="button button--quiet button--small" type="button" data-action="open-time-jump-child" data-time-jump-id="${escapeHtml(timeJump.id)}">＋ Person</button>
-              <button class="icon-button" type="button" data-action="delete-time-jump" data-time-jump-id="${escapeHtml(timeJump.id)}" aria-label="Zeitsprungknoten entfernen">×</button>
+              <button class="button button--quiet button--small" type="button" data-action="open-time-jump-actions" data-time-jump-id="${escapeHtml(timeJump.id)}">Zeitsprung öffnen</button>
             </span>
           </li>
         `).join('')}

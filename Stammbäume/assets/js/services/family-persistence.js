@@ -76,8 +76,29 @@ export function saveFamilyRecord(record, storage = globalThis.localStorage) {
   return Object.freeze({ ...nextRecord, source: 'local' });
 }
 
+export function saveFamilyRecordsAtomically(recordsToSave, storage = globalThis.localStorage) {
+  const timestamp = new Date().toISOString();
+  const incoming = recordsToSave.map(record => {
+    const family = assertValidFamily(record.family).family;
+    return {
+      id: String(record.id || family.document.id),
+      title: String(record.title || family.document.title),
+      folderPath: Array.isArray(record.folderPath) ? record.folderPath.map(String).filter(Boolean) : [],
+      updatedAt: timestamp,
+      family
+    };
+  });
+  const incomingIds = new Set(incoming.map(record => record.id));
+  if (incomingIds.size !== incoming.length) throw new Error('Eine Familienakte wurde beim Spiegeln doppelt angegeben.');
+  const retained = loadSavedFamilyRecords(storage)
+    .filter(record => !incomingIds.has(record.id))
+    .map(({ source, ...record }) => record);
+  const next = [...retained, ...incoming];
+  storage?.setItem(SAVED_FAMILIES_KEY, JSON.stringify(next));
+  return Object.freeze(incoming.map(record => Object.freeze({ ...record, source: 'local' })));
+}
+
 export function deleteSavedFamilyRecord(familyId, storage = globalThis.localStorage) {
   const records = loadSavedFamilyRecords(storage).filter(record => record.id !== familyId);
   storage?.setItem(SAVED_FAMILIES_KEY, JSON.stringify(records.map(({ source, ...record }) => record)));
 }
-

@@ -1,0 +1,91 @@
+import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { HOUSE_GWEFRYDD_PORTRAITS } from './house-gwefrydd-portraits.js';
+import { HOUSE_ILLEWOD_PORTRAITS } from './house-illewod-portraits.js';
+import { HOUSE_ILLYSYWEN_PORTRAITS } from './house-illysywen-portraits.js';
+import { HOUSE_NEIDR_PORTRAITS } from './house-neidr-portraits.js';
+import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
+
+const PORTRAIT_ROOT = 'assets/images/portraits/haus-grawn';
+const LOCAL_PORTRAIT_IDS = Object.freeze([
+  'tristam-grawn',
+  'emer-ui-cruithneacht',
+  'dystan-grawn',
+  'bedwyr-grawn',
+  'vaughan-grawn',
+  'mervyn-grawn',
+  'coemgen-airt',
+  'maelgwyn-grawn',
+  'osian-grawn',
+  'aneurin-grawn',
+  'dyfnwal-baedd',
+  'yvain-grawn',
+  'cynfarch-grawn',
+  'wyndham-grawn',
+  'rheinallt-grawn',
+  'rhydian-grawn',
+  'hewet-grawn',
+  'gwendolyn-grawn',
+  'cloi-grawn',
+  'iestyn-grawn',
+  'arianwyn-grawn',
+  'morcant-sgwarnog',
+  'enid-llwynog',
+  'glesni-canwyll',
+  'robyert-dienyddiwr',
+  'iorwerth-1685-grawn',
+  'mawr-grawn',
+  'dyffryn-grawn',
+  'caellach-grawn',
+  'aeron-1693-grawn',
+  'mordred-grawn',
+  'ceridwen-1700-grawn',
+  'beavan-grawn',
+  'glenys-grawn',
+  'ywen-grawn',
+  'elin-grawn',
+  'meirion-grawn',
+  'tarah-draenog',
+  'himiko-ashina',
+  'glada-grawn-affair',
+  'gwenllian-grawn-affair',
+  'parzifal-arth',
+  'annegret-skogg',
+  'llyonell-marchog',
+  'arthos-morcanhuc',
+  'cei-baedd',
+  'diahan-fintain',
+  'afon-grawn',
+  'akira-grawn',
+  'akane-grawn',
+  'afan-grawn',
+  'tryphena-grawn',
+  'elaine-grawn',
+  'ragnailt-grawn',
+  'arwal-grawn',
+  'eirwen-grawn',
+  'trystan-1715-grawn',
+  'ysolde-grawn',
+  'kynan-grawn',
+  'kyndra-grawn',
+  'morgan-grawn',
+  'jac-grawn'
+]);
+
+export const HOUSE_GRAWN_PORTRAITS = Object.freeze({
+  ...Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
+    personId,
+    `${PORTRAIT_ROOT}/${personId}.jpg`
+  ])),
+  'petyr-grawn': HOUSE_NEIDR_PORTRAITS['petyr-grawn'],
+  'telyn-grawn': HOUSE_PENDRAG_PORTRAITS['telyn-grawn'],
+  'ector-1629-pendrag': HOUSE_PENDRAG_PORTRAITS['ector-1629-pendrag'],
+  'igraine-grawn': HOUSE_PENDRAG_PORTRAITS['igraine-grawn'],
+  'uther-1643-pendrag': HOUSE_PENDRAG_PORTRAITS['uther-1643-pendrag'],
+  'eifion-grawn': HOUSE_GWEFRYDD_PORTRAITS['eifion-grawn'],
+  'madoc-illewod': HOUSE_ILLEWOD_PORTRAITS['madoc-illewod'],
+  'owen-grawn': HOUSE_ILLYSYWEN_PORTRAITS['owen-grawn'],
+  'morwen-illysywen': HOUSE_ILLYSYWEN_PORTRAITS['morwen-illysywen'],
+  'maredudd-draig': HOUSE_DRAIG_PORTRAITS['maredudd-draig'],
+  'neithon-1718-draig': HOUSE_DRAIG_PORTRAITS['neithon-1718-draig'],
+  'alaweyn-grawn': HOUSE_DRAIG_PORTRAITS['alaweyn-grawn']
+});

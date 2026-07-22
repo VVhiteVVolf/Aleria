@@ -1,9 +1,18 @@
-import { FamilyRevisionConflictError } from './firestore-family-repository.js';
+import {
+  describeFamilySyncError,
+  FamilyRevisionConflictError
+} from './family-sync-errors.js';
+import { assertMirroredCrossFamilyBatch } from './cross-family-sync-invariant.js';
 import { createFamilySyncStatusUi } from './family-sync-status-ui.js';
 
-const SAVE_DELAY_MS = 900;
+const REMOTE_SOURCES = new Set(['firebase-sync', 'firebase-priority']);
+const NEW_FAMILY_SOURCES = new Set([
+  'new-empty-family',
+  'new-founding-family',
+  'tree-generator-cta'
+]);
 
-function sameFamily(first, second) {
+export function sameFamily(first, second) {
   return JSON.stringify(first) === JSON.stringify(second);
 }
 
@@ -14,205 +23,608 @@ export function createFamilySyncController({
   authService,
   documentRef = document,
   runtime = globalThis,
-  editing = false
+  editing = false,
+  resolveOriginFamily = () => null,
+  uiFactory = createFamilySyncStatusUi
 }) {
-  const ui = createFamilySyncStatusUi(documentRef);
+  const ui = uiFactory(documentRef);
   let user = null;
+  let activeFamilyId = store.getState().family.document.id;
+  let connectedFamilyId = '';
+  let originFamily = resolveOriginFamily(activeFamilyId);
   let remoteBase = null;
   let remoteRevision = 0;
-  let pendingRemote = null;
+  let localBaseRevision = 0;
   let dirty = false;
   let saving = false;
+  let publishing = false;
+  let connecting = false;
   let destroyed = false;
-  let saveTimer = null;
-  let retryDelay = 2000;
+  let contextVersion = 0;
+  let pendingSaveFamilyId = '';
+  let preservePendingIntentOnClose = false;
+  let identityChangeBlock = null;
+  const identityCollisionProvenances = new Map();
+  let connectionPromise = null;
   let unsubscribeStore = null;
   let unsubscribeAuth = null;
   let unsubscribeRemote = null;
 
   function renderStatus(phase, message) {
-    ui.render({ phase, user, message });
+    ui.render({
+      phase,
+      user,
+      message,
+      dirty,
+      saving,
+      canReset: Boolean(originFamily)
+    });
     const localStatus = documentRef.getElementById('save-status');
     if (localStatus) localStatus.textContent = message;
   }
 
-  function persistLocally(family) {
-    const saved = localRepository.persistCurrent(family);
-    if (!user) {
-      renderStatus(saved ? 'local' : 'error', saved ? 'Lokal gespeichert' : 'Lokale Speicherung nicht verfügbar');
+  function persistLocally(family, options = {}) {
+    const collisionProvenance = identityCollisionProvenances.get(family.document.id);
+    const hasActiveCollision = identityChangeBlock?.sameIdCollision === true
+      && identityChangeBlock.fromFamilyId === family.document.id;
+    const saved = localRepository.persistCurrent(family, {
+      baseRevision: options.baseRevision ?? localBaseRevision,
+      dirty: options.dirty ?? dirty,
+      cloudFamilyId: options.cloudFamilyId
+        ?? identityChangeBlock?.fromFamilyId
+        ?? undefined,
+      identityCollision: hasActiveCollision,
+      baseFamily: options.baseFamily
+        ?? (hasActiveCollision ? collisionProvenance?.originalFamily : undefined)
+    });
+    if (!user && options.render !== false) {
+      renderStatus(
+        saved ? (dirty ? 'pending' : 'local') : 'error',
+        saved
+          ? (dirty ? 'Lokal gespeichert · online ungespeichert' : 'Lokal gespeichert')
+          : 'Lokale Speicherung nicht verfügbar'
+      );
     }
     return saved;
   }
 
-  function cancelScheduledSave() {
-    if (saveTimer !== null) runtime.clearTimeout(saveTimer);
-    saveTimer = null;
-  }
-
-  function scheduleSave(delay = SAVE_DELAY_MS) {
-    cancelScheduledSave();
-    if (!editing || !user || pendingRemote || saving || destroyed) return;
-    saveTimer = runtime.setTimeout(() => {
-      saveTimer = null;
-      void saveNow();
-    }, delay);
-  }
-
-  async function saveNow() {
-    if (!editing || !user || pendingRemote || saving || !dirty || destroyed) return;
-    saving = true;
-    const familyToSave = store.getState().family;
-    if (remoteBase && sameFamily(remoteBase, familyToSave)) {
-      dirty = false;
-      saving = false;
-      renderStatus('synced', `Cloud unverändert · Revision ${remoteRevision}`);
-      return;
-    }
-    renderStatus('saving', 'Speichert in Firebase …');
-    try {
-      const result = await cloudRepository.saveDraft({
-        family: familyToSave,
-        baseFamily: remoteBase,
-        expectedRevision: remoteRevision
-      });
-      remoteBase = result.family;
-      remoteRevision = result.revision;
-      retryDelay = 2000;
-      dirty = !sameFamily(store.getState().family, familyToSave);
-      renderStatus(dirty ? 'pending' : 'synced', dirty ? 'Weitere Änderungen ausstehend' : `Cloud gespeichert · Revision ${remoteRevision}`);
-    } catch (error) {
-      if (error instanceof FamilyRevisionConflictError) {
-        pendingRemote = await cloudRepository.loadDraft(familyToSave.document.id);
-        renderStatus('conflict', 'Speicherkonflikt · Entscheidung erforderlich');
-        ui.open();
-      } else {
-        renderStatus('offline', 'Nur lokal · Firebase derzeit nicht erreichbar');
-        retryDelay = Math.min(retryDelay * 2, 30000);
-      }
-    } finally {
-      saving = false;
-      if (dirty && !pendingRemote) scheduleSave(retryDelay);
-    }
-  }
-
-  async function watchRemote(familyId) {
+  function resetRemoteContext() {
     unsubscribeRemote?.();
-    unsubscribeRemote = await cloudRepository.watchDraftMetadata(familyId, metadata => {
-      if (!metadata || metadata.revision <= remoteRevision || destroyed) return;
-      if (saving && metadata.updatedBy === user?.uid && metadata.revision === remoteRevision + 1) return;
-      void cloudRepository.loadDraft(familyId).then(record => {
-        if (!record || record.revision <= remoteRevision || destroyed) return;
-        if (dirty || saving) {
-          pendingRemote = record;
-          renderStatus('conflict', 'Neue Cloud-Fassung vorhanden · Entscheidung erforderlich');
-          return;
-        }
-        applyRemote(record);
-      }).catch(() => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokal verfügbar'));
-    }, () => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokal verfügbar'));
+    unsubscribeRemote = null;
+    connectedFamilyId = '';
+    remoteBase = null;
+    remoteRevision = 0;
+    connecting = false;
+    connectionPromise = null;
   }
 
-  function applyRemote(record) {
-    if (!record) return;
+  function identityBlockMessage() {
+    if (!identityChangeBlock) return '';
+    if (identityChangeBlock.sameIdCollision) {
+      return `Die neue Familie verwendet bereits die online gebundene ID „${identityChangeBlock.fromFamilyId}“. Bitte eine andere Familien-ID wählen.`;
+    }
+    return `Familien-ID geändert · Cloud-Migration erforderlich (${identityChangeBlock.fromFamilyId} → ${identityChangeBlock.toFamilyId})`;
+  }
+
+  function rememberIdentityCollision({ familyId, baseRevision, originalFamily, active = true }) {
+    if (!familyId || !originalFamily) return null;
+    const provenance = Object.freeze({
+      familyId,
+      baseRevision: Math.max(0, Number(baseRevision || 0)),
+      originalFamily,
+      active: active === true
+    });
+    identityCollisionProvenances.set(familyId, provenance);
+    return provenance;
+  }
+
+  function loadIdentityCollision(familyId) {
+    const remembered = identityCollisionProvenances.get(familyId);
+    if (remembered) return remembered;
+    const draft = localRepository.loadDraft?.(familyId);
+    if (!draft?.identityCollision || !draft.baseFamily) return null;
+    return rememberIdentityCollision({
+      familyId,
+      baseRevision: draft.baseRevision,
+      originalFamily: draft.baseFamily,
+      active: true
+    });
+  }
+
+  function updateIdentityCollision(provenance, active) {
+    return rememberIdentityCollision({ ...provenance, active });
+  }
+
+  function createIdentityCollisionBlock(provenance) {
+    if (!provenance?.active) return null;
+    return Object.freeze({
+      fromFamilyId: provenance.familyId,
+      toFamilyId: provenance.familyId,
+      baseRevision: provenance.baseRevision,
+      sameIdCollision: true,
+      originalFamily: provenance.originalFamily
+    });
+  }
+
+  function activateFamilyContext(family, {
+    changed = false,
+    allowNewIdentity = false,
+    source = ''
+  } = {}) {
+    const nextFamilyId = family.document.id;
+    if (nextFamilyId === activeFamilyId) {
+      let collisionProvenance = loadIdentityCollision(activeFamilyId);
+      if (allowNewIdentity && Math.max(remoteRevision, localBaseRevision) > 0) {
+        const previousLocalFamily = localRepository.loadDraft?.(activeFamilyId)?.family;
+        collisionProvenance = rememberIdentityCollision({
+          familyId: activeFamilyId,
+          baseRevision: Math.max(remoteRevision, localBaseRevision),
+          originalFamily: (collisionProvenance?.active ? collisionProvenance.originalFamily : previousLocalFamily)
+            || collisionProvenance?.originalFamily
+            || remoteBase,
+          active: true
+        });
+      } else if (collisionProvenance && source === 'history-undo'
+        && sameFamily(collisionProvenance.originalFamily, family)) {
+        collisionProvenance = updateIdentityCollision(collisionProvenance, false);
+      } else if (collisionProvenance && source === 'history-redo') {
+        collisionProvenance = updateIdentityCollision(
+          collisionProvenance,
+          !sameFamily(collisionProvenance.originalFamily, family)
+        );
+      }
+      if (collisionProvenance) {
+        identityChangeBlock = createIdentityCollisionBlock(collisionProvenance);
+      }
+      return false;
+    }
+    const previousFamilyId = activeFamilyId;
+    const previousBaseRevision = Math.max(remoteRevision, localBaseRevision);
+    const originalCloudFamilyId = identityChangeBlock?.fromFamilyId || previousFamilyId;
+    const originalCloudRevision = identityChangeBlock?.baseRevision || previousBaseRevision;
+    let returnedToCloudIdentity = false;
+    let nextCollisionProvenance = loadIdentityCollision(nextFamilyId);
+    if (nextCollisionProvenance && source === 'history-undo'
+      && sameFamily(nextCollisionProvenance.originalFamily, family)) {
+      nextCollisionProvenance = updateIdentityCollision(nextCollisionProvenance, false);
+    } else if (nextCollisionProvenance && source === 'history-redo') {
+      nextCollisionProvenance = updateIdentityCollision(
+        nextCollisionProvenance,
+        !sameFamily(nextCollisionProvenance.originalFamily, family)
+      );
+    }
+    if (nextCollisionProvenance) {
+      identityChangeBlock = createIdentityCollisionBlock(nextCollisionProvenance);
+      returnedToCloudIdentity = true;
+    } else if (identityChangeBlock && nextFamilyId === originalCloudFamilyId) {
+      identityChangeBlock = null;
+      returnedToCloudIdentity = true;
+    } else if (identityChangeBlock?.sameIdCollision) {
+      // Eine ausdrückliche Neuanlage, die nur mit einer bereits cloudgebundenen
+      // ID kollidierte, wird durch die verlangte neue ID zu einer eigenen Akte.
+      // Die alte Provenienz bleibt im Speicher, damit Undo zur kollidierenden ID
+      // die Sperre zuverlässig wiederherstellt.
+      identityChangeBlock = null;
+    } else if (changed && !allowNewIdentity && (identityChangeBlock || previousBaseRevision > 0)) {
+      identityChangeBlock = Object.freeze({
+        fromFamilyId: originalCloudFamilyId,
+        toFamilyId: nextFamilyId,
+        baseRevision: originalCloudRevision
+      });
+    } else if (allowNewIdentity) {
+      identityChangeBlock = null;
+    }
+    contextVersion += 1;
+    resetRemoteContext();
+    activeFamilyId = nextFamilyId;
+    originFamily = resolveOriginFamily(nextFamilyId);
+    const existingDraft = localRepository.loadDraft?.(nextFamilyId) || null;
+    if (changed && existingDraft?.dirty && !sameFamily(existingDraft.family, family)) {
+      localRepository.archiveDraft?.(nextFamilyId, 'family-id-reused');
+    }
+    localBaseRevision = identityChangeBlock?.toFamilyId === nextFamilyId
+      ? originalCloudRevision
+      : returnedToCloudIdentity
+        ? Number(existingDraft?.baseRevision || previousBaseRevision)
+        : changed
+          ? 0
+          : Number(existingDraft?.baseRevision || 0);
+    dirty = changed || existingDraft?.dirty === true;
+    return true;
+  }
+
+  function applyRemote(record, { priority = false, message = '' } = {}) {
+    if (!record || record.family.document.id !== activeFamilyId) return false;
     remoteBase = record.family;
     remoteRevision = record.revision;
-    pendingRemote = null;
+    localBaseRevision = record.revision;
+    connectedFamilyId = activeFamilyId;
     dirty = false;
-    store.replaceFamily(record.family, { source: 'firebase-sync' });
-    persistLocally(record.family);
-    renderStatus('synced', `Cloud geladen · Revision ${remoteRevision}`);
+    store.synchronizeFamily(record.family, { source: priority ? 'firebase-priority' : 'firebase-sync' });
+    localRepository.markSynced?.(record.family, record.revision);
+    renderStatus(
+      'synced',
+      message || `${priority ? 'Neuere Firebase-Fassung übernommen' : 'Firebase-Fassung geladen'} · Revision ${remoteRevision}`
+    );
+    return true;
   }
 
-  async function connectCurrentFamily() {
-    if (!editing || !user) return;
-    const localFamily = store.getState().family;
+  async function watchRemote(familyId, version) {
+    const unsubscribe = await cloudRepository.watchDraftMetadata(familyId, metadata => {
+      if (!metadata || metadata.revision <= remoteRevision || destroyed || version !== contextVersion) return;
+      if (saving && metadata.updatedBy === user?.uid && metadata.revision === remoteRevision + 1) return;
+      void cloudRepository.loadDraft(familyId).then(record => {
+        if (!record || record.revision <= remoteRevision || destroyed || version !== contextVersion) return;
+        if (dirty) localRepository.archiveDraft?.(familyId, 'newer-firebase-revision');
+        applyRemote(record, {
+          priority: true,
+          message: `Neuere Firebase-Fassung hatte Vorrang · Revision ${record.revision}`
+        });
+      }).catch(() => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokaler Entwurf bleibt erhalten'));
+    }, () => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokaler Entwurf bleibt erhalten'));
+    if (destroyed || version !== contextVersion || familyId !== activeFamilyId) {
+      unsubscribe?.();
+      return;
+    }
+    unsubscribeRemote?.();
+    unsubscribeRemote = unsubscribe;
+  }
+
+  async function performConnect({ forceRemote = false } = {}) {
+    if (!editing || !user || destroyed) return false;
+    const familyAtStart = store.getState().family;
+    const familyId = familyAtStart.document.id;
+    if (familyId !== activeFamilyId) activateFamilyContext(familyAtStart);
+    const version = ++contextVersion;
     renderStatus('loading', 'Firebase-Fassung wird geprüft …');
     try {
-      const remote = await cloudRepository.loadDraft(localFamily.document.id);
+      const remote = await cloudRepository.loadDraft(familyId);
+      if (destroyed || version !== contextVersion || familyId !== activeFamilyId) return false;
+      connectedFamilyId = familyId;
+      const localDraft = localRepository.loadDraft?.(familyId);
       if (!remote) {
         remoteBase = null;
         remoteRevision = 0;
+        localBaseRevision = 0;
         dirty = true;
-        scheduleSave();
-      } else if (sameFamily(remote.family, localFamily)) {
+        const locallySaved = persistLocally(store.getState().family, { baseRevision: 0, dirty: true, render: false });
+        renderStatus(
+          locallySaved ? 'pending' : 'error',
+          locallySaved
+            ? 'Lokal gespeichert · noch nicht online angelegt'
+            : 'Lokaler Entwurf konnte nicht gesichert werden'
+        );
+      } else {
         remoteBase = remote.family;
         remoteRevision = remote.revision;
-        dirty = false;
-        renderStatus('synced', `Cloud verbunden · Revision ${remoteRevision}`);
-      } else {
-        pendingRemote = remote;
-        renderStatus('conflict', 'Lokale und Cloud-Fassung unterscheiden sich');
+        const hasLocalChanges = localDraft?.dirty === true
+          && !sameFamily(localDraft.family, remote.family);
+        const localIsBasedOnRemote = Number(localDraft?.baseRevision || 0) === remote.revision
+          || (
+            Number(localDraft?.baseRevision || 0) === 0
+            && localDraft?.baseFamily
+            && sameFamily(localDraft.baseFamily, remote.family)
+          );
+        if (hasLocalChanges && localIsBasedOnRemote && !forceRemote) {
+          localBaseRevision = remote.revision;
+          dirty = true;
+          const locallySaved = persistLocally(store.getState().family, {
+            baseRevision: remote.revision,
+            dirty: true,
+            render: false
+          });
+          renderStatus(
+            locallySaved ? 'pending' : 'error',
+            locallySaved
+              ? `Lokaler Entwurf · Firebase-Basis Revision ${remote.revision}`
+              : 'Lokaler Entwurf konnte nicht gesichert werden'
+          );
+        } else if (sameFamily(remote.family, store.getState().family)) {
+          localBaseRevision = remote.revision;
+          dirty = false;
+          localRepository.markSynced?.(remote.family, remote.revision);
+          renderStatus('synced', `Online verbunden · Revision ${remote.revision}`);
+        } else {
+          if (hasLocalChanges) localRepository.archiveDraft?.(familyId, 'firebase-priority');
+          applyRemote(remote, {
+            priority: hasLocalChanges,
+            message: hasLocalChanges
+              ? `Firebase-Fassung hatte Vorrang · Revision ${remote.revision}`
+              : `Firebase-Fassung geladen · Revision ${remote.revision}`
+          });
+        }
       }
-      await watchRemote(localFamily.document.id);
+      await watchRemote(familyId, version);
+      return true;
     } catch (error) {
-      renderStatus('offline', 'Nur lokal · Firebase derzeit nicht erreichbar');
+      if (destroyed || version !== contextVersion) return false;
+      connectedFamilyId = '';
+      const message = describeFamilySyncError(error);
+      renderStatus(String(error?.code || '').includes('permission-denied') ? 'error' : 'offline', message);
+      return false;
+    }
+  }
+
+  function connectCurrentFamily(options = {}) {
+    if (connecting && connectionPromise) return connectionPromise;
+    connecting = true;
+    const currentPromise = performConnect(options).finally(() => {
+      if (connectionPromise !== currentPromise) return;
+      connecting = false;
+      connectionPromise = null;
+    });
+    connectionPromise = currentPromise;
+    return connectionPromise;
+  }
+
+  async function saveNow() {
+    if (!editing || destroyed) return false;
+    if (!user) {
+      pendingSaveFamilyId = activeFamilyId;
+      renderStatus('auth', 'Zum Online-Speichern bei Firebase anmelden');
+      ui.open();
+      return false;
+    }
+    if (identityChangeBlock) {
+      throw new Error(identityChangeBlock.sameIdCollision
+        ? identityBlockMessage()
+        : `Die bereits online gespeicherte Familien-ID „${identityChangeBlock.fromFamilyId}“ kann nicht direkt in „${identityChangeBlock.toFamilyId}“ umbenannt werden. Bitte die lokale Umbenennung rückgängig machen; eine Cloud-ID-Migration benötigt einen eigenen Migrationsschritt.`);
+    }
+    if (saving) return false;
+    if (connecting && connectionPromise) await connectionPromise;
+    const familyId = store.getState().family.document.id;
+    if (familyId !== activeFamilyId) activateFamilyContext(store.getState().family, { changed: true });
+    if (connectedFamilyId !== activeFamilyId) {
+      const connected = await connectCurrentFamily();
+      if (!connected) throw new Error('Firebase konnte vor dem Speichern nicht geprüft werden. Der Entwurf bleibt lokal erhalten.');
+    }
+    const familyToSave = store.getState().family;
+    const relatedDrafts = localRepository.listRelatedDrafts?.(activeFamilyId) || [];
+    if (!dirty && !relatedDrafts.length && remoteBase && sameFamily(remoteBase, familyToSave)) {
+      renderStatus('synced', `Online unverändert · Revision ${remoteRevision}`);
+      return true;
+    }
+    if (saving) return false;
+    saving = true;
+    renderStatus(
+      'saving',
+      relatedDrafts.length
+        ? `Speichert ${relatedDrafts.length + 1} verknüpfte Familien atomar …`
+        : 'Wird online gespeichert …'
+    );
+    try {
+      const primaryRecord = {
+        family: familyToSave,
+        baseFamily: remoteBase,
+        expectedRevision: remoteRevision
+      };
+      let savedRecords;
+      if (relatedDrafts.length) {
+        if (typeof cloudRepository.saveDraftBatch !== 'function') {
+          throw new Error('Der atomare Online-Speicher für verknüpfte Familien ist nicht verfügbar. Es wurde nichts hochgeladen.');
+        }
+        const relatedRecords = [];
+        for (const draft of relatedDrafts) {
+          const relatedFamilyId = draft.family.document.id;
+          if (draft.cloudFamilyId && draft.cloudFamilyId !== relatedFamilyId) {
+            throw new Error(`Die verknüpfte Familie „${relatedFamilyId}“ wartet auf eine Cloud-ID-Migration. Es wurde nichts hochgeladen.`);
+          }
+          const remote = await cloudRepository.loadDraft(relatedFamilyId);
+          if (!remote) {
+            if (draft.baseRevision > 0) {
+              throw new FamilyRevisionConflictError(draft.baseRevision, 0, relatedFamilyId);
+            }
+            relatedRecords.push({ family: draft.family, baseFamily: null, expectedRevision: 0 });
+            continue;
+          }
+          const revisionMatches = draft.baseRevision === remote.revision;
+          const baselineMatches = draft.baseRevision === 0
+            && draft.baseFamily
+            && sameFamily(draft.baseFamily, remote.family);
+          if (!revisionMatches && !baselineMatches) {
+            throw new FamilyRevisionConflictError(draft.baseRevision, remote.revision, relatedFamilyId);
+          }
+          relatedRecords.push({
+            family: draft.family,
+            baseFamily: remote.family,
+            expectedRevision: remote.revision
+          });
+        }
+        const batchRecords = [primaryRecord, ...relatedRecords];
+        assertMirroredCrossFamilyBatch(batchRecords);
+        savedRecords = await cloudRepository.saveDraftBatch(batchRecords);
+      } else {
+        assertMirroredCrossFamilyBatch([primaryRecord]);
+        savedRecords = [await cloudRepository.saveDraft(primaryRecord)];
+      }
+      const result = savedRecords[0];
+      if (familyToSave.document.id !== activeFamilyId) return false;
+      remoteBase = result.family;
+      remoteRevision = result.revision;
+      localBaseRevision = result.revision;
+      dirty = !sameFamily(store.getState().family, familyToSave);
+      const finalizedRelatedBatch = savedRecords.length > 1 && !dirty
+        ? localRepository.markDraftsSynced?.(savedRecords, activeFamilyId) === true
+        : false;
+      if (!finalizedRelatedBatch) {
+        savedRecords.slice(1).forEach(saved => {
+          localRepository.markDraftSynced?.(saved.family, saved.revision);
+        });
+      }
+      if (dirty) {
+        const locallySaved = persistLocally(store.getState().family, {
+          baseRevision: result.revision,
+          dirty: true,
+          render: false
+        });
+        renderStatus(
+          locallySaved ? 'pending' : 'error',
+          locallySaved
+            ? 'Online gespeichert · weitere lokale Änderungen ausstehend'
+            : 'Online gespeichert · neuer lokaler Entwurf konnte nicht gesichert werden'
+        );
+      } else {
+        if (!finalizedRelatedBatch) {
+          localRepository.markSynced?.(result.family, result.revision);
+        }
+        renderStatus(
+          'synced',
+          savedRecords.length > 1
+            ? `${savedRecords.length} verknüpfte Familien online gespeichert · Revision ${remoteRevision}`
+            : `Online gespeichert · Revision ${remoteRevision}`
+        );
+      }
+      return !dirty;
+    } catch (error) {
+      if (error instanceof FamilyRevisionConflictError) {
+        if (error.familyId && error.familyId !== familyToSave.document.id) {
+          const message = `Die Firebase-Fassung der verknüpften Familie „${error.familyId}“ ist neuer. Keine der Familien wurde online verändert; bitte diese Familie zuerst öffnen und abgleichen.`;
+          renderStatus('pending', message);
+          throw new Error(message, { cause: error });
+        }
+        let latest = null;
+        try {
+          latest = await cloudRepository.loadDraft(familyToSave.document.id);
+        } catch (loadError) {
+          const message = describeFamilySyncError(loadError);
+          renderStatus('offline', message);
+          throw new Error(message, { cause: loadError });
+        }
+        if (latest) {
+          localRepository.archiveDraft?.(familyToSave.document.id, 'revision-conflict');
+          applyRemote(latest, {
+            priority: true,
+            message: `Firebase war neuer und hatte Vorrang · Revision ${latest.revision}`
+          });
+          return false;
+        }
+      }
+      const message = describeFamilySyncError(error);
+      renderStatus(String(error?.code || '').includes('permission-denied') ? 'error' : 'offline', message);
+      throw new Error(message, { cause: error });
+    } finally {
+      saving = false;
     }
   }
 
   async function onAuthChanged(nextUser) {
     user = nextUser;
-    pendingRemote = null;
-    remoteBase = null;
-    remoteRevision = 0;
-    unsubscribeRemote?.();
-    unsubscribeRemote = null;
+    resetRemoteContext();
+    contextVersion += 1;
     if (!user) {
-      dirty = false;
-      renderStatus('local', 'Lokal gespeichert · nicht mit Firebase verbunden');
+      renderStatus(dirty ? 'pending' : 'local', dirty
+        ? 'Lokal gespeichert · online ungespeichert'
+        : 'Lokal gespeichert · nicht mit Firebase verbunden');
+      return;
+    }
+    if (identityChangeBlock) {
+      renderStatus('error', identityBlockMessage());
       return;
     }
     renderStatus('loading', `Angemeldet als ${user.email || 'Firebase-Konto'}`);
-    await connectCurrentFamily();
+    const connected = await connectCurrentFamily();
+    if (pendingSaveFamilyId === activeFamilyId) {
+      pendingSaveFamilyId = '';
+      if (connected && dirty) await saveNow();
+    } else if (pendingSaveFamilyId) {
+      pendingSaveFamilyId = '';
+    }
   }
 
   function onStoreChange(state, event) {
     if (!event?.affectsFamily) return;
-    persistLocally(state.family);
-    if (!editing || !user || event.details?.source === 'firebase-sync') return;
+    const source = event.details?.source || event.type;
+    const changedFamily = state.family;
+    const counterpartFamily = event.details?.counterpartFamily;
+    const relatedSaved = counterpartFamily
+      ? localRepository.persistRelatedChanges?.([
+        { family: changedFamily, baseFamily: event.details?.currentBaseFamily || null },
+        { family: counterpartFamily, baseFamily: event.details?.counterpartBaseFamily || null }
+      ]) !== false
+      : true;
+    const familyChanged = activateFamilyContext(changedFamily, {
+      changed: !REMOTE_SOURCES.has(source),
+      allowNewIdentity: NEW_FAMILY_SOURCES.has(source),
+      source
+    });
+    if (REMOTE_SOURCES.has(source)) {
+      persistLocally(changedFamily, { dirty: false, baseRevision: remoteRevision, render: false });
+      return;
+    }
     dirty = true;
-    renderStatus('pending', 'Lokal gespeichert · Cloud ausstehend');
-    scheduleSave();
+    const locallySaved = persistLocally(changedFamily, { dirty: true, render: false });
+    if (!locallySaved || !relatedSaved) {
+      renderStatus('error', 'Lokaler Entwurf konnte nicht gesichert werden');
+      return;
+    }
+    renderStatus(
+      identityChangeBlock ? 'error' : 'pending',
+      identityChangeBlock
+        ? identityBlockMessage()
+        : counterpartFamily
+          ? 'Beide verknüpften Familien lokal gespeichert · online ungespeichert'
+          : 'Lokal gespeichert · online ungespeichert'
+    );
+    if (familyChanged && user && !identityChangeBlock) void connectCurrentFamily();
+  }
+
+  async function resetToOrigin() {
+    if (!originFamily) throw new Error('Für diese Familie gibt es keine Projekt-Ursprungsfassung.');
+    const confirmed = runtime.confirm?.('Lokalen Arbeitsstand auf die unveränderte Projekt-Ursprungsfassung zurücksetzen? Die Cloud ändert sich erst beim nächsten Online-Speichern.');
+    if (confirmed === false) return;
+    localRepository.archiveDraft?.(activeFamilyId, 'project-origin-reset');
+    store.replaceFamily(originFamily, { source: 'project-origin-reset' });
+    renderStatus('pending', 'Projekt-Ursprung lokal wiederhergestellt · online ungespeichert');
   }
 
   async function handleAction(action) {
     switch (action) {
+      case 'cloud-save':
+        await saveNow();
+        break;
       case 'open-cloud-login':
       case 'open-cloud-account':
         ui.open();
         break;
       case 'close-cloud-account':
+        pendingSaveFamilyId = '';
         ui.close();
+        break;
+      case 'cloud-reset-origin':
+        await resetToOrigin();
         break;
       case 'cloud-logout':
         await authService.logout();
         ui.close();
         break;
-      case 'use-cloud-version':
-        if (pendingRemote) applyRemote(pendingRemote);
-        ui.close();
-        break;
-      case 'overwrite-cloud-version':
-        if (!pendingRemote) return;
-        remoteBase = pendingRemote.family;
-        remoteRevision = pendingRemote.revision;
-        pendingRemote = null;
-        dirty = true;
-        ui.close();
-        scheduleSave();
-        break;
       case 'retry-cloud-sync':
-        await connectCurrentFamily();
+        if (dirty && runtime.confirm?.('Die aktuelle lokale Fassung verwerfen und die Firebase-Fassung neu laden? Der lokale Stand wird als Wiederherstellungskopie archiviert.') === false) break;
+        await connectCurrentFamily({ forceRemote: true });
         break;
       case 'cloud-publish': {
-        await saveNow();
-        if (dirty || pendingRemote || saving) throw new Error('Vor der Veröffentlichung muss die Cloud-Fassung konfliktfrei gespeichert sein.');
+        if (!user) {
+          ui.open();
+          throw new Error('Zum Veröffentlichen zuerst bei Firebase anmelden.');
+        }
+        if (dirty || saving || connectedFamilyId !== activeFamilyId || remoteRevision < 1) {
+          throw new Error('Bitte die lokale Fassung zuerst mit „Online speichern“ sichern.');
+        }
+        if (publishing) break;
+        publishing = true;
         renderStatus('publishing', 'Öffentliche Fassung wird erstellt …');
-        const published = await cloudRepository.publishDraft({
-          familyId: store.getState().family.document.id,
-          expectedRevision: remoteRevision
-        });
-        renderStatus('synced', `Veröffentlicht · Revision ${published.revision}`);
-        ui.close();
+        try {
+          const published = await cloudRepository.publishDraft({
+            familyId: activeFamilyId,
+            expectedRevision: remoteRevision
+          });
+          renderStatus('synced', `Veröffentlicht · Revision ${published.revision}`);
+          ui.close();
+        } catch (error) {
+          renderStatus('synced', `Private Online-Fassung bleibt gespeichert · Revision ${remoteRevision}`);
+          throw error;
+        } finally {
+          publishing = false;
+        }
         break;
       }
       default:
@@ -220,12 +632,30 @@ export function createFamilySyncController({
     }
   }
 
+  const handledActions = new Set([
+    'cloud-save',
+    'open-cloud-login',
+    'open-cloud-account',
+    'close-cloud-account',
+    'cloud-reset-origin',
+    'cloud-logout',
+    'retry-cloud-sync',
+    'cloud-publish'
+  ]);
+
   function onClick(event) {
-    const actionElement = event.target.closest('[data-action]');
-    if (!actionElement?.dataset.action.startsWith('cloud-')
-      && !['open-cloud-login', 'open-cloud-account', 'close-cloud-account', 'use-cloud-version', 'overwrite-cloud-version', 'retry-cloud-sync'].includes(actionElement?.dataset.action)) return;
+    const actionElement = event.target.closest?.('[data-action]');
+    if (!handledActions.has(actionElement?.dataset.action)) return;
     event.preventDefault();
     void handleAction(actionElement.dataset.action).catch(error => ui.showError(error.message));
+  }
+
+  function onCloudDialogClosed() {
+    if (preservePendingIntentOnClose) {
+      preservePendingIntentOnClose = false;
+      return;
+    }
+    pendingSaveFamilyId = '';
   }
 
   function onSubmit(event) {
@@ -235,18 +665,53 @@ export function createFamilySyncController({
     void authService.login(credentials.email, credentials.password)
       .then(() => {
         ui.clearPassword();
+        preservePendingIntentOnClose = true;
         ui.close();
       })
       .catch(error => ui.showError(error.message));
   }
 
   async function init() {
-    persistLocally(store.getState().family);
+    if (!editing) {
+      renderStatus('local', 'Ansichtsmodus · keine lokalen Änderungen');
+      return;
+    }
+    const initialFamily = store.getState().family;
+    const initialDraft = localRepository.loadDraft?.(activeFamilyId);
+    localBaseRevision = Number(initialDraft?.baseRevision || 0);
+    dirty = initialDraft?.dirty === true;
+    if (initialDraft?.cloudFamilyId && initialDraft.cloudFamilyId !== activeFamilyId) {
+      identityChangeBlock = Object.freeze({
+        fromFamilyId: initialDraft.cloudFamilyId,
+        toFamilyId: activeFamilyId,
+        baseRevision: localBaseRevision
+      });
+    } else if (initialDraft?.identityCollision) {
+      const collisionProvenance = rememberIdentityCollision({
+        familyId: activeFamilyId,
+        baseRevision: localBaseRevision,
+        originalFamily: initialDraft.baseFamily,
+        active: true
+      });
+      identityChangeBlock = createIdentityCollisionBlock(collisionProvenance);
+    }
+    const locallySaved = persistLocally(initialFamily, { baseRevision: localBaseRevision, dirty, render: false });
+    renderStatus(
+      locallySaved && !identityChangeBlock ? (dirty ? 'pending' : 'local') : 'error',
+      !locallySaved
+        ? 'Lokaler Entwurf konnte nicht gesichert werden'
+        : identityChangeBlock
+          ? identityBlockMessage()
+          : (dirty ? 'Lokaler Entwurf · online ungespeichert' : 'Lokal gespeichert')
+    );
     unsubscribeStore = store.subscribe(onStoreChange);
     documentRef.addEventListener('click', onClick);
     documentRef.addEventListener('submit', onSubmit);
+    ui.dialog?.addEventListener('close', onCloudDialogClosed);
     try {
-      unsubscribeAuth = await authService.observe(nextUser => void onAuthChanged(nextUser));
+      unsubscribeAuth = await authService.observe(nextUser => {
+        void onAuthChanged(nextUser).catch(error => ui.showError(error.message));
+      });
     } catch (error) {
       renderStatus('offline', 'Nur lokal · Firebase konnte nicht gestartet werden');
     }
@@ -254,13 +719,30 @@ export function createFamilySyncController({
 
   function destroy() {
     destroyed = true;
-    cancelScheduledSave();
+    contextVersion += 1;
     documentRef.removeEventListener('click', onClick);
     documentRef.removeEventListener('submit', onSubmit);
+    ui.dialog?.removeEventListener('close', onCloudDialogClosed);
     unsubscribeStore?.();
     unsubscribeAuth?.();
     unsubscribeRemote?.();
   }
 
-  return Object.freeze({ init, destroy, saveNow });
+  return Object.freeze({
+    init,
+    destroy,
+    saveNow,
+    resetToOrigin,
+    getSyncState: () => Object.freeze({
+      familyId: activeFamilyId,
+      connectedFamilyId,
+      remoteRevision,
+      localBaseRevision,
+      dirty,
+      saving,
+      publishing,
+      identityChangeBlock,
+      user
+    })
+  });
 }

@@ -4,20 +4,33 @@ function setText(element, value) {
 
 export function createFamilySyncStatusUi(documentRef = document) {
   const status = documentRef.getElementById('cloud-sync-status');
-  const loginButton = documentRef.querySelector('[data-action="open-cloud-login"]');
+  const saveButton = documentRef.querySelector('[data-action="cloud-save"]');
+  const resetButton = documentRef.querySelector('[data-action="cloud-reset-origin"]');
   const accountButton = documentRef.querySelector('[data-action="open-cloud-account"]');
+  const publishButton = documentRef.querySelector('[data-action="cloud-publish"]');
   const dialog = documentRef.getElementById('cloud-account-dialog');
   const form = documentRef.getElementById('cloud-login-form');
   const error = documentRef.getElementById('cloud-login-error');
+  const accountError = documentRef.getElementById('cloud-account-error');
   const signedOut = documentRef.getElementById('cloud-signed-out');
   const signedIn = documentRef.getElementById('cloud-signed-in');
   const accountEmail = documentRef.getElementById('cloud-account-email');
-  const conflictActions = documentRef.getElementById('cloud-conflict-actions');
+  let currentUser = null;
 
-  function render({ phase, user = null, message = '' }) {
+  function render({ phase, user = null, message = '', dirty = false, canReset = false }) {
+    currentUser = user;
     const signedInUser = Boolean(user);
-    if (loginButton) loginButton.hidden = signedInUser;
     if (accountButton) accountButton.hidden = !signedInUser;
+    if (saveButton) {
+      saveButton.disabled = ['loading', 'saving', 'publishing'].includes(phase);
+      saveButton.textContent = phase === 'saving' ? 'Speichert online …' : 'Online speichern';
+      saveButton.dataset.dirty = dirty ? 'true' : 'false';
+    }
+    if (resetButton) {
+      resetButton.hidden = !canReset;
+      resetButton.disabled = ['loading', 'saving', 'publishing'].includes(phase);
+    }
+    if (publishButton) publishButton.disabled = ['loading', 'saving', 'publishing'].includes(phase);
     if (signedOut) signedOut.hidden = signedInUser;
     if (signedIn) signedIn.hidden = !signedInUser;
     if (accountEmail) accountEmail.textContent = user?.email || user?.displayName || 'Firebase-Konto';
@@ -25,12 +38,12 @@ export function createFamilySyncStatusUi(documentRef = document) {
       status.dataset.phase = phase;
       status.textContent = message || (signedInUser ? 'Cloud verbunden' : 'Nur lokal');
     }
-    if (conflictActions) conflictActions.hidden = phase !== 'conflict';
   }
 
   function open() {
     if (!dialog?.open) dialog?.showModal();
-    error.hidden = true;
+    if (error) error.hidden = true;
+    if (accountError) accountError.hidden = true;
   }
 
   function close() {
@@ -46,8 +59,9 @@ export function createFamilySyncStatusUi(documentRef = document) {
   }
 
   function showError(message) {
-    setText(error, message);
-    error.hidden = false;
+    const target = currentUser ? accountError : error;
+    setText(target, message);
+    if (target) target.hidden = false;
   }
 
   return Object.freeze({

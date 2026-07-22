@@ -6,8 +6,12 @@ import {
   normalizeFamily
 } from '../domain/family-schema.js';
 import { DEFAULT_CREST_FRAME } from '../config/chart-frames.js';
+import {
+  applyExclusivePartnershipChange,
+  isExclusiveActivePartnership
+} from '../modules/relationships/exclusive-partnership-policy.js';
 
-const RELATED_PERSON_KINDS = new Set(['partnership', 'child', 'parent', 'time-jump-child']);
+const RELATED_PERSON_KINDS = new Set(['partnership', 'child', 'parent', 'time-jump-child', 'lineage-gap-child']);
 
 function createSnapshot(family) {
   return cloneValue(family);
@@ -30,7 +34,7 @@ function createPersonRecord(values, id, familyId) {
     lineageRole: values.lineageRole,
     tags: values.tags || [],
     notes: values.notes,
-    extensions: {}
+    extensions: cloneValue(values.extensions || {})
   };
 }
 
@@ -60,6 +64,90 @@ function resolveTimeJumpAnchor(draft, values) {
     parentPartnershipId: partnership?.id || '',
     parentPersonId: partnership ? '' : person.id
   };
+}
+
+function applyTimeJumpParentage(parentage, timeJumpId, anchor, options = {}) {
+  const existingExtensions = cloneValue(parentage.extensions || {});
+  if (!existingExtensions.timeJumpId && options.created !== true) {
+    existingExtensions.timeJumpPrevious = {
+      parentIds: [...parentage.parentIds],
+      partnershipId: parentage.partnershipId,
+      type: parentage.type,
+      legitimacy: parentage.legitimacy,
+      certainty: parentage.certainty,
+      visibility: parentage.visibility,
+      notes: parentage.notes,
+      extensions: cloneValue(parentage.extensions || {})
+    };
+  }
+  parentage.parentIds = [...anchor.parentIds];
+  parentage.partnershipId = anchor.parentPartnershipId;
+  parentage.type = 'claimed';
+  parentage.legitimacy = 'unknown';
+  parentage.certainty = 'probable';
+  parentage.visibility = 'public';
+  parentage.notes = 'Nach einem Zeitsprung wieder belegte Linie.';
+  parentage.extensions = {
+    ...existingExtensions,
+    timeJumpId,
+    ...(options.created === true ? { timeJumpCreated: true } : {})
+  };
+}
+
+function restoreParentageBeforeTimeJump(parentage) {
+  const previous = parentage.extensions?.timeJumpPrevious;
+  if (!previous) return null;
+  Object.assign(parentage, {
+    parentIds: [...previous.parentIds],
+    partnershipId: previous.partnershipId,
+    type: previous.type,
+    legitimacy: previous.legitimacy,
+    certainty: previous.certainty,
+    visibility: previous.visibility,
+    notes: previous.notes,
+    extensions: cloneValue(previous.extensions || {})
+  });
+  return parentage;
+}
+
+function synchronizeTimeJumpParentages(draft, timeJumpId, childIds, anchor) {
+  const selectedChildIds = new Set(childIds);
+  draft.parentages = draft.parentages.flatMap(parentage => {
+    if (parentage.extensions?.timeJumpId !== timeJumpId || selectedChildIds.has(parentage.childId)) {
+      return [parentage];
+    }
+    const restored = restoreParentageBeforeTimeJump(parentage);
+    return restored ? [restored] : [];
+  });
+
+  selectedChildIds.forEach(childId => {
+    let parentage = draft.parentages.find(item => item.extensions?.timeJumpId === timeJumpId && item.childId === childId);
+    if (!parentage) {
+      parentage = draft.parentages.find(item => (
+        item.childId === childId
+        && item.partnershipId === anchor.parentPartnershipId
+        && anchor.parentIds.every(parentId => item.parentIds.includes(parentId))
+      ));
+    }
+    if (parentage) {
+      applyTimeJumpParentage(parentage, timeJumpId, anchor);
+      return;
+    }
+    parentage = {
+      id: createRecordId('parentage', draft.parentages.map(item => item.id)),
+      childId,
+      parentIds: [],
+      partnershipId: '',
+      type: 'claimed',
+      legitimacy: 'unknown',
+      certainty: 'probable',
+      visibility: 'public',
+      notes: '',
+      extensions: {}
+    };
+    applyTimeJumpParentage(parentage, timeJumpId, anchor, { created: true });
+    draft.parentages.push(parentage);
+  });
 }
 
 export function createFamilyStore(initialFamily, options = {}) {
@@ -113,6 +201,21 @@ export function createFamilyStore(initialFamily, options = {}) {
     }, details);
   }
 
+  // Registerübergreifende Transaktionen bilden eine gemeinsame Persistenzgrenze.
+  // Ein lokales Undo dürfte sonst nur diese Akte zurückdrehen und die gespiegelte
+  // Gegenakte inkonsistent zurücklassen; deshalb beginnt danach bewusst eine neue
+  // lokale Historie.
+  function synchronizeFamily(nextFamily, details = {}) {
+    family = assertValidFamily(nextFamily).family;
+    history = [];
+    future = [];
+    if (!family.persons.some(person => person.id === selectedPersonId)) {
+      selectedPersonId = family.view.focusPersonId || family.persons[0]?.id || '';
+    }
+    emit('family-synchronized', details, true);
+    return getState();
+  }
+
   function selectPerson(personId) {
     if (personId && !family.persons.some(person => person.id === personId)) return false;
     selectedPersonId = personId || '';
@@ -144,18 +247,27 @@ export function createFamilyStore(initialFamily, options = {}) {
       draft.persons.push(createPersonRecord(personValues, personId, draft.document.id));
 
       if (relationKind === 'partnership') {
-        draft.partnerships.push({
+        const values = {
           id: createRecordId('partnership', draft.partnerships.map(item => item.id)),
           participantIds: [referencePersonId, personId],
           type: relationValues.partnershipType,
           status: relationValues.partnershipStatus,
-          start: '',
-          end: '',
           certainty: relationValues.certainty,
-          visibility: relationValues.visibility,
-          notes: '',
-          extensions: {}
-        });
+          visibility: relationValues.visibility
+        };
+        if (isExclusiveActivePartnership(values)) {
+          const result = applyExclusivePartnershipChange(draft, values);
+          Object.keys(draft).forEach(key => delete draft[key]);
+          Object.assign(draft, result.family);
+        } else {
+          draft.partnerships.push({
+            ...values,
+            start: '',
+            end: '',
+            notes: '',
+            extensions: {}
+          });
+        }
         return;
       }
 
@@ -196,6 +308,21 @@ export function createFamilyStore(initialFamily, options = {}) {
         timeJump.childIds.push(personId);
       }
 
+      if (relationKind === 'lineage-gap-child') {
+        const founderPartnership = draft.partnerships.find(item => item.id === draft.lineage.founderPartnershipId);
+        if (!draft.lineage.timeGap.enabled || !founderPartnership) {
+          throw new Error('Der Zeitsprung unter dem Stammwappen wurde nicht gefunden.');
+        }
+        if (!founderPartnership.participantIds.includes(referencePersonId)) {
+          throw new Error('Der Haus-Zeitsprung gehört nicht zur ausgewählten Person.');
+        }
+        parentIds = [...founderPartnership.participantIds];
+        partnershipId = founderPartnership.id;
+        parentageType = 'claimed';
+      }
+
+      const followsTimeBarrier = ['time-jump-child', 'lineage-gap-child'].includes(relationKind);
+
       draft.parentages.push({
         id: createRecordId('parentage', draft.parentages.map(item => item.id)),
         childId,
@@ -205,8 +332,12 @@ export function createFamilyStore(initialFamily, options = {}) {
         legitimacy: relationValues.legitimacy,
         certainty: relationValues.certainty,
         visibility: relationValues.visibility,
-        notes: relationKind === 'time-jump-child' ? 'Nach einem Zeitsprung wieder belegte Linie.' : '',
-        extensions: relationKind === 'time-jump-child' ? { timeJumpId: relationValues.timeJumpId } : {}
+        notes: followsTimeBarrier ? 'Nach einem Zeitsprung wieder belegte Linie.' : '',
+        extensions: relationKind === 'time-jump-child'
+          ? { timeJumpId: relationValues.timeJumpId, timeJumpCreated: true }
+          : relationKind === 'lineage-gap-child'
+            ? { lineageTimeGap: true }
+            : {}
       });
     }, { personId, referencePersonId, relationKind });
     selectedPersonId = personId;
@@ -291,6 +422,7 @@ export function createFamilyStore(initialFamily, options = {}) {
   }
 
   function addPartnership(values) {
+    if (isExclusiveActivePartnership(values)) return setExclusivePartnership(values);
     const participantIds = [...new Set(values.participantIds || [])];
     const existing = family.partnerships.find(partnership => (
       partnership.participantIds.length === participantIds.length
@@ -314,6 +446,17 @@ export function createFamilyStore(initialFamily, options = {}) {
       });
     }, { partnershipId: id });
     return id;
+  }
+
+  function setExclusivePartnership(values) {
+    let resultPlan = null;
+    commit('exclusive-partnership-set', draft => {
+      const result = applyExclusivePartnershipChange(draft, values);
+      resultPlan = result.plan;
+      Object.keys(draft).forEach(key => delete draft[key]);
+      Object.assign(draft, result.family);
+    }, { participantIds: [...new Set(values.participantIds || [])], type: values.type });
+    return resultPlan;
   }
 
   function updatePartnership(partnershipId, values) {
@@ -421,6 +564,19 @@ export function createFamilyStore(initialFamily, options = {}) {
     });
   }
 
+  function setLineageTimeGap(values) {
+    return commit('lineage-time-gap-updated', draft => {
+      draft.lineage.timeGap = {
+        ...draft.lineage.timeGap,
+        enabled: values.enabled === true,
+        years: Number(values.years || 0),
+        fromYear: values.fromYear || '',
+        toYear: values.toYear || '',
+        label: values.label || 'Nicht einzeln überlieferte Generationen'
+      };
+    });
+  }
+
   function setLineageOrigin(values) {
     return commit('lineage-origin-updated', draft => {
       draft.lineage.originHouse = {
@@ -497,26 +653,7 @@ export function createFamilyStore(initialFamily, options = {}) {
         notes: values.notes || '',
         extensions: {}
       });
-      [...new Set(values.childIds || [])].forEach(childId => {
-        const alreadyConnected = draft.parentages.some(parentage => (
-          parentage.childId === childId
-          && parentage.partnershipId === anchor.parentPartnershipId
-          && anchor.parentIds.every(parentId => parentage.parentIds.includes(parentId))
-        ));
-        if (alreadyConnected) return;
-        draft.parentages.push({
-          id: createRecordId('parentage', draft.parentages.map(item => item.id)),
-          childId,
-          parentIds: anchor.parentIds,
-          partnershipId: anchor.parentPartnershipId,
-          type: 'claimed',
-          legitimacy: 'unknown',
-          certainty: 'probable',
-          visibility: 'public',
-          notes: 'Nach einem Zeitsprung wieder belegte Linie.',
-          extensions: { timeJumpId: id }
-        });
-      });
+      synchronizeTimeJumpParentages(draft, id, [...new Set(values.childIds || [])], anchor);
     }, { timeJumpId: id });
     return id;
   }
@@ -526,29 +663,29 @@ export function createFamilyStore(initialFamily, options = {}) {
       const timeJump = draft.timeJumps.find(item => item.id === timeJumpId);
       if (!timeJump) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
       const anchor = resolveTimeJumpAnchor(draft, values);
+      const childIds = [...new Set(values.childIds || timeJump.childIds)];
       Object.assign(timeJump, {
         parentPartnershipId: anchor.parentPartnershipId,
         parentPersonId: anchor.parentPersonId,
-        childIds: [...new Set(values.childIds || timeJump.childIds)],
+        childIds,
         years: Number(values.years || 0),
         fromYear: values.fromYear || '',
         toYear: values.toYear || '',
         label: values.label,
         notes: values.notes || ''
       });
-      draft.parentages
-        .filter(parentage => parentage.extensions?.timeJumpId === timeJumpId)
-        .forEach(parentage => {
-          parentage.parentIds = anchor.parentIds;
-          parentage.partnershipId = anchor.parentPartnershipId;
-        });
+      synchronizeTimeJumpParentages(draft, timeJumpId, childIds, anchor);
     }, { timeJumpId });
   }
 
   function deleteTimeJump(timeJumpId) {
     return commit('time-jump-deleted', draft => {
       draft.timeJumps = draft.timeJumps.filter(timeJump => timeJump.id !== timeJumpId);
-      draft.parentages = draft.parentages.filter(parentage => parentage.extensions?.timeJumpId !== timeJumpId);
+      draft.parentages = draft.parentages.flatMap(parentage => {
+        if (parentage.extensions?.timeJumpId !== timeJumpId) return [parentage];
+        const restored = restoreParentageBeforeTimeJump(parentage);
+        return restored ? [restored] : [];
+      });
     }, { timeJumpId });
   }
 
@@ -578,6 +715,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     getState,
     subscribe,
     replaceFamily,
+    synchronizeFamily,
     selectPerson,
     addPerson,
     addRelatedPerson,
@@ -586,6 +724,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     setFamilyExtension,
     deletePerson,
     addPartnership,
+    setExclusivePartnership,
     updatePartnership,
     addParentage,
     updateParentage,
@@ -594,6 +733,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     updateDocument,
     setRelationshipColors,
     setLineage,
+    setLineageTimeGap,
     setLineageOrigin,
     addCadetBranch,
     updateCadetBranch,

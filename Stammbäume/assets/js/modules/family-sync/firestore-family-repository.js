@@ -15,15 +15,9 @@ import {
   familyFromRepositoryRecords,
   summarizeFamilyChangeSet
 } from './family-change-set.js';
+import { FamilyRevisionConflictError } from './family-sync-errors.js';
 
-export class FamilyRevisionConflictError extends Error {
-  constructor(expectedRevision, actualRevision) {
-    super(`Der Stammbaum wurde zwischenzeitlich geändert (lokal ${expectedRevision}, Server ${actualRevision}).`);
-    this.name = 'FamilyRevisionConflictError';
-    this.expectedRevision = expectedRevision;
-    this.actualRevision = actualRevision;
-  }
-}
+export { FamilyRevisionConflictError } from './family-sync-errors.js';
 
 function workspaceRef(db, familyId) {
   return doc(db, 'familyWorkspaces', familyId);
@@ -74,58 +68,93 @@ export function createFirestoreFamilyRepository(firebaseClient) {
     return repositoryRecord(snapshot, familyFromRepositoryRecords(snapshot.data(), entities));
   }
 
-  async function saveDraft({ family, baseFamily = null, expectedRevision = 0 }) {
+  async function saveDraftBatch(records) {
     const { auth, db } = await services();
     const actor = auth.currentUser;
     if (!actor) throw new Error('Zum Speichern in Firebase ist eine Anmeldung erforderlich.');
-    assertFamilyId(family?.document?.id);
-    const changeSet = createFamilyChangeSet(baseFamily, family);
-    if (changeSet.operationCount > 480) {
-      throw new Error('Diese Änderung ist zu groß für einen einzelnen sicheren Speichervorgang. Bitte in kleinere Schritte teilen.');
-    }
-    const reference = workspaceRef(db, changeSet.family.document.id);
-    const nextRevision = await runTransaction(db, async transaction => {
-      const current = await transaction.get(reference);
-      const actualRevision = current.exists() ? Number(current.data().revision || 0) : 0;
-      if (actualRevision !== expectedRevision) {
-        throw new FamilyRevisionConflictError(expectedRevision, actualRevision);
-      }
-      const revision = actualRevision + 1;
-      const now = serverTimestamp();
-      transaction.set(reference, {
-        ...changeSet.root,
-        familyId: changeSet.family.document.id,
-        title: changeSet.family.document.title,
-        lifecycle: 'draft',
-        revision,
-        createdAt: current.exists() ? current.data().createdAt : now,
-        createdBy: current.exists() ? current.data().createdBy : actor.uid,
-        updatedAt: now,
-        updatedBy: actor.uid
+    const prepared = records.map(record => {
+      assertFamilyId(record.family?.document?.id);
+      const changeSet = createFamilyChangeSet(record.baseFamily || null, record.family);
+      return Object.freeze({
+        changeSet,
+        expectedRevision: Math.max(0, Number(record.expectedRevision || 0)),
+        reference: workspaceRef(db, changeSet.family.document.id)
       });
-      if (!current.exists()) {
-        transaction.set(doc(reference, 'members', actor.uid), {
-          role: 'admin',
-          uid: actor.uid,
-          email: actor.email || '',
-          createdAt: now,
-          updatedAt: now
-        });
-      }
-      FAMILY_ENTITY_COLLECTIONS.forEach(collectionName => {
-        const changes = changeSet.collections[collectionName];
-        changes.upsert.forEach(record => transaction.set(doc(reference, collectionName, record.id), record));
-        changes.remove.forEach(recordId => transaction.delete(doc(reference, collectionName, recordId)));
-      });
-      transaction.set(doc(reference, 'changeSets', String(revision).padStart(10, '0')), {
-        revision,
-        actorId: actor.uid,
-        createdAt: now,
-        changes: summarizeFamilyChangeSet(changeSet)
-      });
-      return revision;
     });
-    return Object.freeze({ revision: nextRevision, family: changeSet.family });
+    if (!prepared.length) return Object.freeze([]);
+    const familyIds = prepared.map(item => item.changeSet.family.document.id);
+    if (new Set(familyIds).size !== familyIds.length) {
+      throw new Error('Eine Familienakte wurde im Online-Speicherpaket doppelt angegeben.');
+    }
+    const estimatedWrites = prepared.reduce((sum, item) => sum + item.changeSet.operationCount + 3, 0);
+    if (estimatedWrites > 480) {
+      throw new Error('Diese Änderungen sind zusammen zu groß für einen atomaren Speichervorgang. Bitte in kleinere Schritte teilen.');
+    }
+    const revisions = await runTransaction(db, async transaction => {
+      const snapshots = [];
+      for (const item of prepared) snapshots.push(await transaction.get(item.reference));
+      snapshots.forEach((current, index) => {
+        const item = prepared[index];
+        const actualRevision = current.exists() ? Number(current.data().revision || 0) : 0;
+        if (actualRevision !== item.expectedRevision) {
+          throw new FamilyRevisionConflictError(
+            item.expectedRevision,
+            actualRevision,
+            item.changeSet.family.document.id
+          );
+        }
+      });
+      const now = serverTimestamp();
+      const nextRevisions = [];
+      prepared.forEach((item, index) => {
+        const { changeSet, reference } = item;
+        const current = snapshots[index];
+        const actualRevision = current.exists() ? Number(current.data().revision || 0) : 0;
+        const revision = actualRevision + 1;
+        nextRevisions.push(revision);
+        transaction.set(reference, {
+          ...changeSet.root,
+          familyId: changeSet.family.document.id,
+          title: changeSet.family.document.title,
+          lifecycle: 'draft',
+          revision,
+          createdAt: current.exists() ? current.data().createdAt : now,
+          createdBy: current.exists() ? current.data().createdBy : actor.uid,
+          updatedAt: now,
+          updatedBy: actor.uid
+        });
+        if (!current.exists()) {
+          transaction.set(doc(reference, 'members', actor.uid), {
+            role: 'admin',
+            uid: actor.uid,
+            email: actor.email || '',
+            createdAt: now,
+            updatedAt: now
+          });
+        }
+        FAMILY_ENTITY_COLLECTIONS.forEach(collectionName => {
+          const changes = changeSet.collections[collectionName];
+          changes.upsert.forEach(record => transaction.set(doc(reference, collectionName, record.id), record));
+          changes.remove.forEach(recordId => transaction.delete(doc(reference, collectionName, recordId)));
+        });
+        transaction.set(doc(reference, 'changeSets', String(revision).padStart(10, '0')), {
+          revision,
+          actorId: actor.uid,
+          createdAt: now,
+          changes: summarizeFamilyChangeSet(changeSet)
+        });
+      });
+      return nextRevisions;
+    });
+    return Object.freeze(prepared.map((item, index) => Object.freeze({
+      revision: revisions[index],
+      family: item.changeSet.family
+    })));
+  }
+
+  async function saveDraft(record) {
+    const [result] = await saveDraftBatch([record]);
+    return result;
   }
 
   async function loadPublished(familyId) {
@@ -182,6 +211,7 @@ export function createFirestoreFamilyRepository(firebaseClient) {
     kind: 'firestore',
     loadDraft,
     saveDraft,
+    saveDraftBatch,
     loadPublished,
     listPublishedRegistry,
     watchDraftMetadata,

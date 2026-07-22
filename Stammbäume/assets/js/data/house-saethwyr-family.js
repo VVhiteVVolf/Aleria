@@ -148,7 +148,7 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
 
     // Kinder Gruffyds und Mennas
     person('gallgoid-saethwyr', 'Gallgoid', 'male', '1648', '1720'),
-    person('dolena-saethwyr', 'Dolena', 'female', '1652'),
+    person('dolena-saethwyr', 'Dolena', 'female', '1652', '????'),
     person('gwenllian-saethwyr', 'Gwenllian', 'female', '1650', '1720'),
     person('padrig-saethwyr', 'Padrig', 'male', '1654', '1720'),
     person('selyse-gwefrydd', 'Selyse Gwefrydd', 'female', '1651', '1705', 'house-gwefrydd'),

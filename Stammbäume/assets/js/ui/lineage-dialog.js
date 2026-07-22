@@ -1,5 +1,4 @@
 import { fillCrestFrameSelect } from './crest-frame-options.js';
-import { earliestKnownBirthYear, latestKnownPersonYear } from '../domain/time-boundaries.js';
 
 function partnershipLabel(partnership, personById) {
   return partnership.participantIds
@@ -23,10 +22,6 @@ export function createLineageDialog(documentRef = document) {
   function open(family) {
     currentFamily = family;
     const personById = new Map(family.persons.map(person => [person.id, person]));
-    const founderPartnership = family.partnerships.find(item => item.id === family.lineage.founderPartnershipId);
-    const descendantIds = family.parentages
-      .filter(parentage => parentage.partnershipId === family.lineage.founderPartnershipId)
-      .map(parentage => parentage.childId);
     partnershipSelect.replaceChildren(new Option('— Kein Gründerpaar —', ''));
     family.partnerships.forEach(partnership => {
       partnershipSelect.add(new Option(partnershipLabel(partnership, personById), partnership.id));
@@ -40,13 +35,6 @@ export function createLineageDialog(documentRef = document) {
     form.elements.namedItem('crestFrameScale').value = String(Math.round(family.lineage.crestFrameScale * 100));
     form.elements.namedItem('crestSubtitle').value = family.lineage.crestSubtitle;
     emblemInput.value = selectedEmblem();
-    form.elements.namedItem('timeGapEnabled').checked = family.lineage.timeGap.enabled;
-    form.elements.namedItem('timeGapFromYear').value = family.lineage.timeGap.fromYear
-      || latestKnownPersonYear(founderPartnership?.participantIds || [], personById);
-    form.elements.namedItem('timeGapToYear').value = family.lineage.timeGap.toYear
-      || earliestKnownBirthYear(descendantIds, personById);
-    form.elements.namedItem('timeGapYears').value = String(family.lineage.timeGap.years || '');
-    form.elements.namedItem('timeGapLabel').value = family.lineage.timeGap.label;
     dialog.showModal();
   }
 
@@ -58,14 +46,7 @@ export function createLineageDialog(documentRef = document) {
       crestFrame: form.elements.namedItem('crestFrame').value,
       crestEmblemScale: Number(form.elements.namedItem('crestEmblemScale').value || 86) / 100,
       crestFrameScale: Number(form.elements.namedItem('crestFrameScale').value || 100) / 100,
-      emblem: emblemInput.value.trim(),
-      timeGap: {
-        enabled: form.elements.namedItem('timeGapEnabled').checked,
-        years: Number(form.elements.namedItem('timeGapYears').value || 0),
-        fromYear: form.elements.namedItem('timeGapFromYear').value.trim(),
-        toYear: form.elements.namedItem('timeGapToYear').value.trim(),
-        label: form.elements.namedItem('timeGapLabel').value.trim()
-      }
+      emblem: emblemInput.value.trim()
     };
   }
 

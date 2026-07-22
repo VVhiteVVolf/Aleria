@@ -8,6 +8,9 @@ import { createFamilyAssetUploadController } from './modules/family-assets/famil
 import { createFamilySyncController } from './modules/family-sync/family-sync-controller.js';
 import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
 import { createLocalFamilyRepository } from './modules/family-sync/local-family-repository.js';
+import { createLatestLocalFamilySource } from './modules/family-sync/latest-local-family-source.js';
+import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js';
+import { applyPublishedFamilyPriority } from './modules/family-sync/published-family-priority.js';
 import { loadFamilyById } from './services/family-library.js';
 import { loadPersistedFamily } from './services/family-persistence.js';
 import {
@@ -35,37 +38,39 @@ if (requestedQuery.get('action') === 'start-tree-generator') {
   cleanedUrl.searchParams.delete('action');
   globalThis.history.replaceState({}, '', cleanedUrl.href);
 }
+const workspaceAccess = resolveWorkspaceAccess(globalThis.location, globalThis.sessionStorage);
 const firebaseClient = createFirebaseClient();
 const cloudRepository = createFirestoreFamilyRepository(firebaseClient);
 const authService = createFirebaseAuthService(firebaseClient);
 const localRepository = createLocalFamilyRepository(globalThis.localStorage);
+const latestLocalFamilySource = createLatestLocalFamilySource({
+  draftRepository: localRepository,
+  storage: globalThis.localStorage
+});
 const assetRepository = createFirebaseAssetRepository(firebaseClient);
 const almanachCharacterRepository = createAlmanachCharacterRepository(firebaseClient);
-let requestedFamily = requestedFamilyId ? loadFamilyById(requestedFamilyId) : null;
-if (requestedFamilyId && !requestedFamily) {
-  try {
-    const published = await cloudRepository.loadPublished(requestedFamilyId);
-    if (published) requestedFamily = { ...published, source: 'firebase' };
-  } catch (error) {
-    console.info('Die veröffentlichte Firebase-Fassung ist derzeit nicht erreichbar.', error);
-  }
-}
+const registeredOrSavedFamily = requestedFamilyId ? loadFamilyById(requestedFamilyId) : null;
+const localDraft = requestedFamilyId ? localRepository.loadDraft(requestedFamilyId) : null;
+const localDraftRecord = localDraft ? { ...localDraft, source: 'local-draft' } : null;
+const requestedFamily = workspaceAccess.mode === WORKSPACE_MODE.edit
+  ? localDraftRecord || registeredOrSavedFamily
+  : registeredOrSavedFamily || localDraftRecord;
 const persistedFamily = loadPersistedFamily();
 const availablePersistedFamily = persistedFamily && !RETIRED_FAMILY_IDS.includes(persistedFamily.document.id)
   ? persistedFamily
   : null;
 const loadedFamily = requestedFamily?.family || availablePersistedFamily || HOUSE_ARWYDD_FAMILY;
-const initialFamily = requestedPersonId && loadedFamily.persons.some(person => person.id === requestedPersonId)
-  ? { ...loadedFamily, view: { ...loadedFamily.view, focusPersonId: requestedPersonId } }
-  : loadedFamily;
-const workspaceAccess = resolveWorkspaceAccess(globalThis.location, globalThis.sessionStorage);
-const store = createFamilyStore(initialFamily);
+const store = createFamilyStore(loadedFamily);
+if (requestedPersonId && loadedFamily.persons.some(person => person.id === requestedPersonId)) {
+  store.selectPerson(requestedPersonId);
+}
 const autoOpenTreeGenerator = workspaceAccess.mode === WORKSPACE_MODE.edit
   && hasPendingTreeGeneratorLaunch(globalThis.sessionStorage);
 const controller = createAppController({
   store,
   almanachCharacterRepository,
   assetRepository,
+  latestLocalFamilySource,
   workspaceMode: workspaceAccess.mode,
   requestEditOnInit: workspaceAccess.shouldRequestPassword,
   autoOpenTreeGenerator
@@ -75,7 +80,8 @@ const syncController = createFamilySyncController({
   localRepository,
   cloudRepository,
   authService,
-  editing: workspaceAccess.mode === 'edit'
+  editing: workspaceAccess.mode === 'edit',
+  resolveOriginFamily: resolveProjectFamilyOrigin
 });
 const assetUploadController = createFamilyAssetUploadController({
   store,
@@ -86,6 +92,17 @@ const assetUploadController = createFamilyAssetUploadController({
 controller.init();
 void syncController.init();
 assetUploadController.init();
+if (workspaceAccess.mode === WORKSPACE_MODE.view && requestedFamilyId) {
+  void applyPublishedFamilyPriority({
+    requestedFamilyId,
+    initialFamilyId: loadedFamily.document.id,
+    store,
+    cloudRepository,
+    onUnavailable(error) {
+      console.info('Die veröffentlichte Firebase-Fassung ist derzeit nicht erreichbar.', error);
+    }
+  });
+}
 globalThis.addEventListener('beforeunload', () => {
   assetUploadController.destroy();
   syncController.destroy();

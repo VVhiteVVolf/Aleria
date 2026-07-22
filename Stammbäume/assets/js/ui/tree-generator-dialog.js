@@ -1,65 +1,23 @@
-import {
-  ALERIA_CURRENT_YEAR,
-  DEFAULT_CHILDBEARING_AGE,
-  DEFAULT_LIFESPAN_YEARS,
-  DEFAULT_MARRIAGE_AGE
-} from '../config/chronology.js';
-import { PORTRAIT_PLACEHOLDERS, resolvePortraitSource } from '../config/portrait-placeholders.js';
+import { resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { fillHouseRankSelect } from './house-profile-fields.js';
 import { escapeHtml } from './dom.js';
+import {
+  defaultGenerationParams,
+  GENERATION_PARAMETER_DEFINITIONS
+} from '../modules/tree-generator/generation-policy.js';
+import { FAMILY_TEMPLATE_DEFINITIONS } from '../modules/tree-generator/family-template-catalog.js';
+import { AUTOMATIC_TEMPLATE_GENERATION_LIMITS } from '../modules/tree-generator/automatic-family-template.js';
+import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
 
-// Deckt die vom User vorgegebene Parameterliste 1:1 ab. "wired: true" beeinflusst
-// die Generierung in dieser Ausbaustufe bereits tatsächlich; "wired: false" ist
-// bewusst nur vorbereitetes Gerüst für eine spätere Ausbaustufe (siehe Plan).
-export const PARAMETER_DEFINITIONS = Object.freeze([
-  { id: 'minChildren', group: 'Familienstruktur', label: 'Mindestanzahl Kinder', kind: 'number', wired: true, defaultValue: 1 },
-  { id: 'maxChildren', group: 'Familienstruktur', label: 'Maximalanzahl Kinder', kind: 'number', wired: true, defaultValue: 4 },
-  { id: 'allowTwins', group: 'Familienstruktur', label: 'Zwillinge erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowAdoption', group: 'Familienstruktur', label: 'Adoptionen erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowBastards', group: 'Familienstruktur', label: 'Bastarde erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowAffairs', group: 'Familienstruktur', label: 'Affären erlauben', kind: 'checkbox', wired: false, defaultValue: false },
-  { id: 'allowMultipleMarriages', group: 'Familienstruktur', label: 'Mehrfache Ehen erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowRemarriage', group: 'Familienstruktur', label: 'Wiederverheiratung erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowChildlessMarriage', group: 'Familienstruktur', label: 'Kinderlose Ehe erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowLineExtinction', group: 'Familienstruktur', label: 'Aussterben einer Linie erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'earlyDeath', group: 'Lebensereignisse', label: 'Früher Tod', kind: 'checkbox', wired: false },
-  { id: 'warCasualties', group: 'Lebensereignisse', label: 'Kriegstote', kind: 'checkbox', wired: false },
-  { id: 'diseases', group: 'Lebensereignisse', label: 'Krankheiten', kind: 'checkbox', wired: false },
-  { id: 'murders', group: 'Lebensereignisse', label: 'Ermordungen', kind: 'checkbox', wired: false },
-  { id: 'disappearances', group: 'Lebensereignisse', label: 'Verschwundene Personen', kind: 'checkbox', wired: false },
-  { id: 'disinheritance', group: 'Lebensereignisse', label: 'Enterbungen', kind: 'checkbox', wired: false },
-  { id: 'houseFoundings', group: 'Lebensereignisse', label: 'Hausgründungen', kind: 'checkbox', wired: false },
-  { id: 'houseChanges', group: 'Lebensereignisse', label: 'Hauswechsel', kind: 'checkbox', wired: false },
-  { id: 'dynastyChanges', group: 'Lebensereignisse', label: 'Dynastiewechsel', kind: 'checkbox', wired: false },
-  { id: 'inheritTitles', group: 'Adel', label: 'Titel vererben', kind: 'checkbox', wired: false },
-  { id: 'loseTitles', group: 'Adel', label: 'Titel verlieren', kind: 'checkbox', wired: false },
-  { id: 'enfeoffments', group: 'Adel', label: 'Belehnungen', kind: 'checkbox', wired: false },
-  { id: 'changeFealty', group: 'Adel', label: 'Lehnstreue ändern', kind: 'checkbox', wired: false },
-  { id: 'changeCrest', group: 'Adel', label: 'Wappen ändern', kind: 'checkbox', wired: false },
-  { id: 'changeMotto', group: 'Adel', label: 'Hausmotto ändern', kind: 'checkbox', wired: false },
-  { id: 'marriageAge', group: 'Zeit', label: 'Durchschnittliches Heiratsalter', kind: 'number', wired: true, defaultValue: DEFAULT_MARRIAGE_AGE },
-  { id: 'childbearingAge', group: 'Zeit', label: 'Durchschnittliches Gebäralter', kind: 'number', wired: true, defaultValue: DEFAULT_CHILDBEARING_AGE },
-  { id: 'lifespan', group: 'Zeit', label: 'Durchschnittliche Lebensdauer', kind: 'number', wired: true, defaultValue: DEFAULT_LIFESPAN_YEARS },
-  { id: 'timeJumpAfterGeneration', group: 'Zeit', label: 'Zeitsprung nach Generation', kind: 'number', wired: true, defaultValue: 0 },
-  { id: 'autoCalculateYearGaps', group: 'Zeit', label: 'Jahresabstände automatisch berechnen', kind: 'checkbox', wired: false },
-  { id: 'autoGenerateNames', group: 'KI-Unterstützung', label: 'Namen automatisch erzeugen', kind: 'checkbox', wired: true, defaultValue: false },
-  { id: 'autoCalculateBirth', group: 'KI-Unterstützung', label: 'Geburtsdaten berechnen', kind: 'checkbox', wired: true, defaultValue: false },
-  { id: 'autoCalculateDeath', group: 'KI-Unterstützung', label: 'Sterbedaten berechnen', kind: 'checkbox', wired: true, defaultValue: false },
-  { id: 'autoPlausibilizeRelationships', group: 'KI-Unterstützung', label: 'Beziehungen automatisch plausibilisieren', kind: 'checkbox', wired: false },
-  { id: 'autoFillMissingData', group: 'KI-Unterstützung', label: 'Fehlende Daten ergänzen', kind: 'checkbox', wired: false },
-  { id: 'usePlaceholders', group: 'KI-Unterstützung', label: 'Platzhalter verwenden', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'allowSpecialAging', group: 'Sonderarten', label: 'Priester/Magier/Druiden-Alterung erlauben', kind: 'checkbox', wired: true, defaultValue: true },
-  { id: 'considerMageFertility', group: 'Sonderarten', label: 'Magier-Fruchtbarkeit berücksichtigen (~5 % gegenüber Normalsterblichen)', kind: 'checkbox', wired: true, defaultValue: true }
-]);
+// Die Oberfläche zeigt ausschließlich Parameter, die von der Generierungsregel
+// tatsächlich ausgewertet werden. Dadurch verspricht kein Regler Verhalten, das
+// beim Anlegen der Generation wirkungslos bliebe.
+export const PARAMETER_DEFINITIONS = GENERATION_PARAMETER_DEFINITIONS;
 
-const STEP_LABELS = ['Familiendaten', 'Gründerpaar', 'Zeitsprung', 'Generationen'];
+const STEP_LABELS = ['Familiendaten', 'Gründerpaar', 'Aufbau', 'Generationen'];
 
 export function defaultParams() {
-  const params = {};
-  PARAMETER_DEFINITIONS.forEach(definition => {
-    params[definition.id] = definition.defaultValue ?? (definition.kind === 'checkbox' ? false : '');
-  });
-  return params;
+  return { ...defaultGenerationParams() };
 }
 
 export function createTreeGeneratorDialog(documentRef = document) {
@@ -73,8 +31,13 @@ export function createTreeGeneratorDialog(documentRef = document) {
   // Rein lokaler UI-Zustand innerhalb einer offenen Sitzung (nicht in der Familie
   // gespeichert): welche Karte im Arbeitsblatt gerade das Kind-Formular zeigt, und
   // wer zuletzt hinzugefügt wurde (für den "Zwilling"-Kurzweg).
-  let activeChildFormPersonId = '';
+  let activeChildFormLineId = '';
   let lastAddedChild = null;
+
+  function resetSessionState() {
+    activeChildFormLineId = '';
+    lastAddedChild = null;
+  }
 
   // Der Dialog hat bewusst keinen type="submit"-Button (jede Etappe hat mehrere,
   // ungleichwertige Aktionen) — Enter in einem Textfeld soll trotzdem nie ein
@@ -86,14 +49,19 @@ export function createTreeGeneratorDialog(documentRef = document) {
   });
 
   function open() {
+    resetSessionState();
     if (!dialog.open) dialog.showModal();
   }
 
   function close() {
-    activeChildFormPersonId = '';
-    lastAddedChild = null;
+    resetSessionState();
     if (dialog.open) dialog.close();
   }
+
+  // Escape und andere native <dialog>-Schließwege laufen nicht über close().
+  // Der lokale Arbeitsblattzustand darf trotzdem nie in die nächste Sitzung
+  // durchsickern.
+  dialog.addEventListener('close', resetSessionState);
 
   function setLastAddedChild(entry) {
     lastAddedChild = entry;
@@ -208,9 +176,26 @@ export function createTreeGeneratorDialog(documentRef = document) {
     `;
   }
 
-  function renderPhaseThree() {
-    titleEl.textContent = 'Optionaler Zeitsprung';
+  function renderPhaseThree(family, params, automaticState = {}) {
     renderSteps(3);
+    if (!automaticState.mode) {
+      titleEl.textContent = 'Stammbaum aufbauen';
+      bodyEl.innerHTML = `
+        <p class="relation-step-lead">Wie möchtest du die neue Gründerfamilie fortsetzen?</p>
+        <div class="tree-generator-choice-row">
+          <button class="button" type="button" data-action="tree-generator-select-guided-mode">Etappenweise aufbauen</button>
+          <button class="button button--quiet" type="button" data-action="tree-generator-select-automatic-mode">Automatische Vorlage erstellen</button>
+        </div>
+        <p class="relation-step-note">Beide Wege verwenden dieselben Familienregeln. Die Automatik zeigt vor der Übernahme eine reproduzierbare Vorschau.</p>
+      `;
+      footerEl.innerHTML = '';
+      return;
+    }
+    if (automaticState.mode === 'automatic') {
+      renderAutomaticPhaseThree(family, params, automaticState);
+      return;
+    }
+    titleEl.textContent = 'Etappenweise · optionaler Zeitsprung';
     bodyEl.innerHTML = `
       <p class="relation-step-lead">Direkt mit der ersten Kindgeneration beginnen, oder zunächst einen Zeitsprung einfügen?</p>
       <div class="tree-generator-choice-row">
@@ -226,12 +211,93 @@ export function createTreeGeneratorDialog(documentRef = document) {
       </div>
     `;
     footerEl.innerHTML = `
+      <button class="button button--quiet" type="button" data-action="tree-generator-back-to-mode-choice">Zurück zur Auswahl</button>
       <button class="button" type="button" id="tree-generator-commit-time-jump" data-action="tree-generator-commit-time-jump" hidden>Zeitsprung übernehmen</button>
     `;
-    bodyEl.querySelector('[data-action="tree-generator-reveal-time-jump"]').addEventListener('click', () => {
-      bodyEl.querySelector('#tree-generator-time-jump-fields').hidden = false;
-      footerEl.querySelector('#tree-generator-commit-time-jump').hidden = false;
-    });
+  }
+
+  function renderAutomaticPhaseThree(family, params, automaticState) {
+    titleEl.textContent = 'Automatische Familienvorlage';
+    const options = automaticState.options || {};
+    const selectedTemplateId = options.templateId || 'balanced';
+    const generationCount = Number(options.generationCount) || 4;
+    const seed = options.seed || '';
+    const timeJump = options.timeJump || {};
+    const preview = automaticState.preview?.summary || null;
+    bodyEl.innerHTML = `
+      <p class="relation-step-lead">Die Generationenzahl umfasst das vorhandene Gründerpaar. Ein Zeitsprung ist ein Trenner und zählt nicht als eigene Generation.</p>
+      <fieldset class="tree-generator-params-group">
+        <legend>Vorlage</legend>
+        <div class="tree-generator-template-grid">
+          ${FAMILY_TEMPLATE_DEFINITIONS.map(template => `
+            <label class="tree-generator-template-choice">
+              <input type="radio" name="automaticTemplateId" value="${escapeHtml(template.id)}" ${template.id === selectedTemplateId ? 'checked' : ''}>
+              <strong>${escapeHtml(template.label)}</strong>
+              <span>${escapeHtml(template.description)}</span>
+            </label>
+          `).join('')}
+        </div>
+      </fieldset>
+      <div class="form-grid">
+        <label class="field">Sichtbare Generationen
+          <input name="automaticGenerationCount" type="number" value="${escapeHtml(String(generationCount))}" min="${AUTOMATIC_TEMPLATE_GENERATION_LIMITS.minimumGenerations}" max="${AUTOMATIC_TEMPLATE_GENERATION_LIMITS.maximumGenerations}">
+        </label>
+        <label class="field">Zufalls-Seed
+          <input name="automaticSeed" value="${escapeHtml(seed)}" placeholder="z. B. hausname-1">
+        </label>
+      </div>
+      <details class="tree-generator-params">
+        <summary>Optionaler Zeitsprung nach dem Gründerwappen</summary>
+        <label class="checkbox-field"><input type="checkbox" name="automaticTimeJumpEnabled" ${timeJump.enabled ? 'checked' : ''}> Zeitsprung einfügen</label>
+        <div class="form-grid">
+          <label class="field">Von Jahr<input name="automaticTimeJumpFromYear" value="${escapeHtml(timeJump.fromYear || '')}" placeholder="wird sonst berechnet"></label>
+          <label class="field">Bis Jahr<input name="automaticTimeJumpToYear" value="${escapeHtml(timeJump.toYear || '')}" placeholder="wird sonst berechnet"></label>
+          <label class="field">Anzahl Jahre<input name="automaticTimeJumpYears" type="number" min="0" max="10000" value="${escapeHtml(String(timeJump.years ?? 25))}"></label>
+          <label class="field field--wide">Bezeichnung<input name="automaticTimeJumpLabel" value="${escapeHtml(timeJump.label || 'Nicht einzeln überlieferte Generationen')}"></label>
+        </div>
+      </details>
+      ${renderParamPanel(params, { automatic: true })}
+      ${preview ? `
+        <div class="tree-generator-summary-card" data-role="automatic-preview-summary">
+          <strong>${escapeHtml(preview.templateLabel)} · ${preview.generationCount} Generationen</strong>
+          <span>${preview.personCount} Personen · ${preview.partnershipCount} Verbindungen · ${escapeHtml(preview.fromYear)} bis ${escapeHtml(preview.toYear)}${preview.timeJumpEnabled ? ' · mit Zeitsprung' : ''}</span>
+        </div>
+        <p class="relation-step-note" data-role="automatic-preview-note">Die Vorschau liegt noch nicht im Stammbaum. Erst „Vorlage übernehmen“ erzeugt einen einzigen lokalen Änderungsschritt.</p>
+      ` : ''}
+    `;
+    footerEl.innerHTML = `
+      <button class="button button--quiet" type="button" data-action="tree-generator-back-to-mode-choice">Zurück zur Auswahl</button>
+      ${preview
+        ? '<button class="button button--quiet" type="button" data-action="tree-generator-reroll-automatic">Neu würfeln</button><button class="button" type="button" data-action="tree-generator-accept-automatic">Vorlage übernehmen</button>'
+        : '<button class="button" type="button" data-action="tree-generator-preview-automatic">Vorschau erzeugen</button>'}
+    `;
+  }
+
+  function revealTimeJumpFields() {
+    const fields = bodyEl.querySelector('#tree-generator-time-jump-fields');
+    const submit = footerEl.querySelector('#tree-generator-commit-time-jump');
+    if (!fields || !submit) return false;
+    fields.hidden = false;
+    submit.hidden = false;
+    fields.querySelector('input')?.focus();
+    return true;
+  }
+
+  function markAutomaticPreviewStale() {
+    const summary = bodyEl.querySelector?.('[data-role="automatic-preview-summary"]');
+    const note = bodyEl.querySelector?.('[data-role="automatic-preview-note"]');
+    const acceptButton = footerEl.querySelector?.('[data-action="tree-generator-accept-automatic"]');
+    const refreshButton = footerEl.querySelector?.('[data-action="tree-generator-reroll-automatic"]');
+    if (summary) summary.dataset.previewState = 'stale';
+    if (note) {
+      note.textContent = 'Optionen wurden geändert. Aktualisiere die Vorschau, bevor du sie übernehmen kannst.';
+    }
+    if (acceptButton) acceptButton.disabled = true;
+    if (refreshButton) {
+      refreshButton.dataset.action = 'tree-generator-preview-automatic';
+      refreshButton.textContent = 'Vorschau aktualisieren';
+    }
+    return Boolean(summary || note || acceptButton || refreshButton);
   }
 
   function personLifeLabel(person) {
@@ -240,28 +306,31 @@ export function createTreeGeneratorDialog(documentRef = document) {
     return death ? `${birth}–${death}` : `${birth}–lebend`;
   }
 
-  function renderChildForm(person, params) {
-    const twinAvailable = params.allowTwins && lastAddedChild && lastAddedChild.referencePersonId === person.id;
+  function renderChildForm(leaf, person, params) {
+    const lineId = leaf.lineId || `person:${person.id}`;
+    const twinAvailable = params.allowTwins && lastAddedChild && lastAddedChild.lineId === lineId;
     const parentIsMage = (person.tags || []).includes('Magier');
+    const supportsDirectParentageOptions = !leaf.afterTimeBarrier;
     return `
       <div class="tree-generator-child-form">
-        ${parentIsMage && params.considerMageFertility ? `
+        ${supportsDirectParentageOptions ? '' : '<p class="relation-step-note">Hinter einem Zeitsprung wird die Abstammung als später wieder belegte, beanspruchte Linie geführt. Adoption und Unehelichkeit sind für diese Lücke nicht zuverlässig bestimmbar.</p>'}
+        ${supportsDirectParentageOptions && parentIsMage && params.considerMageFertility ? `
           <p class="tree-generator-fertility-warning">⚠ ${escapeHtml(person.name)} ist Magier — Magier haben nur ca. 5 % der üblichen Fruchtbarkeit gegenüber Normalsterblichen, Kinder sind eine seltene Ausnahme.</p>
         ` : ''}
         <div class="form-grid">
-          <label class="field">Name ${aiButton('name-either', `childName-${person.id}`)}<input name="childName-${person.id}" placeholder="???"></label>
+          <label class="field">Name ${aiButton('name-either', `childName-${lineId}`)}<input name="childName-${escapeHtml(lineId)}" placeholder="???"></label>
           <label class="field">Geschlecht
-            <select name="childSex-${person.id}">
+            <select name="childSex-${escapeHtml(lineId)}">
               <option value="unknown">Unbekannt</option>
               <option value="female">Weiblich</option>
               <option value="male">Männlich</option>
             </select>
           </label>
-          <label class="field">Geburt ${aiButton('birth-year', `childBirth-${person.id}`)}<input name="childBirth-${person.id}" placeholder="????"></label>
-          <label class="field">Tod<input name="childDeath-${person.id}" placeholder="????"></label>
+          <label class="field">Geburt ${aiButton('birth-year', `childBirth-${lineId}`)}<input name="childBirth-${escapeHtml(lineId)}" placeholder="????"></label>
+          <label class="field">Tod<input name="childDeath-${escapeHtml(lineId)}" placeholder="????"></label>
           ${params.allowSpecialAging ? `
             <label class="field">Art
-              <select name="childAgingKind-${person.id}">
+              <select name="childAgingKind-${escapeHtml(lineId)}">
                 <option value="normal">Normal</option>
                 <option value="priester">Priester (altert halb so schnell)</option>
                 <option value="magier">Magier (altert bis zu 10× langsamer, ~5 % Fruchtbarkeit)</option>
@@ -269,34 +338,35 @@ export function createTreeGeneratorDialog(documentRef = document) {
               </select>
             </label>
           ` : ''}
-          ${params.allowBastards ? `<label class="checkbox-field"><input type="checkbox" name="childBastard-${person.id}"> Bastard (unehelich)</label>` : ''}
-          ${params.allowAdoption ? `<label class="checkbox-field"><input type="checkbox" name="childAdoption-${person.id}"> Adoptiert</label>` : ''}
-          ${twinAvailable ? `<label class="checkbox-field"><input type="checkbox" name="childTwin-${person.id}"> Zwilling von ${escapeHtml(lastAddedChild.name)}</label>` : ''}
+          ${supportsDirectParentageOptions && params.allowBastards ? `<label class="checkbox-field"><input type="checkbox" name="childBastard-${escapeHtml(lineId)}"> Bastard (unehelich)</label>` : ''}
+          ${supportsDirectParentageOptions && params.allowAdoption ? `<label class="checkbox-field"><input type="checkbox" name="childAdoption-${escapeHtml(lineId)}"> Adoptiert</label>` : ''}
+          ${twinAvailable ? `<label class="checkbox-field"><input type="checkbox" name="childTwin-${escapeHtml(lineId)}"> Zwilling von ${escapeHtml(lastAddedChild.name)}</label>` : ''}
         </div>
         <div class="tree-generator-child-form-actions">
-          <button class="button button--quiet" type="button" data-action="tree-generator-cancel-child" data-person-id="${escapeHtml(person.id)}">Abbrechen</button>
-          <button class="button" type="button" data-action="tree-generator-add-child" data-person-id="${escapeHtml(person.id)}">Kind hinzufügen</button>
+          <button class="button button--quiet" type="button" data-action="tree-generator-cancel-child" data-person-id="${escapeHtml(person.id)}" data-line-id="${escapeHtml(lineId)}">Abbrechen</button>
+          <button class="button" type="button" data-action="tree-generator-add-child" data-person-id="${escapeHtml(person.id)}" data-line-id="${escapeHtml(lineId)}">Kind hinzufügen</button>
         </div>
       </div>
     `;
   }
 
-  function renderParamPanel(params) {
+  function renderParamPanel(params, options = {}) {
     const groups = [];
-    PARAMETER_DEFINITIONS.forEach(definition => {
+    PARAMETER_DEFINITIONS
+      .filter(definition => !options.automatic || definition.id !== 'autoCalculateBirth')
+      .forEach(definition => {
       let group = groups.find(item => item.name === definition.group);
       if (!group) { group = { name: definition.group, rows: [] }; groups.push(group); }
       const value = params[definition.id];
-      const inert = definition.wired ? '' : ' tree-generator-param--inert';
-      const suffix = definition.wired ? '' : ' <small>· in Vorbereitung</small>';
       const control = definition.kind === 'checkbox'
         ? `<input type="checkbox" name="param-${definition.id}" ${value ? 'checked' : ''}>`
-        : `<input type="number" name="param-${definition.id}" value="${escapeHtml(String(value ?? ''))}" min="0">`;
-      group.rows.push(`<label class="tree-generator-param${inert}">${control} ${escapeHtml(definition.label)}${suffix}</label>`);
+        : `<input type="number" name="param-${definition.id}" value="${escapeHtml(String(value ?? ''))}" min="${definition.min ?? 0}" max="${definition.max ?? 10000}">`;
+      group.rows.push(`<label class="tree-generator-param">${control} ${escapeHtml(definition.label)}</label>`);
     });
     return `
-      <details class="tree-generator-params">
-        <summary>Parameter dieser Generation</summary>
+      <details class="tree-generator-params" open>
+        <summary>Regeln für neue Nachkommen</summary>
+        <p class="tree-generator-param-note">Hier erscheinen nur Optionen, die das Anlegen in diesem Arbeitsblatt tatsächlich beeinflussen.</p>
         ${groups.map(group => `
           <fieldset class="tree-generator-params-group">
             <legend>${escapeHtml(group.name)}</legend>
@@ -308,12 +378,15 @@ export function createTreeGeneratorDialog(documentRef = document) {
   }
 
   function renderPhaseFour(family, phaseInfo, params) {
-    titleEl.textContent = `Generation ${phaseInfo.generationIndex}`;
+    titleEl.textContent = phaseInfo.focusedContinuation
+      ? phaseInfo.continuationTitle
+      : `Nachkommen von Generation ${phaseInfo.generationIndex}`;
     renderSteps(4);
     const worklistCards = phaseInfo.openLeaves.map(leaf => {
       const person = family.persons.find(item => item.id === leaf.personId);
       if (!person) return '';
-      const showChildForm = activeChildFormPersonId === person.id;
+      const lineId = leaf.lineId || `person:${person.id}`;
+      const showChildForm = activeChildFormLineId === lineId;
       return `
         <div class="tree-generator-worklist-card">
           <img src="${escapeHtml(resolvePortraitSource(person))}" alt="">
@@ -322,34 +395,61 @@ export function createTreeGeneratorDialog(documentRef = document) {
             <small>${escapeHtml(personLifeLabel(person))}${leaf.unresolvedTimeJumpId ? ' · nach Zeitsprung' : ''}</small>
           </div>
           <div class="tree-generator-worklist-actions">
-            <button class="button button--quiet" type="button" data-action="tree-generator-toggle-child-form" data-person-id="${escapeHtml(person.id)}">＋ Kind</button>
-            <button class="button button--quiet" type="button" data-action="tree-generator-delegate-marriage" data-person-id="${escapeHtml(person.id)}">⚭ Ehe/Verlobung</button>
-            <button class="button button--quiet" type="button" data-action="tree-generator-delegate-cadet" data-person-id="${escapeHtml(person.id)}">Kadettenhaus/Aussterben …</button>
+            <button class="button button--quiet" type="button" data-action="tree-generator-toggle-child-form" data-person-id="${escapeHtml(person.id)}" data-line-id="${escapeHtml(lineId)}">${leaf.continuationMode ? '＋ Person / Geschwister' : '＋ Kind'}</button>
+            ${leaf.continuationMode ? '' : `
+              <button class="button button--quiet" type="button" data-action="tree-generator-delegate-marriage" data-person-id="${escapeHtml(person.id)}">⚭ Ehe/Verlobung</button>
+              ${leaf.partnershipId ? `<button class="button button--quiet" type="button" data-action="tree-generator-delegate-cadet" data-person-id="${escapeHtml(person.id)}" data-partnership-id="${escapeHtml(leaf.partnershipId)}">Linie abschließen / Haus verknüpfen</button>` : ''}
+            `}
           </div>
-          ${showChildForm ? renderChildForm(person, params) : ''}
+          ${showChildForm ? renderChildForm(leaf, person, params) : ''}
         </div>
       `;
     }).join('') || '<p class="tree-generator-empty">Keine offenen Personen in dieser Generation.</p>';
 
+    const continuationCards = (phaseInfo.existingContinuationIds || []).map(personId => {
+      const person = family.persons.find(item => item.id === personId);
+      if (!person) return '';
+      const lineagePartnerships = listLineagePartnerships(family, person.id);
+      const unambiguousPartnership = lineagePartnerships.length === 1 ? lineagePartnerships[0] : null;
+      return `
+        <div class="tree-generator-worklist-card">
+          <img src="${escapeHtml(resolvePortraitSource(person))}" alt="">
+          <div class="tree-generator-worklist-info"><strong>${escapeHtml(person.name)}</strong><small>${escapeHtml(personLifeLabel(person))}</small></div>
+          <div class="tree-generator-worklist-actions">
+            <button class="button button--quiet" type="button" data-action="tree-generator-delegate-marriage" data-person-id="${escapeHtml(person.id)}">⚭ Ehe/Verlobung</button>
+            ${unambiguousPartnership ? `<button class="button button--quiet" type="button" data-action="tree-generator-delegate-cadet" data-person-id="${escapeHtml(person.id)}" data-partnership-id="${escapeHtml(unambiguousPartnership.id)}">Linie abschließen / Haus verknüpfen</button>` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
+
     bodyEl.innerHTML = `
       ${renderParamPanel(params)}
-      <h3 class="form-section-title">Offene Personen dieser Generation</h3>
+      <h3 class="form-section-title">${phaseInfo.focusedContinuation ? 'Ausgangspunkt' : `Personen der Generation ${phaseInfo.generationIndex}`}</h3>
       <div class="tree-generator-worklist">${worklistCards}</div>
+      ${phaseInfo.focusedContinuation ? `
+        <h3 class="form-section-title">Bereits direkt dieser Linie zugeordnete Personen</h3>
+        <div class="tree-generator-worklist">${continuationCards || '<p class="tree-generator-empty">Noch keine Person angelegt. Füge oben nacheinander Einzelpersonen, Geschwister oder anschließend einen Ehepartner hinzu.</p>'}</div>
+      ` : ''}
     `;
-    footerEl.innerHTML = `
-      <button class="button" type="button" data-action="tree-generator-next-generation">Diese Generation abschließen → nächste Generation</button>
-    `;
+    footerEl.innerHTML = phaseInfo.focusedContinuation || phaseInfo.canFinish
+      ? '<button class="button" type="button" data-action="close-tree-generator">Fertig</button>'
+      : `
+        <button class="button" type="button" data-action="tree-generator-next-generation" ${phaseInfo.canAdvance ? '' : 'disabled'}>
+          ${phaseInfo.canAdvance ? `Generation ${phaseInfo.generationIndex} abschließen → Generation ${phaseInfo.generationIndex + 1}` : 'Zuerst Nachkommen anlegen oder Linien abschließen'}
+        </button>
+      `;
   }
 
-  function renderPhase(phaseInfo, family, params) {
+  function renderPhase(phaseInfo, family, params, automaticState = {}) {
     if (phaseInfo.phase === 1) renderPhaseOne(family);
     else if (phaseInfo.phase === 2) renderPhaseTwo(family);
-    else if (phaseInfo.phase === 3) renderPhaseThree(family);
+    else if (phaseInfo.phase === 3) renderPhaseThree(family, params, automaticState);
     else renderPhaseFour(family, phaseInfo, params);
   }
 
-  function toggleChildForm(personId) {
-    activeChildFormPersonId = activeChildFormPersonId === personId ? '' : personId;
+  function toggleChildForm(lineId) {
+    activeChildFormLineId = activeChildFormLineId === lineId ? '' : lineId;
   }
 
   function read(section) {
@@ -387,12 +487,31 @@ export function createTreeGeneratorDialog(documentRef = document) {
       };
     }
     if (section === 'phase-3-time-jump') {
+      const fromYear = String(values.fromYear || '').trim();
+      const toYear = String(values.toYear || '').trim();
+      const calculatedYears = /^\d{1,4}$/.test(fromYear) && /^\d{1,4}$/.test(toYear)
+        ? Math.max(0, Number(toYear) - Number(fromYear))
+        : Number(values.years || 0);
       return {
-        fromYear: String(values.fromYear || '').trim(),
-        toYear: String(values.toYear || '').trim(),
-        years: Number(values.years || 0),
+        fromYear,
+        toYear,
+        years: calculatedYears,
         label: String(values.label || '').trim(),
         notes: String(values.notes || '').trim()
+      };
+    }
+    if (section === 'automatic-template') {
+      return {
+        templateId: String(values.automaticTemplateId || 'balanced'),
+        generationCount: Number(values.automaticGenerationCount || 4),
+        seed: String(values.automaticSeed || '').trim(),
+        timeJump: {
+          enabled: values.automaticTimeJumpEnabled === 'on',
+          fromYear: String(values.automaticTimeJumpFromYear || '').trim(),
+          toYear: String(values.automaticTimeJumpToYear || '').trim(),
+          years: Number(values.automaticTimeJumpYears || 0),
+          label: String(values.automaticTimeJumpLabel || '').trim()
+        }
       };
     }
     if (section === 'params') {
@@ -405,16 +524,17 @@ export function createTreeGeneratorDialog(documentRef = document) {
     }
     if (typeof section === 'object' && section?.childOf) {
       const personId = section.childOf;
+      const lineId = section.lineId || personId;
       return {
         referencePersonId: personId,
-        name: String(values[`childName-${personId}`] || '').trim(),
-        sex: values[`childSex-${personId}`] || 'unknown',
-        birth: String(values[`childBirth-${personId}`] || '').trim(),
-        death: String(values[`childDeath-${personId}`] || '').trim(),
-        agingKind: values[`childAgingKind-${personId}`] || 'normal',
-        bastard: values[`childBastard-${personId}`] === 'on',
-        adoption: values[`childAdoption-${personId}`] === 'on',
-        twin: values[`childTwin-${personId}`] === 'on'
+        name: String(values[`childName-${lineId}`] || '').trim(),
+        sex: values[`childSex-${lineId}`] || 'unknown',
+        birth: String(values[`childBirth-${lineId}`] || '').trim(),
+        death: String(values[`childDeath-${lineId}`] || '').trim(),
+        agingKind: values[`childAgingKind-${lineId}`] || 'normal',
+        bastard: values[`childBastard-${lineId}`] === 'on',
+        adoption: values[`childAdoption-${lineId}`] === 'on',
+        twin: values[`childTwin-${lineId}`] === 'on'
       };
     }
     return {};
@@ -426,9 +546,12 @@ export function createTreeGeneratorDialog(documentRef = document) {
     open,
     close,
     renderPhase,
+    revealTimeJumpFields,
+    markAutomaticPreviewStale,
     read,
     toggleChildForm,
     setLastAddedChild,
-    clearActiveChildForm: () => { activeChildFormPersonId = ''; }
+    getLastAddedChild: () => lastAddedChild ? { ...lastAddedChild } : null,
+    clearActiveChildForm: () => { activeChildFormLineId = ''; }
   });
 }

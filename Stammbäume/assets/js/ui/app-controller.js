@@ -17,6 +17,7 @@ import {
   saveFamilyToLibrary
 } from '../services/family-library.js';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
+import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {
   clearPendingTreeGeneratorLaunch,
   consumePendingTreeGeneratorLaunch,
@@ -31,6 +32,7 @@ import { createFamilySaveDialog } from './family-save-dialog.js';
 import { renderFamilyLegend } from './legend-ui.js';
 import { createLineColorsDialog } from './line-colors-dialog.js';
 import { createLineageDialog } from './lineage-dialog.js';
+import { createLineageTimeGapDialog } from './lineage-time-gap-dialog.js';
 import { createLineageOriginDialog } from './lineage-origin-dialog.js';
 import { createNewFamilyDialog } from './new-family-dialog.js';
 import { createPersonDialog } from './person-dialog.js';
@@ -45,6 +47,13 @@ import {
 import { createRelationshipDialog } from './relationship-dialog.js';
 import { createTimeJumpDialog } from './time-jump-dialog.js';
 import { createToast } from './toast.js';
+import { createTreeNodeActionsDialog } from '../modules/tree-node-actions/tree-node-actions-dialog.js';
+import { findLineageBarrier } from '../modules/tree-node-actions/tree-node-actions-model.js';
+import {
+  createMirroredPartnershipChange,
+  updateMirroredPartnershipChange
+} from '../modules/relationships/cross-family-relationship.js';
+import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
 
 function isTypingTarget(target) {
   return target instanceof HTMLInputElement
@@ -75,6 +84,7 @@ export function createAppController({
   assetRepository = null,
   documentRef = document,
   runtime = globalThis,
+  latestLocalFamilySource = null,
   workspaceMode = WORKSPACE_MODE.view,
   requestEditOnInit = false,
   autoOpenTreeGenerator = false
@@ -90,6 +100,9 @@ export function createAppController({
   const importInput = documentRef.getElementById('family-import');
   const bundleImportInput = documentRef.getElementById('family-bundle-import');
   const toast = createToast(documentRef.getElementById('app-toast'));
+  const localFamilySource = latestLocalFamilySource || Object.freeze({
+    loadById: familyId => loadFamilyById(familyId, runtime.localStorage)
+  });
   let chartSession = null;
   const almanachCharacterController = createAlmanachCharacterController({
     store,
@@ -102,14 +115,16 @@ export function createAppController({
   });
   const personDialog = createPersonDialog(documentRef);
   const relatedPersonDialog = createRelatedPersonDialog(documentRef);
-  const relationActionsDialog = createRelationActionsDialog(documentRef, runtime);
+  const relationActionsDialog = createRelationActionsDialog(documentRef, runtime, latestLocalFamilySource);
   const relationshipDialog = createRelationshipDialog(documentRef);
   const lineColorsDialog = createLineColorsDialog(documentRef);
   const lineageDialog = createLineageDialog(documentRef);
+  const lineageTimeGapDialog = createLineageTimeGapDialog(documentRef);
   const lineageOriginDialog = createLineageOriginDialog(documentRef);
   const newFamilyDialog = createNewFamilyDialog(documentRef);
   const cadetDialog = createCadetDialog(documentRef);
   const timeJumpDialog = createTimeJumpDialog(documentRef);
+  const treeNodeActionsDialog = createTreeNodeActionsDialog(documentRef);
   const treeGeneratorController = createTreeGeneratorController({
     store,
     documentRef,
@@ -156,37 +171,76 @@ export function createAppController({
     chartStatus.classList.remove('is-error');
   }
 
-  function openTimeJumpChild(timeJumpId) {
-    const state = store.getState();
-    const timeJump = state.family.timeJumps.find(item => item.id === timeJumpId);
-    const partnership = state.family.partnerships.find(item => item.id === timeJump?.parentPartnershipId);
-    const anchorPersonIds = partnership?.participantIds || (timeJump?.parentPersonId ? [timeJump.parentPersonId] : []);
-    if (!timeJump || !anchorPersonIds.length) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
-    const referencePersonId = anchorPersonIds.includes(state.selectedPersonId)
-      ? state.selectedPersonId
-      : anchorPersonIds[0];
-    relatedPersonDialog.open(referencePersonId, state.family, { timeJumpId });
+  function lineageHouseName(family) {
+    return family.houses.find(house => house.id === family.lineage.houseId)?.name
+      || family.document.title;
   }
 
-  function openLineageCrestChild(partnershipId) {
+  function openTreeNodeActions(context) {
+    const family = store.getState().family;
+    treeNodeActionsDialog.open(context, family);
+  }
+
+  function performTreeNodeAction(actionId) {
     const state = store.getState();
-    const partnership = state.family.partnerships.find(item => item.id === partnershipId);
-    if (!partnership?.participantIds.length) throw new Error('Das Paar über dem Wappen wurde nicht gefunden.');
-    const [referencePersonId, secondParentId = ''] = partnership.participantIds;
-    relatedPersonDialog.open(referencePersonId, state.family, {
-      relationKind: 'child',
-      secondParentId,
-      houseId: state.family.lineage.houseId,
-      heading: 'Neuen Nachkommen unter dem Stammwappen anlegen'
-    });
+    const context = treeNodeActionsDialog.getContext();
+    if (!context || context.familyId !== state.family.document.id) {
+      throw new Error('Der ausgewählte Knoten ist nicht mehr aktuell.');
+    }
+    if (actionId === 'back') {
+      treeNodeActionsDialog.showPrimary();
+      return;
+    }
+    if (actionId === 'continue-house') {
+      treeNodeActionsDialog.showHouseContinuation(state.family);
+      return;
+    }
+    if (actionId === 'edit-house') {
+      treeNodeActionsDialog.close();
+      lineageDialog.open(state.family);
+      return;
+    }
+    if (actionId === 'add-direct') {
+      treeNodeActionsDialog.close();
+      treeGeneratorController.openAtLineage(context.partnershipId);
+      return;
+    }
+    if (actionId === 'add-gap') {
+      treeNodeActionsDialog.close();
+      lineageTimeGapDialog.open(state.family, { focusLabel: true });
+      return;
+    }
+
+    const barrier = context.kind === 'house-crest'
+      ? findLineageBarrier(state.family, context.partnershipId)
+      : context.kind === 'lineage-gap'
+        ? { kind: 'lineage-gap', id: '' }
+        : { kind: 'time-jump', id: context.timeJumpId };
+    if (!barrier) throw new Error('An diesem Haus ist kein Zeitsprung vorhanden.');
+    if (actionId === 'edit-gap') {
+      treeNodeActionsDialog.close();
+      if (barrier.kind === 'lineage-gap') lineageTimeGapDialog.open(state.family);
+      else timeJumpDialog.openEdit(state.family, barrier.id);
+      return;
+    }
+    if (actionId === 'add-after-gap') {
+      treeNodeActionsDialog.close();
+      if (barrier.kind === 'lineage-gap') {
+        treeGeneratorController.openAtLineage(context.partnershipId || state.family.lineage.founderPartnershipId);
+      } else {
+        treeGeneratorController.openAtTimeJump(barrier.id);
+      }
+      return;
+    }
+    throw new Error('Diese Knotenaktion ist nicht verfügbar.');
   }
 
   function firstSpouseId(family, personId) {
     const preferred = family.partnerships.find(partnership => (
       partnership.participantIds.includes(personId)
       && ['marriage', 'union'].includes(partnership.type)
-      && ['active', 'widowed'].includes(partnership.status)
-    )) || family.partnerships.find(partnership => partnership.participantIds.includes(personId));
+      && partnership.status === 'active'
+    ));
     return preferred?.participantIds.find(id => id !== personId) || '';
   }
 
@@ -235,13 +289,6 @@ export function createAppController({
           heading: `Adoptivkind von ${person.name} anlegen`
         });
         return;
-      case 'marry-away': {
-        const partnership = graph.getPartnerships(person.id)[0];
-        if (!partnership) throw new Error('Für ein Wegverheiratet-Medaillon braucht die Person zuerst eine Verbindung.');
-        relationActionsDialog.close();
-        cadetDialog.openCreate(state.family, partnership.id);
-        return;
-      }
       case 'add-parent':
         relationActionsDialog.close();
         relatedPersonDialog.open(person.id, state.family, {
@@ -290,13 +337,90 @@ export function createAppController({
       if (wardPerson && wardPerson.familyRole !== 'ward') store.updatePerson(partnerId, { familyRole: 'ward' });
       return;
     }
-    store.addPartnership({
+    store.setExclusivePartnership({
       participantIds: [person.id, partnerId],
       type: action === 'marry' ? 'marriage' : 'engagement',
       status: 'active',
       certainty: 'confirmed',
       visibility: 'public'
     });
+  }
+
+  function persistMirroredPartnershipChange({
+    currentRecord,
+    currentBaseFamily,
+    counterpartRecord,
+    change,
+    source
+  }) {
+    saveFamilyRecordsAtomically([
+      {
+        id: currentRecord.id,
+        title: currentRecord.title,
+        folderPath: currentRecord.folderPath,
+        family: change.currentFamily
+      },
+      {
+        id: counterpartRecord.id,
+        title: counterpartRecord.title,
+        folderPath: counterpartRecord.folderPath,
+        family: change.counterpartFamily
+      }
+    ], runtime.localStorage);
+    store.synchronizeFamily(change.currentFamily, {
+      source,
+      counterpartFamilyId: counterpartRecord.id,
+      counterpartFamily: change.counterpartFamily,
+      currentBaseFamily,
+      counterpartBaseFamily: counterpartRecord.family,
+      linkId: change.linkId
+    });
+  }
+
+  function mirrorRegistryPartnership({ action, state, person, record, sourcePerson }) {
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    if (!currentRecord) {
+      throw new Error('Bitte speichere die aktuelle Familienakte zuerst im Register, bevor du zwei Stammbäume verknüpfst.');
+    }
+    const type = action === 'marry' ? 'marriage' : 'engagement';
+    const change = createMirroredPartnershipChange({
+      currentFamily: state.family,
+      counterpartFamily: record.family,
+      currentPersonId: person.id,
+      counterpartPersonId: sourcePerson.id,
+      type
+    });
+    persistMirroredPartnershipChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord: record,
+      change,
+      source: 'cross-family-relationship'
+    });
+  }
+
+  function updateRegistryPartnership({ state, partnership, values }) {
+    const relationship = partnership.extensions?.crossFamilyRelationship;
+    if (!relationship?.linkId || !relationship.counterpartFamilyId) return false;
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    const counterpartRecord = localFamilySource.loadById(relationship.counterpartFamilyId);
+    if (!currentRecord || !counterpartRecord) {
+      throw new Error('Mindestens eine Akte der gespiegelten Verbindung fehlt im Familienregister. Bitte die Verknüpfung dort zuerst wiederherstellen.');
+    }
+    const change = updateMirroredPartnershipChange({
+      currentFamily: state.family,
+      counterpartFamily: counterpartRecord.family,
+      partnershipId: partnership.id,
+      values
+    });
+    persistMirroredPartnershipChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord,
+      change,
+      source: 'cross-family-relationship-updated'
+    });
+    return true;
   }
 
   function submitPartnerAction(values, state, person) {
@@ -330,11 +454,24 @@ export function createAppController({
     if (!values.registryFamilyId || !values.registryPersonId) {
       throw new Error('Bitte Haus und Person aus dem Register wählen.');
     }
-    const record = loadFamilyById(values.registryFamilyId, runtime.localStorage);
+    const record = localFamilySource.loadById(values.registryFamilyId);
     const sourcePerson = record?.family.persons.find(item => item.id === values.registryPersonId);
     if (!sourcePerson) throw new Error('Die Person wurde im Register nicht gefunden.');
-    relationActionsDialog.close();
     const existing = findExistingImport(state.family, sourcePerson);
+    if (record.id === state.family.document.id && existing) {
+      relationActionsDialog.close();
+      connectExistingPartner(action, person, existing.id, state.family);
+      toastPartnerSuccess(action, person, existing.name);
+      return;
+    }
+    if (action !== 'import-ward') {
+      mirrorRegistryPartnership({ action, state, person, record, sourcePerson });
+      relationActionsDialog.close();
+      toastPartnerSuccess(action, person, sourcePerson.name);
+      toast(`Die Verbindung wurde auch in ${record.title} gespiegelt.`, { duration: 5500 });
+      return;
+    }
+    relationActionsDialog.close();
     if (existing) {
       connectExistingPartner(action, person, existing.id, state.family);
       toastPartnerSuccess(action, person, existing.name);
@@ -370,7 +507,7 @@ export function createAppController({
 
     if (values.action === 'send-ward') {
       if (!values.targetFamilyId) throw new Error('Bitte ein Zielhaus wählen.');
-      const record = loadFamilyById(values.targetFamilyId, runtime.localStorage);
+      const record = localFamilySource.loadById(values.targetFamilyId);
       if (!record) throw new Error('Die Zielakte wurde im Register nicht gefunden.');
       relationActionsDialog.close();
       const note = `Als Mündel an ${record.title} gegeben.`;
@@ -382,24 +519,54 @@ export function createAppController({
       return;
     }
 
+    if (values.action === 'marry-away') {
+      const partnership = listLineagePartnerships(state.family, person.id)
+        .find(item => item.id === values.partnershipId);
+      if (!partnership) {
+        throw new Error('Bitte eine Ehe oder Lebensgemeinschaft für den Wappenknoten wählen.');
+      }
+      relationActionsDialog.close();
+      cadetDialog.openCreate(state.family, partnership.id);
+      return;
+    }
+
     if (values.action === 'divorce') {
       const partnership = state.family.partnerships.find(item => item.id === values.partnershipId);
       if (!partnership) throw new Error('Bitte eine Verbindung wählen.');
-      relationActionsDialog.close();
-      store.updatePartnership(partnership.id, {
-        status: partnership.type === 'engagement' ? 'ended' : 'divorced',
+      const wasEngagement = partnership.type === 'engagement';
+      const changes = {
+        status: partnership.type === 'marriage' ? 'divorced' : 'ended',
         end: String(ALERIA_CURRENT_YEAR)
-      });
-      toast(partnership.type === 'engagement' ? 'Das Verlöbnis wurde gelöst.' : 'Die Ehe wurde geschieden.');
+      };
+      const mirrored = updateRegistryPartnership({ state, partnership, values: changes });
+      if (!mirrored) store.updatePartnership(partnership.id, changes);
+      relationActionsDialog.close();
+      toast(wasEngagement
+        ? `Das Verlöbnis wurde gelöst${mirrored ? ' und in beiden Familienakten aktualisiert' : ''}.`
+        : partnership.type === 'marriage'
+          ? `Die Ehe wurde geschieden${mirrored ? ' und in beiden Familienakten aktualisiert' : ''}.`
+          : `Die Verbindung wurde gelöst${mirrored ? ' und in beiden Familienakten aktualisiert' : ''}.`);
       return;
     }
 
     if (values.action === 'upgrade-engagement') {
       const partnership = state.family.partnerships.find(item => item.id === values.partnershipId);
       if (!partnership) throw new Error('Bitte ein Verlöbnis wählen.');
+      const changes = { type: 'marriage', status: 'active', start: String(ALERIA_CURRENT_YEAR), end: '' };
+      const mirrored = updateRegistryPartnership({ state, partnership, values: changes });
+      if (!mirrored) {
+        store.setExclusivePartnership({
+          participantIds: partnership.participantIds,
+          type: 'marriage',
+          status: 'active',
+          start: String(ALERIA_CURRENT_YEAR),
+          certainty: partnership.certainty,
+          visibility: partnership.visibility,
+          extensions: partnership.extensions
+        });
+      }
       relationActionsDialog.close();
-      store.updatePartnership(partnership.id, { type: 'marriage', status: 'active', start: String(ALERIA_CURRENT_YEAR) });
-      toast('Aus dem Verlöbnis wurde eine Ehe.');
+      toast(`Aus dem Verlöbnis wurde eine Ehe${mirrored ? ' – in beiden Familienakten' : ''}.`);
       return;
     }
 
@@ -441,6 +608,10 @@ export function createAppController({
           return openRelationActions(personId);
         },
         onPortraitClick({ personId }) {
+          if (isEditing) {
+            store.selectPerson(personId);
+            return openRelationActions(personId);
+          }
           return openPersonBiography(personId);
         },
         onFamilyLinkClick({ familyId, branchId }) {
@@ -474,18 +645,23 @@ export function createAppController({
           runtime.location.assign(target.href);
         },
         onTimeJumpClick({ timeJumpId }) {
-          if (isEditing) timeJumpDialog.openEdit(store.getState().family, timeJumpId);
+          if (!isEditing) return;
+          const timeJump = store.getState().family.timeJumps.find(item => item.id === timeJumpId);
+          openTreeNodeActions({ kind: 'time-jump', timeJumpId, label: timeJump?.label || 'Zeitsprung' });
         },
-        onLineageCrestClick() {
+        onLineageCrestClick({ partnershipId }) {
           if (isEditing) {
-            lineageDialog.open(store.getState().family);
+            const family = store.getState().family;
+            openTreeNodeActions({ kind: 'house-crest', partnershipId, label: lineageHouseName(family) });
             return;
           }
           const link = buildHouseLoreLink(runtime, store.getState().family.document.id);
           if (link) runtime.open?.(link, '_blank', 'noopener');
         },
-        onLineageTimeGapClick() {
-          if (isEditing) lineageDialog.open(store.getState().family);
+        onLineageTimeGapClick({ partnershipId }) {
+          if (isEditing) {
+            openTreeNodeActions({ kind: 'lineage-gap', partnershipId, label: 'Zeitsprung unter dem Hauswappen' });
+          }
         }
       });
     } catch (error) {
@@ -682,6 +858,22 @@ export function createAppController({
       case 'close-lineage-settings':
         lineageDialog.close();
         break;
+      case 'close-lineage-time-gap':
+        lineageTimeGapDialog.close();
+        break;
+      case 'delete-lineage-time-gap':
+        if (runtime.confirm('Diesen Zeitsprung unter dem Hauswappen entfernen? Die Nachkommen bleiben erhalten.')) {
+          lineageTimeGapDialog.close();
+          store.setLineageTimeGap({ enabled: false });
+          toast('Zeitsprung unter dem Hauswappen wurde entfernt.');
+        }
+        break;
+      case 'close-tree-node-actions':
+        treeNodeActionsDialog.close();
+        break;
+      case 'tree-node-action':
+        performTreeNodeAction(actionElement.dataset.nodeAction);
+        break;
       case 'close-lineage-origin-dialog':
         lineageOriginDialog.close();
         break;
@@ -727,31 +919,16 @@ export function createAppController({
       case 'close-time-jump-dialog':
         timeJumpDialog.close();
         break;
-      case 'open-time-jump-child':
-        openTimeJumpChild(actionElement.dataset.timeJumpId);
-        break;
-      case 'open-time-jump-child-from-editor': {
-        const timeJumpId = timeJumpDialog.getCurrentId();
-        if (timeJumpId) {
-          timeJumpDialog.close();
-          openTimeJumpChild(timeJumpId);
-        }
+      case 'open-time-jump-actions': {
+        const timeJump = state.family.timeJumps.find(item => item.id === actionElement.dataset.timeJumpId);
+        if (!timeJump) throw new Error('Der Zeitsprungknoten wurde nicht gefunden.');
+        openTreeNodeActions({
+          kind: 'time-jump',
+          timeJumpId: timeJump.id,
+          label: timeJump.label || 'Zeitsprung'
+        });
         break;
       }
-      case 'open-lineage-child-from-editor':
-        if (state.family.lineage.founderPartnershipId) {
-          lineageDialog.close();
-          openLineageCrestChild(state.family.lineage.founderPartnershipId);
-        } else {
-          toast('Bitte zuerst ein Gründerpaar auswählen und speichern.', { error: true });
-        }
-        break;
-      case 'delete-time-jump':
-        if (runtime.confirm('Diesen Zeitsprungknoten entfernen? Nachkommen bleiben als Personen erhalten.')) {
-          store.deleteTimeJump(actionElement.dataset.timeJumpId);
-          toast('Zeitsprungknoten wurde entfernt.');
-        }
-        break;
       case 'delete-current-time-jump': {
         const timeJumpId = timeJumpDialog.getCurrentId();
         if (timeJumpId && runtime.confirm('Diesen Zeitsprungknoten entfernen? Nachkommen bleiben als Personen erhalten.')) {
@@ -779,26 +956,50 @@ export function createAppController({
       case 'tree-generator-commit-phase-2':
         treeGeneratorController.commitPhaseTwo();
         break;
+      case 'tree-generator-select-guided-mode':
+        treeGeneratorController.selectGenerationMode('guided');
+        break;
+      case 'tree-generator-select-automatic-mode':
+        treeGeneratorController.selectGenerationMode('automatic');
+        break;
+      case 'tree-generator-back-to-mode-choice':
+        treeGeneratorController.backToModeChoice();
+        break;
+      case 'tree-generator-preview-automatic':
+        treeGeneratorController.previewAutomaticTemplate();
+        break;
+      case 'tree-generator-reroll-automatic':
+        treeGeneratorController.previewAutomaticTemplate({ reroll: true });
+        break;
+      case 'tree-generator-accept-automatic':
+        treeGeneratorController.acceptAutomaticTemplate();
+        break;
       case 'tree-generator-skip-time-jump':
         treeGeneratorController.skipTimeJump();
+        break;
+      case 'tree-generator-reveal-time-jump':
+        treeGeneratorController.revealTimeJumpFields();
         break;
       case 'tree-generator-commit-time-jump':
         treeGeneratorController.commitTimeJump();
         break;
       case 'tree-generator-toggle-child-form':
-        treeGeneratorController.toggleChildForm(actionElement.dataset.personId);
+        treeGeneratorController.toggleChildForm(actionElement.dataset.lineId);
         break;
       case 'tree-generator-cancel-child':
         treeGeneratorController.cancelChildForm();
         break;
       case 'tree-generator-add-child':
-        treeGeneratorController.addChild(actionElement.dataset.personId);
+        treeGeneratorController.addChild(actionElement.dataset.personId, actionElement.dataset.lineId);
         break;
       case 'tree-generator-delegate-marriage':
         treeGeneratorController.delegateMarriage(actionElement.dataset.personId);
         break;
       case 'tree-generator-delegate-cadet':
-        treeGeneratorController.delegateCadet(actionElement.dataset.personId);
+        treeGeneratorController.delegateCadet(
+          actionElement.dataset.personId,
+          actionElement.dataset.partnershipId
+        );
         break;
       case 'tree-generator-next-generation':
         treeGeneratorController.nextGeneration();
@@ -930,14 +1131,21 @@ export function createAppController({
       throw new Error('Bitte beide Personen des Gründerpaares benennen.');
     }
     const family = createFoundingFamily(values);
+    if (family.document.id === store.getState().family.document.id) {
+      throw new Error('Diese Familien-ID gehört bereits zur geöffneten Akte. Bitte für die neue Familie eine andere ID wählen.');
+    }
     store.replaceFamily(family, { source: 'new-founding-family' });
     store.selectPerson(family.view.focusPersonId);
     const target = new URL(runtime.location.href);
     target.searchParams.delete('family');
     runtime.history.replaceState({}, '', target.href);
     newFamilyDialog.close();
-    if (values.openSaveAfterCreate) familySaveDialog.open(family, []);
-    toast(`${family.document.title} wurde als neue Familienakte angelegt.`);
+    if (values.nextStep === 'register') {
+      familySaveDialog.open(family, []);
+    } else {
+      treeGeneratorController.open({ mode: values.nextStep });
+    }
+    toast(`${family.document.title} wurde als neue Gründerfamilie angelegt.`);
   }
 
   function submitRelatedPersonForm() {
@@ -991,6 +1199,12 @@ export function createAppController({
     store.setLineage(lineageDialog.read());
     lineageDialog.close();
     toast('Gründerpaar und Linienaufbau wurden gespeichert.');
+  }
+
+  function submitLineageTimeGapForm() {
+    store.setLineageTimeGap(lineageTimeGapDialog.read());
+    lineageTimeGapDialog.close();
+    toast('Zeitsprung unter dem Hauswappen wurde gespeichert.');
   }
 
   function submitLineageOriginForm() {
@@ -1141,6 +1355,14 @@ export function createAppController({
         toast(error.message, { error: true, duration: 5000 });
       }
     }
+    if (event.target === lineageTimeGapDialog.form) {
+      event.preventDefault();
+      try {
+        submitLineageTimeGapForm();
+      } catch (error) {
+        toast(error.message, { error: true, duration: 5000 });
+      }
+    }
     if (event.target === lineageOriginDialog.form) {
       event.preventDefault();
       try {
@@ -1196,7 +1418,7 @@ export function createAppController({
       ? 'Stammbaum bearbeiten'
       : 'Stammbaum ansehen';
     documentRef.querySelector('.chart-hint').textContent = isEditing
-      ? 'Ziehen zum Verschieben · Mausrad zum Zoomen · Portrait öffnet die Biographie'
+      ? 'Ziehen zum Verschieben · Mausrad zum Zoomen · Karte oder Portrait öffnet „Beziehung modifizieren“'
       : 'Ziehen zum Verschieben · Mausrad zum Zoomen · Portrait öffnet die Biographie · Wappen öffnen weitere Häuser';
     documentRef.querySelectorAll('[data-current-year]').forEach(element => {
       element.textContent = String(ALERIA_CURRENT_YEAR);

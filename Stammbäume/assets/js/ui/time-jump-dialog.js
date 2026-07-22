@@ -17,7 +17,6 @@ export function createTimeJumpDialog(documentRef = document) {
   const title = documentRef.getElementById('time-jump-dialog-title');
   const submitButton = documentRef.getElementById('time-jump-dialog-submit');
   const deleteButton = documentRef.getElementById('time-jump-dialog-delete');
-  const addChildButton = documentRef.getElementById('time-jump-dialog-add-child');
   let currentFamily = null;
   let currentTimeJump = null;
 
@@ -83,7 +82,6 @@ export function createTimeJumpDialog(documentRef = document) {
     title.textContent = 'Zeitsprungknoten anlegen';
     submitButton.textContent = 'Zeitsprungknoten anlegen';
     deleteButton.hidden = true;
-    addChildButton.hidden = true;
     if (!dialog.open) dialog.showModal();
   }
 
@@ -108,7 +106,6 @@ export function createTimeJumpDialog(documentRef = document) {
     title.textContent = 'Zeitsprungknoten bearbeiten';
     submitButton.textContent = 'Zeitsprung speichern';
     deleteButton.hidden = false;
-    addChildButton.hidden = false;
     if (!dialog.open) dialog.showModal();
   }
 

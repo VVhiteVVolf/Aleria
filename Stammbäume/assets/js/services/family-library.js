@@ -30,24 +30,38 @@ export function parseFolderPath(value) {
     .filter(Boolean);
 }
 
+function resolveFamilyRecord(registered, local) {
+  if (!local) return registered ? { ...registered, source: 'registry' } : null;
+  if (!registered) {
+    return {
+      ...local,
+      link: createFamilyViewLink(local.id)
+    };
+  }
+
+  const registeredHasFamily = (registered.family?.persons || []).length > 0;
+  if (registeredHasFamily && isUntouchedBlankFamily(local)) {
+    return { ...registered, source: 'registry' };
+  }
+
+  const needsUpgrade = needsRegisteredFamilyUpgrade(registered.family, local.family);
+  return {
+    ...local,
+    family: needsUpgrade
+      ? resolveRegisteredFamilyUpgrade(registered.family, local.family)
+      : local.family,
+    source: needsUpgrade ? 'registry-upgrade' : local.source,
+    link: createFamilyViewLink(local.id)
+  };
+}
+
 export function listFamilyRecords(storage = globalThis.localStorage) {
   const retiredIds = new Set(RETIRED_FAMILY_IDS);
   const byId = new Map(FAMILY_REGISTRY.map(record => [record.id, { ...record, source: 'registry' }]));
   loadSavedFamilyRecords(storage).forEach(record => {
     if (retiredIds.has(record.id)) return;
-    const registered = byId.get(record.id);
-    const needsUpgrade = registered
-      && !isUntouchedBlankFamily(record)
-      && needsRegisteredFamilyUpgrade(registered.family, record.family);
-    const family = needsUpgrade
-      ? resolveRegisteredFamilyUpgrade(registered.family, record.family)
-      : record.family;
-    byId.set(record.id, {
-      ...record,
-      family,
-      source: needsUpgrade ? 'registry-upgrade' : record.source,
-      link: createFamilyViewLink(record.id)
-    });
+    const registered = getRegisteredFamily(record.id);
+    byId.set(record.id, resolveFamilyRecord(registered, record));
   });
   return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
 }
@@ -57,19 +71,7 @@ export function loadFamilyById(familyId, storage = globalThis.localStorage) {
   if (RETIRED_FAMILY_IDS.includes(normalizedId)) return null;
   const local = loadSavedFamilyRecords(storage).find(record => record.id === normalizedId);
   const registered = getRegisteredFamily(normalizedId);
-  if (local && registered && !isUntouchedBlankFamily(local)) {
-    const needsUpgrade = needsRegisteredFamilyUpgrade(registered.family, local.family);
-    const family = needsUpgrade
-      ? resolveRegisteredFamilyUpgrade(registered.family, local.family)
-      : local.family;
-    return {
-      ...local,
-      family,
-      source: needsUpgrade ? 'registry-upgrade' : local.source
-    };
-  }
-  if (local && !(registered && isUntouchedBlankFamily(local) && registered.family.persons.length)) return local;
-  return registered ? { ...registered, source: 'registry' } : null;
+  return resolveFamilyRecord(registered, local);
 }
 
 export function saveFamilyToLibrary({ family, id, title, folderPath, rankId }, storage = globalThis.localStorage) {

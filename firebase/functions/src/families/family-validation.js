@@ -1,3 +1,8 @@
+import {
+  resolvePublishedAnchorGenerationDepth,
+  resolvePublishedFamilyGenerationDepths
+} from './family-generation-depth.js';
+
 function asSet(records, label, diagnostics) {
   const ids = new Set();
   records.forEach(record => {
@@ -39,6 +44,7 @@ export function validateWorkspaceForPublishing(workspace) {
   }
   const personIds = asSet(collections.persons, 'Person', diagnostics);
   const partnershipIds = asSet(collections.partnerships, 'Partnerschaft', diagnostics);
+  const partnershipById = new Map(collections.partnerships.map(partnership => [partnership.id, partnership]));
   asSet(collections.parentages, 'Abstammung', diagnostics);
   asSet(collections.houses, 'Haus', diagnostics);
   asSet(collections.cadetBranches, 'Hausverknüpfung', diagnostics);
@@ -67,6 +73,19 @@ export function validateWorkspaceForPublishing(workspace) {
     if (!partnershipIds.has(branch.parentPartnershipId)) diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein gültiges Elternpaar.`);
     if (!branch.targetFamilyId) diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein Zielhaus.`);
   });
+  const timeJumpAnchors = [];
+  const founderPersonIds = new Set(
+    partnershipById.get(root.lineage?.founderPartnershipId)?.participantIds || []
+  );
+  const generationDepths = resolvePublishedFamilyGenerationDepths(collections);
+  const occupiedTimeBarrierDepths = new Map();
+  const founderGenerationDepth = resolvePublishedAnchorGenerationDepth(
+    [...founderPersonIds],
+    generationDepths
+  );
+  if (root.lineage?.timeGap?.enabled === true && founderGenerationDepth !== null) {
+    occupiedTimeBarrierDepths.set(founderGenerationDepth, 'lineage-time-gap');
+  }
   collections.timeJumps.forEach(timeJump => {
     const hasPartnership = timeJump.parentPartnershipId && partnershipIds.has(timeJump.parentPartnershipId);
     const hasPerson = timeJump.parentPersonId && personIds.has(timeJump.parentPersonId);
@@ -74,6 +93,35 @@ export function validateWorkspaceForPublishing(workspace) {
     if (timeJump.parentPersonId && !hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ verweist auf eine unbekannte Ausgangsperson.`);
     if (!hasPartnership && !hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ hat keine gültige Ausgangsperson oder -verbindung.`);
     if (hasPartnership && hasPerson) diagnostics.push(`Zeitsprung „${timeJump.id}“ hat mehrere Ausgangspunkte.`);
+    const anchorPersonIds = hasPartnership
+      ? partnershipById.get(timeJump.parentPartnershipId)?.participantIds || []
+      : hasPerson ? [timeJump.parentPersonId] : [];
+    const overlappingAnchor = timeJumpAnchors.find(anchor => (
+      anchor.personIds.some(personId => anchorPersonIds.includes(personId))
+    ));
+    if (anchorPersonIds.length && overlappingAnchor) {
+      diagnostics.push(`Zeitsprung „${timeJump.id}“ überlappt „${overlappingAnchor.timeJumpId}“ an mindestens einer Person und wäre damit parallel.`);
+    }
+    if (anchorPersonIds.length) timeJumpAnchors.push({ timeJumpId: timeJump.id, personIds: anchorPersonIds });
+    const hasExactlyOneAnchorField = Boolean(timeJump.parentPartnershipId) !== Boolean(timeJump.parentPersonId);
+    const hasValidAnchor = hasExactlyOneAnchorField && (Boolean(hasPartnership) !== Boolean(hasPerson));
+    const anchorGenerationDepth = hasValidAnchor
+      ? resolvePublishedAnchorGenerationDepth(anchorPersonIds, generationDepths)
+      : null;
+    const existingBarrierId = anchorGenerationDepth === null
+      ? ''
+      : occupiedTimeBarrierDepths.get(anchorGenerationDepth);
+    if (existingBarrierId) {
+      diagnostics.push(`Zeitsprung „${timeJump.id}“ wäre auf Generation ${anchorGenerationDepth} parallel zu „${existingBarrierId}“. Pro Generation ist nur ein globaler Trenner zulässig.`);
+    } else if (anchorGenerationDepth !== null) {
+      occupiedTimeBarrierDepths.set(anchorGenerationDepth, timeJump.id);
+    }
+    if (
+      root.lineage?.timeGap?.enabled === true
+      && anchorPersonIds.some(personId => founderPersonIds.has(personId))
+    ) {
+      diagnostics.push(`Zeitsprung „${timeJump.id}“ belegt denselben Platz wie der bestehende Trenner unter dem Stammwappen.`);
+    }
     (timeJump.childIds || []).forEach(id => {
       if (!personIds.has(id)) diagnostics.push(`Zeitsprung „${timeJump.id}“ verweist auf eine unbekannte Person.`);
     });

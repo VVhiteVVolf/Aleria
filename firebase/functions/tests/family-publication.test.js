@@ -88,6 +88,91 @@ test('akzeptiert einen Zeitsprung direkt nach einer einzelnen Person', () => {
   assert.equal(validateWorkspaceForPublishing(draft).valid, false);
 });
 
+test('weist parallele Zeitsprünge am selben Ausgangspunkt zurück', () => {
+  const draft = workspace();
+  draft.collections.timeJumps = ['first', 'second'].map(id => ({
+    id,
+    parentPartnershipId: 'p',
+    parentPersonId: '',
+    childIds: []
+  }));
+
+  const result = validateWorkspaceForPublishing(draft);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('parallel')));
+});
+
+test('weist überlappende Paar-/Einzelanker sowie einen Gründeranker neben dem Haus-Zeitsprung zurück', () => {
+  const overlapping = workspace();
+  overlapping.collections.timeJumps = [
+    { id: 'pair-gap', parentPartnershipId: 'p', parentPersonId: '', childIds: [] },
+    { id: 'person-gap', parentPartnershipId: '', parentPersonId: 'a', childIds: [] }
+  ];
+  let result = validateWorkspaceForPublishing(overlapping);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('überlappt')));
+
+  const besideLineageGap = workspace();
+  besideLineageGap.root.lineage = {
+    founderPartnershipId: 'p',
+    timeGap: { enabled: true }
+  };
+  besideLineageGap.collections.timeJumps = [
+    { id: 'founder-person-gap', parentPartnershipId: '', parentPersonId: 'a', childIds: [] }
+  ];
+  result = validateWorkspaceForPublishing(besideLineageGap);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('bestehende Trenner')));
+});
+
+test('weist disjunkte Zeitsprünge derselben Generation zurück', () => {
+  const draft = workspace();
+  draft.collections.persons.push(
+    { id: 'd', name: 'D', portrait: '', notes: '', extensions: {} },
+    { id: 'e', name: 'E', portrait: '', notes: '', extensions: {} }
+  );
+  draft.collections.partnerships.push({
+    id: 'q', participantIds: ['d', 'e'], visibility: 'public', notes: '', extensions: {}
+  });
+  draft.collections.timeJumps = [
+    { id: 'gap-p', parentPartnershipId: 'p', parentPersonId: '', childIds: [] },
+    { id: 'gap-q', parentPartnershipId: 'q', parentPersonId: '', childIds: [] }
+  ];
+
+  let result = validateWorkspaceForPublishing(draft);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('Pro Generation')));
+
+  draft.collections.timeJumps.reverse();
+  result = validateWorkspaceForPublishing(draft);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('Pro Generation')));
+});
+
+test('behandelt den Haus-Zeitsprung auch gegenüber einer disjunkten Wurzel als globalen Trenner', () => {
+  const draft = workspace();
+  draft.root.lineage = { founderPartnershipId: 'p', timeGap: { enabled: true } };
+  draft.collections.persons.push({ id: 'd', name: 'D', portrait: '', notes: '', extensions: {} });
+  draft.collections.timeJumps = [
+    { id: 'gap-root', parentPartnershipId: '', parentPersonId: 'd', childIds: [] }
+  ];
+
+  const result = validateWorkspaceForPublishing(draft);
+  assert.equal(result.valid, false);
+  assert.ok(result.diagnostics.some(message => message.includes('Pro Generation')));
+});
+
+test('erlaubt Zeitsprünge an unterschiedlichen Generationen', () => {
+  const draft = workspace();
+  draft.collections.partnerships = draft.collections.partnerships.filter(partnership => partnership.id !== 'secret');
+  draft.collections.timeJumps = [
+    { id: 'gap-root', parentPartnershipId: 'p', parentPersonId: '', childIds: [] },
+    { id: 'gap-child', parentPartnershipId: '', parentPersonId: 'c', childIds: [] }
+  ];
+
+  assert.equal(validateWorkspaceForPublishing(draft).valid, true);
+});
+
 test('entfernt private Daten, veröffentlicht aber das Biographie-Modul', () => {
   const published = createPublicFamily(workspace());
   assert.equal(published.collections.partnerships.length, 1);

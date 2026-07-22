@@ -11,6 +11,7 @@ import { HOUSE_ILLYSYWEN_PORTRAITS } from './house-illysywen-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   illysywen: 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png',
@@ -93,7 +94,7 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-brathfengr', 'Haus Brathfengr'),
-    house('house-grawn', 'Haus Grawn'),
+    house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-pyrth', 'Haus Pyrth'),
     house('house-eldrath', 'Haus Eldrath'),
     house('house-rochraide', 'Haus Rochraide'),
@@ -215,7 +216,7 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
     marriedAway('married-away-gwefrydd-ysbail', 'Haus Gwefrydd', 'marriage-ysbail-ormund', 'house-gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     marriedAway('married-away-seaghda-jenifrydd', 'Haus Séaghda', 'marriage-jenifrydd-malachy', 'house-seaghda'),
     marriedAway('married-away-gwyvern-dajenne', 'Haus Gwyvern', 'marriage-dajenne-kimball', 'house-gwyvern', HOUSE_EMBLEMS.gwyvern),
-    marriedAway('married-away-grawn-morwen', 'Haus Grawn', 'marriage-morwen-owen', 'house-grawn'),
+    marriedAway('married-away-grawn-morwen', 'Haus Grawn', 'marriage-morwen-owen', 'house-grawn', HOUSE_EMBLEMS.grawn),
     createExtinctBranch({
       id: 'extinct-hugwan',
       parentPartnershipId: 'engagement-hugwan-nasuada',

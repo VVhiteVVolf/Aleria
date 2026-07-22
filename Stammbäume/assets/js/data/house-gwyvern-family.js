@@ -9,6 +9,7 @@ import {
 import { HOUSE_GWYVERN_PORTRAITS } from './house-gwyvern-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
@@ -103,7 +104,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     house('house-arth', 'Haus Arth'),
     house('house-airt', 'Haus Airt'),
     house('house-hebog', 'Haus Hebog'),
-    house('house-aderyn', 'Haus Aderyn'),
+    house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     house('house-arwydd', 'Haus Arwydd', HOUSE_EMBLEMS.arwydd),
     house('house-creyr', 'Haus Créyr')

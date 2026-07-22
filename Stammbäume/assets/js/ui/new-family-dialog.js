@@ -17,7 +17,7 @@ export function createNewFamilyDialog(documentRef = document) {
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), DEFAULT_CREST_FRAME);
     fillHouseRankSelect(form.elements.namedItem('rankId'), 'unknown');
     form.elements.namedItem('emblem').value = PORTRAIT_PLACEHOLDERS.crest;
-    form.elements.namedItem('openSaveAfterCreate').checked = true;
+    form.elements.namedItem('nextStep').value = 'guided';
     dialog.showModal();
     titleInput.focus();
   }
@@ -41,12 +41,9 @@ export function createNewFamilyDialog(documentRef = document) {
       founderWomanBirth: String(values.founderWomanBirth || '').trim(),
       founderWomanDeath: String(values.founderWomanDeath || '').trim(),
       marriageYear: String(values.marriageYear || '').trim(),
-      firstChildName: String(values.firstChildName || '').trim(),
-      firstChildTitle: String(values.firstChildTitle || '').trim(),
-      firstChildSex: values.firstChildSex || 'unknown',
-      firstChildBirth: String(values.firstChildBirth || '').trim(),
-      firstChildDeath: String(values.firstChildDeath || '').trim(),
-      openSaveAfterCreate: values.openSaveAfterCreate === 'on'
+      nextStep: ['guided', 'automatic', 'register'].includes(values.nextStep)
+        ? values.nextStep
+        : 'guided'
     };
   }
 

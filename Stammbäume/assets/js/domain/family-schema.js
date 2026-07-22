@@ -2,6 +2,10 @@ import { DEFAULT_RELATIONSHIP_COLORS, FAMILY_ROLES } from '../config/family-colo
 import { DEFAULT_CREST_FRAME, isCrestFrameId } from '../config/chart-frames.js';
 import { DEFAULT_PERSON_LINEAGE_ROLE, isPersonLineageRole } from '../config/person-lineage.js';
 import { normalizeHouseProfile } from './house-profile.js';
+import {
+  resolveAnchorGenerationDepth,
+  resolveFamilyGenerationDepths
+} from './family-generation-depth.js';
 
 export const FAMILY_SCHEMA = 'aleria.family-tree';
 export const FAMILY_SCHEMA_VERSION = 1;
@@ -472,6 +476,18 @@ export function validateFamily(input) {
   });
 
   const timeJumpChildIds = new Set();
+  const timeJumpAnchors = [];
+  const founderPartnership = partnershipById.get(family.lineage.founderPartnershipId);
+  const founderPersonIds = new Set(founderPartnership?.participantIds || []);
+  const generationDepths = resolveFamilyGenerationDepths(family);
+  const occupiedTimeBarrierDepths = new Map();
+  const founderGenerationDepth = resolveAnchorGenerationDepth(
+    founderPartnership?.participantIds || [],
+    generationDepths
+  );
+  if (family.lineage.timeGap.enabled && founderGenerationDepth !== null) {
+    occupiedTimeBarrierDepths.set(founderGenerationDepth, 'lineage-time-gap');
+  }
   family.timeJumps.forEach(timeJump => {
     const partnership = partnershipById.get(timeJump.parentPartnershipId);
     const hasPersonAnchor = personIds.has(timeJump.parentPersonId);
@@ -498,6 +514,43 @@ export function validateFamily(input) {
       }));
     }
     const anchorPersonIds = partnership?.participantIds || (hasPersonAnchor ? [timeJump.parentPersonId] : []);
+    const overlappingAnchor = timeJumpAnchors.find(anchor => (
+      anchor.personIds.some(personId => anchorPersonIds.includes(personId))
+    ));
+    if (anchorPersonIds.length && overlappingAnchor) {
+      diagnostics.push(diagnostic('error', 'PARALLEL_TIME_JUMP_ANCHOR', 'Überlappende Personen oder Verbindungen dürfen nicht mehrere Zeitsprünge tragen. Zeitsprünge sind serielle Generationstrenner und niemals parallele Zweige.', {
+        timeJumpId: timeJump.id,
+        existingTimeJumpId: overlappingAnchor.timeJumpId,
+        overlappingPersonIds: anchorPersonIds.filter(personId => overlappingAnchor.personIds.includes(personId))
+      }));
+    }
+    if (anchorPersonIds.length) timeJumpAnchors.push({ timeJumpId: timeJump.id, personIds: anchorPersonIds });
+    const hasExactlyOneAnchorField = Boolean(timeJump.parentPartnershipId) !== Boolean(timeJump.parentPersonId);
+    const hasValidAnchor = hasExactlyOneAnchorField && (Boolean(partnership) !== hasPersonAnchor);
+    const anchorGenerationDepth = hasValidAnchor
+      ? resolveAnchorGenerationDepth(anchorPersonIds, generationDepths)
+      : null;
+    const existingBarrierId = anchorGenerationDepth === null
+      ? ''
+      : occupiedTimeBarrierDepths.get(anchorGenerationDepth);
+    if (existingBarrierId) {
+      diagnostics.push(diagnostic('error', 'PARALLEL_TIME_JUMP_GENERATION', 'In derselben Generation darf nur ein Zeitsprung existieren. Der Trenner gilt immer für die vollständige Ebene und darf nicht parallel zu einem anderen Knoten stehen.', {
+        timeJumpId: timeJump.id,
+        existingBarrierId,
+        generationDepth: anchorGenerationDepth
+      }));
+    } else if (anchorGenerationDepth !== null) {
+      occupiedTimeBarrierDepths.set(anchorGenerationDepth, timeJump.id);
+    }
+    if (
+      family.lineage.timeGap.enabled
+      && anchorPersonIds.some(personId => founderPersonIds.has(personId))
+    ) {
+      diagnostics.push(diagnostic('error', 'DUPLICATE_LINEAGE_TIME_BARRIER', 'Unter dem Stammwappen existiert bereits ein Zeitsprung. Auch ein Einzelanker an einem Mitglied des Gründerpaares würde dieselbe Generation doppelt belegen.', {
+        timeJumpId: timeJump.id,
+        partnershipId: family.lineage.founderPartnershipId
+      }));
+    }
     timeJump.childIds.forEach(childId => {
       if (!personIds.has(childId)) {
         diagnostics.push(diagnostic('error', 'MISSING_TIME_JUMP_CHILD', 'Der Zeitsprungknoten verweist auf eine unbekannte Person.', {

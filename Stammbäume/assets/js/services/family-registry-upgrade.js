@@ -14,9 +14,13 @@ function sourceRevision(family) {
   return Number.isInteger(revision) && revision >= 0 ? revision : 0;
 }
 
-function mergeEntities(registeredEntities = [], localEntities = []) {
+function tombstonesFor(family, collection) {
+  return new Set(family?.extensions?.registryTombstones?.[collection] || []);
+}
+
+function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set()) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
-  const merged = registeredEntities.map(entity => {
+  const merged = registeredEntities.filter(entity => !tombstones.has(entity.id)).map(entity => {
     const localEntity = localById.get(entity.id);
     if (!localEntity) return entity;
 
@@ -58,16 +62,35 @@ function resemblesRegisteredSnapshot(registeredFamily, localFamily) {
 function missesRegisteredStructure(registeredFamily, localFamily) {
   return ENTITY_COLLECTIONS.some(collection => {
     const localIds = new Set((localFamily[collection] || []).map(entity => entity.id));
-    return (registeredFamily[collection] || []).some(entity => !localIds.has(entity.id));
+    const tombstones = tombstonesFor(localFamily, collection);
+    return (registeredFamily[collection] || []).some(entity => !localIds.has(entity.id) && !tombstones.has(entity.id));
   });
 }
 
 export function isUntouchedBlankFamily(record) {
   const family = record?.family;
-  return family?.extensions?.blankFamily === true
-    && (family.persons || []).length === 0
-    && (family.partnerships || []).length === 0
-    && (family.parentages || []).length === 0;
+  if (family?.extensions?.blankFamily !== true) return false;
+
+  const persons = family.persons || [];
+  const partnerships = family.partnerships || [];
+  const parentages = family.parentages || [];
+  if (!persons.length && !partnerships.length && !parentages.length) return true;
+
+  const familyId = family.document?.id || record?.id || '';
+  const founderIds = [`${familyId}-gruender`, `${familyId}-gruenderin`];
+  const founderPartnershipId = `marriage-${familyId}-founders`;
+  const onlyFactoryFounders = persons.length === 2
+    && persons.every(person => founderIds.includes(person.id) && person.name === '???');
+  const onlyFactoryPartnership = partnerships.length === 1
+    && partnerships[0].id === founderPartnershipId
+    && founderIds.every(personId => partnerships[0].participantIds?.includes(personId));
+
+  return onlyFactoryFounders
+    && onlyFactoryPartnership
+    && !parentages.length
+    && !(family.cadetBranches || []).length
+    && !(family.timeJumps || []).length
+    && family.lineage?.founderPartnershipId === founderPartnershipId;
 }
 
 export function needsRegisteredFamilyUpgrade(registeredFamily, localFamily) {
@@ -91,7 +114,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
 
   const mergedCollections = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
-    mergeEntities(registered[collection], local[collection])
+    mergeEntities(registered[collection], local[collection], tombstonesFor(local, collection))
   ]));
 
   return normalizeFamily({

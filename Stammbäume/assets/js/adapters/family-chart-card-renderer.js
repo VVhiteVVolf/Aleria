@@ -111,6 +111,9 @@ function timeNode(data) {
 
 export function createFamilyChartCardHtml(hierarchyDatum) {
   const data = hierarchyDatum?.data?.data || hierarchyDatum?.data || {};
+  if (data.nodeKind === 'time-jump-stage') {
+    return '<div class="card-inner aleria-chart-card aleria-time-jump-stage" aria-hidden="true"></div>';
+  }
   if (['house-crest', 'cadet-house', 'house-origin'].includes(data.nodeKind)) return crestNode(data);
   if (data.nodeKind === 'line-end') return lineEndNode(data);
   if (data.nodeKind === 'time-gap' || data.nodeKind === 'time-jump') return timeNode(data);

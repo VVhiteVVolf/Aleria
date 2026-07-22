@@ -52,7 +52,8 @@
         <div class="workspace-mode-switch" aria-label="Arbeitsmodus">
           <span class="workspace-mode-label" id="workspace-mode-label">Ansichtsmodus</span>
           <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur lokal</span>
-          <button class="button button--quiet" type="button" data-action="open-cloud-login" data-edit-only>Cloud anmelden</button>
+          <button class="button" type="button" data-action="cloud-save" data-edit-only>Online speichern</button>
+          <button class="button button--quiet" type="button" data-action="cloud-reset-origin" data-edit-only hidden>Zum Ursprung</button>
           <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>Cloud-Konto</button>
           <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
@@ -112,9 +113,9 @@
       </div>
 
       <div class="toolbar-group" aria-label="Familienakte">
-        <button class="button" type="button" data-action="start-new-family">＋ Neue Familie</button>
-        <button class="button" type="button" data-action="open-tree-generator">Stammbaum-Generator</button>
-        <button class="button button--quiet" type="button" data-action="open-family-save">Familie speichern</button>
+        <button class="button" type="button" data-action="start-new-family" title="Haus und Gründerpaar in einem Schritt anlegen">＋ Neue Familie · Schnellstart</button>
+        <button class="button" type="button" data-action="open-tree-generator" title="Familie automatisch aus einer Vorlage oder etappenweise aufbauen">Stammbaum-Generator</button>
+        <button class="button button--quiet" type="button" data-action="open-family-save">Im Familienregister speichern</button>
         <a class="button button--quiet" href="index.html">Startseite</a>
         <a class="button button--quiet" href="register.html">Familienregister</a>
       </div>
@@ -160,8 +161,8 @@
     <form method="dialog" id="new-family-form">
       <header class="dialog-header">
         <div>
-          <p class="eyebrow">Neue unabhängige Familienakte</p>
-          <h2>Familie mit Gründerpaar beginnen</h2>
+          <p class="eyebrow">Neue Familie · Schnellstart</p>
+          <h2>Haus und Gründerpaar in einem Schritt</h2>
         </div>
         <button class="icon-button" type="button" data-action="close-new-family-dialog" aria-label="Dialog schließen">×</button>
       </header>
@@ -232,35 +233,20 @@
           <input name="marriageYear" maxlength="40" placeholder="1712">
         </label>
 
-        <h3 class="form-section-title field--wide">Erstes Kind unter dem Wappen <span>optional</span></h3>
-        <label class="field">Name
-          <input name="firstChildName" maxlength="120" placeholder="Kann später ergänzt werden">
-        </label>
-        <label class="field">Titel
-          <input name="firstChildTitle" maxlength="120">
-        </label>
-        <label class="field">Geschlecht
-          <select name="firstChildSex">
-            <option value="unknown">Unbekannt</option>
-            <option value="female">Weiblich</option>
-            <option value="male">Männlich</option>
+        <h3 class="form-section-title field--wide">Weiterer Aufbau</h3>
+        <label class="field field--wide">Nach dem Gründerpaar
+          <select name="nextStep">
+            <option value="guided">Etappenweise Nachkommen und Zeitsprung ergänzen</option>
+            <option value="automatic">Automatische Familienvorlage konfigurieren</option>
+            <option value="register">Nur Gründerfamilie anlegen und im Register speichern</option>
           </select>
-        </label>
-        <label class="field">Geburt
-          <input name="firstChildBirth" maxlength="40">
-        </label>
-        <label class="field">Tod
-          <input name="firstChildDeath" maxlength="40" placeholder="leer = lebend">
-        </label>
-        <label class="checkbox-field field--wide">
-          <input type="checkbox" name="openSaveAfterCreate" checked>
-          <span>Nach dem Anlegen direkt den Speicherdialog für das Familienregister öffnen</span>
+          <span class="form-help">Die automatische Vorlage fragt anschließend nach Generationenzahl, Struktur und optionalem Zeitsprung.</span>
         </label>
       </div>
       <footer class="dialog-footer">
         <button class="button button--quiet" type="button" data-action="start-empty-family">Ganz leer beginnen</button>
         <button class="button button--quiet" type="button" data-action="close-new-family-dialog">Abbrechen</button>
-        <button class="button" value="default" type="submit">Gründerfamilie anlegen</button>
+        <button class="button" value="default" type="submit">Gründerfamilie anlegen und weiter</button>
       </footer>
     </form>
   </dialog>
@@ -645,7 +631,7 @@
       <header class="dialog-header">
         <div>
           <p class="eyebrow">Aufbau der Linie</p>
-          <h2>Gründerpaar, Wappen & Zeitsprung</h2>
+          <h2>Gründerpaar und Hauswappen</h2>
         </div>
         <button class="icon-button" type="button" data-action="close-lineage-settings" aria-label="Dialog schließen">×</button>
       </header>
@@ -675,28 +661,58 @@
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
           <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
         </label>
-        <label class="checkbox-field field--wide">
-          <input type="checkbox" name="timeGapEnabled">
-          <span>Zeitsprung zwischen Wappen und belegten Nachkommen anzeigen</span>
-        </label>
+      </div>
+      <footer class="dialog-footer">
+        <button class="button button--quiet" type="button" data-action="close-lineage-settings">Abbrechen</button>
+        <button class="button" value="default" type="submit">Hausknoten speichern</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="lineage-time-gap-dialog">
+    <form method="dialog" id="lineage-time-gap-form">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow">Absolute Generationsbarriere</p>
+          <h2 id="lineage-time-gap-title">Zeitsprung unter dem Hauswappen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-lineage-time-gap" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body form-grid">
+        <p class="form-hint field--wide">Dieser Zeitsprung liegt immer allein zwischen dem Hauswappen und der nächsten belegten Generation.</p>
         <label class="field">Jahr (von)
-          <input name="timeGapFromYear" maxlength="40" placeholder="z. B. 1252">
+          <input name="fromYear" maxlength="40" placeholder="z. B. 1252">
         </label>
         <label class="field">Jahr (bis)
-          <input name="timeGapToYear" maxlength="40" placeholder="z. B. 1704">
+          <input name="toYear" maxlength="40" placeholder="z. B. 1704">
         </label>
         <label class="field">Zeitraum in Jahren
-          <input type="number" name="timeGapYears" min="0" max="10000" step="1" placeholder="500">
+          <input type="number" name="years" min="0" max="10000" step="1" placeholder="500">
         </label>
-        <label class="field">Beschriftung
-          <input name="timeGapLabel" maxlength="160" placeholder="Nach Jahrhunderten beginnt die belegte Linie">
+        <label class="field field--wide">Beschriftung
+          <input name="label" maxlength="160" placeholder="Nach Jahrhunderten beginnt die belegte Linie">
         </label>
       </div>
       <footer class="dialog-footer">
-        <button class="button button--quiet" type="button" data-action="open-lineage-child-from-editor">Nachkommen anlegen</button>
-        <button class="button button--quiet" type="button" data-action="close-lineage-settings">Abbrechen</button>
-        <button class="button" value="default" type="submit">Baumaufbau speichern</button>
+        <button class="button button--danger" id="lineage-time-gap-delete" type="button" data-action="delete-lineage-time-gap" hidden>Zeitsprung entfernen</button>
+        <button class="button button--quiet" type="button" data-action="close-lineage-time-gap">Abbrechen</button>
+        <button class="button" id="lineage-time-gap-submit" value="default" type="submit">Zeitsprung speichern</button>
       </footer>
+    </form>
+  </dialog>
+
+  <dialog class="dialog dialog--compact" id="tree-node-actions-dialog">
+    <form method="dialog">
+      <header class="dialog-header">
+        <div>
+          <p class="eyebrow" id="tree-node-actions-eyebrow">Knoten bearbeiten</p>
+          <h2 id="tree-node-actions-title">Aktion auswählen</h2>
+        </div>
+        <button class="icon-button" type="button" data-action="close-tree-node-actions" aria-label="Dialog schließen">×</button>
+      </header>
+      <div class="dialog-body">
+        <div class="relation-action-group-grid" id="tree-node-actions-menu"></div>
+      </div>
     </form>
   </dialog>
 
@@ -855,7 +871,6 @@
       </div>
       <footer class="dialog-footer">
         <button class="button button--danger" id="time-jump-dialog-delete" type="button" data-action="delete-current-time-jump" hidden>Zeitsprung löschen</button>
-        <button class="button button--quiet" id="time-jump-dialog-add-child" type="button" data-action="open-time-jump-child-from-editor" hidden>Nachkommen anlegen</button>
         <button class="button button--quiet" type="button" data-action="close-time-jump-dialog">Abbrechen</button>
         <button class="button" id="time-jump-dialog-submit" value="default" type="submit">Zeitsprungknoten anlegen</button>
       </footer>
@@ -980,17 +995,12 @@
       </header>
       <div class="dialog-body">
         <p>Angemeldet als <strong id="cloud-account-email">Firebase-Konto</strong>.</p>
-        <p class="form-help">Lokale Änderungen werden revisionssicher mit der privaten Arbeitsfassung synchronisiert.</p>
-        <div class="cloud-conflict-actions" id="cloud-conflict-actions" hidden>
-          <h3>Fassungen unterscheiden sich</h3>
-          <p>Wähle bewusst, welche Fassung weitergeführt werden soll.</p>
-          <button class="button" type="button" data-action="use-cloud-version">Cloud-Fassung übernehmen</button>
-          <button class="button button--quiet" type="button" data-action="overwrite-cloud-version">Lokale Fassung als neue Revision speichern</button>
-        </div>
+        <p class="form-help">Änderungen werden automatisch nur auf diesem Gerät gesichert. Erst „Online speichern“ legt eine neue private Firebase-Revision an. Eine neuere Firebase-Fassung hat beim Abgleich Vorrang.</p>
+        <p class="form-error" id="cloud-account-error" role="alert" hidden></p>
       </div>
       <footer class="dialog-footer">
         <button class="button button--quiet" type="button" data-action="cloud-logout">Abmelden</button>
-        <button class="button" type="button" data-action="retry-cloud-sync">Neu verbinden</button>
+        <button class="button button--quiet" type="button" data-action="retry-cloud-sync">Firebase-Fassung neu laden</button>
         <button class="button" type="button" data-action="cloud-publish">Öffentliche Fassung veröffentlichen</button>
       </footer>
     </div>
@@ -999,7 +1009,7 @@
       <div id="cloud-signed-out">
         <header class="dialog-header">
           <div>
-            <p class="eyebrow">Private Arbeitsfassungen</p>
+            <p class="eyebrow">Online speichern</p>
             <h2>Bei Firebase anmelden</h2>
           </div>
           <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
@@ -1012,7 +1022,7 @@
             <input name="password" type="password" autocomplete="current-password" required>
           </label>
           <p class="form-error field--wide" id="cloud-login-error" role="alert" hidden></p>
-          <p class="form-help field--wide">Das bisherige Werkstatt-Passwort öffnet nur den lokalen Bearbeitungsmodus. Cloud-Schreibrechte werden ausschließlich über dieses Firebase-Konto vergeben.</p>
+          <p class="form-help field--wide">Das Werkstatt-Passwort öffnet den Bearbeitungsmodus. Für den ersten Online-Speichervorgang verlangt Firebase zusätzlich ein berechtigtes Konto; eine bestehende Anmeldung wird wiederverwendet.</p>
         </div>
         <footer class="dialog-footer">
           <button class="button button--quiet" type="button" data-action="close-cloud-account">Abbrechen</button>

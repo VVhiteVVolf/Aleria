@@ -5,6 +5,10 @@ import {
 import { PORTRAIT_PLACEHOLDERS, resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { EXTINCT_LINE_FRAME, getCrestFrame, getPersonCardFrame, TIME_JUMP_FRAME } from '../config/chart-frames.js';
 import { getPersonLineageRole } from '../config/person-lineage.js';
+import {
+  resolveAnchorGenerationDepth,
+  resolveFamilyGenerationDepths
+} from '../domain/family-generation-depth.js';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { formatLifeLine } from '../domain/person-presentation.js';
 import { earliestKnownBirthYear, latestKnownPersonYear } from '../domain/time-boundaries.js';
@@ -14,6 +18,7 @@ import {
 } from './family-chart-card-renderer.js';
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
+import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
 
 const ADAPTER_ID = 'family-chart';
 const LIBRARY_VERSION = '0.9.0';
@@ -71,8 +76,11 @@ function layoutGender(person, diagnostics) {
   return 'F';
 }
 
-function selectPrimaryParentage(parentages) {
+function selectPrimaryParentage(parentages, person) {
+  const preferredType = person?.familyRole === 'ward' ? 'foster' : '';
   return [...parentages].sort((first, second) => (
+    (first.type === preferredType ? -1 : 0) - (second.type === preferredType ? -1 : 0)
+    ||
     (PARENTAGE_PRIORITY[first.type] ?? 99) - (PARENTAGE_PRIORITY[second.type] ?? 99)
     || (CERTAINTY_PRIORITY[first.certainty] ?? 99) - (CERTAINTY_PRIORITY[second.certainty] ?? 99)
   ))[0];
@@ -168,6 +176,14 @@ function createVirtualNode({
     },
     rels: { parents: [], spouses: [], children: [] }
   };
+}
+
+function createTimeJumpLayoutStage(nodeId) {
+  return createVirtualNode({
+    id: `${nodeId}--layout-stage`,
+    name: '',
+    nodeKind: 'time-jump-stage'
+  });
 }
 
 function relationColor(family, relationType, fallback = '#8e2724') {
@@ -354,12 +370,86 @@ function applyOriginHouseStructure({ family, chartById, parentageLines, houseByI
   chartById.set(nodeId, node);
 }
 
-function applyTimeJumps({ family, chartById, parentageLines, personById }) {
-  family.timeJumps.forEach(timeJump => {
-    const partnership = family.partnerships.find(item => item.id === timeJump.parentPartnershipId);
+function applyTimeJumps({ family, chartById, parentageLines, personById, diagnostics }) {
+  const partnershipById = new Map(family.partnerships.map(partnership => [partnership.id, partnership]));
+  const generationDepths = resolveFamilyGenerationDepths(family);
+  const occupiedBarrierDepths = new Map();
+  const founderPartnership = partnershipById.get(family.lineage.founderPartnershipId);
+  const founderGenerationDepth = resolveAnchorGenerationDepth(
+    founderPartnership?.participantIds || [],
+    generationDepths
+  );
+  if (family.lineage.timeGap.enabled) {
+    const founderIds = (founderPartnership?.participantIds || []).filter(personId => chartById.has(personId)).slice(0, 2);
+    const lineageGapNode = chartById.get(`__lineage-gap-${family.document.id}`);
+    if (founderIds.length && lineageGapNode) {
+      if (founderGenerationDepth !== null) {
+        occupiedBarrierDepths.set(founderGenerationDepth, lineageGapNode.id);
+      }
+      const routed = insertTimeJumpAsSerialBarrier({
+        chartById,
+        timeJumpNode: lineageGapNode,
+        layoutStageNode: createTimeJumpLayoutStage(lineageGapNode.id),
+        parentIds: founderIds,
+        sourcePartnershipId: founderPartnership.id,
+        declaredChildIds: [...lineageGapNode.rels.children]
+      });
+      routed.continuationIds.forEach(childId => {
+        parentageLines.set(childId, {
+          type: 'claimed',
+          color: relationColor(family, 'claimed'),
+          dashed: true
+        });
+      });
+      if (routed.stageId) {
+        parentageLines.set(routed.stageId, {
+          type: 'time-gap',
+          color: relationColor(family, 'claimed'),
+          dashed: true
+        });
+      }
+    }
+  }
+
+  const orderedTimeJumps = family.timeJumps
+    .map(timeJump => {
+      const partnership = partnershipById.get(timeJump.parentPartnershipId);
+      const anchorIds = partnership?.participantIds || (timeJump.parentPersonId ? [timeJump.parentPersonId] : []);
+      return {
+        timeJump,
+        anchorGenerationDepth: resolveAnchorGenerationDepth(anchorIds, generationDepths)
+      };
+    })
+    .sort((first, second) => (
+      (first.anchorGenerationDepth ?? Number.MAX_SAFE_INTEGER)
+      - (second.anchorGenerationDepth ?? Number.MAX_SAFE_INTEGER)
+      || first.timeJump.id.localeCompare(second.timeJump.id, 'de')
+    ));
+
+  orderedTimeJumps.forEach(({ timeJump, anchorGenerationDepth }) => {
+    const partnership = partnershipById.get(timeJump.parentPartnershipId);
     const anchorIds = partnership?.participantIds || (timeJump.parentPersonId ? [timeJump.parentPersonId] : []);
     const parentIds = anchorIds.filter(personId => chartById.has(personId)).slice(0, 2);
     if (!parentIds.length) return;
+    const existingBarrierId = anchorGenerationDepth === null
+      ? ''
+      : occupiedBarrierDepths.get(anchorGenerationDepth);
+    if (existingBarrierId) {
+      diagnostics.push(Object.freeze({
+        severity: 'error',
+        code: 'PARALLEL_TIME_JUMP_GENERATION_SKIPPED',
+        message: 'Ein zweiter Zeitsprung derselben Generation wurde nicht dargestellt. Zeitsprünge sind globale serielle Trenner und dürfen niemals parallel stehen.',
+        details: Object.freeze({
+          timeJumpId: timeJump.id,
+          existingBarrierId,
+          generationDepth: anchorGenerationDepth
+        })
+      }));
+      return;
+    }
+    if (anchorGenerationDepth !== null) {
+      occupiedBarrierDepths.set(anchorGenerationDepth, `__time-jump-${timeJump.id}`);
+    }
     const nodeId = `__time-jump-${timeJump.id}`;
     const node = createVirtualNode({
       id: nodeId,
@@ -371,15 +461,20 @@ function applyTimeJumps({ family, chartById, parentageLines, personById }) {
       fromYear: timeJump.fromYear || latestKnownPersonYear(parentIds, personById),
       toYear: timeJump.toYear || earliestKnownBirthYear(timeJump.childIds, personById)
     });
-    node.rels.parents = [...parentIds];
-    parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
+    const founderPartnership = family.partnerships.find(item => item.id === family.lineage.founderPartnershipId);
+    const sourcePartnershipId = timeJump.parentPartnershipId
+      || (founderPartnership?.participantIds.includes(timeJump.parentPersonId) ? founderPartnership.id : '');
+    const routed = insertTimeJumpAsSerialBarrier({
+      chartById,
+      timeJumpNode: node,
+      layoutStageNode: createTimeJumpLayoutStage(node.id),
+      parentIds,
+      sourcePartnershipId,
+      declaredChildIds: timeJump.childIds
+    });
 
-    timeJump.childIds.forEach(childId => {
-      const child = chartById.get(childId);
-      if (!child) return;
-      chartById.forEach(chartNode => removeValue(chartNode.rels.children, childId));
-      child.rels.parents = [nodeId];
-      addUnique(node.rels.children, childId);
+    routed.continuationIds.forEach(childId => {
+      if (!chartById.has(childId)) return;
       parentageLines.set(childId, {
         type: 'claimed',
         color: relationColor(family, 'claimed'),
@@ -387,7 +482,14 @@ function applyTimeJumps({ family, chartById, parentageLines, personById }) {
       });
     });
 
-    chartById.set(nodeId, node);
+    if (routed.stageId) {
+      parentageLines.set(routed.stageId, {
+        type: 'time-jump',
+        color: relationColor(family, 'claimed'),
+        dashed: true
+      });
+    }
+
     parentageLines.set(nodeId, {
       type: 'time-jump',
       color: relationColor(family, 'claimed'),
@@ -413,7 +515,7 @@ export function toFamilyChartData(input, options = {}) {
     parentagesByChild.get(parentage.childId).push(parentage);
   });
   parentagesByChild.forEach((parentages, childId) => {
-    selectedParentageByChild.set(childId, selectPrimaryParentage(parentages));
+    selectedParentageByChild.set(childId, selectPrimaryParentage(parentages, personById.get(childId)));
   });
 
   family.persons.forEach(person => {
@@ -509,9 +611,9 @@ export function toFamilyChartData(input, options = {}) {
   });
 
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
-  applyTimeJumps({ family, chartById, parentageLines, personById });
   applyCadetBranches({ family, chartById, parentageLines, houseById });
   applyOriginHouseStructure({ family, chartById, parentageLines, houseById });
+  applyTimeJumps({ family, chartById, parentageLines, personById, diagnostics });
 
   return Object.freeze({
     data: Object.freeze([...chartById.values()]),

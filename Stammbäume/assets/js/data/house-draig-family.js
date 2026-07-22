@@ -11,11 +11,13 @@ import {
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   dreigiau: PORTRAIT_PLACEHOLDERS.crest,
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
+  grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
@@ -146,7 +148,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-grael', 'Haus Grael'),
-    house('house-aderyn', 'Haus Aderyn'),
+    house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-tanwyn', 'Haus Tanwyn'),
     house('house-roth', 'Haus Roth'),
     house('house-neidr', 'Haus Neidr'),
@@ -166,7 +168,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
     house('house-ceirwynn', 'Haus Ceirwynn'),
     house('house-eirce', 'Haus Eirce'),
-    house('house-grawn', 'Haus Grawn'),
+    house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-eisenherz', 'Haus Eisenherz'),
     house('house-cenyr', 'Haus Cenyr'),
@@ -356,7 +358,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('isobel-1719-draig', 'Isobel', 'female', '1719', ''),
     person('rhiannon-draig', 'Rhiannon', 'female', '1721', ''),
     person('gawain-draig', 'Gawain', 'male', '1722', ''),
-    person('guinevere-neidr', 'Guinevere Neidr', 'female', '????', '', 'house-neidr', { familyRole: 'ward' }),
+    person('guinevere-neidr', 'Guinevere Neidr', 'female', '1722', '', 'house-neidr', { familyRole: 'ward' }),
     person('amadia-draig', 'Amadia', 'female', '1718', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
     person('rhygifarch-draig', 'Rhygifarch', 'male', '????', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
     person('rollo-draig', 'Rollo', 'male', '????', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
@@ -370,10 +372,16 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('einion-draig', 'Einion', 'male', '1723', ''),
     person('carys-draig', 'Carys', 'female', '1726', ''),
     person('skalli-varulv', 'Skalli Varulv', 'female', '1716', '', 'house-varulv'),
-    person('unknown-idwal-betrothed', 'Unbekannte Verlobte', 'female', '????', '', '', { status: 'unknown' }),
+    person('unknown-idwal-betrothed', 'Unbekannte Verlobte', 'female', '????', '', '', {
+      status: 'unknown',
+      extensions: { relationshipPlaceholder: { kind: 'betrothed', replaceable: true } }
+    }),
     person('revelyn-penderyn', 'Revelyn Penderyn', 'female', '1718', '', 'house-pendrag'),
     person('alaweyn-grawn', 'Alaweyn Grawn', 'female', '1716', '', 'house-grawn'),
-    person('unknown-isobel-betrothed', 'Unbekannter Verlobter', 'male', '????', '', '', { status: 'unknown' })
+    person('unknown-isobel-betrothed', 'Unbekannter Verlobter', 'male', '????', '', '', {
+      status: 'unknown',
+      extensions: { relationshipPlaceholder: { kind: 'betrothed', replaceable: true } }
+    })
   ],
   partnerships: [
     createMarriage('marriage-gwyrthern-gwendolyn', ...GWYRTHERN_IDS),

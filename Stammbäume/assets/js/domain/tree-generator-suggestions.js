@@ -24,15 +24,15 @@ const FEMALE_NAME_POOL = Object.freeze([
   'Meredith', 'Nesta', 'Sioned'
 ]);
 
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)];
+function pickRandom(list, randomFn = Math.random) {
+  return list[Math.floor(randomFn() * list.length)];
 }
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
-export function suggestName(sex, usedNames = []) {
+export function suggestName(sex, usedNames = [], randomFn = Math.random) {
   const pool = sex === 'female'
     ? FEMALE_NAME_POOL
     : sex === 'male'
@@ -41,16 +41,16 @@ export function suggestName(sex, usedNames = []) {
   const used = new Set(usedNames);
   const candidates = pool.filter(name => !used.has(name));
   if (!candidates.length) return PLACEHOLDER_UNKNOWN;
-  return pickRandom(candidates);
+  return pickRandom(candidates, randomFn);
 }
 
 // role 'spouse': anchorYear ist das Geburtsjahr des bereits bekannten Partners.
 // role 'child': anchorYear ist das Geburtsjahr des Elternteils.
-export function suggestBirthYear({ anchorYear, role, params = {} } = {}) {
+export function suggestBirthYear({ anchorYear, role, params = {}, randomFn = Math.random } = {}) {
   const anchor = Number(anchorYear);
   if (!Number.isInteger(anchor)) return PLACEHOLDER_UNKNOWN;
   if (role === 'spouse') {
-    const jitter = pickRandom([-4, -2, -1, 0, 1, 2, 4]);
+    const jitter = pickRandom([-4, -2, -1, 0, 1, 2, 4], randomFn);
     return String(anchor + jitter);
   }
   if (role === 'child') {
@@ -73,7 +73,7 @@ export const AGING_KINDS = Object.freeze({
   druide: { id: 'druide', label: 'Druide (zeitlos, bis zu 10.000 Jahre)' }
 });
 
-export function suggestDeathYear({ birthYear, params = {}, agingKind = 'normal' } = {}) {
+export function suggestDeathYear({ birthYear, params = {}, agingKind = 'normal', randomFn = Math.random } = {}) {
   const birth = Number(birthYear);
   if (!Number.isInteger(birth)) return PLACEHOLDER_UNKNOWN;
   if (agingKind === 'druide') return PLACEHOLDER_UNKNOWN;
@@ -81,9 +81,9 @@ export function suggestDeathYear({ birthYear, params = {}, agingKind = 'normal' 
   const lifespan = agingKind === 'priester'
     ? baseLifespan * 2
     : agingKind === 'magier'
-      ? baseLifespan * pickRandom([3, 4, 5, 6, 7, 8, 9, 10])
+      ? baseLifespan * pickRandom([3, 4, 5, 6, 7, 8, 9, 10], randomFn)
       : baseLifespan;
-  const jitter = pickRandom([-10, -6, -2, 0, 4, 8]);
+  const jitter = pickRandom([-10, -6, -2, 0, 4, 8], randomFn);
   return String(birth + Math.max(1, lifespan + jitter));
 }
 

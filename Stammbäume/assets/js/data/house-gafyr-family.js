@@ -9,6 +9,7 @@ import {
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
@@ -93,7 +94,7 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
     house('house-creyr', 'Haus Créyr'),
     house('house-gallchobhair', 'Haus Gallchobhair'),
-    house('house-aderyn', 'Haus Aderyn'),
+    house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-tir-addawol', 'Haus Tir Addawol'),
     house('house-gwialen', 'Haus Gwialen'),
     house('house-lwynog', 'Haus Lwynog'),
@@ -311,14 +312,16 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
       name: 'Haus Aderyn',
       parentPartnershipId: 'marriage-braith-carnedyr',
       houseId: 'house-aderyn',
-      targetFamilyId: 'haus-aderyn'
+      targetFamilyId: 'haus-aderyn',
+      emblem: HOUSE_EMBLEMS.aderyn
     }),
     createMarriedAwayBranch({
       id: 'married-away-aderyn-bronwyn',
       name: 'Haus Aderyn',
       parentPartnershipId: 'marriage-bronwyn-grufydd',
       houseId: 'house-aderyn',
-      targetFamilyId: 'haus-aderyn'
+      targetFamilyId: 'haus-aderyn',
+      emblem: HOUSE_EMBLEMS.aderyn
     }),
     createMarriedAwayBranch({
       id: 'married-away-lwynog',

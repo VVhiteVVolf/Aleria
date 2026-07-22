@@ -35,6 +35,11 @@
   background: transparent;
 }
 
+.family-chart-host.f3 .aleria-time-jump-stage {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .family-chart-host.f3 div.card-main .aleria-chart-card,
 .family-chart-host.f3 div.card:hover .aleria-chart-card,
 .family-chart-host.f3 .aleria-chart-card.f3-path-to-main {

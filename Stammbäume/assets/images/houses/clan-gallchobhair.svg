@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Wappen des Clans Gallchobhair</title>
+  <desc id="desc">Goldenes Keimblatt auf dunkelgrünem Rundschild.</desc>
+  <defs>
+    <radialGradient id="field" cx="38%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#31583b"/>
+      <stop offset="1" stop-color="#10281c"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7d77a"/>
+      <stop offset="0.48" stop-color="#c8912f"/>
+      <stop offset="1" stop-color="#7e4d12"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="246" fill="#17130d"/>
+  <circle cx="256" cy="256" r="229" fill="url(#field)" stroke="url(#gold)" stroke-width="14"/>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="#d5aa4d" stroke-width="5" opacity=".76"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 385V178" stroke-width="20"/>
+    <path d="M256 332c-62-13-101-51-112-107 55 7 94 34 112 86" stroke-width="16"/>
+    <path d="M256 294c63-12 102-50 114-107-56 7-95 35-114 87" stroke-width="16"/>
+    <path d="M256 236c-35-31-38-77 0-112 38 35 35 81 0 112Z" fill="url(#gold)" stroke-width="10"/>
+    <path d="M256 385c-32-2-60 9-82 34h164c-22-25-50-36-82-34Z" fill="url(#gold)" stroke-width="8"/>
+  </g>
+  <g fill="url(#gold)">
+    <circle cx="180" cy="251" r="11"/>
+    <circle cx="156" cy="219" r="9"/>
+    <circle cx="332" cy="218" r="11"/>
+    <circle cx="357" cy="185" r="9"/>
+  </g>
+</svg>

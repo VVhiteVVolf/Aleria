@@ -37,6 +37,7 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Veröffentlichungen werden serverseitig erneut validiert und bereinigt. Private Notizen, unbekannte Extensions und geheime Beziehungen erscheinen nicht in der öffentlichen Fassung; das ausdrücklich öffentliche Biographie-Modul wird separat normalisiert und mitveröffentlicht.
 - Portraits und Wappen können weiterhin als Imgur-URL eingetragen werden. Nach Cloud-Anmeldung lassen sie sich alternativ als PNG, JPEG oder WebP bis 8 MB über eine autorisierte Function hochladen; direkte Browser-Schreibrechte auf den Storage-Bucket existieren nicht.
 - Projektweit auslieferbare Familien werden zentral in `assets/js/data/families.registry.js` registriert.
+- Der verbindliche Ablauf für Quellenübernahme, Weltidentitäten, Hausknoten, Zeitsprünge, Portraits, Revisionen und Fehlerdiagnose steht in [`DATENPFLEGE.md`](DATENPFLEGE.md).
 - JSON-Export verwendet `aleria.family-tree` Schema-Version 1.
 - Der Import akzeptiert außerdem das alte Format der temporären `Stammbaum.html` mit `persons` und `couples`.
 - Jede Baumperson erhält eine dauerhafte `worldPersonId`. Der Almanach speichert dieselbe ID unter `identity.worldPersonId` und `genealogy.worldPersonId`; dadurch bleibt die Verbindung auch bei späteren Namens- oder Hausänderungen eindeutig.

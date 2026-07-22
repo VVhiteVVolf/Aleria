@@ -1,8 +1,10 @@
+import { createWorldPersonId } from '../domain/family-schema.js';
+
 // Helfer für „Beziehung modifizieren“: Personen aus anderen Registerakten
 // in den aktuellen Stammbaum übernehmen und Aktionen vorbereiten.
 
 function houseSurname(houseName) {
-  return String(houseName || '').replace(/^haus\s+/i, '').trim();
+  return String(houseName || '').replace(/^(?:haus|clan)\s+/i, '').trim();
 }
 
 // Fremde Personen tragen im Zielbaum den vollen Namen samt Hausnamen
@@ -17,20 +19,31 @@ export function buildImportedPersonName(sourcePerson, sourceHouse) {
 
 // Findet eine bereits vorhandene Fassung derselben Weltperson im Zielbaum.
 export function findExistingImport(family, sourcePerson) {
-  return family.persons.find(person => (
-    person.id === sourcePerson.id
-    || (sourcePerson.worldPersonId && person.worldPersonId === sourcePerson.worldPersonId)
-  )) || null;
+  if (sourcePerson.worldPersonId) {
+    const worldMatch = family.persons.find(person => person.worldPersonId === sourcePerson.worldPersonId);
+    if (worldMatch) return worldMatch;
+  }
+  const idMatch = family.persons.find(person => person.id === sourcePerson.id) || null;
+  if (idMatch && sourcePerson.worldPersonId && idMatch.worldPersonId && idMatch.worldPersonId !== sourcePerson.worldPersonId) {
+    return null;
+  }
+  return idMatch;
 }
 
 export function buildImportedPersonValues(sourceFamily, sourcePerson, options = {}) {
   const sourceHouse = sourceFamily.houses.find(house => house.id === sourcePerson.houseId) || null;
   const usedIds = new Set(sourceFamily === options.targetFamily ? [] : (options.targetFamily?.persons || []).map(person => person.id));
-  let id = sourcePerson.id;
-  if (usedIds.has(id)) id = `${id}-${sourcePerson.birth || 'import'}`.replace(/[^a-z0-9-]/gi, '-');
+  const baseId = sourcePerson.id;
+  let id = baseId;
+  let suffix = 1;
+  while (usedIds.has(id)) {
+    const discriminator = suffix === 1 ? sourcePerson.birth || 'import' : `${sourcePerson.birth || 'import'}-${suffix}`;
+    id = `${baseId}-${discriminator}`.replace(/[^a-z0-9-]/gi, '-');
+    suffix += 1;
+  }
   return {
     id,
-    worldPersonId: sourcePerson.worldPersonId || '',
+    worldPersonId: sourcePerson.worldPersonId || createWorldPersonId(sourceFamily.document.id, sourcePerson.id),
     name: buildImportedPersonName(sourcePerson, sourceHouse),
     title: '',
     sex: sourcePerson.sex,
@@ -42,7 +55,9 @@ export function buildImportedPersonValues(sourceFamily, sourcePerson, options = 
     houseId: sourceHouse ? sourcePerson.houseId : '',
     familyRole: options.familyRole || 'married',
     lineageRole: 'branch',
+    tags: [...(sourcePerson.tags || [])],
     notes: '',
+    extensions: { ...(sourcePerson.extensions || {}) },
     house: sourceHouse
       ? { id: sourceHouse.id, name: sourceHouse.name, emblem: sourceHouse.emblem || '' }
       : null

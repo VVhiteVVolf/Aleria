@@ -17,3 +17,7 @@ export function buildBirthYearPrompt({ houseName, anchorLabel, anchorYear }) {
 export function buildDeathYearPrompt({ houseName, personName, birthYear }) {
   return `${buildBaseContext(houseName)} ${personName} wurde ${birthYear} geboren. Schlage ein plausibles Sterbejahr vor. Antworte nur mit der Jahreszahl.`;
 }
+
+export function buildMarriageYearPrompt({ houseName, firstBirthYear, secondBirthYear }) {
+  return `${buildBaseContext(houseName)} Die beiden Personen wurden ${firstBirthYear || 'in unbekanntem Jahr'} und ${secondBirthYear || 'in unbekanntem Jahr'} geboren. Schlage ein plausibles Jahr für ihre Eheschließung vor. Antworte nur mit der Jahreszahl.`;
+}

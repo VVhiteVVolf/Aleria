@@ -12,8 +12,10 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
+  grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   dreigiau: PORTRAIT_PLACEHOLDERS.crest
 });
 
@@ -160,7 +162,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-paun', 'Haus Paun'),
     house('house-teigr', 'Haus Teigr'),
     house('house-cumhail', 'Haus Cumhail'),
-    house('house-aderyn', 'Haus Aderyn'),
+    house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-diulb', 'Haus Diulb'),
     house('house-fiachraoin', 'Haus Fiachraoin'),
     house('house-urquhart', 'Haus Urquhart'),
@@ -172,7 +174,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-wylan', 'Haus Wylan'),
     house('house-illewod', 'Haus Illewod'),
     house('house-draenog', 'Haus Draenog'),
-    house('house-grawn', 'Haus Grawn'),
+    house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-dieniddiwr', 'Haus Dieniddiwr'),
     house('house-penderyn', 'Haus Penderyn'),
     house('house-cetchathach', 'Haus Cétchathach'),
@@ -274,7 +276,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
 
     // 12. Generation – Kinder Bors' & Cariads
     person('artus-1622-pendrag', 'Artus Pendrag', 'male', '1622', '1673'),
-    person('sulwen-pendrag', 'Sulwen Pendrag', 'female', '1625', ''),
+    person('sulwen-pendrag', 'Sulwen Pendrag', 'female', '1625', '1700'),
     person('ector-1629-pendrag', 'Ector Pendrag', 'male', '1629', '1713'),
     person('parzifal-1630-pendrag', 'Parzifal Pendrag', 'male', '1630', '1655'),
     person('tor-pendrag', 'Tor Pendrag', 'male', '1632', '1701'),
@@ -444,7 +446,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     marriedAway('married-away-pysgod-tarwen', 'Haus Pysgod', 'marriage-tarwen-gingalain', 'house-pysgod'),
     marriedAway('married-away-wylan-iesin', 'Haus Wylan', 'marriage-iesin-vorath', 'house-wylan'),
     marriedAway('married-away-illewod-blodeuyn', 'Haus Illewod', 'marriage-blodeuyn-keudawg', 'house-illewod'),
-    marriedAway('married-away-aderyn-caradwyn', 'Haus Aderyn', 'marriage-caradwyn-dungarth', 'house-aderyn'),
+    marriedAway('married-away-aderyn-caradwyn', 'Haus Aderyn', 'marriage-caradwyn-dungarth', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-urquhart-meeghan', 'Haus Urquhart', 'marriage-meeghan-cainneach', 'house-urquhart'),
     marriedAway('married-away-grael-rhiannon', 'Haus Grael', 'marriage-rhiannon1673-trahayarn', 'house-grael')
   ],

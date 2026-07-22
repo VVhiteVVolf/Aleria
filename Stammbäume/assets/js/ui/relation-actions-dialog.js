@@ -1,5 +1,6 @@
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { resolvePortraitSource } from '../config/portrait-placeholders.js';
+import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
 import { listFamilyRecords } from '../services/family-library.js';
 import { escapeHtml } from './dom.js';
 
@@ -10,15 +11,15 @@ const ACTION_DEFINITIONS = Object.freeze([
     id: 'marry',
     group: 'Bund & Ehe',
     glyph: '⚭',
-    label: 'Verheiraten',
-    hint: 'Ehe mit einer Person aus diesem Baum, dem Register oder einer neuen Person schließen'
+    label: 'Einheiraten / wegverheiraten',
+    hint: 'Eine Ehe anlegen und bei Registerpersonen automatisch in beiden Stammbäumen spiegeln'
   },
   {
     id: 'betroth',
     group: 'Bund & Ehe',
     glyph: '⚯',
     label: 'Verloben',
-    hint: 'Verlöbnis mit einer Person aus diesem Baum, dem Register oder einer neuen Person'
+    hint: 'Ein Verlöbnis anlegen; ersetzbare Platzhalter werden dabei sauber ausgetauscht'
   },
   {
     id: 'upgrade-engagement',
@@ -34,7 +35,7 @@ const ACTION_DEFINITIONS = Object.freeze([
     glyph: '⚮',
     label: 'Verbindung lösen',
     hint: 'Eine bestehende Ehe scheiden oder ein Verlöbnis auflösen',
-    requires: 'partnership'
+    requires: 'separable'
   },
   {
     id: 'beget-child',
@@ -99,9 +100,9 @@ const ACTION_DEFINITIONS = Object.freeze([
     id: 'marry-away',
     group: 'Erweitert',
     glyph: '➳',
-    label: 'Wegverheiraten (Wappenknoten)',
-    hint: 'Wappen-Medaillon der wegverheirateten Linie unter der Ehe anlegen',
-    requires: 'partnership'
+    label: 'Zielhaus als Wappenknoten',
+    hint: 'Optional ein Medaillon für die wegverheiratete Linie unter einer bestehenden Ehe anlegen',
+    requires: 'lineage-partnership'
   },
   {
     id: 'add-related',
@@ -122,12 +123,26 @@ const ACTION_DEFINITIONS = Object.freeze([
 function partnershipTypeLabel(type) {
   if (type === 'marriage') return 'Ehe';
   if (type === 'engagement') return 'Verlöbnis';
+  if (type === 'union') return 'Lebensgemeinschaft';
   if (type === 'affair') return 'Affäre';
   if (type === 'forced') return 'Erzwungene Verbindung';
   return 'Verbindung';
 }
 
-export function createRelationActionsDialog(documentRef = document, runtime = globalThis) {
+function partnershipStatusLabel(status) {
+  if (status === 'active') return 'aktiv';
+  if (status === 'secret') return 'geheim';
+  if (status === 'widowed') return 'verwitwet';
+  if (status === 'divorced') return 'geschieden';
+  if (status === 'ended') return 'beendet';
+  return status || 'Status unbekannt';
+}
+
+export function createRelationActionsDialog(
+  documentRef = document,
+  runtime = globalThis,
+  latestLocalFamilySource = null
+) {
   const dialog = documentRef.getElementById('relation-actions-dialog');
   const form = documentRef.getElementById('relation-actions-form');
   const hero = documentRef.getElementById('relation-actions-hero');
@@ -136,6 +151,8 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
   const footer = documentRef.getElementById('relation-actions-footer');
   const submitButton = documentRef.getElementById('relation-actions-submit');
   let context = null;
+  const listAvailableFamilyRecords = () => latestLocalFamilySource?.listRecords?.()
+    || listFamilyRecords(runtime.localStorage);
 
   function personById(personId) {
     return context?.family.persons.find(person => person.id === personId) || null;
@@ -151,13 +168,18 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
       partnership.participantIds.includes(person.id)
     ));
     const engagements = partnerships.filter(partnership => partnership.type === 'engagement' && partnership.status === 'active');
-    const separable = partnerships.filter(partnership => ['active', 'secret'].includes(partnership.status));
+    const separable = partnerships.filter(partnership => (
+      ['marriage', 'engagement', 'union'].includes(partnership.type)
+      && ['active', 'secret'].includes(partnership.status)
+    ));
+    const lineagePartnerships = listLineagePartnerships(context.family, person.id);
     const nonLegitimate = context.family.parentages.filter(parentage => (
       parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
     ));
     return {
       engagement: engagements.length > 0,
       partnership: partnerships.length > 0,
+      'lineage-partnership': lineagePartnerships.length > 0,
       separable: separable.length > 0,
       dead: person.status === 'dead' || Boolean(person.death),
       'not-dead': person.status !== 'dead',
@@ -165,6 +187,7 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
       partnerships,
       engagements,
       separable_list: separable,
+      lineage_partnerships: lineagePartnerships,
       nonLegitimate
     };
   }
@@ -217,7 +240,7 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
 
   function registryOptions(excludeCurrentFamily) {
     const currentId = context.family.document.id;
-    return listFamilyRecords(runtime.localStorage)
+    return listAvailableFamilyRecords()
       .filter(record => record.family.persons.length > 0)
       .filter(record => !excludeCurrentFamily || record.id !== currentId)
       .map(record => `<option value="${escapeHtml(record.id)}">${escapeHtml(record.title)} · ${record.family.persons.length} Personen</option>`)
@@ -233,6 +256,7 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
 
   function renderPartnerStep(person, action) {
     const verb = action === 'marry' ? 'Ehepartner' : action === 'betroth' ? 'Verlobte Person' : 'Mündel';
+    const otherFamilyOptions = registryOptions(true);
     step.innerHTML = `
       <p class="relation-step-lead">${escapeHtml(verb)} wählen:</p>
       <label class="field">Quelle
@@ -244,11 +268,12 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
       </label>
       <div data-partner-source="registry">
         <label class="field">Haus / Familienakte
-          <select name="registryFamilyId">${registryOptions(false)}</select>
+          <select name="registryFamilyId">${otherFamilyOptions || '<option value="">Kein anderes Haus gespeichert</option>'}</select>
         </label>
         <label class="field">Person
           <select name="registryPersonId"></select>
         </label>
+        ${action === 'marry' || action === 'betroth' ? '<p class="relation-step-note">Registerverbindungen werden in beiden Familienakten gespeichert. Im jeweiligen Heimatbaum bleibt die eigene Person Kernfamilie; die andere Person erscheint eingeheiratet.</p>' : ''}
       </div>
       <div data-partner-source="tree" hidden>
         <label class="field">Person aus diesem Baum
@@ -285,14 +310,23 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
 
   function renderPartnershipStep(person, action) {
     const available = availability(person);
-    const candidates = action === 'upgrade-engagement' ? available.engagements : available.separable_list;
+    const candidates = action === 'upgrade-engagement'
+      ? available.engagements
+      : action === 'marry-away'
+        ? available.lineage_partnerships
+        : available.separable_list;
+    const prompt = action === 'upgrade-engagement'
+      ? 'Welches Verlöbnis wird zur Ehe?'
+      : action === 'marry-away'
+        ? 'Unter welcher Ehe oder Lebensgemeinschaft soll der Wappenknoten stehen?'
+        : 'Welche Verbindung wird gelöst?';
     step.innerHTML = `
-      <p class="relation-step-lead">${action === 'upgrade-engagement' ? 'Welches Verlöbnis wird zur Ehe?' : 'Welche Verbindung wird gelöst?'}</p>
+      <p class="relation-step-lead">${prompt}</p>
       <label class="field">Verbindung
         <select name="partnershipId">
           ${candidates.map(partnership => `
             <option value="${escapeHtml(partnership.id)}">
-              ${escapeHtml(partnershipTypeLabel(partnership.type))} mit ${escapeHtml(partnerName(partnership, person.id))}
+              ${escapeHtml(partnershipTypeLabel(partnership.type))} mit ${escapeHtml(partnerName(partnership, person.id))} · ${escapeHtml(partnershipStatusLabel(partnership.status))}${partnership.start ? ` seit ${escapeHtml(partnership.start)}` : ''}
             </option>
           `).join('')}
         </select>
@@ -308,18 +342,29 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
         field.disabled = container.hidden;
       });
     });
+    const registryPersonSelect = form.elements.namedItem('registryPersonId');
+    submitButton.disabled = source === 'registry' && !registryPersonSelect?.value;
   }
 
   function populateRegistryPersons() {
     const familySelect = form.elements.namedItem('registryFamilyId');
     const personSelect = form.elements.namedItem('registryPersonId');
     if (!familySelect || !personSelect) return;
-    const record = listFamilyRecords(runtime.localStorage).find(item => item.id === familySelect.value);
+    const record = listAvailableFamilyRecords().find(item => item.id === familySelect.value);
+    const currentPerson = personById(context?.personId);
     personSelect.replaceChildren();
-    (record?.family.persons || []).forEach(person => {
+    const candidates = (record?.family.persons || []).filter(person => (
+      !(currentPerson?.worldPersonId && person.worldPersonId === currentPerson.worldPersonId)
+      && !(record?.id === context?.family.document.id && person.id === context?.personId)
+    ));
+    candidates.forEach(person => {
       const life = person.birth ? ` (${person.birth}${person.death ? `–${person.death}` : ''})` : '';
       personSelect.add(new Option(`${person.name}${life}`, person.id));
     });
+    if (!candidates.length) personSelect.add(new Option('Keine andere Person in dieser Akte', ''));
+    const registryContainer = personSelect.closest('[data-partner-source="registry"]');
+    personSelect.disabled = !candidates.length || registryContainer?.hidden === true;
+    submitButton.disabled = form.elements.namedItem('partnerSource')?.value === 'registry' && !personSelect.value;
   }
 
   function open(person, family) {
@@ -335,11 +380,12 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
   function showStep(actionId) {
     const person = personById(context.personId);
     if (!person) throw new Error('Die Person wurde nicht gefunden.');
+    submitButton.disabled = false;
     form.elements.namedItem('relationAction').value = actionId;
     if (PARTNER_ACTIONS.has(actionId)) renderPartnerStep(person, actionId);
     else if (actionId === 'die') renderDeathStep(person);
     else if (actionId === 'send-ward') renderSendWardStep(person);
-    else if (actionId === 'divorce' || actionId === 'upgrade-engagement') renderPartnershipStep(person, actionId);
+    else if (['divorce', 'upgrade-engagement', 'marry-away'].includes(actionId)) renderPartnershipStep(person, actionId);
     else return false;
     const definition = ACTION_DEFINITIONS.find(item => item.id === actionId);
     submitButton.textContent = definition ? definition.label : 'Übernehmen';
@@ -371,7 +417,10 @@ export function createRelationActionsDialog(documentRef = document, runtime = gl
   }
 
   form.addEventListener('change', event => {
-    if (event.target.name === 'partnerSource') syncPartnerSource();
+    if (event.target.name === 'partnerSource') {
+      syncPartnerSource();
+      if (event.target.value === 'registry') populateRegistryPersons();
+    }
     if (event.target.name === 'registryFamilyId') populateRegistryPersons();
   });
 

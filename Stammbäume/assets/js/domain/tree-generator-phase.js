@@ -1,4 +1,5 @@
 import { createFamilyGraph } from './family-graph.js';
+import { resolveFamilyGenerationDepths } from './family-generation-depth.js';
 
 // Leitet rein aus dem aktuellen Familiendokument ab, in welcher Etappe sich der
 // Stammbaum-Generator gerade befindet. Es gibt bewusst kein persistiertes
@@ -39,7 +40,12 @@ export function deriveTreeGeneratorPhase(family, options = {}) {
   // Kind zugeordnet wurde (childIds leer).
   const unresolvedTimeJumps = family.timeJumps.filter(item => !item.childIds || item.childIds.length === 0);
 
-  if (generationCount === 1 && !unresolvedTimeJumps.length && !options.skipTimeJumpOffer) {
+  if (
+    generationCount === 1
+    && !unresolvedTimeJumps.length
+    && !family.lineage.timeGap.enabled
+    && !options.skipTimeJumpOffer
+  ) {
     return Object.freeze({ phase: 3, founderPartnershipId });
   }
 
@@ -51,59 +57,143 @@ export function deriveTreeGeneratorPhase(family, options = {}) {
   const workingDepth = Number.isInteger(options.currentGenerationDepth)
     ? Math.max(1, Math.min(options.currentGenerationDepth, generationCount))
     : generationCount;
+  const openLeaves = findOpenLeaves(family, family.timeJumps, workingDepth);
 
   return Object.freeze({
     phase: 4,
     generationIndex: workingDepth,
     maximumGenerationIndex: generationCount,
+    canAdvance: generationCount > workingDepth,
+    canFinish: openLeaves.length === 0,
     founderPartnershipId,
-    openLeaves: findOpenLeaves(family, graph, unresolvedTimeJumps, workingDepth)
+    openLeaves
   });
 }
 
-function computeDepths(family, graph) {
-  const childIds = new Set(family.parentages.map(parentage => parentage.childId));
-  const roots = family.persons.filter(person => !childIds.has(person.id));
-  const startPeople = roots.length ? roots : family.persons;
-  const depth = new Map();
-  const queue = startPeople.map(person => ({ personId: person.id, depth: 1 }));
-  while (queue.length) {
-    const current = queue.shift();
-    if ((depth.get(current.personId) || 0) >= current.depth) continue;
-    depth.set(current.personId, current.depth);
-    graph.getChildren(current.personId).forEach(child => queue.push({ personId: child.id, depth: current.depth + 1 }));
+export function deriveFocusedContinuationPhase(family, options = {}) {
+  const graph = createFamilyGraph(family);
+  const depths = computeDepths(family);
+  const timeJump = options.timeJumpId
+    ? family.timeJumps.find(item => item.id === options.timeJumpId)
+    : null;
+  const partnershipId = timeJump?.parentPartnershipId || options.partnershipId || '';
+  const partnership = partnershipId
+    ? family.partnerships.find(item => item.id === partnershipId)
+    : null;
+  const anchorIds = partnership?.participantIds
+    || (timeJump?.parentPersonId ? [timeJump.parentPersonId] : []);
+  const referencePersonId = anchorIds[0] || '';
+  if (!referencePersonId) throw new Error('Der Ausgangspunkt für die nächste Generation wurde nicht gefunden.');
+  const followsLineageGap = !timeJump
+    && partnershipId === family.lineage.founderPartnershipId
+    && family.lineage.timeGap.enabled;
+  const existingContinuationIds = timeJump
+    ? [...timeJump.childIds]
+    : family.parentages
+      .filter(parentage => parentage.partnershipId === partnershipId)
+      .map(parentage => parentage.childId);
+  const anchorDepth = Math.max(...anchorIds.map(personId => depths.get(personId) || 1));
+  return Object.freeze({
+    phase: 4,
+    generationIndex: anchorDepth,
+    maximumGenerationIndex: graph.getGenerationCount(),
+    canAdvance: false,
+    focusedContinuation: true,
+    continuationKind: timeJump ? 'time-jump' : followsLineageGap ? 'lineage-gap' : 'lineage',
+    continuationTitle: timeJump || followsLineageGap
+      ? 'Erste Generation nach dem Zeitsprung'
+      : 'Nachkommen unter dem Hauswappen',
+    existingContinuationIds: Object.freeze([...new Set(existingContinuationIds)]),
+    openLeaves: Object.freeze([Object.freeze({
+      lineId: timeJump
+        ? `time-jump:${timeJump.id}`
+        : followsLineageGap
+          ? `lineage-gap:${partnershipId}`
+          : `partnership:${partnershipId}`,
+      personId: referencePersonId,
+      partnershipId,
+      unresolvedTimeJumpId: timeJump?.id || '',
+      afterTimeBarrier: Boolean(timeJump || followsLineageGap),
+      continuationYear: continuationYear(timeJump || (followsLineageGap ? family.lineage.timeGap : null)),
+      continuationMode: true
+    })])
+  });
+}
+
+function continuationYear(timeGap) {
+  if (!timeGap) return '';
+  if (/^\d{1,4}$/.test(String(timeGap.toYear || ''))) return String(timeGap.toYear);
+  if (/^\d{1,4}$/.test(String(timeGap.fromYear || '')) && Number(timeGap.years) > 0) {
+    return String(Number(timeGap.fromYear) + Number(timeGap.years));
   }
-  return depth;
+  return '';
 }
 
-// Alle Personen der aktuellen Arbeitsgeneration (nach Tiefe, nicht nach
-// Kinderzahl!) ohne bereits abschließenden Kadettenzweig (wegverheiratet/
-// ausgestorben) an ihrer jüngsten Partnerschaft. Wer schon ein Kind hat, bleibt
-// also im Arbeitsblatt sichtbar, solange die Generation nicht abgeschlossen wurde
-// — sonst ließe sich einer Person immer nur ein einziges Kind zuordnen.
-function findOpenLeaves(family, graph, unresolvedTimeJumps, workingDepth) {
-  const depths = computeDepths(family, graph);
+function computeDepths(family) {
+  return new Map([...resolveFamilyGenerationDepths(family)]
+    .map(([personId, depth]) => [personId, depth + 1]));
+}
+
+// Jede offene Fortsetzungslinie erscheint genau einmal: aktive Ehepaare teilen
+// sich eine Arbeitskarte, Einzelpersonen behalten eine eigene. Wer schon ein Kind
+// hat, bleibt sichtbar, bis die Generation bewusst abgeschlossen wird.
+function findOpenLeaves(family, timeJumps, workingDepth) {
+  const depths = computeDepths(family);
   const branchedPartnershipIds = new Set(family.cadetBranches.map(branch => branch.parentPartnershipId));
-  const timeJumpByParentId = new Map();
-  unresolvedTimeJumps.forEach(timeJump => {
-    const anchorPartnership = timeJump.parentPartnershipId
-      ? family.partnerships.find(item => item.id === timeJump.parentPartnershipId)
-      : null;
-    const parentIds = anchorPartnership
-      ? anchorPartnership.participantIds
-      : [timeJump.parentPersonId].filter(Boolean);
-    parentIds.forEach(personId => timeJumpByParentId.set(personId, timeJump.id));
+  const timeJumpByPartnershipId = new Map();
+  const timeJumpByPersonId = new Map();
+  timeJumps.forEach(timeJump => {
+    if (timeJump.parentPartnershipId) {
+      timeJumpByPartnershipId.set(timeJump.parentPartnershipId, timeJump);
+    } else if (timeJump.parentPersonId) {
+      timeJumpByPersonId.set(timeJump.parentPersonId, timeJump);
+    }
   });
 
-  return family.persons
-    .filter(person => {
-      if ((depths.get(person.id) || 1) !== workingDepth) return false;
-      const hasResolvedBranch = graph.getPartnerships(person.id)
-        .some(partnership => branchedPartnershipIds.has(partnership.id));
-      return !hasResolvedBranch;
-    })
-    .map(person => Object.freeze({
+  const candidates = family.persons.filter(person => (depths.get(person.id) || 1) === workingDepth);
+  const candidateIds = new Set(candidates.map(person => person.id));
+  const representedPersonIds = new Set();
+  const leaves = [];
+
+  family.partnerships
+    .filter(partnership => (
+      ['marriage', 'union'].includes(partnership.type)
+      && ['active', 'secret', 'widowed'].includes(partnership.status)
+    ))
+    .forEach(partnership => {
+      const participants = partnership.participantIds
+        .map(personId => family.persons.find(person => person.id === personId))
+        .filter(person => person && candidateIds.has(person.id));
+      if (participants.length < 2) return;
+      participants.forEach(person => representedPersonIds.add(person.id));
+      if (branchedPartnershipIds.has(partnership.id)) return;
+      const representative = [...participants].sort((first, second) => (
+        Number(first.familyRole === 'married') - Number(second.familyRole === 'married')
+        || first.id.localeCompare(second.id, 'de')
+      ))[0];
+      const timeJump = timeJumpByPartnershipId.get(partnership.id);
+      leaves.push(Object.freeze({
+        lineId: `partnership:${partnership.id}`,
+        personId: representative.id,
+        partnershipId: partnership.id,
+        unresolvedTimeJumpId: timeJump?.id || '',
+        afterTimeBarrier: Boolean(timeJump),
+        continuationYear: continuationYear(timeJump)
+      }));
+    });
+
+  candidates.forEach(person => {
+    if (representedPersonIds.has(person.id)) return;
+    const timeJump = timeJumpByPersonId.get(person.id);
+    leaves.push(Object.freeze({
+      lineId: `person:${person.id}`,
       personId: person.id,
-      unresolvedTimeJumpId: timeJumpByParentId.get(person.id) || ''
+      partnershipId: '',
+      unresolvedTimeJumpId: timeJump?.id || '',
+      afterTimeBarrier: Boolean(timeJump),
+      continuationYear: continuationYear(timeJump)
     }));
+  });
+
+  return Object.freeze(leaves);
 }

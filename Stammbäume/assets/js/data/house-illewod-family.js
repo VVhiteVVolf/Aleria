@@ -8,10 +8,14 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { HOUSE_ILLEWOD_PORTRAITS } from './house-illewod-portraits.js';
+import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png'
+  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
+  grawn: 'assets/images/houses/Ährental/haus-grawn.png',
+  gallchobhair: 'assets/images/houses/clan-gallchobhair.svg'
 });
 
 const ILLEWOD_HOUSE_ID = 'house-illewod';
@@ -49,7 +53,11 @@ function person(id, name, sex, birth = '????', death = '', houseId = ILLEWOD_HOU
     birth,
     death,
     houseId,
-    portrait: HOUSE_ILLEWOD_PORTRAITS[id] || HOUSE_DRAIG_PORTRAITS[id] || HOUSE_SAETHWYR_PORTRAITS[id] || '',
+    portrait: HOUSE_ILLEWOD_PORTRAITS[id]
+      || HOUSE_DRAIG_PORTRAITS[id]
+      || HOUSE_PENDRAG_PORTRAITS[id]
+      || HOUSE_SAETHWYR_PORTRAITS[id]
+      || '',
     familyRole: options.familyRole || (houseId === ILLEWOD_HOUSE_ID ? 'core' : 'married'),
     lineageRole: options.lineageRole || lineageRoleFor(id),
     ...options
@@ -130,16 +138,16 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     house('house-riordain', 'Haus Ríordáin'),
     house('house-neidr', 'Haus Neidr'),
     house('house-blach', 'Haus Blach'),
-    house('house-gallchobhair', 'Haus Gallchobhair'),
+    house('house-gallchobhair', 'Clan Gallchobhair', HOUSE_EMBLEMS.gallchobhair),
     house('house-wylan', 'Haus Wylan'),
-    house('house-aderyn', 'Haus Aderyn'),
+    house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-pendrag', 'Haus Pendrag'),
     house('house-llwynog', 'Haus Llwynog'),
     house('house-eoghhainn', 'Haus Eóghhainn'),
     house('house-teyrngarch', 'Haus Teyrngarch'),
     house('house-pysgod', 'Haus Pysgod'),
     house('house-penderyn', 'Haus Penderyn'),
-    house('house-grawn', 'Haus Grawn'),
+    house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-dieniddiwr', 'Haus Dieniddiwr'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-brithyll', 'Haus Brithyll'),
@@ -216,7 +224,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('rhondda-llwynog', 'Rhondda Llwynog', 'male', '1654', '1734', 'house-llwynog'),
     person('rhondda-dieniddiwr', 'Rhondda Dieniddiwr', 'female', '1655', '1715', 'house-dieniddiwr'),
 
-    // 10. Generation – Kinder Selwyns & Maygans / Brannoc & Rhonddas
+    // 10. Generation – Kinder Selwyns & Maygans / Madocs & Glaws / Brannocs & Rhonddas
     person('arthgal-illewod', 'Arthgal Illewod', 'male', '1664', '1720'),
     person('carwyn-illewod', 'Carwyn Illewod', 'female', '1670', ''),
     person('mifawi-illewod', 'Mifawi Illewod', 'female', '1667', '1720'),
@@ -254,11 +262,11 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('lewelin-illewod', 'Lewelin Illewod', 'male', '1718', ''),
     person('zirilla-illewod', 'Zirilla Illewod', 'female', '1720', ''),
     person('nowy-illewod', 'Nowy Illewod', 'male', '1720', ''),
-    person('dymphna-gallchobhair', 'Dymphna Gallchobhair', 'female', '1724', '', ILLEWOD_HOUSE_ID, {
-      familyRole: 'adopted', title: 'Mündel Merwins'
+    person('dymphna-gallchobhair', 'Dymphna Gallchobhair', 'female', '1724', '', 'house-gallchobhair', {
+      familyRole: 'ward', title: 'Mündel Merwins'
     }),
-    person('deaglan-gallchobhair', 'Deaglan Gallchobhair', 'male', '1724', '', ILLEWOD_HOUSE_ID, {
-      familyRole: 'adopted', title: 'Mündel Merwins'
+    person('deaglan-gallchobhair', 'Deaglan Gallchobhair', 'male', '1724', '', 'house-gallchobhair', {
+      familyRole: 'ward', title: 'Mündel Merwins'
     }),
     person('collen-illewod', 'Collen Illewod', 'female', '1733', ''),
     person('celyn-illewod', 'Célyn Illewod', 'male', '1733', '')
@@ -313,7 +321,9 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     ...childrenOf(['selwyn-illewod', 'evaine-illewod', 'olwyna-illewod', 'madoc-illewod'], IORWERTH_IDS, 'marriage-iorwerth-lynfa'),
     ...childrenOf(['ehangwen-illewod'], GARETH_IDS, 'marriage-gareth-telyn'),
     ...childrenOf(['brannoc-illewod'], GWALES_IDS, 'marriage-gwales-isobel'),
-    ...childrenOf(['arthgal-illewod', 'carwyn-illewod', 'mifawi-illewod', 'meical-illewod', 'caled-illewod'], SELWYN_IDS, 'marriage-maygan-selwyn'),
+    ...childrenOf(['arthgal-illewod', 'carwyn-illewod', 'mifawi-illewod'], SELWYN_IDS, 'marriage-maygan-selwyn'),
+    ...childrenOf(['meical-illewod'], MADOC_IDS, 'marriage-madoc-glaw'),
+    ...childrenOf(['caled-illewod'], BRANNOC_IDS, 'marriage-brannoc-rhondda'),
     ...childrenOf(['merwin-illewod', 'mairwen-illewod', 'marared-illewod'], ARTHGAL_IDS, 'marriage-arthgal-land'),
     ...childrenOf(['hedd-illewod', 'kerris-illewod', 'anali-illewod'], MEICAL_IDS, 'marriage-meical-menna'),
     ...childrenOf(['sayres-illewod', 'elen-illewod'], CALED_IDS, 'marriage-caled-siriol'),
@@ -323,12 +333,16 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     ...childrenOf(['dymphna-gallchobhair', 'deaglan-gallchobhair'], ['merwin-illewod'], '', {
       type: 'foster', legitimacy: 'unknown', notes: 'Leibliche Kinder Analis & Tynans, als Mündel an Merwin gegeben.'
     }),
+    ...childrenOf(['dymphna-gallchobhair', 'deaglan-gallchobhair'], ANALI_IDS, 'marriage-anali-tynan', {
+      idPrefix: 'parentage-biological',
+      notes: 'Leibliche Kinder Analis Illewod und Tynan Gallchobhairs.'
+    }),
     ...childrenOf(['collen-illewod', 'celyn-illewod'], SAYRES_IDS, 'marriage-gwawr-sayres')
   ],
   cadetBranches: [
     marriedAway('married-away-neidr-sabria', 'Haus Neidr', 'marriage-sabria-gwyron', 'house-neidr'),
     marriedAway('married-away-wylan-ysolde', 'Haus Wylan', 'marriage-ysolde-rhun', 'house-wylan'),
-    marriedAway('married-away-aderyn-ffion', 'Haus Aderyn', 'marriage-ffion-trevelyan', 'house-aderyn'),
+    marriedAway('married-away-aderyn-ffion', 'Haus Aderyn', 'marriage-ffion-trevelyan', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-eoghhainn-rhianu', 'Haus Eóghhainn', 'marriage-rhianu-muiredach', 'house-eoghhainn'),
     marriedAway('married-away-teyrngarch-morgaine', 'Haus Teyrngarch', 'marriage-morgaine-ercwiff', 'house-teyrngarch'),
     marriedAway('married-away-neidr-karys', 'Haus Neidr', 'marriage-karys-griff', 'house-neidr'),
@@ -336,7 +350,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     marriedAway('married-away-tylluan-evaine', 'Haus Tylluan', 'marriage-evaine-shan', 'house-tylluan'),
     marriedAway('married-away-llwynog-ehangwen', 'Haus Llwynog', 'marriage-ehangwen-rhondda', 'house-llwynog'),
     marriedAway('married-away-blach-carwyn', 'Haus Blach', 'marriage-carwyn-dafydd', 'house-blach'),
-    marriedAway('married-away-aderyn-mifawi', 'Haus Aderyn', 'marriage-mifawi-catel', 'house-aderyn'),
+    marriedAway('married-away-aderyn-mifawi', 'Haus Aderyn', 'marriage-mifawi-catel', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-pysgod-mairwen', 'Haus Pysgod', 'marriage-mairwen-cynfor', 'house-pysgod'),
     marriedAway('married-away-llwynog-kerris', 'Haus Llwynog', 'marriage-kerris-ieuan', 'house-llwynog'),
     marriedAway('married-away-gallchobhair-anali', 'Haus Gallchobhair', 'marriage-anali-tynan', 'house-gallchobhair')
