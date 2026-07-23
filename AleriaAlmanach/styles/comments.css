@@ -2869,7 +2869,7 @@
   }
   .module-insert-profile-card {
     position: relative;
-    width: min(1840px, calc(100vw - 16px), var(--comment-module-profile-width, 100vw));
+    width: min(1840px, calc(100vw - 16px), var(--comment-module-profile-width, 100vw), calc(min(100vh - 16px, var(--comment-module-profile-height, 94vh)) * 1.45));
     max-height: min(calc(100vh - 16px), var(--comment-module-profile-height, 94vh));
     overflow: auto;
     background: var(--parchment);
