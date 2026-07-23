@@ -48,7 +48,7 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
     id: 'haus-dubhan',
     title: 'Clan Dubhan',
     motto: 'Vergessen, doch nicht gebrochen.',
-    description: 'Die Sept Dubhan, eine Nebenlinie des Clan Mac Dubglais aus Faelaorn, bewachte über Jahrhunderte die Grenzfeste Caer Dubhan in Tir na Fuil. Im Krieg gegen die Nordmänner (1718-1721) verlor der Clan seine Heimat und fast alle seine Mitglieder. Nur Breccan Dubhan und seine beiden Kinder Rogaire und Alpin überlebten und suchen heute in Celtigerns Wacht einen neuen Herrn.',
+    description: 'Die Sept Dubhan, eine Nebenlinie des Clan Mac Dubglais aus Faelaorn, bewachte über Jahrhunderte die Grenzfeste Caer Dubhan in Tir na Fuil. Im Krieg gegen die Nordmänner (1718-1721) verlor der Clan seine Heimat; in den Jahren danach starb der Großteil der Familie nach und nach. Nur Breccan Dubhan, seine beiden Kinder Rogaire und Alpin sowie seine Nichte Ailbhe leben noch. Breccan zog mit Rogaire und Alpin nach Celtigerns Wacht, um Haus Draig einen neuen Eid anzubieten.',
     emblem: HOUSE_EMBLEMS.dubhan,
     houseProfile: createHouseProfileFromFolderPath(
       ['Faelaorn', 'Tir na Brann', 'Tir na Fuil', 'Caer Dubhan'],
@@ -65,8 +65,7 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
   },
   houses: [
     house(DUBHAN_HOUSE_ID, 'Sept Dubhan', HOUSE_EMBLEMS.dubhan),
-    house('house-mac-dubglais', 'Clan Mac Dubglais', HOUSE_EMBLEMS.macDubglais),
-    house('house-beargha', 'Haus Beargha', '')
+    house('house-mac-dubglais', 'Clan Mac Dubglais', HOUSE_EMBLEMS.macDubglais)
   ],
   persons: [
     // Ursprung der Sept: ein namentlich nicht überlieferter Dubglais-Lord zeugte mit einer
@@ -115,78 +114,78 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
       notes: 'Breccans Großmutter; Herkunft nicht überliefert.'
     }),
 
-    person('fearghal-dubhan', 'Fearghal Dubhan', 'male', '1665', '1719', DUBHAN_HOUSE_ID, {
+    person('fearghal-dubhan', 'Fearghal Dubhan', 'male', '1665', '1733', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'head',
       title: 'Herr von Caer Dubhan',
-      notes: 'Breccans Vater; fiel 1719 mit seiner Frau Sorcha bei der Verteidigung der Grenzfeste Caer Dubhan gegen die Nordmänner.'
+      notes: 'Breccans Vater; überlebte den Fall Caer Dubhans, starb 1733 gemeinsam mit seiner Frau Sorcha. Genaue Todesumstände nicht überliefert.'
     }),
-    person('sorcha-dubhan', 'Sorcha', 'female', '1668', '1719', '', {
+    person('sorcha-dubhan', 'Sorcha', 'female', '1668', '1733', '', {
       familyRole: 'married',
-      notes: 'Breccans Mutter; fiel 1719 gemeinsam mit Fearghal bei der Verteidigung von Caer Dubhan.'
+      notes: 'Breccans Mutter; starb 1733 gemeinsam mit Fearghal. Genaue Todesumstände nicht überliefert.'
     }),
 
     // Breccans Generation: seine älteren Brüder Muirchertach und Tadhg, seine ältere Schwester
-    // Deirdre, und er selbst. Fast der gesamte übrige Clan fiel im Krieg 1718-1721 - Eltern,
-    // Geschwister, Schwager, Neffen und Nichten -, einzig einer von Tadhgs unehelichen Kindern
-    // überlebte.
-    person('muirchertach-dubhan', 'Muirchertach Dubhan', 'male', '1688', '1719', DUBHAN_HOUSE_ID, {
+    // Deirdre, und er selbst. Der Krieg 1718-1721 kostete dem Clan seine Heimat; die meisten
+    // Verluste der Familie folgten erst in den Jahren danach. Lebend sind heute nur Breccan,
+    // seine Kinder und Ailbhe, eine von Tadhgs unehelichen Töchtern.
+    person('muirchertach-dubhan', 'Muirchertach Dubhan', 'male', '1688', '1737', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'branch',
-      title: 'Ältester Sohn, Krieger der Dubhan',
-      notes: 'Breccans ältester Bruder; fiel 1719 mit seiner Frau Aingeal bei der Verteidigung Caer Dubhans.'
+      title: 'Ältester Sohn der Dubhan',
+      notes: 'Breccans ältester Bruder; überlebte den Krieg 1718-1721, starb 1737 gemeinsam mit seiner Frau Aingeal. Genaue Todesumstände nicht überliefert.'
     }),
-    person('aingeal-dubhan', 'Aingeal', 'female', '1690', '1719', '', {
+    person('aingeal-dubhan', 'Aingeal', 'female', '1690', '1737', '', {
       familyRole: 'married',
-      notes: 'Muirchertachs Frau; fiel 1719 gemeinsam mit ihm. Herkunft nicht überliefert.'
+      notes: 'Muirchertachs Frau; starb 1737 gemeinsam mit ihm. Herkunft nicht überliefert.'
     }),
-    person('ruarc-dubhan', 'Ruarc Dubhan', 'male', '1711', '1719', DUBHAN_HOUSE_ID, {
+    person('ruarc-dubhan', 'Ruarc Dubhan', 'male', '1711', '1738', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'branch',
       title: 'Sohn Muirchertachs',
-      notes: 'Starb 1719 als Kind beim Fall Caer Dubhans, gemeinsam mit seinen Eltern.'
+      notes: 'Starb 1738. Genaue Todesumstände nicht überliefert.'
     }),
-    person('tadhg-dubhan', 'Tadhg Dubhan', 'male', '1690', '1718', DUBHAN_HOUSE_ID, {
+    person('tadhg-dubhan', 'Tadhg Dubhan', 'male', '1690', '1736', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'branch',
-      title: 'Sohn, Krieger der Dubhan',
-      notes: 'Breccans Bruder; fiel 1718 im ersten Kriegsjahr. Ging nie eine Ehe ein, unterhielt aber gleichzeitig zwei Verhältnisse, mit Sceanbh und mit Muirne, aus denen zusammen drei Kinder hervorgingen.'
+      title: 'Sohn der Dubhan',
+      notes: 'Breccans Bruder; starb 1736. Ging nie eine Ehe ein, unterhielt aber gleichzeitig zwei Verhältnisse, mit Sceanbh und mit Muirne, aus denen zusammen drei Kinder hervorgingen.'
     }),
-    person('sceanbh', 'Sceanbh', 'female', '1693', '1719', '', {
+    person('sceanbh', 'Sceanbh', 'female', '1693', '', '', {
       familyRole: 'affair',
-      notes: 'Tadhgs heimliche Geliebte, Mutter seines Sohnes Onchú; fiel 1719 in der Zerstörung der Grenzregion.'
+      notes: 'Tadhgs heimliche Geliebte, Mutter seines Sohnes Onchú; lebt noch.'
     }),
-    person('onchu-dubhan', 'Onchú Dubhan', 'male', '1715', '1718', DUBHAN_HOUSE_ID, {
+    person('onchu-dubhan', 'Onchú Dubhan', 'male', '1714', '1737', DUBHAN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Unehelicher Sohn Tadhgs',
-      notes: 'Fiel 1718 im ersten Kriegsjahr, im Alter Rogaires.'
+      notes: 'Starb 1737. Genaue Todesumstände nicht überliefert.'
     }),
-    person('muirne', 'Muirne', 'female', '1694', '1719', '', {
+    person('muirne', 'Muirne', 'female', '1694', '', '', {
       familyRole: 'affair',
-      notes: 'Tadhgs zweite heimliche Geliebte, Mutter von Gormlaith und Ailbhe; fiel 1719 in der Zerstörung der Grenzregion.'
+      notes: 'Tadhgs zweite heimliche Geliebte, Mutter von Gormlaith und Ailbhe; lebt noch.'
     }),
-    person('gormlaith-dubhan', 'Gormlaith Dubhan', 'female', '1715', '1719', DUBHAN_HOUSE_ID, {
+    person('gormlaith-dubhan', 'Gormlaith Dubhan', 'female', '1715', '1738', DUBHAN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Uneheliche Tochter Tadhgs',
-      notes: 'Fiel 1719 beim Fall Caer Dubhans, im Alter Rogaires.'
+      notes: 'Starb 1738. Genaue Todesumstände nicht überliefert.'
     }),
-    person('ailbhe-dubhan', 'Ailbhe Dubhan', 'female', '1715', '', DUBHAN_HOUSE_ID, {
+    person('ailbhe-dubhan', 'Ailbhe Dubhan', 'female', '1717', '', DUBHAN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Uneheliche Tochter Tadhgs',
-      notes: 'Im Alter Rogaires; überlebte den Krieg als einzige ihrer Geschwister. Blieb in Faelaorn zurück, reiste nicht mit Breccan nach Celtigerns Wacht. Verbleib offen.'
+      notes: 'Lebt noch, als einzige ihrer Geschwister. Blieb in Faelaorn zurück, reiste nicht mit Breccan nach Celtigerns Wacht. Verbleib offen.'
     }),
-    person('deirdre-dubhan', 'Deirdre Dubhan', 'female', '1692', '1718', DUBHAN_HOUSE_ID, {
+    person('deirdre-dubhan', 'Deirdre Dubhan', 'female', '1692', '', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'branch',
-      title: 'Kriegerin der Dubhan, wegverheiratet nach Haus Beargha',
-      notes: 'Breccans ältere Schwester; heiratete Cathal von Haus Beargha und verließ die Sept Dubhan. Fiel 1718 im ersten Kriegsjahr, gemeinsam mit ihm. Keine Kinder.'
+      title: 'Wegverheiratet an ein unbekanntes Haus',
+      notes: 'Breccans ältere Schwester; heiratete Cathal und verließ die Sept Dubhan für sein - nicht überliefertes - Haus. Lebt noch, ebenso wie Cathal. Keine Kinder.'
     }),
-    person('cathal', 'Cathal Beargha', 'male', '1688', '1718', 'house-beargha', {
+    person('cathal', 'Cathal', 'male', '1688', '', '', {
       familyRole: 'married',
-      notes: 'Deirdres Mann, Haus Beargha; fiel 1718 gemeinsam mit ihr.'
+      notes: 'Deirdres Mann; Herkunftshaus nicht überliefert. Lebt noch.'
     }),
     person('breccan-dubhan', 'Breccan Dubhan', 'male', '1695', '', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
@@ -236,38 +235,37 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
     createMarriage('marriage-fearghal-sorcha', ...FEARGHAL_SORCHA_IDS, {
       status: 'ended',
       start: '1686',
-      end: '1719',
-      notes: 'Beide fielen 1719 gemeinsam bei der Verteidigung Caer Dubhans.'
+      end: '1733',
+      notes: 'Beide starben 1733 gemeinsam.'
     }),
     createMarriage('marriage-muirchertach-aingeal', ...MUIRCHERTACH_AINGEAL_IDS, {
       status: 'ended',
       start: '1708',
-      end: '1719',
-      notes: 'Beide fielen 1719 gemeinsam bei der Verteidigung Caer Dubhans.'
+      end: '1737',
+      notes: 'Beide starben 1737 gemeinsam.'
     }),
     createMarriage('affair-tadhg-sceanbh', ...TADHG_SCEANBH_IDS, {
       type: 'affair',
       status: 'ended',
-      start: '1714',
-      end: '1719',
+      start: '1713',
+      end: '1736',
       certainty: 'confirmed',
       visibility: 'restricted',
-      notes: 'Erstes heimliches Verhältnis Tadhgs, parallel zur Verbindung mit Muirne; Ursprung Onchús.'
+      notes: 'Erstes heimliches Verhältnis Tadhgs, parallel zur Verbindung mit Muirne; Ursprung Onchús. Endete mit Tadhgs Tod 1736, Sceanbh lebt noch.'
     }),
     createMarriage('affair-tadhg-muirne', ...TADHG_MUIRNE_IDS, {
       type: 'affair',
       status: 'ended',
       start: '1714',
-      end: '1719',
+      end: '1736',
       certainty: 'confirmed',
       visibility: 'restricted',
-      notes: 'Zweites, gleichzeitiges heimliches Verhältnis Tadhgs; Ursprung von Gormlaith und Ailbhe.'
+      notes: 'Zweites, gleichzeitiges heimliches Verhältnis Tadhgs; Ursprung von Gormlaith und Ailbhe. Endete mit Tadhgs Tod 1736, Muirne lebt noch.'
     }),
     createMarriage('marriage-deirdre-cathal', ...DEIRDRE_CATHAL_IDS, {
-      status: 'ended',
+      status: 'active',
       start: '1712',
-      end: '1718',
-      notes: 'Beide fielen 1718 gemeinsam im ersten Kriegsjahr.'
+      notes: 'Deirdre verließ mit dieser Ehe die Sept Dubhan; beide leben noch.'
     }),
     createMarriage('marriage-breccan-eithne', ...BRECCAN_EITHNE_IDS, {
       status: 'ended',
@@ -317,11 +315,11 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
   ],
   cadetBranches: [
     createMarriedAwayBranch({
-      id: 'married-away-beargha-deirdre',
-      name: 'Haus Beargha',
+      id: 'married-away-unbekannt-deirdre',
+      name: 'Unbekanntes Haus',
       parentPartnershipId: 'marriage-deirdre-cathal',
-      houseId: 'house-beargha',
-      targetFamilyId: 'haus-beargha',
+      houseId: '',
+      targetFamilyId: 'haus-unbekannt',
       emblem: ''
     })
   ],
