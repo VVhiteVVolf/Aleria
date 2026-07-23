@@ -243,37 +243,37 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
 
     // Hrolfs und Livs elf Kinder: die aeltesten Ylva und Asgeir sowie vier weitere blieben bei
     // Hrolf, fuenf juengere zogen mit Liv fort und sind seither verschollen.
-    person('ylva-wolfshorn', 'Ylva Wolfshorn', 'female', '1712', '', WOLFSHORN_HOUSE_ID, {
+    person('ylva-wolfshorn', 'Ylva Wolfshorn', 'female', '1710', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Erstgeborene Tochter',
       portrait: 'https://i.imgur.com/zQmDv85.png',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
     }),
-    person('asgeir-wolfshorn', 'Asgeir Wolfshorn', 'male', '1714', '', WOLFSHORN_HOUSE_ID, {
+    person('asgeir-wolfshorn', 'Asgeir Wolfshorn', 'male', '1712', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Aeltester Sohn',
       portrait: 'https://i.imgur.com/tlufXWn.png',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
     }),
-    person('bodil-wolfshorn', 'Bodil Wolfshorn', 'female', '1716', '', WOLFSHORN_HOUSE_ID, {
+    person('bodil-wolfshorn', 'Bodil Wolfshorn', 'female', '1714', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
     }),
-    person('kettil-wolfshorn', 'Kettil Wolfshorn', 'male', '1718', '', WOLFSHORN_HOUSE_ID, {
+    person('kettil-wolfshorn', 'Kettil Wolfshorn', 'male', '1716', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
     }),
-    person('eirik-wolfshorn', 'Eirik Wolfshorn', 'male', '1719', '', WOLFSHORN_HOUSE_ID, {
+    person('eirik-wolfshorn', 'Eirik Wolfshorn', 'male', '1718', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Zog mit Liv fort; sein heutiges Schicksal ist Hrolf unbekannt.'
     }),
-    person('sigrun-wolfshorn', 'Sigrun Wolfshorn', 'female', '1721', '', WOLFSHORN_HOUSE_ID, {
+    person('sigrun-wolfshorn', 'Sigrun Wolfshorn', 'female', '1720', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
@@ -284,24 +284,24 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       lineageRole: 'mainline',
       notes: 'Zog mit Liv fort; ihr heutiges Schicksal ist Hrolf unbekannt.'
     }),
-    person('torstein-wolfshorn', 'Torstein Wolfshorn', 'male', '1723', '', WOLFSHORN_HOUSE_ID, {
+    person('torstein-wolfshorn', 'Torstein Wolfshorn', 'male', '1724', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
     }),
-    person('vibeke-wolfshorn', 'Vibeke Wolfshorn', 'female', '1725', '', WOLFSHORN_HOUSE_ID, {
+    person('vibeke-wolfshorn', 'Vibeke Wolfshorn', 'female', '1726', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Zog mit Liv fort; ihr heutiges Schicksal ist Hrolf unbekannt.'
     }),
-    person('ansgar-wolfshorn', 'Ansgar Wolfshorn', 'male', '1726', '', WOLFSHORN_HOUSE_ID, {
+    person('ansgar-wolfshorn', 'Ansgar Wolfshorn', 'male', '1728', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
       familyRole: 'core',
       lineageRole: 'mainline',
       notes: 'Zog mit Liv fort; sein heutiges Schicksal ist Hrolf unbekannt.'
     }),
-    person('helka-wolfshorn', 'Helka Wolfshorn', 'female', '1728', '', WOLFSHORN_HOUSE_ID, {
+    person('helka-wolfshorn', 'Helka Wolfshorn', 'female', '1730', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
       familyRole: 'core',
       lineageRole: 'mainline',
@@ -331,9 +331,9 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     }),
     createMarriage('marriage-hrolf-liv', ...HROLF_LIV_IDS, {
       status: 'ended',
-      start: '1710',
-      end: '1730',
-      notes: 'Liv verliess Hrolf um 1730 mit einem Teil ihrer Kinder und kehrte zu ihrem eigenen Clan im Norden Aldrimars zurueck. Beide leben noch.'
+      start: '1709',
+      end: '1731',
+      notes: 'Liv verliess Hrolf 1731, kurz nach der Geburt der juengsten Tochter Helka, mit einem Teil ihrer Kinder und kehrte zu ihrem eigenen Clan im Norden Aldrimars zurueck. Beide leben noch.'
     }),
     createMarriage('marriage-gyda-roar', ...GYDA_ROAR_IDS, {
       status: 'active',
