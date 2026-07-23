@@ -11,6 +11,7 @@ import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js';
+import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -102,6 +103,12 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: 'haus-garrael',
     title: 'Haus Garrael',
     family: HOUSE_GARRAEL_FAMILY,
+    type: 'lower-nobility'
+  }),
+  familyRecord({
+    id: 'haus-dubhan',
+    title: 'Clan Dubhan',
+    family: HOUSE_DUBHAN_FAMILY,
     type: 'lower-nobility'
   }),
   familyRecord({

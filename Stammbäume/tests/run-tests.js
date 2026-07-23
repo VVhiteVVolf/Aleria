@@ -5054,13 +5054,14 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
   // Albenclans in einer eigenen Orts-Hierarchie (Antike Crannath Clans) und werden ebenfalls
   // gesondert geprüft. Die 8 übrigen Grafenhäuser Cenyrs (CENYR_COUNTY_HOUSE_FAMILIES)
   // haben je ihre eigene, noch baronielose Orts-Hierarchie und werden in einem eigenen
-  // Test geprüft.
+  // Test geprüft. Clan Dubhan (Sept Dubhan) sitzt als Faelaorn-Flüchtlingsclan in einer
+  // eigenen, außerhalb Cenyrs liegenden Orts-Hierarchie und wird ebenfalls gesondert geprüft.
   const newVassalHouseCount = ARTUS_STREBEN_HOUSE_FAMILIES.length
     + GWENDOLYNS_UFER_HOUSE_FAMILIES.length
     + RHONWENS_TRAENEN_HOUSE_FAMILIES.length;
   assert.equal(
     listFamilyRecords(storage).length,
-    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 5 + newVassalHouseCount + CENYR_COUNTY_HOUSE_FAMILIES.length
+    expected.size + LOWER_KNIGHT_HOUSE_FAMILIES.length + 6 + newVassalHouseCount + CENYR_COUNTY_HOUSE_FAMILIES.length
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
