@@ -54,6 +54,7 @@ const GYDA_ROAR_IDS = ['gyda-wolfshorn', 'roar'];
 const SIGNE_EINAR_IDS = ['signe-wolfshorn', 'einar'];
 const BJORN_VIGDIS_IDS = ['bjorn-wolfshorn', 'vigdis'];
 const BJORN_HALLA_IDS = ['bjorn-wolfshorn', 'halla'];
+const THORA_ANGREIFER_IDS = ['thora-wolfshorn', 'unbekannter-angreifer-thora'];
 
 export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
@@ -188,6 +189,11 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       lineageRole: 'branch',
       title: 'Schwester Hrolfs',
       notes: 'Wurde waehrend eines Ueberfalls Fremder geschaendet; ihr Sohn Kolbein ist das Ergebnis dieser Tat. Lebt noch.'
+    }),
+    person('unbekannter-angreifer-thora', 'Unbekannter Angreifer', 'male', '????', '????', '', {
+      familyRole: 'forced',
+      lineageRole: 'branch',
+      notes: 'Namenloser Angreifer, der Thora waehrend des Ueberfalls schaendete; Vater Kolbeins. Kein Teil des Clans, Verbleib unbekannt.'
     }),
     person('halvar-wolfshorn', 'Halvar Wolfshorn', 'male', '1701', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
@@ -349,6 +355,13 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       certainty: 'confirmed',
       visibility: 'restricted',
       notes: 'Zweites, gleichzeitiges heimliches Verhaeltnis Bjoerns; Ursprung von Njall und Solvi.'
+    }),
+    createMarriage('forced-thora-angreifer', ...THORA_ANGREIFER_IDS, {
+      type: 'forced',
+      status: 'ended',
+      certainty: 'confirmed',
+      visibility: 'restricted',
+      notes: 'Erzwungene Verbindung waehrend eines Ueberfalls Fremder; Ursprung Kolbeins.'
     })
   ],
   parentages: [
@@ -375,11 +388,11 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       visibility: 'restricted',
       notes: 'Uneheliche Kinder aus Bjoerns Verhaeltnis mit Halla.'
     }),
-    ...createParentages(['kolbein-wolfshorn'], ['thora-wolfshorn'], '', {
+    ...createParentages(['kolbein-wolfshorn'], THORA_ANGREIFER_IDS, 'forced-thora-angreifer', {
       legitimacy: 'illegitimate',
       certainty: 'confirmed',
       visibility: 'restricted',
-      notes: 'Thoras Sohn aus dem Ueberfall, bei dem sie geschaendet wurde; Vater unbekannt.'
+      notes: 'Thoras Sohn aus dem Ueberfall, bei dem sie geschaendet wurde.'
     }),
     ...createParentages(
       ['ylva-wolfshorn', 'asgeir-wolfshorn', 'bodil-wolfshorn', 'kettil-wolfshorn', 'eirik-wolfshorn', 'sigrun-wolfshorn', 'dagny-wolfshorn', 'torstein-wolfshorn', 'vibeke-wolfshorn', 'ansgar-wolfshorn', 'helka-wolfshorn'],
