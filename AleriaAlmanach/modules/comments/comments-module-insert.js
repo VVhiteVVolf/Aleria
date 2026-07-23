@@ -392,10 +392,27 @@ function closeCommentModuleInsertProfile() {
   if (card) {
     card.style.removeProperty('--comment-module-profile-width');
     card.style.removeProperty('--comment-module-profile-height');
+    card.classList.remove('maximized');
   }
+  document.querySelector('.module-insert-profile-maximize')?.setAttribute('aria-pressed', 'false');
   _moduleInsertProfileItem = null;
   _moduleInsertProfilePageIndex = 0;
   deactivateDialog('module-insert-profile-overlay');
+}
+
+function toggleCommentModuleInsertProfileMaximize(button) {
+  const card = document.querySelector('#module-insert-profile-overlay .module-insert-profile-card');
+  if (!card) return;
+  const enabled = !card.classList.contains('maximized');
+  card.classList.toggle('maximized', enabled);
+  const label = enabled ? 'Vollbild verlassen' : 'Vollbild';
+  const target = button || document.querySelector('.module-insert-profile-maximize');
+  if (target) {
+    target.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+    target.setAttribute('aria-label', label);
+    target.setAttribute('title', label);
+    target.textContent = enabled ? '↙' : '⛶';
+  }
 }
 
 function setCommentModuleInsertProfilePage(index) {

@@ -1780,6 +1780,12 @@ function buildPage(page, entry, pageIndex, total) {
     ${sym}`;
 }
 
+function buildModalFocusToggleButton() {
+  const enabled = typeof isSessionFocusModeEnabled === 'function' && isSessionFocusModeEnabled();
+  const label = enabled ? 'Lesemodus verlassen' : 'Lesebereich maximieren';
+  return `<button class="modal-page-tool" type="button" data-modal-action="toggle-focus-mode" aria-pressed="${enabled ? 'true' : 'false'}" title="${label}" aria-label="${label}">${enabled ? '↙' : '⛶'} ${label}</button>`;
+}
+
 function buildNav(page, pageIndex, total) {
   const previewContext = globalThis._moduleRenderPreviewContext;
   const previewOnly = !!previewContext?.entry;
@@ -1825,6 +1831,7 @@ function buildNav(page, pageIndex, total) {
       <button class="modal-page-tool" type="button" data-modal-action="move-inline-page" data-direction="1" ${pageIndex===total-1?'disabled':''}>Nach rechts</button>
       ${pages.length > 1 ? `<button class="modal-page-tool" type="button" data-modal-action="remove-inline-page">Seite löschen</button>` : ''}`
     : `
+      ${page.sessionPage ? '' : buildModalFocusToggleButton()}
       <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Export</button>
       ${commentThreadActions}
       <button class="modal-page-tool" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>`);

@@ -54,6 +54,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'close-delete-confirm',
   'close-comment-showcase-profile',
   'close-comment-module-insert-profile',
+  'toggle-comment-module-insert-profile-maximize',
   'submit-comment',
   'submit-showcase',
   'submit-module-insert',
@@ -285,6 +286,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'close-comment-module-insert-profile') {
     closeCommentModuleInsertProfile();
+    return;
+  }
+  if (action === 'toggle-comment-module-insert-profile-maximize') {
+    toggleCommentModuleInsertProfileMaximize(trigger);
     return;
   }
   if (action === 'submit-comment') {

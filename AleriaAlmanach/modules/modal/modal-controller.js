@@ -47,7 +47,7 @@ function syncCurlForRenderedPage(entry) {
 
 function afterModalPageRender(entry, page, pageIndex, scope) {
   applyModalTheme(entry);
-  syncSessionFocusShell(!!page?.sessionPage && isSessionFocusModeEnabled());
+  syncSessionFocusShell(isSessionFocusModeEnabled());
   applyCommentReaderSettings();
   hydrateModuleRichEditors(scope);
   globalThis.AleriaFamily?.workbench?.mount?.({ root: scope });

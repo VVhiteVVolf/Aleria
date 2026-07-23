@@ -2876,10 +2876,26 @@
     border: 2px solid var(--gold);
     box-shadow: 0 14px 46px rgba(0,0,0,0.78);
   }
+  .module-insert-profile-card.maximized {
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    border-width: 0;
+    box-shadow: none;
+  }
   .module-insert-profile-close {
     position: absolute;
     top: 0.7rem;
     right: 0.85rem;
+    z-index: 3;
+    background: rgba(246,232,190,0.94);
+  }
+  .module-insert-profile-maximize {
+    position: absolute;
+    top: 0.7rem;
+    right: 2.75rem;
     z-index: 3;
     background: rgba(246,232,190,0.94);
   }

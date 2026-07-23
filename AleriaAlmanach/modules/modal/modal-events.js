@@ -19,7 +19,8 @@ document.addEventListener('click', event => {
     'export-current-comment-thread',
     'import-current-comment-thread',
     'rescue-current-comment-thread',
-    'open-module-editor-current'
+    'open-module-editor-current',
+    'toggle-focus-mode'
   ].includes(action)) return;
   event.preventDefault();
 
@@ -69,6 +70,10 @@ document.addEventListener('click', event => {
   }
   if (action === 'open-module-editor-current') {
     openModuleEditorForCurrent();
+    return;
+  }
+  if (action === 'toggle-focus-mode') {
+    toggleSessionFocusMode(trigger);
   }
 });
 

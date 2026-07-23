@@ -23,8 +23,9 @@ function syncSessionFocusShell(enabled) {
 }
 
 function toggleSessionFocusMode(button) {
+  const card = document.querySelector('.modal-card');
+  const enabled = !card?.classList.contains('session-focus-expanded');
   const page = button?.closest?.('.session-page');
-  const enabled = !page?.classList.contains('session-focus-mode');
   page?.classList.toggle('session-focus-mode', enabled);
   setSessionFocusModeEnabled(enabled);
   syncSessionFocusShell(enabled);
