@@ -348,7 +348,7 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'breccan-dubhan',
+    focusPersonId: 'fiachra-dubhan',
     orientation: 'vertical',
     ancestorDepth: 6,
     descendantDepth: 3,
