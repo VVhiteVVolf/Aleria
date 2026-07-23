@@ -203,30 +203,31 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       notes: 'Begleitet Hrolf nach Cenyr.'
     }),
 
-    // Bjoerns uneheliche Kinder
-    person('eskil-wolfshorn', 'Eskil Wolfshorn', 'male', '1715', '', WOLFSHORN_HOUSE_ID, {
+    // Bjoerns uneheliche Kinder. Als Bastarde tragen sie nicht den Hausnamen Wolfshorn,
+    // sondern einen Beinamen.
+    person('eskil-wolfshorn', 'Eskil Langbein', 'male', '1715', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Unehelicher Sohn Bjoerns'
     }),
-    person('frida-wolfshorn', 'Frida Wolfshorn', 'female', '1717', '', WOLFSHORN_HOUSE_ID, {
+    person('frida-wolfshorn', 'Frida die Rote', 'female', '1717', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Uneheliche Tochter Bjoerns'
     }),
-    person('njall-wolfshorn', 'Njall Wolfshorn', 'male', '1722', '', WOLFSHORN_HOUSE_ID, {
+    person('njall-wolfshorn', 'Njall der Kleine', 'male', '1722', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Unehelicher Sohn Bjoerns'
     }),
-    person('solvi-wolfshorn', 'Solvi Wolfshorn', 'female', '1724', '', WOLFSHORN_HOUSE_ID, {
+    person('solvi-wolfshorn', 'Solvi Falkenauge', 'female', '1724', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Uneheliche Tochter Bjoerns'
     }),
 
-    // Thoras unehelicher Sohn
-    person('kolbein-wolfshorn', 'Kolbein Wolfshorn', 'male', '1710', '', WOLFSHORN_HOUSE_ID, {
+    // Thoras unehelicher Sohn. Als Bastard traegt er nicht den Hausnamen Wolfshorn.
+    person('kolbein-wolfshorn', 'Kolbein der Namenlose', 'male', '1710', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'bastard',
       lineageRole: 'branch',
       title: 'Unehelicher Sohn Thoras'
