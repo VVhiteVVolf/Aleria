@@ -168,9 +168,14 @@ function getSceneTimeCommentDuration(comment = {}) {
   return String(comment.text || '').trim() ? SCENE_TIME_DEFAULT_SEGMENT_SECONDS : 0;
 }
 
+function getSceneDayFromSeconds(totalSeconds) {
+  if (!Number.isFinite(totalSeconds)) return 1;
+  return Math.floor(totalSeconds / 86400) + 1;
+}
+
 function formatSceneClock(totalSeconds, includeDay = true) {
   if (!Number.isFinite(totalSeconds)) return 'Zeit nicht gesetzt';
-  const day = Math.floor(totalSeconds / 86400) + 1;
+  const day = getSceneDayFromSeconds(totalSeconds);
   const seconds = ((Math.floor(totalSeconds) % 86400) + 86400) % 86400;
   const hh = String(Math.floor(seconds / 3600)).padStart(2, '0');
   const mm = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');

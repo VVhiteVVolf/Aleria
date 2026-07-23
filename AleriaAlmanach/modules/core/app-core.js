@@ -322,6 +322,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
     next.sessionHint = String(page.sessionHint || '').trim();
     next.sessionEmptyTitle = String(page.sessionEmptyTitle || '').trim();
     next.sessionEmptyText = String(page.sessionEmptyText || '').trim();
+    next.sessionDateAleria = sanitizeAleriaDate(page.sessionDateAleria);
   }
 
   if (page.wantedPage) {

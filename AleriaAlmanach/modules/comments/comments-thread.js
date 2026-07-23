@@ -223,10 +223,36 @@ function renderCommentsToScroll(scroll, comments) {
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
   const sceneTimeline = typeof buildSceneTimeline === 'function' ? buildSceneTimeline(sortedComments) : [];
+  const clockRoot = document.querySelector(`[data-scene-clock][data-scene-thread-id="${getCommentThreadSelectorValue(threadId)}"]`);
+  const sceneStartDate = clockRoot?.dataset.sceneAleriaYear ? sanitizeAleriaDate({
+    year: clockRoot.dataset.sceneAleriaYear,
+    month: clockRoot.dataset.sceneAleriaMonth,
+    day: clockRoot.dataset.sceneAleriaDay
+  }) : null;
+  // Jeder Beitrag mit eigener Uhrzeit bekommt sein Aleria-Datum + eine Seitenzahl, die pro
+  // Tag bei 1 beginnt. Bricht ein neuer Tag an, faengt die Zaehlung fuer diesen Tag neu an.
+  if (sceneStartDate && hasAleriaDate(sceneStartDate)) {
+    let dayCursor = null;
+    let pageCounter = 0;
+    sceneTimeline.forEach(entry => {
+      if (!Number.isFinite(entry.startSeconds)) return;
+      const dayIndex = getSceneDayFromSeconds(entry.startSeconds);
+      pageCounter = dayIndex === dayCursor ? pageCounter + 1 : 1;
+      dayCursor = dayIndex;
+      entry.aleriaPageInDay = pageCounter;
+      entry.aleriaDate = dayIndex > 1 ? addAleriaDays(sceneStartDate, dayIndex - 1) : sceneStartDate;
+    });
+  }
   const sceneTimelineById = new Map(sceneTimeline.map(entry => [String(entry.comment?.id || ''), entry]));
-  const clockValue = document.querySelector(`[data-scene-clock][data-scene-thread-id="${getCommentThreadSelectorValue(threadId)}"] [data-scene-clock-value]`);
+  const clockValue = clockRoot?.querySelector('[data-scene-clock-value]');
   const lastTimedEntry = sceneTimeline.slice().reverse().find(entry => Number.isFinite(entry.endSeconds));
   if (clockValue) clockValue.textContent = lastTimedEntry ? formatSceneClock(lastTimedEntry.endSeconds) : 'Zeit nicht gesetzt';
+  const dateValue = clockRoot?.querySelector('[data-scene-clock-date]');
+  if (dateValue && sceneStartDate) {
+    const sceneDay = lastTimedEntry ? getSceneDayFromSeconds(lastTimedEntry.endSeconds) : 1;
+    const currentDate = sceneDay > 1 ? addAleriaDays(sceneStartDate, sceneDay - 1) : sceneStartDate;
+    dateValue.textContent = formatAleriaDateRange(sceneStartDate, currentDate);
+  }
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);
   const paginationBottom = renderCommentPaginationControls(threadId, pageInfo);
   if (sortedComments.length === 0) {

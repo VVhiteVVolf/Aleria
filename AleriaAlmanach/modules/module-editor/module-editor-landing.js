@@ -25,7 +25,7 @@ function sanitizeLandingMembers(items = []) {
     statusColor: String(item?.statusColor || '#2c8a3d').trim(),
     portrait: String(item?.portrait || '').trim(),
     badgeIcon: String(item?.badgeIcon || '*').trim()
-  })).filter(item => item.name || item.portrait).slice(0, 24);
+  })).filter(item => item.name || item.portrait).slice(0, 60);
 }
 
 function sanitizeLandingQuests(items = []) {
@@ -56,7 +56,8 @@ function sanitizeLandingEvents(items = []) {
   return (Array.isArray(items) ? items : []).map((item, index) => ({
     icon: String(item?.icon || '*').trim(),
     title: String(item?.title || `Ereignis ${index + 1}`).trim(),
-    time: String(item?.time || '').trim()
+    time: String(item?.time || '').trim(),
+    aleriaDate: sanitizeAleriaDate(item?.aleriaDate)
   })).filter(item => item.icon || item.title || item.time).slice(0, 12);
 }
 
@@ -76,12 +77,13 @@ function sanitizeLandingData(data = {}) {
     memberTitle: String(data.memberTitle || 'Abenteurer').trim(),
     questTitle: String(data.questTitle || 'Quests').trim(),
     notesTitle: String(data.notesTitle || 'Notizen').trim(),
-    eventsTitle: String(data.eventsTitle || 'Anstehende Ereignisse').trim(),
+    eventsTitle: String(data.eventsTitle || 'Letzte Ereignisse').trim(),
     mapTitle: String(data.mapTitle || 'Aktuelle Karte').trim(),
+    mapKartenId: String(data.mapKartenId || '').trim(),
     mapImage: String(data.mapImage || '').trim(),
     mapLink: String(data.mapLink || '').trim(),
     mapButtonLabel: String(data.mapButtonLabel || 'Karte oeffnen').trim(),
-    infoTitle: String(data.infoTitle || 'Schnelle Informationen').trim(),
+    infoTitle: String(data.infoTitle || 'Informationen').trim(),
     members: sanitizeLandingMembers(data.members),
     quests: sanitizeLandingQuests(data.quests),
     notes: sanitizeLandingNotes(data.notes),
@@ -118,8 +120,8 @@ function createDefaultLandingPage(index = 0) {
       ],
       events: [
         { icon: '*', title: 'Sitzung mit der Grafenfamilie', time: 'Heute, 18:00 Uhr' },
-        { icon: '*', title: 'Patrouille im Grenzgebiet', time: 'Morgen, 09:00 Uhr' },
-        { icon: '*', title: 'Lieferung fuer die Taverne', time: 'Uebermorgen, 14:00 Uhr' }
+        { icon: '*', title: 'Patrouille im Grenzgebiet', time: 'Gestern, 09:00 Uhr' },
+        { icon: '*', title: 'Lieferung fuer die Taverne', time: 'Vor 2 Tagen, 14:00 Uhr' }
       ],
       info: [
         { icon: '*', title: 'Gildenruf', text: 'Angesehen' },
@@ -149,6 +151,79 @@ function buildLandingTextarea(label, className, value) {
     </label>`;
 }
 
+let _landingIconPickerTarget = null;
+
+function buildLandingIconInput(label, className, value) {
+  return `
+    <label>
+      <span>${escapeHtml(label)}</span>
+      <span class="biography-ability-icon-field">
+        <input class="inline-edit-input ${className}" type="text" value="${escapeHtml(value || '')}">
+        <button class="module-editor-mini-btn biography-ability-icon-picker" type="button" data-module-editor-action="pick-landing-icon" data-landing-icon-target="${className}" title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
+      </span>
+    </label>`;
+}
+
+function openLandingIconPicker(button) {
+  const targetClass = button?.dataset?.landingIconTarget || '';
+  const target = button.closest('.trade-editor-grid, .module-editor-field')?.querySelector(`.${targetClass}`)
+    || button.parentElement?.querySelector(`.${targetClass}`);
+  if (!target) return;
+  _landingIconPickerTarget = target;
+  if (typeof openIconDirectory === 'function') {
+    openIconDirectory();
+    return;
+  }
+  _landingIconPickerTarget = null;
+}
+
+function handleLandingIconSelected(event) {
+  const target = _landingIconPickerTarget;
+  const src = String(event?.detail?.src || '').trim();
+  if (!target || !target.isConnected || !src) {
+    _landingIconPickerTarget = null;
+    return;
+  }
+  target.value = src;
+  target.dispatchEvent(new Event('input', { bubbles: true }));
+  target.dispatchEvent(new Event('change', { bubbles: true }));
+  try {
+    target.focus({ preventScroll: true });
+  } catch {
+    target.focus();
+  }
+  if (typeof closeIconDirectory === 'function') {
+    closeIconDirectory();
+  }
+  _landingIconPickerTarget = null;
+}
+
+document.addEventListener('almanach-icon-selected', handleLandingIconSelected);
+
+function getLandingKartenRegistry() {
+  return (typeof KartoMapRegistry !== 'undefined' && KartoMapRegistry?.all) ? KartoMapRegistry.all() : [];
+}
+
+function buildLandingKartenOptions(selectedId) {
+  const maps = getLandingKartenRegistry();
+  const options = maps.map(map => {
+    const breadcrumb = (map.hierarchy || []).map(step => step.title).join(' / ');
+    const label = breadcrumb && breadcrumb !== map.title ? `${map.title} (${breadcrumb})` : map.title;
+    return `<option value="${escapeHtml(map.id)}"${map.id === selectedId ? ' selected' : ''}>${escapeHtml(label)}</option>`;
+  }).join('');
+  return `<option value=""${selectedId ? '' : ' selected'}>Keine - Platzhalterbild verwenden</option>${options}`;
+}
+
+function buildLandingMapKartenField(data) {
+  return `
+    <label>
+      <span>Karte aus "Karten"</span>
+      <select class="inline-edit-select me-landing-mapKartenId" data-module-editor-action="sync-json-preview">
+        ${buildLandingKartenOptions(data.mapKartenId)}
+      </select>
+    </label>`;
+}
+
 function buildLandingMemberRows(members = [], mode = 'module') {
   return members.map((member, index) => `
     <section class="trade-editor-item landing-editor-member-row">
@@ -163,7 +238,7 @@ function buildLandingMemberRows(members = [], mode = 'module') {
         ${buildLandingInput('Klasse', 'me-landing-member-className', member.className)}
         ${buildLandingInput('Status', 'me-landing-member-status', member.status)}
         ${buildLandingInput('Statusfarbe', 'me-landing-member-statusColor', member.statusColor)}
-        ${buildLandingInput('Badge/Icon oder Bild-URL', 'me-landing-member-badgeIcon', member.badgeIcon)}
+        ${buildLandingIconInput('Badge/Icon oder Bild-URL', 'me-landing-member-badgeIcon', member.badgeIcon)}
         ${buildLandingInput('Portrait', 'me-landing-member-portrait', member.portrait, 'url')}
       </div>
     </section>`).join('');
@@ -186,7 +261,7 @@ function buildLandingQuestRows(quests = [], mode = 'module') {
           <option value="failed"${quest.status === 'failed' ? ' selected' : ''}>Fehlgeschlagen</option>
         </select></label>
         ${buildLandingInput('Fortschritt', 'me-landing-quest-progress', quest.progress, 'number')}
-        ${buildLandingInput('Icon oder Bild-URL', 'me-landing-quest-image', quest.image, 'url')}
+        ${buildLandingIconInput('Icon oder Bild-URL', 'me-landing-quest-image', quest.image)}
         ${buildLandingTextarea('Text', 'me-landing-quest-text', quest.text)}
       </div>
     </section>`).join('');
@@ -202,7 +277,7 @@ function buildLandingNoteRows(notes = [], mode = 'module') {
       </div>
       <div class="trade-editor-grid">
         ${buildLandingInput('Titel', 'me-landing-note-title', note.title)}
-        ${buildLandingInput('Icon oder Bild-URL', 'me-landing-note-icon', note.icon)}
+        ${buildLandingIconInput('Icon oder Bild-URL', 'me-landing-note-icon', note.icon)}
         ${buildLandingInput('Autor', 'me-landing-note-authorName', note.authorName)}
         ${buildLandingInput('Autor-ID optional', 'me-landing-note-authorId', note.authorId)}
         ${buildLandingInput('Zeitstempel', 'me-landing-note-createdAt', note.createdAt)}
@@ -219,9 +294,10 @@ function buildLandingSimpleRows(items = [], kind = 'event', mode = 'module') {
         <button class="module-editor-mini-btn module-editor-danger" type="button" data-${mode === 'inline' ? 'inline' : 'module-editor'}-action="remove-landing-${kind}" data-landing-index="${index}">Entfernen</button>
       </div>
       <div class="trade-editor-grid">
-        ${buildLandingInput('Icon oder Bild-URL', `me-landing-${kind}-icon`, item.icon)}
-        ${buildLandingInput('Titel', `me-landing-${kind}-title`, item.title)}
-        ${buildLandingInput(kind === 'event' ? 'Zeit' : 'Text', `me-landing-${kind}-${kind === 'event' ? 'time' : 'text'}`, kind === 'event' ? item.time : item.text)}
+        ${buildLandingIconInput('Icon oder Bild-URL', `me-landing-${kind}-icon`, item.icon)}
+        ${buildLandingInput(kind === 'event' ? 'Beschreibung' : 'Titel', `me-landing-${kind}-title`, item.title)}
+        ${buildLandingInput(kind === 'event' ? 'Datum (Freitext)' : 'Text', `me-landing-${kind}-${kind === 'event' ? 'time' : 'text'}`, kind === 'event' ? item.time : item.text)}
+        ${kind === 'event' ? buildAleriaDateField('Aleria-Datum', 'me-landing-event-aleriaDate', item.aleriaDate) : ''}
       </div>
     </section>`).join('');
 }
@@ -240,6 +316,7 @@ function collectLandingDataFromBlock(block) {
     notesTitle: getTrimmedFormValue(block, '.me-landing-notesTitle'),
     eventsTitle: getTrimmedFormValue(block, '.me-landing-eventsTitle'),
     mapTitle: getTrimmedFormValue(block, '.me-landing-mapTitle'),
+    mapKartenId: getTrimmedFormValue(block, '.me-landing-mapKartenId'),
     mapImage: getTrimmedFormValue(block, '.me-landing-mapImage'),
     mapLink: getTrimmedFormValue(block, '.me-landing-mapLink'),
     mapButtonLabel: getTrimmedFormValue(block, '.me-landing-mapButtonLabel'),
@@ -275,7 +352,8 @@ function collectLandingDataFromBlock(block) {
     events: collectLandingRows(block, '.landing-editor-event-row', row => ({
       icon: getTrimmedFormValue(row, '.me-landing-event-icon'),
       title: getTrimmedFormValue(row, '.me-landing-event-title'),
-      time: getTrimmedFormValue(row, '.me-landing-event-time')
+      time: getTrimmedFormValue(row, '.me-landing-event-time'),
+      aleriaDate: collectAleriaDateFromBlock(row, 'me-landing-event-aleriaDate')
     })),
     info: collectLandingRows(block, '.landing-editor-info-row', row => ({
       icon: getTrimmedFormValue(row, '.me-landing-info-icon'),
@@ -297,7 +375,7 @@ function buildLandingModuleEditorFields(page) {
         <div class="module-editor-field wide"><label>Kopfbereich</label><div class="trade-editor-grid">
           ${buildLandingInput('Titel', 'me-landing-title', data.title)}
           ${buildLandingInput('Untertitel', 'me-landing-subtitle', data.subtitle)}
-          ${buildLandingInput('Bannerbild', 'me-landing-bannerImage', data.bannerImage, 'url')}
+          ${buildLandingIconInput('Bannerbild', 'me-landing-bannerImage', data.bannerImage)}
         </div></div>
         <div class="module-editor-field wide"><label>Ueberschriften</label><div class="trade-editor-grid">
           ${buildLandingInput('Abenteurer', 'me-landing-memberTitle', data.memberTitle)}
@@ -310,10 +388,11 @@ function buildLandingModuleEditorFields(page) {
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Abenteurer</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-member">+ Abenteurer</button></div><div class="trade-editor-list landing-editor-member-list">${buildLandingMemberRows(data.members, 'module')}</div></div>
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Quests</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-quest">+ Quest</button></div><div class="trade-editor-list landing-editor-quest-list">${buildLandingQuestRows(data.quests, 'module')}</div></div>
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Notizen</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-note">+ Notiz</button></div><div class="trade-editor-list landing-editor-note-list">${buildLandingNoteRows(data.notes, 'module')}</div></div>
-        <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Anstehende Ereignisse</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-event">+ Ereignis</button></div><div class="trade-editor-list landing-editor-event-list">${buildLandingSimpleRows(data.events, 'event', 'module')}</div></div>
-        <div class="module-editor-field wide"><label>Aktuelle Karte</label><div class="trade-editor-grid">
-          ${buildLandingInput('Kartenbild', 'me-landing-mapImage', data.mapImage, 'url')}
-          ${buildLandingInput('Klickziel / Modul-ID / Link', 'me-landing-mapLink', data.mapLink)}
+        <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Letzte Ereignisse</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-event">+ Ereignis</button></div><div class="trade-editor-list landing-editor-event-list">${buildLandingSimpleRows(data.events, 'event', 'module')}</div></div>
+        <div class="module-editor-field wide"><label>Aktuelle Karte</label><div class="module-editor-help">Waehle eine Karte aus dem "Karten"-Ordner: Es wird eine kleine Vorschau angezeigt, der Button oeffnet die vollstaendige Karte in einem neuen Tab. Ohne Auswahl wird ersatzweise das Platzhalterbild mit Klickziel genutzt.</div><div class="trade-editor-grid">
+          ${buildLandingMapKartenField(data)}
+          ${buildLandingIconInput('Platzhalterbild (Fallback)', 'me-landing-mapImage', data.mapImage)}
+          ${buildLandingInput('Klickziel / Modul-ID / Link (Fallback)', 'me-landing-mapLink', data.mapLink)}
           ${buildLandingInput('Buttontext', 'me-landing-mapButtonLabel', data.mapButtonLabel)}
         </div></div>
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Informationen</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-info">+ Info</button></div><div class="trade-editor-list landing-editor-info-list">${buildLandingSimpleRows(data.info, 'info', 'module')}</div></div>

@@ -38,7 +38,7 @@ function getLandingInternalTarget(value) {
 function buildLandingMembers(data) {
   return `
     <section class="landing-panel landing-members-panel">
-      <div class="landing-panel-head"><h3>${escapeHtml(data.memberTitle)}</h3><span>${data.members.length}/8</span></div>
+      <div class="landing-panel-head"><h3>${escapeHtml(data.memberTitle)}</h3><span>${data.members.length}</span></div>
       <div class="landing-member-grid">
         ${data.members.map(member => `
           <article class="landing-member-card">
@@ -79,18 +79,18 @@ function buildLandingQuests(data) {
           <article class="landing-quest-card" data-quest-status="${escapeHtml(quest.status)}" data-quest-id="${escapeHtml(quest.id)}">
             ${buildLandingImage(quest.image, quest.title, 'landing-quest-icon', '*')}
             <div class="landing-quest-main">
-              <div class="landing-quest-title-row">
-                <strong>${escapeHtml(quest.title)}</strong>
-                <span>${escapeHtml(quest.kind)}</span>
-              </div>
+              <strong>${escapeHtml(quest.title)}</strong>
               <p>${landingParagraph(quest.text)}</p>
               <div class="landing-progress"><i style="width:${quest.progress}%"></i></div>
             </div>
-            <div class="landing-quest-tools">
-              <small>${quest.progress}%</small>
-              <button type="button" data-landing-action="edit-quest" data-quest-id="${escapeHtml(quest.id)}">Bearbeiten</button>
-              <button type="button" data-landing-action="complete-quest" data-quest-id="${escapeHtml(quest.id)}">${quest.status === 'done' ? 'Oeffnen' : 'Abschliessen'}</button>
-              <button type="button" class="danger" data-landing-action="delete-quest" data-quest-id="${escapeHtml(quest.id)}">Loeschen</button>
+            <div class="landing-item-menu-wrap">
+              <button type="button" class="landing-menu-toggle" data-landing-action="toggle-quest-menu" aria-haspopup="true" aria-expanded="false" title="Optionen">[...]</button>
+              <div class="landing-quest-menu landing-item-menu">
+                <div class="landing-item-menu-meta"><span>${escapeHtml(quest.kind)}</span><span>${quest.progress}%</span></div>
+                <button type="button" data-landing-action="edit-quest" data-quest-id="${escapeHtml(quest.id)}">Bearbeiten</button>
+                <button type="button" data-landing-action="complete-quest" data-quest-id="${escapeHtml(quest.id)}">${quest.status === 'done' ? 'Oeffnen' : 'Abschliessen'}</button>
+                <button type="button" class="danger" data-landing-action="delete-quest" data-quest-id="${escapeHtml(quest.id)}">Loeschen</button>
+              </div>
             </div>
           </article>`).join('')}
       </div>
@@ -114,7 +114,10 @@ function buildLandingNotes(data) {
               <strong>${escapeHtml(note.title)}</strong>
               <p>${landingParagraph(note.text)}</p>
               <small>${escapeHtml(note.authorName || 'Unbekannt')} - ${escapeHtml(formatLandingDate(note.createdAt))}</small>
-              <div class="landing-note-actions">
+            </div>
+            <div class="landing-item-menu-wrap">
+              <button type="button" class="landing-menu-toggle" data-landing-action="toggle-note-menu" aria-haspopup="true" aria-expanded="false" title="Optionen">[...]</button>
+              <div class="landing-note-menu landing-item-menu">
                 <button type="button" data-landing-action="edit-note" data-note-id="${escapeHtml(note.id)}">Bearbeiten</button>
                 <button type="button" class="danger" data-landing-action="delete-note" data-note-id="${escapeHtml(note.id)}">Loeschen</button>
               </div>
@@ -132,13 +135,30 @@ function buildLandingEvents(data) {
         ${data.events.map(item => `
           <div class="landing-event-row">
             ${buildLandingIcon(item.icon, item.title, 'landing-row-icon')}
-            <div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.time)}</small></div>
+            <span class="landing-event-date">${escapeHtml(item.time)}</span>
+            <div class="landing-event-body">
+              <span class="landing-event-arrow">&rarr;</span>
+              <span class="landing-event-desc">${escapeHtml(item.title)}</span>
+              ${buildAleriaDateBadge(item.aleriaDate)}
+            </div>
           </div>`).join('')}
       </div>
     </section>`;
 }
 
 function buildLandingMap(data) {
+  const kartenMap = data.mapKartenId && typeof KartoMapRegistry !== 'undefined' ? KartoMapRegistry.byId(data.mapKartenId) : null;
+  if (kartenMap) {
+    const previewSrc = kartenMap.images?.normal ? `../Karten/${kartenMap.images.normal}` : '';
+    const preview = buildLandingImage(previewSrc, kartenMap.title, 'landing-map-image', '*');
+    const href = `../Karten/${kartenMap.link}`;
+    return `
+      <section class="landing-panel landing-map-panel">
+        <div class="landing-panel-head"><h3>${escapeHtml(data.mapTitle)}</h3></div>
+        <div class="landing-map-frame">${preview}</div>
+        <button class="landing-wide-action" type="button" data-landing-action="open-karten-map" data-map-link="${escapeHtml(href)}">${escapeHtml(data.mapButtonLabel || 'Karte oeffnen')}</button>
+      </section>`;
+  }
   const image = buildLandingImage(data.mapImage, data.mapTitle, 'landing-map-image', '*');
   const internalTarget = getLandingInternalTarget(data.mapLink);
   const linkAttrs = internalTarget
@@ -244,6 +264,53 @@ function landingSettingsInput(label, field, value, type = 'text') {
     </label>`;
 }
 
+function landingSettingsIconInput(label, field, value) {
+  return `
+    <label>
+      <span>${escapeHtml(label)}</span>
+      <div class="biography-ability-icon-field">
+        <input type="text" data-landing-settings-field="${escapeHtml(field)}" value="${escapeHtml(value || '')}">
+        <button type="button" class="biography-ability-icon-picker" data-landing-editor-action="pick-icon" title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
+      </div>
+    </label>`;
+}
+
+let _landingSettingsIconPickerTarget = null;
+
+function openLandingSettingsIconPicker(button) {
+  const target = button.closest('label')?.querySelector('[data-landing-settings-field]');
+  if (!target) return;
+  _landingSettingsIconPickerTarget = target;
+  if (typeof openIconDirectory === 'function') {
+    openIconDirectory();
+    return;
+  }
+  _landingSettingsIconPickerTarget = null;
+}
+
+function handleLandingSettingsIconSelected(event) {
+  const target = _landingSettingsIconPickerTarget;
+  const src = String(event?.detail?.src || '').trim();
+  if (!target || !target.isConnected || !src) {
+    _landingSettingsIconPickerTarget = null;
+    return;
+  }
+  target.value = src;
+  target.dispatchEvent(new Event('input', { bubbles: true }));
+  target.dispatchEvent(new Event('change', { bubbles: true }));
+  try {
+    target.focus({ preventScroll: true });
+  } catch {
+    target.focus();
+  }
+  if (typeof closeIconDirectory === 'function') {
+    closeIconDirectory();
+  }
+  _landingSettingsIconPickerTarget = null;
+}
+
+document.addEventListener('almanach-icon-selected', handleLandingSettingsIconSelected);
+
 function landingSettingsTextarea(label, field, value) {
   return `
     <label class="wide">
@@ -275,7 +342,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
           ${landingSettingsInput('Klasse', 'className', item.className)}
           ${landingSettingsInput('Status', 'status', item.status)}
           ${landingSettingsInput('Statusfarbe', 'statusColor', item.statusColor || '#2c8a3d')}
-          ${landingSettingsInput('Badge/Icon oder Bild-URL', 'badgeIcon', item.badgeIcon || '*')}
+          ${landingSettingsIconInput('Badge/Icon oder Bild-URL', 'badgeIcon', item.badgeIcon || '*')}
           ${landingSettingsInput('Portrait-URL', 'portrait', item.portrait, 'url')}
         </div>
       </section>`;
@@ -294,7 +361,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
             { value: 'failed', label: 'Fehlgeschlagen' }
           ])}
           ${landingSettingsInput('Fortschritt', 'progress', item.progress ?? 0, 'number')}
-          ${landingSettingsInput('Icon oder Bild-URL', 'image', item.image, 'url')}
+          ${landingSettingsIconInput('Icon oder Bild-URL', 'image', item.image)}
           ${landingSettingsTextarea('Text', 'text', item.text)}
         </div>
       </section>`;
@@ -307,7 +374,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
         <input type="hidden" data-landing-settings-field="createdAt" value="${escapeHtml(item.createdAt || '')}">
         <div class="landing-settings-grid compact">
           ${landingSettingsInput('Titel', 'title', item.title)}
-          ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon)}
+          ${landingSettingsIconInput('Icon oder Bild-URL', 'icon', item.icon)}
           ${landingSettingsInput('Verfasser', 'authorName', item.authorName)}
           ${landingSettingsInput('Verfasser-ID optional', 'authorId', item.authorId)}
           ${landingSettingsTextarea('Text', 'text', item.text)}
@@ -319,9 +386,10 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
       <section class="landing-settings-row" data-settings-kind="event">
         <div class="landing-settings-row-head"><strong>Ereignis ${index + 1}</strong>${removeButton}</div>
         <div class="landing-settings-grid compact">
-          ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
+          ${landingSettingsIconInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
           ${landingSettingsInput('Titel', 'title', item.title)}
-          ${landingSettingsInput('Zeit', 'time', item.time)}
+          ${landingSettingsInput('Datum (Freitext)', 'time', item.time)}
+          ${buildAleriaDateField('Aleria-Datum', 'landing-settings-event-aleriaDate', item.aleriaDate)}
         </div>
       </section>`;
   }
@@ -329,7 +397,7 @@ function buildLandingSettingsRow(kind, item = {}, index = 0) {
     <section class="landing-settings-row" data-settings-kind="info">
       <div class="landing-settings-row-head"><strong>Information ${index + 1}</strong>${removeButton}</div>
       <div class="landing-settings-grid compact">
-        ${landingSettingsInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
+        ${landingSettingsIconInput('Icon oder Bild-URL', 'icon', item.icon || '*')}
         ${landingSettingsInput('Ueberschrift', 'title', item.title)}
         ${landingSettingsInput('Text', 'text', item.text)}
       </div>
@@ -352,7 +420,7 @@ function buildLandingSettingsBody(data) {
         <div class="landing-settings-grid">
           ${landingSettingsInput('Titel', 'title', data.title)}
           ${landingSettingsInput('Untertitel', 'subtitle', data.subtitle)}
-          ${landingSettingsInput('Bannerbild', 'bannerImage', data.bannerImage, 'url')}
+          ${landingSettingsIconInput('Bannerbild', 'bannerImage', data.bannerImage)}
         </div>
       </section>
       <section class="landing-settings-section">
@@ -379,19 +447,25 @@ function buildLandingSettingsBody(data) {
         ${buildLandingSettingsList('note', data.notes, '+ Notiz')}
       </section>
       <section class="landing-settings-section">
-        <h4>Anstehende Ereignisse</h4>
+        <h4>Letzte Ereignisse</h4>
         ${buildLandingSettingsList('event', data.events, '+ Ereignis')}
       </section>
       <section class="landing-settings-section">
         <h4>Aktuelle Karte</h4>
         <div class="landing-settings-grid">
-          ${landingSettingsInput('Kartenbild', 'mapImage', data.mapImage, 'url')}
-          ${landingSettingsInput('Klickziel / Modul-ID / Link', 'mapLink', data.mapLink)}
+          <label>
+            <span>Karte aus "Karten"</span>
+            <select data-landing-settings-field="mapKartenId">
+              ${buildLandingKartenOptions(data.mapKartenId)}
+            </select>
+          </label>
+          ${landingSettingsIconInput('Platzhalterbild (Fallback)', 'mapImage', data.mapImage)}
+          ${landingSettingsInput('Klickziel / Modul-ID / Link (Fallback)', 'mapLink', data.mapLink)}
           ${landingSettingsInput('Buttontext', 'mapButtonLabel', data.mapButtonLabel)}
         </div>
       </section>
       <section class="landing-settings-section">
-        <h4>Schnelle Informationen</h4>
+        <h4>Informationen</h4>
         ${buildLandingSettingsList('info', data.info, '+ Info')}
       </section>
     </div>`;
@@ -479,6 +553,7 @@ function collectLandingSettingsData(root) {
     notesTitle: getLandingSettingsValue(root, 'notesTitle'),
     eventsTitle: getLandingSettingsValue(root, 'eventsTitle'),
     mapTitle: getLandingSettingsValue(root, 'mapTitle'),
+    mapKartenId: getLandingSettingsValue(root, 'mapKartenId'),
     mapImage: getLandingSettingsValue(root, 'mapImage'),
     mapLink: getLandingSettingsValue(root, 'mapLink'),
     mapButtonLabel: getLandingSettingsValue(root, 'mapButtonLabel'),
@@ -514,7 +589,8 @@ function collectLandingSettingsData(root) {
     events: collectLandingSettingsRows(root, 'event', row => ({
       icon: getLandingSettingsValue(row, 'icon'),
       title: getLandingSettingsValue(row, 'title'),
-      time: getLandingSettingsValue(row, 'time')
+      time: getLandingSettingsValue(row, 'time'),
+      aleriaDate: collectAleriaDateFromBlock(row, 'landing-settings-event-aleriaDate')
     })),
     info: collectLandingSettingsRows(root, 'info', row => ({
       icon: getLandingSettingsValue(row, 'icon'),
@@ -620,6 +696,14 @@ function openLandingNoteDialog(element, noteId = '') {
 }
 
 document.addEventListener('click', event => {
+  const withinItemMenu = event.target?.closest?.('.landing-item-menu-wrap');
+  document.querySelectorAll('.landing-item-menu-wrap.open').forEach(wrap => {
+    if (wrap !== withinItemMenu) {
+      wrap.classList.remove('open');
+      wrap.querySelector('.landing-menu-toggle')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   const editorAction = event.target?.closest?.('[data-landing-editor-action]');
   if (editorAction) {
     event.preventDefault();
@@ -627,6 +711,7 @@ document.addEventListener('click', event => {
     if (action === 'save') saveLandingEditorDialog();
     else if (action === 'add-settings-row') addLandingSettingsRow(editorAction);
     else if (action === 'remove-settings-row') removeLandingSettingsRow(editorAction);
+    else if (action === 'pick-icon') openLandingSettingsIconPicker(editorAction);
     else closeLandingEditorDialog();
     return;
   }
@@ -648,6 +733,19 @@ document.addEventListener('click', event => {
     page.querySelectorAll('.landing-quest-card').forEach(card => {
       card.hidden = filter !== 'all' && card.dataset.questStatus !== filter;
     });
+    return;
+  }
+
+  if (action === 'toggle-quest-menu' || action === 'toggle-note-menu') {
+    const wrap = trigger.closest('.landing-item-menu-wrap');
+    if (!wrap) return;
+    const open = !wrap.classList.contains('open');
+    document.querySelectorAll('.landing-item-menu-wrap.open').forEach(other => {
+      other.classList.remove('open');
+      other.querySelector('.landing-menu-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+    wrap.classList.toggle('open', open);
+    trigger.setAttribute('aria-expanded', String(open));
     return;
   }
 
@@ -690,6 +788,11 @@ document.addEventListener('click', event => {
   if (action === 'open-map-link') {
     const href = sanitizeHref(trigger.dataset.mapLink || '');
     if (href) window.open(href, /^https?:\/\//i.test(href) ? '_blank' : '_self', 'noopener');
+    return;
+  }
+  if (action === 'open-karten-map') {
+    const href = sanitizeHref(trigger.dataset.mapLink || '');
+    if (href) window.open(href, '_blank', 'noopener');
   }
 });
 

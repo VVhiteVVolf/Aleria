@@ -16,6 +16,9 @@ function buildSessionModuleEditorFields(page) {
             <input type="text" class="me-page-session-location" value="${escapeHtml(page?.sessionLocation || '')}" placeholder="Llysfaen · Ratssaal">
           </div>
           <div class="module-editor-field">
+            ${buildAleriaDateField('Aleria-Datum der Szene', 'me-page-session-aleriaDate', page?.sessionDateAleria)}
+          </div>
+          <div class="module-editor-field">
             <label>Aktuelle Phase</label>
             <input type="text" class="me-page-session-phase" value="${escapeHtml(page?.sessionPhase || '')}" placeholder="Anhörung des ersten Bittstellers">
           </div>
@@ -49,6 +52,7 @@ function collectSessionModuleEditorPage(card, page) {
   page.sessionIntro = getTrimmedFormValue(card, '.me-page-session-intro');
   page.sessionHint = getTrimmedFormValue(card, '.me-page-session-hint');
   page.sessionLocation = getTrimmedFormValue(card, '.me-page-session-location');
+  page.sessionDateAleria = collectAleriaDateFromBlock(card, 'me-page-session-aleriaDate');
   page.sessionPhase = getTrimmedFormValue(card, '.me-page-session-phase');
   page.sessionParticipants = normalizeSessionStatusParticipants(getTrimmedFormValue(card, '.me-page-session-participants'));
   page.sessionStatus = getTrimmedFormValue(card, '.me-page-session-status') || 'active';

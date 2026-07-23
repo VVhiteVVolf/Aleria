@@ -1,0 +1,66 @@
+/* Aleria-Weltkalender: gemeinsames Datumsfeld (Editor) und Anzeige-Badge (Renderer). */
+
+.aleria-date-field {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.aleria-date-field-label {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.aleria-date-field-row {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, 0.8fr) minmax(0, 1.3fr) minmax(0, 1.3fr);
+  gap: 0.4rem;
+}
+
+.aleria-date-field-row input,
+.aleria-date-field-row select {
+  min-width: 0;
+}
+
+.aleria-date-badge {
+  display: inline-block;
+  border: 1px solid rgba(139,105,20,0.32);
+  background: rgba(255,255,255,0.28);
+  color: var(--gold-dark);
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  padding: 0.15rem 0.45rem;
+  white-space: nowrap;
+}
+
+.aleria-date-badge-past {
+  opacity: 0.72;
+  font-style: italic;
+}
+
+.aleria-date-badge-future {
+  border-color: rgba(44,111,181,0.4);
+  color: #2c6fb5;
+}
+
+@media (max-width: 480px) {
+  .aleria-date-field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Szenenzeit-Kontrolle (scene-time.css .scene-clock): Aleria-Datum als zweite Zeile unter der Uhrzeit. */
+.scene-clock-date {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.66rem;
+  font-style: italic;
+  color: #8a703a;
+  line-height: 1.2;
+}

@@ -101,7 +101,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
               <div class="session-stage-title">${escapeHtml(page.pageTitle || 'Anhörung')}</div>
             </div>
             <div class="session-stage-actions">
-              ${buildSceneClockControl(threadId)}
+              ${buildSceneClockControl(threadId, page)}
               ${buildSceneInventoryControl(threadId)}
               ${buildSceneDiceControl(threadId)}
               ${buildSessionStatusControl(page, entry, threadId)}

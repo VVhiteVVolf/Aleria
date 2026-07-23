@@ -226,6 +226,9 @@ function buildQuestFileModuleEditorFields(page) {
             <input type="text" class="me-quest-confidentiality" value="${escapeHtml(questFile.confidentiality)}">
           </div>
           <div class="module-editor-field">
+            ${buildAleriaDateField('Datum der Auftragserteilung', 'me-quest-issuedDateAleria', questFile.issuedDateAleria)}
+          </div>
+          <div class="module-editor-field">
             <label>Banner / Wappenband</label>
             <input type="url" class="me-quest-banner-image" value="${escapeHtml(questFile.bannerImage)}" placeholder="https://i.imgur.com/...">
           </div>
@@ -368,6 +371,7 @@ function collectQuestFileModuleEditorPage(card, page) {
   page.questFile = sanitizeQuestFileData({
     archiveLabel: getTrimmedFormValue(questBlock, '.me-quest-archive-label'),
     confidentiality: getTrimmedFormValue(questBlock, '.me-quest-confidentiality'),
+    issuedDateAleria: collectAleriaDateFromBlock(questBlock, 'me-quest-issuedDateAleria'),
     bannerImage: getTrimmedFormValue(questBlock, '.me-quest-banner-image'),
     crestImage: getTrimmedFormValue(questBlock, '.me-quest-crest-image'),
     clientName: getTrimmedFormValue(questBlock, '.me-quest-client-name'),

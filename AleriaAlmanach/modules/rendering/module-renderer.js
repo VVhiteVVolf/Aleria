@@ -985,6 +985,7 @@ function buildQuestFilePage(page, entry, pageIndex, total) {
           ${entry.subtitle || page.pageTitle ? `<p>${escapeHtml(entry.subtitle || page.pageTitle || '')}</p>` : ''}
         </div>
         ${data.confidentiality ? `<div class="quest-file-confidentiality">${escapeHtml(data.confidentiality)}</div>` : ''}
+        ${buildAleriaDateBadge(data.issuedDateAleria)}
       </header>
       <div class="quest-file-layout">
         <aside class="quest-file-left-panel">

@@ -1771,6 +1771,7 @@ function sanitizeQuestFileData(data = {}) {
   return {
     archiveLabel: String(data.archiveLabel || 'Aufträge · Hauptquesten').trim(),
     confidentiality: String(data.confidentiality || 'Vertraulich. Nur für fähige und diskrete Ohren.').trim(),
+    issuedDateAleria: sanitizeAleriaDate(data.issuedDateAleria),
     bannerImage: String(data.bannerImage || '').trim(),
     crestImage: String(data.crestImage || '').trim(),
     clientName: String(data.clientName || '').trim(),

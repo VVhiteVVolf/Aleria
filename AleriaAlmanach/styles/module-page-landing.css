@@ -1,6 +1,8 @@
 .landing-page {
   position: relative;
-  min-height: calc(var(--module-height, 100vh) - 8rem);
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
   padding: 1.05rem;
   border: 1px solid rgba(139,105,20,0.35);
   background:
@@ -46,7 +48,7 @@
 
 .landing-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 1.18fr) minmax(430px, 1.48fr) minmax(280px, 0.82fr);
+  grid-template-columns: minmax(430px, 1.25fr) minmax(430px, 1.35fr) minmax(300px, 0.9fr);
   grid-template-areas:
     "members quests notes"
     "events map info";
@@ -110,11 +112,11 @@
 }
 
 .landing-member-grid {
-  max-height: 27.5rem;
+  max-height: 34rem;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
   padding-right: 0.18rem;
 }
 
@@ -147,16 +149,16 @@
 
 .landing-member-badge {
   position: absolute;
-  left: 0.3rem;
-  top: 0.3rem;
+  left: 0.4rem;
+  top: 0.4rem;
   display: grid;
   place-items: center;
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.7rem;
+  height: 1.7rem;
   border-radius: 50%;
   background: rgba(40,23,8,0.72);
   color: var(--gold-light);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   overflow: hidden;
 }
 
@@ -170,24 +172,27 @@
 
 .landing-member-body {
   display: grid;
-  gap: 0.12rem;
-  padding: 0.48rem;
-  font-size: 0.75rem;
+  gap: 0.18rem;
+  padding: 0.65rem;
+  font-size: 0.85rem;
 }
 
 .landing-member-body strong,
 .landing-quest-main strong,
 .landing-note-card strong,
-.landing-event-row strong,
 .landing-info-row strong {
   font-family: 'Cinzel', serif;
   font-size: 0.75rem;
   letter-spacing: 0.04em;
 }
 
+.landing-member-body strong {
+  font-size: 0.88rem;
+}
+
 .landing-member-body em {
   color: var(--ink-faded);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
 }
 
 .landing-member-body small {
@@ -213,6 +218,7 @@
 }
 
 .landing-quest-card {
+  position: relative;
   display: grid;
   grid-template-columns: 3.4rem minmax(0, 1fr) auto;
   gap: 0.65rem;
@@ -235,24 +241,15 @@
   background: rgba(255,250,232,0.5);
 }
 
-.landing-quest-title-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.landing-quest-title-row span {
-  border: 1px solid rgba(139,105,20,0.32);
-  padding: 0.14rem 0.4rem;
-  font-size: 0.52rem;
-  font-family: 'Cinzel', serif;
-}
-
 .landing-quest-main p,
-.landing-note-card p {
+.landing-note-main p {
   margin: 0.24rem 0;
   font-size: 0.82rem;
   line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .landing-progress {
@@ -267,10 +264,50 @@
   background: linear-gradient(90deg, #8a4e16, #b8862d);
 }
 
-.landing-quest-tools {
-  display: grid;
-  gap: 0.25rem;
-  justify-items: end;
+.landing-item-menu-wrap {
+  position: relative;
+  align-self: start;
+}
+
+.landing-menu-toggle {
+  min-width: 2.1rem;
+}
+
+.landing-item-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.3rem);
+  z-index: 12;
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 9.5rem;
+  border: 1px solid rgba(139,105,20,0.45);
+  background: var(--parchment);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+  padding: 0.45rem;
+}
+
+.landing-item-menu-wrap.open .landing-item-menu {
+  display: flex;
+}
+
+.landing-item-menu button {
+  width: 100%;
+  text-align: left;
+}
+
+.landing-item-menu-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  padding: 0 0.1rem 0.3rem;
+  border-bottom: 1px solid rgba(139,105,20,0.22);
+  margin-bottom: 0.15rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
 }
 
 .landing-note-list {
@@ -282,8 +319,9 @@
 }
 
 .landing-note-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 2.6rem minmax(0, 1fr);
+  grid-template-columns: 2.6rem minmax(0, 1fr) auto;
   gap: 0.65rem;
   align-items: start;
   border: 1px solid rgba(139,105,20,0.22);
@@ -312,20 +350,12 @@
   font-style: italic;
 }
 
-.landing-note-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.35rem;
-  margin-top: 0.45rem;
-}
-
 .landing-event-list,
 .landing-info-list {
   display: grid;
   gap: 0.55rem;
 }
 
-.landing-event-row,
 .landing-info-row {
   display: grid;
   grid-template-columns: 2rem minmax(0, 1fr);
@@ -335,7 +365,6 @@
   padding-bottom: 0.48rem;
 }
 
-.landing-event-row > span,
 .landing-info-row > span {
   display: grid;
   place-items: center;
@@ -346,10 +375,58 @@
   overflow: hidden;
 }
 
-.landing-event-row small,
 .landing-info-row small {
   display: block;
   color: var(--ink-faded);
+}
+
+.landing-event-row {
+  display: grid;
+  grid-template-columns: 2rem auto minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(139,105,20,0.16);
+  padding-bottom: 0.48rem;
+}
+
+.landing-event-body {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.landing-event-row .landing-row-icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(139,105,20,0.28);
+  background: rgba(255,255,255,0.22);
+  overflow: hidden;
+}
+
+.landing-event-date {
+  font-family: 'Cinzel', serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  color: var(--gold-dark);
+  white-space: nowrap;
+}
+
+.landing-event-arrow {
+  color: var(--ink-faded);
+  text-align: center;
+}
+
+.landing-event-desc {
+  flex: 1 1 auto;
+  min-width: 4rem;
+  font-size: 0.82rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .landing-map-frame {
@@ -562,21 +639,34 @@
   }
 }
 
+@media (max-width: 900px) {
+  .landing-member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 680px) {
   .landing-hero {
     grid-template-columns: 1fr;
   }
   .landing-member-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
   .landing-quest-card {
-    grid-template-columns: 3rem minmax(0, 1fr);
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
   }
-  .landing-quest-tools {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: stretch;
+  .landing-note-card {
+    grid-template-columns: 2.6rem minmax(0, 1fr) auto;
   }
+  .landing-event-row {
+    grid-template-columns: 2rem auto;
+    grid-template-areas: "icon date" "icon body";
+    row-gap: 0.15rem;
+  }
+  .landing-event-row .landing-row-icon { grid-area: icon; }
+  .landing-event-date { grid-area: date; }
+  .landing-event-body { grid-area: body; }
+  .landing-event-desc { white-space: normal; }
   .landing-editor-body {
     grid-template-columns: 1fr;
   }

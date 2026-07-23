@@ -99,6 +99,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-landing-event',
   'add-landing-info',
   'remove-landing-info',
+  'pick-landing-icon',
   'add-ci-row',
   'remove-ci-row',
   'add-ci-attribute',
@@ -572,6 +573,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'remove-landing-info') {
     removeLandingEditorItem(trigger, 'info');
+    return;
+  }
+  if (action === 'pick-landing-icon') {
+    openLandingIconPicker(trigger);
     return;
   }
   if (action === 'add-ci-row') {

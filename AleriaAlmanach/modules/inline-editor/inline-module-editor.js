@@ -89,6 +89,13 @@ function syncInlinePageField(input) {
     return;
   }
 
+  if (field === 'sessionDateAleria') {
+    const scope = input.closest('.aleria-date-field');
+    page.sessionDateAleria = collectAleriaDateFromBlock(scope, 'inline-page-session-aleriaDate');
+    renderPage(currentPage, 0);
+    return;
+  }
+
   page[field] = String(input.value || '').trim();
 }
 
@@ -434,6 +441,9 @@ function buildInlineComplexEditor(entry, page, type) {
         <div class="inline-edit-field">
           <span class="inline-edit-label">Ort</span>
           <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionLocation" value="${escapeHtml(page.sessionLocation || '')}">
+        </div>
+        <div class="inline-edit-field">
+          ${buildAleriaDateField('Aleria-Datum der Szene', 'inline-page-session-aleriaDate', page.sessionDateAleria, 'sessionDateAleria')}
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Aktuelle Phase</span>
