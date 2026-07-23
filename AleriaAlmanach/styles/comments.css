@@ -2884,6 +2884,42 @@
     max-height: none;
     border-width: 0;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Ohne diese Kette stretcht der Kartenrahmen zwar auf 100vh, aber der Inhalt (der dieselbe
+     buildPage()-Ausgabe wie im normalen Modal nutzt und dort flex:1 von einer Flex-Vorfahrenkette
+     erwartet) bleibt bei seiner natuerlichen Hoehe - sichtbar als leere Flaeche unterhalb des
+     Inhalts. Zusaetzlich hat .comment-module-preview-frame ein festes max-height, das ebenfalls
+     aufgehoben werden muss. */
+  .module-insert-profile-card.maximized .module-insert-profile-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .module-insert-profile-card.maximized .comment-module-profile-card {
+    flex: 1;
+    min-height: 0;
+  }
+  .module-insert-profile-card.maximized .comment-module-preview-stage {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .module-insert-profile-card.maximized .comment-module-preview-page {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .module-insert-profile-card.maximized .comment-module-preview-frame {
+    flex: 1;
+    min-height: 0;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
   }
   .module-insert-profile-close {
     position: absolute;
