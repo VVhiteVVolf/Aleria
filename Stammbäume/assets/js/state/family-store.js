@@ -401,7 +401,9 @@ export function createFamilyStore(initialFamily, options = {}) {
         draft.lineage.founderPartnershipId = '';
       }
       draft.cadetBranches = draft.cadetBranches.filter(branch => (
-        remainingPartnershipIds.has(branch.parentPartnershipId)
+        branch.parentPersonId
+          ? branch.parentPersonId !== personId
+          : remainingPartnershipIds.has(branch.parentPartnershipId)
       ));
       draft.timeJumps = draft.timeJumps
         .filter(timeJump => (
@@ -595,7 +597,8 @@ export function createFamilyStore(initialFamily, options = {}) {
         name: values.name,
         subtitle: values.subtitle || '',
         linkType: values.linkType,
-        parentPartnershipId: values.parentPartnershipId,
+        parentPartnershipId: values.parentPartnershipId || '',
+        parentPersonId: values.parentPersonId || '',
         houseId: values.houseId || '',
         emblem: values.emblem || '',
         emblemScale: Number(values.emblemScale || 0.86),
@@ -618,7 +621,8 @@ export function createFamilyStore(initialFamily, options = {}) {
         name: values.name,
         subtitle: values.subtitle || '',
         linkType: values.linkType,
-        parentPartnershipId: values.parentPartnershipId,
+        parentPartnershipId: values.parentPartnershipId || '',
+        parentPersonId: values.parentPersonId || '',
         houseId: values.houseId || '',
         emblem: values.emblem || '',
         emblemScale: Number(values.emblemScale || 0.86),
@@ -635,6 +639,60 @@ export function createFamilyStore(initialFamily, options = {}) {
     return commit('cadet-branch-deleted', draft => {
       draft.cadetBranches = draft.cadetBranches.filter(branch => branch.id !== branchId);
     }, { branchId });
+  }
+
+  function sendWardToHouse({ personId, targetFamilyId, targetFamilyTitle, targetHouse, crestFrame = 'silver' }) {
+    const normalizedTargetFamilyId = String(targetFamilyId || '').trim();
+    const targetHouseId = String(targetHouse?.id || '').trim();
+    if (!normalizedTargetFamilyId || !targetHouseId) throw new Error('Das Zielhaus des Mündels ist unvollständig.');
+    const existingBranch = family.cadetBranches.find(branch => (
+      branch.linkType === 'ward-away' && branch.parentPersonId === personId
+    ));
+    const branchId = existingBranch?.id
+      || createRecordId('ward-away', family.cadetBranches.map(item => item.id));
+
+    commit('ward-sent-to-house', draft => {
+      const person = draft.persons.find(item => item.id === personId);
+      if (!person) throw new Error('Die fortzugebende Person wurde nicht gefunden.');
+      const note = `Als Mündel an ${targetFamilyTitle} gegeben.`;
+      person.familyRole = 'ward-away';
+      person.tags = [...new Set([...(person.tags || []), 'Fortgegebenes Mündel'])];
+      person.notes = person.notes && !person.notes.includes(note)
+        ? `${person.notes} ${note}`
+        : (person.notes || note);
+
+      if (!draft.houses.some(house => house.id === targetHouseId)) {
+        draft.houses.push({
+          id: targetHouseId,
+          name: String(targetHouse.name || targetFamilyTitle || targetHouseId).trim(),
+          motto: String(targetHouse.motto || '').trim(),
+          emblem: String(targetHouse.emblem || '').trim(),
+          status: targetHouse.status || 'active'
+        });
+      }
+
+      const branchValues = {
+        id: branchId,
+        name: String(targetFamilyTitle || targetHouse.name || targetHouseId).trim(),
+        subtitle: 'Als Mündel vermittelt',
+        linkType: 'ward-away',
+        parentPartnershipId: '',
+        parentPersonId: personId,
+        houseId: targetHouseId,
+        emblem: String(targetHouse.emblem || '').trim(),
+        emblemScale: 0.86,
+        crestFrame,
+        frameScale: 1,
+        founded: '',
+        targetFamilyId: normalizedTargetFamilyId,
+        notes: note,
+        extensions: existingBranch?.extensions || {}
+      };
+      const branch = draft.cadetBranches.find(item => item.id === branchId);
+      if (branch) Object.assign(branch, branchValues);
+      else draft.cadetBranches.push(branchValues);
+    }, { personId, branchId, targetFamilyId: normalizedTargetFamilyId });
+    return branchId;
   }
 
   function addTimeJump(values) {
@@ -738,6 +796,7 @@ export function createFamilyStore(initialFamily, options = {}) {
     addCadetBranch,
     updateCadetBranch,
     deleteCadetBranch,
+    sendWardToHouse,
     addTimeJump,
     updateTimeJump,
     deleteTimeJump,

@@ -911,6 +911,20 @@
   .cp-portrait-upload-area {
     display: flex; gap: 1.2rem; align-items: flex-start;
   }
+  .cp-portrait-fields {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .cp-image-link-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .cp-image-link-row .char-field-input {
+    min-width: 0;
+  }
   .cp-portrait-thumb {
     flex-shrink: 0;
     width: 120px;
@@ -936,6 +950,55 @@
     padding: 6px 16px; transition: background 0.15s, color 0.15s;
   }
   .cp-portrait-upload-btn:hover { background: var(--gold); color: var(--ink); }
+  .cp-portrait-upload-btn.secondary {
+    background: transparent;
+    color: var(--ink-faded);
+    border-color: var(--parchment-deeper);
+  }
+  .cp-portrait-upload-btn.secondary:hover {
+    background: var(--parchment-deeper);
+    color: var(--ink);
+  }
+  .cp-avatar-section-title {
+    margin-top: 0.5rem;
+  }
+  .cp-section-meta {
+    opacity: 0.6;
+    font-size: 0.85em;
+  }
+  .cp-avatar-help {
+    margin-bottom: 0.5rem;
+  }
+  .cp-avatar-import {
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 0.8rem;
+    padding: 0.75rem;
+    border: 1px dashed var(--parchment-deeper);
+    background: rgba(255, 255, 255, 0.12);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .cp-avatar-import.is-dragging {
+    border-color: var(--gold);
+    background: rgba(176, 128, 64, 0.12);
+  }
+  .cp-avatar-links {
+    min-height: 74px;
+    resize: vertical;
+  }
+  .cp-avatar-import-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .cp-avatar-import-status {
+    min-height: 1em;
+    color: var(--ink-faded);
+    font-size: 0.72rem;
+  }
+  .cp-avatar-import-status.is-error {
+    color: var(--red-wax);
+  }
 
   /* Info fields (edit mode, Tab 2) */
   .char-field-group { display: flex; flex-direction: column; gap: 0.25rem; }
@@ -1017,5 +1080,16 @@
     }
     .char-dashboard-metrics {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cp-portrait-upload-area,
+    .cp-image-link-row {
+      flex-direction: column;
+    }
+    .cp-portrait-thumb {
+      width: min(160px, 100%);
+    }
+    .cp-avatar-import-actions .cp-portrait-upload-btn {
+      flex: 1 1 100%;
+      text-align: center;
     }
   }

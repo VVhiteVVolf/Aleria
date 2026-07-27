@@ -4,6 +4,7 @@ import {
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
+  createWardAwayBranch,
   createParentages
 } from './family-record-builders.js';
 
@@ -99,7 +100,9 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
   houses: [
     { id: GWARED_HOUSE_ID, name: 'Haus Gwared', motto: 'Ehre wägt schwerer als Blut.', emblem: GWARED_EMBLEM, status: 'active' },
     house('house-madryn', 'Haus Madryn', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Madryn.png'),
-    house('house-merek', 'Haus Merek', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png')
+    house('house-merek', 'Haus Merek', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png'),
+    house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png'),
+    house('house-chwedlonol', 'Haus Chwedlonol', 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png')
   ],
   persons: [
     // Sagenhafter Begründer, vor der Überlieferungslücke
@@ -357,6 +360,26 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
       emblem: 'assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png',
       crestFrame: 'silver',
       notes: 'Nera wurde an Haus Merek verheiratet.'
+    }),
+    createWardAwayBranch({
+      id: 'ward-away-sheev-balchder',
+      name: 'Haus Balchder',
+      parentPersonId: 'sheev-gwared',
+      houseId: 'house-balchder',
+      targetFamilyId: 'haus-balchder',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-balchder.png',
+      crestFrame: 'silver',
+      notes: 'Sheev Gwared wurde als Mündel an Haus Balchder vermittelt.'
+    }),
+    createWardAwayBranch({
+      id: 'ward-away-soffi-chwedlonol',
+      name: 'Haus Chwedlonol',
+      parentPersonId: 'soffi-gwared',
+      houseId: 'house-chwedlonol',
+      targetFamilyId: 'haus-chwedlonol',
+      emblem: 'assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png',
+      crestFrame: 'silver',
+      notes: 'Soffi Gwared wurde als Mündel an Haus Chwedlonol vermittelt.'
     })
   ],
   timeJumps: [],
@@ -375,6 +398,6 @@ export const HOUSE_GWARED_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Struktur nach der vom User bereitgestellten Stammbaumgrafik: ein Gründerpaar vor einer Überlieferungslücke, danach zwei Brüder (1618), an denen sich das Haus in eine Illysywen-treue Linie (links, ab Cyrwyn Gwared) und eine Draig-treue Linie (rechts, ab Rhydor Gwared) spaltet. Alle Namen außer Sheev und Soffi Gwared (bereits in Haus Balchder/Chwedonol als Mündel angelegt, Portraits von dort übernommen) wurden mit dem Rheunwaith-Namensschema (Namenslisten-Modul des Aleria Almanachs) frei erfunden. Der Krieg von 1718-1720 (ausgelöst durch Nodawls Schändung Rhonwen Draigs, siehe house-illysywen-family.js) löschte die gesamte Illysywen-treue Linie Cyrwyns aus — auf der linken Seite leben nur noch Sheev und Soffi, beide als Mündel fortgegeben (familyRole "ward-away"). Die Kopfschaft fällt danach an die überlebende, vormals nebengeordnete Draig-treue Linie (Rhydor–Maelric–Brenan–Ellric). Frauen des Hauses werden wegverheiratet (Maelwen an Haus Madryn, Nera an Haus Merek); Ellric und Dyrwyn setzen die Linie mit einer weiteren Generation fort (Brenar/Ellena bzw. Neddan/Firena). Haus Gwared steht seither im Banner Haus Arwydds.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

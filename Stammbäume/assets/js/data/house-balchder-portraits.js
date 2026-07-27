@@ -5,7 +5,6 @@ import { HOUSE_RHYDDID_PORTRAITS } from './house-rhyddid-portraits.js';
 
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-balchder';
 const LOCAL_JPG_PORTRAIT_IDS = Object.freeze([
-  'lugh-seldryn',
   'dalvin-balchder',
   'iseult-caerlaen',
   'genofeva-balchder',
@@ -36,6 +35,9 @@ export const HOUSE_BALCHDER_PORTRAITS = Object.freeze({
   // Die beiden ergänzten Portraits liegen in der Quelle als PNG vor.
   'aerona-balchder': `${PORTRAIT_ROOT}/aerona-balchder.png`,
   'godwyn-sgrechiwr': `${PORTRAIT_ROOT}/godwyn-sgrechiwr.png`,
+
+  // Die neuere Seldryn-Hausquelle ersetzt Lughs älteres Balchder-Portrait.
+  'lugh-seldryn': 'assets/images/portraits/haus-seldryn/lugh-seldryn.png',
 
   // Geteilte Weltpersonen verwenden jeweils das bereits kanonisch gehostete Portrait.
   'avan-balchder': HOUSE_RHYDDID_PORTRAITS['avan-balchder'],

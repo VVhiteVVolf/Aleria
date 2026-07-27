@@ -11,6 +11,7 @@ export function createCadetDialog(documentRef = document) {
   const dialog = documentRef.getElementById('cadet-dialog');
   const form = documentRef.getElementById('cadet-form');
   const partnershipSelect = documentRef.getElementById('cadet-parent-partnership');
+  const personInput = form.elements.namedItem('parentPersonId');
   const title = documentRef.getElementById('cadet-dialog-title');
   const submitButton = documentRef.getElementById('cadet-dialog-submit');
   const deleteButton = documentRef.getElementById('cadet-dialog-delete');
@@ -28,6 +29,9 @@ export function createCadetDialog(documentRef = document) {
 
   function openCreate(family, preferredPartnershipId = '') {
     form.reset();
+    personInput.value = '';
+    partnershipSelect.disabled = false;
+    partnershipSelect.required = true;
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), DEFAULT_CREST_FRAME);
     form.elements.namedItem('emblemScale').value = '86';
     form.elements.namedItem('frameScale').value = '100';
@@ -42,7 +46,14 @@ export function createCadetDialog(documentRef = document) {
     const branch = family.cadetBranches.find(item => item.id === branchId);
     if (!branch) throw new Error('Die Hausverknüpfung wurde nicht gefunden.');
     form.reset();
+    personInput.value = branch.parentPersonId || '';
     populatePartnerships(family, branch.parentPartnershipId);
+    partnershipSelect.disabled = Boolean(branch.parentPersonId);
+    partnershipSelect.required = !branch.parentPersonId;
+    if (branch.parentPersonId) {
+      const person = family.persons.find(item => item.id === branch.parentPersonId);
+      partnershipSelect.replaceChildren(new Option(person?.name || branch.parentPersonId, ''));
+    }
     fillCrestFrameSelect(form.elements.namedItem('crestFrame'), branch.crestFrame);
     ['id', 'houseId', 'linkType', 'name', 'subtitle', 'founded', 'emblem', 'targetFamilyId', 'notes'].forEach(fieldName => {
       form.elements.namedItem(fieldName).value = branch[fieldName] || '';
@@ -59,6 +70,8 @@ export function createCadetDialog(documentRef = document) {
     const values = Object.fromEntries(new FormData(form).entries());
     return {
       ...values,
+      parentPartnershipId: partnershipSelect.disabled ? '' : String(partnershipSelect.value || ''),
+      parentPersonId: String(personInput.value || ''),
       emblemScale: Number(values.emblemScale || 86) / 100,
       frameScale: Number(values.frameScale || 100) / 100
     };

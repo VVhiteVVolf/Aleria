@@ -510,12 +510,16 @@ export function createAppController({
       const record = localFamilySource.loadById(values.targetFamilyId);
       if (!record) throw new Error('Die Zielakte wurde im Register nicht gefunden.');
       relationActionsDialog.close();
-      const note = `Als Mündel an ${record.title} gegeben.`;
-      store.updatePerson(person.id, {
-        tags: [...new Set([...(person.tags || []), 'muendel-weggegeben'])],
-        notes: person.notes && !person.notes.includes(note) ? `${person.notes} ${note}` : (person.notes || note)
+      const targetHouse = record.family.houses.find(house => house.id === record.family.lineage.houseId);
+      if (!targetHouse) throw new Error('Das Zielhaus besitzt keinen gültigen Hausdatensatz.');
+      store.sendWardToHouse({
+        personId: person.id,
+        targetFamilyId: record.id,
+        targetFamilyTitle: record.title,
+        targetHouse,
+        crestFrame: record.family.lineage.crestFrame
       });
-      toast(`${person.name} wurde als Mündel an ${record.title} gegeben. Im Zielbaum lässt sich die Person über „Mündel aufnehmen“ einbinden.`, { duration: 6500 });
+      toast(`${person.name} wurde als Mündel an ${record.title} gegeben und dort mit einem Hausknoten verknüpft. Im Zielbaum lässt sich die Person über „Mündel aufnehmen“ einbinden.`, { duration: 6500 });
       return;
     }
 
@@ -1219,7 +1223,12 @@ export function createAppController({
   function submitCadetForm() {
     const values = cadetDialog.read();
     if (!values.name.trim()) throw new Error('Bitte einen Namen für das Kadettenhaus eintragen.');
-    if (!values.parentPartnershipId) throw new Error('Bitte ein Gründerpaar wählen.');
+    if (values.linkType === 'ward-away' && !values.parentPersonId) {
+      throw new Error('Eine Mündelvermittlung benötigt die fortgegebene Person.');
+    }
+    if (values.linkType !== 'ward-away' && !values.parentPartnershipId) {
+      throw new Error('Bitte ein Gründerpaar wählen.');
+    }
     if (!values.targetFamilyId.trim()) throw new Error('Bitte die Ziel-Familien-ID im Register eintragen.');
     if (values.id) store.updateCadetBranch(values.id, values);
     else store.addCadetBranch(values);

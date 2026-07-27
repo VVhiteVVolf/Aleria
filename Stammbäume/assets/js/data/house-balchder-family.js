@@ -9,6 +9,7 @@ import {
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
 
 const BALCHDER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-balchder.png';
+const SELDRYN_EMBLEM = 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Seldryn.png';
 const BALCHDER_HOUSE_ID = 'house-balchder';
 const HOUSE_HEAD_IDS = new Set([
   'caedmon-balchder',
@@ -82,7 +83,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
   houses: [
     { id: BALCHDER_HOUSE_ID, name: 'Haus Balchder', motto: 'Feder und Pflicht.', emblem: BALCHDER_EMBLEM, status: 'active' },
     house('house-eneiniog', 'Haus Eneiniog', 'assets/images/houses/Llamreis Ankunft/haus-eneiniog.png'),
-    house('house-seldryn', 'Haus Seldryn'),
+    house('house-seldryn', 'Haus Seldryn', SELDRYN_EMBLEM),
     house('house-caerlaen', 'Haus Caerlaen'),
     house('house-gwyntog', 'Haus Gwyntog'),
     house('house-cludwyr', 'Haus Cludwyr', 'assets/images/houses/Llamreis Ankunft/haus-cludwyr.png'),
@@ -106,7 +107,11 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     }),
     person('millena-eneiniog', 'Millena Eneiniog', 'female', '1652', '1737', 'house-eneiniog'),
     person('bronwen-balchder', 'Bronwen Balchder', 'female', '1653', '1719'),
-    person('lugh-seldryn', 'Lugh Seldryn', 'male', '1650', '1720', 'house-seldryn'),
+    person('lugh-seldryn', 'Lugh Seldryn', 'male', '1650', '1720', 'house-seldryn', {
+      title: 'Gründer und erster Ritterherr des Hauses Seldryn',
+      notes: 'Begründete Haus Seldryn durch seinen Ritterschlag im Dienst Haus Gwyverns; fiel 1720 im großen Krieg in Ceitheach.',
+      extensions: { registryManagedFields: ['portrait', 'title', 'notes'] }
+    }),
     person('trevon-balchder', 'Trevon Balchder', 'male', '1657', '1720'),
     spouse('niya', 'Niya', 'female', '1660', '1739'),
 
@@ -163,7 +168,10 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
   partnerships: [
     createMarriage('marriage-caedmon-eilonwy', ...FOUNDER_IDS),
     createMarriage('marriage-uther-millena', ...UTHER_IDS),
-    createMarriage('marriage-bronwen-lugh', ...BRONWEN_IDS),
+    createMarriage('marriage-bronwen-lugh', ...BRONWEN_IDS, {
+      status: 'ended',
+      extensions: { registryManagedFields: ['status'] }
+    }),
     createMarriage('marriage-trevon-niya', ...TREVON_IDS),
     createMarriage('marriage-dalvin-iseult', ...DALVIN_IDS),
     createMarriage('marriage-genofeva-alastair', ...GENOFEVA_IDS),
@@ -227,8 +235,10 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-bronwen-lugh',
       houseId: 'house-seldryn',
       targetFamilyId: 'haus-seldryn',
-      crestFrame: 'gold',
-      notes: 'Bronwen wurde an Haus Seldryn wegverheiratet.'
+      emblem: SELDRYN_EMBLEM,
+      crestFrame: 'silver',
+      notes: 'Bronwen wurde an das Ritterhaus Seldryn wegverheiratet.',
+      extensions: { registryManagedFields: ['emblem', 'crestFrame', 'notes'] }
     }),
     createMarriedAwayBranch({
       id: 'married-away-sgrechiwr-aerona',
@@ -290,8 +300,8 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Balchder-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Bronwen, Genofeva, Aerona, Klervi und Cerrin besitzen Wegverheiratungs-Knoten zu ihren Zielhäusern; Aerona ist als älteste Tochter Dalvins ergänzt. Avan und Ronda Rhyddid, Klervi und Rhain Cludwyr, Kamber und Senara Gelyn sowie Marven und Morgaine Chwedonol sind mit ihren bestehenden Stammbäumen als dieselben Weltpersonen verknüpft. Sheev Gwared ist Avans aufgenommenes Mündel und wird ausschließlich als Schutzbefohlener mit Vormundschaft, nicht als leibliches Kind, geführt. Als Ritterherrenhaus führt Balchder den silbernen Wappenrahmen.',
+    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Balchder-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Bronwen, Genofeva, Aerona, Klervi und Cerrin besitzen Wegverheiratungs-Knoten zu ihren Zielhäusern; Aerona ist als älteste Tochter Dalvins ergänzt. Avan und Ronda Rhyddid, Klervi und Rhain Cludwyr, Kamber und Senara Gelyn sowie Marven und Morgaine Chwedonol sind mit ihren bestehenden Stammbäumen als dieselben Weltpersonen verknüpft. Sheev Gwared ist Avans aufgenommenes Mündel und wird ausschließlich als Schutzbefohlener mit Vormundschaft, nicht als leibliches Kind, geführt. Als Ritterherrenhaus führt Balchder den silbernen Wappenrahmen. Die ergänzende Seldryn-Quelle synchronisiert Lugh und Bronwen samt beendeter Ehe, ersetzt Lughs älteres Portrait und gibt Bronwens Zielknoten das echte silbern gerahmte Wappen von Haus Seldryn.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

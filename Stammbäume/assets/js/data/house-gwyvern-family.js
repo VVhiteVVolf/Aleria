@@ -11,6 +11,7 @@ import { HOUSE_GWYVERN_PORTRAITS } from './house-gwyvern-portraits.js';
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
+  daran: 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Daran.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
@@ -103,6 +104,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
     house('house-arth', 'Haus Arth'),
     house('house-airt', 'Haus Airt'),
+    house('house-daran', 'Haus Daran', HOUSE_EMBLEMS.daran),
     house('house-hebog', 'Haus Hebog'),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-gwefrydd', 'Haus Gwefrydd', HOUSE_EMBLEMS.gwefrydd),
@@ -136,13 +138,27 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     person('kimball-gwyvern', 'Kimball', 'male', '1652', '1715'),
     person('enola-dyngwn', 'Enola Dyngwn', 'female', '1650', '1711', 'house-dyngwn'),
     person('conall-airgid', 'Conall Airgid', 'male', '1650', '1712', 'house-airgid'),
-    person('kenyon-taranvyr', 'Kenyon Taranvyr', 'male', '1650', '????', 'house-taranvyr'),
+    person('kenyon-taranvyr', 'Kenyon Taranvyr', 'male', '1650', '', 'house-taranvyr', {
+      status: 'alive',
+      extensions: {
+        registryManagedFields: ['status', 'death']
+      }
+    }),
     person('dajenne-illyswen', 'Dajenne Illyswen', 'female', '1654', '1699', 'house-illyswen'),
 
     // Kinder von Seithved und Enola
     person('maredudd-gwyvern', 'Maredudd', 'male', '1671', '1720'),
     person('heledd-gwyvern', 'Heledd', 'female', '1670', ''),
     person('delyth-gwyvern', 'Delyth', 'female', '1675', '1705'),
+    person('maelgwyn-daran', 'Maelgwyn Daran', 'male', '1669', '', 'house-daran', {
+      familyRole: 'ward',
+      title: 'Ehemaliger Page und Knappe Baron Seithveds · späterer Gründer Haus Darans',
+      tags: ['Aufgenommenes Mündel'],
+      notes: 'Diente als Page und ab 1683 als Knappe bei Baron Seithved Gwyvern, bevor er 1686 zum Ritter geschlagen wurde und 1720 Haus Daran begründete.',
+      extensions: {
+        registryManagedFields: ['familyRole', 'title', 'tags', 'notes']
+      }
+    }),
     person('olwen-wyrm', 'Olwen Wyrm', 'female', '1675', '', 'house-wyrm'),
     person('meurig-draig', 'Meurig Draig', 'male', '1668', '', 'house-draig'),
     person('afal-arth', 'Afal Arth', 'male', '1675', '????', 'house-arth'),
@@ -207,6 +223,11 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
       'marriage-dyvynwal-venora'
     ),
     ...childrenOf(['maredudd-gwyvern', 'heledd-gwyvern', 'delyth-gwyvern'], SEITHVED_IDS, 'marriage-seithved-enola'),
+    ...childrenOf(['maelgwyn-daran'], ['seithved-gwyvern'], '', {
+      type: 'foster',
+      legitimacy: 'unknown',
+      notes: 'Maelgwyn Daran war Seithveds Page und Knappe, nicht sein leiblicher Sohn.'
+    }),
     ...childrenOf(['aethlem-gwyvern', 'liliwen-gwyvern', 'morwenna-gwyvern'], KIMBALL_IDS, 'marriage-kimball-dajenne'),
     ...childrenOf(['mervyn-gwyvern', 'alys-gwyvern'], MAREDUDD_IDS, 'marriage-maredudd-olwen'),
     ...childrenOf(['gwynnan-gwyvern', 'genofeva-gwyvern'], AETHLEM_IDS, 'marriage-aethlem-beatha'),
@@ -248,8 +269,8 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwyvern-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die in der Grafik angedeutete Verlobung Tegwens wurde auf Anweisung nicht übernommen.',
+    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwyvern-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Arwydd und Daran verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die in der Grafik angedeutete Verlobung Tegwens wurde auf Anweisung nicht übernommen. Kenyon Taranvyrs unbekanntes Endjahr wurde durch die ausführliche Taranvyr-Gegenakte präzisiert: Er lebt in der Gegenwart und dient als heutiger Waffenmeister des Barons. Maelgwyn Darans historischer Dienst als Page und Knappe Baron Seithveds ist als nichtbiologische Pflegebeziehung registriert und mit seiner Daran-Gegenakte synchronisiert.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 3
   }
 });

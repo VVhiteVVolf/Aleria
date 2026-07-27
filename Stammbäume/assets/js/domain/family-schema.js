@@ -19,7 +19,7 @@ const LEGITIMACY_VALUES = new Set(['legitimate', 'illegitimate', 'legitimized', 
 const CERTAINTY_VALUES = new Set(['confirmed', 'probable', 'rumored', 'disputed', 'unknown']);
 const VISIBILITY_VALUES = new Set(['public', 'restricted', 'secret']);
 const PORTRAIT_PLACEHOLDERS = new Set(['auto', 'male', 'female', 'child', 'unknown']);
-const HOUSE_LINK_TYPES = new Set(['cadet-house', 'married-away', 'line-extinct']);
+const HOUSE_LINK_TYPES = new Set(['cadet-house', 'married-away', 'ward-away', 'line-extinct']);
 
 export class FamilyValidationError extends Error {
   constructor(diagnostics) {
@@ -155,6 +155,7 @@ function normalizeCadetBranch(branch = {}, index = 0) {
     subtitle: text(branch.subtitle),
     linkType: enumValue(branch.linkType, HOUSE_LINK_TYPES, 'cadet-house'),
     parentPartnershipId: text(branch.parentPartnershipId),
+    parentPersonId: text(branch.parentPersonId),
     houseId: text(branch.houseId),
     emblem: text(branch.emblem),
     emblemScale: boundedNumber(branch.emblemScale, 0.86, 0.5, 1.6),
@@ -456,10 +457,47 @@ export function validateFamily(input) {
   }
 
   family.cadetBranches.forEach(branch => {
-    if (!partnershipIds.has(branch.parentPartnershipId)) {
+    const hasPartnershipAnchor = partnershipIds.has(branch.parentPartnershipId);
+    const hasPersonAnchor = personIds.has(branch.parentPersonId);
+    if (branch.parentPartnershipId && !hasPartnershipAnchor) {
       diagnostics.push(diagnostic('error', 'MISSING_CADET_PARENT_PARTNERSHIP', 'Das Kadettenhaus verweist auf ein unbekanntes Elternpaar.', {
         branchId: branch.id,
         partnershipId: branch.parentPartnershipId
+      }));
+    }
+    if (branch.parentPersonId && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'MISSING_HOUSE_LINK_PERSON', 'Die Hausverknüpfung verweist auf eine unbekannte Person.', {
+        branchId: branch.id,
+        personId: branch.parentPersonId
+      }));
+    }
+    if (!hasPartnershipAnchor && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'MISSING_HOUSE_LINK_ANCHOR', 'Eine Hausverknüpfung benötigt ein Paar oder eine Einzelperson als Ausgangspunkt.', {
+        branchId: branch.id
+      }));
+    }
+    if (hasPartnershipAnchor && hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'AMBIGUOUS_HOUSE_LINK_ANCHOR', 'Eine Hausverknüpfung darf nicht zugleich an einem Paar und einer Einzelperson hängen.', {
+        branchId: branch.id
+      }));
+    }
+    if (branch.linkType === 'ward-away' && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'WARD_LINK_REQUIRES_PERSON', 'Die Vermittlung eines Mündels muss direkt an der fortgegebenen Person hängen.', {
+        branchId: branch.id
+      }));
+    }
+    if (branch.linkType === 'ward-away' && hasPersonAnchor) {
+      const ward = family.persons.find(person => person.id === branch.parentPersonId);
+      if (ward?.familyRole !== 'ward-away') {
+        diagnostics.push(diagnostic('error', 'WARD_LINK_REQUIRES_WARD_ROLE', 'Eine Mündelvermittlung darf nur an einer als fortgegebenes Mündel markierten Person hängen.', {
+          branchId: branch.id,
+          personId: branch.parentPersonId
+        }));
+      }
+    }
+    if (branch.linkType !== 'ward-away' && hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'HOUSE_LINK_REQUIRES_PARTNERSHIP', 'Kadetten-, Wegverheiratet- und Linienendknoten müssen an ihrem maßgeblichen Paar hängen.', {
+        branchId: branch.id
       }));
     }
     if (branch.houseId && !houseIds.has(branch.houseId)) {
@@ -471,6 +509,23 @@ export function validateFamily(input) {
     if (!branch.targetFamilyId && branch.linkType !== 'line-extinct') {
       diagnostics.push(diagnostic('error', 'MISSING_HOUSE_LINK_TARGET', 'Eine Hausverknüpfung benötigt eine Ziel-Familien-ID.', {
         branchId: branch.id
+      }));
+    }
+  });
+
+  family.persons.filter(person => person.familyRole === 'ward-away').forEach(person => {
+    const targetBranches = family.cadetBranches.filter(branch => (
+      branch.linkType === 'ward-away' && branch.parentPersonId === person.id
+    ));
+    if (!targetBranches.length) {
+      diagnostics.push(diagnostic('error', 'MISSING_WARD_TARGET_HOUSE', 'Ein fortgegebenes Mündel benötigt direkt unter seiner Person eine Verknüpfung zum Zielhaus.', {
+        personId: person.id
+      }));
+    }
+    if (targetBranches.length > 1) {
+      diagnostics.push(diagnostic('error', 'MULTIPLE_WARD_TARGET_HOUSES', 'Ein fortgegebenes Mündel darf nicht gleichzeitig an mehrere Zielhäuser vermittelt sein.', {
+        personId: person.id,
+        branchIds: targetBranches.map(branch => branch.id)
       }));
     }
   });

@@ -281,8 +281,11 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
 function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
   family.cadetBranches.forEach(branch => {
     const partnership = family.partnerships.find(item => item.id === branch.parentPartnershipId);
-    if (!partnership) return;
-    const parentIds = partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2);
+    const parentIds = partnership
+      ? partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2)
+      : branch.parentPersonId && chartById.has(branch.parentPersonId)
+        ? [branch.parentPersonId]
+        : [];
     if (!parentIds.length) return;
     if (branch.linkType === 'line-extinct') {
       const endNodeId = `__line-end-${branch.id}`;
@@ -311,7 +314,9 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
       name: branch.name,
       title: branch.subtitle || (branch.linkType === 'married-away'
         ? 'Wegverheiratete Linie'
-        : branch.founded ? `Gegründet ${branch.founded}` : ''),
+        : branch.linkType === 'ward-away'
+          ? 'Als Mündel vermittelt'
+          : branch.founded ? `Gegründet ${branch.founded}` : ''),
       house: house?.name || branch.name,
       portrait: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
       nodeKind: 'cadet-house',
@@ -325,9 +330,9 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
     parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
     chartById.set(nodeId, node);
     parentageLines.set(nodeId, {
-      type: 'cadet-house',
-      color: '#b88b37',
-      dashed: false
+      type: branch.linkType === 'ward-away' ? 'ward-away' : 'cadet-house',
+      color: branch.linkType === 'ward-away' ? ROLE_LINE_COLORS['ward-away'] : '#b88b37',
+      dashed: branch.linkType === 'ward-away'
     });
   });
 }

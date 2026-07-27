@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260715-comment-wrap-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
-<link rel="stylesheet" href="./styles/characters.css?v=20260703-character-dashboard-v1">
+<link rel="stylesheet" href="./styles/characters.css?v=20260726-character-avatars-v1">
 <link rel="stylesheet" href="./styles/character-genealogy.css?v=20260717-genealogy-living-filter-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260709-scene-module-import-export-v1">
 <link rel="stylesheet" href="./styles/aleria-calendar.css?v=20260723-aleria-calendar-v1">
@@ -217,12 +217,13 @@
   <script src="./modules/characters/character-tabs.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260602-character-subtabs-v1" defer></script>
   <script src="./modules/characters/character-inventory-profile.js?v=20260625-character-inventory-itemdb-v1" defer></script>
-  <script src="./modules/characters/character-profile.js?v=20260703-character-dashboard-v1" defer></script>
+  <script src="./modules/characters/character-avatar-import.js?v=20260726-character-avatars-v1" defer></script>
+  <script src="./modules/characters/character-profile.js?v=20260726-character-avatars-v1" defer></script>
   <script src="./modules/characters/character-bulk-actions.js?v=20260611-character-bulk-v1" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-comment-picker.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/characters/character-profile-events.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/characters/character-profile-events.js?v=20260726-character-avatars-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
@@ -1111,11 +1112,12 @@
             <img id="cp-portrait-thumb-img" alt="Portrait" style="display:none">
             <div id="cp-portrait-thumb-ph" class="cp-portrait-thumb-placeholder">?</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:0.6rem;flex:1">
-            <div style="font-size:0.78rem;color:var(--ink-faded);font-style:italic">
-              Imgur-Link einfügen (z.B. https://i.imgur.com/xxxxx.png)
+          <div class="cp-portrait-fields">
+            <div class="char-field-hint">Bild-Link einfügen oder direkt aus der Zwischenablage übernehmen.</div>
+            <div class="cp-image-link-row">
+              <input class="char-field-input" type="url" id="cp-portrait-url" placeholder="https://i.imgur.com/...">
+              <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="paste-portrait-link">Einfügen</button>
             </div>
-            <input class="char-field-input" type="url" id="cp-portrait-url" placeholder="https://i.imgur.com/..." style="width:100%">
             <div id="cp-portrait-url-error" style="font-size:0.72rem;color:var(--red-wax);display:none">
               Bild konnte nicht geladen werden.
             </div>
@@ -1123,9 +1125,18 @@
         </div>
 
         <!-- Emotes -->
-        <div class="cp-section-title" style="margin-top:0.5rem">Emote Portraits <span style="opacity:0.5;font-size:0.85em">(max. 40)</span></div>
-        <div style="font-size:0.78rem;color:var(--ink-faded);font-style:italic;margin-bottom:0.5rem">
+        <div class="cp-section-title cp-avatar-section-title">Emote Portraits <span class="cp-section-meta">(<span id="cp-avatar-count">0</span>/<span id="cp-avatar-limit">80</span>)</span></div>
+        <div class="char-field-hint cp-avatar-help">
           Quadratische Ausdrucks-Portraits für das Kommentarsystem.
+        </div>
+        <div class="cp-avatar-import" id="cp-avatar-import-zone">
+          <label class="char-field-label" for="cp-avatar-links">Mehrere Avatar-Links auf einmal</label>
+          <textarea class="char-field-textarea cp-avatar-links" id="cp-avatar-links" rows="3" placeholder="Bild-Links hier einfügen – einer pro Zeile"></textarea>
+          <div class="cp-avatar-import-actions">
+            <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-avatar-links">Links übernehmen</button>
+            <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-avatar-links">Aus Zwischenablage</button>
+          </div>
+          <div class="cp-avatar-import-status" id="cp-avatar-import-status" role="status" aria-live="polite">Du kannst Links auch direkt auf dieses Feld ziehen.</div>
         </div>
         <div class="emote-grid" id="cp-emote-grid"></div>
 

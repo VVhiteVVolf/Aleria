@@ -18,6 +18,26 @@ function tombstonesFor(family, collection) {
   return new Set(family?.extensions?.registryTombstones?.[collection] || []);
 }
 
+function mergedTombstonesFor(registeredFamily, localFamily, collection) {
+  return new Set([
+    ...tombstonesFor(registeredFamily, collection),
+    ...tombstonesFor(localFamily, collection)
+  ]);
+}
+
+function registryManagedFieldNames(family, extensionKey) {
+  const fieldNames = family?.extensions?.[extensionKey];
+  return Array.isArray(fieldNames) ? fieldNames : [];
+}
+
+function mergeRegisteredManagedFields(registeredValue = {}, localValue = {}, fieldNames = []) {
+  const result = { ...registeredValue, ...localValue };
+  fieldNames.forEach(fieldName => {
+    if (Object.hasOwn(registeredValue, fieldName)) result[fieldName] = registeredValue[fieldName];
+  });
+  return result;
+}
+
 function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set()) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
   const merged = registeredEntities.filter(entity => !tombstones.has(entity.id)).map(entity => {
@@ -44,7 +64,7 @@ function mergeEntities(registeredEntities = [], localEntities = [], tombstones =
   });
   const registeredIds = new Set(registeredEntities.map(entity => entity.id));
   localEntities.forEach(entity => {
-    if (!registeredIds.has(entity.id)) merged.push(entity);
+    if (!registeredIds.has(entity.id) && !tombstones.has(entity.id)) merged.push(entity);
   });
   return merged;
 }
@@ -112,10 +132,36 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   const localRevision = sourceRevision(local);
   if (!needsRegisteredFamilyUpgrade(registered, local)) return local;
 
+  const mergedTombstones = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
+    collection,
+    mergedTombstonesFor(registered, local, collection)
+  ]));
   const mergedCollections = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
-    mergeEntities(registered[collection], local[collection], tombstonesFor(local, collection))
+    mergeEntities(registered[collection], local[collection], mergedTombstones[collection])
   ]));
+  const mergedRegistryTombstones = Object.fromEntries(ENTITY_COLLECTIONS.flatMap(collection => {
+    const ids = [...mergedTombstones[collection]];
+    return ids.length ? [[collection, ids]] : [];
+  }));
+  const mergedHouseProfile = mergeRegisteredManagedFields(
+    registered.document.houseProfile,
+    local.document.houseProfile,
+    registryManagedFieldNames(registered, 'registryManagedHouseProfileFields')
+  );
+  const mergedView = mergeRegisteredManagedFields(
+    registered.view,
+    local.view,
+    registryManagedFieldNames(registered, 'registryManagedViewFields')
+  );
+  const registryManagedUpgradeMetadata = Object.fromEntries([
+    'registryManagedHouseProfileFields',
+    'registryManagedRecordFields',
+    'registryManagedViewFields'
+  ].flatMap(extensionKey => {
+    const fieldNames = registered.extensions?.[extensionKey];
+    return Array.isArray(fieldNames) ? [[extensionKey, [...fieldNames]]] : [];
+  }));
 
   return normalizeFamily({
     ...registered,
@@ -124,10 +170,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     document: {
       ...registered.document,
       ...local.document,
-      houseProfile: {
-        ...registered.document.houseProfile,
-        ...local.document.houseProfile
-      }
+      houseProfile: mergedHouseProfile
     },
     lineage: {
       ...registered.lineage,
@@ -148,14 +191,15 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
       }
     },
     view: {
-      ...registered.view,
-      ...local.view,
+      ...mergedView,
       ancestorDepth: Math.max(registered.view.ancestorDepth, local.view.ancestorDepth),
       descendantDepth: Math.max(registered.view.descendantDepth, local.view.descendantDepth)
     },
     extensions: {
       ...registered.extensions,
       ...local.extensions,
+      ...registryManagedUpgradeMetadata,
+      registryTombstones: mergedRegistryTombstones,
       sourceRevision: registeredRevision,
       registryUpgrade: {
         fromRevision: localRevision,

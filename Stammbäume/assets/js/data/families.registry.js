@@ -16,6 +16,7 @@ import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
+import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
@@ -135,6 +136,12 @@ export const FAMILY_REGISTRY = Object.freeze([
     title: family.document.title,
     family,
     type: 'lower-nobility'
+  })),
+  ...GWYNTHOR_COMMONER_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'commoner'
   })),
   ...[
     ...ARTUS_STREBEN_HOUSE_FAMILIES,

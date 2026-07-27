@@ -1,6 +1,6 @@
 let _editingChar = null;
 let _charPortraitUrl = null;
-const MAX_EMOTES = 40;
+const MAX_EMOTES = CHARACTER_AVATAR_LIMIT;
 let _emoteSlots = [];
 
 function openCharProfile(id) {
@@ -33,6 +33,9 @@ function openCharProfile(id) {
   if (urlField) urlField.value = c.portrait || '';
 
   initEmoteSlots(c.emotes || []);
+  setCharacterAvatarImportStatus('Du kannst Links auch direkt auf dieses Feld ziehen.');
+  const avatarLinksInput = document.getElementById('cp-avatar-links');
+  if (avatarLinksInput) avatarLinksInput.value = '';
   if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
 
   document.getElementById('cp-delete-btn').style.display = id ? 'inline-block' : 'none';
@@ -242,6 +245,7 @@ function renderEmoteGrid() {
     }
     grid.appendChild(div);
   });
+  updateCharacterAvatarImportSummary();
 }
 
 function removeEmote(i) {

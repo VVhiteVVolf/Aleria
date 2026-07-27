@@ -37,7 +37,7 @@ function renderCadetBranches(branches) {
       <ul class="relationship-list">
         ${branches.map(branch => `
           <li class="cadet-branch-row">
-            <span><strong>${escapeHtml(branch.name)}</strong><small>${branch.linkType === 'married-away' ? 'Wegverheiratete Linie' : branch.founded ? `Kadettenhaus · gegründet ${escapeHtml(branch.founded)}` : 'Kadettenhaus'}</small></span>
+            <span><strong>${escapeHtml(branch.name)}</strong><small>${branch.linkType === 'married-away' ? 'Wegverheiratete Linie' : branch.linkType === 'ward-away' ? 'Als Mündel vermittelt' : branch.founded ? `Kadettenhaus · gegründet ${escapeHtml(branch.founded)}` : 'Kadettenhaus'}</small></span>
             <button class="icon-button" type="button" data-action="delete-cadet" data-branch-id="${escapeHtml(branch.id)}" aria-label="${escapeHtml(branch.name)} entfernen">×</button>
           </li>
         `).join('')}
@@ -89,7 +89,9 @@ export function renderPersonInspector(container, graph, personId) {
   const descendants = graph.getDescendants(person.id);
   const groups = graph.getRelationshipGroups(person.id);
   const partnershipIds = new Set(graph.getPartnerships(person.id).map(partnership => partnership.id));
-  const cadetBranches = graph.family.cadetBranches.filter(branch => partnershipIds.has(branch.parentPartnershipId));
+  const cadetBranches = graph.family.cadetBranches.filter(branch => (
+    partnershipIds.has(branch.parentPartnershipId) || branch.parentPersonId === person.id
+  ));
   const timeJumps = graph.family.timeJumps.filter(timeJump => (
     partnershipIds.has(timeJump.parentPartnershipId) || timeJump.parentPersonId === person.id
   ));

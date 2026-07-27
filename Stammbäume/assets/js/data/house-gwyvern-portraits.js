@@ -1,5 +1,6 @@
 import { HOUSE_ARWYDD_PORTRAITS } from './house-arwydd-portraits.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { HOUSE_DARAN_PORTRAITS } from './house-daran-portraits.js';
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
@@ -49,5 +50,6 @@ export const HOUSE_GWYVERN_PORTRAITS = Object.freeze({
   'izobel-arwydd': HOUSE_ARWYDD_PORTRAITS['izobel-arwydd'],
   'gwynnan-gwyvern': HOUSE_ARWYDD_PORTRAITS['gwynnan-gwywern'],
   'meurig-draig': HOUSE_DRAIG_PORTRAITS['meurig-draig'],
-  'heledd-gwyvern': HOUSE_DRAIG_PORTRAITS['heledd-gwyvern']
+  'heledd-gwyvern': HOUSE_DRAIG_PORTRAITS['heledd-gwyvern'],
+  'maelgwyn-daran': HOUSE_DARAN_PORTRAITS['maelgwyn-daran']
 });

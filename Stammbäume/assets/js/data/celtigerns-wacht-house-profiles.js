@@ -7,6 +7,9 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
     Abergwint: 'assets/images/regions/abergwint.png',
     Castellbryn: 'assets/images/regions/castellbryn.png',
     Gwynthor: 'assets/images/regions/gwynthor.png',
+    Morddyn: 'assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Morddyn.png',
+    'Côr Mynyddfaen': 'assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Côr Mynyddfaen.png',
+    Garwfaen: 'assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Garwfaen.png',
     Rhosmere: 'assets/images/regions/rhosmere.png',
     // Neue Sitz-Wappen liegen in einer nach der Orts-Hierarchie verschachtelten Ordnerstruktur.
     Aberllan: 'assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png',
@@ -92,6 +95,31 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
   uiTalamh: profile('ard-tiarna', ['Cenyr', 'Celtigerns Wacht', 'Antike Crannath Clans', 'Antikes Gwynthor'])
 });
 
+const GWYNTHOR_COMMONER_PATH = Object.freeze([
+  'Cenyr',
+  'Celtigerns Wacht',
+  'Llamreis Ankunft',
+  'Gwynthor'
+]);
+
+function gwynthorCommonerProfile() {
+  return profile('commoner', GWYNTHOR_COMMONER_PATH, {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  });
+}
+
+export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
+  draenmelyn: gwynthorCommonerProfile(),
+  pendrwn: gwynthorCommonerProfile(),
+  swyll: gwynthorCommonerProfile(),
+  aelmor: gwynthorCommonerProfile(),
+  maerllys: gwynthorCommonerProfile(),
+  braglas: gwynthorCommonerProfile(),
+  tonnarth: gwynthorCommonerProfile(),
+  ysgrif: gwynthorCommonerProfile()
+});
+
 const LOWER_KNIGHT_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
 
 function lowerKnightProfile(liegeHouseId, secondarySeats = []) {
@@ -111,6 +139,9 @@ function lowerKnightProfile(liegeHouseId, secondarySeats = []) {
 // (Haus Gwyvern). Rhonwens Tränen bleibt vorerst ohne festen Sitz (dreistufiger Pfad).
 const ARTUS_STREBEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Artus Streben', 'Rhosmere']);
 const GWENDOLYNS_UFER_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Abergwint']);
+const GWENDOLYNS_UFER_COR_MYNYDDFAEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Côr Mynyddfaen']);
+const GWENDOLYNS_UFER_GARWFAEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Garwfaen']);
+const GWENDOLYNS_UFER_MORDDYN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Gwendolyns Ufer', 'Morddyn']);
 const RHONWENS_TRAENEN_PATH = Object.freeze(['Cenyr', 'Celtigerns Wacht', 'Rhonwens Tränen']);
 
 export const ARTUS_STREBEN_VASSAL_PROFILES = Object.freeze({
@@ -131,23 +162,75 @@ export const ARTUS_STREBEN_VASSAL_PROFILES = Object.freeze({
 });
 
 export const GWENDOLYNS_UFER_VASSAL_PROFILES = Object.freeze({
-  annwyl: profile('knight', GWENDOLYNS_UFER_PATH),
-  barus: profile('knight', GWENDOLYNS_UFER_PATH),
-  cenfig: profile('knight', GWENDOLYNS_UFER_PATH),
-  cysgodion: profile('knight', GWENDOLYNS_UFER_PATH),
-  daran: profile('knight', GWENDOLYNS_UFER_PATH),
-  edmy: profile('knight', GWENDOLYNS_UFER_PATH),
-  gwyntog: profile('knight', GWENDOLYNS_UFER_PATH),
-  penwyn: profile('knight', GWENDOLYNS_UFER_PATH),
-  rhuddgar: profile('knight', GWENDOLYNS_UFER_PATH),
-  seldryn: profile('knight', GWENDOLYNS_UFER_PATH),
-  selog: profile('knight', GWENDOLYNS_UFER_PATH),
-  taranvyr: profile('knight', GWENDOLYNS_UFER_PATH),
-  tawelgar: profile('knight', GWENDOLYNS_UFER_PATH),
-  trydar: profile('knight', GWENDOLYNS_UFER_PATH),
-  ymladd: profile('knight', GWENDOLYNS_UFER_PATH),
-  caerlaen: profile('commoner', GWENDOLYNS_UFER_PATH),
-  caerthwyn: profile('commoner', GWENDOLYNS_UFER_PATH)
+  annwyl: profile('knight', GWENDOLYNS_UFER_COR_MYNYDDFAEN_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  barus: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  cenfig: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  cysgodion: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  daran: profile('knight', GWENDOLYNS_UFER_GARWFAEN_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  edmy: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  gwyntog: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  penwyn: profile('knight', GWENDOLYNS_UFER_MORDDYN_PATH, {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  }),
+  rhuddgar: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  seldryn: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  selog: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern',
+    secondarySeats: ['Burg am Feuerstollen']
+  }),
+  taranvyr: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  tawelgar: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  trydar: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  ymladd: profile('knight', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  caerlaen: profile('commoner', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  }),
+  caerthwyn: profile('commoner', GWENDOLYNS_UFER_PATH, {
+    liegeHouseId: 'haus-gwyvern',
+    liegeHouseName: 'Haus Gwyvern'
+  })
 });
 
 // Morveth und Skellor liegen im "Ausgestorben"-Unterordner (bereits erloschene Linien),

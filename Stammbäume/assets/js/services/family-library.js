@@ -45,11 +45,20 @@ function resolveFamilyRecord(registered, local) {
   }
 
   const needsUpgrade = needsRegisteredFamilyUpgrade(registered.family, local.family);
+  const upgradedFamily = needsUpgrade
+    ? resolveRegisteredFamilyUpgrade(registered.family, local.family)
+    : local.family;
+  const registryManagedRecordFields = Array.isArray(
+    registered.family?.extensions?.registryManagedRecordFields
+  )
+    ? registered.family.extensions.registryManagedRecordFields
+    : [];
+  const usesRegisteredFolderPath = needsUpgrade
+    && registryManagedRecordFields.includes('folderPath');
   return {
     ...local,
-    family: needsUpgrade
-      ? resolveRegisteredFamilyUpgrade(registered.family, local.family)
-      : local.family,
+    folderPath: usesRegisteredFolderPath ? registered.folderPath : local.folderPath,
+    family: upgradedFamily,
     source: needsUpgrade ? 'registry-upgrade' : local.source,
     link: createFamilyViewLink(local.id)
   };

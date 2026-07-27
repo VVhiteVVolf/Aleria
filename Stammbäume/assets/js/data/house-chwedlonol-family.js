@@ -84,7 +84,8 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
     { id: CHWEDLONOL_HOUSE_ID, name: 'Haus Chwedonol', motto: 'Pflicht kennt keine Flaute.', emblem: CHWEDLONOL_EMBLEM, status: 'active' },
     house('house-rhyddid', 'Haus Rhyddid', 'assets/images/houses/Llamreis Ankunft/haus-rhyddid.png'),
     house('house-balchder', 'Haus Balchder', 'assets/images/houses/Llamreis Ankunft/haus-balchder.png'),
-    house('house-gwared', 'Haus Gwared', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png')
+    house('house-gwared', 'Haus Gwared', 'assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png'),
+    house('house-tawelgar', 'Haus Tawelgar', 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Tawelgar.png')
   ],
   persons: [
     // Gründerin und ihr Ehemann
@@ -132,7 +133,13 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
 
     // Kind von Rhonwen und Cieran
     person('romney-1704-chwedlonol', 'Romney Chwedonol', 'female', '1704', ''),
-    person('emlyn-tawelgar', 'Emlyn Tawelgar', 'male', '????', '', '', { familyRole: 'married' }),
+    person('emlyn-tawelgar', 'Emlyn Tawelgar', 'male', '1707', '', 'house-tawelgar', {
+      familyRole: 'married',
+      notes: 'Eingeheirateter Tawelgar; seine Ehe mit Romney und ihre Kinder werden als matriarchale Chwedonol-Linie geführt.',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'birth', 'portrait', 'houseId', 'notes']
+      }
+    }),
 
     // Kinder von Angharad und Drystan
     person('gwyneth-chwedlonol', 'Gwyneth Chwedonol', 'female', '????', ''),
@@ -246,8 +253,8 @@ export const HOUSE_CHWEDLONOL_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Chwedonol-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Als matriarchales Haus vererben die Frauen die Führung (Erbfolge Meredithe–Gwenhwyfar–Niniane–Morgaine–Eleyne); Arianwen wurde an Haus Rhyddid wegverheiratet und teilt sich dort mit Kerwin Rhyddid. Soffi Gwared ist Morgaines aufgenommenes Mündel. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Chwedonol den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherrin.',
+    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Chwedonol-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Als matriarchales Haus vererben die Frauen die Führung (Erbfolge Meredithe–Gwenhwyfar–Niniane–Morgaine–Eleyne); Arianwen wurde an Haus Rhyddid wegverheiratet und teilt sich dort mit Kerwin Rhyddid. Soffi Gwared ist Morgaines aufgenommenes Mündel. Die neuere Tawelgar-Gegenakte belegt Emlyns Geburtsjahr 1707, seine Herkunft aus Haus Tawelgar und sein individuelles Portrait; Weltperson und Ehe-ID bleiben in beiden Familienakten identisch. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Chwedonol den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherrin.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

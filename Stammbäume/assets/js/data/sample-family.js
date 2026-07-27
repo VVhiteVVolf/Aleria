@@ -69,6 +69,20 @@ export const SAMPLE_FAMILY = Object.freeze({
       targetFamilyId: 'haus-sgrechwyr',
       notes: 'Kadettenlinie des Nordturms.',
       extensions: {}
+    },
+    {
+      id: 'ward-away-elowen-thorne',
+      name: 'Haus Thorne',
+      subtitle: 'Als Mündel vermittelt',
+      linkType: 'ward-away',
+      parentPartnershipId: '',
+      parentPersonId: 'elowen-vael',
+      houseId: 'house-thorne',
+      emblem: '',
+      crestFrame: 'silver',
+      targetFamilyId: 'haus-thorne',
+      notes: 'Elowen wurde als Mündel an Haus Thorne vermittelt.',
+      extensions: {}
     }
   ],
   timeJumps: [],

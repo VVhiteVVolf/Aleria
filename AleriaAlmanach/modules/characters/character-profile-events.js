@@ -66,6 +66,21 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'import-avatar-links') {
+    void importCharacterAvatarLinks();
+    return;
+  }
+
+  if (action === 'paste-avatar-links') {
+    void pasteCharacterAvatarLinks();
+    return;
+  }
+
+  if (action === 'paste-portrait-link') {
+    void pasteCharacterPortraitLink();
+    return;
+  }
+
   if (action === 'remove-emote') {
     removeEmote(Number(actionTarget.dataset.emoteIndex));
   }
@@ -108,4 +123,26 @@ document.addEventListener('keydown', event => {
 document.addEventListener('input', event => {
   if (!event.target.closest('#char-profile-overlay')) return;
   handleCharacterProfileInput(event);
+});
+
+document.addEventListener('dragover', event => {
+  if (!event.target.closest('#cp-avatar-import-zone')) return;
+  event.preventDefault();
+  setCharacterAvatarDropActive(true);
+});
+
+document.addEventListener('dragleave', event => {
+  if (!event.target.closest('#cp-avatar-import-zone')) return;
+  if (event.relatedTarget?.closest?.('#cp-avatar-import-zone')) return;
+  setCharacterAvatarDropActive(false);
+});
+
+document.addEventListener('drop', event => {
+  if (!event.target.closest('#cp-avatar-import-zone')) return;
+  event.preventDefault();
+  setCharacterAvatarDropActive(false);
+  const rawValue = readCharacterAvatarDropText(event.dataTransfer);
+  const input = document.getElementById('cp-avatar-links');
+  if (input) input.value = rawValue;
+  void importCharacterAvatarLinks(rawValue);
 });

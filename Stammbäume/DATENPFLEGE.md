@@ -73,6 +73,7 @@ Verbindliche Bausteine sind:
 - `createParentages` für jede Eltern-Kind-Zuordnung;
 - `createMarriedAwayBranch` für eine Person des dargestellten Hauses, die in ein anderes Haus heiratet;
 - `createCadetHouseBranch` ausschließlich für ein ausdrücklich neu gegründetes Seitenhaus;
+- `createWardAwayBranch` für ein Familienkind, das als Mündel, Page oder Knappe an ein anderes Haus vermittelt wurde;
 - `createExtinctBranch` für ein belegtes Linienende.
 
 Verwandtschaftsrollen wie Tante, Cousin oder Großmutter werden nicht gespeichert. Sie werden aus dem Graphen berechnet.
@@ -87,8 +88,11 @@ Für jeden Hausknoten gilt zwingend:
 - Das Zielhaus darf nicht aus dem Geburtsnamen eines Partners abgeleitet werden. Beispiel: Morholt Pysgod und Caitrin Neidr gründen Haus Tiwna; der Knoten ist deshalb Tiwna, nicht Pysgod.
 - Ein eingeheirateter Partner erzeugt im aktuellen Baum keinen Herkunfts-Hausknoten. Der reziproke Wegverheiratet-Knoten gehört in seine eigene Familienakte.
 - Verlobungen erzeugen noch keinen Wegverheiratet-Knoten.
+- Jede Person des dargestellten Hauses, die laut Quelle verheiratet wurde und deren Zielhaus nicht überliefert ist, erhält an genau dieser Ehe einen `married-away`-Knoten „Unbekanntes Haus“ (`targetFamilyId: haus-unbekannt`). Ein „???“-Ehepartner ist kein Grund, den Knoten wegzulassen.
+- Jede als Mündel fortgegebene Person besitzt zusätzlich zu `familyRole: ward-away` genau einen `ward-away`-Hausknoten. Dieser hängt über `parentPersonId` unmittelbar unter der Person und nennt das Zielhaus; ist auch dieses unbekannt, wird „Unbekanntes Haus“ verwendet. Eine nicht belegte Vormundsperson oder Pflege-Elternschaft wird dabei nicht erfunden.
+- Eine ausdrückliche Vermittlung als Page oder Knappe an eine Person eines anderen Hauses gilt in der Heimatakte ebenfalls als fortgegebenes Mündel. Die Person behält ihr Geburtshaus und ihre biologische Abstammung, erhält aber zwingend `familyRole: ward-away`, den dunkelblauen Mündelrahmen und genau einen direkten `ward-away`-Zielknoten zum Haus des Ritters oder Vormunds. Formulierungen wie „zu X gegeben“, „X angeboten“ oder „dient als Page/Knappe von X“ dürfen nicht als bloßer Titel ohne Vermittlungsknoten abgelegt werden.
 
-Hausknoten sind terminale Anhänge und bleiben direkt am Paar. Der Zeitsprung-Router darf sie niemals in die nächste Generation verschieben.
+Hausknoten sind terminale Anhänge und bleiben direkt am maßgeblichen Paar beziehungsweise beim fortgegebenen Mündel direkt an der Person. Der Zeitsprung-Router darf sie niemals in die nächste Generation verschieben.
 
 ## 7. Hardcore-Regel für Zeitsprünge
 
@@ -139,7 +143,7 @@ Eine Familienakte ist erst fertig, wenn alle folgenden Punkte geprüft sind:
 - IDs, Weltpersonen-IDs und Chart-IDs sind eindeutig.
 - Jede Partnerschaft und Elternschaft besitzt die erwarteten Teilnehmer.
 - Bastardgruppen mit verschiedenen Affären bleiben getrennt und ausdrücklich beschriftet.
-- Jeder Hausknoten hängt im konvertierten Chart direkt an seinem `parentPartnershipId`-Paar.
+- Jeder Hausknoten hängt im konvertierten Chart direkt an seinem `parentPartnershipId`-Paar; ein `ward-away`-Knoten hängt ausschließlich an seiner `parentPersonId`-Person.
 - Kein Zeitsprung steht sichtbar parallel zu einem anderen Knoten; Gap-Kinder sind ausschließlich Personen.
 - Kein Chartknoten besitzt mehr als zwei Eltern oder mehrere Hierarchiepfade.
 - Geteilte Personen, Partnerschaften und Portraits stimmen mit den Gegenakten überein.

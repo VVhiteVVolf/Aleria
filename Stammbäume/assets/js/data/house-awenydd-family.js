@@ -9,6 +9,7 @@ import {
 import { HOUSE_AWENYDD_PORTRAITS } from './house-awenydd-portraits.js';
 
 const AWENYDD_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-awenydd.png';
+const PENWYN_EMBLEM = 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Penwyn.png';
 const AWENYDD_HOUSE_ID = 'house-awenydd';
 const HOUSE_HEAD_IDS = new Set([
   'aeddan-awenydd',
@@ -77,6 +78,7 @@ export const HOUSE_AWENYDD_FAMILY = Object.freeze({
   },
   houses: [
     { id: AWENYDD_HOUSE_ID, name: 'Haus Awenydd', motto: '', emblem: AWENYDD_EMBLEM, status: 'active' },
+    { id: 'house-penwyn', name: 'Haus Penwyn', motto: '', emblem: PENWYN_EMBLEM, status: 'active' },
     { id: 'house-balguen', name: 'Haus Balguen', motto: '', emblem: '', status: 'active' },
     { id: 'house-unbekannt-brynna', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' },
     { id: 'house-unbekannt-eleri', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' }
@@ -130,7 +132,12 @@ export const HOUSE_AWENYDD_FAMILY = Object.freeze({
     person('brychan-awenydd', 'Brychan Awenydd', 'male', '1698', '', AWENYDD_HOUSE_ID, {
       notes: 'Persönlicher Botengänger und Waldläufer des Ratsmagiers Myrddin, Nachfolger seines Vaters Hafgan.'
     }),
-    spouse('rhoswyn-penwyn', 'Rhoswyn Penwyn', 'female', '????', ''),
+    person('rhoswyn-penwyn', 'Rhoswyn Penwyn', 'female', '1700', '', 'house-penwyn', {
+      familyRole: 'married',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'birth', 'status', 'houseId', 'familyRole']
+      }
+    }),
 
     // Jüngste Generation
     person('rhiwallon-awenydd', 'Rhiwallon Awenydd', 'male', '1714', ''),
@@ -237,8 +244,8 @@ export const HOUSE_AWENYDD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert nur wenige Namen und keine Lebensdaten; Geburtsjahre der jüngsten Generation wurden anhand des dargestellten Alters (14–26 Jahre, verankert an Arthens ausdrücklich genannten 14 Lebensjahren) geschätzt und die Elterngenerationen rückwirkend so berechnet, dass die Altersabstände plausibel sind. Die meisten Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Awenydd den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
+    sourceNote: 'Die Quelltabelle überliefert nur wenige Namen und keine Lebensdaten; Geburtsjahre der jüngsten Generation wurden anhand des dargestellten Alters (14–26 Jahre, verankert an Arthens ausdrücklich genannten 14 Lebensjahren) geschätzt und die Elterngenerationen rückwirkend so berechnet, dass die Altersabstände plausibel sind. Die meisten Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos. Rhoswyn Penwyns Gegenakte belegt ihr Geburtsjahr 1700 und verwendet für sie, Brychan sowie ihre Ehe dieselben Weltidentitäten und Portraitdateien wie Haus Penwyn. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Awenydd den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

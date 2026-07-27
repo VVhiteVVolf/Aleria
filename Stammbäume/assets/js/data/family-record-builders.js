@@ -80,7 +80,8 @@ export function createParentages(childIds, parentIds, partnershipId, options = {
 function createHouseBranch({
   id,
   name,
-  parentPartnershipId,
+  parentPartnershipId = '',
+  parentPersonId = '',
   houseId,
   targetFamilyId,
   linkType,
@@ -88,6 +89,7 @@ function createHouseBranch({
   subtitle,
   founded = '',
   notes = '',
+  extensions = {},
   // Ritterherrenhäuser als Zielhaus führen den silbernen Wappenrahmen.
   crestFrame = 'gold'
 }) {
@@ -97,6 +99,7 @@ function createHouseBranch({
     subtitle,
     linkType,
     parentPartnershipId,
+    parentPersonId,
     houseId,
     emblem,
     emblemScale: 0.86,
@@ -105,7 +108,7 @@ function createHouseBranch({
     founded,
     targetFamilyId,
     notes,
-    extensions: {}
+    extensions: { ...extensions }
   };
 }
 
@@ -122,6 +125,14 @@ export function createCadetHouseBranch(options) {
     ...options,
     linkType: 'cadet-house',
     subtitle: options.subtitle || 'Gegründetes Kadettenhaus'
+  });
+}
+
+export function createWardAwayBranch(options) {
+  return createHouseBranch({
+    ...options,
+    linkType: 'ward-away',
+    subtitle: options.subtitle || 'Als Mündel vermittelt'
   });
 }
 

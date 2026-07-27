@@ -83,6 +83,58 @@ export function createFounderPlaceholderHouseFamily({
   });
 }
 
+// Vorbereitete Hausakte mit einem bewusst noch leeren, aber bereits seriell
+// verankerten Überlieferungssprung. Der Trenner hängt ausschließlich unter dem
+// Stammwappen des Gründerpaares; spätere bekannte Nachkommen werden über childIds
+// ergänzt und dürfen niemals parallel zum Zeitsprung angelegt werden.
+export function createFounderTimeJumpPlaceholderHouseFamily({
+  id,
+  title,
+  emblem,
+  houseProfile,
+  description = 'Vorbereitete Familienakte mit Platzhalter-Gründerpaar und Überlieferungssprung.',
+  toYear = '1600',
+  timeJumpLabel = 'Überlieferung ab etwa 1600',
+  pendingDescendantReview = false
+}) {
+  const base = createFounderPlaceholderHouseFamily({
+    id,
+    title,
+    emblem,
+    houseProfile,
+    description
+  });
+  const timeJumpId = `gap-${id.replace(/^haus-/, '')}-to-${toYear}`;
+  return Object.freeze({
+    ...base,
+    persons: Object.freeze(base.persons.map(person => Object.freeze({
+      ...person,
+      status: 'dead',
+      death: '????',
+      notes: 'Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.'
+    }))),
+    timeJumps: Object.freeze([
+      Object.freeze({
+        id: timeJumpId,
+        parentPartnershipId: base.lineage.founderPartnershipId,
+        parentPersonId: '',
+        childIds: Object.freeze([]),
+        years: 0,
+        fromYear: '????',
+        toYear: String(toYear),
+        label: timeJumpLabel,
+        notes: 'Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.',
+        extensions: Object.freeze({ preparedPlaceholder: true })
+      })
+    ]),
+    extensions: Object.freeze({
+      ...base.extensions,
+      preparedTimeJump: true,
+      pendingDescendantReview: Boolean(pendingDescendantReview)
+    })
+  });
+}
+
 // Variante für bereits erloschene Häuser: dasselbe Platzhalter-Gründerpaar, aber mit
 // einem sofort angehängten Ausgestorben-Knoten (wie createExtinctBranch() in
 // family-record-builders.js) an der Gründerehe, damit das Erlöschen von Anfang an
