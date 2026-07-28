@@ -12,6 +12,9 @@ export function createCadetDialog(documentRef = document) {
   const form = documentRef.getElementById('cadet-form');
   const partnershipSelect = documentRef.getElementById('cadet-parent-partnership');
   const personInput = form.elements.namedItem('parentPersonId');
+  const linkTypeSelect = form.elements.namedItem('linkType');
+  const migrationOption = [...linkTypeSelect.options]
+    .find(option => option.value === 'migration-offshoot');
   const title = documentRef.getElementById('cadet-dialog-title');
   const submitButton = documentRef.getElementById('cadet-dialog-submit');
   const deleteButton = documentRef.getElementById('cadet-dialog-delete');
@@ -29,6 +32,10 @@ export function createCadetDialog(documentRef = document) {
 
   function openCreate(family, preferredPartnershipId = '') {
     form.reset();
+    if (migrationOption) {
+      migrationOption.hidden = true;
+      migrationOption.disabled = true;
+    }
     personInput.value = '';
     partnershipSelect.disabled = false;
     partnershipSelect.required = true;
@@ -46,6 +53,11 @@ export function createCadetDialog(documentRef = document) {
     const branch = family.cadetBranches.find(item => item.id === branchId);
     if (!branch) throw new Error('Die Hausverknüpfung wurde nicht gefunden.');
     form.reset();
+    if (migrationOption) {
+      const isMigrationOffshoot = branch.linkType === 'migration-offshoot';
+      migrationOption.hidden = !isMigrationOffshoot;
+      migrationOption.disabled = !isMigrationOffshoot;
+    }
     personInput.value = branch.parentPersonId || '';
     populatePartnerships(family, branch.parentPartnershipId);
     partnershipSelect.disabled = Boolean(branch.parentPersonId);

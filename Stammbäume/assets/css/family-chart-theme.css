@@ -182,12 +182,12 @@
   min-width: 0;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   color: var(--card-text);
   font-weight: 600;
   line-height: 1.13;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 1px 2px rgba(28, 17, 10, 0.42);
 }
 
@@ -226,6 +226,7 @@
 .family-card-house,
 .family-card-life {
   display: block;
+  width: 100%;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -234,7 +235,7 @@
 .aleria-person-card .family-card-name {
   display: -webkit-box;
   font-family: var(--font-display);
-  font-size: 0.91rem;
+  font-size: 0.82rem;
   font-weight: 700;
   font-variant: small-caps;
   letter-spacing: 0.035em;
@@ -244,25 +245,36 @@
   -webkit-line-clamp: 2;
 }
 
-.aleria-person-card .family-card-title,
 .aleria-person-card .family-card-house,
 .aleria-person-card .family-card-life {
   margin-top: 0.26rem;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
   white-space: nowrap;
 }
 
+.aleria-person-card .family-card-title {
+  display: -webkit-box;
+  margin-top: 0.26rem;
+  overflow-wrap: anywhere;
+  font-size: 0.63rem;
+  line-height: 1.16;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .aleria-person-card .family-card-house {
+  margin-top: 0.62rem;
   color: var(--card-subtle);
   font-family: var(--font-display);
-  font-size: 0.62rem;
+  font-size: 0.56rem;
   letter-spacing: 0.055em;
   text-transform: uppercase;
 }
 
 .aleria-person-card .family-card-life {
   color: var(--card-subtle);
-  font-size: 0.66rem;
+  font-size: 0.59rem;
   font-style: italic;
 }
 
@@ -459,6 +471,111 @@
     brightness(1.06)
     drop-shadow(0 0.55rem 0.48rem rgba(54, 34, 20, 0.38));
   transform: translateY(-2px);
+}
+
+.aleria-house-offshoot-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 7.25rem;
+  pointer-events: none;
+}
+
+.aleria-house-offshoot {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0;
+  border: 0;
+  color: #3b281b;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.aleria-house-offshoot__seal {
+  position: relative;
+  width: 4.65rem;
+  height: 4.65rem;
+  flex: 0 0 4.65rem;
+  border-radius: 50%;
+  background: #f4ead4;
+  filter: drop-shadow(0 0.3rem 0.32rem rgba(54, 34, 20, 0.34));
+  transition: filter 140ms ease, transform 140ms ease;
+}
+
+.aleria-house-offshoot__emblem-clip {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f4ead4;
+}
+
+.aleria-house-offshoot__emblem,
+.aleria-house-offshoot__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.aleria-house-offshoot__emblem {
+  object-fit: cover;
+  transform: scale(var(--offshoot-emblem-scale, 0.86));
+}
+
+.aleria-house-offshoot__frame {
+  z-index: 4;
+  transform: scale(var(--offshoot-frame-scale, 1));
+}
+
+.aleria-house-offshoot__label {
+  display: -webkit-box;
+  width: 6rem;
+  overflow: hidden;
+  color: #4b3320;
+  font-family: var(--font-display);
+  font-size: 0.57rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.035em;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 250, 231, 0.9);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.aleria-house-offshoot:hover .aleria-house-offshoot__seal,
+.aleria-house-offshoot:focus-visible .aleria-house-offshoot__seal {
+  filter:
+    brightness(1.07)
+    drop-shadow(0 0.38rem 0.4rem rgba(54, 34, 20, 0.42));
+  transform: translateY(-2px);
+}
+
+.aleria-house-offshoot:focus-visible {
+  outline: 2px solid rgba(153, 102, 31, 0.86);
+  outline-offset: 3px;
+  border-radius: 0.45rem;
+}
+
+.aleria-house-offshoot-link {
+  stroke: #b88b37;
+  stroke-width: 3px;
+  pointer-events: none;
 }
 
 .aleria-line-end {

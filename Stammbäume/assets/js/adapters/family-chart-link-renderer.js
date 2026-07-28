@@ -1,3 +1,6 @@
+import { FAMILY_CHART_CARD_LAYOUT } from './family-chart-card-renderer.js';
+import { collectFamilyChartCardPositions } from './family-chart-layout-dom.js';
+
 const DEFAULT_CORNER_RADIUS = 18;
 
 function asPoint(value) {
@@ -94,27 +97,64 @@ export function createRoundedOrthogonalPath(points, cornerRadius = DEFAULT_CORNE
 
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
 
-function cardLayoutPoint(cardContainer) {
-  const node = cardContainer?.__data__;
-  const x = Number(node?.x);
-  const y = Number(node?.y);
-  if (Number.isFinite(x) && Number.isFinite(y)) return { x, y };
-  const match = /translate\((-?[\d.]+)px,\s*(-?[\d.]+)px\)/.exec(cardContainer?.style?.transform || '');
-  if (!match) return null;
-  const parsedX = Number(match[1]);
-  const parsedY = Number(match[2]);
-  return Number.isFinite(parsedX) && Number.isFinite(parsedY) ? { x: parsedX, y: parsedY } : null;
+function midpoint(points) {
+  if (!points.length) return null;
+  const total = points.reduce((sum, point) => ({ x: sum.x + point.x, y: sum.y + point.y }), { x: 0, y: 0 });
+  return { x: total.x / points.length, y: total.y / points.length };
 }
 
-function cardPersonId(cardContainer) {
-  const node = cardContainer?.__data__;
-  return node?.data?.id || cardContainer.querySelector('[data-id]')?.dataset.id || '';
+function parentageRoute(first, second, orientation) {
+  if (orientation !== 'horizontal') {
+    const firstEdge = second.y >= first.y ? first.y + FAMILY_CHART_CARD_LAYOUT.height : first.y;
+    const secondEdge = second.y >= first.y ? second.y : second.y + FAMILY_CHART_CARD_LAYOUT.height;
+    const middleY = firstEdge + ((secondEdge - firstEdge) / 2);
+    return [first, { x: first.x, y: middleY }, { x: second.x, y: middleY }, second];
+  }
+  const firstEdge = second.x >= first.x ? first.x + FAMILY_CHART_CARD_LAYOUT.width : first.x;
+  const secondEdge = second.x >= first.x ? second.x : second.x + FAMILY_CHART_CARD_LAYOUT.width;
+  const middleX = firstEdge + ((secondEdge - firstEdge) / 2);
+  return [first, { x: middleX, y: first.y }, { x: middleX, y: second.y }, second];
+}
+
+function partnershipRoute(first, second, orientation, routeSide = 'after') {
+  if (orientation !== 'horizontal') {
+    const generationGap = Math.max(
+      24,
+      FAMILY_CHART_CARD_LAYOUT.verticalSpacing - FAMILY_CHART_CARD_LAYOUT.height
+    );
+    const laneY = routeSide === 'before'
+      ? Math.min(first.y, second.y) - (generationGap / 2)
+      : Math.max(first.y, second.y) + FAMILY_CHART_CARD_LAYOUT.height + (generationGap / 2);
+    return [first, { x: first.x, y: laneY }, { x: second.x, y: laneY }, second];
+  }
+  const generationGap = Math.max(
+    24,
+    FAMILY_CHART_CARD_LAYOUT.horizontalSpacing - FAMILY_CHART_CARD_LAYOUT.width
+  );
+  const laneX = routeSide === 'before'
+    ? Math.min(first.x, second.x) - (generationGap / 2)
+    : Math.max(first.x, second.x) + FAMILY_CHART_CARD_LAYOUT.width + (generationGap / 2);
+  return [first, { x: laneX, y: first.y }, { x: laneX, y: second.y }, second];
+}
+
+export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation = 'vertical') {
+  if (extraLink.kind === 'parentage') {
+    const parentPoints = (extraLink.parentIds || []).map(parentId => cardPositions.get(parentId)).filter(Boolean);
+    const childPoint = cardPositions.get(extraLink.childId);
+    const parentPoint = midpoint(parentPoints);
+    return parentPoint && childPoint ? parentageRoute(parentPoint, childPoint, orientation) : [];
+  }
+
+  const first = cardPositions.get(extraLink.firstId);
+  const second = cardPositions.get(extraLink.secondId);
+  return first && second ? partnershipRoute(first, second, orientation, extraLink.routeSide) : [];
 }
 
 export function createFamilyChartLinkRenderer({
   container,
   resolveMetadata,
   resolveExtraLinks,
+  resolveOrientation,
   schedule = globalThis.setTimeout?.bind(globalThis),
   cancel = globalThis.clearTimeout?.bind(globalThis)
 }) {
@@ -137,20 +177,16 @@ export function createFamilyChartLinkRenderer({
     if (!extraLinks.length) return;
     const linksView = container.querySelector('.links_view');
     if (!linksView) return;
-    const cardPositions = new Map();
-    container.querySelectorAll('.card_cont').forEach(cardContainer => {
-      const personId = cardPersonId(cardContainer);
-      const point = cardLayoutPoint(cardContainer);
-      if (personId && point) cardPositions.set(personId, point);
-    });
+    const cardPositions = collectFamilyChartCardPositions(container);
+    const orientation = typeof resolveOrientation === 'function' ? resolveOrientation() : 'vertical';
     extraLinks.forEach(extraLink => {
-      const first = cardPositions.get(extraLink.firstId);
-      const second = cardPositions.get(extraLink.secondId);
-      if (!first || !second) return;
+      const route = createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation);
+      if (route.length < 2) return;
       const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
       path.setAttribute('class', 'link aleria-link--routed aleria-extra-link');
       path.setAttribute('fill', 'none');
-      path.setAttribute('d', createRoundedOrthogonalPath([first, second]));
+      path.setAttribute('d', createRoundedOrthogonalPath(route));
+      path.dataset.extraLinkKind = extraLink.kind || 'partnership';
       applyLineStyle(path, extraLink);
       linksView.appendChild(path);
     });

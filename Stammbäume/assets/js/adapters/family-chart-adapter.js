@@ -16,8 +16,14 @@ import {
   createFamilyChartCardHtml,
   FAMILY_CHART_CARD_LAYOUT
 } from './family-chart-card-renderer.js';
+import {
+  createFamilyChartCyclePlan,
+  detachFamilyChartParentLinks
+} from './family-chart-cycle-router.js';
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
+import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
+import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
 
 const ADAPTER_ID = 'family-chart';
@@ -121,6 +127,24 @@ function createChartPerson(person, house, diagnostics, legitimacy = 'unknown') {
         familyRole: person.familyRole,
         legitimacy,
         virtualType: ''
+      }
+    },
+    rels: { parents: [], spouses: [], children: [] }
+  };
+}
+
+function createChartPersonAppearance(sourceNode, appearance) {
+  return {
+    id: appearance.id,
+    data: {
+      ...sourceNode.data,
+      nodeKind: 'person-appearance',
+      aleria: {
+        ...sourceNode.data.aleria,
+        personId: appearance.personId,
+        chartAppearanceId: appearance.id,
+        chartAppearanceRole: appearance.role,
+        sourcePartnershipId: appearance.partnershipId
       }
     },
     rels: { parents: [], spouses: [], children: [] }
@@ -280,6 +304,7 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
 
 function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
   family.cadetBranches.forEach(branch => {
+    if (branch.linkType === 'migration-offshoot') return;
     const partnership = family.partnerships.find(item => item.id === branch.parentPartnershipId);
     const parentIds = partnership
       ? partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2)
@@ -335,6 +360,31 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
       dashed: branch.linkType === 'ward-away'
     });
   });
+}
+
+function createMigrationHouseOffshoots({ family, chartById, houseById }) {
+  return family.cadetBranches
+    .filter(branch => (
+      branch.linkType === 'migration-offshoot'
+      && branch.parentPersonId
+      && chartById.has(branch.parentPersonId)
+    ))
+    .map(branch => {
+      const house = houseById.get(branch.houseId);
+      return Object.freeze({
+        id: `__house-offshoot-${branch.id}`,
+        branchId: branch.id,
+        anchorPersonId: branch.parentPersonId,
+        targetFamilyId: branch.targetFamilyId,
+        name: branch.name,
+        subtitle: branch.subtitle || 'Ausgewanderte Hauslinie',
+        emblem: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+        crestFrameAsset: getCrestFrame(branch.crestFrame).asset,
+        emblemScale: branch.emblemScale,
+        frameScale: branch.frameScale,
+        preferredSide: branch.extensions?.offshootSide === 'after' ? 'after' : 'before'
+      });
+    });
 }
 
 function applyOriginHouseStructure({ family, chartById, parentageLines, houseById }) {
@@ -533,17 +583,54 @@ export function toFamilyChartData(input, options = {}) {
     ));
   });
 
+  const visiblePartnerships = family.partnerships.filter(partnership => (
+    !options.publicOnly || partnership.visibility === 'public'
+  ));
+  const appearancePlan = createFamilyChartPersonAppearancePlan({ partnerships: visiblePartnerships, personById });
+  appearancePlan.appearances.forEach(appearance => {
+    const sourceNode = chartById.get(appearance.personId);
+    if (sourceNode) chartById.set(appearance.id, createChartPersonAppearance(sourceNode, appearance));
+  });
+  appearancePlan.invalidRequests.forEach(request => {
+    diagnostics.push(Object.freeze({
+      severity: 'warning',
+      code: 'INVALID_PERSON_APPEARANCE_PARTNERSHIP',
+      message: 'Eine zusÃ¤tzliche Personenansicht verweist nicht auf eine Beteiligung dieser Person.',
+      details: request
+    }));
+  });
+
+  const layoutPersonById = new Map(personById);
+  appearancePlan.appearances.forEach(appearance => {
+    layoutPersonById.set(appearance.id, personById.get(appearance.personId));
+  });
+  const layoutPartnerships = visiblePartnerships.map(partnership => ({
+    ...partnership,
+    participantIds: partnership.participantIds.map(personId => (
+      appearancePlan.resolveParticipantId(personId, partnership.id)
+    ))
+  }));
+  const layoutParentageByChild = new Map([...selectedParentageByChild].map(([childId, parentage]) => [
+    childId,
+    {
+      ...parentage,
+      parentIds: parentage.parentIds.map(parentId => (
+        appearancePlan.resolveParticipantId(parentId, parentage.partnershipId)
+      ))
+    }
+  ]));
+  const cyclePlan = createFamilyChartCyclePlan({
+    partnerships: layoutPartnerships,
+    selectedParentageByChild: layoutParentageByChild,
+    personById: layoutPersonById
+  });
   const extraCoupleLines = [];
+  const extraParentageLines = [];
 
-  function shareChartParent(firstId, secondId) {
-    const firstParents = selectedParentageByChild.get(firstId)?.parentIds || [];
-    const secondParents = selectedParentageByChild.get(secondId)?.parentIds || [];
-    return firstParents.some(parentId => secondParents.includes(parentId));
-  }
-
-  family.partnerships.forEach(partnership => {
-    if (options.publicOnly && partnership.visibility !== 'public') return;
-    const validIds = partnership.participantIds.filter(personId => chartById.has(personId));
+  visiblePartnerships.forEach(partnership => {
+    const validIds = partnership.participantIds
+      .map(personId => appearancePlan.resolveParticipantId(personId, partnership.id))
+      .filter(personId => chartById.has(personId));
     if (validIds.length < 2) return;
     if (validIds.length > 2) {
       diagnostics.push(Object.freeze({
@@ -563,22 +650,87 @@ export function toFamilyChartData(input, options = {}) {
           dashed: partnership.type === 'affair' || partnership.type === 'forced'
         });
         pairMetadata.set(pairKey(firstId, secondId), metadata);
-        if (shareChartParent(firstId, secondId)) {
-          // Partner im selben Geschwisterblock (z. B. Mündel und Verlobter) würden vom
-          // Layout dupliziert; ihre Linie zeichnet der Link-Renderer stattdessen direkt.
-          extraCoupleLines.push(Object.freeze({ firstId, secondId, ...metadata }));
+        const cycleDecision = cyclePlan.getDecision(firstId, secondId);
+        if (cycleDecision?.mode === 'extra-partnership-line') {
+          // Bereits über Abstammung verbundene Partner ohne gemeinsame Kinder würden
+          // vom Layout dupliziert; ihre Linie zeichnet der Link-Renderer direkt.
+          extraCoupleLines.push(Object.freeze({
+            kind: 'partnership',
+            firstId,
+            secondId,
+            routeSide: cycleDecision.sharedChildIds.length ? 'before' : 'after',
+            ...metadata
+          }));
           diagnostics.push(Object.freeze({
             severity: 'info',
-            code: 'SIBLING_PARTNERSHIP_EXTRA_LINE',
-            message: 'Eine Verbindung innerhalb desselben Geschwisterblocks wird als Zusatzlinie gezeichnet.',
+            code: cycleDecision.reason === 'related-partners'
+              ? 'MULTI_PARTNER_ANCESTRY_EXTRA_LINE'
+              : cycleDecision.siblingPair
+                ? 'SIBLING_PARTNERSHIP_EXTRA_LINE'
+                : 'RELATED_PARTNERSHIP_EXTRA_LINE',
+            message: cycleDecision.reason === 'related-partners'
+              ? 'Eine weitere Verbindung in bereits verwandte Partnerzweige wird als Zusatzlinie gezeichnet.'
+              : cycleDecision.siblingPair
+                ? 'Eine Verbindung innerhalb desselben Geschwisterblocks wird als Zusatzlinie gezeichnet.'
+                : 'Eine Verbindung innerhalb derselben Abstammung wird als Zusatzlinie gezeichnet.',
             details: Object.freeze({ partnershipId: partnership.id, participantIds: Object.freeze([firstId, secondId]) })
           }));
           continue;
+        }
+        if (cycleDecision?.mode === 'detach-parentage') {
+          diagnostics.push(Object.freeze({
+            severity: 'info',
+            code: 'RELATED_PARTNERSHIP_PARENTAGE_ROUTED',
+            message: 'Eine verwandte Elternverbindung wird für das Layout zyklusfrei geführt.',
+            details: Object.freeze({
+              partnershipId: partnership.id,
+              participantIds: Object.freeze([firstId, secondId]),
+              detachedPersonId: cycleDecision.detachedPersonId,
+              sharedChildIds: cycleDecision.sharedChildIds
+            })
+          }));
         }
         addUnique(chartById.get(firstId).rels.spouses, secondId);
         addUnique(chartById.get(secondId).rels.spouses, firstId);
       }
     }
+  });
+
+  const visiblePartnershipById = new Map(visiblePartnerships.map(partnership => [partnership.id, partnership]));
+  appearancePlan.partnerMirrors.forEach(mirror => {
+    const partnership = visiblePartnershipById.get(mirror.partnershipId);
+    const mirrorNode = chartById.get(mirror.id);
+    if (!partnership || !mirrorNode) return;
+
+    const metadata = Object.freeze({
+      type: partnership.type,
+      color: relationColor(family, partnership.type),
+      dashed: partnership.type === 'affair' || partnership.type === 'forced'
+    });
+    mirror.partnerIds.filter(partnerId => chartById.has(partnerId)).forEach(partnerId => {
+      addUnique(mirrorNode.rels.spouses, partnerId);
+      addUnique(chartById.get(partnerId).rels.spouses, mirror.id);
+      pairMetadata.set(pairKey(mirror.id, partnerId), metadata);
+    });
+    diagnostics.push(Object.freeze({
+      severity: 'info',
+      code: 'PARTNERSHIP_PARTNER_MIRRORED',
+      message: 'Eine zweite Partnerkarte zeigt die Verbindung am Herkunftszweig ohne erneute Nachkommenlinie.',
+      details: Object.freeze({
+        partnershipId: mirror.partnershipId,
+        personId: mirror.personId,
+        partnerIds: mirror.partnerIds
+      })
+    }));
+  });
+
+  cyclePlan.multiPartnerParentageRoutes.forEach(route => {
+    diagnostics.push(Object.freeze({
+      severity: 'info',
+      code: 'MULTI_PARTNER_PARENTAGE_ROUTED',
+      message: 'Mehrere Verbindungen in verwandte Zweige werden für das Layout zyklusfrei geführt.',
+      details: route
+    }));
   });
 
   parentagesByChild.forEach((parentages, childId) => {
@@ -593,7 +745,9 @@ export function toFamilyChartData(input, options = {}) {
         details: Object.freeze({ childId, selectedParentageId: selected.id })
       }));
     }
-    selected.parentIds.slice(0, 2).forEach(parentId => {
+    selected.parentIds.slice(0, 2).map(parentId => (
+      appearancePlan.resolveParticipantId(parentId, selected.partnershipId)
+    )).forEach(parentId => {
       const parent = chartById.get(parentId);
       if (!parent || parentId === childId) return;
       addUnique(child.rels.parents, parentId);
@@ -619,11 +773,52 @@ export function toFamilyChartData(input, options = {}) {
   applyCadetBranches({ family, chartById, parentageLines, houseById });
   applyOriginHouseStructure({ family, chartById, parentageLines, houseById });
   applyTimeJumps({ family, chartById, parentageLines, personById, diagnostics });
+  const houseOffshoots = createMigrationHouseOffshoots({ family, chartById, houseById });
+
+  cyclePlan.detachedPersonIds.forEach(childId => {
+    const parentIds = detachFamilyChartParentLinks(chartById, childId);
+    if (!parentIds.length) return;
+    const metadata = parentageLines.get(childId) || Object.freeze({
+      type: 'biological',
+      color: relationColor(family, 'biological'),
+      dashed: false
+    });
+    extraParentageLines.push(Object.freeze({
+      kind: 'parentage',
+      parentIds,
+      childId,
+      type: metadata.type,
+      color: metadata.color,
+      dashed: metadata.dashed
+    }));
+  });
+
+  cyclePlan.multiPartnerParentageRoutes.forEach(route => {
+    route.childIds.forEach(childId => {
+      const parentIds = detachFamilyChartParentLinks(chartById, childId, [route.personId]);
+      if (!parentIds.length) return;
+      const metadata = parentageLines.get(childId) || Object.freeze({
+        type: 'biological',
+        color: relationColor(family, 'biological'),
+        dashed: false
+      });
+      extraParentageLines.push(Object.freeze({
+        kind: 'parentage',
+        parentIds,
+        childId,
+        type: metadata.type,
+        color: metadata.color,
+        dashed: metadata.dashed
+      }));
+    });
+  });
 
   return Object.freeze({
     data: Object.freeze([...chartById.values()]),
     diagnostics: Object.freeze(diagnostics),
+    houseOffshoots: Object.freeze(houseOffshoots),
     extraCoupleLines: Object.freeze([...extraCoupleLines]),
+    extraParentageLines: Object.freeze([...extraParentageLines]),
     getPartnershipLine(firstId, secondId) {
       return pairMetadata.get(pairKey(firstId, secondId)) || null;
     },
@@ -703,7 +898,22 @@ export function createFamilyChartSession(config) {
       return converted.getParentageLine(childIdFromLink(link));
     },
     resolveExtraLinks() {
-      return converted.extraCoupleLines;
+      return [...converted.extraCoupleLines, ...converted.extraParentageLines];
+    },
+    resolveOrientation() {
+      return view.orientation;
+    }
+  });
+  const houseOffshootRenderer = createFamilyChartHouseOffshootRenderer({
+    container,
+    resolveOffshoots() {
+      return converted.houseOffshoots;
+    },
+    resolveOrientation() {
+      return view.orientation;
+    },
+    onActivate(payload) {
+      config.onFamilyLinkClick?.(payload);
     }
   });
 
@@ -730,7 +940,8 @@ export function createFamilyChartSession(config) {
     card?.setCardInnerHtmlCreator?.(createFamilyChartCardHtml);
     card?.setOnCardClick?.((event, datum) => {
       const metadata = datum?.data?.data?.aleria || datum?.data?.aleria || {};
-      const personId = datum?.data?.id || datum?.id;
+      const chartNodeId = datum?.data?.id || datum?.id;
+      const personId = metadata.personId || chartNodeId;
       if (metadata.virtualType === 'house-origin') {
         config.onLineageOriginClick?.({
           lineageOriginId: metadata.lineageOriginId,
@@ -767,8 +978,47 @@ export function createFamilyChartSession(config) {
       }
       const handled = typeof config.onPersonClick === 'function'
         && config.onPersonClick({ personId, event }) === true;
-      if (!handled) focus(personId, { fit: false });
+      if (!handled) focus(chartNodeId, { fit: false });
     });
+  }
+
+  function configuredFocusViewport() {
+    const chartViewport = family.extensions?.chartViewport;
+    if (chartViewport?.initialPosition !== 'focus') return null;
+    const configuredScale = Number(chartViewport.initialScale);
+    const scale = Number.isFinite(configuredScale)
+      ? Math.min(1, Math.max(0.25, configuredScale))
+      : 0.55;
+    return { scale };
+  }
+
+  function centerExistingChartNode(personId, scale) {
+    const canvas = container.querySelector('#f3Canvas');
+    const zoomController = canvas?.__zoomObj;
+    const card = [...container.querySelectorAll('.card[data-id]')]
+      .find(element => element.dataset.id === personId);
+    const cardContainer = card?.closest('.card_cont');
+    if (!canvas || !zoomController || !cardContainer) return false;
+
+    const position = cardContainer.__data__;
+    const transformMatch = String(cardContainer.style.transform || '')
+      .match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
+    const x = Number.isFinite(position?.x) ? position.x : Number(transformMatch?.[1]);
+    const y = Number.isFinite(position?.y) ? position.y : Number(transformMatch?.[2]);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+
+    const canvasRect = canvas.getBoundingClientRect();
+    const targetX = canvasRect.width / 2;
+    const targetY = Math.min(FAMILY_CHART_CARD_LAYOUT.height * 0.85, canvasRect.height * 0.25);
+    const transform = runtime.d3.zoomIdentity
+      .translate(targetX - x * scale, targetY - y * scale)
+      .scale(scale);
+
+    // Family Chart 0.9.0 legt seine D3-Zoomsteuerung am Canvas ab. Der Zugriff
+    // bleibt hier im Adapter gekapselt, damit sehr breite Akten lesbar starten,
+    // ohne den Graphen ein zweites Mal aufzubauen oder Personen auszublenden.
+    runtime.d3.select(canvas).call(zoomController.transform, transform);
+    return true;
   }
 
   function update(nextFamily, nextView = nextFamily?.view) {
@@ -794,6 +1044,8 @@ export function createFamilyChartSession(config) {
     focusPersonId = personId;
     applyView(false);
     chart.updateMainId?.(personId);
+    const focusViewport = configuredFocusViewport();
+    if (focusViewport && centerExistingChartNode(personId, focusViewport.scale)) return true;
     chart.updateTree?.({
       initial: false,
       tree_position: options.fit === true ? 'fit' : 'main_to_middle'
@@ -813,6 +1065,8 @@ export function createFamilyChartSession(config) {
     focusPersonId = defaultPersonId;
     applyView(false);
     chart.updateMainId?.(defaultPersonId);
+    const focusViewport = configuredFocusViewport();
+    if (focusViewport && centerExistingChartNode(defaultPersonId, focusViewport.scale)) return true;
     chart.updateTree?.({ initial: false, tree_position: 'fit' });
     return true;
   }
@@ -826,6 +1080,7 @@ export function createFamilyChartSession(config) {
   function destroy() {
     if (destroyed) return;
     linkRenderer.destroy();
+    houseOffshootRenderer.destroy();
     container.replaceChildren();
     container.classList.remove('f3', 'f3-cont');
     destroyed = true;
@@ -833,9 +1088,21 @@ export function createFamilyChartSession(config) {
 
   configureCard();
   applyView(false);
-  chart.setAfterUpdate?.(options => linkRenderer.refresh(options?.transition_time));
+  chart.setAfterUpdate?.(options => {
+    linkRenderer.refresh(options?.transition_time);
+    houseOffshootRenderer.refresh(options?.transition_time);
+  });
   chart.updateMainId?.(focusPersonId);
   chart.updateTree?.({ initial: true, tree_position: 'fit', transition_time: 0 });
+  const focusViewport = configuredFocusViewport();
+  if (focusViewport) {
+    const applyConfiguredViewport = () => {
+      if (!destroyed) centerExistingChartNode(focusPersonId, focusViewport.scale);
+    };
+    if (typeof runtime.requestAnimationFrame === 'function') {
+      runtime.requestAnimationFrame(() => runtime.requestAnimationFrame(applyConfiguredViewport));
+    } else applyConfiguredViewport();
+  }
 
   return Object.freeze({
     update,

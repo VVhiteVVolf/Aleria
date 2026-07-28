@@ -13,9 +13,12 @@ import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
+  pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
+  wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   dreigiau: PORTRAIT_PLACEHOLDERS.crest
 });
 
@@ -169,9 +172,9 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-dyngwn', 'Haus Dyngwn'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-vaeren', 'Haus Vaeren'),
-    house('house-pysgod', 'Haus Pysgod'),
+    house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-grael', 'Haus Grael'),
-    house('house-wylan', 'Haus Wylan'),
+    house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-illewod', 'Haus Illewod'),
     house('house-draenog', 'Haus Draenog'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
@@ -182,7 +185,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-neidr', 'Haus Neidr'),
     house('house-eisenherz', 'Haus Eisenherz'),
     house('house-blodyn', 'Haus Blodyn'),
-    house('house-arth', 'Haus Arth'),
+    house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-rochraide', 'Haus Rochraide')
   ],
   persons: [
@@ -260,7 +263,9 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     person('tarwen-pendrag', 'Tarwen Pendrag', 'female', '1572', '1643'),
     person('caitrin-draig', 'Caitrin', 'female', '1555', '1603', 'house-draig'),
     person('cunedda-draig', 'Cunedda', 'male', '1553', '1617', 'house-draig'),
-    person('gingalain-1572-pysgod', 'Gingalain Pysgod', 'male', '????', '????', 'house-pysgod'),
+    person('gingalain-1572-pysgod', 'Gingalain Pysgod', 'male', '1571', '1639', 'house-pysgod', {
+      notes: 'Die Pysgod-Gegenakte belegt 1571–1639; die stabile Personen-ID bleibt unverändert.'
+    }),
 
     // 10. Generation – Kinder Gawains & Caitrins
     person('gareth-pendrag', 'Gareth Pendrag', 'male', '1573', '1634'),
@@ -443,7 +448,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     marriedAway('married-away-draig-angharad', 'Haus Draig', 'marriage-rhodri-angharad', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-ceirwyn-rhoslyn', 'Haus Ceirwyn', 'marriage-rhoslyn-ceirwyn', 'house-ceirwyn'),
     marriedAway('married-away-neidr-sulwen', 'Haus Neidr', 'marriage-sulwen-howell', 'house-neidr'),
-    marriedAway('married-away-pysgod-tarwen', 'Haus Pysgod', 'marriage-tarwen-gingalain', 'house-pysgod'),
+    marriedAway('married-away-pysgod-tarwen', 'Haus Pysgod', 'marriage-tarwen-gingalain', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
     marriedAway('married-away-wylan-iesin', 'Haus Wylan', 'marriage-iesin-vorath', 'house-wylan'),
     marriedAway('married-away-illewod-blodeuyn', 'Haus Illewod', 'marriage-blodeuyn-keudawg', 'house-illewod'),
     marriedAway('married-away-aderyn-caradwyn', 'Haus Aderyn', 'marriage-caradwyn-dungarth', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
@@ -504,5 +509,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     limitGenerations: false,
     showSiblings: true
   },
-  extensions: {}
+  extensions: {
+    sourceRevision: 1
+  }
 });

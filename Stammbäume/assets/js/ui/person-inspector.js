@@ -31,13 +31,19 @@ function renderGroup(group) {
 
 function renderCadetBranches(branches) {
   if (!branches.length) return '';
+  const branchLabel = branch => {
+    if (branch.linkType === 'married-away') return 'Wegverheiratete Linie';
+    if (branch.linkType === 'ward-away') return 'Als Mündel vermittelt';
+    if (branch.linkType === 'migration-offshoot') return 'Seitlicher Auswanderungszweig';
+    return branch.founded ? `Kadettenhaus · gegründet ${escapeHtml(branch.founded)}` : 'Kadettenhaus';
+  };
   return `
     <section class="inspector-section">
-      <h3>Verknüpfte Häuser dieses Paares</h3>
+      <h3>Verknüpfte Häuser</h3>
       <ul class="relationship-list">
         ${branches.map(branch => `
           <li class="cadet-branch-row">
-            <span><strong>${escapeHtml(branch.name)}</strong><small>${branch.linkType === 'married-away' ? 'Wegverheiratete Linie' : branch.linkType === 'ward-away' ? 'Als Mündel vermittelt' : branch.founded ? `Kadettenhaus · gegründet ${escapeHtml(branch.founded)}` : 'Kadettenhaus'}</small></span>
+            <span><strong>${escapeHtml(branch.name)}</strong><small>${branchLabel(branch)}</small></span>
             <button class="icon-button" type="button" data-action="delete-cadet" data-branch-id="${escapeHtml(branch.id)}" aria-label="${escapeHtml(branch.name)} entfernen">×</button>
           </li>
         `).join('')}

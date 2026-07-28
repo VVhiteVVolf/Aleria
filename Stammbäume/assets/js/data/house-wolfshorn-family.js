@@ -4,8 +4,10 @@ import {
   createFamilyPerson,
   createMarriage,
   createParentages,
-  createMarriedAwayBranch
+  createMarriedAwayBranch,
+  createMigrationHouseBranch
 } from './family-record-builders.js';
+import { HOUSE_WOLFSHORN_PORTRAITS } from './house-wolfshorn-portraits.js';
 
 // Quelle: vom Nutzer geliefertes AleriaAlmanach-Modulpaket "Hrolf Wolfshorn" (Biographie- und
 // Hausseite "Clan Wolfshorn") sowie ausdrueckliche Nutzerkorrekturen zu Alter, Verwandtschaft
@@ -14,8 +16,9 @@ import {
 // aeltester Sohn") und den ausdruecklichen Nutzerangaben (Halvar 39, Asgeir/Ylva 25+); nach
 // DATENPFLEGE-Quellenhierarchie gilt die strukturierte Liste, nicht der Fliesstext.
 const HOUSE_EMBLEMS = Object.freeze({
-  wolfshorn: 'https://i.imgur.com/wsMjaTx.png',
-  vangandr: 'https://i.imgur.com/A9WNWtf.png'
+  wolfshorn: 'assets/images/houses/Aldrimar/clan-wolfshorn.png',
+  vangandr: 'https://i.imgur.com/A9WNWtf.png',
+  bleiddorn: 'assets/images/houses/Llamreis Ankunft/haus-bleiddorn.png'
 });
 
 const REGION_EMBLEMS = Object.freeze({
@@ -80,7 +83,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
   },
   houses: [
     house(WOLFSHORN_HOUSE_ID, 'Clan Wolfshorn', HOUSE_EMBLEMS.wolfshorn),
-    house('house-vangandr', 'Clan Vangandr', HOUSE_EMBLEMS.vangandr)
+    house('house-vangandr', 'Clan Vangandr', HOUSE_EMBLEMS.vangandr),
+    house('house-bleiddorn', 'Haus Bleiddorn', HOUSE_EMBLEMS.bleiddorn)
   ],
   persons: [
     // Unbekanntes Gruenderpaar, das Haus Wolfshorn begruendete. Mehrere Jahrhunderte als
@@ -135,8 +139,9 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       familyRole: 'core',
       lineageRole: 'head',
       title: 'Huskarlherr (Ritterherr), vormals Herr von Hornhall',
-      portrait: 'https://i.imgur.com/3SWLL45.png',
-      notes: 'Gab Hornhall auf und fuehrt die letzten Wolfshorn nach Cenyr, um Haus Draig einen neuen Eid anzubieten.'
+      portrait: HOUSE_WOLFSHORN_PORTRAITS['hrolf-wolfshorn'],
+      notes: 'Gab Hornhall auf und fuehrt die letzten Wolfshorn nach Cenyr, um Haus Draig einen neuen Eid anzubieten.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
     person('ivar-wolfshorn', 'Ivar Wolfshorn', 'male', '1684', '1730', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
@@ -199,8 +204,9 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       familyRole: 'core',
       lineageRole: 'branch',
       title: 'Juengster Bruder Hrolfs, Huskarl der Wolfshorn',
-      portrait: 'https://i.imgur.com/tKPWO78.png',
-      notes: 'Begleitet Hrolf nach Cenyr.'
+      portrait: HOUSE_WOLFSHORN_PORTRAITS['halvar-wolfshorn'],
+      notes: 'Begleitet Hrolf nach Cenyr.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
 
     // Bjoerns uneheliche Kinder. Als Bastarde tragen sie nicht den Hausnamen Wolfshorn,
@@ -247,15 +253,17 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Erstgeborene Tochter',
-      portrait: 'https://i.imgur.com/zQmDv85.png',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      portrait: HOUSE_WOLFSHORN_PORTRAITS['ylva-wolfshorn'],
+      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
     person('asgeir-wolfshorn', 'Asgeir Wolfshorn', 'male', '1712', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Aeltester Sohn',
-      portrait: 'https://i.imgur.com/tlufXWn.png',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      portrait: HOUSE_WOLFSHORN_PORTRAITS['asgeir-wolfshorn'],
+      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
     person('bodil-wolfshorn', 'Bodil Wolfshorn', 'female', '1714', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
@@ -402,6 +410,26 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     )
   ],
   cadetBranches: [
+    createMigrationHouseBranch({
+      id: 'cadet-bleiddorn-hrolf',
+      name: 'Haus Bleiddorn',
+      subtitle: 'Ausgewandertes Ritterherrenhaus',
+      parentPersonId: 'hrolf-wolfshorn',
+      houseId: 'house-bleiddorn',
+      targetFamilyId: 'haus-bleiddorn',
+      emblem: HOUSE_EMBLEMS.bleiddorn,
+      crestFrame: 'silver',
+      notes: 'Hrolf gründete nach der Auswanderung aus Aldrimar in Gwynthor das Ritterherrenhaus Bleiddorn. Der seitliche Auswanderungszweig ist keine Abstammung und verändert die Wolfshorn-Generationen nicht.',
+      extensions: {
+        registryManagedFields: [
+          'linkType',
+          'parentPartnershipId',
+          'parentPersonId',
+          'subtitle',
+          'notes'
+        ]
+      }
+    }),
     marriedAway('married-away-unbekannt-astrid', 'marriage-astrid-torgils'),
     marriedAway('married-away-unbekannt-solveig', 'marriage-solveig-ulf'),
     marriedAway('married-away-unbekannt-gyda', 'marriage-gyda-roar'),
@@ -437,5 +465,5 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     limitGenerations: false,
     showSiblings: true
   },
-  extensions: { sourceRevision: 1 }
+  extensions: { sourceRevision: 3 }
 });

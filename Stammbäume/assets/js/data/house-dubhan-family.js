@@ -4,16 +4,19 @@ import {
   createFamilyPerson,
   createMarriage,
   createParentages,
-  createMarriedAwayBranch
+  createMarriedAwayBranch,
+  createMigrationHouseBranch
 } from './family-record-builders.js';
+import { HOUSE_DUBHAN_PORTRAITS } from './house-dubhan-portraits.js';
 
 // Quelle: vom Nutzer geliefertes AleriaAlmanach-Modulpaket "Breccan Dubhan" (Biographie- und
 // Hausseite "Sept der Dubhan") sowie ausdrückliche Nutzerkorrekturen zu Alter, Verwandtschaft
 // und dem Krieg 1718-1721. Kartenwappen fuer Faelaorn und Tir na Brann vom Nutzer geliefert;
 // alle weiteren Wappen (Dubhan-Sept-Symbol, Mac-Dubglais-Wappen) stammen aus dem Modulpaket.
 const HOUSE_EMBLEMS = Object.freeze({
-  dubhan: 'https://i.imgur.com/dkv5dNQ.png',
-  macDubglais: 'https://i.imgur.com/y1uwNjF.png'
+  dubhan: 'assets/images/houses/Faelaorn/sept-dubhan.png',
+  macDubglais: 'https://i.imgur.com/y1uwNjF.png',
+  gwynthorDubhan: 'assets/images/houses/Llamreis Ankunft/haus-dubhan-gwynthor.png'
 });
 
 const REGION_EMBLEMS = Object.freeze({
@@ -65,7 +68,8 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
   },
   houses: [
     house(DUBHAN_HOUSE_ID, 'Sept Dubhan', HOUSE_EMBLEMS.dubhan),
-    house('house-mac-dubglais', 'Clan Mac Dubglais', HOUSE_EMBLEMS.macDubglais)
+    house('house-mac-dubglais', 'Clan Mac Dubglais', HOUSE_EMBLEMS.macDubglais),
+    house('house-dubhan-gwynthor', 'Haus Dubhan', HOUSE_EMBLEMS.gwynthorDubhan)
   ],
   persons: [
     // Ursprung der Sept: ein namentlich nicht überlieferter Dubglais-Lord zeugte mit einer
@@ -191,8 +195,9 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
       familyRole: 'core',
       lineageRole: 'head',
       title: 'Krieger der Dubhan, vormals Grenzwächter Faelaorns',
-      portrait: 'https://i.imgur.com/Ce392i6.png',
-      notes: 'Überlebte den Krieg 1718-1721 und den Untergang Faelaorns; zog mit seinen Kindern Rogaire und Alpin nach Celtigerns Wacht, um Haus Draig seinen Eid anzubieten.'
+      portrait: HOUSE_DUBHAN_PORTRAITS['breccan-dubhan'],
+      notes: 'Überlebte den Krieg 1718-1721 und den Untergang Faelaorns; zog mit seinen Kindern Rogaire und Alpin nach Celtigerns Wacht, um Haus Draig seinen Eid anzubieten.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
     person('eithne-dubhan', 'Eithne Dubhan', 'female', '1691', '1735', '', {
       familyRole: 'married',
@@ -204,15 +209,17 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Älteste Tochter',
-      portrait: 'https://i.imgur.com/qB71xNE.png',
-      notes: 'Reiste mit Breccan und Alpin von Faelaorn nach Celtigerns Wacht.'
+      portrait: HOUSE_DUBHAN_PORTRAITS['rogaire-dubhan'],
+      notes: 'Reiste mit Breccan und Alpin von Faelaorn nach Celtigerns Wacht.',
+      extensions: { registryManagedFields: ['portrait'] }
     }),
     person('alpin-dubhan', 'Alpin Dubhan', 'male', '1726', '', DUBHAN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Sohn',
-      portrait: 'https://i.imgur.com/RiquhTC.png',
-      notes: 'Reiste mit Breccan und Rogaire von Faelaorn nach Celtigerns Wacht.'
+      portrait: HOUSE_DUBHAN_PORTRAITS['alpin-dubhan'],
+      notes: 'Reiste mit Breccan und Rogaire von Faelaorn nach Celtigerns Wacht.',
+      extensions: { registryManagedFields: ['portrait'] }
     })
   ],
   partnerships: [
@@ -314,6 +321,26 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
     ...createParentages(['rogaire-dubhan', 'alpin-dubhan'], BRECCAN_EITHNE_IDS, 'marriage-breccan-eithne')
   ],
   cadetBranches: [
+    createMigrationHouseBranch({
+      id: 'cadet-dubhan-gwynthor-breccan',
+      name: 'Haus Dubhan',
+      subtitle: 'Ausgewandertes Ritterherrenhaus in Gwynthor',
+      parentPersonId: 'breccan-dubhan',
+      houseId: 'house-dubhan-gwynthor',
+      targetFamilyId: 'haus-dubhan-gwynthor',
+      emblem: HOUSE_EMBLEMS.gwynthorDubhan,
+      crestFrame: 'silver',
+      notes: 'Breccan begründet mit seiner Familie die neue Gwynthor-Linie von Haus Dubhan. Der seitliche Auswanderungszweig ist keine Abstammung und verändert die Generationen der Sept nicht.',
+      extensions: {
+        registryManagedFields: [
+          'linkType',
+          'parentPartnershipId',
+          'parentPersonId',
+          'subtitle',
+          'notes'
+        ]
+      }
+    }),
     createMarriedAwayBranch({
       id: 'married-away-unbekannt-deirdre',
       name: 'Unbekanntes Haus',
@@ -353,5 +380,5 @@ export const HOUSE_DUBHAN_FAMILY = Object.freeze({
     limitGenerations: false,
     showSiblings: true
   },
-  extensions: { sourceRevision: 1 }
+  extensions: { sourceRevision: 3 }
 });

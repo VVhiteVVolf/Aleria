@@ -1,0 +1,351 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "Chroniken",
+    "tab": "Chroniken",
+    "desc": "Szenen, Ereignisse & Geschichten aus Aleria",
+    "entries": [],
+    "nodeId": "root:chroniken"
+  },
+  "entry": {
+    "id": "scene-module-1783534847186",
+    "title": "Cenric Scandyn",
+    "subtitle": "Der Ritter der fernen Küste",
+    "type": "Story",
+    "category": "Chroniken",
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "https://i.imgur.com/U6TGS6U.png",
+    "stamp": "Chroniken",
+    "icon": "✦",
+    "symbol": "https://i.imgur.com/roQc7AB.png",
+    "locked": false,
+    "appendCommentsPage": false,
+    "enablePageComments": false,
+    "sessionCast": [],
+    "sessionCastDetails": [],
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "0",
+        "image": "https://i.imgur.com/0uRopVw.png",
+        "imageWidth": 38,
+        "imagePosition": "center",
+        "pageTitle": "Cenric Scandyn",
+        "description": "<!--StartFragment-->Cenric Scandyn ist ein junger Særinc aus Aeldrunmar und Spross eines niederen Rittergeschlechts, das dem mächtigen Haus Tharn dient. Anders als viele seiner Landsleute, deren Ruhm auf Pferdezucht und schwerer Reiterei beruht, stammt Cenric von der großen Insel vor der Küste Aeldrunmars, wo das Haus Scandyn seit Generationen über eine Hafenburg wacht und eine eigene maritime Rittertradition pflegt.<!--EndFragment-->",
+        "quote": "„Ein Leitsatz oder persönliches Zitat.“",
+        "quoteBy": "— Name",
+        "imageSquare": true,
+        "biographyPage": true,
+        "stats": [
+          [
+            "Vollständiger Name",
+            "Cenric Scandyn"
+          ],
+          [
+            "Titel",
+            "Ritter zur See"
+          ],
+          [
+            "Haus",
+            "Haus Scandyn"
+          ],
+          [
+            "Geburt",
+            "1.717"
+          ],
+          [
+            "Alter",
+            "23"
+          ],
+          [
+            "Herkunft",
+            "Aeldrunmar"
+          ],
+          [
+            "Stand",
+            "Niederer Adel / Rittergeschlecht"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Tharn"
+          ],
+          [
+            "Status",
+            "Fahrender Ritter / Auf der Suche nach einem neuen Eid"
+          ],
+          [
+            "Klasse",
+            "Særinc (Ritter zur See)"
+          ]
+        ],
+        "biography": {
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Biografie",
+          "biographyText": "<!--StartFragment-->Cenric Scandyn ist ein junger Særinc aus Aeldrunmar und Spross eines niederen Rittergeschlechts, das dem mächtigen Haus Tharn dient. Anders als viele seiner Landsleute, deren Ruhm auf Pferdezucht und schwerer Reiterei beruht, stammt Cenric von der großen Insel vor der Küste Aeldrunmars, wo das Haus Scandyn seit Generationen über eine Hafenburg wacht und eine eigene maritime Rittertradition pflegt.<!--EndFragment-->",
+          "abilitiesTitle": "Persönlichkeit",
+          "abilities": [
+            {
+              "title": "Idealistisch",
+              "detail": "Glaubt aufrichtig an Ritterehre, Heldentaten und die alten Geschichten.",
+              "icon": "../IconOrdner/Traits Icon/Game_master.png"
+            },
+            {
+              "title": "Abenteuerlustig",
+              "detail": "Sucht fremde Länder, neue Menschen und Herausforderungen außerhalb seiner Heimat.",
+              "icon": "../IconOrdner/Traits Icon/Adventurer.png"
+            },
+            {
+              "title": "Seefahrer",
+              "detail": "Geprägt von Inseln, Häfen und der rauen Kultur der Küsten Aeldrunmars.",
+              "icon": "../IconOrdner/Traits Icon/Varangian.png"
+            },
+            {
+              "title": "Ehrgeizig",
+              "detail": "Will nicht nur als Sohn der Scandyn bekannt sein, sondern eigene Taten vollbringen.",
+              "icon": "../IconOrdner/Traits Icon/Ambitious.png"
+            },
+            {
+              "title": "Loyal",
+              "detail": "Hat großen Respekt vor Eiden und der Bindung zwischen Ritter und Lehnsherr.",
+              "icon": "../IconOrdner/Traits Icon/Trusting.png"
+            },
+            {
+              "title": "Naiv-romantisch",
+              "detail": "Sieht das Ritterleben manchmal noch stärker durch die Augen alter Sagen als durch die harte Wirklichkeit.",
+              "icon": "../IconOrdner/Traits Icon/Master_seducer.png"
+            }
+          ],
+          "extraSections": [],
+          "historyTitle": "Hintergrund",
+          "historyText": "Schon früh wurde Cenric nicht nur im Umgang mit Schwert, Lanze und Rüstung ausgebildet, sondern lernte auch das Leben auf See kennen. Die Scandyn gelten als eines jener wenigen aeldrunmarischen Häuser, deren Ritter ebenso sicher auf einem schwankenden Schiffsdeck kämpfen können wie auf einem Turnierplatz. Als Særinc verbindet Cenric die Ideale eines Ritters mit den Pflichten eines Seefahrers, Beschützers und Küstenwächters.<!--EndFragment--><br><br><!--StartFragment-->Seit seiner Kindheit faszinieren ihn die Geschichten aus Cenyr. Die Ritter der Tafelrunde, die alten Heldensagen und besonders die Erzählungen über Galahad Draig prägten sein Bild davon, was wahres Rittertum bedeuten sollte. Für ihn ist Cenyr nicht nur ein fremdes Reich, sondern der Ursprung vieler Ideale, denen er selbst nacheifert.<!--EndFragment--><br><br><!--StartFragment-->Gegen den üblichen Weg seines Hauses entschied sich Cenric, seine Heimat für einige Zeit zu verlassen und als fahrender Ritter durch die Lande zu ziehen. Seine Reise führte ihn schließlich nach Celtigerns Wacht, wo er darum bittet, dem Haus Draig dienen zu dürfen. Nicht aus Not, Verbannung oder Hoffnung auf Reichtum, sondern weil er glaubt, dass ein Ritter seinen Wert dort beweisen sollte, wo die größten Geschichten geschrieben werden.",
+          "worksTitle": "Sonstiges",
+          "works": [
+            "Cenric gehört zu den Rittern Aeldrunmars, die lieber den Klang von Wellen als das Donnern von Pferdehufen hören.",
+            "Führt ein kleines Tagebuch über seine Reisen, in dem er Burgen, Ritter und besondere Begegnungen festhält."
+          ],
+          "triviaTitle": "Trivia",
+          "trivia": [
+            "Hat eine Vorliebe für Gewitter und stürmische See, weil er findet, dass man den Charakter eines Menschen erst bei schlechtem Wetter erkennt.",
+            "Ist fasziniert von den großen Ritterpferden Cenyrs, hat aber deutlich mehr Vertrauen in Holzplanken unter seinen Füßen als in einen Sattel."
+          ],
+          "quotesTitle": "Zitate",
+          "quotes": [
+            "„Jeder große Name begann einst nur als ein Mann, der den Mut hatte, aufzubrechen.“"
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Personen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Eadric Scandyn",
+              "detail": "Vater",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Mairwen Scandyn",
+              "detail": "Mutter",
+              "image": "https://i.imgur.com/7yB9PR6.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Alden Scandyn",
+              "detail": "Älterer Bruder",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Neue Gruppe",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Scandyn",
+              "detail": "Mitglied",
+              "image": "https://i.imgur.com/roQc7AB.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "connection",
+              "name": "Haus Tharn",
+              "detail": "Lehensherren",
+              "image": "https://i.imgur.com/qsWVYlf.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Dokumente & Aufzeichnungen",
+          "documents": [
+            {
+              "icon": "",
+              "title": "",
+              "text": "Archivnotiz oder Dokument",
+              "link": ""
+            }
+          ],
+          "footer": "Disziplin ist unser Schild. Wissen ist unsere Waffe."
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "1",
+        "image": "https://i.imgur.com/79LMKSD.png",
+        "imageWidth": 38,
+        "imagePosition": "center",
+        "pageTitle": "Haus Scandyn",
+        "description": "<strong>Haus Scandyn</strong> ist ein niederes Rittergeschlecht aus Aeldrunmar und dient seit Generationen den mächtigen Earls des <strong>Hauses Tharn</strong>. Ihr Sitz liegt auf der großen Insel vor der Küste Aeldrunmars, wo sie eine alte Hafenburg verwalten und die umliegenden Küstensiedlungen beschützen.<!--EndFragment--><br><br><!--StartFragment-->Anders als viele Häuser Aeldrunmars, deren Traditionen auf Pferdezucht, Reiterei und Lanzenkampf beruhen, haben die Scandyn ihre Stärke auf dem Meer gefunden. Sie sind bekannt als Seefahrer, Fischer und Schiffsbauer und gehören zu jenen wenigen Ritterhäusern des Landes, die maritime Kriegsführung mit den Idealen des Rittertums verbinden.<!--EndFragment--><br><br><!--StartFragment-->Durch ihre Lage an der Küste stehen die Scandyn seit jeher im Konflikt mit Piraten, Plünderern und fremden Seeräubern. Ihre Ritter und Krieger wurden weniger auf Turnierfeldern, sondern auf stürmischen Decks, an Hafenmauern und bei der Verteidigung ihrer Küsten geschmiedet.<!--EndFragment--><br><br><!--StartFragment-->Obwohl sie nie zu den reichsten oder einflussreichsten Häusern Aeldrunmars zählten, genießen sie den Ruf eines zuverlässigen und widerstandsfähigen Geschlechts, dessen Treue gegenüber den Tharn niemals infrage stand.<!--EndFragment-->",
+        "quote": "<!--StartFragment-->„Der Wind ist unser Gefährte.“<!--EndFragment-->",
+        "quoteBy": "— Hauschronik",
+        "imageSquare": true,
+        "housePage": true,
+        "stats": [
+          [
+            "Vollständiger Name",
+            "Haus Scandyn"
+          ],
+          [
+            "Herkunft",
+            "Aeldrunmar"
+          ],
+          [
+            "Gegründet",
+            "Noch festlegen"
+          ],
+          [
+            "Sitz",
+            "Noch festlegen"
+          ],
+          [
+            "Oberhaupt",
+            "Eadric Scandyn"
+          ],
+          [
+            "Stand",
+            "Niederes Rittergeschlecht"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Tharn"
+          ],
+          [
+            "Kultur",
+            "Aeldrunmarisch"
+          ],
+          [
+            "Status",
+            "Aktiv"
+          ]
+        ],
+        "house": {
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über dieses Haus",
+          "biographyText": "<strong>Haus Scandyn</strong> ist ein niederes Rittergeschlecht aus Aeldrunmar und dient seit Generationen den mächtigen Earls des <strong>Hauses Tharn</strong>. Ihr Sitz liegt auf der großen Insel vor der Küste Aeldrunmars, wo sie eine alte Hafenburg verwalten und die umliegenden Küstensiedlungen beschützen.<!--EndFragment--><br><br><!--StartFragment-->Anders als viele Häuser Aeldrunmars, deren Traditionen auf Pferdezucht, Reiterei und Lanzenkampf beruhen, haben die Scandyn ihre Stärke auf dem Meer gefunden. Sie sind bekannt als Seefahrer, Fischer und Schiffsbauer und gehören zu jenen wenigen Ritterhäusern des Landes, die maritime Kriegsführung mit den Idealen des Rittertums verbinden.<!--EndFragment--><br><br><!--StartFragment-->Durch ihre Lage an der Küste stehen die Scandyn seit jeher im Konflikt mit Piraten, Plünderern und fremden Seeräubern. Ihre Ritter und Krieger wurden weniger auf Turnierfeldern, sondern auf stürmischen Decks, an Hafenmauern und bei der Verteidigung ihrer Küsten geschmiedet.<!--EndFragment--><br><br><!--StartFragment-->Obwohl sie nie zu den reichsten oder einflussreichsten Häusern Aeldrunmars zählten, genießen sie den Ruf eines zuverlässigen und widerstandsfähigen Geschlechts, dessen Treue gegenüber den Tharn niemals infrage stand.<!--EndFragment-->",
+          "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+          "abilities": [
+            {
+              "title": "Særinc-Tradition",
+              "detail": "Bekannt für Ritter zur See, die Seekampf und ritterliche Ausbildung verbinden.",
+              "icon": "../IconOrdner/Traits alternativ/Trait_track_bow.png"
+            },
+            {
+              "title": "Schiffsbau",
+              "detail": "Verfügen über erfahrene Handwerker und kleine Werften an ihrer Hafenburg.",
+              "icon": "../IconOrdner/ZunftsWappen/Schiffsmacher.png"
+            },
+            {
+              "title": "Küstenschutz",
+              "detail": "Erprobte Verteidiger gegen Piraten und Überfälle entlang der Inselküste.",
+              "icon": "../IconOrdner/Cktraits/Trait_architect.png"
+            },
+            {
+              "title": "Fischerei",
+              "detail": "Verwalten mehrere Fischerdörfer und leben stark von den Erträgen des Meeres.",
+              "icon": "../IconOrdner/Welt Pins/Neue/Fischerhütte-removebg-preview.png"
+            }
+          ],
+          "extraSections": [],
+          "historyTitle": "Geschichte des Hauses",
+          "historyText": "<!--StartFragment-->Während die großen Reiterhäuser Aeldrunmars ihren Ruhm auf offenem Feld suchten, blickten die Scandyn stets zum Meer. Über Generationen sicherten sie die Inselgebiete des Hauses Tharn und sorgten dafür, dass Handel, Fischerei und Küstensiedlungen bestehen konnten.<!--EndFragment--><br><br><!--StartFragment-->Die ständigen Konflikte mit Piraten machten aus den Scandyn ein ungewöhnliches Ritterhaus: weniger prunkvoll als viele ihrer Nachbarn, aber erfahren in echten Kämpfen und schnellen Gefechten. Ihre Særinc gelten als Männer, die sowohl ein Schwert als auch ein Ruder führen können.<!--EndFragment-->",
+          "worksTitle": "Bekannte Taten & Ereignisse",
+          "works": [
+            "Jahrhundertelanger Schutz der Inselgebiete des Hauses Tharn.",
+            "Entwicklung einer eigenen maritimen Ritterkultur."
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [
+            "Die Scandyn besitzen deutlich weniger Pferde als andere aeldrunmarische Ritterhäuser.",
+            "Viele ihrer Ritter lernen zuerst Segeln und Schwimmen, bevor sie eine Lanze führen."
+          ],
+          "quotesTitle": "Hausworte & Zitate",
+          "quotes": [
+            "„Der Wind ist unser Gefährte.“"
+          ],
+          "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Verbündete Häuser",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Tharn",
+              "detail": "Lehensherren",
+              "image": "https://i.imgur.com/qsWVYlf.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Adelsstand",
+          "documents": [
+            {
+              "icon": "",
+              "title": "",
+              "text": "Kleines, aber angesehenes Vasallenhaus der Tharn mit langer Tradition als Küstenritter.",
+              "link": ""
+            },
+            {
+              "icon": "",
+              "title": "",
+              "text": "Verwalter einer Hafenburg und mehrerer Küstendörfer auf der großen Insel Aeldrunmars.",
+              "link": ""
+            },
+            {
+              "icon": "",
+              "title": "",
+              "text": "Gehören zu jenen Häusern Aeldrunmars, deren Ritter ihre Ehre auf See statt im Sattel suchen.",
+              "link": ""
+            }
+          ],
+          "footer": "Blut, Ehre und das Wort des Hauses.",
+          "crestImage": "https://i.imgur.com/roQc7AB.png"
+        }
+      }
+    ],
+    "schemaVersion": 1,
+    "multipage": true
+  }
+}

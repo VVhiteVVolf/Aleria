@@ -10,6 +10,7 @@ import { HOUSE_GWYVERN_PORTRAITS } from './house-gwyvern-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   daran: 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Daran.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
@@ -102,7 +103,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     house('house-airgid', 'Haus Airgid'),
     house('house-taranvyr', 'Haus Taranvyr'),
     house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
-    house('house-arth', 'Haus Arth'),
+    house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-airt', 'Haus Airt'),
     house('house-daran', 'Haus Daran', HOUSE_EMBLEMS.daran),
     house('house-hebog', 'Haus Hebog'),
@@ -253,7 +254,7 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
     marriedAway('married-away-airgid-gwyneira', 'Haus Airgid', 'marriage-gwyneira-conall', 'house-airgid'),
     marriedAway('married-away-taranvyr-talaith', 'Haus Taranvyr', 'marriage-talaith-kenyon', 'house-taranvyr'),
     marriedAway('married-away-draig-heledd', 'Haus Draig', 'marriage-heledd-meurig', 'house-draig', HOUSE_EMBLEMS.draig),
-    marriedAway('married-away-arth-delyth', 'Haus Arth', 'marriage-delyth-afal', 'house-arth'),
+    marriedAway('married-away-arth-delyth', 'Haus Arth', 'marriage-delyth-afal', 'house-arth', HOUSE_EMBLEMS.arth),
     marriedAway('married-away-hebog-liliwen', 'Haus Hebog', 'marriage-liliwen-griffith', 'house-hebog'),
     marriedAway('married-away-saethwyr-morwenna', 'Haus Saethwyr', 'marriage-morwenna-huw', 'house-saethwyr', HOUSE_EMBLEMS.saethwyr),
     marriedAway('married-away-gwefrydd-alys', 'Haus Gwefrydd', 'marriage-alys-thomos', 'house-gwefrydd', HOUSE_EMBLEMS.gwefrydd),
@@ -271,6 +272,6 @@ export const HOUSE_GWYVERN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwyvern-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Arwydd und Daran verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Die in der Grafik angedeutete Verlobung Tegwens wurde auf Anweisung nicht übernommen. Kenyon Taranvyrs unbekanntes Endjahr wurde durch die ausführliche Taranvyr-Gegenakte präzisiert: Er lebt in der Gegenwart und dient als heutiger Waffenmeister des Barons. Maelgwyn Darans historischer Dienst als Page und Knappe Baron Seithveds ist als nichtbiologische Pflegebeziehung registriert und mit seiner Daran-Gegenakte synchronisiert.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 4
   }
 });

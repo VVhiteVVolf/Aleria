@@ -1,0 +1,261 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-07-28T04:18:49.070Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 2,
+    "section": {
+      "key": "Chroniken",
+      "tab": "Chroniken",
+      "desc": "Szenen, Ereignisse & Geschichten aus Aleria",
+      "path": [],
+      "nodeId": "root:chroniken"
+    },
+    "entry": {
+      "id": "scene-module-1783044632634",
+      "title": "Ruprecht von Hochreuth",
+      "subtitle": "Erzählerischer Almanach-Eintrag",
+      "type": "Story",
+      "category": "Biographie",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "https://i.imgur.com/22L8ahj.png",
+      "stamp": "Biographie",
+      "icon": "✦",
+      "symbol": "https://i.imgur.com/t0BlVyH.png",
+      "locked": false,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "0",
+          "image": "https://i.imgur.com/ooLZYzb.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "pageTitle": "Ruprecht von Hochreuth",
+          "description": "<b>Ruprecht von Hochreuth</b> entstammt dem altehrwürdigen Ritterhaus von Hochreuth aus Goldmund. Als Herr der Burg Hochreuth verwaltete er über Jahrzehnte die Ländereien seines Hauses und galt als besonnener Lehnsmann des Hauses Roden. Nach einem <b>Zwischenfall </b>am <b>Hofe Roden</b> entbrannte ein <b>Erbstreit</b>, in dessen Verlauf der Fürst den Anspruch des eigenen Vetters anerkannte und Ruprecht Burg, Titel und Erbe aberkannte. Obwohl viele seiner Gefolgsleute bereit gewesen wären, für ihn zu den Waffen zu greifen, beugte er sich dem Urteil seines Lehnsherrn und verließ seine Heimat ohne Aufstand. Gemeinsam mit seinen Söhnen <b>Rupert und Kasper </b>sowie den <i>wenigen </i>Männern, die ihm freiwillig die Treue hielten, zog er mehrere Jahre durch die Reiche. Nun bittet er das Haus Draig um Aufnahme als Lehensritter, damit sein Haus und sein Gefolge wieder Wurzeln schlagen können.",
+          "quote": "\"Ein Herr erkennt man nicht daran, was er besitzt, sondern daran, wer ihm folgt, wenn er nichts mehr besitzt.\"",
+          "quoteBy": "— Ruprecht von Hochreuth",
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Ruprecht von Hochreuth"
+            ],
+            [
+              "Titel",
+              "Ministerialer Herr (Ritterherr)"
+            ],
+            [
+              "Haus",
+              "von Hochreuth"
+            ],
+            [
+              "Geburt",
+              "1.674"
+            ],
+            [
+              "Alter",
+              "66 Jahre"
+            ],
+            [
+              "Herkunft",
+              "Goldmund"
+            ],
+            [
+              "Lehensherr",
+              "Haus Roden"
+            ],
+            [
+              "Status",
+              "Im Exil"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "<b>Ruprecht von Hochreuth</b> entstammt dem altehrwürdigen Ritterhaus von Hochreuth aus Goldmund. Als Herr der Burg Hochreuth verwaltete er über Jahrzehnte die Ländereien seines Hauses und galt als besonnener Lehnsmann des Hauses Roden. Nach einem <b>Zwischenfall </b>am <b>Hofe Roden</b> entbrannte ein <b>Erbstreit</b>, in dessen Verlauf der Fürst den Anspruch des eigenen Vetters anerkannte und Ruprecht Burg, Titel und Erbe aberkannte. Obwohl viele seiner Gefolgsleute bereit gewesen wären, für ihn zu den Waffen zu greifen, beugte er sich dem Urteil seines Lehnsherrn und verließ seine Heimat ohne Aufstand. Gemeinsam mit seinen Söhnen <b>Rupert und Kasper </b>sowie den <i>wenigen </i>Männern, die ihm freiwillig die Treue hielten, zog er mehrere Jahre durch die Reiche. Nun bittet er das Haus Draig um Aufnahme als Lehensritter, damit sein Haus und sein Gefolge wieder Wurzeln schlagen können.",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Lehnstreue",
+                "detail": "Stellt den Eid über persönliche Interessen und akzeptiert selbst schwere Urteile seines Lehnsherrn.",
+                "icon": "../IconOrdner/Traits Icon/Humble.png"
+              },
+              {
+                "title": "Pflichtbewusstsein",
+                "detail": "Übernimmt Verantwortung für Familie, Gefolge und Untergebene, auch in Zeiten größter Not.",
+                "icon": "../IconOrdner/Traits Icon/Diligent.png"
+              },
+              {
+                "title": "Besonnenheit",
+                "detail": "Handelt überlegt und bewahrt selbst in schwierigen Situationen Ruhe und Würde.",
+                "icon": "../IconOrdner/Traits Icon/Patient.png"
+              },
+              {
+                "title": "Verwaltungsgeschick",
+                "detail": "Erfahrener Burgherr mit jahrzehntelanger Praxis in der Führung eines Lehens und seiner Bewohner.",
+                "icon": "../IconOrdner/Traits Icon/Administrator.png"
+              },
+              {
+                "title": "Standhaftigkeit",
+                "detail": "Lässt sich weder durch Verlust noch durch jahrelange Entbehrungen von seinen Grundsätzen abbringen.",
+                "icon": "../IconOrdner/Traits Icon/Zealous.png"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": "Der Sturz des Hauses von Hochreuth gilt vielen Rittern Goldmunds als Beispiel dafür, wie politische Entscheidungen selbst alteingesessene Geschlechter innerhalb weniger Tage ihrer Heimat berauben können. Ruprecht selbst wurde durch seine würdevolle Akzeptanz des Urteils eher geachtet als bemitleidet.",
+            "worksTitle": "Sonstiges",
+            "works": [
+              "Verließ Goldmund ohne Aufstand, obwohl ihm zahlreiche Gefolgsleute die Treue hielten und bereit gewesen wären, für seinen Anspruch zu kämpfen.",
+              "Führt bis heute das alte Banner und Siegel des Hauses von Hochreuth mit sich, in der Hoffnung, eines Tages seinem Geschlecht wieder eine feste Heimat zu schenken."
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Seine verstorbene Gemahlin war fast zwanzig Jahre jünger als er und starb bei der Geburt seines jüngsten Sohnes Kasper.",
+              "NeuGilt als außergewöhnlich guter Schachspieler und fordert an langen Winterabenden gern seine Hofritter heraus.e Notiz",
+              "Spricht fließend die höfische Sprache Goldmunds, beherrscht aber ebenso den Dialekt einfacher Bauern.",
+              "Liebt die Falknerei und bildete früher selbst Jagdfalken aus.otiz",
+              "Seine Männer sprechen ihn bis heute mit „Herr von Hochreuth“ an, obwohl er weder Burg noch Lehen besitzt.",
+              "Trinkt am liebsten albischen Whiskey."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "\"Ein Herr erkennt man nicht daran, was er besitzt, sondern daran, wer ihm folgt, wenn er nichts mehr besitzt.\""
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Personen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Rupert von Hochreuth",
+                "detail": "Ersteborener Sohn",
+                "image": "https://i.imgur.com/NBcl5Am.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Kasper von Hochreuth",
+                "detail": "Zweitgeborener Sohn",
+                "image": "https://i.imgur.com/Np3Q37d.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Verbindungen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Haus \"von Hochreuth\"",
+                "detail": "Eigenes Haus",
+                "image": "https://i.imgur.com/t0BlVyH.png",
+                "imageFormat": "square"
+              }
+            ],
+            "documentsTitle": "Dokumente",
+            "documents": [
+              {
+                "icon": "",
+                "title": "",
+                "text": "Archivnotiz oder Dokument",
+                "link": ""
+              }
+            ],
+            "footer": "„Unsere Wurzeln tragen uns.“"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mr4ydk31-o61qr",
+          "image": "https://i.imgur.com/WQ2bPBY.png",
+          "imageWidth": 38,
+          "pageTitle": "Von Hochreuth",
+          "description": "<strong>Haus von Hochreuth</strong> ist ein niederes Rittergeschlecht aus dem Fürstentum Goldmund und steht seit Generationen im Vasallendienst des mächtigen Hauses <strong>Roden</strong>. Anders als viele kriegerische Geschlechter Goldmunds gründeten die Hochreuth ihren Einfluss weniger auf militärische Eroberungen, sondern auf ihre fruchtbaren Ländereien, ihre Weinberge und die geschickte Verwaltung ihrer Bauernhöfe.<br><!--StartFragment-->Der Sitz des Hauses war eine ländliche Burg im Großen Tal Goldmunds, umgeben von weiten Feldern, alten Weinreben und kleinen Dörfern. Über Generationen galten die Hochreuth als zuverlässige Weinherren und Verwalter, deren Wohlstand aus der Landwirtschaft, der Pferdezucht und den Erträgen ihrer Ländereien stammte. Ihr Wappen zeigt einen goldenen Falken mit ausgebreiteten Schwingen, der einen silbernen Weinrebenzweig in seinen Fängen hält.<!--EndFragment--><br><br><!--StartFragment-->Unter <strong>Ruprecht von Hochreuth</strong> galt das Haus als traditionsbewusstes, aber eigenständiges Rittergeschlecht. Ruprecht war kein ehrgeiziger Höfling, sondern ein klassischer Landherr, der seine Zeit lieber auf seinen Gütern als am Hof der Roden verbrachte. Gerade diese Distanz wurde ihm schließlich zum Verhängnis.<br><br><!--StartFragment-->Nach politischen Streitigkeiten am Hofe des Hauses Roden verlor Ruprecht zunehmend die Gunst seiner Lehnsherren. Die Roden sahen in seinem Vetter einen gefügigeren und politisch nützlicheren Vasallen und unterstützten dessen Anspruch auf die Herrschaft Hochreuth. Nach einem umstrittenen Entscheid wurde Ruprecht seines Sitzes enthoben und sein Vetter als neuer Herr der Burg eingesetzt.<!--EndFragment--><br><br><!--StartFragment-->Obwohl viele seiner Ritter, Knechte und Bauern weiterhin zu Ruprecht hielten, akzeptierte er das Urteil seines Lehnsherrn und verweigerte einen bewaffneten Konflikt innerhalb seines eigenen Hauses. Gemeinsam mit seinen Söhnen Rupert und Kasper sowie jenen Gefolgsleuten, die ihm freiwillig folgten, verließ er Goldmund.<!--EndFragment--><br><br><!--StartFragment-->Bis heute gilt das Schicksal der Hochreuth als Beispiel für die gefährliche Macht höfischer Politik: Ein Haus, das nicht durch Krieg oder Armut fiel, sondern durch den Verlust der Gunst seiner Herren.<!--EndFragment-->",
+          "quote": "",
+          "quoteBy": "",
+          "imageTall": true,
+          "stats": [
+            [
+              "Neuer Eintrag",
+              "Wert"
+            ]
+          ],
+          "commentSequence": [
+            {
+              "narrator": true,
+              "text": "„Mein Herr traf seine Entscheidung. Es steht einem Vasallen nicht zu, nur jene Urteile zu achten, die zu seinen Gunsten fallen. Ich verlor meine Burg, meine Felder und meinen Namen am Tor... doch nicht meine Ehre. Was ein Mann besitzt, kann genommen werden. Was ein Mann ist, entscheidet er selbst.“"
+            }
+          ],
+          "commentator": {
+            "name": "Ruprecht von Hochreuth",
+            "title": "Ritter, Burg Hochreuth",
+            "avatars": {
+              "default": "https://i.imgur.com/ooLZYzb.png"
+            }
+          },
+          "commentatorMood": "default",
+          "commentText": "<!--StartFragment-->„Mein Herr traf seine Entscheidung. Es steht einem Vasallen nicht zu, nur jene Urteile zu achten, die zu seinen Gunsten fallen. Ich verlor meine Burg, meine Felder und meinen Namen am Tor... doch nicht meine Ehre. Was ein Mann besitzt, kann genommen werden. Was ein Mann ist, entscheidet er selbst.“<br><!--EndFragment-->"
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true
+    }
+  },
+  "commentsExport": {
+    "type": "aleria-module-comments-export",
+    "version": 1,
+    "exportedAt": "2026-07-28T04:18:49.070Z",
+    "source": {
+      "moduleId": "scene-module-1783044632634",
+      "moduleTitle": "Ruprecht von Hochreuth",
+      "sectionKey": "Chroniken",
+      "sectionTab": "Chroniken"
+    },
+    "summary": {
+      "threadCount": 1,
+      "commentCount": 0,
+      "turnCount": 0
+    },
+    "threads": [
+      {
+        "threadId": "scene-module-1783044632634",
+        "kind": "entry-comments",
+        "pageIndex": null,
+        "pageTitle": "Modulkommentare",
+        "commentCount": 0,
+        "turn": null,
+        "comments": []
+      }
+    ],
+    "comments": [],
+    "commentTurns": []
+  },
+  "summary": {
+    "moduleId": "scene-module-1783044632634",
+    "moduleTitle": "Ruprecht von Hochreuth",
+    "pageCount": 2,
+    "threadCount": 1,
+    "commentCount": 0,
+    "turnCount": 0
+  }
+}

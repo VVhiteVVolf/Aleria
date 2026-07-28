@@ -1,3 +1,5 @@
+import { HOUSE_PYSGOD_LOCAL_PORTRAITS } from './house-pysgod-local-portraits.js';
+
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-pendrag';
 const LOCAL_PORTRAIT_IDS = Object.freeze([
   "agravaine-pendrag",
@@ -67,9 +69,11 @@ const LOCAL_PORTRAIT_IDS = Object.freeze([
   "ygraine-pendrag"
 ]);
 
-export const HOUSE_PENDRAG_PORTRAITS = Object.freeze(
-  Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
+export const HOUSE_PENDRAG_PORTRAITS = Object.freeze({
+  ...Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
     personId,
     `${PORTRAIT_ROOT}/${personId}.jpg`
-  ]))
-);
+  ])),
+  'genyth-pysgod': HOUSE_PYSGOD_LOCAL_PORTRAITS['genyth-pysgod'],
+  'gwenhwyfar-dreigiau': 'assets/images/portraits/haus-arth/gwenhwyfar-dreigiau.jpg'
+});

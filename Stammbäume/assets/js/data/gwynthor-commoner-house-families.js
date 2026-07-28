@@ -1,8 +1,12 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { HOUSE_AELMOR_FAMILY } from './house-aelmor-family.js';
+import { HOUSE_BRAGLAS_FAMILY } from './house-braglas-family.js';
 import { HOUSE_DRAENMELYN_FAMILY } from './house-draenmelyn-family.js';
+import { HOUSE_MAERLLYS_FAMILY } from './house-maerllys-family.js';
 import { HOUSE_PENDRWN_FAMILY } from './house-pendrwn-family.js';
 import { HOUSE_SWYLL_FAMILY } from './house-swyll-family.js';
+import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js';
 import { HOUSE_YSGRIF_FAMILY } from './house-ysgrif-family.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
@@ -19,9 +23,13 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
 ]);
 
 const DEVELOPED_FAMILIES = Object.freeze({
+  aelmor: HOUSE_AELMOR_FAMILY,
+  braglas: HOUSE_BRAGLAS_FAMILY,
   draenmelyn: HOUSE_DRAENMELYN_FAMILY,
+  maerllys: HOUSE_MAERLLYS_FAMILY,
   pendrwn: HOUSE_PENDRWN_FAMILY,
   swyll: HOUSE_SWYLL_FAMILY,
+  tonnarth: HOUSE_TONNARTH_FAMILY,
   ysgrif: HOUSE_YSGRIF_FAMILY
 });
 

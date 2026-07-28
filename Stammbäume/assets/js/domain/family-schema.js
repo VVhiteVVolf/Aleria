@@ -19,7 +19,14 @@ const LEGITIMACY_VALUES = new Set(['legitimate', 'illegitimate', 'legitimized', 
 const CERTAINTY_VALUES = new Set(['confirmed', 'probable', 'rumored', 'disputed', 'unknown']);
 const VISIBILITY_VALUES = new Set(['public', 'restricted', 'secret']);
 const PORTRAIT_PLACEHOLDERS = new Set(['auto', 'male', 'female', 'child', 'unknown']);
-const HOUSE_LINK_TYPES = new Set(['cadet-house', 'married-away', 'ward-away', 'line-extinct']);
+const HOUSE_LINK_TYPES = new Set([
+  'cadet-house',
+  'married-away',
+  'ward-away',
+  'line-extinct',
+  'migration-offshoot'
+]);
+const PERSON_ANCHORED_HOUSE_LINK_TYPES = new Set(['ward-away', 'migration-offshoot']);
 
 export class FamilyValidationError extends Error {
   constructor(diagnostics) {
@@ -495,7 +502,12 @@ export function validateFamily(input) {
         }));
       }
     }
-    if (branch.linkType !== 'ward-away' && hasPersonAnchor) {
+    if (branch.linkType === 'migration-offshoot' && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'MIGRATION_LINK_REQUIRES_PERSON', 'Ein Auswanderungszweig muss direkt an seiner auswandernden Gründerperson hängen.', {
+        branchId: branch.id
+      }));
+    }
+    if (!PERSON_ANCHORED_HOUSE_LINK_TYPES.has(branch.linkType) && hasPersonAnchor) {
       diagnostics.push(diagnostic('error', 'HOUSE_LINK_REQUIRES_PARTNERSHIP', 'Kadetten-, Wegverheiratet- und Linienendknoten müssen an ihrem maßgeblichen Paar hängen.', {
         branchId: branch.id
       }));

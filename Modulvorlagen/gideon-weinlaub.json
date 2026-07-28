@@ -1,0 +1,204 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "Chroniken",
+    "tab": "Chroniken",
+    "desc": "Szenen, Ereignisse & Geschichten aus Aleria",
+    "entries": [],
+    "nodeId": "root:chroniken"
+  },
+  "entry": {
+    "id": "scene-module-1783045825192",
+    "title": "Gideon Weinlaub",
+    "subtitle": "Der enterbte Erstgeborene",
+    "type": "Story",
+    "category": "Chroniken",
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "https://i.imgur.com/bHCTJuf.png",
+    "stamp": "Chroniken",
+    "icon": "✦",
+    "symbol": "https://i.imgur.com/i9utgzj.png",
+    "locked": false,
+    "appendCommentsPage": false,
+    "enablePageComments": false,
+    "sessionCast": [],
+    "sessionCastDetails": [],
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "p-mr4bgqav-g2feh",
+        "image": "https://i.imgur.com/IUnN3Sp.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "pageTitle": "Gideon Weinlaub",
+        "description": "<b>Gideon Weinlaub</b> ist ein junger <b>Ritter </b>aus <b>Weisenfluh </b>und der einstige Erstgeborene des <b>Hauses Weinlaub</b>, eines wohlhabenden niederen Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner <u><b>Stiefmutter</b></u>, <i>Zweifel </i>an Gideons Charakter und seiner Eignung als Erben zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon des Hauses verwies. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als <b><i>fahrender Ritter </i></b>durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, unter dessen Banner er sich seinen Namen durch eigene Taten zurückverdienen kann.",
+        "quote": "„Geduld trägt süße Frucht.“",
+        "quoteBy": "— Gideon Weinlaub",
+        "imageTall": true,
+        "biographyPage": true,
+        "stats": [
+          [
+            "Vollständiger Name",
+            "Gideon Weinlaub"
+          ],
+          [
+            "Titel",
+            "Ritter aus Weisenfluh"
+          ],
+          [
+            "Haus",
+            "Weinlaub"
+          ],
+          [
+            "Geburt",
+            "1711"
+          ],
+          [
+            "Alter",
+            "29"
+          ],
+          [
+            "Herkunft",
+            "Burg Rebenwacht nahe Ewigensee"
+          ],
+          [
+            "Lehensherr",
+            "Keiner"
+          ],
+          [
+            "Status",
+            "Im Exil"
+          ]
+        ],
+        "biography": {
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Biografie",
+          "biographyText": "<b>Gideon Weinlaub</b> ist ein junger <b>Ritter </b>aus <b>Weisenfluh </b>und der einstige Erstgeborene des <b>Hauses Weinlaub</b>, eines wohlhabenden niederen Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner <u><b>Stiefmutter</b></u>, <i>Zweifel </i>an Gideons Charakter und seiner Eignung als Erben zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon des Hauses verwies. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als <b><i>fahrender Ritter </i></b>durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, unter dessen Banner er sich seinen Namen durch eigene Taten zurückverdienen kann.",
+          "abilitiesTitle": "Persönlichkeit",
+          "abilities": [
+            {
+              "title": "Verbittert",
+              "detail": "Trägt den Schmerz seiner Enterbung tief in sich und fällt es schwer, seiner Familie zu vergeben.",
+              "icon": "../IconOrdner/Traits Icon/Envious.png"
+            },
+            {
+              "title": "Stolz",
+              "detail": "Lehnt Mitleid entschieden ab und möchte ausschließlich nach seinen Leistungen beurteilt werden.",
+              "icon": "../IconOrdner/Traits Icon/Proud.png"
+            },
+            {
+              "title": "Pflichtbewusst",
+              "detail": "Erfüllt übernommene Aufgaben gewissenhaft, selbst wenn sie ihm persönlich widerstreben.",
+              "icon": "../IconOrdner/Traits Icon/Diligent.png"
+            },
+            {
+              "title": "Misstrauisch",
+              "detail": "Vertraut Autoritäten und höfischen Versprechen erst, nachdem sie sich über längere Zeit bewährt haben.",
+              "icon": "../IconOrdner/Traits Icon/Cynical.png"
+            },
+            {
+              "title": "Willensstark",
+              "detail": "Jahre der Wanderschaft haben ihn gelehrt, Rückschläge zu ertragen und dennoch weiterzugehen.",
+              "icon": "../IconOrdner/Traits Icon/Temperate.png"
+            },
+            {
+              "title": "Jähzornig",
+              "detail": "Beleidigungen gegen seine Ehre oder seine verstorbene Mutter bringen ihn schneller aus der Fassung, als ihm lieb ist.",
+              "icon": "../IconOrdner/Traits Icon/Wroth.png"
+            }
+          ],
+          "extraSections": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Die Enterbung Gideons wurde in Weisenfluh vielfach als innere Angelegenheit seines Hauses betrachtet. Für ihn selbst bedeutete sie jedoch den Verlust seiner Familie, seiner Heimat und seiner Zukunft. Die Jahre als fahrender Ritter machten ihn zu einem erfahrenen Kämpfer, hinterließen jedoch einen Mann, der sich seinen Platz in der Welt erst wieder verdienen muss. Seine Geschichte prägt ihn bis heute und erklärt seinen Wunsch, nicht länger nach seiner Herkunft, sondern nach seinen Taten beurteilt zu werden.",
+          "worksTitle": "Sonstiges",
+          "works": [
+            "Trägt den Ring seiner verstorbenen Mutter stets an einer Halskette unter dem Wappenrock.",
+            "Hat seit seiner Verbannung keinen einzigen Tropfen Wein aus den Weinbergen seiner Familie angerührt."
+          ],
+          "triviaTitle": "Trivia",
+          "trivia": [
+            "Kann Rebsorten und Weinjahrgänge erstaunlich treffsicher unterscheiden.",
+            "Spielt hervorragend Laute, hat das Instrument seit seiner Verbannung jedoch kaum noch angerührt."
+          ],
+          "quotesTitle": "Zitate",
+          "quotes": [
+            "„Ein Name wird nicht vererbt. Er wird bewiesen.“"
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Personen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Josiah Weinlaub",
+              "detail": "Vater",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Elias Weinlaub",
+              "detail": "Halbbruder",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Miryam Weinlaub",
+              "detail": "Stiefmutter",
+              "image": "https://i.imgur.com/7yB9PR6.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Neue Gruppe",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Weinlaub",
+              "detail": "Eigenes Haus",
+              "image": "https://i.imgur.com/i9utgzj.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "...",
+          "documents": [],
+          "footer": "„Geduld trägt süße Frucht.“"
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "p-mr4yunr0-5mxae",
+        "image": "https://i.imgur.com/LBJ5cAr.png",
+        "imageWidth": 38,
+        "pageTitle": "II. — Neue Seite",
+        "description": "<strong>Haus Weinlaub</strong> ist ein niederes Rittergeschlecht aus Weisenfluh, dessen Burg und Anwesen nahe der Hauptstadt <strong>Ewigensee</strong> liegt. Seit Generationen dienen die Weinlaubs den Herren Weisenfluhs als Landesritter, Verwalter und Beamte. Anders als viele andere Ritterhäuser gründet ihr Ansehen weniger auf großen Schlachten oder berühmten Kriegern, sondern auf Wohlstand, Bildung und treuem Dienst in der Verwaltung des Landes.<br><br><!--StartFragment-->Die Ländereien des Hauses umfassen einige Weinberge, Obstgärten und fruchtbare Felder, aus denen einige gute und bekannte Weine stammen. Ihr Wappen, ein silberner Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund, verweist auf diese lange Tradition als Winzer und Bewahrer des Landes. Über die Jahre wurde der Name Weinlaub eher an den Höfen und in Schreibstuben bekannt als auf Schlachtfeldern.<!--EndFragment--><br><br><!--StartFragment-->Viele Angehörige des Hauses dienten als <b>Vögte</b>, <b>Herolde</b>, <b>Schreiber </b>und <b>Beamte </b>wohlhabender Adelshäuser. Die Weinlaubs gelten als gebildet, diplomatisch und zuverlässig, aber unter kämpferisch geprägten Ritterhäusern gelegentlich als zu höfisch und wenig kriegserfahren.<!--EndFragment--><br><br><!--StartFragment-->Gerade deshalb galt <strong>Gideon Weinlaub</strong> als ungewöhnlicher Erbe seines Hauses. Während viele seiner Verwandten die Verwaltung, den Handel oder den Hofdienst bevorzugten, strebte Gideon danach, den ritterlichen Ursprung seines Hauses wieder stärker zu verkörpern. Er übte den Umgang mit Schwert und Lanze, nahm Dienst als fahrender Ritter an und wollte beweisen, dass der Name Weinlaub nicht nur für gute Weine und kluge Verwalter stehen konnte.<!--EndFragment--><br><br><!--StartFragment-->Nach dem Tod seiner Mutter und der erneuten Heirat seines Vaters verschoben sich jedoch die Machtverhältnisse innerhalb des Hauses. Durch den Einfluss seiner <b>Stiefmutter </b>verlor Gideon nach und nach das Vertrauen seines Vaters, bis dieser schließlich seinen jüngeren Halbbruder zum Erben bestimmte. Gideon verließ Ewigensee ohne Besitz und ohne Anspruch auf das Erbe des Hauses Weinlaub.<!--EndFragment--><br><br><!--StartFragment-->Während das Haus weiterhin seine Weinberge verwaltet und seine Stellung in Weisenfluh bewahrt, sucht Gideon fern seiner Heimat einen neuen Herrn, unter dessen Banner er nicht als Sohn der Weinlaubs, sondern durch seine eigenen Taten beurteilt wird.<!--EndFragment-->",
+        "quote": "",
+        "quoteBy": "",
+        "stats": [
+          [
+            "Neuer Eintrag",
+            "Wert"
+          ]
+        ]
+      }
+    ],
+    "schemaVersion": 1,
+    "multipage": true
+  }
+}

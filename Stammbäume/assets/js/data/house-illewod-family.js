@@ -15,7 +15,9 @@ const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
-  gallchobhair: 'assets/images/houses/clan-gallchobhair.svg'
+  gallchobhair: 'assets/images/houses/clan-gallchobhair.svg',
+  pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
+  wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
 const ILLEWOD_HOUSE_ID = 'house-illewod';
@@ -139,13 +141,13 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     house('house-neidr', 'Haus Neidr'),
     house('house-blach', 'Haus Blach'),
     house('house-gallchobhair', 'Clan Gallchobhair', HOUSE_EMBLEMS.gallchobhair),
-    house('house-wylan', 'Haus Wylan'),
+    house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-pendrag', 'Haus Pendrag'),
     house('house-llwynog', 'Haus Llwynog'),
     house('house-eoghhainn', 'Haus Eóghhainn'),
     house('house-teyrngarch', 'Haus Teyrngarch'),
-    house('house-pysgod', 'Haus Pysgod'),
+    house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-penderyn', 'Haus Penderyn'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-dieniddiwr', 'Haus Dieniddiwr'),
@@ -351,7 +353,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     marriedAway('married-away-llwynog-ehangwen', 'Haus Llwynog', 'marriage-ehangwen-rhondda', 'house-llwynog'),
     marriedAway('married-away-blach-carwyn', 'Haus Blach', 'marriage-carwyn-dafydd', 'house-blach'),
     marriedAway('married-away-aderyn-mifawi', 'Haus Aderyn', 'marriage-mifawi-catel', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
-    marriedAway('married-away-pysgod-mairwen', 'Haus Pysgod', 'marriage-mairwen-cynfor', 'house-pysgod'),
+    marriedAway('married-away-pysgod-mairwen', 'Haus Pysgod', 'marriage-mairwen-cynfor', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
     marriedAway('married-away-llwynog-kerris', 'Haus Llwynog', 'marriage-kerris-ieuan', 'house-llwynog'),
     marriedAway('married-away-gallchobhair-anali', 'Haus Gallchobhair', 'marriage-anali-tynan', 'house-gallchobhair')
   ],

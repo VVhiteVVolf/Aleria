@@ -5,6 +5,9 @@ import { HOUSE_ILLEWOD_FAMILY } from './house-illewod-family.js';
 import { HOUSE_NEIDR_FAMILY } from './house-neidr-family.js';
 import { HOUSE_GRAWN_FAMILY } from './house-grawn-family.js';
 import { HOUSE_ADERYN_FAMILY } from './house-aderyn-family.js';
+import { HOUSE_PYSGOD_FAMILY } from './house-pysgod-family.js';
+import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
+import { HOUSE_WYLAN_FAMILY } from './house-wylan-family.js';
 
 // Zentrales Register für die 8 weiteren großen Häuser Cenyrs
 // (Celtigerns Wacht/Haus Draig ist separat ausgearbeitet). Noch nicht ausgearbeitete
@@ -21,11 +24,14 @@ import { HOUSE_ADERYN_FAMILY } from './house-aderyn-family.js';
 // Bereits ausgearbeitete Häuser ersetzen ihre vorbereitete Leerakte — analog zu
 // ELABORATED_RHONWENS_TRAENEN_FAMILIES in rhonwens-traenen-house-families.js.
 const ELABORATED_CENYR_COUNTY_FAMILIES = Object.freeze({
+  wylan: HOUSE_WYLAN_FAMILY,
   pendrag: HOUSE_PENDRAG_FAMILY,
   illewod: HOUSE_ILLEWOD_FAMILY,
   neidr: HOUSE_NEIDR_FAMILY,
   grawn: HOUSE_GRAWN_FAMILY,
-  aderyn: HOUSE_ADERYN_FAMILY
+  aderyn: HOUSE_ADERYN_FAMILY,
+  pysgod: HOUSE_PYSGOD_FAMILY,
+  arth: HOUSE_ARTH_FAMILY
 });
 
 const CENYR_COUNTY_HOUSE_DEFINITIONS = Object.freeze([

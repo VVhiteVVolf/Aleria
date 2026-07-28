@@ -5,6 +5,7 @@ import { HOUSE_GWYVERN_PORTRAITS } from './house-gwyvern-portraits.js';
 import { HOUSE_ILLEWOD_PORTRAITS } from './house-illewod-portraits.js';
 import { HOUSE_NEIDR_PORTRAITS } from './house-neidr-portraits.js';
 import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
+import { HOUSE_PYSGOD_LOCAL_PORTRAITS } from './house-pysgod-local-portraits.js';
 
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-aderyn';
 
@@ -13,7 +14,10 @@ const PORTRAIT_ROOT = 'assets/images/portraits/haus-aderyn';
 // wurde und ihre ID hier eingetragen ist. So entstehen bei ausstehenden
 // Downloads keine kaputten Bild-URLs; die Kartenansicht nutzt bis dahin ihre
 // geschlechtsspezifische Standardfassung.
-const CHECKED_IN_LOCAL_PORTRAIT_IDS = Object.freeze([]);
+const CHECKED_IN_LOCAL_PORTRAIT_IDS = Object.freeze([
+  'gareth-aderyn',
+  'catrin-blodyn'
+]);
 
 const SHARED_PORTRAITS = Object.freeze({
   'rhiannon-aderyn': HOUSE_DRAIG_PORTRAITS['rhiannon-aderyn'],
@@ -33,7 +37,10 @@ const SHARED_PORTRAITS = Object.freeze({
   'gwendolyn-aderyn': HOUSE_DRAIG_PORTRAITS['gwendolyn-aderyn'],
   'galahad-draig': HOUSE_DRAIG_PORTRAITS['galahad-draig'],
   'jeannae-aderyn': HOUSE_GWYVERN_PORTRAITS['jeannae-aderyn'],
-  'mervyn-gwyvern': HOUSE_GWYVERN_PORTRAITS['mervyn-gwyvern']
+  'mervyn-gwyvern': HOUSE_GWYVERN_PORTRAITS['mervyn-gwyvern'],
+  'hefin-pysgod': HOUSE_PYSGOD_LOCAL_PORTRAITS['hefin-pysgod'],
+  'talfryn-aderyn': 'assets/images/portraits/haus-wylan/talfryn-aderyn.jpg',
+  'gwalchgwyn-arth': 'assets/images/portraits/haus-arth/gwalchgwyn-arth.jpg'
 });
 
 const isUsablePortraitPath = value => typeof value === 'string' && value.trim() !== '';

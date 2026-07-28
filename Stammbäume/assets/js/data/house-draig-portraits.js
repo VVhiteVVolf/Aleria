@@ -2,6 +2,7 @@ import { HOUSE_ARWYDD_PORTRAITS } from './house-arwydd-portraits.js';
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
+import { HOUSE_PYSGOD_LOCAL_PORTRAITS } from './house-pysgod-local-portraits.js';
 
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-draig';
 const LOCAL_PORTRAIT_IDS = Object.freeze([
@@ -143,5 +144,10 @@ export const HOUSE_DRAIG_PORTRAITS = Object.freeze({
   'egon-gafyr': HOUSE_GAFYR_PORTRAITS['egon-gafyr'],
   'tecwyn-draig': HOUSE_ARWYDD_PORTRAITS['tecwyn-draig'],
   'ianto-arwydd': HOUSE_ARWYDD_PORTRAITS['ianto-arwydd'],
-  'rhydderch-wyrm': HOUSE_WYRM_PORTRAITS['rhydderch-wyrm']
+  'rhydderch-wyrm': HOUSE_WYRM_PORTRAITS['rhydderch-wyrm'],
+  'gingalain-pysgod': HOUSE_PYSGOD_LOCAL_PORTRAITS['gingalain-pysgod'],
+  'morgaine-dreigiau': HOUSE_PYSGOD_LOCAL_PORTRAITS['morgaine-dreigiau'],
+  'gwenhwyfar-dreigiau': 'assets/images/portraits/haus-arth/gwenhwyfar-dreigiau.jpg',
+  'mordred-blodyn': 'assets/images/portraits/haus-blodyn/mordred-blodyn.jpg',
+  'kerrylin-dreigiau': 'assets/images/portraits/haus-blodyn/kerrylin-dreigiau.jpg'
 });

@@ -11,6 +11,7 @@ import { HOUSE_NEIDR_PORTRAITS } from './house-neidr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
@@ -146,7 +147,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     house(NEIDR_HOUSE_ID, 'Haus Neidr', HOUSE_EMBLEMS.neidr),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-ailella', 'Haus Ailella'),
-    house('house-arth', 'Haus Arth'),
+    house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-canwyll', 'Haus Canwyll'),
     house('house-crefyddol', 'Haus Crefyddol'),
     house('house-draenog', 'Haus Draenog'),
@@ -529,6 +530,6 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Neidr-Tabelle und der eingebetteten Stammbaumgrafik. Die fünf Zeitsprünge sind als serielle absolute Generationentrenner modelliert. Der in der Oberhauptgalerie ab 1720 als „Gwyneed“ beschriftete, aber mit Yvains Portrait dargestellte Graf wird aufgrund der Erbfolge als Yvain geführt. Prynhawn und Iowaneth sind nur grafisch und als unsicher belegtes Paar überliefert; Mari erscheint nur in der Tabelle. Die unbeschriftete Hausfortsetzung unter Jinelle und Sieffre wird nach der ergänzenden Vorgabe als Wegverheiratung in ein unbekanntes Haus geführt. Bors und Gwennan begründen Haus Saith, Morholt und Caitrin Haus Tiwna sowie Roderic und Llynn Haus Pyrth. Die Kinderzeilen ordnen Odyar Ariana und Ninian Crystin zu, obwohl die Partnerzeile beide Spalten vertauscht. Genauer belegte Todesjahre für Gaenor, Llywellyn und Elenydd sowie die wechselseitigen Pflege-, Verlobungs- und Draig-Verbindungen wurden aus den bereits vorhandenen verbundenen Hausakten übernommen.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

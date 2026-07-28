@@ -12,13 +12,23 @@ import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
+import { HOUSE_DUBHAN_GWYNTHOR_FAMILY } from './house-dubhan-gwynthor-family.js';
 import { HOUSE_WOLFSHORN_FAMILY } from './house-wolfshorn-family.js';
+import { HOUSE_BLEIDDORN_FAMILY } from './house-bleiddorn-family.js';
+import { HOUSE_HOCHREUTH_FAMILY } from './house-hochreuth-family.js';
+import { WEISENFLUH_HOUSE_FAMILIES } from './weisenfluh-house-families.js';
+import { VENALYS_HOUSE_FAMILIES } from './venalys-house-families.js';
+import { MORGORN_HOUSE_FAMILIES } from './morgorn-house-families.js';
+import { AELDRUNMAR_HOUSE_FAMILIES } from './aeldrunmar-house-families.js';
+import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
+import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
 import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
+import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
@@ -114,11 +124,65 @@ export const FAMILY_REGISTRY = Object.freeze([
     type: 'lower-nobility'
   }),
   familyRecord({
+    id: 'haus-dubhan-gwynthor',
+    title: 'Haus Dubhan',
+    family: HOUSE_DUBHAN_GWYNTHOR_FAMILY,
+    type: 'lower-nobility'
+  }),
+  familyRecord({
     id: 'haus-wolfshorn',
     title: 'Clan Wolfshorn',
     family: HOUSE_WOLFSHORN_FAMILY,
     type: 'lower-nobility'
   }),
+  familyRecord({
+    id: 'haus-bleiddorn',
+    title: 'Haus Bleiddorn',
+    family: HOUSE_BLEIDDORN_FAMILY,
+    type: 'lower-nobility'
+  }),
+  familyRecord({
+    id: 'haus-von-hochreuth',
+    title: 'Haus von Hochreuth',
+    family: HOUSE_HOCHREUTH_FAMILY,
+    type: 'lower-nobility'
+  }),
+  ...WEISENFLUH_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'lower-nobility'
+  })),
+  ...VENALYS_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'magnarian'
+  })),
+  ...MORGORN_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'lower-nobility'
+  })),
+  ...AELDRUNMAR_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'lower-nobility'
+  })),
+  ...TALYNDOR_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'lower-nobility'
+  })),
+  ...CEITHEACH_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'commoner'
+  })),
   familyRecord({
     id: 'haus-gwyllach',
     title: 'Haus Gwyllach',
@@ -154,6 +218,11 @@ export const FAMILY_REGISTRY = Object.freeze([
     type: family.document.houseProfile.rankId === 'commoner' ? 'commoner' : 'lower-nobility'
   })),
   ...CENYR_COUNTY_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family
+  })),
+  ...BLODYN_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,
     family

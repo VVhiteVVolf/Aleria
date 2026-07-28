@@ -136,6 +136,15 @@ export function createWardAwayBranch(options) {
   });
 }
 
+export function createMigrationHouseBranch(options) {
+  return createHouseBranch({
+    ...options,
+    parentPartnershipId: '',
+    linkType: 'migration-offshoot',
+    subtitle: options.subtitle || 'Ausgewanderte Hauslinie'
+  });
+}
+
 export function createExtinctBranch(options) {
   return createHouseBranch({
     targetFamilyId: '',

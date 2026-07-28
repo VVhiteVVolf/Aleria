@@ -307,7 +307,10 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('slevin-gaeth', 'Slevin Gaeth', 'male', '1672', '', 'house-gaeth', { title: 'Hoffalkner von Penbryn' }),
 
     // Generationen bis zum Bezugsjahr 1740.
-    person('gareth-aderyn', 'Gareth Aderyn', 'male', '1694', '', ADERYN_HOUSE_ID, { title: 'Graf des Tals der Milane seit 1720' }),
+    person('gareth-aderyn', 'Gareth Aderyn', 'male', '1694', '', ADERYN_HOUSE_ID, {
+      title: 'Graf des Tals der Milane seit 1720',
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('gwendolyn-aderyn', 'Gwendolyn Aderyn', 'female', '1695', '', ADERYN_HOUSE_ID, { title: 'Gräfin von Celtigerns Wacht' }),
     person('gwilym-aderyn', 'Gwilym Aderyn', 'male', '1699', ''),
     person('bledyn-aderyn', 'Bledyn Aderyn', 'male', '1695', ''),
@@ -322,7 +325,9 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('jeannae-aderyn', 'Jeannae Aderyn', 'female', '1702', '', ADERYN_HOUSE_ID, {
       notes: 'Die Kinderliste schreibt Jeanae; die bereits kanonische Haus-Gwyvern-Akte verwendet Jeannae.'
     }),
-    person('catrin-blodyn', 'Catrin Blodyn', 'female', '1694', '', 'house-blodyn'),
+    person('catrin-blodyn', 'Catrin Blodyn', 'female', '1694', '', 'house-blodyn', {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('galahad-draig', 'Galahad Draig', 'male', '1695', '', 'house-draig'),
     person('gwenhwyfar-mwyalchen', 'Gwenhwyfar Mwyalchen', 'female', '1700', '', 'house-mwyalchen'),
     person('agna-baerenfell', 'Agna Bärenfell', 'female', '1701', '', 'house-baerenfell'),
@@ -523,6 +528,6 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Die Übersicht sagt „Kadetten: Keine“; eine andere Quellpassage zählt Gaeth, Hebog, Mwyalchen, Tylluan, Eryr und Ilyuncu ohne Gründer oder genealogischen Anker auf. Deshalb wurden keine Kadettenhausknoten erfunden. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Die 73 individuellen, noch extern abzurufenden Portraitquellen sind im Downloadkatalog erfasst; bis die lokalen Dateien vorliegen, verwendet die Oberfläche bewusst ihre Portraitplatzhalter statt defekter URLs.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 3
   }
 });

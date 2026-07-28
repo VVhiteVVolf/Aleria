@@ -87,5 +87,6 @@ export const HOUSE_GRAWN_PORTRAITS = Object.freeze({
   'morwen-illysywen': HOUSE_ILLYSYWEN_PORTRAITS['morwen-illysywen'],
   'maredudd-draig': HOUSE_DRAIG_PORTRAITS['maredudd-draig'],
   'neithon-1718-draig': HOUSE_DRAIG_PORTRAITS['neithon-1718-draig'],
-  'alaweyn-grawn': HOUSE_DRAIG_PORTRAITS['alaweyn-grawn']
+  'alaweyn-grawn': HOUSE_DRAIG_PORTRAITS['alaweyn-grawn'],
+  'iolyn-wylan': 'assets/images/portraits/haus-wylan/iolyn-wylan.jpg'
 });

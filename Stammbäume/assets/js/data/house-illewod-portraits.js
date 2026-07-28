@@ -60,9 +60,10 @@ const LOCAL_PORTRAIT_IDS = Object.freeze([
   "zirilla-illewod"
 ]);
 
-export const HOUSE_ILLEWOD_PORTRAITS = Object.freeze(
-  Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
+export const HOUSE_ILLEWOD_PORTRAITS = Object.freeze({
+  ...Object.fromEntries(LOCAL_PORTRAIT_IDS.map(personId => [
     personId,
     `${PORTRAIT_ROOT}/${personId}.jpg`
-  ]))
-);
+  ])),
+  'rhun-wylan': 'assets/images/portraits/haus-wylan/rhun-wylan.jpg'
+});

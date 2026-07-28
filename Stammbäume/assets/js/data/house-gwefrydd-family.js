@@ -17,6 +17,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
@@ -108,7 +109,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-laoch', 'Haus Laoch'),
-    house('house-wylan', 'Haus Wylan'),
+    house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-draenog', 'Haus Draenog'),
     house('house-gwarchod', 'Haus Gwarchod'),
     house('house-gortach', 'Haus Gortach'),

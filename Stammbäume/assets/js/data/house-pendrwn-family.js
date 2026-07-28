@@ -22,7 +22,7 @@ const BASE_FAMILY = createFounderTimeJumpPlaceholderHouseFamily({
   title: 'Haus Pendrwn',
   emblem: PENDRWN_EMBLEM,
   houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES.pendrwn,
-  description: 'Ein kleines bürgerliches Haus aus Gwynthor, dessen konkrete Linie nur bis zu Tudwal Pendrwns Großvater zurückreicht.',
+  description: 'Ein kleines bürgerliches Haus aus Gwynthor, dessen konkrete Linie nur bis zu Emyr Pendrwns Großvater zurückreicht.',
   toYear: '1661',
   timeJumpLabel: 'Die belegte Pendrwn-Linie setzt mit Idwals Generation um 1661 wieder ein',
   pendingDescendantReview: false
@@ -81,7 +81,7 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
   persons: Object.freeze([
     ...BASE_FAMILY.persons,
 
-    // Höchste konkrete Generation: Tudwals Großeltern.
+    // Höchste konkrete Generation: Emyrs Großeltern.
     person('idwal-pendrwn', 'Idwal Pendrwn', 'male', '1661', PENDRWN_HOUSE_ID, {
       lineageRole: 'head',
       title: 'Ältestes überliefertes Oberhaupt des Hauses Pendrwn'
@@ -97,17 +97,17 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
     sharedPerson(PENDRWN_DRAENMELYN_MARRIAGE.second, 'married'),
 
     // Jüngste Generation: alle ausdrücklich ohne Ehe oder Verlobung.
-    person('tudwal-pendrwn', 'Tudwal Pendrwn', 'male', '1717', PENDRWN_HOUSE_ID, {
+    person('emyr-pendrwn', 'Emyr Pendrwn', 'male', '1717', PENDRWN_HOUSE_ID, {
       title: 'Dreiundzwanzigjähriger Angehöriger des Hauses Pendrwn',
       tags: ['23 Jahre'],
       notes: 'Unverheiratet und ohne Verlobung; zentrale Person der jüngsten Pendrwn-Generation.'
     }),
     person('enid-pendrwn', 'Enid Pendrwn', 'female', '1720', PENDRWN_HOUSE_ID, {
-      title: 'Jüngere Schwester Tudwals',
+      title: 'Jüngere Schwester Emyrs',
       notes: 'Unverheiratet und ohne Verlobung.'
     }),
     person('cadell-pendrwn', 'Cadell Pendrwn', 'male', '1723', PENDRWN_HOUSE_ID, {
-      title: 'Jüngerer Bruder Tudwals',
+      title: 'Jüngerer Bruder Emyrs',
       notes: 'Unverheiratet und ohne Verlobung.'
     })
   ]),
@@ -130,7 +130,7 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
       'marriage-idwal-bronwen-pendrwn'
     ),
     ...createParentages(
-      ['tudwal-pendrwn', 'enid-pendrwn', 'cadell-pendrwn'],
+      ['emyr-pendrwn', 'enid-pendrwn', 'cadell-pendrwn'],
       PENDRWN_SWYLL_MARRIAGE.participantIds,
       PENDRWN_SWYLL_MARRIAGE.id
     )
@@ -153,7 +153,7 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
       childIds: Object.freeze(['idwal-pendrwn']),
       toYear: '1661',
       label: 'Die belegte Pendrwn-Linie setzt mit Idwals Generation um 1661 wieder ein',
-      notes: 'Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Pendrwn-Wappen; die konkrete Linie beginnt erst mit Tudwals Großvater Idwal.',
+      notes: 'Der Zeitsprung bleibt der alleinige absolute Generationentrenner unter dem Pendrwn-Wappen; die konkrete Linie beginnt erst mit Emyrs Großvater Idwal.',
       extensions: Object.freeze({
         ...BASE_FAMILY.timeJumps[0].extensions,
         registryManagedFields: Object.freeze([
@@ -181,8 +181,12 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
-    sourceNote: 'Die konkrete Pendrwn-Linie reicht nur bis zu Tudwals Großvater Idwal. Tudwal ist im Jahr 1740 dreiundzwanzig Jahre alt; er und seine beiden jüngeren Geschwister bleiben unverheiratet und ohne Verlobung. Seine Mutter Eirwen Swyll und seine Tante Gweniths Ehe mit Caradog Draenmelyn werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Portrait wurde lokal gesichert.'
+    registryTombstones: Object.freeze({
+      persons: Object.freeze(['tudwal-pendrwn']),
+      parentages: Object.freeze(['parentage-tudwal-pendrwn'])
+    }),
+    sourceNote: 'Die konkrete Pendrwn-Linie reicht nur bis zu Emyrs Großvater Idwal. Emyr ist im Jahr 1740 dreiundzwanzig Jahre alt; er und seine beiden jüngeren Geschwister bleiben unverheiratet und ohne Verlobung. Seine Mutter Eirwen Swyll und seine Tante Gweniths Ehe mit Caradog Draenmelyn werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Portrait wurde lokal gesichert.'
   })
 });

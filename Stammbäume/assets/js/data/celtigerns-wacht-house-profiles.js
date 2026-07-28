@@ -64,6 +64,17 @@ export const CELTIGERNS_WACHT_HOUSE_PROFILES = Object.freeze({
     liegeHouseId: 'haus-draig',
     liegeHouseName: 'Haus Draig'
   }),
+  // Aus Clan Wolfshorn hervorgegangenes Ritterherrenhaus. Der neue Sitz liegt in
+  // Gwynthor; Haus Draig ist nach Hrolfs Auswanderung der neue Lehnsherr.
+  bleiddorn: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'], {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  }),
+  // Neu begründete Gwynthor-Linie der aus Faelaorn ausgewanderten Sept Dubhan.
+  dubhanGwynthor: profile('knight', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'], {
+    liegeHouseId: 'haus-draig',
+    liegeHouseName: 'Haus Draig'
+  }),
   // Bürgerliches Haus, kein Rittergeschlecht: sitzt im generischen Gwynthor-Pfad, aber
   // außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS (die ist strikt an rankId 'knight' gebunden).
   gwyllach: profile('commoner', ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'], {

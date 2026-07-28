@@ -9,6 +9,7 @@ import {
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
@@ -105,7 +106,7 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     house('house-neidr', 'Haus Neidr'),
     house('house-hwyaden', 'Haus Hwyaden'),
     house('house-illyswen', 'Haus Illyswen'),
-    house('house-arth', 'Haus Arth'),
+    house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-arwydd', 'Haus Arwydd', HOUSE_EMBLEMS.arwydd),
     house('house-illewod', 'Haus Illewod'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
@@ -315,6 +316,6 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Saethwyr-Tabelle und Stammbaumgrafik. Bereits in Arwydd, Gafyr oder Wyrm geführte Personen verwenden dieselben Weltpersonen-IDs und lokalen Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

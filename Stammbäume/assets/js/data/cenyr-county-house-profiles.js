@@ -37,7 +37,8 @@ function countyProfile(rankId, county, seat, options = {}) {
 
 // Grafenhäuser der acht übrigen großen Grafschaften Cenyrs (Celtigerns Wacht/Haus Draig
 // ist bereits in celtigerns-wacht-house-profiles.js ausgearbeitet). Blodyn O'Llyndor
-// bleibt bewusst ausgenommen: laut Vorlage ohne eigene Grafschaft.
+// bleibt hier bewusst ausgenommen: Königshaus und Aberdail-Nebenzweig besitzen ihre
+// eigenen, vierstufigen Profile in blodyn-house-profiles.js.
 //
 // WICHTIG: Für JEDES dieser acht Häuser existieren bereits verstreute Personen-Stubs in
 // anderen Hausakten (Ehepartner, die dort hineingeheiratet haben) — vor dem Anlegen der
@@ -50,7 +51,9 @@ function countyProfile(rankId, county, seat, options = {}) {
 //
 // Bereits bekannte Cross-Tree-Stubs je Haus (Fundstellen, Stand Juli 2026):
 //   wylan:   house-draig (hewet-wylan 1670-1720), house-gwefrydd (wrnach-wylan 1577-1653),
-//            house-wyrm (neala-wylan, Ehefrau)
+//            house-illewod (rhun-/selsye-wylan), house-neidr (rheidwn-/morgana-wylan),
+//            house-pendrag (vorath-wylan), house-pysgod (bedivere-/braith-wylan),
+//            house-aderyn (sianwen-wylan), house-grawn (iolyn-wylan), house-wyrm (neala-wylan)
 //   illewod: house-draig (kyvwlch-illewod, selwyn-illewod 1643-1707), house-saethwyr (sayres-illewod 1692-)
 //   pendrag: house-draig (vortigern-pendrag = König Vortigern I., Gründer; tanwen-/uther-/
 //            arianwyn-/trystan-/parzifal-/griflet-/gwyneira-/cerridwyn-/arianwen-/gawain-/
@@ -61,7 +64,10 @@ function countyProfile(rankId, county, seat, options = {}) {
 //            house-illewod (gwyron-neidr, griff-neidr 1625-1699), house-pendrag
 //            (howell-neidr 1623-1701, lancelot-neidr 1730- [Mündel]),
 //            house-saethwyr (llywellyn-neidr 1650-1734)
-//   pysgod:  house-draig (gingalain-pysgod, llinos-pysgod 1619-1653)
+//   pysgod:  house-draig (gingalain-pysgod, llinos-pysgod 1619-1653), house-pendrag
+//            (gingalain-1572-pysgod 1571-1639, genyth-pysgod 1673-), house-neidr
+//            (morholt-pysgod, Gründer des Hauses Tiwna), house-illewod (lynfa-pysgod
+//            1623-1679, cynfor-pysgod 1698-), house-aderyn (hefin-pysgod 1630-1702)
 //   arth:    house-draig (caradoc-arth, madoc-arth 1643-1722, esyllt-arth 1696- [Affäre]),
 //            house-gwyvern (afal-arth 1675-), house-saethwyr (melyn-arth 1684-1735)
 //   aderyn:  house-draig (rhiannon-aderyn = Vortigerns Königin, tiwlip-aderyn 1117-1194,

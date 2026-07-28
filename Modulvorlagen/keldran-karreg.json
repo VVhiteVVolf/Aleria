@@ -1,0 +1,350 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "Chroniken",
+    "tab": "Chroniken",
+    "desc": "Szenen, Ereignisse & Geschichten aus Aleria",
+    "entries": [],
+    "nodeId": "root:chroniken"
+  },
+  "entry": {
+    "id": "scene-module-1783524922558",
+    "title": "Keldran Karreg",
+    "subtitle": "Felsenritter der Treue",
+    "type": "Story",
+    "category": "Chroniken",
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "https://i.imgur.com/VTYFCmw.png",
+    "stamp": "Chroniken",
+    "icon": "✦",
+    "symbol": "https://i.imgur.com/ol6T8lt.png",
+    "locked": false,
+    "appendCommentsPage": false,
+    "enablePageComments": false,
+    "sessionCast": [],
+    "sessionCastDetails": [],
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "0",
+        "image": "https://i.imgur.com/K1Lsh4Q.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "pageTitle": "Keldran Karrag",
+        "description": "<strong>Keldran Karrag</strong> ist ein Felsenritter aus dem Gebirgskönigreich <strong>Morgorn</strong> und entstammt dem niederen Adelshaus <strong>Karrag</strong>, einem niederen Adelsgeschlecht des Königshauses <strong>Eisenherz</strong>. Über Generationen dienten die Karrag als Wächter der Bergpfade und Hochlandtäler Morgorns, bekannt für ihre Standhaftigkeit, ihre Widderreiter und ihre Treue gegenüber der Krone.<!--EndFragment--><br><br><!--StartFragment-->Bereits in jungen Jahren wurde Keldran am Hof der Eisenherz in den ritterlichen Künsten ausgebildet. Dort lernte er auch <strong>Lady Brona Eisenherz und ihre Geschwister</strong> kennen, mit denen ihn über viele Jahre eine Freundschaft verband. Gemeinsam lernten sie den Umgang mit Waffen, höfische Pflichten und die alten Traditionen der morgornischen Felsenritter. Als Brona schließlich Morgorn verließ und durch ihre Vermählung Teil des Hauses Draig wurde, trennten sich ihre Wege.",
+        "quote": "„Kein Sturm bricht den Stein.“",
+        "quoteBy": "— Haus Karreg",
+        "imageSemiLandscape": true,
+        "biographyPage": true,
+        "stats": [
+          [
+            "Vollständiger Name",
+            "Keldran Karrag"
+          ],
+          [
+            "Titel",
+            "Felsenritter von Morgorn"
+          ],
+          [
+            "Haus",
+            "Karrag"
+          ],
+          [
+            "Geburt",
+            "1.704"
+          ],
+          [
+            "Alter",
+            "36"
+          ],
+          [
+            "Spezialisierung",
+            "Widderritter / Gebirgskrieger"
+          ],
+          [
+            "Rang",
+            "Ritter"
+          ],
+          [
+            "Status",
+            "Aktiv"
+          ]
+        ],
+        "biography": {
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Biografie",
+          "biographyText": "<strong>Keldran Karrag</strong> ist ein Felsenritter aus dem Gebirgskönigreich <strong>Morgorn</strong> und entstammt dem niederen Adelshaus <strong>Karrag</strong>, einem niederen Adelsgeschlecht des Königshauses <strong>Eisenherz</strong>. Über Generationen dienten die Karrag als Wächter der Bergpfade und Hochlandtäler Morgorns, bekannt für ihre Standhaftigkeit, ihre Widderreiter und ihre Treue gegenüber der Krone.<!--EndFragment--><br><br><!--StartFragment-->Bereits in jungen Jahren wurde Keldran am Hof der Eisenherz in den ritterlichen Künsten ausgebildet. Dort lernte er auch <strong>Lady Brona Eisenherz und ihre Geschwister</strong> kennen, mit denen ihn über viele Jahre eine Freundschaft verband. Gemeinsam lernten sie den Umgang mit Waffen, höfische Pflichten und die alten Traditionen der morgornischen Felsenritter. Als Brona schließlich Morgorn verließ und durch ihre Vermählung Teil des Hauses Draig wurde, trennten sich ihre Wege.",
+          "abilitiesTitle": "Persönlichkeit",
+          "abilities": [
+            {
+              "title": "Ehrenhaft",
+              "detail": "Hält Wort und Eid für das höchste Gut eines Ritters.",
+              "icon": "../IconOrdner/Traits Icon/Attractive.png"
+            },
+            {
+              "title": "Abenteuerlustig",
+              "detail": "Gehört zu den wenigen Morgornern, die freiwillig die Berge verlassen, um die Welt jenseits ihrer Heimat kennenzulernen.",
+              "icon": "../IconOrdner/Traits Icon/Adventurer.png"
+            },
+            {
+              "title": "Standhaft",
+              "detail": "Begegnet Problemen mit derselben Geduld und Härte, für die die Felsenritter bekannt sind.",
+              "icon": "../IconOrdner/Traits Icon/Strong.png"
+            },
+            {
+              "title": "Loyal",
+              "detail": "Vergisst alte Freunde und Bündnisse nicht, selbst wenn Jahre und Königreiche zwischen ihnen liegen.",
+              "icon": "../IconOrdner/Traits Icon/Trusting.png"
+            },
+            {
+              "title": "Direkt",
+              "detail": "Spricht offen und ehrlich, auch wenn höfische Feinheiten manchmal an ihm vorbeigehen.",
+              "icon": "../IconOrdner/Traits Icon/Wroth.png"
+            },
+            {
+              "title": "Traditionsbewusst",
+              "detail": "Trägt die alten Bräuche Morgorns mit Stolz in fremde Länder.",
+              "icon": "../IconOrdner/Traits Icon/Erudite.png"
+            }
+          ],
+          "extraSections": [],
+          "historyTitle": "Hintergrund",
+          "historyText": "Über Jahre verfolgte Keldran die Geschichten über das ferne Haus der Draig. Besonders die Taten von <strong>Galahad Draig</strong>, die Ritter der Tafelrunde und die Rolle seiner alten Freundin Brona stärkten seine Bewunderung für dieses Geschlecht. Mit Zustimmung seines eigenen Herrn erhielt er schließlich die Erlaubnis, Morgorn zu verlassen und den langen Weg nach Celtigerns Wacht anzutreten.<!--EndFragment--><br><br><!--StartFragment-->Gemeinsam mit seinem treuen Gebirgswidder <strong>Graubart</strong> überquerte Keldran Berge, Täler und Königreiche, um dem Haus Draig seinen Eid anzubieten. Für ihn bedeutet dieser Schritt keinen Bruch mit Morgorn, sondern eine Möglichkeit, die Freundschaft zwischen Eisenherz und Draig weiter zu festigen.",
+          "worksTitle": "Sonstiges",
+          "works": [
+            "Sein Widder Graubart begleitet ihn bereits seit vielen Jahren und gilt unter den Karrag  als vollwertiges Familienmitglied.",
+            "Trägt ein Empfehlungsschreiben seines alten Herrn, welches seinen Dienst unter dem Haus Draig ausdrücklich unterstützt.",
+            "Ausbildung am Hofe des Hauses Eisenherz gemeinsam mit Lady Brona.",
+            "Überquerung des Kontinents von Morgorn bis nach Cenyr mit seinem Widder Graubart."
+          ],
+          "triviaTitle": "Trivia",
+          "trivia": [
+            "Spricht häufig mit Graubart, als könne dieser jedes seiner Worte verstehen.",
+            "Hält Pferde für nützlich, aber für „etwas zerbrechliche Tiere“."
+          ],
+          "quotesTitle": "Zitate",
+          "quotes": [
+            "„Ein Berg fragt nicht, woher der Wind kommt. Er entscheidet nur, ob er standhält.“"
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Personen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Lady Brona Eisenherz",
+              "detail": "Kindheitsfreundin",
+              "image": "https://i.imgur.com/yEPvXLm.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Brennar Karrag",
+              "detail": "Vater & Oberhaupt der Karrag",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Maela Karrag",
+              "detail": "Mutter",
+              "image": "https://i.imgur.com/7yB9PR6.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Thoran Karrag",
+              "detail": "Älterer Bruder",
+              "image": "https://i.imgur.com/51CghpL.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Graubart",
+              "detail": "Gefährte und Widder",
+              "image": "https://i.imgur.com/IFbAd8Z.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Verbindungen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Eisenherz",
+              "detail": "Lehensherren",
+              "image": "https://i.imgur.com/SAFaSow.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "connection",
+              "name": "Haus Karrag",
+              "detail": "Mitglied des Hauses",
+              "image": "https://i.imgur.com/ol6T8lt.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Dokumente & Aufzeichnungen",
+          "documents": [
+            {
+              "icon": "",
+              "title": "",
+              "text": "Archivnotiz oder Dokument",
+              "link": ""
+            }
+          ],
+          "footer": "„Kein Sturm bricht den Stein.“"
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "1",
+        "image": "https://i.imgur.com/4BTNyel.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "pageTitle": "Haus Karreg",
+        "description": "<strong>Haus Karreg</strong> ist ein niederes Adelsgeschlecht aus dem Gebirgskönigreich <strong>Morgorn</strong> und steht seit Generationen in direkter Vasallentreue zum Königshaus <strong>Eisenherz</strong>. Ihr Sitz, die <strong>Burg Karregwacht</strong>, liegt hoch über einem Gebirgstal und bewacht seit Jahrhunderten die wichtigen Pässe und Wege zwischen den Bergregionen Morgorns.<br><br><!--StartFragment-->Die Karreg sind vor allem für ihre mächtigen <strong>Kriegswidder</strong> bekannt, die sie in den rauen Höhen ihrer Heimat züchten und ausbilden. Diese Tiere bilden das Herz ihrer ritterlichen Tradition, denn die berühmten Gebirgsstürmer des Hauses kämpfen nicht auf Pferden, sondern reiten auf gepanzerten Widdern selbst durch Gelände, das für gewöhnliche Kavallerie unpassierbar wäre.<br><br><!--StartFragment-->Neben ihrer militärischen Tradition besitzt das Haus mehrere Schürfrechte innerhalb der umliegenden Berge und betreibt einige kleinere Minen. Die dort gewonnenen Erze versorgen die Schmieden der Karreg, deren Handwerker besonders für robuste Rüstungen, Waffen und Beschläge für ihre Widderreiter geschätzt werden.",
+        "quote": "„Aus Stein geboren, im Sturm bewährt.“",
+        "quoteBy": "— Hauschronik",
+        "housePage": true,
+        "stats": [
+          [
+            "Vollständiger Name",
+            "Haus Karreg"
+          ],
+          [
+            "Sitz",
+            "Burg Karregwacht, Morgorn"
+          ],
+          [
+            "Gegründet",
+            "1.214"
+          ],
+          [
+            "Oberhaupt",
+            "Thoran Karreg"
+          ],
+          [
+            "Rang",
+            "Niederes Adelsgeschlecht"
+          ],
+          [
+            "Status",
+            "Aktiv"
+          ]
+        ],
+        "house": {
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über dieses Haus",
+          "biographyText": "<strong>Haus Karreg</strong> ist ein niederes Adelsgeschlecht aus dem Gebirgskönigreich <strong>Morgorn</strong> und steht seit Generationen in direkter Vasallentreue zum Königshaus <strong>Eisenherz</strong>. Ihr Sitz, die <strong>Burg Karregwacht</strong>, liegt hoch über einem Gebirgstal und bewacht seit Jahrhunderten die wichtigen Pässe und Wege zwischen den Bergregionen Morgorns.<br><br><!--StartFragment-->Die Karreg sind vor allem für ihre mächtigen <strong>Kriegswidder</strong> bekannt, die sie in den rauen Höhen ihrer Heimat züchten und ausbilden. Diese Tiere bilden das Herz ihrer ritterlichen Tradition, denn die berühmten Gebirgsstürmer des Hauses kämpfen nicht auf Pferden, sondern reiten auf gepanzerten Widdern selbst durch Gelände, das für gewöhnliche Kavallerie unpassierbar wäre.<br><br><!--StartFragment-->Neben ihrer militärischen Tradition besitzt das Haus mehrere Schürfrechte innerhalb der umliegenden Berge und betreibt einige kleinere Minen. Die dort gewonnenen Erze versorgen die Schmieden der Karreg, deren Handwerker besonders für robuste Rüstungen, Waffen und Beschläge für ihre Widderreiter geschätzt werden.",
+          "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+          "abilities": [
+            {
+              "title": "Militär",
+              "detail": "Streitmacht, Wehrpflicht oder Rittergefolge des Hauses.",
+              "icon": "../IconOrdner/Cktraits/Trait_education_martial_3.png"
+            },
+            {
+              "title": "Widderzucht",
+              "detail": "Züchten einige der kräftigsten Kriegswidder Morgorns und bewahren alte Zuchtlinien, die seit Generationen für Ausdauer, Trittsicherheit und Kampfstärke geschätzt werden.",
+              "icon": "../IconOrdner/Cktraits/Trait_rakish.png"
+            },
+            {
+              "title": "Handwerk",
+              "detail": "Betreiben Bergwerke und Schmieden, deren Erzeugnisse vor allem für widerstandsfähige Waffen, Rüstungen und Ausrüstung ihrer Gebirgsritter bekannt sind.",
+              "icon": "../IconOrdner/Cktraits/Trait_architect.png"
+            }
+          ],
+          "extraSections": [],
+          "historyTitle": "Geschichte des Hauses",
+          "historyText": "<!--StartFragment-->Seit Jahrhunderten wachen die Karreg über die Bergpässe Morgorns. Ihre Burg entstand ursprünglich als Grenz- und Wachfeste, entwickelte sich jedoch mit der Zeit zum Zentrum ihrer Widderzucht und Schmiedekunst. Die Kombination aus starken Gebirgskriegern, zuverlässigen Minen und geschickten Handwerkern machte sie zu einem wichtigen Bestandteil der Verteidigung Morgorns.<!--EndFragment-->",
+          "worksTitle": "Bekannte Taten & Ereignisse",
+          "works": [
+            "Aufbau einer der angesehensten Kriegswidder-Zuchten Morgorns.",
+            "Mehrere Generationen treuer Dienste als Gebirgsritter des Hauses Eisenherz."
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [
+            "Die Karreg betrachten ihre Kriegswidder nicht nur als Reittiere, sondern als Kampfgefährten und Symbol ihres Hauses.",
+            "Viele Angehörige des Hauses erlernen neben dem Kampf auch Grundlagen der Schmiede- oder Bergwerkskunst."
+          ],
+          "quotesTitle": "Hausworte & Zitate",
+          "quotes": [
+            "„Aus Stein geboren, im Sturm bewährt.“"
+          ],
+          "connectionsTitle": "Verbündete, Rivalen & Vasallen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Verbindungen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Eisenherz",
+              "detail": "Lehnsherren",
+              "image": "https://i.imgur.com/SAFaSow.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "connection",
+              "name": "Die Seelenschmiede",
+              "detail": "Mitglieder",
+              "image": "https://i.imgur.com/NL6iKYX.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Adelstand",
+          "documents": [
+            {
+              "icon": "",
+              "title": "",
+              "text": "Traditionsreiches Ritterhaus mit enger Bindung zum Königshof.",
+              "link": ""
+            },
+            {
+              "icon": "",
+              "title": "",
+              "text": "Ausbilder der berühmten Widderreiter und Bergkämpfer Morgorns.",
+              "link": ""
+            },
+            {
+              "icon": "",
+              "title": "",
+              "text": "Hüter alter Schmiede- und Bergbaukünste.",
+              "link": ""
+            }
+          ],
+          "footer": "„Aus Stein geboren, im Sturm bewährt.“",
+          "crestImage": "https://i.imgur.com/ol6T8lt.png"
+        }
+      }
+    ],
+    "schemaVersion": 1,
+    "multipage": true
+  }
+}

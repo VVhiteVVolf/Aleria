@@ -12,6 +12,7 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
@@ -20,8 +21,10 @@ const HOUSE_EMBLEMS = Object.freeze({
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
   talamh: 'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png',
+  wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
@@ -156,15 +159,15 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-duibhne', 'Haus Duibhne'),
     house('house-wyrm', 'Haus Wyrm', HOUSE_EMBLEMS.wyrm),
     house('house-dyngwn', 'Haus Dyngwn'),
-    house('house-pysgod', 'Haus Pysgod'),
+    house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-airt', 'Haus Airt'),
-    house('house-arth', 'Haus Arth'),
+    house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-blodyn', 'Haus Blodyn'),
     house('house-diulb', 'Haus Diulb'),
     house('house-ness', 'Haus Ness'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
     house('house-crefyddol', 'Haus Crefyddol'),
-    house('house-wylan', 'Haus Wylan'),
+    house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
     house('house-ceirwynn', 'Haus Ceirwynn'),
     house('house-eirce', 'Haus Eirce'),
@@ -183,8 +186,13 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('gwendolyn-mwnci', 'Gwendolyn Mwnci', 'female', '????', '????', 'house-mwnci'),
     person('rhonwen-dreigiau', 'Rhonwen', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
     person('dyngannon-paun', 'Dyngannon Paun', 'male', '????', '????', 'house-paun'),
-    person('kerrylin-dreigiau', 'Kerrylin', 'female', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
-    person('mordred-blodyn', 'Mordred Blodyn', 'male', '????', '????', 'house-blodyn'),
+    person('kerrylin-dreigiau', 'Kerrylin', 'female', '????', '????', 'house-dreigiau', {
+      familyRole: 'core',
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
+    person('mordred-blodyn', 'Mordred Blodyn', 'male', '????', '????', 'house-blodyn', {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('vortimer-dreigiau', 'Vortimer', 'male', '????', '????', 'house-dreigiau', { familyRole: 'core' }),
     person('isolde-teigr', 'Isolde Teigr', 'female', '????', '????', 'house-teigr'),
     person('vortigern-pendrag', 'Vortigern', 'male', '????', '????', 'house-pendrag', { familyRole: 'core' }),
@@ -585,8 +593,8 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
       targetFamilyId: 'haus-pendrag',
       notes: 'Vortigern begründet mit Rhiannon Aderyn die Linie des Hauses Pendrag.'
     }),
-    marriedAway('married-away-arth-gwenhwyfar', 'Haus Arth', 'marriage-gwenhwyfar-caradoc', 'house-arth'),
-    marriedAway('married-away-pysgod-morgaine', 'Haus Pysgod', 'marriage-morgaine-gingalain', 'house-pysgod'),
+    marriedAway('married-away-arth-gwenhwyfar', 'Haus Arth', 'marriage-gwenhwyfar-caradoc', 'house-arth', HOUSE_EMBLEMS.arth),
+    marriedAway('married-away-pysgod-morgaine', 'Haus Pysgod', 'marriage-morgaine-gingalain', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
     createCadetHouseBranch({
       id: 'cadet-gwyvern-bleddyn',
       name: 'Haus Gwyvern',
@@ -613,7 +621,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     marriedAway('married-away-wyrm-heulwen', 'Haus Wyrm', 'marriage-heulwen-rhydderch', 'house-wyrm', HOUSE_EMBLEMS.wyrm),
     marriedAway('married-away-diulb-myfanwy', 'Haus Diulb', 'marriage-myfanwy-uaithne', 'house-diulb'),
     marriedAway('married-away-gafyr-olwen', 'Haus Gafyr', 'marriage-olwen-hwyvel', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
-    marriedAway('married-away-arth-hafwen', 'Haus Arth', 'marriage-hafwen-madoc', 'house-arth'),
+    marriedAway('married-away-arth-hafwen', 'Haus Arth', 'marriage-hafwen-madoc', 'house-arth', HOUSE_EMBLEMS.arth),
     marriedAway('married-away-illewod-maygan', 'Haus Illewod', 'marriage-maygan-selwyn', 'house-illewod'),
     marriedAway('married-away-neidr-elenydd', 'Haus Neidr', 'marriage-elenydd-gaenor', 'house-neidr'),
     marriedAway('married-away-ness-arianwen', 'Haus Ness', 'marriage-arianwen-turlough', 'house-ness'),
@@ -663,6 +671,6 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 4
+    sourceRevision: 6
   }
 });

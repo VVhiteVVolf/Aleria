@@ -20,7 +20,7 @@ export const PENDRWN_SWYLL_MARRIAGE = marriage(
     birth: '1687',
     houseId: 'house-pendrwn',
     portrait: '',
-    title: 'Vater Tudwal Pendrwns',
+    title: 'Vater Emyr Pendrwns',
     notes: 'Ehemann Eirwen Swylls und Vater der jüngsten Pendrwn-Geschwister.'
   }),
   person({
@@ -44,7 +44,7 @@ export const PENDRWN_DRAENMELYN_MARRIAGE = marriage(
     birth: '1693',
     houseId: 'house-pendrwn',
     portrait: '',
-    title: 'Tante Tudwal Pendrwns',
+    title: 'Tante Emyr Pendrwns',
     notes: 'Schwester Meilyr Pendrwns; heiratete Caradog Draenmelyn.'
   }),
   person({

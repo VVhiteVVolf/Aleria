@@ -6,6 +6,7 @@
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
   royal: Object.freeze({ id: 'royal', label: 'Königsgeschlecht', order: 10 }),
+  patrician: Object.freeze({ id: 'patrician', label: 'Patrizierhaus', order: 15 }),
   ducal: Object.freeze({ id: 'ducal', label: 'Herzogsgeschlecht', order: 20 }),
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
@@ -13,8 +14,11 @@ const RANK_DEFINITIONS = Object.freeze({
   'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Herzog/Fürst)', order: 20 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
+  magnarian: Object.freeze({ id: 'magnarian', label: 'Magnarierhaus', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
-  commoner: Object.freeze({ id: 'commoner', label: 'Bürgerfamilie', order: 80 })
+  commoner: Object.freeze({ id: 'commoner', label: 'Bürgerfamilie', order: 80 }),
+  mercantian: Object.freeze({ id: 'mercantian', label: 'Mercantierhaus', order: 80 }),
+  plebeian: Object.freeze({ id: 'plebeian', label: 'Plebejerfamilie', order: 90 })
 });
 
 export const HOUSE_RANKS = RANK_DEFINITIONS;
@@ -119,13 +123,31 @@ export function isHouseProfileEmpty(profile = {}) {
 
 export function formatHouseProfile(profile = {}, separator = ' · ') {
   const normalized = normalizeHouseProfile(profile);
+  const venalysRank = ['patrician', 'magnarian', 'mercantian', 'plebeian'].includes(normalized.rankId);
+  const labels = venalysRank
+    ? {
+        seat: 'Sitz',
+        barony: 'Stadtbezirk',
+        county: 'Region',
+        kingdom: 'Stadtrepublik',
+        secondarySeats: 'Weitere Sitze',
+        liegeHouse: 'Patrizierhaus'
+      }
+    : {
+        seat: 'Stammsitz',
+        barony: 'Baronie',
+        county: 'Grafschaft',
+        kingdom: 'Königreich',
+        secondarySeats: 'Weitere Sitze',
+        liegeHouse: 'Lehnshaus'
+      };
   const location = [
-    normalized.seat ? `Stammsitz: ${normalized.seat}` : '',
-    normalized.barony ? `Baronie: ${normalized.barony}` : '',
-    normalized.county ? `Grafschaft: ${normalized.county}` : '',
-    normalized.kingdom ? `Königreich: ${normalized.kingdom}` : '',
-    normalized.secondarySeats.length ? `Weitere Sitze: ${normalized.secondarySeats.join(', ')}` : '',
-    normalized.liegeHouseName ? `Lehnshaus: ${normalized.liegeHouseName}` : ''
+    normalized.seat ? `${labels.seat}: ${normalized.seat}` : '',
+    normalized.barony ? `${labels.barony}: ${normalized.barony}` : '',
+    normalized.county ? `${labels.county}: ${normalized.county}` : '',
+    normalized.kingdom ? `${labels.kingdom}: ${normalized.kingdom}` : '',
+    normalized.secondarySeats.length ? `${labels.secondarySeats}: ${normalized.secondarySeats.join(', ')}` : '',
+    normalized.liegeHouseName ? `${labels.liegeHouse}: ${normalized.liegeHouseName}` : ''
   ].filter(Boolean);
   const rank = getHouseRank(normalized.rankId);
   return [rank.id === 'unknown' ? '' : rank.label, ...location].filter(Boolean).join(separator);

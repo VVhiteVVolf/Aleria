@@ -9,11 +9,13 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_SWYLL_PORTRAITS } from './house-swyll-portraits.js';
+import { MAERLLYS_SWYLL_MARRIAGE } from './maerllys-cross-family-marriages.js';
 import { PENDRWN_SWYLL_MARRIAGE } from './pendrwn-cross-family-marriages.js';
 
 const SWYLL_HOUSE_ID = 'house-swyll';
 const SWYLL_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png';
 const DRAENMELYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png';
+const MAERLLYS_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png';
 const PENDRWN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png';
 
 const BASE_FAMILY = createFounderTimeJumpPlaceholderHouseFamily({
@@ -97,15 +99,6 @@ const MARRIED_AWAY_RELATIONS = Object.freeze([
     note: 'Merediths Großtante Gwenifer wurde an ein nicht überliefertes Haus verheiratet.'
   }),
   Object.freeze({
-    id: 'bronwen-swyll',
-    personId: 'bronwen-swyll',
-    spouseId: 'unknown-spouse-bronwen-swyll',
-    partnershipId: 'marriage-bronwen-unknown-swyll',
-    name: 'Bronwen Swyll',
-    birth: '1691',
-    note: 'Merediths Tante Bronwen wurde an ein nicht überliefertes Haus verheiratet.'
-  }),
-  Object.freeze({
     id: 'carys-swyll',
     personId: 'carys-swyll',
     spouseId: 'unknown-spouse-carys-swyll',
@@ -163,6 +156,8 @@ const SWYLL_PEOPLE = Object.freeze([
   ...MARRIED_AWAY_PEOPLE.slice(2, 8),
   sharedPerson(PENDRWN_SWYLL_MARRIAGE.second, 'core'),
   sharedPerson(PENDRWN_SWYLL_MARRIAGE.first, 'married'),
+  sharedPerson(MAERLLYS_SWYLL_MARRIAGE.second, 'core'),
+  sharedPerson(MAERLLYS_SWYLL_MARRIAGE.first, 'married'),
   person('owain-swyll', 'Owain Swyll', 'male', '1696', '', SWYLL_HOUSE_ID, {
     title: 'Onkel Merediths'
   }),
@@ -238,6 +233,7 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
     house('house-draenmelyn', 'Haus Draenmelyn', DRAENMELYN_EMBLEM),
+    house('house-maerllys', 'Haus Maerllys', MAERLLYS_EMBLEM),
     house('house-pendrwn', 'Haus Pendrwn', PENDRWN_EMBLEM),
     ...MARRIED_AWAY_RELATIONS.map(relation => (
       house(`house-unbekannt-${relation.id}`, 'Unbekanntes Haus')
@@ -261,6 +257,10 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
     createMarriage(
       PENDRWN_SWYLL_MARRIAGE.id,
       ...PENDRWN_SWYLL_MARRIAGE.participantIds
+    ),
+    createMarriage(
+      MAERLLYS_SWYLL_MARRIAGE.id,
+      ...MAERLLYS_SWYLL_MARRIAGE.participantIds
     ),
     createMarriage('affair-rhodri-morwen-swyll', ...RHODRI_AFFAIR_IDS, {
       type: 'affair',
@@ -312,6 +312,16 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
       emblem: PENDRWN_EMBLEM,
       crestFrame: 'iron',
       notes: 'Eirwen Swyll wurde an Meilyr Pendrwn verheiratet; dieselbe Ehe wird in der Pendrwn-Gegenakte geführt.'
+    }),
+    createMarriedAwayBranch({
+      id: 'married-away-maerllys-bronwen-swyll',
+      name: 'Haus Maerllys',
+      parentPartnershipId: MAERLLYS_SWYLL_MARRIAGE.id,
+      houseId: 'house-maerllys',
+      targetFamilyId: 'haus-maerllys',
+      emblem: MAERLLYS_EMBLEM,
+      crestFrame: 'iron',
+      notes: 'Bronwen Swyll wurde an Iorwerth Maerllys verheiratet; dieselbe Ehe wird in der Maerllys-Gegenakte geführt.'
     })
   ]),
   timeJumps: Object.freeze([
@@ -350,18 +360,30 @@ export const HOUSE_SWYLL_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 7,
+    sourceRevision: 8,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
-      persons: Object.freeze(['mair-ysgrif', 'unknown-spouse-eirwen-swyll']),
+      persons: Object.freeze([
+        'mair-ysgrif',
+        'unknown-spouse-eirwen-swyll',
+        'unknown-spouse-bronwen-swyll'
+      ]),
       partnerships: Object.freeze([
         'marriage-mair-ysgrif-gareth-swyll',
-        'marriage-eirwen-unknown-swyll'
+        'marriage-eirwen-unknown-swyll',
+        'marriage-bronwen-unknown-swyll'
       ]),
       parentages: Object.freeze(['parentage-iestyn-swyll']),
-      houses: Object.freeze(['house-ysgrif', 'house-unbekannt-eirwen-swyll']),
-      cadetBranches: Object.freeze(['married-away-eirwen-swyll'])
+      houses: Object.freeze([
+        'house-ysgrif',
+        'house-unbekannt-eirwen-swyll',
+        'house-unbekannt-bronwen-swyll'
+      ]),
+      cadetBranches: Object.freeze([
+        'married-away-eirwen-swyll',
+        'married-away-bronwen-swyll'
+      ])
     }),
-    sourceNote: 'Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt fünf wegverheiratete Schwestern: Eirwens Ehemann ist nun als Meilyr Pendrwn bekannt und ihre Ehe wird in der Pendrwn-Gegenakte gespiegelt; die vier übrigen Zielhäuser bleiben unbekannt. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert.'
+    sourceNote: 'Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt fünf wegverheiratete Schwestern: Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys werden in den jeweiligen Gegenakten gespiegelt; nur Carys, Llio und Nerys führen noch zu unbekannten Häusern. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert.'
   })
 });

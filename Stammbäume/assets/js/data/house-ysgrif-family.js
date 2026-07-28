@@ -8,9 +8,11 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_YSGRIF_PORTRAITS } from './house-ysgrif-portraits.js';
+import { MAERLLYS_YSGRIF_MARRIAGE } from './maerllys-cross-family-marriages.js';
 
 const YSGRIF_HOUSE_ID = 'house-ysgrif';
 const YSGRIF_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png';
+const MAERLLYS_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png';
 
 const BASE_FAMILY = createFounderTimeJumpPlaceholderHouseFamily({
   id: 'haus-ysgrif',
@@ -41,18 +43,32 @@ function person(id, name, sex, birth = '????', death = '', houseId = YSGRIF_HOUS
   });
 }
 
+function sharedPerson(definition, familyRole) {
+  return person(definition.id, definition.name, definition.sex, definition.birth, '', definition.houseId, {
+    familyRole,
+    title: definition.title,
+    portrait: definition.portrait,
+    notes: definition.notes
+  });
+}
+
 const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 const GRANDPARENT_IDS = ['idris-ysgrif', 'efa-spouse-ysgrif'];
 const PARENT_IDS = ['aneirin-ysgrif', 'catrin-spouse-ysgrif'];
 const BRYN_IDS = ['bryn-ysgrif', 'elen-spouse-ysgrif'];
-const GREAT_AUNT_IDS = ['gwenllian-ysgrif', 'unknown-spouse-gwenllian-ysgrif'];
 
 export const HOUSE_YSGRIF_FAMILY = Object.freeze({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
-    Object.freeze({ id: 'house-unbekannt-gwenllian-ysgrif', name: 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' })
+    Object.freeze({
+      id: 'house-maerllys',
+      name: 'Haus Maerllys',
+      motto: '',
+      emblem: MAERLLYS_EMBLEM,
+      status: 'active'
+    })
   ]),
   persons: Object.freeze([
     ...BASE_FAMILY.persons,
@@ -65,15 +81,8 @@ export const HOUSE_YSGRIF_FAMILY = Object.freeze({
     person('efa-spouse-ysgrif', 'Efa', 'female', '1670', '', '', {
       familyRole: 'married'
     }),
-    person('gwenllian-ysgrif', 'Gwenllian Ysgrif', 'female', '1668', '', YSGRIF_HOUSE_ID, {
-      title: 'Wegverheiratete Großtante Floyds',
-      notes: 'Schwester von Idris Ysgrif; wurde an ein nicht überliefertes Haus verheiratet.'
-    }),
-    person('unknown-spouse-gwenllian-ysgrif', 'Unbekannter Ehemann', 'male', '????', '', 'house-unbekannt-gwenllian-ysgrif', {
-      familyRole: 'married',
-      status: 'unknown',
-      title: 'Ehemann Gwenllian Ysgrifs'
-    }),
+    sharedPerson(MAERLLYS_YSGRIF_MARRIAGE.second, 'core'),
+    sharedPerson(MAERLLYS_YSGRIF_MARRIAGE.first, 'married'),
 
     // Floyds Eltern und seine beiden Onkel.
     person('aneirin-ysgrif', 'Aneirin Ysgrif', 'male', '1693', '', YSGRIF_HOUSE_ID, {
@@ -123,7 +132,7 @@ export const HOUSE_YSGRIF_FAMILY = Object.freeze({
   partnerships: Object.freeze([
     ...BASE_FAMILY.partnerships,
     createMarriage('marriage-idris-efa-ysgrif', ...GRANDPARENT_IDS),
-    createMarriage('marriage-gwenllian-unknown-ysgrif', ...GREAT_AUNT_IDS),
+    createMarriage(MAERLLYS_YSGRIF_MARRIAGE.id, ...MAERLLYS_YSGRIF_MARRIAGE.participantIds),
     createMarriage('marriage-aneirin-catrin-ysgrif', ...PARENT_IDS),
     createMarriage('marriage-bryn-elen-ysgrif', ...BRYN_IDS)
   ]),
@@ -157,13 +166,14 @@ export const HOUSE_YSGRIF_FAMILY = Object.freeze({
   ]),
   cadetBranches: Object.freeze([
     createMarriedAwayBranch({
-      id: 'married-away-unknown-gwenllian-ysgrif',
-      name: 'Unbekanntes Haus',
-      parentPartnershipId: 'marriage-gwenllian-unknown-ysgrif',
-      houseId: 'house-unbekannt-gwenllian-ysgrif',
-      targetFamilyId: 'haus-unbekannt',
-      crestFrame: 'gold',
-      notes: 'Floyds Großtante Gwenllian wurde an ein nicht überliefertes Haus verheiratet.'
+      id: 'married-away-maerllys-gwenllian-ysgrif',
+      name: 'Haus Maerllys',
+      parentPartnershipId: MAERLLYS_YSGRIF_MARRIAGE.id,
+      houseId: 'house-maerllys',
+      targetFamilyId: 'haus-maerllys',
+      emblem: MAERLLYS_EMBLEM,
+      crestFrame: 'iron',
+      notes: 'Floyds Großtante Gwenllian wurde an Owain Maerllys verheiratet; dieselbe Ehe wird in der Maerllys-Gegenakte geführt.'
     })
   ]),
   timeJumps: Object.freeze([
@@ -200,17 +210,29 @@ export const HOUSE_YSGRIF_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
-      persons: Object.freeze(['sioned-draenmelyn', 'gareth-swyll']),
+      persons: Object.freeze([
+        'sioned-draenmelyn',
+        'gareth-swyll',
+        'unknown-spouse-gwenllian-ysgrif'
+      ]),
       partnerships: Object.freeze([
         'marriage-floyd-ysgrif-sioned-draenmelyn',
-        'marriage-mair-ysgrif-gareth-swyll'
+        'marriage-mair-ysgrif-gareth-swyll',
+        'marriage-gwenllian-unknown-ysgrif'
       ]),
-      houses: Object.freeze(['house-draenmelyn', 'house-swyll']),
-      cadetBranches: Object.freeze(['married-away-swyll-mair-ysgrif'])
+      houses: Object.freeze([
+        'house-draenmelyn',
+        'house-swyll',
+        'house-unbekannt-gwenllian-ysgrif'
+      ]),
+      cadetBranches: Object.freeze([
+        'married-away-swyll-mair-ysgrif',
+        'married-away-unknown-gwenllian-ysgrif'
+      ])
     }),
-    sourceNote: 'Floyd Ysgrif ist im Jahr 1740 einundzwanzig Jahre alt, unverheiratet und besitzt zwei ebenfalls unverheiratete Schwestern. Ihre weiteren Lebenslinien bleiben bewusst offen. Bryn hat drei unverheiratete Söhne; Madoc lebt als kinderloser Söldner. Idris ist der einzige konkret ausgearbeitete Großvater, seine Schwester Gwenllian führt einen direkten Wegverheiratet-Knoten zu einem unbekannten Haus. Das eigene Ysgrif-Wappen und Floyds Portrait wurden lokal aus den vorgegebenen Quellen gesichert.'
+    sourceNote: 'Floyd Ysgrif ist im Jahr 1740 einundzwanzig Jahre alt, unverheiratet und besitzt zwei ebenfalls unverheiratete Schwestern. Ihre weiteren Lebenslinien bleiben bewusst offen. Bryn hat drei unverheiratete Söhne; Madoc lebt als kinderloser Söldner. Idris ist der einzige konkret ausgearbeitete Großvater; seine Schwester Gwenllian ist an Owain Maerllys verheiratet und führt einen direkten, beidseitig registrierten Wegverheiratet-Knoten zu Haus Maerllys. Das eigene Ysgrif-Wappen und Floyds Portrait wurden lokal aus den vorgegebenen Quellen gesichert.'
   })
 });

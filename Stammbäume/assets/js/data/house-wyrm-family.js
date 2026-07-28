@@ -9,6 +9,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
 
@@ -147,7 +148,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     { id: 'house-dinefwr', name: 'Haus Dinefwr', motto: '', emblem: '', status: 'active' },
     { id: 'house-coedwig', name: 'Haus Coedwig', motto: '', emblem: '', status: 'active' },
     { id: 'house-arwydd', name: 'Haus Arwydd', motto: '', emblem: HOUSE_EMBLEMS.arwydd, status: 'active' },
-    { id: 'house-wylan', name: 'Haus Wylan', motto: '', emblem: '', status: 'active' },
+    { id: 'house-wylan', name: 'Haus Wylan', motto: '', emblem: HOUSE_EMBLEMS.wylan, status: 'active' },
     { id: 'house-tiwna', name: 'Haus Tiwna', motto: '', emblem: '', status: 'active' },
     { id: 'house-swgarnog', name: 'Haus Swgarnog', motto: '', emblem: '', status: 'active' },
     { id: 'house-rosenblueht', name: 'Haus Rosenblüht', motto: '', emblem: '', status: 'active' },

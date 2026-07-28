@@ -154,7 +154,13 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     local.view,
     registryManagedFieldNames(registered, 'registryManagedViewFields')
   );
+  const mergedExtensions = mergeRegisteredManagedFields(
+    registered.extensions,
+    local.extensions,
+    registryManagedFieldNames(registered, 'registryManagedExtensionFields')
+  );
   const registryManagedUpgradeMetadata = Object.fromEntries([
+    'registryManagedExtensionFields',
     'registryManagedHouseProfileFields',
     'registryManagedRecordFields',
     'registryManagedViewFields'
@@ -196,8 +202,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
       descendantDepth: Math.max(registered.view.descendantDepth, local.view.descendantDepth)
     },
     extensions: {
-      ...registered.extensions,
-      ...local.extensions,
+      ...mergedExtensions,
       ...registryManagedUpgradeMetadata,
       registryTombstones: mergedRegistryTombstones,
       sourceRevision: registeredRevision,
