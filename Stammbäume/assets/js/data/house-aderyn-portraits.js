@@ -40,7 +40,9 @@ const SHARED_PORTRAITS = Object.freeze({
   'mervyn-gwyvern': HOUSE_GWYVERN_PORTRAITS['mervyn-gwyvern'],
   'hefin-pysgod': HOUSE_PYSGOD_LOCAL_PORTRAITS['hefin-pysgod'],
   'talfryn-aderyn': 'assets/images/portraits/haus-wylan/talfryn-aderyn.jpg',
-  'gwalchgwyn-arth': 'assets/images/portraits/haus-arth/gwalchgwyn-arth.jpg'
+  'gwalchgwyn-arth': 'assets/images/portraits/haus-arth/gwalchgwyn-arth.jpg',
+  'colwynn-aderyn': 'assets/images/portraits/haus-dienyddiwr/colwynn-aderyn.png',
+  'enfys-dienyddiwr': 'assets/images/portraits/haus-dienyddiwr/enfys-dienyddiwr.jpg'
 });
 
 const isUsablePortraitPath = value => typeof value === 'string' && value.trim() !== '';

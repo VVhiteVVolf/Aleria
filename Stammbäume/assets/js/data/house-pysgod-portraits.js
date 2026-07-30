@@ -13,6 +13,7 @@ export const HOUSE_PYSGOD_PORTRAITS = Object.freeze({
   'tarwen-pendrag': HOUSE_PENDRAG_PORTRAITS['tarwen-pendrag'],
   'morholt-pysgod': HOUSE_NEIDR_PORTRAITS['morholt-pysgod'],
   'caitrin-neidr': HOUSE_NEIDR_PORTRAITS['caitrin-neidr'],
+  'eiddon-tiwna': 'assets/images/portraits/haus-tiwna/eiddon-tiwna.png',
   'merfyn-draig': HOUSE_DRAIG_PORTRAITS['merfyn-draig'],
   'iorwerth-illewod': HOUSE_ILLEWOD_PORTRAITS['iorwerth-illewod'],
   'cynfor-pysgod': HOUSE_ILLEWOD_PORTRAITS['cynfor-pysgod'],

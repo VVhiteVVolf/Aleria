@@ -28,6 +28,16 @@ import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families
 import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
+import {
+  SONNENKUESTE_DEPENDENT_HOUSE_FAMILIES,
+  SONNENKUESTE_LINKED_LINE_FAMILIES
+} from './sonnenkueste-house-families.js';
+import { VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES } from './vortigerns-ruh-house-families.js';
+import { WEIDEBUCHT_DEPENDENT_HOUSE_FAMILIES } from './weidebucht-house-families.js';
+import { AEHRENTAL_DEPENDENT_HOUSE_FAMILIES } from './aehrental-house-families.js';
+import { SILBERINSEL_DEPENDENT_HOUSE_FAMILIES } from './silberinsel-house-families.js';
+import { TAL_DER_MILANE_DEPENDENT_HOUSE_FAMILIES } from './tal-der-milane-house-families.js';
+import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 
@@ -45,13 +55,14 @@ function hierarchyFor(path, familyId, familyTitle) {
   ]);
 }
 
-function familyRecord({ id, title, family, type = 'dynasty' }) {
+function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' }) {
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   return Object.freeze({
     id,
     title,
     status: 'active',
     type,
+    listing,
     folderPath,
     houseProfile: family.document.houseProfile,
     hierarchy: hierarchyFor(folderPath, id, title),
@@ -221,6 +232,79 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: family.document.id,
     title: family.document.title,
     family
+  })),
+  ...SONNENKUESTE_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...SONNENKUESTE_LINKED_LINE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'dynasty',
+    listing: 'linked-only'
+  })),
+  ...VORTIGERNS_RUH_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...WEIDEBUCHT_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...AEHRENTAL_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...SILBERINSEL_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...TAL_DER_MILANE_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'knight'
+        ? 'lower-nobility'
+        : 'dynasty'
+  })),
+  ...MOCHDAER_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'dynasty'
   })),
   ...BLODYN_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

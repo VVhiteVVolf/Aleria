@@ -1,6 +1,7 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import {
+  createCadetHouseBranch,
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
@@ -15,6 +16,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
+  grianlaoch: 'assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png',
+  illwath: 'assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png',
   gallchobhair: 'assets/images/houses/clan-gallchobhair.svg',
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
@@ -74,14 +77,18 @@ function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
-function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+function marriedAway(id, name, partnershipId, houseId, emblem = '', options = {}) {
   return createMarriedAwayBranch({
     id,
     name,
     parentPartnershipId: partnershipId,
     houseId,
-    targetFamilyId: houseId.replace(/^house-/, 'haus-'),
-    emblem
+    targetFamilyId: options.targetFamilyId || houseId.replace(/^house-/, 'haus-'),
+    emblem: options.emblem || emblem,
+    crestFrame: options.crestFrame || 'gold',
+    subtitle: options.subtitle,
+    notes: options.notes || '',
+    extensions: options.extensions || {}
   });
 }
 
@@ -141,16 +148,18 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     house('house-neidr', 'Haus Neidr'),
     house('house-blach', 'Haus Blach'),
     house('house-gallchobhair', 'Clan Gallchobhair', HOUSE_EMBLEMS.gallchobhair),
+    house('house-grianlaoch', 'Haus Grianlaoch', HOUSE_EMBLEMS.grianlaoch),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-pendrag', 'Haus Pendrag'),
     house('house-llwynog', 'Haus Llwynog'),
+    house('house-illwath', 'Haus Illwath', HOUSE_EMBLEMS.illwath),
     house('house-eoghhainn', 'Haus Eóghhainn'),
     house('house-teyrngarch', 'Haus Teyrngarch'),
     house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-penderyn', 'Haus Penderyn'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
-    house('house-dieniddiwr', 'Haus Dieniddiwr'),
+    house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-brithyll', 'Haus Brithyll'),
     house('house-draenog', 'Haus Draenog'),
@@ -218,13 +227,15 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('evaine-illewod', 'Evaine Illewod', 'female', '1650', '1715'),
     person('olwyna-illewod', 'Olwyna Illewod', 'female', '1647', ''),
     person('madoc-illewod', 'Madoc Illewod', 'male', '1649', '1712'),
-    person('ehangwen-illewod', 'Ehangwen Illewod', 'female', '1652', '1720'),
+    person('ehangwen-illewod', 'Ehangwen Illewod', 'male', '1652', '1720'),
     person('brannoc-illewod', 'Brannoc Illewod', 'male', '1652', '1720'),
     person('maygan-draig', 'Maygan', 'female', '1645', '1711', 'house-draig'),
     person('shan-tylluan', 'Shan Tylluan', 'male', '1649', '1723', 'house-tylluan'),
     person('glaw-grawn', 'Glaw Grawn', 'female', '1653', '1711', 'house-grawn'),
-    person('rhondda-llwynog', 'Rhondda Llwynog', 'male', '1654', '1734', 'house-llwynog'),
-    person('rhondda-dieniddiwr', 'Rhondda Dieniddiwr', 'female', '1655', '1715', 'house-dieniddiwr'),
+    person('rhondda-llwynog', 'Rhondda Llwynog', 'female', '1654', '1734', 'house-llwynog'),
+    person('rhondda-dieniddiwr', 'Rhondda Dienyddiwr', 'female', '1655', '1715', 'house-dienyddiwr', {
+      extensions: { registryManagedFields: ['name', 'houseId'] }
+    }),
 
     // 10. Generation – Kinder Selwyns & Maygans / Madocs & Glaws / Brannocs & Rhonddas
     person('arthgal-illewod', 'Arthgal Illewod', 'male', '1664', '1720'),
@@ -244,7 +255,15 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('marared-illewod', 'Marared Illewod', 'male', '1698', ''),
     person('hedd-illewod', 'Hedd Illewod', 'male', '1691', ''),
     person('kerris-illewod', 'Kerris Illewod', 'female', '1695', ''),
-    person('anali-illewod', 'Anali Illewod', 'female', '1697', ''),
+    person('anali-illewod', 'Anali Illewod', 'female', '1697', '', ILLEWOD_HOUSE_ID, {
+      worldPersonId: 'person:haus-illewod:anali-illewod',
+      title: 'Wegverheiratet an Haus Grianlaoch',
+      tags: ['Wegverheiratet'],
+      notes: 'Anali heiratete Tynan Gallchobhair und begründete mit ihm das junge Ritterhaus Grianlaoch in Gallchofaen.',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'title', 'tags', 'notes']
+      }
+    }),
     person('sayres-illewod', 'Sayres Illewod', 'male', '1692', ''),
     person('elen-illewod', 'Elen Illewod', 'female', '1698', ''),
     person('alana-gallchobhair', 'Alana Gallchobhair', 'female', '1697', '', 'house-gallchobhair'),
@@ -252,7 +271,14 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('selsye-wylan', 'Selsye Wylan', 'female', '1700', '', 'house-wylan'),
     person('torri-coedwig', 'Torri Coedwig', 'female', '1698', '', 'house-coedwig'),
     person('ieuan-llwynog', 'Ieuan Llwynog', 'male', '1694', '', 'house-llwynog'),
-    person('tynan-gallchobhair', 'Tynan Gallchobhair', 'male', '1696', '', 'house-gallchobhair'),
+    person('tynan-gallchobhair', 'Tynan Gallchobhair', 'male', '1696', '', 'house-grianlaoch', {
+      worldPersonId: 'person:haus-gallchobhair:tynan-gallchobhair',
+      title: 'Gründer und Ritterherr des Hauses Grianlaoch',
+      notes: 'Tynan kam mit Gallchobhair-Kriegern und Siedlern aus Dun Laog nach Aberon und begründete in Gallchofaen Haus Grianlaoch.',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'title', 'houseId', 'notes']
+      }
+    }),
     person('gwawr-saethwyr', 'Gwawr Saethwyr', 'female', '1699', '', 'house-saethwyr'),
     person('gaenor-teyrngarch', 'Gaenor Teyrngarch', 'male', '1694', '', 'house-teyrngarch'),
 
@@ -264,11 +290,23 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     person('lewelin-illewod', 'Lewelin Illewod', 'male', '1718', ''),
     person('zirilla-illewod', 'Zirilla Illewod', 'female', '1720', ''),
     person('nowy-illewod', 'Nowy Illewod', 'male', '1720', ''),
-    person('dymphna-gallchobhair', 'Dymphna Gallchobhair', 'female', '1724', '', 'house-gallchobhair', {
-      familyRole: 'ward', title: 'Mündel Merwins'
+    person('dymphna-gallchobhair', 'Dymphna Grianlaoch', 'female', '1724', '', 'house-grianlaoch', {
+      worldPersonId: 'person:haus-gallchobhair:dymphna-gallchobhair',
+      familyRole: 'ward',
+      title: 'Aufgenommenes Mündel Graf Merwins',
+      notes: 'Leibliche Tochter Tynans und Analis sowie dynastischer Spross des Hauses Grianlaoch; zur Festigung der Verbindung als Mündel an Graf Merwin Illewod gegeben.',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'name', 'title', 'houseId', 'familyRole', 'notes']
+      }
     }),
-    person('deaglan-gallchobhair', 'Deaglan Gallchobhair', 'male', '1724', '', 'house-gallchobhair', {
-      familyRole: 'ward', title: 'Mündel Merwins'
+    person('deaglan-gallchobhair', 'Deaglan Grianlaoch', 'male', '1724', '', 'house-grianlaoch', {
+      worldPersonId: 'person:haus-gallchobhair:deaglan-gallchobhair',
+      familyRole: 'ward',
+      title: 'Erbe des Hauses Grianlaoch · Aufgenommenes Mündel Graf Merwins',
+      notes: 'Leiblicher Sohn Tynans und Analis sowie Erbe des Hauses Grianlaoch; gemeinsam mit Dymphna als Mündel an Graf Merwin Illewod gegeben.',
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'name', 'title', 'houseId', 'familyRole', 'notes']
+      }
     }),
     person('collen-illewod', 'Collen Illewod', 'female', '1733', ''),
     person('celyn-illewod', 'Célyn Illewod', 'male', '1733', '')
@@ -350,12 +388,43 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     marriedAway('married-away-neidr-karys', 'Haus Neidr', 'marriage-karys-griff', 'house-neidr'),
     marriedAway('married-away-blach-lowri', 'Haus Blach', 'marriage-lowri-gawain', 'house-blach'),
     marriedAway('married-away-tylluan-evaine', 'Haus Tylluan', 'marriage-evaine-shan', 'house-tylluan'),
-    marriedAway('married-away-llwynog-ehangwen', 'Haus Llwynog', 'marriage-ehangwen-rhondda', 'house-llwynog'),
+    createCadetHouseBranch({
+      id: 'cadet-illwath-ehangwen',
+      name: 'Haus Illwath',
+      parentPartnershipId: 'marriage-ehangwen-rhondda',
+      houseId: 'house-illwath',
+      targetFamilyId: 'haus-illwath',
+      emblem: HOUSE_EMBLEMS.illwath,
+      subtitle: 'Begründetes Kadettenhaus',
+      notes: 'Ehangwen Illewod und Rhondda Llwynog begründen Haus Illwath; ihre Nachkommen werden ausschließlich in der Illwath-Akte fortgeführt.'
+    }),
     marriedAway('married-away-blach-carwyn', 'Haus Blach', 'marriage-carwyn-dafydd', 'house-blach'),
     marriedAway('married-away-aderyn-mifawi', 'Haus Aderyn', 'marriage-mifawi-catel', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-pysgod-mairwen', 'Haus Pysgod', 'marriage-mairwen-cynfor', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
     marriedAway('married-away-llwynog-kerris', 'Haus Llwynog', 'marriage-kerris-ieuan', 'house-llwynog'),
-    marriedAway('married-away-gallchobhair-anali', 'Haus Gallchobhair', 'marriage-anali-tynan', 'house-gallchobhair')
+    marriedAway(
+      'married-away-gallchobhair-anali',
+      'Haus Grianlaoch',
+      'marriage-anali-tynan',
+      'house-grianlaoch',
+      HOUSE_EMBLEMS.grianlaoch,
+      {
+        crestFrame: 'silver',
+        subtitle: 'Wegverheiratet an Haus Grianlaoch',
+        notes: 'Anali Illewod und Tynan Gallchobhair begründeten das junge Ritterhaus Grianlaoch. Dymphna und Deaglan werden dort als ihre leiblichen Kinder und hier zusätzlich als Mündel Graf Merwins geführt.',
+        extensions: {
+          registryManagedFields: [
+            'name',
+            'subtitle',
+            'houseId',
+            'targetFamilyId',
+            'emblem',
+            'crestFrame',
+            'notes'
+          ]
+        }
+      }
+    )
   ],
   timeJumps: [
     {
@@ -397,5 +466,16 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     limitGenerations: false,
     showSiblings: true
   },
-  extensions: {}
+  extensions: {
+    sourceRevision: 4,
+    registryManagedRecordFields: ['folderPath'],
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'regionEmblems'
+    ]
+  }
 });

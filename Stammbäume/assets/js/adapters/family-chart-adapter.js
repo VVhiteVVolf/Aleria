@@ -23,6 +23,10 @@ import {
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
+import {
+  alignFamilyChartPartnersOverChildren,
+  createFamilyChartPartnerAlignmentPlan
+} from './family-chart-partner-alignment.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { insertTimeJumpAsSerialBarrier } from './family-chart-time-jump-router.js';
 
@@ -96,18 +100,22 @@ function createChartPerson(person, house, diagnostics, legitimacy = 'unknown') {
   const role = getFamilyRole(person.familyRole);
   const lineageRole = getPersonLineageRole(person.lineageRole);
   const frame = getPersonCardFrame(role.id, lineageRole.id, legitimacy, person.extensions.cardFrameId || '');
+  const cardHouseName = person.extensions.cardHouseName || house?.name || '';
+  const cardHouseEmblem = person.extensions.cardHouseEmblem || house?.emblem || '';
   // Bastarde dürfen das Hauswappen nicht führen und tragen das neutrale Siegel –
   // außer sie wurden nachträglich legitimiert, dann gilt das Hauswappen wieder.
-  const crest = role.id === 'bastard' && legitimacy !== 'legitimized'
-    ? PORTRAIT_PLACEHOLDERS.crest
-    : (house?.emblem || PORTRAIT_PLACEHOLDERS.crest);
+  const crest = frame.displayCrest === false
+    ? ''
+    : role.id === 'bastard' && legitimacy !== 'legitimized'
+      ? PORTRAIT_PLACEHOLDERS.crest
+      : (cardHouseEmblem || PORTRAIT_PLACEHOLDERS.crest);
   return {
     id: person.id,
     data: {
       gender: layoutGender(person, diagnostics),
       name: person.name,
       title: person.title,
-      house: house?.name || '',
+      house: cardHouseName,
       life: formatLifeLine(person),
       portrait: resolvePortraitSource(person),
       crest: lineageRole.isHouseHead ? '' : crest,
@@ -302,12 +310,44 @@ function applyLineageStructure({ family, chartById, selectedParentageByChild, pa
   }
 }
 
-function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
+function createHouseLinkNode(branch, house) {
+  return createVirtualNode({
+    id: `__cadet-${branch.id}`,
+    name: branch.name,
+    title: branch.subtitle || (branch.linkType === 'married-away'
+      ? 'Wegverheiratete Linie'
+      : branch.linkType === 'linked-line'
+        ? 'Fortgeführte Nebenlinie'
+      : branch.linkType === 'ward-away'
+        ? 'Als Mündel vermittelt'
+        : branch.founded ? `Gegründet ${branch.founded}` : ''),
+    house: house?.name || branch.name,
+    portrait: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+    nodeKind: 'cadet-house',
+    targetFamilyId: branch.targetFamilyId,
+    cadetBranchId: branch.id,
+    crestFrame: branch.crestFrame,
+    emblemScale: branch.emblemScale,
+    frameScale: branch.frameScale
+  });
+}
+
+function applyCadetBranches({ family, chartById, parentageLines, houseById, appearancePlan }) {
   family.cadetBranches.forEach(branch => {
-    if (branch.linkType === 'migration-offshoot') return;
+    const isSidePlacedLineEnd = branch.linkType === 'line-extinct'
+      && branch.parentPersonId
+      && branch.extensions?.sidePlacement === true;
+    if (branch.linkType === 'migration-offshoot' || isSidePlacedLineEnd) return;
     const partnership = family.partnerships.find(item => item.id === branch.parentPartnershipId);
     const parentIds = partnership
-      ? partnership.participantIds.filter(personId => chartById.has(personId)).slice(0, 2)
+      ? partnership.participantIds
+        // Bei einer ausdrücklich gespiegelten, kinderlosen Paaransicht gehört
+        // ein endender Hausknoten an genau diese Herkunftsstelle. Der normale
+        // Wegverheiratet-Knoten bleibt dadurch paargebunden, ohne die fortführende
+        // Kinderlinie oder einen Sonderrenderer zu benutzen.
+        .map(personId => appearancePlan.resolvePartnerMirrorId(personId, partnership.id))
+        .filter(personId => chartById.has(personId))
+        .slice(0, 2)
       : branch.parentPersonId && chartById.has(branch.parentPersonId)
         ? [branch.parentPersonId]
         : [];
@@ -333,24 +373,8 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
       return;
     }
     const house = houseById.get(branch.houseId);
-    const nodeId = `__cadet-${branch.id}`;
-    const node = createVirtualNode({
-      id: nodeId,
-      name: branch.name,
-      title: branch.subtitle || (branch.linkType === 'married-away'
-        ? 'Wegverheiratete Linie'
-        : branch.linkType === 'ward-away'
-          ? 'Als Mündel vermittelt'
-          : branch.founded ? `Gegründet ${branch.founded}` : ''),
-      house: house?.name || branch.name,
-      portrait: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
-      nodeKind: 'cadet-house',
-      targetFamilyId: branch.targetFamilyId,
-      cadetBranchId: branch.id,
-      crestFrame: branch.crestFrame,
-      emblemScale: branch.emblemScale,
-      frameScale: branch.frameScale
-    });
+    const node = createHouseLinkNode(branch, house);
+    const nodeId = node.id;
     node.rels.parents = [...parentIds];
     parentIds.forEach(parentId => addUnique(chartById.get(parentId).rels.children, nodeId));
     chartById.set(nodeId, node);
@@ -362,24 +386,29 @@ function applyCadetBranches({ family, chartById, parentageLines, houseById }) {
   });
 }
 
-function createMigrationHouseOffshoots({ family, chartById, houseById }) {
+function createHouseOffshoots({ family, chartById, houseById }) {
   return family.cadetBranches
     .filter(branch => (
-      branch.linkType === 'migration-offshoot'
+      (
+        branch.linkType === 'migration-offshoot'
+        || (branch.linkType === 'line-extinct' && branch.extensions?.sidePlacement === true)
+      )
       && branch.parentPersonId
       && chartById.has(branch.parentPersonId)
     ))
     .map(branch => {
       const house = houseById.get(branch.houseId);
+      const isLineEnd = branch.linkType === 'line-extinct';
       return Object.freeze({
         id: `__house-offshoot-${branch.id}`,
         branchId: branch.id,
         anchorPersonId: branch.parentPersonId,
         targetFamilyId: branch.targetFamilyId,
         name: branch.name,
-        subtitle: branch.subtitle || 'Ausgewanderte Hauslinie',
-        emblem: branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
-        crestFrameAsset: getCrestFrame(branch.crestFrame).asset,
+        subtitle: branch.subtitle || (isLineEnd ? 'Die Linie endet hier' : 'Ausgewanderte Hauslinie'),
+        nodeKind: isLineEnd ? 'line-end' : 'house-offshoot',
+        emblem: isLineEnd ? '' : branch.emblem || house?.emblem || PORTRAIT_PLACEHOLDERS.crest,
+        crestFrameAsset: isLineEnd ? EXTINCT_LINE_FRAME.asset : getCrestFrame(branch.crestFrame).asset,
         emblemScale: branch.emblemScale,
         frameScale: branch.frameScale,
         preferredSide: branch.extensions?.offshootSide === 'after' ? 'after' : 'before'
@@ -425,7 +454,14 @@ function applyOriginHouseStructure({ family, chartById, parentageLines, houseByI
   chartById.set(nodeId, node);
 }
 
-function applyTimeJumps({ family, chartById, parentageLines, personById, diagnostics }) {
+function applyTimeJumps({
+  family,
+  chartById,
+  parentageLines,
+  personById,
+  diagnostics,
+  extraParentageLines
+}) {
   const partnershipById = new Map(family.partnerships.map(partnership => [partnership.id, partnership]));
   const generationDepths = resolveFamilyGenerationDepths(family);
   const occupiedBarrierDepths = new Map();
@@ -549,6 +585,25 @@ function applyTimeJumps({ family, chartById, parentageLines, personById, diagnos
       type: 'time-jump',
       color: relationColor(family, 'claimed'),
       dashed: true
+    });
+
+    timeJump.sharedParentPartnershipIds.forEach(sharedPartnershipId => {
+      if (sharedPartnershipId === timeJump.parentPartnershipId) return;
+      const sharedPartnership = partnershipById.get(sharedPartnershipId);
+      const sharedParentIds = (sharedPartnership?.participantIds || [])
+        .filter(personId => chartById.has(personId))
+        .slice(0, 2);
+      if (!sharedPartnership || !chartById.has(nodeId) || !sharedParentIds.length) return;
+      extraParentageLines.push(Object.freeze({
+        kind: 'parentage',
+        parentIds: Object.freeze([...sharedParentIds]),
+        childId: nodeId,
+        type: 'time-jump',
+        color: relationColor(family, 'claimed'),
+        dashed: true,
+        timeJumpId: timeJump.id,
+        sourcePartnershipId: sharedPartnershipId
+      }));
     });
   });
 }
@@ -770,10 +825,17 @@ export function toFamilyChartData(input, options = {}) {
   });
 
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
-  applyCadetBranches({ family, chartById, parentageLines, houseById });
+  applyCadetBranches({ family, chartById, parentageLines, houseById, appearancePlan });
   applyOriginHouseStructure({ family, chartById, parentageLines, houseById });
-  applyTimeJumps({ family, chartById, parentageLines, personById, diagnostics });
-  const houseOffshoots = createMigrationHouseOffshoots({ family, chartById, houseById });
+  applyTimeJumps({
+    family,
+    chartById,
+    parentageLines,
+    personById,
+    diagnostics,
+    extraParentageLines
+  });
+  const houseOffshoots = createHouseOffshoots({ family, chartById, houseById });
 
   cyclePlan.detachedPersonIds.forEach(childId => {
     const parentIds = detachFamilyChartParentLinks(chartById, childId);
@@ -1088,6 +1150,14 @@ export function createFamilyChartSession(config) {
 
   configureCard();
   applyView(false);
+  chart.setBeforeUpdate?.(() => {
+    const alignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
+    alignFamilyChartPartnersOverChildren({
+      tree: chart.store?.getTree?.(),
+      plan: alignmentPlan,
+      orientation: view.orientation
+    });
+  });
   chart.setAfterUpdate?.(options => {
     linkRenderer.refresh(options?.transition_time);
     houseOffshootRenderer.refresh(options?.transition_time);

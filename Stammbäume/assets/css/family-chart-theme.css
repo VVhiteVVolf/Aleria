@@ -353,6 +353,29 @@
   left: 41%;
 }
 
+/* Der HolyFrame besitzt ein weiter rechts und tiefer sitzendes Portraitoval sowie
+   einen breiten Strahlenkranz über der Kartenmitte. Portrait, Farbfläche und Text
+   folgen deshalb der tatsächlichen Innenkontur des Bildes statt dem Standardraster. */
+.aleria-person-card.frame-holy .aleria-person-card__portrait-backdrop,
+.aleria-person-card.frame-holy .aleria-person-card__portrait {
+  top: 18.5%;
+  left: 8.5%;
+  width: 30.5%;
+  height: 65.5%;
+}
+
+.aleria-person-card.frame-holy .aleria-person-card__fill {
+  inset: 18.5% 7.2% 16% 40.5%;
+  clip-path: none;
+}
+
+.aleria-person-card.frame-holy .aleria-person-card__text {
+  top: 30%;
+  right: 8.5%;
+  bottom: 12%;
+  left: 42.5%;
+}
+
 .aleria-crest-node {
   display: flex !important;
   flex-direction: column;
@@ -576,6 +599,18 @@
   stroke: #b88b37;
   stroke-width: 3px;
   pointer-events: none;
+}
+
+.aleria-house-offshoot--line-end {
+  cursor: default;
+}
+
+.aleria-house-offshoot--line-end .aleria-house-offshoot__seal {
+  background: transparent;
+}
+
+.aleria-house-offshoot-link--line-end {
+  stroke: #5b544c;
 }
 
 .aleria-line-end {

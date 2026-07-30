@@ -29,7 +29,11 @@ export const PERSON_CARD_FRAMES = Object.freeze({
   adopted: personFrame('person-adopted.png', 47.8, 12.7),
   // Anders proportioniert als die übrigen Rahmen (Weltenbaum-Medaillon sitzt tiefer
   // und schmaler als das Standard-Siegel), daher eigene Justierung statt der Defaults.
-  druid: personFrame('DruidischerRahmen.png', 50, 16, 'druid', { width: 13, height: 19.5 })
+  druid: personFrame('DruidischerRahmen.png', 50, 16, 'druid', { width: 13, height: 19.5 }),
+  holy: Object.freeze({
+    ...personFrame('HolyFrame.png', 50, 12.6, 'holy'),
+    displayCrest: false
+  })
 });
 
 // Ringmitte des Medaillons im Rahmenbild: 47,8 % / 12,6 %; Wappen etwas kleiner,

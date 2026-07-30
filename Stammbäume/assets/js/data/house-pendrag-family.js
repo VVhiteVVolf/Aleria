@@ -1,6 +1,9 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
-import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import {
+  VORTIGERNS_RUH_HOUSE_EMBLEMS,
+  VORTIGERNS_RUH_HOUSE_PROFILES
+} from './vortigerns-ruh-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -14,7 +17,13 @@ import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
-  pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
+  pendrag: VORTIGERNS_RUH_HOUSE_EMBLEMS.pendrag,
+  ceirwyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.ceirwyn,
+  dienyddiwr: VORTIGERNS_RUH_HOUSE_EMBLEMS.dienyddiwr,
+  dyngwn: VORTIGERNS_RUH_HOUSE_EMBLEMS.dyngwn,
+  fiachraoin: VORTIGERNS_RUH_HOUSE_EMBLEMS.fiachraoin,
+  grael: VORTIGERNS_RUH_HOUSE_EMBLEMS.grael,
+  penderyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.penderyn,
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
@@ -153,9 +162,9 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     id: 'haus-pendrag',
     title: 'Haus Pendrag',
     motto: '',
-    description: 'Die königliche Dynastie des Hauses Pendrag von Vortigern, dem ersten König Cenyrs, bis zur Regentschaft König Tristans im Jahr 1740.',
+    description: 'Die königliche Dynastie des Hauses Pendrag aus der Königlichen Grafschaft Vortigerns Ruh und der Königlichen Baronie Tanwens Flamme, von Vortigern, dem ersten König Cenyrs, bis zur Regentschaft König Tristans im Jahr 1740.',
     emblem: HOUSE_EMBLEMS.pendrag,
-    houseProfile: CENYR_COUNTY_HOUSE_PROFILES.pendrag
+    houseProfile: VORTIGERNS_RUH_HOUSE_PROFILES.pendrag
   },
   houses: [
     house(PENDRAG_HOUSE_ID, 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
@@ -167,19 +176,19 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-cumhail', 'Haus Cumhail'),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-diulb', 'Haus Diulb'),
-    house('house-fiachraoin', 'Haus Fiachraoin'),
+    house('house-fiachraoin', 'Clan Fiachraoin', HOUSE_EMBLEMS.fiachraoin),
     house('house-urquhart', 'Haus Urquhart'),
-    house('house-dyngwn', 'Haus Dyngwn'),
-    house('house-ceirwyn', 'Haus Ceirwyn'),
+    house('house-dyngwn', 'Haus Dyngwn', HOUSE_EMBLEMS.dyngwn),
+    house('house-ceirwyn', 'Haus Ceirwyn', HOUSE_EMBLEMS.ceirwyn),
     house('house-vaeren', 'Haus Vaeren'),
     house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
-    house('house-grael', 'Haus Grael'),
+    house('house-grael', 'Haus Grael', HOUSE_EMBLEMS.grael),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-illewod', 'Haus Illewod'),
     house('house-draenog', 'Haus Draenog'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
-    house('house-dieniddiwr', 'Haus Dieniddiwr'),
-    house('house-penderyn', 'Haus Penderyn'),
+    house('house-dienyddiwr', 'Haus Dienyddiwr', HOUSE_EMBLEMS.dienyddiwr),
+    house('house-penderyn', 'Haus Penderyn', HOUSE_EMBLEMS.penderyn),
     house('house-cetchathach', 'Haus Cétchathach'),
     house('house-roth', 'Haus Roth'),
     house('house-neidr', 'Haus Neidr'),
@@ -288,7 +297,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     person('noirin-urquhart', 'Nóirin Urquhart', 'female', '1625', '1678', 'house-urquhart'),
     person('howell-neidr', 'Howell Neidr', 'male', '1623', '1701', 'house-neidr'),
     person('telyn-grawn', 'Telyn Grawn', 'female', '1633', '1707', 'house-grawn'),
-    person('hefin-dieniddiwr', 'Hefin Dieniddiwr', 'female', '1632', '1700', 'house-dieniddiwr'),
+    person('hefin-dieniddiwr', 'Hefin Dienyddiwr', 'female', '1632', '1700', 'house-dienyddiwr'),
 
     // 13. Generation
     person('uther-1643-pendrag', 'Uther Pendrag', 'male', '1643', '1678'),
@@ -314,7 +323,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     person('trahayarn-grael', 'Trahayarn Grael', 'male', '1669', '', 'house-grael'),
 
     // 15. Generation
-    person('talla-ceirwyn', 'Talla Ceirwyn', 'female', '1670', '', 'house-ceirwyn'),
+    person('talla-ceirwyn', 'Talla Ceirwyn', 'female', '1670', '1720', 'house-ceirwyn'),
     person('dystan-pendrag', 'Dystan Pendrag', 'male', '1691', '1720'),
     person('tristan-pendrag', 'Tristan Pendrag', 'male', '1694', '', PENDRAG_HOUSE_ID, { title: 'Regierender König von Cenyr' }),
     person('cei-pendrag', 'Cei Pendrag', 'male', '1696', '1720'),
@@ -438,7 +447,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
   cadetBranches: [
     cadetHouse(
       'cadet-grael-trystan', 'Haus Grael', 'marriage-malltwyn-trystan', 'house-grael',
-      'Trystan Pendrag und Malltwyn Draig begründen das Kadettenhaus Grael.'
+      'Trystan Pendrag und Malltwyn Draig begründen das Kadettenhaus Grael.', HOUSE_EMBLEMS.grael
     ),
     marriedAway('married-away-draig-tanwen', 'Haus Draig', 'marriage-artus-tanwen', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-arianwyn', 'Haus Draig', 'marriage-godwyn-arianwyn', 'house-draig', HOUSE_EMBLEMS.draig),
@@ -446,14 +455,14 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     marriedAway('married-away-draig-cerridwyn', 'Haus Draig', 'marriage-marared-cerridwyn', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-arianwen', 'Haus Draig', 'marriage-cunedda-arianwen', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-draig-angharad', 'Haus Draig', 'marriage-rhodri-angharad', 'house-draig', HOUSE_EMBLEMS.draig),
-    marriedAway('married-away-ceirwyn-rhoslyn', 'Haus Ceirwyn', 'marriage-rhoslyn-ceirwyn', 'house-ceirwyn'),
+    marriedAway('married-away-ceirwyn-rhoslyn', 'Haus Ceirwyn', 'marriage-rhoslyn-ceirwyn', 'house-ceirwyn', HOUSE_EMBLEMS.ceirwyn),
     marriedAway('married-away-neidr-sulwen', 'Haus Neidr', 'marriage-sulwen-howell', 'house-neidr'),
     marriedAway('married-away-pysgod-tarwen', 'Haus Pysgod', 'marriage-tarwen-gingalain', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
     marriedAway('married-away-wylan-iesin', 'Haus Wylan', 'marriage-iesin-vorath', 'house-wylan'),
     marriedAway('married-away-illewod-blodeuyn', 'Haus Illewod', 'marriage-blodeuyn-keudawg', 'house-illewod'),
     marriedAway('married-away-aderyn-caradwyn', 'Haus Aderyn', 'marriage-caradwyn-dungarth', 'house-aderyn', HOUSE_EMBLEMS.aderyn),
     marriedAway('married-away-urquhart-meeghan', 'Haus Urquhart', 'marriage-meeghan-cainneach', 'house-urquhart'),
-    marriedAway('married-away-grael-rhiannon', 'Haus Grael', 'marriage-rhiannon1673-trahayarn', 'house-grael')
+    marriedAway('married-away-grael-rhiannon', 'Haus Grael', 'marriage-rhiannon1673-trahayarn', 'house-grael', HOUSE_EMBLEMS.grael)
   ],
   timeJumps: [
     {
@@ -510,6 +519,8 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceRevision: 1
+    sourceRevision: 3,
+    registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
+    registryManagedRecordFields: ['folderPath']
   }
 });

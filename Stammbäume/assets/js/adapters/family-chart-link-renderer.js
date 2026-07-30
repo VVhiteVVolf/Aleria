@@ -2,6 +2,7 @@ import { FAMILY_CHART_CARD_LAYOUT } from './family-chart-card-renderer.js';
 import { collectFamilyChartCardPositions } from './family-chart-layout-dom.js';
 
 const DEFAULT_CORNER_RADIUS = 18;
+const ALIGNED_CARD_TOLERANCE = 1;
 
 function asPoint(value) {
   if (Array.isArray(value) && value.length >= 2) {
@@ -137,6 +138,31 @@ function partnershipRoute(first, second, orientation, routeSide = 'after') {
   return [first, { x: laneX, y: first.y }, { x: laneX, y: second.y }, second];
 }
 
+function alignedEngagementRoute(first, second, orientation) {
+  if (orientation !== 'horizontal') {
+    if (Math.abs(first.y - second.y) > ALIGNED_CARD_TOLERANCE) return [];
+    const left = first.x <= second.x ? first : second;
+    const right = left === first ? second : first;
+    // FamilyChart positioniert Karten über ihren Mittelpunkt. Die gerade
+    // Verlobungslinie liegt deshalb auf der gemeinsamen y-Achse und beginnt
+    // beziehungsweise endet nur um die halbe Kartenbreite versetzt.
+    const lineY = (left.y + right.y) / 2;
+    return [
+      { x: left.x + (FAMILY_CHART_CARD_LAYOUT.width / 2), y: lineY },
+      { x: right.x - (FAMILY_CHART_CARD_LAYOUT.width / 2), y: lineY }
+    ];
+  }
+
+  if (Math.abs(first.x - second.x) > ALIGNED_CARD_TOLERANCE) return [];
+  const top = first.y <= second.y ? first : second;
+  const bottom = top === first ? second : first;
+  const lineX = (top.x + bottom.x) / 2;
+  return [
+    { x: lineX, y: top.y + (FAMILY_CHART_CARD_LAYOUT.height / 2) },
+    { x: lineX, y: bottom.y - (FAMILY_CHART_CARD_LAYOUT.height / 2) }
+  ];
+}
+
 export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation = 'vertical') {
   if (extraLink.kind === 'parentage') {
     const parentPoints = (extraLink.parentIds || []).map(parentId => cardPositions.get(parentId)).filter(Boolean);
@@ -147,7 +173,13 @@ export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orient
 
   const first = cardPositions.get(extraLink.firstId);
   const second = cardPositions.get(extraLink.secondId);
-  return first && second ? partnershipRoute(first, second, orientation, extraLink.routeSide) : [];
+  if (!first || !second) return [];
+  const directEngagementRoute = extraLink.type === 'engagement'
+    ? alignedEngagementRoute(first, second, orientation)
+    : [];
+  return directEngagementRoute.length
+    ? directEngagementRoute
+    : partnershipRoute(first, second, orientation, extraLink.routeSide);
 }
 
 export function createFamilyChartLinkRenderer({

@@ -1,4 +1,10 @@
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
+import { AEHRENTAL_HOUSE_PROFILES } from './aehrental-house-profiles.js';
+import { SONNENKUESTE_HOUSE_PROFILES } from './sonnenkueste-house-profiles.js';
+import { SILBERINSEL_HOUSE_PROFILES } from './silberinsel-house-profiles.js';
+import { TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
+import { VORTIGERNS_RUH_HOUSE_PROFILES } from './vortigerns-ruh-house-profiles.js';
+import { WEIDEBUCHT_HOUSE_PROFILES } from './weidebucht-house-profiles.js';
 
 export const CENYR_REGION_EMBLEMS = Object.freeze({
   kingdom: 'assets/images/regions/koenigreich-cenyr.png',
@@ -14,8 +20,10 @@ export const CENYR_REGION_EMBLEMS = Object.freeze({
   })
 });
 
-// Diese acht Grafschaften haben (noch) keine überlieferte Unterteilung in Baronien; ihr
-// Grafenhaus sitzt direkt am Grafschaftssitz. Anders als profile() in
+// Drei dieser acht Grafschaften haben (noch) keine überlieferte Unterteilung in
+// Baronien; ihr Grafenhaus sitzt direkt am Grafschaftssitz. Vortigerns Ruh,
+// Weidebucht, Sonnenküste, Ährental, Silberinsel und Tal der Milane werden
+// inzwischen in eigenen Feature-Modulen mit ihren Herrschaften geführt. Anders als profile() in
 // celtigerns-wacht-house-profiles.js (immer 4-stufiger Kingdom/County/Barony/Seat-Pfad)
 // wird hier bewusst KEIN Platzhalter-Baronie-Name erfunden: createHouseProfileFromFolderPath
 // erlaubt seat als direktes Override statt über einen 4. Pfad-Index, wodurch die
@@ -78,12 +86,12 @@ function countyProfile(rankId, county, seat, options = {}) {
 //            (carwyn-aderyn 1675-, gwendolyn-aderyn 1695-), house-pendrag
 //            (rhiannon-aderyn, dungarth-aderyn 1643-1705)
 export const CENYR_COUNTY_HOUSE_PROFILES = Object.freeze({
-  wylan: countyProfile('county', 'Weidebucht', 'Cerrigarth'),
-  illewod: countyProfile('county', 'Sonnenküste', 'Aberon'),
-  pendrag: countyProfile('royal', 'Vortigerns Ruh', 'Mathragon'),
-  grawn: countyProfile('county', 'Ährental', 'Glyndraith'),
-  neidr: countyProfile('county', 'Silberinsel', 'Llanvane'),
+  wylan: WEIDEBUCHT_HOUSE_PROFILES.wylan,
+  illewod: SONNENKUESTE_HOUSE_PROFILES.illewod,
+  pendrag: VORTIGERNS_RUH_HOUSE_PROFILES.pendrag,
+  grawn: AEHRENTAL_HOUSE_PROFILES.grawn,
+  neidr: SILBERINSEL_HOUSE_PROFILES.neidr,
   pysgod: countyProfile('county', 'Graue Weite', 'Tredegar'),
   arth: countyProfile('county', 'Klaueninsel', 'Talgarth'),
-  aderyn: countyProfile('county', 'Tal der Milane', 'Penbryn')
+  aderyn: TAL_DER_MILANE_HOUSE_PROFILES.aderyn
 });

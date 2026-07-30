@@ -97,7 +97,7 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-tir-addawol', 'Haus Tir Addawol'),
     house('house-gwialen', 'Haus Gwialen'),
-    house('house-lwynog', 'Haus Lwynog'),
+    house('house-llwynog', 'Haus Llwynog'),
     house('house-mwyalchen', 'Haus Mwyalchen'),
     house('house-eirce', 'Haus Eirce'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
@@ -171,7 +171,10 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
       worldPersonId: 'person--haus-gafyr--kelyddon-gafyr'
     }),
     person('alicyn-draig', 'Alicyn Draig', 'female', '1697', '', 'house-draig'),
-    person('tudwallon-lwynog', 'Tudwallon Lwynog', 'male', '1695', '', 'house-lwynog'),
+    person('tudwallon-lwynog', 'Tudwallon Llwynog', 'male', '1695', '', 'house-llwynog', {
+      worldPersonId: 'person--haus-llwynog--tudwallon-lwynog',
+      notes: 'Die historische technische ID bleibt zur Datenkompatibilität unverändert; Hausname und Weltidentität verwenden die kanonische Schreibweise Llwynog.'
+    }),
     person('ffion-gwefrydd', 'Ffion Gwefrydd', 'female', '1700', '', 'house-gwefrydd'),
     person('eleri-marwolaeth', 'Eleri Marwolaeth', 'female', '1698', '', 'house-marwolaeth'),
     person('izolda-arwydd', 'Izolda Arwydd', 'female', '1701', '', 'house-arwydd', {
@@ -325,10 +328,10 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     }),
     createMarriedAwayBranch({
       id: 'married-away-lwynog',
-      name: 'Haus Lwynog',
+      name: 'Haus Llwynog',
       parentPartnershipId: 'marriage-aerwyn-tudwallon',
-      houseId: 'house-lwynog',
-      targetFamilyId: 'haus-lwynog'
+      houseId: 'house-llwynog',
+      targetFamilyId: 'haus-llwynog'
     })
   ],
   timeJumps: [
@@ -364,8 +367,8 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd und zum Almanach verwenden gemeinsame feste Personen-IDs.',
+    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

@@ -139,13 +139,16 @@ function createOffshootCard(documentRef, offshoot, layout) {
   cardContainer.dataset.houseOffshootId = offshoot.id;
   cardContainer.style.transform = `translate(${layout.x}px, ${layout.y}px) translate(-50%, -50%)`;
 
-  const button = documentRef.createElement('button');
-  button.type = 'button';
-  button.className = 'aleria-house-offshoot';
-  button.dataset.action = 'open-house-offshoot';
-  button.dataset.familyId = offshoot.targetFamilyId;
-  button.dataset.branchId = offshoot.branchId;
-  button.setAttribute('aria-label', `${offshoot.name} öffnen`);
+  const isLineEnd = offshoot.nodeKind === 'line-end';
+  const button = documentRef.createElement(isLineEnd ? 'div' : 'button');
+  if (!isLineEnd) {
+    button.type = 'button';
+    button.dataset.action = 'open-house-offshoot';
+    button.dataset.familyId = offshoot.targetFamilyId;
+    button.dataset.branchId = offshoot.branchId;
+  }
+  button.className = `aleria-house-offshoot${isLineEnd ? ' aleria-house-offshoot--line-end' : ''}`;
+  button.setAttribute('aria-label', isLineEnd ? offshoot.name : `${offshoot.name} öffnen`);
   button.title = offshoot.subtitle ? `${offshoot.name} – ${offshoot.subtitle}` : offshoot.name;
   button.style.setProperty('--offshoot-emblem-scale', String(offshoot.emblemScale || 0.86));
   button.style.setProperty('--offshoot-frame-scale', String(offshoot.frameScale || 1));
@@ -207,7 +210,10 @@ export function createFamilyChartHouseOffshootRenderer({
       if (!layout) return;
 
       const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
-      path.setAttribute('class', 'aleria-house-offshoot-link');
+      path.setAttribute(
+        'class',
+        `aleria-house-offshoot-link${offshoot.nodeKind === 'line-end' ? ' aleria-house-offshoot-link--line-end' : ''}`
+      );
       path.setAttribute('fill', 'none');
       path.setAttribute('d', createRoundedOrthogonalPath(layout.route, 10));
       path.dataset.branchId = offshoot.branchId;

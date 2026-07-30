@@ -456,8 +456,20 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Grawn-Tabelle und ihrer Stammbaumgrafik. Die Galeriezeiträume der Grafen sind Amtszeiten und wurden nicht als Geburtsdaten übernommen. Der einzige sichtbare Zeitsprung liegt nach Iorwerth und Aranrhod; die sieben anschließend belegten Geschwister werden wegen der unbekannten Zwischengenerationen nur als wahrscheinliche Linienfortsetzung geführt. Die doppelte Darstellung Yvains und Ceridwens ist eine einzige Ehe. Die Stammbaumgrafik belegt Annegret Skogg, während ihre Partnerkarte in der Hierarchietabelle namenlos bleibt. Nerys bleibt entsprechend der Quelle Wivern. Efas Todesjahr 1691 und Neithons Geburtsjahr 1718 folgen den bereits kanonischen Gegenakten. Mordreds sechs Bastarde mit Glada und seine zwei Bastarde mit Gwenllian sind über getrennte Affären, Elternschaften und sichtbare Kartentitel zugeordnet. Vollständig anonyme Verlobungsvorlagen sowie unverbundene Hofamts-Platzhalter wurden nicht zu Personen erhoben. Die Quelle nennt ausdrücklich keine Kadettenhäuser.',
+    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Grawn-Tabelle und ihrer Stammbaumgrafik. Die Galeriezeiträume der Grafen sind Amtszeiten und wurden nicht als Geburtsdaten übernommen. Der einzige sichtbare Zeitsprung liegt nach Iorwerth und Aranrhod; die sieben anschließend belegten Geschwister werden wegen der unbekannten Zwischengenerationen nur als wahrscheinliche Linienfortsetzung geführt. Die doppelte Darstellung Yvains und Ceridwens ist eine einzige Ehe. Die Stammbaumgrafik belegt Annegret Skogg, während ihre Partnerkarte in der Hierarchietabelle namenlos bleibt. Nerys bleibt entsprechend der Quelle Wivern. Efas Todesjahr 1691 und Neithons Geburtsjahr 1718 folgen den bereits kanonischen Gegenakten. Mordreds sechs Bastarde mit Glada und seine zwei Bastarde mit Gwenllian sind über getrennte Affären, Elternschaften und sichtbare Kartentitel zugeordnet. Vollständig anonyme Verlobungsvorlagen sowie unverbundene Hofamts-Platzhalter wurden nicht zu Personen erhoben. Die Quelle nennt ausdrücklich keine Kadettenhäuser. Seit Revision 2 liegt Glyndraith verbindlich in Tristams Ebene; ältere direkte Ährental/Glyndraith-Registerpfade werden auf die vierstufige Hierarchie migriert.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
   }
 });

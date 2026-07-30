@@ -169,7 +169,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     house('house-crefyddol', 'Haus Crefyddol'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
-    house('house-ceirwynn', 'Haus Ceirwynn'),
+    house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-eirce', 'Haus Eirce'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-illysywen', 'Haus Illysywen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
@@ -328,7 +328,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('hewet-wylan', 'Hewet Wylan', 'male', '1670', '1720', 'house-wylan'),
     person('heledd-gwyvern', 'Heledd Gwyvern', 'female', '1670', '', 'house-gwyvern'),
     person('mailgwin-wyrm', 'Mailgwin Wyrm', 'male', '1669', '', 'house-wyrm'),
-    person('rihanna-ceirwynn', 'Rihanna Ceirwynn', 'female', '1678', '', 'house-ceirwynn'),
+    person('rihanna-ceirwynn', 'Rihanna Ceirwyn', 'female', '1678', '', 'house-ceirwyn'),
     person('beibhinn-eirce', 'Beibhinn Eirce', 'female', '1669', '', 'house-eirce'),
     person('bleddyn-blodyn', 'Bleddyn Blodyn', 'male', '1669', '1720', 'house-blodyn'),
     person('alaw-grawn', 'Alaw Grawn', 'female', '1676', '1720', 'house-grawn'),
@@ -384,7 +384,9 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
       status: 'unknown',
       extensions: { relationshipPlaceholder: { kind: 'betrothed', replaceable: true } }
     }),
-    person('revelyn-penderyn', 'Revelyn Penderyn', 'female', '1718', '', 'house-pendrag'),
+    person('revelyn-penderyn', 'Revelyn Penderyn', 'female', '1718', '', 'house-penderyn', {
+      extensions: { registryManagedFields: ['worldPersonId', 'houseId', 'familyRole'] }
+    }),
     person('alaweyn-grawn', 'Alaweyn Grawn', 'female', '1716', '', 'house-grawn'),
     person('unknown-isobel-betrothed', 'Unbekannter Verlobter', 'male', '????', '', '', {
       status: 'unknown',
@@ -671,6 +673,6 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 6
+    sourceRevision: 7
   }
 });

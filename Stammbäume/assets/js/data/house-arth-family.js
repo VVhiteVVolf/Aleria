@@ -282,7 +282,11 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     person('afanen-1660-arth', 'Afanen Arth', 'female', '1660', ''),
     person('elisud-crafanc', 'Elisud Crafanc', 'male', '1661', '', 'house-crafanc'),
     person('ffodor-arth', 'Ffodor Arth', 'male', '1662', '1723'),
-    person('ffionwen-penderyn', 'Ffionwen Penderyn', 'female', '????', '????', 'house-penderyn'),
+    person('ffionwen-penderyn', 'Ffionwen Penderyn', 'female', '1662', '1733', 'house-penderyn', {
+      extensions: {
+        registryManagedFields: ['worldPersonId', 'birth', 'death', 'status', 'houseId']
+      }
+    }),
 
     person('run-arth', 'Run Arth', 'male', '1669', '1720', ARTH_HOUSE_ID, { title: 'Graf von Talgarth 1698–1720' }),
     person('morfadd-arth', 'Morfadd Arth', 'female', '1670', ''),
@@ -303,8 +307,12 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     person('morgan-selwyn', 'Morgan Selwyn', 'male', '1678', '', 'house-selwyn'),
     person('griff-arth', 'Griff Arth', 'male', '1680', '1696'),
     person('jowna-arfordir', 'Jowna Arfordir', 'female', '1680', '1696', 'house-arfordir'),
-    person('cadfael-1681-arth', 'Cadfael Arth', 'male', '1681', ''),
-    person('gwendolen-marwolaeth', 'Gwendolen Marwolaeth', 'female', '????', '', 'house-marwolaeth'),
+    person('cadfael-1681-arth', 'Cadfael Arth', 'male', '1681', '1740', ARTH_HOUSE_ID, {
+      extensions: { registryManagedFields: ['death'] }
+    }),
+    person('gwendolen-marwolaeth', 'Gwendolen Marwolaeth', 'female', '1679', '', 'house-marwolaeth', {
+      extensions: { registryManagedFields: ['birth'] }
+    }),
     person('gwennan-arth', 'Gwennan Arth', 'female', '1678', '1700'),
     person('cerdd-wivern', 'Cerdd Wivern', 'male', '1676', '', 'house-wivern'),
 
@@ -492,8 +500,8 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol, Morthwyll, Eirth und Selwyn hängen jeweils direkt unter ihrem Gründerpaar. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
+    sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol, Morthwyll, Eirth und Selwyn hängen jeweils direkt unter ihrem Gründerpaar. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 4
   }
 });

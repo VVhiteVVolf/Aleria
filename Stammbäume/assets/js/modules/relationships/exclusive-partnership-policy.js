@@ -163,6 +163,9 @@ export function applyExclusivePartnershipChange(familyInput, values) {
     });
     family.timeJumps.forEach(timeJump => {
       if (removedPartnershipIds.has(timeJump.parentPartnershipId)) timeJump.parentPartnershipId = retainedPartnershipId;
+      timeJump.sharedParentPartnershipIds = [...new Set(timeJump.sharedParentPartnershipIds.map(partnershipId => (
+        removedPartnershipIds.has(partnershipId) ? retainedPartnershipId : partnershipId
+      )))].filter(partnershipId => partnershipId !== timeJump.parentPartnershipId);
     });
     family.parentages.forEach(parentage => {
       if (!removedPartnershipIds.has(parentage.partnershipId)) return;

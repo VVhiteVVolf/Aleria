@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
 
@@ -9,6 +10,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  sgwarnog: AEHRENTAL_HOUSE_EMBLEMS.sgwarnog,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
 });
@@ -150,7 +152,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     { id: 'house-arwydd', name: 'Haus Arwydd', motto: '', emblem: HOUSE_EMBLEMS.arwydd, status: 'active' },
     { id: 'house-wylan', name: 'Haus Wylan', motto: '', emblem: HOUSE_EMBLEMS.wylan, status: 'active' },
     { id: 'house-tiwna', name: 'Haus Tiwna', motto: '', emblem: '', status: 'active' },
-    { id: 'house-swgarnog', name: 'Haus Swgarnog', motto: '', emblem: '', status: 'active' },
+    { id: 'house-sgwarnog', name: 'Haus Sgwarnog', motto: '', emblem: HOUSE_EMBLEMS.sgwarnog, status: 'active' },
     { id: 'house-rosenblueht', name: 'Haus Rosenblüht', motto: '', emblem: '', status: 'active' },
     { id: 'house-cein', name: 'Haus Céin', motto: '', emblem: '', status: 'active' }
   ],
@@ -214,7 +216,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     member('meriel-wyrm', 'Meriel', 'female', '1701'),
     spouse('neala-wylan', 'Neala Wylan', 'unknown', '1693', '', 'house-wylan'),
     spouse('cadfan-tiwna', 'Cadfan Tiwna', 'male', '1696', '', 'house-tiwna'),
-    spouse('mabli-swgarnog', 'Mabli Swgarnog', 'female', '1694', '', 'house-swgarnog'),
+    spouse('mabli-swgarnog', 'Mabil Sgwarnog', 'female', '1694', '', 'house-sgwarnog'),
     spouse('anouk-rosenblueht', 'Anouk Rosenblüht', 'female', '1699', '', 'house-rosenblueht'),
     spouse('idwallon-blach', 'Idwallon Blach', 'male', '1704', '', 'house-blach'),
     spouse('marmaduke-saethwyr', 'Marmaduke Saethwyr', 'male', '1695', '', 'house-saethwyr'),
@@ -348,6 +350,6 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Externe Portraitquellen wurden als lokale Projektdateien gesichert; unbenannte Verlobte wurden nicht als Personen angelegt.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

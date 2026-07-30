@@ -1,7 +1,7 @@
 // Rangfolge in Cenyr: König > Graf > Baron > Ritterfürst > Ritterherr > einfacher Ritter > Bürger.
 // Albische Clans (Crannath) verwenden eigene Titel: Laird=Ritterfürst, Dún Tiarna=Baron,
-// Mor Tiarna=Graf, Ard Tiarna=Herzog/Fürst, Ri Tiarna=König/Kaiser. Bislang sind nur
-// 'dun-tiarna' und 'ard-tiarna' verdrahtet (je nach Bedarf); sie teilen sich die
+// Mor Tiarna=Graf, Ard Tiarna=Herzog/Fürst, Ri Tiarna=König/Kaiser. Die verdrahteten
+// albischen Titel teilen sich jeweils die Rangstufe ihres Cenyr-Äquivalents.
 // Rangstufe (order) ihres Cenyr-Äquivalents.
 const RANK_DEFINITIONS = Object.freeze({
   unknown: Object.freeze({ id: 'unknown', label: 'Nicht vermerkt', order: 99 }),
@@ -9,6 +9,7 @@ const RANK_DEFINITIONS = Object.freeze({
   patrician: Object.freeze({ id: 'patrician', label: 'Patrizierhaus', order: 15 }),
   ducal: Object.freeze({ id: 'ducal', label: 'Herzogsgeschlecht', order: 20 }),
   county: Object.freeze({ id: 'county', label: 'Grafengeschlecht', order: 30 }),
+  'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mór Tiarna (Graf)', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
   'ard-tiarna': Object.freeze({ id: 'ard-tiarna', label: 'Ard Tiarna (Herzog/Fürst)', order: 20 }),
@@ -26,6 +27,7 @@ export const HOUSE_RANKS = RANK_DEFINITIONS;
 // Stand-Icons zeigen den Rang eines Hauses; nicht jeder Rang hat bislang ein eigenes Icon.
 const RANK_ICONS = Object.freeze({
   county: 'assets/images/ranks/graf.png',
+  'mor-tiarna': 'assets/images/ranks/graf.png',
   barony: 'assets/images/ranks/baron.png',
   // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.
   'dun-tiarna': 'assets/images/ranks/baron.png',

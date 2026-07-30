@@ -263,10 +263,14 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     person('rhydderch-llwynog', 'Rhydderch Llwynog', 'male', '1624', '1696', 'house-llwynog', {
       notes: 'Das Todesjahr ist in der Quelle mit einem Fragezeichen versehen.'
     }),
-    person('gwindor-crefydoll', 'Gwindor Crefydoll', 'male', '1631', '1673', 'house-crefyddol'),
+    person('gwindor-crefydoll', 'Gwindor Crefyddol', 'male', '1631', '1673', 'house-crefyddol', {
+      extensions: { registryManagedFields: ['name'] }
+    }),
 
     person('gendry-wylan', 'Gendry Wylan', 'male', '1653', '1716'),
-    person('enid-wylan', 'Enid Wylan', 'female', '1655', '????'),
+    person('enid-wylan', 'Enid Wylan', 'female', '1655', '1729', WYLAN_HOUSE_ID, {
+      extensions: { registryManagedFields: ['death'] }
+    }),
     person('malvina-wylan', 'Malvina Wylan', 'female', '1657', '1700'),
     person('iolyn-wylan', 'Iolyn Wylan', 'male', '1650', '1720'),
     person('glynis-wylan', 'Glynis Wylan', 'female', '1660', '1715'),
@@ -295,7 +299,9 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     person('liadan-cetchathach', 'Liadan Cétchathach', 'female', '1674', '', 'house-cetchathach'),
     person('gwynham-tir-addawol', 'Gwynham Tir Addawol', 'male', '1670', '', 'house-tir-addawol'),
     person('anarawd-llwynog', 'Anarawd Llwynog', 'male', '1671', '', 'house-llwynog'),
-    person('kimball-crefydoll', 'Kimball Crefydoll', 'male', '1673', '', 'house-crefyddol'),
+    person('kimball-crefydoll', 'Kimball Crefyddol', 'male', '1673', '', 'house-crefyddol', {
+      extensions: { registryManagedFields: ['name'] }
+    }),
     person('lugh-teyrngrach', 'Lugh Teyrngrach', 'male', '1669', '', 'house-teyrngarch'),
 
     person('morgana-wylan', 'Morgana Wylan', 'female', '1694', ''),
@@ -511,9 +517,21 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Genealogie, Lebensdaten, Hausdaten und Portraitquellen folgen der bereitgestellten Wylan-Hausseite und ihrer Hierarchietabelle. Der verbindliche Name ist nach Caption und Übersicht Haus Wylan O’Cerrigarth; die erzählerischen Varianten O’Dewet und O’Penrith werden nicht als weitere Familien angelegt. Die vier Auslassungszeichen werden ausschließlich als strikt serielle Zeitsprünge unter Breandan/Oileán, Merlion/Tadhgín, Rheidwn/Maygan und Rhun/Ysolde abgebildet. Rhuns Todesjahr steht hier quellgetreu als 1182; die Illewod-Gegenakte nennt abweichend 1172. Selyse wird mit der stabilen Gegenakten-ID selsye-wylan geführt. Sämtliche verheirateten Wylan-Frauen, deren Linie in ein anderes Haus führt, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten; die beiden benannten Verlobungen Anona/Alun und Nona/Evan erzeugen gemäß Regel noch keinen solchen Knoten. Rhodhri Wylan und Tanwen Hwyaden begründen Haus Créyr; der Kadettenhausknoten hängt direkt unter ihrem Paar. Arawn bleibt als Sohn von Iolyn Wylan und Gladys Grawn im fortgesetzten Zweig: Dort steht seine Ehe mit Mervyne und dort hängen ihre Kinder. Mervyne bleibt zugleich als Tochter von Gendry Wylan und Arryn Blodyn sichtbar; an ihrem Herkunftszweig erscheint eine reine Arawn-Partnerkarte ohne erneute Nachkommenlinie. Wiederholte generische Frauen- und Männer-Silhouetten sowie die neun namenlosen Verlobtenfelder werden nicht als individuelle Personen oder Portraits importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Hausdaten und Portraitquellen folgen der bereitgestellten Wylan-Hausseite und ihrer Hierarchietabelle. Der verbindliche Name ist nach Caption und Übersicht Haus Wylan O’Cerrigarth; die erzählerischen Varianten O’Dewet und O’Penrith werden nicht als weitere Familien angelegt. Die vier Auslassungszeichen werden ausschließlich als strikt serielle Zeitsprünge unter Breandan/Oileán, Merlion/Tadhgín, Rheidwn/Maygan und Rhun/Ysolde abgebildet. Rhuns Todesjahr steht hier quellgetreu als 1182; die Illewod-Gegenakte nennt abweichend 1172. Selyse wird mit der stabilen Gegenakten-ID selsye-wylan geführt. Sämtliche verheirateten Wylan-Frauen, deren Linie in ein anderes Haus führt, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten; die beiden benannten Verlobungen Anona/Alun und Nona/Evan erzeugen gemäß Regel noch keinen solchen Knoten. Rhodhri Wylan und Tanwen Hwyaden begründen Haus Créyr; der Kadettenhausknoten hängt direkt unter ihrem Paar. Arawn bleibt als Sohn von Iolyn Wylan und Gladys Grawn im fortgesetzten Zweig: Dort steht seine Ehe mit Mervyne und dort hängen ihre Kinder. Mervyne bleibt zugleich als Tochter von Gendry Wylan und Arryn Blodyn sichtbar; an ihrem Herkunftszweig erscheint eine reine Arawn-Partnerkarte ohne erneute Nachkommenlinie. Wiederholte generische Frauen- und Männer-Silhouetten sowie die neun namenlosen Verlobtenfelder werden nicht als individuelle Personen oder Portraits importiert. Seit Revision 4 liegt Cerrigarth verbindlich in der Baronie Melwas Au; ältere direkte Weidebucht/Cerrigarth-Registerpfade werden auf die vierstufige Hierarchie migriert. Revision 5 übernimmt Enid Wylans in der Saith-Gegenquelle ausdrücklich belegtes Todesjahr 1729. Revision 6 vereinheitlicht die sichtbaren Namen Gwindor und Kimball zur kanonischen Schreibweise Crefyddol, ohne ihre stabilen Gegenakten-IDs zu ändern.',
     chartViewport: { initialPosition: 'focus', initialScale: 0.55 },
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 6,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
   }
 });

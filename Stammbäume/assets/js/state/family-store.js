@@ -413,6 +413,8 @@ export function createFamilyStore(initialFamily, options = {}) {
         ))
         .map(timeJump => ({
           ...timeJump,
+          sharedParentPartnershipIds: timeJump.sharedParentPartnershipIds
+            .filter(partnershipId => remainingPartnershipIds.has(partnershipId)),
           childIds: timeJump.childIds.filter(childId => childId !== personId)
         }));
       const remainingTimeJumpIds = new Set(draft.timeJumps.map(timeJump => timeJump.id));
@@ -702,6 +704,7 @@ export function createFamilyStore(initialFamily, options = {}) {
       draft.timeJumps.push({
         id,
         parentPartnershipId: anchor.parentPartnershipId,
+        sharedParentPartnershipIds: [...new Set(values.sharedParentPartnershipIds || [])],
         parentPersonId: anchor.parentPersonId,
         childIds: [...new Set(values.childIds || [])],
         years: Number(values.years || 0),

@@ -1,8 +1,10 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
+  createLinkedLineBranch,
   createMarriage,
   createMarriedAwayBranch,
   createParentages
@@ -12,13 +14,19 @@ import { HOUSE_NEIDR_PORTRAITS } from './house-neidr-portraits.js';
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
+  canwyll: SILBERINSEL_HOUSE_EMBLEMS.canwyll,
+  crefyddol: SILBERINSEL_HOUSE_EMBLEMS.crefyddol,
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
-  neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
+  muirghin: SILBERINSEL_HOUSE_EMBLEMS['tir-an-muirghin'],
+  neidr: SILBERINSEL_HOUSE_EMBLEMS.neidr,
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
+  pyrth: SILBERINSEL_HOUSE_EMBLEMS.pyrth,
+  saith: SILBERINSEL_HOUSE_EMBLEMS.saith,
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  tiwna: SILBERINSEL_HOUSE_EMBLEMS.tiwna,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -74,11 +82,15 @@ function house(id, name, emblem = '') {
   return { id, name, motto: '', emblem, status: 'active' };
 }
 
+function emblemForHouseId(houseId) {
+  return HOUSE_EMBLEMS[String(houseId || '').replace(/^house-/, '')] || '';
+}
+
 function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
-function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+function marriedAway(id, name, partnershipId, houseId, emblem = emblemForHouseId(houseId)) {
   return createMarriedAwayBranch({
     id,
     name,
@@ -96,6 +108,7 @@ function houseSprout(id, name, partnershipId, houseId, notes) {
     subtitle: 'Spross',
     parentPartnershipId: partnershipId,
     houseId,
+    emblem: emblemForHouseId(houseId),
     targetFamilyId: houseId.replace(/^house-/, 'haus-'),
     notes
   });
@@ -148,8 +161,8 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-ailella', 'Haus Ailella'),
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
-    house('house-canwyll', 'Haus Canwyll'),
-    house('house-crefyddol', 'Haus Crefyddol'),
+    house('house-canwyll', 'Haus Canwyll', HOUSE_EMBLEMS.canwyll),
+    house('house-crefyddol', 'Haus Crefyddol', HOUSE_EMBLEMS.crefyddol),
     house('house-draenog', 'Haus Draenog'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-dyngwn', 'Haus Dyngwn'),
@@ -158,16 +171,15 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     house('house-luga', 'Haus Luga'),
     house('house-magach', 'Haus Magach'),
     house('house-morforwyn', 'Haus Morforwyn'),
-    house('house-muirghin', 'Haus Muirghin'),
+    house('house-muirghin', 'Tir An Muirghin', HOUSE_EMBLEMS.muirghin),
     house('house-pawen', 'Haus Pawen'),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
-    house('house-pyrth', 'Haus Pyrth'),
+    house('house-pyrth', 'Haus Pyrth', HOUSE_EMBLEMS.pyrth),
     house('house-pysgod', 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
-    house('house-saith', 'Haus Saith'),
-    house('house-tiwna', 'Haus Tiwna'),
+    house('house-saith', 'Haus Saith', HOUSE_EMBLEMS.saith),
+    house('house-tiwna', 'Haus Tiwna', HOUSE_EMBLEMS.tiwna),
     house('house-trachwyll', 'Haus Trachwyll'),
-    house('house-unbekannt-jinelle', 'Unbekanntes Haus'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan)
   ],
   persons: [
@@ -199,7 +211,10 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     person('merwin-neidr', 'Merwin Neidr', 'male', '????', '????'),
     person('jinelle-neidr', 'Jinelle Neidr', 'female', '????', '????'),
     person('elinor-saith', 'Elinor Saith', 'female', '????', '????', 'house-saith'),
-    person('sieffre-der-fromme', 'Sieffre der Fromme', 'male', '????', '????', ''),
+    person('sieffre-der-fromme', 'Sieffre der Fromme', 'male', '????', '????', '', {
+      title: 'Heiliger Priester · Stammvater der Bruderhäuser Crefyddol und Canwyll',
+      extensions: { cardFrameId: 'holy', registryManagedFields: ['title'] }
+    }),
 
     // Nach der dritten Überlieferungslücke
     person('powell-neidr', 'Powell Neidr', 'male', '????', '????'),
@@ -229,14 +244,17 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
       familyRole: 'bastard',
       title: 'Uneheliche Tochter Daffyds und Banws'
     }),
-    person('prynhawn-neidr', 'Prynhawn Neidr', 'unknown', '????', '????', NEIDR_HOUSE_ID, {
-      notes: 'Nur in der bereitgestellten Stammbaumgrafik überliefert.'
+    person('prynhawn-neidr', 'Prynhawn Neidr', 'female', '1608', '1655', NEIDR_HOUSE_ID, {
+      notes: 'Die ausgearbeitete Pyrth-Hausquelle belegt ihre Lebensdaten und Ehe mit Jowaneth Pyrth.'
     }),
     person('enya-luga', 'Enya Luga', 'female', '????', '????', 'house-luga'),
-    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '', 'house-dyngwn'),
+    person('morgan-dyngwn', 'Morgan Dyngwn', 'male', '1588', '????', 'house-dyngwn', {
+      notes: 'Die Grael-Gegenakte kennzeichnet Morgan trotz unbekannten Todesjahrs ausdrücklich als verstorben.',
+      extensions: { registryManagedFields: ['death', 'status', 'notes'] }
+    }),
     person('lancelot-draig', 'Lancelot Draig', 'male', '1411', '', 'house-draig'),
-    person('iowaneth-pyrth', 'Iowaneth Pyrth', 'unknown', '????', '????', 'house-pyrth', {
-      notes: 'Nur in der bereitgestellten Stammbaumgrafik überliefert.'
+    person('iowaneth-pyrth', 'Jowaneth Pyrth', 'male', '1608', '1679', 'house-pyrth', {
+      notes: 'Die ausgearbeitete Pyrth-Hausquelle führt ihn als Ritterfürsten des Hauses Pyrth von 1662 bis 1679.'
     }),
 
     // Kinder Gwynnan Neidrs und Enya Lugas
@@ -244,12 +262,12 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     person('griff-neidr', 'Griff Neidr', 'male', '1625', '1699'),
     person('gladdie-neidr', 'Gladdie Neidr', 'female', '1627', '1699'),
     person('gwenhwyfar-neidr', 'Gwenhwyfar Neidr', 'female', '1627', '1705'),
-    person('gildas-neidr', 'Gildas Neidr', 'male', '1630', '????'),
+    person('gildas-neidr', 'Gildas Neidr', 'male', '1630', '1662'),
     person('sulwen-pendrag', 'Sulwen Pendrag', 'female', '1625', '1700', 'house-pendrag'),
     person('karys-illewod', 'Karys Illewod', 'female', '1628', '1681', 'house-illewod'),
     person('beynon-crefyddol', 'Beynon Crefyddol', 'male', '1628', '1713', 'house-crefyddol'),
     person('brinthan-pyrth', 'Brinthan Pyrth', 'male', '1627', '1703', 'house-pyrth'),
-    person('meiriona-tiwna', 'Meiriona Tiwna', 'female', '1632', '????', 'house-tiwna'),
+    person('meiriona-tiwna', 'Meiriona Tiwna', 'female', '1632', '1669', 'house-tiwna'),
 
     // Enkel Gwynnan Neidrs
     person('gaenor-neidr', 'Gaenor Neidr', 'male', '1646', '1711'),
@@ -334,7 +352,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     createMarriage('marriage-caitrin-morholt', 'caitrin-neidr', 'morholt-pysgod'),
     createMarriage('marriage-merwin-elinor', ...MERWIN_IDS),
     createMarriage('marriage-jinelle-sieffre', 'jinelle-neidr', 'sieffre-der-fromme', {
-      notes: 'Jinelle Neidr wurde mit Sieffre dem Frommen in ein nicht näher überliefertes Haus wegverheiratet.',
+      notes: 'Aus der Verbindung gingen Llwyarch, Gründer von Crefyddol, und Llwellyn, Gründer von Canwyll, hervor.',
       extensions: { registryManagedFields: ['notes'] }
     }),
     createMarriage('marriage-powell-dolena', ...POWELL_IDS),
@@ -349,10 +367,9 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     createMarriage('marriage-aoirghe-morgan', 'aoirghe-neidr', 'morgan-dyngwn'),
     createMarriage('marriage-lancelot-gwyneth', 'lancelot-draig', 'gwyneth-neidr'),
     createMarriage('union-prynhawn-iowaneth', 'prynhawn-neidr', 'iowaneth-pyrth', {
-      type: 'union',
       status: 'ended',
-      certainty: 'probable',
-      notes: 'Nur als Paarlinie in der Stammbaumgrafik belegt; die Personentabelle nennt dieses Paar nicht.'
+      end: '1655',
+      notes: 'Die ausgearbeitete Pyrth-Hausquelle belegt diese Verbindung als Ehe.'
     }),
     createMarriage('marriage-sulwen-howell', 'sulwen-pendrag', 'howell-neidr'),
     createMarriage('marriage-karys-griff', 'karys-illewod', 'griff-neidr'),
@@ -452,14 +469,27 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
       'house-tiwna',
       'Morholt Pysgod und Caitrin Neidr begründen Haus Tiwna.'
     ),
-    createMarriedAwayBranch({
-      id: 'married-away-unbekannt-jinelle',
-      name: 'Unbekanntes Haus',
+    createLinkedLineBranch({
+      id: 'brother-house-crefyddol-llwyarch-neidr',
+      name: 'Haus Crefyddol',
       parentPartnershipId: 'marriage-jinelle-sieffre',
-      houseId: 'house-unbekannt-jinelle',
-      targetFamilyId: 'haus-unbekannt',
+      houseId: 'house-crefyddol',
+      targetFamilyId: 'haus-crefyddol',
+      emblem: HOUSE_EMBLEMS.crefyddol,
+      subtitle: 'Sohn Llwyarch begründet das Bruderhaus',
       crestFrame: 'gold',
-      notes: 'Jinelle Neidr wurde mit Sieffre dem Frommen in ein nicht überliefertes Haus wegverheiratet.'
+      notes: 'Die vollständige Gründung durch Llwyarch und Lynette wird in der verknüpften Crefyddol-Akte fortgeführt.'
+    }),
+    createLinkedLineBranch({
+      id: 'brother-house-canwyll-llwellyn-neidr',
+      name: 'Haus Canwyll',
+      parentPartnershipId: 'marriage-jinelle-sieffre',
+      houseId: 'house-canwyll',
+      targetFamilyId: 'haus-canwyll',
+      emblem: HOUSE_EMBLEMS.canwyll,
+      subtitle: 'Sohn Llwellyn begründet das Bruderhaus',
+      crestFrame: 'gold',
+      notes: 'Die vollständige Gründung durch Llwellyn und Hafren wird in der verknüpften Canwyll-Akte fortgeführt.'
     }),
     houseSprout(
       'married-away-pyrth-llynn',
@@ -472,6 +502,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     marriedAway('married-away-crefyddol-igraine', 'Haus Crefyddol', 'marriage-igraine-morien', 'house-crefyddol'),
     marriedAway('married-away-dyngwn-aoirghe', 'Haus Dyngwn', 'marriage-aoirghe-morgan', 'house-dyngwn'),
     marriedAway('married-away-draig-gwyneth', 'Haus Draig', 'marriage-lancelot-gwyneth', 'house-draig', HOUSE_EMBLEMS.draig),
+    marriedAway('married-away-pyrth-prynhawn', 'Haus Pyrth', 'union-prynhawn-iowaneth', 'house-pyrth'),
     marriedAway('married-away-crefyddol-gladdie', 'Haus Crefyddol', 'marriage-gladdie-beynon', 'house-crefyddol'),
     marriedAway('married-away-pyrth-gwenhwyfar', 'Haus Pyrth', 'marriage-gwenhwyfar-brinthan', 'house-pyrth'),
     marriedAway('married-away-grawn-rohella', 'Haus Grawn', 'marriage-rohella-petyr', 'house-grawn', HOUSE_EMBLEMS.grawn),
@@ -528,8 +559,12 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Neidr-Tabelle und der eingebetteten Stammbaumgrafik. Die fünf Zeitsprünge sind als serielle absolute Generationentrenner modelliert. Der in der Oberhauptgalerie ab 1720 als „Gwyneed“ beschriftete, aber mit Yvains Portrait dargestellte Graf wird aufgrund der Erbfolge als Yvain geführt. Prynhawn und Iowaneth sind nur grafisch und als unsicher belegtes Paar überliefert; Mari erscheint nur in der Tabelle. Die unbeschriftete Hausfortsetzung unter Jinelle und Sieffre wird nach der ergänzenden Vorgabe als Wegverheiratung in ein unbekanntes Haus geführt. Bors und Gwennan begründen Haus Saith, Morholt und Caitrin Haus Tiwna sowie Roderic und Llynn Haus Pyrth. Die Kinderzeilen ordnen Odyar Ariana und Ninian Crystin zu, obwohl die Partnerzeile beide Spalten vertauscht. Genauer belegte Todesjahre für Gaenor, Llywellyn und Elenydd sowie die wechselseitigen Pflege-, Verlobungs- und Draig-Verbindungen wurden aus den bereits vorhandenen verbundenen Hausakten übernommen.',
+    sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Neidr-Tabelle und der eingebetteten Stammbaumgrafik. Die fünf Zeitsprünge sind als serielle absolute Generationentrenner modelliert. Der in der Oberhauptgalerie ab 1720 als „Gwyneed“ beschriftete, aber mit Yvains Portrait dargestellte Graf wird aufgrund der Erbfolge als Yvain geführt. Die ausgearbeitete Pyrth-Gegenakte belegt Prynhawn und Jowaneth als Ehepaar sowie ihre Lebensdaten; Neidr zeigt deshalb auch Prynhawns direkten Wegverheiratet-Knoten zu Haus Pyrth. Mari erscheint nur in der Tabelle. Die ergänzende Crefyddoll-Quelle löst die zuvor unbeschriftete Fortsetzung unter Jinelle und Sieffre auf: Ihre Söhne Llwyarch und Llwellyn begründen mit Lynette beziehungsweise Hafren die Bruderhäuser Crefyddol und Canwyll. Neidr zeigt beide verknüpften Zielhäuser direkt unter dem Ursprungspaar; die vollständigen Gründerpaare und Fortsetzungen bleiben in den Zielakten, damit sie vor Neidrs nächstem absoluten Zeitsprung nicht als falsche Generation erscheinen. Sieffre trägt als Heiliger den Holy Frame. Bors und Gwennan begründen Haus Saith, Morholt und Caitrin Haus Tiwna sowie Roderic und Llynn Haus Pyrth. Die Kinderzeilen ordnen Odyar Ariana und Ninian Crystin zu, obwohl die Partnerzeile beide Spalten vertauscht. Genauer belegte Todesjahre für Gaenor, Llywellyn und Elenydd sowie die wechselseitigen Pflege-, Verlobungs- und Draig-Verbindungen wurden aus den bereits vorhandenen verbundenen Hausakten übernommen.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 7,
+    registryTombstones: {
+      houses: ['house-unbekannt-jinelle'],
+      cadetBranches: ['married-away-unbekannt-jinelle']
+    }
   }
 });

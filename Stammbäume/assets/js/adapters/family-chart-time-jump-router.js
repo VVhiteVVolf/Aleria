@@ -102,21 +102,36 @@ export function insertTimeJumpAsSerialBarrier({
   const depths = computeNodeDepths(chartById);
   const anchorDepth = Math.max(0, ...serialParentIds.map(parentId => depths.get(parentId) || 0));
   const declaredContinuationIds = new Set(declaredChildIds);
-  const continuationIds = new Set([...chartById.values()]
-    .filter(node => (
-      !serialParentIds.includes(node.id)
-      && depths.get(node.id) === anchorDepth + 1
-      && !TERMINAL_ATTACHMENT_KINDS.has(node.data?.nodeKind)
-      && (node.rels.parents.length > 0 || declaredContinuationIds.has(node.id))
-    ))
-    .map(node => node.id));
+  // Hinter einer echten Überlieferungslücke besitzen die ausdrücklich
+  // benannten ersten Personen häufig absichtlich keine biologischen Eltern.
+  // Ihre vorläufige Diagrammtiefe ist dann 0 und darf nicht dazu führen, dass
+  // bereits korrekt verknüpfte Enkel auf die Ebene des Zeitsprungs hochgezogen
+  // werden. In diesem Fall sind ausschließlich die deklarierten Wurzeln die
+  // Fortsetzung; ihre späteren Generationen behalten ihre realen Elternpfade.
+  const hasDetachedDeclaredRoots = declaredChildIds.length > 0 && declaredChildIds.every(childId => {
+    const child = chartById.get(childId);
+    return child && child.rels.parents.length === 0;
+  });
+  const inferredContinuationIds = hasDetachedDeclaredRoots
+    ? []
+    : [...chartById.values()]
+      .filter(node => (
+        !serialParentIds.includes(node.id)
+        && depths.get(node.id) === anchorDepth + 1
+        && !TERMINAL_ATTACHMENT_KINDS.has(node.data?.nodeKind)
+        && (node.rels.parents.length > 0 || declaredContinuationIds.has(node.id))
+      ))
+      .map(node => node.id);
+  const continuationIds = new Set(inferredContinuationIds);
 
-  const terminalAttachmentIds = [...chartById.values()]
-    .filter(node => (
-      depths.get(node.id) === anchorDepth + 1
-      && TERMINAL_ATTACHMENT_KINDS.has(node.data?.nodeKind)
-    ))
-    .map(node => node.id);
+  const terminalAttachmentIds = hasDetachedDeclaredRoots
+    ? []
+    : [...chartById.values()]
+      .filter(node => (
+        depths.get(node.id) === anchorDepth + 1
+        && TERMINAL_ATTACHMENT_KINDS.has(node.data?.nodeKind)
+      ))
+      .map(node => node.id);
 
   declaredChildIds
     .filter(childId => {

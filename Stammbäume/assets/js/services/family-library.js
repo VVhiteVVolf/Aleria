@@ -57,6 +57,7 @@ function resolveFamilyRecord(registered, local) {
     && registryManagedRecordFields.includes('folderPath');
   return {
     ...local,
+    listing: registered.listing,
     folderPath: usesRegisteredFolderPath ? registered.folderPath : local.folderPath,
     family: upgradedFamily,
     source: needsUpgrade ? 'registry-upgrade' : local.source,
@@ -72,7 +73,9 @@ export function listFamilyRecords(storage = globalThis.localStorage) {
     const registered = getRegisteredFamily(record.id);
     byId.set(record.id, resolveFamilyRecord(registered, record));
   });
-  return [...byId.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
+  return [...byId.values()]
+    .filter(record => record.listing !== 'linked-only')
+    .sort((first, second) => first.title.localeCompare(second.title, 'de'));
 }
 
 export function loadFamilyById(familyId, storage = globalThis.localStorage) {

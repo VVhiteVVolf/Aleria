@@ -20,6 +20,7 @@ function requestedPartnershipIds(person, extensionKey) {
 export function createFamilyChartPersonAppearancePlan({ partnerships, personById }) {
   const partnershipById = new Map((partnerships || []).map(partnership => [partnership.id, partnership]));
   const appearanceByPersonAndPartnership = new Map();
+  const partnerMirrorByPersonAndPartnership = new Map();
   const appearances = [];
   const partnerMirrors = [];
   const invalidRequests = [];
@@ -56,6 +57,7 @@ export function createFamilyChartPersonAppearancePlan({ partnerships, personById
         role: 'partner-mirror',
         partnerIds: Object.freeze(partnership.participantIds.filter(participantId => participantId !== personId))
       });
+      partnerMirrorByPersonAndPartnership.set(appearanceKey(personId, partnershipId), mirror);
       partnerMirrors.push(mirror);
       appearances.push(mirror);
     });
@@ -67,6 +69,9 @@ export function createFamilyChartPersonAppearancePlan({ partnerships, personById
     invalidRequests: Object.freeze(invalidRequests),
     resolveParticipantId(personId, partnershipId) {
       return appearanceByPersonAndPartnership.get(appearanceKey(personId, partnershipId))?.id || personId;
+    },
+    resolvePartnerMirrorId(personId, partnershipId) {
+      return partnerMirrorByPersonAndPartnership.get(appearanceKey(personId, partnershipId))?.id || personId;
     }
   });
 }

@@ -21,6 +21,7 @@ function iconForPathLevel(record, levelIndex) {
 export function buildRegistryFolderTree(records) {
   const root = createFolderNode();
   records.forEach(record => {
+    if (record.listing === 'linked-only') return;
     const path = record.folderPath?.length ? record.folderPath : ['Nicht einsortiert'];
     let node = root;
     path.forEach((segment, levelIndex) => {

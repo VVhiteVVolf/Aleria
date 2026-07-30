@@ -128,6 +128,14 @@ export function createCadetHouseBranch(options) {
   });
 }
 
+export function createLinkedLineBranch(options) {
+  return createHouseBranch({
+    ...options,
+    linkType: 'linked-line',
+    subtitle: options.subtitle || 'Fortgeführte Nebenlinie'
+  });
+}
+
 export function createWardAwayBranch(options) {
   return createHouseBranch({
     ...options,

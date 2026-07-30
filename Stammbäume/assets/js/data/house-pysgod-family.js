@@ -178,7 +178,7 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     house('house-cwningod', 'Haus Cwningod'),
     house('house-nuadat', 'Haus Nuadat'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
-    house('house-dwyngwn', 'Haus Dwyngwn')
+    house('house-dyngwn', 'Haus Dyngwn')
   ],
   persons: [
     // Gründer und erste drei unmittelbar überlieferte Generationen
@@ -326,7 +326,9 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     person('adelayne-marwolaeth', 'Adelayne Marwolaeth', 'female', '1700', '', 'house-marwolaeth'),
     person('glendower-morfil', 'Glendower Morfil', 'male', '1707', '', 'house-morfil'),
     person('kylah-roich', 'Kylah Roich', 'female', '1700', '', 'house-roich'),
-    person('hafwen-dwyngwn', 'Hafwen Dwyngwn', 'female', '1703', '', 'house-dwyngwn'),
+    person('hafwen-dwyngwn', 'Hafwen Dyngwn', 'female', '1703', '', 'house-dyngwn', {
+      extensions: { registryManagedFields: ['name', 'houseId'] }
+    }),
 
     // Jüngste, im Jahr 1740 unverheiratete Generation
     person('maewyn-pysgod', 'Maewyn Pysgod', 'male', '1718', '', PYSGOD_HOUSE_ID, {
@@ -546,6 +548,6 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Ehen, Abstammungen und Portraitzuordnungen folgen der bereitgestellten Pysgod-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die drei Auslassungszeichen wurden ausschließlich als serielle Zeitsprünge unter Caradoc/Linessa, Cynwrig/Afanen und Tyreke/Gobaith modelliert. Die Quelle widerspricht sich bei Cynwrig/„Griflet“ sowie bei mehreren unmöglichen Jahreszahlen; diese Fälle sind direkt an den betroffenen Personen dokumentiert und wurden nicht still erfunden. Amtsjahre der Grafen sind Titelangaben, keine Geburtsjahre. Die vier ausdrücklich bestätigten Gründerpaare sind Trayvion Pysgod/Brighde für Haus Morfil, Háscan Gwialen/Arianhrod Pysgod für Haus Gwialen, Categirn Pysgod/Marwine für Haus Brithyll sowie Morholt Pysgod/Caitrin Neidr für Haus Tiwna; jeder Hausknoten hängt ausschließlich direkt unter seinem Paar. Alle dreizehn verheirateten Pysgod-Frauen, deren Linie im Zielhaus weiterläuft, besitzen eine direkte Wegverheiratet-Verknüpfung; bloße Herkunftswappen eingeheirateter Partner erzeugen keinen Hausknoten. Generische Quell-Silhouetten und unbenannte Hofämter wurden nicht als individuelle Portraits oder Personen importiert.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

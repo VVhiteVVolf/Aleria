@@ -156,8 +156,14 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     person('myrcella-gwefrydd', 'Myrcella Gwefrydd', 'female', 'married', 'house-gwefrydd'),
     person('izobel-arwydd', 'Izobel', 'female', 'core', 'house-arwydd'),
     person('gwynnan-gwywern', 'Gwynnan Gwyvern', 'male', 'married', 'house-gwywern'),
-    person('iorwerth-arwydd', 'Iorwerth', 'male', 'core', 'house-arwydd'),
-    person('dyddi-dyngwn', 'Dyddi Dyngwn', 'unknown', 'married', 'house-dyngwn'),
+    person('iorwerth-arwydd', 'Iorwerth', 'male', 'core', 'house-arwydd', {
+      worldPersonId: 'person--haus-arwydd--iorwerth-arwydd',
+      extensions: { registryManagedFields: ['worldPersonId'] }
+    }),
+    person('dyddi-dyngwn', 'Dyddi Dyngwn', 'female', 'married', 'house-dyngwn', {
+      worldPersonId: 'person--haus-dyngwn--dyddi-dyngwn',
+      extensions: { registryManagedFields: ['worldPersonId', 'sex', 'name', 'houseId'] }
+    }),
 
     person('ifor-arwydd', 'Ifor', 'male', 'core', 'house-arwydd'),
     person('idelle-arwydd', 'Idelle', 'female', 'core', 'house-arwydd'),
@@ -280,6 +286,8 @@ export const HOUSE_ARWYDD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Portraitquellen wurden als lokale Projektdateien gesichert; fehlende Titel und Nebenwappen bleiben bewusst offen.'
+    sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Portraitquellen wurden als lokale Projektdateien gesichert; fehlende Titel und Nebenwappen bleiben bewusst offen. Dyddi Dyngwn wird durch die Dyngwn-Gegenakte als Frau bestätigt. Dyddi und Iorwerth teilen mit der Dyngwn-Gegenakte dieselben weltweiten Personenidentitäten.',
+    blankFamily: false,
+    sourceRevision: 2
   }
 });

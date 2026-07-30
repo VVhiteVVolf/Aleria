@@ -21,12 +21,17 @@ const VISIBILITY_VALUES = new Set(['public', 'restricted', 'secret']);
 const PORTRAIT_PLACEHOLDERS = new Set(['auto', 'male', 'female', 'child', 'unknown']);
 const HOUSE_LINK_TYPES = new Set([
   'cadet-house',
+  'linked-line',
   'married-away',
   'ward-away',
   'line-extinct',
   'migration-offshoot'
 ]);
-const PERSON_ANCHORED_HOUSE_LINK_TYPES = new Set(['ward-away', 'migration-offshoot']);
+const PERSON_ANCHORED_HOUSE_LINK_TYPES = new Set([
+  'ward-away',
+  'migration-offshoot',
+  'line-extinct'
+]);
 
 export class FamilyValidationError extends Error {
   constructor(diagnostics) {
@@ -184,6 +189,7 @@ function normalizeTimeJump(timeJump = {}, index = 0) {
   return {
     id: text(timeJump.id, `time-jump-${index + 1}`),
     parentPartnershipId: text(timeJump.parentPartnershipId),
+    sharedParentPartnershipIds: uniqueText(timeJump.sharedParentPartnershipIds),
     parentPersonId: text(timeJump.parentPersonId),
     childIds: uniqueText(timeJump.childIds),
     years: Number.isFinite(Number(timeJump.years))
@@ -508,7 +514,7 @@ export function validateFamily(input) {
       }));
     }
     if (!PERSON_ANCHORED_HOUSE_LINK_TYPES.has(branch.linkType) && hasPersonAnchor) {
-      diagnostics.push(diagnostic('error', 'HOUSE_LINK_REQUIRES_PARTNERSHIP', 'Kadetten-, Wegverheiratet- und Linienendknoten müssen an ihrem maßgeblichen Paar hängen.', {
+      diagnostics.push(diagnostic('error', 'HOUSE_LINK_REQUIRES_PARTNERSHIP', 'Kadetten- und Wegverheiratet-Knoten müssen an ihrem maßgeblichen Paar hängen.', {
         branchId: branch.id
       }));
     }
@@ -597,6 +603,47 @@ export function validateFamily(input) {
     const anchorGenerationDepth = hasValidAnchor
       ? resolveAnchorGenerationDepth(anchorPersonIds, generationDepths)
       : null;
+    timeJump.sharedParentPartnershipIds.forEach(sharedPartnershipId => {
+      const sharedPartnership = partnershipById.get(sharedPartnershipId);
+      if (!sharedPartnership) {
+        diagnostics.push(diagnostic('error', 'MISSING_SHARED_TIME_JUMP_PARTNERSHIP', 'Eine weitere Zuführung zum gemeinsamen Zeitsprung verweist auf ein unbekanntes Paar.', {
+          timeJumpId: timeJump.id,
+          partnershipId: sharedPartnershipId
+        }));
+        return;
+      }
+      if (sharedPartnershipId === timeJump.parentPartnershipId) {
+        diagnostics.push(diagnostic('error', 'DUPLICATE_SHARED_TIME_JUMP_PARTNERSHIP', 'Das strukturelle Ankerpaar darf nicht zusätzlich als weitere Zuführung desselben Zeitsprungs eingetragen sein.', {
+          timeJumpId: timeJump.id,
+          partnershipId: sharedPartnershipId
+        }));
+        return;
+      }
+      const overlappingPersonIds = sharedPartnership.participantIds.filter(personId => anchorPersonIds.includes(personId));
+      if (overlappingPersonIds.length) {
+        diagnostics.push(diagnostic('error', 'OVERLAPPING_SHARED_TIME_JUMP_PARTNERSHIP', 'Geteilte Zeitsprung-Zuführungen müssen aus eigenständigen Paaren derselben Generation bestehen.', {
+          timeJumpId: timeJump.id,
+          partnershipId: sharedPartnershipId,
+          overlappingPersonIds
+        }));
+      }
+      const sharedGenerationDepth = resolveAnchorGenerationDepth(
+        sharedPartnership.participantIds,
+        generationDepths
+      );
+      if (
+        anchorGenerationDepth !== null
+        && sharedGenerationDepth !== null
+        && sharedGenerationDepth !== anchorGenerationDepth
+      ) {
+        diagnostics.push(diagnostic('error', 'SHARED_TIME_JUMP_GENERATION_MISMATCH', 'Alle Zuführungen eines gemeinsamen Zeitsprungs müssen aus derselben Generation stammen.', {
+          timeJumpId: timeJump.id,
+          partnershipId: sharedPartnershipId,
+          anchorGenerationDepth,
+          sharedGenerationDepth
+        }));
+      }
+    });
     const existingBarrierId = anchorGenerationDepth === null
       ? ''
       : occupiedTimeBarrierDepths.get(anchorGenerationDepth);

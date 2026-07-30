@@ -1,5 +1,8 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
-import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import {
+  TAL_DER_MILANE_HOUSE_EMBLEMS,
+  TAL_DER_MILANE_HOUSE_PROFILES
+} from './tal-der-milane-house-profiles.js';
 import {
   createFamilyPerson,
   createMarriage,
@@ -9,17 +12,25 @@ import {
 import { HOUSE_ADERYN_PORTRAITS } from './house-aderyn-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
-  aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  aderyn: TAL_DER_MILANE_HOUSE_EMBLEMS.aderyn,
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  gaeth: TAL_DER_MILANE_HOUSE_EMBLEMS.gaeth,
+  gormard: TAL_DER_MILANE_HOUSE_EMBLEMS.gormard,
+  hebog: TAL_DER_MILANE_HOUSE_EMBLEMS.hebog,
+  ilyuncu: TAL_DER_MILANE_HOUSE_EMBLEMS.ilyuncu,
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   illysywen: 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png',
   neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
+  mwyalchen: TAL_DER_MILANE_HOUSE_EMBLEMS.mwyalchen,
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
+  eryr: TAL_DER_MILANE_HOUSE_EMBLEMS.eryr,
+  tylluan: TAL_DER_MILANE_HOUSE_EMBLEMS.tylluan,
+  'ua-fionnghal': TAL_DER_MILANE_HOUSE_EMBLEMS['ua-fionnghal'],
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -70,7 +81,11 @@ function childrenOf(childIds, parentIds, partnershipId, options = {}) {
   return createParentages(childIds, parentIds, partnershipId, options);
 }
 
-function marriedAway(id, name, partnershipId, houseId, emblem = '') {
+function emblemForHouseId(houseId) {
+  return HOUSE_EMBLEMS[String(houseId || '').replace(/^house-/, '')] || '';
+}
+
+function marriedAway(id, name, partnershipId, houseId, emblem = emblemForHouseId(houseId)) {
   return createMarriedAwayBranch({
     id,
     name,
@@ -147,26 +162,26 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     motto: 'Y nod ger bron. – Das Ziel vor Augen.',
     description: 'Das Grafengeschlecht Aderyn aus Penbryn im Tal der Milane, von der avallornischen Gründerzeit bis zur im Jahr 1740 lebenden Generation.',
     emblem: HOUSE_EMBLEMS.aderyn,
-    houseProfile: CENYR_COUNTY_HOUSE_PROFILES.aderyn
+    houseProfile: TAL_DER_MILANE_HOUSE_PROFILES.aderyn
   },
   houses: [
     house(ADERYN_HOUSE_ID, 'Haus Aderyn', HOUSE_EMBLEMS.aderyn, 'Das Ziel vor Augen.'),
-    house('house-gormard', 'Haus Gormárd'),
+    house('house-gormard', 'Clan Ui Gormárd', HOUSE_EMBLEMS.gormard),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
-    house('house-ua-fionnghal', 'Haus Ua Fíonnghal'),
+    house('house-ua-fionnghal', 'Clan Ua Fíonnghal', HOUSE_EMBLEMS['ua-fionnghal']),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-duilb', 'Haus Duilb'),
     house('house-oglivy', 'Haus Oglivy'),
-    house('house-gaeth', 'Haus Gaeth'),
-    house('house-hebog', 'Haus Hebog'),
+    house('house-gaeth', 'Haus Gaeth', HOUSE_EMBLEMS.gaeth),
+    house('house-hebog', 'Haus Hebog', HOUSE_EMBLEMS.hebog),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-neidr', 'Haus Neidr', HOUSE_EMBLEMS.neidr),
     house('house-illewod', 'Haus Illewod', HOUSE_EMBLEMS.illewod),
     house('house-tairise', 'Haus Tairise'),
-    house('house-mwyalchen', 'Haus Mwyalchen'),
-    house('house-tylluan', 'Haus Tylluan'),
-    house('house-eryr', 'Haus Eryr'),
+    house('house-mwyalchen', 'Haus Mwyalchen', HOUSE_EMBLEMS.mwyalchen),
+    house('house-tylluan', 'Haus Tylluan', HOUSE_EMBLEMS.tylluan),
+    house('house-eryr', 'Haus Eryr', HOUSE_EMBLEMS.eryr),
     house('house-seymour', 'Haus Seymour'),
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-conochbhair', 'Haus Conochbhair'),
@@ -188,7 +203,7 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     house('house-loganne', 'Haus Loganne'),
     house('house-goidin', 'Haus Goidin'),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
-    house('house-ilyuncu', 'Haus Ilyuncu')
+    house('house-ilyuncu', 'Haus Ilyuncu', HOUSE_EMBLEMS.ilyuncu)
   ],
   persons: [
     // Unbekannte Eltern verbinden die ausdrücklich als Geschwister belegten Yvain und Rhiannon.
@@ -317,7 +332,9 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('venora-aderyn', 'Venora Aderyn', 'female', '1702', ''),
     person('selwyn-aderyn', 'Selwyn Aderyn', 'male', '1698', ''),
     person('rheanne-aderyn', 'Rheanne Aderyn', 'female', '1701', ''),
-    person('colwynn-aderyn', 'Colwynn Aderyn', 'male', '1700', ''),
+    person('colwynn-aderyn', 'Colwynn Aderyn', 'male', '1700', '', ADERYN_HOUSE_ID, {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('gais-aderyn', 'Gais Aderyn', 'male', '1697', '', ADERYN_HOUSE_ID, {
       notes: 'Die Partnerüberschrift verwendet die Kurzform Gai.'
     }),
@@ -334,7 +351,9 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('merryn-tir-addawol', 'Merryn Tir Addawol', 'male', '1698', '', 'house-tir-addawol'),
     person('eluned-draenog', 'Eluned Draenog', 'female', '1699', '', 'house-draenog'),
     person('sheev-mwyalchen', 'Sheev Mwyalchen', 'male', '1696', '', 'house-mwyalchen'),
-    person('enfys-dienyddiwr', 'Enfys Dienyddiwr', 'female', '1703', '', 'house-dienyddiwr'),
+    person('enfys-dienyddiwr', 'Enfys Dienyddiwr', 'female', '1703', '', 'house-dienyddiwr', {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('branna-loganne', 'Branna Loganne', 'female', '1699', '', 'house-loganne', {
       notes: 'Die Kinderüberschrift verwendet die Namensvariante Brannat.'
     }),
@@ -526,8 +545,20 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Die Übersicht sagt „Kadetten: Keine“; eine andere Quellpassage zählt Gaeth, Hebog, Mwyalchen, Tylluan, Eryr und Ilyuncu ohne Gründer oder genealogischen Anker auf. Deshalb wurden keine Kadettenhausknoten erfunden. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Die 73 individuellen, noch extern abzurufenden Portraitquellen sind im Downloadkatalog erfasst; bis die lokalen Dateien vorliegen, verwendet die Oberfläche bewusst ihre Portraitplatzhalter statt defekter URLs.',
+    sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Die Übersicht sagt „Kadetten: Keine“; eine andere Quellpassage zählt Gaeth, Hebog, Mwyalchen, Tylluan, Eryr und Ilyuncu ohne Gründer oder genealogischen Anker auf. Deshalb wurden keine Kadettenhausknoten erfunden. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Die 73 individuellen, noch extern abzurufenden Portraitquellen sind im Downloadkatalog erfasst; bis die lokalen Dateien vorliegen, verwendet die Oberfläche bewusst ihre Portraitplatzhalter statt defekter URLs. Die neue Registergliederung führt Aderyn unter Yvains Klamm und Penbryn. Die bekannten Wappen der in dieser Akte vorkommenden Häuser des Tals der Milane werden aus dem gemeinsamen Grafschaftsmodul bezogen.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 5,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
   }
 });
