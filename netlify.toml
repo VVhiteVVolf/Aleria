@@ -2,6 +2,10 @@
   publish = "."
   functions = "netlify/functions"
 
+[build.environment]
+  # Safelist only the public Firebase browser identifier; all other smart detection remains active.
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg"
+
 [[redirects]]
   from = "/firebase/*"
   to = "/not_found.html"
