@@ -21,7 +21,7 @@ function preserveClassicAlmanachScripts() {
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await cp(
         resolve(almanachRoot, 'public/assets/dice-box'),
-        resolve(buildAlmanachRoot, 'assets/dice-box'),
+        resolve(buildAlmanachRoot, 'public/assets/dice-box'),
         { recursive: true, force: true }
       );
     }
@@ -30,7 +30,7 @@ function preserveClassicAlmanachScripts() {
 
 export default defineConfig({
   root: workspaceRoot,
-  publicDir: resolve(almanachRoot, 'public'),
+  publicDir: false,
   base: './',
   plugins: [preserveClassicAlmanachScripts()],
   build: {

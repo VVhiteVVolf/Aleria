@@ -1,4 +1,4 @@
-import DiceParser from '@3d-dice/dice-parser-interface';
+import DiceParser from '../../vendor/scene-dice/dice-parser-interface.esm.js';
 import {
   DICE_LIMITS,
   getNotationGroupSigns,

@@ -1,8 +1,7 @@
-import DiceBox from '@3d-dice/dice-box';
+import DiceBox from '../../vendor/scene-dice/dice-box.esm.js';
 
 function getAssetLocation() {
-  const baseUrl = `${import.meta.env.BASE_URL}assets/dice-box/`;
-  const url = new URL(baseUrl, window.location.href);
+  const url = new URL('./public/assets/dice-box/', document.baseURI);
   return { assetPath: url.pathname, origin: url.origin };
 }
 

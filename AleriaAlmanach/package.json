@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
+    "prepare:dice-runtime": "node scripts/prepare-dice-runtime.mjs",
+    "prebuild": "npm run prepare:dice-runtime",
     "build": "vite build",
+    "pretest": "npm run prepare:dice-runtime",
     "test": "node --test tests/*.test.mjs",
     "copy:dice-assets": "node scripts/copy-dice-assets.mjs",
-    "postinstall": "node scripts/copy-dice-assets.mjs"
+    "build:dice-vendor": "node scripts/build-dice-vendor.mjs",
+    "postinstall": "npm run prepare:dice-runtime"
   },
   "dependencies": {
     "@3d-dice/dice-box": "1.1.4",
