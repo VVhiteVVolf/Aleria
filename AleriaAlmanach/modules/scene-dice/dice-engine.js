@@ -1,5 +1,6 @@
 import DiceBox from '../../vendor/scene-dice/dice-box.esm.js';
 import { applyDiceAppearance } from './dice-appearance.js';
+import { getDiceMotionConfig } from './dice-motion.js';
 
 function getAssetLocation() {
   const url = new URL('./public/assets/dice-box/', document.baseURI);
@@ -11,7 +12,7 @@ export class DiceBoxEngine {
     if (!container?.id) throw new Error('Der 3D-Würfelbereich wurde nicht gefunden.');
     const assetLocation = getAssetLocation();
     const reducedMotion = settings.reducedMotion === true;
-    const motion = this.#getMotionConfig(settings);
+    const motion = getDiceMotionConfig(settings);
     this.box = new DiceBox({
       container: `#${container.id}`,
       ...assetLocation,
@@ -20,7 +21,6 @@ export class DiceBoxEngine {
       scale: reducedMotion ? 4.5 : 5.2,
       delay: reducedMotion ? 0 : 90,
       ...motion,
-      settleTimeout: reducedMotion ? 2200 : 5000,
       enableShadows: !reducedMotion,
       boundarySegments: 32,
       boundaryInsetX: 0.77,
@@ -58,17 +58,9 @@ export class DiceBoxEngine {
     const reducedMotion = settings.reducedMotion === true;
     await this.box.updateConfig({
       delay: reducedMotion ? 0 : 90,
-      ...this.#getMotionConfig(settings),
-      settleTimeout: reducedMotion ? 2200 : 5000,
+      ...getDiceMotionConfig(settings),
       enableShadows: !reducedMotion
     });
-  }
-
-  #getMotionConfig(settings = {}) {
-    if (settings.reducedMotion === true) return { spinForce: 1.8, throwForce: 2.8, startingHeight: 5 };
-    if (settings.throwStyle === 'gentle') return { spinForce: 3.5, throwForce: 4.2, startingHeight: 6 };
-    if (settings.throwStyle === 'dramatic') return { spinForce: 7.5, throwForce: 8.5, startingHeight: 11 };
-    return { spinForce: 5, throwForce: 6, startingHeight: 8 };
   }
 }
 

@@ -40,5 +40,9 @@ test('ships browser-ready vendor modules, board artwork and page-relative Dice B
   assert.ok(ammoAsset.size > 100_000);
   assert.ok(boardAsset.size > 100_000);
   const embeddedWorkers = Array.from(diceBoxSource.matchAll(/["']([A-Za-z0-9+/=]{100000,})["']/g), match => match[1]);
-  assert.ok(embeddedWorkers.some(value => Buffer.from(value, 'base64').toString('utf8').includes('ALERIA_ELLIPSE_BOUNDARY="v1"')));
+  assert.ok(embeddedWorkers.some(value => {
+    const workerSource = Buffer.from(value, 'base64').toString('utf8');
+    return workerSource.includes('ALERIA_ELLIPSE_BOUNDARY="v1"')
+      && workerSource.includes('ALERIA_DICE_DYNAMICS="v1"');
+  }));
 });

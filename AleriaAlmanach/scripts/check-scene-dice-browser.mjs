@@ -5,6 +5,7 @@ import { dirname, resolve } from 'node:path';
 const cdpOrigin = process.env.CDP_ORIGIN || 'http://127.0.0.1:9223';
 const appUrl = process.argv[2] || process.env.ALERIA_URL || 'http://127.0.0.1:4174/AleriaAlmanach/AleriaAlmanach.html';
 const screenshotPath = resolve('.codex-temp/scene-dice-browser.png');
+const motionScreenshotPath = resolve('.codex-temp/scene-dice-motion.png');
 
 const target = await fetch(`${cdpOrigin}/json/new?about:blank`, { method: 'PUT' }).then(response => response.json());
 const socket = new WebSocket(target.webSocketDebuggerUrl);
@@ -172,12 +173,22 @@ assert.equal(advantage.keptDice.length, 1);
 assert.equal(advantage.droppedDice.length, 1);
 assert.equal(advantage.total, advantage.keptDice[0] + 5);
 
-const combined = await evaluate(`(async () => {
+await evaluate(`(() => {
   const input = document.getElementById('scene-dice-formula');
   document.getElementById('scene-dice-roller').value = 'Liora';
   document.getElementById('scene-dice-purpose').value = 'Arkane Untersuchung';
   input.value = '1d4+1d6+1d8+1d10+1d12+1d20';
   document.querySelector('[data-scene-dice-action="roll"]').click();
+  return true;
+})()`);
+
+await new Promise(resolveDelay => setTimeout(resolveDelay, 220));
+const motionScreenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+await mkdir(dirname(motionScreenshotPath), { recursive: true });
+await writeFile(motionScreenshotPath, Buffer.from(motionScreenshot.data, 'base64'));
+
+const combined = await evaluate(`(async () => {
+  const input = document.getElementById('scene-dice-formula');
   const started = Date.now();
   while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== input.value) {
     if (Date.now() - started > 30000) throw new Error('Der kombinierte Farbwurf wurde nicht abgeschlossen.');
@@ -266,5 +277,5 @@ const relevantRuntimeErrors = runtimeErrors.filter(error => /dice|scene-dice/i.t
 assert.deepEqual(diceAssetErrors, [], `Dice-Asset-Fehler: ${diceAssetErrors.join(', ')}`);
 assert.deepEqual(relevantRuntimeErrors, [], 'JavaScript-Fehler im Würfelsystem entdeckt.');
 
-console.log(JSON.stringify({ prepared, poolCombination, damage, advantage, combined, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath }, null, 2));
+console.log(JSON.stringify({ prepared, poolCombination, damage, advantage, combined, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath }, null, 2));
 socket.close();
