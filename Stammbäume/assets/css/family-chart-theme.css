@@ -207,15 +207,32 @@
   user-select: none;
 }
 
-.aleria-person-card__crest {
+.aleria-person-card__crest-link {
   position: absolute;
   z-index: 5;
   top: var(--card-crest-top);
   left: var(--card-crest-left);
   width: var(--card-crest-width);
   height: var(--card-crest-height);
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: rgba(244, 223, 174, 0.38);
+  cursor: pointer;
+}
+
+.aleria-person-card__crest-link:hover,
+.aleria-person-card__crest-link:focus-visible {
+  filter: brightness(1.12) drop-shadow(0 0 5px rgba(243, 198, 86, 0.82));
+  outline: 2px solid rgba(255, 224, 137, 0.92);
+  outline-offset: 2px;
+}
+
+.aleria-person-card__crest {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
   pointer-events: none;
   user-select: none;

@@ -30,6 +30,39 @@
   box-shadow: 0 0.35rem 0.9rem rgba(39, 25, 15, 0.28);
 }
 
+.relation-actions-portrait-button {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.relation-actions-portrait-button > span {
+  position: absolute;
+  right: -0.35rem;
+  bottom: -0.25rem;
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 1px solid var(--gold-500);
+  border-radius: 50%;
+  background: var(--paper-50);
+  color: var(--gold-500);
+  font-size: 0.78rem;
+  box-shadow: 0 0.2rem 0.45rem rgba(39, 25, 15, 0.25);
+}
+
+.relation-actions-portrait-button:hover .relation-actions-portrait,
+.relation-actions-portrait-button:focus-visible .relation-actions-portrait {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
 .relation-actions-life {
   margin: 0;
   color: var(--ink-650);
@@ -87,8 +120,18 @@
 }
 
 .relation-action-card:disabled {
-  opacity: 0.45;
+  opacity: 0.68;
   cursor: not-allowed;
+}
+
+.relation-action-card:disabled .relation-action-glyph {
+  filter: grayscale(0.75);
+  opacity: 0.55;
+}
+
+.relation-action-text small.relation-action-disabled-reason {
+  color: #87574f;
+  font-weight: 600;
 }
 
 .relation-action-glyph {
@@ -156,4 +199,32 @@
 .relation-actions-step [data-partner-source] {
   display: grid;
   gap: 0.75rem;
+}
+
+.relation-portrait-editor {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.relation-portrait-editor > img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--gold-500);
+  border-radius: 6px;
+  background: var(--paper-200);
+  object-fit: cover;
+  box-shadow: 0 0.45rem 1rem rgba(39, 25, 15, 0.24);
+}
+
+.relation-portrait-editor > div {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (max-width: 540px) {
+  .relation-portrait-editor {
+    grid-template-columns: 5rem minmax(0, 1fr);
+  }
 }

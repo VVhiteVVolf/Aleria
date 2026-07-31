@@ -4,14 +4,17 @@ import { createEmptyFamily, createFoundingFamily } from '../domain/family-factor
 import { createFamilyGraph } from '../domain/family-graph.js';
 import { formatHouseProfile, getHouseRank, getHouseRankIcon, isHouseProfileEmpty } from '../domain/house-profile.js';
 import { createAlmanachCharacterController } from '../modules/almanach-bridge/almanach-character-controller.js';
+import { buildRegisteredHouseIndex } from '../modules/family-assets/house-emblem-index.js';
 import { createTreeGeneratorController } from '../modules/tree-generator/tree-generator-controller.js';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
 import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
+import { assertUsablePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
 import { createRelationshipMatrixDialog } from '../modules/relationship-matrix/relationship-matrix-dialog.js';
 import { exportChartAsPng } from '../services/chart-png-export.js';
 import { downloadFamilyBundle } from '../services/family-bundle-export.js';
 import { importFamilyBundle } from '../services/family-bundle-import.js';
 import {
+  listFamilyRecords,
   loadFamilyById,
   parseFolderPath,
   saveFamilyToLibrary
@@ -40,7 +43,6 @@ import { renderPersonInspector } from './person-inspector.js';
 import { createRelatedPersonDialog } from './related-person-dialog.js';
 import { createRelationActionsDialog } from './relation-actions-dialog.js';
 import {
-  buildImportedPersonValues,
   findExistingImport,
   relationForAction
 } from '../services/relation-actions.js';
@@ -53,6 +55,7 @@ import {
   createMirroredPartnershipChange,
   updateMirroredPartnershipChange
 } from '../modules/relationships/cross-family-relationship.js';
+import { createMirroredGuardianshipChange } from '../modules/relationships/cross-family-guardianship.js';
 import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
 
 function isTypingTarget(target) {
@@ -101,8 +104,18 @@ export function createAppController({
   const bundleImportInput = documentRef.getElementById('family-bundle-import');
   const toast = createToast(documentRef.getElementById('app-toast'));
   const localFamilySource = latestLocalFamilySource || Object.freeze({
-    loadById: familyId => loadFamilyById(familyId, runtime.localStorage)
+    loadById: familyId => loadFamilyById(familyId, runtime.localStorage),
+    listRecords: () => listFamilyRecords(runtime.localStorage)
   });
+  let registeredHouses = new Map();
+
+  function refreshRegisteredHouses() {
+    registeredHouses = buildRegisteredHouseIndex(localFamilySource.listRecords?.() || []);
+  }
+
+  function resolveRegisteredHouse(houseId) {
+    return registeredHouses.get(houseId) || null;
+  }
   let chartSession = null;
   const almanachCharacterController = createAlmanachCharacterController({
     store,
@@ -174,6 +187,29 @@ export function createAppController({
   function lineageHouseName(family) {
     return family.houses.find(house => house.id === family.lineage.houseId)?.name
       || family.document.title;
+  }
+
+  function familyIdForHouse(houseId, currentFamily) {
+    if (!houseId) return '';
+    if (currentFamily.lineage.houseId === houseId) return currentFamily.document.id;
+    const registered = localFamilySource.listRecords?.().find(record => (
+      record.family?.lineage?.houseId === houseId
+    ));
+    if (registered?.id) return registered.id;
+    const conventionalId = String(houseId).replace(/^house-/, 'haus-');
+    return localFamilySource.loadById?.(conventionalId)?.id || '';
+  }
+
+  function navigateToFamily(familyId, missingMessage) {
+    if (!familyId || !localFamilySource.loadById?.(familyId)) {
+      toast(missingMessage, { error: true });
+      return false;
+    }
+    const target = new URL(runtime.location.href);
+    target.searchParams.set('family', familyId);
+    target.searchParams.set('mode', workspaceMode);
+    runtime.location.assign(target.href);
+    return true;
   }
 
   function openTreeNodeActions(context) {
@@ -256,6 +292,7 @@ export function createAppController({
     const state = store.getState();
     const person = state.family.persons.find(item => item.id === relationActionsDialog.getPersonId());
     if (!person) throw new Error('Die Person wurde nicht gefunden.');
+
     switch (actionId) {
       case 'revive':
         relationActionsDialog.close();
@@ -317,6 +354,7 @@ export function createAppController({
   function toastPartnerSuccess(action, person, partnerName) {
     if (action === 'marry') toast(`${person.name} und ${partnerName} sind nun verheiratet.`);
     else if (action === 'betroth') toast(`${person.name} und ${partnerName} sind nun verlobt.`);
+    else if (action === 'affair') toast(`Die Affäre zwischen ${person.name} und ${partnerName} wurde eingetragen.`);
     else toast(`${partnerName} wurde als Mündel bei ${person.name} aufgenommen.`);
   }
 
@@ -337,16 +375,19 @@ export function createAppController({
       if (wardPerson && wardPerson.familyRole !== 'ward') store.updatePerson(partnerId, { familyRole: 'ward' });
       return;
     }
-    store.setExclusivePartnership({
+    const relation = relationForAction(action);
+    const values = {
       participantIds: [person.id, partnerId],
-      type: action === 'marry' ? 'marriage' : 'engagement',
-      status: 'active',
-      certainty: 'confirmed',
-      visibility: 'public'
-    });
+      type: relation.partnershipType,
+      status: relation.partnershipStatus,
+      certainty: relation.certainty,
+      visibility: relation.visibility
+    };
+    if (action === 'affair') store.addPartnership(values);
+    else store.setExclusivePartnership(values);
   }
 
-  function persistMirroredPartnershipChange({
+  function persistMirroredFamilyChange({
     currentRecord,
     currentBaseFamily,
     counterpartRecord,
@@ -377,25 +418,52 @@ export function createAppController({
     });
   }
 
-  function mirrorRegistryPartnership({ action, state, person, record, sourcePerson }) {
+  function mirrorRegistryPartnership({ action, state, person, record, sourcePerson, marriageDirection = 'partner-leaves' }) {
     const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
     if (!currentRecord) {
       throw new Error('Bitte speichere die aktuelle Familienakte zuerst im Register, bevor du zwei Stammbäume verknüpfst.');
     }
-    const type = action === 'marry' ? 'marriage' : 'engagement';
+    const relation = relationForAction(action);
     const change = createMirroredPartnershipChange({
       currentFamily: state.family,
       counterpartFamily: record.family,
       currentPersonId: person.id,
       counterpartPersonId: sourcePerson.id,
-      type
+      type: relation.partnershipType,
+      status: relation.partnershipStatus,
+      certainty: relation.certainty,
+      visibility: relation.visibility,
+      leavingFamilyId: action === 'marry'
+        ? (marriageDirection === 'current-leaves' ? state.family.document.id : record.family.document.id)
+        : ''
     });
-    persistMirroredPartnershipChange({
+    persistMirroredFamilyChange({
       currentRecord,
       currentBaseFamily: state.family,
       counterpartRecord: record,
       change,
       source: 'cross-family-relationship'
+    });
+  }
+
+  function mirrorRegistryGuardianship({ state, person, record, otherPerson, currentRole }) {
+    const currentRecord = loadFamilyById(state.family.document.id, runtime.localStorage);
+    if (!currentRecord) {
+      throw new Error('Bitte speichere die aktuelle Familienakte zuerst im Register, bevor du ein Mündel zwischen zwei Stammbäumen vermittelst.');
+    }
+    const change = createMirroredGuardianshipChange({
+      currentFamily: state.family,
+      counterpartFamily: record.family,
+      currentPersonId: person.id,
+      counterpartPersonId: otherPerson.id,
+      currentRole
+    });
+    persistMirroredFamilyChange({
+      currentRecord,
+      currentBaseFamily: state.family,
+      counterpartRecord: record,
+      change,
+      source: 'cross-family-guardianship'
     });
   }
 
@@ -413,7 +481,7 @@ export function createAppController({
       partnershipId: partnership.id,
       values
     });
-    persistMirroredPartnershipChange({
+    persistMirroredFamilyChange({
       currentRecord,
       currentBaseFamily: state.family,
       counterpartRecord,
@@ -438,8 +506,14 @@ export function createAppController({
       }
       relatedPersonDialog.open(person.id, state.family, {
         relationKind: 'partnership',
-        partnershipType: action === 'marry' ? 'marriage' : 'engagement',
-        heading: action === 'marry' ? `${person.name} verheiraten` : `${person.name} verloben`
+        partnershipType: action === 'marry' ? 'marriage' : action === 'betroth' ? 'engagement' : 'affair',
+        partnershipStatus: action === 'affair' ? 'secret' : 'active',
+        visibility: action === 'affair' ? 'private' : 'public',
+        heading: action === 'marry'
+          ? `${person.name} verheiraten`
+          : action === 'betroth'
+            ? `${person.name} verloben`
+            : `Affäre für ${person.name} eintragen`
       });
       return;
     }
@@ -465,27 +539,29 @@ export function createAppController({
       return;
     }
     if (action !== 'import-ward') {
-      mirrorRegistryPartnership({ action, state, person, record, sourcePerson });
+      mirrorRegistryPartnership({
+        action,
+        state,
+        person,
+        record,
+        sourcePerson,
+        marriageDirection: values.marriageDirection
+      });
       relationActionsDialog.close();
       toastPartnerSuccess(action, person, sourcePerson.name);
       toast(`Die Verbindung wurde auch in ${record.title} gespiegelt.`, { duration: 5500 });
       return;
     }
-    relationActionsDialog.close();
-    if (existing) {
-      connectExistingPartner(action, person, existing.id, state.family);
-      toastPartnerSuccess(action, person, existing.name);
-      return;
-    }
-    const imported = buildImportedPersonValues(record.family, sourcePerson, {
-      targetFamily: state.family,
-      familyRole: action === 'import-ward' ? 'ward' : 'married'
+    mirrorRegistryGuardianship({
+      state,
+      person,
+      record,
+      otherPerson: sourcePerson,
+      currentRole: 'guardian'
     });
-    const { house, ...personValues } = imported;
-    if (house) store.ensureHouse(house);
-    const relation = relationForAction(action, action === 'import-ward' ? firstSpouseId(state.family, person.id) : '');
-    store.addRelatedPerson(person.id, personValues, relation);
-    toastPartnerSuccess(action, person, personValues.name);
+    relationActionsDialog.close();
+    toastPartnerSuccess(action, person, sourcePerson.name);
+    toast(`Die Aufnahme wurde zugleich in ${record.title} als fortgegebenes Mündel verzeichnet.`, { duration: 6000 });
   }
 
   function submitRelationActionsForm() {
@@ -493,6 +569,16 @@ export function createAppController({
     const state = store.getState();
     const person = state.family.persons.find(item => item.id === values.personId);
     if (!person) throw new Error('Die Person wurde nicht gefunden.');
+
+    if (values.action === 'change-portrait') {
+      const portrait = assertUsablePortraitSource(values.portrait);
+      store.updatePerson(person.id, { portrait });
+      relationActionsDialog.close();
+      toast(portrait
+        ? `Das Portrait von ${person.name} wurde im lokalen Entwurf gespeichert. Für andere ist es erst nach „Online speichern“ sichtbar.`
+        : `Für ${person.name} wird wieder die Standardsilhouette verwendet.`);
+      return;
+    }
 
     if (values.action === 'die') {
       const year = values.deathUnknown ? '????' : values.deathYear;
@@ -506,20 +592,20 @@ export function createAppController({
     }
 
     if (values.action === 'send-ward') {
-      if (!values.targetFamilyId) throw new Error('Bitte ein Zielhaus wählen.');
+      if (!values.targetFamilyId || !values.targetGuardianId) throw new Error('Bitte Zielhaus und aufnehmende Person wählen.');
       const record = localFamilySource.loadById(values.targetFamilyId);
       if (!record) throw new Error('Die Zielakte wurde im Register nicht gefunden.');
-      relationActionsDialog.close();
-      const targetHouse = record.family.houses.find(house => house.id === record.family.lineage.houseId);
-      if (!targetHouse) throw new Error('Das Zielhaus besitzt keinen gültigen Hausdatensatz.');
-      store.sendWardToHouse({
-        personId: person.id,
-        targetFamilyId: record.id,
-        targetFamilyTitle: record.title,
-        targetHouse,
-        crestFrame: record.family.lineage.crestFrame
+      const guardian = record.family.persons.find(item => item.id === values.targetGuardianId);
+      if (!guardian) throw new Error('Die aufnehmende Person wurde im Zielhaus nicht gefunden.');
+      mirrorRegistryGuardianship({
+        state,
+        person,
+        record,
+        otherPerson: guardian,
+        currentRole: 'ward'
       });
-      toast(`${person.name} wurde als Mündel an ${record.title} gegeben und dort mit einem Hausknoten verknüpft. Im Zielbaum lässt sich die Person über „Mündel aufnehmen“ einbinden.`, { duration: 6500 });
+      relationActionsDialog.close();
+      toast(`${person.name} wurde an ${record.title} vermittelt und dort direkt als Mündel bei ${guardian.name} eingesetzt. Beide Akten warten gemeinsam auf „Online speichern“.`, { duration: 7000 });
       return;
     }
 
@@ -574,7 +660,7 @@ export function createAppController({
       return;
     }
 
-    if (['marry', 'betroth', 'import-ward'].includes(values.action)) {
+    if (['marry', 'betroth', 'affair', 'import-ward'].includes(values.action)) {
       submitPartnerAction(values, state, person);
       return;
     }
@@ -601,10 +687,12 @@ export function createAppController({
     }
     try {
       hideChartStatus();
+      refreshRegisteredHouses();
       chartSession = createFamilyChartSession({
         container: chartContainer,
         family,
         view: family.view,
+        options: { resolveHouse: resolveRegisteredHouse },
         runtime,
         onPersonClick({ personId }) {
           if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId);
@@ -618,20 +706,22 @@ export function createAppController({
           }
           return openPersonBiography(personId);
         },
+        onPersonCrestClick({ personId }) {
+          const currentFamily = store.getState().family;
+          const person = currentFamily.persons.find(entry => entry.id === personId);
+          const familyId = familyIdForHouse(person?.houseId, currentFamily);
+          return navigateToFamily(
+            familyId,
+            'Für dieses Wappen ist noch kein eigener Stammbaum im Familienregister angelegt.'
+          );
+        },
         onFamilyLinkClick({ familyId, branchId }) {
           if (!familyId) return;
           if (isEditing) {
             cadetDialog.openEdit(store.getState().family, branchId);
             return;
           }
-          if (!loadFamilyById(familyId, runtime.localStorage)) {
-            toast('Das verknüpfte Haus ist noch nicht im Familienregister angelegt.', { error: true });
-            return;
-          }
-          const target = new URL(runtime.location.href);
-          target.searchParams.set('family', familyId);
-          target.searchParams.set('mode', workspaceMode);
-          runtime.location.assign(target.href);
+          navigateToFamily(familyId, 'Das verknüpfte Haus ist noch nicht im Familienregister angelegt.');
         },
         onLineageOriginClick({ familyId }) {
           if (isEditing) {
@@ -639,14 +729,7 @@ export function createAppController({
             return;
           }
           if (!familyId) return;
-          if (!loadFamilyById(familyId, runtime.localStorage)) {
-            toast('Das verknüpfte Ursprungshaus ist noch nicht im Familienregister angelegt.', { error: true });
-            return;
-          }
-          const target = new URL(runtime.location.href);
-          target.searchParams.set('family', familyId);
-          target.searchParams.set('mode', workspaceMode);
-          runtime.location.assign(target.href);
+          navigateToFamily(familyId, 'Das verknüpfte Ursprungshaus ist noch nicht im Familienregister angelegt.');
         },
         onTimeJumpClick({ timeJumpId }) {
           if (!isEditing) return;
@@ -686,7 +769,10 @@ export function createAppController({
     }
     try {
       hideChartStatus();
-      if (event?.affectsFamily) chartSession.update(state.family, state.family.view);
+      if (event?.affectsFamily) {
+        refreshRegisteredHouses();
+        chartSession.update(state.family, state.family.view);
+      }
     } catch (error) {
       showChartStatus(error.message, true);
     }

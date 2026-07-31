@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { BLODYN_HOUSE_PROFILES } from './blodyn-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -16,8 +17,12 @@ const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   blodyn: BLODYN_EMBLEM,
+  blaidd: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd,
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
+  gwaedlyd: GRAUE_WEITE_HOUSE_EMBLEMS.gwaedlyd,
+  illygoden: GRAUE_WEITE_HOUSE_EMBLEMS.illygoden,
+  lyfant: GRAUE_WEITE_HOUSE_EMBLEMS.lyfant,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -143,7 +148,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-dreigiau', 'Haus Dreigiau'),
     house('house-riabhach', 'Haus Riabhach'),
     house('house-raun', 'Haus Raun'),
-    house('house-blaidd', 'Haus Blaidd'),
+    house('house-blaidd', "Haus Blaidd O'Branon", HOUSE_EMBLEMS.blaidd),
     house('house-dobhar', 'Haus Dobhar'),
     house('house-dianc', 'Haus Dianc'),
     house('house-trachwyll', 'Haus Trachwyll'),
@@ -153,14 +158,14 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-mac-duilb', 'Haus Mac Duilb'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-walwrs', 'Haus Walwrs'),
-    house('house-llyfant', 'Haus Llyfant'),
+    house('house-llyfant', "Haus Lyfant O'Derwyddion", HOUSE_EMBLEMS.lyfant),
     house('house-dubglais', 'Haus Dubglais'),
     house('house-wargh', 'Haus Wargh'),
     house('house-gwenyen', 'Haus Gwenyen'),
     house('house-blodeuwedd', 'Haus Blodeuwedd'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
-    house('house-gwaedlyd', 'Haus Gwaedlyd'),
-    house('house-illygoden', 'Haus Illygoden'),
+    house('house-gwaedlyd', "Haus Gwaedlyd O'Caer Gorwel", HOUSE_EMBLEMS.gwaedlyd),
+    house('house-illygoden', "Haus Illygoden O'Tirwedd", HOUSE_EMBLEMS.illygoden),
     house('house-morgant', 'Haus Morgant'),
     house('house-mochdear', 'Haus Mochdear'),
     house('house-dyfrgi', 'Haus Dyfrgi'),
@@ -217,7 +222,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('meuric-blodyn', 'Meuric Blodyn', 'male', '1621', '1642'),
 
     person('gruffydd-blodyn', 'Gruffydd Blodyn', 'male', '1635', '1694', BLODYN_HOUSE_ID, { title: 'König von Vennyr 1668–1694' }),
-    person('catryn-llyfant', 'Catryn Llyfant', 'female', '1635', '1652', 'house-llyfant'),
+    person('catryn-llyfant', 'Catryn Lyfant', 'female', '1635', '1652', 'house-llyfant'),
     person('blodeuwedd-blodyn', 'Blodeuwedd Blodyn', 'female', '1637', '1670'),
     person('lulach-dubglais', 'Lulach Dubglais', 'male', '1636', '1678', 'house-dubglais'),
     person('kethtrwm-blodyn', 'Kethtrwm Blodyn', 'male', '1635', '1690'),
@@ -375,7 +380,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
       crestFrame: 'gold',
       notes: 'Der Knoten hängt direkt unter Yvain Blodyn und Bronwen Blaidd. Dalvin und Erec werden ausschließlich im separaten Aberdail-Stammbaum weitergeführt.'
     }),
-    marriedAway('married-away-blaidd-ceridwen', 'Haus Blaidd', 'marriage-ceridwen-gwynfor', 'house-blaidd'),
+    marriedAway('married-away-blaidd-ceridwen', "Haus Blaidd O'Branon", 'marriage-ceridwen-gwynfor', 'house-blaidd', HOUSE_EMBLEMS.blaidd),
     marriedAway('married-away-dobhar-morfydd', 'Haus Dobhar', 'marriage-morfydd-breseal', 'house-dobhar'),
     marriedAway('married-away-dianc-gwendolen', 'Haus Dianc', 'marriage-gwendolen-arthfael', 'house-dianc'),
     marriedAway('married-away-trachwyll-morwenna', 'Haus Trachwyll', 'marriage-morwenna-gwalchmai', 'house-trachwyll'),
@@ -386,7 +391,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     marriedAway('married-away-dubglais-blodeuwedd', 'Haus Dubglais', 'marriage-blodeuwedd-lulach', 'house-dubglais'),
     marriedAway('married-away-gwenyen-olwyn', 'Haus Gwenyen', 'marriage-olwyn-colwin', 'house-gwenyen'),
     marriedAway('married-away-wylan-arryn', 'Haus Wylan', 'marriage-gendry-arryn', 'house-wylan', HOUSE_EMBLEMS.wylan),
-    marriedAway('married-away-blaidd-arvyn', 'Haus Blaidd', 'marriage-arvyn-trystan', 'house-blaidd'),
+    marriedAway('married-away-blaidd-arvyn', "Haus Blaidd O'Branon", 'marriage-arvyn-trystan', 'house-blaidd', HOUSE_EMBLEMS.blaidd),
     marriedAway('married-away-arth-blawd', 'Haus Arth', 'marriage-rhys-blawd', 'house-arth', HOUSE_EMBLEMS.arth),
     marriedAway('married-away-dyfrgi-elin', 'Haus Dyfrgi', 'marriage-elin-mevyn', 'house-dyfrgi'),
     marriedAway('married-away-drewi-afanen', 'Haus Drewi', 'marriage-afanen-grugyn', 'house-drewi'),

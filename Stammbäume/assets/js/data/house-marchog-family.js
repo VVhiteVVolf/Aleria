@@ -227,7 +227,10 @@ export const HOUSE_MARCHOG_FAMILY = Object.freeze({
       notes: 'Die Quelle führt Bréannain als Sohn zweier nicht überlieferter Eltern.'
     }),
     person('breannain-marchog', 'Bréannain Marchog', 'male', '1633', '', {
-      notes: 'Ehemaliger Krabbenfischer und einfacher Seemann. Nach seiner nächtlichen Versorgungsfahrt während der Belagerung erhob Iorwerth Grawn ihn 1720 im Alter von 87 Jahren zum Ritterfürsten.'
+      notes: 'Ehemaliger Krabbenfischer und einfacher Seemann. Nach seiner nächtlichen Versorgungsfahrt während der Belagerung erhob Iorwerth Grawn ihn 1720 im Alter von 87 Jahren zum Ritterfürsten.',
+      extensions: {
+        chartCenterBetweenSpousePersonIds: ['delwen', 'arianwen']
+      }
     }),
     spouse('delwen', 'Delwen', 'female', '1634', '1655', '', { title: 'Erste Ehefrau Bréannains' }),
     spouse('arianwen', 'Arianwen', 'female', '1638', '1700', '', { title: 'Zweite Ehefrau Bréannains' }),
@@ -284,7 +287,10 @@ export const HOUSE_MARCHOG_FAMILY = Object.freeze({
   ],
   partnerships: [
     endedMarriage('marriage-unknown-origins-marchog', ...COUPLES.origins),
-    endedMarriage('marriage-breannain-delwen', ...COUPLES.delwen, '1655'),
+    alignPartnerOverChildren(
+      endedMarriage('marriage-breannain-delwen', ...COUPLES.delwen, '1655'),
+      'delwen'
+    ),
     alignPartnerOverChildren(
       endedMarriage('marriage-breannain-arianwen', ...COUPLES.arianwen, '1700'),
       'arianwen'
@@ -370,8 +376,9 @@ export const HOUSE_MARCHOG_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
-    sourceNote: 'Genealogie, Lebensdaten, Erbfolge und Porträts folgen der bereitgestellten Marchog-Haustabelle. Bréannain bleibt trotz der unbekannten Eltern ausdrücklich der Gründer: Der Hausknoten liegt als genealogischer Trenner zwischen den anonymen Eltern und dem ersten namentlich belegten Marchog. Seine Kinder aus beiden Ehen bleiben ihren tatsächlichen Müttern zugeordnet; Enora und Evain hängen getrennt unter den Affären mit Mari beziehungsweise Mabli. Die Gegenakten-IDs für Llyonell/Glenys und Tirian/Eiddwen werden unverändert wiederverwendet. Rhianu und Gwenaelle erhalten die vorgeschriebenen Wegverheiratet-Verknüpfungen; die junge Generation bleibt unverheiratet und unverlobt.',
+    sourceRevision: 3,
+    chartAlignLineageOriginOverPersonId: 'breannain-marchog',
+    sourceNote: 'Genealogie, Lebensdaten, Erbfolge und Porträts folgen der bereitgestellten Marchog-Haustabelle. Bréannain bleibt trotz der unbekannten Eltern ausdrücklich der Gründer: Der Hausknoten liegt als genealogischer Trenner zwischen den anonymen Eltern und dem ersten namentlich belegten Marchog. Seine Kinder aus beiden Ehen bleiben ihren tatsächlichen Müttern zugeordnet; Enora und Evain hängen getrennt unter den Affären mit Mari beziehungsweise Mabli. Für die Darstellung stehen Delwen und Arianwen jeweils über ihrem Kinderblock und Bréannain genau einmal zwischen seinen legitimen Ehefrauen; die beiden Affären beeinflussen diese Zentrierung nicht. Das unbekannte Gründerpaar und das Marchog-Wappen werden als gemeinsamer Block geradlinig über Bréannain ausgerichtet. Die Gegenakten-IDs für Llyonell/Glenys und Tirian/Eiddwen werden unverändert wiederverwendet. Rhianu und Gwenaelle erhalten die vorgeschriebenen Wegverheiratet-Verknüpfungen; die junge Generation bleibt unverheiratet und unverlobt.',
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

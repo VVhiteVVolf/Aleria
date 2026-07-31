@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_GWEFRYDD_PORTRAITS } from './house-gwefrydd-portraits.js';
+import { TAL_DER_MILANE_HOUSE_EMBLEMS } from './tal-der-milane-house-profiles.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
@@ -16,6 +17,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  hebog: TAL_DER_MILANE_HOUSE_EMBLEMS.hebog,
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
@@ -89,6 +91,7 @@ const STENNIS_IDS = ['stennis-gwefrydd', 'morwen-dyngwn'];
 const RENLY_IDS = ['renly-gwefrydd', 'maelona-ceirwyn'];
 const THOMOS_IDS = ['thomos-gwefrydd', 'alys-gwyvern'];
 const TOMMEN_IDS = ['tommen-gwefrydd', 'eithne-frisealach'];
+const IORWERTH_IDS = ['iorwerth-gwefrydd', 'glinda-hebog'];
 
 export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
@@ -124,6 +127,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-creyr', 'Haus Créyr'),
     house('house-coedwig', 'Haus Coedwig'),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
+    house('house-hebog', "Haus Hebog O'Talwyn", HOUSE_EMBLEMS.hebog),
     house('house-frisealach', 'Haus Frisealach'),
     house('house-arwydd', 'Haus Arwydd', HOUSE_EMBLEMS.arwydd)
   ],
@@ -218,6 +222,9 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
 
     // Jüngste Generation
     person('iorwerth-gwefrydd', 'Iorwerth', 'male', '1718', ''),
+    person('glinda-hebog', 'Glinda Hebog', 'female', '1723', '', 'house-hebog', {
+      title: 'Verlobte Iorwerths'
+    }),
     person('eira-gwefrydd', 'Eira', 'female', '1721', ''),
     person('bethan-gwefrydd', 'Bethan', 'female', '1722', ''),
     person('petyr-gwefrydd', 'Petyr', 'male', '1722', ''),
@@ -251,7 +258,8 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     createMarriage('marriage-thomos-alys', ...THOMOS_IDS),
     createMarriage('marriage-branwen-steffan', 'branwen-gwefrydd', 'steffan-draig'),
     createMarriage('marriage-tommen-eithne', ...TOMMEN_IDS),
-    createMarriage('marriage-myrcella-ieuan', 'myrcella-gwefrydd', 'ieuan-arwydd')
+    createMarriage('marriage-myrcella-ieuan', 'myrcella-gwefrydd', 'ieuan-arwydd'),
+    createMarriage('engagement-iorwerth-glinda-hebog', ...IORWERTH_IDS, { type: 'engagement' })
   ],
   parentages: [
     ...childrenOf(['wynfor-gwefrydd', 'heulwen-gwefrydd'], FOUNDER_IDS, 'marriage-tallwch-clodagh', {
@@ -325,8 +333,8 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn ist gemäß Tabellenüberschrift der Sohn Edrics und Luneds; Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet.',
+    sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn ist gemäß Tabellenüberschrift der Sohn Edrics und Luneds; Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet. Die Hebog-Gegenakte ergänzt Iorwerths Verlobung mit Glinda Hebog gegenseitig in beiden Stammbäumen.',
     blankFamily: false,
-    sourceRevision: 1
+    sourceRevision: 2
   }
 });

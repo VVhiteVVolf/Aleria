@@ -8,7 +8,7 @@ const MIRRORED_PARTNERSHIP_FIELDS = Object.freeze([
   'notes'
 ]);
 
-function collectLinks(family) {
+function collectRelationshipLinks(family) {
   const links = new Map();
   const personsById = new Map((family?.persons || []).map(person => [person.id, person]));
   family?.partnerships?.forEach(partnership => {
@@ -18,6 +18,7 @@ function collectLinks(family) {
     if (!linkId || !counterpartFamilyId) return;
     if (!links.has(linkId)) links.set(linkId, []);
     links.get(linkId).push(Object.freeze({
+      kind: 'relationship',
       familyId: family.document.id,
       counterpartFamilyId,
       participantWorldPersonIds: partnership.participantIds.map(personId => {
@@ -30,8 +31,48 @@ function collectLinks(family) {
   return links;
 }
 
+function collectGuardianshipLinks(family) {
+  const links = new Map();
+  const add = details => {
+    const linkId = String(details?.linkId || '');
+    const wardFamilyId = String(details?.wardFamilyId || '');
+    const guardianFamilyId = String(details?.guardianFamilyId || '');
+    if (!linkId || !wardFamilyId || !guardianFamilyId) return;
+    const counterpartFamilyId = family.document.id === wardFamilyId ? guardianFamilyId : wardFamilyId;
+    if (!links.has(linkId)) links.set(linkId, []);
+    links.get(linkId).push(Object.freeze({
+      kind: 'guardianship',
+      familyId: family.document.id,
+      counterpartFamilyId,
+      wardWorldPersonId: String(details.wardWorldPersonId || ''),
+      guardianWorldPersonId: String(details.guardianWorldPersonId || '')
+    }));
+  };
+  family?.cadetBranches?.forEach(branch => add(branch.extensions?.crossFamilyGuardianship));
+  family?.parentages?.forEach(parentage => add(parentage.extensions?.crossFamilyGuardianship));
+  return links;
+}
+
+function collectLinks(family) {
+  const links = collectRelationshipLinks(family);
+  collectGuardianshipLinks(family).forEach((entries, linkId) => {
+    if (!links.has(linkId)) links.set(linkId, []);
+    links.get(linkId).push(...entries);
+  });
+  return links;
+}
+
 function entrySignature(entry, { includeCounterpart = true } = {}) {
+  if (entry.kind === 'guardianship') {
+    return JSON.stringify([
+      entry.kind,
+      ...(includeCounterpart ? [entry.counterpartFamilyId] : []),
+      entry.wardWorldPersonId,
+      entry.guardianWorldPersonId
+    ]);
+  }
   return JSON.stringify([
+    entry.kind,
     ...(includeCounterpart ? [entry.counterpartFamilyId] : []),
     entry.participantWorldPersonIds,
     ...MIRRORED_PARTNERSHIP_FIELDS.map(field => String(entry.partnership[field] || ''))
@@ -43,7 +84,7 @@ function entriesSignature(entries) {
 }
 
 function invariantMessage(linkId, detail) {
-  return `Die registerübergreifende Beziehung „${linkId}“ ist nicht mehr beidseitig konsistent (${detail}). Es wurde nichts online gespeichert. Gleiche zuerst beide Familien mit Firebase ab oder stelle die Spiegelbeziehung in beiden Akten wieder her.`;
+  return `Die registerübergreifende Verbindung „${linkId}“ ist nicht mehr beidseitig konsistent (${detail}). Es wurde nichts online gespeichert. Gleiche zuerst beide Familien mit der GitHub-Registry ab oder stelle die Spiegelung in beiden Akten wieder her.`;
 }
 
 export class CrossFamilySyncInvariantError extends Error {

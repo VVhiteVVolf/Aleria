@@ -35,7 +35,9 @@ export function createFamilyAssetUploadController({
       if (!target) throw new Error('Das Zielfeld für den Bild-Link wurde nicht gefunden.');
       target.value = result.url;
       target.dispatchEvent(new Event('input', { bubbles: true }));
-      renderStatus(input, 'Firebase-Bild übernommen.');
+      renderStatus(input, result.staged
+        ? 'Bild nur auf diesem Gerät vorgemerkt · erst „Online speichern“ veröffentlicht es über GitHub für andere.'
+        : 'Bild übernommen.');
     } catch (error) {
       renderStatus(input, error.message, true);
     } finally {

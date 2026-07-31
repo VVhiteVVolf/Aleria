@@ -30,6 +30,8 @@ export const SONNENKUESTE_HOUSE_EMBLEMS = Object.freeze({
   llwynog: 'assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png',
   illwath: 'assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png',
   morforwyn: 'assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png',
+  rhelian: 'assets/images/houses/Sonnenküste/Jungferntal/haus-rhelian.png',
+  aelryn: 'assets/images/houses/Sonnenküste/Jungferntal/haus-aelryn.png',
   grianlaoch: 'assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png',
   gwaedryn: 'assets/images/houses/Sonnenküste/Gersteküste/haus-gwaedryn.png',
   rhavorn: 'assets/images/houses/Sonnenküste/Gersteküste/haus-rhavorn.png',
@@ -87,6 +89,8 @@ export const SONNENKUESTE_HOUSE_PROFILES = Object.freeze({
   llwynog: illewodVassalProfile('knight-prince'),
   illwath: illewodVassalProfile('knight-prince', CAER_LLEW_PATH),
   morforwyn: illewodVassalProfile('barony', CARNGOL_PATH),
+  rhelian: illewodVassalProfile('knight', CARNGOL_PATH),
+  aelryn: illewodVassalProfile('knight', CARNGOL_PATH),
   grianlaoch: illewodVassalProfile('knight', ABERON_PATH, {
     secondarySeats: ['Gallchofaen']
   }),

@@ -26,6 +26,18 @@ function optionalImage(source, className) {
     : '';
 }
 
+function personCrest(data) {
+  if (!data.crest) return '';
+  const houseName = String(data.house || '').trim();
+  const label = houseName
+    ? `Zum Stammbaum von ${houseName}`
+    : 'Zum zugehörigen Haus';
+  return `
+    <button class="aleria-person-card__crest-link" type="button" aria-label="${escapeHtml(label)}" title="${escapeHtml(label)}">
+      ${optionalImage(data.crest, 'aleria-person-card__crest')}
+    </button>`;
+}
+
 function crestPositionStyle(position = {}) {
   const declarations = [
     ['--card-crest-left', position.left],
@@ -61,7 +73,7 @@ function personCard(data) {
         ${data.life ? `<span class="family-card-life">${escapeHtml(data.life)}</span>` : ''}
       </div>
       ${optionalImage(data.frameAsset, 'aleria-person-card__frame')}
-      ${optionalImage(data.crest, 'aleria-person-card__crest')}
+      ${personCrest(data)}
     </div>`;
 }
 

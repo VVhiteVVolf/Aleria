@@ -1,12 +1,12 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
 import { RETIRED_FAMILY_IDS } from './data/families.registry.js';
-import { createFirebaseAuthService } from './modules/firebase-platform/firebase-auth.js';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
-import { createFirebaseAssetRepository } from './modules/family-assets/firebase-asset-repository.js';
+import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
+import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
+import { createGitHubPublisherAuthService } from './modules/github-publication/github-publisher-auth.js';
 import { createAlmanachCharacterRepository } from './modules/almanach-bridge/almanach-character-repository.js';
 import { createFamilyAssetUploadController } from './modules/family-assets/family-asset-upload-controller.js';
 import { createFamilySyncController } from './modules/family-sync/family-sync-controller.js';
-import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
 import { createLocalFamilyRepository } from './modules/family-sync/local-family-repository.js';
 import { createLatestLocalFamilySource } from './modules/family-sync/latest-local-family-source.js';
 import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js';
@@ -40,14 +40,14 @@ if (requestedQuery.get('action') === 'start-tree-generator') {
 }
 const workspaceAccess = resolveWorkspaceAccess(globalThis.location, globalThis.sessionStorage);
 const firebaseClient = createFirebaseClient();
-const cloudRepository = createFirestoreFamilyRepository(firebaseClient);
-const authService = createFirebaseAuthService(firebaseClient);
+const cloudRepository = createGitHubFamilyRepository();
+const authService = createGitHubPublisherAuthService(cloudRepository);
 const localRepository = createLocalFamilyRepository(globalThis.localStorage);
 const latestLocalFamilySource = createLatestLocalFamilySource({
   draftRepository: localRepository,
   storage: globalThis.localStorage
 });
-const assetRepository = createFirebaseAssetRepository(firebaseClient);
+const assetRepository = createLocalImageDraftRepository();
 const almanachCharacterRepository = createAlmanachCharacterRepository(firebaseClient);
 const registeredOrSavedFamily = requestedFamilyId ? loadFamilyById(requestedFamilyId) : null;
 const localDraft = requestedFamilyId ? localRepository.loadDraft(requestedFamilyId) : null;
@@ -99,7 +99,7 @@ if (workspaceAccess.mode === WORKSPACE_MODE.view && requestedFamilyId) {
     store,
     cloudRepository,
     onUnavailable(error) {
-      console.info('Die veröffentlichte Firebase-Fassung ist derzeit nicht erreichbar.', error);
+      console.info('Die veröffentlichte GitHub-Fassung ist derzeit nicht erreichbar.', error);
     }
   });
 }

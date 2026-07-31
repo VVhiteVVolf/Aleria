@@ -36,6 +36,7 @@ export const TAL_DER_MILANE_HOUSE_EMBLEMS = Object.freeze({
   tylluan: 'assets/images/houses/Tal der Milane/Yvains Klamm/haus-tylluan.png',
   mwyalchen: 'assets/images/houses/Tal der Milane/Yvains Klamm/haus-mwyalchen.png',
   ilyuncu: 'assets/images/houses/Tal der Milane/Schwalbenhort/haus-ilyuncu.png',
+  sliabh: 'assets/images/houses/Tal der Milane/Schwalbenhort/haus-sliabh.png',
   gaeth: 'assets/images/houses/Tal der Milane/Taubenfurt/haus-gaeth.png',
   hebog: 'assets/images/houses/Tal der Milane/Falkenhöh/haus-hebog.png',
   bronnor: 'assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png',
@@ -82,12 +83,20 @@ function aderynVassalProfile(rankId, folderPath = PENBRYN_PATH) {
   });
 }
 
+function ilyuncuVassalProfile(rankId) {
+  return profile(rankId, CAER_GWENNOL_PATH, {
+    liegeHouseId: 'haus-ilyuncu',
+    liegeHouseName: "Haus Ilyuncu O'Caer Gwennol"
+  });
+}
+
 export const TAL_DER_MILANE_HOUSE_PROFILES = Object.freeze({
   aderyn: profile('county', PENBRYN_PATH),
   eryr: aderynVassalProfile('knight-prince'),
   tylluan: aderynVassalProfile('knight-prince'),
   mwyalchen: aderynVassalProfile('knight-prince'),
   ilyuncu: aderynVassalProfile('knight-prince', CAER_GWENNOL_PATH),
+  sliabh: ilyuncuVassalProfile('knight'),
   gaeth: aderynVassalProfile('barony', PENLLYN_PATH),
   hebog: aderynVassalProfile('barony', TALWYN_PATH),
   bronnor: aderynVassalProfile('knight'),

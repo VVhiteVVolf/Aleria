@@ -24,7 +24,7 @@ import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
 import {
-  alignFamilyChartPartnersOverChildren,
+  applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
@@ -61,8 +61,38 @@ export function isPortraitCardEvent(event) {
   return Boolean(event?.target?.closest?.('.aleria-person-card__portrait'));
 }
 
+export function isPersonCrestCardEvent(event) {
+  return Boolean(event?.target?.closest?.('.aleria-person-card__crest-link'));
+}
+
 function addUnique(target, value) {
   if (value && !target.includes(value)) target.push(value);
+}
+
+function createChartHouseIndex(family, options) {
+  const referencedHouseIds = new Set([
+    ...family.persons.map(person => person.houseId),
+    ...family.cadetBranches.map(branch => branch.houseId),
+    family.lineage?.houseId,
+    family.lineage?.originHouse?.houseId
+  ].filter(Boolean));
+  const localHouseById = new Map(family.houses.map(house => [house.id, house]));
+
+  return new Map([...referencedHouseIds].map(houseId => {
+    const localHouse = localHouseById.get(houseId);
+    const registeredHouse = options.resolveHouse?.(houseId);
+    const emblem = localHouse?.emblem
+      || registeredHouse?.emblem
+      || options.resolveHouseEmblem?.(houseId)
+      || '';
+    return [houseId, {
+      ...(registeredHouse || {}),
+      ...(localHouse || {}),
+      id: houseId,
+      name: localHouse?.name || registeredHouse?.name || '',
+      emblem
+    }];
+  }));
 }
 
 function removeValue(target, value) {
@@ -611,7 +641,7 @@ function applyTimeJumps({
 export function toFamilyChartData(input, options = {}) {
   const family = normalizeFamily(input);
   const diagnostics = [];
-  const houseById = new Map(family.houses.map(house => [house.id, house]));
+  const houseById = createChartHouseIndex(family, options);
   const personById = new Map(family.persons.map(person => [person.id, person]));
   const chartById = new Map();
   const pairMetadata = new Map();
@@ -1033,6 +1063,11 @@ export function createFamilyChartSession(config) {
         return;
       }
       if (metadata.virtualType) return;
+      if (isPersonCrestCardEvent(event)) {
+        const crestHandled = typeof config.onPersonCrestClick === 'function'
+          && config.onPersonCrestClick({ personId, event }) === true;
+        if (crestHandled) return;
+      }
       if (isPortraitCardEvent(event)) {
         const portraitHandled = typeof config.onPortraitClick === 'function'
           && config.onPortraitClick({ personId, event }) === true;
@@ -1152,7 +1187,7 @@ export function createFamilyChartSession(config) {
   applyView(false);
   chart.setBeforeUpdate?.(() => {
     const alignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
-    alignFamilyChartPartnersOverChildren({
+    applyFamilyChartPartnerAlignmentPlan({
       tree: chart.store?.getTree?.(),
       plan: alignmentPlan,
       orientation: view.orientation

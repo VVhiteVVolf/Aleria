@@ -7,6 +7,7 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_WYLAN_PORTRAITS } from './house-wylan-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -15,6 +16,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
+  gwialen: GRAUE_WEITE_HOUSE_EMBLEMS.gwialen,
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
@@ -182,7 +184,7 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     house('house-saith', 'Haus Saith'),
     house('house-blach', 'Haus Blach'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
-    house('house-gwialen', 'Haus Gwialen'),
+    house('house-gwialen', 'Haus Gwialen', HOUSE_EMBLEMS.gwialen),
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-cetchathach', 'Haus Cétchathach'),
@@ -440,7 +442,7 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     marriedAway('married-away-crefyddol-celyn', 'Haus Crefyddol', 'marriage-celyn-gwindor', 'house-crefyddol'),
     marriedAway('married-away-saith-enid', 'Haus Saith', 'marriage-enid-hopcyn', 'house-saith'),
     marriedAway('married-away-blach-malvina', 'Haus Blach', 'marriage-malvina-ifan', 'house-blach'),
-    marriedAway('married-away-gwialen-glynis', 'Haus Gwialen', 'marriage-glynis-uther', 'house-gwialen'),
+    marriedAway('married-away-gwialen-glynis', 'Haus Gwialen', 'marriage-glynis-uther', 'house-gwialen', HOUSE_EMBLEMS.gwialen),
     marriedAway('married-away-dienyddiwr-evaine', 'Haus Dienyddiwr', 'marriage-evaine-mervyn', 'house-dienyddiwr'),
     marriedAway('married-away-tir-addawol-caralyn', 'Haus Tir Addawol', 'marriage-caralyn-gwynham', 'house-tir-addawol'),
     marriedAway('married-away-llwynog-malt', 'Haus Llwynog', 'marriage-malt-anarawd', 'house-llwynog'),
@@ -517,10 +519,10 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Genealogie, Lebensdaten, Hausdaten und Portraitquellen folgen der bereitgestellten Wylan-Hausseite und ihrer Hierarchietabelle. Der verbindliche Name ist nach Caption und Übersicht Haus Wylan O’Cerrigarth; die erzählerischen Varianten O’Dewet und O’Penrith werden nicht als weitere Familien angelegt. Die vier Auslassungszeichen werden ausschließlich als strikt serielle Zeitsprünge unter Breandan/Oileán, Merlion/Tadhgín, Rheidwn/Maygan und Rhun/Ysolde abgebildet. Rhuns Todesjahr steht hier quellgetreu als 1182; die Illewod-Gegenakte nennt abweichend 1172. Selyse wird mit der stabilen Gegenakten-ID selsye-wylan geführt. Sämtliche verheirateten Wylan-Frauen, deren Linie in ein anderes Haus führt, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten; die beiden benannten Verlobungen Anona/Alun und Nona/Evan erzeugen gemäß Regel noch keinen solchen Knoten. Rhodhri Wylan und Tanwen Hwyaden begründen Haus Créyr; der Kadettenhausknoten hängt direkt unter ihrem Paar. Arawn bleibt als Sohn von Iolyn Wylan und Gladys Grawn im fortgesetzten Zweig: Dort steht seine Ehe mit Mervyne und dort hängen ihre Kinder. Mervyne bleibt zugleich als Tochter von Gendry Wylan und Arryn Blodyn sichtbar; an ihrem Herkunftszweig erscheint eine reine Arawn-Partnerkarte ohne erneute Nachkommenlinie. Wiederholte generische Frauen- und Männer-Silhouetten sowie die neun namenlosen Verlobtenfelder werden nicht als individuelle Personen oder Portraits importiert. Seit Revision 4 liegt Cerrigarth verbindlich in der Baronie Melwas Au; ältere direkte Weidebucht/Cerrigarth-Registerpfade werden auf die vierstufige Hierarchie migriert. Revision 5 übernimmt Enid Wylans in der Saith-Gegenquelle ausdrücklich belegtes Todesjahr 1729. Revision 6 vereinheitlicht die sichtbaren Namen Gwindor und Kimball zur kanonischen Schreibweise Crefyddol, ohne ihre stabilen Gegenakten-IDs zu ändern.',
+    sourceNote: 'Genealogie, Lebensdaten, Hausdaten und Portraitquellen folgen der bereitgestellten Wylan-Hausseite und ihrer Hierarchietabelle. Der verbindliche Name ist nach Caption und Übersicht Haus Wylan O’Cerrigarth; die erzählerischen Varianten O’Dewet und O’Penrith werden nicht als weitere Familien angelegt. Die vier Auslassungszeichen werden ausschließlich als strikt serielle Zeitsprünge unter Breandan/Oileán, Merlion/Tadhgín, Rheidwn/Maygan und Rhun/Ysolde abgebildet. Rhuns Todesjahr steht hier quellgetreu als 1182; die Illewod-Gegenakte nennt abweichend 1172. Selyse wird mit der stabilen Gegenakten-ID selsye-wylan geführt. Sämtliche verheirateten Wylan-Frauen, deren Linie in ein anderes Haus führt, besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten; die beiden benannten Verlobungen Anona/Alun und Nona/Evan erzeugen gemäß Regel noch keinen solchen Knoten. Rhodhri Wylan und Tanwen Hwyaden begründen Haus Créyr; der Kadettenhausknoten hängt direkt unter ihrem Paar. Arawn bleibt als Sohn von Iolyn Wylan und Gladys Grawn im fortgesetzten Zweig: Dort steht seine Ehe mit Mervyne und dort hängen ihre Kinder. Mervyne bleibt zugleich als Tochter von Gendry Wylan und Arryn Blodyn sichtbar; an ihrem Herkunftszweig erscheint eine reine Arawn-Partnerkarte ohne erneute Nachkommenlinie. Wiederholte generische Frauen- und Männer-Silhouetten sowie die neun namenlosen Verlobtenfelder werden nicht als individuelle Personen oder Portraits importiert. Seit Revision 4 liegt Cerrigarth verbindlich in der Baronie Melwas Au; ältere direkte Weidebucht/Cerrigarth-Registerpfade werden auf die vierstufige Hierarchie migriert. Revision 5 übernimmt Enid Wylans in der Saith-Gegenquelle ausdrücklich belegtes Todesjahr 1729. Revision 6 vereinheitlicht die sichtbaren Namen Gwindor und Kimball zur kanonischen Schreibweise Crefyddol, ohne ihre stabilen Gegenakten-IDs zu ändern. Revision 7 ergänzt das belegte Gwialen-Wappen an Glynis Wylans Zielhausknoten.',
     chartViewport: { initialPosition: 'focus', initialScale: 0.55 },
     blankFamily: false,
-    sourceRevision: 6,
+    sourceRevision: 7,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

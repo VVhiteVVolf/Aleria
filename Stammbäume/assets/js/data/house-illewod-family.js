@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -14,6 +15,7 @@ import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
+  brithyll: GRAUE_WEITE_HOUSE_EMBLEMS.brithyll,
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   grawn: 'assets/images/houses/Ährental/haus-grawn.png',
   grianlaoch: 'assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png',
@@ -70,7 +72,14 @@ function person(id, name, sex, birth = '????', death = '', houseId = ILLEWOD_HOU
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    ...(emblem ? { extensions: { registryManagedFields: ['name', 'emblem'] } } : {})
+  };
 }
 
 function childrenOf(childIds, parentIds, partnershipId, options = {}) {
@@ -161,7 +170,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
-    house('house-brithyll', 'Haus Brithyll'),
+    house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
     house('house-draenog', 'Haus Draenog'),
     house('house-coedwig', 'Haus Coedwig'),
     house('house-saethwyr', 'Haus Saethwyr'),
@@ -332,14 +341,22 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     createMarriage('marriage-gwales-isobel', ...GWALES_IDS),
     createMarriage('marriage-lowri-gawain', ...LOWRI_IDS),
     createMarriage('marriage-maygan-selwyn', 'maygan-draig', 'selwyn-illewod'),
-    createMarriage('marriage-evaine-shan', ...EVAINE_IDS),
+    createMarriage('marriage-evaine-shan', ...EVAINE_IDS, {
+      status: 'ended',
+      end: '1715',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-madoc-glaw', ...MADOC_IDS),
     createMarriage('marriage-ehangwen-rhondda', ...EHANGWEN_IDS),
     createMarriage('marriage-brannoc-rhondda', ...BRANNOC_IDS),
     createMarriage('marriage-arthgal-land', ...ARTHGAL_IDS),
     createMarriage('marriage-carwyn-dafydd', ...CARWYN_IDS),
     createMarriage('marriage-mifawi-catel', ...MIFAWI_IDS),
-    createMarriage('marriage-meical-menna', ...MEICAL_IDS),
+    createMarriage('marriage-meical-menna', ...MEICAL_IDS, {
+      status: 'ended',
+      end: '1715',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-caled-siriol', ...CALED_IDS),
     createMarriage('marriage-merwin-alana', ...MERWIN_IDS),
     createMarriage('marriage-mairwen-cynfor', ...MAIRWEN_IDS),
@@ -467,7 +484,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceRevision: 4,
+    sourceRevision: 6,
     registryManagedRecordFields: ['folderPath'],
     registryManagedHouseProfileFields: [
       'rankId',

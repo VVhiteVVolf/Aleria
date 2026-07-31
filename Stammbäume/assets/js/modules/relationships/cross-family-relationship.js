@@ -1,58 +1,96 @@
 import {
   cloneValue,
   createRecordId,
-  createWorldPersonId,
   normalizeFamily
 } from '../../domain/family-schema.js';
 import {
-  buildImportedPersonValues,
-  findExistingImport
-} from '../../services/relation-actions.js';
-import {
   applyExclusivePartnershipChange,
+  isExclusiveActivePartnership,
   planExclusivePartnershipChange
 } from './exclusive-partnership-policy.js';
+import {
+  ensureProjectedHouse,
+  ensureProjectedPerson,
+  stableCrossFamilyLinkId,
+  withCanonicalWorldPersonIds
+} from './cross-family-person-projection.js';
 
-function ensureHouse(targetFamily, sourceFamily, sourcePerson) {
-  const sourceHouse = sourceFamily.houses.find(house => house.id === sourcePerson.houseId);
-  if (!sourceHouse || targetFamily.houses.some(house => house.id === sourceHouse.id)) return;
-  targetFamily.houses.push(cloneValue(sourceHouse));
+function primaryHouse(family) {
+  return family.houses.find(house => house.id === family.lineage.houseId) || null;
 }
 
-function ensurePerson(targetFamily, sourceFamily, sourcePerson) {
-  const existing = findExistingImport(targetFamily, sourcePerson);
-  if (existing) return existing.id;
-  const imported = buildImportedPersonValues(sourceFamily, sourcePerson, {
-    targetFamily,
-    familyRole: 'married'
-  });
-  const { house, ...personValues } = imported;
-  if (house) ensureHouse(targetFamily, sourceFamily, sourcePerson);
-  targetFamily.persons.push({
-    ...personValues,
-    id: personValues.id || createRecordId('person', targetFamily.persons.map(person => person.id)),
-    extensions: { ...(personValues.extensions || {}) }
-  });
-  return personValues.id;
-}
-
-function stableLinkId(firstFamily, firstPerson, secondFamily, secondPerson) {
-  return ['linked', firstFamily.document.id, firstPerson.worldPersonId || firstPerson.id, secondFamily.document.id, secondPerson.worldPersonId || secondPerson.id]
-    .join('-')
-    .toLocaleLowerCase('de')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9-]+/g, '-')
-    .replace(/-+/g, '-')
-    .slice(0, 150);
-}
-
-function withCanonicalWorldPersonIds(familyInput) {
+function addMarriedAwayBranch(familyInput, partnershipId, targetFamily, linkId) {
   const family = cloneValue(normalizeFamily(familyInput));
-  family.persons.forEach(person => {
-    if (!person.worldPersonId) person.worldPersonId = createWorldPersonId(family.document.id, person.id);
-  });
+  const targetHouse = primaryHouse(targetFamily);
+  if (!targetHouse) throw new Error('Das Zielhaus der Wegverheiratung wurde nicht gefunden.');
+  ensureProjectedHouse(family, targetFamily, { houseId: targetHouse.id });
+  const existing = family.cadetBranches.find(branch => (
+    branch.linkType === 'married-away'
+    && branch.parentPartnershipId === partnershipId
+    && branch.targetFamilyId === targetFamily.document.id
+  ));
+  const values = {
+    id: existing?.id || createRecordId('married-away', family.cadetBranches.map(branch => branch.id)),
+    name: targetFamily.document.title,
+    subtitle: 'Wegverheiratete Linie',
+    linkType: 'married-away',
+    parentPartnershipId: partnershipId,
+    parentPersonId: '',
+    houseId: targetHouse.id,
+    emblem: targetHouse.emblem || '',
+    emblemScale: 0.86,
+    crestFrame: targetFamily.lineage.crestFrame || 'silver',
+    frameScale: 1,
+    founded: '',
+    targetFamilyId: targetFamily.document.id,
+    notes: `Wegverheiratet an ${targetFamily.document.title}.`,
+    extensions: {
+      ...(existing?.extensions || {}),
+      crossFamilyRelationship: {
+        linkId,
+        counterpartFamilyId: targetFamily.document.id
+      }
+    }
+  };
+  if (existing) Object.assign(existing, values);
+  else family.cadetBranches.push(values);
   return normalizeFamily(family);
+}
+
+function applyMirroredPartnershipChange(familyInput, values) {
+  if (isExclusiveActivePartnership(values)) return applyExclusivePartnershipChange(familyInput, values);
+  const family = cloneValue(normalizeFamily(familyInput));
+  const participantIds = [...new Set(values.participantIds || [])];
+  const existing = family.partnerships.find(partnership => (
+    partnership.type === values.type
+    && partnership.participantIds.length === participantIds.length
+    && participantIds.every(personId => partnership.participantIds.includes(personId))
+    && ['active', 'secret'].includes(partnership.status || 'active')
+  ));
+  if (existing) {
+    existing.extensions = { ...(existing.extensions || {}), ...(values.extensions || {}) };
+    return Object.freeze({
+      family: normalizeFamily(family),
+      plan: Object.freeze({ mode: 'idempotent', partnershipId: existing.id })
+    });
+  }
+  const partnershipId = values.id || createRecordId('partnership', family.partnerships.map(item => item.id));
+  family.partnerships.push({
+    id: partnershipId,
+    participantIds,
+    type: values.type,
+    status: values.status || 'active',
+    start: values.start || '',
+    end: values.end || '',
+    certainty: values.certainty || 'confirmed',
+    visibility: values.visibility || 'public',
+    notes: values.notes || '',
+    extensions: { ...(values.extensions || {}) }
+  });
+  return Object.freeze({
+    family: normalizeFamily(family),
+    plan: Object.freeze({ mode: 'create', partnershipId })
+  });
 }
 
 function projectPartnership(targetInput, sourceInput, targetPersonId, sourcePersonId, values, linkId) {
@@ -60,9 +98,11 @@ function projectPartnership(targetInput, sourceInput, targetPersonId, sourcePers
   const source = normalizeFamily(sourceInput);
   const sourcePerson = source.persons.find(person => person.id === sourcePersonId);
   if (!sourcePerson) throw new Error('Die Person der anderen Familienakte wurde nicht gefunden.');
-  const importedSourcePersonId = ensurePerson(target, source, sourcePerson);
-  return applyExclusivePartnershipChange(target, {
-    participantIds: [targetPersonId, importedSourcePersonId],
+  const importedSourcePerson = ensureProjectedPerson(target, source, sourcePerson, {
+    familyRole: values.type === 'affair' ? 'affair' : 'married'
+  });
+  return applyMirroredPartnershipChange(target, {
+    participantIds: [targetPersonId, importedSourcePerson.id],
     type: values.type,
     status: values.status || 'active',
     certainty: values.certainty || 'confirmed',
@@ -84,7 +124,8 @@ export function createMirroredPartnershipChange({
   type,
   status = 'active',
   certainty = 'confirmed',
-  visibility = 'public'
+  visibility = 'public',
+  leavingFamilyId = ''
 }) {
   const currentFamily = withCanonicalWorldPersonIds(currentInput);
   const counterpartFamily = withCanonicalWorldPersonIds(counterpartInput);
@@ -94,7 +135,7 @@ export function createMirroredPartnershipChange({
   const currentPerson = currentFamily.persons.find(person => person.id === currentPersonId);
   const counterpartPerson = counterpartFamily.persons.find(person => person.id === counterpartPersonId);
   if (!currentPerson || !counterpartPerson) throw new Error('Mindestens eine Person der Verbindung wurde nicht gefunden.');
-  const linkId = stableLinkId(currentFamily, currentPerson, counterpartFamily, counterpartPerson);
+  const linkId = stableCrossFamilyLinkId('relationship', currentFamily, currentPerson, counterpartFamily, counterpartPerson);
   const currentProjection = projectPartnership(
     currentFamily,
     counterpartFamily,
@@ -111,10 +152,17 @@ export function createMirroredPartnershipChange({
     { type, status, certainty, visibility },
     linkId
   );
+  let nextCurrentFamily = currentProjection.family;
+  let nextCounterpartFamily = counterpartProjection.family;
+  if (type === 'marriage' && leavingFamilyId === currentFamily.document.id) {
+    nextCurrentFamily = addMarriedAwayBranch(nextCurrentFamily, currentProjection.plan.partnershipId, counterpartFamily, linkId);
+  } else if (type === 'marriage' && leavingFamilyId === counterpartFamily.document.id) {
+    nextCounterpartFamily = addMarriedAwayBranch(nextCounterpartFamily, counterpartProjection.plan.partnershipId, currentFamily, linkId);
+  }
   return Object.freeze({
     linkId,
-    currentFamily: currentProjection.family,
-    counterpartFamily: counterpartProjection.family,
+    currentFamily: nextCurrentFamily,
+    counterpartFamily: nextCounterpartFamily,
     currentPlan: currentProjection.plan,
     counterpartPlan: counterpartProjection.plan
   });

@@ -1,6 +1,5 @@
 import { PORTRAIT_PLACEHOLDERS } from './config/portrait-placeholders.js';
-import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
-import { createFirestoreFamilyRepository } from './modules/family-sync/firestore-family-repository.js';
+import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
 import {
   getHouseProfileSearchTerms,
   getHouseRank,
@@ -23,7 +22,7 @@ function renderFamilyTile(record) {
   const emblem = record.emblem || record.family?.document.emblem || record.family?.houses[0]?.emblem || PORTRAIT_PLACEHOLDERS.crest;
   const people = Number(record.personCount ?? record.family?.persons.length ?? 0);
   const motto = record.motto || record.family?.document.motto || '';
-  const flag = record.source === 'local' ? 'Lokal' : record.source === 'firebase' ? 'Publiziert' : '';
+  const flag = record.source === 'local' ? 'Lokal' : record.source === 'github' ? 'GitHub' : '';
   return `
     <a class="registry-tile" href="${escapeHtml(createFamilyViewLink(record.id))}"
       title="${escapeHtml(record.title)}${motto ? ` · ${escapeHtml(motto)}` : ''}">
@@ -174,7 +173,7 @@ render();
 
 async function loadPublishedRegistry() {
   try {
-    const repository = createFirestoreFamilyRepository(createFirebaseClient());
+    const repository = createGitHubFamilyRepository();
     const published = await repository.listPublishedRegistry();
     const records = new Map(allRecords.map(record => [record.id, record]));
     published.forEach(record => {
@@ -189,14 +188,14 @@ async function loadPublishedRegistry() {
         houseProfile: record.houseProfile || projectFallback?.houseProfile || projectFallback?.family?.document.houseProfile,
         family: projectFallback?.family,
         link: normalizeFamilyViewLink(record.link, id),
-        source: 'firebase'
+        source: 'github'
       });
     });
     allRecords = [...records.values()].sort((first, second) => first.title.localeCompare(second.title, 'de'));
     document.getElementById('registry-count').textContent = String(allRecords.length);
     render(search.value);
   } catch (error) {
-    console.info('Das veröffentlichte Firebase-Register ist derzeit nicht erreichbar.', error);
+    console.info('Das veröffentlichte GitHub-Register ist derzeit nicht erreichbar.', error);
   }
 }
 

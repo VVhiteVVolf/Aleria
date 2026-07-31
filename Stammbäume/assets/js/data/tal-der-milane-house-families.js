@@ -3,12 +3,21 @@ import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,
   TAL_DER_MILANE_HOUSE_PROFILES
 } from './tal-der-milane-house-profiles.js';
+import { HOUSE_ERYR_FAMILY } from './house-eryr-family.js';
+import { HOUSE_GAETH_FAMILY } from './house-gaeth-family.js';
+import { HOUSE_HEBOG_FAMILY } from './house-hebog-family.js';
+import { HOUSE_ILYUNCU_FAMILY } from './house-ilyuncu-family.js';
+import { HOUSE_SLIABH_FAMILY } from './house-sliabh-family.js';
+import { HOUSE_DURDYNN_FAMILY } from './house-durdynn-family.js';
+import { HOUSE_MWYALCHEN_FAMILY } from './house-mwyalchen-family.js';
+import { HOUSE_TYLLUAN_FAMILY } from './house-tylluan-family.js';
 
 export const TAL_DER_MILANE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'eryr', title: 'Haus Eryr' }),
   Object.freeze({ slug: 'tylluan', title: 'Haus Tylluan' }),
   Object.freeze({ slug: 'mwyalchen', title: 'Haus Mwyalchen' }),
   Object.freeze({ slug: 'ilyuncu', title: 'Haus Ilyuncu' }),
+  Object.freeze({ slug: 'sliabh', title: 'Haus Sliabh' }),
   Object.freeze({ slug: 'gaeth', title: 'Haus Gaeth' }),
   Object.freeze({ slug: 'hebog', title: 'Haus Hebog' }),
   Object.freeze({ slug: 'bronnor', title: 'Haus Bronnor' }),
@@ -52,8 +61,21 @@ function placeholderFamily(definition) {
   });
 }
 
+const COMPLETED_HOUSE_FAMILIES = Object.freeze({
+  durdynn: HOUSE_DURDYNN_FAMILY,
+  eryr: HOUSE_ERYR_FAMILY,
+  gaeth: HOUSE_GAETH_FAMILY,
+  hebog: HOUSE_HEBOG_FAMILY,
+  ilyuncu: HOUSE_ILYUNCU_FAMILY,
+  sliabh: HOUSE_SLIABH_FAMILY,
+  mwyalchen: HOUSE_MWYALCHEN_FAMILY,
+  tylluan: HOUSE_TYLLUAN_FAMILY
+});
+
 // Haus Aderyn bleibt als ausgearbeitete Grafenakte im zentralen Cenyr-Aggregat.
-// Dieses Modul registriert ausschließlich die 19 abhängigen und antiken Häuser.
+// Dieses Modul registriert ausschließlich die 20 abhängigen und antiken Häuser.
 export const TAL_DER_MILANE_DEPENDENT_HOUSE_FAMILIES = Object.freeze(
-  TAL_DER_MILANE_DEPENDENT_HOUSE_DEFINITIONS.map(placeholderFamily)
+  TAL_DER_MILANE_DEPENDENT_HOUSE_DEFINITIONS.map(definition => (
+    COMPLETED_HOUSE_FAMILIES[definition.slug] || placeholderFamily(definition)
+  ))
 );

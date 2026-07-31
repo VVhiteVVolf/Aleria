@@ -5,7 +5,7 @@ import {
 import { assertMirroredCrossFamilyBatch } from './cross-family-sync-invariant.js';
 import { createFamilySyncStatusUi } from './family-sync-status-ui.js';
 
-const REMOTE_SOURCES = new Set(['firebase-sync', 'firebase-priority']);
+const REMOTE_SOURCES = new Set(['repository-sync', 'repository-priority']);
 const NEW_FAMILY_SOURCES = new Set([
   'new-empty-family',
   'new-founding-family',
@@ -81,7 +81,7 @@ export function createFamilySyncController({
       renderStatus(
         saved ? (dirty ? 'pending' : 'local') : 'error',
         saved
-          ? (dirty ? 'Lokal gespeichert · online ungespeichert' : 'Lokal gespeichert')
+          ? (dirty ? 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar' : 'Lokal auf diesem Gerät gespeichert')
           : 'Lokale Speicherung nicht verfügbar'
       );
     }
@@ -240,11 +240,11 @@ export function createFamilySyncController({
     localBaseRevision = record.revision;
     connectedFamilyId = activeFamilyId;
     dirty = false;
-    store.synchronizeFamily(record.family, { source: priority ? 'firebase-priority' : 'firebase-sync' });
+    store.synchronizeFamily(record.family, { source: priority ? 'repository-priority' : 'repository-sync' });
     localRepository.markSynced?.(record.family, record.revision);
     renderStatus(
       'synced',
-      message || `${priority ? 'Neuere Firebase-Fassung übernommen' : 'Firebase-Fassung geladen'} · Revision ${remoteRevision}`
+      message || `${priority ? 'Neuere GitHub-Fassung übernommen' : 'GitHub-Fassung geladen'} · Revision ${remoteRevision}`
     );
     return true;
   }
@@ -255,10 +255,10 @@ export function createFamilySyncController({
       if (saving && metadata.updatedBy === user?.uid && metadata.revision === remoteRevision + 1) return;
       void cloudRepository.loadDraft(familyId).then(record => {
         if (!record || record.revision <= remoteRevision || destroyed || version !== contextVersion) return;
-        if (dirty) localRepository.archiveDraft?.(familyId, 'newer-firebase-revision');
+        if (dirty) localRepository.archiveDraft?.(familyId, 'newer-repository-revision');
         applyRemote(record, {
           priority: true,
-          message: `Neuere Firebase-Fassung hatte Vorrang · Revision ${record.revision}`
+          message: `Neuere GitHub-Fassung hatte Vorrang · Revision ${record.revision}`
         });
       }).catch(() => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokaler Entwurf bleibt erhalten'));
     }, () => renderStatus('offline', 'Cloud-Verbindung unterbrochen · lokaler Entwurf bleibt erhalten'));
@@ -276,7 +276,7 @@ export function createFamilySyncController({
     const familyId = familyAtStart.document.id;
     if (familyId !== activeFamilyId) activateFamilyContext(familyAtStart);
     const version = ++contextVersion;
-    renderStatus('loading', 'Firebase-Fassung wird geprüft …');
+    renderStatus('loading', 'GitHub-Fassung wird geprüft …');
     try {
       const remote = await cloudRepository.loadDraft(familyId);
       if (destroyed || version !== contextVersion || familyId !== activeFamilyId) return false;
@@ -291,7 +291,7 @@ export function createFamilySyncController({
         renderStatus(
           locallySaved ? 'pending' : 'error',
           locallySaved
-            ? 'Lokal gespeichert · noch nicht online angelegt'
+            ? 'Lokaler Entwurf nur auf diesem Gerät · noch nicht in GitHub angelegt'
             : 'Lokaler Entwurf konnte nicht gesichert werden'
         );
       } else {
@@ -316,7 +316,7 @@ export function createFamilySyncController({
           renderStatus(
             locallySaved ? 'pending' : 'error',
             locallySaved
-              ? `Lokaler Entwurf · Firebase-Basis Revision ${remote.revision}`
+              ? `Lokaler Entwurf nur auf diesem Gerät · GitHub-Basis Revision ${remote.revision}`
               : 'Lokaler Entwurf konnte nicht gesichert werden'
           );
         } else if (sameFamily(remote.family, store.getState().family)) {
@@ -325,12 +325,12 @@ export function createFamilySyncController({
           localRepository.markSynced?.(remote.family, remote.revision);
           renderStatus('synced', `Online verbunden · Revision ${remote.revision}`);
         } else {
-          if (hasLocalChanges) localRepository.archiveDraft?.(familyId, 'firebase-priority');
+          if (hasLocalChanges) localRepository.archiveDraft?.(familyId, 'repository-priority');
           applyRemote(remote, {
             priority: hasLocalChanges,
             message: hasLocalChanges
-              ? `Firebase-Fassung hatte Vorrang · Revision ${remote.revision}`
-              : `Firebase-Fassung geladen · Revision ${remote.revision}`
+              ? `GitHub-Fassung hatte Vorrang · Revision ${remote.revision}`
+              : `GitHub-Fassung geladen · Revision ${remote.revision}`
           });
         }
       }
@@ -361,7 +361,7 @@ export function createFamilySyncController({
     if (!editing || destroyed) return false;
     if (!user) {
       pendingSaveFamilyId = activeFamilyId;
-      renderStatus('auth', 'Zum Online-Speichern bei Firebase anmelden');
+      renderStatus('auth', 'Zum Online-Speichern mit der GitHub-Registry verbinden');
       ui.open();
       return false;
     }
@@ -376,7 +376,7 @@ export function createFamilySyncController({
     if (familyId !== activeFamilyId) activateFamilyContext(store.getState().family, { changed: true });
     if (connectedFamilyId !== activeFamilyId) {
       const connected = await connectCurrentFamily();
-      if (!connected) throw new Error('Firebase konnte vor dem Speichern nicht geprüft werden. Der Entwurf bleibt lokal erhalten.');
+      if (!connected) throw new Error('GitHub konnte vor dem Speichern nicht geprüft werden. Der Entwurf bleibt lokal erhalten.');
     }
     const familyToSave = store.getState().family;
     const relatedDrafts = localRepository.listRelatedDrafts?.(activeFamilyId) || [];
@@ -442,7 +442,12 @@ export function createFamilySyncController({
       remoteBase = result.family;
       remoteRevision = result.revision;
       localBaseRevision = result.revision;
-      dirty = !sameFamily(store.getState().family, familyToSave);
+      const appliedServerResult = !sameFamily(result.family, familyToSave)
+        && sameFamily(store.getState().family, familyToSave);
+      if (appliedServerResult) {
+        store.synchronizeFamily(result.family, { source: 'repository-sync' });
+      }
+      dirty = appliedServerResult ? false : !sameFamily(store.getState().family, familyToSave);
       const finalizedRelatedBatch = savedRecords.length > 1 && !dirty
         ? localRepository.markDraftsSynced?.(savedRecords, activeFamilyId) === true
         : false;
@@ -478,7 +483,7 @@ export function createFamilySyncController({
     } catch (error) {
       if (error instanceof FamilyRevisionConflictError) {
         if (error.familyId && error.familyId !== familyToSave.document.id) {
-          const message = `Die Firebase-Fassung der verknüpften Familie „${error.familyId}“ ist neuer. Keine der Familien wurde online verändert; bitte diese Familie zuerst öffnen und abgleichen.`;
+          const message = `Die GitHub-Fassung der verknüpften Familie „${error.familyId}“ ist neuer. Keine der Familien wurde online verändert; bitte diese Familie zuerst öffnen und abgleichen.`;
           renderStatus('pending', message);
           throw new Error(message, { cause: error });
         }
@@ -494,7 +499,7 @@ export function createFamilySyncController({
           localRepository.archiveDraft?.(familyToSave.document.id, 'revision-conflict');
           applyRemote(latest, {
             priority: true,
-            message: `Firebase war neuer und hatte Vorrang · Revision ${latest.revision}`
+            message: `GitHub war neuer und hatte Vorrang · Revision ${latest.revision}`
           });
           return false;
         }
@@ -513,15 +518,15 @@ export function createFamilySyncController({
     contextVersion += 1;
     if (!user) {
       renderStatus(dirty ? 'pending' : 'local', dirty
-        ? 'Lokal gespeichert · online ungespeichert'
-        : 'Lokal gespeichert · nicht mit Firebase verbunden');
+        ? 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar'
+        : 'Lokal auf diesem Gerät gespeichert · nicht mit GitHub verbunden');
       return;
     }
     if (identityChangeBlock) {
       renderStatus('error', identityBlockMessage());
       return;
     }
-    renderStatus('loading', `Angemeldet als ${user.email || 'Firebase-Konto'}`);
+    renderStatus('loading', `Verbunden mit ${user.email || user.displayName || 'GitHub-Registry'}`);
     const connected = await connectCurrentFamily();
     if (pendingSaveFamilyId === activeFamilyId) {
       pendingSaveFamilyId = '';
@@ -562,8 +567,8 @@ export function createFamilySyncController({
       identityChangeBlock
         ? identityBlockMessage()
         : counterpartFamily
-          ? 'Beide verknüpften Familien lokal gespeichert · online ungespeichert'
-          : 'Lokal gespeichert · online ungespeichert'
+          ? 'Beide verknüpften Familien nur auf diesem Gerät gespeichert · für andere noch nicht sichtbar'
+          : 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar'
     );
     if (familyChanged && user && !identityChangeBlock) void connectCurrentFamily();
   }
@@ -574,7 +579,7 @@ export function createFamilySyncController({
     if (confirmed === false) return;
     localRepository.archiveDraft?.(activeFamilyId, 'project-origin-reset');
     store.replaceFamily(originFamily, { source: 'project-origin-reset' });
-    renderStatus('pending', 'Projekt-Ursprung lokal wiederhergestellt · online ungespeichert');
+    renderStatus('pending', 'Projekt-Ursprung nur auf diesem Gerät wiederhergestellt · für andere noch nicht sichtbar');
   }
 
   async function handleAction(action) {
@@ -598,35 +603,9 @@ export function createFamilySyncController({
         ui.close();
         break;
       case 'retry-cloud-sync':
-        if (dirty && runtime.confirm?.('Die aktuelle lokale Fassung verwerfen und die Firebase-Fassung neu laden? Der lokale Stand wird als Wiederherstellungskopie archiviert.') === false) break;
+        if (dirty && runtime.confirm?.('Die aktuelle lokale Fassung verwerfen und die GitHub-Fassung neu laden? Der lokale Stand wird als Wiederherstellungskopie archiviert.') === false) break;
         await connectCurrentFamily({ forceRemote: true });
         break;
-      case 'cloud-publish': {
-        if (!user) {
-          ui.open();
-          throw new Error('Zum Veröffentlichen zuerst bei Firebase anmelden.');
-        }
-        if (dirty || saving || connectedFamilyId !== activeFamilyId || remoteRevision < 1) {
-          throw new Error('Bitte die lokale Fassung zuerst mit „Online speichern“ sichern.');
-        }
-        if (publishing) break;
-        publishing = true;
-        renderStatus('publishing', 'Öffentliche Fassung wird erstellt …');
-        try {
-          const published = await cloudRepository.publishDraft({
-            familyId: activeFamilyId,
-            expectedRevision: remoteRevision
-          });
-          renderStatus('synced', `Veröffentlicht · Revision ${published.revision}`);
-          ui.close();
-        } catch (error) {
-          renderStatus('synced', `Private Online-Fassung bleibt gespeichert · Revision ${remoteRevision}`);
-          throw error;
-        } finally {
-          publishing = false;
-        }
-        break;
-      }
       default:
         break;
     }
@@ -639,8 +618,7 @@ export function createFamilySyncController({
     'close-cloud-account',
     'cloud-reset-origin',
     'cloud-logout',
-    'retry-cloud-sync',
-    'cloud-publish'
+    'retry-cloud-sync'
   ]);
 
   function onClick(event) {
@@ -702,7 +680,7 @@ export function createFamilySyncController({
         ? 'Lokaler Entwurf konnte nicht gesichert werden'
         : identityChangeBlock
           ? identityBlockMessage()
-          : (dirty ? 'Lokaler Entwurf · online ungespeichert' : 'Lokal gespeichert')
+          : (dirty ? 'Lokaler Entwurf nur auf diesem Gerät · für andere noch nicht sichtbar' : 'Lokal auf diesem Gerät gespeichert')
     );
     unsubscribeStore = store.subscribe(onStoreChange);
     documentRef.addEventListener('click', onClick);
@@ -713,7 +691,7 @@ export function createFamilySyncController({
         void onAuthChanged(nextUser).catch(error => ui.showError(error.message));
       });
     } catch (error) {
-      renderStatus('offline', 'Nur lokal · Firebase konnte nicht gestartet werden');
+      renderStatus('offline', 'Nur auf diesem Gerät · GitHub-Veröffentlichung ist nicht erreichbar');
     }
   }
 

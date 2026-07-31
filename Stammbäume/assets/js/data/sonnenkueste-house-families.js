@@ -19,6 +19,8 @@ export const SONNENKUESTE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'llwynog', title: 'Llwynog' }),
   Object.freeze({ slug: 'illwath', title: 'Illwath' }),
   Object.freeze({ slug: 'morforwyn', title: 'Morforwyn' }),
+  Object.freeze({ slug: 'rhelian', title: 'Rhelian' }),
+  Object.freeze({ slug: 'aelryn', title: 'Aelryn' }),
   Object.freeze({ slug: 'grianlaoch', title: 'Grianlaoch' }),
   Object.freeze({ slug: 'gwaedryn', title: 'Gwaedryn' }),
   Object.freeze({ slug: 'rhavorn', title: 'Rhavorn' }),

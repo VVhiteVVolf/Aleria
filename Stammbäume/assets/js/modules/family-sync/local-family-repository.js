@@ -224,14 +224,14 @@ export function createLocalFamilyRepository(storage = globalThis.localStorage) {
     return draftsSaved && currentSaved;
   }
 
-  function archiveDraft(familyId, reason = 'firebase-priority') {
+  function archiveDraft(familyId, reason = 'repository-priority') {
     const draft = loadDraft(familyId);
     if (!draft?.dirty) return null;
     const recoveryRecords = readJson(storage, RECOVERY_STORAGE_KEY, []);
     const nextRecord = Object.freeze({
       ...draft,
       familyId,
-      reason: String(reason || 'firebase-priority'),
+      reason: String(reason || 'repository-priority'),
       archivedAt: new Date().toISOString()
     });
     try {

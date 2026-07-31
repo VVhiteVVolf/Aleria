@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   createCadetHouseBranch,
   createFamilyPerson,
@@ -16,7 +17,17 @@ const HOUSE_EMBLEMS = Object.freeze({
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
   neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
-  pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
+  pysgod: GRAUE_WEITE_HOUSE_EMBLEMS.pysgod,
+  blaidd: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd,
+  brathaireann: GRAUE_WEITE_HOUSE_EMBLEMS.brathaireann,
+  brithyll: GRAUE_WEITE_HOUSE_EMBLEMS.brithyll,
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
+  dornach: GRAUE_WEITE_HOUSE_EMBLEMS.dornach,
+  draenog: GRAUE_WEITE_HOUSE_EMBLEMS.draenog,
+  gwialen: GRAUE_WEITE_HOUSE_EMBLEMS.gwialen,
+  morfil: GRAUE_WEITE_HOUSE_EMBLEMS.morfil,
+  tonnmharra: GRAUE_WEITE_HOUSE_EMBLEMS.tonnmharra,
+  wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -60,7 +71,16 @@ function person(id, name, sex, birth = '????', death = '', houseId = PYSGOD_HOUS
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    ...(emblem
+      ? { extensions: { registryManagedFields: ['name', 'emblem'] } }
+      : {})
+  };
 }
 
 function childrenOf(childIds, parentIds, partnershipId, options = {}) {
@@ -83,7 +103,10 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
     parentPartnershipId: partnershipId,
     houseId,
     targetFamilyId: houseId.replace(/^house-/, 'haus-'),
-    emblem
+    emblem,
+    extensions: {
+      registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem']
+    }
   });
 }
 
@@ -147,12 +170,12 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
   houses: [
     house(PYSGOD_HOUSE_ID, 'Haus Pysgod', HOUSE_EMBLEMS.pysgod),
     house('house-dreigiau', 'Haus Dreigiau'),
-    house('house-tonnmharra', 'Haus Tonnmharra'),
-    house('house-brathaireann', 'Haus Brathaireann'),
-    house('house-dornach', 'Haus Dornach'),
+    house('house-tonnmharra', 'Clan Tonnmharra', HOUSE_EMBLEMS.tonnmharra),
+    house('house-brathaireann', 'Clan Brathaireann', HOUSE_EMBLEMS.brathaireann),
+    house('house-dornach', 'Clan Dornach', HOUSE_EMBLEMS.dornach),
     house('house-unbekannt-brighde', 'Unbekanntes Haus'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
-    house('house-gwialen', 'Haus Gwialen'),
+    house('house-gwialen', 'Haus Gwialen', HOUSE_EMBLEMS.gwialen),
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-unbekannt-marwine', 'Unbekanntes Haus'),
     house('house-culloch', 'Haus Culloch'),
@@ -161,17 +184,17 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     house('house-tiwna', 'Haus Tiwna'),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
     house('house-arfordir', 'Haus Arfordir'),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', HOUSE_EMBLEMS.draenog),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-illewod', 'Haus Illewod', HOUSE_EMBLEMS.illewod),
-    house('house-morfil', 'Haus Morfil'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-crefyddol', 'Haus Crefyddol'),
     house('house-eisenherz', 'Haus Eisenherz'),
-    house('house-brithyll', 'Haus Brithyll'),
-    house('house-blaidd', 'Haus Blaidd'),
-    house('house-wivern', 'Haus Wivern'),
+    house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
+    house('house-blaidd', "Haus Blaidd O'Branon", HOUSE_EMBLEMS.blaidd),
+    house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
     house('house-ronain', 'Haus Rónáin'),
     house('house-estmere', 'Haus Estmere'),
     house('house-dianc', 'Haus Dianc'),
@@ -374,7 +397,11 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     createMarriage('marriage-bledri-esill', ...BLEDRI_IDS),
     createMarriage('marriage-eirlys-yarpen', ...EIRLYS_IDS),
     createMarriage('marriage-enfys-rhiwallaun', ...ENFYS_IDS),
-    createMarriage('marriage-gereint-blodeuyn', ...GEREINT_IDS),
+    createMarriage('marriage-gereint-blodeuyn', ...GEREINT_IDS, {
+      status: 'ended',
+      end: '1710',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-guenevere-kyndrwyn', ...GUENEVERE_IDS),
     createMarriage('marriage-eirwyn1654-islwyn', ...EIRWYN_1654_IDS),
     createMarriage('marriage-gingalain1671-llewella', ...GINGALAIN_1671_IDS),
@@ -452,6 +479,8 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-trayvion-brighde',
       houseId: 'house-morfil',
       targetFamilyId: 'haus-morfil',
+      emblem: HOUSE_EMBLEMS.morfil,
+      extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] },
       notes: 'Trayvion Pysgod und Brighde begründen Haus Morfil; der Hausknoten hängt direkt unter ihrem Paar.'
     }),
     createCadetHouseBranch({
@@ -460,6 +489,8 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-aranhrod-hascan',
       houseId: 'house-gwialen',
       targetFamilyId: 'haus-gwialen',
+      emblem: HOUSE_EMBLEMS.gwialen,
+      extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] },
       notes: 'Háscan Gwialen und Arianhrod Pysgod begründen Haus Gwialen; der Hausknoten hängt direkt unter ihrem Paar.'
     }),
     createCadetHouseBranch({
@@ -468,6 +499,8 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
       parentPartnershipId: 'marriage-categirn-marwine',
       houseId: 'house-brithyll',
       targetFamilyId: 'haus-brithyll',
+      emblem: HOUSE_EMBLEMS.brithyll,
+      extensions: { registryManagedFields: ['name', 'houseId', 'targetFamilyId', 'emblem'] },
       notes: 'Categirn Pysgod und Marwine begründen Haus Brithyll; der Hausknoten hängt direkt unter ihrem Paar.'
     }),
     createCadetHouseBranch({
@@ -481,16 +514,16 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     marriedAway('married-away-arth-aranrhod', 'Haus Arth', 'marriage-aranrhod-traharyan', 'house-arth', HOUSE_EMBLEMS.arth),
     marriedAway('married-away-draig-llinos', 'Haus Draig', 'marriage-merfyn-llinos', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-illewod-lynfa', 'Haus Illewod', 'marriage-iorwerth-lynfa', 'house-illewod', HOUSE_EMBLEMS.illewod),
-    marriedAway('married-away-coedwig-bettry', 'Haus Coedwig', 'marriage-bettry-arawn', 'house-coedwig'),
+    marriedAway('married-away-coedwig-bettry', 'Haus Coedwig', 'marriage-bettry-arawn', 'house-coedwig', HOUSE_EMBLEMS.coedwig),
     marriedAway('married-away-tiwna-frewi', 'Haus Tiwna', 'marriage-frewi-eiddon', 'house-tiwna'),
     marriedAway('married-away-crefyddol-eirwyn1634', 'Haus Crefyddol', 'marriage-eirwyn1634-gwastad', 'house-crefyddol'),
     marriedAway('married-away-eisenherz-eirlys', 'Haus Eisenherz', 'marriage-eirlys-yarpen', 'house-eisenherz'),
-    marriedAway('married-away-brithyll-enfys', 'Haus Brithyll', 'marriage-enfys-rhiwallaun', 'house-brithyll'),
-    marriedAway('married-away-blaidd-guenevere', 'Haus Blaidd', 'marriage-guenevere-kyndrwyn', 'house-blaidd'),
-    marriedAway('married-away-wivern-eirwyn1654', 'Haus Wivern', 'marriage-eirwyn1654-islwyn', 'house-wivern'),
+    marriedAway('married-away-brithyll-enfys', 'Haus Brithyll', 'marriage-enfys-rhiwallaun', 'house-brithyll', HOUSE_EMBLEMS.brithyll),
+    marriedAway('married-away-blaidd-guenevere', "Haus Blaidd O'Branon", 'marriage-guenevere-kyndrwyn', 'house-blaidd', HOUSE_EMBLEMS.blaidd),
+    marriedAway('married-away-wivern-eirwyn1654', 'Haus Wivern', 'marriage-eirwyn1654-islwyn', 'house-wivern', HOUSE_EMBLEMS.wivern),
     marriedAway('married-away-pendrag-genyth', 'Haus Pendrag', 'marriage-pelleas-genyth', 'house-pendrag', HOUSE_EMBLEMS.pendrag),
     marriedAway('married-away-wylan-caitrin', 'Haus Wylan', 'marriage-caitrin-bedivere', 'house-wylan', HOUSE_EMBLEMS.wylan),
-    marriedAway('married-away-morfil-myfanwy', 'Haus Morfil', 'marriage-myfanwy-glendower', 'house-morfil')
+    marriedAway('married-away-morfil-myfanwy', 'Haus Morfil', 'marriage-myfanwy-glendower', 'house-morfil', HOUSE_EMBLEMS.morfil)
   ],
   timeJumps: [
     {
@@ -548,6 +581,18 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Ehen, Abstammungen und Portraitzuordnungen folgen der bereitgestellten Pysgod-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die drei Auslassungszeichen wurden ausschließlich als serielle Zeitsprünge unter Caradoc/Linessa, Cynwrig/Afanen und Tyreke/Gobaith modelliert. Die Quelle widerspricht sich bei Cynwrig/„Griflet“ sowie bei mehreren unmöglichen Jahreszahlen; diese Fälle sind direkt an den betroffenen Personen dokumentiert und wurden nicht still erfunden. Amtsjahre der Grafen sind Titelangaben, keine Geburtsjahre. Die vier ausdrücklich bestätigten Gründerpaare sind Trayvion Pysgod/Brighde für Haus Morfil, Háscan Gwialen/Arianhrod Pysgod für Haus Gwialen, Categirn Pysgod/Marwine für Haus Brithyll sowie Morholt Pysgod/Caitrin Neidr für Haus Tiwna; jeder Hausknoten hängt ausschließlich direkt unter seinem Paar. Alle dreizehn verheirateten Pysgod-Frauen, deren Linie im Zielhaus weiterläuft, besitzen eine direkte Wegverheiratet-Verknüpfung; bloße Herkunftswappen eingeheirateter Partner erzeugen keinen Hausknoten. Generische Quell-Silhouetten und unbenannte Hofämter wurden nicht als individuelle Portraits oder Personen importiert.',
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 5,
+    registryManagedHouseProfileFields: [
+      'rankId',
+      'seat',
+      'barony',
+      'county',
+      'kingdom',
+      'liegeHouseId',
+      'liegeHouseName',
+      'secondarySeats',
+      'regionEmblems'
+    ],
+    registryManagedRecordFields: ['folderPath']
   }
 });

@@ -72,6 +72,9 @@ export function relationForAction(action, secondParentId = '') {
   if (action === 'betroth') {
     return { relationKind: 'partnership', partnershipType: 'engagement', partnershipStatus: 'active', certainty: 'confirmed', visibility: 'public' };
   }
+  if (action === 'affair') {
+    return { relationKind: 'partnership', partnershipType: 'affair', partnershipStatus: 'secret', certainty: 'confirmed', visibility: 'private' };
+  }
   if (action === 'import-ward') {
     return {
       relationKind: 'child',

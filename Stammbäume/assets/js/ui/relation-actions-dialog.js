@@ -1,10 +1,15 @@
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { resolvePortraitSource } from '../config/portrait-placeholders.js';
 import { listLineagePartnerships } from '../modules/relationships/lineage-partnership-policy.js';
+import {
+  partnerCandidateAvailability,
+  relationshipActionState
+} from '../modules/relationships/relationship-action-policy.js';
+import { normalizePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
 import { listFamilyRecords } from '../services/family-library.js';
 import { escapeHtml } from './dom.js';
 
-const PARTNER_ACTIONS = new Set(['marry', 'betroth', 'import-ward']);
+const PARTNER_ACTIONS = new Set(['marry', 'betroth', 'affair', 'import-ward']);
 
 const ACTION_DEFINITIONS = Object.freeze([
   {
@@ -22,6 +27,13 @@ const ACTION_DEFINITIONS = Object.freeze([
     hint: 'Ein Verlöbnis anlegen; ersetzbare Platzhalter werden dabei sauber ausgetauscht'
   },
   {
+    id: 'affair',
+    group: 'Bund & Ehe',
+    glyph: '◇',
+    label: 'Affäre eingehen',
+    hint: 'Eine zusätzliche, nicht exklusive Beziehung anlegen – auch neben einer Ehe oder Verlobung'
+  },
+  {
     id: 'upgrade-engagement',
     group: 'Bund & Ehe',
     glyph: '✽',
@@ -34,7 +46,7 @@ const ACTION_DEFINITIONS = Object.freeze([
     group: 'Bund & Ehe',
     glyph: '⚮',
     label: 'Verbindung lösen',
-    hint: 'Eine bestehende Ehe scheiden oder ein Verlöbnis auflösen',
+    hint: 'Eine aktive Ehe, Verlobung, Lebensgemeinschaft oder Affäre gezielt beenden',
     requires: 'separable'
   },
   {
@@ -164,14 +176,8 @@ export function createRelationActionsDialog(
   }
 
   function availability(person) {
-    const partnerships = context.family.partnerships.filter(partnership => (
-      partnership.participantIds.includes(person.id)
-    ));
-    const engagements = partnerships.filter(partnership => partnership.type === 'engagement' && partnership.status === 'active');
-    const separable = partnerships.filter(partnership => (
-      ['marriage', 'engagement', 'union'].includes(partnership.type)
-      && ['active', 'secret'].includes(partnership.status)
-    ));
+    const policy = relationshipActionState(context.family, person.id);
+    const { partnerships, engagements, separable } = policy;
     const lineagePartnerships = listLineagePartnerships(context.family, person.id);
     const nonLegitimate = context.family.parentages.filter(parentage => (
       parentage.childId === person.id && !['legitimate', 'legitimized'].includes(parentage.legitimacy)
@@ -188,7 +194,8 @@ export function createRelationActionsDialog(
       engagements,
       separable_list: separable,
       lineage_partnerships: lineagePartnerships,
-      nonLegitimate
+      nonLegitimate,
+      actionAvailability: policy.actionAvailability
     };
   }
 
@@ -196,13 +203,50 @@ export function createRelationActionsDialog(
     const house = context.family.houses.find(item => item.id === person.houseId);
     const life = [person.birth || '????', person.death || (person.status === 'dead' ? '????' : 'lebend')].join(' – ');
     hero.innerHTML = `
-      <img class="relation-actions-portrait" src="${escapeHtml(resolvePortraitSource(person))}" alt="">
+      <button class="relation-actions-portrait-button" type="button"
+        data-action="relation-action" data-relation-action="change-portrait"
+        aria-label="Portrait von ${escapeHtml(person.name)} austauschen" title="Portrait austauschen">
+        <img class="relation-actions-portrait" src="${escapeHtml(resolvePortraitSource(person))}" alt="">
+        <span aria-hidden="true">✎</span>
+      </button>
       <div>
         <p class="eyebrow">Beziehung modifizieren</p>
         <h2>${escapeHtml(person.name)}</h2>
         <p class="relation-actions-life">${escapeHtml(person.title || house?.name || 'Ohne Haus')} · ${escapeHtml(life)}</p>
       </div>
     `;
+  }
+
+  function renderPortraitStep(person) {
+    step.innerHTML = `
+      <p class="relation-step-lead">Portrait von ${escapeHtml(person.name)} austauschen:</p>
+      <div class="relation-portrait-editor">
+        <img data-role="portrait-preview" src="${escapeHtml(resolvePortraitSource(person))}" alt="Portrait-Vorschau">
+        <div>
+          <label class="field">Bildadresse oder lokaler Projektpfad
+            <input name="portrait" value="${escapeHtml(person.portrait || '')}"
+              placeholder="https://i.imgur.com/DATEI.png" autocomplete="off">
+          </label>
+          <label class="field" data-cloud-asset-field>Bilddatei auswählen
+            <input type="file" accept="image/png,image/jpeg,image/webp"
+              data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
+            <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · erst „Online speichern“ veröffentlicht das Bild für andere · maximal 1 MB</span>
+          </label>
+          <p class="relation-step-note">„Portrait speichern“ sichert zunächst nur den Entwurf in diesem Browser. Erst „Online speichern“ schreibt ihn in die GitHub-Registry; danach sehen Patrick und andere Nutzer die Änderung beim nächsten Laden. Eine leere Adresse stellt wieder die passende Silhouette her.</p>
+        </div>
+      </div>
+    `;
+  }
+
+  function updatePortraitPreview() {
+    const person = personById(context?.personId);
+    const preview = step.querySelector('[data-role="portrait-preview"]');
+    const portrait = form.elements.namedItem('portrait');
+    if (!person || !preview || !portrait) return;
+    preview.src = resolvePortraitSource({
+      ...person,
+      portrait: normalizePortraitSource(portrait.value)
+    });
   }
 
   function renderMenu(person) {
@@ -214,14 +258,17 @@ export function createRelationActionsDialog(
         group = { name: definition.group, cards: [] };
         groups.push(group);
       }
-      const enabled = !definition.requires || available[definition.requires];
+      const policy = available.actionAvailability[definition.id];
+      const enabled = policy ? policy.enabled : (!definition.requires || available[definition.requires]);
+      const disabledReason = enabled ? '' : (policy?.reason || 'Für diese Person ist die Aktion derzeit nicht anwendbar.');
       group.cards.push(`
         <button class="relation-action-card" type="button"
-          data-action="relation-action" data-relation-action="${definition.id}" ${enabled ? '' : 'disabled'}>
+          data-action="relation-action" data-relation-action="${definition.id}" ${enabled ? '' : 'disabled'}
+          ${disabledReason ? `title="${escapeHtml(disabledReason)}"` : ''}>
           <span class="relation-action-glyph" aria-hidden="true">${definition.glyph}</span>
           <span class="relation-action-text">
             <strong>${escapeHtml(definition.label)}</strong>
-            <small>${escapeHtml(definition.hint)}</small>
+            <small${disabledReason ? ' class="relation-action-disabled-reason"' : ''}>${escapeHtml(disabledReason || definition.hint)}</small>
           </span>
         </button>
       `);
@@ -247,15 +294,28 @@ export function createRelationActionsDialog(
       .join('');
   }
 
-  function treePartnerOptions(person) {
+  function candidateOption(candidate, family, action) {
+    const availability = partnerCandidateAvailability(family, candidate.id, action);
+    const life = candidate.birth ? ` (${escapeHtml(candidate.birth)}${candidate.death ? `–${escapeHtml(candidate.death)}` : ''})` : '';
+    const reason = availability.enabled ? '' : ` — ${escapeHtml(availability.reason)}`;
+    return `<option value="${escapeHtml(candidate.id)}" ${availability.enabled ? '' : 'disabled'}>${escapeHtml(candidate.name)}${life}${reason}</option>`;
+  }
+
+  function treePartnerOptions(person, action) {
     return context.family.persons
       .filter(candidate => candidate.id !== person.id)
-      .map(candidate => `<option value="${escapeHtml(candidate.id)}">${escapeHtml(candidate.name)}${candidate.birth ? ` (${escapeHtml(candidate.birth)})` : ''}</option>`)
+      .map(candidate => candidateOption(candidate, context.family, action))
       .join('');
   }
 
   function renderPartnerStep(person, action) {
-    const verb = action === 'marry' ? 'Ehepartner' : action === 'betroth' ? 'Verlobte Person' : 'Mündel';
+    const verb = action === 'marry'
+      ? 'Ehepartner'
+      : action === 'betroth'
+        ? 'Verlobte Person'
+        : action === 'affair'
+          ? 'Affärenpartner'
+          : 'Mündel';
     const otherFamilyOptions = registryOptions(true);
     step.innerHTML = `
       <p class="relation-step-lead">${escapeHtml(verb)} wählen:</p>
@@ -273,11 +333,20 @@ export function createRelationActionsDialog(
         <label class="field">Person
           <select name="registryPersonId"></select>
         </label>
-        ${action === 'marry' || action === 'betroth' ? '<p class="relation-step-note">Registerverbindungen werden in beiden Familienakten gespeichert. Im jeweiligen Heimatbaum bleibt die eigene Person Kernfamilie; die andere Person erscheint eingeheiratet.</p>' : ''}
+        ${action === 'marry' ? `
+          <label class="field">Welche Linie führt die Ehe fort?
+            <select name="marriageDirection">
+              <option value="partner-leaves">Die gewählte Person heiratet in diesen Stammbaum ein</option>
+              <option value="current-leaves">${escapeHtml(person.name)} wird in den gewählten Stammbaum wegverheiratet</option>
+            </select>
+          </label>
+        ` : ''}
+        ${['marry', 'betroth', 'affair'].includes(action) ? '<p class="relation-step-note">Registerverbindungen werden als gekoppelte Änderung in beiden Familienakten gespeichert. Im jeweiligen Heimatbaum bleibt die eigene Person Kernfamilie; die andere Person erhält automatisch den zur Beziehung passenden Rahmen.</p>' : ''}
+        ${action === 'import-ward' ? '<p class="relation-step-note">Das Mündel erscheint hier automatisch im dunkelblauen Mündelrahmen. Im Herkunftsbaum wird dieselbe Person zugleich als fortgegebenes Mündel mit Zielhaus-Verknüpfung eingetragen.</p>' : ''}
       </div>
       <div data-partner-source="tree" hidden>
         <label class="field">Person aus diesem Baum
-          <select name="partnerPersonId">${treePartnerOptions(person)}</select>
+          <select name="partnerPersonId">${treePartnerOptions(person, action)}</select>
         </label>
       </div>
       <div data-partner-source="new" hidden>
@@ -304,8 +373,12 @@ export function createRelationActionsDialog(
       <label class="field">Zielhaus im Familienregister
         <select name="targetFamilyId">${registryOptions(true)}</select>
       </label>
-      <p class="relation-step-note">Die Person erhält hier den Vermerk als weggegebenes Mündel. Im Stammbaum des Zielhauses kann sie anschließend über „Mündel aufnehmen“ eingebunden werden.</p>
+      <label class="field">Aufnehmende Person
+        <select name="targetGuardianId"></select>
+      </label>
+      <p class="relation-step-note">Beide Familienakten werden gemeinsam geändert: hier fortgegebenes Mündel samt Zielhaus-Verknüpfung, dort aufgenommenes Mündel im dunkelblauen Rahmen unter der gewählten Person. Für andere wird beides erst nach „Online speichern“ sichtbar.</p>
     `;
+    populateTargetGuardians();
   }
 
   function renderPartnershipStep(person, action) {
@@ -358,13 +431,33 @@ export function createRelationActionsDialog(
       && !(record?.id === context?.family.document.id && person.id === context?.personId)
     ));
     candidates.forEach(person => {
+      const action = form.elements.namedItem('relationAction')?.value || '';
+      const candidateAvailability = partnerCandidateAvailability(record.family, person.id, action);
       const life = person.birth ? ` (${person.birth}${person.death ? `–${person.death}` : ''})` : '';
-      personSelect.add(new Option(`${person.name}${life}`, person.id));
+      const option = new Option(
+        `${person.name}${life}${candidateAvailability.enabled ? '' : ` — ${candidateAvailability.reason}`}`,
+        person.id
+      );
+      option.disabled = !candidateAvailability.enabled;
+      personSelect.add(option);
     });
     if (!candidates.length) personSelect.add(new Option('Keine andere Person in dieser Akte', ''));
     const registryContainer = personSelect.closest('[data-partner-source="registry"]');
     personSelect.disabled = !candidates.length || registryContainer?.hidden === true;
     submitButton.disabled = form.elements.namedItem('partnerSource')?.value === 'registry' && !personSelect.value;
+  }
+
+  function populateTargetGuardians() {
+    const familySelect = form.elements.namedItem('targetFamilyId');
+    const guardianSelect = form.elements.namedItem('targetGuardianId');
+    if (!familySelect || !guardianSelect) return;
+    const record = listAvailableFamilyRecords().find(item => item.id === familySelect.value);
+    guardianSelect.replaceChildren();
+    (record?.family.persons || []).forEach(person => {
+      guardianSelect.add(new Option(`${person.name}${person.title ? ` · ${person.title}` : ''}`, person.id));
+    });
+    if (!guardianSelect.options.length) guardianSelect.add(new Option('Keine aufnehmende Person in dieser Akte', ''));
+    submitButton.disabled = !guardianSelect.value;
   }
 
   function open(person, family) {
@@ -383,12 +476,15 @@ export function createRelationActionsDialog(
     submitButton.disabled = false;
     form.elements.namedItem('relationAction').value = actionId;
     if (PARTNER_ACTIONS.has(actionId)) renderPartnerStep(person, actionId);
+    else if (actionId === 'change-portrait') renderPortraitStep(person);
     else if (actionId === 'die') renderDeathStep(person);
     else if (actionId === 'send-ward') renderSendWardStep(person);
     else if (['divorce', 'upgrade-engagement', 'marry-away'].includes(actionId)) renderPartnershipStep(person, actionId);
     else return false;
     const definition = ACTION_DEFINITIONS.find(item => item.id === actionId);
-    submitButton.textContent = definition ? definition.label : 'Übernehmen';
+    submitButton.textContent = actionId === 'change-portrait'
+      ? 'Portrait speichern'
+      : definition?.label || 'Übernehmen';
     menu.hidden = true;
     step.hidden = false;
     footer.hidden = false;
@@ -409,12 +505,19 @@ export function createRelationActionsDialog(
       partnerPersonId: values.partnerPersonId || '',
       registryFamilyId: values.registryFamilyId || '',
       registryPersonId: values.registryPersonId || '',
+      marriageDirection: values.marriageDirection || 'partner-leaves',
       deathYear: String(values.deathYear || '').trim(),
       deathUnknown: Boolean(values.deathUnknown),
       targetFamilyId: values.targetFamilyId || '',
-      partnershipId: values.partnershipId || ''
+      targetGuardianId: values.targetGuardianId || '',
+      partnershipId: values.partnershipId || '',
+      portrait: normalizePortraitSource(values.portrait)
     };
   }
+
+  form.addEventListener('input', event => {
+    if (event.target.name === 'portrait') updatePortraitPreview();
+  });
 
   form.addEventListener('change', event => {
     if (event.target.name === 'partnerSource') {
@@ -422,6 +525,7 @@ export function createRelationActionsDialog(
       if (event.target.value === 'registry') populateRegistryPersons();
     }
     if (event.target.name === 'registryFamilyId') populateRegistryPersons();
+    if (event.target.name === 'targetFamilyId') populateTargetGuardians();
   });
 
   return Object.freeze({

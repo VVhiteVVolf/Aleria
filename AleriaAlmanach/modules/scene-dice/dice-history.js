@@ -1,0 +1,101 @@
+export const DICE_HISTORY_KEY = 'aleria.dice.history.v1';
+export const DICE_SETTINGS_KEY = 'aleria.dice.settings.v1';
+export const DICE_HISTORY_LIMIT = 30;
+
+const DEFAULT_SETTINGS = Object.freeze({
+  animationEnabled: true,
+  soundEnabled: false,
+  reducedMotion: false
+});
+
+function safeParse(value, fallback) {
+  try {
+    return value ? JSON.parse(value) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function createId() {
+  if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+  return `dice-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function sanitizeDiceList(value) {
+  return Array.isArray(value)
+    ? value.map(Number).filter(Number.isFinite).slice(0, 200)
+    : [];
+}
+
+function sanitizeHistoryEntry(entry = {}) {
+  const notation = String(entry.notation || '').slice(0, 100);
+  if (!notation) return null;
+  return {
+    id: String(entry.id || createId()),
+    timestamp: String(entry.timestamp || new Date().toISOString()),
+    notation,
+    dice: sanitizeDiceList(entry.dice),
+    keptDice: sanitizeDiceList(entry.keptDice),
+    droppedDice: sanitizeDiceList(entry.droppedDice),
+    modifier: Number(entry.modifier) || 0,
+    total: Number(entry.total) || 0,
+    critical: ['success', 'failure'].includes(entry.critical) ? entry.critical : ''
+  };
+}
+
+export class DiceHistoryRepository {
+  constructor(storage = globalThis.localStorage) {
+    this.storage = storage;
+  }
+
+  list() {
+    const stored = safeParse(this.storage?.getItem(DICE_HISTORY_KEY), null);
+    const entries = Array.isArray(stored?.entries) ? stored.entries : [];
+    return entries.map(sanitizeHistoryEntry).filter(Boolean).slice(0, DICE_HISTORY_LIMIT);
+  }
+
+  add(result) {
+    const entry = sanitizeHistoryEntry({ ...result, id: createId() });
+    const entries = [entry, ...this.list()].filter(Boolean).slice(0, DICE_HISTORY_LIMIT);
+    this.#write(entries);
+    return entry;
+  }
+
+  remove(id) {
+    const entries = this.list().filter(entry => entry.id !== String(id));
+    this.#write(entries);
+    return entries;
+  }
+
+  clear() {
+    this.#write([]);
+    return [];
+  }
+
+  getSettings() {
+    const stored = safeParse(this.storage?.getItem(DICE_SETTINGS_KEY), {});
+    return {
+      animationEnabled: stored.animationEnabled !== false,
+      soundEnabled: stored.soundEnabled === true,
+      reducedMotion: stored.reducedMotion === true
+    };
+  }
+
+  setSettings(patch = {}) {
+    const settings = { ...DEFAULT_SETTINGS, ...this.getSettings(), ...patch };
+    try {
+      this.storage?.setItem(DICE_SETTINGS_KEY, JSON.stringify({ schemaVersion: 1, ...settings }));
+    } catch (error) {
+      console.warn('Würfeleinstellungen konnten nicht gespeichert werden.', error);
+    }
+    return settings;
+  }
+
+  #write(entries) {
+    try {
+      this.storage?.setItem(DICE_HISTORY_KEY, JSON.stringify({ schemaVersion: 1, entries }));
+    } catch (error) {
+      console.warn('Würfelverlauf konnte nicht gespeichert werden.', error);
+    }
+  }
+}

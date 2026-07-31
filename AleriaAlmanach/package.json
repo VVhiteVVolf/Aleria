@@ -1,0 +1,22 @@
+{
+  "name": "aleria-almanach",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aleria Almanach mit szenengebundenem 3D-Würfelsystem",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "preview": "vite preview --host 127.0.0.1",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "copy:dice-assets": "node scripts/copy-dice-assets.mjs",
+    "postinstall": "node scripts/copy-dice-assets.mjs"
+  },
+  "dependencies": {
+    "@3d-dice/dice-box": "1.1.4",
+    "@3d-dice/dice-parser-interface": "0.2.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "vite": "8.2.0"
+  }
+}

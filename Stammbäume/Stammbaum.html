@@ -51,10 +51,10 @@
         </div>
         <div class="workspace-mode-switch" aria-label="Arbeitsmodus">
           <span class="workspace-mode-label" id="workspace-mode-label">Ansichtsmodus</span>
-          <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur lokal</span>
+          <span class="cloud-sync-status" id="cloud-sync-status" data-edit-only data-phase="local">Nur auf diesem Gerät</span>
           <button class="button" type="button" data-action="cloud-save" data-edit-only>Online speichern</button>
           <button class="button button--quiet" type="button" data-action="cloud-reset-origin" data-edit-only hidden>Zum Ursprung</button>
-          <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>Cloud-Konto</button>
+          <button class="button button--quiet" type="button" data-action="open-cloud-account" data-edit-only hidden>GitHub-Verbindung</button>
           <a class="button button--quiet" href="index.html" data-view-only>Startseite</a>
           <a class="button button--quiet" href="register.html" data-view-only>Familienregister</a>
           <button class="button" type="button" data-action="request-edit-mode" data-view-only>Bearbeiten</button>
@@ -152,7 +152,7 @@
     </main>
 
     <footer class="app-footer">
-      <span id="save-status" data-edit-only>Lokal gespeichert</span>
+      <span id="save-status" data-edit-only>Lokal auf diesem Gerät gespeichert</span>
       <span>Gegenwart <span data-current-year>1740</span> · Family Chart 0.9.0 · Aleria-Datenmodell v1</span>
     </footer>
   </div>
@@ -186,9 +186,9 @@
         <label class="field">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
         </label>
-        <label class="field" data-cloud-asset-field>Wappen über Firebase hochladen
+        <label class="field" data-cloud-asset-field>Wappen lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
-          <span class="asset-upload-status" data-asset-upload-status>Cloud-Anmeldung erforderlich · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
         <label class="field field--wide">Untertitel am Wappenknoten
           <input name="crestSubtitle" maxlength="160" placeholder="optional">
@@ -316,9 +316,9 @@
         <label class="field">Portrait-URL oder lokaler Pfad
           <input name="portrait" type="text" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
         </label>
-        <label class="field" data-cloud-asset-field>Portrait über Firebase hochladen
+        <label class="field" data-cloud-asset-field>Portrait lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
-          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
         <label class="field">Platzhalter ohne Portrait
           <select name="portraitPlaceholder">
@@ -451,9 +451,9 @@
         <label class="field">Portrait-URL oder lokaler Pfad
           <input name="portrait" placeholder="https://i.imgur.com/DATEI.jpg (2:3)">
         </label>
-        <label class="field" data-cloud-asset-field>Portrait über Firebase hochladen
+        <label class="field" data-cloud-asset-field>Portrait lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="portrait" data-asset-target="portrait">
-          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
         <label class="field">Platzhalter ohne Portrait
           <select name="portraitPlaceholder">
@@ -657,9 +657,9 @@
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
         </label>
-        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+        <label class="field field--wide" data-cloud-asset-field>Wappen lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
-          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
       </div>
       <footer class="dialog-footer">
@@ -752,9 +752,9 @@
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="assets/images/placeholders/neutral-crest.png">
         </label>
-        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+        <label class="field field--wide" data-cloud-asset-field>Wappen lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
-          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
         <label class="field field--wide">Optionale Ziel-Familien-ID
           <input name="targetFamilyId" maxlength="120" placeholder="Erst eintragen, sobald das Zielhaus im Register existiert">
@@ -815,9 +815,9 @@
         <label class="field field--wide">Wappen-URL oder lokaler Pfad (1:1)
           <input name="emblem" placeholder="https://i.imgur.com/DATEI.png">
         </label>
-        <label class="field field--wide" data-cloud-asset-field>Wappen über Firebase hochladen
+        <label class="field field--wide" data-cloud-asset-field>Wappen lokal auswählen
           <input type="file" accept="image/png,image/jpeg,image/webp" data-family-asset-upload data-asset-kind="crest" data-asset-target="emblem">
-          <span class="asset-upload-status" data-asset-upload-status>Öffentliches Bild · maximal 8 MB</span>
+          <span class="asset-upload-status" data-asset-upload-status>Nur auf diesem Gerät · für andere erst nach „Online speichern“ sichtbar · maximal 1 MB</span>
         </label>
         <label class="field field--wide">Ziel-Familien-ID im Register
           <input name="targetFamilyId" required maxlength="120" placeholder="haus-morgenrot">
@@ -991,20 +991,19 @@
     <div class="cloud-account-panel" id="cloud-signed-in" hidden>
       <header class="dialog-header">
         <div>
-          <p class="eyebrow">Firebase-Synchronisierung</p>
-          <h2>Cloud-Konto</h2>
+          <p class="eyebrow">GitHub-Veröffentlichung</p>
+          <h2>Repository verbunden</h2>
         </div>
         <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
       </header>
       <div class="dialog-body">
-        <p>Angemeldet als <strong id="cloud-account-email">Firebase-Konto</strong>.</p>
-        <p class="form-help">Änderungen werden automatisch nur auf diesem Gerät gesichert. Erst „Online speichern“ legt eine neue private Firebase-Revision an. Eine neuere Firebase-Fassung hat beim Abgleich Vorrang.</p>
+        <p>Verbunden mit <strong id="cloud-account-email">GitHub-Registry</strong>.</p>
+        <p class="form-help">Änderungen werden automatisch nur auf diesem Gerät gesichert. „Online speichern“ schreibt Familienakte und Registereintrag gemeinsam als revisionsgeprüften Commit nach GitHub.</p>
         <p class="form-error" id="cloud-account-error" role="alert" hidden></p>
       </div>
       <footer class="dialog-footer">
-        <button class="button button--quiet" type="button" data-action="cloud-logout">Abmelden</button>
-        <button class="button button--quiet" type="button" data-action="retry-cloud-sync">Firebase-Fassung neu laden</button>
-        <button class="button" type="button" data-action="cloud-publish">Öffentliche Fassung veröffentlichen</button>
+        <button class="button button--quiet" type="button" data-action="cloud-logout">Verbindung lösen</button>
+        <button class="button" type="button" data-action="retry-cloud-sync">GitHub-Fassung neu laden</button>
       </footer>
     </div>
 
@@ -1013,23 +1012,20 @@
         <header class="dialog-header">
           <div>
             <p class="eyebrow">Online speichern</p>
-            <h2>Bei Firebase anmelden</h2>
+            <h2>Mit GitHub-Registry verbinden</h2>
           </div>
           <button class="icon-button" type="button" data-action="close-cloud-account" aria-label="Dialog schließen">×</button>
         </header>
         <div class="dialog-body form-grid">
-          <label class="field field--wide">E-Mail-Adresse
-            <input name="email" type="email" autocomplete="username" required>
-          </label>
-          <label class="field field--wide">Passwort
+          <label class="field field--wide">Veröffentlichungsschlüssel
             <input name="password" type="password" autocomplete="current-password" required>
           </label>
           <p class="form-error field--wide" id="cloud-login-error" role="alert" hidden></p>
-          <p class="form-help field--wide">Das Werkstatt-Passwort öffnet den Bearbeitungsmodus. Für den ersten Online-Speichervorgang verlangt Firebase zusätzlich ein berechtigtes Konto; eine bestehende Anmeldung wird wiederverwendet.</p>
+          <p class="form-help field--wide">Der Schlüssel wird nur für diese geöffnete Seite im Arbeitsspeicher gehalten. Der eigentliche GitHub-Token bleibt geschützt auf dem Server.</p>
         </div>
         <footer class="dialog-footer">
           <button class="button button--quiet" type="button" data-action="close-cloud-account">Abbrechen</button>
-          <button class="button" value="default" type="submit">Anmelden</button>
+          <button class="button" value="default" type="submit">Verbinden</button>
         </footer>
       </div>
     </form>

@@ -89,8 +89,10 @@ export function createRelatedPersonDialog(documentRef = document) {
     form.elements.namedItem('visibility').value = 'public';
     // Voreinstellungen aus „Beziehung modifizieren“ (z. B. Verlobung, Adoption, Mündel).
     if (options.partnershipType) partnershipType.value = options.partnershipType;
+    if (options.partnershipStatus) form.elements.namedItem('partnershipStatus').value = options.partnershipStatus;
     if (options.parentageType) parentageType.value = options.parentageType;
     if (options.legitimacy) legitimacy.value = options.legitimacy;
+    if (options.visibility) form.elements.namedItem('visibility').value = options.visibility;
     syncFields();
     dialog.showModal();
     form.elements.namedItem('name').focus();

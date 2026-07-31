@@ -62,6 +62,12 @@ function normalizeTextList(value) {
     .filter(Boolean))];
 }
 
+function normalizeFolderPath(value) {
+  return (Array.isArray(value) ? value : [])
+    .map(cleanText)
+    .filter(Boolean);
+}
+
 export function listHouseRanks() {
   return Object.values(RANK_DEFINITIONS).sort((first, second) => first.order - second.order);
 }
@@ -72,6 +78,7 @@ export function getHouseRank(rankId) {
 
 export function normalizeHouseProfile(profile = {}) {
   const source = profile && typeof profile === 'object' ? profile : {};
+  const folderPath = normalizeFolderPath(source.folderPath);
   return {
     rankId: getHouseRank(cleanText(source.rankId)).id,
     seat: cleanText(source.seat),
@@ -81,6 +88,7 @@ export function normalizeHouseProfile(profile = {}) {
     secondarySeats: normalizeTextList(source.secondarySeats),
     liegeHouseId: cleanText(source.liegeHouseId),
     liegeHouseName: cleanText(source.liegeHouseName),
+    ...(folderPath.length > 4 ? { folderPath } : {}),
     regionEmblems: normalizeRegionEmblems(source.regionEmblems)
   };
 }
@@ -91,14 +99,16 @@ export function createHouseProfileFromFolderPath(folderPath = [], overrides = {}
   const nextKingdom = path[0] || current.kingdom;
   const nextCounty = path[1] || current.county;
   const nextBarony = path[2] || current.barony;
+  const nextSeat = path.length > 3 ? path[path.length - 1] : current.seat;
   return normalizeHouseProfile({
     ...current,
+    ...(path.length > 4 ? { folderPath: path } : {}),
     kingdom: nextKingdom,
     county: nextCounty,
     barony: nextBarony,
-    seat: path[3] || current.seat,
+    seat: nextSeat,
     regionEmblems: {
-      seat: current.seat && current.seat !== (path[3] || current.seat) ? '' : current.regionEmblems.seat,
+      seat: current.seat && current.seat !== nextSeat ? '' : current.regionEmblems.seat,
       kingdom: current.kingdom && current.kingdom !== nextKingdom ? '' : current.regionEmblems.kingdom,
       county: current.county && current.county !== nextCounty ? '' : current.regionEmblems.county,
       barony: current.barony && current.barony !== nextBarony ? '' : current.regionEmblems.barony
@@ -108,7 +118,9 @@ export function createHouseProfileFromFolderPath(folderPath = [], overrides = {}
 
 export function createFolderPathFromHouseProfile(profile = {}) {
   const normalized = normalizeHouseProfile(profile);
-  return [normalized.kingdom, normalized.county, normalized.barony, normalized.seat].filter(Boolean);
+  return Array.isArray(normalized.folderPath) && normalized.folderPath.length
+    ? [...normalized.folderPath]
+    : [normalized.kingdom, normalized.county, normalized.barony, normalized.seat].filter(Boolean);
 }
 
 export function isHouseProfileEmpty(profile = {}) {
@@ -120,7 +132,8 @@ export function isHouseProfileEmpty(profile = {}) {
     && !normalized.kingdom
     && !normalized.secondarySeats.length
     && !normalized.liegeHouseId
-    && !normalized.liegeHouseName;
+    && !normalized.liegeHouseName
+    && !(Array.isArray(normalized.folderPath) && normalized.folderPath.length);
 }
 
 export function formatHouseProfile(profile = {}, separator = ' · ') {
@@ -157,13 +170,14 @@ export function formatHouseProfile(profile = {}, separator = ' · ') {
 
 export function getHouseProfileSearchTerms(profile = {}) {
   const normalized = normalizeHouseProfile(profile);
-  return [
+  return [...new Set([
     getHouseRank(normalized.rankId).label,
     normalized.seat,
     normalized.barony,
     normalized.county,
     normalized.kingdom,
+    ...(normalized.folderPath || []),
     ...normalized.secondarySeats,
     normalized.liegeHouseName
-  ].filter(Boolean);
+  ].filter(Boolean))];
 }

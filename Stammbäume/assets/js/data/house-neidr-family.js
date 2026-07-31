@@ -7,7 +7,8 @@ import {
   createLinkedLineBranch,
   createMarriage,
   createMarriedAwayBranch,
-  createParentages
+  createParentages,
+  createWardAwayBranch
 } from './family-record-builders.js';
 import { HOUSE_NEIDR_PORTRAITS } from './house-neidr-portraits.js';
 
@@ -318,13 +319,21 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     // Im Jahr 1740 lebende jüngste Generation
     person('gwennah-neidr', 'Gwennah Neidr', 'female', '1720', ''),
     person('guinevere-neidr', 'Guinevere Neidr', 'female', '1722', '', NEIDR_HOUSE_ID, {
-      title: 'Mündel des Hauses Draig'
+      familyRole: 'ward-away',
+      title: 'Weggegebenes Mündel bei Haus Draig',
+      tags: ['Fortgegebenes Mündel'],
+      notes: 'Guinevere bleibt ein leiblicher Spross des Hauses Neidr, wurde aber als Mündel an Galahad Draig und Gwendolyn Aderyn gegeben.',
+      extensions: { registryManagedFields: ['familyRole', 'title', 'tags', 'notes'] }
     }),
     person('gwynfor-neidr', 'Gwynfor Neidr', 'male', '1725', '', NEIDR_HOUSE_ID, {
       title: 'Erster in der Erbfolge des Hauses Neidr'
     }),
     person('lancelot-neidr', 'Lancelot Neidr', 'male', '1730', '', NEIDR_HOUSE_ID, {
-      title: 'Zweiter in der Erbfolge; Mündel am Königshof'
+      familyRole: 'ward-away',
+      title: 'Zweiter in der Erbfolge · Weggegebenes Mündel bei Haus Pendrag',
+      tags: ['Fortgegebenes Mündel'],
+      notes: 'Lancelot bleibt ein leiblicher Spross und Erbe des Hauses Neidr, wurde aber als Mündel an König Tristan Pendrag und Isolde Arth gegeben.',
+      extensions: { registryManagedFields: ['familyRole', 'title', 'tags', 'notes'] }
     }),
     person('rigis-neidr', 'Rigis Neidr', 'male', '1723', ''),
     person('padrig-neidr', 'Padrig Neidr', 'male', '1728', ''),
@@ -511,7 +520,27 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     marriedAway('married-away-draenog-lunet', 'Haus Draenog', 'marriage-lunet-mathonwy', 'house-draenog'),
     marriedAway('married-away-canwyll-rhiannon', 'Haus Canwyll', 'marriage-rhiannon-cadoc', 'house-canwyll'),
     marriedAway('married-away-tiwna-dilwen', 'Haus Tiwna', 'marriage-dilwen-morholt', 'house-tiwna'),
-    marriedAway('married-away-crefyddol-ael', 'Haus Crefyddol', 'marriage-ael-merrion', 'house-crefyddol')
+    marriedAway('married-away-crefyddol-ael', 'Haus Crefyddol', 'marriage-ael-merrion', 'house-crefyddol'),
+    createWardAwayBranch({
+      id: 'ward-away-guinevere-draig',
+      name: 'Haus Draig',
+      parentPersonId: 'guinevere-neidr',
+      houseId: 'house-draig',
+      targetFamilyId: 'haus-draig',
+      emblem: HOUSE_EMBLEMS.draig,
+      crestFrame: 'gold',
+      notes: 'Guinevere Neidr wurde als Mündel an Galahad Draig und Gwendolyn Aderyn vermittelt.'
+    }),
+    createWardAwayBranch({
+      id: 'ward-away-lancelot-pendrag',
+      name: 'Haus Pendrag',
+      parentPersonId: 'lancelot-neidr',
+      houseId: 'house-pendrag',
+      targetFamilyId: 'haus-pendrag',
+      emblem: HOUSE_EMBLEMS.pendrag,
+      crestFrame: 'gold',
+      notes: 'Lancelot Neidr wurde als Mündel an König Tristan Pendrag und Isolde Arth vermittelt.'
+    })
   ],
   timeJumps: [
     {
@@ -561,7 +590,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Neidr-Tabelle und der eingebetteten Stammbaumgrafik. Die fünf Zeitsprünge sind als serielle absolute Generationentrenner modelliert. Der in der Oberhauptgalerie ab 1720 als „Gwyneed“ beschriftete, aber mit Yvains Portrait dargestellte Graf wird aufgrund der Erbfolge als Yvain geführt. Die ausgearbeitete Pyrth-Gegenakte belegt Prynhawn und Jowaneth als Ehepaar sowie ihre Lebensdaten; Neidr zeigt deshalb auch Prynhawns direkten Wegverheiratet-Knoten zu Haus Pyrth. Mari erscheint nur in der Tabelle. Die ergänzende Crefyddoll-Quelle löst die zuvor unbeschriftete Fortsetzung unter Jinelle und Sieffre auf: Ihre Söhne Llwyarch und Llwellyn begründen mit Lynette beziehungsweise Hafren die Bruderhäuser Crefyddol und Canwyll. Neidr zeigt beide verknüpften Zielhäuser direkt unter dem Ursprungspaar; die vollständigen Gründerpaare und Fortsetzungen bleiben in den Zielakten, damit sie vor Neidrs nächstem absoluten Zeitsprung nicht als falsche Generation erscheinen. Sieffre trägt als Heiliger den Holy Frame. Bors und Gwennan begründen Haus Saith, Morholt und Caitrin Haus Tiwna sowie Roderic und Llynn Haus Pyrth. Die Kinderzeilen ordnen Odyar Ariana und Ninian Crystin zu, obwohl die Partnerzeile beide Spalten vertauscht. Genauer belegte Todesjahre für Gaenor, Llywellyn und Elenydd sowie die wechselseitigen Pflege-, Verlobungs- und Draig-Verbindungen wurden aus den bereits vorhandenen verbundenen Hausakten übernommen.',
     blankFamily: false,
-    sourceRevision: 7,
+    sourceRevision: 8,
     registryTombstones: {
       houses: ['house-unbekannt-jinelle'],
       cadetBranches: ['married-away-unbekannt-jinelle']

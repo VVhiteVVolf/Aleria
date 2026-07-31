@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { BLODYN_HOUSE_PROFILES } from './blodyn-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   createFamilyPerson,
   createMarriage,
@@ -41,7 +42,7 @@ export const HOUSE_BLODYN_ABERDAIL_FAMILY = Object.freeze({
   houses: [
     { id: ABERDAIL_HOUSE_ID, name: 'Haus Blodyn von Aberdail', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
     { id: BLODYN_HOUSE_ID, name: 'Haus Blodyn', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
-    { id: 'house-blaidd', name: 'Haus Blaidd', motto: '', emblem: '', status: 'active' }
+    { id: 'house-blaidd', name: "Haus Blaidd O'Branon", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' }
   ],
   persons: [
     person('yvain-blodyn', 'Yvain Blodyn', 'male', '1694', BLODYN_HOUSE_ID, {

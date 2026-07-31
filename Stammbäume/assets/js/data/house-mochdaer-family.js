@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_MOCHDAER_PORTRAITS } from './house-mochdaer-portraits.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { MOCHDAER_HOUSE_PROFILES } from './mochdaer-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
 
@@ -90,9 +91,9 @@ const GWYLIAU_HOUSES = Object.freeze([
   house('house-coedwig', 'Haus Coedwig'),
   house('house-dobhar', 'Haus Dobhar'),
   house('house-ness', 'Haus Ness'),
-  house('house-blaidd', 'Haus Blaidd'),
+  house('house-blaidd', "Haus Blaidd O'Branon", GRAUE_WEITE_HOUSE_EMBLEMS.blaidd),
   house('house-blodyn', 'Haus Blodyn', HOUSE_EMBLEMS.blodyn),
-  house('house-lyfant', 'Haus Lyfant'),
+  house('house-lyfant', "Haus Lyfant O'Derwyddion", GRAUE_WEITE_HOUSE_EMBLEMS.lyfant),
   house('house-crafanc', 'Haus Crafanc'),
   house('house-gwenyen', 'Haus Gwenyen'),
   house('house-haig', 'Haus Haig'),
@@ -102,7 +103,7 @@ const GWYLIAU_HOUSES = Object.freeze([
 const CERRIGARTH_HOUSES = Object.freeze([
   house(CERRIGARTH_HOUSE_ID, "Haus Mochdaer O'Cerrigarth", MOCHDAER_EMBLEM),
   house(GWYLIAU_HOUSE_ID, "Haus Mochdaer O' Gwyliau", MOCHDAER_EMBLEM),
-  house('house-blaidd', 'Haus Blaidd'),
+  house('house-blaidd', "Haus Blaidd O'Branon", GRAUE_WEITE_HOUSE_EMBLEMS.blaidd),
   house('house-dianc', 'Haus Dianc'),
   house('house-dinefwr', 'Haus Dinefwr', HOUSE_EMBLEMS.dinefwr),
   house('house-walwrs', 'Haus Walwrs'),
@@ -211,7 +212,7 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
     marriedAway('married-away-balauric-jinell', 'Haus Balauric', 'marriage-jinell-heveydd-mochdaer', 'house-balauric', 'haus-balauric'),
     marriedAway('married-away-dobhar-marvine', 'Haus Dobhar', 'marriage-marvine-donnacha-mochdaer', 'house-dobhar', 'haus-dobhar'),
     marriedAway('married-away-blodyn-luned', 'Haus Blodyn', 'marriage-luned-tarrant-mochdaer', 'house-blodyn', 'haus-blodyn', HOUSE_EMBLEMS.blodyn),
-    marriedAway('married-away-lyfant-rhosyn', 'Haus Lyfant', 'marriage-rhosyn-cledwyn-mochdaer', 'house-lyfant', 'haus-lyfant'),
+    marriedAway('married-away-lyfant-rhosyn', "Haus Lyfant O'Derwyddion", 'marriage-rhosyn-cledwyn-mochdaer', 'house-lyfant', 'haus-lyfant', GRAUE_WEITE_HOUSE_EMBLEMS.lyfant),
     marriedAway('married-away-crafanc-jowna', 'Haus Crafanc', 'marriage-jowna-artgal-mochdaer', 'house-crafanc', 'haus-crafanc'),
     marriedAway('married-away-gwenyen-ceridwen', 'Haus Gwenyen', 'marriage-ceridwen-kimball-mochdaer', 'house-gwenyen', 'haus-gwenyen'),
     marriedAway('married-away-udgorn-meggan', 'Haus Udgorn', 'marriage-meggan-tyreke-mochdaer', 'house-udgorn', 'haus-udgorn'),

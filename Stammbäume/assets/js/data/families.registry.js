@@ -37,6 +37,10 @@ import { WEIDEBUCHT_DEPENDENT_HOUSE_FAMILIES } from './weidebucht-house-families
 import { AEHRENTAL_DEPENDENT_HOUSE_FAMILIES } from './aehrental-house-families.js';
 import { SILBERINSEL_DEPENDENT_HOUSE_FAMILIES } from './silberinsel-house-families.js';
 import { TAL_DER_MILANE_DEPENDENT_HOUSE_FAMILIES } from './tal-der-milane-house-families.js';
+import {
+  GRAUE_WEITE_DEPENDENT_HOUSE_FAMILIES,
+  GRAUE_WEITE_ORIGIN_HOUSE_FAMILIES
+} from './graue-weite-house-families.js';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
@@ -299,6 +303,20 @@ export const FAMILY_REGISTRY = Object.freeze([
       : family.document.houseProfile.rankId === 'knight'
         ? 'lower-nobility'
         : 'dynasty'
+  })),
+  ...GRAUE_WEITE_DEPENDENT_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'knight'
+      ? 'lower-nobility'
+      : 'dynasty'
+  })),
+  ...GRAUE_WEITE_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: 'dynasty'
   })),
   ...MOCHDAER_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

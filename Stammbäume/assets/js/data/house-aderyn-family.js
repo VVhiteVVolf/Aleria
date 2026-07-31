@@ -4,6 +4,7 @@ import {
   TAL_DER_MILANE_HOUSE_PROFILES
 } from './tal-der-milane-house-profiles.js';
 import {
+  createCadetHouseBranch,
   createFamilyPerson,
   createMarriage,
   createMarriedAwayBranch,
@@ -59,6 +60,10 @@ function lineageRoleFor(personId) {
 }
 
 function person(id, name, sex, birth = '????', death = '', houseId = ADERYN_HOUSE_ID, options = {}) {
+  const portrait = HOUSE_ADERYN_PORTRAITS[id] || '';
+  const registryManagedFields = new Set(options.extensions?.registryManagedFields || []);
+  if (portrait) registryManagedFields.add('portrait');
+
   return createFamilyPerson({
     id,
     name,
@@ -66,10 +71,16 @@ function person(id, name, sex, birth = '????', death = '', houseId = ADERYN_HOUS
     birth,
     death,
     houseId,
-    portrait: HOUSE_ADERYN_PORTRAITS[id] || '',
+    portrait,
     familyRole: options.familyRole || (houseId === ADERYN_HOUSE_ID ? 'core' : 'married'),
     lineageRole: options.lineageRole || lineageRoleFor(id),
-    ...options
+    ...options,
+    extensions: {
+      ...(options.extensions || {}),
+      ...(registryManagedFields.size
+        ? { registryManagedFields: [...registryManagedFields] }
+        : {})
+    }
   });
 }
 
@@ -238,7 +249,10 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('gruffyd-draig', 'Gruffyd Draig O\'Gwnthor', 'male', '1114', '1171', 'house-draig', {
       notes: 'Die Aderyn-Tabelle nennt 1157; die bereits kanonische Haus-Draig-Akte belegt 1171.'
     }),
-    person('sianwen-wylan', 'Sianwen Wylan', 'female', '????', '????', 'house-wylan'),
+    person('sianwen-wylan', 'Sianwen Wylan', 'female', '1122', '1203', 'house-wylan', {
+      extensions: { registryManagedFields: ['birth', 'death'] },
+      notes: 'Die Aderyn-Quelle lässt die Lebensdaten offen; die kanonische Haus-Wylan-Akte belegt 1122–1203.'
+    }),
     person('thalena-1126-spouse', 'Thalena', 'female', '1126', '1185', ''),
     person('rhianu-1130-spouse', 'Rhianu', 'female', '1130', '1215', ''),
 
@@ -264,7 +278,9 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('siriol-aderyn', 'Siriol Aderyn', 'female', '1594', '1669'),
     person('eirwyn-mwyalchen', 'Eirwyn Mwyalchen', 'female', '1585', '1644', 'house-mwyalchen'),
     person('gwladus-tylluan', 'Gwladus Tylluan', 'female', '1592', '1671', 'house-tylluan'),
-    person('eiddyl-eryr', 'Eiddyl Eryr', 'male', '1590', '1652', 'house-eryr'),
+    person('eiddyl-eryr', 'Eiddyl Eryr', 'male', '1590', '1652', 'house-eryr', {
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('llwydawg-aderyn', 'Llwydawg Aderyn', 'male', '1607', '1670', ADERYN_HOUSE_ID, { title: 'Graf des Tals der Milane 1629–1670' }),
     person('arglwyddes-aderyn', 'Arglwyddes Aderyn', 'female', '1614', '1666'),
     person('clwyd-aderyn', 'Clywd Aderyn', 'male', '1610', '1673', ADERYN_HOUSE_ID, {
@@ -305,10 +321,14 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('thalen-hebog', 'Thalen Hebog', 'male', '1655', '1692', 'house-hebog'),
     person('catel-aderyn', 'Catel Aderyn', 'male', '1661', '1720', ADERYN_HOUSE_ID, { title: 'Graf des Tals der Milane 1705–1720' }),
     person('merfyn-aderyn', 'Merfyn Aderyn', 'male', '1664', ''),
-    person('cadwallon-aderyn', 'Cadwallon Aderyn', 'male', '1667', ''),
+    person('cadwallon-aderyn', 'Cadwallon Aderyn', 'male', '1667', '', ADERYN_HOUSE_ID, {
+      extensions: { chartPartnerMirrorForPartnershipIds: ['marriage-cadwallon-thivya'] }
+    }),
     person('grufydd-aderyn', 'Grufydd Aderyn', 'male', '1670', ''),
     person('carwyn-aderyn', 'Carwyn Aderyn', 'female', '1675', ''),
-    person('thivya-aderyn', 'Thivya Aderyn', 'female', '1669', ''),
+    person('thivya-aderyn', 'Thivya Aderyn', 'female', '1669', '', ADERYN_HOUSE_ID, {
+      extensions: { chartRepeatForPartnershipIds: ['marriage-cadwallon-thivya'] }
+    }),
     person('frewi-aderyn', 'Frewi Aderyn', 'female', '1666', '1673'),
     person('conwy-aderyn', 'Conwy Aderyn', 'male', '1670', ''),
     person('micah-aderyn', 'Micah Aderyn', 'male', '1674', ''),
@@ -361,7 +381,10 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('mervyn-gwyvern', 'Mervyn Gwyvern', 'male', '1696', '', 'house-gwyvern', {
       notes: 'Die Aderyn-Tabelle schreibt Merwyn; die bereits kanonische Haus-Gwyvern-Akte verwendet Mervyn.'
     }),
-    person('catwan-aderyn', 'Catwan Aderyn', 'male', '1714', '', ADERYN_HOUSE_ID, { title: 'Erbe des Hauses Aderyn' }),
+    person('catwan-aderyn', 'Catwan Aderyn', 'male', '1714', '', ADERYN_HOUSE_ID, {
+      title: 'Erbe des Hauses Aderyn',
+      extensions: { registryManagedFields: ['portrait'] }
+    }),
     person('cwgon-aderyn', 'Cwgon Aderyn', 'male', '1715', '', ADERYN_HOUSE_ID, { title: 'Erbe des Hauses Aderyn' }),
     person('arthen-aderyn', 'Arthen Aderyn', 'male', '1716', '', ADERYN_HOUSE_ID, { title: 'Erbe des Hauses Aderyn' }),
     person('rhenawedd-aderyn', 'Rhenawedd Aderyn', 'female', '1718', ''),
@@ -369,8 +392,8 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('elowen-aderyn', 'Elowen Aderyn', 'female', '1723', ''),
     person('rhiwallon-aderyn', 'Rhiwallon Aderyn', 'male', '????', ''),
     person('cynfyn-aderyn', 'Cynfyn Aderyn', 'male', '????', ''),
-    person('dilys-aderyn', 'Dilys Aderyn', 'female', '????', '', ADERYN_HOUSE_ID, {
-      notes: 'Die Partnerüberschrift verwendet die verkürzte Schreibweise Dily.'
+    person('dilys-aderyn', 'Dilys Aderyn', 'female', '1722', '', ADERYN_HOUSE_ID, {
+      notes: 'Die Partnerüberschrift verwendet die verkürzte Schreibweise Dily; die ausgearbeitete Hebog-Gegenakte belegt das Geburtsjahr 1722.'
     }),
     person('gwil-aderyn', 'Gwil Aderyn', 'male', '????', ''),
     person('ewynn-aderyn', 'Ewynn Aderyn', 'female', '????', ''),
@@ -379,9 +402,17 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     person('yale-aderyn', 'Yale Aderyn', 'male', '1722', ''),
     person('lleulu-aderyn', 'Lleulu Aderyn', 'female', '1724', ''),
     person('wyett-aderyn', 'Wyett Aderyn', 'male', '1723', ''),
-    person('wula-aderyn', 'Wula Aderyn', 'female', '1725', ''),
-    person('aysha-eryr', "Aysha Eryr O'Penbryn", 'female', '????', '', 'house-eryr'),
-    person('leolin-hebog', 'Leolin Hebog', 'male', '????', '', 'house-hebog'),
+    person('wula-aderyn', 'Wula Aderyn', 'female', '1725', '', ADERYN_HOUSE_ID, {
+      title: 'Wegverlobt an Haus Ilyuncu',
+      tags: ['Wegverlobt'],
+      extensions: { registryManagedFields: ['name', 'title', 'tags'] }
+    }),
+    person('aysha-eryr', "Aysha Eryr O'Penbryn", 'female', '1717', '', 'house-eryr', {
+      extensions: { registryManagedFields: ['birth', 'portrait'] }
+    }),
+    person('leolin-hebog', 'Leolin Hebog', 'male', '1721', '', 'house-hebog', {
+      notes: 'Die ausgearbeitete Hebog-Gegenakte belegt das Geburtsjahr 1721.'
+    }),
     person('marvin-ilyuncu', 'Marvin Ilyuncu', 'male', '1723', '', 'house-ilyuncu')
   ],
   partnerships: [
@@ -401,16 +432,32 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     createMarriage('marriage-gruffyd-tiwlip', 'gruffyd-draig', 'tiwlip-aderyn'),
     createMarriage('marriage-talfryn-sianwen', ...TALFRYN_IDS),
     createMarriage('marriage-agravaine-thalena', 'agravaine-aderyn', 'thalena-1126-spouse'),
-    createMarriage('marriage-gwynham-rhianu', 'gwynham-aderyn', 'rhianu-1130-spouse'),
+    createMarriage('marriage-gwynham-rhianu', 'gwynham-aderyn', 'rhianu-1130-spouse', {
+      status: 'ended',
+      end: '1199',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-ywen-evaine', ...YWEN_IDS),
     createMarriage('marriage-ffion-trevelyan', ...TREVELYAN_IDS),
-    createMarriage('marriage-aeron-rhianu', 'aeron-aderyn', 'rhianu-1266-spouse'),
+    createMarriage('marriage-aeron-rhianu', 'aeron-aderyn', 'rhianu-1266-spouse', {
+      status: 'ended',
+      end: '1300',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-gwalchgwyn-myfanwy', ...GWALCHGWYN_IDS),
     createMarriage('marriage-geraint-gwenhwyfar', 'geraint-gaeth', 'gwenhwyfar-1270-aderyn'),
     createMarriage('marriage-taran-glaodhaich', ...TARAN_ANCIENT_IDS),
     createMarriage('marriage-nodawl-eirwyn', ...NODAWL_IDS),
-    createMarriage('marriage-siors-gwladus', ...SIORS_IDS),
-    createMarriage('marriage-eiddyl-siriol', 'eiddyl-eryr', 'siriol-aderyn'),
+    createMarriage('marriage-siors-gwladus', ...SIORS_IDS, {
+      status: 'ended',
+      end: '1661',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
+    createMarriage('marriage-eiddyl-siriol', 'eiddyl-eryr', 'siriol-aderyn', {
+      status: 'ended',
+      end: '1652',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-llwydawg-erasesanne', ...LLWYDAWG_IDS),
     createMarriage('marriage-gwalchgwyn-arglwyddes', 'gwalchgwyn-arth', 'arglwyddes-aderyn'),
     createMarriage('marriage-clwyd-ellun', ...CLYWD_IDS),
@@ -422,8 +469,16 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     createMarriage('marriage-odin-heledd', 'odin-feuerhaar', 'heledd-aderyn'),
     createMarriage('marriage-rhynnon-gwenyth', ...RHYNNON_IDS),
     createMarriage('marriage-caradwyn-dungarth', ...DUNGARTH_IDS),
-    createMarriage('marriage-armel-myf', 'armel-creyr', 'myf-aderyn'),
-    createMarriage('marriage-efnisien-siana', ...EFNISIEN_IDS),
+    createMarriage('marriage-armel-myf', 'armel-creyr', 'myf-aderyn', {
+      status: 'ended',
+      end: '1691',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
+    createMarriage('marriage-efnisien-siana', ...EFNISIEN_IDS, {
+      status: 'ended',
+      end: '1672',
+      extensions: { registryManagedFields: ['status', 'end'] }
+    }),
     createMarriage('marriage-braith-carnedyr', ...CARNEDYR_IDS),
     createMarriage('marriage-taran-ailin', ...TARAN_1653_IDS),
     createMarriage('marriage-thalen-tesni', 'thalen-hebog', 'tesni-aderyn'),
@@ -491,6 +546,66 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     ...childrenOf(['wyett-aderyn', 'wula-aderyn'], RODERIC_IDS, 'marriage-roderic-duana')
   ],
   cadetBranches: [
+    createCadetHouseBranch({
+      id: 'cadet-gaeth-gereint-tudful',
+      name: 'Haus Gaeth',
+      parentPartnershipId: 'marriage-gereint-tudful',
+      houseId: 'house-gaeth',
+      targetFamilyId: 'haus-gaeth',
+      emblem: HOUSE_EMBLEMS.gaeth,
+      subtitle: 'Gegründetes Baronenhaus',
+      notes: 'Gereint Aderyn und Tudful begründen den Gaeth-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
+    createCadetHouseBranch({
+      id: 'cadet-hebog-mordred-thalena',
+      name: 'Haus Hebog',
+      parentPartnershipId: 'marriage-mordred-thalena-ancient',
+      houseId: 'house-hebog',
+      targetFamilyId: 'haus-hebog',
+      emblem: HOUSE_EMBLEMS.hebog,
+      subtitle: 'Gegründetes Baronenhaus',
+      notes: 'Mordred Aderyn und Thalena begründen den Hebog-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
+    createCadetHouseBranch({
+      id: 'cadet-mwyalchen-agravaine-thalena',
+      name: 'Haus Mwyalchen',
+      parentPartnershipId: 'marriage-agravaine-thalena',
+      houseId: 'house-mwyalchen',
+      targetFamilyId: 'haus-mwyalchen',
+      emblem: HOUSE_EMBLEMS.mwyalchen,
+      subtitle: 'Gegründetes Ritterfürstenhaus',
+      notes: 'Agravaine Aderyn und Thalena begründen den Mwyalchen-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
+    createCadetHouseBranch({
+      id: 'cadet-eryr-aeron-rhianu',
+      name: 'Haus Eryr',
+      parentPartnershipId: 'marriage-aeron-rhianu',
+      houseId: 'house-eryr',
+      targetFamilyId: 'haus-eryr',
+      emblem: HOUSE_EMBLEMS.eryr,
+      subtitle: 'Gegründetes Ritterfürstenhaus',
+      notes: 'Aeron Aderyn und Rhianu begründen den Eryr-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
+    createCadetHouseBranch({
+      id: 'cadet-tylluan-gwynham-rhianu',
+      name: 'Haus Tylluan',
+      parentPartnershipId: 'marriage-gwynham-rhianu',
+      houseId: 'house-tylluan',
+      targetFamilyId: 'haus-tylluan',
+      emblem: HOUSE_EMBLEMS.tylluan,
+      subtitle: 'Gegründetes Ritterfürstenhaus',
+      notes: 'Gwynham Aderyn und Rhianu begründen den Tylluan-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
+    createCadetHouseBranch({
+      id: 'cadet-ilyuncu-merfyn-meriel',
+      name: 'Haus Ilyuncu',
+      parentPartnershipId: 'marriage-merfyn-meriel',
+      houseId: 'house-ilyuncu',
+      targetFamilyId: 'haus-ilyuncu',
+      emblem: HOUSE_EMBLEMS.ilyuncu,
+      subtitle: 'Gegründetes Ritterfürstenhaus',
+      notes: 'Merfyn Aderyn und Meriel Gaeth begründen den Ilyuncu-Kadettenzweig; der Hausknoten hängt direkt unter ihrem Paar.'
+    }),
     marriedAway('married-away-pendrag-rhiannon', 'Haus Pendrag', 'marriage-vortigern-rhiannon', 'house-pendrag', HOUSE_EMBLEMS.pendrag),
     marriedAway('married-away-grawn-aranrhod', 'Haus Grawn', 'marriage-iorwerth-aranrhod', 'house-grawn', HOUSE_EMBLEMS.grawn),
     marriedAway('married-away-gaeth-lynette', 'Haus Gaeth', 'marriage-gwendal-lynette', 'house-gaeth'),
@@ -510,7 +625,17 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     marriedAway('married-away-draig-gwendolyn', 'Haus Draig', 'marriage-galahad-gwendolyn', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-tir-addawol-venora', 'Haus Tir Addawol', 'marriage-merryn-venora', 'house-tir-addawol'),
     marriedAway('married-away-mwyalchen-rheanne', 'Haus Mwyalchen', 'marriage-sheev-rheanne', 'house-mwyalchen'),
-    marriedAway('married-away-gwyvern-jeannae', 'Haus Gwyvern', 'marriage-mervyn-jeannae', 'house-gwyvern', HOUSE_EMBLEMS.gwyvern)
+    marriedAway('married-away-gwyvern-jeannae', 'Haus Gwyvern', 'marriage-mervyn-jeannae', 'house-gwyvern', HOUSE_EMBLEMS.gwyvern),
+    createMarriedAwayBranch({
+      id: 'engaged-away-wula-aderyn-ilyuncu',
+      name: 'Haus Ilyuncu',
+      parentPartnershipId: 'engagement-wula-marvin',
+      houseId: 'house-ilyuncu',
+      targetFamilyId: 'haus-ilyuncu',
+      emblem: HOUSE_EMBLEMS.ilyuncu,
+      subtitle: 'Wegverlobt an Haus Ilyuncu',
+      notes: 'Wula Aderyn ist mit Marvin Ilyuncu verlobt; die Verbindung wird nicht als geschlossene Ehe dargestellt.'
+    })
   ],
   timeJumps: [
     timeJump('gap-owain-brinthan', 'marriage-owain-uilean', ['brinthan-aderyn', 'gereint-aderyn'], '????', '????'),
@@ -545,9 +670,9 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Die Übersicht sagt „Kadetten: Keine“; eine andere Quellpassage zählt Gaeth, Hebog, Mwyalchen, Tylluan, Eryr und Ilyuncu ohne Gründer oder genealogischen Anker auf. Deshalb wurden keine Kadettenhausknoten erfunden. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Die 73 individuellen, noch extern abzurufenden Portraitquellen sind im Downloadkatalog erfasst; bis die lokalen Dateien vorliegen, verwendet die Oberfläche bewusst ihre Portraitplatzhalter statt defekter URLs. Die neue Registergliederung führt Aderyn unter Yvains Klamm und Penbryn. Die bekannten Wappen der in dieser Akte vorkommenden Häuser des Tals der Milane werden aus dem gemeinsamen Grafschaftsmodul bezogen.',
+    sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Sechs belegte Kadettenzweige hängen jeweils direkt unter ihrem Gründerpaar: Gereint und Tudful begründen Haus Gaeth, Mordred und Thalena Haus Hebog, Agravaine und Thalena Haus Mwyalchen, Gwynham und Rhianu Haus Tylluan, Aeron und Rhianu Haus Eryr sowie Merfyn und Meriel Gaeth Haus Ilyuncu. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Agravaines Individualporträt wird aus der ausgearbeiteten Mwyalchen-Gegenakte wiederverwendet. Die neue Registergliederung führt Aderyn unter Yvains Klamm und Penbryn. Die bekannten Wappen der in dieser Akte vorkommenden Häuser des Tals der Milane werden aus dem gemeinsamen Grafschaftsmodul bezogen.',
     blankFamily: false,
-    sourceRevision: 5,
+    sourceRevision: 14,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

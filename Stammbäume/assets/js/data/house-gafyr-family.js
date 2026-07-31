@@ -6,6 +6,7 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_GAFYR_PORTRAITS } from './house-gafyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -15,6 +16,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
+  gwialen: GRAUE_WEITE_HOUSE_EMBLEMS.gwialen,
   saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
   talamh: 'assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png',
   wyrm: 'assets/images/houses/Llamreis Ankunft/haus-wyrm.png'
@@ -96,7 +98,7 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     house('house-gallchobhair', 'Haus Gallchobhair'),
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-tir-addawol', 'Haus Tir Addawol'),
-    house('house-gwialen', 'Haus Gwialen'),
+    house('house-gwialen', 'Haus Gwialen', HOUSE_EMBLEMS.gwialen),
     house('house-llwynog', 'Haus Llwynog'),
     house('house-mwyalchen', 'Haus Mwyalchen'),
     house('house-eirce', 'Haus Eirce'),
@@ -367,8 +369,8 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht.',
+    sourceNote: 'Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

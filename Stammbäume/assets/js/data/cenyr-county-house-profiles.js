@@ -1,5 +1,6 @@
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { AEHRENTAL_HOUSE_PROFILES } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_PROFILES } from './graue-weite-house-profiles.js';
 import { SONNENKUESTE_HOUSE_PROFILES } from './sonnenkueste-house-profiles.js';
 import { SILBERINSEL_HOUSE_PROFILES } from './silberinsel-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
@@ -22,7 +23,7 @@ export const CENYR_REGION_EMBLEMS = Object.freeze({
 
 // Drei dieser acht Grafschaften haben (noch) keine überlieferte Unterteilung in
 // Baronien; ihr Grafenhaus sitzt direkt am Grafschaftssitz. Vortigerns Ruh,
-// Weidebucht, Sonnenküste, Ährental, Silberinsel und Tal der Milane werden
+// Weidebucht, Sonnenküste, Ährental, Silberinsel, Graue Weite und Tal der Milane werden
 // inzwischen in eigenen Feature-Modulen mit ihren Herrschaften geführt. Anders als profile() in
 // celtigerns-wacht-house-profiles.js (immer 4-stufiger Kingdom/County/Barony/Seat-Pfad)
 // wird hier bewusst KEIN Platzhalter-Baronie-Name erfunden: createHouseProfileFromFolderPath
@@ -91,7 +92,7 @@ export const CENYR_COUNTY_HOUSE_PROFILES = Object.freeze({
   pendrag: VORTIGERNS_RUH_HOUSE_PROFILES.pendrag,
   grawn: AEHRENTAL_HOUSE_PROFILES.grawn,
   neidr: SILBERINSEL_HOUSE_PROFILES.neidr,
-  pysgod: countyProfile('county', 'Graue Weite', 'Tredegar'),
+  pysgod: GRAUE_WEITE_HOUSE_PROFILES.pysgod,
   arth: countyProfile('county', 'Klaueninsel', 'Talgarth'),
   aderyn: TAL_DER_MILANE_HOUSE_PROFILES.aderyn
 });

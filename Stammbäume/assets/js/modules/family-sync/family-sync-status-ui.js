@@ -33,10 +33,10 @@ export function createFamilySyncStatusUi(documentRef = document) {
     if (publishButton) publishButton.disabled = ['loading', 'saving', 'publishing'].includes(phase);
     if (signedOut) signedOut.hidden = signedInUser;
     if (signedIn) signedIn.hidden = !signedInUser;
-    if (accountEmail) accountEmail.textContent = user?.email || user?.displayName || 'Firebase-Konto';
+    if (accountEmail) accountEmail.textContent = user?.email || user?.displayName || 'GitHub-Registry';
     if (status) {
       status.dataset.phase = phase;
-      status.textContent = message || (signedInUser ? 'Cloud verbunden' : 'Nur lokal');
+      status.textContent = message || (signedInUser ? 'Mit GitHub verbunden' : 'Nur auf diesem Gerät');
     }
   }
 

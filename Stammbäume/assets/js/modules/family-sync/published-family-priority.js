@@ -1,5 +1,5 @@
 /**
- * Loads the public Firebase release without delaying the local application
+ * Loads the public repository release without delaying the local application
  * bootstrap. The release is applied only while the page still shows the same
  * family context that was active when the request started.
  */
@@ -29,7 +29,7 @@ export async function applyPublishedFamilyPriority({
     if (!published?.family || published.family.document?.id !== familyId) return false;
     if (store.getState().family.document.id !== initialFamilyId) return false;
     if (isStalePublishedPlaceholder(published.family, store.getState().family)) return false;
-    store.synchronizeFamily(published.family, { source: 'firebase-published-priority' });
+    store.synchronizeFamily(published.family, { source: 'repository-published-priority' });
     return true;
   } catch (error) {
     onUnavailable(error);

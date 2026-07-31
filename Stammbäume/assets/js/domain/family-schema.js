@@ -151,12 +151,16 @@ function normalizeParentage(parentage = {}, index = 0) {
 }
 
 function normalizeHouse(house = {}, index = 0) {
+  const extensions = house.extensions && typeof house.extensions === 'object'
+    ? cloneValue(house.extensions)
+    : null;
   return {
     id: text(house.id, `house-${index + 1}`),
     name: text(house.name, 'Unbenanntes Haus'),
     motto: text(house.motto),
     emblem: text(house.emblem),
-    status: text(house.status, 'active')
+    status: text(house.status, 'active'),
+    ...(extensions ? { extensions } : {})
   };
 }
 
