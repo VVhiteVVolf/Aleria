@@ -2,6 +2,7 @@ import { build } from 'esbuild';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createDiceBoxBoundaryPlugin } from './dice-box-boundary-patch.mjs';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outputRoot = resolve(projectRoot, 'vendor/scene-dice');
@@ -30,6 +31,7 @@ await Promise.all([
       sourcefile: 'dice-box-browser-entry.js'
     },
     outfile: diceBoxOutput,
+    plugins: [createDiceBoxBoundaryPlugin()],
     banner: { js: '/*! @3d-dice/dice-box 1.1.4 | MIT and BabylonJS | Apache-2.0 | see ../../THIRD_PARTY_NOTICES.md */' }
   }),
   build({

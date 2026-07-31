@@ -99,11 +99,18 @@ const prepared = await evaluate(`(async () => {
   activateDialog('scene-dice-overlay', { initialFocus: '#scene-dice-formula', delay: 0 });
   await new Promise(resolve => setTimeout(resolve, 60));
   const engine = await window.AleriaSceneDice.prepare(document.getElementById('scene-dice-stage'));
+  const board = document.querySelector('.scene-dice-board');
+  const shade = document.querySelector('.scene-dice-board-shade');
+  const appearances = window.AleriaSceneDice.getDiceTypes();
   return {
     fallback: engine.isFallback,
     canvasCount: document.querySelectorAll('#scene-dice-stage canvas').length,
     focusedId: document.activeElement?.id || '',
-    modalOpen: document.getElementById('scene-dice-overlay').classList.contains('active')
+    modalOpen: document.getElementById('scene-dice-overlay').classList.contains('active'),
+    boardBackground: getComputedStyle(board).backgroundImage,
+    shadeMask: getComputedStyle(shade).maskImage || getComputedStyle(shade).webkitMaskImage,
+    appearanceCount: appearances.length,
+    appearanceColors: appearances.map(item => item.color)
   };
 })()`, 90000);
 
@@ -111,6 +118,26 @@ assert.equal(prepared.fallback, false, '3D-Engine fiel unerwartet auf Textmodus 
 assert.ok(prepared.canvasCount >= 1, 'Dice Box hat kein Canvas erzeugt.');
 assert.equal(prepared.focusedId, 'scene-dice-formula');
 assert.equal(prepared.modalOpen, true);
+assert.match(prepared.boardBackground, /dice-board\.png/);
+assert.notEqual(prepared.shadeMask, 'none', 'Die optische Brettbegrenzung fehlt.');
+assert.equal(prepared.appearanceCount, 7);
+assert.equal(new Set(prepared.appearanceColors).size, 7, 'Nicht jede Würfelart besitzt eine eigene Farbe.');
+
+const poolCombination = await evaluate(`(() => {
+  document.querySelector('[data-scene-dice-action="reset-pool"]').click();
+  document.querySelector('[data-scene-dice-action="add-die"][data-die-sides="6"]').click();
+  document.querySelector('[data-scene-dice-action="add-die"][data-die-sides="6"]').click();
+  document.querySelector('[data-scene-dice-action="add-die"][data-die-sides="8"]').click();
+  const result = {
+    formula: document.getElementById('scene-dice-formula').value,
+    chips: Array.from(document.querySelectorAll('.scene-dice-pool-chip strong')).map(node => node.textContent.trim())
+  };
+  document.querySelector('[data-scene-dice-action="reset-pool"]').click();
+  return result;
+})()`);
+
+assert.equal(poolCombination.formula, '2d6+1d8+1d20');
+assert.deepEqual(poolCombination.chips, ['2W6', '1W8', '1W20']);
 
 const damage = await evaluate(`(async () => {
   const input = document.getElementById('scene-dice-formula');
@@ -145,6 +172,39 @@ assert.equal(advantage.keptDice.length, 1);
 assert.equal(advantage.droppedDice.length, 1);
 assert.equal(advantage.total, advantage.keptDice[0] + 5);
 
+const combined = await evaluate(`(async () => {
+  const input = document.getElementById('scene-dice-formula');
+  document.getElementById('scene-dice-roller').value = 'Liora';
+  document.getElementById('scene-dice-purpose').value = 'Arkane Untersuchung';
+  input.value = '1d4+1d6+1d8+1d10+1d12+1d20';
+  document.querySelector('[data-scene-dice-action="roll"]').click();
+  const started = Date.now();
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== input.value) {
+    if (Date.now() - started > 30000) throw new Error('Der kombinierte Farbwurf wurde nicht abgeschlossen.');
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  return JSON.parse(JSON.stringify(_sceneDicePendingRoll));
+})()`, 45000);
+
+assert.equal(combined.dice.length, 6);
+assert.equal(combined.terms.filter(term => term.kind === 'dice').length, 6);
+assert.equal(combined.roller, 'Liora');
+assert.equal(combined.purpose, 'Arkane Untersuchung');
+
+const desktopLayout = await evaluate(`(() => {
+  const board = document.querySelector('.scene-dice-board').getBoundingClientRect();
+  const result = document.querySelector('.scene-dice-result').getBoundingClientRect();
+  const formula = document.querySelector('.scene-dice-result-formula');
+  return {
+    boardBottom: Math.round(board.bottom),
+    resultTop: Math.round(result.top),
+    formulaFits: formula.scrollWidth <= formula.clientWidth + 1
+  };
+})()`);
+
+assert.ok(desktopLayout.boardBottom <= desktopLayout.resultTop, 'Würfelbrett und Ergebnisfläche überlappen sich.');
+assert.equal(desktopLayout.formulaFits, true, 'Die Ergebnisformel läuft aus ihrer Spalte.');
+
 const screenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
 await mkdir(dirname(screenshotPath), { recursive: true });
 await writeFile(screenshotPath, Buffer.from(screenshot.data, 'base64'));
@@ -165,7 +225,7 @@ const mobileUi = await evaluate(`(async () => {
   window.dispatchEvent(new Event('resize'));
   await new Promise(resolve => setTimeout(resolve, 120));
   const body = document.querySelector('.scene-dice-body');
-  const stage = document.querySelector('.scene-dice-stage-panel');
+  const stage = document.querySelector('.scene-dice-board');
   const controls = document.querySelector('.scene-dice-controls');
   const formula = document.getElementById('scene-dice-formula');
   return {
@@ -194,8 +254,8 @@ const finalUi = await evaluate(`(() => {
 })()`);
 
 assert.equal(finalUi.modalOpen, false);
-assert.ok(finalUi.historyCount >= 3);
-assert.ok(finalUi.resultText.includes('2d20kh1+5'));
+assert.ok(finalUi.historyCount >= 4);
+assert.ok(finalUi.resultText.includes('1d4+1d6+1d8+1d10+1d12+1d20'));
 
 const diceAssetErrors = [
   ...failedRequests.map(item => item.url || item.requestId),
@@ -206,5 +266,5 @@ const relevantRuntimeErrors = runtimeErrors.filter(error => /dice|scene-dice/i.t
 assert.deepEqual(diceAssetErrors, [], `Dice-Asset-Fehler: ${diceAssetErrors.join(', ')}`);
 assert.deepEqual(relevantRuntimeErrors, [], 'JavaScript-Fehler im Würfelsystem entdeckt.');
 
-console.log(JSON.stringify({ prepared, damage, advantage, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath }, null, 2));
+console.log(JSON.stringify({ prepared, poolCombination, damage, advantage, combined, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath }, null, 2));
 socket.close();

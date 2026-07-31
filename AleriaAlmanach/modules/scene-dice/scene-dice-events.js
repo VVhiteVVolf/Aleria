@@ -35,19 +35,14 @@ function closeSceneDiceDialog() {
   deactivateDialog('scene-dice-overlay');
 }
 
-function applySceneDiceRollType(result, rollType) {
-  result.rollType = rollType;
-  if (rollType === 'attack' && result.natural === 20) result.special = 'Natürliche 20 · Kritischer Treffer';
-  if (rollType === 'attack' && result.natural === 1) result.special = 'Natürliche 1 · Angriff verfehlt automatisch';
-  if (rollType === 'death-save' && result.natural === 20) result.special = 'Natürliche 20 · 1 Trefferpunkt zurückerlangt';
-  if (rollType === 'death-save' && result.natural === 1) result.special = 'Natürliche 1 · Zwei Fehlschläge';
-  return result;
-}
-
 async function runSceneDiceAnimation(notationOverride = '') {
   const formulaInput = document.getElementById('scene-dice-formula');
   const formula = String(notationOverride || formulaInput?.value || '').trim();
-  const rollType = document.getElementById('scene-dice-roll-type')?.value || 'general';
+  const context = {
+    roller: String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Unbekannte Hand',
+    purpose: String(document.getElementById('scene-dice-purpose')?.value || '').trim(),
+    rollType: document.getElementById('scene-dice-roll-type')?.value || 'general'
+  };
   if (formulaInput && notationOverride) formulaInput.value = notationOverride;
   setSceneDiceStatus('');
   setSceneDiceEngineNote('');
@@ -55,10 +50,7 @@ async function runSceneDiceAnimation(notationOverride = '') {
   setSceneDiceBusy(true);
   try {
     const service = getSceneDiceService();
-    const result = applySceneDiceRollType(
-      await service.roll(formula, document.getElementById('scene-dice-stage')),
-      rollType
-    );
+    const result = await service.roll(formula, document.getElementById('scene-dice-stage'), context);
     _sceneDicePendingRoll = result;
     _sceneDiceLastNotation = result.formula;
     renderSceneDicePendingRoll(result);
@@ -68,6 +60,13 @@ async function runSceneDiceAnimation(notationOverride = '') {
     setSceneDiceStageStatus(result.visualMode === '3d' ? 'Wurf abgeschlossen.' : 'Textwurf abgeschlossen.', result.visualMode === '3d' ? 'ready' : 'fallback');
     if (result.aggregationCorrected) {
       setSceneDiceStatus('Die Ergebnisaggregation wurde vom Aleria-Adapter verifiziert und korrigiert.', 'info');
+    }
+    if (!service.getSettings().keepPool) {
+      service.resetPool();
+      _sceneDiceMode = 'normal';
+      renderSceneDicePool();
+      updateSceneDiceModeButtons();
+      buildSceneDiceFormulaFromControls();
     }
   } catch (error) {
     setSceneDiceStageStatus('Wurf nicht ausgeführt.', 'error');
@@ -83,7 +82,7 @@ function clearSceneDiceResult() {
   const result = document.querySelector('[data-scene-dice-result]');
   if (result) {
     result.dataset.state = 'idle';
-    result.innerHTML = '<div class="scene-dice-result-idle">Die Würfel warten auf deine Hand.</div>';
+    result.innerHTML = '<div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Stelle rechts deinen Würfelpool zusammen.</span></div>';
   }
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (commit) commit.disabled = true;
@@ -95,8 +94,8 @@ function clearSceneDiceResult() {
 async function commitSceneDiceRoll() {
   if (!_sceneDicePendingRoll) return;
   const threadId = getCurrentCommentThreadId();
-  const roller = String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Unbekannte Hand';
-  const purpose = String(document.getElementById('scene-dice-purpose')?.value || '').trim();
+  const roller = String(document.getElementById('scene-dice-roller')?.value || '').trim() || _sceneDicePendingRoll.roller || 'Unbekannte Hand';
+  const purpose = String(document.getElementById('scene-dice-purpose')?.value || '').trim() || _sceneDicePendingRoll.purpose || '';
   const roll = { ..._sceneDicePendingRoll, roller, purpose };
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (!threadId) {
@@ -144,11 +143,14 @@ async function commitSceneDiceRoll() {
 async function updateSceneDiceSettingsFromDialog() {
   const animationEnabled = document.getElementById('scene-dice-animation-enabled')?.checked !== false;
   const soundEnabled = document.getElementById('scene-dice-sound-enabled')?.checked === true;
-  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
+  const reducedMotion = document.getElementById('scene-dice-reduced-motion')?.checked === true;
+  const keepPool = document.getElementById('scene-dice-keep-pool')?.checked !== false;
+  const throwStyle = document.getElementById('scene-dice-throw-style')?.value || 'balanced';
   const service = getSceneDiceService();
-  await service.updateSettings({ animationEnabled, soundEnabled, reducedMotion });
-  service.clear();
+  const previousSettings = service.getSettings();
+  await service.updateSettings({ animationEnabled, soundEnabled, reducedMotion, keepPool, throwStyle });
   if (!animationEnabled) {
+    if (previousSettings.animationEnabled) service.clear();
     setSceneDiceStageStatus('Textmodus bereit.', 'fallback');
     setSceneDiceEngineNote('Die Animation ist deaktiviert; Würfe werden sicher im Textmodus ausgeführt.');
   } else {
@@ -165,21 +167,29 @@ document.addEventListener('click', event => {
   const action = trigger.dataset.sceneDiceAction;
   if (action === 'open') openSceneDiceDialog();
   if (action === 'close') closeSceneDiceDialog();
-  if (action === 'choose-die') {
-    _sceneDiceSelectedSides = Number(trigger.dataset.dieSides) || 20;
+  if (action === 'add-die') {
+    getSceneDiceService().addPoolDie(Number(trigger.dataset.dieSides) || 20);
+    renderSceneDicePool();
+    buildSceneDiceFormulaFromControls();
+  }
+  if (action === 'remove-die') {
+    getSceneDiceService().removePoolDie(Number(trigger.dataset.dieSides) || 20);
+    renderSceneDicePool();
+    buildSceneDiceFormulaFromControls();
+  }
+  if (action === 'reset-pool') {
+    getSceneDiceService().resetPool();
     _sceneDiceMode = 'normal';
-    updateSceneDiceTypeButtons();
+    renderSceneDicePool();
     updateSceneDiceModeButtons();
-    runSceneDiceAnimation(buildSceneDiceFormulaFromControls());
+    buildSceneDiceFormulaFromControls();
   }
   if (action === 'set-mode') {
     _sceneDiceMode = trigger.dataset.diceMode || 'normal';
-    if (_sceneDiceMode !== 'normal') {
-      _sceneDiceSelectedSides = 20;
-      const count = document.getElementById('scene-dice-count');
-      if (count) count.value = '2';
+    if (_sceneDiceMode !== 'normal' && !getSceneDiceService().getPool().some(entry => entry.sides === 20)) {
+      getSceneDiceService().addPoolDie(20);
+      renderSceneDicePool();
     }
-    updateSceneDiceTypeButtons();
     updateSceneDiceModeButtons();
     buildSceneDiceFormulaFromControls();
   }
@@ -199,12 +209,12 @@ document.addEventListener('click', event => {
 });
 
 document.addEventListener('input', event => {
-  if (!event.target?.matches?.('#scene-dice-count, #scene-dice-modifier')) return;
+  if (!event.target?.matches?.('#scene-dice-modifier')) return;
   buildSceneDiceFormulaFromControls();
 });
 
 document.addEventListener('change', event => {
-  if (!event.target?.matches?.('#scene-dice-animation-enabled, #scene-dice-sound-enabled')) return;
+  if (!event.target?.matches?.('#scene-dice-animation-enabled, #scene-dice-sound-enabled, #scene-dice-reduced-motion, #scene-dice-keep-pool, #scene-dice-throw-style')) return;
   updateSceneDiceSettingsFromDialog().catch(error => setSceneDiceStatus(error.message || 'Einstellung konnte nicht übernommen werden.', 'error'));
 });
 

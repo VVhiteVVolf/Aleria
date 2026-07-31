@@ -2,6 +2,7 @@
   "name": "aleria-almanach",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Aleria Almanach mit szenengebundenem 3D-Würfelsystem",
   "scripts": {
     "dev": "vite --host 127.0.0.1",

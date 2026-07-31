@@ -11,6 +11,10 @@ const SCENE_DICE_ICONS = {
   100: '../IconOrdner/Würfel/D10_Physical.png'
 };
 
+let _sceneDicePendingRoll = null;
+let _sceneDiceLastNotation = '1d20';
+let _sceneDiceMode = 'normal';
+
 function getSceneDiceIcon(sides) {
   return SCENE_DICE_ICONS[Number(sides)] || SCENE_DICE_ICONS[20];
 }

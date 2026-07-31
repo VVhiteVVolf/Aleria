@@ -5,7 +5,9 @@ export const DICE_HISTORY_LIMIT = 30;
 const DEFAULT_SETTINGS = Object.freeze({
   animationEnabled: true,
   soundEnabled: false,
-  reducedMotion: false
+  reducedMotion: false,
+  throwStyle: 'balanced',
+  keepPool: true
 });
 
 function safeParse(value, fallback) {
@@ -39,7 +41,10 @@ function sanitizeHistoryEntry(entry = {}) {
     droppedDice: sanitizeDiceList(entry.droppedDice),
     modifier: Number(entry.modifier) || 0,
     total: Number(entry.total) || 0,
-    critical: ['success', 'failure'].includes(entry.critical) ? entry.critical : ''
+    critical: ['success', 'failure'].includes(entry.critical) ? entry.critical : '',
+    roller: String(entry.roller || '').trim().slice(0, 80),
+    purpose: String(entry.purpose || '').trim().slice(0, 140),
+    rollType: ['general', 'attack', 'death-save'].includes(entry.rollType) ? entry.rollType : 'general'
   };
 }
 
@@ -77,14 +82,16 @@ export class DiceHistoryRepository {
     return {
       animationEnabled: stored.animationEnabled !== false,
       soundEnabled: stored.soundEnabled === true,
-      reducedMotion: stored.reducedMotion === true
+      reducedMotion: stored.reducedMotion === true,
+      throwStyle: ['gentle', 'balanced', 'dramatic'].includes(stored.throwStyle) ? stored.throwStyle : 'balanced',
+      keepPool: stored.keepPool !== false
     };
   }
 
   setSettings(patch = {}) {
     const settings = { ...DEFAULT_SETTINGS, ...this.getSettings(), ...patch };
     try {
-      this.storage?.setItem(DICE_SETTINGS_KEY, JSON.stringify({ schemaVersion: 1, ...settings }));
+      this.storage?.setItem(DICE_SETTINGS_KEY, JSON.stringify({ schemaVersion: 2, ...settings }));
     } catch (error) {
       console.warn('Würfeleinstellungen konnten nicht gespeichert werden.', error);
     }

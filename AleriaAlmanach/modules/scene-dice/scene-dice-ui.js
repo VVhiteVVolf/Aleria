@@ -1,9 +1,4 @@
 // Scene dice dialog. Physical execution and persistence live in the ES-module service.
-let _sceneDicePendingRoll = null;
-let _sceneDiceLastNotation = '1d20';
-let _sceneDiceSelectedSides = 20;
-let _sceneDiceMode = 'normal';
-
 function getSceneDiceService() {
   if (!window.AleriaSceneDice) throw new Error('Das Würfelsystem wird noch geladen. Bitte versuche es gleich erneut.');
   return window.AleriaSceneDice;
@@ -16,12 +11,37 @@ function buildSceneDiceControl(threadId = '') {
     </button>`;
 }
 
+function getSceneDiceTypes() {
+  try { return getSceneDiceService().getDiceTypes(); } catch {
+    return Array.from(SCENE_DICE_ALLOWED_SIDES).map(sides => ({ sides, color: '#8b6914', label: `W${sides}` }));
+  }
+}
+
+function getSceneDicePoolCounts() {
+  try { return new Map(getSceneDiceService().getPool().map(entry => [entry.sides, entry.count])); } catch { return new Map([[20, 1]]); }
+}
+
 function buildSceneDiceTypeButtons() {
-  return [4, 6, 8, 10, 12, 20, 100].map(sides => `
-    <button class="scene-dice-type${sides === 20 ? ' selected' : ''}" type="button" data-scene-dice-action="choose-die" data-die-sides="${sides}" aria-label="W${sides} würfeln" aria-pressed="${sides === 20}">
-      <img src="${escapeHtml(getSceneDiceIcon(sides))}" alt="" loading="lazy" decoding="async">
-      <span>W${sides}</span>
-    </button>`).join('');
+  const counts = getSceneDicePoolCounts();
+  return getSceneDiceTypes().map(type => {
+    const count = counts.get(type.sides) || 0;
+    return `
+      <button class="scene-dice-type${count ? ' selected' : ''}" style="--dice-color:${escapeHtml(type.color)}" type="button" data-scene-dice-action="add-die" data-die-sides="${type.sides}" aria-label="W${type.sides} zum Würfelpool hinzufügen">
+        <span class="scene-dice-type-icon"><img src="${escapeHtml(getSceneDiceIcon(type.sides))}" alt="" loading="lazy" decoding="async"></span>
+        <span>W${type.sides}</span>
+        <b data-dice-count="${type.sides}"${count ? '' : ' hidden'}>${count}</b>
+      </button>`;
+  }).join('');
+}
+
+function buildSceneDiceRollerSuggestions() {
+  const names = ['Erzähler'];
+  try {
+    if (typeof getAvailableCommentCharacters === 'function') {
+      names.push(...getAvailableCommentCharacters().map(character => String(character?.name || '').trim()).filter(Boolean));
+    }
+  } catch { /* character data is optional while the dialog is created */ }
+  return Array.from(new Set(names)).map(name => `<option value="${escapeHtml(name)}"></option>`).join('');
 }
 
 function ensureSceneDiceDialog() {
@@ -38,68 +58,77 @@ function ensureSceneDiceDialog() {
   overlay.innerHTML = `
     <div class="scene-dice-card">
       <header class="scene-dice-head">
-        <div><span>Schicksalswurf</span><h2 id="scene-dice-title">Würfel der Szene</h2></div>
-        <button type="button" data-scene-dice-action="close" aria-label="Würfelfenster schließen">×</button>
+        <div class="scene-dice-title-block"><span>Schicksalswerkstatt</span><h2 id="scene-dice-title">Würfel der Szene</h2><small>Pool bauen, werfen und als Szenenereignis festhalten</small></div>
+        <div class="scene-dice-head-state"><i aria-hidden="true"></i><span data-scene-dice-head-state>Bereit</span></div>
+        <button class="scene-dice-close" type="button" data-scene-dice-action="close" aria-label="Würfelfenster schließen">×</button>
       </header>
       <div class="scene-dice-body">
         <main class="scene-dice-workspace">
-          <section class="scene-dice-stage-panel" aria-label="3D-Würfelanimation">
+          <section class="scene-dice-board" aria-label="3D-Würfelbrett">
             <div id="scene-dice-stage" class="scene-dice-stage"></div>
+            <div class="scene-dice-board-shade" aria-hidden="true"></div>
             <div class="scene-dice-stage-status" data-scene-dice-stage-status data-state="idle">Bereit für deinen Wurf.</div>
             <div class="scene-dice-engine-note" data-scene-dice-engine-note hidden></div>
           </section>
           <section class="scene-dice-result" data-scene-dice-result data-state="idle" aria-live="polite">
-            <div class="scene-dice-result-idle">Die Würfel warten auf deine Hand.</div>
+            <div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Stelle rechts deinen Würfelpool zusammen.</span></div>
           </section>
         </main>
         <aside class="scene-dice-controls" aria-label="Würfelsteuerung">
-          <section class="scene-dice-panel">
-            <div class="scene-dice-section-head"><span>Schnellwahl</span><small>Tippen würfelt sofort</small></div>
+          <section class="scene-dice-panel scene-dice-pool-panel">
+            <div class="scene-dice-section-head"><div><span>Würfelpool</span><small>Antippen fügt einen Würfel hinzu</small></div><button type="button" data-scene-dice-action="reset-pool">Zurücksetzen</button></div>
             <div class="scene-dice-types">${buildSceneDiceTypeButtons()}</div>
-            <div class="scene-dice-number-row">
-              <label><span>Anzahl</span><input id="scene-dice-count" type="number" min="1" max="50" value="1" inputmode="numeric"></label>
-              <label><span>Modifikator</span><input id="scene-dice-modifier" type="number" min="-9999" max="9999" value="0" inputmode="numeric"></label>
+            <div class="scene-dice-pool" data-scene-dice-pool></div>
+            <div class="scene-dice-mode-row">
+              <span>W20-Modus</span>
+              <div class="scene-dice-mode-group" role="group" aria-label="W20-Modus">
+                <button type="button" data-scene-dice-action="set-mode" data-dice-mode="normal" aria-pressed="true">Normal</button>
+                <button type="button" data-scene-dice-action="set-mode" data-dice-mode="advantage" aria-pressed="false">Vorteil</button>
+                <button type="button" data-scene-dice-action="set-mode" data-dice-mode="disadvantage" aria-pressed="false">Nachteil</button>
+              </div>
             </div>
-            <div class="scene-dice-mode-group" role="group" aria-label="W20-Modus">
-              <button type="button" data-scene-dice-action="set-mode" data-dice-mode="normal" aria-pressed="true">Normal</button>
-              <button type="button" data-scene-dice-action="set-mode" data-dice-mode="advantage" aria-pressed="false">Vorteil</button>
-              <button type="button" data-scene-dice-action="set-mode" data-dice-mode="disadvantage" aria-pressed="false">Nachteil</button>
-            </div>
-          </section>
-          <section class="scene-dice-panel">
-            <label class="scene-dice-formula-label" for="scene-dice-formula"><span>Würfelnotation</span></label>
+            <label class="scene-dice-modifier-field" for="scene-dice-modifier"><span>Gesamtmodifikator</span><input id="scene-dice-modifier" type="number" min="-9999" max="9999" value="0" inputmode="numeric"></label>
+            <label class="scene-dice-formula-label" for="scene-dice-formula"><span>Würfelformel</span><small>Direkt editierbar</small></label>
             <div class="scene-dice-formula-input">
-              <input id="scene-dice-formula" type="text" value="1d20" maxlength="100" placeholder="z. B. 2d20kh1+5" spellcheck="false" autocomplete="off" aria-describedby="scene-dice-help">
-              <button class="primary" type="button" data-scene-dice-action="roll" aria-label="Würfelformel ausführen">Würfeln</button>
+              <input id="scene-dice-formula" type="text" value="1d20" maxlength="100" placeholder="z. B. 1d20+2d6+4" spellcheck="false" autocomplete="off" aria-describedby="scene-dice-help">
+              <button class="primary" type="button" data-scene-dice-action="roll" aria-label="Würfelformel ausführen"><span aria-hidden="true">◆</span> Würfeln</button>
             </div>
-            <p class="scene-dice-help" id="scene-dice-help">Unterstützt u. a. 4d6dl1, 2d12r1, 6d6! und mehrere Würfelgruppen.</p>
+            <p class="scene-dice-help" id="scene-dice-help">Mehrere Würfelarten werden gemeinsam geworfen. Erweitert: 4d6dl1, 2d12r1 oder 6d6!.</p>
             <div class="scene-dice-secondary-actions">
-              <button type="button" data-scene-dice-action="repeat" aria-label="Letzten Wurf wiederholen">Erneut</button>
-              <button type="button" data-scene-dice-action="clear" aria-label="Würfel und Ergebnis leeren">Leeren</button>
+              <button type="button" data-scene-dice-action="repeat">Letzten wiederholen</button>
+              <button type="button" data-scene-dice-action="clear">Brett leeren</button>
             </div>
           </section>
-          <details class="scene-dice-panel scene-dice-context-panel">
-            <summary>Szeneneintrag</summary>
+
+          <section class="scene-dice-panel scene-dice-context-panel">
+            <div class="scene-dice-section-head"><div><span>Szenenwurf</span><small>Wer, warum und welche Art?</small></div></div>
             <div class="scene-dice-context">
-              <label><span>Wer würfelt?</span><input id="scene-dice-roller" type="text" maxlength="80" placeholder="Figur oder Erzähler"></label>
+              <label class="scene-dice-roller-field"><span>Wer würfelt?</span><input id="scene-dice-roller" type="text" list="scene-dice-roller-options" maxlength="80" placeholder="Figur oder Erzähler" autocomplete="off"><datalist id="scene-dice-roller-options">${buildSceneDiceRollerSuggestions()}</datalist></label>
               <label><span>Anlass</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
               <label><span>Wurfart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
             </div>
-          </details>
+          </section>
+
           <details class="scene-dice-panel scene-dice-settings-panel">
-            <summary>Einstellungen</summary>
-            <label class="scene-dice-check"><input id="scene-dice-animation-enabled" type="checkbox" checked><span>3D-Animation verwenden</span></label>
-            <label class="scene-dice-check"><input id="scene-dice-sound-enabled" type="checkbox"><span>Ergebniston abspielen</span></label>
+            <summary><span>Einstellungen</span><small>Darstellung und Wurfgefühl</small></summary>
+            <div class="scene-dice-settings-grid">
+              <label><span>Wurfstärke</span><select id="scene-dice-throw-style"><option value="gentle">Ruhig</option><option value="balanced">Ausgewogen</option><option value="dramatic">Dramatisch</option></select></label>
+              <label class="scene-dice-check"><input id="scene-dice-animation-enabled" type="checkbox" checked><span>3D-Animation verwenden</span></label>
+              <label class="scene-dice-check"><input id="scene-dice-sound-enabled" type="checkbox"><span>Ergebniston abspielen</span></label>
+              <label class="scene-dice-check"><input id="scene-dice-reduced-motion" type="checkbox"><span>Bewegung reduzieren</span></label>
+              <label class="scene-dice-check"><input id="scene-dice-keep-pool" type="checkbox" checked><span>Pool nach dem Wurf behalten</span></label>
+            </div>
           </details>
-        </aside>
-        <aside class="scene-dice-history" aria-labelledby="scene-dice-history-title">
-          <div class="scene-dice-history-head"><h3 id="scene-dice-history-title">Verlauf</h3><button type="button" data-scene-dice-action="clear-history">Alle löschen</button></div>
-          <div class="scene-dice-history-list" data-scene-dice-history-list></div>
+
+          <details class="scene-dice-panel scene-dice-history" open>
+            <summary><span>Verlauf</span><button type="button" data-scene-dice-action="clear-history">Alle löschen</button></summary>
+            <div class="scene-dice-history-list" data-scene-dice-history-list></div>
+          </details>
         </aside>
       </div>
       <footer class="scene-dice-foot">
         <div class="scene-dice-status" data-scene-dice-status role="status" aria-live="assertive"></div>
-        <button class="primary" type="button" data-scene-dice-action="commit" disabled>In Szene eintragen</button>
+        <button class="primary" type="button" data-scene-dice-action="commit" disabled>Wurf in Szene eintragen</button>
       </footer>
     </div>`;
   document.body.appendChild(overlay);
@@ -115,9 +144,16 @@ function setSceneDiceStatus(message = '', type = 'info') {
 
 function setSceneDiceStageStatus(message = '', state = 'idle') {
   const target = document.querySelector('[data-scene-dice-stage-status]');
-  if (!target) return;
-  target.dataset.state = state;
-  target.textContent = String(message || '');
+  if (target) {
+    target.dataset.state = state;
+    target.textContent = String(message || '');
+  }
+  const headState = document.querySelector('[data-scene-dice-head-state]');
+  if (headState) {
+    const headStateContainer = headState.closest('.scene-dice-head-state');
+    if (headStateContainer) headStateContainer.dataset.state = state;
+    headState.textContent = state === 'rolling' ? 'Würfelt' : state === 'fallback' ? 'Textmodus' : state === 'error' ? 'Fehler' : 'Bereit';
+  }
 }
 
 function setSceneDiceEngineNote(message = '') {
@@ -128,7 +164,7 @@ function setSceneDiceEngineNote(message = '') {
 }
 
 function setSceneDiceBusy(busy) {
-  document.querySelectorAll('[data-scene-dice-action="roll"], [data-scene-dice-action="choose-die"], [data-scene-dice-action="repeat"], [data-scene-dice-action="clear"]')
+  document.querySelectorAll('[data-scene-dice-action="roll"], [data-scene-dice-action="add-die"], [data-scene-dice-action="remove-die"], [data-scene-dice-action="repeat"], [data-scene-dice-action="clear"]')
     .forEach(button => { button.disabled = !!busy; });
   const overlay = document.getElementById('scene-dice-overlay');
   if (overlay) overlay.setAttribute('aria-busy', String(!!busy));
@@ -142,7 +178,8 @@ function renderSceneDiceRollDetails(roll) {
   return (roll.terms || []).map(term => {
     if (term.kind === 'modifier') return `<span class="scene-dice-modifier">${term.value >= 0 ? '+' : ''}${escapeHtml(term.value)}</span>`;
     const rolls = (term.rolls || []).map(item => `<span class="${item.kept ? 'kept' : 'discarded'}" title="${item.kept ? 'Behalten' : escapeHtml(item.reason || 'Verworfen')}">${escapeHtml(item.value)}</span>`).join('');
-    return `<span class="scene-dice-term"><img src="${escapeHtml(getSceneDiceIcon(term.sides))}" alt="W${escapeHtml(term.sides)}"><span>${term.sign < 0 ? '−' : ''}${escapeHtml(term.count)}W${escapeHtml(term.sides)}</span><span class="scene-dice-values">${rolls}</span></span>`;
+    const appearance = getSceneDiceTypes().find(type => type.sides === term.sides);
+    return `<span class="scene-dice-term" style="--dice-color:${escapeHtml(appearance?.color || '#8b6914')}"><img src="${escapeHtml(getSceneDiceIcon(term.sides))}" alt="W${escapeHtml(term.sides)}"><span>${term.sign < 0 ? '−' : ''}${escapeHtml(term.count)}W${escapeHtml(term.sides)}</span><span class="scene-dice-values">${rolls}</span></span>`;
   }).join('');
 }
 
@@ -154,17 +191,45 @@ function renderSceneDicePendingRoll(roll) {
   const dropped = (roll.droppedDice || []).join(', ');
   target.innerHTML = `
     <div class="scene-dice-result-summary">
-      <div class="scene-dice-result-kicker">${escapeHtml(getSceneDiceModeLabel(roll.mode))} · ${escapeHtml(roll.formula)}</div>
+      <div class="scene-dice-result-kicker">${escapeHtml(roll.roller || 'Unbekannte Hand')} · ${escapeHtml(getSceneDiceModeLabel(roll.mode))}</div>
       <div class="scene-dice-total">${escapeHtml(roll.total)}</div>
+      <div class="scene-dice-result-formula">${escapeHtml(roll.formula)}</div>
       ${roll.special ? `<div class="scene-dice-critical">${escapeHtml(roll.special)}</div>` : ''}
     </div>
     <div class="scene-dice-result-data">
       <span><small>Behalten</small><strong>${escapeHtml(kept)}</strong></span>
       ${dropped ? `<span><small>Verworfen</small><strong>${escapeHtml(dropped)}</strong></span>` : ''}
       <span><small>Modifikator</small><strong>${roll.modifier >= 0 ? '+' : ''}${escapeHtml(roll.modifier)}</strong></span>
+      ${roll.purpose ? `<span><small>Anlass</small><strong>${escapeHtml(roll.purpose)}</strong></span>` : ''}
     </div>
     <div class="scene-dice-breakdown">${renderSceneDiceRollDetails(roll)}</div>`;
   setSceneDiceEngineNote(roll.animationWarning || '');
+}
+
+function renderSceneDicePool() {
+  const target = document.querySelector('[data-scene-dice-pool]');
+  if (!target) return;
+  const entries = getSceneDiceService().getPool();
+  const types = getSceneDiceTypes();
+  target.innerHTML = entries.length ? entries.map(entry => {
+    const type = types.find(item => item.sides === entry.sides) || { color: '#8b6914', label: `W${entry.sides}` };
+    return `<article class="scene-dice-pool-chip" style="--dice-color:${escapeHtml(type.color)}">
+      <img src="${escapeHtml(getSceneDiceIcon(entry.sides))}" alt="" loading="lazy" decoding="async">
+      <span><strong>${entry.count}W${entry.sides}</strong><small>${escapeHtml(type.label)}</small></span>
+      <div><button type="button" data-scene-dice-action="remove-die" data-die-sides="${entry.sides}" aria-label="Einen W${entry.sides} entfernen">−</button><button type="button" data-scene-dice-action="add-die" data-die-sides="${entry.sides}" aria-label="Einen W${entry.sides} hinzufügen">+</button></div>
+    </article>`;
+  }).join('') : '<p class="scene-dice-pool-empty">Der Pool ist leer. Wähle oben mindestens einen Würfel.</p>';
+
+  const counts = new Map(entries.map(entry => [entry.sides, entry.count]));
+  document.querySelectorAll('.scene-dice-type').forEach(button => {
+    const count = counts.get(Number(button.dataset.dieSides)) || 0;
+    button.classList.toggle('selected', count > 0);
+    const badge = button.querySelector('[data-dice-count]');
+    if (badge) {
+      badge.hidden = !count;
+      badge.textContent = count;
+    }
+  });
 }
 
 function renderSceneDiceHistory() {
@@ -180,7 +245,7 @@ function renderSceneDiceHistory() {
     const time = new Date(entry.timestamp).toLocaleString('de-DE', { dateStyle: 'short', timeStyle: 'short' });
     return `<article class="scene-dice-history-entry" data-history-id="${escapeHtml(entry.id)}">
       <button class="scene-dice-history-reroll" type="button" data-scene-dice-action="reroll-history" data-history-id="${escapeHtml(entry.id)}" data-notation="${escapeHtml(entry.notation)}" aria-label="${escapeHtml(entry.notation)} erneut würfeln">
-        <span><strong>${escapeHtml(entry.notation)}</strong><small>${escapeHtml(time)}</small></span><b>${escapeHtml(entry.total)}</b>
+        <span><strong>${escapeHtml(entry.roller || 'Unbekannte Hand')}</strong><small>${escapeHtml(entry.notation)}${entry.purpose ? ` · ${escapeHtml(entry.purpose)}` : ''}<br>${escapeHtml(time)}</small></span><b>${escapeHtml(entry.total)}</b>
       </button>
       <button class="scene-dice-history-delete" type="button" data-scene-dice-action="delete-history" data-history-id="${escapeHtml(entry.id)}" aria-label="Wurf aus Verlauf löschen">×</button>
     </article>`;
@@ -195,33 +260,37 @@ function updateSceneDiceModeButtons() {
   });
 }
 
-function updateSceneDiceTypeButtons() {
-  document.querySelectorAll('[data-scene-dice-action="choose-die"]').forEach(button => {
-    const active = Number(button.dataset.dieSides) === _sceneDiceSelectedSides;
-    button.classList.toggle('selected', active);
-    button.setAttribute('aria-pressed', String(active));
-  });
-}
-
 function buildSceneDiceFormulaFromControls() {
-  const count = Math.max(1, Math.min(50, Number(document.getElementById('scene-dice-count')?.value) || 1));
-  const modifier = Math.max(-9999, Math.min(9999, Number(document.getElementById('scene-dice-modifier')?.value) || 0));
-  let formula = `${count}d${_sceneDiceSelectedSides}`;
-  if (_sceneDiceMode === 'advantage') formula = '2d20kh1';
-  if (_sceneDiceMode === 'disadvantage') formula = '2d20kl1';
-  if (modifier) formula += modifier > 0 ? `+${modifier}` : String(modifier);
+  const modifier = Number(document.getElementById('scene-dice-modifier')?.value) || 0;
   const input = document.getElementById('scene-dice-formula');
-  if (input) input.value = formula;
-  return formula;
+  const rollButton = document.querySelector('[data-scene-dice-action="roll"]');
+  try {
+    const formula = getSceneDiceService().buildPoolNotation({ mode: _sceneDiceMode, modifier });
+    if (input) input.value = formula;
+    if (rollButton) rollButton.disabled = false;
+    return formula;
+  } catch {
+    if (input) input.value = '';
+    if (rollButton) rollButton.disabled = true;
+    return '';
+  }
 }
 
 function syncSceneDiceSettings() {
   try {
     const settings = getSceneDiceService().getSettings();
-    const animation = document.getElementById('scene-dice-animation-enabled');
-    const sound = document.getElementById('scene-dice-sound-enabled');
-    if (animation) animation.checked = settings.animationEnabled;
-    if (sound) sound.checked = settings.soundEnabled;
+    const fields = {
+      'scene-dice-animation-enabled': settings.animationEnabled,
+      'scene-dice-sound-enabled': settings.soundEnabled,
+      'scene-dice-reduced-motion': settings.reducedMotion,
+      'scene-dice-keep-pool': settings.keepPool
+    };
+    Object.entries(fields).forEach(([id, value]) => {
+      const input = document.getElementById(id);
+      if (input) input.checked = !!value;
+    });
+    const throwStyle = document.getElementById('scene-dice-throw-style');
+    if (throwStyle) throwStyle.value = settings.throwStyle || 'balanced';
   } catch { /* module still loading */ }
 }
 
@@ -230,16 +299,16 @@ function resetSceneDiceDialog() {
   let history = [];
   try { history = getSceneDiceService().getHistory(); } catch { /* module still loading */ }
   _sceneDiceLastNotation = history[0]?.notation || _sceneDiceLastNotation || '1d20';
-  const formula = document.getElementById('scene-dice-formula');
   const roller = document.getElementById('scene-dice-roller');
   const purpose = document.getElementById('scene-dice-purpose');
-  if (formula) formula.value = _sceneDiceLastNotation;
+  const rollerOptions = document.getElementById('scene-dice-roller-options');
+  if (rollerOptions) rollerOptions.innerHTML = buildSceneDiceRollerSuggestions();
   if (roller) roller.value = localStorage.getItem('aleria-scene-dice-roller-v1') || '';
   if (purpose) purpose.value = '';
   const result = document.querySelector('[data-scene-dice-result]');
   if (result) {
     result.dataset.state = 'idle';
-    result.innerHTML = '<div class="scene-dice-result-idle">Die Würfel warten auf deine Hand.</div>';
+    result.innerHTML = '<div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Stelle rechts deinen Würfelpool zusammen.</span></div>';
   }
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (commit) commit.disabled = true;
@@ -247,7 +316,8 @@ function resetSceneDiceDialog() {
   setSceneDiceEngineNote('');
   setSceneDiceStageStatus('3D-Würfel werden vorbereitet …', 'loading');
   syncSceneDiceSettings();
+  renderSceneDicePool();
+  buildSceneDiceFormulaFromControls();
   renderSceneDiceHistory();
   updateSceneDiceModeButtons();
-  updateSceneDiceTypeButtons();
 }
