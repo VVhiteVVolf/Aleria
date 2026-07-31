@@ -6,6 +6,7 @@ const cdpOrigin = process.env.CDP_ORIGIN || 'http://127.0.0.1:9223';
 const appUrl = process.argv[2] || process.env.ALERIA_URL || 'http://127.0.0.1:4174/AleriaAlmanach/AleriaAlmanach.html';
 const screenshotPath = resolve('.codex-temp/scene-dice-browser.png');
 const motionScreenshotPath = resolve('.codex-temp/scene-dice-motion.png');
+const participantScreenshotPath = resolve('.codex-temp/scene-dice-participants.png');
 
 const target = await fetch(`${cdpOrigin}/json/new?about:blank`, { method: 'PUT' }).then(response => response.json());
 const socket = new WebSocket(target.webSocketDebuggerUrl);
@@ -87,7 +88,7 @@ await loaded;
 await evaluate(`new Promise((resolve, reject) => {
   const started = Date.now();
   const check = () => {
-    if (window.AleriaSceneDice && typeof ensureSceneDiceDialog === 'function') return resolve(true);
+    if (window.AleriaSceneDice && window.AleriaSceneDiceParticipants && window.AleriaSceneDiceNarration && typeof ensureSceneDiceDialog === 'function') return resolve(true);
     if (Date.now() - started > 15000) return reject(new Error('Würfelmodule wurden nicht geladen.'));
     setTimeout(check, 50);
   };
@@ -95,6 +96,17 @@ await evaluate(`new Promise((resolve, reject) => {
 })`);
 
 const prepared = await evaluate(`(async () => {
+  window.__sceneDiceAiQueries = [];
+  window.AleriaGptRetrieval = {
+    retrieve: async query => {
+      window.__sceneDiceAiQueries.push(query);
+      return { sourceHash: 'browser-check', promptContext: 'Browser-Testkontext', chunks: [], stats: {} };
+    }
+  };
+  window.AleriaGptClient = {
+    isConfigured: () => true,
+    sendChat: async () => ({ ok: true, status: 200, text: 'Die Untersuchung liefert unter diesen Umständen nur einen unsicheren Eindruck; etwas Belastbares fällt nicht auf.' })
+  };
   ensureSceneDiceDialog();
   resetSceneDiceDialog();
   activateDialog('scene-dice-overlay', { initialFocus: '#scene-dice-formula', delay: 0 });
@@ -124,6 +136,36 @@ assert.notEqual(prepared.shadeMask, 'none', 'Die optische Brettbegrenzung fehlt.
 assert.equal(prepared.appearanceCount, 7);
 assert.equal(new Set(prepared.appearanceColors).size, 7, 'Nicht jede Würfelart besitzt eine eigene Farbe.');
 
+const participantUi = await evaluate(`(async () => {
+  const started = Date.now();
+  while (window.AleriaSceneDiceParticipants.isLoading()) {
+    if (Date.now() - started > 10000) throw new Error('Szenenfiguren wurden nicht geladen.');
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  document.querySelector('[data-scene-dice-action="toggle-roller"]').click();
+  const picker = document.querySelector('[data-scene-dice-participant-picker]');
+  const panel = document.querySelector('.scene-dice-context-panel');
+  const pickerRect = picker.getBoundingClientRect();
+  const panelRect = panel.getBoundingClientRect();
+  const result = {
+    hidden: picker.hidden,
+    embedded: pickerRect.left >= panelRect.left && pickerRect.right <= panelRect.right + 1,
+    optionCount: picker.querySelectorAll('[data-scene-dice-action="select-roller"]').length,
+    groupLabels: Array.from(picker.querySelectorAll('.scene-dice-participant-group')).map(node => node.textContent.trim()),
+    selectedName: document.querySelector('[data-scene-dice-roller-trigger] strong')?.textContent.trim() || ''
+  };
+  return result;
+})()`);
+
+assert.equal(participantUi.hidden, false);
+assert.equal(participantUi.embedded, true, 'Die Figurenauswahl verlässt ihr Szenenpanel.');
+assert.ok(participantUi.optionCount >= 1);
+assert.ok(participantUi.groupLabels.includes('Erzähler und Umgebung'));
+const participantScreenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+await mkdir(dirname(participantScreenshotPath), { recursive: true });
+await writeFile(participantScreenshotPath, Buffer.from(participantScreenshot.data, 'base64'));
+await evaluate(`document.querySelector('[data-scene-dice-action="toggle-roller"]').click()`);
+
 const poolCombination = await evaluate(`(() => {
   document.querySelector('[data-scene-dice-action="reset-pool"]').click();
   document.querySelector('[data-scene-dice-action="add-die"][data-die-sides="6"]').click();
@@ -145,7 +187,7 @@ const damage = await evaluate(`(async () => {
   input.value = '2d6+4';
   document.querySelector('[data-scene-dice-action="roll"]').click();
   const started = Date.now();
-  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '2d6+4') {
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '2d6+4' || _sceneDicePendingRoll.narrationState === 'loading') {
     if (Date.now() - started > 30000) throw new Error('2d6+4 wurde nicht abgeschlossen.');
     await new Promise(resolve => setTimeout(resolve, 50));
   }
@@ -162,7 +204,7 @@ const advantage = await evaluate(`(async () => {
   input.value = '2d20kh1+5';
   document.querySelector('[data-scene-dice-action="roll"]').click();
   const started = Date.now();
-  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '2d20kh1+5') {
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '2d20kh1+5' || _sceneDicePendingRoll.narrationState === 'loading') {
     if (Date.now() - started > 30000) throw new Error('Vorteilswurf wurde nicht abgeschlossen.');
     await new Promise(resolve => setTimeout(resolve, 50));
   }
@@ -177,6 +219,7 @@ await evaluate(`(() => {
   const input = document.getElementById('scene-dice-formula');
   document.getElementById('scene-dice-roller').value = 'Liora';
   document.getElementById('scene-dice-purpose').value = 'Arkane Untersuchung';
+  document.getElementById('scene-dice-situation').value = 'Liora prüft ein fremdartiges Siegel am Tatort.';
   input.value = '1d4+1d6+1d8+1d10+1d12+1d20';
   document.querySelector('[data-scene-dice-action="roll"]').click();
   return true;
@@ -190,7 +233,7 @@ await writeFile(motionScreenshotPath, Buffer.from(motionScreenshot.data, 'base64
 const combined = await evaluate(`(async () => {
   const input = document.getElementById('scene-dice-formula');
   const started = Date.now();
-  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== input.value) {
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== input.value || _sceneDicePendingRoll.narrationState === 'loading') {
     if (Date.now() - started > 30000) throw new Error('Der kombinierte Farbwurf wurde nicht abgeschlossen.');
     await new Promise(resolve => setTimeout(resolve, 50));
   }
@@ -201,6 +244,50 @@ assert.equal(combined.dice.length, 6);
 assert.equal(combined.terms.filter(term => term.kind === 'dice').length, 6);
 assert.equal(combined.roller, 'Liora');
 assert.equal(combined.purpose, 'Arkane Untersuchung');
+assert.equal(combined.situation, 'Liora prüft ein fremdartiges Siegel am Tatort.');
+assert.match(combined.narration, /unsicheren Eindruck/);
+
+const narrationRequest = await evaluate(`(() => ({
+  query: window.__sceneDiceAiQueries.at(-1) || '',
+  preview: document.querySelector('.scene-dice-narration[data-state="ready"]')?.textContent || '',
+  commitEnabled: !document.querySelector('[data-scene-dice-action="commit"]')?.disabled
+}))()`);
+assert.match(narrationRequest.query, /neutraler Erzähler in der dritten Person/);
+assert.match(narrationRequest.query, /Liora prüft ein fremdartiges Siegel am Tatort/);
+assert.match(narrationRequest.preview, /Erzählerische Auswertung/);
+assert.equal(narrationRequest.commitEnabled, true);
+
+const persistedNarration = await evaluate(`(() => {
+  const host = document.createElement('div');
+  host.innerHTML = renderSceneDiceEventComment({
+    id: 'browser-preview',
+    charName: 'Erzähler',
+    narrator: true,
+    sceneDiceRoll: {
+      ..._sceneDicePendingRoll,
+      formula: '1d20',
+      natural: 4,
+      total: 4,
+      roller: 'Anaraut Draig',
+      purpose: 'Wahrnehmung',
+      situation: 'Anaraut begutachtet eine Tatwaffe.',
+      narration: 'Bei der flüchtigen Begutachtung fällt nichts Belastbares auf.'
+    }
+  });
+  const actor = host.querySelector('.scene-dice-event-actor');
+  return {
+    actorTag: actor?.tagName || '',
+    actor: actor?.textContent.trim() || '',
+    heading: host.querySelector('.scene-dice-event-head')?.textContent.trim() || '',
+    narration: host.querySelector('.scene-dice-event-narration')?.textContent.trim() || '',
+    context: host.querySelector('.scene-dice-event-context')?.textContent.trim() || ''
+  };
+})()`);
+assert.equal(persistedNarration.actorTag, 'MARK');
+assert.equal(persistedNarration.actor, 'Anaraut Draig');
+assert.match(persistedNarration.heading, /würfelt auf Wahrnehmung/);
+assert.match(persistedNarration.narration, /nichts Belastbares/);
+assert.match(persistedNarration.context, /Tatwaffe/);
 
 const desktopLayout = await evaluate(`(() => {
   const board = document.querySelector('.scene-dice-board').getBoundingClientRect();
@@ -277,5 +364,5 @@ const relevantRuntimeErrors = runtimeErrors.filter(error => /dice|scene-dice/i.t
 assert.deepEqual(diceAssetErrors, [], `Dice-Asset-Fehler: ${diceAssetErrors.join(', ')}`);
 assert.deepEqual(relevantRuntimeErrors, [], 'JavaScript-Fehler im Würfelsystem entdeckt.');
 
-console.log(JSON.stringify({ prepared, poolCombination, damage, advantage, combined, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath }, null, 2));
+console.log(JSON.stringify({ prepared, participantUi, poolCombination, damage, advantage, combined, narrationRequest, persistedNarration, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath, participantScreenshotPath }, null, 2));
 socket.close();

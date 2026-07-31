@@ -34,16 +34,6 @@ function buildSceneDiceTypeButtons() {
   }).join('');
 }
 
-function buildSceneDiceRollerSuggestions() {
-  const names = ['Erzähler'];
-  try {
-    if (typeof getAvailableCommentCharacters === 'function') {
-      names.push(...getAvailableCommentCharacters().map(character => String(character?.name || '').trim()).filter(Boolean));
-    }
-  } catch { /* character data is optional while the dialog is created */ }
-  return Array.from(new Set(names)).map(name => `<option value="${escapeHtml(name)}"></option>`).join('');
-}
-
 function ensureSceneDiceDialog() {
   let overlay = document.getElementById('scene-dice-overlay');
   if (overlay) return overlay;
@@ -101,11 +91,22 @@ function ensureSceneDiceDialog() {
           </section>
 
           <section class="scene-dice-panel scene-dice-context-panel">
-            <div class="scene-dice-section-head"><div><span>Szenenwurf</span><small>Wer, warum und welche Art?</small></div></div>
+            <div class="scene-dice-section-head"><div><span>Szenenwurf</span><small>Figur, Probe und erzählerischer Kontext</small></div></div>
             <div class="scene-dice-context">
-              <label class="scene-dice-roller-field"><span>Wer würfelt?</span><input id="scene-dice-roller" type="text" list="scene-dice-roller-options" maxlength="80" placeholder="Figur oder Erzähler" autocomplete="off"><datalist id="scene-dice-roller-options">${buildSceneDiceRollerSuggestions()}</datalist></label>
-              <label><span>Anlass</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
+              <div class="scene-dice-roller-field">
+                <span>Wer handelt?</span>
+                <input id="scene-dice-roller" type="hidden" value="">
+                <button class="scene-dice-roller-trigger" type="button" data-scene-dice-action="toggle-roller" data-scene-dice-roller-trigger aria-expanded="false">
+                  <span class="scene-dice-roller-avatar placeholder" aria-hidden="true">?</span><span><strong>Figur wird geladen …</strong><small>Aktive Szene wird ausgewertet</small></span><i aria-hidden="true">⌄</i>
+                </button>
+                <div class="scene-dice-participant-picker" data-scene-dice-participant-picker hidden>
+                  <label class="scene-dice-participant-search"><span>Figur suchen</span><input type="search" data-scene-dice-participant-search placeholder="Name oder Alias" autocomplete="off"></label>
+                  <div class="scene-dice-participant-list" data-scene-dice-participant-list><p class="scene-dice-participant-empty">Aktive Szene wird gelesen …</p></div>
+                </div>
+              </div>
+              <label><span>Probe</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
               <label><span>Wurfart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
+              <label class="scene-dice-situation-field"><span>Situationskontext für AleriaGPT</span><textarea id="scene-dice-situation" rows="2" maxlength="900" placeholder="z. B. Anaraut begutachtet die gefundene Tatwaffe und sucht nach ungewöhnlichen Spuren."></textarea><small>Weshalb wird gewürfelt und worauf soll das Ergebnis angewendet werden?</small></label>
             </div>
           </section>
 
@@ -183,6 +184,19 @@ function renderSceneDiceRollDetails(roll) {
   }).join('');
 }
 
+function renderSceneDiceNarrationPreview(roll) {
+  if (roll.narrationState === 'loading') {
+    return '<div class="scene-dice-narration" data-state="loading"><span>AleriaGPT deutet den Wurf</span><p>Seitenkontext und bisheriger Szenenverlauf werden gelesen …</p></div>';
+  }
+  if (roll.narrationState === 'error') {
+    return `<div class="scene-dice-narration" data-state="error"><span>Erzähltext nicht verfügbar</span><p>${escapeHtml(roll.narrationError || 'AleriaGPT konnte den Wurf gerade nicht auswerten.')}</p><button type="button" data-scene-dice-action="retry-narration">Erneut versuchen</button></div>`;
+  }
+  if (roll.narration) {
+    return `<div class="scene-dice-narration" data-state="ready"><span>Erzählerische Auswertung</span><p>${escapeHtml(roll.narration)}</p></div>`;
+  }
+  return '<div class="scene-dice-narration" data-state="idle"><span>Erzählerische Auswertung</span><p>Wird nach dem Wurf von AleriaGPT erstellt.</p></div>';
+}
+
 function renderSceneDicePendingRoll(roll) {
   const target = document.querySelector('[data-scene-dice-result]');
   if (!target) return;
@@ -202,7 +216,10 @@ function renderSceneDicePendingRoll(roll) {
       <span><small>Modifikator</small><strong>${roll.modifier >= 0 ? '+' : ''}${escapeHtml(roll.modifier)}</strong></span>
       ${roll.purpose ? `<span><small>Anlass</small><strong>${escapeHtml(roll.purpose)}</strong></span>` : ''}
     </div>
-    <div class="scene-dice-breakdown">${renderSceneDiceRollDetails(roll)}</div>`;
+    <div class="scene-dice-result-detail">
+      <div class="scene-dice-breakdown">${renderSceneDiceRollDetails(roll)}</div>
+      ${renderSceneDiceNarrationPreview(roll)}
+    </div>`;
   setSceneDiceEngineNote(roll.animationWarning || '');
 }
 
@@ -301,10 +318,14 @@ function resetSceneDiceDialog() {
   _sceneDiceLastNotation = history[0]?.notation || _sceneDiceLastNotation || '1d20';
   const roller = document.getElementById('scene-dice-roller');
   const purpose = document.getElementById('scene-dice-purpose');
-  const rollerOptions = document.getElementById('scene-dice-roller-options');
-  if (rollerOptions) rollerOptions.innerHTML = buildSceneDiceRollerSuggestions();
-  if (roller) roller.value = localStorage.getItem('aleria-scene-dice-roller-v1') || '';
+  const situation = document.getElementById('scene-dice-situation');
+  if (roller) roller.value = '';
   if (purpose) purpose.value = '';
+  if (situation) situation.value = '';
+  window.AleriaSceneDiceParticipants?.reset?.().catch(error => {
+    console.warn('scene dice participant refresh failed:', error);
+    setSceneDiceStatus('Die aktive Szenenbesetzung konnte nicht geladen werden.', 'error');
+  });
   const result = document.querySelector('[data-scene-dice-result]');
   if (result) {
     result.dataset.state = 'idle';

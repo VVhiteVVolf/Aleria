@@ -35,14 +35,60 @@ function closeSceneDiceDialog() {
   deactivateDialog('scene-dice-overlay');
 }
 
-async function runSceneDiceAnimation(notationOverride = '') {
-  const formulaInput = document.getElementById('scene-dice-formula');
-  const formula = String(notationOverride || formulaInput?.value || '').trim();
-  const context = {
-    roller: String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Unbekannte Hand',
+function getSceneDiceDialogContext() {
+  const participant = window.AleriaSceneDiceParticipants?.getSelection?.() || {
+    id: '',
+    name: String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Erzähler'
+  };
+  return {
+    roller: String(participant.name || '').trim() || 'Erzähler',
+    rollerId: participant.id === '__narrator__' ? '' : String(participant.id || '').trim(),
     purpose: String(document.getElementById('scene-dice-purpose')?.value || '').trim(),
+    situation: String(document.getElementById('scene-dice-situation')?.value || '').trim().slice(0, 900),
     rollType: document.getElementById('scene-dice-roll-type')?.value || 'general'
   };
+}
+
+async function generateSceneDiceNarrationForRoll(roll) {
+  if (!roll) return;
+  const token = ++_sceneDiceNarrationToken;
+  roll.narration = '';
+  roll.narrationError = '';
+  roll.narrationState = 'loading';
+  renderSceneDicePendingRoll(roll);
+  const commit = document.querySelector('[data-scene-dice-action="commit"]');
+  if (commit) commit.disabled = true;
+  setSceneDiceStatus('AleriaGPT liest den bisherigen Szenenverlauf und deutet das Ergebnis …', 'info');
+  try {
+    if (!window.AleriaSceneDiceNarration?.generate) {
+      throw new Error('Die AleriaGPT-Würfelauswertung ist noch nicht geladen.');
+    }
+    const narration = await window.AleriaSceneDiceNarration.generate(roll, {
+      situation: roll.situation || ''
+    });
+    if (token !== _sceneDiceNarrationToken || _sceneDicePendingRoll?.id !== roll.id) return;
+    roll.narration = narration;
+    roll.narrationState = 'ready';
+    renderSceneDicePendingRoll(roll);
+    setSceneDiceStatus('Erzähltext erstellt. Der Wurf kann in die Szene eingetragen werden.', 'info');
+  } catch (error) {
+    if (token !== _sceneDiceNarrationToken || _sceneDicePendingRoll?.id !== roll.id) return;
+    roll.narrationState = 'error';
+    roll.narrationError = error?.message || 'AleriaGPT konnte den Wurf gerade nicht auswerten.';
+    renderSceneDicePendingRoll(roll);
+    setSceneDiceStatus('Die KI-Beschreibung ist fehlgeschlagen. Du kannst sie erneut anfordern oder den Wurf ohne Beschreibung eintragen.', 'error');
+  } finally {
+    if (token === _sceneDiceNarrationToken && _sceneDicePendingRoll?.id === roll.id && commit) {
+      commit.disabled = false;
+    }
+  }
+}
+
+async function runSceneDiceAnimation(notationOverride = '') {
+  _sceneDiceNarrationToken += 1;
+  const formulaInput = document.getElementById('scene-dice-formula');
+  const formula = String(notationOverride || formulaInput?.value || '').trim();
+  const context = getSceneDiceDialogContext();
   if (formulaInput && notationOverride) formulaInput.value = notationOverride;
   setSceneDiceStatus('');
   setSceneDiceEngineNote('');
@@ -51,12 +97,14 @@ async function runSceneDiceAnimation(notationOverride = '') {
   try {
     const service = getSceneDiceService();
     const result = await service.roll(formula, document.getElementById('scene-dice-stage'), context);
+    result.rollerId = context.rollerId;
+    result.situation = context.situation;
     _sceneDicePendingRoll = result;
     _sceneDiceLastNotation = result.formula;
     renderSceneDicePendingRoll(result);
     renderSceneDiceHistory();
     const commit = document.querySelector('[data-scene-dice-action="commit"]');
-    if (commit) commit.disabled = false;
+    if (commit) commit.disabled = true;
     setSceneDiceStageStatus(result.visualMode === '3d' ? 'Wurf abgeschlossen.' : 'Textwurf abgeschlossen.', result.visualMode === '3d' ? 'ready' : 'fallback');
     if (result.aggregationCorrected) {
       setSceneDiceStatus('Die Ergebnisaggregation wurde vom Aleria-Adapter verifiziert und korrigiert.', 'info');
@@ -68,6 +116,7 @@ async function runSceneDiceAnimation(notationOverride = '') {
       updateSceneDiceModeButtons();
       buildSceneDiceFormulaFromControls();
     }
+    generateSceneDiceNarrationForRoll(result);
   } catch (error) {
     setSceneDiceStageStatus('Wurf nicht ausgeführt.', 'error');
     setSceneDiceStatus(error.message || 'Wurf konnte nicht ausgeführt werden.', 'error');
@@ -77,6 +126,7 @@ async function runSceneDiceAnimation(notationOverride = '') {
 }
 
 function clearSceneDiceResult() {
+  _sceneDiceNarrationToken += 1;
   getSceneDiceService().clear();
   _sceneDicePendingRoll = null;
   const result = document.querySelector('[data-scene-dice-result]');
@@ -94,17 +144,35 @@ function clearSceneDiceResult() {
 async function commitSceneDiceRoll() {
   if (!_sceneDicePendingRoll) return;
   const threadId = getCurrentCommentThreadId();
-  const roller = String(document.getElementById('scene-dice-roller')?.value || '').trim() || _sceneDicePendingRoll.roller || 'Unbekannte Hand';
-  const purpose = String(document.getElementById('scene-dice-purpose')?.value || '').trim() || _sceneDicePendingRoll.purpose || '';
-  const roll = { ..._sceneDicePendingRoll, roller, purpose };
+  const context = getSceneDiceDialogContext();
+  const roller = context.roller || _sceneDicePendingRoll.roller || 'Erzähler';
+  const purpose = context.purpose || _sceneDicePendingRoll.purpose || '';
+  const roll = {
+    ..._sceneDicePendingRoll,
+    roller,
+    rollerId: context.rollerId || _sceneDicePendingRoll.rollerId || '',
+    purpose,
+    situation: context.situation || _sceneDicePendingRoll.situation || ''
+  };
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (!threadId) {
     setSceneDiceStatus('Kein aktiver Szenen-Thread gefunden.', 'error');
     return;
   }
+  if (roll.narrationState === 'loading') {
+    setSceneDiceStatus('AleriaGPT deutet diesen Wurf noch. Bitte warte einen Moment.', 'error');
+    return;
+  }
   if (commit) commit.disabled = true;
-  localStorage.setItem('aleria-scene-dice-roller-v1', roller);
-  const text = `${roller} würfelt ${roll.formula}${purpose ? ` für ${purpose}` : ''}: ${roll.total}`;
+  const resultValue = Number.isFinite(Number(roll.natural)) && Number(roll.natural) > 0
+    ? Number(roll.natural)
+    : Number(roll.total) || 0;
+  const totalSuffix = resultValue !== Number(roll.total) ? ` (Gesamt ${roll.total})` : '';
+  const text = [
+    `${roller} würfelt${purpose ? ` auf ${purpose}` : ''}.`,
+    `Das Ergebnis ist ${resultValue}${totalSuffix}.`,
+    roll.narration || ''
+  ].filter(Boolean).join(' ');
   const metadata = {
     commentMode: 'scene-dice',
     commentKind: SCENE_DICE_EVENT_KIND,
@@ -114,7 +182,7 @@ async function commitSceneDiceRoll() {
   let backend = null;
   try {
     backend = await getCommentBackend({ timeoutMs: 1200 });
-    await backend.addComment(threadId, roller, '', null, text, COMMENT_DELETE_CODE, true, metadata);
+    await backend.addComment(threadId, 'Erzähler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
     closeSceneDiceDialog();
     requestCommentAutoScroll(threadId);
     await loadCommentsIntoPage(threadId, true, { page: 'last' });
@@ -122,7 +190,7 @@ async function commitSceneDiceRoll() {
   } catch (error) {
     if (backend && !backend._localFallback) {
       try {
-        await getLocalCommentBackend().addComment(threadId, roller, '', null, text, COMMENT_DELETE_CODE, true, metadata);
+        await getLocalCommentBackend().addComment(threadId, 'Erzähler', '', null, text, COMMENT_DELETE_CODE, true, metadata);
         showCommentFallbackNotice();
         closeSceneDiceDialog();
         requestCommentAutoScroll(threadId);
@@ -206,9 +274,16 @@ document.addEventListener('click', event => {
     getSceneDiceService().clearHistory();
     renderSceneDiceHistory();
   }
+  if (action === 'toggle-roller') window.AleriaSceneDiceParticipants?.toggle?.();
+  if (action === 'select-roller') window.AleriaSceneDiceParticipants?.select?.(trigger.dataset.characterId || '');
+  if (action === 'retry-narration') generateSceneDiceNarrationForRoll(_sceneDicePendingRoll);
 });
 
 document.addEventListener('input', event => {
+  if (event.target?.matches?.('[data-scene-dice-participant-search]')) {
+    window.AleriaSceneDiceParticipants?.filter?.(event.target.value || '');
+    return;
+  }
   if (!event.target?.matches?.('#scene-dice-modifier')) return;
   buildSceneDiceFormulaFromControls();
 });

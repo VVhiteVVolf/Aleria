@@ -14,6 +14,7 @@ const SCENE_DICE_ICONS = {
 let _sceneDicePendingRoll = null;
 let _sceneDiceLastNotation = '1d20';
 let _sceneDiceMode = 'normal';
+let _sceneDiceNarrationToken = 0;
 
 function getSceneDiceIcon(sides) {
   return SCENE_DICE_ICONS[Number(sides)] || SCENE_DICE_ICONS[20];
