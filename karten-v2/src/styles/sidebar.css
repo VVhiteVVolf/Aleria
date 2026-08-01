@@ -1,0 +1,328 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(420px, 100vw);
+  transform: translateX(100%);
+  transition: transform 0.22s cubic-bezier(0.22, 0.68, 0, 1.1);
+  background: var(--p2);
+  border-left: 2px solid var(--border);
+  box-shadow: -6px 0 18px var(--shadow);
+  overflow-y: auto;
+  z-index: 30;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* ── Scroll / parchment detail card ────────────────────────────────── */
+.scroll-card {
+  position: relative;
+  margin: 1rem;
+  padding: 1.2rem 1.1rem 1rem;
+  background: #f8efd2;
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  box-shadow: 0 8px 22px var(--shadow);
+}
+
+.scroll-card::before,
+.scroll-card::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  height: 10px;
+  background: #8a641f;
+  border-radius: 3px;
+}
+
+.scroll-card::before {
+  top: -6px;
+}
+
+.scroll-card::after {
+  bottom: -6px;
+}
+
+.scroll-card__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: var(--ink3);
+  cursor: pointer;
+}
+
+.scroll-card__header {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.scroll-card__crest {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border2);
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scroll-card__crest img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-card__crest-fallback {
+  font-size: 1.8rem;
+  opacity: 0.35;
+}
+
+.scroll-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.scroll-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0.3rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--cat-color, var(--gold));
+  color: var(--cat-color, var(--gold));
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+}
+
+.scroll-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.scroll-card__affiliations {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.scroll-card__affil {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--ink2);
+}
+
+.scroll-card__affil span:first-child {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink3);
+  margin-right: 3px;
+}
+
+.scroll-card__body {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.scroll-card__image {
+  width: 40%;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+}
+
+.scroll-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-card__table {
+  flex: 1;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+}
+
+.scroll-card__table td {
+  padding: 3px 6px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(122, 80, 10, 0.15);
+}
+
+.scroll-card__table td:first-child {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink3);
+  background: #e5d19a;
+  white-space: nowrap;
+}
+
+.scroll-card__lore {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+
+.scroll-card__divider {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.3em;
+}
+
+.scroll-card__footer {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.scroll-card__btn {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  background: rgba(200, 160, 60, 0.1);
+  color: var(--ink2);
+  cursor: pointer;
+}
+
+.scroll-card__btn:hover {
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.scroll-card__btn--danger {
+  border-color: rgba(139, 32, 32, 0.3);
+  color: var(--red);
+}
+
+.scroll-card__btn--danger:hover {
+  background: rgba(139, 32, 32, 0.1);
+  border-color: var(--red-light);
+}
+
+/* ── Feature form ───────────────────────────────────────────────────── */
+.feature-form-panel {
+  padding: 1rem;
+}
+
+.feature-form__row {
+  margin-bottom: 0.7rem;
+}
+
+.feature-form__row--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.feature-form label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink3);
+  margin-bottom: 3px;
+}
+
+.feature-form input,
+.feature-form select,
+.feature-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  background: rgba(255, 248, 220, 0.6);
+  color: var(--ink);
+}
+
+.feature-form__table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.feature-form__table-remove {
+  border: none;
+  background: none;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.feature-form__add-row {
+  margin-top: 4px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  border: 1px dashed var(--border2);
+  background: none;
+  color: var(--ink3);
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.feature-form__footer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.feature-form__save,
+.feature-form__cancel,
+.feature-form__delete {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.feature-form__save {
+  background: var(--gold);
+  color: #fff;
+  border: 1px solid var(--border);
+}
+
+.feature-form__cancel {
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--ink2);
+}
+
+.feature-form__delete {
+  background: none;
+  border: 1px solid rgba(139, 32, 32, 0.3);
+  color: var(--red);
+  margin-right: auto;
+}

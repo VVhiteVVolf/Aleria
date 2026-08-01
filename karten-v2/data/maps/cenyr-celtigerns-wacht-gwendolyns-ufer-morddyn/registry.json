@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",
+  "legacyId": "cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn",
+  "title": "Morddyn",
+  "documentTitle": "Morddyn - Aleria",
+  "status": "planned",
+  "type": "city",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr-celtigerns-wacht-gwendolyns-ufer",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "celtigerns-wacht", "title": "Celtigerns Wacht" },
+    { "level": "barony", "slug": "gwendolyns-ufer", "title": "Gwendolyns Ufer" },
+    { "level": "city", "slug": "morddyn", "title": "Morddyn" }
+  ],
+  "notes": "Geplanter Stadt-Link fuer die spaetere Morddyn-Ortsseite."
+}

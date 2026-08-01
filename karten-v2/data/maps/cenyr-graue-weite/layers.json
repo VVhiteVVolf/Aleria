@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "layers": [
+    {
+      "id": "cenyr-graue-weite-base",
+      "mapId": "cenyr-graue-weite",
+      "name": "Karte",
+      "type": "image-overlay",
+      "defaultVisible": true,
+      "editable": false,
+      "pane": "base-map-pane",
+      "image": "maps/graue-weite/base.webp"
+    },
+    {
+      "id": "cenyr-graue-weite-regions",
+      "mapId": "cenyr-graue-weite",
+      "name": "Regionen",
+      "type": "image-overlay",
+      "defaultVisible": false,
+      "editable": false,
+      "pane": "region-pane",
+      "image": "maps/graue-weite/regions.webp"
+    },
+    {
+      "id": "cenyr-graue-weite-markers-image",
+      "mapId": "cenyr-graue-weite",
+      "name": "Markierungen (Bild)",
+      "type": "image-overlay",
+      "defaultVisible": false,
+      "editable": false,
+      "pane": "label-pane",
+      "image": "maps/graue-weite/markers.webp"
+    },
+    {
+      "id": "cenyr-graue-weite-settlements",
+      "mapId": "cenyr-graue-weite",
+      "name": "Siedlungen & Orte",
+      "type": "marker",
+      "defaultVisible": true,
+      "editable": true,
+      "minZoom": -4,
+      "maxZoom": 4,
+      "pane": "marker-pane"
+    }
+  ]
+}

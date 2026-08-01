@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "source": "Karten/assets/js/pins/pin-templates.js PIN_TEMPLATES (unveraendert uebernommen)",
+  "templates": [
+    {
+      "id": "siedlung",
+      "icon": "🏘",
+      "label": "Siedlung / Ort",
+      "description": "Stadt, Dorf, Weiler…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Typ", "v": "" },
+        { "k": "Gewerbe", "v": "" },
+        { "k": "Regierungstyp", "v": "" },
+        { "k": "Führung", "v": "" },
+        { "k": "Lehensherr", "v": "" },
+        { "k": "Bevölkerung", "v": "" },
+        { "k": "Einwohnerzahl", "v": "" },
+        { "k": "Bekannte Familien", "v": "" },
+        { "k": "Gefahren", "v": "" },
+        { "k": "Ressourcen", "v": "" }
+      ]
+    },
+    {
+      "id": "gebaeude",
+      "icon": "🏰",
+      "label": "Einzelnes Gebäude",
+      "description": "Taverne, Turm, Tempel…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Typ", "v": "" },
+        { "k": "Gewerbe", "v": "" },
+        { "k": "Besitzer", "v": "" },
+        { "k": "Zustand", "v": "" },
+        { "k": "Bekannte Bewohner", "v": "" },
+        { "k": "Gerüchte", "v": "" },
+        { "k": "Besonderheiten", "v": "" }
+      ]
+    },
+    {
+      "id": "natur",
+      "icon": "🌿",
+      "label": "Naturgebiet / POI",
+      "description": "Wald, Berg, Höhle, Quelle…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Typ", "v": "" },
+        { "k": "Gefahren", "v": "" },
+        { "k": "Ressourcen", "v": "" },
+        { "k": "Bekannte Bewohner", "v": "" },
+        { "k": "Besonderheiten", "v": "" },
+        { "k": "Legenden", "v": "" }
+      ]
+    },
+    {
+      "id": "ruine",
+      "icon": "🏚",
+      "label": "Ruine",
+      "description": "Verfallene Burg, altes Heiligtum…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Ursprung", "v": "" },
+        { "k": "Zustand", "v": "" },
+        { "k": "Ursache des Verfalls", "v": "" },
+        { "k": "Aktuelle Bewohner", "v": "" },
+        { "k": "Gefahren", "v": "" },
+        { "k": "Schätze / Reliquien", "v": "" },
+        { "k": "Gerüchte", "v": "" }
+      ]
+    },
+    {
+      "id": "monsterhort",
+      "icon": "🐉",
+      "label": "Monsterhort",
+      "description": "Lager, Nest, Revier…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Kreatur(en)", "v": "" },
+        { "k": "Anzahl", "v": "" },
+        { "k": "Gefährlichkeit", "v": "" },
+        { "k": "Territorium", "v": "" },
+        { "k": "Beute / Schatz", "v": "" },
+        { "k": "Schwächen", "v": "" },
+        { "k": "Verbündete", "v": "" }
+      ]
+    },
+    {
+      "id": "dungeon",
+      "icon": "⚔️",
+      "label": "Dungeon",
+      "description": "Verlies, Katakomben, Labyrinth…",
+      "table": [
+        { "k": "Name", "v": "" },
+        { "k": "Typ", "v": "" },
+        { "k": "Ebenen", "v": "" },
+        { "k": "Hauptgegner", "v": "" },
+        { "k": "Ursprung", "v": "" },
+        { "k": "Bekannte Fallen", "v": "" },
+        { "k": "Schätze", "v": "" },
+        { "k": "Schwierigkeitsgrad", "v": "" },
+        { "k": "Fraktionen innen", "v": "" }
+      ]
+    }
+  ]
+}

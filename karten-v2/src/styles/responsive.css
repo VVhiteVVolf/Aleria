@@ -1,0 +1,75 @@
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100vw;
+    border-left: none;
+  }
+
+  .map-toolbar__title {
+    font-size: 0.8rem;
+  }
+
+  .search-panel {
+    min-width: 140px;
+  }
+
+  #layer-panel {
+    top: auto;
+    bottom: 12px;
+    right: 8px;
+  }
+
+  .scroll-card__body {
+    flex-direction: column;
+  }
+
+  .scroll-card__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .map-toolbar__row {
+    gap: 0.4rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .map-toolbar__btn {
+    padding: 6px 9px;
+    font-size: 0.7rem;
+  }
+
+  .map-toolbar__btn span.label {
+    display: none;
+  }
+
+  .map-toolbar__title {
+    max-width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .feature-form__row--split {
+    grid-template-columns: 1fr;
+  }
+
+  .data-manager {
+    width: calc(100vw - 24px);
+  }
+}
+
+/* Ensure touch targets stay comfortably large on small screens */
+@media (pointer: coarse) {
+  .map-toolbar__btn,
+  .layer-panel__item,
+  .search-panel__result,
+  .map-children__item,
+  .map-breadcrumb__crumb {
+    min-height: 34px;
+  }
+}
+
+/* Prevent the page from scrolling while panning/pinching the map on touch */
+#map-shell {
+  touch-action: none;
+}

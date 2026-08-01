@@ -8,3 +8,7 @@ storage-debug.log
 .codex-temp/
 AleriaAlmanach/dist/
 AleriaAlmanach/.vite-dice-test*.log
+# karten-v2/dist/ is intentionally committed (not ignored): this repo has no
+# Netlify build step, so the bundled output must be checked in for
+# /karten-v2/* to be servable. Rebuild with `npm run build` in karten-v2/
+# and commit the result after any source change.

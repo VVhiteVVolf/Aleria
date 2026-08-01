@@ -7,6 +7,24 @@
   SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg"
 
 [[redirects]]
+  from = "/karten-v2/assets/*"
+  to = "/karten-v2/dist/assets/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/karten-v2/maps/*"
+  to = "/karten-v2/dist/maps/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/karten-v2/*"
+  to = "/karten-v2/dist/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/firebase/*"
   to = "/not_found.html"
   status = 404

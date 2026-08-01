@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "layers": [
+    {
+      "id": "cenyr-celtigerns-wacht-base",
+      "mapId": "cenyr-celtigerns-wacht",
+      "name": "Karte",
+      "type": "image-overlay",
+      "defaultVisible": true,
+      "editable": false,
+      "pane": "base-map-pane",
+      "image": "maps/celtigerns-wacht/base.webp"
+    },
+    {
+      "id": "cenyr-celtigerns-wacht-regions",
+      "mapId": "cenyr-celtigerns-wacht",
+      "name": "Regionen",
+      "type": "image-overlay",
+      "defaultVisible": false,
+      "editable": false,
+      "pane": "region-pane",
+      "image": "maps/celtigerns-wacht/regions.webp"
+    },
+    {
+      "id": "cenyr-celtigerns-wacht-markers-image",
+      "mapId": "cenyr-celtigerns-wacht",
+      "name": "Markierungen (Bild)",
+      "type": "image-overlay",
+      "defaultVisible": false,
+      "editable": false,
+      "pane": "label-pane",
+      "image": "maps/celtigerns-wacht/markers.webp"
+    },
+    {
+      "id": "cenyr-celtigerns-wacht-settlements",
+      "mapId": "cenyr-celtigerns-wacht",
+      "name": "Siedlungen & Orte",
+      "type": "marker",
+      "defaultVisible": true,
+      "editable": true,
+      "minZoom": -4,
+      "maxZoom": 4,
+      "pane": "marker-pane"
+    }
+  ]
+}

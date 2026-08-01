@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-weidebucht",
+  "legacyId": "cenyr-weidebucht",
+  "title": "Weidebucht",
+  "documentTitle": "Weidebucht - Aleria",
+  "status": "planned",
+  "type": "county",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "weidebucht", "title": "Weidebucht" }
+  ],
+  "rulingHouse": "Haus Wylan",
+  "rulingHouseCrest": "crests/haus-wylan.png",
+  "capital": "Cerrigarth",
+  "editableDraft": true,
+  "notes": "Geplante Grafschaftskarte. Bilder/Kartendaten fehlen noch. Laut Stammbäume liegt die Hauptstadt Cerrigarth in der Baronie 'Melwas Au'."
+}

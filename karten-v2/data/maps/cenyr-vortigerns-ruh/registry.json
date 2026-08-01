@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-vortigerns-ruh",
+  "legacyId": "cenyr-vortigerns-ruh",
+  "title": "Vortigerns Ruh",
+  "documentTitle": "Vortigerns Ruh - Aleria",
+  "status": "planned",
+  "type": "county",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "vortigerns-ruh", "title": "Vortigerns Ruh" }
+  ],
+  "rulingHouse": "Königliche Grafschaft des Hauses Pendrag",
+  "rulingHouseCrest": "crests/haus-pendrag.png",
+  "capital": "Mathragon",
+  "editableDraft": true,
+  "notes": "Geplante Grafschaftskarte. Bilder/Kartendaten fehlen noch. Haus Pendrag ist laut Stammbäume/assets/js/data/cenyr-county-house-profiles.js rankId 'royal' (Koenigshaus), nicht nur Grafenhaus - Vortigern Pendrag war Cenyrs erster Koenig."
+}

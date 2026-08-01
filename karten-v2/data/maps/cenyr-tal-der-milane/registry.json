@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-tal-der-milane",
+  "legacyId": "cenyr-tal-der-milane",
+  "title": "Tal der Milane",
+  "documentTitle": "Tal der Milane - Aleria",
+  "status": "planned",
+  "type": "county",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "tal-der-milane", "title": "Tal der Milane" }
+  ],
+  "rulingHouse": "Haus Aderyn",
+  "rulingHouseCrest": "crests/haus-aderyn.png",
+  "capital": "Penbryn",
+  "editableDraft": true,
+  "notes": "Geplante Grafschaftskarte. Bilder/Kartendaten fehlen noch."
+}

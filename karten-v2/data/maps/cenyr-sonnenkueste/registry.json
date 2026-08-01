@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-sonnenkueste",
+  "legacyId": "cenyr-sonnenkueste",
+  "title": "Sonnenküste",
+  "documentTitle": "Sonnenküste - Aleria",
+  "status": "planned",
+  "type": "county",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "sonnenkueste", "title": "Sonnenküste" }
+  ],
+  "rulingHouse": "Haus Illewod",
+  "rulingHouseCrest": "crests/haus-illewod.png",
+  "capital": "Aberon",
+  "editableDraft": true,
+  "notes": "Geplante Grafschaftskarte. Bilder/Kartendaten fehlen noch."
+}

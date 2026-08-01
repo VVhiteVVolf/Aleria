@@ -1,0 +1,6 @@
+{
+  "type": "FeatureCollection",
+  "schemaVersion": 1,
+  "note": "Keine Routen migriert - die LSB-Reiserouten des Altsystems liegen wie die Pins nur live in Firestore vor (siehe LEGACY_AUDIT.md Abschnitt 10). Neue Routen koennen im Editor gezeichnet werden.",
+  "features": []
+}

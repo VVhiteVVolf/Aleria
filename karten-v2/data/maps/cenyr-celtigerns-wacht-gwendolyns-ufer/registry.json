@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-celtigerns-wacht-gwendolyns-ufer",
+  "legacyId": "cenyr-celtigerns-wacht-gwendolyns-ufer",
+  "title": "Gwendolyns Ufer",
+  "documentTitle": "Gwendolyns Ufer - Aleria",
+  "status": "planned",
+  "type": "barony",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr-celtigerns-wacht",
+  "childMapIds": ["cenyr-celtigerns-wacht-gwendolyns-ufer-morddyn"],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "celtigerns-wacht", "title": "Celtigerns Wacht" },
+    { "level": "barony", "slug": "gwendolyns-ufer", "title": "Gwendolyns Ufer" }
+  ],
+  "notes": "Geplanter Baronien-Link, noch keine Kartenbilder im Altsystem."
+}

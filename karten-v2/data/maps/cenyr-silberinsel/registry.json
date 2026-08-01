@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-silberinsel",
+  "legacyId": "cenyr-silberinsel",
+  "title": "Silberinsel",
+  "documentTitle": "Silberinsel - Aleria",
+  "status": "planned",
+  "type": "county",
+  "image": null,
+  "width": null,
+  "height": null,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": null,
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "silberinsel", "title": "Silberinsel" }
+  ],
+  "rulingHouse": "Haus Neidr",
+  "rulingHouseCrest": "crests/haus-neidr.png",
+  "capital": "Llanvane",
+  "editableDraft": true,
+  "notes": "Geplante Grafschaftskarte. Bilder/Kartendaten fehlen noch."
+}

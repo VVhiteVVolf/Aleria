@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "cenyr-graue-weite",
+  "legacyId": "cenyr-graue-weite",
+  "title": "Graue Weite",
+  "documentTitle": "Graue Weite - Aleria",
+  "status": "active",
+  "type": "county",
+  "image": "maps/graue-weite/base.webp",
+  "regionsImage": "maps/graue-weite/regions.webp",
+  "markersImage": "maps/graue-weite/markers.webp",
+  "width": 4096,
+  "height": 2492,
+  "coordinateOrigin": "top-left",
+  "minZoom": -4,
+  "maxZoom": 4,
+  "zoomSnap": 0.25,
+  "unitsPerPixel": 1,
+  "unitName": "Meilen",
+  "parentMapId": "cenyr",
+  "childMapIds": [],
+  "initialView": { "x": 2048, "y": 1246, "zoom": -2 },
+  "hierarchy": [
+    { "level": "kingdom", "slug": "cenyr", "title": "Cenyr" },
+    { "level": "county", "slug": "graue-weite", "title": "Graue Weite" }
+  ],
+  "rulingHouse": "Haus Pysgod",
+  "rulingHouseCrest": "crests/haus-pysgod.png",
+  "capital": "Tredegar",
+  "notes": "Im Altsystem war diese Karte in der Registry 'planned' ohne images{}, obwohl unter Karten/Cenyr/Kartenbilder bereits drei echte, konsistent benannte GraueWeite*-Bilder liegen (4096x2492, siehe LEGACY_AUDIT.md Abschnitt 8). In karten-v2 als zweite echte aktive Karte verdrahtet, um Mehrkarten-Unterstuetzung an echten statt erfundenen Daten zu zeigen. Keine Pins vorhanden."
+}
