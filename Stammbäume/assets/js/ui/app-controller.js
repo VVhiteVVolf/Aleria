@@ -1309,12 +1309,15 @@ export function createAppController({
   function submitCadetForm() {
     const values = cadetDialog.read();
     if (!values.name.trim()) throw new Error('Bitte einen Namen für das Kadettenhaus eintragen.');
-    const requiresPersonAnchor = ['ward-away', 'migration-offshoot'].includes(values.linkType);
+    const requiresPersonAnchor = ['ward-away', 'migration-offshoot', 'single-founder-house'].includes(values.linkType);
     if (values.linkType === 'ward-away' && !values.parentPersonId) {
       throw new Error('Eine Mündelvermittlung benötigt die fortgegebene Person.');
     }
     if (values.linkType === 'migration-offshoot' && !values.parentPersonId) {
       throw new Error('Ein Auswanderungszweig benötigt seine auswandernde Gründerperson.');
+    }
+    if (values.linkType === 'single-founder-house' && !values.parentPersonId) {
+      throw new Error('Diese Hausgründung benötigt ihre alleinige Gründerperson.');
     }
     if (!requiresPersonAnchor && !values.parentPartnershipId) {
       throw new Error('Bitte ein Gründerpaar wählen.');

@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   TAL_DER_MILANE_HOUSE_EMBLEMS,
   TAL_DER_MILANE_HOUSE_PROFILES
@@ -209,7 +210,7 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
     house('house-blodyn', 'Haus Blodyn'),
     house('house-baerenfell', 'Haus Bärenfell'),
     house('house-tir-addawol', 'Haus Tir Addawol'),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-loganne', 'Haus Loganne'),
     house('house-goidin', 'Haus Goidin'),
@@ -672,7 +673,7 @@ export const HOUSE_ADERYN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Beziehungen und die sechs seriellen Überlieferungslücken folgen der bereitgestellten Aderyn-Tabelle und ihrer Stammbaumgrafik. Yvain und Rhiannon sind ausdrücklich Geschwister; ihre nicht benannten Eltern werden deshalb als zwei strukturelle Unbekannte geführt. Der Haus-Aderyn-Knoten hängt direkt am Gründerpaar Yvain und Fainche. Sechs belegte Kadettenzweige hängen jeweils direkt unter ihrem Gründerpaar: Gereint und Tudful begründen Haus Gaeth, Mordred und Thalena Haus Hebog, Agravaine und Thalena Haus Mwyalchen, Gwynham und Rhianu Haus Tylluan, Aeron und Rhianu Haus Eryr sowie Merfyn und Meriel Gaeth Haus Ilyuncu. Cadwallon und Thivya erscheinen in der Tabelle zweimal, sind aber jeweils genau eine Person und bilden genau eine Ehe. Vierzehn anonyme Partnerkarten sowie der unverbundene Hofbeamte Daffyd Eryr wurden nicht als genealogische Personen importiert. Die Amtszeiten der Grafen wurden nur als Titel, nicht als Geburtsdaten verwendet. Abweichende Schreibweisen und die kanonischen Gegenakten sind an den betroffenen Personen dokumentiert. Agravaines Individualporträt wird aus der ausgearbeiteten Mwyalchen-Gegenakte wiederverwendet. Die neue Registergliederung führt Aderyn unter Yvains Klamm und Penbryn. Die bekannten Wappen der in dieser Akte vorkommenden Häuser des Tals der Milane werden aus dem gemeinsamen Grafschaftsmodul bezogen.',
     blankFamily: false,
-    sourceRevision: 14,
+    sourceRevision: 15,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

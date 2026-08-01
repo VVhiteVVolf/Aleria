@@ -14,6 +14,7 @@ import { HOUSE_PENDRAG_PORTRAITS } from './house-pendrag-portraits.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   brithyll: GRAUE_WEITE_HOUSE_EMBLEMS.brithyll,
   illewod: 'assets/images/houses/Sonnenküste/haus-illewod.png',
@@ -171,8 +172,8 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
-    house('house-draenog', 'Haus Draenog'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-saethwyr', 'Haus Saethwyr'),
     house('house-tylluan', 'Haus Tylluan')
   ],
@@ -484,7 +485,7 @@ export const HOUSE_ILLEWOD_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceRevision: 6,
+    sourceRevision: 8,
     registryManagedRecordFields: ['folderPath'],
     registryManagedHouseProfileFields: [
       'rankId',

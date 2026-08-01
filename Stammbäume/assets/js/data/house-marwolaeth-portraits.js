@@ -46,6 +46,7 @@ export const HOUSE_MARWOLAETH_LOCAL_PORTRAITS = Object.freeze({
 
 export const HOUSE_MARWOLAETH_PORTRAITS = Object.freeze({
   ...HOUSE_MARWOLAETH_LOCAL_PORTRAITS,
+  'gwydolwyn-marwolaeth': 'assets/images/portraits/haus-draenog/gwydolwyn-marwolaeth.png',
   'eiddyl-wylan': HOUSE_WYLAN_PORTRAITS['eiddyl-wylan'],
   'trayvon-dienyddiwr': HOUSE_DIENYDDIWR_PORTRAITS['trayvon-dienyddiwr'],
   'sieffre-marwolaeth': HOUSE_PENDERYN_PORTRAITS['sieffre-marwolaeth'],

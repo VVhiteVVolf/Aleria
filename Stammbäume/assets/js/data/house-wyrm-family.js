@@ -1,9 +1,11 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_WYRM_PORTRAITS } from './house-wyrm-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   gafyr: 'assets/images/houses/Llamreis Ankunft/haus-gafyr.png',
@@ -75,7 +77,7 @@ function marriage(id, firstId, secondId) {
   };
 }
 
-function marriedAway(id, name, parentPartnershipId, houseId) {
+function marriedAway(id, name, parentPartnershipId, houseId, emblem = '') {
   return {
     id,
     name,
@@ -83,7 +85,7 @@ function marriedAway(id, name, parentPartnershipId, houseId) {
     linkType: 'married-away',
     parentPartnershipId,
     houseId,
-    emblem: '',
+    emblem,
     crestFrame: 'gold',
     founded: '',
     targetFamilyId: houseId.replace(/^house-/, 'haus-'),
@@ -148,7 +150,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     { id: 'house-gwefrydd', name: 'Haus Gwefrydd', motto: '', emblem: HOUSE_EMBLEMS.gwefrydd, status: 'active' },
     { id: 'house-fiachrach', name: 'Haus Fiachrach', motto: '', emblem: '', status: 'active' },
     { id: 'house-dinefwr', name: 'Haus Dinefwr', motto: '', emblem: '', status: 'active' },
-    { id: 'house-coedwig', name: 'Haus Coedwig', motto: '', emblem: '', status: 'active' },
+    { id: 'house-coedwig', name: 'Haus Coedwig', motto: '', emblem: HOUSE_EMBLEMS.coedwig, status: 'active' },
     { id: 'house-arwydd', name: 'Haus Arwydd', motto: '', emblem: HOUSE_EMBLEMS.arwydd, status: 'active' },
     { id: 'house-wylan', name: 'Haus Wylan', motto: '', emblem: HOUSE_EMBLEMS.wylan, status: 'active' },
     { id: 'house-tiwna', name: 'Haus Tiwna', motto: '', emblem: '', status: 'active' },
@@ -200,7 +202,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     member('eiddon-wyrm', 'Eiddon', 'male', '1671'),
     member('olwen-wyrm', 'Olwen', 'female', '1675'),
     spouse('ceridwen-draig', 'Ceridwen Draig', 'female', '1670', '', 'house-draig'),
-    spouse('trahaern-coedwig', 'Trahaern Coedwig', 'male', '1673', '', 'house-coedwig'),
+    spouse('trahaern-coedwig', 'Trahaearn Coedwig', 'male', '1673', '', 'house-coedwig'),
     spouse('elaine-saethwyr', 'Elaine Saethwyr', 'female', '1675', '', 'house-saethwyr'),
     spouse('iseult-arwydd', 'Iseult Arwydd', 'female', '1675', '', 'house-arwydd'),
     spouse('maredudd-gwyvern', 'Maredudd Gwyvern', 'male', '1671', '1720', 'house-gwyvern'),
@@ -319,7 +321,7 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
     marriedAway('married-away-grael', 'Haus Grael', 'marriage-lynesse-galahad', 'house-grael'),
     marriedAway('married-away-gwefrydd', 'Haus Gwefrydd', 'marriage-sulwen-steffon', 'house-gwefrydd'),
     marriedAway('married-away-dinefwr', 'Haus Dinefwr', 'marriage-lynesse-carnedyr', 'house-dinefwr'),
-    marriedAway('married-away-coedwig', 'Haus Coedwig', 'marriage-celyn-trahaern', 'house-coedwig'),
+    marriedAway('married-away-coedwig', 'Haus Coedwig', 'marriage-celyn-trahaern', 'house-coedwig', HOUSE_EMBLEMS.coedwig),
     marriedAway('married-away-gwyvern', 'Haus Gwyvern', 'marriage-olwen-maredudd', 'house-gwyvern'),
     marriedAway('married-away-tiwna', 'Haus Tiwna', 'marriage-aelwyd-cadfan', 'house-tiwna'),
     marriedAway('married-away-blach-marve', 'Haus Blach', 'marriage-marve-idwallon', 'house-blach'),
@@ -350,6 +352,6 @@ export const HOUSE_WYRM_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Tabelle und Stammbaumgrafik. Externe Portraitquellen wurden als lokale Projektdateien gesichert; unbenannte Verlobte wurden nicht als Personen angelegt.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

@@ -149,6 +149,7 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     house('house-riabhach', 'Haus Riabhach'),
     house('house-raun', 'Haus Raun'),
     house('house-blaidd', "Haus Blaidd O'Branon", HOUSE_EMBLEMS.blaidd),
+    house('house-blaidd-tredegar', "Haus Blaidd O'Tredegar", HOUSE_EMBLEMS.blaidd),
     house('house-dobhar', 'Haus Dobhar'),
     house('house-dianc', 'Haus Dianc'),
     house('house-trachwyll', 'Haus Trachwyll'),
@@ -272,7 +273,9 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('dystan-pendrag', 'Dystan Pendrag', 'male', '1691', '1720', 'house-pendrag'),
 
     person('yvain-blodyn', 'Yvain Blodyn', 'male', '1694', '', BLODYN_HOUSE_ID, { title: 'Baron von Aberdail' }),
-    person('bronwen-blaidd', 'Bronwen Blaidd', 'female', '1694', '', 'house-blaidd'),
+    person('bronwen-blaidd', 'Bronwen Blaidd', 'female', '1694', '', 'house-blaidd-tredegar', {
+      worldPersonId: 'person--haus-blaidd--bronwen-blaidd'
+    }),
     person('meggan-blodyn', 'Meggan Blodyn', 'female', '1700', ''),
     person('micah-arfordir', 'Micah Arfordir', 'male', '1695', '', 'house-arfordir'),
     person('talara-blodyn', 'Talara Blodyn', 'female', '1704', '1720'),

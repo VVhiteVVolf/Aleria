@@ -88,7 +88,7 @@ const GWYLIAU_HOUSES = Object.freeze([
   house('house-arfordir', 'Haus Arfordir'),
   house('house-drewi', 'Haus Drewi'),
   house('house-balauric', 'Haus Balauric'),
-  house('house-coedwig', 'Haus Coedwig'),
+  house('house-coedwig', 'Haus Coedwig', GRAUE_WEITE_HOUSE_EMBLEMS.coedwig),
   house('house-dobhar', 'Haus Dobhar'),
   house('house-ness', 'Haus Ness'),
   house('house-blaidd', "Haus Blaidd O'Branon", GRAUE_WEITE_HOUSE_EMBLEMS.blaidd),
@@ -187,7 +187,7 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
     endedMarriage('marriage-marmaduke-arglwyddes-mochdaer', 'marmaduke-mochdaer', 'arglwyddes-arfordir'),
     endedMarriage('marriage-merwin-nesta-mochdaer', 'merwin-mochdaer', 'nesta-drewi'),
     endedMarriage('marriage-jinell-heveydd-mochdaer', 'jinell-mochdaer', 'heveydd-balauric'),
-    endedMarriage('marriage-drudwas-mallt-mochdaer', 'drudwas-mochdaer', 'mallt-coedwig'),
+    endedMarriage('marriage-drudwas-mallt-mochdaer', 'drudwas-mochdaer', 'mallt-coedwig', { end: '1715' }),
     endedMarriage('marriage-marvine-donnacha-mochdaer', 'marvine-mochdaer', 'donnacha-dobhar'),
     endedMarriage('marriage-slavi-lindsey-mochdaer', 'slavi-mochdaer', 'lindsey-ness'),
     endedMarriage('marriage-luned-tarrant-mochdaer', 'luned-mochdear', 'tarrant-blodyn'),
@@ -256,7 +256,7 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceNote: 'Vennyrianische Herkunftsakte nach der bereitgestellten Mochdaer-Tabelle. Der Auslassungspunkt der Quelle wird als absoluter serieller Zeitsprung direkt nach dem Gwyliau-Hauswappen und vor Owain, Armella und Marmaduke geführt. Aethlem ist hier Sohn von Drudwas und Mallt; seine Ehe mit Lunet ist dieselbe wie in Cerrigarth und führt geradlinig in den gemeinsamen Kadettenhausknoten. Seine Nachkommen sind bewusst nicht Teil dieser Akte. Slavis und Lindseys vollständiger verbliebener Zweig endet 1720 mit Idris, Ceridwen und Meggan sowie den Enkeln Arian und Afon.'
   }
 });

@@ -21,6 +21,7 @@ const TIWNA_EMBLEM = SILBERINSEL_HOUSE_EMBLEMS.tiwna;
 const CARADOC_TIME_JUMP_ID = 'gap-caradoc-to-brannock-tiwna';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   blach: SONNENKUESTE_HOUSE_EMBLEMS.blach,
   brithyll: GRAUE_WEITE_HOUSE_EMBLEMS.brithyll,
   canwyll: SILBERINSEL_HOUSE_EMBLEMS.canwyll,
@@ -31,6 +32,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   dinefwr: WEIDEBUCHT_HOUSE_EMBLEMS.dinefwr,
   dyngwn: VORTIGERNS_RUH_HOUSE_EMBLEMS.dyngwn,
   llwynog: SONNENKUESTE_HOUSE_EMBLEMS.llwynog,
+  morfil: GRAUE_WEITE_HOUSE_EMBLEMS.morfil,
   morforwyn: SONNENKUESTE_HOUSE_EMBLEMS.morforwyn,
   neidr: SILBERINSEL_HOUSE_EMBLEMS.neidr,
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
@@ -226,8 +228,8 @@ export const HOUSE_TIWNA_FAMILY = Object.freeze({
     house('house-neidr', "Haus Neidr O'Llanvane", HOUSE_EMBLEMS.neidr),
     house('house-tylwyth', 'Haus Tylwyth'),
     house('house-canwyll', "Haus Canwyll O'Llanvane", HOUSE_EMBLEMS.canwyll),
-    house('house-morfil', 'Haus Morfil'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-pawen', 'Haus Pawen'),
     house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
     house('house-wylan', "Haus Wylan O'Cerrigarth", HOUSE_EMBLEMS.wylan),
@@ -393,7 +395,7 @@ export const HOUSE_TIWNA_FAMILY = Object.freeze({
   ],
   cadetBranches: [
     marriedAway('married-away-caralyn-tiwna-canwyll', 'Haus Canwyll', 'marriage-howell-carlyn-canwyll', 'house-canwyll', HOUSE_EMBLEMS.canwyll),
-    marriedAway('married-away-eirian-tiwna-coedwig', 'Haus Coedwig', 'marriage-eirian-meredydd-tiwna', 'house-coedwig'),
+    marriedAway('married-away-eirian-tiwna-coedwig', 'Haus Coedwig', 'marriage-eirian-meredydd-tiwna', 'house-coedwig', HOUSE_EMBLEMS.coedwig),
     marriedAway('married-away-heledd-tiwna-brithyll', 'Haus Brithyll', 'marriage-heledd-custenin-tiwna', 'house-brithyll', HOUSE_EMBLEMS.brithyll),
     marriedAway('married-away-meiriona-tiwna-neidr', 'Haus Neidr', 'marriage-gildas-meiriona', 'house-neidr', HOUSE_EMBLEMS.neidr),
     marriedAway('married-away-dylis-tiwna-canwyll', 'Haus Canwyll', 'marriage-cynwrig-dylis-canwyll', 'house-canwyll', HOUSE_EMBLEMS.canwyll),
@@ -444,7 +446,7 @@ export const HOUSE_TIWNA_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 4,
     sourceModule: "Haus Tiwna O'Eiddon (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Tiwna-Hausseite. Morholt Pysgod und Caitrin Neidr bilden das Gründerpaar; ihr goldener Tiwna-Hausknoten hängt unmittelbar unter beiden. Die beiden Punktreihen sind strikt serielle absolute Generationentrenner: der erste folgt auf das Hauswappen, der zweite ausschließlich unter Caradoc und Telyth. Caralyns Canwyll-Zweig endet vor dem zweiten Sprung. Die Schreibvarianten Carlyn/Caralyn, Dyllis/Dylis, Brannoc/Brannock, Olwyn/Olwyna, Ystafell/Ystafel, Pirth/Pyrth, Dyngyn/Dyngwn, Crefyddoll/Crefyddol und Gwylim/Gwilym werden zugunsten bestehender Gegenakten beziehungsweise der ausführlichen Hierarchie vereinheitlicht; stabile vorhandene IDs bleiben erhalten. Caralyn, Eirian, Heledd, Meiriona, Dylis, Teleri, Dytiana, Cici, Meghan, Caitrin und Olwyna besitzen direkte Wegverheiratet-Knoten. Ihre in Canwyll, Neidr, Chiffyddlon, Dienyddiwr, Dinefwr und Créyr fortgeführten Kinder werden ausschließlich in den jeweiligen Gegenakten gezeigt. Die genauer belegten Todesjahre 1662 für Gildas und 1669 für Meiriona werden in der Neidr-Gegenakte gespiegelt. Wiederholte schwarze Standardsilhouetten werden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],

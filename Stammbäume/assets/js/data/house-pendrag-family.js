@@ -20,6 +20,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   pendrag: VORTIGERNS_RUH_HOUSE_EMBLEMS.pendrag,
   ceirwyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.ceirwyn,
   dienyddiwr: VORTIGERNS_RUH_HOUSE_EMBLEMS.dienyddiwr,
+  draenog: 'assets/images/houses/Graue Weite/Silberwald/haus-draenog.png',
   dyngwn: VORTIGERNS_RUH_HOUSE_EMBLEMS.dyngwn,
   fiachraoin: VORTIGERNS_RUH_HOUSE_EMBLEMS.fiachraoin,
   grael: VORTIGERNS_RUH_HOUSE_EMBLEMS.grael,
@@ -185,7 +186,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     house('house-grael', 'Haus Grael', HOUSE_EMBLEMS.grael),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-illewod', 'Haus Illewod'),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', HOUSE_EMBLEMS.draenog),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-dienyddiwr', 'Haus Dienyddiwr', HOUSE_EMBLEMS.dienyddiwr),
     house('house-penderyn', 'Haus Penderyn', HOUSE_EMBLEMS.penderyn),
@@ -519,7 +520,7 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceRevision: 3,
+    sourceRevision: 4,
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']
   }

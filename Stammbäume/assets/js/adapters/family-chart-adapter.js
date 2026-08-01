@@ -24,6 +24,10 @@ import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
 import {
+  applyFamilyChartHouseLinkAlignmentPlan,
+  createFamilyChartHouseLinkAlignmentPlan
+} from './family-chart-house-link-alignment.js';
+import {
   applyFamilyChartPartnerAlignmentPlan,
   createFamilyChartPartnerAlignmentPlan
 } from './family-chart-partner-alignment.js';
@@ -1190,6 +1194,12 @@ export function createFamilyChartSession(config) {
     applyFamilyChartPartnerAlignmentPlan({
       tree: chart.store?.getTree?.(),
       plan: alignmentPlan,
+      orientation: view.orientation
+    });
+    const houseLinkAlignmentPlan = createFamilyChartHouseLinkAlignmentPlan(family);
+    applyFamilyChartHouseLinkAlignmentPlan({
+      tree: chart.store?.getTree?.(),
+      plan: houseLinkAlignmentPlan,
       orientation: view.orientation
     });
   });

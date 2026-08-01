@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS, SILBERINSEL_HOUSE_PROFILES } from './silberinsel-house-profiles.js';
 import { VORTIGERNS_RUH_HOUSE_EMBLEMS } from './vortigerns-ruh-house-profiles.js';
 import { WEIDEBUCHT_HOUSE_EMBLEMS } from './weidebucht-house-profiles.js';
@@ -199,7 +200,7 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
     house(SAITH_HOUSE_ID, "Haus Saith O'Llanvane", SAITH_EMBLEM),
     house('house-neidr', "Haus Neidr O'Llanvane", HOUSE_EMBLEMS.neidr),
     house('house-crefyddol', 'Haus Crefyddol', HOUSE_EMBLEMS.crefyddol),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-creyr', 'Haus Créyr', HOUSE_EMBLEMS.creyr),
     house('house-tsaoir', "Haus T'Saoir"),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
@@ -374,7 +375,7 @@ export const HOUSE_SAITH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Saith O'Llanvane (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Saith-Hausseite. Bors Saith und Gwennan Neidr bilden das Gründerpaar; der Hausknoten und die erste Überlieferungslücke folgen strikt seriell. Der zweite, einzige freie Zeitsprung ist ein gemeinsamer absoluter Trenner der Linien Dadweir/Llewella und Elinor/Merwin. Die Quellenform Crefyddoll wird als projektweit kanonisches Crefyddol geführt. Bei Merlijn nennt eine Kinderüberschrift irrtümlich Yseut; die zugehörige Ehezeile weist eindeutig Ysolt Pyrth als Ehefrau und Saselia als gemeinsames Kind aus. Bereits vorhandene Gegenakten verwenden identische Weltpersonen-, Partnerschafts- und Porträtzuordnungen. Kinder erscheinen nur in der fortführenden Akte: Arianas Kinder ausschließlich bei Neidr, Yseuts Kind bei Gwarchod und Yvettes Kinder bei Tir Addawol; Xylons und Maelrons Kinder ausschließlich hier. Walerans Todesjahr bleibt gemäß seiner ausführlicheren Gwarchod-Herkunftsakte unbekannt und liegt nach 1730. Wiederholte Standardsilhouetten der Altdaten bleiben Systemplatzhalter.',
     registryManagedExtensionFields: ['sourceNote'],

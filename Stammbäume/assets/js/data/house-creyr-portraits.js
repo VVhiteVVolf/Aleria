@@ -65,5 +65,6 @@ export const HOUSE_CREYR_PORTRAITS = Object.freeze({
   'gwenifer-hwyaden': HOUSE_HWYADEN_PORTRAITS['gwenifer-hwyaden'],
   'dadweir-creyr': HOUSE_HWYADEN_PORTRAITS['dadweir-creyr'],
   'cadel-mochdaer': HOUSE_MOCHDAER_PORTRAITS['cadel-mochdaer'],
-  'gwynfa-creyr': HOUSE_MOCHDAER_PORTRAITS['gwynfa-creyr']
+  'gwynfa-creyr': HOUSE_MOCHDAER_PORTRAITS['gwynfa-creyr'],
+  'zara-coedwig': 'assets/images/portraits/haus-coedwig/zara-coedwig.jpg'
 });

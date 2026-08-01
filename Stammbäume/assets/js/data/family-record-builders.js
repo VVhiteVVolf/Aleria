@@ -128,6 +128,15 @@ export function createCadetHouseBranch(options) {
   });
 }
 
+export function createSingleFounderHouseBranch(options) {
+  return createHouseBranch({
+    ...options,
+    parentPartnershipId: '',
+    linkType: 'single-founder-house',
+    subtitle: options.subtitle || 'Von einer Einzelperson gegründetes Haus'
+  });
+}
+
 export function createLinkedLineBranch(options) {
   return createHouseBranch({
     ...options,

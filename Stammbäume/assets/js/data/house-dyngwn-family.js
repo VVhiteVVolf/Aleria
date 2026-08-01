@@ -5,6 +5,7 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_DYNGWN_PORTRAITS } from './house-dyngwn-portraits.js';
 import {
   VORTIGERNS_RUH_HOUSE_EMBLEMS,
@@ -28,6 +29,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwefrydd: 'assets/images/houses/Artus Streben/haus-gwefrydd.png',
   gwyvern: 'assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png',
   marwolaeth: VORTIGERNS_RUH_HOUSE_EMBLEMS.marwolaeth,
+  morfil: GRAUE_WEITE_HOUSE_EMBLEMS.morfil,
   neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
   penderyn: VORTIGERNS_RUH_HOUSE_EMBLEMS.penderyn,
   pendrag: VORTIGERNS_RUH_HOUSE_EMBLEMS.pendrag,
@@ -215,7 +217,7 @@ export const HOUSE_DYNGWN_FAMILY = Object.freeze({
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-neidr', 'Haus Neidr', HOUSE_EMBLEMS.neidr),
     house('house-grael', 'Haus Grael', HOUSE_EMBLEMS.grael),
-    house('house-morfil', 'Haus Morfil'),
+    house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
     house('house-morthwyll', 'Haus Morthwyll'),
     house('house-ceirwyn', 'Haus Ceirwyn', HOUSE_EMBLEMS.ceirwyn),
     house('house-dinefwr', 'Haus Dinefwr'),
@@ -397,7 +399,7 @@ export const HOUSE_DYNGWN_FAMILY = Object.freeze({
     createMarriage('marriage-cadfael-sioned', ...COUPLES.sioned),
     createMarriage('marriage-aoirghe-morgan', ...COUPLES.morganAoirghe),
     createMarriage('marriage-rhonwen-morgan-grael', ...COUPLES.morganRhonwen, { status: 'widowed' }),
-    createMarriage('marriage-aeronwy-murvin-dyngwn', ...COUPLES.aeronwy),
+    createMarriage('marriage-aeronwy-murvin-dyngwn', ...COUPLES.aeronwy, { status: 'ended', end: '1682' }),
     createMarriage('marriage-rhondia-merlion-dyngwn', ...COUPLES.rhondia),
     createMarriage('marriage-gwennoeth-dewey-ceirwyn', ...COUPLES.dewey, { status: 'widowed', end: '1700' }),
     createMarriage('marriage-derwen-gwrtheyrn-dyngwn', ...COUPLES.derwen),
@@ -542,7 +544,7 @@ export const HOUSE_DYNGWN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceModule: "Haus Dyngwn O'Mathragon (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Ehen, Hausgeschichte, Ritterfürsten- und Erbfolge sowie Portraitzuordnungen folgen der bereitgestellten Dyngwn-Hausseite und ihrer eingebetteten Stammbaumgrafik. Kynwas Schwertarm und Niam Fiachraoin bilden das Gründerpaar. Die beiden Punkttrenner der Grafik werden als strikt serielle Zeitsprünge geführt: der erste nach dem Stammwappen zu Goronwy/Rhonwen, der zweite ausschließlich unter Goronwy/Saoirse zu Cadogan, Myfanwy und Arthur. Morgan heiratet nacheinander Aoirghe Neidr und Rhonwen Grael; nur die jeweils belegten Kinder werden dem richtigen Paar zugeordnet. Die Erbfolge verläuft über Gwlgawd, Garith, Derwyn und Hael. Dreiundzwanzig verheiratete Dyngwn-Frauen ohne fortgeführten Dyngwn-Zweig besitzen direkte Zielhausknoten. Kinder aus den Zielhäusern werden nicht parallel in dieser Akte kopiert. Gemeinsame Personen und Ehen mit Pendrag, Dienyddiwr, Draig, Neidr, Grael, Ceirwyn, Wyrm, Gwefrydd, Gwyvern, Penderyn, Arth, Wylan, Saethwyr, Pysgod und Arwydd behalten ihre vorhandenen Weltpersonen- und Partnerschafts-IDs; die ältere technische ID hafwen-dwyngwn bleibt aus Stabilitätsgründen erhalten, während der sichtbare Hausname kanonisch Dyngwn lautet. Ninians in seiner Marwolaeth-Heimatakte belegtes Todesjahr 1709 ersetzt die ältere Gegenaktenangabe 1702. Wiederholte generische Silhouetten wurden nicht als individuelle Portraits importiert.',
     registryManagedExtensionFields: ['sourceNote'],

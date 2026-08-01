@@ -6,10 +6,12 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_GWEFRYDD_PORTRAITS } from './house-gwefrydd-portraits.js';
 import { TAL_DER_MILANE_HOUSE_EMBLEMS } from './tal-der-milane-house-profiles.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   ardConbhron: 'assets/images/houses/Antike Crannath Clans/haus-ard-conbhron.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
@@ -113,7 +115,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
     house('house-laoch', 'Haus Laoch'),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-gwarchod', 'Haus Gwarchod'),
     house('house-gortach', 'Haus Gortach'),
     house('house-illyswen', 'Haus Illyswen', 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png'),
@@ -125,7 +127,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     house('house-tir-addawol', 'Haus Tir Addawol'),
     house('house-ceirwyn', 'Haus Ceirwyn'),
     house('house-creyr', 'Haus Créyr'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
     house('house-hebog', "Haus Hebog O'Talwyn", HOUSE_EMBLEMS.hebog),
     house('house-frisealach', 'Haus Frisealach'),
@@ -309,7 +311,7 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
     marriedAway('married-away-dyngwn-gwenhwyfar', 'Haus Dyngwn', 'marriage-gwenhwyfar-dewyll', 'house-dyngwn'),
     marriedAway('married-away-saethwyr-selyse', 'Haus Saethwyr', 'marriage-selyse-gallgoid', 'house-saethwyr', HOUSE_EMBLEMS.saethwyr),
     marriedAway('married-away-creyr-morwenna', 'Haus Créyr', 'marriage-morwenna-glendower', 'house-creyr'),
-    marriedAway('married-away-coedwig-gwendolen', 'Haus Coedwig', 'marriage-gwendolen-tyreke', 'house-coedwig'),
+    marriedAway('married-away-coedwig-gwendolen', 'Haus Coedwig', 'marriage-gwendolen-tyreke', 'house-coedwig', HOUSE_EMBLEMS.coedwig),
     marriedAway('married-away-gafyr-ffion', 'Haus Gafyr', 'marriage-ffion-rheinallt', 'house-gafyr', HOUSE_EMBLEMS.gafyr),
     marriedAway('married-away-draig-branwen', 'Haus Draig', 'marriage-branwen-steffan', 'house-draig', HOUSE_EMBLEMS.draig),
     marriedAway('married-away-arwydd-myrcella', 'Haus Arwydd', 'marriage-myrcella-ieuan', 'house-arwydd', HOUSE_EMBLEMS.arwydd)
@@ -335,6 +337,6 @@ export const HOUSE_GWEFRYDD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gwefrydd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Namens- und jahresgleiche Personen aus Draig, Saethwyr, Gafyr, Wyrm, Gwyvern und Arwydd verwenden dieselben Weltpersonen-IDs und Portraitdateien; externe Portraitquellen wurden als lokale Projektdateien gesichert. Ursyn ist gemäß Tabellenüberschrift der Sohn Edrics und Luneds; Gwenhwyfar wurde nach Haus Dyngwn wegverheiratet. Die Hebog-Gegenakte ergänzt Iorwerths Verlobung mit Glinda Hebog gegenseitig in beiden Stammbäumen.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 4
   }
 });

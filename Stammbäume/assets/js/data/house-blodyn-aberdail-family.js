@@ -42,14 +42,18 @@ export const HOUSE_BLODYN_ABERDAIL_FAMILY = Object.freeze({
   houses: [
     { id: ABERDAIL_HOUSE_ID, name: 'Haus Blodyn von Aberdail', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
     { id: BLODYN_HOUSE_ID, name: 'Haus Blodyn', motto: 'Datblyg dy nerth a thyfu!', emblem: BLODYN_EMBLEM, status: 'active' },
-    { id: 'house-blaidd', name: "Haus Blaidd O'Branon", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' }
+    { id: 'house-blaidd', name: "Haus Blaidd O'Branon", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' },
+    { id: 'house-blaidd-tredegar', name: "Haus Blaidd O'Tredegar", motto: '', emblem: GRAUE_WEITE_HOUSE_EMBLEMS.blaidd, status: 'active' }
   ],
   persons: [
     person('yvain-blodyn', 'Yvain Blodyn', 'male', '1694', BLODYN_HOUSE_ID, {
       title: 'Baron von Aberdail',
       lineageRole: 'head'
     }),
-    person('bronwen-blaidd', 'Bronwen Blaidd', 'female', '1694', 'house-blaidd', { familyRole: 'married' }),
+    person('bronwen-blaidd', 'Bronwen Blaidd', 'female', '1694', 'house-blaidd-tredegar', {
+      worldPersonId: 'person--haus-blaidd--bronwen-blaidd',
+      familyRole: 'married'
+    }),
     person('dalvin-blodyn', 'Dalvin Blodyn', 'male', '1713', ABERDAIL_HOUSE_ID, {
       title: 'Erster in der Erbfolge von Aberdail',
       lineageRole: 'mainline'

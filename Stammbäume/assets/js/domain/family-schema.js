@@ -25,12 +25,14 @@ const HOUSE_LINK_TYPES = new Set([
   'married-away',
   'ward-away',
   'line-extinct',
-  'migration-offshoot'
+  'migration-offshoot',
+  'single-founder-house'
 ]);
 const PERSON_ANCHORED_HOUSE_LINK_TYPES = new Set([
   'ward-away',
   'migration-offshoot',
-  'line-extinct'
+  'line-extinct',
+  'single-founder-house'
 ]);
 
 export class FamilyValidationError extends Error {
@@ -514,6 +516,11 @@ export function validateFamily(input) {
     }
     if (branch.linkType === 'migration-offshoot' && !hasPersonAnchor) {
       diagnostics.push(diagnostic('error', 'MIGRATION_LINK_REQUIRES_PERSON', 'Ein Auswanderungszweig muss direkt an seiner auswandernden Gründerperson hängen.', {
+        branchId: branch.id
+      }));
+    }
+    if (branch.linkType === 'single-founder-house' && !hasPersonAnchor) {
+      diagnostics.push(diagnostic('error', 'SINGLE_FOUNDER_LINK_REQUIRES_PERSON', 'Ein von einer Einzelperson gegründetes Haus muss direkt an dieser Gründerperson hängen.', {
         branchId: branch.id
       }));
     }

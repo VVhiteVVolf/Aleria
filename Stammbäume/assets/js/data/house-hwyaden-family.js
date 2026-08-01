@@ -6,6 +6,7 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_HWYADEN_PORTRAITS } from './house-hwyaden-portraits.js';
 import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
 import {
@@ -18,6 +19,7 @@ const HWYADEN_HOUSE_ID = 'house-hwyaden';
 const HWYADEN_EMBLEM = WEIDEBUCHT_HOUSE_EMBLEMS.hwyaden;
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   asyn: WEIDEBUCHT_HOUSE_EMBLEMS.asyn,
   blach: SONNENKUESTE_HOUSE_EMBLEMS.blach,
   creyr: WEIDEBUCHT_HOUSE_EMBLEMS.creyr,
@@ -179,12 +181,12 @@ export const HOUSE_HWYADEN_FAMILY = Object.freeze({
     house('house-creyr', 'Haus Créyr', HOUSE_EMBLEMS.creyr),
     house('house-asyn', 'Haus Asyn', HOUSE_EMBLEMS.asyn),
     house('house-wylan', "Haus Wylan O'Cerrigarth", HOUSE_EMBLEMS.wylan),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-dyngwn', 'Haus Dyngwn', HOUSE_EMBLEMS.dyngwn),
     house('house-grawn', 'Haus Grawn'),
     house('house-gaeth', 'Haus Gaeth'),
     house('house-saethwyr', 'Haus Saethwyr', HOUSE_EMBLEMS.saethwyr),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-pyrth', 'Haus Pyrth'),
     house('house-blach', 'Haus Blach', HOUSE_EMBLEMS.blach),
     house('house-tir-addawol', 'Haus Tir Addawol', HOUSE_EMBLEMS['tir-addawol']),
@@ -417,7 +419,7 @@ export const HOUSE_HWYADEN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 3,
     sourceModule: "Haus Hwyaden O'Trefyddin (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Ehen, Porträts, Baronsfolge und Erbfolge folgen der bereitgestellten Hwyaden-Hausseite. Das unbekannte Gründerpaar führt zuerst in den Hausknoten und danach in einen absoluten Zeitsprung zu Gormán; ein zweiter serieller Sprung verbindet Gormán und Wrantha mit Owain und Oweta. Catwg folgt der ausführlichen Hierarchie; die widersprüchliche Hofkurzform Cadwg und ihre Amtszahl wurden nicht als zweite Person oder Geburtsjahr übernommen. Emyas folgt der Partnerzeile und der Tir-Addawol-Gegenakte statt der einmaligen Schreibvariante Ewyas. Deliah folgt der Dyngwn-Gegenakte statt der Variante Delilah. Oweta, Delwen, Nest, Meeghan, Bricelyn, Heatherlinn, Zinnara und Gwenifer besitzen direkt an ihrer Ehe einen Wegverheiratet-Knoten. Rhodhri Wylan und Tanwen Hwyaden tragen direkt unter ihrer Ehe den Gründungsknoten des Hauses Créyr. Nachkommen wegverheirateter Hwyaden werden nur in der jeweils fortgeführten Gegenakte gezeigt; dadurch entstehen keine doppelten Kinderlinien. Generische schwarze Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],

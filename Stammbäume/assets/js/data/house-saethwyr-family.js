@@ -6,9 +6,11 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_SAETHWYR_PORTRAITS } from './house-saethwyr-portraits.js';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   arwydd: 'assets/images/houses/Rhonwens Tränen/haus-arwydd.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
@@ -101,7 +103,7 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     house('house-wyrm', 'Haus Wyrm', HOUSE_EMBLEMS.wyrm),
     house('house-grael', 'Haus Grael'),
     house('house-dinefwr', 'Haus Dinefwr'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
     house('house-neidr', 'Haus Neidr'),
     house('house-hwyaden', 'Haus Hwyaden'),
@@ -202,7 +204,7 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
     createMarriage('marriage-llawvrodedd-elinor', ...LLAWVRODEDD_FAMILY_IDS),
     createMarriage('marriage-owena-bleddyn', 'owena-saethwyr', 'bleddyn-draig'),
     createMarriage('marriage-drudwas-evaine', ...DRUDWAS_FAMILY_IDS),
-    createMarriage('marriage-gruffyd-menna', ...GRUFFYD_FAMILY_IDS),
+    createMarriage('marriage-gruffyd-menna', ...GRUFFYD_FAMILY_IDS, { status: 'ended', end: '1700' }),
     createMarriage('marriage-venora-dyvynwal', 'venora-saethwyr', 'dyvynwal-gwyvern'),
     createMarriage('marriage-gallgoid-selyse', ...GALLGOID_FAMILY_IDS),
     createMarriage('marriage-dolena-llywellyn', 'dolena-saethwyr', 'llywellyn-neidr'),
@@ -316,6 +318,6 @@ export const HOUSE_SAETHWYR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Saethwyr-Tabelle und Stammbaumgrafik. Bereits in Arwydd, Gafyr oder Wyrm geführte Personen verwenden dieselben Weltpersonen-IDs und lokalen Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

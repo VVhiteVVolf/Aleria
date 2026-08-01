@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import {
   createFamilyPerson,
   createMarriage,
@@ -18,6 +19,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   illysywen: 'assets/images/houses/Rhonwens Tränen/haus-illysywen.png',
   neidr: 'assets/images/houses/Silberinsel/haus-neidr.png',
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
+  wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern,
   wylan: 'assets/images/houses/Weidebucht/haus-wylan.png'
 });
 
@@ -61,7 +63,14 @@ function bastard(id, name, sex, birth, affairPartnerName) {
 }
 
 function house(id, name, emblem = '', motto = '') {
-  return { id, name, motto, emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto,
+    emblem,
+    status: 'active',
+    ...(emblem ? { extensions: { registryManagedFields: ['name', 'emblem'] } } : {})
+  };
 }
 
 function childrenOf(childIds, parentIds, partnershipId, options = {}) {
@@ -133,7 +142,7 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     house('house-illewod', 'Haus Illewod', HOUSE_EMBLEMS.illewod),
     house('house-illysywen', 'Haus Illysywen', HOUSE_EMBLEMS.illysywen),
     house('house-gwarchod', 'Haus Gwarchod'),
-    house('house-wivern', 'Haus Wivern'),
+    house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
     house('house-penderyn', 'Haus Penderyn'),
     house('house-earncynne', 'Haus Earncynne'),
@@ -142,7 +151,7 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     house('house-canwyll', 'Haus Canwyll'),
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-ashina', 'Haus Ashina'),
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-marchog', 'Haus Marchog'),
@@ -329,7 +338,11 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
     createMarriage('marriage-yvain-ceridwen', ...YVAIN_IDS),
     createMarriage('marriage-madoc-glaw', 'madoc-illewod', 'glaw-grawn'),
     createMarriage('marriage-cynfarch-jinell', ...CYNFARCH_IDS),
-    createMarriage('marriage-wyndham-nerys', ...WYNDHAM_IDS),
+    createMarriage('marriage-wyndham-nerys', ...WYNDHAM_IDS, {
+      status: 'ended',
+      end: '1720',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-gladys-iolyn', 'gladys-grawn', 'iolyn-wylan'),
     createMarriage('marriage-rhydian-aelwen', ...RHYDIAN_IDS),
     createMarriage('marriage-hewet-alwen', ...HEWET_IDS),
@@ -458,7 +471,7 @@ export const HOUSE_GRAWN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Grawn-Tabelle und ihrer Stammbaumgrafik. Die Galeriezeiträume der Grafen sind Amtszeiten und wurden nicht als Geburtsdaten übernommen. Der einzige sichtbare Zeitsprung liegt nach Iorwerth und Aranrhod; die sieben anschließend belegten Geschwister werden wegen der unbekannten Zwischengenerationen nur als wahrscheinliche Linienfortsetzung geführt. Die doppelte Darstellung Yvains und Ceridwens ist eine einzige Ehe. Die Stammbaumgrafik belegt Annegret Skogg, während ihre Partnerkarte in der Hierarchietabelle namenlos bleibt. Nerys bleibt entsprechend der Quelle Wivern. Efas Todesjahr 1691 und Neithons Geburtsjahr 1718 folgen den bereits kanonischen Gegenakten. Mordreds sechs Bastarde mit Glada und seine zwei Bastarde mit Gwenllian sind über getrennte Affären, Elternschaften und sichtbare Kartentitel zugeordnet. Vollständig anonyme Verlobungsvorlagen sowie unverbundene Hofamts-Platzhalter wurden nicht zu Personen erhoben. Die Quelle nennt ausdrücklich keine Kadettenhäuser. Seit Revision 2 liegt Glyndraith verbindlich in Tristams Ebene; ältere direkte Ährental/Glyndraith-Registerpfade werden auf die vierstufige Hierarchie migriert.',
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 4,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

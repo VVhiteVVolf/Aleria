@@ -15,6 +15,8 @@ export function createCadetDialog(documentRef = document) {
   const linkTypeSelect = form.elements.namedItem('linkType');
   const migrationOption = [...linkTypeSelect.options]
     .find(option => option.value === 'migration-offshoot');
+  const singleFounderOption = [...linkTypeSelect.options]
+    .find(option => option.value === 'single-founder-house');
   const title = documentRef.getElementById('cadet-dialog-title');
   const submitButton = documentRef.getElementById('cadet-dialog-submit');
   const deleteButton = documentRef.getElementById('cadet-dialog-delete');
@@ -35,6 +37,10 @@ export function createCadetDialog(documentRef = document) {
     if (migrationOption) {
       migrationOption.hidden = true;
       migrationOption.disabled = true;
+    }
+    if (singleFounderOption) {
+      singleFounderOption.hidden = true;
+      singleFounderOption.disabled = true;
     }
     personInput.value = '';
     partnershipSelect.disabled = false;
@@ -57,6 +63,11 @@ export function createCadetDialog(documentRef = document) {
       const isMigrationOffshoot = branch.linkType === 'migration-offshoot';
       migrationOption.hidden = !isMigrationOffshoot;
       migrationOption.disabled = !isMigrationOffshoot;
+    }
+    if (singleFounderOption) {
+      const isSingleFounderHouse = branch.linkType === 'single-founder-house';
+      singleFounderOption.hidden = !isSingleFounderHouse;
+      singleFounderOption.disabled = !isSingleFounderHouse;
     }
     personInput.value = branch.parentPersonId || '';
     populatePartnerships(family, branch.parentPartnershipId);

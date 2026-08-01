@@ -344,7 +344,9 @@ export const HOUSE_GWIALEN_FAMILY = Object.freeze({
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'gereint-gwialen',
+    // Vollständiger Stammbaum: Der früheste Gründer bleibt Layout-Anker;
+    // kein späterer Fokuspunkt darf Cadwyns Seitenzweig oder Nachfahren ausblenden.
+    focusPersonId: 'hascan-gwialen',
     orientation: 'vertical',
     ancestorDepth: 20,
     descendantDepth: 20,
@@ -353,7 +355,7 @@ export const HOUSE_GWIALEN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Gwialen O'Tredegar (bereitgestellte Altdaten)",
     sourceNote: 'Háscan Gwialen und Arianhrod Pysgod begründen Haus Gwialen. Der Hausknoten und der einzige Zeitsprung stehen strikt seriell vor Llewarc und Cadwyn. Die Altquelle widerspricht sich bei Llewarc/Lewarc, Andarch/Amdarch und Cwrgi/Gwrgi; Stammbaumgrafik, Partnerkarte und Hierarchie belegen die hier verwendeten Formen. Kinder der wegverheirateten Cadwyn, Angharad, Gwladus, Esill, Morfudd, Gwen und Alwen werden ausschließlich in den jeweiligen Zielhäusern fortgeführt. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
@@ -368,6 +370,7 @@ export const HOUSE_GWIALEN_FAMILY = Object.freeze({
       'secondarySeats',
       'regionEmblems'
     ],
-    registryManagedRecordFields: ['folderPath']
+    registryManagedRecordFields: ['folderPath'],
+    registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
 });

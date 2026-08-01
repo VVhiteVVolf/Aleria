@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import {
   createCadetHouseBranch,
@@ -164,7 +165,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
     house('house-arth', 'Haus Arth', HOUSE_EMBLEMS.arth),
     house('house-canwyll', 'Haus Canwyll', HOUSE_EMBLEMS.canwyll),
     house('house-crefyddol', 'Haus Crefyddol', HOUSE_EMBLEMS.crefyddol),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
     house('house-dyngwn', 'Haus Dyngwn'),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
@@ -590,7 +591,7 @@ export const HOUSE_NEIDR_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten, Portraitzuordnungen und Beziehungen nach der bereitgestellten Haus-Neidr-Tabelle und der eingebetteten Stammbaumgrafik. Die fünf Zeitsprünge sind als serielle absolute Generationentrenner modelliert. Der in der Oberhauptgalerie ab 1720 als „Gwyneed“ beschriftete, aber mit Yvains Portrait dargestellte Graf wird aufgrund der Erbfolge als Yvain geführt. Die ausgearbeitete Pyrth-Gegenakte belegt Prynhawn und Jowaneth als Ehepaar sowie ihre Lebensdaten; Neidr zeigt deshalb auch Prynhawns direkten Wegverheiratet-Knoten zu Haus Pyrth. Mari erscheint nur in der Tabelle. Die ergänzende Crefyddoll-Quelle löst die zuvor unbeschriftete Fortsetzung unter Jinelle und Sieffre auf: Ihre Söhne Llwyarch und Llwellyn begründen mit Lynette beziehungsweise Hafren die Bruderhäuser Crefyddol und Canwyll. Neidr zeigt beide verknüpften Zielhäuser direkt unter dem Ursprungspaar; die vollständigen Gründerpaare und Fortsetzungen bleiben in den Zielakten, damit sie vor Neidrs nächstem absoluten Zeitsprung nicht als falsche Generation erscheinen. Sieffre trägt als Heiliger den Holy Frame. Bors und Gwennan begründen Haus Saith, Morholt und Caitrin Haus Tiwna sowie Roderic und Llynn Haus Pyrth. Die Kinderzeilen ordnen Odyar Ariana und Ninian Crystin zu, obwohl die Partnerzeile beide Spalten vertauscht. Genauer belegte Todesjahre für Gaenor, Llywellyn und Elenydd sowie die wechselseitigen Pflege-, Verlobungs- und Draig-Verbindungen wurden aus den bereits vorhandenen verbundenen Hausakten übernommen.',
     blankFamily: false,
-    sourceRevision: 8,
+    sourceRevision: 9,
     registryTombstones: {
       houses: ['house-unbekannt-jinelle'],
       cadetBranches: ['married-away-unbekannt-jinelle']

@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_MWYALCHEN_PORTRAITS } from './house-mwyalchen-portraits.js';
 import { SILBERINSEL_HOUSE_EMBLEMS } from './silberinsel-house-profiles.js';
 import {
@@ -253,7 +254,7 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
     house('house-gafyr', 'Haus Gafyr', HOUSE_EMBLEMS.gafyr),
     house('house-ciarog', 'Haus Ciaróg', HOUSE_EMBLEMS.ciarog),
     house('house-arwydd', 'Haus Arwydd', HOUSE_EMBLEMS.arwydd),
-    house('house-draenog', 'Haus Draenog'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
     house('house-hwyaden', 'Haus Hwyaden', HOUSE_EMBLEMS.hwyaden),
     house('house-tylluan', "Haus Tylluan O'Penbryn", HOUSE_EMBLEMS.tylluan),
     house('house-camoran', 'Haus Camoran'),
@@ -476,7 +477,7 @@ export const HOUSE_MWYALCHEN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Mwyalchen O'Penbryn (bereitgestellte Altdaten)",
     sourceNote: 'Agravaine Aderyn und Thalena begründen Haus Mwyalchen. Hausknoten und einziger Zeitsprung stehen strikt seriell vor Iorwerth und Eirwyn. Frauen, deren Nachkommen in einem anderen Haus fortgeführt werden, erhalten direkte Wegverheiratet- oder Wegverlobt-Knoten; die fremden Kinder werden in dieser Akte nicht gedoppelt. Umgekehrt werden nur die Mwyalchen-Linien von Iorwerth, Kelyddon, Cadwallen, Arglwydd, Gwynham, Cieran, Agravaine, Gwalchgwyn, Daddweir, Sheev, Gwindor, Gower und Conway hier fortgeführt. Mithlas Camoran ist ausdrücklich Gwindors aufgenommenes Mündel und daher als Mündel statt als leibliches Kind gerahmt. Die fehlerhafte Quellüberschrift „Sheev & Chryl“ wurde anhand der unmittelbar zugeordneten Partnerzeilen berichtigt: Tirion und Orbo stammen von Sheev und Rheanne; Chryl ist Conways Ehefrau und Mutter Ieuans. Die Hofliste nennt einen dritten Erben namens Iorwerth, liefert ihm jedoch weder Abstammung noch eigene Karte; er wurde deshalb nicht als unverbundene Person erfunden. Die Schreibvariante Dadweir wurde mit der kanonischen Ciaróg-Gegenakte Daddweir zusammengeführt. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],

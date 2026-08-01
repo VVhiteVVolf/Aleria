@@ -75,5 +75,6 @@ export const HOUSE_PENDRAG_PORTRAITS = Object.freeze({
     `${PORTRAIT_ROOT}/${personId}.jpg`
   ])),
   'genyth-pysgod': HOUSE_PYSGOD_LOCAL_PORTRAITS['genyth-pysgod'],
+  'cariad-draenog': 'assets/images/portraits/haus-draenog/cariad-draenog.png',
   'gwenhwyfar-dreigiau': 'assets/images/portraits/haus-arth/gwenhwyfar-dreigiau.jpg'
 });

@@ -389,8 +389,8 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     createMarriage('marriage-merfyn-llinos', ...LLINOS_IDS),
     createMarriage('marriage-iorwerth-lynfa', ...LYNFA_IDS),
     createMarriage('marriage-rhodri-cadwyn', ...RHODRI_IDS),
-    createMarriage('marriage-garym-arial', ...GARYM_IDS),
-    createMarriage('marriage-bettry-arawn', ...BETTRY_IDS),
+    createMarriage('marriage-garym-arial', ...GARYM_IDS, { status: 'ended', end: '1692' }),
+    createMarriage('marriage-bettry-arawn', ...BETTRY_IDS, { status: 'ended', end: '1699' }),
     createMarriage('marriage-hefin-ellanah', ...HEFIN_IDS),
     createMarriage('marriage-frewi-eiddon', ...FREWI_IDS),
     createMarriage('marriage-eirwyn1634-gwastad', ...EIRWYN_1634_IDS),
@@ -403,7 +403,11 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
       extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
     }),
     createMarriage('marriage-guenevere-kyndrwyn', ...GUENEVERE_IDS),
-    createMarriage('marriage-eirwyn1654-islwyn', ...EIRWYN_1654_IDS),
+    createMarriage('marriage-eirwyn1654-islwyn', ...EIRWYN_1654_IDS, {
+      status: 'ended',
+      end: '1730',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-gingalain1671-llewella', ...GINGALAIN_1671_IDS),
     createMarriage('marriage-griflet-donna', ...GRIFLET_IDS),
     createMarriage('marriage-pelleas-genyth', ...GENYTH_IDS),
@@ -581,7 +585,7 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Ehen, Abstammungen und Portraitzuordnungen folgen der bereitgestellten Pysgod-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die drei Auslassungszeichen wurden ausschließlich als serielle Zeitsprünge unter Caradoc/Linessa, Cynwrig/Afanen und Tyreke/Gobaith modelliert. Die Quelle widerspricht sich bei Cynwrig/„Griflet“ sowie bei mehreren unmöglichen Jahreszahlen; diese Fälle sind direkt an den betroffenen Personen dokumentiert und wurden nicht still erfunden. Amtsjahre der Grafen sind Titelangaben, keine Geburtsjahre. Die vier ausdrücklich bestätigten Gründerpaare sind Trayvion Pysgod/Brighde für Haus Morfil, Háscan Gwialen/Arianhrod Pysgod für Haus Gwialen, Categirn Pysgod/Marwine für Haus Brithyll sowie Morholt Pysgod/Caitrin Neidr für Haus Tiwna; jeder Hausknoten hängt ausschließlich direkt unter seinem Paar. Alle dreizehn verheirateten Pysgod-Frauen, deren Linie im Zielhaus weiterläuft, besitzen eine direkte Wegverheiratet-Verknüpfung; bloße Herkunftswappen eingeheirateter Partner erzeugen keinen Hausknoten. Generische Quell-Silhouetten und unbenannte Hofämter wurden nicht als individuelle Portraits oder Personen importiert.',
     blankFamily: false,
-    sourceRevision: 5,
+    sourceRevision: 8,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

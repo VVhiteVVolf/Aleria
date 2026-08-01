@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_CANWYLL_PORTRAITS } from './house-canwyll-portraits.js';
 import {
   SILBERINSEL_HOUSE_EMBLEMS,
@@ -35,6 +36,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   sgwarnog: AEHRENTAL_HOUSE_EMBLEMS.sgwarnog,
   teyrngarch: SONNENKUESTE_HOUSE_EMBLEMS.teyrngarch,
   tiwna: SILBERINSEL_HOUSE_EMBLEMS.tiwna,
+  wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern,
   wylan: WEIDEBUCHT_HOUSE_EMBLEMS.wylan
 });
 
@@ -113,7 +115,14 @@ function awayWoman(id, name, birth, death, targetHouseName, options = {}) {
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    ...(emblem ? { extensions: { registryManagedFields: ['name', 'emblem'] } } : {})
+  };
 }
 
 const COUPLES = Object.freeze({
@@ -225,8 +234,8 @@ export const HOUSE_CANWYLL_FAMILY = Object.freeze({
     house('house-pyrth', 'Haus Pyrth', HOUSE_EMBLEMS.pyrth),
     house('house-blach', 'Haus Blach', HOUSE_EMBLEMS.blach),
     house('house-selwyn', 'Haus Selwyn'),
-    house('house-draenog', 'Haus Draenog'),
-    house('house-wivern', 'Haus Wivern'),
+    house('house-draenog', 'Haus Draenog', GRAUE_WEITE_HOUSE_EMBLEMS.draenog),
+    house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
     house('house-grawn', 'Haus Grawn', HOUSE_EMBLEMS.grawn),
     house('house-saith', 'Haus Saith', HOUSE_EMBLEMS.saith),
     house('house-wylan', 'Haus Wylan', HOUSE_EMBLEMS.wylan),
@@ -478,7 +487,7 @@ export const HOUSE_CANWYLL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 3,
     sourceModule: "Haus Canwyll O'Llanvane (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten und Porträtzuordnungen folgen der bereitgestellten Canwyll-Hausseite. Sieffre der Fromme und Jinelle Neidr sind die gemeinsamen Eltern der Gründerbrüder; Sieffre trägt den Holy Frame. Llwellyn und Hafren tragen allein den Canwyll-Hausknoten und führen diese Akte fort, während Llwyarch und Lynette ausschließlich den verknüpften Bruderhaus-Knoten Crefyddol tragen. Alle drei Punktreihen sind als strikt serielle absolute Generationentrenner modelliert. Der fehlerhafte Tabellenkopf „Cadoc’s & Urien’s“ wurde anhand der Partner- und Spaltenordnung zu Cadoc und Rhiannon berichtigt; Dyl und Derwen sind ihre Kinder, Mawr und die jüngere Llewella stammen von Urien und Zyraline. Die Quellformen Llewelyn/Llewellyn, Crefyddoll, Tegyrnach und Chiffydlon sind auf die bestehenden Projektformen Llwellyn, Crefyddol, Teyrngarch und Chiffyddlon normalisiert. Für die ältere Llewella gelten die genauer gepflegten Chiffyddlon-Daten 1608–1678 statt 1605–1693; Aeronwens offener Lebensstatus folgt der Neidr-Gegenakte trotz eines undatierten Todeskreuzes in der Canwyll-Tabelle. Die chronologisch auffällige Geburt Glesnis 1669 bei 1662 geborenen Eltern bleibt mangels belastbarer Alternativdaten dokumentiert, aber unverändert. Uvel und Alaweyn bilden die ausdrücklich belegte matrilineare Ausnahme: Orson und Lynee werden ausschließlich in Canwyll fortgeführt. Kinder anderer wegverheirateter Canwyll-Frauen bleiben in den jeweiligen Gegenakten. Sämtliche fünfzehn verheirateten Canwyll-Frauen ohne eigene Canwyll-Fortsetzung besitzen direkte Zielhausknoten.',
     registryManagedExtensionFields: ['sourceNote'],

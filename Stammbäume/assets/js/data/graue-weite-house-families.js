@@ -8,7 +8,23 @@ import {
   GRAUE_WEITE_ORIGIN_HOUSE_PROFILES
 } from './graue-weite-house-profiles.js';
 import { HOUSE_BRITHYLL_FAMILY } from './house-brithyll-family.js';
+import {
+  HOUSE_BLAIDD_BRANON_FAMILY,
+  HOUSE_BLAIDD_TREDEGAR_FAMILY
+} from './house-blaidd-family.js';
+import { HOUSE_COEDWIG_FAMILY } from './house-coedwig-family.js';
+import { HOUSE_DRAENOG_FAMILY } from './house-draenog-family.js';
 import { HOUSE_GWIALEN_FAMILY } from './house-gwialen-family.js';
+import {
+  HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY,
+  HOUSE_GWAEDLYD_TREDEGAR_FAMILY
+} from './house-gwaedlyd-family.js';
+import {
+  HOUSE_ILLYGODEN_TIRWEDD_FAMILY,
+  HOUSE_ILLYGODEN_TREDEGAR_FAMILY
+} from './house-illygoden-family.js';
+import { HOUSE_MORFIL_FAMILY } from './house-morfil-family.js';
+import { HOUSE_WIVERN_FAMILY } from './house-wivern-family.js';
 
 export const GRAUE_WEITE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'blaidd', familySlug: 'blaidd-tredegar', title: "Haus Blaidd O'Tredegar" }),
@@ -67,8 +83,21 @@ export const GRAUE_WEITE_ORIGIN_HOUSE_DEFINITIONS = Object.freeze([
 ]);
 
 const COMPLETED_CURRENT_HOUSE_FAMILIES = Object.freeze({
+  blaidd: HOUSE_BLAIDD_TREDEGAR_FAMILY,
   brithyll: HOUSE_BRITHYLL_FAMILY,
-  gwialen: HOUSE_GWIALEN_FAMILY
+  coedwig: HOUSE_COEDWIG_FAMILY,
+  draenog: HOUSE_DRAENOG_FAMILY,
+  gwialen: HOUSE_GWIALEN_FAMILY,
+  gwaedlyd: HOUSE_GWAEDLYD_TREDEGAR_FAMILY,
+  illygoden: HOUSE_ILLYGODEN_TREDEGAR_FAMILY,
+  morfil: HOUSE_MORFIL_FAMILY,
+  wivern: HOUSE_WIVERN_FAMILY
+});
+
+const COMPLETED_ORIGIN_HOUSE_FAMILIES = Object.freeze({
+  blaidd: HOUSE_BLAIDD_BRANON_FAMILY,
+  gwaedlyd: HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY,
+  illygoden: HOUSE_ILLYGODEN_TIRWEDD_FAMILY
 });
 
 function currentPlaceholder(definition) {
@@ -96,6 +125,8 @@ function currentPlaceholder(definition) {
 }
 
 function originPlaceholder(definition) {
+  const completedFamily = COMPLETED_ORIGIN_HOUSE_FAMILIES[definition.familySlug];
+  if (completedFamily) return completedFamily;
   const base = createFounderPlaceholderHouseFamily({
     id: `haus-${definition.familySlug}`,
     title: definition.title,

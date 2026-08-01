@@ -396,7 +396,9 @@ export const HOUSE_BRITHYLL_FAMILY = Object.freeze({
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: {
-    focusPersonId: 'cador-brithyll',
+    // Vollständiger Stammbaum: Der früheste Gründer bleibt Layout-Anker;
+    // kein späterer Fokuspunkt darf die fünf Geschwisterlinien optisch abschneiden.
+    focusPersonId: 'categirn-pysgod',
     orientation: 'vertical',
     ancestorDepth: 20,
     descendantDepth: 20,
@@ -405,7 +407,7 @@ export const HOUSE_BRITHYLL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Brithyll O'Tredegar (bereitgestellte Altdaten)",
     sourceNote: 'Categirn Pysgod und Marwine begründen Haus Brithyll. Der Hausknoten und der einzige Zeitsprung stehen strikt seriell vor der Generation Custenins. Gwyneth Coedwig ist eine einzelne Weltperson: Ihre Verlobung mit Gareth endet 1657; danach heiratet sie Rhydian, und nur dieser Ehe werden Blodeuyn und Aneirin zugeordnet. Kinder der wegverheirateten Blodeuyn, Menna, Dafyddwen und weiterer Frauen werden ausschließlich in den jeweiligen Zielhäusern fortgeführt. Die Altquelle widerspricht sich bei Efans Ehefrau in einer Kinderüberschrift; Partnerkarte und Genealogie belegen Maygan Blodeuwedd. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
@@ -420,6 +422,7 @@ export const HOUSE_BRITHYLL_FAMILY = Object.freeze({
       'secondarySeats',
       'regionEmblems'
     ],
-    registryManagedRecordFields: ['folderPath']
+    registryManagedRecordFields: ['folderPath'],
+    registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
 });

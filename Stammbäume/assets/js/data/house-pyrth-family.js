@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_PYRTH_PORTRAITS } from './house-pyrth-portraits.js';
 import {
   SILBERINSEL_HOUSE_EMBLEMS,
@@ -19,6 +20,7 @@ const PYRTH_HOUSE_ID = 'house-pyrth';
 const PYRTH_EMBLEM = SILBERINSEL_HOUSE_EMBLEMS.pyrth;
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   baedd: AEHRENTAL_HOUSE_EMBLEMS.baedd,
   canwyll: SILBERINSEL_HOUSE_EMBLEMS.canwyll,
   crefyddol: SILBERINSEL_HOUSE_EMBLEMS.crefyddol,
@@ -189,7 +191,7 @@ export const HOUSE_PYRTH_FAMILY = Object.freeze({
   houses: [
     house(PYRTH_HOUSE_ID, "Haus Pyrth O'Caer Clwyd", PYRTH_EMBLEM),
     house('house-neidr', "Haus Neidr O'Llanvane", HOUSE_EMBLEMS.neidr),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-crefyddol', "Haus Crefyddol O'Llanvane", HOUSE_EMBLEMS.crefyddol),
     house('house-dienyddiwr', 'Haus Dienyddiwr', HOUSE_EMBLEMS.dienyddiwr),
     house('house-canwyll', "Haus Canwyll O'Llanvane", HOUSE_EMBLEMS.canwyll),
@@ -357,7 +359,7 @@ export const HOUSE_PYRTH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     sourceModule: "Haus Pyrth O'Caer Clwyd (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Kopfschaft und Porträtzuordnungen folgen der bereitgestellten Pyrth-Hausseite. Roderic Pyrth und Llynn Neidr bilden das Gründerpaar; der goldene Pyrth-Hausknoten hängt unmittelbar unter beiden. Die einzige Punktreihe wird als absoluter Generationentrenner seriell nach dem Hauswappen und vor Dyngannon und Zygmunt gesetzt. Jowaneth verwendet zur Wahrung der vorhandenen Neidr-Gegenakte die stabile technische ID iowaneth-pyrth. Zyraline, Olwyn, Ythalia, Ysolt, Xantippe, Zenovia und Zennorah besitzen direkte Wegverheiratet-Knoten. Ihre in Crefyddol, Gwefrydd, Saith, Illysywen, Hwyaden und Baedd fortgeführten Kinder werden ausschließlich in den jeweiligen Gegenakten gezeigt. Umgekehrt bleiben die Nachkommen von Ulysses/Gwendolen, Jethro/Iorwen, Yspaddaden/Arvonia, Yorath/Caitrin und Wynoc/Maelyn ausschließlich in der Pyrth-Akte. Wiederholte schwarze Standardsilhouetten werden nicht als Individualporträts importiert. Das in der Quelle nicht als verstorben markierte, zugleich jedoch 1592 geborene Zygmunt bleibt ohne erfundenes Todesjahr.',
     registryManagedExtensionFields: ['sourceNote'],

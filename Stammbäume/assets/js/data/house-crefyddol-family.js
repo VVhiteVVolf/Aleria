@@ -21,6 +21,7 @@ const CREFYDDOL_EMBLEM = SILBERINSEL_HOUSE_EMBLEMS.crefyddol;
 const SECOND_TIME_JUMP_ID = 'gap-nodawl-to-merrion-generation-crefyddol';
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   canwyll: SILBERINSEL_HOUSE_EMBLEMS.canwyll,
   chiffyddlon: AEHRENTAL_HOUSE_EMBLEMS.chiffyddlon,
   crefyddol: CREFYDDOL_EMBLEM,
@@ -254,7 +255,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
     house('house-dienyddiwr', 'Haus Dienyddiwr', HOUSE_EMBLEMS.dienyddiwr),
     house('house-sgwarnog', 'Haus Sgwarnog', HOUSE_EMBLEMS.sgwarnog),
     house('house-penderyn', 'Haus Penderyn', HOUSE_EMBLEMS.penderyn),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-eirth', 'Haus Eirth'),
     house('house-morthwyl', 'Haus Morthwyl'),
     house('house-chiffyddlon', 'Haus Chiffyddlon', HOUSE_EMBLEMS.chiffyddlon),
@@ -331,7 +332,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
 
     person('kimball-crefydoll', 'Kimball Crefyddol', 'male', '1673', ''),
     awayWoman('gwendolyn-crefyddol', 'Gwendolyn Crefyddol', '1674', '', 'Haus Saith'),
-    person('lamorak-crefyddol', 'Lamorak Crefyddol', 'male', '1675', ''),
+    person('lamorak-crefyddol', 'Lamorak Crefyddol', 'male', '1675', '1725'),
     awayWoman('gwendolen-crefyddol', 'Gwendolen Crefyddol', '1678', '', 'Haus Eirth'),
     person('gethin-crefyddol', 'Gethin Crefyddol', 'male', '1675', ''),
     person('aneurin-crefyddol', 'Aneurin Crefyddol', 'male', '1675', ''),
@@ -392,7 +393,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
     createMarriage('marriage-cefinwen-penkawr-unigol', ...COUPLES.cefinwen),
     createMarriage('marriage-deryn-kimball', ...COUPLES.kimball),
     createMarriage('marriage-darwyn-gwendolyn-saith', ...COUPLES.gwendolyn1674),
-    createMarriage('marriage-lamorak-telyn-crefyddol', ...COUPLES.lamorak),
+    createMarriage('marriage-lamorak-telyn-crefyddol', ...COUPLES.lamorak, { status: 'ended', end: '1725' }),
     createMarriage('marriage-gwendolen-wyndham-eirth', ...COUPLES.gwendolen),
     createMarriage('marriage-gethin-katewen-crefyddol', ...COUPLES.gethin),
     createMarriage('marriage-anwen-aneurin-crefyddol', ...COUPLES.aneirin, { status: 'widowed', end: '1733' }),
@@ -501,7 +502,7 @@ export const HOUSE_CREFYDDOL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Crefyddoll O'Llanvane (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Amtsfolge und Porträtzuordnungen folgen der bereitgestellten Crefyddoll-Hausseite. Die Nutzerfestlegung und der ausführliche Geschichtstext haben Vorrang vor der widersprüchlichen Tabellenzeile, die fälschlich Bors Saith und Gwennan Neidr als Ursprung nennt: Sieffre der Fromme und Jinelle Neidr sind die gemeinsamen Eltern der Hausgründer. Sieffre trägt den Holy Frame. Llwyarch und Lynette tragen allein den Crefyddol-Hausknoten und führen diese Akte fort; Llwellyn und Hafren tragen ausschließlich den verknüpften Bruderhaus-Knoten Canwyll. Beide überlieferten Punktreihen werden als strikt serielle Zeitsprünge geführt. Die Schreibweisen Crefyddoll/Crefydoll und Beyon werden unter den bestehenden Projektformen Crefyddol und Beynon vereinheitlicht; die stabilen Gegenakten-IDs gwindor-crefydoll und kimball-crefydoll bleiben zur Identitätserhaltung bestehen. Penkawrs unmögliches Todesjahr 1625 ist zu 1725 normalisiert. Célyn Wylans Todesjahr 1712 folgt ihrer ausführlicheren Wylan-Herkunftsakte statt der hier genannten 1705. Kinder werden nur im fortführenden Haus geführt: Rhondia bei Dyngwn, Argylls Nachkommen bei Saith, Gregorys Nachkommen bei Marwolaeth, Glendowers Nachkommen bei Dyngwn, Darwyns Nachkommen bei Saith und Ninians Nachkommen bei Neidr; die Crefyddol-Nachkommen stehen ausschließlich hier. Sämtliche zwölf wegverheirateten Crefyddol-Frauen besitzen direkte Zielhausknoten. Revision 2 ergänzt das inzwischen belegte Gwialen-Wappen an der gemeinsamen Ehe Arwel/Angharad.',
     registryManagedExtensionFields: ['sourceNote'],

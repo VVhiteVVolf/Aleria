@@ -15,9 +15,11 @@ const HOUSE_EMBLEMS = Object.freeze({
   arth: 'assets/images/houses/Klaueninsel/haus-arth.png',
   draig: 'assets/images/houses/Llamreis Ankunft/haus-draig.png',
   brithyll: GRAUE_WEITE_HOUSE_EMBLEMS.brithyll,
+  morfil: GRAUE_WEITE_HOUSE_EMBLEMS.morfil,
   pendrag: 'assets/images/houses/Vortigerns Ruh/haus-pendrag.png',
   pysgod: 'assets/images/houses/Graue Weite/haus-pysgod.png',
-  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png'
+  saethwyr: 'assets/images/houses/Llamreis Ankunft/haus-saethwyr.png',
+  wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern
 });
 
 const ARTH_HOUSE_ID = 'house-arth';
@@ -191,7 +193,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll),
     house('house-morthwyll', 'Haus Morthwyll'),
     house('house-draig', 'Haus Draig', HOUSE_EMBLEMS.draig),
-    house('house-morfil', 'Haus Morfil'),
+    house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
     house('house-blodyn', 'Haus Blodyn'),
     house('house-eirth', 'Haus Eirth'),
     house('house-penderyn', 'Haus Penderyn'),
@@ -202,7 +204,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     house('house-selwyn', 'Haus Selwyn'),
     house('house-arfordir', 'Haus Arfordir'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
-    house('house-wivern', 'Haus Wivern'),
+    house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
     house('house-grawn', 'Haus Grawn'),
     house('house-pendrag', 'Haus Pendrag', HOUSE_EMBLEMS.pendrag),
     house('house-mata', 'Haus Mata'),
@@ -406,7 +408,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     }),
     createMarriage('marriage-heddwen-sayres', ...HEDDWEN_IDS),
     createMarriage('marriage-hafwen-madoc', ...MADOC_IDS),
-    createMarriage('marriage-rhydderch-talaith', ...RHYDDERCH_IDS),
+    createMarriage('marriage-rhydderch-talaith', ...RHYDDERCH_IDS, { status: 'ended', end: '1698' }),
     createMarriage('marriage-rhys-blawd', ...RHYS_IDS),
     createMarriage('marriage-rian-sath', ...RIAN_IDS),
     createMarriage('marriage-rhynnon-kyndra', ...RHYNNON_IDS),
@@ -423,7 +425,11 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     createMarriage('marriage-tegwen-morgan', ...TEGWEN_IDS),
     createMarriage('engagement-griff-jowna', ...GRIFF_IDS, { type: 'engagement', status: 'ended' }),
     createMarriage('marriage-cadfael-gwendolen', ...CADFAEL_1681_IDS),
-    createMarriage('marriage-gwennan-cerdd', ...GWENNAN_IDS),
+    createMarriage('marriage-gwennan-cerdd', ...GWENNAN_IDS, {
+      status: 'ended',
+      end: '1700',
+      extensions: { registryManagedFields: ['participantIds', 'type', 'status', 'end'] }
+    }),
     createMarriage('marriage-ceridwen-parzifal', ...PARZIFAL_IDS),
     createMarriage('marriage-tristan-isolde', ...ISOLDE_IDS),
     createMarriage('affair-owain-esyllt', ...ESYLLT_AFFAIR_IDS, { type: 'affair', status: 'ended' }),
@@ -522,6 +528,6 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol, Morthwyll, Eirth und Selwyn hängen jeweils direkt unter ihrem Gründerpaar. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 6
+    sourceRevision: 8
   }
 });

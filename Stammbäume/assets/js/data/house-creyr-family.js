@@ -5,6 +5,7 @@ import {
   createMarriedAwayBranch,
   createParentages
 } from './family-record-builders.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_CREYR_PORTRAITS } from './house-creyr-portraits.js';
 import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
 import {
@@ -17,6 +18,7 @@ const CREYR_HOUSE_ID = 'house-creyr';
 const CREYR_EMBLEM = WEIDEBUCHT_HOUSE_EMBLEMS.creyr;
 
 const HOUSE_EMBLEMS = Object.freeze({
+  coedwig: GRAUE_WEITE_HOUSE_EMBLEMS.coedwig,
   aderyn: 'assets/images/houses/Tal der Milane/haus-aderyn.png',
   blach: SONNENKUESTE_HOUSE_EMBLEMS.blach,
   creyr: CREYR_EMBLEM,
@@ -26,6 +28,7 @@ const HOUSE_EMBLEMS = Object.freeze({
   gwyvern: 'assets/images/houses/Llamreis Ankunft/haus-gwyvern.png',
   hwyaden: WEIDEBUCHT_HOUSE_EMBLEMS.hwyaden,
   llwynog: SONNENKUESTE_HOUSE_EMBLEMS.llwynog,
+  morfil: GRAUE_WEITE_HOUSE_EMBLEMS.morfil,
   mochdaer: WEIDEBUCHT_HOUSE_EMBLEMS.mochdaer,
   wylan: WEIDEBUCHT_HOUSE_EMBLEMS.wylan
 });
@@ -181,9 +184,9 @@ export const HOUSE_CREYR_FAMILY = Object.freeze({
     house('house-aderyn', 'Haus Aderyn', HOUSE_EMBLEMS.aderyn),
     house('house-saith', 'Haus Saith'),
     house('house-baedd', 'Haus Baedd'),
-    house('house-coedwig', 'Haus Coedwig'),
+    house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig),
     house('house-gwefrydd', 'Haus Gwefrydd'),
-    house('house-morfil', 'Haus Morfil'),
+    house('house-morfil', 'Haus Morfil', HOUSE_EMBLEMS.morfil),
     house('house-dyngwn', 'Haus Dyngwn', HOUSE_EMBLEMS.dyngwn),
     house('house-llwynog', 'Haus Llwynog', HOUSE_EMBLEMS.llwynog),
     house('house-gwyvern', 'Haus Gwyvern', HOUSE_EMBLEMS.gwyvern),
@@ -327,7 +330,7 @@ export const HOUSE_CREYR_FAMILY = Object.freeze({
     marriedAway('married-away-tudorwen-creyr-tylluan', 'Haus Tylluan', 'marriage-tudorwen-blegwywyrd-creyr', 'house-tylluan', 'haus-tylluan'),
     marriedAway('married-away-ariene-creyr-wylan', 'Haus Wylan', 'marriage-trachmyr-ariene', 'house-wylan', 'haus-wylan', HOUSE_EMBLEMS.wylan),
     marriedAway('married-away-blodwen-creyr-saith', 'Haus Saith', 'marriage-blodwen-lancel-creyr', 'house-saith', 'haus-saith'),
-    marriedAway('married-away-meredid-creyr-coedwig', 'Haus Coedwig', 'marriage-meredid-hoyer-creyr', 'house-coedwig', 'haus-coedwig'),
+    marriedAway('married-away-meredid-creyr-coedwig', 'Haus Coedwig', 'marriage-meredid-hoyer-creyr', 'house-coedwig', 'haus-coedwig', HOUSE_EMBLEMS.coedwig),
     marriedAway('married-away-gwenllian-creyr-dyngwn', 'Haus Dyngwn', 'marriage-gethin-gwenllian-dyngwn', 'house-dyngwn', 'haus-dyngwn', HOUSE_EMBLEMS.dyngwn),
     marriedAway('married-away-eurfron-creyr-gaeth', 'Haus Gaeth', 'marriage-eurfron-tudor-creyr', 'house-gaeth', 'haus-gaeth')
   ],
@@ -379,9 +382,13 @@ export const HOUSE_CREYR_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 4,
     sourceModule: "Haus Créyr O'Esgairmor (bereitgestellte Altdaten)",
-    sourceNote: 'Genealogie, Lebensdaten, Ehen, Porträts, Baronsfolge und Erbfolge folgen der bereitgestellten Créyr-Hausseite. Rhodhri Wylan und Tanwen Hwyaden tragen als Gründerpaar das Créyr-Hauswappen; der erste Zeitsprung liegt strikt darunter und führt erst danach zu Maldwyn und Llwyrddyddwg. Der zweite Zeitsprung führt ausschließlich von Maldwyn und Siriol zur Cadwaladr-Generation. Nachkommen werden nur in den fortgeführten Créyr-Zweigen dargestellt. Die Wylan-Nachkommen von Trachmyr und Ariene sowie die Dyngwn-Nachkommen von Gethin und Gwenllian verbleiben ausschließlich in ihren jeweiligen Gegenakten. Tudorwen, Ariene, Blodwen, Meredid, Gwenllian und Eurfron besitzen an ihren belegten Ehen direkte Wegverheiratet-Knoten. Gemeinsame Personen und Ehen behalten die vorhandenen Welt- und Beziehungs-IDs. Wiederholte generische Silhouetten und zwei namenlose Verlobten-Platzhalter wurden nicht als individuelle Personen importiert.',
+    sourceNote: 'Genealogie, Lebensdaten, Ehen, Porträts, Baronsfolge und Erbfolge folgen der bereitgestellten Créyr-Hausseite. Rhodhri Wylan und Tanwen Hwyaden tragen als Gründerpaar das Créyr-Hauswappen; der erste Zeitsprung liegt strikt darunter und führt erst danach zu Maldwyn und Llwyrddyddwg. Der zweite Zeitsprung führt ausschließlich von Maldwyn und Siriol zur Cadwaladr-Generation. Nachkommen werden nur in den fortgeführten Créyr-Zweigen dargestellt. Die Wylan-Nachkommen von Trachmyr und Ariene sowie die Dyngwn-Nachkommen von Gethin und Gwenllian verbleiben ausschließlich in ihren jeweiligen Gegenakten. Tudorwen, Ariene, Blodwen, Meredid, Gwenllian und Eurfron besitzen an ihren belegten Ehen direkte Wegverheiratet-Knoten. Gemeinsame Personen und Ehen behalten die vorhandenen Welt- und Beziehungs-IDs. Die neuere Gwaedlyd-Quelle ordnet Zara Coedwig eindeutig Talan Gwaedlyd zu; Talan Créyr bleibt daher ohne diese widersprüchliche Verlobung. Wiederholte generische Silhouetten und zwei namenlose Verlobten-Platzhalter wurden nicht als individuelle Personen importiert.',
+    registryTombstones: {
+      persons: ['zara-coedwig'],
+      partnerships: ['engagement-talan-zara-coedwig']
+    },
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems']
   }

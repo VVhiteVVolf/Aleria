@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
+import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
 import { HOUSE_TYLLUAN_PORTRAITS } from './house-tylluan-portraits.js';
 import { SONNENKUESTE_HOUSE_EMBLEMS } from './sonnenkueste-house-profiles.js';
 import {
@@ -28,7 +29,8 @@ const HOUSE_EMBLEMS = Object.freeze({
   illewod: SONNENKUESTE_HOUSE_EMBLEMS.illewod,
   ilyuncu: TAL_DER_MILANE_HOUSE_EMBLEMS.ilyuncu,
   mwyalchen: TAL_DER_MILANE_HOUSE_EMBLEMS.mwyalchen,
-  tylluan: TYLLUAN_EMBLEM
+  tylluan: TYLLUAN_EMBLEM,
+  wivern: GRAUE_WEITE_HOUSE_EMBLEMS.wivern
 });
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
@@ -136,7 +138,14 @@ function bastard(id, name, birth, death, options = {}) {
 }
 
 function house(id, name, emblem = '') {
-  return { id, name, motto: '', emblem, status: 'active' };
+  return {
+    id,
+    name,
+    motto: '',
+    emblem,
+    status: 'active',
+    ...(emblem ? { extensions: { registryManagedFields: ['name', 'emblem'] } } : {})
+  };
 }
 
 function endedMarriage(id, firstId, secondId, end) {
@@ -240,7 +249,7 @@ export const HOUSE_TYLLUAN_FAMILY = Object.freeze({
     house('house-feuerhaar', 'Haus Feuerhaar'),
     house('house-gwarchod', 'Haus Gwarchod', HOUSE_EMBLEMS.gwarchod),
     house('house-hebog', 'Haus Hebog', HOUSE_EMBLEMS.hebog),
-    house('house-wivern', 'Haus Wivern'),
+    house('house-wivern', 'Haus Wivern', HOUSE_EMBLEMS.wivern),
     house('house-mwyalchen', 'Haus Mwyalchen', HOUSE_EMBLEMS.mwyalchen),
     house('house-loganne', 'Haus Loganne'),
     house('house-ilyuncu', 'Haus Ilyuncu', HOUSE_EMBLEMS.ilyuncu)
@@ -399,7 +408,7 @@ export const HOUSE_TYLLUAN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: "Haus Tylluan O'Penbryn (bereitgestellte Altdaten)",
     sourceNote: 'Gwynham Aderyn und Rhianu begründen den Tylluan-Kadettenzweig. Der Hausknoten und der einzige Zeitsprung stehen strikt seriell vor Niadhnair und Gwladus. Niadhnairs ehelicher Sohn Blegwywyrd und sein Bastard Arawn werden ihren jeweiligen Müttern eindeutig zugeordnet; Gwion führt als Arawns Sohn den Bastardstatus in dieser Linie fort. Gwladus, Manon, Siana, Wynthonya, Jenara und Talaith erhalten direkte Wegverheiratet-Knoten; ihre Kinder werden nur in der jeweils fortführenden Hausakte gezeigt. Umgekehrt werden die Tylluan-Kinder von Tudorwen Créyr, Gwendolen Gaeth, Evaine Illewod, Venora Eryr, Tegan Gwarchod, Thalena Hebog und Tatumn Mwyalchen ausschließlich hier fortgeführt. Die Quellenvarianten Blegwyrd und Logane wurden an die bereits kanonischen Formen Blegwywyrd und Loganne angeglichen. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['sourceNote'],
