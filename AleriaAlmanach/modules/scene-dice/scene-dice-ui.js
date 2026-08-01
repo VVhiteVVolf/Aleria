@@ -54,19 +54,46 @@ function ensureSceneDiceDialog() {
       </header>
       <div class="scene-dice-body">
         <main class="scene-dice-workspace">
-          <section class="scene-dice-board" aria-label="3D-Würfelbrett">
-            <div id="scene-dice-stage" class="scene-dice-stage"></div>
-            <div class="scene-dice-board-shade" aria-hidden="true"></div>
-            <div class="scene-dice-stage-status" data-scene-dice-stage-status data-state="idle">Bereit für deinen Wurf.</div>
-            <div class="scene-dice-engine-note" data-scene-dice-engine-note hidden></div>
-          </section>
-          <section class="scene-dice-result" data-scene-dice-result data-state="idle" aria-live="polite">
-            <div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Stelle rechts deinen Würfelpool zusammen.</span></div>
-          </section>
+          <div class="scene-dice-board-shell">
+            <span class="scene-dice-frame-rail is-top" aria-hidden="true"></span>
+            <span class="scene-dice-frame-rail is-right" aria-hidden="true"></span>
+            <span class="scene-dice-frame-rail is-bottom" aria-hidden="true"></span>
+            <span class="scene-dice-frame-rail is-left" aria-hidden="true"></span>
+            <span class="scene-dice-frame-corner is-top-left" aria-hidden="true"><i></i></span>
+            <span class="scene-dice-frame-corner is-top-right" aria-hidden="true"><i></i></span>
+            <span class="scene-dice-frame-corner is-bottom-right" aria-hidden="true"><i></i></span>
+            <span class="scene-dice-frame-corner is-bottom-left" aria-hidden="true"><i></i></span>
+            <section class="scene-dice-board" aria-label="3D-Würfelbrett">
+              <div id="scene-dice-stage" class="scene-dice-stage"></div>
+              <div class="scene-dice-board-shade" aria-hidden="true"></div>
+              <div class="scene-dice-stage-status" data-scene-dice-stage-status data-state="idle">Bereit für deinen Wurf.</div>
+              <div class="scene-dice-engine-note" data-scene-dice-engine-note hidden></div>
+            </section>
+          </div>
         </main>
         <aside class="scene-dice-controls" aria-label="Würfelsteuerung">
+          <section class="scene-dice-panel scene-dice-context-panel">
+            <div class="scene-dice-section-head"><div><span>1 · Szenenangaben</span><small>Figur, Probe und erzählerischer Kontext</small></div></div>
+            <div class="scene-dice-context">
+              <div class="scene-dice-roller-field">
+                <span>Wer handelt?</span>
+                <input id="scene-dice-roller" type="hidden" value="">
+                <button class="scene-dice-roller-trigger" type="button" data-scene-dice-action="toggle-roller" data-scene-dice-roller-trigger aria-expanded="false">
+                  <span class="scene-dice-roller-avatar placeholder" aria-hidden="true">?</span><span><strong>Figur wird geladen …</strong><small>Aktive Szene wird ausgewertet</small></span><i aria-hidden="true">⌄</i>
+                </button>
+                <div class="scene-dice-participant-picker" data-scene-dice-participant-picker hidden>
+                  <label class="scene-dice-participant-search"><span>Figur suchen</span><input type="search" data-scene-dice-participant-search placeholder="Name oder Alias" autocomplete="off"></label>
+                  <div class="scene-dice-participant-list" data-scene-dice-participant-list><p class="scene-dice-participant-empty">Aktive Szene wird gelesen …</p></div>
+                </div>
+              </div>
+              <label><span>Probe</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
+              <label><span>Wurfart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
+              <label class="scene-dice-situation-field"><span>Situationskontext für AleriaGPT</span><textarea id="scene-dice-situation" rows="2" maxlength="900" placeholder="z. B. Anaraut begutachtet die gefundene Tatwaffe und sucht nach ungewöhnlichen Spuren."></textarea><small>Weshalb wird gewürfelt und worauf soll das Ergebnis angewendet werden?</small></label>
+            </div>
+          </section>
+
           <section class="scene-dice-panel scene-dice-pool-panel">
-            <div class="scene-dice-section-head"><div><span>Würfelpool</span><small>Antippen fügt einen Würfel hinzu</small></div><button type="button" data-scene-dice-action="reset-pool">Zurücksetzen</button></div>
+            <div class="scene-dice-section-head"><div><span>2 · Würfelpool</span><small>Antippen fügt einen Würfel hinzu</small></div><button type="button" data-scene-dice-action="reset-pool">Zurücksetzen</button></div>
             <div class="scene-dice-types">${buildSceneDiceTypeButtons()}</div>
             <div class="scene-dice-pool" data-scene-dice-pool></div>
             <div class="scene-dice-mode-row">
@@ -90,23 +117,10 @@ function ensureSceneDiceDialog() {
             </div>
           </section>
 
-          <section class="scene-dice-panel scene-dice-context-panel">
-            <div class="scene-dice-section-head"><div><span>Szenenwurf</span><small>Figur, Probe und erzählerischer Kontext</small></div></div>
-            <div class="scene-dice-context">
-              <div class="scene-dice-roller-field">
-                <span>Wer handelt?</span>
-                <input id="scene-dice-roller" type="hidden" value="">
-                <button class="scene-dice-roller-trigger" type="button" data-scene-dice-action="toggle-roller" data-scene-dice-roller-trigger aria-expanded="false">
-                  <span class="scene-dice-roller-avatar placeholder" aria-hidden="true">?</span><span><strong>Figur wird geladen …</strong><small>Aktive Szene wird ausgewertet</small></span><i aria-hidden="true">⌄</i>
-                </button>
-                <div class="scene-dice-participant-picker" data-scene-dice-participant-picker hidden>
-                  <label class="scene-dice-participant-search"><span>Figur suchen</span><input type="search" data-scene-dice-participant-search placeholder="Name oder Alias" autocomplete="off"></label>
-                  <div class="scene-dice-participant-list" data-scene-dice-participant-list><p class="scene-dice-participant-empty">Aktive Szene wird gelesen …</p></div>
-                </div>
-              </div>
-              <label><span>Probe</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
-              <label><span>Wurfart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
-              <label class="scene-dice-situation-field"><span>Situationskontext für AleriaGPT</span><textarea id="scene-dice-situation" rows="2" maxlength="900" placeholder="z. B. Anaraut begutachtet die gefundene Tatwaffe und sucht nach ungewöhnlichen Spuren."></textarea><small>Weshalb wird gewürfelt und worauf soll das Ergebnis angewendet werden?</small></label>
+          <section class="scene-dice-panel scene-dice-result-panel">
+            <div class="scene-dice-section-head"><div><span>3 · Auswertung</span><small>Ergebnis und erzählerische Folge</small></div></div>
+            <div class="scene-dice-result" data-scene-dice-result data-state="idle" aria-live="polite">
+              <div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Lege Szenenangaben und Würfelpool fest.</span></div>
             </div>
           </section>
 
@@ -197,6 +211,12 @@ function renderSceneDiceNarrationPreview(roll) {
   return '<div class="scene-dice-narration" data-state="idle"><span>Erzählerische Auswertung</span><p>Wird nach dem Wurf von AleriaGPT erstellt.</p></div>';
 }
 
+function revealSceneDiceResult() {
+  requestAnimationFrame(() => {
+    document.querySelector('.scene-dice-result-panel')?.scrollIntoView({ block: 'start', inline: 'nearest' });
+  });
+}
+
 function renderSceneDicePendingRoll(roll) {
   const target = document.querySelector('[data-scene-dice-result]');
   if (!target) return;
@@ -221,6 +241,7 @@ function renderSceneDicePendingRoll(roll) {
       ${renderSceneDiceNarrationPreview(roll)}
     </div>`;
   setSceneDiceEngineNote(roll.animationWarning || '');
+  revealSceneDiceResult();
 }
 
 function renderSceneDicePool() {
@@ -329,8 +350,10 @@ function resetSceneDiceDialog() {
   const result = document.querySelector('[data-scene-dice-result]');
   if (result) {
     result.dataset.state = 'idle';
-    result.innerHTML = '<div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Stelle rechts deinen Würfelpool zusammen.</span></div>';
+    result.innerHTML = '<div class="scene-dice-result-idle"><strong>Noch kein Schicksal geworfen</strong><span>Lege Szenenangaben und Würfelpool fest.</span></div>';
   }
+  const controls = document.querySelector('.scene-dice-controls');
+  if (controls) controls.scrollTop = 0;
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (commit) commit.disabled = true;
   setSceneDiceStatus('');

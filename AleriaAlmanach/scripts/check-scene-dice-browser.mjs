@@ -7,6 +7,7 @@ const appUrl = process.argv[2] || process.env.ALERIA_URL || 'http://127.0.0.1:41
 const screenshotPath = resolve('.codex-temp/scene-dice-browser.png');
 const motionScreenshotPath = resolve('.codex-temp/scene-dice-motion.png');
 const participantScreenshotPath = resolve('.codex-temp/scene-dice-participants.png');
+const compactDesktopScreenshotPath = resolve('.codex-temp/scene-dice-compact-desktop.png');
 
 const target = await fetch(`${cdpOrigin}/json/new?about:blank`, { method: 'PUT' }).then(response => response.json());
 const socket = new WebSocket(target.webSocketDebuggerUrl);
@@ -112,6 +113,7 @@ const prepared = await evaluate(`(async () => {
   activateDialog('scene-dice-overlay', { initialFocus: '#scene-dice-formula', delay: 0 });
   await new Promise(resolve => setTimeout(resolve, 60));
   const engine = await window.AleriaSceneDice.prepare(document.getElementById('scene-dice-stage'));
+  const shell = document.querySelector('.scene-dice-board-shell');
   const board = document.querySelector('.scene-dice-board');
   const shade = document.querySelector('.scene-dice-board-shade');
   const appearances = window.AleriaSceneDice.getDiceTypes();
@@ -121,6 +123,9 @@ const prepared = await evaluate(`(async () => {
     focusedId: document.activeElement?.id || '',
     modalOpen: document.getElementById('scene-dice-overlay').classList.contains('active'),
     boardBackground: getComputedStyle(board).backgroundImage,
+    htmlFrameRailCount: shell.querySelectorAll('.scene-dice-frame-rail').length,
+    htmlFrameCornerCount: shell.querySelectorAll('.scene-dice-frame-corner').length,
+    boardNestedInFrame: shell.contains(board),
     shadeMask: getComputedStyle(shade).maskImage || getComputedStyle(shade).webkitMaskImage,
     appearanceCount: appearances.length,
     appearanceColors: appearances.map(item => item.color)
@@ -132,6 +137,9 @@ assert.ok(prepared.canvasCount >= 1, 'Dice Box hat kein Canvas erzeugt.');
 assert.equal(prepared.focusedId, 'scene-dice-formula');
 assert.equal(prepared.modalOpen, true);
 assert.match(prepared.boardBackground, /dice-board\.png/);
+assert.equal(prepared.htmlFrameRailCount, 4);
+assert.equal(prepared.htmlFrameCornerCount, 4);
+assert.equal(prepared.boardNestedInFrame, true);
 assert.notEqual(prepared.shadeMask, 'none', 'Die optische Brettbegrenzung fehlt.');
 assert.equal(prepared.appearanceCount, 7);
 assert.equal(new Set(prepared.appearanceColors).size, 7, 'Nicht jede Würfelart besitzt eine eigene Farbe.');
@@ -250,12 +258,18 @@ assert.match(combined.narration, /unsicheren Eindruck/);
 const narrationRequest = await evaluate(`(() => ({
   query: window.__sceneDiceAiQueries.at(-1) || '',
   preview: document.querySelector('.scene-dice-narration[data-state="ready"]')?.textContent || '',
-  commitEnabled: !document.querySelector('[data-scene-dice-action="commit"]')?.disabled
+  commitEnabled: !document.querySelector('[data-scene-dice-action="commit"]')?.disabled,
+  resultVisible: (() => {
+    const panel = document.querySelector('.scene-dice-result-panel').getBoundingClientRect();
+    const controls = document.querySelector('.scene-dice-controls').getBoundingClientRect();
+    return panel.top >= controls.top - 1 && panel.bottom <= controls.bottom + 1;
+  })()
 }))()`);
 assert.match(narrationRequest.query, /neutraler Erzähler in der dritten Person/);
 assert.match(narrationRequest.query, /Liora prüft ein fremdartiges Siegel am Tatort/);
 assert.match(narrationRequest.preview, /Erzählerische Auswertung/);
 assert.equal(narrationRequest.commitEnabled, true);
+assert.equal(narrationRequest.resultVisible, true, 'Die Auswertung wird nach dem Wurf nicht sichtbar nachgeführt.');
 
 const persistedNarration = await evaluate(`(() => {
   const host = document.createElement('div');
@@ -290,22 +304,70 @@ assert.match(persistedNarration.narration, /nichts Belastbares/);
 assert.match(persistedNarration.context, /Tatwaffe/);
 
 const desktopLayout = await evaluate(`(() => {
+  const frame = document.querySelector('.scene-dice-board-shell').getBoundingClientRect();
   const board = document.querySelector('.scene-dice-board').getBoundingClientRect();
   const result = document.querySelector('.scene-dice-result').getBoundingClientRect();
   const formula = document.querySelector('.scene-dice-result-formula');
   return {
-    boardBottom: Math.round(board.bottom),
-    resultTop: Math.round(result.top),
+    frameWidth: Math.round(frame.width),
+    frameHeight: Math.round(frame.height),
+    boardWidth: Math.round(board.width),
+    boardHeight: Math.round(board.height),
+    playAreaWidth: Math.round(board.width),
+    playAreaHeight: Math.round(board.height),
+    frameOutsideBoard: frame.width > board.width && frame.height > board.height && frame.left < board.left && frame.top < board.top,
+    resultInsideControls: !!document.querySelector('.scene-dice-controls > .scene-dice-result-panel .scene-dice-result'),
+    boardAndResultSeparated: frame.right <= result.left || result.right <= frame.left || frame.bottom <= result.top || result.bottom <= frame.top,
     formulaFits: formula.scrollWidth <= formula.clientWidth + 1
   };
 })()`);
 
-assert.ok(desktopLayout.boardBottom <= desktopLayout.resultTop, 'Würfelbrett und Ergebnisfläche überlappen sich.');
+assert.ok(desktopLayout.playAreaWidth >= 500 && desktopLayout.playAreaHeight >= 500, 'Die innere Würfelbildfläche nutzt den verfügbaren Platz nicht aus.');
+assert.equal(desktopLayout.frameOutsideBoard, true, 'Der HTML-Rahmen liegt nicht vollständig außerhalb des Würfelbilds.');
+assert.equal(desktopLayout.resultInsideControls, true, 'Die Auswertung liegt nicht in der geordneten Steuerungsspalte.');
+assert.equal(desktopLayout.boardAndResultSeparated, true, 'Würfelbrett und Ergebnisfläche überlappen sich.');
 assert.equal(desktopLayout.formulaFits, true, 'Die Ergebnisformel läuft aus ihrer Spalte.');
 
 const screenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
 await mkdir(dirname(screenshotPath), { recursive: true });
 await writeFile(screenshotPath, Buffer.from(screenshot.data, 'base64'));
+
+await send('Emulation.setDeviceMetricsOverride', { width: 1165, height: 807, deviceScaleFactor: 1, mobile: false });
+const compactDesktopUi = await evaluate(`(async () => {
+  window.dispatchEvent(new Event('resize'));
+  await new Promise(resolve => setTimeout(resolve, 120));
+  if (_sceneDicePendingRoll) renderSceneDicePendingRoll(_sceneDicePendingRoll);
+  await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  const card = document.querySelector('.scene-dice-card').getBoundingClientRect();
+  const body = document.querySelector('.scene-dice-body').getBoundingClientRect();
+  const frame = document.querySelector('.scene-dice-board-shell').getBoundingClientRect();
+  const boardElement = document.querySelector('.scene-dice-board');
+  const board = boardElement.getBoundingClientRect();
+  const controls = document.querySelector('.scene-dice-controls').getBoundingClientRect();
+  const result = document.querySelector('.scene-dice-result').getBoundingClientRect();
+  const resultPanel = document.querySelector('.scene-dice-result-panel').getBoundingClientRect();
+  const footer = document.querySelector('.scene-dice-foot').getBoundingClientRect();
+  return {
+    cardRect: { left: Math.round(card.left), top: Math.round(card.top), right: Math.round(card.right), bottom: Math.round(card.bottom), width: Math.round(card.width), height: Math.round(card.height) },
+    cardFits: card.left >= 0 && card.right <= innerWidth && card.top >= 0 && card.bottom <= innerHeight,
+    bodyEndsBeforeFooter: body.bottom <= footer.top + 1,
+    boardFitsBody: frame.left >= body.left && frame.top >= body.top && frame.bottom <= body.bottom + 1,
+    playAreaWidth: Math.round(board.width),
+    columnsSeparated: frame.right <= controls.left && (frame.right <= result.left || result.right <= frame.left),
+    resultVisible: resultPanel.top >= controls.top - 1 && resultPanel.bottom <= controls.bottom + 1,
+    resultFormulaFits: document.querySelector('.scene-dice-result-formula').scrollWidth <= document.querySelector('.scene-dice-result-formula').clientWidth + 1
+  };
+})()`);
+
+assert.equal(compactDesktopUi.cardFits, true, `Das Würfelfenster verlässt bei 1165 × 807 den sichtbaren Bereich: ${JSON.stringify(compactDesktopUi.cardRect)}`);
+assert.equal(compactDesktopUi.bodyEndsBeforeFooter, true, 'Inhalt und Aktionsleiste überlappen sich bei 1165 × 807.');
+assert.equal(compactDesktopUi.boardFitsBody, true, 'Der gerahmte Würfelbereich läuft bei 1165 × 807 aus dem Fenster.');
+assert.ok(compactDesktopUi.playAreaWidth >= 500, 'Das Würfelbild bleibt bei 1165 × 807 zu klein.');
+assert.equal(compactDesktopUi.columnsSeparated, true, 'Würfelbild und Steuerung überlappen sich bei 1165 × 807.');
+assert.equal(compactDesktopUi.resultVisible, true, 'Die Auswertung bleibt bei 1165 × 807 nach dem Wurf nicht vollständig sichtbar.');
+assert.equal(compactDesktopUi.resultFormulaFits, true, 'Die Ergebnisformel überläuft bei 1165 × 807.');
+const compactDesktopScreenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+await writeFile(compactDesktopScreenshotPath, Buffer.from(compactDesktopScreenshot.data, 'base64'));
 
 const collisionGuard = await evaluate(`(async () => {
   const first = window.AleriaSceneDice.roll('1d4', document.getElementById('scene-dice-stage'));
@@ -323,7 +385,7 @@ const mobileUi = await evaluate(`(async () => {
   window.dispatchEvent(new Event('resize'));
   await new Promise(resolve => setTimeout(resolve, 120));
   const body = document.querySelector('.scene-dice-body');
-  const stage = document.querySelector('.scene-dice-board');
+  const stage = document.querySelector('.scene-dice-board-shell');
   const controls = document.querySelector('.scene-dice-controls');
   const formula = document.getElementById('scene-dice-formula');
   return {
@@ -364,5 +426,5 @@ const relevantRuntimeErrors = runtimeErrors.filter(error => /dice|scene-dice/i.t
 assert.deepEqual(diceAssetErrors, [], `Dice-Asset-Fehler: ${diceAssetErrors.join(', ')}`);
 assert.deepEqual(relevantRuntimeErrors, [], 'JavaScript-Fehler im Würfelsystem entdeckt.');
 
-console.log(JSON.stringify({ prepared, participantUi, poolCombination, damage, advantage, combined, narrationRequest, persistedNarration, desktopLayout, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath, participantScreenshotPath }, null, 2));
+console.log(JSON.stringify({ prepared, participantUi, poolCombination, damage, advantage, combined, narrationRequest, persistedNarration, desktopLayout, compactDesktopUi, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath, participantScreenshotPath, compactDesktopScreenshotPath }, null, 2));
 socket.close();
