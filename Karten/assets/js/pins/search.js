@@ -18,7 +18,8 @@
   }
 
   function searchableFields(pin){
-    return [pin.title, pin.region, pin.house, pin.faction, pin.text, ...(pin.table || []).map(row => row.v)];
+    const dominion = runtime.dominionForPin(pin);
+    return [pin.title, dominion?.name, pin.region, pin.house, pin.faction, pin.text, ...(pin.table || []).map(row => row.v)];
   }
 
   // Ranks pins against a query: exact-prefix matches on the title rank

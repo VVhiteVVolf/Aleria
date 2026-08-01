@@ -147,6 +147,67 @@ Basiskarte. Der Editormodus-Zugang (Button "🔒 Bearbeiten") fragt seit
 2026-08 kein Passwort mehr ab (`toggleEdit()` ruft direkt `enterEdit()`/
 `exitEdit()`) - die Karten sind ohnehin nicht oeffentlich verlinkt.
 
+### Praesentationsmodus
+
+`togglePresentationMode()` setzt/entfernt die Klasse `presentation-mode`
+auf `<body>`; CSS blendet damit Topbar, Kategorie-Leiste und die linke
+Reise-Werkzeuge-Sidebar komplett aus (nur fuer Bildschirmfreigabe mit
+Spielern - geheime Pins sind bereits ausserhalb des Editormodus gefiltert,
+das bleibt unveraendert). Ein einzelner Button oben rechts
+(`#btn-exit-presentation`, nur in diesem Modus sichtbar) sowie Escape
+beenden ihn wieder. `window.fitView()` wird beim Ein-/Ausschalten erneut
+aufgerufen, weil sich die verfuegbare Kartenflaeche aendert. Reiner
+Sitzungs-Zustand, nichts davon wird gespeichert.
+
+### Herrschaften/Baronien (`S.dominions`)
+
+Jede Karte kann eine eigene Liste an Herrschaften/Baronien fuehren
+(`{id, name, type, ruler, seat, note, parentId}`, verwaltet ueber "📋 DM ▾
+→ 🏰 Herrschaften"). `parentId` bildet feudale Verschachtelung ab (z.B.
+eine ritterfuerstliche Herrschaft INNERHALB einer Baronie) - `dominionChain()`
+liefert die volle Kette vom obersten Vorfahren bis zur Herrschaft selbst,
+`orderedDominions()` sortiert die Verwaltungsliste/das Zuordnungs-Dropdown
+so, dass jede Herrschaft direkt unter ihrem Elternteil steht (eingerueckt
+mit "↳"). Wird ein Elternteil geloescht, ruecken seine Kinder eine Ebene
+hoch statt zu verschwinden.
+
+Pins verweisen optional per `pin.dominionId` darauf, zuweisbar im
+Pin-Editor unter "⚔ Zugehoerigkeit" (zusaetzlich zu den bestehenden
+Freitextfeldern Region/Herrschaft-Haus/Fraktion, die nicht angetastet
+wurden). Die volle Kette erscheint in der Sichtungsrolle und der
+Live-Vorschau des Editors, und fliesst in die Sucheindex-Felder mit ein
+(`search.js`).
+
+Fuer Celtigerns Wacht mit 9 Herrschaften aus der Lore-Seite "Grafschaft
+Celtigerns Wacht" vorbefuellt (Herrschaft der Saethwyr/Gafyr/Wyrm sind
+ritterfuerstliche Herrschaften mit `parentId` = Baronie Gwendolyns Ufer,
+vom Nutzer bestaetigt). 53 von 99 Pins zugeordnet - per Abgleich mit
+vorhandenem `pin.region`-Freitext, exaktem Siedlungsnamen-Treffer aus der
+Lore-Seite, oder direkter Nutzer-Bestaetigung fuer die restlichen
+Zweifelsfaelle; was uneindeutig blieb, wurde bewusst leer gelassen statt
+geraten. Andere Grafschaften/Karten starten mit einer leeren Liste, bis
+jemand sie befuellt - die Struktur ist generisch und nicht an Celtigerns
+Wacht gebunden.
+
+### Undo & Mehrfachauswahl
+
+`karto-app.js` fuehrt einen Sitzungs-Undo-Stack (`pushUndo(label, fn)` /
+`undoLast()`, ueber `runtime.pushUndo` auch fuer Feature-Module nutzbar;
+`btn-undo` + Strg/Cmd+Z). Kein echtes Redo, kein Ueberleben eines
+Reloads - dafuer bleibt der bestehende Backup-Verlauf zustaendig. Bereits
+angebunden: Pin verschieben/loeschen/setzen (inkl. Stempeln),
+Überschreiben-Aktion, sowie die Mehrfachauswahl-Bulk-Aktionen unten.
+
+In `pin-renderer.js` schaltet Strg/Cmd+Klick auf einen Pin dessen
+Mitgliedschaft in einer Sitzungs-Auswahl (`selection`-Set, nicht
+gespeichert) um; `#bulk-bar` erscheint sobald 1+ Pins ausgewaehlt sind
+und bietet Kategorie-Aendern und Loeschen fuer die ganze Auswahl an
+(je ein gemeinsamer Undo-Eintrag fuer die ganze Aktion). Die Bar
+positioniert sich bei jedem Update relativ zur tatsaechlich gemessenen
+Topbar-Hoehe (`topbar.getBoundingClientRect().bottom`), nicht ueber
+einen festen Pixel-Wert, weil die Topbar im Editormodus je nach
+Fensterbreite unterschiedlich viele Zeilen umbricht.
+
 ## Regeln fuer neue Karten
 
 Eine neue Karte darf individuelle Inhalte besitzen:

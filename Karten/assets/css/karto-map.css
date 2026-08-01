@@ -249,6 +249,10 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 }
 .pin.edit-mode:hover .pin-marker-img{transform:translate(-50%,0) scale(1.12);}
 .pin.dragging .pin-marker-img{opacity:.85;}
+/* Multi-select (Strg/Cmd+Klick) - highlight follows whichever marker type
+   the pin actually renders, so no separate ring/anchor math is needed. */
+.pin.selected .pin-dot{box-shadow:0 0 0 3px var(--gold),0 2px 6px rgba(0,0,0,.6);}
+.pin.selected .pin-marker-img{filter:drop-shadow(0 0 4px var(--gold)) drop-shadow(0 0 4px var(--gold)) drop-shadow(1px 2px 3px rgba(0,0,0,.55));}
 /* pin label */
 .pin-label{
   position:absolute;
@@ -536,6 +540,34 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 #hint.on{opacity:1;}
 #toast{position:fixed;top:62px;right:13px;z-index:999;background:var(--p1);border:1px solid var(--border);font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.06em;color:var(--ink);padding:.32rem .9rem;pointer-events:none;opacity:0.75;transition:all .22s;transform:translateY(-5px);box-shadow:0 4px 14px var(--shadow);}
 #toast.on{opacity:1;transform:translateY(0);}
+
+#bulk-bar{
+  position:fixed;top:62px;left:50%;transform:translateX(-50%);
+  z-index:400;align-items:center;gap:.55rem;
+  background:var(--p1);border:1px solid var(--border);border-radius:3px;
+  padding:.4rem .7rem;box-shadow:0 6px 20px var(--shadow);
+  animation:popIn .16s ease;
+}
+#bulk-count{font-family:'Cinzel',serif;font-size:var(--fs-sm);letter-spacing:0.02em;color:var(--ink2);white-space:nowrap;}
+#bulk-cat-sel{width:auto;flex-shrink:0;}
+
+/* ══ PRÄSENTATIONSMODUS ══ - screen-sharing view, no DM chrome */
+.presentation-mode #topbar,
+.presentation-mode #cat-bar-wrap,
+.presentation-mode #lsb-toggle,
+.presentation-mode #lsb{display:none !important;}
+#btn-exit-presentation{
+  display:none;position:fixed;top:12px;right:12px;z-index:900;
+  font-family:'Cinzel',serif;font-size:var(--fs-xs);letter-spacing:0.04em;
+  background:rgba(30,15,0,.55);border:1px solid rgba(255,255,255,.25);color:#fff;
+  padding:5px 12px;border-radius:2px;cursor:pointer;opacity:.55;transition:opacity .15s;
+}
+#btn-exit-presentation:hover{opacity:1;}
+.presentation-mode #btn-exit-presentation{display:block;}
+
+/* ══ HERRSCHAFTEN-VERWALTUNG ══ */
+#dominion-list{display:flex;flex-direction:column;gap:.5rem;}
+.dom-card{border:1px solid var(--border2);border-radius:2px;padding:.5rem .6rem;background:rgba(255,248,220,.4);}
 
 .map-route-status{
   position:fixed;

@@ -3,7 +3,13 @@
   let dragId = null;
   let dragOffsetX = 0;
   let dragOffsetY = 0;
+  let dragStartX = null;
+  let dragStartY = null;
   let tooltipHideTimer = null;
+  // Ctrl/Cmd+click toggles pin membership here - session-only, not saved.
+  // Bulk actions (Kategorie ändern / Löschen) act on whatever's in here,
+  // see bulkSetCategory()/bulkDeleteSelected() below.
+  let selection = new Set();
 
   function state(){
     return runtime.state();
@@ -28,10 +34,16 @@
     layer.innerHTML = '';
     if(!image.width) return;
 
+    // Drop selection entries for pins that no longer exist (bulk-deleted,
+    // or an add got undone) so a stale id can't silently linger.
+    const validIds = new Set(state().pins.map(pin => pin.id));
+    let selectionChanged = false;
+    selection.forEach(id => { if(!validIds.has(id)){ selection.delete(id); selectionChanged = true; } });
+
     const options = runtime.pinDisplayOptions();
     visiblePins().forEach(pin => {
       const element = document.createElement('div');
-      element.className = 'pin' + (runtime.isEditMode() ? ' edit-mode' : '') + (pin.secret ? ' secret' : '');
+      element.className = 'pin' + (runtime.isEditMode() ? ' edit-mode' : '') + (pin.secret ? ' secret' : '') + (selection.has(pin.id) ? ' selected' : '');
       element.dataset.id = pin.id;
       element.style.left = (pin.x * image.width) + 'px';
       element.style.top = (pin.y * image.height) + 'px';
@@ -60,6 +72,7 @@
       attachPinEvents(element, pin);
       layer.appendChild(element);
     });
+    if(selectionChanged) updateBulkBar();
   }
 
   function attachPinEvents(element, pin){
@@ -86,6 +99,8 @@
       if(!runtime.isEditMode()) return;
 
       dragId = pin.id;
+      dragStartX = pin.x;
+      dragStartY = pin.y;
       const image = runtime.mapImageSize();
       const point = runtime.mapPointFromClient(event.clientX, event.clientY);
       dragOffsetX = point.x - pin.x * image.width;
@@ -98,9 +113,12 @@
       event.stopPropagation();
       const distance = Math.hypot(event.clientX - pinDownX, event.clientY - pinDownY);
       if(distance < 5){
-        if(window.KartoStampOverwrite?.isOverwriteActive()){
+        if(runtime.isEditMode() && (event.ctrlKey || event.metaKey)){
+          toggleSelection(pin.id);
+        } else if(window.KartoStampOverwrite?.isOverwriteActive()){
           window.KartoStampOverwrite.applyOverwrite(pin.id);
         } else {
+          if(selection.size) clearSelection();
           runtime.openPin(pin.id, runtime.isEditMode() ? 'edit' : 'view');
         }
       }
@@ -127,9 +145,99 @@
 
   function stopDrag(options = {}){
     if(!dragId) return;
+    const pin = state().pins.find(item => item.id === dragId);
+    if(pin && dragStartX !== null && (pin.x !== dragStartX || pin.y !== dragStartY)){
+      const id = dragId, fromX = dragStartX, fromY = dragStartY;
+      runtime.pushUndo('Pin verschoben: ' + pin.title, () => {
+        const target = state().pins.find(item => item.id === id);
+        if(target){ target.x = fromX; target.y = fromY; }
+      });
+    }
     dragId = null;
+    dragStartX = null;
+    dragStartY = null;
     if(options.save) runtime.save();
     if(options.rerender) renderPins();
+  }
+
+  // ═══════════════════════════════════════════
+  // SELECTION & BULK ACTIONS (edit mode only - Ctrl/Cmd+click a pin to
+  // add/remove it, bulk-bar handles the rest)
+  // ═══════════════════════════════════════════
+  function toggleSelection(id){
+    if(selection.has(id)) selection.delete(id);
+    else selection.add(id);
+    renderPins();
+    updateBulkBar();
+  }
+
+  function clearSelection(){
+    if(!selection.size) return;
+    selection.clear();
+    renderPins();
+    updateBulkBar();
+  }
+
+  function selectedPins(){
+    return state().pins.filter(pin => selection.has(pin.id));
+  }
+
+  function updateBulkBar(){
+    const bar = document.getElementById('bulk-bar');
+    if(!bar) return;
+    const count = selection.size;
+    if(!count){ bar.style.display = 'none'; return; }
+    // Topbar height varies (flex-wrap adds rows once edit-mode buttons
+    // appear) - measure it fresh each time instead of a fixed offset, so
+    // the bar never sits on top of the topbar's buttons.
+    const topbar = document.getElementById('topbar');
+    if(topbar) bar.style.top = (topbar.getBoundingClientRect().bottom + 8) + 'px';
+    bar.style.display = 'flex';
+    document.getElementById('bulk-count').textContent = count + (count === 1 ? ' Pin ausgewählt' : ' Pins ausgewählt');
+    const select = document.getElementById('bulk-cat-sel');
+    if(select){
+      const esc = runtime.esc;
+      select.innerHTML = '<option value="">Kategorie ändern…</option>' +
+        state().cats.map(cat => `<option value="${esc(cat.id)}">${esc(cat.label)}</option>`).join('');
+    }
+  }
+
+  function bulkSetCategory(catId){
+    if(!selection.size || !catId) return;
+    const pins = selectedPins();
+    const before = pins.map(pin => ({id: pin.id, cat: pin.cat}));
+    pins.forEach(pin => { pin.cat = catId; });
+    runtime.pushUndo('Kategorie geändert (' + before.length + ' Pins)', () => {
+      before.forEach(entry => {
+        const pin = state().pins.find(item => item.id === entry.id);
+        if(pin) pin.cat = entry.cat;
+      });
+    });
+    renderPins();
+    runtime.save();
+    runtime.toast('Kategorie geändert: ' + before.length + ' Pins');
+  }
+
+  function bulkDeleteSelected(){
+    const count = selection.size;
+    if(!count) return;
+    if(!confirm(count + (count === 1 ? ' Pin' : ' Pins') + ' wirklich löschen?')) return;
+    const snapshot = [];
+    state().pins.forEach((pin, index) => {
+      if(selection.has(pin.id)) snapshot.push({pin: JSON.parse(JSON.stringify(pin)), index});
+    });
+    const removeIds = new Set(selection);
+    const s = state();
+    s.pins = s.pins.filter(pin => !removeIds.has(pin.id));
+    runtime.pushUndo(count + (count === 1 ? ' Pin gelöscht' : ' Pins gelöscht'), () => {
+      const target = state();
+      snapshot.forEach(entry => {
+        target.pins.splice(Math.min(entry.index, target.pins.length), 0, entry.pin);
+      });
+    });
+    clearSelection();
+    runtime.save();
+    runtime.toast(count + (count === 1 ? ' Pin gelöscht' : ' Pins gelöscht'));
   }
 
   function showTooltip(pin, clientX, clientY){
@@ -198,5 +306,10 @@
     moveDrag,
     stopDrag,
     hideTooltip,
+    toggleSelection,
+    clearSelection,
+    selectedPins,
+    bulkSetCategory,
+    bulkDeleteSelected,
   };
 })();

@@ -68,6 +68,29 @@ function cleanExtraLayers(list){
   })).filter(l => l.id);
 }
 
+// Herrschaften/Baronien dieser Karte (z.B. "Herrschaft der Wyrm",
+// "Baronie Gwendolyns Ufer") - Pins verweisen optional per pin.dominionId
+// darauf (siehe dominionOf()). Frei erweiterbar, damit auch Karten ohne
+// vorbereitete Lore-Seite eigene Herrschaften anlegen koennen.
+function cleanDominions(list){
+  if(!Array.isArray(list)) return [];
+  const cleaned = list.map(d => ({
+    id: String(d?.id || uid()),
+    name: String(d?.name || '').trim() || 'Unbenannte Herrschaft',
+    type: String(d?.type || '').trim(),
+    ruler: String(d?.ruler || '').trim(),
+    seat: String(d?.seat || '').trim(),
+    note: String(d?.note || '').trim(),
+    // Feudale Verschachtelung, z.B. eine ritterfürstliche Herrschaft
+    // INNERHALB einer Baronie - siehe dominionChain().
+    parentId: String(d?.parentId || '').trim(),
+  })).filter(d => d.id);
+  // Haengende/selbstreferenzierende parentIds kappen (geloeschter Elternteil o.ae.)
+  const ids = new Set(cleaned.map(d => d.id));
+  cleaned.forEach(d => { if(d.parentId && (d.parentId === d.id || !ids.has(d.parentId))) d.parentId = ''; });
+  return cleaned;
+}
+
 // ═══════════════════════════════════════════
 // STATE — everything saved to Firebase
 // ═══════════════════════════════════════════
@@ -81,6 +104,7 @@ let S = {
   mapImages: cleanMapImages(KARTO_CONFIG.images || {}),
   layerNames: cleanLayerNames(KARTO_CONFIG.layerNames || {}),
   extraLayers: cleanExtraLayers(KARTO_CONFIG.extraLayers || []),
+  dominions: cleanDominions(KARTO_CONFIG.defaultDominions || []),
   dm: { sessions:[], notes:'', groupStatus:{} },
   markerCatalog: JSON.parse(JSON.stringify(KARTO_CONFIG.defaultMarkerCatalog || DEFAULT_MARKER_CATALOG)),
 };
@@ -107,8 +131,49 @@ function mediaLink(html, href){
   return url?`<a class="sv-linked-media" href="${esc(url)}">${html}</a>`:html;
 }
 function catOf(p){return S.cats.find(c=>c.id===p.cat)||S.cats[S.cats.length-1]||{id:'other',label:'Sonstiges',color:'#7a6040'};}
+function dominionOf(p){return S.dominions.find(d=>d.id===p.dominionId)||null;}
+// [topmost ancestor, ..., dominion] - e.g. [Baronie Gwendolyns Ufer, Herrschaft der Wyrm].
+// Capped at 10 hops as a cheap cycle guard (real nesting never goes beyond 2-3).
+function dominionChain(dominion){
+  const chain=[];
+  let current=dominion;
+  let guard=0;
+  while(current && guard<10){
+    chain.unshift(current);
+    current=current.parentId?S.dominions.find(d=>d.id===current.parentId):null;
+    guard++;
+  }
+  return chain;
+}
 let _ht;function hint(m){const e=document.getElementById('hint');e.textContent=m;e.classList.toggle('on',!!m);}
 let _tt;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('on');clearTimeout(_tt);_tt=setTimeout(()=>e.classList.remove('on'),2800);}
+
+// ═══════════════════════════════════════════
+// UNDO — session-only safety net for the most error-prone edit actions
+// (Pin verschieben/löschen/setzen). Single-direction stack, no redo,
+// cleared on reload - for anything older than the current session, the
+// existing Backup-Verlauf (localStorage-Snapshots) is the fallback.
+// ═══════════════════════════════════════════
+const UNDO_LIMIT = 30;
+let undoStack = [];
+function pushUndo(label, undoFn){
+  undoStack.push({label, undoFn});
+  if(undoStack.length > UNDO_LIMIT) undoStack.shift();
+  updateUndoButton();
+}
+function undoLast(){
+  const entry = undoStack.pop();
+  if(!entry){ toast('Nichts rückgängig zu machen'); updateUndoButton(); return; }
+  entry.undoFn();
+  renderPins();
+  saveD();
+  toast('↩ Rückgängig: ' + entry.label);
+  updateUndoButton();
+}
+function updateUndoButton(){
+  const btn = document.getElementById('btn-undo');
+  if(btn) btn.style.display = (editMode && undoStack.length) ? 'block' : 'none';
+}
 
 function applyMapConfig(){
   const cfg=KARTO_CONFIG;
@@ -206,6 +271,7 @@ window.KartoRuntime = {
   formatText: fmtText,
   save: saveD,
   toast,
+  pushUndo,
   closeModal: closeLMo,
   applyState,
   renderPins,
@@ -221,6 +287,10 @@ window.KartoRuntime = {
     return S.pins.filter(p => !p.secret || editMode);
   },
   categoryForPin: catOf,
+  dominionForPin: dominionOf,
+  dominions(){ return S.dominions; },
+  dominionChain,
+  orderedDominions,
   setLayer(layer){ window.toggleLayer(layer); },
   jumpToPin(id){
     const p=S.pins.find(x=>x.id===id);if(!p||!imgW)return;
@@ -368,6 +438,7 @@ function applyState(remote){
   if(remote.mapImages) S.mapImages=cleanMapImages(remote.mapImages);
   if(remote.layerNames) S.layerNames=cleanLayerNames(remote.layerNames);
   if(Array.isArray(remote.extraLayers)) S.extraLayers=cleanExtraLayers(remote.extraLayers);
+  if(Array.isArray(remote.dominions)) S.dominions=cleanDominions(remote.dominions);
   if(remote.dm)         {S.dm=remote.dm;S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};}
   if(remote.markerCatalog?.length) S.markerCatalog=remote.markerCatalog;
   applyMapImages();
@@ -406,6 +477,21 @@ function applyRegionMeta(){
 // Permanent travel canvas loop is owned by KartoLsbCanvas.
 
 // ═══════════════════════════════════════════
+// PRESENTATION MODE — for screen-sharing with players: hides the whole
+// DM-only chrome (Toolbar, Kategorie-Leiste, Reise-Werkzeuge-Tab), leaves
+// just the map + pins. Secret pins already stay hidden outside edit mode,
+// so nothing extra to filter here. Pure UI state, not saved.
+// ═══════════════════════════════════════════
+let presentationMode = false;
+function togglePresentationMode(){
+  presentationMode = !presentationMode;
+  document.body.classList.toggle('presentation-mode', presentationMode);
+  // The map viewport just grew/shrank (topbar appeared/disappeared) - refit
+  // so it isn't left cropped or oddly offset.
+  window.fitView?.();
+}
+
+// ═══════════════════════════════════════════
 // EDIT MODE
 // ═══════════════════════════════════════════
 function toggleEdit(){editMode?exitEdit():enterEdit();}
@@ -429,6 +515,8 @@ function exitEdit(){
   const t=document.getElementById('title');t.classList.remove('editable');t.title='';
   const iw=document.getElementById('region-icon-wrap');iw.classList.remove('editable');iw.title='';
   mapWrap.style.cursor='grab';hint('');renderPins();
+  clearSelection();
+  updateUndoButton();
 }
 function enterEdit(){
   editMode=true;
@@ -449,6 +537,7 @@ function enterEdit(){
   const iw=document.getElementById('region-icon-wrap');iw.classList.add('editable');iw.title='Klicken um Icon zu setzen';
   mapWrap.style.cursor='grab';
   renderPins();toast('✓ Editormodus aktiviert');
+  updateUndoButton();
 }
 
 // ═══════════════════════════════════════════
@@ -629,6 +718,109 @@ function deleteExtraLayer(layerId){
 }
 
 // ═══════════════════════════════════════════
+// HERRSCHAFTEN/BARONIEN — welche Pins gehoeren zu welcher Herrschaft
+// ═══════════════════════════════════════════
+function openDominionManager(){
+  renderDominionRows();
+  document.getElementById('dominion-mo').classList.add('open');
+}
+// Top-level dominions first, each immediately followed by its own children
+// (recursively) - so a Baronie and its ritterfürstlichen Herrschaften stay
+// visually grouped instead of scattered in creation order.
+function orderedDominions(){
+  const byParent=new Map();
+  S.dominions.forEach(d=>{
+    const key=d.parentId||'';
+    if(!byParent.has(key)) byParent.set(key, []);
+    byParent.get(key).push(d);
+  });
+  const result=[];
+  (function walk(parentId, depth){
+    (byParent.get(parentId)||[]).forEach(d=>{
+      result.push({dominion:d, depth});
+      walk(d.id, depth+1);
+    });
+  })('', 0);
+  return result;
+}
+function renderDominionRows(){
+  const wrap=document.getElementById('dominion-list');
+  if(!wrap) return;
+  if(!S.dominions.length){
+    wrap.innerHTML=`<div style="font-family:'EB Garamond',serif;font-size:.85rem;color:var(--ink3);font-style:italic;padding:.4rem 0;">Noch keine Herrschaften angelegt.</div>`;
+    return;
+  }
+  wrap.innerHTML=orderedDominions().map(({dominion:d, depth})=>`
+    <div class="dom-card" style="margin-left:${depth*1.3}rem;${depth?'border-left:2px solid var(--gold);':''}">
+      <div style="display:flex;gap:.4rem;">
+        <div style="flex:2;min-width:140px;">
+          <label class="lml" style="margin-bottom:2px;">Name</label>
+          <input class="e-inp" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="name" value="${esc(d.name)}" placeholder="z.B. Herrschaft der Wyrm"/>
+        </div>
+        <div style="flex:1;min-width:90px;">
+          <label class="lml" style="margin-bottom:2px;">Typ</label>
+          <input class="e-inp" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="type" value="${esc(d.type)}" placeholder="Baronie…"/>
+        </div>
+      </div>
+      <div style="margin-top:.35rem;">
+        <label class="lml" style="margin-bottom:2px;">Übergeordnete Herrschaft <span style="font-family:'EB Garamond',serif;font-style:italic;opacity:.7;">(optional – z.B. die Baronie, in der diese Herrschaft liegt)</span></label>
+        <select class="e-sel" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="parentId">
+          <option value="">— Keine (oberste Ebene) —</option>
+          ${S.dominions.filter(other=>other.id!==d.id).map(other=>`<option value="${esc(other.id)}"${d.parentId===other.id?' selected':''}>${esc(other.name)}</option>`).join('')}
+        </select>
+      </div>
+      <div style="display:flex;gap:.4rem;margin-top:.35rem;align-items:flex-end;">
+        <div style="flex:1;min-width:90px;">
+          <label class="lml" style="margin-bottom:2px;">Sitz</label>
+          <input class="e-inp" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="seat" value="${esc(d.seat)}"/>
+        </div>
+        <div style="flex:1;min-width:110px;">
+          <label class="lml" style="margin-bottom:2px;">Herrscher/Haus</label>
+          <input class="e-inp" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="ruler" value="${esc(d.ruler)}"/>
+        </div>
+        <button class="s-btn s-del" style="flex-shrink:0;height:34px;" data-action="delete-dominion" data-dominion-id="${esc(d.id)}" title="Herrschaft löschen">🗑</button>
+      </div>
+      <div style="margin-top:.35rem;">
+        <label class="lml" style="margin-bottom:2px;">Notiz</label>
+        <input class="e-inp" data-input-action="set-dominion-field" data-dominion-id="${esc(d.id)}" data-dominion-field="note" value="${esc(d.note)}" placeholder="optional"/>
+      </div>
+    </div>`).join('');
+}
+function addDominion(){
+  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  S.dominions.push({id:uid(), name:'Neue Herrschaft', type:'', ruler:'', seat:'', note:'', parentId:''});
+  renderDominionRows();
+  saveD();
+  toast('✓ Herrschaft hinzugefügt — benennen');
+}
+function setDominionField(id, field, value){
+  if(!['name','type','ruler','seat','note','parentId'].includes(field)) return;
+  const dominion=S.dominions.find(x=>x.id===id);
+  if(!dominion) return;
+  if(field==='parentId' && value===id) return; // no self-parenting
+  dominion[field]=String(value||'');
+  saveD();
+  // Hierarchy/indent + every card's "available parent" list depend on this -
+  // a plain text field doesn't need the whole list re-rendered, parentId does.
+  if(field==='parentId') renderDominionRows();
+}
+function deleteDominion(id){
+  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  const dominion=S.dominions.find(x=>x.id===id);
+  if(!dominion) return;
+  if(!confirm('Herrschaft "'+dominion.name+'" wirklich löschen? Zugewiesene Pins verlieren die Zuordnung.')) return;
+  S.dominions=S.dominions.filter(x=>x.id!==id);
+  // Untergeordnete Herrschaften nicht mitloeschen - sie ruecken stattdessen
+  // eine Ebene hoch, statt in einem toten parentId-Verweis zu verschwinden.
+  S.dominions.forEach(d=>{ if(d.parentId===id) d.parentId=''; });
+  let cleared=0;
+  S.pins.forEach(p=>{ if(p.dominionId===id){ p.dominionId=''; cleared++; } });
+  renderDominionRows();
+  saveD();
+  toast('🗑 Herrschaft "'+dominion.name+'" entfernt'+(cleared?` (${cleared} Pin(s) ohne Zuordnung)`:''));
+}
+
+// ═══════════════════════════════════════════
 // SLIDERS — persistent
 // ═══════════════════════════════════════════
 function onDotSl(v){
@@ -648,6 +840,9 @@ function onLblSl(v){
 // ═══════════════════════════════════════════
 function renderPins(){
   window.KartoPinRenderer?.renderPins();
+}
+function clearSelection(){
+  window.KartoPinRenderer?.clearSelection();
 }
 
 document.getElementById('stamp-mo').addEventListener('click',e=>{if(e.target===document.getElementById('stamp-mo'))closeLMo('stamp-mo');});
@@ -794,8 +989,10 @@ function renderEditorPreview(){
   if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
   const category=catOf(pin);
   const affiliations=[];
+  const dominion=dominionOf(pin);
+  if(dominion) affiliations.push({label:dominion.type || 'Herrschaft', value:dominionChain(dominion).map(x=>x.name).join(' → ')});
   if(pin.region) affiliations.push({label:'Region', value:pin.region});
-  if(pin.house) affiliations.push({label:'Herrschaft', value:pin.house});
+  if(pin.house) affiliations.push({label:'Herrschaft/Haus', value:pin.house});
   if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
   const rgb=hexToRgb(category.color||'#8a6510');
   const rows=(pin.table||[]).filter(row=>row.k||row.v);
@@ -833,7 +1030,7 @@ function renderEditorPreview(){
         <div class="sv-img-wrap">
           <div class="sv-img">
             ${pin.img
-              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
+              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
                  <div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink)
               : `<div class="sv-img-ph">Bild</div>`}
           </div>
@@ -884,9 +1081,12 @@ function openScroll(id,mode){openSidebar(id,mode);}
 // ═══════════════════════════════════════════
 function askDel(id){
   if(!editMode){toast('⚠ Editormodus erforderlich');return;}
-  const p=S.pins.find(x=>x.id===id);
+  const index=S.pins.findIndex(x=>x.id===id);
+  if(index===-1)return;
+  const p=S.pins[index];
   if(!confirm('Pin "'+(p?.title||id)+'" wirklich löschen?'))return;
-  S.pins=S.pins.filter(x=>x.id!==id);
+  S.pins.splice(index,1);
+  pushUndo('Pin gelöscht: '+p.title, () => { S.pins.splice(index,0,p); });
   closeScroll();closeSidebar();
   renderPins();saveD();toast('Pin gelöscht');
 }
@@ -912,13 +1112,16 @@ function fmtText(t){
 document.addEventListener('keydown',e=>{
   const inF=['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName);
   if(e.key==='Escape'){
+    if(presentationMode){togglePresentationMode();return;}
     if(window.KartoStampOverwrite?.isOverwriteActive()){window.stopOverwrite();return;}
     if(window.KartoStampOverwrite?.isStamping()){window.stopStamp();return;}
     if(addingPin){addingPin=false;window.KartoMapInteraction.resetCursor();window.KartoMapInteraction.hidePlacementCursor();hint('');return;}
+    clearSelection();
     closeScroll();closeSidebar();
     document.getElementById('catmgr-mo').classList.remove('open');
     document.getElementById('icon-mo').classList.remove('open');
   }
+  if(!inF&&(e.key==='z'||e.key==='Z')&&(e.ctrlKey||e.metaKey)&&editMode){e.preventDefault();undoLast();}
   if(inF)return;
   if(e.key==='e'&&editMode)startAdd();
   if(e.key==='1')window.toggleLayer('normal');

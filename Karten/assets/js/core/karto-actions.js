@@ -11,6 +11,13 @@
     'save-region-icon': () => window.saveIcon(),
     'jump-to-search-result': el => window.jumpTo(el.dataset.pinId),
     'toggle-edit': () => window.toggleEdit(),
+    'toggle-presentation': () => window.togglePresentationMode(),
+    'undo-last': () => window.undoLast(),
+    'bulk-delete-selected': () => window.KartoPinRenderer.bulkDeleteSelected(),
+    'clear-pin-selection': () => window.KartoPinRenderer.clearSelection(),
+    'open-dominion-manager': () => window.openDominionManager(),
+    'add-dominion': () => window.addDominion(),
+    'delete-dominion': el => window.deleteDominion(el.dataset.dominionId),
     'start-add-pin': () => window.startAdd(),
     'select-pin-template': el => window.selectTpl(el.dataset.templateId),
     'apply-pin-template': () => window.tplApply(),
@@ -169,9 +176,15 @@
       document.getElementById('layer-opacity-val').textContent = el.value + '%';
       window.applyLayerOpacities();
     },
+    'bulk-set-category': el => {
+      if(!el.value) return;
+      window.KartoPinRenderer.bulkSetCategory(el.value);
+      el.value = '';
+    },
     'set-pin-marker-scale': el => window.sbSetPinMarkerScale(el.value),
     'rename-extra-layer': el => window.renameExtraLayer(el.dataset.layerId, el.value),
     'set-extra-layer-url': el => window.setExtraLayerUrl(el.dataset.layerId, el.value),
+    'set-dominion-field': el => window.setDominionField(el.dataset.dominionId, el.dataset.dominionField, el.value),
     'set-label-size': el => window.onLblSl(el.value),
     'set-travel-icon-size': el => window.lsbSetIconSize(el.value),
     'preview-travel-icon-url': () => window.KartoLsbModals.previewIconUrl(),
@@ -277,7 +290,7 @@
   }, true);
 
   document.addEventListener('keydown', event => {
-    const el = event.target.closest('[data-keydown-action]');
+    const el = event.target.closest?.('[data-keydown-action]');
     if(!el) return;
     const action = keydownActions[el.dataset.keydownAction];
     if(action) action(el, event);

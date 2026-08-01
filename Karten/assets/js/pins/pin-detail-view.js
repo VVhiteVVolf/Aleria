@@ -25,8 +25,10 @@
     const actions = document.getElementById('scroll-actions');
     const category = runtime.categoryForPin(pin);
     const affiliations = [];
+    const dominion = runtime.dominionForPin(pin);
+    if(dominion) affiliations.push({label:dominion.type || 'Herrschaft', value:runtime.dominionChain(dominion).map(d => d.name).join(' → ')});
     if(pin.region) affiliations.push({label:'Region', value:pin.region});
-    if(pin.house) affiliations.push({label:'Herrschaft', value:pin.house});
+    if(pin.house) affiliations.push({label:'Herrschaft/Haus', value:pin.house});
     if(pin.faction) affiliations.push({label:'Fraktion', value:pin.faction});
 
     const rgb = hexToRgb(category.color || '#8a6510');
@@ -65,7 +67,7 @@
         <div class="sv-img-wrap">
           <div class="sv-img">
             ${pin.img
-              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/>
+              ? mediaLink(`<img src="${esc(pin.img)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
                  <div class="sv-img-ph" style="display:none">Bild</div>`, pin.imgLink)
               : `<div class="sv-img-ph">Bild</div>`}
           </div>

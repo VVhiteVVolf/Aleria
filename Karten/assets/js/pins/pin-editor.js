@@ -65,7 +65,14 @@
         <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
           <div class="e-lbl" style="margin-bottom:.4rem;">⚔ Zugehörigkeit</div>
           <div class="e-row">
-            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Region / Gebiet</label>
+            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Herrschaft <span style="font-family:'EB Garamond',serif;font-style:italic;opacity:.7;">(aus der Liste unter "🏰 Herrschaften")</span></label>
+            <select class="e-sel" id="sb-dominion">
+              <option value="">— Keine —</option>
+              ${runtime.orderedDominions().map(({dominion:d, depth}) => `<option value="${esc(d.id)}"${pin.dominionId === d.id ? ' selected' : ''}>${'  '.repeat(depth)}${depth ? '↳ ' : ''}${esc(d.name)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="e-row">
+            <label class="e-lbl" style="font-size:var(--fs-xs);opacity:.7;">Region / Gebiet <span style="font-family:'EB Garamond',serif;font-style:italic;opacity:.7;">(Freitext, zusätzlich zur Herrschaft)</span></label>
             <input class="e-inp" id="sb-region" value="${esc(pin.region || '')}" maxlength="80" placeholder="z.B. Grafschaft Celtigern…"/>
           </div>
           <div class="e-row">
@@ -277,6 +284,7 @@
     pin.crestLink = document.getElementById('sb-crestlink')?.value ?? pin.crestLink;
     pin.banner = document.getElementById('sb-banner')?.value ?? pin.banner;
     pin.bannerLink = document.getElementById('sb-bannerlink')?.value ?? pin.bannerLink;
+    pin.dominionId = document.getElementById('sb-dominion')?.value ?? pin.dominionId;
     pin.region = document.getElementById('sb-region')?.value ?? pin.region;
     pin.house = document.getElementById('sb-house')?.value ?? pin.house;
     pin.faction = document.getElementById('sb-faction')?.value ?? pin.faction;
@@ -336,6 +344,7 @@
     pin.crestLink = (document.getElementById('sb-crestlink')?.value || '').trim();
     pin.banner = (document.getElementById('sb-banner')?.value || '').trim();
     pin.bannerLink = (document.getElementById('sb-bannerlink')?.value || '').trim();
+    pin.dominionId = (document.getElementById('sb-dominion')?.value || '').trim();
     pin.region = (document.getElementById('sb-region')?.value || '').trim();
     pin.house = (document.getElementById('sb-house')?.value || '').trim();
     pin.faction = (document.getElementById('sb-faction')?.value || '').trim();

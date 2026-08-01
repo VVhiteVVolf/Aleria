@@ -91,6 +91,11 @@
     if(template) pendingPin.table = template.table.map(row => ({...row}));
     runtime.closeModal('pin-tpl-mo');
     runtime.addPin(pendingPin);
+    const newPinId = pendingPin.id;
+    runtime.pushUndo('Pin gesetzt: ' + pendingPin.title, () => {
+      const s = runtime.state();
+      s.pins = s.pins.filter(item => item.id !== newPinId);
+    });
     runtime.renderPins();
     runtime.save();
     runtime.openPin(pendingPin.id, 'edit');

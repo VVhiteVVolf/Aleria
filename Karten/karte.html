@@ -132,6 +132,10 @@ if (window.KARTO_BOOT_STATUS === 'active') {
     <button id="search-clear" data-action="clear-search">✕</button>
     <div id="search-results"></div>
   </div>
+  <!-- Präsentationsmodus: blendet die ganze DM-Toolbar/Kategorie-Leiste
+       aus, für Bildschirmfreigabe mit Spielern. Geheime Pins bleiben wie
+       gehabt automatisch versteckt (Ansichtsmodus-Filter). -->
+  <button class="tbtn" id="btn-presentation" data-action="toggle-presentation" title="Präsentationsmodus (Esc zum Beenden)">🎬 Präsentation</button>
   <div class="sep"></div>
 
   <!-- Edit toggle -->
@@ -140,6 +144,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 
   <!-- Edit-mode controls -->
   <button class="tbtn" id="btn-add" data-action="start-add-pin" style="display:none">📍 Pin setzen</button>
+  <button class="tbtn" id="btn-undo" data-action="undo-last" title="Strg+Z" style="display:none">↩ Rückgängig</button>
   <button class="tbtn" id="btn-stamp" data-action="open-stamp-picker" style="display:none">🔖 Kopieren &amp; stempeln</button>
   <button class="tbtn" id="btn-overwrite" data-action="open-overwrite-picker" style="display:none">✏️ Überschreiben</button>
   <button class="tbtn" id="btn-map-images" data-action="open-map-images" style="display:none">🖼 Bilder</button>
@@ -152,6 +157,7 @@ if (window.KARTO_BOOT_STATUS === 'active') {
       <button class="dm-menu-item" data-action="open-group-status">⚔️ Gruppen-Status</button>
       <button class="dm-menu-item" data-action="open-diary">📖 Reise-Tagebuch</button>
       <button class="dm-menu-item" data-action="open-category-manager">🏷 Kategorien</button>
+      <button class="dm-menu-item" data-action="open-dominion-manager">🏰 Herrschaften</button>
       <button class="dm-menu-item" data-action="open-marker-catalog">🗂 Marker-Katalog</button>
       <button class="dm-menu-item" data-action="open-data-manager">📦 Daten-Manager</button>
       <button class="dm-menu-item" data-action="open-backup-history">🕓 Backup-Verlauf</button>
@@ -764,6 +770,24 @@ if (window.KARTO_BOOT_STATUS === 'active') {
   </div>
 </div>
 
+<!-- DOMINION MANAGER: Herrschaften/Baronien dieser Karte, denen Pins
+     zugeordnet werden koennen (siehe Pin-Editor "⚔ Zugehörigkeit") -->
+<div class="mo" id="dominion-mo">
+  <div class="lmc" style="width:min(680px,calc(100vw - 32px));max-height:calc(100vh - 48px);display:flex;flex-direction:column;">
+    <div class="lmh"><span>🏰 Herrschaften</span><button data-action="close-modal" data-modal-id="dominion-mo">✕</button></div>
+    <div class="lmb-body" style="overflow-y:auto;">
+      <div style="font-family:'EB Garamond',serif;font-size:.85rem;color:var(--ink3);font-style:italic;">
+        Herrschaften/Baronien dieser Karte – Pins lassen sich im Editor unter „⚔ Zugehörigkeit" einer davon zuordnen.
+      </div>
+      <div id="dominion-list"></div>
+      <button class="s-btn s-cancel" style="width:100%;" data-action="add-dominion">+ Herrschaft hinzufügen</button>
+    </div>
+    <div class="lmb-footer">
+      <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="dominion-mo">Schließen</button>
+    </div>
+  </div>
+</div>
+
 <!-- REGION ICON MODAL -->
 <div class="mo" id="icon-mo">
   <div id="icon-card">
@@ -800,6 +824,17 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 
 <div id="hint"></div>
 <div id="toast"></div>
+
+<!-- Multi-select bulk-action bar (Strg/Cmd+Klick auf Pins) -->
+<div id="bulk-bar" style="display:none;">
+  <span id="bulk-count"></span>
+  <select id="bulk-cat-sel" class="e-sel" data-input-action="bulk-set-category"></select>
+  <button class="s-btn s-del" data-action="bulk-delete-selected">🗑 Löschen</button>
+  <button class="s-btn s-cancel" data-action="clear-pin-selection">✕ Aufheben</button>
+</div>
+
+<!-- Nur im Präsentationsmodus sichtbar (die Toolbar ist ja ausgeblendet) -->
+<button id="btn-exit-presentation" data-action="toggle-presentation" title="Präsentationsmodus beenden (Esc)">✕ Präsentation beenden</button>
 
 <script src="assets/js/lsb/lsb-config.js"></script>
 <script src="assets/js/lsb/lsb-calculations.js"></script>

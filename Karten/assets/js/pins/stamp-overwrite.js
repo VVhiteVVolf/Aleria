@@ -89,6 +89,10 @@
       secret: stampTemplate.secret || false
     };
     runtime.addPin(pin);
+    runtime.pushUndo('Stempel gesetzt: ' + pin.title, () => {
+      const s = runtime.state();
+      s.pins = s.pins.filter(item => item.id !== pin.id);
+    });
     runtime.renderPins();
     runtime.save();
     runtime.toast('📍 Kopie von "' + stampTemplate.title + '" gesetzt');
@@ -208,6 +212,7 @@
     if(!overwriteTemplate) return;
     const target = state().pins.find(pin => pin.id === targetId);
     if(!target) return;
+    const before = JSON.parse(JSON.stringify(target));
     const source = overwriteTemplate;
     if(overwriteFields.table) target.table = JSON.parse(JSON.stringify(source.table || []));
     if(overwriteFields.cat && source.cat) target.cat = source.cat;
@@ -222,6 +227,11 @@
       target.bannerLink = source.bannerLink || '';
     }
     if(overwriteFields.text && source.text) target.text = source.text;
+    runtime.pushUndo('Überschreiben: ' + target.title, () => {
+      const s = runtime.state();
+      const pin = s.pins.find(item => item.id === targetId);
+      if(pin) Object.assign(pin, before);
+    });
     runtime.save();
     runtime.renderPins();
     document.querySelectorAll('.pin-dot').forEach(element => element.classList.add('pin-ow-target'));
