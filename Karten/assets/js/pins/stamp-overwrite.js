@@ -83,6 +83,7 @@
       house: stampTemplate.house || '',
       faction: stampTemplate.faction || '',
       pinMarker: stampTemplate.pinMarker || '',
+      pinMarkerScale: stampTemplate.pinMarkerScale || 1,
       table: JSON.parse(JSON.stringify(stampTemplate.table || [])),
       text: stampTemplate.text || '',
       secret: stampTemplate.secret || false

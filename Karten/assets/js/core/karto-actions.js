@@ -24,6 +24,8 @@
     'open-map-images': () => window.openMapImagesModal(),
     'save-map-images': () => window.saveMapImages(),
     'clear-map-images': () => window.clearMapImages(),
+    'add-extra-layer': () => window.addExtraLayer(),
+    'delete-extra-layer': el => window.deleteExtraLayer(el.dataset.layerId),
     'start-stamp': el => window.startStamp(el.dataset.pinId),
     'close-scroll-and-start-stamp': el => {
       window.closeScroll();
@@ -54,6 +56,9 @@
     'switch-overwrite-tab': el => window.owSwitchTab(el.dataset.tab),
     'start-overwrite-template': el => window.startOverwriteFromTemplate(el.dataset.templateId),
     'start-overwrite-pin': el => window.startOverwriteFromPin(el.dataset.pinId),
+    'open-publish-modal': () => window.openPublishModal(),
+    'submit-publish-key': () => window.submitPublishKey(),
+    'publish-online': () => window.publishOnline(),
     'open-data-manager': el => {
       window.openDataMgr();
       if(el.closest('#dm-menu')) window.toggleDmMenu();
@@ -162,6 +167,9 @@
     'render-stamp-list': el => window.renderStampList(el.value),
     'render-overwrite-pin-list': el => window.renderOverwritePinList(el.value),
     'set-dot-size': el => window.onDotSl(el.value),
+    'set-pin-marker-scale': el => window.sbSetPinMarkerScale(el.value),
+    'rename-extra-layer': el => window.renameExtraLayer(el.dataset.layerId, el.value),
+    'set-extra-layer-url': el => window.setExtraLayerUrl(el.dataset.layerId, el.value),
     'set-label-size': el => window.onLblSl(el.value),
     'set-travel-icon-size': el => window.lsbSetIconSize(el.value),
     'preview-travel-icon-url': () => window.KartoLsbModals.previewIconUrl(),
@@ -199,6 +207,9 @@
     'check-password': (el, event) => {
       if(event.key === 'Enter') window.checkPw();
     },
+    'submit-publish-key': (el, event) => {
+      if(event.key === 'Enter') window.submitPublishKey();
+    },
   };
 
   document.addEventListener('click', event => {
@@ -231,6 +242,8 @@
       case 'data-manager-import': window.dmgrHandleFile(file); break;
       case 'legacy-import': window.importHandleFile(file); break;
       case 'load-travel-icon-file': window.KartoLsbModals.loadIconFile(fileEl); break;
+      case 'mcat-upload-icon': window.mcatUploadIcon(file); break;
+      case 'extra-layer-upload': window.uploadExtraLayerImage(fileEl.dataset.layerId, file); break;
     }
   });
 

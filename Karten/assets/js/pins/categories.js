@@ -97,8 +97,8 @@
     const groups = [...new Set((state().markerCatalog || []).map(m => m.group || '').filter(Boolean))].sort();
     const filter = document.getElementById('catmkr-filter');
     filter.innerHTML = '<option value="">Alle Gruppen</option>' + groups.map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
-    renderCatMarkerGrid('');
     document.getElementById('cat-marker-mo').classList.add('open');
+    renderCatMarkerGrid('');
   }
 
   function renderCatMarkerGrid(q){
@@ -127,7 +127,7 @@
       <div class="mcat-grp-header">${esc(group)}</div>
       ${items.map(m => `
         <div class="mcat-item" data-action="set-category-marker" data-marker-url="${esc(m.url)}" title="${esc(m.name)}">
-          <img src="${esc(m.url)}" loading="lazy" style="width:48px;height:58px;object-fit:contain;"
+          <img src="${esc(m.url)}" style="width:48px;height:58px;object-fit:contain;"
                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 48%22><text y=%2230%22 font-size=%2224%22>📍</text></svg>'"/>
           <span class="mcat-lbl">${esc(m.name)}</span>
         </div>`).join('')}

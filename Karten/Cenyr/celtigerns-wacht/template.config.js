@@ -7,13 +7,7 @@ window.KARTO_CONFIG = {
     regions: "Kartenbilder/CeltigernsWachtRegionen.png",
     pins: "Kartenbilder/CeltigernsWachtMarker.png",
   },
-  firebase: {
-    collection: "karten",
-    docId: "cenyr-celtigerns-wacht",
-    legacyImport: {
-      collection: "karto-v4",
-      docId: "state",
-      migrateIfEmpty: true,
-    },
+  storage: {
+    dataPath: "Cenyr/celtigerns-wacht/data.json",
   },
 };

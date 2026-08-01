@@ -35,9 +35,28 @@
       element.dataset.id = pin.id;
       element.style.left = (pin.x * image.width) + 'px';
       element.style.top = (pin.y * image.height) + 'px';
+
+      const category = runtime.categoryForPin(pin);
+      const color = category.color || '#8a6510';
+      const iconUrl = pin.pinMarker || category.marker || '';
+      const labelGap = Math.round(options.dotSize * .3);
+
+      let markerHtml;
+      if(iconUrl){
+        // Custom icon (from the Marker-Katalog, see assets/js/data/default-marker-catalog.js)
+        // rendered permanently, not just on hover - this is the actual "use an icon
+        // as a marker" feature. Anchored bottom-center (these are teardrop pin
+        // graphics - the tip, not the visual center, belongs on the coordinate).
+        // Falls back to the plain dot if the image 404s.
+        const size = Math.round(options.dotSize * 2.2 * (pin.pinMarkerScale || 1));
+        markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" width="${size}" height="${size}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'pin-dot',style:'width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;display:block;opacity:1;'}))"/>`;
+      } else {
+        markerHtml = `<div class="pin-dot" style="width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;"></div>`;
+      }
+
       element.innerHTML = `
-        <div class="pin-dot" style="width:${options.dotSize}px;height:${options.dotSize}px;background:#111;border-color:#fff;"></div>
-        <div class="pin-label" style="font-size:${options.labelSize}px;top:calc(100% + ${Math.round(options.dotSize * .3)}px);">${runtime.esc(pin.title)}${pin.secret ? ' 🔒' : ''}</div>`;
+        ${markerHtml}
+        <div class="pin-label" style="font-size:${options.labelSize}px;top:calc(100% + ${labelGap}px);">${runtime.esc(pin.title)}${pin.secret ? ' 🔒' : ''}</div>`;
       attachPinEvents(element, pin);
       layer.appendChild(element);
     });

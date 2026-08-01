@@ -32,10 +32,10 @@ Der Validator prueft:
 - doppelte Karten-IDs
 - ungueltige Status- und Typwerte
 - stabile Links nach dem Muster `karte.html?map=<id>`
-- aktive Karten auf Config oder Registry-Bildlinks, Firebase-Doc-ID und Kartenbilder
+- aktive Karten auf Config oder Registry-Bildlinks, dataPath und Kartenbilder
 - lokale Bildpfade oder externe HTTP/HTTPS-Bildlinks, z. B. Imgur
 - geplante Karten ohne erzwungene Ordner oder Bilder
-- editierbare Entwurfskarten auf eigene Firebase-Doc-ID
+- editierbare Entwurfskarten auf eigenen dataPath
 - doppelte Bildinhalte als Warnung
 
 Warnungen blockieren die Struktur nicht. Sie markieren Punkte fuer kontrollierte Bereinigung.
@@ -56,8 +56,9 @@ Die gemeinsame Technik liegt in:
 
 - `assets/css/karto-map.css`
 - `assets/js/karto-app.js`
-- `assets/js/karto-firebase.js`
+- `assets/js/karto-storage.js`
 - `assets/js/core/karto-actions.js`
+- `assets/js/core/karto-publish-ui.js`
 - `assets/js/core/karto-bootstrap.js`
 - `assets/js/data/data-manager.js`
 - `assets/js/dm/dm-tools.js`
@@ -102,8 +103,9 @@ Uebergangsweise fuer eine neue wirklich existierende Karte:
 1. Einen Registry-Eintrag mit stabiler `id` und `link` anlegen.
 2. Erst wenn die Karte wirklich entsteht, den passenden Hierarchieordner anlegen.
 3. Die drei Kartenbilder in den lokalen `Kartenbilder`-Ordner legen.
-4. In der Config `mapId`, `title`, `documentTitle`, `images` und `firebase.docId` anpassen.
-5. Keine neue HTML-Datei als Dauerloesung kopieren; die zentrale Shell soll diese Rolle uebernehmen.
+4. In der Config `mapId`, `title`, `documentTitle`, `images` und `storage.dataPath` anpassen.
+5. Eine leere `data.json` im selben Ordner anlegen (siehe `_template/data.json` als Vorlage).
+6. Keine neue HTML-Datei als Dauerloesung kopieren; die zentrale Shell soll diese Rolle uebernehmen.
 
 ## Karte mit Imgur-Bildern aktivieren
 
@@ -127,10 +129,7 @@ Dann braucht sie keine lokale Config-Datei. Beispiel:
     regions: "https://i.imgur.com/DEIN_REGIONEN_BILD.png",
     pins: "https://i.imgur.com/DEIN_MARKER_BILD.png",
   },
-  firebase: {
-    collection: "karten",
-    docId: "cenyr-vortigerns-ruh",
-  },
+  dataPath: "Cenyr/vortigerns-ruh/data.json",
 }
 ```
 
@@ -138,7 +137,7 @@ Wichtig:
 
 - `status` muss dann `MAP_STATUS.ACTIVE` sein.
 - `images.normal`, `images.regions` und `images.pins` muessen gesetzt sein.
-- `firebase.docId` trennt die gespeicherten Pins und Daten von anderen Karten.
+- `dataPath` (relativ zu `Karten/`) trennt die gespeicherten Pins und Daten von anderen Karten - die Datei muss existieren (leeres `data.json` reicht).
 - Danach `node Karten/tools/validate-karten-structure.mjs` ausfuehren.
 
 ## Imgur-Links im Browser setzen
@@ -151,10 +150,11 @@ Arbeitsablauf:
 2. `Bearbeiten` aktivieren
 3. `Bilder` oeffnen
 4. Imgur-Links fuer `Karte`, `Regionen` und `Markierungen` eintragen
-5. speichern
+5. speichern (landet sofort als lokaler Entwurf im Browser)
+6. `🌐 Online speichern` klicken, um den Stand ins Repository zu committen - siehe `ARCHITEKTUR.md`, Abschnitt "Datenspeicherung"
 
-Diese Bildlinks werden im Firebase-Dokument dieser Karte gespeichert. Sie sind dadurch nicht in GitHub noetig und gehoeren nicht zu anderen Karten.
+Diese Bildlinks werden zusammen mit dem restlichen Kartenzustand in `Karten/<kartenordner>/data.json` gespeichert, sobald online gespeichert wurde. Bis dahin liegen sie nur lokal im Browser.
 
-Jede Karte bekommt durch `firebase.docId` einen eigenen Datensatz. Pins, Marker und DM-Daten werden daher nicht zwischen Karten geteilt.
+Jede Karte bekommt durch ihren eigenen `dataPath` eine eigene Datei. Pins, Marker und DM-Daten werden daher nicht zwischen Karten geteilt.
 
 Neue Karten sollen nur die gemeinsame Script-Reihenfolge aus dem Template uebernehmen. Feature-Logik wird nicht in Kartenordner kopiert.

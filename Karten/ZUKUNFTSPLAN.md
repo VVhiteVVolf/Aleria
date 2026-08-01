@@ -324,3 +324,14 @@ Karte anklicken -> stabile Karten-ID -> Registry -> zentrale Shell -> Config/Bil
 ```
 
 Damit bleiben Links konkret, Karten planbar und die HTML-Struktur langfristig wartbar.
+
+## Nachtrag 2026-08-01: Firebase entfernt
+
+Dieser Plan beschreibt den Stand vor der Speichersystem-Ablösung. Seit
+2026-08-01 nutzt `Karten/` kein Firebase/Firestore mehr. Der Datenteil des
+Plans (Firestore-Dokument pro Karte, `firebase.docId` in Registry/Config) ist
+damit historisch - er beschreibt weiterhin korrekt, *warum* die Registry-
+Architektur entstand, nicht mehr *wie* die Daten heute gespeichert werden.
+Siehe `ARCHITEKTUR.md`, Abschnitt "Datenspeicherung", für den aktuellen Stand:
+statische `data.json` pro Karte + lokale Entwürfe (`localStorage`) + explizites
+"Online speichern" über eine GitHub-committende Netlify-Funktion.

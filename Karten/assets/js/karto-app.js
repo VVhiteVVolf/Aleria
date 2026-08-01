@@ -27,82 +27,10 @@ const DEFAULT_CATS = [
   {id:'mmflxnnhbh4g', label:'Besondere Orte',     color:'#6060b0'},
 ];
 
-const DEFAULT_MARKER_CATALOG = [
-  {id:'mmhy1v2v5vo1',url:'https://i.imgur.com/si6Lzp4.png',name:'Lager, Camp',group:'Lager'},
-  {id:'mmhy2ggp7sm2',url:'https://i.imgur.com/Qssb7fy.png',name:'Druidenhain',group:'Druidenhain'},
-  {id:'mmhy31uz6u4x',url:'https://i.imgur.com/rTtcgCX.png',name:'Höhle, Spalt',group:'Dungeon'},
-  {id:'mmhy3d2p8oi3',url:'https://i.imgur.com/27bSz0a.png',name:'Gruft',group:'Dungeon'},
-  {id:'mmhy402r9mbv',url:'https://i.imgur.com/M4EXUZA.png',name:'Düstere Burg',group:'Ort'},
-  {id:'mmhy4bozrx2q',url:'https://i.imgur.com/xPjYDr7.png',name:'Hain',group:'Druidenhain'},
-  {id:'mmhy6pk7x8tt',url:'https://i.imgur.com/7IPY6U6.png',name:'Turmruine',group:'Ruinen'},
-  {id:'mmhy7kiv76or',url:'https://i.imgur.com/qIPp64T.png',name:'Monsterlager',group:'Monster, Kreaturen'},
-  {id:'mmhy7v09o9hv',url:'https://i.imgur.com/Cy1m0Yg.png',name:'Piratenversteck',group:'Lager'},
-  {id:'mmhy8gukzwrf',url:'https://i.imgur.com/oKYN5Zi.png',name:'Ahnenbaum',group:'Druidenhain'},
-  {id:'mmhy8xy8th6r',url:'https://i.imgur.com/W91SDei.png',name:'Hafensiedlung',group:'Siedlungen'},
-  {id:'mmhy9guzperf',url:'https://i.imgur.com/ZMBWVT3.png',name:'Wahrzeichen',group:'Ort'},
-  {id:'mmhy9qiwr9d3',url:'https://i.imgur.com/owm3FRd.png',name:'Antike Ruine',group:'Ruinen'},
-  {id:'mmhya29o2ou0',url:'https://i.imgur.com/oQo2DxQ.png',name:'Bauernsiedlung',group:'Siedlungen'},
-  {id:'mmhyapiiwk6c',url:'https://i.imgur.com/zn8PqT9.png',name:'Burgsiedlung',group:'Siedlungen'},
-  {id:'mmhyb1j0a7rr',url:'https://i.imgur.com/4gUcfj7.png',name:'Waldsiedlung',group:'Siedlungen'},
-  {id:'mmhybamogr5u',url:'https://i.imgur.com/WUjAGC5.png',name:'Bergbausiedlung',group:'Siedlungen'},
-  {id:'mmhybk0g5ep5',url:'https://i.imgur.com/XBchNeO.png',name:'Leuchtturm',group:'Siedlungen'},
-  {id:'mmhybs1at7gb',url:'https://i.imgur.com/W5reRk3.png',name:'Sonstiges',group:'Ort'},
-  {id:'mmhycsrakooq',url:'https://i.imgur.com/gCD7g8z.png',name:'Befestigung, Turm',group:'Siedlungen'},
-  {id:'mmhyd9rw13hp',url:'https://i.imgur.com/rkPVj2q.png',name:'Großes Hügelgrab',group:'Dungeon'},
-  {id:'mmhydq2qvg60',url:'https://i.imgur.com/3FCGHjn.png',name:'Antikes Grabmal',group:'Dungeon'},
-  {id:'mmhye4s8sgib',url:'https://i.imgur.com/oa6fFKZ.png',name:'Schmiede',group:'Einzelne Orte'},
-  {id:'mmhyegn0obaj',url:'https://i.imgur.com/P0KVz1C.png',name:'Flusssiedlung',group:'Siedlungen'},
-  {id:'mmhyews3t5aw',url:'https://i.imgur.com/QgWTzna.png',name:'Schiffswrack',group:'Ort'},
-  {id:'mmhyf9ai4we3',url:'https://i.imgur.com/D5KPZrl.png',name:'Klostersiedlung',group:'Siedlungen'},
-  {id:'mmhyfwp6jspa',url:'https://i.imgur.com/UdZpwwT.png',name:'Kleinstadt, Bardensiedlung',group:'Siedlungen'},
-  {id:'mmhygeiqc942',url:'https://i.imgur.com/ig4QY5L.png',name:'Große Stadt',group:'Städte'},
-  {id:'mmhyh0xyptir',url:'https://i.imgur.com/ZyWnMQI.png',name:'Handelssiedlung, Straßensiedlung',group:'Siedlungen'},
-  {id:'mmhyhe9aohw9',url:'https://i.imgur.com/IzgkaZA.png',name:'Stadtruine',group:'Ruinen'},
-  {id:'mmhyhpsw5bdv',url:'https://i.imgur.com/a86oa8b.png',name:'Große Burg',group:'Städte'},
-  {id:'mmhyi688vt0g',url:'https://i.imgur.com/b3Dis88.png',name:'Ausgrabung',group:'Lager'},
-  {id:'mmhyihniof25',url:'https://i.imgur.com/QfEWeNI.png',name:'Taverne',group:'Einzelne Orte'},
-  {id:'mmhyiw9w5qme',url:'https://i.imgur.com/7jYp7Ec.png',name:'Siedlungsruine',group:'Ruinen'},
-  {id:'mmhyj3uc39d4',url:'https://i.imgur.com/xnDdkTd.png',name:'Magierturm',group:'Einzelne Orte'},
-  {id:'mmhyjfea8n2b',url:'https://i.imgur.com/jHSfDfQ.png',name:'Brauersiedlung',group:'Siedlungen'},
-  {id:'mmhyjpeo7nr4',url:'https://i.imgur.com/pj1bZ3c.png',name:'Turnierfeld',group:'Lager'},
-  {id:'mmhyk0z25v4z',url:'https://i.imgur.com/UhmOtK9.png',name:'Jägerlager',group:'Lager'},
-  {id:'mmhyk9omthtu',url:'https://i.imgur.com/TbPgU39.png',name:'Kriegslager',group:'Lager'},
-  {id:'mmhyl0rch8om',url:'https://i.imgur.com/h70HD3e.png',name:'Festung',group:'Ort'},
-  {id:'mmhylbiaxcz3',url:'https://i.imgur.com/czlsvjk.png',name:'Einzelne Ruine',group:'Ruinen'},
-  {id:'mmhyltcc3a1x',url:'https://i.imgur.com/0uPEURl.png',name:'Sumpf- Moorsiedlung',group:'Siedlungen'},
-  {id:'mmhym8zo3azt',url:'https://i.imgur.com/ztEu5O7.png',name:'Hauptstadt',group:'Städte'},
-  {id:'mmhymmwwir59',url:'https://i.imgur.com/oQuDDCk.png',name:'Pferdesiedlung',group:'Siedlungen'},
-  {id:'mmhyn26wfw4s',url:'https://i.imgur.com/pksanNk.png',name:'Kaufmannssiedlung',group:'Siedlungen'},
-  {id:'mmhynd7erizf',url:'https://i.imgur.com/OdbjAeR.png',name:'Söldner/Banditen Lager',group:'Lager'},
-  {id:'mmhynr1ma41r',url:'https://i.imgur.com/kdjcTYV.png',name:'Diebesgilde',group:'Lager'},
-  {id:'mmhyo03k4th4',url:'https://i.imgur.com/4JhJVAe.png',name:'Kultistenversteck',group:'Lager'},
-  {id:'mmhyoelgkk9u',url:'https://i.imgur.com/GrUPOsK.png',name:'Hügelgrab, klein',group:'Dungeon'},
-  {id:'mmhyorh0f51w',url:'https://i.imgur.com/J2sSgDc.png',name:'Methalle',group:'Einzelne Orte'},
-  {id:'mmhyp27egsr6',url:'https://i.imgur.com/BMmLQin.png',name:'Verwunschener Wald',group:'Ort'},
-  {id:'mmhypwaasn7f',url:'https://i.imgur.com/cuVBi3a.png',name:'Ritterliches Gut',group:'Einzelne Orte'},
-  {id:'mmhyqcq9e9w8',url:'https://i.imgur.com/frFNzJJ.png',name:'Dimensionaler Riss',group:'Ort'},
-  {id:'mmhyqo9qnb18',url:'https://i.imgur.com/o2dIFVI.png',name:'Fähre, Furt',group:'Ort'},
-  {id:'mmhyr6ggtc37',url:'https://i.imgur.com/BM4XrJ8.png',name:'Gasthof, Herberge',group:'Einzelne Orte'},
-  {id:'mmhyrk2dpslf',url:'https://i.imgur.com/JpCv3lu.png',name:'Heiße Quellen',group:'Ort'},
-  {id:'mmhys0dzbfte',url:'https://i.imgur.com/l29ikqO.png',name:'Jägerhaus, Jagdhaus, Jäger',group:'Einzelne Orte'},
-  {id:'mmhysddvuzoh',url:'https://i.imgur.com/oV4VYuE.png',name:'Monsterhort',group:'Dungeon'},
-  {id:'mmhyt6evk15e',url:'https://i.imgur.com/yS1IZVM.png',name:'Ländliches Gut',group:'Einzelne Orte'},
-  {id:'mmhytf3rttx3',url:'https://i.imgur.com/vkMw1eo.png',name:'Plantage',group:'Einzelne Orte'},
-  {id:'mmhyts4v2042',url:'https://i.imgur.com/NH4abC8.png',name:'Wegesschrein',group:'Ort'},
-  {id:'mmhyusqfs3vl',url:'https://i.imgur.com/zudaHxx.png',name:'Zoll, Grenzposten',group:'Einzelne Orte'},
-  {id:'mmhyv2vdwluc',url:'https://i.imgur.com/EkzS9nU.png',name:'Totem, Waldschrat',group:'Ort'},
-  {id:'mmhyvispb0ju',url:'https://i.imgur.com/N2Pw8Dn.png',name:'Viehzüchter, Weide, Hof',group:'Einzelne Orte'},
-  {id:'mmhywaaxhik7',url:'https://i.imgur.com/I40DFfC.png',name:'Weingut, moderat',group:'Einzelne Orte'},
-  {id:'mmhywrd12a2a',url:'https://i.imgur.com/LlxOwL3.png',name:'Schiff',group:'Einzelne Orte'},
-  {id:'mmhyx1cdo310',url:'https://i.imgur.com/w8ZQqt1.png',name:'Ritterburg',group:'Einzelne Orte'},
-  {id:'mmhyxjmf13p3',url:'https://i.imgur.com/0FocBLD.png',name:'Anwesen',group:'Einzelne Orte'},
-  {id:'mmhyxza5y2p9',url:'https://i.imgur.com/LHe3Ld1.png',name:'Familienhof',group:'Einzelne Orte'},
-  {id:'mmhyynav6vzr',url:'https://i.imgur.com/xRYQ5yq.png',name:'Außenposten',group:'Einzelne Orte'},
-  {id:'mmhyz18t7j1c',url:'https://i.imgur.com/UV2ynil.png',name:'Großes Weingut',group:'Einzelne Orte'},
-  {id:'mmhyzd3pgkrl',url:'https://i.imgur.com/piwh9ya.png',name:'Jagdklingen Lager',group:'Gilden'},
-  {id:'mmhyzo7hxsdr',url:'https://i.imgur.com/w8g32Iv.png',name:'Windreiter Standort',group:'Gilden'},
-  {id:'mmhz03mpxj4s',url:'https://i.imgur.com/Cnr33rb.png',name:'Möwensang Standort',group:'Gilden'},
-];
+// DEFAULT_MARKER_CATALOG now lives in assets/js/data/default-marker-catalog.js
+// (336 entries: the original 74 Imgur markers + 262 local icons from IconOrdner/,
+// loaded as window.KARTO_DEFAULT_MARKER_CATALOG before this script runs).
+const DEFAULT_MARKER_CATALOG = window.KARTO_DEFAULT_MARKER_CATALOG || [];
 
 const EMPTY_MAP_IMAGE = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000"><rect width="1400" height="1000" fill="#e6d7ad"/><text x="700" y="475" text-anchor="middle" font-family="serif" font-size="38" fill="#87621f">Kartenbild fehlt</text><text x="700" y="525" text-anchor="middle" font-family="serif" font-size="22" fill="#87621f">Editormodus -> Bilder -> Imgur-Links eintragen</text></svg>'
@@ -119,6 +47,28 @@ function cleanMapImages(images){
   };
 }
 
+const DEFAULT_LAYER_NAMES = {normal:'Karte', regions:'Regionen', pins:'Markierungen'};
+function cleanLayerNames(names){
+  return {
+    normal: String(names?.normal || '').trim() || DEFAULT_LAYER_NAMES.normal,
+    regions: String(names?.regions || '').trim() || DEFAULT_LAYER_NAMES.regions,
+    pins: String(names?.pins || '').trim() || DEFAULT_LAYER_NAMES.pins,
+  };
+}
+
+// Beyond the 3 fixed layers (Karte/Regionen/Markierungen), maps can define
+// any number of additional optional image overlays - each just needs a
+// name and an image (URL or local upload, staged the same way as marker
+// icons - see karto-storage.js's KartoPublish.stageImage).
+function cleanExtraLayers(list){
+  if(!Array.isArray(list)) return [];
+  return list.map(l => ({
+    id: String(l?.id || uid()),
+    name: String(l?.name || '').trim() || 'Ebene',
+    url: String(l?.url || '').trim(),
+  })).filter(l => l.id);
+}
+
 // ═══════════════════════════════════════════
 // STATE — everything saved to Firebase
 // ═══════════════════════════════════════════
@@ -130,6 +80,8 @@ let S = {
   regionIcon: KARTO_CONFIG.regionIcon || '',
   regionTitle: KARTO_CONFIG.title || 'Karten-Vorlage',
   mapImages: cleanMapImages(KARTO_CONFIG.images || {}),
+  layerNames: cleanLayerNames(KARTO_CONFIG.layerNames || {}),
+  extraLayers: cleanExtraLayers(KARTO_CONFIG.extraLayers || []),
   dm: { sessions:[], notes:'', groupStatus:{} },
   markerCatalog: JSON.parse(JSON.stringify(KARTO_CONFIG.defaultMarkerCatalog || DEFAULT_MARKER_CATALOG)),
 };
@@ -165,6 +117,8 @@ function applyMapConfig(){
   if(cfg.regionIcon && !S.regionIcon) S.regionIcon=cfg.regionIcon;
   if(!S.mapImages) S.mapImages=cleanMapImages(cfg.images||{});
   applyMapImages();
+  applyExtraLayerImages();
+  renderLayerButtons();
   if(cfg.documentTitle) document.title=cfg.documentTitle;
 }
 function applyMapImages(){
@@ -176,6 +130,54 @@ function applyMapImages(){
   if(normal) normal.src=imgs.normal||EMPTY_MAP_IMAGE;
   if(regions) regions.src=imgs.regions||EMPTY_LAYER_IMAGE;
   if(pins) pins.src=imgs.pins||EMPTY_LAYER_IMAGE;
+}
+// Beyond the 3 built-in overlay <img>s (#lr/#lm), custom layers get their
+// own <img class="ml" data-overlay="extra-<id>"> created on demand here -
+// map-view.js's setLayer() already treats any [data-overlay] element the
+// same way, so nothing else needs to know these weren't in the original HTML.
+function applyExtraLayerImages(){
+  const stageEl=document.getElementById('map-stage');
+  if(!stageEl) return;
+  const currentIds=new Set(S.extraLayers.map(l=>l.id));
+  stageEl.querySelectorAll('img.ml[data-extra-layer]').forEach(img=>{
+    if(!currentIds.has(img.dataset.extraLayer)) img.remove();
+  });
+  const pinLayerEl=document.getElementById('pl');
+  S.extraLayers.forEach(layer=>{
+    let img=document.getElementById('le-'+layer.id);
+    if(!img){
+      img=document.createElement('img');
+      img.id='le-'+layer.id;
+      img.className='ml';
+      img.alt='';
+      img.draggable=false;
+      img.dataset.overlay='extra-'+layer.id;
+      img.dataset.extraLayer=layer.id;
+      img.style.opacity='0';
+      stageEl.insertBefore(img, pinLayerEl);
+    }
+    img.src=layer.url||EMPTY_LAYER_IMAGE;
+  });
+}
+function renderLayerButtons(){
+  const fixed={normal:S.layerNames.normal, regions:S.layerNames.regions, pins:S.layerNames.pins};
+  Object.keys(fixed).forEach(key=>{
+    const btn=document.getElementById('lb-'+key);
+    if(btn) btn.textContent=fixed[key];
+  });
+  const container=document.getElementById('layer-btns');
+  if(!container) return;
+  container.querySelectorAll('.lbtn[data-extra-layer]').forEach(btn=>btn.remove());
+  S.extraLayers.forEach(layer=>{
+    const btn=document.createElement('button');
+    btn.className='lbtn';
+    btn.id='lb-extra-'+layer.id;
+    btn.dataset.action='set-layer';
+    btn.dataset.layer='extra-'+layer.id;
+    btn.dataset.extraLayer=layer.id;
+    btn.textContent=layer.name;
+    container.appendChild(btn);
+  });
 }
 
 // ═══════════════════════════════════════════
@@ -364,9 +366,13 @@ function applyState(remote){
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
   if(remote.regionTitle) S.regionTitle=remote.regionTitle;
   if(remote.mapImages) S.mapImages=cleanMapImages(remote.mapImages);
+  if(remote.layerNames) S.layerNames=cleanLayerNames(remote.layerNames);
+  if(Array.isArray(remote.extraLayers)) S.extraLayers=cleanExtraLayers(remote.extraLayers);
   if(remote.dm)         {S.dm=remote.dm;S.dm.sessions=S.dm.sessions||[];S.dm.groupStatus=S.dm.groupStatus||{};}
   if(remote.markerCatalog?.length) S.markerCatalog=remote.markerCatalog;
   applyMapImages();
+  applyExtraLayerImages();
+  renderLayerButtons();
   applySizes();
   applyRegionMeta();
   renderPins();
@@ -411,8 +417,11 @@ function exitEdit(){
   document.getElementById('btn-add').style.display='none';
   document.getElementById('btn-stamp').style.display='none';
   document.getElementById('btn-overwrite').style.display='none';
-  document.getElementById('btn-map-images').style.display='none';
+  // btn-map-images/btn-publish only exist on the registry-driven karte.html
+  // shell, not on the legacy standalone CeltigernsWachtKarte.html/KartenTemplate.html.
+  const btnMapImages=document.getElementById('btn-map-images');if(btnMapImages)btnMapImages.style.display='none';
   document.getElementById('btn-export').style.display='none';
+  const btnPublish=document.getElementById('btn-publish');if(btnPublish)btnPublish.style.display='none';
   document.getElementById('dm-btn-wrap').style.display='none';
   document.getElementById('dm-panel').style.display='none';
   document.getElementById('dot-sl-wrap').style.display='none';
@@ -429,8 +438,10 @@ function enterEdit(){
   document.getElementById('btn-add').style.display='block';
   document.getElementById('btn-stamp').style.display='block';
   document.getElementById('btn-overwrite').style.display='block';
-  document.getElementById('btn-map-images').style.display='block';
+  const btnMapImages=document.getElementById('btn-map-images');if(btnMapImages)btnMapImages.style.display='block';
   document.getElementById('btn-export').style.display='block';
+  const btnPublish=document.getElementById('btn-publish');
+  if(btnPublish)btnPublish.style.display=window.KartoPublish?.isConfigured() ? 'block' : 'none';
   document.getElementById('dm-btn-wrap').style.display='block';
   document.getElementById('dot-sl-wrap').style.display='flex';
   document.getElementById('lbl-sl-wrap').style.display='flex';
@@ -511,6 +522,10 @@ function openMapImagesModal(){
   document.getElementById('mapimg-normal').value=imgs.normal;
   document.getElementById('mapimg-regions').value=imgs.regions;
   document.getElementById('mapimg-pins').value=imgs.pins;
+  document.getElementById('layername-normal').value=S.layerNames.normal;
+  document.getElementById('layername-regions').value=S.layerNames.regions;
+  document.getElementById('layername-pins').value=S.layerNames.pins;
+  renderExtraLayerRows();
   document.getElementById('mapimg-mo').classList.add('open');
   setTimeout(()=>document.getElementById('mapimg-normal').focus(),60);
 }
@@ -523,7 +538,13 @@ function saveMapImages(){
   });
   if(!next.normal){toast('⚠ Kartenbild fehlt');return;}
   S.mapImages=next;
+  S.layerNames=cleanLayerNames({
+    normal: document.getElementById('layername-normal').value,
+    regions: document.getElementById('layername-regions').value,
+    pins: document.getElementById('layername-pins').value,
+  });
   applyMapImages();
+  renderLayerButtons();
   saveD();
   closeLMo('mapimg-mo');
   toast('✓ Kartenbilder gespeichert');
@@ -535,6 +556,83 @@ function clearMapImages(){
   saveD();
   closeLMo('mapimg-mo');
   toast('Kartenbilder geleert');
+}
+
+// ═══════════════════════════════════════════
+// EXTRA LAYERS — optional user-defined overlays beyond Karte/Regionen/Markierungen
+// ═══════════════════════════════════════════
+function renderExtraLayerRows(){
+  const wrap=document.getElementById('extra-layers-list');
+  if(!wrap) return;
+  if(!S.extraLayers.length){
+    wrap.innerHTML=`<div style="font-family:'EB Garamond',serif;font-size:.85rem;color:var(--ink3);font-style:italic;">Noch keine weiteren Ebenen.</div>`;
+    return;
+  }
+  wrap.innerHTML=S.extraLayers.map(layer=>`
+    <div style="display:flex;gap:.4rem;align-items:flex-end;margin-bottom:.5rem;">
+      <div style="flex:1;min-width:90px;">
+        <label class="lml" style="margin-bottom:2px;">Name</label>
+        <input class="e-inp" data-input-action="rename-extra-layer" data-layer-id="${esc(layer.id)}" value="${esc(layer.name)}" placeholder="z.B. Handelsrouten"/>
+      </div>
+      <div style="flex:2;min-width:140px;">
+        <label class="lml" style="margin-bottom:2px;">Bild-URL <em style="opacity:.7">oder</em> Datei</label>
+        <div style="display:flex;gap:.3rem;">
+          <input class="e-inp" data-input-action="set-extra-layer-url" data-layer-id="${esc(layer.id)}" value="${esc(layer.url)}" placeholder="https://i.imgur.com/...png" style="width:100%;"/>
+          <label class="s-btn s-cancel" style="flex-shrink:0;height:34px;display:flex;align-items:center;cursor:pointer;margin:0;">📁
+            <input type="file" accept="image/png,image/jpeg,image/webp" data-file-action="extra-layer-upload" data-layer-id="${esc(layer.id)}" style="display:none;"/>
+          </label>
+        </div>
+      </div>
+      <button class="s-btn s-del" style="flex-shrink:0;height:34px;" data-action="delete-extra-layer" data-layer-id="${esc(layer.id)}" title="Ebene löschen">🗑</button>
+    </div>`).join('');
+}
+function addExtraLayer(){
+  if(!editMode){toast('⚠ Editormodus erforderlich');return;}
+  S.extraLayers.push({id:uid(), name:`Ebene ${S.extraLayers.length+1}`, url:''});
+  applyExtraLayerImages();
+  renderLayerButtons();
+  renderExtraLayerRows();
+  saveD();
+  toast('✓ Ebene hinzugefügt — benennen & Bild hinterlegen');
+}
+function renameExtraLayer(layerId, name){
+  const layer=S.extraLayers.find(l=>l.id===layerId);
+  if(!layer) return;
+  layer.name=String(name||'').trim()||'Ebene';
+  renderLayerButtons();
+  saveD();
+}
+function setExtraLayerUrl(layerId, url){
+  const layer=S.extraLayers.find(l=>l.id===layerId);
+  if(!layer) return;
+  layer.url=String(url||'').trim();
+  applyExtraLayerImages();
+  saveD();
+}
+async function uploadExtraLayerImage(layerId, file){
+  const layer=S.extraLayers.find(l=>l.id===layerId);
+  if(!layer) return;
+  if(!window.KartoPublish?.stageImage){toast('⚠ Upload nicht verfügbar');return;}
+  try{
+    const dataUrl=await window.KartoPublish.stageImage(file);
+    layer.url=dataUrl;
+    applyExtraLayerImages();
+    renderExtraLayerRows();
+    saveD();
+    toast('✓ Ebenenbild geladen');
+  } catch(error){
+    toast('⚠ '+(error?.message||'Datei konnte nicht geladen werden'));
+  }
+}
+function deleteExtraLayer(layerId){
+  const layer=S.extraLayers.find(l=>l.id===layerId);
+  S.extraLayers=S.extraLayers.filter(l=>l.id!==layerId);
+  document.getElementById('le-'+layerId)?.remove();
+  if(document.getElementById('lb-extra-'+layerId)?.classList.contains('on')) window.setLayer('normal');
+  renderLayerButtons();
+  renderExtraLayerRows();
+  saveD();
+  toast('🗑 Ebene "'+(layer?.name||'')+'" entfernt');
 }
 
 // ═══════════════════════════════════════════

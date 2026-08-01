@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../assets/css/karto-map.css">
 
 <script src="./template.config.js"></script>
-<script type="module" src="../assets/js/karto-firebase.js"></script>
+<script src="../assets/js/karto-storage.js"></script>
 </head>
 <body>
 <div style="display:flex;flex-direction:column;height:100%;">
@@ -78,7 +78,7 @@
   <div class="sp"></div>
   <div style="display:flex;align-items:center;gap:4px;flex-shrink:0;">
     <div id="sdot"></div>
-    <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.65;letter-spacing:0.05em">SYNC</span>
+    <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.65;letter-spacing:0.05em">LOKAL</span>
   </div>
 </div>
 
@@ -313,8 +313,8 @@
 <div id="map-wrap" style="flex:1;position:relative;overflow:hidden;">
   <div id="map-stage">
     <img id="ln" class="ml" src="Kartenbilder/normal.png"         alt="" draggable="false" onload="onImgLoad(this)" onerror="onImgErr()"/>
-    <img id="lr" class="ml" src="Kartenbilder/regionen.png" alt="" draggable="false"/>
-    <img id="lm" class="ml" src="Kartenbilder/marker.png"   alt="" draggable="false"/>
+    <img id="lr" class="ml" data-overlay="regions" src="Kartenbilder/regionen.png" alt="" draggable="false"/>
+    <img id="lm" class="ml" data-overlay="pins" src="Kartenbilder/marker.png"   alt="" draggable="false"/>
     <div id="pl"></div>
   </div>
   <canvas id="measure-canvas"></canvas>
@@ -494,8 +494,14 @@
     <!-- Add entry bar -->
     <div style="padding:.6rem 1rem;border-bottom:1px solid var(--border2);display:flex;gap:.5rem;align-items:flex-end;flex-wrap:wrap;background:rgba(0,0,0,.04);">
       <div style="flex:2;min-width:180px;">
-        <label class="lml" style="margin-bottom:3px;">Imgur-URL (direktlink auf .png/.jpg)</label>
-        <input class="e-inp" id="mcat-url" placeholder="https://i.imgur.com/xxxxx.png" style="width:100%;"/>
+        <label class="lml" style="margin-bottom:3px;">Imgur-URL <em style="opacity:.7;">oder</em> Datei hochladen</label>
+        <div style="display:flex;gap:.4rem;">
+          <input class="e-inp" id="mcat-url" placeholder="https://i.imgur.com/xxxxx.png" style="width:100%;"/>
+          <label class="s-btn s-cancel" style="flex-shrink:0;height:34px;display:flex;align-items:center;cursor:pointer;margin:0;">📁
+            <input type="file" id="mcat-file" accept="image/png,image/jpeg,image/webp" data-file-action="mcat-upload-icon" style="display:none;"/>
+          </label>
+        </div>
+        <span id="mcat-file-status" style="display:block;font-family:'Cinzel',serif;font-size:.65rem;color:var(--gold);margin-top:2px;"></span>
       </div>
       <div style="flex:1;min-width:120px;">
         <label class="lml" style="margin-bottom:3px;">Name</label>
@@ -638,6 +644,7 @@
 <script src="../assets/js/lsb/lsb-tools.js"></script>
 <script src="../assets/js/lsb/lsb-canvas.js"></script>
 <script src="../assets/js/lsb/lsb-interaction.js"></script>
+<script src="../assets/js/data/default-marker-catalog.js"></script>
 <script src="../assets/js/karto-app.js"></script>
 <script src="../assets/js/lsb/lsb-groups.js"></script>
 <script src="../assets/js/lsb/lsb-modals.js"></script>

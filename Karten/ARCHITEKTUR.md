@@ -21,8 +21,9 @@ Karten/
   assets/
     js/
       karto-app.js              # Kartenkern, Runtime-Bruecke und uebergeordneter State
-      karto-firebase.js         # Firebase-Persistenz pro Karte
+      karto-storage.js          # Lokale Entwuerfe (localStorage) + GitHub-Veroeffentlichung, siehe Abschnitt "Datenspeicherung" unten
       core/
+        karto-publish-ui.js     # UI fuer den "Online speichern"-Dialog (#publish-mo)
         karto-actions.js        # zentrale data-action/data-input-action Event-Delegation
       data/
         data-manager.js         # Import, Export, Backup und Pin-Normalisierung
@@ -62,6 +63,76 @@ Karten/
       Kartenbilder/             # aktive Kartenbilder fuer Celtigerns Wacht
 ```
 
+## Datenspeicherung (kein Firebase mehr)
+
+Bis 2026-08 lag der komplette Zustand einer Karte (Pins, Kategorien, Marker-
+Katalog, DM-Daten, LSB-Reisedaten) in einem einzigen Firestore-Dokument pro
+Karte. Das wurde vollstaendig ersetzt durch eine reine GitHub/Netlify-Loesung,
+ohne Datenbank:
+
+1. **Veroeffentlichter Stand** liegt als eine JSON-Datei pro Karte im Repo:
+   `Karten/<kartenordner>/data.json` (Pfad in der Registry/Config als
+   `storage.dataPath`, relativ zu `Karten/`). Diese Datei wird beim Laden der
+   Karte per `fetch()` gelesen - eine ganz normale statische Datei, kein
+   Server noetig.
+2. **Jede Aenderung** (Pin verschieben, Text bearbeiten, Kategorie anlegen...)
+   speichert sofort einen **lokalen Entwurf** in `localStorage` des Browsers
+   (`karto.draft.<mapId>`) - genauso verzögerungsfrei wie vorher das
+   Firestore-Autosave, aber ohne Netzwerkzugriff.
+3. **"🌐 Online speichern"** (Button im Editiermodus) committet den lokalen
+   Entwurf direkt auf den `master`-Branch: Der Browser schickt den Zustand an
+   die Netlify-Funktion `netlify/functions/karten-publisher.mjs`, die per
+   GitHub-API `Karten/<...>/data.json` aktualisiert (mit Konfliktpruefung
+   ueber ein `revision`-Feld - falls in der Zwischenzeit jemand anderes
+   veroeffentlicht hat, wird das erkannt statt stillschweigend ueberschrieben).
+   Erst danach sehen andere Geraete/Browser die Aenderung (nach dem naechsten
+   Netlify-Deploy).
+4. Das Modul heisst technisch weiterhin `window._fb` (Legacy-Name, um nicht
+   jede Aufrufstelle in `karto-app.js` anfassen zu muessen) - es ist aber kein
+   Firebase mehr.
+
+**Wichtige Verhaltensaenderung:** Es gibt keine automatische Geraete-zu-
+Geraete-Synchronisation mehr. Solange "Online speichern" nicht geklickt wurde,
+bleiben Aenderungen nur im aktuellen Browser. Wer an mehreren Geraeten
+arbeitet, muss bewusst veroeffentlichen.
+
+Der "Online speichern"-Dialog fragt nach einem Veroeffentlichungsschluessel
+(`ALERIA_GITHUB_PUBLISH_KEY`, als Netlify-Umgebungsvariable gesetzt - dieselbe
+Variable, die auch `netlify/functions/family-publisher.mjs` fuer die
+Stammbäume-Veroeffentlichung nutzt). Ohne gueltigen Schluessel lehnt die
+Funktion die Anfrage ab (401).
+
+### Lokale Bild-Uploads (Icons, Ebenenbilder)
+
+Seit 2026-08 koennen Marker-Icons und Ebenenbilder auch als lokale Datei
+hochgeladen werden statt nur per Imgur-Link (`KartoPublish.stageImage(file)`
+in `karto-storage.js`, genutzt vom Marker-Katalog und der Ebenen-Verwaltung):
+
+1. Die Datei wird client-seitig als `data:image/...;base64,...`-URL gelesen
+   (max. 4 MB, PNG/JPEG/WebP) und landet direkt im lokalen Zustand - sie
+   funktioniert sofort als `<img src>`, ganz ohne Netzwerkzugriff.
+2. Erst beim "Online speichern" durchsucht `karten-publisher.mjs`
+   (`materializeStagedImages`) den gesamten Kartenzustand rekursiv nach
+   solchen `data:`-URLs, validiert Signatur/Groesse, committet sie als
+   echte Dateien unter `Karten/assets/uploads/<mapId>/...` und schreibt den
+   Zustand so um, dass er auf den neuen relativen Pfad zeigt.
+3. Fuer sehr grosse, handgezeichnete Kartenbilder (mehrere zehn MB, wie die
+   bestehenden WebP-Kartenbilder) ist dieser Weg **nicht** gedacht - dafuer
+   weiterhin eine gehostete URL eintragen, nicht hochladen (die Funktion
+   lehnt Anfragen ueber 6 MB grundsaetzlich ab).
+
+### Weitere Ebenen (ueber Karte/Regionen/Markierungen hinaus)
+
+Die 3 festen Ebenen lassen sich im "🖼 Kartenbilder & Ebenen"-Dialog
+umbenennen (`S.layerNames`), und es lassen sich beliebig viele zusaetzliche
+optionale Bild-Ebenen anlegen (`S.extraLayers: [{id, name, url}]`). Jede
+weitere Ebene bekommt automatisch einen Layer-Button und ein Overlay-`<img>`
+(`assets/js/karto-app.js`: `renderLayerButtons()` / `applyExtraLayerImages()`),
+`map-view.js`s `setLayer()` behandelt sie generisch ueber
+`.ml[data-overlay="<id>"]` - kein Sonderfall pro Ebene noetig. Da `S` beim
+Speichern immer als Ganzes committet wird, brauchen neue Felder wie
+`extraLayers`/`layerNames` keine gesonderte Persistenz-Anbindung.
+
 ## Regeln fuer neue Karten
 
 Eine neue Karte darf individuelle Inhalte besitzen:
@@ -69,7 +140,7 @@ Eine neue Karte darf individuelle Inhalte besitzen:
 - Registry-Eintrag mit stabiler `id`
 - `template.config.js`
 - Kartenbilder
-- eigene Firebase-`docId`
+- eigenen `storage.dataPath` (eigene `data.json`)
 - spaeter optionale Startdaten
 
 Geplante Karten brauchen nur einen Registry-Eintrag. Ordner, Config und Bilder werden erst angelegt, wenn die Karte wirklich entsteht.
@@ -93,7 +164,7 @@ Abgeschlossen:
    - Messwerkzeug, Gruppen und Routen
    - DM-Sitzungen, Tagebuch und Status
 3. State-Zugriffe ueber `window.KartoRuntime` kapseln, damit Features nicht direkt am globalen `S` arbeiten muessen.
-4. Firebase als Storage-Adapter behalten und nicht in Featuremodule streuen.
+4. Persistenz als eigenen Storage-Adapter (`karto-storage.js`) kapseln und nicht in Featuremodule streuen - urspruenglich Firebase, seit 2026-08 lokale Entwuerfe + GitHub-Veroeffentlichung (siehe "Datenspeicherung" oben).
 5. Zentrale Karten-Shell `karte.html` fuer Registry-gesteuertes Laden anlegen.
 6. `karten.registry.js` fuer aktive und geplante Karten-IDs anlegen.
 7. Validator fuer Registry, aktive Kartenpfade und doppelte Bildinhalte anlegen.

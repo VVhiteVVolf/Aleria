@@ -7,8 +7,7 @@ window.KARTO_CONFIG = {
     regions: "Kartenbilder/regionen.png",
     pins: "Kartenbilder/marker.png",
   },
-  firebase: {
-    collection: "karten",
-    docId: "template-map",
+  storage: {
+    dataPath: "_template/data.json",
   },
 };

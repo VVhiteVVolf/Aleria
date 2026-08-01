@@ -54,6 +54,12 @@
             </div>
             ${pin.pinMarker ? `<button data-action="clear-pin-marker" title="Marker entfernen" style="background:none;border:none;color:var(--redl);cursor:pointer;font-size:.8rem;flex-shrink:0;">✕</button>` : ''}
           </div>
+          ${pin.pinMarker ? `
+          <div style="display:flex;align-items:center;gap:.5rem;margin-top:.4rem;">
+            <span style="font-family:'Cinzel',serif;font-size:var(--fs-xs);color:var(--ink3);opacity:.7;white-space:nowrap;">Icon-Größe</span>
+            <input type="range" id="sb-pinmarker-scale" min="40" max="300" value="${Math.round((pin.pinMarkerScale || 1) * 100)}" style="flex:1;accent-color:var(--gold);" data-input-action="set-pin-marker-scale"/>
+            <span id="sb-pinmarker-scale-val" style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:var(--gold);min-width:34px;text-align:right;">${Math.round((pin.pinMarkerScale || 1) * 100)}%</span>
+          </div>` : ''}
         </div>
 
         <div style="border-top:1px solid var(--border2);padding-top:.5rem;margin-top:.1rem;">
@@ -189,9 +195,9 @@
     const groups = [...new Set((state().markerCatalog || []).map(item => item.group || '').filter(Boolean))].sort();
     const filter = document.getElementById('pinmkr-filter');
     filter.innerHTML = '<option value="">Alle Gruppen</option>' + groups.map(group => `<option value="${runtime.esc(group)}">${runtime.esc(group)}</option>`).join('');
-    renderPinMarkerGrid('');
     runtime.closeModal('pinmkr-mo');
     document.getElementById('pinmkr-mo').classList.add('open');
+    renderPinMarkerGrid('');
   }
 
   function renderPinMarkerGrid(query){
@@ -220,7 +226,7 @@
       <div class="mcat-grp-header">${esc(group)}</div>
       ${items.map(marker => `
         <div class="mcat-item" data-action="set-pin-marker" data-marker-url="${esc(marker.url)}" title="${esc(marker.name)}">
-          <img src="${esc(marker.url)}" loading="lazy" style="width:48px;height:58px;object-fit:contain;"
+          <img src="${esc(marker.url)}" style="width:48px;height:58px;object-fit:contain;"
                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 48%22><text y=%2230%22 font-size=%2224%22>📍</text></svg>'"/>
           <span class="mcat-lbl">${esc(marker.name)}</span>
         </div>`).join('')}
@@ -241,6 +247,16 @@
     if(!pin) return;
     pin.pinMarker = '';
     renderSidebarEdit(pin);
+  }
+
+  function sbSetPinMarkerScale(value){
+    const pin = sbSyncAll();
+    if(!pin) return;
+    pin.pinMarkerScale = Math.max(.4, Math.min(3, Number(value) / 100));
+    document.getElementById('sb-pinmarker-scale-val').textContent = `${Math.round(pin.pinMarkerScale * 100)}%`;
+    window.KartoPinRenderer?.renderPins();
+    runtime.save();
+    runtime.renderEditorPreview();
   }
 
   function sbSyncTbl(){
@@ -363,6 +379,7 @@
   window.renderPinMarkerGrid = renderPinMarkerGrid;
   window.sbSetPinMarker = sbSetPinMarker;
   window.sbClearPinMarker = sbClearPinMarker;
+  window.sbSetPinMarkerScale = sbSetPinMarkerScale;
   window.sbSyncTbl = sbSyncTbl;
   window.sbSyncAll = sbSyncAll;
   window.sbAddRow = sbAddRow;

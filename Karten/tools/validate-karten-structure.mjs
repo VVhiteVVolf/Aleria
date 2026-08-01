@@ -112,10 +112,21 @@ function validateActiveMap(map) {
 
   if (map.config && !fileExists(map.config)) reportError(`${label}: config not found: ${map.config}`);
 
-  if (!map.firebase?.docId) {
-    reportError(`${label}: active map needs firebase.docId`);
-  } else if (map.firebase.docId !== map.id) {
-    reportWarning(`${label}: firebase.docId differs from map id`);
+  if (!map.dataPath) {
+    reportError(`${label}: active map needs a dataPath`);
+  } else if (!fileExists(map.dataPath)) {
+    reportError(`${label}: dataPath does not exist: ${map.dataPath}`);
+  }
+
+  // karte.html's own boot logic (see the `!selectedMap.config && !selectedMap.images
+  // && !selectedMap.editableDraft` check) treats editableDraft as exempt from
+  // needing images up front - an active-but-still-empty map is expected to load
+  // with placeholder art until images are set via the in-app "Bilder"-Dialog.
+  // Pre-existing gap: this validator didn't have that same exemption, so it
+  // was already erroring on Llysfaen (status active, editableDraft, images:{})
+  // before this pass - fixed here to match actual runtime behaviour.
+  if ((!map.images || typeof map.images !== "object" || !Object.keys(map.images).length) && map.editableDraft) {
+    return;
   }
 
   if (!map.images || typeof map.images !== "object") {
@@ -139,11 +150,11 @@ function validateActiveMap(map) {
 function validatePlannedMap(map) {
   const label = map.id;
 
-  if (map.editableDraft && !map.firebase?.docId) {
-    reportError(`${label}: editable draft needs firebase.docId`);
+  if (map.editableDraft && !map.dataPath) {
+    reportError(`${label}: editable draft needs a dataPath`);
   }
-  if (map.editableDraft && map.firebase?.docId !== map.id) {
-    reportWarning(`${label}: editable draft firebase.docId differs from map id`);
+  if (map.editableDraft && map.dataPath && !fileExists(map.dataPath)) {
+    reportError(`${label}: editable draft dataPath does not exist: ${map.dataPath}`);
   }
   if (map.config) {
     reportWarning(`${label}: planned map already has config; consider switching to active when assets are ready`);
