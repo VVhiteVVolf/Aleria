@@ -40,16 +40,18 @@ function getSceneDiceDialogContext() {
     id: '',
     name: String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Erzähler'
   };
+  const narrationMode = window.AleriaSceneDiceNarration?.normalizeMode?.(
+    document.getElementById('scene-dice-narration-mode')?.value || 'immersive'
+  ) || 'immersive';
+  const narrationPolicy = window.AleriaSceneDiceNarration?.getMode?.(narrationMode);
   return {
     roller: String(participant.name || '').trim() || 'Erzähler',
     rollerId: participant.id === '__narrator__' ? '' : String(participant.id || '').trim(),
     purpose: String(document.getElementById('scene-dice-purpose')?.value || '').trim(),
     situation: String(document.getElementById('scene-dice-situation')?.value || '').trim().slice(0, 900),
     rollType: document.getElementById('scene-dice-roll-type')?.value || 'general',
-    narrationMode: window.AleriaSceneDiceNarration?.normalizeMode?.(
-      document.getElementById('scene-dice-narration-mode')?.value || 'immersive'
-    ) || 'immersive',
-    humorEnabled: document.getElementById('scene-dice-humor-enabled')?.checked === true,
+    narrationMode,
+    humorEnabled: narrationPolicy?.usesAi !== false && document.getElementById('scene-dice-humor-enabled')?.checked === true,
     manualNarration: String(document.getElementById('scene-dice-manual-narration')?.value || '').trim().slice(0, 700)
   };
 }
@@ -61,6 +63,15 @@ async function generateSceneDiceNarrationForRoll(roll) {
   roll.narration = '';
   roll.narrationError = '';
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
+
+  if (roll.narrationMode === 'simple') {
+    roll.narrationSource = 'simple';
+    roll.narrationState = 'ready';
+    renderSceneDicePendingRoll(roll);
+    if (commit) commit.disabled = false;
+    setSceneDiceStatus('Einfacher Wurf bereit. AleriaGPT wird nicht verwendet.', 'info');
+    return;
+  }
 
   const manualNarration = String(roll.manualNarration || '').trim().slice(0, 700);
   if (manualNarration) {

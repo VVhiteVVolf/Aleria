@@ -16,7 +16,7 @@ function renderSceneDiceEventComment(comment, idx = 0) {
   const divider = idx > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   const modeLabel = roll.mode === 'advantage' ? 'Vorteil' : roll.mode === 'disadvantage' ? 'Nachteil' : 'Normal';
   const narrationModeLabel = window.AleriaSceneDiceNarration?.getMode?.(roll.narrationMode)?.label
-    || (roll.narrationMode === 'standard' ? 'Standard' : roll.narrationMode === 'character' ? 'Charakterfokus' : roll.narrationMode === 'dramatic' ? 'Dramatisch' : 'Immersiv');
+    || (roll.narrationMode === 'simple' ? 'Einfach würfeln' : roll.narrationMode === 'standard' ? 'Standard' : roll.narrationMode === 'character' ? 'Charakterfokus' : roll.narrationMode === 'dramatic' ? 'Dramatisch' : 'Immersiv');
   const actor = roll.roller || 'Die Szene';
   const natural = Number(roll.natural);
   const rolledValue = Number.isFinite(natural) && natural > 0 ? natural : Number(roll.total) || 0;

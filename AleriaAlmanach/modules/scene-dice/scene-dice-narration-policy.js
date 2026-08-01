@@ -18,6 +18,12 @@ const SCENE_DICE_NARRATION_MODES = Object.freeze([
     usesAi: true
   }),
   Object.freeze({
+    id: 'simple',
+    label: 'Einfach würfeln',
+    description: 'Keine KI und kein Erzähltext: Es wird ausschließlich das Würfelergebnis angezeigt.',
+    usesAi: false
+  }),
+  Object.freeze({
     id: 'standard',
     label: 'Standard',
     description: 'Keine KI-Deutung: Name und gewürfelter Wert werden knapp festgehalten.',

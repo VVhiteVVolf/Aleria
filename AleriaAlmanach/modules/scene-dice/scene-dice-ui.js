@@ -36,10 +36,11 @@ function buildSceneDiceTypeButtons() {
 
 function getSceneDiceNarrationModes() {
   return window.AleriaSceneDiceNarration?.getModes?.() || [
-    { id: 'immersive', label: 'Immersiv', description: 'AleriaGPT erzählt die unmittelbare Folge als Teil der Szene.' },
-    { id: 'character', label: 'Charakterfokus', description: 'Die bekannte Persönlichkeit erhält mehr Gewicht.' },
-    { id: 'dramatic', label: 'Dramatisch', description: 'Atmosphäre und sichtbare Konsequenzen werden verdichtet.' },
-    { id: 'standard', label: 'Standard', description: 'Nur Name und gewürfelter Wert, ohne KI-Deutung.' }
+    { id: 'immersive', label: 'Immersiv', description: 'AleriaGPT erzählt die unmittelbare Folge als Teil der Szene.', usesAi: true },
+    { id: 'character', label: 'Charakterfokus', description: 'Die bekannte Persönlichkeit erhält mehr Gewicht.', usesAi: true },
+    { id: 'dramatic', label: 'Dramatisch', description: 'Atmosphäre und sichtbare Konsequenzen werden verdichtet.', usesAi: true },
+    { id: 'simple', label: 'Einfach würfeln', description: 'Keine KI und kein Erzähltext: Es wird ausschließlich das Würfelergebnis angezeigt.', usesAi: false },
+    { id: 'standard', label: 'Standard', description: 'Nur Name und gewürfelter Wert, ohne KI-Deutung.', usesAi: false }
   ];
 }
 
@@ -219,7 +220,7 @@ function syncSceneDiceNarrationModeUi() {
   const description = document.querySelector('[data-scene-dice-narration-mode-description]');
   if (description) description.textContent = selected?.description || '';
   const humor = document.getElementById('scene-dice-humor-enabled');
-  if (humor) humor.disabled = selected?.usesAi === false || selected?.id === 'standard';
+  if (humor) humor.disabled = selected?.usesAi === false;
 }
 
 function renderSceneDiceRollDetails(roll) {
@@ -238,6 +239,9 @@ function renderSceneDiceNarrationPreview(roll) {
   }
   if (roll.narrationState === 'error') {
     return `<div class="scene-dice-narration" data-state="error"><span>Erzähltext nicht verfügbar</span><p>${escapeHtml(roll.narrationError || 'AleriaGPT konnte den Wurf gerade nicht auswerten.')}</p><button type="button" data-scene-dice-action="retry-narration">Erneut versuchen</button></div>`;
+  }
+  if (roll.narrationSource === 'simple' && roll.narrationState === 'ready') {
+    return '';
   }
   if (roll.narration) {
     const label = roll.narrationSource === 'manual'

@@ -70,8 +70,10 @@ test('places full scene and character context in retrieval instead of the trunca
   assert.match(enriched.promptContext, /Anaraut ist geduldig/);
 });
 
-test('offers distinct narration modes and deterministic standard output', () => {
-  assert.deepEqual(getSceneDiceNarrationModes().map(mode => mode.id), ['immersive', 'character', 'dramatic', 'standard']);
+test('offers distinct narration modes and deterministic non-AI behavior', () => {
+  const modes = getSceneDiceNarrationModes();
+  assert.deepEqual(modes.map(mode => mode.id), ['immersive', 'character', 'dramatic', 'simple', 'standard']);
+  assert.equal(modes.find(mode => mode.id === 'simple')?.usesAi, false);
   assert.equal(createSceneDiceStandardNarration(lowPerceptionRoll, 'Anaraut Draig'), 'Anaraut Draig hat eine 4 gewürfelt.');
 });
 

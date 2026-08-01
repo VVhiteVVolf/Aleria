@@ -36,6 +36,7 @@ async function sendSceneDiceNarrationRequest(query, retrieval, mode) {
 async function generateSceneDiceNarration(roll = {}, options = {}) {
   const narrationMode = normalizeSceneDiceNarrationMode(roll.narrationMode);
   const mode = getSceneDiceNarrationMode(narrationMode);
+  if (narrationMode === 'simple') return '';
   if (!mode.usesAi) return createSceneDiceStandardNarration(roll, roll.roller);
   if (!window.AleriaGptClient?.isConfigured?.()) {
     throw new Error('AleriaGPT ist in dieser Umgebung nicht verbunden.');

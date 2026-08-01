@@ -156,7 +156,7 @@ assert.equal(prepared.boardNestedInFrame, true);
 assert.notEqual(prepared.shadeMask, 'none', 'Die optische Brettbegrenzung fehlt.');
 assert.equal(prepared.appearanceCount, 7);
 assert.equal(new Set(prepared.appearanceColors).size, 7, 'Nicht jede Würfelart besitzt eine eigene Farbe.');
-assert.deepEqual(prepared.narrationModes, ['immersive', 'character', 'dramatic', 'standard']);
+assert.deepEqual(prepared.narrationModes, ['immersive', 'character', 'dramatic', 'simple', 'standard']);
 assert.equal(prepared.humorEnabled, true);
 assert.equal(prepared.manualNarrationAvailable, true);
 
@@ -243,12 +243,29 @@ const standardAndManual = await evaluate(`(async () => {
   const input = document.getElementById('scene-dice-formula');
   const narrationMode = document.getElementById('scene-dice-narration-mode');
   const manual = document.getElementById('scene-dice-manual-narration');
+  narrationMode.value = 'simple';
+  manual.value = '';
+  syncSceneDiceNarrationModeUi();
+  const queriesBeforeSimple = window.__sceneDiceAiQueries.length;
+  input.value = '1d8';
+  document.querySelector('[data-scene-dice-action="roll"]').click();
+  let started = Date.now();
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '1d8' || _sceneDicePendingRoll.narrationState !== 'ready') {
+    if (Date.now() - started > 30000) throw new Error('Einfacher Wurf wurde nicht abgeschlossen.');
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  const simple = JSON.parse(JSON.stringify(_sceneDicePendingRoll));
+  const simpleResultText = document.querySelector('.scene-dice-total')?.textContent.trim() || '';
+  const simpleNarrationVisible = !!document.querySelector('.scene-dice-narration');
+  const humorDisabledForSimple = document.getElementById('scene-dice-humor-enabled').disabled;
+  const simpleSkippedAi = window.__sceneDiceAiQueries.length === queriesBeforeSimple;
+
   narrationMode.value = 'standard';
   syncSceneDiceNarrationModeUi();
   const queriesBeforeStandard = window.__sceneDiceAiQueries.length;
   input.value = '1d20';
   document.querySelector('[data-scene-dice-action="roll"]').click();
-  let started = Date.now();
+  started = Date.now();
   while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '1d20' || _sceneDicePendingRoll.narrationState !== 'ready') {
     if (Date.now() - started > 30000) throw new Error('Standardwurf wurde nicht abgeschlossen.');
     await new Promise(resolve => setTimeout(resolve, 50));
@@ -271,13 +288,25 @@ const standardAndManual = await evaluate(`(async () => {
   narrationMode.value = 'immersive';
   syncSceneDiceNarrationModeUi();
   return {
+    simple,
     standard,
     manualRoll,
+    simpleResultText,
+    simpleNarrationVisible,
+    humorDisabledForSimple,
+    simpleSkippedAi,
     humorDisabledForStandard,
     standardSkippedAi: window.__sceneDiceAiQueries.length === queriesBeforeStandard
   };
 })()`, 75000);
 
+assert.equal(standardAndManual.simple.narrationSource, 'simple');
+assert.equal(standardAndManual.simple.narration, '');
+assert.equal(standardAndManual.simpleSkippedAi, true);
+assert.equal(standardAndManual.humorDisabledForSimple, true);
+assert.equal(standardAndManual.simple.humorEnabled, false);
+assert.equal(standardAndManual.simpleNarrationVisible, false);
+assert.equal(standardAndManual.simpleResultText, String(standardAndManual.simple.total));
 assert.equal(standardAndManual.standard.narrationSource, 'standard');
 assert.match(standardAndManual.standard.narration, /^Erzähler hat eine \d+ gewürfelt\.$/);
 assert.equal(standardAndManual.standardSkippedAi, true);
