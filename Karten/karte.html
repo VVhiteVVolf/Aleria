@@ -112,11 +112,17 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 
   <div class="sep"></div>
 
-  <!-- Layers -->
+  <!-- Layers: independently toggleable overlays, not a radio group -->
   <div id="layer-btns">
-    <button class="lbtn on" id="lb-normal"  data-action="set-layer" data-layer="normal">Karte</button>
-    <button class="lbtn"    id="lb-regions" data-action="set-layer" data-layer="regions">Regionen</button>
-    <button class="lbtn"    id="lb-pins"    data-action="set-layer" data-layer="pins">Markierungen</button>
+    <button class="lbtn" id="lb-normal"  data-action="set-layer" data-layer="normal">Karte</button>
+    <button class="lbtn" id="lb-regions" data-action="set-layer" data-layer="regions">Regionen</button>
+    <button class="lbtn" id="lb-pins"    data-action="set-layer" data-layer="pins">Markierungen</button>
+  </div>
+  <!-- Only shown once 2+ layers are active at once, to blend them -->
+  <div class="sl-wrap" id="layer-opacity-wrap" style="display:none;">
+    <span class="sl-lbl">Deckkraft</span>
+    <input type="range" class="sl-inp" id="layer-opacity-sl" min="20" max="100" value="70" data-input-action="set-layer-opacity"/>
+    <span class="sl-val" id="layer-opacity-val">70%</span>
   </div>
   <div class="sep"></div>
 
@@ -780,18 +786,6 @@ if (window.KARTO_BOOT_STATUS === 'active') {
         <button class="s-btn s-save" data-action="save-region-icon">✓ Speichern</button>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- PASSWORD MODAL -->
-<div class="mo" id="pw-mo">
-  <div id="pw-card">
-    <div class="pw-title">🔐 Editormodus</div>
-    <div class="pw-sub">NUR FÜR DEN KARTOGRAPHEN</div>
-    <input id="pw-inp" type="password" placeholder="············" data-keydown-action="check-password"/>
-    <div id="pw-err">✕ Falsches Passwort</div>
-    <button id="pw-ok" data-action="check-password">Eintreten</button>
-    <button id="pw-cancel" data-action="close-password-modal">Abbrechen</button>
   </div>
 </div>
 

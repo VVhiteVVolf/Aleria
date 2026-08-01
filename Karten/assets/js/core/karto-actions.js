@@ -2,15 +2,13 @@
   const actions = {
     'edit-region-icon': () => window.onIconClick(),
     'edit-title': () => window.onTitleClick(),
-    'set-layer': el => window.setLayer(el.dataset.layer || 'normal'),
+    'set-layer': el => window.toggleLayer(el.dataset.layer || 'normal'),
     'clear-search': () => window.clearSearch(),
     'close-modal': el => window.KartoRuntime.closeModal(el.dataset.modalId),
     'close-region-icon-modal': () => window.closeIconModal(),
     'preview-region-icon-url': () => window.previewIconUrl(),
     'clear-region-icon': () => window.clearIcon(),
     'save-region-icon': () => window.saveIcon(),
-    'close-password-modal': () => window.closePw(),
-    'check-password': () => window.checkPw(),
     'jump-to-search-result': el => window.jumpTo(el.dataset.pinId),
     'toggle-edit': () => window.toggleEdit(),
     'start-add-pin': () => window.startAdd(),
@@ -167,6 +165,10 @@
     'render-stamp-list': el => window.renderStampList(el.value),
     'render-overwrite-pin-list': el => window.renderOverwritePinList(el.value),
     'set-dot-size': el => window.onDotSl(el.value),
+    'set-layer-opacity': el => {
+      document.getElementById('layer-opacity-val').textContent = el.value + '%';
+      window.applyLayerOpacities();
+    },
     'set-pin-marker-scale': el => window.sbSetPinMarkerScale(el.value),
     'rename-extra-layer': el => window.renameExtraLayer(el.dataset.layerId, el.value),
     'set-extra-layer-url': el => window.setExtraLayerUrl(el.dataset.layerId, el.value),
@@ -203,9 +205,6 @@
     },
     'save-travel-group-name': (el, event) => {
       if(event.key === 'Enter') window.KartoLsbModals.saveGroup();
-    },
-    'check-password': (el, event) => {
-      if(event.key === 'Enter') window.checkPw();
     },
     'submit-publish-key': (el, event) => {
       if(event.key === 'Enter') window.submitPublishKey();

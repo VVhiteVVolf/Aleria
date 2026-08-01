@@ -128,10 +128,24 @@ umbenennen (`S.layerNames`), und es lassen sich beliebig viele zusaetzliche
 optionale Bild-Ebenen anlegen (`S.extraLayers: [{id, name, url}]`). Jede
 weitere Ebene bekommt automatisch einen Layer-Button und ein Overlay-`<img>`
 (`assets/js/karto-app.js`: `renderLayerButtons()` / `applyExtraLayerImages()`),
-`map-view.js`s `setLayer()` behandelt sie generisch ueber
+`map-view.js`s Layer-Funktionen behandeln sie generisch ueber
 `.ml[data-overlay="<id>"]` - kein Sonderfall pro Ebene noetig. Da `S` beim
 Speichern immer als Ganzes committet wird, brauchen neue Felder wie
 `extraLayers`/`layerNames` keine gesonderte Persistenz-Anbindung.
+
+Seit 2026-08 sind die Layer-Buttons keine Radiogruppe mehr, sondern
+unabhaengige Ein/Aus-Schalter (`map-view.js`: `toggleLayer()`/
+`activateLayer()`/`deactivateLayer()`/`resetLayers()`) - beliebige
+Kombinationen (z.B. Regionen + Markierungen gleichzeitig) sind moeglich.
+Sind 2+ Ebenen gleichzeitig aktiv, blendet ein gemeinsamer "Deckkraft"-
+Regler (`#layer-opacity-sl`) alle aktiven Overlays ab, damit sie sich
+sichtbar ueberlagern statt die unterste komplett zu verdecken; bei 0-1
+aktiven Ebenen bleibt alles wie zuvor bei voller Deckkraft. Dieser
+Zustand (welche Ebenen an sind, Deckkraft-Wert) ist reine Sitzungs-UI und
+wird nicht mitgespeichert - "Karte" setzt alles zurueck auf die reine
+Basiskarte. Der Editormodus-Zugang (Button "🔒 Bearbeiten") fragt seit
+2026-08 kein Passwort mehr ab (`toggleEdit()` ruft direkt `enterEdit()`/
+`exitEdit()`) - die Karten sind ohnehin nicht oeffentlich verlinkt.
 
 ## Regeln fuer neue Karten
 

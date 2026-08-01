@@ -2,7 +2,6 @@
 // CONFIG
 // ═══════════════════════════════════════════
 const KARTO_CONFIG = window.KARTO_CONFIG || {};
-const PASSWORD = '7777';
 
 const DEFAULT_CATS = [
   {id:'mmflrbzxydg7', label:'Hauptstadt',        color:'#ff0000'},
@@ -133,8 +132,9 @@ function applyMapImages(){
 }
 // Beyond the 3 built-in overlay <img>s (#lr/#lm), custom layers get their
 // own <img class="ml" data-overlay="extra-<id>"> created on demand here -
-// map-view.js's setLayer() already treats any [data-overlay] element the
-// same way, so nothing else needs to know these weren't in the original HTML.
+// map-view.js's layer toggle functions already treat any [data-overlay]
+// element the same way, so nothing else needs to know these weren't in
+// the original HTML.
 function applyExtraLayerImages(){
   const stageEl=document.getElementById('map-stage');
   if(!stageEl) return;
@@ -221,12 +221,12 @@ window.KartoRuntime = {
     return S.pins.filter(p => !p.secret || editMode);
   },
   categoryForPin: catOf,
-  setLayer(layer){ window.setLayer(layer); },
+  setLayer(layer){ window.toggleLayer(layer); },
   jumpToPin(id){
     const p=S.pins.find(x=>x.id===id);if(!p||!imgW)return;
     const ww=mapWrap.clientWidth,wh=mapWrap.clientHeight;
     vx=ww/2-p.x*imgW*vz;vy=wh/2-p.y*imgH*vz;this.applyMapTransform();
-    window.setLayer('pins');
+    window.activateLayer('pins');
     const el=pl.querySelector(`[data-id="${id}"]`);
     if(el){el.style.transition='none';el.style.transform='translate(-50%,-50%) scale(2)';setTimeout(()=>{el.style.transition='';el.style.transform='';},300);}
   },
@@ -408,7 +408,7 @@ function applyRegionMeta(){
 // ═══════════════════════════════════════════
 // EDIT MODE
 // ═══════════════════════════════════════════
-function toggleEdit(){editMode?exitEdit():openPw();}
+function toggleEdit(){editMode?exitEdit():enterEdit();}
 function exitEdit(){
   editMode=false;addingPin=false;
   document.getElementById('btn-edit').textContent='🔒 Bearbeiten';
@@ -449,13 +449,6 @@ function enterEdit(){
   const iw=document.getElementById('region-icon-wrap');iw.classList.add('editable');iw.title='Klicken um Icon zu setzen';
   mapWrap.style.cursor='grab';
   renderPins();toast('✓ Editormodus aktiviert');
-}
-
-function openPw(){document.getElementById('pw-mo').classList.add('open');setTimeout(()=>document.getElementById('pw-inp').focus(),70);}
-function closePw(){document.getElementById('pw-mo').classList.remove('open');document.getElementById('pw-inp').value='';document.getElementById('pw-err').style.display='none';}
-function checkPw(){
-  if(document.getElementById('pw-inp').value===PASSWORD){closePw();enterEdit();}
-  else{document.getElementById('pw-err').style.display='block';document.getElementById('pw-inp').select();}
 }
 
 // ═══════════════════════════════════════════
@@ -628,7 +621,7 @@ function deleteExtraLayer(layerId){
   const layer=S.extraLayers.find(l=>l.id===layerId);
   S.extraLayers=S.extraLayers.filter(l=>l.id!==layerId);
   document.getElementById('le-'+layerId)?.remove();
-  if(document.getElementById('lb-extra-'+layerId)?.classList.contains('on')) window.setLayer('normal');
+  window.deactivateLayer('extra-'+layerId);
   renderLayerButtons();
   renderExtraLayerRows();
   saveD();
@@ -922,20 +915,19 @@ document.addEventListener('keydown',e=>{
     if(window.KartoStampOverwrite?.isOverwriteActive()){window.stopOverwrite();return;}
     if(window.KartoStampOverwrite?.isStamping()){window.stopStamp();return;}
     if(addingPin){addingPin=false;window.KartoMapInteraction.resetCursor();window.KartoMapInteraction.hidePlacementCursor();hint('');return;}
-    closeScroll();closeSidebar();closePw();
+    closeScroll();closeSidebar();
     document.getElementById('catmgr-mo').classList.remove('open');
     document.getElementById('icon-mo').classList.remove('open');
   }
   if(inF)return;
   if(e.key==='e'&&editMode)startAdd();
-  if(e.key==='1')window.setLayer('normal');
-  if(e.key==='2')window.setLayer('regions');
-  if(e.key==='3')window.setLayer('pins');
+  if(e.key==='1')window.toggleLayer('normal');
+  if(e.key==='2')window.toggleLayer('regions');
+  if(e.key==='3')window.toggleLayer('pins');
 });
 document.getElementById('scroll-mo').addEventListener('click',e=>{if(e.target===document.getElementById('scroll-mo'))closeScroll();});
 document.getElementById('catmgr-mo').addEventListener('click',e=>{if(e.target===document.getElementById('catmgr-mo'))closeCatMgr();});
 document.getElementById('icon-mo').addEventListener('click',e=>{if(e.target===document.getElementById('icon-mo'))closeIconModal();});
-document.getElementById('pw-mo').addEventListener('click',e=>{if(e.target===document.getElementById('pw-mo'))closePw();});
 
 // ═══════════════════════════════════════════
 // LEFT SIDEBAR — WERKZEUGE
@@ -1011,7 +1003,7 @@ function lsbPreloadIcons(){
 // ═══════════════════════════════════════════
 function init(){
   applyMapConfig();
-  window.setLayer('normal');mapWrap.style.cursor='grab';
+  window.resetLayers();mapWrap.style.cursor='grab';
   applySizes();applyRegionMeta();renderCatBar();
   window.KartoLsbCanvas.init();
   window.KartoLsbInteraction.init();
