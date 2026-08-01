@@ -8,6 +8,7 @@ const screenshotPath = resolve('.codex-temp/scene-dice-browser.png');
 const motionScreenshotPath = resolve('.codex-temp/scene-dice-motion.png');
 const participantScreenshotPath = resolve('.codex-temp/scene-dice-participants.png');
 const compactDesktopScreenshotPath = resolve('.codex-temp/scene-dice-compact-desktop.png');
+const controlsScreenshotPath = resolve('.codex-temp/scene-dice-controls.png');
 
 const target = await fetch(`${cdpOrigin}/json/new?about:blank`, { method: 'PUT' }).then(response => response.json());
 const socket = new WebSocket(target.webSocketDebuggerUrl);
@@ -98,6 +99,8 @@ await evaluate(`new Promise((resolve, reject) => {
 
 const prepared = await evaluate(`(async () => {
   window.__sceneDiceAiQueries = [];
+  window.__sceneDiceChatQueries = [];
+  window.__sceneDiceForceMechanicsLeak = false;
   window.AleriaGptRetrieval = {
     retrieve: async query => {
       window.__sceneDiceAiQueries.push(query);
@@ -106,7 +109,14 @@ const prepared = await evaluate(`(async () => {
   };
   window.AleriaGptClient = {
     isConfigured: () => true,
-    sendChat: async () => ({ ok: true, status: 200, text: 'Die Untersuchung liefert unter diesen Umständen nur einen unsicheren Eindruck; etwas Belastbares fällt nicht auf.' })
+    sendChat: async query => {
+      window.__sceneDiceChatQueries.push(query);
+      const repairing = /Überarbeite den folgenden Szenentext/.test(query);
+      const text = window.__sceneDiceForceMechanicsLeak && !repairing
+        ? 'Der Wurf ergibt 2; das Ergebnis bleibt entsprechend dürftig.'
+        : 'Liora fährt mit dem Daumen über das fremde Siegel. Außer einem hartnäckigen Rußfleck gibt es seine Geheimnisse heute nicht preis.';
+      return { ok: true, status: 200, text };
+    }
   };
   ensureSceneDiceDialog();
   resetSceneDiceDialog();
@@ -128,7 +138,10 @@ const prepared = await evaluate(`(async () => {
     boardNestedInFrame: shell.contains(board),
     shadeMask: getComputedStyle(shade).maskImage || getComputedStyle(shade).webkitMaskImage,
     appearanceCount: appearances.length,
-    appearanceColors: appearances.map(item => item.color)
+    appearanceColors: appearances.map(item => item.color),
+    narrationModes: Array.from(document.getElementById('scene-dice-narration-mode').options).map(option => option.value),
+    humorEnabled: document.getElementById('scene-dice-humor-enabled').checked,
+    manualNarrationAvailable: !!document.getElementById('scene-dice-manual-narration')
   };
 })()`, 90000);
 
@@ -143,6 +156,9 @@ assert.equal(prepared.boardNestedInFrame, true);
 assert.notEqual(prepared.shadeMask, 'none', 'Die optische Brettbegrenzung fehlt.');
 assert.equal(prepared.appearanceCount, 7);
 assert.equal(new Set(prepared.appearanceColors).size, 7, 'Nicht jede Würfelart besitzt eine eigene Farbe.');
+assert.deepEqual(prepared.narrationModes, ['immersive', 'character', 'dramatic', 'standard']);
+assert.equal(prepared.humorEnabled, true);
+assert.equal(prepared.manualNarrationAvailable, true);
 
 const participantUi = await evaluate(`(async () => {
   const started = Date.now();
@@ -223,6 +239,52 @@ assert.equal(advantage.keptDice.length, 1);
 assert.equal(advantage.droppedDice.length, 1);
 assert.equal(advantage.total, advantage.keptDice[0] + 5);
 
+const standardAndManual = await evaluate(`(async () => {
+  const input = document.getElementById('scene-dice-formula');
+  const narrationMode = document.getElementById('scene-dice-narration-mode');
+  const manual = document.getElementById('scene-dice-manual-narration');
+  narrationMode.value = 'standard';
+  syncSceneDiceNarrationModeUi();
+  const queriesBeforeStandard = window.__sceneDiceAiQueries.length;
+  input.value = '1d20';
+  document.querySelector('[data-scene-dice-action="roll"]').click();
+  let started = Date.now();
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '1d20' || _sceneDicePendingRoll.narrationState !== 'ready') {
+    if (Date.now() - started > 30000) throw new Error('Standardwurf wurde nicht abgeschlossen.');
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  const standard = JSON.parse(JSON.stringify(_sceneDicePendingRoll));
+  const humorDisabledForStandard = document.getElementById('scene-dice-humor-enabled').disabled;
+
+  narrationMode.value = 'immersive';
+  manual.value = 'Liora hält das Siegel gegen das Licht; der matte Rand bleibt stumm.';
+  syncSceneDiceNarrationModeUi();
+  input.value = '1d12';
+  document.querySelector('[data-scene-dice-action="roll"]').click();
+  started = Date.now();
+  while (window.AleriaSceneDice.getEngineState().busy || !_sceneDicePendingRoll || _sceneDicePendingRoll.formula !== '1d12' || _sceneDicePendingRoll.narrationState !== 'ready') {
+    if (Date.now() - started > 30000) throw new Error('Manueller Szenenwurf wurde nicht abgeschlossen.');
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  const manualRoll = JSON.parse(JSON.stringify(_sceneDicePendingRoll));
+  manual.value = '';
+  narrationMode.value = 'immersive';
+  syncSceneDiceNarrationModeUi();
+  return {
+    standard,
+    manualRoll,
+    humorDisabledForStandard,
+    standardSkippedAi: window.__sceneDiceAiQueries.length === queriesBeforeStandard
+  };
+})()`, 75000);
+
+assert.equal(standardAndManual.standard.narrationSource, 'standard');
+assert.match(standardAndManual.standard.narration, /^Erzähler hat eine \d+ gewürfelt\.$/);
+assert.equal(standardAndManual.standardSkippedAi, true);
+assert.equal(standardAndManual.humorDisabledForStandard, true);
+assert.equal(standardAndManual.manualRoll.narrationSource, 'manual');
+assert.equal(standardAndManual.manualRoll.narration, 'Liora hält das Siegel gegen das Licht; der matte Rand bleibt stumm.');
+
 await evaluate(`(() => {
   const input = document.getElementById('scene-dice-formula');
   document.getElementById('scene-dice-roller').value = 'Liora';
@@ -253,7 +315,8 @@ assert.equal(combined.terms.filter(term => term.kind === 'dice').length, 6);
 assert.equal(combined.roller, 'Liora');
 assert.equal(combined.purpose, 'Arkane Untersuchung');
 assert.equal(combined.situation, 'Liora prüft ein fremdartiges Siegel am Tatort.');
-assert.match(combined.narration, /unsicheren Eindruck/);
+assert.equal(combined.narrationSource, 'ai');
+assert.match(combined.narration, /fremde Siegel/);
 
 const narrationRequest = await evaluate(`(() => ({
   query: window.__sceneDiceAiQueries.at(-1) || '',
@@ -265,11 +328,40 @@ const narrationRequest = await evaluate(`(() => ({
     return panel.top >= controls.top - 1 && panel.bottom <= controls.bottom + 1;
   })()
 }))()`);
-assert.match(narrationRequest.query, /neutraler Erzähler in der dritten Person/);
+assert.match(narrationRequest.query, /Schreibe als neutraler Erzähler/);
 assert.match(narrationRequest.query, /Liora prüft ein fremdartiges Siegel am Tatort/);
-assert.match(narrationRequest.preview, /Erzählerische Auswertung/);
+assert.match(narrationRequest.query, /Nie Würfel, Wurf, Ergebnis, Zahlenwert/);
+assert.match(narrationRequest.preview, /AleriaGPT · Immersiv/);
 assert.equal(narrationRequest.commitEnabled, true);
 assert.equal(narrationRequest.resultVisible, true, 'Die Auswertung wird nach dem Wurf nicht sichtbar nachgeführt.');
+
+const mechanicsGuard = await evaluate(`(async () => {
+  window.__sceneDiceForceMechanicsLeak = true;
+  const chatCountBefore = window.__sceneDiceChatQueries.length;
+  try {
+    const narration = await window.AleriaSceneDiceNarration.generate({
+      ..._sceneDicePendingRoll,
+      formula: '1d20',
+      natural: 2,
+      total: 2,
+      keptDice: [2],
+      terms: [{ kind: 'dice', sides: 20, count: 1 }],
+      narrationMode: 'immersive',
+      humorEnabled: true
+    }, { situation: 'Liora prüft ein fremdartiges Siegel.' });
+    return {
+      narration,
+      chatCalls: window.__sceneDiceChatQueries.length - chatCountBefore,
+      repairQuery: window.__sceneDiceChatQueries.at(-1) || '',
+      leaks: window.AleriaSceneDiceNarration.findMechanicsLeaks(narration, { natural: 2, total: 2 })
+    };
+  } finally {
+    window.__sceneDiceForceMechanicsLeak = false;
+  }
+})()`, 90000);
+assert.equal(mechanicsGuard.chatCalls, 2, 'Mechanik-Leak löst keine gezielte Korrekturrunde aus.');
+assert.match(mechanicsGuard.repairQuery, /Entferne jede Erwähnung von Würfel, Wurf, Ergebnis/);
+assert.deepEqual(mechanicsGuard.leaks, []);
 
 const persistedNarration = await evaluate(`(() => {
   const host = document.createElement('div');
@@ -282,6 +374,7 @@ const persistedNarration = await evaluate(`(() => {
       formula: '1d20',
       natural: 4,
       total: 4,
+      terms: [{ kind: 'dice', sides: 20, count: 1, rolls: [{ value: 4 }], keptIndexes: [0] }],
       roller: 'Anaraut Draig',
       purpose: 'Wahrnehmung',
       situation: 'Anaraut begutachtet eine Tatwaffe.',
@@ -292,16 +385,24 @@ const persistedNarration = await evaluate(`(() => {
   return {
     actorTag: actor?.tagName || '',
     actor: actor?.textContent.trim() || '',
+    narrator: host.querySelector('.scene-dice-event-narrator')?.textContent.trim() || '',
+    resultLabel: host.querySelector('.scene-dice-event-result-badge strong')?.textContent.trim() || '',
+    resultIcon: host.querySelector('.scene-dice-event-narrator img')?.getAttribute('src') || '',
     heading: host.querySelector('.scene-dice-event-head')?.textContent.trim() || '',
     narration: host.querySelector('.scene-dice-event-narration')?.textContent.trim() || '',
-    context: host.querySelector('.scene-dice-event-context')?.textContent.trim() || ''
+    context: host.querySelector('.scene-dice-event-context')?.textContent.trim() || '',
+    proseOutcomeExists: !!host.querySelector('.scene-dice-event-outcome')
   };
 })()`);
 assert.equal(persistedNarration.actorTag, 'MARK');
 assert.equal(persistedNarration.actor, 'Anaraut Draig');
+assert.equal(persistedNarration.narrator, 'Erzähler');
+assert.equal(persistedNarration.resultLabel, 'W20 · 4');
+assert.match(persistedNarration.resultIcon, /D20\.png/);
 assert.match(persistedNarration.heading, /würfelt auf Wahrnehmung/);
 assert.match(persistedNarration.narration, /nichts Belastbares/);
 assert.match(persistedNarration.context, /Tatwaffe/);
+assert.equal(persistedNarration.proseOutcomeExists, false);
 
 const desktopLayout = await evaluate(`(() => {
   const frame = document.querySelector('.scene-dice-board-shell').getBoundingClientRect();
@@ -369,6 +470,39 @@ assert.equal(compactDesktopUi.resultFormulaFits, true, 'Die Ergebnisformel über
 const compactDesktopScreenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
 await writeFile(compactDesktopScreenshotPath, Buffer.from(compactDesktopScreenshot.data, 'base64'));
 
+const controlsOverlapUi = await evaluate(`(async () => {
+  const controls = document.querySelector('.scene-dice-controls');
+  const settings = document.querySelector('.scene-dice-settings-panel');
+  const history = document.querySelector('.scene-dice-history');
+  settings.open = true;
+  history.open = true;
+  controls.scrollTop = controls.scrollHeight;
+  await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  const settingsRect = settings.getBoundingClientRect();
+  const historyRect = history.getBoundingClientRect();
+  const historySummaryRect = history.querySelector('summary').getBoundingClientRect();
+  const firstEntryRect = history.querySelector('.scene-dice-history-entry')?.getBoundingClientRect() || null;
+  const settingsLabelsFit = Array.from(settings.querySelectorAll('label')).every(label => {
+    const rect = label.getBoundingClientRect();
+    return rect.left >= settingsRect.left - 1 && rect.right <= settingsRect.right + 1;
+  });
+  return {
+    settingsBeforeHistory: settingsRect.bottom <= historyRect.top + 1,
+    summaryInsideHistory: historySummaryRect.top >= historyRect.top - 1 && historySummaryRect.bottom <= historyRect.bottom + 1,
+    entriesBelowSummary: !firstEntryRect || firstEntryRect.top >= historySummaryRect.bottom - 1,
+    settingsLabelsFit,
+    controlsAtBottom: Math.abs((controls.scrollHeight - controls.clientHeight) - controls.scrollTop) <= 2
+  };
+})()`);
+
+assert.equal(controlsOverlapUi.settingsBeforeHistory, true, 'Einstellungen und Verlauf überlappen sich.');
+assert.equal(controlsOverlapUi.summaryInsideHistory, true, 'Der Verlaufskopf löst sich aus seinem Panel.');
+assert.equal(controlsOverlapUi.entriesBelowSummary, true, 'Verlaufseinträge liegen unter dem Verlaufskopf.');
+assert.equal(controlsOverlapUi.settingsLabelsFit, true, 'Einstellungen laufen seitlich aus ihrem Panel.');
+assert.equal(controlsOverlapUi.controlsAtBottom, true, 'Die Steuerung erreicht das Ende ihres eigenen Scrollbereichs nicht.');
+const controlsScreenshot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+await writeFile(controlsScreenshotPath, Buffer.from(controlsScreenshot.data, 'base64'));
+
 const collisionGuard = await evaluate(`(async () => {
   const first = window.AleriaSceneDice.roll('1d4', document.getElementById('scene-dice-stage'));
   const second = window.AleriaSceneDice.roll('1d4', document.getElementById('scene-dice-stage'));
@@ -426,5 +560,5 @@ const relevantRuntimeErrors = runtimeErrors.filter(error => /dice|scene-dice/i.t
 assert.deepEqual(diceAssetErrors, [], `Dice-Asset-Fehler: ${diceAssetErrors.join(', ')}`);
 assert.deepEqual(relevantRuntimeErrors, [], 'JavaScript-Fehler im Würfelsystem entdeckt.');
 
-console.log(JSON.stringify({ prepared, participantUi, poolCombination, damage, advantage, combined, narrationRequest, persistedNarration, desktopLayout, compactDesktopUi, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath, participantScreenshotPath, compactDesktopScreenshotPath }, null, 2));
+console.log(JSON.stringify({ prepared, participantUi, poolCombination, damage, advantage, standardAndManual, combined, narrationRequest, mechanicsGuard, persistedNarration, desktopLayout, compactDesktopUi, controlsOverlapUi, collisionGuard, mobileUi, finalUi, diceAssetErrors, screenshotPath, motionScreenshotPath, participantScreenshotPath, compactDesktopScreenshotPath, controlsScreenshotPath }, null, 2));
 socket.close();

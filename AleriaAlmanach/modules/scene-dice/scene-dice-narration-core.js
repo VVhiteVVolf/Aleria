@@ -1,5 +1,19 @@
+import {
+  getSceneDiceHumorInstruction,
+  getSceneDiceNarrationMode,
+  getSceneDiceNarrationModeInstruction,
+  getSceneDiceRolledValue,
+  normalizeSceneDiceNarrationMode
+} from './scene-dice-narration-policy.js';
+
 function cleanNarrationField(value, maxLength = 14000) {
   return String(value || '').trim().slice(0, maxLength);
+}
+
+function truncateNarrationFieldAtWord(value, maxLength) {
+  const text = String(value || '').trim();
+  if (text.length <= maxLength) return text;
+  return text.slice(0, Math.max(0, maxLength)).replace(/\s+\S*$/, '').trim();
 }
 
 function getPrimaryDiceTerm(roll = {}) {
@@ -37,48 +51,48 @@ export function getSceneDiceOutcomeProfile(roll = {}) {
   };
 }
 
-export function buildSceneDiceNarrationQuery({ roll = {}, participant = {}, snapshot = {}, situation = '' } = {}) {
+export function buildSceneDiceNarrationQuery({ roll = {}, participant = {}, situation = '' } = {}) {
   const outcome = getSceneDiceOutcomeProfile(roll);
-  const actorName = cleanNarrationField(participant.name || roll.roller || 'Die Szene', 80);
-  const purpose = cleanNarrationField(roll.purpose || 'allgemeine Probe', 140);
+  const actorName = cleanNarrationField(participant.name || roll.roller || 'Die Szene', 60);
+  const purpose = cleanNarrationField(roll.purpose || 'allgemeine Probe', 100);
   const sceneSituation = cleanNarrationField(situation || roll.situation || '', 900);
+  const narrationMode = normalizeSceneDiceNarrationMode(roll.narrationMode);
+  const mode = getSceneDiceNarrationMode(narrationMode);
+  const humorInstruction = getSceneDiceHumorInstruction({ ...roll, outcomeRatio: outcome.ratio }, roll.humorEnabled === true);
   const resultLine = outcome.natural !== null
     ? `${outcome.natural} auf W${outcome.primarySides}; Gesamtergebnis ${outcome.total}`
     : `Gesamtergebnis ${outcome.total} bei ${cleanNarrationField(roll.formula, 100)}`;
 
-  return [
-    'Erstelle die kurze erzählerische Auswertung eines Würfelwurfs in einer interaktiven Aleria-Szene.',
-    'Schreibe ausschließlich als neutraler Erzähler in der dritten Person, niemals aus Figurenperspektive.',
-    `Handelnde Figur: ${actorName}`,
-    `Probe/Anlass: ${purpose}`,
-    `Würfelergebnis: ${resultLine}`,
-    `Ergebnisqualität: ${outcome.label}`,
-    sceneSituation ? `Vom Nutzer gesetzter Situationskontext: ${sceneSituation}` : 'Kein zusätzlicher Situationskontext wurde angegeben.',
-    snapshot.moduleTitle ? `Aktuelles Modul: ${cleanNarrationField(snapshot.moduleTitle, 160)}` : '',
-    snapshot.pageTitle ? `Aktuelle Szene/Seite: ${cleanNarrationField(snapshot.pageTitle, 160)}` : '',
-    '',
-    'Pflichtkontext – aktuelle Seite:',
-    cleanNarrationField(snapshot.pageText, 9000) || 'Kein Seitentext verfügbar.',
-    '',
-    'Pflichtkontext – bisheriger Szenenverlauf in Reihenfolge:',
-    cleanNarrationField(snapshot.transcript, 14000) || 'Noch keine kommentierten Szenenbeiträge.',
-    '',
-    'Regeln:',
-    '- Der gesetzte Situationskontext, das Ergebnis und der bisherige Szenenverlauf haben Vorrang vor allgemeinen Almanach-Treffern.',
-    '- Beschreibe nur beobachtbare Folgen, Wahrnehmungen oder ausbleibende Erkenntnisse. Erfinde kein verborgenes Wissen.',
-    '- Bei einem niedrigen Ergebnis bleibt Entscheidendes unbemerkt oder unsicher; verrate nicht, was tatsächlich verborgen ist.',
-    '- Keine Gedanken, Gefühle, Absichten oder wörtliche Rede der Figur erfinden.',
-    '- Keine Ich-Perspektive, kein Rollenspiel aus Sicht der Figur und keine Erklärung der Würfelmechanik.',
-    '- Ein kurzer Absatz mit 1 bis 3 Sätzen, höchstens 500 Zeichen.',
-    '- Gib ausschließlich den fertigen Erzähltext aus, ohne Überschrift, Quellen oder Vorbemerkung.'
-  ].filter(Boolean).join('\n');
+  const lines = [
+    `Schreibe als neutraler Erzähler eine kurze Szenenfolge im Modus „${mode.label}“.`,
+    `Nur intern zur Abstufung: ${resultLine}; Qualität ${outcome.label}. Dies niemals ausgeben.`,
+    'Ausgabe: 1–3 natürliche Sätze mitten in der Szene, höchstens 500 Zeichen. Nie Würfel, Wurf, Ergebnis, Zahlenwert, Formel oder Erfolgsstufe nennen.',
+    'Nutze Szenenverlauf und etablierte Persönlichkeit konkret. Keine Analyse, Überschrift, Quellen, erfundenen Gedanken oder verborgenen Fakten.',
+    getSceneDiceNarrationModeInstruction(narrationMode),
+    'Niedrig: Handlung scheitert konkret, ohne Verborgenes zu verraten. Hoch: klare, kontextgerechte Erkenntnis oder Folge.',
+    `Humorregel: ${humorInstruction}`,
+    `Figur: ${actorName}. Anlass: ${purpose}.`
+  ];
+  const baseQuery = lines.join('\n');
+  const situationPrefix = '\nSituationsauftrag: ';
+  if (!sceneSituation) return `${baseQuery}${situationPrefix}aus dem gelieferten Pflichtkontext ableiten.`;
+  const availableSituationLength = Math.max(0, 1180 - baseQuery.length - situationPrefix.length);
+  return `${baseQuery}${situationPrefix}${truncateNarrationFieldAtWord(sceneSituation, availableSituationLength)}`.trim();
 }
 
-export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { participant = {}, snapshot = {}, situation = '' } = {}) {
+export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { roll = {}, participant = {}, snapshot = {}, situation = '' } = {}) {
+  const outcome = getSceneDiceOutcomeProfile(roll);
+  const narrationMode = normalizeSceneDiceNarrationMode(roll.narrationMode);
+  const mode = getSceneDiceNarrationMode(narrationMode);
   const promptContext = [
-    'Szenenwurf-Pflichtkontext',
+    'Szenenwurf – verbindlicher Erzählauftrag',
+    `Erzählmodus: ${mode.label}`,
     `Handelnde Figur: ${cleanNarrationField(participant.name, 80) || 'Die Szene'}`,
-    situation ? `Situationskontext: ${cleanNarrationField(situation, 900)}` : '',
+    `Probe/Anlass: ${cleanNarrationField(roll.purpose || 'allgemeine Probe', 140)}`,
+    `Interne Ergebnissteuerung: ${getSceneDiceRolledValue(roll)}, Qualitätsstufe ${outcome.label}. Diese Mechanik und ihr Zahlenwert dürfen im Erzähltext nicht genannt werden.`,
+    `Modusregel: ${getSceneDiceNarrationModeInstruction(narrationMode)}`,
+    `Humorregel: ${getSceneDiceHumorInstruction({ ...roll, outcomeRatio: outcome.ratio }, roll.humorEnabled === true)}`,
+    situation ? `Vom Nutzer gesetzter Situationskontext: ${cleanNarrationField(situation, 900)}` : '',
     snapshot.moduleTitle ? `Modul: ${cleanNarrationField(snapshot.moduleTitle, 160)}` : '',
     snapshot.pageTitle ? `Szene/Seite: ${cleanNarrationField(snapshot.pageTitle, 160)}` : '',
     '',
@@ -88,7 +102,8 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { participant 
     'Geordneter Szenenverlauf:',
     cleanNarrationField(snapshot.transcript, 14000) || 'Noch keine kommentierten Szenenbeiträge.',
     '',
-    'Erzählregel: neutraler Erzähler, dritte Person, keine erfundenen Innenzustände oder verborgenen Fakten.'
+    'Kontextpriorität: Situationsauftrag, laufende Szene und bisheriger Verlauf zuerst; danach etablierte Persönlichkeit und übrige Almanach-Treffer.',
+    'Erzählregel: neutrale dritte Person, keine Metasprache und keine erfundenen Innenzustände oder verborgenen Fakten.'
   ].filter(Boolean).join('\n');
 
   const requiredChunks = [
@@ -130,7 +145,8 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { participant 
     ],
     stats: {
       ...(retrieval?.stats || {}),
-      requiredSceneContextIncluded: true
+      requiredSceneContextIncluded: true,
+      sceneDiceNarrationMode: narrationMode
     }
   };
 }

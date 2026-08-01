@@ -31,8 +31,9 @@ function getSceneDiceCommentText(comment = {}) {
   if (comment.sceneDiceRoll) {
     const roll = comment.sceneDiceRoll;
     return [
-      `${roll.roller || 'Unbekannte Hand'} würfelt${roll.purpose ? ` auf ${roll.purpose}` : ''}: ${roll.total}.`,
-      roll.narration || ''
+      `[Interne Szenenwurf-Metadaten – nicht nacherzählen] ${roll.roller || 'Unbekannte Hand'} würfelt${roll.purpose ? ` auf ${roll.purpose}` : ''}: ${roll.total}.`,
+      roll.situation ? `Situationskontext: ${roll.situation}` : '',
+      roll.narration ? `Erzählte Folge: ${roll.narration}` : ''
     ].filter(Boolean).join(' ');
   }
   const segments = Array.isArray(comment.commentSegments) && comment.commentSegments.length

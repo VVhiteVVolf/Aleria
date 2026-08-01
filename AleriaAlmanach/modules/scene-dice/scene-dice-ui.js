@@ -34,6 +34,21 @@ function buildSceneDiceTypeButtons() {
   }).join('');
 }
 
+function getSceneDiceNarrationModes() {
+  return window.AleriaSceneDiceNarration?.getModes?.() || [
+    { id: 'immersive', label: 'Immersiv', description: 'AleriaGPT erzählt die unmittelbare Folge als Teil der Szene.' },
+    { id: 'character', label: 'Charakterfokus', description: 'Die bekannte Persönlichkeit erhält mehr Gewicht.' },
+    { id: 'dramatic', label: 'Dramatisch', description: 'Atmosphäre und sichtbare Konsequenzen werden verdichtet.' },
+    { id: 'standard', label: 'Standard', description: 'Nur Name und gewürfelter Wert, ohne KI-Deutung.' }
+  ];
+}
+
+function buildSceneDiceNarrationModeOptions() {
+  return getSceneDiceNarrationModes()
+    .map(mode => `<option value="${escapeHtml(mode.id)}">${escapeHtml(mode.label)}</option>`)
+    .join('');
+}
+
 function ensureSceneDiceDialog() {
   let overlay = document.getElementById('scene-dice-overlay');
   if (overlay) return overlay;
@@ -87,8 +102,13 @@ function ensureSceneDiceDialog() {
                 </div>
               </div>
               <label><span>Probe</span><input id="scene-dice-purpose" type="text" maxlength="140" placeholder="z. B. Wahrnehmung"></label>
-              <label><span>Wurfart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
+              <label><span>Regelart</span><select id="scene-dice-roll-type"><option value="general">Allgemein</option><option value="attack">Angriff</option><option value="death-save">Todesrettungswurf</option></select></label>
+              <div class="scene-dice-narration-config">
+                <label><span>Wurfart</span><select id="scene-dice-narration-mode">${buildSceneDiceNarrationModeOptions()}</select><small data-scene-dice-narration-mode-description></small></label>
+                <label class="scene-dice-check scene-dice-humor-check"><input id="scene-dice-humor-enabled" type="checkbox" checked><span>Lockeren Humor bei Patzern erlauben</span></label>
+              </div>
               <label class="scene-dice-situation-field"><span>Situationskontext für AleriaGPT</span><textarea id="scene-dice-situation" rows="2" maxlength="900" placeholder="z. B. Anaraut begutachtet die gefundene Tatwaffe und sucht nach ungewöhnlichen Spuren."></textarea><small>Weshalb wird gewürfelt und worauf soll das Ergebnis angewendet werden?</small></label>
+              <label class="scene-dice-manual-narration-field"><span>Eigene Beschreibung (optional)</span><textarea id="scene-dice-manual-narration" rows="2" maxlength="700" placeholder="Überschreibt die automatische Auswertung für diesen Wurf."></textarea><small>Wenn dieses Feld Text enthält, wird er unverändert als Erzählerbeschreibung verwendet.</small></label>
             </div>
           </section>
 
@@ -189,6 +209,19 @@ function getSceneDiceModeLabel(mode) {
   return mode === 'advantage' ? 'Vorteil' : mode === 'disadvantage' ? 'Nachteil' : 'Normal';
 }
 
+function getSceneDiceNarrationModeLabel(mode) {
+  return getSceneDiceNarrationModes().find(entry => entry.id === mode)?.label || 'Immersiv';
+}
+
+function syncSceneDiceNarrationModeUi() {
+  const select = document.getElementById('scene-dice-narration-mode');
+  const selected = getSceneDiceNarrationModes().find(mode => mode.id === select?.value) || getSceneDiceNarrationModes()[0];
+  const description = document.querySelector('[data-scene-dice-narration-mode-description]');
+  if (description) description.textContent = selected?.description || '';
+  const humor = document.getElementById('scene-dice-humor-enabled');
+  if (humor) humor.disabled = selected?.usesAi === false || selected?.id === 'standard';
+}
+
 function renderSceneDiceRollDetails(roll) {
   return (roll.terms || []).map(term => {
     if (term.kind === 'modifier') return `<span class="scene-dice-modifier">${term.value >= 0 ? '+' : ''}${escapeHtml(term.value)}</span>`;
@@ -199,16 +232,22 @@ function renderSceneDiceRollDetails(roll) {
 }
 
 function renderSceneDiceNarrationPreview(roll) {
+  const modeLabel = getSceneDiceNarrationModeLabel(roll.narrationMode);
   if (roll.narrationState === 'loading') {
-    return '<div class="scene-dice-narration" data-state="loading"><span>AleriaGPT deutet den Wurf</span><p>Seitenkontext und bisheriger Szenenverlauf werden gelesen …</p></div>';
+    return `<div class="scene-dice-narration" data-state="loading"><span>AleriaGPT · ${escapeHtml(modeLabel)}</span><p>Szene, bisheriger Verlauf und Figurenkontext werden gelesen …</p></div>`;
   }
   if (roll.narrationState === 'error') {
     return `<div class="scene-dice-narration" data-state="error"><span>Erzähltext nicht verfügbar</span><p>${escapeHtml(roll.narrationError || 'AleriaGPT konnte den Wurf gerade nicht auswerten.')}</p><button type="button" data-scene-dice-action="retry-narration">Erneut versuchen</button></div>`;
   }
   if (roll.narration) {
-    return `<div class="scene-dice-narration" data-state="ready"><span>Erzählerische Auswertung</span><p>${escapeHtml(roll.narration)}</p></div>`;
+    const label = roll.narrationSource === 'manual'
+      ? 'Eigene Beschreibung'
+      : roll.narrationSource === 'standard'
+        ? 'Standardausgabe'
+        : `AleriaGPT · ${modeLabel}`;
+    return `<div class="scene-dice-narration" data-state="ready"><span>${escapeHtml(label)}</span><p>${escapeHtml(roll.narration)}</p></div>`;
   }
-  return '<div class="scene-dice-narration" data-state="idle"><span>Erzählerische Auswertung</span><p>Wird nach dem Wurf von AleriaGPT erstellt.</p></div>';
+  return '<div class="scene-dice-narration" data-state="idle"><span>Erzählerische Auswertung</span><p>Wird nach dem Wurf entsprechend der gewählten Wurfart erstellt.</p></div>';
 }
 
 function revealSceneDiceResult() {
@@ -223,10 +262,15 @@ function renderSceneDicePendingRoll(roll) {
   target.dataset.state = roll.critical || 'ready';
   const kept = (roll.keptDice || []).join(', ') || '—';
   const dropped = (roll.droppedDice || []).join(', ');
+  const primarySides = Number(roll.terms?.find(term => term.kind === 'dice')?.sides) || 20;
+  const natural = Number(roll.natural);
+  const rolledValue = Number.isFinite(natural) && natural > 0 ? natural : Number(roll.total) || 0;
+  const resultBadge = Number.isFinite(natural) && natural > 0 ? `W${primarySides} · ${rolledValue}` : `Gesamt · ${rolledValue}`;
   target.innerHTML = `
     <div class="scene-dice-result-summary">
-      <div class="scene-dice-result-kicker">${escapeHtml(roll.roller || 'Unbekannte Hand')} · ${escapeHtml(getSceneDiceModeLabel(roll.mode))}</div>
+      <div class="scene-dice-result-kicker"><span><img src="${escapeHtml(getSceneDiceIcon(primarySides))}" alt="">Erzähler</span><strong>${escapeHtml(resultBadge)}</strong></div>
       <div class="scene-dice-total">${escapeHtml(roll.total)}</div>
+      <div class="scene-dice-result-actor">${escapeHtml(roll.roller || 'Unbekannte Hand')} · ${escapeHtml(getSceneDiceNarrationModeLabel(roll.narrationMode))} · ${escapeHtml(getSceneDiceModeLabel(roll.mode))}</div>
       <div class="scene-dice-result-formula">${escapeHtml(roll.formula)}</div>
       ${roll.special ? `<div class="scene-dice-critical">${escapeHtml(roll.special)}</div>` : ''}
     </div>
@@ -340,9 +384,17 @@ function resetSceneDiceDialog() {
   const roller = document.getElementById('scene-dice-roller');
   const purpose = document.getElementById('scene-dice-purpose');
   const situation = document.getElementById('scene-dice-situation');
+  const rollType = document.getElementById('scene-dice-roll-type');
+  const narrationMode = document.getElementById('scene-dice-narration-mode');
+  const humorEnabled = document.getElementById('scene-dice-humor-enabled');
+  const manualNarration = document.getElementById('scene-dice-manual-narration');
   if (roller) roller.value = '';
   if (purpose) purpose.value = '';
   if (situation) situation.value = '';
+  if (rollType) rollType.value = 'general';
+  if (narrationMode) narrationMode.value = 'immersive';
+  if (humorEnabled) humorEnabled.checked = true;
+  if (manualNarration) manualNarration.value = '';
   window.AleriaSceneDiceParticipants?.reset?.().catch(error => {
     console.warn('scene dice participant refresh failed:', error);
     setSceneDiceStatus('Die aktive Szenenbesetzung konnte nicht geladen werden.', 'error');
@@ -360,6 +412,7 @@ function resetSceneDiceDialog() {
   setSceneDiceEngineNote('');
   setSceneDiceStageStatus('3D-Würfel werden vorbereitet …', 'loading');
   syncSceneDiceSettings();
+  syncSceneDiceNarrationModeUi();
   renderSceneDicePool();
   buildSceneDiceFormulaFromControls();
   renderSceneDiceHistory();

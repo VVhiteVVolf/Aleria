@@ -15,23 +15,28 @@ function renderSceneDiceEventComment(comment, idx = 0) {
   const commentId = escapeHtml(comment.id || '');
   const divider = idx > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   const modeLabel = roll.mode === 'advantage' ? 'Vorteil' : roll.mode === 'disadvantage' ? 'Nachteil' : 'Normal';
+  const narrationModeLabel = window.AleriaSceneDiceNarration?.getMode?.(roll.narrationMode)?.label
+    || (roll.narrationMode === 'standard' ? 'Standard' : roll.narrationMode === 'character' ? 'Charakterfokus' : roll.narrationMode === 'dramatic' ? 'Dramatisch' : 'Immersiv');
   const actor = roll.roller || 'Die Szene';
   const natural = Number(roll.natural);
   const rolledValue = Number.isFinite(natural) && natural > 0 ? natural : Number(roll.total) || 0;
-  const totalDiffers = rolledValue !== Number(roll.total);
+  const primarySides = Number(roll.terms?.find(term => term.kind === 'dice')?.sides) || 20;
+  const resultLabel = Number.isFinite(natural) && natural > 0 ? `W${primarySides} · ${rolledValue}` : `Gesamt · ${rolledValue}`;
+  const icon = getSceneDiceIcon(primarySides);
   return `${divider}
-    <article class="scene-dice-event${roll.critical ? ` is-${escapeHtml(roll.critical)}` : ''}" data-comment-id="${commentId}">
-      <div class="scene-dice-event-mark"><img src="${escapeHtml(getSceneDiceIcon(roll.natural ? 20 : (roll.terms?.find(term => term.kind === 'dice')?.sides || 20)))}" alt=""></div>
+    <article class="scene-dice-event${roll.critical ? ` is-${escapeHtml(roll.critical)}` : ''}" data-comment-id="${commentId}" data-narration-mode="${escapeHtml(roll.narrationMode || 'immersive')}">
       <div class="scene-dice-event-copy">
-        <div class="scene-dice-event-kicker">Erzählerischer Szenenwurf · ${escapeHtml(modeLabel)}</div>
+        <div class="scene-dice-event-kicker">
+          <span class="scene-dice-event-narrator"><img src="${escapeHtml(icon)}" alt=""><b>Erzähler</b></span>
+          <span class="scene-dice-event-result-badge"><strong>${escapeHtml(resultLabel)}</strong><small>${escapeHtml(narrationModeLabel)} · ${escapeHtml(modeLabel)}</small></span>
+        </div>
         <div class="scene-dice-event-head"><mark class="scene-dice-event-actor">${escapeHtml(actor)}</mark><span>würfelt${roll.purpose ? ` auf <strong>${escapeHtml(roll.purpose)}</strong>` : ''}.</span></div>
-        <div class="scene-dice-event-outcome">Würfelt eine <strong>${escapeHtml(rolledValue)}</strong>${totalDiffers ? ` <small>Gesamt ${escapeHtml(roll.total)}</small>` : ''}.</div>
-        ${roll.situation ? `<div class="scene-dice-event-context">${escapeHtml(roll.situation)}</div>` : ''}
         ${roll.narration ? `<p class="scene-dice-event-narration">${escapeHtml(roll.narration)}</p>` : ''}
+        ${roll.situation ? `<div class="scene-dice-event-context">${escapeHtml(roll.situation)}</div>` : ''}
         <div class="scene-dice-event-breakdown">${renderSceneDiceStoredTerms(roll)}</div>
         <div class="scene-dice-event-formula">${escapeHtml(roll.formula || '')}</div>
       </div>
-      <div class="scene-dice-event-total"><span>Ergebnis</span><strong>${escapeHtml(roll.total)}</strong>${roll.special ? `<small>${escapeHtml(roll.special)}</small>` : ''}</div>
+      ${roll.special ? `<div class="scene-dice-event-special">${escapeHtml(roll.special)}</div>` : ''}
       <button type="button" class="scene-dice-event-delete" data-action="open-delete-confirm" data-comment-id="${commentId}" title="Wurf löschen" aria-label="Wurf löschen">×</button>
     </article>`;
 }

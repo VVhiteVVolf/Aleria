@@ -45,20 +45,49 @@ function getSceneDiceDialogContext() {
     rollerId: participant.id === '__narrator__' ? '' : String(participant.id || '').trim(),
     purpose: String(document.getElementById('scene-dice-purpose')?.value || '').trim(),
     situation: String(document.getElementById('scene-dice-situation')?.value || '').trim().slice(0, 900),
-    rollType: document.getElementById('scene-dice-roll-type')?.value || 'general'
+    rollType: document.getElementById('scene-dice-roll-type')?.value || 'general',
+    narrationMode: window.AleriaSceneDiceNarration?.normalizeMode?.(
+      document.getElementById('scene-dice-narration-mode')?.value || 'immersive'
+    ) || 'immersive',
+    humorEnabled: document.getElementById('scene-dice-humor-enabled')?.checked === true,
+    manualNarration: String(document.getElementById('scene-dice-manual-narration')?.value || '').trim().slice(0, 700)
   };
 }
 
 async function generateSceneDiceNarrationForRoll(roll) {
   if (!roll) return;
   const token = ++_sceneDiceNarrationToken;
+  roll.narrationMode = window.AleriaSceneDiceNarration?.normalizeMode?.(roll.narrationMode) || 'immersive';
   roll.narration = '';
   roll.narrationError = '';
-  roll.narrationState = 'loading';
-  renderSceneDicePendingRoll(roll);
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
+
+  const manualNarration = String(roll.manualNarration || '').trim().slice(0, 700);
+  if (manualNarration) {
+    roll.narration = manualNarration;
+    roll.narrationSource = 'manual';
+    roll.narrationState = 'ready';
+    renderSceneDicePendingRoll(roll);
+    if (commit) commit.disabled = false;
+    setSceneDiceStatus('Deine eigene Beschreibung wird für diesen Wurf verwendet.', 'info');
+    return;
+  }
+  if (roll.narrationMode === 'standard') {
+    roll.narration = window.AleriaSceneDiceNarration?.createStandard?.(roll, roll.roller)
+      || `${roll.roller || 'Die Szene'} hat eine ${roll.natural || roll.total || 0} gewürfelt.`;
+    roll.narrationSource = 'standard';
+    roll.narrationState = 'ready';
+    renderSceneDicePendingRoll(roll);
+    if (commit) commit.disabled = false;
+    setSceneDiceStatus('Standardwurf bereit. Es wird keine KI-Deutung verwendet.', 'info');
+    return;
+  }
+
+  roll.narrationState = 'loading';
+  roll.narrationSource = 'ai';
+  renderSceneDicePendingRoll(roll);
   if (commit) commit.disabled = true;
-  setSceneDiceStatus('AleriaGPT liest den bisherigen Szenenverlauf und deutet das Ergebnis …', 'info');
+  setSceneDiceStatus('AleriaGPT liest Szene, bisherigen Verlauf und Figurenkontext …', 'info');
   try {
     if (!window.AleriaSceneDiceNarration?.generate) {
       throw new Error('Die AleriaGPT-Würfelauswertung ist noch nicht geladen.');
@@ -68,6 +97,7 @@ async function generateSceneDiceNarrationForRoll(roll) {
     });
     if (token !== _sceneDiceNarrationToken || _sceneDicePendingRoll?.id !== roll.id) return;
     roll.narration = narration;
+    roll.narrationSource = 'ai';
     roll.narrationState = 'ready';
     renderSceneDicePendingRoll(roll);
     setSceneDiceStatus('Erzähltext erstellt. Der Wurf kann in die Szene eingetragen werden.', 'info');
@@ -99,6 +129,9 @@ async function runSceneDiceAnimation(notationOverride = '') {
     const result = await service.roll(formula, document.getElementById('scene-dice-stage'), context);
     result.rollerId = context.rollerId;
     result.situation = context.situation;
+    result.narrationMode = context.narrationMode;
+    result.humorEnabled = context.humorEnabled;
+    result.manualNarration = context.manualNarration;
     _sceneDicePendingRoll = result;
     _sceneDiceLastNotation = result.formula;
     renderSceneDicePendingRoll(result);
@@ -152,7 +185,10 @@ async function commitSceneDiceRoll() {
     roller,
     rollerId: context.rollerId || _sceneDicePendingRoll.rollerId || '',
     purpose,
-    situation: context.situation || _sceneDicePendingRoll.situation || ''
+    situation: context.situation || _sceneDicePendingRoll.situation || '',
+    narrationMode: _sceneDicePendingRoll.narrationMode || context.narrationMode,
+    humorEnabled: _sceneDicePendingRoll.humorEnabled === true,
+    manualNarration: _sceneDicePendingRoll.manualNarration || ''
   };
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
   if (!threadId) {
@@ -168,11 +204,8 @@ async function commitSceneDiceRoll() {
     ? Number(roll.natural)
     : Number(roll.total) || 0;
   const totalSuffix = resultValue !== Number(roll.total) ? ` (Gesamt ${roll.total})` : '';
-  const text = [
-    `${roller} würfelt${purpose ? ` auf ${purpose}` : ''}.`,
-    `Das Ergebnis ist ${resultValue}${totalSuffix}.`,
-    roll.narration || ''
-  ].filter(Boolean).join(' ');
+  const fallbackText = `${roller} würfelt${purpose ? ` auf ${purpose}` : ''}: ${resultValue}${totalSuffix}.`;
+  const text = roll.narration || fallbackText;
   const metadata = {
     commentMode: 'scene-dice',
     commentKind: SCENE_DICE_EVENT_KIND,
@@ -226,6 +259,22 @@ async function updateSceneDiceSettingsFromDialog() {
     const engine = await service.prepare(document.getElementById('scene-dice-stage'));
     setSceneDiceStageStatus(engine.isFallback ? 'Textmodus bereit.' : '3D-Würfel bereit.', engine.isFallback ? 'fallback' : 'ready');
   }
+}
+
+function updateSceneDiceNarrationFromDialog() {
+  syncSceneDiceNarrationModeUi();
+  if (!_sceneDicePendingRoll) return;
+  const context = getSceneDiceDialogContext();
+  Object.assign(_sceneDicePendingRoll, {
+    roller: context.roller,
+    rollerId: context.rollerId,
+    purpose: context.purpose,
+    situation: context.situation,
+    narrationMode: context.narrationMode,
+    humorEnabled: context.humorEnabled,
+    manualNarration: context.manualNarration
+  });
+  generateSceneDiceNarrationForRoll(_sceneDicePendingRoll);
 }
 
 document.addEventListener('click', event => {
@@ -289,6 +338,10 @@ document.addEventListener('input', event => {
 });
 
 document.addEventListener('change', event => {
+  if (event.target?.matches?.('#scene-dice-narration-mode, #scene-dice-humor-enabled, #scene-dice-manual-narration')) {
+    updateSceneDiceNarrationFromDialog();
+    return;
+  }
   if (!event.target?.matches?.('#scene-dice-animation-enabled, #scene-dice-sound-enabled, #scene-dice-reduced-motion, #scene-dice-keep-pool, #scene-dice-throw-style')) return;
   updateSceneDiceSettingsFromDialog().catch(error => setSceneDiceStatus(error.message || 'Einstellung konnte nicht übernommen werden.', 'error'));
 });
