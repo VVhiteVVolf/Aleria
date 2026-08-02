@@ -29,7 +29,13 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     combatRollMode: normalizedKind === 'combataction' && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
       : 'normal',
-    actorId: String(combatSettings?.actorId || combatSettings?.sceneActorId || '')
+    actorId: String(combatSettings?.actorId || combatSettings?.sceneActorId || ''),
+    storedCombatAction: normalizedKind === 'combataction' && combatSettings?.storedCombatAction
+      ? combatSettings.storedCombatAction
+      : null,
+    storedCombatResolution: normalizedKind === 'combataction' && combatSettings?.storedCombatResolution
+      ? combatSettings.storedCombatResolution
+      : null
   };
 }
 

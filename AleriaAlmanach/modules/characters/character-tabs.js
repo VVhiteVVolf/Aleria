@@ -79,6 +79,37 @@ function handleExternallySavedCharacter(event) {
 
 document.addEventListener('aleria:character-saved', handleExternallySavedCharacter);
 
+function applyCommittedCharacterCombatProfile(event) {
+  const updates = Array.isArray(event?.detail?.updates) ? event.detail.updates : [];
+  let changed = false;
+  updates.filter(update => update?.kind === 'character').forEach(update => {
+    const index = _characters.findIndex(character => String(character.id || '') === String(update.recordId || ''));
+    if (index < 0) return;
+    const hitPoints = update.hitPoints;
+    const currentCombatProfile = _characters[index].combatProfile || {};
+    _characters[index] = {
+      ..._characters[index],
+      combatProfile: {
+        ...currentCombatProfile,
+        hitPoints: hitPoints ? {
+          ...(currentCombatProfile.hitPoints || {}),
+          current: Math.max(0, Number(hitPoints.current) || 0),
+          temporary: Math.max(0, Number(hitPoints.temporary) || 0)
+        } : currentCombatProfile.hitPoints,
+        resources: Array.isArray(update.resources)
+          ? update.resources.map(resource => ({ ...resource }))
+          : (currentCombatProfile.resources || [])
+      }
+    };
+    changed = true;
+  });
+  if (!changed) return;
+  renderCharGrid();
+  renderCharPickerInForm();
+}
+
+document.addEventListener('aleria:combat-profile-committed', applyCommittedCharacterCombatProfile);
+
 function saveCharTabs() {
   if (!window._fb?.saveCharTabs) {
     showAppStatus('Charakter-Reiter konnten nicht online gespeichert werden.', 'error');

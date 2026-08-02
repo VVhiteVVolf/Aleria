@@ -147,7 +147,8 @@ export function makeCreatureSceneActor(value = {}) {
     title: [creature.type, creature.species].filter(Boolean).join(' · '),
     aliases: [],
     emotes: creature.avatars.map(avatar => ({ img: avatar.img, label: avatar.label })),
-    playerOwner: ''
+    playerOwner: '',
+    _builtin: !!value._builtin
   };
 }
 

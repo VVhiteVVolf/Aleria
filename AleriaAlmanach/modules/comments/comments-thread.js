@@ -78,6 +78,10 @@ function sortCommentsByRecentActivity(comments) {
     .map(item => item.comment);
 }
 
+function getCachedCommentsForThread(threadId) {
+  return sortCommentsByTimeline(_commentCache[String(threadId || '')] || []);
+}
+
 function getNextCommentOrderKey(threadId, insertAfterId = null) {
   const comments = sortCommentsByTimeline(_commentCache[String(threadId || '')] || []);
   if (!comments.length) return Date.now();

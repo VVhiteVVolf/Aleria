@@ -77,7 +77,9 @@ async function verifyEditCode() {
           targetId: segment.combatTargetId || segment.combatAction?.targetId,
           actionId: segment.combatActionId || segment.combatAction?.profileActionId,
           rollMode: segment.combatRollMode || segment.combatAction?.rollMode,
-          actorId: segment.sceneActorId || segment.actorId || ''
+          actorId: segment.sceneActorId || segment.actorId || '',
+          storedCombatAction: segment.combatAction || null,
+          storedCombatResolution: segment.combatResolution || null
         }
       ));
     } else {

@@ -235,7 +235,9 @@ function buildEditCommentSegmentsForSave() {
         ...(segment.kind === 'combataction' ? {
           combatTargetId: String(segment.combatTargetId || ''),
           combatActionId: String(segment.combatActionId || ''),
-          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal'
+          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+          storedCombatAction: segment.storedCombatAction || null,
+          storedCombatResolution: segment.storedCombatResolution || null
         } : {}),
         ...(commentKindUsesLanguage(segment.kind) ? {
           language: getCommentLanguage(segment),

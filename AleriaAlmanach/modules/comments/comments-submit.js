@@ -100,9 +100,16 @@ async function submitComment() {
       }
     }
     backend = await getCommentBackend({ timeoutMs: 1200 });
-    await backend.addComment(
-      threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata
-    );
+    const hasCombatTransaction = (commentMetadata.commentSegments || [])
+      .some(segment => segment?.combatResolution?.resolutionId);
+    const saveResult = hasCombatTransaction && typeof backend.addCombatComment === 'function'
+      ? await backend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
+      : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
+    if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
+      document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', {
+        detail: { updates: saveResult.profileUpdates }
+      }));
+    }
     clearCommentDraft(threadId);
     closeCommentForm();
     await loadCommentsIntoPage(threadId, true, _commentInsertAfterId ? {} : { page: 'last' });
@@ -111,10 +118,23 @@ async function submitComment() {
     btn.textContent = 'Eintragen';
     _commentSubmitInFlight = false;
   } catch(e) {
-    if (backend && !backend._localFallback) {
+    const hasPersistentCombatTransaction = (commentMetadata.commentSegments || []).some(segment => (
+      (['character', 'creature'].includes(segment?.combatResolution?.targetPersistence?.kind)
+        && segment?.combatResolution?.targetPersistence?.recordId)
+      || (Array.isArray(segment?.combatResolution?.resourceCosts) && segment.combatResolution.resourceCosts.length > 0
+        && ['character', 'creature'].includes(segment?.combatResolution?.actorPersistence?.kind)
+        && segment?.combatResolution?.actorPersistence?.recordId)
+    ));
+    if (backend && !backend._localFallback && !hasPersistentCombatTransaction) {
       try {
         const localBackend = getLocalCommentBackend();
-        await localBackend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
+        const hasCombatTransaction = (commentMetadata.commentSegments || [])
+          .some(segment => segment?.combatResolution?.resolutionId);
+        if (hasCombatTransaction) {
+          await localBackend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
+        } else {
+          await localBackend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
+        }
         showCommentFallbackNotice();
         clearCommentDraft(threadId);
         closeCommentForm();

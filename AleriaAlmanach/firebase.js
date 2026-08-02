@@ -1,6 +1,12 @@
 ﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch }
+    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import {
+      normalizeCombatHitPointState,
+      normalizeCombatResources,
+      patchResolutionHitPointState,
+      patchResolutionResourceState
+    } from "./modules/combat/combat-state-model.js?v=20260802-combat-state-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -62,6 +68,53 @@
         next.moduleInsertJson = '';
       }
       return next;
+    }
+
+    function cloneSerializableValue(value) {
+      if (!value || typeof value !== 'object') return value;
+      if (typeof structuredClone === 'function') return structuredClone(value);
+      return JSON.parse(JSON.stringify(value));
+    }
+
+    function buildCommentDocument(entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, metadata = {}, nowClient = Date.now()) {
+      const commentMetadata = normalizeCommentModuleInsertForFirestore(metadata);
+      return {
+        entryId, charName, charTitle, portrait, text,
+        deleteCodeHash, deleteCodeVersion: 1,
+        narrator: narrator || false,
+        characterId: commentMetadata.characterId || '',
+        actorType: commentMetadata.actorType || '',
+        creatureId: commentMetadata.creatureId || '',
+        emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
+        avatarKind: commentMetadata.avatarKind || '',
+        commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
+        commentKind: commentMetadata.commentKind || (narrator ? 'narrator' : 'speech'),
+        commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
+        itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
+        moduleInsert: null,
+        moduleInsertJson: commentMetadata.moduleInsertJson || '',
+        documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
+        sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
+        sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
+        scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
+        sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
+        combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
+        combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
+        combatTransaction: commentMetadata.combatTransaction && typeof commentMetadata.combatTransaction === 'object' ? commentMetadata.combatTransaction : null,
+        orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
+        createdAtClient: nowClient,
+        activityAtClient: nowClient,
+        activityAt: serverTimestamp(),
+        schemaVersion: 2,
+        ts: serverTimestamp()
+      };
+    }
+
+    function getCombatResolutionEntries(metadata = {}) {
+      const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
+      return segments
+        .map((segment, index) => ({ index, resolution: segment?.combatResolution }))
+        .filter(entry => entry.resolution?.targetId && entry.resolution?.targetSnapshot);
     }
 
     function normalizeFirebaseModuleStore(data) {
@@ -513,36 +566,143 @@
       async addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);
         const nowClient = Date.now();
-        const commentMetadata = normalizeCommentModuleInsertForFirestore(metadata);
-        return addDoc(collection(db, 'comments'), {
-          entryId, charName, charTitle, portrait, text,
-          deleteCodeHash, deleteCodeVersion: 1,
-          narrator: narrator || false,
-          characterId: commentMetadata.characterId || '',
-          actorType: commentMetadata.actorType || '',
-          creatureId: commentMetadata.creatureId || '',
-          emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
-          avatarKind: commentMetadata.avatarKind || '',
-          commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
-          commentKind: commentMetadata.commentKind || (narrator ? 'narrator' : 'speech'),
-          commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
-          itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
-          moduleInsert: null,
-          moduleInsertJson: commentMetadata.moduleInsertJson || '',
-          documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
-          sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
-          sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
-          scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
-          sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
-          combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
-          combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
-          orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
-          createdAtClient: nowClient,
-          activityAtClient: nowClient,
-          activityAt: serverTimestamp(),
-          schemaVersion: 2,
-          ts: serverTimestamp()
+        return addDoc(collection(db, 'comments'), buildCommentDocument(
+          entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, metadata, nowClient
+        ));
+      },
+      async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const nowClient = Date.now();
+        const commentRef = doc(collection(db, 'comments'));
+        let profileUpdates = [];
+
+        await runTransaction(db, async transaction => {
+          const commentMetadata = cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata));
+          const entries = getCombatResolutionEntries(commentMetadata);
+          if (!entries.length) throw new Error('Die Kampfauswertung enthält keine speicherbare Auflösung.');
+
+          const persistentTargets = new Map();
+          entries.forEach(({ resolution }) => {
+            const persistence = resolution.targetPersistence || {};
+            const candidates = [{ persistence, touchHitPoints: true, touchResources: false }];
+            if (Array.isArray(resolution.resourceCosts) && resolution.resourceCosts.length) {
+              candidates.push({
+                persistence: resolution.actorPersistence || {},
+                touchHitPoints: false,
+                touchResources: true
+              });
+            }
+            candidates.forEach(({ persistence: candidate, touchHitPoints, touchResources }) => {
+              if (!['character', 'creature'].includes(candidate.kind) || !candidate.recordId) return;
+              const key = `${candidate.kind}:${candidate.recordId}`;
+              const existing = persistentTargets.get(key);
+              if (existing) {
+                existing.touchHitPoints ||= touchHitPoints;
+                existing.touchResources ||= touchResources;
+              } else {
+                persistentTargets.set(key, {
+                  key,
+                  kind: candidate.kind,
+                  recordId: String(candidate.recordId),
+                  touchHitPoints,
+                  touchResources,
+                  ref: doc(db, candidate.kind === 'creature' ? 'creatures' : 'characters', String(candidate.recordId))
+                });
+              }
+            });
+          });
+
+          const targetRecords = [...persistentTargets.values()];
+          const snapshots = await Promise.all(targetRecords.map(target => transaction.get(target.ref)));
+          const states = new Map();
+          targetRecords.forEach((target, index) => {
+            const snapshot = snapshots[index];
+            if (!snapshot.exists()) throw new Error(`Das Kampfziel ${target.recordId} ist online nicht mehr vorhanden.`);
+            const hitPoints = snapshot.data()?.combatProfile?.hitPoints || {};
+            const initialResolution = entries.find(entry => {
+              const targetPersistence = entry.resolution?.targetPersistence || {};
+              const actorPersistence = entry.resolution?.actorPersistence || {};
+              return `${targetPersistence.kind || ''}:${targetPersistence.recordId || ''}` === target.key
+                || `${actorPersistence.kind || ''}:${actorPersistence.recordId || ''}` === target.key;
+            })?.resolution;
+            const actorValues = initialResolution?.actorCombatProfile?.derivedCombatValues || {};
+            states.set(target.key, {
+              ...normalizeCombatHitPointState(hitPoints, {
+                current: initialResolution?.targetSnapshot?.hitPointsBefore ?? actorValues.currentHitPoints,
+                maximum: initialResolution?.targetSnapshot?.maximumHitPoints ?? actorValues.maximumHitPoints,
+                temporary: initialResolution?.targetSnapshot?.temporaryHitPointsBefore ?? actorValues.temporaryHitPoints
+              }),
+              resources: normalizeCombatResources(snapshot.data()?.combatProfile?.resources || [])
+            });
+          });
+
+          entries.forEach(({ index, resolution }) => {
+            let patched = resolution;
+            const actorPersistence = resolution.actorPersistence || {};
+            const actorKey = `${actorPersistence.kind || ''}:${actorPersistence.recordId || ''}`;
+            const actorState = states.get(actorKey);
+            const resourceResult = patchResolutionResourceState(patched, actorState?.resources || resolution.actorResourceSnapshot?.before || []);
+            if (!resourceResult.applied.sufficient) {
+              throw new Error(`${resolution.actorName || 'Die Figur'} hat online nicht mehr genug ${resourceResult.applied.missing?.name || 'Ressourcen'} für diesen Angriff.`);
+            }
+            patched = resourceResult.resolution;
+            if (actorState && resourceResult.applied.changes.length) {
+              states.set(actorKey, { ...actorState, resources: resourceResult.applied.after });
+            }
+
+            const persistence = resolution.targetPersistence || {};
+            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
+            const storedState = states.get(key);
+            const fallbackState = normalizeCombatHitPointState({
+              current: resolution.targetSnapshot?.hitPointsBefore,
+              maximum: resolution.targetSnapshot?.maximumHitPoints,
+              temporary: resolution.targetSnapshot?.temporaryHitPointsBefore
+            });
+            patched = patchResolutionHitPointState(patched, storedState || fallbackState);
+            commentMetadata.commentSegments[index].combatResolution = patched;
+            const nextState = normalizeCombatHitPointState({
+              current: patched.targetSnapshot.hitPointsAfter,
+              maximum: patched.targetSnapshot.maximumHitPoints,
+              temporary: patched.targetSnapshot.temporaryHitPointsAfter
+            });
+            if (storedState) states.set(key, { ...storedState, ...nextState });
+          });
+
+          const combatEntries = getCombatResolutionEntries(commentMetadata);
+          commentMetadata.combatResolution = combatEntries.length === 1 ? combatEntries[0].resolution : null;
+          commentMetadata.combatTransaction = {
+            schemaVersion: 1,
+            transactionId: commentRef.id,
+            committedAtClient: nowClient,
+            atomicProfileUpdates: targetRecords.length
+          };
+
+          profileUpdates = targetRecords.map(target => {
+            const state = states.get(target.key);
+            const updates = { updatedAt: new Date(nowClient).toISOString() };
+            if (target.touchHitPoints) {
+              updates['combatProfile.hitPoints.current'] = state.current;
+              updates['combatProfile.hitPoints.temporary'] = state.temporary;
+            }
+            if (target.touchResources) {
+              updates['combatProfile.resources'] = normalizeCombatResources(state.resources || []);
+            }
+            transaction.update(target.ref, updates);
+            return {
+              kind: target.kind,
+              recordId: target.recordId,
+              hitPoints: target.touchHitPoints
+                ? { current: state.current, maximum: state.maximum, temporary: state.temporary }
+                : null,
+              resources: target.touchResources ? normalizeCombatResources(state.resources || []) : null
+            };
+          });
+          transaction.set(commentRef, buildCommentDocument(
+            entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, commentMetadata, nowClient
+          ));
         });
+
+        return { id: commentRef.id, profileUpdates };
       },
       async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);

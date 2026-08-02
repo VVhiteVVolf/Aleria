@@ -20,7 +20,7 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260802-creatures-v3';
+} from './creature-model.js?v=20260802-combat-state-v2';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
@@ -28,7 +28,7 @@ import {
 } from './creature-catalog.js?v=20260802-brandhof-combat-v1';
 
 const state = {
-  creatures: getBuiltinCreatureTemplates(),
+  creatures: getBuiltinCreatureTemplates().map(creature => ({ ...creature, _builtin: true })),
   loaded: false,
   loading: false,
   editingId: '',
@@ -39,9 +39,9 @@ const SIZE_OPTIONS = ['Winzig', 'Klein', 'Mittel', 'Groß', 'Riesig', 'Gigantisc
 const ATTRIBUTE_OPTIONS = COMBAT_ATTRIBUTE_DEFINITIONS.map(item => `<option value="${item.key}">${item.label}</option>`).join('');
 
 function mergeCreatureCatalog(storedCreatures = []) {
-  const byId = new Map(getBuiltinCreatureTemplates().map(creature => [creature.id, creature]));
+  const byId = new Map(getBuiltinCreatureTemplates().map(creature => [creature.id, { ...creature, _builtin: true }]));
   (Array.isArray(storedCreatures) ? storedCreatures : []).map(sanitizeCreature).forEach(creature => {
-    byId.set(creature.id, creature);
+    byId.set(creature.id, { ...creature, _builtin: false });
   });
   return [...byId.values()].sort((a, b) => a.name.localeCompare(b.name, 'de', { numeric: true }));
 }
@@ -724,6 +724,34 @@ function handleKeydown(event) {
   if (event.key === 'Escape' && getOverlay()?.classList.contains('open')) closeSheet();
 }
 
+function handleCommittedCreatureCombatProfile(event) {
+  const updates = Array.isArray(event?.detail?.updates) ? event.detail.updates : [];
+  let changed = false;
+  updates.filter(update => update?.kind === 'creature').forEach(update => {
+    const index = state.creatures.findIndex(creature => String(creature.id || '') === String(update.recordId || ''));
+    if (index < 0) return;
+    const currentCombatProfile = state.creatures[index].combatProfile || {};
+    state.creatures[index] = sanitizeCreature({
+      ...state.creatures[index],
+      combatProfile: {
+        ...currentCombatProfile,
+        hitPoints: update.hitPoints ? {
+          ...(currentCombatProfile.hitPoints || {}),
+          current: Math.max(0, Number(update.hitPoints?.current) || 0),
+          temporary: Math.max(0, Number(update.hitPoints?.temporary) || 0)
+        } : currentCombatProfile.hitPoints,
+        resources: Array.isArray(update.resources)
+          ? update.resources.map(resource => ({ ...resource }))
+          : (currentCombatProfile.resources || [])
+      }
+    });
+    changed = true;
+  });
+  if (!changed) return;
+  renderLibrary();
+  dispatchChanged();
+}
+
 export async function loadCreatures(options = {}) {
   if (state.loading || (state.loaded && !options.force)) {
     renderLibrary();
@@ -762,6 +790,7 @@ document.addEventListener('click', handleClick);
 document.addEventListener('input', handleInput);
 document.addEventListener('change', handleInput);
 document.addEventListener('keydown', handleKeydown);
+document.addEventListener('aleria:combat-profile-committed', handleCommittedCreatureCombatProfile);
 window.addEventListener('fb-ready', () => loadCreatures({ force: true }));
 
 window.AleriaCreatures = Object.freeze({

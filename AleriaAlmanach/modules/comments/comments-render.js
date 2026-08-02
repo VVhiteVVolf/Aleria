@@ -183,6 +183,8 @@ function renderCommentBubble(c, idx) {
         commentSegments: null,
         combatAction: null,
         combatResolution: null,
+        _combatTimelineCommentId: c.id,
+        _combatTimelineSegmentIndex: segmentIdx,
         _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
       const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
@@ -236,9 +238,14 @@ function renderCommentBubble(c, idx) {
       ? `<img class="comment-portrait${isSecretAction ? ' comment-portrait-silhouette' : ''}" src="${part.portrait}" alt="${safeDisplayCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
       : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
     const combatProfileCharacterId = String(c.sceneActorSourceId || c.creatureId || c.characterId || '').trim();
+    const combatActorId = String(c.sceneActorId || c.characterId || combatProfileCharacterId).trim();
     const portrait = window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
       portraitMarkup,
       characterId: combatProfileCharacterId,
+      actorId: combatActorId,
+      threadId: c.entryId || '',
+      timelineCommentId: c._combatTimelineCommentId || c.id,
+      timelineSegmentIndex: Number.isInteger(c._combatTimelineSegmentIndex) ? c._combatTimelineSegmentIndex : null,
       commentId: c.id,
       renderIndex: idx,
       partIndex: partIdx,

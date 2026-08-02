@@ -117,6 +117,9 @@ function applyCommentToolsVisibility() {
     btn.classList.toggle('active', _commentToolsVisible);
     btn.setAttribute('aria-pressed', _commentToolsVisible ? 'true' : 'false');
   });
+  document.dispatchEvent(new CustomEvent('aleria:comment-tools-visibility-changed', {
+    detail: { visible: _commentToolsVisible }
+  }));
 }
 
 function toggleCommentToolsVisibility() {

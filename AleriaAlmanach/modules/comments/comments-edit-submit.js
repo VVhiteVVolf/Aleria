@@ -50,28 +50,51 @@ async function submitEditComment() {
       : 'Bitte Charakter wählen oder manuell eingeben.';
     errEl.style.display='block'; return;
   }
+  const storedCombatSegments = (Array.isArray(_editCommentData?.commentSegments) ? _editCommentData.commentSegments : [])
+    .filter(segment => segment?.combatResolution);
+  const editedCombatSegments = editSegments.filter(segment => segment.commentKind === 'combataction');
+  if (storedCombatSegments.length !== editedCombatSegments.length) {
+    errEl.textContent = 'Gespeicherte Kampfauswertungen dürfen beim Bearbeiten nicht hinzugefügt oder entfernt werden. Lege dafür einen neuen Beitrag an.';
+    errEl.style.display = 'block';
+    return;
+  }
+  let combatIndex = 0;
+  let combatMechanicsError = '';
+  const preservedSegments = editSegments.map(segment => {
+    if (segment.commentKind !== 'combataction') return segment;
+    const stored = storedCombatSegments[combatIndex++];
+    const storedAction = stored?.combatAction;
+    const actorId = String(segment.sceneActorId || segment.characterId || '');
+    const sameMechanics = storedAction
+      && String(storedAction.actorId || '') === actorId
+      && String(storedAction.targetId || '') === String(segment.combatTargetId || '')
+      && String(storedAction.profileActionId || '') === String(segment.combatActionId || '');
+    if (!sameMechanics) {
+      combatMechanicsError = 'Ziel, Angreifer und aktiver Angriff einer bereits ausgewerteten Kampfhandlung sind unveränderlich. Erstelle für einen neuen Wurf einen neuen Beitrag.';
+      return segment;
+    }
+    const { storedCombatAction, storedCombatResolution, ...cleanSegment } = segment;
+    return {
+      ...cleanSegment,
+      combatAction: storedAction,
+      combatResolution: stored.combatResolution
+    };
+  });
+  if (combatMechanicsError) {
+    errEl.textContent = combatMechanicsError;
+    errEl.style.display = 'block';
+    return;
+  }
   commentMetadata.commentKind = normalizeCommentKind(_editCommentKind, narrator);
-  commentMetadata.commentSegments = editSegments;
+  commentMetadata.commentSegments = preservedSegments;
+  const preservedCombat = preservedSegments.filter(segment => segment.combatResolution);
+  commentMetadata.combatAction = preservedCombat.length === 1 ? preservedCombat[0].combatAction : null;
+  commentMetadata.combatResolution = preservedCombat.length === 1 ? preservedCombat[0].combatResolution : null;
 
   errEl.style.display = 'none';
   btn.disabled = true;
   btn.textContent = 'Speichere…';
   try {
-    if (window.AleriaCombat?.handleSubmission) {
-      const combatResult = await window.AleriaCombat.handleSubmission({
-        threadId: getCurrentCommentThreadId(),
-        text,
-        charName,
-        charTitle,
-        portrait,
-        characterId: commentMetadata.characterId || '',
-        commentSegments: editSegments,
-        commentMetadata
-      });
-      if (combatResult?.commentMetadata && typeof combatResult.commentMetadata === 'object') {
-        commentMetadata = { ...commentMetadata, ...combatResult.commentMetadata };
-      }
-    }
     const backend = await getCommentBackend({ timeoutMs: 1200 });
     await backend.updateComment(_editTargetId, { text, charName, charTitle, portrait, narrator, ...commentMetadata });
     closeEditComment();

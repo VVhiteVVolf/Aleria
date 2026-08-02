@@ -126,6 +126,7 @@ function getLocalCommentBackend() {
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
         combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
         combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
+        combatTransaction: commentMetadata.combatTransaction && typeof commentMetadata.combatTransaction === 'object' ? commentMetadata.combatTransaction : null,
         orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
@@ -136,6 +137,31 @@ function getLocalCommentBackend() {
       store[key] = comments;
       writeLocalCommentStore(store);
       return { id: comments[comments.length - 1].id };
+    },
+    async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+      const resolutions = (Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [])
+        .map(segment => segment?.combatResolution)
+        .filter(Boolean);
+      const hasPersistentTarget = resolutions.some(resolution => (
+        (['character', 'creature'].includes(resolution?.targetPersistence?.kind)
+          && resolution?.targetPersistence?.recordId)
+        || (Array.isArray(resolution?.resourceCosts) && resolution.resourceCosts.length > 0
+          && ['character', 'creature'].includes(resolution?.actorPersistence?.kind)
+          && resolution?.actorPersistence?.recordId)
+      ));
+      if (hasPersistentTarget) {
+        throw new Error('Dieser Kampf verändert ein Online-Profil und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
+      }
+      return this.addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, {
+        ...metadata,
+        combatTransaction: {
+          schemaVersion: 1,
+          transactionId: makeLocalCommentId(),
+          committedAtClient: Date.now(),
+          atomicProfileUpdates: 0,
+          localSceneState: true
+        }
+      });
     },
     async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
       const store = readLocalCommentStore();

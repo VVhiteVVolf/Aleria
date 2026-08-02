@@ -29,6 +29,12 @@ import { CombatResolutionService } from '../modules/combat/combat-resolution-ser
 import { combatNarrationInternals, narrateCombatResolution } from '../modules/combat/combat-narration-service.js';
 import { combatUiInternals } from '../modules/combat/ui/combat-ui.js';
 import {
+  applyCombatDamage,
+  applyCombatResourceCosts,
+  deriveCombatStateFromComments,
+  patchResolutionHitPointState
+} from '../modules/combat/combat-state-model.js';
+import {
   buildAttackNotation,
   buildDamageNotation,
   evaluateAttackRoll,
@@ -315,7 +321,7 @@ test('erzeugt Treffer und Schaden aus den vollständig abgeleiteten Charakterpro
     description: 'Alwyn zieht die Klinge in einem flachen Bogen herum.',
     rollMode: 'normal'
   }, { onPhase: phase => phases.push(phase.phase) });
-  assert.equal(result.schemaVersion, 3);
+  assert.equal(result.schemaVersion, 4);
   assert.equal(result.attack.hit, true);
   assert.equal(result.attack.modifier, 6);
   assert.equal(result.attack.targetDefense, 14);
@@ -392,6 +398,42 @@ test('eine Auswertung verändert Trefferpunkte des Zielprofils nicht still', asy
   assert.equal(result.targetSnapshot.hitPointsBefore, before);
   assert.equal(result.targetSnapshot.hitPointsAfter, before - result.damage.total);
   assert.equal(result.targetSnapshot.defeated, false);
+});
+
+test('Schaden verbraucht temporaere TP vor den regulaeren Trefferpunkten', () => {
+  const applied = applyCombatDamage({ current: 18, maximum: 20, temporary: 5 }, 9);
+  assert.deepEqual(applied.before, { current: 18, maximum: 20, temporary: 5 });
+  assert.deepEqual(applied.after, { current: 14, maximum: 20, temporary: 0 });
+  assert.equal(applied.absorbedByTemporary, 5);
+  assert.equal(applied.hitPointDamage, 4);
+});
+
+test('gespeicherte Kampfauswertungen bilden eine fortlaufende TP-Kette', () => {
+  const first = patchResolutionHitPointState({
+    targetId: 'ziel', damage: { total: 7 }, targetSnapshot: { maximumHitPoints: 20 }
+  }, { current: 20, maximum: 20, temporary: 0 });
+  const second = patchResolutionHitPointState({
+    targetId: 'ziel', damage: { total: 6 }, targetSnapshot: { maximumHitPoints: 20 }
+  }, { current: first.targetSnapshot.hitPointsAfter, maximum: 20, temporary: 0 });
+  const states = deriveCombatStateFromComments([{ commentSegments: [
+    { combatResolution: first }, { combatResolution: second }
+  ] }]);
+  assert.equal(first.targetSnapshot.hitPointsAfter, 13);
+  assert.equal(second.targetSnapshot.hitPointsBefore, 13);
+  assert.equal(states.get('ziel').current, 7);
+});
+
+test('Ressourcenkosten werden als nachvollziehbare Vorher-Nachher-Aenderung gebucht', () => {
+  const applied = applyCombatResourceCosts([
+    { id: 'mana', name: 'Mana', current: 8, maximum: 10 },
+    { id: 'mut', name: 'Mut', current: 2, maximum: 3 }
+  ], [{ resourceId: 'mana', name: 'Mana', amount: 3 }]);
+  assert.equal(applied.sufficient, true);
+  assert.equal(applied.after.find(resource => resource.id === 'mana').current, 5);
+  assert.deepEqual(applied.changes[0], {
+    resourceId: 'mana', name: 'Mana', amount: 3, before: 8, after: 5, maximum: 10
+  });
+  assert.equal(applyCombatResourceCosts(applied.after, [{ resourceId: 'mana', amount: 9 }]).sufficient, false);
 });
 
 test('zeigt auch ohne KI-Antwort eine vollstaendige Kampfauswertung', () => {

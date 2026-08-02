@@ -1,13 +1,19 @@
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260802-dice-audio-v2';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260802-combat-feedback-v3';
-import { CombatProfileResolver } from './combat-profile-resolver.js?v=20260802-brandhof-combat-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260802-brandhof-combat-v1';
+import { CombatProfileResolver } from './combat-profile-resolver.js?v=20260802-combat-state-v2';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260802-combat-state-v2';
+import {
+  deriveCombatStateFromComments,
+  getResolutionActorResourceState,
+  getResolutionHitPointState,
+  overlayCombatHitPointState
+} from './combat-state-model.js?v=20260802-combat-state-v1';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260802-combat-feedback-v3';
+} from './ui/combat-ui.js?v=20260802-combat-state-v2';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -47,6 +53,21 @@ function mergeCombatActors(characters = [], sceneActors = []) {
   return [...merged.values()];
 }
 
+function getStoredCombatStates(threadId = '', position = {}) {
+  const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
+  return deriveCombatStateFromComments(comments, {
+    commentId: position.timelineCommentId || '',
+    segmentIndex: Number.isInteger(position.timelineSegmentIndex) ? position.timelineSegmentIndex : null
+  });
+}
+
+function resolveActorProfile(character, options = {}) {
+  const profile = profileResolver.resolve(character, { actionId: options.actionId });
+  const actorId = String(options.actorId || profile.characterId || '');
+  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
+  return overlayCombatHitPointState(profile, state);
+}
+
 function activateResolutionDialog() {
   const overlay = ensureCombatResolutionDialog();
   overlay.setAttribute('aria-hidden', 'false');
@@ -69,16 +90,24 @@ function closeResolutionDialog() {
 function mountComposers(context = {}) {
   latestComposerContext = context;
   const characters = mergeCombatActors(getCharacters(), context.sceneActors || []);
+  const storedStates = getStoredCombatStates(context.threadId || '');
 
   (context.segments || []).forEach(segment => {
     if (segment.kind !== 'combataction') return;
     const actorId = String(segment.actorId || context.selectedCharacterId || '');
     const actorCharacter = characters.find(character => String(character.id || '') === actorId) || null;
-    const actor = actorCharacter ? profileResolver.resolve(actorCharacter, { actionId: segment.combatActionId }) : null;
+    const actor = actorCharacter ? resolveActorProfile(actorCharacter, {
+      actionId: segment.combatActionId,
+      actorId,
+      storedStates
+    }) : null;
     const actorReady = actor ? profileResolver.validateActor(actor).ready : false;
     const targets = characters
       .filter(character => String(character.id || '') !== actorId)
-      .map(character => profileResolver.resolve(character));
+      .map(character => resolveActorProfile(character, {
+        actorId: character.id,
+        storedStates
+      }));
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     mountCombatComposer({ card, segment, actor, targets, actorReady });
   });
@@ -110,11 +139,16 @@ function buildNarrationFacts(resolution) {
   };
 }
 
-async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '') {
+async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '', stateContext = {}) {
   const actorId = String(segment.sceneActorId || segment.actorId || segment.characterId || fallbackActorId || '');
   const actorCharacter = characters.find(character => String(character.id || '') === actorId);
   if (!actorCharacter) throw new Error('Die handelnde Figur dieser Kampfbeschreibung ist nicht mehr verfügbar.');
-  const actor = profileResolver.resolve(actorCharacter, { actionId: segment.combatActionId });
+  const actor = resolveActorProfile(actorCharacter, {
+    actionId: segment.combatActionId,
+    actorId,
+    storedStates: stateContext.storedStates,
+    workingStates: stateContext.workingStates
+  });
   if (!profileResolver.validateActor(actor).ready) {
     throw new Error(`Ergänze für ${actor.name} zuerst einen Angriff mit Schadenswurf auf dem Profilbogen.`);
   }
@@ -122,7 +156,11 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   if (!targetId) throw new Error('Wähle für jede Kampfbeschreibung ein Ziel.');
   const targetCharacter = characters.find(character => String(character.id || '') === targetId);
   if (!targetCharacter) throw new Error('Das gewählte Kampfziel ist nicht mehr verfügbar.');
-  const target = profileResolver.resolve(targetCharacter);
+  const target = resolveActorProfile(targetCharacter, {
+    actorId: targetId,
+    storedStates: stateContext.storedStates,
+    workingStates: stateContext.workingStates
+  });
   const stage = document.getElementById('combat-dice-stage');
   if (stage) stage.innerHTML = '';
   setCombatResolutionStatus(
@@ -143,6 +181,16 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   });
   setCombatResolutionStatus('Erzählerische Folge wird formuliert …', `${resolution.actorName} gegen ${resolution.targetName}`);
   resolution.narration = await narrateCombatResolution(buildNarrationFacts(resolution));
+  const nextTargetState = getResolutionHitPointState(resolution);
+  if (nextTargetState) {
+    const previous = stateContext.workingStates?.get(targetId) || stateContext.storedStates?.get(targetId) || {};
+    stateContext.workingStates?.set(targetId, { ...previous, ...nextTargetState });
+  }
+  const nextActorResources = getResolutionActorResourceState(resolution);
+  if (nextActorResources) {
+    const previous = stateContext.workingStates?.get(actorId) || stateContext.storedStates?.get(actorId) || {};
+    stateContext.workingStates?.set(actorId, { ...previous, resources: nextActorResources });
+  }
   return resolution;
 }
 
@@ -151,12 +199,23 @@ async function handleSubmission(submission = {}) {
   const combatSegments = segments.filter(segment => segment.commentKind === 'combataction' || segment.kind === 'combataction');
   if (!combatSegments.length) return { handled: false, published: false };
   const characters = mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []);
+  const stateContext = {
+    storedStates: getStoredCombatStates(submission.threadId || ''),
+    workingStates: new Map()
+  };
 
   activateResolutionDialog();
   try {
     const resolutions = [];
     for (let index = 0; index < combatSegments.length; index += 1) {
-      resolutions.push(await resolveCombatSegment(combatSegments[index], characters, index, combatSegments.length, submission.characterId));
+      resolutions.push(await resolveCombatSegment(
+        combatSegments[index],
+        characters,
+        index,
+        combatSegments.length,
+        submission.characterId,
+        stateContext
+      ));
     }
 
     let resolutionIndex = 0;
@@ -204,9 +263,13 @@ document.addEventListener('change', event => {
 });
 
 globalThis.AleriaCombat = Object.freeze({
-  getProfile(characterId) {
+  getProfile(characterId, options = {}) {
     const character = getCharacterById(characterId);
-    return character ? profileResolver.resolve(character) : null;
+    if (!character) return null;
+    const profile = profileResolver.resolve(character);
+    const actorId = String(options.actorId || characterId || '');
+    const state = getStoredCombatStates(options.threadId || '', options).get(actorId) || null;
+    return overlayCombatHitPointState(profile, state);
   },
   mountComposer(list, context = {}) {
     mountComposers({

@@ -75,9 +75,13 @@
     const characterId = String(options.characterId || '').trim();
     if (!characterId || options.secret) return String(options.portraitMarkup || '');
     const displayName = String(options.displayName || 'Figur');
+    const actorId = String(options.actorId || characterId).trim();
+    const threadId = String(options.threadId || '').trim();
+    const timelineCommentId = String(options.timelineCommentId || options.commentId || '').trim();
+    const timelineSegmentIndex = Number.isInteger(options.timelineSegmentIndex) ? options.timelineSegmentIndex : null;
     const panelId = `comment-combat-profile-${safeDomId(options.commentId)}-${Number(options.renderIndex) || 0}-${Number(options.partIndex) || 0}`;
     return `
-      <div class="comment-combat-profile-shell" data-comment-combat-profile data-combat-character-id="${escapeMarkup(characterId)}" data-combat-display-name="${escapeMarkup(displayName)}">
+      <div class="comment-combat-profile-shell" data-comment-combat-profile data-combat-character-id="${escapeMarkup(characterId)}" data-combat-actor-id="${escapeMarkup(actorId)}" data-combat-thread-id="${escapeMarkup(threadId)}" data-combat-timeline-comment-id="${escapeMarkup(timelineCommentId)}"${timelineSegmentIndex == null ? '' : ` data-combat-timeline-segment-index="${timelineSegmentIndex}"`} data-combat-display-name="${escapeMarkup(displayName)}">
         <div class="comment-combat-profile-portrait">${String(options.portraitMarkup || '')}</div>
         <section class="comment-combat-profile-panel" id="${escapeMarkup(panelId)}" data-comment-combat-profile-panel aria-label="Kampfdaten von ${escapeMarkup(displayName)}" hidden></section>
         <button type="button" class="comment-combat-profile-toggle" data-action="toggle-comment-combat-profile" aria-controls="${escapeMarkup(panelId)}" aria-expanded="false" title="Kampfdaten anzeigen">
@@ -104,7 +108,14 @@
     if (activeRoot && activeRoot !== root) closeProfile(activeRoot);
     const panel = root.querySelector('[data-comment-combat-profile-panel]');
     const toggle = root.querySelector(TOGGLE_SELECTOR);
-    const profile = global.AleriaCombat?.getProfile?.(root.dataset.combatCharacterId || '');
+    const profile = global.AleriaCombat?.getProfile?.(root.dataset.combatCharacterId || '', {
+      actorId: root.dataset.combatActorId || root.dataset.combatCharacterId || '',
+      threadId: root.dataset.combatThreadId || '',
+      timelineCommentId: root.dataset.combatTimelineCommentId || '',
+      timelineSegmentIndex: root.dataset.combatTimelineSegmentIndex == null
+        ? null
+        : Number(root.dataset.combatTimelineSegmentIndex)
+    });
     if (!panel || !toggle || !profile) return;
 
     panel.innerHTML = renderPanel(profile, root.dataset.combatDisplayName || profile.name);
@@ -137,6 +148,10 @@
     const toggle = activeRoot.querySelector(TOGGLE_SELECTOR);
     closeProfile(activeRoot);
     toggle?.focus?.();
+  });
+
+  document.addEventListener('aleria:comment-tools-visibility-changed', event => {
+    if (event.detail?.visible === false) closeProfile();
   });
 
   global.AleriaCommentCombatMiniProfile = Object.freeze({

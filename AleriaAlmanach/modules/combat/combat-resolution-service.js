@@ -1,8 +1,12 @@
 import { buildAttackNotation, buildDamageNotation, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import { resolveAttackRollMode } from './combat-profile-model.js?v=20260802-combat-sheet-v4';
-import { validateCombatActorProfile, validateCombatTargetProfile } from './combat-profile-resolver.js?v=20260802-brandhof-combat-v1';
+import { validateCombatActorProfile, validateCombatTargetProfile } from './combat-profile-resolver.js?v=20260802-combat-state-v2';
+import {
+  patchResolutionHitPointState,
+  patchResolutionResourceState
+} from './combat-state-model.js?v=20260802-combat-state-v1';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-1';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-2';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -26,6 +30,11 @@ export class CombatResolutionService {
 
     const safeRollMode = resolveAttackRollMode(actor, normalizeRollMode(rollMode));
     const weapon = actor.weapon;
+    const resourceCheck = patchResolutionResourceState({ resourceCosts: actor.resourceCosts || [] }, actor.resources || []);
+    if (!resourceCheck.applied.sufficient) {
+      const missing = resourceCheck.applied.missing;
+      throw new Error(`${actor.name} hat nicht genug ${missing?.name || 'Ressourcen'} für diesen Angriff.`);
+    }
     const attackModifier = Number(actor.attackModifier || 0);
     const targetDefense = Number(target.totalDefense);
     const attackNotation = buildAttackNotation(attackModifier, safeRollMode);
@@ -54,13 +63,8 @@ export class CombatResolutionService {
         container: options.container
       });
     }
-    const hitPointsBefore = Number.isFinite(Number(target.currentHitPoints)) ? Number(target.currentHitPoints) : null;
-    const hitPointsAfter = hitPointsBefore == null
-      ? null
-      : Math.max(0, hitPointsBefore - Number(damageRoll?.total || 0));
-
-    return {
-      schemaVersion: 3,
+    const baseResolution = {
+      schemaVersion: 4,
       rulesVersion: COMBAT_EVALUATION_RULES_VERSION,
       resolutionId: createResolutionId(),
       actionType: 'attack',
@@ -68,9 +72,17 @@ export class CombatResolutionService {
       actorName: actor.name,
       targetId: target.characterId,
       targetName: target.name,
+      actorPersistence: actor.persistence || null,
+      targetPersistence: target.persistence || null,
       weapon: { ...weapon },
       profileActionId: actor.profileActionId || '',
       profileActionKind: actor.profileActionKind || 'weapon',
+      resourceCosts: Array.isArray(actor.resourceCosts) ? actor.resourceCosts.map(cost => ({ ...cost })) : [],
+      actorResourceSnapshot: resourceCheck.applied.changes.length ? {
+        before: resourceCheck.applied.before,
+        after: resourceCheck.applied.after,
+        changes: resourceCheck.applied.changes
+      } : null,
       actorCombatProfile: actor.aiSnapshot || null,
       targetCombatProfile: target.aiSnapshot || null,
       originalDescription: String(description || '').slice(0, 5000),
@@ -100,15 +112,22 @@ export class CombatResolutionService {
       } : null,
       targetSnapshot: {
         currentHitPoints: target.currentHitPoints,
-        hitPointsBefore,
-        hitPointsAfter,
-        defeated: hitPointsAfter === 0 && hitPointsBefore !== null,
+        hitPointsBefore: target.currentHitPoints,
+        hitPointsAfter: target.currentHitPoints,
+        temporaryHitPointsBefore: target.temporaryHitPoints || 0,
+        temporaryHitPointsAfter: target.temporaryHitPoints || 0,
+        defeated: false,
         maximumHitPoints: target.maximumHitPoints,
         defense: targetDefense,
         armorName: target.armor?.name || ''
       },
       resolvedAt: new Date().toISOString()
     };
+    return patchResolutionHitPointState(baseResolution, {
+      current: target.currentHitPoints,
+      maximum: target.maximumHitPoints,
+      temporary: target.temporaryHitPoints
+    });
   }
 }
 

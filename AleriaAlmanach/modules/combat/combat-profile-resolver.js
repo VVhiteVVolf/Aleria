@@ -7,6 +7,9 @@ import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=2026
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 function buildCombatProfileActions(character, profile) {
+  const manaResource = profile.resources.find(resource => resource.id === profile.magic?.manaResourceId)
+    || profile.resources.find(resource => /mana|fokus/i.test(resource.name || ''))
+    || null;
   const weaponKind = character.entityType === 'creature' ? 'Angriff' : 'Waffe';
   const weaponActions = profile.weapons
     .filter(weapon => weapon.name && weapon.damageFormula)
@@ -20,6 +23,7 @@ function buildCombatProfileActions(character, profile) {
       weapon: { ...weapon },
       attackModifier: getWeaponAttackModifier(profile, weapon),
       damageModifier: getWeaponDamageModifier(profile, weapon),
+      resourceCosts: [],
       default: !!weapon.equipped
     }));
   const spellActions = (profile.magic?.enabled ? profile.magic.spells : [])
@@ -44,9 +48,28 @@ function buildCombatProfileActions(character, profile) {
       },
       attackModifier: profile.spellAttackModifier,
       damageModifier: 0,
+      resourceCosts: Number(spell.manaCost) > 0 ? [{
+        resourceId: manaResource?.id || profile.magic?.manaResourceId || 'mana-focus',
+        name: manaResource?.name || 'Mana / Fokus',
+        amount: Number(spell.manaCost)
+      }] : [],
       default: false
     }));
   return [...weaponActions, ...spellActions];
+}
+
+function resolveCombatPersistence(character = {}) {
+  const actorId = String(character.id || '').trim();
+  const sourceCreatureId = String(character.sourceCreatureId || character.sceneActorSourceId || '').trim();
+  if (sourceCreatureId) {
+    return { kind: 'scene-creature', actorId, sourceCreatureId };
+  }
+  if (!actorId || character._builtin) {
+    return { kind: 'scene-actor', actorId };
+  }
+  return character.entityType === 'creature'
+    ? { kind: 'creature', recordId: actorId }
+    : { kind: 'character', recordId: actorId };
 }
 
 export function resolveCombatProfile(character = {}, options = {}) {
@@ -67,7 +90,9 @@ export function resolveCombatProfile(character = {}, options = {}) {
     damageModifier: selectedAction?.damageModifier ?? profile.damageModifier,
     profileActionId: selectedAction?.id || '',
     profileActionKind: selectedAction?.kind || 'weapon',
+    resourceCosts: Array.isArray(selectedAction?.resourceCosts) ? selectedAction.resourceCosts : [],
     actions,
+    persistence: resolveCombatPersistence(character),
     aiSnapshot: buildCombatProfileAiSnapshot(character)
   };
 }

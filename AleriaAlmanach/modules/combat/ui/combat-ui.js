@@ -142,6 +142,17 @@ export function renderCombatEvaluation(source = {}) {
   const remainingHitPoints = resolution.targetSnapshot?.hitPointsAfter != null
     ? `<span>Ziel: <b>${escapeHtml(resolution.targetSnapshot.hitPointsAfter)}</b> TP${resolution.targetSnapshot.defeated ? ' · ausgeschaltet' : ''}</span>`
     : '';
+  const hitPointTransition = resolution.targetSnapshot?.hitPointsAfter != null
+    ? `<span>Ziel-TP: <b>${escapeHtml(resolution.targetSnapshot.hitPointsBefore)}</b> &rarr; <b>${escapeHtml(resolution.targetSnapshot.hitPointsAfter)}</b>${resolution.targetSnapshot.defeated ? ' &middot; ausgeschaltet' : ''}</span>`
+    : remainingHitPoints;
+  const temporaryHitPoints = Number(resolution.targetSnapshot?.temporaryHitPointsBefore || 0) > 0
+    ? `<span>Temp. TP: <b>${escapeHtml(resolution.targetSnapshot.temporaryHitPointsBefore)}</b> &rarr; <b>${escapeHtml(resolution.targetSnapshot.temporaryHitPointsAfter || 0)}</b></span>`
+    : '';
+  const resourceChanges = (Array.isArray(resolution.actorResourceSnapshot?.changes)
+    ? resolution.actorResourceSnapshot.changes
+    : []).map(change => (
+      `<span>${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
+    )).join('');
   return `
     <aside class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
       <div class="combat-evaluation-heading">
@@ -153,7 +164,9 @@ export function renderCombatEvaluation(source = {}) {
         <span><b>${escapeHtml(attack.total)}</b> Angriff · ${escapeHtml(attack.notation || '')}</span>
         <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> Verteidigung</span>
         ${damage}
-        ${remainingHitPoints}
+        ${hitPointTransition}
+        ${temporaryHitPoints}
+        ${resourceChanges}
       </div>
       <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
     </aside>`;
