@@ -2324,6 +2324,39 @@ const SECTIONS = [
         ],
       },
     ]
+  },
+  {
+    key: "Systemtest",
+    desc: "Reproduzierbare Testszenen für Kommentare, Würfel und Kampfauswertung",
+    tab: "Test",
+    entries: [
+      {
+        id: "test-brandhof-scharmuetzel",
+        title: "Der Brandhof — Drei gegen Drei",
+        subtitle: "Vollständiger Kampfsystem-Regressionslauf",
+        type: "Testszene · Kampf & Dialog",
+        category: "Systemtest · Interaktive Szene",
+        image: "https://i.imgur.com/uLAE7V0.png",
+        stamp: "ALERIA · KAMPFSYSTEM · REGRESSIONSTEST",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "⚔",
+        pages: [
+          {
+            image: "https://i.imgur.com/uLAE7V0.png",
+            pageTitle: "I. — Scharmützel am Brandhof",
+            sessionPage: true,
+            commentThreadKey: "brandhof-3v3",
+            testSceneId: "combat-brandhof-3v3",
+            sessionIntro: "Nahe eines niedergebrannten Hofes treffen drei Schwarze Zitteraale auf drei Gefolgsleute des Hauses Draig. Der fest eingebaute Ablauf führt das Gefecht ohne Initiative bis zur Entscheidung und prüft Sprecherwechsel, Szeneninstanzen, Profilangriffe, Ziele, normale Würfe, Vorteil/Nachteil, Treffer, Fehlschlag, kritischen Treffer, Schaden, Rest-TP, Kampfauswertung sowie Rede, Gedanken, Flüstern, Rufen und Handlung. Die gespeicherte Referenz nutzt bewusst die deterministische AleriaGPT-Ersatznarration; neue Live-Angriffe verwenden AleriaGPT, sobald es erreichbar ist.",
+            sessionHint: "Setze Kreaturenvorlagen mehrfach als Szeneninstanzen ein oder führe den Regressionstest mit eigenen Beiträgen fort.",
+            sessionEmptyTitle: "Der Brandhof wartet",
+            sessionEmptyText: "Die feste Testsimulation konnte nicht geladen werden. Eigene Beiträge bleiben dennoch möglich."
+          }
+        ]
+      }
+    ]
   }
 ];
 

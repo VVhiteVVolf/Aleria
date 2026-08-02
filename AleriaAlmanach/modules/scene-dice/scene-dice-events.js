@@ -41,8 +41,8 @@ function getSceneDiceDialogContext() {
     name: String(document.getElementById('scene-dice-roller')?.value || '').trim() || 'Erzähler'
   };
   const narrationMode = window.AleriaSceneDiceNarration?.normalizeMode?.(
-    document.getElementById('scene-dice-narration-mode')?.value || 'immersive'
-  ) || 'immersive';
+    document.getElementById('scene-dice-narration-mode')?.value || SCENE_DICE_DEFAULT_NARRATION_MODE
+  ) || SCENE_DICE_DEFAULT_NARRATION_MODE;
   const narrationPolicy = window.AleriaSceneDiceNarration?.getMode?.(narrationMode);
   return {
     roller: String(participant.name || '').trim() || 'Erzähler',
@@ -59,7 +59,7 @@ function getSceneDiceDialogContext() {
 async function generateSceneDiceNarrationForRoll(roll) {
   if (!roll) return;
   const token = ++_sceneDiceNarrationToken;
-  roll.narrationMode = window.AleriaSceneDiceNarration?.normalizeMode?.(roll.narrationMode) || 'immersive';
+  roll.narrationMode = window.AleriaSceneDiceNarration?.normalizeMode?.(roll.narrationMode) || SCENE_DICE_DEFAULT_NARRATION_MODE;
   roll.narration = '';
   roll.narrationError = '';
   const commit = document.querySelector('[data-scene-dice-action="commit"]');
@@ -255,12 +255,14 @@ async function commitSceneDiceRoll() {
 async function updateSceneDiceSettingsFromDialog() {
   const animationEnabled = document.getElementById('scene-dice-animation-enabled')?.checked !== false;
   const soundEnabled = document.getElementById('scene-dice-sound-enabled')?.checked === true;
+  const soundVolume = Math.min(1, Math.max(0, Number(document.getElementById('scene-dice-sound-volume')?.value || 65) / 100));
   const reducedMotion = document.getElementById('scene-dice-reduced-motion')?.checked === true;
   const keepPool = document.getElementById('scene-dice-keep-pool')?.checked !== false;
   const throwStyle = document.getElementById('scene-dice-throw-style')?.value || 'balanced';
   const service = getSceneDiceService();
   const previousSettings = service.getSettings();
-  await service.updateSettings({ animationEnabled, soundEnabled, reducedMotion, keepPool, throwStyle });
+  await service.updateSettings({ animationEnabled, soundEnabled, soundVolume, reducedMotion, keepPool, throwStyle });
+  syncSceneDiceSettings();
   if (!animationEnabled) {
     if (previousSettings.animationEnabled) service.clear();
     setSceneDiceStageStatus('Textmodus bereit.', 'fallback');
@@ -344,6 +346,11 @@ document.addEventListener('input', event => {
     window.AleriaSceneDiceParticipants?.filter?.(event.target.value || '');
     return;
   }
+  if (event.target?.matches?.('#scene-dice-sound-volume')) {
+    const output = document.getElementById('scene-dice-sound-volume-output');
+    if (output) output.textContent = `${event.target.value} %`;
+    return;
+  }
   if (!event.target?.matches?.('#scene-dice-modifier')) return;
   buildSceneDiceFormulaFromControls();
 });
@@ -353,7 +360,7 @@ document.addEventListener('change', event => {
     updateSceneDiceNarrationFromDialog();
     return;
   }
-  if (!event.target?.matches?.('#scene-dice-animation-enabled, #scene-dice-sound-enabled, #scene-dice-reduced-motion, #scene-dice-keep-pool, #scene-dice-throw-style')) return;
+  if (!event.target?.matches?.('#scene-dice-animation-enabled, #scene-dice-sound-enabled, #scene-dice-sound-volume, #scene-dice-reduced-motion, #scene-dice-keep-pool, #scene-dice-throw-style')) return;
   updateSceneDiceSettingsFromDialog().catch(error => setSceneDiceStatus(error.message || 'Einstellung konnte nicht übernommen werden.', 'error'));
 });
 

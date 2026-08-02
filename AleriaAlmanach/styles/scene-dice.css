@@ -442,6 +442,11 @@
 .scene-dice-check { display: flex !important; align-items: center; gap: .42rem !important; }
 .scene-dice-check input { width: 1rem; min-height: 1rem; accent-color: var(--theme-accent); }
 .scene-dice-check span { color: var(--ink) !important; font-family: 'EB Garamond',serif !important; font-size: .8rem !important; letter-spacing: 0 !important; text-transform: none !important; }
+.scene-dice-volume { grid-column: 1/-1; }
+.scene-dice-volume > span { align-items: center; display: flex; justify-content: space-between; }
+.scene-dice-volume output { color: var(--theme-accent-dark); font-variant-numeric: tabular-nums; }
+.scene-dice-volume input { accent-color: var(--theme-accent); cursor: pointer; min-height: 1.35rem; width: 100%; }
+.scene-dice-volume input:disabled { cursor: not-allowed; opacity: .45; }
 
 .scene-dice-result {
   min-height: 104px;
@@ -577,7 +582,7 @@
   .scene-dice-title-block h2 { font-size: .96rem; }
   .scene-dice-types { grid-template-columns: repeat(4,minmax(0,1fr)); }
   .scene-dice-pool,.scene-dice-context,.scene-dice-settings-grid { grid-template-columns: 1fr; }
-  .scene-dice-roller-field,.scene-dice-settings-grid > label:first-child { grid-column: 1; }
+  .scene-dice-roller-field,.scene-dice-settings-grid > label:first-child,.scene-dice-volume { grid-column: 1; }
   .scene-dice-narration-config { grid-column: 1; grid-template-columns: 1fr; }
   .scene-dice-formula-input { grid-template-columns: 1fr; }
   .scene-dice-result { grid-template-columns: 1fr; }

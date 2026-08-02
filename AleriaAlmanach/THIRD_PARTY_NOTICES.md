@@ -26,6 +26,16 @@ The complete MIT license text for the 3D Dice packages is stored in
 License 2.0 text shipped by Babylon.js is stored in
 [`licenses/BabylonJS-Apache-2.0.md`](licenses/BabylonJS-Apache-2.0.md).
 
+## Dice audio
+
+The physical dice-roll and landing recordings are adapted from
+**“2 dice roll (29 throws)”** by the OpenGameArt user **RPG**. The source is
+released under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/):
+<https://opengameart.org/content/2-dice-roll-29-throws>.
+
+The exact transformations and resulting files are documented in
+[`assets/audio/dice/README.md`](assets/audio/dice/README.md).
+
 ## Build and test dependencies
 
 `vite` 8.2.0 and `esbuild` 0.28.1 are used only to build and test the project.

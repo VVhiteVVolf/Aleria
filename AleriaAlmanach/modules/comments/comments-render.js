@@ -15,7 +15,7 @@ const COMMENT_KIND_LABELS = {
   prayer: 'Gebet',
   flirt: 'Flirt',
   secretaction: 'Geheimaktion',
-  combataction: 'Kampfhandlung',
+  combataction: 'Kampfbeschreibung',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
   'scene-transition-event': 'Szenenwechsel',
@@ -181,9 +181,15 @@ function renderCommentBubble(c, idx) {
         charTitle: segment.charTitle || (segment.narrator ? '' : c.charTitle),
         portrait: segment.narrator ? null : (segment.portrait || c.portrait),
         commentSegments: null,
-        _hideActions: segmentIdx < cleanSegments.length - 1
+        combatAction: null,
+        combatResolution: null,
+        _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
-      return renderCommentBubble(segmentComment, idx + segmentIdx);
+      const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
+      const evaluation = segment.combatResolution
+        ? (window.AleriaCombat?.renderEvaluation?.(segment) || '')
+        : '';
+      return `${bubble}${evaluation}`;
     }).join('');
   }
 
@@ -226,9 +232,19 @@ function renderCommentBubble(c, idx) {
   const safeDisplayCharName = escapeHtml(displayCharName);
   const parts = splitCommentByEmoteMarkers(c);
   const entries = parts.map((part, partIdx) => {
-    const portrait = part.portrait
+    const portraitMarkup = part.portrait
       ? `<img class="comment-portrait${isSecretAction ? ' comment-portrait-silhouette' : ''}" src="${part.portrait}" alt="${safeDisplayCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
       : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
+    const combatProfileCharacterId = String(c.sceneActorSourceId || c.creatureId || c.characterId || '').trim();
+    const portrait = window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
+      portraitMarkup,
+      characterId: combatProfileCharacterId,
+      commentId: c.id,
+      renderIndex: idx,
+      partIndex: partIdx,
+      displayName: displayCharName,
+      secret: isSecretAction
+    }) || portraitMarkup;
     const actions = !c._hideActions && partIdx === parts.length - 1
       ? `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
@@ -255,5 +271,8 @@ function renderCommentBubble(c, idx) {
       </div>`;
   }).join('');
 
-  return `${divider}${entries}`;
+  const legacyEvaluation = commentKind === 'combataction' && c.combatResolution
+    ? (window.AleriaCombat?.renderEvaluation?.(c) || '')
+    : '';
+  return `${divider}${entries}${legacyEvaluation}`;
 }

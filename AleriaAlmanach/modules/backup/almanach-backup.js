@@ -156,8 +156,9 @@ async function buildFullAlmanachBackupPayload() {
   const commentBackend = typeof getCommentBackend === 'function'
     ? await getCommentBackend({ timeoutMs: 800 })
     : window._fb;
-  const [characters, charTabs, comments, commentTurns] = await Promise.all([
+  const [characters, creatures, charTabs, comments, commentTurns] = await Promise.all([
     window._fb?.loadCharacters ? window._fb.loadCharacters() : Promise.resolve(_characters || []),
+    window._fb?.loadCreatures ? window._fb.loadCreatures() : Promise.resolve(window.AleriaCreatures?.getAll?.() || []),
     window._fb?.loadCharTabs ? window._fb.loadCharTabs() : Promise.resolve({
       tabs: _charTabs,
       map: _charTabMap,
@@ -174,6 +175,7 @@ async function buildFullAlmanachBackupPayload() {
     exportedAt: new Date().toISOString(),
     moduleStore: cloneForBackup(getModuleStorePayload(Date.now())),
     characters: cloneForBackup(characters || []),
+    creatures: cloneForBackup(creatures || []),
     charTabs: cloneForBackup(charTabs || {
       tabs: _charTabs,
       map: _charTabMap,
@@ -193,7 +195,7 @@ async function exportFullAlmanachBackup() {
     const payload = await buildFullAlmanachBackupPayload();
     const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
     downloadJsonFile(payload, `aleria-almanach-backup-${stamp}.json`);
-    setModuleEditorStatus(`Vollbackup erstellt: ${payload.characters.length} Charaktere, ${payload.comments.length} Kommentare, ${payload.commentTurns.length} Redestab-Stände.`);
+    setModuleEditorStatus(`Vollbackup erstellt: ${payload.characters.length} Charaktere, ${payload.creatures.length} Kreaturen, ${payload.comments.length} Kommentare, ${payload.commentTurns.length} Redestab-Stände.`);
     updateFirebaseSyncStatus(_firebaseSyncState === 'error' ? 'error' : 'synced', 'Backup exportiert.');
   } catch (error) {
     console.error('full backup export failed:', error);
@@ -208,6 +210,7 @@ function normalizeFullBackupPayload(parsed) {
   return {
     moduleStore: normalizeModuleStorePayload(parsed.moduleStore),
     characters: Array.isArray(parsed.characters) ? parsed.characters : [],
+    creatures: Array.isArray(parsed.creatures) ? parsed.creatures : [],
     charTabs: parsed.charTabs && typeof parsed.charTabs === 'object' ? parsed.charTabs : null,
     comments: Array.isArray(parsed.comments) ? parsed.comments : [],
     commentTurns: Array.isArray(parsed.commentTurns) ? parsed.commentTurns : []
@@ -218,7 +221,7 @@ async function applyFullAlmanachBackup(payload) {
   const backup = normalizeFullBackupPayload(payload);
   if (!confirmDiscardModuleEditorChanges('Backup importieren')) return;
   if (!confirmBackupBeforeDestructiveImport('Vollbackup importieren', 'Nicht enthaltene Daten bleiben bestehen, gleiche IDs werden ueberschrieben.')) return;
-  if (!confirm(`Backup importieren?\n\nModule: ${backup.moduleStore.customSections.length} Bereiche / ${Object.keys(backup.moduleStore.entryOverrides).length} Überschreibungen\nCharaktere: ${backup.characters.length}\nKommentare: ${backup.comments.length}\nRedestab-Stände: ${backup.commentTurns.length}\n\nDer Import überschreibt gleiche IDs und lässt nicht enthaltene Daten bestehen.`)) {
+  if (!confirm(`Backup importieren?\n\nModule: ${backup.moduleStore.customSections.length} Bereiche / ${Object.keys(backup.moduleStore.entryOverrides).length} Überschreibungen\nCharaktere: ${backup.characters.length}\nKreaturen: ${backup.creatures.length}\nKommentare: ${backup.comments.length}\nRedestab-Stände: ${backup.commentTurns.length}\n\nDer Import überschreibt gleiche IDs und lässt nicht enthaltene Daten bestehen.`)) {
     return;
   }
 
@@ -259,6 +262,17 @@ async function applyFullAlmanachBackup(payload) {
     _charactersLoaded = true;
   }
 
+  if (window._fb?.saveCreature) {
+    for (const creature of backup.creatures) {
+      const id = String(creature?.id || '').trim();
+      if (!id) continue;
+      const data = { ...creature };
+      delete data.id;
+      await window._fb.saveCreature(id, data);
+    }
+    await window.AleriaCreatures?.reload?.();
+  }
+
   if (window._fb?.saveBackupComment) {
     for (const comment of backup.comments) {
       const id = String(comment?.id || '').trim();
@@ -285,7 +299,7 @@ async function applyFullAlmanachBackup(payload) {
   renderCharPickerInForm();
   refreshAllModuleCastPickers();
   loadSidebarFeed();
-  setModuleEditorStatus(`Backup importiert: ${backup.characters.length} Charaktere, ${backup.comments.length} Kommentare, ${backup.commentTurns.length} Redestab-Stände.`);
+  setModuleEditorStatus(`Backup importiert: ${backup.characters.length} Charaktere, ${backup.creatures.length} Kreaturen, ${backup.comments.length} Kommentare, ${backup.commentTurns.length} Redestab-Stände.`);
   warnIfModuleStoreSizeIsHigh(backup.moduleStore);
   updateFirebaseSyncStatus('synced', 'Backup online importiert.');
   showAppStatus('Almanach-Backup wurde importiert und synchronisiert.', 'success');

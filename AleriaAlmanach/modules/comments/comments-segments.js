@@ -4,18 +4,19 @@
   if (!_commentSegments.length) _commentSegments = [makeCommentSegment('speech')];
   coerceCommentSegmentsForMode(false);
   renderCommentSegmentActions(false);
-  const charHasEmotes = !!(_selectedCharId && getAvailableCommentCharacterById(_selectedCharId)?.emotes?.length);
   list.innerHTML = _commentSegments.map((segment, idx) => {
-    const canUseEmote = segment.kind !== 'action' && _commentMode !== 'narrator' && charHasEmotes;
+    const canUseEmote = segment.kind !== 'action' && _commentMode !== 'narrator' && !!getCommentSegmentActor(segment, false)?.emotes?.length;
+    const canRemove = _commentSegments.length > 1;
     const textareaId = getCommentSegmentTextareaId(segment, false);
     return `
       <div class="comment-segment-card comment-segment-${segment.kind}" data-segment-id="${segment.id}">
-        <div class="comment-segment-head">
+        <div class="comment-segment-head${canRemove ? ' has-remove' : ''}">
           <div class="comment-segment-title">Abschnitt ${idx + 1}</div>
           ${getCommentSegmentDurationControl(segment, false)}
           <div class="comment-segment-types">${getSegmentTypeButtons(segment)}</div>
-          ${_commentSegments.length > 1 ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
+          ${canRemove ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
         </div>
+        ${getCommentSegmentActorControl(segment, false)}
         ${getSegmentSideControl(segment, false)}
         ${getCommentLanguageControls(segment, false)}
         ${canUseEmote ? getSegmentEmotePalette(segment, false) : ''}
@@ -25,6 +26,12 @@
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
       </div>`;
   }).join('') + renderCommentDurationTotal(false);
+  window.AleriaCombat?.mountComposer?.(list, {
+    segments: _commentSegments,
+    selectedCharacterId: _selectedCharId || '',
+    sceneActors: window.AleriaCommentSceneCast?.getActors?.(false) || [],
+    threadId: getCurrentCommentThreadId()
+  });
   syncCommentSegmentsToLegacyText();
 }
 
@@ -55,6 +62,11 @@ function setCommentSegmentKind(id, kind) {
   } else {
     segment.side = normalizeCommentSegmentSide(segment.side);
   }
+  if (segment.kind !== 'combataction') {
+    segment.combatTargetId = '';
+    segment.combatActionId = '';
+    segment.combatRollMode = 'normal';
+  }
   renderCommentSegmentList();
   updateCommentFormPreview();
   persistCommentDraft();
@@ -65,6 +77,19 @@ function setCommentSegmentText(id, value) {
   if (!segment) return;
   segment.text = String(value || '');
   syncCommentSegmentsToLegacyText();
+  updateCommentFormPreview();
+  persistCommentDraft();
+}
+
+function setCommentSegmentActor(id, actorId) {
+  const segment = _commentSegments.find(item => item.id === id);
+  const actor = window.AleriaCommentSceneCast?.getActor?.(actorId, false);
+  if (!segment || !actor) return;
+  segment.actorId = actor.id;
+  segment.emoteIndex = null;
+  segment.combatActionId = '';
+  if (segment.combatTargetId === actor.id) segment.combatTargetId = '';
+  renderCommentSegmentList();
   updateCommentFormPreview();
   persistCommentDraft();
 }
@@ -154,6 +179,23 @@ function getBaseCommentActorState() {
   return { narrator: false, name: 'Noch keine Figur gewählt', title: 'Wähle eine Figur oder trage sie manuell ein', portrait: null, characterId: '', avatarKind: 'none' };
 }
 
+function getCommentSegmentActorState(segment, fallback) {
+  const char = getCommentSegmentActor(segment, false);
+  if (!char) return fallback;
+  const sceneActor = window.AleriaCommentSceneCast?.getActor?.(segment.actorId, false);
+  return {
+    narrator: false,
+    name: char.name || 'Unbekannt',
+    title: char.title || '',
+    portrait: char.portrait || null,
+    characterId: char.id || '',
+    avatarKind: 'portrait',
+    char,
+    sceneActorId: sceneActor?.id || '',
+    sceneActorSourceId: sceneActor?.sourceCreatureId || ''
+  };
+}
+
 function buildCommentSegmentsForSave() {
   const base = getBaseCommentActorState();
   return _commentSegments
@@ -162,6 +204,7 @@ function buildCommentSegmentsForSave() {
     .map(segment => {
       if (_commentMode === 'narrator' || segment.kind === 'action') {
         return {
+          clientSegmentId: segment.id,
           kind: segment.kind === 'action' ? 'action' : 'narrator',
           commentKind: segment.kind === 'action' ? 'action' : 'narrator',
           text: segment.text,
@@ -176,19 +219,32 @@ function buildCommentSegmentsForSave() {
           ,durationSeconds: getSceneTimeSegmentDuration(segment)
         };
       }
-      const emote = base.char?.emotes?.[segment.emoteIndex] || null;
+      const actor = getCommentSegmentActorState(segment, base);
+      const emote = actor.char?.emotes?.[segment.emoteIndex] || null;
       return {
+        clientSegmentId: segment.id,
         kind: segment.kind,
         commentKind: segment.kind,
         text: segment.text,
         narrator: false,
-        charName: base.name,
-        charTitle: base.title,
-        portrait: emote?.img || base.portrait || null,
-        characterId: base.characterId || '',
+        charName: actor.name,
+        charTitle: actor.title,
+        portrait: emote?.img || actor.portrait || null,
+        characterId: actor.characterId || '',
+        ...(actor.sceneActorId ? {
+          actorType: 'creature',
+          creatureId: actor.sceneActorSourceId,
+          sceneActorId: actor.sceneActorId,
+          sceneActorSourceId: actor.sceneActorSourceId
+        } : {}),
         emoteIndex: emote ? segment.emoteIndex : null,
-        avatarKind: emote ? 'emote' : base.avatarKind,
+        avatarKind: emote ? 'emote' : actor.avatarKind,
         side: normalizeCommentSegmentSide(segment.side),
+        ...(segment.kind === 'combataction' ? {
+          combatTargetId: String(segment.combatTargetId || ''),
+          combatActionId: String(segment.combatActionId || ''),
+          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal'
+        } : {}),
         ...(commentKindUsesLanguage(segment.kind) ? {
           language: getCommentLanguage(segment),
           languageColor: getCommentLanguageColor(segment, segment.kind)

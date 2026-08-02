@@ -88,8 +88,24 @@ function formatSceneTimeRomanNumeral(value) {
   return result || 'I';
 }
 
+// Ermittelt das Aleria-Kalenderdatum eines Szenentages ueber das Aleria-Startdatum
+// der Sitzung (page.sessionDateAleria) + Segment-Index (1 = Starttag, 2 = Starttag+1, ...).
+// Ist kein Startdatum fuer diese Szene hinterlegt, gibt es kein Datum zurueck.
+function getSceneTimeSegmentAleriaDate(segmentIndex = 1) {
+  const page = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread()?.page : null;
+  const startDate = page ? sanitizeAleriaDate(page.sessionDateAleria) : null;
+  if (!startDate || !hasAleriaDate(startDate)) return null;
+  const index = Math.max(1, Math.floor(Number(segmentIndex) || 1));
+  return index > 1 ? addAleriaDays(startDate, index - 1) : startDate;
+}
+
+// Voreingestellte Tagesbeschriftung: bevorzugt den echten Aleria-Wochentagsnamen
+// (Lyristag, Ordanstag, ...) des jeweiligen Szenentages; nur wenn der Szene kein
+// Aleria-Startdatum hinterlegt ist, faellt es auf die roemische Zaehlung zurueck.
 function getSceneTimeDefaultSegmentLabel(segmentIndex = 1) {
-  return `Tag ${formatSceneTimeRomanNumeral(segmentIndex)}`;
+  const date = getSceneTimeSegmentAleriaDate(segmentIndex);
+  const weekday = date ? getAleriaWeekdayName(date.day) : '';
+  return weekday || `Tag ${formatSceneTimeRomanNumeral(segmentIndex)}`;
 }
 
 function getSceneTimeEventSegmentLabel(eventInput = {}, segmentIndex = 1) {
@@ -196,6 +212,18 @@ function buildSceneTimeline(comments = []) {
     if (Number.isFinite(cursor)) cursor += durationSeconds;
     return { comment, startSeconds, endSeconds: cursor, durationSeconds, anchor: false };
   });
+}
+
+// Liest den Zeitcursor direkt NACH einem bestehenden Beitrag - damit ein
+// rueckwirkend eingefuegter Tag-Marker (scene-time-events.js) die bisherige
+// Zeitrechnung nicht verschiebt, sondern genau dort weitermacht, wo sie war.
+function getSceneTimelineCursorAfterComment(comments, commentId) {
+  const sorted = typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(comments) : comments;
+  const index = sorted.findIndex(comment => String(comment?.id || '') === String(commentId));
+  if (index < 0) return 0;
+  const timeline = buildSceneTimeline(sorted.slice(0, index + 1));
+  const lastEntry = timeline[timeline.length - 1];
+  return Number.isFinite(lastEntry?.endSeconds) ? lastEntry.endSeconds : 0;
 }
 
 function isSceneTimeSegmentBreakEvent(input = {}) {

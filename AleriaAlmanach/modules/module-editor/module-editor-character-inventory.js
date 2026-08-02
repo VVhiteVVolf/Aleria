@@ -184,6 +184,24 @@ function sanitizeCharacterInventoryEquipmentQuiz(data = {}) {
   };
 }
 
+function sanitizeCharacterInventoryCombatDefinition(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  const damageFormula = String(source.damageFormula || '').trim().slice(0, 40);
+  if (!damageFormula) return null;
+  return {
+    damageFormula,
+    attackAttribute: String(source.attackAttribute || '').trim().slice(0, 80),
+    damageAttribute: String(source.damageAttribute || '').trim().slice(0, 80),
+    attackBonus: Number.isFinite(Number(source.attackBonus)) ? Number(source.attackBonus) : 0,
+    damageBonus: Number.isFinite(Number(source.damageBonus)) ? Number(source.damageBonus) : 0,
+    damageType: String(source.damageType || 'physical').trim().slice(0, 80),
+    rangeType: source.rangeType === 'ranged' ? 'ranged' : 'melee',
+    properties: Array.isArray(source.properties)
+      ? source.properties.map(item => String(item || '').trim()).filter(Boolean).slice(0, 20)
+      : []
+  };
+}
+
 function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
@@ -219,6 +237,8 @@ function sanitizeCharacterInventoryItems(items = []) {
       weight: String(item?.weight || '').trim(),
       quantity: String(item?.quantity || '1').trim(),
       tags: String(item?.tags || '').trim(),
+      equipped: item?.equipped === true,
+      combatDefinition: sanitizeCharacterInventoryCombatDefinition(item?.combatDefinition || item?.combat),
       infoRows: sanitizeCharacterInventoryRows(item?.infoRows, [
         { label: 'Qualitaet', value: 'Noch festlegen' },
         { label: 'Zustand', value: 'Noch festlegen' }

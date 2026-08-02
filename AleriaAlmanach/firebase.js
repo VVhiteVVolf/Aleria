@@ -519,6 +519,8 @@
           deleteCodeHash, deleteCodeVersion: 1,
           narrator: narrator || false,
           characterId: commentMetadata.characterId || '',
+          actorType: commentMetadata.actorType || '',
+          creatureId: commentMetadata.creatureId || '',
           emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
           avatarKind: commentMetadata.avatarKind || '',
           commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
@@ -532,6 +534,8 @@
           sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
           scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
           sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
+          combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
+          combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
           orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
           createdAtClient: nowClient,
           activityAtClient: nowClient,
@@ -636,6 +640,17 @@
         } catch(e) {
           console.error('loadCharacters error:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Charaktere konnten nicht geladen werden.'));
+          return [];
+        }
+      },
+      async loadCreatures() {
+        try {
+          const q = query(collection(db, 'creatures'), orderBy('name', 'asc'));
+          const snap = await getDocs(q);
+          return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        } catch(e) {
+          console.error('loadCreatures error:', e);
+          notifyAppStatus(getFirebaseErrorMessage(e, 'Kreaturen konnten nicht geladen werden.'));
           return [];
         }
       },
@@ -753,6 +768,17 @@
         const safeId = String(id || '').trim();
         if (!safeId) throw new Error('Kommentar ohne ID kann nicht importiert werden.');
         await setDoc(doc(db, 'comments', safeId), normalizeCommentModuleInsertForFirestore(data), { merge: true });
+      },
+      async saveCreature(id, data) {
+        if (id) {
+          await setDoc(doc(db, 'creatures', id), data, { merge: true });
+          return id;
+        }
+        const ref = await addDoc(collection(db, 'creatures'), data);
+        return ref.id;
+      },
+      async deleteCreature(id) {
+        return deleteDoc(doc(db, 'creatures', id));
       },
       async transferCharacterInventories(giverId, giverInventory, receiverId, receiverInventory, threadId, sceneEvent, deleteCode) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);

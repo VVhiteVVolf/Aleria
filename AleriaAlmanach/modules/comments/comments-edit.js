@@ -11,6 +11,7 @@ function openEditComment(commentId) {
   _editManualMode = false;
   _editPortraitUrl = null;
   _editCommentSegments = [makeCommentSegment('speech')];
+  window.AleriaCommentSceneCast?.setEditActorsFromSegments?.([]);
   // Reset to code step
   document.getElementById('ec-code').value = '';
   document.getElementById('ec-code-error').style.display = 'none';
@@ -63,6 +64,7 @@ async function verifyEditCode() {
     // Populate edit form
     setRichEditorContent('ec-text', data.text || '');
     if (Array.isArray(data.commentSegments) && data.commentSegments.length) {
+      window.AleriaCommentSceneCast?.setEditActorsFromSegments?.(data.commentSegments);
       _editCommentSegments = data.commentSegments.map(segment => makeCommentSegment(
         segment.commentKind || segment.kind || (segment.narrator ? 'action' : 'speech'),
         segment.text || '',
@@ -70,18 +72,31 @@ async function verifyEditCode() {
         segment.side || 'left',
         segment.durationSeconds,
         segment.language || segment.spellFont,
-        segment.languageColor
+        segment.languageColor,
+        {
+          targetId: segment.combatTargetId || segment.combatAction?.targetId,
+          actionId: segment.combatActionId || segment.combatAction?.profileActionId,
+          rollMode: segment.combatRollMode || segment.combatAction?.rollMode,
+          actorId: segment.sceneActorId || segment.actorId || ''
+        }
       ));
     } else {
       _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null)];
     }
-    // Set mode
-    setEditMode(data.narrator ? 'narrator' : 'charakter');
+    // Set mode. Creature metadata is persisted independently from the display name,
+    // so duplicated or renamed instances still reopen in the correct picker.
+    const creatureComment = !data.narrator && (
+      data.actorType === 'creature' || !!data.creatureId || data.commentMode === 'creature'
+    );
+    const actorMode = data.narrator ? 'narrator' : (creatureComment ? 'creature' : 'charakter');
+    setEditMode(actorMode);
     // Pre-select char if it exists
     _editSelectedCharId = null;
     if (!data.narrator) {
-      const match = getAvailableCommentCharacterByName(data.charName);
-      if (match) {
+      const preferredId = creatureComment ? (data.creatureId || data.characterId) : data.characterId;
+      const directMatch = preferredId ? getAvailableCommentCharacterById(preferredId) : null;
+      const match = directMatch || getAvailableCommentCharacterByName(data.charName);
+      if (match && commentActorMatchesComposerMode(match, actorMode)) {
         _editSelectedCharId = match.id;
         if (data.portrait && Array.isArray(match.emotes)) {
           const emoteIdx = match.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));

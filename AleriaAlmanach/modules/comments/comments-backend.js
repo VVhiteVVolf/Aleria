@@ -107,6 +107,8 @@ function getLocalCommentBackend() {
         deleteCode: String(deleteCode || '').trim().toUpperCase(),
         narrator: !!narrator,
         characterId: commentMetadata.characterId || '',
+        actorType: commentMetadata.actorType || '',
+        creatureId: commentMetadata.creatureId || '',
         emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
         avatarKind: commentMetadata.avatarKind || '',
         commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
@@ -122,6 +124,8 @@ function getLocalCommentBackend() {
         sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
         scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
+        combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
+        combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
         orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
@@ -162,7 +166,7 @@ function getLocalCommentBackend() {
       const key = String(threadId || '');
       const value = ['erdi', 'patrick', 'ended'].includes(String(current || '')) ? String(current) : '';
       const turns = readLocalCommentTurnStore();
-      turns[key] = { threadId: key, current: value, updatedAt: makeLocalTimestamp(), localOnly: true };
+      turns[key] = { ...(turns[key] || {}), threadId: key, current: value, updatedAt: makeLocalTimestamp(), localOnly: true };
       writeLocalCommentTurnStore(turns);
     },
     async verifyCommentCode(docId, code) {

@@ -18,19 +18,27 @@ async function submitComment() {
     commentMetadata = { commentMode: 'narrator', avatarKind: 'narrator', characterId: '', emoteIndex: null };
   } else if (_selectedCharId) {
     const c = getAvailableCommentCharacterById(_selectedCharId);
-    if (!c) { errEl.textContent = 'Charakter nicht gefunden.'; errEl.style.display='block'; return; }
+    if (!c) { errEl.textContent = _commentMode === 'creature' ? 'Kreatur nicht gefunden.' : 'Charakter nicht gefunden.'; errEl.style.display='block'; return; }
+    if (!commentActorMatchesComposerMode(c, _commentMode)) {
+      errEl.textContent = _commentMode === 'creature' ? 'Bitte eine Kreatur aus dem Kreaturenregister auswählen.' : 'Bitte einen Charakter auswählen.';
+      errEl.style.display='block'; return;
+    }
     if (!isCommentCharacterAllowedForActivePlayer(c)) {
       errEl.textContent = `${c.name} ist ${getCommentPlayerOwnerLabel(c.playerOwner || c.playedBy || c.player)} zugewiesen.`;
       errEl.style.display='block';
       return;
     }
     name = c.name; title = c.title || '';
+    const actorMetadata = c.entityType === 'creature'
+      ? { actorType: 'creature', creatureId: _selectedCharId }
+      : { actorType: 'character', creatureId: '' };
+    const actorCommentMode = c.entityType === 'creature' ? 'creature' : 'character';
     if (_selectedEmoteIdx !== null && c.emotes && c.emotes[_selectedEmoteIdx]) {
       portrait = c.emotes[_selectedEmoteIdx].img;
-      commentMetadata = { commentMode: 'character', avatarKind: 'emote', characterId: _selectedCharId, emoteIndex: _selectedEmoteIdx };
+      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'emote', characterId: _selectedCharId, emoteIndex: _selectedEmoteIdx, ...actorMetadata };
     } else {
       portrait = c.portrait || null;
-      commentMetadata = { commentMode: 'character', avatarKind: 'portrait', characterId: _selectedCharId, emoteIndex: null };
+      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'portrait', characterId: _selectedCharId, emoteIndex: null, ...actorMetadata };
     }
   } else if (_manualMode) {
     name    = document.getElementById('cf-name').value.trim();
@@ -39,11 +47,13 @@ async function submitComment() {
     commentMetadata = { commentMode: 'manual', avatarKind: portrait ? 'manual' : 'none', characterId: '', emoteIndex: null };
     if (!name) { errEl.textContent = 'Bitte einen Charakternamen eingeben.'; errEl.style.display='block'; return; }
   } else {
-    errEl.textContent = 'Bitte einen Charakter auswählen oder manuell eingeben.';
+    errEl.textContent = _commentMode === 'creature'
+      ? 'Bitte eine Kreatur aus dem Kreaturenregister auswählen.'
+      : 'Bitte einen Charakter auswählen oder manuell eingeben.';
     errEl.style.display='block'; return;
   }
   commentMetadata.commentKind = normalizeCommentKind(_commentKind, isNarrator);
-  commentMetadata.commentSegments = commentSegments;
+  commentMetadata.commentSegments = commentSegments.map(({ clientSegmentId, ...segment }) => segment);
   commentMetadata.orderKey = getNextCommentOrderKey(threadId, _commentInsertAfterId);
 
   if (!text) { errEl.textContent = 'Bitte einen Text schreiben.'; errEl.style.display='block'; return; }
@@ -59,6 +69,36 @@ async function submitComment() {
   let backend = null;
 
   try {
+    if (window.AleriaCombat?.handleSubmission) {
+      const combatResult = await window.AleriaCombat.handleSubmission({
+        threadId,
+        text,
+        charName: name,
+        charTitle: title,
+        portrait,
+        characterId: commentMetadata.characterId || '',
+        commentSegments,
+        commentMetadata,
+        deleteCode
+      });
+      if (combatResult?.handled) {
+        if (combatResult.commentMetadata && typeof combatResult.commentMetadata === 'object') {
+          commentMetadata = { ...commentMetadata, ...combatResult.commentMetadata };
+        }
+        if (combatResult.published) {
+          clearCommentDraft(threadId);
+          closeCommentForm();
+          requestCommentAutoScroll(threadId);
+          await loadCommentsIntoPage(threadId, true, { page: 'last' });
+          if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
+          if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
+          btn.disabled = false;
+          btn.textContent = 'Eintragen';
+          _commentSubmitInFlight = false;
+          return;
+        }
+      }
+    }
     backend = await getCommentBackend({ timeoutMs: 1200 });
     await backend.addComment(
       threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata

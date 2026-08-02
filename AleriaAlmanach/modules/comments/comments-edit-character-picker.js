@@ -64,6 +64,15 @@ function renderEditEmotePicker() {
 }
 
 function selectEditChar(id) {
+  const char = getAvailableCommentCharacterById(id);
+  if (!char || !commentActorMatchesComposerMode(char, _editMode)) {
+    const errEl = document.getElementById('ec-form-error');
+    if (errEl) {
+      errEl.textContent = _editMode === 'creature' ? 'Diese Kreatur ist nicht mehr verfügbar.' : 'Dieser Charakter ist nicht mehr verfügbar.';
+      errEl.style.display = 'block';
+    }
+    return;
+  }
   _editSelectedCharId = id;
   _editSelectedEmoteIdx = null;
   _editManualMode = false;
@@ -74,7 +83,6 @@ function selectEditChar(id) {
   document.getElementById('ec-manual-fields').style.display = 'none';
   document.getElementById('ec-manual-toggle').textContent = '+ Manuell';
   document.getElementById('ec-portrait-preview').style.display = 'none';
-  const char = getAvailableCommentCharacterById(id);
   document.getElementById('ec-selected-name').textContent = char ? `Als ${char.name} bearbeiten` : '';
   renderEditEmotePicker();
   renderEditCommentSegmentList();
@@ -97,7 +105,9 @@ function renderEditCharPicker() {
   const picker = document.getElementById('ec-char-picker');
   if (!picker) return;
   picker.innerHTML = '';
-  getAvailableCommentCharacters().forEach(c => {
+  getAvailableCommentCharacters().filter(c => _editMode === 'creature'
+    ? c.entityType === 'creature'
+    : c.entityType !== 'creature').forEach(c => {
     const safeName = escapeHtml(c.name);
     const portraitSrc = sanitizeImageSrc(c.portrait);
     const opt = document.createElement('div');
@@ -116,6 +126,7 @@ function renderEditCharPicker() {
 }
 
 function toggleEditManualMode() {
+  if (_editMode === 'creature') return;
   _editManualMode = !_editManualMode;
   _editSelectedCharId = null;
   _editSelectedEmoteIdx = null;

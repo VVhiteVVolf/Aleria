@@ -53,6 +53,16 @@ const SECTION_THEME_META = {
     slug: 'charaktere',
     label: 'Personenregister',
     note: 'Gesichter, Rollen und wiederkehrende Stimmen des Almanachs.'
+  },
+  Kreaturen: {
+    slug: 'kreaturen',
+    label: 'Kreaturenregister',
+    note: 'Monster, NSCs und wiederverwendbare Gegner-Vorlagen des Almanachs.'
+  },
+  Test: {
+    slug: 'test',
+    label: 'Prüfkammer',
+    note: 'Reproduzierbare Szenen für Kampf, Würfel, Kommentare und AleriaGPT-Kontext.'
   }
 };
 let _activeTab = 'Alle';
@@ -121,6 +131,7 @@ function getThemeMetaForSection(section) {
 function getThemeMetaForTab(tab) {
   if (tab === 'Alle') return SECTION_THEME_META.Archive;
   if (tab === 'Charaktere') return SECTION_THEME_META.Charaktere;
+  if (tab === 'Kreaturen') return SECTION_THEME_META.Kreaturen;
   const section = getValidSections().find(item => (item.tab || item.key) === tab);
   return getThemeMetaForSection(section);
 }
@@ -135,7 +146,7 @@ function updateSidebarCurrentNote(tab = _activeTab) {
   const note = document.getElementById('sidebar-current-note');
   if (!note) return;
   const meta = getThemeMetaForTab(tab);
-  const section = tab === 'Alle' || tab === 'Charaktere'
+  const section = tab === 'Alle' || tab === 'Charaktere' || tab === 'Kreaturen'
     ? null
     : getValidSections().find(item => (item.tab || item.key) === tab);
   const label = tab === 'Alle' ? 'Alle Bereiche' : tab;
@@ -237,14 +248,14 @@ function handleArchiveActionClick(event) {
   }
   if (action === 'toggle-hierarchy-node') {
     event.preventDefault();
-    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
     toggleArchiveHierarchyNode(_activeTab, decodeArchivePathData(trigger.dataset.sectionPath || ''));
     renderAll();
     return;
   }
   if (action === 'select-hierarchy-node') {
     event.preventDefault();
-    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
     const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
     setActiveArchivePath(_activeTab, path);
     expandArchiveHierarchyPath(_activeTab, path);
@@ -253,7 +264,7 @@ function handleArchiveActionClick(event) {
   }
   if (action === 'show-hierarchy-content') {
     event.preventDefault();
-    if (_activeTab === 'Alle' || _activeTab === 'Charaktere') return;
+    if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
     const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
     const pathChanged = !archivePathsEqual(getActiveArchivePath(_activeTab), path);
     if (pathChanged) {
@@ -498,7 +509,7 @@ function clearTransientSearchInputsAfterBrowserRestore() {
 }
 
 function shouldRenderArchiveDrilldown(tab = _activeTab) {
-  return tab !== 'Alle' && tab !== 'Charaktere' && !_archiveSearchNeedle;
+  return tab !== 'Alle' && tab !== 'Charaktere' && tab !== 'Kreaturen' && !_archiveSearchNeedle;
 }
 
 function getArchiveTabSections(sections = [], tab = _activeTab) {
@@ -574,7 +585,7 @@ function renderAll() {
   // Collect unique tabs in order
   // Build tab order: 'Alle' first, then unique section tabs (skip 'Alle' if a section uses it), then 'Charaktere'
   const sectionTabs = [...new Set(sections.map(s => s.tab || s.key).filter(t => t !== 'Alle'))];
-  const tabOrder = ['Alle', ...sectionTabs, 'Charaktere'];
+  const tabOrder = ['Alle', ...sectionTabs, 'Charaktere', 'Kreaturen'];
   const tabGroup = document.createElement('div');
   tabGroup.className = 'gallery-tab-group gallery-tab-group-main';
   tabsNav.appendChild(tabGroup);
@@ -817,9 +828,22 @@ function renderAll() {
     <div class="char-subtabs-bar" id="char-subtabs-bar"></div>
     <div class="char-grid" id="char-grid"></div>`;
   main.appendChild(charBlock);
+
+  const creatureBlock = document.createElement('div');
+  creatureBlock.className = 'section-block visible';
+  creatureBlock.dataset.tab = 'Kreaturen';
+  creatureBlock.dataset.sectionTheme = 'kreaturen';
+  creatureBlock.dataset.hasMatches = 'true';
+  creatureBlock.innerHTML = `
+    <div class="section-header"><span class="section-title"><span>Kreaturen</span></span></div>
+    <div class="section-kicker">Monster, NSCs und mehrfach einsetzbare Gegner-Vorlagen.</div>
+    <div id="creature-library-root"></div>`;
+  main.appendChild(creatureBlock);
   _archiveEntryMatchCount = entryMatchCount;
   _archiveEntrySectionMatchCount = sectionMatchCount;
-  _archiveSectionMatchCount = sectionMatchCount + (charBlock.dataset.hasMatches !== 'false' ? 1 : 0);
+  _archiveSectionMatchCount = sectionMatchCount
+    + (charBlock.dataset.hasMatches !== 'false' ? 1 : 0)
+    + (creatureBlock.dataset.hasMatches !== 'false' ? 1 : 0);
   switchTab(_activeTab);
   updateArchiveSearchUI();
 
@@ -833,6 +857,7 @@ function renderAll() {
     }
   }
   loadCharacters();
+  window.AleriaCreatures?.mount?.();
 }
 
 function initPage() {

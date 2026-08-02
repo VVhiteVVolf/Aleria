@@ -3,11 +3,8 @@ let _charPortraitUrl = null;
 const MAX_EMOTES = CHARACTER_AVATAR_LIMIT;
 let _emoteSlots = [];
 
-function openCharProfile(id) {
-  _editingChar = id;
+function populateCharacterProfileForm(c = {}) {
   _charPortraitUrl = null;
-  const c = id ? (getCharacterById(id) || {}) : {};
-  const isBuiltin = isBuiltinCharacterId(id);
 
   document.getElementById('cp-name').value     = c.name     || '';
   document.getElementById('cp-title').value    = c.title    || '';
@@ -37,10 +34,17 @@ function openCharProfile(id) {
   const avatarLinksInput = document.getElementById('cp-avatar-links');
   if (avatarLinksInput) avatarLinksInput.value = '';
   if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
+  window.AleriaCharacterCombatProfile?.init?.(c);
 
+}
+
+function openCharProfile(id) {
+  _editingChar = id;
+  const c = id ? (getCharacterById(id) || {}) : {};
+  const isBuiltin = isBuiltinCharacterId(id);
+  populateCharacterProfileForm(c);
   document.getElementById('cp-delete-btn').style.display = id ? 'inline-block' : 'none';
   document.getElementById('cp-delete-btn').textContent = isBuiltin ? 'Ausblenden' : 'Löschen';
-
   switchCharTab('info');
   activateDialog('char-profile-overlay', { initialFocus: '#cp-name' });
 }
@@ -147,6 +151,13 @@ function syncCharacterGenealogyFields(character = {}) {
 }
 
 function switchCharTab(tab) {
+  if (tab === 'combat' && window.AleriaCharacterCombatProfile?.refreshInventory) {
+    const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
+    const inventory = typeof collectCharacterInventoryProfileData === 'function'
+      ? collectCharacterInventoryProfileData()
+      : existing.inventory;
+    window.AleriaCharacterCombatProfile.refreshInventory({ ...existing, inventory });
+  }
   document.querySelectorAll('.char-profile-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.charProfileTab === tab);
   });
@@ -286,6 +297,10 @@ function collectCharacterProfileDataFromForm() {
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
       : sanitizeCharacterInventoryData(existing.inventory || {}),
+    combatProfile: window.AleriaCharacterCombatProfile?.collect?.()
+      || window.AleriaCharacterCombatProfile?.sanitize?.(existing.combatProfile || {})
+      || existing.combatProfile
+      || {},
     identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
       ? existing.identity
       : { worldPersonId: genealogy.worldPersonId }),
@@ -312,6 +327,39 @@ function exportCurrentCharacterProfile() {
     assignedTab: getCharacterAssignedTab(data.id)
   };
   downloadJsonFile(payload, `${slugify(data.name || data.id || 'charakter')}.json`);
+}
+
+function openCurrentCharacterImportFilePicker() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.addEventListener('change', async () => {
+    const file = input.files?.[0];
+    if (!file) return;
+    const status = document.getElementById('cp-save-status');
+    try {
+      const parsed = JSON.parse(await file.text());
+      const normalized = normalizeCharacterImportPayload(parsed);
+      const records = normalized.characters.filter(character => character && typeof character === 'object');
+      if (records.length !== 1) throw new Error('Bitte wähle für den geöffneten Bogen genau einen Charakter aus.');
+      const imported = {
+        ...records[0],
+        aliases: Array.isArray(records[0].aliases) ? records[0].aliases : parseAliasInput(records[0].aliases || ''),
+        emotes: Array.isArray(records[0].emotes) ? records[0].emotes : []
+      };
+      populateCharacterProfileForm(imported);
+      if (status) {
+        status.style.color = 'var(--gold)';
+        status.textContent = 'Importiert – mit „Speichern“ dauerhaft übernehmen.';
+      }
+    } catch (error) {
+      if (status) {
+        status.style.color = 'var(--red-wax)';
+        status.textContent = error.message || 'Charakterdatei konnte nicht importiert werden.';
+      }
+    }
+  }, { once: true });
+  input.click();
 }
 
 async function saveCharacter() {
@@ -370,6 +418,10 @@ async function saveCharacter() {
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
       : sanitizeCharacterInventoryData(existing.inventory || {}),
+    combatProfile: window.AleriaCharacterCombatProfile?.collect?.()
+      || window.AleriaCharacterCombatProfile?.sanitize?.(existing.combatProfile || {})
+      || existing.combatProfile
+      || {},
     identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
       ? existing.identity
       : { worldPersonId: genealogy.worldPersonId }),

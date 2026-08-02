@@ -10,7 +10,7 @@ function commentSegmentUsesSide(kind, edit = false) {
   return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
 }
 
-function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, language = COMMENT_LANGUAGE_DEFAULT, languageColor = '') {
+function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, language = COMMENT_LANGUAGE_DEFAULT, languageColor = '', combatSettings = {}) {
   const normalizedKind = normalizeCommentKind(kind);
   _commentSegmentSeq += 1;
   return {
@@ -23,7 +23,13 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     language: normalizeCommentLanguage(language),
     languageColor: commentKindUsesLanguage(normalizedKind)
       ? normalizeCommentLanguageColor(languageColor, normalizedKind)
-      : ''
+      : '',
+    combatTargetId: normalizedKind === 'combataction' ? String(combatSettings?.targetId || combatSettings?.combatTargetId || '') : '',
+    combatActionId: normalizedKind === 'combataction' ? String(combatSettings?.actionId || combatSettings?.combatActionId || '') : '',
+    combatRollMode: normalizedKind === 'combataction' && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
+      ? String(combatSettings.rollMode || combatSettings.combatRollMode)
+      : 'normal',
+    actorId: String(combatSettings?.actorId || combatSettings?.sceneActorId || '')
   };
 }
 
@@ -42,7 +48,7 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? ['action']
-    : ['speech', 'thought', 'whisper', 'shout', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'madness', 'prayer', 'flirt', 'combataction', 'secretaction', 'action'];
+    : ['speech', 'action', 'thought', 'whisper', 'shout', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction'];
 }
 
 function coerceCommentSegmentsForMode(edit = false) {
@@ -62,33 +68,19 @@ function coerceCommentSegmentsForMode(edit = false) {
   });
 }
 
-const PRIMARY_COMMENT_SEGMENT_KINDS = ['speech', 'action', 'thought', 'whisper', 'shout'];
-
-function splitCommentSegmentKinds(edit = false) {
-  const allowed = getAllowedCommentSegmentKinds(edit);
-  return {
-    primary: allowed.filter(kind => PRIMARY_COMMENT_SEGMENT_KINDS.includes(kind)),
-    additional: allowed.filter(kind => !PRIMARY_COMMENT_SEGMENT_KINDS.includes(kind))
-  };
-}
+const COMMENT_SEGMENT_COMPACT_LABELS = Object.freeze({
+  whisper: 'Flüstern',
+  combataction: 'Kampf\u00ADbeschreibung'
+});
 
 function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false } = {}) {
   const segmentAttr = segmentId ? ` data-segment-id="${segmentId}"` : '';
+  const label = COMMENT_SEGMENT_COMPACT_LABELS[kind] || getCommentKindLabel(kind);
   return `
     <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
       ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
-      <span>${add ? '+ ' : ''}${escapeHtml(getCommentKindLabel(kind))}</span>
+      <span>${add ? '+ ' : ''}${escapeHtml(label)}</span>
     </button>`;
-}
-
-function buildCommentSegmentMoreMenu(kinds, buttons, activeKind = '') {
-  if (!kinds.length) return '';
-  const activeLabel = kinds.includes(activeKind) ? getCommentKindLabel(activeKind) : '';
-  return `
-    <details class="comment-segment-more${activeLabel ? ' has-active' : ''}">
-      <summary>${activeLabel ? escapeHtml(activeLabel) : 'Weitere'} <span aria-hidden="true">⌄</span></summary>
-      <div class="comment-segment-more-menu">${buttons.join('')}</div>
-    </details>`;
 }
 
 function renderCommentSegmentActions(edit = false) {
@@ -98,27 +90,42 @@ function renderCommentSegmentActions(edit = false) {
   const actions = document.querySelector(selector);
   if (!actions) return;
   const action = edit ? 'add-edit-comment-segment' : 'add-comment-segment';
-  const kinds = splitCommentSegmentKinds(edit);
-  const primary = kinds.primary.map(kind => buildCommentSegmentKindButton(kind, { action, add: true }));
-  const additional = kinds.additional.map(kind => buildCommentSegmentKindButton(kind, { action, add: true }));
-  actions.innerHTML = primary.join('') + buildCommentSegmentMoreMenu(kinds.additional, additional);
+  actions.innerHTML = getAllowedCommentSegmentKinds(edit)
+    .map(kind => buildCommentSegmentKindButton(kind, { action, add: true }))
+    .join('');
 }
 
 function getSegmentTypeButtons(segment, edit = false) {
   const action = edit ? 'set-edit-comment-segment-kind' : 'set-comment-segment-kind';
   const segmentId = escapeHtml(segment.id);
-  const kinds = splitCommentSegmentKinds(edit);
-  const primary = kinds.primary.map(kind => buildCommentSegmentKindButton(kind, {
+  return getAllowedCommentSegmentKinds(edit).map(kind => buildCommentSegmentKindButton(kind, {
     action,
     segmentId,
     active: segment.kind === kind
-  }));
-  const additional = kinds.additional.map(kind => buildCommentSegmentKindButton(kind, {
-    action,
-    segmentId,
-    active: segment.kind === kind
-  }));
-  return primary.join('') + buildCommentSegmentMoreMenu(kinds.additional, additional, segment.kind);
+  })).join('');
+}
+
+function getCommentSegmentActor(segment, edit = false) {
+  const sceneActor = window.AleriaCommentSceneCast?.getActor?.(segment?.actorId, edit);
+  if (sceneActor) return sceneActor;
+  const selectedId = edit ? _editSelectedCharId : _selectedCharId;
+  return selectedId ? getAvailableCommentCharacterById(selectedId) : null;
+}
+
+function getCommentSegmentActorControl(segment, edit = false) {
+  const mode = edit ? _editMode : _commentMode;
+  if (mode !== 'creature' || segment.kind === 'action') return '';
+  const actors = window.AleriaCommentSceneCast?.getActors?.(edit) || [];
+  if (!actors.length) return '';
+  if (!actors.some(actor => actor.id === segment.actorId)) segment.actorId = actors[0].id;
+  const action = edit ? 'set-edit-comment-segment-actor' : 'set-comment-segment-actor';
+  return `
+    <label class="comment-segment-actor">
+      <span>Sprecher / Instanz</span>
+      <select data-action="${action}" data-segment-id="${escapeHtml(segment.id)}">
+        ${actors.map(actor => `<option value="${escapeHtml(actor.id)}"${actor.id === segment.actorId ? ' selected' : ''}>${escapeHtml(actor.name)} · ${escapeHtml(actor.id)}</option>`).join('')}
+      </select>
+    </label>`;
 }
 
 function renderSegmentAvatarThumb(src, fallbackName, label) {
@@ -130,9 +137,7 @@ function renderSegmentAvatarThumb(src, fallbackName, label) {
 }
 
 function getSegmentEmotePalette(segment, edit = false) {
-  const char = edit
-    ? (_editSelectedCharId ? getAvailableCommentCharacterById(_editSelectedCharId) : null)
-    : (_selectedCharId ? getAvailableCommentCharacterById(_selectedCharId) : null);
+  const char = getCommentSegmentActor(segment, edit);
   if (!char) return '';
 
   const emotes = Array.isArray(char.emotes) ? char.emotes : [];
@@ -177,7 +182,7 @@ function getCommentSegmentPlaceholder(kind) {
   if (normalized === 'madness') return 'Was bricht aus dem Wahn hervor?';
   if (normalized === 'prayer') return 'Welches Gebet wird gesprochen?';
   if (normalized === 'flirt') return 'Was wird charmant gesagt?';
-  if (normalized === 'combataction') return 'Welche Kampfhandlung geschieht?';
+  if (normalized === 'combataction') return 'Beschreibe den Angriff rollenspielerisch. Ob er gelingt, entscheidet danach die Kampfauswertung.';
   if (normalized === 'secretaction') return 'Welche geheime Handlung geschieht, verborgen vor allen Blicken?';
   return 'Was wird gesagt?';
 }

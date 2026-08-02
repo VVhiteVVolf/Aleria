@@ -8,7 +8,7 @@ function getAssetLocation() {
 }
 
 export class DiceBoxEngine {
-  constructor(container, settings = {}) {
+  constructor(container, settings = {}, callbacks = {}) {
     if (!container?.id) throw new Error('Der 3D-Würfelbereich wurde nicht gefunden.');
     const assetLocation = getAssetLocation();
     const reducedMotion = settings.reducedMotion === true;
@@ -26,7 +26,8 @@ export class DiceBoxEngine {
       boundaryInsetX: 0.77,
       boundaryInsetY: 0.79,
       boundaryThickness: 0.68,
-      offscreen: typeof OffscreenCanvas !== 'undefined'
+      offscreen: typeof OffscreenCanvas !== 'undefined',
+      onDieComplete: die => callbacks.onDieComplete?.(die)
     });
     this.isFallback = false;
   }
@@ -64,7 +65,7 @@ export class DiceBoxEngine {
   }
 }
 
-export async function createDiceBoxEngine(container, settings) {
-  const engine = new DiceBoxEngine(container, settings);
+export async function createDiceBoxEngine(container, settings, callbacks = {}) {
+  const engine = new DiceBoxEngine(container, settings, callbacks);
   return engine.init();
 }

@@ -1,10 +1,13 @@
+import { clampDiceSoundVolume, DEFAULT_DICE_SOUND_VOLUME } from './dice-audio.js';
+
 export const DICE_HISTORY_KEY = 'aleria.dice.history.v1';
 export const DICE_SETTINGS_KEY = 'aleria.dice.settings.v1';
 export const DICE_HISTORY_LIMIT = 30;
 
 const DEFAULT_SETTINGS = Object.freeze({
   animationEnabled: true,
-  soundEnabled: false,
+  soundEnabled: true,
+  soundVolume: DEFAULT_DICE_SOUND_VOLUME,
   reducedMotion: false,
   throwStyle: 'balanced',
   keepPool: true
@@ -79,9 +82,11 @@ export class DiceHistoryRepository {
 
   getSettings() {
     const stored = safeParse(this.storage?.getItem(DICE_SETTINGS_KEY), {});
+    const usesCurrentAudioSettings = Number(stored.schemaVersion) >= 3;
     return {
       animationEnabled: stored.animationEnabled !== false,
-      soundEnabled: stored.soundEnabled === true,
+      soundEnabled: usesCurrentAudioSettings ? stored.soundEnabled !== false : true,
+      soundVolume: clampDiceSoundVolume(stored.soundVolume),
       reducedMotion: stored.reducedMotion === true,
       throwStyle: ['gentle', 'balanced', 'dramatic'].includes(stored.throwStyle) ? stored.throwStyle : 'balanced',
       keepPool: stored.keepPool !== false
@@ -89,9 +94,17 @@ export class DiceHistoryRepository {
   }
 
   setSettings(patch = {}) {
-    const settings = { ...DEFAULT_SETTINGS, ...this.getSettings(), ...patch };
+    const candidate = { ...DEFAULT_SETTINGS, ...this.getSettings(), ...patch };
+    const settings = {
+      animationEnabled: candidate.animationEnabled !== false,
+      soundEnabled: candidate.soundEnabled !== false,
+      soundVolume: clampDiceSoundVolume(candidate.soundVolume),
+      reducedMotion: candidate.reducedMotion === true,
+      throwStyle: ['gentle', 'balanced', 'dramatic'].includes(candidate.throwStyle) ? candidate.throwStyle : 'balanced',
+      keepPool: candidate.keepPool !== false
+    };
     try {
-      this.storage?.setItem(DICE_SETTINGS_KEY, JSON.stringify({ schemaVersion: 2, ...settings }));
+      this.storage?.setItem(DICE_SETTINGS_KEY, JSON.stringify({ schemaVersion: 3, ...settings }));
     } catch (error) {
       console.warn('Würfeleinstellungen konnten nicht gespeichert werden.', error);
     }

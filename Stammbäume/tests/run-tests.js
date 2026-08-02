@@ -106,6 +106,15 @@ import {
   HOUSE_GWAEDLYD_PORTRAITS,
   HOUSE_GWAEDLYD_PORTRAIT_SOURCES
 } from '../assets/js/data/house-gwaedlyd-portraits.js';
+import {
+  HOUSE_LYFANT_CAER_ASGWRN_FAMILY,
+  HOUSE_LYFANT_DERWYDDION_FAMILY
+} from '../assets/js/data/house-lyfant-family.js';
+import {
+  HOUSE_LYFANT_LOCAL_PORTRAIT_FILES,
+  HOUSE_LYFANT_PORTRAITS,
+  HOUSE_LYFANT_PORTRAIT_SOURCES
+} from '../assets/js/data/house-lyfant-portraits.js';
 import { HOUSE_GAETH_FAMILY } from '../assets/js/data/house-gaeth-family.js';
 import { HOUSE_HEBOG_FAMILY } from '../assets/js/data/house-hebog-family.js';
 import { HOUSE_MWYALCHEN_FAMILY } from '../assets/js/data/house-mwyalchen-family.js';
@@ -15071,6 +15080,8 @@ test('registriert alte und neue Flüchtlingslinien der Grauen Weite getrennt und
         ['haus-illygoden-tredegar', HOUSE_ILLYGODEN_TREDEGAR_FAMILY],
         ['haus-gwaedlyd', HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY],
         ['haus-gwaedlyd-tredegar', HOUSE_GWAEDLYD_TREDEGAR_FAMILY],
+        ['haus-lyfant', HOUSE_LYFANT_DERWYDDION_FAMILY],
+        ['haus-lyfant-caer-asgwrn', HOUSE_LYFANT_CAER_ASGWRN_FAMILY],
         ['haus-brithyll', HOUSE_BRITHYLL_FAMILY],
         ['haus-coedwig', HOUSE_COEDWIG_FAMILY],
         ['haus-draenog', HOUSE_DRAENOG_FAMILY],
@@ -15700,6 +15711,208 @@ test('liefert Gwaedlyds 22 neue Quellporträts lokal und verwendet Gegenaktenbil
       counterpart.persons.find(person => person.id === personId).portrait,
       personId
     );
+  });
+});
+
+test('bildet Lyfant O Derwyddion vollstaendig bis zu zwei geradlinigen Uebergaengen ab', () => {
+  const { family, diagnostics } = assertValidFamily(HOUSE_LYFANT_DERWYDDION_FAMILY);
+  const converted = toFamilyChartData(family);
+  const chartById = new Map(converted.data.map(node => [node.id, node]));
+  const crestId = '__lineage-crest-haus-lyfant';
+  const gapId = '__lineage-gap-haus-lyfant';
+  const cledwynMigrationId = '__cadet-migration-cledwyn-lyfant-caer-asgwrn';
+  const cadwganMigrationId = '__cadet-migration-cadwgan-lyfant-caer-asgwrn';
+
+  assert.equal(diagnostics.filter(item => item.severity === 'error').length, 0);
+  assert.equal(family.persons.length, 35);
+  assert.equal(family.partnerships.length, 16);
+  assert.equal(family.parentages.length, 18);
+  assert.equal(family.cadetBranches.length, 10);
+  assert.equal(family.view.limitGenerations, false);
+  assert.equal(family.view.focusPersonId, 'conan-founder-lyfant');
+  assert.deepEqual(chartById.get(crestId).rels.parents.sort(), [
+    'conan-founder-lyfant',
+    'ffion-founder-lyfant'
+  ].sort());
+  assert.deepEqual(chartById.get(crestId).rels.children, [gapId]);
+  assert.deepEqual(chartById.get(gapId).rels.children.sort(), [
+    'catryn-llyfant',
+    'gareth-lyfant',
+    'glesni-lyfant'
+  ].sort());
+  assert.deepEqual(chartById.get(cledwynMigrationId).rels.parents, ['cledwyn-lyfant']);
+  assert.deepEqual(chartById.get(cadwganMigrationId).rels.parents, ['cadwgan-lyfant']);
+
+  const alignmentPlan = createFamilyChartHouseLinkAlignmentPlan(family);
+  assert.deepEqual(alignmentPlan.invalidRequests, []);
+  assert.deepEqual(alignmentPlan.routes.map(route => [route.anchorPersonId, route.houseNodeId]), [
+    ['cledwyn-lyfant', cledwynMigrationId],
+    ['cadwgan-lyfant', cadwganMigrationId]
+  ]);
+
+  const { reachableNodeIds } = collectReachableChartNodeIds(family);
+  family.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht erreichbar`);
+  });
+});
+
+test('trennt Lyfants Caer-Asgwrn-Nachfolge von Meredydds erloschener Derwyddion-Linie', () => {
+  const origin = assertValidFamily(HOUSE_LYFANT_DERWYDDION_FAMILY).family;
+  const successor = assertValidFamily(HOUSE_LYFANT_CAER_ASGWRN_FAMILY).family;
+  const originOnlyIds = [
+    'meredydd-lyfant',
+    'main-trachwyll',
+    'deiniol-lyfant',
+    'agnes',
+    'frewi-llyfant',
+    'uryen-gwaedlyd',
+    'ceri-lyfant',
+    'cadi-lyfant'
+  ];
+  const successorOnlyIds = [
+    'rhisiart-lyfant',
+    'goronwy-lyfant',
+    'bethan-lyfant',
+    'yale-lyfant',
+    'eilun-llyfant',
+    'conan-young-lyfant',
+    'heulwen-lyfant',
+    'derfel-lyfant',
+    'cybi-lyfant',
+    'crispin-lyfant',
+    'eilin-lyfant'
+  ];
+
+  assert.equal(successor.persons.length, 20);
+  assert.equal(successor.partnerships.length, 7);
+  assert.equal(successor.parentages.length, 11);
+  assert.equal(successor.cadetBranches.length, 2);
+  assert.equal(successor.lineage.founderPartnershipId, '');
+  assert.deepEqual(successor.lineage.originHouse.childIds, ['cledwyn-lyfant', 'cadwgan-lyfant']);
+  assert.equal(successor.lineage.originHouse.childIds.includes('meredydd-lyfant'), false);
+  assert.equal(
+    toFamilyChartData(successor).data.some(node => node.id === '__lineage-crest-haus-lyfant-caer-asgwrn'),
+    false
+  );
+
+  originOnlyIds.forEach(personId => {
+    assert.ok(origin.persons.some(person => person.id === personId), `${personId}: fehlt in Derwyddion`);
+    assert.equal(successor.persons.some(person => person.id === personId), false, `${personId}: darf nicht auswandern`);
+  });
+  successorOnlyIds.forEach(personId => {
+    assert.ok(successor.persons.some(person => person.id === personId), `${personId}: fehlt in Caer Asgwrn`);
+    assert.equal(origin.persons.some(person => person.id === personId), false, `${personId}: darf nicht doppelt fortgefuehrt werden`);
+  });
+
+  ['cledwyn-lyfant', 'cadwgan-lyfant'].forEach(personId => {
+    const originPerson = origin.persons.find(person => person.id === personId);
+    const successorPerson = successor.persons.find(person => person.id === personId);
+    assert.equal(originPerson.worldPersonId, successorPerson.worldPersonId, personId);
+    assert.equal(originPerson.portrait, successorPerson.portrait, `${personId}: Portraet`);
+  });
+
+  const parentageByChild = new Map(successor.parentages.map(parentage => [parentage.childId, parentage]));
+  ['rhisiart-lyfant', 'goronwy-lyfant', 'bethan-lyfant'].forEach(personId => {
+    assert.deepEqual(parentageByChild.get(personId).parentIds, ['cledwyn-lyfant', 'rhosyn-mochdaer']);
+  });
+  ['yale-lyfant', 'eilun-llyfant'].forEach(personId => {
+    assert.deepEqual(parentageByChild.get(personId).parentIds, ['cadwgan-lyfant', 'neila-serenoc']);
+  });
+
+  const converted = toFamilyChartData(successor);
+  const chartById = new Map(converted.data.map(node => [node.id, node]));
+  const reachableNodeIds = new Set();
+  const pendingNodeIds = ['__origin-house-haus-lyfant-caer-asgwrn-lyfant-derwyddion-origin'];
+  while (pendingNodeIds.length) {
+    const nodeId = pendingNodeIds.shift();
+    if (reachableNodeIds.has(nodeId)) continue;
+    reachableNodeIds.add(nodeId);
+    const node = chartById.get(nodeId);
+    if (!node) continue;
+    pendingNodeIds.push(...node.rels.children, ...node.rels.spouses);
+  }
+  successor.persons.forEach(person => {
+    assert.ok(reachableNodeIds.has(person.id), `${person.id}: nicht gerendert`);
+  });
+});
+
+test('spiegelt Lyfants ausgearbeitete Gegenbeziehungen in beiden Stammbaeumen', () => {
+  const expectations = [
+    [HOUSE_LYFANT_DERWYDDION_FAMILY, HOUSE_BLODYN_FAMILY, 'marriage-gruffydd-catryn'],
+    [HOUSE_LYFANT_DERWYDDION_FAMILY, HOUSE_MOCHDAER_GWYLIAU_FAMILY, 'marriage-rhosyn-cledwyn-mochdaer'],
+    [HOUSE_LYFANT_CAER_ASGWRN_FAMILY, HOUSE_MOCHDAER_GWYLIAU_FAMILY, 'marriage-rhosyn-cledwyn-mochdaer'],
+    [HOUSE_LYFANT_DERWYDDION_FAMILY, HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY, 'marriage-uryen-frewi-gwaedlyd'],
+    [HOUSE_LYFANT_CAER_ASGWRN_FAMILY, HOUSE_MORFIL_FAMILY, 'marriage-guto-eilun-morfil']
+  ];
+
+  expectations.forEach(([lyfantFamily, counterpartFamily, partnershipId]) => {
+    const here = lyfantFamily.partnerships.find(partnership => partnership.id === partnershipId);
+    const there = counterpartFamily.partnerships.find(partnership => partnership.id === partnershipId);
+    assert.ok(here && there, partnershipId);
+    assert.deepEqual(here.participantIds, there.participantIds, partnershipId);
+    here.participantIds.forEach(personId => {
+      const herePerson = lyfantFamily.persons.find(person => person.id === personId);
+      const therePerson = counterpartFamily.persons.find(person => person.id === personId);
+      assert.equal(herePerson.worldPersonId, therePerson.worldPersonId, `${partnershipId}: ${personId}`);
+      assert.equal(herePerson.portrait, therePerson.portrait, `${partnershipId}: Bild ${personId}`);
+    });
+  });
+});
+
+test('liefert Lyfants 28 zulassige Quellportraets und laesst veraltete Bilder aus', async () => {
+  const sourceManifest = JSON.parse(await readFile(
+    new URL('../assets/images/portraits/haus-lyfant/portrait-sources.json', import.meta.url),
+    'utf8'
+  ));
+
+  assert.equal(Object.keys(HOUSE_LYFANT_LOCAL_PORTRAIT_FILES).length, 28);
+  assert.deepEqual(
+    Object.keys(HOUSE_LYFANT_LOCAL_PORTRAIT_FILES).sort(),
+    Object.keys(HOUSE_LYFANT_PORTRAIT_SOURCES).sort()
+  );
+  assert.deepEqual(sourceManifest, HOUSE_LYFANT_PORTRAIT_SOURCES);
+
+  await Promise.all(Object.entries(HOUSE_LYFANT_LOCAL_PORTRAIT_FILES).map(async ([personId, fileName]) => {
+    const portrait = `assets/images/portraits/haus-lyfant/${fileName}`;
+    assert.equal(HOUSE_LYFANT_PORTRAITS[personId], portrait);
+    const image = await readFile(new URL(`../${portrait}`, import.meta.url));
+    assert.ok(image.length > 100, personId);
+    const header = [...image.subarray(0, 4)];
+    const isPng = header.every((byte, index) => byte === [0x89, 0x50, 0x4e, 0x47][index]);
+    const isJpeg = header[0] === 0xff && header[1] === 0xd8;
+    assert.ok(isPng || isJpeg, `${personId}: lesbares Rasterbild`);
+  }));
+
+  [
+    ['catryn-llyfant', HOUSE_BLODYN_FAMILY],
+    ['gruffydd-blodyn', HOUSE_BLODYN_FAMILY],
+    ['cledwyn-lyfant', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['rhosyn-mochdaer', HOUSE_MOCHDAER_GWYLIAU_FAMILY],
+    ['eilun-llyfant', HOUSE_MORFIL_FAMILY],
+    ['guto-morfil', HOUSE_MORFIL_FAMILY],
+    ['frewi-llyfant', HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY],
+    ['uryen-gwaedlyd', HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY]
+  ].forEach(([personId, counterpart]) => {
+    assert.equal(
+      HOUSE_LYFANT_PORTRAITS[personId],
+      counterpart.persons.find(person => person.id === personId).portrait,
+      personId
+    );
+  });
+
+  const excludedPortraitIds = [
+    'agnes',
+    'gunhild-eisenbieger',
+    'aine-drummond',
+    'gereint-drewi',
+    'dafydd-trachwyll'
+  ];
+  excludedPortraitIds.forEach(personId => {
+    assert.equal(HOUSE_LYFANT_PORTRAITS[personId], undefined, personId);
+    const person = [...HOUSE_LYFANT_DERWYDDION_FAMILY.persons, ...HOUSE_LYFANT_CAER_ASGWRN_FAMILY.persons]
+      .find(entry => entry.id === personId);
+    assert.ok(person, `${personId}: Person bleibt erhalten`);
+    assert.equal(person.portrait, '', `${personId}: veraltetes Bild darf nicht erscheinen`);
   });
 });
 

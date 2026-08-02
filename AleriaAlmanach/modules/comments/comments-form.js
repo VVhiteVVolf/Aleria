@@ -10,6 +10,7 @@ function openCommentForm() {
   _commentMode = 'charakter';
   _commentKind = 'speech';
   _commentSegments = [makeCommentSegment('speech')];
+  window.AleriaCommentSceneCast?.resetCreate?.();
   document.getElementById('cf-name').value    = '';
   document.getElementById('cf-title').value   = '';
   setRichEditorContent('cf-text', '');

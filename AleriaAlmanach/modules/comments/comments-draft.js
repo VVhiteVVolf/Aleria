@@ -18,8 +18,13 @@ function getCommentDraftPayload() {
       side: commentSegmentUsesSide(segment.kind, false) ? normalizeCommentSegmentSide(segment.side) : '',
       language: getCommentLanguage(segment),
       languageColor: commentKindUsesLanguage(segment.kind) ? getCommentLanguageColor(segment, segment.kind) : '',
-      durationSeconds: getSceneTimeSegmentDuration(segment)
+      durationSeconds: getSceneTimeSegmentDuration(segment),
+      actorId: String(segment.actorId || ''),
+      combatTargetId: segment.kind === 'combataction' ? String(segment.combatTargetId || '') : '',
+      combatActionId: segment.kind === 'combataction' ? String(segment.combatActionId || '') : '',
+      combatRollMode: segment.kind === 'combataction' && ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal'
     })),
+    sceneActors: window.AleriaCommentSceneCast?.serializeCreate?.() || [],
     portraitUrl: _portraitUrl || '',
     charSearch: '',
     ts: Date.now(),
@@ -110,7 +115,8 @@ function restoreCommentDraft() {
         segment.side || 'left',
         segment.durationSeconds,
         segment.language || segment.spellFont,
-        segment.languageColor
+        segment.languageColor,
+        { targetId: segment.combatTargetId, actionId: segment.combatActionId, rollMode: segment.combatRollMode, actorId: segment.actorId }
       ));
     } else {
       _commentSegments = [makeCommentSegment(draft.commentKind || 'speech', String(draft.text || ''), Number.isInteger(draft.selectedEmoteIdx) ? draft.selectedEmoteIdx : null)];
@@ -131,11 +137,14 @@ function restoreCommentDraft() {
       preview.style.display = 'none';
     }
 
+    window.AleriaCommentSceneCast?.restoreCreate?.(draft.sceneActors || []);
     if (draft.mode === 'narrator') {
       setCommentMode('narrator');
     } else {
-      setCommentMode('charakter');
-      if (draft.selectedCharId && getAvailableCommentCharacterById(draft.selectedCharId)) {
+      const restoredActor = draft.selectedCharId ? getAvailableCommentCharacterById(draft.selectedCharId) : null;
+      const restoredMode = draft.mode === 'creature' || restoredActor?.entityType === 'creature' ? 'creature' : 'charakter';
+      setCommentMode(restoredMode);
+      if (restoredActor && commentActorMatchesComposerMode(restoredActor, restoredMode)) {
         selectCharForComment(draft.selectedCharId);
         if (Number.isInteger(draft.selectedEmoteIdx) && draft.selectedEmoteIdx >= 0) {
           selectEmote(draft.selectedEmoteIdx);

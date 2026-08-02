@@ -15,18 +15,26 @@ async function submitEditComment() {
     commentMetadata = { characterId: '', emoteIndex: null, avatarKind: 'narrator', commentMode: 'narrator', schemaVersion: 2 };
   } else if (_editSelectedCharId) {
     const c = getAvailableCommentCharacterById(_editSelectedCharId);
-    if (!c) { errEl.textContent = 'Charakter nicht gefunden.'; errEl.style.display='block'; return; }
+    if (!c) { errEl.textContent = _editMode === 'creature' ? 'Kreatur nicht gefunden.' : 'Charakter nicht gefunden.'; errEl.style.display='block'; return; }
+    if (!commentActorMatchesComposerMode(c, _editMode)) {
+      errEl.textContent = _editMode === 'creature' ? 'Bitte eine Kreatur aus dem Kreaturenregister auswählen.' : 'Bitte einen Charakter auswählen.';
+      errEl.style.display='block'; return;
+    }
     charName = c.name;
     charTitle = c.title || '';
+    const actorMetadata = c.entityType === 'creature'
+      ? { actorType: 'creature', creatureId: _editSelectedCharId }
+      : { actorType: 'character', creatureId: '' };
+    const actorCommentMode = c.entityType === 'creature' ? 'creature' : 'character';
     if (_editSelectedEmoteIdx !== null && c.emotes && c.emotes[_editSelectedEmoteIdx]) {
       portrait = c.emotes[_editSelectedEmoteIdx].img;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: _editSelectedEmoteIdx, avatarKind: 'emote', commentMode: 'character', schemaVersion: 2 };
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: _editSelectedEmoteIdx, avatarKind: 'emote', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
     } else if (normalizeSearchText(_editCommentData?.charName) === normalizeSearchText(c.name) && _editCommentData?.portrait) {
       portrait = normalizeImageUrlForStorage(_editCommentData.portrait) || c.portrait || null;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: 'character', schemaVersion: 2 };
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
     } else {
       portrait = c.portrait || null;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: 'character', schemaVersion: 2 };
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
     }
     narrator = false;
   } else if (_editManualMode) {
@@ -37,7 +45,9 @@ async function submitEditComment() {
     commentMetadata = { characterId: '', emoteIndex: null, avatarKind: portrait ? 'manual' : 'none', commentMode: 'manual', schemaVersion: 2 };
     if (!charName) { errEl.textContent = 'Bitte Namen eingeben.'; errEl.style.display='block'; return; }
   } else {
-    errEl.textContent = 'Bitte Charakter wählen oder manuell eingeben.';
+    errEl.textContent = _editMode === 'creature'
+      ? 'Bitte eine Kreatur aus dem Kreaturenregister auswählen.'
+      : 'Bitte Charakter wählen oder manuell eingeben.';
     errEl.style.display='block'; return;
   }
   commentMetadata.commentKind = normalizeCommentKind(_editCommentKind, narrator);
@@ -47,6 +57,21 @@ async function submitEditComment() {
   btn.disabled = true;
   btn.textContent = 'Speichere…';
   try {
+    if (window.AleriaCombat?.handleSubmission) {
+      const combatResult = await window.AleriaCombat.handleSubmission({
+        threadId: getCurrentCommentThreadId(),
+        text,
+        charName,
+        charTitle,
+        portrait,
+        characterId: commentMetadata.characterId || '',
+        commentSegments: editSegments,
+        commentMetadata
+      });
+      if (combatResult?.commentMetadata && typeof combatResult.commentMetadata === 'object') {
+        commentMetadata = { ...commentMetadata, ...combatResult.commentMetadata };
+      }
+    }
     const backend = await getCommentBackend({ timeoutMs: 1200 });
     await backend.updateComment(_editTargetId, { text, charName, charTitle, portrait, narrator, ...commentMetadata });
     closeEditComment();

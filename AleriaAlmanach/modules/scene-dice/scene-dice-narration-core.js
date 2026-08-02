@@ -4,7 +4,8 @@ import {
   getSceneDiceNarrationModeInstruction,
   getSceneDiceRolledValue,
   normalizeSceneDiceNarrationMode
-} from './scene-dice-narration-policy.js';
+} from './scene-dice-narration-policy.js?v=20260802-dice-default-simple-v1';
+import { formatCombatProfileAiContext } from '../combat/combat-profile-context.js?v=20260802-combat-sheet-v4';
 
 function cleanNarrationField(value, maxLength = 14000) {
   return String(value || '').trim().slice(0, maxLength);
@@ -84,6 +85,26 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { roll = {}, p
   const outcome = getSceneDiceOutcomeProfile(roll);
   const narrationMode = normalizeSceneDiceNarrationMode(roll.narrationMode);
   const mode = getSceneDiceNarrationMode(narrationMode);
+  const combatProfileContext = participant.id
+    && participant.id !== '__narrator__'
+    && participant.combatProfile
+    && typeof participant.combatProfile === 'object'
+    ? formatCombatProfileAiContext(participant)
+    : '';
+  const creatureContext = participant.entityType === 'creature'
+    ? [
+        'Kreaturenprofil – zusätzlich verbindlich',
+        `Typ/Gattung: ${cleanNarrationField([participant.type, participant.species].filter(Boolean).join(' / '), 180) || 'nicht gesetzt'}`,
+        `Habitat: ${cleanNarrationField(participant.habitat, 180) || 'nicht gesetzt'}`,
+        `Bedrohungsgrad/Größe: ${cleanNarrationField(`${participant.challengeRating ?? 0} / ${participant.size || 'nicht gesetzt'}`, 120)}`,
+        participant.notes ? `Notizen: ${cleanNarrationField(participant.notes, 1200)}` : '',
+        participant.loot?.currency ? `Mitgeführte Währung: ${cleanNarrationField(participant.loot.currency, 220)}` : '',
+        Array.isArray(participant.loot?.items) && participant.loot.items.length
+          ? `Mögliche Beute: ${cleanNarrationField(participant.loot.items.map(item => `${item.name} ×${item.quantity} (${item.chance}%)${item.notes ? ` – ${item.notes}` : ''}`).join('; '), 1400)}`
+          : '',
+        participant.loot?.notes ? `Loot-Regel: ${cleanNarrationField(participant.loot.notes, 700)}` : ''
+      ].filter(Boolean).join('\n')
+    : '';
   const promptContext = [
     'Szenenwurf – verbindlicher Erzählauftrag',
     `Erzählmodus: ${mode.label}`,
@@ -92,6 +113,8 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { roll = {}, p
     `Interne Ergebnissteuerung: ${getSceneDiceRolledValue(roll)}, Qualitätsstufe ${outcome.label}. Diese Mechanik und ihr Zahlenwert dürfen im Erzähltext nicht genannt werden.`,
     `Modusregel: ${getSceneDiceNarrationModeInstruction(narrationMode)}`,
     `Humorregel: ${getSceneDiceHumorInstruction({ ...roll, outcomeRatio: outcome.ratio }, roll.humorEnabled === true)}`,
+    combatProfileContext,
+    creatureContext,
     situation ? `Vom Nutzer gesetzter Situationskontext: ${cleanNarrationField(situation, 900)}` : '',
     snapshot.moduleTitle ? `Modul: ${cleanNarrationField(snapshot.moduleTitle, 160)}` : '',
     snapshot.pageTitle ? `Szene/Seite: ${cleanNarrationField(snapshot.pageTitle, 160)}` : '',
@@ -107,6 +130,28 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { roll = {}, p
   ].filter(Boolean).join('\n');
 
   const requiredChunks = [
+    ...(combatProfileContext ? [{
+      sourceType: 'character-combat-profile',
+      sourceRef: `combat-profile:${participant.id || participant.name || 'current'}`,
+      moduleId: snapshot.moduleId || '',
+      moduleTitle: snapshot.moduleTitle || '',
+      pageTitle: snapshot.pageTitle || '',
+      speakerName: participant.name || '',
+      kind: 'required-character-combat-profile',
+      score: 10001,
+      text: combatProfileContext
+    }] : []),
+    ...(creatureContext ? [{
+      sourceType: 'creature-profile',
+      sourceRef: `creature-profile:${participant.id || participant.name || 'current'}`,
+      moduleId: snapshot.moduleId || '',
+      moduleTitle: snapshot.moduleTitle || '',
+      pageTitle: snapshot.pageTitle || '',
+      speakerName: participant.name || '',
+      kind: 'required-creature-profile',
+      score: 10002,
+      text: creatureContext
+    }] : []),
     {
       sourceType: 'current-scene-page',
       sourceRef: `scene-dice:page:${snapshot.moduleId || 'current'}`,
@@ -146,6 +191,7 @@ export function enrichSceneDiceNarrationRetrieval(retrieval = {}, { roll = {}, p
     stats: {
       ...(retrieval?.stats || {}),
       requiredSceneContextIncluded: true,
+      requiredCombatProfileIncluded: Boolean(combatProfileContext),
       sceneDiceNarrationMode: narrationMode
     }
   };

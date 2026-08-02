@@ -56,7 +56,7 @@ function buildSceneClockControl(threadId, page = {}) {
   const dateAttrs = hasStart
     ? ` data-scene-aleria-year="${startDate.year}" data-scene-aleria-month="${startDate.month}" data-scene-aleria-day="${startDate.day}"`
     : '';
-  const dateLabel = hasStart ? formatAleriaDate(startDate, { withWeekday: false }) : '';
+  const dateLabel = hasStart ? formatAleriaDate(startDate) : '';
   return `<div class="scene-clock" data-scene-clock data-scene-thread-id="${escapeHtml(threadId)}"${dateAttrs} title="Zeit dieser Szenenseite"><span class="scene-clock-icon" aria-hidden="true"><img src="../IconOrdner/Etablissement Icons/Sanduhr.PNG" alt="" decoding="async"></span><span class="scene-clock-copy"><span class="scene-clock-label">Szenenzeit</span><strong data-scene-clock-value>Zeit nicht gesetzt</strong>${hasStart ? `<span class="scene-clock-date" data-scene-clock-date>${escapeHtml(dateLabel)}</span>` : ''}</span><button type="button" data-scene-time-action="open-event-dialog" aria-label="Szenenzeit einstellen" title="Szenenzeit einstellen">✎</button></div>`;
 }
 
@@ -64,7 +64,7 @@ function renderSceneCommentTime(entry) {
   if (!entry || !Number.isFinite(entry.startSeconds)) return '';
   const end = Number.isFinite(entry.endSeconds) ? entry.endSeconds : entry.startSeconds;
   const hasAleria = !!entry.aleriaDate;
-  const prefix = hasAleria ? `${formatAleriaDate(entry.aleriaDate, { withWeekday: false })} · Seite ${entry.aleriaPageInDay} · ` : '';
+  const prefix = hasAleria ? `${formatAleriaDate(entry.aleriaDate)} · Seite ${entry.aleriaPageInDay} · ` : '';
   const text = `${prefix}${formatSceneClock(entry.startSeconds, !hasAleria)}${end !== entry.startSeconds ? ` → ${formatSceneClock(end, false)}` : ''}`;
   return `<div class="scene-comment-time" title="Dauer dieses Beitrags: ${entry.durationSeconds || 0} Sekunden">${escapeHtml(text)}</div>`;
 }
@@ -104,6 +104,9 @@ function ensureSceneTimeEventDialog() {
         <button class="scene-time-event-close" type="button" data-scene-time-action="close-dialog" aria-label="Zeitereignis schliessen">x</button>
       </div>
       <div class="scene-time-event-card-body">
+        <div class="scene-time-dialog-hint" data-scene-time-mode-hint style="display:none;">
+          Wird direkt nach dem gewählten Beitrag eingefügt – dieser Beitrag bleibt beim bisherigen Tag, alles danach (bis zum nächsten Tag-Marker) zählt zu diesem neu benannten Tag. Zeit/Tag der Zeitlinie sind so vorausgefüllt, dass die bisherige Zeitrechnung nicht springt.
+        </div>
         <section class="scene-time-dialog-panel">
           <label>Tagesform oder Ereignis</label>
           <div class="scene-time-preset-grid" data-scene-time-presets>
@@ -229,6 +232,12 @@ function resetSceneTimeEventDialog() {
   const timeLabel = document.getElementById('ste-time-label');
   if (title) title.value = preset.title;
   if (timeLabel) timeLabel.value = preset.timeLabel;
+  // Sonst wuerde ein vorheriger rueckwirkender Aufruf (prefillSceneTimeAnchorFromSeconds)
+  // seine Tag/Uhrzeit-Werte in ein spaeteres normales "jetzt ankuendigen" durchsickern lassen.
+  const anchorDay = document.getElementById('ste-anchor-day');
+  const anchorTime = document.getElementById('ste-anchor-time');
+  if (anchorDay) anchorDay.value = '1';
+  if (anchorTime) anchorTime.value = '18:30:00';
   setSceneTimeEventStatus('');
   setSceneTimePreset(preset.key);
 }

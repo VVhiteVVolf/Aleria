@@ -7,10 +7,12 @@ import {
   getSceneDiceOutcomeProfile
 } from '../modules/scene-dice/scene-dice-narration-core.js';
 import {
+  DEFAULT_SCENE_DICE_NARRATION_MODE,
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,
   getSceneDiceHumorInstruction,
-  getSceneDiceNarrationModes
+  getSceneDiceNarrationModes,
+  normalizeSceneDiceNarrationMode
 } from '../modules/scene-dice/scene-dice-narration-policy.js';
 
 const lowPerceptionRoll = {
@@ -70,8 +72,59 @@ test('places full scene and character context in retrieval instead of the trunca
   assert.match(enriched.promptContext, /Anaraut ist geduldig/);
 });
 
+test('prioritizes the complete combat sheet for character-bound scene rolls', () => {
+  const enriched = enrichSceneDiceNarrationRetrieval({ chunks: [], stats: {} }, {
+    roll: lowPerceptionRoll,
+    participant: {
+      id: 'anaraut',
+      name: 'Anaraut Draig',
+      combatProfile: {
+        resources: [{ id: 'focus', name: 'Fokus', current: 2, maximum: 4 }],
+        conditions: [{ id: 'wounded', name: 'Verwundet', active: true }]
+      }
+    },
+    snapshot: { threadId: 'scene-1', moduleId: 'mord', pageText: 'Tatort', transcript: 'Verlauf' }
+  });
+  assert.equal(enriched.chunks[0].sourceType, 'character-combat-profile');
+  assert.equal(enriched.stats.requiredCombatProfileIncluded, true);
+  assert.match(enriched.promptContext, /Fokus/);
+  assert.match(enriched.promptContext, /Verwundet/);
+});
+
+test('adds creature identity, tactics and loot as required scene context', () => {
+  const enriched = enrichSceneDiceNarrationRetrieval({ chunks: [], stats: {} }, {
+    roll: lowPerceptionRoll,
+    participant: {
+      id: 'frostspinne',
+      entityType: 'creature',
+      name: 'Frostbiss-Spinne',
+      type: 'Kreatur',
+      species: 'Riesenspinne',
+      habitat: 'Eishöhlen',
+      challengeRating: 3,
+      size: 'Mittel',
+      notes: 'Greift bevorzugt isolierte Ziele an.',
+      loot: {
+        currency: '3 Silber',
+        notes: 'Giftzahn vorsichtig bergen.',
+        items: [{ name: 'Frostdrüse', quantity: 1, chance: 70, notes: 'intakt halten' }]
+      },
+      combatProfile: { hitPoints: { current: 27, maximumOverride: 27 }, armorClass: { override: 14 } }
+    },
+    snapshot: { threadId: 'scene-1', moduleId: 'jagd', pageText: 'Eishöhle', transcript: 'Verlauf' }
+  });
+  assert.deepEqual(enriched.chunks.slice(0, 2).map(chunk => chunk.sourceType), ['character-combat-profile', 'creature-profile']);
+  assert.match(enriched.promptContext, /Riesenspinne/);
+  assert.match(enriched.promptContext, /isolierte Ziele/);
+  assert.match(enriched.promptContext, /Frostdrüse/);
+  assert.match(enriched.promptContext, /70%/);
+});
+
 test('offers distinct narration modes and deterministic non-AI behavior', () => {
   const modes = getSceneDiceNarrationModes();
+  assert.equal(DEFAULT_SCENE_DICE_NARRATION_MODE, 'simple');
+  assert.equal(normalizeSceneDiceNarrationMode(), 'simple');
+  assert.equal(normalizeSceneDiceNarrationMode('unknown'), 'simple');
   assert.deepEqual(modes.map(mode => mode.id), ['immersive', 'character', 'dramatic', 'simple', 'standard']);
   assert.equal(modes.find(mode => mode.id === 'simple')?.usesAi, false);
   assert.equal(createSceneDiceStandardNarration(lowPerceptionRoll, 'Anaraut Draig'), 'Anaraut Draig hat eine 4 gewürfelt.');

@@ -12,11 +12,12 @@ function renderSceneDiceStoredTerms(roll = {}) {
 
 function renderSceneDiceEventComment(comment, idx = 0) {
   const roll = comment.sceneDiceRoll || {};
+  const narrationMode = roll.narrationMode || SCENE_DICE_DEFAULT_NARRATION_MODE;
   const commentId = escapeHtml(comment.id || '');
   const divider = idx > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   const modeLabel = roll.mode === 'advantage' ? 'Vorteil' : roll.mode === 'disadvantage' ? 'Nachteil' : 'Normal';
-  const narrationModeLabel = window.AleriaSceneDiceNarration?.getMode?.(roll.narrationMode)?.label
-    || (roll.narrationMode === 'simple' ? 'Einfach würfeln' : roll.narrationMode === 'standard' ? 'Standard' : roll.narrationMode === 'character' ? 'Charakterfokus' : roll.narrationMode === 'dramatic' ? 'Dramatisch' : 'Immersiv');
+  const narrationModeLabel = window.AleriaSceneDiceNarration?.getMode?.(narrationMode)?.label
+    || (narrationMode === 'standard' ? 'Standard' : narrationMode === 'character' ? 'Charakterfokus' : narrationMode === 'dramatic' ? 'Dramatisch' : narrationMode === 'immersive' ? 'Immersiv' : 'Einfach würfeln');
   const actor = roll.roller || 'Die Szene';
   const natural = Number(roll.natural);
   const rolledValue = Number.isFinite(natural) && natural > 0 ? natural : Number(roll.total) || 0;
@@ -24,7 +25,7 @@ function renderSceneDiceEventComment(comment, idx = 0) {
   const resultLabel = Number.isFinite(natural) && natural > 0 ? `W${primarySides} · ${rolledValue}` : `Gesamt · ${rolledValue}`;
   const icon = getSceneDiceIcon(primarySides);
   return `${divider}
-    <article class="scene-dice-event${roll.critical ? ` is-${escapeHtml(roll.critical)}` : ''}" data-comment-id="${commentId}" data-narration-mode="${escapeHtml(roll.narrationMode || 'immersive')}">
+    <article class="scene-dice-event${roll.critical ? ` is-${escapeHtml(roll.critical)}` : ''}" data-comment-id="${commentId}" data-narration-mode="${escapeHtml(narrationMode)}">
       <div class="scene-dice-event-copy">
         <div class="scene-dice-event-kicker">
           <span class="scene-dice-event-narrator"><img src="${escapeHtml(icon)}" alt=""><b>Erzähler</b></span>

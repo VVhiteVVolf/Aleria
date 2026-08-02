@@ -140,6 +140,8 @@ function buildStoredCharacterFromRecord(char, archived) {
     inventory: cloned.inventory && typeof cloned.inventory === 'object'
       ? sanitizeCharacterInventoryData(cloned.inventory)
       : undefined,
+    combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(cloned.combatProfile || {})
+      || cloneCharacterStructuredValue(cloned.combatProfile, {}),
     identity: normalizeCharacterIdentityRecord(cloned.identity),
     genealogy: normalizeCharacterGenealogyRecord(cloned.genealogy)
   };

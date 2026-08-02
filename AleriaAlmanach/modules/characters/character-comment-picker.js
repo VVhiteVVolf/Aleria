@@ -5,17 +5,23 @@ function renderCharPickerInForm() {
   const picker = document.getElementById('cf-char-picker');
   if (!picker) return;
   picker.innerHTML = '';
-  const characters = getAvailableCommentCharacters();
-  const playerFilter = typeof getCommentPlayerFilter === 'function'
+  const creatureMode = typeof _commentMode !== 'undefined' && _commentMode === 'creature';
+  const characters = getAvailableCommentCharacters().filter(char => creatureMode
+    ? char.entityType === 'creature'
+    : char.entityType !== 'creature');
+  const playerFilter = !creatureMode && typeof getCommentPlayerFilter === 'function'
     ? normalizeCharacterPlayerOwner(getCommentPlayerFilter())
     : '';
   picker.dataset.playerView = playerFilter ? 'true' : 'false';
 
   let grouped;
-  if (playerFilter) {
+  if (creatureMode) {
+    grouped = [{ label: 'Kreaturenregister', chars: characters, kind: 'creatures' }];
+  } else if (playerFilter) {
+    const playerCharacters = characters;
     const playerLabel = getCharacterPlayerOwnerLabel(playerFilter);
-    const owned = characters.filter(char => normalizeCharacterPlayerOwner(char.playerOwner) === playerFilter);
-    const unassigned = characters.filter(char => !normalizeCharacterPlayerOwner(char.playerOwner));
+    const owned = playerCharacters.filter(char => normalizeCharacterPlayerOwner(char.playerOwner) === playerFilter);
+    const unassigned = playerCharacters.filter(char => !normalizeCharacterPlayerOwner(char.playerOwner));
     grouped = [
       { label: `${playerLabel}s Charaktere`, chars: owned, kind: 'owned' },
       { label: 'Nicht zugewiesen', chars: unassigned, kind: 'unassigned' }
@@ -23,12 +29,10 @@ function renderCharPickerInForm() {
   } else {
     const active = characters.filter(isCharacterCommentedInCurrentModule);
     const inactive = characters.filter(char => !isCharacterCommentedInCurrentModule(char));
-    grouped = active.length
-      ? [
-          { label: 'Bereits im Modul aktiv', chars: active },
-          { label: 'Weitere Charaktere', chars: inactive }
-        ].filter(group => group.chars.length)
-      : [{ label: '', chars: characters }];
+    grouped = [
+      { label: active.length ? 'Bereits im Modul aktiv' : '', chars: active.length ? active : inactive },
+      ...(active.length ? [{ label: 'Weitere Charaktere', chars: inactive }] : [])
+    ].filter(group => group.chars.length);
   }
 
   const addCharacterOption = c => {
@@ -37,7 +41,7 @@ function renderCharPickerInForm() {
     const hasCommented = isCharacterCommentedInCurrentModule(c);
     const playerOwner = normalizeCharacterPlayerOwner(c.playerOwner);
     const playerOwnerLabel = getCharacterPlayerOwnerLabel(playerOwner);
-    const isPlayerBlocked = !playerFilter && typeof isCommentCharacterAllowedForActivePlayer === 'function'
+    const isPlayerBlocked = !creatureMode && !playerFilter && typeof isCommentCharacterAllowedForActivePlayer === 'function'
       ? !isCommentCharacterAllowedForActivePlayer(c)
       : false;
     const opt = document.createElement('div');
@@ -75,6 +79,14 @@ function renderCharPickerInForm() {
 
 function selectCharForComment(id) {
   const c = getAvailableCommentCharacterById(id);
+  if (!c || (typeof commentActorMatchesComposerMode === 'function' && !commentActorMatchesComposerMode(c, _commentMode))) {
+    const errEl = document.getElementById('cf-error');
+    if (errEl) {
+      errEl.textContent = _commentMode === 'creature' ? 'Diese Kreatur ist nicht mehr verfügbar.' : 'Dieser Charakter ist nicht mehr verfügbar.';
+      errEl.style.display = 'block';
+    }
+    return;
+  }
   if (c && typeof isCommentCharacterAllowedForActivePlayer === 'function' && !isCommentCharacterAllowedForActivePlayer(c)) {
     const ownerLabel = getCharacterPlayerOwnerLabel(c.playerOwner);
     const errEl = document.getElementById('cf-error');
@@ -95,16 +107,17 @@ function selectCharForComment(id) {
 
   const emoteSection = document.getElementById('cf-emote-section');
   const emotePicker  = document.getElementById('cf-emote-picker');
+  const isCreature = c?.entityType === 'creature';
   const emotes = (c && c.emotes && c.emotes.length) ? c.emotes : [];
-  if (c) {
+  if (c && (!isCreature || emotes.length)) {
     const addDisabled = emotes.length >= MAX_EMOTES;
     emotePicker.innerHTML = emotes.map((e, i) => `
       <div class="cf-emote-option" data-action="select-comment-emote" data-emote-idx="${i}">
-        <button class="cf-emote-remove-btn" type="button" title="Avatar löschen" aria-label="Avatar löschen" data-action="remove-comment-emote" data-emote-idx="${i}">x</button>
+        ${isCreature ? '' : `<button class="cf-emote-remove-btn" type="button" title="Avatar löschen" aria-label="Avatar löschen" data-action="remove-comment-emote" data-emote-idx="${i}">x</button>`}
         <img src="${sanitizeImageSrc(e.img)}" alt="${escapeHtml(e.label || 'Emote ' + (i + 1))}" loading="lazy" decoding="async">
         <div class="cf-emote-option-label">${escapeHtml(e.label || '')}</div>
         <button class="cf-emote-break-btn" type="button" data-action="insert-comment-emote-break" data-emote-idx="${i}">Als Abschnitt</button>
-      </div>`).join('') + `
+      </div>`).join('') + (isCreature ? '' : `
       <div class="cf-emote-add-card">
         <div class="cf-emote-add-title">Avatar hinzufügen</div>
         <div class="cf-emote-add-help">Quadratisches 1:1-Bild als URL einfügen.</div>
@@ -112,13 +125,14 @@ function selectCharForComment(id) {
         <input class="cf-emote-add-input" id="cf-emote-add-url" type="url" placeholder="https://i.imgur.com/..."${addDisabled ? ' disabled' : ''}>
         <button class="cf-emote-add-btn" type="button" data-action="add-comment-emote"${addDisabled ? ' disabled' : ''}>Hinzufügen</button>
         <div class="cf-emote-add-status" id="cf-emote-add-status">${addDisabled ? `Maximal ${MAX_EMOTES} Avatare pro Figur.` : ''}</div>
-      </div>`;
+      </div>`);
     emoteSection.style.display = 'block';
   } else {
     emoteSection.style.display = 'none';
     emotePicker.innerHTML = '';
   }
   if (typeof renderCommentSegmentList === 'function') renderCommentSegmentList();
+  window.AleriaCommentSceneCast?.render?.();
   updateCommentFormPreview();
   persistCommentDraft();
 }
@@ -153,6 +167,8 @@ function buildCommentCharacterSaveData(char, emotes, portraitFallback = null) {
     inventory: char.inventory && typeof char.inventory === 'object'
       ? sanitizeCharacterInventoryData(char.inventory)
       : undefined,
+    combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(char.combatProfile || {})
+      || cloneCharacterStructuredValue(char.combatProfile, {}),
     identity: normalizeCharacterIdentityRecord(char.identity),
     genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
   };
@@ -187,6 +203,10 @@ async function addEmoteToSelectedCommentCharacter() {
     ? (getAvailableCommentCharacterById(_selectedCharId) || getCharacterById(_selectedCharId))
     : null;
   if (!char) return;
+  if (char.entityType === 'creature') {
+    if (status) status.textContent = 'Kreaturen verwenden ihr Portrait aus dem Kreaturenbogen.';
+    return;
+  }
 
   const label = String(labelInput?.value || '').trim() || 'Avatar';
   const img = normalizeImageUrlForStorage(urlInput?.value || '');
@@ -241,6 +261,7 @@ async function removeEmoteFromSelectedCommentCharacter(idx, event) {
     ? (getAvailableCommentCharacterById(_selectedCharId) || getCharacterById(_selectedCharId))
     : null;
   if (!char) return;
+  if (char.entityType === 'creature') return;
 
   const emotes = Array.isArray(char.emotes) ? char.emotes.slice() : [];
   if (!emotes[idx]) return;
@@ -285,6 +306,7 @@ function selectEmote(idx) {
 }
 
 function toggleManualMode() {
+  if (_commentMode === 'creature') return;
   _manualMode = !_manualMode;
   _selectedCharId = null;
   _selectedEmoteIdx = null;

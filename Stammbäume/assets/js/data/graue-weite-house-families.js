@@ -23,6 +23,10 @@ import {
   HOUSE_ILLYGODEN_TIRWEDD_FAMILY,
   HOUSE_ILLYGODEN_TREDEGAR_FAMILY
 } from './house-illygoden-family.js';
+import {
+  HOUSE_LYFANT_CAER_ASGWRN_FAMILY,
+  HOUSE_LYFANT_DERWYDDION_FAMILY
+} from './house-lyfant-family.js';
 import { HOUSE_MORFIL_FAMILY } from './house-morfil-family.js';
 import { HOUSE_WIVERN_FAMILY } from './house-wivern-family.js';
 
@@ -90,6 +94,7 @@ const COMPLETED_CURRENT_HOUSE_FAMILIES = Object.freeze({
   gwialen: HOUSE_GWIALEN_FAMILY,
   gwaedlyd: HOUSE_GWAEDLYD_TREDEGAR_FAMILY,
   illygoden: HOUSE_ILLYGODEN_TREDEGAR_FAMILY,
+  lyfant: HOUSE_LYFANT_CAER_ASGWRN_FAMILY,
   morfil: HOUSE_MORFIL_FAMILY,
   wivern: HOUSE_WIVERN_FAMILY
 });
@@ -97,7 +102,8 @@ const COMPLETED_CURRENT_HOUSE_FAMILIES = Object.freeze({
 const COMPLETED_ORIGIN_HOUSE_FAMILIES = Object.freeze({
   blaidd: HOUSE_BLAIDD_BRANON_FAMILY,
   gwaedlyd: HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY,
-  illygoden: HOUSE_ILLYGODEN_TIRWEDD_FAMILY
+  illygoden: HOUSE_ILLYGODEN_TIRWEDD_FAMILY,
+  lyfant: HOUSE_LYFANT_DERWYDDION_FAMILY
 });
 
 function currentPlaceholder(definition) {

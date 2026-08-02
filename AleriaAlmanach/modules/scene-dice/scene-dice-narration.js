@@ -3,14 +3,14 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js';
+} from './scene-dice-narration-core.js?v=20260802-combat-sheet-v4';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,
   getSceneDiceNarrationMode,
   getSceneDiceNarrationModes,
   normalizeSceneDiceNarrationMode
-} from './scene-dice-narration-policy.js';
+} from './scene-dice-narration-policy.js?v=20260802-dice-default-simple-v1';
 
 function buildSceneDiceRepairQuery(narration, roll = {}) {
   const actor = String(roll.roller || 'die Figur').trim();

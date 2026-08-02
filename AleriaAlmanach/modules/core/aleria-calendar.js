@@ -101,9 +101,9 @@ function formatAleriaDateRange(startValue, currentValue) {
   if (!hasAleriaDate(start)) return '';
   const current = sanitizeAleriaDate(currentValue);
   if (!hasAleriaDate(current) || getAleriaDayOrdinal(current) === getAleriaDayOrdinal(start)) {
-    return formatAleriaDate(start, { withWeekday: false });
+    return formatAleriaDate(start);
   }
-  return `${formatAleriaDate(start, { withWeekday: false })} bis ${formatAleriaDate(current, { withWeekday: false })}`;
+  return `${formatAleriaDate(start)} bis ${formatAleriaDate(current)}`;
 }
 
 function buildAleriaDateBadge(value, className = 'aleria-date-badge') {

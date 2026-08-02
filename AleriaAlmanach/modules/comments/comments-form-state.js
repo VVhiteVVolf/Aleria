@@ -4,7 +4,7 @@ const COMMENT_DRAFT_PREFIX = 'aleria-comment-draft:';
 const COMMENT_DELETE_CODE = '7777';
 let _commentDraftTimer = null;
 let _portraitUrl = null;
-let _commentMode = 'charakter'; // 'charakter' | 'narrator'
+let _commentMode = 'charakter'; // 'charakter' | 'creature' | 'narrator'
 let _commentKind = 'speech';
 let _commentPlayerFilter = ''; // '' | 'erdi' | 'patrick'
 let _commentSegments = [];
@@ -146,12 +146,57 @@ function applyCommentCharacterFilter() {
   if (empty) empty.style.display = visible ? 'none' : 'block';
 }
 
+function normalizeCommentComposerMode(mode) {
+  if (mode === 'narrator') return 'narrator';
+  if (mode === 'creature') return 'creature';
+  return 'charakter';
+}
+
+function commentActorMatchesComposerMode(actor, mode) {
+  if (!actor) return false;
+  return normalizeCommentComposerMode(mode) === 'creature'
+    ? actor.entityType === 'creature'
+    : actor.entityType !== 'creature';
+}
+
+function updateCommentActorModeCopy(mode) {
+  const creatureMode = mode === 'creature';
+  const heading = document.getElementById('cf-actor-heading');
+  const label = document.getElementById('cf-actor-select-label');
+  const search = document.getElementById('cf-char-search');
+  const empty = document.getElementById('cf-char-search-empty');
+  const playerFilter = document.getElementById('cf-player-filter');
+  const manualToggle = document.getElementById('cf-manual-toggle');
+  if (heading) heading.textContent = creatureMode ? 'Kreatur & Ausdruck' : 'Charakter & Ausdruck';
+  if (label) label.textContent = creatureMode ? 'Kreatur wählen' : 'Charakter wählen';
+  if (search) search.placeholder = creatureMode ? 'Kreatur suchen...' : 'Figur suchen...';
+  if (empty) empty.textContent = creatureMode
+    ? 'Keine passende Kreatur im Kreaturenregister gefunden.'
+    : 'Keine passende Figur gefunden. Du kannst stattdessen manuell schreiben.';
+  if (playerFilter) playerFilter.hidden = creatureMode;
+  if (manualToggle) manualToggle.hidden = creatureMode;
+}
+
 function setCommentMode(mode) {
+  mode = normalizeCommentComposerMode(mode);
   _commentMode = mode;
-  document.getElementById('cf-mode-char').classList.toggle('active', mode === 'charakter');
-  document.getElementById('cf-mode-narrator').classList.toggle('active', mode === 'narrator');
+  document.getElementById('cf-mode-char')?.classList.toggle('active', mode === 'charakter');
+  document.getElementById('cf-mode-creature')?.classList.toggle('active', mode === 'creature');
+  document.getElementById('cf-mode-narrator')?.classList.toggle('active', mode === 'narrator');
   const charSection = document.getElementById('cf-char-section');
   const narratorHint = document.getElementById('cf-narrator-hint');
+  const selectedActor = _selectedCharId ? getAvailableCommentCharacterById(_selectedCharId) : null;
+  if (mode !== 'narrator' && _selectedCharId && !commentActorMatchesComposerMode(selectedActor, mode)) {
+    _selectedCharId = null;
+    _selectedEmoteIdx = null;
+    document.getElementById('cf-selected-name').textContent = '';
+    document.getElementById('cf-emote-section').style.display = 'none';
+    document.getElementById('cf-emote-picker').innerHTML = '';
+  }
+  if (mode !== 'charakter' && _manualMode) {
+    _manualMode = false;
+    document.getElementById('cf-manual-fields').style.display = 'none';
+  }
   if (mode === 'narrator') {
     charSection.style.display = 'none';
     narratorHint.style.display = 'block';
@@ -163,8 +208,12 @@ function setCommentMode(mode) {
     document.getElementById('cf-selected-name').textContent = '';
   } else {
     charSection.style.display = 'block';
+    charSection.dataset.actorMode = mode;
     narratorHint.style.display = 'none';
+    updateCommentActorModeCopy(mode);
+    if (typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
   }
+  window.AleriaCommentSceneCast?.render?.();
   renderCommentSegmentActions(false);
   renderCommentSegmentList();
   updateCommentFormPreview();

@@ -130,9 +130,14 @@ function getInlineCommentThreadForPage(page, entry, pageIndex) {
   };
 }
 
+function getActiveCommentEntry() {
+  return typeof currentEntry === 'undefined' ? null : currentEntry;
+}
+
 function getCurrentCommentThread() {
-  if (!currentEntry) return null;
-  const entry = getRenderableEntry(currentEntry);
+  const activeEntry = getActiveCommentEntry();
+  if (!activeEntry) return null;
+  const entry = getRenderableEntry(activeEntry);
   const pages = getPages(entry);
   const page = pages[currentPage];
   return getCommentThreadForPage(page, entry, currentPage)
@@ -140,13 +145,14 @@ function getCurrentCommentThread() {
 }
 
 function getCurrentCommentThreadId() {
-  return getCurrentCommentThread()?.threadId || currentEntry?.id || '';
+  return getCurrentCommentThread()?.threadId || getActiveCommentEntry()?.id || '';
 }
 
 function getCurrentCommentCastIds() {
   const thread = getCurrentCommentThread();
   const page = thread?.page;
-  const entry = thread?.entry || getRenderableEntry(currentEntry);
+  const activeEntry = getActiveCommentEntry();
+  const entry = thread?.entry || (activeEntry ? getRenderableEntry(activeEntry) : null);
   if (!page) return [];
   const pageCast = getModuleCastIdsFromSource(page);
   if (pageCast.length) return pageCast;

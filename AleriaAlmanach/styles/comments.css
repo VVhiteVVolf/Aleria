@@ -357,7 +357,7 @@
   }
   .comment-segment-head {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
     gap: 0.55rem;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -371,9 +371,10 @@
     white-space: nowrap;
   }
   .comment-segment-types {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(7.2rem, 1fr));
     gap: 0.25rem;
+    width: 100%;
   }
   .comment-segment-type,
   .comment-segment-add,
@@ -564,10 +565,137 @@
     font-style: italic;
   }
   .comment-segment-actions {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(7.2rem, 1fr));
     gap: 0.35rem;
     margin: 0.6rem 0 0.7rem;
+  }
+  .comment-segment-actions .comment-segment-add,
+  .comment-segment-types .comment-segment-type {
+    justify-content: center;
+    min-width: 0;
+  }
+  .comment-segment-actor {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 0.55rem;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid rgba(112, 64, 59, 0.2);
+    background: rgba(255,255,255,0.2);
+  }
+  .comment-segment-actor span {
+    color: var(--gold-dark);
+    font: 700 0.55rem/1.2 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .comment-segment-actor select {
+    min-width: 0;
+    width: 100%;
+    border: 1px solid rgba(139,105,20,0.3);
+    background: rgba(255,250,232,0.72);
+    color: var(--ink);
+    padding: 0.4rem 0.55rem;
+    font: 600 0.76rem/1.2 'EB Garamond', serif;
+  }
+  .comment-scene-cast {
+    margin-top: 0.7rem;
+    padding: 0.7rem;
+    border: 1px solid rgba(112, 64, 59, 0.28);
+    border-left: 3px solid rgba(139, 44, 46, 0.68);
+    background: linear-gradient(90deg, rgba(94, 28, 32, 0.1), rgba(255,255,255,0.12));
+  }
+  .comment-scene-cast[hidden] { display: none; }
+  .comment-scene-cast-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+  .comment-scene-cast-head > div {
+    display: grid;
+    gap: 0.1rem;
+  }
+  .comment-scene-cast-head span,
+  .comment-scene-cast-list label span {
+    color: #8b393e;
+    font: 700 0.52rem/1.2 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .comment-scene-cast-head strong {
+    color: var(--ink);
+    font: 700 0.84rem/1.2 'Cinzel', serif;
+  }
+  .comment-scene-cast-head button,
+  .comment-scene-cast-remove {
+    border: 1px solid rgba(139,44,46,0.34);
+    background: rgba(139,44,46,0.1);
+    color: #762e34;
+    cursor: pointer;
+    padding: 0.38rem 0.55rem;
+    font: 700 0.55rem/1.2 'Cinzel', serif;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .comment-scene-cast-head button:disabled { opacity: 0.48; cursor: default; }
+  .comment-scene-cast > p {
+    margin: 0.48rem 0 0.58rem;
+    color: var(--ink-faded);
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+  .comment-scene-cast-list {
+    display: grid;
+    gap: 0.36rem;
+  }
+  .comment-scene-cast-list article {
+    display: grid;
+    grid-template-columns: 38px minmax(12rem, 0.8fr) minmax(10rem, 1fr) auto;
+    align-items: center;
+    gap: 0.48rem;
+    padding: 0.38rem;
+    border: 1px solid rgba(139,105,20,0.18);
+    background: rgba(255,255,255,0.2);
+  }
+  .comment-scene-cast-list img,
+  .comment-scene-cast-placeholder {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    display: grid;
+    place-items: center;
+    background: #302121;
+    color: #d3ad68;
+  }
+  .comment-scene-cast-list label { display: grid; gap: 0.15rem; }
+  .comment-scene-cast-list input {
+    min-width: 0;
+    border: 1px solid rgba(139,105,20,0.25);
+    background: rgba(255,250,232,0.66);
+    color: var(--ink);
+    padding: 0.35rem 0.45rem;
+    font: 600 0.78rem/1.2 'EB Garamond', serif;
+  }
+  .comment-scene-cast-list code {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--ink-faded);
+    font-size: 0.62rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .comment-scene-cast-remove { width: 2rem; height: 2rem; padding: 0; }
+  .comment-scene-cast-empty {
+    padding: 0.55rem;
+    border: 1px dashed rgba(139,105,20,0.24);
+    color: var(--ink-faded);
+    font-size: 0.74rem;
+    font-style: italic;
   }
   .comment-segment-add:hover,
   .comment-segment-type:hover,

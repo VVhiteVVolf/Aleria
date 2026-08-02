@@ -9,6 +9,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-module-insert-form-after',
   'open-attachment-form-after',
   'open-edit-comment',
+  'open-scene-time-insert-after',
   'open-edit-showcase-form',
   'open-edit-module-insert-form',
   'open-edit-attachment-form',
@@ -105,6 +106,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'open-edit-comment') {
     openEditComment(commentId);
+    return;
+  }
+  if (action === 'open-scene-time-insert-after') {
+    openSceneTimeEventDialogAfter(commentId);
     return;
   }
   if (action === 'open-edit-showcase-form') {

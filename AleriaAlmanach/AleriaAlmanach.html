@@ -16,10 +16,11 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-<link rel="stylesheet" href="./styles/comments.css?v=20260713-language-bubbles-v1">
+<link rel="stylesheet" href="./styles/comments.css?v=20260802-brandhof-combat-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
-<link rel="stylesheet" href="./styles/scene-dice.css?v=20260801-scene-dice-simple-v9">
+<link rel="stylesheet" href="./styles/scene-dice.css?v=20260802-dice-audio-v1">
+<link rel="stylesheet" href="./styles/combat.css?v=20260802-combat-feedback-v3">
 <link rel="stylesheet" href="./styles/scene-inventory.css?v=20260710-scene-inventory-v2">
 <link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260711-scene-clock-v3">
@@ -27,9 +28,11 @@
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260520-cleanup-v1">
-<link rel="stylesheet" href="./styles/comment-composer.css?v=20260715-comment-wrap-v1">
+<link rel="stylesheet" href="./styles/comment-composer.css?v=20260802-comment-layout-v2">
 <link rel="stylesheet" href="./styles/session.css?v=20260710-session-status-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20260726-character-avatars-v1">
+<link rel="stylesheet" href="./styles/character-combat-profile.css?v=20260802-combat-sheet-v4">
+<link rel="stylesheet" href="./styles/creatures.css?v=20260802-creatures-v3">
 <link rel="stylesheet" href="./styles/character-genealogy.css?v=20260717-genealogy-living-filter-v1">
 <link rel="stylesheet" href="./styles/module-editor.css?v=20260709-scene-module-import-export-v1">
 <link rel="stylesheet" href="./styles/aleria-calendar.css?v=20260723-aleria-calendar-v1">
@@ -66,13 +69,14 @@
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260712-dashboard-readable-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
+<link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260802-comment-combat-profile-v1">
   <!-- Firebase -->
-  <script type="module" src="./firebase.js?v=20260703-module-insert-json-v4"></script>
+  <script type="module" src="./firebase.js?v=20260802-combat-evaluation-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260717-genealogy-living-filter-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
-  <script src="./data/sections.js?v=20260713-argenti-stoicheia-v1" defer></script>
+  <script src="./data/sections.js?v=20260802-brandhof-combat-v1" defer></script>
   <script src="./modules/house-warriors/house-warriors-data.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
@@ -132,7 +136,7 @@
   <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260625-character-inventory-itemdb-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20260802-combat-mvp-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20260712-image-tabs-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260709-row-schema-pilot-v1" defer></script>
@@ -211,29 +215,32 @@
   <script src="./modules/dashboard/dashboard-state.js?v=20260712-continuation-v1" defer></script>
   <script src="./modules/archive/archive-dashboard.js?v=20260713-page-one-icon-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20260712-hierarchy-browser-v1" defer></script>
-  <script src="./modules/characters/character-data.js?v=20260703-character-dashboard-v1" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20260802-brandhof-combat-v1" defer></script>
+  <script src="./modules/characters/character-data.js?v=20260802-combat-profile-v1" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-tabs.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260602-character-subtabs-v1" defer></script>
   <script src="./modules/characters/character-inventory-profile.js?v=20260625-character-inventory-itemdb-v1" defer></script>
+  <script type="module" src="./modules/characters/character-combat-profile.js?v=20260802-combat-sheet-v4"></script>
+  <script type="module" src="./modules/creatures/creature-system.js?v=20260802-brandhof-combat-v1"></script>
   <script src="./modules/characters/character-avatar-import.js?v=20260726-character-avatars-v1" defer></script>
-  <script src="./modules/characters/character-profile.js?v=20260726-character-avatars-v1" defer></script>
-  <script src="./modules/characters/character-bulk-actions.js?v=20260611-character-bulk-v1" defer></script>
+  <script src="./modules/characters/character-profile.js?v=20260802-combat-profile-v1" defer></script>
+  <script src="./modules/characters/character-bulk-actions.js?v=20260802-combat-profile-v1" defer></script>
   <script src="./modules/characters/character-dashboard.js?v=20260703-character-dashboard-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20260703-character-dashboard-v1" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20260802-creature-picker-v1" defer></script>
   <script src="./modules/characters/character-profile-events.js?v=20260726-character-avatars-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-renderer.js?v=20260710-scene-inventory-v2" defer></script>
-  <script type="module" src="./modules/scene-dice/scene-dice-bridge.js?v=20260801-scene-dice-simple-v9"></script>
+  <script type="module" src="./modules/scene-dice/scene-dice-bridge.js?v=20260802-dice-audio-v2"></script>
   <script type="module" src="./modules/scene-dice/scene-dice-participants.js?v=20260801-scene-dice-simple-v9"></script>
-  <script type="module" src="./modules/scene-dice/scene-dice-narration.js?v=20260801-scene-dice-simple-v9"></script>
-  <script src="./modules/scene-dice/scene-dice-state.js?v=20260801-scene-dice-simple-v9" defer></script>
-  <script src="./modules/scene-dice/scene-dice-ui.js?v=20260801-scene-dice-simple-v9" defer></script>
-  <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260801-scene-dice-simple-v9" defer></script>
+  <script type="module" src="./modules/scene-dice/scene-dice-narration.js?v=20260802-combat-sheet-v4"></script>
+  <script type="module" src="./modules/combat/combat-controller.js?v=20260802-comment-combat-profile-v1"></script>
+  <script src="./modules/scene-dice/scene-dice-state.js?v=20260802-dice-default-simple-v1" defer></script>
+  <script src="./modules/scene-dice/scene-dice-ui.js?v=20260802-dice-default-simple-v1" defer></script>
+  <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-time/scene-time-state.js?v=20260711-scene-clock-v3" defer></script>
   <script src="./modules/scene-time/scene-time-ui.js?v=20260711-scene-clock-v5" defer></script>
   <script src="./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2" defer></script>
@@ -241,50 +248,53 @@
   <script src="./modules/scene-polls/scene-polls-state.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/scene-polls/scene-polls-ui.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/comments/comments-spell-fonts.js?v=20260713-language-bubbles-v2" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20260713-language-bubbles-v1" defer></script>
+  <script src="./modules/comments/comments-combat-mini-profile.js?v=20260802-comment-combat-profile-v1" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20260802-comment-combat-profile-v1" defer></script>
+  <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
-  <script src="./modules/comments/comments-routing.js?v=20260618-trade-catalog-v1" defer></script>
+  <script src="./modules/comments/comments-routing.js?v=20260802-comment-combat-profile-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260602-edit-preview-toggle-v2" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20260711-scene-clock-v1" defer></script>
-  <script src="./modules/comments/comments-backend.js?v=20260703-module-insert-json-v4" defer></script>
-  <script src="./modules/comments/comments-form-state.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-form.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20260713-language-bubbles-v1" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20260713-language-bubbles-v1" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20260802-combat-evaluation-v1" defer></script>
+  <script src="./modules/comments/comments-backend.js?v=20260802-combat-evaluation-v1" defer></script>
+  <script src="./modules/comments/comments-form-state.js?v=20260802-brandhof-combat-v1" defer></script>
+  <script src="./modules/comments/comments-scene-cast.js?v=20260802-scene-cast-v1" defer></script>
+  <script src="./modules/comments/comments-form.js?v=20260802-brandhof-combat-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20260802-comment-layout-v2" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20260802-comment-layout-v2" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260710-bubble-redesign-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20260713-language-bubbles-v1" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20260802-brandhof-combat-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/comments/comments-thread.js?v=20260711-scene-clock-v1" defer></script>
+  <script src="./modules/comments/comments-thread.js?v=20260802-brandhof-combat-v1" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260711-scene-clock-v2" defer></script>
-  <script src="./modules/scene-dice/scene-dice-events.js?v=20260801-scene-dice-simple-v9" defer></script>
+  <script src="./modules/scene-dice/scene-dice-events.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-polls/scene-polls-events.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/comments/comments-jump.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-submit.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/comments/comments-submit.js?v=20260802-creature-picker-v1" defer></script>
   <script src="./modules/comments/comments-showcase.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
-  <script src="./modules/comments/comments-edit-state.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20260713-language-bubbles-v1" defer></script>
+  <script src="./modules/comments/comments-edit-state.js?v=20260802-brandhof-combat-v1" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20260802-comment-layout-v2" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20260710-bubble-redesign-v1" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20260713-language-bubbles-v1" defer></script>
-  <script src="./modules/comments/comments-edit-character-picker.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-edit-submit.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20260802-creature-picker-v1" defer></script>
+  <script src="./modules/comments/comments-edit-character-picker.js?v=20260802-creature-picker-v1" defer></script>
+  <script src="./modules/comments/comments-edit-submit.js?v=20260802-creature-picker-v1" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
-  <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260618-trade-catalog-v1" defer></script>
+  <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260802-combat-sheet-v4" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-retrieval.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/archive/archive-dashboard-insights.js?v=20260616-dashboard-insights-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-stats.js?v=20260605-ai-context-v1" defer></script>
@@ -364,8 +374,8 @@
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260520-cleanup-v1" defer></script>
-<script src="./modules/comments/comments-segment-events.js?v=20260713-language-bubbles-v1" defer></script>
-<script src="./modules/comments/comments-assistant.js?v=20260613-comment-assistant-v1" defer></script>
+<script src="./modules/comments/comments-segment-events.js?v=20260802-brandhof-combat-v1" defer></script>
+<script src="./modules/comments/comments-assistant.js?v=20260802-creature-picker-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-action-events.js?v=20260709-scene-module-import-export-v1" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
@@ -379,6 +389,7 @@
     <!-- Modus-Umschalter -->
     <div class="cf-mode-toggle">
       <button class="cf-mode-btn active" id="cf-mode-char" type="button" data-action="set-comment-mode" data-mode="charakter">👤 Charakter</button>
+      <button class="cf-mode-btn cf-mode-btn-creature" id="cf-mode-creature" type="button" data-action="set-comment-mode" data-mode="creature">☠ Kreatur</button>
       <button class="cf-mode-btn" id="cf-mode-narrator" type="button" data-action="set-comment-mode" data-mode="narrator">✦ Erzähler</button>
     </div>
 
@@ -395,8 +406,8 @@
       </div>
       <!-- Charakter auswählen -->
       <div>
-        <label>Charakter wählen</label>
-        <div class="cf-player-filter" aria-label="Spielerfilter">
+        <label id="cf-actor-select-label">Charakter wählen</label>
+        <div class="cf-player-filter" id="cf-player-filter" aria-label="Spielerfilter">
           <div class="cf-player-filter-head">
             <span class="cf-player-filter-kicker">Sicht</span>
             <span id="cf-player-filter-active">Alle Figuren</span>
@@ -416,6 +427,7 @@
           <span id="cf-selected-name" style="font-style:italic;font-size:0.75rem;color:var(--gold)"></span>
           <button class="cf-char-manual-toggle" id="cf-manual-toggle" type="button" data-action="toggle-manual-mode">+ Manuell eingeben</button>
         </div>
+        <div id="cf-creature-scene-cast" class="comment-scene-cast" hidden></div>
       </div>
       <!-- Emote picker -->
       <div id="cf-emote-section" style="display:none">
@@ -481,13 +493,6 @@
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="action">+ Handlung</button>
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="thought">+ Gedanke</button>
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="whisper">+ Zu Flüstern</button>
-      </div>
-      <div class="comment-kind-toggle comment-legacy-editor" aria-label="Kommentar-Typ" hidden>
-        <button type="button" class="comment-kind-btn active" data-action="set-comment-kind" data-comment-kind="speech">Rede</button>
-        <button type="button" class="comment-kind-btn" data-action="set-comment-kind" data-comment-kind="action">Handlung</button>
-        <button type="button" class="comment-kind-btn" data-action="set-comment-kind" data-comment-kind="thought">Gedanke</button>
-        <button type="button" class="comment-kind-btn" data-action="set-comment-kind" data-comment-kind="whisper">Zu Flüstern</button>
-        <button type="button" class="comment-kind-btn" data-action="set-comment-kind" data-comment-kind="shout">Rufen</button>
       </div>
       <div class="fmt-textarea-wrap comment-legacy-editor" hidden>
       <div class="fmt-toolbar">
@@ -834,12 +839,13 @@
       <!-- Modus-Toggle -->
       <div class="cf-mode-toggle">
         <button class="cf-mode-btn active" id="ec-mode-char" type="button" data-action="set-edit-mode" data-mode="charakter">👤 Charakter</button>
+        <button class="cf-mode-btn cf-mode-btn-creature" id="ec-mode-creature" type="button" data-action="set-edit-mode" data-mode="creature">☠ Kreatur</button>
         <button class="cf-mode-btn" id="ec-mode-narrator" type="button" data-action="set-edit-mode" data-mode="narrator">✦ Erzähler</button>
       </div>
 
       <!-- Charakter-Bereich -->
       <div id="ec-char-section">
-        <label style="font-family:'Cinzel',serif;font-size:0.68rem;color:var(--gold);letter-spacing:0.08em;">Charakter wählen</label>
+        <label id="ec-actor-select-label" style="font-family:'Cinzel',serif;font-size:0.68rem;color:var(--gold);letter-spacing:0.08em;">Charakter wählen</label>
         <div class="comment-form-search" style="margin-top:0.4rem;">
           <input type="search" id="ec-char-search" class="comment-form-search-input" placeholder="Figur suchen..." autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false" data-lpignore="true" data-form-type="other">
           <div id="ec-char-search-empty" class="comment-form-search-empty">Keine passende Figur gefunden. Du kannst stattdessen manuell bearbeiten.</div>
@@ -877,13 +883,6 @@
           <button type="button" class="comment-segment-add" data-action="add-edit-comment-segment" data-kind="action">+ Handlung</button>
           <button type="button" class="comment-segment-add" data-action="add-edit-comment-segment" data-kind="thought">+ Gedanke</button>
           <button type="button" class="comment-segment-add" data-action="add-edit-comment-segment" data-kind="whisper">+ Zu Flüstern</button>
-        </div>
-        <div class="comment-kind-toggle comment-legacy-editor" aria-label="Kommentar-Typ" hidden>
-          <button type="button" class="comment-kind-btn active" data-action="set-edit-comment-kind" data-edit-comment-kind="speech">Rede</button>
-          <button type="button" class="comment-kind-btn" data-action="set-edit-comment-kind" data-edit-comment-kind="action">Handlung</button>
-          <button type="button" class="comment-kind-btn" data-action="set-edit-comment-kind" data-edit-comment-kind="thought">Gedanke</button>
-          <button type="button" class="comment-kind-btn" data-action="set-edit-comment-kind" data-edit-comment-kind="whisper">Zu Flüstern</button>
-          <button type="button" class="comment-kind-btn" data-action="set-edit-comment-kind" data-edit-comment-kind="shout">Rufen</button>
         </div>
         <div class="fmt-textarea-wrap comment-legacy-editor" hidden>
       <div class="fmt-toolbar">
@@ -973,6 +972,7 @@
         <button class="char-profile-tab active" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="info">✦ Profil</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="bilder">⊞ Bilder &amp; Emotes</button>
         <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="inventory">✦ Inventar</button>
+        <button class="char-profile-tab" type="button" data-char-profile-action="switch-tab" data-char-profile-tab="combat">⚔ Kampfdaten</button>
       </div>
       <button class="char-profile-close" type="button" data-char-profile-action="close" aria-label="Charakterprofil schließen">✕</button>
     </div>
@@ -1166,15 +1166,43 @@
       </div>
     </div>
 
+    <!-- TAB 4: KAMPFDATEN -->
+    <div class="char-tab-panel cp-combat-tab" id="cp-tab-combat">
+      <div id="cp-combat-sheet-root" class="cp-combat-sheet-root" aria-live="polite"></div>
+    </div>
+
     <!-- Actions -->
     <div class="char-profile-actions">
       <button class="char-delete-btn" id="cp-delete-btn" type="button" data-char-profile-action="delete" style="display:none">Löschen</button>
       <span class="char-status-msg" id="cp-save-status"></span>
+      <button class="comment-btn-cancel" type="button" data-char-profile-action="import">Importieren</button>
       <button class="comment-btn-cancel" type="button" data-char-profile-action="export">Exportieren</button>
       <button class="comment-btn-cancel" type="button" data-char-profile-action="close">Abbrechen</button>
       <button class="char-save-btn" type="button" data-char-profile-action="save">Speichern</button>
     </div>
 
+  </div>
+</div>
+
+<!-- KREATURENBOGEN -->
+<div id="creature-profile-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="creature-profile-title" tabindex="-1">
+  <div class="creature-profile-card">
+    <header class="creature-profile-head">
+      <div>
+        <div class="creature-profile-kicker">Aleria · NPC- und Monsterprofil</div>
+        <h2 id="creature-profile-title">Kreaturenbogen</h2>
+      </div>
+      <button type="button" class="creature-profile-close" data-creature-action="close" aria-label="Kreaturenbogen schließen">✕</button>
+    </header>
+    <div id="creature-sheet-root" class="creature-sheet-root"></div>
+    <footer class="creature-profile-actions">
+      <button type="button" class="creature-danger-button" data-creature-action="delete" hidden>Löschen</button>
+      <span id="creature-save-status" class="creature-save-status" role="status" aria-live="polite"></span>
+      <button type="button" class="creature-secondary-button" data-creature-action="import-current">Importieren</button>
+      <button type="button" class="creature-secondary-button" data-creature-action="export-current">Exportieren</button>
+      <button type="button" class="creature-secondary-button" data-creature-action="close">Abbrechen</button>
+      <button type="button" class="creature-primary-button" data-creature-action="save">Online speichern</button>
+    </footer>
   </div>
 </div>
 

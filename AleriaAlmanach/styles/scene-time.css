@@ -219,6 +219,16 @@
   padding: 0.78rem;
 }
 
+.scene-time-dialog-hint {
+  border: 1px solid rgba(139,105,20,0.4);
+  background: rgba(255,215,120,0.16);
+  padding: 0.6rem 0.78rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
 .scene-time-dialog-panel label,
 .scene-time-dialog-panel label span {
   display: block;

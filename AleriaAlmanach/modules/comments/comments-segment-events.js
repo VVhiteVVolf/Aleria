@@ -110,6 +110,14 @@ function handleCommentSegmentTextInput(event) {
     setEditCommentSegmentDuration(field.dataset.segmentId || '', field.value);
     return;
   }
+  if (field?.matches?.('[data-action="set-comment-segment-actor"]')) {
+    setCommentSegmentActor(field.dataset.segmentId || '', field.value);
+    return;
+  }
+  if (field?.matches?.('[data-action="set-edit-comment-segment-actor"]')) {
+    setEditCommentSegmentActor(field.dataset.segmentId || '', field.value);
+    return;
+  }
   if (!field?.matches?.('.comment-segment-textarea[data-action]')) return;
   rememberCommentTextareaSelection(field);
 
@@ -132,6 +140,7 @@ function handleCommentSegmentSelection(event) {
 document.addEventListener('mousedown', handleCommentSegmentActionMouseDown);
 document.addEventListener('click', handleCommentSegmentActionClick);
 document.addEventListener('input', handleCommentSegmentTextInput);
+document.addEventListener('change', handleCommentSegmentTextInput);
 document.addEventListener('keyup', handleCommentSegmentSelection);
 document.addEventListener('mouseup', handleCommentSegmentSelection);
 document.addEventListener('select', handleCommentSegmentSelection);

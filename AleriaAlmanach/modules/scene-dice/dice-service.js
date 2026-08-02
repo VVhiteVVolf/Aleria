@@ -1,6 +1,7 @@
 import { DiceFallbackEngine } from './dice-fallback-engine.js';
-import { DiceHistoryRepository } from './dice-history.js';
+import { DiceHistoryRepository } from './dice-history.js?v=20260802-dice-audio-v2';
 import { DiceParserAdapter } from './dice-parser-adapter.js';
+import { DiceAudioFeedback } from './dice-audio.js';
 import { getDiceAppearances } from './dice-appearance.js';
 import { SceneDicePool } from './dice-pool.js';
 import { validateDiceNotation } from './dice-validation.js';
@@ -28,17 +29,20 @@ class SceneDiceService {
     this.history = new DiceHistoryRepository();
     this.parser = new DiceParserAdapter();
     this.pool = new SceneDicePool();
+    this.audio = new DiceAudioFeedback();
     this.fallbackEngine = new DiceFallbackEngine();
     this.engine = null;
     this.enginePromise = null;
     this.engineError = null;
     this.busy = false;
     this.container = null;
+    this.engineContainer = null;
     const storedSettings = this.history.getSettings();
     this.settings = {
       ...storedSettings,
       reducedMotion: storedSettings.reducedMotion || globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true
     };
+    this.audio.configure(this.settings);
   }
 
   validate(notation) {
@@ -46,15 +50,24 @@ class SceneDiceService {
   }
 
   async prepare(container) {
+    if (container && this.engine && this.engineContainer && container !== this.engineContainer) {
+      this.engine.clear();
+      this.engine = null;
+      this.enginePromise = null;
+      container.replaceChildren();
+    }
     if (container) this.container = container;
     if (!this.settings.animationEnabled || this.engineError) return this.fallbackEngine;
     if (this.engine) return this.engine;
     if (!this.container) throw new Error('Der 3D-Würfelbereich wurde nicht gefunden.');
     if (!this.enginePromise) {
-      this.enginePromise = import('./dice-engine.js')
-        .then(module => module.createDiceBoxEngine(this.container, this.settings))
+      this.enginePromise = import('./dice-engine.js?v=20260802-dice-audio-v1')
+        .then(module => module.createDiceBoxEngine(this.container, this.settings, {
+          onDieComplete: die => this.audio.playLanding(die)
+        }))
         .then(engine => {
           this.engine = engine;
+          this.engineContainer = this.container;
           return engine;
         })
         .catch(error => {
@@ -71,6 +84,7 @@ class SceneDiceService {
     this.busy = true;
     try {
       this.validate(notation);
+      this.audio.startRoll(notation, this.settings);
       const engine = this.settings.animationEnabled
         ? await this.prepare(container)
         : this.fallbackEngine;
@@ -81,14 +95,18 @@ class SceneDiceService {
         : 'Die Animation ist deaktiviert; der Wurf wurde im Textmodus ausgeführt.';
       const historyEntry = this.history.add(result);
       result.id = historyEntry.id;
-      if (this.settings.soundEnabled) this.#playResultSound(result);
+      this.audio.finishRoll(result, { textMode: engine.isFallback });
       return result;
+    } catch (error) {
+      this.audio.cancelRoll();
+      throw error;
     } finally {
       this.busy = false;
     }
   }
 
   clear() {
+    this.audio.cancelRoll();
     this.engine?.clear();
     this.fallbackEngine.clear();
   }
@@ -139,6 +157,7 @@ class SceneDiceService {
 
   async updateSettings(patch = {}) {
     this.settings = this.history.setSettings(patch);
+    this.audio.configure(this.settings);
     if (this.engine) await this.engine.updateSettings(this.settings);
     return this.getSettings();
   }
@@ -148,29 +167,9 @@ class SceneDiceService {
       busy: this.busy,
       mode: this.engine && !this.engine.isFallback ? '3d' : 'text',
       failed: !!this.engineError,
+      audio: this.audio.getState(),
       message: this.engineError ? '3D-Animation nicht verfügbar; sicherer Textmodus aktiv.' : ''
     };
-  }
-
-  #playResultSound(result) {
-    try {
-      const AudioContextClass = globalThis.AudioContext || globalThis.webkitAudioContext;
-      if (!AudioContextClass) return;
-      const context = new AudioContextClass();
-      const oscillator = context.createOscillator();
-      const gain = context.createGain();
-      oscillator.type = 'triangle';
-      oscillator.frequency.value = result.critical === 'success' ? 660 : result.critical === 'failure' ? 150 : 260;
-      gain.gain.setValueAtTime(0.0001, context.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.08, context.currentTime + 0.015);
-      gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.18);
-      oscillator.connect(gain).connect(context.destination);
-      oscillator.start();
-      oscillator.stop(context.currentTime + 0.2);
-      oscillator.addEventListener('ended', () => context.close(), { once: true });
-    } catch (error) {
-      console.warn('Würfelton konnte nicht abgespielt werden.', error);
-    }
   }
 }
 

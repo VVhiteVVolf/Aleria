@@ -157,6 +157,16 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
   if (!scroll) return;
   scroll.dataset.commentThreadId = entryId;
   let pageTarget = options.page;
+  const withBuiltinTestComments = comments => {
+    const incoming = Array.isArray(comments) ? comments : [];
+    const builtins = window.AleriaCombatTestScene?.getComments?.(entryId) || [];
+    if (!builtins.length) return incoming;
+    const ids = new Set(incoming.map(comment => String(comment?.id || '')));
+    return sortCommentsByTimeline([
+      ...builtins.filter(comment => !ids.has(String(comment.id || ''))),
+      ...incoming
+    ]);
+  };
   const applyPageTarget = comments => {
     if (pageTarget == null) return;
     setCommentPageTarget(entryId, pageTarget, comments);
@@ -182,12 +192,13 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
   if (typeof backend.subscribeComments === 'function') {
     _commentLiveThreadId = entryId;
     _commentLiveUnsubscribe = backend.subscribeComments(entryId, comments => {
-      _commentCache[entryId] = comments;
-      applyPageTarget(comments);
+      const mergedComments = withBuiltinTestComments(comments);
+      _commentCache[entryId] = mergedComments;
+      applyPageTarget(mergedComments);
       const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
       if (currentScroll?.dataset.commentThreadId === entryId) {
-        renderCommentsToScroll(currentScroll, comments);
-        maybeAutoScrollComments(currentScroll, comments);
+        renderCommentsToScroll(currentScroll, mergedComments);
+        maybeAutoScrollComments(currentScroll, mergedComments);
       }
       if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
     }, async error => {
@@ -196,7 +207,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
       }
       const fallbackBackend = getLocalCommentBackend();
       showCommentFallbackNotice();
-      const comments = await fallbackBackend.loadComments(entryId);
+      const comments = withBuiltinTestComments(await fallbackBackend.loadComments(entryId));
       _commentCache[entryId] = comments;
       applyPageTarget(comments);
       const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
@@ -208,7 +219,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
     return;
   }
 
-  const comments = await backend.loadComments(entryId);
+  const comments = withBuiltinTestComments(await backend.loadComments(entryId));
   _commentCache[entryId] = comments;
   applyPageTarget(comments);
   renderCommentsToScroll(scroll, comments);
@@ -377,12 +388,16 @@ function renderCommentInsertControl(comment, idx, comments) {
   const moduleInsertButton = currentThreadKind === 'session'
     ? `<button type="button" data-action="open-module-insert-form-after" data-comment-id="${safeId}">Modul danach</button>`
     : '';
+  const sceneTimeInsertButton = currentThreadKind === 'session'
+    ? `<button type="button" data-action="open-scene-time-insert-after" data-comment-id="${safeId}" title="Alle folgenden Beitraege bis zum naechsten Tag-Marker zu einem benannten Tag zusammenfassen">Tag danach benennen</button>`
+    : '';
   return `
     <div class="comment-insert-control">
       <button type="button" data-action="open-comment-form-after" data-comment-id="${safeId}">${label}</button>
       <button type="button" data-action="open-showcase-form-after" data-comment-id="${safeId}">Objekt danach</button>
       ${moduleInsertButton}
       <button type="button" data-action="open-attachment-form-after" data-comment-id="${safeId}">Anhang danach</button>
+      ${sceneTimeInsertButton}
     </div>`;
 }
 

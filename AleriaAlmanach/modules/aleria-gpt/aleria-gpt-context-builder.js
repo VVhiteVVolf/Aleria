@@ -1,4 +1,4 @@
-const ALERIA_GPT_CONTEXT_SCHEMA_VERSION = 1;
+const ALERIA_GPT_CONTEXT_SCHEMA_VERSION = 2;
 
 function normalizeAleriaGptKey(value) {
   if (typeof normalizeSearchText === 'function') return normalizeSearchText(value || '');
@@ -11,13 +11,13 @@ function normalizeAleriaGptKey(value) {
 }
 
 function compactAleriaGptText(value) {
-  return String(value || '')
+  return String(value ?? '')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
 function decodeAleriaGptEntities(value) {
-  const text = String(value || '');
+  const text = String(value ?? '');
   if (!text || typeof document === 'undefined') return text;
   const textarea = document.createElement('textarea');
   textarea.innerHTML = text;
@@ -25,7 +25,7 @@ function decodeAleriaGptEntities(value) {
 }
 
 function toAleriaGptPlainText(value) {
-  let text = String(value || '');
+  let text = String(value ?? '');
   if (!text) return '';
 
   text = text
@@ -166,6 +166,36 @@ function collectAleriaGptCharacters(options = {}) {
   }).filter(character => character.id || character.name);
 }
 
+function collectAleriaGptCreatures() {
+  const source = window.AleriaCreatures?.getAll?.() || [];
+  return source.map(creature => {
+    const structuredFacts = [];
+    collectAleriaGptStructuredFacts({
+      identity: {
+        type: creature?.type,
+        species: creature?.species,
+        habitat: creature?.habitat,
+        size: creature?.size,
+        challengeRating: creature?.challengeRating,
+        level: creature?.level,
+        instanceOrdinal: creature?.instanceOrdinal
+      },
+      combatProfile: creature?.combatProfile,
+      loot: creature?.loot,
+      notes: creature?.notes
+    }, structuredFacts, 'kreatur', 0);
+    return {
+      id: String(creature?.id || '').trim(),
+      entityType: 'creature',
+      name: String(creature?.name || '').trim(),
+      title: [creature?.type, creature?.species].filter(Boolean).join(' · '),
+      aliases: [],
+      templateId: String(creature?.templateId || '').trim(),
+      profileText: Array.from(new Set(structuredFacts.filter(Boolean))).join('\n')
+    };
+  }).filter(creature => creature.id || creature.name);
+}
+
 function collectAleriaGptCast(source, characterIndex) {
   const cast = [];
   const seen = new Set();
@@ -201,7 +231,7 @@ function pushAleriaGptTextFragment(target, value) {
 
 function isAleriaGptTechnicalField(path) {
   const key = String(path || '').toLowerCase();
-  return /(?:^|\.)(id|uuid|key|schema|version|src|url|href|link|image|img|avatar|portrait|background|icon|color|style|class|html)(?:$|\.)/.test(key);
+  return /(?:^|\.)(id|uuid|key|schema|version|src|url|href|link|image|img|avatar|portrait|icon|color|style|class|html)(?:$|\.)/.test(key);
 }
 
 function formatAleriaGptFactLabel(path) {
@@ -540,6 +570,7 @@ function summarizeAleriaGptContext(payload) {
   const storedCommentSegmentCount = payload.comments.reduce((sum, comment) => sum + comment.segments.length, 0);
   return {
     characterCount: payload.characters.length,
+    creatureCount: payload.creatures?.length || 0,
     moduleCount: payload.modules.length,
     pageCount,
     dialogueCount,
@@ -552,7 +583,8 @@ function summarizeAleriaGptContext(payload) {
 async function buildAleriaGptContext(options = {}) {
   const scope = normalizeAleriaGptScope(options);
   const characters = collectAleriaGptCharacters(options);
-  const characterIndex = getAleriaGptCharacterIndex(characters);
+  const creatures = collectAleriaGptCreatures();
+  const characterIndex = getAleriaGptCharacterIndex([...characters, ...creatures]);
   const modules = collectAleriaGptModules(characterIndex);
   const comments = collectAleriaGptStoredComments(await loadAleriaGptComments(), characterIndex);
   const payload = filterAleriaGptContextByScope({
@@ -561,6 +593,7 @@ async function buildAleriaGptContext(options = {}) {
     generatedAt: new Date().toISOString(),
     scope,
     characters,
+    creatures,
     modules,
     comments
   }, scope, characterIndex);
@@ -569,6 +602,7 @@ async function buildAleriaGptContext(options = {}) {
     schemaVersion: payload.schemaVersion,
     scope: payload.scope,
     characters: payload.characters,
+    creatures: payload.creatures,
     modules: payload.modules,
     comments: payload.comments
   }));

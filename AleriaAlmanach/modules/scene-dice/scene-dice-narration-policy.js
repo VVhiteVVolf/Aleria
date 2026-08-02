@@ -1,3 +1,5 @@
+export const DEFAULT_SCENE_DICE_NARRATION_MODE = 'simple';
+
 const SCENE_DICE_NARRATION_MODES = Object.freeze([
   Object.freeze({
     id: 'immersive',
@@ -37,7 +39,9 @@ export function getSceneDiceNarrationModes() {
 
 export function normalizeSceneDiceNarrationMode(value) {
   const requested = String(value || '').trim();
-  return SCENE_DICE_NARRATION_MODES.some(mode => mode.id === requested) ? requested : 'immersive';
+  return SCENE_DICE_NARRATION_MODES.some(mode => mode.id === requested)
+    ? requested
+    : DEFAULT_SCENE_DICE_NARRATION_MODE;
 }
 
 export function getSceneDiceNarrationMode(value) {

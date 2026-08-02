@@ -64,7 +64,7 @@ function getCommentAssistantActor() {
     const character = getAvailableCommentCharacterById(_selectedCharId);
     if (character) {
       return {
-        mode: 'character',
+        mode: character.entityType === 'creature' ? 'creature' : 'character',
         name: String(character.name || '').trim(),
         title: String(character.title || '').trim(),
         characterId: String(_selectedCharId || '').trim(),

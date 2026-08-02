@@ -1,5 +1,6 @@
 // Compatibility-facing constants for scene comments and the classic-script UI.
 const SCENE_DICE_EVENT_KIND = 'scene-dice-event';
+const SCENE_DICE_DEFAULT_NARRATION_MODE = 'simple';
 const SCENE_DICE_ALLOWED_SIDES = new Set([4, 6, 8, 10, 12, 20, 100]);
 const SCENE_DICE_ICONS = {
   4: '../IconOrdner/Würfel/D4_Physical.png',

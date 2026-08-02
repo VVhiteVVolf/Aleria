@@ -31,6 +31,11 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'import') {
+    openCurrentCharacterImportFilePicker();
+    return;
+  }
+
   if (action === 'save') {
     saveCharacter();
     return;

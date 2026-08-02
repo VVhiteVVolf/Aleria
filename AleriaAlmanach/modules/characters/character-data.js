@@ -70,6 +70,7 @@ function cloneCharacterRecord(char) {
     ...char,
     identity: normalizeCharacterIdentityRecord(char?.identity),
     genealogy: normalizeCharacterGenealogyRecord(char?.genealogy),
+    combatProfile: cloneCharacterStructuredValue(char?.combatProfile, undefined),
     playerOwner: normalizeCharacterPlayerOwner(char?.playerOwner || char?.playedBy || char?.player),
     aliases: Array.isArray(char?.aliases)
       ? char.aliases.map(alias => String(alias || '').trim()).filter(Boolean)
@@ -108,6 +109,7 @@ function mergeCharacterRecords(primary, fallback) {
     updatedAt: first.updatedAt || second.updatedAt || '',
     identity: normalizeCharacterIdentityRecord(first.identity?.worldPersonId ? first.identity : second.identity),
     genealogy: normalizeCharacterGenealogyRecord(hasCharacterGenealogyData(first.genealogy) ? first.genealogy : second.genealogy),
+    combatProfile: cloneCharacterStructuredValue(first.combatProfile || second.combatProfile, undefined),
     _builtin: !!(first._builtin || second._builtin),
     emotesOverride: !!first.emotesOverride,
   };
@@ -367,10 +369,16 @@ function getAvailableCommentCharacters() {
       return !seenIds.has(charId) && !seenNames.has(nameKey);
     });
 
-    return [...prioritized, ...remainder];
+    return appendAvailableCreatureActors([...prioritized, ...remainder]);
   }
 
-  return allCharacters;
+  return appendAvailableCreatureActors(allCharacters);
+}
+
+function appendAvailableCreatureActors(characters = []) {
+  const creatures = window.AleriaCreatures?.getSceneActors?.() || [];
+  const ids = new Set(characters.map(item => String(item?.id || '').trim()).filter(Boolean));
+  return [...characters, ...creatures.filter(item => !ids.has(String(item?.id || '').trim()))];
 }
 
 function getAvailableCommentCharacterById(id) {
@@ -419,3 +427,8 @@ function buildCharacterSearchText(char) {
 
   return normalizeSearchText(parts.filter(Boolean).join(' '));
 }
+
+document.addEventListener('aleria:creatures-changed', () => {
+  if (typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
+  window.AleriaSceneDiceParticipants?.refresh?.();
+});

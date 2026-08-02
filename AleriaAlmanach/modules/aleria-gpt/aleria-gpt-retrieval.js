@@ -58,7 +58,7 @@ function makeAleriaGptRetrievalNameKeys(character) {
 }
 
 function detectAleriaGptCharacters(queryInfo, context) {
-  return (context.characters || []).map(character => {
+  return [...(context.characters || []), ...(context.creatures || [])].map(character => {
     const keys = makeAleriaGptRetrievalNameKeys(character);
     const matchedKeys = keys.filter(key =>
       key && (
@@ -177,6 +177,22 @@ function collectAleriaGptRetrievalChunks(context) {
       text,
       maxLength: 1800,
       metadata: { faction: character.faction || '', profileLink: character.profileLink || '' }
+    }));
+  });
+
+  (context.creatures || []).forEach(creature => {
+    const text = [creature.name, creature.title, creature.profileText].filter(Boolean).join('\n');
+    if (!compactAleriaGptRetrievalText(text)) return;
+    chunks.push(makeAleriaGptChunk({
+      sourceType: 'creature-profile',
+      sourceRef: `creature:${creature.id || creature.name}`,
+      title: creature.name || creature.id,
+      speakerName: creature.name || '',
+      characterIds: [creature.id],
+      speakerNames: [creature.name],
+      text,
+      maxLength: 2600,
+      metadata: { entityType: 'creature', templateId: creature.templateId || '' }
     }));
   });
 
@@ -500,6 +516,7 @@ async function retrieveAleriaGptContext(query, options = {}) {
       totalChunks: chunks.length,
       returnedChunks: rankedChunks.length,
       characterCount: context.characters?.length || 0,
+      creatureCount: context.creatures?.length || 0,
       moduleCount: context.modules?.length || 0,
       commentCount: context.comments?.length || 0
     },

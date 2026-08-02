@@ -46,7 +46,7 @@ function getSceneDiceNarrationModes() {
 
 function buildSceneDiceNarrationModeOptions() {
   return getSceneDiceNarrationModes()
-    .map(mode => `<option value="${escapeHtml(mode.id)}">${escapeHtml(mode.label)}</option>`)
+    .map(mode => `<option value="${escapeHtml(mode.id)}"${mode.id === SCENE_DICE_DEFAULT_NARRATION_MODE ? ' selected' : ''}>${escapeHtml(mode.label)}</option>`)
     .join('');
 }
 
@@ -150,7 +150,8 @@ function ensureSceneDiceDialog() {
             <div class="scene-dice-settings-grid">
               <label><span>Wurfstärke</span><select id="scene-dice-throw-style"><option value="gentle">Ruhig</option><option value="balanced">Ausgewogen</option><option value="dramatic">Dramatisch</option></select></label>
               <label class="scene-dice-check"><input id="scene-dice-animation-enabled" type="checkbox" checked><span>3D-Animation verwenden</span></label>
-              <label class="scene-dice-check"><input id="scene-dice-sound-enabled" type="checkbox"><span>Ergebniston abspielen</span></label>
+              <label class="scene-dice-check"><input id="scene-dice-sound-enabled" type="checkbox"><span>Würfelgeräusche abspielen</span></label>
+              <label class="scene-dice-volume"><span>Lautstärke <output id="scene-dice-sound-volume-output" for="scene-dice-sound-volume">65 %</output></span><input id="scene-dice-sound-volume" type="range" min="0" max="100" step="5" value="65"></label>
               <label class="scene-dice-check"><input id="scene-dice-reduced-motion" type="checkbox"><span>Bewegung reduzieren</span></label>
               <label class="scene-dice-check"><input id="scene-dice-keep-pool" type="checkbox" checked><span>Pool nach dem Wurf behalten</span></label>
             </div>
@@ -211,12 +212,17 @@ function getSceneDiceModeLabel(mode) {
 }
 
 function getSceneDiceNarrationModeLabel(mode) {
-  return getSceneDiceNarrationModes().find(entry => entry.id === mode)?.label || 'Immersiv';
+  const modes = getSceneDiceNarrationModes();
+  return modes.find(entry => entry.id === mode)?.label
+    || modes.find(entry => entry.id === SCENE_DICE_DEFAULT_NARRATION_MODE)?.label
+    || 'Einfach würfeln';
 }
 
 function syncSceneDiceNarrationModeUi() {
   const select = document.getElementById('scene-dice-narration-mode');
-  const selected = getSceneDiceNarrationModes().find(mode => mode.id === select?.value) || getSceneDiceNarrationModes()[0];
+  const modes = getSceneDiceNarrationModes();
+  const selected = modes.find(mode => mode.id === select?.value)
+    || modes.find(mode => mode.id === SCENE_DICE_DEFAULT_NARRATION_MODE);
   const description = document.querySelector('[data-scene-dice-narration-mode-description]');
   if (description) description.textContent = selected?.description || '';
   const humor = document.getElementById('scene-dice-humor-enabled');
@@ -377,6 +383,14 @@ function syncSceneDiceSettings() {
     });
     const throwStyle = document.getElementById('scene-dice-throw-style');
     if (throwStyle) throwStyle.value = settings.throwStyle || 'balanced';
+    const soundVolume = document.getElementById('scene-dice-sound-volume');
+    const soundVolumeOutput = document.getElementById('scene-dice-sound-volume-output');
+    const volumePercent = Math.round(Math.min(1, Math.max(0, Number(settings.soundVolume) || 0)) * 100);
+    if (soundVolume) {
+      soundVolume.value = String(volumePercent);
+      soundVolume.disabled = settings.soundEnabled !== true;
+    }
+    if (soundVolumeOutput) soundVolumeOutput.textContent = `${volumePercent} %`;
   } catch { /* module still loading */ }
 }
 
@@ -396,7 +410,7 @@ function resetSceneDiceDialog() {
   if (purpose) purpose.value = '';
   if (situation) situation.value = '';
   if (rollType) rollType.value = 'general';
-  if (narrationMode) narrationMode.value = 'immersive';
+  if (narrationMode) narrationMode.value = SCENE_DICE_DEFAULT_NARRATION_MODE;
   if (humorEnabled) humorEnabled.checked = true;
   if (manualNarration) manualNarration.value = '';
   window.AleriaSceneDiceParticipants?.reset?.().catch(error => {

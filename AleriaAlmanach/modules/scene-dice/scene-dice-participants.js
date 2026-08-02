@@ -169,6 +169,7 @@ function renderParticipantAvatar(participant, className) {
 function getParticipantGroupLabel(participant) {
   if (participant.id === SCENE_DICE_NARRATOR_ID) return 'Erzähler und Umgebung';
   if (participant.scenePriority === 0) return 'Gerade in dieser Szene aktiv';
+  if (participant.entityType === 'creature') return 'Kreaturen & NSCs';
   if (participant.scenePriority === 1) return 'Szenenbesetzung';
   return 'Weitere Figuren';
 }
