@@ -1,7 +1,17 @@
 const DEFAULT_PROVIDER_BASE_URL = 'https://openrouter.ai/api/v1';
 const DEFAULT_MAX_TOKENS = 1200;
 const DEFAULT_TIMEOUT_MS = 30000;
-const DEFAULT_MAX_BODY_CHARS = 650000;
+const DEFAULT_MAX_BODY_CHARS = 180000;
+const DEFAULT_RATE_LIMIT_PER_MINUTE = 8;
+const DEFAULT_IP_RATE_LIMIT_PER_MINUTE = 20;
+const DEFAULT_DAILY_TOKEN_BUDGET = 12000;
+const DEFAULT_GLOBAL_DAILY_TOKEN_BUDGET = 200000;
+const FIREBASE_JWKS_URL = 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com';
+let firebaseJwksCache = { keys: {}, expiresAt: 0 };
+
+function resetFirebaseJwksCache() {
+  firebaseJwksCache = { keys: {}, expiresAt: 0 };
+}
 
 function getEnvText(env, key, fallback = '') {
   return String(env?.[key] || fallback).trim();
@@ -20,7 +30,7 @@ function getAllowedOrigins(env) {
 }
 
 function isOriginAllowed(origin, env) {
-  if (!origin) return true;
+  if (!origin) return false;
   const allowed = getAllowedOrigins(env);
   if (!allowed.length) return false;
   return allowed.includes(origin);
@@ -30,17 +40,90 @@ function corsHeaders(origin, env) {
   return {
     'Access-Control-Allow-Origin': origin && isOriginAllowed(origin, env) ? origin : 'null',
     'Access-Control-Allow-Methods': 'POST,OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Vary': 'Origin'
   };
 }
 
-function jsonResponse(payload, status = 200, origin = '', env = {}) {
+function base64UrlBytes(value) {
+  const normalized = String(value || '').replace(/-/g, '+').replace(/_/g, '/');
+  const padded = normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '=');
+  const binary = atob(padded);
+  return Uint8Array.from(binary, character => character.charCodeAt(0));
+}
+
+function decodeJwtPart(value) {
+  return JSON.parse(new TextDecoder().decode(base64UrlBytes(value)));
+}
+
+function getBearerToken(request) {
+  const match = String(request.headers.get('Authorization') || '').match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : '';
+}
+
+function getCacheMaxAge(headers) {
+  const match = String(headers?.get?.('cache-control') || '').match(/max-age=(\d+)/i);
+  return match ? Math.max(60, Number(match[1]) || 0) : 3600;
+}
+
+async function getFirebaseJwks(now = Date.now()) {
+  if (firebaseJwksCache.expiresAt > now && Object.keys(firebaseJwksCache.keys).length) return firebaseJwksCache.keys;
+  const response = await fetch(FIREBASE_JWKS_URL);
+  if (!response.ok) throw Object.assign(new Error('Firebase-SchlÃ¼ssel konnten nicht geladen werden.'), { status: 503 });
+  const keys = await response.json();
+  firebaseJwksCache = { keys, expiresAt: now + getCacheMaxAge(response.headers) * 1000 };
+  return keys;
+}
+
+async function verifyFirebaseIdToken(token, env, now = Date.now()) {
+  const projectId = getEnvText(env, 'ALERIA_FIREBASE_PROJECT_ID');
+  if (!projectId) throw Object.assign(new Error('Firebase-Authentifizierung ist nicht konfiguriert.'), { status: 503 });
+  const parts = String(token || '').split('.');
+  if (parts.length !== 3) throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+  let header;
+  let payload;
+  try {
+    header = decodeJwtPart(parts[0]);
+    payload = decodeJwtPart(parts[1]);
+  } catch {
+    throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+  }
+  const nowSeconds = Math.floor(now / 1000);
+  if (header.alg !== 'RS256' || !header.kid
+    || payload.aud !== projectId
+    || payload.iss !== `https://securetoken.google.com/${projectId}`
+    || !payload.sub || String(payload.sub).length > 128
+    || Number(payload.exp || 0) <= nowSeconds
+    || Number(payload.iat || 0) > nowSeconds + 60) {
+    throw Object.assign(new Error('Anmeldung abgelaufen oder ungÃ¼ltig.'), { status: 401 });
+  }
+  const jwks = await getFirebaseJwks(now);
+  const jwk = jwks[header.kid];
+  if (!jwk) throw Object.assign(new Error('AnmeldeschlÃ¼ssel ist nicht mehr gÃ¼ltig.'), { status: 401 });
+  const key = await crypto.subtle.importKey(
+    'jwk',
+    jwk,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false,
+    ['verify']
+  );
+  const verified = await crypto.subtle.verify(
+    'RSASSA-PKCS1-v1_5',
+    key,
+    base64UrlBytes(parts[2]),
+    new TextEncoder().encode(`${parts[0]}.${parts[1]}`)
+  );
+  if (!verified) throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+  return { uid: String(payload.sub), claims: payload };
+}
+
+function jsonResponse(payload, status = 200, origin = '', env = {}, extraHeaders = {}) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
-      ...corsHeaders(origin, env)
+      ...corsHeaders(origin, env),
+      ...extraHeaders
     }
   });
 }
@@ -150,6 +233,87 @@ async function fetchWithTimeout(url, options, timeoutMs) {
   }
 }
 
+function utcDayKey(now) {
+  return new Date(now).toISOString().slice(0, 10);
+}
+
+function nextUsageState(previous = {}, input = {}) {
+  const now = Number(input.now || Date.now());
+  const windowMs = Math.max(1000, Number(input.windowMs || 60000));
+  const maximumRequests = Math.max(0, Number(input.maximumRequests || 0));
+  const tokenReservation = Math.max(0, Number(input.tokenReservation || 0));
+  const dailyTokenBudget = Math.max(0, Number(input.dailyTokenBudget || 0));
+  const recentRequests = (Array.isArray(previous.recentRequests) ? previous.recentRequests : [])
+    .map(Number)
+    .filter(timestamp => Number.isFinite(timestamp) && timestamp > now - windowMs);
+  const dayKey = utcDayKey(now);
+  const usedTokens = previous.dayKey === dayKey ? Math.max(0, Number(previous.usedTokens || 0)) : 0;
+  if (maximumRequests && recentRequests.length >= maximumRequests) {
+    return { allowed: false, reason: 'rate', retryAfterSeconds: Math.max(1, Math.ceil((recentRequests[0] + windowMs - now) / 1000)), state: { dayKey, usedTokens, recentRequests } };
+  }
+  if (dailyTokenBudget && usedTokens + tokenReservation > dailyTokenBudget) {
+    return { allowed: false, reason: 'budget', retryAfterSeconds: Math.max(1, Math.ceil((Date.parse(`${dayKey}T23:59:59.999Z`) - now) / 1000)), state: { dayKey, usedTokens, recentRequests } };
+  }
+  if (maximumRequests) recentRequests.push(now);
+  return {
+    allowed: true,
+    reason: '',
+    retryAfterSeconds: 0,
+    state: { dayKey, usedTokens: usedTokens + tokenReservation, recentRequests }
+  };
+}
+
+export class AleriaGptUsageLimiter {
+  constructor(state) {
+    this.state = state;
+  }
+
+  async fetch(request) {
+    const input = await request.json();
+    let result;
+    await this.state.storage.transaction(async transaction => {
+      const previous = await transaction.get('usage') || {};
+      result = nextUsageState(previous, input);
+      await transaction.put('usage', result.state);
+    });
+    return new Response(JSON.stringify(result), {
+      status: result.allowed ? 200 : 429,
+      headers: { 'Content-Type': 'application/json;charset=utf-8' }
+    });
+  }
+}
+
+async function reserveUsage(env, key, limits) {
+  if (!env.ALERIA_GPT_USAGE_LIMITER) {
+    throw Object.assign(new Error('Rate-Limit-Speicher ist nicht konfiguriert.'), { status: 503 });
+  }
+  const id = env.ALERIA_GPT_USAGE_LIMITER.idFromName(String(key));
+  const response = await env.ALERIA_GPT_USAGE_LIMITER.get(id).fetch('https://aleria.internal/reserve', {
+    method: 'POST',
+    body: JSON.stringify({ now: Date.now(), ...limits })
+  });
+  const result = await response.json();
+  if (!response.ok || result.allowed !== true) {
+    const error = new Error(result.reason === 'budget' ? 'Das heutige AleriaGPT-Budget ist aufgebraucht.' : 'Zu viele AleriaGPT-Anfragen. Bitte kurz warten.');
+    error.status = 429;
+    error.retryAfterSeconds = Number(result.retryAfterSeconds || 60);
+    throw error;
+  }
+}
+
+async function enforceUsageProtection(request, env, uid, tokenReservation) {
+  const userRate = getEnvNumber(env, 'ALERIA_GPT_RATE_LIMIT_PER_MINUTE', DEFAULT_RATE_LIMIT_PER_MINUTE);
+  const ipRate = getEnvNumber(env, 'ALERIA_GPT_IP_RATE_LIMIT_PER_MINUTE', DEFAULT_IP_RATE_LIMIT_PER_MINUTE);
+  const dailyBudget = getEnvNumber(env, 'ALERIA_GPT_DAILY_TOKEN_BUDGET', DEFAULT_DAILY_TOKEN_BUDGET);
+  const globalBudget = getEnvNumber(env, 'ALERIA_GPT_GLOBAL_DAILY_TOKEN_BUDGET', DEFAULT_GLOBAL_DAILY_TOKEN_BUDGET);
+  const clientIp = cleanText(request.headers.get('CF-Connecting-IP') || 'unknown', 80);
+  await Promise.all([
+    reserveUsage(env, `user:${uid}`, { windowMs: 60000, maximumRequests: userRate, tokenReservation, dailyTokenBudget: dailyBudget }),
+    reserveUsage(env, `ip:${clientIp}`, { windowMs: 60000, maximumRequests: ipRate, tokenReservation: 0, dailyTokenBudget: 0 }),
+    reserveUsage(env, 'global', { windowMs: 60000, maximumRequests: 0, tokenReservation, dailyTokenBudget: globalBudget })
+  ]);
+}
+
 async function callProvider(payload, env) {
   const providerBaseUrl = getEnvText(env, 'ALERIA_GPT_PROVIDER_BASE_URL', DEFAULT_PROVIDER_BASE_URL).replace(/\/+$/g, '');
   const apiKey = getEnvText(env, 'ALERIA_GPT_API_KEY');
@@ -198,10 +362,17 @@ async function callProvider(payload, env) {
     throw error;
   }
 
-  return cleanOutputText(json?.choices?.[0]?.message?.content || '', 10000);
+  return {
+    text: cleanOutputText(json?.choices?.[0]?.message?.content || '', 10000),
+    usage: {
+      promptTokens: Math.max(0, Number(json?.usage?.prompt_tokens || 0)),
+      completionTokens: Math.max(0, Number(json?.usage?.completion_tokens || 0)),
+      totalTokens: Math.max(0, Number(json?.usage?.total_tokens || 0))
+    }
+  };
 }
 
-async function handleChat(request, env, origin) {
+async function handleChat(request, env, origin, identity) {
   const payload = await readJsonPayload(request, env);
   const query = cleanText(payload?.query, 1200);
   const promptContext = String(payload?.retrieval?.promptContext || '');
@@ -209,12 +380,15 @@ async function handleChat(request, env, origin) {
     return jsonResponse({ error: 'query and retrieval.promptContext are required' }, 400, origin, env);
   }
 
-  const text = await callProvider(payload, env);
+  const reservedTokens = getResponseTokenLimit(env, payload);
+  await enforceUsageProtection(request, env, identity.uid, reservedTokens);
+  const providerResult = await callProvider(payload, env);
   return jsonResponse({
     ok: true,
-    text,
+    text: providerResult.text,
     model: getEnvText(env, 'ALERIA_GPT_MODEL'),
-    sourceHash: payload?.retrieval?.sourceHash || ''
+    sourceHash: payload?.retrieval?.sourceHash || '',
+    usage: providerResult.usage
   }, 200, origin, env);
 }
 
@@ -222,6 +396,10 @@ export default {
   async fetch(request, env) {
     const origin = String(request.headers.get('Origin') || '');
     const url = new URL(request.url);
+
+    if (request.method === 'GET' && url.pathname === '/health') {
+      return jsonResponse({ ok: true, service: 'aleria-gpt-worker' }, 200, origin, env);
+    }
 
     if (!isOriginAllowed(origin, env)) {
       return jsonResponse({ error: 'Origin not allowed' }, 403, origin, env);
@@ -234,19 +412,35 @@ export default {
       });
     }
 
-    if (request.method === 'GET' && url.pathname === '/health') {
-      return jsonResponse({ ok: true, service: 'aleria-gpt-worker' }, 200, origin, env);
-    }
-
     if (request.method === 'POST' && url.pathname === '/aleria-gpt/chat') {
       try {
-        return await handleChat(request, env, origin);
+        const token = getBearerToken(request);
+        if (!token) throw Object.assign(new Error('Firebase-Anmeldung erforderlich.'), { status: 401 });
+        const identity = await verifyFirebaseIdToken(token, env);
+        return await handleChat(request, env, origin, identity);
       } catch (error) {
-        console.error('AleriaGPT worker error:', error);
-        return jsonResponse({ error: error.message || 'Worker error' }, Number(error.status || 500), origin, env);
+        const status = Number(error.status || 500);
+        console.error('AleriaGPT worker request failed', { status, name: error?.name || 'Error' });
+        return jsonResponse(
+          { error: error.message || 'Worker error' },
+          status,
+          origin,
+          env,
+          error.retryAfterSeconds ? { 'Retry-After': String(error.retryAfterSeconds) } : {}
+        );
       }
     }
 
     return jsonResponse({ error: 'Not found' }, 404, origin, env);
   }
 };
+
+export const workerInternals = Object.freeze({
+  isOriginAllowed,
+  getBearerToken,
+  getResponseTokenLimit,
+  nextUsageState,
+  decodeJwtPart,
+  resetFirebaseJwksCache,
+  verifyFirebaseIdToken
+});

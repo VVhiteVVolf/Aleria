@@ -1,0 +1,123 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function hasRole(roles) {
+      return signedIn()
+        && request.auth.token.keys().hasAll(['aleriaRole'])
+        && request.auth.token.aleriaRole is string
+        && request.auth.token.aleriaRole in roles;
+    }
+
+    function isModerator() {
+      return hasRole(['admin', 'moderator']);
+    }
+
+    function canEditSharedContent() {
+      return hasRole(['admin', 'moderator', 'editor']);
+    }
+
+    function isMechanicalComment(data) {
+      return (data.keys().hasAny(['mechanicalAudit']) && data.mechanicalAudit == true)
+        || (data.keys().hasAny(['combatTransaction']) && data.combatTransaction != null)
+        || (data.keys().hasAny(['restTransaction']) && data.restTransaction != null)
+        || (data.keys().hasAny(['inventoryTransaction']) && data.inventoryTransaction != null)
+        || (data.keys().hasAny(['sceneInventoryTransfer']) && data.sceneInventoryTransfer != null)
+        || (data.keys().hasAny(['sceneRest']) && data.sceneRest != null)
+        || (data.keys().hasAny(['sceneDiceRoll']) && data.sceneDiceRoll != null)
+        || (data.keys().hasAny(['sceneTimeEvent']) && data.sceneTimeEvent != null)
+        || (data.keys().hasAny(['skillResolution']) && data.skillResolution != null)
+        || (data.keys().hasAny(['importedHistoricalMechanics']) && data.importedHistoricalMechanics == true)
+        || (data.keys().hasAny(['serverValidatedMechanics']) && data.serverValidatedMechanics == true);
+    }
+
+    function ownsDocument(data) {
+      return signedIn() && (
+        (data.keys().hasAny(['ownerUid']) && data.ownerUid == request.auth.uid)
+        || (data.keys().hasAny(['createdBy']) && data.createdBy == request.auth.uid)
+      );
+    }
+
+    match /comments/{commentId} {
+      allow read: if true;
+      allow create: if false;
+      allow update: if !isMechanicalComment(resource.data)
+        && !isMechanicalComment(request.resource.data)
+        && (ownsDocument(resource.data) || isModerator())
+        && request.resource.data.createdBy == resource.data.createdBy;
+      allow delete: if !isMechanicalComment(resource.data)
+        && (ownsDocument(resource.data) || isModerator());
+    }
+
+    match /characters/{recordId} {
+      allow read: if true;
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update: if (ownsDocument(resource.data) || canEditSharedContent())
+        && (
+          (resource.data.keys().hasAny(['ownerUid']) && request.resource.data.ownerUid == resource.data.ownerUid)
+          || (!resource.data.keys().hasAny(['ownerUid']) && canEditSharedContent())
+        );
+      allow delete: if ownsDocument(resource.data) || isModerator();
+    }
+
+    match /creatures/{recordId} {
+      allow read: if true;
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update: if (ownsDocument(resource.data) || canEditSharedContent())
+        && (
+          (resource.data.keys().hasAny(['ownerUid']) && request.resource.data.ownerUid == resource.data.ownerUid)
+          || (!resource.data.keys().hasAny(['ownerUid']) && canEditSharedContent())
+        );
+      allow delete: if ownsDocument(resource.data) || isModerator();
+    }
+
+    match /comment_turns/{threadId} {
+      allow read: if true;
+      allow create, update: if signedIn() && request.resource.data.updatedBy == request.auth.uid;
+      allow delete: if isModerator();
+    }
+
+    match /char_tabs/{documentId} {
+      allow read: if true;
+      allow write: if canEditSharedContent();
+    }
+
+    match /module_store_entries/{documentId} {
+      allow read: if true;
+      allow write: if canEditSharedContent();
+    }
+
+    match /item_database/{documentId} {
+      allow read: if true;
+      allow write: if canEditSharedContent();
+    }
+
+    match /item_database_entries/{documentId} {
+      allow read: if true;
+      allow write: if canEditSharedContent();
+    }
+
+    match /aleria_roles/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isModerator());
+      allow write: if false;
+    }
+
+    match /mechanic_requests/{requestId} {
+      allow read: if signedIn() && (resource.data.createdBy == request.auth.uid || isModerator());
+      allow write: if false;
+    }
+
+    match /auditEvents/{eventId} {
+      allow read: if isModerator();
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

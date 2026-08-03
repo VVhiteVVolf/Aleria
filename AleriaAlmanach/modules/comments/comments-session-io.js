@@ -334,8 +334,7 @@ async function importCommentThreadPayload(parsed, targetDescriptor, options = {}
   }
 
   const backend = await getCommentIoBackend();
-  let commentCount = 0;
-  for (const [index, comment] of comments.entries()) {
+  const importedComments = comments.map((comment, index) => {
     const oldId = String(comment?.id || '').trim();
     const newId = makeImportedThreadCommentId(oldId, sourceThreadId, targetThreadId, index + 1);
     const data = cloneForBackup(comment);
@@ -343,16 +342,30 @@ async function importCommentThreadPayload(parsed, targetDescriptor, options = {}
     delete data.id;
     delete data.exportOrder;
     delete data.threadOrder;
-    await backend.saveBackupComment(newId, data);
-    commentCount += 1;
+    return { id: newId, ...data };
+  });
+  let commentCount = 0;
+  if (backend.importBackupRecords && importedComments.length) {
+    const result = await backend.importBackupRecords('comments', importedComments);
+    commentCount = Number(result?.imported || importedComments.length);
+  } else {
+    for (const comment of importedComments) {
+      const { id, ...data } = comment;
+      await backend.saveBackupComment(id, data);
+      commentCount += 1;
+    }
   }
 
   let turnCount = 0;
-  if (turn && backend.saveBackupCommentTurn) {
+  if (turn && (backend.saveBackupCommentTurn || backend.importBackupRecords)) {
     const data = cloneForBackup(turn);
     delete data.id;
     data.threadId = targetThreadId;
-    await backend.saveBackupCommentTurn(targetThreadId, data);
+    if (backend.importBackupRecords) {
+      await backend.importBackupRecords('commentTurns', [{ id: targetThreadId, ...data }]);
+    } else {
+      await backend.saveBackupCommentTurn(targetThreadId, data);
+    }
     turnCount = 1;
   }
 

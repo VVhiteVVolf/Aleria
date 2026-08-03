@@ -10,4 +10,17 @@ ALERIA_GPT_APP_URL = "https://dieweltvonaleria.netlify.app/AleriaAlmanach/Aleria
 ALERIA_GPT_APP_TITLE = "Aleria Almanach"
 ALERIA_GPT_MAX_TOKENS = "1200"
 ALERIA_GPT_TIMEOUT_MS = "30000"
-ALERIA_GPT_MAX_BODY_CHARS = "650000"
+ALERIA_GPT_MAX_BODY_CHARS = "180000"
+ALERIA_FIREBASE_PROJECT_ID = "aleriaprojekt"
+ALERIA_GPT_RATE_LIMIT_PER_MINUTE = "8"
+ALERIA_GPT_IP_RATE_LIMIT_PER_MINUTE = "20"
+ALERIA_GPT_DAILY_TOKEN_BUDGET = "12000"
+ALERIA_GPT_GLOBAL_DAILY_TOKEN_BUDGET = "200000"
+
+[[durable_objects.bindings]]
+name = "ALERIA_GPT_USAGE_LIMITER"
+class_name = "AleriaGptUsageLimiter"
+
+[[migrations]]
+tag = "v1-usage-limiter"
+new_sqlite_classes = ["AleriaGptUsageLimiter"]

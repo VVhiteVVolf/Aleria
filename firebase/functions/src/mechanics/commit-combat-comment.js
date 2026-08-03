@@ -1,0 +1,516 @@
+import { randomUUID } from 'node:crypto';
+import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { getPersistentCombatResources, recoverDailyCombatResources, resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
+import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
+import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
+import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
+import { deriveCombatStateFromComments, getResolutionActorResourceState, getResolutionHitPointState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
+import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
+import { applyInventoryUseToInventory, normalizeInventoryUse } from '../generated/inventory-use/inventory-use-model.js';
+import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
+import { getTrustedSceneDay, isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { validateSkillCommentSegments } from './skill-comment-validator.js';
+
+const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
+const RECORD_KINDS = new Set(['character', 'creature']);
+const MAX_COMMENT_BYTES = 700_000;
+
+function fail(code, message) {
+  throw new HttpsError(code, message);
+}
+
+function cleanText(value, maximum = 250000) {
+  return String(value || '').trim().slice(0, maximum);
+}
+
+function clonePayload(value) {
+  try {
+    const serialized = JSON.stringify(value || {});
+    if (Buffer.byteLength(serialized, 'utf8') > MAX_COMMENT_BYTES) fail('invalid-argument', 'Der mechanische Beitrag ist zu groß.');
+    return JSON.parse(serialized);
+  } catch (error) {
+    if (error instanceof HttpsError) throw error;
+    fail('invalid-argument', 'Der mechanische Beitrag enthält ungültige Daten.');
+  }
+}
+
+function normalizePersistence(value = {}, actorId = '') {
+  const kind = String(value?.kind || '');
+  if (RECORD_KINDS.has(kind) && value.recordId) {
+    if (String(actorId) !== String(value.recordId)) {
+      fail('failed-precondition', 'Persistente Figuren-ID und Profilquelle stimmen nicht \u00fcberein.');
+    }
+    return { kind, recordId: String(value.recordId), stateKey: String(actorId), persistent: true };
+  }
+  if (kind === 'scene-creature' && value.sourceCreatureId) {
+    return { kind: 'creature', recordId: String(value.sourceCreatureId), stateKey: String(actorId), persistent: false };
+  }
+  fail('failed-precondition', 'Die beteiligte Figur besitzt keine serverseitig prüfbare Profilquelle.');
+}
+
+function ruleSelectionDescriptors(entry) {
+  const selections = Array.isArray(entry?.segment?.combatAction?.ruleSelections)
+    ? entry.segment.combatAction.ruleSelections
+    : [];
+  return selections.slice(0, 20).map(selection => ({
+    role: 'rule-source',
+    actorId: cleanText(selection?.sourceActorId, 240),
+    ruleId: cleanText(selection?.ruleId, 160),
+    distanceMeters: Math.max(0, Math.min(9999, Number(selection?.distanceMeters) || 0)),
+    persistence: normalizePersistence(selection?.sourcePersistence, selection?.sourceActorId)
+  }));
+}
+
+function collectionFor(kind) {
+  return kind === 'creature' ? 'creatures' : 'characters';
+}
+
+function canControlActor(record, persistence, request) {
+  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
+  if (persistence.kind === 'creature') return true;
+  const uid = String(request.auth?.uid || '');
+  return String(record.ownerUid || record.createdBy || '') === uid
+    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
+}
+
+function combatSegments(metadata) {
+  return (Array.isArray(metadata?.commentSegments) ? metadata.commentSegments : [])
+    .map((segment, index) => ({ segment, index, submitted: segment?.combatResolution }))
+    .filter(entry => entry.submitted?.resolutionId && entry.segment?.combatAction);
+}
+
+function inventorySegments(metadata) {
+  return (Array.isArray(metadata?.commentSegments) ? metadata.commentSegments : [])
+    .map((segment, index) => ({ segment, index, submitted: segment?.inventoryUse }))
+    .filter(entry => entry.submitted?.item?.id);
+}
+
+function inventoryDescriptor(entry) {
+  const submitted = normalizeInventoryUse(entry.submitted);
+  if (submitted.actorPersistence?.kind === 'character' && submitted.actorPersistence.recordId) {
+    return {
+      role: 'inventory-actor',
+      actorId: submitted.actorId,
+      persistence: normalizePersistence(submitted.actorPersistence, submitted.actorId)
+    };
+  }
+  const sourceCreatureId = cleanText(entry.segment?.sceneActorSourceId || entry.segment?.creatureId, 160);
+  if (submitted.mode !== 'consume' && sourceCreatureId) {
+    return {
+      role: 'inventory-actor',
+      actorId: submitted.actorId,
+      persistence: { kind: 'creature', recordId: sourceCreatureId, stateKey: String(submitted.actorId), persistent: false }
+    };
+  }
+  fail('failed-precondition', 'Inventarnutzungen brauchen eine serverseitig pr\u00fcfbare Profilquelle.');
+}
+
+function makeCharacter(record, persistence, actorId) {
+  return {
+    ...record,
+    id: String(actorId),
+    entityType: persistence.kind === 'creature' ? 'creature' : 'character'
+  };
+}
+
+function relationshipBetween(first = {}, second = {}) {
+  const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
+  const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
+  return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
+}
+
+function collectSceneActorTeams(comments = [], currentSegments = []) {
+  const teams = new Map();
+  const remember = segment => {
+    const actorId = cleanText(segment?.sceneActorId || segment?.actorId, 240);
+    const team = cleanText(segment?.combatTeam, 80);
+    if (actorId && team && !teams.has(actorId)) teams.set(actorId, team);
+  };
+  comments.forEach(comment => (Array.isArray(comment?.commentSegments) ? comment.commentSegments : []).forEach(remember));
+  currentSegments.forEach(remember);
+  return teams;
+}
+
+function relationshipForActors(firstRecord, secondRecord, firstActorId, secondActorId, sceneTeams) {
+  return relationshipBetween(
+    { ...firstRecord, combatTeam: sceneTeams.get(String(firstActorId)) || firstRecord?.combatTeam },
+    { ...secondRecord, combatTeam: sceneTeams.get(String(secondActorId)) || secondRecord?.combatTeam }
+  );
+}
+
+function applyStoredState(profile, state) {
+  if (!state) return profile;
+  return overlayCombatHitPointState(profile, state);
+}
+
+function getEffectiveCommentResources(profileResources = [], stateResources = null, recoveryDayKey = '') {
+  return recoverDailyCombatResources(
+    Array.isArray(stateResources) ? stateResources : resetCommentScopedResources(profileResources),
+    recoveryDayKey
+  );
+}
+
+function consumeAbilityUse(sourceAbilities, resolution, recoveryDayKey = '') {
+  const applied = applyCombatAbilityUse(sourceAbilities, resolution.profileActionId, recoveryDayKey);
+  if (!applied.sufficient) {
+    fail('failed-precondition', `${applied.missing?.name || 'Diese Fähigkeit'} hat keine Nutzung mehr übrig.`);
+  }
+  return applied;
+}
+
+function consumeRuleAbilityUse(sourceAbilities, application, recoveryDayKey = '') {
+  if (!application?.consumesAbilityUse || application.entryKind !== 'ability') {
+    return { changed: false, abilities: sourceAbilities || [], beforeAbilities: sourceAbilities || [], use: null };
+  }
+  return consumeAbilityUse(sourceAbilities, {
+    profileActionId: `ability:${application.entryId}`
+  }, recoveryDayKey);
+}
+
+export const commitCombatComment = onCall({
+  region: 'europe-west1',
+  maxInstances: 20,
+  concurrency: 20,
+  enforceAppCheck: false,
+  timeoutSeconds: 30
+}, async request => {
+  if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
+  const payload = clonePayload(request.data);
+  const entryId = cleanText(payload.entryId, 240);
+  const text = cleanText(payload.text);
+  const metadata = clonePayload(payload.metadata);
+  const entries = combatSegments(metadata);
+  const inventoryEntries = inventorySegments(metadata);
+  if (!entryId || !text || (!entries.length && !inventoryEntries.length)) {
+    fail('invalid-argument', 'Beitrag und mindestens ein mechanischer Vorgang sind erforderlich.');
+  }
+
+  const database = getFirestore();
+  const commentRef = database.collection('comments').doc();
+  const nowClient = Date.now();
+  let committedComment;
+  let profileUpdates = [];
+
+  await database.runTransaction(async transaction => {
+    const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
+    const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
+    const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
+    const historyStates = deriveCombatStateFromComments(trustedHistory);
+    const sceneActorTeams = collectSceneActorTeams(trustedHistory, metadata.commentSegments);
+    const sceneDay = getTrustedSceneDay(allHistory);
+    const recoveryDayKey = `scene:${entryId}:day-${sceneDay}`;
+    const rulePeriods = { comment: commentRef.id, scene: entryId, day: recoveryDayKey };
+    let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods);
+
+    const descriptors = entries.flatMap(({ submitted }) => [
+      { role: 'actor', actorId: submitted.actorId, persistence: normalizePersistence(submitted.actorPersistence, submitted.actorId) },
+      { role: 'target', actorId: submitted.targetId, persistence: normalizePersistence(submitted.targetPersistence, submitted.targetId) }
+    ]).concat(entries.flatMap(ruleSelectionDescriptors), inventoryEntries.map(inventoryDescriptor));
+    const uniqueRecords = new Map();
+    descriptors.forEach(descriptor => {
+      const key = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
+      if (!uniqueRecords.has(key)) uniqueRecords.set(key, {
+        ...descriptor.persistence,
+        key,
+        ref: database.collection(collectionFor(descriptor.persistence.kind)).doc(descriptor.persistence.recordId)
+      });
+    });
+    const recordEntries = [...uniqueRecords.values()];
+    const snapshots = await Promise.all(recordEntries.map(entry => transaction.get(entry.ref)));
+    const records = new Map();
+    recordEntries.forEach((entry, index) => {
+      if (!snapshots[index].exists) fail('not-found', `Das Profil ${entry.recordId} wurde nicht gefunden.`);
+      records.set(entry.key, snapshots[index].data() || {});
+    });
+
+    const workingStates = new Map([...historyStates].map(([actorId, state]) => [actorId, {
+      ...state,
+      resources: Array.isArray(state.resources) ? resetCommentScopedResources(state.resources) : state.resources
+    }]));
+    const workingInventories = new Map();
+    const persistentUpdates = new Map();
+    let enhancedSegments = metadata.commentSegments.map(segment => ({ ...segment }));
+    const validatedSkills = await validateSkillCommentSegments({
+      database,
+      transaction,
+      request,
+      metadata: { ...metadata, commentSegments: enhancedSegments },
+      history: trustedHistory,
+      rulePeriods,
+      usedRuleFrequencyKeys
+    });
+    enhancedSegments = validatedSkills.commentSegments;
+    usedRuleFrequencyKeys = validatedSkills.usedRuleFrequencyKeys;
+
+    for (const entry of inventoryEntries) {
+      const descriptor = inventoryDescriptor(entry);
+      const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
+      const record = records.get(recordKey);
+      if (!canControlActor(record, descriptor.persistence, request)) {
+        fail('permission-denied', 'Du darfst das Inventar dieser Spielfigur nicht verwenden.');
+      }
+      const submittedUse = normalizeInventoryUse({
+        ...entry.submitted,
+        usageId: randomUUID(),
+        actorId: descriptor.actorId,
+        actorName: cleanText(entry.segment?.charName || entry.submitted?.actorName || record?.name, 160),
+        actorPersistence: descriptor.persistence.persistent
+          ? { kind: descriptor.persistence.kind, recordId: descriptor.persistence.recordId }
+          : { kind: 'scene-actor', actorId: descriptor.actorId }
+      });
+      const currentInventory = workingInventories.get(recordKey) || record?.inventory || {};
+      const applied = applyInventoryUseToInventory(currentInventory, submittedUse);
+      workingInventories.set(recordKey, applied.inventory);
+      enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: applied.inventoryUse };
+      if (descriptor.persistence.persistent && submittedUse.mode === 'consume') {
+        const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
+        existing.inventory = applied.inventory;
+        persistentUpdates.set(recordKey, existing);
+      }
+    }
+
+    for (const { index, segment, submitted } of entries) {
+      const actorPersistence = normalizePersistence(submitted.actorPersistence, submitted.actorId);
+      const targetPersistence = normalizePersistence(submitted.targetPersistence, submitted.targetId);
+      const actorRecordKey = `${actorPersistence.kind}:${actorPersistence.recordId}`;
+      const targetRecordKey = `${targetPersistence.kind}:${targetPersistence.recordId}`;
+      const actorRecord = records.get(actorRecordKey);
+      const targetRecord = records.get(targetRecordKey);
+      if (!canControlActor(actorRecord, actorPersistence, request)) {
+        fail('permission-denied', 'Du darfst diese Spielfigur nicht für einen Kampf einsetzen.');
+      }
+
+      const paymentMode = String(segment.combatAction?.paymentMode || 'standard');
+      const actorBase = resolveCombatProfile(makeCharacter(actorRecord, actorPersistence, submitted.actorId), {
+        actionId: String(segment.combatAction?.profileActionId || submitted.profileActionId || ''),
+        segmentKind: String(segment.commentKind || segment.kind || ''),
+        paymentMode
+      });
+      const targetBase = resolveCombatProfile(makeCharacter(targetRecord, targetPersistence, submitted.targetId));
+      const actorState = workingStates.get(String(submitted.actorId));
+      const targetState = workingStates.get(String(submitted.targetId));
+      const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
+      const actor = applyStoredState(actorBase, {
+        ...(actorState || {}),
+        resources: actorResources
+      });
+      const target = applyStoredState(targetBase, targetState);
+      const selectedRuleDescriptors = ruleSelectionDescriptors({ segment });
+      const ruleSources = selectedRuleDescriptors.map(descriptor => {
+        const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
+        const record = records.get(recordKey);
+        if (!record) fail('not-found', 'Eine ausgew\u00e4hlte Reaktionsquelle wurde nicht gefunden.');
+        if (!canControlActor(record, descriptor.persistence, request)) {
+          fail('permission-denied', 'Du darfst die ausgew\u00e4hlte Reaktion dieser Figur nicht ausl\u00f6sen.');
+        }
+        const sourceBase = resolveCombatProfile(makeCharacter(record, descriptor.persistence, descriptor.actorId));
+        const sourceState = workingStates.get(String(descriptor.actorId));
+        const sourceResources = getEffectiveCommentResources(sourceBase.resources, sourceState?.resources, recoveryDayKey);
+        const source = applyStoredState(sourceBase, {
+          ...(sourceState || {}),
+          resources: sourceResources
+        });
+        return {
+          actorId: descriptor.actorId,
+          actorName: source.name,
+          profile: source,
+          sourceRole: String(descriptor.actorId) === String(submitted.actorId)
+            ? 'actor'
+            : (String(descriptor.actorId) === String(submitted.targetId) ? 'target' : 'support'),
+          relationToActor: String(descriptor.actorId) === String(submitted.actorId)
+            ? 'self'
+            : relationshipForActors(record, actorRecord, descriptor.actorId, submitted.actorId, sceneActorTeams),
+          relationToTarget: String(descriptor.actorId) === String(submitted.targetId)
+            ? 'self'
+            : relationshipForActors(record, targetRecord, descriptor.actorId, submitted.targetId, sceneActorTeams),
+          distanceToActor: String(descriptor.actorId) === String(submitted.actorId) ? 0 : descriptor.distanceMeters,
+          distanceToTarget: String(descriptor.actorId) === String(submitted.targetId) ? 0 : descriptor.distanceMeters,
+          passiveRulesAllowed: [String(submitted.actorId), String(submitted.targetId)].includes(String(descriptor.actorId)),
+          selectedRuleIds: selectedRuleDescriptors
+            .filter(item => String(item.actorId) === String(descriptor.actorId))
+            .map(item => item.ruleId),
+          persistence: descriptor.persistence
+        };
+      });
+      const service = new CombatResolutionService(new ProvidedDiceAdapter(submitted));
+      const distanceMeters = Math.max(0, Math.min(9999, Number(segment.combatDistanceMeters) || 0));
+      const resolution = await service.resolveAttack({
+        actor,
+        target,
+        description: String(segment.text || submitted.originalDescription || ''),
+        rollMode: String(segment.combatAction?.rollMode || submitted.attack?.rollMode || 'normal')
+      }, {
+        relationship: relationshipForActors(actorRecord, targetRecord, submitted.actorId, submitted.targetId, sceneActorTeams),
+        distanceMeters,
+        ruleSources,
+        rulePeriods,
+        usedRuleFrequencyKeys
+      });
+      usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
+      resolution.resolutionId = randomUUID();
+      resolution.serverValidated = true;
+      resolution.validatedAt = new Date(nowClient).toISOString();
+      resolution.narration = null;
+
+      const abilityUse = consumeAbilityUse(actor.abilities, resolution, recoveryDayKey);
+      if (abilityUse.use) {
+        resolution.abilityUse = abilityUse.use;
+        resolution.actorAbilitySnapshot = {
+          before: abilityUse.beforeAbilities.map(ability => ({ ...ability })),
+          after: abilityUse.abilities.map(ability => ({ ...ability })),
+          change: abilityUse.use
+        };
+      }
+
+      const targetNext = getResolutionHitPointState(resolution);
+      const actorNextResources = getResolutionActorResourceState(resolution);
+      if (targetNext) workingStates.set(String(submitted.targetId), { ...(targetState || {}), ...targetNext });
+      if (actorNextResources || abilityUse.changed) workingStates.set(String(submitted.actorId), {
+        ...(workingStates.get(String(submitted.actorId)) || actorState || {}),
+        ...(actorNextResources ? { resources: actorNextResources } : {}),
+        ...(abilityUse.changed ? { abilities: abilityUse.abilities } : {})
+      });
+
+      const ruleAbilitySnapshots = [];
+      (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : [])
+        .filter(application => application.consumesAbilityUse)
+        .forEach(application => {
+          const sourceId = String(application.sourceActorId || '');
+          const source = ruleSources.find(item => String(item.actorId) === sourceId);
+          if (!source) fail('failed-precondition', 'Die F\u00e4higkeitsquelle einer Reaktion fehlt.');
+          const currentState = workingStates.get(sourceId) || {};
+          const currentAbilities = Array.isArray(currentState.abilities) ? currentState.abilities : source.profile.abilities;
+          const consumed = consumeRuleAbilityUse(currentAbilities, application, recoveryDayKey);
+          if (!consumed.changed) return;
+          workingStates.set(sourceId, { ...currentState, abilities: consumed.abilities });
+          ruleAbilitySnapshots.push({
+            sourceActorId: sourceId,
+            sourceActorName: application.sourceActorName,
+            applicationKey: application.applicationKey,
+            before: consumed.beforeAbilities,
+            after: consumed.abilities,
+            change: consumed.use
+          });
+          if (source.persistence?.persistent) {
+            const recordKey = `${source.persistence.kind}:${source.persistence.recordId}`;
+            const sourceRecord = records.get(recordKey);
+            const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record: sourceRecord };
+            existing.abilities = consumed.abilities;
+            persistentUpdates.set(recordKey, existing);
+          }
+        });
+      if (ruleAbilitySnapshots.length) resolution.ruleAbilitySnapshots = ruleAbilitySnapshots;
+
+      (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
+        const sourceId = String(snapshot.sourceActorId || '');
+        const source = ruleSources.find(item => String(item.actorId) === sourceId);
+        if (!source) fail('failed-precondition', 'Die Ressourcenquelle einer Reaktion fehlt.');
+        const currentState = workingStates.get(sourceId) || {};
+        workingStates.set(sourceId, { ...currentState, resources: snapshot.after });
+        if (source.persistence?.persistent) {
+          const recordKey = `${source.persistence.kind}:${source.persistence.recordId}`;
+          const sourceRecord = records.get(recordKey);
+          const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record: sourceRecord };
+          existing.resources = getPersistentCombatResources(source.profile.resources, snapshot.after);
+          persistentUpdates.set(recordKey, existing);
+        }
+      });
+
+      enhancedSegments[index] = { ...segment, combatResolution: resolution };
+
+      if (targetPersistence.persistent) {
+        const existing = persistentUpdates.get(targetRecordKey) || { entry: uniqueRecords.get(targetRecordKey), record: targetRecord };
+        existing.hitPoints = targetNext;
+        persistentUpdates.set(targetRecordKey, existing);
+      }
+      if (actorPersistence.persistent) {
+        const existing = persistentUpdates.get(actorRecordKey) || { entry: uniqueRecords.get(actorRecordKey), record: actorRecord };
+        const actorFinalResources = workingStates.get(String(submitted.actorId))?.resources || actorNextResources || actorBase.resources;
+        existing.resources = getPersistentCombatResources(actorBase.resources, actorFinalResources);
+        if (abilityUse.changed) existing.abilities = abilityUse.abilities;
+        persistentUpdates.set(actorRecordKey, existing);
+      }
+    }
+
+    profileUpdates = [...persistentUpdates.values()].map(update => {
+      const values = { updatedAt: new Date(nowClient).toISOString() };
+      if (update.hitPoints) {
+        values['combatProfile.hitPoints.current'] = update.hitPoints.current;
+        values['combatProfile.hitPoints.temporary'] = update.hitPoints.temporary;
+      }
+      if (update.resources) values['combatProfile.resources'] = update.resources;
+      if (update.abilities) values['combatProfile.abilities'] = update.abilities;
+      if (update.inventory) values.inventory = update.inventory;
+      transaction.update(update.entry.ref, values);
+      return {
+        kind: update.entry.kind,
+        recordId: update.entry.recordId,
+        hitPoints: update.hitPoints || null,
+        resources: update.resources || null,
+        abilities: update.abilities || null,
+        inventory: update.inventory || null
+      };
+    });
+
+    const resolutions = enhancedSegments.map(segment => segment?.combatResolution).filter(Boolean);
+    committedComment = {
+      entryId,
+      charName: cleanText(payload.charName, 160),
+      charTitle: cleanText(payload.charTitle, 160),
+      portrait: cleanText(payload.portrait, 2000) || null,
+      text,
+      deleteCodeHash: cleanText(payload.deleteCodeHash, 128),
+      deleteCodeVersion: 1,
+      narrator: payload.narrator === true,
+      characterId: cleanText(metadata.characterId, 160),
+      actorType: cleanText(metadata.actorType, 40),
+      creatureId: cleanText(metadata.creatureId, 160),
+      emoteIndex: Number.isInteger(metadata.emoteIndex) ? metadata.emoteIndex : null,
+      imageSetId: cleanText(metadata.imageSetId, 48),
+      avatarKind: cleanText(metadata.avatarKind, 40),
+      commentMode: cleanText(metadata.commentMode, 40),
+      commentKind: cleanText(metadata.commentKind, 80),
+      commentSegments: enhancedSegments,
+      combatAction: resolutions.length === 1 ? enhancedSegments.find(segment => segment?.combatAction)?.combatAction || null : null,
+      combatResolution: resolutions.length === 1 ? resolutions[0] : null,
+      combatRecoveryDayKey: recoveryDayKey,
+      combatTransaction: {
+        schemaVersion: 2,
+        transactionId: commentRef.id,
+        committedAtClient: nowClient,
+        atomicProfileUpdates: persistentUpdates.size,
+        validatedBy: 'commitCombatComment'
+      },
+      ...(inventoryEntries.length ? {
+        inventoryTransaction: {
+          schemaVersion: 2,
+          transactionId: commentRef.id,
+          operations: inventoryEntries.length,
+          validatedBy: 'commitCombatComment'
+        }
+      } : {}),
+      serverValidatedMechanics: true,
+      createdBy: request.auth.uid,
+      createdByRole: String(request.auth.token?.aleriaRole || 'player'),
+      orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : nowClient,
+      createdAtClient: nowClient,
+      activityAtClient: nowClient,
+      activityAt: FieldValue.serverTimestamp(),
+      schemaVersion: 3,
+      ts: FieldValue.serverTimestamp()
+    };
+    transaction.create(commentRef, committedComment);
+  });
+
+  return {
+    id: commentRef.id,
+    profileUpdates,
+    mechanics: {
+      commentSegments: committedComment.commentSegments,
+      combatResolution: committedComment.combatResolution
+    }
+  };
+});
+
+export const combatCommentInternals = Object.freeze({ consumeAbilityUse, getEffectiveCommentResources });

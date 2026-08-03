@@ -13,6 +13,7 @@ function renderSceneInventoryTransferComment(comment, idx = 0) {
   const object = transfer.object || {};
   const image = sanitizeImageSrc(object.visualIcon || object.image || object.icon || '');
   const divider = idx > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
+  const lockMarkup = window.renderCommentTransactionLock?.(comment) || '';
   return `${divider}<article class="scene-transfer-event" data-comment-id="${escapeHtml(comment.id || '')}">
     <div class="scene-transfer-kicker">Inventar · Übergabe</div>
     <div class="scene-transfer-stage">
@@ -28,6 +29,6 @@ function renderSceneInventoryTransferComment(comment, idx = 0) {
       ${renderSceneInventoryActor(transfer.receiver, 'receiver')}
     </div>
     ${transfer.flavour ? `<div class="scene-transfer-flavour">${parseCommentMarkup(transfer.flavour)}</div>` : ''}
-    <button type="button" class="scene-transfer-delete" data-action="open-delete-confirm" data-comment-id="${escapeHtml(comment.id || '')}" aria-label="Übergabe aus der Chronik entfernen" title="Chronikeintrag entfernen">×</button>
+    ${lockMarkup || `<button type="button" class="scene-transfer-delete" data-action="open-delete-confirm" data-comment-id="${escapeHtml(comment.id || '')}" aria-label="Übergabe aus der Chronik entfernen" title="Chronikeintrag entfernen">×</button>`}
   </article>`;
 }

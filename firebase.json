@@ -2,6 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
   "firestore": [
     {
+      "database": "(default)",
+      "rules": "firebase/firestore.rules",
+      "indexes": "firebase/firestore.indexes.json"
+    },
+    {
       "database": "family-trees",
       "rules": "firebase/firestore.family-trees.rules",
       "indexes": "firebase/firestore.family-trees.indexes.json"

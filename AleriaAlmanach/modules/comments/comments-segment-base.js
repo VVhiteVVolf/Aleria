@@ -65,6 +65,9 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
       : 'normal',
+    combatDistanceMeters: usesCombatResolution
+      ? Math.max(0, Math.min(9999, Number(combatSettings?.distanceMeters ?? combatSettings?.combatDistanceMeters) || 0))
+      : 0,
     combatPaymentMode: ['aura', 'cheat'].includes(combatSettings?.paymentMode || combatSettings?.combatPaymentMode)
       ? String(combatSettings.paymentMode || combatSettings.combatPaymentMode)
       : 'standard',
@@ -177,7 +180,7 @@ function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = 
   const label = COMMENT_SEGMENT_COMPACT_LABELS[kind] || getCommentKindLabel(kind);
   return `
     <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
-      ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
+      ${getCommentKindButtonIconMarkup(kind, 'comment-segment-type-icon')}
       <span>${add ? '+ ' : ''}${escapeHtml(label)}</span>
     </button>`;
 }

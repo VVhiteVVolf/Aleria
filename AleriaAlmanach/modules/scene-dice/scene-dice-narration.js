@@ -52,14 +52,19 @@ async function generateSceneDiceNarration(roll = {}, options = {}) {
   const currentParticipant = participants.getSelection?.();
   const participant = currentParticipant && String(currentParticipant.name || '') === String(roll.roller || '')
     ? currentParticipant
-    : { id: roll.rollerId || '', name: roll.roller || 'Die Szene' };
+    : {
+        id: roll.rollerId || '',
+        sourceCharacterId: roll.rollerSourceId || roll.rollerId || '',
+        entityType: roll.rollerEntityType || '',
+        name: roll.roller || 'Die Szene'
+      };
   const situation = String(options.situation || roll.situation || '').trim().slice(0, 900);
   const contextualRoll = { ...roll, narrationMode };
   const query = buildSceneDiceNarrationQuery({ roll: contextualRoll, participant, snapshot, situation });
   const retrieval = await window.AleriaGptRetrieval.retrieve(query, {
     scope: snapshot.moduleId ? 'module' : 'all',
     moduleId: snapshot.moduleId || '',
-    characterId: participant.id === '__narrator__' ? '' : participant.id,
+    characterId: participant.id === '__narrator__' ? '' : (participant.sourceCharacterId || participant.id),
     characterName: participant.id === '__narrator__' ? '' : participant.name,
     limit: 30
   });

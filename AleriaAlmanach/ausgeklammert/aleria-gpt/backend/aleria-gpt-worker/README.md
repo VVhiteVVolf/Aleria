@@ -1,124 +1,83 @@
 # AleriaGPT Cloudflare Worker
 
-Kostenarme/kostenlose Proxy-Variante fuer AleriaGPT.
+Der Worker ist der authentifizierte OpenRouter-Proxy des AleriaAlmanachs. Er hält den Provider-Key ausschließlich serverseitig und stellt zwei Endpunkte bereit:
 
-Der Worker haelt den OpenRouter-Key serverseitig und bietet dieselbe Frontend-Schnittstelle wie der Node/Railway-Proxy:
+- `GET /health` ist öffentlich und liefert nur den Betriebsstatus.
+- `POST /aleria-gpt/chat` verlangt einen gültigen Firebase-ID-Token im Header `Authorization: Bearer <token>`.
 
-- `GET /health`
-- `POST /aleria-gpt/chat`
+Der Client bezieht den Token aus der anonymen Firebase-Sitzung. Der Worker prüft Signatur, Aussteller, Zielprojekt und Ablauf gegen die offiziellen Firebase-Schlüssel. Eine bloße UID oder ein selbstgebauter JWT genügt nicht.
 
 ## Voraussetzungen
 
-- Cloudflare-Account
-- Node.js lokal
-- OpenRouter-API-Key
-- OpenRouter-Modell-ID
+- Cloudflare-Account mit Durable Objects
+- Node.js 22 oder neuer
+- OpenRouter-API-Key und gültige Modell-ID
+- im Firebase-Projekt `aleriaprojekt` aktivierte anonyme Anmeldung
 
-## Setup
+## Lokale Einrichtung
 
 ```powershell
-cd "d:\0-KI Generierte\VS Studio Code\AleriaAlmanach\backend\aleria-gpt-worker"
+cd "E:\Aleria\AleriaAlmanach\ausgeklammert\aleria-gpt\backend\aleria-gpt-worker"
 npm install
 npx wrangler login
-```
-
-## Modell setzen
-
-In `wrangler.toml`:
-
-```toml
-ALERIA_GPT_MODEL = "dein/openrouter-modell"
-```
-
-Beispiele:
-
-```toml
-ALERIA_GPT_MODEL = "anthropic/claude-opus-4.8"
-```
-
-oder guenstiger:
-
-```toml
-ALERIA_GPT_MODEL = "google/gemini-3.5-flash"
-```
-
-## Secret setzen
-
-Den OpenRouter-Key nicht in Dateien schreiben.
-
-```powershell
 npx wrangler secret put ALERIA_GPT_API_KEY
 ```
 
-Dann den Key im Terminal einfuegen.
+Den OpenRouter-Key niemals in `worker.js`, `wrangler.toml`, Chat, Log oder Git schreiben.
 
-## Lokal testen
+## Konfiguration
+
+Die nicht geheimen Produktionswerte liegen in `wrangler.toml`:
+
+- `ALERIA_FIREBASE_PROJECT_ID`: erwartetes Firebase-Projekt im ID-Token.
+- `ALERIA_GPT_ALLOWED_ORIGINS`: exakte, kommagetrennte Web-Ursprünge. Anfragen ohne erlaubten Origin werden für den Chat abgewiesen.
+- `ALERIA_GPT_MAX_BODY_CHARS`: maximale JSON-Größe vor dem Provider-Aufruf.
+- `ALERIA_GPT_RATE_LIMIT_PER_MINUTE`: Anfragen je Benutzer und Minute.
+- `ALERIA_GPT_IP_RATE_LIMIT_PER_MINUTE`: Anfragen je IP und Minute.
+- `ALERIA_GPT_DAILY_TOKEN_BUDGET`: reservierte Ausgabetokens je Benutzer und UTC-Tag.
+- `ALERIA_GPT_GLOBAL_DAILY_TOKEN_BUDGET`: reservierte Ausgabetokens für alle Benutzer je UTC-Tag.
+
+Die Limits werden in `AleriaGptUsageLimiter` als Durable Object atomar reserviert. Deshalb muss beim ersten Deployment die in `wrangler.toml` deklarierte Migration mit ausgerollt werden. Die Reservierung ist absichtlich konservativ: Ein abgebrochener Provider-Aufruf gibt sein bereits reserviertes Tagesbudget nicht wieder frei.
+
+## Prüfen und lokal starten
 
 ```powershell
+npm test
 npm run dev
 ```
 
-Healthcheck:
+Der Healthcheck funktioniert ohne Token:
 
 ```powershell
 Invoke-WebRequest -Uri "http://127.0.0.1:8787/health" -UseBasicParsing
 ```
 
-## Deploy
+Ein Chat-Aufruf benötigt dagegen zusätzlich einen echten Firebase-ID-Token und einen erlaubten `Origin`-Header. Der Browser-Client setzt den Bearer-Header automatisch.
+
+## Deployment
 
 ```powershell
 npm run deploy
 ```
 
-Cloudflare gibt danach eine URL aus, etwa:
+Beim ersten Rollout im Cloudflare-Dashboard kontrollieren:
 
-```text
-https://aleria-gpt.<account>.workers.dev
-```
+1. Secret `ALERIA_GPT_API_KEY` ist vorhanden.
+2. Binding `ALERIA_GPT_USAGE_LIMITER` zeigt auf `AleriaGptUsageLimiter`.
+3. Migration `v1-usage-limiter` wurde angewendet.
+4. die Netlify-Produktionsdomain steht exakt in `ALERIA_GPT_ALLOWED_ORIGINS`.
+5. `/health` meldet das erwartete Modell, aber keine Geheimnisse.
 
-Diese URL kommt danach in:
+Die ausgegebene Worker-URL wird in `modules/aleria-gpt/aleria-gpt-config.js` als Produktionsendpunkt gepflegt.
 
-```text
-AleriaAlmanach/modules/aleria-gpt/aleria-gpt-config.js
-```
+## Sicherheits- und Kostenverhalten
 
-als:
+- Keine Chat-Anfrage ohne Firebase-Authentifizierung.
+- Keine Chat-Anfrage von unbekanntem oder fehlendem Origin.
+- Größenlimit vor JSON-Verarbeitung und Provider-Aufruf.
+- Benutzer-, IP- und globale Limits vor dem Provider-Aufruf.
+- Begrenzung der angeforderten Ausgabetokens auf die konfigurierte Obergrenze.
+- Logs enthalten Status und Fehlerklasse, aber weder Provider-Antworttexte noch Zugangsdaten.
+- Ein HTTP-429 bedeutet bewusst Rate-Limit oder erschöpftes Tagesbudget; der Client darf dann nicht ungezügelt wiederholen.
 
-```js
-const ALERIA_GPT_PRODUCTION_BACKEND_ENDPOINT = 'https://aleria-gpt.<account>.workers.dev';
-```
-
-## Cloudflare-Dashboard Alternative
-
-Wenn du nicht mit CLI arbeiten willst:
-
-1. Workers & Pages oeffnen.
-2. Worker `aleria-gpt` erstellen.
-3. Code aus `worker.js` einfuegen.
-4. Variables setzen:
-
-```text
-ALERIA_GPT_ALLOWED_ORIGINS=https://dieweltvonaleria.neocities.org,http://127.0.0.1:5508
-ALERIA_GPT_PROVIDER_BASE_URL=https://openrouter.ai/api/v1
-ALERIA_GPT_MODEL=<OpenRouter-Modell-ID>
-ALERIA_GPT_APP_URL=https://dieweltvonaleria.neocities.org
-ALERIA_GPT_APP_TITLE=Aleria Almanach
-ALERIA_GPT_MAX_TOKENS=700
-ALERIA_GPT_TIMEOUT_MS=30000
-ALERIA_GPT_MAX_BODY_CHARS=650000
-```
-
-5. Secret setzen:
-
-```text
-ALERIA_GPT_API_KEY=<OpenRouter-Key>
-```
-
-6. Deployen und Worker-URL kopieren.
-
-## Wichtig
-
-- OpenRouter-Key nie in `wrangler.toml`, `worker.js`, Chat oder Git schreiben.
-- Wenn die Free-Limits erreicht sind, stoppt Cloudflare Requests statt heimlich unbegrenzt weiterzurechnen.
-- OpenRouter-Kosten entstehen trotzdem je nach Modell und Nutzung.
-
+OpenRouter-Kosten entstehen weiterhin abhängig von Modell und tatsächlicher Nutzung. Cloudflare-Limits sind eine zusätzliche Schutzschicht, kein Ersatz für Provider-Budgetwarnungen.

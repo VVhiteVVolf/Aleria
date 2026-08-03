@@ -35,7 +35,7 @@ async function submitSceneInventoryTransfer() {
       schemaVersion: 1
     };
     const text = `${prepared.giver.name} übergibt ${prepared.receiver.name} ${prepared.transfer.name}.`;
-    await window._fb.transferCharacterInventories(
+    const committed = await window._fb.transferCharacterInventories(
       prepared.giver.id,
       prepared.giverInventory,
       prepared.receiver.id,
@@ -46,8 +46,8 @@ async function submitSceneInventoryTransfer() {
     );
     const giverIndex = _characters.findIndex(character => character.id === prepared.giver.id);
     const receiverIndex = _characters.findIndex(character => character.id === prepared.receiver.id);
-    if (giverIndex >= 0) _characters[giverIndex] = { ..._characters[giverIndex], inventory: prepared.giverInventory };
-    if (receiverIndex >= 0) _characters[receiverIndex] = { ..._characters[receiverIndex], inventory: prepared.receiverInventory };
+    if (giverIndex >= 0) _characters[giverIndex] = { ..._characters[giverIndex], inventory: committed?.giverInventory || prepared.giverInventory };
+    if (receiverIndex >= 0) _characters[receiverIndex] = { ..._characters[receiverIndex], inventory: committed?.receiverInventory || prepared.receiverInventory };
     closeSceneInventoryDialog();
     requestCommentAutoScroll(threadId);
     await loadCommentsIntoPage(threadId, true, { page: 'last' });

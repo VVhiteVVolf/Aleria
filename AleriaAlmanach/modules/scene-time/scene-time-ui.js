@@ -22,10 +22,9 @@ function renderSceneTimeEventBlock(eventInput, options = {}) {
   const dayLabel = event.dayLabel ? `<span>${escapeHtml(event.dayLabel)}</span>` : '';
   const timeLabel = event.timeLabel ? `<span>${escapeHtml(event.timeLabel)}</span>` : '';
   const body = event.body ? `<div class="scene-time-event-body">${parseCommentMarkup(event.body)}</div>` : '';
-  const actions = options.commentId && !options.hideActions ? `
-    <div class="comment-narrator-actions scene-time-event-actions">
-      <button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${escapeHtml(options.commentId)}" title="Loeschen">Loeschen</button>
-    </div>` : '';
+  const actions = options.commentId && !options.hideActions
+    ? `<div class="comment-narrator-actions scene-time-event-actions">${options.lockMarkup || `<button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${escapeHtml(options.commentId)}" title="Loeschen">Loeschen</button>`}</div>`
+    : '';
 
   return `
     <div class="scene-time-event" data-scene-time-theme="${escapeHtml(event.theme)}" data-scene-time-preset="${escapeHtml(event.presetKey)}">
@@ -47,7 +46,8 @@ function renderSceneTimeEventComment(comment, index = 0) {
   const divider = index > 0
     ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>'
     : '';
-  return `${divider}${renderSceneTimeEventBlock(comment, { commentId: comment?.id || '' })}`;
+  const lockMarkup = window.renderCommentTransactionLock?.(comment) || '';
+  return `${divider}${renderSceneTimeEventBlock(comment, { commentId: comment?.id || '', lockMarkup })}`;
 }
 
 function buildSceneClockControl(threadId, page = {}) {

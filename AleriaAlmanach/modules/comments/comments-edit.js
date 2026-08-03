@@ -59,6 +59,10 @@ async function verifyEditCode() {
   try {
     const backend = await getCommentBackend({ timeoutMs: 1200 });
     const data = await backend.verifyCommentCode(_editTargetId, code);
+    const transactionPolicy = window.AleriaCommentTransactions;
+    if (transactionPolicy?.isImmutable?.(data)) {
+      throw new Error(transactionPolicy.getLockMessage(data, 'bearbeitet'));
+    }
     _editCommentData = data;
     _editSelectedEmoteIdx = null;
     _editSelectedImageSetId = String(data.imageSetId || data.commentSegments?.[0]?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
@@ -99,6 +103,7 @@ async function verifyEditCode() {
           targetId: segment.combatTargetId || segment.combatAction?.targetId,
           actionId: segment.combatActionId || segment.combatAction?.profileActionId,
           rollMode: segment.combatRollMode || segment.combatAction?.rollMode,
+          distanceMeters: segment.combatDistanceMeters ?? segment.combatResolution?.auraContext?.distanceMeters,
           paymentMode: segment.combatPaymentMode || segment.combatAction?.paymentMode,
           paymentConfirmed: true,
           actorId: segment.sceneActorId || segment.actorId || '',

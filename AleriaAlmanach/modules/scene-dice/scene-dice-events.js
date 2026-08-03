@@ -47,6 +47,8 @@ function getSceneDiceDialogContext() {
   return {
     roller: String(participant.name || '').trim() || 'Erzähler',
     rollerId: participant.id === '__narrator__' ? '' : String(participant.id || '').trim(),
+    rollerSourceId: participant.id === '__narrator__' ? '' : String(participant.sourceCharacterId || participant.id || '').trim(),
+    rollerEntityType: participant.id === '__narrator__' ? '' : String(participant.entityType || '').trim(),
     purpose: String(document.getElementById('scene-dice-purpose')?.value || '').trim(),
     situation: String(document.getElementById('scene-dice-situation')?.value || '').trim().slice(0, 900),
     rollType: document.getElementById('scene-dice-roll-type')?.value || 'general',
@@ -139,6 +141,8 @@ async function runSceneDiceAnimation(notationOverride = '') {
     const service = getSceneDiceService();
     const result = await service.roll(formula, document.getElementById('scene-dice-stage'), context);
     result.rollerId = context.rollerId;
+    result.rollerSourceId = context.rollerSourceId;
+    result.rollerEntityType = context.rollerEntityType;
     result.situation = context.situation;
     result.narrationMode = context.narrationMode;
     result.humorEnabled = context.humorEnabled;
@@ -195,6 +199,8 @@ async function commitSceneDiceRoll() {
     ..._sceneDicePendingRoll,
     roller,
     rollerId: context.rollerId || _sceneDicePendingRoll.rollerId || '',
+    rollerSourceId: context.rollerSourceId || _sceneDicePendingRoll.rollerSourceId || '',
+    rollerEntityType: context.rollerEntityType || _sceneDicePendingRoll.rollerEntityType || '',
     purpose,
     situation: context.situation || _sceneDicePendingRoll.situation || '',
     narrationMode: _sceneDicePendingRoll.narrationMode || context.narrationMode,
@@ -281,6 +287,8 @@ function updateSceneDiceNarrationFromDialog() {
   Object.assign(_sceneDicePendingRoll, {
     roller: context.roller,
     rollerId: context.rollerId,
+    rollerSourceId: context.rollerSourceId,
+    rollerEntityType: context.rollerEntityType,
     purpose: context.purpose,
     situation: context.situation,
     narrationMode: context.narrationMode,

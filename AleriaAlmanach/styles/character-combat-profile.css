@@ -1428,11 +1428,50 @@
 .cp-sheet-cheat-toggle input { accent-color: #a84d3d; }
 .cp-sheet-subhead > div { display: grid; gap: 3px; }
 .cp-sheet-subhead small { color: #8e8069; font: italic 11px Georgia, serif; }
+.cp-sheet-spell-slots {
+  margin: 0.8rem 0;
+  padding: 0.65rem;
+  border: 1px solid rgba(74, 112, 177, 0.38);
+  background: radial-gradient(circle at 100% 0, rgba(71, 93, 157, 0.14), rgba(4, 6, 6, 0.24) 44%);
+}
+.cp-sheet-spell-slots .cp-sheet-subhead { margin-top: 0; }
+.cp-sheet-spell-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  gap: 0.45rem;
+}
+.cp-sheet-spell-slot-grid > label {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  min-width: 0;
+  padding: 0.45rem;
+  border: 1px solid rgba(92, 125, 185, 0.32);
+  background: rgba(20, 27, 43, 0.48);
+}
+.cp-sheet-spell-slot-grid > label > span:nth-child(2) {
+  overflow: hidden;
+  color: #aebfe0;
+  font: 600 0.68rem/1.2 "Cinzel", serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cp-sheet-spell-slot-grid > label > span:last-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.25rem;
+}
+.cp-sheet-spell-slot-grid i { color: #7186ae; font-style: normal; }
+.cp-sheet-spell-slot-grid input { min-width: 0; text-align: center; }
 .cp-sheet-spell-list > div { grid-template-columns: repeat(5, minmax(105px, 1fr)); }
 .cp-sheet-spell-list > div > textarea { grid-column: 1 / -1; }
 
 @media (max-width: 900px) {
   .cp-aura-mechanics-grid { grid-template-columns: 1fr; }
+  .cp-sheet-spell-slot-grid { grid-template-columns: repeat(2, minmax(110px, 1fr)); }
   .cp-sheet-spell-list > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -1440,5 +1479,6 @@
   .cp-sheet-detail-card { grid-template-columns: 1fr; }
   .cp-sheet-detail-actions { justify-content: flex-end; }
   .cp-sheet-spell-list > div { grid-template-columns: 1fr; }
+  .cp-sheet-spell-slot-grid { grid-template-columns: 1fr; }
   .cp-aura-mechanics { grid-template-columns: 1fr; }
 }

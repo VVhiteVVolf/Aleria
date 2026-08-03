@@ -1,0 +1,24 @@
+.comment-transaction-lock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid color-mix(in srgb, currentColor 38%, transparent);
+  border-radius: 999px;
+  color: #75501e;
+  background: rgba(255, 248, 222, 0.78);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.comment-transaction-lock::before {
+  content: "\1F512";
+  font-size: 0.72rem;
+}
+
+.comment-narrator-actions > .comment-transaction-lock {
+  margin-top: 0;
+}

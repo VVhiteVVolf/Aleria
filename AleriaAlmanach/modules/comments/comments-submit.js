@@ -137,9 +137,13 @@ async function submitComment() {
     backend = await getCommentBackend({ timeoutMs: 1200 });
     const hasProfileTransaction = (commentMetadata.commentSegments || [])
       .some(segment => segment?.combatResolution?.resolutionId || segment?.inventoryUse?.usageId);
+    const hasSkillTransaction = (commentMetadata.commentSegments || [])
+      .some(segment => segment?.skillResolution?.resolutionId);
     const saveResult = hasProfileTransaction && typeof backend.addCombatComment === 'function'
       ? await backend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
-      : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
+      : (hasSkillTransaction && typeof backend.addSkillComment === 'function'
+        ? await backend.addSkillComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
+        : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata));
     if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
       document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', {
         detail: { updates: saveResult.profileUpdates }

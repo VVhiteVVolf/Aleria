@@ -4,6 +4,7 @@ import test from 'node:test';
 import {
   getArmorClass,
   getAuraOpponentMechanics,
+  getAuraTargetMechanics,
   getAttributeModifier,
   getCharacterCombatInventoryOptions,
   getEffectiveCombatLevel,
@@ -12,6 +13,7 @@ import {
   getProficiencyBonus,
   getSkillTotal,
   isTechniqueCompatibleWithWeapon,
+  parseAuraRadiusMeters,
   resolveAttackRollMode,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
@@ -34,6 +36,7 @@ import {
   applyCombatDamage,
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
+  normalizeCombatHitPointState,
   patchResolutionHitPointState
 } from '../modules/combat/combat-state-model.js';
 import {
@@ -49,6 +52,43 @@ import {
   evaluateAttackRoll,
   parseDamageFormula
 } from '../modules/combat/rules/combat-mvp-rules.js';
+import { SkillResolutionService } from '../modules/skill-checks/skill-resolution-service.js';
+import { deriveCombatRuleFrequencyKeys } from '../modules/combat/combat-trigger-rules.js';
+import {
+  COMBAT_SPELL_SLOT_DEFINITIONS,
+  getOrderedSpellSlotResources,
+  getSpellLevelLabel,
+  getSpellSlotResourceId
+} from '../modules/combat/combat-spell-slots.js';
+
+test('fehlende aktuelle TP starten bei den berechneten maximalen TP', () => {
+  assert.deepEqual(normalizeCombatHitPointState({ current: null, maximum: 19 }), {
+    current: 19,
+    maximum: 19,
+    temporary: 0
+  });
+  const resolved = resolveCharacterCombatProfile(character('actor', {
+    hitPoints: { current: null, maximumOverride: 19, hitDie: 8 }
+  }));
+  assert.equal(resolved.currentHitPoints, 19);
+});
+
+test('Fähigkeitsnutzungen werden aus mechanischen Kommentaren fortgeschrieben', () => {
+  const state = deriveCombatStateFromComments([{
+    id: 'ability-comment',
+    commentSegments: [{
+      combatResolution: {
+        actorId: 'actor',
+        targetId: 'target',
+        targetSnapshot: { hitPointsAfter: 10, maximumHitPoints: 10, temporaryHitPointsAfter: 0 },
+        actorAbilitySnapshot: {
+          after: [{ id: 'battle-cry', name: 'Schlachtruf', usesCurrent: 1, usesMaximum: 2 }]
+        }
+      }
+    }]
+  }]);
+  assert.equal(state.get('actor').abilities[0].usesCurrent, 1);
+});
 
 function character(id, combatProfile = {}) {
   return {
@@ -98,7 +138,16 @@ class FakeDiceAdapter {
   }
 }
 
-test('migriert das alte Kampfprofil verlustarm in Schema vier', () => {
+class FakeSkillDiceAdapter {
+  constructor(natural) { this.natural = natural; this.calls = []; }
+  async rollSkill(request) {
+    this.calls.push(request);
+    const dice = request.rollMode === 'normal' ? [this.natural] : [this.natural, Math.max(1, this.natural - 3)];
+    return { id: 'skill-roll', natural: this.natural, dice, keptDice: [this.natural], total: this.natural + request.modifier };
+  }
+}
+
+test('migriert das alte Kampfprofil verlustarm in Schema sechs', () => {
   const profile = sanitizeCharacterCombatProfile({
     defense: 13,
     maximumHitPoints: 22,
@@ -108,7 +157,7 @@ test('migriert das alte Kampfprofil verlustarm in Schema vier', () => {
     weapon: { name: 'Speer', damageFormula: '1W6 + 1' },
     armor: { name: 'Lederrüstung', defenseBonus: 2 }
   });
-  assert.equal(profile.schemaVersion, 4);
+  assert.equal(profile.schemaVersion, 6);
   assert.equal(profile.armorClass.base, 13);
   assert.equal(profile.hitPoints.maximumOverride, 22);
   assert.equal(profile.combat.attackBonus, 4);
@@ -540,6 +589,14 @@ test('migriert Schicksalspunkte zu celestialen Punkten und ergänzt infernale Ta
   assert.equal(profile.resources.some(resource => resource.id === 'fate-points'), false);
 });
 
+test('legacy daily resources without a day key initialize exactly once', () => {
+  const resources = [{ id: 'mana', current: 0, maximum: 8, scope: 'persistent', recovery: 'day' }];
+  const recovered = recoverDailyCombatResources(resources, 'scene:test:day-3');
+  assert.equal(recovered[0].current, 8);
+  assert.equal(recovered[0].recoveryDayKey, 'scene:test:day-3');
+  assert.equal(recoverDailyCombatResources([{ ...recovered[0], current: 3 }], 'scene:test:day-3')[0].current, 3);
+});
+
 test('Techniken werden nur mit einer passenden aktiven Waffenart freigeschaltet', () => {
   const technique = { name: 'Mordhau', weaponTypes: ['sword'] };
   assert.equal(isTechniqueCompatibleWithWeapon(technique, { id: 'blade', weaponType: 'sword' }), true);
@@ -575,6 +632,27 @@ test('latente Aura liefert strukturierte Debuffs für gegnerische Kampfwerte', (
   assert.equal(mechanics.savingThrow, -3);
 });
 
+test('Aura unterscheidet Verbündete und Gegner und respektiert ihren Radius', () => {
+  const source = {
+    aura: {
+      enabled: true,
+      latentPresence: {
+        enabled: true,
+        active: true,
+        target: 'Verbündete und Gegner',
+        radius: '9 m',
+        allyMechanics: { attack: 2 },
+        enemyMechanics: { attack: -2 }
+      }
+    }
+  };
+  assert.equal(parseAuraRadiusMeters('30 ft').toFixed(2), '9.14');
+  assert.equal(getAuraTargetMechanics(source, { relation: 'ally', distanceMeters: 5 }).attack, 2);
+  assert.equal(getAuraTargetMechanics(source, { relation: 'enemy', distanceMeters: 5 }).attack, -2);
+  assert.equal(getAuraTargetMechanics(source, { relation: 'ally', distanceMeters: 12 }).attack, 0);
+  assert.equal(getAuraTargetMechanics(source, { relation: 'ally' }).attack, 0);
+});
+
 test('latente Präsenz kann dem gegnerischen Angriff Nachteil geben', async () => {
   const actor = resolveCombatProfile(character('actor'));
   const target = resolveCombatProfile(character('target', {
@@ -602,9 +680,166 @@ test('Zauberformeln würfeln Rettung gegen den Zauber-SG des Akteurs', async () 
   assert.equal(resolution.attack.hit, false);
 });
 
-test('Spielleiter-Cheat entfernt Kosten und erzwingt auch bei natürlicher Eins einen Treffer', async () => {
-  const actor = resolveCombatProfile(character('actor', { cheats: { enabled: true } }));
+test('ein natürlicher Rettungswurf von eins erzeugt keinen kritischen Schaden', async () => {
+  const actor = resolveCombatProfile(character('actor', {
+    attributes: [{ key: 'intelligence', score: 18 }],
+    magic: {
+      enabled: true,
+      castingAttribute: 'intelligence',
+      spells: [{
+        id: 'brand', name: 'Brandmal', rollFormula: '2W6', resolutionType: 'saving-throw',
+        saveAttribute: 'dexterity', prepared: true
+      }]
+    }
+  }), { actionId: 'spell:brand', segmentKind: 'spell' });
   const target = resolveCombatProfile(character('target'));
+  const dice = new FakeDiceAdapter({ natural: 1, total: 1 });
+  const resolution = await new CombatResolutionService(dice).resolveAttack({ actor, target });
+  assert.equal(resolution.attack.saveSucceeded, false);
+  assert.equal(resolution.attack.hit, true);
+  assert.equal(resolution.attack.criticalSuccess, false);
+  assert.equal(resolution.attack.criticalFailure, false);
+  assert.equal(dice.damageCalls[0].critical, false);
+});
+
+test('ein Zauber mit Slotkosten ist ohne konkrete Zauberplatz-Ressource gesperrt', () => {
+  const magic = {
+    enabled: true,
+    castingAttribute: 'intelligence',
+    spells: [{
+      id: 'sealed', name: 'Versiegelte Flamme', rollFormula: '2W6', prepared: true,
+      level: 1, slotCost: 1, slotResourceId: 'unbekannter-slot'
+    }]
+  };
+  const actor = resolveCombatProfile(character('actor', { magic }), {
+    actionId: 'spell:sealed', segmentKind: 'spell'
+  });
+  const validation = validateCombatActorProfile(actor);
+  assert.equal(actor.selectedAction.compatible, false);
+  assert.equal(validation.ready, false);
+  assert.ok(validation.missingFields.includes('incompatibleAction'));
+});
+
+test('ein Zauber mit gültigem Slot zieht den Zauberplatz in seine Kosten ein', () => {
+  const actor = resolveCombatProfile(character('actor', {
+    resources: [{
+      id: 'slot-1', name: 'Zauberplatz I', current: 1, maximum: 1,
+      category: 'magic', scope: 'persistent'
+    }],
+    magic: {
+      enabled: true,
+      castingAttribute: 'intelligence',
+      slotResourceIds: ['slot-1'],
+      spells: [{
+        id: 'flame', name: 'Flamme', rollFormula: '2W6', prepared: true,
+        level: 1, slotCost: 1, slotResourceId: 'slot-1'
+      }]
+    }
+  }), { actionId: 'spell:flame', segmentKind: 'spell' });
+  assert.equal(actor.selectedAction.compatible, true);
+  assert.equal(validateCombatActorProfile(actor).ready, true);
+  assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'slot-1')?.amount, 1);
+});
+
+test('Zaubertricks sind kostenlos und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
+  const profile = sanitizeCharacterCombatProfile({
+    magic: {
+      enabled: true,
+      spells: [
+        { id: 'spark', name: 'Funke', level: 0, rollFormula: '1W4', manaCost: 9, slotCost: 2, prepared: true },
+        { id: 'gate', name: 'Weltenpforte', level: 18, rollFormula: '4W10', manaCost: 5, prepared: true }
+      ]
+    }
+  });
+  const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
+  assert.equal(COMBAT_SPELL_SLOT_DEFINITIONS.length, 10);
+  assert.deepEqual(slots.map(slot => [slot.spellLevel, slot.recovery]), Array.from({ length: 10 }, (_entry, index) => [index + 1, 'long-rest']));
+  assert.equal(profile.magic.spells[0].manaCost, 0);
+  assert.equal(profile.magic.spells[0].slotCost, 0);
+  assert.equal(profile.magic.spells[0].slotResourceId, '');
+  assert.equal(profile.magic.spells[1].level, 10);
+  assert.equal(profile.magic.spells[1].slotResourceId, getSpellSlotResourceId(10));
+  assert.equal(getSpellLevelLabel(0), 'Zaubertrick');
+  assert.equal(getSpellLevelLabel(10), 'Grad X');
+
+  const migratedPaidSpell = sanitizeCharacterCombatProfile({
+    magic: { enabled: true, spells: [{ id: 'legacy', name: 'Alter Zauber', manaCost: 2, rollFormula: '1W6' }] }
+  }).magic.spells[0];
+  assert.equal(migratedPaidSpell.level, 1);
+  assert.equal(migratedPaidSpell.slotResourceId, getSpellSlotResourceId(1));
+
+  const cantrip = resolveCombatProfile(character('mage', { magic: profile.magic, resources: profile.resources }), {
+    actionId: 'spell:spark', segmentKind: 'spell'
+  });
+  assert.equal(cantrip.selectedAction.isCantrip, true);
+  assert.deepEqual(cantrip.resourceCosts.map(cost => cost.resourceId), ['action']);
+});
+
+test('AleriaGPT erhält Aura-Ersatzregel, Zaubergrade und aktuelle Zauberplätze strukturiert', () => {
+  const snapshot = buildCombatProfileAiSnapshot(character('mage', {
+    magic: { enabled: true, spells: [{ id: 'spark', name: 'Funke', level: 0, rollFormula: '1W4', prepared: true }] },
+    aura: { enabled: true, focusResourceId: 'aura-focus', focusBypassCost: 2 }
+  }));
+  assert.equal(snapshot.actionEconomy.some(resource => resource.id === 'aura-focus'), true);
+  assert.equal(snapshot.actionEconomyRules.auraFocusRule.replacesEntireRegularCostPackage, true);
+  assert.equal(snapshot.magic.spellLevelRules.cantrip.spellSlotCost, 0);
+  assert.equal(snapshot.magic.spellLevelRules.slotLevels.length, 10);
+  assert.equal(snapshot.magic.spellSlots.length, 10);
+});
+
+test('eine Figur mit null TP ist nur mit ausdrücklicher Sonderregel handlungsfähig', () => {
+  const unconscious = resolveCombatProfile(character('actor', {
+    hitPoints: { current: 0, maximumOverride: 20, hitDie: 8 }
+  }));
+  const exception = resolveCombatProfile(character('actor', {
+    hitPoints: { current: 0, maximumOverride: 20, hitDie: 8 },
+    combat: { canActAtZeroHitPoints: true }
+  }));
+  assert.deepEqual(validateCombatActorProfile(unconscious), {
+    ready: false,
+    missingFields: ['incapacitated']
+  });
+  assert.equal(validateCombatActorProfile(exception).ready, true);
+});
+
+test('Regeln einer Technik gelten automatisch nur für genau diese ausgewählte Technik', async () => {
+  const actor = resolveCombatProfile(character('actor', {
+    techniques: [{
+      id: 'measured-strike', name: 'Abgemessener Hieb', active: true,
+      compatibleWeaponIds: ['sword'], damageFormula: '1W8',
+      triggerRules: [{
+        id: 'measured-bonus', phase: 'pre-roll', recipient: 'actor', sourceRelation: 'self',
+        activation: 'passive', frequency: 'always', condition: 'always',
+        actionKinds: ['technique'], effects: { attackModifier: 2 }
+      }]
+    }, {
+      id: 'wild-strike', name: 'Wilder Hieb', active: true,
+      compatibleWeaponIds: ['sword'], damageFormula: '1W8',
+      triggerRules: [{
+        id: 'wild-bonus', phase: 'pre-roll', recipient: 'actor', sourceRelation: 'self',
+        activation: 'passive', frequency: 'always', condition: 'always',
+        actionKinds: ['technique'], effects: { attackModifier: 5 }
+      }]
+    }]
+  }), { actionId: 'technique:measured-strike', segmentKind: 'combataction' });
+  const target = resolveCombatProfile(character('target'));
+  const resolution = await new CombatResolutionService(new FakeDiceAdapter({ natural: 12, total: 18 }))
+    .resolveAttack({ actor, target });
+  assert.deepEqual(resolution.ruleApplications.map(rule => rule.ruleId), ['measured-bonus']);
+});
+
+test('Spielleiter-Cheat entfernt Kosten und bleibt auch gegen nachträgliche Abwehrregeln erfolgreich', async () => {
+  const actor = resolveCombatProfile(character('actor', { cheats: { enabled: true } }));
+  const target = resolveCombatProfile(character('target', {
+    quirks: [{
+      id: 'absolute-dodge', name: 'Unberührbar', active: true,
+      triggerRules: [{
+        id: 'force-miss', phase: 'post-roll', recipient: 'target', sourceRelation: 'self',
+        activation: 'passive', frequency: 'always', condition: 'would-hit',
+        actionKinds: ['weapon'], effects: { defenseModifier: 99, outcome: 'force-miss' }
+      }]
+    }]
+  }));
   const resolution = await new CombatResolutionService(new FakeDiceAdapter({ natural: 1, total: -4 })).resolveAttack({ actor, target });
   assert.equal(actor.resourceCosts.length, 0);
   assert.equal(resolution.attack.hit, true);
@@ -660,3 +895,215 @@ test('ruft AleriaGPT fuer eine neue Kampfauswertung tatsaechlich auf', async () 
     else globalThis.AleriaGptRetrieval = previousRetrieval;
   }
 });
+
+test('eine strukturierte Zielregel laesst den ersten treffenden Angriff der Szene automatisch scheitern', async () => {
+  const actor = resolveCombatProfile(character('actor'));
+  const target = resolveCombatProfile(character('target', {
+    armorClass: { override: 20 },
+    quirks: [{
+      id: 'first-dodge', name: 'Erster Schritt zur Seite', active: true,
+      triggerRules: [{
+        id: 'dodge-first-hit', name: 'Ersten Treffer ausweichen', phase: 'post-roll',
+        recipient: 'target', sourceRelation: 'self', activation: 'passive', frequency: 'scene',
+        condition: 'would-hit', actionKinds: ['weapon'], effects: { outcome: 'force-miss' }
+      }]
+    }]
+  }));
+  const first = await new CombatResolutionService(new FakeDiceAdapter({ natural: 16, total: 22 })).resolveAttack({ actor, target }, {
+    relationship: 'enemy', distanceMeters: 1,
+    rulePeriods: { comment: 'c1', scene: 'scene-1', day: 'day-1' }
+  });
+  assert.equal(first.attack.total, 22);
+  assert.equal(first.attack.targetDefense, 20);
+  assert.equal(first.attack.hit, false);
+  assert.equal(first.damage, null);
+  assert.equal(first.ruleApplications[0].ruleName, 'Ersten Treffer ausweichen');
+
+  const second = await new CombatResolutionService(new FakeDiceAdapter({ natural: 16, total: 22 })).resolveAttack({ actor, target }, {
+    relationship: 'enemy', distanceMeters: 1,
+    rulePeriods: { comment: 'c2', scene: 'scene-1', day: 'day-1' },
+    usedRuleFrequencyKeys: first.usedRuleFrequencyKeys
+  });
+  assert.equal(second.attack.hit, true);
+  assert.equal(second.ruleApplications.length, 0);
+});
+
+test('eine ausgewaehlte verbuendete Reaktion verbessert den Angriff und verbraucht ihre Ressource', async () => {
+  const actor = resolveCombatProfile(character('actor'));
+  const target = resolveCombatProfile(character('target', { armorClass: { override: 20 } }));
+  const helper = resolveCombatProfile(character('guinevere', {
+    abilities: [{
+      id: 'guiding-call', name: 'Lenkender Ruf', active: true, activationType: 'reaction',
+      triggerRules: [{
+        id: 'first-attack-plus-two', name: 'Deckung oeffnen', phase: 'post-roll',
+        recipient: 'actor', sourceRelation: 'ally', activation: 'reaction', frequency: 'comment',
+        condition: 'always', actionKinds: ['weapon'], radiusMeters: 12,
+        effects: { attackModifier: 2 }
+      }]
+    }]
+  }));
+  const result = await new CombatResolutionService(new FakeDiceAdapter({ natural: 13, total: 19 })).resolveAttack({ actor, target }, {
+    relationship: 'enemy', distanceMeters: 1,
+    rulePeriods: { comment: 'comment-1', scene: 'scene-1', day: 'day-1' },
+    ruleSources: [{
+      actorId: helper.characterId, actorName: helper.name, profile: helper, sourceRole: 'support',
+      relationToActor: 'ally', relationToTarget: 'enemy', distanceToActor: 5, distanceToTarget: 6,
+      selectedRuleIds: ['first-attack-plus-two']
+    }]
+  });
+  assert.equal(result.attack.total, 21);
+  assert.equal(result.attack.hit, true);
+  assert.equal(result.ruleApplications[0].sourceActorId, 'guinevere');
+  assert.deepEqual(result.ruleResourceSnapshots[0].changes.map(change => [change.resourceId, change.before, change.after]), [
+    ['reaction', 1, 0]
+  ]);
+});
+
+test('eine Regel pro Kommentar darf in einem späteren Kommentar erneut auslösen', async () => {
+  const actor = resolveCombatProfile(character('actor', {
+    quirks: [{
+      id: 'steady-hand', name: 'Sichere Hand', active: true,
+      triggerRules: [{
+        id: 'comment-bonus', phase: 'pre-roll', recipient: 'actor', sourceRelation: 'self',
+        activation: 'passive', frequency: 'comment', condition: 'always',
+        actionKinds: ['weapon'], effects: { attackModifier: 1 }
+      }]
+    }]
+  }));
+  const target = resolveCombatProfile(character('target'));
+  const first = await new CombatResolutionService(new FakeDiceAdapter({ natural: 12, total: 18 })).resolveAttack({ actor, target }, {
+    rulePeriods: { comment: 'comment-1', scene: 'scene-1', day: 'day-1' }
+  });
+  const historicalKeys = deriveCombatRuleFrequencyKeys([{
+    commentSegments: [{ combatResolution: first }]
+  }], { comment: 'comment-2', scene: 'scene-1', day: 'day-1' });
+  const second = await new CombatResolutionService(new FakeDiceAdapter({ natural: 12, total: 18 })).resolveAttack({ actor, target }, {
+    rulePeriods: { comment: 'comment-2', scene: 'scene-1', day: 'day-1' },
+    usedRuleFrequencyKeys: historicalKeys
+  });
+  assert.equal(first.ruleApplications.length, 1);
+  assert.equal(second.ruleApplications.length, 1);
+  assert.match(first.ruleApplications[0].usedKey, /comment:comment-1$/);
+  assert.match(second.ruleApplications[0].usedKey, /comment:comment-2$/);
+});
+
+test('Fertigkeitsregeln veraendern den serverpruefbaren Gesamtwert statt nur den KI-Text', async () => {
+  const actor = character('actor', {
+    progression: { level: 1 },
+    attributes: [{ key: 'charisma', score: 14 }],
+    skills: [{ id: 'persuasion', name: 'ueberreden', attributeKey: 'charisma', proficiency: 'trained', bonus: 0 }],
+    quirks: [{
+      id: 'courtly', name: 'Hoefische Haltung', active: true,
+      triggerRules: [{
+        id: 'courtly-persuasion', phase: 'pre-roll', recipient: 'actor', sourceRelation: 'self',
+        activation: 'passive', frequency: 'always', actionKinds: ['skill'], effects: { skillModifier: 2 }
+      }]
+    }]
+  });
+  const dice = new FakeSkillDiceAdapter(9);
+  const result = await new SkillResolutionService(dice).resolve({
+    actor,
+    settings: { skillId: 'persuasion', customModifier: 0, difficulty: 14, rollMode: 'normal' }
+  }, { rulePeriods: { comment: 'c1', scene: 's1', day: 'd1' } });
+  assert.equal(result.profileModifier, 4);
+  assert.equal(result.ruleModifier, 2);
+  assert.equal(result.total, 15);
+  assert.equal(result.outcome, 'success');
+  assert.equal(result.ruleApplications[0].entryName, 'Hoefische Haltung');
+});
+
+test('der DnD-Kostenblock zeigt Aura als universelle Aktionsressource und trennt Mana sowie Zauberplätze', () => {
+  const actor = {
+    resources: [
+      { id: 'action', name: 'Aktion', current: 1, maximum: 1 },
+      { id: 'bonus-action', name: 'Bonusaktion', current: 1, maximum: 1 },
+      { id: 'reaction', name: 'Reaktion', current: 0, maximum: 1 },
+      { id: 'special-action', name: 'Besondere Aktion', current: 2, maximum: 2 },
+      { id: 'mana-focus', name: 'Mana / Fokus', current: 3, maximum: 5, category: 'magic' },
+      { id: 'slot-1', name: 'Zauberplatz I', current: 1, maximum: 2, category: 'magic' }
+    ],
+    magic: { slotResourceIds: ['slot-1'] },
+    aura: { enabled: false },
+    cheats: { enabled: false }
+  };
+  const costs = [
+    { resourceId: 'bonus-action', name: 'Bonusaktion', amount: 1 },
+    { resourceId: 'mana-focus', name: 'Mana / Fokus', amount: 2 },
+    { resourceId: 'slot-1', name: 'Zauberplatz I', amount: 1 }
+  ];
+  const cards = combatUiInternals.buildPaymentResourceCards({
+    actor,
+    segmentKind: 'spell',
+    paymentMode: 'standard',
+    paymentOptions: [{ mode: 'standard', costs, payment: { sufficient: true } }]
+  });
+  assert.deepEqual(ACTION_RESOURCE_IDS_FOR_TEST(cards), [
+    ['action', false], ['bonus-action', true], ['reaction', false], ['special-action', false]
+  ]);
+  assert.equal(cards.find(card => card.resource.id === 'mana-focus')?.cost, 2);
+  assert.equal(cards.find(card => card.resource.id === 'slot-1')?.cost, 1);
+  const groups = combatUiInternals.classifyPaymentResourceCards(cards, actor, true);
+  assert.deepEqual(groups.actions.map(card => card.resource.id), ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
+  assert.deepEqual(groups.mana.map(card => card.resource.id), ['mana-focus']);
+  assert.deepEqual(groups.spellSlots.map(card => card.resource.id), ['slot-1']);
+  assert.deepEqual(groups.otherResources.map(card => card.resource.id), []);
+});
+
+test('Kampf- und Zauberfenster verwenden getrennte Werte und Ressourcenbereiche', () => {
+  assert.equal(combatUiInternals.isMagicSegmentKind('spell'), true);
+  assert.equal(combatUiInternals.isMagicSegmentKind('prayer'), true);
+  assert.equal(combatUiInternals.isMagicSegmentKind('combataction'), false);
+  assert.deepEqual(combatUiInternals.getMagicDisplayStats({
+    actionSpellSaveDc: 16,
+    spellAttackModifier: 7,
+    actionResolutionMode: 'saving-throw'
+  }), {
+    saveDc: 16,
+    spellAttack: 7,
+    resolutionLabel: 'Rettungswurf gegen Zauber-SG',
+    spellLevelLabel: '',
+    cantrip: false
+  });
+  assert.deepEqual(combatUiInternals.getCombatDisplayStats({
+    attackModifier: 6,
+    damageModifier: 3,
+    weapon: { damageFormula: '1d8', damageType: 'Hieb' },
+    selectedAction: { activationType: 'bonus-action' }
+  }), {
+    attack: '+6',
+    damage: '1W8 +3',
+    activation: 'Bonusaktion'
+  });
+  const orderedSlots = combatUiInternals.classifyPaymentResourceCards([
+    { resource: { id: 'slot-3', name: 'Zauberplatz III' } },
+    { resource: { id: 'slot-1', name: 'Zauberplatz I' } },
+    { resource: { id: 'slot-2', name: 'Zauberplatz II' } }
+  ], { magic: { slotResourceIds: ['slot-3', 'slot-1', 'slot-2'] } }, true);
+  assert.deepEqual(orderedSlots.spellSlots.map(card => card.resource.id), ['slot-1', 'slot-2', 'slot-3']);
+
+  const actor = {
+    resources: [
+      { id: 'action', name: 'Aktion', current: 1, maximum: 1 },
+      { id: 'mana-focus', name: 'Mana / Fokus', current: 4, maximum: 4, category: 'magic' },
+      { id: 'slot-1', name: 'Zauberplatz I', current: 2, maximum: 2, category: 'magic' }
+    ],
+    magic: { slotResourceIds: ['slot-1'] }
+  };
+  const cards = combatUiInternals.buildPaymentResourceCards({
+    actor,
+    segmentKind: 'combataction',
+    paymentMode: 'standard',
+    paymentOptions: [{
+      mode: 'standard',
+      costs: [{ resourceId: 'action', name: 'Aktion', amount: 1 }],
+      payment: { sufficient: true }
+    }]
+  });
+  assert.equal(cards.some(card => card.resource.id === 'mana-focus'), false);
+  assert.equal(cards.some(card => card.resource.id === 'slot-1'), false);
+});
+
+function ACTION_RESOURCE_IDS_FOR_TEST(cards) {
+  return ['action', 'bonus-action', 'reaction', 'special-action']
+    .map(id => [id, cards.find(card => card.resource.id === id)?.required]);
+}

@@ -1,4 +1,9 @@
 function fallbackNarration(facts = {}) {
+  if (facts.attack?.resolutionMode === 'saving-throw') {
+    return facts.attack.saveSucceeded
+      ? `${facts.target} widersteht der Wirkung von ${facts.actor}${facts.damage ? ', wird jedoch noch gestreift' : ''}.`
+      : `${facts.target} kann der Wirkung von ${facts.actor} nicht widerstehen.`;
+  }
   if (facts.criticalFailure) return `${facts.actor} setzt zum Angriff an, doch ${facts.target} entgeht dem Versuch vollständig.`;
   if (!facts.hit) return `${facts.target} entzieht sich dem Angriff von ${facts.actor}, bevor ${facts.weapon || 'die Waffe'} Wirkung entfalten kann.`;
   if (facts.critical) return `${facts.actor} findet eine seltene Öffnung. Der Angriff mit ${facts.weapon || 'der Waffe'} trifft ${facts.target} mit außergewöhnlicher Präzision.`;
@@ -20,7 +25,19 @@ function enrichCombatNarrationRetrieval(retrieval = {}, facts = {}) {
     'VERBINDLICHE KAMPFPROFIL-SNAPSHOTS',
     JSON.stringify({
       actorCombatProfile: facts.actorCombatProfile || null,
-      targetCombatProfile: facts.targetCombatProfile || null
+      targetCombatProfile: facts.targetCombatProfile || null,
+      confirmedOutcome: {
+        attack: facts.attack || null,
+        damage: facts.damageRoll || null,
+        targetSnapshot: facts.targetSnapshot || null,
+        actorResourceSnapshot: facts.actorResourceSnapshot || null,
+        actorAbilitySnapshot: facts.actorAbilitySnapshot || null,
+        abilityUse: facts.abilityUse || null,
+        auraContext: facts.auraContext || null,
+        ruleApplications: facts.ruleApplications || [],
+        ruleResourceSnapshots: facts.ruleResourceSnapshots || [],
+        ruleAbilitySnapshots: facts.ruleAbilitySnapshots || []
+      }
     }, null, 2)
   ].join('\n');
   return {
@@ -56,6 +73,19 @@ function buildCombatNarrationQuery(facts = {}) {
     critical: facts.critical,
     criticalFailure: facts.criticalFailure,
     damage: facts.damage,
+    resolutionMode: facts.attack?.resolutionMode || 'weapon-attack',
+    saveSucceeded: facts.attack?.saveSucceeded ?? null,
+    targetHitPointsAfter: facts.targetSnapshot?.hitPointsAfter ?? null,
+    targetMaximumHitPoints: facts.targetSnapshot?.maximumHitPoints ?? null,
+    temporaryHitPointsBefore: facts.targetSnapshot?.temporaryHitPointsBefore ?? 0,
+    temporaryHitPointsAfter: facts.targetSnapshot?.temporaryHitPointsAfter ?? 0,
+    temporaryHitPointsAbsorbed: facts.targetSnapshot?.damageAbsorbedByTemporaryHitPoints ?? 0,
+    abilityUse: facts.abilityUse?.name || '',
+    appliedRules: (facts.ruleApplications || []).slice(0, 8).map(rule => ({
+      source: rule.sourceActorName,
+      rule: rule.ruleName,
+      phase: rule.phase
+    })),
     originalDescription: ''
   };
   const prefix = `${instructions}\nBestätigte Fakten: `;

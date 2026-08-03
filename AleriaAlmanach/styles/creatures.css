@@ -442,12 +442,18 @@ body.creature-profile-open { overflow: hidden; }
 .creature-aura-mechanics input { min-width: 0; width: 100%; }
 
 .creature-spell-list { display: grid; gap: 7px; }
-.creature-spell-list > div { display: grid; grid-template-columns: 1.2fr .7fr 70px 1fr 1.1fr auto 34px; gap: 6px; }
+.creature-spell-slot-grid { display: grid; grid-template-columns: repeat(5, minmax(110px, 1fr)); gap: 7px; margin: 10px 0; padding: 9px; border: 1px solid rgba(77, 111, 170, .42); background: rgba(25, 32, 52, .36); }
+.creature-spell-slot-grid > label { display: grid; gap: 5px; padding: 7px; border: 1px solid rgba(98, 128, 181, .35); color: #adc0e1; font: 600 11px Georgia, serif; }
+.creature-spell-slot-grid > label > div { display: grid; grid-template-columns: 1fr auto 1fr; gap: 4px; align-items: center; }
+.creature-spell-slot-grid input { min-width: 0; width: 100%; text-align: center; }
+.creature-spell-slot-grid i { color: #7890ba; font-style: normal; }
+.creature-spell-list > div { display: grid; grid-template-columns: 1.2fr .8fr .7fr 70px 1fr 1.1fr auto 34px; gap: 6px; }
 .creature-spell-list textarea { grid-column: 1 / -1; }
 .creature-cheat-section { border-color: rgba(150, 60, 50, .55); }
 
 @media (max-width: 820px) {
   .creature-aura-mechanics { grid-template-columns: 1fr; }
+  .creature-spell-slot-grid { grid-template-columns: repeat(2, minmax(110px, 1fr)); }
   .creature-spell-list > div { grid-template-columns: 1fr 1fr; }
   .creature-detail-card { grid-template-columns: 1fr; }
 }

@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test worker.test.mjs",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "secret:openrouter": "wrangler secret put ALERIA_GPT_API_KEY"
@@ -12,4 +13,3 @@
     "wrangler": "^4.0.0"
   }
 }
-

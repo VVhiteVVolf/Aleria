@@ -44,6 +44,12 @@ function makeLocalTimestamp() {
   return { seconds: Math.floor(Date.now() / 1000), local: true };
 }
 
+function assertLocalCommentMutable(comment, operation) {
+  const policy = window.AleriaCommentTransactions;
+  if (!policy?.assertMutable) throw new Error('Der Schutz mechanischer Beiträge ist nicht geladen.');
+  return policy.assertMutable(comment, operation);
+}
+
 function normalizeCommentModuleInsertForStorage(source = {}) {
   const next = { ...(source || {}) };
   if (typeof next.moduleInsert === 'string' && next.moduleInsert.trim()) {
@@ -204,6 +210,17 @@ function getLocalCommentBackend() {
         } : null
       });
     },
+    async addSkillComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+      return this.addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, {
+        ...metadata,
+        skillTransaction: {
+          schemaVersion: 1,
+          transactionId: makeLocalCommentId(),
+          committedAtClient: Date.now(),
+          localSceneState: true
+        }
+      });
+    },
     async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
       const store = readLocalCommentStore();
       const nowClient = Date.now();
@@ -255,6 +272,7 @@ function getLocalCommentBackend() {
       Object.keys(store).forEach(key => {
         store[key] = (store[key] || []).map(comment => {
           if (comment.id !== docId) return comment;
+          assertLocalCommentMutable(comment, 'bearbeitet');
           updated = true;
           const nowClient = Date.now();
           return {
@@ -271,7 +289,8 @@ function getLocalCommentBackend() {
       writeLocalCommentStore(store);
     },
     async deleteComment(docId, deleteCode) {
-      await this.verifyCommentCode(docId, deleteCode);
+      const comment = await this.verifyCommentCode(docId, deleteCode);
+      assertLocalCommentMutable(comment, 'gelöscht');
       const store = readLocalCommentStore();
       Object.keys(store).forEach(key => {
         store[key] = (store[key] || []).filter(comment => comment.id !== docId);

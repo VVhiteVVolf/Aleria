@@ -220,3 +220,49 @@ test('AleriaGPT-Retrieval nimmt den Mechaniktext tatsächlich in den Kommentarbl
   assert.match(chunks[0].text, /Ziel-TP 11 -> 4\/11/);
   assert.equal(chunks[0].metadata.hasMechanics, true);
 });
+
+test('saving spells and temporary hit points stay explicit in the AI context', () => {
+  const window = loadContextBuilder();
+  const comments = window.__storedComments([{
+    id: 'saving-spell',
+    entryId: 'scene-1',
+    commentSegments: [{
+      kind: 'spell',
+      text: 'Flammen schlagen um das Ziel.',
+      combatResolution: {
+        resolutionId: 'saving-spell-1',
+        resolutionMode: 'saving-throw',
+        actorName: 'Magierin',
+        targetName: 'Waechter',
+        weapon: { name: 'Flammenkreis' },
+        attack: {
+          hit: true,
+          saveSucceeded: false,
+          saveAttribute: 'dexterity',
+          rollOwner: 'target',
+          total: 11,
+          targetDefense: 15
+        },
+        damage: { total: 8, damageType: 'Feuer' },
+        targetSnapshot: {
+          hitPointsBefore: 20,
+          hitPointsAfter: 17,
+          maximumHitPoints: 20,
+          temporaryHitPointsBefore: 5,
+          temporaryHitPointsAfter: 0,
+          damageAbsorbedByTemporaryHitPoints: 5,
+          damageAppliedToHitPoints: 3
+        }
+      }
+    }]
+  }]);
+
+  const resolution = comments[0].segments[0].combatResolution;
+  assert.equal(resolution.resolutionMode, 'saving-throw');
+  assert.equal(resolution.saveSucceeded, false);
+  assert.equal(resolution.temporaryHitPointsBefore, 5);
+  assert.equal(resolution.damageAbsorbedByTemporaryHitPoints, 5);
+  assert.match(comments[0].segments[0].mechanicsText, /Rettungswurf misslungen/);
+  assert.match(comments[0].segments[0].mechanicsText, /Zauber-SG 15/);
+  assert.match(comments[0].segments[0].mechanicsText, /tempor.*re TP 5 -> 0/);
+});

@@ -11,9 +11,16 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-combat-sheet-v6';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-combat-entry-editor-v1';
-import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-resource-icons-v1';
+} from '../combat/combat-profile-model.js?v=20260803-spell-grades-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-spell-grades-v1';
+import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
+import {
+  findSpellSlotResourceId,
+  getOrderedSpellSlotResources,
+  getSpellLevelLabel,
+  getSpellSlotLevel,
+  isSpellSlotResource
+} from '../combat/combat-spell-slots.js?v=20260803-economy-audit-v1';
 import {
   CREATURE_ARCHIVE_EXPORT_TYPE,
   CREATURE_SCHEMA_VERSION,
@@ -38,6 +45,10 @@ const state = {
   editingId: '',
   draft: null
 };
+
+function renderCreatureSpellLevelOptions(value = 0) {
+  return Array.from({ length: 11 }, (_entry, level) => `<option value="${level}"${Number(value) === level ? ' selected' : ''}>${escapeHtml(getSpellLevelLabel(level))}</option>`).join('');
+}
 
 const SIZE_OPTIONS = ['Winzig', 'Klein', 'Mittel', 'Groß', 'Riesig', 'Gigantisch'];
 const ATTRIBUTE_OPTIONS = COMBAT_ATTRIBUTE_DEFINITIONS.map(item => `<option value="${item.key}">${item.label}</option>`).join('');
@@ -296,6 +307,7 @@ function renderSheet() {
             <label><span>Bewegung (m)</span><input type="number" min="0" max="999" data-combat-field="movement" value="${profile.combat.movement}"><b>${profile.combat.movement} m</b></label>
             <label><span>Kompetenzbonus</span><input type="number" min="-20" max="30" data-combat-field="proficiency" value="${proficiency}"><b>+${proficiency}</b></label>
             <label><span>Passiv-Bonus</span><input type="number" min="-99" max="99" data-combat-field="passive-perception" value="${profile.combat.passivePerceptionBonus}"><b>${passivePerception}</b></label>
+            <label><span>0-TP-Sonderregel</span><input type="checkbox" data-creature-profile-path="combat.canActAtZeroHitPoints"${profile.combat.canActAtZeroHitPoints ? ' checked' : ''}><b>${profile.combat.canActAtZeroHitPoints ? 'Handlungsfähig' : 'Handlungsunfähig'}</b></label>
           </div>
         </section>
         <section class="creature-sheet-section">
@@ -377,9 +389,10 @@ function renderCreatureDetailSection(profile, collection, number, title, kind, a
 }
 
 function renderCreatureResources(profile) {
+  const coreResources = profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds));
   return `<section class="creature-sheet-section creature-resource-section">
     <div class="creature-section-title"><span>R</span> Aktionen & Kernressourcen</div>
-    <div class="creature-resource-grid">${profile.resources.map(resource => { const icon = getCombatResourceIconPresentation(resource, document.baseURI); return `<label data-creature-resource-id="${escapeHtml(resource.id)}"><span class="creature-resource-icon-frame" aria-hidden="true"><b>${icon.fallback}</b>${icon.source ? `<img class="creature-resource-icon" src="${escapeHtml(icon.source)}" alt="" loading="eager" decoding="async">` : ''}</span><span>${escapeHtml(resource.name)}</span><div><input type="number" min="0" max="9999" data-resource-field="current" value="${resource.current}"><i>/</i><input type="number" min="0" max="9999" data-resource-field="maximum" value="${resource.maximum}"></div><small>${resource.scope === 'comment' ? 'pro Kommentar' : resource.recovery}</small></label>`; }).join('')}</div>
+    <div class="creature-resource-grid">${coreResources.map(resource => { const icon = getCombatResourceIconPresentation(resource, document.baseURI); return `<label data-creature-resource-id="${escapeHtml(resource.id)}"><span class="creature-resource-icon-frame" aria-hidden="true"><b>${icon.fallback}</b>${icon.source ? `<img class="creature-resource-icon" src="${escapeHtml(icon.source)}" alt="" loading="eager" decoding="async">` : ''}</span><span>${escapeHtml(resource.name)}</span><div><input type="number" min="0" max="9999" data-resource-field="current" value="${resource.current}"><i>/</i><input type="number" min="0" max="9999" data-resource-field="maximum" value="${resource.maximum}"></div><small>${resource.scope === 'comment' ? 'pro Kommentar' : resource.recovery}</small></label>`; }).join('')}</div>
   </section>`;
 }
 
@@ -397,9 +410,11 @@ function renderCreatureAura(profile) {
 }
 
 function renderCreatureMagic(profile) {
+  const spellSlots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
   return `<section class="creature-sheet-section creature-magic-section">
     <div class="creature-section-head"><div class="creature-section-title"><span>M</span> Magie & Zauberformeln</div><div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="magic.enabled"${profile.magic.enabled ? ' checked' : ''}> Magie aktiv</label><button type="button" data-creature-action="add-spell">+ Zauber</button></div></div>
-    <div class="creature-spell-list">${profile.magic.spells.map((spell, index) => `<div data-spell-index="${index}"><input data-spell-field="name" value="${escapeHtml(spell.name)}" placeholder="Zauber"><input data-spell-field="rollFormula" value="${escapeHtml(spell.rollFormula)}" placeholder="1d8"><input type="number" min="0" max="999" data-spell-field="manaCost" value="${spell.manaCost}" aria-label="Mana"><select data-spell-field="presentationKind"><option value="spell"${spell.presentationKind === 'spell' ? ' selected' : ''}>Zauberformel</option><option value="prayer"${spell.presentationKind === 'prayer' ? ' selected' : ''}>Gebet</option><option value="song"${spell.presentationKind === 'song' ? ' selected' : ''}>Gesang</option></select><select data-spell-field="resolutionType"><option value="spell-attack"${spell.resolutionType === 'spell-attack' ? ' selected' : ''}>Zauberangriff</option><option value="saving-throw"${spell.resolutionType === 'saving-throw' ? ' selected' : ''}>Zauber-SG</option><option value="automatic"${spell.resolutionType === 'automatic' ? ' selected' : ''}>Automatisch</option></select><button type="button" data-creature-action="edit-detail" data-collection="magic.spells" data-entry-kind="spell" data-item-id="${escapeHtml(spell.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-spell" data-index="${index}">×</button><textarea rows="2" data-spell-field="description" placeholder="Wirkung">${escapeHtml(spell.description)}</textarea></div>`).join('') || '<div class="creature-table-empty">Noch keine Zauberformel.</div>'}</div>
+    ${spellSlots.length ? `<div class="creature-spell-slot-grid">${spellSlots.map(resource => `<label data-creature-resource-id="${escapeHtml(resource.id)}"><span>${escapeHtml(getSpellLevelLabel(getSpellSlotLevel(resource)))}</span><div><input type="number" min="0" max="9999" data-resource-field="current" value="${resource.current}" aria-label="${escapeHtml(resource.name)} aktuell"><i>/</i><input type="number" min="0" max="9999" data-resource-field="maximum" value="${resource.maximum}" aria-label="${escapeHtml(resource.name)} maximum"></div></label>`).join('')}</div>` : ''}
+    <div class="creature-spell-list">${profile.magic.spells.map((spell, index) => `<div data-spell-index="${index}"><input data-spell-field="name" value="${escapeHtml(spell.name)}" placeholder="Zauber"><select data-spell-field="level" aria-label="Zaubergrad">${renderCreatureSpellLevelOptions(spell.level)}</select><input data-spell-field="rollFormula" value="${escapeHtml(spell.rollFormula)}" placeholder="1d8"><input type="number" min="0" max="999" data-spell-field="manaCost" value="${spell.manaCost}" aria-label="Mana"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}><select data-spell-field="presentationKind"><option value="spell"${spell.presentationKind === 'spell' ? ' selected' : ''}>Zauberformel</option><option value="prayer"${spell.presentationKind === 'prayer' ? ' selected' : ''}>Gebet</option><option value="song"${spell.presentationKind === 'song' ? ' selected' : ''}>Gesang</option></select><select data-spell-field="resolutionType"><option value="spell-attack"${spell.resolutionType === 'spell-attack' ? ' selected' : ''}>Zauberangriff</option><option value="saving-throw"${spell.resolutionType === 'saving-throw' ? ' selected' : ''}>Zauber-SG</option><option value="automatic"${spell.resolutionType === 'automatic' ? ' selected' : ''}>Automatisch</option></select><button type="button" data-creature-action="edit-detail" data-collection="magic.spells" data-entry-kind="spell" data-item-id="${escapeHtml(spell.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-spell" data-index="${index}">×</button><textarea rows="2" data-spell-field="description" placeholder="Wirkung">${escapeHtml(spell.description)}</textarea></div>`).join('') || '<div class="creature-table-empty">Noch keine Zauberformel.</div>'}</div>
   </section>`;
 }
 
@@ -547,17 +562,24 @@ function collectDraftFromForm() {
     description: row.querySelector('[data-ability-field="description"]')?.value || '', active: true
   }));
   const spellRows = Array.from(document.querySelectorAll('[data-spell-index]'));
-  profile.magic.spells = spellRows.map((row, index) => ({
-    ...(profile.magic.spells[index] || {}),
-    id: profile.magic.spells[index]?.id || makeId('spell'),
-    name: row.querySelector('[data-spell-field="name"]')?.value || '',
-    rollFormula: row.querySelector('[data-spell-field="rollFormula"]')?.value || '',
-    manaCost: readNumber(row.querySelector('[data-spell-field="manaCost"]'), 0),
-    presentationKind: row.querySelector('[data-spell-field="presentationKind"]')?.value || 'spell',
-    resolutionType: row.querySelector('[data-spell-field="resolutionType"]')?.value || 'spell-attack',
-    description: row.querySelector('[data-spell-field="description"]')?.value || '',
-    prepared: true
-  }));
+  profile.magic.spells = spellRows.map((row, index) => {
+    const existing = profile.magic.spells[index] || {};
+    const level = Math.max(0, Math.min(10, readNumber(row.querySelector('[data-spell-field="level"]'), existing.level || 0)));
+    return {
+      ...existing,
+      id: existing.id || makeId('spell'),
+      name: row.querySelector('[data-spell-field="name"]')?.value || '',
+      level,
+      rollFormula: row.querySelector('[data-spell-field="rollFormula"]')?.value || '',
+      manaCost: level === 0 ? 0 : readNumber(row.querySelector('[data-spell-field="manaCost"]'), 0),
+      slotResourceId: level === 0 ? '' : findSpellSlotResourceId(profile.resources, level),
+      slotCost: level === 0 ? 0 : Math.max(1, Number(existing.slotCost) || 1),
+      presentationKind: row.querySelector('[data-spell-field="presentationKind"]')?.value || 'spell',
+      resolutionType: row.querySelector('[data-spell-field="resolutionType"]')?.value || 'spell-attack',
+      description: row.querySelector('[data-spell-field="description"]')?.value || '',
+      prepared: true
+    };
+  });
   profile.skills = Array.from(document.querySelectorAll('[data-skill-index]')).map((row, index) => ({
     ...(profile.skills[index] || {}), id: profile.skills[index]?.id || makeId('skill'),
     name: row.querySelector('[data-skill-field="name"]')?.value || '',
@@ -771,7 +793,7 @@ function addRow(kind) {
   const profile = state.draft.combatProfile;
   if (kind === 'attack') { const id = makeId('attack'); profile.weapons.push({ id, name: '', weaponType: 'natural', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, equipped: profile.weapons.length === 0 }); }
   if (kind === 'ability') profile.abilities.push({ id: makeId('ability'), name: '', description: '', active: true });
-  if (kind === 'spell') profile.magic.spells.push({ id: makeId('spell'), name: '', rollFormula: '', manaCost: 0, presentationKind: 'spell', resolutionType: 'spell-attack', activationType: 'action', damageType: 'Magie', prepared: true, description: '' });
+  if (kind === 'spell') profile.magic.spells.push({ id: makeId('spell'), name: '', level: 0, rollFormula: '', manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', resolutionType: 'spell-attack', activationType: 'action', damageType: 'Magie', prepared: true, description: '' });
   if (kind === 'skill') profile.skills.push({ id: makeId('skill'), name: '', attributeKey: 'dexterity', proficiency: 'trained', bonus: 0 });
   if (kind === 'condition') profile.conditions.push({ id: makeId('condition'), name: '', duration: '', description: '', active: true });
   if (kind === 'loot') state.draft.loot.items.push({ id: makeId('loot'), name: '', quantity: 1, chance: 100, notes: '' });

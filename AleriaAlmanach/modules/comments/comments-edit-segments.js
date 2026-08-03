@@ -74,6 +74,9 @@ function setEditCommentSegmentKind(id, kind) {
   if (!getAllowedCommentSegmentKinds(true).includes(kind)) kind = 'action';
   if (!isCommentSegmentKindAllowedForMechanicMode(segment, kind, true)) return;
   segment.kind = normalizeCommentKind(kind);
+  if (segment.kind !== 'performance') {
+    segment.skillChallengeEnabled = false;
+  }
   if (segment.kind === 'action') {
     segment.emoteIndex = null;
     segment.side = '';
@@ -85,6 +88,7 @@ function setEditCommentSegmentKind(id, kind) {
     segment.combatTargetId = '';
     segment.combatActionId = '';
     segment.combatRollMode = 'normal';
+    segment.combatDistanceMeters = 0;
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
   }
@@ -210,7 +214,8 @@ function getEditCommentSegmentActorState(segment, fallback) {
     avatarKind: 'portrait',
     char,
     sceneActorId: sceneActor?.id || '',
-    sceneActorSourceId: sceneActor?.sourceCreatureId || ''
+    sceneActorSourceId: sceneActor?.sourceCreatureId || '',
+    sceneActorCombatTeam: sceneActor?.combatTeam || ''
   };
 }
 
@@ -254,7 +259,8 @@ function buildEditCommentSegmentsForSave() {
           actorType: 'creature',
           creatureId: actor.sceneActorSourceId,
           sceneActorId: actor.sceneActorId,
-          sceneActorSourceId: actor.sceneActorSourceId
+          sceneActorSourceId: actor.sceneActorSourceId,
+          combatTeam: actor.sceneActorCombatTeam
         } : {}),
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : actor.avatarKind,
@@ -283,6 +289,7 @@ function buildEditCommentSegmentsForSave() {
           combatTargetId: String(segment.combatTargetId || ''),
           combatActionId: String(segment.combatActionId || ''),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+          combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),
           combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
           combatPaymentConfirmed: !!segment.combatPaymentConfirmed,
           storedCombatAction: segment.storedCombatAction || null,

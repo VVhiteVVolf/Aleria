@@ -24,6 +24,7 @@ function renderSceneDiceEventComment(comment, idx = 0) {
   const primarySides = Number(roll.terms?.find(term => term.kind === 'dice')?.sides) || 20;
   const resultLabel = Number.isFinite(natural) && natural > 0 ? `W${primarySides} · ${rolledValue}` : `Gesamt · ${rolledValue}`;
   const icon = getSceneDiceIcon(primarySides);
+  const lockMarkup = window.renderCommentTransactionLock?.(comment) || '';
   return `${divider}
     <article class="scene-dice-event${roll.critical ? ` is-${escapeHtml(roll.critical)}` : ''}" data-comment-id="${commentId}" data-narration-mode="${escapeHtml(narrationMode)}">
       <div class="scene-dice-event-copy">
@@ -38,6 +39,6 @@ function renderSceneDiceEventComment(comment, idx = 0) {
         <div class="scene-dice-event-formula">${escapeHtml(roll.formula || '')}</div>
       </div>
       ${roll.special ? `<div class="scene-dice-event-special">${escapeHtml(roll.special)}</div>` : ''}
-      <button type="button" class="scene-dice-event-delete" data-action="open-delete-confirm" data-comment-id="${commentId}" title="Wurf löschen" aria-label="Wurf löschen">×</button>
+      ${lockMarkup || `<button type="button" class="scene-dice-event-delete" data-action="open-delete-confirm" data-comment-id="${commentId}" title="Wurf löschen" aria-label="Wurf löschen">×</button>`}
     </article>`;
 }

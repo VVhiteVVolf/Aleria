@@ -1,26 +1,12 @@
 ﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, onIdTokenChanged, signInAnonymously }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFunctions, httpsCallable }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
     import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-    import {
-      normalizeCombatHitPointState,
-      normalizeCombatResources,
-      patchResolutionHitPointState,
-      patchResolutionResourceState
-    } from "./modules/combat/combat-state-model.js?v=20260803-scene-rest-v1";
-    import {
-      ensureCombatActionResources,
-      getPersistentCombatResources,
-      recoverDailyCombatResources,
-      resetCommentScopedResources
-    } from "./modules/combat/combat-action-economy.js?v=20260803-action-economy-v2";
-    import {
-      applyInventoryUseToInventory,
-      normalizeInventoryUse
-    } from "./modules/inventory-use/inventory-use-model.js?v=20260803-inventory-use-v1";
-    import {
-      buildSceneRestParticipant,
-      normalizeSceneRest
-    } from "./modules/scene-rest/scene-rest-model.js?v=20260803-scene-rest-v1";
+    import { createFirebaseAuthSession }
+      from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -32,7 +18,18 @@
     };
 
     const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const authSession = createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonymously });
+    const authReady = authSession.start();
     const db  = getFirestore(app);
+    const functions = getFunctions(app, 'europe-west1');
+    const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
+    const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
+    const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
+    const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
+    const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
+    const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
+    const importBackupRecordsCallable = httpsCallable(functions, 'importBackupRecords', { timeout: 60000 });
     const familyTreeDb = getFirestore(app, 'family-trees');
     const FAMILY_TREE_ENTITY_COLLECTIONS = Object.freeze([
       'persons',
@@ -50,12 +47,39 @@
     const ITEM_DATABASE_DOC = 'global';
     const ITEM_DATABASE_ENTRY_COLLECTION = 'item_database_entries';
     const ITEM_DATABASE_SPLIT_FORMAT = 'split-v1';
-    const COMMENT_ADMIN_CODE = '7777';
+
+    async function requireFirebaseUser() {
+      return authSession.requireUser();
+    }
+
+    function getFirebaseAccess() {
+      return authSession.getAccess();
+    }
+
+    async function requireSharedEditor() {
+      await requireFirebaseUser();
+      if (!getFirebaseAccess().canEditSharedContent) {
+        throw new Error('Diese Änderung benötigt die Firebase-Rolle Editor, Moderator oder Admin.');
+      }
+    }
+
+    async function requireModerator() {
+      await requireFirebaseUser();
+      if (!getFirebaseAccess().canModerate) {
+        throw new Error('Diese Änderung benötigt die Firebase-Rolle Moderator oder Admin.');
+      }
+    }
 
     function notifyAppStatus(message, type = 'error') {
       if (typeof window.showAppStatus === 'function') {
         window.showAppStatus(message, type);
       }
+    }
+
+    function assertCommentMutable(data, operation) {
+      const policy = window.AleriaCommentTransactions;
+      if (!policy?.assertMutable) throw new Error('Der Schutz mechanischer Beiträge ist nicht geladen.');
+      return policy.assertMutable(data, operation);
     }
 
     function getFirebaseErrorMessage(error, fallback) {
@@ -88,59 +112,6 @@
       if (!value || typeof value !== 'object') return value;
       if (typeof structuredClone === 'function') return structuredClone(value);
       return JSON.parse(JSON.stringify(value));
-    }
-
-    function buildCommentDocument(entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, metadata = {}, nowClient = Date.now()) {
-      const commentMetadata = normalizeCommentModuleInsertForFirestore(metadata);
-      return {
-        entryId, charName, charTitle, portrait, text,
-        deleteCodeHash, deleteCodeVersion: 1,
-        narrator: narrator || false,
-        characterId: commentMetadata.characterId || '',
-        actorType: commentMetadata.actorType || '',
-        creatureId: commentMetadata.creatureId || '',
-        emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
-        imageSetId: String(commentMetadata.imageSetId || '').slice(0, 48),
-        avatarKind: commentMetadata.avatarKind || '',
-        commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
-        commentKind: commentMetadata.commentKind || (narrator ? 'narrator' : 'speech'),
-        commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
-        itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
-        moduleInsert: null,
-        moduleInsertJson: commentMetadata.moduleInsertJson || '',
-        documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
-        sceneTimeEvent: commentMetadata.sceneTimeEvent && typeof commentMetadata.sceneTimeEvent === 'object' ? commentMetadata.sceneTimeEvent : null,
-        sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
-        scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
-        sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
-        sceneRest: commentMetadata.sceneRest && typeof commentMetadata.sceneRest === 'object' ? commentMetadata.sceneRest : null,
-        restTransaction: commentMetadata.restTransaction && typeof commentMetadata.restTransaction === 'object' ? commentMetadata.restTransaction : null,
-        combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
-        combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
-        combatTransaction: commentMetadata.combatTransaction && typeof commentMetadata.combatTransaction === 'object' ? commentMetadata.combatTransaction : null,
-        combatRecoveryDayKey: String(commentMetadata.combatRecoveryDayKey || ''),
-        inventoryTransaction: commentMetadata.inventoryTransaction && typeof commentMetadata.inventoryTransaction === 'object' ? commentMetadata.inventoryTransaction : null,
-        orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
-        createdAtClient: nowClient,
-        activityAtClient: nowClient,
-        activityAt: serverTimestamp(),
-        schemaVersion: 2,
-        ts: serverTimestamp()
-      };
-    }
-
-    function getCombatResolutionEntries(metadata = {}) {
-      const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
-      return segments
-        .map((segment, index) => ({ index, resolution: segment?.combatResolution }))
-        .filter(entry => entry.resolution?.targetId && entry.resolution?.targetSnapshot);
-    }
-
-    function getInventoryUseEntries(metadata = {}) {
-      const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
-      return segments
-        .map((segment, index) => ({ index, inventoryUse: segment?.inventoryUse }))
-        .filter(entry => entry.inventoryUse?.usageId && entry.inventoryUse?.item?.id);
     }
 
     function normalizeFirebaseModuleStore(data) {
@@ -456,31 +427,11 @@
       return Array.from(new Uint8Array(hash), byte => byte.toString(16).padStart(2, '0')).join('');
     }
 
-    async function hashCommentAdminCode(code) {
-      const normalized = String(code || '').trim().toUpperCase();
-      if (!normalized) return '';
-      if (!window.crypto?.subtle) {
-        throw new Error('Sichere Code-Pruefung wird von diesem Browser nicht unterstuetzt.');
-      }
-      const bytes = new TextEncoder().encode(`aleria-comment-admin:v1:${normalized}`);
-      const hash = await window.crypto.subtle.digest('SHA-256', bytes);
-      return Array.from(new Uint8Array(hash), byte => byte.toString(16).padStart(2, '0')).join('');
-    }
-
-    async function isMatchingCommentAdminCode(code) {
-      const normalized = String(code || '').trim().toUpperCase();
-      if (!normalized) return false;
-      if (normalized === COMMENT_ADMIN_CODE) return true;
-      const snap = await getDoc(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC));
-      if (!snap.exists()) return false;
-      const adminHash = String(snap.data()?.commentAdminCodeHash || '');
-      return !!adminHash && adminHash === await hashCommentAdminCode(normalized);
-    }
-
     async function isMatchingDeleteCode(data, code) {
       const normalized = String(code || '').trim().toUpperCase();
+      await authReady;
+      if (getFirebaseAccess().canModerate) return true;
       if (!normalized) return false;
-      if (await isMatchingCommentAdminCode(normalized)) return true;
       if (data?.deleteCodeHash) return data.deleteCodeHash === await hashDeleteCode(normalized);
       // Legacy comments created before hashing still carry a clear-text deleteCode.
       return data?.deleteCode === normalized;
@@ -590,364 +541,112 @@
         });
       },
       async addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+        await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
-        const nowClient = Date.now();
-        return addDoc(collection(db, 'comments'), buildCommentDocument(
-          entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, metadata, nowClient
-        ));
+        const committed = await commitNarrativeCommentCallable({
+          entryId,
+          charName,
+          charTitle,
+          portrait,
+          text,
+          deleteCodeHash,
+          narrator: narrator === true,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+        });
+        return committed.data;
       },
       async addSceneRest(entryId, text, deleteCode, metadata = {}) {
+        await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
-        const nowClient = Date.now();
-        const commentRef = doc(collection(db, 'comments'));
-        let profileUpdates = [];
-
-        await runTransaction(db, async transaction => {
-          const commentMetadata = cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata));
-          const rest = normalizeSceneRest(commentMetadata.sceneRest || {});
-          if (!rest.participants.length) throw new Error('Die Rast enthält keine ausgewählten Figuren.');
-
-          const persistentTargets = new Map();
-          rest.participants.forEach(participant => {
-            const persistence = participant.persistence || {};
-            if (!['character', 'creature'].includes(persistence.kind) || !persistence.recordId) return;
-            const key = `${persistence.kind}:${persistence.recordId}`;
-            if (persistentTargets.has(key)) return;
-            persistentTargets.set(key, {
-              key,
-              kind: persistence.kind,
-              recordId: String(persistence.recordId),
-              ref: doc(db, persistence.kind === 'creature' ? 'creatures' : 'characters', String(persistence.recordId))
-            });
-          });
-
-          const targetRecords = [...persistentTargets.values()];
-          const snapshots = await Promise.all(targetRecords.map(target => transaction.get(target.ref)));
-          const targetData = new Map();
-          targetRecords.forEach((target, index) => {
-            const snapshot = snapshots[index];
-            if (!snapshot.exists()) throw new Error(`Das Profil ${target.recordId} ist online nicht mehr vorhanden.`);
-            targetData.set(target.key, snapshot.data() || {});
-          });
-
-          const participants = rest.participants.map(participant => {
-            const persistence = participant.persistence || {};
-            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
-            const stored = targetData.get(key);
-            if (!stored) return participant;
-            const storedProfile = stored.combatProfile || {};
-            const hitPoints = normalizeCombatHitPointState(storedProfile.hitPoints || {}, {
-              current: participant.before.hitPoints.current,
-              maximum: participant.after.hitPoints.maximum,
-              temporary: participant.before.hitPoints.temporary
-            });
-            const resources = ensureCombatActionResources(normalizeCombatResources(storedProfile.resources || participant.before.resources || []));
-            return buildSceneRestParticipant({
-              characterId: participant.actorId,
-              name: participant.name,
-              title: participant.title,
-              portrait: participant.portrait,
-              currentHitPoints: hitPoints.current,
-              maximumHitPoints: hitPoints.maximum || participant.after.hitPoints.maximum,
-              temporaryHitPoints: hitPoints.temporary,
-              resources,
-              abilities: Array.isArray(storedProfile.abilities) ? storedProfile.abilities : participant.before.abilities,
-              persistence
-            }, rest.type, {
-              actorId: participant.actorId,
-              sourceId: participant.sourceId,
-              name: participant.name,
-              title: participant.title,
-              portrait: participant.portrait,
-              persistence,
-              recoveryDayKey: rest.recoveryDayKey
-            });
-          });
-
-          const committedRest = normalizeSceneRest({ ...rest, participants });
-          commentMetadata.sceneRest = committedRest;
-          commentMetadata.restTransaction = {
-            schemaVersion: 1,
-            transactionId: commentRef.id,
-            committedAtClient: nowClient,
-            atomicProfileUpdates: targetRecords.length
-          };
-
-          profileUpdates = targetRecords.map(target => {
-            const participant = committedRest.participants.find(item => {
-              const persistence = item.persistence || {};
-              return `${persistence.kind || ''}:${persistence.recordId || ''}` === target.key;
-            });
-            const hitPoints = participant.after.hitPoints;
-            const resources = participant.after.resources;
-            const abilities = participant.after.abilities;
-            transaction.update(target.ref, {
-              'combatProfile.hitPoints.current': hitPoints.current,
-              'combatProfile.hitPoints.temporary': hitPoints.temporary,
-              'combatProfile.resources': resources,
-              'combatProfile.abilities': abilities,
-              updatedAt: new Date(nowClient).toISOString()
-            });
-            return {
-              kind: target.kind,
-              recordId: target.recordId,
-              hitPoints: { ...hitPoints },
-              resources: resources.map(resource => ({ ...resource })),
-              abilities: abilities.map(ability => ({ ...ability }))
-            };
-          });
-
-          transaction.set(commentRef, buildCommentDocument(
-            entryId,
-            'Erzähler',
-            '',
-            null,
-            text,
-            deleteCodeHash,
-            true,
-            commentMetadata,
-            nowClient
-          ));
+        const committed = await commitSceneRestCallable({
+          entryId,
+          text,
+          deleteCodeHash,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
         });
+        return committed.data;
 
-        return { id: commentRef.id, profileUpdates };
+
       },
       async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+        await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
-        const nowClient = Date.now();
-        const commentRef = doc(collection(db, 'comments'));
-        let profileUpdates = [];
-
-        await runTransaction(db, async transaction => {
-          const commentMetadata = cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata));
-          const entries = getCombatResolutionEntries(commentMetadata);
-          const inventoryEntries = getInventoryUseEntries(commentMetadata);
-          if (!entries.length && !inventoryEntries.length) {
-            throw new Error('Der Beitrag enthält keine speicherbare Profiländerung.');
-          }
-
-          const persistentTargets = new Map();
-          entries.forEach(({ resolution }) => {
-            const persistence = resolution.targetPersistence || {};
-            const candidates = [{ persistence, touchHitPoints: true, touchResources: false }];
-            const hasPersistentResourceCosts = Array.isArray(resolution.resourceCosts)
-              && resolution.resourceCosts.some(cost => cost.scope !== 'comment');
-            const hasDailyResources = Array.isArray(resolution.actorCombatProfile?.dailyResources)
-              && resolution.actorCombatProfile.dailyResources.length > 0;
-            if (hasPersistentResourceCosts || hasDailyResources) {
-              candidates.push({
-                persistence: resolution.actorPersistence || {},
-                touchHitPoints: false,
-                touchResources: true
-              });
-            }
-            candidates.forEach(({ persistence: candidate, touchHitPoints, touchResources }) => {
-              if (!['character', 'creature'].includes(candidate.kind) || !candidate.recordId) return;
-              const key = `${candidate.kind}:${candidate.recordId}`;
-              const existing = persistentTargets.get(key);
-              if (existing) {
-                existing.touchHitPoints ||= touchHitPoints;
-                existing.touchResources ||= touchResources;
-              } else {
-                persistentTargets.set(key, {
-                  key,
-                  kind: candidate.kind,
-                  recordId: String(candidate.recordId),
-                  touchHitPoints,
-                  touchResources,
-                  touchInventory: false,
-                  tracksInventory: false,
-                  ref: doc(db, candidate.kind === 'creature' ? 'creatures' : 'characters', String(candidate.recordId))
-                });
-              }
-            });
-          });
-          inventoryEntries.forEach(({ inventoryUse }) => {
-            const normalizedUse = normalizeInventoryUse(inventoryUse);
-            const persistence = normalizedUse.actorPersistence;
-            if (persistence.kind !== 'character' || !persistence.recordId) return;
-            const key = `character:${persistence.recordId}`;
-            const existing = persistentTargets.get(key);
-            if (existing) {
-              existing.tracksInventory = true;
-              existing.touchInventory ||= normalizedUse.mode === 'consume';
-              return;
-            }
-            persistentTargets.set(key, {
-              key,
-              kind: 'character',
-              recordId: String(persistence.recordId),
-              touchHitPoints: false,
-              touchResources: false,
-              touchInventory: normalizedUse.mode === 'consume',
-              tracksInventory: true,
-              ref: doc(db, 'characters', String(persistence.recordId))
-            });
-          });
-
-          const targetRecords = [...persistentTargets.values()];
-          const snapshots = await Promise.all(targetRecords.map(target => transaction.get(target.ref)));
-          const states = new Map();
-          targetRecords.forEach((target, index) => {
-            const snapshot = snapshots[index];
-            if (!snapshot.exists()) throw new Error(`Das Profil ${target.recordId} ist online nicht mehr vorhanden.`);
-            const hitPoints = snapshot.data()?.combatProfile?.hitPoints || {};
-            const initialResolution = entries.find(entry => {
-              const targetPersistence = entry.resolution?.targetPersistence || {};
-              const actorPersistence = entry.resolution?.actorPersistence || {};
-              return `${targetPersistence.kind || ''}:${targetPersistence.recordId || ''}` === target.key
-                || `${actorPersistence.kind || ''}:${actorPersistence.recordId || ''}` === target.key;
-            })?.resolution;
-            const actorValues = initialResolution?.actorCombatProfile?.derivedCombatValues || {};
-            const persistedResources = normalizeCombatResources(snapshot.data()?.combatProfile?.resources || []);
-            const transactionResources = normalizeCombatResources(recoverDailyCombatResources(
-              ensureCombatActionResources(persistedResources),
-              commentMetadata.combatRecoveryDayKey
-            ));
-            states.set(target.key, {
-              ...normalizeCombatHitPointState(hitPoints, {
-                current: initialResolution?.targetSnapshot?.hitPointsBefore ?? actorValues.currentHitPoints,
-                maximum: initialResolution?.targetSnapshot?.maximumHitPoints ?? actorValues.maximumHitPoints,
-                temporary: initialResolution?.targetSnapshot?.temporaryHitPointsBefore ?? actorValues.temporaryHitPoints
-              }),
-              resources: resetCommentScopedResources(transactionResources),
-              persistedResources,
-              inventory: cloneSerializableValue(snapshot.data()?.inventory || { items: [] })
-            });
-          });
-
-          entries.forEach(({ index, resolution }) => {
-            let patched = resolution;
-            const actorPersistence = resolution.actorPersistence || {};
-            const actorKey = `${actorPersistence.kind || ''}:${actorPersistence.recordId || ''}`;
-            const actorState = states.get(actorKey);
-            const resourceResult = patchResolutionResourceState(patched, actorState?.resources || resolution.actorResourceSnapshot?.before || []);
-            if (!resourceResult.applied.sufficient) {
-              throw new Error(`${resolution.actorName || 'Die Figur'} hat online nicht mehr genug ${resourceResult.applied.missing?.name || 'Ressourcen'} für diesen Angriff.`);
-            }
-            patched = resourceResult.resolution;
-            if (actorState && resourceResult.applied.changes.length) {
-              states.set(actorKey, { ...actorState, resources: resourceResult.applied.after });
-            }
-
-            const persistence = resolution.targetPersistence || {};
-            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
-            const storedState = states.get(key);
-            const fallbackState = normalizeCombatHitPointState({
-              current: resolution.targetSnapshot?.hitPointsBefore,
-              maximum: resolution.targetSnapshot?.maximumHitPoints,
-              temporary: resolution.targetSnapshot?.temporaryHitPointsBefore
-            });
-            patched = patchResolutionHitPointState(patched, storedState || fallbackState);
-            commentMetadata.commentSegments[index].combatResolution = patched;
-            const nextState = normalizeCombatHitPointState({
-              current: patched.targetSnapshot.hitPointsAfter,
-              maximum: patched.targetSnapshot.maximumHitPoints,
-              temporary: patched.targetSnapshot.temporaryHitPointsAfter
-            });
-            if (storedState) states.set(key, { ...storedState, ...nextState });
-          });
-
-          inventoryEntries.forEach(({ index, inventoryUse }) => {
-            const normalizedUse = normalizeInventoryUse(inventoryUse);
-            const persistence = normalizedUse.actorPersistence || {};
-            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
-            const storedState = states.get(key);
-            if (persistence.kind === 'character' && persistence.recordId) {
-              if (!storedState) throw new Error(`${normalizedUse.actorName} besitzt kein erreichbares Online-Inventar.`);
-              const applied = applyInventoryUseToInventory(storedState.inventory, normalizedUse);
-              states.set(key, { ...storedState, inventory: applied.inventory });
-              commentMetadata.commentSegments[index].inventoryUse = applied.inventoryUse;
-            } else if (normalizedUse.mode === 'consume') {
-              throw new Error(`${normalizedUse.actorName} muss als Online-Charakter gespeichert sein, um Gegenstände dauerhaft zu verbrauchen.`);
-            } else {
-              commentMetadata.commentSegments[index].inventoryUse = normalizedUse;
-            }
-          });
-
-          const combatEntries = getCombatResolutionEntries(commentMetadata);
-          commentMetadata.combatResolution = combatEntries.length === 1 ? combatEntries[0].resolution : null;
-          commentMetadata.combatTransaction = {
-            schemaVersion: 1,
-            transactionId: commentRef.id,
-            committedAtClient: nowClient,
-            atomicProfileUpdates: targetRecords.length
-          };
-          commentMetadata.inventoryTransaction = inventoryEntries.length ? {
-            schemaVersion: 1,
-            transactionId: commentRef.id,
-            committedAtClient: nowClient,
-            operations: inventoryEntries.length
-          } : null;
-
-          profileUpdates = targetRecords.map(target => {
-            const state = states.get(target.key);
-            const updates = { updatedAt: new Date(nowClient).toISOString() };
-            if (target.touchHitPoints) {
-              updates['combatProfile.hitPoints.current'] = state.current;
-              updates['combatProfile.hitPoints.temporary'] = state.temporary;
-            }
-            if (target.touchResources) {
-              updates['combatProfile.resources'] = getPersistentCombatResources(state.persistedResources || [], state.resources || []);
-            }
-            if (target.touchInventory) updates.inventory = state.inventory;
-            transaction.update(target.ref, updates);
-            return {
-              kind: target.kind,
-              recordId: target.recordId,
-              hitPoints: target.touchHitPoints
-                ? { current: state.current, maximum: state.maximum, temporary: state.temporary }
-                : null,
-              resources: target.touchResources ? getPersistentCombatResources(state.persistedResources || [], state.resources || []) : null,
-              inventory: target.tracksInventory ? state.inventory : null
-            };
-          });
-          transaction.set(commentRef, buildCommentDocument(
-            entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, commentMetadata, nowClient
-          ));
+        const committed = await commitCombatCommentCallable({
+          entryId,
+          charName,
+          charTitle,
+          portrait,
+          text,
+          deleteCodeHash,
+          narrator: narrator === true,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
         });
+        try {
+          const combatNarrations = typeof window.AleriaCombat?.narrateCommittedMechanics === 'function'
+            ? await window.AleriaCombat.narrateCommittedMechanics(committed.data?.mechanics || {})
+            : [];
+          const skillNarrations = typeof window.AleriaSkillChecks?.narrateCommittedMechanics === 'function'
+            ? await window.AleriaSkillChecks.narrateCommittedMechanics(committed.data?.mechanics || {})
+            : [];
+          const narrations = [...combatNarrations, ...skillNarrations];
+          if (narrations.length) {
+            await finalizeCombatNarrationCallable({ commentId: committed.data.id, narrations });
+          }
+        } catch (narrationError) {
+          console.warn('combat narration finalization failed after committed mechanics:', narrationError);
+          notifyAppStatus('Der Kampfzustand ist sicher gespeichert; nur die erzählerische Auswertung konnte noch nicht ergänzt werden.', 'error');
+          committed.data.narrationPending = true;
+        }
+        return committed.data;
 
-        return { id: commentRef.id, profileUpdates };
+
+      },
+      async addSkillComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
+        await requireFirebaseUser();
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const committed = await commitSkillCommentCallable({
+          entryId,
+          charName,
+          charTitle,
+          portrait,
+          text,
+          deleteCodeHash,
+          narrator: narrator === true,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+        });
+        try {
+          const narrations = typeof window.AleriaSkillChecks?.narrateCommittedMechanics === 'function'
+            ? await window.AleriaSkillChecks.narrateCommittedMechanics(committed.data?.mechanics || {})
+            : [];
+          if (narrations.length) await finalizeCombatNarrationCallable({ commentId: committed.data.id, narrations });
+        } catch (narrationError) {
+          console.warn('skill narration finalization failed after committed mechanics:', narrationError);
+          notifyAppStatus('Die Fertigkeitsauswertung ist sicher gespeichert; nur ihre Erz\u00e4hlung konnte noch nicht erg\u00e4nzt werden.', 'error');
+          committed.data.narrationPending = true;
+        }
+        return committed.data;
       },
       async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
+        await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
-        const nowClient = Date.now();
-        const batch = writeBatch(db);
-        new Set([sourceThreadId, targetThreadId].map(threadId => String(threadId || '').trim()).filter(Boolean)).forEach(entryId => {
-          const ref = doc(collection(db, 'comments'));
-          batch.set(ref, {
-            entryId: String(entryId || ''),
-            charName: 'Erzähler',
-            charTitle: '',
-            portrait: null,
-            text,
-            deleteCodeHash,
-            deleteCodeVersion: 1,
-            narrator: true,
-            characterId: '',
-            emoteIndex: null,
-            avatarKind: '',
+        const committed = await commitNarrativeCommentCallable({
+          entryIds: [sourceThreadId, targetThreadId],
+          charName: 'Erzähler',
+          charTitle: '',
+          portrait: null,
+          text,
+          deleteCodeHash,
+          narrator: true,
+          metadata: cloneSerializableValue({
             commentMode: 'scene-transition',
             commentKind: 'scene-transition-event',
-            commentSegments: null,
-            itemShowcase: null,
-            moduleInsert: null,
-            moduleInsertJson: '',
-            documentAttachment: null,
-            sceneTimeEvent: null,
-            sceneTransition: metadata.sceneTransition,
-            scenePoll: null,
-            orderKey: nowClient,
-            createdAtClient: nowClient,
-            activityAtClient: nowClient,
-            activityAt: serverTimestamp(),
-            schemaVersion: 2,
-            ts: serverTimestamp()
-          });
+            sceneTransition: metadata.sceneTransition
+          })
         });
-        await batch.commit();
+        return committed.data;
       },
       async deleteSceneTransition(docId, transitionId, deleteCode) {
+        await requireFirebaseUser();
         const selectedRef = doc(db, 'comments', String(docId || ''));
         const selected = await getDoc(selectedRef);
         if (!selected.exists()) throw new Error('Nicht gefunden');
@@ -982,19 +681,23 @@
         });
       },
       async saveCommentTurn(threadId, current) {
+        const user = await requireFirebaseUser();
         const value = ['erdi', 'patrick', 'ended'].includes(String(current || '')) ? String(current) : '';
         return setDoc(doc(db, 'comment_turns', String(threadId || '')), {
           threadId: String(threadId || ''),
           current: value,
+          updatedBy: user.uid,
           updatedAt: serverTimestamp()
         }, { merge: true });
       },
       async deleteComment(docId, deleteCode) {
+        await requireFirebaseUser();
         const { getDoc, deleteDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         const ref  = doc(db, 'comments', docId);
         const snap = await getDoc(ref);
         if (!snap.exists()) throw new Error('Nicht gefunden');
         if (!(await isMatchingDeleteCode(snap.data(), deleteCode))) throw new Error('Falscher Code');
+        assertCommentMutable(snap.data(), 'gelöscht');
         return deleteDoc(ref);
       },
       async loadCharacters() {
@@ -1045,17 +748,26 @@
         };
       },
       async saveCharacter(id, data) {
+        const user = await requireFirebaseUser();
         const { setDoc, doc, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         if (id) {
           const ref = doc(db, 'characters', id);
-          await setDoc(ref, data, { merge: true });
+          const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
+          void ignoredOwnerUid;
+          void ignoredCreatedBy;
+          await setDoc(ref, safeData, { merge: true });
           return id;
         } else {
-          const ref = await addDoc(collection(db, 'characters'), data);
+          const ref = await addDoc(collection(db, 'characters'), {
+            ...(data || {}),
+            ownerUid: user.uid,
+            createdBy: user.uid
+          });
           return ref.id;
         }
       },
       async deleteCharacter(id) {
+        await requireFirebaseUser();
         const { deleteDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         return deleteDoc(doc(db, 'characters', id));
       },
@@ -1081,16 +793,22 @@
         return { id: snap.id, ...snap.data() };
       },
       async updateComment(docId, updates) {
-        const { setDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+        await requireFirebaseUser();
         const nowClient = Date.now();
         const safeUpdates = normalizeCommentModuleInsertForFirestore(updates);
-        await setDoc(doc(db, 'comments', docId), {
-          ...safeUpdates,
-          updatedAtClient: nowClient,
-          activityAtClient: nowClient,
-          updatedAt: serverTimestamp(),
-          activityAt: serverTimestamp()
-        }, { merge: true });
+        const ref = doc(db, 'comments', docId);
+        await runTransaction(db, async transaction => {
+          const snapshot = await transaction.get(ref);
+          if (!snapshot.exists()) throw new Error('Nicht gefunden');
+          assertCommentMutable(snapshot.data(), 'bearbeitet');
+          transaction.set(ref, {
+            ...safeUpdates,
+            updatedAtClient: nowClient,
+            activityAtClient: nowClient,
+            updatedAt: serverTimestamp(),
+            activityAt: serverTimestamp()
+          }, { merge: true });
+        });
       },
       async loadRecentComments(n) {
         try {
@@ -1132,67 +850,66 @@
       async saveBackupComment(id, data) {
         const safeId = String(id || '').trim();
         if (!safeId) throw new Error('Kommentar ohne ID kann nicht importiert werden.');
-        await setDoc(doc(db, 'comments', safeId), normalizeCommentModuleInsertForFirestore(data), { merge: true });
+        await this.importBackupRecords('comments', [{ id: safeId, ...normalizeCommentModuleInsertForFirestore(data) }]);
+      },
+      async importBackupRecords(kind, records) {
+        await requireModerator();
+        const allowed = new Set(['characters', 'creatures', 'comments', 'commentTurns']);
+        if (!allowed.has(String(kind || ''))) throw new Error('Unbekannte Backup-Importart.');
+        const list = Array.isArray(records) ? records : [];
+        let imported = 0;
+        for (let index = 0; index < list.length; index += 200) {
+          const chunk = list.slice(index, index + 200);
+          if (!chunk.length) continue;
+          const result = await importBackupRecordsCallable({ kind, records: cloneSerializableValue(chunk) });
+          imported += Number(result.data?.imported || 0);
+        }
+        return { kind, imported };
       },
       async saveCreature(id, data) {
+        const user = await requireFirebaseUser();
         if (id) {
-          await setDoc(doc(db, 'creatures', id), data, { merge: true });
+          const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
+          void ignoredOwnerUid;
+          void ignoredCreatedBy;
+          await setDoc(doc(db, 'creatures', id), safeData, { merge: true });
           return id;
         }
-        const ref = await addDoc(collection(db, 'creatures'), data);
+        const ref = await addDoc(collection(db, 'creatures'), {
+          ...(data || {}),
+          ownerUid: user.uid,
+          createdBy: user.uid
+        });
         return ref.id;
       },
       async deleteCreature(id) {
+        await requireFirebaseUser();
         return deleteDoc(doc(db, 'creatures', id));
       },
       async transferCharacterInventories(giverId, giverInventory, receiverId, receiverInventory, threadId, sceneEvent, deleteCode) {
-        const deleteCodeHash = await hashDeleteCode(deleteCode);
-        const nowClient = Date.now();
-        const batch = writeBatch(db);
-        batch.set(doc(db, 'characters', giverId), { inventory: giverInventory, updatedAt: new Date().toISOString() }, { merge: true });
-        batch.set(doc(db, 'characters', receiverId), { inventory: receiverInventory, updatedAt: new Date().toISOString() }, { merge: true });
-        const commentRef = doc(collection(db, 'comments'));
-        batch.set(commentRef, {
+        await requireFirebaseUser();
+        void giverInventory;
+        void receiverInventory;
+        const serverDeleteCodeHash = await hashDeleteCode(deleteCode);
+        const committed = await commitInventoryTransferCallable({
+          giverId,
+          receiverId,
           entryId: threadId,
-          charName: 'Erzähler',
-          charTitle: '',
-          portrait: null,
-          text: sceneEvent.text,
-          deleteCodeHash,
-          deleteCodeVersion: 1,
-          narrator: true,
-          characterId: '',
-          emoteIndex: null,
-          avatarKind: '',
-          commentMode: 'scene-inventory-transfer',
-          commentKind: 'scene-inventory-transfer-event',
-          commentSegments: null,
-          itemShowcase: null,
-          moduleInsert: null,
-          moduleInsertJson: '',
-          documentAttachment: null,
-          sceneTimeEvent: null,
-          sceneTransition: null,
-          scenePoll: null,
-          sceneDiceRoll: null,
-          sceneInventoryTransfer: sceneEvent.transfer,
-          orderKey: sceneEvent.orderKey,
-          createdAtClient: nowClient,
-          activityAtClient: nowClient,
-          activityAt: serverTimestamp(),
-          schemaVersion: 2,
-          ts: serverTimestamp()
+          sceneEvent: cloneSerializableValue(sceneEvent),
+          deleteCodeHash: serverDeleteCodeHash
         });
-        await batch.commit();
-        return commentRef.id;
+        return committed.data;
+
+
       },
       async saveBackupCommentTurn(id, data) {
         const safeId = String(id || data?.threadId || '').trim();
         if (!safeId) throw new Error('Redestab-Datensatz ohne ID kann nicht importiert werden.');
-        await setDoc(doc(db, 'comment_turns', safeId), data || {}, { merge: true });
+        await this.importBackupRecords('commentTurns', [{ id: safeId, ...(data || {}) }]);
       },
       async saveCharTabs(data) {
         try {
+          await requireSharedEditor();
           await setDoc(doc(db, 'char_tabs', 'config'), data || {});
         } catch(e) {
           console.error('saveCharTabs:', e);
@@ -1200,13 +917,9 @@
         }
       },
       async setCommentAdminCode(code) {
-        const commentAdminCodeHash = await hashCommentAdminCode(code);
-        if (!commentAdminCodeHash) return;
-        await setDoc(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC), {
-          commentAdminCodeHash,
-          commentAdminCodeVersion: 1,
-          commentAdminCodeUpdatedAt: serverTimestamp()
-        }, { merge: true });
+        await requireModerator();
+        void code;
+        throw new Error('Der gemeinsame Moderationscode wurde abgeschaltet. Moderation erfolgt über Firebase-Benutzerrollen.');
       },
       async loadModuleStore() {
         try {
@@ -1230,6 +943,7 @@
       },
       async saveModuleStore(data) {
         try {
+          await requireSharedEditor();
           const normalized = normalizeFirebaseModuleStore(data);
           try {
             await saveSplitModuleStore(normalized);
@@ -1304,6 +1018,7 @@
       },
       async saveItemDatabase(payload) {
         try {
+          await requireSharedEditor();
           const safePayload = payload && typeof payload === 'object' ? payload : {};
           try {
             await saveSplitItemDatabase(safePayload);
@@ -1344,6 +1059,12 @@
         });
       }
     };
+
+    window._fbAuth = Object.freeze({
+      ready: authReady,
+      getAccess: getFirebaseAccess,
+      getIdToken: forceRefresh => authSession.getIdToken(forceRefresh)
+    });
 
     // Signal that Firebase is ready
     window._fbReady = true;

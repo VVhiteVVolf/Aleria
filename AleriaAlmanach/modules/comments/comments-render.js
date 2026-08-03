@@ -46,6 +46,12 @@ const COMMENT_KIND_ICONS = {
   combataction: '../IconOrdner/Buttom Icons/Kampfhandlung.PNG'
 };
 
+// Editor buttons may use a different glyph than the decorative icon rendered on the published bubble.
+const COMMENT_KIND_BUTTON_ICONS = {
+  ...COMMENT_KIND_ICONS,
+  performance: './public/assets/comment-icons/performance-button.png?v=20260803-schauspiel-button-v1'
+};
+
 const COMMENT_KIND_ALIASES = {
   ooc: 'whisper',
   fluestern: 'whisper',
@@ -109,6 +115,13 @@ function getCommentKindIconMarkup(kind, className = 'comment-kind-icon') {
     : '';
 }
 
+function getCommentKindButtonIconMarkup(kind, className = 'comment-kind-icon') {
+  const src = COMMENT_KIND_BUTTON_ICONS[normalizeCommentKind(kind)] || '';
+  return src
+    ? `<img class="${escapeHtml(className)}" src="${sanitizeImageSrc(src)}" alt="" loading="lazy" decoding="async">`
+    : '';
+}
+
 function commentKindUsesQuoteMark(kind) {
   return ['speech', 'foreign', 'shout', 'performance', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
@@ -138,6 +151,13 @@ function getCommentEmotePortrait(c, idx) {
   const char = getCommentCharacterForStoredComment(c);
   const emote = char?.emotes?.[idx];
   return emote?.img ? sanitizeImageSrc(emote.img) : '';
+}
+
+function renderCommentTransactionLock(comment = {}) {
+  const policy = window.AleriaCommentTransactions;
+  if (!policy?.isImmutable?.(comment)) return '';
+  const label = policy.getLabel?.(comment) || 'Mechanischer Beitrag';
+  return `<span class="comment-transaction-lock" title="Dieser Beitrag ist Teil des unveränderlichen Szenenverlaufs.">${escapeHtml(label)} geschützt</span>`;
 }
 
 function splitCommentByEmoteMarkers(c) {
@@ -189,6 +209,7 @@ function renderCommentBubble(c, idx) {
 
   if (Array.isArray(c.commentSegments) && c.commentSegments.some(segment => String(segment?.text || '').trim())) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());
+    const mechanicalLock = window.AleriaCommentTransactions?.isImmutable?.(c) === true;
     return cleanSegments.map((segment, segmentIdx) => {
       const displayText = window.AleriaSkillChecks?.getDisplayText?.(segment) ?? segment.text ?? '';
       const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment)
@@ -209,6 +230,7 @@ function renderCommentBubble(c, idx) {
         combatResolution: null,
         _combatTimelineCommentId: c.id,
         _combatTimelineSegmentIndex: segmentIdx,
+        _mechanicalLocked: mechanicalLock,
         _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
       const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
@@ -246,7 +268,9 @@ function renderCommentBubble(c, idx) {
     : '';
 
   if (c.narrator) {
-    const narratorActions = c._hideActions ? '' : `
+    const narratorActions = c._hideActions ? '' : (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
+      ? `<div class="comment-narrator-actions">${renderCommentTransactionLock(c)}</div>`
+      : `
         <div class="comment-narrator-actions">
           <button type="button" class="comment-narrator-del" data-action="open-edit-comment" data-comment-id="${commentId}" title="Bearbeiten">Bearbeiten</button>
           <button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${commentId}" title="Löschen">Löschen</button>
@@ -286,7 +310,9 @@ function renderCommentBubble(c, idx) {
       secret: isSecretAction
     }) || portraitMarkup;
     const actions = !c._hideActions && partIdx === parts.length - 1
-      ? `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
+      ? (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
+        ? renderCommentTransactionLock(c)
+        : `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
     const textMarkup = commentKind === 'animal'
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)

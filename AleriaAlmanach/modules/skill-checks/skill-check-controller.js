@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-action-economy-v2';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-rule-integrity-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -17,8 +17,19 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260803-skill-checks-v2';
+import { SkillResolutionService } from './skill-resolution-service.js?v=20260803-skill-rules-v1';
+import { deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260803-rule-integrity-v1';
 
 const profileResolver = new CombatProfileResolver();
+const skillResolutionService = new SkillResolutionService({
+  async rollSkill({ notation, actorName, skillName, container }) {
+    return sceneDiceService.roll(notation, container, {
+      roller: actorName || 'Unbekannt',
+      purpose: skillName || 'Fertigkeitsversuch',
+      rollType: 'general'
+    });
+  }
+});
 let latestComposerContext = null;
 let revealedChallengeIds = new Set();
 
@@ -187,7 +198,7 @@ function renderSkillComposer(segment, actor, challenges) {
 }
 
 function renderChallengeComposer(segment) {
-  if (String(segment?.kind || '') === 'action') return '';
+  if (String(segment?.kind || segment?.commentKind || '') !== 'performance') return '';
   const challenge = normalizeSkillChallenge({
     id: segment.skillChallengeId || getChallengeId(segment.id),
     enabled: !!segment.skillChallengeEnabled,
@@ -340,7 +351,7 @@ function setResolutionStatus(message) {
   if (node) node.textContent = String(message || '');
 }
 
-async function resolveSegment(segment, submission, actors, challenges, index, total) {
+async function resolveSegment(segment, submission, actors, challenges, index, total, resolutionContext) {
   const actor = getActorForSegment(segment, submission.characterId, actors);
   if (!actor) throw new Error('Für diesen Fertigkeitsversuch ist keine Figur mit Profil ausgewählt.');
   const allowed = getSkillsForCommentKind(segment.commentKind || segment.kind);
@@ -354,66 +365,38 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   if (!allowed.some(skill => skill.id === settings.skillId)) throw new Error('Wähle für jeden Fertigkeitsversuch eine zur Blase passende Fertigkeit.');
   const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
-  const skill = resolveSkillModifier(actor, settings.skillId);
-  const affinityModifier = targetChallenge ? getChallengeAffinityModifier(targetChallenge, settings.skillId) : 0;
-  const totalModifier = skill.modifier + settings.customModifier + affinityModifier;
-  const difficulty = targetChallenge?.difficulty ?? settings.difficulty;
-  const notation = buildSkillRollNotation(totalModifier, settings.rollMode);
+  const profile = profileResolver.resolve(actor);
   const stage = document.querySelector('[data-skill-dice-stage]');
   if (stage) stage.innerHTML = '';
-  setResolutionStatus(total > 1 ? `Fertigkeitsversuch ${index + 1} von ${total} …` : `${skill.definition.label} wird gewürfelt …`);
-  const roll = await sceneDiceService.roll(notation, stage, {
-    roller: actor.name || segment.charName || 'Unbekannt',
-    purpose: targetChallenge ? `${skill.definition.label} gegen ${targetChallenge.authorName}` : skill.definition.label,
-    rollType: 'general'
+  const definition = getSkillDefinition(settings.skillId);
+  setResolutionStatus(total > 1 ? `Fertigkeitsversuch ${index + 1} von ${total} …` : `${definition?.label || 'Fertigkeit'} wird gewürfelt …`);
+  const resolution = await skillResolutionService.resolve({
+    actor,
+    settings,
+    challenge: targetChallenge,
+    actorPersistence: profile.persistence || null
+  }, {
+    container: stage,
+    ruleSources: [{
+      actorId: profile.characterId,
+      actorName: profile.name,
+      profile,
+      sourceRole: 'actor',
+      relationToActor: 'self',
+      relationToTarget: 'enemy',
+      distanceToActor: 0,
+      distanceToTarget: null,
+      selectedRuleIds: []
+    }],
+    rulePeriods: resolutionContext.rulePeriods,
+    usedRuleFrequencyKeys: resolutionContext.usedRuleFrequencyKeys
   });
-  const natural = Number(roll.natural ?? roll.rolls?.[0]?.value ?? 0);
-  const outcome = classifySkillCheck({ natural, total: roll.total, difficulty });
-  const successful = isSuccessfulSkillOutcome(outcome);
-  const profile = profileResolver.resolve(actor);
-  setResolutionStatus('AleriaGPT formuliert die Folge …');
-  const narration = await narrateSkillResolution({
-    actorId: String(actor.id || ''),
-    actor: actor.name || segment.charName,
-    skill: skill.definition.label,
-    outcome,
-    attempt: segment.text,
-    targetContribution: targetChallenge?.visibleText || '',
-    targetActor: targetChallenge?.authorName || '',
-    actorProfileSnapshot: profile.aiSnapshot || null
-  });
-  return {
-    schemaVersion: 1,
-    resolutionId: makeResolutionId(),
-    actorId: String(actor.id || ''),
-    actorName: String(actor.name || segment.charName || 'Unbekannt'),
-    skillId: settings.skillId,
-    skillName: skill.definition.label,
-    skillSource: skill.source,
-    profileSkillName: skill.profileSkill?.name || '',
-    attributeKey: skill.definition.attributeKey,
-    profileModifier: skill.modifier,
-    customModifier: settings.customModifier,
-    affinityModifier,
-    totalModifier,
-    difficulty,
-    rollMode: settings.rollMode,
-    notation,
-    natural,
-    total: Number(roll.total || 0),
-    outcome,
-    targetChallengeId: targetChallenge?.id || '',
-    targetChallengeAuthor: targetChallenge?.authorName || '',
-    targetCommentId: targetChallenge?.commentId || '',
-    targetSegmentIndex: targetChallenge?.segmentIndex ?? null,
-    targetContributionRank: targetChallenge?.contributionRank ?? null,
-    narration,
-    actorProfileSnapshot: profile.aiSnapshot || null
-  };
+  resolutionContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
+  return { ...resolution, actorProfileSnapshot: profile.aiSnapshot || null, originalAttempt: String(segment.text || '') };
 }
 
 function buildStoredChallenge(segment) {
-  if (!segment.skillChallengeEnabled) return null;
+  if (!segment.skillChallengeEnabled || String(segment.kind || segment.commentKind || '') !== 'performance') return null;
   const challenge = normalizeSkillChallenge({
     id: segment.skillChallengeId || getChallengeId(segment.clientSegmentId),
     enabled: true,
@@ -429,15 +412,31 @@ function buildStoredChallenge(segment) {
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
   const skillSegments = segments.filter(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
-  const hasChallenges = segments.some(segment => segment?.skillChallengeEnabled);
+  const hasChallenges = segments.some(segment => segment?.skillChallengeEnabled
+    && String(segment.kind || segment.commentKind || '') === 'performance');
   if (!skillSegments.length && !hasChallenges) return { handled: false, published: false };
   const actors = mergeActors(latestComposerContext?.sceneActors || []);
   const challenges = getComposerChallenges(submission.threadId || '');
+  const comments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
+  const timeline = typeof globalThis.buildSceneTimeline === 'function' ? globalThis.buildSceneTimeline(comments) : [];
+  const lastTimedEntry = [...timeline].reverse().find(entry => Number.isFinite(entry?.endSeconds));
+  const day = typeof globalThis.getSceneDayFromSeconds === 'function'
+    ? globalThis.getSceneDayFromSeconds(lastTimedEntry?.endSeconds || 0)
+    : 1;
+  const rulePeriods = {
+    comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
+    scene: String(submission.threadId || ''),
+    day: `scene:${String(submission.threadId || '')}:day-${day}`
+  };
+  const resolutionContext = {
+    rulePeriods,
+    usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(comments, rulePeriods)
+  };
   if (skillSegments.length) openResolutionDialog();
   try {
     const resolutions = [];
     for (let index = 0; index < skillSegments.length; index += 1) {
-      resolutions.push(await resolveSegment(skillSegments[index], submission, actors, challenges, index, skillSegments.length));
+      resolutions.push(await resolveSegment(skillSegments[index], submission, actors, challenges, index, skillSegments.length, resolutionContext));
     }
     let resolutionIndex = 0;
     const enhancedSegments = segments.map(segment => {
@@ -448,6 +447,7 @@ async function handleSubmission(submission = {}) {
       const skillChallenge = buildStoredChallenge({ ...storedSegment, clientSegmentId });
       return {
         ...storedSegment,
+        skillChallengeEnabled: !!skillChallenge,
         ...(skillChallenge ? { kind: 'performance', commentKind: 'performance' } : {}),
         mechanicMode: skillChallenge ? 'normal' : normalizeMechanicMode(storedSegment.mechanicMode, storedSegment),
         ...(skillResolution ? { skillResolution } : {}),
@@ -466,6 +466,30 @@ async function handleSubmission(submission = {}) {
   }
 }
 
+async function narrateCommittedMechanics(mechanics = {}) {
+  const segments = Array.isArray(mechanics.commentSegments) ? mechanics.commentSegments : [];
+  const narrations = [];
+  for (const segment of segments) {
+    const resolution = segment?.skillResolution;
+    if (!resolution?.serverValidated || !resolution.resolutionId) continue;
+    narrations.push({
+      resolutionId: resolution.resolutionId,
+      narration: await narrateSkillResolution({
+        actorId: resolution.actorId,
+        actor: resolution.actorName,
+        skill: resolution.skillName,
+        outcome: resolution.outcome,
+        attempt: resolution.originalAttempt || segment.text || '',
+        targetContribution: resolution.targetContribution || '',
+        targetActor: resolution.targetChallengeAuthor || '',
+        actorProfileSnapshot: resolution.actorProfileSnapshot || null,
+        ruleApplications: resolution.ruleApplications || []
+      })
+    });
+  }
+  return narrations;
+}
+
 function getOutcomeLabel(outcome) {
   if (outcome === 'critical-success') return 'Kritischer Erfolg';
   if (outcome === 'success') return 'Erfolg';
@@ -479,6 +503,10 @@ function renderEvaluation(source = {}) {
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
   const custom = Number(resolution.customModifier || 0);
+  const ruleModifier = Number(resolution.ruleModifier || 0);
+  const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
+    `<span class="skill-rule-ledger"><b>${escapeHtml(rule.sourceActorName || 'Regelquelle')} · ${escapeHtml(rule.ruleName)}</b><small>${escapeHtml(rule.before?.total ?? rule.before?.modifier ?? '')} → ${escapeHtml(rule.after?.total ?? rule.after?.modifier ?? '')}</small></span>`
+  )).join('');
   return `
     <aside class="skill-evaluation" data-state="${escapeHtml(resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
       <div class="skill-evaluation-heading"><span>Fertigkeitsauswertung</span><strong>${escapeHtml(getOutcomeLabel(resolution.outcome))}</strong></div>
@@ -486,7 +514,8 @@ function renderEvaluation(source = {}) {
       <div class="skill-evaluation-mechanics">
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>
         <span>gegen <b>SG ${escapeHtml(resolution.difficulty)}</b></span>
-        <span>Bogen ${Number(resolution.profileModifier) >= 0 ? '+' : ''}${escapeHtml(resolution.profileModifier)}${custom ? ` · frei ${custom >= 0 ? '+' : ''}${escapeHtml(custom)}` : ''}${affinity ? ` · Lösung ${affinity >= 0 ? '+' : ''}${escapeHtml(affinity)}` : ''}</span>
+        <span>Bogen ${Number(resolution.profileModifier) >= 0 ? '+' : ''}${escapeHtml(resolution.profileModifier)}${custom ? ` · frei ${custom >= 0 ? '+' : ''}${escapeHtml(custom)}` : ''}${affinity ? ` · Lösung ${affinity >= 0 ? '+' : ''}${escapeHtml(affinity)}` : ''}${ruleModifier ? ` · Regeln ${ruleModifier >= 0 ? '+' : ''}${escapeHtml(ruleModifier)}` : ''}</span>
+        ${ruleLedger}
       </div>
       <div class="skill-evaluation-source">${escapeHtml(sourceLabel)}</div>
     </aside>`;
@@ -539,6 +568,7 @@ globalThis.AleriaSkillChecks = Object.freeze({
     });
   },
   handleSubmission,
+  narrateCommittedMechanics,
   renderEvaluation,
   renderChallengeStatus,
   setRenderContext(comments = []) {

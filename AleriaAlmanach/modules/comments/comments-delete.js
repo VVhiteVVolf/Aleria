@@ -2,6 +2,15 @@
 let _deleteTargetId = null;
 
 function openDeleteConfirm(commentId) {
+  const targetComment = Object.values(_commentCache || {})
+    .flat()
+    .find(comment => comment?.id === commentId);
+  const policy = window.AleriaCommentTransactions;
+  if (targetComment && policy?.isImmutable?.(targetComment)) {
+    const message = policy.getLockMessage(targetComment, 'gelöscht');
+    if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
+    return;
+  }
   _deleteTargetId = commentId;
   document.getElementById('dc-code').value = '';
   document.getElementById('dc-error').style.display = 'none';

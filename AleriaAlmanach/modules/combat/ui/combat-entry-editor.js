@@ -1,5 +1,11 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260803-combat-sheet-v6';
-import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260803-action-economy-v2';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260803-spell-grades-v1';
+import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260803-economy-audit-v1';
+import {
+  findSpellSlotResourceId,
+  getOrderedSpellSlotResources,
+  getSpellLevelLabel,
+  isSpellSlotResource
+} from '../combat-spell-slots.js?v=20260803-economy-audit-v1';
 
 const state = { kind: '', item: null, resources: [], weapons: [], onSave: null };
 const COMMENT_ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
@@ -59,6 +65,10 @@ function renderAttributeOptions(value) {
   return COMBAT_ATTRIBUTE_DEFINITIONS.map(option => `<option value="${option.key}"${selected(value, option.key)}>${option.label}</option>`).join('');
 }
 
+function renderSpellLevelOptions(value = 0) {
+  return Array.from({ length: 11 }, (_entry, level) => `<option value="${level}"${selected(value, level)}>${escapeHtml(getSpellLevelLabel(level))}</option>`).join('');
+}
+
 function renderMechanicsFields(item) {
   const mechanics = item.mechanics || {};
   const fields = [
@@ -74,11 +84,63 @@ function renderMechanicsFields(item) {
   </fieldset>`;
 }
 
+const RULE_ACTION_KINDS = Object.freeze([
+  ['weapon', 'Waffe'], ['technique', 'Technik'], ['ability', 'F\u00e4higkeit'],
+  ['spell', 'Zauber'], ['prayer', 'Gebet'], ['song', 'Gesang'], ['skill', 'Fertigkeit']
+]);
+
+function renderTriggerRules(item) {
+  const rules = Array.isArray(item.triggerRules) ? item.triggerRules : [];
+  return `<fieldset class="combat-entry-editor-rules"><legend>Ausl\u00f6ser & Reaktionen</legend>
+    <p>Diese Regeln werden deterministisch vor oder nach dem Wurf gepr\u00fcft. Freitext allein ver\u00e4ndert kein Ergebnis.</p>
+    <div class="combat-entry-editor-rule-list">${rules.map((rule, index) => {
+      const effects = rule.effects || {};
+      const kinds = Array.isArray(rule.actionKinds) ? rule.actionKinds : [];
+      return `<section class="combat-entry-editor-rule" data-entry-rule-index="${index}">
+        <header><strong>${escapeHtml(rule.name || `Regel ${index + 1}`)}</strong><button type="button" data-entry-action="remove-rule" data-entry-index="${index}" aria-label="Regel entfernen">&times;</button></header>
+        <div class="combat-entry-editor-grid">
+          <label><span>Regelname</span><input data-entry-field="triggerRules.${index}.name" value="${escapeHtml(rule.name)}"></label>
+          <label class="check"><input type="checkbox" data-entry-field="triggerRules.${index}.enabled"${checked(rule.enabled !== false)}> Aktiv</label>
+          <label><span>Zeitpunkt</span><select data-entry-field="triggerRules.${index}.phase"><option value="pre-roll"${selected(rule.phase, 'pre-roll')}>Vor dem Wurf</option><option value="post-roll"${selected(rule.phase, 'post-roll')}>Nach dem Wurf</option><option value="post-hit"${selected(rule.phase, 'post-hit')}>Nach Trefferpr\u00fcfung</option><option value="pre-damage"${selected(rule.phase, 'pre-damage')}>Vor Schaden</option></select></label>
+          <label><span>Aktivierung</span><select data-entry-field="triggerRules.${index}.activation"><option value="passive"${selected(rule.activation, 'passive')}>Passiv / automatisch</option><option value="reaction"${selected(rule.activation, 'reaction')}>Reaktion / ausw\u00e4hlbar</option></select></label>
+          <label><span>Aktionsbindung</span><select data-entry-field="triggerRules.${index}.actionScope"><option value=""${selected(rule.actionScope, '')}>Automatisch</option><option value="entry"${selected(rule.actionScope, 'entry')}>Nur bei Nutzung dieses Eintrags</option><option value="global"${selected(rule.actionScope, 'global')}>Global / bei anderen Aktionen</option></select></label>
+          <label class="check"><input type="checkbox" data-entry-field="triggerRules.${index}.consumeReaction"${checked(rule.consumeReaction !== false)}> Reaktionsressource verbrauchen</label>
+          <label><span>Wirkt auf</span><select data-entry-field="triggerRules.${index}.recipient"><option value="actor"${selected(rule.recipient, 'actor')}>Handelnde Figur</option><option value="target"${selected(rule.recipient, 'target')}>Ziel</option></select></label>
+          <label><span>Beziehung zur Quelle</span><select data-entry-field="triggerRules.${index}.sourceRelation"><option value="self"${selected(rule.sourceRelation, 'self')}>Quelle selbst</option><option value="ally"${selected(rule.sourceRelation, 'ally')}>Verb\u00fcndeter der Quelle</option><option value="enemy"${selected(rule.sourceRelation, 'enemy')}>Feind der Quelle</option><option value="any"${selected(rule.sourceRelation, 'any')}>Beliebige Beziehung</option></select></label>
+          <label><span>Bedingung</span><select data-entry-field="triggerRules.${index}.condition"><option value="always"${selected(rule.condition, 'always')}>Immer</option><option value="would-hit"${selected(rule.condition, 'would-hit')}>Wurf w\u00fcrde treffen</option><option value="would-miss"${selected(rule.condition, 'would-miss')}>Wurf w\u00fcrde verfehlen</option><option value="critical-hit"${selected(rule.condition, 'critical-hit')}>Kritischer Treffer</option><option value="critical-failure"${selected(rule.condition, 'critical-failure')}>Kritischer Fehlschlag</option></select></label>
+          <label><span>H\u00e4ufigkeit</span><select data-entry-field="triggerRules.${index}.frequency"><option value="always"${selected(rule.frequency, 'always')}>Jedes Mal</option><option value="comment"${selected(rule.frequency, 'comment')}>Einmal je Kommentar</option><option value="scene"${selected(rule.frequency, 'scene')}>Einmal je Szene</option><option value="day"${selected(rule.frequency, 'day')}>Einmal je Tag</option></select></label>
+          <label><span>Radius in Metern</span><input type="number" min="0" max="9999" step="0.5" data-entry-field="triggerRules.${index}.radiusMeters" value="${escapeHtml(rule.radiusMeters ?? '')}" placeholder="Leer = unbegrenzt"></label>
+          <label><span>Priorit\u00e4t</span><input type="number" min="-99" max="99" data-entry-field="triggerRules.${index}.priority" value="${escapeHtml(rule.priority ?? 0)}"></label>
+          <fieldset class="wide combat-entry-editor-weapons"><legend>G\u00fcltige Handlungen</legend>${RULE_ACTION_KINDS.map(([kind, label]) => `<label><input type="checkbox" data-entry-rule-kind="${kind}" data-entry-rule-index="${index}"${checked(kinds.includes(kind))}> ${label}</label>`).join('')}<small>Ohne Auswahl gilt die Regel f\u00fcr alle Handlungsarten.</small></fieldset>
+          <label class="wide"><span>Regelbeschreibung</span><textarea rows="2" data-entry-field="triggerRules.${index}.description">${escapeHtml(rule.description)}</textarea></label>
+        </div>
+        <div class="combat-entry-editor-number-grid">
+          <label><span>Angriff</span><input type="number" data-entry-field="triggerRules.${index}.effects.attackModifier" value="${escapeHtml(effects.attackModifier ?? 0)}"></label>
+          <label><span>Verteidigung</span><input type="number" data-entry-field="triggerRules.${index}.effects.defenseModifier" value="${escapeHtml(effects.defenseModifier ?? 0)}"></label>
+          <label><span>Rettungswurf</span><input type="number" data-entry-field="triggerRules.${index}.effects.savingThrowModifier" value="${escapeHtml(effects.savingThrowModifier ?? 0)}"></label>
+          <label><span>Zauber-SG</span><input type="number" data-entry-field="triggerRules.${index}.effects.spellSaveDcModifier" value="${escapeHtml(effects.spellSaveDcModifier ?? 0)}"></label>
+          <label><span>Fertigkeit</span><input type="number" data-entry-field="triggerRules.${index}.effects.skillModifier" value="${escapeHtml(effects.skillModifier ?? 0)}"></label>
+          <label><span>Schaden</span><input type="number" data-entry-field="triggerRules.${index}.effects.damageModifier" value="${escapeHtml(effects.damageModifier ?? 0)}"></label>
+          <label><span>Schadensreduktion</span><input type="number" min="0" data-entry-field="triggerRules.${index}.effects.damageReduction" value="${escapeHtml(effects.damageReduction ?? 0)}"></label>
+          <label><span>Wurfmodus</span><select data-entry-field="triggerRules.${index}.effects.rollMode"><option value="normal"${selected(effects.rollMode, 'normal')}>Normal</option><option value="advantage"${selected(effects.rollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(effects.rollMode, 'disadvantage')}>Nachteil</option></select></label>
+          <label><span>Ergebnis</span><select data-entry-field="triggerRules.${index}.effects.outcome"><option value="none"${selected(effects.outcome, 'none')}>Nicht erzwingen</option><option value="force-hit"${selected(effects.outcome, 'force-hit')}>Treffer erzwingen</option><option value="force-miss"${selected(effects.outcome, 'force-miss')}>Fehlschlag erzwingen</option><option value="force-critical-hit"${selected(effects.outcome, 'force-critical-hit')}>Kritischen Treffer erzwingen</option><option value="force-save-success"${selected(effects.outcome, 'force-save-success')}>Rettung gelingt</option><option value="force-save-failure"${selected(effects.outcome, 'force-save-failure')}>Rettung misslingt</option><option value="force-skill-success"${selected(effects.outcome, 'force-skill-success')}>Fertigkeit gelingt</option><option value="force-skill-failure"${selected(effects.outcome, 'force-skill-failure')}>Fertigkeit scheitert</option></select></label>
+        </div>
+      </section>`;
+    }).join('') || '<p class="combat-entry-editor-empty">Noch keine auswertbare Ausl\u00f6serregel.</p>'}</div>
+    <button type="button" data-entry-action="add-rule">+ Ausl\u00f6serregel</button>
+  </fieldset>`;
+}
+
 function renderCosts(item) {
   const costs = Array.isArray(item.costs) ? item.costs : [];
+  const selectableResources = state.kind === 'spell'
+    ? state.resources.filter(resource => resource.id !== 'aura-focus'
+      && !/mana/i.test(`${resource.id || ''} ${resource.name || ''}`)
+      && !isSpellSlotResource(resource))
+    : state.resources;
   return `<fieldset class="combat-entry-editor-costs"><legend>Kosten & Aktionsökonomie</legend>
     <div class="combat-entry-editor-cost-list">${costs.map((cost, index) => `<div class="combat-entry-editor-cost-row">
-      <select data-entry-cost-index="${index}" data-entry-cost-field="resourceId"><option value="">Ressource wählen</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(cost.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select>
+      <select data-entry-cost-index="${index}" data-entry-cost-field="resourceId"><option value="">Ressource wählen</option>${selectableResources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(cost.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select>
       <input type="number" min="0" max="9999" data-entry-cost-index="${index}" data-entry-cost-field="amount" value="${escapeHtml(cost.amount ?? 1)}" aria-label="Kosten">
       <button type="button" data-entry-action="remove-cost" data-entry-index="${index}" aria-label="Kosten entfernen">×</button>
     </div>`).join('') || '<p class="combat-entry-editor-empty">Keine Kosten hinterlegt.</p>'}</div>
@@ -87,6 +149,7 @@ function renderCosts(item) {
       <label class="check"><input type="checkbox" data-entry-field="auraBypass.allowed"${checked(item.auraBypass?.allowed !== false)}> Durch Aura-Fokus ersetzbar</label>
       <label><span>Aura-Kosten</span><input type="number" min="1" max="999" data-entry-field="auraBypass.cost" value="${escapeHtml(item.auraBypass?.cost ?? 1)}"></label>
     </div>
+    ${state.kind === 'spell' ? '<p>Mana und Zauberplätze werden ausschließlich über die getrennten Zauberfelder berechnet. Aura-Fokus ersetzt bei Auswahl das gesamte reguläre Paket.</p>' : ''}
   </fieldset>`;
 }
 
@@ -103,7 +166,7 @@ function renderQuirk(item) {
     <label class="wide"><span>Beschreibung</span><textarea data-entry-field="description" rows="5">${escapeHtml(item.description)}</textarea></label>
     <label class="wide"><span>Grenzen & Konflikte</span><textarea data-entry-field="limitations" rows="3">${escapeHtml(item.limitations)}</textarea></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4" placeholder="Wie soll die KI diese Marotte interpretieren und erzählen?">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderMechanicsFields(item)}`;
+  </div>${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderAbility(item) {
@@ -122,7 +185,7 @@ function renderAbility(item) {
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}${renderMechanicsFields(item)}`;
+  </div>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderTechnique(item) {
@@ -144,7 +207,7 @@ function renderTechnique(item) {
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}${renderMechanicsFields(item)}`;
+  </div>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderWeapon(item) {
@@ -161,17 +224,19 @@ function renderWeapon(item) {
 }
 
 function renderSpell(item) {
+  const cantrip = Number(item.level) === 0;
+  const spellSlots = getOrderedSpellSlotResources(state.resources);
   return `<div class="combat-entry-editor-grid">
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Darstellung</span><select data-entry-field="presentationKind"><option value="spell"${selected(item.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(item.presentationKind, 'prayer')}>Gebet / heiliger Schwur</option><option value="song"${selected(item.presentationKind, 'song')}>Gesang</option></select></label>
     <label><span>Auflösung</span><select data-entry-field="resolutionType"><option value="spell-attack"${selected(item.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(item.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(item.resolutionType, 'automatic')}>Automatische Wirkung</option></select></label>
     <label><span>Rettungsattribut</span><select data-entry-field="saveAttribute">${renderAttributeOptions(item.saveAttribute)}</select></label>
-    <label><span>Grad</span><input type="number" min="0" max="20" data-entry-field="level" value="${escapeHtml(item.level ?? 0)}"></label>
+    <label><span>Zaubergrad</span><select data-entry-field="level">${renderSpellLevelOptions(item.level)}</select></label>
     <label><span>Würfelformel</span><input data-entry-field="rollFormula" value="${escapeHtml(String(item.rollFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="2W6"></label>
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>
-    <label><span>Mana</span><input type="number" min="0" max="999" data-entry-field="manaCost" value="${escapeHtml(item.manaCost ?? 0)}"></label>
-    <label><span>Slot-Ressource</span><select data-entry-field="slotResourceId"><option value="">Kein Slot</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(item.slotResourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
-    <label><span>Slotkosten</span><input type="number" min="0" max="99" data-entry-field="slotCost" value="${escapeHtml(item.slotCost ?? 0)}"></label>
+    <label><span>Mana</span><input type="number" min="0" max="999" data-entry-field="manaCost" value="${escapeHtml(item.manaCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}></label>
+    <label><span>Zauberplatz</span><select data-entry-field="slotResourceId"${cantrip ? ' disabled' : ''}><option value="">${cantrip ? 'Zaubertrick · kein Platz' : 'Zauberplatz wählen'}</option>${spellSlots.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(item.slotResourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
+    <label><span>Platzkosten</span><input type="number" min="0" max="99" data-entry-field="slotCost" value="${escapeHtml(item.slotCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
     <label class="check"><input type="checkbox" data-entry-field="halfDamageOnSave"${checked(item.halfDamageOnSave)}> Halber Schaden bei gelungener Rettung</label>
@@ -179,7 +244,7 @@ function renderSpell(item) {
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}`;
+  </div><p class="combat-entry-editor-spell-rule">${cantrip ? 'Zaubertrick: verbraucht weiterhin seine Aktionsart, aber weder Mana noch einen Zauberplatz.' : `${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht die hinterlegte Aktionsart sowie Mana- und Zauberplatzkosten.`}</p>${renderCosts(item)}`;
 }
 
 function ensureOverlay() {
@@ -251,9 +316,21 @@ function syncSingleActivationCost(field) {
   cost.scope = resource?.scope === 'comment' ? 'comment' : 'persistent';
 }
 
+function syncSpellLevel(field) {
+  if (state.kind !== 'spell' || field.dataset.entryField !== 'level') return false;
+  const level = Math.max(0, Math.min(10, Number(field.value) || 0));
+  state.item.level = level;
+  state.item.manaCost = level === 0 ? 0 : Math.max(0, Number(state.item.manaCost) || 0);
+  state.item.slotCost = level === 0 ? 0 : Math.max(1, Number(state.item.slotCost) || 1);
+  state.item.slotResourceId = level === 0 ? '' : findSpellSlotResourceId(state.resources, level);
+  render();
+  return true;
+}
+
 document.addEventListener('input', event => {
   const field = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-field], #combat-entry-editor-overlay [data-entry-cost-field]');
   if (!field || !state.item) return;
+  if (syncSpellLevel(field)) return;
   if (field.dataset.entryCostField) updateCost(field);
   else {
     setAtPath(state.item, field.dataset.entryField, fieldValue(field));
@@ -262,6 +339,16 @@ document.addEventListener('input', event => {
 });
 
 document.addEventListener('change', event => {
+  const ruleKind = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-rule-kind]');
+  if (ruleKind && state.item) {
+    const rule = state.item.triggerRules?.[Number(ruleKind.dataset.entryRuleIndex)];
+    if (!rule) return;
+    const values = new Set(Array.isArray(rule.actionKinds) ? rule.actionKinds : []);
+    if (ruleKind.checked) values.add(ruleKind.dataset.entryRuleKind);
+    else values.delete(ruleKind.dataset.entryRuleKind);
+    rule.actionKinds = [...values];
+    return;
+  }
   const weaponType = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-weapon-type]');
   if (weaponType && state.item) {
     const values = new Set(Array.isArray(state.item.weaponTypes) ? state.item.weaponTypes : []);
@@ -272,6 +359,7 @@ document.addEventListener('change', event => {
   }
   const field = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-field], #combat-entry-editor-overlay [data-entry-cost-field]');
   if (!field || !state.item) return;
+  if (syncSpellLevel(field)) return;
   if (field.dataset.entryCostField) updateCost(field);
   else {
     setAtPath(state.item, field.dataset.entryField, fieldValue(field));
@@ -287,6 +375,22 @@ document.addEventListener('click', event => {
   if (action === 'add-cost') {
     if (!Array.isArray(state.item.costs)) state.item.costs = [];
     state.item.costs.push({ id: `cost-${Date.now().toString(36)}`, resourceId: '', name: 'Ressource', amount: 1, scope: 'persistent' });
+    render();
+  }
+  if (action === 'add-rule') {
+    if (!Array.isArray(state.item.triggerRules)) state.item.triggerRules = [];
+    state.item.triggerRules.push({
+      id: `combat-rule-${Date.now().toString(36)}`,
+      name: 'Neue Regel', enabled: true, phase: 'post-roll', recipient: 'actor', sourceRelation: 'self',
+      activation: 'passive', frequency: 'always', condition: 'always', actionKinds: [],
+      actionScope: '', consumeReaction: true, costs: [],
+      radiusMeters: null, priority: 0, description: '',
+      effects: { attackModifier: 0, defenseModifier: 0, savingThrowModifier: 0, spellSaveDcModifier: 0, skillModifier: 0, damageModifier: 0, damageReduction: 0, rollMode: 'normal', outcome: 'none' }
+    });
+    render();
+  }
+  if (action === 'remove-rule') {
+    state.item.triggerRules?.splice(Number(trigger.dataset.entryIndex), 1);
     render();
   }
   if (action === 'remove-cost') {

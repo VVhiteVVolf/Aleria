@@ -1,11 +1,11 @@
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-action-economy-v2';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260803-scene-rest-v1';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260803-economy-audit-v1';
 import {
   buildSceneRestParticipant,
   getSceneRestType,
   isSceneRestComment,
   normalizeSceneRest
-} from './scene-rest-model.js?v=20260803-scene-rest-v1';
+} from './scene-rest-model.js?v=20260803-economy-audit-v1';
 import {
   ensureSceneRestDialog,
   filterSceneRestCandidates,
@@ -17,7 +17,7 @@ import {
   setSceneRestSubmitting,
   setSceneRestType,
   updateSceneRestSelectionCount
-} from './scene-rest-ui.js?v=20260803-scene-rest-v1';
+} from './scene-rest-ui.js?v=20260803-economy-audit-v1';
 
 const profileResolver = new CombatProfileResolver();
 let activeCandidates = [];
@@ -163,7 +163,9 @@ function getCurrentTimelineCursor(threadId) {
 function getDialogTimeRange() {
   const day = Math.max(1, Math.floor(Number(document.getElementById('scene-rest-start-day')?.value) || 1));
   const clock = parseClock(document.getElementById('scene-rest-start-time')?.value);
-  const hours = Math.max(0.25, Math.min(168, Number(document.getElementById('scene-rest-duration-hours')?.value) || 1));
+  const restType = getSceneRestType(document.getElementById('scene-rest-type')?.value || 'short');
+  const minimumHours = restType.durationSeconds / 3600;
+  const hours = Math.max(minimumHours, Math.min(168, Number(document.getElementById('scene-rest-duration-hours')?.value) || minimumHours));
   const startTotalSeconds = ((day - 1) * 86400) + (clock ?? 0);
   const durationSeconds = Math.round(hours * 3600);
   const endTotalSeconds = startTotalSeconds + durationSeconds;
@@ -208,7 +210,8 @@ function buildDialogPayload() {
       title: candidate.title,
       portrait: candidate.portrait,
       persistence: candidate.profile.persistence,
-      recoveryDayKey
+      recoveryDayKey,
+      dayChanged: range.endDay > range.startDay
     }));
   const definition = getSceneRestType(type);
   const body = String(document.getElementById('scene-rest-body')?.value || definition.description).trim();
@@ -218,6 +221,7 @@ function buildDialogPayload() {
     title: definition.title,
     body,
     recoveryDayKey,
+    dayChanged: range.endDay > range.startDay,
     participants
   });
   const sceneTimeInput = {

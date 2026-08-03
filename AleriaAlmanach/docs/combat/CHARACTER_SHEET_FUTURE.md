@@ -10,7 +10,7 @@ Das System bleibt abschnittsbasiert: Spieler schreiben eine Kampfbeschreibung, d
 
 ## Bereits gelegte Grundlage
 
-- Versioniertes `combatProfile`-Schema 4 mit Migration der bisherigen Kampfdaten.
+- Versioniertes `combatProfile`-Schema 5 mit Migration der bisherigen Kampfdaten und strukturierten Auslöserregeln.
 - Normale Stufen 1–20 und bis zu zehn zusätzliche Sonderstufen, Gesamtstufe maximal 30.
 - D&amp;D-inspirierter Kompetenzbonus von +2 bis +9, manuell überschreibbar.
 - Sechs frei benennbare Attribute mit abgeleitetem oder manuell überschriebenem Modifikator.
@@ -30,6 +30,7 @@ Das System bleibt abschnittsbasiert: Spieler schreiben eine Kampfbeschreibung, d
 - Techniken und Formen besitzen Waffenkompatibilität, Aktivierungsart, Kosten, Reichweite, Schaden und strukturierte Wirkungen.
 - Aura, Präsenz und Domäne trennen aktive Form und latente Präsenz einschließlich strukturierter Eigen-, Verbündeten- und Gegnerwirkungen.
 - Marotten, besondere Fähigkeiten und Techniken besitzen gemeinsame Detaildialoge mit Auslösern, Zielen, Dauer, Grenzen, Kosten und ausdrücklichen AleriaGPT-Hinweisen.
+- Marotten, Zustände, Fähigkeiten und Techniken können deterministische Trigger für Vor-Wurf, Nach-Wurf, Nach-Treffer und Vor-Schaden definieren. Beziehungen, Radien, Häufigkeiten und Reaktionskosten werden serverseitig geprüft und im Regelbeleg protokolliert.
 
 ## Umgesetzter Stufenaufstieg
 

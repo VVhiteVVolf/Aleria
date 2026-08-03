@@ -5,7 +5,7 @@ import {
   getMaximumHitPoints,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-combat-sheet-v6';
+} from './combat-profile-model.js?v=20260803-spell-grades-v1';
 
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);
@@ -99,7 +99,7 @@ function normalizePlan(profile, value = {}) {
     },
     newSpell: {
       name: text(newSpell.name, 120),
-      level: boundedInteger(newSpell.level, 0, 0, 20),
+      level: boundedInteger(newSpell.level, 0, 0, 10),
       manaCost: boundedInteger(newSpell.manaCost, 0, 0, 999),
       rollFormula: text(newSpell.rollFormula, 40),
       description: text(newSpell.description, 1600),

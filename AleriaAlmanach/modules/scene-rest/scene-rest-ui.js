@@ -1,4 +1,4 @@
-import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260803-scene-rest-v1';
+import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260803-economy-audit-v1';
 
 export const SCENE_REST_ICON_URL = '../IconOrdner/Buttom Icons/Rasten.png';
 
@@ -133,7 +133,10 @@ export function setSceneRestType(type = 'short') {
   const duration = document.getElementById('scene-rest-duration-hours');
   const body = document.getElementById('scene-rest-body');
   if (input) input.value = definition.id;
-  if (duration) duration.value = String(definition.durationSeconds / 3600);
+  if (duration) {
+    duration.min = String(definition.durationSeconds / 3600);
+    duration.value = String(definition.durationSeconds / 3600);
+  }
   if (body) body.value = definition.description;
   document.querySelectorAll('[data-scene-rest-action="select-type"]').forEach(button => {
     const active = button.dataset.restType === definition.id;

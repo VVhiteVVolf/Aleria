@@ -93,6 +93,15 @@
 
 .combat-entry-editor-grid > .wide { grid-column: 1 / -1; }
 
+.combat-entry-editor-spell-rule {
+  margin: 0;
+  padding: 0.55rem 0.65rem;
+  border-left: 3px solid #5579ad;
+  color: #aebfdb;
+  background: rgba(54, 79, 121, 0.14);
+  font: italic 0.76rem/1.4 Georgia, serif;
+}
+
 .combat-entry-editor-dialog label {
   display: grid;
   gap: 5px;
@@ -162,6 +171,11 @@
 .combat-entry-editor-pair { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; }
 .combat-entry-editor-pair i { color: #967b4a; }
 .combat-entry-editor-empty { margin: 0; color: #81745d; font-style: italic; }
+.combat-entry-editor-rule-list { display: grid; gap: 14px; margin-bottom: 12px; }
+.combat-entry-editor-rule { padding: 12px; border: 1px solid rgba(184, 138, 62, .32); background: rgba(7, 8, 7, .48); }
+.combat-entry-editor-rule > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: #d2ad66; }
+.combat-entry-editor-rule > header button { width: 34px; min-height: 30px; padding: 0; }
+.combat-entry-editor-rule .combat-entry-editor-number-grid { grid-template-columns: repeat(3, minmax(130px, 1fr)); }
 .combat-entry-editor-error { margin: 14px 0 0; padding: 9px 12px; color: #f0b0a0; border: 1px solid #863e35; background: rgba(92, 25, 20, .35); }
 
 @media (max-width: 760px) {

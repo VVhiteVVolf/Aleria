@@ -24,3 +24,22 @@ test('prioritizes recent active-scene commenters before cast and remaining chara
   assert.equal(ranked[2].scenePriority, 1);
   assert.equal(ranked[3].scenePriority, 2);
 });
+
+test('keeps duplicated creature instances separate from their reusable template', () => {
+  const characters = [{ id: 'skeleton', name: 'Skelettkrieger', entityType: 'creature', portrait: 'template.png' }];
+  const comments = [{
+    commentSegments: [
+      { sceneActorId: 'scene-creature:test:skeleton:1', sceneActorSourceId: 'skeleton', charName: 'Skelettkrieger I.', portrait: 'one.png' },
+      { sceneActorId: 'scene-creature:test:skeleton:2', sceneActorSourceId: 'skeleton', charName: 'Skelettkrieger II.' }
+    ]
+  }];
+
+  const ranked = rankSceneDiceParticipants(characters, comments, []);
+  const instances = ranked.filter(participant => participant.sourceCharacterId === 'skeleton');
+  assert.deepEqual(instances.map(participant => participant.id), [
+    'scene-creature:test:skeleton:1',
+    'scene-creature:test:skeleton:2'
+  ]);
+  assert.equal(instances[0].portrait, 'one.png');
+  assert.equal(instances[1].portrait, 'template.png');
+});

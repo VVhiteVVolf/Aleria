@@ -79,10 +79,16 @@ async function sendAleriaGptChat(query, retrieval, options = {}) {
     };
   }
 
+  await window._fbAuth?.ready;
+  const idToken = await window._fbAuth?.getIdToken?.();
+  if (!idToken) {
+    return { ok: false, status: 'unauthenticated', text: '', raw: null };
+  }
+
   const url = `${endpoint}/aleria-gpt/chat`;
   const response = await fetchAleriaGptWithTimeout(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
     body: JSON.stringify(buildAleriaGptChatPayload(query, retrieval, options))
   }, Number(options.timeoutMs || ALERIA_GPT_CLIENT_TIMEOUT_MS));
 

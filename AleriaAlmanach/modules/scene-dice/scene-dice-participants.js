@@ -21,11 +21,19 @@ function normalizeParticipantKey(value) {
 function getCommentSpeakerRefs(comment = {}) {
   if (SCENE_DICE_SYSTEM_MODES.has(String(comment.commentMode || '').trim())) return [];
   const refs = [];
-  const addRef = (characterId, name, narrator = false) => {
+  const addRef = (characterId, name, narrator = false, metadata = {}) => {
     if (narrator) return;
     const id = String(characterId || '').trim();
     const safeName = String(name || '').trim();
-    if (id || safeName) refs.push({ id, name: safeName });
+    if (id || safeName) refs.push({
+      id,
+      name: safeName,
+      sourceCharacterId: String(metadata.sourceCharacterId || '').trim(),
+      entityType: String(metadata.entityType || '').trim(),
+      portrait: String(metadata.portrait || '').trim(),
+      title: String(metadata.title || '').trim(),
+      combatTeam: String(metadata.combatTeam || '').trim()
+    });
   };
 
   addRef(
@@ -35,9 +43,16 @@ function getCommentSpeakerRefs(comment = {}) {
   );
   (Array.isArray(comment.commentSegments) ? comment.commentSegments : []).forEach(segment => {
     addRef(
-      segment?.characterId || comment.characterId,
+      segment?.sceneActorId || segment?.characterId || comment.characterId,
       segment?.charName || segment?.name || comment.charName,
-      !!segment?.narrator || String(segment?.kind || segment?.commentKind || '') === 'narrator'
+      !!segment?.narrator || String(segment?.kind || segment?.commentKind || '') === 'narrator',
+      {
+        sourceCharacterId: segment?.sceneActorSourceId || segment?.creatureId || segment?.characterId || comment.characterId,
+        entityType: segment?.sceneActorId ? 'creature' : (segment?.actorType || comment.actorType),
+        portrait: segment?.portrait || comment.portrait,
+        title: segment?.charTitle || comment.charTitle,
+        combatTeam: segment?.combatTeam
+      }
     );
   });
 
@@ -53,6 +68,7 @@ function getCommentSpeakerRefs(comment = {}) {
 export function rankSceneDiceParticipants(characters = [], comments = [], castIds = []) {
   const activityById = new Map();
   const activityByName = new Map();
+  const sceneInstances = new Map();
   (Array.isArray(comments) ? comments : []).forEach((comment, commentIndex) => {
     getCommentSpeakerRefs(comment).forEach(ref => {
       const previous = (ref.id && activityById.get(ref.id))
@@ -62,6 +78,9 @@ export function rankSceneDiceParticipants(characters = [], comments = [], castId
       if (ref.id) activityById.set(ref.id, activity);
       const nameKey = normalizeParticipantKey(ref.name);
       if (nameKey) activityByName.set(nameKey, activity);
+      if (ref.id && ref.sourceCharacterId && ref.id !== ref.sourceCharacterId) {
+        sceneInstances.set(ref.id, { ...(sceneInstances.get(ref.id) || {}), ...ref });
+      }
     });
   });
 
@@ -69,7 +88,23 @@ export function rankSceneDiceParticipants(characters = [], comments = [], castId
     .map((id, index) => [String(id || '').trim(), index])
     .filter(([id]) => id));
 
-  return (Array.isArray(characters) ? characters : [])
+  const sourceCharacters = Array.isArray(characters) ? characters : [];
+  const characterById = new Map(sourceCharacters.map(character => [String(character?.id || '').trim(), character]));
+  const instanceCharacters = [...sceneInstances.values()].map(instance => {
+    const source = characterById.get(instance.sourceCharacterId) || {};
+    return {
+      ...source,
+      ...instance,
+      id: instance.id,
+      sourceCharacterId: instance.sourceCharacterId,
+      entityType: instance.entityType || source.entityType || 'creature',
+      name: instance.name || source.name || 'Kreatur',
+      portrait: instance.portrait || source.portrait || '',
+      title: instance.title || source.title || ''
+    };
+  });
+
+  return [...sourceCharacters, ...instanceCharacters]
     .map(character => {
       const id = String(character?.id || '').trim();
       const name = String(character?.name || '').trim();
@@ -105,7 +140,11 @@ function readStoredSceneDiceRoller() {
   try {
     const stored = JSON.parse(localStorage.getItem(SCENE_DICE_ROLLER_STORAGE_KEY) || 'null');
     if (stored && typeof stored === 'object') {
-      return { id: String(stored.id || ''), name: String(stored.name || '') };
+      return {
+        id: String(stored.id || ''),
+        name: String(stored.name || ''),
+        sourceCharacterId: String(stored.sourceCharacterId || '')
+      };
     }
     const legacyName = String(localStorage.getItem('aleria-scene-dice-roller-v1') || '').trim();
     return legacyName ? { id: '', name: legacyName } : null;
@@ -118,7 +157,8 @@ function storeSceneDiceRoller(selection) {
   try {
     localStorage.setItem(SCENE_DICE_ROLLER_STORAGE_KEY, JSON.stringify({
       id: selection.id || '',
-      name: selection.name || ''
+      name: selection.name || '',
+      sourceCharacterId: selection.sourceCharacterId || ''
     }));
   } catch { /* localStorage may be blocked */ }
 }

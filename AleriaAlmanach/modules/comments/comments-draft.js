@@ -42,6 +42,7 @@ function getCommentDraftPayload() {
       combatTargetId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatTargetId || '') : '',
       combatActionId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatActionId || '') : '',
       combatRollMode: commentSegmentUsesCombatResolution(segment) && ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+      combatDistanceMeters: commentSegmentUsesCombatResolution(segment) ? Math.max(0, Number(segment.combatDistanceMeters) || 0) : 0,
       combatPaymentMode: commentSegmentUsesCombatResolution(segment) && ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
       combatPaymentConfirmed: commentSegmentUsesCombatResolution(segment) && !!segment.combatPaymentConfirmed
     })),
@@ -159,6 +160,7 @@ function restoreCommentDraft() {
           targetId: segment.combatTargetId,
           actionId: segment.combatActionId,
           rollMode: segment.combatRollMode,
+          distanceMeters: segment.combatDistanceMeters,
           actorId: segment.actorId,
           paymentMode: segment.combatPaymentMode,
           paymentConfirmed: segment.combatPaymentConfirmed

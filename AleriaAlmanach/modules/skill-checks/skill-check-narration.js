@@ -28,13 +28,21 @@ function buildQuery(facts = {}) {
       outcome: facts.outcome,
       attempt: String(facts.attempt || '').slice(0, 500),
       targetActor: facts.targetActor || '',
-      targetContribution: String(facts.targetContribution || '').slice(0, 800)
+      targetContribution: String(facts.targetContribution || '').slice(0, 800),
+      appliedRules: (facts.ruleApplications || []).slice(0, 8).map(rule => ({
+        source: rule.sourceActorName,
+        rule: rule.ruleName,
+        effects: rule.effects
+      }))
     })}`
   ].join('\n');
 }
 
 function enrichRetrieval(retrieval = {}, facts = {}) {
-  const profileContext = ['VERBINDLICHER FIGURENBOGEN', JSON.stringify(facts.actorProfileSnapshot || null, null, 2)].join('\n');
+  const profileContext = ['VERBINDLICHER FIGURENBOGEN UND REGELPROTOKOLL', JSON.stringify({
+    actorProfileSnapshot: facts.actorProfileSnapshot || null,
+    appliedRules: facts.ruleApplications || []
+  }, null, 2)].join('\n');
   return {
     ...(retrieval || {}),
     promptContext: [profileContext, retrieval?.promptContext || ''].filter(Boolean).join('\n\n--- Weitere Almanach-Treffer ---\n\n'),

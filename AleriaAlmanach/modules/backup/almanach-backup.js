@@ -219,6 +219,10 @@ function normalizeFullBackupPayload(parsed) {
 
 async function applyFullAlmanachBackup(payload) {
   const backup = normalizeFullBackupPayload(payload);
+  await window._fbAuth?.ready;
+  if (!window._fb?.importBackupRecords || !window._fbAuth?.getAccess?.().canModerate) {
+    throw new Error('Vollbackups kÃ¶nnen nur mit der Firebase-Rolle Moderator oder Admin sicher importiert werden.');
+  }
   if (!confirmDiscardModuleEditorChanges('Backup importieren')) return;
   if (!confirmBackupBeforeDestructiveImport('Vollbackup importieren', 'Nicht enthaltene Daten bleiben bestehen, gleiche IDs werden ueberschrieben.')) return;
   if (!confirm(`Backup importieren?\n\nModule: ${backup.moduleStore.customSections.length} Bereiche / ${Object.keys(backup.moduleStore.entryOverrides).length} Überschreibungen\nCharaktere: ${backup.characters.length}\nKreaturen: ${backup.creatures.length}\nKommentare: ${backup.comments.length}\nRedestab-Stände: ${backup.commentTurns.length}\n\nDer Import überschreibt gleiche IDs und lässt nicht enthaltene Daten bestehen.`)) {
@@ -250,47 +254,16 @@ async function applyFullAlmanachBackup(payload) {
     _charTabsLoaded = true;
   }
 
-  if (window._fb?.saveCharacter) {
-    for (const char of backup.characters) {
-      const id = String(char?.id || '').trim();
-      if (!id) continue;
-      const data = { ...char };
-      delete data.id;
-      await window._fb.saveCharacter(id, data);
-    }
+  if (window._fb?.importBackupRecords) {
+    await window._fb.importBackupRecords('characters', backup.characters.filter(char => String(char?.id || '').trim()));
     _characters = await window._fb.loadCharacters();
     _charactersLoaded = true;
-  }
-
-  if (window._fb?.saveCreature) {
-    for (const creature of backup.creatures) {
-      const id = String(creature?.id || '').trim();
-      if (!id) continue;
-      const data = { ...creature };
-      delete data.id;
-      await window._fb.saveCreature(id, data);
-    }
+    await window._fb.importBackupRecords('creatures', backup.creatures.filter(creature => String(creature?.id || '').trim()));
     await window.AleriaCreatures?.reload?.();
-  }
-
-  if (window._fb?.saveBackupComment) {
-    for (const comment of backup.comments) {
-      const id = String(comment?.id || '').trim();
-      if (!id) continue;
-      const data = { ...comment };
-      delete data.id;
-      await window._fb.saveBackupComment(id, data);
-    }
-  }
-
-  if (window._fb?.saveBackupCommentTurn) {
-    for (const turn of backup.commentTurns) {
-      const id = String(turn?.id || turn?.threadId || '').trim();
-      if (!id) continue;
-      const data = { ...turn };
-      delete data.id;
-      await window._fb.saveBackupCommentTurn(id, data);
-    }
+    await window._fb.importBackupRecords('comments', backup.comments.filter(comment => String(comment?.id || '').trim()));
+    await window._fb.importBackupRecords('commentTurns', backup.commentTurns.filter(turn => String(turn?.id || turn?.threadId || '').trim()));
+  } else {
+    throw new Error('Der sichere serverseitige Backup-Import ist nicht verfÃ¼gbar.');
   }
 
   renderAll();

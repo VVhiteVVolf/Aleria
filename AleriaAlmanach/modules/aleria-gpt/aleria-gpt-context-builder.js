@@ -489,6 +489,8 @@ function normalizeAleriaGptCombatResolution(value = {}) {
     criticalSuccess: attack.criticalSuccess === true,
     criticalFailure: attack.criticalFailure === true,
     saveSucceeded: typeof attack.saveSucceeded === 'boolean' ? attack.saveSucceeded : null,
+    saveAttribute: String(attack.saveAttribute || ''),
+    rollOwner: String(attack.rollOwner || ''),
     naturalRoll: getAleriaGptFiniteNumber(attack.naturalRoll),
     total: getAleriaGptFiniteNumber(attack.total),
     targetDefense: getAleriaGptFiniteNumber(attack.targetDefense),
@@ -497,7 +499,10 @@ function normalizeAleriaGptCombatResolution(value = {}) {
     hitPointsBefore: getAleriaGptFiniteNumber(target.hitPointsBefore ?? target.currentHitPoints),
     hitPointsAfter: getAleriaGptFiniteNumber(target.hitPointsAfter ?? target.currentHitPoints),
     maximumHitPoints: getAleriaGptFiniteNumber(target.maximumHitPoints),
+    temporaryHitPointsBefore: getAleriaGptFiniteNumber(target.temporaryHitPointsBefore),
     temporaryHitPointsAfter: getAleriaGptFiniteNumber(target.temporaryHitPointsAfter),
+    damageAbsorbedByTemporaryHitPoints: getAleriaGptFiniteNumber(target.damageAbsorbedByTemporaryHitPoints),
+    damageAppliedToHitPoints: getAleriaGptFiniteNumber(target.damageAppliedToHitPoints),
     defeated: target.defeated === true,
     resourceChanges,
     narration: compactAleriaGptText(value.narration?.text || '')
@@ -553,10 +558,19 @@ function formatAleriaGptSegmentMechanics({ skillResolution, combatResolution, in
     lines.push(`Fertigkeitsauswertung: ${skillResolution.skillName || skillResolution.skillId || 'Fertigkeit'} = ${skillResolution.outcome || 'unbekannt'}, Gesamt ${skillResolution.total}, SG ${skillResolution.difficulty}.`);
   }
   if (combatResolution) {
-    const outcome = combatResolution.criticalFailure
-      ? 'kritischer Fehlschlag'
-      : (combatResolution.criticalSuccess ? 'kritischer Erfolg' : (combatResolution.hit ? 'Treffer' : 'Fehlschlag'));
-    lines.push(`Kampfauswertung: ${combatResolution.actorName || 'Akteur'} gegen ${combatResolution.targetName || 'Ziel'} mit ${combatResolution.weaponName || combatResolution.profileActionKind || 'Angriff'}: ${outcome}; Angriff ${combatResolution.total} gegen Verteidigung ${combatResolution.targetDefense}; Schaden ${combatResolution.damageTotal} ${combatResolution.damageType || ''}; Ziel-TP ${combatResolution.hitPointsBefore} -> ${combatResolution.hitPointsAfter}/${combatResolution.maximumHitPoints}${combatResolution.defeated ? '; besiegt' : ''}.`);
+    const savingThrow = combatResolution.resolutionMode === 'saving-throw';
+    const outcome = savingThrow
+      ? (combatResolution.saveSucceeded ? 'Rettungswurf gelungen' : 'Rettungswurf misslungen')
+      : (combatResolution.criticalFailure
+          ? 'kritischer Fehlschlag'
+          : (combatResolution.criticalSuccess ? 'kritischer Erfolg' : (combatResolution.hit ? 'Treffer' : 'Fehlschlag')));
+    const rollLabel = savingThrow
+      ? `Rettungswurf ${combatResolution.saveAttribute || ''} ${combatResolution.total} gegen Zauber-SG ${combatResolution.targetDefense}`
+      : `Angriff ${combatResolution.total} gegen Verteidigung ${combatResolution.targetDefense}`;
+    const temporaryHitPoints = combatResolution.temporaryHitPointsBefore || combatResolution.temporaryHitPointsAfter
+      ? `; temporäre TP ${combatResolution.temporaryHitPointsBefore} -> ${combatResolution.temporaryHitPointsAfter}, davon ${combatResolution.damageAbsorbedByTemporaryHitPoints} Schaden absorbiert`
+      : '';
+    lines.push(`Kampfauswertung: ${combatResolution.actorName || 'Akteur'} gegen ${combatResolution.targetName || 'Ziel'} mit ${combatResolution.weaponName || combatResolution.profileActionKind || 'Angriff'}: ${outcome}; ${rollLabel}; Schaden ${combatResolution.damageTotal} ${combatResolution.damageType || ''}; Ziel-TP ${combatResolution.hitPointsBefore} -> ${combatResolution.hitPointsAfter}/${combatResolution.maximumHitPoints}${temporaryHitPoints}${combatResolution.defeated ? '; besiegt' : ''}.`);
     combatResolution.resourceChanges.forEach(change => {
       lines.push(`Ressourcenverbrauch ${combatResolution.actorName || 'Akteur'}: ${change.name} ${change.before} -> ${change.after}.`);
     });

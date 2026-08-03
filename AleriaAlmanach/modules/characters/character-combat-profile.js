@@ -10,13 +10,20 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-combat-sheet-v6';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-combat-entry-editor-v1';
+} from '../combat/combat-profile-model.js?v=20260803-spell-grades-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-spell-grades-v1';
 import {
   createCharacterLevelUpPlan,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260802-level-up-v1';
-import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-resource-icons-v1';
+} from '../combat/combat-level-up-model.js?v=20260803-spell-grades-v1';
+import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
+import {
+  findSpellSlotResourceId,
+  getOrderedSpellSlotResources,
+  getSpellLevelLabel,
+  getSpellSlotLevel,
+  isSpellSlotResource
+} from '../combat/combat-spell-slots.js?v=20260803-economy-audit-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -26,6 +33,12 @@ let levelUpNotice = '';
 const ATTRIBUTE_OPTIONS = COMBAT_ATTRIBUTE_DEFINITIONS
   .map(attribute => `<option value="${attribute.key}">${attribute.label}</option>`)
   .join('');
+
+function renderSpellLevelOptions(value = 0) {
+  return Array.from({ length: 11 }, (_entry, level) => (
+    `<option value="${level}"${selected(value, level)}>${escapeMarkup(getSpellLevelLabel(level))}</option>`
+  )).join('');
+}
 
 function escapeMarkup(value) {
   const node = document.createElement('span');
@@ -185,7 +198,7 @@ function renderLevelUpDialog(profile) {
 
         ${profile.resources.length ? `<section class="cp-level-up-section">
           <div class="cp-level-up-section-head"><div><span>Kernressourcen</span><h4>Vorräte steigern</h4></div><small>Aktuell und Maximum können getrennt wachsen.</small></div>
-          <div class="cp-level-up-resources">${profile.resources.map(resource => `<div><strong>${escapeMarkup(resource.name)}</strong><small>${resource.current} / ${resource.maximum}</small><label>Aktuell +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="current" value="${plan.resourceIncreases[resource.id]?.current ?? 0}"></label><label>Maximum +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="maximum" value="${plan.resourceIncreases[resource.id]?.maximum ?? 0}"></label></div>`).join('')}</div>
+          <div class="cp-level-up-resources">${profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds)).map(resource => `<div><strong>${escapeMarkup(resource.name)}</strong><small>${resource.current} / ${resource.maximum}</small><label>Aktuell +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="current" value="${plan.resourceIncreases[resource.id]?.current ?? 0}"></label><label>Maximum +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="maximum" value="${plan.resourceIncreases[resource.id]?.maximum ?? 0}"></label></div>`).join('')}</div>
         </section>` : ''}
 
         <section class="cp-level-up-section">
@@ -207,7 +220,7 @@ function renderLevelUpDialog(profile) {
             </div></details>
             <details><summary>Neuer Zauber</summary><div class="cp-level-up-fields">
               <label><span>Name</span><input data-level-up-path="newSpell.name" value="${escapeMarkup(plan.newSpell.name)}" maxlength="120"></label>
-              <label><span>Grad</span><input type="number" min="0" max="20" data-level-up-path="newSpell.level" value="${plan.newSpell.level}"></label>
+              <label><span>Zaubergrad</span><select data-level-up-path="newSpell.level">${renderSpellLevelOptions(plan.newSpell.level)}</select></label>
               <label><span>Manakosten</span><input type="number" min="0" max="999" data-level-up-path="newSpell.manaCost" value="${plan.newSpell.manaCost}"></label>
               <label><span>Würfelformel</span><input data-level-up-path="newSpell.rollFormula" value="${escapeMarkup(plan.newSpell.rollFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40"></label>
               <label class="cp-level-up-check"><input type="checkbox" data-level-up-path="newSpell.prepared"${checked(plan.newSpell.prepared)}> Sofort vorbereitet</label>
@@ -303,6 +316,7 @@ function renderRules(profile) {
           <label><span>Angriff global</span><input type="number" min="-99" max="99" data-combat-path="combat.attackBonus" value="${profile.combat.attackBonus}"></label>
           <label><span>Schaden global</span><input type="number" min="-99" max="99" data-combat-path="combat.damageBonus" value="${profile.combat.damageBonus}"></label>
           <label><span>Passive Wahrnehmung extra</span><input type="number" min="-99" max="99" data-combat-path="combat.passivePerceptionBonus" value="${profile.combat.passivePerceptionBonus}"></label>
+          <label class="check wide"><input type="checkbox" data-combat-path="combat.canActAtZeroHitPoints"${checked(profile.combat.canActAtZeroHitPoints)}> Sonderregel: Die Figur kann bei 0 TP handeln</label>
         </div>
       </article>
     </section>`;
@@ -342,9 +356,10 @@ function renderSkills(profile) {
 }
 
 function renderResources(profile) {
+  const coreResources = profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds));
   return `<article class="cp-sheet-card cp-sheet-resources">
     <div class="cp-sheet-section-head"><div><span>Verbrauch &amp; Erholung</span><h4>Kernressourcen</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="resources">+ Ressource</button></div>
-    <div class="cp-sheet-resource-list">${profile.resources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
+    <div class="cp-sheet-resource-list">${coreResources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
       <div class="cp-sheet-resource-identity">${renderResourceIcon(resource)}<input class="name" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="name" value="${escapeMarkup(resource.name)}" maxlength="100" aria-label="Ressource"></div>
       <label><span>Aktuell</span><input type="number" min="-9999" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}"></label>
       <label><span>Maximum</span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}"></label>
@@ -513,8 +528,22 @@ function renderCheats(profile) {
   </section>`;
 }
 
+function renderSpellSlotProfile(profile) {
+  const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
+  if (!slots.length) return '<p class="cp-sheet-empty">Aktiviere Magie, um Zauberplätze I–X anzulegen.</p>';
+  return `<section class="cp-sheet-spell-slots" aria-label="Zauberplätze nach Grad">
+    <div class="cp-sheet-subhead"><div><strong>Zauberplätze I–X</strong><small>Eigenständige Magieressourcen · Auffüllung durch lange Rast</small></div></div>
+    <div class="cp-sheet-spell-slot-grid">${slots.map(resource => `<label data-spell-slot-level="${getSpellSlotLevel(resource) || ''}">
+      ${renderResourceIcon(resource)}
+      <span>${escapeMarkup(getSpellLevelLabel(getSpellSlotLevel(resource)))}</span>
+      <span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}" aria-label="${escapeMarkup(resource.name)} aktuell"><i>/</i><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}" aria-label="${escapeMarkup(resource.name)} maximum"></span>
+    </label>`).join('')}</div>
+  </section>`;
+}
+
 function renderMagic(profile) {
   const magic = profile.magic;
+  const spellSlots = getOrderedSpellSlotResources(profile.resources, magic.slotResourceIds);
   return `<article class="cp-sheet-card cp-sheet-magic">
     <div class="cp-sheet-section-head"><div><span>Mana, Zauberwerte &amp; Repertoire</span><h4>Magie</h4></div><label class="cp-sheet-toggle"><input type="checkbox" data-combat-path="magic.enabled"${checked(magic.enabled)}> Magie aktiv</label></div>
     <div class="cp-sheet-fields compact">
@@ -524,19 +553,20 @@ function renderMagic(profile) {
       <label><span>Mana-Ressource</span><select data-combat-path="magic.manaResourceId"><option value="">Keine Verknüpfung</option>${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(magic.manaResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select></label>
       <label class="wide"><span>Magische Regeln / Tradition</span><textarea data-combat-path="magic.notes" maxlength="1600" placeholder="Magiesystem, Grenzen, Fokus, Tradition …">${escapeMarkup(magic.notes)}</textarea></label>
     </div>
+    ${renderSpellSlotProfile(profile)}
     <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Vorbereitet für den künftigen Zauberersteller und die zentrale Zauberliste.</small></div><button type="button" data-combat-action="add-item" data-combat-collection="magic.spells">+ Zauber</button></div>
     <div class="cp-sheet-spell-list">${magic.spells.map(spell => `<div>
       <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> bereit</label>
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="name" value="${escapeMarkup(spell.name)}" maxlength="120" placeholder="Zaubername">
-      <input type="number" min="0" max="20" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="level" value="${spell.level}" aria-label="Grad">
-      <input type="number" min="0" max="999" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="manaCost" value="${spell.manaCost}" aria-label="Manakosten">
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="level" aria-label="Zaubergrad">${renderSpellLevelOptions(spell.level)}</select>
+      <input type="number" min="0" max="999" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="manaCost" value="${spell.manaCost}" aria-label="Manakosten"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen kein Mana"' : ''}>
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="rollFormula" value="${escapeMarkup(spell.rollFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="Wurf">
       <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="presentationKind" aria-label="Darstellung"><option value="spell"${selected(spell.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(spell.presentationKind, 'prayer')}>Gebet</option><option value="song"${selected(spell.presentationKind, 'song')}>Gesang</option></select>
       <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="activationType" aria-label="Aktivierung"><option value="action"${selected(spell.activationType, 'action')}>Aktion</option><option value="bonus-action"${selected(spell.activationType, 'bonus-action')}>Bonusaktion</option><option value="reaction"${selected(spell.activationType, 'reaction')}>Reaktion</option><option value="special-action"${selected(spell.activationType, 'special-action')}>Besondere Aktion</option></select>
       <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="resolutionType" aria-label="Zauberprüfung"><option value="spell-attack"${selected(spell.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(spell.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(spell.resolutionType, 'automatic')}>Automatische Wirkung</option></select>
       <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="saveAttribute" aria-label="Rettungswurf-Attribut">${renderAttributeOptions(spell.saveAttribute)}</select>
-      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotResourceId" aria-label="Zauberslot"><option value="">Kein Slot</option>${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(spell.slotResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select>
-      <input type="number" min="0" max="99" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotCost" value="${spell.slotCost}" aria-label="Slotkosten">
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotResourceId" aria-label="Zauberplatz"${spell.level === 0 ? ' disabled' : ''}><option value="">${spell.level === 0 ? 'Zaubertrick · kein Platz' : 'Zauberplatz wählen'}</option>${spellSlots.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(spell.slotResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select>
+      <input type="number" min="0" max="99" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotCost" value="${spell.slotCost}" aria-label="Zauberplatzkosten"${spell.level === 0 ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}>
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="damageType" value="${escapeMarkup(spell.damageType)}" placeholder="Schadensart">
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="range" value="${escapeMarkup(spell.range)}" placeholder="Reichweite">
       <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="halfDamageOnSave"${checked(spell.halfDamageOnSave)}> halber Schaden bei Rettung</label>
@@ -642,6 +672,10 @@ function updateDraftField(target) {
   const directPath = target.dataset.combatPath;
   if (directPath) {
     setAtPath(draftProfile, directPath, inputValue(target));
+    if (directPath === 'magic.enabled') {
+      draftProfile = sanitizeCharacterCombatProfile(draftProfile);
+      renderSheet();
+    }
     return true;
   }
   const collectionPath = target.dataset.combatCollection;
@@ -651,6 +685,16 @@ function updateDraftField(target) {
   const item = findCollectionItem(collectionPath, itemId);
   if (!item) return false;
   setAtPath(item, property, inputValue(target));
+  if (collectionPath === 'magic.spells' && property === 'level') {
+    const level = Math.max(0, Math.min(10, Number(target.value) || 0));
+    item.level = level;
+    item.manaCost = level === 0 ? 0 : Math.max(0, Number(item.manaCost) || 0);
+    item.slotCost = level === 0 ? 0 : Math.max(1, Number(item.slotCost) || 1);
+    item.slotResourceId = level === 0 ? '' : findSpellSlotResourceId(draftProfile.resources, level);
+    draftProfile = sanitizeCharacterCombatProfile(draftProfile);
+    renderSheet();
+    return true;
+  }
   if (collectionPath === 'magic.spells' && property === 'activationType') {
     const resource = draftProfile.resources.find(entry => entry.id === target.value);
     const actionResourceIds = new Set(['action', 'bonus-action', 'reaction', 'special-action']);

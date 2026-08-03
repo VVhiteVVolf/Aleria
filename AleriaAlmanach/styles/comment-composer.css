@@ -403,14 +403,6 @@
   letter-spacing: 0.04em;
 }
 
-@media (min-width: 861px) {
-  #comment-form-overlay .comment-segment-types > .comment-segment-type:nth-child(10),
-  #edit-comment-overlay .comment-segment-types > .comment-segment-type:nth-child(10),
-  #comment-form-overlay .comment-segment-actions > .comment-segment-add:nth-child(10) {
-    grid-column: 2;
-  }
-}
-
 #comment-form-overlay .comment-duration-total {
   padding-top: 0.5rem;
   text-align: right;

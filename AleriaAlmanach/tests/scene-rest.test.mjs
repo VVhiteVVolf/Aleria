@@ -40,14 +40,21 @@ test('kurze Rast heilt vollständig und füllt nur Kurzrast- sowie Kommentarress
   assert.equal(participant.after.abilities.find(item => item.id === 'oath').usesCurrent, 0);
 });
 
-test('lange Rast füllt Kurzrast-, Langrast-, Tages- und Szenenressourcen, aber keine manuellen', () => {
+test('lange Rast füllt keine Tagesressourcen ohne tatsächlichen Tageswechsel', () => {
   const recovered = recoverSceneRestResources(resources, 'long', 'scene:test:day-2');
   assert.equal(recovered.find(item => item.id === 'action').current, 1);
   assert.equal(recovered.find(item => item.id === 'stamina').current, 4);
   assert.equal(recovered.find(item => item.id === 'mana-focus').current, 10);
+  assert.equal(recovered.find(item => item.id === 'aura-focus').current, 0);
+  assert.equal(recovered.find(item => item.id === 'aura-focus').recoveryDayKey, undefined);
+  assert.equal(recovered.find(item => item.id === 'manual').current, 1);
+});
+
+test('ein echter Tageswechsel füllt Tagesressourcen unabhängig von der Rast-Art', () => {
+  const recovered = recoverSceneRestResources(resources, 'short', 'scene:test:day-2', { dayChanged: true });
   assert.equal(recovered.find(item => item.id === 'aura-focus').current, 3);
   assert.equal(recovered.find(item => item.id === 'aura-focus').recoveryDayKey, 'scene:test:day-2');
-  assert.equal(recovered.find(item => item.id === 'manual').current, 1);
+  assert.equal(recovered.find(item => item.id === 'mana-focus').current, 2);
 });
 
 test('Rasteinträge werden beim historischen Kampfzustand an der richtigen Stelle angewendet', () => {

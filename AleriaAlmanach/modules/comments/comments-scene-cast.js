@@ -66,6 +66,7 @@
       entityType: 'creature',
       name: String(source.name || source.charName || template?.name || 'Kreatur').trim().slice(0, 140),
       title: String(source.title || source.charTitle || template?.title || '').trim().slice(0, 180),
+      combatTeam: String(source.combatTeam || template?.combatTeam || template?.fraktion || template?.faction || '').trim().slice(0, 80),
       portrait: String(source.portrait || template?.portrait || ''),
       emotes: Array.isArray(source.emotes) ? clone(source.emotes) : clone(template?.emotes || []),
       combatProfile: clone(source.combatProfile || template?.combatProfile || {})
@@ -119,6 +120,13 @@
     global.persistCommentDraft?.();
   }
 
+  function setActorTeam(id, combatTeam) {
+    const actor = createActors.find(item => item.id === id);
+    if (!actor) return;
+    actor.combatTeam = String(combatTeam || '').trim().slice(0, 80);
+    global.persistCommentDraft?.();
+  }
+
   function removeActor(id) {
     const index = createActors.findIndex(item => item.id === id);
     if (index < 0) return;
@@ -165,6 +173,7 @@
         sourceCreatureId: sourceId,
         name: segment.charName,
         title: segment.charTitle,
+        combatTeam: segment.combatTeam,
         portrait: segment.portrait
       });
       if (actor) byId.set(id, actor);
@@ -181,6 +190,7 @@
       entityType: 'creature',
       name: actor.name,
       title: actor.title || '',
+      combatTeam: actor.combatTeam || '',
       portrait: actor.portrait || '',
       emotes: clone(actor.emotes || []),
       combatProfile: clone(actor.combatProfile || {})
@@ -205,6 +215,7 @@
           <article data-scene-actor-id="${escapeHtml(actor.id)}">
             ${actor.portrait ? `<img src="${escapeHtml(actor.portrait)}" alt="">` : '<span class="comment-scene-cast-placeholder">☠</span>'}
             <label><span>Anzeigename</span><input type="text" maxlength="140" value="${escapeHtml(actor.name)}" data-scene-cast-action="rename" data-scene-actor-id="${escapeHtml(actor.id)}"></label>
+            <label><span>Seite / Team</span><input type="text" maxlength="80" value="${escapeHtml(actor.combatTeam || '')}" data-scene-cast-action="team" data-scene-actor-id="${escapeHtml(actor.id)}" placeholder="z. B. Draig"></label>
             <code>${escapeHtml(actor.id)}</code>
             <button type="button" class="comment-scene-cast-remove" data-scene-cast-action="remove" data-scene-actor-id="${escapeHtml(actor.id)}" aria-label="Instanz entfernen">×</button>
           </article>`).join('') || '<div class="comment-scene-cast-empty">Noch keine Instanz in dieser Szene. Wähle oben eine Vorlage und setze sie ein.</div>'}
@@ -219,9 +230,10 @@
   });
 
   document.addEventListener('input', event => {
-    const input = event.target?.closest?.('[data-scene-cast-action="rename"]');
+    const input = event.target?.closest?.('[data-scene-cast-action="rename"], [data-scene-cast-action="team"]');
     if (!input) return;
-    renameActor(input.dataset.sceneActorId || '', input.value);
+    if (input.dataset.sceneCastAction === 'rename') renameActor(input.dataset.sceneActorId || '', input.value);
+    if (input.dataset.sceneCastAction === 'team') setActorTeam(input.dataset.sceneActorId || '', input.value);
   });
 
   global.AleriaCommentSceneCast = Object.freeze({
