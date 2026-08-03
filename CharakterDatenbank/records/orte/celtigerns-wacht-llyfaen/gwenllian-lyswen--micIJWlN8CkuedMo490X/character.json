@@ -1,0 +1,1079 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--micIJWlN8CkuedMo490X",
+  "slug": "gwenllian-lyswen",
+  "identity": {
+    "name": "Gwenllian Lyswen",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "celtigerns-wacht-llyfaen",
+      "label": "Celtigerns Wacht - Llyfaen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "celtigerns-wacht-llyfaen",
+        "label": "Celtigerns Wacht - Llyfaen",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Celtigerns Wacht - Llyfaen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "micIJWlN8CkuedMo490X",
+      "documentIds": [
+        "micIJWlN8CkuedMo490X"
+      ],
+      "documents": [
+        {
+          "documentId": "micIJWlN8CkuedMo490X",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "micIJWlN8CkuedMo490X"
+    ],
+    "contentHash": "98fa336828e024e1eb39ab2cc9ca288379942096a2ff197a1416bee4d4d495db"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "micIJWlN8CkuedMo490X",
+        "emotesOverride": true,
+        "aliases": [],
+        "archived": false,
+        "inventory": {
+          "items": [
+            {
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "type": "Waffe",
+              "tags": "",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Hauptwaffe",
+              "imagePosition": "center",
+              "infoRows": [],
+              "category": "weapon",
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "image": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-0-w8ef"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-1-exvo",
+              "category": "armor",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "imageFormat": "square",
+              "icon": "*",
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz",
+              "infoRows": [],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "type": "Rüstung"
+            },
+            {
+              "category": "equipment",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "name": "Reiseausrüstung",
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "tags": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-2-0fx2"
+            },
+            {
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "image": "",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-3-2lgm",
+              "type": "Trinktur",
+              "imagePosition": "center",
+              "tags": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Heil- oder Verbrauchsgut",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+            },
+            {
+              "icon": "*",
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "category": "documents",
+              "image": "",
+              "imagePosition": "center",
+              "type": "Dokument",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden",
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFit": "contain"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "category": "other",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "infoRows": [],
+              "image": "",
+              "id": "item-mqu1vat1-5-5kao",
+              "imageFit": "contain",
+              "type": "Sonstiges",
+              "tags": ""
+            }
+          ],
+          "portrait": "https://i.imgur.com/cy3TS2x.png",
+          "moneyState": {
+            "silver": 0,
+            "totalCopper": 0,
+            "gold": 0,
+            "copper": 0
+          },
+          "carryLabel": "Traglast",
+          "infoRows": [],
+          "moneyNotice": "",
+          "portraitFormat": "portrait",
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "role": "Diakonin, Llysfaen",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "name": "Gwenllian Lyswen",
+          "portraitFit": "cover",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "step": 0,
+            "status": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": ""
+          },
+          "companions": [
+            {
+              "infoRows": [],
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "status": "Gesund",
+              "imageFormat": "landscape",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imagePosition": "top",
+              "description": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "image": ""
+            },
+            {
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "infoRows": [],
+              "species": "Tier / Person",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "description": "",
+              "status": "Noch festlegen",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "statusColor": "#5c7f20"
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "level": "Kirche von Cenyr, Gwendolyns Ufer (Llysfaen)",
+          "portraitPosition": "top",
+          "healthColor": "#5c7f20",
+          "status": "Gesund",
+          "carryValue": "Noch festlegen",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+        },
+        "playerOwner": "patrick",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/jeHcqEK.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/C8gh8kp.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/heHr3ZH.png"
+          },
+          {
+            "img": "https://i.imgur.com/RVpaCyc.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/9lK1YNJ.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/EW3pvot.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/5KA5Ke0.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/s2h6NR9.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/lP1xVKz.png"
+          }
+        ],
+        "bio": "",
+        "portrait": "https://i.imgur.com/cy3TS2x.png",
+        "profileLink": "",
+        "fraktion": "Kirche von Cenyr, Gwendolyns Ufer (Llysfaen)",
+        "title": "Diakonin, Llysfaen",
+        "name": "Gwenllian Lyswen"
+      }
+    ]
+  },
+  "character": {
+    "id": "micIJWlN8CkuedMo490X",
+    "emotesOverride": true,
+    "aliases": [],
+    "archived": false,
+    "inventory": {
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "type": "Waffe",
+          "tags": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Hauptwaffe",
+          "imagePosition": "center",
+          "infoRows": [],
+          "category": "weapon",
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "image": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-0-w8ef"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "image": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "imageFormat": "square",
+          "icon": "*",
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "infoRows": [],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "type": "Rüstung"
+        },
+        {
+          "category": "equipment",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-2-0fx2"
+        },
+        {
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "image": "",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-3-2lgm",
+          "type": "Trinktur",
+          "imagePosition": "center",
+          "tags": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Heil- oder Verbrauchsgut",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+        },
+        {
+          "icon": "*",
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "category": "documents",
+          "image": "",
+          "imagePosition": "center",
+          "type": "Dokument",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFit": "contain"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "category": "other",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "infoRows": [],
+          "image": "",
+          "id": "item-mqu1vat1-5-5kao",
+          "imageFit": "contain",
+          "type": "Sonstiges",
+          "tags": ""
+        }
+      ],
+      "portrait": "https://i.imgur.com/cy3TS2x.png",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "carryLabel": "Traglast",
+      "infoRows": [],
+      "moneyNotice": "",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "role": "Diakonin, Llysfaen",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "name": "Gwenllian Lyswen",
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "step": 0,
+        "status": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": ""
+      },
+      "companions": [
+        {
+          "infoRows": [],
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "imageFormat": "landscape",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imagePosition": "top",
+          "description": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": ""
+        },
+        {
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "infoRows": [],
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "description": "",
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "statusColor": "#5c7f20"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "level": "Kirche von Cenyr, Gwendolyns Ufer (Llysfaen)",
+      "portraitPosition": "top",
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+    },
+    "playerOwner": "patrick",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/jeHcqEK.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/C8gh8kp.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/heHr3ZH.png"
+      },
+      {
+        "img": "https://i.imgur.com/RVpaCyc.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/9lK1YNJ.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/EW3pvot.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/5KA5Ke0.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/s2h6NR9.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/lP1xVKz.png"
+      }
+    ],
+    "bio": "",
+    "portrait": "https://i.imgur.com/cy3TS2x.png",
+    "profileLink": "",
+    "fraktion": "Kirche von Cenyr, Gwendolyns Ufer (Llysfaen)",
+    "title": "Diakonin, Llysfaen",
+    "name": "Gwenllian Lyswen",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1024 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--zlkBFnEc1nLcBWTjUBTM",
+  "slug": "cynan-bachyngoch",
+  "identity": {
+    "name": "Cynan Bachyngoch",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "zlkBFnEc1nLcBWTjUBTM",
+      "documentIds": [
+        "zlkBFnEc1nLcBWTjUBTM"
+      ],
+      "documents": [
+        {
+          "documentId": "zlkBFnEc1nLcBWTjUBTM",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "zlkBFnEc1nLcBWTjUBTM"
+    ],
+    "contentHash": "229a0b6112dfd197b500b469a0c07c133318e314bbb76aacc3eb5cecba022dc6"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "zlkBFnEc1nLcBWTjUBTM",
+        "archived": true,
+        "title": "Pfandleiher & Geldwechsler",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/aacfIZW.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/4QUtAaX.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jLtONBD.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Erap3GZ.png",
+            "label": ""
+          }
+        ],
+        "fraktion": "Unbekannte Zugehörigkeit",
+        "portrait": "https://i.imgur.com/Hi8rx0k.png",
+        "bio": "Cynan Bachyngoch ist ein Geld- und Pfandleiher aus Bronhir, Betreiber eines bekannten Pfandhauses und scheinbar unabhängig von den großen Banden – weder der Melynwyrdd noch der Gleißenden Hand offen zugehörig. Doch völlige Unabhängigkeit traut ihm kaum jemand zu, und wem seine Loyalität tatsächlich gilt, bleibt im Schatten. Sicher ist nur: Aledryn Cledrdu steht bei ihm in der Schuld, und der Junge",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "portraitFit": "cover",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitPosition": "top",
+          "level": "Unbekannte Zugehörigkeit",
+          "healthColor": "#5c7f20",
+          "name": "Cynan Bachyngoch",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "equipmentQuiz": {
+            "resultText": "",
+            "step": 0,
+            "status": "",
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false
+          },
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "role": "Pfandleiher & Geldwechsler",
+          "title": "Charakter-Inventar",
+          "infoRows": [],
+          "portrait": "https://i.imgur.com/Hi8rx0k.png",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "moneyNotice": "",
+          "companions": [
+            {
+              "image": "",
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "id": "companion-mqu1vat2-0-zz2n",
+              "species": "Tier oder Begleiter",
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "description": "",
+              "status": "Gesund",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "infoRows": [],
+              "status": "Noch festlegen",
+              "imageFit": "cover",
+              "role": "Gefährte",
+              "species": "Tier / Person",
+              "name": "Treuer Begleiter",
+              "image": "",
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "description": ""
+            }
+          ],
+          "portraitFormat": "portrait",
+          "hitpoints": "TP / Zustand",
+          "items": [
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "icon": "*",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFormat": "square",
+              "type": "Waffe",
+              "tags": ""
+            },
+            {
+              "infoRows": [],
+              "id": "item-mqu1vat1-1-exvo",
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Rüstung",
+              "image": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "name": "Rüstung / Schutz",
+              "category": "armor",
+              "imagePosition": "center"
+            },
+            {
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-2-0fx2",
+              "type": "Ausrüstung",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imageFormat": "square",
+              "quantity": "1",
+              "image": "",
+              "category": "equipment",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "potions",
+              "imagePosition": "center",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "tags": "",
+              "infoRows": [],
+              "id": "item-mqu1vat1-3-2lgm",
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFormat": "square"
+            },
+            {
+              "image": "",
+              "imageFormat": "square",
+              "name": "Dokumente / Urkunden",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "type": "Dokument",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "quantity": "1",
+              "category": "documents",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "id": "item-mqu1vat1-4-ajrj",
+              "weight": "Noch festlegen",
+              "icon": "*"
+            },
+            {
+              "image": "",
+              "imagePosition": "center",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand",
+              "id": "item-mqu1vat1-5-5kao",
+              "category": "other",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Sonstiges"
+            }
+          ]
+        },
+        "aliases": [],
+        "name": "Cynan Bachyngoch"
+      }
+    ]
+  },
+  "character": {
+    "id": "zlkBFnEc1nLcBWTjUBTM",
+    "archived": true,
+    "title": "Pfandleiher & Geldwechsler",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/aacfIZW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/4QUtAaX.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jLtONBD.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Erap3GZ.png",
+        "label": ""
+      }
+    ],
+    "fraktion": "Unbekannte Zugehörigkeit",
+    "portrait": "https://i.imgur.com/Hi8rx0k.png",
+    "bio": "Cynan Bachyngoch ist ein Geld- und Pfandleiher aus Bronhir, Betreiber eines bekannten Pfandhauses und scheinbar unabhängig von den großen Banden – weder der Melynwyrdd noch der Gleißenden Hand offen zugehörig. Doch völlige Unabhängigkeit traut ihm kaum jemand zu, und wem seine Loyalität tatsächlich gilt, bleibt im Schatten. Sicher ist nur: Aledryn Cledrdu steht bei ihm in der Schuld, und der Junge",
+    "inventory": {
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "portraitFit": "cover",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitPosition": "top",
+      "level": "Unbekannte Zugehörigkeit",
+      "healthColor": "#5c7f20",
+      "name": "Cynan Bachyngoch",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "equipmentQuiz": {
+        "resultText": "",
+        "step": 0,
+        "status": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false
+      },
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "role": "Pfandleiher & Geldwechsler",
+      "title": "Charakter-Inventar",
+      "infoRows": [],
+      "portrait": "https://i.imgur.com/Hi8rx0k.png",
+      "status": "Gesund",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "moneyNotice": "",
+      "companions": [
+        {
+          "image": "",
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "species": "Tier oder Begleiter",
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "description": "",
+          "status": "Gesund",
+          "statusColor": "#5c7f20"
+        },
+        {
+          "infoRows": [],
+          "status": "Noch festlegen",
+          "imageFit": "cover",
+          "role": "Gefährte",
+          "species": "Tier / Person",
+          "name": "Treuer Begleiter",
+          "image": "",
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "description": ""
+        }
+      ],
+      "portraitFormat": "portrait",
+      "hitpoints": "TP / Zustand",
+      "items": [
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFormat": "square",
+          "type": "Waffe",
+          "tags": ""
+        },
+        {
+          "infoRows": [],
+          "id": "item-mqu1vat1-1-exvo",
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Rüstung",
+          "image": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "name": "Rüstung / Schutz",
+          "category": "armor",
+          "imagePosition": "center"
+        },
+        {
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-2-0fx2",
+          "type": "Ausrüstung",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imageFormat": "square",
+          "quantity": "1",
+          "image": "",
+          "category": "equipment",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "potions",
+          "imagePosition": "center",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "tags": "",
+          "infoRows": [],
+          "id": "item-mqu1vat1-3-2lgm",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFormat": "square"
+        },
+        {
+          "image": "",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "type": "Dokument",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "quantity": "1",
+          "category": "documents",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "image": "",
+          "imagePosition": "center",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand",
+          "id": "item-mqu1vat1-5-5kao",
+          "category": "other",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Sonstiges"
+        }
+      ]
+    },
+    "aliases": [],
+    "name": "Cynan Bachyngoch",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

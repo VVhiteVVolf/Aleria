@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dieweltvonaleria.net/schemas/character-record.schema.json",
+  "title": "Aleria character record",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "recordId",
+    "identity",
+    "classification",
+    "links",
+    "sync",
+    "local",
+    "sources",
+    "character"
+  ],
+  "properties": {
+    "schema": { "const": "aleria.character-record" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "recordId": { "type": "string", "pattern": "^character--" },
+    "slug": { "type": "string", "minLength": 1 },
+    "identity": {
+      "type": "object",
+      "required": ["name", "aliases", "worldPersonId"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "worldPersonId": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "classification": {
+      "type": "object",
+      "required": ["primary", "familyStatus", "families", "groups", "places", "legacy"],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "required": ["kind", "id", "label"],
+          "properties": {
+            "kind": { "enum": ["family", "group", "place", "unassigned"] },
+            "id": { "type": "string", "minLength": 1 },
+            "label": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": true
+        },
+        "familyStatus": { "enum": ["linked", "ambiguous", "pending"] },
+        "families": { "type": "array" },
+        "familyAlternatives": { "type": "array" },
+        "groups": { "type": "array" },
+        "places": { "type": "array" },
+        "legacy": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "links": {
+      "type": "object",
+      "required": ["firestore", "familyTree", "profile"],
+      "properties": {
+        "firestore": {
+          "type": "object",
+          "required": ["projectId", "databaseId", "collection", "documentId", "documentIds", "documents"],
+          "properties": {
+            "projectId": { "const": "aleriaprojekt" },
+            "databaseId": { "const": "(default)" },
+            "collection": { "const": "characters" },
+            "documentId": { "type": "string", "minLength": 1 },
+            "documentIds": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "documents": { "type": "array", "minItems": 1 }
+          },
+          "additionalProperties": false
+        },
+        "familyTree": { "type": "array" },
+        "profile": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "sync": {
+      "type": "object",
+      "required": ["strategy", "sourceArchive", "sourceExportedAt", "sourceDocumentIds", "contentHash"],
+      "properties": {
+        "strategy": { "const": "online-wins-runtime-local-wins-identity" },
+        "sourceArchive": { "type": "string", "minLength": 1 },
+        "sourceExportedAt": { "type": "string" },
+        "sourceUpdatedAt": { "type": "string" },
+        "sourceDocumentIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "local": {
+      "type": "object",
+      "required": ["notes", "tags", "references", "classificationOverride"],
+      "properties": {
+        "notes": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "references": { "type": "array" },
+        "classificationOverride": {
+          "type": ["object", "null"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "object",
+      "required": ["firestoreExports"],
+      "properties": {
+        "firestoreExports": { "type": "array", "minItems": 1 }
+      },
+      "additionalProperties": false
+    },
+    "character": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

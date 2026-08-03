@@ -1,4 +1,4 @@
-const DAMAGE_FORMULA_PATTERN = /^(\d+)d(4|6|8|10|12)([+-]\d+)?$/i;
+const DAMAGE_FORMULA_PATTERN = /^(\d+d(?:4|6|8|10|12))(?:\+\d+d(?:4|6|8|10|12))*(?:[+-]\d+)?$/i;
 
 export function clampSituationalModifier(value) {
   const number = Number(value) || 0;
@@ -20,23 +20,34 @@ export function buildAttackNotation(modifier = 0, rollMode = 'normal') {
 
 export function parseDamageFormula(value) {
   const notation = String(value || '').trim().toLowerCase().replace(/\s+/g, '').replace(/w/g, 'd');
-  const match = notation.match(DAMAGE_FORMULA_PATTERN);
-  if (!match) throw new Error('Die Schadensformel muss z. B. 1W8 oder 2W6+1 lauten.');
-  const diceCount = Number(match[1]);
-  if (diceCount < 1 || diceCount > 20) throw new Error('Die Schadensformel enthält zu viele Würfel.');
+  if (!DAMAGE_FORMULA_PATTERN.test(notation)) throw new Error('Die Schadensformel muss z. B. 1W8, 2W6+1 oder 1W10+1W4 lauten.');
+  const terms = [...notation.matchAll(/(\d+)d(4|6|8|10|12)/gi)].map(match => ({
+    diceCount: Number(match[1]),
+    sides: Number(match[2])
+  }));
+  if (!terms.length || terms.some(term => term.diceCount < 1) || terms.reduce((sum, term) => sum + term.diceCount, 0) > 20) {
+    throw new Error('Die Schadensformel enthält zu viele Würfel.');
+  }
+  const fixedMatch = notation.match(/([+-]\d+)$/);
+  const fixedModifier = Number(fixedMatch?.[1] || 0);
+  if (terms.length === 1) return { ...terms[0], fixedModifier, notation };
   return {
-    diceCount,
-    sides: Number(match[2]),
-    fixedModifier: Number(match[3] || 0),
-    notation: `${diceCount}d${match[2]}${match[3] || ''}`
+    diceCount: terms.reduce((sum, term) => sum + term.diceCount, 0),
+    sides: null,
+    fixedModifier,
+    notation,
+    terms
   };
 }
 
 export function buildDamageNotation(damageFormula, bonus = 0, critical = false) {
   const parsed = parseDamageFormula(damageFormula);
-  const diceCount = critical ? parsed.diceCount * 2 : parsed.diceCount;
+  const terms = parsed.terms || [{ diceCount: parsed.diceCount, sides: parsed.sides }];
   const modifier = parsed.fixedModifier + (Number(bonus) || 0);
-  return `${diceCount}d${parsed.sides}${modifier === 0 ? '' : `${modifier > 0 ? '+' : ''}${modifier}`}`;
+  const diceNotation = terms
+    .map(term => `${critical ? term.diceCount * 2 : term.diceCount}d${term.sides}`)
+    .join('+');
+  return `${diceNotation}${modifier === 0 ? '' : `${modifier > 0 ? '+' : ''}${modifier}`}`;
 }
 
 export function buildVerifiedModifiers(action = {}) {

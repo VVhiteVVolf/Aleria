@@ -1,0 +1,1054 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--gtFWOieVj64YehNR5Rpv",
+  "slug": "arion-hundt-zu-falkengrund",
+  "identity": {
+    "name": "Arion Hundt  'zu Falkengrund'",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "zum-roten-drachen",
+      "label": "Zum Roten Drachen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Zum Roten Drachen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "gtFWOieVj64YehNR5Rpv",
+      "documentIds": [
+        "gtFWOieVj64YehNR5Rpv"
+      ],
+      "documents": [
+        {
+          "documentId": "gtFWOieVj64YehNR5Rpv",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "gtFWOieVj64YehNR5Rpv"
+    ],
+    "contentHash": "fbb87da3c9af2d1c2baeee643d0e5dfd5b48d358f83d04b06bc55b47b07c8b76"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "gtFWOieVj64YehNR5Rpv",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/LGmOVYD.png",
+            "label": "Neutral"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/R0zFzmd.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/G7yDP4k.png"
+          },
+          {
+            "img": "https://i.imgur.com/3HRqmDi.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/D17TNIe.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/FTGfS6J.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ueMn8Bv.png"
+          }
+        ],
+        "inventory": {
+          "hitpoints": "TP / Zustand",
+          "items": [
+            {
+              "type": "Waffe",
+              "tags": "",
+              "category": "weapon",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "name": "Hauptwaffe",
+              "image": "",
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "infoRows": []
+            },
+            {
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "imagePosition": "center",
+              "type": "Rüstung",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-1-exvo",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "category": "armor",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "quantity": "1",
+              "image": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "infoRows": [],
+              "imageFit": "contain",
+              "name": "Reiseausrüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "tags": "",
+              "type": "Ausrüstung",
+              "imageFormat": "square"
+            },
+            {
+              "image": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imagePosition": "center",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "category": "potions",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*"
+            },
+            {
+              "type": "Dokument",
+              "imagePosition": "center",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-4-ajrj",
+              "name": "Dokumente / Urkunden",
+              "infoRows": [],
+              "category": "documents",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "image": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Persönlicher Gegenstand",
+              "category": "other",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "type": "Sonstiges",
+              "imagePosition": "center",
+              "tags": "",
+              "id": "item-mqu1vat1-5-5kao"
+            }
+          ],
+          "portraitPosition": "top",
+          "role": "Fahrender Ritter",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "status": "",
+            "step": 0,
+            "resultText": "",
+            "updatedAt": ""
+          },
+          "portraitFormat": "portrait",
+          "name": "Arion Hundt  'zu Falkengrund'",
+          "moneyNotice": "",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "gold": 0
+          },
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "label": "Ausrüstung",
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents",
+              "label": "Dokumente"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "title": "Charakter-Inventar",
+          "portrait": "https://i.postimg.cc/8cQL9kfV/9c78cded-c1d9-479a-937a-379998950aa7.png",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "status": "Gesund",
+          "infoRows": [],
+          "healthColor": "#5c7f20",
+          "level": "...",
+          "portraitFit": "cover",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "companions": [
+            {
+              "imageFormat": "landscape",
+              "status": "Gesund",
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "species": "Tier oder Begleiter",
+              "description": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "id": "companion-mqu1vat2-0-zz2n",
+              "image": "",
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "infoRows": []
+            },
+            {
+              "id": "companion-mqu1vat2-1-5e7l",
+              "species": "Tier / Person",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "name": "Treuer Begleiter",
+              "status": "Noch festlegen",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "description": "",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ]
+            }
+          ],
+          "carryValue": "Noch festlegen"
+        },
+        "title": "Fahrender Ritter",
+        "portrait": "https://i.postimg.cc/8cQL9kfV/9c78cded-c1d9-479a-937a-379998950aa7.png",
+        "name": "Arion Hundt  'zu Falkengrund'",
+        "bio": "Arion Hundt  'zu Falkengrund' ist ein Ritter aus Aldingen der seit 20 jahren als Fahrender Ritter unterwegs ist. Er hat eine Vorliebe für das cenyrische Volk und will seinem Knappen Bejamin wahren Rittertum zeigen, nicht dieses prunkvolle Rittersein in Lothirischen Kreisen. Im Herzen ist Arion nunmal selbst wie ein Cenyri!",
+        "fraktion": "..."
+      }
+    ]
+  },
+  "character": {
+    "id": "gtFWOieVj64YehNR5Rpv",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/LGmOVYD.png",
+        "label": "Neutral"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/R0zFzmd.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/G7yDP4k.png"
+      },
+      {
+        "img": "https://i.imgur.com/3HRqmDi.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/D17TNIe.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/FTGfS6J.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ueMn8Bv.png"
+      }
+    ],
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "items": [
+        {
+          "type": "Waffe",
+          "tags": "",
+          "category": "weapon",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "name": "Hauptwaffe",
+          "image": "",
+          "icon": "*",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "infoRows": []
+        },
+        {
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "imagePosition": "center",
+          "type": "Rüstung",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-1-exvo",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "category": "armor",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "image": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "image": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Reiseausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "tags": "",
+          "type": "Ausrüstung",
+          "imageFormat": "square"
+        },
+        {
+          "image": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imagePosition": "center",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*"
+        },
+        {
+          "type": "Dokument",
+          "imagePosition": "center",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-4-ajrj",
+          "name": "Dokumente / Urkunden",
+          "infoRows": [],
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "image": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Persönlicher Gegenstand",
+          "category": "other",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "tags": "",
+          "id": "item-mqu1vat1-5-5kao"
+        }
+      ],
+      "portraitPosition": "top",
+      "role": "Fahrender Ritter",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "status": "",
+        "step": 0,
+        "resultText": "",
+        "updatedAt": ""
+      },
+      "portraitFormat": "portrait",
+      "name": "Arion Hundt  'zu Falkengrund'",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0
+      },
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "title": "Charakter-Inventar",
+      "portrait": "https://i.postimg.cc/8cQL9kfV/9c78cded-c1d9-479a-937a-379998950aa7.png",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "status": "Gesund",
+      "infoRows": [],
+      "healthColor": "#5c7f20",
+      "level": "...",
+      "portraitFit": "cover",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "imageFormat": "landscape",
+          "status": "Gesund",
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "species": "Tier oder Begleiter",
+          "description": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "infoRows": []
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "species": "Tier / Person",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "description": "",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ]
+        }
+      ],
+      "carryValue": "Noch festlegen"
+    },
+    "title": "Fahrender Ritter",
+    "portrait": "https://i.postimg.cc/8cQL9kfV/9c78cded-c1d9-479a-937a-379998950aa7.png",
+    "name": "Arion Hundt  'zu Falkengrund'",
+    "bio": "Arion Hundt  'zu Falkengrund' ist ein Ritter aus Aldingen der seit 20 jahren als Fahrender Ritter unterwegs ist. Er hat eine Vorliebe für das cenyrische Volk und will seinem Knappen Bejamin wahren Rittertum zeigen, nicht dieses prunkvolle Rittersein in Lothirischen Kreisen. Im Herzen ist Arion nunmal selbst wie ein Cenyri!",
+    "fraktion": "...",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1069 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
+  "slug": "asta-brathfengr",
+  "identity": {
+    "name": "Asta Brathfengr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "klangheim",
+      "label": "Klangheim",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "klangheim",
+        "label": "Klangheim",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Klangheim"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "kCmUm4WvMZDYetqrSWQ0",
+      "documentIds": [
+        "kCmUm4WvMZDYetqrSWQ0"
+      ],
+      "documents": [
+        {
+          "documentId": "kCmUm4WvMZDYetqrSWQ0",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "kCmUm4WvMZDYetqrSWQ0"
+    ],
+    "contentHash": "8683b03bf905aad2b7413c6352a0a06209fdfa39b36e99329f14ab952ff72f3c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "kCmUm4WvMZDYetqrSWQ0",
+        "archived": false,
+        "inventory": {
+          "items": [
+            {
+              "tags": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Waffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "infoRows": [],
+              "imageFit": "contain",
+              "name": "Hauptwaffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "image": "",
+              "category": "weapon",
+              "imagePosition": "center"
+            },
+            {
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz",
+              "image": "",
+              "infoRows": [],
+              "tags": "",
+              "type": "Rüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "id": "item-mqu1vat1-1-exvo",
+              "category": "armor",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "icon": "*",
+              "imagePosition": "center"
+            },
+            {
+              "type": "Ausrüstung",
+              "imageFormat": "square",
+              "tags": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "image": "",
+              "name": "Reiseausrüstung",
+              "category": "equipment",
+              "infoRows": [],
+              "icon": "*",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-2-0fx2"
+            },
+            {
+              "image": "",
+              "quantity": "1",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-3-2lgm",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "infoRows": [],
+              "imageFit": "contain"
+            },
+            {
+              "icon": "*",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "infoRows": [],
+              "image": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFit": "contain",
+              "type": "Dokument",
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "category": "documents",
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "category": "other",
+              "imagePosition": "center",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "image": "",
+              "type": "Sonstiges",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "id": "item-mqu1vat1-5-5kao",
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "infoRows": []
+            }
+          ],
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "portrait": "https://i.imgur.com/IRjzx1b.png",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "moneyNotice": "",
+          "infoRows": [],
+          "hitpoints": "TP / Zustand",
+          "equipmentQuiz": {
+            "resultText": "",
+            "step": 0,
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false
+          },
+          "title": "Charakter-Inventar",
+          "status": "Gesund",
+          "role": "Skaldin, Klangheim",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "name": "Asta Brathfengr",
+          "portraitFit": "cover",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "level": "Clan Brathfengr, Klangheim",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "healthColor": "#5c7f20",
+          "portraitPosition": "top",
+          "portraitFormat": "portrait",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "description": "",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "image": "",
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "infoRows": [],
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "status": "Gesund"
+            },
+            {
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "species": "Tier / Person",
+              "status": "Noch festlegen",
+              "imageFit": "cover",
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "top",
+              "role": "Gefährte",
+              "infoRows": [],
+              "name": "Treuer Begleiter"
+            }
+          ]
+        },
+        "name": "Asta Brathfengr",
+        "bio": "Asta ist eine Tochter von Vorna und Gunhild Brathfengr's und eine junge Skaldin.",
+        "title": "Skaldin, Klangheim",
+        "emotesOverride": true,
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/iw0hcs5.png"
+          },
+          {
+            "img": "https://i.imgur.com/npDoBWo.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/icL6dlk.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/zSM3t54.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Jw9i0jk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/7VhRndA.png"
+          },
+          {
+            "img": "https://i.imgur.com/k0aAxkf.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/6NunGtG.png",
+            "label": ""
+          }
+        ],
+        "fraktion": "Clan Brathfengr, Klangheim",
+        "portrait": "https://i.imgur.com/IRjzx1b.png",
+        "playerOwner": "patrick",
+        "aliases": []
+      }
+    ]
+  },
+  "character": {
+    "id": "kCmUm4WvMZDYetqrSWQ0",
+    "archived": false,
+    "inventory": {
+      "items": [
+        {
+          "tags": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Waffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Hauptwaffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "image": "",
+          "category": "weapon",
+          "imagePosition": "center"
+        },
+        {
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "infoRows": [],
+          "tags": "",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "icon": "*",
+          "imagePosition": "center"
+        },
+        {
+          "type": "Ausrüstung",
+          "imageFormat": "square",
+          "tags": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "image": "",
+          "name": "Reiseausrüstung",
+          "category": "equipment",
+          "infoRows": [],
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-2-0fx2"
+        },
+        {
+          "image": "",
+          "quantity": "1",
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "infoRows": [],
+          "imageFit": "contain"
+        },
+        {
+          "icon": "*",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "infoRows": [],
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFit": "contain",
+          "type": "Dokument",
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "category": "documents",
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "category": "other",
+          "imagePosition": "center",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "image": "",
+          "type": "Sonstiges",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-mqu1vat1-5-5kao",
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "infoRows": []
+        }
+      ],
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "portrait": "https://i.imgur.com/IRjzx1b.png",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "moneyNotice": "",
+      "infoRows": [],
+      "hitpoints": "TP / Zustand",
+      "equipmentQuiz": {
+        "resultText": "",
+        "step": 0,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false
+      },
+      "title": "Charakter-Inventar",
+      "status": "Gesund",
+      "role": "Skaldin, Klangheim",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "name": "Asta Brathfengr",
+      "portraitFit": "cover",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "level": "Clan Brathfengr, Klangheim",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "healthColor": "#5c7f20",
+      "portraitPosition": "top",
+      "portraitFormat": "portrait",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "description": "",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "infoRows": [],
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "status": "Gesund"
+        },
+        {
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "species": "Tier / Person",
+          "status": "Noch festlegen",
+          "imageFit": "cover",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "infoRows": [],
+          "name": "Treuer Begleiter"
+        }
+      ]
+    },
+    "name": "Asta Brathfengr",
+    "bio": "Asta ist eine Tochter von Vorna und Gunhild Brathfengr's und eine junge Skaldin.",
+    "title": "Skaldin, Klangheim",
+    "emotesOverride": true,
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/iw0hcs5.png"
+      },
+      {
+        "img": "https://i.imgur.com/npDoBWo.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/icL6dlk.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/zSM3t54.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Jw9i0jk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/7VhRndA.png"
+      },
+      {
+        "img": "https://i.imgur.com/k0aAxkf.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/6NunGtG.png",
+        "label": ""
+      }
+    ],
+    "fraktion": "Clan Brathfengr, Klangheim",
+    "portrait": "https://i.imgur.com/IRjzx1b.png",
+    "playerOwner": "patrick",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

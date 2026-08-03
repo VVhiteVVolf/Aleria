@@ -37,3 +37,20 @@ test('berechnet Fertigkeitswuerfe aus Einzelwuerfeln und dem serverseitigen Modi
   await assert.rejects(new ProvidedDiceAdapter({ diceResults: [6], natural: 6 })
     .rollSkill({ modifier: 4, rollMode: 'advantage' }));
 });
+
+test('validiert gemischte Technikschadenswuerfel, Sekundaerrettung und Folgeangriff getrennt', async () => {
+  const adapter = new ProvidedDiceAdapter({
+    attack: { diceResults: [14], naturalRoll: 14 },
+    damage: { diceResults: [8, 3] },
+    secondarySaves: [{ diceResults: [7], naturalRoll: 7 }],
+    followUpAttacks: [{
+      attack: { diceResults: [12], naturalRoll: 12 },
+      damage: { diceResults: [4] }
+    }]
+  });
+  assert.equal((await adapter.rollAttack({ modifier: 4 })).total, 18);
+  assert.equal((await adapter.rollDamage({ damageFormula: '1W10+1W4', bonus: 2 })).total, 13);
+  assert.equal((await adapter.rollSavingThrow({ modifier: 3 })).total, 10);
+  assert.equal((await adapter.rollAttack({ modifier: 4 })).total, 16);
+  assert.equal((await adapter.rollDamage({ damageFormula: '1W4', bonus: 2 })).total, 6);
+});

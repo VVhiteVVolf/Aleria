@@ -1,0 +1,1272 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--03d4RFlsrtZmobcmryW5",
+  "slug": "cederic-chwedonol",
+  "identity": {
+    "name": "Cederic Chwedonol",
+    "aliases": [],
+    "worldPersonId": "person--haus-chwedlonol--cederic-chwedlonol"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chwedlonol",
+      "label": "Haus Chwedonol"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chwedlonol",
+        "familyTitle": "Haus Chwedonol",
+        "personId": "cederic-chwedlonol",
+        "worldPersonId": "person--haus-chwedlonol--cederic-chwedlonol",
+        "houseId": "house-chwedlonol",
+        "houseName": "Haus Chwedonol",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=cederic-chwedlonol",
+        "fingerprint": "{\"name\":\"Cederic Chwedonol\",\"title\":\"\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chwedlonol\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chwedlonol/cederic-chwedlonol.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"morgaine-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--morgaine-chwedlonol\",\"name\":\"Morgaine Chwedonol\"},{\"personId\":\"marven-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--marven-balchder\",\"name\":\"Marven Balchder\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "03d4RFlsrtZmobcmryW5",
+      "documentIds": [
+        "03d4RFlsrtZmobcmryW5"
+      ],
+      "documents": [
+        {
+          "documentId": "03d4RFlsrtZmobcmryW5",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chwedlonol",
+        "personId": "cederic-chwedlonol",
+        "worldPersonId": "person--haus-chwedlonol--cederic-chwedlonol",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=cederic-chwedlonol"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "03d4RFlsrtZmobcmryW5"
+    ],
+    "contentHash": "e2be6e4d65c09d87b992554208b0ca238576d65476317c6ea080cf8290aa1766"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "03d4RFlsrtZmobcmryW5",
+        "name": "Cederic Chwedonol",
+        "archived": false,
+        "emotesOverride": true,
+        "playerOwner": "patrick",
+        "bio": "Cederic heuerte bei Idwal Draig, dem Sohn des Grafen, auf dessen Schiff an. Nicht als Befehlshaber, sondern als Mitglied der Besatzung – und bald als einer von Idwals Vertrauten. Er dient dort aus freiem Willen, findet Anerkennung durch Leistung statt durch Geburt und hat erstmals das Gefühl, Einfluss auf seinen eigenen Weg zu haben.",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/LJbNSRF.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/NrIpKxW.png"
+          },
+          {
+            "img": "https://i.imgur.com/jGsMWNs.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/qqqsuEC.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/2YrzNcw.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/DZsLqCT.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/76uMWgL.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/k2Sto5Q.png"
+          },
+          {
+            "img": "https://i.imgur.com/t83g10r.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2OXPb3w.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/8uoU8Jx.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2C5EBuK.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/yARD5nK.png"
+          },
+          {
+            "img": "https://i.imgur.com/mSILwVg.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/zy1czWl.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/6vhK6Nf.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Mugov51.png"
+          }
+        ],
+        "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+        "fraktion": "Haus Chwedonol , Celtigerns Wacht",
+        "inventory": {
+          "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+          "portraitFormat": "portrait",
+          "infoRows": [
+            {
+              "icon": "*",
+              "label": "Status",
+              "value": "Gesund"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "TP / Zustand",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "Geld",
+              "value": "0 Gold, 0 Silber, 0 Kupfer"
+            },
+            {
+              "icon": "*",
+              "label": "Tragkapazität",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Rolle",
+              "icon": "*"
+            },
+            {
+              "label": "Fraktion",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Aufenthalt",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Notiz",
+              "icon": "*"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "equipmentQuiz": {
+            "step": 0,
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "updatedAt": "",
+            "open": false
+          },
+          "status": "Gesund",
+          "items": [
+            {
+              "weight": "Noch festlegen",
+              "id": "item-mqwtxiv6-0-wyiv",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "weapon",
+              "imagePosition": "center",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "tags": "",
+              "image": "",
+              "imageFormat": "square",
+              "type": "Waffe"
+            },
+            {
+              "type": "Rüstung",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqwtxiv6-1-08l4",
+              "category": "armor",
+              "name": "Rüstung / Schutz",
+              "image": "",
+              "imageFormat": "square",
+              "quantity": "1",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "description": "Rüstung, Kleidung oder magischer Schutz."
+            },
+            {
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "weight": "Noch festlegen",
+              "image": "",
+              "quantity": "1",
+              "icon": "*",
+              "id": "item-mqwtxiv6-2-si9w",
+              "category": "equipment",
+              "infoRows": [],
+              "name": "Reiseausrüstung",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Ausrüstung",
+              "tags": ""
+            },
+            {
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "tags": "",
+              "category": "potions",
+              "id": "item-mqwtxiv6-3-stjb",
+              "quantity": "1",
+              "name": "Heil- oder Verbrauchsgut",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*",
+              "infoRows": [],
+              "image": ""
+            },
+            {
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "category": "documents",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "name": "Dokumente / Urkunden",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "type": "Dokument",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqwtxiv6-4-zl3a"
+            },
+            {
+              "infoRows": [],
+              "id": "item-mqwtxiv6-5-60kh",
+              "imagePosition": "center",
+              "tags": "",
+              "type": "Sonstiges",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "icon": "*",
+              "imageFormat": "square",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "category": "other"
+            }
+          ],
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "moneyNotice": "",
+          "companions": [
+            {
+              "image": "",
+              "description": "",
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "role": "Begleiter",
+              "imageFit": "cover",
+              "species": "Tier oder Begleiter",
+              "name": "Reittier / Gefährte",
+              "infoRows": [],
+              "status": "Gesund",
+              "id": "companion-mqwtxiv6-0-kybq"
+            },
+            {
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imagePosition": "top",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "description": "",
+              "species": "Tier / Person",
+              "status": "Noch festlegen",
+              "image": "",
+              "id": "companion-mqwtxiv6-1-tbio",
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "portraitFit": "cover",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "hitpoints": "TP / Zustand",
+          "name": "Name des Charakters",
+          "level": "Stufe",
+          "carryValue": "Noch festlegen",
+          "role": "Rolle",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitPosition": "top"
+        },
+        "aliases": [],
+        "title": "Ritter, Gwynthor",
+        "profileLink": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "03d4RFlsrtZmobcmryW5",
+    "name": "Cederic Chwedonol",
+    "archived": false,
+    "emotesOverride": true,
+    "playerOwner": "patrick",
+    "bio": "Cederic heuerte bei Idwal Draig, dem Sohn des Grafen, auf dessen Schiff an. Nicht als Befehlshaber, sondern als Mitglied der Besatzung – und bald als einer von Idwals Vertrauten. Er dient dort aus freiem Willen, findet Anerkennung durch Leistung statt durch Geburt und hat erstmals das Gefühl, Einfluss auf seinen eigenen Weg zu haben.",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/LJbNSRF.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/NrIpKxW.png"
+      },
+      {
+        "img": "https://i.imgur.com/jGsMWNs.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/qqqsuEC.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/2YrzNcw.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/DZsLqCT.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/76uMWgL.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/k2Sto5Q.png"
+      },
+      {
+        "img": "https://i.imgur.com/t83g10r.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2OXPb3w.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/8uoU8Jx.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2C5EBuK.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/yARD5nK.png"
+      },
+      {
+        "img": "https://i.imgur.com/mSILwVg.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/zy1czWl.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/6vhK6Nf.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Mugov51.png"
+      }
+    ],
+    "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+    "fraktion": "Haus Chwedonol , Celtigerns Wacht",
+    "inventory": {
+      "portrait": "https://64.media.tumblr.com/9cc0f7eac9baf5f9ed2adc1e3a2e0706/4dcf5f1d633b168c-ca/s400x600/a13b03917ade550ff88284c4cce07d57ba1f5d1d.pnj",
+      "portraitFormat": "portrait",
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "TP / Zustand",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Geld",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Rolle",
+          "icon": "*"
+        },
+        {
+          "label": "Fraktion",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Aufenthalt",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Notiz",
+          "icon": "*"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "updatedAt": "",
+        "open": false
+      },
+      "status": "Gesund",
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "id": "item-mqwtxiv6-0-wyiv",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "weapon",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "tags": "",
+          "image": "",
+          "imageFormat": "square",
+          "type": "Waffe"
+        },
+        {
+          "type": "Rüstung",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqwtxiv6-1-08l4",
+          "category": "armor",
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "imageFormat": "square",
+          "quantity": "1",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz."
+        },
+        {
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "image": "",
+          "quantity": "1",
+          "icon": "*",
+          "id": "item-mqwtxiv6-2-si9w",
+          "category": "equipment",
+          "infoRows": [],
+          "name": "Reiseausrüstung",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Ausrüstung",
+          "tags": ""
+        },
+        {
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "tags": "",
+          "category": "potions",
+          "id": "item-mqwtxiv6-3-stjb",
+          "quantity": "1",
+          "name": "Heil- oder Verbrauchsgut",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "infoRows": [],
+          "image": ""
+        },
+        {
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "category": "documents",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "type": "Dokument",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqwtxiv6-4-zl3a"
+        },
+        {
+          "infoRows": [],
+          "id": "item-mqwtxiv6-5-60kh",
+          "imagePosition": "center",
+          "tags": "",
+          "type": "Sonstiges",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "imageFormat": "square",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "category": "other"
+        }
+      ],
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "moneyNotice": "",
+      "companions": [
+        {
+          "image": "",
+          "description": "",
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape",
+          "role": "Begleiter",
+          "imageFit": "cover",
+          "species": "Tier oder Begleiter",
+          "name": "Reittier / Gefährte",
+          "infoRows": [],
+          "status": "Gesund",
+          "id": "companion-mqwtxiv6-0-kybq"
+        },
+        {
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "description": "",
+          "species": "Tier / Person",
+          "status": "Noch festlegen",
+          "image": "",
+          "id": "companion-mqwtxiv6-1-tbio",
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "portraitFit": "cover",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "hitpoints": "TP / Zustand",
+      "name": "Name des Charakters",
+      "level": "Stufe",
+      "carryValue": "Noch festlegen",
+      "role": "Rolle",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitPosition": "top"
+    },
+    "aliases": [],
+    "title": "Ritter, Gwynthor",
+    "profileLink": "",
+    "identity": {
+      "worldPersonId": "person--haus-chwedlonol--cederic-chwedlonol"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chwedlonol--cederic-chwedlonol",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "houseId": "house-chwedlonol",
+      "houseName": "Haus Chwedonol",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chwedlonol",
+          "personId": "cederic-chwedlonol",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=cederic-chwedlonol",
+          "fingerprint": "{\"name\":\"Cederic Chwedonol\",\"title\":\"\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chwedlonol\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chwedlonol/cederic-chwedlonol.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"morgaine-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--morgaine-chwedlonol\",\"name\":\"Morgaine Chwedonol\"},{\"personId\":\"marven-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--marven-balchder\",\"name\":\"Marven Balchder\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "morgaine-chwedlonol",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chwedlonol--morgaine-chwedlonol",
+            "name": "Morgaine Chwedonol"
+          },
+          {
+            "personId": "marven-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--marven-balchder",
+            "name": "Marven Balchder"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

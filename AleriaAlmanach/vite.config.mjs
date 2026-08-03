@@ -24,6 +24,11 @@ function preserveClassicAlmanachScripts() {
         resolve(buildAlmanachRoot, 'public/assets'),
         { recursive: true, force: true }
       );
+      await cp(
+        resolve(workspaceRoot, 'CharakterDatenbank'),
+        resolve(buildRoot, 'CharakterDatenbank'),
+        { recursive: true, force: true }
+      );
     }
   };
 }

@@ -2,6 +2,7 @@ let _characters  = [];
 let _charactersLoaded = false;
 let _charTabsLoaded = false;
 const CHARACTER_ARCHIVE_TAB = 'Archiv';
+let _localCharacterDatabaseRequest = null;
 
 let _charTabs = ['Alle'];
 let _charTabMap = {};
@@ -15,13 +16,46 @@ let _hiddenBuiltinCharacterIds = new Set();
 let _charOrganizeMode = false;
 let _collapsedCharGroups = new Set();
 
+function loadLocalCharacterDatabaseState() {
+  if (!_localCharacterDatabaseRequest) {
+    _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs')
+      .then(async repository => ({ repository, database: await repository.loadLocalCharacterDatabase() }))
+      .catch(error => {
+        console.info('Lokale Charakterdatenbank konnte nicht initialisiert werden.', error);
+        return {
+          repository: null,
+          database: { characters: [], charTabs: null }
+        };
+      });
+  }
+  return _localCharacterDatabaseRequest;
+}
+
 async function loadCharacters() {
+  const localStateRequest = loadLocalCharacterDatabaseState();
   if (!_fbReady) await waitForFirebaseReady();
+  const localState = await localStateRequest;
+  const localCharacters = localState.database?.characters || [];
   if (!window._fb?.loadCharacters) {
     if (!_charactersLoaded) {
-      _characters = [];
+      _characters = localCharacters.map(cloneCharacterRecord);
       _charactersLoaded = true;
-      showAppStatus('Charakterdaten konnten nicht online geladen werden. Die Seite bleibt im lokalen Lesemodus nutzbar.', 'error');
+      showAppStatus(
+        localCharacters.length
+          ? `Online-Verbindung fehlt. ${localCharacters.length} Figuren wurden aus der lokalen Charakterdatenbank geladen.`
+          : 'Charakterdaten konnten weder online noch lokal geladen werden.',
+        localCharacters.length ? 'info' : 'error'
+      );
+    }
+    if (!_charTabsLoaded && localState.database?.charTabs) {
+      const saved = localState.database.charTabs;
+      _charTabs = saved.tabs || ['Alle'];
+      _charTabMap = saved.map || {};
+      _charSubtabs = saved.subtabs || {};
+      _charSubtabMap = saved.subtabMap || {};
+      _hiddenBuiltinCharacterIds = new Set(Array.isArray(saved.hiddenBuiltins) ? saved.hiddenBuiltins : []);
+      _charTabsLoaded = true;
+      normalizeCharTabState();
     }
     renderCharSubtabs();
     renderCharGrid();
@@ -30,12 +64,16 @@ async function loadCharacters() {
   }
 
   if (!_charactersLoaded) {
-    _characters = await window._fb.loadCharacters();
+    const onlineCharacters = await window._fb.loadCharacters();
+    _characters = localState.repository?.mergeCharacterDatabases
+      ? localState.repository.mergeCharacterDatabases(onlineCharacters, localCharacters).map(cloneCharacterRecord)
+      : onlineCharacters.map(cloneCharacterRecord);
     _charactersLoaded = true;
   }
 
   if (!_charTabsLoaded) {
-    const saved = window._fb?.loadCharTabs ? await window._fb.loadCharTabs() : null;
+    const onlineSaved = window._fb?.loadCharTabs ? await window._fb.loadCharTabs() : null;
+    const saved = onlineSaved?.tabs ? onlineSaved : localState.database?.charTabs;
     if (saved && saved.tabs) {
       _charTabs = saved.tabs;
       _charTabMap = saved.map || {};

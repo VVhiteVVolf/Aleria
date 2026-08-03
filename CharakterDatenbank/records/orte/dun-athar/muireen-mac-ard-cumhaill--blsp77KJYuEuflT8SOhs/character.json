@@ -1,0 +1,1069 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--blsp77KJYuEuflT8SOhs",
+  "slug": "muireen-mac-ard-cumhaill",
+  "identity": {
+    "name": "Muireen Mac Ard Cumhaill",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "dun-athar",
+      "label": "Dun Athar",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "dun-athar",
+        "label": "Dun Athar",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Dun Athar"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "blsp77KJYuEuflT8SOhs",
+      "documentIds": [
+        "blsp77KJYuEuflT8SOhs"
+      ],
+      "documents": [
+        {
+          "documentId": "blsp77KJYuEuflT8SOhs",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "blsp77KJYuEuflT8SOhs"
+    ],
+    "contentHash": "3c9b4c975e7298e0fda02a91b45a4001ecdad321e370ae6dd183d43e6584f13f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "blsp77KJYuEuflT8SOhs",
+        "name": "Muireen Mac Ard Cumhaill",
+        "archived": false,
+        "inventory": {
+          "status": "Gesund",
+          "infoRows": [],
+          "items": [
+            {
+              "icon": "*",
+              "category": "weapon",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-0-w8ef",
+              "type": "Waffe",
+              "tags": "",
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "image": "",
+              "name": "Hauptwaffe",
+              "infoRows": []
+            },
+            {
+              "name": "Rüstung / Schutz",
+              "image": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "id": "item-mqu1vat1-1-exvo",
+              "type": "Rüstung",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "armor",
+              "imageFormat": "square",
+              "quantity": "1",
+              "imagePosition": "center",
+              "icon": "*"
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "image": "",
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "quantity": "1",
+              "category": "equipment",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Ausrüstung",
+              "weight": "Noch festlegen"
+            },
+            {
+              "id": "item-mqu1vat1-3-2lgm",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "image": "",
+              "infoRows": [],
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "quantity": "1",
+              "imagePosition": "center",
+              "category": "potions",
+              "imageFormat": "square",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "type": "Trinktur",
+              "weight": "Noch festlegen"
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "icon": "*",
+              "quantity": "1",
+              "category": "documents",
+              "weight": "Noch festlegen",
+              "image": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "infoRows": [],
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "imageFormat": "square"
+            },
+            {
+              "category": "other",
+              "tags": "",
+              "quantity": "1",
+              "type": "Sonstiges",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "name": "Persönlicher Gegenstand",
+              "image": "",
+              "id": "item-mqu1vat1-5-5kao",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen"
+            }
+          ],
+          "portrait": "https://i.imgur.com/jYOPgxY.jpeg",
+          "portraitFit": "cover",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor",
+              "label": "Rüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "role": "Prinzessin, Dun Athar",
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitFormat": "portrait",
+          "title": "Charakter-Inventar",
+          "name": "Muireen Mac Ard Cumhaill",
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "status": "",
+            "resultText": ""
+          },
+          "companions": [
+            {
+              "id": "companion-mqu1vat2-0-zz2n",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "imageFormat": "landscape",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "description": "",
+              "role": "Begleiter",
+              "imageFit": "cover",
+              "species": "Tier oder Begleiter",
+              "imagePosition": "top",
+              "name": "Reittier / Gefährte"
+            },
+            {
+              "species": "Tier / Person",
+              "imageFormat": "landscape",
+              "image": "",
+              "imagePosition": "top",
+              "infoRows": [],
+              "status": "Noch festlegen",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "name": "Treuer Begleiter",
+              "description": "",
+              "role": "Gefährte",
+              "id": "companion-mqu1vat2-1-5e7l"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "portraitPosition": "top",
+          "moneyNotice": "",
+          "hitpoints": "TP / Zustand",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "level": "Clan Mac Ard Cumhaill, Dun Athar",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        "playerOwner": "patrick",
+        "aliases": [],
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/IqSFwPV.png"
+          },
+          {
+            "img": "https://i.imgur.com/EKljhiu.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/7PEFker.png"
+          },
+          {
+            "img": "https://i.imgur.com/a72zTOK.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jBA7inm.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/POY3CnG.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/inoOgfA.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Zzc5pY6.png"
+          }
+        ],
+        "portrait": "https://i.imgur.com/jYOPgxY.jpeg",
+        "title": "Prinzessin, Dun Athar",
+        "emotesOverride": true,
+        "fraktion": "Clan Mac Ard Cumhaill, Dun Athar",
+        "bio": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "blsp77KJYuEuflT8SOhs",
+    "name": "Muireen Mac Ard Cumhaill",
+    "archived": false,
+    "inventory": {
+      "status": "Gesund",
+      "infoRows": [],
+      "items": [
+        {
+          "icon": "*",
+          "category": "weapon",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-0-w8ef",
+          "type": "Waffe",
+          "tags": "",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "image": "",
+          "name": "Hauptwaffe",
+          "infoRows": []
+        },
+        {
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "id": "item-mqu1vat1-1-exvo",
+          "type": "Rüstung",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "armor",
+          "imageFormat": "square",
+          "quantity": "1",
+          "imagePosition": "center",
+          "icon": "*"
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "image": "",
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "quantity": "1",
+          "category": "equipment",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "weight": "Noch festlegen"
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "infoRows": [],
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "potions",
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut",
+          "tags": "",
+          "type": "Trinktur",
+          "weight": "Noch festlegen"
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "icon": "*",
+          "quantity": "1",
+          "category": "documents",
+          "weight": "Noch festlegen",
+          "image": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "infoRows": [],
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Dokument",
+          "name": "Dokumente / Urkunden",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "imageFormat": "square"
+        },
+        {
+          "category": "other",
+          "tags": "",
+          "quantity": "1",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "id": "item-mqu1vat1-5-5kao",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen"
+        }
+      ],
+      "portrait": "https://i.imgur.com/jYOPgxY.jpeg",
+      "portraitFit": "cover",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "role": "Prinzessin, Dun Athar",
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "name": "Muireen Mac Ard Cumhaill",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "status": "",
+        "resultText": ""
+      },
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "imageFormat": "landscape",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "description": "",
+          "role": "Begleiter",
+          "imageFit": "cover",
+          "species": "Tier oder Begleiter",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte"
+        },
+        {
+          "species": "Tier / Person",
+          "imageFormat": "landscape",
+          "image": "",
+          "imagePosition": "top",
+          "infoRows": [],
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "name": "Treuer Begleiter",
+          "description": "",
+          "role": "Gefährte",
+          "id": "companion-mqu1vat2-1-5e7l"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "level": "Clan Mac Ard Cumhaill, Dun Athar",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer"
+    },
+    "playerOwner": "patrick",
+    "aliases": [],
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/IqSFwPV.png"
+      },
+      {
+        "img": "https://i.imgur.com/EKljhiu.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/7PEFker.png"
+      },
+      {
+        "img": "https://i.imgur.com/a72zTOK.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jBA7inm.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/POY3CnG.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/inoOgfA.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Zzc5pY6.png"
+      }
+    ],
+    "portrait": "https://i.imgur.com/jYOPgxY.jpeg",
+    "title": "Prinzessin, Dun Athar",
+    "emotesOverride": true,
+    "fraktion": "Clan Mac Ard Cumhaill, Dun Athar",
+    "bio": "",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

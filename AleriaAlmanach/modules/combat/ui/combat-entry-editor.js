@@ -1,11 +1,11 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260803-spell-grades-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260803-gawain-level4-v1';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260803-economy-audit-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
   getSpellLevelLabel,
   isSpellSlotResource
-} from '../combat-spell-slots.js?v=20260803-economy-audit-v1';
+} from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 
 const state = { kind: '', item: null, resources: [], weapons: [], onSave: null };
 const COMMENT_ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
@@ -111,6 +111,8 @@ function renderTriggerRules(item) {
           <label><span>H\u00e4ufigkeit</span><select data-entry-field="triggerRules.${index}.frequency"><option value="always"${selected(rule.frequency, 'always')}>Jedes Mal</option><option value="comment"${selected(rule.frequency, 'comment')}>Einmal je Kommentar</option><option value="scene"${selected(rule.frequency, 'scene')}>Einmal je Szene</option><option value="day"${selected(rule.frequency, 'day')}>Einmal je Tag</option></select></label>
           <label><span>Radius in Metern</span><input type="number" min="0" max="9999" step="0.5" data-entry-field="triggerRules.${index}.radiusMeters" value="${escapeHtml(rule.radiusMeters ?? '')}" placeholder="Leer = unbegrenzt"></label>
           <label><span>Priorit\u00e4t</span><input type="number" min="-99" max="99" data-entry-field="triggerRules.${index}.priority" value="${escapeHtml(rule.priority ?? 0)}"></label>
+          <label class="wide"><span>Ben\u00f6tigte Ziel-Tags</span><input data-entry-field="triggerRules.${index}.requiredTargetTags" value="${escapeHtml((rule.requiredTargetTags || []).join(', '))}" placeholder="z. B. stinkend, untot"></label>
+          <label class="wide"><span>Nur diese Fertigkeiten</span><input data-entry-field="triggerRules.${index}.skillIds" value="${escapeHtml((rule.skillIds || []).join(', '))}" placeholder="z. B. persuasion, survival"></label>
           <fieldset class="wide combat-entry-editor-weapons"><legend>G\u00fcltige Handlungen</legend>${RULE_ACTION_KINDS.map(([kind, label]) => `<label><input type="checkbox" data-entry-rule-kind="${kind}" data-entry-rule-index="${index}"${checked(kinds.includes(kind))}> ${label}</label>`).join('')}<small>Ohne Auswahl gilt die Regel f\u00fcr alle Handlungsarten.</small></fieldset>
           <label class="wide"><span>Regelbeschreibung</span><textarea rows="2" data-entry-field="triggerRules.${index}.description">${escapeHtml(rule.description)}</textarea></label>
         </div>
@@ -170,6 +172,8 @@ function renderQuirk(item) {
 }
 
 function renderAbility(item) {
+  const inventoryTrigger = item.inventoryUseTrigger || {};
+  const restoredResource = inventoryTrigger.restoreResources?.[0] || {};
   return `<div class="combat-entry-editor-grid">
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Darstellung</span><select data-entry-field="delivery"><option value="ability"${selected(item.delivery, 'ability')}>Fähigkeit</option><option value="weapon"${selected(item.delivery, 'weapon')}>Waffentechnik</option><option value="spell"${selected(item.delivery, 'spell')}>Zauberformel</option><option value="prayer"${selected(item.delivery, 'prayer')}>Gebet / heiliger Schwur</option><option value="song"${selected(item.delivery, 'song')}>Gesang</option></select></label>
@@ -185,14 +189,30 @@ function renderAbility(item) {
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
+  </div>
+  <fieldset class="combat-entry-editor-mechanics"><legend>Ausl\u00f6ser durch Inventarnutzung</legend>
+    <p>Kann beim Benutzen eines passenden Gegenstands eine Ressource regenerieren. Nutzung und Tagesgrenze werden serverseitig gepr\u00fcft.</p>
+    <div class="combat-entry-editor-grid">
+      <label class="check"><input type="checkbox" data-entry-field="inventoryUseTrigger.enabled"${checked(inventoryTrigger.enabled)}> Aktiv</label>
+      <label class="wide"><span>Passende Gegenstands-Tags</span><input data-entry-field="inventoryUseTrigger.itemTags" value="${escapeHtml((inventoryTrigger.itemTags || []).join(', '))}" placeholder="z. B. Duft, Parf\u00fcm"></label>
+      <label><span>Ressource</span><select data-entry-field="inventoryUseTrigger.restoreResources.0.resourceId"><option value="">Ressource w\u00e4hlen</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(restoredResource.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
+      <label><span>Punkte regenerieren</span><input type="number" min="1" max="999" data-entry-field="inventoryUseTrigger.restoreResources.0.amount" value="${escapeHtml(restoredResource.amount ?? 1)}"></label>
+      <label class="check"><input type="checkbox" data-entry-field="inventoryUseTrigger.requireActualRecovery"${checked(inventoryTrigger.requireActualRecovery !== false)}> Nutzung nur bei tats\u00e4chlicher Regeneration verbrauchen</label>
+    </div>
+  </fieldset>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderTechnique(item) {
   const weaponTypes = Array.isArray(item.weaponTypes) ? item.weaponTypes : [];
+  const compatibleWeaponIds = Array.isArray(item.compatibleWeaponIds) ? item.compatibleWeaponIds : [];
+  const secondarySave = item.secondarySave || {};
+  const failureCondition = secondarySave.failureCondition || {};
+  const followUp = item.followUpAttack || {};
   return `<div class="combat-entry-editor-grid">
     <label><span>Kategorie</span><select data-entry-field="category"><option value="technique"${selected(item.category, 'technique')}>Technik</option><option value="form"${selected(item.category, 'form')}>Form / Haltung</option><option value="reaction"${selected(item.category, 'reaction')}>Reaktion</option><option value="bonus"${selected(item.category, 'bonus')}>Bonusaktion</option><option value="special"${selected(item.category, 'special')}>Besondere Aktion</option></select></label>
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
+    <label><span>Ausbildungsform</span><input data-entry-field="trainingForm" value="${escapeHtml(item.trainingForm)}" placeholder="z. B. Drachentanz"></label>
+    <label><span>Freigabe ab Stufe</span><input type="number" min="1" max="30" data-entry-field="minimumLevel" value="${escapeHtml(item.minimumLevel ?? 1)}"></label>
     <label><span>Schadenswurf</span><input data-entry-field="damageFormula" value="${escapeHtml(String(item.damageFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="Leer = aktive Waffe"></label>
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}" placeholder="Leer = aktive Waffe"></label>
     <label><span>Angriffsbonus</span><input type="number" min="-99" max="99" data-entry-field="attackBonus" value="${escapeHtml(item.attackBonus ?? 0)}"></label>
@@ -201,13 +221,34 @@ function renderTechnique(item) {
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Ziel</span><input data-entry-field="target" value="${escapeHtml(item.target)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
-    <fieldset class="wide combat-entry-editor-weapons"><legend>Erlaubte Waffenarten</legend>${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<label><input type="checkbox" data-entry-weapon-type="${option.id}"${checked(weaponTypes.includes(option.id))}> ${option.label}</label>`).join('')}<small>Ohne Auswahl gilt die Technik für jede aktive Waffe.</small></fieldset>
+    <fieldset class="wide combat-entry-editor-weapons"><legend>Erlaubte Waffenarten</legend>${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<label><input type="checkbox" data-entry-weapon-type="${option.id}"${checked(weaponTypes.includes(option.id))}> ${option.label}</label>`).join('')}<small>Ohne Auswahl gilt die Technik für jede Waffenart.</small></fieldset>
+    ${state.weapons.length ? `<fieldset class="wide combat-entry-editor-weapons"><legend>Konkrete Waffenbindung</legend>${state.weapons.map(weapon => `<label><input type="checkbox" data-entry-weapon-id="${escapeHtml(weapon.id)}"${checked(compatibleWeaponIds.includes(weapon.id))}> ${escapeHtml(weapon.name)}</label>`).join('')}<small>Eine Auswahl beschränkt die Technik zusätzlich auf genau diese Gegenstände.</small></fieldset>` : ''}
     <label class="wide"><span>Beschreibung</span><textarea data-entry-field="description" rows="4">${escapeHtml(item.description)}</textarea></label>
     <label class="wide"><span>Mechanischer / erzählerischer Effekt</span><textarea data-entry-field="effect" rows="4">${escapeHtml(item.effect)}</textarea></label>
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
+  </div>
+  <fieldset class="combat-entry-editor-mechanics"><legend>Rettungswurf nach einem Treffer</legend><div class="combat-entry-editor-grid">
+    <label class="check"><input type="checkbox" data-entry-field="secondarySave.enabled"${checked(secondarySave.enabled)}> Aktiv</label>
+    <label><span>Rettungsattribut</span><select data-entry-field="secondarySave.attributeKey">${renderAttributeOptions(secondarySave.attributeKey || 'constitution')}</select></label>
+    <label><span>Grund-SG</span><input type="number" min="0" max="99" data-entry-field="secondarySave.dcBase" value="${escapeHtml(secondarySave.dcBase ?? 8)}"></label>
+    <label><span>SG-Attribut</span><select data-entry-field="secondarySave.dcAttributeKey">${renderAttributeOptions(secondarySave.dcAttributeKey || 'strength')}</select></label>
+    <label class="check"><input type="checkbox" data-entry-field="secondarySave.addProficiency"${checked(secondarySave.addProficiency !== false)}> Kompetenzbonus zum SG</label>
+    <label><span>Zustandsname bei Fehlschlag</span><input data-entry-field="secondarySave.failureCondition.name" value="${escapeHtml(failureCondition.name)}"></label>
+    <label><span>Dauer</span><input data-entry-field="secondarySave.failureCondition.duration" value="${escapeHtml(failureCondition.duration)}"></label>
+    <label><span>Angriffsmodifikator</span><input type="number" min="-99" max="99" data-entry-field="secondarySave.failureCondition.mechanics.attack" value="${escapeHtml(failureCondition.mechanics?.attack ?? 0)}"></label>
+    <label class="wide"><span>Zustandsbeschreibung</span><textarea data-entry-field="secondarySave.failureCondition.description" rows="3">${escapeHtml(failureCondition.description)}</textarea></label>
+  </div></fieldset>
+  <fieldset class="combat-entry-editor-mechanics"><legend>Unmittelbarer Folgeangriff</legend><div class="combat-entry-editor-grid">
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.enabled"${checked(followUp.enabled)}> Nach Haupttreffer würfeln</label>
+    <label><span>Schadenswurf</span><input data-entry-field="followUpAttack.damageFormula" value="${escapeHtml(String(followUp.damageFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W4"></label>
+    <label><span>Schadensart</span><input data-entry-field="followUpAttack.damageType" value="${escapeHtml(followUp.damageType)}"></label>
+    <label><span>Angriffsbonus</span><input type="number" min="-99" max="99" data-entry-field="followUpAttack.attackBonus" value="${escapeHtml(followUp.attackBonus ?? 0)}"></label>
+    <label><span>Schadensbonus</span><input type="number" min="-99" max="99" data-entry-field="followUpAttack.damageBonus" value="${escapeHtml(followUp.damageBonus ?? 0)}"></label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.sameTarget"${checked(followUp.sameTarget !== false)}> Gleiches Ziel</label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.triggerFurtherEffects"${checked(followUp.triggerFurtherEffects)}> Darf weitere Fähigkeiten auslösen</label>
+  </div></fieldset>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderWeapon(item) {
@@ -357,6 +398,14 @@ document.addEventListener('change', event => {
     state.item.weaponTypes = [...values];
     return;
   }
+  const weaponId = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-weapon-id]');
+  if (weaponId && state.item) {
+    const values = new Set(Array.isArray(state.item.compatibleWeaponIds) ? state.item.compatibleWeaponIds : []);
+    if (weaponId.checked) values.add(weaponId.dataset.entryWeaponId);
+    else values.delete(weaponId.dataset.entryWeaponId);
+    state.item.compatibleWeaponIds = [...values];
+    return;
+  }
   const field = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-field], #combat-entry-editor-overlay [data-entry-cost-field]');
   if (!field || !state.item) return;
   if (syncSpellLevel(field)) return;
@@ -383,6 +432,7 @@ document.addEventListener('click', event => {
       id: `combat-rule-${Date.now().toString(36)}`,
       name: 'Neue Regel', enabled: true, phase: 'post-roll', recipient: 'actor', sourceRelation: 'self',
       activation: 'passive', frequency: 'always', condition: 'always', actionKinds: [],
+      skillIds: [], requiredTargetTags: [],
       actionScope: '', consumeReaction: true, costs: [],
       radiusMeters: null, priority: 0, description: '',
       effects: { attackModifier: 0, defenseModifier: 0, savingThrowModifier: 0, spellSaveDcModifier: 0, skillModifier: 0, damageModifier: 0, damageReduction: 0, rollMode: 'normal', outcome: 'none' }

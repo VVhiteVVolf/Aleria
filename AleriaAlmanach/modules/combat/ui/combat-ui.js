@@ -4,7 +4,7 @@ import {
   getSpellLevelLabel,
   getSpellSlotLevel,
   isSpellSlotResource as isConfiguredSpellSlotResource
-} from '../combat-spell-slots.js?v=20260803-economy-audit-v1';
+} from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -357,6 +357,9 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   composer.dataset.combatKind = magic ? 'magic' : 'martial';
   const paymentMode = actor.cheats?.enabled ? 'cheat' : (['aura', 'cheat'].includes(segment?.combatPaymentMode) ? segment.combatPaymentMode : 'standard');
   const rollMode = ['advantage', 'disadvantage'].includes(segment?.combatRollMode) ? segment.combatRollMode : 'normal';
+  const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
+    ? 'two-handed'
+    : 'one-handed';
   const targetOptions = targets.map(target => {
     const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
     return `<option value="${escapeHtml(target.characterId)}"${target.characterId === selectedTargetId ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(optionLabel(target))}</option>`;
@@ -407,6 +410,12 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
           <option value="disadvantage"${rollMode === 'disadvantage' ? ' selected' : ''}>Nachteil</option>
         </select>
       </label>
+      ${!magic && actor.supportsVersatileGrip ? `<label>Führung
+        <select data-combat-input="weaponGrip">
+          <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>
+          <option value="two-handed"${weaponGrip === 'two-handed' ? ' selected' : ''}>Zweihändig · ${escapeHtml(actor.selectedAction?.weapon?.versatileDamageFormula || '')}</option>
+        </select>
+      </label>` : ''}
     </div>
     ${magic ? renderMagicValueStrip(actor) : renderCombatValueStrip(actor)}
     ${paymentPanel}
@@ -543,6 +552,15 @@ export function renderCombatEvaluation(source = {}) {
     .flatMap(snapshot => (snapshot.changes || []).map(change => (
       `<span>${escapeHtml(snapshot.sourceActorName || 'Reaktion')} \u00b7 ${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
     ))).join('');
+  const secondarySaves = (Array.isArray(resolution.secondarySaves) ? resolution.secondarySaves : []).map(save => (
+    `<span><b>${escapeHtml(String(save.attributeKey || 'Rettung').toUpperCase())}-Rettung ${escapeHtml(save.total)}</b> gegen SG ${escapeHtml(save.dc)} · ${save.succeeded ? 'gelungen' : 'misslungen'}</span>`
+  )).join('');
+  const followUpAttacks = (Array.isArray(resolution.followUpAttacks) ? resolution.followUpAttacks : []).map(followUp => (
+    `<span><b>Folgeangriff ${escapeHtml(followUp.attack?.total ?? '—')}</b> gegen ${escapeHtml(followUp.attack?.targetDefense ?? '—')} · ${followUp.attack?.hit ? `Treffer${followUp.damage ? `, ${escapeHtml(followUp.damage.total)} Schaden` : ''}` : 'verfehlt'}</span>`
+  )).join('');
+  const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
+    ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
+    : '';
   const savingThrowMode = attack.resolutionMode === 'saving-throw';
   const rollLabel = savingThrowMode ? 'Rettungswurf' : (attack.resolutionMode === 'spell-attack' ? 'Zauberangriff' : 'Angriff');
   const defenseLabel = savingThrowMode ? 'Zauber-SG' : 'Verteidigung';
@@ -562,6 +580,9 @@ export function renderCombatEvaluation(source = {}) {
         ${temporaryHitPoints}
         ${resourceChanges}
         ${ruleResourceChanges}
+        ${secondarySaves}
+        ${followUpAttacks}
+        ${appliedCondition}
         ${ruleLedger}
       </div>
       <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>

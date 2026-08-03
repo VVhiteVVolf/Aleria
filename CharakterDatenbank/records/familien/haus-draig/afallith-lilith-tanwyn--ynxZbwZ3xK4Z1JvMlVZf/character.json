@@ -1,0 +1,1155 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--ynxZbwZ3xK4Z1JvMlVZf",
+  "slug": "afallith-lilith-tanwyn",
+  "identity": {
+    "name": "Afallith \"Lilith\" Tanwyn",
+    "aliases": [
+      "Lilith"
+    ],
+    "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "afallith-lilith-tanwyn",
+        "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn",
+        "houseId": "house-tanwyn",
+        "houseName": "Haus Tanwyn",
+        "familyRole": "affair",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=afallith-lilith-tanwyn",
+        "fingerprint": "{\"name\":\"Afallith „Lilith“ Tanwyn\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-tanwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/afallith-lilith-tanwyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"myrddin-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myrddin-draig\",\"name\":\"Myrddin Draig\"}],\"children\":[{\"personId\":\"myriad-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myriad-draig\",\"name\":\"Myriad Draig\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "ynxZbwZ3xK4Z1JvMlVZf",
+      "documentIds": [
+        "ynxZbwZ3xK4Z1JvMlVZf"
+      ],
+      "documents": [
+        {
+          "documentId": "ynxZbwZ3xK4Z1JvMlVZf",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "afallith-lilith-tanwyn",
+        "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=afallith-lilith-tanwyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "ynxZbwZ3xK4Z1JvMlVZf"
+    ],
+    "contentHash": "3812d62bb4296364bf7e504cf182fe62279f6737ea13d8eb4b1f812015e022c2"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "ynxZbwZ3xK4Z1JvMlVZf",
+        "archived": false,
+        "bio": "Afallith „Lilith“ Tanwyn —  gilt der Öffentlichkeit als diskrete Archivarin und gelegentliche Mätresse des Erzmagiers Myrddin – eine Frau aus altem cenyrischem Magierblut, selten gesehen, kaum greifbar, stets im Schatten seines Turms.\n\nWas niemand ahnt: Hinter der kultivierten Fassade verbirgt sich ein gefallenes infernales Wesen, das sich bewusst gegen seinen Ursprung gestellt und sein Schicksal untrennbar an Myrddin gebunden hat.",
+        "name": "Afallith \"Lilith\" Tanwyn",
+        "aliases": [
+          "Lilith"
+        ],
+        "emotesOverride": true,
+        "playerOwner": "erdi",
+        "portrait": "https://i.imgur.com/CadkD3o.png",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/pJokGxh.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/YbDhhVt.png"
+          },
+          {
+            "img": "https://i.imgur.com/c2suzmm.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/lAKJEEZ.png"
+          },
+          {
+            "img": "https://i.imgur.com/vrNOwjZ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/lLgEUo2.png"
+          },
+          {
+            "img": "https://i.imgur.com/2ZZQmu9.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/o8WA9up.png"
+          },
+          {
+            "img": "https://i.imgur.com/kxATzdN.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/akn4VOa.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/DO01Xtq.png"
+          }
+        ],
+        "inventory": {
+          "portrait": "https://i.imgur.com/CadkD3o.png",
+          "hitpoints": "TP / Zustand",
+          "carryValue": "Noch festlegen",
+          "infoRows": [],
+          "status": "Gesund",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFormat": "portrait",
+          "companions": [
+            {
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "landscape",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "status": "Gesund",
+              "image": "",
+              "imagePosition": "top",
+              "description": "",
+              "role": "Begleiter",
+              "infoRows": [],
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "imageFit": "cover",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "species": "Tier / Person",
+              "infoRows": [],
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "status": "Noch festlegen"
+            }
+          ],
+          "level": "Haus Tanwyn, Celtigerns Wacht",
+          "name": "Afallith \"Lilith\" Tanwyn",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "role": "Archivarin des Hofzauberers, Gwynthor",
+          "moneyNotice": "",
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "items": [
+            {
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-0-w8ef",
+              "category": "weapon",
+              "icon": "*",
+              "name": "Hauptwaffe",
+              "image": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imagePosition": "center",
+              "type": "Waffe",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": ""
+            },
+            {
+              "infoRows": [],
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "type": "Rüstung",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "name": "Rüstung / Schutz",
+              "id": "item-mqu1vat1-1-exvo",
+              "imagePosition": "center",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "icon": "*",
+              "quantity": "1",
+              "image": "",
+              "category": "armor"
+            },
+            {
+              "imageFormat": "square",
+              "icon": "*",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-2-0fx2",
+              "infoRows": [],
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "type": "Ausrüstung",
+              "imagePosition": "center",
+              "quantity": "1",
+              "tags": "",
+              "image": "",
+              "name": "Reiseausrüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen"
+            },
+            {
+              "category": "potions",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Trinktur",
+              "quantity": "1",
+              "tags": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "icon": "*",
+              "image": "",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imageFormat": "square",
+              "infoRows": []
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "tags": "",
+              "type": "Dokument",
+              "quantity": "1",
+              "name": "Dokumente / Urkunden",
+              "category": "documents",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "image": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "weight": "Noch festlegen",
+              "image": "",
+              "category": "other",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "id": "item-mqu1vat1-5-5kao",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "tags": "",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "infoRows": []
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "equipmentQuiz": {
+            "resultText": "",
+            "step": 0,
+            "status": "",
+            "updatedAt": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        },
+        "fraktion": "Haus Tanwyn, Celtigerns Wacht",
+        "title": "Archivarin des Hofzauberers, Gwynthor"
+      }
+    ]
+  },
+  "character": {
+    "id": "ynxZbwZ3xK4Z1JvMlVZf",
+    "archived": false,
+    "bio": "Afallith „Lilith“ Tanwyn —  gilt der Öffentlichkeit als diskrete Archivarin und gelegentliche Mätresse des Erzmagiers Myrddin – eine Frau aus altem cenyrischem Magierblut, selten gesehen, kaum greifbar, stets im Schatten seines Turms.\n\nWas niemand ahnt: Hinter der kultivierten Fassade verbirgt sich ein gefallenes infernales Wesen, das sich bewusst gegen seinen Ursprung gestellt und sein Schicksal untrennbar an Myrddin gebunden hat.",
+    "name": "Afallith \"Lilith\" Tanwyn",
+    "aliases": [
+      "Lilith"
+    ],
+    "emotesOverride": true,
+    "playerOwner": "erdi",
+    "portrait": "https://i.imgur.com/CadkD3o.png",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/pJokGxh.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/YbDhhVt.png"
+      },
+      {
+        "img": "https://i.imgur.com/c2suzmm.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/lAKJEEZ.png"
+      },
+      {
+        "img": "https://i.imgur.com/vrNOwjZ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/lLgEUo2.png"
+      },
+      {
+        "img": "https://i.imgur.com/2ZZQmu9.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/o8WA9up.png"
+      },
+      {
+        "img": "https://i.imgur.com/kxATzdN.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/akn4VOa.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/DO01Xtq.png"
+      }
+    ],
+    "inventory": {
+      "portrait": "https://i.imgur.com/CadkD3o.png",
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "infoRows": [],
+      "status": "Gesund",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFormat": "portrait",
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFormat": "landscape",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Gesund",
+          "image": "",
+          "imagePosition": "top",
+          "description": "",
+          "role": "Begleiter",
+          "infoRows": [],
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "statusColor": "#5c7f20"
+        },
+        {
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "imageFit": "cover",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "infoRows": [],
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "status": "Noch festlegen"
+        }
+      ],
+      "level": "Haus Tanwyn, Celtigerns Wacht",
+      "name": "Afallith \"Lilith\" Tanwyn",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "role": "Archivarin des Hofzauberers, Gwynthor",
+      "moneyNotice": "",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon",
+          "icon": "*",
+          "name": "Hauptwaffe",
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": ""
+        },
+        {
+          "infoRows": [],
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "type": "Rüstung",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "name": "Rüstung / Schutz",
+          "id": "item-mqu1vat1-1-exvo",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "icon": "*",
+          "quantity": "1",
+          "image": "",
+          "category": "armor"
+        },
+        {
+          "imageFormat": "square",
+          "icon": "*",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-2-0fx2",
+          "infoRows": [],
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "type": "Ausrüstung",
+          "imagePosition": "center",
+          "quantity": "1",
+          "tags": "",
+          "image": "",
+          "name": "Reiseausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen"
+        },
+        {
+          "category": "potions",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Trinktur",
+          "quantity": "1",
+          "tags": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "image": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFormat": "square",
+          "infoRows": []
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "tags": "",
+          "type": "Dokument",
+          "quantity": "1",
+          "name": "Dokumente / Urkunden",
+          "category": "documents",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "weight": "Noch festlegen",
+          "image": "",
+          "category": "other",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "id": "item-mqu1vat1-5-5kao",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "tags": "",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "infoRows": []
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "equipmentQuiz": {
+        "resultText": "",
+        "step": 0,
+        "status": "",
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+    "fraktion": "Haus Tanwyn, Celtigerns Wacht",
+    "title": "Archivarin des Hofzauberers, Gwynthor",
+    "identity": {
+      "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tanwyn--afallith-lilith-tanwyn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "????",
+      "death": "",
+      "houseId": "house-tanwyn",
+      "houseName": "Haus Tanwyn",
+      "familyRole": "affair",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "afallith-lilith-tanwyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=afallith-lilith-tanwyn",
+          "fingerprint": "{\"name\":\"Afallith „Lilith“ Tanwyn\",\"title\":\"\",\"birth\":\"????\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-tanwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/afallith-lilith-tanwyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"myrddin-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myrddin-draig\",\"name\":\"Myrddin Draig\"}],\"children\":[{\"personId\":\"myriad-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--myriad-draig\",\"name\":\"Myriad Draig\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "myrddin-draig",
+            "type": "affair",
+            "status": "secret",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--myrddin-draig",
+            "name": "Myrddin Draig"
+          }
+        ],
+        "children": [
+          {
+            "personId": "myriad-draig",
+            "type": "biological",
+            "legitimacy": "illegitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--myriad-draig",
+            "name": "Myriad Draig"
+          }
+        ]
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

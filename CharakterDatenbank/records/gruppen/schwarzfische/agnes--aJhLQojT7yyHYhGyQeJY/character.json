@@ -1,0 +1,1013 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--aJhLQojT7yyHYhGyQeJY",
+  "slug": "agnes",
+  "identity": {
+    "name": "Agnes",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarzfische",
+      "label": "Schwarzfische",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarzfische"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "aJhLQojT7yyHYhGyQeJY",
+      "documentIds": [
+        "aJhLQojT7yyHYhGyQeJY"
+      ],
+      "documents": [
+        {
+          "documentId": "aJhLQojT7yyHYhGyQeJY",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "aJhLQojT7yyHYhGyQeJY"
+    ],
+    "contentHash": "3c87284ae52a613b7c6874a7c3cde9668c1293f0c9785ce5cf0f9d62aaaaca37"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "aJhLQojT7yyHYhGyQeJY",
+        "fraktion": "",
+        "portrait": "https://i.imgur.com/UOGTDJB.png",
+        "name": "Agnes",
+        "title": "Kapitaenin der Schwarzen Flut, Schwarzfische",
+        "playerOwner": "patrick",
+        "aliases": [],
+        "bio": "",
+        "inventory": {
+          "portraitPosition": "top",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "status": "Gesund",
+          "level": "Stufe",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "moneyNotice": "",
+          "infoRows": [],
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "portrait": "https://i.imgur.com/UOGTDJB.png",
+          "portraitFormat": "portrait",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "status": "",
+            "step": 0,
+            "open": false,
+            "updatedAt": ""
+          },
+          "title": "Charakter-Inventar",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitFit": "cover",
+          "carryValue": "Noch festlegen",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "role": "Begleiter",
+              "description": "",
+              "status": "Gesund",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "infoRows": [],
+              "image": "",
+              "imageFit": "cover",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape"
+            },
+            {
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "status": "Noch festlegen",
+              "imageFit": "cover",
+              "infoRows": [],
+              "role": "Gefährte",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "statusColor": "#5c7f20",
+              "species": "Tier / Person",
+              "imageFormat": "landscape"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "role": "Kapitaenin der Schwarzen Flut, Schwarzfische",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "name": "Agnes",
+          "items": [
+            {
+              "imagePosition": "center",
+              "name": "Hauptwaffe",
+              "imageFormat": "square",
+              "image": "",
+              "category": "weapon",
+              "type": "Waffe",
+              "quantity": "1",
+              "tags": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-0-w8ef",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "name": "Rüstung / Schutz",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "tags": "",
+              "imageFormat": "square",
+              "type": "Rüstung",
+              "quantity": "1",
+              "category": "armor",
+              "id": "item-mqu1vat1-1-exvo",
+              "icon": "*",
+              "description": "Rüstung, Kleidung oder magischer Schutz."
+            },
+            {
+              "imagePosition": "center",
+              "category": "equipment",
+              "type": "Ausrüstung",
+              "image": "",
+              "quantity": "1",
+              "tags": "",
+              "name": "Reiseausrüstung",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-2-0fx2",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "infoRows": []
+            },
+            {
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "id": "item-mqu1vat1-3-2lgm",
+              "tags": "",
+              "imageFormat": "square",
+              "quantity": "1",
+              "image": "",
+              "category": "potions",
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+            },
+            {
+              "infoRows": [],
+              "name": "Dokumente / Urkunden",
+              "image": "",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Dokument",
+              "id": "item-mqu1vat1-4-ajrj",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "category": "documents",
+              "icon": "*"
+            },
+            {
+              "imagePosition": "center",
+              "infoRows": [],
+              "imageFit": "contain",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-5-5kao",
+              "icon": "*",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "quantity": "1",
+              "imageFormat": "square",
+              "category": "other",
+              "type": "Sonstiges",
+              "tags": ""
+            }
+          ]
+        },
+        "archived": false,
+        "emotesOverride": true,
+        "emotes": [
+          {
+            "label": "erklarend",
+            "img": "https://i.imgur.com/AnOaghs.png"
+          }
+        ]
+      }
+    ]
+  },
+  "character": {
+    "id": "aJhLQojT7yyHYhGyQeJY",
+    "fraktion": "",
+    "portrait": "https://i.imgur.com/UOGTDJB.png",
+    "name": "Agnes",
+    "title": "Kapitaenin der Schwarzen Flut, Schwarzfische",
+    "playerOwner": "patrick",
+    "aliases": [],
+    "bio": "",
+    "inventory": {
+      "portraitPosition": "top",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "status": "Gesund",
+      "level": "Stufe",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyNotice": "",
+      "infoRows": [],
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "portrait": "https://i.imgur.com/UOGTDJB.png",
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "status": "",
+        "step": 0,
+        "open": false,
+        "updatedAt": ""
+      },
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFit": "cover",
+      "carryValue": "Noch festlegen",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "role": "Begleiter",
+          "description": "",
+          "status": "Gesund",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "infoRows": [],
+          "image": "",
+          "imageFit": "cover",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape"
+        },
+        {
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen",
+          "imageFit": "cover",
+          "infoRows": [],
+          "role": "Gefährte",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "statusColor": "#5c7f20",
+          "species": "Tier / Person",
+          "imageFormat": "landscape"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "role": "Kapitaenin der Schwarzen Flut, Schwarzfische",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "name": "Agnes",
+      "items": [
+        {
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "imageFormat": "square",
+          "image": "",
+          "category": "weapon",
+          "type": "Waffe",
+          "quantity": "1",
+          "tags": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "tags": "",
+          "imageFormat": "square",
+          "type": "Rüstung",
+          "quantity": "1",
+          "category": "armor",
+          "id": "item-mqu1vat1-1-exvo",
+          "icon": "*",
+          "description": "Rüstung, Kleidung oder magischer Schutz."
+        },
+        {
+          "imagePosition": "center",
+          "category": "equipment",
+          "type": "Ausrüstung",
+          "image": "",
+          "quantity": "1",
+          "tags": "",
+          "name": "Reiseausrüstung",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": []
+        },
+        {
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "tags": "",
+          "imageFormat": "square",
+          "quantity": "1",
+          "image": "",
+          "category": "potions",
+          "icon": "*",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+        },
+        {
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "image": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Dokument",
+          "id": "item-mqu1vat1-4-ajrj",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "category": "documents",
+          "icon": "*"
+        },
+        {
+          "imagePosition": "center",
+          "infoRows": [],
+          "imageFit": "contain",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-5-5kao",
+          "icon": "*",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "category": "other",
+          "type": "Sonstiges",
+          "tags": ""
+        }
+      ]
+    },
+    "archived": false,
+    "emotesOverride": true,
+    "emotes": [
+      {
+        "label": "erklarend",
+        "img": "https://i.imgur.com/AnOaghs.png"
+      }
+    ],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

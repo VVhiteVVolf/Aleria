@@ -5,7 +5,7 @@ import {
   inferInventoryUseMode,
   prepareInventoryUse,
   resolveInventoryUseMode
-} from './inventory-use-model.js?v=20260803-inventory-use-v1';
+} from './inventory-use-model.js?v=20260803-gawain-level4-v1';
 
 let latestComposerContext = null;
 
@@ -162,9 +162,12 @@ function renderUsage(segment = {}) {
   const quantity = consumed && use.quantityBefore != null && use.quantityAfter != null
     ? `<span>Bestand ${escapeHtml(use.quantityBefore)} → ${escapeHtml(use.quantityAfter)}</span>`
     : '<span>Bleibt im Inventar</span>';
+  const abilityEffects = (Array.isArray(use.abilityEffects) ? use.abilityEffects : [])
+    .map(effect => `<span>${escapeHtml(effect.abilityName)}: ${escapeHtml(effect.resourceName)} ${escapeHtml(effect.before)} → ${escapeHtml(effect.after)}</span>`)
+    .join('');
   return `<aside class="inventory-use-result" data-mode="${consumed ? 'consume' : 'use'}">
     ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span class="inventory-use-result-icon" aria-hidden="true">◆</span>'}
-    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}</div>
+    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}${abilityEffects}</div>
   </aside>`;
 }
 

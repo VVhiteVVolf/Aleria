@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
+  applyInventoryUseAbilityEffects,
   applyInventoryUseToInventory,
   inferInventoryUseMode,
   prepareInventoryUse,
@@ -60,4 +61,56 @@ test('a stale online quantity cannot be consumed', () => {
     ...prepareInventoryUse({ character, itemId: 'potion-1' }),
     mode: 'consume'
   }), /online nicht mehr/);
+});
+
+test('Liebt Duefte stellt eine Besondere Aktion wieder her und ist nur einmal pro Tag nutzbar', () => {
+  const profile = {
+    resources: [{ id: 'special-action', name: 'Besondere Aktion', current: 1, maximum: 2 }],
+    abilities: [{
+      id: 'loves-scents', name: 'Liebt Duefte', active: true,
+      usesCurrent: 1, usesMaximum: 1, recovery: 'day', recoveryDayKey: 'day-1',
+      inventoryUseTrigger: {
+        enabled: true,
+        itemTags: ['Duft', 'Parfum'],
+        restoreResources: [{ resourceId: 'special-action', amount: 1 }],
+        requireActualRecovery: true
+      }
+    }]
+  };
+  const use = {
+    actorId: 'gawain', item: { id: 'rose-scent', name: 'Rosenduft', category: 'consumable', tags: 'Duft' }, mode: 'use'
+  };
+  const first = applyInventoryUseAbilityEffects(profile, use, 'day-1');
+  assert.equal(first.changed, true);
+  assert.equal(first.resources[0].current, 2);
+  assert.equal(first.abilities[0].usesCurrent, 0);
+  assert.equal(first.inventoryUse.abilityEffects[0].amount, 1);
+
+  const second = applyInventoryUseAbilityEffects({ resources: first.resources, abilities: first.abilities }, use, 'day-1');
+  assert.equal(second.changed, false);
+  assert.equal(second.abilities[0].usesCurrent, 0);
+
+  const nextDay = applyInventoryUseAbilityEffects({
+    resources: [{ ...first.resources[0], current: 1 }],
+    abilities: first.abilities
+  }, use, 'day-2');
+  assert.equal(nextDay.changed, true);
+  assert.equal(nextDay.abilities[0].recoveryDayKey, 'day-2');
+});
+
+test('Liebt Duefte verbraucht die Tagesnutzung nicht bei bereits voller Ressource', () => {
+  const result = applyInventoryUseAbilityEffects({
+    resources: [{ id: 'special-action', name: 'Besondere Aktion', current: 2, maximum: 2 }],
+    abilities: [{
+      id: 'loves-scents', name: 'Liebt Duefte', usesCurrent: 1, usesMaximum: 1, recovery: 'day',
+      inventoryUseTrigger: {
+        enabled: true,
+        itemTags: ['Parfum'],
+        restoreResources: [{ resourceId: 'special-action', amount: 1 }],
+        requireActualRecovery: true
+      }
+    }]
+  }, { item: { id: 'perfume', name: 'Parfum' }, mode: 'use' }, 'day-1');
+  assert.equal(result.changed, false);
+  assert.equal(result.abilities[0].usesCurrent, 1);
 });

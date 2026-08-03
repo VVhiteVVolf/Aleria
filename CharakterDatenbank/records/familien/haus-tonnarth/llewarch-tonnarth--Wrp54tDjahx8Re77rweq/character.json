@@ -1,0 +1,1336 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--Wrp54tDjahx8Re77rweq",
+  "slug": "llewarch-tonnarth",
+  "identity": {
+    "name": "Llewarch Tonnarth",
+    "aliases": [],
+    "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-tonnarth",
+      "label": "Haus Tonnarth"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-tonnarth",
+        "familyTitle": "Haus Tonnarth",
+        "personId": "llewarch-tonnarth",
+        "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth",
+        "houseId": "house-tonnarth",
+        "houseName": "Haus Tonnarth",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=llewarch-tonnarth",
+        "fingerprint": "{\"name\":\"Llewarch Tonnarth\",\"title\":\"Angehöriger des Hauses Tonnarth\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-tonnarth/llewarch-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"25 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadell-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--cadell-tonnarth\",\"name\":\"Cadell Tonnarth\"},{\"personId\":\"ceridwen-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--ceridwen-spouse-tonnarth\",\"name\":\"Ceridwen\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "Wrp54tDjahx8Re77rweq",
+      "documentIds": [
+        "Wrp54tDjahx8Re77rweq"
+      ],
+      "documents": [
+        {
+          "documentId": "Wrp54tDjahx8Re77rweq",
+          "createdAt": "2026-07-27T02:51:11.860Z",
+          "updatedAt": "2026-07-27T15:53:49.471Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-tonnarth",
+        "personId": "llewarch-tonnarth",
+        "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=llewarch-tonnarth"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-27T15:53:49.471Z",
+    "sourceDocumentIds": [
+      "Wrp54tDjahx8Re77rweq"
+    ],
+    "contentHash": "1aae0b44072c32a496573ed0c435a3695269f91348e351b22a587389b06b54fe"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "Wrp54tDjahx8Re77rweq",
+        "taxonomyPath": "",
+        "role": "",
+        "currentLocation": "",
+        "emotesOverride": true,
+        "name": "Llewarch Tonnarth",
+        "origin": "",
+        "genealogy": {
+          "portraitPlaceholder": "",
+          "death": "",
+          "houseName": "",
+          "sex": "unknown",
+          "birth": "",
+          "relationships": {
+            "partners": [],
+            "children": [],
+            "parents": []
+          },
+          "houseId": "",
+          "status": "",
+          "sources": [],
+          "worldPersonId": "",
+          "familyRole": "",
+          "tags": []
+        },
+        "bio": "",
+        "archived": false,
+        "createdAt": "2026-07-27T02:51:11.860Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/vAFUcWu.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/UnqlrtN.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OOUAhnF.png"
+          },
+          {
+            "img": "https://i.imgur.com/PjlhhqM.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/JzIASWx.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/q3bsEFL.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Rxz7Eov.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2ppRl9A.png"
+          },
+          {
+            "img": "https://i.imgur.com/5XG0PTq.png",
+            "label": ""
+          }
+        ],
+        "inventory": {
+          "characterId": "Wrp54tDjahx8Re77rweq",
+          "name": "Name des Charakters",
+          "role": "Rolle",
+          "carryValue": "Noch festlegen",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "showInfoTable": false,
+          "portraitFit": "cover",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ],
+          "infoRows": [
+            {
+              "icon": "*",
+              "label": "Status",
+              "value": "Gesund"
+            },
+            {
+              "label": "TP / Zustand",
+              "value": "Noch festlegen",
+              "icon": "*"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "label": "Geld",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Tragkapazität"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Rolle"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Fraktion",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "Aufenthalt",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Notiz",
+              "icon": "*",
+              "value": "Noch festlegen"
+            }
+          ],
+          "portrait": "https://i.imgur.com/YXLDnVs.png",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "portraitPosition": "top",
+          "companions": [
+            {
+              "description": "",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "image": "",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "species": "Tier oder Begleiter",
+              "id": "companion-ms2mmx2p-0-20zy",
+              "infoRows": [],
+              "name": "Reittier / Gefährte",
+              "status": "Gesund",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ]
+            },
+            {
+              "species": "Tier / Person",
+              "image": "",
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "status": "Noch festlegen",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "role": "Gefährte",
+              "id": "companion-ms2mmx2p-1-2nvx",
+              "imagePosition": "top",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "name": "Treuer Begleiter"
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "level": "Stufe",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square",
+              "originItemDbKey": "",
+              "type": "Waffe",
+              "ownerCharacterId": "",
+              "tags": "",
+              "id": "item-ms2mmx2p-0-qlcf",
+              "itemStorageMode": "character",
+              "ownerCharacterName": "",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "individualizedAt": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon",
+              "icon": "*",
+              "quantity": "1"
+            },
+            {
+              "imageFit": "contain",
+              "icon": "*",
+              "infoRows": [],
+              "imageFormat": "square",
+              "ownerCharacterName": "",
+              "itemStorageMode": "character",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "image": "",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "type": "Rüstung",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "name": "Rüstung / Schutz",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "armor",
+              "quantity": "1",
+              "imagePosition": "center",
+              "id": "item-ms2mmx2p-1-betj"
+            },
+            {
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "imageFormat": "square",
+              "category": "equipment",
+              "image": "",
+              "icon": "*",
+              "originItemDbKey": "",
+              "id": "item-ms2mmx2p-2-hhum",
+              "itemStorageMode": "character",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "weight": "Noch festlegen",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "imagePosition": "center",
+              "type": "Ausrüstung",
+              "tags": "",
+              "imageFit": "contain"
+            },
+            {
+              "category": "potions",
+              "originItemDbKey": "",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "quantity": "1",
+              "ownerCharacterId": "",
+              "imageFormat": "square",
+              "ownerCharacterName": "",
+              "id": "item-ms2mmx2p-3-6y4z",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "acquiredAt": "",
+              "type": "Trinktur",
+              "image": "",
+              "individualizedAt": "",
+              "imageFit": "contain",
+              "name": "Heil- oder Verbrauchsgut",
+              "itemDbKey": "",
+              "infoRows": [],
+              "itemStorageMode": "character",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+            },
+            {
+              "individualizedAt": "",
+              "id": "item-ms2mmx2p-4-opxk",
+              "acquiredAt": "",
+              "name": "Dokumente / Urkunden",
+              "infoRows": [],
+              "tags": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "type": "Dokument",
+              "imageFit": "contain",
+              "itemStorageMode": "character",
+              "weight": "Noch festlegen",
+              "image": "",
+              "itemDbKey": "",
+              "quantity": "1",
+              "originItemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "ownerCharacterId": "",
+              "category": "documents",
+              "icon": "*",
+              "imageFormat": "square",
+              "ownerCharacterName": ""
+            },
+            {
+              "id": "item-ms2mmx2p-5-mshx",
+              "tags": "",
+              "type": "Sonstiges",
+              "infoRows": [],
+              "imageFit": "contain",
+              "itemDbKey": "",
+              "imagePosition": "center",
+              "itemStorageMode": "character",
+              "individualizedAt": "",
+              "acquiredAt": "",
+              "image": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "ownerCharacterName": "",
+              "name": "Persönlicher Gegenstand",
+              "originItemDbKey": "",
+              "icon": "*",
+              "quantity": "1",
+              "ownerCharacterId": "",
+              "category": "other",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "imageFormat": "square"
+            }
+          ],
+          "moneyNotice": "",
+          "equipmentQuiz": {
+            "step": 0,
+            "resultText": "",
+            "updatedAt": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": ""
+          },
+          "hitpoints": "TP / Zustand",
+          "status": "Gesund",
+          "title": "Charakter-Inventar",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "carryLabel": "Traglast"
+        },
+        "relevance": "",
+        "portrait": "https://i.imgur.com/YXLDnVs.png",
+        "profileLink": "",
+        "fraktion": "Haus Awduryn, Celtigerns Wacht",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "plotNode": "",
+        "status": "",
+        "playerOwner": "",
+        "aliases": [],
+        "updatedAt": "2026-07-27T15:53:49.471Z",
+        "title": "Kammerdiener Idwals, Gwynthor"
+      }
+    ]
+  },
+  "character": {
+    "id": "Wrp54tDjahx8Re77rweq",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "role": "",
+    "currentLocation": "",
+    "emotesOverride": true,
+    "name": "Llewarch Tonnarth",
+    "origin": "",
+    "genealogy": {
+      "portraitPlaceholder": "auto",
+      "death": "",
+      "houseName": "Haus Tonnarth",
+      "sex": "unknown",
+      "birth": "1715",
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cadell-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--cadell-tonnarth",
+            "name": "Cadell Tonnarth"
+          },
+          {
+            "personId": "ceridwen-spouse-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--ceridwen-spouse-tonnarth",
+            "name": "Ceridwen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      },
+      "houseId": "house-tonnarth",
+      "status": "alive",
+      "sources": [
+        {
+          "familyId": "haus-tonnarth",
+          "personId": "llewarch-tonnarth",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=llewarch-tonnarth",
+          "fingerprint": "{\"name\":\"Llewarch Tonnarth\",\"title\":\"Angehöriger des Hauses Tonnarth\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-tonnarth/llewarch-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"25 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadell-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--cadell-tonnarth\",\"name\":\"Cadell Tonnarth\"},{\"personId\":\"ceridwen-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--ceridwen-spouse-tonnarth\",\"name\":\"Ceridwen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth",
+      "familyRole": "core",
+      "tags": [
+        "25 Jahre"
+      ]
+    },
+    "bio": "",
+    "archived": false,
+    "createdAt": "2026-07-27T02:51:11.860Z",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/vAFUcWu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/UnqlrtN.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OOUAhnF.png"
+      },
+      {
+        "img": "https://i.imgur.com/PjlhhqM.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/JzIASWx.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/q3bsEFL.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Rxz7Eov.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2ppRl9A.png"
+      },
+      {
+        "img": "https://i.imgur.com/5XG0PTq.png",
+        "label": ""
+      }
+    ],
+    "inventory": {
+      "characterId": "Wrp54tDjahx8Re77rweq",
+      "name": "Name des Charakters",
+      "role": "Rolle",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "showInfoTable": false,
+      "portraitFit": "cover",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "label": "TP / Zustand",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Tragkapazität"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Rolle"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Fraktion",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Notiz",
+          "icon": "*",
+          "value": "Noch festlegen"
+        }
+      ],
+      "portrait": "https://i.imgur.com/YXLDnVs.png",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "portraitPosition": "top",
+      "companions": [
+        {
+          "description": "",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "image": "",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "species": "Tier oder Begleiter",
+          "id": "companion-ms2mmx2p-0-20zy",
+          "infoRows": [],
+          "name": "Reittier / Gefährte",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ]
+        },
+        {
+          "species": "Tier / Person",
+          "image": "",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "role": "Gefährte",
+          "id": "companion-ms2mmx2p-1-2nvx",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "name": "Treuer Begleiter"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "level": "Stufe",
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "type": "Waffe",
+          "ownerCharacterId": "",
+          "tags": "",
+          "id": "item-ms2mmx2p-0-qlcf",
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon",
+          "icon": "*",
+          "quantity": "1"
+        },
+        {
+          "imageFit": "contain",
+          "icon": "*",
+          "infoRows": [],
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "image": "",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "type": "Rüstung",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "name": "Rüstung / Schutz",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "armor",
+          "quantity": "1",
+          "imagePosition": "center",
+          "id": "item-ms2mmx2p-1-betj"
+        },
+        {
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "category": "equipment",
+          "image": "",
+          "icon": "*",
+          "originItemDbKey": "",
+          "id": "item-ms2mmx2p-2-hhum",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "tags": "",
+          "imageFit": "contain"
+        },
+        {
+          "category": "potions",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "quantity": "1",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "id": "item-ms2mmx2p-3-6y4z",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "acquiredAt": "",
+          "type": "Trinktur",
+          "image": "",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "name": "Heil- oder Verbrauchsgut",
+          "itemDbKey": "",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+        },
+        {
+          "individualizedAt": "",
+          "id": "item-ms2mmx2p-4-opxk",
+          "acquiredAt": "",
+          "name": "Dokumente / Urkunden",
+          "infoRows": [],
+          "tags": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "image": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "category": "documents",
+          "icon": "*",
+          "imageFormat": "square",
+          "ownerCharacterName": ""
+        },
+        {
+          "id": "item-ms2mmx2p-5-mshx",
+          "tags": "",
+          "type": "Sonstiges",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "image": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "ownerCharacterName": "",
+          "name": "Persönlicher Gegenstand",
+          "originItemDbKey": "",
+          "icon": "*",
+          "quantity": "1",
+          "ownerCharacterId": "",
+          "category": "other",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "imageFormat": "square"
+        }
+      ],
+      "moneyNotice": "",
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": ""
+      },
+      "hitpoints": "TP / Zustand",
+      "status": "Gesund",
+      "title": "Charakter-Inventar",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0
+      },
+      "carryLabel": "Traglast"
+    },
+    "relevance": "",
+    "portrait": "https://i.imgur.com/YXLDnVs.png",
+    "profileLink": "",
+    "fraktion": "Haus Awduryn, Celtigerns Wacht",
+    "identity": {
+      "worldPersonId": "person--haus-tonnarth--llewarch-tonnarth"
+    },
+    "plotNode": "",
+    "status": "",
+    "playerOwner": "",
+    "aliases": [],
+    "updatedAt": "2026-07-27T15:53:49.471Z",
+    "title": "Kammerdiener Idwals, Gwynthor"
+  }
+}

@@ -160,6 +160,11 @@ export function getResolutionActorAbilityState(resolution = {}) {
   return Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : null;
 }
 
+export function getResolutionTargetConditionState(resolution = {}) {
+  const conditions = resolution?.targetConditionSnapshot?.after;
+  return Array.isArray(conditions) ? conditions.map(condition => ({ ...condition })) : null;
+}
+
 function getStoredResolutions(comment = {}) {
   if (Array.isArray(comment.commentSegments)) {
     return comment.commentSegments
@@ -174,6 +179,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    const expiringConditionIds = new Map();
     states.forEach((state, actorId) => {
       if (Array.isArray(state.resources)) {
         states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
@@ -188,6 +194,13 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
       const resolution = entry.resolution;
+      const actorId = String(resolution.actorId || '');
+      const actorConditions = states.get(actorId)?.temporaryConditions;
+      if (actorId && Array.isArray(actorConditions) && actorConditions.length) {
+        const ids = expiringConditionIds.get(actorId) || new Set();
+        actorConditions.forEach(condition => ids.add(String(condition.id || '')));
+        expiringConditionIds.set(actorId, ids);
+      }
       const state = getResolutionHitPointState(resolution);
       if (state) {
         const previous = states.get(String(resolution.targetId)) || {};
@@ -203,6 +216,12 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           ...(actorAbilities ? { abilities: actorAbilities } : {})
         });
       }
+      const targetConditions = getResolutionTargetConditionState(resolution);
+      if (targetConditions) {
+        const targetId = String(resolution.targetId || '');
+        const previous = states.get(targetId) || {};
+        states.set(targetId, { ...previous, temporaryConditions: targetConditions });
+      }
       (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
         if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
         const sourceId = String(snapshot.sourceActorId);
@@ -216,6 +235,14 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
     }
+    expiringConditionIds.forEach((ids, actorId) => {
+      const previous = states.get(actorId);
+      if (!previous?.temporaryConditions) return;
+      states.set(actorId, {
+        ...previous,
+        temporaryConditions: previous.temporaryConditions.filter(condition => !ids.has(String(condition.id || '')))
+      });
+    });
     applySceneRestCommentToStateMap(states, comment);
     if (isStopComment) break;
   }
@@ -249,6 +276,16 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
         } : ability;
       })
     : profile.abilities;
+  const temporaryConditions = Array.isArray(state.temporaryConditions)
+    ? state.temporaryConditions.map(condition => ({ ...condition, active: true }))
+    : [];
+  const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
+    const mechanics = condition?.mechanics || {};
+    ['attack', 'damage', 'armorClass', 'savingThrow', 'spellAttack', 'spellSaveDc', 'passivePerception'].forEach(key => {
+      result[key] = (Number(result[key]) || 0) + (Number(mechanics[key]) || 0);
+    });
+    return result;
+  }, {});
   const normalizedResources = normalizeCombatResources(resources || []);
   const actionEconomyIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
   const spellSlotIds = new Set((profile.magic?.slotResourceIds || []).map(String));
@@ -272,7 +309,8 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       ...profile.aiSnapshot.magic,
       spellSlots: normalizedResources.filter(resource => spellSlotIds.has(resource.id))
     } : profile.aiSnapshot.magic,
-    specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : []
+    specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
+    temporaryConditions
   } : profile.aiSnapshot;
   return {
     ...profile,
@@ -281,6 +319,14 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     temporaryHitPoints: normalized.temporary,
     resources,
     abilities,
+    conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
+    temporaryConditions,
+    attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0),
+    damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0),
+    totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
+    spellAttackModifier: Number(profile.spellAttackModifier || 0) + Number(temporaryMechanics.spellAttack || 0),
+    spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
+    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0),
     aiSnapshot,
     hitPoints: profile.hitPoints ? {
       ...profile.hitPoints,

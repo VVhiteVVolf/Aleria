@@ -1,0 +1,1244 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--vPv7fwfcZFY8wMTJlYXZ",
+  "slug": "morfudd-geb-gwialen-gafyr",
+  "identity": {
+    "name": "Morfudd (geb. Gwialen) Gafyr",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwialen--morfudd-gwialen"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwialen",
+      "label": "Haus Gwialen O'Tredegar"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwialen",
+        "familyTitle": "Haus Gwialen O'Tredegar",
+        "personId": "morfudd-gwialen",
+        "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+        "houseId": "house-gwialen",
+        "houseName": "Haus Gwialen O'Tredegar",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Graue Weite",
+          "Schimmerküste",
+          "Tredegar"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=morfudd-gwialen",
+        "fingerprint": "{\"name\":\"Morfudd Gwialen\",\"title\":\"Wegverheiratet an Haus Gafyr\",\"birth\":\"1676\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwialen\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/morfudd-gwialen.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"libet-pawen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pawen--libet-pawen\",\"name\":\"Libet Pawen\"},{\"personId\":\"artus-gwialen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--artus-gwialen\",\"name\":\"Artus Gwialen\"}],\"partners\":[{\"personId\":\"duncan-gafyr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--duncan-gafyr\",\"name\":\"Duncan Gafyr\"}],\"children\":[]}}",
+        "score": 185
+      },
+      {
+        "familyId": "haus-gafyr",
+        "familyTitle": "Haus Gafyr",
+        "personId": "morfudd-gwialen",
+        "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+        "houseId": "house-gwialen",
+        "houseName": "Haus Gwialen",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=morfudd-gwialen",
+        "fingerprint": "{\"name\":\"Morfudd Gwialen\",\"title\":\"\",\"birth\":\"1676\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwialen\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/morfudd-gwialen.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"duncan-gafyr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--duncan-gafyr\",\"name\":\"Duncan Gafyr\"}],\"children\":[{\"personId\":\"egon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"},{\"personId\":\"aerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--aerwyn-gafyr\",\"name\":\"Aerwyn Gafyr\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "vPv7fwfcZFY8wMTJlYXZ",
+      "documentIds": [
+        "vPv7fwfcZFY8wMTJlYXZ"
+      ],
+      "documents": [
+        {
+          "documentId": "vPv7fwfcZFY8wMTJlYXZ",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwialen",
+        "personId": "morfudd-gwialen",
+        "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=morfudd-gwialen"
+      },
+      {
+        "familyId": "haus-gafyr",
+        "personId": "morfudd-gwialen",
+        "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=morfudd-gwialen"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "vPv7fwfcZFY8wMTJlYXZ"
+    ],
+    "contentHash": "18d180adbd3e20d99bba40fe7209c8c59be2a7095a2679e41e9bf4501fb59991"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "vPv7fwfcZFY8wMTJlYXZ",
+        "name": "Morfudd (geb. Gwialen) Gafyr",
+        "archived": false,
+        "title": "Lady, Tredegar",
+        "emotesOverride": true,
+        "inventory": {
+          "infoRows": [],
+          "level": "Haus Gafyr, Celtigerns Wacht",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "moneyState": {
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "status": "",
+            "open": false,
+            "resultText": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "portrait": "https://i.imgur.com/RIflKLi.png",
+          "status": "Gesund",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "moneyNotice": "",
+          "role": "Lady, Tredegar",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "name": "Morfudd (geb. Gwialen) Gafyr",
+          "title": "Charakter-Inventar",
+          "hitpoints": "TP / Zustand",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "tags": "",
+              "quantity": "1",
+              "image": "",
+              "type": "Waffe",
+              "category": "weapon",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-0-w8ef",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "icon": "*",
+              "id": "item-mqu1vat1-1-exvo",
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "category": "armor",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "quantity": "1",
+              "tags": ""
+            },
+            {
+              "imageFit": "contain",
+              "name": "Reiseausrüstung",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "type": "Ausrüstung",
+              "image": "",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "icon": "*",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "quantity": "1"
+            },
+            {
+              "name": "Heil- oder Verbrauchsgut",
+              "id": "item-mqu1vat1-3-2lgm",
+              "category": "potions",
+              "image": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "quantity": "1",
+              "tags": "",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "icon": "*"
+            },
+            {
+              "category": "documents",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "image": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "id": "item-mqu1vat1-4-ajrj",
+              "tags": "",
+              "type": "Dokument",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "name": "Dokumente / Urkunden",
+              "weight": "Noch festlegen",
+              "infoRows": []
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "type": "Sonstiges",
+              "imageFit": "contain",
+              "quantity": "1",
+              "category": "other",
+              "image": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "species": "Tier oder Begleiter",
+              "image": "",
+              "description": "",
+              "status": "Gesund",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFit": "cover",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "name": "Reittier / Gefährte",
+              "role": "Begleiter",
+              "summary": "Kurzbeschreibung des Gefährten."
+            },
+            {
+              "description": "",
+              "species": "Tier / Person",
+              "image": "",
+              "status": "Noch festlegen",
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "name": "Treuer Begleiter",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "role": "Gefährte",
+              "imagePosition": "top",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "id": "companion-mqu1vat2-1-5e7l"
+            }
+          ]
+        },
+        "bio": "",
+        "profileLink": "",
+        "fraktion": "Haus Gafyr, Celtigerns Wacht",
+        "portrait": "https://i.imgur.com/RIflKLi.png",
+        "aliases": [],
+        "playerOwner": "patrick",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/uosXMwR.png"
+          },
+          {
+            "img": "https://i.imgur.com/vzEYyw8.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/OOamkch.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/cLBpd7g.png"
+          },
+          {
+            "img": "https://i.imgur.com/anabhtG.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/9vtCgku.png"
+          },
+          {
+            "img": "https://i.imgur.com/Vs8QNo2.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/VHAfKfO.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/wWXhW3M.png"
+          },
+          {
+            "img": "https://i.imgur.com/LWka1vZ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2hQQkVN.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/UthiLUQ.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/SrA8puO.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OhRUQ4Q.png"
+          },
+          {
+            "img": "https://i.imgur.com/hgHq1cP.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/NH3zBYf.png"
+          },
+          {
+            "img": "https://i.imgur.com/l5g4xKa.png",
+            "label": ""
+          }
+        ]
+      }
+    ]
+  },
+  "character": {
+    "id": "vPv7fwfcZFY8wMTJlYXZ",
+    "name": "Morfudd (geb. Gwialen) Gafyr",
+    "archived": false,
+    "title": "Lady, Tredegar",
+    "emotesOverride": true,
+    "inventory": {
+      "infoRows": [],
+      "level": "Haus Gafyr, Celtigerns Wacht",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "status": "",
+        "open": false,
+        "resultText": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "portrait": "https://i.imgur.com/RIflKLi.png",
+      "status": "Gesund",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "moneyNotice": "",
+      "role": "Lady, Tredegar",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "name": "Morfudd (geb. Gwialen) Gafyr",
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "tags": "",
+          "quantity": "1",
+          "image": "",
+          "type": "Waffe",
+          "category": "weapon",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-0-w8ef",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "icon": "*",
+          "id": "item-mqu1vat1-1-exvo",
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "category": "armor",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "tags": ""
+        },
+        {
+          "imageFit": "contain",
+          "name": "Reiseausrüstung",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "type": "Ausrüstung",
+          "image": "",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "icon": "*",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "quantity": "1"
+        },
+        {
+          "name": "Heil- oder Verbrauchsgut",
+          "id": "item-mqu1vat1-3-2lgm",
+          "category": "potions",
+          "image": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "quantity": "1",
+          "tags": "",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "category": "documents",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "image": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "id": "item-mqu1vat1-4-ajrj",
+          "tags": "",
+          "type": "Dokument",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen",
+          "infoRows": []
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
+          "imageFit": "contain",
+          "quantity": "1",
+          "category": "other",
+          "image": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "species": "Tier oder Begleiter",
+          "image": "",
+          "description": "",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFit": "cover",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "name": "Reittier / Gefährte",
+          "role": "Begleiter",
+          "summary": "Kurzbeschreibung des Gefährten."
+        },
+        {
+          "description": "",
+          "species": "Tier / Person",
+          "image": "",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "name": "Treuer Begleiter",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "role": "Gefährte",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "id": "companion-mqu1vat2-1-5e7l"
+        }
+      ]
+    },
+    "bio": "",
+    "profileLink": "",
+    "fraktion": "Haus Gafyr, Celtigerns Wacht",
+    "portrait": "https://i.imgur.com/RIflKLi.png",
+    "aliases": [],
+    "playerOwner": "patrick",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/uosXMwR.png"
+      },
+      {
+        "img": "https://i.imgur.com/vzEYyw8.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/OOamkch.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/cLBpd7g.png"
+      },
+      {
+        "img": "https://i.imgur.com/anabhtG.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/9vtCgku.png"
+      },
+      {
+        "img": "https://i.imgur.com/Vs8QNo2.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/VHAfKfO.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/wWXhW3M.png"
+      },
+      {
+        "img": "https://i.imgur.com/LWka1vZ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2hQQkVN.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/UthiLUQ.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/SrA8puO.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OhRUQ4Q.png"
+      },
+      {
+        "img": "https://i.imgur.com/hgHq1cP.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/NH3zBYf.png"
+      },
+      {
+        "img": "https://i.imgur.com/l5g4xKa.png",
+        "label": ""
+      }
+    ],
+    "identity": {
+      "worldPersonId": "person--haus-gwialen--morfudd-gwialen"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1676",
+      "death": "",
+      "houseId": "house-gwialen",
+      "houseName": "Haus Gwialen O'Tredegar",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Wegverheiratet"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-gwialen",
+          "personId": "morfudd-gwialen",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=morfudd-gwialen",
+          "fingerprint": "{\"name\":\"Morfudd Gwialen\",\"title\":\"Wegverheiratet an Haus Gafyr\",\"birth\":\"1676\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwialen\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/morfudd-gwialen.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"libet-pawen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-pawen--libet-pawen\",\"name\":\"Libet Pawen\"},{\"personId\":\"artus-gwialen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--artus-gwialen\",\"name\":\"Artus Gwialen\"}],\"partners\":[{\"personId\":\"duncan-gafyr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--duncan-gafyr\",\"name\":\"Duncan Gafyr\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-gafyr",
+          "personId": "morfudd-gwialen",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=morfudd-gwialen",
+          "fingerprint": "{\"name\":\"Morfudd Gwialen\",\"title\":\"\",\"birth\":\"1676\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwialen\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/morfudd-gwialen.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"duncan-gafyr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--duncan-gafyr\",\"name\":\"Duncan Gafyr\"}],\"children\":[{\"personId\":\"egon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"},{\"personId\":\"aerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--aerwyn-gafyr\",\"name\":\"Aerwyn Gafyr\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "libet-pawen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-pawen--libet-pawen",
+            "name": "Libet Pawen"
+          },
+          {
+            "personId": "artus-gwialen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwialen--artus-gwialen",
+            "name": "Artus Gwialen"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "duncan-gafyr",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+            "name": "Duncan Gafyr"
+          }
+        ],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Graue Weite > Schimmerküste > Tredegar"
+  }
+}

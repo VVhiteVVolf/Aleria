@@ -1,0 +1,1208 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--jXU4gNTGm2pPLJrzyBLb",
+  "slug": "taliesin-draenmelyn",
+  "identity": {
+    "name": "Taliesin Draenmelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draenmelyn",
+      "label": "Haus Draenmelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draenmelyn",
+        "familyTitle": "Haus Draenmelyn",
+        "personId": "taliesin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn",
+        "houseId": "house-draenmelyn",
+        "houseName": "Haus Draenmelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=taliesin-draenmelyn",
+        "fingerprint": "{\"name\":\"Taliesin Draenmelyn\",\"title\":\"Bediensteter des Hauses Draig\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"18 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "jXU4gNTGm2pPLJrzyBLb",
+      "documentIds": [
+        "jXU4gNTGm2pPLJrzyBLb"
+      ],
+      "documents": [
+        {
+          "documentId": "jXU4gNTGm2pPLJrzyBLb",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draenmelyn",
+        "personId": "taliesin-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=taliesin-draenmelyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "jXU4gNTGm2pPLJrzyBLb"
+    ],
+    "contentHash": "b970dcb76bbf43cd803b0619831cdaa0f75259f21b4b7dd65736f9f4f5d94454"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "jXU4gNTGm2pPLJrzyBLb",
+        "emotesOverride": true,
+        "playerOwner": "",
+        "archived": false,
+        "inventory": {
+          "name": "Taliesin Draenmelyn",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents",
+              "label": "Dokumente"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "items": [
+            {
+              "icon": "*",
+              "quantity": "1",
+              "category": "weapon",
+              "image": "",
+              "imageFormat": "square",
+              "tags": "",
+              "infoRows": [],
+              "type": "Waffe",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Hauptwaffe"
+            },
+            {
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "imagePosition": "center",
+              "category": "armor",
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "type": "Rüstung",
+              "imageFit": "contain",
+              "tags": "",
+              "name": "Rüstung / Schutz",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "imageFit": "contain",
+              "infoRows": [],
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "name": "Reiseausrüstung",
+              "type": "Ausrüstung",
+              "image": "",
+              "tags": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1"
+            },
+            {
+              "imagePosition": "center",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "imageFormat": "square",
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "icon": "*",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "id": "item-mqu1vat1-3-2lgm",
+              "image": ""
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "quantity": "1",
+              "category": "documents",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imagePosition": "center",
+              "type": "Dokument",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-4-ajrj",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "icon": "*",
+              "imageFit": "contain"
+            },
+            {
+              "image": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "icon": "*",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-5-5kao",
+              "category": "other",
+              "name": "Persönlicher Gegenstand",
+              "tags": "",
+              "type": "Sonstiges",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen"
+            }
+          ],
+          "role": "Kammerdiener, Gwynthor",
+          "portraitPosition": "top",
+          "status": "Gesund",
+          "portraitFormat": "portrait",
+          "title": "Charakter-Inventar",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyState": {
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitFit": "cover",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "resultText": "",
+            "step": 0
+          },
+          "portrait": "https://i.imgur.com/Od4NmVk.png",
+          "moneyNotice": "",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "imageFormat": "landscape",
+              "species": "Tier oder Begleiter",
+              "image": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "description": "",
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "name": "Reittier / Gefährte",
+              "role": "Begleiter",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "status": "Noch festlegen",
+              "image": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "description": "",
+              "imageFit": "cover",
+              "species": "Tier / Person",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "imageFormat": "landscape"
+            }
+          ],
+          "infoRows": [],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "hitpoints": "TP / Zustand"
+        },
+        "name": "Taliesin Draenmelyn",
+        "title": "Kammerdiener, Gwynthor",
+        "aliases": [],
+        "profileLink": "",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "portrait": "https://i.imgur.com/Od4NmVk.png",
+        "bio": "Taliesin Draenmelyn entstammt dem bürgerlichen Haus Draenmelyn, einer angesehenen Familie aus dem Adelsviertel von Celtigerns Wacht. Seit Generationen stehen die Draenmelyn in enger Verbindung zum Haus Balchder, welches ihre Unternehmungen fördert und unterstützt. Als treue Gefolgsleute des Hauses Draig stellen sie seit jeher Zofen, Diener, Schreiber und Verwalter für den Hof. Die Familie genießt den Ruf, außergewöhnlich gebildet, gepflegt und pflichtbewusst zu sein.\n\nTaliesin dient als persönlicher Kammerdiener des jungen Prinzen Gawain Draig. Trotz seines noch jungen Alters erfüllt er seine Aufgabe mit beinahe fanatischer Hingabe. Er achtet akribisch auf das Erscheinungsbild seines Herrn, sorgt für tadellose Kleidung, gepflegtes Haar und ein würdevolles Auftreten bei jeder Gelegenheit. Zerknitterte Gewänder, staubige Stiefel oder ungekämmte Haare betrachtet er beinahe als persönliche Beleidigung.\n\nVon Natur aus ist Taliesin eitel, ordnungsliebend und bisweilen etwas überheblich. Er besitzt einen ausgeprägten Sinn für Ästhetik und verliert nicht selten die Nerven, wenn Gawain durch Schlamm watet, in einer Scheune übernachtet oder sich in irgendeine unvernünftige Unternehmung stürzt. Während der Prinz derlei Unannehmlichkeiten meist mit einem Schulterzucken hinnimmt, reagiert Taliesin darauf oft mit dramatischer Verzweiflung.\n\nSeine Loyalität steht dennoch außer Frage. Kaum jemand kümmert sich hingebungsvoller um das Wohlergehen seines Herrn. So ist es durchaus vorgekommen, dass er quer durch die Stadt eilte, um ein bestimmtes Parfüm zu beschaffen, das der Prinz einst beiläufig gelobt hatte. Ebenso achtet er darauf, dass Gawains Hengst regelmäßig die besten roten Äpfel erhält, und führt darüber mit Stallburschen gelegentlich hitzigere Diskussionen als andere Männer über Politik.\n\nUnter Hofbediensteten gilt Taliesin als fleißig, zuverlässig und zugleich amüsant. Viele schätzen ihn, manche belächeln ihn, doch niemand würde bestreiten, dass der junge Kammerdiener die Würde des Prinzen verteidigt, als hinge das Schicksal des Reiches davon ab.",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/KmTIq6x.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/CwoFyL6.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/NK7qmUE.png"
+          },
+          {
+            "img": "https://i.imgur.com/dktIJD7.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/soAB3wL.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/QGjXPfD.png"
+          },
+          {
+            "img": "https://i.imgur.com/x6RmJeE.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/xW4EYhk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2dVAHmv.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gCv2V08.png"
+          },
+          {
+            "img": "https://i.imgur.com/R3YaXNh.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/pzTmoQK.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/tZ6wOyg.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/euG9xC2.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/KfKGcUj.png"
+          },
+          {
+            "img": "https://i.imgur.com/WdNZCyF.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Hpq0iUm.png"
+          },
+          {
+            "img": "https://i.imgur.com/mjpOcqe.png",
+            "label": ""
+          }
+        ]
+      }
+    ]
+  },
+  "character": {
+    "id": "jXU4gNTGm2pPLJrzyBLb",
+    "emotesOverride": true,
+    "playerOwner": "",
+    "archived": false,
+    "inventory": {
+      "name": "Taliesin Draenmelyn",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "items": [
+        {
+          "icon": "*",
+          "quantity": "1",
+          "category": "weapon",
+          "image": "",
+          "imageFormat": "square",
+          "tags": "",
+          "infoRows": [],
+          "type": "Waffe",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Hauptwaffe"
+        },
+        {
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "armor",
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "type": "Rüstung",
+          "imageFit": "contain",
+          "tags": "",
+          "name": "Rüstung / Schutz",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": ""
+        },
+        {
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "image": "",
+          "tags": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1"
+        },
+        {
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "icon": "*",
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": ""
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "quantity": "1",
+          "category": "documents",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "type": "Dokument",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-4-ajrj",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "icon": "*",
+          "imageFit": "contain"
+        },
+        {
+          "image": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "icon": "*",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-5-5kao",
+          "category": "other",
+          "name": "Persönlicher Gegenstand",
+          "tags": "",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen"
+        }
+      ],
+      "role": "Kammerdiener, Gwynthor",
+      "portraitPosition": "top",
+      "status": "Gesund",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "resultText": "",
+        "step": 0
+      },
+      "portrait": "https://i.imgur.com/Od4NmVk.png",
+      "moneyNotice": "",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "imageFormat": "landscape",
+          "species": "Tier oder Begleiter",
+          "image": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "description": "",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "role": "Begleiter",
+          "statusColor": "#5c7f20"
+        },
+        {
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "image": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "imageFit": "cover",
+          "species": "Tier / Person",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFormat": "landscape"
+        }
+      ],
+      "infoRows": [],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "hitpoints": "TP / Zustand"
+    },
+    "name": "Taliesin Draenmelyn",
+    "title": "Kammerdiener, Gwynthor",
+    "aliases": [],
+    "profileLink": "",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "portrait": "https://i.imgur.com/Od4NmVk.png",
+    "bio": "Taliesin Draenmelyn entstammt dem bürgerlichen Haus Draenmelyn, einer angesehenen Familie aus dem Adelsviertel von Celtigerns Wacht. Seit Generationen stehen die Draenmelyn in enger Verbindung zum Haus Balchder, welches ihre Unternehmungen fördert und unterstützt. Als treue Gefolgsleute des Hauses Draig stellen sie seit jeher Zofen, Diener, Schreiber und Verwalter für den Hof. Die Familie genießt den Ruf, außergewöhnlich gebildet, gepflegt und pflichtbewusst zu sein.\n\nTaliesin dient als persönlicher Kammerdiener des jungen Prinzen Gawain Draig. Trotz seines noch jungen Alters erfüllt er seine Aufgabe mit beinahe fanatischer Hingabe. Er achtet akribisch auf das Erscheinungsbild seines Herrn, sorgt für tadellose Kleidung, gepflegtes Haar und ein würdevolles Auftreten bei jeder Gelegenheit. Zerknitterte Gewänder, staubige Stiefel oder ungekämmte Haare betrachtet er beinahe als persönliche Beleidigung.\n\nVon Natur aus ist Taliesin eitel, ordnungsliebend und bisweilen etwas überheblich. Er besitzt einen ausgeprägten Sinn für Ästhetik und verliert nicht selten die Nerven, wenn Gawain durch Schlamm watet, in einer Scheune übernachtet oder sich in irgendeine unvernünftige Unternehmung stürzt. Während der Prinz derlei Unannehmlichkeiten meist mit einem Schulterzucken hinnimmt, reagiert Taliesin darauf oft mit dramatischer Verzweiflung.\n\nSeine Loyalität steht dennoch außer Frage. Kaum jemand kümmert sich hingebungsvoller um das Wohlergehen seines Herrn. So ist es durchaus vorgekommen, dass er quer durch die Stadt eilte, um ein bestimmtes Parfüm zu beschaffen, das der Prinz einst beiläufig gelobt hatte. Ebenso achtet er darauf, dass Gawains Hengst regelmäßig die besten roten Äpfel erhält, und führt darüber mit Stallburschen gelegentlich hitzigere Diskussionen als andere Männer über Politik.\n\nUnter Hofbediensteten gilt Taliesin als fleißig, zuverlässig und zugleich amüsant. Viele schätzen ihn, manche belächeln ihn, doch niemand würde bestreiten, dass der junge Kammerdiener die Würde des Prinzen verteidigt, als hinge das Schicksal des Reiches davon ab.",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/KmTIq6x.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/CwoFyL6.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/NK7qmUE.png"
+      },
+      {
+        "img": "https://i.imgur.com/dktIJD7.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/soAB3wL.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/QGjXPfD.png"
+      },
+      {
+        "img": "https://i.imgur.com/x6RmJeE.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/xW4EYhk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2dVAHmv.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gCv2V08.png"
+      },
+      {
+        "img": "https://i.imgur.com/R3YaXNh.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/pzTmoQK.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/tZ6wOyg.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/euG9xC2.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/KfKGcUj.png"
+      },
+      {
+        "img": "https://i.imgur.com/WdNZCyF.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Hpq0iUm.png"
+      },
+      {
+        "img": "https://i.imgur.com/mjpOcqe.png",
+        "label": ""
+      }
+    ],
+    "identity": {
+      "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-draenmelyn--taliesin-draenmelyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-draenmelyn",
+      "houseName": "Haus Draenmelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "18 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-draenmelyn",
+          "personId": "taliesin-draenmelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=taliesin-draenmelyn",
+          "fingerprint": "{\"name\":\"Taliesin Draenmelyn\",\"title\":\"Bediensteter des Hauses Draig\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"18 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "afan-draenmelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draenmelyn--afan-draenmelyn",
+            "name": "Afan Draenmelyn"
+          },
+          {
+            "personId": "elen-spouse-draenmelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--elen-spouse-draenmelyn",
+            "name": "Elen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

@@ -39,6 +39,35 @@ function boolean(value, fallback = false) {
   return Boolean(value);
 }
 
+function normalizedList(value, maximum = 20) {
+  const source = Array.isArray(value) ? value : String(value || '').split(',');
+  return [...new Set(source
+    .map(item => text(item, 120).toLocaleLowerCase('de'))
+    .filter(Boolean))].slice(0, maximum);
+}
+
+function tagKey(value) {
+  return text(value, 160)
+    .toLocaleLowerCase('de')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function collectProfileTags(profile = {}) {
+  const values = [];
+  ['quirks', 'conditions', 'abilities'].forEach(collection => {
+    (Array.isArray(profile?.[collection]) ? profile[collection] : []).forEach(entry => {
+      if (entry?.active === false) return;
+      values.push(entry?.name);
+      values.push(...String(entry?.tags || '').split(/[,;·]/));
+    });
+  });
+  return new Set(values.map(tagKey).filter(Boolean));
+}
+
 export function sanitizeCombatRuleEffects(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const rollMode = text(source.rollMode || source.attackRollMode, 24);
@@ -82,6 +111,8 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     consumeReaction: boolean(source.consumeReaction, true),
     costs: normalizeCombatResourceCosts(source.costs),
     actionKinds: [...new Set(actionKinds)].slice(0, 12),
+    skillIds: normalizedList(source.skillIds),
+    requiredTargetTags: normalizedList(source.requiredTargetTags),
     radiusMeters: optionalNumber(source.radiusMeters, 0, 9999),
     priority: number(source.priority, 0, -99, 99),
     description: text(source.description, 1000),
@@ -185,10 +216,19 @@ function conditionAllows(rule, state = {}) {
   return true;
 }
 
-function actionAllows(rule, actionKind, profileActionId = '') {
+function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
   if (rule.actionKinds.length && !rule.actionKinds.includes(actionKind)) return false;
+  if (rule.skillIds.length && (actionKind !== 'skill' || !rule.skillIds.includes(String(state.skillId || '').toLocaleLowerCase('de')))) return false;
   if (rule.actionScope === 'entry' && !rule.requiredActionId) return false;
   return !rule.requiredActionId || rule.requiredActionId === String(profileActionId || '');
+}
+
+function targetTagsAllow(rule, state = {}) {
+  if (!rule.requiredTargetTags.length) return true;
+  const available = state.targetTags instanceof Set
+    ? new Set([...state.targetTags].map(tagKey).filter(Boolean))
+    : collectProfileTags(state.targetProfile || {});
+  return rule.requiredTargetTags.every(required => available.has(tagKey(required)));
 }
 
 export function getCombatRuleApplicationKey(source = {}, rule = {}) {
@@ -225,7 +265,7 @@ export function collectApplicableCombatRules({
   const applications = [];
   sources.forEach(source => {
     collectCombatTriggerRules(source.profile).forEach(rule => {
-      if (rule.phase !== phase || !actionAllows(rule, actionKind, profileActionId)) return;
+      if (rule.phase !== phase || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
       if (!relationAllows(rule, source) || !distanceAllows(rule, source) || !conditionAllows(rule, state)) return;
       if (rule.activation === 'reaction' && !selectedRule(source, rule)) return;
       if (rule.activation === 'passive' && source.passiveRulesAllowed === false) return;

@@ -1,0 +1,1260 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--OJEmpbD6YWhDFDmitk6R",
+  "slug": "branwen-geb-gwefrydd-draig",
+  "identity": {
+    "name": "Branwen (Geb. Gwefrydd) Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwefrydd",
+      "label": "Haus Gwefrydd"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwefrydd",
+        "familyTitle": "Haus Gwefrydd",
+        "personId": "branwen-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+        "houseId": "house-gwefrydd",
+        "houseName": "Haus Gwefrydd",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Artus Streben",
+          "Rhosmere"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=branwen-gwefrydd",
+        "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"stennis-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--stennis-gwefrydd\",\"name\":\"Stennis Gwefrydd\"},{\"personId\":\"morwen-dyngwn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[]}}",
+        "score": 185
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "branwen-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+        "houseId": "house-gwefrydd",
+        "houseName": "Haus Gwefrydd",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=branwen-gwefrydd",
+        "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[{\"personId\":\"gethin-1722-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gethin-1722-draig\",\"name\":\"Gethin Draig\"},{\"personId\":\"tegan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tegan-draig\",\"name\":\"Tegan Draig\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": [
+        "Gwynthor > Gwynthor - Haus Draig"
+      ]
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "OJEmpbD6YWhDFDmitk6R",
+      "documentIds": [
+        "OJEmpbD6YWhDFDmitk6R"
+      ],
+      "documents": [
+        {
+          "documentId": "OJEmpbD6YWhDFDmitk6R",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwefrydd",
+        "personId": "branwen-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=branwen-gwefrydd"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "branwen-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=branwen-gwefrydd"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "OJEmpbD6YWhDFDmitk6R"
+    ],
+    "contentHash": "f9c31053788fcae24782aaa03f94836550e69ee1778f2198212284f4b3e385e3"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "OJEmpbD6YWhDFDmitk6R",
+        "inventory": {
+          "portraitFit": "cover",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "companions": [
+            {
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFit": "cover",
+              "image": "",
+              "role": "Begleiter",
+              "statusColor": "#5c7f20",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "infoRows": [],
+              "description": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "status": "Gesund"
+            },
+            {
+              "description": "",
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "status": "Noch festlegen",
+              "imageFit": "cover",
+              "imageFormat": "landscape",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "name": "Treuer Begleiter",
+              "imagePosition": "top",
+              "role": "Gefährte",
+              "summary": "Besonderheit, Nutzen oder Bindung."
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "equipmentQuiz": {
+            "step": 0,
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false,
+            "updatedAt": ""
+          },
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "name": "Branwen (Geb. Gwefrydd) Draig",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitFormat": "portrait",
+          "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+          "healthColor": "#5c7f20",
+          "title": "Charakter-Inventar",
+          "infoRows": [],
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "portraitPosition": "top",
+          "portrait": "https://i.imgur.com/U6kCjOZ.png",
+          "status": "Gesund",
+          "hitpoints": "TP / Zustand",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0
+          },
+          "moneyNotice": "",
+          "items": [
+            {
+              "type": "Waffe",
+              "tags": "",
+              "imagePosition": "center",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Hauptwaffe",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "quantity": "1",
+              "icon": "*",
+              "category": "weapon",
+              "id": "item-mqu1vat1-0-w8ef",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "image": "",
+              "weight": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imagePosition": "center",
+              "category": "armor",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "type": "Rüstung",
+              "tags": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "name": "Rüstung / Schutz"
+            },
+            {
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "id": "item-mqu1vat1-2-0fx2",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "category": "equipment",
+              "icon": "*",
+              "quantity": "1",
+              "imageFit": "contain",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "tags": "",
+              "type": "Ausrüstung"
+            },
+            {
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "category": "potions",
+              "tags": "",
+              "type": "Trinktur",
+              "image": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-3-2lgm",
+              "icon": "*",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center"
+            },
+            {
+              "imagePosition": "center",
+              "icon": "*",
+              "imageFormat": "square",
+              "infoRows": [],
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "tags": "",
+              "category": "documents",
+              "image": "",
+              "name": "Dokumente / Urkunden",
+              "weight": "Noch festlegen"
+            },
+            {
+              "imagePosition": "center",
+              "category": "other",
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Sonstiges",
+              "image": "",
+              "tags": "",
+              "imageFit": "contain",
+              "name": "Persönlicher Gegenstand",
+              "id": "item-mqu1vat1-5-5kao",
+              "weight": "Noch festlegen",
+              "infoRows": []
+            }
+          ]
+        },
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/3zN0iTH.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/WLuDcCN.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/4vED2zp.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/hImkBx5.png"
+          },
+          {
+            "img": "https://i.imgur.com/uKmUBZr.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/BCLm8UM.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/dufZG7d.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/qa9MoZD.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/7eFgVhN.png"
+          },
+          {
+            "img": "https://i.imgur.com/CSYcjxx.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/577Xtwt.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/EyKLZxl.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/a2AZiG2.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/4qMizTN.png"
+          },
+          {
+            "img": "https://i.imgur.com/FdMHtSh.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/LDcQZnD.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/2qB63N4.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/kPsBFJZ.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/W72fqkO.png"
+          }
+        ],
+        "archived": false,
+        "playerOwner": "erdi",
+        "name": "Branwen (Geb. Gwefrydd) Draig",
+        "emotesOverride": true,
+        "bio": "",
+        "portrait": "https://i.imgur.com/U6kCjOZ.png",
+        "profileLink": "",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "aliases": [],
+        "title": "Adjutantin des Herolds des Grafen, Rhosmere"
+      }
+    ]
+  },
+  "character": {
+    "id": "OJEmpbD6YWhDFDmitk6R",
+    "inventory": {
+      "portraitFit": "cover",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFit": "cover",
+          "image": "",
+          "role": "Begleiter",
+          "statusColor": "#5c7f20",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "infoRows": [],
+          "description": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Gesund"
+        },
+        {
+          "description": "",
+          "species": "Tier / Person",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "status": "Noch festlegen",
+          "imageFit": "cover",
+          "imageFormat": "landscape",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "name": "Treuer Begleiter",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "summary": "Besonderheit, Nutzen oder Bindung."
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false,
+        "updatedAt": ""
+      },
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "name": "Branwen (Geb. Gwefrydd) Draig",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+      "healthColor": "#5c7f20",
+      "title": "Charakter-Inventar",
+      "infoRows": [],
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portraitPosition": "top",
+      "portrait": "https://i.imgur.com/U6kCjOZ.png",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "moneyNotice": "",
+      "items": [
+        {
+          "type": "Waffe",
+          "tags": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Hauptwaffe",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "quantity": "1",
+          "icon": "*",
+          "category": "weapon",
+          "id": "item-mqu1vat1-0-w8ef",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "image": "",
+          "weight": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imagePosition": "center",
+          "category": "armor",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "tags": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "name": "Rüstung / Schutz"
+        },
+        {
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "category": "equipment",
+          "icon": "*",
+          "quantity": "1",
+          "imageFit": "contain",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "tags": "",
+          "type": "Ausrüstung"
+        },
+        {
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "category": "potions",
+          "tags": "",
+          "type": "Trinktur",
+          "image": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-3-2lgm",
+          "icon": "*",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center"
+        },
+        {
+          "imagePosition": "center",
+          "icon": "*",
+          "imageFormat": "square",
+          "infoRows": [],
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "tags": "",
+          "category": "documents",
+          "image": "",
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imagePosition": "center",
+          "category": "other",
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Sonstiges",
+          "image": "",
+          "tags": "",
+          "imageFit": "contain",
+          "name": "Persönlicher Gegenstand",
+          "id": "item-mqu1vat1-5-5kao",
+          "weight": "Noch festlegen",
+          "infoRows": []
+        }
+      ]
+    },
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/3zN0iTH.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/WLuDcCN.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/4vED2zp.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/hImkBx5.png"
+      },
+      {
+        "img": "https://i.imgur.com/uKmUBZr.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/BCLm8UM.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/dufZG7d.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/qa9MoZD.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/7eFgVhN.png"
+      },
+      {
+        "img": "https://i.imgur.com/CSYcjxx.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/577Xtwt.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/EyKLZxl.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/a2AZiG2.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/4qMizTN.png"
+      },
+      {
+        "img": "https://i.imgur.com/FdMHtSh.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/LDcQZnD.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/2qB63N4.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/kPsBFJZ.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/W72fqkO.png"
+      }
+    ],
+    "archived": false,
+    "playerOwner": "erdi",
+    "name": "Branwen (Geb. Gwefrydd) Draig",
+    "emotesOverride": true,
+    "bio": "",
+    "portrait": "https://i.imgur.com/U6kCjOZ.png",
+    "profileLink": "",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "aliases": [],
+    "title": "Adjutantin des Herolds des Grafen, Rhosmere",
+    "identity": {
+      "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "houseId": "house-gwefrydd",
+      "houseName": "Haus Gwefrydd",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwefrydd",
+          "personId": "branwen-gwefrydd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=branwen-gwefrydd",
+          "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"stennis-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--stennis-gwefrydd\",\"name\":\"Stennis Gwefrydd\"},{\"personId\":\"morwen-dyngwn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "branwen-gwefrydd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=branwen-gwefrydd",
+          "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[{\"personId\":\"gethin-1722-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gethin-1722-draig\",\"name\":\"Gethin Draig\"},{\"personId\":\"tegan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tegan-draig\",\"name\":\"Tegan Draig\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "stennis-gwefrydd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+            "name": "Stennis Gwefrydd"
+          },
+          {
+            "personId": "morwen-dyngwn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-dyngwn--morwen-dyngwn",
+            "name": "Morwen Dyngwn"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "steffan-draig",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--steffan-draig",
+            "name": "Steffan Draig"
+          }
+        ],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere"
+  }
+}

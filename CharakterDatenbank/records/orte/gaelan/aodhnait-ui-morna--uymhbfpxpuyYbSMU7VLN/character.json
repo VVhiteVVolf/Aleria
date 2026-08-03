@@ -1,0 +1,1069 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--uymhbfpxpuyYbSMU7VLN",
+  "slug": "aodhnait-ui-morna",
+  "identity": {
+    "name": "Aodhnait Ui'Morna",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gaelan",
+      "label": "Gaelan",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gaelan",
+        "label": "Gaelan",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gaelan"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "uymhbfpxpuyYbSMU7VLN",
+      "documentIds": [
+        "uymhbfpxpuyYbSMU7VLN"
+      ],
+      "documents": [
+        {
+          "documentId": "uymhbfpxpuyYbSMU7VLN",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "uymhbfpxpuyYbSMU7VLN"
+    ],
+    "contentHash": "db85dd3d8f12373c09a843aeeb552c184728f2853645f2850be37623a49eda6b"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "uymhbfpxpuyYbSMU7VLN",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "portraitPosition": "top",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "items": [
+            {
+              "weight": "Noch festlegen",
+              "name": "Hauptwaffe",
+              "image": "",
+              "infoRows": [],
+              "imageFormat": "square",
+              "type": "Waffe",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-0-w8ef",
+              "tags": "",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "icon": "*"
+            },
+            {
+              "type": "Rüstung",
+              "imageFormat": "square",
+              "tags": "",
+              "image": "",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "name": "Rüstung / Schutz",
+              "category": "armor",
+              "icon": "*",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "imagePosition": "center"
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "equipment",
+              "tags": "",
+              "type": "Ausrüstung",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "infoRows": [],
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "image": ""
+            },
+            {
+              "id": "item-mqu1vat1-3-2lgm",
+              "image": "",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "category": "potions",
+              "icon": "*",
+              "quantity": "1",
+              "imageFit": "contain",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "icon": "*",
+              "category": "documents",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "image": "",
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFormat": "square",
+              "type": "Dokument",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "infoRows": [],
+              "image": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Sonstiges",
+              "id": "item-mqu1vat1-5-5kao",
+              "category": "other",
+              "imageFormat": "square",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "icon": "*"
+            }
+          ],
+          "moneyNotice": "",
+          "status": "Gesund",
+          "equipmentQuiz": {
+            "open": false,
+            "updatedAt": "",
+            "status": "",
+            "resultText": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "role": "Prinzessin, Gaelan",
+          "name": "Aodhnait Ui'Morna",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "carryValue": "Noch festlegen",
+          "level": "Clan Ui'Morna, Gaelan",
+          "infoRows": [],
+          "companions": [
+            {
+              "description": "",
+              "species": "Tier oder Begleiter",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "role": "Begleiter",
+              "image": "",
+              "imageFormat": "landscape",
+              "name": "Reittier / Gefährte",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFit": "cover",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "infoRows": []
+            },
+            {
+              "name": "Treuer Begleiter",
+              "imagePosition": "top",
+              "role": "Gefährte",
+              "infoRows": [],
+              "species": "Tier / Person",
+              "imageFormat": "landscape",
+              "imageFit": "cover",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "statusColor": "#5c7f20",
+              "status": "Noch festlegen",
+              "description": "",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ]
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFit": "cover",
+          "portrait": "https://i.imgur.com/IebdFPk.jpeg"
+        },
+        "fraktion": "Clan Ui'Morna, Gaelan",
+        "portrait": "https://i.imgur.com/IebdFPk.jpeg",
+        "title": "Prinzessin, Gaelan",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/jAwKrER.png"
+          },
+          {
+            "img": "https://i.imgur.com/BfybObc.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/3lB2LOL.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/HcoqdCP.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/qIQMQkb.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/vPvkKjk.png"
+          },
+          {
+            "img": "https://i.imgur.com/NFqRxJW.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/EyIxJQ4.png"
+          }
+        ],
+        "playerOwner": "erdi",
+        "emotesOverride": true,
+        "bio": "",
+        "archived": false,
+        "aliases": [],
+        "name": "Aodhnait Ui'Morna"
+      }
+    ]
+  },
+  "character": {
+    "id": "uymhbfpxpuyYbSMU7VLN",
+    "inventory": {
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0
+      },
+      "portraitPosition": "top",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "name": "Hauptwaffe",
+          "image": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "type": "Waffe",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-0-w8ef",
+          "tags": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*"
+        },
+        {
+          "type": "Rüstung",
+          "imageFormat": "square",
+          "tags": "",
+          "image": "",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "name": "Rüstung / Schutz",
+          "category": "armor",
+          "icon": "*",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "imagePosition": "center"
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "equipment",
+          "tags": "",
+          "type": "Ausrüstung",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "image": ""
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "icon": "*",
+          "quantity": "1",
+          "imageFit": "contain",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "category": "documents",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "image": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFormat": "square",
+          "type": "Dokument",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "infoRows": [],
+          "image": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Sonstiges",
+          "id": "item-mqu1vat1-5-5kao",
+          "category": "other",
+          "imageFormat": "square",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "icon": "*"
+        }
+      ],
+      "moneyNotice": "",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "open": false,
+        "updatedAt": "",
+        "status": "",
+        "resultText": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "role": "Prinzessin, Gaelan",
+      "name": "Aodhnait Ui'Morna",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "level": "Clan Ui'Morna, Gaelan",
+      "infoRows": [],
+      "companions": [
+        {
+          "description": "",
+          "species": "Tier oder Begleiter",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "role": "Begleiter",
+          "image": "",
+          "imageFormat": "landscape",
+          "name": "Reittier / Gefährte",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFit": "cover",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "infoRows": []
+        },
+        {
+          "name": "Treuer Begleiter",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "infoRows": [],
+          "species": "Tier / Person",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "statusColor": "#5c7f20",
+          "status": "Noch festlegen",
+          "description": "",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ]
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFit": "cover",
+      "portrait": "https://i.imgur.com/IebdFPk.jpeg"
+    },
+    "fraktion": "Clan Ui'Morna, Gaelan",
+    "portrait": "https://i.imgur.com/IebdFPk.jpeg",
+    "title": "Prinzessin, Gaelan",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/jAwKrER.png"
+      },
+      {
+        "img": "https://i.imgur.com/BfybObc.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/3lB2LOL.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/HcoqdCP.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/qIQMQkb.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/vPvkKjk.png"
+      },
+      {
+        "img": "https://i.imgur.com/NFqRxJW.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/EyIxJQ4.png"
+      }
+    ],
+    "playerOwner": "erdi",
+    "emotesOverride": true,
+    "bio": "",
+    "archived": false,
+    "aliases": [],
+    "name": "Aodhnait Ui'Morna",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

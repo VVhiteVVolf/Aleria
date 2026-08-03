@@ -11,7 +11,7 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-spell-grades-v1';
+} from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-spell-grades-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
@@ -20,7 +20,7 @@ import {
   getSpellLevelLabel,
   getSpellSlotLevel,
   isSpellSlotResource
-} from '../combat/combat-spell-slots.js?v=20260803-economy-audit-v1';
+} from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
 import {
   CREATURE_ARCHIVE_EXPORT_TYPE,
   CREATURE_SCHEMA_VERSION,
@@ -195,7 +195,7 @@ function renderLibrary() {
 }
 
 function renderCreatureCard(creature) {
-  const profile = sanitizeCharacterCombatProfile(creature.combatProfile, { ensureRequiredSkills: false });
+  const profile = sanitizeCharacterCombatProfile(creature.combatProfile, { ensureRequiredSkills: false, ensureSpellSlots: false });
   const portrait = safeImageUrl(creature.portrait);
   const hp = getMaximumHitPoints(profile);
   const ac = getArmorClass(profile);
@@ -828,7 +828,7 @@ function openCreatureDetailEditor(trigger) {
       const index = items.findIndex(entry => entry.id === updated.id);
       if (index >= 0) items[index] = updated;
       else items.push(updated);
-      state.draft.combatProfile = sanitizeCharacterCombatProfile(state.draft.combatProfile, { ensureRequiredSkills: false });
+      state.draft.combatProfile = sanitizeCharacterCombatProfile(state.draft.combatProfile, { ensureRequiredSkills: false, ensureSpellSlots: false });
       renderSheet();
       setStatus('Kampfprofil-Eintrag in den Entwurf übernommen. Online speichern nicht vergessen.', 'success');
     }

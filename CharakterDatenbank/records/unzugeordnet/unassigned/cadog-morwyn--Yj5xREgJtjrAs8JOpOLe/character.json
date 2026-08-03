@@ -1,0 +1,1070 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--Yj5xREgJtjrAs8JOpOLe",
+  "slug": "cadog-morwyn",
+  "identity": {
+    "name": "Cadog Môrwyn",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "Yj5xREgJtjrAs8JOpOLe",
+      "documentIds": [
+        "Yj5xREgJtjrAs8JOpOLe"
+      ],
+      "documents": [
+        {
+          "documentId": "Yj5xREgJtjrAs8JOpOLe",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "Yj5xREgJtjrAs8JOpOLe"
+    ],
+    "contentHash": "85b3fe59529ab22f20201e367d3ff02fe4b125e08901280975c939c55b405abd"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "Yj5xREgJtjrAs8JOpOLe",
+        "playerOwner": "erdi",
+        "name": "Cadog Môrwyn",
+        "archived": false,
+        "inventory": {
+          "title": "Charakter-Inventar",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "moneyState": {
+            "gold": 0,
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor",
+              "label": "Rüstung"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "label": "Sonstiges",
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "name": "Cadog Môrwyn",
+          "role": "Diakon, Rhonwens Tränen (Traethgwen)",
+          "items": [
+            {
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "icon": "*",
+              "infoRows": [],
+              "image": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Waffe",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "name": "Hauptwaffe",
+              "category": "weapon",
+              "id": "item-mqu1vat1-0-w8ef",
+              "quantity": "1"
+            },
+            {
+              "imageFit": "contain",
+              "image": "",
+              "infoRows": [],
+              "id": "item-mqu1vat1-1-exvo",
+              "icon": "*",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "weight": "Noch festlegen",
+              "category": "armor",
+              "imagePosition": "center",
+              "type": "Rüstung",
+              "tags": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1"
+            },
+            {
+              "name": "Reiseausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "type": "Ausrüstung",
+              "quantity": "1",
+              "imagePosition": "center",
+              "tags": "",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "infoRows": [],
+              "image": "",
+              "icon": "*",
+              "weight": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "infoRows": [],
+              "id": "item-mqu1vat1-3-2lgm",
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Trinktur",
+              "image": "",
+              "quantity": "1",
+              "imageFormat": "square",
+              "name": "Heil- oder Verbrauchsgut"
+            },
+            {
+              "category": "documents",
+              "image": "",
+              "name": "Dokumente / Urkunden",
+              "id": "item-mqu1vat1-4-ajrj",
+              "quantity": "1",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "icon": "*",
+              "infoRows": []
+            },
+            {
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "category": "other",
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "type": "Sonstiges",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "id": "item-mqu1vat1-5-5kao",
+              "tags": ""
+            }
+          ],
+          "portraitFit": "cover",
+          "equipmentQuiz": {
+            "status": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "updatedAt": "",
+            "step": 0
+          },
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "moneyNotice": "",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Kirche von Cenyr, Rhonwens Tränen (Traethgwen)",
+          "portraitFormat": "portrait",
+          "infoRows": [],
+          "carryValue": "Noch festlegen",
+          "status": "Gesund",
+          "portrait": "https://i.imgur.com/t2AWKNw.png",
+          "portraitPosition": "top",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "species": "Tier oder Begleiter",
+              "name": "Reittier / Gefährte",
+              "image": "",
+              "description": "",
+              "role": "Begleiter",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "infoRows": [],
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "status": "Gesund"
+            },
+            {
+              "id": "companion-mqu1vat2-1-5e7l",
+              "species": "Tier / Person",
+              "image": "",
+              "imageFormat": "landscape",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "name": "Treuer Begleiter",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "status": "Noch festlegen",
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "infoRows": []
+            }
+          ]
+        },
+        "bio": "",
+        "profileLink": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/gT8BQB1.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/94urFgu.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/QMwnIEM.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/rQOLE2V.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Hsi0I74.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/zVo5RTw.png"
+          },
+          {
+            "img": "https://i.imgur.com/Ah3fn2J.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/cPDZgIp.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Lp2yL16.png"
+          }
+        ],
+        "portrait": "https://i.imgur.com/t2AWKNw.png",
+        "aliases": [],
+        "fraktion": "Kirche von Cenyr, Rhonwens Tränen (Traethgwen)",
+        "title": "Diakon, Rhonwens Tränen (Traethgwen)",
+        "emotesOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "Yj5xREgJtjrAs8JOpOLe",
+    "playerOwner": "erdi",
+    "name": "Cadog Môrwyn",
+    "archived": false,
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "name": "Cadog Môrwyn",
+      "role": "Diakon, Rhonwens Tränen (Traethgwen)",
+      "items": [
+        {
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*",
+          "infoRows": [],
+          "image": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Waffe",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "name": "Hauptwaffe",
+          "category": "weapon",
+          "id": "item-mqu1vat1-0-w8ef",
+          "quantity": "1"
+        },
+        {
+          "imageFit": "contain",
+          "image": "",
+          "infoRows": [],
+          "id": "item-mqu1vat1-1-exvo",
+          "icon": "*",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "weight": "Noch festlegen",
+          "category": "armor",
+          "imagePosition": "center",
+          "type": "Rüstung",
+          "tags": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1"
+        },
+        {
+          "name": "Reiseausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "type": "Ausrüstung",
+          "quantity": "1",
+          "imagePosition": "center",
+          "tags": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "infoRows": [],
+          "image": "",
+          "icon": "*",
+          "weight": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "id": "item-mqu1vat1-3-2lgm",
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "image": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut"
+        },
+        {
+          "category": "documents",
+          "image": "",
+          "name": "Dokumente / Urkunden",
+          "id": "item-mqu1vat1-4-ajrj",
+          "quantity": "1",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "icon": "*",
+          "infoRows": []
+        },
+        {
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "category": "other",
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-mqu1vat1-5-5kao",
+          "tags": ""
+        }
+      ],
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "status": "",
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "updatedAt": "",
+        "step": 0
+      },
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "moneyNotice": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Kirche von Cenyr, Rhonwens Tränen (Traethgwen)",
+      "portraitFormat": "portrait",
+      "infoRows": [],
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "portrait": "https://i.imgur.com/t2AWKNw.png",
+      "portraitPosition": "top",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "species": "Tier oder Begleiter",
+          "name": "Reittier / Gefährte",
+          "image": "",
+          "description": "",
+          "role": "Begleiter",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "infoRows": [],
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "status": "Gesund"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "species": "Tier / Person",
+          "image": "",
+          "imageFormat": "landscape",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "infoRows": []
+        }
+      ]
+    },
+    "bio": "",
+    "profileLink": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/gT8BQB1.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/94urFgu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/QMwnIEM.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/rQOLE2V.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Hsi0I74.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/zVo5RTw.png"
+      },
+      {
+        "img": "https://i.imgur.com/Ah3fn2J.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/cPDZgIp.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Lp2yL16.png"
+      }
+    ],
+    "portrait": "https://i.imgur.com/t2AWKNw.png",
+    "aliases": [],
+    "fraktion": "Kirche von Cenyr, Rhonwens Tränen (Traethgwen)",
+    "title": "Diakon, Rhonwens Tränen (Traethgwen)",
+    "emotesOverride": true,
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

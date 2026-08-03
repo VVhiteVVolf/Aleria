@@ -3,13 +3,14 @@ import { narrateCombatResolution } from './combat-narration-service.js?v=2026080
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260803-spell-grades-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260803-spell-grades-v1';
+} from './combat-profile-resolver.js?v=20260803-gawain-level4-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260803-gawain-level4-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
   getResolutionActorResourceState,
   getResolutionHitPointState,
+  getResolutionTargetConditionState,
   overlayCombatHitPointState
 } from './combat-state-model.js?v=20260803-economy-audit-v1';
 import {
@@ -24,11 +25,11 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260803-spell-grades-v1';
+} from './ui/combat-ui.js?v=20260803-gawain-level4-v1';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260803-rule-integrity-v1';
+} from './combat-trigger-rules.js?v=20260803-gawain-level4-v1';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -213,7 +214,8 @@ function resolveActorProfile(character, options = {}) {
   const profile = profileResolver.resolve(character, {
     actionId: options.actionId,
     segmentKind: options.segmentKind,
-    paymentMode: options.paymentMode
+    paymentMode: options.paymentMode,
+    weaponGrip: options.weaponGrip
   });
   const actorId = String(options.actorId || profile.characterId || '');
   const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
@@ -269,6 +271,7 @@ function mountComposers(context = {}) {
       resetCommentResources: true,
       segmentKind: getEffectiveCombatSegmentKind(segment),
       paymentMode: segment.combatPaymentMode,
+      weaponGrip: segment.combatWeaponGrip,
       recoveryDayKey
     }) : null;
     const actorValidation = actor ? profileResolver.validateActor(actor) : { ready: false, missingFields: [] };
@@ -340,16 +343,18 @@ function updateSegmentSetting(segmentId, field, value) {
   if (field === 'targetId') segment.combatTargetId = String(value || '');
   if (field === 'actionId') {
     segment.combatActionId = String(value || '');
+    segment.combatWeaponGrip = 'one-handed';
     segment.combatPaymentConfirmed = false;
   }
   if (field === 'rollMode') segment.combatRollMode = ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
+  if (field === 'weaponGrip') segment.combatWeaponGrip = String(value || '') === 'two-handed' ? 'two-handed' : 'one-handed';
   if (field === 'distanceMeters') segment.combatDistanceMeters = Math.max(0, Math.min(9999, Number(value) || 0));
   if (field === 'paymentMode') {
     segment.combatPaymentMode = ['aura', 'cheat'].includes(value) ? value : 'standard';
     segment.combatPaymentConfirmed = false;
   }
   globalThis.persistCommentDraft?.();
-  if (field === 'actionId' || field === 'paymentMode') mountComposers(latestComposerContext || {});
+  if (field === 'actionId' || field === 'paymentMode' || field === 'weaponGrip') mountComposers(latestComposerContext || {});
 }
 
 function setSegmentPaymentConfirmation(segmentId, confirmed) {
@@ -419,6 +424,9 @@ function buildNarrationFacts(resolution) {
     ruleApplications: resolution.ruleApplications || [],
     ruleResourceSnapshots: resolution.ruleResourceSnapshots || [],
     ruleAbilitySnapshots: resolution.ruleAbilitySnapshots || [],
+    secondarySaves: resolution.secondarySaves || [],
+    followUpAttacks: resolution.followUpAttacks || [],
+    targetConditionSnapshot: resolution.targetConditionSnapshot || null,
     originalDescription: resolution.originalDescription,
     actorCombatProfile: resolution.actorCombatProfile,
     targetCombatProfile: resolution.targetCombatProfile
@@ -452,6 +460,7 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
     resetCommentResources: true,
     segmentKind: getEffectiveCombatSegmentKind(segment),
     paymentMode: segment.combatPaymentMode,
+    weaponGrip: segment.combatWeaponGrip,
     recoveryDayKey: stateContext.recoveryDayKey
   });
   if (!segment.combatPaymentConfirmed && !actor.cheats?.enabled) {
@@ -513,9 +522,14 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   }
   setCombatResolutionStatus('Würfelbeleg erfasst …', 'Der Server prüft Profilwerte und endgültigen Zustand beim Speichern.');
   const nextTargetState = getResolutionHitPointState(resolution);
-  if (nextTargetState) {
+  const nextTargetConditions = getResolutionTargetConditionState(resolution);
+  if (nextTargetState || nextTargetConditions) {
     const previous = stateContext.workingStates?.get(targetId) || stateContext.storedStates?.get(targetId) || {};
-    stateContext.workingStates?.set(targetId, { ...previous, ...nextTargetState });
+    stateContext.workingStates?.set(targetId, {
+      ...previous,
+      ...(nextTargetState || {}),
+      ...(nextTargetConditions ? { temporaryConditions: nextTargetConditions } : {})
+    });
   }
   const nextActorResources = getResolutionActorResourceState(resolution);
   if (nextActorResources || abilityUse.changed) {
@@ -586,6 +600,7 @@ async function handleSubmission(submission = {}) {
           profileActionId: combatResolution.profileActionId || storedSegment.combatActionId || '',
           profileActionKind: combatResolution.profileActionKind || '',
           rollMode: combatResolution.attack.rollMode,
+          weaponGrip: combatResolution.weaponGrip || storedSegment.combatWeaponGrip || 'one-handed',
           paymentMode: storedSegment.combatPaymentMode || 'standard',
           resourceCosts: combatResolution.resourceCosts || [],
           ruleSelections: Array.isArray(storedSegment.combatRuleSelections) ? storedSegment.combatRuleSelections.map(selection => ({ ...selection })) : [],

@@ -1,0 +1,1375 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gwefrydd--stennis-gwefrydd",
+  "slug": "stennis-gwefrydd",
+  "identity": {
+    "name": "Stennis Gwefrydd",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwefrydd",
+      "label": "Haus Gwefrydd"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwefrydd",
+        "familyTitle": "Haus Gwefrydd",
+        "personId": "stennis-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+        "houseId": "house-gwefrydd",
+        "houseName": "Haus Gwefrydd",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Artus Streben",
+          "Rhosmere"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd",
+        "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffon-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--steffon-gwefrydd\",\"name\":\"Steffon Gwefrydd\"},{\"personId\":\"sulwen-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--sulwen-wyrm\",\"name\":\"Sulwen Wyrm\"}],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[{\"personId\":\"thomos-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--thomos-gwefrydd\",\"name\":\"Thomos Gwefrydd\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-dyngwn",
+        "familyTitle": "Haus Dyngwn O'Mathragon",
+        "personId": "stennis-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+        "houseId": "house-gwefrydd",
+        "houseName": "Haus Gwefrydd",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Vortigerns Ruh",
+          "Tanwens Flamme",
+          "Mathragon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view&person=stennis-gwefrydd",
+        "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dyngwn/stennis-gwefrydd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gwefrydd--stennis-gwefrydd",
+      "documentIds": [
+        "person--haus-gwefrydd--stennis-gwefrydd"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gwefrydd--stennis-gwefrydd",
+          "createdAt": "2026-07-20T17:06:42.919Z",
+          "updatedAt": "2026-07-20T17:06:56.958Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwefrydd",
+        "personId": "stennis-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd"
+      },
+      {
+        "familyId": "haus-dyngwn",
+        "personId": "stennis-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view&person=stennis-gwefrydd"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-20T17:06:56.958Z",
+    "sourceDocumentIds": [
+      "person--haus-gwefrydd--stennis-gwefrydd"
+    ],
+    "contentHash": "76235694b8b7eb688329b42fb9e608b8780309fb025bf92813ee97e636456957"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-gwefrydd--stennis-gwefrydd",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere",
+        "inventory": {
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor",
+              "label": "Rüstung"
+            },
+            {
+              "label": "Ausrüstung",
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "portraitPosition": "top",
+          "role": "Haus Gwefrydd",
+          "name": "Stennis Gwefrydd",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "characterId": "person--haus-gwefrydd--stennis-gwefrydd",
+          "carryValue": "Noch festlegen",
+          "showInfoTable": false,
+          "portraitFit": "cover",
+          "hitpoints": "TP / Zustand",
+          "moneyNotice": "",
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false
+          },
+          "level": "Haus Gwefrydd",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "portraitFormat": "portrait",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+          "healthColor": "#5c7f20",
+          "items": [
+            {
+              "imageFit": "contain",
+              "id": "item-mrth8iyx-0-yt0t",
+              "infoRows": [],
+              "tags": "",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Waffe",
+              "name": "Hauptwaffe",
+              "originItemDbKey": "",
+              "individualizedAt": "",
+              "imageFormat": "square",
+              "itemStorageMode": "character",
+              "acquiredAt": "",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "ownerCharacterName": "",
+              "ownerCharacterId": "",
+              "category": "weapon",
+              "quantity": "1",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "itemDbKey": "",
+              "image": ""
+            },
+            {
+              "infoRows": [],
+              "name": "Rüstung / Schutz",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "individualizedAt": "",
+              "image": "",
+              "itemStorageMode": "character",
+              "type": "Rüstung",
+              "tags": "",
+              "ownerCharacterName": "",
+              "originItemDbKey": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "acquiredAt": "",
+              "id": "item-mrth8iyx-1-01b4",
+              "quantity": "1",
+              "icon": "*",
+              "itemDbKey": "",
+              "ownerCharacterId": "",
+              "imagePosition": "center",
+              "category": "armor"
+            },
+            {
+              "ownerCharacterId": "",
+              "acquiredAt": "",
+              "id": "item-mrth8iyx-2-qq7w",
+              "imageFormat": "square",
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "image": "",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "itemStorageMode": "character",
+              "individualizedAt": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "category": "equipment",
+              "ownerCharacterName": "",
+              "icon": "*",
+              "weight": "Noch festlegen"
+            },
+            {
+              "quantity": "1",
+              "id": "item-mrth8iyx-3-11kk",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "itemStorageMode": "character",
+              "icon": "*",
+              "image": "",
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Trinktur",
+              "ownerCharacterName": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "individualizedAt": "",
+              "infoRows": [],
+              "originItemDbKey": "",
+              "itemDbKey": "",
+              "imageFit": "contain"
+            },
+            {
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "itemDbKey": "",
+              "name": "Dokumente / Urkunden",
+              "originItemDbKey": "",
+              "acquiredAt": "",
+              "infoRows": [],
+              "type": "Dokument",
+              "tags": "",
+              "ownerCharacterName": "",
+              "weight": "Noch festlegen",
+              "individualizedAt": "",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "icon": "*",
+              "category": "documents",
+              "id": "item-mrth8iyx-4-ntm7",
+              "ownerCharacterId": "",
+              "quantity": "1",
+              "itemStorageMode": "character"
+            },
+            {
+              "quantity": "1",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "originItemDbKey": "",
+              "category": "other",
+              "tags": "",
+              "image": "",
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "imageFormat": "square",
+              "id": "item-mrth8iyx-5-9ncq",
+              "icon": "*",
+              "ownerCharacterId": "",
+              "itemStorageMode": "character",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "acquiredAt": ""
+            }
+          ],
+          "companions": [
+            {
+              "name": "Reittier / Gefährte",
+              "imagePosition": "top",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "landscape",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "imageFit": "cover",
+              "id": "companion-mrth8iyx-0-kxal",
+              "image": "",
+              "description": "",
+              "status": "Gesund",
+              "species": "Tier oder Begleiter"
+            },
+            {
+              "name": "Treuer Begleiter",
+              "species": "Tier / Person",
+              "image": "",
+              "role": "Gefährte",
+              "status": "Noch festlegen",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "id": "companion-mrth8iyx-1-az8q",
+              "infoRows": [],
+              "description": ""
+            }
+          ],
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "label": "Status",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "label": "Geld",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Tragkapazität"
+            },
+            {
+              "icon": "*",
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Fraktion",
+              "value": "Haus Gwefrydd"
+            },
+            {
+              "icon": "*",
+              "label": "Aufenthalt",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Notiz",
+              "value": "Noch festlegen"
+            }
+          ],
+          "status": "Gesund",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "title": "Charakter-Inventar"
+        },
+        "createdAt": "2026-07-20T17:06:42.919Z",
+        "genealogy": {
+          "portraitPlaceholder": "auto",
+          "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+          "relationships": {
+            "parents": [
+              {
+                "legitimacy": "legitimate",
+                "personId": "steffon-gwefrydd",
+                "certainty": "confirmed",
+                "name": "Steffon Gwefrydd",
+                "worldPersonId": "person--haus-gwefrydd--steffon-gwefrydd",
+                "type": "biological"
+              },
+              {
+                "worldPersonId": "person--haus-wyrm--sulwen-wyrm",
+                "name": "Sulwen Wyrm",
+                "legitimacy": "legitimate",
+                "personId": "sulwen-wyrm",
+                "certainty": "confirmed",
+                "type": "biological"
+              }
+            ],
+            "children": [
+              {
+                "type": "biological",
+                "personId": "thomos-gwefrydd",
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "name": "Thomos Gwefrydd",
+                "worldPersonId": "person--haus-gwefrydd--thomos-gwefrydd"
+              },
+              {
+                "name": "Branwen Gwefrydd",
+                "certainty": "confirmed",
+                "legitimacy": "legitimate",
+                "personId": "branwen-gwefrydd",
+                "type": "biological",
+                "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+              }
+            ],
+            "partners": [
+              {
+                "type": "marriage",
+                "worldPersonId": "person--haus-dyngwn--morwen-dyngwn",
+                "certainty": "confirmed",
+                "personId": "morwen-dyngwn",
+                "status": "active",
+                "name": "Morwen Dyngwn"
+              }
+            ]
+          },
+          "tags": [],
+          "death": "",
+          "houseName": "Haus Gwefrydd",
+          "houseId": "house-gwefrydd",
+          "sex": "male",
+          "birth": "1667",
+          "sources": [
+            {
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd",
+              "publishedAt": "",
+              "personId": "stennis-gwefrydd",
+              "releaseId": "",
+              "lastSyncedAt": "2026-07-20T17:06:42.919Z",
+              "importedAt": "2026-07-20T17:06:42.919Z",
+              "familyId": "haus-gwefrydd",
+              "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffon-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--steffon-gwefrydd\",\"name\":\"Steffon Gwefrydd\"},{\"personId\":\"sulwen-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--sulwen-wyrm\",\"name\":\"Sulwen Wyrm\"}],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[{\"personId\":\"thomos-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--thomos-gwefrydd\",\"name\":\"Thomos Gwefrydd\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}]}}"
+            }
+          ],
+          "status": "alive",
+          "familyRole": "core"
+        },
+        "archived": false,
+        "aliases": [],
+        "emotes": [],
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+        "fraktion": "Haus Gwefrydd",
+        "updatedAt": "2026-07-20T17:06:56.958Z",
+        "origin": "",
+        "currentLocation": "",
+        "playerOwner": "",
+        "emotesOverride": true,
+        "bio": "",
+        "title": "",
+        "name": "Stennis Gwefrydd",
+        "identity": {
+          "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd"
+        },
+        "plotNode": "",
+        "profileLink": "",
+        "role": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-gwefrydd--stennis-gwefrydd",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere",
+    "inventory": {
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "portraitPosition": "top",
+      "role": "Haus Gwefrydd",
+      "name": "Stennis Gwefrydd",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "characterId": "person--haus-gwefrydd--stennis-gwefrydd",
+      "carryValue": "Noch festlegen",
+      "showInfoTable": false,
+      "portraitFit": "cover",
+      "hitpoints": "TP / Zustand",
+      "moneyNotice": "",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false
+      },
+      "level": "Haus Gwefrydd",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0
+      },
+      "portraitFormat": "portrait",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+      "healthColor": "#5c7f20",
+      "items": [
+        {
+          "imageFit": "contain",
+          "id": "item-mrth8iyx-0-yt0t",
+          "infoRows": [],
+          "tags": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Waffe",
+          "name": "Hauptwaffe",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "category": "weapon",
+          "quantity": "1",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "itemDbKey": "",
+          "image": ""
+        },
+        {
+          "infoRows": [],
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "image": "",
+          "itemStorageMode": "character",
+          "type": "Rüstung",
+          "tags": "",
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "acquiredAt": "",
+          "id": "item-mrth8iyx-1-01b4",
+          "quantity": "1",
+          "icon": "*",
+          "itemDbKey": "",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "category": "armor"
+        },
+        {
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "id": "item-mrth8iyx-2-qq7w",
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "image": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "category": "equipment",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "weight": "Noch festlegen"
+        },
+        {
+          "quantity": "1",
+          "id": "item-mrth8iyx-3-11kk",
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "image": "",
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Trinktur",
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "individualizedAt": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "imageFit": "contain"
+        },
+        {
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "itemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "infoRows": [],
+          "type": "Dokument",
+          "tags": "",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "icon": "*",
+          "category": "documents",
+          "id": "item-mrth8iyx-4-ntm7",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "itemStorageMode": "character"
+        },
+        {
+          "quantity": "1",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "originItemDbKey": "",
+          "category": "other",
+          "tags": "",
+          "image": "",
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "id": "item-mrth8iyx-5-9ncq",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "acquiredAt": ""
+        }
+      ],
+      "companions": [
+        {
+          "name": "Reittier / Gefährte",
+          "imagePosition": "top",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFormat": "landscape",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "imageFit": "cover",
+          "id": "companion-mrth8iyx-0-kxal",
+          "image": "",
+          "description": "",
+          "status": "Gesund",
+          "species": "Tier oder Begleiter"
+        },
+        {
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "image": "",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "id": "companion-mrth8iyx-1-az8q",
+          "infoRows": [],
+          "description": ""
+        }
+      ],
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "label": "Status",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Tragkapazität"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Haus Gwefrydd"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "status": "Gesund",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "title": "Charakter-Inventar"
+    },
+    "createdAt": "2026-07-20T17:06:42.919Z",
+    "genealogy": {
+      "portraitPlaceholder": "auto",
+      "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd",
+      "relationships": {
+        "parents": [
+          {
+            "legitimacy": "legitimate",
+            "personId": "steffon-gwefrydd",
+            "certainty": "confirmed",
+            "name": "Steffon Gwefrydd",
+            "worldPersonId": "person--haus-gwefrydd--steffon-gwefrydd",
+            "type": "biological"
+          },
+          {
+            "worldPersonId": "person--haus-wyrm--sulwen-wyrm",
+            "name": "Sulwen Wyrm",
+            "legitimacy": "legitimate",
+            "personId": "sulwen-wyrm",
+            "certainty": "confirmed",
+            "type": "biological"
+          }
+        ],
+        "children": [
+          {
+            "type": "biological",
+            "personId": "thomos-gwefrydd",
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "name": "Thomos Gwefrydd",
+            "worldPersonId": "person--haus-gwefrydd--thomos-gwefrydd"
+          },
+          {
+            "name": "Branwen Gwefrydd",
+            "certainty": "confirmed",
+            "legitimacy": "legitimate",
+            "personId": "branwen-gwefrydd",
+            "type": "biological",
+            "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
+          }
+        ],
+        "partners": [
+          {
+            "type": "marriage",
+            "worldPersonId": "person--haus-dyngwn--morwen-dyngwn",
+            "certainty": "confirmed",
+            "personId": "morwen-dyngwn",
+            "status": "active",
+            "name": "Morwen Dyngwn"
+          }
+        ]
+      },
+      "tags": [],
+      "death": "",
+      "houseName": "Haus Gwefrydd",
+      "houseId": "house-gwefrydd",
+      "sex": "male",
+      "birth": "1667",
+      "sources": [
+        {
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd",
+          "publishedAt": "",
+          "personId": "stennis-gwefrydd",
+          "releaseId": "",
+          "lastSyncedAt": "2026-07-20T17:06:42.919Z",
+          "importedAt": "2026-07-20T17:06:42.919Z",
+          "familyId": "haus-gwefrydd",
+          "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"steffon-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--steffon-gwefrydd\",\"name\":\"Steffon Gwefrydd\"},{\"personId\":\"sulwen-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--sulwen-wyrm\",\"name\":\"Sulwen Wyrm\"}],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[{\"personId\":\"thomos-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--thomos-gwefrydd\",\"name\":\"Thomos Gwefrydd\"},{\"personId\":\"branwen-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--branwen-gwefrydd\",\"name\":\"Branwen Gwefrydd\"}]}}"
+        },
+        {
+          "familyId": "haus-dyngwn",
+          "personId": "stennis-gwefrydd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view&person=stennis-gwefrydd",
+          "fingerprint": "{\"name\":\"Stennis Gwefrydd\",\"title\":\"\",\"birth\":\"1667\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dyngwn/stennis-gwefrydd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morwen-dyngwn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"children\":[]}}"
+        }
+      ],
+      "status": "alive",
+      "familyRole": "core"
+    },
+    "archived": false,
+    "aliases": [],
+    "emotes": [],
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+    "fraktion": "Haus Gwefrydd",
+    "updatedAt": "2026-07-20T17:06:56.958Z",
+    "origin": "",
+    "currentLocation": "",
+    "playerOwner": "",
+    "emotesOverride": true,
+    "bio": "",
+    "title": "",
+    "name": "Stennis Gwefrydd",
+    "identity": {
+      "worldPersonId": "person--haus-gwefrydd--stennis-gwefrydd"
+    },
+    "plotNode": "",
+    "profileLink": "",
+    "role": ""
+  }
+}

@@ -5,10 +5,11 @@ import {
   getMaximumHitPoints,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-spell-grades-v1';
+} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
 
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);
+export const CHARACTER_ATTRIBUTE_INCREASE_LEVELS = Object.freeze([4, 8, 12, 16, 20]);
 
 function boundedInteger(value, fallback, minimum, maximum) {
   if (value === '' || value == null) return fallback;
@@ -37,6 +38,14 @@ function getNextProgression(profile) {
   if (level < 20) return { level: level + 1, specialLevels, kind: 'normal' };
   if (specialLevels < 10) return { level, specialLevels: specialLevels + 1, kind: 'special' };
   return null;
+}
+
+export function getLevelUpAttributePointAllowance(profile = {}) {
+  const normalized = sanitizeCharacterCombatProfile(profile);
+  const next = getNextProgression(normalized);
+  if (!next) return 0;
+  if (next.kind === 'special') return 4;
+  return CHARACTER_ATTRIBUTE_INCREASE_LEVELS.includes(next.level) ? 2 : 0;
 }
 
 function makeUniqueId(profile, collection, prefix, targetLevel) {
@@ -187,6 +196,14 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   }
 
   const plan = normalizePlan(beforeProfile, planValue);
+  const attributePointAllowance = getLevelUpAttributePointAllowance(beforeProfile);
+  const allocatedAttributePoints = Object.values(plan.attributeIncreases)
+    .reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
+  const attributeErrors = allocatedAttributePoints === attributePointAllowance
+    ? []
+    : [attributePointAllowance > 0
+        ? `Verteile für diesen Stufenaufstieg genau ${attributePointAllowance} Attributspunkte (${allocatedAttributePoints} vergeben).`
+        : 'Dieser Stufenaufstieg gewährt keine Attributspunkte.'];
   const nextProfile = sanitizeCharacterCombatProfile(beforeProfile);
   const beforeMaximumHitPoints = getMaximumHitPoints(beforeProfile);
   const beforeProficiency = getProficiencyBonus(beforeProfile);
@@ -250,11 +267,14 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   appendChange(changes, 'proficiency', 'Kompetenzbonus', beforeProficiency, afterProficiency);
 
   return {
-    ready: true,
-    errors: [],
+    ready: attributeErrors.length === 0,
+    errors: attributeErrors,
     profile: finalProfile,
     plan,
     changes,
+    attributePointAllowance,
+    allocatedAttributePoints,
+    remainingAttributePoints: attributePointAllowance - allocatedAttributePoints,
     before: {
       level: beforeLevel,
       maximumHitPoints: beforeMaximumHitPoints,

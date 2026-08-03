@@ -1,0 +1,1496 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--hTN74LdJjXUFz7X7ReRr",
+  "slug": "cadfan-draig",
+  "identity": {
+    "name": "Cadfan Draig",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--cadfan-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "cadfan-draig",
+        "worldPersonId": "person--haus-draig--cadfan-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig",
+        "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"},{\"personId\":\"alaw-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaw-grawn\",\"name\":\"Alaw Grawn\"}],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[{\"personId\":\"einion-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--einion-draig\",\"name\":\"Einion Draig\"},{\"personId\":\"carys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--carys-draig\",\"name\":\"Carys Draig\"}]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": [
+        "Gwynthor > Gwynthor - Haus Draig"
+      ]
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "hTN74LdJjXUFz7X7ReRr",
+      "documentIds": [
+        "hTN74LdJjXUFz7X7ReRr"
+      ],
+      "documents": [
+        {
+          "documentId": "hTN74LdJjXUFz7X7ReRr",
+          "createdAt": "2026-07-26T10:56:37.748Z",
+          "updatedAt": "2026-07-26T10:56:37.748Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "cadfan-draig",
+        "worldPersonId": "person--haus-draig--cadfan-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-26T10:56:37.748Z",
+    "sourceDocumentIds": [
+      "hTN74LdJjXUFz7X7ReRr"
+    ],
+    "contentHash": "eca0445923d83f404c126921a541c0bcc1df7401b08ded85fe74dabbba67bd4e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "hTN74LdJjXUFz7X7ReRr",
+        "taxonomyPath": "",
+        "aliases": [],
+        "emotesOverride": true,
+        "status": "",
+        "bio": "Cadfan Draig ist der Herold und Würdenträger der Grafschaft von Celtigerns Wacht.",
+        "updatedAt": "2026-07-26T10:56:37.748Z",
+        "archived": false,
+        "profileLink": "",
+        "currentLocation": "",
+        "portrait": "https://i.imgur.com/9BKpYTU.jpeg",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "relevance": "",
+        "playerOwner": "patrick",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/uZmDEkN.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ZpY7aeK.png"
+          },
+          {
+            "img": "https://i.imgur.com/alsX5Wr.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/RMtCMTe.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/fL1y896.png"
+          },
+          {
+            "img": "https://i.imgur.com/tGb6Ib7.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Rx9Tuh3.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/TFTvK27.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gDJNfss.png"
+          },
+          {
+            "img": "https://i.imgur.com/TsLBqSK.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/u8u5IZS.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/4nSFxzL.png"
+          },
+          {
+            "img": "https://i.imgur.com/3TkaQcg.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/PIXnyqQ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/0LByeTU.png"
+          },
+          {
+            "img": "https://i.imgur.com/vcU9AWA.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Jeg833r.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/oTkE5Qz.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/nuZGHlX.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gaKw27g.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/suzY5Sa.png"
+          },
+          {
+            "img": "https://i.imgur.com/4WrvCTC.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/pwPB3q3.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/KKcaElq.png"
+          },
+          {
+            "img": "https://i.imgur.com/jnWMM9b.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/6J7CdjA.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/bPYvoxe.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/sQ8dFc0.png"
+          },
+          {
+            "img": "https://i.imgur.com/yjapLEM.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/WSAwneJ.png"
+          },
+          {
+            "img": "https://i.imgur.com/0vHQjYk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/35L6uSm.png"
+          },
+          {
+            "img": "https://i.imgur.com/avZ4vNH.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/SwiWaK3.png"
+          },
+          {
+            "img": "https://i.imgur.com/D0fN7gP.png",
+            "label": ""
+          }
+        ],
+        "title": "Herold des Grafen, Gwynthor",
+        "role": "",
+        "origin": "",
+        "createdAt": "2026-07-26T10:56:37.748Z",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "inventory": {
+          "moneyNotice": "",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "infoRows": [],
+          "companions": [
+            {
+              "description": "",
+              "image": "",
+              "role": "Begleiter",
+              "statusColor": "#5c7f20",
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "species": "Tier oder Begleiter",
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "status": "Gesund",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": []
+            },
+            {
+              "description": "",
+              "imagePosition": "top",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imageFit": "cover",
+              "infoRows": [],
+              "image": "",
+              "statusColor": "#5c7f20",
+              "status": "Noch festlegen",
+              "species": "Tier / Person",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l"
+            }
+          ],
+          "portrait": "https://i.imgur.com/9BKpYTU.jpeg",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "status": "Gesund",
+          "hitpoints": "TP / Zustand",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "resultText": "",
+            "updatedAt": "",
+            "status": "",
+            "step": 0
+          },
+          "showInfoTable": false,
+          "carryValue": "Noch festlegen",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "portraitFormat": "portrait",
+          "items": [
+            {
+              "ownerCharacterName": "",
+              "type": "Waffe",
+              "imageFormat": "square",
+              "tags": "",
+              "image": "",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "individualizedAt": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Hauptwaffe",
+              "category": "weapon",
+              "id": "item-mqu1vat1-0-w8ef",
+              "icon": "*",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imageFit": "contain",
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "imagePosition": "center",
+              "acquiredAt": ""
+            },
+            {
+              "category": "armor",
+              "ownerCharacterId": "",
+              "itemDbKey": "",
+              "quantity": "1",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "id": "item-mqu1vat1-1-exvo",
+              "acquiredAt": "",
+              "image": "",
+              "itemStorageMode": "character",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "originItemDbKey": "",
+              "individualizedAt": "",
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Rüstung",
+              "infoRows": []
+            },
+            {
+              "category": "equipment",
+              "individualizedAt": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "tags": "",
+              "id": "item-mqu1vat1-2-0fx2",
+              "itemStorageMode": "character",
+              "image": "",
+              "type": "Ausrüstung",
+              "name": "Reiseausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterName": "",
+              "icon": "*",
+              "ownerCharacterId": "",
+              "itemDbKey": "",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "originItemDbKey": "",
+              "acquiredAt": "",
+              "infoRows": []
+            },
+            {
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "icon": "*",
+              "itemDbKey": "",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "image": "",
+              "acquiredAt": "",
+              "category": "potions",
+              "infoRows": [],
+              "imageFormat": "square",
+              "ownerCharacterName": "",
+              "individualizedAt": "",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "tags": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "originItemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center"
+            },
+            {
+              "individualizedAt": "",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "imagePosition": "center",
+              "type": "Dokument",
+              "originItemDbKey": "",
+              "image": "",
+              "tags": "",
+              "itemDbKey": "",
+              "name": "Dokumente / Urkunden",
+              "quantity": "1",
+              "category": "documents",
+              "infoRows": [],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "ownerCharacterName": "",
+              "ownerCharacterId": "",
+              "icon": "*",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-4-ajrj",
+              "itemStorageMode": "character"
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "acquiredAt": "",
+              "infoRows": [],
+              "imagePosition": "center",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "individualizedAt": "",
+              "originItemDbKey": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "itemStorageMode": "character",
+              "name": "Persönlicher Gegenstand",
+              "itemDbKey": "",
+              "tags": "",
+              "imageFormat": "square",
+              "type": "Sonstiges",
+              "category": "other",
+              "ownerCharacterName": "",
+              "ownerCharacterId": "",
+              "quantity": "1"
+            }
+          ],
+          "name": "Cadfan Draig",
+          "characterId": "hTN74LdJjXUFz7X7ReRr",
+          "role": "Herold des Grafen, Gwynthor",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "title": "Charakter-Inventar"
+        },
+        "plotNode": "",
+        "name": "Cadfan Draig",
+        "genealogy": {
+          "tags": [],
+          "status": "",
+          "portraitPlaceholder": "",
+          "familyRole": "",
+          "worldPersonId": "",
+          "sex": "unknown",
+          "birth": "",
+          "houseName": "",
+          "sources": [],
+          "relationships": {
+            "partners": [],
+            "parents": [],
+            "children": []
+          },
+          "houseId": "",
+          "death": ""
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "hTN74LdJjXUFz7X7ReRr",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "aliases": [],
+    "emotesOverride": true,
+    "status": "",
+    "bio": "Cadfan Draig ist der Herold und Würdenträger der Grafschaft von Celtigerns Wacht.",
+    "updatedAt": "2026-07-26T10:56:37.748Z",
+    "archived": false,
+    "profileLink": "",
+    "currentLocation": "",
+    "portrait": "https://i.imgur.com/9BKpYTU.jpeg",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "relevance": "",
+    "playerOwner": "patrick",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/uZmDEkN.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ZpY7aeK.png"
+      },
+      {
+        "img": "https://i.imgur.com/alsX5Wr.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/RMtCMTe.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/fL1y896.png"
+      },
+      {
+        "img": "https://i.imgur.com/tGb6Ib7.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Rx9Tuh3.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/TFTvK27.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gDJNfss.png"
+      },
+      {
+        "img": "https://i.imgur.com/TsLBqSK.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/u8u5IZS.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/4nSFxzL.png"
+      },
+      {
+        "img": "https://i.imgur.com/3TkaQcg.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/PIXnyqQ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/0LByeTU.png"
+      },
+      {
+        "img": "https://i.imgur.com/vcU9AWA.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Jeg833r.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/oTkE5Qz.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nuZGHlX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gaKw27g.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/suzY5Sa.png"
+      },
+      {
+        "img": "https://i.imgur.com/4WrvCTC.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/pwPB3q3.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/KKcaElq.png"
+      },
+      {
+        "img": "https://i.imgur.com/jnWMM9b.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/6J7CdjA.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/bPYvoxe.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/sQ8dFc0.png"
+      },
+      {
+        "img": "https://i.imgur.com/yjapLEM.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/WSAwneJ.png"
+      },
+      {
+        "img": "https://i.imgur.com/0vHQjYk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/35L6uSm.png"
+      },
+      {
+        "img": "https://i.imgur.com/avZ4vNH.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/SwiWaK3.png"
+      },
+      {
+        "img": "https://i.imgur.com/D0fN7gP.png",
+        "label": ""
+      }
+    ],
+    "title": "Herold des Grafen, Gwynthor",
+    "role": "",
+    "origin": "",
+    "createdAt": "2026-07-26T10:56:37.748Z",
+    "identity": {
+      "worldPersonId": "person--haus-draig--cadfan-draig"
+    },
+    "inventory": {
+      "moneyNotice": "",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "infoRows": [],
+      "companions": [
+        {
+          "description": "",
+          "image": "",
+          "role": "Begleiter",
+          "statusColor": "#5c7f20",
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "species": "Tier oder Begleiter",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": []
+        },
+        {
+          "description": "",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFit": "cover",
+          "infoRows": [],
+          "image": "",
+          "statusColor": "#5c7f20",
+          "status": "Noch festlegen",
+          "species": "Tier / Person",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "id": "companion-mqu1vat2-1-5e7l"
+        }
+      ],
+      "portrait": "https://i.imgur.com/9BKpYTU.jpeg",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "resultText": "",
+        "updatedAt": "",
+        "status": "",
+        "step": 0
+      },
+      "showInfoTable": false,
+      "carryValue": "Noch festlegen",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portraitFormat": "portrait",
+      "items": [
+        {
+          "ownerCharacterName": "",
+          "type": "Waffe",
+          "imageFormat": "square",
+          "tags": "",
+          "image": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "individualizedAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Hauptwaffe",
+          "category": "weapon",
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "*",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFit": "contain",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "acquiredAt": ""
+        },
+        {
+          "category": "armor",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "id": "item-mqu1vat1-1-exvo",
+          "acquiredAt": "",
+          "image": "",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Rüstung",
+          "infoRows": []
+        },
+        {
+          "category": "equipment",
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "tags": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemStorageMode": "character",
+          "image": "",
+          "type": "Ausrüstung",
+          "name": "Reiseausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "infoRows": []
+        },
+        {
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": "",
+          "acquiredAt": "",
+          "category": "potions",
+          "infoRows": [],
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "individualizedAt": "",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "tags": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center"
+        },
+        {
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "type": "Dokument",
+          "originItemDbKey": "",
+          "image": "",
+          "tags": "",
+          "itemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "quantity": "1",
+          "category": "documents",
+          "infoRows": [],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "icon": "*",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-4-ajrj",
+          "itemStorageMode": "character"
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "itemStorageMode": "character",
+          "name": "Persönlicher Gegenstand",
+          "itemDbKey": "",
+          "tags": "",
+          "imageFormat": "square",
+          "type": "Sonstiges",
+          "category": "other",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "quantity": "1"
+        }
+      ],
+      "name": "Cadfan Draig",
+      "characterId": "hTN74LdJjXUFz7X7ReRr",
+      "role": "Herold des Grafen, Gwynthor",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "title": "Charakter-Inventar"
+    },
+    "plotNode": "",
+    "name": "Cadfan Draig",
+    "genealogy": {
+      "tags": [],
+      "status": "alive",
+      "portraitPlaceholder": "auto",
+      "familyRole": "core",
+      "worldPersonId": "person--haus-draig--cadfan-draig",
+      "sex": "unknown",
+      "birth": "1696",
+      "houseName": "Haus Draig",
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "cadfan-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=cadfan-draig",
+          "fingerprint": "{\"name\":\"Cadfan Draig\",\"title\":\"\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"},{\"personId\":\"alaw-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaw-grawn\",\"name\":\"Alaw Grawn\"}],\"partners\":[{\"personId\":\"wynonna-fiachrach\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-fiachrach--wynonna-fiachrach\",\"name\":\"Wynonna Fiachrach\"}],\"children\":[{\"personId\":\"einion-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--einion-draig\",\"name\":\"Einion Draig\"},{\"personId\":\"carys-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--carys-draig\",\"name\":\"Carys Draig\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "maredudd-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--maredudd-draig",
+            "name": "Maredudd Draig"
+          },
+          {
+            "personId": "alaw-grawn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-grawn--alaw-grawn",
+            "name": "Alaw Grawn"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "wynonna-fiachrach",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
+            "name": "Wynonna Fiachrach"
+          }
+        ],
+        "children": [
+          {
+            "personId": "einion-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--einion-draig",
+            "name": "Einion Draig"
+          },
+          {
+            "personId": "carys-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--carys-draig",
+            "name": "Carys Draig"
+          }
+        ]
+      },
+      "houseId": "house-draig",
+      "death": ""
+    }
+  }
+}

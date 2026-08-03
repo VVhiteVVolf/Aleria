@@ -1,0 +1,995 @@
+{
+  "schema": "aleria.character-sync-report",
+  "schemaVersion": 1,
+  "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+  "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+  "summary": {
+    "sourceDocuments": 179,
+    "total": 173,
+    "mergedSameNameGroups": 4,
+    "familyLinked": 93,
+    "familyAmbiguous": 0,
+    "familyPending": 80,
+    "primaryFamily": 93,
+    "primaryGroup": 26,
+    "primaryPlace": 25,
+    "primaryUnassigned": 29,
+    "duplicateWorldPeople": 0
+  },
+  "pending": [
+    {
+      "recordId": "character--ax26chmgvtaURnzC0n0l",
+      "name": "Brychan",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--2UgcQTdEEpSJDTNKxx0U",
+      "name": "Rhodri",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--01OfFXeScnCoL2eNMPAM",
+      "name": "Tegid",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--aJhLQojT7yyHYhGyQeJY",
+      "name": "Agnes",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--B6vkXUSpc1uLrbdkjwWi",
+      "name": "Alara",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--bLTVJ1RvvaAQLhZVyMWz",
+      "name": "Arvel",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--80W2QuDvlWJ7I40956HH",
+      "name": "Avira",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--F0kNfSsKDSRNBAV5yzeV",
+      "name": "Bjorn Skald",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--awrSFBbKY6HVAC391tqB",
+      "name": "Breandan Dál'Tartarfhuil",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--cxFkzE5K2LDNcUI8w7i6",
+      "name": "Colm",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--eYAYDso0ZdNrlSrqo79R",
+      "name": "Cynwrig Pysgod O'Tredegar",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--sbF0O67or4uLiAS9LhIU",
+      "name": "Gwyneira O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--AF1ceE97cg4ShC7OAvhM",
+      "name": "Rolard Altenwerth",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--8dmEDgZiC8k8e9mLc47D",
+      "name": "Selene",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--Ehv25KycKw79gWlhjzyv",
+      "name": "Sinead",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--JAoyCqABsUSdEiZSRNjK",
+      "name": "Trystan O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--EPwTMvE8J0vG76aXt2NK",
+      "name": "Vaughn Cwingod",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--qoEKhiI091TI7Lauk2yA",
+      "name": "Ysolde O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--HwrrZFjUCd0mMJgtYyx7",
+      "name": "Zibhi (An'Feannag)",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--BNxhA7jpBQMpTuvjY2Iv",
+      "name": "Alard",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--gtFWOieVj64YehNR5Rpv",
+      "name": "Arion Hundt  'zu Falkengrund'",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--mOmrmO7kZW8seVwRIIDu",
+      "name": "Benjamin",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--sV3WumbptfbvSoVf6PAA",
+      "name": "Egan Gochwyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--mgmmdQJY0FWLYvZ1goVs",
+      "name": "Eira Gochwyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--87PtbbgKtQE2hsZcagbV",
+      "name": "Mairead Gochwyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--YwxG9YkeHojIUnKpWi5S",
+      "name": "Nia Gochwyr",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--nLIylooQSlgWjUsA1fpI",
+      "name": "Arianwen Bradrhith",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "bradrhith-hof",
+        "label": "Bradrhith Hof",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--go0D7CiweVxWK1CqVgZz",
+      "name": "Gruffudd Gwregysdu",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "bradrhith-hof",
+        "label": "Bradrhith Hof",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--WjNUoPlIiFgdUHJQkJhU",
+      "name": "Llyr Dewrdd",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "bradrhith-hof",
+        "label": "Bradrhith Hof",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--QuZzplDSReDR5ErEk0VI",
+      "name": "Merediton Morforwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "carngol",
+        "label": "Carngol",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--dq4z6WvMJSpyAR3FqpX3",
+      "name": "Sianmue Morforwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "carngol",
+        "label": "Carngol",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--micIJWlN8CkuedMo490X",
+      "name": "Gwenllian Lyswen",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "celtigerns-wacht-llyfaen",
+        "label": "Celtigerns Wacht - Llyfaen",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--ImdhjbPiRmMDzDZ5lHgT",
+      "name": "Eoghan Mac Ard Cumhaill",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "dun-athar",
+        "label": "Dun Athar",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--blsp77KJYuEuflT8SOhs",
+      "name": "Muireen Mac Ard Cumhaill",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "dun-athar",
+        "label": "Dun Athar",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--2bCru7S3YGrzjFnYpnN9",
+      "name": "Senán Mac Ard Cumhaill",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "dun-athar",
+        "label": "Dun Athar",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--uymhbfpxpuyYbSMU7VLN",
+      "name": "Aodhnait Ui'Morna",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gaelan",
+        "label": "Gaelan",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--z4ShYR7bp3PV28FmMTDK",
+      "name": "Saorlaith (Geb. Cumhaill) Ui'Morna",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gaelan",
+        "label": "Gaelan",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--bFUmD1snc4TSIGLRPuSx",
+      "name": "Arian Seathwyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--NfpyXayG4KoYqp5xQZd5",
+      "name": "Cai Taflu",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--N5dG28Nj2pGovQPOHYJl",
+      "name": "Galahad Draig O'Gwynthor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--6atOllMA637Z2VNAZAxf",
+      "name": "Gethin",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--67GWb6YWz8rBsxNUNRoI",
+      "name": "Huw",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--jTzoT0bqb2lfmslJ05FJ",
+      "name": "Kevan Pert",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--wQWeGmSn3YRBxoituMEh",
+      "name": "Madoc Llawgwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--rnUp9XrpUPUVELhWbX8F",
+      "name": "Schreier",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--cjmjs5y07J2pSPMImekh",
+      "name": "Sir Aledryn Cledrdu",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--wg5NZfmiGgGYxgPdc89u",
+      "name": "Sir Egon Gafyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
+      "name": "Asta Brathfengr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "klangheim",
+        "label": "Klangheim",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--azkLuGRYThWXgFtJdpu6",
+      "name": "Gunhild Varulv",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "klangheim",
+        "label": "Klangheim",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--2Ys1zQX27FclPMTPkU5L",
+      "name": "Solja Brathfengr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "klangheim",
+        "label": "Klangheim",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--w9fadKUpbAYPMqUWEodN",
+      "name": "Yvain Neidr O'Llanvane",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "silberinseln",
+        "label": "Silberinseln",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--Hx23IAHjVHeuFUJGZPAj",
+      "name": "Bryn Rhydderch",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--Yj5xREgJtjrAs8JOpOLe",
+      "name": "Cadog Môrwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--h52Rej5uKSevVFqc1CGk",
+      "name": "Chefkoch Draig",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zlkBFnEc1nLcBWTjUBTM",
+      "name": "Cynan Bachyngoch",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--FRideQ8WB7YSGwyQSRfm",
+      "name": "Draig Bursche I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--BwYD9v8oS2NGSlr8bazR",
+      "name": "Draig Bursche II.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--DN7qpq7o5VQxFCYkuvpP",
+      "name": "Draig Bursche III.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--B5Riv0tKuhPlDZl6O337",
+      "name": "Draig Dienstmagd",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--ug60OTl0SjvmKM7165GE",
+      "name": "Draig Knecht",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--Pghf8zWTOD6uDC2GBtZa",
+      "name": "Draig Küchenmagd I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--v8JncFY1IV2osYlBju4j",
+      "name": "Draig Küchenmagd II.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--b5xS20UyFNDBN3S96F92",
+      "name": "Draig Protokollführer",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--hojcjYJteMtL0Wv88XLA",
+      "name": "Draig Zofe",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--3PTbknSqFvPdmpuXe7aK",
+      "name": "Eirlys Alun",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--j4fZKrXkARcP9oDAUSeb",
+      "name": "Emrys Porthan",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--pZOlHOyG7aKr8xFX2rIU",
+      "name": "Fürsprecher",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--F4IX2fVbKzZ4BBJg0tUK",
+      "name": "Fürsprecherin",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--Xm1MNKjNq699jTPGoej5",
+      "name": "Männlicher Draig Waffenknecht",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--5jF7PqbF6uxh154TQyug",
+      "name": "Namenlose Zofe",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--RCIAmYF1pCWX3vbqJpHX",
+      "name": "Namenloser Diener II",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--HWUuhs0eUIaWLQ5IwdE2",
+      "name": "Namenloser Draig Waffenknecht I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--ExQDi0xrpkmXAXUL1Ukh",
+      "name": "Namenloser Draig Waffenknecht II.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--XVeiNvgFfsmtomLuIjcA",
+      "name": "Namenloser Draig Waffenknecht III.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--aArU51fkAO1XZ46BDshm",
+      "name": "Olafr Schleierauge",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--6yWirueXidKYc9ALlSd8",
+      "name": "Stallknecht I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--9SaX3A7TqunPSZpLA2kQ",
+      "name": "Stallmagd I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--YJBPWL1J4t5Y6Z8aR75w",
+      "name": "Weiblicher Draig Waffenknecht",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--mm0oS9MrdeC7IBrgrW3h",
+      "name": "Zuchtmeister Draig I.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--HCZmTm9C8T49RwshuF0V",
+      "name": "Zuchtmeisterin Draig II.",
+      "status": "pending",
+      "primary": {
+        "kind": "unassigned",
+        "id": "unassigned",
+        "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    }
+  ],
+  "mergedSameNameGroups": [
+    {
+      "name": "Dehlia Gelyn",
+      "canonicalDocumentId": "fBCCU7G0r163GXUBqgYg",
+      "documentIds": [
+        "fBCCU7G0r163GXUBqgYg",
+        "mRCEkgEQByaxQWC0PJN5"
+      ],
+      "ages": []
+    },
+    {
+      "name": "Gawain Draig",
+      "canonicalDocumentId": "q1QtSIug74FzzwUAqWrs",
+      "documentIds": [
+        "q1QtSIug74FzzwUAqWrs",
+        "q1QtSIug74FzzwUAqWrs"
+      ],
+      "ages": [
+        "Geburtsjahr 1722"
+      ]
+    },
+    {
+      "name": "Gwendolyn Draig (geb. Aderyn)",
+      "canonicalDocumentId": "15ml9RhSvJPXof7z4qY3",
+      "documentIds": [
+        "15ml9RhSvJPXof7z4qY3",
+        "uiKiMFXC6OEWOdDenbiM",
+        "XWJ6XXwvpESHR3zAXkJx"
+      ],
+      "ages": []
+    },
+    {
+      "name": "Meurig Draig",
+      "canonicalDocumentId": "E8HXkgi2kdkXaqkxrnRo",
+      "documentIds": [
+        "E8HXkgi2kdkXaqkxrnRo",
+        "N11mTG3vo2rLq2eQxOXE",
+        "oVvNboWTUionb0PCZDf7"
+      ],
+      "ages": []
+    }
+  ],
+  "duplicateWorldPersonIds": []
+}

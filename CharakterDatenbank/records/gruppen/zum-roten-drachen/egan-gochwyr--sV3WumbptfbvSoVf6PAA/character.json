@@ -1,0 +1,1006 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--sV3WumbptfbvSoVf6PAA",
+  "slug": "egan-gochwyr",
+  "identity": {
+    "name": "Egan Gochwyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "zum-roten-drachen",
+      "label": "Zum Roten Drachen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Zum Roten Drachen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "sV3WumbptfbvSoVf6PAA",
+      "documentIds": [
+        "sV3WumbptfbvSoVf6PAA"
+      ],
+      "documents": [
+        {
+          "documentId": "sV3WumbptfbvSoVf6PAA",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "sV3WumbptfbvSoVf6PAA"
+    ],
+    "contentHash": "2087e0031398094a32b2f87db0f87cfcabb8c2e0f47c3f3b17b1e44c387ba71c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "sV3WumbptfbvSoVf6PAA",
+        "name": "Egan Gochwyr",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/FvgfwKF.png",
+            "label": ""
+          }
+        ],
+        "bio": "Egan Gochwyr ist der rechtliche Eigentümer und die oberste Entscheidungsinstanz des Roten Drachen. Er trägt die Gesamtverantwortung für Betrieb, Vertragstreue und Außenvertretung gegenüber Pachtgebern und Gilden. Im täglichen Ablauf übernimmt er persönlich den Ausschank, empfängt Gäste und wahrt die Ordnung im Schankraum. Die fachliche Brau- und Destillationsarbeit führt er nicht selbst aus, behäl",
+        "portrait": "https://i.imgur.com/ECoZULm.png",
+        "title": "Taverneninhaber des Roten Drachen",
+        "inventory": {
+          "level": "Penderyn Destillerie & Brauereigilde",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "companions": [
+            {
+              "image": "",
+              "role": "Begleiter",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "name": "Reittier / Gefährte",
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "imageFit": "cover",
+              "species": "Tier oder Begleiter",
+              "id": "companion-mqu1vat2-0-zz2n"
+            },
+            {
+              "status": "Noch festlegen",
+              "species": "Tier / Person",
+              "description": "",
+              "imageFit": "cover",
+              "infoRows": [],
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": ""
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "portraitFit": "cover",
+          "role": "Taverneninhaber des Roten Drachen",
+          "moneyNotice": "",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "name": "Egan Gochwyr",
+          "title": "Charakter-Inventar",
+          "status": "Gesund",
+          "hitpoints": "TP / Zustand",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "resultText": "",
+            "open": false,
+            "updatedAt": "",
+            "status": ""
+          },
+          "portrait": "https://i.imgur.com/ECoZULm.png",
+          "items": [
+            {
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "tags": "",
+              "id": "item-mqu1vat1-0-w8ef",
+              "type": "Waffe",
+              "image": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "name": "Hauptwaffe",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "imageFormat": "square",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "weapon"
+            },
+            {
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-1-exvo",
+              "icon": "*",
+              "category": "armor",
+              "quantity": "1",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "type": "Rüstung"
+            },
+            {
+              "imageFormat": "square",
+              "category": "equipment",
+              "imagePosition": "center",
+              "icon": "*",
+              "quantity": "1",
+              "id": "item-mqu1vat1-2-0fx2",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "type": "Ausrüstung",
+              "image": "",
+              "imageFit": "contain",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "icon": "*",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "potions",
+              "infoRows": [],
+              "id": "item-mqu1vat1-3-2lgm",
+              "tags": "",
+              "imageFormat": "square",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "image": "",
+              "name": "Heil- oder Verbrauchsgut"
+            },
+            {
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "imageFit": "contain",
+              "infoRows": [],
+              "id": "item-mqu1vat1-4-ajrj",
+              "imagePosition": "center",
+              "category": "documents",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "quantity": "1",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "id": "item-mqu1vat1-5-5kao",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Sonstiges",
+              "imageFormat": "square",
+              "category": "other",
+              "image": "",
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand"
+            }
+          ],
+          "portraitPosition": "top",
+          "infoRows": [],
+          "portraitFormat": "portrait",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ]
+        },
+        "fraktion": "Penderyn Destillerie & Brauereigilde"
+      }
+    ]
+  },
+  "character": {
+    "id": "sV3WumbptfbvSoVf6PAA",
+    "name": "Egan Gochwyr",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/FvgfwKF.png",
+        "label": ""
+      }
+    ],
+    "bio": "Egan Gochwyr ist der rechtliche Eigentümer und die oberste Entscheidungsinstanz des Roten Drachen. Er trägt die Gesamtverantwortung für Betrieb, Vertragstreue und Außenvertretung gegenüber Pachtgebern und Gilden. Im täglichen Ablauf übernimmt er persönlich den Ausschank, empfängt Gäste und wahrt die Ordnung im Schankraum. Die fachliche Brau- und Destillationsarbeit führt er nicht selbst aus, behäl",
+    "portrait": "https://i.imgur.com/ECoZULm.png",
+    "title": "Taverneninhaber des Roten Drachen",
+    "inventory": {
+      "level": "Penderyn Destillerie & Brauereigilde",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "companions": [
+        {
+          "image": "",
+          "role": "Begleiter",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "name": "Reittier / Gefährte",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "species": "Tier oder Begleiter",
+          "id": "companion-mqu1vat2-0-zz2n"
+        },
+        {
+          "status": "Noch festlegen",
+          "species": "Tier / Person",
+          "description": "",
+          "imageFit": "cover",
+          "infoRows": [],
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": ""
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "portraitFit": "cover",
+      "role": "Taverneninhaber des Roten Drachen",
+      "moneyNotice": "",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "name": "Egan Gochwyr",
+      "title": "Charakter-Inventar",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "resultText": "",
+        "open": false,
+        "updatedAt": "",
+        "status": ""
+      },
+      "portrait": "https://i.imgur.com/ECoZULm.png",
+      "items": [
+        {
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "tags": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "type": "Waffe",
+          "image": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "name": "Hauptwaffe",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "imageFormat": "square",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "weapon"
+        },
+        {
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-1-exvo",
+          "icon": "*",
+          "category": "armor",
+          "quantity": "1",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "type": "Rüstung"
+        },
+        {
+          "imageFormat": "square",
+          "category": "equipment",
+          "imagePosition": "center",
+          "icon": "*",
+          "quantity": "1",
+          "id": "item-mqu1vat1-2-0fx2",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "type": "Ausrüstung",
+          "image": "",
+          "imageFit": "contain",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "potions",
+          "infoRows": [],
+          "id": "item-mqu1vat1-3-2lgm",
+          "tags": "",
+          "imageFormat": "square",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "image": "",
+          "name": "Heil- oder Verbrauchsgut"
+        },
+        {
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Dokument",
+          "name": "Dokumente / Urkunden",
+          "imageFit": "contain",
+          "infoRows": [],
+          "id": "item-mqu1vat1-4-ajrj",
+          "imagePosition": "center",
+          "category": "documents",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "quantity": "1",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": ""
+        },
+        {
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-mqu1vat1-5-5kao",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "category": "other",
+          "image": "",
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand"
+        }
+      ],
+      "portraitPosition": "top",
+      "infoRows": [],
+      "portraitFormat": "portrait",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ]
+    },
+    "fraktion": "Penderyn Destillerie & Brauereigilde",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

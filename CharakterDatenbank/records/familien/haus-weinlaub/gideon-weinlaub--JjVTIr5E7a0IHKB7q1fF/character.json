@@ -1,0 +1,1325 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--JjVTIr5E7a0IHKB7q1fF",
+  "slug": "gideon-weinlaub",
+  "identity": {
+    "name": "Gideon Weinlaub",
+    "aliases": [],
+    "worldPersonId": "person--haus-weinlaub--gideon-weinlaub"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-weinlaub",
+      "label": "Haus Weinlaub"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-weinlaub",
+        "familyTitle": "Haus Weinlaub",
+        "personId": "gideon-weinlaub",
+        "worldPersonId": "person--haus-weinlaub--gideon-weinlaub",
+        "houseId": "house-weinlaub",
+        "houseName": "Haus Weinlaub",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Weisenfluh",
+          "Region Ewigensee",
+          "Ewigensee"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view&person=gideon-weinlaub",
+        "fingerprint": "{\"name\":\"Gideon Weinlaub\",\"title\":\"Enterbter Erstgeborener · seit 1728 fahrender Ritter\",\"birth\":\"1711\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-weinlaub\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-weinlaub/gideon-weinlaub.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Enterbt\",\"Verstoßen\",\"Fahrender Ritter\",\"Im Exil\"],\"relationships\":{\"parents\":[{\"personId\":\"josiah-weinlaub\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-weinlaub--josiah-weinlaub\",\"name\":\"Josiah Weinlaub\"},{\"personId\":\"rahel-weinlaub-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--rahel-weinlaub-spouse\",\"name\":\"Rahel\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "weisenfluh-weinlaub",
+        "label": "Weisenfluh, Weinlaub",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Weisenfluh, Weinlaub"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "JjVTIr5E7a0IHKB7q1fF",
+      "documentIds": [
+        "JjVTIr5E7a0IHKB7q1fF"
+      ],
+      "documents": [
+        {
+          "documentId": "JjVTIr5E7a0IHKB7q1fF",
+          "createdAt": "2026-07-10T11:41:57.023Z",
+          "updatedAt": "2026-07-10T11:41:57.916Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-weinlaub",
+        "personId": "gideon-weinlaub",
+        "worldPersonId": "person--haus-weinlaub--gideon-weinlaub",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view&person=gideon-weinlaub"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-10T11:41:57.916Z",
+    "sourceDocumentIds": [
+      "JjVTIr5E7a0IHKB7q1fF"
+    ],
+    "contentHash": "95316db4326db1d25785bd1ecfaf5b072b5c8730733b4f61af2c81d1c9fdd713"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "JjVTIr5E7a0IHKB7q1fF",
+        "relevance": "",
+        "aliases": [],
+        "createdAt": "2026-07-10T11:41:57.023Z",
+        "inventory": {
+          "status": "Gesund",
+          "characterId": "JjVTIr5E7a0IHKB7q1fF",
+          "showInfoTable": false,
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "originItemDbKey": "",
+              "acquiredAt": "",
+              "image": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "type": "Waffe",
+              "individualizedAt": "",
+              "tags": "",
+              "imageFormat": "square",
+              "itemDbKey": "",
+              "ownerCharacterName": "",
+              "category": "weapon",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "id": "item-mr475o6r-0-2541",
+              "ownerCharacterId": "",
+              "icon": "*",
+              "itemStorageMode": "character",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale."
+            },
+            {
+              "ownerCharacterId": "",
+              "category": "armor",
+              "imagePosition": "center",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "image": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen",
+              "ownerCharacterName": "",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "id": "item-mr475o6r-1-ba5c",
+              "individualizedAt": "",
+              "name": "Rüstung / Schutz",
+              "acquiredAt": "",
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Rüstung",
+              "imageFormat": "square",
+              "infoRows": []
+            },
+            {
+              "id": "item-mr475o6r-2-5dxv",
+              "category": "equipment",
+              "icon": "*",
+              "originItemDbKey": "",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "ownerCharacterId": "",
+              "tags": "",
+              "type": "Ausrüstung",
+              "acquiredAt": "",
+              "imageFit": "contain",
+              "individualizedAt": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "ownerCharacterName": "",
+              "itemDbKey": "",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "itemStorageMode": "character"
+            },
+            {
+              "name": "Heil- oder Verbrauchsgut",
+              "originItemDbKey": "",
+              "image": "",
+              "itemDbKey": "",
+              "imagePosition": "center",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "infoRows": [],
+              "type": "Trinktur",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "category": "potions",
+              "quantity": "1",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "imageFormat": "square",
+              "itemStorageMode": "character",
+              "icon": "*",
+              "id": "item-mr475o6r-3-g7m0"
+            },
+            {
+              "tags": "",
+              "infoRows": [],
+              "type": "Dokument",
+              "individualizedAt": "",
+              "imageFit": "contain",
+              "image": "",
+              "itemStorageMode": "character",
+              "id": "item-mr475o6r-4-pct3",
+              "acquiredAt": "",
+              "imageFormat": "square",
+              "name": "Dokumente / Urkunden",
+              "icon": "*",
+              "ownerCharacterId": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "itemDbKey": "",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "category": "documents",
+              "ownerCharacterName": "",
+              "imagePosition": "center",
+              "originItemDbKey": ""
+            },
+            {
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "icon": "*",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "category": "other",
+              "itemDbKey": "",
+              "acquiredAt": "",
+              "image": "",
+              "quantity": "1",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "individualizedAt": "",
+              "infoRows": [],
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "name": "Persönlicher Gegenstand",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mr475o6r-5-2rgj",
+              "originItemDbKey": ""
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "portraitFit": "cover",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "portrait": "https://i.imgur.com/IUnN3Sp.png",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "statusColor": "#5c7f20",
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "status": "Gesund",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "id": "companion-mr475o6r-0-va2d",
+              "infoRows": [],
+              "role": "Begleiter",
+              "imageFormat": "landscape"
+            },
+            {
+              "image": "",
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "id": "companion-mr475o6r-1-2tqq",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "landscape",
+              "infoRows": [],
+              "imageFit": "cover",
+              "status": "Noch festlegen",
+              "species": "Tier / Person"
+            }
+          ],
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "label": "Status",
+              "icon": "*"
+            },
+            {
+              "label": "TP / Zustand",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Geld",
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "icon": "*"
+            },
+            {
+              "label": "Tragkapazität",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Fraktion"
+            },
+            {
+              "label": "Aufenthalt",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Notiz",
+              "icon": "*"
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "level": "Stufe",
+          "healthColor": "#5c7f20",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "label": "Sonstiges",
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "name": "Name des Charakters",
+          "role": "Rolle",
+          "moneyNotice": "",
+          "carryValue": "Noch festlegen",
+          "portraitPosition": "top",
+          "equipmentQuiz": {
+            "status": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "open": false,
+            "updatedAt": ""
+          },
+          "money": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        "portrait": "https://i.imgur.com/IUnN3Sp.png",
+        "fraktion": "Haus Weinlaub",
+        "status": "",
+        "emotesOverride": true,
+        "role": "",
+        "currentLocation": "",
+        "plotNode": "",
+        "name": "Gideon Weinlaub",
+        "taxonomyPath": "",
+        "updatedAt": "2026-07-10T11:41:57.916Z",
+        "profileLink": "",
+        "bio": "Gideon Weinlaub ist ein junger Ritter aus Weisenfluh und der einstige Erstgeborene des Hauses Weinlaub, eines wohlhabenden Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner Stiefmutter, Zweifel an Gideons Charakter und seiner Eignung als Erbe zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon aus dem Haus verbannte. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als fahrender Ritter durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, dem er aus freiem Willen seine Treue schenken und unter dessen Banner er sich durch Taten statt durch Geburt einen neuen Namen machen kann.",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Ju1fWcS.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/fq9OVDr.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/0xqsevp.png"
+          },
+          {
+            "img": "https://i.imgur.com/Jk3pPOW.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/7GUMns6.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/H4FBQET.png"
+          },
+          {
+            "img": "https://i.imgur.com/oD0hgWD.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/yVS4iGu.png"
+          },
+          {
+            "img": "https://i.imgur.com/WZxn2VO.png",
+            "label": ""
+          }
+        ],
+        "title": "Ritter, Weisenfluh",
+        "origin": "",
+        "archived": false,
+        "playerOwner": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "JjVTIr5E7a0IHKB7q1fF",
+    "relevance": "",
+    "aliases": [],
+    "createdAt": "2026-07-10T11:41:57.023Z",
+    "inventory": {
+      "status": "Gesund",
+      "characterId": "JjVTIr5E7a0IHKB7q1fF",
+      "showInfoTable": false,
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "image": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "type": "Waffe",
+          "individualizedAt": "",
+          "tags": "",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "ownerCharacterName": "",
+          "category": "weapon",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "id": "item-mr475o6r-0-2541",
+          "ownerCharacterId": "",
+          "icon": "*",
+          "itemStorageMode": "character",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale."
+        },
+        {
+          "ownerCharacterId": "",
+          "category": "armor",
+          "imagePosition": "center",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "image": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "id": "item-mr475o6r-1-ba5c",
+          "individualizedAt": "",
+          "name": "Rüstung / Schutz",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Rüstung",
+          "imageFormat": "square",
+          "infoRows": []
+        },
+        {
+          "id": "item-mr475o6r-2-5dxv",
+          "category": "equipment",
+          "icon": "*",
+          "originItemDbKey": "",
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "tags": "",
+          "type": "Ausrüstung",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "itemStorageMode": "character"
+        },
+        {
+          "name": "Heil- oder Verbrauchsgut",
+          "originItemDbKey": "",
+          "image": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "type": "Trinktur",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "quantity": "1",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "id": "item-mr475o6r-3-g7m0"
+        },
+        {
+          "tags": "",
+          "infoRows": [],
+          "type": "Dokument",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "image": "",
+          "itemStorageMode": "character",
+          "id": "item-mr475o6r-4-pct3",
+          "acquiredAt": "",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "itemDbKey": "",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "category": "documents",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "originItemDbKey": ""
+        },
+        {
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "category": "other",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "image": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "infoRows": [],
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "name": "Persönlicher Gegenstand",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mr475o6r-5-2rgj",
+          "originItemDbKey": ""
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "portraitFit": "cover",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "portrait": "https://i.imgur.com/IUnN3Sp.png",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "statusColor": "#5c7f20",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "status": "Gesund",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "id": "companion-mr475o6r-0-va2d",
+          "infoRows": [],
+          "role": "Begleiter",
+          "imageFormat": "landscape"
+        },
+        {
+          "image": "",
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "id": "companion-mr475o6r-1-2tqq",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFormat": "landscape",
+          "infoRows": [],
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "species": "Tier / Person"
+        }
+      ],
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "label": "Status",
+          "icon": "*"
+        },
+        {
+          "label": "TP / Zustand",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Geld",
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "icon": "*"
+        },
+        {
+          "label": "Tragkapazität",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Fraktion"
+        },
+        {
+          "label": "Aufenthalt",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Notiz",
+          "icon": "*"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "level": "Stufe",
+      "healthColor": "#5c7f20",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "name": "Name des Charakters",
+      "role": "Rolle",
+      "moneyNotice": "",
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "equipmentQuiz": {
+        "status": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "open": false,
+        "updatedAt": ""
+      },
+      "money": "0 Gold, 0 Silber, 0 Kupfer"
+    },
+    "portrait": "https://i.imgur.com/IUnN3Sp.png",
+    "fraktion": "Haus Weinlaub",
+    "status": "",
+    "emotesOverride": true,
+    "role": "",
+    "currentLocation": "",
+    "plotNode": "",
+    "name": "Gideon Weinlaub",
+    "taxonomyPath": "Weisenfluh > Region Ewigensee > Ewigensee",
+    "updatedAt": "2026-07-10T11:41:57.916Z",
+    "profileLink": "",
+    "bio": "Gideon Weinlaub ist ein junger Ritter aus Weisenfluh und der einstige Erstgeborene des Hauses Weinlaub, eines wohlhabenden Ritterhauses, dessen Ansehen auf weitläufigen Weinbergen, fruchtbaren Feldern und erfolgreicher Landwirtschaft gründet. Das Wappen seiner Familie zeigt einen silbernen Weinrebenzweig mit drei purpurnen Trauben auf rosafarbenem Grund. Nach dem frühen Tod seiner Mutter heiratete sein Vater erneut. Über Jahre gelang es seiner Stiefmutter, Zweifel an Gideons Charakter und seiner Eignung als Erbe zu säen, bis sein Vater ihm schließlich das Erbrecht entzog, seinen jüngeren Halbbruder zum neuen Erben erklärte und Gideon aus dem Haus verbannte. Ohne Besitz, Titel oder familiären Rückhalt zog er mehrere Jahre als fahrender Ritter durch die Reiche und verdiente seinen Lebensunterhalt im Dienst fremder Herren. Nun tritt er vor Gräfin Gwendolyn Draig und bittet darum, als Lehensritter in den Dienst des Hauses Draig aufgenommen zu werden. Er sucht weder Reichtum noch Vergeltung, sondern einen Herrn, dem er aus freiem Willen seine Treue schenken und unter dessen Banner er sich durch Taten statt durch Geburt einen neuen Namen machen kann.",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Ju1fWcS.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/fq9OVDr.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/0xqsevp.png"
+      },
+      {
+        "img": "https://i.imgur.com/Jk3pPOW.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/7GUMns6.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/H4FBQET.png"
+      },
+      {
+        "img": "https://i.imgur.com/oD0hgWD.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/yVS4iGu.png"
+      },
+      {
+        "img": "https://i.imgur.com/WZxn2VO.png",
+        "label": ""
+      }
+    ],
+    "title": "Ritter, Weisenfluh",
+    "origin": "",
+    "archived": false,
+    "playerOwner": "",
+    "identity": {
+      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-weinlaub--gideon-weinlaub",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1711",
+      "death": "",
+      "houseId": "house-weinlaub",
+      "houseName": "Haus Weinlaub",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Enterbt",
+        "Verstoßen",
+        "Fahrender Ritter",
+        "Im Exil"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-weinlaub",
+          "personId": "gideon-weinlaub",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view&person=gideon-weinlaub",
+          "fingerprint": "{\"name\":\"Gideon Weinlaub\",\"title\":\"Enterbter Erstgeborener · seit 1728 fahrender Ritter\",\"birth\":\"1711\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-weinlaub\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-weinlaub/gideon-weinlaub.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Enterbt\",\"Verstoßen\",\"Fahrender Ritter\",\"Im Exil\"],\"relationships\":{\"parents\":[{\"personId\":\"josiah-weinlaub\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-weinlaub--josiah-weinlaub\",\"name\":\"Josiah Weinlaub\"},{\"personId\":\"rahel-weinlaub-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--rahel-weinlaub-spouse\",\"name\":\"Rahel\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "josiah-weinlaub",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-weinlaub--josiah-weinlaub",
+            "name": "Josiah Weinlaub"
+          },
+          {
+            "personId": "rahel-weinlaub-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--rahel-weinlaub-spouse",
+            "name": "Rahel"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

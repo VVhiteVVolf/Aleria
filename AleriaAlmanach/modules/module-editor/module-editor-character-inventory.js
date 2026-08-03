@@ -186,19 +186,51 @@ function sanitizeCharacterInventoryEquipmentQuiz(data = {}) {
 
 function sanitizeCharacterInventoryCombatDefinition(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
+  const kind = String(source.kind || '').trim().toLowerCase();
   const damageFormula = String(source.damageFormula || '').trim().slice(0, 40);
-  if (!damageFormula) return null;
+  const baseArmorClass = source.baseArmorClass == null || source.baseArmorClass === ''
+    ? null
+    : Math.max(0, Math.min(99, Number(source.baseArmorClass) || 0));
+  const hasWeaponDefinition = kind === 'weapon' || !!damageFormula;
+  const hasArmorDefinition = kind === 'armor' || baseArmorClass != null || source.armorClassBonus != null;
+  if (!hasWeaponDefinition && !hasArmorDefinition) return null;
   return {
+    kind: hasArmorDefinition && !hasWeaponDefinition ? 'armor' : 'weapon',
+    weaponType: String(source.weaponType || '').trim().slice(0, 40),
+    training: String(source.training || '').trim().slice(0, 40),
     damageFormula,
+    versatileDamageFormula: String(source.versatileDamageFormula || '').trim().slice(0, 40),
     attackAttribute: String(source.attackAttribute || '').trim().slice(0, 80),
     damageAttribute: String(source.damageAttribute || '').trim().slice(0, 80),
+    proficient: source.proficient !== false,
     attackBonus: Number.isFinite(Number(source.attackBonus)) ? Number(source.attackBonus) : 0,
     damageBonus: Number.isFinite(Number(source.damageBonus)) ? Number(source.damageBonus) : 0,
     damageType: String(source.damageType || 'physical').trim().slice(0, 80),
     rangeType: source.rangeType === 'ranged' ? 'ranged' : 'melee',
+    range: String(source.range || '').trim().slice(0, 80),
     properties: Array.isArray(source.properties)
-      ? source.properties.map(item => String(item || '').trim()).filter(Boolean).slice(0, 20)
-      : []
+      ? source.properties.map(item => String(item || '').trim()).filter(Boolean).slice(0, 20).join(' · ')
+      : String(source.properties || '').trim().slice(0, 500),
+    notes: String(source.notes || '').trim().slice(0, 800),
+    requirements: String(source.requirements || '').trim().slice(0, 1000),
+    aiInstructions: String(source.aiInstructions || '').trim().slice(0, 1600),
+    armorKind: String(source.armorKind || 'armor').trim().slice(0, 40),
+    baseArmorClass,
+    armorClassBonus: Number.isFinite(Number(source.armorClassBonus)) ? Number(source.armorClassBonus) : 0,
+    dexterityMode: ['full', 'capped', 'none'].includes(String(source.dexterityMode || '')) ? String(source.dexterityMode) : 'full',
+    dexterityCap: Number.isFinite(Number(source.dexterityCap)) ? Number(source.dexterityCap) : 2,
+    dexterityUnlockLevel: Math.max(0, Math.min(30, Number(source.dexterityUnlockLevel) || 0))
+  };
+}
+
+function sanitizeCharacterInventoryEquipmentLink(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  const kind = String(source.kind || '').trim();
+  if (!['weapon', 'armor'].includes(kind)) return null;
+  return {
+    schemaVersion: Math.max(1, Number(source.schemaVersion) || 1),
+    kind,
+    combatEntryId: String(source.combatEntryId || '').trim().slice(0, 120)
   };
 }
 
@@ -239,6 +271,7 @@ function sanitizeCharacterInventoryItems(items = []) {
       tags: String(item?.tags || '').trim(),
       equipped: item?.equipped === true,
       combatDefinition: sanitizeCharacterInventoryCombatDefinition(item?.combatDefinition || item?.combat),
+      equipmentLink: sanitizeCharacterInventoryEquipmentLink(item?.equipmentLink),
       infoRows: sanitizeCharacterInventoryRows(item?.infoRows, [
         { label: 'Qualitaet', value: 'Noch festlegen' },
         { label: 'Zustand', value: 'Noch festlegen' }
@@ -526,6 +559,8 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
       <input type="hidden" class="me-ci-item-owner-name" value="${escapeHtml(item.ownerCharacterName || '')}">
       <input type="hidden" class="me-ci-item-acquired-at" value="${escapeHtml(item.acquiredAt || '')}">
       <input type="hidden" class="me-ci-item-individualized-at" value="${escapeHtml(item.individualizedAt || '')}">
+      <input type="hidden" class="me-ci-item-combat-definition" value="${escapeHtml(JSON.stringify(item.combatDefinition || null))}">
+      <input type="hidden" class="me-ci-item-equipment-link" value="${escapeHtml(JSON.stringify(item.equipmentLink || null))}">
       <div class="ci-editor-card-head">
         <strong>Item ${index + 1}${item.itemDbKey ? ' - Registerlink' : item.originItemDbKey ? ' - Individuell' : ''}</strong>
         <div class="ci-editor-card-actions">
@@ -758,6 +793,8 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
         weight: getTrimmedFormValue(row, '.me-ci-item-weight'),
         quantity: getTrimmedFormValue(row, '.me-ci-item-quantity'),
         tags: getTrimmedFormValue(row, '.me-ci-item-tags'),
+        combatDefinition: collectCharacterInventoryJsonField(row, '.me-ci-item-combat-definition', null),
+        equipmentLink: collectCharacterInventoryJsonField(row, '.me-ci-item-equipment-link', null),
         infoRows: collectCharacterInventoryRows(row, '[data-ci-row-kind="item-info"]', infoRow => ({
           icon: getTrimmedFormValue(infoRow, '.me-ci-item-info-icon'),
           label: getTrimmedFormValue(infoRow, '.me-ci-item-info-label'),

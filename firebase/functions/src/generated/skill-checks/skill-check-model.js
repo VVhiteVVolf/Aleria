@@ -1,7 +1,7 @@
 import {
   getSkillTotal,
   resolveCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-rule-integrity-v1';
+} from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
 
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
 
@@ -14,6 +14,8 @@ export const SKILL_DEFINITIONS = Object.freeze([
   { id: 'animal-handling', label: 'Mit Tieren umgehen', aliases: ['mit tieren umgehen', 'tierkunde'], attributeKey: 'wisdom' },
   { id: 'medicine', label: 'Heilkunde', aliases: ['heilkunde'], attributeKey: 'wisdom' },
   { id: 'investigation', label: 'Nachforschungen', aliases: ['nachforschungen', 'nachforschen'], attributeKey: 'intelligence' },
+  { id: 'religion', label: 'Religion', aliases: ['religion', 'glaubenskunde'], attributeKey: 'intelligence' },
+  { id: 'survival', label: 'Überleben', aliases: ['überleben', 'ueberleben'], attributeKey: 'wisdom' },
   { id: 'sleight-of-hand', label: 'Fingerfertigkeit', aliases: ['fingerfertigkeit'], attributeKey: 'dexterity' },
   { id: 'acrobatics', label: 'Akrobatik', aliases: ['akrobatik'], attributeKey: 'dexterity' },
   { id: 'athletics', label: 'Athletik', aliases: ['athletik'], attributeKey: 'strength' },
@@ -27,9 +29,9 @@ export const COMMENT_KIND_SKILL_IDS = Object.freeze({
   speech: ['persuasion'],
   shout: ['intimidation'],
   performance: ['deception', 'performance'],
-  thought: ['insight', 'investigation'],
+  thought: ['insight', 'investigation', 'religion'],
   animal: ['animal-handling'],
-  interact: ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control'],
+  interact: ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival'],
   flirt: ['seduction']
 });
 

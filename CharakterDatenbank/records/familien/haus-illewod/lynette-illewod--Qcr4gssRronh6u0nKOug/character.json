@@ -1,0 +1,1156 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--Qcr4gssRronh6u0nKOug",
+  "slug": "lynette-illewod",
+  "identity": {
+    "name": "Lynette Illewod",
+    "aliases": [],
+    "worldPersonId": "person--haus-illewod--lynette-illewod"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-illewod",
+      "label": "Haus Illewod"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-illewod",
+        "familyTitle": "Haus Illewod",
+        "personId": "lynette-illewod",
+        "worldPersonId": "person--haus-illewod--lynette-illewod",
+        "houseId": "house-illewod",
+        "houseName": "Haus Illewod",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Sonnenküste",
+          "Gersteküste",
+          "Aberon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-illewod&mode=view&person=lynette-illewod",
+        "fingerprint": "{\"name\":\"Lynette Illewod\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-illewod\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-illewod/lynette-illewod.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"merwin-illewod\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-illewod--merwin-illewod\",\"name\":\"Merwin Illewod\"},{\"personId\":\"alana-gallchobhair\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gallchobhair--alana-gallchobhair\",\"name\":\"Alana Gallchobhair\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "aberon",
+        "label": "Aberon",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Aberon"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "Qcr4gssRronh6u0nKOug",
+      "documentIds": [
+        "Qcr4gssRronh6u0nKOug"
+      ],
+      "documents": [
+        {
+          "documentId": "Qcr4gssRronh6u0nKOug",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-illewod",
+        "personId": "lynette-illewod",
+        "worldPersonId": "person--haus-illewod--lynette-illewod",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-illewod&mode=view&person=lynette-illewod"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "Qcr4gssRronh6u0nKOug"
+    ],
+    "contentHash": "f25093fdb6b7c8c6761d428c0594747a3dd3906b85e03e9b1a6504e370070931"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "Qcr4gssRronh6u0nKOug",
+        "bio": "",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/JVmDkeS.png"
+          },
+          {
+            "img": "https://i.imgur.com/v9ZBgzU.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/yHMUcfw.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/7mw9Gqz.png"
+          },
+          {
+            "img": "https://i.imgur.com/UyaWk0E.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/LKFqUHL.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/WaWElHm.png"
+          },
+          {
+            "img": "https://i.imgur.com/LZyxJwQ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Jdume88.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OLjGrQK.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/aiOccxx.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OQEmNmp.png"
+          }
+        ],
+        "name": "Lynette Illewod",
+        "playerOwner": "patrick",
+        "emotesOverride": true,
+        "archived": false,
+        "aliases": [],
+        "title": "Prinzessin, Aberon",
+        "portrait": "https://i.imgur.com/Dm4KQW3.png",
+        "inventory": {
+          "name": "Lynette Illewod",
+          "items": [
+            {
+              "quantity": "1",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imagePosition": "center",
+              "category": "weapon",
+              "imageFormat": "square",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "name": "Hauptwaffe",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "tags": "",
+              "image": "",
+              "type": "Waffe",
+              "imageFit": "contain"
+            },
+            {
+              "type": "Rüstung",
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz",
+              "imageFormat": "square",
+              "icon": "*",
+              "imagePosition": "center",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "image": "",
+              "category": "armor",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen"
+            },
+            {
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Ausrüstung",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Reiseausrüstung",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "image": "",
+              "imageFormat": "square",
+              "imagePosition": "center"
+            },
+            {
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "image": "",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imagePosition": "center",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "category": "potions"
+            },
+            {
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "image": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "quantity": "1",
+              "type": "Dokument",
+              "category": "documents",
+              "tags": "",
+              "id": "item-mqu1vat1-4-ajrj",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Dokumente / Urkunden",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "imageFormat": "square",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "category": "other",
+              "imagePosition": "center",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Sonstiges",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "moneyNotice": "",
+          "status": "Gesund",
+          "role": "Prinzessin, Aberon",
+          "portrait": "https://i.imgur.com/Dm4KQW3.png",
+          "infoRows": [],
+          "hitpoints": "TP / Zustand",
+          "portraitPosition": "top",
+          "carryValue": "Noch festlegen",
+          "title": "Charakter-Inventar",
+          "companions": [
+            {
+              "image": "",
+              "statusColor": "#5c7f20",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "description": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "name": "Reittier / Gefährte",
+              "infoRows": [],
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "species": "Tier oder Begleiter",
+              "imagePosition": "top",
+              "status": "Gesund"
+            },
+            {
+              "status": "Noch festlegen",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "description": "",
+              "image": "",
+              "name": "Treuer Begleiter",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "species": "Tier / Person",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "imageFit": "cover"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "equipmentQuiz": {
+            "step": 0,
+            "resultText": "",
+            "status": "",
+            "updatedAt": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "carryLabel": "Traglast",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFormat": "portrait",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "level": "Haus Illewod, Aberon",
+          "portraitFit": "cover"
+        },
+        "fraktion": "Haus Illewod, Aberon"
+      }
+    ]
+  },
+  "character": {
+    "id": "Qcr4gssRronh6u0nKOug",
+    "bio": "",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/JVmDkeS.png"
+      },
+      {
+        "img": "https://i.imgur.com/v9ZBgzU.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/yHMUcfw.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/7mw9Gqz.png"
+      },
+      {
+        "img": "https://i.imgur.com/UyaWk0E.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/LKFqUHL.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/WaWElHm.png"
+      },
+      {
+        "img": "https://i.imgur.com/LZyxJwQ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Jdume88.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OLjGrQK.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/aiOccxx.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OQEmNmp.png"
+      }
+    ],
+    "name": "Lynette Illewod",
+    "playerOwner": "patrick",
+    "emotesOverride": true,
+    "archived": false,
+    "aliases": [],
+    "title": "Prinzessin, Aberon",
+    "portrait": "https://i.imgur.com/Dm4KQW3.png",
+    "inventory": {
+      "name": "Lynette Illewod",
+      "items": [
+        {
+          "quantity": "1",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imagePosition": "center",
+          "category": "weapon",
+          "imageFormat": "square",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "tags": "",
+          "image": "",
+          "type": "Waffe",
+          "imageFit": "contain"
+        },
+        {
+          "type": "Rüstung",
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square",
+          "icon": "*",
+          "imagePosition": "center",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "image": "",
+          "category": "armor",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen"
+        },
+        {
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Ausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Reiseausrüstung",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "image": "",
+          "imageFormat": "square",
+          "imagePosition": "center"
+        },
+        {
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "image": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "category": "potions"
+        },
+        {
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "quantity": "1",
+          "type": "Dokument",
+          "category": "documents",
+          "tags": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "imageFormat": "square",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "category": "other",
+          "imagePosition": "center",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Sonstiges",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "moneyNotice": "",
+      "status": "Gesund",
+      "role": "Prinzessin, Aberon",
+      "portrait": "https://i.imgur.com/Dm4KQW3.png",
+      "infoRows": [],
+      "hitpoints": "TP / Zustand",
+      "portraitPosition": "top",
+      "carryValue": "Noch festlegen",
+      "title": "Charakter-Inventar",
+      "companions": [
+        {
+          "image": "",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "name": "Reittier / Gefährte",
+          "infoRows": [],
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "species": "Tier oder Begleiter",
+          "imagePosition": "top",
+          "status": "Gesund"
+        },
+        {
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "description": "",
+          "image": "",
+          "name": "Treuer Begleiter",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "species": "Tier / Person",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "imageFit": "cover"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "status": "",
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "silver": 0,
+        "gold": 0
+      },
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFormat": "portrait",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "level": "Haus Illewod, Aberon",
+      "portraitFit": "cover"
+    },
+    "fraktion": "Haus Illewod, Aberon",
+    "identity": {
+      "worldPersonId": "person--haus-illewod--lynette-illewod"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-illewod--lynette-illewod",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1721",
+      "death": "",
+      "houseId": "house-illewod",
+      "houseName": "Haus Illewod",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-illewod",
+          "personId": "lynette-illewod",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-illewod&mode=view&person=lynette-illewod",
+          "fingerprint": "{\"name\":\"Lynette Illewod\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-illewod\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-illewod/lynette-illewod.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"merwin-illewod\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-illewod--merwin-illewod\",\"name\":\"Merwin Illewod\"},{\"personId\":\"alana-gallchobhair\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gallchobhair--alana-gallchobhair\",\"name\":\"Alana Gallchobhair\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "merwin-illewod",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-illewod--merwin-illewod",
+            "name": "Merwin Illewod"
+          },
+          {
+            "personId": "alana-gallchobhair",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gallchobhair--alana-gallchobhair",
+            "name": "Alana Gallchobhair"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Sonnenküste > Gersteküste > Aberon"
+  }
+}

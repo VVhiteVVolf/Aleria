@@ -144,6 +144,15 @@ function syncCharacterGenealogyFields(character = {}) {
 }
 
 function switchCharTab(tab) {
+  if (tab === 'inventory' && window.AleriaCharacterCombatProfile?.collectLinked) {
+    const inventory = typeof collectCharacterInventoryProfileData === 'function'
+      ? collectCharacterInventoryProfileData()
+      : {};
+    const linked = window.AleriaCharacterCombatProfile.collectLinked(inventory);
+    if (linked?.inventory && typeof setCharacterInventoryProfileData === 'function') {
+      setCharacterInventoryProfileData(linked.inventory, { render: true });
+    }
+  }
   if (tab === 'combat' && window.AleriaCharacterCombatProfile?.refreshInventory) {
     const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
     const inventory = typeof collectCharacterInventoryProfileData === 'function'
@@ -257,12 +266,31 @@ function removeEmote(i) {
   renderEmoteGrid();
 }
 
+function collectCharacterEquipmentProfileData(existing = {}) {
+  const inventory = typeof collectCharacterInventoryProfileData === 'function'
+    ? collectCharacterInventoryProfileData()
+    : sanitizeCharacterInventoryData(existing.inventory || {});
+  const linked = window.AleriaCharacterCombatProfile?.collectLinked?.(inventory);
+  if (linked?.inventory && typeof setCharacterInventoryProfileData === 'function') {
+    setCharacterInventoryProfileData(linked.inventory);
+  }
+  return {
+    inventory: linked?.inventory || inventory,
+    combatProfile: linked?.combatProfile
+      || window.AleriaCharacterCombatProfile?.collect?.()
+      || window.AleriaCharacterCombatProfile?.sanitize?.(existing.combatProfile || {})
+      || existing.combatProfile
+      || {}
+  };
+}
+
 function collectCharacterProfileDataFromForm() {
   const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
   const profileLink = normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || '');
   const now = new Date().toISOString();
   const genealogy = getCharacterGenealogyFormData(existing);
   const imageSetData = collectCharacterImageSetEditorData();
+  const equipmentData = collectCharacterEquipmentProfileData(existing);
   return {
     id: _editingChar || '',
     name: document.getElementById('cp-name')?.value.trim() || existing.name || '',
@@ -283,13 +311,11 @@ function collectCharacterProfileDataFromForm() {
     createdAt: existing.createdAt || now,
     updatedAt: now,
     ...imageSetData,
-    inventory: typeof collectCharacterInventoryProfileData === 'function'
-      ? collectCharacterInventoryProfileData()
-      : sanitizeCharacterInventoryData(existing.inventory || {}),
-    combatProfile: window.AleriaCharacterCombatProfile?.collect?.()
-      || window.AleriaCharacterCombatProfile?.sanitize?.(existing.combatProfile || {})
-      || existing.combatProfile
-      || {},
+    inventory: equipmentData.inventory,
+    combatProfile: equipmentData.combatProfile,
+    ...(existing.localRecord ? {
+      localRecord: cloneCharacterStructuredValue(existing.localRecord, existing.localRecord)
+    } : {}),
     identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
       ? existing.identity
       : { worldPersonId: genealogy.worldPersonId }),
@@ -394,6 +420,7 @@ async function saveCharacter() {
 
   const genealogy = getCharacterGenealogyFormData(existing);
   const imageSetData = collectCharacterImageSetEditorData();
+  const equipmentData = collectCharacterEquipmentProfileData(existing);
   const data = {
     name, title, fraktion, role, status: characterStatus, relevance,
     taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
@@ -402,13 +429,11 @@ async function saveCharacter() {
     createdAt: existing.createdAt || now,
     updatedAt: now,
     ...imageSetData,
-    inventory: typeof collectCharacterInventoryProfileData === 'function'
-      ? collectCharacterInventoryProfileData()
-      : sanitizeCharacterInventoryData(existing.inventory || {}),
-    combatProfile: window.AleriaCharacterCombatProfile?.collect?.()
-      || window.AleriaCharacterCombatProfile?.sanitize?.(existing.combatProfile || {})
-      || existing.combatProfile
-      || {},
+    inventory: equipmentData.inventory,
+    combatProfile: equipmentData.combatProfile,
+    ...(existing.localRecord ? {
+      localRecord: cloneCharacterStructuredValue(existing.localRecord, existing.localRecord)
+    } : {}),
     identity: normalizeCharacterIdentityRecord(existing.identity?.worldPersonId
       ? existing.identity
       : { worldPersonId: genealogy.worldPersonId }),

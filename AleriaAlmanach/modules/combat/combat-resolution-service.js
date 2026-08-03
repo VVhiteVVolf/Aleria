@@ -3,12 +3,12 @@ import {
   getAuraTargetMechanics,
   getSavingThrowTotal,
   resolveAttackRollMode
-} from './combat-profile-model.js?v=20260803-spell-grades-v1';
+} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260803-spell-grades-v1';
+} from './combat-profile-resolver.js?v=20260803-gawain-level4-v1';
 import {
   patchResolutionHitPointState,
   patchResolutionResourceState
@@ -18,7 +18,7 @@ import {
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260803-rule-integrity-v1';
+} from './combat-trigger-rules.js?v=20260803-gawain-level4-v1';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-4';
 
@@ -237,8 +237,10 @@ export class CombatResolutionService {
     const rulePeriods = options.rulePeriods || {};
     const actionKind = actor.profileActionKind || 'weapon';
     const profileActionId = actor.profileActionId || '';
+    const ruleProfileState = { actorProfile: actor, targetProfile: target };
     const preRollApplications = collectApplicableCombatRules({
-      phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys
+      phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
+      usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState
     }).concat(buildSupportAuraApplications(ruleSources, actionKind));
     markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
     const preRollEffects = mergeCombatRuleEffects(preRollApplications);
@@ -291,7 +293,7 @@ export class CombatResolutionService {
     const baseAttackState = { ...attack };
     const postRollApplications = collectApplicableCombatRules({
       phase: 'post-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: attack
+      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
     });
     markCombatRuleApplications(postRollApplications, usedRuleFrequencyKeys);
     const postRollEffects = mergeCombatRuleEffects(postRollApplications);
@@ -315,7 +317,7 @@ export class CombatResolutionService {
     const postRollAttackState = { ...attack };
     const postHitApplications = collectApplicableCombatRules({
       phase: 'post-hit', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: attack
+      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
     });
     markCombatRuleApplications(postHitApplications, usedRuleFrequencyKeys);
     const postHitEffects = mergeCombatRuleEffects(postHitApplications);
@@ -323,7 +325,7 @@ export class CombatResolutionService {
     const postHitAttackState = { ...attack };
     const preDamageApplications = collectApplicableCombatRules({
       phase: 'pre-damage', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
-      usedFrequencyKeys: usedRuleFrequencyKeys, state: attack
+      usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...ruleProfileState, ...attack }
     });
     markCombatRuleApplications(preDamageApplications, usedRuleFrequencyKeys);
     const preDamageEffects = mergeCombatRuleEffects(preDamageApplications);
@@ -342,6 +344,12 @@ export class CombatResolutionService {
     const damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
       + postHitEffects.damageModifier + preDamageEffects.damageModifier;
     let damageRoll = null;
+    const secondarySaves = [];
+    const followUpAttacks = [];
+    const existingTemporaryConditions = Array.isArray(target.temporaryConditions)
+      ? target.temporaryConditions.map(condition => ({ ...condition }))
+      : [];
+    let appliedTemporaryCondition = null;
 
     if (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave)) {
       const damageNotation = buildDamageNotation(weapon.damageFormula, damageBonus, attack.criticalSuccess);
@@ -365,6 +373,96 @@ export class CombatResolutionService {
           rawTotal: damageRoll.rawTotal == null ? beforeReduction : damageRoll.rawTotal,
           total: Math.max(0, beforeReduction - reduction),
           damageReduction: Math.min(beforeReduction, reduction)
+        };
+      }
+    }
+    const secondarySave = actor.selectedAction?.secondarySave;
+    if (attack.hit && secondarySave?.enabled && typeof this.dice.rollSavingThrow === 'function') {
+      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey);
+      const savingThrowRoll = await this.dice.rollSavingThrow({
+        modifier: savingThrowModifier,
+        rollMode: 'normal',
+        actorName: actor.name,
+        targetName: target.name,
+        container: options.container
+      });
+      const dc = Number(secondarySave.dc) || 8;
+      const succeeded = Number(savingThrowRoll.total) >= dc;
+      const saveResult = {
+        attributeKey: secondarySave.attributeKey,
+        dc,
+        naturalRoll: Number(savingThrowRoll.natural),
+        diceResults: Array.isArray(savingThrowRoll.dice) ? savingThrowRoll.dice.slice() : [],
+        keptDice: Array.isArray(savingThrowRoll.keptDice) ? savingThrowRoll.keptDice.slice() : [],
+        modifier: savingThrowModifier,
+        total: Number(savingThrowRoll.total),
+        succeeded,
+        rollId: savingThrowRoll.id || '',
+        visualMode: savingThrowRoll.visualMode || 'text'
+      };
+      secondarySaves.push(saveResult);
+      if (!succeeded && secondarySave.failureCondition?.name) {
+        appliedTemporaryCondition = {
+          ...secondarySave.failureCondition,
+          id: `${secondarySave.failureCondition.id || 'technique-condition'}-${createResolutionId()}`,
+          source: actor.selectedAction?.name || actor.weapon?.name || 'Technik',
+          active: true,
+          remainingActorComments: 1
+        };
+      }
+    }
+    const followUp = actor.selectedAction?.followUpAttack;
+    if (attack.hit && followUp?.enabled && followUp.damageFormula) {
+      const followAttackModifier = Number(actor.attackModifier || 0) + Number(followUp.attackBonus || 0);
+      const followAttackRoll = await this.dice.rollAttack({
+        modifier: followAttackModifier,
+        rollMode: 'normal',
+        actorName: actor.name,
+        targetName: target.name,
+        container: options.container
+      });
+      const followAttack = evaluateAttackRoll(followAttackRoll, targetDefense + postDefenseModifier);
+      let followDamage = null;
+      if (followAttack.hit) {
+        followDamage = await this.dice.rollDamage({
+          damageFormula: followUp.damageFormula,
+          bonus: Number(actor.damageModifier || 0) + Number(followUp.damageBonus || 0),
+          critical: followAttack.criticalSuccess,
+          actorName: actor.name,
+          targetName: target.name,
+          container: options.container
+        });
+      }
+      followUpAttacks.push({
+        sameTarget: followUp.sameTarget !== false,
+        triggerFurtherEffects: followUp.triggerFurtherEffects === true,
+        attack: {
+          naturalRoll: Number(followAttackRoll.natural),
+          diceResults: Array.isArray(followAttackRoll.dice) ? followAttackRoll.dice.slice() : [],
+          modifier: followAttackModifier,
+          total: Number(followAttackRoll.total),
+          targetDefense: targetDefense + postDefenseModifier,
+          hit: followAttack.hit,
+          criticalSuccess: followAttack.criticalSuccess,
+          criticalFailure: followAttack.criticalFailure,
+          rollMode: 'normal',
+          rollId: followAttackRoll.id || ''
+        },
+        damage: followDamage ? {
+          notation: followDamage.notation,
+          diceResults: Array.isArray(followDamage.keptDice) ? followDamage.keptDice.slice() : [],
+          modifier: Number(followDamage.modifier) || 0,
+          total: Number(followDamage.total),
+          damageType: followUp.damageType || weapon.damageType || 'physisch',
+          rollId: followDamage.id || ''
+        } : null
+      });
+      if (damageRoll && followDamage) {
+        damageRoll = {
+          ...damageRoll,
+          primaryTotal: Number(damageRoll.total) || 0,
+          total: (Number(damageRoll.total) || 0) + (Number(followDamage.total) || 0),
+          notation: `${damageRoll.notation} + ${followDamage.notation}`
         };
       }
     }
@@ -402,6 +500,14 @@ export class CombatResolutionService {
       actorPersistence: actor.persistence || null,
       targetPersistence: target.persistence || null,
       weapon: { ...weapon },
+      weaponGrip: actor.weaponGrip || 'one-handed',
+      secondarySaves,
+      followUpAttacks,
+      targetConditionSnapshot: appliedTemporaryCondition ? {
+        before: existingTemporaryConditions,
+        after: [...existingTemporaryConditions, appliedTemporaryCondition],
+        applied: appliedTemporaryCondition
+      } : null,
       profileActionId: actor.profileActionId || '',
       profileActionKind: actor.profileActionKind || 'weapon',
       resourceCosts: Array.isArray(actor.resourceCosts) ? actor.resourceCosts.map(cost => ({ ...cost })) : [],
@@ -447,6 +553,7 @@ export class CombatResolutionService {
         diceResults: Array.isArray(damageRoll.keptDice) ? damageRoll.keptDice.slice() : [],
         modifier: Number(damageRoll.modifier) || 0,
         total: Number(damageRoll.total),
+        primaryTotal: damageRoll.primaryTotal == null ? Number(damageRoll.total) : Number(damageRoll.primaryTotal),
         rawTotal: damageRoll.rawTotal == null ? Number(damageRoll.total) : Number(damageRoll.rawTotal),
         damageReduction: Number(damageRoll.damageReduction || 0),
         halvedBySave: !!damageRoll.halvedBySave,

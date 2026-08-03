@@ -1,0 +1,1170 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--tDPhY0vT1Jp8Hu9celcu",
+  "slug": "tarah-geb-draenog-grawn",
+  "identity": {
+    "name": "Tarah (Geb. Draenog) Grawn",
+    "aliases": [],
+    "worldPersonId": "person--haus-draenog--tarah-draenog"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draenog",
+      "label": "Haus Draenog O'Llanforwyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draenog",
+        "familyTitle": "Haus Draenog O'Llanforwyn",
+        "personId": "tarah-draenog",
+        "worldPersonId": "person--haus-draenog--tarah-draenog",
+        "houseId": "house-draenog",
+        "houseName": "Haus Draenog O'Llanforwyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Graue Weite",
+          "Silberwald",
+          "Llanforwyn"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenog&mode=view&person=tarah-draenog",
+        "fingerprint": "{\"name\":\"Tarah Draenog\",\"title\":\"Wegverheiratet an Haus Grawn\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-grawn/tarah-draenog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"lunet-neidr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--lunet-neidr\",\"name\":\"Lunet Neidr\"},{\"personId\":\"mathonwy-draenog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenog--mathonwy-draenog\",\"name\":\"Mathonwy Draenog\"}],\"partners\":[{\"personId\":\"iorwerth-1685-grawn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--iorwerth-1685-grawn\",\"name\":\"Iorwerth Grawn\"}],\"children\":[]}}",
+        "score": 185
+      },
+      {
+        "familyId": "haus-grawn",
+        "familyTitle": "Haus Grawn",
+        "personId": "tarah-draenog",
+        "worldPersonId": "person--haus-draenog--tarah-draenog",
+        "houseId": "house-draenog",
+        "houseName": "Haus Draenog",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Ährental",
+          "Tristams Ebene",
+          "Glyndraith"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-grawn&mode=view&person=tarah-draenog",
+        "fingerprint": "{\"name\":\"Tarah Draenog\",\"title\":\"\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-grawn/tarah-draenog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-1685-grawn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--iorwerth-1685-grawn\",\"name\":\"Iorwerth Grawn\"}],\"children\":[{\"personId\":\"afon-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--afon-grawn\",\"name\":\"Afon Grawn\"},{\"personId\":\"alaweyn-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaweyn-grawn\",\"name\":\"Alaweyn Grawn\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "glyndraith",
+        "label": "Glyndraith",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Glyndraith"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "tDPhY0vT1Jp8Hu9celcu",
+      "documentIds": [
+        "tDPhY0vT1Jp8Hu9celcu"
+      ],
+      "documents": [
+        {
+          "documentId": "tDPhY0vT1Jp8Hu9celcu",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draenog",
+        "personId": "tarah-draenog",
+        "worldPersonId": "person--haus-draenog--tarah-draenog",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenog&mode=view&person=tarah-draenog"
+      },
+      {
+        "familyId": "haus-grawn",
+        "personId": "tarah-draenog",
+        "worldPersonId": "person--haus-draenog--tarah-draenog",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-grawn&mode=view&person=tarah-draenog"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "tDPhY0vT1Jp8Hu9celcu"
+    ],
+    "contentHash": "bf518198ec1961510132643f844c1d59a8a6af969b750f2449abfd510db9a6fc"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "tDPhY0vT1Jp8Hu9celcu",
+        "aliases": [],
+        "name": "Tarah (Geb. Draenog) Grawn",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "gold": 0,
+            "copper": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "level": "Haus Grawn, Ährental",
+          "portraitPosition": "top",
+          "status": "Gesund",
+          "infoRows": [],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "hitpoints": "TP / Zustand",
+          "moneyNotice": "",
+          "portrait": "https://64.media.tumblr.com/10e7e55e076eb504980bbe178c91cb46/1d0fdf290bb92993-d1/s250x400/4b287dac786920f78a22e812445faf36f5c0f6cd.pnj",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "items": [
+            {
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imagePosition": "center",
+              "type": "Waffe",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-0-w8ef",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "icon": "*",
+              "imageFit": "contain"
+            },
+            {
+              "imagePosition": "center",
+              "type": "Rüstung",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "infoRows": [],
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "icon": "*",
+              "category": "armor",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "id": "item-mqu1vat1-1-exvo",
+              "image": ""
+            },
+            {
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imagePosition": "center",
+              "name": "Reiseausrüstung",
+              "type": "Ausrüstung",
+              "image": "",
+              "tags": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1"
+            },
+            {
+              "imageFormat": "square",
+              "icon": "*",
+              "quantity": "1",
+              "imagePosition": "center",
+              "category": "potions",
+              "id": "item-mqu1vat1-3-2lgm",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "tags": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "icon": "*",
+              "quantity": "1",
+              "image": "",
+              "category": "documents",
+              "imageFormat": "square",
+              "tags": "",
+              "infoRows": [],
+              "type": "Dokument",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "icon": "*",
+              "id": "item-mqu1vat1-5-5kao",
+              "infoRows": [],
+              "imageFit": "contain",
+              "image": "",
+              "quantity": "1",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "category": "other",
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "tags": ""
+            }
+          ],
+          "portraitFit": "cover",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "role": "Gräfin des Ährentals, Matriarchin der Kirche von Cenyr, Llanforwyn",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "equipmentQuiz": {
+            "open": false,
+            "status": "",
+            "resultText": "",
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0
+          },
+          "name": "Tarah (Geb. Draenog) Grawn",
+          "companions": [
+            {
+              "name": "Reittier / Gefährte",
+              "description": "",
+              "role": "Begleiter",
+              "imagePosition": "top",
+              "status": "Gesund",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "species": "Tier oder Begleiter",
+              "imageFormat": "landscape",
+              "infoRows": [],
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "imageFormat": "landscape",
+              "species": "Tier / Person",
+              "image": "",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "status": "Noch festlegen",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imageFit": "cover",
+              "description": "",
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "healthColor": "#5c7f20",
+          "title": "Charakter-Inventar"
+        },
+        "archived": false,
+        "title": "Gräfin des Ährentals, Matriarchin der Kirche von Cenyr, Llanforwyn",
+        "playerOwner": "patrick",
+        "bio": "",
+        "fraktion": "Haus Grawn, Ährental",
+        "portrait": "https://64.media.tumblr.com/10e7e55e076eb504980bbe178c91cb46/1d0fdf290bb92993-d1/s250x400/4b287dac786920f78a22e812445faf36f5c0f6cd.pnj",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/kORWzHI.png"
+          },
+          {
+            "img": "https://i.imgur.com/8FqAoNq.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/JH4H37V.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Xyde0zQ.png"
+          },
+          {
+            "img": "https://i.imgur.com/oSIw098.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/0ENLjrd.png"
+          },
+          {
+            "img": "https://i.imgur.com/5rvbng3.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/cjmhXFO.png"
+          }
+        ],
+        "emotesOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "tDPhY0vT1Jp8Hu9celcu",
+    "aliases": [],
+    "name": "Tarah (Geb. Draenog) Grawn",
+    "inventory": {
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "level": "Haus Grawn, Ährental",
+      "portraitPosition": "top",
+      "status": "Gesund",
+      "infoRows": [],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "hitpoints": "TP / Zustand",
+      "moneyNotice": "",
+      "portrait": "https://64.media.tumblr.com/10e7e55e076eb504980bbe178c91cb46/1d0fdf290bb92993-d1/s250x400/4b287dac786920f78a22e812445faf36f5c0f6cd.pnj",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "items": [
+        {
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-0-w8ef",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "icon": "*",
+          "imageFit": "contain"
+        },
+        {
+          "imagePosition": "center",
+          "type": "Rüstung",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "infoRows": [],
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "icon": "*",
+          "category": "armor",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "id": "item-mqu1vat1-1-exvo",
+          "image": ""
+        },
+        {
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "image": "",
+          "tags": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1"
+        },
+        {
+          "imageFormat": "square",
+          "icon": "*",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "potions",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "tags": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": ""
+        },
+        {
+          "icon": "*",
+          "quantity": "1",
+          "image": "",
+          "category": "documents",
+          "imageFormat": "square",
+          "tags": "",
+          "infoRows": [],
+          "type": "Dokument",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "icon": "*",
+          "id": "item-mqu1vat1-5-5kao",
+          "infoRows": [],
+          "imageFit": "contain",
+          "image": "",
+          "quantity": "1",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "tags": ""
+        }
+      ],
+      "portraitFit": "cover",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "role": "Gräfin des Ährentals, Matriarchin der Kirche von Cenyr, Llanforwyn",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "equipmentQuiz": {
+        "open": false,
+        "status": "",
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0
+      },
+      "name": "Tarah (Geb. Draenog) Grawn",
+      "companions": [
+        {
+          "name": "Reittier / Gefährte",
+          "description": "",
+          "role": "Begleiter",
+          "imagePosition": "top",
+          "status": "Gesund",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "species": "Tier oder Begleiter",
+          "imageFormat": "landscape",
+          "infoRows": [],
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "imageFormat": "landscape",
+          "species": "Tier / Person",
+          "image": "",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFit": "cover",
+          "description": "",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "healthColor": "#5c7f20",
+      "title": "Charakter-Inventar"
+    },
+    "archived": false,
+    "title": "Gräfin des Ährentals, Matriarchin der Kirche von Cenyr, Llanforwyn",
+    "playerOwner": "patrick",
+    "bio": "",
+    "fraktion": "Haus Grawn, Ährental",
+    "portrait": "https://64.media.tumblr.com/10e7e55e076eb504980bbe178c91cb46/1d0fdf290bb92993-d1/s250x400/4b287dac786920f78a22e812445faf36f5c0f6cd.pnj",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/kORWzHI.png"
+      },
+      {
+        "img": "https://i.imgur.com/8FqAoNq.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/JH4H37V.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Xyde0zQ.png"
+      },
+      {
+        "img": "https://i.imgur.com/oSIw098.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/0ENLjrd.png"
+      },
+      {
+        "img": "https://i.imgur.com/5rvbng3.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/cjmhXFO.png"
+      }
+    ],
+    "emotesOverride": true,
+    "identity": {
+      "worldPersonId": "person--haus-draenog--tarah-draenog"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-draenog--tarah-draenog",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1689",
+      "death": "",
+      "houseId": "house-draenog",
+      "houseName": "Haus Draenog O'Llanforwyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Wegverheiratet"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-draenog",
+          "personId": "tarah-draenog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenog&mode=view&person=tarah-draenog",
+          "fingerprint": "{\"name\":\"Tarah Draenog\",\"title\":\"Wegverheiratet an Haus Grawn\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-grawn/tarah-draenog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"lunet-neidr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--lunet-neidr\",\"name\":\"Lunet Neidr\"},{\"personId\":\"mathonwy-draenog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenog--mathonwy-draenog\",\"name\":\"Mathonwy Draenog\"}],\"partners\":[{\"personId\":\"iorwerth-1685-grawn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--iorwerth-1685-grawn\",\"name\":\"Iorwerth Grawn\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-grawn",
+          "personId": "tarah-draenog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-grawn&mode=view&person=tarah-draenog",
+          "fingerprint": "{\"name\":\"Tarah Draenog\",\"title\":\"\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-grawn/tarah-draenog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-1685-grawn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--iorwerth-1685-grawn\",\"name\":\"Iorwerth Grawn\"}],\"children\":[{\"personId\":\"afon-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--afon-grawn\",\"name\":\"Afon Grawn\"},{\"personId\":\"alaweyn-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--alaweyn-grawn\",\"name\":\"Alaweyn Grawn\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "lunet-neidr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-neidr--lunet-neidr",
+            "name": "Lunet Neidr"
+          },
+          {
+            "personId": "mathonwy-draenog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draenog--mathonwy-draenog",
+            "name": "Mathonwy Draenog"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "iorwerth-1685-grawn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-grawn--iorwerth-1685-grawn",
+            "name": "Iorwerth Grawn"
+          }
+        ],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Graue Weite > Silberwald > Llanforwyn"
+  }
+}

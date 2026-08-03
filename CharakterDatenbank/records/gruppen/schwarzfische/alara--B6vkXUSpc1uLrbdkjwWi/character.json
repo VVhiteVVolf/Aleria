@@ -1,0 +1,1003 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--B6vkXUSpc1uLrbdkjwWi",
+  "slug": "alara",
+  "identity": {
+    "name": "Alara",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarzfische",
+      "label": "Schwarzfische",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarzfische"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "B6vkXUSpc1uLrbdkjwWi",
+      "documentIds": [
+        "B6vkXUSpc1uLrbdkjwWi"
+      ],
+      "documents": [
+        {
+          "documentId": "B6vkXUSpc1uLrbdkjwWi",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "B6vkXUSpc1uLrbdkjwWi"
+    ],
+    "contentHash": "7ff3ea94f22c3351eab3b639565038da2deaac3c01b5efcaf9021ef72dbe2307"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "B6vkXUSpc1uLrbdkjwWi",
+        "fraktion": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+        "portrait": "https://i.imgur.com/ZBZ1ZeO.png",
+        "bio": "Alara ist der Schatten der Schwarzfische, sie setzt sich in der Regel mit größeren Auftragsgebern zusammen und geht Investigativen Aufgaben innerhalb der Schwarzfische nach.",
+        "name": "Alara",
+        "title": "Schatten der Schwarzfische, Unbekannt",
+        "emotes": [],
+        "emotesOverride": true,
+        "archived": false,
+        "inventory": {
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0,
+            "copper": 0
+          },
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitPosition": "top",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "category": "weapon",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "id": "item-mqu1vat1-0-w8ef",
+              "image": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "type": "Waffe",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "infoRows": [],
+              "icon": "*"
+            },
+            {
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-1-exvo",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imageFit": "contain",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "imagePosition": "center",
+              "image": "",
+              "quantity": "1",
+              "type": "Rüstung",
+              "category": "armor"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "infoRows": [],
+              "imageFit": "contain",
+              "type": "Ausrüstung",
+              "tags": "",
+              "name": "Reiseausrüstung",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-2-0fx2",
+              "imageFormat": "square",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+            },
+            {
+              "imageFormat": "square",
+              "infoRows": [],
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imagePosition": "center",
+              "image": "",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "name": "Heil- oder Verbrauchsgut",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "category": "potions",
+              "type": "Trinktur"
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "imageFormat": "square",
+              "type": "Dokument",
+              "category": "documents",
+              "tags": "",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "infoRows": [],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "icon": "*",
+              "id": "item-mqu1vat1-4-ajrj",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "icon": "*",
+              "quantity": "1",
+              "imagePosition": "center",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "category": "other",
+              "image": "",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Sonstiges",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Persönlicher Gegenstand",
+              "imageFormat": "square"
+            }
+          ],
+          "moneyNotice": "",
+          "status": "Gesund",
+          "equipmentQuiz": {
+            "resultText": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "step": 0,
+            "updatedAt": ""
+          },
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "portraitFormat": "portrait",
+          "role": "Schatten der Schwarzfische, Unbekannt",
+          "healthColor": "#5c7f20",
+          "name": "Alara",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "carryValue": "Noch festlegen",
+          "level": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+          "infoRows": [],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "companions": [
+            {
+              "name": "Reittier / Gefährte",
+              "imagePosition": "top",
+              "role": "Begleiter",
+              "species": "Tier oder Begleiter",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "imageFit": "cover",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "status": "Gesund",
+              "description": "",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "description": "",
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "role": "Gefährte",
+              "image": "",
+              "imageFormat": "landscape",
+              "name": "Treuer Begleiter",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "imageFit": "cover",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "infoRows": []
+            }
+          ],
+          "portraitFit": "cover",
+          "portrait": "https://i.imgur.com/ZBZ1ZeO.png"
+        },
+        "playerOwner": "erdi",
+        "aliases": []
+      }
+    ]
+  },
+  "character": {
+    "id": "B6vkXUSpc1uLrbdkjwWi",
+    "fraktion": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+    "portrait": "https://i.imgur.com/ZBZ1ZeO.png",
+    "bio": "Alara ist der Schatten der Schwarzfische, sie setzt sich in der Regel mit größeren Auftragsgebern zusammen und geht Investigativen Aufgaben innerhalb der Schwarzfische nach.",
+    "name": "Alara",
+    "title": "Schatten der Schwarzfische, Unbekannt",
+    "emotes": [],
+    "emotesOverride": true,
+    "archived": false,
+    "inventory": {
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitPosition": "top",
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "category": "weapon",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "id": "item-mqu1vat1-0-w8ef",
+          "image": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "type": "Waffe",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "icon": "*"
+        },
+        {
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-1-exvo",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFit": "contain",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "imagePosition": "center",
+          "image": "",
+          "quantity": "1",
+          "type": "Rüstung",
+          "category": "armor"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "tags": "",
+          "name": "Reiseausrüstung",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imageFormat": "square",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "imageFormat": "square",
+          "infoRows": [],
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imagePosition": "center",
+          "image": "",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "category": "potions",
+          "type": "Trinktur"
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "imageFormat": "square",
+          "type": "Dokument",
+          "category": "documents",
+          "tags": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "icon": "*",
+          "id": "item-mqu1vat1-4-ajrj",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "icon": "*",
+          "quantity": "1",
+          "imagePosition": "center",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "image": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Sonstiges",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square"
+        }
+      ],
+      "moneyNotice": "",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "step": 0,
+        "updatedAt": ""
+      },
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "portraitFormat": "portrait",
+      "role": "Schatten der Schwarzfische, Unbekannt",
+      "healthColor": "#5c7f20",
+      "name": "Alara",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "level": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+      "infoRows": [],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "name": "Reittier / Gefährte",
+          "imagePosition": "top",
+          "role": "Begleiter",
+          "species": "Tier oder Begleiter",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Gesund",
+          "description": "",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "description": "",
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "role": "Gefährte",
+          "image": "",
+          "imageFormat": "landscape",
+          "name": "Treuer Begleiter",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFit": "cover",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "infoRows": []
+        }
+      ],
+      "portraitFit": "cover",
+      "portrait": "https://i.imgur.com/ZBZ1ZeO.png"
+    },
+    "playerOwner": "erdi",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

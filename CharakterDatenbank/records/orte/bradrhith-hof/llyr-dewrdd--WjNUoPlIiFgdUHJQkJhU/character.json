@@ -1,0 +1,1037 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--WjNUoPlIiFgdUHJQkJhU",
+  "slug": "llyr-dewrdd",
+  "identity": {
+    "name": "Llyr Dewrdd",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "bradrhith-hof",
+      "label": "Bradrhith Hof",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "bradrhith-hof",
+        "label": "Bradrhith Hof",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Bradrhith Hof"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "WjNUoPlIiFgdUHJQkJhU",
+      "documentIds": [
+        "WjNUoPlIiFgdUHJQkJhU"
+      ],
+      "documents": [
+        {
+          "documentId": "WjNUoPlIiFgdUHJQkJhU",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "WjNUoPlIiFgdUHJQkJhU"
+    ],
+    "contentHash": "405742eedb60f548be0f19c3be69077ff6582a6722a1b2b1221575ba12d7498f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "WjNUoPlIiFgdUHJQkJhU",
+        "emotesOverride": true,
+        "archived": true,
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/cshJBng.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/bY5CPVs.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/aMjMexq.png"
+          },
+          {
+            "img": "https://i.imgur.com/fu6TlzP.png",
+            "label": ""
+          }
+        ],
+        "name": "Llyr Dewrdd",
+        "inventory": {
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "status": "Gesund",
+          "portrait": "https://i.imgur.com/lDOLO2X.png",
+          "moneyNotice": "",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFormat": "portrait",
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "status": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "open": false
+          },
+          "infoRows": [],
+          "level": "Angestellter/ Hof der Bradrhith",
+          "companions": [
+            {
+              "species": "Tier oder Begleiter",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "status": "Gesund",
+              "imagePosition": "top",
+              "description": "",
+              "name": "Reittier / Gefährte",
+              "statusColor": "#5c7f20",
+              "role": "Begleiter",
+              "imageFit": "cover",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "infoRows": [],
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "image": "",
+              "imageFit": "cover",
+              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "species": "Tier / Person"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitPosition": "top",
+          "items": [
+            {
+              "category": "weapon",
+              "id": "item-mqu1vat1-0-w8ef",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "tags": "",
+              "type": "Waffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imageFit": "contain",
+              "name": "Hauptwaffe",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": []
+            },
+            {
+              "category": "armor",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "imagePosition": "center",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "image": "",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "type": "Rüstung",
+              "id": "item-mqu1vat1-1-exvo",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "infoRows": [],
+              "name": "Rüstung / Schutz"
+            },
+            {
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "id": "item-mqu1vat1-2-0fx2",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "category": "equipment",
+              "tags": "",
+              "infoRows": [],
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "type": "Ausrüstung",
+              "imagePosition": "center",
+              "image": "",
+              "imageFit": "contain",
+              "name": "Reiseausrüstung"
+            },
+            {
+              "imageFormat": "square",
+              "image": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "icon": "*",
+              "infoRows": [],
+              "name": "Heil- oder Verbrauchsgut",
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "id": "item-mqu1vat1-3-2lgm",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": ""
+            },
+            {
+              "category": "documents",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "id": "item-mqu1vat1-4-ajrj",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen",
+              "type": "Dokument",
+              "tags": "",
+              "name": "Dokumente / Urkunden",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square"
+            },
+            {
+              "imagePosition": "center",
+              "icon": "*",
+              "infoRows": [],
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "imageFit": "contain",
+              "image": "",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "tags": "",
+              "category": "other",
+              "id": "item-mqu1vat1-5-5kao",
+              "type": "Sonstiges",
+              "imageFormat": "square",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            }
+          ],
+          "portraitFit": "cover",
+          "title": "Charakter-Inventar",
+          "name": "Llyr Dewrdd",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "role": "Pferdemeister/ Gwynthor"
+        },
+        "bio": "Llyr Dewrdd war lange ein einfacher Arbeiter auf dem Hof, doch sein Gespür für Pferde machte ihn unentbehrlich und verschaffte ihm Ansehen. Aus der Nähe zur Familie wuchs schließlich die Verbindung zur jüngeren Tochter, deren Heirat ihm mit dem Segen des alten Hofherrn gelang; gemeinsam trugen sie in den letzten Jahren einen großen Teil der Arbeit. Nach dem Tod des Alten jedoch geriet seine Stellung ins Wanken, da Recht und Besitz klar der älteren Linie zufielen – und nun steht er, nach dem Überfall, als Witwer vor dem Hof, dessen Zukunft ebenso ungewiss ist wie seine eigene.\n\nEr erholt sich derweil in der Burg des Hauses Draig bis entschieden wird, wohin mit ihm.",
+        "playerOwner": "erdi",
+        "portrait": "https://i.imgur.com/lDOLO2X.png",
+        "fraktion": "Angestellter/ Hof der Bradrhith",
+        "aliases": [],
+        "title": "Pferdemeister/ Gwynthor"
+      }
+    ]
+  },
+  "character": {
+    "id": "WjNUoPlIiFgdUHJQkJhU",
+    "emotesOverride": true,
+    "archived": true,
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/cshJBng.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/bY5CPVs.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/aMjMexq.png"
+      },
+      {
+        "img": "https://i.imgur.com/fu6TlzP.png",
+        "label": ""
+      }
+    ],
+    "name": "Llyr Dewrdd",
+    "inventory": {
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "status": "Gesund",
+      "portrait": "https://i.imgur.com/lDOLO2X.png",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "open": false
+      },
+      "infoRows": [],
+      "level": "Angestellter/ Hof der Bradrhith",
+      "companions": [
+        {
+          "species": "Tier oder Begleiter",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Gesund",
+          "imagePosition": "top",
+          "description": "",
+          "name": "Reittier / Gefährte",
+          "statusColor": "#5c7f20",
+          "role": "Begleiter",
+          "imageFit": "cover",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": ""
+        },
+        {
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "infoRows": [],
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "image": "",
+          "imageFit": "cover",
+          "name": "Treuer Begleiter",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "species": "Tier / Person"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitPosition": "top",
+      "items": [
+        {
+          "category": "weapon",
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "tags": "",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFit": "contain",
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": []
+        },
+        {
+          "category": "armor",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "image": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "type": "Rüstung",
+          "id": "item-mqu1vat1-1-exvo",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "infoRows": [],
+          "name": "Rüstung / Schutz"
+        },
+        {
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mqu1vat1-2-0fx2",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "category": "equipment",
+          "tags": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "type": "Ausrüstung",
+          "imagePosition": "center",
+          "image": "",
+          "imageFit": "contain",
+          "name": "Reiseausrüstung"
+        },
+        {
+          "imageFormat": "square",
+          "image": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "icon": "*",
+          "infoRows": [],
+          "name": "Heil- oder Verbrauchsgut",
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": ""
+        },
+        {
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "type": "Dokument",
+          "tags": "",
+          "name": "Dokumente / Urkunden",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square"
+        },
+        {
+          "imagePosition": "center",
+          "icon": "*",
+          "infoRows": [],
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imageFit": "contain",
+          "image": "",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        }
+      ],
+      "portraitFit": "cover",
+      "title": "Charakter-Inventar",
+      "name": "Llyr Dewrdd",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "role": "Pferdemeister/ Gwynthor"
+    },
+    "bio": "Llyr Dewrdd war lange ein einfacher Arbeiter auf dem Hof, doch sein Gespür für Pferde machte ihn unentbehrlich und verschaffte ihm Ansehen. Aus der Nähe zur Familie wuchs schließlich die Verbindung zur jüngeren Tochter, deren Heirat ihm mit dem Segen des alten Hofherrn gelang; gemeinsam trugen sie in den letzten Jahren einen großen Teil der Arbeit. Nach dem Tod des Alten jedoch geriet seine Stellung ins Wanken, da Recht und Besitz klar der älteren Linie zufielen – und nun steht er, nach dem Überfall, als Witwer vor dem Hof, dessen Zukunft ebenso ungewiss ist wie seine eigene.\n\nEr erholt sich derweil in der Burg des Hauses Draig bis entschieden wird, wohin mit ihm.",
+    "playerOwner": "erdi",
+    "portrait": "https://i.imgur.com/lDOLO2X.png",
+    "fraktion": "Angestellter/ Hof der Bradrhith",
+    "aliases": [],
+    "title": "Pferdemeister/ Gwynthor",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

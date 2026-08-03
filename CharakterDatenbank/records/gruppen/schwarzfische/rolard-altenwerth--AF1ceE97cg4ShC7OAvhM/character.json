@@ -1,0 +1,1003 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--AF1ceE97cg4ShC7OAvhM",
+  "slug": "rolard-altenwerth",
+  "identity": {
+    "name": "Rolard Altenwerth",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarzfische",
+      "label": "Schwarzfische",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarzfische"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "AF1ceE97cg4ShC7OAvhM",
+      "documentIds": [
+        "AF1ceE97cg4ShC7OAvhM"
+      ],
+      "documents": [
+        {
+          "documentId": "AF1ceE97cg4ShC7OAvhM",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "AF1ceE97cg4ShC7OAvhM"
+    ],
+    "contentHash": "f3beb639cd3267ac1ea5479a41cb28a9685b7e267e3404d7254a7c99468e9aeb"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "AF1ceE97cg4ShC7OAvhM",
+        "portrait": "https://i.imgur.com/xmC1HES.jpeg",
+        "aliases": [],
+        "fraktion": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+        "name": "Rolard Altenwerth",
+        "title": "Paladin, Aldwerder",
+        "playerOwner": "erdi",
+        "archived": false,
+        "bio": "Rolard entstammt dem niederen Rittergeschlecht Altenwerth aus Altwerder (kleine Burg) im nördlichen Großherzogtum Aldingen. Sein Haus war klein und von wenig Bedeutung, galt jedoch als pflichtbewusst und standhaft.\n\nWährend des Krieges wurde Altwerder zerstört und des Hauses Altenwerth ausgelöscht. Rolard gehörte zu den wenigen Überlebenden der Burg und zog danach einige wenige Jahre als fahrender Ritter durchs Land.\n\nErst bei den Söldnern der Schwarzfische fand er schließlich eine neue Heimat.",
+        "inventory": {
+          "equipmentQuiz": {
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false,
+            "resultText": "",
+            "updatedAt": ""
+          },
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ],
+          "role": "Paladin, Aldwerder",
+          "portrait": "https://i.imgur.com/xmC1HES.jpeg",
+          "name": "Rolard Altenwerth",
+          "portraitFormat": "portrait",
+          "title": "Charakter-Inventar",
+          "moneyNotice": "",
+          "infoRows": [],
+          "items": [
+            {
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Waffe",
+              "image": "",
+              "imageFormat": "square",
+              "tags": "",
+              "name": "Hauptwaffe",
+              "infoRows": [],
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFit": "contain",
+              "quantity": "1",
+              "icon": "*",
+              "imagePosition": "center",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon"
+            },
+            {
+              "weight": "Noch festlegen",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "icon": "*",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-1-exvo",
+              "image": "",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Rüstung",
+              "category": "armor",
+              "imagePosition": "center",
+              "quantity": "1"
+            },
+            {
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "category": "equipment",
+              "type": "Ausrüstung",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-2-0fx2",
+              "infoRows": [],
+              "image": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "imageFormat": "square"
+            },
+            {
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "icon": "*",
+              "imageFit": "contain",
+              "image": "",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "tags": "",
+              "category": "potions",
+              "type": "Trinktur",
+              "imageFormat": "square",
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imagePosition": "center",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "category": "documents",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "imageFormat": "square",
+              "icon": "*",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Dokumente / Urkunden",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "type": "Dokument",
+              "tags": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "id": "item-mqu1vat1-4-ajrj",
+              "imagePosition": "center"
+            },
+            {
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-5-5kao",
+              "type": "Sonstiges",
+              "image": "",
+              "tags": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imagePosition": "center",
+              "category": "other",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "quantity": "1",
+              "icon": "*"
+            }
+          ],
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "level": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+          "portraitPosition": "top",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "carryValue": "Noch festlegen",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "role": "Begleiter",
+              "name": "Reittier / Gefährte",
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "image": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "species": "Tier oder Begleiter",
+              "status": "Gesund",
+              "imageFit": "cover",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "description": "",
+              "infoRows": [],
+              "statusColor": "#5c7f20"
+            },
+            {
+              "statusColor": "#5c7f20",
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "name": "Treuer Begleiter",
+              "imageFit": "cover",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "role": "Gefährte",
+              "species": "Tier / Person",
+              "infoRows": [],
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "imagePosition": "top"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "portraitFit": "cover",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "status": "Gesund"
+        },
+        "emotesOverride": true,
+        "emotes": []
+      }
+    ]
+  },
+  "character": {
+    "id": "AF1ceE97cg4ShC7OAvhM",
+    "portrait": "https://i.imgur.com/xmC1HES.jpeg",
+    "aliases": [],
+    "fraktion": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+    "name": "Rolard Altenwerth",
+    "title": "Paladin, Aldwerder",
+    "playerOwner": "erdi",
+    "archived": false,
+    "bio": "Rolard entstammt dem niederen Rittergeschlecht Altenwerth aus Altwerder (kleine Burg) im nördlichen Großherzogtum Aldingen. Sein Haus war klein und von wenig Bedeutung, galt jedoch als pflichtbewusst und standhaft.\n\nWährend des Krieges wurde Altwerder zerstört und des Hauses Altenwerth ausgelöscht. Rolard gehörte zu den wenigen Überlebenden der Burg und zog danach einige wenige Jahre als fahrender Ritter durchs Land.\n\nErst bei den Söldnern der Schwarzfische fand er schließlich eine neue Heimat.",
+    "inventory": {
+      "equipmentQuiz": {
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false,
+        "resultText": "",
+        "updatedAt": ""
+      },
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "role": "Paladin, Aldwerder",
+      "portrait": "https://i.imgur.com/xmC1HES.jpeg",
+      "name": "Rolard Altenwerth",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "infoRows": [],
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Waffe",
+          "image": "",
+          "imageFormat": "square",
+          "tags": "",
+          "name": "Hauptwaffe",
+          "infoRows": [],
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFit": "contain",
+          "quantity": "1",
+          "icon": "*",
+          "imagePosition": "center",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon"
+        },
+        {
+          "weight": "Noch festlegen",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "icon": "*",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-1-exvo",
+          "image": "",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Rüstung",
+          "category": "armor",
+          "imagePosition": "center",
+          "quantity": "1"
+        },
+        {
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "category": "equipment",
+          "type": "Ausrüstung",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-2-0fx2",
+          "infoRows": [],
+          "image": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "imageFormat": "square"
+        },
+        {
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "imageFit": "contain",
+          "image": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "tags": "",
+          "category": "potions",
+          "type": "Trinktur",
+          "imageFormat": "square",
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "category": "documents",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "imageFormat": "square",
+          "icon": "*",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "tags": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "id": "item-mqu1vat1-4-ajrj",
+          "imagePosition": "center"
+        },
+        {
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-5-5kao",
+          "type": "Sonstiges",
+          "image": "",
+          "tags": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "category": "other",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "quantity": "1",
+          "icon": "*"
+        }
+      ],
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "level": "Windreiter, Hauptmannsbanner der Schwarz Fische",
+      "portraitPosition": "top",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "carryValue": "Noch festlegen",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "role": "Begleiter",
+          "name": "Reittier / Gefährte",
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "image": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "species": "Tier oder Begleiter",
+          "status": "Gesund",
+          "imageFit": "cover",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "description": "",
+          "infoRows": [],
+          "statusColor": "#5c7f20"
+        },
+        {
+          "statusColor": "#5c7f20",
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "name": "Treuer Begleiter",
+          "imageFit": "cover",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "role": "Gefährte",
+          "species": "Tier / Person",
+          "infoRows": [],
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "imagePosition": "top"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "portraitFit": "cover",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "status": "Gesund"
+    },
+    "emotesOverride": true,
+    "emotes": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

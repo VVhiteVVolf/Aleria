@@ -1,0 +1,325 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-aderyn--jeannae-aderyn",
+  "slug": "jeannae-aderyn",
+  "identity": {
+    "name": "Jeannae Aderyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-aderyn--jeannae-aderyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-aderyn",
+      "label": "Haus Aderyn O'Penbryn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-aderyn",
+        "familyTitle": "Haus Aderyn O'Penbryn",
+        "personId": "jeannae-aderyn",
+        "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+        "houseId": "house-aderyn",
+        "houseName": "Haus Aderyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Tal der Milane",
+          "Yvains Klamm",
+          "Penbryn"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=jeannae-aderyn",
+        "fingerprint": "{\"name\":\"Jeannae Aderyn\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"micah-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--micah-aderyn\",\"name\":\"Micah Aderyn\"},{\"personId\":\"nurit-rosenstolz\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-rosenstolz--nurit-rosenstolz\",\"name\":\"Nurit Rosenstolz\"}],\"partners\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"}],\"children\":[]}}",
+        "score": 275
+      },
+      {
+        "familyId": "haus-gwyvern",
+        "familyTitle": "Haus Gwyvern",
+        "personId": "jeannae-aderyn",
+        "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+        "houseId": "house-aderyn",
+        "houseName": "Haus Aderyn",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Gwendolyns Ufer",
+          "Abergwint"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=jeannae-aderyn",
+        "fingerprint": "{\"name\":\"Jeannae Aderyn\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"}],\"children\":[{\"personId\":\"trevor-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--trevor-gwyvern\",\"name\":\"Trevor Gwyvern\"},{\"personId\":\"tegwen-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--tegwen-gwyvern\",\"name\":\"Tegwen Gwyvern\"},{\"personId\":\"huw-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--huw-gwyvern\",\"name\":\"Huw Gwyvern\"},{\"personId\":\"gwenfrewi-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--gwenfrewi-gwyvern\",\"name\":\"Gwenfrewi Gwyvern\"}]}}",
+        "score": 230
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-aderyn--jeannae-aderyn",
+      "documentIds": [
+        "person--haus-aderyn--jeannae-aderyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-aderyn--jeannae-aderyn",
+          "createdAt": "2026-07-30T19:58:28.475Z",
+          "updatedAt": "2026-07-30T19:58:28.475Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-aderyn",
+        "personId": "jeannae-aderyn",
+        "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=jeannae-aderyn"
+      },
+      {
+        "familyId": "haus-gwyvern",
+        "personId": "jeannae-aderyn",
+        "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=jeannae-aderyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-30T19:58:28.475Z",
+    "sourceDocumentIds": [
+      "person--haus-aderyn--jeannae-aderyn"
+    ],
+    "contentHash": "ff817f7deb0f992e5fa7d267cd88d717470d22d63149084eba9e25dc1261ca54"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-aderyn--jeannae-aderyn",
+        "relevance": "",
+        "profileLink": "",
+        "origin": "",
+        "inventory": null,
+        "archived": false,
+        "aliases": [],
+        "createdAt": "2026-07-30T19:58:28.475Z",
+        "emotes": [],
+        "genealogy": {
+          "death": "",
+          "houseName": "Haus Aderyn",
+          "status": "alive",
+          "birth": "1702",
+          "sex": "female",
+          "sources": [
+            {
+              "lastSyncedAt": "2026-07-30T19:58:28.475Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=jeannae-aderyn",
+              "releaseId": "",
+              "familyId": "haus-gwyvern",
+              "fingerprint": "{\"name\":\"Jeannae Aderyn\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"}],\"children\":[{\"personId\":\"trevor-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--trevor-gwyvern\",\"name\":\"Trevor Gwyvern\"},{\"personId\":\"tegwen-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--tegwen-gwyvern\",\"name\":\"Tegwen Gwyvern\"},{\"personId\":\"huw-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--huw-gwyvern\",\"name\":\"Huw Gwyvern\"},{\"personId\":\"gwenfrewi-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--gwenfrewi-gwyvern\",\"name\":\"Gwenfrewi Gwyvern\"}]}}",
+              "publishedAt": "",
+              "importedAt": "2026-07-30T19:58:28.475Z",
+              "personId": "jeannae-aderyn"
+            }
+          ],
+          "familyRole": "married",
+          "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "houseId": "house-aderyn",
+          "relationships": {
+            "partners": [
+              {
+                "name": "Mervyn Gwyvern",
+                "status": "active",
+                "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+                "personId": "mervyn-gwyvern",
+                "type": "marriage",
+                "certainty": "confirmed"
+              }
+            ],
+            "children": [
+              {
+                "type": "biological",
+                "personId": "trevor-gwyvern",
+                "legitimacy": "legitimate",
+                "worldPersonId": "person--haus-gwyvern--trevor-gwyvern",
+                "name": "Trevor Gwyvern",
+                "certainty": "confirmed"
+              },
+              {
+                "name": "Tegwen Gwyvern",
+                "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+                "certainty": "confirmed",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "personId": "tegwen-gwyvern"
+              },
+              {
+                "name": "Huw Gwyvern",
+                "certainty": "confirmed",
+                "personId": "huw-gwyvern",
+                "legitimacy": "legitimate",
+                "type": "biological",
+                "worldPersonId": "person--haus-gwyvern--huw-gwyvern"
+              },
+              {
+                "personId": "gwenfrewi-gwyvern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwyvern--gwenfrewi-gwyvern",
+                "name": "Gwenfrewi Gwyvern"
+              }
+            ],
+            "parents": []
+          }
+        },
+        "currentLocation": "",
+        "playerOwner": "",
+        "name": "Jeannae Aderyn",
+        "updatedAt": "2026-07-30T19:58:28.475Z",
+        "role": "",
+        "bio": "",
+        "title": "",
+        "plotNode": "",
+        "identity": {
+          "worldPersonId": "person--haus-aderyn--jeannae-aderyn"
+        },
+        "status": "active",
+        "emotesOverride": false,
+        "fraktion": "Haus Aderyn",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint"
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-aderyn--jeannae-aderyn",
+    "relevance": "",
+    "profileLink": "",
+    "origin": "",
+    "inventory": null,
+    "archived": false,
+    "aliases": [],
+    "createdAt": "2026-07-30T19:58:28.475Z",
+    "emotes": [],
+    "genealogy": {
+      "death": "",
+      "houseName": "Haus Aderyn",
+      "status": "alive",
+      "birth": "1702",
+      "sex": "female",
+      "sources": [
+        {
+          "lastSyncedAt": "2026-07-30T19:58:28.475Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=jeannae-aderyn",
+          "releaseId": "",
+          "familyId": "haus-gwyvern",
+          "fingerprint": "{\"name\":\"Jeannae Aderyn\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"}],\"children\":[{\"personId\":\"trevor-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--trevor-gwyvern\",\"name\":\"Trevor Gwyvern\"},{\"personId\":\"tegwen-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--tegwen-gwyvern\",\"name\":\"Tegwen Gwyvern\"},{\"personId\":\"huw-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--huw-gwyvern\",\"name\":\"Huw Gwyvern\"},{\"personId\":\"gwenfrewi-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--gwenfrewi-gwyvern\",\"name\":\"Gwenfrewi Gwyvern\"}]}}",
+          "publishedAt": "",
+          "importedAt": "2026-07-30T19:58:28.475Z",
+          "personId": "jeannae-aderyn"
+        },
+        {
+          "familyId": "haus-aderyn",
+          "personId": "jeannae-aderyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=jeannae-aderyn",
+          "fingerprint": "{\"name\":\"Jeannae Aderyn\",\"title\":\"\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"micah-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--micah-aderyn\",\"name\":\"Micah Aderyn\"},{\"personId\":\"nurit-rosenstolz\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-rosenstolz--nurit-rosenstolz\",\"name\":\"Nurit Rosenstolz\"}],\"partners\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"}],\"children\":[]}}"
+        }
+      ],
+      "familyRole": "married",
+      "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "houseId": "house-aderyn",
+      "relationships": {
+        "partners": [
+          {
+            "name": "Mervyn Gwyvern",
+            "status": "active",
+            "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+            "personId": "mervyn-gwyvern",
+            "type": "marriage",
+            "certainty": "confirmed"
+          }
+        ],
+        "children": [
+          {
+            "type": "biological",
+            "personId": "trevor-gwyvern",
+            "legitimacy": "legitimate",
+            "worldPersonId": "person--haus-gwyvern--trevor-gwyvern",
+            "name": "Trevor Gwyvern",
+            "certainty": "confirmed"
+          },
+          {
+            "name": "Tegwen Gwyvern",
+            "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+            "certainty": "confirmed",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "personId": "tegwen-gwyvern"
+          },
+          {
+            "name": "Huw Gwyvern",
+            "certainty": "confirmed",
+            "personId": "huw-gwyvern",
+            "legitimacy": "legitimate",
+            "type": "biological",
+            "worldPersonId": "person--haus-gwyvern--huw-gwyvern"
+          },
+          {
+            "personId": "gwenfrewi-gwyvern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyvern--gwenfrewi-gwyvern",
+            "name": "Gwenfrewi Gwyvern"
+          }
+        ],
+        "parents": []
+      }
+    },
+    "currentLocation": "",
+    "playerOwner": "",
+    "name": "Jeannae Aderyn",
+    "updatedAt": "2026-07-30T19:58:28.475Z",
+    "role": "",
+    "bio": "",
+    "title": "",
+    "plotNode": "",
+    "identity": {
+      "worldPersonId": "person--haus-aderyn--jeannae-aderyn"
+    },
+    "status": "active",
+    "emotesOverride": false,
+    "fraktion": "Haus Aderyn",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint"
+  }
+}

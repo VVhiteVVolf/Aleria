@@ -1,0 +1,1381 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--yg7RonBDX5ctbr7icLWe",
+  "slug": "refri-thornwick",
+  "identity": {
+    "name": "Refri Thornwick",
+    "aliases": [],
+    "worldPersonId": "person--haus-thornwick--refri-thornwick"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-thornwick",
+      "label": "Haus Thornwick"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-thornwick",
+        "familyTitle": "Haus Thornwick",
+        "personId": "refri-thornwick",
+        "worldPersonId": "person--haus-thornwick--refri-thornwick",
+        "houseId": "house-thornwick",
+        "houseName": "Haus Thornwick",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Talyndor",
+          "Earltum der Warren",
+          "Thaintum der Warren",
+          "Thornholt"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-thornwick&mode=view&person=refri-thornwick",
+        "fingerprint": "{\"name\":\"Refri Thornwick\",\"title\":\"Ritterin · Oberhaupt des heimatlosen Hauses Thornwick\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-thornwick\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-thornwick/refri-thornwick.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Überlebende des Hauses\",\"Ehemals Blauschwingen\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"aldric-thornwick\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-thornwick--aldric-thornwick\",\"name\":\"Aldric Thornwick\"},{\"personId\":\"elwyn-thornwick-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elwyn-thornwick-spouse\",\"name\":\"Elwyn Thornwick\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "der-schatten-von-talyndor",
+        "label": "Der Schatten von Talyndor",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Der Schatten von Talyndor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "yg7RonBDX5ctbr7icLWe",
+      "documentIds": [
+        "yg7RonBDX5ctbr7icLWe"
+      ],
+      "documents": [
+        {
+          "documentId": "yg7RonBDX5ctbr7icLWe",
+          "createdAt": "2026-07-09T11:46:29.968Z",
+          "updatedAt": "2026-07-10T11:38:25.347Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-thornwick",
+        "personId": "refri-thornwick",
+        "worldPersonId": "person--haus-thornwick--refri-thornwick",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-thornwick&mode=view&person=refri-thornwick"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-10T11:38:25.347Z",
+    "sourceDocumentIds": [
+      "yg7RonBDX5ctbr7icLWe"
+    ],
+    "contentHash": "4386f43404bed8acdce57a099b6481ff0e25c0281c844020857bdb176802f605"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "yg7RonBDX5ctbr7icLWe",
+        "archived": false,
+        "inventory": {
+          "portrait": "https://i.imgur.com/3Ai7ly2.png",
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "label": "Status",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "icon": "*",
+              "label": "Geld"
+            },
+            {
+              "icon": "*",
+              "label": "Tragkapazität",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Rolle",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Fraktion",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Aufenthalt",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Notiz",
+              "icon": "*"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "portraitPosition": "top",
+          "items": [
+            {
+              "type": "Waffe",
+              "ownerCharacterName": "",
+              "category": "weapon",
+              "tags": "",
+              "quantity": "1",
+              "itemDbKey": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterId": "",
+              "name": "Hauptwaffe",
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "icon": "*",
+              "originItemDbKey": "",
+              "imageFormat": "square",
+              "id": "item-mrdfws8b-0-kvf8",
+              "imageFit": "contain",
+              "acquiredAt": "",
+              "image": "",
+              "individualizedAt": "",
+              "infoRows": []
+            },
+            {
+              "acquiredAt": "",
+              "imageFit": "contain",
+              "tags": "",
+              "ownerCharacterId": "",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imagePosition": "center",
+              "image": "",
+              "infoRows": [],
+              "itemStorageMode": "character",
+              "weight": "Noch festlegen",
+              "name": "Rüstung / Schutz",
+              "icon": "*",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "imageFormat": "square",
+              "id": "item-mrdfws8b-1-mv6g",
+              "individualizedAt": "",
+              "category": "armor",
+              "originItemDbKey": "",
+              "quantity": "1"
+            },
+            {
+              "infoRows": [],
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Reiseausrüstung",
+              "imageFit": "contain",
+              "type": "Ausrüstung",
+              "image": "",
+              "tags": "",
+              "id": "item-mrdfws8b-2-qg9m",
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "icon": "*",
+              "quantity": "1",
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "category": "equipment"
+            },
+            {
+              "imagePosition": "center",
+              "ownerCharacterId": "",
+              "icon": "*",
+              "ownerCharacterName": "",
+              "originItemDbKey": "",
+              "quantity": "1",
+              "id": "item-mrdfws8b-3-xcgu",
+              "weight": "Noch festlegen",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "acquiredAt": "",
+              "infoRows": [],
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "tags": "",
+              "image": "",
+              "individualizedAt": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "imageFormat": "square"
+            },
+            {
+              "category": "documents",
+              "icon": "*",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "individualizedAt": "",
+              "id": "item-mrdfws8b-4-z28u",
+              "itemStorageMode": "character",
+              "imageFormat": "square",
+              "image": "",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "tags": "",
+              "originItemDbKey": "",
+              "type": "Dokument",
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imagePosition": "center",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterId": "",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "type": "Sonstiges",
+              "id": "item-mrdfws8b-5-8p1k",
+              "tags": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "image": "",
+              "imageFormat": "square",
+              "category": "other",
+              "acquiredAt": "",
+              "icon": "*"
+            }
+          ],
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "showInfoTable": false,
+          "level": "Stufe",
+          "characterId": "yg7RonBDX5ctbr7icLWe",
+          "carryValue": "Noch festlegen",
+          "portraitFit": "cover",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "carryLabel": "Traglast",
+          "hitpoints": "TP / Zustand",
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "portraitFormat": "portrait",
+          "moneyNotice": "",
+          "status": "Gesund",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "name": "Name des Charakters",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "role": "Rolle",
+          "equipmentQuiz": {
+            "status": "",
+            "resultText": "",
+            "open": false,
+            "updatedAt": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "companions": [
+            {
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "infoRows": [],
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "image": "",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "top",
+              "status": "Gesund",
+              "id": "companion-mrdfws8c-0-vcau",
+              "description": ""
+            },
+            {
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "description": "",
+              "name": "Treuer Begleiter",
+              "status": "Noch festlegen",
+              "imagePosition": "top",
+              "id": "companion-mrdfws8c-1-mvmb",
+              "imageFit": "cover",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imageFormat": "landscape",
+              "image": ""
+            }
+          ]
+        },
+        "createdAt": "2026-07-09T11:46:29.968Z",
+        "currentLocation": "",
+        "status": "active",
+        "playerOwner": "patrick",
+        "bio": "",
+        "emotesOverride": true,
+        "relevance": "",
+        "name": "Refri Thornwick",
+        "profileLink": "",
+        "role": "",
+        "title": "Ritterin, Talyndor",
+        "plotNode": "",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/tMV3o32.png"
+          },
+          {
+            "img": "https://i.imgur.com/koPtE9s.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/7pzNGoG.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/4LEXg0J.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/GluPpr6.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/YpEcDVm.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/CPtg9xu.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/SP8aJ4E.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/YB22ZL0.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/nuR6hXU.png"
+          },
+          {
+            "img": "https://i.imgur.com/7joftHs.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/V4wdEQS.png"
+          },
+          {
+            "img": "https://i.imgur.com/G9CkNO9.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/IcMt2Is.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/EanbVGK.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/TyTaesW.png"
+          }
+        ],
+        "updatedAt": "2026-07-10T11:38:25.347Z",
+        "origin": "",
+        "fraktion": "Haus Thornwick, Talyndor",
+        "portrait": "https://i.imgur.com/3Ai7ly2.png",
+        "aliases": [],
+        "taxonomyPath": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "yg7RonBDX5ctbr7icLWe",
+    "archived": false,
+    "inventory": {
+      "portrait": "https://i.imgur.com/3Ai7ly2.png",
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "label": "Status",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "icon": "*",
+          "label": "Geld"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Rolle",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Aufenthalt",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Notiz",
+          "icon": "*"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "portraitPosition": "top",
+      "items": [
+        {
+          "type": "Waffe",
+          "ownerCharacterName": "",
+          "category": "weapon",
+          "tags": "",
+          "quantity": "1",
+          "itemDbKey": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterId": "",
+          "name": "Hauptwaffe",
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "icon": "*",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "id": "item-mrdfws8b-0-kvf8",
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "image": "",
+          "individualizedAt": "",
+          "infoRows": []
+        },
+        {
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "tags": "",
+          "ownerCharacterId": "",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imagePosition": "center",
+          "image": "",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "name": "Rüstung / Schutz",
+          "icon": "*",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "id": "item-mrdfws8b-1-mv6g",
+          "individualizedAt": "",
+          "category": "armor",
+          "originItemDbKey": "",
+          "quantity": "1"
+        },
+        {
+          "infoRows": [],
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Reiseausrüstung",
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "image": "",
+          "tags": "",
+          "id": "item-mrdfws8b-2-qg9m",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "icon": "*",
+          "quantity": "1",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "category": "equipment"
+        },
+        {
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "quantity": "1",
+          "id": "item-mrdfws8b-3-xcgu",
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "acquiredAt": "",
+          "infoRows": [],
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "tags": "",
+          "image": "",
+          "individualizedAt": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "imageFormat": "square"
+        },
+        {
+          "category": "documents",
+          "icon": "*",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "individualizedAt": "",
+          "id": "item-mrdfws8b-4-z28u",
+          "itemStorageMode": "character",
+          "imageFormat": "square",
+          "image": "",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "tags": "",
+          "originItemDbKey": "",
+          "type": "Dokument",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Sonstiges",
+          "id": "item-mrdfws8b-5-8p1k",
+          "tags": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "image": "",
+          "imageFormat": "square",
+          "category": "other",
+          "acquiredAt": "",
+          "icon": "*"
+        }
+      ],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "showInfoTable": false,
+      "level": "Stufe",
+      "characterId": "yg7RonBDX5ctbr7icLWe",
+      "carryValue": "Noch festlegen",
+      "portraitFit": "cover",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryLabel": "Traglast",
+      "hitpoints": "TP / Zustand",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "portraitFormat": "portrait",
+      "moneyNotice": "",
+      "status": "Gesund",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "name": "Name des Charakters",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "role": "Rolle",
+      "equipmentQuiz": {
+        "status": "",
+        "resultText": "",
+        "open": false,
+        "updatedAt": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "companions": [
+        {
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "infoRows": [],
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape",
+          "image": "",
+          "species": "Tier oder Begleiter",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imagePosition": "top",
+          "status": "Gesund",
+          "id": "companion-mrdfws8c-0-vcau",
+          "description": ""
+        },
+        {
+          "species": "Tier / Person",
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "description": "",
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen",
+          "imagePosition": "top",
+          "id": "companion-mrdfws8c-1-mvmb",
+          "imageFit": "cover",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFormat": "landscape",
+          "image": ""
+        }
+      ]
+    },
+    "createdAt": "2026-07-09T11:46:29.968Z",
+    "currentLocation": "",
+    "status": "active",
+    "playerOwner": "patrick",
+    "bio": "",
+    "emotesOverride": true,
+    "relevance": "",
+    "name": "Refri Thornwick",
+    "profileLink": "",
+    "role": "",
+    "title": "Ritterin, Talyndor",
+    "plotNode": "",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/tMV3o32.png"
+      },
+      {
+        "img": "https://i.imgur.com/koPtE9s.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/7pzNGoG.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/4LEXg0J.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/GluPpr6.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/YpEcDVm.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/CPtg9xu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/SP8aJ4E.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/YB22ZL0.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nuR6hXU.png"
+      },
+      {
+        "img": "https://i.imgur.com/7joftHs.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/V4wdEQS.png"
+      },
+      {
+        "img": "https://i.imgur.com/G9CkNO9.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/IcMt2Is.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/EanbVGK.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/TyTaesW.png"
+      }
+    ],
+    "updatedAt": "2026-07-10T11:38:25.347Z",
+    "origin": "",
+    "fraktion": "Haus Thornwick, Talyndor",
+    "portrait": "https://i.imgur.com/3Ai7ly2.png",
+    "aliases": [],
+    "taxonomyPath": "Talyndor > Earltum der Warren > Thaintum der Warren > Thornholt",
+    "identity": {
+      "worldPersonId": "person--haus-thornwick--refri-thornwick"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-thornwick--refri-thornwick",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1715",
+      "death": "",
+      "houseId": "house-thornwick",
+      "houseName": "Haus Thornwick",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Überlebende des Hauses",
+        "Ehemals Blauschwingen",
+        "Im Dienst des Hauses Draig"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-thornwick",
+          "personId": "refri-thornwick",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-thornwick&mode=view&person=refri-thornwick",
+          "fingerprint": "{\"name\":\"Refri Thornwick\",\"title\":\"Ritterin · Oberhaupt des heimatlosen Hauses Thornwick\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-thornwick\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-thornwick/refri-thornwick.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Überlebende des Hauses\",\"Ehemals Blauschwingen\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"aldric-thornwick\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-thornwick--aldric-thornwick\",\"name\":\"Aldric Thornwick\"},{\"personId\":\"elwyn-thornwick-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elwyn-thornwick-spouse\",\"name\":\"Elwyn Thornwick\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "aldric-thornwick",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-thornwick--aldric-thornwick",
+            "name": "Aldric Thornwick"
+          },
+          {
+            "personId": "elwyn-thornwick-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--elwyn-thornwick-spouse",
+            "name": "Elwyn Thornwick"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects
-} from '../combat/combat-trigger-rules.js?v=20260803-rule-integrity-v1';
+} from '../combat/combat-trigger-rules.js?v=20260803-gawain-level4-v1';
 
 export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-2';
 
@@ -56,8 +56,15 @@ export class SkillResolutionService {
     const usedRuleFrequencyKeys = options.usedRuleFrequencyKeys instanceof Set
       ? new Set(options.usedRuleFrequencyKeys)
       : new Set(Array.isArray(options.usedRuleFrequencyKeys) ? options.usedRuleFrequencyKeys : []);
+    const skillRuleState = {
+      skillId: settings.skillId,
+      skillName: skill.definition.label,
+      actorProfile: skill.profile,
+      targetProfile: options.targetProfile || null
+    };
     const preApplications = collectApplicableCombatRules({
-      phase: 'pre-roll', actionKind: 'skill', sources, periods, usedFrequencyKeys: usedRuleFrequencyKeys
+      phase: 'pre-roll', actionKind: 'skill', sources, periods,
+      usedFrequencyKeys: usedRuleFrequencyKeys, state: skillRuleState
     });
     markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
     const preEffects = mergeCombatRuleEffects(preApplications);
@@ -80,6 +87,7 @@ export class SkillResolutionService {
     const postApplications = collectApplicableCombatRules({
       phase: 'post-roll', actionKind: 'skill', sources, periods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: {
+        ...skillRuleState,
         hit: isSuccessfulSkillOutcome(firstOutcome),
         criticalSuccess: firstOutcome === 'critical-success',
         criticalFailure: firstOutcome === 'critical-failure'

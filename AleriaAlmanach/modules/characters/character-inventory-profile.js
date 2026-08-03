@@ -145,6 +145,12 @@ function collectCharacterInventoryProfileData() {
   return _characterInventoryDraft;
 }
 
+function setCharacterInventoryProfileData(inventory = {}, options = {}) {
+  _characterInventoryDraft = sanitizeCharacterInventoryData(inventory);
+  if (options.render === true) renderCharacterInventoryProfileEditor();
+  return _characterInventoryDraft;
+}
+
 function syncCharacterInventoryProfileDraftFromPage(page) {
   if (!page?.closest?.('#cp-inventory-editor')) return;
   try {

@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-rule-integrity-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-gawain-level4-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -17,8 +17,8 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260803-skill-checks-v2';
-import { SkillResolutionService } from './skill-resolution-service.js?v=20260803-skill-rules-v1';
-import { deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260803-rule-integrity-v1';
+import { SkillResolutionService } from './skill-resolution-service.js?v=20260803-gawain-level4-v1';
+import { deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260803-gawain-level4-v1';
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({

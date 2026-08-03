@@ -1,0 +1,1169 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--40nxCJI0BfGcHkbYEVHl",
+  "slug": "dalvin-balchder",
+  "identity": {
+    "name": "Dalvin Balchder",
+    "aliases": [],
+    "worldPersonId": "person--haus-balchder--dalvin-balchder"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-balchder",
+      "label": "Haus Balchder"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-balchder",
+        "familyTitle": "Haus Balchder",
+        "personId": "dalvin-balchder",
+        "worldPersonId": "person--haus-balchder--dalvin-balchder",
+        "houseId": "house-balchder",
+        "houseName": "Haus Balchder",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=dalvin-balchder",
+        "fingerprint": "{\"name\":\"Dalvin Balchder\",\"title\":\"Ritterherr des Hauses Balchder\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"uther-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--uther-balchder\",\"name\":\"Uther Balchder\"},{\"personId\":\"millena-eneiniog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eneiniog--millena-eneiniog\",\"name\":\"Millena Eneiniog\"}],\"partners\":[{\"personId\":\"iseult-caerlaen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"children\":[{\"personId\":\"aerona-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--aerona-balchder\",\"name\":\"Aerona Balchder\"},{\"personId\":\"avan-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--avan-balchder\",\"name\":\"Avan Balchder\"},{\"personId\":\"cerrin-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--cerrin-balchder\",\"name\":\"Cerrin Balchder\"},{\"personId\":\"kamber-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--kamber-balchder\",\"name\":\"Kamber Balchder\"}]}}",
+        "score": 195
+      },
+      {
+        "familyId": "haus-caerlaen",
+        "familyTitle": "Haus Caerlaen",
+        "personId": "dalvin-balchder",
+        "worldPersonId": "person--haus-balchder--dalvin-balchder",
+        "houseId": "house-balchder",
+        "houseName": "Haus Balchder",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Gwendolyns Ufer",
+          "Abergwint"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-caerlaen&mode=view&person=dalvin-balchder",
+        "fingerprint": "{\"name\":\"Dalvin Balchder\",\"title\":\"Ritterherr des Hauses Balchder\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iseult-caerlaen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"children\":[]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "40nxCJI0BfGcHkbYEVHl",
+      "documentIds": [
+        "40nxCJI0BfGcHkbYEVHl"
+      ],
+      "documents": [
+        {
+          "documentId": "40nxCJI0BfGcHkbYEVHl",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-balchder",
+        "personId": "dalvin-balchder",
+        "worldPersonId": "person--haus-balchder--dalvin-balchder",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=dalvin-balchder"
+      },
+      {
+        "familyId": "haus-caerlaen",
+        "personId": "dalvin-balchder",
+        "worldPersonId": "person--haus-balchder--dalvin-balchder",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-caerlaen&mode=view&person=dalvin-balchder"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "40nxCJI0BfGcHkbYEVHl"
+    ],
+    "contentHash": "410bd88d695ae6caed6e61f2861bb4e3599ba0332b6d0a3bde177469cf7d5622"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "40nxCJI0BfGcHkbYEVHl",
+        "archived": false,
+        "emotesOverride": true,
+        "bio": "",
+        "inventory": {
+          "status": "Gesund",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "step": 0,
+            "status": "",
+            "resultText": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "items": [
+            {
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "imageFormat": "square",
+              "category": "weapon",
+              "infoRows": [],
+              "id": "item-mqu1vat1-0-w8ef",
+              "tags": "",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Waffe",
+              "imagePosition": "center",
+              "name": "Hauptwaffe",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "image": ""
+            },
+            {
+              "image": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "type": "Rüstung",
+              "imagePosition": "center",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "icon": "*",
+              "category": "armor"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "equipment",
+              "quantity": "1",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "image": "",
+              "imagePosition": "center",
+              "name": "Reiseausrüstung",
+              "imageFit": "contain",
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "tags": "",
+              "id": "item-mqu1vat1-2-0fx2",
+              "infoRows": []
+            },
+            {
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "icon": "*",
+              "infoRows": [],
+              "name": "Heil- oder Verbrauchsgut",
+              "category": "potions",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "id": "item-mqu1vat1-3-2lgm",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Trinktur",
+              "tags": ""
+            },
+            {
+              "type": "Dokument",
+              "imageFormat": "square",
+              "tags": "",
+              "image": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Dokumente / Urkunden",
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "category": "documents",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj"
+            },
+            {
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "category": "other",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "icon": "*",
+              "quantity": "1",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-5-5kao",
+              "name": "Persönlicher Gegenstand",
+              "infoRows": [],
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Sonstiges",
+              "imageFormat": "square"
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portraitFit": "cover",
+          "carryValue": "Noch festlegen",
+          "title": "Charakter-Inventar",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "image": "",
+              "description": "",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "role": "Begleiter",
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "status": "Gesund",
+              "imageFit": "cover",
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-0-zz2n"
+            },
+            {
+              "infoRows": [],
+              "status": "Noch festlegen",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "role": "Gefährte",
+              "species": "Tier / Person",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "image": "",
+              "name": "Treuer Begleiter",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "description": ""
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitFormat": "portrait",
+          "portrait": "https://i.imgur.com/JhyjjnJ.jpeg",
+          "moneyState": {
+            "silver": 0,
+            "copper": 0,
+            "gold": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "infoRows": [],
+          "moneyNotice": "",
+          "name": "Dalvin Balchder",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ],
+          "level": "Haus Draig, Haus Balchder",
+          "portraitPosition": "top",
+          "role": "Vogt der Draig, Ritter"
+        },
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/AOL5EFs.png"
+          },
+          {
+            "img": "https://i.imgur.com/62UngwS.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/m24S5Id.png"
+          },
+          {
+            "img": "https://i.imgur.com/Gauygzn.png",
+            "label": ""
+          }
+        ],
+        "name": "Dalvin Balchder",
+        "portrait": "https://i.imgur.com/JhyjjnJ.jpeg",
+        "playerOwner": "patrick",
+        "title": "Vogt der Draig, Ritter",
+        "fraktion": "Haus Draig, Haus Balchder",
+        "aliases": []
+      }
+    ]
+  },
+  "character": {
+    "id": "40nxCJI0BfGcHkbYEVHl",
+    "archived": false,
+    "emotesOverride": true,
+    "bio": "",
+    "inventory": {
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "step": 0,
+        "status": "",
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "items": [
+        {
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "imageFormat": "square",
+          "category": "weapon",
+          "infoRows": [],
+          "id": "item-mqu1vat1-0-w8ef",
+          "tags": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Waffe",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "image": ""
+        },
+        {
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "type": "Rüstung",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "icon": "*",
+          "category": "armor"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "equipment",
+          "quantity": "1",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "image": "",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "tags": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "infoRows": []
+        },
+        {
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "icon": "*",
+          "infoRows": [],
+          "name": "Heil- oder Verbrauchsgut",
+          "category": "potions",
+          "image": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Trinktur",
+          "tags": ""
+        },
+        {
+          "type": "Dokument",
+          "imageFormat": "square",
+          "tags": "",
+          "image": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Dokumente / Urkunden",
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "category": "documents",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj"
+        },
+        {
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "category": "other",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "quantity": "1",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "infoRows": [],
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Sonstiges",
+          "imageFormat": "square"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portraitFit": "cover",
+      "carryValue": "Noch festlegen",
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "image": "",
+          "description": "",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "status": "Gesund",
+          "imageFit": "cover",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-0-zz2n"
+        },
+        {
+          "infoRows": [],
+          "status": "Noch festlegen",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "role": "Gefährte",
+          "species": "Tier / Person",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "name": "Treuer Begleiter",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "description": ""
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "portrait": "https://i.imgur.com/JhyjjnJ.jpeg",
+      "moneyState": {
+        "silver": 0,
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "infoRows": [],
+      "moneyNotice": "",
+      "name": "Dalvin Balchder",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "level": "Haus Draig, Haus Balchder",
+      "portraitPosition": "top",
+      "role": "Vogt der Draig, Ritter"
+    },
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/AOL5EFs.png"
+      },
+      {
+        "img": "https://i.imgur.com/62UngwS.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/m24S5Id.png"
+      },
+      {
+        "img": "https://i.imgur.com/Gauygzn.png",
+        "label": ""
+      }
+    ],
+    "name": "Dalvin Balchder",
+    "portrait": "https://i.imgur.com/JhyjjnJ.jpeg",
+    "playerOwner": "patrick",
+    "title": "Vogt der Draig, Ritter",
+    "fraktion": "Haus Draig, Haus Balchder",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": "person--haus-balchder--dalvin-balchder"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-balchder--dalvin-balchder",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "houseId": "house-balchder",
+      "houseName": "Haus Balchder",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-balchder",
+          "personId": "dalvin-balchder",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=dalvin-balchder",
+          "fingerprint": "{\"name\":\"Dalvin Balchder\",\"title\":\"Ritterherr des Hauses Balchder\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"uther-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--uther-balchder\",\"name\":\"Uther Balchder\"},{\"personId\":\"millena-eneiniog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eneiniog--millena-eneiniog\",\"name\":\"Millena Eneiniog\"}],\"partners\":[{\"personId\":\"iseult-caerlaen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"children\":[{\"personId\":\"aerona-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--aerona-balchder\",\"name\":\"Aerona Balchder\"},{\"personId\":\"avan-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--avan-balchder\",\"name\":\"Avan Balchder\"},{\"personId\":\"cerrin-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--cerrin-balchder\",\"name\":\"Cerrin Balchder\"},{\"personId\":\"kamber-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--kamber-balchder\",\"name\":\"Kamber Balchder\"}]}}"
+        },
+        {
+          "familyId": "haus-caerlaen",
+          "personId": "dalvin-balchder",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-caerlaen&mode=view&person=dalvin-balchder",
+          "fingerprint": "{\"name\":\"Dalvin Balchder\",\"title\":\"Ritterherr des Hauses Balchder\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iseult-caerlaen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "uther-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--uther-balchder",
+            "name": "Uther Balchder"
+          },
+          {
+            "personId": "millena-eneiniog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-eneiniog--millena-eneiniog",
+            "name": "Millena Eneiniog"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "iseult-caerlaen",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caerlaen--iseult-caerlaen",
+            "name": "Iseult Caerlaen"
+          }
+        ],
+        "children": [
+          {
+            "personId": "aerona-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--aerona-balchder",
+            "name": "Aerona Balchder"
+          },
+          {
+            "personId": "avan-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--avan-balchder",
+            "name": "Avan Balchder"
+          },
+          {
+            "personId": "cerrin-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--cerrin-balchder",
+            "name": "Cerrin Balchder"
+          },
+          {
+            "personId": "kamber-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--kamber-balchder",
+            "name": "Kamber Balchder"
+          }
+        ]
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

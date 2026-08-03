@@ -106,7 +106,12 @@ export function sanitizeCreature(value = {}) {
       archetype: source.type || combatSource.identity?.archetype,
       background: source.habitat || combatSource.identity?.background
     }
-  }, { ensureRequiredSkills: false }), level);
+  }, {
+    ensureRequiredSkills: false,
+    ensureSpellSlots: Boolean(combatSource.magic?.enabled
+      || combatSource.magic?.spells?.length
+      || combatSource.magic?.slotResourceIds?.length)
+  }), level);
   const loot = source.loot && typeof source.loot === 'object' ? source.loot : {};
   const result = {
     schemaVersion: CREATURE_SCHEMA_VERSION,

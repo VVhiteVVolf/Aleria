@@ -36,7 +36,10 @@ function enrichCombatNarrationRetrieval(retrieval = {}, facts = {}) {
         auraContext: facts.auraContext || null,
         ruleApplications: facts.ruleApplications || [],
         ruleResourceSnapshots: facts.ruleResourceSnapshots || [],
-        ruleAbilitySnapshots: facts.ruleAbilitySnapshots || []
+        ruleAbilitySnapshots: facts.ruleAbilitySnapshots || [],
+        secondarySaves: facts.secondarySaves || [],
+        followUpAttacks: facts.followUpAttacks || [],
+        targetConditionSnapshot: facts.targetConditionSnapshot || null
       }
     }, null, 2)
   ].join('\n');
@@ -86,6 +89,9 @@ function buildCombatNarrationQuery(facts = {}) {
       rule: rule.ruleName,
       phase: rule.phase
     })),
+    secondarySaves: facts.secondarySaves || [],
+    followUpAttacks: facts.followUpAttacks || [],
+    targetConditionSnapshot: facts.targetConditionSnapshot || null,
     originalDescription: ''
   };
   const prefix = `${instructions}\nBestätigte Fakten: `;

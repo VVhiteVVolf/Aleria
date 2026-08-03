@@ -1,0 +1,1038 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--mOmrmO7kZW8seVwRIIDu",
+  "slug": "benjamin",
+  "identity": {
+    "name": "Benjamin",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "zum-roten-drachen",
+      "label": "Zum Roten Drachen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Zum Roten Drachen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "mOmrmO7kZW8seVwRIIDu",
+      "documentIds": [
+        "mOmrmO7kZW8seVwRIIDu"
+      ],
+      "documents": [
+        {
+          "documentId": "mOmrmO7kZW8seVwRIIDu",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "mOmrmO7kZW8seVwRIIDu"
+    ],
+    "contentHash": "6e6a3a6f025b921b3c7a6e0362e7fc017f60b0502ce30a3bafbe31f2a6e88368"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "mOmrmO7kZW8seVwRIIDu",
+        "fraktion": "...",
+        "portrait": "https://i.postimg.cc/d08FGwPD/2d69e597-6c51-4fde-9dd5-977421ce4ac4.png",
+        "bio": "Benny ist der Knappe von Meister Arion Hundt zu Falkengrund... Und irgendwie versteht er nicht ganz warum sie aus dem gemühtlichen Weisenfluh ins regnerische und nasskalte Estryll gereist sind..... Ritter kann er doch auch in Weisenfluh werden!",
+        "name": "Benjamin",
+        "inventory": {
+          "status": "Gesund",
+          "infoRows": [],
+          "portrait": "https://i.postimg.cc/d08FGwPD/2d69e597-6c51-4fde-9dd5-977421ce4ac4.png",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "moneyNotice": "",
+          "companions": [
+            {
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "name": "Reittier / Gefährte",
+              "imageFit": "cover",
+              "status": "Gesund",
+              "infoRows": [],
+              "description": "",
+              "role": "Begleiter",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "species": "Tier oder Begleiter",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFormat": "landscape",
+              "image": ""
+            },
+            {
+              "infoRows": [],
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "species": "Tier / Person",
+              "role": "Gefährte",
+              "image": "",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "description": ""
+            }
+          ],
+          "level": "...",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitFormat": "portrait",
+          "portraitFit": "cover",
+          "items": [
+            {
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "image": "",
+              "icon": "*",
+              "category": "weapon",
+              "quantity": "1",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Hauptwaffe",
+              "imagePosition": "center",
+              "type": "Waffe",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "id": "item-mqu1vat1-0-w8ef"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "category": "armor",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "quantity": "1",
+              "tags": "",
+              "id": "item-mqu1vat1-1-exvo",
+              "imageFit": "contain",
+              "type": "Rüstung",
+              "infoRows": [],
+              "image": "",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "imageFormat": "square"
+            },
+            {
+              "infoRows": [],
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "imageFormat": "square",
+              "name": "Reiseausrüstung",
+              "id": "item-mqu1vat1-2-0fx2",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "category": "equipment",
+              "image": "",
+              "imagePosition": "center"
+            },
+            {
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "image": "",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imagePosition": "center",
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "potions",
+              "imageFormat": "square",
+              "icon": "*"
+            },
+            {
+              "tags": "",
+              "type": "Dokument",
+              "category": "documents",
+              "name": "Dokumente / Urkunden",
+              "quantity": "1",
+              "image": "",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-4-ajrj",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "icon": "*",
+              "imagePosition": "center",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen"
+            },
+            {
+              "category": "other",
+              "quantity": "1",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-5-5kao",
+              "imagePosition": "center",
+              "image": "",
+              "icon": "*",
+              "name": "Persönlicher Gegenstand",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "type": "Sonstiges"
+            }
+          ],
+          "portraitPosition": "top",
+          "equipmentQuiz": {
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "updatedAt": "",
+            "open": false,
+            "status": ""
+          },
+          "role": "Fahrender Knappe",
+          "healthColor": "#5c7f20",
+          "title": "Charakter-Inventar",
+          "hitpoints": "TP / Zustand",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "name": "Benjamin",
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ]
+        },
+        "title": "Fahrender Knappe",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/NRfTlDW.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/DzIHd6z.png"
+          },
+          {
+            "img": "https://i.imgur.com/eQRATJW.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/NdRtmBu.png"
+          },
+          {
+            "img": "https://i.imgur.com/4o0s8u1.png",
+            "label": ""
+          }
+        ]
+      }
+    ]
+  },
+  "character": {
+    "id": "mOmrmO7kZW8seVwRIIDu",
+    "fraktion": "...",
+    "portrait": "https://i.postimg.cc/d08FGwPD/2d69e597-6c51-4fde-9dd5-977421ce4ac4.png",
+    "bio": "Benny ist der Knappe von Meister Arion Hundt zu Falkengrund... Und irgendwie versteht er nicht ganz warum sie aus dem gemühtlichen Weisenfluh ins regnerische und nasskalte Estryll gereist sind..... Ritter kann er doch auch in Weisenfluh werden!",
+    "name": "Benjamin",
+    "inventory": {
+      "status": "Gesund",
+      "infoRows": [],
+      "portrait": "https://i.postimg.cc/d08FGwPD/2d69e597-6c51-4fde-9dd5-977421ce4ac4.png",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "moneyNotice": "",
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Reittier / Gefährte",
+          "imageFit": "cover",
+          "status": "Gesund",
+          "infoRows": [],
+          "description": "",
+          "role": "Begleiter",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "species": "Tier oder Begleiter",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFormat": "landscape",
+          "image": ""
+        },
+        {
+          "infoRows": [],
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "name": "Treuer Begleiter",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "image": "",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "description": ""
+        }
+      ],
+      "level": "...",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitFormat": "portrait",
+      "portraitFit": "cover",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "image": "",
+          "icon": "*",
+          "category": "weapon",
+          "quantity": "1",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Hauptwaffe",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "id": "item-mqu1vat1-0-w8ef"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "category": "armor",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "tags": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "infoRows": [],
+          "image": "",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square"
+        },
+        {
+          "infoRows": [],
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "category": "equipment",
+          "image": "",
+          "imagePosition": "center"
+        },
+        {
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "image": "",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imagePosition": "center",
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "potions",
+          "imageFormat": "square",
+          "icon": "*"
+        },
+        {
+          "tags": "",
+          "type": "Dokument",
+          "category": "documents",
+          "name": "Dokumente / Urkunden",
+          "quantity": "1",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-4-ajrj",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "icon": "*",
+          "imagePosition": "center",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen"
+        },
+        {
+          "category": "other",
+          "quantity": "1",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-5-5kao",
+          "imagePosition": "center",
+          "image": "",
+          "icon": "*",
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "type": "Sonstiges"
+        }
+      ],
+      "portraitPosition": "top",
+      "equipmentQuiz": {
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "updatedAt": "",
+        "open": false,
+        "status": ""
+      },
+      "role": "Fahrender Knappe",
+      "healthColor": "#5c7f20",
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Benjamin",
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ]
+    },
+    "title": "Fahrender Knappe",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/NRfTlDW.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/DzIHd6z.png"
+      },
+      {
+        "img": "https://i.imgur.com/eQRATJW.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/NdRtmBu.png"
+      },
+      {
+        "img": "https://i.imgur.com/4o0s8u1.png",
+        "label": ""
+      }
+    ],
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

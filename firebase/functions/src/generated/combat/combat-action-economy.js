@@ -180,13 +180,18 @@ export function getActionPaymentCosts(action = {}, paymentMode = 'standard', pro
     const resourceId = String(action?.auraBypass?.resourceId || profile?.aura?.focusResourceId || 'aura-focus');
     const amount = normalizeAmount(action?.auraBypass?.cost ?? profile?.aura?.focusBypassCost, 1) || 1;
     const resource = (profile?.resources || []).find(item => item.id === resourceId);
-    return [{
+    const auraCost = {
       id: `aura-${resourceId}`,
       resourceId,
       name: resource?.name || 'Aura-Fokuspunkt',
       amount,
       scope: resource?.scope === 'comment' ? 'comment' : 'persistent'
-    }];
+    };
+    const limitedUseCosts = normalizeCombatResourceCosts(action?.costs).filter(cost => {
+      const requiredResource = (profile?.resources || []).find(item => item.id === cost.resourceId);
+      return requiredResource?.category === 'technique-use';
+    });
+    return [auraCost, ...limitedUseCosts];
   }
   const explicit = normalizeCombatResourceCosts(action?.costs);
   return explicit.length ? explicit : getDefaultActivationCosts(action?.activationType || 'action');

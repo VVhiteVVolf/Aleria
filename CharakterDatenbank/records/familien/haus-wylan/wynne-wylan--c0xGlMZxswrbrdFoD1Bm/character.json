@@ -1,0 +1,1124 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--c0xGlMZxswrbrdFoD1Bm",
+  "slug": "wynne-wylan",
+  "identity": {
+    "name": "Wynne Wylan",
+    "aliases": [],
+    "worldPersonId": "person--haus-wylan--wynne-wylan"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-wylan",
+      "label": "Haus Wylan O'Cerrigarth"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-wylan",
+        "familyTitle": "Haus Wylan O'Cerrigarth",
+        "personId": "wynne-wylan",
+        "worldPersonId": "person--haus-wylan--wynne-wylan",
+        "houseId": "house-wylan",
+        "houseName": "Haus Wylan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Weidebucht",
+          "Melwas Au",
+          "Cerrigarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=wynne-wylan",
+        "fingerprint": "{\"name\":\"Wynne Wylan\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-wylan\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wylan/wynne-wylan.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ekmeleddin-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--ekmeleddin-wylan\",\"name\":\"Ekmeleddin Wylan\"},{\"personId\":\"faylinn-ailella\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ailella--faylinn-ailella\",\"name\":\"Faylinn Ailella\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "cerrigarth",
+        "label": "Cerrigarth",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Cerrigarth"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "c0xGlMZxswrbrdFoD1Bm",
+      "documentIds": [
+        "c0xGlMZxswrbrdFoD1Bm"
+      ],
+      "documents": [
+        {
+          "documentId": "c0xGlMZxswrbrdFoD1Bm",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-wylan",
+        "personId": "wynne-wylan",
+        "worldPersonId": "person--haus-wylan--wynne-wylan",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=wynne-wylan"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "c0xGlMZxswrbrdFoD1Bm"
+    ],
+    "contentHash": "44f352103038579eb7124c58d27e728b7a191ea9e5bfe9e98ac788b6a392a689"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "c0xGlMZxswrbrdFoD1Bm",
+        "playerOwner": "patrick",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/2mdK5F7.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/FEs8oNe.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/elolJTJ.png"
+          },
+          {
+            "img": "https://i.imgur.com/zfscXOH.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/icYAYX6.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gYC0Edb.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/KiMZNte.png"
+          },
+          {
+            "img": "https://i.imgur.com/EETa2x7.png",
+            "label": ""
+          }
+        ],
+        "name": "Wynne Wylan",
+        "fraktion": "Haus Wylan, Cerrigarth",
+        "emotesOverride": true,
+        "portrait": "https://i.imgur.com/l7cA984.png",
+        "inventory": {
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Haus Wylan, Cerrigarth",
+          "healthColor": "#5c7f20",
+          "portraitFit": "cover",
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "resultText": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": ""
+          },
+          "portrait": "https://i.imgur.com/l7cA984.png",
+          "status": "Gesund",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0
+          },
+          "infoRows": [],
+          "hitpoints": "TP / Zustand",
+          "title": "Charakter-Inventar",
+          "portraitPosition": "top",
+          "companions": [
+            {
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "status": "Gesund",
+              "infoRows": [],
+              "name": "Reittier / Gefährte",
+              "imageFormat": "landscape",
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "image": "",
+              "imagePosition": "top",
+              "description": "",
+              "species": "Tier oder Begleiter"
+            },
+            {
+              "name": "Treuer Begleiter",
+              "image": "",
+              "description": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "role": "Gefährte",
+              "imagePosition": "top",
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "infoRows": [],
+              "imageFit": "cover"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyNotice": "",
+          "carryValue": "Noch festlegen",
+          "portraitFormat": "portrait",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "name": "Wynne Wylan",
+          "role": "Prinzessin, Cerrigarth",
+          "items": [
+            {
+              "weight": "Noch festlegen",
+              "name": "Hauptwaffe",
+              "infoRows": [],
+              "image": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "type": "Waffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "icon": "*",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon"
+            },
+            {
+              "id": "item-mqu1vat1-1-exvo",
+              "quantity": "1",
+              "image": "",
+              "category": "armor",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Rüstung",
+              "infoRows": [],
+              "imageFit": "contain",
+              "description": "Rüstung, Kleidung oder magischer Schutz."
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "weight": "Noch festlegen",
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "imageFormat": "square",
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "category": "equipment",
+              "quantity": "1",
+              "image": "",
+              "icon": "*",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+            },
+            {
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "image": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "tags": "",
+              "type": "Trinktur",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "infoRows": []
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "name": "Dokumente / Urkunden",
+              "imagePosition": "center",
+              "category": "documents",
+              "quantity": "1",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Dokument",
+              "weight": "Noch festlegen",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*"
+            },
+            {
+              "imageFit": "contain",
+              "name": "Persönlicher Gegenstand",
+              "infoRows": [],
+              "id": "item-mqu1vat1-5-5kao",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "tags": "",
+              "type": "Sonstiges",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "image": "",
+              "imageFormat": "square",
+              "category": "other",
+              "icon": "*",
+              "quantity": "1"
+            }
+          ]
+        },
+        "title": "Prinzessin, Cerrigarth",
+        "aliases": [],
+        "archived": false,
+        "bio": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "c0xGlMZxswrbrdFoD1Bm",
+    "playerOwner": "patrick",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/2mdK5F7.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/FEs8oNe.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/elolJTJ.png"
+      },
+      {
+        "img": "https://i.imgur.com/zfscXOH.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/icYAYX6.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gYC0Edb.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/KiMZNte.png"
+      },
+      {
+        "img": "https://i.imgur.com/EETa2x7.png",
+        "label": ""
+      }
+    ],
+    "name": "Wynne Wylan",
+    "fraktion": "Haus Wylan, Cerrigarth",
+    "emotesOverride": true,
+    "portrait": "https://i.imgur.com/l7cA984.png",
+    "inventory": {
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Haus Wylan, Cerrigarth",
+      "healthColor": "#5c7f20",
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": ""
+      },
+      "portrait": "https://i.imgur.com/l7cA984.png",
+      "status": "Gesund",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "infoRows": [],
+      "hitpoints": "TP / Zustand",
+      "title": "Charakter-Inventar",
+      "portraitPosition": "top",
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "infoRows": [],
+          "name": "Reittier / Gefährte",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imagePosition": "top",
+          "description": "",
+          "species": "Tier oder Begleiter"
+        },
+        {
+          "name": "Treuer Begleiter",
+          "image": "",
+          "description": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "role": "Gefährte",
+          "imagePosition": "top",
+          "species": "Tier / Person",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "cover"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyNotice": "",
+      "carryValue": "Noch festlegen",
+      "portraitFormat": "portrait",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "name": "Wynne Wylan",
+      "role": "Prinzessin, Cerrigarth",
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "name": "Hauptwaffe",
+          "infoRows": [],
+          "image": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "type": "Waffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "icon": "*",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon"
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "quantity": "1",
+          "image": "",
+          "category": "armor",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Rüstung",
+          "infoRows": [],
+          "imageFit": "contain",
+          "description": "Rüstung, Kleidung oder magischer Schutz."
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "imageFormat": "square",
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "category": "equipment",
+          "quantity": "1",
+          "image": "",
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "tags": "",
+          "type": "Trinktur",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "infoRows": []
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "name": "Dokumente / Urkunden",
+          "imagePosition": "center",
+          "category": "documents",
+          "quantity": "1",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Dokument",
+          "weight": "Noch festlegen",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*"
+        },
+        {
+          "imageFit": "contain",
+          "name": "Persönlicher Gegenstand",
+          "infoRows": [],
+          "id": "item-mqu1vat1-5-5kao",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "tags": "",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "image": "",
+          "imageFormat": "square",
+          "category": "other",
+          "icon": "*",
+          "quantity": "1"
+        }
+      ]
+    },
+    "title": "Prinzessin, Cerrigarth",
+    "aliases": [],
+    "archived": false,
+    "bio": "",
+    "identity": {
+      "worldPersonId": "person--haus-wylan--wynne-wylan"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-wylan--wynne-wylan",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-wylan",
+      "houseName": "Haus Wylan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-wylan",
+          "personId": "wynne-wylan",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=wynne-wylan",
+          "fingerprint": "{\"name\":\"Wynne Wylan\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-wylan\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wylan/wynne-wylan.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ekmeleddin-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--ekmeleddin-wylan\",\"name\":\"Ekmeleddin Wylan\"},{\"personId\":\"faylinn-ailella\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ailella--faylinn-ailella\",\"name\":\"Faylinn Ailella\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "ekmeleddin-wylan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wylan--ekmeleddin-wylan",
+            "name": "Ekmeleddin Wylan"
+          },
+          {
+            "personId": "faylinn-ailella",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ailella--faylinn-ailella",
+            "name": "Faylinn Ailella"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Weidebucht > Melwas Au > Cerrigarth"
+  }
+}

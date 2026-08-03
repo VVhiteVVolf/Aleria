@@ -1,0 +1,1521 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--oUlhJyX6C4Q69mtLS9u1",
+  "slug": "asgeir-wolfshorn",
+  "identity": {
+    "name": "Asgeir Wolfshorn",
+    "aliases": [],
+    "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-wolfshorn",
+      "label": "Clan Wolfshorn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-wolfshorn",
+        "familyTitle": "Clan Wolfshorn",
+        "personId": "asgeir-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+        "houseId": "house-wolfshorn",
+        "houseName": "Clan Wolfshorn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Aldrimar",
+          "Roriksheim",
+          "Daemmergrund",
+          "Hornhall"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wolfshorn&mode=view&person=asgeir-wolfshorn",
+        "fingerprint": "{\"name\":\"Asgeir Wolfshorn\",\"title\":\"Aeltester Sohn\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wolfshorn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wolfshorn/asgeir-wolfshorn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-wolfshorn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wolfshorn--hrolf-wolfshorn\",\"name\":\"Hrolf Wolfshorn\"},{\"personId\":\"liv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--liv\",\"name\":\"Liv\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      },
+      {
+        "familyId": "haus-bleiddorn",
+        "familyTitle": "Haus Bleiddorn",
+        "personId": "asgeir-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+        "houseId": "house-bleiddorn",
+        "houseName": "Haus Bleiddorn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=asgeir-wolfshorn",
+        "fingerprint": "{\"name\":\"Asgeir Wolfshorn\",\"title\":\"Ältester Sohn Hrolfs\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-bleiddorn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wolfshorn/asgeir-wolfshorn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-wolfshorn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wolfshorn--hrolf-wolfshorn\",\"name\":\"Hrolf Wolfshorn\"},{\"personId\":\"liv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--liv\",\"name\":\"Liv\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "wolfshorn",
+        "label": "Wolfshorn",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Wolfshorn"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "oUlhJyX6C4Q69mtLS9u1",
+      "documentIds": [
+        "oUlhJyX6C4Q69mtLS9u1"
+      ],
+      "documents": [
+        {
+          "documentId": "oUlhJyX6C4Q69mtLS9u1",
+          "createdAt": "2026-07-10T11:41:10.805Z",
+          "updatedAt": "2026-07-27T21:03:21.211Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-wolfshorn",
+        "personId": "asgeir-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wolfshorn&mode=view&person=asgeir-wolfshorn"
+      },
+      {
+        "familyId": "haus-bleiddorn",
+        "personId": "asgeir-wolfshorn",
+        "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=asgeir-wolfshorn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-27T21:03:21.211Z",
+    "sourceDocumentIds": [
+      "oUlhJyX6C4Q69mtLS9u1"
+    ],
+    "contentHash": "49edb1ac82aea1baeafa5e60e3762d03e824385bfd7b3112ccda595ee7d0d4a8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "oUlhJyX6C4Q69mtLS9u1",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/YIT1sag.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Od7dokn.png"
+          },
+          {
+            "img": "https://i.imgur.com/Jrslqiw.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/FC6UHWX.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Q5JqMLJ.png"
+          },
+          {
+            "img": "https://i.imgur.com/mMNydCg.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ivHnQCV.png"
+          },
+          {
+            "img": "https://i.imgur.com/GHwLVKR.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/nfhdZbv.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/0hM6j8y.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/T6QS1NT.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/TUzyqFR.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OG6dnW1.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/UdgyIai.png"
+          },
+          {
+            "img": "https://i.imgur.com/AgHS6FB.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/rG4kMX1.png"
+          },
+          {
+            "img": "https://i.imgur.com/VMNedeQ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/xridME2.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/3HmspSR.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ChIbEWr.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/PcyHCAi.png"
+          },
+          {
+            "img": "https://i.imgur.com/LVymlsv.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/N814mkK.png"
+          },
+          {
+            "img": "https://i.imgur.com/EL0t6lS.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/RhpYxT5.png"
+          },
+          {
+            "img": "https://i.imgur.com/C6K2MD0.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Uct9vx5.png",
+            "label": ""
+          }
+        ],
+        "taxonomyPath": "",
+        "origin": "",
+        "profileLink": "",
+        "aliases": [],
+        "bio": "",
+        "relevance": "",
+        "inventory": {
+          "portraitFit": "cover",
+          "portraitFormat": "portrait",
+          "name": "Name des Charakters",
+          "portraitPosition": "top",
+          "characterId": "oUlhJyX6C4Q69mtLS9u1",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "role": "Rolle",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "copper": 0,
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 0
+          },
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "status": ""
+          },
+          "companions": [
+            {
+              "imageFit": "cover",
+              "image": "",
+              "role": "Begleiter",
+              "infoRows": [],
+              "name": "Reittier / Gefährte",
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "id": "companion-mr49e25e-0-8otq",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20",
+              "status": "Gesund",
+              "description": ""
+            },
+            {
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "infoRows": [],
+              "imageFit": "cover",
+              "name": "Treuer Begleiter",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "description": "",
+              "status": "Noch festlegen",
+              "image": "",
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "species": "Tier / Person",
+              "id": "companion-mr49e25e-1-g7nh"
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "status": "Gesund",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "level": "Stufe",
+          "infoRows": [
+            {
+              "icon": "*",
+              "label": "Status",
+              "value": "Gesund"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Geld",
+              "value": "0 Gold, 0 Silber, 0 Kupfer"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Tragkapazität",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "value": "Noch festlegen",
+              "label": "Rolle"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Fraktion"
+            },
+            {
+              "icon": "*",
+              "label": "Aufenthalt",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Notiz",
+              "value": "Noch festlegen"
+            }
+          ],
+          "items": [
+            {
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Waffe",
+              "id": "item-mr49e25e-0-z845",
+              "originItemDbKey": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "itemDbKey": "",
+              "infoRows": [],
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "individualizedAt": "",
+              "name": "Hauptwaffe",
+              "icon": "*",
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "ownerCharacterName": "",
+              "ownerCharacterId": "",
+              "category": "weapon",
+              "quantity": "1",
+              "itemStorageMode": "character"
+            },
+            {
+              "icon": "*",
+              "imageFormat": "square",
+              "individualizedAt": "",
+              "originItemDbKey": "",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "ownerCharacterName": "",
+              "image": "",
+              "category": "armor",
+              "ownerCharacterId": "",
+              "tags": "",
+              "infoRows": [],
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "id": "item-mr49e25e-1-2x1m",
+              "imageFit": "contain",
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "name": "Rüstung / Schutz",
+              "itemStorageMode": "character"
+            },
+            {
+              "itemStorageMode": "character",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "individualizedAt": "",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "id": "item-mr49e25e-2-9jp9",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "name": "Reiseausrüstung",
+              "quantity": "1",
+              "image": "",
+              "acquiredAt": "",
+              "category": "equipment",
+              "itemDbKey": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "type": "Ausrüstung",
+              "tags": ""
+            },
+            {
+              "imageFormat": "square",
+              "infoRows": [],
+              "ownerCharacterId": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "id": "item-mr49e25e-3-vfkj",
+              "image": "",
+              "itemStorageMode": "character",
+              "type": "Trinktur",
+              "tags": "",
+              "acquiredAt": "",
+              "originItemDbKey": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "ownerCharacterName": "",
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "category": "potions"
+            },
+            {
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "ownerCharacterName": "",
+              "category": "documents",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*",
+              "image": "",
+              "itemDbKey": "",
+              "weight": "Noch festlegen",
+              "individualizedAt": "",
+              "imagePosition": "center",
+              "originItemDbKey": "",
+              "id": "item-mr49e25e-4-csws",
+              "imageFormat": "square",
+              "tags": "",
+              "acquiredAt": "",
+              "itemStorageMode": "character",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "infoRows": [],
+              "ownerCharacterId": "",
+              "imageFit": "contain"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "quantity": "1",
+              "id": "item-mr49e25e-5-059l",
+              "ownerCharacterId": "",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "imageFormat": "square",
+              "category": "other",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "infoRows": [],
+              "type": "Sonstiges",
+              "imageFit": "contain",
+              "tags": "",
+              "image": "",
+              "originItemDbKey": "",
+              "acquiredAt": "",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "individualizedAt": "",
+              "ownerCharacterName": ""
+            }
+          ],
+          "portrait": "https://i.imgur.com/tlufXWn.png",
+          "carryValue": "Noch festlegen",
+          "showInfoTable": false,
+          "title": "Charakter-Inventar",
+          "moneyNotice": ""
+        },
+        "archived": false,
+        "playerOwner": "",
+        "createdAt": "2026-07-10T11:41:10.805Z",
+        "genealogy": {
+          "houseId": "",
+          "portraitPlaceholder": "",
+          "death": "",
+          "relationships": {
+            "parents": [],
+            "children": [],
+            "partners": []
+          },
+          "sources": [],
+          "familyRole": "",
+          "worldPersonId": "",
+          "birth": "",
+          "houseName": "",
+          "status": "",
+          "tags": [],
+          "sex": "unknown"
+        },
+        "status": "",
+        "currentLocation": "",
+        "portrait": "https://i.imgur.com/tlufXWn.png",
+        "fraktion": "Clan Wolfshorn, Dämmergrund",
+        "title": "Huskarl, Hornhall",
+        "name": "Asgeir Wolfshorn",
+        "updatedAt": "2026-07-27T21:03:21.211Z",
+        "role": "",
+        "identity": {
+          "worldPersonId": ""
+        },
+        "plotNode": "",
+        "emotesOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "oUlhJyX6C4Q69mtLS9u1",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/YIT1sag.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Od7dokn.png"
+      },
+      {
+        "img": "https://i.imgur.com/Jrslqiw.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/FC6UHWX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Q5JqMLJ.png"
+      },
+      {
+        "img": "https://i.imgur.com/mMNydCg.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ivHnQCV.png"
+      },
+      {
+        "img": "https://i.imgur.com/GHwLVKR.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/nfhdZbv.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/0hM6j8y.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/T6QS1NT.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/TUzyqFR.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OG6dnW1.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/UdgyIai.png"
+      },
+      {
+        "img": "https://i.imgur.com/AgHS6FB.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/rG4kMX1.png"
+      },
+      {
+        "img": "https://i.imgur.com/VMNedeQ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/xridME2.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/3HmspSR.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ChIbEWr.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PcyHCAi.png"
+      },
+      {
+        "img": "https://i.imgur.com/LVymlsv.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/N814mkK.png"
+      },
+      {
+        "img": "https://i.imgur.com/EL0t6lS.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/RhpYxT5.png"
+      },
+      {
+        "img": "https://i.imgur.com/C6K2MD0.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Uct9vx5.png",
+        "label": ""
+      }
+    ],
+    "taxonomyPath": "Aldrimar > Roriksheim > Daemmergrund > Hornhall",
+    "origin": "",
+    "profileLink": "",
+    "aliases": [],
+    "bio": "",
+    "relevance": "",
+    "inventory": {
+      "portraitFit": "cover",
+      "portraitFormat": "portrait",
+      "name": "Name des Charakters",
+      "portraitPosition": "top",
+      "characterId": "oUlhJyX6C4Q69mtLS9u1",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "role": "Rolle",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "silver": 0,
+        "gold": 0,
+        "totalCopper": 0
+      },
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "status": ""
+      },
+      "companions": [
+        {
+          "imageFit": "cover",
+          "image": "",
+          "role": "Begleiter",
+          "infoRows": [],
+          "name": "Reittier / Gefährte",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "id": "companion-mr49e25e-0-8otq",
+          "species": "Tier oder Begleiter",
+          "statusColor": "#5c7f20",
+          "status": "Gesund",
+          "description": ""
+        },
+        {
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "infoRows": [],
+          "imageFit": "cover",
+          "name": "Treuer Begleiter",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "status": "Noch festlegen",
+          "image": "",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "species": "Tier / Person",
+          "id": "companion-mr49e25e-1-g7nh"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "status": "Gesund",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "level": "Stufe",
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Geld",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Tragkapazität",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Rolle"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Fraktion"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "items": [
+        {
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Waffe",
+          "id": "item-mr49e25e-0-z845",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "itemDbKey": "",
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "individualizedAt": "",
+          "name": "Hauptwaffe",
+          "icon": "*",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "category": "weapon",
+          "quantity": "1",
+          "itemStorageMode": "character"
+        },
+        {
+          "icon": "*",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "image": "",
+          "category": "armor",
+          "ownerCharacterId": "",
+          "tags": "",
+          "infoRows": [],
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "id": "item-mr49e25e-1-2x1m",
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "name": "Rüstung / Schutz",
+          "itemStorageMode": "character"
+        },
+        {
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "id": "item-mr49e25e-2-9jp9",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "name": "Reiseausrüstung",
+          "quantity": "1",
+          "image": "",
+          "acquiredAt": "",
+          "category": "equipment",
+          "itemDbKey": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "type": "Ausrüstung",
+          "tags": ""
+        },
+        {
+          "imageFormat": "square",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "id": "item-mr49e25e-3-vfkj",
+          "image": "",
+          "itemStorageMode": "character",
+          "type": "Trinktur",
+          "tags": "",
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "ownerCharacterName": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "category": "potions"
+        },
+        {
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "ownerCharacterName": "",
+          "category": "documents",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "image": "",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "id": "item-mr49e25e-4-csws",
+          "imageFormat": "square",
+          "tags": "",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "type": "Dokument",
+          "name": "Dokumente / Urkunden",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "imageFit": "contain"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "quantity": "1",
+          "id": "item-mr49e25e-5-059l",
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "category": "other",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "infoRows": [],
+          "type": "Sonstiges",
+          "imageFit": "contain",
+          "tags": "",
+          "image": "",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "individualizedAt": "",
+          "ownerCharacterName": ""
+        }
+      ],
+      "portrait": "https://i.imgur.com/tlufXWn.png",
+      "carryValue": "Noch festlegen",
+      "showInfoTable": false,
+      "title": "Charakter-Inventar",
+      "moneyNotice": ""
+    },
+    "archived": false,
+    "playerOwner": "",
+    "createdAt": "2026-07-10T11:41:10.805Z",
+    "genealogy": {
+      "houseId": "house-wolfshorn",
+      "portraitPlaceholder": "auto",
+      "death": "",
+      "relationships": {
+        "parents": [
+          {
+            "personId": "hrolf-wolfshorn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wolfshorn--hrolf-wolfshorn",
+            "name": "Hrolf Wolfshorn"
+          },
+          {
+            "personId": "liv",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--liv",
+            "name": "Liv"
+          }
+        ],
+        "partners": [],
+        "children": []
+      },
+      "sources": [
+        {
+          "familyId": "haus-wolfshorn",
+          "personId": "asgeir-wolfshorn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wolfshorn&mode=view&person=asgeir-wolfshorn",
+          "fingerprint": "{\"name\":\"Asgeir Wolfshorn\",\"title\":\"Aeltester Sohn\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-wolfshorn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wolfshorn/asgeir-wolfshorn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-wolfshorn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wolfshorn--hrolf-wolfshorn\",\"name\":\"Hrolf Wolfshorn\"},{\"personId\":\"liv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--liv\",\"name\":\"Liv\"}],\"partners\":[],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-bleiddorn",
+          "personId": "asgeir-wolfshorn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=asgeir-wolfshorn",
+          "fingerprint": "{\"name\":\"Asgeir Wolfshorn\",\"title\":\"Ältester Sohn Hrolfs\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-bleiddorn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wolfshorn/asgeir-wolfshorn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-wolfshorn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wolfshorn--hrolf-wolfshorn\",\"name\":\"Hrolf Wolfshorn\"},{\"personId\":\"liv\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--liv\",\"name\":\"Liv\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "familyRole": "core",
+      "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn",
+      "birth": "1712",
+      "houseName": "Clan Wolfshorn",
+      "status": "alive",
+      "tags": [],
+      "sex": "unknown"
+    },
+    "status": "",
+    "currentLocation": "",
+    "portrait": "https://i.imgur.com/tlufXWn.png",
+    "fraktion": "Clan Wolfshorn, Dämmergrund",
+    "title": "Huskarl, Hornhall",
+    "name": "Asgeir Wolfshorn",
+    "updatedAt": "2026-07-27T21:03:21.211Z",
+    "role": "",
+    "identity": {
+      "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn"
+    },
+    "plotNode": "",
+    "emotesOverride": true
+  }
+}

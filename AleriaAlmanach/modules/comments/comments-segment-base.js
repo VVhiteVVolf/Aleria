@@ -65,6 +65,14 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
       : 'normal',
+    combatWeaponGrip: usesCombatResolution && String(
+      combatSettings?.weaponGrip
+      || combatSettings?.combatWeaponGrip
+      || combatSettings?.storedCombatAction?.weaponGrip
+      || combatSettings?.combatAction?.weaponGrip
+    ) === 'two-handed'
+      ? 'two-handed'
+      : 'one-handed',
     combatDistanceMeters: usesCombatResolution
       ? Math.max(0, Math.min(9999, Number(combatSettings?.distanceMeters ?? combatSettings?.combatDistanceMeters) || 0))
       : 0,

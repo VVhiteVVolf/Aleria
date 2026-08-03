@@ -4,6 +4,7 @@ const state = {
 };
 
 const els = {};
+let localRepositoryPromise = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   bindElements();
@@ -15,7 +16,7 @@ function bindElements() {
   [
     "searchInput", "landFilter", "countyFilter", "settlementFilter", "genderFilter",
     "clanFilter", "orgFilter", "statusFilter", "ageMin", "ageMax", "resetBtn",
-    "loadSeedBtn", "sortSelect", "resultCount", "resultList", "emptyState",
+    "reloadDataBtn", "sortSelect", "resultCount", "resultList", "emptyState",
     "characterCardTemplate", "syncDot", "syncText",
   ].forEach((id) => els[id] = document.getElementById(id));
 }
@@ -26,44 +27,30 @@ function bindEvents() {
     .forEach((id) => els[id].addEventListener("input", applyFilters));
 
   els.resetBtn.addEventListener("click", resetFilters);
-  els.loadSeedBtn.addEventListener("click", loadSeedData);
+  els.reloadDataBtn.addEventListener("click", () => loadCharacters({ forceLocal: true }));
 }
 
-async function loadCharacters() {
+async function loadCharacters({ forceLocal = false } = {}) {
   setSync("loading", "lade");
+  const repository = await loadLocalRepository();
+  const local = await repository.loadLocalCharacterDatabase({ force: forceLocal });
+  let online = [];
   try {
     await waitForFirebase();
-    state.characters = normalizeCharacters(await window.CharacterDB.loadAll());
-    if (!state.characters.length) {
-      state.characters = normalizeCharacters(await fetchJson("data/example.characters.json"));
-      setSync("", "lokale Beispieldaten");
-    } else {
-      setSync("ok", "firebase");
-    }
+    online = await window.CharacterDB.loadAll();
+    setSync("ok", online.length ? "online + lokal" : "lokal");
   } catch (error) {
     console.warn(error);
-    state.characters = normalizeCharacters(await fetchJson("data/example.characters.json"));
-    setSync("err", "offline");
+    setSync(local.characters.length ? "" : "err", local.characters.length ? "lokal" : "nicht verfügbar");
   }
+  state.characters = normalizeCharacters(repository.mergeCharacterDatabases(online, local.characters));
   populateFilters();
   applyFilters();
 }
 
-async function loadSeedData() {
-  setSync("loading", "import");
-  const seed = normalizeCharacters(await fetchJson("data/example.characters.json"));
-  try {
-    await waitForFirebase();
-    for (const character of seed) await window.CharacterDB.upsert(character);
-    state.characters = normalizeCharacters(await window.CharacterDB.loadAll());
-    setSync("ok", "firebase");
-  } catch (error) {
-    console.error(error);
-    state.characters = seed;
-    setSync("err", "import fehlgeschlagen");
-  }
-  populateFilters();
-  applyFilters();
+function loadLocalRepository() {
+  if (!localRepositoryPromise) localRepositoryPromise = import("./character-database-client.mjs");
+  return localRepositoryPromise;
 }
 
 function applyFilters() {
@@ -192,29 +179,78 @@ function resetFilters() {
 
 function normalizeCharacters(rows) {
   return rows.map((row) => {
+    const genealogy = row.genealogy || {};
+    const classification = row.localRecord?.classification || {};
+    const primary = classification.primary || {};
+    const family = classification.families?.[0] || null;
+    const taxonomy = String(row.taxonomyPath || "").split(">").map((part) => part.trim()).filter(Boolean);
+    const groupLinks = classification.groups || [];
+    const placeLinks = classification.places || [];
     const fullName = row.fullName || [row.name, row.surname].filter(Boolean).join(" ");
+    const landName = row.landName || taxonomy[0] || "";
+    const countyName = row.countyName || taxonomy[1] || "";
+    const settlementName = row.settlementName || row.currentLocation || placeLinks[0]?.label
+      || (primary.kind === "place" ? primary.label : "");
+    const clanName = row.clanName || genealogy.houseName || family?.familyTitle
+      || (primary.kind === "family" ? primary.label : "");
+    const organizations = uniqueStrings([
+      ...(row.organizations || []),
+      ...groupLinks.map(group => group.id),
+      ...(primary.kind === "group" ? [primary.id] : [])
+    ]);
+    const organizationNames = uniqueStrings([
+      ...(row.organizationNames || []),
+      ...groupLinks.map(group => group.label),
+      ...(primary.kind === "group" ? [primary.label] : [])
+    ]);
+    const gender = row.gender || genealogy.sex || "";
+    const status = row.status || genealogy.status || "";
+    const tags = uniqueStrings([
+      ...(row.tags || []),
+      ...(genealogy.tags || []),
+      primary.kind,
+      row.playerOwner ? `spieler:${row.playerOwner}` : ""
+    ]);
     const searchParts = [
-      fullName, row.name, row.surname, row.landName, row.countyName, row.baronyName,
-      row.settlementName, row.clanName, ...(row.organizationNames || []), ...(row.tags || []),
+      fullName, row.name, row.surname, landName, countyName, row.baronyName,
+      settlementName, clanName, ...organizationNames, ...tags, row.fraktion, row.title,
+      row.bio, row.identity?.worldPersonId,
       ...(row.searchTokens || []),
     ];
     return {
       ...row,
       fullName,
+      gender,
+      genderName: row.genderName || genderLabel(gender),
+      status,
+      statusName: row.statusName || statusLabel(status),
+      land: row.land || slugify(landName),
+      landName,
+      county: row.county || slugify(countyName),
+      countyName,
+      settlement: row.settlement || slugify(settlementName),
+      settlementName,
+      clan: row.clan || family?.familyId || (primary.kind === "family" ? primary.id : ""),
+      clanName,
+      organizations,
+      organizationNames,
+      role: row.role || row.title || "",
+      description: row.description || row.bio || "",
+      tags,
       searchIndex: normalizeText(searchParts.filter(Boolean).join(" ")),
     };
   });
 }
 
-async function fetchJson(path) {
-  const response = await fetch(path);
-  if (!response.ok) throw new Error(`Konnte ${path} nicht laden`);
-  return response.json();
-}
-
 function waitForFirebase() {
   if (window.CharacterDB) return Promise.resolve();
-  return new Promise((resolve) => window.addEventListener("character-db-ready", resolve, { once: true }));
+  return new Promise((resolve, reject) => {
+    const timeout = window.setTimeout(() => reject(new Error("Firebase-Zeitüberschreitung")), 4000);
+    window.addEventListener("character-db-ready", () => {
+      window.clearTimeout(timeout);
+      resolve();
+    }, { once: true });
+  });
 }
 
 function setSync(stateName, text) {
@@ -230,6 +266,22 @@ function initials(character) {
 function normalizeText(value) {
   return String(value || "").toLowerCase()
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function slugify(value) {
+  return normalizeText(value).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function uniqueStrings(values) {
+  return [...new Set(values.map((value) => String(value || "").trim()).filter(Boolean))];
+}
+
+function genderLabel(value) {
+  return ({ male: "männlich", female: "weiblich", unknown: "unbekannt" })[value] || value;
+}
+
+function statusLabel(value) {
+  return ({ alive: "lebendig", dead: "verstorben", missing: "vermisst", unknown: "unbekannt" })[value] || value;
 }
 
 function cmp(a, b) {

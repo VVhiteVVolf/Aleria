@@ -1,0 +1,1136 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--2ZIauO2ZQ1sbn8iFhyzH",
+  "slug": "myfanwy-draenmelyn",
+  "identity": {
+    "name": "Myfanwy Draenmelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draenmelyn",
+      "label": "Haus Draenmelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draenmelyn",
+        "familyTitle": "Haus Draenmelyn",
+        "personId": "myfanwy-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn",
+        "houseId": "house-draenmelyn",
+        "houseName": "Haus Draenmelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn",
+        "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "2ZIauO2ZQ1sbn8iFhyzH",
+      "documentIds": [
+        "2ZIauO2ZQ1sbn8iFhyzH"
+      ],
+      "documents": [
+        {
+          "documentId": "2ZIauO2ZQ1sbn8iFhyzH",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draenmelyn",
+        "personId": "myfanwy-draenmelyn",
+        "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "2ZIauO2ZQ1sbn8iFhyzH"
+    ],
+    "contentHash": "0e0f95e607f15c37268be2baf662562bed0219e94126466088569d679cb34173"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "2ZIauO2ZQ1sbn8iFhyzH",
+        "playerOwner": "erdi",
+        "archived": false,
+        "name": "Myfanwy Draenmelyn",
+        "aliases": [],
+        "title": "Zofe, Gwynthor",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/GBuXVrq.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/wP5W3EO.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Ae2IioC.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/yEemNAG.png"
+          },
+          {
+            "img": "https://i.imgur.com/NuViqT3.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/I2kocxS.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/LPibYnV.png"
+          },
+          {
+            "img": "https://i.imgur.com/0jKKldW.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/WIwgcdp.png",
+            "label": ""
+          }
+        ],
+        "inventory": {
+          "name": "Myfanwy Draenmelyn",
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "items": [
+            {
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "type": "Waffe",
+              "tags": "",
+              "image": "",
+              "name": "Hauptwaffe",
+              "quantity": "1",
+              "id": "item-mqu1vat1-0-w8ef",
+              "category": "weapon"
+            },
+            {
+              "infoRows": [],
+              "imagePosition": "center",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Rüstung",
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "quantity": "1",
+              "image": "",
+              "name": "Rüstung / Schutz",
+              "category": "armor"
+            },
+            {
+              "name": "Reiseausrüstung",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "category": "equipment",
+              "id": "item-mqu1vat1-2-0fx2",
+              "type": "Ausrüstung",
+              "quantity": "1",
+              "tags": "",
+              "imageFit": "contain",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "infoRows": [],
+              "image": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "weight": "Noch festlegen"
+            },
+            {
+              "imageFormat": "square",
+              "category": "potions",
+              "quantity": "1",
+              "image": "",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-3-2lgm",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "infoRows": [],
+              "imagePosition": "center"
+            },
+            {
+              "category": "documents",
+              "imageFormat": "square",
+              "type": "Dokument",
+              "imagePosition": "center",
+              "quantity": "1",
+              "tags": "",
+              "name": "Dokumente / Urkunden",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-4-ajrj",
+              "infoRows": []
+            },
+            {
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "image": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "category": "other",
+              "id": "item-mqu1vat1-5-5kao",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square",
+              "imagePosition": "center"
+            }
+          ],
+          "role": "Zofe, Gwynthor",
+          "portrait": "https://i.imgur.com/03YDRX5.png",
+          "status": "Gesund",
+          "title": "Charakter-Inventar",
+          "hitpoints": "TP / Zustand",
+          "infoRows": [],
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "step": 0,
+            "open": false,
+            "updatedAt": "",
+            "status": ""
+          },
+          "moneyNotice": "",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "companions": [
+            {
+              "status": "Gesund",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "species": "Tier oder Begleiter",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "infoRows": [],
+              "statusColor": "#5c7f20",
+              "role": "Begleiter",
+              "imagePosition": "top",
+              "image": "",
+              "description": ""
+            },
+            {
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "role": "Gefährte",
+              "imageFormat": "landscape",
+              "species": "Tier / Person",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "status": "Noch festlegen",
+              "infoRows": [],
+              "description": "",
+              "imageFit": "cover"
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "carryValue": "Noch festlegen",
+          "healthColor": "#5c7f20"
+        },
+        "profileLink": "",
+        "portrait": "https://i.imgur.com/03YDRX5.png",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "emotesOverride": true,
+        "bio": "Myfanwy Draenmelyn ist die Cousine des Kammerdieners Taliesin Draenmelyn und dient als persönliche Zofe der Ritterin Oweta Draig. Wie viele Angehörige ihrer Familie wurde sie schon früh für den Dienst am Hof ausgebildet und zeichnet sich durch ihre gute Erziehung, ihr höfliches Auftreten und ihre außergewöhnliche Aufmerksamkeit aus. Während ihr Cousin dazu neigt, jede Unannehmlichkeit mit dramatischer Besorgnis zu begleiten, begegnet Myfanwy den Herausforderungen des Hoflebens mit bemerkenswerter Ruhe und Gelassenheit.\n\nSie gilt als scharfsinnig und beobachtet ihre Umgebung mit wachem Blick, wodurch ihr nur selten wichtige Details entgehen. Viele unterschätzen die stille junge Dame zunächst, doch jene, die regelmäßig mit ihr zu tun haben, wissen ihre hohe Auffassungsgabe und ihre Zuverlässigkeit zu schätzen. Besonders Oweta vertraut auf ihr Urteilsvermögen, da Myfanwy oft bemerkt, was anderen verborgen bleibt, und dabei stets die nötige Diskretion wahrt."
+      }
+    ]
+  },
+  "character": {
+    "id": "2ZIauO2ZQ1sbn8iFhyzH",
+    "playerOwner": "erdi",
+    "archived": false,
+    "name": "Myfanwy Draenmelyn",
+    "aliases": [],
+    "title": "Zofe, Gwynthor",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/GBuXVrq.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/wP5W3EO.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Ae2IioC.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/yEemNAG.png"
+      },
+      {
+        "img": "https://i.imgur.com/NuViqT3.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/I2kocxS.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/LPibYnV.png"
+      },
+      {
+        "img": "https://i.imgur.com/0jKKldW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/WIwgcdp.png",
+        "label": ""
+      }
+    ],
+    "inventory": {
+      "name": "Myfanwy Draenmelyn",
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "tags": "",
+          "image": "",
+          "name": "Hauptwaffe",
+          "quantity": "1",
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon"
+        },
+        {
+          "infoRows": [],
+          "imagePosition": "center",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Rüstung",
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "quantity": "1",
+          "image": "",
+          "name": "Rüstung / Schutz",
+          "category": "armor"
+        },
+        {
+          "name": "Reiseausrüstung",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "category": "equipment",
+          "id": "item-mqu1vat1-2-0fx2",
+          "type": "Ausrüstung",
+          "quantity": "1",
+          "tags": "",
+          "imageFit": "contain",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "infoRows": [],
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imageFormat": "square",
+          "category": "potions",
+          "quantity": "1",
+          "image": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-3-2lgm",
+          "name": "Heil- oder Verbrauchsgut",
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "infoRows": [],
+          "imagePosition": "center"
+        },
+        {
+          "category": "documents",
+          "imageFormat": "square",
+          "type": "Dokument",
+          "imagePosition": "center",
+          "quantity": "1",
+          "tags": "",
+          "name": "Dokumente / Urkunden",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-4-ajrj",
+          "infoRows": []
+        },
+        {
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "image": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square",
+          "imagePosition": "center"
+        }
+      ],
+      "role": "Zofe, Gwynthor",
+      "portrait": "https://i.imgur.com/03YDRX5.png",
+      "status": "Gesund",
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "infoRows": [],
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "step": 0,
+        "open": false,
+        "updatedAt": "",
+        "status": ""
+      },
+      "moneyNotice": "",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "companions": [
+        {
+          "status": "Gesund",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFormat": "landscape",
+          "species": "Tier oder Begleiter",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "infoRows": [],
+          "statusColor": "#5c7f20",
+          "role": "Begleiter",
+          "imagePosition": "top",
+          "image": "",
+          "description": ""
+        },
+        {
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "role": "Gefährte",
+          "imageFormat": "landscape",
+          "species": "Tier / Person",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "status": "Noch festlegen",
+          "infoRows": [],
+          "description": "",
+          "imageFit": "cover"
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "carryValue": "Noch festlegen",
+      "healthColor": "#5c7f20"
+    },
+    "profileLink": "",
+    "portrait": "https://i.imgur.com/03YDRX5.png",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "emotesOverride": true,
+    "bio": "Myfanwy Draenmelyn ist die Cousine des Kammerdieners Taliesin Draenmelyn und dient als persönliche Zofe der Ritterin Oweta Draig. Wie viele Angehörige ihrer Familie wurde sie schon früh für den Dienst am Hof ausgebildet und zeichnet sich durch ihre gute Erziehung, ihr höfliches Auftreten und ihre außergewöhnliche Aufmerksamkeit aus. Während ihr Cousin dazu neigt, jede Unannehmlichkeit mit dramatischer Besorgnis zu begleiten, begegnet Myfanwy den Herausforderungen des Hoflebens mit bemerkenswerter Ruhe und Gelassenheit.\n\nSie gilt als scharfsinnig und beobachtet ihre Umgebung mit wachem Blick, wodurch ihr nur selten wichtige Details entgehen. Viele unterschätzen die stille junge Dame zunächst, doch jene, die regelmäßig mit ihr zu tun haben, wissen ihre hohe Auffassungsgabe und ihre Zuverlässigkeit zu schätzen. Besonders Oweta vertraut auf ihr Urteilsvermögen, da Myfanwy oft bemerkt, was anderen verborgen bleibt, und dabei stets die nötige Diskretion wahrt.",
+    "identity": {
+      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-draenmelyn--myfanwy-draenmelyn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1723",
+      "death": "",
+      "houseId": "house-draenmelyn",
+      "houseName": "Haus Draenmelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "17 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-draenmelyn",
+          "personId": "myfanwy-draenmelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=myfanwy-draenmelyn",
+          "fingerprint": "{\"name\":\"Myfanwy Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--meurig-draenmelyn\",\"name\":\"Meurig Draenmelyn\"},{\"personId\":\"catrin-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--catrin-spouse-draenmelyn\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "meurig-draenmelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draenmelyn--meurig-draenmelyn",
+            "name": "Meurig Draenmelyn"
+          },
+          {
+            "personId": "catrin-spouse-draenmelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--catrin-spouse-draenmelyn",
+            "name": "Catrin"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

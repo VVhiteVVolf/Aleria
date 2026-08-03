@@ -1,0 +1,1168 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--C9E5NjYfZp9mJDkbovDn",
+  "slug": "generis-geb-draig-wylan",
+  "identity": {
+    "name": "Generis (Geb. Draig) Wylan",
+    "aliases": [],
+    "worldPersonId": "person--haus-draig--generis-draig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "generis-draig",
+        "worldPersonId": "person--haus-draig--generis-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=generis-draig",
+        "fingerprint": "{\"name\":\"Generis Draig\",\"title\":\"\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/generis-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cahir-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cahir-draig\",\"name\":\"Cahir Draig\"},{\"personId\":\"alawen-cumhail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cumhail--alawen-cumhail\",\"name\":\"Alawen Cumhail\"}],\"partners\":[{\"personId\":\"hewet-wylan\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--hewet-wylan\",\"name\":\"Hewet Wylan\"}],\"children\":[]}}",
+        "score": 185
+      },
+      {
+        "familyId": "haus-wylan",
+        "familyTitle": "Haus Wylan O'Cerrigarth",
+        "personId": "generis-draig",
+        "worldPersonId": "person--haus-draig--generis-draig",
+        "houseId": "house-draig",
+        "houseName": "Haus Draig",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Weidebucht",
+          "Melwas Au",
+          "Cerrigarth"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=generis-draig",
+        "fingerprint": "{\"name\":\"Generis Draig\",\"title\":\"\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/generis-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"hewet-wylan\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--hewet-wylan\",\"name\":\"Hewet Wylan\"}],\"children\":[{\"personId\":\"morgana-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--morgana-wylan\",\"name\":\"Morgana Wylan\"},{\"personId\":\"bedivere-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--bedivere-wylan\",\"name\":\"Bedivere Wylan\"},{\"personId\":\"selsye-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--selsye-wylan\",\"name\":\"Selyse Wylan\"}]}}",
+        "score": 140
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "cerrigarth",
+        "label": "Cerrigarth",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Cerrigarth"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "C9E5NjYfZp9mJDkbovDn",
+      "documentIds": [
+        "C9E5NjYfZp9mJDkbovDn"
+      ],
+      "documents": [
+        {
+          "documentId": "C9E5NjYfZp9mJDkbovDn",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "generis-draig",
+        "worldPersonId": "person--haus-draig--generis-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=generis-draig"
+      },
+      {
+        "familyId": "haus-wylan",
+        "personId": "generis-draig",
+        "worldPersonId": "person--haus-draig--generis-draig",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=generis-draig"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "C9E5NjYfZp9mJDkbovDn"
+    ],
+    "contentHash": "b410f94249c41fb5e33632bffbd3d1200d2b274849463b501bf87c47d474cb45"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "C9E5NjYfZp9mJDkbovDn",
+        "portrait": "https://64.media.tumblr.com/d653c75595576ea6830205e6055e4977/f7cc597c74572057-f4/s250x400/8243555c9839dec11dba1f03c381bf5fd8174762.pnj",
+        "emotesOverride": true,
+        "fraktion": "Haus Wylan",
+        "playerOwner": "erdi",
+        "archived": false,
+        "bio": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/FVf9kbA.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Rl8k4WO.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/03LBVYn.png"
+          },
+          {
+            "img": "https://i.imgur.com/FWzCzAI.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/o2WPl99.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/TnVoM2f.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/mgHkbQn.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/PwtnAGl.png"
+          }
+        ],
+        "aliases": [],
+        "title": "Justiziarin des Grafen,  Gwynthor",
+        "inventory": {
+          "hitpoints": "TP / Zustand",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "items": [
+            {
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "image": "",
+              "tags": "",
+              "imagePosition": "center",
+              "type": "Waffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "quantity": "1",
+              "imageFormat": "square",
+              "category": "weapon",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Hauptwaffe"
+            },
+            {
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "category": "armor",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-1-exvo",
+              "infoRows": [],
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "name": "Reiseausrüstung",
+              "weight": "Noch festlegen",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "image": "",
+              "type": "Ausrüstung",
+              "id": "item-mqu1vat1-2-0fx2",
+              "tags": "",
+              "category": "equipment",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "infoRows": [],
+              "imagePosition": "center",
+              "icon": "*"
+            },
+            {
+              "imageFormat": "square",
+              "name": "Heil- oder Verbrauchsgut",
+              "id": "item-mqu1vat1-3-2lgm",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "tags": "",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "quantity": "1",
+              "imagePosition": "center",
+              "category": "potions",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "image": "",
+              "icon": "*"
+            },
+            {
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "image": "",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "icon": "*",
+              "name": "Dokumente / Urkunden",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj",
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "type": "Dokument",
+              "category": "documents",
+              "tags": ""
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imagePosition": "center",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "category": "other",
+              "quantity": "1",
+              "id": "item-mqu1vat1-5-5kao",
+              "name": "Persönlicher Gegenstand",
+              "image": "",
+              "tags": "",
+              "type": "Sonstiges"
+            }
+          ],
+          "moneyNotice": "",
+          "portraitPosition": "top",
+          "role": "Justiziarin des Grafen,  Gwynthor",
+          "title": "Charakter-Inventar",
+          "portraitFormat": "portrait",
+          "companions": [
+            {
+              "name": "Reittier / Gefährte",
+              "description": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "role": "Begleiter",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "image": "",
+              "species": "Tier oder Begleiter",
+              "imageFormat": "landscape",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "infoRows": [],
+              "status": "Gesund",
+              "imageFit": "cover"
+            },
+            {
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "infoRows": [],
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "imageFormat": "landscape",
+              "status": "Noch festlegen",
+              "statusColor": "#5c7f20",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "description": ""
+            }
+          ],
+          "name": "Generis (Geb. Draig) Wylan",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "carryValue": "Noch festlegen",
+          "status": "Gesund",
+          "portrait": "https://64.media.tumblr.com/d653c75595576ea6830205e6055e4977/f7cc597c74572057-f4/s250x400/8243555c9839dec11dba1f03c381bf5fd8174762.pnj",
+          "equipmentQuiz": {
+            "resultText": "",
+            "open": false,
+            "status": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "updatedAt": "",
+            "step": 0
+          },
+          "infoRows": [],
+          "portraitFit": "cover",
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "carryLabel": "Traglast",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "level": "Haus Wylan",
+          "money": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        "name": "Generis (Geb. Draig) Wylan"
+      }
+    ]
+  },
+  "character": {
+    "id": "C9E5NjYfZp9mJDkbovDn",
+    "portrait": "https://64.media.tumblr.com/d653c75595576ea6830205e6055e4977/f7cc597c74572057-f4/s250x400/8243555c9839dec11dba1f03c381bf5fd8174762.pnj",
+    "emotesOverride": true,
+    "fraktion": "Haus Wylan",
+    "playerOwner": "erdi",
+    "archived": false,
+    "bio": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/FVf9kbA.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Rl8k4WO.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/03LBVYn.png"
+      },
+      {
+        "img": "https://i.imgur.com/FWzCzAI.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/o2WPl99.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TnVoM2f.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/mgHkbQn.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PwtnAGl.png"
+      }
+    ],
+    "aliases": [],
+    "title": "Justiziarin des Grafen,  Gwynthor",
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "items": [
+        {
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "image": "",
+          "tags": "",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "quantity": "1",
+          "imageFormat": "square",
+          "category": "weapon",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Hauptwaffe"
+        },
+        {
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "category": "armor",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [],
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name": "Reiseausrüstung",
+          "weight": "Noch festlegen",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "image": "",
+          "type": "Ausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "tags": "",
+          "category": "equipment",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "infoRows": [],
+          "imagePosition": "center",
+          "icon": "*"
+        },
+        {
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "tags": "",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "potions",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "icon": "*"
+        },
+        {
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "image": "",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "icon": "*",
+          "name": "Dokumente / Urkunden",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj",
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "category": "documents",
+          "tags": ""
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "quantity": "1",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "tags": "",
+          "type": "Sonstiges"
+        }
+      ],
+      "moneyNotice": "",
+      "portraitPosition": "top",
+      "role": "Justiziarin des Grafen,  Gwynthor",
+      "title": "Charakter-Inventar",
+      "portraitFormat": "portrait",
+      "companions": [
+        {
+          "name": "Reittier / Gefährte",
+          "description": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "role": "Begleiter",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "image": "",
+          "species": "Tier oder Begleiter",
+          "imageFormat": "landscape",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "infoRows": [],
+          "status": "Gesund",
+          "imageFit": "cover"
+        },
+        {
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "infoRows": [],
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFormat": "landscape",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "description": ""
+        }
+      ],
+      "name": "Generis (Geb. Draig) Wylan",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "portrait": "https://64.media.tumblr.com/d653c75595576ea6830205e6055e4977/f7cc597c74572057-f4/s250x400/8243555c9839dec11dba1f03c381bf5fd8174762.pnj",
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": "",
+        "step": 0
+      },
+      "infoRows": [],
+      "portraitFit": "cover",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "carryLabel": "Traglast",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "level": "Haus Wylan",
+      "money": "0 Gold, 0 Silber, 0 Kupfer"
+    },
+    "name": "Generis (Geb. Draig) Wylan",
+    "identity": {
+      "worldPersonId": "person--haus-draig--generis-draig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-draig--generis-draig",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1674",
+      "death": "",
+      "houseId": "house-draig",
+      "houseName": "Haus Draig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "generis-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=generis-draig",
+          "fingerprint": "{\"name\":\"Generis Draig\",\"title\":\"\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/generis-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cahir-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--cahir-draig\",\"name\":\"Cahir Draig\"},{\"personId\":\"alawen-cumhail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cumhail--alawen-cumhail\",\"name\":\"Alawen Cumhail\"}],\"partners\":[{\"personId\":\"hewet-wylan\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--hewet-wylan\",\"name\":\"Hewet Wylan\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-wylan",
+          "personId": "generis-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wylan&mode=view&person=generis-draig",
+          "fingerprint": "{\"name\":\"Generis Draig\",\"title\":\"\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/generis-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"hewet-wylan\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--hewet-wylan\",\"name\":\"Hewet Wylan\"}],\"children\":[{\"personId\":\"morgana-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--morgana-wylan\",\"name\":\"Morgana Wylan\"},{\"personId\":\"bedivere-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--bedivere-wylan\",\"name\":\"Bedivere Wylan\"},{\"personId\":\"selsye-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--selsye-wylan\",\"name\":\"Selyse Wylan\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cahir-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--cahir-draig",
+            "name": "Cahir Draig"
+          },
+          {
+            "personId": "alawen-cumhail",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-cumhail--alawen-cumhail",
+            "name": "Alawen Cumhail"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "hewet-wylan",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wylan--hewet-wylan",
+            "name": "Hewet Wylan"
+          }
+        ],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

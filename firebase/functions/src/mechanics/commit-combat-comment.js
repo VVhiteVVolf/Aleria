@@ -5,9 +5,13 @@ import { getPersistentCombatResources, recoverDailyCombatResources, resetComment
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
-import { deriveCombatStateFromComments, getResolutionActorResourceState, getResolutionHitPointState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
+import { deriveCombatStateFromComments, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetConditionState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
-import { applyInventoryUseToInventory, normalizeInventoryUse } from '../generated/inventory-use/inventory-use-model.js';
+import {
+  applyInventoryUseAbilityEffects,
+  applyInventoryUseToInventory,
+  normalizeInventoryUse
+} from '../generated/inventory-use/inventory-use-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 import { getTrustedSceneDay, isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
 import { validateSkillCommentSegments } from './skill-comment-validator.js';
@@ -262,10 +266,28 @@ export const commitCombatComment = onCall({
       const currentInventory = workingInventories.get(recordKey) || record?.inventory || {};
       const applied = applyInventoryUseToInventory(currentInventory, submittedUse);
       workingInventories.set(recordKey, applied.inventory);
-      enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: applied.inventoryUse };
+      const actorBase = resolveCombatProfile(makeCharacter(record, descriptor.persistence, descriptor.actorId));
+      const actorState = workingStates.get(String(descriptor.actorId));
+      const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
+      const actorProfile = applyStoredState(actorBase, { ...(actorState || {}), resources: actorResources });
+      const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey);
+      enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: triggered.inventoryUse };
+      if (triggered.changed) {
+        workingStates.set(String(descriptor.actorId), {
+          ...(actorState || {}),
+          resources: triggered.resources,
+          abilities: triggered.abilities
+        });
+      }
       if (descriptor.persistence.persistent && submittedUse.mode === 'consume') {
         const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
         existing.inventory = applied.inventory;
+        persistentUpdates.set(recordKey, existing);
+      }
+      if (descriptor.persistence.persistent && triggered.changed) {
+        const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
+        existing.resources = getPersistentCombatResources(actorBase.resources, triggered.resources);
+        existing.abilities = triggered.abilities;
         persistentUpdates.set(recordKey, existing);
       }
     }
@@ -285,7 +307,8 @@ export const commitCombatComment = onCall({
       const actorBase = resolveCombatProfile(makeCharacter(actorRecord, actorPersistence, submitted.actorId), {
         actionId: String(segment.combatAction?.profileActionId || submitted.profileActionId || ''),
         segmentKind: String(segment.commentKind || segment.kind || ''),
-        paymentMode
+        paymentMode,
+        weaponGrip: String(segment.combatAction?.weaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed'
       });
       const targetBase = resolveCombatProfile(makeCharacter(targetRecord, targetPersistence, submitted.targetId));
       const actorState = workingStates.get(String(submitted.actorId));
@@ -364,8 +387,13 @@ export const commitCombatComment = onCall({
       }
 
       const targetNext = getResolutionHitPointState(resolution);
+      const targetConditions = getResolutionTargetConditionState(resolution);
       const actorNextResources = getResolutionActorResourceState(resolution);
-      if (targetNext) workingStates.set(String(submitted.targetId), { ...(targetState || {}), ...targetNext });
+      if (targetNext || targetConditions) workingStates.set(String(submitted.targetId), {
+        ...(targetState || {}),
+        ...(targetNext || {}),
+        ...(targetConditions ? { temporaryConditions: targetConditions } : {})
+      });
       if (actorNextResources || abilityUse.changed) workingStates.set(String(submitted.actorId), {
         ...(workingStates.get(String(submitted.actorId)) || actorState || {}),
         ...(actorNextResources ? { resources: actorNextResources } : {}),

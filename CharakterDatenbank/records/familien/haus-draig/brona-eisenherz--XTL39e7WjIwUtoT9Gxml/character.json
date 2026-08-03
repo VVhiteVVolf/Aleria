@@ -1,0 +1,1175 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--XTL39e7WjIwUtoT9Gxml",
+  "slug": "brona-eisenherz",
+  "identity": {
+    "name": "Brona Eisenherz",
+    "aliases": [],
+    "worldPersonId": "person--haus-eisenherz--brona-eisenherz"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-draig",
+      "label": "Haus Draig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "brona-eisenherz",
+        "worldPersonId": "person--haus-eisenherz--brona-eisenherz",
+        "houseId": "house-eisenherz",
+        "houseName": "Haus Eisenherz",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz",
+        "fingerprint": "{\"name\":\"Brona Eisenherz\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-eisenherz\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhys-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhys-draig\",\"name\":\"Rhys Draig\"}],\"children\":[{\"personId\":\"kane-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--kane-draig\",\"name\":\"Kane Draig\"},{\"personId\":\"oweta-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--oweta-draig\",\"name\":\"Oweta Draig\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": [
+        "Gwynthor > Gwynthor - Haus Draig"
+      ]
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "XTL39e7WjIwUtoT9Gxml",
+      "documentIds": [
+        "XTL39e7WjIwUtoT9Gxml"
+      ],
+      "documents": [
+        {
+          "documentId": "XTL39e7WjIwUtoT9Gxml",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-draig",
+        "personId": "brona-eisenherz",
+        "worldPersonId": "person--haus-eisenherz--brona-eisenherz",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "XTL39e7WjIwUtoT9Gxml"
+    ],
+    "contentHash": "8820188ff390a559ed8f6d59f2c6c40f29994825ede0473e4fa48b1bf8ad043c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "XTL39e7WjIwUtoT9Gxml",
+        "name": "Brona Eisenherz",
+        "archived": false,
+        "title": "Lady, Morgorn",
+        "playerOwner": "patrick",
+        "bio": "",
+        "aliases": [],
+        "fraktion": "Haus Eisenherz, Celtigerns Wacht",
+        "inventory": {
+          "hitpoints": "TP / Zustand",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "image": "",
+              "infoRows": [],
+              "imageFormat": "square",
+              "type": "Waffe",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "category": "weapon",
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1"
+            },
+            {
+              "imageFormat": "square",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Rüstung",
+              "id": "item-mqu1vat1-1-exvo",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Rüstung / Schutz",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "icon": "*",
+              "imagePosition": "center",
+              "image": "",
+              "quantity": "1",
+              "category": "armor"
+            },
+            {
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "tags": "",
+              "imagePosition": "center",
+              "infoRows": [],
+              "imageFormat": "square",
+              "image": "",
+              "name": "Reiseausrüstung",
+              "id": "item-mqu1vat1-2-0fx2"
+            },
+            {
+              "category": "potions",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "icon": "*",
+              "name": "Heil- oder Verbrauchsgut",
+              "image": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "type": "Trinktur",
+              "tags": "",
+              "infoRows": []
+            },
+            {
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "tags": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "type": "Dokument",
+              "category": "documents",
+              "image": "",
+              "quantity": "1",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "quantity": "1",
+              "type": "Sonstiges",
+              "category": "other",
+              "tags": "",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-5-5kao",
+              "infoRows": [],
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "image": ""
+            }
+          ],
+          "companions": [
+            {
+              "imageFit": "cover",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "statusColor": "#5c7f20",
+              "status": "Gesund",
+              "image": "",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "description": "",
+              "name": "Reittier / Gefährte",
+              "species": "Tier oder Begleiter",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "role": "Begleiter",
+              "imagePosition": "top",
+              "imageFormat": "landscape"
+            },
+            {
+              "imagePosition": "top",
+              "species": "Tier / Person",
+              "name": "Treuer Begleiter",
+              "description": "",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "status": "Noch festlegen",
+              "role": "Gefährte",
+              "imageFit": "cover",
+              "infoRows": [],
+              "statusColor": "#5c7f20",
+              "image": "",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "moneyNotice": "",
+          "carryValue": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "title": "Charakter-Inventar",
+          "portraitPosition": "top",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "status": "",
+            "step": 0
+          },
+          "name": "Brona Eisenherz",
+          "infoRows": [],
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "role": "Lady, Morgorn",
+          "portraitFormat": "portrait",
+          "portrait": "https://i.imgur.com/yEPvXLm.png",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFit": "cover",
+          "status": "Gesund",
+          "level": "Haus Eisenherz, Celtigerns Wacht",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast"
+        },
+        "portrait": "https://i.imgur.com/yEPvXLm.png",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/hAF5xFX.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/gATXm3Q.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/nM8hqKB.png"
+          },
+          {
+            "img": "https://i.imgur.com/3bCeAAc.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/lA5PREk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/tH2dg6s.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/39yIT3B.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/xWgXSzf.png"
+          },
+          {
+            "img": "https://i.imgur.com/VXFvUii.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Klxnaei.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/6UNjJG7.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/b0ymTZj.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Kbq6a5d.png"
+          }
+        ],
+        "emotesOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "XTL39e7WjIwUtoT9Gxml",
+    "name": "Brona Eisenherz",
+    "archived": false,
+    "title": "Lady, Morgorn",
+    "playerOwner": "patrick",
+    "bio": "",
+    "aliases": [],
+    "fraktion": "Haus Eisenherz, Celtigerns Wacht",
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "image": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "type": "Waffe",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "category": "weapon",
+          "icon": "*",
+          "id": "item-mqu1vat1-0-w8ef",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1"
+        },
+        {
+          "imageFormat": "square",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "id": "item-mqu1vat1-1-exvo",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "icon": "*",
+          "imagePosition": "center",
+          "image": "",
+          "quantity": "1",
+          "category": "armor"
+        },
+        {
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "tags": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "imageFormat": "square",
+          "image": "",
+          "name": "Reiseausrüstung",
+          "id": "item-mqu1vat1-2-0fx2"
+        },
+        {
+          "category": "potions",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "name": "Heil- oder Verbrauchsgut",
+          "image": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "type": "Trinktur",
+          "tags": "",
+          "infoRows": []
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "tags": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "category": "documents",
+          "image": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "quantity": "1",
+          "type": "Sonstiges",
+          "category": "other",
+          "tags": "",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-5-5kao",
+          "infoRows": [],
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "image": ""
+        }
+      ],
+      "companions": [
+        {
+          "imageFit": "cover",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "statusColor": "#5c7f20",
+          "status": "Gesund",
+          "image": "",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "role": "Begleiter",
+          "imagePosition": "top",
+          "imageFormat": "landscape"
+        },
+        {
+          "imagePosition": "top",
+          "species": "Tier / Person",
+          "name": "Treuer Begleiter",
+          "description": "",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "status": "Noch festlegen",
+          "role": "Gefährte",
+          "imageFit": "cover",
+          "infoRows": [],
+          "statusColor": "#5c7f20",
+          "image": "",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "moneyNotice": "",
+      "carryValue": "Noch festlegen",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "title": "Charakter-Inventar",
+      "portraitPosition": "top",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "status": "",
+        "step": 0
+      },
+      "name": "Brona Eisenherz",
+      "infoRows": [],
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "role": "Lady, Morgorn",
+      "portraitFormat": "portrait",
+      "portrait": "https://i.imgur.com/yEPvXLm.png",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFit": "cover",
+      "status": "Gesund",
+      "level": "Haus Eisenherz, Celtigerns Wacht",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast"
+    },
+    "portrait": "https://i.imgur.com/yEPvXLm.png",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/hAF5xFX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/gATXm3Q.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nM8hqKB.png"
+      },
+      {
+        "img": "https://i.imgur.com/3bCeAAc.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/lA5PREk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/tH2dg6s.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/39yIT3B.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/xWgXSzf.png"
+      },
+      {
+        "img": "https://i.imgur.com/VXFvUii.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Klxnaei.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/6UNjJG7.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/b0ymTZj.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Kbq6a5d.png"
+      }
+    ],
+    "emotesOverride": true,
+    "identity": {
+      "worldPersonId": "person--haus-eisenherz--brona-eisenherz"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-eisenherz--brona-eisenherz",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1701",
+      "death": "",
+      "houseId": "house-eisenherz",
+      "houseName": "Haus Eisenherz",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "brona-eisenherz",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz",
+          "fingerprint": "{\"name\":\"Brona Eisenherz\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-eisenherz\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhys-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhys-draig\",\"name\":\"Rhys Draig\"}],\"children\":[{\"personId\":\"kane-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--kane-draig\",\"name\":\"Kane Draig\"},{\"personId\":\"oweta-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--oweta-draig\",\"name\":\"Oweta Draig\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "rhys-draig",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--rhys-draig",
+            "name": "Rhys Draig"
+          }
+        ],
+        "children": [
+          {
+            "personId": "kane-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--kane-draig",
+            "name": "Kane Draig"
+          },
+          {
+            "personId": "oweta-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--oweta-draig",
+            "name": "Oweta Draig"
+          }
+        ]
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

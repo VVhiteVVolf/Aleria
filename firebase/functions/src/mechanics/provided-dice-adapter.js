@@ -21,10 +21,15 @@ function validateDieResults(values, expectedCount, sides, label) {
 export class ProvidedDiceAdapter {
   constructor(submittedResolution = {}) {
     this.submitted = submittedResolution;
+    this.attackIndex = 0;
+    this.damageIndex = 0;
+    this.savingThrowIndex = 0;
   }
 
   async rollAttack({ modifier = 0, rollMode = 'normal' } = {}) {
-    const source = this.submitted.attack || {};
+    const source = this.attackIndex++ === 0
+      ? (this.submitted.attack || {})
+      : (this.submitted.followUpAttacks?.[this.attackIndex - 2]?.attack || {});
     const expectedCount = rollMode === 'normal' ? 1 : 2;
     const dice = validateDieResults(source.diceResults, expectedCount, 20, 'Angriffswurf');
     const natural = rollMode === 'advantage'
@@ -61,15 +66,45 @@ export class ProvidedDiceAdapter {
 
   async rollDamage({ damageFormula, bonus = 0, critical = false } = {}) {
     const base = parseDamageFormula(damageFormula);
-    const diceCount = critical ? base.diceCount * 2 : base.diceCount;
-    const dice = validateDieResults(this.submitted.damage?.diceResults, diceCount, base.sides, 'Schadenswurf');
+    const source = this.damageIndex++ === 0
+      ? (this.submitted.damage || {})
+      : (this.submitted.followUpAttacks?.[this.damageIndex - 2]?.damage || {});
+    const terms = base.terms || [{ diceCount: base.diceCount, sides: base.sides }];
+    const expectedTerms = terms.map(term => ({ ...term, diceCount: critical ? term.diceCount * 2 : term.diceCount }));
+    const submittedDice = Array.isArray(source.diceResults) ? source.diceResults : [];
+    const expectedCount = expectedTerms.reduce((sum, term) => sum + term.diceCount, 0);
+    if (submittedDice.length !== expectedCount) invalid(`Schadenswurf: Es wurden ${expectedCount} gültige Würfelergebnisse erwartet.`);
+    let offset = 0;
+    const dice = expectedTerms.flatMap(term => {
+      const values = submittedDice.slice(offset, offset + term.diceCount);
+      offset += term.diceCount;
+      return validateDieResults(values, term.diceCount, term.sides, 'Schadenswurf');
+    });
     const modifier = base.fixedModifier + Number(bonus || 0);
     return {
-      id: String(this.submitted.damage?.rollId || ''),
-      notation: `${diceCount}d${base.sides}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`,
+      id: String(source.rollId || ''),
+      notation: `${expectedTerms.map(term => `${term.diceCount}d${term.sides}`).join('+')}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`,
       keptDice: dice,
       modifier,
       total: Math.max(0, dice.reduce((sum, value) => sum + value, 0) + modifier),
+      visualMode: 'server-validated'
+    };
+  }
+
+  async rollSavingThrow({ modifier = 0, rollMode = 'normal' } = {}) {
+    const source = this.submitted.secondarySaves?.[this.savingThrowIndex++] || {};
+    const expectedCount = rollMode === 'normal' ? 1 : 2;
+    const dice = validateDieResults(source.diceResults, expectedCount, 20, 'Sekundärer Rettungswurf');
+    const natural = rollMode === 'advantage'
+      ? Math.max(...dice)
+      : (rollMode === 'disadvantage' ? Math.min(...dice) : dice[0]);
+    if (Number(source.naturalRoll) !== natural) invalid('Der ausgewählte W20 des sekundären Rettungswurfs stimmt nicht mit dem Würfelbeleg überein.');
+    return {
+      id: String(source.rollId || ''),
+      natural,
+      dice,
+      keptDice: [natural],
+      total: natural + Number(modifier || 0),
       visualMode: 'server-validated'
     };
   }

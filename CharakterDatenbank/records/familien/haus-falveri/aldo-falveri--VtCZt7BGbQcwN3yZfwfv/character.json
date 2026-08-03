@@ -1,0 +1,1232 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--VtCZt7BGbQcwN3yZfwfv",
+  "slug": "aldo-falveri",
+  "identity": {
+    "name": "Aldo Falveri",
+    "aliases": [],
+    "worldPersonId": "person--haus-falveri--aldo-falveri"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-falveri",
+      "label": "Haus Falveri"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-falveri",
+        "familyTitle": "Haus Falveri",
+        "personId": "aldo-falveri",
+        "worldPersonId": "person--haus-falveri--aldo-falveri",
+        "houseId": "house-falveri",
+        "houseName": "Haus Falveri",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Venalys"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falveri&mode=view&person=aldo-falveri",
+        "fingerprint": "{\"name\":\"Aldo Falveri\",\"title\":\"Don · Cavaliere und ehemaliger Condottiere der Roten Kompanie\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-falveri\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-falveri/aldo-falveri.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Cavaliere\",\"Condottiere\",\"Rote Kompanie\",\"Klingende Münze\"],\"relationships\":{\"parents\":[{\"personId\":\"rationius-falveri\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falveri--rationius-falveri\",\"name\":\"Rationius Falveri\"},{\"personId\":\"civeria-rationius-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--civeria-rationius-spouse\",\"name\":\"Civeria\"}],\"partners\":[],\"children\":[]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "condottieri-aus-leidenschaft",
+        "label": "Condottieri aus Leidenschaft",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Condottieri aus Leidenschaft"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "VtCZt7BGbQcwN3yZfwfv",
+      "documentIds": [
+        "VtCZt7BGbQcwN3yZfwfv"
+      ],
+      "documents": [
+        {
+          "documentId": "VtCZt7BGbQcwN3yZfwfv",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-falveri",
+        "personId": "aldo-falveri",
+        "worldPersonId": "person--haus-falveri--aldo-falveri",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falveri&mode=view&person=aldo-falveri"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "VtCZt7BGbQcwN3yZfwfv"
+    ],
+    "contentHash": "d54385439f77cd093561d22a8735a0be87ee10e1552ff8656fe169cc59ae3606"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "VtCZt7BGbQcwN3yZfwfv",
+        "profileLink": "",
+        "archived": false,
+        "bio": "Aldo Falveri ist ein Condottiere aus der Stadtrepublik Venalys, der viele Jahre als Hauptmann der Roten Kompanie diente. Den größten Teil seiner Laufbahn verbrachte er am Standort der Kompanie in Gwynthor, wo er Garnisonen befehligte, Handelsstraßen sicherte, Karawanen eskortierte und im Auftrag verschiedenster Herren für Ordnung sorgte. Während dieser Zeit verdiente er ein beachtliches Vermögen und knüpfte enge Beziehungen zu Kaufleuten, Bankiers und der Klingenden Münze. Durch seine langjährige Tätigkeit in Gwynthor ist ihm Cenyr ebenso vertraut wie die Sitten und Gebräuche seiner Adelshäuser.\n\nAnders als viele andere Bewerber sucht Aldo weder Zuflucht noch Reichtum, denn beides besitzt er bereits. Was ihm fehlt, ist ein dauerhaftes Erbe. Vor den Rat tritt er daher nicht als Bittsteller, sondern als Mann mit einem Angebot. Er erklärt offen, dass er in den Dienst des Hauses Draig treten möchte und dafür die Belehnung mit einer Burg oder einem geeigneten Lehen erwartet. Im Gegenzug verspricht er, sein Vermögen in die Grafschaft zu investieren, sein Lehen auf eigene Kosten auszubauen, erfahrene Krieger in seinen Dienst zu nehmen und dem Haus Draig als großzügiger, loyaler und leistungsfähiger Vasall zu dienen. Seine engen Beziehungen zur Klingenden Münze und zu den Handelshäusern Venalys stellt er ausdrücklich in Aussicht, da sie der Grafschaft sowohl wirtschaftliche als auch militärische Vorteile verschaffen könnten.\n\nAldo macht keinen Hehl aus seiner Vergangenheit als Condottiere. Er weiß, dass viele Ritter einem Söldnerführer mit Misstrauen begegnen und sich fragen werden, ob ein Mann, der sein Leben unter Soldverträgen verbrachte, zu echter Lehnstreue fähig ist. Eben deshalb sucht er nun keinen neuen Vertrag, sondern einen Herrn, dem er seinen Eid bis an sein Lebensende schwören kann.",
+        "name": "Aldo Falveri",
+        "aliases": [],
+        "playerOwner": "",
+        "emotes": [],
+        "portrait": "https://i.imgur.com/iy9Cc0t.png",
+        "inventory": {
+          "status": "Gesund",
+          "showInfoTable": false,
+          "items": [
+            {
+              "ownerCharacterId": "",
+              "icon": "*",
+              "imagePosition": "center",
+              "itemStorageMode": "character",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "id": "item-mr46pfuy-0-ft4m",
+              "itemDbKey": "",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "ownerCharacterName": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Waffe",
+              "imageFit": "contain",
+              "tags": "",
+              "individualizedAt": "",
+              "image": "",
+              "infoRows": [],
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "name": "Hauptwaffe",
+              "originItemDbKey": ""
+            },
+            {
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "ownerCharacterId": "",
+              "id": "item-mr46pfuy-1-45fi",
+              "ownerCharacterName": "",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "infoRows": [],
+              "type": "Rüstung",
+              "itemStorageMode": "character",
+              "imageFit": "contain",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "individualizedAt": "",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "image": "",
+              "itemDbKey": "",
+              "quantity": "1",
+              "category": "armor",
+              "originItemDbKey": "",
+              "icon": "*"
+            },
+            {
+              "ownerCharacterId": "",
+              "acquiredAt": "",
+              "ownerCharacterName": "",
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "image": "",
+              "imageFormat": "square",
+              "originItemDbKey": "",
+              "tags": "",
+              "itemDbKey": "",
+              "id": "item-mr46pfuy-2-1oim",
+              "type": "Ausrüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "individualizedAt": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "category": "equipment",
+              "name": "Reiseausrüstung",
+              "imagePosition": "center"
+            },
+            {
+              "image": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "id": "item-mr46pfuy-3-xvue",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "itemStorageMode": "character",
+              "category": "potions",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "center",
+              "ownerCharacterName": "",
+              "tags": "",
+              "individualizedAt": "",
+              "quantity": "1",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "itemDbKey": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "icon": "*"
+            },
+            {
+              "ownerCharacterName": "",
+              "type": "Dokument",
+              "ownerCharacterId": "",
+              "tags": "",
+              "quantity": "1",
+              "name": "Dokumente / Urkunden",
+              "weight": "Noch festlegen",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "category": "documents",
+              "itemStorageMode": "character",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "infoRows": [],
+              "icon": "*",
+              "originItemDbKey": "",
+              "imageFit": "contain",
+              "image": "",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mr46pfuy-4-r7nz"
+            },
+            {
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "originItemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "image": "",
+              "icon": "*",
+              "individualizedAt": "",
+              "category": "other",
+              "imageFormat": "square",
+              "infoRows": [],
+              "itemDbKey": "",
+              "imageFit": "contain",
+              "ownerCharacterName": "",
+              "id": "item-mr46pfuy-5-52h4",
+              "name": "Persönlicher Gegenstand",
+              "tags": "",
+              "itemStorageMode": "character",
+              "acquiredAt": "",
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "ownerCharacterId": ""
+            }
+          ],
+          "portraitFormat": "portrait",
+          "hitpoints": "TP / Zustand",
+          "title": "Charakter-Inventar",
+          "moneyNotice": "",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "carryValue": "Noch festlegen",
+          "level": "Stufe",
+          "portrait": "",
+          "portraitPosition": "top",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "infoRows": [
+            {
+              "icon": "*",
+              "value": "Gesund",
+              "label": "Status"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "label": "Geld",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "value": "Noch festlegen",
+              "label": "Tragkapazität"
+            },
+            {
+              "icon": "*",
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Fraktion",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Aufenthalt",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Notiz",
+              "value": "Noch festlegen"
+            }
+          ],
+          "name": "Name des Charakters",
+          "role": "Rolle",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "portraitFit": "cover",
+          "characterId": "",
+          "companions": [
+            {
+              "role": "Begleiter",
+              "status": "Gesund",
+              "name": "Reittier / Gefährte",
+              "imagePosition": "top",
+              "id": "companion-mr46pfuy-0-xmoq",
+              "species": "Tier oder Begleiter",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "image": "",
+              "imageFormat": "landscape",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "description": "",
+              "imageFit": "cover"
+            },
+            {
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "name": "Treuer Begleiter",
+              "role": "Gefährte",
+              "id": "companion-mr46pfuy-1-btbq",
+              "description": "",
+              "species": "Tier / Person",
+              "infoRows": [],
+              "imageFit": "cover",
+              "image": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "landscape"
+            }
+          ],
+          "equipmentQuiz": {
+            "step": 0,
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "updatedAt": "",
+            "open": false,
+            "status": ""
+          },
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+        },
+        "fraktion": "Haus Falveri, Venalys",
+        "emotesOverride": true,
+        "title": "Condottieri, Venalys"
+      }
+    ]
+  },
+  "character": {
+    "id": "VtCZt7BGbQcwN3yZfwfv",
+    "profileLink": "",
+    "archived": false,
+    "bio": "Aldo Falveri ist ein Condottiere aus der Stadtrepublik Venalys, der viele Jahre als Hauptmann der Roten Kompanie diente. Den größten Teil seiner Laufbahn verbrachte er am Standort der Kompanie in Gwynthor, wo er Garnisonen befehligte, Handelsstraßen sicherte, Karawanen eskortierte und im Auftrag verschiedenster Herren für Ordnung sorgte. Während dieser Zeit verdiente er ein beachtliches Vermögen und knüpfte enge Beziehungen zu Kaufleuten, Bankiers und der Klingenden Münze. Durch seine langjährige Tätigkeit in Gwynthor ist ihm Cenyr ebenso vertraut wie die Sitten und Gebräuche seiner Adelshäuser.\n\nAnders als viele andere Bewerber sucht Aldo weder Zuflucht noch Reichtum, denn beides besitzt er bereits. Was ihm fehlt, ist ein dauerhaftes Erbe. Vor den Rat tritt er daher nicht als Bittsteller, sondern als Mann mit einem Angebot. Er erklärt offen, dass er in den Dienst des Hauses Draig treten möchte und dafür die Belehnung mit einer Burg oder einem geeigneten Lehen erwartet. Im Gegenzug verspricht er, sein Vermögen in die Grafschaft zu investieren, sein Lehen auf eigene Kosten auszubauen, erfahrene Krieger in seinen Dienst zu nehmen und dem Haus Draig als großzügiger, loyaler und leistungsfähiger Vasall zu dienen. Seine engen Beziehungen zur Klingenden Münze und zu den Handelshäusern Venalys stellt er ausdrücklich in Aussicht, da sie der Grafschaft sowohl wirtschaftliche als auch militärische Vorteile verschaffen könnten.\n\nAldo macht keinen Hehl aus seiner Vergangenheit als Condottiere. Er weiß, dass viele Ritter einem Söldnerführer mit Misstrauen begegnen und sich fragen werden, ob ein Mann, der sein Leben unter Soldverträgen verbrachte, zu echter Lehnstreue fähig ist. Eben deshalb sucht er nun keinen neuen Vertrag, sondern einen Herrn, dem er seinen Eid bis an sein Lebensende schwören kann.",
+    "name": "Aldo Falveri",
+    "aliases": [],
+    "playerOwner": "",
+    "emotes": [],
+    "portrait": "https://i.imgur.com/iy9Cc0t.png",
+    "inventory": {
+      "status": "Gesund",
+      "showInfoTable": false,
+      "items": [
+        {
+          "ownerCharacterId": "",
+          "icon": "*",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "id": "item-mr46pfuy-0-ft4m",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Waffe",
+          "imageFit": "contain",
+          "tags": "",
+          "individualizedAt": "",
+          "image": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "name": "Hauptwaffe",
+          "originItemDbKey": ""
+        },
+        {
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "id": "item-mr46pfuy-1-45fi",
+          "ownerCharacterName": "",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "infoRows": [],
+          "type": "Rüstung",
+          "itemStorageMode": "character",
+          "imageFit": "contain",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "individualizedAt": "",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "image": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "category": "armor",
+          "originItemDbKey": "",
+          "icon": "*"
+        },
+        {
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "image": "",
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "tags": "",
+          "itemDbKey": "",
+          "id": "item-mr46pfuy-2-1oim",
+          "type": "Ausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "imagePosition": "center"
+        },
+        {
+          "image": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "id": "item-mr46pfuy-3-xvue",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "itemStorageMode": "character",
+          "category": "potions",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "ownerCharacterName": "",
+          "tags": "",
+          "individualizedAt": "",
+          "quantity": "1",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "icon": "*"
+        },
+        {
+          "ownerCharacterName": "",
+          "type": "Dokument",
+          "ownerCharacterId": "",
+          "tags": "",
+          "quantity": "1",
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "category": "documents",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "infoRows": [],
+          "icon": "*",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "image": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mr46pfuy-4-r7nz"
+        },
+        {
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "image": "",
+          "icon": "*",
+          "individualizedAt": "",
+          "category": "other",
+          "imageFormat": "square",
+          "infoRows": [],
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "ownerCharacterName": "",
+          "id": "item-mr46pfuy-5-52h4",
+          "name": "Persönlicher Gegenstand",
+          "tags": "",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "ownerCharacterId": ""
+        }
+      ],
+      "portraitFormat": "portrait",
+      "hitpoints": "TP / Zustand",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "carryValue": "Noch festlegen",
+      "level": "Stufe",
+      "portrait": "",
+      "portraitPosition": "top",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "infoRows": [
+        {
+          "icon": "*",
+          "value": "Gesund",
+          "label": "Status"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Tragkapazität"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "name": "Name des Charakters",
+      "role": "Rolle",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portraitFit": "cover",
+      "characterId": "",
+      "companions": [
+        {
+          "role": "Begleiter",
+          "status": "Gesund",
+          "name": "Reittier / Gefährte",
+          "imagePosition": "top",
+          "id": "companion-mr46pfuy-0-xmoq",
+          "species": "Tier oder Begleiter",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "imageFormat": "landscape",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "description": "",
+          "imageFit": "cover"
+        },
+        {
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "role": "Gefährte",
+          "id": "companion-mr46pfuy-1-btbq",
+          "description": "",
+          "species": "Tier / Person",
+          "infoRows": [],
+          "imageFit": "cover",
+          "image": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFormat": "landscape"
+        }
+      ],
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": "",
+        "open": false,
+        "status": ""
+      },
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+    },
+    "fraktion": "Haus Falveri, Venalys",
+    "emotesOverride": true,
+    "title": "Condottieri, Venalys",
+    "identity": {
+      "worldPersonId": "person--haus-falveri--aldo-falveri"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-falveri--aldo-falveri",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1697",
+      "death": "",
+      "houseId": "house-falveri",
+      "houseName": "Haus Falveri",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Cavaliere",
+        "Condottiere",
+        "Rote Kompanie",
+        "Klingende Münze"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-falveri",
+          "personId": "aldo-falveri",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-falveri&mode=view&person=aldo-falveri",
+          "fingerprint": "{\"name\":\"Aldo Falveri\",\"title\":\"Don · Cavaliere und ehemaliger Condottiere der Roten Kompanie\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-falveri\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-falveri/aldo-falveri.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Cavaliere\",\"Condottiere\",\"Rote Kompanie\",\"Klingende Münze\"],\"relationships\":{\"parents\":[{\"personId\":\"rationius-falveri\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falveri--rationius-falveri\",\"name\":\"Rationius Falveri\"},{\"personId\":\"civeria-rationius-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--civeria-rationius-spouse\",\"name\":\"Civeria\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "rationius-falveri",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-falveri--rationius-falveri",
+            "name": "Rationius Falveri"
+          },
+          {
+            "personId": "civeria-rationius-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--civeria-rationius-spouse",
+            "name": "Civeria"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Venalys"
+  }
+}

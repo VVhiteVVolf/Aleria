@@ -1,15 +1,18 @@
 import {
+  getAttributeModifier,
+  getEffectiveCombatLevel,
+  getProficiencyBonus,
   getWeaponAttackModifier,
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-spell-grades-v1';
+} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts
 } from './combat-action-economy.js?v=20260803-economy-audit-v1';
-import { getSpellLevelLabel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-economy-audit-v1';
-import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260803-spell-grades-v1';
+import { getSpellLevelLabel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
+import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260803-gawain-level4-v1';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 function buildCombatProfileActions(character, profile) {
@@ -51,8 +54,16 @@ function buildCombatProfileActions(character, profile) {
   const techniqueActions = (profile.techniques || [])
     .filter(technique => technique.active && technique.name)
     .map(technique => {
-      const compatible = !!activeWeapon && isTechniqueCompatibleWithWeapon(technique, activeWeapon);
+      const weaponCompatible = !!activeWeapon && isTechniqueCompatibleWithWeapon(technique, activeWeapon);
+      const levelCompatible = getEffectiveCombatLevel(profile) >= Number(technique.minimumLevel || 1);
+      const compatible = weaponCompatible && levelCompatible;
       const formula = technique.damageFormula || activeWeapon?.damageFormula || '';
+      const saveAttribute = profile.attributes.find(attribute => attribute.key === technique.secondarySave?.dcAttributeKey);
+      const secondarySaveDc = technique.secondarySave?.enabled
+        ? Number(technique.secondarySave.dcBase || 8)
+          + (technique.secondarySave.addProficiency ? getProficiencyBonus(profile) : 0)
+          + getAttributeModifier(saveAttribute)
+        : null;
       return {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
@@ -77,9 +88,15 @@ function buildCombatProfileActions(character, profile) {
         auraBypass: technique.auraBypass,
         resolutionMode: 'weapon-attack',
         forcedRollMode: technique.rollMode,
+        secondarySave: technique.secondarySave?.enabled ? { ...technique.secondarySave, dc: secondarySaveDc } : null,
+        followUpAttack: technique.followUpAttack?.enabled ? { ...technique.followUpAttack } : null,
         segmentKinds: ['combataction'],
         compatible,
-        disabledReason: compatible ? '' : `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`,
+        disabledReason: compatible
+          ? ''
+          : (!levelCompatible
+              ? `Wird ab Stufe ${technique.minimumLevel} freigeschaltet.`
+              : `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`),
         default: false
       };
     });
@@ -202,12 +219,34 @@ export function resolveCombatProfile(character = {}, options = {}) {
     || actions.find(action => action.default)
     || actions[0]
     || null;
+  const requestedWeaponGrip = String(options.weaponGrip || '').trim().toLowerCase();
+  const supportsVersatileGrip = selectedAction?.kind === 'weapon'
+    && Boolean(String(selectedAction?.weapon?.versatileDamageFormula || '').trim());
+  const weaponGrip = supportsVersatileGrip && requestedWeaponGrip === 'two-handed'
+    ? 'two-handed'
+    : 'one-handed';
+  const resolvedWeapon = selectedAction?.weapon
+    ? {
+        ...selectedAction.weapon,
+        damageFormula: weaponGrip === 'two-handed'
+          ? selectedAction.weapon.versatileDamageFormula
+          : selectedAction.weapon.damageFormula
+      }
+    : profile.weapon;
+  const resolvedSelectedAction = selectedAction
+    ? {
+        ...selectedAction,
+        baseDamageFormula: selectedAction.weapon?.damageFormula || selectedAction.formula,
+        weapon: { ...resolvedWeapon },
+        formula: resolvedWeapon?.damageFormula || selectedAction.formula
+      }
+    : null;
   return {
     ...profile,
     characterId: String(character.id || ''),
     name: String(character.name || 'Unbekannt'),
     portrait: String(character.portrait || ''),
-    weapon: { ...(selectedAction?.weapon || profile.weapon) },
+    weapon: { ...(resolvedWeapon || {}) },
     armor: { ...profile.armor },
     attackModifier: selectedAction?.attackModifier ?? profile.attackModifier,
     damageModifier: selectedAction?.damageModifier ?? profile.damageModifier,
@@ -215,7 +254,9 @@ export function resolveCombatProfile(character = {}, options = {}) {
     profileActionKind: selectedAction?.kind || 'weapon',
     resourceCosts: getActionPaymentCosts(selectedAction || {}, options.paymentMode || 'standard', profile),
     actionCosts: normalizeCombatResourceCosts(selectedAction?.costs),
-    selectedAction: selectedAction ? { ...selectedAction } : null,
+    selectedAction: resolvedSelectedAction,
+    weaponGrip,
+    supportsVersatileGrip,
     paymentMode: options.paymentMode || 'standard',
     actionResolutionMode: selectedAction?.resolutionMode || 'weapon-attack',
     actionSaveAttribute: selectedAction?.saveAttribute || 'dexterity',

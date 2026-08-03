@@ -12,6 +12,8 @@
     "build": "vite build",
     "pretest": "npm run prepare:dice-runtime",
     "test": "node --test tests/*.test.mjs",
+    "sync:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs",
+    "check:characters": "node ../CharakterDatenbank/scripts/sync-character-archive.mjs --check",
     "copy:dice-assets": "node scripts/copy-dice-assets.mjs",
     "build:dice-vendor": "node scripts/build-dice-vendor.mjs",
     "postinstall": "npm run prepare:dice-runtime"

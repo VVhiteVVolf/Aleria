@@ -59,6 +59,7 @@ function normalizeItemSnapshot(item = {}) {
     name: cleanText(item.name || 'Gegenstand', 160),
     type: cleanText(item.type, 120),
     category: cleanText(item.category, 100),
+    tags: cleanText(item.tags, 500),
     description: cleanText(item.description, 1200),
     icon: cleanText(item.icon, 1000),
     image: cleanText(item.image, 2000)
@@ -92,7 +93,83 @@ export function normalizeInventoryUse(value = {}) {
     quantity,
     quantityBefore: source.quantityBefore != null && Number.isFinite(Number(source.quantityBefore)) ? Math.max(0, Number(source.quantityBefore)) : null,
     quantityAfter: source.quantityAfter != null && Number.isFinite(Number(source.quantityAfter)) ? Math.max(0, Number(source.quantityAfter)) : null,
+    abilityEffects: (Array.isArray(source.abilityEffects) ? source.abilityEffects : []).map(effect => ({
+      abilityId: cleanText(effect?.abilityId, 240),
+      abilityName: cleanText(effect?.abilityName, 160),
+      resourceId: cleanText(effect?.resourceId, 160),
+      resourceName: cleanText(effect?.resourceName, 160),
+      before: Math.max(0, Number(effect?.before) || 0),
+      after: Math.max(0, Number(effect?.after) || 0),
+      amount: Math.max(0, Number(effect?.amount) || 0)
+    })).filter(effect => effect.abilityId && effect.resourceId).slice(0, 20),
     actorPersistence: persistence
+  };
+}
+
+function lookupText(value) {
+  return cleanText(value, 2000)
+    .toLocaleLowerCase('de')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function itemMatchesTrigger(item = {}, trigger = {}) {
+  const tags = Array.isArray(trigger.itemTags) ? trigger.itemTags.map(lookupText).filter(Boolean) : [];
+  if (!tags.length) return false;
+  const itemText = lookupText([item.name, item.type, item.category, item.tags, item.description].join(' '));
+  return tags.some(tag => itemText.includes(tag));
+}
+
+export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '') {
+  const inventoryUse = normalizeInventoryUse(value);
+  const resources = clone(Array.isArray(combatProfile?.resources) ? combatProfile.resources : []);
+  const abilities = clone(Array.isArray(combatProfile?.abilities) ? combatProfile.abilities : []);
+  const dayKey = cleanText(recoveryDayKey, 160);
+  const effects = [];
+
+  abilities.forEach(ability => {
+    const trigger = ability?.inventoryUseTrigger;
+    if (trigger?.enabled !== true || !itemMatchesTrigger(inventoryUse.item, trigger)) return;
+    const maximum = Math.max(0, Number(ability.usesMaximum) || 0);
+    if (ability.recovery === 'day' && dayKey && String(ability.recoveryDayKey || '') !== dayKey) {
+      ability.usesCurrent = maximum;
+      ability.recoveryDayKey = dayKey;
+    }
+    if (maximum > 0 && Math.max(0, Number(ability.usesCurrent) || 0) < 1) return;
+
+    const pending = (Array.isArray(trigger.restoreResources) ? trigger.restoreResources : []).flatMap(restoration => {
+      const resource = resources.find(candidate => String(candidate?.id || '') === String(restoration?.resourceId || ''));
+      if (!resource) return [];
+      const before = Math.max(0, Number(resource.current) || 0);
+      const maximumValue = Math.max(0, Number(resource.maximum) || 0);
+      const after = Math.min(maximumValue, before + Math.max(1, Number(restoration.amount) || 1));
+      if (after <= before) return [];
+      return [{ ability, resource, before, after }];
+    });
+    if (!pending.length && trigger.requireActualRecovery !== false) return;
+    if (maximum > 0) ability.usesCurrent = Math.max(0, Number(ability.usesCurrent) - 1);
+    pending.forEach(change => {
+      change.resource.current = change.after;
+      effects.push({
+        abilityId: cleanText(ability.id, 240),
+        abilityName: cleanText(ability.name, 160),
+        resourceId: cleanText(change.resource.id, 160),
+        resourceName: cleanText(change.resource.name, 160),
+        before: change.before,
+        after: change.after,
+        amount: change.after - change.before
+      });
+    });
+  });
+
+  return {
+    changed: effects.length > 0,
+    resources,
+    abilities,
+    inventoryUse: normalizeInventoryUse({ ...inventoryUse, abilityEffects: effects })
   };
 }
 

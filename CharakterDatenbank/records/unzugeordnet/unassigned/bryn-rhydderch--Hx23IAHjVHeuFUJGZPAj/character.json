@@ -1,0 +1,1070 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--Hx23IAHjVHeuFUJGZPAj",
+  "slug": "bryn-rhydderch",
+  "identity": {
+    "name": "Bryn Rhydderch",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "unassigned",
+      "id": "unassigned",
+      "label": "Unzugeordnet"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "Hx23IAHjVHeuFUJGZPAj",
+      "documentIds": [
+        "Hx23IAHjVHeuFUJGZPAj"
+      ],
+      "documents": [
+        {
+          "documentId": "Hx23IAHjVHeuFUJGZPAj",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "Hx23IAHjVHeuFUJGZPAj"
+    ],
+    "contentHash": "52a692018528c26026bc5f89b17adab7ed9a1f5ee01f234c07c56b85f27bf336"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "Hx23IAHjVHeuFUJGZPAj",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/lSK9bU0.png"
+          },
+          {
+            "img": "https://i.imgur.com/0X7I0V1.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/fBkl7LS.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Snj8oJE.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/SvNEnWP.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/KtQqIiS.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/pT7v9S2.png"
+          },
+          {
+            "img": "https://i.imgur.com/vnizRF1.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/xKGQNYV.png",
+            "label": ""
+          }
+        ],
+        "inventory": {
+          "hitpoints": "TP / Zustand",
+          "portrait": "https://i.imgur.com/sMslhgn.png",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "infoRows": [],
+          "status": "Gesund",
+          "portraitPosition": "top",
+          "healthColor": "#5c7f20",
+          "level": "Kirche von Cenyr, Artus Streben (Gwaulhir)",
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "carryLabel": "Traglast",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "portraitFit": "cover",
+          "equipmentQuiz": {
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "open": false,
+            "updatedAt": "",
+            "status": ""
+          },
+          "portraitFormat": "portrait",
+          "title": "Charakter-Inventar",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "moneyNotice": "",
+          "name": "Bryn Rhydderch",
+          "companions": [
+            {
+              "imageFormat": "landscape",
+              "image": "",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imagePosition": "top",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "name": "Reittier / Gefährte",
+              "infoRows": [],
+              "description": "",
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "statusColor": "#5c7f20",
+              "species": "Tier oder Begleiter",
+              "status": "Gesund"
+            },
+            {
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "image": "",
+              "infoRows": [],
+              "species": "Tier / Person",
+              "description": "",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "imagePosition": "top",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "status": "Noch festlegen",
+              "summary": "Besonderheit, Nutzen oder Bindung."
+            }
+          ],
+          "role": "Diakonin, Artus Streben (Gwaulhir)",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "carryValue": "Noch festlegen",
+          "items": [
+            {
+              "quantity": "1",
+              "category": "weapon",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-0-w8ef",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "name": "Hauptwaffe",
+              "infoRows": [],
+              "image": "",
+              "type": "Waffe",
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "tags": ""
+            },
+            {
+              "image": "",
+              "imagePosition": "center",
+              "infoRows": [],
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "icon": "*",
+              "id": "item-mqu1vat1-1-exvo",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "name": "Rüstung / Schutz",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "type": "Rüstung",
+              "tags": "",
+              "quantity": "1",
+              "category": "armor"
+            },
+            {
+              "icon": "*",
+              "category": "equipment",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "image": "",
+              "quantity": "1",
+              "id": "item-mqu1vat1-2-0fx2",
+              "type": "Ausrüstung",
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imageFit": "contain",
+              "name": "Reiseausrüstung",
+              "infoRows": [],
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "quantity": "1",
+              "category": "potions",
+              "image": "",
+              "tags": "",
+              "imageFormat": "square",
+              "infoRows": [],
+              "type": "Trinktur",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "name": "Heil- oder Verbrauchsgut"
+            },
+            {
+              "imageFormat": "square",
+              "icon": "*",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "image": "",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj",
+              "tags": "",
+              "category": "documents",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "category": "other",
+              "type": "Sonstiges",
+              "image": "",
+              "tags": "",
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "infoRows": [],
+              "id": "item-mqu1vat1-5-5kao"
+            }
+          ]
+        },
+        "portrait": "https://i.imgur.com/sMslhgn.png",
+        "fraktion": "Kirche von Cenyr, Artus Streben (Gwaulhir)",
+        "emotesOverride": true,
+        "playerOwner": "erdi",
+        "bio": "",
+        "archived": false,
+        "title": "Diakonin, Artus Streben (Gwaulhir)",
+        "name": "Bryn Rhydderch",
+        "aliases": [],
+        "profileLink": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "Hx23IAHjVHeuFUJGZPAj",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/lSK9bU0.png"
+      },
+      {
+        "img": "https://i.imgur.com/0X7I0V1.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/fBkl7LS.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Snj8oJE.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/SvNEnWP.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/KtQqIiS.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pT7v9S2.png"
+      },
+      {
+        "img": "https://i.imgur.com/vnizRF1.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/xKGQNYV.png",
+        "label": ""
+      }
+    ],
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "portrait": "https://i.imgur.com/sMslhgn.png",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "infoRows": [],
+      "status": "Gesund",
+      "portraitPosition": "top",
+      "healthColor": "#5c7f20",
+      "level": "Kirche von Cenyr, Artus Streben (Gwaulhir)",
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0
+      },
+      "carryLabel": "Traglast",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "open": false,
+        "updatedAt": "",
+        "status": ""
+      },
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "moneyNotice": "",
+      "name": "Bryn Rhydderch",
+      "companions": [
+        {
+          "imageFormat": "landscape",
+          "image": "",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imagePosition": "top",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Reittier / Gefährte",
+          "infoRows": [],
+          "description": "",
+          "imageFit": "cover",
+          "role": "Begleiter",
+          "statusColor": "#5c7f20",
+          "species": "Tier oder Begleiter",
+          "status": "Gesund"
+        },
+        {
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "infoRows": [],
+          "species": "Tier / Person",
+          "description": "",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "imagePosition": "top",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung."
+        }
+      ],
+      "role": "Diakonin, Artus Streben (Gwaulhir)",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "Noch festlegen",
+      "items": [
+        {
+          "quantity": "1",
+          "category": "weapon",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-0-w8ef",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "name": "Hauptwaffe",
+          "infoRows": [],
+          "image": "",
+          "type": "Waffe",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "tags": ""
+        },
+        {
+          "image": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "icon": "*",
+          "id": "item-mqu1vat1-1-exvo",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "type": "Rüstung",
+          "tags": "",
+          "quantity": "1",
+          "category": "armor"
+        },
+        {
+          "icon": "*",
+          "category": "equipment",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "image": "",
+          "quantity": "1",
+          "id": "item-mqu1vat1-2-0fx2",
+          "type": "Ausrüstung",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "name": "Reiseausrüstung",
+          "infoRows": [],
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "quantity": "1",
+          "category": "potions",
+          "image": "",
+          "tags": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut"
+        },
+        {
+          "imageFormat": "square",
+          "icon": "*",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "image": "",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj",
+          "tags": "",
+          "category": "documents",
+          "type": "Dokument",
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "category": "other",
+          "type": "Sonstiges",
+          "image": "",
+          "tags": "",
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "infoRows": [],
+          "id": "item-mqu1vat1-5-5kao"
+        }
+      ]
+    },
+    "portrait": "https://i.imgur.com/sMslhgn.png",
+    "fraktion": "Kirche von Cenyr, Artus Streben (Gwaulhir)",
+    "emotesOverride": true,
+    "playerOwner": "erdi",
+    "bio": "",
+    "archived": false,
+    "title": "Diakonin, Artus Streben (Gwaulhir)",
+    "name": "Bryn Rhydderch",
+    "aliases": [],
+    "profileLink": "",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

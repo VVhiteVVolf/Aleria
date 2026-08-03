@@ -10,12 +10,13 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-spell-grades-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-spell-grades-v1';
+} from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-gawain-level4-v1';
 import {
   createCharacterLevelUpPlan,
+  getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260803-spell-grades-v1';
+} from '../combat/combat-level-up-model.js?v=20260803-gawain-level4-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -23,12 +24,52 @@ import {
   getSpellLevelLabel,
   getSpellSlotLevel,
   isSpellSlotResource
-} from '../combat/combat-spell-slots.js?v=20260803-economy-audit-v1';
+} from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260803-gawain-level4-v1';
+import {
+  synchronizeEquipmentFromCombat,
+  synchronizeEquipmentFromInventory
+} from '../character-equipment/character-equipment-sync.js?v=20260803-gawain-level4-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
 let levelUpState = null;
 let levelUpNotice = '';
+let setupNotice = '';
+
+function getInventoryDraft() {
+  if (typeof globalThis.collectCharacterInventoryProfileData === 'function') {
+    return globalThis.collectCharacterInventoryProfileData();
+  }
+  return activeCharacter?.inventory && typeof activeCharacter.inventory === 'object' ? activeCharacter.inventory : {};
+}
+
+function setInventoryDraft(inventory, options = {}) {
+  activeCharacter = { ...(activeCharacter || {}), inventory };
+  if (typeof globalThis.setCharacterInventoryProfileData === 'function') {
+    globalThis.setCharacterInventoryProfileData(inventory, options);
+  }
+}
+
+function synchronizeDraftFromCombat(options = {}) {
+  const result = synchronizeEquipmentFromCombat({
+    inventory: options.inventory || getInventoryDraft(),
+    combatProfile: draftProfile,
+    characterId: activeCharacter?.id || '',
+    characterName: activeCharacter?.name || '',
+    now: new Date().toISOString()
+  });
+  draftProfile = sanitizeCharacterCombatProfile(result.combatProfile);
+  setInventoryDraft(result.inventory, { render: options.renderInventory === true });
+  return result;
+}
+
+function synchronizeDraftFromInventory(inventory = getInventoryDraft()) {
+  const result = synchronizeEquipmentFromInventory({ inventory, combatProfile: draftProfile });
+  draftProfile = sanitizeCharacterCombatProfile(result.combatProfile);
+  setInventoryDraft(result.inventory);
+  return result;
+}
 
 const ATTRIBUTE_OPTIONS = COMBAT_ATTRIBUTE_DEFINITIONS
   .map(attribute => `<option value="${attribute.key}">${attribute.label}</option>`)
@@ -122,9 +163,11 @@ function renderIdentityAndProgression(profile) {
       </div>
       <div class="cp-sheet-title-actions">
         <p>Alle Werte sind frei bearbeitbar, werden online mit der Figur gespeichert und als verbindlicher Kontext an AleriaGPT übergeben.</p>
+        <button type="button" data-combat-action="open-character-setup">✦ Starthilfe · Stufe 1</button>
         <button type="button" data-combat-action="open-level-up">✦ Stufenaufstieg</button>
       </div>
     </header>
+    ${setupNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(setupNotice)}</p>` : ''}
     ${levelUpNotice ? `<p class="cp-level-up-notice" role="status">${escapeMarkup(levelUpNotice)}</p>` : ''}
     <section class="cp-sheet-card cp-sheet-identity" aria-label="Figur und Fortschritt">
       <div class="cp-sheet-portrait">
@@ -166,6 +209,10 @@ function renderLevelUpDialog(profile) {
   if (!levelUpState) return '';
   const preview = previewCharacterLevelUp(profile, levelUpState.plan);
   const plan = preview.plan;
+  const attributePointAllowance = getLevelUpAttributePointAllowance(profile);
+  const allocatedAttributePoints = Object.values(plan.attributeIncreases)
+    .reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
+  const remainingAttributePoints = attributePointAllowance - allocatedAttributePoints;
   return `<div class="cp-level-up-backdrop" data-level-up-role="backdrop">
     <section class="cp-level-up-dialog" role="dialog" aria-modal="true" aria-labelledby="cp-level-up-title">
       <header>
@@ -176,7 +223,7 @@ function renderLevelUpDialog(profile) {
         <section class="cp-level-up-section cp-level-up-intro">
           <div><small>Aktuell</small><strong>Stufe ${preview.before?.level ?? 30}</strong></div>
           <span aria-hidden="true">→</span>
-          <div><small>Danach</small><strong>${preview.ready ? (preview.after.levelKind === 'special' ? `Gesamt ${preview.after.level} · Sonder ${preview.after.specialLevels}` : `Stufe ${preview.after.level}`) : 'Maximum erreicht'}</strong></div>
+          <div><small>Danach</small><strong>${preview.after ? (preview.after.levelKind === 'special' ? `Gesamt ${preview.after.level} · Sonder ${preview.after.specialLevels}` : `Stufe ${preview.after.level}`) : 'Maximum erreicht'}</strong></div>
           <p>Der Vorgang ändert zunächst nur den Entwurf. Dauerhaft wird er erst über <b>Figur speichern</b>.</p>
         </section>
 
@@ -192,8 +239,8 @@ function renderLevelUpDialog(profile) {
         </section>
 
         <section class="cp-level-up-section">
-          <div class="cp-level-up-section-head"><div><span>Freie Steigerung</span><h4>Attribute</h4></div><small>0 lässt den Wert unverändert.</small></div>
-          <div class="cp-level-up-attributes">${profile.attributes.map(attribute => `<label><span>${escapeMarkup(attribute.label)} <b>${attribute.score}</b></span><input type="number" min="0" max="10" data-level-up-attribute="${attribute.key}" value="${plan.attributeIncreases[attribute.key]}"><small>+ Punkte</small></label>`).join('')}</div>
+          <div class="cp-level-up-section-head"><div><span>Freie Steigerung</span><h4>Attribute</h4></div><small>${attributePointAllowance ? `${attributePointAllowance} Punkte frei verteilen · ${remainingAttributePoints} übrig` : 'Auf dieser Stufe keine Attributspunkte'}</small></div>
+          <div class="cp-level-up-attributes">${profile.attributes.map(attribute => `<label><span>${escapeMarkup(attribute.label)} <b>${attribute.score}</b></span><input type="number" min="0" max="${attributePointAllowance}" data-level-up-attribute="${attribute.key}" value="${plan.attributeIncreases[attribute.key]}"${attributePointAllowance ? '' : ' disabled'}><small>+ Punkte</small></label>`).join('')}</div>
         </section>
 
         ${profile.resources.length ? `<section class="cp-level-up-section">
@@ -338,6 +385,20 @@ function renderSavingThrows(profile) {
   </section>`;
 }
 
+function renderProficiencies(profile) {
+  const groups = [
+    ['Rüstungen', profile.proficiencies.armor],
+    ['Waffen', profile.proficiencies.weapons],
+    ['Werkzeuge & Ausbildung', profile.proficiencies.tools],
+    ['Sprachen', profile.proficiencies.languages]
+  ];
+  return `<section class="cp-sheet-card cp-sheet-proficiencies">
+    <div class="cp-sheet-section-head"><div><span>Aus Herkunft, Hintergrund und Klasse</span><h4>Ausbildungen &amp; Kenntnisse</h4></div></div>
+    <div class="cp-sheet-proficiency-grid">${groups.map(([label, values]) => `<article><span>${escapeMarkup(label)}</span><strong>${escapeMarkup(values.join(', ') || 'Keine eingetragen')}</strong></article>`).join('')}</div>
+    ${profile.proficiencies.notes ? `<p>${escapeMarkup(profile.proficiencies.notes)}</p>` : ''}
+  </section>`;
+}
+
 function renderSkills(profile) {
   return `<article class="cp-sheet-card cp-sheet-skills">
     <div class="cp-sheet-section-head"><div><span>Frei ergänzbar</span><h4>Fertigkeiten</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="skills">+ Fertigkeit</button></div>
@@ -355,18 +416,26 @@ function renderSkills(profile) {
   </article>`;
 }
 
-function renderResources(profile) {
-  const coreResources = profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds));
-  return `<article class="cp-sheet-card cp-sheet-resources">
-    <div class="cp-sheet-section-head"><div><span>Verbrauch &amp; Erholung</span><h4>Kernressourcen</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="resources">+ Ressource</button></div>
-    <div class="cp-sheet-resource-list">${coreResources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
+function renderResourceRows(resources = []) {
+  return resources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
       <div class="cp-sheet-resource-identity">${renderResourceIcon(resource)}<input class="name" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="name" value="${escapeMarkup(resource.name)}" maxlength="100" aria-label="Ressource"></div>
       <label><span>Aktuell</span><input type="number" min="-9999" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}"></label>
       <label><span>Maximum</span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}"></label>
       <select data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="recovery" aria-label="Erholung"><option value="manual"${selected(resource.recovery, 'manual')}>Manuell</option><option value="short-rest"${selected(resource.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(resource.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(resource.recovery, 'scene')}>Kommentar / Szene</option><option value="day"${selected(resource.recovery, 'day')}>Tag</option><option value="none"${selected(resource.recovery, 'none')}>Keine</option></select>
       <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" aria-label="Ressource entfernen">×</button>
       <input class="cp-sheet-resource-notes" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="notes" value="${escapeMarkup(resource.notes)}" maxlength="500" placeholder="Regeln, Grenzen oder Besonderheiten dieser Ressource"><small>${resource.scope === 'comment' ? 'Wird pro Gesamtkommentar aufgefüllt.' : (resource.recovery === 'day' ? 'Bleibt erhalten und wird erst am nächsten Aleria-Tag aufgefüllt.' : 'Bleibt zwischen Kommentaren erhalten.')}</small>
-    </div>`).join('')}</div>
+    </div>`).join('');
+}
+
+function renderResources(profile) {
+  const actionIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
+  const coreResources = profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds));
+  const actionResources = coreResources.filter(resource => actionIds.has(resource.id));
+  const persistentResources = coreResources.filter(resource => !actionIds.has(resource.id));
+  return `<article class="cp-sheet-card cp-sheet-resources">
+    <div class="cp-sheet-section-head"><div><span>Verbrauch, Bezahlung &amp; Erholung</span><h4>Aktionsökonomie &amp; Kernressourcen</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="resources">+ Ressource</button></div>
+    <div class="cp-sheet-resource-group"><div class="cp-sheet-subhead"><div><strong>Aktionsökonomie</strong><small>Aktion, Bonusaktion und Reaktion gelten pro Gesamtkommentar; Aura kann ein vollständiges Kostenpaket ersetzen.</small></div></div><div class="cp-sheet-resource-list">${renderResourceRows(actionResources)}</div></div>
+    <div class="cp-sheet-resource-group"><div class="cp-sheet-subhead"><div><strong>Kernressourcen</strong><small>Persistente Vorräte werden nur nach ihrer eingetragenen Erholungsregel aufgefüllt.</small></div></div><div class="cp-sheet-resource-list">${renderResourceRows(persistentResources)}</div></div>
     ${renderSavingThrows(profile)}
   </article>`;
 }
@@ -375,9 +444,10 @@ function renderWeapons(profile) {
   return `<section class="cp-sheet-card">
     <div class="cp-sheet-section-head"><div><span>Inventar als Vorlage · danach frei</span><h4>Waffen</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="weapon">${renderInventoryOptions('weapon')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="weapon">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="weapons">+ Waffe</button></div></div>
     <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<article class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}">
-      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname"><button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
+      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname">${weapon.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : '<span class="cp-sheet-equipment-link is-system">Grundangriff</span>'}<button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
       <div class="cp-sheet-fields weapon">
         <label><span>Schadenswurf</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageFormula" value="${escapeMarkup(weapon.damageFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="1W8"></label>
+        <label><span>Zweihändig / vielseitig</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="versatileDamageFormula" value="${escapeMarkup(String(weapon.versatileDamageFormula || '').toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="z. B. 1W10"></label>
         <label><span>Schadensart</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageType" value="${escapeMarkup(weapon.damageType)}" maxlength="80"></label>
         <label><span>Waffenart</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="weaponType">${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<option value="${option.id}"${selected(weapon.weaponType, option.id)}>${option.label}</option>`).join('')}</select></label>
         <label><span>Ausbildung</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="training"><option value="simple"${selected(weapon.training, 'simple')}>Schlicht / simpel</option><option value="martial"${selected(weapon.training, 'martial')}>Kriegerisch</option><option value="special"${selected(weapon.training, 'special')}>Besonders</option></select></label>
@@ -398,13 +468,14 @@ function renderArmor(profile) {
   return `<section class="cp-sheet-card">
     <div class="cp-sheet-section-head"><div><span>Mehrere Schutzquellen kombinierbar</span><h4>Rüstung &amp; Schutz</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="armor">${renderInventoryOptions('armor')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="armor">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="armorItems">+ Schutz</button></div></div>
     <div class="cp-sheet-item-list">${profile.armorItems.length ? profile.armorItems.map(armor => `<article class="cp-sheet-item ${armor.equipped ? 'equipped' : ''}">
-      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="checkbox" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="equipped"${checked(armor.equipped)}> angelegt</label><input data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="name" value="${escapeMarkup(armor.name)}" maxlength="120" placeholder="Rüstung / Schild / Schutz"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}">×</button></div>
+      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="checkbox" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="equipped"${checked(armor.equipped)}> angelegt</label><input data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="name" value="${escapeMarkup(armor.name)}" maxlength="120" placeholder="Rüstung / Schild / Schutz">${armor.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : ''}<button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}">×</button></div>
       <div class="cp-sheet-fields armor">
         <label><span>Art</span><select data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="kind"><option value="armor"${selected(armor.kind, 'armor')}>Rüstung</option><option value="shield"${selected(armor.kind, 'shield')}>Schild</option><option value="ward"${selected(armor.kind, 'ward')}>Schutz / Magie</option></select></label>
         <label><span>Basis-RK</span><input type="number" min="0" max="99" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="baseArmorClass" value="${armor.baseArmorClass ?? ''}" placeholder="keine"></label>
         <label><span>RK-Bonus</span><input type="number" min="-99" max="99" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="armorClassBonus" value="${armor.armorClassBonus}"></label>
         <label><span>Geschick</span><select data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="dexterityMode"><option value="full"${selected(armor.dexterityMode, 'full')}>Voll</option><option value="capped"${selected(armor.dexterityMode, 'capped')}>Begrenzt</option><option value="none"${selected(armor.dexterityMode, 'none')}>Nicht</option></select></label>
         <label><span>GES-Limit</span><input type="number" min="-20" max="20" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="dexterityCap" value="${armor.dexterityCap}"></label>
+        <label><span>GES zählt ab Stufe</span><input type="number" min="0" max="30" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="dexterityUnlockLevel" value="${armor.dexterityUnlockLevel || 0}" title="0 bedeutet: sofort"></label>
         <label class="wide"><span>Eigenschaften</span><input data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="properties" value="${escapeMarkup(armor.properties)}" maxlength="500"></label>
         <label class="wide"><span>Notizen / besondere Regeln</span><textarea data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="notes" maxlength="800">${escapeMarkup(armor.notes)}</textarea></label>
       </div>
@@ -530,10 +601,12 @@ function renderCheats(profile) {
 
 function renderSpellSlotProfile(profile) {
   const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
-  if (!slots.length) return '<p class="cp-sheet-empty">Aktiviere Magie, um Zauberplätze I–X anzulegen.</p>';
   return `<section class="cp-sheet-spell-slots" aria-label="Zauberplätze nach Grad">
     <div class="cp-sheet-subhead"><div><strong>Zauberplätze I–X</strong><small>Eigenständige Magieressourcen · Auffüllung durch lange Rast</small></div></div>
-    <div class="cp-sheet-spell-slot-grid">${slots.map(resource => `<label data-spell-slot-level="${getSpellSlotLevel(resource) || ''}">
+    <div class="cp-sheet-spell-slot-grid"><div class="cp-sheet-cantrip-slot" data-spell-slot-level="0">
+      <span class="cp-sheet-resource-icon-frame" aria-hidden="true"><span class="cp-sheet-resource-icon-fallback">∞</span></span>
+      <span>Zaubertricks</span><strong>Unerschöpflich</strong>
+    </div>${slots.map(resource => `<label data-spell-slot-level="${getSpellSlotLevel(resource) || ''}">
       ${renderResourceIcon(resource)}
       <span>${escapeMarkup(getSpellLevelLabel(getSpellSlotLevel(resource)))}</span>
       <span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}" aria-label="${escapeMarkup(resource.name)} aktuell"><i>/</i><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}" aria-label="${escapeMarkup(resource.name)} maximum"></span>
@@ -594,6 +667,7 @@ function renderSheet() {
     ${renderAttributeRadar(profile)}
     ${renderDerivedStats(profile)}
     ${renderRules(profile)}
+    ${renderProficiencies(profile)}
     ${renderResources(profile)}
     ${renderSkills(profile)}
     ${renderWeapons(profile)}
@@ -762,13 +836,13 @@ function updateDerivedView() {
 function createEmptyItem(collection) {
   const id = createItemId(collection.replace('.', '-'));
   if (collection === 'skills') return { id, name: '', attributeKey: 'dexterity', proficiency: 'none', bonus: 0, notes: '' };
-  if (collection === 'weapons') return { id, name: '', weaponType: 'unarmed', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, requirements: '', aiInstructions: '', equipped: draftProfile.weapons.length === 0 };
-  if (collection === 'armorItems') return { id, name: '', kind: 'armor', baseArmorClass: '', armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, equipped: true };
+  if (collection === 'weapons') return { id, inventoryItemId: '', name: '', weaponType: 'unarmed', training: 'simple', damageFormula: '', versatileDamageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, requirements: '', aiInstructions: '', equipped: draftProfile.weapons.length === 0 };
+  if (collection === 'armorItems') return { id, inventoryItemId: '', name: '', kind: 'armor', baseArmorClass: '', armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, dexterityUnlockLevel: 0, equipped: true };
   if (collection === 'resources') return { id, name: '', current: 0, maximum: 0, recovery: 'manual', scope: 'persistent', category: '', icon: '' };
-  if (collection === 'techniques') return { id, name: '', category: 'technique', description: '', effect: '', activationType: 'action', weaponTypes: [], compatibleWeaponIds: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+  if (collection === 'techniques') return { id, name: '', trainingForm: '', minimumLevel: 1, category: 'technique', description: '', effect: '', activationType: 'action', weaponTypes: [], compatibleWeaponIds: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, secondarySave: { enabled: false, attributeKey: 'constitution', dcBase: 8, dcAttributeKey: 'strength', addProficiency: true, failureCondition: { id: `${id}-condition`, name: '', duration: '', description: '', mechanics: {} } }, followUpAttack: { enabled: false, sameTarget: true, damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, triggerFurtherEffects: false } };
   if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', trigger: '', target: 'Selbst', duration: '', stacking: 'normal', tags: '', limitations: '', aiInstructions: '', priority: 0, active: true, mechanics: {} };
   if (collection === 'conditions') return { id, name: '', duration: '', source: '', description: '', active: true, mechanics: {} };
-  if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', rollFormula: '', damageType: 'physisch', activationType: 'action', delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+  if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', recoveryDayKey: '', rollFormula: '', damageType: 'physisch', activationType: 'action', delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, inventoryUseTrigger: { enabled: false, itemTags: [], restoreResources: [], requireActualRecovery: true } };
   if (collection === 'magic.spells') return { id, name: '', level: 0, manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', activationType: 'action', resolutionType: 'spell-attack', saveAttribute: 'dexterity', halfDamageOnSave: false, damageType: 'Magie', range: 'Zauber', rollFormula: '', description: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, prepared: true };
   return { id };
 }
@@ -777,6 +851,7 @@ function addItem(collectionPath, item = null) {
   const collection = getAtPath(draftProfile, collectionPath);
   if (!Array.isArray(collection)) return;
   collection.push(item || createEmptyItem(collectionPath));
+  if (collectionPath === 'weapons' || collectionPath === 'armorItems') synchronizeDraftFromCombat();
   renderSheet();
 }
 
@@ -807,6 +882,7 @@ function openDetailItemEditor(collectionPath, itemId, kind, defaultActivation = 
       if (index >= 0) collection[index] = updated;
       else collection.push(updated);
       draftProfile = sanitizeCharacterCombatProfile(draftProfile);
+      if (collectionPath === 'weapons' || collectionPath === 'armorItems') synchronizeDraftFromCombat();
       renderSheet();
     }
   });
@@ -828,6 +904,12 @@ function copyInventoryEquipment(kind, trigger) {
   const item = getCharacterCombatInventoryOptions(activeCharacter || {}, kind)
     .find(candidate => candidate.inventoryItemId === itemId);
   if (!item) return;
+  const collectionName = kind === 'weapon' ? 'weapons' : 'armorItems';
+  const linked = draftProfile[collectionName].find(entry => entry.inventoryItemId === itemId);
+  if (linked) {
+    if (kind === 'weapon') equipWeapon(linked.id);
+    return;
+  }
   item.id = createItemId(kind);
   if (kind === 'weapon') {
     item.equipped = draftProfile.weapons.length === 0;
@@ -840,32 +922,40 @@ function copyInventoryEquipment(kind, trigger) {
 
 function equipWeapon(itemId) {
   draftProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === itemId; });
+  synchronizeDraftFromCombat();
   renderSheet();
 }
 
 function init(character = {}) {
   activeCharacter = character;
   draftProfile = sanitizeCharacterCombatProfile(character.combatProfile);
+  synchronizeDraftFromInventory(character.inventory || {});
+  synchronizeDraftFromCombat({ inventory: character.inventory || {} });
   levelUpState = null;
   levelUpNotice = '';
+  setupNotice = '';
   renderSheet();
 }
 
 function collect() {
+  synchronizeDraftFromCombat();
   return sanitizeCharacterCombatProfile(draftProfile);
 }
 
 function refreshInventory(character = activeCharacter || {}) {
   activeCharacter = character;
-  document.querySelectorAll('[data-combat-inventory-picker="weapon"]').forEach(select => { select.innerHTML = renderInventoryOptions('weapon'); });
-  document.querySelectorAll('[data-combat-inventory-picker="armor"]').forEach(select => { select.innerHTML = renderInventoryOptions('armor'); });
+  synchronizeDraftFromInventory(character.inventory || {});
+  renderSheet();
 }
 
 document.addEventListener('input', event => {
   const target = event.target;
   if (!target?.closest?.('#cp-tab-combat')) return;
   if (updateLevelUpPlan(target)) return;
-  if (updateDraftField(target)) updateDerivedView();
+  if (updateDraftField(target)) {
+    if (['weapons', 'armorItems'].includes(target.dataset.combatCollection)) synchronizeDraftFromCombat();
+    updateDerivedView();
+  }
 });
 
 document.addEventListener('change', event => {
@@ -873,7 +963,10 @@ document.addEventListener('change', event => {
   if (!target?.closest?.('#cp-tab-combat')) return;
   if (updateLevelUpPlan(target)) return;
   if (target.dataset.combatAction === 'equip-weapon') return;
-  if (updateDraftField(target)) updateDerivedView();
+  if (updateDraftField(target)) {
+    if (['weapons', 'armorItems'].includes(target.dataset.combatCollection)) synchronizeDraftFromCombat();
+    updateDerivedView();
+  }
 });
 
 document.addEventListener('click', event => {
@@ -887,6 +980,18 @@ document.addEventListener('click', event => {
   if (action === 'remove-item') removeItem(trigger.dataset.combatCollection, trigger.dataset.combatItemId);
   if (action === 'copy-inventory') copyInventoryEquipment(trigger.dataset.combatKind, trigger);
   if (action === 'equip-weapon') equipWeapon(trigger.dataset.combatItemId);
+  if (action === 'open-character-setup') {
+    openCharacterCombatSetup({
+      character: activeCharacter || {},
+      profile: draftProfile,
+      onApply(profile) {
+        draftProfile = sanitizeCharacterCombatProfile(profile);
+        synchronizeDraftFromCombat();
+        setupNotice = 'Die Stufe-1-Starthilfe wurde in den Entwurf übernommen. Bitte „Figur speichern“ verwenden, um den Bogen dauerhaft zu sichern.';
+        renderSheet();
+      }
+    });
+  }
   if (action === 'open-level-up') openLevelUp();
   if (action === 'close-level-up') closeLevelUp();
   if (action === 'apply-level-up') applyLevelUp();
@@ -902,6 +1007,11 @@ globalThis.AleriaCharacterCombatProfile = Object.freeze({
   init,
   collect,
   refreshInventory,
+  collectLinked(inventory = getInventoryDraft()) {
+    synchronizeDraftFromInventory(inventory);
+    const result = synchronizeDraftFromCombat({ inventory });
+    return { inventory: result.inventory, combatProfile: sanitizeCharacterCombatProfile(draftProfile) };
+  },
   sanitize: sanitizeCharacterCombatProfile,
   refreshDerived: updateDerivedView
 });

@@ -1,0 +1,1006 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--mgmmdQJY0FWLYvZ1goVs",
+  "slug": "eira-gochwyr",
+  "identity": {
+    "name": "Eira Gochwyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "zum-roten-drachen",
+      "label": "Zum Roten Drachen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Zum Roten Drachen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "mgmmdQJY0FWLYvZ1goVs",
+      "documentIds": [
+        "mgmmdQJY0FWLYvZ1goVs"
+      ],
+      "documents": [
+        {
+          "documentId": "mgmmdQJY0FWLYvZ1goVs",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "mgmmdQJY0FWLYvZ1goVs"
+    ],
+    "contentHash": "671ab52e776d0b6ed7f4600f6955c0298d39f3cb3904eed7b6dbd2ca4b011f03"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "mgmmdQJY0FWLYvZ1goVs",
+        "bio": "Eira Gochwyr verantwortet den Herbergsbetrieb des Roten Drachen. Sie weist Gästen die Zimmer zu, überwacht Belegung und Ordnung, organisiert Bettzeug und Wäsche und sorgt für die Instandhaltung der Kammern. Der gesamte Zimmer- und Übernachtungsbereich unterliegt ihrer täglichen Aufsicht.",
+        "name": "Eira Gochwyr",
+        "title": "Kammerverwalterin",
+        "inventory": {
+          "portraitFit": "cover",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portraitFormat": "portrait",
+          "companions": [
+            {
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "image": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "id": "companion-mqu1vat2-0-zz2n",
+              "infoRows": [],
+              "role": "Begleiter",
+              "name": "Reittier / Gefährte",
+              "description": "",
+              "imageFit": "cover",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "imageFit": "cover",
+              "image": "",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "id": "companion-mqu1vat2-1-5e7l",
+              "name": "Treuer Begleiter",
+              "species": "Tier / Person",
+              "description": "",
+              "status": "Noch festlegen"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "hitpoints": "TP / Zustand",
+          "portrait": "https://i.imgur.com/WpjQmCd.png",
+          "role": "Kammerverwalterin",
+          "carryValue": "Noch festlegen",
+          "portraitPosition": "top",
+          "level": "Zum Roten Drachen",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "name": "Eira Gochwyr",
+          "infoRows": [],
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "items": [
+            {
+              "icon": "*",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "type": "Waffe",
+              "tags": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "weapon",
+              "image": "",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "id": "item-mqu1vat1-0-w8ef"
+            },
+            {
+              "id": "item-mqu1vat1-1-exvo",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Rüstung",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "imageFormat": "square",
+              "infoRows": [],
+              "image": "",
+              "category": "armor",
+              "quantity": "1",
+              "icon": "*",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen"
+            },
+            {
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "name": "Reiseausrüstung",
+              "id": "item-mqu1vat1-2-0fx2",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "equipment",
+              "imagePosition": "center",
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "type": "Ausrüstung",
+              "quantity": "1"
+            },
+            {
+              "infoRows": [],
+              "type": "Trinktur",
+              "imagePosition": "center",
+              "tags": "",
+              "image": "",
+              "imageFit": "contain",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "id": "item-mqu1vat1-3-2lgm",
+              "name": "Heil- oder Verbrauchsgut",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "potions"
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "imageFormat": "square",
+              "image": "",
+              "category": "documents",
+              "type": "Dokument",
+              "tags": "",
+              "quantity": "1",
+              "imageFit": "contain",
+              "infoRows": [],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "image": "",
+              "icon": "*",
+              "category": "other",
+              "quantity": "1",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "imageFormat": "square",
+              "tags": "",
+              "id": "item-mqu1vat1-5-5kao"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "status": "Gesund",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "open": false,
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "status": ""
+          },
+          "moneyNotice": "",
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ]
+        },
+        "fraktion": "Zum Roten Drachen",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/pmvCxr7.png"
+          }
+        ],
+        "portrait": "https://i.imgur.com/WpjQmCd.png"
+      }
+    ]
+  },
+  "character": {
+    "id": "mgmmdQJY0FWLYvZ1goVs",
+    "bio": "Eira Gochwyr verantwortet den Herbergsbetrieb des Roten Drachen. Sie weist Gästen die Zimmer zu, überwacht Belegung und Ordnung, organisiert Bettzeug und Wäsche und sorgt für die Instandhaltung der Kammern. Der gesamte Zimmer- und Übernachtungsbereich unterliegt ihrer täglichen Aufsicht.",
+    "name": "Eira Gochwyr",
+    "title": "Kammerverwalterin",
+    "inventory": {
+      "portraitFit": "cover",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portraitFormat": "portrait",
+      "companions": [
+        {
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "infoRows": [],
+          "role": "Begleiter",
+          "name": "Reittier / Gefährte",
+          "description": "",
+          "imageFit": "cover",
+          "species": "Tier oder Begleiter",
+          "statusColor": "#5c7f20"
+        },
+        {
+          "imageFit": "cover",
+          "image": "",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "id": "companion-mqu1vat2-1-5e7l",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "description": "",
+          "status": "Noch festlegen"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "hitpoints": "TP / Zustand",
+      "portrait": "https://i.imgur.com/WpjQmCd.png",
+      "role": "Kammerverwalterin",
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "level": "Zum Roten Drachen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "name": "Eira Gochwyr",
+      "infoRows": [],
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "items": [
+        {
+          "icon": "*",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "type": "Waffe",
+          "tags": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "weapon",
+          "image": "",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "id": "item-mqu1vat1-0-w8ef"
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Rüstung",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square",
+          "infoRows": [],
+          "image": "",
+          "category": "armor",
+          "quantity": "1",
+          "icon": "*",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "equipment",
+          "imagePosition": "center",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "type": "Ausrüstung",
+          "quantity": "1"
+        },
+        {
+          "infoRows": [],
+          "type": "Trinktur",
+          "imagePosition": "center",
+          "tags": "",
+          "image": "",
+          "imageFit": "contain",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "name": "Heil- oder Verbrauchsgut",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "potions"
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "imageFormat": "square",
+          "image": "",
+          "category": "documents",
+          "type": "Dokument",
+          "tags": "",
+          "quantity": "1",
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "image": "",
+          "icon": "*",
+          "category": "other",
+          "quantity": "1",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "tags": "",
+          "id": "item-mqu1vat1-5-5kao"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "open": false,
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "status": ""
+      },
+      "moneyNotice": "",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ]
+    },
+    "fraktion": "Zum Roten Drachen",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pmvCxr7.png"
+      }
+    ],
+    "portrait": "https://i.imgur.com/WpjQmCd.png",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

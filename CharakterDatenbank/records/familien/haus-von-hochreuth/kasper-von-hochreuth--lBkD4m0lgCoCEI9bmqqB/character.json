@@ -1,0 +1,1230 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--lBkD4m0lgCoCEI9bmqqB",
+  "slug": "kasper-von-hochreuth",
+  "identity": {
+    "name": "Kasper von Hochreuth",
+    "aliases": [],
+    "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-von-hochreuth",
+      "label": "Haus von Hochreuth"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-von-hochreuth",
+        "familyTitle": "Haus von Hochreuth",
+        "personId": "kasper-von-hochreuth",
+        "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth",
+        "houseId": "house-von-hochreuth",
+        "houseName": "Haus von Hochreuth",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Goldmund",
+          "Unsortierte Häuser"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=kasper-von-hochreuth",
+        "fingerprint": "{\"name\":\"Kasper von Hochreuth\",\"title\":\"Zweiter Sohn Ruprechts · im Exil\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-von-hochreuth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hochreuth/kasper-von-hochreuth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Durch Haus Roden 1736 enterbt\"],\"relationships\":{\"parents\":[{\"personId\":\"ruprecht-von-hochreuth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-von-hochreuth--ruprecht-von-hochreuth\",\"name\":\"Ruprecht von Hochreuth\"},{\"personId\":\"margarethe-hochreuth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--margarethe-hochreuth-spouse\",\"name\":\"Margarethe\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "von-hochreuth",
+        "label": "von Hochreuth",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "von Hochreuth"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "lBkD4m0lgCoCEI9bmqqB",
+      "documentIds": [
+        "lBkD4m0lgCoCEI9bmqqB"
+      ],
+      "documents": [
+        {
+          "documentId": "lBkD4m0lgCoCEI9bmqqB",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-von-hochreuth",
+        "personId": "kasper-von-hochreuth",
+        "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=kasper-von-hochreuth"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "lBkD4m0lgCoCEI9bmqqB"
+    ],
+    "contentHash": "fa00961313cc04b778375d2b421ca232e2a1e986d867e7ccb531b5ec06c80b9e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "lBkD4m0lgCoCEI9bmqqB",
+        "emotes": [],
+        "inventory": {
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "icon": "*",
+              "label": "Status"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Geld",
+              "icon": "*",
+              "value": "0 Gold, 0 Silber, 0 Kupfer"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Tragkapazität",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Rolle"
+            },
+            {
+              "icon": "*",
+              "label": "Fraktion",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Aufenthalt"
+            },
+            {
+              "label": "Notiz",
+              "icon": "*",
+              "value": "Noch festlegen"
+            }
+          ],
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "portrait": "",
+          "companions": [
+            {
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "description": "",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "top",
+              "species": "Tier oder Begleiter",
+              "name": "Reittier / Gefährte",
+              "image": "",
+              "status": "Gesund",
+              "imageFormat": "landscape",
+              "id": "companion-mr46aaa9-0-ybli"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "infoRows": [],
+              "imageFit": "cover",
+              "imageFormat": "landscape",
+              "id": "companion-mr46aaa9-1-m2v7",
+              "status": "Noch festlegen",
+              "species": "Tier / Person",
+              "image": "",
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top"
+            }
+          ],
+          "moneyNotice": "",
+          "status": "Gesund",
+          "role": "Rolle",
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "name": "Name des Charakters",
+          "portraitFormat": "portrait",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "equipmentQuiz": {
+            "resultText": "",
+            "updatedAt": "",
+            "open": false,
+            "status": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0
+          },
+          "hitpoints": "TP / Zustand",
+          "items": [
+            {
+              "id": "item-mr46aaa9-0-j4y0",
+              "individualizedAt": "",
+              "acquiredAt": "",
+              "quantity": "1",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon",
+              "itemStorageMode": "character",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "originItemDbKey": "",
+              "ownerCharacterName": "",
+              "imageFormat": "square",
+              "ownerCharacterId": "",
+              "name": "Hauptwaffe",
+              "tags": "",
+              "itemDbKey": "",
+              "infoRows": [],
+              "type": "Waffe",
+              "imageFit": "contain"
+            },
+            {
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "ownerCharacterId": "",
+              "id": "item-mr46aaa9-1-3hf8",
+              "infoRows": [],
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "ownerCharacterName": "",
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "originItemDbKey": "",
+              "individualizedAt": "",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "category": "armor",
+              "imagePosition": "center",
+              "acquiredAt": "",
+              "type": "Rüstung",
+              "quantity": "1",
+              "itemDbKey": ""
+            },
+            {
+              "acquiredAt": "",
+              "name": "Reiseausrüstung",
+              "imageFit": "contain",
+              "id": "item-mr46aaa9-2-2jjr",
+              "infoRows": [],
+              "ownerCharacterName": "",
+              "ownerCharacterId": "",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "tags": "",
+              "type": "Ausrüstung",
+              "originItemDbKey": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "itemStorageMode": "character",
+              "weight": "Noch festlegen",
+              "image": "",
+              "category": "equipment",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "icon": "*",
+              "individualizedAt": "",
+              "itemDbKey": ""
+            },
+            {
+              "type": "Trinktur",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "tags": "",
+              "ownerCharacterId": "",
+              "itemDbKey": "",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterName": "",
+              "weight": "Noch festlegen",
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "category": "potions",
+              "individualizedAt": "",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "originItemDbKey": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "acquiredAt": "",
+              "id": "item-mr46aaa9-3-gv4o"
+            },
+            {
+              "id": "item-mr46aaa9-4-ectq",
+              "category": "documents",
+              "ownerCharacterId": "",
+              "icon": "*",
+              "image": "",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "itemStorageMode": "character",
+              "ownerCharacterName": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "type": "Dokument",
+              "individualizedAt": "",
+              "originItemDbKey": "",
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "acquiredAt": "",
+              "name": "Dokumente / Urkunden",
+              "infoRows": []
+            },
+            {
+              "quantity": "1",
+              "image": "",
+              "name": "Persönlicher Gegenstand",
+              "ownerCharacterName": "",
+              "category": "other",
+              "imagePosition": "center",
+              "originItemDbKey": "",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "tags": "",
+              "imageFormat": "square",
+              "type": "Sonstiges",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "id": "item-mr46aaa9-5-w5ld",
+              "individualizedAt": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "itemStorageMode": "character",
+              "icon": "*",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz."
+            }
+          ],
+          "showInfoTable": false,
+          "portraitPosition": "top",
+          "carryValue": "Noch festlegen",
+          "title": "Charakter-Inventar",
+          "portraitFit": "cover",
+          "characterId": "",
+          "level": "Stufe",
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ]
+        },
+        "playerOwner": "",
+        "bio": "",
+        "archived": false,
+        "emotesOverride": true,
+        "title": "Ritter, Burg Hochreuth",
+        "name": "Kasper von Hochreuth",
+        "profileLink": "",
+        "portrait": "https://i.imgur.com/Np3Q37d.png",
+        "fraktion": "Von Hochreuth, Heimatlos",
+        "aliases": []
+      }
+    ]
+  },
+  "character": {
+    "id": "lBkD4m0lgCoCEI9bmqqB",
+    "emotes": [],
+    "inventory": {
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "icon": "*",
+          "label": "Status"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "label": "Geld",
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Tragkapazität",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Rolle"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Aufenthalt"
+        },
+        {
+          "label": "Notiz",
+          "icon": "*",
+          "value": "Noch festlegen"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portrait": "",
+      "companions": [
+        {
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "description": "",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imagePosition": "top",
+          "species": "Tier oder Begleiter",
+          "name": "Reittier / Gefährte",
+          "image": "",
+          "status": "Gesund",
+          "imageFormat": "landscape",
+          "id": "companion-mr46aaa9-0-ybli"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "imageFit": "cover",
+          "imageFormat": "landscape",
+          "id": "companion-mr46aaa9-1-m2v7",
+          "status": "Noch festlegen",
+          "species": "Tier / Person",
+          "image": "",
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top"
+        }
+      ],
+      "moneyNotice": "",
+      "status": "Gesund",
+      "role": "Rolle",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "name": "Name des Charakters",
+      "portraitFormat": "portrait",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "equipmentQuiz": {
+        "resultText": "",
+        "updatedAt": "",
+        "open": false,
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0
+      },
+      "hitpoints": "TP / Zustand",
+      "items": [
+        {
+          "id": "item-mr46aaa9-0-j4y0",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "quantity": "1",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "name": "Hauptwaffe",
+          "tags": "",
+          "itemDbKey": "",
+          "infoRows": [],
+          "type": "Waffe",
+          "imageFit": "contain"
+        },
+        {
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "ownerCharacterId": "",
+          "id": "item-mr46aaa9-1-3hf8",
+          "infoRows": [],
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "category": "armor",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "type": "Rüstung",
+          "quantity": "1",
+          "itemDbKey": ""
+        },
+        {
+          "acquiredAt": "",
+          "name": "Reiseausrüstung",
+          "imageFit": "contain",
+          "id": "item-mr46aaa9-2-2jjr",
+          "infoRows": [],
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "tags": "",
+          "type": "Ausrüstung",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "image": "",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "icon": "*",
+          "individualizedAt": "",
+          "itemDbKey": ""
+        },
+        {
+          "type": "Trinktur",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "tags": "",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "category": "potions",
+          "individualizedAt": "",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "acquiredAt": "",
+          "id": "item-mr46aaa9-3-gv4o"
+        },
+        {
+          "id": "item-mr46aaa9-4-ectq",
+          "category": "documents",
+          "ownerCharacterId": "",
+          "icon": "*",
+          "image": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "type": "Dokument",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "name": "Dokumente / Urkunden",
+          "infoRows": []
+        },
+        {
+          "quantity": "1",
+          "image": "",
+          "name": "Persönlicher Gegenstand",
+          "ownerCharacterName": "",
+          "category": "other",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "tags": "",
+          "imageFormat": "square",
+          "type": "Sonstiges",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "id": "item-mr46aaa9-5-w5ld",
+          "individualizedAt": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz."
+        }
+      ],
+      "showInfoTable": false,
+      "portraitPosition": "top",
+      "carryValue": "Noch festlegen",
+      "title": "Charakter-Inventar",
+      "portraitFit": "cover",
+      "characterId": "",
+      "level": "Stufe",
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ]
+    },
+    "playerOwner": "",
+    "bio": "",
+    "archived": false,
+    "emotesOverride": true,
+    "title": "Ritter, Burg Hochreuth",
+    "name": "Kasper von Hochreuth",
+    "profileLink": "",
+    "portrait": "https://i.imgur.com/Np3Q37d.png",
+    "fraktion": "Von Hochreuth, Heimatlos",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-von-hochreuth",
+      "houseName": "Haus von Hochreuth",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Durch Haus Roden 1736 enterbt"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-von-hochreuth",
+          "personId": "kasper-von-hochreuth",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=kasper-von-hochreuth",
+          "fingerprint": "{\"name\":\"Kasper von Hochreuth\",\"title\":\"Zweiter Sohn Ruprechts · im Exil\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-von-hochreuth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hochreuth/kasper-von-hochreuth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Durch Haus Roden 1736 enterbt\"],\"relationships\":{\"parents\":[{\"personId\":\"ruprecht-von-hochreuth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-von-hochreuth--ruprecht-von-hochreuth\",\"name\":\"Ruprecht von Hochreuth\"},{\"personId\":\"margarethe-hochreuth-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--margarethe-hochreuth-spouse\",\"name\":\"Margarethe\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "ruprecht-von-hochreuth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-von-hochreuth--ruprecht-von-hochreuth",
+            "name": "Ruprecht von Hochreuth"
+          },
+          {
+            "personId": "margarethe-hochreuth-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--margarethe-hochreuth-spouse",
+            "name": "Margarethe"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Goldmund > Unsortierte Häuser"
+  }
+}

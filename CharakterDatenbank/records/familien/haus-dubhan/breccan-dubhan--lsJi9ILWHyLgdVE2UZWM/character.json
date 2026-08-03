@@ -1,0 +1,1454 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--lsJi9ILWHyLgdVE2UZWM",
+  "slug": "breccan-dubhan",
+  "identity": {
+    "name": "Breccan Dubhan",
+    "aliases": [],
+    "worldPersonId": "person--haus-dubhan--breccan-dubhan"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-dubhan",
+      "label": "Clan Dubhan"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-dubhan",
+        "familyTitle": "Clan Dubhan",
+        "personId": "breccan-dubhan",
+        "worldPersonId": "person--haus-dubhan--breccan-dubhan",
+        "houseId": "house-dubhan",
+        "houseName": "Sept Dubhan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Faelaorn",
+          "Tir na Brann",
+          "Tir na Fuil",
+          "Caer Dubhan"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan&mode=view&person=breccan-dubhan",
+        "fingerprint": "{\"name\":\"Breccan Dubhan\",\"title\":\"Krieger der Dubhan, vormals Grenzwächter Faelaorns\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhan\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"fearghal-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--fearghal-dubhan\",\"name\":\"Fearghal Dubhan\"},{\"personId\":\"sorcha-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--sorcha-dubhan\",\"name\":\"Sorcha\"}],\"partners\":[{\"personId\":\"eithne-dubhan\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-dubhan\",\"name\":\"Eithne Dubhan\"}],\"children\":[{\"personId\":\"rogaire-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--rogaire-dubhan\",\"name\":\"Rogaire Dubhan\"},{\"personId\":\"alpin-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--alpin-dubhan\",\"name\":\"Alpin Dubhan\"}]}}",
+        "score": 195
+      },
+      {
+        "familyId": "haus-dubhan-gwynthor",
+        "familyTitle": "Haus Dubhan",
+        "personId": "breccan-dubhan",
+        "worldPersonId": "person--haus-dubhan--breccan-dubhan",
+        "houseId": "house-dubhan-gwynthor",
+        "houseName": "Haus Dubhan",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+        "fingerprint": "{\"name\":\"Breccan Dubhan\",\"title\":\"Oberherr und Gründer\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhan-gwynthor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eithne-dubhan\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-dubhan\",\"name\":\"Eithne Dubhan\"}],\"children\":[{\"personId\":\"rogaire-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--rogaire-dubhan\",\"name\":\"Rogaire Dubhan\"},{\"personId\":\"alpin-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--alpin-dubhan\",\"name\":\"Alpin Dubhan\"}]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "die-kleinen-dubglais",
+        "label": "Die kleinen Dubglais",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Die kleinen Dubglais"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "lsJi9ILWHyLgdVE2UZWM",
+      "documentIds": [
+        "lsJi9ILWHyLgdVE2UZWM"
+      ],
+      "documents": [
+        {
+          "documentId": "lsJi9ILWHyLgdVE2UZWM",
+          "createdAt": "2026-07-09T11:49:49.082Z",
+          "updatedAt": "2026-07-10T11:52:11.154Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-dubhan",
+        "personId": "breccan-dubhan",
+        "worldPersonId": "person--haus-dubhan--breccan-dubhan",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan&mode=view&person=breccan-dubhan"
+      },
+      {
+        "familyId": "haus-dubhan-gwynthor",
+        "personId": "breccan-dubhan",
+        "worldPersonId": "person--haus-dubhan--breccan-dubhan",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-10T11:52:11.154Z",
+    "sourceDocumentIds": [
+      "lsJi9ILWHyLgdVE2UZWM"
+    ],
+    "contentHash": "f1dbe45c23a6e1d080af70be0293ccae46a1ab53dc5baf4297165e72fd47842d"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "lsJi9ILWHyLgdVE2UZWM",
+        "fraktion": "Sept Dubhan, Tir na Brann - Land der Wälle",
+        "portrait": "https://i.imgur.com/Ce392i6.png",
+        "taxonomyPath": "",
+        "emotesOverride": true,
+        "origin": "",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/jK2YpJn.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/4QeINFt.png"
+          },
+          {
+            "img": "https://i.imgur.com/Kk2z7AF.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/jOV6dYS.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/WMHOnFs.png"
+          },
+          {
+            "img": "https://i.imgur.com/vQCuYml.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/P8G7N2O.png"
+          },
+          {
+            "img": "https://i.imgur.com/KLSdry7.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/M5pPAwu.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/m8pHhtX.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ZlaT3ah.png"
+          },
+          {
+            "img": "https://i.imgur.com/cBGopjl.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/U4jHX8H.png"
+          },
+          {
+            "img": "https://i.imgur.com/flwWmd2.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/CboamWo.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/y6R428H.png"
+          },
+          {
+            "img": "https://i.imgur.com/KM9tS6S.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/GonGkoZ.png",
+            "label": ""
+          }
+        ],
+        "title": "Sept Oberhaupt, Caer Dubhan",
+        "plotNode": "",
+        "relevance": "",
+        "currentLocation": "",
+        "inventory": {
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "equipmentQuiz": {
+            "step": 0,
+            "updatedAt": "",
+            "open": false,
+            "status": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "status": "Gesund",
+          "portraitPosition": "top",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "role": "Rolle",
+          "name": "Name des Charakters",
+          "portraitFit": "cover",
+          "carryValue": "Noch festlegen",
+          "characterId": "lsJi9ILWHyLgdVE2UZWM",
+          "portraitFormat": "portrait",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "level": "Stufe",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyNotice": "",
+          "infoRows": [
+            {
+              "label": "Status",
+              "value": "Gesund",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "TP / Zustand"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "label": "Geld",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Tragkapazität",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Fraktion",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Aufenthalt"
+            },
+            {
+              "value": "Noch festlegen",
+              "icon": "*",
+              "label": "Notiz"
+            }
+          ],
+          "portrait": "https://i.imgur.com/Ce392i6.png",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "items": [
+            {
+              "originItemDbKey": "",
+              "ownerCharacterName": "",
+              "name": "Hauptwaffe",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mrdg0w2u-0-pus1",
+              "imageFormat": "square",
+              "ownerCharacterId": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "tags": "",
+              "type": "Waffe",
+              "weight": "Noch festlegen",
+              "category": "weapon",
+              "image": "",
+              "itemDbKey": "",
+              "acquiredAt": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "individualizedAt": "",
+              "icon": "*"
+            },
+            {
+              "individualizedAt": "",
+              "category": "armor",
+              "icon": "*",
+              "quantity": "1",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "originItemDbKey": "",
+              "image": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "tags": "",
+              "type": "Rüstung",
+              "ownerCharacterId": "",
+              "id": "item-mrdg0w2u-1-ds35",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "name": "Rüstung / Schutz",
+              "imageFormat": "square"
+            },
+            {
+              "ownerCharacterId": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "id": "item-mrdg0w2u-2-d4fb",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "image": "",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "icon": "*",
+              "itemDbKey": "",
+              "category": "equipment",
+              "name": "Reiseausrüstung",
+              "quantity": "1",
+              "individualizedAt": "",
+              "imageFormat": "square",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "acquiredAt": "",
+              "ownerCharacterName": "",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Ausrüstung"
+            },
+            {
+              "itemDbKey": "",
+              "infoRows": [],
+              "imagePosition": "center",
+              "icon": "*",
+              "acquiredAt": "",
+              "imageFit": "contain",
+              "id": "item-mrdg0w2u-3-t2m1",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "itemStorageMode": "character",
+              "image": "",
+              "imageFormat": "square",
+              "tags": "",
+              "individualizedAt": "",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "originItemDbKey": "",
+              "quantity": "1",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "weight": "Noch festlegen",
+              "name": "Heil- oder Verbrauchsgut"
+            },
+            {
+              "id": "item-mrdg0w2u-4-9x6e",
+              "ownerCharacterName": "",
+              "acquiredAt": "",
+              "individualizedAt": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "icon": "*",
+              "imageFormat": "square",
+              "itemDbKey": "",
+              "category": "documents",
+              "weight": "Noch festlegen",
+              "originItemDbKey": "",
+              "image": "",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "ownerCharacterId": "",
+              "imagePosition": "center"
+            },
+            {
+              "acquiredAt": "",
+              "id": "item-mrdg0w2u-5-yyeo",
+              "category": "other",
+              "imageFormat": "square",
+              "quantity": "1",
+              "tags": "",
+              "originItemDbKey": "",
+              "type": "Sonstiges",
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "itemDbKey": "",
+              "name": "Persönlicher Gegenstand",
+              "image": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterId": "",
+              "imagePosition": "center",
+              "icon": "*",
+              "imageFit": "contain",
+              "itemStorageMode": "character",
+              "infoRows": [],
+              "weight": "Noch festlegen"
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "healthColor": "#5c7f20",
+          "showInfoTable": false,
+          "companions": [
+            {
+              "imageFit": "cover",
+              "imageFormat": "landscape",
+              "role": "Begleiter",
+              "name": "Reittier / Gefährte",
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "image": "",
+              "description": "",
+              "species": "Tier oder Begleiter",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "id": "companion-mrdg0w2u-0-v3ko",
+              "status": "Gesund"
+            },
+            {
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "imageFormat": "landscape",
+              "name": "Treuer Begleiter",
+              "infoRows": [],
+              "role": "Gefährte",
+              "id": "companion-mrdg0w2u-1-ikzv",
+              "imageFit": "cover",
+              "imagePosition": "top",
+              "status": "Noch festlegen",
+              "description": "",
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20"
+            }
+          ]
+        },
+        "createdAt": "2026-07-09T11:49:49.082Z",
+        "role": "",
+        "profileLink": "",
+        "status": "",
+        "name": "Breccan Dubhan",
+        "bio": "",
+        "updatedAt": "2026-07-10T11:52:11.154Z",
+        "archived": false,
+        "playerOwner": "erdi",
+        "aliases": []
+      }
+    ]
+  },
+  "character": {
+    "id": "lsJi9ILWHyLgdVE2UZWM",
+    "fraktion": "Sept Dubhan, Tir na Brann - Land der Wälle",
+    "portrait": "https://i.imgur.com/Ce392i6.png",
+    "taxonomyPath": "Faelaorn > Tir na Brann > Tir na Fuil > Caer Dubhan",
+    "emotesOverride": true,
+    "origin": "",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/jK2YpJn.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/4QeINFt.png"
+      },
+      {
+        "img": "https://i.imgur.com/Kk2z7AF.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/jOV6dYS.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/WMHOnFs.png"
+      },
+      {
+        "img": "https://i.imgur.com/vQCuYml.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/P8G7N2O.png"
+      },
+      {
+        "img": "https://i.imgur.com/KLSdry7.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/M5pPAwu.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/m8pHhtX.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ZlaT3ah.png"
+      },
+      {
+        "img": "https://i.imgur.com/cBGopjl.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/U4jHX8H.png"
+      },
+      {
+        "img": "https://i.imgur.com/flwWmd2.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/CboamWo.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/y6R428H.png"
+      },
+      {
+        "img": "https://i.imgur.com/KM9tS6S.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/GonGkoZ.png",
+        "label": ""
+      }
+    ],
+    "title": "Sept Oberhaupt, Caer Dubhan",
+    "plotNode": "",
+    "relevance": "",
+    "currentLocation": "",
+    "inventory": {
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "open": false,
+        "status": "",
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "status": "Gesund",
+      "portraitPosition": "top",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "role": "Rolle",
+      "name": "Name des Charakters",
+      "portraitFit": "cover",
+      "carryValue": "Noch festlegen",
+      "characterId": "lsJi9ILWHyLgdVE2UZWM",
+      "portraitFormat": "portrait",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "level": "Stufe",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyNotice": "",
+      "infoRows": [
+        {
+          "label": "Status",
+          "value": "Gesund",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "TP / Zustand"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Tragkapazität",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Fraktion",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Aufenthalt"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Notiz"
+        }
+      ],
+      "portrait": "https://i.imgur.com/Ce392i6.png",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "items": [
+        {
+          "originItemDbKey": "",
+          "ownerCharacterName": "",
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mrdg0w2u-0-pus1",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "tags": "",
+          "type": "Waffe",
+          "weight": "Noch festlegen",
+          "category": "weapon",
+          "image": "",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "icon": "*"
+        },
+        {
+          "individualizedAt": "",
+          "category": "armor",
+          "icon": "*",
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "image": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "tags": "",
+          "type": "Rüstung",
+          "ownerCharacterId": "",
+          "id": "item-mrdg0w2u-1-ds35",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square"
+        },
+        {
+          "ownerCharacterId": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mrdg0w2u-2-d4fb",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "image": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "icon": "*",
+          "itemDbKey": "",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "quantity": "1",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Ausrüstung"
+        },
+        {
+          "itemDbKey": "",
+          "infoRows": [],
+          "imagePosition": "center",
+          "icon": "*",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "id": "item-mrdg0w2u-3-t2m1",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "itemStorageMode": "character",
+          "image": "",
+          "imageFormat": "square",
+          "tags": "",
+          "individualizedAt": "",
+          "type": "Trinktur",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "quantity": "1",
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut"
+        },
+        {
+          "id": "item-mrdg0w2u-4-9x6e",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "icon": "*",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "category": "documents",
+          "weight": "Noch festlegen",
+          "originItemDbKey": "",
+          "image": "",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "ownerCharacterId": "",
+          "imagePosition": "center"
+        },
+        {
+          "acquiredAt": "",
+          "id": "item-mrdg0w2u-5-yyeo",
+          "category": "other",
+          "imageFormat": "square",
+          "quantity": "1",
+          "tags": "",
+          "originItemDbKey": "",
+          "type": "Sonstiges",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "icon": "*",
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "weight": "Noch festlegen"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "healthColor": "#5c7f20",
+      "showInfoTable": false,
+      "companions": [
+        {
+          "imageFit": "cover",
+          "imageFormat": "landscape",
+          "role": "Begleiter",
+          "name": "Reittier / Gefährte",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "image": "",
+          "description": "",
+          "species": "Tier oder Begleiter",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "id": "companion-mrdg0w2u-0-v3ko",
+          "status": "Gesund"
+        },
+        {
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "imageFormat": "landscape",
+          "name": "Treuer Begleiter",
+          "infoRows": [],
+          "role": "Gefährte",
+          "id": "companion-mrdg0w2u-1-ikzv",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "status": "Noch festlegen",
+          "description": "",
+          "species": "Tier / Person",
+          "statusColor": "#5c7f20"
+        }
+      ]
+    },
+    "createdAt": "2026-07-09T11:49:49.082Z",
+    "role": "",
+    "profileLink": "",
+    "status": "",
+    "name": "Breccan Dubhan",
+    "bio": "",
+    "updatedAt": "2026-07-10T11:52:11.154Z",
+    "archived": false,
+    "playerOwner": "erdi",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": "person--haus-dubhan--breccan-dubhan"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-dubhan--breccan-dubhan",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1695",
+      "death": "",
+      "houseId": "house-dubhan",
+      "houseName": "Sept Dubhan",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-dubhan",
+          "personId": "breccan-dubhan",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan&mode=view&person=breccan-dubhan",
+          "fingerprint": "{\"name\":\"Breccan Dubhan\",\"title\":\"Krieger der Dubhan, vormals Grenzwächter Faelaorns\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhan\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"fearghal-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--fearghal-dubhan\",\"name\":\"Fearghal Dubhan\"},{\"personId\":\"sorcha-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--sorcha-dubhan\",\"name\":\"Sorcha\"}],\"partners\":[{\"personId\":\"eithne-dubhan\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-dubhan\",\"name\":\"Eithne Dubhan\"}],\"children\":[{\"personId\":\"rogaire-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--rogaire-dubhan\",\"name\":\"Rogaire Dubhan\"},{\"personId\":\"alpin-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--alpin-dubhan\",\"name\":\"Alpin Dubhan\"}]}}"
+        },
+        {
+          "familyId": "haus-dubhan-gwynthor",
+          "personId": "breccan-dubhan",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+          "fingerprint": "{\"name\":\"Breccan Dubhan\",\"title\":\"Oberherr und Gründer\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhan-gwynthor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eithne-dubhan\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eithne-dubhan\",\"name\":\"Eithne Dubhan\"}],\"children\":[{\"personId\":\"rogaire-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--rogaire-dubhan\",\"name\":\"Rogaire Dubhan\"},{\"personId\":\"alpin-dubhan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dubhan--alpin-dubhan\",\"name\":\"Alpin Dubhan\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "fearghal-dubhan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-dubhan--fearghal-dubhan",
+            "name": "Fearghal Dubhan"
+          },
+          {
+            "personId": "sorcha-dubhan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--sorcha-dubhan",
+            "name": "Sorcha"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "eithne-dubhan",
+            "type": "marriage",
+            "status": "ended",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--eithne-dubhan",
+            "name": "Eithne Dubhan"
+          }
+        ],
+        "children": [
+          {
+            "personId": "rogaire-dubhan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-dubhan--rogaire-dubhan",
+            "name": "Rogaire Dubhan"
+          },
+          {
+            "personId": "alpin-dubhan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-dubhan--alpin-dubhan",
+            "name": "Alpin Dubhan"
+          }
+        ]
+      }
+    }
+  }
+}

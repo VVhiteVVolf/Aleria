@@ -1,4 +1,4 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-action-economy-v2';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-gawain-level4-v1';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260803-economy-audit-v1';
 import {
   buildSceneRestParticipant,

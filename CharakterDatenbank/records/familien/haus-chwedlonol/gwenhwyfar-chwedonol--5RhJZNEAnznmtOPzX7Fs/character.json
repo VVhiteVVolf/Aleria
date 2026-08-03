@@ -1,0 +1,1158 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--5RhJZNEAnznmtOPzX7Fs",
+  "slug": "gwenhwyfar-chwedonol",
+  "identity": {
+    "name": "Gwenhwyfar Chwedonol",
+    "aliases": [],
+    "worldPersonId": "person--haus-chwedlonol--gwenhwyfar-chwedlonol"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chwedlonol",
+      "label": "Haus Chwedonol"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chwedlonol",
+        "familyTitle": "Haus Chwedonol",
+        "personId": "gwenhwyfar-chwedlonol",
+        "worldPersonId": "person--haus-chwedlonol--gwenhwyfar-chwedlonol",
+        "houseId": "house-chwedlonol",
+        "houseName": "Haus Chwedonol",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=gwenhwyfar-chwedlonol",
+        "fingerprint": "{\"name\":\"Gwenhwyfar Chwedonol\",\"title\":\"Ritterherrin des Hauses Chwedonol\",\"birth\":\"1652\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chwedlonol\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chwedlonol/gwenhwyfar-chwedlonol.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"meredithe-chwedlonol\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-chwedlonol--meredithe-chwedlonol\",\"name\":\"Meredithe Chwedonol\"},{\"personId\":\"ekmeleddin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--family-tree--ekmeleddin\",\"name\":\"Ekmeleddin\"}],\"partners\":[{\"personId\":\"cynfarch\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--cynfarch\",\"name\":\"Cynfarch\"}],\"children\":[{\"personId\":\"niniane-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--niniane-chwedlonol\",\"name\":\"Niniane Chwedonol\"},{\"personId\":\"meredithe-1677-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--meredithe-1677-chwedlonol\",\"name\":\"Meredithe Chwedonol\"},{\"personId\":\"rhonwen-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--rhonwen-chwedlonol\",\"name\":\"Rhonwen Chwedonol\"}]}}",
+        "score": 195
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor-glastraeth",
+        "label": "(Gwynthor), Glastraeth",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "(Gwynthor), Glastraeth"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "5RhJZNEAnznmtOPzX7Fs",
+      "documentIds": [
+        "5RhJZNEAnznmtOPzX7Fs"
+      ],
+      "documents": [
+        {
+          "documentId": "5RhJZNEAnznmtOPzX7Fs",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chwedlonol",
+        "personId": "gwenhwyfar-chwedlonol",
+        "worldPersonId": "person--haus-chwedlonol--gwenhwyfar-chwedlonol",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=gwenhwyfar-chwedlonol"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "5RhJZNEAnznmtOPzX7Fs"
+    ],
+    "contentHash": "8dce34b3f16f4748813885c9589af3155f8c427180f4f3b6f85083894efbb4b0"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "5RhJZNEAnznmtOPzX7Fs",
+        "name": "Gwenhwyfar Chwedonol",
+        "portrait": "https://64.media.tumblr.com/706336b351fa2813b66cc5a030723bfe/509b0fc594dd0b61-78/s250x400/45ea1d30fc0fbc85448975851e05031f1f822ae7.pnj",
+        "inventory": {
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0
+          },
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "status": "Gesund",
+          "level": "Haus Chwedonol, Gwynthor & Glastraeth",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "role": "Ritterherrin, Gwynthor & Glastraeth",
+          "portraitFit": "cover",
+          "name": "Gwenhwyfar Chwedonol",
+          "categories": [
+            {
+              "id": "weapon",
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents",
+              "label": "Dokumente"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "equipmentQuiz": {
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "updatedAt": "",
+            "open": false,
+            "status": ""
+          },
+          "title": "Charakter-Inventar",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portraitPosition": "top",
+          "moneyNotice": "",
+          "infoRows": [],
+          "companions": [
+            {
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "role": "Begleiter",
+              "status": "Gesund",
+              "image": "",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "description": "",
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "species": "Tier oder Begleiter",
+              "imageFormat": "landscape"
+            },
+            {
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "description": "",
+              "status": "Noch festlegen",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imageFormat": "landscape",
+              "image": "",
+              "imageFit": "cover",
+              "infoRows": []
+            }
+          ],
+          "portraitFormat": "portrait",
+          "carryValue": "Noch festlegen",
+          "portrait": "https://64.media.tumblr.com/706336b351fa2813b66cc5a030723bfe/509b0fc594dd0b61-78/s250x400/45ea1d30fc0fbc85448975851e05031f1f822ae7.pnj",
+          "items": [
+            {
+              "category": "weapon",
+              "icon": "*",
+              "quantity": "1",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imageFit": "contain",
+              "name": "Hauptwaffe",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "image": "",
+              "weight": "Noch festlegen",
+              "type": "Waffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFormat": "square",
+              "tags": ""
+            },
+            {
+              "quantity": "1",
+              "name": "Rüstung / Schutz",
+              "category": "armor",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Rüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "id": "item-mqu1vat1-1-exvo",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "infoRows": [],
+              "image": "",
+              "icon": "*",
+              "imageFit": "contain"
+            },
+            {
+              "imagePosition": "center",
+              "icon": "*",
+              "category": "equipment",
+              "imageFormat": "square",
+              "quantity": "1",
+              "image": "",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-2-0fx2",
+              "tags": "",
+              "infoRows": [],
+              "type": "Ausrüstung",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "name": "Reiseausrüstung",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen"
+            },
+            {
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "quantity": "1",
+              "id": "item-mqu1vat1-3-2lgm",
+              "image": "",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "infoRows": []
+            },
+            {
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "icon": "*",
+              "category": "documents",
+              "quantity": "1",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-4-ajrj",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "tags": "",
+              "type": "Dokument",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "image": "",
+              "category": "other",
+              "icon": "*",
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-5-5kao",
+              "type": "Sonstiges",
+              "imagePosition": "center",
+              "tags": ""
+            }
+          ],
+          "hitpoints": "TP / Zustand"
+        },
+        "fraktion": "Haus Chwedonol, Gwynthor & Glastraeth",
+        "bio": "",
+        "emotesOverride": true,
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/1iGVXa3.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/0ONeINH.png"
+          },
+          {
+            "img": "https://i.imgur.com/SKirpCq.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/eQghPM4.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/AJxB35q.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/w0mYSvX.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/09LbTLO.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/FTBqKLp.png"
+          }
+        ],
+        "archived": false,
+        "aliases": [],
+        "title": "Ritterherrin, Gwynthor & Glastraeth",
+        "playerOwner": "patrick"
+      }
+    ]
+  },
+  "character": {
+    "id": "5RhJZNEAnznmtOPzX7Fs",
+    "name": "Gwenhwyfar Chwedonol",
+    "portrait": "https://64.media.tumblr.com/706336b351fa2813b66cc5a030723bfe/509b0fc594dd0b61-78/s250x400/45ea1d30fc0fbc85448975851e05031f1f822ae7.pnj",
+    "inventory": {
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "status": "Gesund",
+      "level": "Haus Chwedonol, Gwynthor & Glastraeth",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "role": "Ritterherrin, Gwynthor & Glastraeth",
+      "portraitFit": "cover",
+      "name": "Gwenhwyfar Chwedonol",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "equipmentQuiz": {
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "updatedAt": "",
+        "open": false,
+        "status": ""
+      },
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portraitPosition": "top",
+      "moneyNotice": "",
+      "infoRows": [],
+      "companions": [
+        {
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "role": "Begleiter",
+          "status": "Gesund",
+          "image": "",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "species": "Tier oder Begleiter",
+          "imageFormat": "landscape"
+        },
+        {
+          "species": "Tier / Person",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "description": "",
+          "status": "Noch festlegen",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFormat": "landscape",
+          "image": "",
+          "imageFit": "cover",
+          "infoRows": []
+        }
+      ],
+      "portraitFormat": "portrait",
+      "carryValue": "Noch festlegen",
+      "portrait": "https://64.media.tumblr.com/706336b351fa2813b66cc5a030723bfe/509b0fc594dd0b61-78/s250x400/45ea1d30fc0fbc85448975851e05031f1f822ae7.pnj",
+      "items": [
+        {
+          "category": "weapon",
+          "icon": "*",
+          "quantity": "1",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFit": "contain",
+          "name": "Hauptwaffe",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "image": "",
+          "weight": "Noch festlegen",
+          "type": "Waffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFormat": "square",
+          "tags": ""
+        },
+        {
+          "quantity": "1",
+          "name": "Rüstung / Schutz",
+          "category": "armor",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-1-exvo",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "infoRows": [],
+          "image": "",
+          "icon": "*",
+          "imageFit": "contain"
+        },
+        {
+          "imagePosition": "center",
+          "icon": "*",
+          "category": "equipment",
+          "imageFormat": "square",
+          "quantity": "1",
+          "image": "",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-2-0fx2",
+          "tags": "",
+          "infoRows": [],
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen"
+        },
+        {
+          "category": "potions",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "quantity": "1",
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "infoRows": []
+        },
+        {
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "icon": "*",
+          "category": "documents",
+          "quantity": "1",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "tags": "",
+          "type": "Dokument",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "image": "",
+          "category": "other",
+          "icon": "*",
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-5-5kao",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "tags": ""
+        }
+      ],
+      "hitpoints": "TP / Zustand"
+    },
+    "fraktion": "Haus Chwedonol, Gwynthor & Glastraeth",
+    "bio": "",
+    "emotesOverride": true,
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/1iGVXa3.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/0ONeINH.png"
+      },
+      {
+        "img": "https://i.imgur.com/SKirpCq.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/eQghPM4.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/AJxB35q.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/w0mYSvX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/09LbTLO.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/FTBqKLp.png"
+      }
+    ],
+    "archived": false,
+    "aliases": [],
+    "title": "Ritterherrin, Gwynthor & Glastraeth",
+    "playerOwner": "patrick",
+    "identity": {
+      "worldPersonId": "person--haus-chwedlonol--gwenhwyfar-chwedlonol"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chwedlonol--gwenhwyfar-chwedlonol",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1652",
+      "death": "",
+      "houseId": "house-chwedlonol",
+      "houseName": "Haus Chwedonol",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chwedlonol",
+          "personId": "gwenhwyfar-chwedlonol",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=gwenhwyfar-chwedlonol",
+          "fingerprint": "{\"name\":\"Gwenhwyfar Chwedonol\",\"title\":\"Ritterherrin des Hauses Chwedonol\",\"birth\":\"1652\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chwedlonol\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chwedlonol/gwenhwyfar-chwedlonol.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"meredithe-chwedlonol\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-chwedlonol--meredithe-chwedlonol\",\"name\":\"Meredithe Chwedonol\"},{\"personId\":\"ekmeleddin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--family-tree--ekmeleddin\",\"name\":\"Ekmeleddin\"}],\"partners\":[{\"personId\":\"cynfarch\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--cynfarch\",\"name\":\"Cynfarch\"}],\"children\":[{\"personId\":\"niniane-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--niniane-chwedlonol\",\"name\":\"Niniane Chwedonol\"},{\"personId\":\"meredithe-1677-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--meredithe-1677-chwedlonol\",\"name\":\"Meredithe Chwedonol\"},{\"personId\":\"rhonwen-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--rhonwen-chwedlonol\",\"name\":\"Rhonwen Chwedonol\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "meredithe-chwedlonol",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--haus-chwedlonol--meredithe-chwedlonol",
+            "name": "Meredithe Chwedonol"
+          },
+          {
+            "personId": "ekmeleddin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--family-tree--ekmeleddin",
+            "name": "Ekmeleddin"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "cynfarch",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--cynfarch",
+            "name": "Cynfarch"
+          }
+        ],
+        "children": [
+          {
+            "personId": "niniane-chwedlonol",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chwedlonol--niniane-chwedlonol",
+            "name": "Niniane Chwedonol"
+          },
+          {
+            "personId": "meredithe-1677-chwedlonol",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chwedlonol--meredithe-1677-chwedlonol",
+            "name": "Meredithe Chwedonol"
+          },
+          {
+            "personId": "rhonwen-chwedlonol",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chwedlonol--rhonwen-chwedlonol",
+            "name": "Rhonwen Chwedonol"
+          }
+        ]
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

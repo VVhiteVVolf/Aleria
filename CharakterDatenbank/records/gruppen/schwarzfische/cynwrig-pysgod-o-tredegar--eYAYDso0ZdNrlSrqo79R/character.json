@@ -1,0 +1,1045 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--eYAYDso0ZdNrlSrqo79R",
+  "slug": "cynwrig-pysgod-o-tredegar",
+  "identity": {
+    "name": "Cynwrig Pysgod O'Tredegar",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarzfische",
+      "label": "Schwarzfische",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarzfische"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "eYAYDso0ZdNrlSrqo79R",
+      "documentIds": [
+        "eYAYDso0ZdNrlSrqo79R"
+      ],
+      "documents": [
+        {
+          "documentId": "eYAYDso0ZdNrlSrqo79R",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "eYAYDso0ZdNrlSrqo79R"
+    ],
+    "contentHash": "645f74ac1137560f8b374d9c00c6ea44338cef57853ba509d31f5ef2aa934618"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "eYAYDso0ZdNrlSrqo79R",
+        "playerOwner": "erdi",
+        "name": "Cynwrig Pysgod O'Tredegar",
+        "archived": false,
+        "bio": "Cynwrig ist der Kommandant der Schwarzfische, einem Hauptbanner der Windreiter Söldner und Ritter und Spross des Grafenhauses Psygod.",
+        "inventory": {
+          "role": "Ritter & Kommandant der Schwarzfische",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "role": "Begleiter",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "name": "Reittier / Gefährte",
+              "imageFit": "cover",
+              "description": "",
+              "status": "Gesund",
+              "imagePosition": "top",
+              "image": "",
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "species": "Tier oder Begleiter",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "infoRows": [],
+              "imagePosition": "top",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "imageFit": "cover",
+              "statusColor": "#5c7f20",
+              "name": "Treuer Begleiter",
+              "species": "Tier / Person",
+              "role": "Gefährte",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "description": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "status": "Noch festlegen",
+              "imageFormat": "landscape"
+            }
+          ],
+          "name": "Cynwrig Pysgod O'Tredegar",
+          "moneyNotice": "",
+          "level": "Kommandant bei den Windreiter Söldnern",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "portraitFormat": "portrait",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portrait": "https://i.imgur.com/0zwjCkA.jpeg",
+          "items": [
+            {
+              "image": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "category": "weapon",
+              "type": "Waffe",
+              "tags": "",
+              "imagePosition": "center"
+            },
+            {
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "image": "",
+              "id": "item-mqu1vat1-1-exvo",
+              "infoRows": [],
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "tags": "",
+              "category": "armor",
+              "type": "Rüstung",
+              "quantity": "1"
+            },
+            {
+              "id": "item-mqu1vat1-2-0fx2",
+              "infoRows": [],
+              "icon": "*",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imageFit": "contain",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "category": "equipment",
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Ausrüstung",
+              "imageFormat": "square"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "imageFormat": "square",
+              "category": "potions",
+              "icon": "*",
+              "image": "",
+              "id": "item-mqu1vat1-3-2lgm",
+              "weight": "Noch festlegen",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "type": "Trinktur",
+              "imagePosition": "center",
+              "tags": "",
+              "imageFit": "contain"
+            },
+            {
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-4-ajrj",
+              "weight": "Noch festlegen",
+              "type": "Dokument",
+              "tags": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Dokumente / Urkunden",
+              "quantity": "1",
+              "imagePosition": "center",
+              "category": "documents"
+            },
+            {
+              "imageFit": "contain",
+              "infoRows": [],
+              "icon": "*",
+              "imageFormat": "square",
+              "image": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "type": "Sonstiges",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "other",
+              "id": "item-mqu1vat1-5-5kao",
+              "imagePosition": "center",
+              "quantity": "1"
+            }
+          ],
+          "status": "Gesund",
+          "infoRows": [],
+          "healthColor": "#5c7f20",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "moneyState": {
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitPosition": "top",
+          "portraitFit": "cover",
+          "title": "Charakter-Inventar",
+          "equipmentQuiz": {
+            "resultText": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false,
+            "updatedAt": ""
+          }
+        },
+        "portrait": "https://i.imgur.com/0zwjCkA.jpeg",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/Sm3zR5S.jpeg",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/FdbpwY1.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/hQpRNkI.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/IJseGGF.png"
+          },
+          {
+            "img": "https://i.imgur.com/N8D3FLi.png",
+            "label": ""
+          }
+        ],
+        "aliases": [],
+        "fraktion": "Kommandant bei den Windreiter Söldnern",
+        "title": "Ritter & Kommandant der Schwarzfische",
+        "emotesOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "eYAYDso0ZdNrlSrqo79R",
+    "playerOwner": "erdi",
+    "name": "Cynwrig Pysgod O'Tredegar",
+    "archived": false,
+    "bio": "Cynwrig ist der Kommandant der Schwarzfische, einem Hauptbanner der Windreiter Söldner und Ritter und Spross des Grafenhauses Psygod.",
+    "inventory": {
+      "role": "Ritter & Kommandant der Schwarzfische",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "role": "Begleiter",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "name": "Reittier / Gefährte",
+          "imageFit": "cover",
+          "description": "",
+          "status": "Gesund",
+          "imagePosition": "top",
+          "image": "",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "species": "Tier oder Begleiter",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "infoRows": [],
+          "imagePosition": "top",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "status": "Noch festlegen",
+          "imageFormat": "landscape"
+        }
+      ],
+      "name": "Cynwrig Pysgod O'Tredegar",
+      "moneyNotice": "",
+      "level": "Kommandant bei den Windreiter Söldnern",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFormat": "portrait",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portrait": "https://i.imgur.com/0zwjCkA.jpeg",
+      "items": [
+        {
+          "image": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "icon": "*",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "category": "weapon",
+          "type": "Waffe",
+          "tags": "",
+          "imagePosition": "center"
+        },
+        {
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "image": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [],
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "category": "armor",
+          "type": "Rüstung",
+          "quantity": "1"
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "infoRows": [],
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Ausrüstung",
+          "imageFormat": "square"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "imageFormat": "square",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "type": "Trinktur",
+          "imagePosition": "center",
+          "tags": "",
+          "imageFit": "contain"
+        },
+        {
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "type": "Dokument",
+          "tags": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Dokumente / Urkunden",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "documents"
+        },
+        {
+          "imageFit": "contain",
+          "infoRows": [],
+          "icon": "*",
+          "imageFormat": "square",
+          "image": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "imagePosition": "center",
+          "quantity": "1"
+        }
+      ],
+      "status": "Gesund",
+      "infoRows": [],
+      "healthColor": "#5c7f20",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "moneyState": {
+        "gold": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitPosition": "top",
+      "portraitFit": "cover",
+      "title": "Charakter-Inventar",
+      "equipmentQuiz": {
+        "resultText": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false,
+        "updatedAt": ""
+      }
+    },
+    "portrait": "https://i.imgur.com/0zwjCkA.jpeg",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/Sm3zR5S.jpeg",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/FdbpwY1.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/hQpRNkI.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/IJseGGF.png"
+      },
+      {
+        "img": "https://i.imgur.com/N8D3FLi.png",
+        "label": ""
+      }
+    ],
+    "aliases": [],
+    "fraktion": "Kommandant bei den Windreiter Söldnern",
+    "title": "Ritter & Kommandant der Schwarzfische",
+    "emotesOverride": true,
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

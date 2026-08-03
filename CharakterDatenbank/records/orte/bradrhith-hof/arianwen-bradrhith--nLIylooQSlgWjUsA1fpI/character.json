@@ -1,0 +1,1159 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--nLIylooQSlgWjUsA1fpI",
+  "slug": "arianwen-bradrhith",
+  "identity": {
+    "name": "Arianwen Bradrhith",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "bradrhith-hof",
+      "label": "Bradrhith Hof",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "bradrhith-hof",
+        "label": "Bradrhith Hof",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Bradrhith Hof"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "nLIylooQSlgWjUsA1fpI",
+      "documentIds": [
+        "nLIylooQSlgWjUsA1fpI"
+      ],
+      "documents": [
+        {
+          "documentId": "nLIylooQSlgWjUsA1fpI",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "nLIylooQSlgWjUsA1fpI"
+    ],
+    "contentHash": "eca6d94c54410d6a608948e9395181edff0037b5c7b918bf07af7fbe4637376c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "nLIylooQSlgWjUsA1fpI",
+        "aliases": [],
+        "profileLink": "",
+        "bio": "Arianwen Bradrhith ist die älteste Tochter des verstorbenen Hofherrn und rechtmäßige Erbin des Gestüts. Sie wuchs in der Verantwortung für Stall, Zucht und Handel auf und kennt den Wert jedes Tieres ebenso wie die Bedeutung des Hofes für die Draig. Ihr Auftreten ist gefasst und bestimmt – doch hinter der Haltung liegt eine Frau, die den Hof um jeden Preis zusammenhalten will, auch wenn dies bedeutet, harte Entscheidungen zu treffen.\n\nSie befindet sich nach dem Prozess in priesterlicher Gewahrsam im Orden der Geläuteren, wo sie im Gefolge des Patriarchen von Celtigerns Wacht als Geläuterte Schwester dient und büßt.",
+        "inventory": {
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "label": "Trinkturen",
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "portraitPosition": "top",
+          "items": [
+            {
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "infoRows": [],
+              "imageFit": "contain",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "type": "Waffe",
+              "image": "",
+              "tags": "",
+              "name": "Hauptwaffe",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "id": "item-mqu1vat1-0-w8ef",
+              "category": "weapon"
+            },
+            {
+              "name": "Rüstung / Schutz",
+              "imagePosition": "center",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "type": "Rüstung",
+              "category": "armor",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "image": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-2-0fx2",
+              "imagePosition": "center",
+              "category": "equipment",
+              "quantity": "1",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "image": "",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Ausrüstung",
+              "infoRows": [],
+              "imageFormat": "square",
+              "name": "Reiseausrüstung"
+            },
+            {
+              "tags": "",
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "image": "",
+              "weight": "Noch festlegen",
+              "name": "Heil- oder Verbrauchsgut",
+              "infoRows": [],
+              "imageFormat": "square",
+              "category": "potions",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-3-2lgm",
+              "icon": "*",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "imageFormat": "square",
+              "image": "",
+              "category": "documents",
+              "id": "item-mqu1vat1-4-ajrj",
+              "type": "Dokument",
+              "quantity": "1",
+              "tags": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*"
+            },
+            {
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "category": "other",
+              "tags": "",
+              "imageFormat": "square",
+              "image": "",
+              "quantity": "1",
+              "name": "Persönlicher Gegenstand",
+              "icon": "*",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "infoRows": [],
+              "id": "item-mqu1vat1-5-5kao",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            }
+          ],
+          "role": "Erbin des Hofes der Bradrhith",
+          "status": "Gesund",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "status": "",
+            "open": false,
+            "resultText": ""
+          },
+          "title": "Charakter-Inventar",
+          "name": "Arianwen Bradrhith",
+          "portraitFormat": "portrait",
+          "moneyNotice": "",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitFit": "cover",
+          "hitpoints": "TP / Zustand",
+          "companions": [
+            {
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "role": "Begleiter",
+              "status": "Gesund",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imagePosition": "top",
+              "name": "Reittier / Gefährte",
+              "imageFormat": "landscape",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "image": "",
+              "species": "Tier oder Begleiter",
+              "imageFit": "cover",
+              "description": ""
+            },
+            {
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "status": "Noch festlegen",
+              "description": "",
+              "role": "Gefährte",
+              "name": "Treuer Begleiter",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "imageFormat": "landscape",
+              "infoRows": [],
+              "imagePosition": "top",
+              "species": "Tier / Person",
+              "imageFit": "cover"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "infoRows": [],
+          "level": "Gwynthor/ Hof der Bradrhith",
+          "healthColor": "#5c7f20",
+          "portrait": "https://i.imgur.com/vfpCxHX.png",
+          "money": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        "portrait": "https://i.imgur.com/vfpCxHX.png",
+        "fraktion": "Gwynthor/ Hof der Bradrhith",
+        "name": "Arianwen Bradrhith",
+        "title": "Erbin des Hofes der Bradrhith",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/fthBzzz.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/rAsDOg4.png"
+          },
+          {
+            "img": "https://i.imgur.com/KsbgCSq.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jCecwKn.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/s2sSMUt.png"
+          },
+          {
+            "img": "https://i.imgur.com/SgZtgbk.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/BK0Paie.png"
+          },
+          {
+            "img": "https://i.imgur.com/wfF60oJ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/v0KIOCH.png"
+          },
+          {
+            "img": "https://i.imgur.com/ZRLjcMw.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jpiG7Sd.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/DcKMKJV.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/nCBh4yf.png"
+          },
+          {
+            "img": "https://i.imgur.com/CDxsAqa.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/CDxsAqa.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/qr7HqvX.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/yy02wma.png"
+          },
+          {
+            "img": "https://i.imgur.com/e9AFFn7.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/EFVeJXf.png"
+          }
+        ],
+        "playerOwner": "erdi",
+        "emotesOverride": true,
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "nLIylooQSlgWjUsA1fpI",
+    "aliases": [],
+    "profileLink": "",
+    "bio": "Arianwen Bradrhith ist die älteste Tochter des verstorbenen Hofherrn und rechtmäßige Erbin des Gestüts. Sie wuchs in der Verantwortung für Stall, Zucht und Handel auf und kennt den Wert jedes Tieres ebenso wie die Bedeutung des Hofes für die Draig. Ihr Auftreten ist gefasst und bestimmt – doch hinter der Haltung liegt eine Frau, die den Hof um jeden Preis zusammenhalten will, auch wenn dies bedeutet, harte Entscheidungen zu treffen.\n\nSie befindet sich nach dem Prozess in priesterlicher Gewahrsam im Orden der Geläuteren, wo sie im Gefolge des Patriarchen von Celtigerns Wacht als Geläuterte Schwester dient und büßt.",
+    "inventory": {
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "portraitPosition": "top",
+      "items": [
+        {
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "type": "Waffe",
+          "image": "",
+          "tags": "",
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon"
+        },
+        {
+          "name": "Rüstung / Schutz",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "type": "Rüstung",
+          "category": "armor",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "image": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-2-0fx2",
+          "imagePosition": "center",
+          "category": "equipment",
+          "quantity": "1",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "image": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "infoRows": [],
+          "imageFormat": "square",
+          "name": "Reiseausrüstung"
+        },
+        {
+          "tags": "",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "image": "",
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut",
+          "infoRows": [],
+          "imageFormat": "square",
+          "category": "potions",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-3-2lgm",
+          "icon": "*",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "imageFormat": "square",
+          "image": "",
+          "category": "documents",
+          "id": "item-mqu1vat1-4-ajrj",
+          "type": "Dokument",
+          "quantity": "1",
+          "tags": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*"
+        },
+        {
+          "type": "Sonstiges",
+          "weight": "Noch festlegen",
+          "category": "other",
+          "tags": "",
+          "imageFormat": "square",
+          "image": "",
+          "quantity": "1",
+          "name": "Persönlicher Gegenstand",
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "id": "item-mqu1vat1-5-5kao",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        }
+      ],
+      "role": "Erbin des Hofes der Bradrhith",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "open": false,
+        "resultText": ""
+      },
+      "title": "Charakter-Inventar",
+      "name": "Arianwen Bradrhith",
+      "portraitFormat": "portrait",
+      "moneyNotice": "",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitFit": "cover",
+      "hitpoints": "TP / Zustand",
+      "companions": [
+        {
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "role": "Begleiter",
+          "status": "Gesund",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "imageFormat": "landscape",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "image": "",
+          "species": "Tier oder Begleiter",
+          "imageFit": "cover",
+          "description": ""
+        },
+        {
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "status": "Noch festlegen",
+          "description": "",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFormat": "landscape",
+          "infoRows": [],
+          "imagePosition": "top",
+          "species": "Tier / Person",
+          "imageFit": "cover"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "infoRows": [],
+      "level": "Gwynthor/ Hof der Bradrhith",
+      "healthColor": "#5c7f20",
+      "portrait": "https://i.imgur.com/vfpCxHX.png",
+      "money": "0 Gold, 0 Silber, 0 Kupfer"
+    },
+    "portrait": "https://i.imgur.com/vfpCxHX.png",
+    "fraktion": "Gwynthor/ Hof der Bradrhith",
+    "name": "Arianwen Bradrhith",
+    "title": "Erbin des Hofes der Bradrhith",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/fthBzzz.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/rAsDOg4.png"
+      },
+      {
+        "img": "https://i.imgur.com/KsbgCSq.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jCecwKn.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/s2sSMUt.png"
+      },
+      {
+        "img": "https://i.imgur.com/SgZtgbk.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/BK0Paie.png"
+      },
+      {
+        "img": "https://i.imgur.com/wfF60oJ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/v0KIOCH.png"
+      },
+      {
+        "img": "https://i.imgur.com/ZRLjcMw.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jpiG7Sd.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/DcKMKJV.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nCBh4yf.png"
+      },
+      {
+        "img": "https://i.imgur.com/CDxsAqa.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/CDxsAqa.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/qr7HqvX.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/yy02wma.png"
+      },
+      {
+        "img": "https://i.imgur.com/e9AFFn7.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/EFVeJXf.png"
+      }
+    ],
+    "playerOwner": "erdi",
+    "emotesOverride": true,
+    "archived": false,
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

@@ -23,4 +23,13 @@ export class CombatDiceAdapter {
       rollType: 'general'
     });
   }
+
+  async rollSavingThrow({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null } = {}) {
+    const notation = buildAttackNotation(modifier, rollMode);
+    return this.service.roll(notation, container, {
+      roller: targetName,
+      purpose: `Rettungswurf gegen ${actorName}`,
+      rollType: 'saving-throw'
+    });
+  }
 }

@@ -72,9 +72,10 @@ export function findSpellSlotResourceId(resources = [], level = 0, fallbackToCan
   return resource?.id || (fallbackToCanonical ? getSpellSlotResourceId(normalizedLevel) : '');
 }
 
-export function ensureSpellSlotResources(resources = [], { enabled = false, spells = [], slotResourceIds = [] } = {}) {
+export function ensureSpellSlotResources(resources = [], { enabled = false, spells = [], slotResourceIds = [], always = false } = {}) {
   const result = (Array.isArray(resources) ? resources : []).map(resource => ({ ...resource }));
-  const configured = enabled
+  const configured = always
+    || enabled
     || (Array.isArray(spells) && spells.length > 0)
     || (Array.isArray(slotResourceIds) && slotResourceIds.length > 0)
     || result.some(resource => isSpellSlotResource(resource, slotResourceIds));

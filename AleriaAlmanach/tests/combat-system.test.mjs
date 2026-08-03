@@ -21,6 +21,7 @@ import {
 import { buildCombatProfileAiSnapshot } from '../modules/combat/combat-profile-context.js';
 import {
   createCharacterLevelUpPlan,
+  getLevelUpAttributePointAllowance,
   getSuggestedHitPointGain,
   previewCharacterLevelUp
 } from '../modules/combat/combat-level-up-model.js';
@@ -147,7 +148,7 @@ class FakeSkillDiceAdapter {
   }
 }
 
-test('migriert das alte Kampfprofil verlustarm in Schema sechs', () => {
+test('migriert das alte Kampfprofil verlustarm in Schema acht', () => {
   const profile = sanitizeCharacterCombatProfile({
     defense: 13,
     maximumHitPoints: 22,
@@ -157,7 +158,7 @@ test('migriert das alte Kampfprofil verlustarm in Schema sechs', () => {
     weapon: { name: 'Speer', damageFormula: '1W6 + 1' },
     armor: { name: 'Lederrüstung', defenseBonus: 2 }
   });
-  assert.equal(profile.schemaVersion, 6);
+  assert.equal(profile.schemaVersion, 8);
   assert.equal(profile.armorClass.base, 13);
   assert.equal(profile.hitPoints.maximumOverride, 22);
   assert.equal(profile.combat.attackBonus, 4);
@@ -198,7 +199,9 @@ test('führt einen normalen Stufenaufstieg mit automatischen Trefferpunkten als 
 
 test('wechselt nach Stufe 20 in Sonderstufen und respektiert das Gesamtlimit 30', () => {
   const levelTwenty = sanitizeCharacterCombatProfile({ progression: { level: 20, specialLevels: 0 } });
-  const specialPreview = previewCharacterLevelUp(levelTwenty, createCharacterLevelUpPlan(levelTwenty));
+  const specialPlan = createCharacterLevelUpPlan(levelTwenty);
+  specialPlan.attributeIncreases.strength = 4;
+  const specialPreview = previewCharacterLevelUp(levelTwenty, specialPlan);
   assert.equal(specialPreview.ready, true);
   assert.equal(specialPreview.profile.progression.level, 20);
   assert.equal(specialPreview.profile.progression.specialLevels, 1);
@@ -212,7 +215,7 @@ test('wechselt nach Stufe 20 in Sonderstufen und respektiert das Gesamtlimit 30'
 
 test('wendet freie Level-up-Entscheidungen auf Attribute, Ressourcen und Freischaltungen an', () => {
   const profile = sanitizeCharacterCombatProfile({
-    progression: { level: 4 },
+    progression: { level: 7 },
     attributes: [{ key: 'constitution', score: 13 }, { key: 'wisdom', score: 15 }],
     hitPoints: { current: 25, maximumOverride: 25 },
     resources: [{ id: 'mana', name: 'Mana', current: 3, maximum: 5 }],
@@ -220,7 +223,7 @@ test('wendet freie Level-up-Entscheidungen auf Attribute, Ressourcen und Freisch
   });
   const plan = createCharacterLevelUpPlan(profile);
   plan.attributeIncreases.constitution = 1;
-  plan.attributeIncreases.wisdom = 2;
+  plan.attributeIncreases.wisdom = 1;
   plan.hitPointMode = 'manual';
   plan.manualHitPointGain = 9;
   plan.resourceIncreases.mana = { current: 4, maximum: 4 };
@@ -229,7 +232,8 @@ test('wendet freie Level-up-Entscheidungen auf Attribute, Ressourcen und Freisch
   plan.newSpell = { name: 'Dornenruf', level: 2, manaCost: 3, rollFormula: '2W6', description: 'Dornen brechen hervor.', prepared: true };
   const preview = previewCharacterLevelUp(profile, plan);
   assert.equal(preview.profile.attributes.find(attribute => attribute.key === 'constitution').score, 14);
-  assert.equal(preview.profile.attributes.find(attribute => attribute.key === 'wisdom').score, 17);
+  assert.equal(preview.ready, true);
+  assert.equal(preview.profile.attributes.find(attribute => attribute.key === 'wisdom').score, 16);
   assert.equal(preview.profile.hitPoints.maximumOverride, 34);
   assert.equal(preview.profile.hitPoints.current, 34);
   assert.deepEqual(preview.profile.resources.find(resource => resource.id === 'mana'), {
@@ -240,6 +244,38 @@ test('wendet freie Level-up-Entscheidungen auf Attribute, Ressourcen und Freisch
   assert.equal(preview.profile.magic.enabled, true);
   assert.equal(preview.profile.magic.spells[0].damageFormula, undefined);
   assert.equal(preview.profile.magic.spells[0].rollFormula, '2d6');
+});
+
+test('vergibt Attributspunkte nur auf 4, 8, 12, 16 und 20 sowie vier Punkte je Sonderstufe', () => {
+  assert.equal(getLevelUpAttributePointAllowance({ progression: { level: 2 } }), 0);
+  assert.equal(getLevelUpAttributePointAllowance({ progression: { level: 3 } }), 2);
+  assert.equal(getLevelUpAttributePointAllowance({ progression: { level: 7 } }), 2);
+  assert.equal(getLevelUpAttributePointAllowance({ progression: { level: 20, specialLevels: 0 } }), 4);
+
+  const levelThree = sanitizeCharacterCombatProfile({ progression: { level: 3 } });
+  const missingPoints = previewCharacterLevelUp(levelThree, createCharacterLevelUpPlan(levelThree));
+  assert.equal(missingPoints.ready, false);
+  assert.match(missingPoints.errors[0], /genau 2 Attributspunkte/);
+  const balancedPlan = createCharacterLevelUpPlan(levelThree);
+  balancedPlan.attributeIncreases.strength = 1;
+  balancedPlan.attributeIncreases.dexterity = 1;
+  const balanced = previewCharacterLevelUp(levelThree, balancedPlan);
+  assert.equal(balanced.ready, true);
+  assert.equal(balanced.profile.attributes.find(attribute => attribute.key === 'strength').score, 11);
+  assert.equal(balanced.profile.attributes.find(attribute => attribute.key === 'dexterity').score, 11);
+});
+
+test('der erste Aura-Fokuspunkt wird ab normaler Stufe sechs freigeschaltet', () => {
+  const before = sanitizeCharacterCombatProfile({ progression: { level: 5 } });
+  assert.deepEqual(
+    [before.resources.find(resource => resource.id === 'aura-focus').current, before.resources.find(resource => resource.id === 'aura-focus').maximum],
+    [0, 0]
+  );
+  const after = sanitizeCharacterCombatProfile({ progression: { level: 6 }, resources: before.resources });
+  assert.deepEqual(
+    [after.resources.find(resource => resource.id === 'aura-focus').current, after.resources.find(resource => resource.id === 'aura-focus').maximum],
+    [1, 1]
+  );
 });
 
 test('berechnet Trefferpunkte aus Trefferwürfel, Konstitution und Stufe', () => {
@@ -393,6 +429,14 @@ test('aktive Zustände steuern den Angriffswurf und Vorteil und Nachteil heben s
 test('akzeptiert W-Schreibweise und verdoppelt bei kritischem Treffer nur Schadenswürfel', () => {
   assert.deepEqual(parseDamageFormula('1W8+1'), { diceCount: 1, sides: 8, fixedModifier: 1, notation: '1d8+1' });
   assert.equal(buildDamageNotation('1W8+1', 3, true), '2d8+4');
+  assert.deepEqual(parseDamageFormula('1W10+1W4'), {
+    diceCount: 2,
+    sides: null,
+    fixedModifier: 0,
+    notation: '1d10+1d4',
+    terms: [{ diceCount: 1, sides: 10 }, { diceCount: 1, sides: 4 }]
+  });
+  assert.equal(buildDamageNotation('1W10+1W4', 0, true), '2d10+2d4');
 });
 
 test('wertet Gleichstand, natürliche Eins und natürliche Zwanzig korrekt aus', () => {
@@ -613,6 +657,24 @@ test('Aura-Fokus ersetzt reguläre Aktions-, Mana- und Slotkosten vollständig',
   assert.deepEqual(getActionPaymentCosts(action, 'standard', profile).map(cost => [cost.resourceId, cost.amount]), [['action', 1], ['mana', 4]]);
 });
 
+test('Aura-Fokus ersetzt die Aktion, aber nicht die begrenzte Nutzung einer Technik', () => {
+  const profile = sanitizeCharacterCombatProfile({
+    resources: [{
+      id: 'technique-uses', name: 'Techniknutzungen', current: 2, maximum: 2,
+      category: 'technique-use', scope: 'persistent', recovery: 'day'
+    }],
+    aura: { enabled: true, focusResourceId: 'aura-focus', focusBypassCost: 1 }
+  });
+  const action = {
+    costs: [{ resourceId: 'action', amount: 1 }, { resourceId: 'technique-uses', amount: 1 }],
+    auraBypass: { allowed: true, cost: 1 }
+  };
+  assert.deepEqual(
+    getActionPaymentCosts(action, 'aura', profile).map(cost => [cost.resourceId, cost.amount]),
+    [['aura-focus', 1], ['technique-uses', 1]]
+  );
+});
+
 test('nicht freigeschaltete Aura- und Cheat-Zahlungen können keine Kosten umgehen', () => {
   const profile = sanitizeCharacterCombatProfile({
     aura: { enabled: false },
@@ -782,6 +844,8 @@ test('AleriaGPT erhält Aura-Ersatzregel, Zaubergrade und aktuelle Zauberplätze
   }));
   assert.equal(snapshot.actionEconomy.some(resource => resource.id === 'aura-focus'), true);
   assert.equal(snapshot.actionEconomyRules.auraFocusRule.replacesEntireRegularCostPackage, true);
+  assert.equal(snapshot.actionEconomyRules.auraFocusRule.preservesLimitedTechniqueUses, true);
+  assert.deepEqual(snapshot.character.progression.advancementRules.normalAttributeIncreaseLevels, [4, 8, 12, 16, 20]);
   assert.equal(snapshot.magic.spellLevelRules.cantrip.spellSlotCost, 0);
   assert.equal(snapshot.magic.spellLevelRules.slotLevels.length, 10);
   assert.equal(snapshot.magic.spellSlots.length, 10);
@@ -1107,3 +1171,60 @@ function ACTION_RESOURCE_IDS_FOR_TEST(cards) {
   return ['action', 'bonus-action', 'reaction', 'special-action']
     .map(id => [id, cards.find(card => card.resource.id === id)?.required]);
 }
+
+test('zielgebundene Traits veraendern einen Angriff nur gegen ein passend markiertes Ziel', async () => {
+  const actor = resolveCombatProfile(character('actor', {
+    conditions: [{
+      id: 'smell-aversion', name: 'Geruchsempfindlich', active: true,
+      triggerRules: [{
+        id: 'stink-penalty', enabled: true, phase: 'pre-roll', recipient: 'actor',
+        sourceRelation: 'self', activation: 'passive', frequency: 'always', condition: 'always',
+        actionKinds: ['weapon'], requiredTargetTags: ['stinkend'],
+        effects: { attackModifier: -2 }
+      }]
+    }]
+  }));
+  const smellyTarget = resolveCombatProfile(character('target', {
+    quirks: [{ id: 'stinkend', name: 'Stinkend', tags: 'Stinkend', active: true }]
+  }));
+  const neutralTarget = resolveCombatProfile(character('neutral'));
+
+  const affectedDice = new FakeDiceAdapter({ natural: 14, total: 18 });
+  const affected = await new CombatResolutionService(affectedDice).resolveAttack({ actor, target: smellyTarget });
+  assert.equal(affectedDice.attackCalls[0].modifier, actor.attackModifier - 2);
+  assert.equal(affected.ruleApplications[0].entryId, 'smell-aversion');
+
+  const neutralDice = new FakeDiceAdapter({ natural: 14, total: 20 });
+  const neutral = await new CombatResolutionService(neutralDice).resolveAttack({ actor, target: neutralTarget });
+  assert.equal(neutralDice.attackCalls[0].modifier, actor.attackModifier);
+  assert.equal(neutral.ruleApplications.length, 0);
+});
+
+test('fertigkeitsspezifischer Nachteil greift nur bei den hinterlegten Fertigkeiten', async () => {
+  const actor = character('actor', {
+    abilities: [{
+      id: 'muttersoehnchen', name: 'Muttersoehnchen', active: true,
+      triggerRules: [{
+        id: 'social-insecurity', enabled: true, phase: 'pre-roll', recipient: 'actor',
+        sourceRelation: 'self', activation: 'passive', frequency: 'always', condition: 'always',
+        actionKinds: ['skill'], skillIds: ['persuasion', 'survival', 'religion'],
+        effects: { rollMode: 'disadvantage' }
+      }]
+    }]
+  });
+  const persuasionDice = new FakeSkillDiceAdapter(12);
+  const persuasion = await new SkillResolutionService(persuasionDice).resolve({
+    actor,
+    settings: { skillId: 'persuasion', difficulty: 10, rollMode: 'normal' }
+  });
+  assert.equal(persuasion.rollMode, 'disadvantage');
+  assert.equal(persuasionDice.calls[0].rollMode, 'disadvantage');
+
+  const athleticsDice = new FakeSkillDiceAdapter(12);
+  const athletics = await new SkillResolutionService(athleticsDice).resolve({
+    actor,
+    settings: { skillId: 'athletics', difficulty: 10, rollMode: 'normal' }
+  });
+  assert.equal(athletics.rollMode, 'normal');
+  assert.equal(athleticsDice.calls[0].rollMode, 'normal');
+});

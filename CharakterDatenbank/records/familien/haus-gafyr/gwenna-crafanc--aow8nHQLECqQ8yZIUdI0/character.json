@@ -1,0 +1,1148 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--aow8nHQLECqQ8yZIUdI0",
+  "slug": "gwenna-crafanc",
+  "identity": {
+    "name": "Gwenna Crafanc",
+    "aliases": [],
+    "worldPersonId": "person--haus-crafanc--gwenna-crafanc"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gafyr",
+      "label": "Haus Gafyr"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gafyr",
+        "familyTitle": "Haus Gafyr",
+        "personId": "gwenna-crafanc",
+        "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+        "houseId": "house-crafanc",
+        "houseName": "Haus Crafanc",
+        "familyRole": "ward",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gwenna-crafanc",
+        "fingerprint": "{\"name\":\"Gwenna Crafanc\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-crafanc\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"egon-gafyr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"}],\"partners\":[],\"children\":[]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "talgarth",
+        "label": "Talgarth",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Talgarth"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "aow8nHQLECqQ8yZIUdI0",
+      "documentIds": [
+        "aow8nHQLECqQ8yZIUdI0"
+      ],
+      "documents": [
+        {
+          "documentId": "aow8nHQLECqQ8yZIUdI0",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gafyr",
+        "personId": "gwenna-crafanc",
+        "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gwenna-crafanc"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "aow8nHQLECqQ8yZIUdI0"
+    ],
+    "contentHash": "7592e664a6be1f7c4240206a2a414e72db94303b9566c83c605381d7eb8ca1cb"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "aow8nHQLECqQ8yZIUdI0",
+        "name": "Gwenna Crafanc",
+        "portrait": "https://i.imgur.com/nRZRnHW.jpeg",
+        "inventory": {
+          "portraitFit": "cover",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "companions": [
+            {
+              "imagePosition": "top",
+              "description": "",
+              "species": "Tier oder Begleiter",
+              "name": "Reittier / Gefährte",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "role": "Begleiter",
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "imageFit": "cover",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFormat": "landscape",
+              "image": ""
+            },
+            {
+              "name": "Treuer Begleiter",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "image": "",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "description": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFit": "cover",
+              "status": "Noch festlegen",
+              "species": "Tier / Person",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imagePosition": "top",
+              "imageFormat": "landscape"
+            }
+          ],
+          "level": "Haus Crafanc",
+          "carryValue": "Noch festlegen",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "updatedAt": "",
+            "resultText": "",
+            "status": "",
+            "open": false
+          },
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "items": [
+            {
+              "icon": "*",
+              "category": "weapon",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-0-w8ef",
+              "image": "",
+              "type": "Waffe",
+              "tags": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "infoRows": [],
+              "name": "Hauptwaffe"
+            },
+            {
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "icon": "*",
+              "quantity": "1",
+              "category": "armor",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "infoRows": [],
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz",
+              "image": "",
+              "imagePosition": "center",
+              "type": "Rüstung",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-1-exvo"
+            },
+            {
+              "imageFit": "contain",
+              "infoRows": [],
+              "imageFormat": "square",
+              "icon": "*",
+              "id": "item-mqu1vat1-2-0fx2",
+              "weight": "Noch festlegen",
+              "name": "Reiseausrüstung",
+              "image": "",
+              "imagePosition": "center",
+              "category": "equipment",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "type": "Ausrüstung",
+              "quantity": "1",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+            },
+            {
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "id": "item-mqu1vat1-3-2lgm",
+              "icon": "*",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "infoRows": [],
+              "image": "",
+              "category": "potions",
+              "imageFormat": "square",
+              "quantity": "1",
+              "tags": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Trinktur",
+              "name": "Heil- oder Verbrauchsgut",
+              "weight": "Noch festlegen"
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "image": "",
+              "imagePosition": "center",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "type": "Dokument",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "category": "documents",
+              "quantity": "1",
+              "imageFormat": "square",
+              "icon": "*",
+              "id": "item-mqu1vat1-4-ajrj"
+            },
+            {
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "category": "other",
+              "type": "Sonstiges",
+              "quantity": "1",
+              "image": "",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-5-5kao",
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*"
+            }
+          ],
+          "infoRows": [],
+          "hitpoints": "TP / Zustand",
+          "name": "Gwenna Crafanc",
+          "portraitFormat": "portrait",
+          "portrait": "https://i.imgur.com/nRZRnHW.jpeg",
+          "role": "Ritterin, Talgarth",
+          "portraitPosition": "top",
+          "moneyNotice": "",
+          "status": "Gesund",
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ]
+        },
+        "fraktion": "Haus Crafanc",
+        "bio": "",
+        "emotesOverride": true,
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/PyKXemD.png"
+          },
+          {
+            "img": "https://i.imgur.com/50WM5uz.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Bls0o3o.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/PtOQXAA.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/aqxyQ45.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/QkVit24.png"
+          },
+          {
+            "img": "https://i.imgur.com/WNnPS3J.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/M0uA3Oz.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/vplgSOY.png"
+          },
+          {
+            "img": "https://i.imgur.com/sgAk8Ue.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/WqiEyEY.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OFSN801.png"
+          }
+        ],
+        "archived": false,
+        "aliases": [],
+        "title": "Ritterin, Talgarth",
+        "playerOwner": "erdi"
+      }
+    ]
+  },
+  "character": {
+    "id": "aow8nHQLECqQ8yZIUdI0",
+    "name": "Gwenna Crafanc",
+    "portrait": "https://i.imgur.com/nRZRnHW.jpeg",
+    "inventory": {
+      "portraitFit": "cover",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "companions": [
+        {
+          "imagePosition": "top",
+          "description": "",
+          "species": "Tier oder Begleiter",
+          "name": "Reittier / Gefährte",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "role": "Begleiter",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "imageFit": "cover",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFormat": "landscape",
+          "image": ""
+        },
+        {
+          "name": "Treuer Begleiter",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "image": "",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "species": "Tier / Person",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imagePosition": "top",
+          "imageFormat": "landscape"
+        }
+      ],
+      "level": "Haus Crafanc",
+      "carryValue": "Noch festlegen",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "status": "",
+        "open": false
+      },
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "items": [
+        {
+          "icon": "*",
+          "category": "weapon",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-0-w8ef",
+          "image": "",
+          "type": "Waffe",
+          "tags": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "infoRows": [],
+          "name": "Hauptwaffe"
+        },
+        {
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "icon": "*",
+          "quantity": "1",
+          "category": "armor",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "imagePosition": "center",
+          "type": "Rüstung",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-1-exvo"
+        },
+        {
+          "imageFit": "contain",
+          "infoRows": [],
+          "imageFormat": "square",
+          "icon": "*",
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "image": "",
+          "imagePosition": "center",
+          "category": "equipment",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "type": "Ausrüstung",
+          "quantity": "1",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "icon": "*",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "image": "",
+          "category": "potions",
+          "imageFormat": "square",
+          "quantity": "1",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Trinktur",
+          "name": "Heil- oder Verbrauchsgut",
+          "weight": "Noch festlegen"
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "image": "",
+          "imagePosition": "center",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "type": "Dokument",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "category": "documents",
+          "quantity": "1",
+          "imageFormat": "square",
+          "icon": "*",
+          "id": "item-mqu1vat1-4-ajrj"
+        },
+        {
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "type": "Sonstiges",
+          "quantity": "1",
+          "image": "",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-5-5kao",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*"
+        }
+      ],
+      "infoRows": [],
+      "hitpoints": "TP / Zustand",
+      "name": "Gwenna Crafanc",
+      "portraitFormat": "portrait",
+      "portrait": "https://i.imgur.com/nRZRnHW.jpeg",
+      "role": "Ritterin, Talgarth",
+      "portraitPosition": "top",
+      "moneyNotice": "",
+      "status": "Gesund",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ]
+    },
+    "fraktion": "Haus Crafanc",
+    "bio": "",
+    "emotesOverride": true,
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PyKXemD.png"
+      },
+      {
+        "img": "https://i.imgur.com/50WM5uz.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Bls0o3o.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PtOQXAA.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/aqxyQ45.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/QkVit24.png"
+      },
+      {
+        "img": "https://i.imgur.com/WNnPS3J.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/M0uA3Oz.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/vplgSOY.png"
+      },
+      {
+        "img": "https://i.imgur.com/sgAk8Ue.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/WqiEyEY.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OFSN801.png"
+      }
+    ],
+    "archived": false,
+    "aliases": [],
+    "title": "Ritterin, Talgarth",
+    "playerOwner": "erdi",
+    "identity": {
+      "worldPersonId": "person--haus-crafanc--gwenna-crafanc"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "houseId": "house-crafanc",
+      "houseName": "Haus Crafanc",
+      "familyRole": "ward",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gafyr",
+          "personId": "gwenna-crafanc",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gwenna-crafanc",
+          "fingerprint": "{\"name\":\"Gwenna Crafanc\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-crafanc\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"egon-gafyr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "egon-gafyr",
+            "type": "foster",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--egon-gafyr",
+            "name": "Egon Gafyr"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+  }
+}

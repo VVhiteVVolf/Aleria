@@ -552,6 +552,12 @@
   gap: 0.4rem;
 }
 
+.cp-sheet-resource-group + .cp-sheet-resource-group {
+  margin-top: 0.9rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(195, 154, 87, 0.18);
+}
+
 .cp-sheet-resource-list > div {
   display: grid;
   grid-template-columns: minmax(220px, 1fr) 82px 82px minmax(118px, 0.42fr) 30px;
@@ -672,6 +678,23 @@
 .cp-sheet-narrative-title > input {
   color: var(--sheet-gold-bright);
   font-family: "Cinzel", serif;
+}
+
+.cp-sheet-equipment-link {
+  flex: 0 0 auto;
+  padding: 0.3rem 0.52rem;
+  border: 1px solid rgba(91, 139, 82, 0.55);
+  color: #a9c99d;
+  background: rgba(48, 83, 44, 0.18);
+  font: 600 0.62rem/1.1 var(--font-smallcaps, Georgia, serif);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.cp-sheet-equipment-link.is-system {
+  border-color: rgba(178, 141, 69, 0.4);
+  color: var(--gold-muted, #a88a51);
+  background: rgba(95, 69, 24, 0.12);
 }
 
 .cp-sheet-equipped,

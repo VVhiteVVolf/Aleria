@@ -1,0 +1,1196 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--YgZBoWpb8KPGN1CNmpd3",
+  "slug": "rihanna-draig-geb-ceirwyn",
+  "identity": {
+    "name": "Rihanna Draig (geb. Ceirwyn)",
+    "aliases": [],
+    "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-ceirwyn",
+      "label": "Haus Ceirwyn O'Calon"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-ceirwyn",
+        "familyTitle": "Haus Ceirwyn O'Calon",
+        "personId": "rihanna-ceirwynn",
+        "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+        "houseId": "house-ceirwyn",
+        "houseName": "Haus Ceirwyn O'Calon",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Vortigerns Ruh",
+          "Uthers Aufstieg",
+          "Calon"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view&person=rihanna-ceirwynn",
+        "fingerprint": "{\"name\":\"Rihanna Ceirwyn\",\"title\":\"Wegverheiratet an Haus Draig\",\"birth\":\"1678\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ceirwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"ariana-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--ariana-grael\",\"name\":\"Ariana Grael\"},{\"personId\":\"taliesin-ceirwyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--taliesin-ceirwyn\",\"name\":\"Taliesin Ceirwyn\"}],\"partners\":[{\"personId\":\"trayvon-draig\",\"type\":\"marriage\",\"status\":\"widowed\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"}],\"children\":[]}}",
+        "score": 185
+      },
+      {
+        "familyId": "haus-draig",
+        "familyTitle": "Haus Draig",
+        "personId": "rihanna-ceirwynn",
+        "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+        "houseId": "house-ceirwyn",
+        "houseName": "Haus Ceirwyn",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rihanna-ceirwynn",
+        "fingerprint": "{\"name\":\"Rihanna Ceirwyn\",\"title\":\"\",\"birth\":\"1678\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ceirwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"trayvon-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"}],\"children\":[{\"personId\":\"eilonwy-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--eilonwy-draig\",\"name\":\"Eilonwy Draig\"}]}}",
+        "score": 150
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": [
+        "Gwynthor > Gwynthor - Haus Draig"
+      ]
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "YgZBoWpb8KPGN1CNmpd3",
+      "documentIds": [
+        "YgZBoWpb8KPGN1CNmpd3"
+      ],
+      "documents": [
+        {
+          "documentId": "YgZBoWpb8KPGN1CNmpd3",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-ceirwyn",
+        "personId": "rihanna-ceirwynn",
+        "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view&person=rihanna-ceirwynn"
+      },
+      {
+        "familyId": "haus-draig",
+        "personId": "rihanna-ceirwynn",
+        "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rihanna-ceirwynn"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "YgZBoWpb8KPGN1CNmpd3"
+    ],
+    "contentHash": "fbfddfd38fc69f13b228f3a466b4b3c50346ddfc7839347b28becb851f88bf18"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "YgZBoWpb8KPGN1CNmpd3",
+        "aliases": [],
+        "archived": false,
+        "playerOwner": "erdi",
+        "name": "Rihanna Draig (geb. Ceirwyn)",
+        "inventory": {
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "moneyNotice": "",
+          "portrait": "https://i.imgur.com/wzxzNHo.jpeg",
+          "status": "Gesund",
+          "infoRows": [],
+          "carryLabel": "Traglast",
+          "moneyState": {
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0,
+            "copper": 0
+          },
+          "portraitFormat": "portrait",
+          "items": [
+            {
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "infoRows": [],
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "type": "Waffe",
+              "tags": "",
+              "imageFormat": "square",
+              "image": "",
+              "quantity": "1",
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "category": "weapon",
+              "imagePosition": "center"
+            },
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "imageFormat": "square",
+              "category": "armor",
+              "icon": "*",
+              "image": "",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "infoRows": [],
+              "type": "Rüstung",
+              "tags": "",
+              "imageFit": "contain"
+            },
+            {
+              "icon": "*",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "image": "",
+              "type": "Ausrüstung",
+              "tags": "",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "id": "item-mqu1vat1-2-0fx2",
+              "category": "equipment"
+            },
+            {
+              "type": "Trinktur",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "category": "potions",
+              "tags": "",
+              "quantity": "1",
+              "name": "Heil- oder Verbrauchsgut",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-3-2lgm",
+              "image": "",
+              "infoRows": []
+            },
+            {
+              "icon": "*",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "category": "documents",
+              "quantity": "1",
+              "imageFit": "contain",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "infoRows": [],
+              "tags": "",
+              "name": "Dokumente / Urkunden",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-4-ajrj",
+              "image": "",
+              "weight": "Noch festlegen"
+            },
+            {
+              "imageFit": "contain",
+              "name": "Persönlicher Gegenstand",
+              "id": "item-mqu1vat1-5-5kao",
+              "infoRows": [],
+              "image": "",
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "type": "Sonstiges",
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "category": "other",
+              "imageFormat": "square",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "icon": "*"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "companions": [
+            {
+              "description": "",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "status": "Gesund",
+              "infoRows": [],
+              "role": "Begleiter",
+              "statusColor": "#5c7f20",
+              "imageFit": "cover",
+              "image": "",
+              "name": "Reittier / Gefährte",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFormat": "landscape",
+              "imagePosition": "top",
+              "species": "Tier oder Begleiter"
+            },
+            {
+              "imageFit": "cover",
+              "image": "",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "infoRows": [],
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "status": "Noch festlegen",
+              "role": "Gefährte",
+              "description": "",
+              "name": "Treuer Begleiter"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "carryValue": "Noch festlegen",
+          "name": "Rihanna Draig (geb. Ceirwyn)",
+          "portraitPosition": "top",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "equipmentQuiz": {
+            "status": "",
+            "updatedAt": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "resultText": ""
+          },
+          "role": "Barde des Grafen, Calon",
+          "portraitFit": "cover",
+          "hitpoints": "TP / Zustand"
+        },
+        "emotes": [
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/a1erXYJ.png"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/8y57TkF.png"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/RDE5I0D.png"
+          },
+          {
+            "img": "https://i.imgur.com/uGSVmeG.png",
+            "label": "Avatar"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/dx4Jwt3.png"
+          },
+          {
+            "img": "https://i.imgur.com/86FDFnI.png",
+            "label": "Avatar"
+          },
+          {
+            "img": "https://i.imgur.com/2sG6rPG.png",
+            "label": "Avatar"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/A92xMoj.png"
+          },
+          {
+            "img": "https://i.imgur.com/d6Ta5BP.png",
+            "label": "Avatar"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/pesZZYU.png"
+          },
+          {
+            "label": "Avatar",
+            "img": "https://i.imgur.com/NhthAYC.png"
+          }
+        ],
+        "bio": "Rihanna Ceirwyn ist die Bardin des Grafen ...",
+        "portrait": "https://i.imgur.com/wzxzNHo.jpeg",
+        "emotesOverride": true,
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "title": "Barde des Grafen, Calon"
+      }
+    ]
+  },
+  "character": {
+    "id": "YgZBoWpb8KPGN1CNmpd3",
+    "aliases": [],
+    "archived": false,
+    "playerOwner": "erdi",
+    "name": "Rihanna Draig (geb. Ceirwyn)",
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "moneyNotice": "",
+      "portrait": "https://i.imgur.com/wzxzNHo.jpeg",
+      "status": "Gesund",
+      "infoRows": [],
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "portraitFormat": "portrait",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "infoRows": [],
+          "name": "Hauptwaffe",
+          "imageFit": "contain",
+          "type": "Waffe",
+          "tags": "",
+          "imageFormat": "square",
+          "image": "",
+          "quantity": "1",
+          "icon": "*",
+          "id": "item-mqu1vat1-0-w8ef",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "category": "weapon",
+          "imagePosition": "center"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "imageFormat": "square",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "infoRows": [],
+          "type": "Rüstung",
+          "tags": "",
+          "imageFit": "contain"
+        },
+        {
+          "icon": "*",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "image": "",
+          "type": "Ausrüstung",
+          "tags": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment"
+        },
+        {
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "category": "potions",
+          "tags": "",
+          "quantity": "1",
+          "name": "Heil- oder Verbrauchsgut",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": "",
+          "infoRows": []
+        },
+        {
+          "icon": "*",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "category": "documents",
+          "quantity": "1",
+          "imageFit": "contain",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "infoRows": [],
+          "tags": "",
+          "name": "Dokumente / Urkunden",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-4-ajrj",
+          "image": "",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imageFit": "contain",
+          "name": "Persönlicher Gegenstand",
+          "id": "item-mqu1vat1-5-5kao",
+          "infoRows": [],
+          "image": "",
+          "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "other",
+          "imageFormat": "square",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "icon": "*"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "companions": [
+        {
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "status": "Gesund",
+          "infoRows": [],
+          "role": "Begleiter",
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "image": "",
+          "name": "Reittier / Gefährte",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFormat": "landscape",
+          "imagePosition": "top",
+          "species": "Tier oder Begleiter"
+        },
+        {
+          "imageFit": "cover",
+          "image": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "infoRows": [],
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "status": "Noch festlegen",
+          "role": "Gefährte",
+          "description": "",
+          "name": "Treuer Begleiter"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "carryValue": "Noch festlegen",
+      "name": "Rihanna Draig (geb. Ceirwyn)",
+      "portraitPosition": "top",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "equipmentQuiz": {
+        "status": "",
+        "updatedAt": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "resultText": ""
+      },
+      "role": "Barde des Grafen, Calon",
+      "portraitFit": "cover",
+      "hitpoints": "TP / Zustand"
+    },
+    "emotes": [
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/a1erXYJ.png"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/8y57TkF.png"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/RDE5I0D.png"
+      },
+      {
+        "img": "https://i.imgur.com/uGSVmeG.png",
+        "label": "Avatar"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/dx4Jwt3.png"
+      },
+      {
+        "img": "https://i.imgur.com/86FDFnI.png",
+        "label": "Avatar"
+      },
+      {
+        "img": "https://i.imgur.com/2sG6rPG.png",
+        "label": "Avatar"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/A92xMoj.png"
+      },
+      {
+        "img": "https://i.imgur.com/d6Ta5BP.png",
+        "label": "Avatar"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/pesZZYU.png"
+      },
+      {
+        "label": "Avatar",
+        "img": "https://i.imgur.com/NhthAYC.png"
+      }
+    ],
+    "bio": "Rihanna Ceirwyn ist die Bardin des Grafen ...",
+    "portrait": "https://i.imgur.com/wzxzNHo.jpeg",
+    "emotesOverride": true,
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "title": "Barde des Grafen, Calon",
+    "identity": {
+      "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-ceirwyn--rihanna-ceirwynn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1678",
+      "death": "",
+      "houseId": "house-ceirwyn",
+      "houseName": "Haus Ceirwyn O'Calon",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Wegverheiratet"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-ceirwyn",
+          "personId": "rihanna-ceirwynn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view&person=rihanna-ceirwynn",
+          "fingerprint": "{\"name\":\"Rihanna Ceirwyn\",\"title\":\"Wegverheiratet an Haus Draig\",\"birth\":\"1678\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ceirwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"ariana-grael\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grael--ariana-grael\",\"name\":\"Ariana Grael\"},{\"personId\":\"taliesin-ceirwyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ceirwyn--taliesin-ceirwyn\",\"name\":\"Taliesin Ceirwyn\"}],\"partners\":[{\"personId\":\"trayvon-draig\",\"type\":\"marriage\",\"status\":\"widowed\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "rihanna-ceirwynn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rihanna-ceirwynn",
+          "fingerprint": "{\"name\":\"Rihanna Ceirwyn\",\"title\":\"\",\"birth\":\"1678\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ceirwyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"trayvon-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--trayvon-draig\",\"name\":\"Trayvon Draig\"}],\"children\":[{\"personId\":\"eilonwy-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--eilonwy-draig\",\"name\":\"Eilonwy Draig\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "ariana-grael",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-grael--ariana-grael",
+            "name": "Ariana Grael"
+          },
+          {
+            "personId": "taliesin-ceirwyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ceirwyn--taliesin-ceirwyn",
+            "name": "Taliesin Ceirwyn"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "trayvon-draig",
+            "type": "marriage",
+            "status": "widowed",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--trayvon-draig",
+            "name": "Trayvon Draig"
+          }
+        ],
+        "children": []
+      }
+    },
+    "taxonomyPath": "Cenyr > Vortigerns Ruh > Uthers Aufstieg > Calon"
+  }
+}

@@ -1,0 +1,1390 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--QEePoQdWzxeqhB06GL7W",
+  "slug": "lorcan-daire",
+  "identity": {
+    "name": "Lorcán Daire",
+    "aliases": [],
+    "worldPersonId": "person--sept-daire--lorcan-daire"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "sept-daire",
+      "label": "Sept Daire"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "sept-daire",
+        "familyTitle": "Sept Daire",
+        "personId": "lorcan-daire",
+        "worldPersonId": "person--sept-daire--lorcan-daire",
+        "houseId": "sept-daire",
+        "houseName": "Sept Daire",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Ceitheach",
+          "Tir na Dorcha",
+          "Tír na Droma",
+          "Tulachinis"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=sept-daire&mode=view&person=lorcan-daire",
+        "fingerprint": "{\"name\":\"Lorcán Daire\",\"title\":\"Tiarna-Krieger im Exil · Letzter Daire\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-daire\",\"portrait\":\"../Stammbäume/assets/images/portraits/sept-daire/lorcan-daire.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Tiarna-Krieger\",\"Letzter Daire\",\"Im Exil\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"ciaran-daire\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-daire--ciaran-daire\",\"name\":\"Ciarán Daire\"},{\"personId\":\"aoife-ciaran-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--aoife-ciaran-spouse\",\"name\":\"Aoife\"}],\"partners\":[],\"children\":[]}}",
+        "score": 185
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "QEePoQdWzxeqhB06GL7W",
+      "documentIds": [
+        "QEePoQdWzxeqhB06GL7W"
+      ],
+      "documents": [
+        {
+          "documentId": "QEePoQdWzxeqhB06GL7W",
+          "createdAt": "2026-07-10T11:25:38.406Z",
+          "updatedAt": "2026-07-10T11:34:10.849Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "sept-daire",
+        "personId": "lorcan-daire",
+        "worldPersonId": "person--sept-daire--lorcan-daire",
+        "url": "../Stammbäume/Stammbaum.html?family=sept-daire&mode=view&person=lorcan-daire"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "2026-07-10T11:34:10.849Z",
+    "sourceDocumentIds": [
+      "QEePoQdWzxeqhB06GL7W"
+    ],
+    "contentHash": "fdad7bceced3950707f980100995398d181c299c64793bb4b2d2e87c03e9c529"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "QEePoQdWzxeqhB06GL7W",
+        "aliases": [],
+        "relevance": "",
+        "createdAt": "2026-07-10T11:25:38.406Z",
+        "profileLink": "",
+        "inventory": {
+          "companions": [
+            {
+              "status": "Gesund",
+              "imageFormat": "landscape",
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFit": "cover",
+              "id": "companion-mreum736-0-q0wn",
+              "infoRows": [],
+              "role": "Begleiter",
+              "image": "",
+              "species": "Tier oder Begleiter",
+              "description": "",
+              "imagePosition": "top",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "imageFit": "cover",
+              "role": "Gefährte",
+              "infoRows": [],
+              "name": "Treuer Begleiter",
+              "image": "",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "statusColor": "#5c7f20",
+              "id": "companion-mreum736-1-eye1",
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "description": "",
+              "status": "Noch festlegen"
+            }
+          ],
+          "equipmentQuiz": {
+            "resultText": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "status": "",
+            "updatedAt": ""
+          },
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "characterId": "QEePoQdWzxeqhB06GL7W",
+          "portraitFit": "cover",
+          "portraitPosition": "top",
+          "portrait": "https://i.imgur.com/WD4goAN.png",
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "icon": "*",
+              "label": "Status"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "TP / Zustand",
+              "icon": "*"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "icon": "*",
+              "label": "Geld"
+            },
+            {
+              "label": "Tragkapazität",
+              "value": "Noch festlegen",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "Rolle",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Fraktion",
+              "icon": "*"
+            },
+            {
+              "label": "Aufenthalt",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Notiz",
+              "value": "Noch festlegen"
+            }
+          ],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "role": "Rolle",
+          "status": "Gesund",
+          "name": "Name des Charakters",
+          "portraitFormat": "portrait",
+          "carryValue": "Noch festlegen",
+          "level": "Stufe",
+          "hitpoints": "TP / Zustand",
+          "healthColor": "#5c7f20",
+          "title": "Charakter-Inventar",
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "moneyNotice": "",
+          "items": [
+            {
+              "tags": "",
+              "itemStorageMode": "character",
+              "type": "Waffe",
+              "image": "",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "icon": "*",
+              "id": "item-mreum735-0-e3ex",
+              "infoRows": [],
+              "individualizedAt": "",
+              "originItemDbKey": "",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterName": "",
+              "itemDbKey": ""
+            },
+            {
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "icon": "*",
+              "imageFormat": "square",
+              "ownerCharacterName": "",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "itemDbKey": "",
+              "image": "",
+              "imageFit": "contain",
+              "quantity": "1",
+              "tags": "",
+              "type": "Rüstung",
+              "individualizedAt": "",
+              "category": "armor",
+              "id": "item-mreum735-1-kevq",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "itemStorageMode": "character",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "acquiredAt": ""
+            },
+            {
+              "image": "",
+              "individualizedAt": "",
+              "itemStorageMode": "character",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "id": "item-mreum735-2-1po1",
+              "acquiredAt": "",
+              "name": "Reiseausrüstung",
+              "imageFit": "contain",
+              "itemDbKey": "",
+              "weight": "Noch festlegen",
+              "tags": "",
+              "type": "Ausrüstung",
+              "infoRows": [],
+              "category": "equipment",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "ownerCharacterName": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterId": "",
+              "quantity": "1",
+              "icon": "*",
+              "originItemDbKey": ""
+            },
+            {
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "category": "potions",
+              "icon": "*",
+              "ownerCharacterId": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "id": "item-mreum735-3-zu8m",
+              "image": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "ownerCharacterName": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "individualizedAt": "",
+              "type": "Trinktur",
+              "originItemDbKey": "",
+              "itemDbKey": "",
+              "acquiredAt": "",
+              "imageFormat": "square"
+            },
+            {
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "itemDbKey": "",
+              "individualizedAt": "",
+              "category": "documents",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "acquiredAt": "",
+              "image": "",
+              "icon": "*",
+              "id": "item-mreum735-4-1yle",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "name": "Dokumente / Urkunden",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterName": "",
+              "infoRows": [],
+              "type": "Dokument",
+              "originItemDbKey": "",
+              "tags": ""
+            },
+            {
+              "imagePosition": "center",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "imageFormat": "square",
+              "image": "",
+              "ownerCharacterName": "",
+              "category": "other",
+              "acquiredAt": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "type": "Sonstiges",
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "originItemDbKey": "",
+              "individualizedAt": "",
+              "itemDbKey": "",
+              "id": "item-mreum735-5-zpw4",
+              "name": "Persönlicher Gegenstand",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            }
+          ],
+          "showInfoTable": false
+        },
+        "playerOwner": "patrick",
+        "status": "",
+        "archived": false,
+        "title": "Tiarna, Ceitheach",
+        "updatedAt": "2026-07-10T11:34:10.849Z",
+        "taxonomyPath": "",
+        "emotesOverride": true,
+        "fraktion": "Sept der Daire, Ceitheach",
+        "portrait": "https://i.imgur.com/WD4goAN.png",
+        "bio": "",
+        "role": "",
+        "plotNode": "",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/60JTNqr.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/sfS7V5t.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/p4xVOtY.png"
+          },
+          {
+            "img": "https://i.imgur.com/xIu3Clk.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/o6DbY46.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jHYEtzG.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/nrjahC9.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/M0J6lMj.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/YVHIKqg.png"
+          },
+          {
+            "img": "https://i.imgur.com/8x6jWOZ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/cYdndG8.png"
+          },
+          {
+            "img": "https://i.imgur.com/yToRDfU.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/ZeHhDzT.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/dbOsgCs.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/F4DhOdA.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/toBkxgW.png"
+          },
+          {
+            "img": "https://i.imgur.com/SlMuMnH.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Zf3fYMR.png",
+            "label": ""
+          }
+        ],
+        "name": "Lorcán Daire",
+        "currentLocation": "",
+        "origin": ""
+      }
+    ]
+  },
+  "character": {
+    "id": "QEePoQdWzxeqhB06GL7W",
+    "aliases": [],
+    "relevance": "",
+    "createdAt": "2026-07-10T11:25:38.406Z",
+    "profileLink": "",
+    "inventory": {
+      "companions": [
+        {
+          "status": "Gesund",
+          "imageFormat": "landscape",
+          "name": "Reittier / Gefährte",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFit": "cover",
+          "id": "companion-mreum736-0-q0wn",
+          "infoRows": [],
+          "role": "Begleiter",
+          "image": "",
+          "species": "Tier oder Begleiter",
+          "description": "",
+          "imagePosition": "top",
+          "statusColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "imageFit": "cover",
+          "role": "Gefährte",
+          "infoRows": [],
+          "name": "Treuer Begleiter",
+          "image": "",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "id": "companion-mreum736-1-eye1",
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "description": "",
+          "status": "Noch festlegen"
+        }
+      ],
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "status": "",
+        "updatedAt": ""
+      },
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "characterId": "QEePoQdWzxeqhB06GL7W",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "portrait": "https://i.imgur.com/WD4goAN.png",
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "icon": "*",
+          "label": "Status"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "TP / Zustand",
+          "icon": "*"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "icon": "*",
+          "label": "Geld"
+        },
+        {
+          "label": "Tragkapazität",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Fraktion",
+          "icon": "*"
+        },
+        {
+          "label": "Aufenthalt",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "role": "Rolle",
+      "status": "Gesund",
+      "name": "Name des Charakters",
+      "portraitFormat": "portrait",
+      "carryValue": "Noch festlegen",
+      "level": "Stufe",
+      "hitpoints": "TP / Zustand",
+      "healthColor": "#5c7f20",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "moneyNotice": "",
+      "items": [
+        {
+          "tags": "",
+          "itemStorageMode": "character",
+          "type": "Waffe",
+          "image": "",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "imageFit": "contain",
+          "icon": "*",
+          "id": "item-mreum735-0-e3ex",
+          "infoRows": [],
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "itemDbKey": ""
+        },
+        {
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "icon": "*",
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemDbKey": "",
+          "image": "",
+          "imageFit": "contain",
+          "quantity": "1",
+          "tags": "",
+          "type": "Rüstung",
+          "individualizedAt": "",
+          "category": "armor",
+          "id": "item-mreum735-1-kevq",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "acquiredAt": ""
+        },
+        {
+          "image": "",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mreum735-2-1po1",
+          "acquiredAt": "",
+          "name": "Reiseausrüstung",
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "type": "Ausrüstung",
+          "infoRows": [],
+          "category": "equipment",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "icon": "*",
+          "originItemDbKey": ""
+        },
+        {
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "category": "potions",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "id": "item-mreum735-3-zu8m",
+          "image": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "tags": "",
+          "individualizedAt": "",
+          "type": "Trinktur",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "imageFormat": "square"
+        },
+        {
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "category": "documents",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "acquiredAt": "",
+          "image": "",
+          "icon": "*",
+          "id": "item-mreum735-4-1yle",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "type": "Dokument",
+          "originItemDbKey": "",
+          "tags": ""
+        },
+        {
+          "imagePosition": "center",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "image": "",
+          "ownerCharacterName": "",
+          "category": "other",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "type": "Sonstiges",
+          "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "id": "item-mreum735-5-zpw4",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "showInfoTable": false
+    },
+    "playerOwner": "patrick",
+    "status": "",
+    "archived": false,
+    "title": "Tiarna, Ceitheach",
+    "updatedAt": "2026-07-10T11:34:10.849Z",
+    "taxonomyPath": "Ceitheach > Tir na Dorcha > Tír na Droma > Tulachinis",
+    "emotesOverride": true,
+    "fraktion": "Sept der Daire, Ceitheach",
+    "portrait": "https://i.imgur.com/WD4goAN.png",
+    "bio": "",
+    "role": "",
+    "plotNode": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/60JTNqr.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/sfS7V5t.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/p4xVOtY.png"
+      },
+      {
+        "img": "https://i.imgur.com/xIu3Clk.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/o6DbY46.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jHYEtzG.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/nrjahC9.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/M0J6lMj.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/YVHIKqg.png"
+      },
+      {
+        "img": "https://i.imgur.com/8x6jWOZ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/cYdndG8.png"
+      },
+      {
+        "img": "https://i.imgur.com/yToRDfU.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ZeHhDzT.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/dbOsgCs.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/F4DhOdA.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/toBkxgW.png"
+      },
+      {
+        "img": "https://i.imgur.com/SlMuMnH.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Zf3fYMR.png",
+        "label": ""
+      }
+    ],
+    "name": "Lorcán Daire",
+    "currentLocation": "",
+    "origin": "",
+    "identity": {
+      "worldPersonId": "person--sept-daire--lorcan-daire"
+    },
+    "genealogy": {
+      "worldPersonId": "person--sept-daire--lorcan-daire",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1702",
+      "death": "",
+      "houseId": "sept-daire",
+      "houseName": "Sept Daire",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Tiarna-Krieger",
+        "Letzter Daire",
+        "Im Exil",
+        "Im Dienst des Hauses Draig"
+      ],
+      "sources": [
+        {
+          "familyId": "sept-daire",
+          "personId": "lorcan-daire",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=sept-daire&mode=view&person=lorcan-daire",
+          "fingerprint": "{\"name\":\"Lorcán Daire\",\"title\":\"Tiarna-Krieger im Exil · Letzter Daire\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-daire\",\"portrait\":\"../Stammbäume/assets/images/portraits/sept-daire/lorcan-daire.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Tiarna-Krieger\",\"Letzter Daire\",\"Im Exil\",\"Im Dienst des Hauses Draig\"],\"relationships\":{\"parents\":[{\"personId\":\"ciaran-daire\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-daire--ciaran-daire\",\"name\":\"Ciarán Daire\"},{\"personId\":\"aoife-ciaran-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--aoife-ciaran-spouse\",\"name\":\"Aoife\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "ciaran-daire",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--sept-daire--ciaran-daire",
+            "name": "Ciarán Daire"
+          },
+          {
+            "personId": "aoife-ciaran-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--aoife-ciaran-spouse",
+            "name": "Aoife"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

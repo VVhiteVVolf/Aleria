@@ -1,0 +1,1019 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--ax26chmgvtaURnzC0n0l",
+  "slug": "brychan",
+  "identity": {
+    "name": "Brychan",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarze-zitteraale",
+      "label": "Schwarze Zitteraale",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarze Zitteraale"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "ax26chmgvtaURnzC0n0l",
+      "documentIds": [
+        "ax26chmgvtaURnzC0n0l"
+      ],
+      "documents": [
+        {
+          "documentId": "ax26chmgvtaURnzC0n0l",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "ax26chmgvtaURnzC0n0l"
+    ],
+    "contentHash": "f2db1adef133ac193a7313fb8287e8cc2563992c4ecf9ee26991b9ec432c3072"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "ax26chmgvtaURnzC0n0l",
+        "title": "Bandit/ Carregdrag",
+        "inventory": {
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "level": "Schwarze Zitteraale",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "role": "Bandit/ Carregdrag",
+          "portraitFit": "cover",
+          "name": "Brychan",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "companions": [
+            {
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "role": "Begleiter",
+              "species": "Tier oder Begleiter",
+              "description": "",
+              "name": "Reittier / Gefährte",
+              "image": "",
+              "infoRows": [],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imagePosition": "top",
+              "imageFit": "cover",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "id": "companion-mqu1vat2-0-zz2n"
+            },
+            {
+              "species": "Tier / Person",
+              "image": "",
+              "imageFormat": "landscape",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "name": "Treuer Begleiter",
+              "statusColor": "#5c7f20",
+              "status": "Noch festlegen",
+              "role": "Gefährte",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "description": "",
+              "imagePosition": "top",
+              "imageFit": "cover"
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "status": "Gesund",
+          "infoRows": [],
+          "moneyState": {
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0,
+            "copper": 0
+          },
+          "carryLabel": "Traglast",
+          "title": "Charakter-Inventar",
+          "portrait": "https://i.imgur.com/XwxOQMe.png",
+          "items": [
+            {
+              "imageFormat": "square",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "category": "weapon",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "id": "item-mqu1vat1-0-w8ef",
+              "infoRows": [],
+              "imageFit": "contain",
+              "name": "Hauptwaffe",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Waffe",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ]
+            },
+            {
+              "type": "Rüstung",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "name": "Rüstung / Schutz",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "quantity": "1",
+              "image": "",
+              "category": "armor",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-1-exvo"
+            },
+            {
+              "type": "Ausrüstung",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "infoRows": [],
+              "id": "item-mqu1vat1-2-0fx2",
+              "name": "Reiseausrüstung",
+              "imageFormat": "square",
+              "image": "",
+              "imageFit": "contain",
+              "icon": "*",
+              "quantity": "1",
+              "weight": "Noch festlegen",
+              "category": "equipment",
+              "imagePosition": "center",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+            },
+            {
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Trinktur",
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "image": "",
+              "id": "item-mqu1vat1-3-2lgm",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "category": "potions"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "type": "Dokument",
+              "id": "item-mqu1vat1-4-ajrj",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "category": "documents",
+              "name": "Dokumente / Urkunden",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "weight": "Noch festlegen",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "other",
+              "icon": "*",
+              "infoRows": [],
+              "name": "Persönlicher Gegenstand",
+              "id": "item-mqu1vat1-5-5kao",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "image": "",
+              "imageFit": "contain",
+              "tags": "",
+              "type": "Sonstiges"
+            }
+          ],
+          "moneyNotice": "",
+          "portraitPosition": "top",
+          "hitpoints": "TP / Zustand",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other",
+              "label": "Sonstiges"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "status": "",
+            "resultText": "",
+            "step": 0
+          }
+        },
+        "fraktion": "Schwarze Zitteraale",
+        "aliases": [],
+        "portrait": "https://i.imgur.com/XwxOQMe.png",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/5j05v91.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/4qdhS5R.png"
+          }
+        ],
+        "emotesOverride": true,
+        "name": "Brychan",
+        "archived": true,
+        "bio": "Brychan (ca. 28) stammt aus den Bergwerken von Carregdrag, geboren als unerwünschtes Kind eines Minenarbeiters und einer Frau, die früh verstarb. Schon als Bursche musste er sich allein durchschlagen, stets im Schatten eines Vaters, der ihn nie anerkannte. Ein Streit eskalierte eines Tages, und im Zorn erschlug er den Mann – ein Moment, der ihn endgültig aus seiner Heimat trieb. Auf der Flucht fand er schließlich Aufnahme bei den Zitteraalen, wo aus einem Getriebenen ein Mann wurde, der gelernt hat, Härte mit Härte zu beantworten."
+      }
+    ]
+  },
+  "character": {
+    "id": "ax26chmgvtaURnzC0n0l",
+    "title": "Bandit/ Carregdrag",
+    "inventory": {
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "level": "Schwarze Zitteraale",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "role": "Bandit/ Carregdrag",
+      "portraitFit": "cover",
+      "name": "Brychan",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "companions": [
+        {
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "role": "Begleiter",
+          "species": "Tier oder Begleiter",
+          "description": "",
+          "name": "Reittier / Gefährte",
+          "image": "",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imagePosition": "top",
+          "imageFit": "cover",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "id": "companion-mqu1vat2-0-zz2n"
+        },
+        {
+          "species": "Tier / Person",
+          "image": "",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "name": "Treuer Begleiter",
+          "statusColor": "#5c7f20",
+          "status": "Noch festlegen",
+          "role": "Gefährte",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "description": "",
+          "imagePosition": "top",
+          "imageFit": "cover"
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "infoRows": [],
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "carryLabel": "Traglast",
+      "title": "Charakter-Inventar",
+      "portrait": "https://i.imgur.com/XwxOQMe.png",
+      "items": [
+        {
+          "imageFormat": "square",
+          "image": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "id": "item-mqu1vat1-0-w8ef",
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Hauptwaffe",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Waffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "type": "Rüstung",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "image": "",
+          "category": "armor",
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-1-exvo"
+        },
+        {
+          "type": "Ausrüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "infoRows": [],
+          "id": "item-mqu1vat1-2-0fx2",
+          "name": "Reiseausrüstung",
+          "imageFormat": "square",
+          "image": "",
+          "imageFit": "contain",
+          "icon": "*",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "category": "equipment",
+          "imagePosition": "center",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Trinktur",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "image": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "category": "potions"
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "type": "Dokument",
+          "id": "item-mqu1vat1-4-ajrj",
+          "image": "",
+          "imagePosition": "center",
+          "quantity": "1",
+          "category": "documents",
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "weight": "Noch festlegen",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "other",
+          "icon": "*",
+          "infoRows": [],
+          "name": "Persönlicher Gegenstand",
+          "id": "item-mqu1vat1-5-5kao",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "image": "",
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Sonstiges"
+        }
+      ],
+      "moneyNotice": "",
+      "portraitPosition": "top",
+      "hitpoints": "TP / Zustand",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "status": "",
+        "resultText": "",
+        "step": 0
+      }
+    },
+    "fraktion": "Schwarze Zitteraale",
+    "aliases": [],
+    "portrait": "https://i.imgur.com/XwxOQMe.png",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/5j05v91.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/4qdhS5R.png"
+      }
+    ],
+    "emotesOverride": true,
+    "name": "Brychan",
+    "archived": true,
+    "bio": "Brychan (ca. 28) stammt aus den Bergwerken von Carregdrag, geboren als unerwünschtes Kind eines Minenarbeiters und einer Frau, die früh verstarb. Schon als Bursche musste er sich allein durchschlagen, stets im Schatten eines Vaters, der ihn nie anerkannte. Ein Streit eskalierte eines Tages, und im Zorn erschlug er den Mann – ein Moment, der ihn endgültig aus seiner Heimat trieb. Auf der Flucht fand er schließlich Aufnahme bei den Zitteraalen, wo aus einem Getriebenen ein Mann wurde, der gelernt hat, Härte mit Härte zu beantworten.",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

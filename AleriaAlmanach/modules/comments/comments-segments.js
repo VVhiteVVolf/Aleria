@@ -84,6 +84,7 @@ function setCommentSegmentKind(id, kind) {
     segment.combatTargetId = '';
     segment.combatActionId = '';
     segment.combatRollMode = 'normal';
+    segment.combatWeaponGrip = 'one-handed';
     segment.combatDistanceMeters = 0;
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
@@ -292,6 +293,7 @@ function buildCommentSegmentsForSave() {
           combatTargetId: String(segment.combatTargetId || ''),
           combatActionId: String(segment.combatActionId || ''),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+          combatWeaponGrip: String(segment.combatWeaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed',
           combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),
           combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
           combatPaymentConfirmed: !!segment.combatPaymentConfirmed

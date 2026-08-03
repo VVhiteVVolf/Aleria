@@ -1,0 +1,1035 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--01OfFXeScnCoL2eNMPAM",
+  "slug": "tegid",
+  "identity": {
+    "name": "Tegid",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarze-zitteraale",
+      "label": "Schwarze Zitteraale",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarze Zitteraale"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "01OfFXeScnCoL2eNMPAM",
+      "documentIds": [
+        "01OfFXeScnCoL2eNMPAM"
+      ],
+      "documents": [
+        {
+          "documentId": "01OfFXeScnCoL2eNMPAM",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "01OfFXeScnCoL2eNMPAM"
+    ],
+    "contentHash": "eaf7f4779e694daea5a90e11f0b549e126840f1a7d749d162c4435e47ff41038"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "01OfFXeScnCoL2eNMPAM",
+        "bio": "Tegid (22) ist eines der jüngeren Gesichter unter den Zitteraalen. Aus einfachen Verhältnissen stammend, verschwand er früh aus seinem Elternhaus und schlug sich zunächst als Straßen- und Taschendieb durch, bis er in die Reihen der Bande geriet. Dort wurde aus einem flüchtigen Dieb ein Mann, der gelernt hat, Gewalt als Mittel einzusetzen – und der nun vor dem Hof steht, gezeichnet von einem Leben, das früh in die falsche Richtung ging.",
+        "archived": true,
+        "name": "Tegid",
+        "title": "Bandit/ Mwynfaen",
+        "aliases": [],
+        "portrait": "https://i.imgur.com/Xv0wnQP.png",
+        "fraktion": "Schwarze Zitteraale",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/0rb2UBN.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/CvLbWZQ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/oJqYVaU.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/pvK3CR0.png"
+          }
+        ],
+        "emotesOverride": true,
+        "inventory": {
+          "infoRows": [],
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portrait": "https://i.imgur.com/Xv0wnQP.png",
+          "items": [
+            {
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "name": "Hauptwaffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon",
+              "tags": "",
+              "type": "Waffe",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "icon": "*"
+            },
+            {
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "image": "",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "category": "armor",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "imagePosition": "center",
+              "name": "Rüstung / Schutz",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "tags": "",
+              "type": "Rüstung",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-2-0fx2",
+              "weight": "Noch festlegen",
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "type": "Ausrüstung",
+              "category": "equipment",
+              "quantity": "1",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "imageFit": "contain",
+              "infoRows": [],
+              "image": "",
+              "icon": "*",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFormat": "square"
+            },
+            {
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "tags": "",
+              "type": "Trinktur",
+              "id": "item-mqu1vat1-3-2lgm",
+              "category": "potions",
+              "name": "Heil- oder Verbrauchsgut",
+              "quantity": "1",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "icon": "*",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "tags": "",
+              "type": "Dokument",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imageFit": "contain",
+              "image": "",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "name": "Dokumente / Urkunden",
+              "category": "documents",
+              "icon": "*",
+              "id": "item-mqu1vat1-4-ajrj",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "imageFormat": "square"
+            },
+            {
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "icon": "*",
+              "image": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "category": "other",
+              "id": "item-mqu1vat1-5-5kao",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "quantity": "1",
+              "type": "Sonstiges",
+              "name": "Persönlicher Gegenstand",
+              "weight": "Noch festlegen"
+            }
+          ],
+          "name": "Tegid",
+          "title": "Charakter-Inventar",
+          "equipmentQuiz": {
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "resultText": "",
+            "step": 0,
+            "updatedAt": "",
+            "status": ""
+          },
+          "moneyNotice": "",
+          "role": "Bandit/ Mwynfaen",
+          "portraitPosition": "top",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "species": "Tier oder Begleiter",
+              "role": "Begleiter",
+              "name": "Reittier / Gefährte",
+              "statusColor": "#5c7f20",
+              "image": "",
+              "imagePosition": "top",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "description": "",
+              "status": "Gesund",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFit": "cover",
+              "infoRows": [],
+              "imageFormat": "landscape"
+            },
+            {
+              "imageFit": "cover",
+              "infoRows": [],
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "status": "Noch festlegen",
+              "role": "Gefährte",
+              "description": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "name": "Treuer Begleiter",
+              "image": "",
+              "statusColor": "#5c7f20"
+            }
+          ],
+          "portraitFormat": "portrait",
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "carryLabel": "Traglast",
+          "portraitFit": "cover",
+          "categories": [
+            {
+              "label": "Waffen",
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "status": "Gesund",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "healthColor": "#5c7f20",
+          "hitpoints": "TP / Zustand",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "level": "Schwarze Zitteraale"
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "01OfFXeScnCoL2eNMPAM",
+    "bio": "Tegid (22) ist eines der jüngeren Gesichter unter den Zitteraalen. Aus einfachen Verhältnissen stammend, verschwand er früh aus seinem Elternhaus und schlug sich zunächst als Straßen- und Taschendieb durch, bis er in die Reihen der Bande geriet. Dort wurde aus einem flüchtigen Dieb ein Mann, der gelernt hat, Gewalt als Mittel einzusetzen – und der nun vor dem Hof steht, gezeichnet von einem Leben, das früh in die falsche Richtung ging.",
+    "archived": true,
+    "name": "Tegid",
+    "title": "Bandit/ Mwynfaen",
+    "aliases": [],
+    "portrait": "https://i.imgur.com/Xv0wnQP.png",
+    "fraktion": "Schwarze Zitteraale",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/0rb2UBN.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/CvLbWZQ.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/oJqYVaU.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pvK3CR0.png"
+      }
+    ],
+    "emotesOverride": true,
+    "inventory": {
+      "infoRows": [],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portrait": "https://i.imgur.com/Xv0wnQP.png",
+      "items": [
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "name": "Hauptwaffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon",
+          "tags": "",
+          "type": "Waffe",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "icon": "*"
+        },
+        {
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "image": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "category": "armor",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "tags": "",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "quantity": "1",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "image": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square"
+        },
+        {
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "tags": "",
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "category": "potions",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "icon": "*",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "tags": "",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFit": "contain",
+          "image": "",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "name": "Dokumente / Urkunden",
+          "category": "documents",
+          "icon": "*",
+          "id": "item-mqu1vat1-4-ajrj",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imagePosition": "center",
+          "imageFormat": "square"
+        },
+        {
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "image": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "quantity": "1",
+          "type": "Sonstiges",
+          "name": "Persönlicher Gegenstand",
+          "weight": "Noch festlegen"
+        }
+      ],
+      "name": "Tegid",
+      "title": "Charakter-Inventar",
+      "equipmentQuiz": {
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "step": 0,
+        "updatedAt": "",
+        "status": ""
+      },
+      "moneyNotice": "",
+      "role": "Bandit/ Mwynfaen",
+      "portraitPosition": "top",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "name": "Reittier / Gefährte",
+          "statusColor": "#5c7f20",
+          "image": "",
+          "imagePosition": "top",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "description": "",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "imageFit": "cover",
+          "infoRows": [],
+          "imageFormat": "landscape"
+        },
+        {
+          "imageFit": "cover",
+          "infoRows": [],
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "status": "Noch festlegen",
+          "role": "Gefährte",
+          "description": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Treuer Begleiter",
+          "image": "",
+          "statusColor": "#5c7f20"
+        }
+      ],
+      "portraitFormat": "portrait",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "carryLabel": "Traglast",
+      "portraitFit": "cover",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "status": "Gesund",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "hitpoints": "TP / Zustand",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "level": "Schwarze Zitteraale"
+    },
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

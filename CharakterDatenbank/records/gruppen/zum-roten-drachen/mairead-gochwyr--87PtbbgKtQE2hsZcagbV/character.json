@@ -1,0 +1,1006 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--87PtbbgKtQE2hsZcagbV",
+  "slug": "mairead-gochwyr",
+  "identity": {
+    "name": "Mairead Gochwyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "zum-roten-drachen",
+      "label": "Zum Roten Drachen",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "zum-roten-drachen",
+        "label": "Zum Roten Drachen",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Zum Roten Drachen"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "87PtbbgKtQE2hsZcagbV",
+      "documentIds": [
+        "87PtbbgKtQE2hsZcagbV"
+      ],
+      "documents": [
+        {
+          "documentId": "87PtbbgKtQE2hsZcagbV",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-08-03-16-37-25.json",
+    "sourceExportedAt": "2026-08-03T18:28:54.436Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "87PtbbgKtQE2hsZcagbV"
+    ],
+    "contentHash": "88bdb03e7bb24b1584a1818abebacc068702e4307df947dccde822c11202eb10"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "87PtbbgKtQE2hsZcagbV",
+        "inventory": {
+          "infoRows": [],
+          "portraitFormat": "portrait",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente",
+              "id": "documents"
+            },
+            {
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "id": "other"
+            }
+          ],
+          "portraitFit": "cover",
+          "portrait": "https://i.imgur.com/CttMIx0.png",
+          "portraitPosition": "top",
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast",
+          "level": "Penderyn Destillerie & Brauereigilde",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "status": "Gesund",
+          "carryValue": "Noch festlegen",
+          "items": [
+            {
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imagePosition": "center",
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "quantity": "1",
+              "imageFormat": "square",
+              "tags": "",
+              "id": "item-mqu1vat1-0-w8ef",
+              "type": "Waffe",
+              "category": "weapon",
+              "name": "Hauptwaffe",
+              "image": ""
+            },
+            {
+              "id": "item-mqu1vat1-1-exvo",
+              "tags": "",
+              "type": "Rüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "infoRows": [],
+              "image": "",
+              "category": "armor",
+              "quantity": "1",
+              "icon": "*",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "weight": "Noch festlegen"
+            },
+            {
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "icon": "*",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imagePosition": "center",
+              "category": "equipment",
+              "quantity": "1",
+              "imageFormat": "square",
+              "name": "Reiseausrüstung",
+              "image": "",
+              "type": "Ausrüstung",
+              "tags": "",
+              "id": "item-mqu1vat1-2-0fx2"
+            },
+            {
+              "type": "Trinktur",
+              "imageFormat": "square",
+              "tags": "",
+              "quantity": "1",
+              "category": "potions",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Heil- oder Verbrauchsgut",
+              "icon": "*",
+              "infoRows": [],
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "image": "",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-3-2lgm"
+            },
+            {
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "documents",
+              "imagePosition": "center",
+              "quantity": "1",
+              "icon": "*",
+              "imageFormat": "square",
+              "name": "Dokumente / Urkunden",
+              "id": "item-mqu1vat1-4-ajrj",
+              "weight": "Noch festlegen",
+              "image": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "tags": "",
+              "type": "Dokument"
+            },
+            {
+              "id": "item-mqu1vat1-5-5kao",
+              "icon": "*",
+              "image": "",
+              "imagePosition": "center",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "quantity": "1",
+              "tags": "",
+              "category": "other",
+              "type": "Sonstiges",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Persönlicher Gegenstand",
+              "imageFormat": "square"
+            }
+          ],
+          "equipmentQuiz": {
+            "status": "",
+            "step": 0,
+            "resultText": "",
+            "updatedAt": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false
+          },
+          "role": "Hausmutter & Wirtin",
+          "companions": [
+            {
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "role": "Begleiter",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imagePosition": "top",
+              "status": "Gesund",
+              "name": "Reittier / Gefährte",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "image": "",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "imageFit": "cover",
+              "description": "",
+              "species": "Tier oder Begleiter"
+            },
+            {
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imagePosition": "top",
+              "imageFormat": "landscape",
+              "infoRows": [],
+              "name": "Treuer Begleiter",
+              "statusColor": "#5c7f20",
+              "image": "",
+              "role": "Gefährte",
+              "imageFit": "cover",
+              "status": "Noch festlegen",
+              "species": "Tier / Person",
+              "description": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ]
+            }
+          ],
+          "name": "Mairead Gochwyr",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyNotice": "",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "hitpoints": "TP / Zustand",
+          "title": "Charakter-Inventar"
+        },
+        "name": "Mairead Gochwyr",
+        "bio": "Mairead Gochwyr leitet den Innenbetrieb der Herberge und verantwortet Küche, Vorräte, Zimmervergabe und Personal. Ist Egan gebunden oder abwesend, übernimmt sie stellvertretend den Gastbetrieb und die operative Leitung des Hauses.",
+        "fraktion": "Penderyn Destillerie & Brauereigilde",
+        "title": "Hausmutter & Wirtin",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/JKSHboa.png",
+            "label": ""
+          }
+        ],
+        "portrait": "https://i.imgur.com/CttMIx0.png"
+      }
+    ]
+  },
+  "character": {
+    "id": "87PtbbgKtQE2hsZcagbV",
+    "inventory": {
+      "infoRows": [],
+      "portraitFormat": "portrait",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "portraitFit": "cover",
+      "portrait": "https://i.imgur.com/CttMIx0.png",
+      "portraitPosition": "top",
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "carryLabel": "Traglast",
+      "level": "Penderyn Destillerie & Brauereigilde",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "status": "Gesund",
+      "carryValue": "Noch festlegen",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imagePosition": "center",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "quantity": "1",
+          "imageFormat": "square",
+          "tags": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "type": "Waffe",
+          "category": "weapon",
+          "name": "Hauptwaffe",
+          "image": ""
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "tags": "",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "infoRows": [],
+          "image": "",
+          "category": "armor",
+          "quantity": "1",
+          "icon": "*",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "weight": "Noch festlegen"
+        },
+        {
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imagePosition": "center",
+          "category": "equipment",
+          "quantity": "1",
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "image": "",
+          "type": "Ausrüstung",
+          "tags": "",
+          "id": "item-mqu1vat1-2-0fx2"
+        },
+        {
+          "type": "Trinktur",
+          "imageFormat": "square",
+          "tags": "",
+          "quantity": "1",
+          "category": "potions",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Heil- oder Verbrauchsgut",
+          "icon": "*",
+          "infoRows": [],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-3-2lgm"
+        },
+        {
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "documents",
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "*",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "image": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "tags": "",
+          "type": "Dokument"
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "icon": "*",
+          "image": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "quantity": "1",
+          "tags": "",
+          "category": "other",
+          "type": "Sonstiges",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square"
+        }
+      ],
+      "equipmentQuiz": {
+        "status": "",
+        "step": 0,
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false
+      },
+      "role": "Hausmutter & Wirtin",
+      "companions": [
+        {
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "role": "Begleiter",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imagePosition": "top",
+          "status": "Gesund",
+          "name": "Reittier / Gefährte",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "imageFit": "cover",
+          "description": "",
+          "species": "Tier oder Begleiter"
+        },
+        {
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "infoRows": [],
+          "name": "Treuer Begleiter",
+          "statusColor": "#5c7f20",
+          "image": "",
+          "role": "Gefährte",
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "species": "Tier / Person",
+          "description": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ]
+        }
+      ],
+      "name": "Mairead Gochwyr",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "moneyNotice": "",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "title": "Charakter-Inventar"
+    },
+    "name": "Mairead Gochwyr",
+    "bio": "Mairead Gochwyr leitet den Innenbetrieb der Herberge und verantwortet Küche, Vorräte, Zimmervergabe und Personal. Ist Egan gebunden oder abwesend, übernimmt sie stellvertretend den Gastbetrieb und die operative Leitung des Hauses.",
+    "fraktion": "Penderyn Destillerie & Brauereigilde",
+    "title": "Hausmutter & Wirtin",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/JKSHboa.png",
+        "label": ""
+      }
+    ],
+    "portrait": "https://i.imgur.com/CttMIx0.png",
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}
