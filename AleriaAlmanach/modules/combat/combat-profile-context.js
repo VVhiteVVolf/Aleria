@@ -6,14 +6,14 @@ import {
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260802-combat-sheet-v4';
+} from './combat-profile-model.js?v=20260803-combat-sheet-v6';
 
 export function buildCombatProfileAiSnapshot(character = {}) {
-  const profile = sanitizeCharacterCombatProfile(character.combatProfile || character);
+  const profile = sanitizeCharacterCombatProfile(character.combatProfile || character, { ensureRequiredSkills: character.entityType !== 'creature' });
   const resolved = resolveCharacterCombatProfile({ ...character, combatProfile: profile });
   return {
     schemaVersion: profile.schemaVersion,
-    instruction: 'Diese Kampfdaten sind vollständig und verbindlich. Berücksichtige jede Kategorie sowie ausdrücklich auch 0, false und null. Strukturierte Mechanik gilt exakt; bei Marotten, Zuständen und Fähigkeiten fließen Zahlen nur mit active=true ein. Abgeleitete Gesamtwerte enthalten diese Modifikatoren bereits und dürfen nicht doppelt addiert werden. Freitext beeinflusst Interpretation und Erzählung, sofern er der Mechanik nicht widerspricht.',
+    instruction: 'Diese Kampfdaten sind vollständig und verbindlich. Berücksichtige jede Kategorie sowie ausdrücklich auch 0, false und null. Strukturierte Mechanik gilt exakt; bei Marotten, Zuständen, Fähigkeiten, Aura und Präsenz fließen Zahlen nur in ihrer aktiven Form ein. Latente gegnerische Aura-Modifikatoren werden im Kampfsystem auf den jeweiligen Gegner angewandt. Abgeleitete Gesamtwerte enthalten Modifikatoren bereits und dürfen nicht doppelt addiert werden. Aktion, Bonusaktion und Reaktion werden pro Gesamtkommentar aufgefüllt. Besondere Aktion, Mana/Fokus, Aura-Fokus sowie Celestiale und Infernale Punkte sind tagesgebundene, persistente Ressourcen und dürfen nicht vor dem nächsten Tag aufgefüllt werden. Freitext und aiInstructions beeinflussen Interpretation und Erzählung, sofern sie der Mechanik nicht widersprechen.',
     character: {
       id: String(character.id || ''),
       name: String(character.name || 'Unbekannte Figur'),
@@ -38,7 +38,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       temporaryHitPoints: resolved.temporaryHitPoints,
       armorClass: resolved.totalDefense,
       initiative: resolved.initiative,
-      movementMeters: profile.combat.movement,
+      movementMeters: resolved.movement,
       proficiencyBonus: resolved.proficiencyBonus,
       passivePerception: resolved.passivePerception,
       spellAttackModifier: resolved.spellAttackModifier,
@@ -59,10 +59,15 @@ export function buildCombatProfileAiSnapshot(character = {}) {
     })),
     armor: profile.armorItems,
     coreResources: profile.resources,
+    actionEconomy: profile.resources.filter(resource => resource.scope === 'comment'),
+    dailyResources: profile.resources.filter(resource => resource.recovery === 'day'),
+    techniquesAndForms: profile.techniques,
     quirksAndTraits: profile.quirks,
     conditionsAndEffects: profile.conditions,
     specialAbilities: profile.abilities,
     magic: profile.magic,
+    auraPresenceAndDomain: profile.aura,
+    cheatRules: profile.cheats,
     notesAndSpecialRules: profile.notes
   };
 }

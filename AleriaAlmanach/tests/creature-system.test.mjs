@@ -26,7 +26,12 @@ test('creature defaults use the compact combat schema without character skill bl
   assert.equal(creature.entityType, 'creature');
   assert.equal(creature.level, 1);
   assert.equal(creature.combatProfile.skills.length, 0);
-  assert.equal(creature.combatProfile.resources.length, 0);
+  assert.deepEqual(creature.combatProfile.resources.filter(resource => resource.scope === 'comment').map(resource => resource.id), ['action', 'bonus-action', 'reaction']);
+  assert.deepEqual(creature.combatProfile.resources.find(resource => resource.id === 'special-action'), {
+    id: 'special-action', name: 'Besondere Aktion', current: 2, maximum: 2, recovery: 'day', scope: 'persistent', category: 'action',
+    icon: './public/assets/combat-profile-icons/special-action.png', notes: ''
+  });
+  assert.equal(creature.combatProfile.weapons[0].name, 'Nahkampf');
   assert.equal(creature.combatProfile.hitPoints.maximumOverride, 10);
   assert.deepEqual(creature.avatars, []);
 });
@@ -116,9 +121,9 @@ test('liefert die drei Draig-Gefolgsleute mit den geforderten Stufen und Waffen'
     ['Draig Schütze', 3, 'https://i.imgur.com/tntwr06.png']
   ]);
   assert.deepEqual(draigs.map(creature => creature.combatProfile.weapons.map(weapon => weapon.name)), [
-    ['Draig-Langschwert', 'Knaufstoß'],
-    ['Draig-Speer', 'Schildstoß'],
-    ['Draig-Langbogen', 'Draig-Dolch']
+    ['Draig-Langschwert', 'Knaufstoß', 'Nahkampf'],
+    ['Draig-Speer', 'Schildstoß', 'Nahkampf'],
+    ['Draig-Langbogen', 'Draig-Dolch', 'Nahkampf']
   ]);
   draigs.forEach(creature => {
     assert.equal(isBuiltinCreatureId(creature.id), true);

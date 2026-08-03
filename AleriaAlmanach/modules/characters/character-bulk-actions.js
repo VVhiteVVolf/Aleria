@@ -114,6 +114,8 @@ function assignSelectedCharactersToGroup(trigger) {
 function buildStoredCharacterFromRecord(char, archived) {
   const cloned = cloneCharacterRecord(char || {});
   const now = new Date().toISOString();
+  const imageSets = buildCharacterImageSetStorage(cloned.imageSets || normalizeCharacterImageSets(cloned));
+  const standardSet = imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || imageSets[0];
   return {
     name: cloned.name || '',
     title: cloned.title || '',
@@ -132,11 +134,15 @@ function buildStoredCharacterFromRecord(char, archived) {
     archived: !!archived,
     createdAt: cloned.createdAt || now,
     updatedAt: now,
-    portrait: normalizeImageUrlForStorage(cloned.portrait) || null,
-    emotes: (cloned.emotes || [])
-      .map(emote => ({ img: normalizeImageUrlForStorage(emote.img), label: emote.label || '' }))
-      .filter(emote => emote.img),
+    portrait: standardSet?.portrait || null,
+    emotes: (standardSet?.emotes || []).map(emote => ({ ...emote })),
     emotesOverride: !!cloned.emotesOverride,
+    imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,
+    imageSets,
+    activeImageSetId: imageSets.some(set => set.id === cloned.activeImageSetId)
+      ? cloned.activeImageSetId
+      : CHARACTER_IMAGE_SET_DEFAULT_ID,
+    imageSetsOverride: !!cloned.imageSetsOverride,
     inventory: cloned.inventory && typeof cloned.inventory === 'object'
       ? sanitizeCharacterInventoryData(cloned.inventory)
       : undefined,

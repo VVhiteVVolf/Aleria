@@ -2,6 +2,9 @@
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
+import { resetCommentScopedResources } from './combat-action-economy.js?v=20260803-action-economy-v2';
+import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260803-scene-rest-v1';
+
 function finiteOrNull(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
@@ -61,13 +64,20 @@ export function normalizeCombatResources(resources = []) {
 
 export function applyCombatResourceCosts(resources = [], costs = []) {
   const before = normalizeCombatResources(resources);
-  const normalizedCosts = (Array.isArray(costs) ? costs : [])
+  const rawCosts = (Array.isArray(costs) ? costs : [])
     .map(cost => ({
       resourceId: String(cost?.resourceId || ''),
       name: String(cost?.name || 'Ressource'),
-      amount: Math.max(0, Number(cost?.amount) || 0)
+      amount: Math.max(0, Number(cost?.amount) || 0),
+      scope: cost?.scope === 'comment' ? 'comment' : 'persistent'
     }))
     .filter(cost => cost.resourceId && cost.amount > 0);
+  const normalizedCosts = [...rawCosts.reduce((grouped, cost) => {
+    const existing = grouped.get(cost.resourceId);
+    if (existing) existing.amount += cost.amount;
+    else grouped.set(cost.resourceId, { ...cost });
+    return grouped;
+  }, new Map()).values()];
   const missing = normalizedCosts.find(cost => {
     const resource = before.find(item => item.id === cost.resourceId);
     return !resource || resource.current < cost.amount;
@@ -86,7 +96,8 @@ export function applyCombatResourceCosts(resources = [], costs = []) {
       amount,
       before: resource.current,
       after: next.current,
-      maximum: resource.maximum
+      maximum: resource.maximum,
+      scope: resource.scope === 'comment' ? 'comment' : 'persistent'
     });
     return next;
   });
@@ -157,6 +168,11 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    states.forEach((state, actorId) => {
+      if (Array.isArray(state.resources)) {
+        states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
+      }
+    });
     const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
     if (isStopComment && stopSegmentIndex == null) break;
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
@@ -177,6 +193,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(String(resolution.actorId), { ...previous, resources: actorResources });
       }
     }
+    applySceneRestCommentToStateMap(states, comment);
     if (isStopComment) break;
   }
   return states;
@@ -192,6 +209,13 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
         return stored ? { ...resource, current: stored.current, maximum: stored.maximum } : resource;
       })
     : profile.resources;
+  const storedAbilities = Array.isArray(state.abilities) ? state.abilities : null;
+  const abilities = storedAbilities
+    ? (Array.isArray(profile.abilities) ? profile.abilities : []).map(ability => {
+        const stored = storedAbilities.find(item => String(item?.id || '') === String(ability?.id || ''));
+        return stored ? { ...ability, usesCurrent: Number(stored.usesCurrent) || 0, usesMaximum: Math.max(0, Number(stored.usesMaximum) || 0) } : ability;
+      })
+    : profile.abilities;
   const aiSnapshot = profile.aiSnapshot ? {
     ...profile.aiSnapshot,
     derivedCombatValues: {
@@ -205,7 +229,10 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       current: normalized.current,
       temporary: normalized.temporary
     } : profile.aiSnapshot.hitPointRules,
-    coreResources: normalizeCombatResources(resources || [])
+    coreResources: normalizeCombatResources(resources || []),
+    actionEconomy: normalizeCombatResources(resources || []).filter(resource => resource.scope === 'comment'),
+    dailyResources: normalizeCombatResources(resources || []).filter(resource => resource.recovery === 'day'),
+    specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : []
   } : profile.aiSnapshot;
   return {
     ...profile,
@@ -213,6 +240,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
     temporaryHitPoints: normalized.temporary,
     resources,
+    abilities,
     aiSnapshot,
     hitPoints: profile.hitPoints ? {
       ...profile.hitPoints,

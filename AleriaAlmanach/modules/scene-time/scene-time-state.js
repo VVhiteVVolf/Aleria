@@ -56,6 +56,26 @@ const SCENE_TIME_EVENT_PRESETS = [
     iconMark: '>>',
     iconUrl: 'https://i.imgur.com/r1dNxHU.png',
     theme: 'skip'
+  },
+  {
+    key: 'short-rest',
+    label: 'Kurze Rast',
+    title: 'Eine kurze Rast',
+    timeLabel: 'Eine Stunde später',
+    iconMark: 'R',
+    iconUrl: '../IconOrdner/Buttom Icons/Rasten.png',
+    theme: 'rest-short',
+    hiddenInTimeDialog: true
+  },
+  {
+    key: 'long-rest',
+    label: 'Lange Rast',
+    title: 'Eine lange Rast',
+    timeLabel: 'Acht Stunden später',
+    iconMark: 'R',
+    iconUrl: '../IconOrdner/Buttom Icons/Rasten.png',
+    theme: 'rest-long',
+    hiddenInTimeDialog: true
   }
 ];
 
@@ -151,7 +171,7 @@ function normalizeSceneTimeEvent(input = {}) {
     anchorSeconds: Number.isFinite(describedAnchorSeconds) ? describedAnchorSeconds : storedAnchorSeconds,
     body: normalizeSceneTimeText(input.body || input.text, ''),
     iconMark: normalizeSceneTimeText(input.iconMark, preset.iconMark),
-    iconUrl: normalizeSceneTimeIconUrl(preset.iconUrl),
+    iconUrl: normalizeSceneTimeIconUrl(input.iconUrl || preset.iconUrl),
     schemaVersion: 3
   };
 }

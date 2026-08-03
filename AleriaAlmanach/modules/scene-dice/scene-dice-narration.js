@@ -3,7 +3,7 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js?v=20260802-combat-sheet-v4';
+} from './scene-dice-narration-core.js?v=20260803-combat-sheet-v6';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,

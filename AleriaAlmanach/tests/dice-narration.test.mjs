@@ -14,6 +14,7 @@ import {
   getSceneDiceNarrationModes,
   normalizeSceneDiceNarrationMode
 } from '../modules/scene-dice/scene-dice-narration-policy.js';
+import { sceneDiceSceneContextInternals } from '../modules/scene-dice/scene-dice-scene-context.js';
 
 const lowPerceptionRoll = {
   formula: '1d20',
@@ -70,6 +71,33 @@ test('places full scene and character context in retrieval instead of the trunca
   assert.equal(enriched.stats.sceneDiceNarrationMode, 'character');
   assert.match(enriched.promptContext, /Bisheriger Verlauf/);
   assert.match(enriched.promptContext, /Anaraut ist geduldig/);
+});
+
+test('führt gespeicherte Kampfmechanik im Szenenverlauf für spätere KI-Würfe mit', () => {
+  const previousWindow = globalThis.window;
+  globalThis.window = {
+    AleriaGptContext: {
+      toPlainText: value => String(value || ''),
+      formatStoredMechanics: segment => segment.combatResolution
+        ? 'Kampfauswertung: Ziel-TP 11 -> 4/11.'
+        : ''
+    }
+  };
+  try {
+    const transcript = sceneDiceSceneContextInternals.buildSceneDiceTranscript([{
+      charName: 'Gawain',
+      commentSegments: [{
+        text: 'Der Hieb trifft.',
+        combatResolution: { resolutionId: 'resolution-1' }
+      }]
+    }]);
+    assert.match(transcript, /Gawain: Der Hieb trifft/);
+    assert.match(transcript, /Gespeicherte Mechanik – verbindlich/);
+    assert.match(transcript, /Ziel-TP 11 -> 4\/11/);
+  } finally {
+    if (previousWindow === undefined) delete globalThis.window;
+    else globalThis.window = previousWindow;
+  }
 });
 
 test('prioritizes the complete combat sheet for character-bound scene rolls', () => {

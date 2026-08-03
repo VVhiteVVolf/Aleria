@@ -6,6 +6,7 @@ function openCommentForm() {
   _portraitUrl = null;
   _selectedCharId = null;
   _selectedEmoteIdx = null;
+  _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
   _manualMode = false;
   _commentMode = 'charakter';
   _commentKind = 'speech';

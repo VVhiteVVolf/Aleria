@@ -554,11 +554,19 @@
 
 .cp-sheet-resource-list > div {
   display: grid;
-  grid-template-columns: minmax(110px, 1fr) 75px 75px 110px 30px;
+  grid-template-columns: minmax(220px, 1fr) 82px 82px minmax(118px, 0.42fr) 30px;
   gap: 0.4rem;
-  align-items: end;
-  padding: 0.4rem;
+  align-items: center;
+  padding: 0.55rem;
   border: 1px solid rgba(195, 154, 87, 0.16);
+}
+
+.cp-sheet-resource-identity {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: center;
+  min-width: 0;
 }
 
 .cp-sheet-resource-list .name {
@@ -569,6 +577,16 @@
 .cp-sheet-resource-list .cp-sheet-resource-notes {
   grid-column: 1 / -1;
   font-size: 0.76rem;
+}
+
+.cp-sheet-saving-throws {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(195, 154, 87, 0.28);
+}
+
+.cp-sheet-saving-throws .cp-sheet-section-head {
+  margin-bottom: 0.65rem;
 }
 
 .cp-sheet-table {
@@ -1230,10 +1248,10 @@
   }
 
   .cp-sheet-resource-list > div {
-    grid-template-columns: 1fr 70px 70px 30px;
+    grid-template-columns: minmax(0, 1fr) 70px 70px 30px;
   }
 
-  .cp-sheet-resource-list .name,
+  .cp-sheet-resource-identity,
   .cp-sheet-resource-list select {
     grid-column: span 2;
   }
@@ -1334,4 +1352,93 @@
   .cp-level-up-check {
     grid-column: 1;
   }
+}
+.cp-sheet-resource-list > div { position: relative; }
+.cp-sheet-resource-icon-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+}
+.cp-sheet-resource-icon,
+.cp-sheet-resource-icon-fallback {
+  grid-area: 1 / 1;
+}
+.cp-sheet-resource-icon {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+.cp-sheet-resource-icon-fallback {
+  color: #d7b96c;
+  font: 700 25px/1 "Cinzel", serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .7);
+}
+.cp-sheet-resource-icon-frame.is-missing .cp-sheet-resource-icon { display: none; }
+.cp-sheet-resource-list > .comment-resource {
+  border-color: rgba(181, 129, 53, .58);
+  background: linear-gradient(120deg, rgba(107, 66, 22, .15), rgba(15, 14, 12, .72));
+}
+.cp-sheet-resource-list > div > small {
+  grid-column: 1 / -1;
+  color: #8f7b59;
+  font: italic 11px Georgia, serif;
+}
+
+.cp-sheet-detail-list { display: grid; gap: 8px; }
+.cp-sheet-detail-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(130, 96, 43, .48);
+  border-radius: 5px;
+  background: rgba(13, 13, 12, .62);
+}
+.cp-sheet-detail-card.inactive { opacity: .58; }
+.cp-sheet-detail-card span { display: block; color: #9b8051; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.cp-sheet-detail-card strong { display: block; margin-top: 3px; color: #ddbd7c; font: 600 16px Georgia, serif; }
+.cp-sheet-detail-card p { margin: 5px 0 0; color: #aa9a7e; font: italic 12px/1.4 Georgia, serif; }
+.cp-sheet-detail-actions { display: flex; gap: 6px; }
+.cp-sheet-detail-actions button { white-space: nowrap; }
+.cp-sheet-technique-grid { align-items: stretch; }
+
+.cp-sheet-aura {
+  background:
+    radial-gradient(circle at 50% 0, rgba(128, 79, 177, .15), transparent 38%),
+    rgba(17, 15, 18, .92);
+  border-color: rgba(144, 101, 176, .48);
+}
+.cp-aura-component { margin-top: 12px; padding: 10px 12px; border: 1px solid rgba(128, 91, 151, .42); border-radius: 6px; background: rgba(21, 16, 25, .55); }
+.cp-aura-component > summary { color: #c7a5da; cursor: pointer; font: 600 14px Georgia, serif; letter-spacing: .06em; }
+.cp-aura-component[open] > summary { margin-bottom: 12px; }
+.cp-aura-mechanics-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+.cp-aura-mechanics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; min-width: 0; margin: 0; padding: 10px; border: 1px solid rgba(116, 86, 130, .42); }
+.cp-aura-mechanics legend { color: #b495c5; font: 600 11px Georgia, serif; }
+.cp-aura-mechanics label { min-width: 0; }
+
+.cp-sheet-cheats { border-color: rgba(151, 53, 45, .62); background: rgba(55, 19, 17, .22); }
+.cp-sheet-cheat-toggle { display: flex; align-items: center; gap: 9px; margin: 8px 0; color: #c8aa82; font: 13px/1.4 Georgia, serif; }
+.cp-sheet-cheat-toggle input { accent-color: #a84d3d; }
+.cp-sheet-subhead > div { display: grid; gap: 3px; }
+.cp-sheet-subhead small { color: #8e8069; font: italic 11px Georgia, serif; }
+.cp-sheet-spell-list > div { grid-template-columns: repeat(5, minmax(105px, 1fr)); }
+.cp-sheet-spell-list > div > textarea { grid-column: 1 / -1; }
+
+@media (max-width: 900px) {
+  .cp-aura-mechanics-grid { grid-template-columns: 1fr; }
+  .cp-sheet-spell-list > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .cp-sheet-detail-card { grid-template-columns: 1fr; }
+  .cp-sheet-detail-actions { justify-content: flex-end; }
+  .cp-sheet-spell-list > div { grid-template-columns: 1fr; }
+  .cp-aura-mechanics { grid-template-columns: 1fr; }
 }

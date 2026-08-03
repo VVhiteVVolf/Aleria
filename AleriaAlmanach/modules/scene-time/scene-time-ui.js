@@ -70,7 +70,7 @@ function renderSceneCommentTime(entry) {
 }
 
 function buildSceneTimePresetButtons(selectedKey = 'evening') {
-  return getSceneTimeEventPresets().map(preset => `
+  return getSceneTimeEventPresets().filter(preset => !preset.hiddenInTimeDialog).map(preset => `
     <button
       type="button"
       class="scene-time-preset-btn${preset.key === selectedKey ? ' active' : ''}"

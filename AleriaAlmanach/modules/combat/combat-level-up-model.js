@@ -5,7 +5,7 @@ import {
   getMaximumHitPoints,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260802-combat-sheet-v4';
+} from './combat-profile-model.js?v=20260803-combat-sheet-v6';
 
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);

@@ -1,9 +1,11 @@
-const ALERIA_GPT_RETRIEVAL_SCHEMA_VERSION = 1;
+const ALERIA_GPT_RETRIEVAL_SCHEMA_VERSION = 2;
 const ALERIA_GPT_DEFAULT_RETRIEVAL_LIMIT = 28;
 const ALERIA_GPT_COMMENT_QUERY_TERMS = new Set([
   'kommentar', 'kommentare', 'kommentaren', 'reagiere', 'reagier', 'reaktion',
   'reaktionen', 'antwort', 'antworten', 'szene', 'interaktive', 'gespraech',
-  'gesprach', 'stimme', 'sprecher', 'dialog', 'dialoge'
+  'gesprach', 'stimme', 'sprecher', 'dialog', 'dialoge', 'kampf', 'treffer',
+  'schaden', 'trefferpunkte', 'tp', 'rast', 'ruhe', 'ressource', 'ressourcen',
+  'inventar', 'konsumiert', 'verbraucht', 'benutzt', 'fertigkeit', 'auswertung', 'wurf'
 ]);
 
 const ALERIA_GPT_STOPWORDS = new Set([
@@ -312,13 +314,14 @@ function collectAleriaGptRetrievalChunks(context) {
         speakerNames: [segment.speakerName],
         kind: segment.kind,
         createdAt: Number(comment.updatedAt || comment.createdAt || 0),
-        text: segment.plainText,
+        text: [segment.plainText, segment.mechanicsText].filter(Boolean).join('\n'),
         metadata: {
           commentId: comment.commentId,
           threadId: comment.threadId,
           threadKind: comment.threadKind,
           side: segment.side || '',
-          order: index
+          order: index,
+          hasMechanics: Boolean(segment.mechanicsText)
         }
       }));
     });

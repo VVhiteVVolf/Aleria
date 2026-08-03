@@ -23,16 +23,9 @@ function populateCharacterProfileForm(c = {}) {
   document.getElementById('cp-archived').checked = !!c.archived;
   document.getElementById('cp-save-status').textContent = '';
 
-  syncPortraitDisplay(c.portrait || null, c.name || '?');
   syncProfileLinkDisplay(c.profileLink || '', c.name || '');
   syncCharacterGenealogyFields(c);
-  const urlField = document.getElementById('cp-portrait-url');
-  if (urlField) urlField.value = c.portrait || '';
-
-  initEmoteSlots(c.emotes || []);
-  setCharacterAvatarImportStatus('Du kannst Links auch direkt auf dieses Feld ziehen.');
-  const avatarLinksInput = document.getElementById('cp-avatar-links');
-  if (avatarLinksInput) avatarLinksInput.value = '';
+  initCharacterImageSetEditor(c);
   if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
   window.AleriaCharacterCombatProfile?.init?.(c);
 
@@ -269,6 +262,7 @@ function collectCharacterProfileDataFromForm() {
   const profileLink = normalizeCharacterProfileLinkForStorage(document.getElementById('cp-profile-link-url')?.value || '');
   const now = new Date().toISOString();
   const genealogy = getCharacterGenealogyFormData(existing);
+  const imageSetData = collectCharacterImageSetEditorData();
   return {
     id: _editingChar || '',
     name: document.getElementById('cp-name')?.value.trim() || existing.name || '',
@@ -288,12 +282,7 @@ function collectCharacterProfileDataFromForm() {
     archived: !!document.getElementById('cp-archived')?.checked,
     createdAt: existing.createdAt || now,
     updatedAt: now,
-    portrait: normalizeImageUrlForStorage(document.getElementById('cp-portrait-url')?.value || '') || normalizeImageUrlForStorage(existing.portrait) || null,
-    emotes: (_emoteSlots || [])
-      .filter(Boolean)
-      .map(e => ({ img: normalizeImageUrlForStorage(e.img), label: e.label || '' }))
-      .filter(e => e.img),
-    emotesOverride: true,
+    ...imageSetData,
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
       : sanitizeCharacterInventoryData(existing.inventory || {}),
@@ -345,7 +334,8 @@ function openCurrentCharacterImportFilePicker() {
       const imported = {
         ...records[0],
         aliases: Array.isArray(records[0].aliases) ? records[0].aliases : parseAliasInput(records[0].aliases || ''),
-        emotes: Array.isArray(records[0].emotes) ? records[0].emotes : []
+        emotes: Array.isArray(records[0].emotes) ? records[0].emotes : [],
+        imageSets: Array.isArray(records[0].imageSets) ? records[0].imageSets : []
       };
       populateCharacterProfileForm(imported);
       if (status) {
@@ -365,6 +355,7 @@ function openCurrentCharacterImportFilePicker() {
 async function saveCharacter() {
   const selectedCommentCharId = _selectedCharId;
   const selectedCommentEmoteIdx = _selectedEmoteIdx;
+  const selectedCommentImageSetId = _selectedImageSetId;
   const name     = document.getElementById('cp-name').value.trim();
   const title    = document.getElementById('cp-title').value.trim();
   const fraktion = document.getElementById('cp-fraktion').value.trim();
@@ -402,6 +393,7 @@ async function saveCharacter() {
   const now = new Date().toISOString();
 
   const genealogy = getCharacterGenealogyFormData(existing);
+  const imageSetData = collectCharacterImageSetEditorData();
   const data = {
     name, title, fraktion, role, status: characterStatus, relevance,
     taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
@@ -409,12 +401,7 @@ async function saveCharacter() {
     archived,
     createdAt: existing.createdAt || now,
     updatedAt: now,
-    portrait: normalizeImageUrlForStorage(document.getElementById('cp-portrait-url').value) || normalizeImageUrlForStorage(existing.portrait) || null,
-    emotes: _emoteSlots
-      .filter(Boolean)
-      .map(e => ({ img: normalizeImageUrlForStorage(e.img), label: e.label || '' }))
-      .filter(e => e.img),
-    emotesOverride: true,
+    ...imageSetData,
     inventory: typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
       : sanitizeCharacterInventoryData(existing.inventory || {}),
@@ -458,8 +445,9 @@ async function saveCharacter() {
     if (typeof isCommentFormOpen === 'function' && isCommentFormOpen() && selectedCommentCharId) {
       const refreshed = getAvailableCommentCharacterById(selectedCommentCharId) || getAvailableCommentCharacterByName(name);
       if (refreshed) {
-        selectCharForComment(refreshed.id);
-        if (Number.isInteger(selectedCommentEmoteIdx) && refreshed.emotes?.[selectedCommentEmoteIdx]) {
+        selectCharForComment(refreshed.id, { imageSetId: selectedCommentImageSetId });
+        const refreshedPresentation = getSelectedCommentCharacterPresentation(refreshed);
+        if (Number.isInteger(selectedCommentEmoteIdx) && refreshedPresentation.emotes?.[selectedCommentEmoteIdx]) {
           selectEmote(selectedCommentEmoteIdx);
         }
       }

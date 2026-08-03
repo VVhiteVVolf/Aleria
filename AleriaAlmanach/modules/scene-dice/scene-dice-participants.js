@@ -1,4 +1,4 @@
-import { loadActiveSceneSnapshot } from './scene-dice-scene-context.js';
+import { loadActiveSceneSnapshot } from './scene-dice-scene-context.js?v=20260803-system-audit-v1';
 
 const SCENE_DICE_ROLLER_STORAGE_KEY = 'aleria.scene-dice.roller.v2';
 const SCENE_DICE_NARRATOR_ID = '__narrator__';

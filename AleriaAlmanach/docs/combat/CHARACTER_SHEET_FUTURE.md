@@ -1,6 +1,6 @@
 # Zukunftskonzept: Aleria-Kampfbogen und Regelsystem
 
-Stand: 2. August 2026
+Stand: 3. August 2026
 
 ## Zielbild
 
@@ -10,7 +10,7 @@ Das System bleibt abschnittsbasiert: Spieler schreiben eine Kampfbeschreibung, d
 
 ## Bereits gelegte Grundlage
 
-- Versioniertes `combatProfile`-Schema 3 mit Migration der bisherigen Kampfdaten.
+- Versioniertes `combatProfile`-Schema 4 mit Migration der bisherigen Kampfdaten.
 - Normale Stufen 1–20 und bis zu zehn zusätzliche Sonderstufen, Gesamtstufe maximal 30.
 - D&amp;D-inspirierter Kompetenzbonus von +2 bis +9, manuell überschreibbar.
 - Sechs frei benennbare Attribute mit abgeleitetem oder manuell überschriebenem Modifikator.
@@ -24,6 +24,12 @@ Das System bleibt abschnittsbasiert: Spieler schreiben eine Kampfbeschreibung, d
 - Der Stufenaufstieg verändert zunächst nur den lokalen Bogenentwurf und wird erst mit „Figur speichern“ dauerhaft in Firebase geschrieben.
 - Passive Wahrnehmung verwendet den vollständigen Wahrnehmungs-Fertigkeitswert statt nur Weisheit.
 - Der allgemeine AleriaGPT-Indexer bewahrt auch `0`, `false` und erzählerische Hintergrundfelder; der verbindliche Kampf-Snapshot enthält sämtliche Kampfbogen-Kategorien und warnt vor doppelter Addition.
+- Aktion, Bonusaktion und Reaktion sind kommentargebundene Ressourcen. Besondere Aktion besitzt zwei Einsätze pro Tag. Mana/Fokus, Aura-Fokus sowie Celestiale und Infernale Punkte bleiben dauerhaft gespeichert und erholen sich am nächsten Aleria-Tag.
+- `Schicksalspunkte` werden verlustarm zu `Celestiale Punkte` migriert. `Flirten (Charisma)` und `Körperbeherrschung (Konstitution)` gehören zur Charakter-Fertigkeitenliste.
+- Waffen tragen eine strukturierte Waffenart. Der einfache waffenlose Nahkampf ist als nicht entfernbarer Rückfall vorhanden.
+- Techniken und Formen besitzen Waffenkompatibilität, Aktivierungsart, Kosten, Reichweite, Schaden und strukturierte Wirkungen.
+- Aura, Präsenz und Domäne trennen aktive Form und latente Präsenz einschließlich strukturierter Eigen-, Verbündeten- und Gegnerwirkungen.
+- Marotten, besondere Fähigkeiten und Techniken besitzen gemeinsame Detaildialoge mit Auslösern, Zielen, Dauer, Grenzen, Kosten und ausdrücklichen AleriaGPT-Hinweisen.
 
 ## Umgesetzter Stufenaufstieg
 
@@ -74,6 +80,32 @@ AleriaGPT interpretiert Bedeutung und formuliert Erzähltext. Es erhält immer:
 - Magieregeln, Zauberangriff, Zauber-SG und alle Zauber
 - freie Notizen und Sonderabsprachen
 - die bereits bestätigten Würfel- und Kampffakten
+
+Zusätzlich erhält die KI die gewählte Technik oder den gewählten Zauber, aktive Waffenkompatibilität, Zahlungsweg, Kosten-Snapshot, Aura-Bypass und die Ressourcenstände vor und nach jedem mechanischen Abschnitt. Ein Freitext darf niemals eine fehlende Zahlung ersetzen.
+
+## Kommentargebundene Aktionsökonomie
+
+Ein vollständiger Kommentar ist die Abrechnungsgrenze. Rede, Handlung, Gedanken und andere rein erzählerische Abschnitte bleiben unbegrenzt. Kampfbeschreibung, Zauberformel, Gebet und Gesang sind mechanische Abschnitte und müssen vor dem Würfeln bezahlt werden.
+
+- Standardmäßig kostet ein Angriff seine im Bogen hinterlegte Aktion sowie mögliche Zusatzkosten.
+- Eine Technik darf stattdessen Bonusaktion, Reaktion oder Besondere Aktion verlangen und mehrere Kosten kombinieren.
+- Aura-Fokus ersetzt bei ausdrücklich freigegebenen Einträgen die gesamten Standardkosten; er wird nicht zusätzlich berechnet.
+- Der Cheatmodus erlässt Kosten und erzwingt Erfolg. Automatischer kritischer Erfolg bleibt eine getrennte Option.
+- Mehrere mechanische Abschnitte desselben Akteurs werden in Reihenfolge auf demselben Ressourcenstand berechnet.
+- Beim nächsten vollständigen Kommentar werden Aktion, Bonusaktion und Reaktion aufgefüllt. Tagesressourcen werden anhand des Aleria-Szenentages erst bei einem echten Tageswechsel erneuert.
+- Dauerhafte Änderungen und Ziel-TP werden gemeinsam mit dem Kommentar atomar in Firebase geschrieben; die historischen Abschnittssnapshots bleiben unverändert.
+
+## Geplanter Zauberersteller und Zauberliste
+
+Das heutige Schema bereitet den späteren Zauberkatalog vor, ohne ihn vorwegzunehmen. Ein Zauber besitzt bereits stabile ID, Aktivierungsart, Angriffs- oder Rettungswurfmodus, Attribut, Reichweite, Dauer, Schaden, Mana-/Slotkosten, Aura-Bypass und AleriaGPT-Regelhinweise.
+
+Die spätere Registry soll Definition und Besitz trennen:
+
+1. Die Registry enthält die versionierte Zauberdefinition.
+2. Der Charakterbogen speichert Registry-ID, verwendete Version und eine lokale Regelkopie.
+3. Vorbereitung, individuelle Kosten, aktuelle Slots und persönliche Notizen bleiben Instanzdaten in Firebase.
+4. Ein Registry-Update überschreibt keine laufende Figur und keine alte Kampfauswertung.
+5. Der Zauberersteller validiert Formeln und Kosten mit demselben Regelkern wie die interaktive Szene.
 
 Die KI darf strukturierte Modifikatoren nicht ein zweites Mal addieren. Sie darf aus Freitext keine neue Zahlenwirkung erfinden. Bei einem Widerspruch hat die strukturierte Mechanik Vorrang; der Konflikt soll später im Diagnosebereich des Bogens sichtbar werden.
 

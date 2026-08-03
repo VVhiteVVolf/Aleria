@@ -1,6 +1,6 @@
 # Kreaturenregister – Architektur und Zukunftsplan
 
-Stand: 2. August 2026
+Stand: 3. August 2026
 Status: Grundlage produktiv implementiert
 
 ## Zweck
@@ -18,7 +18,7 @@ Eine Kreatur enthält:
 - Identität: Name, Typ, Gattung, Habitat, Größe, Bedrohungsgrad und Stufe 1–30
 - Präsentation: Standardportrait, Bildunterschrift und bis zu zehn zusätzliche Avatare
 - Vorlagenbezug: `templateId` und `instanceOrdinal`
-- kompatibles Kampfprofil Schema v3
+- kompatibles Kampfprofil Schema v4 einschließlich Aktionsökonomie, Aura, Techniken, Zaubern und Cheatregeln
 - Mini-Lootbox mit Währung, Fundregeln und einzelnen Gegenständen
 - freie Spielleitungsnotizen
 - Erstellungs- und Änderungszeitpunkt
@@ -79,6 +79,8 @@ Für Kreaturen gelten dieselben harten Regeln wie für Charakter-Kampfdaten:
 4. Typ, Gattung, Habitat, Bedrohungsgrad, Notizen und Loot werden zusätzlich als Kreaturenkontext übergeben.
 5. Eine Szeneninstanz wird anhand ihrer eigenen ID bewertet, nicht anhand eines gleichnamigen Vorlagenwerts.
 6. Fehlende Angaben dürfen erzählerisch vorsichtig beschrieben, aber nicht als dauerhafte Regel erfunden werden.
+
+Kreaturen verwenden denselben Aktionskosten- und Zahlungsweg wie Charaktere. Ihre kommentargebundenen Aktionen werden pro vollständigem Kommentar aufgefüllt; dauerhafte Ressourcen und Trefferpunkte bleiben pro konkreter Szeneninstanz erhalten.
 
 Der allgemeine AleriaGPT-Index erhält Kreaturen als eigene Dokumentart `creature-profile`. Bei einem szenengebundenen Wurf wird das Profil zusätzlich als nicht verdrängbarer Pflichtkontext eingefügt.
 

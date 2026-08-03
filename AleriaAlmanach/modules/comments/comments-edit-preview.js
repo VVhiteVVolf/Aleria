@@ -11,14 +11,17 @@ function getEditPreviewState() {
   if (_editSelectedCharId) {
     const char = getAvailableCommentCharacterById(_editSelectedCharId);
     if (char) {
+      const presentation = char.entityType === 'creature'
+        ? char
+        : applyCharacterImageSetPresentation(char, _editSelectedImageSetId);
       return {
         narrator: false,
         commentKind: _editCommentKind,
         name: char.name || 'Unbekannt',
         title: char.title || '',
-        portrait: _editSelectedEmoteIdx !== null && char.emotes?.[_editSelectedEmoteIdx]
-          ? char.emotes[_editSelectedEmoteIdx].img
-          : (char.portrait || null),
+        portrait: _editSelectedEmoteIdx !== null && presentation.emotes?.[_editSelectedEmoteIdx]
+          ? presentation.emotes[_editSelectedEmoteIdx].img
+          : (presentation.portrait || null),
         text,
       };
     }
@@ -56,13 +59,15 @@ function updateEditFormPreview() {
         <div class="comment-live-preview-kicker">Live-Vorschau</div>
       </div>
       <div class="comment-segment-preview-stack">
-        ${segments.map((segment, index) => renderCommentBubble({
+        ${segments.map((segment, index) => { const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment) || segment.commentKind || segment.kind; return renderCommentBubble({
           id: `edit-preview-${index}`,
           ...segment,
+          kind: displayKind,
+          commentKind: displayKind,
           _hideActions: true,
           _commentPreview: true,
           commentSegments: null
-        }, index)).join('')}
+        }, index); }).join('')}
       </div>`;
     return;
   }

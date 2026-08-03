@@ -18,14 +18,15 @@ function getCommentPreviewState() {
   if (_selectedCharId) {
     const char = getAvailableCommentCharacterById(_selectedCharId);
     if (char) {
+      const presentation = char.entityType === 'creature' ? char : getSelectedCommentCharacterPresentation(char);
       return {
         narrator: false,
         commentKind: _commentKind,
         name: char.name || 'Unbekannt',
         title: char.title || '',
-        portrait: _selectedEmoteIdx !== null && char.emotes?.[_selectedEmoteIdx]
-          ? char.emotes[_selectedEmoteIdx].img
-          : (char.portrait || null),
+        portrait: _selectedEmoteIdx !== null && presentation.emotes?.[_selectedEmoteIdx]
+          ? presentation.emotes[_selectedEmoteIdx].img
+          : (presentation.portrait || null),
         text,
       };
     }
@@ -63,13 +64,15 @@ function updateCommentFormPreview() {
         <div class="comment-live-preview-kicker">Live-Vorschau</div>
       </div>
       <div class="comment-segment-preview-stack">
-        ${segments.map((segment, index) => renderCommentBubble({
+        ${segments.map((segment, index) => { const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment) || segment.commentKind || segment.kind; return renderCommentBubble({
           id: `preview-${index}`,
           ...segment,
+          kind: displayKind,
+          commentKind: displayKind,
           _hideActions: true,
           _commentPreview: true,
           commentSegments: null
-        }, index)).join('')}
+        }, index); }).join('')}
       </div>`;
     return;
   }

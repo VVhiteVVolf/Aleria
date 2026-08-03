@@ -22,11 +22,24 @@
         ${canUseEmote ? getSegmentEmotePalette(segment, false) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
+        <div class="comment-segment-mechanics-host" data-segment-mechanics-host></div>
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
       </div>`;
   }).join('') + renderCommentDurationTotal(false);
+  window.AleriaSkillChecks?.mountComposer?.(list, {
+    segments: _commentSegments,
+    selectedCharacterId: _selectedCharId || '',
+    sceneActors: window.AleriaCommentSceneCast?.getActors?.(false) || [],
+    threadId: getCurrentCommentThreadId()
+  });
   window.AleriaCombat?.mountComposer?.(list, {
+    segments: _commentSegments,
+    selectedCharacterId: _selectedCharId || '',
+    sceneActors: window.AleriaCommentSceneCast?.getActors?.(false) || [],
+    threadId: getCurrentCommentThreadId()
+  });
+  window.AleriaInventoryUse?.mountComposer?.(list, {
     segments: _commentSegments,
     selectedCharacterId: _selectedCharId || '',
     sceneActors: window.AleriaCommentSceneCast?.getActors?.(false) || [],
@@ -55,6 +68,7 @@ function setCommentSegmentKind(id, kind) {
   const segment = _commentSegments.find(item => item.id === id);
   if (!segment) return;
   if (!getAllowedCommentSegmentKinds(false).includes(kind)) kind = 'action';
+  if (!isCommentSegmentKindAllowedForMechanicMode(segment, kind, false)) return;
   segment.kind = normalizeCommentKind(kind);
   if (segment.kind === 'action') {
     segment.emoteIndex = null;
@@ -62,10 +76,17 @@ function setCommentSegmentKind(id, kind) {
   } else {
     segment.side = normalizeCommentSegmentSide(segment.side);
   }
-  if (segment.kind !== 'combataction') {
+  if (segment.kind === 'action') {
+    segment.mechanicMode = 'normal';
     segment.combatTargetId = '';
     segment.combatActionId = '';
     segment.combatRollMode = 'normal';
+    segment.combatPaymentMode = 'standard';
+    segment.combatPaymentConfirmed = false;
+  }
+  if (segment.kind !== 'consume') {
+    segment.inventoryItemId = '';
+    segment.inventoryUseMode = 'auto';
   }
   renderCommentSegmentList();
   updateCommentFormPreview();
@@ -88,6 +109,7 @@ function setCommentSegmentActor(id, actorId) {
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
+  segment.combatPaymentConfirmed = false;
   if (segment.combatTargetId === actor.id) segment.combatTargetId = '';
   renderCommentSegmentList();
   updateCommentFormPreview();
@@ -124,6 +146,7 @@ function setCommentSegmentEmote(id, value) {
   if (!segment) return;
   const idx = value === '' ? null : Number(value);
   segment.emoteIndex = Number.isInteger(idx) ? idx : null;
+  segment.imageSetId = _selectedImageSetId;
   updateCommentFormPreview();
   persistCommentDraft();
 }
@@ -214,6 +237,7 @@ function buildCommentSegmentsForSave() {
           portrait: null,
           characterId: '',
           emoteIndex: null,
+          imageSetId: '',
           avatarKind: 'narrator',
           side: ''
           ,durationSeconds: getSceneTimeSegmentDuration(segment)
@@ -231,6 +255,7 @@ function buildCommentSegmentsForSave() {
         charTitle: actor.title,
         portrait: emote?.img || actor.portrait || null,
         characterId: actor.characterId || '',
+        imageSetId: actor.char?.selectedImageSetId || '',
         ...(actor.sceneActorId ? {
           actorType: 'creature',
           creatureId: actor.sceneActorSourceId,
@@ -240,10 +265,29 @@ function buildCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : actor.avatarKind,
         side: normalizeCommentSegmentSide(segment.side),
-        ...(segment.kind === 'combataction' ? {
+        mechanicMode: normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.kind, segment),
+        skillId: String(segment.skillId || ''),
+        skillCustomModifier: Number(segment.skillCustomModifier || 0),
+        skillDifficulty: Number(segment.skillDifficulty || 10),
+        skillRollMode: ['advantage', 'disadvantage'].includes(segment.skillRollMode) ? segment.skillRollMode : 'normal',
+        skillTargetActorKey: String(segment.skillTargetActorKey || ''),
+        skillTargetChallengeId: String(segment.skillTargetChallengeId || ''),
+        skillChallengeId: String(segment.skillChallengeId || ''),
+        skillChallengeEnabled: !!segment.skillChallengeEnabled,
+        skillChallengeTitle: String(segment.skillChallengeTitle || ''),
+        skillChallengeRevealedText: String(segment.skillChallengeRevealedText || ''),
+        skillChallengeDifficulty: Number(segment.skillChallengeDifficulty || 10),
+        skillChallengePreferredSkills: Array.isArray(segment.skillChallengePreferredSkills) ? [...segment.skillChallengePreferredSkills] : [],
+        skillChallengePreferredModifier: Number(segment.skillChallengePreferredModifier ?? 2),
+        skillChallengeAlternativeModifier: Number(segment.skillChallengeAlternativeModifier ?? -2),
+        inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
+        inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+        ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
           combatActionId: String(segment.combatActionId || ''),
-          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal'
+          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+          combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
+          combatPaymentConfirmed: !!segment.combatPaymentConfirmed
         } : {}),
         ...(commentKindUsesLanguage(segment.kind) ? {
           language: getCommentLanguage(segment),

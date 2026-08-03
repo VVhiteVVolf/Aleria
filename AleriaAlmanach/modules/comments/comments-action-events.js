@@ -25,6 +25,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'set-comment-kind',
   'toggle-manual-mode',
   'select-comment-character',
+  'select-comment-image-set',
   'select-comment-emote',
   'insert-comment-emote-break',
   'remove-comment-emote',
@@ -36,6 +37,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'add-showcase-info-row',
   'remove-showcase-info-row',
   'select-edit-character',
+  'select-edit-image-set',
   'select-edit-emote',
   'insert-edit-comment-emote-break',
   'set-comment-turn',
@@ -173,6 +175,10 @@ function handleCommentFormActionClick(event) {
     selectCharForComment(trigger.dataset.id || '');
     return;
   }
+  if (action === 'select-comment-image-set') {
+    selectCommentImageSet(trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+    return;
+  }
   if (action === 'select-comment-emote') {
     selectEmote(Number(trigger.dataset.emoteIdx) || 0);
     return;
@@ -215,6 +221,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'select-edit-character') {
     selectEditChar(trigger.dataset.id || '');
+    return;
+  }
+  if (action === 'select-edit-image-set') {
+    selectEditImageSet(trigger.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
     return;
   }
   if (action === 'select-edit-emote') {

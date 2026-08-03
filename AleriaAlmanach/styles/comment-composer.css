@@ -250,7 +250,7 @@
 
 #edit-comment-overlay .comment-segment-types {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   grid-column: 2;
   grid-row: 1 / span 2;
   justify-self: end;
@@ -269,7 +269,7 @@
 
 #comment-form-overlay .comment-segment-types {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   grid-column: 2;
   grid-row: 1 / span 2;
   justify-self: end;
@@ -322,6 +322,23 @@
   background: linear-gradient(180deg, #966108, #6d4403);
 }
 
+#comment-form-overlay .comment-segment-type:disabled,
+#edit-comment-overlay .comment-segment-type:disabled {
+  opacity: 0.3;
+  filter: grayscale(0.85);
+  cursor: not-allowed;
+  color: rgba(74, 59, 34, 0.68);
+  background: rgba(109, 96, 67, 0.12);
+}
+
+#comment-form-overlay .comment-segment-type.active:disabled,
+#edit-comment-overlay .comment-segment-type.active:disabled {
+  opacity: 0.78;
+  filter: none;
+  color: #fff5d8;
+  background: linear-gradient(180deg, #966108, #6d4403);
+}
+
 #comment-form-overlay .comment-segment-side {
   margin: 0.55rem 0 0.4rem;
   justify-content: flex-start;
@@ -365,7 +382,7 @@
 
 #comment-form-overlay .comment-segment-actions {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 0.35rem;
   margin-top: 0.65rem;
   padding: 0.5rem;
@@ -387,9 +404,9 @@
 }
 
 @media (min-width: 861px) {
-  #comment-form-overlay .comment-segment-types > .comment-segment-type:nth-child(9),
-  #edit-comment-overlay .comment-segment-types > .comment-segment-type:nth-child(9),
-  #comment-form-overlay .comment-segment-actions > .comment-segment-add:nth-child(9) {
+  #comment-form-overlay .comment-segment-types > .comment-segment-type:nth-child(10),
+  #edit-comment-overlay .comment-segment-types > .comment-segment-type:nth-child(10),
+  #comment-form-overlay .comment-segment-actions > .comment-segment-add:nth-child(10) {
     grid-column: 2;
   }
 }

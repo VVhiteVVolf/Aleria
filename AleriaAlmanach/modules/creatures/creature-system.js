@@ -1,5 +1,6 @@
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
+  COMBAT_WEAPON_TYPE_OPTIONS,
   getArmorClass,
   getAttributeModifier,
   getMaximumHitPoints,
@@ -8,8 +9,11 @@ import {
   getSavingThrowTotal,
   getSkillTotal,
   getWeaponAttackModifier,
+  isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260802-combat-sheet-v4';
+} from '../combat/combat-profile-model.js?v=20260803-combat-sheet-v6';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-combat-entry-editor-v1';
+import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-resource-icons-v1';
 import {
   CREATURE_ARCHIVE_EXPORT_TYPE,
   CREATURE_SCHEMA_VERSION,
@@ -20,7 +24,7 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260802-combat-state-v2';
+} from './creature-model.js?v=20260803-combat-sheet-v6';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
@@ -74,6 +78,21 @@ function clone(value) {
 
 function makeId(prefix) {
   return `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function getAtPath(target, path) {
+  return String(path || '').split('.').filter(Boolean).reduce((value, key) => value?.[key], target);
+}
+
+function setAtPath(target, path, value) {
+  const parts = String(path || '').split('.').filter(Boolean);
+  const last = parts.pop();
+  if (!last) return;
+  const parent = parts.reduce((value, key) => {
+    if (!value[key] || typeof value[key] !== 'object') value[key] = {};
+    return value[key];
+  }, target);
+  parent[last] = value;
 }
 
 function getOverlay() {
@@ -165,7 +184,7 @@ function renderLibrary() {
 }
 
 function renderCreatureCard(creature) {
-  const profile = sanitizeCharacterCombatProfile(creature.combatProfile);
+  const profile = sanitizeCharacterCombatProfile(creature.combatProfile, { ensureRequiredSkills: false });
   const portrait = safeImageUrl(creature.portrait);
   const hp = getMaximumHitPoints(profile);
   const ac = getArmorClass(profile);
@@ -293,17 +312,33 @@ function renderSheet() {
       </div>
     </div>
     ${renderAttacks(profile)}
+    ${renderCreatureResources(profile)}
+    <div class="creature-sheet-columns">
+      ${renderCreatureDetailSection(profile, 'techniques', 'T', 'Techniken & Formen', 'technique', 'Technik', item => !['reaction', 'bonus-action'].includes(item.activationType), 'action')}
+      ${renderCreatureDetailSection(profile, 'techniques', 'B', 'Reaktionen & Bonusaktionen', 'technique', 'Reaktion / Bonusaktion', item => ['reaction', 'bonus-action'].includes(item.activationType), 'bonus-action')}
+    </div>
+    ${renderCreatureAura(profile)}
     <div class="creature-sheet-columns">
       ${renderAbilities(profile)}
       ${renderSkillsAndSaves(profile)}
     </div>
+    <div class="creature-sheet-columns">
+      ${renderCreatureDetailSection(profile, 'quirks', 'E', 'Marotten & Eigenschaften', 'quirk', 'Marotte')}
+      ${renderCreatureMagic(profile)}
+    </div>
     ${renderConditions(profile)}
+    <section class="creature-sheet-section creature-cheat-section"><div class="creature-section-title"><span>!</span> Spielleiter-Cheat</div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="cheats.enabled"${profile.cheats.enabled ? ' checked' : ''}> Kosten entfallen und Angriffe gelingen automatisch</label><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="cheats.automaticCritical"${profile.cheats.automaticCritical ? ' checked' : ''}> automatische kritische Treffer</label></section>
     ${renderLoot(creature)}
     <section class="creature-sheet-section">
       <div class="creature-section-title"><span>9</span> Spielleitungsnotizen</div>
       <textarea class="creature-textarea" rows="4" data-creature-field="notes" placeholder="Taktik, Verhalten, Geheimnisse und besondere Regeln …">${escapeHtml(creature.notes)}</textarea>
     </section>
     ${renderAvatars(creature)}`;
+  root.querySelectorAll('.creature-resource-icon').forEach(image => {
+    const markFailed = () => image.closest('.creature-resource-icon-frame')?.classList.add('is-missing');
+    if (image.complete && image.naturalWidth === 0) markFailed();
+    else image.addEventListener('error', markFailed, { once: true });
+  });
   const deleteButton = document.querySelector('[data-creature-action="delete"]');
   if (deleteButton) deleteButton.hidden = !state.editingId || isBuiltinCreatureId(state.editingId);
 }
@@ -312,27 +347,59 @@ function renderAttacks(profile) {
   return `<section class="creature-sheet-section">
     <div class="creature-section-head"><div class="creature-section-title"><span>5</span> Angriffe</div><button type="button" data-creature-action="add-attack">+ Angriff</button></div>
     <div class="creature-table creature-attacks-table">
-      <div class="creature-table-head"><span>Name</span><span>Attribut</span><span>Schaden</span><span>Art / Reichweite</span><span>Effekt</span><span></span></div>
+      <div class="creature-table-head"><span>Name / Waffenart</span><span>Attribut</span><span>Schaden</span><span>Art / Reichweite</span><span>Effekt</span><span></span></div>
       ${profile.weapons.map((weapon, index) => `<div class="creature-table-row" data-attack-index="${index}">
-        <input data-attack-field="name" value="${escapeHtml(weapon.name)}" placeholder="Biss">
+        <div class="creature-stacked-inputs"><input data-attack-field="name" value="${escapeHtml(weapon.name)}" placeholder="Biss"><select data-attack-field="weaponType">${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<option value="${option.id}"${option.id === weapon.weaponType ? ' selected' : ''}>${option.label}</option>`).join('')}</select><select data-attack-field="training"><option value="simple"${weapon.training === 'simple' ? ' selected' : ''}>Schlicht / simpel</option><option value="martial"${weapon.training === 'martial' ? ' selected' : ''}>Kriegerisch</option><option value="special"${weapon.training === 'special' ? ' selected' : ''}>Besonders</option></select></div>
         <select data-attack-field="attackAttribute">${ATTRIBUTE_OPTIONS.replace(`value="${weapon.attackAttribute}"`, `value="${weapon.attackAttribute}" selected`)}</select>
         <input data-attack-field="damageFormula" value="${escapeHtml(weapon.damageFormula)}" placeholder="1d8+2">
         <div class="creature-stacked-inputs"><input data-attack-field="damageType" value="${escapeHtml(weapon.damageType)}" placeholder="Stich"><input data-attack-field="range" value="${escapeHtml(weapon.range)}" placeholder="Nahkampf"></div>
         <textarea rows="2" data-attack-field="notes" placeholder="Effekt / Besonderheit">${escapeHtml(weapon.notes || weapon.properties)}</textarea>
-        <button type="button" class="creature-row-remove" data-creature-action="remove-attack" data-index="${index}" aria-label="Angriff entfernen">×</button>
+        <div class="creature-attack-actions"><button type="button" data-creature-action="edit-detail" data-collection="weapons" data-entry-kind="weapon" data-item-id="${escapeHtml(weapon.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-attack" data-index="${index}" aria-label="Angriff entfernen">×</button></div>
       </div>`).join('') || '<div class="creature-table-empty">Noch kein Angriff. Füge natürliche Angriffe, Waffen oder Zauberangriffe hinzu.</div>'}
     </div>
   </section>`;
 }
 
 function renderAbilities(profile) {
-  return `<section class="creature-sheet-section">
-    <div class="creature-section-head"><div class="creature-section-title"><span>6</span> Eigenschaften / Fähigkeiten</div><button type="button" data-creature-action="add-ability">+ Fähigkeit</button></div>
-    <div class="creature-compact-list">${profile.abilities.map((ability, index) => `<div class="creature-compact-row" data-ability-index="${index}">
-      <input data-ability-field="name" value="${escapeHtml(ability.name)}" placeholder="Dunkelsicht">
-      <textarea rows="2" data-ability-field="description" placeholder="Wirkung und Regel">${escapeHtml(ability.description)}</textarea>
-      <button type="button" class="creature-row-remove" data-creature-action="remove-ability" data-index="${index}">×</button>
-    </div>`).join('') || '<div class="creature-table-empty">Resistenzen, Sinne und besondere Fähigkeiten ergänzen.</div>'}</div>
+  return renderCreatureDetailSection(profile, 'abilities', '6', 'Eigenschaften / Fähigkeiten', 'ability', 'Fähigkeit');
+}
+
+function renderCreatureDetailSection(profile, collection, number, title, kind, addLabel, filter = null, defaultActivation = '') {
+  const items = filter ? (profile[collection] || []).filter(filter) : (profile[collection] || []);
+  const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || null;
+  return `<section class="creature-sheet-section creature-detail-section">
+    <div class="creature-section-head"><div class="creature-section-title"><span>${number}</span> ${title}</div><button type="button" data-creature-action="add-detail" data-collection="${collection}" data-entry-kind="${kind}"${defaultActivation ? ` data-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
+    <div class="creature-detail-list">${items.map(item => { const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon); return `<article class="creature-detail-card ${item.active === false || !compatible ? 'inactive' : ''}" data-compatible="${compatible}">
+      <div><span>${escapeHtml([item.activationType || item.type, (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · '), compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar`].filter(Boolean).join(' · '))}</span><strong>${escapeHtml(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeHtml(item.description || item.effect || 'Noch keine Beschreibung.')}</p></div>
+      <div><button type="button" data-creature-action="edit-detail" data-collection="${collection}" data-entry-kind="${kind}" data-item-id="${escapeHtml(item.id)}">Bearbeiten</button><button type="button" class="creature-row-remove" data-creature-action="remove-detail" data-collection="${collection}" data-item-id="${escapeHtml(item.id)}">×</button></div>
+    </article>`; }).join('') || `<div class="creature-table-empty">Noch keine ${title.toLowerCase()} eingetragen.</div>`}</div>
+  </section>`;
+}
+
+function renderCreatureResources(profile) {
+  return `<section class="creature-sheet-section creature-resource-section">
+    <div class="creature-section-title"><span>R</span> Aktionen & Kernressourcen</div>
+    <div class="creature-resource-grid">${profile.resources.map(resource => { const icon = getCombatResourceIconPresentation(resource, document.baseURI); return `<label data-creature-resource-id="${escapeHtml(resource.id)}"><span class="creature-resource-icon-frame" aria-hidden="true"><b>${icon.fallback}</b>${icon.source ? `<img class="creature-resource-icon" src="${escapeHtml(icon.source)}" alt="" loading="eager" decoding="async">` : ''}</span><span>${escapeHtml(resource.name)}</span><div><input type="number" min="0" max="9999" data-resource-field="current" value="${resource.current}"><i>/</i><input type="number" min="0" max="9999" data-resource-field="maximum" value="${resource.maximum}"></div><small>${resource.scope === 'comment' ? 'pro Kommentar' : resource.recovery}</small></label>`; }).join('')}</div>
+  </section>`;
+}
+
+function renderCreatureAuraMechanics(path, title, mechanics = {}) {
+  return `<fieldset><legend>${title}</legend>${[['attack','Angriff'],['damage','Schaden'],['armorClass','RK'],['savingThrow','Rettung'],['spellAttack','Zauberangriff'],['spellSaveDc','Zauber-SG']].map(([key, label]) => `<label><span>${label}</span><input type="number" min="-99" max="99" data-creature-profile-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}</fieldset>`;
+}
+
+function renderCreatureAura(profile) {
+  const aura = profile.aura;
+  return `<section class="creature-sheet-section creature-aura-section">
+    <div class="creature-section-head"><div class="creature-section-title"><span>A</span> Aura, Präsenz & Domäne</div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="aura.enabled"${aura.enabled ? ' checked' : ''}> aktiv</label></div>
+    <div class="creature-identity-grid"><label class="creature-field"><span>Name</span><input data-creature-profile-path="aura.name" value="${escapeHtml(aura.name)}"></label><label class="creature-field"><span>Domäne</span><input data-creature-profile-path="aura.domain" value="${escapeHtml(aura.domain)}"></label><label class="creature-field"><span>Fokusressource</span><select data-creature-profile-path="aura.focusResourceId">${profile.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${resource.id === aura.focusResourceId ? ' selected' : ''}>${escapeHtml(resource.name)}</option>`).join('')}</select></label><label class="creature-field"><span>Fokuskosten</span><input type="number" min="1" max="999" data-creature-profile-path="aura.focusBypassCost" value="${aura.focusBypassCost}"></label></div>
+    <div class="creature-aura-components">${[['activeForm','Aktive Form'],['latentPresence','Latente Präsenz']].map(([key, title]) => { const component = aura[key]; return `<details open><summary>${title}</summary><div class="creature-identity-grid"><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="aura.${key}.enabled"${component.enabled ? ' checked' : ''}> vorhanden</label><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="aura.${key}.active"${component.active ? ' checked' : ''}> wirkt</label><label class="creature-field"><span>Name</span><input data-creature-profile-path="aura.${key}.name" value="${escapeHtml(component.name)}"></label><label class="creature-field"><span>Radius</span><input data-creature-profile-path="aura.${key}.radius" value="${escapeHtml(component.radius)}"></label></div><textarea class="creature-textarea" rows="3" data-creature-profile-path="aura.${key}.description" placeholder="Wirkung und Wahrnehmung">${escapeHtml(component.description)}</textarea><div class="creature-aura-mechanics">${renderCreatureAuraMechanics(`aura.${key}.selfMechanics`, 'Träger', component.selfMechanics)}${renderCreatureAuraMechanics(`aura.${key}.allyMechanics`, 'Verbündete', component.allyMechanics)}${renderCreatureAuraMechanics(`aura.${key}.enemyMechanics`, 'Gegner', component.enemyMechanics)}</div></details>`; }).join('')}</div>
+  </section>`;
+}
+
+function renderCreatureMagic(profile) {
+  return `<section class="creature-sheet-section creature-magic-section">
+    <div class="creature-section-head"><div class="creature-section-title"><span>M</span> Magie & Zauberformeln</div><div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="magic.enabled"${profile.magic.enabled ? ' checked' : ''}> Magie aktiv</label><button type="button" data-creature-action="add-spell">+ Zauber</button></div></div>
+    <div class="creature-spell-list">${profile.magic.spells.map((spell, index) => `<div data-spell-index="${index}"><input data-spell-field="name" value="${escapeHtml(spell.name)}" placeholder="Zauber"><input data-spell-field="rollFormula" value="${escapeHtml(spell.rollFormula)}" placeholder="1d8"><input type="number" min="0" max="999" data-spell-field="manaCost" value="${spell.manaCost}" aria-label="Mana"><select data-spell-field="presentationKind"><option value="spell"${spell.presentationKind === 'spell' ? ' selected' : ''}>Zauberformel</option><option value="prayer"${spell.presentationKind === 'prayer' ? ' selected' : ''}>Gebet</option><option value="song"${spell.presentationKind === 'song' ? ' selected' : ''}>Gesang</option></select><select data-spell-field="resolutionType"><option value="spell-attack"${spell.resolutionType === 'spell-attack' ? ' selected' : ''}>Zauberangriff</option><option value="saving-throw"${spell.resolutionType === 'saving-throw' ? ' selected' : ''}>Zauber-SG</option><option value="automatic"${spell.resolutionType === 'automatic' ? ' selected' : ''}>Automatisch</option></select><button type="button" data-creature-action="edit-detail" data-collection="magic.spells" data-entry-kind="spell" data-item-id="${escapeHtml(spell.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-spell" data-index="${index}">×</button><textarea rows="2" data-spell-field="description" placeholder="Wirkung">${escapeHtml(spell.description)}</textarea></div>`).join('') || '<div class="creature-table-empty">Noch keine Zauberformel.</div>'}</div>
   </section>`;
 }
 
@@ -433,6 +500,10 @@ function collectDraftFromForm() {
     else next[path] = value;
   });
   const profile = clone(next.combatProfile);
+  document.querySelectorAll('#creature-sheet-root [data-creature-profile-path]').forEach(element => {
+    const value = element.type === 'checkbox' ? element.checked : (element.type === 'number' ? readNumber(element) : element.value);
+    setAtPath(profile, element.dataset.creatureProfilePath, value);
+  });
   profile.progression.level = Math.min(20, Math.max(1, readNumber(document.querySelector('[data-creature-field="level"]'), next.level)));
   profile.progression.specialLevels = Math.max(0, Math.min(10, next.level - 20));
   profile.hitPoints.current = readNumber(document.querySelector('[data-combat-field="hp-current"]'), 0);
@@ -449,10 +520,18 @@ function collectDraftFromForm() {
     const save = profile.savingThrows.find(item => item.attributeKey === element.dataset.saveKey);
     if (save) save.proficient = element.checked;
   });
+  document.querySelectorAll('[data-creature-resource-id]').forEach(row => {
+    const resource = profile.resources.find(item => item.id === row.dataset.creatureResourceId);
+    if (!resource) return;
+    resource.current = readNumber(row.querySelector('[data-resource-field="current"]'), resource.current);
+    resource.maximum = readNumber(row.querySelector('[data-resource-field="maximum"]'), resource.maximum);
+  });
   profile.weapons = Array.from(document.querySelectorAll('[data-attack-index]')).map((row, index) => ({
     ...(profile.weapons[index] || {}),
     id: profile.weapons[index]?.id || makeId('attack'),
     name: row.querySelector('[data-attack-field="name"]')?.value || '',
+    weaponType: row.querySelector('[data-attack-field="weaponType"]')?.value || 'natural',
+    training: row.querySelector('[data-attack-field="training"]')?.value || 'simple',
     attackAttribute: row.querySelector('[data-attack-field="attackAttribute"]')?.value || 'strength',
     damageFormula: row.querySelector('[data-attack-field="damageFormula"]')?.value || '',
     damageType: row.querySelector('[data-attack-field="damageType"]')?.value || '',
@@ -461,10 +540,23 @@ function collectDraftFromForm() {
     equipped: index === 0,
     proficient: true
   }));
-  profile.abilities = Array.from(document.querySelectorAll('[data-ability-index]')).map((row, index) => ({
+  const abilityRows = Array.from(document.querySelectorAll('[data-ability-index]'));
+  if (abilityRows.length) profile.abilities = abilityRows.map((row, index) => ({
     ...(profile.abilities[index] || {}), id: profile.abilities[index]?.id || makeId('ability'),
     name: row.querySelector('[data-ability-field="name"]')?.value || '',
     description: row.querySelector('[data-ability-field="description"]')?.value || '', active: true
+  }));
+  const spellRows = Array.from(document.querySelectorAll('[data-spell-index]'));
+  profile.magic.spells = spellRows.map((row, index) => ({
+    ...(profile.magic.spells[index] || {}),
+    id: profile.magic.spells[index]?.id || makeId('spell'),
+    name: row.querySelector('[data-spell-field="name"]')?.value || '',
+    rollFormula: row.querySelector('[data-spell-field="rollFormula"]')?.value || '',
+    manaCost: readNumber(row.querySelector('[data-spell-field="manaCost"]'), 0),
+    presentationKind: row.querySelector('[data-spell-field="presentationKind"]')?.value || 'spell',
+    resolutionType: row.querySelector('[data-spell-field="resolutionType"]')?.value || 'spell-attack',
+    description: row.querySelector('[data-spell-field="description"]')?.value || '',
+    prepared: true
   }));
   profile.skills = Array.from(document.querySelectorAll('[data-skill-index]')).map((row, index) => ({
     ...(profile.skills[index] || {}), id: profile.skills[index]?.id || makeId('skill'),
@@ -677,17 +769,62 @@ function addRow(kind) {
   }
   collectDraftFromForm();
   const profile = state.draft.combatProfile;
-  if (kind === 'attack') profile.weapons.push({ id: makeId('attack'), name: '', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, range: 'Nahkampf', equipped: profile.weapons.length === 0 });
+  if (kind === 'attack') { const id = makeId('attack'); profile.weapons.push({ id, name: '', weaponType: 'natural', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, equipped: profile.weapons.length === 0 }); }
   if (kind === 'ability') profile.abilities.push({ id: makeId('ability'), name: '', description: '', active: true });
+  if (kind === 'spell') profile.magic.spells.push({ id: makeId('spell'), name: '', rollFormula: '', manaCost: 0, presentationKind: 'spell', resolutionType: 'spell-attack', activationType: 'action', damageType: 'Magie', prepared: true, description: '' });
   if (kind === 'skill') profile.skills.push({ id: makeId('skill'), name: '', attributeKey: 'dexterity', proficiency: 'trained', bonus: 0 });
   if (kind === 'condition') profile.conditions.push({ id: makeId('condition'), name: '', duration: '', description: '', active: true });
   if (kind === 'loot') state.draft.loot.items.push({ id: makeId('loot'), name: '', quantity: 1, chance: 100, notes: '' });
   renderSheet();
 }
 
+function createCreatureDetailItem(collection, defaultActivation = '') {
+  const id = makeId(collection === 'quirks' ? 'quirk' : (collection === 'abilities' ? 'ability' : 'technique'));
+  if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', trigger: '', target: 'Selbst', duration: '', stacking: 'normal', tags: '', limitations: '', aiInstructions: '', priority: 0, active: true, mechanics: {} };
+  const activationType = defaultActivation || 'action';
+  const resource = state.draft.combatProfile.resources.find(item => item.id === activationType);
+  const costs = activationType === 'passive' ? [] : [{ id: `${id}-cost`, resourceId: activationType, name: resource?.name || activationType, amount: 1, scope: resource?.scope || 'comment' }];
+  if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', rollFormula: '', damageType: 'physisch', activationType, delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs, auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+  return { id, name: '', category: 'technique', description: '', effect: '', activationType, weaponTypes: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs, auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+}
+
+function openCreatureDetailEditor(trigger) {
+  collectDraftFromForm();
+  const collection = trigger.dataset.collection;
+  const kind = trigger.dataset.entryKind;
+  const itemId = trigger.dataset.itemId || '';
+  const items = getAtPath(state.draft.combatProfile, collection);
+  if (!Array.isArray(items)) return;
+  const existing = items.find(item => item.id === itemId);
+  const item = existing ? clone(existing) : createCreatureDetailItem(collection, trigger.dataset.defaultActivation || '');
+  openCombatEntryEditor({
+    kind,
+    item,
+    resources: state.draft.combatProfile.resources,
+    weapons: state.draft.combatProfile.weapons,
+    onSave: updated => {
+      const index = items.findIndex(entry => entry.id === updated.id);
+      if (index >= 0) items[index] = updated;
+      else items.push(updated);
+      state.draft.combatProfile = sanitizeCharacterCombatProfile(state.draft.combatProfile, { ensureRequiredSkills: false });
+      renderSheet();
+      setStatus('Kampfprofil-Eintrag in den Entwurf übernommen. Online speichern nicht vergessen.', 'success');
+    }
+  });
+}
+
+function removeCreatureDetail(collection, itemId) {
+  collectDraftFromForm();
+  const items = state.draft.combatProfile[collection];
+  if (!Array.isArray(items)) return;
+  const index = items.findIndex(item => item.id === itemId);
+  if (index >= 0) items.splice(index, 1);
+  renderSheet();
+}
+
 function removeRow(kind, index) {
   collectDraftFromForm();
-  const mapping = { attack: state.draft.combatProfile.weapons, ability: state.draft.combatProfile.abilities, skill: state.draft.combatProfile.skills, condition: state.draft.combatProfile.conditions, loot: state.draft.loot.items, avatar: state.draft.avatars };
+  const mapping = { attack: state.draft.combatProfile.weapons, ability: state.draft.combatProfile.abilities, spell: state.draft.combatProfile.magic.spells, skill: state.draft.combatProfile.skills, condition: state.draft.combatProfile.conditions, loot: state.draft.loot.items, avatar: state.draft.avatars };
   mapping[kind]?.splice(index, 1);
   renderSheet();
 }
@@ -708,6 +845,10 @@ function handleClick(event) {
   else if (action === 'export-archive') exportArchive();
   else if (action === 'import-current') importCurrent();
   else if (action === 'import-archive') importArchive();
+  else if (action === 'add-detail' || action === 'edit-detail') openCreatureDetailEditor(trigger);
+  else if (action === 'remove-detail') removeCreatureDetail(trigger.dataset.collection, trigger.dataset.itemId);
+  else if (action === 'add-spell') addRow('spell');
+  else if (action === 'remove-spell') removeRow('spell', Number(trigger.dataset.index));
   else if (action.startsWith('add-')) addRow(action.slice(4));
   else if (action.startsWith('remove-')) removeRow(action.slice(7), Number(trigger.dataset.index));
 }
@@ -742,7 +883,10 @@ function handleCommittedCreatureCombatProfile(event) {
         } : currentCombatProfile.hitPoints,
         resources: Array.isArray(update.resources)
           ? update.resources.map(resource => ({ ...resource }))
-          : (currentCombatProfile.resources || [])
+          : (currentCombatProfile.resources || []),
+        abilities: Array.isArray(update.abilities)
+          ? update.abilities.map(ability => ({ ...ability }))
+          : (currentCombatProfile.abilities || [])
       }
     });
     changed = true;

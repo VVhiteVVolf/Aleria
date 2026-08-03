@@ -1,4 +1,11 @@
-const ALERIA_GPT_CONTEXT_SCHEMA_VERSION = 2;
+const ALERIA_GPT_CONTEXT_SCHEMA_VERSION = 3;
+
+const ALERIA_GPT_COMMENT_KINDS = new Set([
+  'speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout',
+  'performance', 'animal', 'foreign', 'song', 'spell', 'madness', 'telepathy',
+  'prayer', 'flirt', 'secretaction', 'combataction', 'narrator',
+  'scene-time-event', 'scene-rest-event', 'scene-transition-event', 'scene-poll-event'
+]);
 
 function normalizeAleriaGptKey(value) {
   if (typeof normalizeSearchText === 'function') return normalizeSearchText(value || '');
@@ -101,7 +108,7 @@ function getAleriaGptCommentKind(kind, narrator = false) {
   if (typeof normalizeCommentKind === 'function') return normalizeCommentKind(kind, narrator);
   if (narrator) return 'narrator';
   const value = String(kind || 'speech').toLowerCase();
-  return ['speech', 'action', 'thought', 'whisper', 'shout'].includes(value) ? value : 'speech';
+  return ALERIA_GPT_COMMENT_KINDS.has(value) ? value : 'speech';
 }
 
 function getAleriaGptCharacterIndex(characters) {
@@ -143,7 +150,8 @@ function collectAleriaGptCharacters(options = {}) {
   return source.map(character => {
     const structuredFacts = [];
     collectAleriaGptStructuredFacts(character, structuredFacts, 'charakter', 0, {
-      skipKeys: new Set(['portrait', 'profileLink'])
+      skipKeys: new Set(['portrait', 'profileLink']),
+      maxDepth: 8
     });
     const next = {
       id: String(character?.id || '').trim(),
@@ -183,7 +191,7 @@ function collectAleriaGptCreatures() {
       combatProfile: creature?.combatProfile,
       loot: creature?.loot,
       notes: creature?.notes
-    }, structuredFacts, 'kreatur', 0);
+    }, structuredFacts, 'kreatur', 0, { maxDepth: 8 });
     return {
       id: String(creature?.id || '').trim(),
       entityType: 'creature',
@@ -253,7 +261,10 @@ function pushAleriaGptFact(target, path, value) {
 }
 
 function collectAleriaGptStructuredFacts(value, target, path = '', depth = 0, options = {}) {
-  if (depth > 5 || value == null) return;
+  const maximumDepth = Number.isFinite(Number(options.maxDepth))
+    ? Math.max(1, Math.min(12, Number(options.maxDepth)))
+    : 5;
+  if (depth > maximumDepth || value == null) return;
   const skipKeys = options.skipKeys || new Set();
 
   if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
@@ -431,7 +442,165 @@ function collectAleriaGptModules(characterIndex) {
   return modules;
 }
 
-function getAleriaGptCommentSegments(comment, characterIndex) {
+function getAleriaGptFiniteNumber(value, fallback = 0) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : fallback;
+}
+
+function collectAleriaGptRevealedChallengeIds(comments = []) {
+  const revealed = new Set();
+  (Array.isArray(comments) ? comments : []).forEach(comment => {
+    (Array.isArray(comment?.commentSegments) ? comment.commentSegments : []).forEach(segment => {
+      const resolution = segment?.skillResolution;
+      if (!resolution || !['success', 'critical-success'].includes(String(resolution.outcome || ''))) return;
+      const challengeId = String(resolution.targetChallengeId || '').trim();
+      if (challengeId) revealed.add(challengeId);
+    });
+  });
+  return revealed;
+}
+
+function normalizeAleriaGptCombatResolution(value = {}) {
+  if (!value || typeof value !== 'object' || !value.resolutionId) return null;
+  const attack = value.attack && typeof value.attack === 'object' ? value.attack : {};
+  const damage = value.damage && typeof value.damage === 'object' ? value.damage : null;
+  const target = value.targetSnapshot && typeof value.targetSnapshot === 'object' ? value.targetSnapshot : {};
+  const resourceChanges = Array.isArray(value.actorResourceSnapshot?.changes)
+    ? value.actorResourceSnapshot.changes.map(change => ({
+        resourceId: String(change?.resourceId || ''),
+        name: String(change?.name || 'Ressource'),
+        amount: getAleriaGptFiniteNumber(change?.amount),
+        before: getAleriaGptFiniteNumber(change?.before),
+        after: getAleriaGptFiniteNumber(change?.after)
+      }))
+    : [];
+  return {
+    resolutionId: String(value.resolutionId),
+    actorId: String(value.actorId || ''),
+    actorName: String(value.actorName || ''),
+    targetId: String(value.targetId || ''),
+    targetName: String(value.targetName || ''),
+    actionType: String(value.actionType || 'attack'),
+    resolutionMode: String(value.resolutionMode || attack.resolutionMode || ''),
+    profileActionKind: String(value.profileActionKind || ''),
+    profileActionId: String(value.profileActionId || ''),
+    weaponName: String(value.weapon?.name || ''),
+    hit: attack.hit === true,
+    criticalSuccess: attack.criticalSuccess === true,
+    criticalFailure: attack.criticalFailure === true,
+    saveSucceeded: typeof attack.saveSucceeded === 'boolean' ? attack.saveSucceeded : null,
+    naturalRoll: getAleriaGptFiniteNumber(attack.naturalRoll),
+    total: getAleriaGptFiniteNumber(attack.total),
+    targetDefense: getAleriaGptFiniteNumber(attack.targetDefense),
+    damageTotal: damage ? getAleriaGptFiniteNumber(damage.total) : 0,
+    damageType: String(damage?.damageType || ''),
+    hitPointsBefore: getAleriaGptFiniteNumber(target.hitPointsBefore ?? target.currentHitPoints),
+    hitPointsAfter: getAleriaGptFiniteNumber(target.hitPointsAfter ?? target.currentHitPoints),
+    maximumHitPoints: getAleriaGptFiniteNumber(target.maximumHitPoints),
+    temporaryHitPointsAfter: getAleriaGptFiniteNumber(target.temporaryHitPointsAfter),
+    defeated: target.defeated === true,
+    resourceChanges,
+    narration: compactAleriaGptText(value.narration?.text || '')
+  };
+}
+
+function normalizeAleriaGptInventoryUse(value = {}) {
+  if (!value || typeof value !== 'object' || !value.usageId) return null;
+  return {
+    usageId: String(value.usageId),
+    actorId: String(value.actorId || ''),
+    actorName: String(value.actorName || ''),
+    itemId: String(value.item?.id || ''),
+    itemName: String(value.item?.name || ''),
+    itemType: String(value.item?.type || value.item?.category || ''),
+    mode: String(value.mode || 'use'),
+    quantity: getAleriaGptFiniteNumber(value.quantity, 1),
+    quantityBefore: getAleriaGptFiniteNumber(value.quantityBefore),
+    quantityAfter: getAleriaGptFiniteNumber(value.quantityAfter)
+  };
+}
+
+function normalizeAleriaGptSceneRest(value = {}) {
+  if (!value || typeof value !== 'object' || (!value.kind && !value.type)) return null;
+  return {
+    type: String(value.type || 'short'),
+    title: compactAleriaGptText(value.title || ''),
+    durationSeconds: getAleriaGptFiniteNumber(value.durationSeconds),
+    recoveryDayKey: String(value.recoveryDayKey || ''),
+    participants: (Array.isArray(value.participants) ? value.participants : []).map(participant => ({
+      actorId: String(participant?.actorId || ''),
+      name: String(participant?.name || ''),
+      hitPointsBefore: getAleriaGptFiniteNumber(participant?.before?.hitPoints?.current),
+      hitPointsAfter: getAleriaGptFiniteNumber(participant?.after?.hitPoints?.current),
+      maximumHitPoints: getAleriaGptFiniteNumber(participant?.after?.hitPoints?.maximum),
+      recoveredResources: (Array.isArray(participant?.changes?.resources) ? participant.changes.resources : []).map(change => ({
+        name: String(change?.name || 'Ressource'),
+        before: getAleriaGptFiniteNumber(change?.before),
+        after: getAleriaGptFiniteNumber(change?.after)
+      })),
+      recoveredAbilities: (Array.isArray(participant?.changes?.abilities) ? participant.changes.abilities : []).map(change => ({
+        name: String(change?.name || 'Besondere Fähigkeit'),
+        before: getAleriaGptFiniteNumber(change?.before),
+        after: getAleriaGptFiniteNumber(change?.after)
+      }))
+    }))
+  };
+}
+
+function formatAleriaGptSegmentMechanics({ skillResolution, combatResolution, inventoryUse, sceneRest, sceneTimeEvent } = {}) {
+  const lines = [];
+  if (skillResolution) {
+    lines.push(`Fertigkeitsauswertung: ${skillResolution.skillName || skillResolution.skillId || 'Fertigkeit'} = ${skillResolution.outcome || 'unbekannt'}, Gesamt ${skillResolution.total}, SG ${skillResolution.difficulty}.`);
+  }
+  if (combatResolution) {
+    const outcome = combatResolution.criticalFailure
+      ? 'kritischer Fehlschlag'
+      : (combatResolution.criticalSuccess ? 'kritischer Erfolg' : (combatResolution.hit ? 'Treffer' : 'Fehlschlag'));
+    lines.push(`Kampfauswertung: ${combatResolution.actorName || 'Akteur'} gegen ${combatResolution.targetName || 'Ziel'} mit ${combatResolution.weaponName || combatResolution.profileActionKind || 'Angriff'}: ${outcome}; Angriff ${combatResolution.total} gegen Verteidigung ${combatResolution.targetDefense}; Schaden ${combatResolution.damageTotal} ${combatResolution.damageType || ''}; Ziel-TP ${combatResolution.hitPointsBefore} -> ${combatResolution.hitPointsAfter}/${combatResolution.maximumHitPoints}${combatResolution.defeated ? '; besiegt' : ''}.`);
+    combatResolution.resourceChanges.forEach(change => {
+      lines.push(`Ressourcenverbrauch ${combatResolution.actorName || 'Akteur'}: ${change.name} ${change.before} -> ${change.after}.`);
+    });
+  }
+  if (inventoryUse) {
+    const verb = inventoryUse.mode === 'consume' ? 'verbraucht' : 'benutzt';
+    lines.push(`Inventarvorgang: ${inventoryUse.actorName || 'Akteur'} ${verb} ${inventoryUse.itemName || 'Gegenstand'}; Bestand ${inventoryUse.quantityBefore} -> ${inventoryUse.quantityAfter}.`);
+  }
+  if (sceneRest) {
+    const restLabel = sceneRest.type === 'long' ? 'Lange Rast' : 'Kurze Rast';
+    lines.push(`${restLabel}: ${sceneRest.durationSeconds} Sekunden verstrichen${sceneRest.recoveryDayKey ? `; Erholungstag ${sceneRest.recoveryDayKey}` : ''}.`);
+    sceneRest.participants.forEach(participant => {
+      const recovered = [...participant.recoveredResources, ...participant.recoveredAbilities]
+        .map(change => `${change.name} ${change.before} -> ${change.after}`)
+        .join(', ');
+      lines.push(`Rastfolge ${participant.name || participant.actorId || 'Figur'}: TP ${participant.hitPointsBefore} -> ${participant.hitPointsAfter}/${participant.maximumHitPoints}${recovered ? `; ${recovered}` : ''}.`);
+    });
+  }
+  if (sceneTimeEvent && typeof sceneTimeEvent === 'object') {
+    lines.push(`Szenenzeit: Tag ${getAleriaGptFiniteNumber(sceneTimeEvent.anchorDay, 1)}, Sekunde ${getAleriaGptFiniteNumber(sceneTimeEvent.anchorSeconds)}${sceneTimeEvent.segmentBreak ? '; neuer Zeitabschnitt' : ''}.`);
+  }
+  return lines.join('\n');
+}
+
+function formatAleriaGptStoredMechanics(segment = {}, comment = {}, segmentIndex = 0) {
+  const skillResolution = segment?.skillResolution && typeof segment.skillResolution === 'object'
+    ? {
+        skillId: String(segment.skillResolution.skillId || ''),
+        skillName: String(segment.skillResolution.skillName || ''),
+        outcome: String(segment.skillResolution.outcome || ''),
+        total: getAleriaGptFiniteNumber(segment.skillResolution.total),
+        difficulty: getAleriaGptFiniteNumber(segment.skillResolution.difficulty)
+      }
+    : null;
+  return formatAleriaGptSegmentMechanics({
+    skillResolution,
+    combatResolution: normalizeAleriaGptCombatResolution(segment?.combatResolution),
+    inventoryUse: normalizeAleriaGptInventoryUse(segment?.inventoryUse),
+    sceneRest: segmentIndex === 0 ? normalizeAleriaGptSceneRest(comment?.sceneRest) : null,
+    sceneTimeEvent: segmentIndex === 0 ? comment?.sceneTimeEvent : null
+  });
+}
+
+function getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeIds = new Set()) {
   const narrator = !!comment?.narrator || String(comment?.commentMode || '') === 'narrator';
   const baseCharacter = narrator ? null : resolveAleriaGptCharacter({
     characterId: comment?.characterId,
@@ -462,11 +631,54 @@ function getAleriaGptCommentSegments(comment, characterIndex) {
           name: segment?.name || segment?.charName || baseSpeaker.name,
           title: segment?.title || baseSpeaker.title
         });
-    const kind = getAleriaGptCommentKind(segment?.kind || comment?.commentKind, segmentNarrator);
+    const skillResolution = segment?.skillResolution && typeof segment.skillResolution === 'object'
+      ? {
+          skillId: String(segment.skillResolution.skillId || ''),
+          skillName: String(segment.skillResolution.skillName || ''),
+          outcome: String(segment.skillResolution.outcome || ''),
+          total: Number(segment.skillResolution.total || 0),
+          difficulty: Number(segment.skillResolution.difficulty || 0),
+          targetChallengeId: String(segment.skillResolution.targetChallengeId || ''),
+          revealedText: String(segment.skillResolution.revealedText || '')
+        }
+      : null;
+    const skillChallenge = segment?.skillChallenge && typeof segment.skillChallenge === 'object'
+      ? {
+          id: String(segment.skillChallenge.id || ''),
+          title: String(segment.skillChallenge.title || ''),
+          difficulty: Number(segment.skillChallenge.difficulty || 0),
+          preferredSkills: Array.isArray(segment.skillChallenge.preferredSkills) ? segment.skillChallenge.preferredSkills : [],
+          preferredModifier: Number(segment.skillChallenge.preferredModifier || 0),
+          alternativeModifier: Number(segment.skillChallenge.alternativeModifier || 0)
+        }
+      : null;
+    const storedKind = getAleriaGptCommentKind(segment?.kind || comment?.commentKind, segmentNarrator);
+    const kind = skillChallenge?.id && !revealedChallengeIds.has(skillChallenge.id)
+      ? 'speech'
+      : storedKind;
+    const combatResolution = normalizeAleriaGptCombatResolution(segment?.combatResolution);
+    const inventoryUse = normalizeAleriaGptInventoryUse(segment?.inventoryUse);
+    const sceneRest = segmentIndex === 0 ? normalizeAleriaGptSceneRest(comment?.sceneRest) : null;
+    const sceneTimeEvent = segmentIndex === 0 && comment?.sceneTimeEvent && typeof comment.sceneTimeEvent === 'object'
+      ? comment.sceneTimeEvent
+      : null;
     return {
       speakerCharacterId: speaker.characterId,
       speakerName: speaker.name,
       kind,
+      mechanicMode: String(segment?.mechanicMode || 'normal'),
+      skillResolution,
+      skillChallenge,
+      combatResolution,
+      inventoryUse,
+      sceneRest,
+      mechanicsText: formatAleriaGptSegmentMechanics({
+        skillResolution,
+        combatResolution,
+        inventoryUse,
+        sceneRest,
+        sceneTimeEvent
+      }),
       side: kind === 'action' || segmentNarrator ? '' : (String(segment?.side || 'left') === 'right' ? 'right' : 'left'),
       plainText: toAleriaGptPlainText(segment?.text || ''),
       sourceRef: `comment:${comment?.id || 'unknown'}:segment:${segmentIndex}`
@@ -490,6 +702,7 @@ async function loadAleriaGptComments() {
 }
 
 function collectAleriaGptStoredComments(comments, characterIndex) {
+  const revealedChallengeIds = collectAleriaGptRevealedChallengeIds(comments);
   return (Array.isArray(comments) ? comments : []).map(comment => {
     const threadId = String(comment?.entryId || comment?.threadId || '').trim();
     const location = typeof parseCommentThreadLocation === 'function'
@@ -504,7 +717,7 @@ function collectAleriaGptStoredComments(comments, characterIndex) {
       createdAt: getAleriaGptTimestampValue(comment?.ts || comment?.createdAt),
       updatedAt: getAleriaGptTimestampValue(comment?.editedAt || comment?.updatedAt),
       commentMode: String(comment?.commentMode || (comment?.narrator ? 'narrator' : 'character')).trim(),
-      segments: getAleriaGptCommentSegments(comment, characterIndex)
+      segments: getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeIds)
     };
   }).filter(comment => comment.commentId || comment.segments.length);
 }
@@ -612,5 +825,6 @@ async function buildAleriaGptContext(options = {}) {
 window.AleriaGptContext = {
   buildContext: buildAleriaGptContext,
   toPlainText: toAleriaGptPlainText,
-  hashSource: hashAleriaGptSource
+  hashSource: hashAleriaGptSource,
+  formatStoredMechanics: formatAleriaGptStoredMechanics
 };

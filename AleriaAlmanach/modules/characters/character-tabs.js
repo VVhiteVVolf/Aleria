@@ -89,6 +89,11 @@ function applyCommittedCharacterCombatProfile(event) {
     const currentCombatProfile = _characters[index].combatProfile || {};
     _characters[index] = {
       ..._characters[index],
+      inventory: update.inventory && typeof update.inventory === 'object'
+        ? (typeof sanitizeCharacterInventoryData === 'function'
+            ? sanitizeCharacterInventoryData(update.inventory)
+            : update.inventory)
+        : _characters[index].inventory,
       combatProfile: {
         ...currentCombatProfile,
         hitPoints: hitPoints ? {
@@ -98,7 +103,10 @@ function applyCommittedCharacterCombatProfile(event) {
         } : currentCombatProfile.hitPoints,
         resources: Array.isArray(update.resources)
           ? update.resources.map(resource => ({ ...resource }))
-          : (currentCombatProfile.resources || [])
+          : (currentCombatProfile.resources || []),
+        abilities: Array.isArray(update.abilities)
+          ? update.abilities.map(ability => ({ ...ability }))
+          : (currentCombatProfile.abilities || [])
       }
     };
     changed = true;

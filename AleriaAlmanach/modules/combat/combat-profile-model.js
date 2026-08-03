@@ -1,4 +1,10 @@
-export const COMBAT_PROFILE_SCHEMA_VERSION = 3;
+import {
+  ensureCombatActionResources,
+  getDefaultActivationCosts,
+  normalizeCombatResourceCosts
+} from './combat-action-economy.js?v=20260803-action-economy-v2';
+
+export const COMBAT_PROFILE_SCHEMA_VERSION = 4;
 
 export const COMBAT_ATTRIBUTE_DEFINITIONS = Object.freeze([
   { key: 'strength', label: 'Kraft', shortLabel: 'KRF' },
@@ -14,19 +20,52 @@ const DEXTERITY_MODES = new Set(['full', 'capped', 'none']);
 const PROFICIENCY_LEVELS = new Set(['none', 'trained', 'expertise']);
 const ROLL_MODES = new Set(['normal', 'advantage', 'disadvantage']);
 const RECOVERY_TYPES = new Set(['none', 'short-rest', 'long-rest', 'scene', 'day', 'manual']);
+const RESOURCE_SCOPES = new Set(['persistent', 'comment']);
+const WEAPON_TYPES = new Set(['unarmed', 'sword', 'dagger', 'axe', 'mace', 'spear', 'polearm', 'bow', 'crossbow', 'firearm', 'staff', 'shield', 'improvised', 'natural', 'arcane', 'other']);
+const WEAPON_TRAINING = new Set(['simple', 'martial', 'special']);
+const ACTIVATION_TYPES = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'passive']);
+const ABILITY_DELIVERIES = new Set(['ability', 'weapon', 'spell', 'prayer', 'song']);
+const SPELL_RESOLUTION_TYPES = new Set(['spell-attack', 'saving-throw', 'automatic']);
+const SPELL_PRESENTATION_KINDS = new Set(['spell', 'prayer', 'song']);
+export const COMBAT_WEAPON_TYPE_OPTIONS = Object.freeze([
+  ['unarmed', 'Nahkampf / waffenlos'], ['sword', 'Schwert'], ['dagger', 'Dolch'], ['axe', 'Axt'],
+  ['mace', 'Keule / Hammer'], ['spear', 'Speer'], ['polearm', 'Stangenwaffe'], ['bow', 'Bogen'],
+  ['crossbow', 'Armbrust'], ['firearm', 'Feuerwaffe'], ['staff', 'Stab'], ['shield', 'Schild'],
+  ['improvised', 'Improvisiert'], ['natural', 'Natürlicher Angriff'], ['arcane', 'Arkaner Fokus'], ['other', 'Sonstige']
+].map(([id, label]) => ({ id, label })));
 const DEFAULT_SKILLS = Object.freeze([
   ['Athletik', 'strength'], ['Akrobatik', 'dexterity'], ['Fingerfertigkeit', 'dexterity'],
   ['Heimlichkeit', 'dexterity'], ['Arkane Kunde', 'intelligence'], ['Geschichte', 'intelligence'],
   ['Nachforschungen', 'intelligence'], ['Naturkunde', 'intelligence'], ['Religion', 'intelligence'],
   ['Heilkunde', 'wisdom'], ['Mit Tieren umgehen', 'wisdom'], ['Motiv erkennen', 'wisdom'],
   ['Überleben', 'wisdom'], ['Wahrnehmung', 'wisdom'], ['Auftreten', 'charisma'],
-  ['Einschüchtern', 'charisma'], ['Täuschen', 'charisma'], ['Überreden', 'charisma']
+  ['Einschüchtern', 'charisma'], ['Täuschen', 'charisma'], ['Überreden', 'charisma'],
+  ['Flirten', 'charisma'], ['Körperbeherrschung', 'constitution']
 ].map(([name, attributeKey], index) => ({ id: `default-skill-${index + 1}`, name, attributeKey })));
+const REQUIRED_SKILLS = Object.freeze([
+  { id: 'default-skill-flirt', name: 'Flirten', attributeKey: 'charisma', aliases: ['flirten', 'verführen', 'verfuehren'] },
+  { id: 'default-skill-body-control', name: 'Körperbeherrschung', attributeKey: 'constitution', aliases: ['körperbeherrschung', 'koerperbeherrschung'] }
+]);
 const DEFAULT_RESOURCES = Object.freeze([
   { id: 'inspiration', name: 'Inspiration', current: 0, maximum: 1, recovery: 'manual' },
-  { id: 'mana-focus', name: 'Mana / Fokus', current: 0, maximum: 0, recovery: 'long-rest' },
-  { id: 'fate-points', name: 'Schicksalspunkte', current: 0, maximum: 0, recovery: 'manual' }
+  { id: 'mana-focus', name: 'Mana / Fokus', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'magic' },
+  { id: 'celestial-points', name: 'Celestiale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'celestial' },
+  { id: 'infernal-points', name: 'Infernale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'infernal' }
 ]);
+const DEFAULT_MELEE_WEAPON = Object.freeze({
+  id: 'default-unarmed-melee',
+  name: 'Nahkampf',
+  weaponType: 'unarmed',
+  training: 'simple',
+  damageFormula: '1d4',
+  damageType: 'Wucht',
+  attackAttribute: 'strength',
+  proficient: true,
+  range: 'Nahkampf',
+  properties: 'Schlicht · simpel · immer verfügbar',
+  notes: 'Grundlegender waffenloser Nahkampfangriff.',
+  equipped: true
+});
 
 function normalizeText(value, maximumLength = 160) {
   return String(value || '').trim().slice(0, maximumLength);
@@ -81,6 +120,9 @@ function sanitizeMechanicalModifiers(value = {}) {
     savingThrow: normalizeNumber(source.savingThrow, 0, -99, 99),
     spellAttack: normalizeNumber(source.spellAttack, 0, -99, 99),
     spellSaveDc: normalizeNumber(source.spellSaveDc, 0, -99, 99),
+    movement: normalizeNumber(source.movement, 0, -999, 999),
+    maximumHitPoints: normalizeNumber(source.maximumHitPoints, 0, -9999, 9999),
+    passivePerception: normalizeNumber(source.passivePerception, 0, -99, 99),
     attackRollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal'
   };
 }
@@ -119,12 +161,56 @@ function sanitizeSkill(value = {}, index = 0) {
   };
 }
 
+function normalizeSkillName(value = '') {
+  return String(value || '').trim().toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function ensureRequiredSkills(skills = []) {
+  const result = (Array.isArray(skills) ? skills : []).map(skill => ({ ...skill }));
+  REQUIRED_SKILLS.forEach(definition => {
+    const accepted = new Set(definition.aliases.map(normalizeSkillName));
+    const existing = result.find(skill => accepted.has(normalizeSkillName(skill?.name)));
+    if (existing) {
+      existing.name = definition.name;
+      existing.attributeKey ||= definition.attributeKey;
+      return;
+    }
+    result.push({ id: definition.id, name: definition.name, attributeKey: definition.attributeKey });
+  });
+  return result;
+}
+
+function inferWeaponType(source = {}) {
+  const explicit = normalizeText(source.weaponType || source.type, 30);
+  if (WEAPON_TYPES.has(explicit)) return explicit;
+  const text = `${source.name || ''} ${source.properties || ''}`.toLocaleLowerCase('de');
+  if (/langschwert|kurzschwert|schwert|säbel|degen|klinge/.test(text)) return 'sword';
+  if (/dolch|messer/.test(text)) return 'dagger';
+  if (/axt|beil/.test(text)) return 'axe';
+  if (/hammer|keule|morgenstern|streitkolben/.test(text)) return 'mace';
+  if (/speer|lanze/.test(text)) return 'spear';
+  if (/hellebarde|glefe|stangenwaffe/.test(text)) return 'polearm';
+  if (/armbrust/.test(text)) return 'crossbow';
+  if (/bogen/.test(text)) return 'bow';
+  if (/pistole|muskete|gewehr/.test(text)) return 'firearm';
+  if (/stab|stock/.test(text)) return 'staff';
+  if (/schild/.test(text)) return 'shield';
+  if (/biss|klaue|kralle|stachel|schwanz/.test(text)) return 'natural';
+  if (/zauber|arkan|magie/.test(text)) return 'arcane';
+  return source.rangeType === 'ranged' ? 'bow' : 'unarmed';
+}
+
 function sanitizeWeapon(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
+  const weaponType = inferWeaponType(source);
+  const training = normalizeText(source.training || source.category, 30);
+  const activationType = normalizeText(source.activationType, 30);
   return {
     id: normalizeId(source.id, `weapon-${index + 1}`),
     inventoryItemId: normalizeText(source.inventoryItemId, 120),
     name: normalizeText(source.name, 120),
+    weaponType: WEAPON_TYPES.has(weaponType) ? weaponType : (source.rangeType === 'ranged' ? 'bow' : 'unarmed'),
+    training: WEAPON_TRAINING.has(training) ? training : 'simple',
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
     damageType: normalizeText(source.damageType || 'physisch', 80),
     attackAttribute: getAttributeKey(source.attackAttribute, source.rangeType === 'ranged' ? 'dexterity' : 'strength'),
@@ -134,8 +220,30 @@ function sanitizeWeapon(value = {}, index = 0) {
     range: normalizeText(source.range || (source.rangeType === 'ranged' ? 'Fernkampf' : 'Nahkampf'), 80),
     properties: normalizeText(source.properties, 500),
     notes: normalizeText(source.notes, 800),
+    requirements: normalizeText(source.requirements, 1000),
+    aiInstructions: normalizeText(source.aiInstructions, 1600),
+    activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
+    costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
+    auraBypass: {
+      allowed: normalizeBoolean(source.auraBypass?.allowed, true),
+      resourceId: normalizeText(source.auraBypass?.resourceId, 120),
+      cost: normalizeNumber(source.auraBypass?.cost, 1, 1, 999)
+    },
     equipped: normalizeBoolean(source.equipped, index === 0)
   };
+}
+
+function sanitizeWeaponsWithDefault(value = []) {
+  const weapons = sanitizeList(value, sanitizeWeapon);
+  const existingDefault = weapons.find(weapon => weapon.id === DEFAULT_MELEE_WEAPON.id)
+    || weapons.find(weapon => weapon.weaponType === 'unarmed' && weapon.name.toLocaleLowerCase('de') === 'nahkampf');
+  if (existingDefault) return weapons;
+  if (weapons.length >= 60) weapons.length = 59;
+  weapons.push(sanitizeWeapon({
+    ...DEFAULT_MELEE_WEAPON,
+    equipped: weapons.length === 0
+  }, weapons.length));
+  return weapons;
 }
 
 function sanitizeArmor(value = {}, index = 0) {
@@ -160,14 +268,43 @@ function sanitizeArmor(value = {}, index = 0) {
 function sanitizeResource(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   const recovery = normalizeText(source.recovery, 20);
+  const scope = normalizeText(source.scope, 20);
   return {
     id: normalizeId(source.id, `resource-${index + 1}`),
     name: normalizeText(source.name, 100),
     current: normalizeNumber(source.current, 0, -9999, 9999),
     maximum: normalizeNumber(source.maximum, 0, 0, 9999),
     recovery: RECOVERY_TYPES.has(recovery) ? recovery : 'manual',
+    scope: RESOURCE_SCOPES.has(scope) ? scope : 'persistent',
+    category: normalizeText(source.category, 40),
+    icon: normalizeText(source.icon, 1000),
+    ...(normalizeText(source.recoveryDayKey, 160) ? { recoveryDayKey: normalizeText(source.recoveryDayKey, 160) } : {}),
     notes: normalizeText(source.notes, 500)
   };
+}
+
+function ensureDefaultCoreResources(resources = []) {
+  const result = (Array.isArray(resources) ? resources : []).map(resource => ({ ...resource }));
+  const legacyFate = result.find(resource => resource.id === 'fate-points' || /schicksalspunkte/i.test(String(resource.name || '')));
+  if (legacyFate && !result.some(resource => resource.id === 'celestial-points')) {
+    legacyFate.id = 'celestial-points';
+    legacyFate.name = 'Celestiale Punkte';
+    legacyFate.recovery = 'day';
+    legacyFate.scope = 'persistent';
+    legacyFate.category = 'celestial';
+  }
+  DEFAULT_RESOURCES.filter(definition => definition.id !== 'inspiration').forEach(definition => {
+    const existing = result.find(resource => resource.id === definition.id);
+    if (existing) {
+      existing.name = definition.name;
+      existing.recovery = definition.recovery;
+      existing.scope = definition.scope;
+      existing.category ||= definition.category;
+      return;
+    }
+    result.push({ ...definition });
+  });
+  return result.filter((resource, index, source) => source.findIndex(candidate => candidate.id === resource.id) === index);
 }
 
 function sanitizeQuirk(value = {}, index = 0) {
@@ -179,6 +316,14 @@ function sanitizeQuirk(value = {}, index = 0) {
     type: ['quirk', 'trait', 'ideal', 'bond', 'flaw', 'rule'].includes(type) ? type : 'quirk',
     description: normalizeText(source.description, 1200),
     appliesWhen: normalizeText(source.appliesWhen, 500),
+    trigger: normalizeText(source.trigger, 500),
+    target: normalizeText(source.target || 'self', 80),
+    duration: normalizeText(source.duration, 120),
+    stacking: normalizeText(source.stacking || 'normal', 80),
+    tags: normalizeText(source.tags, 500),
+    limitations: normalizeText(source.limitations, 1000),
+    aiInstructions: normalizeText(source.aiInstructions, 1600),
+    priority: normalizeNumber(source.priority, 0, -99, 99),
     active: normalizeBoolean(source.active, true),
     mechanics: sanitizeMechanicalModifiers(source.mechanics)
   };
@@ -200,6 +345,8 @@ function sanitizeCondition(value = {}, index = 0) {
 function sanitizeAbility(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   const recovery = normalizeText(source.recovery, 20);
+  const activationType = normalizeText(source.activationType, 30);
+  const delivery = normalizeText(source.delivery, 30);
   return {
     id: normalizeId(source.id, `ability-${index + 1}`),
     name: normalizeText(source.name, 120),
@@ -208,6 +355,22 @@ function sanitizeAbility(value = {}, index = 0) {
     usesMaximum: normalizeNumber(source.usesMaximum, 0, 0, 999),
     recovery: RECOVERY_TYPES.has(recovery) ? recovery : 'none',
     rollFormula: normalizeCombatDamageFormula(source.rollFormula),
+    damageType: normalizeText(source.damageType || 'physisch', 80),
+    activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
+    delivery: ABILITY_DELIVERIES.has(delivery) ? delivery : 'ability',
+    combatUsable: normalizeBoolean(source.combatUsable),
+    target: normalizeText(source.target, 160),
+    range: normalizeText(source.range, 160),
+    duration: normalizeText(source.duration, 160),
+    requirements: normalizeText(source.requirements, 1000),
+    tags: normalizeText(source.tags, 500),
+    aiInstructions: normalizeText(source.aiInstructions, 1600),
+    costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
+    auraBypass: {
+      allowed: normalizeBoolean(source.auraBypass?.allowed, true),
+      resourceId: normalizeText(source.auraBypass?.resourceId, 120),
+      cost: normalizeNumber(source.auraBypass?.cost, 1, 1, 999)
+    },
     active: normalizeBoolean(source.active, true),
     mechanics: sanitizeMechanicalModifiers(source.mechanics)
   };
@@ -215,14 +378,108 @@ function sanitizeAbility(value = {}, index = 0) {
 
 function sanitizeSpell(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
+  const activationType = normalizeText(source.activationType, 30);
+  const resolutionType = normalizeText(source.resolutionType, 30);
   return {
     id: normalizeId(source.id, `spell-${index + 1}`),
     name: normalizeText(source.name, 120),
     level: normalizeNumber(source.level, 0, 0, 20),
     manaCost: normalizeNumber(source.manaCost, 0, 0, 999),
+    slotResourceId: normalizeText(source.slotResourceId, 120),
+    slotCost: normalizeNumber(source.slotCost, source.level > 0 ? 1 : 0, 0, 99),
+    presentationKind: SPELL_PRESENTATION_KINDS.has(normalizeText(source.presentationKind, 20)) ? normalizeText(source.presentationKind, 20) : 'spell',
+    activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
+    resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : 'spell-attack',
+    saveAttribute: getAttributeKey(source.saveAttribute, 'dexterity'),
+    halfDamageOnSave: normalizeBoolean(source.halfDamageOnSave),
+    damageType: normalizeText(source.damageType || 'Magie', 80),
+    range: normalizeText(source.range || 'Zauber', 160),
+    duration: normalizeText(source.duration, 160),
+    requirements: normalizeText(source.requirements, 1000),
+    tags: normalizeText(source.tags, 500),
+    aiInstructions: normalizeText(source.aiInstructions, 1600),
+    costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
+    auraBypass: {
+      allowed: normalizeBoolean(source.auraBypass?.allowed, true),
+      resourceId: normalizeText(source.auraBypass?.resourceId, 120),
+      cost: normalizeNumber(source.auraBypass?.cost, 1, 1, 999)
+    },
     rollFormula: normalizeCombatDamageFormula(source.rollFormula),
     description: normalizeText(source.description, 1600),
     prepared: normalizeBoolean(source.prepared, true)
+  };
+}
+
+function sanitizeTechnique(value = {}, index = 0) {
+  const source = value && typeof value === 'object' ? value : {};
+  const activationType = normalizeText(source.activationType, 30);
+  const rollMode = normalizeText(source.rollMode, 20);
+  const weaponTypes = (Array.isArray(source.weaponTypes) ? source.weaponTypes : String(source.weaponTypes || '').split(','))
+    .map(item => normalizeText(item, 30))
+    .filter(item => WEAPON_TYPES.has(item));
+  return {
+    id: normalizeId(source.id, `technique-${index + 1}`),
+    name: normalizeText(source.name, 140),
+    category: ['technique', 'form', 'reaction', 'bonus', 'special'].includes(normalizeText(source.category, 30))
+      ? normalizeText(source.category, 30)
+      : 'technique',
+    description: normalizeText(source.description, 2000),
+    effect: normalizeText(source.effect, 1600),
+    activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
+    weaponTypes: [...new Set(weaponTypes)].slice(0, 20),
+    compatibleWeaponIds: sanitizeList(source.compatibleWeaponIds, item => normalizeText(item, 120), 40).filter(Boolean),
+    damageFormula: normalizeCombatDamageFormula(source.damageFormula),
+    damageType: normalizeText(source.damageType, 80),
+    attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
+    damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
+    rollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
+    range: normalizeText(source.range, 160),
+    target: normalizeText(source.target, 160),
+    duration: normalizeText(source.duration, 160),
+    requirements: normalizeText(source.requirements, 1200),
+    tags: normalizeText(source.tags, 500),
+    aiInstructions: normalizeText(source.aiInstructions, 1600),
+    costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
+    auraBypass: {
+      allowed: normalizeBoolean(source.auraBypass?.allowed, true),
+      resourceId: normalizeText(source.auraBypass?.resourceId, 120),
+      cost: normalizeNumber(source.auraBypass?.cost, 1, 1, 999)
+    },
+    active: normalizeBoolean(source.active, true),
+    mechanics: sanitizeMechanicalModifiers(source.mechanics)
+  };
+}
+
+function sanitizeAuraComponent(value = {}, defaults = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  return {
+    enabled: normalizeBoolean(source.enabled, defaults.enabled ?? false),
+    active: normalizeBoolean(source.active, defaults.active ?? false),
+    name: normalizeText(source.name || defaults.name, 140),
+    description: normalizeText(source.description, 2400),
+    radius: normalizeText(source.radius, 160),
+    target: normalizeText(source.target || defaults.target, 160),
+    trigger: normalizeText(source.trigger, 600),
+    duration: normalizeText(source.duration, 160),
+    requirements: normalizeText(source.requirements, 1200),
+    aiInstructions: normalizeText(source.aiInstructions, 1800),
+    selfMechanics: sanitizeMechanicalModifiers(source.selfMechanics),
+    allyMechanics: sanitizeMechanicalModifiers(source.allyMechanics),
+    enemyMechanics: sanitizeMechanicalModifiers(source.enemyMechanics)
+  };
+}
+
+function sanitizeAura(value = {}) {
+  const source = value && typeof value === 'object' ? value : {};
+  return {
+    enabled: normalizeBoolean(source.enabled),
+    name: normalizeText(source.name || 'Aura', 140),
+    domain: normalizeText(source.domain, 600),
+    focusResourceId: normalizeText(source.focusResourceId || 'aura-focus', 120),
+    focusBypassCost: normalizeNumber(source.focusBypassCost, 1, 1, 999),
+    notes: normalizeText(source.notes, 2400),
+    activeForm: sanitizeAuraComponent(source.activeForm, { name: 'Aktive Form', target: 'Selbst und gewählte Ziele' }),
+    latentPresence: sanitizeAuraComponent(source.latentPresence, { name: 'Latente Präsenz', target: 'Umgebung, Verbündete und Gegner', enabled: true, active: true })
   };
 }
 
@@ -247,7 +504,7 @@ function getLegacyArmor(source) {
   return [{ ...armor, id: 'legacy-armor', armorClassBonus: armor.defenseBonus, equipped: true }];
 }
 
-export function sanitizeCharacterCombatProfile(value = {}) {
+export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
@@ -302,10 +559,13 @@ export function sanitizeCharacterCombatProfile(value = {}) {
     },
     savingThrows: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>
       sanitizeSavingThrow(sourceSaves.get(definition.key), definition)),
-    skills: sanitizeList(Array.isArray(source.skills) ? source.skills : DEFAULT_SKILLS, sanitizeSkill),
-    weapons: sanitizeList(getLegacyWeapons(source), sanitizeWeapon),
+    skills: sanitizeList(options.ensureRequiredSkills === false
+      ? (Array.isArray(source.skills) ? source.skills : [])
+      : ensureRequiredSkills(Array.isArray(source.skills) ? source.skills : DEFAULT_SKILLS), sanitizeSkill),
+    weapons: sanitizeWeaponsWithDefault(getLegacyWeapons(source)),
     armorItems: sanitizeList(getLegacyArmor(source), sanitizeArmor),
-    resources: sanitizeList(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES, sanitizeResource),
+    resources: sanitizeList(ensureCombatActionResources(ensureDefaultCoreResources(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES)), sanitizeResource),
+    techniques: sanitizeList(source.techniques, sanitizeTechnique),
     quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
     abilities: sanitizeList(source.abilities, sanitizeAbility),
@@ -315,8 +575,14 @@ export function sanitizeCharacterCombatProfile(value = {}) {
       spellAttackOverride: normalizeOptionalNumber(magic.spellAttackOverride, -99, 99),
       spellSaveDcOverride: normalizeOptionalNumber(magic.spellSaveDcOverride, 0, 999),
       manaResourceId: normalizeText(magic.manaResourceId, 120),
+      slotResourceIds: sanitizeList(magic.slotResourceIds, item => normalizeText(item, 120), 20).filter(Boolean),
       notes: normalizeText(magic.notes, 1600),
       spells: sanitizeList(magic.spells, sanitizeSpell)
+    },
+    aura: sanitizeAura(source.aura),
+    cheats: {
+      enabled: normalizeBoolean(source.cheats?.enabled),
+      automaticCritical: normalizeBoolean(source.cheats?.automaticCritical)
     },
     notes: normalizeText(source.notes, 6000)
   };
@@ -344,9 +610,43 @@ function getAttribute(profile, key) {
 }
 
 function collectActiveMechanicalSources(profile) {
-  return [...profile.quirks, ...profile.conditions, ...profile.abilities]
+  const auraSources = [];
+  if (profile.aura?.enabled && profile.aura.latentPresence?.enabled && profile.aura.latentPresence?.active) {
+    auraSources.push({ active: true, mechanics: profile.aura.latentPresence.selfMechanics });
+  }
+  if (profile.aura?.enabled && profile.aura.activeForm?.enabled && profile.aura.activeForm?.active) {
+    auraSources.push({ active: true, mechanics: profile.aura.activeForm.selfMechanics });
+  }
+  return [...profile.quirks, ...profile.conditions, ...profile.abilities, ...auraSources]
     .filter(entry => entry.active)
     .map(entry => entry.mechanics);
+}
+
+function mergeMechanicalModifiers(sources = []) {
+  return sources.reduce((result, source) => {
+    Object.keys(sanitizeMechanicalModifiers()).forEach(key => {
+      if (key === 'attackRollMode') return;
+      result[key] = (Number(result[key]) || 0) + (Number(source?.[key]) || 0);
+    });
+    const modes = [result.attackRollMode, source?.attackRollMode].filter(mode => mode && mode !== 'normal');
+    result.attackRollMode = modes.includes('advantage') && modes.includes('disadvantage')
+      ? 'normal'
+      : (modes[0] || 'normal');
+    return result;
+  }, sanitizeMechanicalModifiers());
+}
+
+export function getAuraOpponentMechanics(profile = {}) {
+  const normalized = sanitizeCharacterCombatProfile(profile);
+  if (!normalized.aura.enabled) return sanitizeMechanicalModifiers();
+  const sources = [];
+  if (normalized.aura.latentPresence.enabled && normalized.aura.latentPresence.active) {
+    sources.push(normalized.aura.latentPresence.enemyMechanics);
+  }
+  if (normalized.aura.activeForm.enabled && normalized.aura.activeForm.active) {
+    sources.push(normalized.aura.activeForm.enemyMechanics);
+  }
+  return mergeMechanicalModifiers(sources);
 }
 
 function sumMechanicalModifier(profile, key) {
@@ -361,7 +661,8 @@ export function getMaximumHitPoints(profile = {}) {
   const level = getEffectiveCombatLevel(normalized);
   const firstLevel = Math.max(1, normalized.hitPoints.hitDie + constitutionModifier);
   const average = normalized.hitPoints.averagePerLevelOverride ?? (Math.floor(normalized.hitPoints.hitDie / 2) + 1);
-  return firstLevel + Math.max(0, level - 1) * Math.max(1, average + constitutionModifier);
+  return Math.max(1, firstLevel + Math.max(0, level - 1) * Math.max(1, average + constitutionModifier)
+    + sumMechanicalModifier(normalized, 'maximumHitPoints'));
 }
 
 function getAppliedDexterityModifier(modifier, mode, cap) {
@@ -428,7 +729,7 @@ export function getPassivePerception(profile = {}) {
       proficiency: 'none',
       bonus: 0
     });
-  return 10 + perceptionTotal + normalized.combat.passivePerceptionBonus;
+  return 10 + perceptionTotal + normalized.combat.passivePerceptionBonus + sumMechanicalModifier(normalized, 'passivePerception');
 }
 
 export function resolveAttackRollMode(profile = {}, requestedMode = 'normal') {
@@ -476,6 +777,14 @@ export function getSpellcastingValues(profile = {}) {
     saveDc: normalized.magic.spellSaveDcOverride
       ?? 8 + abilityModifier + proficiency + sumMechanicalModifier(normalized, 'spellSaveDc')
   };
+}
+
+export function isTechniqueCompatibleWithWeapon(technique = {}, weapon = {}) {
+  const normalizedTechnique = sanitizeTechnique(technique);
+  const normalizedWeapon = sanitizeWeapon(weapon);
+  if (!normalizedTechnique.weaponTypes.length && !normalizedTechnique.compatibleWeaponIds.length) return true;
+  if (normalizedTechnique.compatibleWeaponIds.includes(normalizedWeapon.id)) return true;
+  return normalizedTechnique.weaponTypes.includes(normalizedWeapon.weaponType);
 }
 
 function getInventoryItems(character = {}) {
@@ -535,7 +844,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
 }
 
 export function resolveCharacterCombatProfile(character = {}) {
-  const profile = sanitizeCharacterCombatProfile(character.combatProfile);
+  const profile = sanitizeCharacterCombatProfile(character.combatProfile, { ensureRequiredSkills: character.entityType !== 'creature' });
   const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || sanitizeWeapon({});
   const equippedArmor = profile.armorItems.filter(item => item.equipped);
   const primaryArmor = equippedArmor[0] || profile.armorItems[0] || sanitizeArmor({});
@@ -553,6 +862,7 @@ export function resolveCharacterCombatProfile(character = {}) {
     totalDefense,
     armorClassTotal: totalDefense,
     initiative: dexterityModifier + profile.combat.initiativeBonus + sumMechanicalModifier(profile, 'initiative'),
+    movement: Math.max(0, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
     passivePerception: getPassivePerception(profile),
     weapon: activeWeapon,
     armor: primaryArmor,
@@ -570,5 +880,7 @@ export const combatProfileModelInternals = Object.freeze({
   readNamedAttribute,
   getAppliedDexterityModifier,
   sumMechanicalModifier,
-  sanitizeMechanicalModifiers
+  sanitizeMechanicalModifiers,
+  sanitizeTechnique,
+  sanitizeAura
 });

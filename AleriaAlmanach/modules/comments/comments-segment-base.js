@@ -10,32 +10,75 @@ function commentSegmentUsesSide(kind, edit = false) {
   return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
 }
 
+const COMMENT_SEGMENT_MECHANIC_MODES = new Set(['normal', 'skill', 'combat', 'magic']);
+
+function normalizeCommentSegmentMechanicMode(value, kind = 'speech', settings = {}) {
+  const mode = String(value || '').trim().toLowerCase();
+  if (COMMENT_SEGMENT_MECHANIC_MODES.has(mode)) return mode;
+  if (settings?.storedCombatResolution || settings?.storedCombatAction || settings?.combatResolution || settings?.combatAction) {
+    return ['spell', 'prayer', 'song'].includes(normalizeCommentKind(kind)) ? 'magic' : 'combat';
+  }
+  return 'normal';
+}
+
+function commentSegmentUsesCombatResolution(segment = {}) {
+  const mode = normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.kind || segment.commentKind, segment);
+  return mode === 'combat' || mode === 'magic';
+}
+
 function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side = 'left', durationSeconds = SCENE_TIME_DEFAULT_SEGMENT_SECONDS, language = COMMENT_LANGUAGE_DEFAULT, languageColor = '', combatSettings = {}) {
   const normalizedKind = normalizeCommentKind(kind);
+  const mechanicMode = normalizeCommentSegmentMechanicMode(combatSettings?.mechanicMode, normalizedKind, combatSettings);
+  const usesCombatResolution = mechanicMode === 'combat' || mechanicMode === 'magic';
   _commentSegmentSeq += 1;
   return {
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
     text: String(text || ''),
     emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
+    imageSetId: String(combatSettings?.imageSetId || ''),
     side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
     durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds),
     language: normalizeCommentLanguage(language),
     languageColor: commentKindUsesLanguage(normalizedKind)
       ? normalizeCommentLanguageColor(languageColor, normalizedKind)
       : '',
-    combatTargetId: normalizedKind === 'combataction' ? String(combatSettings?.targetId || combatSettings?.combatTargetId || '') : '',
-    combatActionId: normalizedKind === 'combataction' ? String(combatSettings?.actionId || combatSettings?.combatActionId || '') : '',
-    combatRollMode: normalizedKind === 'combataction' && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
+    mechanicMode,
+    skillId: String(combatSettings?.skillId || ''),
+    skillCustomModifier: Number(combatSettings?.skillCustomModifier || 0),
+    skillDifficulty: Number(combatSettings?.skillDifficulty || 10),
+    skillRollMode: ['advantage', 'disadvantage'].includes(combatSettings?.skillRollMode) ? combatSettings.skillRollMode : 'normal',
+    skillTargetActorKey: String(combatSettings?.skillTargetActorKey || ''),
+    skillTargetChallengeId: String(combatSettings?.skillTargetChallengeId || ''),
+    skillChallengeId: String(combatSettings?.skillChallengeId || ''),
+    skillChallengeEnabled: !!combatSettings?.skillChallengeEnabled,
+    skillChallengeTitle: String(combatSettings?.skillChallengeTitle || ''),
+    skillChallengeRevealedText: String(combatSettings?.skillChallengeRevealedText || ''),
+    skillChallengeDifficulty: Number(combatSettings?.skillChallengeDifficulty || 10),
+    skillChallengePreferredSkills: Array.isArray(combatSettings?.skillChallengePreferredSkills) ? [...combatSettings.skillChallengePreferredSkills] : [],
+    skillChallengePreferredModifier: Number(combatSettings?.skillChallengePreferredModifier ?? 2),
+    skillChallengeAlternativeModifier: Number(combatSettings?.skillChallengeAlternativeModifier ?? -2),
+    storedSkillResolution: combatSettings?.storedSkillResolution || null,
+    storedSkillChallenge: combatSettings?.storedSkillChallenge || null,
+    combatTargetId: usesCombatResolution ? String(combatSettings?.targetId || combatSettings?.combatTargetId || '') : '',
+    combatActionId: usesCombatResolution ? String(combatSettings?.actionId || combatSettings?.combatActionId || '') : '',
+    combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
       : 'normal',
+    combatPaymentMode: ['aura', 'cheat'].includes(combatSettings?.paymentMode || combatSettings?.combatPaymentMode)
+      ? String(combatSettings.paymentMode || combatSettings.combatPaymentMode)
+      : 'standard',
+    combatPaymentConfirmed: usesCombatResolution && Boolean(combatSettings?.paymentConfirmed ?? combatSettings?.combatPaymentConfirmed),
     actorId: String(combatSettings?.actorId || combatSettings?.sceneActorId || ''),
-    storedCombatAction: normalizedKind === 'combataction' && combatSettings?.storedCombatAction
+    storedCombatAction: usesCombatResolution && combatSettings?.storedCombatAction
       ? combatSettings.storedCombatAction
       : null,
-    storedCombatResolution: normalizedKind === 'combataction' && combatSettings?.storedCombatResolution
+    storedCombatResolution: usesCombatResolution && combatSettings?.storedCombatResolution
       ? combatSettings.storedCombatResolution
-      : null
+      : null,
+    inventoryItemId: String(combatSettings?.inventoryItemId || combatSettings?.storedInventoryUse?.item?.id || ''),
+    inventoryUseMode: ['consume', 'use'].includes(combatSettings?.inventoryUseMode) ? combatSettings.inventoryUseMode : 'auto',
+    storedInventoryUse: combatSettings?.storedInventoryUse || null
   };
 }
 
@@ -54,8 +97,57 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? ['action']
-    : ['speech', 'action', 'thought', 'whisper', 'shout', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction'];
+    : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction'];
 }
+
+const COMMENT_SEGMENT_MODE_KINDS = Object.freeze({
+  skill: Object.freeze(['speech', 'shout', 'performance', 'thought', 'animal', 'interact', 'flirt']),
+  combat: Object.freeze(['combataction']),
+  magic: Object.freeze(['spell', 'prayer', 'song'])
+});
+
+function getCommentSegmentKindsForMechanicMode(mode = 'normal', edit = false) {
+  const normalizedMode = normalizeCommentSegmentMechanicMode(mode);
+  const allowedForCommentMode = getAllowedCommentSegmentKinds(edit);
+  const mechanicKinds = COMMENT_SEGMENT_MODE_KINDS[normalizedMode];
+  return mechanicKinds
+    ? mechanicKinds.filter(kind => allowedForCommentMode.includes(kind))
+    : allowedForCommentMode;
+}
+
+function isCommentSegmentKindAllowedForMechanicMode(segment = {}, kind = segment.kind, edit = false) {
+  if (segment.skillChallengeEnabled) return normalizeCommentKind(kind) === 'performance';
+  return getCommentSegmentKindsForMechanicMode(segment.mechanicMode, edit).includes(normalizeCommentKind(kind));
+}
+
+function applyCommentSegmentMechanicMode(segment = {}, mode = 'normal', edit = false) {
+  const normalizedMode = normalizeCommentSegmentMechanicMode(mode, segment.kind, segment);
+  const allowedKinds = getCommentSegmentKindsForMechanicMode(normalizedMode, edit);
+  segment.mechanicMode = normalizedMode;
+  if (segment.skillChallengeEnabled) {
+    segment.kind = 'performance';
+    segment.mechanicMode = 'normal';
+  } else if (!allowedKinds.includes(segment.kind)) {
+    segment.kind = allowedKinds[0] || 'speech';
+    segment.emoteIndex = null;
+  }
+  if (segment.kind === 'action') {
+    segment.side = '';
+    segment.emoteIndex = null;
+  } else {
+    segment.side = normalizeCommentSegmentSide(segment.side);
+  }
+  if (segment.mechanicMode !== 'combat' && segment.mechanicMode !== 'magic') {
+    segment.combatPaymentConfirmed = false;
+  }
+  return segment;
+}
+
+globalThis.AleriaCommentSegmentModeRules = Object.freeze({
+  applyMode: applyCommentSegmentMechanicMode,
+  getAllowedKinds: getCommentSegmentKindsForMechanicMode,
+  isKindAllowed: isCommentSegmentKindAllowedForMechanicMode
+});
 
 function coerceCommentSegmentsForMode(edit = false) {
   const segments = edit ? _editCommentSegments : _commentSegments;
@@ -71,6 +163,7 @@ function coerceCommentSegmentsForMode(edit = false) {
     } else {
       segment.side = normalizeCommentSegmentSide(segment.side);
     }
+    applyCommentSegmentMechanicMode(segment, segment.mechanicMode, edit);
   });
 }
 
@@ -79,11 +172,11 @@ const COMMENT_SEGMENT_COMPACT_LABELS = Object.freeze({
   combataction: 'Kampf\u00ADbeschreibung'
 });
 
-function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false } = {}) {
+function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false, disabled = false } = {}) {
   const segmentAttr = segmentId ? ` data-segment-id="${segmentId}"` : '';
   const label = COMMENT_SEGMENT_COMPACT_LABELS[kind] || getCommentKindLabel(kind);
   return `
-    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}">
+    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
       ${getCommentKindIconMarkup(kind, 'comment-segment-type-icon')}
       <span>${add ? '+ ' : ''}${escapeHtml(label)}</span>
     </button>`;
@@ -104,10 +197,12 @@ function renderCommentSegmentActions(edit = false) {
 function getSegmentTypeButtons(segment, edit = false) {
   const action = edit ? 'set-edit-comment-segment-kind' : 'set-comment-segment-kind';
   const segmentId = escapeHtml(segment.id);
+  const challengeDisguised = !!segment.skillChallengeEnabled;
   return getAllowedCommentSegmentKinds(edit).map(kind => buildCommentSegmentKindButton(kind, {
     action,
     segmentId,
-    active: segment.kind === kind
+    active: challengeDisguised ? kind === 'speech' : segment.kind === kind,
+    disabled: challengeDisguised || !isCommentSegmentKindAllowedForMechanicMode(segment, kind, edit)
   })).join('');
 }
 
@@ -115,7 +210,10 @@ function getCommentSegmentActor(segment, edit = false) {
   const sceneActor = window.AleriaCommentSceneCast?.getActor?.(segment?.actorId, edit);
   if (sceneActor) return sceneActor;
   const selectedId = edit ? _editSelectedCharId : _selectedCharId;
-  return selectedId ? getAvailableCommentCharacterById(selectedId) : null;
+  const character = selectedId ? getAvailableCommentCharacterById(selectedId) : null;
+  if (!character || character.entityType === 'creature') return character;
+  const selectedSetId = edit ? _editSelectedImageSetId : _selectedImageSetId;
+  return applyCharacterImageSetPresentation(character, segment?.imageSetId || selectedSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
 }
 
 function getCommentSegmentActorControl(segment, edit = false) {
@@ -177,6 +275,9 @@ function getCommentSegmentTextareaId(segment, edit = false) {
 function getCommentSegmentPlaceholder(kind) {
   const normalized = normalizeCommentKind(kind);
   if (normalized === 'action') return 'Was geschieht?';
+  if (normalized === 'interact') return 'Wie interagiert die Figur mit ihrer Umgebung oder einer anderen Person?';
+  if (normalized === 'consume') return 'Wie benutzt oder verbraucht die Figur den ausgewählten Gegenstand?';
+  if (normalized === 'performance') return 'Was spielt, behauptet oder führt die Figur vor?';
   if (normalized === 'thought') return 'Was denkt die Figur?';
   if (normalized === 'whisper') return 'Was wird geflüstert?';
   if (normalized === 'shout') return 'Was wird gerufen?';
@@ -186,7 +287,7 @@ function getCommentSegmentPlaceholder(kind) {
   if (normalized === 'foreign') return 'Was wird in der gewählten Fremdsprache gesagt?';
   if (normalized === 'spell') return 'Welche Zauberformel wird gesprochen?';
   if (normalized === 'madness') return 'Was bricht aus dem Wahn hervor?';
-  if (normalized === 'prayer') return 'Welches Gebet wird gesprochen?';
+  if (normalized === 'prayer') return 'Welches Gebet, welcher Schwur oder welche heilige Anrufung wird gewirkt?';
   if (normalized === 'flirt') return 'Was wird charmant gesagt?';
   if (normalized === 'combataction') return 'Beschreibe den Angriff rollenspielerisch. Ob er gelingt, entscheidet danach die Kampfauswertung.';
   if (normalized === 'secretaction') return 'Welche geheime Handlung geschieht, verborgen vor allen Blicken?';

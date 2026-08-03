@@ -7,6 +7,7 @@ function getCommentDraftPayload() {
     commentKind: _commentKind,
     selectedCharId: _selectedCharId,
     selectedEmoteIdx: _selectedEmoteIdx,
+    selectedImageSetId: _selectedImageSetId,
     manualMode: _manualMode,
     name: document.getElementById('cf-name')?.value || '',
     title: document.getElementById('cf-title')?.value || '',
@@ -15,14 +16,34 @@ function getCommentDraftPayload() {
       kind: segment.kind,
       text: segment.text,
       emoteIndex: Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
+      imageSetId: String(segment.imageSetId || ''),
       side: commentSegmentUsesSide(segment.kind, false) ? normalizeCommentSegmentSide(segment.side) : '',
       language: getCommentLanguage(segment),
       languageColor: commentKindUsesLanguage(segment.kind) ? getCommentLanguageColor(segment, segment.kind) : '',
       durationSeconds: getSceneTimeSegmentDuration(segment),
       actorId: String(segment.actorId || ''),
-      combatTargetId: segment.kind === 'combataction' ? String(segment.combatTargetId || '') : '',
-      combatActionId: segment.kind === 'combataction' ? String(segment.combatActionId || '') : '',
-      combatRollMode: segment.kind === 'combataction' && ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal'
+      mechanicMode: normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.kind, segment),
+      skillId: String(segment.skillId || ''),
+      skillCustomModifier: Number(segment.skillCustomModifier || 0),
+      skillDifficulty: Number(segment.skillDifficulty || 10),
+      skillRollMode: ['advantage', 'disadvantage'].includes(segment.skillRollMode) ? segment.skillRollMode : 'normal',
+      skillTargetActorKey: String(segment.skillTargetActorKey || ''),
+      skillTargetChallengeId: String(segment.skillTargetChallengeId || ''),
+      skillChallengeId: String(segment.skillChallengeId || ''),
+      skillChallengeEnabled: !!segment.skillChallengeEnabled,
+      skillChallengeTitle: String(segment.skillChallengeTitle || ''),
+      skillChallengeRevealedText: String(segment.skillChallengeRevealedText || ''),
+      skillChallengeDifficulty: Number(segment.skillChallengeDifficulty || 10),
+      skillChallengePreferredSkills: Array.isArray(segment.skillChallengePreferredSkills) ? [...segment.skillChallengePreferredSkills] : [],
+      skillChallengePreferredModifier: Number(segment.skillChallengePreferredModifier ?? 2),
+      skillChallengeAlternativeModifier: Number(segment.skillChallengeAlternativeModifier ?? -2),
+      inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
+      inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+      combatTargetId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatTargetId || '') : '',
+      combatActionId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatActionId || '') : '',
+      combatRollMode: commentSegmentUsesCombatResolution(segment) && ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+      combatPaymentMode: commentSegmentUsesCombatResolution(segment) && ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
+      combatPaymentConfirmed: commentSegmentUsesCombatResolution(segment) && !!segment.combatPaymentConfirmed
     })),
     sceneActors: window.AleriaCommentSceneCast?.serializeCreate?.() || [],
     portraitUrl: _portraitUrl || '',
@@ -116,7 +137,32 @@ function restoreCommentDraft() {
         segment.durationSeconds,
         segment.language || segment.spellFont,
         segment.languageColor,
-        { targetId: segment.combatTargetId, actionId: segment.combatActionId, rollMode: segment.combatRollMode, actorId: segment.actorId }
+        {
+          mechanicMode: segment.mechanicMode,
+          imageSetId: segment.imageSetId,
+          skillId: segment.skillId,
+          skillCustomModifier: segment.skillCustomModifier,
+          skillDifficulty: segment.skillDifficulty,
+          skillRollMode: segment.skillRollMode,
+          skillTargetActorKey: segment.skillTargetActorKey,
+          skillTargetChallengeId: segment.skillTargetChallengeId,
+          skillChallengeId: segment.skillChallengeId,
+          skillChallengeEnabled: segment.skillChallengeEnabled,
+          skillChallengeTitle: segment.skillChallengeTitle,
+          skillChallengeRevealedText: segment.skillChallengeRevealedText,
+          skillChallengeDifficulty: segment.skillChallengeDifficulty,
+          skillChallengePreferredSkills: segment.skillChallengePreferredSkills,
+          skillChallengePreferredModifier: segment.skillChallengePreferredModifier,
+          skillChallengeAlternativeModifier: segment.skillChallengeAlternativeModifier,
+          inventoryItemId: segment.inventoryItemId,
+          inventoryUseMode: segment.inventoryUseMode,
+          targetId: segment.combatTargetId,
+          actionId: segment.combatActionId,
+          rollMode: segment.combatRollMode,
+          actorId: segment.actorId,
+          paymentMode: segment.combatPaymentMode,
+          paymentConfirmed: segment.combatPaymentConfirmed
+        }
       ));
     } else {
       _commentSegments = [makeCommentSegment(draft.commentKind || 'speech', String(draft.text || ''), Number.isInteger(draft.selectedEmoteIdx) ? draft.selectedEmoteIdx : null)];
@@ -145,7 +191,7 @@ function restoreCommentDraft() {
       const restoredMode = draft.mode === 'creature' || restoredActor?.entityType === 'creature' ? 'creature' : 'charakter';
       setCommentMode(restoredMode);
       if (restoredActor && commentActorMatchesComposerMode(restoredActor, restoredMode)) {
-        selectCharForComment(draft.selectedCharId);
+        selectCharForComment(draft.selectedCharId, { imageSetId: draft.selectedImageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID });
         if (Number.isInteger(draft.selectedEmoteIdx) && draft.selectedEmoteIdx >= 0) {
           selectEmote(draft.selectedEmoteIdx);
         }

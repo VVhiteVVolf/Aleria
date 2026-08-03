@@ -71,6 +71,21 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'select-image-set') {
+    selectCharacterImageSet(actionTarget.dataset.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+    return;
+  }
+
+  if (action === 'add-image-set') {
+    addCharacterImageSet();
+    return;
+  }
+
+  if (action === 'delete-image-set') {
+    deleteActiveCharacterImageSet();
+    return;
+  }
+
   if (action === 'import-avatar-links') {
     void importCharacterAvatarLinks();
     return;
@@ -78,6 +93,11 @@ function handleCharacterProfileClick(event) {
 
   if (action === 'paste-avatar-links') {
     void pasteCharacterAvatarLinks();
+    return;
+  }
+
+  if (action === 'import-imgur-album') {
+    void importCharacterImgurAlbum();
     return;
   }
 
@@ -102,6 +122,11 @@ function handleCharacterProfileInput(event) {
 
   if (target.id === 'cp-profile-link-url') {
     syncProfileLinkDisplay(target.value, document.getElementById('cp-name')?.value || '');
+    return;
+  }
+
+  if (target.dataset.charProfileAction === 'rename-image-set') {
+    renameActiveCharacterImageSet(target.value);
     return;
   }
 

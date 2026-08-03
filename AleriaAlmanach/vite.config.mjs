@@ -20,8 +20,8 @@ function preserveClassicAlmanachScripts() {
       await mkdir(buildAlmanachRoot, { recursive: true });
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await cp(
-        resolve(almanachRoot, 'public/assets/dice-box'),
-        resolve(buildAlmanachRoot, 'public/assets/dice-box'),
+        resolve(almanachRoot, 'public/assets'),
+        resolve(buildAlmanachRoot, 'public/assets'),
         { recursive: true, force: true }
       );
     }

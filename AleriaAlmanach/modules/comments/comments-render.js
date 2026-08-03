@@ -3,9 +3,12 @@
 const COMMENT_KIND_LABELS = {
   speech: 'Rede',
   action: 'Handlung',
+  interact: 'Interagieren',
+  consume: 'Konsumieren',
   thought: 'Gedanke',
   whisper: 'Zu Flüstern',
   shout: 'Rufen',
+  performance: 'Schauspiel',
   animal: 'Tiersprache',
   foreign: 'Fremdsprache',
   song: 'Gesang',
@@ -18,6 +21,7 @@ const COMMENT_KIND_LABELS = {
   combataction: 'Kampfbeschreibung',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
+  'scene-rest-event': 'Rast',
   'scene-transition-event': 'Szenenwechsel',
   'scene-poll-event': 'Abstimmung'
 };
@@ -27,6 +31,9 @@ const COMMENT_KIND_ICONS = {
   thought: '../IconOrdner/Buttom Icons/Gedanke.PNG',
   whisper: '../IconOrdner/Buttom Icons/Flüstern.PNG',
   shout: '../IconOrdner/Buttom Icons/Rufen.PNG',
+  performance: './public/assets/comment-icons/performance.png?v=20260803-auftreten-v1',
+  interact: './public/assets/comment-icons/interact.png',
+  consume: './public/assets/comment-icons/consume.png',
   animal: '../IconOrdner/Buttom Icons/Tiersprache.PNG',
   foreign: '../IconOrdner/Buttom Icons/Rede.PNG',
   song: '../IconOrdner/Buttom Icons/Singen.PNG',
@@ -44,6 +51,16 @@ const COMMENT_KIND_ALIASES = {
   fluestern: 'whisper',
   flüstern: 'whisper',
   rufen: 'shout',
+  schauspiel: 'performance',
+  auftreten: 'performance',
+  performance: 'performance',
+  interagieren: 'interact',
+  interaktion: 'interact',
+  interact: 'interact',
+  konsumieren: 'consume',
+  verbrauchen: 'consume',
+  benutzen: 'consume',
+  consume: 'consume',
   tiersprache: 'animal',
   tier: 'animal',
   animal: 'animal',
@@ -93,7 +110,7 @@ function getCommentKindIconMarkup(kind, className = 'comment-kind-icon') {
 }
 
 function commentKindUsesQuoteMark(kind) {
-  return ['speech', 'foreign', 'shout', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
+  return ['speech', 'foreign', 'shout', 'performance', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
 
 function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
@@ -145,6 +162,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (window.AleriaSceneRest?.isComment?.(c)) {
+    return window.AleriaSceneRest.renderComment(c, idx);
+  }
   if (typeof isSceneInventoryTransferComment === 'function' && isSceneInventoryTransferComment(c)) {
     return renderSceneInventoryTransferComment(c, idx);
   }
@@ -170,13 +190,17 @@ function renderCommentBubble(c, idx) {
   if (Array.isArray(c.commentSegments) && c.commentSegments.some(segment => String(segment?.text || '').trim())) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());
     return cleanSegments.map((segment, segmentIdx) => {
+      const displayText = window.AleriaSkillChecks?.getDisplayText?.(segment) ?? segment.text ?? '';
+      const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment)
+        || segment.commentKind || segment.kind || (segment.narrator ? 'narrator' : 'speech');
       const segmentComment = {
         ...c,
         ...segment,
         id: c.id,
-        text: segment.text || '',
+        text: displayText,
         narrator: !!segment.narrator,
-        commentKind: segment.commentKind || segment.kind || (segment.narrator ? 'narrator' : 'speech'),
+        commentKind: displayKind,
+        kind: displayKind,
         charName: segment.charName || (segment.narrator ? 'Erzähler' : c.charName),
         charTitle: segment.charTitle || (segment.narrator ? '' : c.charTitle),
         portrait: segment.narrator ? null : (segment.portrait || c.portrait),
@@ -188,10 +212,19 @@ function renderCommentBubble(c, idx) {
         _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
       const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
-      const evaluation = segment.combatResolution
+      const combatEvaluation = segment.combatResolution
         ? (window.AleriaCombat?.renderEvaluation?.(segment) || '')
         : '';
-      return `${bubble}${evaluation}`;
+      const skillEvaluation = segment.skillResolution
+        ? (window.AleriaSkillChecks?.renderEvaluation?.(segment) || '')
+        : '';
+      const challengeStatus = segment.skillChallenge
+        ? (window.AleriaSkillChecks?.renderChallengeStatus?.(segment) || '')
+        : '';
+      const inventoryUse = segment.inventoryUse
+        ? (window.AleriaInventoryUse?.renderUsage?.(segment) || '')
+        : '';
+      return `${bubble}${inventoryUse}${combatEvaluation}${skillEvaluation}${challengeStatus}`;
     }).join('');
   }
 

@@ -8,6 +8,8 @@ function openEditComment(commentId) {
   _editCommentKind = 'speech';
   _editSelectedCharId = null;
   _editSelectedEmoteIdx = null;
+  _editSelectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
+  _editImageSetChangedByUser = false;
   _editManualMode = false;
   _editPortraitUrl = null;
   _editCommentSegments = [makeCommentSegment('speech')];
@@ -59,6 +61,8 @@ async function verifyEditCode() {
     const data = await backend.verifyCommentCode(_editTargetId, code);
     _editCommentData = data;
     _editSelectedEmoteIdx = null;
+    _editSelectedImageSetId = String(data.imageSetId || data.commentSegments?.[0]?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+    _editImageSetChangedByUser = false;
     _editPortraitUrl = normalizeImageUrlForStorage(data.portrait || '');
     setEditCommentKind(data.commentKind || 'speech');
     // Populate edit form
@@ -74,12 +78,35 @@ async function verifyEditCode() {
         segment.language || segment.spellFont,
         segment.languageColor,
         {
+          imageSetId: segment.imageSetId || data.imageSetId || '',
+          mechanicMode: segment.mechanicMode,
+          skillId: segment.skillId || segment.skillResolution?.skillId,
+          skillCustomModifier: segment.skillCustomModifier ?? segment.skillResolution?.customModifier,
+          skillDifficulty: segment.skillDifficulty ?? segment.skillResolution?.difficulty,
+          skillRollMode: segment.skillRollMode || segment.skillResolution?.rollMode,
+          skillTargetActorKey: segment.skillTargetActorKey || '',
+          skillTargetChallengeId: segment.skillTargetChallengeId || segment.skillResolution?.targetChallengeId,
+          skillChallengeId: segment.skillChallenge?.id,
+          skillChallengeEnabled: !!segment.skillChallenge,
+          skillChallengeTitle: segment.skillChallenge?.title,
+          skillChallengeRevealedText: segment.skillChallenge?.revealedText,
+          skillChallengeDifficulty: segment.skillChallenge?.difficulty,
+          skillChallengePreferredSkills: segment.skillChallenge?.preferredSkills,
+          skillChallengePreferredModifier: segment.skillChallenge?.preferredModifier,
+          skillChallengeAlternativeModifier: segment.skillChallenge?.alternativeModifier,
+          storedSkillResolution: segment.skillResolution || null,
+          storedSkillChallenge: segment.skillChallenge || null,
           targetId: segment.combatTargetId || segment.combatAction?.targetId,
           actionId: segment.combatActionId || segment.combatAction?.profileActionId,
           rollMode: segment.combatRollMode || segment.combatAction?.rollMode,
+          paymentMode: segment.combatPaymentMode || segment.combatAction?.paymentMode,
+          paymentConfirmed: true,
           actorId: segment.sceneActorId || segment.actorId || '',
           storedCombatAction: segment.combatAction || null,
-          storedCombatResolution: segment.combatResolution || null
+          storedCombatResolution: segment.combatResolution || null,
+          inventoryItemId: segment.inventoryUse?.item?.id || '',
+          inventoryUseMode: segment.inventoryUse?.requestedMode || segment.inventoryUse?.mode || 'auto',
+          storedInventoryUse: segment.inventoryUse || null
         }
       ));
     } else {
@@ -100,8 +127,12 @@ async function verifyEditCode() {
       const match = directMatch || getAvailableCommentCharacterByName(data.charName);
       if (match && commentActorMatchesComposerMode(match, actorMode)) {
         _editSelectedCharId = match.id;
-        if (data.portrait && Array.isArray(match.emotes)) {
-          const emoteIdx = match.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));
+        const presentation = match.entityType === 'creature'
+          ? match
+          : applyCharacterImageSetPresentation(match, _editSelectedImageSetId);
+        _editSelectedImageSetId = presentation?.selectedImageSetId || '';
+        if (data.portrait && Array.isArray(presentation?.emotes)) {
+          const emoteIdx = presentation.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));
           _editSelectedEmoteIdx = emoteIdx >= 0 ? emoteIdx : null;
         }
       } else {

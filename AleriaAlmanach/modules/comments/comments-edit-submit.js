@@ -26,15 +26,20 @@ async function submitEditComment() {
       ? { actorType: 'creature', creatureId: _editSelectedCharId }
       : { actorType: 'character', creatureId: '' };
     const actorCommentMode = c.entityType === 'creature' ? 'creature' : 'character';
-    if (_editSelectedEmoteIdx !== null && c.emotes && c.emotes[_editSelectedEmoteIdx]) {
-      portrait = c.emotes[_editSelectedEmoteIdx].img;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: _editSelectedEmoteIdx, avatarKind: 'emote', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
-    } else if (normalizeSearchText(_editCommentData?.charName) === normalizeSearchText(c.name) && _editCommentData?.portrait) {
-      portrait = normalizeImageUrlForStorage(_editCommentData.portrait) || c.portrait || null;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
+    const presentation = c.entityType === 'creature'
+      ? c
+      : applyCharacterImageSetPresentation(c, _editSelectedImageSetId);
+    const selectedImageSetId = presentation.selectedImageSetId || '';
+    const imageSetChanged = _editImageSetChangedByUser;
+    if (_editSelectedEmoteIdx !== null && presentation.emotes && presentation.emotes[_editSelectedEmoteIdx]) {
+      portrait = presentation.emotes[_editSelectedEmoteIdx].img;
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: _editSelectedEmoteIdx, imageSetId: selectedImageSetId, avatarKind: 'emote', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
+    } else if (!imageSetChanged && normalizeSearchText(_editCommentData?.charName) === normalizeSearchText(c.name) && _editCommentData?.portrait) {
+      portrait = normalizeImageUrlForStorage(_editCommentData.portrait) || presentation.portrait || null;
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, imageSetId: selectedImageSetId, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
     } else {
-      portrait = c.portrait || null;
-      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
+      portrait = presentation.portrait || null;
+      commentMetadata = { characterId: _editSelectedCharId, emoteIndex: null, imageSetId: selectedImageSetId, avatarKind: 'portrait', commentMode: actorCommentMode, schemaVersion: 2, ...actorMetadata };
     }
     narrator = false;
   } else if (_editManualMode) {
@@ -52,7 +57,7 @@ async function submitEditComment() {
   }
   const storedCombatSegments = (Array.isArray(_editCommentData?.commentSegments) ? _editCommentData.commentSegments : [])
     .filter(segment => segment?.combatResolution);
-  const editedCombatSegments = editSegments.filter(segment => segment.commentKind === 'combataction');
+  const editedCombatSegments = editSegments.filter(segment => commentSegmentUsesCombatResolution(segment));
   if (storedCombatSegments.length !== editedCombatSegments.length) {
     errEl.textContent = 'Gespeicherte Kampfauswertungen dürfen beim Bearbeiten nicht hinzugefügt oder entfernt werden. Lege dafür einen neuen Beitrag an.';
     errEl.style.display = 'block';
@@ -61,14 +66,15 @@ async function submitEditComment() {
   let combatIndex = 0;
   let combatMechanicsError = '';
   const preservedSegments = editSegments.map(segment => {
-    if (segment.commentKind !== 'combataction') return segment;
+    if (!commentSegmentUsesCombatResolution(segment)) return segment;
     const stored = storedCombatSegments[combatIndex++];
     const storedAction = stored?.combatAction;
     const actorId = String(segment.sceneActorId || segment.characterId || '');
     const sameMechanics = storedAction
       && String(storedAction.actorId || '') === actorId
       && String(storedAction.targetId || '') === String(segment.combatTargetId || '')
-      && String(storedAction.profileActionId || '') === String(segment.combatActionId || '');
+      && String(storedAction.profileActionId || '') === String(segment.combatActionId || '')
+      && String(storedAction.paymentMode || 'standard') === String(segment.combatPaymentMode || 'standard');
     if (!sameMechanics) {
       combatMechanicsError = 'Ziel, Angreifer und aktiver Angriff einer bereits ausgewerteten Kampfhandlung sind unveränderlich. Erstelle für einen neuen Wurf einen neuen Beitrag.';
       return segment;
@@ -85,11 +91,66 @@ async function submitEditComment() {
     errEl.style.display = 'block';
     return;
   }
+  const originalSegments = Array.isArray(_editCommentData?.commentSegments) ? _editCommentData.commentSegments : [];
+  let skillMechanicsError = '';
+  const fullyPreservedSegments = preservedSegments.map((segment, index) => {
+    const original = originalSegments[index] || {};
+    const { storedSkillResolution, storedSkillChallenge, ...cleanSegment } = segment;
+    if (original.skillResolution) {
+      const actorId = String(segment.sceneActorId || segment.characterId || '');
+      const sameSkillMechanics = normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.commentKind, segment) === 'skill'
+        && String(original.skillResolution.actorId || '') === actorId
+        && String(original.skillResolution.skillId || '') === String(segment.skillId || '')
+        && String(original.skillResolution.targetChallengeId || '') === String(segment.skillTargetChallengeId || '');
+      if (!sameSkillMechanics) {
+        skillMechanicsError = 'Eine bereits ausgewertete Fertigkeit darf beim Bearbeiten nicht verändert oder neu gewürfelt werden. Erstelle dafür einen neuen Beitrag.';
+      }
+    } else if (normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.commentKind, segment) === 'skill') {
+      skillMechanicsError = 'Neue Fertigkeitswürfe können nur beim Eintragen eines neuen Beitrags erzeugt werden.';
+    }
+    if (segment.skillChallengeEnabled && !original.skillChallenge) {
+      skillMechanicsError = 'Neue verdeckte Herausforderungen können nur mit einem neuen Beitrag angelegt werden.';
+    }
+    return {
+      ...cleanSegment,
+      ...(original.skillResolution ? { skillResolution: original.skillResolution } : {}),
+      ...(original.skillChallenge ? { skillChallenge: original.skillChallenge } : {})
+    };
+  });
+  if (skillMechanicsError) {
+    errEl.textContent = skillMechanicsError;
+    errEl.style.display = 'block';
+    return;
+  }
+  let inventoryUseError = '';
+  const inventoryPreservedSegments = fullyPreservedSegments.map((segment, index) => {
+    const original = originalSegments[index] || {};
+    const storedUse = original.inventoryUse;
+    const { storedInventoryUse, ...cleanSegment } = segment;
+    if (storedUse) {
+      const sameItem = String(segment.commentKind || segment.kind || '') === 'consume'
+        && String(segment.inventoryItemId || storedInventoryUse?.item?.id || '') === String(storedUse.item?.id || '');
+      if (!sameItem) {
+        inventoryUseError = 'Ein bereits gespeicherter Inventarvorgang und sein Gegenstand sind unveränderlich. Erstelle für eine neue Benutzung einen neuen Beitrag.';
+      }
+      return { ...cleanSegment, inventoryUse: storedUse };
+    }
+    if (String(segment.commentKind || segment.kind || '') === 'consume') {
+      inventoryUseError = 'Neue Inventarvorgänge können nur beim Eintragen eines neuen Beitrags erzeugt werden.';
+    }
+    return cleanSegment;
+  });
+  if (inventoryUseError) {
+    errEl.textContent = inventoryUseError;
+    errEl.style.display = 'block';
+    return;
+  }
   commentMetadata.commentKind = normalizeCommentKind(_editCommentKind, narrator);
-  commentMetadata.commentSegments = preservedSegments;
-  const preservedCombat = preservedSegments.filter(segment => segment.combatResolution);
+  commentMetadata.commentSegments = inventoryPreservedSegments;
+  const preservedCombat = inventoryPreservedSegments.filter(segment => segment.combatResolution);
   commentMetadata.combatAction = preservedCombat.length === 1 ? preservedCombat[0].combatAction : null;
   commentMetadata.combatResolution = preservedCombat.length === 1 ? preservedCombat[0].combatResolution : null;
+  commentMetadata.inventoryTransaction = _editCommentData?.inventoryTransaction || null;
 
   errEl.style.display = 'none';
   btn.disabled = true;

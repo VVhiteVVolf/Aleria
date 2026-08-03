@@ -3,7 +3,7 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js';
 
-export const CREATURE_SCHEMA_VERSION = 2;
+export const CREATURE_SCHEMA_VERSION = 3;
 export const CREATURE_EXPORT_TYPE = 'aleria-creature';
 export const CREATURE_ARCHIVE_EXPORT_TYPE = 'aleria-creature-archive';
 export const MAX_CREATURE_AVATARS = 10;
@@ -56,7 +56,8 @@ function createCreatureCombatDefaults() {
     skills: [],
     weapons: [],
     armorItems: [],
-    resources: [],
+    resources: [{ id: 'mana-focus', name: 'Mana / Fokus', current: 0, maximum: 0, recovery: 'long-rest', scope: 'persistent', category: 'magic' }],
+    techniques: [],
     quirks: [],
     conditions: [],
     abilities: []
@@ -105,7 +106,7 @@ export function sanitizeCreature(value = {}) {
       archetype: source.type || combatSource.identity?.archetype,
       background: source.habitat || combatSource.identity?.background
     }
-  }), level);
+  }, { ensureRequiredSkills: false }), level);
   const loot = source.loot && typeof source.loot === 'object' ? source.loot : {};
   const result = {
     schemaVersion: CREATURE_SCHEMA_VERSION,

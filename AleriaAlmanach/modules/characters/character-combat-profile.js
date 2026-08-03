@@ -1,18 +1,22 @@
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
+  COMBAT_WEAPON_TYPE_OPTIONS,
   getAttributeModifier,
   getCharacterCombatInventoryOptions,
   getSavingThrowTotal,
   getSkillTotal,
   getWeaponAttackModifier,
   getWeaponDamageModifier,
+  isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260802-combat-sheet-v4';
+} from '../combat/combat-profile-model.js?v=20260803-combat-sheet-v6';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-combat-entry-editor-v1';
 import {
   createCharacterLevelUpPlan,
   previewCharacterLevelUp
 } from '../combat/combat-level-up-model.js?v=20260802-level-up-v1';
+import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-resource-icons-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -75,6 +79,22 @@ function renderInventoryOptions(kind) {
   return `<option value="">${label}</option>${options.map(item =>
     `<option value="${escapeMarkup(item.inventoryItemId)}">${escapeMarkup(item.name || 'Unbenannter Gegenstand')}</option>`
   ).join('')}`;
+}
+
+function renderResourceIcon(resource = {}) {
+  const presentation = getCombatResourceIconPresentation(resource, document.baseURI);
+  return `<span class="cp-sheet-resource-icon-frame" data-resource-kind="${escapeMarkup(presentation.kind)}" aria-hidden="true">
+    <span class="cp-sheet-resource-icon-fallback">${presentation.fallback}</span>
+    ${presentation.source ? `<img class="cp-sheet-resource-icon" src="${escapeMarkup(presentation.source)}" alt="" loading="eager" decoding="async">` : ''}
+  </span>`;
+}
+
+function activateResourceIconFallbacks(root) {
+  root?.querySelectorAll?.('.cp-sheet-resource-icon').forEach(image => {
+    const markFailed = () => image.closest('.cp-sheet-resource-icon-frame')?.classList.add('is-missing');
+    if (image.complete && image.naturalWidth === 0) markFailed();
+    else image.addEventListener('error', markFailed, { once: true });
+  });
 }
 
 function renderIdentityAndProgression(profile) {
@@ -289,7 +309,7 @@ function renderRules(profile) {
 }
 
 function renderSavingThrows(profile) {
-  return `<article class="cp-sheet-card">
+  return `<section class="cp-sheet-saving-throws">
     <div class="cp-sheet-section-head"><div><span>Attribut + Kompetenz</span><h4>Rettungswürfe</h4></div></div>
     <div class="cp-sheet-save-list">${profile.savingThrows.map(save => {
       const definition = profile.attributes.find(attribute => attribute.key === save.attributeKey);
@@ -301,7 +321,7 @@ function renderSavingThrows(profile) {
         <input type="number" min="-99" max="99" data-combat-collection="savingThrows" data-combat-item-id="${save.attributeKey}" data-combat-property="bonus" value="${save.bonus}" aria-label="Freier Bonus">
       </div>`;
     }).join('')}</div>
-  </article>`;
+  </section>`;
 }
 
 function renderSkills(profile) {
@@ -324,14 +344,15 @@ function renderSkills(profile) {
 function renderResources(profile) {
   return `<article class="cp-sheet-card cp-sheet-resources">
     <div class="cp-sheet-section-head"><div><span>Verbrauch &amp; Erholung</span><h4>Kernressourcen</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="resources">+ Ressource</button></div>
-    <div class="cp-sheet-resource-list">${profile.resources.map(resource => `<div>
-      <input class="name" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="name" value="${escapeMarkup(resource.name)}" maxlength="100" aria-label="Ressource">
+    <div class="cp-sheet-resource-list">${profile.resources.map(resource => `<div class="${resource.scope === 'comment' ? 'comment-resource' : ''}">
+      <div class="cp-sheet-resource-identity">${renderResourceIcon(resource)}<input class="name" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="name" value="${escapeMarkup(resource.name)}" maxlength="100" aria-label="Ressource"></div>
       <label><span>Aktuell</span><input type="number" min="-9999" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="current" value="${resource.current}"></label>
       <label><span>Maximum</span><input type="number" min="0" max="9999" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="maximum" value="${resource.maximum}"></label>
-      <select data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="recovery" aria-label="Erholung"><option value="manual"${selected(resource.recovery, 'manual')}>Manuell</option><option value="short-rest"${selected(resource.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(resource.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(resource.recovery, 'scene')}>Szene</option><option value="day"${selected(resource.recovery, 'day')}>Tag</option><option value="none"${selected(resource.recovery, 'none')}>Keine</option></select>
+      <select data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="recovery" aria-label="Erholung"><option value="manual"${selected(resource.recovery, 'manual')}>Manuell</option><option value="short-rest"${selected(resource.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(resource.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(resource.recovery, 'scene')}>Kommentar / Szene</option><option value="day"${selected(resource.recovery, 'day')}>Tag</option><option value="none"${selected(resource.recovery, 'none')}>Keine</option></select>
       <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" aria-label="Ressource entfernen">×</button>
-      <input class="cp-sheet-resource-notes" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="notes" value="${escapeMarkup(resource.notes)}" maxlength="500" placeholder="Regeln, Grenzen oder Besonderheiten dieser Ressource">
+      <input class="cp-sheet-resource-notes" data-combat-collection="resources" data-combat-item-id="${escapeMarkup(resource.id)}" data-combat-property="notes" value="${escapeMarkup(resource.notes)}" maxlength="500" placeholder="Regeln, Grenzen oder Besonderheiten dieser Ressource"><small>${resource.scope === 'comment' ? 'Wird pro Gesamtkommentar aufgefüllt.' : (resource.recovery === 'day' ? 'Bleibt erhalten und wird erst am nächsten Aleria-Tag aufgefüllt.' : 'Bleibt zwischen Kommentaren erhalten.')}</small>
     </div>`).join('')}</div>
+    ${renderSavingThrows(profile)}
   </article>`;
 }
 
@@ -339,10 +360,12 @@ function renderWeapons(profile) {
   return `<section class="cp-sheet-card">
     <div class="cp-sheet-section-head"><div><span>Inventar als Vorlage · danach frei</span><h4>Waffen</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="weapon">${renderInventoryOptions('weapon')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="weapon">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="weapons">+ Waffe</button></div></div>
     <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<article class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}">
-      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
+      <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname"><button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
       <div class="cp-sheet-fields weapon">
         <label><span>Schadenswurf</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageFormula" value="${escapeMarkup(weapon.damageFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="1W8"></label>
         <label><span>Schadensart</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageType" value="${escapeMarkup(weapon.damageType)}" maxlength="80"></label>
+        <label><span>Waffenart</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="weaponType">${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<option value="${option.id}"${selected(weapon.weaponType, option.id)}>${option.label}</option>`).join('')}</select></label>
+        <label><span>Ausbildung</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="training"><option value="simple"${selected(weapon.training, 'simple')}>Schlicht / simpel</option><option value="martial"${selected(weapon.training, 'martial')}>Kriegerisch</option><option value="special"${selected(weapon.training, 'special')}>Besonders</option></select></label>
         <label><span>Attribut</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="attackAttribute">${renderAttributeOptions(weapon.attackAttribute)}</select></label>
         <label><span>Reichweite</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="range" value="${escapeMarkup(weapon.range)}" maxlength="80"></label>
         <label><span>Angriff extra</span><input type="number" min="-99" max="99" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="attackBonus" value="${weapon.attackBonus}"></label>
@@ -388,7 +411,29 @@ function renderMechanicsFields(collection, item) {
   </div>`;
 }
 
+function renderDetailCards(profile, collection, title, kicker, kind, addLabel, itemsOverride = null, defaultActivation = '') {
+  const items = itemsOverride || profile[collection] || [];
+  const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || null;
+  return `<article class="cp-sheet-card cp-sheet-detail-cards">
+    <div class="cp-sheet-section-head"><div><span>${kicker}</span><h4>${title}</h4></div><button type="button" data-combat-action="add-detail-item" data-combat-collection="${collection}" data-combat-entry-kind="${kind}"${defaultActivation ? ` data-combat-default-activation="${defaultActivation}"` : ''}>+ ${addLabel}</button></div>
+    <div class="cp-sheet-detail-list">${items.map(item => {
+      const costs = (item.costs || []).map(cost => `${cost.amount} ${cost.name}`).join(' · ');
+      const meta = kind === 'quirk'
+        ? [item.type, item.appliesWhen, item.target].filter(Boolean).join(' · ')
+        : [item.activationType, item.delivery, costs].filter(Boolean).join(' · ');
+      const compatible = kind !== 'technique' || isTechniqueCompatibleWithWeapon(item, activeWeapon);
+      const stateClass = item.active && compatible ? 'active' : 'inactive';
+      const compatibilityNote = compatible ? '' : `Nicht mit ${activeWeapon?.name || 'der aktiven Waffe'} verfügbar.`;
+      return `<article class="cp-sheet-detail-card ${stateClass}" data-compatible="${compatible}">
+        <div><span>${escapeMarkup([meta || (item.active ? 'Aktiv' : 'Inaktiv'), compatibilityNote].filter(Boolean).join(' · '))}</span><strong>${escapeMarkup(item.name || 'Unbenannter Eintrag')}</strong><p>${escapeMarkup(item.description || 'Noch keine Beschreibung.')}</p></div>
+        <div class="cp-sheet-detail-actions"><button type="button" data-combat-action="edit-detail-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-entry-kind="${kind}">Bearbeiten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="${collection}" data-combat-item-id="${escapeMarkup(item.id)}">×</button></div>
+      </article>`;
+    }).join('') || `<p class="cp-sheet-empty">Noch keine ${title.toLowerCase()} eingetragen.</p>`}</div>
+  </article>`;
+}
+
 function renderNarrativeCollection(profile, collection, title, kicker, addLabel) {
+  if (collection === 'quirks') return renderDetailCards(profile, collection, title, kicker, 'quirk', addLabel);
   const typeOptions = collection === 'quirks'
     ? '<option value="quirk">Marotte</option><option value="trait">Eigenschaft</option><option value="ideal">Ideal</option><option value="bond">Bindung</option><option value="flaw">Fehler</option><option value="rule">Sonderregel</option>'
     : '';
@@ -404,15 +449,68 @@ function renderNarrativeCollection(profile, collection, title, kicker, addLabel)
 }
 
 function renderAbilities(profile) {
-  return `<article class="cp-sheet-card">
-    <div class="cp-sheet-section-head"><div><span>Aktiv, passiv oder begrenzt</span><h4>Besondere Fähigkeiten</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="abilities">+ Fähigkeit</button></div>
-    <div class="cp-sheet-narrative-list">${profile.abilities.length ? profile.abilities.map(item => `<article>
-      <div class="cp-sheet-narrative-title"><label><input type="checkbox" data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="active"${checked(item.active)}> aktiv</label><input data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="name" value="${escapeMarkup(item.name)}" maxlength="120" placeholder="Fähigkeit"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}">×</button></div>
-      <div class="cp-sheet-fields ability"><label><span>Nutzungen</span><div class="cp-sheet-pair"><input type="number" min="0" max="999" data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="usesCurrent" value="${item.usesCurrent}"><i>/</i><input type="number" min="0" max="999" data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="usesMaximum" value="${item.usesMaximum}"></div></label><label><span>Erholung</span><select data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="recovery"><option value="none"${selected(item.recovery, 'none')}>Keine</option><option value="short-rest"${selected(item.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(item.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(item.recovery, 'scene')}>Szene</option><option value="day"${selected(item.recovery, 'day')}>Tag</option><option value="manual"${selected(item.recovery, 'manual')}>Manuell</option></select></label><label><span>Würfelformel</span><input data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="rollFormula" value="${escapeMarkup(item.rollFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40"></label></div>
-      <textarea data-combat-collection="abilities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="description" maxlength="1600" placeholder="Wirkung, Grenzen und erzählerische Bedeutung">${escapeMarkup(item.description)}</textarea>
-      ${renderMechanicsFields('abilities', item)}
-    </article>`).join('') : '<p class="cp-sheet-empty">Noch keine besondere Fähigkeit eingetragen.</p>'}</div>
-  </article>`;
+  return renderDetailCards(profile, 'abilities', 'Besondere Fähigkeiten', 'Aktiv, passiv, begrenzt oder kampfrelevant', 'ability', 'Fähigkeit');
+}
+
+function renderTechniques(profile) {
+  const standard = profile.techniques.filter(item => !['reaction', 'bonus-action'].includes(item.activationType));
+  const reactive = profile.techniques.filter(item => ['reaction', 'bonus-action'].includes(item.activationType));
+  return `<section class="cp-sheet-grid cp-sheet-grid-two cp-sheet-technique-grid">
+    ${renderDetailCards(profile, 'techniques', 'Techniken & Formen', 'Waffenabhängige Spezialangriffe und Haltungen', 'technique', 'Technik', standard, 'action')}
+    ${renderDetailCards(profile, 'techniques', 'Reaktionen & Bonusaktionen', 'Schnelle Antworten und zusätzliche Manöver', 'technique', 'Reaktion / Bonusaktion', reactive, 'bonus-action')}
+  </section>`;
+}
+
+const AURA_MECHANIC_FIELDS = Object.freeze([
+  ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'RK'], ['savingThrow', 'Rettung'],
+  ['skill', 'Fertigkeit'], ['spellAttack', 'Zauberangriff'], ['spellSaveDc', 'Zauber-SG'],
+  ['movement', 'Bewegung'], ['maximumHitPoints', 'Max. TP'], ['passivePerception', 'Wahrnehmung']
+]);
+
+function renderAuraMechanics(path, title, mechanics = {}) {
+  return `<fieldset class="cp-aura-mechanics"><legend>${title}</legend>${AURA_MECHANIC_FIELDS.map(([key, label]) => `<label><span>${label}</span><input type="number" min="-9999" max="9999" data-combat-path="${path}.${key}" value="${mechanics[key] ?? 0}"></label>`).join('')}<label><span>Wurfmodus</span><select data-combat-path="${path}.attackRollMode"><option value="normal"${selected(mechanics.attackRollMode, 'normal')}>Normal</option><option value="advantage"${selected(mechanics.attackRollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(mechanics.attackRollMode, 'disadvantage')}>Nachteil</option></select></label></fieldset>`;
+}
+
+function renderAuraComponent(component, path, title) {
+  return `<details class="cp-aura-component" open><summary>${title} · ${escapeMarkup(component.name || '')}</summary>
+    <div class="cp-sheet-fields compact">
+      <label class="check"><input type="checkbox" data-combat-path="${path}.enabled"${checked(component.enabled)}> Vorhanden</label>
+      <label class="check"><input type="checkbox" data-combat-path="${path}.active"${checked(component.active)}> Wirkt aktuell</label>
+      <label><span>Name</span><input data-combat-path="${path}.name" value="${escapeMarkup(component.name)}"></label>
+      <label><span>Radius / Reichweite</span><input data-combat-path="${path}.radius" value="${escapeMarkup(component.radius)}"></label>
+      <label><span>Zielgruppe</span><input data-combat-path="${path}.target" value="${escapeMarkup(component.target)}"></label>
+      <label><span>Dauer</span><input data-combat-path="${path}.duration" value="${escapeMarkup(component.duration)}"></label>
+      <label class="wide"><span>Auslöser</span><input data-combat-path="${path}.trigger" value="${escapeMarkup(component.trigger)}"></label>
+      <label class="wide"><span>Beschreibung</span><textarea data-combat-path="${path}.description" rows="4">${escapeMarkup(component.description)}</textarea></label>
+      <label class="wide"><span>Voraussetzungen</span><textarea data-combat-path="${path}.requirements" rows="2">${escapeMarkup(component.requirements)}</textarea></label>
+      <label class="wide"><span>Hinweise an AleriaGPT</span><textarea data-combat-path="${path}.aiInstructions" rows="3">${escapeMarkup(component.aiInstructions)}</textarea></label>
+    </div>
+    <div class="cp-aura-mechanics-grid">${renderAuraMechanics(`${path}.selfMechanics`, 'Auf den Träger', component.selfMechanics)}${renderAuraMechanics(`${path}.allyMechanics`, 'Auf Verbündete', component.allyMechanics)}${renderAuraMechanics(`${path}.enemyMechanics`, 'Auf Gegner', component.enemyMechanics)}</div>
+  </details>`;
+}
+
+function renderAura(profile) {
+  const aura = profile.aura;
+  return `<section class="cp-sheet-card cp-sheet-aura">
+    <div class="cp-sheet-section-head"><div><span>Wille, Ausstrahlung und beherrschter Einfluss</span><h4>Aura, Präsenz &amp; Domäne</h4></div><label class="cp-sheet-toggle"><input type="checkbox" data-combat-path="aura.enabled"${checked(aura.enabled)}> Aura aktiv</label></div>
+    <div class="cp-sheet-fields compact">
+      <label><span>Name</span><input data-combat-path="aura.name" value="${escapeMarkup(aura.name)}"></label>
+      <label><span>Domäne</span><input data-combat-path="aura.domain" value="${escapeMarkup(aura.domain)}" placeholder="Herrschaft, Sturm, Furcht, Schutz …"></label>
+      <label><span>Fokusressource</span><select data-combat-path="aura.focusResourceId">${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(aura.focusResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select></label>
+      <label><span>Fokuskosten zum Umgehen</span><input type="number" min="1" max="999" data-combat-path="aura.focusBypassCost" value="${aura.focusBypassCost}"></label>
+      <label class="wide"><span>Domänenregeln & Notizen</span><textarea data-combat-path="aura.notes" rows="4">${escapeMarkup(aura.notes)}</textarea></label>
+    </div>
+    ${renderAuraComponent(aura.activeForm, 'aura.activeForm', 'Aktive Form')}
+    ${renderAuraComponent(aura.latentPresence, 'aura.latentPresence', 'Latente Präsenz')}
+  </section>`;
+}
+
+function renderCheats(profile) {
+  return `<section class="cp-sheet-card cp-sheet-cheats">
+    <div class="cp-sheet-section-head"><div><span>Nur für Tests und bewusst regelbrechende Szenen</span><h4>Spielleiter-Cheat</h4></div></div>
+    <label class="cp-sheet-cheat-toggle"><input type="checkbox" data-combat-path="cheats.enabled"${checked(profile.cheats.enabled)}> Alle Kosten entfallen und alle Angriffe gelingen automatisch.</label>
+    <label class="cp-sheet-cheat-toggle"><input type="checkbox" data-combat-path="cheats.automaticCritical"${checked(profile.cheats.automaticCritical)}> Automatische Erfolge zusätzlich als kritischen Treffer behandeln.</label>
+  </section>`;
 }
 
 function renderMagic(profile) {
@@ -426,13 +524,23 @@ function renderMagic(profile) {
       <label><span>Mana-Ressource</span><select data-combat-path="magic.manaResourceId"><option value="">Keine Verknüpfung</option>${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(magic.manaResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select></label>
       <label class="wide"><span>Magische Regeln / Tradition</span><textarea data-combat-path="magic.notes" maxlength="1600" placeholder="Magiesystem, Grenzen, Fokus, Tradition …">${escapeMarkup(magic.notes)}</textarea></label>
     </div>
-    <div class="cp-sheet-subhead"><strong>Zauber</strong><button type="button" data-combat-action="add-item" data-combat-collection="magic.spells">+ Zauber</button></div>
+    <div class="cp-sheet-subhead"><div><strong>Zauber</strong><small>Vorbereitet für den künftigen Zauberersteller und die zentrale Zauberliste.</small></div><button type="button" data-combat-action="add-item" data-combat-collection="magic.spells">+ Zauber</button></div>
     <div class="cp-sheet-spell-list">${magic.spells.map(spell => `<div>
       <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="prepared"${checked(spell.prepared)}> bereit</label>
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="name" value="${escapeMarkup(spell.name)}" maxlength="120" placeholder="Zaubername">
       <input type="number" min="0" max="20" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="level" value="${spell.level}" aria-label="Grad">
       <input type="number" min="0" max="999" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="manaCost" value="${spell.manaCost}" aria-label="Manakosten">
       <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="rollFormula" value="${escapeMarkup(spell.rollFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="Wurf">
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="presentationKind" aria-label="Darstellung"><option value="spell"${selected(spell.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(spell.presentationKind, 'prayer')}>Gebet</option><option value="song"${selected(spell.presentationKind, 'song')}>Gesang</option></select>
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="activationType" aria-label="Aktivierung"><option value="action"${selected(spell.activationType, 'action')}>Aktion</option><option value="bonus-action"${selected(spell.activationType, 'bonus-action')}>Bonusaktion</option><option value="reaction"${selected(spell.activationType, 'reaction')}>Reaktion</option><option value="special-action"${selected(spell.activationType, 'special-action')}>Besondere Aktion</option></select>
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="resolutionType" aria-label="Zauberprüfung"><option value="spell-attack"${selected(spell.resolutionType, 'spell-attack')}>Zauberangriff</option><option value="saving-throw"${selected(spell.resolutionType, 'saving-throw')}>Rettungswurf gegen Zauber-SG</option><option value="automatic"${selected(spell.resolutionType, 'automatic')}>Automatische Wirkung</option></select>
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="saveAttribute" aria-label="Rettungswurf-Attribut">${renderAttributeOptions(spell.saveAttribute)}</select>
+      <select data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotResourceId" aria-label="Zauberslot"><option value="">Kein Slot</option>${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(spell.slotResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select>
+      <input type="number" min="0" max="99" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="slotCost" value="${spell.slotCost}" aria-label="Slotkosten">
+      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="damageType" value="${escapeMarkup(spell.damageType)}" placeholder="Schadensart">
+      <input data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="range" value="${escapeMarkup(spell.range)}" placeholder="Reichweite">
+      <label class="check"><input type="checkbox" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="halfDamageOnSave"${checked(spell.halfDamageOnSave)}> halber Schaden bei Rettung</label>
+      <button type="button" data-combat-action="edit-action-rules" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-entry-kind="spell">Kosten &amp; Regeln</button>
       <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}">×</button>
       <textarea data-combat-collection="magic.spells" data-combat-item-id="${escapeMarkup(spell.id)}" data-combat-property="description" maxlength="1600" placeholder="Wirkung, Reichweite, Ziel, Dauer …">${escapeMarkup(spell.description)}</textarea>
     </div>`).join('')}</div>
@@ -456,15 +564,19 @@ function renderSheet() {
     ${renderAttributeRadar(profile)}
     ${renderDerivedStats(profile)}
     ${renderRules(profile)}
-    <section class="cp-sheet-grid cp-sheet-grid-two">${renderSavingThrows(profile)}${renderResources(profile)}</section>
+    ${renderResources(profile)}
     ${renderSkills(profile)}
     ${renderWeapons(profile)}
+    ${renderTechniques(profile)}
     ${renderArmor(profile)}
+    ${renderAura(profile)}
     <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Zustände & Effekte', 'Dauerhafte und temporäre Einflüsse', 'Zustand')}</section>
     <section class="cp-sheet-grid cp-sheet-grid-two">${renderAbilities(profile)}${renderMagic(profile)}</section>
+    ${renderCheats(profile)}
     ${renderNotes(profile)}
     ${renderLevelUpDialog(profile)}
   </div>`;
+  activateResourceIconFallbacks(root);
   updateDerivedView();
 }
 
@@ -539,6 +651,15 @@ function updateDraftField(target) {
   const item = findCollectionItem(collectionPath, itemId);
   if (!item) return false;
   setAtPath(item, property, inputValue(target));
+  if (collectionPath === 'magic.spells' && property === 'activationType') {
+    const resource = draftProfile.resources.find(entry => entry.id === target.value);
+    const actionResourceIds = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
+    const remainingCosts = (item.costs || []).filter(cost => !actionResourceIds.has(String(cost.resourceId || '')));
+    item.costs = target.value === 'passive' ? remainingCosts : [{
+      id: `${item.id}-activation-cost`, resourceId: target.value, name: resource?.name || target.value,
+      amount: 1, scope: resource?.scope || 'comment'
+    }, ...remainingCosts];
+  }
   return true;
 }
 
@@ -597,13 +718,14 @@ function updateDerivedView() {
 function createEmptyItem(collection) {
   const id = createItemId(collection.replace('.', '-'));
   if (collection === 'skills') return { id, name: '', attributeKey: 'dexterity', proficiency: 'none', bonus: 0, notes: '' };
-  if (collection === 'weapons') return { id, name: '', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0, range: 'Nahkampf', equipped: draftProfile.weapons.length === 0 };
+  if (collection === 'weapons') return { id, name: '', weaponType: 'unarmed', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, requirements: '', aiInstructions: '', equipped: draftProfile.weapons.length === 0 };
   if (collection === 'armorItems') return { id, name: '', kind: 'armor', baseArmorClass: '', armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, equipped: true };
-  if (collection === 'resources') return { id, name: '', current: 0, maximum: 0, recovery: 'manual' };
-  if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', active: true, mechanics: {} };
+  if (collection === 'resources') return { id, name: '', current: 0, maximum: 0, recovery: 'manual', scope: 'persistent', category: '', icon: '' };
+  if (collection === 'techniques') return { id, name: '', category: 'technique', description: '', effect: '', activationType: 'action', weaponTypes: [], compatibleWeaponIds: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+  if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', trigger: '', target: 'Selbst', duration: '', stacking: 'normal', tags: '', limitations: '', aiInstructions: '', priority: 0, active: true, mechanics: {} };
   if (collection === 'conditions') return { id, name: '', duration: '', source: '', description: '', active: true, mechanics: {} };
-  if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', rollFormula: '', active: true, mechanics: {} };
-  if (collection === 'magic.spells') return { id, name: '', level: 0, manaCost: 0, rollFormula: '', description: '', prepared: true };
+  if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', rollFormula: '', damageType: 'physisch', activationType: 'action', delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {} };
+  if (collection === 'magic.spells') return { id, name: '', level: 0, manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', activationType: 'action', resolutionType: 'spell-attack', saveAttribute: 'dexterity', halfDamageOnSave: false, damageType: 'Magie', range: 'Zauber', rollFormula: '', description: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, prepared: true };
   return { id };
 }
 
@@ -612,6 +734,38 @@ function addItem(collectionPath, item = null) {
   if (!Array.isArray(collection)) return;
   collection.push(item || createEmptyItem(collectionPath));
   renderSheet();
+}
+
+function openDetailItemEditor(collectionPath, itemId, kind, defaultActivation = '') {
+  const existing = itemId ? findCollectionItem(collectionPath, itemId) : null;
+  const item = existing ? structuredClone(existing) : createEmptyItem(collectionPath);
+  if (!existing && defaultActivation) {
+    item.activationType = defaultActivation;
+    const resourceId = defaultActivation;
+    const resource = draftProfile.resources.find(entry => entry.id === resourceId);
+    item.costs = resourceId === 'passive' ? [] : [{
+      id: `${item.id}-cost`,
+      resourceId,
+      name: resource?.name || defaultActivation,
+      amount: 1,
+      scope: resource?.scope || 'comment'
+    }];
+  }
+  openCombatEntryEditor({
+    kind,
+    item,
+    resources: draftProfile.resources,
+    weapons: draftProfile.weapons,
+    onSave: updated => {
+      const collection = getAtPath(draftProfile, collectionPath);
+      if (!Array.isArray(collection)) return;
+      const index = collection.findIndex(entry => String(entry.id) === String(updated.id));
+      if (index >= 0) collection[index] = updated;
+      else collection.push(updated);
+      draftProfile = sanitizeCharacterCombatProfile(draftProfile);
+      renderSheet();
+    }
+  });
 }
 
 function removeItem(collectionPath, itemId) {
@@ -683,6 +837,9 @@ document.addEventListener('click', event => {
   if (!trigger || !trigger.closest('#cp-tab-combat')) return;
   const action = trigger.dataset.combatAction;
   if (action === 'add-item') addItem(trigger.dataset.combatCollection);
+  if (action === 'add-detail-item') openDetailItemEditor(trigger.dataset.combatCollection, '', trigger.dataset.combatEntryKind, trigger.dataset.combatDefaultActivation || '');
+  if (action === 'edit-detail-item') openDetailItemEditor(trigger.dataset.combatCollection, trigger.dataset.combatItemId, trigger.dataset.combatEntryKind);
+  if (action === 'edit-action-rules') openDetailItemEditor(trigger.dataset.combatCollection, trigger.dataset.combatItemId, trigger.dataset.combatEntryKind);
   if (action === 'remove-item') removeItem(trigger.dataset.combatCollection, trigger.dataset.combatItemId);
   if (action === 'copy-inventory') copyInventoryEquipment(trigger.dataset.combatKind, trigger);
   if (action === 'equip-weapon') equipWeapon(trigger.dataset.combatItemId);

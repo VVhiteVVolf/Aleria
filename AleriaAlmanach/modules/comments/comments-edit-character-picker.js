@@ -33,7 +33,7 @@ function applyEditCharacterFilter() {
     const haystack = normalizeSearchText([
       char?.name,
       char?.title,
-      ...(char?.emotes || []).map(emote => emote?.label)
+      ...normalizeCharacterImageSets(char || {}).flatMap(set => [set.name, ...set.emotes.map(emote => emote.label)])
     ].filter(Boolean).join(' '));
     const show = !needle || haystack.includes(needle);
     el.style.display = show ? '' : 'none';
@@ -48,13 +48,30 @@ function renderEditEmotePicker() {
   const picker = document.getElementById('ec-emote-picker');
   if (!section || !picker) return;
   const char = _editSelectedCharId ? getAvailableCommentCharacterById(_editSelectedCharId) : null;
-  if (!char?.emotes?.length) {
+  const isCreature = char?.entityType === 'creature';
+  const imageSets = isCreature || !char ? [] : normalizeCharacterImageSets(char);
+  if (!isCreature && !imageSets.some(set => set.id === _editSelectedImageSetId)) {
+    _editSelectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
+  }
+  const presentation = isCreature || !char
+    ? char
+    : applyCharacterImageSetPresentation(char, _editSelectedImageSetId);
+  if (!char || (isCreature && !presentation?.emotes?.length)) {
     section.style.display = 'none';
     picker.innerHTML = '';
     return;
   }
   section.style.display = 'block';
-  picker.innerHTML = char.emotes.map((e, i) => `
+  const setPicker = isCreature ? '' : `
+    <div class="cf-image-set-picker" aria-label="Bilder-&-Emotes-Set wählen">
+      <div class="cf-image-set-label">Set</div>
+      ${imageSets.map(set => `
+        <button type="button" class="cf-image-set-option${set.id === _editSelectedImageSetId ? ' selected' : ''}"
+          data-action="select-edit-image-set" data-image-set-id="${escapeHtml(set.id)}">
+          <span>${escapeHtml(set.name)}</span><small>${set.emotes.length}</small>
+        </button>`).join('')}
+    </div>`;
+  picker.innerHTML = setPicker + (presentation?.emotes || []).map((e, i) => `
     <div class="cf-emote-option ${_editSelectedEmoteIdx === i ? 'selected' : ''}" data-action="select-edit-emote" data-edit-emote-idx="${i}">
       <img src="${sanitizeImageSrc(e.img)}" alt="${escapeHtml(e.label || 'Emote ' + (i + 1))}" loading="lazy" decoding="async">
       <div class="cf-emote-option-label">${escapeHtml(e.label || '')}</div>
@@ -63,7 +80,25 @@ function renderEditEmotePicker() {
   `).join('');
 }
 
-function selectEditChar(id) {
+function selectEditImageSet(setId) {
+  const char = _editSelectedCharId ? getAvailableCommentCharacterById(_editSelectedCharId) : null;
+  if (!char || char.entityType === 'creature') return;
+  if (!normalizeCharacterImageSets(char).some(set => set.id === setId)) return;
+  _editSelectedImageSetId = setId;
+  _editImageSetChangedByUser = true;
+  _editSelectedEmoteIdx = null;
+  _editCommentSegments.forEach(segment => {
+    if (segment.kind !== 'action') {
+      segment.imageSetId = setId;
+      segment.emoteIndex = null;
+    }
+  });
+  renderEditEmotePicker();
+  renderEditCommentSegmentList();
+  updateEditFormPreview();
+}
+
+function selectEditChar(id, options = {}) {
   const char = getAvailableCommentCharacterById(id);
   if (!char || !commentActorMatchesComposerMode(char, _editMode)) {
     const errEl = document.getElementById('ec-form-error');
@@ -75,6 +110,11 @@ function selectEditChar(id) {
   }
   _editSelectedCharId = id;
   _editSelectedEmoteIdx = null;
+  _editImageSetChangedByUser = true;
+  const requestedImageSetId = String(options.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+  _editSelectedImageSetId = char.entityType !== 'creature' && normalizeCharacterImageSets(char).some(set => set.id === requestedImageSetId)
+    ? requestedImageSetId
+    : CHARACTER_IMAGE_SET_DEFAULT_ID;
   _editManualMode = false;
   _editPortraitUrl = null;
   document.getElementById('ec-portrait-url').value = '';
@@ -96,6 +136,7 @@ function selectEditEmote(idx) {
   });
   if (_editCommentSegments.length && _editCommentSegments[0].kind !== 'action') {
     _editCommentSegments[0].emoteIndex = idx;
+    _editCommentSegments[0].imageSetId = _editSelectedImageSetId;
     renderEditCommentSegmentList();
   }
   updateEditFormPreview();
@@ -130,6 +171,7 @@ function toggleEditManualMode() {
   _editManualMode = !_editManualMode;
   _editSelectedCharId = null;
   _editSelectedEmoteIdx = null;
+  _editSelectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
   document.querySelectorAll('#ec-char-picker .cf-char-option').forEach(el => el.classList.remove('selected'));
   document.getElementById('ec-manual-fields').style.display = _editManualMode ? 'block' : 'none';
   document.getElementById('ec-manual-toggle').textContent = _editManualMode ? '<- Charakter waehlen' : '+ Manuell';

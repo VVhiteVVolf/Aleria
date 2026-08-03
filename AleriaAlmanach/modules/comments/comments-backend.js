@@ -110,10 +110,11 @@ function getLocalCommentBackend() {
         actorType: commentMetadata.actorType || '',
         creatureId: commentMetadata.creatureId || '',
         emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
+        imageSetId: String(commentMetadata.imageSetId || '').slice(0, 48),
         avatarKind: commentMetadata.avatarKind || '',
         commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
-        commentKind: commentMetadata.commentKind === 'scene-time-event'
-          ? 'scene-time-event'
+        commentKind: ['scene-time-event', 'scene-rest-event'].includes(commentMetadata.commentKind)
+          ? commentMetadata.commentKind
           : normalizeCommentKind(commentMetadata.commentKind, narrator),
         commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
         itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
@@ -124,9 +125,13 @@ function getLocalCommentBackend() {
         sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
         scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
+        sceneRest: commentMetadata.sceneRest && typeof commentMetadata.sceneRest === 'object' ? commentMetadata.sceneRest : null,
+        restTransaction: commentMetadata.restTransaction && typeof commentMetadata.restTransaction === 'object' ? commentMetadata.restTransaction : null,
         combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
         combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
         combatTransaction: commentMetadata.combatTransaction && typeof commentMetadata.combatTransaction === 'object' ? commentMetadata.combatTransaction : null,
+        combatRecoveryDayKey: String(commentMetadata.combatRecoveryDayKey || ''),
+        inventoryTransaction: commentMetadata.inventoryTransaction && typeof commentMetadata.inventoryTransaction === 'object' ? commentMetadata.inventoryTransaction : null,
         orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
@@ -138,19 +143,48 @@ function getLocalCommentBackend() {
       writeLocalCommentStore(store);
       return { id: comments[comments.length - 1].id };
     },
+    async addSceneRest(entryId, text, deleteCode, metadata = {}) {
+      const participants = Array.isArray(metadata.sceneRest?.participants) ? metadata.sceneRest.participants : [];
+      const persistsOnlineProfiles = participants.some(participant => (
+        ['character', 'creature'].includes(participant?.persistence?.kind)
+        && participant?.persistence?.recordId
+      ));
+      if (persistsOnlineProfiles) {
+        throw new Error('Diese Rast verändert Online-Profile und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
+      }
+      return this.addComment(entryId, 'Erzähler', '', null, text, deleteCode, true, {
+        ...metadata,
+        restTransaction: {
+          schemaVersion: 1,
+          transactionId: makeLocalCommentId(),
+          committedAtClient: Date.now(),
+          atomicProfileUpdates: 0,
+          localSceneState: true
+        }
+      });
+    },
     async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
       const resolutions = (Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [])
         .map(segment => segment?.combatResolution)
         .filter(Boolean);
+      const inventoryUses = (Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [])
+        .map(segment => segment?.inventoryUse)
+        .filter(Boolean);
       const hasPersistentTarget = resolutions.some(resolution => (
         (['character', 'creature'].includes(resolution?.targetPersistence?.kind)
           && resolution?.targetPersistence?.recordId)
-        || (Array.isArray(resolution?.resourceCosts) && resolution.resourceCosts.length > 0
+        || (Array.isArray(resolution?.resourceCosts) && resolution.resourceCosts.some(cost => cost?.scope !== 'comment')
           && ['character', 'creature'].includes(resolution?.actorPersistence?.kind)
           && resolution?.actorPersistence?.recordId)
+        || (Array.isArray(resolution?.actorCombatProfile?.dailyResources) && resolution.actorCombatProfile.dailyResources.length > 0
+          && ['character', 'creature'].includes(resolution?.actorPersistence?.kind)
+          && resolution?.actorPersistence?.recordId)
+      )) || inventoryUses.some(inventoryUse => (
+        inventoryUse?.actorPersistence?.kind === 'character'
+          && inventoryUse?.actorPersistence?.recordId
       ));
       if (hasPersistentTarget) {
-        throw new Error('Dieser Kampf verändert ein Online-Profil und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
+        throw new Error('Dieser Beitrag verändert ein Online-Profil und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
       }
       return this.addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, {
         ...metadata,
@@ -160,7 +194,14 @@ function getLocalCommentBackend() {
           committedAtClient: Date.now(),
           atomicProfileUpdates: 0,
           localSceneState: true
-        }
+        },
+        inventoryTransaction: inventoryUses.length ? {
+          schemaVersion: 1,
+          transactionId: makeLocalCommentId(),
+          committedAtClient: Date.now(),
+          operations: inventoryUses.length,
+          localSceneState: true
+        } : null
       });
     },
     async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {

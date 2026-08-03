@@ -279,6 +279,49 @@
       var(--parchment-dark);
     border: 1px solid var(--parchment-deeper);
   }
+  .cf-image-set-picker {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+    margin-bottom: 0.35rem;
+    padding: 0.55rem;
+    border: 1px solid rgba(139, 105, 20, 0.28);
+    background: rgba(139, 105, 20, 0.06);
+  }
+  .cf-image-set-label {
+    margin-right: 0.25rem;
+    color: var(--gold);
+    font: 700 0.62rem 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .cf-image-set-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 1.85rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid rgba(139, 105, 20, 0.34);
+    background: rgba(255, 250, 225, 0.62);
+    color: var(--ink-soft);
+    font: 700 0.62rem 'Cinzel', serif;
+    cursor: pointer;
+  }
+  .cf-image-set-option small {
+    min-width: 1.2rem;
+    padding: 0.06rem 0.2rem;
+    border: 1px solid currentColor;
+    font-size: 0.52rem;
+  }
+  .cf-image-set-option:hover,
+  .cf-image-set-option.selected {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: #fff8dc;
+  }
   .cf-emote-option {
     position: relative;
     display: flex;

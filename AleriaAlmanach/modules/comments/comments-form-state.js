@@ -53,6 +53,7 @@ function setCommentPlayerFilter(player) {
     if (selected && !isCommentCharacterAllowedForActivePlayer(selected)) {
       _selectedCharId = null;
       _selectedEmoteIdx = null;
+      _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
       document.getElementById('cf-selected-name').textContent = '';
       document.getElementById('cf-emote-section').style.display = 'none';
       document.getElementById('cf-emote-picker').innerHTML = '';
@@ -136,7 +137,7 @@ function applyCommentCharacterFilter() {
     const haystack = normalizeSearchText([
       char?.name,
       char?.title,
-      ...(char?.emotes || []).map(emote => emote?.label)
+      ...normalizeCharacterImageSets(char || {}).flatMap(set => [set.name, ...set.emotes.map(emote => emote.label)])
     ].filter(Boolean).join(' '));
     const show = !needle || haystack.includes(needle);
     el.style.display = show ? '' : 'none';
@@ -189,6 +190,7 @@ function setCommentMode(mode) {
   if (mode !== 'narrator' && _selectedCharId && !commentActorMatchesComposerMode(selectedActor, mode)) {
     _selectedCharId = null;
     _selectedEmoteIdx = null;
+    _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
     document.getElementById('cf-selected-name').textContent = '';
     document.getElementById('cf-emote-section').style.display = 'none';
     document.getElementById('cf-emote-picker').innerHTML = '';

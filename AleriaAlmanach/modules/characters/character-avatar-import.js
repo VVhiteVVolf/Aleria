@@ -106,6 +106,11 @@ function updateCharacterAvatarImportSummary() {
   const limitNode = document.getElementById('cp-avatar-limit');
   if (countNode) countNode.textContent = String(count);
   if (limitNode) limitNode.textContent = String(CHARACTER_AVATAR_LIMIT);
+  if (typeof getActiveCharacterImageSet === 'function') {
+    const activeSet = getActiveCharacterImageSet();
+    if (activeSet) activeSet.emotes = normalizeCharacterImageSetEmotes((_emoteSlots || []).filter(Boolean));
+  }
+  if (typeof renderCharacterImageSetTabs === 'function') renderCharacterImageSetTabs();
 }
 
 async function importCharacterAvatarLinks(rawValue) {
@@ -113,6 +118,13 @@ async function importCharacterAvatarLinks(rawValue) {
   const source = String(rawValue ?? input?.value ?? '').trim();
   if (!source) {
     setCharacterAvatarImportStatus('Füge mindestens einen Bild-Link ein.', true);
+    return;
+  }
+
+  const albumUrl = typeof findImgurAlbumUrl === 'function' ? findImgurAlbumUrl(source) : '';
+  const sourceUrls = source.match(/https?:\/\/[^\s<>"']+/gi) || [];
+  if (albumUrl && sourceUrls.length === 1 && typeof importCharacterImgurAlbum === 'function') {
+    await importCharacterImgurAlbum(albumUrl);
     return;
   }
 

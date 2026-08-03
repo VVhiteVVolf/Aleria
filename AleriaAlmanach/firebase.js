@@ -6,7 +6,21 @@
       normalizeCombatResources,
       patchResolutionHitPointState,
       patchResolutionResourceState
-    } from "./modules/combat/combat-state-model.js?v=20260802-combat-state-v1";
+    } from "./modules/combat/combat-state-model.js?v=20260803-scene-rest-v1";
+    import {
+      ensureCombatActionResources,
+      getPersistentCombatResources,
+      recoverDailyCombatResources,
+      resetCommentScopedResources
+    } from "./modules/combat/combat-action-economy.js?v=20260803-action-economy-v2";
+    import {
+      applyInventoryUseToInventory,
+      normalizeInventoryUse
+    } from "./modules/inventory-use/inventory-use-model.js?v=20260803-inventory-use-v1";
+    import {
+      buildSceneRestParticipant,
+      normalizeSceneRest
+    } from "./modules/scene-rest/scene-rest-model.js?v=20260803-scene-rest-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -86,6 +100,7 @@
         actorType: commentMetadata.actorType || '',
         creatureId: commentMetadata.creatureId || '',
         emoteIndex: Number.isInteger(commentMetadata.emoteIndex) ? commentMetadata.emoteIndex : null,
+        imageSetId: String(commentMetadata.imageSetId || '').slice(0, 48),
         avatarKind: commentMetadata.avatarKind || '',
         commentMode: commentMetadata.commentMode || (narrator ? 'narrator' : 'character'),
         commentKind: commentMetadata.commentKind || (narrator ? 'narrator' : 'speech'),
@@ -98,9 +113,13 @@
         sceneTransition: commentMetadata.sceneTransition && typeof commentMetadata.sceneTransition === 'object' ? commentMetadata.sceneTransition : null,
         scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
+        sceneRest: commentMetadata.sceneRest && typeof commentMetadata.sceneRest === 'object' ? commentMetadata.sceneRest : null,
+        restTransaction: commentMetadata.restTransaction && typeof commentMetadata.restTransaction === 'object' ? commentMetadata.restTransaction : null,
         combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
         combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
         combatTransaction: commentMetadata.combatTransaction && typeof commentMetadata.combatTransaction === 'object' ? commentMetadata.combatTransaction : null,
+        combatRecoveryDayKey: String(commentMetadata.combatRecoveryDayKey || ''),
+        inventoryTransaction: commentMetadata.inventoryTransaction && typeof commentMetadata.inventoryTransaction === 'object' ? commentMetadata.inventoryTransaction : null,
         orderKey: Number.isFinite(Number(commentMetadata.orderKey)) ? Number(commentMetadata.orderKey) : Date.now(),
         createdAtClient: nowClient,
         activityAtClient: nowClient,
@@ -115,6 +134,13 @@
       return segments
         .map((segment, index) => ({ index, resolution: segment?.combatResolution }))
         .filter(entry => entry.resolution?.targetId && entry.resolution?.targetSnapshot);
+    }
+
+    function getInventoryUseEntries(metadata = {}) {
+      const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
+      return segments
+        .map((segment, index) => ({ index, inventoryUse: segment?.inventoryUse }))
+        .filter(entry => entry.inventoryUse?.usageId && entry.inventoryUse?.item?.id);
     }
 
     function normalizeFirebaseModuleStore(data) {
@@ -570,6 +596,122 @@
           entryId, charName, charTitle, portrait, text, deleteCodeHash, narrator, metadata, nowClient
         ));
       },
+      async addSceneRest(entryId, text, deleteCode, metadata = {}) {
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const nowClient = Date.now();
+        const commentRef = doc(collection(db, 'comments'));
+        let profileUpdates = [];
+
+        await runTransaction(db, async transaction => {
+          const commentMetadata = cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata));
+          const rest = normalizeSceneRest(commentMetadata.sceneRest || {});
+          if (!rest.participants.length) throw new Error('Die Rast enthält keine ausgewählten Figuren.');
+
+          const persistentTargets = new Map();
+          rest.participants.forEach(participant => {
+            const persistence = participant.persistence || {};
+            if (!['character', 'creature'].includes(persistence.kind) || !persistence.recordId) return;
+            const key = `${persistence.kind}:${persistence.recordId}`;
+            if (persistentTargets.has(key)) return;
+            persistentTargets.set(key, {
+              key,
+              kind: persistence.kind,
+              recordId: String(persistence.recordId),
+              ref: doc(db, persistence.kind === 'creature' ? 'creatures' : 'characters', String(persistence.recordId))
+            });
+          });
+
+          const targetRecords = [...persistentTargets.values()];
+          const snapshots = await Promise.all(targetRecords.map(target => transaction.get(target.ref)));
+          const targetData = new Map();
+          targetRecords.forEach((target, index) => {
+            const snapshot = snapshots[index];
+            if (!snapshot.exists()) throw new Error(`Das Profil ${target.recordId} ist online nicht mehr vorhanden.`);
+            targetData.set(target.key, snapshot.data() || {});
+          });
+
+          const participants = rest.participants.map(participant => {
+            const persistence = participant.persistence || {};
+            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
+            const stored = targetData.get(key);
+            if (!stored) return participant;
+            const storedProfile = stored.combatProfile || {};
+            const hitPoints = normalizeCombatHitPointState(storedProfile.hitPoints || {}, {
+              current: participant.before.hitPoints.current,
+              maximum: participant.after.hitPoints.maximum,
+              temporary: participant.before.hitPoints.temporary
+            });
+            const resources = ensureCombatActionResources(normalizeCombatResources(storedProfile.resources || participant.before.resources || []));
+            return buildSceneRestParticipant({
+              characterId: participant.actorId,
+              name: participant.name,
+              title: participant.title,
+              portrait: participant.portrait,
+              currentHitPoints: hitPoints.current,
+              maximumHitPoints: hitPoints.maximum || participant.after.hitPoints.maximum,
+              temporaryHitPoints: hitPoints.temporary,
+              resources,
+              abilities: Array.isArray(storedProfile.abilities) ? storedProfile.abilities : participant.before.abilities,
+              persistence
+            }, rest.type, {
+              actorId: participant.actorId,
+              sourceId: participant.sourceId,
+              name: participant.name,
+              title: participant.title,
+              portrait: participant.portrait,
+              persistence,
+              recoveryDayKey: rest.recoveryDayKey
+            });
+          });
+
+          const committedRest = normalizeSceneRest({ ...rest, participants });
+          commentMetadata.sceneRest = committedRest;
+          commentMetadata.restTransaction = {
+            schemaVersion: 1,
+            transactionId: commentRef.id,
+            committedAtClient: nowClient,
+            atomicProfileUpdates: targetRecords.length
+          };
+
+          profileUpdates = targetRecords.map(target => {
+            const participant = committedRest.participants.find(item => {
+              const persistence = item.persistence || {};
+              return `${persistence.kind || ''}:${persistence.recordId || ''}` === target.key;
+            });
+            const hitPoints = participant.after.hitPoints;
+            const resources = participant.after.resources;
+            const abilities = participant.after.abilities;
+            transaction.update(target.ref, {
+              'combatProfile.hitPoints.current': hitPoints.current,
+              'combatProfile.hitPoints.temporary': hitPoints.temporary,
+              'combatProfile.resources': resources,
+              'combatProfile.abilities': abilities,
+              updatedAt: new Date(nowClient).toISOString()
+            });
+            return {
+              kind: target.kind,
+              recordId: target.recordId,
+              hitPoints: { ...hitPoints },
+              resources: resources.map(resource => ({ ...resource })),
+              abilities: abilities.map(ability => ({ ...ability }))
+            };
+          });
+
+          transaction.set(commentRef, buildCommentDocument(
+            entryId,
+            'Erzähler',
+            '',
+            null,
+            text,
+            deleteCodeHash,
+            true,
+            commentMetadata,
+            nowClient
+          ));
+        });
+
+        return { id: commentRef.id, profileUpdates };
+      },
       async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
         const deleteCodeHash = await hashDeleteCode(deleteCode);
         const nowClient = Date.now();
@@ -579,13 +721,20 @@
         await runTransaction(db, async transaction => {
           const commentMetadata = cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata));
           const entries = getCombatResolutionEntries(commentMetadata);
-          if (!entries.length) throw new Error('Die Kampfauswertung enthält keine speicherbare Auflösung.');
+          const inventoryEntries = getInventoryUseEntries(commentMetadata);
+          if (!entries.length && !inventoryEntries.length) {
+            throw new Error('Der Beitrag enthält keine speicherbare Profiländerung.');
+          }
 
           const persistentTargets = new Map();
           entries.forEach(({ resolution }) => {
             const persistence = resolution.targetPersistence || {};
             const candidates = [{ persistence, touchHitPoints: true, touchResources: false }];
-            if (Array.isArray(resolution.resourceCosts) && resolution.resourceCosts.length) {
+            const hasPersistentResourceCosts = Array.isArray(resolution.resourceCosts)
+              && resolution.resourceCosts.some(cost => cost.scope !== 'comment');
+            const hasDailyResources = Array.isArray(resolution.actorCombatProfile?.dailyResources)
+              && resolution.actorCombatProfile.dailyResources.length > 0;
+            if (hasPersistentResourceCosts || hasDailyResources) {
               candidates.push({
                 persistence: resolution.actorPersistence || {},
                 touchHitPoints: false,
@@ -606,9 +755,33 @@
                   recordId: String(candidate.recordId),
                   touchHitPoints,
                   touchResources,
+                  touchInventory: false,
+                  tracksInventory: false,
                   ref: doc(db, candidate.kind === 'creature' ? 'creatures' : 'characters', String(candidate.recordId))
                 });
               }
+            });
+          });
+          inventoryEntries.forEach(({ inventoryUse }) => {
+            const normalizedUse = normalizeInventoryUse(inventoryUse);
+            const persistence = normalizedUse.actorPersistence;
+            if (persistence.kind !== 'character' || !persistence.recordId) return;
+            const key = `character:${persistence.recordId}`;
+            const existing = persistentTargets.get(key);
+            if (existing) {
+              existing.tracksInventory = true;
+              existing.touchInventory ||= normalizedUse.mode === 'consume';
+              return;
+            }
+            persistentTargets.set(key, {
+              key,
+              kind: 'character',
+              recordId: String(persistence.recordId),
+              touchHitPoints: false,
+              touchResources: false,
+              touchInventory: normalizedUse.mode === 'consume',
+              tracksInventory: true,
+              ref: doc(db, 'characters', String(persistence.recordId))
             });
           });
 
@@ -617,7 +790,7 @@
           const states = new Map();
           targetRecords.forEach((target, index) => {
             const snapshot = snapshots[index];
-            if (!snapshot.exists()) throw new Error(`Das Kampfziel ${target.recordId} ist online nicht mehr vorhanden.`);
+            if (!snapshot.exists()) throw new Error(`Das Profil ${target.recordId} ist online nicht mehr vorhanden.`);
             const hitPoints = snapshot.data()?.combatProfile?.hitPoints || {};
             const initialResolution = entries.find(entry => {
               const targetPersistence = entry.resolution?.targetPersistence || {};
@@ -626,13 +799,20 @@
                 || `${actorPersistence.kind || ''}:${actorPersistence.recordId || ''}` === target.key;
             })?.resolution;
             const actorValues = initialResolution?.actorCombatProfile?.derivedCombatValues || {};
+            const persistedResources = normalizeCombatResources(snapshot.data()?.combatProfile?.resources || []);
+            const transactionResources = normalizeCombatResources(recoverDailyCombatResources(
+              ensureCombatActionResources(persistedResources),
+              commentMetadata.combatRecoveryDayKey
+            ));
             states.set(target.key, {
               ...normalizeCombatHitPointState(hitPoints, {
                 current: initialResolution?.targetSnapshot?.hitPointsBefore ?? actorValues.currentHitPoints,
                 maximum: initialResolution?.targetSnapshot?.maximumHitPoints ?? actorValues.maximumHitPoints,
                 temporary: initialResolution?.targetSnapshot?.temporaryHitPointsBefore ?? actorValues.temporaryHitPoints
               }),
-              resources: normalizeCombatResources(snapshot.data()?.combatProfile?.resources || [])
+              resources: resetCommentScopedResources(transactionResources),
+              persistedResources,
+              inventory: cloneSerializableValue(snapshot.data()?.inventory || { items: [] })
             });
           });
 
@@ -668,6 +848,23 @@
             if (storedState) states.set(key, { ...storedState, ...nextState });
           });
 
+          inventoryEntries.forEach(({ index, inventoryUse }) => {
+            const normalizedUse = normalizeInventoryUse(inventoryUse);
+            const persistence = normalizedUse.actorPersistence || {};
+            const key = `${persistence.kind || ''}:${persistence.recordId || ''}`;
+            const storedState = states.get(key);
+            if (persistence.kind === 'character' && persistence.recordId) {
+              if (!storedState) throw new Error(`${normalizedUse.actorName} besitzt kein erreichbares Online-Inventar.`);
+              const applied = applyInventoryUseToInventory(storedState.inventory, normalizedUse);
+              states.set(key, { ...storedState, inventory: applied.inventory });
+              commentMetadata.commentSegments[index].inventoryUse = applied.inventoryUse;
+            } else if (normalizedUse.mode === 'consume') {
+              throw new Error(`${normalizedUse.actorName} muss als Online-Charakter gespeichert sein, um Gegenstände dauerhaft zu verbrauchen.`);
+            } else {
+              commentMetadata.commentSegments[index].inventoryUse = normalizedUse;
+            }
+          });
+
           const combatEntries = getCombatResolutionEntries(commentMetadata);
           commentMetadata.combatResolution = combatEntries.length === 1 ? combatEntries[0].resolution : null;
           commentMetadata.combatTransaction = {
@@ -676,6 +873,12 @@
             committedAtClient: nowClient,
             atomicProfileUpdates: targetRecords.length
           };
+          commentMetadata.inventoryTransaction = inventoryEntries.length ? {
+            schemaVersion: 1,
+            transactionId: commentRef.id,
+            committedAtClient: nowClient,
+            operations: inventoryEntries.length
+          } : null;
 
           profileUpdates = targetRecords.map(target => {
             const state = states.get(target.key);
@@ -685,8 +888,9 @@
               updates['combatProfile.hitPoints.temporary'] = state.temporary;
             }
             if (target.touchResources) {
-              updates['combatProfile.resources'] = normalizeCombatResources(state.resources || []);
+              updates['combatProfile.resources'] = getPersistentCombatResources(state.persistedResources || [], state.resources || []);
             }
+            if (target.touchInventory) updates.inventory = state.inventory;
             transaction.update(target.ref, updates);
             return {
               kind: target.kind,
@@ -694,7 +898,8 @@
               hitPoints: target.touchHitPoints
                 ? { current: state.current, maximum: state.maximum, temporary: state.temporary }
                 : null,
-              resources: target.touchResources ? normalizeCombatResources(state.resources || []) : null
+              resources: target.touchResources ? getPersistentCombatResources(state.persistedResources || [], state.resources || []) : null,
+              inventory: target.tracksInventory ? state.inventory : null
             };
           });
           transaction.set(commentRef, buildCommentDocument(

@@ -962,6 +962,61 @@
   .cp-avatar-section-title {
     margin-top: 0.5rem;
   }
+  .cp-image-set-manager {
+    margin-bottom: 1.15rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(139, 105, 20, 0.35);
+    background: linear-gradient(135deg, rgba(139, 105, 20, 0.08), rgba(255, 250, 225, 0.24));
+  }
+  .cp-image-set-heading-row,
+  .cp-image-set-active-tools,
+  .cp-image-set-create {
+    display: flex;
+    align-items: end;
+    gap: 0.65rem;
+  }
+  .cp-image-set-heading-row { justify-content: space-between; }
+  .cp-image-set-create { min-width: min(31rem, 52%); }
+  .cp-image-set-create .char-field-input { flex: 1; }
+  .cp-image-set-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 0.85rem 0;
+  }
+  .cp-image-set-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 2.35rem;
+    padding: 0.42rem 0.7rem;
+    border: 1px solid rgba(139, 105, 20, 0.36);
+    background: rgba(255, 250, 225, 0.42);
+    color: var(--ink-soft);
+    font: 700 0.68rem 'Cinzel', serif;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .cp-image-set-tab small {
+    padding: 0.12rem 0.28rem;
+    border: 1px solid currentColor;
+    opacity: 0.72;
+    font-size: 0.56rem;
+  }
+  .cp-image-set-tab:hover,
+  .cp-image-set-tab.active {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: #fff8dc;
+    box-shadow: 0 3px 10px rgba(66, 39, 7, 0.17);
+  }
+  .cp-image-set-active-tools {
+    justify-content: space-between;
+    padding-top: 0.7rem;
+    border-top: 1px solid rgba(139, 105, 20, 0.2);
+  }
+  .cp-image-set-active-tools .char-field-group { flex: 1; margin: 0; }
+  .cp-image-set-active-tools button:disabled { opacity: 0.38; cursor: default; }
   .cp-section-meta {
     opacity: 0.6;
     font-size: 0.85em;
@@ -1071,6 +1126,13 @@
   }
 
   @media (max-width: 640px) {
+    .cp-image-set-heading-row,
+    .cp-image-set-active-tools,
+    .cp-image-set-create {
+      align-items: stretch;
+      flex-direction: column;
+    }
+    .cp-image-set-create { min-width: 0; width: 100%; }
     .char-taxonomy-tree {
       grid-template-columns: 1fr;
     }

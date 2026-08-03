@@ -39,12 +39,13 @@ function getSceneDiceCommentText(comment = {}) {
   const segments = Array.isArray(comment.commentSegments) && comment.commentSegments.length
     ? comment.commentSegments
     : [{ text: comment.text || '', charName: comment.charName, narrator: comment.narrator }];
-  return segments.map(segment => {
+  return segments.map((segment, segmentIndex) => {
     const text = toSceneDicePlainText(segment?.text || '');
     if (!text) return '';
     const narrator = !!segment?.narrator || !!comment.narrator || String(comment.commentMode || '') === 'narrator';
     const speaker = narrator ? 'Erzähler' : String(segment?.charName || segment?.name || comment.charName || 'Unbekannte Stimme').trim();
-    return `${speaker}: ${text}`;
+    const mechanics = window.AleriaGptContext?.formatStoredMechanics?.(segment, comment, segmentIndex) || '';
+    return `${speaker}: ${text}${mechanics ? `\n[Gespeicherte Mechanik – verbindlich, nicht neu auswerten]\n${mechanics}` : ''}`;
   }).filter(Boolean).join('\n');
 }
 
@@ -95,3 +96,8 @@ export async function loadActiveSceneSnapshot() {
     comments: ordered
   };
 }
+
+export const sceneDiceSceneContextInternals = Object.freeze({
+  getSceneDiceCommentText,
+  buildSceneDiceTranscript
+});

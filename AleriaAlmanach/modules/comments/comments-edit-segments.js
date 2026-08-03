@@ -25,15 +25,30 @@ function renderEditCommentSegmentList() {
         ${canUseEmote ? getSegmentEmotePalette(segment, true) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
+        <div class="comment-segment-mechanics-host" data-segment-mechanics-host></div>
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-edit-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
       </div>`;
   }).join('') + renderCommentDurationTotal(true);
+  window.AleriaSkillChecks?.mountComposer?.(list, {
+    segments: _editCommentSegments,
+    selectedCharacterId: _editSelectedCharId || '',
+    sceneActors: window.AleriaCommentSceneCast?.getActors?.(true) || [],
+    threadId: getCurrentCommentThreadId(),
+    edit: true
+  });
   window.AleriaCombat?.mountComposer?.(list, {
     segments: _editCommentSegments,
     selectedCharacterId: _editSelectedCharId || '',
     sceneActors: window.AleriaCommentSceneCast?.getActors?.(true) || [],
     threadId: getCurrentCommentThreadId()
+  });
+  window.AleriaInventoryUse?.mountComposer?.(list, {
+    segments: _editCommentSegments,
+    selectedCharacterId: _editSelectedCharId || '',
+    sceneActors: window.AleriaCommentSceneCast?.getActors?.(true) || [],
+    threadId: getCurrentCommentThreadId(),
+    edit: true
   });
   syncEditCommentSegmentsToLegacyText();
 }
@@ -57,6 +72,7 @@ function setEditCommentSegmentKind(id, kind) {
   const segment = _editCommentSegments.find(item => item.id === id);
   if (!segment) return;
   if (!getAllowedCommentSegmentKinds(true).includes(kind)) kind = 'action';
+  if (!isCommentSegmentKindAllowedForMechanicMode(segment, kind, true)) return;
   segment.kind = normalizeCommentKind(kind);
   if (segment.kind === 'action') {
     segment.emoteIndex = null;
@@ -64,10 +80,17 @@ function setEditCommentSegmentKind(id, kind) {
   } else {
     segment.side = normalizeCommentSegmentSide(segment.side);
   }
-  if (segment.kind !== 'combataction') {
+  if (segment.kind === 'action') {
+    segment.mechanicMode = 'normal';
     segment.combatTargetId = '';
     segment.combatActionId = '';
     segment.combatRollMode = 'normal';
+    segment.combatPaymentMode = 'standard';
+    segment.combatPaymentConfirmed = false;
+  }
+  if (segment.kind !== 'consume' && !segment.storedInventoryUse) {
+    segment.inventoryItemId = '';
+    segment.inventoryUseMode = 'auto';
   }
   renderEditCommentSegmentList();
   updateEditFormPreview();
@@ -88,6 +111,7 @@ function setEditCommentSegmentActor(id, actorId) {
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
+  segment.combatPaymentConfirmed = false;
   if (segment.combatTargetId === actor.id) segment.combatTargetId = '';
   renderEditCommentSegmentList();
   updateEditFormPreview();
@@ -120,6 +144,7 @@ function setEditCommentSegmentEmote(id, value) {
   if (!segment) return;
   const idx = value === '' ? null : Number(value);
   segment.emoteIndex = Number.isInteger(idx) ? idx : null;
+  segment.imageSetId = _editSelectedImageSetId;
   updateEditFormPreview();
 }
 
@@ -206,6 +231,7 @@ function buildEditCommentSegmentsForSave() {
           portrait: null,
           characterId: '',
           emoteIndex: null,
+          imageSetId: '',
           avatarKind: 'narrator',
           side: ''
           ,durationSeconds: getSceneTimeSegmentDuration(segment)
@@ -223,6 +249,7 @@ function buildEditCommentSegmentsForSave() {
         charTitle: actor.title,
         portrait: emote?.img || actor.portrait || null,
         characterId: actor.characterId || '',
+        imageSetId: actor.char?.selectedImageSetId || '',
         ...(actor.sceneActorId ? {
           actorType: 'creature',
           creatureId: actor.sceneActorSourceId,
@@ -232,10 +259,32 @@ function buildEditCommentSegmentsForSave() {
         emoteIndex: emote ? segment.emoteIndex : null,
         avatarKind: emote ? 'emote' : actor.avatarKind,
         side: normalizeCommentSegmentSide(segment.side),
-        ...(segment.kind === 'combataction' ? {
+        mechanicMode: normalizeCommentSegmentMechanicMode(segment.mechanicMode, segment.kind, segment),
+        skillId: String(segment.skillId || ''),
+        skillCustomModifier: Number(segment.skillCustomModifier || 0),
+        skillDifficulty: Number(segment.skillDifficulty || 10),
+        skillRollMode: ['advantage', 'disadvantage'].includes(segment.skillRollMode) ? segment.skillRollMode : 'normal',
+        skillTargetActorKey: String(segment.skillTargetActorKey || ''),
+        skillTargetChallengeId: String(segment.skillTargetChallengeId || ''),
+        skillChallengeId: String(segment.skillChallengeId || ''),
+        skillChallengeEnabled: !!segment.skillChallengeEnabled,
+        skillChallengeTitle: String(segment.skillChallengeTitle || ''),
+        skillChallengeRevealedText: String(segment.skillChallengeRevealedText || ''),
+        skillChallengeDifficulty: Number(segment.skillChallengeDifficulty || 10),
+        skillChallengePreferredSkills: Array.isArray(segment.skillChallengePreferredSkills) ? [...segment.skillChallengePreferredSkills] : [],
+        skillChallengePreferredModifier: Number(segment.skillChallengePreferredModifier ?? 2),
+        skillChallengeAlternativeModifier: Number(segment.skillChallengeAlternativeModifier ?? -2),
+        storedSkillResolution: segment.storedSkillResolution || null,
+        storedSkillChallenge: segment.storedSkillChallenge || null,
+        inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
+        inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+        storedInventoryUse: segment.storedInventoryUse || null,
+        ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
           combatActionId: String(segment.combatActionId || ''),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
+          combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
+          combatPaymentConfirmed: !!segment.combatPaymentConfirmed,
           storedCombatAction: segment.storedCombatAction || null,
           storedCombatResolution: segment.storedCombatResolution || null
         } : {}),

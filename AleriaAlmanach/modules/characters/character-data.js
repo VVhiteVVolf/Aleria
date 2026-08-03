@@ -66,6 +66,8 @@ function getCharacterPlayerOwnerLabel(value) {
 }
 
 function cloneCharacterRecord(char) {
+  const imageSets = normalizeCharacterImageSets(char || {});
+  const standardSet = imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID) || imageSets[0];
   return {
     ...char,
     identity: normalizeCharacterIdentityRecord(char?.identity),
@@ -75,11 +77,15 @@ function cloneCharacterRecord(char) {
     aliases: Array.isArray(char?.aliases)
       ? char.aliases.map(alias => String(alias || '').trim()).filter(Boolean)
       : String(char?.aliases || '').split(/[\n,;]+/).map(alias => alias.trim()).filter(Boolean),
-    emotes: Array.isArray(char?.emotes)
-      ? char.emotes
-          .filter(emote => emote && emote.img)
-          .map(emote => ({ img: emote.img, label: emote.label || emote.name || '' }))
-      : []
+    portrait: standardSet?.portrait || char?.portrait || null,
+    emotes: (standardSet?.emotes || []).map(emote => ({ ...emote })),
+    imageSetSchemaVersion: CHARACTER_IMAGE_SET_SCHEMA_VERSION,
+    imageSets,
+    activeImageSetId: imageSets.some(set => set.id === char?.activeImageSetId)
+      ? char.activeImageSetId
+      : CHARACTER_IMAGE_SET_DEFAULT_ID,
+    imageSetsOverride: !!char?.imageSetsOverride,
+    _imageSetsExplicit: Array.isArray(char?.imageSets) && char.imageSets.length > 0
   };
 }
 
@@ -132,6 +138,35 @@ function mergeCharacterRecords(primary, fallback) {
     seen.add(key);
     return true;
   });
+
+  const usePrimaryImageSets = first.imageSetsOverride || first._imageSetsExplicit || first.emotesOverride;
+  const sourceSets = usePrimaryImageSets
+    ? first.imageSets
+    : [...(first.imageSets || []), ...(second.imageSets || [])];
+  const setSeen = new Set();
+  merged.imageSets = normalizeCharacterImageSets({
+    portrait: merged.portrait,
+    emotes: merged.emotes,
+    imageSets: sourceSets.filter(set => {
+      const key = set.id === CHARACTER_IMAGE_SET_DEFAULT_ID
+        ? CHARACTER_IMAGE_SET_DEFAULT_ID
+        : normalizeSearchText(set.name || set.id);
+      if (!key || setSeen.has(key)) return false;
+      setSeen.add(key);
+      return true;
+    })
+  });
+  const mergedStandardSet = merged.imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID);
+  if (mergedStandardSet) {
+    mergedStandardSet.portrait = merged.portrait || null;
+    mergedStandardSet.emotes = merged.emotes.map(emote => ({ ...emote }));
+  }
+  merged.activeImageSetId = merged.imageSets.some(set => set.id === first.activeImageSetId)
+    ? first.activeImageSetId
+    : CHARACTER_IMAGE_SET_DEFAULT_ID;
+  merged.imageSetSchemaVersion = CHARACTER_IMAGE_SET_SCHEMA_VERSION;
+  merged.imageSetsOverride = !!(first.imageSetsOverride || first.emotesOverride);
+  delete merged._imageSetsExplicit;
 
   return merged;
 }

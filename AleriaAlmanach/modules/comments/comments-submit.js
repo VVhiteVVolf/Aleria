@@ -3,7 +3,7 @@
 
 async function submitComment() {
   syncCommentSegmentsToLegacyText();
-  const commentSegments = buildCommentSegmentsForSave();
+  let commentSegments = buildCommentSegmentsForSave();
   const text  = commentSegments.map(segment => segment.text).join('\n\n').trim();
   const errEl = document.getElementById('cf-error');
   const btn   = document.getElementById('cf-submit');
@@ -28,17 +28,18 @@ async function submitComment() {
       errEl.style.display='block';
       return;
     }
+    const presentation = c.entityType === 'creature' ? c : getSelectedCommentCharacterPresentation(c);
     name = c.name; title = c.title || '';
     const actorMetadata = c.entityType === 'creature'
       ? { actorType: 'creature', creatureId: _selectedCharId }
       : { actorType: 'character', creatureId: '' };
     const actorCommentMode = c.entityType === 'creature' ? 'creature' : 'character';
-    if (_selectedEmoteIdx !== null && c.emotes && c.emotes[_selectedEmoteIdx]) {
-      portrait = c.emotes[_selectedEmoteIdx].img;
-      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'emote', characterId: _selectedCharId, emoteIndex: _selectedEmoteIdx, ...actorMetadata };
+    if (_selectedEmoteIdx !== null && presentation.emotes && presentation.emotes[_selectedEmoteIdx]) {
+      portrait = presentation.emotes[_selectedEmoteIdx].img;
+      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'emote', characterId: _selectedCharId, emoteIndex: _selectedEmoteIdx, imageSetId: presentation.selectedImageSetId || '', ...actorMetadata };
     } else {
-      portrait = c.portrait || null;
-      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'portrait', characterId: _selectedCharId, emoteIndex: null, ...actorMetadata };
+      portrait = presentation.portrait || null;
+      commentMetadata = { commentMode: actorCommentMode, avatarKind: 'portrait', characterId: _selectedCharId, emoteIndex: null, imageSetId: presentation.selectedImageSetId || '', ...actorMetadata };
     }
   } else if (_manualMode) {
     name    = document.getElementById('cf-name').value.trim();
@@ -69,6 +70,40 @@ async function submitComment() {
   let backend = null;
 
   try {
+    if (window.AleriaSkillChecks?.handleSubmission) {
+      const skillResult = await window.AleriaSkillChecks.handleSubmission({
+        threadId,
+        text,
+        charName: name,
+        charTitle: title,
+        portrait,
+        characterId: commentMetadata.characterId || '',
+        commentSegments,
+        commentMetadata,
+        deleteCode
+      });
+      if (skillResult?.handled && skillResult.commentMetadata && typeof skillResult.commentMetadata === 'object') {
+        commentMetadata = { ...commentMetadata, ...skillResult.commentMetadata };
+        commentSegments = Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : commentSegments;
+      }
+    }
+    if (window.AleriaInventoryUse?.handleSubmission) {
+      const inventoryResult = await window.AleriaInventoryUse.handleSubmission({
+        threadId,
+        text,
+        charName: name,
+        charTitle: title,
+        portrait,
+        characterId: commentMetadata.characterId || '',
+        commentSegments,
+        commentMetadata,
+        deleteCode
+      });
+      if (inventoryResult?.handled && inventoryResult.commentMetadata && typeof inventoryResult.commentMetadata === 'object') {
+        commentMetadata = { ...commentMetadata, ...inventoryResult.commentMetadata };
+        commentSegments = Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : commentSegments;
+      }
+    }
     if (window.AleriaCombat?.handleSubmission) {
       const combatResult = await window.AleriaCombat.handleSubmission({
         threadId,
@@ -100,9 +135,9 @@ async function submitComment() {
       }
     }
     backend = await getCommentBackend({ timeoutMs: 1200 });
-    const hasCombatTransaction = (commentMetadata.commentSegments || [])
-      .some(segment => segment?.combatResolution?.resolutionId);
-    const saveResult = hasCombatTransaction && typeof backend.addCombatComment === 'function'
+    const hasProfileTransaction = (commentMetadata.commentSegments || [])
+      .some(segment => segment?.combatResolution?.resolutionId || segment?.inventoryUse?.usageId);
+    const saveResult = hasProfileTransaction && typeof backend.addCombatComment === 'function'
       ? await backend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
       : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
     if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
@@ -121,16 +156,22 @@ async function submitComment() {
     const hasPersistentCombatTransaction = (commentMetadata.commentSegments || []).some(segment => (
       (['character', 'creature'].includes(segment?.combatResolution?.targetPersistence?.kind)
         && segment?.combatResolution?.targetPersistence?.recordId)
-      || (Array.isArray(segment?.combatResolution?.resourceCosts) && segment.combatResolution.resourceCosts.length > 0
+      || (Array.isArray(segment?.combatResolution?.resourceCosts) && segment.combatResolution.resourceCosts.some(cost => cost?.scope !== 'comment')
         && ['character', 'creature'].includes(segment?.combatResolution?.actorPersistence?.kind)
         && segment?.combatResolution?.actorPersistence?.recordId)
+      || (Array.isArray(segment?.combatResolution?.actorCombatProfile?.dailyResources)
+        && segment.combatResolution.actorCombatProfile.dailyResources.length > 0
+        && ['character', 'creature'].includes(segment?.combatResolution?.actorPersistence?.kind)
+        && segment?.combatResolution?.actorPersistence?.recordId)
+      || (segment?.inventoryUse?.actorPersistence?.kind === 'character'
+        && segment?.inventoryUse?.actorPersistence?.recordId)
     ));
     if (backend && !backend._localFallback && !hasPersistentCombatTransaction) {
       try {
         const localBackend = getLocalCommentBackend();
-        const hasCombatTransaction = (commentMetadata.commentSegments || [])
-          .some(segment => segment?.combatResolution?.resolutionId);
-        if (hasCombatTransaction) {
+        const hasProfileTransaction = (commentMetadata.commentSegments || [])
+          .some(segment => segment?.combatResolution?.resolutionId || segment?.inventoryUse?.usageId);
+        if (hasProfileTransaction) {
           await localBackend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
         } else {
           await localBackend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
