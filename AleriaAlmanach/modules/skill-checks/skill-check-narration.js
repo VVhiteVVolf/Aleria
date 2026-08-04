@@ -22,6 +22,9 @@ function buildQuery(facts = {}) {
     'Schreibe 1–2 kurze, immersive Sätze als neutrale Fertigkeitsauswertung.',
     'Das bestätigte Ergebnis ist unveränderlich. Nenne keine Würfel, Formeln oder Zahlen.',
     'Erfinde keine zusätzlichen Handlungen. Bei Fehlschlag bleibt eine mögliche Täuschung ausdrücklich unbestätigt.',
+    facts.revealedText
+      ? 'Die folgende Erkenntnis ist bereits serverseitig bestätigt und ist die einzige Wahrheit, die du enthüllen darfst. Füge keine weiteren Täter, Beweise, Motive oder Details hinzu, die nicht darin stehen.'
+      : '',
     `Fakten: ${JSON.stringify({
       actor: facts.actor,
       skill: facts.skill,
@@ -29,19 +32,21 @@ function buildQuery(facts = {}) {
       attempt: String(facts.attempt || '').slice(0, 500),
       targetActor: facts.targetActor || '',
       targetContribution: String(facts.targetContribution || '').slice(0, 800),
+      revealedText: String(facts.revealedText || '').slice(0, 800),
       appliedRules: (facts.ruleApplications || []).slice(0, 8).map(rule => ({
         source: rule.sourceActorName,
         rule: rule.ruleName,
         effects: rule.effects
       }))
     })}`
-  ].join('\n');
+  ].filter(Boolean).join('\n');
 }
 
 function enrichRetrieval(retrieval = {}, facts = {}) {
   const profileContext = ['VERBINDLICHER FIGURENBOGEN UND REGELPROTOKOLL', JSON.stringify({
     actorProfileSnapshot: facts.actorProfileSnapshot || null,
-    appliedRules: facts.ruleApplications || []
+    appliedRules: facts.ruleApplications || [],
+    freigegebeneErkenntnis: facts.revealedText || null
   }, null, 2)].join('\n');
   return {
     ...(retrieval || {}),

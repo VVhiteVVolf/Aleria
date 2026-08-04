@@ -15,6 +15,7 @@ import {
   normalizeSkillCheckSettings,
   resolveSkillModifier
 } from '../generated/skill-checks/skill-check-model.js';
+import { collectHerausforderungApproaches } from '../generated/herausforderung/herausforderung-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
@@ -74,6 +75,10 @@ function challengeClaimId(challenge = {}) {
   ].join('\u0000')).digest('hex');
 }
 
+function herausforderungClaimId(challenge = {}) {
+  return createHash('sha256').update(clean(challenge.id, 240)).digest('hex');
+}
+
 function ruleSelectionDescriptors(entry = {}) {
   return (Array.isArray(entry.segment?.skillRuleSelections) ? entry.segment.skillRuleSelections : []).slice(0, 20).map(selection => ({
     actorId: clean(selection.sourceActorId, 240),
@@ -108,7 +113,10 @@ export async function validateSkillCommentSegments({
     usedRuleFrequencyKeys
   };
 
-  const challenges = collectRecentSkillChallenges(challengeHistory, 3);
+  const challenges = [
+    ...collectRecentSkillChallenges(challengeHistory, 3),
+    ...collectHerausforderungApproaches(challengeHistory)
+  ];
   const encounterParties = getActiveCombatPartyMap(history);
   const revealed = collectRevealedChallengeIds(history);
   const challengeById = new Map(challenges.map(challenge => [String(challenge.id), challenge]));
@@ -279,6 +287,9 @@ export async function validateSkillCommentSegments({
     resolution.customModifierDeclared = Number(settings.customModifier) !== 0;
     resolution.originalAttempt = clean(entry.segment.text, 5000);
     resolution.targetContribution = clean(challenge?.visibleText, 5000);
+    if (challenge?.source === 'herausforderung' && challenge.insight && isSuccessfulSkillOutcome(resolution.outcome)) {
+      resolution.revealedText = clean(challenge.insight, 5000);
+    }
 
     (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
       const source = sources.find(item => String(item.actorId) === String(snapshot.sourceActorId));
@@ -328,9 +339,10 @@ export async function validateSkillCommentSegments({
     if (abilitySnapshots.length) resolution.ruleAbilitySnapshots = abilitySnapshots;
 
     if (challenge && isSuccessfulSkillOutcome(resolution.outcome)) {
-      const claimId = challengeClaimId(challenge);
+      const isHerausforderungApproach = challenge.source === 'herausforderung';
+      const claimId = isHerausforderungApproach ? herausforderungClaimId(challenge) : challengeClaimId(challenge);
       if (locallyClaimed.has(claimId)) fail('already-exists', 'Diese Herausforderung wurde in diesem Beitrag bereits aufgelöst.');
-      const claimRef = database.collection('skill_challenge_claims').doc(claimId);
+      const claimRef = database.collection(isHerausforderungApproach ? 'herausforderung_claims' : 'skill_challenge_claims').doc(claimId);
       const claimSnapshot = await transaction.get(claimRef);
       if (claimSnapshot.exists) fail('already-exists', 'Diese Herausforderung wurde bereits aufgelöst.');
       locallyClaimed.add(claimId);
@@ -354,6 +366,7 @@ export const skillCommentValidatorInternals = Object.freeze({
   normalizePersistence,
   relationshipBetween,
   challengeClaimId,
+  herausforderungClaimId,
   ruleSelectionDescriptors,
   applySkillRuntimeState
 });

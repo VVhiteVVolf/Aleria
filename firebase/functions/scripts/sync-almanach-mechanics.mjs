@@ -23,6 +23,7 @@ const files = [
   'combat/combat-state-model.js',
   'combat/combat-trigger-rules.js',
   'combat/rules/combat-mvp-rules.js',
+  'herausforderung/herausforderung-model.js',
   'inventory-use/inventory-use-model.js',
   'scene-inventory/scene-inventory-transfer-model.js',
   'scene-rest/scene-rest-model.js',

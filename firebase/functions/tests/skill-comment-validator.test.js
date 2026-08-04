@@ -12,6 +12,16 @@ test('eine verdeckte Herausforderung besitzt über alle Auflösungsbeiträge den
   assert.notEqual(first, other);
 });
 
+test('eine Herausforderung-Ansatz-ID besitzt über alle Auflösungsbeiträge denselben atomaren Anspruch, unabhängig von anderen Ansätzen derselben Herausforderung', () => {
+  const approachA = { id: 'herausforderung:comment-1:approach-a' };
+  const approachB = { id: 'herausforderung:comment-1:approach-b' };
+  const first = skillCommentValidatorInternals.herausforderungClaimId(approachA);
+  const retry = skillCommentValidatorInternals.herausforderungClaimId({ ...approachA });
+  const otherApproach = skillCommentValidatorInternals.herausforderungClaimId(approachB);
+  assert.equal(first, retry);
+  assert.notEqual(first, otherApproach);
+});
+
 test('Fertigkeitsregeln verwenden Tagesressourcen des aktuellen Szenentags', () => {
   const profile = skillCommentValidatorInternals.applySkillRuntimeState({
     resources: [{

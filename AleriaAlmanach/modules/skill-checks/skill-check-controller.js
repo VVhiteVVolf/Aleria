@@ -171,10 +171,24 @@ function getModeOptions(segment) {
   return options;
 }
 
+function getHerausforderungApproaches(comments) {
+  try {
+    return typeof globalThis.AleriaHerausforderung?.collectApproaches === 'function'
+      ? globalThis.AleriaHerausforderung.collectApproaches(comments)
+      : [];
+  } catch (error) {
+    console.error('herausforderung approaches unavailable:', error);
+    return [];
+  }
+}
+
 function getComposerChallenges(threadId) {
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
   const revealed = collectRevealedChallengeIds(comments);
-  return collectRecentSkillChallenges(comments, 3).filter(challenge => !revealed.has(challenge.id));
+  return [
+    ...collectRecentSkillChallenges(comments, 3),
+    ...getHerausforderungApproaches(comments)
+  ].filter(challenge => !revealed.has(challenge.id));
 }
 
 function getContributionRankLabel(rank) {
@@ -613,6 +627,7 @@ async function narrateCommittedMechanics(mechanics = {}) {
         attempt: resolution.originalAttempt || segment.text || '',
         targetContribution: resolution.targetContribution || '',
         targetActor: resolution.targetChallengeAuthor || '',
+        revealedText: resolution.revealedText || '',
         actorProfileSnapshot: resolution.actorProfileSnapshot || null,
         ruleApplications: resolution.ruleApplications || []
       })

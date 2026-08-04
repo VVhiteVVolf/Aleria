@@ -17,6 +17,11 @@ export function isTrustedSkillChallengeComment(comment = {}) {
     .some(segment => segment?.skillChallenge?.enabled !== false && segment?.skillChallenge?.id);
 }
 
+export function isTrustedHerausforderungComment(comment = {}) {
+  if (isImportedHistory(comment) || comment?.serverValidatedMechanics !== true) return false;
+  return !!(comment?.herausforderung && Array.isArray(comment.herausforderung.approaches) && comment.herausforderung.approaches.length);
+}
+
 export function isTrustedSceneTimeComment(comment = {}) {
   if (isImportedHistory(comment) || !comment?.sceneTimeEvent || typeof comment.sceneTimeEvent !== 'object') return false;
   return comment.serverValidatedMechanics === true

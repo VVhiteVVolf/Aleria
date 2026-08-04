@@ -157,6 +157,9 @@ function getLocalCommentBackend() {
     async addCombatEncounter() {
       throw new Error('Kampfankündigungen verändern verbindlichen Szenenzustand und benötigen eine Online-Verbindung.');
     },
+    async addHerausforderung() {
+      throw new Error('Herausforderungen benötigen eine serverseitige Prüfung und eine Online-Verbindung.');
+    },
     async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
       throw new Error('Kampfhandlungen verändern verbindlichen Zustand und benötigen eine Online-Verbindung. Der Entwurf bleibt lokal erhalten.');
     },

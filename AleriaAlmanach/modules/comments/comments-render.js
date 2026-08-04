@@ -186,6 +186,13 @@ function renderCommentBubble(c, idx) {
   if (window.AleriaCombatEncounter?.isComment?.(c)) {
     return window.AleriaCombatEncounter.renderComment(c, idx);
   }
+  try {
+    if (window.AleriaHerausforderung?.isComment?.(c)) {
+      return window.AleriaHerausforderung.renderComment(c, idx) || '';
+    }
+  } catch (error) {
+    console.error('herausforderung render failed:', error);
+  }
   if (window.AleriaSceneRest?.isComment?.(c)) {
     return window.AleriaSceneRest.renderComment(c, idx);
   }

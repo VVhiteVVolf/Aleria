@@ -7,6 +7,7 @@ import { commitCombatComment } from './mechanics/commit-combat-comment.js';
 import { commitSkillComment } from './mechanics/commit-skill-comment.js';
 import { commitSceneRest } from './mechanics/commit-scene-rest.js';
 import { commitCombatEncounter } from './mechanics/commit-combat-encounter.js';
+import { commitHerausforderung } from './mechanics/commit-herausforderung.js';
 import { finalizeCombatNarration } from './mechanics/finalize-combat-narration.js';
 import { importBackupRecords } from './backup/import-backup-records.js';
 import { commitInventoryTransfer } from './mechanics/commit-inventory-transfer.js';
@@ -14,4 +15,4 @@ import { commitNarrativeComment } from './comments/commit-narrative-comment.js';
 
 initializeApp();
 
-export { commitCombatComment, commitCombatEncounter, commitInventoryTransfer, commitNarrativeComment, commitSceneRest, commitSkillComment, finalizeCombatNarration, importBackupRecords, publishFamily, setAleriaRole, setFamilyMemberRole, uploadFamilyAsset };
+export { commitCombatComment, commitCombatEncounter, commitHerausforderung, commitInventoryTransfer, commitNarrativeComment, commitSceneRest, commitSkillComment, finalizeCombatNarration, importBackupRecords, publishFamily, setAleriaRole, setFamilyMemberRole, uploadFamilyAsset };

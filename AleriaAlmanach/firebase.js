@@ -29,6 +29,7 @@
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
+    const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
@@ -575,6 +576,17 @@
         await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
         const committed = await commitCombatEncounterCallable({
+          entryId,
+          text,
+          deleteCodeHash,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+        });
+        return committed.data;
+      },
+      async addHerausforderung(entryId, text, deleteCode, metadata = {}) {
+        await requireFirebaseUser();
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const committed = await commitHerausforderungCallable({
           entryId,
           text,
           deleteCodeHash,

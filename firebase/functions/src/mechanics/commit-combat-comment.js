@@ -14,7 +14,7 @@ import {
   normalizeInventoryUse
 } from '../generated/inventory-use/inventory-use-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
-import { getTrustedSceneDay, isTrustedMechanicalComment, isTrustedSceneContributionComment, isTrustedSkillChallengeComment, sortSceneHistory } from './trusted-scene-history.js';
+import { getTrustedSceneDay, isTrustedHerausforderungComment, isTrustedMechanicalComment, isTrustedSceneContributionComment, isTrustedSkillChallengeComment, sortSceneHistory } from './trusted-scene-history.js';
 import { skillSegments, validateSkillCommentSegments } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
 
@@ -256,7 +256,7 @@ export const commitCombatComment = onCall({
       request,
       metadata: { ...metadata, commentSegments: enhancedSegments },
       history: trustedHistory,
-      challengeHistory: allHistory.filter(isTrustedSkillChallengeComment),
+      challengeHistory: allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment)),
       rulePeriods,
       usedRuleFrequencyKeys,
       entryId,

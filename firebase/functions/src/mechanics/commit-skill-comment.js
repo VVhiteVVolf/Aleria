@@ -6,6 +6,7 @@ import { resetCommentScopedResources } from '../generated/combat/combat-action-e
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
 import {
   getTrustedSceneDay,
+  isTrustedHerausforderungComment,
   isTrustedMechanicalComment,
   isTrustedSceneContributionComment,
   isTrustedSkillChallengeComment,
@@ -58,7 +59,7 @@ export const commitSkillComment = onCall({
     const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
-    const challengeHistory = allHistory.filter(isTrustedSkillChallengeComment);
+    const challengeHistory = allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment));
     const sceneDay = getTrustedSceneDay(allHistory);
     const rulePeriods = { comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` };
     const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));

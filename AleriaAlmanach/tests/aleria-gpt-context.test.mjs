@@ -98,6 +98,31 @@ test('AleriaGPT erhält Fertigkeitsresultate, aber keine noch verdeckte Wahrheit
   assert.equal(segment.kind, 'speech');
 });
 
+test('AleriaGPT erhält die freigegebene Erkenntnis einer aufgelösten Herausforderung genau wie bei der versteckten Einzeltäuschung', () => {
+  const window = loadContextBuilder();
+  const [segment] = window.__commentSegments({
+    id: 'comment-2',
+    charName: 'Anaraut',
+    commentSegments: [{
+      kind: 'thought',
+      text: 'Anaraut untersucht die Spuren.',
+      mechanicMode: 'skill',
+      skillResolution: {
+        skillId: 'investigation',
+        skillName: 'Nachforschungen',
+        outcome: 'success',
+        total: 18,
+        difficulty: 13,
+        targetChallengeId: 'herausforderung:comment-1:a1',
+        revealedText: 'Idwal trat erst später in die Pfütze.'
+      }
+    }]
+  });
+  assert.equal(segment.skillResolution.outcome, 'success');
+  assert.equal(segment.skillResolution.revealedText, 'Idwal trat erst später in die Pfütze.');
+  assert.equal(segment.kind, 'thought');
+});
+
 test('AleriaGPT erhält gespeicherte Kampf-, Inventar- und Rastfolgen als kompakte Mechanik', () => {
   const window = loadContextBuilder();
   const comments = window.__storedComments([{
