@@ -192,7 +192,9 @@ async function submitComment() {
         console.warn('local comment fallback save failed:', localError);
       }
     }
-    const message = getFriendlyErrorMessage(e, 'Fehler beim Speichern. Bitte erneut versuchen.');
+    const message = /benötigt eine Online-Verbindung/.test(String(e?.message || ''))
+      ? e.message
+      : getFriendlyErrorMessage(e, 'Fehler beim Speichern. Bitte erneut versuchen.');
     errEl.textContent = message;
     errEl.style.display = 'block';
     if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
