@@ -3,6 +3,8 @@ import test from 'node:test';
 import {
   getTrustedSceneDay,
   isTrustedMechanicalComment,
+  isTrustedSceneContributionComment,
+  isTrustedSkillChallengeComment,
   isTrustedSceneTimeComment
 } from '../src/mechanics/trusted-scene-history.js';
 
@@ -35,4 +37,22 @@ test('only live server-validated mechanics participate in combat replay', () => 
     serverValidatedMechanics: true,
     importedHistoricalMechanics: true
   }), false);
+});
+
+test('server-committed hidden challenges are trusted for discovery but not for combat replay', () => {
+  const comment = {
+    serverCommitted: true,
+    mechanicalAudit: true,
+    commentSegments: [{ skillChallenge: { id: 'challenge-1', enabled: true } }]
+  };
+  assert.equal(isTrustedSkillChallengeComment(comment), true);
+  assert.equal(isTrustedMechanicalComment(comment), false);
+  assert.equal(isTrustedSkillChallengeComment({ ...comment, importedHistoricalMechanics: true }), false);
+});
+
+test('normale Serverbeiträge zählen Zustandsdauern herunter, ohne selbst Mechanik zu erfinden', () => {
+  const comment = { serverCommitted: true, commentSegments: [{ kind: 'speech', actorId: 'gawain' }] };
+  assert.equal(isTrustedSceneContributionComment(comment), true);
+  assert.equal(isTrustedMechanicalComment(comment), false);
+  assert.equal(isTrustedSceneContributionComment({ ...comment, importedHistoricalMechanics: true }), false);
 });

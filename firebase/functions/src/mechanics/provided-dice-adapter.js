@@ -24,6 +24,21 @@ export class ProvidedDiceAdapter {
     this.attackIndex = 0;
     this.damageIndex = 0;
     this.savingThrowIndex = 0;
+    const damageSources = [];
+    const seenRolls = new Set();
+    const rememberDamage = source => {
+      if (!source || typeof source !== 'object') return;
+      const dice = source.diceResults || source.keptDice;
+      if (!Array.isArray(dice)) return;
+      const key = String(source.rollId || source.id || `${source.notation || ''}:${dice.join(',')}:${damageSources.length}`);
+      if (seenRolls.has(key)) return;
+      seenRolls.add(key);
+      damageSources.push(source);
+    };
+    rememberDamage(submittedResolution.damage);
+    (Array.isArray(submittedResolution.followUpAttacks) ? submittedResolution.followUpAttacks : []).forEach(followUp => rememberDamage(followUp?.damage));
+    (Array.isArray(submittedResolution.effectResults) ? submittedResolution.effectResults : []).forEach(result => rememberDamage(result?.roll));
+    this.damageSources = damageSources;
   }
 
   async rollAttack({ modifier = 0, rollMode = 'normal' } = {}) {
@@ -66,12 +81,12 @@ export class ProvidedDiceAdapter {
 
   async rollDamage({ damageFormula, bonus = 0, critical = false } = {}) {
     const base = parseDamageFormula(damageFormula);
-    const source = this.damageIndex++ === 0
-      ? (this.submitted.damage || {})
-      : (this.submitted.followUpAttacks?.[this.damageIndex - 2]?.damage || {});
+    const source = this.damageSources[this.damageIndex++] || {};
     const terms = base.terms || [{ diceCount: base.diceCount, sides: base.sides }];
     const expectedTerms = terms.map(term => ({ ...term, diceCount: critical ? term.diceCount * 2 : term.diceCount }));
-    const submittedDice = Array.isArray(source.diceResults) ? source.diceResults : [];
+    const submittedDice = Array.isArray(source.diceResults)
+      ? source.diceResults
+      : (Array.isArray(source.keptDice) ? source.keptDice : []);
     const expectedCount = expectedTerms.reduce((sum, term) => sum + term.diceCount, 0);
     if (submittedDice.length !== expectedCount) invalid(`Schadenswurf: Es wurden ${expectedCount} gültige Würfelergebnisse erwartet.`);
     let offset = 0;
@@ -82,7 +97,7 @@ export class ProvidedDiceAdapter {
     });
     const modifier = base.fixedModifier + Number(bonus || 0);
     return {
-      id: String(source.rollId || ''),
+      id: String(source.rollId || source.id || ''),
       notation: `${expectedTerms.map(term => `${term.diceCount}d${term.sides}`).join('+')}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`,
       keptDice: dice,
       modifier,

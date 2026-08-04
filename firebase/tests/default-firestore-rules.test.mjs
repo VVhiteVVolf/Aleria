@@ -98,6 +98,31 @@ test('Profile behalten ihren Eigentümer und erlauben Moderation', async () => {
   await assertSucceeds(updateDoc(doc(editor, 'characters/gawain'), { name: 'Redaktionell gepflegt' }));
 });
 
+test('laufende Kämpfe sperren nur kampfrelevante Profilfelder', async () => {
+  const owner = environment.authenticatedContext('owner').firestore();
+  await environment.withSecurityRulesDisabled(async context => {
+    const database = context.firestore();
+    await setDoc(doc(database, 'characters/gawain'), {
+      name: 'Gawain', ownerUid: 'owner',
+      combatProfile: { progression: { level: 4 } },
+      inventory: { items: [] }
+    });
+    await setDoc(doc(database, 'combat_profile_locks/characters/records/gawain'), {
+      activeEncounterKeys: ['brandhof:encounter-1']
+    });
+  });
+  await assertSucceeds(updateDoc(doc(owner, 'characters/gawain'), {
+    bio: 'Darf erzählerisch weiter gepflegt werden.'
+  }));
+  await assertFails(updateDoc(doc(owner, 'characters/gawain'), {
+    combatProfile: { progression: { level: 9 } }
+  }));
+  await assertFails(updateDoc(doc(owner, 'characters/gawain'), {
+    inventory: { items: [{ id: 'free-arrow' }] }
+  }));
+  await assertFails(deleteDoc(doc(owner, 'characters/gawain')));
+});
+
 test('nested skill evaluations are locked by the server audit marker', async () => {
   const owner = environment.authenticatedContext('owner').firestore();
   await environment.withSecurityRulesDisabled(async context => {

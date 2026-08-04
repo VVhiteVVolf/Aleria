@@ -8,6 +8,13 @@ const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
   'combat/combat-action-economy.js',
   'combat/combat-ability-uses.js',
+  'combat/combat-condition-duration.js',
+  'combat/combat-effect-model.js',
+  'combat/combat-encounter-model.js',
+  'combat/combat-progression.js',
+  'combat/combat-rule-consumption.js',
+  'combat/combat-resolution-storage.js',
+  'combat/combat-ammunition.js',
   'combat/combat-profile-context.js',
   'combat/combat-profile-model.js',
   'combat/combat-profile-resolver.js',

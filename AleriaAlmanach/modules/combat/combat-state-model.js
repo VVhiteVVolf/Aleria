@@ -3,7 +3,12 @@
 // replaying stored combat resolutions into the current scene state.
 
 import { resetCommentScopedResources } from './combat-action-economy.js?v=20260803-economy-audit-v1';
-import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260803-economy-audit-v1';
+import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260804-referee-v2';
+import {
+  advanceTemporaryConditionsForComment,
+  normalizeRuntimeCondition
+} from './combat-condition-duration.js?v=20260804-referee-v2';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260804-referee-v2';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -155,9 +160,29 @@ export function getResolutionActorResourceState(resolution = {}) {
   return Array.isArray(resources) ? normalizeCombatResources(resources) : null;
 }
 
+export function getResolutionTargetResourceState(resolution = {}) {
+  const resources = resolution?.targetResourceSnapshot?.after;
+  return Array.isArray(resources) ? normalizeCombatResources(resources) : null;
+}
+
 export function getResolutionActorAbilityState(resolution = {}) {
   const abilities = resolution?.actorAbilitySnapshot?.after;
   return Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : null;
+}
+
+export function getResolutionActorHitPointState(resolution = {}) {
+  const hitPoints = resolution?.actorHitPointSnapshot?.after;
+  return hitPoints ? normalizeCombatHitPointState(hitPoints) : null;
+}
+
+export function getResolutionActorConditionState(resolution = {}) {
+  const conditions = resolution?.actorConditionSnapshot?.after;
+  return Array.isArray(conditions) ? conditions.map(condition => ({ ...condition })) : null;
+}
+
+export function getResolutionActorInventoryState(resolution = {}) {
+  const inventory = resolution?.actorInventorySnapshot?.after;
+  return inventory && typeof inventory === 'object' ? JSON.parse(JSON.stringify(inventory)) : null;
 }
 
 export function getResolutionTargetConditionState(resolution = {}) {
@@ -165,10 +190,32 @@ export function getResolutionTargetConditionState(resolution = {}) {
   return Array.isArray(conditions) ? conditions.map(condition => ({ ...condition })) : null;
 }
 
+export function getResolutionActorChannelingState(resolution = {}) {
+  if (!resolution?.actorChannelingSnapshot) return undefined;
+  return resolution.actorChannelingSnapshot.after || null;
+}
+
+export function getResolutionActorConcentrationState(resolution = {}) {
+  if (!resolution?.actorConcentrationSnapshot) return undefined;
+  return resolution.actorConcentrationSnapshot.after || null;
+}
+
+export function getResolutionTargetConcentrationState(resolution = {}) {
+  if (!resolution?.targetConcentrationSnapshot) return undefined;
+  return resolution.targetConcentrationSnapshot.after || null;
+}
+
+export function getResolutionTargetChannelingState(resolution = {}) {
+  if (!resolution?.targetChannelingSnapshot) return undefined;
+  return resolution.targetChannelingSnapshot.after || null;
+}
+
 function getStoredResolutions(comment = {}) {
   if (Array.isArray(comment.commentSegments)) {
     return comment.commentSegments
-      .map(segment => segment?.combatResolution)
+      .flatMap(segment => Array.isArray(segment?.combatResolutions)
+        ? segment.combatResolutions
+        : [segment?.combatResolution])
       .filter(resolution => resolution?.targetId && resolution?.targetSnapshot);
   }
   return comment.combatResolution?.targetId ? [comment.combatResolution] : [];
@@ -179,28 +226,31 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
-    const expiringConditionIds = new Map();
     states.forEach((state, actorId) => {
       if (Array.isArray(state.resources)) {
         states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
       }
     });
+    const conditionIdsBeforeComment = new Map([...states].map(([actorId, state]) => [
+      String(actorId),
+      new Set((Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : []).map(condition => String(condition?.id || '')).filter(Boolean))
+    ]));
     const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
     if (isStopComment && stopSegmentIndex == null) break;
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
     const entries = segments.length
-      ? segments.map((segment, index) => ({ index, resolution: segment?.combatResolution })).filter(entry => entry.resolution)
+      ? segments.flatMap((segment, index) => {
+          const resolutions = Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
+            ? segment.combatResolutions
+            : [segment?.combatResolution];
+          return resolutions
+            .filter(Boolean)
+            .map(resolution => ({ index, resolution }));
+        })
       : getStoredResolutions(comment).map(resolution => ({ index: 0, resolution }));
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
       const resolution = entry.resolution;
-      const actorId = String(resolution.actorId || '');
-      const actorConditions = states.get(actorId)?.temporaryConditions;
-      if (actorId && Array.isArray(actorConditions) && actorConditions.length) {
-        const ids = expiringConditionIds.get(actorId) || new Set();
-        actorConditions.forEach(condition => ids.add(String(condition.id || '')));
-        expiringConditionIds.set(actorId, ids);
-      }
       const state = getResolutionHitPointState(resolution);
       if (state) {
         const previous = states.get(String(resolution.targetId)) || {};
@@ -208,19 +258,54 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       }
       const actorResources = getResolutionActorResourceState(resolution);
       const actorAbilities = getResolutionActorAbilityState(resolution);
-      if (actorResources || actorAbilities) {
+      const actorInventory = getResolutionActorInventoryState(resolution);
+      const actorHitPoints = getResolutionActorHitPointState(resolution);
+      const actorConditions = getResolutionActorConditionState(resolution);
+      if (actorResources || actorAbilities || actorInventory || actorHitPoints || actorConditions) {
         const previous = states.get(String(resolution.actorId)) || {};
         states.set(String(resolution.actorId), {
           ...previous,
           ...(actorResources ? { resources: actorResources } : {}),
-          ...(actorAbilities ? { abilities: actorAbilities } : {})
+          ...(actorAbilities ? { abilities: actorAbilities } : {}),
+          ...(actorInventory ? { inventory: actorInventory } : {}),
+          ...(actorHitPoints || {}),
+          ...(actorConditions ? { temporaryConditions: actorConditions } : {})
         });
+      }
+      const targetResources = getResolutionTargetResourceState(resolution);
+      if (targetResources) {
+        const targetId = String(resolution.targetId || '');
+        const previous = states.get(targetId) || {};
+        states.set(targetId, { ...previous, resources: targetResources });
       }
       const targetConditions = getResolutionTargetConditionState(resolution);
       if (targetConditions) {
         const targetId = String(resolution.targetId || '');
         const previous = states.get(targetId) || {};
         states.set(targetId, { ...previous, temporaryConditions: targetConditions });
+      }
+      const actorChanneling = getResolutionActorChannelingState(resolution);
+      const actorConcentration = getResolutionActorConcentrationState(resolution);
+      if (actorChanneling !== undefined || actorConcentration !== undefined) {
+        const actorId = String(resolution.actorId || '');
+        const previous = states.get(actorId) || {};
+        states.set(actorId, {
+          ...previous,
+          ...(actorChanneling !== undefined ? { channeling: actorChanneling } : {}),
+          ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
+        });
+      }
+      const targetConcentration = getResolutionTargetConcentrationState(resolution);
+      if (targetConcentration !== undefined) {
+        const targetId = String(resolution.targetId || '');
+        const previous = states.get(targetId) || {};
+        states.set(targetId, { ...previous, concentration: targetConcentration });
+      }
+      const targetChanneling = getResolutionTargetChannelingState(resolution);
+      if (targetChanneling !== undefined) {
+        const targetId = String(resolution.targetId || '');
+        const previous = states.get(targetId) || {};
+        states.set(targetId, { ...previous, channeling: targetChanneling });
       }
       (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
         if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
@@ -235,15 +320,11 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
     }
-    expiringConditionIds.forEach((ids, actorId) => {
-      const previous = states.get(actorId);
-      if (!previous?.temporaryConditions) return;
-      states.set(actorId, {
-        ...previous,
-        temporaryConditions: previous.temporaryConditions.filter(condition => !ids.has(String(condition.id || '')))
-      });
-    });
+    // All contribution kinds advance clocks. Conditions remain active for the
+    // complete contribution and expire only after its final segment.
+    advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
     applySceneRestCommentToStateMap(states, comment);
+    applyCombatEncounterCommentToStateMap(states, comment);
     if (isStopComment) break;
   }
   return states;
@@ -277,11 +358,11 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       })
     : profile.abilities;
   const temporaryConditions = Array.isArray(state.temporaryConditions)
-    ? state.temporaryConditions.map(condition => ({ ...condition, active: true }))
+    ? state.temporaryConditions.map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
     : [];
   const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
     const mechanics = condition?.mechanics || {};
-    ['attack', 'damage', 'armorClass', 'savingThrow', 'spellAttack', 'spellSaveDc', 'passivePerception'].forEach(key => {
+    ['attack', 'damage', 'armorClass', 'savingThrow', 'skill', 'spellAttack', 'spellSaveDc', 'passivePerception'].forEach(key => {
       result[key] = (Number(result[key]) || 0) + (Number(mechanics[key]) || 0);
     });
     return result;
@@ -310,7 +391,9 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       spellSlots: normalizedResources.filter(resource => spellSlotIds.has(resource.id))
     } : profile.aiSnapshot.magic,
     specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
-    temporaryConditions
+    temporaryConditions,
+    concentration: state.concentration || null,
+    channeling: state.channeling || null
   } : profile.aiSnapshot;
   return {
     ...profile,
@@ -321,6 +404,11 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     abilities,
     conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
     temporaryConditions,
+    concentration: state.concentration || null,
+    channeling: state.channeling || null,
+    inventory: state.inventory && typeof state.inventory === 'object'
+      ? JSON.parse(JSON.stringify(state.inventory))
+      : profile.inventory,
     attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0),
     damageModifier: Number(profile.damageModifier || 0) + Number(temporaryMechanics.damage || 0),
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),

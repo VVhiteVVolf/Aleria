@@ -22,6 +22,7 @@ const COMMENT_KIND_LABELS = {
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
   'scene-rest-event': 'Rast',
+  'combat-encounter-event': 'Kampfankündigung',
   'scene-transition-event': 'Szenenwechsel',
   'scene-poll-event': 'Abstimmung'
 };
@@ -182,6 +183,9 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (window.AleriaCombatEncounter?.isComment?.(c)) {
+    return window.AleriaCombatEncounter.renderComment(c, idx);
+  }
   if (window.AleriaSceneRest?.isComment?.(c)) {
     return window.AleriaSceneRest.renderComment(c, idx);
   }
@@ -234,9 +238,12 @@ function renderCommentBubble(c, idx) {
         _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
       const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
-      const combatEvaluation = segment.combatResolution
-        ? (window.AleriaCombat?.renderEvaluation?.(segment) || '')
-        : '';
+      const combatResolutions = Array.isArray(segment.combatResolutions)
+        ? segment.combatResolutions
+        : (segment.combatResolution ? [segment.combatResolution] : []);
+      const combatEvaluation = combatResolutions.map(combatResolution => (
+        window.AleriaCombat?.renderEvaluation?.({ ...segment, combatResolution }) || ''
+      )).join('');
       const skillEvaluation = segment.skillResolution
         ? (window.AleriaSkillChecks?.renderEvaluation?.(segment) || '')
         : '';

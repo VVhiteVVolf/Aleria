@@ -6,13 +6,13 @@ import {
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
+} from './combat-profile-model.js?v=20260804-referee-v2';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts
 } from './combat-action-economy.js?v=20260803-economy-audit-v1';
-import { getSpellLevelLabel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260803-gawain-level4-v1';
+import { getSpellLevelLabel, getSpellSlotLevel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
+import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260804-referee-v2';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 function buildCombatProfileActions(character, profile) {
@@ -45,6 +45,8 @@ function buildCombatProfileActions(character, profile) {
       damageModifier: getWeaponDamageModifier(profile, weapon),
       activationType: weapon.activationType,
       costs: normalizeCombatResourceCosts(weapon.costs),
+      effects: weapon.effects || [],
+      ammunition: weapon.ammunition || null,
       auraBypass: weapon.auraBypass,
       resolutionMode: 'weapon-attack',
       segmentKinds: ['combataction'],
@@ -90,6 +92,7 @@ function buildCombatProfileActions(character, profile) {
         forcedRollMode: technique.rollMode,
         secondarySave: technique.secondarySave?.enabled ? { ...technique.secondarySave, dc: secondarySaveDc } : null,
         followUpAttack: technique.followUpAttack?.enabled ? { ...technique.followUpAttack } : null,
+        effects: technique.effects || [],
         segmentKinds: ['combataction'],
         compatible,
         disabledReason: compatible
@@ -101,7 +104,7 @@ function buildCombatProfileActions(character, profile) {
       };
     });
   const abilityActions = (profile.abilities || [])
-    .filter(ability => ability.active && ability.combatUsable && ability.name && ability.rollFormula)
+    .filter(ability => ability.active && ability.combatUsable && ability.name && (ability.rollFormula || ability.effects?.length))
     .map(ability => {
       const delivery = ability.delivery || 'ability';
       const isSpell = delivery === 'spell' || delivery === 'prayer' || delivery === 'song';
@@ -128,7 +131,10 @@ function buildCombatProfileActions(character, profile) {
         activationType: ability.activationType,
         costs: normalizeCombatResourceCosts(ability.costs),
         auraBypass: ability.auraBypass,
-        resolutionMode: isSpell ? 'spell-attack' : 'weapon-attack',
+        resolutionMode: ability.rollFormula ? (isSpell ? 'spell-attack' : 'weapon-attack') : 'automatic',
+        effects: ability.effects || [],
+        concentration: !!ability.concentration,
+        channelComments: Number(ability.channelComments || 0),
         segmentKinds,
         compatible: delivery !== 'weapon' || !!activeWeapon,
         disabledReason: delivery === 'weapon' && !activeWeapon ? 'Benötigt eine aktive Waffe.' : '',
@@ -136,7 +142,7 @@ function buildCombatProfileActions(character, profile) {
       };
     });
   const spellActions = (profile.magic?.enabled ? profile.magic.spells : [])
-    .filter(spell => spell.prepared && spell.name && spell.rollFormula)
+    .filter(spell => spell.prepared && spell.name && (spell.rollFormula || spell.effects?.length))
     .map(spell => {
       const presentationKind = ['prayer', 'song'].includes(spell.presentationKind) ? spell.presentationKind : 'spell';
       const cantrip = Number(spell.level) === 0;
@@ -181,6 +187,10 @@ function buildCombatProfileActions(character, profile) {
       saveAttribute: spell.saveAttribute,
       spellSaveDc: profile.spellSaveDc,
       halfDamageOnSave: !!spell.halfDamageOnSave,
+      effects: spell.effects || [],
+      concentration: !!spell.concentration,
+      channelComments: Number(spell.channelComments || 0),
+      upcast: spell.upcast || null,
       spellLevel: spell.level,
       spellLevelLabel: getSpellLevelLabel(spell.level),
       isCantrip: cantrip,
@@ -210,15 +220,65 @@ function resolveCombatPersistence(character = {}) {
     : { kind: 'character', recordId: actorId };
 }
 
+function combineFormulas(base = '', addition = '', count = 0) {
+  const parts = [String(base || '').trim(), ...Array.from({ length: Math.max(0, count) }, () => String(addition || '').trim())]
+    .filter(Boolean);
+  return parts.join('+');
+}
+
+function applySpellCastLevel(action, profile, requestedLevel) {
+  if (!action || action.spellLevel == null || (action.kind !== 'spell' && action.kind !== 'prayer' && action.kind !== 'song')) return action;
+  if (action.isCantrip) return { ...action, castLevel: 0, castLevelLabel: getSpellLevelLabel(0) };
+  const baseLevel = Math.max(1, Number(action.spellLevel) || 1);
+  const maximumLevel = Math.max(baseLevel, Math.min(10, Number(action.upcast?.maximumLevel) || 10));
+  const castLevel = Math.max(baseLevel, Math.min(maximumLevel, Number(requestedLevel) || baseLevel));
+  const slotResource = profile.resources.find(resource => getSpellSlotLevel(resource) === castLevel) || null;
+  const difference = castLevel - baseLevel;
+  const scaleFormula = action.upcast?.enabled ? action.upcast.formulaPerLevel : '';
+  const scaleAmount = action.upcast?.enabled ? Number(action.upcast.amountPerLevel || 0) : 0;
+  const effects = (Array.isArray(action.effects) ? action.effects : []).map((effect, index) => {
+    if (index !== 0 || !['damage', 'healing', 'temporary-hit-points'].includes(effect.type)) return { ...effect };
+    return {
+      ...effect,
+      formula: combineFormulas(effect.formula, scaleFormula, difference),
+      amount: Number(effect.amount || 0) + (scaleAmount * difference)
+    };
+  });
+  const dedicatedSlotIds = new Set(profile.resources.filter(resource => isSpellSlotResource(resource, profile.magic?.slotResourceIds)).map(resource => String(resource.id)));
+  const originalSlotCost = Math.max(1, Number((action.costs || []).find(cost => dedicatedSlotIds.has(String(cost.resourceId || '')))?.amount) || 1);
+  const costs = (action.costs || [])
+    .filter(cost => !dedicatedSlotIds.has(String(cost.resourceId || '')))
+    .concat(slotResource ? [{
+      id: `resource-${slotResource.id}`,
+      resourceId: slotResource.id,
+      name: slotResource.name || getSpellLevelLabel(castLevel),
+      amount: originalSlotCost,
+      scope: slotResource.scope || 'persistent'
+    }] : []);
+  const formula = combineFormulas(action.formula, scaleFormula, difference);
+  return {
+    ...action,
+    formula,
+    weapon: { ...action.weapon, damageFormula: formula },
+    effects,
+    costs: normalizeCombatResourceCosts(costs),
+    castLevel,
+    castLevelLabel: getSpellLevelLabel(castLevel),
+    compatible: action.compatible !== false && !!slotResource,
+    disabledReason: !slotResource ? `Es fehlt ein Zauberplatz für ${getSpellLevelLabel(castLevel)}.` : action.disabledReason
+  };
+}
+
 export function resolveCombatProfile(character = {}, options = {}) {
   const profile = resolveCharacterCombatProfile(character);
   const segmentKind = String(options.segmentKind || '');
   const allActions = buildCombatProfileActions(character, profile);
   const actions = segmentKind ? allActions.filter(action => action.segmentKinds.includes(segmentKind)) : allActions;
-  const selectedAction = actions.find(action => action.id === String(options.actionId || ''))
+  const selectedActionBase = actions.find(action => action.id === String(options.actionId || ''))
     || actions.find(action => action.default)
     || actions[0]
     || null;
+  const selectedAction = applySpellCastLevel(selectedActionBase, profile, options.castLevel);
   const requestedWeaponGrip = String(options.weaponGrip || '').trim().toLowerCase();
   const supportsVersatileGrip = selectedAction?.kind === 'weapon'
     && Boolean(String(selectedAction?.weapon?.versatileDamageFormula || '').trim());
@@ -246,6 +306,9 @@ export function resolveCombatProfile(character = {}, options = {}) {
     characterId: String(character.id || ''),
     name: String(character.name || 'Unbekannt'),
     portrait: String(character.portrait || ''),
+    inventory: character.inventory && typeof character.inventory === 'object'
+      ? JSON.parse(JSON.stringify(character.inventory))
+      : { items: [] },
     weapon: { ...(resolvedWeapon || {}) },
     armor: { ...profile.armor },
     attackModifier: selectedAction?.attackModifier ?? profile.attackModifier,
@@ -275,10 +338,13 @@ export function getCombatActorProblems(profile = {}) {
   if (Number(profile.currentHitPoints) <= 0 && profile.combat?.canActAtZeroHitPoints !== true) problems.push('incapacitated');
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
   if (!String(profile.weapon?.name || '').trim()) problems.push('weaponName');
-  try {
-    parseDamageFormula(profile.weapon?.damageFormula);
-  } catch {
-    problems.push('weaponDamageFormula');
+  const hasStructuredEffects = Array.isArray(profile.selectedAction?.effects) && profile.selectedAction.effects.length > 0;
+  if (!hasStructuredEffects) {
+    try {
+      parseDamageFormula(profile.weapon?.damageFormula);
+    } catch {
+      problems.push('weaponDamageFormula');
+    }
   }
   return problems;
 }

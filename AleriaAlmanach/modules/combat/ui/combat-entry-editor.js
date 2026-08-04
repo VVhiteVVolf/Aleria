@@ -1,4 +1,4 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260803-gawain-level4-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260804-referee-v2';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260803-economy-audit-v1';
 import {
   findSpellSlotResourceId,
@@ -7,7 +7,7 @@ import {
   isSpellSlotResource
 } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 
-const state = { kind: '', item: null, resources: [], weapons: [], onSave: null };
+const state = { kind: '', item: null, resources: [], weapons: [], inventoryItems: [], onSave: null };
 const COMMENT_ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
 
 function clone(value) {
@@ -84,6 +84,72 @@ function renderMechanicsFields(item) {
   </fieldset>`;
 }
 
+const EFFECT_TYPE_OPTIONS = Object.freeze([
+  ['damage', 'Schaden'], ['healing', 'Heilung'], ['temporary-hit-points', 'Temporäre TP'],
+  ['apply-condition', 'Zustand geben'], ['remove-condition', 'Zustand entfernen'],
+  ['restore-resource', 'Ressource auffüllen'], ['spend-resource', 'Ressource abziehen'],
+  ['buff', 'Stärkung'], ['debuff', 'Schwächung'], ['move', 'Bewegen / Stoßen / Ziehen'],
+  ['summon', 'Beschwören'], ['interrupt', 'Unterbrechen']
+]);
+
+function createDefaultEffect() {
+  return {
+    id: `effect-${Date.now().toString(36)}`,
+    type: 'damage', target: 'target', on: 'hit', formula: '', amount: 0,
+    damageType: 'physisch', magical: false, resourceId: '', notes: '',
+    condition: { name: '', durationModel: { kind: 'actor-comments', remainingActorComments: 1 } }
+  };
+}
+
+function renderEffects(item, {
+  path = 'effects',
+  legend = 'Auswertbare Effekte',
+  description = 'Mehrere Effekte werden der Reihe nach und serverseitig verbindlich angewandt. Ohne Eintrag bleibt bei Waffen und Techniken der normale Schaden aktiv.',
+  emptyText = 'Keine zusätzlichen strukturierten Effekte.'
+} = {}) {
+  const effectsAtPath = getAtPath(item, path);
+  const effects = Array.isArray(effectsAtPath) ? effectsAtPath : [];
+  const markup = `<fieldset class="combat-entry-editor-mechanics"><legend>${escapeHtml(legend)}</legend>
+    <p>${escapeHtml(description)}</p>
+    <div class="combat-entry-editor-rule-list">${effects.map((effect, index) => `<section class="combat-entry-editor-rule">
+      <header><strong>${escapeHtml(EFFECT_TYPE_OPTIONS.find(option => option[0] === effect.type)?.[1] || `Effekt ${index + 1}`)}</strong><button type="button" data-entry-action="remove-effect" data-entry-effect-path="${escapeHtml(path)}" data-entry-index="${index}" aria-label="Effekt entfernen">&times;</button></header>
+      <div class="combat-entry-editor-grid">
+        <label><span>Wirkung</span><select data-entry-field="effects.${index}.type">${EFFECT_TYPE_OPTIONS.map(([id, label]) => `<option value="${id}"${selected(effect.type, id)}>${label}</option>`).join('')}</select></label>
+        <label><span>Ziel</span><select data-entry-field="effects.${index}.target"><option value="target"${selected(effect.target, 'target')}>Gewähltes Ziel</option><option value="self"${selected(effect.target, 'self')}>Selbst</option><option value="selected"${selected(effect.target, 'selected')}>Ausgewählte Ziele</option><option value="allies"${selected(effect.target, 'allies')}>Verbündete</option><option value="enemies"${selected(effect.target, 'enemies')}>Gegner</option><option value="all"${selected(effect.target, 'all')}>Alle</option></select></label>
+        <label><span>Gilt bei</span><select data-entry-field="effects.${index}.on"><option value="hit"${selected(effect.on, 'hit')}>Treffer / misslungene Rettung</option><option value="always"${selected(effect.on, 'always')}>Immer</option><option value="miss"${selected(effect.on, 'miss')}>Fehlschlag</option><option value="save-success"${selected(effect.on, 'save-success')}>Gelungene Rettung</option><option value="save-failure"${selected(effect.on, 'save-failure')}>Misslungene Rettung</option></select></label>
+        <label><span>Würfelformel</span><input data-entry-field="effects.${index}.formula" value="${escapeHtml(String(effect.formula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="z. B. 1W8"></label>
+        <label><span>Fester Wert</span><input type="number" min="0" data-entry-field="effects.${index}.amount" value="${escapeHtml(effect.amount ?? 0)}"></label>
+        <label><span>Schadensart</span><input data-entry-field="effects.${index}.damageType" value="${escapeHtml(effect.damageType)}"></label>
+        <label class="check"><input type="checkbox" data-entry-field="effects.${index}.magical"${checked(effect.magical)}> Magisch</label>
+        <label><span>Ressource</span><select data-entry-field="effects.${index}.resourceId"><option value="">Keine</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(effect.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
+        <label><span>Zustandsname</span><input data-entry-field="effects.${index}.condition.name" value="${escapeHtml(effect.condition?.name)}"></label>
+        <label><span>Zustands-ID / zu entfernen</span><input data-entry-field="effects.${index}.conditionId" value="${escapeHtml(effect.conditionId)}"></label>
+        <label><span>Zustands-Tags</span><input data-entry-field="effects.${index}.conditionTags" value="${escapeHtml(effect.conditionTags)}" placeholder="Gift, Furcht, Fluch …"></label>
+        <label><span>Zustandsdauer</span><select data-entry-field="effects.${index}.condition.durationModel.kind"><option value="permanent"${selected(effect.condition?.durationModel?.kind, 'permanent')}>Bis entfernt</option><option value="actor-comments"${selected(effect.condition?.durationModel?.kind, 'actor-comments')}>Eigene Beiträge</option><option value="scene-comments"${selected(effect.condition?.durationModel?.kind, 'scene-comments')}>Szenenbeiträge</option><option value="combat"${selected(effect.condition?.durationModel?.kind, 'combat')}>Bis Kampfende</option><option value="short-rest"${selected(effect.condition?.durationModel?.kind, 'short-rest')}>Bis kurze Rast</option><option value="long-rest"${selected(effect.condition?.durationModel?.kind, 'long-rest')}>Bis lange Rast</option><option value="day"${selected(effect.condition?.durationModel?.kind, 'day')}>Bis Tageswechsel</option><option value="concentration"${selected(effect.condition?.durationModel?.kind, 'concentration')}>Konzentration</option></select></label>
+        <label><span>Eigene Beiträge</span><input type="number" min="0" max="999" data-entry-field="effects.${index}.condition.durationModel.remainingActorComments" value="${escapeHtml(effect.condition?.durationModel?.remainingActorComments ?? 0)}"></label>
+        <label><span>Szenenbeiträge</span><input type="number" min="0" max="999" data-entry-field="effects.${index}.condition.durationModel.remainingSceneComments" value="${escapeHtml(effect.condition?.durationModel?.remainingSceneComments ?? 0)}"></label>
+        <label><span>Zustand: Angriff</span><input type="number" min="-99" max="99" data-entry-field="effects.${index}.condition.mechanics.attack" value="${escapeHtml(effect.condition?.mechanics?.attack ?? 0)}"></label>
+        <label><span>Zustand: Schaden</span><input type="number" min="-99" max="99" data-entry-field="effects.${index}.condition.mechanics.damage" value="${escapeHtml(effect.condition?.mechanics?.damage ?? 0)}"></label>
+        <label><span>Zustand: Rüstung</span><input type="number" min="-99" max="99" data-entry-field="effects.${index}.condition.mechanics.armorClass" value="${escapeHtml(effect.condition?.mechanics?.armorClass ?? 0)}"></label>
+        <label><span>Zustand: Rettung</span><input type="number" min="-99" max="99" data-entry-field="effects.${index}.condition.mechanics.savingThrow" value="${escapeHtml(effect.condition?.mechanics?.savingThrow ?? 0)}"></label>
+        <label><span>Bewegungsart</span><select data-entry-field="effects.${index}.movementKind"><option value="move"${selected(effect.movementKind, 'move')}>Bewegen</option><option value="push"${selected(effect.movementKind, 'push')}>Zurückstoßen</option><option value="pull"${selected(effect.movementKind, 'pull')}>Heranziehen</option></select></label>
+        <label><span>Bewegung in Metern</span><input type="number" min="-9999" max="9999" data-entry-field="effects.${index}.movementMeters" value="${escapeHtml(effect.movementMeters ?? 0)}"></label>
+        <label><span>Beschwörungs-Kreatur-ID</span><input data-entry-field="effects.${index}.summon.creatureId" value="${escapeHtml(effect.summon?.creatureId)}"></label>
+        <label><span>Beschwörungsname</span><input data-entry-field="effects.${index}.summon.name" value="${escapeHtml(effect.summon?.name)}"></label>
+        <label><span>Anzahl</span><input type="number" min="1" max="50" data-entry-field="effects.${index}.summon.count" value="${escapeHtml(effect.summon?.count ?? 1)}"></label>
+        <label><span>Kampfpartei</span><input data-entry-field="effects.${index}.summon.partyId" value="${escapeHtml(effect.summon?.partyId)}"></label>
+        <label><span>Beschwörungsdauer</span><select data-entry-field="effects.${index}.summon.duration.kind"><option value="combat"${selected(effect.summon?.duration?.kind, 'combat')}>Bis Kampfende</option><option value="concentration"${selected(effect.summon?.duration?.kind, 'concentration')}>Konzentration</option><option value="actor-comments"${selected(effect.summon?.duration?.kind, 'actor-comments')}>Eigene Beiträge</option><option value="permanent"${selected(effect.summon?.duration?.kind, 'permanent')}>Bis entfernt</option></select></label>
+        <label class="check"><input type="checkbox" data-entry-field="effects.${index}.nonlethal"${checked(effect.nonlethal)}> Schaden ist nichttödlich</label>
+        <label class="wide"><span>Hinweis</span><textarea rows="2" data-entry-field="effects.${index}.notes">${escapeHtml(effect.notes)}</textarea></label>
+      </div>
+    </section>`).join('') || '<p class="combat-entry-editor-empty">Keine zusätzlichen strukturierten Effekte.</p>'}</div>
+    <button type="button" data-entry-action="add-effect" data-entry-effect-path="${escapeHtml(path)}">+ Effekt</button>
+  </fieldset>`;
+  return markup
+    .replaceAll('data-entry-field="effects.', `data-entry-field="${escapeHtml(path)}.`)
+    .replace('Keine zusätzlichen strukturierten Effekte.', escapeHtml(emptyText));
+}
+
 const RULE_ACTION_KINDS = Object.freeze([
   ['weapon', 'Waffe'], ['technique', 'Technik'], ['ability', 'F\u00e4higkeit'],
   ['spell', 'Zauber'], ['prayer', 'Gebet'], ['song', 'Gesang'], ['skill', 'Fertigkeit']
@@ -101,7 +167,7 @@ function renderTriggerRules(item) {
         <div class="combat-entry-editor-grid">
           <label><span>Regelname</span><input data-entry-field="triggerRules.${index}.name" value="${escapeHtml(rule.name)}"></label>
           <label class="check"><input type="checkbox" data-entry-field="triggerRules.${index}.enabled"${checked(rule.enabled !== false)}> Aktiv</label>
-          <label><span>Zeitpunkt</span><select data-entry-field="triggerRules.${index}.phase"><option value="pre-roll"${selected(rule.phase, 'pre-roll')}>Vor dem Wurf</option><option value="post-roll"${selected(rule.phase, 'post-roll')}>Nach dem Wurf</option><option value="post-hit"${selected(rule.phase, 'post-hit')}>Nach Trefferpr\u00fcfung</option><option value="pre-damage"${selected(rule.phase, 'pre-damage')}>Vor Schaden</option></select></label>
+          <label><span>Zeitpunkt</span><select data-entry-field="triggerRules.${index}.phase"><option value="pre-roll"${selected(rule.phase, 'pre-roll')}>Vor dem Wurf</option><option value="post-roll"${selected(rule.phase, 'post-roll')}>Nach dem Wurf</option><option value="post-hit"${selected(rule.phase, 'post-hit')}>Nach Trefferpr\u00fcfung</option><option value="pre-damage"${selected(rule.phase, 'pre-damage')}>Vor Schaden</option><option value="on-damaged"${selected(rule.phase, 'on-damaged')}>Beim Erleiden von Schaden</option><option value="post-damage"${selected(rule.phase, 'post-damage')}>Nach Schaden</option><option value="on-heal"${selected(rule.phase, 'on-heal')}>Bei Heilung</option><option value="on-condition-applied"${selected(rule.phase, 'on-condition-applied')}>Bei neuem Zustand</option><option value="on-condition-removed"${selected(rule.phase, 'on-condition-removed')}>Bei entferntem Zustand</option><option value="on-resource-spent"${selected(rule.phase, 'on-resource-spent')}>Bei Ressourcenverbrauch</option><option value="on-defeat"${selected(rule.phase, 'on-defeat')}>Bei Niederlage</option><option value="on-concentration-check"${selected(rule.phase, 'on-concentration-check')}>Konzentrationspr\u00fcfung</option><option value="on-channel-progress"${selected(rule.phase, 'on-channel-progress')}>Kanalisierungsfortschritt</option><option value="on-combat-start"${selected(rule.phase, 'on-combat-start')}>Kampfbeginn</option><option value="on-combat-end"${selected(rule.phase, 'on-combat-end')}>Kampfende</option></select></label>
           <label><span>Aktivierung</span><select data-entry-field="triggerRules.${index}.activation"><option value="passive"${selected(rule.activation, 'passive')}>Passiv / automatisch</option><option value="reaction"${selected(rule.activation, 'reaction')}>Reaktion / ausw\u00e4hlbar</option></select></label>
           <label><span>Aktionsbindung</span><select data-entry-field="triggerRules.${index}.actionScope"><option value=""${selected(rule.actionScope, '')}>Automatisch</option><option value="entry"${selected(rule.actionScope, 'entry')}>Nur bei Nutzung dieses Eintrags</option><option value="global"${selected(rule.actionScope, 'global')}>Global / bei anderen Aktionen</option></select></label>
           <label class="check"><input type="checkbox" data-entry-field="triggerRules.${index}.consumeReaction"${checked(rule.consumeReaction !== false)}> Reaktionsressource verbrauchen</label>
@@ -111,6 +177,7 @@ function renderTriggerRules(item) {
           <label><span>H\u00e4ufigkeit</span><select data-entry-field="triggerRules.${index}.frequency"><option value="always"${selected(rule.frequency, 'always')}>Jedes Mal</option><option value="comment"${selected(rule.frequency, 'comment')}>Einmal je Kommentar</option><option value="scene"${selected(rule.frequency, 'scene')}>Einmal je Szene</option><option value="day"${selected(rule.frequency, 'day')}>Einmal je Tag</option></select></label>
           <label><span>Radius in Metern</span><input type="number" min="0" max="9999" step="0.5" data-entry-field="triggerRules.${index}.radiusMeters" value="${escapeHtml(rule.radiusMeters ?? '')}" placeholder="Leer = unbegrenzt"></label>
           <label><span>Priorit\u00e4t</span><input type="number" min="-99" max="99" data-entry-field="triggerRules.${index}.priority" value="${escapeHtml(rule.priority ?? 0)}"></label>
+          <label><span>Regelrang</span><select data-entry-field="triggerRules.${index}.authority"><option value="normal"${selected(rule.authority, 'normal')}>Normaler Modifikator</option><option value="passive"${selected(rule.authority, 'passive')}>Passive Eigenschaft / Aura</option><option value="timed"${selected(rule.authority, 'timed')}>Zeitlicher Effekt / F\u00e4higkeit</option><option value="reaction"${selected(rule.authority, 'reaction')}>Aktive Reaktion / Gegenzauber</option><option value="absolute"${selected(rule.authority, 'absolute')}>Immunit\u00e4t / absolute Regel</option></select></label>
           <label class="wide"><span>Ben\u00f6tigte Ziel-Tags</span><input data-entry-field="triggerRules.${index}.requiredTargetTags" value="${escapeHtml((rule.requiredTargetTags || []).join(', '))}" placeholder="z. B. stinkend, untot"></label>
           <label class="wide"><span>Nur diese Fertigkeiten</span><input data-entry-field="triggerRules.${index}.skillIds" value="${escapeHtml((rule.skillIds || []).join(', '))}" placeholder="z. B. persuasion, survival"></label>
           <fieldset class="wide combat-entry-editor-weapons"><legend>G\u00fcltige Handlungen</legend>${RULE_ACTION_KINDS.map(([kind, label]) => `<label><input type="checkbox" data-entry-rule-kind="${kind}" data-entry-rule-index="${index}"${checked(kinds.includes(kind))}> ${label}</label>`).join('')}<small>Ohne Auswahl gilt die Regel f\u00fcr alle Handlungsarten.</small></fieldset>
@@ -127,6 +194,12 @@ function renderTriggerRules(item) {
           <label><span>Wurfmodus</span><select data-entry-field="triggerRules.${index}.effects.rollMode"><option value="normal"${selected(effects.rollMode, 'normal')}>Normal</option><option value="advantage"${selected(effects.rollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(effects.rollMode, 'disadvantage')}>Nachteil</option></select></label>
           <label><span>Ergebnis</span><select data-entry-field="triggerRules.${index}.effects.outcome"><option value="none"${selected(effects.outcome, 'none')}>Nicht erzwingen</option><option value="force-hit"${selected(effects.outcome, 'force-hit')}>Treffer erzwingen</option><option value="force-miss"${selected(effects.outcome, 'force-miss')}>Fehlschlag erzwingen</option><option value="force-critical-hit"${selected(effects.outcome, 'force-critical-hit')}>Kritischen Treffer erzwingen</option><option value="force-save-success"${selected(effects.outcome, 'force-save-success')}>Rettung gelingt</option><option value="force-save-failure"${selected(effects.outcome, 'force-save-failure')}>Rettung misslingt</option><option value="force-skill-success"${selected(effects.outcome, 'force-skill-success')}>Fertigkeit gelingt</option><option value="force-skill-failure"${selected(effects.outcome, 'force-skill-failure')}>Fertigkeit scheitert</option></select></label>
         </div>
+        ${renderEffects(item, {
+          path: `triggerRules.${index}.resultEffects`,
+          legend: 'Folgewirkungen dieser Regel',
+          description: 'Diese Effekte werden nach dem Auslöser einmalig angewandt. Sie lösen im selben Vorgang keine erneute Regelkette aus.',
+          emptyText: 'Diese Regel besitzt noch keine strukturierte Folgewirkung.'
+        })}
       </section>`;
     }).join('') || '<p class="combat-entry-editor-empty">Noch keine auswertbare Ausl\u00f6serregel.</p>'}</div>
     <button type="button" data-entry-action="add-rule">+ Ausl\u00f6serregel</button>
@@ -183,6 +256,8 @@ function renderAbility(item) {
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Ziel</span><input data-entry-field="target" value="${escapeHtml(item.target)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
+    <label class="check"><input type="checkbox" data-entry-field="concentration"${checked(item.concentration)}> Benötigt Konzentration</label>
+    <label><span>Kanalisierung</span><input type="number" min="0" max="99" data-entry-field="channelComments" value="${escapeHtml(item.channelComments ?? 0)}"><small>0 = sofort, sonst Anzahl eigener Abschnitte bis zur Wirkung</small></label>
     <label><span>Nutzungen</span><div class="combat-entry-editor-pair"><input type="number" min="0" max="999" data-entry-field="usesCurrent" value="${escapeHtml(item.usesCurrent ?? 0)}"><i>/</i><input type="number" min="0" max="999" data-entry-field="usesMaximum" value="${escapeHtml(item.usesMaximum ?? 0)}"></div></label>
     <label><span>Erholung</span><select data-entry-field="recovery"><option value="none"${selected(item.recovery, 'none')}>Keine</option><option value="short-rest"${selected(item.recovery, 'short-rest')}>Kurze Rast</option><option value="long-rest"${selected(item.recovery, 'long-rest')}>Lange Rast</option><option value="scene"${selected(item.recovery, 'scene')}>Szene</option><option value="day"${selected(item.recovery, 'day')}>Tag</option><option value="manual"${selected(item.recovery, 'manual')}>Manuell</option></select></label>
     <label class="wide"><span>Beschreibung & Wirkung</span><textarea data-entry-field="description" rows="5">${escapeHtml(item.description)}</textarea></label>
@@ -199,7 +274,7 @@ function renderAbility(item) {
       <label><span>Punkte regenerieren</span><input type="number" min="1" max="999" data-entry-field="inventoryUseTrigger.restoreResources.0.amount" value="${escapeHtml(restoredResource.amount ?? 1)}"></label>
       <label class="check"><input type="checkbox" data-entry-field="inventoryUseTrigger.requireActualRecovery"${checked(inventoryTrigger.requireActualRecovery !== false)}> Nutzung nur bei tats\u00e4chlicher Regeneration verbrauchen</label>
     </div>
-  </fieldset>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
+  </fieldset>${renderCosts(item)}${renderEffects(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderTechnique(item) {
@@ -247,11 +322,14 @@ function renderTechnique(item) {
     <label><span>Angriffsbonus</span><input type="number" min="-99" max="99" data-entry-field="followUpAttack.attackBonus" value="${escapeHtml(followUp.attackBonus ?? 0)}"></label>
     <label><span>Schadensbonus</span><input type="number" min="-99" max="99" data-entry-field="followUpAttack.damageBonus" value="${escapeHtml(followUp.damageBonus ?? 0)}"></label>
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.sameTarget"${checked(followUp.sameTarget !== false)}> Gleiches Ziel</label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.triggerReactions"${checked(followUp.triggerReactions !== false)}> Darf Reaktionen auslösen</label>
+    <label class="check"><input type="checkbox" data-entry-field="followUpAttack.repeatPerAttackRules"${checked(followUp.repeatPerAttackRules !== false)}> „Pro Angriff“-Regeln erneut prüfen</label>
     <label class="check"><input type="checkbox" data-entry-field="followUpAttack.triggerFurtherEffects"${checked(followUp.triggerFurtherEffects)}> Darf weitere Fähigkeiten auslösen</label>
-  </div></fieldset>${renderCosts(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
+  </div></fieldset>${renderCosts(item)}${renderEffects(item)}${renderMechanicsFields(item)}${renderTriggerRules(item)}`;
 }
 
 function renderWeapon(item) {
+  const ammunition = item.ammunition || {};
   return `<div class="combat-entry-editor-grid">
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Waffenart</span><select data-entry-field="weaponType">${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<option value="${option.id}"${selected(item.weaponType, option.id)}>${option.label}</option>`).join('')}</select></label>
@@ -259,14 +337,19 @@ function renderWeapon(item) {
     <label><span>Schadenswurf</span><input data-entry-field="damageFormula" value="${escapeHtml(String(item.damageFormula || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W8"></label>
     <label><span>Schadensart</span><input data-entry-field="damageType" value="${escapeHtml(item.damageType)}"></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
+    <label class="check"><input type="checkbox" data-entry-field="ammunition.required"${checked(ammunition.required)}> Verbraucht Munition aus dem Inventar</label>
+    <label><span>Munition</span><select data-entry-field="ammunition.inventoryItemId"><option value="">Inventargegenstand wählen</option>${state.inventoryItems.map(inventoryItem => `<option value="${escapeHtml(inventoryItem.id)}"${selected(ammunition.inventoryItemId, inventoryItem.id)}>${escapeHtml(inventoryItem.name || 'Gegenstand')} · ${escapeHtml(inventoryItem.quantity ?? 1)}×</option>`).join('')}</select></label>
+    <label><span>Verbrauch je Angriff</span><input type="number" min="1" max="99" data-entry-field="ammunition.amountPerUse" value="${escapeHtml(ammunition.amountPerUse ?? 1)}"></label>
+    <label><span>Nachladen nach</span><input type="number" min="0" max="999" data-entry-field="ammunition.reloadAfter" value="${escapeHtml(ammunition.reloadAfter ?? 0)}"><small>0 = keine separate Nachladeregel</small></label>
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div>${renderCosts(item)}`;
+  </div>${renderCosts(item)}${renderEffects(item)}`;
 }
 
 function renderSpell(item) {
   const cantrip = Number(item.level) === 0;
   const spellSlots = getOrderedSpellSlotResources(state.resources);
+  const upcast = item.upcast || {};
   return `<div class="combat-entry-editor-grid">
     <label><span>Aktivierung</span><select data-entry-field="activationType">${renderActivationOptions(item.activationType)}</select></label>
     <label><span>Darstellung</span><select data-entry-field="presentationKind"><option value="spell"${selected(item.presentationKind, 'spell')}>Zauberformel</option><option value="prayer"${selected(item.presentationKind, 'prayer')}>Gebet / heiliger Schwur</option><option value="song"${selected(item.presentationKind, 'song')}>Gesang</option></select></label>
@@ -280,12 +363,20 @@ function renderSpell(item) {
     <label><span>Platzkosten</span><input type="number" min="0" max="99" data-entry-field="slotCost" value="${escapeHtml(item.slotCost ?? 0)}"${cantrip ? ' disabled title="Zaubertricks verbrauchen keinen Zauberplatz"' : ''}></label>
     <label><span>Reichweite</span><input data-entry-field="range" value="${escapeHtml(item.range)}"></label>
     <label><span>Dauer</span><input data-entry-field="duration" value="${escapeHtml(item.duration)}"></label>
+    <label class="check"><input type="checkbox" data-entry-field="concentration"${checked(item.concentration)}> Benötigt Konzentration</label>
+    <label><span>Kanalisierung</span><input type="number" min="0" max="99" data-entry-field="channelComments" value="${escapeHtml(item.channelComments ?? 0)}"><small>0 = sofort, sonst Anzahl eigener Abschnitte bis zur Wirkung</small></label>
     <label class="check"><input type="checkbox" data-entry-field="halfDamageOnSave"${checked(item.halfDamageOnSave)}> Halber Schaden bei gelungener Rettung</label>
     <label class="wide"><span>Beschreibung & Wirkung</span><textarea data-entry-field="description" rows="5">${escapeHtml(item.description)}</textarea></label>
     <label class="wide"><span>Voraussetzungen & Grenzen</span><textarea data-entry-field="requirements" rows="3">${escapeHtml(item.requirements)}</textarea></label>
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
-  </div><p class="combat-entry-editor-spell-rule">${cantrip ? 'Zaubertrick: verbraucht weiterhin seine Aktionsart, aber weder Mana noch einen Zauberplatz.' : `${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht die hinterlegte Aktionsart sowie Mana- und Zauberplatzkosten.`}</p>${renderCosts(item)}`;
+  </div><p class="combat-entry-editor-spell-rule">${cantrip ? 'Zaubertrick: verbraucht weiterhin seine Aktionsart, aber weder Mana noch einen Zauberplatz.' : `${escapeHtml(getSpellLevelLabel(item.level))}: verbraucht die hinterlegte Aktionsart sowie Mana- und Zauberplatzkosten.`}</p>
+  ${cantrip ? '' : `<fieldset class="combat-entry-editor-mechanics"><legend>Höherstufig wirken</legend><div class="combat-entry-editor-grid">
+    <label class="check"><input type="checkbox" data-entry-field="upcast.enabled"${checked(upcast.enabled)}> Höhere Zauberplätze erlauben</label>
+    <label><span>Zusatzwurf je Grad</span><input data-entry-field="upcast.formulaPerLevel" value="${escapeHtml(String(upcast.formulaPerLevel || '').toUpperCase().replace(/D/g, 'W'))}" placeholder="1W6"></label>
+    <label><span>Fester Zusatz je Grad</span><input type="number" min="0" max="999" data-entry-field="upcast.amountPerLevel" value="${escapeHtml(upcast.amountPerLevel ?? 0)}"></label>
+    <label><span>Höchster Grad</span><input type="number" min="${escapeHtml(item.level || 1)}" max="10" data-entry-field="upcast.maximumLevel" value="${escapeHtml(upcast.maximumLevel ?? 10)}"></label>
+  </div></fieldset>`}${renderCosts(item)}${renderEffects(item)}`;
 }
 
 function ensureOverlay() {
@@ -430,13 +521,29 @@ document.addEventListener('click', event => {
     if (!Array.isArray(state.item.triggerRules)) state.item.triggerRules = [];
     state.item.triggerRules.push({
       id: `combat-rule-${Date.now().toString(36)}`,
-      name: 'Neue Regel', enabled: true, phase: 'post-roll', recipient: 'actor', sourceRelation: 'self',
+      name: 'Neue Regel', enabled: true, phase: 'post-roll', recipient: 'actor', sourceRelation: 'self', authority: 'passive',
       activation: 'passive', frequency: 'always', condition: 'always', actionKinds: [],
       skillIds: [], requiredTargetTags: [],
       actionScope: '', consumeReaction: true, costs: [],
       radiusMeters: null, priority: 0, description: '',
+      resultEffects: [],
       effects: { attackModifier: 0, defenseModifier: 0, savingThrowModifier: 0, spellSaveDcModifier: 0, skillModifier: 0, damageModifier: 0, damageReduction: 0, rollMode: 'normal', outcome: 'none' }
     });
+    render();
+  }
+  if (action === 'add-effect') {
+    const path = trigger.dataset.entryEffectPath || 'effects';
+    let effects = getAtPath(state.item, path);
+    if (!Array.isArray(effects)) {
+      effects = [];
+      setAtPath(state.item, path, effects);
+    }
+    effects.push(createDefaultEffect());
+    render();
+  }
+  if (action === 'remove-effect') {
+    const path = trigger.dataset.entryEffectPath || 'effects';
+    getAtPath(state.item, path)?.splice(Number(trigger.dataset.entryIndex), 1);
     render();
   }
   if (action === 'remove-rule') {
@@ -464,12 +571,13 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && document.getElementById('combat-entry-editor-overlay')?.classList.contains('active')) close();
 });
 
-export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], onSave } = {}) {
+export function openCombatEntryEditor({ kind, item, resources = [], weapons = [], inventoryItems = [], onSave } = {}) {
   if (!['quirk', 'ability', 'technique', 'weapon', 'spell'].includes(kind)) throw new Error('Unbekannter Kampfprofil-Editor.');
   state.kind = kind;
   state.item = clone(item || {});
   state.resources = clone(resources || []);
   state.weapons = clone(weapons || []);
+  state.inventoryItems = clone(inventoryItems || []);
   state.onSave = typeof onSave === 'function' ? onSave : null;
   render();
 }

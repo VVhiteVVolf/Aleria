@@ -30,6 +30,8 @@
       isObject(comment.combatTransaction)
       || hasResolutionId(comment.combatResolution, 'resolutionId')
       || segments.some(segment => hasResolutionId(segment?.combatResolution, 'resolutionId'))
+      || segments.some(segment => (Array.isArray(segment?.combatResolutions) ? segment.combatResolutions : [])
+        .some(resolution => hasResolutionId(resolution, 'resolutionId')))
     ) kinds.add('combat');
     if (
       isObject(comment.inventoryTransaction)

@@ -132,6 +132,8 @@ function getLocalCommentBackend() {
         scenePoll: commentMetadata.scenePoll && typeof commentMetadata.scenePoll === 'object' ? commentMetadata.scenePoll : null,
         sceneDiceRoll: commentMetadata.sceneDiceRoll && typeof commentMetadata.sceneDiceRoll === 'object' ? commentMetadata.sceneDiceRoll : null,
         sceneRest: commentMetadata.sceneRest && typeof commentMetadata.sceneRest === 'object' ? commentMetadata.sceneRest : null,
+        combatEncounter: commentMetadata.combatEncounter && typeof commentMetadata.combatEncounter === 'object' ? commentMetadata.combatEncounter : null,
+        encounterTransaction: commentMetadata.encounterTransaction && typeof commentMetadata.encounterTransaction === 'object' ? commentMetadata.encounterTransaction : null,
         restTransaction: commentMetadata.restTransaction && typeof commentMetadata.restTransaction === 'object' ? commentMetadata.restTransaction : null,
         combatAction: commentMetadata.combatAction && typeof commentMetadata.combatAction === 'object' ? commentMetadata.combatAction : null,
         combatResolution: commentMetadata.combatResolution && typeof commentMetadata.combatResolution === 'object' ? commentMetadata.combatResolution : null,
@@ -150,76 +152,16 @@ function getLocalCommentBackend() {
       return { id: comments[comments.length - 1].id };
     },
     async addSceneRest(entryId, text, deleteCode, metadata = {}) {
-      const participants = Array.isArray(metadata.sceneRest?.participants) ? metadata.sceneRest.participants : [];
-      const persistsOnlineProfiles = participants.some(participant => (
-        ['character', 'creature'].includes(participant?.persistence?.kind)
-        && participant?.persistence?.recordId
-      ));
-      if (persistsOnlineProfiles) {
-        throw new Error('Diese Rast verändert Online-Profile und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
-      }
-      return this.addComment(entryId, 'Erzähler', '', null, text, deleteCode, true, {
-        ...metadata,
-        restTransaction: {
-          schemaVersion: 1,
-          transactionId: makeLocalCommentId(),
-          committedAtClient: Date.now(),
-          atomicProfileUpdates: 0,
-          localSceneState: true
-        }
-      });
+      throw new Error('Rasten verändern verbindlichen Szenenzustand und benötigen eine Online-Verbindung.');
+    },
+    async addCombatEncounter() {
+      throw new Error('Kampfankündigungen verändern verbindlichen Szenenzustand und benötigen eine Online-Verbindung.');
     },
     async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
-      const resolutions = (Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [])
-        .map(segment => segment?.combatResolution)
-        .filter(Boolean);
-      const inventoryUses = (Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [])
-        .map(segment => segment?.inventoryUse)
-        .filter(Boolean);
-      const hasPersistentTarget = resolutions.some(resolution => (
-        (['character', 'creature'].includes(resolution?.targetPersistence?.kind)
-          && resolution?.targetPersistence?.recordId)
-        || (Array.isArray(resolution?.resourceCosts) && resolution.resourceCosts.some(cost => cost?.scope !== 'comment')
-          && ['character', 'creature'].includes(resolution?.actorPersistence?.kind)
-          && resolution?.actorPersistence?.recordId)
-        || (Array.isArray(resolution?.actorCombatProfile?.dailyResources) && resolution.actorCombatProfile.dailyResources.length > 0
-          && ['character', 'creature'].includes(resolution?.actorPersistence?.kind)
-          && resolution?.actorPersistence?.recordId)
-      )) || inventoryUses.some(inventoryUse => (
-        inventoryUse?.actorPersistence?.kind === 'character'
-          && inventoryUse?.actorPersistence?.recordId
-      ));
-      if (hasPersistentTarget) {
-        throw new Error('Dieser Beitrag verändert ein Online-Profil und kann ohne Firebase-Verbindung nicht sicher gespeichert werden.');
-      }
-      return this.addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, {
-        ...metadata,
-        combatTransaction: {
-          schemaVersion: 1,
-          transactionId: makeLocalCommentId(),
-          committedAtClient: Date.now(),
-          atomicProfileUpdates: 0,
-          localSceneState: true
-        },
-        inventoryTransaction: inventoryUses.length ? {
-          schemaVersion: 1,
-          transactionId: makeLocalCommentId(),
-          committedAtClient: Date.now(),
-          operations: inventoryUses.length,
-          localSceneState: true
-        } : null
-      });
+      throw new Error('Kampfhandlungen verändern verbindlichen Zustand und benötigen eine Online-Verbindung. Der Entwurf bleibt lokal erhalten.');
     },
     async addSkillComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
-      return this.addComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, {
-        ...metadata,
-        skillTransaction: {
-          schemaVersion: 1,
-          transactionId: makeLocalCommentId(),
-          committedAtClient: Date.now(),
-          localSceneState: true
-        }
-      });
+      throw new Error('Fertigkeitsauswertungen müssen serverseitig geprüft werden und benötigen eine Online-Verbindung. Der Entwurf bleibt lokal erhalten.');
     },
     async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {
       const store = readLocalCommentStore();

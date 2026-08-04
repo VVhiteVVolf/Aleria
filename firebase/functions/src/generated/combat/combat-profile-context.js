@@ -6,7 +6,7 @@ import {
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
+} from './combat-profile-model.js?v=20260804-referee-v2';
 import { getOrderedSpellSlotResources, getSpellLevelLabel } from './combat-spell-slots.js?v=20260803-character-creation-v1';
 
 const ACTION_ECONOMY_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);

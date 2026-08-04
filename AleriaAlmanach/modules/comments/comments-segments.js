@@ -82,7 +82,9 @@ function setCommentSegmentKind(id, kind) {
   if (segment.kind === 'action') {
     segment.mechanicMode = 'normal';
     segment.combatTargetId = '';
+    segment.combatTargetIds = [];
     segment.combatActionId = '';
+    segment.combatCastLevel = 0;
     segment.combatRollMode = 'normal';
     segment.combatWeaponGrip = 'one-handed';
     segment.combatDistanceMeters = 0;
@@ -114,8 +116,10 @@ function setCommentSegmentActor(id, actorId) {
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
+  segment.combatCastLevel = 0;
   segment.combatPaymentConfirmed = false;
   if (segment.combatTargetId === actor.id) segment.combatTargetId = '';
+  segment.combatTargetIds = (segment.combatTargetIds || []).filter(id => String(id) !== String(actor.id));
   renderCommentSegmentList();
   updateCommentFormPreview();
   persistCommentDraft();
@@ -287,11 +291,16 @@ function buildCommentSegmentsForSave() {
         skillChallengePreferredSkills: Array.isArray(segment.skillChallengePreferredSkills) ? [...segment.skillChallengePreferredSkills] : [],
         skillChallengePreferredModifier: Number(segment.skillChallengePreferredModifier ?? 2),
         skillChallengeAlternativeModifier: Number(segment.skillChallengeAlternativeModifier ?? -2),
+        skillChallengeDefenseMode: segment.skillChallengeDefenseMode === 'fixed' ? 'fixed' : 'passive',
+        skillChallengeDefenseSkillId: String(segment.skillChallengeDefenseSkillId || 'deception'),
+        skillRuleSelections: Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections.map(selection => ({ ...selection })) : [],
         inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
         inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
         ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
+          combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],
           combatActionId: String(segment.combatActionId || ''),
+          combatCastLevel: Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
           combatWeaponGrip: String(segment.combatWeaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed',
           combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),

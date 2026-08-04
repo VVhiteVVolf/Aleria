@@ -73,7 +73,9 @@ async function submitEditComment() {
     const sameMechanics = storedAction
       && String(storedAction.actorId || '') === actorId
       && String(storedAction.targetId || '') === String(segment.combatTargetId || '')
+      && JSON.stringify(storedAction.targetIds || [storedAction.targetId].filter(Boolean)) === JSON.stringify(segment.combatTargetIds || [segment.combatTargetId].filter(Boolean))
       && String(storedAction.profileActionId || '') === String(segment.combatActionId || '')
+      && Number(storedAction.castLevel || 0) === Number(segment.combatCastLevel || 0)
       && String(storedAction.paymentMode || 'standard') === String(segment.combatPaymentMode || 'standard');
     if (!sameMechanics) {
       combatMechanicsError = 'Ziel, Angreifer und aktiver Angriff einer bereits ausgewerteten Kampfhandlung sind unveränderlich. Erstelle für einen neuen Wurf einen neuen Beitrag.';
@@ -83,7 +85,8 @@ async function submitEditComment() {
     return {
       ...cleanSegment,
       combatAction: storedAction,
-      combatResolution: stored.combatResolution
+      combatResolution: stored.combatResolution,
+      ...(Array.isArray(stored.combatResolutions) ? { combatResolutions: stored.combatResolutions } : {})
     };
   });
   if (combatMechanicsError) {

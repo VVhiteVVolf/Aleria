@@ -58,9 +58,17 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     skillChallengePreferredSkills: Array.isArray(combatSettings?.skillChallengePreferredSkills) ? [...combatSettings.skillChallengePreferredSkills] : [],
     skillChallengePreferredModifier: Number(combatSettings?.skillChallengePreferredModifier ?? 2),
     skillChallengeAlternativeModifier: Number(combatSettings?.skillChallengeAlternativeModifier ?? -2),
+    skillChallengeDefenseMode: combatSettings?.skillChallengeDefenseMode === 'fixed' ? 'fixed' : 'passive',
+    skillChallengeDefenseSkillId: String(combatSettings?.skillChallengeDefenseSkillId || 'deception'),
+    skillRuleSelections: Array.isArray(combatSettings?.skillRuleSelections) ? combatSettings.skillRuleSelections.map(selection => ({ ...selection })) : [],
     storedSkillResolution: combatSettings?.storedSkillResolution || null,
     storedSkillChallenge: combatSettings?.storedSkillChallenge || null,
     combatTargetId: usesCombatResolution ? String(combatSettings?.targetId || combatSettings?.combatTargetId || '') : '',
+    combatTargetIds: usesCombatResolution
+      ? [...new Set((Array.isArray(combatSettings?.targetIds || combatSettings?.combatTargetIds)
+        ? (combatSettings.targetIds || combatSettings.combatTargetIds)
+        : [combatSettings?.targetId || combatSettings?.combatTargetId]).map(String).filter(Boolean))]
+      : [],
     combatActionId: usesCombatResolution ? String(combatSettings?.actionId || combatSettings?.combatActionId || '') : '',
     combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
       ? String(combatSettings.rollMode || combatSettings.combatRollMode)
@@ -73,6 +81,9 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     ) === 'two-handed'
       ? 'two-handed'
       : 'one-handed',
+    combatCastLevel: usesCombatResolution
+      ? Math.max(0, Math.min(10, Number(combatSettings?.castLevel ?? combatSettings?.combatCastLevel ?? combatSettings?.storedCombatAction?.castLevel) || 0))
+      : 0,
     combatDistanceMeters: usesCombatResolution
       ? Math.max(0, Math.min(9999, Number(combatSettings?.distanceMeters ?? combatSettings?.combatDistanceMeters) || 0))
       : 0,

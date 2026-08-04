@@ -6,6 +6,17 @@ export function isTrustedMechanicalComment(comment = {}) {
   return !isImportedHistory(comment) && comment?.serverValidatedMechanics === true;
 }
 
+export function isTrustedSceneContributionComment(comment = {}) {
+  return !isImportedHistory(comment)
+    && (comment?.serverCommitted === true || comment?.serverValidatedMechanics === true);
+}
+
+export function isTrustedSkillChallengeComment(comment = {}) {
+  if (isImportedHistory(comment) || comment?.serverCommitted !== true || comment?.mechanicalAudit !== true) return false;
+  return (Array.isArray(comment.commentSegments) ? comment.commentSegments : [])
+    .some(segment => segment?.skillChallenge?.enabled !== false && segment?.skillChallenge?.id);
+}
+
 export function isTrustedSceneTimeComment(comment = {}) {
   if (isImportedHistory(comment) || !comment?.sceneTimeEvent || typeof comment.sceneTimeEvent !== 'object') return false;
   return comment.serverValidatedMechanics === true

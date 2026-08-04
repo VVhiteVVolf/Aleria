@@ -121,11 +121,12 @@ function character(id, combatProfile = {}) {
 }
 
 class FakeDiceAdapter {
-  constructor(attackRoll, damageRoll = { total: 9, notation: '1d8+5', keptDice: [4], modifier: 5 }) {
+  constructor(attackRoll, damageRoll = { total: 9, notation: '1d8+5', keptDice: [4], modifier: 5 }, savingThrowRoll = { natural: 10 }) {
     this.attackRoll = attackRoll;
     this.damageRoll = damageRoll;
     this.attackCalls = [];
     this.damageCalls = [];
+    this.savingThrowRoll = savingThrowRoll;
   }
 
   async rollAttack(request) {
@@ -136,6 +137,14 @@ class FakeDiceAdapter {
   async rollDamage(request) {
     this.damageCalls.push(request);
     return { id: 'damage-roll', visualMode: '3d', ...this.damageRoll };
+  }
+
+  async rollSavingThrow(request) {
+    const natural = Number(this.savingThrowRoll.natural) || 1;
+    return {
+      id: 'saving-throw-roll', natural, dice: [natural], keptDice: [natural],
+      total: natural + Number(request.modifier || 0), visualMode: '3d'
+    };
   }
 }
 
@@ -148,7 +157,7 @@ class FakeSkillDiceAdapter {
   }
 }
 
-test('migriert das alte Kampfprofil verlustarm in Schema acht', () => {
+test('migriert das alte Kampfprofil verlustarm in Schema neun', () => {
   const profile = sanitizeCharacterCombatProfile({
     defense: 13,
     maximumHitPoints: 22,
@@ -158,7 +167,7 @@ test('migriert das alte Kampfprofil verlustarm in Schema acht', () => {
     weapon: { name: 'Speer', damageFormula: '1W6 + 1' },
     armor: { name: 'Lederrüstung', defenseBonus: 2 }
   });
-  assert.equal(profile.schemaVersion, 8);
+  assert.equal(profile.schemaVersion, 9);
   assert.equal(profile.armorClass.base, 13);
   assert.equal(profile.hitPoints.maximumOverride, 22);
   assert.equal(profile.combat.attackBonus, 4);
@@ -1227,4 +1236,55 @@ test('fertigkeitsspezifischer Nachteil greift nur bei den hinterlegten Fertigkei
   });
   assert.equal(athletics.rollMode, 'normal');
   assert.equal(athleticsDice.calls[0].rollMode, 'normal');
+});
+
+test('Kanalisierung speichert Fortschritt und löst Kosten sowie Wirkung erst beim Abschluss aus', async () => {
+  const baseActor = resolveCombatProfile(character('actor'));
+  const target = resolveCombatProfile(character('target'));
+  const actor = {
+    ...baseActor,
+    profileActionId: 'spell:storm-call',
+    profileActionKind: 'spell',
+    selectedAction: {
+      ...baseActor.selectedAction,
+      id: 'storm-call',
+      name: 'Sturmruf',
+      channelComments: 3,
+      effects: [{ id: 'storm-damage', type: 'damage', target: 'target', formula: '1d8', damageType: 'Blitz', on: 'hit' }]
+    }
+  };
+  const dice = new FakeDiceAdapter({ natural: 15, total: 20 });
+  const service = new CombatResolutionService(dice);
+  const first = await service.resolveAttack({ actor, target });
+  assert.equal(first.actionType, 'channeling');
+  assert.equal(first.actorChannelingSnapshot.after.progress, 1);
+  assert.equal(first.actorResourceSnapshot, null);
+  assert.equal(dice.attackCalls.length, 0);
+
+  const second = await service.resolveAttack({ actor: { ...actor, channeling: first.actorChannelingSnapshot.after }, target });
+  assert.equal(second.actorChannelingSnapshot.after.progress, 2);
+  assert.equal(dice.attackCalls.length, 0);
+
+  const completed = await service.resolveAttack({ actor: { ...actor, channeling: second.actorChannelingSnapshot.after }, target });
+  assert.equal(completed.actionType, 'attack');
+  assert.equal(completed.actorChannelingSnapshot.after, null);
+  assert.equal(dice.attackCalls.length, 1);
+});
+
+test('Schaden prüft eine laufende Konzentration und beendet sie bei misslungener Rettung', async () => {
+  const actor = resolveCombatProfile(character('actor'));
+  const target = {
+    ...resolveCombatProfile(character('target')),
+    concentration: { actionId: 'spell:fog', actionName: 'Nebelwand', ownerActorId: 'target' }
+  };
+  const dice = new FakeDiceAdapter(
+    { natural: 18, total: 23 },
+    { total: 12, notation: '1d8+5', keptDice: [7], modifier: 5 },
+    { natural: 4 }
+  );
+  const resolution = await new CombatResolutionService(dice).resolveAttack({ actor, target });
+  const concentrationSave = resolution.secondarySaves.find(save => save.type === 'concentration');
+  assert.equal(concentrationSave.succeeded, false);
+  assert.equal(resolution.targetConcentrationSnapshot.after, null);
+  assert.equal(resolution.targetConcentrationSnapshot.reason, 'save-failed');
 });

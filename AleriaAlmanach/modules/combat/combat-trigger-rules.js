@@ -1,6 +1,12 @@
 import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260803-economy-audit-v1';
+import { normalizeCombatEffects } from './combat-effect-model.js?v=20260804-referee-v2';
 
-const RULE_PHASES = new Set(['pre-roll', 'post-roll', 'post-hit', 'pre-damage']);
+export const COMBAT_RULE_PHASES = Object.freeze([
+  'pre-roll', 'post-roll', 'post-hit', 'pre-damage', 'on-damaged', 'post-damage',
+  'on-heal', 'on-condition-applied', 'on-condition-removed', 'on-resource-spent',
+  'on-defeat', 'on-concentration-check', 'on-channel-progress', 'on-combat-start', 'on-combat-end'
+]);
+const RULE_PHASES = new Set(COMBAT_RULE_PHASES);
 const RULE_RECIPIENTS = new Set(['actor', 'target']);
 const RULE_RELATIONS = new Set(['self', 'ally', 'enemy', 'any']);
 const RULE_ACTIVATIONS = new Set(['passive', 'reaction']);
@@ -14,6 +20,8 @@ const ROLL_MODES = new Set(['normal', 'advantage', 'disadvantage']);
 const ACTION_KINDS = new Set(['weapon', 'technique', 'ability', 'spell', 'prayer', 'song', 'skill']);
 const ACTION_SCOPES = new Set(['entry', 'global']);
 const ACTION_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action']);
+const RULE_AUTHORITIES = new Set(['normal', 'passive', 'timed', 'reaction', 'absolute']);
+const RULE_AUTHORITY_RANK = Object.freeze({ normal: 100, passive: 200, timed: 300, reaction: 400, absolute: 500 });
 
 function text(value, maximum = 160) {
   return String(value || '').trim().slice(0, maximum);
@@ -94,6 +102,7 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
   const frequency = text(source.frequency || source.firstPer, 30);
   const condition = text(source.condition || source.when, 40);
   const actionScope = text(source.actionScope, 30);
+  const authority = text(source.authority, 30);
   const actionKinds = (Array.isArray(source.actionKinds) ? source.actionKinds : String(source.actionKinds || '').split(','))
     .map(value => text(value, 30))
     .filter(value => ACTION_KINDS.has(value));
@@ -115,8 +124,12 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     requiredTargetTags: normalizedList(source.requiredTargetTags),
     radiusMeters: optionalNumber(source.radiusMeters, 0, 9999),
     priority: number(source.priority, 0, -99, 99),
+    authority: RULE_AUTHORITIES.has(authority)
+      ? authority
+      : (activation === 'reaction' ? 'reaction' : 'passive'),
     description: text(source.description, 1000),
-    effects: sanitizeCombatRuleEffects(source.effects)
+    effects: sanitizeCombatRuleEffects(source.effects),
+    resultEffects: normalizeCombatEffects(source.resultEffects)
   };
 }
 
@@ -292,7 +305,10 @@ export function collectApplicableCombatRules({
         recipient: rule.recipient,
         sourceRelation: rule.sourceRelation,
         priority: rule.priority,
+        authority: rule.authority,
+        authorityRank: RULE_AUTHORITY_RANK[rule.authority] || RULE_AUTHORITY_RANK.normal,
         effects: { ...rule.effects },
+        resultEffects: rule.resultEffects.map(effect => ({ ...effect })),
         costs: rule.activation === 'reaction' ? rule.costs.map(cost => ({ ...cost })) : [],
         consumesAbilityUse: rule.activation === 'reaction' && rule.entryKind === 'ability' && rule.abilityUsesMaximum > 0
       });
@@ -312,12 +328,35 @@ export function mergeCombatRuleEffects(applications = []) {
       effects[key] += Number(current[key] || 0);
     });
     if (current.rollMode !== 'normal') rollModes.push(current.rollMode);
-    if (current.outcome !== 'none') outcome = current.outcome;
+    // Outcome forcing is resolved below using explicit authority, not array order.
   });
   const advantage = rollModes.includes('advantage');
   const disadvantage = rollModes.includes('disadvantage');
   effects.rollMode = advantage === disadvantage ? 'normal' : (advantage ? 'advantage' : 'disadvantage');
+  const forcing = applications
+    .map(application => ({
+      application,
+      outcome: sanitizeCombatRuleEffects(application.effects).outcome,
+      rank: Number(application.authorityRank) || RULE_AUTHORITY_RANK[application.authority] || RULE_AUTHORITY_RANK.normal,
+      priority: Number(application.priority) || 0
+    }))
+    .filter(item => item.outcome !== 'none')
+    .sort((left, right) => right.rank - left.rank || right.priority - left.priority);
+  const highestRank = forcing[0]?.rank ?? null;
+  const highestPriority = forcing.find(item => item.rank === highestRank)?.priority ?? null;
+  const finalists = forcing.filter(item => item.rank === highestRank && item.priority === highestPriority);
+  const finalistOutcomes = [...new Set(finalists.map(item => item.outcome))];
+  const conflicts = finalistOutcomes.length > 1 ? finalists.map(item => ({
+    outcome: item.outcome,
+    sourceActorId: item.application.sourceActorId,
+    sourceActorName: item.application.sourceActorName,
+    ruleName: item.application.ruleName,
+    authority: item.application.authority,
+    priority: item.priority
+  })) : [];
+  outcome = conflicts.length ? 'none' : (finalistOutcomes[0] || 'none');
   effects.outcome = outcome;
+  effects.conflicts = conflicts;
   return effects;
 }
 
@@ -332,10 +371,15 @@ export function deriveCombatRuleFrequencyKeys(comments = []) {
   const keys = new Set();
   (Array.isArray(comments) ? comments : []).forEach(comment => {
     (Array.isArray(comment?.commentSegments) ? comment.commentSegments : []).forEach(segment => {
-      const applications = segment?.combatResolution?.ruleApplications;
-      (Array.isArray(applications) ? applications : []).forEach(application => {
-        const storedKey = text(application.usedKey, 500);
-        if (storedKey) keys.add(storedKey);
+      const resolutions = Array.isArray(segment?.combatResolutions)
+        ? segment.combatResolutions
+        : [segment?.combatResolution];
+      resolutions.forEach(resolution => {
+        const applications = resolution?.ruleApplications;
+        (Array.isArray(applications) ? applications : []).forEach(application => {
+          const storedKey = text(application.usedKey, 500);
+          if (storedKey) keys.add(storedKey);
+        });
       });
     });
   });
@@ -347,5 +391,6 @@ export const combatTriggerRuleInternals = Object.freeze({
   conditionAllows,
   actionAllows,
   distanceAllows,
-  relationAllows
+  relationAllows,
+  RULE_AUTHORITY_RANK
 });

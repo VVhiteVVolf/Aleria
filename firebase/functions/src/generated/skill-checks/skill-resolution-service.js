@@ -6,11 +6,13 @@ import {
   normalizeSkillCheckSettings,
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
+import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260804-referee-v2';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects
-} from '../combat/combat-trigger-rules.js?v=20260803-gawain-level4-v1';
+} from '../combat/combat-trigger-rules.js?v=20260804-referee-v2';
+import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260804-referee-v2';
 
 export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-2';
 
@@ -36,6 +38,30 @@ function ledger(applications, before, after) {
   return applications.map(application => ({ ...application, before: { ...before }, after: { ...after } }));
 }
 
+function buildSkillAuraApplications(sources = []) {
+  return sources.flatMap(source => {
+    const selected = new Set(Array.isArray(source.selectedRuleIds) ? source.selectedRuleIds : []);
+    if (source.sourceRole === 'support' && !selected.has('@aura:actor')) return [];
+    const mechanics = getAuraTargetMechanics(source.profile, {
+      relation: source.relationToActor,
+      distanceMeters: source.distanceToActor
+    });
+    const skillModifier = Number(mechanics.skill || 0);
+    const rollMode = mechanics.attackRollMode || 'normal';
+    if (!skillModifier && rollMode === 'normal') return [];
+    return [{
+      applicationKey: `${source.actorId}:aura:skill-actor`,
+      usedKey: '', sourceActorId: String(source.actorId || ''), sourceActorName: String(source.actorName || ''),
+      sourceRole: source.sourceRole, relationToActor: source.relationToActor, relationToTarget: source.relationToTarget,
+      entryKind: 'aura', entryId: 'aura', entryName: source.profile?.aura?.name || 'Aura & Präsenz',
+      ruleId: '@aura:actor', ruleName: `${source.profile?.aura?.name || 'Aura'} auf Fertigkeitsprobe`,
+      phase: 'pre-roll', activation: 'passive', frequency: 'always', condition: 'always', recipient: 'actor',
+      authority: 'passive', authorityRank: 200, priority: -10,
+      effects: { skillModifier, rollMode, outcome: 'none' }, costs: [], consumesAbilityUse: false
+    }];
+  });
+}
+
 export class SkillResolutionService {
   constructor(diceAdapter) {
     this.dice = diceAdapter;
@@ -43,7 +69,7 @@ export class SkillResolutionService {
 
   async resolve({ actor, settings: sourceSettings, challenge = null, actorPersistence = null } = {}, options = {}) {
     const settings = normalizeSkillCheckSettings(sourceSettings);
-    const skill = resolveSkillModifier(actor, settings.skillId);
+    const skill = resolveSkillModifier(options.actorProfile || actor, settings.skillId);
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
     const sources = Array.isArray(options.ruleSources) && options.ruleSources.length
       ? options.ruleSources
@@ -65,13 +91,15 @@ export class SkillResolutionService {
     const preApplications = collectApplicableCombatRules({
       phase: 'pre-roll', actionKind: 'skill', sources, periods,
       usedFrequencyKeys: usedRuleFrequencyKeys, state: skillRuleState
-    });
+    }).concat(buildSkillAuraApplications(sources));
     markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
     const preEffects = mergeCombatRuleEffects(preApplications);
     const rollMode = mergeRollModes(settings.rollMode, preEffects.rollMode);
     const baseModifier = skill.modifier + settings.customModifier + affinityModifier;
     const preModifier = baseModifier + preEffects.skillModifier;
-    const difficulty = challenge?.difficulty ?? settings.difficulty;
+    const difficulty = Number.isFinite(Number(options.opposedDifficulty))
+      ? Number(options.opposedDifficulty)
+      : (challenge?.difficulty ?? settings.difficulty);
     const notation = buildSkillRollNotation(preModifier, rollMode);
     options.onPhase?.({ phase: 'skill', notation, skill, difficulty });
     const roll = await this.dice.rollSkill({
@@ -102,6 +130,9 @@ export class SkillResolutionService {
       ...ledger(preApplications, { modifier: baseModifier, rollMode: settings.rollMode }, { modifier: preModifier, rollMode }),
       ...ledger(postApplications, { total: Number(roll.total), outcome: firstOutcome }, { total, outcome })
     ];
+    const ruleResourceSnapshots = consumeCombatRuleResources(ruleApplications, sources, {
+      actorId: String(actor.id || '')
+    });
     return {
       schemaVersion: 2,
       rulesVersion: SKILL_EVALUATION_RULES_VERSION,
@@ -120,6 +151,8 @@ export class SkillResolutionService {
       ruleModifier: preEffects.skillModifier + postEffects.skillModifier,
       totalModifier: preModifier + postEffects.skillModifier,
       difficulty,
+      authoredDifficulty: challenge?.difficulty ?? null,
+      opposedDefense: options.opposedDefense || null,
       rollMode,
       notation,
       natural,
@@ -134,6 +167,11 @@ export class SkillResolutionService {
       targetSegmentIndex: challenge?.segmentIndex ?? null,
       targetContributionRank: challenge?.contributionRank ?? null,
       ruleApplications,
+      ruleResourceSnapshots,
+      ruleConflicts: [
+        ['pre-roll', preEffects.conflicts],
+        ['post-roll', postEffects.conflicts]
+      ].filter(([, conflicts]) => Array.isArray(conflicts) && conflicts.length).map(([phase, conflicts]) => ({ phase, applications: conflicts })),
       usedRuleFrequencyKeys: [...usedRuleFrequencyKeys],
       narration: null,
       resolvedAt: new Date().toISOString()

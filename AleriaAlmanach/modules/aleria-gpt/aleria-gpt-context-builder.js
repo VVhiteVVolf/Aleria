@@ -504,7 +504,48 @@ function normalizeAleriaGptCombatResolution(value = {}) {
     damageAbsorbedByTemporaryHitPoints: getAleriaGptFiniteNumber(target.damageAbsorbedByTemporaryHitPoints),
     damageAppliedToHitPoints: getAleriaGptFiniteNumber(target.damageAppliedToHitPoints),
     defeated: target.defeated === true,
+    defeat: value.defeat || null,
     resourceChanges,
+    targetResourceChanges: Array.isArray(value.targetResourceSnapshot?.before) && Array.isArray(value.targetResourceSnapshot?.after)
+      ? value.targetResourceSnapshot.after.flatMap(after => {
+          const before = value.targetResourceSnapshot.before.find(item => item?.id === after?.id);
+          return before && Number(before.current) !== Number(after.current) ? [{ name: String(after.name || before.name || 'Ressource'), before: getAleriaGptFiniteNumber(before.current), after: getAleriaGptFiniteNumber(after.current) }] : [];
+        })
+      : [],
+    effects: (Array.isArray(value.effectResults) ? value.effectResults : []).map(result => ({
+      type: String(result?.effect?.type || ''),
+      target: String(result?.effect?.target || 'target'),
+      damageType: String(result?.effect?.damageType || ''),
+      magical: result?.effect?.magical === true,
+      amount: getAleriaGptFiniteNumber(result?.amount),
+      effectiveDamage: getAleriaGptFiniteNumber(result?.applied?.incoming),
+      damageResponse: String(result?.applied?.damageResponse?.response || ''),
+      healing: getAleriaGptFiniteNumber(result?.applied?.restored),
+      temporaryHitPoints: getAleriaGptFiniteNumber(result?.applied?.granted),
+      conditionApplied: String(result?.condition?.name || ''),
+      conditionsRemoved: (Array.isArray(result?.removed) ? result.removed : []).map(condition => String(condition?.name || '')).filter(Boolean),
+      resourceChange: result?.applied?.change ? { name: String(result.applied.change.name || ''), before: getAleriaGptFiniteNumber(result.applied.change.before), after: getAleriaGptFiniteNumber(result.applied.change.after) } : null,
+      notes: compactAleriaGptText(result?.effect?.notes || '')
+    })),
+    rules: (Array.isArray(value.ruleApplications) ? value.ruleApplications : []).map(rule => ({
+      source: String(rule?.sourceActorName || ''), rule: String(rule?.ruleName || ''), phase: String(rule?.phase || ''),
+      authority: String(rule?.authority || ''), effects: rule?.effects && typeof rule.effects === 'object' ? { ...rule.effects } : {}
+    })),
+    ruleConflicts: (Array.isArray(value.ruleConflicts) ? value.ruleConflicts : []).map(conflict => ({
+      phase: String(conflict?.phase || ''),
+      rules: (Array.isArray(conflict?.applications) ? conflict.applications : []).map(application => String(application?.ruleName || '')).filter(Boolean)
+    })),
+    secondarySaves: (Array.isArray(value.secondarySaves) ? value.secondarySaves : []).map(save => ({
+      attributeKey: String(save?.attributeKey || ''), total: getAleriaGptFiniteNumber(save?.total), dc: getAleriaGptFiniteNumber(save?.dc), succeeded: save?.succeeded === true
+    })),
+    followUpAttacks: (Array.isArray(value.followUpAttacks) ? value.followUpAttacks : []).map(followUp => ({
+      total: getAleriaGptFiniteNumber(followUp?.attack?.total), targetDefense: getAleriaGptFiniteNumber(followUp?.attack?.targetDefense), hit: followUp?.attack?.hit === true,
+      damage: getAleriaGptFiniteNumber(followUp?.damage?.total), damageType: String(followUp?.damage?.damageType || '')
+    })),
+    conditionChanges: value.targetConditionSnapshot ? {
+      before: (Array.isArray(value.targetConditionSnapshot.before) ? value.targetConditionSnapshot.before : []).map(condition => String(condition?.name || '')).filter(Boolean),
+      after: (Array.isArray(value.targetConditionSnapshot.after) ? value.targetConditionSnapshot.after : []).map(condition => String(condition?.name || '')).filter(Boolean)
+    } : null,
     narration: compactAleriaGptText(value.narration?.text || '')
   };
 }
@@ -555,7 +596,8 @@ function normalizeAleriaGptSceneRest(value = {}) {
 function formatAleriaGptSegmentMechanics({ skillResolution, combatResolution, inventoryUse, sceneRest, sceneTimeEvent } = {}) {
   const lines = [];
   if (skillResolution) {
-    lines.push(`Fertigkeitsauswertung: ${skillResolution.skillName || skillResolution.skillId || 'Fertigkeit'} = ${skillResolution.outcome || 'unbekannt'}, Gesamt ${skillResolution.total}, SG ${skillResolution.difficulty}.`);
+    lines.push(`Fertigkeitsauswertung: ${skillResolution.skillName || skillResolution.skillId || 'Fertigkeit'} = ${skillResolution.outcome || 'unbekannt'}, Gesamt ${skillResolution.total}, SG ${skillResolution.difficulty}${skillResolution.customModifierDeclared ? '; freier Zusatzmodifikator wurde ausdrücklich verwendet' : ''}.`);
+    (skillResolution.rules || []).forEach(rule => lines.push(`Fertigkeitsregel: ${rule.source || 'Regelquelle'} · ${rule.rule || 'Regel'} (${rule.phase || 'Phase'}).`));
   }
   if (combatResolution) {
     const savingThrow = combatResolution.resolutionMode === 'saving-throw';
@@ -574,6 +616,13 @@ function formatAleriaGptSegmentMechanics({ skillResolution, combatResolution, in
     combatResolution.resourceChanges.forEach(change => {
       lines.push(`Ressourcenverbrauch ${combatResolution.actorName || 'Akteur'}: ${change.name} ${change.before} -> ${change.after}.`);
     });
+    combatResolution.targetResourceChanges.forEach(change => lines.push(`Zielressource: ${change.name} ${change.before} -> ${change.after}.`));
+    combatResolution.effects.forEach(effect => lines.push(`Strukturierter Effekt: ${effect.type}${effect.damageType ? ` ${effect.damageType}` : ''}${effect.damageResponse ? ` (${effect.damageResponse})` : ''}; Betrag ${effect.amount}; wirksamer Schaden ${effect.effectiveDamage}; Heilung ${effect.healing}; temporäre TP ${effect.temporaryHitPoints}${effect.conditionApplied ? `; Zustand +${effect.conditionApplied}` : ''}${effect.conditionsRemoved.length ? `; Zustände entfernt ${effect.conditionsRemoved.join(', ')}` : ''}.`));
+    combatResolution.rules.forEach(rule => lines.push(`Kampfregel: ${rule.source || 'Regelquelle'} · ${rule.rule || 'Regel'} · Phase ${rule.phase || 'unbekannt'} · ${JSON.stringify(rule.effects)}.`));
+    combatResolution.ruleConflicts.forEach(conflict => lines.push(`Offener Regelkonflikt (${conflict.phase || 'Phase'}): ${conflict.rules.join(' gegen ')}; menschliche Entscheidung erforderlich.`));
+    combatResolution.secondarySaves.forEach(save => lines.push(`Sekundäre Rettung ${save.attributeKey}: ${save.total} gegen SG ${save.dc}, ${save.succeeded ? 'gelungen' : 'misslungen'}.`));
+    combatResolution.followUpAttacks.forEach(follow => lines.push(`Folgeangriff: ${follow.total} gegen ${follow.targetDefense}, ${follow.hit ? `Treffer mit ${follow.damage} ${follow.damageType}` : 'verfehlt'}.`));
+    if (combatResolution.conditionChanges) lines.push(`Zustände vorher: ${combatResolution.conditionChanges.before.join(', ') || 'keine'}; nachher: ${combatResolution.conditionChanges.after.join(', ') || 'keine'}.`);
   }
   if (inventoryUse) {
     const verb = inventoryUse.mode === 'consume' ? 'verbraucht' : 'benutzt';
@@ -602,16 +651,22 @@ function formatAleriaGptStoredMechanics(segment = {}, comment = {}, segmentIndex
         skillName: String(segment.skillResolution.skillName || ''),
         outcome: String(segment.skillResolution.outcome || ''),
         total: getAleriaGptFiniteNumber(segment.skillResolution.total),
-        difficulty: getAleriaGptFiniteNumber(segment.skillResolution.difficulty)
+        difficulty: getAleriaGptFiniteNumber(segment.skillResolution.difficulty),
+        customModifierDeclared: segment.skillResolution.customModifierDeclared === true,
+        opposedDefense: segment.skillResolution.opposedDefense || null,
+        rules: (Array.isArray(segment.skillResolution.ruleApplications) ? segment.skillResolution.ruleApplications : []).map(rule => ({ source: String(rule?.sourceActorName || ''), rule: String(rule?.ruleName || ''), phase: String(rule?.phase || '') }))
       }
     : null;
-  return formatAleriaGptSegmentMechanics({
-    skillResolution,
-    combatResolution: normalizeAleriaGptCombatResolution(segment?.combatResolution),
-    inventoryUse: normalizeAleriaGptInventoryUse(segment?.inventoryUse),
-    sceneRest: segmentIndex === 0 ? normalizeAleriaGptSceneRest(comment?.sceneRest) : null,
-    sceneTimeEvent: segmentIndex === 0 ? comment?.sceneTimeEvent : null
-  });
+  const combatResolutions = (Array.isArray(segment?.combatResolutions)
+    ? segment.combatResolutions
+    : [segment?.combatResolution]).map(normalizeAleriaGptCombatResolution).filter(Boolean);
+  return (combatResolutions.length ? combatResolutions : [null]).map((combatResolution, index) => formatAleriaGptSegmentMechanics({
+    skillResolution: index === 0 ? skillResolution : null,
+    combatResolution,
+    inventoryUse: index === 0 ? normalizeAleriaGptInventoryUse(segment?.inventoryUse) : null,
+    sceneRest: index === 0 && segmentIndex === 0 ? normalizeAleriaGptSceneRest(comment?.sceneRest) : null,
+    sceneTimeEvent: index === 0 && segmentIndex === 0 ? comment?.sceneTimeEvent : null
+  })).filter(Boolean).join('\n');
 }
 
 function getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeIds = new Set()) {
@@ -652,6 +707,9 @@ function getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeI
           outcome: String(segment.skillResolution.outcome || ''),
           total: Number(segment.skillResolution.total || 0),
           difficulty: Number(segment.skillResolution.difficulty || 0),
+          customModifierDeclared: segment.skillResolution.customModifierDeclared === true,
+          opposedDefense: segment.skillResolution.opposedDefense || null,
+          rules: (Array.isArray(segment.skillResolution.ruleApplications) ? segment.skillResolution.ruleApplications : []).map(rule => ({ source: String(rule?.sourceActorName || ''), rule: String(rule?.ruleName || ''), phase: String(rule?.phase || '') })),
           targetChallengeId: String(segment.skillResolution.targetChallengeId || ''),
           revealedText: String(segment.skillResolution.revealedText || '')
         }
@@ -670,7 +728,10 @@ function getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeI
     const kind = skillChallenge?.id && !revealedChallengeIds.has(skillChallenge.id)
       ? 'speech'
       : storedKind;
-    const combatResolution = normalizeAleriaGptCombatResolution(segment?.combatResolution);
+    const combatResolutions = (Array.isArray(segment?.combatResolutions)
+      ? segment.combatResolutions
+      : [segment?.combatResolution]).map(normalizeAleriaGptCombatResolution).filter(Boolean);
+    const combatResolution = combatResolutions[0] || null;
     const inventoryUse = normalizeAleriaGptInventoryUse(segment?.inventoryUse);
     const sceneRest = segmentIndex === 0 ? normalizeAleriaGptSceneRest(comment?.sceneRest) : null;
     const sceneTimeEvent = segmentIndex === 0 && comment?.sceneTimeEvent && typeof comment.sceneTimeEvent === 'object'
@@ -684,15 +745,16 @@ function getAleriaGptCommentSegments(comment, characterIndex, revealedChallengeI
       skillResolution,
       skillChallenge,
       combatResolution,
+      combatResolutions,
       inventoryUse,
       sceneRest,
-      mechanicsText: formatAleriaGptSegmentMechanics({
-        skillResolution,
-        combatResolution,
-        inventoryUse,
-        sceneRest,
-        sceneTimeEvent
-      }),
+      mechanicsText: (combatResolutions.length ? combatResolutions : [null]).map((entry, index) => formatAleriaGptSegmentMechanics({
+        skillResolution: index === 0 ? skillResolution : null,
+        combatResolution: entry,
+        inventoryUse: index === 0 ? inventoryUse : null,
+        sceneRest: index === 0 ? sceneRest : null,
+        sceneTimeEvent: index === 0 ? sceneTimeEvent : null
+      })).filter(Boolean).join('\n'),
       side: kind === 'action' || segmentNarrator ? '' : (String(segment?.side || 'left') === 'right' ? 'right' : 'left'),
       plainText: toAleriaGptPlainText(segment?.text || ''),
       sourceRef: `comment:${comment?.id || 'unknown'}:segment:${segmentIndex}`

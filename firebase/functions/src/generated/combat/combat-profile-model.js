@@ -9,9 +9,13 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260803-gawain-level4-v1';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260804-referee-v2';
+import {
+  normalizeCombatEffects,
+  normalizeDamageAffinity
+} from './combat-effect-model.js?v=20260804-referee-v2';
 
-export const COMBAT_PROFILE_SCHEMA_VERSION = 8;
+export const COMBAT_PROFILE_SCHEMA_VERSION = 9;
 
 export const COMBAT_ATTRIBUTE_DEFINITIONS = Object.freeze([
   { key: 'strength', label: 'Kraft', shortLabel: 'KRF' },
@@ -230,6 +234,13 @@ function sanitizeWeapon(value = {}, index = 0) {
     notes: normalizeText(source.notes, 800),
     requirements: normalizeText(source.requirements, 1000),
     aiInstructions: normalizeText(source.aiInstructions, 1600),
+    effects: normalizeCombatEffects(source.effects),
+    ammunition: source.ammunition && typeof source.ammunition === 'object' ? {
+      inventoryItemId: normalizeText(source.ammunition.inventoryItemId, 120),
+      amountPerUse: normalizeNumber(source.ammunition.amountPerUse, 1, 1, 99),
+      reloadAfter: normalizeNumber(source.ammunition.reloadAfter, 0, 0, 999),
+      required: normalizeBoolean(source.ammunition.required)
+    } : null,
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
@@ -429,6 +440,9 @@ function sanitizeAbility(value = {}, index = 0) {
     requirements: normalizeText(source.requirements, 1000),
     tags: normalizeText(source.tags, 500),
     aiInstructions: normalizeText(source.aiInstructions, 1600),
+    effects: normalizeCombatEffects(source.effects),
+    concentration: normalizeBoolean(source.concentration),
+    channelComments: normalizeNumber(source.channelComments, 0, 0, 99),
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
       allowed: normalizeBoolean(source.auraBypass?.allowed, true),
@@ -468,6 +482,15 @@ function sanitizeSpell(value = {}, index = 0) {
     requirements: normalizeText(source.requirements, 1000),
     tags: normalizeText(source.tags, 500),
     aiInstructions: normalizeText(source.aiInstructions, 1600),
+    effects: normalizeCombatEffects(source.effects),
+    concentration: normalizeBoolean(source.concentration),
+    channelComments: normalizeNumber(source.channelComments, 0, 0, 99),
+    upcast: source.upcast && typeof source.upcast === 'object' ? {
+      enabled: normalizeBoolean(source.upcast.enabled),
+      formulaPerLevel: normalizeCombatDamageFormula(source.upcast.formulaPerLevel),
+      amountPerLevel: normalizeNumber(source.upcast.amountPerLevel, 0, 0, 999),
+      maximumLevel: normalizeNumber(source.upcast.maximumLevel, 10, 1, 10)
+    } : { enabled: false, formulaPerLevel: '', amountPerLevel: 0, maximumLevel: 10 },
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
       allowed: normalizeBoolean(source.auraBypass?.allowed, true),
@@ -508,6 +531,8 @@ function sanitizeTechniqueFollowUp(value = {}) {
     damageType: normalizeText(source.damageType, 80),
     attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
     damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
+    triggerReactions: normalizeBoolean(source.triggerReactions, true),
+    repeatPerAttackRules: normalizeBoolean(source.repeatPerAttackRules, true),
     triggerFurtherEffects: normalizeBoolean(source.triggerFurtherEffects, false)
   };
 }
@@ -543,6 +568,7 @@ function sanitizeTechnique(value = {}, index = 0) {
     requirements: normalizeText(source.requirements, 1200),
     tags: normalizeText(source.tags, 500),
     aiInstructions: normalizeText(source.aiInstructions, 1600),
+    effects: normalizeCombatEffects(source.effects),
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
       allowed: normalizeBoolean(source.auraBypass?.allowed, true),
@@ -668,6 +694,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       specialLevels: normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10),
       experience: normalizeNumber(progression.experience ?? source.experience, 0, 0, 999999999),
       nextLevelExperience: normalizeOptionalNumber(progression.nextLevelExperience, 1, 999999999),
+      experienceReward: normalizeOptionalNumber(progression.experienceReward, 0, 999999999),
       proficiencyBonusOverride: normalizeOptionalNumber(progression.proficiencyBonusOverride, -20, 30)
     },
     attributes: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>
@@ -686,7 +713,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       shieldBonus: normalizeNumber(armorClass.shieldBonus, 0, -99, 99),
       magicModifier: normalizeNumber(armorClass.magicModifier, 0, -99, 99),
       otherModifier: normalizeNumber(armorClass.otherModifier, 0, -99, 99),
-      override: normalizeOptionalNumber(armorClass.override, 0, 999)
+      override: normalizeOptionalNumber(armorClass.override, 0, 999),
+      overrideMode: armorClass.overrideMode === 'base' ? 'base' : 'total'
     },
     combat: {
       movement: normalizeNumber(combat.movement, 9, 0, 999),
@@ -707,6 +735,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     techniques: sanitizeList(source.techniques, sanitizeTechnique),
     quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
+    damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity, 100),
     abilities: sanitizeList(source.abilities, sanitizeAbility),
     magic: {
       enabled: magicEnabled,
@@ -842,12 +871,16 @@ function getAppliedDexterityModifier(modifier, mode, cap) {
 
 export function getArmorClass(profile = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
-  if (normalized.armorClass.override != null) return normalized.armorClass.override;
+  if (normalized.armorClass.override != null && normalized.armorClass.overrideMode === 'total') {
+    return normalized.armorClass.override;
+  }
   const equipped = normalized.armorItems.filter(item => item.equipped);
   const bodyArmor = equipped
     .filter(item => item.kind === 'armor' && item.baseArmorClass != null)
     .sort((a, b) => b.baseArmorClass - a.baseArmorClass)[0] || null;
-  const base = bodyArmor?.baseArmorClass ?? normalized.armorClass.base;
+  const base = normalized.armorClass.override != null
+    ? normalized.armorClass.override
+    : (bodyArmor?.baseArmorClass ?? normalized.armorClass.base);
   const dexterityUnlocked = !bodyArmor?.dexterityUnlockLevel
     || getEffectiveCombatLevel(normalized) >= bodyArmor.dexterityUnlockLevel;
   const dexterityMode = dexterityUnlocked

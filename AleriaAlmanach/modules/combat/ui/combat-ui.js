@@ -350,6 +350,7 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   }
 
   const selectedTargetId = String(segment?.combatTargetId || '');
+  const selectedTargetIds = new Set((segment?.combatTargetIds || [selectedTargetId]).map(String).filter(Boolean));
   const selectedActionId = String(segment?.combatActionId || actor.profileActionId || '');
   const segmentKind = String(segment?.kind || 'combataction');
   const magic = isMagicSegmentKind(segmentKind);
@@ -360,13 +361,23 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
     ? 'two-handed'
     : 'one-handed';
+  const supportsMultipleTargets = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
   const targetOptions = targets.map(target => {
     const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
-    return `<option value="${escapeHtml(target.characterId)}"${target.characterId === selectedTargetId ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(optionLabel(target))}</option>`;
+    return `<option value="${escapeHtml(target.characterId)}"${selectedTargetIds.has(String(target.characterId)) ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(optionLabel(target))}</option>`;
   }).join('');
   const actionOptions = (actor.actions || []).map(action => (
     `<option value="${escapeHtml(action.id)}"${action.id === selectedActionId ? ' selected' : ''}${action.compatible === false ? ' disabled' : ''}>${escapeHtml(activationLabel(action.activationType))} · ${escapeHtml(action.kindLabel)} · ${escapeHtml(action.name)}${action.spellLevelLabel ? ` · ${escapeHtml(action.spellLevelLabel)}` : ''} · ${escapeHtml(action.formula.toUpperCase().replace(/D/g, 'W'))}${action.compatible === false ? ' · nicht mit aktiver Waffe möglich' : ''}</option>`
   )).join('');
+  const spellAction = actor.selectedAction?.spellLevel != null ? actor.selectedAction : null;
+  const selectedCastLevel = spellAction?.isCantrip ? 0 : Math.max(Number(spellAction?.spellLevel) || 1, Number(segment?.combatCastLevel) || Number(spellAction?.castLevel) || 1);
+  const maximumCastLevel = spellAction ? Math.max(Number(spellAction.spellLevel) || 0, Math.min(10, Number(spellAction.upcast?.maximumLevel) || 10)) : 0;
+  const castLevelOptions = spellAction ? Array.from({ length: maximumCastLevel - Number(spellAction.spellLevel) + 1 }, (_entry, index) => {
+    const level = Number(spellAction.spellLevel) + index;
+    const slot = actor.resources?.find(resource => getSpellSlotLevel(resource) === level);
+    const disabled = level > 0 && (!slot || Number(slot.current) < 1);
+    return `<option value="${level}"${level === selectedCastLevel ? ' selected' : ''}${disabled ? ' disabled' : ''}>${escapeHtml(getSpellLevelLabel(level))}${level > Number(spellAction.spellLevel) ? ' · höherstufig' : ''}${slot ? ` · ${escapeHtml(slot.current)}/${escapeHtml(slot.maximum)}` : ''}</option>`;
+  }).join('') : '';
   const paymentState = actor.cheats?.enabled ? 'cheat' : (paymentConfirmed && payment?.sufficient ? 'confirmed' : (payment?.sufficient ? 'ready' : 'missing'));
   const composerLabel = segmentKind === 'spell' ? 'Zauberhandlung' : (segmentKind === 'prayer' ? 'Gebetshandlung' : (segmentKind === 'song' ? 'Gesangshandlung' : 'Kampfhandlung'));
   const actionFieldLabel = segmentKind === 'spell' ? 'Aktiver Zauber' : (segmentKind === 'prayer' ? 'Aktives Gebet' : (segmentKind === 'song' ? 'Aktiver Gesang' : 'Aktiver Angriff'));
@@ -396,13 +407,15 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
           ${actionOptions || '<option value="">Waffe, Zauber oder Angriff fehlt</option>'}
         </select>
       </label>
-      <label class="combat-target-field">Ziel
+      <label class="combat-target-field">${supportsMultipleTargets ? 'Ziele' : 'Ziel'}
         <input type="search" data-combat-target-search placeholder="Ziel suchen …" autocomplete="off">
-        <select data-combat-input="targetId">
+        <select data-combat-input="${supportsMultipleTargets ? 'targetIds' : 'targetId'}"${supportsMultipleTargets ? ' multiple size="4"' : ''}>
           <option value="">Ziel wählen</option>
           ${targetOptions}
         </select>
+        ${supportsMultipleTargets ? '<small>Mehrere Ziele dürfen gemeinsam gewählt werden; Kosten und Munition fallen nur einmal an.</small>' : ''}
       </label>
+      ${magic && spellAction ? `<label>Wirkungsgrad<select data-combat-input="castLevel">${castLevelOptions}</select></label>` : ''}
       <label>Wurf
         <select data-combat-input="rollMode">
           <option value="normal"${rollMode === 'normal' ? ' selected' : ''}>Normal</option>
@@ -461,6 +474,16 @@ export function setCombatResolutionStatus(message, detail = '') {
 }
 
 function getEvaluationLabel(resolution) {
+  const effectTypes = new Set((Array.isArray(resolution.effectResults) ? resolution.effectResults : [])
+    .filter(result => result?.applied !== false)
+    .map(result => String(result?.effect?.type || '')));
+  const hasDamage = effectTypes.has('damage');
+  if (!hasDamage && effectTypes.has('healing')) return 'Heilung wirkt';
+  if (!hasDamage && effectTypes.has('temporary-hit-points')) return 'Schutz gewährt';
+  if (!hasDamage && effectTypes.has('remove-condition')) return 'Zustand gelöst';
+  if (!hasDamage && (effectTypes.has('apply-condition') || effectTypes.has('buff') || effectTypes.has('debuff'))) return 'Wirkung angewandt';
+  if (!hasDamage && effectTypes.has('summon')) return 'Beschwörung gelingt';
+  if (!hasDamage && effectTypes.has('interrupt')) return 'Unterbrochen';
   if (resolution.attack?.forcedSuccess) return resolution.attack?.criticalSuccess ? 'Cheat · Kritischer Treffer' : 'Cheat · Erfolg';
   if (resolution.attack?.criticalFailure) return 'Kritischer Fehlschlag';
   if (resolution.attack?.criticalSuccess) return 'Kritischer Treffer';
@@ -474,6 +497,16 @@ function getEvaluationLabel(resolution) {
 }
 
 function getEvaluationFallback(resolution) {
+  const effectTypes = new Set((Array.isArray(resolution.effectResults) ? resolution.effectResults : [])
+    .filter(result => result?.applied !== false)
+    .map(result => String(result?.effect?.type || '')));
+  const hasDamage = effectTypes.has('damage');
+  if (!hasDamage && effectTypes.has('healing')) return 'Die heilende Wirkung wird verbindlich angewandt.';
+  if (!hasDamage && effectTypes.has('temporary-hit-points')) return 'Die schützende Wirkung wird verbindlich angewandt.';
+  if (!hasDamage && effectTypes.has('remove-condition')) return 'Die belastende Wirkung wird entfernt.';
+  if (!hasDamage && (effectTypes.has('apply-condition') || effectTypes.has('buff') || effectTypes.has('debuff'))) return 'Die vorbereitete Wirkung greift.';
+  if (!hasDamage && effectTypes.has('summon')) return 'Die Beschwörung tritt in Kraft.';
+  if (!hasDamage && effectTypes.has('interrupt')) return 'Die laufende Handlung wird unterbrochen.';
   if (resolution.attack?.criticalFailure) return 'Der Angriff scheitert auf dramatische Weise.';
   if (resolution.attack?.criticalSuccess) return 'Der Angriff trifft mit voller Wucht.';
   if (resolution.attack?.resolutionMode === 'saving-throw') {
@@ -518,9 +551,41 @@ function summarizeRuleEffects(effects = {}) {
   return parts.join(' \u00b7 ') || 'Ausl\u00f6ser angewandt';
 }
 
+function renderEffectResult(result = {}) {
+  const effect = result.effect || {};
+  const recipient = result.recipient === 'actor' ? 'Selbst · ' : '';
+  if (effect.type === 'damage' && result.applied) {
+    const response = result.applied.damageResponse?.response;
+    const responseLabel = { resistant: 'Resistenz', vulnerable: 'Verwundbarkeit', immune: 'Immunität' }[response] || '';
+    return `<span>${recipient}<b>${escapeHtml(result.applied.incoming ?? result.amount ?? 0)} ${escapeHtml(effect.damageType || 'Schaden')}</b>${responseLabel ? ` · ${responseLabel} (roh ${escapeHtml(result.applied.rawIncoming ?? result.amount ?? 0)})` : ''}</span>`;
+  }
+  if (effect.type === 'healing' && result.applied) return `<span>${recipient}Heilung: <b>+${escapeHtml(result.applied.restored ?? 0)} TP</b> · ${escapeHtml(result.applied.before?.current ?? 0)} → ${escapeHtml(result.applied.after?.current ?? 0)}</span>`;
+  if (effect.type === 'temporary-hit-points' && result.applied) return `<span>${recipient}Temporäre TP: <b>+${escapeHtml(result.applied.granted ?? 0)}</b> · ${escapeHtml(result.applied.before?.temporary ?? 0)} → ${escapeHtml(result.applied.after?.temporary ?? 0)}</span>`;
+  if (['apply-condition', 'buff', 'debuff'].includes(effect.type) && result.condition) return `<span>Zustand erhalten: <b>${escapeHtml(result.condition.name)}</b></span>`;
+  if (effect.type === 'remove-condition') return `<span>Zustände entfernt: <b>${escapeHtml((result.removed || []).map(condition => condition.name).join(', ') || 'keiner')}</b></span>`;
+  if (['restore-resource', 'spend-resource'].includes(effect.type) && result.applied?.change) return `<span>${escapeHtml(result.applied.change.name || 'Ressource')}: <b>${escapeHtml(result.applied.change.before)} → ${escapeHtml(result.applied.change.after)}</b></span>`;
+  if (effect.type === 'move') return `<span>Bewegungshinweis: <b>${escapeHtml(effect.movementKind || 'move')} ${escapeHtml(effect.movementMeters || 0)} m</b> · erzählerisch absprechen</span>`;
+  if (effect.type === 'summon') return `<span>Beschwörung: <b>${escapeHtml(effect.summon?.count || 1)}× ${escapeHtml(effect.summon?.name || 'Kreatur')}</b></span>`;
+  if (effect.type === 'interrupt') return '<span><b>Unterbrechung ausgelöst</b></span>';
+  return '';
+}
+
 export function renderCombatEvaluation(source = {}) {
   const resolution = source.combatResolution || source.resolution;
   if (!resolution?.attack) return '';
+  if (resolution.actionType === 'channeling') {
+    const progress = resolution.actorChannelingSnapshot?.after || {};
+    const narrationMeta = resolution.narration || {};
+    const narrationSource = getNarrationSourceMeta(narrationMeta);
+    const narration = String(narrationMeta.text || '').trim()
+      || `${resolution.actorName} bereitet ${progress.actionName || 'die Wirkung'} weiter vor.`;
+    return `<aside class="combat-evaluation" data-state="channeling" data-narration-source="${narrationSource.key}" aria-label="Kanalisierung">
+      <div class="combat-evaluation-heading"><span>Kanalisierung</span><strong>${escapeHtml(progress.progress || 0)} / ${escapeHtml(progress.requiredComments || 0)}</strong></div>
+      <p>${escapeHtml(narration)}</p>
+      <div class="combat-evaluation-mechanics"><span><b>Noch keine Kosten und kein Wirkungswurf.</b></span><span>Die Wirkung wird erst beim vollständigen Abschluss ausgelöst.</span></div>
+      <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
+    </aside>`;
+  }
   const attack = resolution.attack;
   const state = attack.criticalFailure
     ? 'failure'
@@ -545,6 +610,9 @@ export function renderCombatEvaluation(source = {}) {
     : []).map(change => (
       `<span>${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
     )).join('');
+  const ammunitionUse = resolution.actorInventorySnapshot?.ammunitionUse
+    ? `<span>Munition: <b>${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.name)}</b> ${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.before)} &rarr; ${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.after)}</span>`
+    : '';
   const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
     `<span class="combat-rule-ledger"><b>${escapeHtml(rule.sourceActorName || 'Regelquelle')} \u00b7 ${escapeHtml(rule.ruleName)}</b><small>${escapeHtml(summarizeRuleEffects(rule.effects))}</small></span>`
   )).join('');
@@ -561,13 +629,18 @@ export function renderCombatEvaluation(source = {}) {
   const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
     ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
     : '';
+  const effectResults = (Array.isArray(resolution.effectResults) ? resolution.effectResults : []).map(renderEffectResult).filter(Boolean).join('');
+  const ruleConflicts = (Array.isArray(resolution.ruleConflicts) ? resolution.ruleConflicts : []).map(conflict => `<span class="combat-rule-conflict"><b>Regelkonflikt:</b> ${escapeHtml((conflict.applications || []).map(item => item.ruleName).join(' ↔ ') || conflict.message || 'gleichrangige Regeln')} · Entscheidung durch Beteiligte oder Erzähler</span>`).join('');
+  const defeatNotice = resolution.defeat?.occurred
+    ? `<span><b>Kampfunfähig${resolution.defeat.nonlethal ? ' · nichttödlich' : ''}</b> · kein automatischer Tod; die weitere Darstellung entscheiden die Beteiligten.</span>`
+    : '';
   const savingThrowMode = attack.resolutionMode === 'saving-throw';
   const rollLabel = savingThrowMode ? 'Rettungswurf' : (attack.resolutionMode === 'spell-attack' ? 'Zauberangriff' : 'Angriff');
   const defenseLabel = savingThrowMode ? 'Zauber-SG' : 'Verteidigung';
   return `
     <aside class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
       <div class="combat-evaluation-heading">
-        <span>Kampfauswertung</span>
+        <span>Kampfauswertung${Number(resolution.multiTargetCount) > 1 ? ` · Ziel ${Number(resolution.multiTargetIndex) + 1}/${Number(resolution.multiTargetCount)}` : ''}</span>
         <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
       </div>
       ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
@@ -579,10 +652,14 @@ export function renderCombatEvaluation(source = {}) {
         ${hitPointTransition}
         ${temporaryHitPoints}
         ${resourceChanges}
+        ${ammunitionUse}
         ${ruleResourceChanges}
         ${secondarySaves}
         ${followUpAttacks}
         ${appliedCondition}
+        ${effectResults}
+        ${ruleConflicts}
+        ${defeatNotice}
         ${ruleLedger}
       </div>
       <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>

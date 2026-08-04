@@ -1,6 +1,11 @@
 // Pure rules and storage normalization for scene rests.
 // UI, Firebase and combat replay all consume the same recovery decisions.
 
+import {
+  expireConditionsForRest,
+  normalizeRuntimeCondition
+} from '../combat/combat-condition-duration.js?v=20260804-referee-v2';
+
 export const SCENE_REST_EVENT_KIND = 'scene-rest-event';
 export const SCENE_REST_SCHEMA_VERSION = 1;
 
@@ -105,7 +110,7 @@ export function recoverSceneRestAbilities(abilities = [], restType = 'short', re
   });
 }
 
-export function recoverSceneRestHitPoints(hitPoints = {}, fallbackMaximum = 0) {
+export function recoverSceneRestHitPoints(hitPoints = {}, fallbackMaximum = 0, options = {}) {
   const maximum = clamp(
     hitPoints.maximum ?? hitPoints.maximumHitPoints ?? hitPoints.maximumOverride,
     0,
@@ -119,7 +124,7 @@ export function recoverSceneRestHitPoints(hitPoints = {}, fallbackMaximum = 0) {
   const temporary = clamp(hitPoints.temporary ?? hitPoints.temporaryHitPoints, 0, 999999);
   return {
     before: { current, maximum, temporary },
-    after: { current: maximum, maximum, temporary }
+    after: { current: maximum, maximum, temporary: options.clearTemporary === true ? 0 : temporary }
   };
 }
 
@@ -129,12 +134,14 @@ export function buildSceneRestParticipant(profile = {}, restType = 'short', opti
     current: profile.currentHitPoints ?? profile.hitPoints?.current,
     maximum: profile.maximumHitPoints ?? profile.hitPoints?.maximumOverride,
     temporary: profile.temporaryHitPoints ?? profile.hitPoints?.temporary
-  }, profile.maximumHitPoints);
+  }, profile.maximumHitPoints, { clearTemporary: restType === 'long' });
   const beforeResources = (Array.isArray(profile.resources) ? profile.resources : []).map(cloneResource);
   const recoveryOptions = { dayChanged: options.dayChanged === true };
   const afterResources = recoverSceneRestResources(beforeResources, restType, options.recoveryDayKey, recoveryOptions);
   const beforeAbilities = (Array.isArray(profile.abilities) ? profile.abilities : []).map(cloneAbility);
   const afterAbilities = recoverSceneRestAbilities(beforeAbilities, restType, options.recoveryDayKey, recoveryOptions);
+  const beforeConditions = (Array.isArray(profile.temporaryConditions) ? profile.temporaryConditions : []).map(normalizeRuntimeCondition);
+  const afterConditions = expireConditionsForRest(beforeConditions, restType, recoveryOptions.dayChanged);
   const resourceChanges = afterResources.flatMap(after => {
     const before = beforeResources.find(resource => resource.id === after.id);
     if (!before || before.current === after.current) return [];
@@ -154,8 +161,8 @@ export function buildSceneRestParticipant(profile = {}, restType = 'short', opti
     persistence: options.persistence && typeof options.persistence === 'object'
       ? { ...options.persistence }
       : (profile.persistence && typeof profile.persistence === 'object' ? { ...profile.persistence } : {}),
-    before: { hitPoints: hitPoints.before, resources: beforeResources, abilities: beforeAbilities },
-    after: { hitPoints: hitPoints.after, resources: afterResources, abilities: afterAbilities },
+    before: { hitPoints: hitPoints.before, resources: beforeResources, abilities: beforeAbilities, conditions: beforeConditions },
+    after: { hitPoints: hitPoints.after, resources: afterResources, abilities: afterAbilities, conditions: afterConditions },
     changes: {
       hitPointsRestored: Math.max(0, hitPoints.after.current - hitPoints.before.current),
       resources: resourceChanges,
@@ -173,6 +180,8 @@ export function normalizeSceneRestParticipant(value = {}, index = 0) {
   const afterResources = (Array.isArray(source.after?.resources) ? source.after.resources : []).map(cloneResource);
   const beforeAbilities = (Array.isArray(source.before?.abilities) ? source.before.abilities : []).map(cloneAbility);
   const afterAbilities = (Array.isArray(source.after?.abilities) ? source.after.abilities : []).map(cloneAbility);
+  const beforeConditions = (Array.isArray(source.before?.conditions) ? source.before.conditions : []).map(normalizeRuntimeCondition);
+  const afterConditions = (Array.isArray(source.after?.conditions) ? source.after.conditions : beforeConditions).map(normalizeRuntimeCondition);
   return {
     actorId,
     sourceId: cleanText(source.sourceId, 180),
@@ -180,8 +189,8 @@ export function normalizeSceneRestParticipant(value = {}, index = 0) {
     title: cleanText(source.title, 180),
     portrait: String(source.portrait || '').trim().slice(0, 2000),
     persistence: source.persistence && typeof source.persistence === 'object' ? { ...source.persistence } : {},
-    before: { hitPoints: beforeHitPoints, resources: beforeResources, abilities: beforeAbilities },
-    after: { hitPoints: afterHitPoints, resources: afterResources, abilities: afterAbilities },
+    before: { hitPoints: beforeHitPoints, resources: beforeResources, abilities: beforeAbilities, conditions: beforeConditions },
+    after: { hitPoints: afterHitPoints, resources: afterResources, abilities: afterAbilities, conditions: afterConditions },
     changes: {
       hitPointsRestored: Math.max(0, finiteNumber(source.changes?.hitPointsRestored, afterHitPoints.current - beforeHitPoints.current)),
       resources: (Array.isArray(source.changes?.resources) ? source.changes.resources : []).map(change => ({
@@ -246,7 +255,10 @@ export function applySceneRestCommentToStateMap(states, comment = {}) {
       maximum: participant.after.hitPoints.maximum,
       temporary: participant.after.hitPoints.temporary,
       resources: participant.after.resources.map(resource => ({ ...resource })),
-      abilities: participant.after.abilities.map(ability => ({ ...ability }))
+      abilities: participant.after.abilities.map(ability => ({ ...ability })),
+      temporaryConditions: participant.after.conditions.map(condition => ({ ...condition })),
+      concentration: null,
+      channeling: null
     });
   });
   return states;

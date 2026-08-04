@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260803-gawain-level4-v1';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260804-referee-v2';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -17,8 +17,8 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260803-skill-checks-v2';
-import { SkillResolutionService } from './skill-resolution-service.js?v=20260803-gawain-level4-v1';
-import { deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260803-gawain-level4-v1';
+import { SkillResolutionService } from './skill-resolution-service.js?v=20260804-referee-v2';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260804-referee-v2';
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({
@@ -77,6 +77,88 @@ function getActorForSegment(segment, fallbackActorId = '', actors = []) {
   return actors.find(actor => String(actor?.id || '') === actorId) || null;
 }
 
+function relationshipBetweenActors(first = {}, second = {}) {
+  const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
+  const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
+  return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
+}
+
+function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallenge, actors = []) {
+  const targetActor = targetChallenge
+    ? actors.find(candidate => [targetChallenge.authorId, targetChallenge.authorKey].includes(String(candidate?.id || ''))) || null
+    : null;
+  const targetProfile = targetActor ? profileResolver.resolve(targetActor) : null;
+  const sources = [{
+    actorId: actorProfile.characterId,
+    actorName: actorProfile.name,
+    profile: actorProfile,
+    sourceRole: 'actor',
+    relationToActor: 'self',
+    relationToTarget: targetActor ? relationshipBetweenActors(actor, targetActor) : 'enemy',
+    distanceToActor: 0,
+    distanceToTarget: null,
+    selectedRuleIds: []
+  }];
+  if (targetActor && targetProfile) sources.push({
+    actorId: targetProfile.characterId,
+    actorName: targetProfile.name,
+    profile: targetProfile,
+    sourceRole: 'target',
+    relationToActor: relationshipBetweenActors(targetActor, actor),
+    relationToTarget: 'self',
+    distanceToActor: null,
+    distanceToTarget: 0,
+    selectedRuleIds: []
+  });
+  const groupedSelections = new Map();
+  (Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections : []).forEach(selection => {
+    const actorId = String(selection?.sourceActorId || '');
+    if (!actorId) return;
+    const current = groupedSelections.get(actorId) || { actorId, ruleIds: [], distanceMeters: Number(selection?.distanceMeters) || 0 };
+    current.ruleIds.push(String(selection?.ruleId || ''));
+    groupedSelections.set(actorId, current);
+  });
+  groupedSelections.forEach(selection => {
+    let source = sources.find(candidate => String(candidate.actorId) === selection.actorId);
+    if (source) {
+      source.selectedRuleIds = [...new Set([...source.selectedRuleIds, ...selection.ruleIds])];
+      return;
+    }
+    const supportActor = actors.find(candidate => String(candidate?.id || '') === selection.actorId);
+    if (!supportActor) return;
+    const supportProfile = profileResolver.resolve(supportActor);
+    source = {
+      actorId: supportProfile.characterId,
+      actorName: supportProfile.name,
+      profile: supportProfile,
+      sourceRole: 'support',
+      relationToActor: relationshipBetweenActors(supportActor, actor),
+      relationToTarget: targetActor ? relationshipBetweenActors(supportActor, targetActor) : 'enemy',
+      distanceToActor: selection.distanceMeters,
+      distanceToTarget: selection.distanceMeters,
+      selectedRuleIds: [...new Set(selection.ruleIds)]
+    };
+    sources.push(source);
+  });
+  const opposedSkill = targetProfile && targetChallenge?.defenseMode !== 'fixed'
+    ? resolveSkillModifier(targetProfile, targetChallenge.defenseSkillId || 'deception')
+    : null;
+  const opposedDifficulty = opposedSkill ? Math.max(1, 10 + Number(opposedSkill.modifier || 0)) : null;
+  return {
+    targetProfile,
+    sources,
+    opposedDifficulty,
+    opposedDefense: opposedSkill ? {
+      actorId: targetProfile.characterId,
+      actorName: targetProfile.name,
+      skillId: opposedSkill.definition.id,
+      skillName: opposedSkill.definition.label,
+      modifier: opposedSkill.modifier,
+      passiveTotal: opposedDifficulty
+    } : null
+  };
+}
+
 function getModeOptions(segment) {
   const kind = String(segment?.kind || segment?.commentKind || 'speech');
   const options = [{ id: 'normal', label: 'Normal', hint: 'Nur erzählen, ohne Wurf' }];
@@ -114,7 +196,30 @@ function renderModeControl(segment) {
     </div>`;
 }
 
-function renderSkillComposer(segment, actor, challenges) {
+function renderSkillSupportOptions(segment, actor, actors = []) {
+  const selected = new Set((Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections : [])
+    .map(item => `${item.sourceActorId}:${item.ruleId}`));
+  const options = [];
+  actors.filter(candidate => String(candidate?.id || '') !== String(actor?.id || '')).forEach(candidate => {
+    const profile = profileResolver.resolve(candidate);
+    const rules = collectCombatTriggerRules(profile)
+      .filter(rule => rule.activation === 'reaction' && (!rule.actionKinds.length || rule.actionKinds.includes('skill')));
+    if (profile.aura?.enabled) rules.unshift({ id: '@aura:actor', entryKind: 'aura', entryId: 'aura', entryName: profile.aura.name || 'Aura', name: 'Aura auf Probe' });
+    rules.forEach(rule => options.push({ candidate, profile, rule }));
+  });
+  if (!options.length) return '';
+  return `<fieldset class="skill-check-support"><legend>Unterstützung & Reaktionen</legend>
+    <p>Nur ausdrücklich gewählte Reaktionen werden verbraucht. Passive Regeln des Gegenspielers prüft der Server automatisch.</p>
+    <div>${options.map(({ candidate, profile, rule }) => {
+      const ruleId = rule.id === '@aura:actor' ? rule.id : (rule.id || `${rule.entryKind}:${rule.entryId}`);
+      const key = `${candidate.id}:${ruleId}`;
+      const persistence = profile.persistence || {};
+      return `<label><input type="checkbox" data-skill-rule-toggle data-source-actor-id="${escapeHtml(candidate.id)}" data-rule-id="${escapeHtml(ruleId)}" data-persistence-kind="${escapeHtml(persistence.kind)}" data-record-id="${escapeHtml(persistence.recordId)}" data-source-creature-id="${escapeHtml(persistence.sourceCreatureId)}"${selected.has(key) ? ' checked' : ''}> <b>${escapeHtml(candidate.name)}</b> · ${escapeHtml(rule.name || rule.entryName)}</label>`;
+    }).join('')}</div>
+  </fieldset>`;
+}
+
+function renderSkillComposer(segment, actor, challenges, actors = []) {
   if (normalizeMechanicMode(segment?.mechanicMode, segment) !== 'skill') return '';
   const kindSkills = getSkillsForCommentKind(segment.kind);
   const settings = normalizeSkillCheckSettings({
@@ -194,6 +299,7 @@ function renderSkillComposer(segment, actor, challenges) {
         </label>
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b><span>Bevorzugte Fertigkeiten: ${escapeHtml(target.preferredSkills.map(id => getSkillDefinition(id)?.label).filter(Boolean).join(', ') || 'keine')}</span></div>` : ''}
+      ${renderSkillSupportOptions(segment, actor, actors)}
     </section>`;
 }
 
@@ -205,7 +311,9 @@ function renderChallengeComposer(segment) {
     difficulty: segment.skillChallengeDifficulty,
     preferredSkills: segment.skillChallengePreferredSkills,
     preferredModifier: segment.skillChallengePreferredModifier,
-    alternativeModifier: segment.skillChallengeAlternativeModifier
+    alternativeModifier: segment.skillChallengeAlternativeModifier,
+    defenseMode: segment.skillChallengeDefenseMode || 'passive',
+    defenseSkillId: segment.skillChallengeDefenseSkillId || 'deception'
   });
   if (!segment.skillChallengeId) segment.skillChallengeId = getChallengeId(segment.id);
   const enabled = !!segment.skillChallengeEnabled;
@@ -219,6 +327,8 @@ function renderChallengeComposer(segment) {
       ${enabled ? `
         <div class="skill-challenge-fields">
           <label>Schwierigkeit<input type="number" min="1" max="40" value="${clampNumber(segment.skillChallengeDifficulty, 10, 1, 40)}" data-skill-input="challengeDifficulty"></label>
+          <label>Gegenprobe<select data-skill-input="challengeDefenseMode"><option value="passive"${challenge?.defenseMode === 'passive' ? ' selected' : ''}>Passive Gegenfertigkeit (10 + Bonus)</option><option value="fixed"${challenge?.defenseMode === 'fixed' ? ' selected' : ''}>Fester SG</option></select></label>
+          <label>Verteidigende Fertigkeit<select data-skill-input="challengeDefenseSkillId">${SKILL_DEFINITIONS.map(skill => `<option value="${skill.id}"${skill.id === challenge?.defenseSkillId ? ' selected' : ''}>${escapeHtml(skill.label)}</option>`).join('')}</select></label>
           <div class="skill-challenge-skills"><span>Bevorzugte Lösungen</span>${SKILL_DEFINITIONS.map(skill => `<label><input type="checkbox" data-skill-challenge-skill="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>${escapeHtml(skill.label)}</label>`).join('')}</div>
           <label>Bonus bevorzugt<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengePreferredModifier, 2, -20, 20)}" data-skill-input="challengePreferredModifier"></label>
           <label>Modifikator andere Fertigkeit<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengeAlternativeModifier, -2, -20, 20)}" data-skill-input="challengeAlternativeModifier"></label>
@@ -236,7 +346,7 @@ function mountComposers(context = {}) {
     const host = card?.querySelector?.('[data-segment-mechanics-host]');
     if (!host) return;
     const actor = getActorForSegment(segment, context.selectedCharacterId, actors);
-    host.innerHTML = `${renderModeControl(segment)}${renderSkillComposer(segment, actor, challenges)}${renderChallengeComposer(segment)}`;
+    host.innerHTML = `${renderModeControl(segment)}${renderSkillComposer(segment, actor, challenges, actors)}${renderChallengeComposer(segment)}`;
   });
 }
 
@@ -278,6 +388,8 @@ function updateSegmentField(segment, field, value) {
   if (field === 'challengeDifficulty') segment.skillChallengeDifficulty = clampNumber(value, 10, 1, 40);
   if (field === 'challengePreferredModifier') segment.skillChallengePreferredModifier = clampNumber(value, 2, -20, 20);
   if (field === 'challengeAlternativeModifier') segment.skillChallengeAlternativeModifier = clampNumber(value, -2, -20, 20);
+  if (field === 'challengeDefenseMode') segment.skillChallengeDefenseMode = value === 'fixed' ? 'fixed' : 'passive';
+  if (field === 'challengeDefenseSkillId') segment.skillChallengeDefenseSkillId = getSkillDefinition(value) ? String(value) : 'deception';
   globalThis.persistCommentDraft?.();
 }
 
@@ -307,6 +419,26 @@ function togglePreferredSkill(segment, skillId, checked) {
   if (checked) preferred.add(skillId);
   else preferred.delete(skillId);
   segment.skillChallengePreferredSkills = [...preferred];
+  globalThis.persistCommentDraft?.();
+}
+
+function updateSkillRuleSelection(segment, field) {
+  if (!Array.isArray(segment.skillRuleSelections)) segment.skillRuleSelections = [];
+  const sourceActorId = String(field.dataset.sourceActorId || '');
+  const ruleId = String(field.dataset.ruleId || '');
+  const index = segment.skillRuleSelections.findIndex(item => String(item.sourceActorId) === sourceActorId && String(item.ruleId) === ruleId);
+  if (!field.checked && index >= 0) segment.skillRuleSelections.splice(index, 1);
+  if (field.checked && index < 0) {
+    const kind = String(field.dataset.persistenceKind || '');
+    segment.skillRuleSelections.push({
+      sourceActorId,
+      ruleId,
+      distanceMeters: 0,
+      sourcePersistence: kind === 'scene-creature'
+        ? { kind, sourceCreatureId: String(field.dataset.sourceCreatureId || '') }
+        : { kind, recordId: String(field.dataset.recordId || '') }
+    });
+  }
   globalThis.persistCommentDraft?.();
 }
 
@@ -366,6 +498,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
   const profile = profileResolver.resolve(actor);
+  const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors);
   const stage = document.querySelector('[data-skill-dice-stage]');
   if (stage) stage.innerHTML = '';
   const definition = getSkillDefinition(settings.skillId);
@@ -377,17 +510,11 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
     actorPersistence: profile.persistence || null
   }, {
     container: stage,
-    ruleSources: [{
-      actorId: profile.characterId,
-      actorName: profile.name,
-      profile,
-      sourceRole: 'actor',
-      relationToActor: 'self',
-      relationToTarget: 'enemy',
-      distanceToActor: 0,
-      distanceToTarget: null,
-      selectedRuleIds: []
-    }],
+    actorProfile: profile,
+    ruleSources: ruleContext.sources,
+    targetProfile: ruleContext.targetProfile,
+    opposedDifficulty: ruleContext.opposedDifficulty,
+    opposedDefense: ruleContext.opposedDefense,
     rulePeriods: resolutionContext.rulePeriods,
     usedRuleFrequencyKeys: resolutionContext.usedRuleFrequencyKeys
   });
@@ -403,7 +530,9 @@ function buildStoredChallenge(segment) {
     difficulty: segment.skillChallengeDifficulty,
     preferredSkills: segment.skillChallengePreferredSkills,
     preferredModifier: segment.skillChallengePreferredModifier,
-    alternativeModifier: segment.skillChallengeAlternativeModifier
+    alternativeModifier: segment.skillChallengeAlternativeModifier,
+    defenseMode: segment.skillChallengeDefenseMode || 'passive',
+    defenseSkillId: segment.skillChallengeDefenseSkillId || 'deception'
   });
   if (!challenge.preferredSkills.length) throw new Error('Wähle für jede verdeckte Herausforderung mindestens eine bevorzugte Fertigkeit.');
   return challenge;
@@ -507,6 +636,11 @@ function renderEvaluation(source = {}) {
   const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
     `<span class="skill-rule-ledger"><b>${escapeHtml(rule.sourceActorName || 'Regelquelle')} · ${escapeHtml(rule.ruleName)}</b><small>${escapeHtml(rule.before?.total ?? rule.before?.modifier ?? '')} → ${escapeHtml(rule.after?.total ?? rule.after?.modifier ?? '')}</small></span>`
   )).join('');
+  const ruleCosts = (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).flatMap(snapshot => (snapshot.changes || []).map(change => `<span>${escapeHtml(snapshot.sourceActorName || 'Unterstützung')} · ${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)} → ${escapeHtml(change.after)}</b></span>`)).join('');
+  const abilityCosts = (Array.isArray(resolution.ruleAbilitySnapshots) ? resolution.ruleAbilitySnapshots : []).map(snapshot => `<span>${escapeHtml(snapshot.change?.name || 'Fähigkeit')}: <b>${escapeHtml(snapshot.change?.before ?? '')} → ${escapeHtml(snapshot.change?.after ?? '')}</b> Nutzungen</span>`).join('');
+  const opposedDefense = resolution.opposedDefense
+    ? `<span>Gegenprobe: <b>${escapeHtml(resolution.opposedDefense.actorName)} · passive ${escapeHtml(resolution.opposedDefense.skillName)} ${escapeHtml(resolution.opposedDefense.passiveTotal)}</b></span>`
+    : '';
   return `
     <aside class="skill-evaluation" data-state="${escapeHtml(resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
       <div class="skill-evaluation-heading"><span>Fertigkeitsauswertung</span><strong>${escapeHtml(getOutcomeLabel(resolution.outcome))}</strong></div>
@@ -514,8 +648,11 @@ function renderEvaluation(source = {}) {
       <div class="skill-evaluation-mechanics">
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>
         <span>gegen <b>SG ${escapeHtml(resolution.difficulty)}</b></span>
+        ${opposedDefense}
         <span>Bogen ${Number(resolution.profileModifier) >= 0 ? '+' : ''}${escapeHtml(resolution.profileModifier)}${custom ? ` · frei ${custom >= 0 ? '+' : ''}${escapeHtml(custom)}` : ''}${affinity ? ` · Lösung ${affinity >= 0 ? '+' : ''}${escapeHtml(affinity)}` : ''}${ruleModifier ? ` · Regeln ${ruleModifier >= 0 ? '+' : ''}${escapeHtml(ruleModifier)}` : ''}</span>
         ${ruleLedger}
+        ${ruleCosts}
+        ${abilityCosts}
       </div>
       <div class="skill-evaluation-source">${escapeHtml(sourceLabel)}</div>
     </aside>`;
@@ -539,6 +676,10 @@ document.addEventListener('change', event => {
   const field = event.target;
   const segment = findComposerSegment(field);
   if (!segment) return;
+  if (field?.matches?.('[data-skill-rule-toggle]')) {
+    updateSkillRuleSelection(segment, field);
+    return;
+  }
   if (field?.matches?.('[data-skill-input]')) {
     updateSegmentField(segment, field.dataset.skillInput, field.type === 'checkbox' ? field.checked : field.value);
     if (field.dataset.skillInput === 'challengeEnabled') rerenderSegmentEditor();
@@ -586,4 +727,9 @@ globalThis.AleriaSkillChecks = Object.freeze({
   isChallengeRevealed(challengeId) {
     return revealedChallengeIds.has(String(challengeId || ''));
   }
+});
+
+export const skillCheckControllerInternals = Object.freeze({
+  relationshipBetweenActors,
+  buildClientSkillRuleContext
 });

@@ -1,6 +1,6 @@
 # Kampf-, Magie- und Fertigkeitsauswertung
 
-Stand: 3. August 2026
+Stand: 4. August 2026
 
 ## Verbindliches Prinzip
 
@@ -20,18 +20,19 @@ Jeder Angriff, Zauber und jedes Gebet folgt derselben Pipeline:
 6. Einzelwürfel validieren und die Summe serverseitig neu berechnen.
 7. Nach-Wurf-Regeln auswerten, etwa „wenn der Angriff treffen würde“, Reaktionsboni, Gegenwehr oder erzwungenes Verfehlen.
 8. Treffer beziehungsweise Rettung endgültig feststellen.
-9. Nach-Treffer- und Vor-Schaden-Regeln anwenden, Schaden würfeln, Halbierung und Schadensreduktion verrechnen.
-10. Temporäre TP vor normalen TP verbrauchen und alle Kosten beziehungsweise Nutzungen atomar buchen.
-11. Einen unveränderlichen Regelbeleg mit Vorher-/Nachherständen speichern.
-12. Erst anschließend AleriaGPT mit genau diesem bestätigten Beleg erzählen lassen.
+9. Nach-Treffer- und Vor-Schaden-Regeln anwenden, strukturierte Effekte ausführen sowie Resistenz, Verwundbarkeit, Immunität und Schadensreduktion verrechnen.
+10. Späte Phasen wie `on-damaged`, `on-heal`, `on-condition-applied`, `on-resource-spent`, Konzentrationsprüfung und Niederlage auswerten; ihre Folgewirkungen werden genau einmal ausgeführt und nicht rekursiv erneut ausgelöst.
+11. Temporäre TP vor normalen TP verbrauchen und alle Kosten, Reaktionen, Munition und Nutzungen atomar buchen.
+12. Einen unveränderlichen Regelbeleg mit Vorher-/Nachherständen speichern.
+13. Erst anschließend AleriaGPT mit genau diesem bestätigten Beleg erzählen lassen.
 
 Fertigkeitsauswertungen verwenden dieselbe Trennung: Profilfertigkeit und Attribut, optionaler Nutzerwert, Herausforderung, Prä-Wurf-Regeln, validierter W20, Nach-Wurf-Regeln und endgültiges Ergebnis. Verdeckte Herausforderungen bleiben höchstens für die drei jüngsten Beiträge der Zielperson auflösbar.
 
 ## Strukturierte Auslöserregeln
 
-`character.combatProfile` verwendet Schema 5. Marotten, Zustände, besondere Fähigkeiten und Techniken können `triggerRules` besitzen. Eine Regel beschreibt:
+`character.combatProfile` verwendet Schema 9. Marotten, Zustände, besondere Fähigkeiten und Techniken können `triggerRules` besitzen. Eine Regel beschreibt:
 
-- Phase: vor dem Wurf, nach dem Wurf, nach dem Treffer oder vor dem Schaden;
+- Phase: vor/nach dem Wurf, nach dem Treffer, vor/nach Schaden sowie Heilung, Zustandsänderung, Ressourcenverbrauch, Niederlage, Konzentration und Kanalisierung;
 - Empfänger: handelnde Figur oder Ziel;
 - Beziehung der Regelquelle: selbst, verbündet, feindlich oder beliebig;
 - Aktivierung: passiv oder bewusst ausgewählte Reaktion;
@@ -41,7 +42,26 @@ Fertigkeitsauswertungen verwenden dieselbe Trennung: Profilfertigkeit und Attrib
 - optionalen Radius und eine eindeutige Priorität;
 - numerische Wirkung, Vorteil/Nachteil, Schadensreduktion oder ein erzwungenes Ergebnis.
 
-Bei mehreren Regeln werden Zahlen addiert. Vorteil und Nachteil heben sich auf. Bei widersprüchlichen erzwungenen Ergebnissen gewinnt die Regel mit der höheren Priorität; stabile IDs halten Gleichstände reproduzierbar. Jede tatsächlich angewendete Regel wird mit Quelle, Phase, Wirkung sowie Zustand davor und danach im Kommentar gespeichert.
+Bei mehreren Regeln werden Zahlen addiert. Vorteil und Nachteil heben sich auf. Erzwungene Ergebnisse folgen der ausdrücklichen Rangfolge absolute Regel/Immunität, aktive Reaktion, zeitlicher Effekt/Fähigkeit, passive Eigenschaft/Aura, normaler Modifikator. Bleiben gleichrangige und gleich priorisierte Regeln widersprüchlich, entscheidet das System nicht unsichtbar: Der Konflikt erscheint in der Auswertung und verlangt eine menschliche Entscheidung.
+
+## Strukturierte Effekte
+
+Eine Handlung oder ausgelöste Regel kann mehrere Effekte in festgelegter Reihenfolge besitzen:
+
+- Schaden, Heilung oder temporäre Trefferpunkte;
+- Zustand geben oder entfernen, Stärkung und Schwächung;
+- Ressource auffüllen oder ausgeben;
+- Bewegung als verbindlicher Hinweis ohne taktische Positionssimulation;
+- Beschwörung als strukturierter Szenenhinweis;
+- Konzentration, Kanalisierung oder eine laufende Handlung unterbrechen.
+
+Selbstheilung und unterstützende Magie verwenden dieselbe Engine wie Angriffe. Mehrzielhandlungen erzeugen je Ziel eine eigene kompakte Auswertung, bezahlen Aktionskosten und Munition aber nur einmal. Folgeangriffe durchlaufen erneut die vollständige Treffer-, Aura-, Reaktions- und Schadenspipeline; weitere Folgeangriffe werden dabei zur Schleifenvermeidung nicht rekursiv erzeugt.
+
+## Kampfliste und Fortschritt
+
+Der Kampf-Announcer verwaltet Beginn, Beitritt, Austritt und Ende ohne Initiative. Er speichert Parteien und konkrete Kreatureninstanzen. Die laufende Liste zeigt TP, Zustände, Konzentration und Kanalisierung. Bei 0 TP gilt eine Figur als kampfunfähig, nicht automatisch als tot; Heilung kann sie wieder aktivieren.
+
+Beim Kampfende werden reine Kampfzustände und Konzentrationen beendet. Besiegte oder geflohene Gegner liefern anhand ihrer Stufe EP, die gleichmäßig auf berechtigte Mitglieder der siegreichen Partei verteilt werden. Die D&D-5e-Schwellen bis Stufe 20 schalten die bestehende Level-up-Werkstatt frei; Attributs-, Trefferpunkt- und Klassenentscheidungen werden nicht still automatisch angewendet.
 
 ## Verbündete, Gegner und Reaktionen
 
@@ -79,6 +99,7 @@ Frühere Abschnitte behalten ihre historischen Snapshots. Der spätere Endstand 
 - Eine nicht strukturierte Marotte oder Reaktion ist erzählerisch, nicht mechanisch.
 - Unterstützerreaktionen werden vor dem Eintragen ausgewählt; asynchrone Unterbrechungsfenster zwischen verschiedenen Spielern sind noch nicht Teil des Systems.
 - Radiusprüfung verwendet derzeit den angegebenen Abstand und die Szenenbeziehung, keine taktische Karte.
+- `on-combat-start` und `on-combat-end` sind als Regelphasen im Schema reserviert. Der Announcer erledigt bereits Sperren, Status, Kampfzustandsende und EP; frei konfigurierbare `resultEffects` dieser beiden Lebenszyklusphasen benötigen noch den geplanten Szenenprojektor.
 - Korrekturen an festgeschriebener Mechanik benötigen künftig Gegenbuchungen; mechanische Kommentare bleiben unveränderlich.
 
 Diese Grenzen sind Absicht: Ungeprüfter Freitext oder nachträgliche KI-Deutung darf keine autoritative Kampfregel sein.

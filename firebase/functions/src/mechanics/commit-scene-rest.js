@@ -3,7 +3,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { buildSceneRestParticipant, getSceneRestType, normalizeSceneRest } from '../generated/scene-rest/scene-rest-model.js';
-import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 
 const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
 
@@ -91,7 +91,7 @@ export const commitSceneRest = onCall({
   await database.runTransaction(async transaction => {
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
-    const history = allHistory.filter(isTrustedMechanicalComment);
+    const history = allHistory.filter(isTrustedSceneContributionComment);
     const combatStates = deriveCombatStateFromComments(history);
     const previousSceneDay = getTrustedSceneDay(allHistory);
     const previousCursor = getTrustedSceneCursorSeconds(allHistory, previousSceneDay);

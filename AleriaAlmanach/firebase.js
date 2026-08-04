@@ -7,6 +7,8 @@
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { createFirebaseAuthSession }
       from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
+    import { compactMechanicalMetadata }
+      from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -26,6 +28,7 @@
     const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
+    const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
@@ -568,6 +571,17 @@
 
 
       },
+      async addCombatEncounter(entryId, text, deleteCode, metadata = {}) {
+        await requireFirebaseUser();
+        const deleteCodeHash = await hashDeleteCode(deleteCode);
+        const committed = await commitCombatEncounterCallable({
+          entryId,
+          text,
+          deleteCodeHash,
+          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+        });
+        return committed.data;
+      },
       async addCombatComment(entryId, charName, charTitle, portrait, text, deleteCode, narrator, metadata = {}) {
         await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
@@ -579,7 +593,7 @@
           text,
           deleteCodeHash,
           narrator: narrator === true,
-          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+          metadata: cloneSerializableValue(compactMechanicalMetadata(normalizeCommentModuleInsertForFirestore(metadata)))
         });
         try {
           const combatNarrations = typeof window.AleriaCombat?.narrateCommittedMechanics === 'function'
@@ -612,7 +626,7 @@
           text,
           deleteCodeHash,
           narrator: narrator === true,
-          metadata: cloneSerializableValue(normalizeCommentModuleInsertForFirestore(metadata))
+          metadata: cloneSerializableValue(compactMechanicalMetadata(normalizeCommentModuleInsertForFirestore(metadata)))
         });
         try {
           const narrations = typeof window.AleriaSkillChecks?.narrateCommittedMechanics === 'function'

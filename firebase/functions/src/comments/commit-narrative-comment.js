@@ -31,9 +31,11 @@ function containsPersistentMechanics(metadata = {}) {
     || metadata.inventoryTransaction
     || metadata.restTransaction
     || metadata.sceneRest
+    || metadata.combatEncounter
+    || metadata.encounterTransaction
     || metadata.sceneInventoryTransfer
     || metadata.serverValidatedMechanics
-    || segments.some(segment => segment?.combatResolution || segment?.inventoryUse || segment?.skillResolution)
+    || segments.some(segment => segment?.combatResolution || segment?.combatResolutions || segment?.inventoryUse || segment?.skillResolution)
   );
 }
 

@@ -10,8 +10,8 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260803-gawain-level4-v1';
+} from '../combat/combat-profile-model.js?v=20260804-referee-v2';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
 import {
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
@@ -187,6 +187,7 @@ function renderIdentityAndProgression(profile) {
         <label><span>Sonderstufen</span><input type="number" min="0" max="10" data-combat-path="progression.specialLevels" value="${profile.progression.specialLevels}"><small>Zusätzlich 0–10</small></label>
         <label><span>Erfahrung</span><input type="number" min="0" max="999999999" data-combat-path="progression.experience" value="${profile.progression.experience}"></label>
         <label><span>Nächste Stufe bei</span><input type="number" min="1" max="999999999" data-combat-path="progression.nextLevelExperience" value="${profile.progression.nextLevelExperience ?? ''}" placeholder="frei"></label>
+        <label><span>EP-Wert bei Niederlage</span><input type="number" min="0" max="999999999" data-combat-path="progression.experienceReward" value="${profile.progression.experienceReward ?? ''}" placeholder="automatisch nach Stufe"></label>
         <label><span>Kompetenz überschreiben</span><input type="number" min="-20" max="30" data-combat-path="progression.proficiencyBonusOverride" value="${profile.progression.proficiencyBonusOverride ?? ''}" placeholder="automatisch"></label>
         <div class="cp-sheet-level-seal"><span>Gesamtstufe</span><strong data-combat-derived="effective-level">1</strong><small>Kompetenz <b data-combat-derived="proficiency">+2</b></small></div>
       </div>
@@ -359,6 +360,7 @@ function renderRules(profile) {
           <label><span>Magisch</span><input type="number" min="-99" max="99" data-combat-path="armorClass.magicModifier" value="${profile.armorClass.magicModifier}"></label>
           <label><span>Sonstiges</span><input type="number" min="-99" max="99" data-combat-path="armorClass.otherModifier" value="${profile.armorClass.otherModifier}"></label>
           <label><span>RK überschreiben</span><input type="number" min="0" max="999" data-combat-path="armorClass.override" value="${profile.armorClass.override ?? ''}" placeholder="automatisch"></label>
+          <label><span>Override-Art</span><select data-combat-path="armorClass.overrideMode"><option value="base"${selected(profile.armorClass.overrideMode, 'base')}>Als Basis + alle Boni</option><option value="total"${selected(profile.armorClass.overrideMode, 'total')}>Fester Endwert</option></select></label>
           <label><span>Initiative extra</span><input type="number" min="-99" max="99" data-combat-path="combat.initiativeBonus" value="${profile.combat.initiativeBonus}"></label>
           <label><span>Angriff global</span><input type="number" min="-99" max="99" data-combat-path="combat.attackBonus" value="${profile.combat.attackBonus}"></label>
           <label><span>Schaden global</span><input type="number" min="-99" max="99" data-combat-path="combat.damageBonus" value="${profile.combat.damageBonus}"></label>
@@ -480,6 +482,24 @@ function renderArmor(profile) {
         <label class="wide"><span>Notizen / besondere Regeln</span><textarea data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="notes" maxlength="800">${escapeMarkup(armor.notes)}</textarea></label>
       </div>
     </article>`).join('') : '<p class="cp-sheet-empty">Noch kein Schutz eingetragen.</p>'}</div>
+  </section>`;
+}
+
+function renderDamageAffinities(profile) {
+  const labels = { normal: 'Normal', resistant: 'Resistent', vulnerable: 'Verwundbar', immune: 'Immun' };
+  return `<section class="cp-sheet-card">
+    <div class="cp-sheet-section-head"><div><span>Schadensart und magische Herkunft</span><h4>Resistenzen, Immunitäten &amp; Verwundbarkeiten</h4></div><button type="button" data-combat-action="add-item" data-combat-collection="damageAffinities">+ Eintrag</button></div>
+    <div class="cp-sheet-table" role="table">
+      <div class="cp-sheet-table-head" role="row"><span>Wirkung</span><span>Schadensart</span><span>Magie</span><span>Quelle</span><span>Notiz</span><span></span></div>
+      ${profile.damageAffinities.map(item => `<div class="cp-sheet-table-row" role="row">
+        <select data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="response" aria-label="Wirkung">${Object.entries(labels).map(([value, label]) => `<option value="${value}"${selected(item.response, value)}>${label}</option>`).join('')}</select>
+        <input data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="damageType" value="${escapeMarkup(item.damageType)}" placeholder="z. B. Feuer oder all">
+        <select data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="magicScope"><option value="any"${selected(item.magicScope, 'any')}>Beliebig</option><option value="magical"${selected(item.magicScope, 'magical')}>Nur magisch</option><option value="nonmagical"${selected(item.magicScope, 'nonmagical')}>Nur nichtmagisch</option></select>
+        <input data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" placeholder="Rüstung, Volk, Zauber …">
+        <input data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="notes" value="${escapeMarkup(item.notes)}" placeholder="Hinweis">
+        <button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="damageAffinities" data-combat-item-id="${escapeMarkup(item.id)}">×</button>
+      </div>`).join('') || '<p class="cp-sheet-empty">Keine besonderen Schadensreaktionen eingetragen.</p>'}
+    </div>
   </section>`;
 }
 
@@ -673,6 +693,7 @@ function renderSheet() {
     ${renderWeapons(profile)}
     ${renderTechniques(profile)}
     ${renderArmor(profile)}
+    ${renderDamageAffinities(profile)}
     ${renderAura(profile)}
     <section class="cp-sheet-grid cp-sheet-grid-two">${renderNarrativeCollection(profile, 'quirks', 'Marotten & Eigenschaften', 'Persönlichkeit und Sonderregeln', 'Marotte')}${renderNarrativeCollection(profile, 'conditions', 'Zustände & Effekte', 'Dauerhafte und temporäre Einflüsse', 'Zustand')}</section>
     <section class="cp-sheet-grid cp-sheet-grid-two">${renderAbilities(profile)}${renderMagic(profile)}</section>
@@ -839,9 +860,10 @@ function createEmptyItem(collection) {
   if (collection === 'weapons') return { id, inventoryItemId: '', name: '', weaponType: 'unarmed', training: 'simple', damageFormula: '', versatileDamageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, requirements: '', aiInstructions: '', equipped: draftProfile.weapons.length === 0 };
   if (collection === 'armorItems') return { id, inventoryItemId: '', name: '', kind: 'armor', baseArmorClass: '', armorClassBonus: 0, dexterityMode: 'full', dexterityCap: 2, dexterityUnlockLevel: 0, equipped: true };
   if (collection === 'resources') return { id, name: '', current: 0, maximum: 0, recovery: 'manual', scope: 'persistent', category: '', icon: '' };
-  if (collection === 'techniques') return { id, name: '', trainingForm: '', minimumLevel: 1, category: 'technique', description: '', effect: '', activationType: 'action', weaponTypes: [], compatibleWeaponIds: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, secondarySave: { enabled: false, attributeKey: 'constitution', dcBase: 8, dcAttributeKey: 'strength', addProficiency: true, failureCondition: { id: `${id}-condition`, name: '', duration: '', description: '', mechanics: {} } }, followUpAttack: { enabled: false, sameTarget: true, damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, triggerFurtherEffects: false } };
+  if (collection === 'techniques') return { id, name: '', trainingForm: '', minimumLevel: 1, category: 'technique', description: '', effect: '', activationType: 'action', weaponTypes: [], compatibleWeaponIds: [], damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, rollMode: 'normal', range: '', target: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, secondarySave: { enabled: false, attributeKey: 'constitution', dcBase: 8, dcAttributeKey: 'strength', addProficiency: true, failureCondition: { id: `${id}-condition`, name: '', duration: '', description: '', mechanics: {} } }, followUpAttack: { enabled: false, sameTarget: true, damageFormula: '', damageType: '', attackBonus: 0, damageBonus: 0, triggerReactions: true, repeatPerAttackRules: true, triggerFurtherEffects: false } };
   if (collection === 'quirks') return { id, name: '', type: 'quirk', description: '', appliesWhen: '', trigger: '', target: 'Selbst', duration: '', stacking: 'normal', tags: '', limitations: '', aiInstructions: '', priority: 0, active: true, mechanics: {} };
   if (collection === 'conditions') return { id, name: '', duration: '', source: '', description: '', active: true, mechanics: {} };
+  if (collection === 'damageAffinities') return { id, damageType: 'all', response: 'resistant', magicScope: 'any', source: '', notes: '' };
   if (collection === 'abilities') return { id, name: '', description: '', usesCurrent: 0, usesMaximum: 0, recovery: 'none', recoveryDayKey: '', rollFormula: '', damageType: 'physisch', activationType: 'action', delivery: 'ability', combatUsable: false, target: '', range: '', duration: '', requirements: '', tags: '', aiInstructions: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, active: true, mechanics: {}, inventoryUseTrigger: { enabled: false, itemTags: [], restoreResources: [], requireActualRecovery: true } };
   if (collection === 'magic.spells') return { id, name: '', level: 0, manaCost: 0, slotResourceId: '', slotCost: 0, presentationKind: 'spell', activationType: 'action', resolutionType: 'spell-attack', saveAttribute: 'dexterity', halfDamageOnSave: false, damageType: 'Magie', range: 'Zauber', rollFormula: '', description: '', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, prepared: true };
   return { id };
@@ -875,6 +897,7 @@ function openDetailItemEditor(collectionPath, itemId, kind, defaultActivation = 
     item,
     resources: draftProfile.resources,
     weapons: draftProfile.weapons,
+    inventoryItems: Array.isArray(getInventoryDraft()?.items) ? getInventoryDraft().items : [],
     onSave: updated => {
       const collection = getAtPath(draftProfile, collectionPath);
       if (!Array.isArray(collection)) return;

@@ -21,9 +21,9 @@ import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile
 
 const actionResourceIds = ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'];
 
-test('ein leerer Charakterbogen besitzt die vollständige Schema-8-Grundlage', () => {
+test('ein leerer Charakterbogen besitzt die vollständige Schema-9-Grundlage', () => {
   const profile = sanitizeCharacterCombatProfile({});
-  assert.equal(profile.schemaVersion, 8);
+  assert.equal(profile.schemaVersion, 9);
   assert.equal(profile.progression.level, 1);
   assert.equal(profile.skills.length, 20);
   assert.deepEqual(

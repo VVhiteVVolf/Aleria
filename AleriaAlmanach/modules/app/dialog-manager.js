@@ -12,6 +12,7 @@ const DIALOG_CONFIGS = {
   'icon-directory-overlay': { label: 'Icon-Verzeichnis', initialFocus: '#icon-directory-search, button, input, select' },
   'scene-time-event-overlay': { label: 'Szenenzeit ankuendigen', initialFocus: '#ste-title, button, input, textarea, select' },
   'scene-rest-overlay': { label: 'Rast einlegen', initialFocus: '[data-scene-rest-action="select-type"], input, button, textarea' },
+  'combat-encounter-overlay': { label: 'Kampfliste verwalten', initialFocus: '[data-combat-encounter-action="operation"], input, button, textarea, select' },
   'scene-transition-overlay': { label: 'Szenenwechsel anlegen', initialFocus: '#scene-transition-target, button, input, textarea, select' },
 };
 

@@ -1,4 +1,4 @@
-import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260803-economy-audit-v1';
+import { getSceneRestType, normalizeSceneRest } from './scene-rest-model.js?v=20260804-referee-v2';
 
 export const SCENE_REST_ICON_URL = '../IconOrdner/Buttom Icons/Rasten.png';
 

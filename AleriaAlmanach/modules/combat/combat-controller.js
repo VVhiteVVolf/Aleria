@@ -1,18 +1,26 @@
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260802-dice-audio-v2';
-import { narrateCombatResolution } from './combat-narration-service.js?v=20260802-combat-feedback-v3';
+import { narrateCombatResolution } from './combat-narration-service.js?v=20260804-referee-v2';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260803-gawain-level4-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260803-gawain-level4-v1';
+} from './combat-profile-resolver.js?v=20260804-referee-v2';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260804-referee-v2';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
+  getResolutionActorChannelingState,
+  getResolutionActorConcentrationState,
+  getResolutionActorConditionState,
+  getResolutionActorHitPointState,
+  getResolutionActorInventoryState,
   getResolutionActorResourceState,
   getResolutionHitPointState,
   getResolutionTargetConditionState,
+  getResolutionTargetChannelingState,
+  getResolutionTargetConcentrationState,
+  getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260803-economy-audit-v1';
+} from './combat-state-model.js?v=20260804-referee-v2';
 import {
   canUseAuraPayment,
   getActionPaymentCosts,
@@ -25,11 +33,12 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260803-gawain-level4-v1';
+} from './ui/combat-ui.js?v=20260804-referee-v2';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260803-gawain-level4-v1';
+} from './combat-trigger-rules.js?v=20260804-referee-v2';
+import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260804-referee-v2';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -85,6 +94,14 @@ function mergeCombatActors(characters = [], sceneActors = []) {
     .forEach(actor => merged.set(String(actor.id || ''), actor));
   sceneActors.forEach(actor => merged.set(String(actor.id || ''), actor));
   return [...merged.values()];
+}
+
+function applyEncounterParties(characters = [], comments = []) {
+  const partyMap = getActiveCombatPartyMap(comments);
+  if (!partyMap.size) return characters;
+  return characters.map(character => partyMap.has(String(character.id || ''))
+    ? { ...character, combatTeam: partyMap.get(String(character.id || '')) }
+    : character);
 }
 
 function getCombatRelationship(first = {}, second = {}) {
@@ -215,7 +232,8 @@ function resolveActorProfile(character, options = {}) {
     actionId: options.actionId,
     segmentKind: options.segmentKind,
     paymentMode: options.paymentMode,
-    weaponGrip: options.weaponGrip
+    weaponGrip: options.weaponGrip,
+    castLevel: options.castLevel
   });
   const actorId = String(options.actorId || profile.characterId || '');
   const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
@@ -229,6 +247,11 @@ function resolveActorProfile(character, options = {}) {
     ? { ...(state || {}), resources: effectiveResources }
     : null;
   return overlayCombatHitPointState(profile, effectiveState);
+}
+
+function actionAllowsSelfTarget(actor = {}) {
+  const effects = Array.isArray(actor.selectedAction?.effects) ? actor.selectedAction.effects : [];
+  return effects.length > 0 && !effects.some(effect => ['damage', 'debuff'].includes(String(effect?.type || '')));
 }
 
 function activateResolutionDialog() {
@@ -252,7 +275,8 @@ function closeResolutionDialog() {
 
 function mountComposers(context = {}) {
   latestComposerContext = context;
-  const characters = mergeCombatActors(getCharacters(), context.sceneActors || []);
+  const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
+  const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), cachedComments);
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
   const composerStates = new Map();
@@ -272,6 +296,7 @@ function mountComposers(context = {}) {
       segmentKind: getEffectiveCombatSegmentKind(segment),
       paymentMode: segment.combatPaymentMode,
       weaponGrip: segment.combatWeaponGrip,
+      castLevel: segment.combatCastLevel,
       recoveryDayKey
     }) : null;
     const actorValidation = actor ? profileResolver.validateActor(actor) : { ready: false, missingFields: [] };
@@ -304,7 +329,7 @@ function mountComposers(context = {}) {
       });
     }
     const targets = characters
-      .filter(character => String(character.id || '') !== actorId)
+      .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
       .map(character => resolveActorProfile(character, {
         actorId: character.id,
         storedStates,
@@ -341,13 +366,23 @@ function updateSegmentSetting(segmentId, field, value) {
   const segment = latestComposerContext?.segments?.find(item => String(item.id || '') === String(segmentId || ''));
   if (!segment) return;
   if (field === 'targetId') segment.combatTargetId = String(value || '');
+  if (field === 'targetIds') {
+    segment.combatTargetIds = [...new Set((Array.isArray(value) ? value : []).map(String).filter(Boolean))];
+    segment.combatTargetId = segment.combatTargetIds[0] || '';
+  }
   if (field === 'actionId') {
     segment.combatActionId = String(value || '');
+    segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
     segment.combatWeaponGrip = 'one-handed';
+    segment.combatCastLevel = 0;
     segment.combatPaymentConfirmed = false;
   }
   if (field === 'rollMode') segment.combatRollMode = ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
   if (field === 'weaponGrip') segment.combatWeaponGrip = String(value || '') === 'two-handed' ? 'two-handed' : 'one-handed';
+  if (field === 'castLevel') {
+    segment.combatCastLevel = Math.max(0, Math.min(10, Number(value) || 0));
+    segment.combatPaymentConfirmed = false;
+  }
   if (field === 'distanceMeters') segment.combatDistanceMeters = Math.max(0, Math.min(9999, Number(value) || 0));
   if (field === 'paymentMode') {
     segment.combatPaymentMode = ['aura', 'cheat'].includes(value) ? value : 'standard';
@@ -419,6 +454,9 @@ function buildNarrationFacts(resolution) {
     targetSnapshot: resolution.targetSnapshot || null,
     actorResourceSnapshot: resolution.actorResourceSnapshot || null,
     actorAbilitySnapshot: resolution.actorAbilitySnapshot || null,
+    actorInventorySnapshot: resolution.actorInventorySnapshot || null,
+    actorHitPointSnapshot: resolution.actorHitPointSnapshot || null,
+    actorConditionSnapshot: resolution.actorConditionSnapshot || null,
     abilityUse: resolution.abilityUse || null,
     auraContext: resolution.auraContext || null,
     ruleApplications: resolution.ruleApplications || [],
@@ -427,6 +465,14 @@ function buildNarrationFacts(resolution) {
     secondarySaves: resolution.secondarySaves || [],
     followUpAttacks: resolution.followUpAttacks || [],
     targetConditionSnapshot: resolution.targetConditionSnapshot || null,
+    targetResourceSnapshot: resolution.targetResourceSnapshot || null,
+    effectResults: resolution.effectResults || [],
+    ruleConflicts: resolution.ruleConflicts || [],
+    actorChannelingSnapshot: resolution.actorChannelingSnapshot || null,
+    actorConcentrationSnapshot: resolution.actorConcentrationSnapshot || null,
+    targetConcentrationSnapshot: resolution.targetConcentrationSnapshot || null,
+    targetChannelingSnapshot: resolution.targetChannelingSnapshot || null,
+    defeat: resolution.defeat || null,
     originalDescription: resolution.originalDescription,
     actorCombatProfile: resolution.actorCombatProfile,
     targetCombatProfile: resolution.targetCombatProfile
@@ -435,7 +481,9 @@ function buildNarrationFacts(resolution) {
 
 async function narrateCommittedMechanics(mechanics = {}) {
   const resolutions = (Array.isArray(mechanics.commentSegments) ? mechanics.commentSegments : [])
-    .map(segment => segment?.combatResolution)
+    .flatMap(segment => Array.isArray(segment?.combatResolutions)
+      ? segment.combatResolutions
+      : [segment?.combatResolution])
     .filter(resolution => resolution?.serverValidated === true && resolution?.resolutionId);
   const entries = [];
   for (const resolution of resolutions) {
@@ -447,7 +495,7 @@ async function narrateCommittedMechanics(mechanics = {}) {
   return entries;
 }
 
-async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '', stateContext = {}) {
+async function resolveCombatTarget(segment, characters, index, total, fallbackActorId = '', stateContext = {}, resolutionOptions = {}) {
   const actorId = String(segment.sceneActorId || segment.actorId || segment.characterId || fallbackActorId || '');
   const actorCharacter = characters.find(character => String(character.id || '') === actorId);
   if (!actorCharacter) throw new Error('Die handelnde Figur dieser Kampfbeschreibung ist nicht mehr verfügbar.');
@@ -461,6 +509,7 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
     segmentKind: getEffectiveCombatSegmentKind(segment),
     paymentMode: segment.combatPaymentMode,
     weaponGrip: segment.combatWeaponGrip,
+    castLevel: segment.combatCastLevel,
     recoveryDayKey: stateContext.recoveryDayKey
   });
   if (!segment.combatPaymentConfirmed && !actor.cheats?.enabled) {
@@ -472,11 +521,7 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   if (!actorValidation.ready) {
     throw new Error(getCombatActorValidationMessage(actor, actorValidation));
   }
-  const abilityUse = applyCombatAbilityUse(actor.abilities, actor.profileActionId, stateContext.recoveryDayKey);
-  if (!abilityUse.sufficient) {
-    throw new Error(`${actor.name} hat keine Nutzung von ${abilityUse.missing?.name || 'dieser Fähigkeit'} mehr übrig.`);
-  }
-  const targetId = String(segment.combatTargetId || '');
+  const targetId = String(resolutionOptions.targetId || segment.combatTargetId || '');
   if (!targetId) throw new Error('Wähle für jede Kampfbeschreibung ein Ziel.');
   const targetCharacter = characters.find(character => String(character.id || '') === targetId);
   if (!targetCharacter) throw new Error('Das gewählte Kampfziel ist nicht mehr verfügbar.');
@@ -505,6 +550,10 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
     ruleSources,
     rulePeriods: stateContext.rulePeriods,
     usedRuleFrequencyKeys: stateContext.usedRuleFrequencyKeys,
+    skipResourceCosts: resolutionOptions.primary === false,
+    skipAmmunition: resolutionOptions.primary === false,
+    skipSelfEffects: resolutionOptions.primary === false,
+    skipChanneling: resolutionOptions.primary === false,
     onPhase: phase => setCombatResolutionStatus(
       phase.phase === 'damage'
         ? 'Treffer – Schaden wird gewürfelt …'
@@ -512,7 +561,13 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
       phase.notation
     )
   });
-  if (abilityUse.changed) {
+  const abilityUse = resolution.actionType === 'channeling' || resolutionOptions.primary === false
+    ? { changed: false, abilities: actor.abilities, beforeAbilities: actor.abilities, use: null, sufficient: true }
+    : applyCombatAbilityUse(actor.abilities, actor.profileActionId, stateContext.recoveryDayKey);
+  if (!abilityUse.sufficient) {
+    throw new Error(`${actor.name} hat keine Nutzung von ${abilityUse.missing?.name || 'dieser Fähigkeit'} mehr übrig.`);
+  }
+  if (resolution.actionType !== 'channeling' && abilityUse.changed) {
     resolution.abilityUse = abilityUse.use;
     resolution.actorAbilitySnapshot = {
       before: abilityUse.beforeAbilities,
@@ -523,21 +578,39 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   setCombatResolutionStatus('Würfelbeleg erfasst …', 'Der Server prüft Profilwerte und endgültigen Zustand beim Speichern.');
   const nextTargetState = getResolutionHitPointState(resolution);
   const nextTargetConditions = getResolutionTargetConditionState(resolution);
-  if (nextTargetState || nextTargetConditions) {
+  const nextTargetResources = getResolutionTargetResourceState(resolution);
+  const nextTargetConcentration = getResolutionTargetConcentrationState(resolution);
+  const nextTargetChanneling = getResolutionTargetChannelingState(resolution);
+  if (nextTargetState || nextTargetConditions || nextTargetResources || nextTargetConcentration !== undefined || nextTargetChanneling !== undefined) {
     const previous = stateContext.workingStates?.get(targetId) || stateContext.storedStates?.get(targetId) || {};
     stateContext.workingStates?.set(targetId, {
       ...previous,
       ...(nextTargetState || {}),
-      ...(nextTargetConditions ? { temporaryConditions: nextTargetConditions } : {})
+      ...(nextTargetConditions ? { temporaryConditions: nextTargetConditions } : {}),
+      ...(nextTargetResources ? { resources: nextTargetResources } : {}),
+      ...(nextTargetConcentration !== undefined ? { concentration: nextTargetConcentration } : {}),
+      ...(nextTargetChanneling !== undefined ? { channeling: nextTargetChanneling } : {})
     });
   }
   const nextActorResources = getResolutionActorResourceState(resolution);
-  if (nextActorResources || abilityUse.changed) {
+  const nextActorInventory = getResolutionActorInventoryState(resolution);
+  const nextActorHitPoints = getResolutionActorHitPointState(resolution);
+  const nextActorConditions = getResolutionActorConditionState(resolution);
+  const nextActorChanneling = getResolutionActorChannelingState(resolution);
+  const nextActorConcentration = getResolutionActorConcentrationState(resolution);
+  if (nextActorResources || nextActorInventory || nextActorHitPoints || nextActorConditions
+    || (resolution.actionType !== 'channeling' && abilityUse.changed)
+    || nextActorChanneling !== undefined || nextActorConcentration !== undefined) {
     const previous = stateContext.workingStates?.get(actorId) || stateContext.storedStates?.get(actorId) || {};
     stateContext.workingStates?.set(actorId, {
       ...previous,
       ...(nextActorResources ? { resources: nextActorResources } : {}),
-      ...(abilityUse.changed ? { abilities: abilityUse.abilities } : {})
+      ...(nextActorInventory ? { inventory: nextActorInventory } : {}),
+      ...(nextActorHitPoints || {}),
+      ...(nextActorConditions ? { temporaryConditions: nextActorConditions } : {}),
+      ...(resolution.actionType !== 'channeling' && abilityUse.changed ? { abilities: abilityUse.abilities } : {}),
+      ...(nextActorChanneling !== undefined ? { channeling: nextActorChanneling } : {}),
+      ...(nextActorConcentration !== undefined ? { concentration: nextActorConcentration } : {})
     });
   }
   (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
@@ -545,14 +618,42 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
     stateContext.workingStates?.set(String(snapshot.sourceActorId), { ...previous, resources: snapshot.after });
   });
   stateContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
+  resolution.multiTargetIndex = Math.max(0, Number(resolutionOptions.targetIndex) || 0);
+  resolution.multiTargetCount = Math.max(1, Number(resolutionOptions.targetCount) || 1);
   return resolution;
+}
+
+async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '', stateContext = {}) {
+  const targetIds = [...new Set((Array.isArray(segment.combatTargetIds) && segment.combatTargetIds.length
+    ? segment.combatTargetIds
+    : [segment.combatTargetId]).map(String).filter(Boolean))].slice(0, 20);
+  if (!targetIds.length) throw new Error('Wähle für jede Kampfbeschreibung mindestens ein Ziel.');
+  const resolutions = [];
+  for (let targetIndex = 0; targetIndex < targetIds.length; targetIndex += 1) {
+    const resolution = await resolveCombatTarget(
+      segment,
+      characters,
+      index,
+      total,
+      fallbackActorId,
+      stateContext,
+      { targetId: targetIds[targetIndex], targetIndex, targetCount: targetIds.length, primary: targetIndex === 0 }
+    );
+    resolutions.push(resolution);
+    if (resolution.actionType === 'channeling') break;
+  }
+  return resolutions;
 }
 
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
   const combatSegments = segments.filter(isCombatSegment);
   if (!combatSegments.length) return { handled: false, published: false };
-  const characters = mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []);
+  const cachedComments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
+  const characters = applyEncounterParties(
+    mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []),
+    cachedComments
+  );
   const stateContext = {
     storedStates: getStoredCombatStates(submission.threadId || ''),
     workingStates: new Map(),
@@ -565,15 +666,15 @@ async function handleSubmission(submission = {}) {
     }
   };
   stateContext.usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys(
-    globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [],
+    cachedComments,
     stateContext.rulePeriods
   );
 
   activateResolutionDialog();
   try {
-    const resolutions = [];
+    const resolutionGroups = [];
     for (let index = 0; index < combatSegments.length; index += 1) {
-      resolutions.push(await resolveCombatSegment(
+      resolutionGroups.push(await resolveCombatSegment(
         combatSegments[index],
         characters,
         index,
@@ -587,7 +688,8 @@ async function handleSubmission(submission = {}) {
     const enhancedSegments = segments.map(segment => {
       const { clientSegmentId, ...storedSegment } = segment;
       if (!isCombatSegment(storedSegment)) return storedSegment;
-      const combatResolution = resolutions[resolutionIndex++];
+      const combatResolutions = resolutionGroups[resolutionIndex++] || [];
+      const combatResolution = combatResolutions[0];
       return {
         ...storedSegment,
         mechanicMode: getCombatSegmentMode(storedSegment),
@@ -597,16 +699,19 @@ async function handleSubmission(submission = {}) {
           presentationKind: storedSegment.commentKind || storedSegment.kind,
           actorId: combatResolution.actorId,
           targetId: combatResolution.targetId,
+          targetIds: combatResolutions.map(resolution => resolution.targetId),
           profileActionId: combatResolution.profileActionId || storedSegment.combatActionId || '',
           profileActionKind: combatResolution.profileActionKind || '',
           rollMode: combatResolution.attack.rollMode,
           weaponGrip: combatResolution.weaponGrip || storedSegment.combatWeaponGrip || 'one-handed',
+          castLevel: combatResolution.castLevel ?? storedSegment.combatCastLevel ?? 0,
           paymentMode: storedSegment.combatPaymentMode || 'standard',
           resourceCosts: combatResolution.resourceCosts || [],
           ruleSelections: Array.isArray(storedSegment.combatRuleSelections) ? storedSegment.combatRuleSelections.map(selection => ({ ...selection })) : [],
           originalDescription: storedSegment.text
         },
-        combatResolution
+        combatResolution,
+        ...(combatResolutions.length > 1 ? { combatResolutions } : {})
       };
     });
     setCombatResolutionStatus('Kampfauswertung abgeschlossen.', 'Der Beitrag wird gespeichert …');
@@ -618,7 +723,7 @@ async function handleSubmission(submission = {}) {
         commentSegments: enhancedSegments,
         combatRecoveryDayKey: stateContext.recoveryDayKey,
         combatAction: combatSegments.length === 1 ? enhancedSegments.find(segment => segment.combatAction)?.combatAction || null : null,
-        combatResolution: combatSegments.length === 1 ? resolutions[0] : null
+        combatResolution: combatSegments.length === 1 && resolutionGroups[0]?.length === 1 ? resolutionGroups[0][0] : null
       }
     };
   } catch (error) {
@@ -637,7 +742,9 @@ document.addEventListener('change', event => {
   const field = event.target?.closest?.('[data-combat-input]');
   if (!field) return;
   const composer = field.closest('[data-combat-composer]');
-  updateSegmentSetting(composer?.dataset.combatSegmentId, field.dataset.combatInput, field.value);
+  updateSegmentSetting(composer?.dataset.combatSegmentId, field.dataset.combatInput, field.multiple
+    ? [...field.selectedOptions].map(option => option.value).filter(Boolean)
+    : field.value);
 });
 
 document.addEventListener('click', event => {
@@ -653,7 +760,7 @@ document.addEventListener('click', event => {
 document.addEventListener('input', event => {
   const search = event.target?.closest?.('[data-combat-target-search]');
   if (!search) return;
-  const select = search.closest('[data-combat-composer]')?.querySelector?.('[data-combat-input="targetId"]');
+  const select = search.closest('[data-combat-composer]')?.querySelector?.('[data-combat-input="targetId"], [data-combat-input="targetIds"]');
   if (!select) return;
   const query = String(search.value || '').trim().toLocaleLowerCase('de');
   [...select.options].forEach((option, index) => {

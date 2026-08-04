@@ -1,7 +1,7 @@
 import {
   getSkillTotal,
   resolveCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
+} from '../combat/combat-profile-model.js?v=20260804-referee-v2';
 
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
 
@@ -80,7 +80,9 @@ export function findProfileSkill(profile, definition) {
 export function resolveSkillModifier(character = {}, skillId = '') {
   const definition = getSkillDefinition(skillId);
   if (!definition) throw new Error('Die gewählte Fertigkeit ist nicht verfügbar.');
-  const profile = resolveCharacterCombatProfile(character);
+  const profile = character?.characterId && Array.isArray(character?.attributes) && Array.isArray(character?.skills)
+    ? character
+    : resolveCharacterCombatProfile(character);
   const profileSkill = findProfileSkill(profile, definition);
   const syntheticSkill = {
     id: `derived-${definition.id}`,
@@ -112,7 +114,9 @@ export function normalizeSkillChallenge(source = {}) {
     difficulty: clampInteger(source.difficulty, 10, 1, 40),
     preferredSkills,
     preferredModifier: clampInteger(source.preferredModifier, 2, -20, 20),
-    alternativeModifier: clampInteger(source.alternativeModifier, -2, -20, 20)
+    alternativeModifier: clampInteger(source.alternativeModifier, -2, -20, 20),
+    defenseMode: ['fixed', 'passive'].includes(String(source.defenseMode || 'passive')) ? String(source.defenseMode || 'passive') : 'passive',
+    defenseSkillId: SKILLS_BY_ID.has(String(source.defenseSkillId || 'deception')) ? String(source.defenseSkillId || 'deception') : 'deception'
   };
 }
 
@@ -168,6 +172,10 @@ export function collectSkillChallenges(comments = []) {
         authorId: String(segment?.sceneActorId || segment?.characterId || comment?.characterId || ''),
         authorKey: String(segment?.sceneActorId || segment?.characterId || comment?.characterId || segment?.charName || comment?.charName || 'unbekannt'),
         authorName: String(segment?.charName || comment?.charName || 'Unbekannt'),
+        authorPersistence: segment?.sceneActorSourceId || comment?.creatureId
+          ? { kind: 'scene-creature', sourceCreatureId: String(segment?.sceneActorSourceId || comment?.creatureId || '') }
+          : { kind: String(comment?.actorType || '') === 'creature' ? 'creature' : 'character', recordId: String(segment?.characterId || comment?.characterId || '') },
+        createdBy: String(comment?.createdBy || ''),
         visibleText: String(segment?.text || ''),
         createdAt: comment?.createdAt || comment?.createdAtClient || null
       });

@@ -136,6 +136,7 @@
       _commentSegments.forEach(segment => {
         if (segment.actorId === id) segment.actorId = fallbackId;
         if (segment.combatTargetId === id) segment.combatTargetId = '';
+        segment.combatTargetIds = (segment.combatTargetIds || []).filter(targetId => String(targetId) !== String(id));
       });
     }
     notifyChange();

@@ -86,7 +86,9 @@ function setEditCommentSegmentKind(id, kind) {
   if (segment.kind === 'action') {
     segment.mechanicMode = 'normal';
     segment.combatTargetId = '';
+    segment.combatTargetIds = [];
     segment.combatActionId = '';
+    segment.combatCastLevel = 0;
     segment.combatRollMode = 'normal';
     segment.combatDistanceMeters = 0;
     segment.combatPaymentMode = 'standard';
@@ -115,8 +117,10 @@ function setEditCommentSegmentActor(id, actorId) {
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
+  segment.combatCastLevel = 0;
   segment.combatPaymentConfirmed = false;
   if (segment.combatTargetId === actor.id) segment.combatTargetId = '';
+  segment.combatTargetIds = (segment.combatTargetIds || []).filter(id => String(id) !== String(actor.id));
   renderEditCommentSegmentList();
   updateEditFormPreview();
 }
@@ -280,6 +284,9 @@ function buildEditCommentSegmentsForSave() {
         skillChallengePreferredSkills: Array.isArray(segment.skillChallengePreferredSkills) ? [...segment.skillChallengePreferredSkills] : [],
         skillChallengePreferredModifier: Number(segment.skillChallengePreferredModifier ?? 2),
         skillChallengeAlternativeModifier: Number(segment.skillChallengeAlternativeModifier ?? -2),
+        skillChallengeDefenseMode: segment.skillChallengeDefenseMode === 'fixed' ? 'fixed' : 'passive',
+        skillChallengeDefenseSkillId: String(segment.skillChallengeDefenseSkillId || 'deception'),
+        skillRuleSelections: Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections.map(selection => ({ ...selection })) : [],
         storedSkillResolution: segment.storedSkillResolution || null,
         storedSkillChallenge: segment.storedSkillChallenge || null,
         inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
@@ -287,7 +294,9 @@ function buildEditCommentSegmentsForSave() {
         storedInventoryUse: segment.storedInventoryUse || null,
         ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
+          combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],
           combatActionId: String(segment.combatActionId || ''),
+          combatCastLevel: Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)),
           combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
           combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),
           combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',

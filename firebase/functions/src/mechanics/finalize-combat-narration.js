@@ -1,5 +1,6 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { validateCombatNarration } from './combat-narration-integrity.js';
 
 const MODERATION_ROLES = new Set(['moderator', 'admin']);
 
@@ -45,21 +46,33 @@ export const finalizeCombatNarration = onCall({
       fail('failed-precondition', 'Nur servergeprüfte Mechanikbeiträge können abgeschlossen werden.');
     }
     const segments = (Array.isArray(comment.commentSegments) ? comment.commentSegments : []).map(segment => {
-      const combatResolution = segment?.combatResolution;
+      const originalCombatResolutions = Array.isArray(segment?.combatResolutions)
+        ? segment.combatResolutions
+        : (segment?.combatResolution ? [segment.combatResolution] : []);
+      const combatResolutions = originalCombatResolutions.map(combatResolution => {
+        const submittedCombatNarration = byResolutionId.get(String(combatResolution?.resolutionId || ''));
+        const combatNarration = submittedCombatNarration
+          ? validateCombatNarration(combatResolution, submittedCombatNarration)
+          : null;
+        return combatNarration && !combatResolution.narration?.text
+          ? { ...combatResolution, narration: combatNarration }
+          : combatResolution;
+      });
+      const combatResolution = combatResolutions[0] || null;
       const skillResolution = segment?.skillResolution;
-      const combatNarration = byResolutionId.get(String(combatResolution?.resolutionId || ''));
       const skillNarration = byResolutionId.get(String(skillResolution?.resolutionId || ''));
       return {
         ...segment,
-        ...(combatResolution && combatNarration && !combatResolution.narration?.text
-          ? { combatResolution: { ...combatResolution, narration: combatNarration } }
-          : {}),
+        ...(combatResolution ? { combatResolution } : {}),
+        ...(combatResolutions.length > 1 ? { combatResolutions } : {}),
         ...(skillResolution && skillNarration && !skillResolution.narration?.text
           ? { skillResolution: { ...skillResolution, narration: skillNarration } }
           : {})
       };
     });
-    const resolutions = segments.map(segment => segment?.combatResolution).filter(Boolean);
+    const resolutions = segments.flatMap(segment => Array.isArray(segment?.combatResolutions)
+      ? segment.combatResolutions
+      : [segment?.combatResolution]).filter(Boolean);
     transaction.update(ref, {
       commentSegments: segments,
       combatResolution: resolutions.length === 1 ? resolutions[0] : null,

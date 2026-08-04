@@ -7,6 +7,7 @@ const COMMENT_ACTION_ICONS = {
   transition: 'https://i.imgur.com/MHOEe96.png',
   time: 'https://i.imgur.com/Q9FVnjc.png',
   rest: '../IconOrdner/Buttom Icons/Rasten.png',
+  encounter: '../IconOrdner/Buttom Icons/Kampfhandlung.PNG',
   poll: 'https://i.imgur.com/jeMqIr7.png'
 };
 
@@ -22,6 +23,9 @@ function buildCommentActionBar(hintText, options = {}) {
   const sceneRestButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-rest-event-btn" type="button" data-scene-rest-action="open" title="Rast einlegen" aria-label="Rast einlegen">${buildCommentActionIcon('rest')}</button>`
     : '';
+  const combatEncounterButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-combat-encounter-btn" type="button" data-combat-encounter-action="open" title="Kampfliste verwalten" aria-label="Kampfliste verwalten">${buildCommentActionIcon('encounter')}</button>`
+    : '';
   const sceneTransitionButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-transition-event-btn" type="button" data-scene-transition-action="open-dialog" title="Szenenwechsel anlegen" aria-label="Szenenwechsel anlegen">${buildCommentActionIcon('transition')}</button>`
     : '';
@@ -36,6 +40,7 @@ function buildCommentActionBar(hintText, options = {}) {
       <button class="comments-add-btn comments-action-icon-btn" type="button" data-action="open-comment-form" title="Kommentieren" aria-label="Kommentieren">${buildCommentActionIcon('comment')}</button>
       ${sceneTimeButton}
       ${sceneRestButton}
+      ${combatEncounterButton}
       ${sceneTransitionButton}
       ${scenePollButton}
       <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>

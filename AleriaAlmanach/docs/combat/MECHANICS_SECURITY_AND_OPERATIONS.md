@@ -1,6 +1,6 @@
 # Mechanik-Sicherheit und Betrieb
 
-Stand: 3. August 2026
+Stand: 4. August 2026
 
 ## Ziel und Vertrauensgrenze
 
@@ -16,6 +16,7 @@ AleriaGPT formuliert erst nach dieser Transaktion eine Erzählung. Die nachträg
 | Fertigkeitsauswertung | `commitSkillComment` | servergeprüfter Fertigkeitswurf, Herausforderung und strukturierter Regelbeleg |
 | Kampf, Zauber, Fähigkeitsnutzung, Konsumieren im Kampfkommentar | `commitCombatComment` | Treffer, Schaden, TP, temporäre TP, Kosten, Nutzungen, Inventar |
 | lange oder kurze Rast | `commitSceneRest` | TP und zulässige Erholungen anhand des tatsächlichen Szenentags |
+| Kampf beginnen, Teilnehmer ändern oder beenden | `commitCombatEncounter` | Parteien, Profil-Sperren, Kampfstatus und automatische EP-Vergabe |
 | Übergabe zwischen Inventaren | `commitInventoryTransfer` | beide gespeicherten Inventare und ein gemeinsamer Audit-Beleg |
 | KI-Narration nach Kampf oder Fertigkeitswurf | `finalizeCombatNarration` | ausschließlich Narrationsfelder des festgeschriebenen Kommentars |
 | Backup-Import | `importBackupRecords` | moderierter Import; Profile sind Zustandsautorität, alte Mechanik bleibt Historie |
@@ -37,6 +38,9 @@ Direkte Browser-Erstellung von Dokumenten in `comments` ist durch die Standard-F
 - Auren unterscheiden Selbst, Verbündete und Gegner. Eine Aura ohne gültigen Radius oder außerhalb der angegebenen Entfernung wird nicht angewendet.
 - Strukturierte Auslöserregeln werden nach Phase, Aktionsart, Beziehung, Empfänger, Radius und Häufigkeit neu geprüft. Ein vom Client behaupteter Reaktionsbonus ohne passende Profilregel wird verworfen.
 - Reaktionskosten und begrenzte Fähigkeitsnutzungen werden auf dem Profil der tatsächlichen Regelquelle verbucht. Fremde Spielerfiguren benötigen Controller- oder Moderationsrechte.
+- Fertigkeitsproben laden Akteur, Gegenspieler und ausgewählte Unterstützer. Gegnerische Aura, Zustände, Eigenschaften und Reaktionen gelten ebenso wie eine echte passive Gegenfertigkeit; erfolgreiche verdeckte Herausforderungen werden atomar beansprucht und können weder vom Autor selbst noch gleichzeitig mehrfach enthüllt werden.
+- Während einer aktiven Kampfankündigung sperren Firestore-Regeln nur `combatProfile` und `inventory` der beteiligten Vorlagen. Andere Profildaten bleiben editierbar. Bei mehrfach verwendeten Kreaturenvorlagen bleibt die Sperre bestehen, bis die letzte aktive Instanz ausgeschieden ist.
+- Vollständige Profil-Snapshots werden nur für die unmittelbare Narration im Browser gehalten. Vor Transport und Firestore-Speicherung werden sie durch stabile Profilreferenzen und kompakte, autoritative Vorher-/Nachher-Belege ersetzt.
 - Freie Notizen, Beschreibungen und KI-Hinweise dürfen keine serverseitig bestätigten Zahlen oder Ergebnisse überschreiben.
 - Rettungszauber speichern den würfelnden Beteiligten und das Rettungsattribut. Temporäre TP werden vor, nach und als absorbierter Anteil im KI-Kontext geführt.
 - Importierte historische Mechanik überschreibt keinen Live-Zustand. Der importierte Profil-Snapshot ist die Fortsetzungsbasis.
@@ -109,3 +113,5 @@ Eine fehlgeschlagene KI-Narration darf niemals die Mechanik zurückrollen. Der K
 - Produktions-E2E mit Auth- und Functions-Emulator in CI ausführen; der aktuelle Brandhof-Test deckt den Regelkern vollständig, aber nicht den realen Browser-Firebase-Transport ab.
 - Rollenänderungen und mechanische Gegenbuchungen in eine eigene, durchsuchbare Audit-Ansicht aufnehmen.
 - Codebase-Namen der gemischten Firebase Functions in einer kontrollierten Migration bereinigen.
+- Die heute noch vollständig geladene Szenenhistorie durch einen transaktionalen Firestore-Szenenprojektor ersetzen. Dieser soll aktuellen Kampfzustand, Regelhäufigkeiten, letzten Szenentag, aktive Begegnung und die drei jüngsten verdeckten Herausforderungen checkpointen. GitHub bleibt Archiv und Registry, ist aber wegen fehlender Firestore-Transaktionen keine geeignete Live-Zustandsquelle.
+- Die reservierten Lebenszyklusphasen `on-combat-start`, `on-combat-end` und frei wirkende Kanalisierungs-Folgewirkungen an diesen Szenenprojektor anbinden.

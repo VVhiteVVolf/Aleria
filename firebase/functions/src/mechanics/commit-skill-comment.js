@@ -2,8 +2,17 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { buildNarrativeCommentDocument } from '../comments/commit-narrative-comment.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
-import { getTrustedSceneDay, isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+import { resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
+import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import {
+  getTrustedSceneDay,
+  isTrustedMechanicalComment,
+  isTrustedSceneContributionComment,
+  isTrustedSkillChallengeComment,
+  sortSceneHistory
+} from './trusted-scene-history.js';
 import { skillSegments, validateSkillCommentSegments } from './skill-comment-validator.js';
+import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -43,25 +52,52 @@ export const commitSkillComment = onCall({
   const ref = database.collection('comments').doc();
   const now = Date.now();
   let document;
+  let profileUpdates = [];
+  let responseSegments = [];
   await database.runTransaction(async transaction => {
     const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
+    const challengeHistory = allHistory.filter(isTrustedSkillChallengeComment);
     const sceneDay = getTrustedSceneDay(allHistory);
     const rulePeriods = { comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` };
+    const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
+    const workingStates = new Map([...historyStates].map(([actorId, state]) => [actorId, {
+      ...state,
+      resources: Array.isArray(state.resources) ? resetCommentScopedResources(state.resources) : state.resources
+    }]));
+    const persistentUpdates = new Map();
     const validated = await validateSkillCommentSegments({
       database,
       transaction,
       request,
       metadata: payload.metadata,
       history: trustedHistory,
+      challengeHistory,
       rulePeriods,
-      usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods)
+      usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods),
+      entryId,
+      workingStates,
+      persistentUpdates
     });
-    const metadata = { ...payload.metadata, commentSegments: validated.commentSegments };
+    profileUpdates = [...persistentUpdates.values()].map(update => {
+      const values = { updatedAt: new Date(now).toISOString() };
+      if (update.resources) values['combatProfile.resources'] = update.resources;
+      if (update.abilities) values['combatProfile.abilities'] = update.abilities;
+      transaction.update(update.entry.ref, values);
+      return {
+        kind: update.entry.kind,
+        recordId: update.entry.recordId,
+        resources: update.resources || null,
+        abilities: update.abilities || null
+      };
+    });
+    responseSegments = validated.commentSegments;
+    const storedSegments = compactMechanicalSegmentsForStorage(validated.commentSegments);
+    const metadata = { ...payload.metadata, commentSegments: storedSegments };
     document = {
       ...buildNarrativeCommentDocument({ ...payload, metadata }, entryId, request, now),
-      commentSegments: validated.commentSegments,
+      commentSegments: storedSegments,
       skillTransaction: {
         schemaVersion: 1,
         transactionId: ref.id,
@@ -77,6 +113,7 @@ export const commitSkillComment = onCall({
   });
   return {
     id: ref.id,
-    mechanics: { commentSegments: document.commentSegments }
+    profileUpdates,
+    mechanics: { commentSegments: responseSegments }
   };
 });

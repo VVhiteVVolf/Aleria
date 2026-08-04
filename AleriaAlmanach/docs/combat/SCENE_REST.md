@@ -8,13 +8,15 @@ Beim Öffnen werden alle Figuren vorausgewählt, die im aktuellen Thread bereits
 
 ## Erholung
 
-Kurze und lange Rasten setzen aktuelle Trefferpunkte auf das Maximum. Temporäre Trefferpunkte bleiben erhalten.
+Kurze und lange Rasten setzen gemäß der Aleria-Vorgabe aktuelle Trefferpunkte auf das Maximum. Temporäre Trefferpunkte bleiben bei einer kurzen Rast erhalten und werden bei einer langen Rast entfernt.
 
 - Kommentarressourcen werden bei jeder Rast gefüllt.
 - `short-rest` wird bei kurzer und langer Rast gefüllt.
-- `long-rest`, `day` und `scene` werden nur bei langer Rast gefüllt.
+- `long-rest` und `scene` werden nur bei langer Rast gefüllt.
+- `day` wird ausschließlich aufgefüllt, wenn die Rast tatsächlich einen neuen Aleria-Szenentag erreicht. Eine lange Rast allein ist kein Tageswechsel.
 - `manual` und `none` bleiben unverändert.
 - Nutzungszähler besonderer Fähigkeiten folgen denselben Erholungskennzeichen und werden in derselben Profiltransaktion gespeichert.
+- Zustände mit `short-rest`, `long-rest` oder `day` laufen an der passenden Grenze aus; Konzentration und Kanalisierung enden bei jeder Rast.
 
 Die Standarddauer beträgt eine Stunde beziehungsweise acht Stunden. Der Dialog erlaubt eine abweichende Dauer. Das Ende wird als normales `sceneTimeEvent` gespeichert und verwendet dadurch dieselbe Szenenuhr, Tagesgrenze und Aleria-Datumslogik wie ein Zeitsprung.
 

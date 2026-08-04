@@ -18,6 +18,9 @@ import {
   narrateSkillResolution,
   skillNarrationInternals
 } from '../modules/skill-checks/skill-check-narration.js';
+import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
+import { overlayCombatHitPointState } from '../modules/combat/combat-state-model.js';
+import { SkillResolutionService } from '../modules/skill-checks/skill-resolution-service.js';
 
 function makeCharacter(skills = []) {
   return {
@@ -39,6 +42,12 @@ function makeCharacter(skills = []) {
   };
 }
 
+class FixedSkillDice {
+  async rollSkill({ modifier }) {
+    return { id: 'skill-roll', natural: 10, dice: [10], keptDice: [10], total: 10 + modifier };
+  }
+}
+
 test('ordnet jeder geforderten Sprechblase nur ihre passenden Fertigkeiten zu', () => {
   assert.deepEqual(getSkillsForCommentKind('speech').map(skill => skill.id), ['persuasion']);
   assert.deepEqual(getSkillsForCommentKind('performance').map(skill => skill.id), ['deception', 'performance']);
@@ -46,6 +55,69 @@ test('ordnet jeder geforderten Sprechblase nur ihre passenden Fertigkeiten zu', 
   assert.deepEqual(getSkillsForCommentKind('interact').map(skill => skill.id), ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival']);
   assert.deepEqual(getSkillsForCommentKind('flirt').map(skill => skill.id), ['seduction']);
   assert.equal(getSkillsForCommentKind('flirt')[0].label, 'Flirten');
+});
+
+test('laufende Zustände verändern auch den echten Fertigkeitsmodifikator', () => {
+  const base = resolveCombatProfile(makeCharacter());
+  const affected = overlayCombatHitPointState(base, {
+    temporaryConditions: [{
+      id: 'verunsichert',
+      name: 'Verunsichert',
+      active: true,
+      mechanics: { skill: -2 },
+      durationModel: { kind: 'scene-comments', remainingSceneComments: 2 }
+    }]
+  });
+  assert.equal(resolveSkillModifier(affected, 'persuasion').modifier, 2);
+});
+
+test('Fertigkeitsauswertung verrechnet Zielregeln und gewählte Unterstützung', async () => {
+  const actor = resolveCombatProfile(makeCharacter());
+  const target = resolveCombatProfile({
+    ...makeCharacter(), id: 'target', name: 'Gegenspieler',
+    combatProfile: {
+      ...makeCharacter().combatProfile,
+      quirks: [{
+        id: 'unsettling', name: 'Verunsichernde Präsenz', active: true,
+        triggerRules: [{
+          id: 'unsettling-skill', name: 'Verunsichert den Gegner', enabled: true,
+          phase: 'pre-roll', recipient: 'actor', sourceRelation: 'enemy', activation: 'passive',
+          frequency: 'always', condition: 'always', actionKinds: ['skill'],
+          effects: { skillModifier: -3 }
+        }]
+      }]
+    }
+  });
+  const support = resolveCombatProfile({
+    ...makeCharacter(), id: 'support', name: 'Unterstützer',
+    combatProfile: {
+      ...makeCharacter().combatProfile,
+      aura: {
+        enabled: true,
+        name: 'Ermutigende Aura',
+        latentPresence: {
+          enabled: true, active: true, name: 'Ermutigende Aura', target: 'Verbündete',
+          allyMechanics: { skill: 2 }
+        }
+      }
+    }
+  });
+  const result = await new SkillResolutionService(new FixedSkillDice()).resolve({
+    actor: { id: actor.characterId, name: actor.name },
+    settings: { skillId: 'persuasion', difficulty: 10 }
+  }, {
+    actorProfile: actor,
+    targetProfile: target,
+    ruleSources: [
+      { actorId: actor.characterId, actorName: actor.name, profile: actor, sourceRole: 'actor', relationToActor: 'self', relationToTarget: 'enemy', selectedRuleIds: [] },
+      { actorId: target.characterId, actorName: target.name, profile: target, sourceRole: 'target', relationToActor: 'enemy', relationToTarget: 'self', selectedRuleIds: [] },
+      { actorId: support.characterId, actorName: support.name, profile: support, sourceRole: 'support', relationToActor: 'ally', relationToTarget: 'enemy', selectedRuleIds: ['@aura:actor'] }
+    ]
+  });
+  assert.equal(result.profileModifier, 4);
+  assert.equal(result.ruleModifier, -1);
+  assert.equal(result.total, 13);
+  assert.deepEqual(result.ruleApplications.map(rule => rule.sourceActorId).sort(), ['support', 'target']);
 });
 
 test('bleibt ein neuer Abschnitt standardmäßig rein erzählerisch', () => {

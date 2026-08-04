@@ -2355,6 +2355,32 @@ const SECTIONS = [
             sessionEmptyText: "Die feste Testsimulation konnte nicht geladen werden. Eigene Beiträge bleiben dennoch möglich."
           }
         ]
+      },
+      {
+        id: "test-testarena-sparring",
+        title: "Testarena — Sparring der Ritter",
+        subtitle: "Freies Testfeld für die Kampf-Kommentarfunktion",
+        type: "Testszene · Kampf & Dialog",
+        category: "Systemtest · Interaktive Szene",
+        image: "https://i.imgur.com/sY3vKh7.png",
+        stamp: "ALERIA · KAMPFSYSTEM · LIVE-TEST",
+        multipage: true,
+        appendCommentsPage: false,
+        locked: false,
+        icon: "⚔",
+        pages: [
+          {
+            image: "https://i.imgur.com/sY3vKh7.png",
+            pageTitle: "I. — Sparring in der Testarena",
+            sessionPage: true,
+            commentThreadKey: "testarena-sparring",
+            sessionIntro: "In der abgesteckten Testarena stehen sich Gawain Draig und ein Draig-Lehensritter zu einem freundschaftlichen Sparring gegenüber. Noch ist kein Schlag gefallen — beide mustern sich nur, wärmen sich auf und warten auf das Startzeichen. Die Szene dient ausschließlich dazu, die neue Kampf-Integration beim Kommentieren frei zu erproben, bevor ein echter Schlagabtausch beginnt.",
+            sessionHint: "Setze Gawain Draig und den Draig-Lehensritter (als Kreaturenvorlage über die Szenenbesetzung) ein und probiere Kampfkommentare aus — ganz ohne Zeitdruck und ohne dass schon ein Treffer sitzen muss.",
+            sessionParticipants: "Gawain Draig, Draig-Lehensritter",
+            sessionEmptyTitle: "Die Testarena wartet",
+            sessionEmptyText: "Noch ist kein Beitrag eingetragen. Setze die Kämpfer ein und beginne das Sparring."
+          }
+        ]
       }
     ]
   }
