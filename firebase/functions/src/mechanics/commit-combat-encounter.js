@@ -67,22 +67,6 @@ function getDescriptorsNoLongerActive(participants = [], candidates = []) {
     .map(descriptor => [recordKey(descriptor), descriptor])).values()];
 }
 
-function mayAwardExperience(record = {}, descriptor = {}, request = {}) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  const uid = String(request.auth?.uid || '');
-  return descriptor.kind === 'creature'
-    || String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
-}
-
-function canControlParticipant(record = {}, descriptor = {}, request = {}) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  if (descriptor.kind === 'creature') return true;
-  const uid = String(request.auth?.uid || '');
-  return String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
-}
-
 function canEndEncounter(encounter = {}, request = {}) {
   if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
   return !!encounter.startedBy && String(encounter.startedBy) === String(request.auth?.uid || '');
@@ -160,17 +144,8 @@ export const commitCombatEncounter = onCall({
       records.set(entry.key, recordSnapshots[index].data() || {});
     });
 
-    if (requested.operation === 'end') {
-      if (!canEndEncounter(current, request)) {
-        fail('permission-denied', 'Nur die kampferöffnende Person oder die Moderation darf diesen Kampf beenden.');
-      }
-    } else {
-      descriptors.forEach(({ participant, descriptor }) => {
-        const record = records.get(recordKey(descriptor));
-        if (!canControlParticipant(record, descriptor, request)) {
-          fail('permission-denied', `Du darfst ${participant.name || 'diese Figur'} nicht zum Kampf hinzufügen oder daraus entfernen.`);
-        }
-      });
+    if (requested.operation === 'end' && !canEndEncounter(current, request)) {
+      fail('permission-denied', 'Nur die kampferöffnende Person oder die Moderation darf diesen Kampf beenden.');
     }
 
     if (requested.operation === 'start' || requested.operation === 'add') {
@@ -218,9 +193,6 @@ export const commitCombatEncounter = onCall({
         const descriptor = persistenceDescriptor(participant);
         if (!descriptor.persistent || descriptor.kind !== 'character') continue;
         const record = records.get(recordKey(descriptor));
-        if (!mayAwardExperience(record, descriptor, request)) {
-          fail('permission-denied', `Du darfst die Erfahrung von ${participant.name || 'dieser Figur'} nicht ändern.`);
-        }
         const progression = record.combatProfile?.progression || {};
         const change = applyExperienceAward(progression, award.experience);
         const target = recordsToLoad.find(entry => entry.key === recordKey(descriptor));
@@ -289,8 +261,6 @@ export const commitCombatEncounter = onCall({
 export const combatEncounterCommitInternals = Object.freeze({
   persistenceDescriptor,
   recordKey,
-  mayAwardExperience,
-  canControlParticipant,
   canEndEncounter,
   getCurrentEncounter,
   validateOperation,

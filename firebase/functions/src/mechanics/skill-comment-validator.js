@@ -17,7 +17,6 @@ import {
 } from '../generated/skill-checks/skill-check-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 
-const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
 const RECORD_KINDS = new Set(['character', 'creature']);
 
 function fail(code, message) {
@@ -38,14 +37,6 @@ function normalizePersistence(value = {}, actorId = '') {
     return { kind: 'creature', recordId: clean(value.sourceCreatureId, 240), persistent: false };
   }
   fail('failed-precondition', 'Der Fertigkeitsversuch besitzt keine serverseitig prüfbare Profilquelle.');
-}
-
-function canControl(record, persistence, request) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  if (persistence.kind === 'creature') return true;
-  const uid = String(request.auth?.uid || '');
-  return String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
 }
 
 function makeActor(record, persistence, actorId) {
@@ -165,9 +156,6 @@ export async function validateSkillCommentSegments({
       persistence: normalizePersistence(entry.submitted.actorPersistence, entry.submitted.actorId)
     };
     const actorRecord = records.get(recordKey(actorDescriptor.persistence));
-    if (!canControl(actorRecord, actorDescriptor.persistence, request)) {
-      fail('permission-denied', 'Du darfst diese Figur nicht für einen Fertigkeitsversuch einsetzen.');
-    }
     const allowed = getSkillsForCommentKind(entry.segment.commentKind || entry.segment.kind);
     const settings = normalizeSkillCheckSettings({
       skillId: entry.segment.skillId || entry.submitted.skillId,
@@ -236,9 +224,6 @@ export async function validateSkillCommentSegments({
     ruleSelectionDescriptors(entry).forEach(selection => {
       const supportRecord = records.get(recordKey(selection.persistence));
       if (!supportRecord) fail('not-found', 'Eine ausgewählte Unterstützungsfigur wurde nicht gefunden.');
-      if (!canControl(supportRecord, selection.persistence, request)) {
-        fail('permission-denied', 'Du darfst diese Unterstützungsreaktion nicht verwenden.');
-      }
       const supportProfile = applySkillRuntimeState(
         resolveCombatProfile(makeActor(supportRecord, selection.persistence, selection.actorId)),
         workingStates.get(String(selection.actorId)) || null,
@@ -367,7 +352,6 @@ export async function validateSkillCommentSegments({
 
 export const skillCommentValidatorInternals = Object.freeze({
   normalizePersistence,
-  canControl,
   relationshipBetween,
   challengeClaimId,
   ruleSelectionDescriptors,

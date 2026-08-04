@@ -5,8 +5,6 @@ import { resolveCombatProfile } from '../generated/combat/combat-profile-resolve
 import { buildSceneRestParticipant, getSceneRestType, normalizeSceneRest } from '../generated/scene-rest/scene-rest-model.js';
 import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 
-const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
-
 function fail(code, message) {
   throw new HttpsError(code, message);
 }
@@ -24,14 +22,6 @@ function recordDescriptor(participant = {}) {
     return { kind: 'creature', recordId: String(persistence.sourceCreatureId), persistent: false };
   }
   fail('failed-precondition', `${participant.name || 'Eine Figur'} besitzt keine prüfbare Profilquelle.`);
-}
-
-function mayChange(record, descriptor, request) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  const uid = String(request.auth?.uid || '');
-  if (!descriptor.persistent && descriptor.kind === 'creature') return true;
-  return String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
 }
 
 function hasPendingDailyRecovery(profile = {}, recoveryDayKey = '') {
@@ -125,7 +115,6 @@ export const commitSceneRest = onCall({
     const participants = descriptors.map(({ participant, descriptor }) => {
       const key = `${descriptor.kind}:${descriptor.recordId}`;
       const record = records.get(key);
-      if (!mayChange(record, descriptor, request)) fail('permission-denied', `Du darfst ${participant.name || 'diese Figur'} nicht erholen.`);
       const actorId = String(participant.actorId || '');
       const base = resolveCombatProfile({
         ...record,

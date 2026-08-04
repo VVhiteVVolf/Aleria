@@ -18,7 +18,6 @@ import { getTrustedSceneDay, isTrustedMechanicalComment, isTrustedSceneContribut
 import { skillSegments, validateSkillCommentSegments } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
 
-const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
 const RECORD_KINDS = new Set(['character', 'creature']);
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -70,14 +69,6 @@ function ruleSelectionDescriptors(entry) {
 
 function collectionFor(kind) {
   return kind === 'creature' ? 'creatures' : 'characters';
-}
-
-function canControlActor(record, persistence, request) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  if (persistence.kind === 'creature') return true;
-  const uid = String(request.auth?.uid || '');
-  return String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
 }
 
 function combatSegments(metadata) {
@@ -279,9 +270,6 @@ export const commitCombatComment = onCall({
       const descriptor = inventoryDescriptor(entry);
       const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
       const record = records.get(recordKey);
-      if (!canControlActor(record, descriptor.persistence, request)) {
-        fail('permission-denied', 'Du darfst das Inventar dieser Spielfigur nicht verwenden.');
-      }
       const submittedUse = normalizeInventoryUse({
         ...entry.submitted,
         usageId: randomUUID(),
@@ -327,9 +315,6 @@ export const commitCombatComment = onCall({
       const targetRecordKey = `${targetPersistence.kind}:${targetPersistence.recordId}`;
       const actorRecord = records.get(actorRecordKey);
       const targetRecord = records.get(targetRecordKey);
-      if (!canControlActor(actorRecord, actorPersistence, request)) {
-        fail('permission-denied', 'Du darfst diese Spielfigur nicht für einen Kampf einsetzen.');
-      }
 
       const paymentMode = String(segment.combatAction?.paymentMode || 'standard');
       const actorBase = resolveCombatProfile(makeCharacter(actorRecord, actorPersistence, submitted.actorId), {
@@ -353,9 +338,6 @@ export const commitCombatComment = onCall({
         const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
         const record = records.get(recordKey);
         if (!record) fail('not-found', 'Eine ausgew\u00e4hlte Reaktionsquelle wurde nicht gefunden.');
-        if (!canControlActor(record, descriptor.persistence, request)) {
-          fail('permission-denied', 'Du darfst die ausgew\u00e4hlte Reaktion dieser Figur nicht ausl\u00f6sen.');
-        }
         const sourceBase = resolveCombatProfile(makeCharacter(record, descriptor.persistence, descriptor.actorId));
         const sourceState = workingStates.get(String(descriptor.actorId));
         const sourceResources = getEffectiveCommentResources(sourceBase.resources, sourceState?.resources, recoveryDayKey);

@@ -13,13 +13,6 @@ function clean(value, maximum = 250000) {
   return String(value || '').trim().slice(0, maximum);
 }
 
-function canControl(record, request) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  const uid = String(request.auth?.uid || '');
-  return String(record.ownerUid || record.createdBy || '') === uid
-    || (Array.isArray(record.controllerUids) && record.controllerUids.includes(uid));
-}
-
 export const commitInventoryTransfer = onCall({
   region: 'europe-west1',
   maxInstances: 10,
@@ -54,7 +47,6 @@ export const commitInventoryTransfer = onCall({
     if (!giverSnapshot.exists || !receiverSnapshot.exists) fail('not-found', 'Geber oder EmpfÃ¤nger wurde nicht gefunden.');
     const giver = { id: giverId, ...(giverSnapshot.data() || {}) };
     const receiver = { id: receiverId, ...(receiverSnapshot.data() || {}) };
-    if (!canControl(giver, request)) fail('permission-denied', 'Du darfst dieses Inventar nicht Ã¼bertragen.');
     const allowRegisterItem = EDIT_ROLES.has(String(request.auth.token?.aleriaRole || ''));
     try {
       result = applySceneInventoryTransfer(giver, receiver, submittedObject, {

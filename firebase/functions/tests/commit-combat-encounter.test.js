@@ -48,19 +48,6 @@ test('dieselbe Profilquelle wird pro Kampfereignis nur einmal gesperrt', () => {
   assert.equal(calls[0][2].merge, true);
 });
 
-test('Spieler dürfen nur eigene Figuren ankündigen, Kreaturen bleiben gemeinsam steuerbar', () => {
-  const request = { auth: { uid: 'owner', token: { aleriaRole: 'player' } } };
-  assert.equal(combatEncounterCommitInternals.canControlParticipant(
-    { ownerUid: 'owner' }, { kind: 'character', recordId: 'gawain' }, request
-  ), true);
-  assert.equal(combatEncounterCommitInternals.canControlParticipant(
-    { ownerUid: 'other' }, { kind: 'character', recordId: 'duncan' }, request
-  ), false);
-  assert.equal(combatEncounterCommitInternals.canControlParticipant(
-    {}, { kind: 'creature', recordId: 'bandit' }, request
-  ), true);
-});
-
 test('nur Eröffner oder Moderation dürfen einen laufenden Kampf beenden', () => {
   assert.equal(combatEncounterCommitInternals.canEndEncounter(
     { startedBy: 'starter' }, { auth: { uid: 'starter', token: { aleriaRole: 'player' } } }
