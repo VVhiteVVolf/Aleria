@@ -48,6 +48,13 @@ function getEditPreviewState() {
   };
 }
 
+let _editFormPreviewTimer = null;
+
+function scheduleEditFormPreviewUpdate() {
+  clearTimeout(_editFormPreviewTimer);
+  _editFormPreviewTimer = setTimeout(updateEditFormPreview, 120);
+}
+
 function updateEditFormPreview() {
   const preview = document.getElementById('ec-preview');
   if (!preview) return;

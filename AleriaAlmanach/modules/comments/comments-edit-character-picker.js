@@ -28,8 +28,10 @@ function applyEditCharacterFilter() {
   const needle = normalizeSearchText(input?.value || '');
   let visible = 0;
 
+  const charById = new Map(getAvailableCommentCharacters().map(char => [String(char.id || '').trim(), char]));
+
   document.querySelectorAll('#ec-char-picker .cf-char-option').forEach(el => {
-    const char = getAvailableCommentCharacterById(el.dataset.id);
+    const char = charById.get(String(el.dataset.id || '').trim());
     const haystack = normalizeSearchText([
       char?.name,
       char?.title,

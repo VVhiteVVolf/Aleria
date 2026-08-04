@@ -53,6 +53,13 @@ function getCommentPreviewState() {
   };
 }
 
+let _commentFormPreviewTimer = null;
+
+function scheduleCommentFormPreviewUpdate() {
+  clearTimeout(_commentFormPreviewTimer);
+  _commentFormPreviewTimer = setTimeout(updateCommentFormPreview, 120);
+}
+
 function updateCommentFormPreview() {
   const preview = document.getElementById('cf-preview');
   if (!preview) return;

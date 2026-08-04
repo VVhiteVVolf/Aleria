@@ -107,7 +107,7 @@ function setEditCommentSegmentText(id, value) {
   if (!segment) return;
   segment.text = String(value || '');
   syncEditCommentSegmentsToLegacyText();
-  updateEditFormPreview();
+  scheduleEditFormPreviewUpdate();
 }
 
 function setEditCommentSegmentActor(id, actorId) {

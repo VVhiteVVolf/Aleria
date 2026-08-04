@@ -275,6 +275,8 @@ function closeResolutionDialog() {
 
 function mountComposers(context = {}) {
   latestComposerContext = context;
+  const segments = Array.isArray(context.segments) ? context.segments : [];
+  if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
   const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), cachedComments);
   const storedStates = getStoredCombatStates(context.threadId || '');
@@ -282,7 +284,7 @@ function mountComposers(context = {}) {
   const composerStates = new Map();
   const composerResourceResets = new Set();
 
-  (context.segments || []).forEach(segment => {
+  segments.forEach(segment => {
     if (!isCombatSegment(segment)) return;
     const actorId = String(segment.actorId || context.selectedCharacterId || '');
     const actorCharacter = characters.find(character => String(character.id || '') === actorId) || null;

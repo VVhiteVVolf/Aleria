@@ -339,13 +339,15 @@ function renderChallengeComposer(segment) {
 
 function mountComposers(context = {}) {
   latestComposerContext = context;
-  const actors = mergeActors(context.sceneActors || []);
-  const challenges = getComposerChallenges(context.threadId || '');
-  (context.segments || []).forEach(segment => {
+  const segments = Array.isArray(context.segments) ? context.segments : [];
+  const needsSkillComposer = segments.some(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
+  const actors = needsSkillComposer ? mergeActors(context.sceneActors || []) : [];
+  const challenges = needsSkillComposer ? getComposerChallenges(context.threadId || '') : [];
+  segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     const host = card?.querySelector?.('[data-segment-mechanics-host]');
     if (!host) return;
-    const actor = getActorForSegment(segment, context.selectedCharacterId, actors);
+    const actor = needsSkillComposer ? getActorForSegment(segment, context.selectedCharacterId, actors) : null;
     host.innerHTML = `${renderModeControl(segment)}${renderSkillComposer(segment, actor, challenges, actors)}${renderChallengeComposer(segment)}`;
   });
 }

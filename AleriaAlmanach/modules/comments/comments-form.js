@@ -47,7 +47,6 @@ function openCommentForm() {
   if (typeof refreshCurrentModuleCommenterHighlights === 'function') {
     refreshCurrentModuleCommenterHighlights();
   }
-  applyCommentCharacterFilter();
   restoreCommentDraft();
   renderCommentSegmentList();
   setCommentFormCounter();

@@ -88,8 +88,10 @@ function renderComposer(segment, actor, edit = false) {
 
 function mountComposers(context = {}) {
   latestComposerContext = context;
-  const actors = mergeActors(context.sceneActors || []);
-  (context.segments || []).forEach(segment => {
+  const segments = Array.isArray(context.segments) ? context.segments : [];
+  const needsInventoryComposer = segments.some(segment => String(segment.kind || '') === 'consume');
+  const actors = needsInventoryComposer ? mergeActors(context.sceneActors || []) : [];
+  segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     card?.querySelector?.('[data-inventory-use-composer]')?.remove();
     if (!card || String(segment.kind || '') !== 'consume') return;

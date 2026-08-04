@@ -168,13 +168,13 @@ function handleRichEditorChange(fieldId) {
   syncRichEditor(fieldId);
   if (fieldId === 'cf-text') {
     setCommentFormCounter();
-    updateCommentFormPreview();
+    scheduleCommentFormPreviewUpdate();
     persistCommentDraft();
     return;
   }
   if (fieldId === 'ec-text') {
     setEditFormCounter();
-    updateEditFormPreview();
+    scheduleEditFormPreviewUpdate();
   }
 }
 

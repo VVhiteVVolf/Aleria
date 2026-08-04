@@ -105,7 +105,7 @@ function setCommentSegmentText(id, value) {
   if (!segment) return;
   segment.text = String(value || '');
   syncCommentSegmentsToLegacyText();
-  updateCommentFormPreview();
+  scheduleCommentFormPreviewUpdate();
   persistCommentDraft();
 }
 

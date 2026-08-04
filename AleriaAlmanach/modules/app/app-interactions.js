@@ -37,7 +37,7 @@ document.addEventListener('input', event => {
   }
   if (['cf-text', 'cf-name', 'cf-title'].includes(event.target.id)) {
     setCommentFormCounter();
-    updateCommentFormPreview();
+    scheduleCommentFormPreviewUpdate();
     persistCommentDraft();
   }
   if (event.target.id === 'cf-char-search') {
@@ -46,7 +46,7 @@ document.addEventListener('input', event => {
   }
   if (['ec-text', 'ec-manual-name', 'ec-manual-title'].includes(event.target.id)) {
     setEditFormCounter();
-    updateEditFormPreview();
+    scheduleEditFormPreviewUpdate();
   }
   if (event.target.id === 'ec-char-search') {
     applyEditCharacterFilter();
