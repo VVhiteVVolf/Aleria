@@ -1,7 +1,8 @@
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 1;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 2;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
+export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
 
 function text(value, maximum = 240) {
   return String(value || '').trim().slice(0, maximum);
@@ -29,8 +30,18 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
     label: text(source.label, 160) || `Ansatz ${index + 1}`,
     preferredSkills,
     difficulty: integer(source.difficulty, 10, 1, 40),
-    insight: text(source.insight, 2000)
+    insight: text(source.insight, 2000),
+    partialHint: text(source.partialHint, 2000),
+    failureConsequence: text(source.failureConsequence, 2000)
   };
+}
+
+export function classifyHerausforderungOutcome({ natural = 0, total = 0, difficulty = 10 } = {}) {
+  if (Number(natural) === 20) return 'kritischer-erfolg';
+  if (Number(natural) === 1) return 'deutlich';
+  if (Number(total) >= Number(difficulty)) return 'erfolg';
+  const margin = Number(difficulty) - Number(total);
+  return margin <= HERAUSFORDERUNG_NARROW_FAILURE_MARGIN ? 'knapp' : 'deutlich';
 }
 
 export function normalizeHerausforderungEvent(value = {}) {
@@ -84,6 +95,8 @@ export function collectHerausforderungApproaches(comments = []) {
         defenseMode: 'fixed',
         defenseSkillId: 'deception',
         insight: approach.insight,
+        partialHint: approach.partialHint,
+        failureConsequence: approach.failureConsequence,
         authorId: '',
         authorKey,
         authorName: text(event.title, 180),

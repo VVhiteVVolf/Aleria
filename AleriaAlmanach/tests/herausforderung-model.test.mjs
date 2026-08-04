@@ -2,8 +2,10 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
+  classifyHerausforderungOutcome,
   collectHerausforderungApproaches,
   getHerausforderungApproachTargetId,
+  HERAUSFORDERUNG_NARROW_FAILURE_MARGIN,
   isHerausforderungComment,
   MAX_HERAUSFORDERUNG_APPROACHES,
   normalizeHerausforderungApproach,
@@ -94,4 +96,46 @@ test('collectHerausforderungApproaches liefert einen Eintrag pro Ansatz mit Ziel
 test('collectHerausforderungApproaches ignoriert Kommentare ohne Herausforderung', () => {
   assert.deepEqual(collectHerausforderungApproaches([{ id: 'x', text: 'normal' }]), []);
   assert.deepEqual(collectHerausforderungApproaches([]), []);
+});
+
+test('normalizeHerausforderungApproach übernimmt optionalen Teilhinweis und Fehlschlag-Konsequenz', () => {
+  const approach = normalizeHerausforderungApproach({ insight: 'Wahrheit', partialHint: 'Unsicherer Hinweis', failureConsequence: 'Komplikation' }, 0);
+  assert.equal(approach.insight, 'Wahrheit');
+  assert.equal(approach.partialHint, 'Unsicherer Hinweis');
+  assert.equal(approach.failureConsequence, 'Komplikation');
+});
+
+test('collectHerausforderungApproaches reicht Teilhinweis und Fehlschlag-Konsequenz durch', () => {
+  const approaches = collectHerausforderungApproaches([{
+    id: 'comment-1',
+    herausforderung: {
+      title: 'X', publicDescription: 'x',
+      approaches: [{ approachId: 'a1', label: 'A', preferredSkills: ['investigation'], insight: 'Wahrheit', partialHint: 'Hinweis', failureConsequence: 'Komplikation' }]
+    }
+  }]);
+  assert.equal(approaches[0].partialHint, 'Hinweis');
+  assert.equal(approaches[0].failureConsequence, 'Komplikation');
+});
+
+test('classifyHerausforderungOutcome: eine natürliche 20 ist immer der kritische Erfolg', () => {
+  assert.equal(classifyHerausforderungOutcome({ natural: 20, total: 1, difficulty: 40 }), 'kritischer-erfolg');
+});
+
+test('classifyHerausforderungOutcome: eine natürliche 1 zählt immer als deutliches Scheitern, auch bei hohem Gesamtwert', () => {
+  assert.equal(classifyHerausforderungOutcome({ natural: 1, total: 99, difficulty: 10 }), 'deutlich');
+});
+
+test('classifyHerausforderungOutcome: erreichte oder übertroffene Schwierigkeit ist ein Erfolg', () => {
+  assert.equal(classifyHerausforderungOutcome({ natural: 10, total: 13, difficulty: 13 }), 'erfolg');
+  assert.equal(classifyHerausforderungOutcome({ natural: 10, total: 15, difficulty: 13 }), 'erfolg');
+});
+
+test('classifyHerausforderungOutcome: verfehlte Schwierigkeit knapp innerhalb der Marge ist knappes Scheitern', () => {
+  const total = 13 - HERAUSFORDERUNG_NARROW_FAILURE_MARGIN;
+  assert.equal(classifyHerausforderungOutcome({ natural: 10, total, difficulty: 13 }), 'knapp');
+});
+
+test('classifyHerausforderungOutcome: verfehlte Schwierigkeit deutlich außerhalb der Marge ist deutliches Scheitern', () => {
+  const total = 13 - HERAUSFORDERUNG_NARROW_FAILURE_MARGIN - 1;
+  assert.equal(classifyHerausforderungOutcome({ natural: 10, total, difficulty: 13 }), 'deutlich');
 });

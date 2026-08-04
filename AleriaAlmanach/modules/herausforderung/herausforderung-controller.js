@@ -5,14 +5,14 @@ import {
   MIN_HERAUSFORDERUNG_APPROACHES,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20260804-herausforderung-v1';
+} from './herausforderung-model.js?v=20260805-herausforderung-v2';
 import {
   ensureHerausforderungDialog,
   renderApproachRows,
   renderHerausforderungComment,
   setHerausforderungStatus,
   setHerausforderungSubmitting
-} from './herausforderung-ui.js?v=20260804-herausforderung-v1';
+} from './herausforderung-ui.js?v=20260805-herausforderung-v2';
 
 let activeThreadId = '';
 let draftApproaches = [];
@@ -68,6 +68,8 @@ function updateApproachField(index, field, value) {
   if (field === 'label') approach.label = String(value || '');
   if (field === 'difficulty') approach.difficulty = Math.max(1, Math.min(40, Math.trunc(Number(value)) || 10));
   if (field === 'insight') approach.insight = String(value || '');
+  if (field === 'partialHint') approach.partialHint = String(value || '');
+  if (field === 'failureConsequence') approach.failureConsequence = String(value || '');
 }
 
 function togglePreferredSkill(index, skillId, checked) {

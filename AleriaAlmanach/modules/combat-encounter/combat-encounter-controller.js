@@ -15,7 +15,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260804-referee-v2';
+} from './combat-encounter-ui.js?v=20260805-herausforderung-v2';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';

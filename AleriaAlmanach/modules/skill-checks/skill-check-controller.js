@@ -16,7 +16,7 @@ import {
   normalizeSkillCheckSettings,
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
-import { narrateSkillResolution } from './skill-check-narration.js?v=20260803-skill-checks-v2';
+import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
 import { SkillResolutionService } from './skill-resolution-service.js?v=20260804-referee-v2';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260804-referee-v2';
 
@@ -628,6 +628,7 @@ async function narrateCommittedMechanics(mechanics = {}) {
         targetContribution: resolution.targetContribution || '',
         targetActor: resolution.targetChallengeAuthor || '',
         revealedText: resolution.revealedText || '',
+        herausforderungTier: resolution.herausforderungTier || '',
         actorProfileSnapshot: resolution.actorProfileSnapshot || null,
         ruleApplications: resolution.ruleApplications || []
       })
@@ -643,9 +644,17 @@ function getOutcomeLabel(outcome) {
   return 'Fehlschlag';
 }
 
+const HERAUSFORDERUNG_TIER_LABELS = {
+  'kritischer-erfolg': 'Kritischer Erfolg',
+  erfolg: 'Erfolg',
+  knapp: 'Knappes Scheitern',
+  deutlich: 'Deutliches Scheitern'
+};
+
 function renderEvaluation(source = {}) {
   const resolution = source.skillResolution || source.resolution;
   if (!resolution?.resolutionId) return '';
+  const outcomeLabel = HERAUSFORDERUNG_TIER_LABELS[resolution.herausforderungTier] || getOutcomeLabel(resolution.outcome);
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
   const custom = Number(resolution.customModifier || 0);
@@ -659,8 +668,8 @@ function renderEvaluation(source = {}) {
     ? `<span>Gegenprobe: <b>${escapeHtml(resolution.opposedDefense.actorName)} · passive ${escapeHtml(resolution.opposedDefense.skillName)} ${escapeHtml(resolution.opposedDefense.passiveTotal)}</b></span>`
     : '';
   return `
-    <aside class="skill-evaluation" data-state="${escapeHtml(resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
-      <div class="skill-evaluation-heading"><span>Fertigkeitsauswertung</span><strong>${escapeHtml(getOutcomeLabel(resolution.outcome))}</strong></div>
+    <aside class="skill-evaluation" data-state="${escapeHtml(resolution.herausforderungTier || resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
+      <div class="skill-evaluation-heading"><span>Fertigkeitsauswertung</span><strong>${escapeHtml(outcomeLabel)}</strong></div>
       <p>${escapeHtml(resolution.narration?.text || '')}</p>
       <div class="skill-evaluation-mechanics">
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>

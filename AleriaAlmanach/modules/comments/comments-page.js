@@ -7,9 +7,9 @@ const COMMENT_ACTION_ICONS = {
   transition: 'https://i.imgur.com/MHOEe96.png',
   time: 'https://i.imgur.com/Q9FVnjc.png',
   rest: '../IconOrdner/Buttom Icons/Rasten.png',
-  encounter: '../IconOrdner/Buttom Icons/Kampfhandlung.PNG',
+  encounter: '../IconOrdner/Buttom Icons/Kampfstarter.png',
   poll: 'https://i.imgur.com/jeMqIr7.png',
-  herausforderung: 'https://i.imgur.com/jeMqIr7.png'
+  herausforderung: '../IconOrdner/Buttom Icons/Herausforderung.png'
 };
 
 function buildCommentActionIcon(iconKey) {

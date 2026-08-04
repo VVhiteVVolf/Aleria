@@ -15,7 +15,7 @@ import {
   normalizeSkillCheckSettings,
   resolveSkillModifier
 } from '../generated/skill-checks/skill-check-model.js';
-import { collectHerausforderungApproaches } from '../generated/herausforderung/herausforderung-model.js';
+import { classifyHerausforderungOutcome, collectHerausforderungApproaches } from '../generated/herausforderung/herausforderung-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
@@ -287,8 +287,13 @@ export async function validateSkillCommentSegments({
     resolution.customModifierDeclared = Number(settings.customModifier) !== 0;
     resolution.originalAttempt = clean(entry.segment.text, 5000);
     resolution.targetContribution = clean(challenge?.visibleText, 5000);
-    if (challenge?.source === 'herausforderung' && challenge.insight && isSuccessfulSkillOutcome(resolution.outcome)) {
-      resolution.revealedText = clean(challenge.insight, 5000);
+    if (challenge?.source === 'herausforderung') {
+      const tier = classifyHerausforderungOutcome({ natural: resolution.natural, total: resolution.total, difficulty: resolution.difficulty });
+      resolution.herausforderungTier = tier;
+      const revealText = tier === 'kritischer-erfolg' || tier === 'erfolg'
+        ? challenge.insight
+        : (tier === 'knapp' ? challenge.partialHint : challenge.failureConsequence);
+      if (revealText) resolution.revealedText = clean(revealText, 5000);
     }
 
     (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {

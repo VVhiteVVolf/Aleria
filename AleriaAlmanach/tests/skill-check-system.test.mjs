@@ -229,6 +229,31 @@ test('priorisiert den vollständigen Figurenbogen für die AleriaGPT-Fertigkeits
   assert.equal(enriched.chunks[0].score, 10002);
 });
 
+test('formuliert je Herausforderung-Erfolgsstufe eine passende, nicht erfindende Anweisung', () => {
+  assert.match(skillNarrationInternals.herausforderungTierInstruction('kritischer-erfolg'), /präzise/);
+  assert.match(skillNarrationInternals.herausforderungTierInstruction('erfolg'), /klar/);
+  assert.match(skillNarrationInternals.herausforderungTierInstruction('knapp'), /unvollständig/);
+  assert.match(skillNarrationInternals.herausforderungTierInstruction('deutlich'), /keine belastbare Erkenntnis/);
+  assert.equal(skillNarrationInternals.herausforderungTierInstruction(''), '');
+  assert.equal(skillNarrationInternals.herausforderungTierInstruction(undefined), '');
+});
+
+test('die Fertigkeits-Anfrage enthält die Herausforderung-Stufe und deren Anweisung, wenn vorhanden', () => {
+  const query = skillNarrationInternals.buildQuery({
+    actor: 'Anaraut', skill: 'Nachforschungen', outcome: 'failure',
+    herausforderungTier: 'knapp', revealedText: 'Ein unvollständiger Hinweis.'
+  });
+  assert.match(query, /Knappes Scheitern/);
+  assert.match(query, /"herausforderungTier":"knapp"/);
+  const withoutTier = skillNarrationInternals.buildQuery({ actor: 'Anaraut', skill: 'Nachforschungen', outcome: 'success' });
+  assert.doesNotMatch(withoutTier, /Knappes Scheitern|Kritischer Erfolg:|Deutliches Scheitern/);
+});
+
+test('die Ersatz-Erzählung ohne KI berücksichtigt knappes und deutliches Scheitern der Herausforderung', () => {
+  assert.match(skillNarrationInternals.fallbackSkillNarration({ actor: 'Anaraut', skill: 'Nachforschungen', herausforderungTier: 'knapp' }), /unvollständigen/);
+  assert.match(skillNarrationInternals.fallbackSkillNarration({ actor: 'Anaraut', skill: 'Nachforschungen', herausforderungTier: 'deutlich' }), /keine belastbare Erkenntnis/);
+});
+
 test('ruft AleriaGPT nur für einen tatsächlich ausgewerteten Fertigkeitsversuch auf', async () => {
   const previousClient = globalThis.AleriaGptClient;
   const previousRetrieval = globalThis.AleriaGptRetrieval;

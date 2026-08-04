@@ -221,6 +221,10 @@
 .skill-evaluation[data-state="critical-success"] .skill-evaluation-heading { background: #23654f; }
 .skill-evaluation[data-state="failure"] .skill-evaluation-heading { background: #7b3a35; }
 .skill-evaluation[data-state="critical-failure"] .skill-evaluation-heading { background: #5b2028; }
+.skill-evaluation[data-state="erfolg"] .skill-evaluation-heading { background: #486d3b; }
+.skill-evaluation[data-state="kritischer-erfolg"] .skill-evaluation-heading { background: #23654f; }
+.skill-evaluation[data-state="knapp"] .skill-evaluation-heading { background: #8a5a1f; }
+.skill-evaluation[data-state="deutlich"] .skill-evaluation-heading { background: #7b3a35; }
 .skill-evaluation > p { margin: 0; padding: 0.65rem 0.8rem 0.35rem; text-align: center; font-style: italic; }
 
 .skill-evaluation-mechanics {

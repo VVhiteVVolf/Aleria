@@ -1,7 +1,7 @@
-import { normalizeHerausforderungEvent } from './herausforderung-model.js?v=20260804-herausforderung-v1';
+import { normalizeHerausforderungEvent } from './herausforderung-model.js?v=20260805-herausforderung-v2';
 import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260803-skill-checks-v2';
 
-export const HERAUSFORDERUNG_ICON_URL = 'https://i.imgur.com/jeMqIr7.png';
+export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
 
 function escapeMarkup(value) {
   return String(value ?? '')
@@ -32,7 +32,7 @@ export function ensureHerausforderungDialog() {
       <div class="herausforderung-body">
         <div class="herausforderung-fields">
           <label><span>Titel</span><input data-herausforderung-field="title" maxlength="180" value="Herausforderung"></label>
-          <label class="wide"><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" rows="3" placeholder="Was alle Beteiligten sehen: Atmosphäre und offensichtliche Hinweise, keine verborgene Lösung."></textarea></label>
+          <label class="wide"><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" rows="6" placeholder="Was alle Beteiligten sehen: Atmosphäre und offensichtliche Hinweise, keine verborgene Lösung."></textarea></label>
         </div>
         <div class="herausforderung-approaches" data-herausforderung-approaches></div>
         <button type="button" class="herausforderung-add-approach" data-herausforderung-action="add-approach">+ Ansatz hinzufügen</button>
@@ -66,8 +66,10 @@ export function renderApproachRows(approaches = []) {
       <button type="button" class="herausforderung-remove-approach" data-herausforderung-action="remove-approach" data-approach-index="${index}" aria-label="Ansatz entfernen">×</button>
       <label><span>Interne Bezeichnung</span><input data-herausforderung-approach-index="${index}" data-herausforderung-field="label" value="${escapeMarkup(approach.label)}" placeholder="z.B. Spuren untersuchen"></label>
       <label><span>Schwierigkeit</span><input type="number" min="1" max="40" data-herausforderung-approach-index="${index}" data-herausforderung-field="difficulty" value="${Number(approach.difficulty) || 10}"></label>
-      <div class="herausforderung-skills"><span>Passende Fertigkeiten</span>${renderSkillCheckboxes(approach, index)}</div>
-      <label class="wide"><span>Verdeckte Erkenntnis (wird erst bei Erfolg gezeigt)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="2" placeholder="Was aufgedeckt wird, wenn dieser Ansatz gelingt.">${escapeMarkup(approach.insight)}</textarea></label>
+      <div class="herausforderung-skills wide"><span>Passende Fertigkeiten</span><div class="herausforderung-skills-list">${renderSkillCheckboxes(approach, index)}</div></div>
+      <label class="wide"><span>Verdeckte Erkenntnis (wird erst bei Erfolg gezeigt)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="4" placeholder="Was aufgedeckt wird, wenn dieser Ansatz gelingt.">${escapeMarkup(approach.insight)}</textarea></label>
+      <label class="wide"><span>Teilhinweis bei knappem Scheitern (optional)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="partialHint" rows="3" placeholder="Ein unvollständiger oder mehrdeutiger Hinweis. Der Ansatz bleibt danach für andere offen.">${escapeMarkup(approach.partialHint)}</textarea></label>
+      <label class="wide"><span>Konsequenz bei deutlichem Scheitern (optional)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="failureConsequence" rows="3" placeholder="Eine erzählerische Komplikation ohne belastbare Erkenntnis.">${escapeMarkup(approach.failureConsequence)}</textarea></label>
     </fieldset>`).join('');
 }
 

@@ -1,10 +1,20 @@
 function fallbackSkillNarration(facts = {}) {
   const actor = facts.actor || 'Die Figur';
   const skill = facts.skill || 'Fertigkeit';
+  if (facts.herausforderungTier === 'knapp') return `${actor} setzt ${skill} ein, findet aber nur einen unvollständigen, mehrdeutigen Hinweis.`;
+  if (facts.herausforderungTier === 'deutlich') return `${actor} setzt ${skill} ein, findet aber diesmal keine belastbare Erkenntnis.`;
   if (facts.outcome === 'critical-success') return `${actor} setzt ${skill} außergewöhnlich sicher ein und durchschaut die Situation vollständig.`;
   if (facts.outcome === 'success') return `${actor} setzt ${skill} erfolgreich ein und gewinnt einen verlässlichen Vorteil.`;
   if (facts.outcome === 'critical-failure') return `${actor} scheitert mit ${skill} auf besonders deutliche Weise und zieht einen falschen Schluss.`;
   return `${actor} findet mit ${skill} diesmal keinen sicheren Zugang zur Situation.`;
+}
+
+function herausforderungTierInstruction(tier) {
+  if (tier === 'kritischer-erfolg') return 'Kritischer Erfolg: Formuliere die freigegebene Erkenntnis besonders präzise und sicher, optional mit einem treffenden zusätzlichen Detail, das nicht über die Erkenntnis hinausgeht.';
+  if (tier === 'erfolg') return 'Erfolg: Formuliere die freigegebene Erkenntnis klar und verständlich.';
+  if (tier === 'knapp') return 'Knappes Scheitern: Die freigegebene Erkenntnis ist nur ein unvollständiger, mehrdeutiger Hinweis. Formuliere Unsicherheit, keine bestätigte Wahrheit.';
+  if (tier === 'deutlich') return 'Deutliches Scheitern: Es gibt keine belastbare Erkenntnis. Formuliere Unsicherheit oder höchstens eine erzählerische Komplikation, erfinde aber keine neuen Fakten, Täter oder Beweise.';
+  return '';
 }
 
 function cleanNarration(value) {
@@ -25,10 +35,12 @@ function buildQuery(facts = {}) {
     facts.revealedText
       ? 'Die folgende Erkenntnis ist bereits serverseitig bestätigt und ist die einzige Wahrheit, die du enthüllen darfst. Füge keine weiteren Täter, Beweise, Motive oder Details hinzu, die nicht darin stehen.'
       : '',
+    herausforderungTierInstruction(facts.herausforderungTier),
     `Fakten: ${JSON.stringify({
       actor: facts.actor,
       skill: facts.skill,
       outcome: facts.outcome,
+      herausforderungTier: facts.herausforderungTier || '',
       attempt: String(facts.attempt || '').slice(0, 500),
       targetActor: facts.targetActor || '',
       targetContribution: String(facts.targetContribution || '').slice(0, 800),
@@ -46,7 +58,8 @@ function enrichRetrieval(retrieval = {}, facts = {}) {
   const profileContext = ['VERBINDLICHER FIGURENBOGEN UND REGELPROTOKOLL', JSON.stringify({
     actorProfileSnapshot: facts.actorProfileSnapshot || null,
     appliedRules: facts.ruleApplications || [],
-    freigegebeneErkenntnis: facts.revealedText || null
+    freigegebeneErkenntnis: facts.revealedText || null,
+    herausforderungStufe: facts.herausforderungTier || null
   }, null, 2)].join('\n');
   return {
     ...(retrieval || {}),
@@ -91,4 +104,4 @@ export async function narrateSkillResolution(facts = {}) {
   }
 }
 
-export const skillNarrationInternals = Object.freeze({ fallbackSkillNarration, cleanNarration, buildQuery, enrichRetrieval });
+export const skillNarrationInternals = Object.freeze({ fallbackSkillNarration, cleanNarration, buildQuery, enrichRetrieval, herausforderungTierInstruction });

@@ -1,6 +1,6 @@
 import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260804-referee-v2';
 
-export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfhandlung.PNG';
+export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 
 function escapeMarkup(value) {
   return String(value ?? '')
