@@ -249,8 +249,8 @@ function resolveActorProfile(character, options = {}) {
   return overlayCombatHitPointState(profile, effectiveState);
 }
 
-function actionAllowsSelfTarget(actor = {}) {
-  const effects = Array.isArray(actor.selectedAction?.effects) ? actor.selectedAction.effects : [];
+function actionAllowsSelfTarget(actor) {
+  const effects = Array.isArray(actor?.selectedAction?.effects) ? actor.selectedAction.effects : [];
   return effects.length > 0 && !effects.some(effect => ['damage', 'debuff'].includes(String(effect?.type || '')));
 }
 
