@@ -28,15 +28,11 @@ service cloud.firestore {
     }
 
     function canReadDraft(familyId) {
-      return hasFamilyRole(familyId, ['viewer', 'editor', 'reviewer', 'admin']);
+      return signedIn();
     }
 
     function canEditDraft(familyId) {
-      return hasFamilyRole(familyId, ['editor', 'reviewer', 'admin']) || (
-        signedIn()
-        && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)).data.createdBy == request.auth.uid
-        && getAfter(/databases/$(database)/documents/familyWorkspaces/$(familyId)/members/$(request.auth.uid)).data.role == 'admin'
-      );
+      return signedIn();
     }
 
     function advancesRevision(familyId) {
@@ -148,15 +144,9 @@ service cloud.firestore {
     }
 
     match /registryDraftNodes/{nodeId} {
-      allow read: if signedIn() && (
-        hasGlobalRole(['admin', 'archivist'])
-        || (resource.data.familyId is string && canReadDraft(resource.data.familyId))
-      );
-      allow create, update: if signedIn() && (
-        hasGlobalRole(['admin', 'archivist'])
-        || (request.resource.data.familyId is string && hasFamilyRole(request.resource.data.familyId, ['reviewer', 'admin']))
-      );
-      allow delete: if hasGlobalRole(['admin', 'archivist']);
+      allow read: if signedIn();
+      allow create, update: if signedIn();
+      allow delete: if signedIn();
     }
 
     match /publishedFamilies/{familyId} {

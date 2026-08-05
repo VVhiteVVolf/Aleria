@@ -83,7 +83,7 @@ test('erlaubt dem Gründer eine atomare Arbeitsfassung mit Admin-Mitgliedschaft'
   await assertSucceeds(batch.commit());
 });
 
-test('erlaubt Editoren nur revisionsgebundene Änderungen', async () => {
+test('erlaubt nur revisionsgebundene, atomare Änderungen', async () => {
   await environment.withSecurityRulesDisabled(async context => {
     const database = context.firestore(DATABASE_ID);
     await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
@@ -104,15 +104,24 @@ test('erlaubt Editoren nur revisionsgebundene Änderungen', async () => {
   await assertSucceeds(batch.commit());
 });
 
-test('verweigert Viewern Schreibzugriffe', async () => {
+test('jeder angemeldete Nutzer darf eine Arbeitsfassung lesen und revisionssicher bearbeiten, auch ohne Mitgliedschaft', async () => {
   await environment.withSecurityRulesDisabled(async context => {
     const database = context.firestore(DATABASE_ID);
     await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
-    await setDoc(doc(database, 'familyWorkspaces/haus-test/members/viewer'), { uid: 'viewer', role: 'viewer' });
   });
-  const database = environment.authenticatedContext('viewer').firestore(DATABASE_ID);
+  const database = environment.authenticatedContext('stranger').firestore(DATABASE_ID);
   await assertSucceeds(getDoc(doc(database, 'familyWorkspaces/haus-test')));
-  await assertFails(setDoc(doc(database, 'familyWorkspaces/haus-test'), { ...baseWorkspace(2), updatedBy: 'viewer' }));
+  await assertSucceeds(setDoc(doc(database, 'familyWorkspaces/haus-test'), { ...baseWorkspace(2), updatedBy: 'stranger' }));
+});
+
+test('verweigert unangemeldeten Nutzern jeden Zugriff, unabhängig von Mitgliedschaft', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    const database = context.firestore(DATABASE_ID);
+    await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
+  });
+  const database = environment.unauthenticatedContext().firestore(DATABASE_ID);
+  await assertFails(getDoc(doc(database, 'familyWorkspaces/haus-test')));
+  await assertFails(setDoc(doc(database, 'familyWorkspaces/haus-test'), { ...baseWorkspace(2), updatedBy: 'anonymous' }));
 });
 
 test('öffentliche Collections bleiben für Browser schreibgeschützt', async () => {

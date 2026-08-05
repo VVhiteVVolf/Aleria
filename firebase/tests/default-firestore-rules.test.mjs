@@ -99,14 +99,14 @@ test('reine Zeit- und Würfelbelege dürfen entstehen, bleiben danach aber unver
   await assertFails(updateDoc(doc(owner, 'comments/dice'), { text: 'Nachträglich geändert' }));
 });
 
-test('Profile behalten ihren Eigentümer und erlauben Moderation', async () => {
+test('jeder angemeldete Nutzer darf jede Spielfigur pflegen, aber niemand ohne Anmeldung', async () => {
+  const anonymous = environment.unauthenticatedContext().firestore();
   const owner = environment.authenticatedContext('owner').firestore();
   const other = environment.authenticatedContext('other').firestore();
-  const editor = environment.authenticatedContext('editor', { aleriaRole: 'editor' }).firestore();
   await assertSucceeds(setDoc(doc(owner, 'characters/gawain'), { name: 'Gawain', ownerUid: 'owner' }));
-  await assertFails(updateDoc(doc(other, 'characters/gawain'), { name: 'Gestohlen' }));
-  await assertFails(updateDoc(doc(owner, 'characters/gawain'), { ownerUid: 'other' }));
-  await assertSucceeds(updateDoc(doc(editor, 'characters/gawain'), { name: 'Redaktionell gepflegt' }));
+  await assertFails(updateDoc(doc(anonymous, 'characters/gawain'), { name: 'Ohne Anmeldung' }));
+  await assertSucceeds(updateDoc(doc(other, 'characters/gawain'), { name: 'Von anderem Spieler gepflegt' }));
+  await assertSucceeds(updateDoc(doc(other, 'characters/gawain'), { ownerUid: 'other' }));
 });
 
 test('laufende Kämpfe sperren nur kampfrelevante Profilfelder', async () => {
@@ -148,9 +148,9 @@ test('nested skill evaluations are locked by the server audit marker', async () 
   await assertFails(deleteDoc(doc(owner, 'comments/skill')));
 });
 
-test('globale Konfiguration bleibt Editor- und Moderationsaufgabe', async () => {
+test('geteilte Konfiguration darf jeder angemeldete Spieler pflegen', async () => {
+  const anonymous = environment.unauthenticatedContext().firestore();
   const player = environment.authenticatedContext('player').firestore();
-  const editor = environment.authenticatedContext('editor', { aleriaRole: 'editor' }).firestore();
-  await assertFails(setDoc(doc(player, 'char_tabs/config'), { tabs: [] }));
-  await assertSucceeds(setDoc(doc(editor, 'char_tabs/config'), { tabs: [] }));
+  await assertFails(setDoc(doc(anonymous, 'char_tabs/config'), { tabs: [] }));
+  await assertSucceeds(setDoc(doc(player, 'char_tabs/config'), { tabs: [] }));
 });

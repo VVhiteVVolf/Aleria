@@ -2,7 +2,6 @@ import { randomUUID } from 'node:crypto';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
-import { requireFamilyRole } from '../access/family-access.js';
 
 const CONTENT_TYPES = new Map([
   ['image/png', 'png'],
@@ -35,6 +34,7 @@ export const uploadFamilyAsset = onCall({
   maxInstances: 5,
   enforceAppCheck: false
 }, async request => {
+  if (!request.auth) throw new HttpsError('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const familyId = String(request.data?.familyId || '').trim();
   const contentType = String(request.data?.contentType || '');
   const kind = String(request.data?.kind || 'image').trim().slice(0, 40);
@@ -46,7 +46,6 @@ export const uploadFamilyAsset = onCall({
   if (!buffer.length || buffer.length > MAX_BYTES) throw new HttpsError('invalid-argument', 'Das Bild darf höchstens 8 MB groß sein.');
   if (!hasValidImageSignature(buffer, contentType)) throw new HttpsError('invalid-argument', 'Dateityp und Bildinhalt stimmen nicht überein.');
   const database = getFirestore('family-trees');
-  await requireFamilyRole({ request, database, familyId, roles: ['editor', 'reviewer', 'admin'] });
 
   const assetId = randomUUID();
   const token = randomUUID();

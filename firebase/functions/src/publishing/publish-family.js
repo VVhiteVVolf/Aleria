@@ -1,6 +1,5 @@
 import { getFirestore, FieldValue } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
-import { requireFamilyRole } from '../access/family-access.js';
 import { FAMILY_COLLECTIONS, loadFamilyWorkspace } from '../families/family-collections.js';
 import { countPublicFamilyWrites, createPublicFamily } from '../families/family-publication.js';
 import { validateWorkspaceForPublishing } from '../families/family-validation.js';
@@ -14,11 +13,11 @@ export const publishFamily = onCall({
   maxInstances: 10,
   enforceAppCheck: false
 }, async request => {
+  if (!request.auth) throw new HttpsError('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const familyId = String(request.data?.familyId || '').trim();
   const expectedRevision = Number(request.data?.expectedRevision || 0);
   if (!/^[a-z0-9-]{2,120}$/.test(familyId)) throw new HttpsError('invalid-argument', 'Ungültige Familien-ID.');
   const database = getFirestore(DATABASE_ID);
-  await requireFamilyRole({ request, database, familyId, roles: ['reviewer', 'admin'] });
   const workspaceReference = database.doc(`familyWorkspaces/${familyId}`);
   const workspace = await loadFamilyWorkspace(workspaceReference);
   if (!workspace) throw new HttpsError('not-found', 'Die private Arbeitsfassung wurde nicht gefunden.');

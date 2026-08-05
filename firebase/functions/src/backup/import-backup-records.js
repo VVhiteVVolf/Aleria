@@ -1,7 +1,6 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 
-const IMPORT_ROLES = new Set(['moderator', 'admin']);
 const COLLECTIONS = Object.freeze({
   characters: 'characters',
   creatures: 'creatures',
@@ -88,9 +87,6 @@ export const importBackupRecords = onCall({
   timeoutSeconds: 60
 }, async request => {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
-  if (!IMPORT_ROLES.has(String(request.auth.token?.aleriaRole || ''))) {
-    fail('permission-denied', 'Backup-Importe erfordern die Rolle Moderator oder Admin.');
-  }
   const payload = clonePayload(request.data);
   const kind = String(payload.kind || '');
   const collectionName = COLLECTIONS[kind];

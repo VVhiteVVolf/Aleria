@@ -17,10 +17,6 @@ service cloud.firestore {
       return hasRole(['admin', 'moderator']);
     }
 
-    function canEditSharedContent() {
-      return hasRole(['admin', 'moderator', 'editor']);
-    }
-
     function isMechanicalComment(data) {
       return (data.keys().hasAny(['mechanicalAudit']) && data.mechanicalAudit == true)
         || (data.keys().hasAny(['combatTransaction']) && data.combatTransaction != null)
@@ -33,13 +29,6 @@ service cloud.firestore {
         || (data.keys().hasAny(['skillResolution']) && data.skillResolution != null)
         || (data.keys().hasAny(['importedHistoricalMechanics']) && data.importedHistoricalMechanics == true)
         || (data.keys().hasAny(['serverValidatedMechanics']) && data.serverValidatedMechanics == true);
-    }
-
-    function ownsDocument(data) {
-      return signedIn() && (
-        (data.keys().hasAny(['ownerUid']) && data.ownerUid == request.auth.uid)
-        || (data.keys().hasAny(['createdBy']) && data.createdBy == request.auth.uid)
-      );
     }
 
     function combatProfileLocked(kind, recordId) {
@@ -67,27 +56,17 @@ service cloud.firestore {
     match /characters/{recordId} {
       allow read: if true;
       allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
-      allow update: if (ownsDocument(resource.data) || canEditSharedContent())
-        && (!changesCombatRelevantProfile() || !combatProfileLocked('characters', recordId))
-        && (
-          (resource.data.keys().hasAny(['ownerUid']) && request.resource.data.ownerUid == resource.data.ownerUid)
-          || (!resource.data.keys().hasAny(['ownerUid']) && canEditSharedContent())
-        );
-      allow delete: if (ownsDocument(resource.data) || isModerator())
-        && !combatProfileLocked('characters', recordId);
+      allow update: if signedIn()
+        && (!changesCombatRelevantProfile() || !combatProfileLocked('characters', recordId));
+      allow delete: if signedIn() && !combatProfileLocked('characters', recordId);
     }
 
     match /creatures/{recordId} {
       allow read: if true;
       allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
-      allow update: if (ownsDocument(resource.data) || canEditSharedContent())
-        && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId))
-        && (
-          (resource.data.keys().hasAny(['ownerUid']) && request.resource.data.ownerUid == resource.data.ownerUid)
-          || (!resource.data.keys().hasAny(['ownerUid']) && canEditSharedContent())
-        );
-      allow delete: if (ownsDocument(resource.data) || isModerator())
-        && !combatProfileLocked('creatures', recordId);
+      allow update: if signedIn()
+        && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId));
+      allow delete: if signedIn() && !combatProfileLocked('creatures', recordId);
     }
 
     match /combat_profile_locks/{kind}/records/{recordId} {
@@ -98,27 +77,27 @@ service cloud.firestore {
     match /comment_turns/{threadId} {
       allow read: if true;
       allow create, update: if signedIn() && request.resource.data.updatedBy == request.auth.uid;
-      allow delete: if isModerator();
+      allow delete: if signedIn();
     }
 
     match /char_tabs/{documentId} {
       allow read: if true;
-      allow write: if canEditSharedContent();
+      allow write: if signedIn();
     }
 
     match /module_store_entries/{documentId} {
       allow read: if true;
-      allow write: if canEditSharedContent();
+      allow write: if signedIn();
     }
 
     match /item_database/{documentId} {
       allow read: if true;
-      allow write: if canEditSharedContent();
+      allow write: if signedIn();
     }
 
     match /item_database_entries/{documentId} {
       allow read: if true;
-      allow write: if canEditSharedContent();
+      allow write: if signedIn();
     }
 
     match /aleria_roles/{uid} {

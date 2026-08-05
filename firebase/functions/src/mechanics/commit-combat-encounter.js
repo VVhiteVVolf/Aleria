@@ -13,7 +13,6 @@ import {
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
 
-const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
 const RECORD_KINDS = new Set(['character', 'creature']);
 
 function fail(code, message) {
@@ -65,11 +64,6 @@ function getDescriptorsNoLongerActive(participants = [], candidates = []) {
     .map(persistenceDescriptor)
     .filter(descriptor => !activeRecordKeys.has(recordKey(descriptor)))
     .map(descriptor => [recordKey(descriptor), descriptor])).values()];
-}
-
-function canEndEncounter(encounter = {}, request = {}) {
-  if (EDIT_ROLES.has(String(request.auth?.token?.aleriaRole || ''))) return true;
-  return !!encounter.startedBy && String(encounter.startedBy) === String(request.auth?.uid || '');
 }
 
 function getCurrentEncounter(history = [], encounterId = '') {
@@ -143,10 +137,6 @@ export const commitCombatEncounter = onCall({
       if (!recordSnapshots[index].exists) fail('not-found', `Das Profil ${entry.recordId} wurde nicht gefunden.`);
       records.set(entry.key, recordSnapshots[index].data() || {});
     });
-
-    if (requested.operation === 'end' && !canEndEncounter(current, request)) {
-      fail('permission-denied', 'Nur die kampferöffnende Person oder die Moderation darf diesen Kampf beenden.');
-    }
 
     if (requested.operation === 'start' || requested.operation === 'add') {
       requested.participants = requested.participants.map(participant => {
@@ -261,7 +251,6 @@ export const commitCombatEncounter = onCall({
 export const combatEncounterCommitInternals = Object.freeze({
   persistenceDescriptor,
   recordKey,
-  canEndEncounter,
   getCurrentEncounter,
   validateOperation,
   combatProfileLockRef,

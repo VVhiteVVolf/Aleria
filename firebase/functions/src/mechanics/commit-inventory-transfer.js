@@ -3,8 +3,6 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { applySceneInventoryTransfer } from '../generated/scene-inventory/scene-inventory-transfer-model.js';
 
-const EDIT_ROLES = new Set(['editor', 'moderator', 'admin']);
-
 function fail(code, message) {
   throw new HttpsError(code, message);
 }
@@ -47,10 +45,9 @@ export const commitInventoryTransfer = onCall({
     if (!giverSnapshot.exists || !receiverSnapshot.exists) fail('not-found', 'Geber oder EmpfÃ¤nger wurde nicht gefunden.');
     const giver = { id: giverId, ...(giverSnapshot.data() || {}) };
     const receiver = { id: receiverId, ...(receiverSnapshot.data() || {}) };
-    const allowRegisterItem = EDIT_ROLES.has(String(request.auth.token?.aleriaRole || ''));
     try {
       result = applySceneInventoryTransfer(giver, receiver, submittedObject, {
-        allowRegisterItem,
+        allowRegisterItem: true,
         transferItemId: `transfer-${randomUUID()}`,
         transferredAt: now.toISOString()
       });

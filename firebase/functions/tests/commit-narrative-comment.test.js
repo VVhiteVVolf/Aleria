@@ -29,11 +29,8 @@ test('hidden skill challenges are immutable audit mechanics before resolution', 
   }), false);
 });
 
-test('scene time requires an editorial role and a bounded integer day', () => {
+test('scene time requires a bounded integer day', () => {
   const metadata = { sceneTimeEvent: { anchorDay: 3 } };
-  assert.equal(narrativeCommentInternals.requiresTimelineRole(metadata), true);
-  assert.equal(narrativeCommentInternals.hasTimelineRole({ auth: { token: { aleriaRole: 'player' } } }), false);
-  assert.equal(narrativeCommentInternals.hasTimelineRole({ auth: { token: { aleriaRole: 'editor' } } }), true);
   assert.equal(narrativeCommentInternals.hasValidSceneDay(metadata), true);
   assert.equal(narrativeCommentInternals.hasValidSceneDay({ sceneTimeEvent: { anchorDay: 1.5 } }), false);
 });

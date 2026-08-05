@@ -2,8 +2,6 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { validateCombatNarration } from './combat-narration-integrity.js';
 
-const MODERATION_ROLES = new Set(['moderator', 'admin']);
-
 function fail(code, message) {
   throw new HttpsError(code, message);
 }
@@ -39,9 +37,6 @@ export const finalizeCombatNarration = onCall({
     const snapshot = await transaction.get(ref);
     if (!snapshot.exists) fail('not-found', 'Der Kampfbeitrag wurde nicht gefunden.');
     const comment = snapshot.data() || {};
-    const mayFinalize = comment.createdBy === request.auth.uid
-      || MODERATION_ROLES.has(String(request.auth.token?.aleriaRole || ''));
-    if (!mayFinalize) fail('permission-denied', 'Du darfst diese Kampferzählung nicht abschließen.');
     if (comment.serverValidatedMechanics !== true || (!comment.combatTransaction && !comment.skillTransaction)) {
       fail('failed-precondition', 'Nur servergeprüfte Mechanikbeiträge können abgeschlossen werden.');
     }

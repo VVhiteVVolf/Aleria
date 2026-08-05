@@ -2,7 +2,6 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 
 const MAX_COMMENT_BYTES = 700_000;
-const TIMELINE_ROLES = new Set(['editor', 'moderator', 'admin']);
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -46,14 +45,6 @@ function containsImmutableAuditMechanics(metadata = {}) {
     || metadata.sceneTimeEvent
     || segments.some(segment => segment?.skillResolution || segment?.skillChallenge)
   );
-}
-
-function requiresTimelineRole(metadata = {}) {
-  return !!metadata.sceneTimeEvent;
-}
-
-function hasTimelineRole(request = {}) {
-  return TIMELINE_ROLES.has(String(request.auth?.token?.aleriaRole || ''));
 }
 
 function hasValidSceneDay(metadata = {}) {
@@ -121,9 +112,6 @@ export const commitNarrativeComment = onCall({
     fail('failed-precondition', 'ZustandsÃ¤ndernde Mechanik braucht ihre eigene serverseitige Transaktion.');
   }
 
-  if (requiresTimelineRole(payload.metadata) && !hasTimelineRole(request)) {
-    fail('permission-denied', 'Szenenzeit darf nur durch Redaktion oder Moderation verÃ¤ndert werden.');
-  }
   if (!hasValidSceneDay(payload.metadata)) fail('invalid-argument', 'Der Aleria-Szenentag ist ungÃ¼ltig.');
 
   const database = getFirestore();
@@ -141,7 +129,5 @@ export const commitNarrativeComment = onCall({
 export const narrativeCommentInternals = Object.freeze({
   containsImmutableAuditMechanics,
   containsPersistentMechanics,
-  hasTimelineRole,
-  hasValidSceneDay,
-  requiresTimelineRole
+  hasValidSceneDay
 });

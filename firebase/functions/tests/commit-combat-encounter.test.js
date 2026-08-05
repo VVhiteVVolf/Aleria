@@ -48,18 +48,6 @@ test('dieselbe Profilquelle wird pro Kampfereignis nur einmal gesperrt', () => {
   assert.equal(calls[0][2].merge, true);
 });
 
-test('nur Eröffner oder Moderation dürfen einen laufenden Kampf beenden', () => {
-  assert.equal(combatEncounterCommitInternals.canEndEncounter(
-    { startedBy: 'starter' }, { auth: { uid: 'starter', token: { aleriaRole: 'player' } } }
-  ), true);
-  assert.equal(combatEncounterCommitInternals.canEndEncounter(
-    { startedBy: 'starter' }, { auth: { uid: 'stranger', token: { aleriaRole: 'player' } } }
-  ), false);
-  assert.equal(combatEncounterCommitInternals.canEndEncounter(
-    { startedBy: 'starter' }, { auth: { uid: 'moderator', token: { aleriaRole: 'moderator' } } }
-  ), true);
-});
-
 test('eine geteilte Kreaturenvorlage bleibt gesperrt solange eine ihrer Instanzen aktiv ist', () => {
   const first = {
     actorId: 'skeleton-I', name: 'Skelett I', status: 'left',
