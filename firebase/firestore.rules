@@ -58,10 +58,10 @@ service cloud.firestore {
       allow create: if false;
       allow update: if !isMechanicalComment(resource.data)
         && !isMechanicalComment(request.resource.data)
-        && (ownsDocument(resource.data) || isModerator())
+        && signedIn()
         && request.resource.data.createdBy == resource.data.createdBy;
       allow delete: if !isMechanicalComment(resource.data)
-        && (ownsDocument(resource.data) || isModerator());
+        && signedIn();
     }
 
     match /characters/{recordId} {

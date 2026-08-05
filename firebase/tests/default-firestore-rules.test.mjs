@@ -42,7 +42,7 @@ test('öffentliche Spieldaten bleiben ohne Anmeldung lesbar', async () => {
   await assertSucceeds(getDoc(doc(environment.unauthenticatedContext().firestore(), 'characters/gawain')));
 });
 
-test('Kommentare brauchen eine Anmeldung und binden den Verfasser', async () => {
+test('Kommentare brauchen eine Anmeldung, aber keinen bestimmten Verfasser mehr', async () => {
   const anonymous = environment.unauthenticatedContext().firestore();
   const owner = environment.authenticatedContext('owner').firestore();
   const other = environment.authenticatedContext('other').firestore();
@@ -53,9 +53,20 @@ test('Kommentare brauchen eine Anmeldung und binden den Verfasser', async () => 
   await environment.withSecurityRulesDisabled(async context => {
     await setDoc(doc(context.firestore(), 'comments/a'), comment('owner'));
   });
-  await assertFails(updateDoc(doc(other, 'comments/a'), { text: 'Fremdänderung' }));
+  await assertFails(updateDoc(doc(anonymous, 'comments/a'), { text: 'Ohne Anmeldung' }));
+  await assertSucceeds(updateDoc(doc(other, 'comments/a'), { text: 'Fremdänderung' }));
   await assertSucceeds(updateDoc(doc(owner, 'comments/a'), { text: 'Eigene Änderung' }));
   await assertSucceeds(updateDoc(doc(moderator, 'comments/a'), { text: 'Moderiert' }));
+});
+
+test('jeder angemeldete Nutzer darf einen normalen fremden Kommentar löschen, aber niemand ohne Anmeldung', async () => {
+  const anonymous = environment.unauthenticatedContext().firestore();
+  const other = environment.authenticatedContext('other').firestore();
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'comments/deletable'), comment('owner'));
+  });
+  await assertFails(deleteDoc(doc(anonymous, 'comments/deletable')));
+  await assertSucceeds(deleteDoc(doc(other, 'comments/deletable')));
 });
 
 test('mechanische Kommentare können nur serverseitig entstehen und nie verändert werden', async () => {
