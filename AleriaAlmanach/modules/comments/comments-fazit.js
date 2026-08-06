@@ -4,6 +4,8 @@ let _fazitLines = [];
 let _fazitLineCounter = 0;
 let _fazitTokenCounter = 0;
 let _fazitIconPickerTarget = null;
+let _fazitPersonPickerTarget = null;
+let _fazitPersonSearch = '';
 let _editingFazitCommentId = null;
 
 function fazitAvailableCharacters() {
@@ -52,6 +54,39 @@ function renderFazitTokenEditor(line, token) {
   </div>`;
 }
 
+function fazitPersonOptionsMarkup(characters) {
+  if (!characters.length) return '<p class="fazit-person-picker-empty">Keine Treffer.</p>';
+  return characters.map(character => {
+    const safeName = escapeHtml(character.name || 'Unbenannt');
+    const portraitSrc = sanitizeImageSrc(character.portrait || '');
+    return `<div class="cf-char-option" data-action="select-fazit-token-person" data-character-id="${escapeHtml(character.id)}">
+      ${portraitSrc
+        ? `<img src="${portraitSrc}" alt="${safeName}" loading="lazy" decoding="async">`
+        : `<div class="cf-char-option-placeholder">${escapeHtml(getInitialChar(character.name))}</div>`}
+      <div class="cf-char-option-name">${safeName}</div>
+    </div>`;
+  }).join('');
+}
+
+function filterFazitPersonCharacters(needle) {
+  const characters = fazitAvailableCharacters();
+  const search = normalizeSearchText(needle || '');
+  if (!search) return characters;
+  return characters.filter(character => normalizeSearchText(character.name || '').includes(search));
+}
+
+function renderFazitPersonPicker(line) {
+  if (!_fazitPersonPickerTarget || _fazitPersonPickerTarget.lineId !== line.id) return '';
+  const characters = filterFazitPersonCharacters(_fazitPersonSearch);
+  return `<div class="fazit-person-picker">
+    <div class="fazit-person-picker-head">
+      <input type="text" class="fazit-person-search" value="${escapeHtml(_fazitPersonSearch)}" placeholder="Figur suchen …" autocomplete="off" data-action="filter-fazit-person-picker">
+      <button type="button" class="fazit-person-picker-close" data-action="close-fazit-person-picker" title="Schließen" aria-label="Schließen">×</button>
+    </div>
+    <div class="cf-char-picker fazit-person-picker-list" data-fazit-person-list>${fazitPersonOptionsMarkup(characters)}</div>
+  </div>`;
+}
+
 function renderFazitLineEditor(line) {
   return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
     <div class="fazit-line-tokens">${line.tokens.map(token => renderFazitTokenEditor(line, token)).join('') || '<span class="fazit-line-empty">Noch keine Bausteine — füge Personen oder Symbole hinzu.</span>'}</div>
@@ -60,6 +95,7 @@ function renderFazitLineEditor(line) {
       <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="symbol" data-line-id="${escapeHtml(line.id)}">+ Symbol</button>
       <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
     </div>
+    ${renderFazitPersonPicker(line)}
   </div>`;
 }
 
@@ -102,8 +138,13 @@ function removeFazitLine(lineId) {
 function addFazitToken(lineId, kind) {
   const line = findFazitLine(lineId);
   if (!line || line.tokens.length >= 24) return;
-  line.tokens.push(newFazitToken(kind));
-  renderFazitLinesEditor();
+  const token = newFazitToken(kind);
+  line.tokens.push(token);
+  if (kind === 'person') {
+    openFazitTokenPersonPicker(lineId, token.id);
+  } else {
+    renderFazitLinesEditor();
+  }
   updateFazitPreview();
 }
 
@@ -166,20 +207,40 @@ document.addEventListener('almanach-icon-selected', handleFazitIconSelected);
 function openFazitTokenPersonPicker(lineId, tokenId) {
   const token = findFazitToken(lineId, tokenId);
   if (!token) return;
-  const characters = fazitAvailableCharacters();
-  if (!characters.length) {
-    if (typeof showAppStatus === 'function') showAppStatus('Keine gespeicherten Figuren im Charakterarchiv gefunden.', 'error');
+  if (_fazitPersonPickerTarget?.lineId === String(lineId) && _fazitPersonPickerTarget?.tokenId === String(tokenId)) {
+    _fazitPersonPickerTarget = null;
+    renderFazitLinesEditor();
     return;
   }
-  const names = characters.map((character, index) => `${index + 1}. ${character.name}`).join('\n');
-  const choice = prompt(`Welche Figur? (Nummer eintragen)\n\n${names}`, '1');
-  if (choice == null) return;
-  const index = Math.max(1, Math.min(characters.length, Number.parseInt(choice, 10) || 0)) - 1;
-  const character = characters[index];
-  if (!character) return;
+  _fazitPersonPickerTarget = { lineId: String(lineId), tokenId: String(tokenId) };
+  _fazitPersonSearch = '';
+  renderFazitLinesEditor();
+  const search = document.querySelector('.fazit-person-search');
+  search?.focus({ preventScroll: true });
+}
+
+function closeFazitPersonPicker() {
+  _fazitPersonPickerTarget = null;
+  renderFazitLinesEditor();
+}
+
+function filterFazitPersonPicker(value) {
+  _fazitPersonSearch = String(value || '');
+  const list = document.querySelector('[data-fazit-person-list]');
+  if (!list) return;
+  list.innerHTML = fazitPersonOptionsMarkup(filterFazitPersonCharacters(_fazitPersonSearch));
+}
+
+function selectFazitTokenPerson(characterId) {
+  const target = _fazitPersonPickerTarget;
+  if (!target) return;
+  const token = findFazitToken(target.lineId, target.tokenId);
+  const character = fazitAvailableCharacters().find(c => String(c.id) === String(characterId));
+  if (!token || !character) return;
   token.icon = String(character.portrait || '');
   token.label = String(character.name || '');
   token.characterId = String(character.id || '');
+  _fazitPersonPickerTarget = null;
   renderFazitLinesEditor();
   updateFazitPreview();
 }
@@ -188,6 +249,8 @@ function resetFazitForm() {
   _fazitLines = [];
   _fazitLineCounter = 0;
   _fazitTokenCounter = 0;
+  _fazitPersonPickerTarget = null;
+  _fazitPersonSearch = '';
   _editingFazitCommentId = null;
   const title = document.getElementById('fz-title');
   if (title) title.value = 'Fazit';

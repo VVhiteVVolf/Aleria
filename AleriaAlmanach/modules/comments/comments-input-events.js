@@ -32,6 +32,10 @@ function handleEditCommentInput(event) {
   }
   if (field?.dataset?.action === 'update-fazit-token-label') {
     updateFazitTokenLabel(field.dataset.lineId, field.dataset.tokenId, field.value);
+    return;
+  }
+  if (field?.dataset?.action === 'filter-fazit-person-picker') {
+    filterFazitPersonPicker(field.value);
   }
 }
 

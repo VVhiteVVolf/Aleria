@@ -22,6 +22,8 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'move-fazit-token',
   'pick-fazit-token-icon',
   'pick-fazit-token-person',
+  'select-fazit-token-person',
+  'close-fazit-person-picker',
   'export-module-insert',
   'choose-module-insert-create',
   'choose-module-insert-import',
@@ -135,6 +137,14 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'pick-fazit-token-person') {
     openFazitTokenPersonPicker(trigger.dataset.lineId, trigger.dataset.tokenId);
+    return;
+  }
+  if (action === 'select-fazit-token-person') {
+    selectFazitTokenPerson(trigger.dataset.characterId);
+    return;
+  }
+  if (action === 'close-fazit-person-picker') {
+    closeFazitPersonPicker();
     return;
   }
   if (action === 'close-fazit-form') {
