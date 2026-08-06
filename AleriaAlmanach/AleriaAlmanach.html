@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-  <link rel="stylesheet" href="./styles/comments.css?v=20260807-fazit-v3">
+  <link rel="stylesheet" href="./styles/comments.css?v=20260807-fazit-v4">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
@@ -302,7 +302,8 @@
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/comments/comments-fazit.js?v=20260807-fazit-v2" defer></script>
+  <script src="./modules/comments/comments-fazit.js?v=20260807-fazit-v3" defer></script>
+  <script src="./modules/comments/comments-fazit-ai.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-fazit-submit.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-fazit-edit-submit.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
@@ -316,7 +317,7 @@
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-action-events.js?v=20260807-fazit-v2" defer></script>
+  <script src="./modules/comments/comments-action-events.js?v=20260807-fazit-v3" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260804-referee-v2" defer></script>
@@ -701,8 +702,16 @@
 <div id="fazit-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="fazit-form-title" tabindex="-1">
   <div class="comment-form-card fazit-form-card">
     <div class="comment-form-title" id="fazit-form-title">✦ &nbsp; Fazit eintragen &nbsp; ✦</div>
-    <div class="fazit-form-grid">
-      <div class="fazit-form-fields">
+    <div class="fazit-hint-panel">
+      <div class="fazit-hint-head">
+        <div><span class="fazit-hint-kicker">AleriaGPT · Gedächtnisstütze</span><span class="fazit-hint-sub">Liest den Szenenverlauf und schlägt die wichtigsten Punkte als Stichpunkte vor — erstellt noch nichts von selbst.</span></div>
+        <button type="button" class="fazit-hint-btn" id="fz-hint-btn" data-action="request-fazit-hints">✨ Wichtigste Punkte vorschlagen</button>
+      </div>
+      <p class="fazit-hint-status" id="fz-hint-status"></p>
+      <div class="fazit-hint-result" id="fz-hint-result"></div>
+    </div>
+    <div class="fazit-form-grid" id="fz-grid">
+      <div class="fazit-form-fields" id="fz-fields-pane">
         <div>
           <label>Titel</label>
           <input type="text" id="fz-title" maxlength="120" value="Fazit" placeholder="z.B. Fazit der Anhörung" data-action="update-fazit-preview">
@@ -714,7 +723,8 @@
         <div id="fz-lines" class="fazit-lines-editor" aria-label="Fazit-Zeilen"></div>
         <div class="fmt-hint">Personen kommen aus dem Charakterarchiv (Figuren dieser Szene zuerst). Symbole: Icon-URL eintragen oder über „Icon” aus dem Icon-Verzeichnis wählen. Reihenfolge mit ◀ ▶ anpassen.</div>
       </div>
-      <div class="showcase-form-preview-col">
+      <div class="fazit-splitter" data-action="fazit-splitter-handle" role="separator" aria-orientation="vertical" aria-label="Breite zwischen Bearbeitung und Vorschau anpassen" tabindex="0"></div>
+      <div class="showcase-form-preview-col fazit-form-preview-col" id="fz-preview-pane">
         <div class="comment-live-preview">
           <div class="comment-live-preview-head"><div class="comment-live-preview-kicker">Vorschau in der Szene</div></div>
           <div id="fz-preview"></div>

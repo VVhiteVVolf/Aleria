@@ -252,6 +252,7 @@ function resetFazitForm() {
   _fazitPersonPickerTarget = null;
   _fazitPersonSearch = '';
   _editingFazitCommentId = null;
+  if (typeof resetFazitHintPanel === 'function') resetFazitHintPanel();
   const title = document.getElementById('fz-title');
   if (title) title.value = 'Fazit';
   renderFazitLinesEditor();
@@ -272,6 +273,7 @@ function openFazitForm() {
   resetFazitForm();
   addFazitLine();
   activateDialog('fazit-form-overlay', { initialFocus: '#fz-title' });
+  applyFazitPreviewWidth(_fazitPreviewWidth);
 }
 
 function closeFazitForm() {
@@ -299,4 +301,57 @@ function openEditFazitForm(commentId) {
   const submit = document.getElementById('fz-submit');
   if (submit) submit.textContent = 'Änderungen speichern';
   activateDialog('fazit-form-overlay', { initialFocus: '#fz-title' });
+  applyFazitPreviewWidth(_fazitPreviewWidth);
 }
+
+const FAZIT_PREVIEW_WIDTH_MIN = 280;
+const FAZIT_PREVIEW_WIDTH_MAX_RATIO = 0.6;
+const FAZIT_PREVIEW_WIDTH_STEP = 24;
+let _fazitPreviewWidth = 420;
+let _fazitSplitterDragState = null;
+
+function applyFazitPreviewWidth(width) {
+  const pane = document.getElementById('fz-preview-pane');
+  const grid = document.getElementById('fz-grid');
+  if (!pane || !grid) return;
+  const maxWidth = Math.max(FAZIT_PREVIEW_WIDTH_MIN, grid.clientWidth * FAZIT_PREVIEW_WIDTH_MAX_RATIO);
+  _fazitPreviewWidth = Math.round(Math.max(FAZIT_PREVIEW_WIDTH_MIN, Math.min(maxWidth, width)));
+  pane.style.flexBasis = `${_fazitPreviewWidth}px`;
+}
+
+function handleFazitSplitterDrag(event) {
+  if (!_fazitSplitterDragState) return;
+  const delta = _fazitSplitterDragState.startX - event.clientX;
+  applyFazitPreviewWidth(_fazitSplitterDragState.startWidth + delta);
+}
+
+function endFazitSplitterDrag() {
+  _fazitSplitterDragState = null;
+  document.body.classList.remove('fazit-splitter-dragging');
+  window.removeEventListener('pointermove', handleFazitSplitterDrag);
+}
+
+function startFazitSplitterDrag(event) {
+  const pane = document.getElementById('fz-preview-pane');
+  if (!pane) return;
+  event.preventDefault();
+  _fazitSplitterDragState = { startX: event.clientX, startWidth: pane.getBoundingClientRect().width };
+  document.body.classList.add('fazit-splitter-dragging');
+  window.addEventListener('pointermove', handleFazitSplitterDrag);
+  window.addEventListener('pointerup', endFazitSplitterDrag, { once: true });
+}
+
+document.addEventListener('pointerdown', event => {
+  if (event.target?.closest?.('[data-action="fazit-splitter-handle"]')) startFazitSplitterDrag(event);
+});
+
+document.addEventListener('keydown', event => {
+  const handle = event.target?.closest?.('[data-action="fazit-splitter-handle"]');
+  if (!handle) return;
+  if (event.key === 'ArrowLeft') { event.preventDefault(); applyFazitPreviewWidth(_fazitPreviewWidth + FAZIT_PREVIEW_WIDTH_STEP); }
+  if (event.key === 'ArrowRight') { event.preventDefault(); applyFazitPreviewWidth(_fazitPreviewWidth - FAZIT_PREVIEW_WIDTH_STEP); }
+});
+
+window.addEventListener('resize', () => {
+  if (document.getElementById('fazit-form-overlay')?.classList.contains('active')) applyFazitPreviewWidth(_fazitPreviewWidth);
+});

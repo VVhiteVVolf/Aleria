@@ -24,6 +24,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'pick-fazit-token-person',
   'select-fazit-token-person',
   'close-fazit-person-picker',
+  'request-fazit-hints',
   'export-module-insert',
   'choose-module-insert-create',
   'choose-module-insert-import',
@@ -145,6 +146,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'close-fazit-person-picker') {
     closeFazitPersonPicker();
+    return;
+  }
+  if (action === 'request-fazit-hints') {
+    void requestFazitHints();
     return;
   }
   if (action === 'close-fazit-form') {
