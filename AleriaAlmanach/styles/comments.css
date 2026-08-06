@@ -1375,6 +1375,48 @@
     font-style: italic; font-size: 0.65rem; color: var(--ink-faded);
   }
 
+  /* Interagieren/Konsumieren — kompakte Benachrichtigung statt großer Dialogblase.
+     Doppelte Klasse (.comment-entry.comment-entry-compact) haelt die Spezifitaet ueber
+     der mobilen .comment-entry-Regel, die sonst align-self/padding wieder ueberschreiben wuerde. */
+  .comment-entry.comment-entry-compact {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.35rem 1rem;
+    max-width: min(30rem, calc(100% - 2rem));
+  }
+  .comment-entry-compact .comment-portrait,
+  .comment-entry-compact .comment-portrait-placeholder {
+    width: 2.1rem; height: 2.1rem;
+    border-width: 1px;
+    box-shadow: 0 0 0 2px rgba(184,149,42,0.12), 0 2px 6px rgba(0,0,0,0.22);
+    font-size: 0.72rem;
+  }
+  .comment-entry-compact .comment-compact-bubble.comment-body {
+    padding: 0.32rem 0.65rem;
+    width: auto;
+    max-width: 26rem;
+    box-shadow: none;
+  }
+  .comment-compact-head {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.15rem;
+  }
+  .comment-compact-head .comment-kind-badge {
+    margin: 0;
+    padding: 0.06rem 0.32rem;
+    font-size: 0.5rem;
+  }
+  .comment-compact-name {
+    border: 0; background: transparent; padding: 0; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faded);
+  }
+  .comment-entry-compact .comment-text { font-size: 0.82rem; }
+
   /* Textblase */
   .comment-body {
     background: var(--parchment);

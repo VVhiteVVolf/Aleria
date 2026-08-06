@@ -323,6 +323,7 @@ function renderCommentBubble(c, idx) {
   const side = ['left', 'right'].includes(String(c.side || '')) ? String(c.side) : (idx % 2 === 0 ? 'left' : 'right');
   const isSecretAction = commentKind === 'secretaction';
   const isFusedAction = isSecretAction || commentKind === 'combataction';
+  const isCompactUsage = commentKind === 'interact' || commentKind === 'consume';
   const displayCharName = isSecretAction ? 'Unbekannte Gestalt' : charName;
   const safeDisplayCharName = escapeHtml(displayCharName);
   const parts = splitCommentByEmoteMarkers(c);
@@ -332,7 +333,7 @@ function renderCommentBubble(c, idx) {
       : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
     const combatProfileCharacterId = String(c.sceneActorSourceId || c.creatureId || c.characterId || '').trim();
     const combatActorId = String(c.sceneActorId || c.characterId || combatProfileCharacterId).trim();
-    const portrait = window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
+    const portrait = isCompactUsage ? portraitMarkup : (window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
       portraitMarkup,
       characterId: combatProfileCharacterId,
       actorId: combatActorId,
@@ -344,7 +345,7 @@ function renderCommentBubble(c, idx) {
       partIndex: partIdx,
       displayName: displayCharName,
       secret: isSecretAction
-    }) || portraitMarkup;
+    }) || portraitMarkup);
     const actions = !c._hideActions && partIdx === parts.length - 1
       ? c._mechanicalUndoEligible
         ? renderMechanicalUndoButton(c.id)
@@ -357,6 +358,21 @@ function renderCommentBubble(c, idx) {
       : commentKindUsesLanguage(commentKind)
         ? buildCommentLanguageTextMarkup(part.text, c, commentKind, commentId, partIdx)
         : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
+
+    if (isCompactUsage) {
+      return `
+        <div class="comment-entry comment-entry-compact ${partIdx ? 'comment-subentry' : ''}" data-comment-id="${commentId}">
+          <div class="comment-compact-portrait">${portrait}</div>
+          <div class="comment-compact-bubble comment-body comment-kind-${commentKind}">
+            <div class="comment-compact-head">
+              <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
+              <button type="button" class="comment-compact-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
+            </div>
+            ${textMarkup}
+            ${actions}
+          </div>
+        </div>`;
+    }
 
     return `
       <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}${isFusedAction ? ' comment-entry-fused' : ''}" data-comment-id="${commentId}">
