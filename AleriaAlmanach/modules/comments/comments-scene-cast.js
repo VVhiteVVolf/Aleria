@@ -82,10 +82,18 @@
     global.persistCommentDraft?.();
   }
 
-  function addSelectedCreature() {
+  async function addSelectedCreature() {
     const template = getCurrentTemplate();
     if (!template) return;
     const sourceCreatureId = String(template.id || '').trim();
+    if (template._builtin) {
+      try {
+        await global.AleriaCreatures?.materializeBuiltin?.(sourceCreatureId);
+      } catch (error) {
+        console.error('materialize builtin creature failed:', error);
+        global.showAppStatus?.(`${baseCreatureName(template.name)} konnte nicht dauerhaft gespeichert werden. Kampfhandlungen mit dieser Figur benötigen eine Online-Verbindung.`, 'error');
+      }
+    }
     const related = createActors.filter(actor => actor.sourceCreatureId === sourceCreatureId);
     const ordinal = Math.max(0, ...related.map(actor => Number(actor.instanceOrdinal) || 0)) + 1;
     const threadKey = safeIdPart(global.getCurrentCommentThreadId?.() || 'szene');
@@ -226,7 +234,7 @@
   document.addEventListener('click', event => {
     const trigger = event.target?.closest?.('[data-scene-cast-action]');
     if (!trigger) return;
-    if (trigger.dataset.sceneCastAction === 'add') addSelectedCreature();
+    if (trigger.dataset.sceneCastAction === 'add') void addSelectedCreature();
     if (trigger.dataset.sceneCastAction === 'remove') removeActor(trigger.dataset.sceneActorId || '');
   });
 

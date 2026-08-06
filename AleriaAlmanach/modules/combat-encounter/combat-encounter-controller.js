@@ -182,14 +182,34 @@ function buildEvent() {
   });
 }
 
-async function submitEvent() {
-  const event = buildEvent();
-  if (!event.participants.length && event.operation !== 'end') {
-    setEncounterStatus('Wähle mindestens eine Figur aus.', 'error');
-    return;
+async function materializeSelectedBuiltins() {
+  const rows = [...document.querySelectorAll('[data-combat-encounter-candidate]')];
+  const pending = rows
+    .map(row => {
+      const checkbox = row.querySelector('[data-combat-encounter-field="participant"]');
+      if (!checkbox?.checked && activeOperation !== 'end') return null;
+      return activeCandidates.find(item => item.actorId === row.dataset.actorId) || null;
+    })
+    .filter(candidate => candidate?.persistence?.kind === 'scene-actor' && candidate.actorId);
+  for (const candidate of pending) {
+    try {
+      await globalThis.AleriaCreatures?.materializeBuiltin?.(candidate.actorId);
+      candidate.persistence = { kind: 'creature', recordId: candidate.actorId };
+    } catch (error) {
+      console.error('materialize builtin creature failed:', error);
+    }
   }
+}
+
+async function submitEvent() {
   setEncounterSubmitting(true);
   try {
+    await materializeSelectedBuiltins();
+    const event = buildEvent();
+    if (!event.participants.length && event.operation !== 'end') {
+      setEncounterStatus('Wähle mindestens eine Figur aus.', 'error');
+      return;
+    }
     const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
     if (!backend?.addCombatEncounter) throw new Error('Der Online-Speicher unterstützt die Kampfliste noch nicht.');
     const labels = { start: 'Der Kampf beginnt.', add: 'Weitere Kämpfer treten bei.', remove: 'Kämpfer scheiden aus.', end: 'Der Kampf ist beendet.' };

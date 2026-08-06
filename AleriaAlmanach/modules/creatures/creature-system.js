@@ -128,6 +128,33 @@ async function ensureBackend() {
   return window._fb;
 }
 
+let materializePromises = new Map();
+
+async function materializeBuiltinCreature(id) {
+  const creatureId = String(id || '').trim();
+  if (!creatureId || !isBuiltinCreatureId(creatureId)) return null;
+  const existing = state.creatures.find(item => item.id === creatureId);
+  if (existing && existing._builtin === false) return existing;
+  if (materializePromises.has(creatureId)) return materializePromises.get(creatureId);
+  const run = (async () => {
+    const template = getBuiltinCreatureTemplates().find(item => item.id === creatureId);
+    if (!template) return null;
+    const backend = await ensureBackend();
+    const now = new Date().toISOString();
+    const data = { ...template, createdAt: now, updatedAt: now };
+    delete data.id;
+    await backend.saveCreature(creatureId, data);
+    const saved = { ...sanitizeCreature({ id: creatureId, ...data }), _builtin: false };
+    const index = state.creatures.findIndex(item => item.id === creatureId);
+    if (index >= 0) state.creatures[index] = saved;
+    else state.creatures.push(saved);
+    dispatchChanged();
+    return saved;
+  })().finally(() => materializePromises.delete(creatureId));
+  materializePromises.set(creatureId, run);
+  return run;
+}
+
 function dispatchChanged() {
   document.dispatchEvent(new CustomEvent('aleria:creatures-changed', {
     detail: { creatures: getSceneActors() }
@@ -966,7 +993,8 @@ window.AleriaCreatures = Object.freeze({
   getById: id => clone(state.creatures.find(item => item.id === id) || null),
   getSceneActors,
   open: openSheet,
-  duplicate: duplicateCreature
+  duplicate: duplicateCreature,
+  materializeBuiltin: materializeBuiltinCreature
 });
 
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
