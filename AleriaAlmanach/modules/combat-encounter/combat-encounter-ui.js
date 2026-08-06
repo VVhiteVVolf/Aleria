@@ -163,7 +163,7 @@ export function renderCombatEncounterComment(comment = {}, index = 0) {
   const awards = event.experience.awards.map(award => `<li><b>${escapeMarkup(award.name)}</b><span>+${award.experience} EP · ${award.beforeExperience}→${award.afterExperience}${award.levelUpAvailable ? ` · Stufe ${award.availableLevel} verfügbar` : ''}</span></li>`).join('');
   const divider = index > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   return `${divider}<section class="combat-encounter-event" data-operation="${event.operation}">
-    <header><img src="${COMBAT_ENCOUNTER_ICON_URL}" alt=""><span>${labels[event.operation]}</span><strong>${escapeMarkup(event.title)}</strong></header>
+    <header><img src="${COMBAT_ENCOUNTER_ICON_URL}" alt=""><span>${labels[event.operation]}</span><strong>${escapeMarkup(event.title)}</strong>${comment.id ? `<button type="button" class="combat-encounter-event-delete" data-action="undo-mechanical-comment" data-comment-id="${escapeMarkup(comment.id)}" title="Löschen und zurücksetzen" aria-label="Löschen und zurücksetzen">×</button>` : ''}</header>
     ${event.body ? `<p>${escapeMarkup(event.body)}</p>` : ''}
     ${renderRoster(event.participants)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}

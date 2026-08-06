@@ -27,8 +27,8 @@
 <link rel="stylesheet" href="./styles/scene-inventory.css?v=20260710-scene-inventory-v2">
 <link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260711-scene-clock-v3">
-<link rel="stylesheet" href="./styles/scene-rest.css?v=20260806-contrast-v1">
-<link rel="stylesheet" href="./styles/combat-encounter.css?v=20260806-flexshrink-v1">
+<link rel="stylesheet" href="./styles/scene-rest.css?v=20260806-undo-btn-v1">
+<link rel="stylesheet" href="./styles/combat-encounter.css?v=20260806-undo-btn-v1">
 <link rel="stylesheet" href="./styles/herausforderung.css?v=20260805-herausforderung-v2">
 <link rel="stylesheet" href="./styles/scene-transition.css?v=20260622-comment-action-icons-v1">
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
@@ -42,7 +42,7 @@
 <link rel="stylesheet" href="./styles/combat-entry-editor.css?v=20260803-spell-grades-v1">
 <link rel="stylesheet" href="./styles/creatures.css?v=20260803-spell-grades-v1">
 <link rel="stylesheet" href="./styles/character-genealogy.css?v=20260717-genealogy-living-filter-v1">
-<link rel="stylesheet" href="./styles/module-editor.css?v=20260709-scene-module-import-export-v1">
+<link rel="stylesheet" href="./styles/module-editor.css?v=20260806-clear-comments-v1">
 <link rel="stylesheet" href="./styles/aleria-calendar.css?v=20260723-aleria-calendar-v1">
 <link rel="stylesheet" href="./styles/family-editor.css?v=20260715-family-workbench-v1">
 <link rel="stylesheet" href="./styles/family-workbench.css?v=20260715-family-workbench-v2">
@@ -79,7 +79,7 @@
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20260710-session-status-v1" media="(max-width: 760px)">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20260802-combat-state-v2">
   <!-- Firebase -->
-  <script type="module" src="./firebase.js?v=20260806-lock-message-v1"></script>
+  <script type="module" src="./firebase.js?v=20260806-mechanical-undo-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260717-genealogy-living-filter-v1"></script>
   <script src="./modules/name-list/name-list-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="./modules/script-table/script-table-data.js?v=20260713-argenti-stoicheia-v1" defer></script>
@@ -163,8 +163,8 @@
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260619-template-transfer-inline-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260715-family-workbench-v1" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20260715-family-workbench-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260715-family-migration-v1" defer></script>
-  <script src="./modules/backup/almanach-backup.js?v=20260611-tab-sort-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1" defer></script>
+  <script src="./modules/backup/almanach-backup.js?v=20260806-clear-comments-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-state.js?v=20260715-family-workbench-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1" defer></script>
@@ -256,8 +256,8 @@
   <script src="./modules/scene-dice/scene-dice-renderer.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-time/scene-time-state.js?v=20260803-scene-rest-v1" defer></script>
   <script src="./modules/scene-time/scene-time-ui.js?v=20260803-scene-rest-v1" defer></script>
-  <script type="module" src="./modules/scene-rest/scene-rest-controller.js?v=20260804-referee-v2"></script>
-  <script type="module" src="./modules/combat-encounter/combat-encounter-controller.js?v=20260806-encounter-card-v1"></script>
+  <script type="module" src="./modules/scene-rest/scene-rest-controller.js?v=20260806-undo-btn-v1"></script>
+  <script type="module" src="./modules/combat-encounter/combat-encounter-controller.js?v=20260806-undo-btn-v1"></script>
   <script type="module" src="./modules/herausforderung/herausforderung-controller.js?v=20260805-herausforderung-v2"></script>
   <script src="./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2" defer></script>
   <script src="./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3" defer></script>
@@ -266,7 +266,7 @@
   <script src="./modules/comments/comments-spell-fonts.js?v=20260713-language-bubbles-v2" defer></script>
   <script src="./modules/comments/comments-transaction-policy.js?v=20260806-badge-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-combat-mini-profile.js?v=20260803-action-economy-v2" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20260806-eval-guard-v1" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20260806-mechanical-undo-v1" defer></script>
   <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
@@ -308,6 +308,7 @@
   <script src="./modules/comments/comments-edit-character-picker.js?v=20260804-char-filter-perf-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260804-referee-v2" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
+  <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-mechanical-undo-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-action-events.js?v=20260804-early-bind-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
@@ -1457,6 +1458,7 @@
             <button class="module-editor-mini-btn" type="button" data-module-editor-action="load-json-as-new">Als neues Modul laden</button>
             <button class="module-editor-mini-btn" type="button" data-module-editor-action="export-module">Modulpaket herunterladen</button>
             <button class="module-editor-mini-btn" type="button" data-module-editor-action="export-module-comments">Kommentare herunterladen</button>
+            <button class="module-editor-mini-btn module-editor-mini-btn-danger" type="button" data-module-editor-action="clear-module-comments">Kommentare leeren…</button>
           </div>
           <div class="module-editor-inline">
             <button class="module-editor-mini-btn" type="button" data-module-editor-action="export-all-modules">Alle Module herunterladen</button>

@@ -142,17 +142,31 @@ export const commitSceneRest = onCall({
       participants
     });
 
+    const mechanicalUndo = {};
     profileUpdates = descriptors.flatMap(({ participant, descriptor }) => {
       if (!descriptor.persistent) return [];
       const committed = rest.participants.find(candidate => candidate.actorId === participant.actorId);
-      const target = unique.get(`${descriptor.kind}:${descriptor.recordId}`);
+      const key = `${descriptor.kind}:${descriptor.recordId}`;
+      const target = unique.get(key);
+      const record = records.get(key) || {};
       transaction.update(target.ref, {
         'combatProfile.hitPoints.current': committed.after.hitPoints.current,
         'combatProfile.hitPoints.temporary': committed.after.hitPoints.temporary,
         'combatProfile.resources': committed.after.resources,
         'combatProfile.abilities': committed.after.abilities,
+        'combatProfile.lastMechanicalCommentId': commentRef.id,
         updatedAt: new Date(nowClient).toISOString()
       });
+      mechanicalUndo[key] = {
+        kind: descriptor.kind,
+        recordId: descriptor.recordId,
+        before: {
+          hitPoints: record.combatProfile?.hitPoints || null,
+          resources: record.combatProfile?.resources || null,
+          abilities: record.combatProfile?.abilities || null
+        },
+        previousMechanicalCommentId: record.combatProfile?.lastMechanicalCommentId || null
+      };
       return [{
         kind: descriptor.kind,
         recordId: descriptor.recordId,
@@ -177,6 +191,7 @@ export const commitSceneRest = onCall({
       commentKind: 'scene-rest-event',
       commentSegments: null,
       sceneRest: rest,
+      mechanicalUndo: Object.keys(mechanicalUndo).length ? mechanicalUndo : null,
       sceneTimeEvent: {
         ...(metadata.sceneTimeEvent || {}),
         anchorDay: sceneDay,

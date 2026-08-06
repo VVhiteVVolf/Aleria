@@ -17,7 +17,7 @@ import {
   setSceneRestSubmitting,
   setSceneRestType,
   updateSceneRestSelectionCount
-} from './scene-rest-ui.js?v=20260804-referee-v2';
+} from './scene-rest-ui.js?v=20260806-undo-btn-v1';
 
 const profileResolver = new CombatProfileResolver();
 let activeCandidates = [];

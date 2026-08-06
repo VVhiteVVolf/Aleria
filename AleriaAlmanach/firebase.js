@@ -29,6 +29,7 @@
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
+    const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
@@ -583,6 +584,11 @@
         });
         return committed.data;
       },
+      async undoMechanicalComment(entryId, commentId) {
+        await requireFirebaseUser();
+        const result = await commitUndoMechanicalCommentCallable({ entryId, commentId });
+        return result.data;
+      },
       async addHerausforderung(entryId, text, deleteCode, metadata = {}) {
         await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
@@ -685,6 +691,19 @@
         const batch = writeBatch(db);
         matches.docs.forEach(item => batch.delete(item.ref));
         await batch.commit();
+      },
+      async deleteCommentsWithoutCode(commentIds) {
+        await requireFirebaseUser();
+        const ids = [...new Set((Array.isArray(commentIds) ? commentIds : []).map(id => String(id || '').trim()).filter(Boolean))];
+        let deleted = 0;
+        for (let index = 0; index < ids.length; index += 400) {
+          const chunk = ids.slice(index, index + 400);
+          const batch = writeBatch(db);
+          chunk.forEach(id => batch.delete(doc(db, 'comments', id)));
+          await batch.commit();
+          deleted += chunk.length;
+        }
+        return { deleted };
       },
       async loadCommentTurn(threadId) {
         try {

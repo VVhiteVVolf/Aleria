@@ -506,15 +506,34 @@ export const commitCombatComment = onCall({
       }
     }
 
+    const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };
+      const before = {};
       if (update.hitPoints) {
+        before.hitPoints = update.record?.combatProfile?.hitPoints || null;
         values['combatProfile.hitPoints.current'] = update.hitPoints.current;
         values['combatProfile.hitPoints.temporary'] = update.hitPoints.temporary;
       }
-      if (update.resources) values['combatProfile.resources'] = update.resources;
-      if (update.abilities) values['combatProfile.abilities'] = update.abilities;
-      if (update.inventory) values.inventory = update.inventory;
+      if (update.resources) {
+        before.resources = update.record?.combatProfile?.resources || null;
+        values['combatProfile.resources'] = update.resources;
+      }
+      if (update.abilities) {
+        before.abilities = update.record?.combatProfile?.abilities || null;
+        values['combatProfile.abilities'] = update.abilities;
+      }
+      if (update.inventory) {
+        before.inventory = update.record?.inventory || null;
+        values.inventory = update.inventory;
+      }
+      values['combatProfile.lastMechanicalCommentId'] = commentRef.id;
+      mechanicalUndo[update.entry.key] = {
+        kind: update.entry.kind,
+        recordId: update.entry.recordId,
+        before,
+        previousMechanicalCommentId: update.record?.combatProfile?.lastMechanicalCommentId || null
+      };
       transaction.update(update.entry.ref, values);
       return {
         kind: update.entry.kind,
@@ -559,6 +578,7 @@ export const commitCombatComment = onCall({
         atomicProfileUpdates: persistentUpdates.size,
         validatedBy: 'commitCombatComment'
       },
+      mechanicalUndo: Object.keys(mechanicalUndo).length ? mechanicalUndo : null,
       ...(inventoryEntries.length ? {
         inventoryTransaction: {
           schemaVersion: 2,

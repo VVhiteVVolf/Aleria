@@ -16,7 +16,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260806-encounter-card-v1';
+} from './combat-encounter-ui.js?v=20260806-undo-btn-v1';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';

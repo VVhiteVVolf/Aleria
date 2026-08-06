@@ -151,6 +151,74 @@ async function exportModuleCommentsFromEditor() {
   }
 }
 
+async function clearModuleCommentsFromEditor() {
+  try {
+    setModuleEditorStatus('Sicherheits-Export wird erstellt…');
+    const exportPayload = await buildModuleCommentExportPayload(collectModuleEditorPayload());
+    if (!exportPayload.summary.commentCount) {
+      setModuleEditorStatus('Dieses Modul hat keine Kommentare zum Leeren.');
+      return;
+    }
+    const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+    const moduleSlug = slugify(exportPayload.source.moduleTitle || exportPayload.source.moduleId || 'aleria-modul');
+    downloadJsonFile(exportPayload, `${moduleSlug}-kommentare-vor-leeren-${stamp}.json`);
+
+    const confirmed = confirm(
+      `Sicherheits-Export wurde heruntergeladen (${exportPayload.summary.commentCount} Kommentare in ${exportPayload.summary.threadCount} Themenbereichen).\n\n`
+      + `Jetzt WIRKLICH alle diese Kommentare unwiderruflich löschen? Kampf-, Kampfankündigungs- und Rast-Einträge werden dabei korrekt zurückgesetzt (Trefferpunkte, Ressourcen, Kampfsperren, Erfahrung).\n\n`
+      + `Ohne den eben heruntergeladenen Export gibt es danach keinen Weg zurück.`
+    );
+    if (!confirmed) {
+      setModuleEditorStatus('Leeren abgebrochen. Der Export wurde trotzdem gespeichert.');
+      return;
+    }
+
+    const backend = await getCommentBackend({ timeoutMs: 1200 });
+    let deleted = 0;
+    let blocked = 0;
+    setModuleEditorStatus('Kommentare werden geleert…');
+    for (const thread of exportPayload.threads) {
+      const ordered = thread.comments.slice().sort((a, b) => (b.threadOrder || 0) - (a.threadOrder || 0));
+      const normalIds = [];
+      for (const comment of ordered) {
+        const isMechanical = comment.serverValidatedMechanics === true || comment.mechanicalAudit === true;
+        if (!isMechanical) {
+          normalIds.push(comment.id);
+          continue;
+        }
+        try {
+          await backend.undoMechanicalComment(thread.threadId, comment.id);
+          deleted += 1;
+        } catch (error) {
+          blocked += 1;
+          console.warn('clear module: mechanical comment skipped:', comment.id, error);
+        }
+      }
+      if (normalIds.length) {
+        try {
+          const result = await backend.deleteCommentsWithoutCode(normalIds);
+          deleted += result.deleted;
+        } catch (error) {
+          blocked += normalIds.length;
+          console.warn('clear module: normal comment batch failed:', thread.threadId, error);
+        }
+      }
+    }
+
+    if (typeof loadCommentsIntoPage === 'function' && typeof getCurrentCommentThreadId === 'function') {
+      await loadCommentsIntoPage(getCurrentCommentThreadId(), true);
+    }
+    setModuleEditorStatus(
+      blocked
+        ? `Geleert: ${deleted} Kommentare gelöscht, ${blocked} konnten nicht automatisch entfernt werden (Details in der Konsole).`
+        : `Geleert: alle ${deleted} Kommentare gelöscht und zurückgesetzt.`
+    );
+  } catch (error) {
+    console.error('clear module comments failed:', error);
+    setModuleEditorStatus(getFriendlyErrorMessage(error, 'Kommentare konnten nicht geleert werden.'), true);
+  }
+}
+
 async function buildFullAlmanachBackupPayload() {
   await waitForFirebaseReady();
   const commentBackend = typeof getCommentBackend === 'function'

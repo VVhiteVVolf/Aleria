@@ -204,7 +204,7 @@ export function renderSceneRestComment(comment = {}, index = 0) {
       <div><strong>${escapeMarkup(participant.name)}</strong><small>TP ${participant.before.hitPoints.current}→${hp.current} / ${hp.maximum}</small><em>${escapeMarkup(getResourceSummary(participant))}</em></div>
     </article>`;
   }).join('');
-  return `${divider}<section class="scene-rest-event" data-scene-rest-type="${escapeMarkup(rest.type)}">${timeMarkup}<div class="scene-rest-result"><div class="scene-rest-result-head"><span>${escapeMarkup(getSceneRestType(rest.type).label)}</span><strong>${formatDuration(rest.durationSeconds)}</strong></div><div class="scene-rest-result-grid">${participants}</div></div></section>`;
+  return `${divider}<section class="scene-rest-event" data-scene-rest-type="${escapeMarkup(rest.type)}">${timeMarkup}<div class="scene-rest-result"><div class="scene-rest-result-head"><span>${escapeMarkup(getSceneRestType(rest.type).label)}</span><strong>${formatDuration(rest.durationSeconds)}</strong>${comment.id ? `<button type="button" class="scene-rest-event-delete" data-action="undo-mechanical-comment" data-comment-id="${escapeMarkup(comment.id)}" title="Löschen und zurücksetzen" aria-label="Löschen und zurücksetzen">×</button>` : ''}</div><div class="scene-rest-result-grid">${participants}</div></div></section>`;
 }
 
 export const sceneRestUiInternals = Object.freeze({ escapeMarkup, formatDuration });

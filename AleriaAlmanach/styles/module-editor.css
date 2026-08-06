@@ -395,6 +395,15 @@
     border-color: var(--gold);
     color: var(--ink);
   }
+  .module-editor-mini-btn-danger {
+    border-color: rgba(139, 29, 29, 0.4);
+    color: var(--red-wax);
+  }
+  .module-editor-mini-btn-danger:hover {
+    border-color: var(--red-wax);
+    background: rgba(139, 29, 29, 0.08);
+    color: var(--red-wax);
+  }
   .module-editor-drag-handle {
     cursor: grab;
     min-width: 2rem;

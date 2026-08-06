@@ -163,6 +163,10 @@ function safeRenderCombatEvaluation(source) {
   }
 }
 
+function renderMechanicalUndoButton(commentId) {
+  return `<button type="button" class="comment-delete-btn" data-action="undo-mechanical-comment" data-comment-id="${escapeHtml(commentId)}">Löschen</button>`;
+}
+
 function renderCommentTransactionLock(comment = {}) {
   const policy = window.AleriaCommentTransactions;
   if (!policy?.isImmutable?.(comment)) return '';
@@ -231,6 +235,9 @@ function renderCommentBubble(c, idx) {
   if (Array.isArray(c.commentSegments) && c.commentSegments.some(segment => String(segment?.text || '').trim())) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());
     const mechanicalLock = window.AleriaCommentTransactions?.isImmutable?.(c) === true;
+    const mechanicalKinds = window.AleriaCommentTransactions?.getKinds?.(c) || [];
+    const hasOtherMechanics = c.commentSegments.some(segment => segment?.skillResolution || segment?.skillChallenge || segment?.inventoryUse?.usageId);
+    const mechanicalUndoEligible = mechanicalKinds.length === 1 && mechanicalKinds[0] === 'combat' && !hasOtherMechanics;
     return cleanSegments.map((segment, segmentIdx) => {
       const displayText = window.AleriaSkillChecks?.getDisplayText?.(segment) ?? segment.text ?? '';
       const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment)
@@ -252,6 +259,7 @@ function renderCommentBubble(c, idx) {
         _combatTimelineCommentId: c.id,
         _combatTimelineSegmentIndex: segmentIdx,
         _mechanicalLocked: mechanicalLock,
+        _mechanicalUndoEligible: mechanicalUndoEligible,
         _hideActions: !!c._hideActions || segmentIdx < cleanSegments.length - 1
       };
       const bubble = renderCommentBubble(segmentComment, idx + segmentIdx);
@@ -334,9 +342,11 @@ function renderCommentBubble(c, idx) {
       secret: isSecretAction
     }) || portraitMarkup;
     const actions = !c._hideActions && partIdx === parts.length - 1
-      ? (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
-        ? renderCommentTransactionLock(c)
-        : `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
+      ? c._mechanicalUndoEligible
+        ? renderMechanicalUndoButton(c.id)
+        : (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
+          ? renderCommentTransactionLock(c)
+          : `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
       : '';
     const textMarkup = commentKind === 'animal'
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)

@@ -155,21 +155,24 @@ export const commitCombatEncounter = onCall({
     }
 
     const encounterKey = `${entryId}:${requested.encounterId}`;
+    let lockDescriptors = [];
+    let locksActivated = true;
     if (requested.operation === 'start' || requested.operation === 'add') {
-      updateCombatProfileLocks(transaction, database, requested.participants.map(persistenceDescriptor), encounterKey, true);
+      lockDescriptors = requested.participants.map(persistenceDescriptor);
+      locksActivated = true;
+      updateCombatProfileLocks(transaction, database, lockDescriptors, encounterKey, true);
     } else if (requested.operation === 'remove') {
-      updateCombatProfileLocks(
-        transaction,
-        database,
-        getDescriptorsNoLongerActive([...mergedParticipants.values()], requested.participants),
-        encounterKey,
-        false
-      );
+      lockDescriptors = getDescriptorsNoLongerActive([...mergedParticipants.values()], requested.participants);
+      locksActivated = false;
+      updateCombatProfileLocks(transaction, database, lockDescriptors, encounterKey, false);
     } else if (requested.operation === 'end') {
-      updateCombatProfileLocks(transaction, database, [...mergedParticipants.values()].map(persistenceDescriptor), encounterKey, false);
+      lockDescriptors = [...mergedParticipants.values()].map(persistenceDescriptor);
+      locksActivated = false;
+      updateCombatProfileLocks(transaction, database, lockDescriptors, encounterKey, false);
     }
 
     let experience = { total: 0, awards: [] };
+    const mechanicalUndo = {};
     if (requested.operation === 'end') {
       const endingParticipants = new Map([...mergedParticipants.entries()]);
       requested.participants.forEach(participant => endingParticipants.set(participant.actorId, participant));
@@ -188,8 +191,15 @@ export const commitCombatEncounter = onCall({
         const target = recordsToLoad.find(entry => entry.key === recordKey(descriptor));
         transaction.update(target.ref, {
           'combatProfile.progression': change.after,
+          'combatProfile.lastMechanicalCommentId': commentRef.id,
           updatedAt: new Date(now).toISOString()
         });
+        mechanicalUndo[recordKey(descriptor)] = {
+          kind: descriptor.kind,
+          recordId: descriptor.recordId,
+          before: { progression },
+          previousMechanicalCommentId: record.combatProfile?.lastMechanicalCommentId || null
+        };
         const availableLevel = getOrdinaryLevelForExperience(change.after.experience);
         const committedAward = {
           ...award,
@@ -232,6 +242,8 @@ export const commitCombatEncounter = onCall({
         atomicProfileUpdates: profileUpdates.length,
         validatedBy: 'commitCombatEncounter'
       },
+      mechanicalUndo: Object.keys(mechanicalUndo).length ? mechanicalUndo : null,
+      encounterLockUndo: lockDescriptors.length ? { encounterKey, locksActivated, descriptors: lockDescriptors } : null,
       serverValidatedMechanics: true,
       mechanicalAudit: true,
       createdBy: request.auth.uid,

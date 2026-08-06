@@ -1,0 +1,144 @@
+import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
+import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
+
+function fail(code, message) {
+  throw new HttpsError(code, message);
+}
+
+function clean(value, maximum = 240) {
+  return String(value || '').trim().slice(0, maximum);
+}
+
+function describeComment(comment = {}) {
+  const who = clean(comment.charName) || 'Ein Beitrag';
+  const kind = comment.commentKind === 'combat-encounter-event'
+    ? 'Kampfankündigung'
+    : (comment.commentKind === 'scene-rest-event' ? 'Rast' : 'Kampfhandlung');
+  const snippet = clean(comment.text, 80);
+  return `${kind} von ${who}${snippet ? ` ("${snippet}${comment.text?.length > 80 ? '…' : ''}")` : ''}`;
+}
+
+function recordRef(database, kind, recordId) {
+  return database.collection(kind === 'creature' ? 'creatures' : 'characters').doc(recordId);
+}
+
+async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUndo, commentId) {
+  const entries = Object.entries(mechanicalUndo || {});
+  if (!entries.length) return;
+  const refs = entries.map(([, entry]) => recordRef(database, entry.kind, entry.recordId));
+  const snapshots = await Promise.all(refs.map(ref => transaction.get(ref)));
+
+  for (let index = 0; index < entries.length; index += 1) {
+    const [, entry] = entries[index];
+    const snapshot = snapshots[index];
+    if (!snapshot.exists) continue;
+    const current = snapshot.data() || {};
+    const currentMarker = current.combatProfile?.lastMechanicalCommentId || null;
+    if (currentMarker !== commentId) {
+      const blockingSnapshot = currentMarker
+        ? await transaction.get(database.collection('comments').doc(currentMarker))
+        : null;
+      const blockingDescription = blockingSnapshot?.exists
+        ? describeComment(blockingSnapshot.data())
+        : `eine neuere Handlung von ${current.name || 'dieser Figur'}`;
+      fail(
+        'failed-precondition',
+        `Das kann nicht gelöscht werden, weil danach schon etwas Neueres passiert ist: ${blockingDescription}. Lösche zuerst diesen neueren Beitrag.`
+      );
+    }
+  }
+
+  entries.forEach(([, entry], index) => {
+    if (!snapshots[index].exists) return;
+    const ref = refs[index];
+    const values = { updatedAt: FieldValue.serverTimestamp() };
+    if (entry.before?.hitPoints !== undefined) values['combatProfile.hitPoints'] = entry.before.hitPoints;
+    if (entry.before?.resources !== undefined) values['combatProfile.resources'] = entry.before.resources;
+    if (entry.before?.abilities !== undefined) values['combatProfile.abilities'] = entry.before.abilities;
+    if (entry.before?.progression !== undefined) values['combatProfile.progression'] = entry.before.progression;
+    if (entry.before?.inventory !== undefined) values.inventory = entry.before.inventory;
+    values['combatProfile.lastMechanicalCommentId'] = entry.previousMechanicalCommentId || FieldValue.delete();
+    transaction.update(ref, values);
+  });
+}
+
+function hasUnsupportedMechanics(comment = {}) {
+  const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
+  return segments.some(segment => segment?.skillResolution || segment?.skillChallenge || segment?.inventoryUse?.usageId);
+}
+
+export const commitUndoMechanicalComment = onCall({
+  region: 'europe-west1',
+  maxInstances: 10,
+  concurrency: 20,
+  enforceAppCheck: false,
+  timeoutSeconds: 30
+}, async request => {
+  if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
+  const entryId = clean(request.data?.entryId, 240);
+  const commentId = clean(request.data?.commentId, 240);
+  if (!entryId || !commentId) fail('invalid-argument', 'Szene und Beitrag sind erforderlich.');
+
+  const database = getFirestore();
+  const commentRef = database.collection('comments').doc(commentId);
+
+  await database.runTransaction(async transaction => {
+    const snapshot = await transaction.get(commentRef);
+    if (!snapshot.exists) fail('not-found', 'Dieser Beitrag existiert nicht mehr.');
+    const comment = snapshot.data() || {};
+    if (clean(comment.entryId, 240) !== entryId) fail('failed-precondition', 'Der Beitrag gehört nicht zu dieser Szene.');
+    if (!comment.serverValidatedMechanics && !comment.mechanicalAudit) {
+      fail('failed-precondition', 'Dieser Beitrag ist kein serverseitig geprüfter Kampf-/Rast-Eintrag.');
+    }
+    if (hasUnsupportedMechanics(comment)) {
+      fail(
+        'failed-precondition',
+        'Dieser Beitrag enthält auch eine Fertigkeitsprobe oder Inventarnutzung und kann derzeit nicht automatisch gelöscht werden.'
+      );
+    }
+
+    if (comment.commentKind === 'combat-encounter-event') {
+      const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
+      const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+        .filter(isTrustedMechanicalComment);
+      const encounterId = clean(comment.combatEncounter?.encounterId, 240);
+      const encounterState = deriveCombatEncounterState(history).get(encounterId);
+      const events = encounterState?.events || [];
+      const lastEvent = events[events.length - 1];
+      if (!lastEvent || lastEvent.commentId !== commentId) {
+        const laterOp = { start: 'begonnen', add: 'verstärkt', remove: 'verändert', end: 'beendet' };
+        fail(
+          'failed-precondition',
+          `Das kann nicht gelöscht werden, weil diese Kampfliste danach schon wieder ${laterOp[lastEvent?.operation] || 'verändert'} wurde. Lösche zuerst die neueren Kampflisten-Einträge dieses Kampfes.`
+        );
+      }
+      await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId);
+      if (comment.encounterLockUndo?.descriptors?.length) {
+        const { encounterKey, locksActivated, descriptors } = comment.encounterLockUndo;
+        descriptors.forEach(descriptor => {
+          const ref = database.collection('combat_profile_locks')
+            .doc(descriptor.kind === 'creature' ? 'creatures' : 'characters')
+            .collection('records')
+            .doc(descriptor.recordId);
+          transaction.set(ref, {
+            activeEncounterKeys: locksActivated ? FieldValue.arrayRemove(encounterKey) : FieldValue.arrayUnion(encounterKey),
+            updatedAt: FieldValue.serverTimestamp()
+          }, { merge: true });
+        });
+      }
+    } else {
+      await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId);
+    }
+
+    transaction.delete(commentRef);
+  });
+
+  return { id: commentId, deleted: true };
+});
+
+export const undoMechanicalCommentInternals = Object.freeze({
+  describeComment,
+  hasUnsupportedMechanics
+});

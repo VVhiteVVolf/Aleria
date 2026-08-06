@@ -9,6 +9,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'load-json-as-new',
   'export-module',
   'export-module-comments',
+  'clear-module-comments',
   'export-template-transfer',
   'open-template-transfer-import',
   'export-selected-comment-thread',
@@ -213,6 +214,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'export-module-comments') {
     exportModuleCommentsFromEditor();
+    return;
+  }
+  if (action === 'clear-module-comments') {
+    clearModuleCommentsFromEditor();
     return;
   }
   if (action === 'export-template-transfer') {
