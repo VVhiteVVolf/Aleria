@@ -73,8 +73,11 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
 }
 
 function hasUnsupportedMechanics(comment = {}) {
+  // Inventory changes are already captured in mechanicalUndo alongside hitPoints/resources/abilities,
+  // so a combat+inventory-use comment is safe to revert. Skill checks are not: they claim a separate
+  // skill_challenge_claims/herausforderung_claims document that this function does not yet unwind.
   const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  return segments.some(segment => segment?.skillResolution || segment?.skillChallenge || segment?.inventoryUse?.usageId);
+  return segments.some(segment => segment?.skillResolution || segment?.skillChallenge);
 }
 
 export const commitUndoMechanicalComment = onCall({

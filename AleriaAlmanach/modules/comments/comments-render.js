@@ -236,8 +236,12 @@ function renderCommentBubble(c, idx) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());
     const mechanicalLock = window.AleriaCommentTransactions?.isImmutable?.(c) === true;
     const mechanicalKinds = window.AleriaCommentTransactions?.getKinds?.(c) || [];
-    const hasOtherMechanics = c.commentSegments.some(segment => segment?.skillResolution || segment?.skillChallenge || segment?.inventoryUse?.usageId);
-    const mechanicalUndoEligible = mechanicalKinds.length === 1 && mechanicalKinds[0] === 'combat' && !hasOtherMechanics;
+    // Inventory changes are captured alongside hitPoints/resources in the server's undo snapshot, so a
+    // combat+inventory-use comment is safely deletable too. Skill checks are not (separate claim record).
+    const hasUnsupportedMechanics = c.commentSegments.some(segment => segment?.skillResolution || segment?.skillChallenge);
+    const mechanicalUndoEligible = mechanicalKinds.includes('combat')
+      && mechanicalKinds.every(kind => kind === 'combat' || kind === 'inventory')
+      && !hasUnsupportedMechanics;
     return cleanSegments.map((segment, segmentIdx) => {
       const displayText = window.AleriaSkillChecks?.getDisplayText?.(segment) ?? segment.text ?? '';
       const displayKind = window.AleriaSkillChecks?.getDisplayKind?.(segment)

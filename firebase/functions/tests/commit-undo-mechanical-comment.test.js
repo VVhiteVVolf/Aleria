@@ -31,13 +31,19 @@ test('erkennt Kampfankündigung und Rast anhand von commentKind', () => {
   );
 });
 
-test('blockiert Beiträge mit zusätzlicher Fertigkeitsprobe oder Inventarnutzung', () => {
+test('blockiert Beiträge mit Fertigkeitsprobe, aber nicht mit Inventarnutzung', () => {
   assert.equal(undoMechanicalCommentInternals.hasUnsupportedMechanics({
     commentSegments: [{ skillResolution: { resolutionId: 'r1' } }]
   }), true);
   assert.equal(undoMechanicalCommentInternals.hasUnsupportedMechanics({
-    commentSegments: [{ inventoryUse: { usageId: 'u1' } }]
+    commentSegments: [{ skillChallenge: { id: 'c1' } }]
   }), true);
+  assert.equal(undoMechanicalCommentInternals.hasUnsupportedMechanics({
+    commentSegments: [{ inventoryUse: { usageId: 'u1' } }]
+  }), false);
+  assert.equal(undoMechanicalCommentInternals.hasUnsupportedMechanics({
+    commentSegments: [{ combatResolution: { resolutionId: 'r1' } }, { inventoryUse: { usageId: 'u1' } }]
+  }), false);
   assert.equal(undoMechanicalCommentInternals.hasUnsupportedMechanics({
     commentSegments: [{ combatResolution: { resolutionId: 'r1' } }]
   }), false);
