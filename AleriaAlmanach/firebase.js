@@ -30,6 +30,7 @@
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
     const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
+    const commitResetCombatParticipantsCallable = httpsCallable(functions, 'commitResetCombatParticipants', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
@@ -584,9 +585,14 @@
         });
         return committed.data;
       },
-      async undoMechanicalComment(entryId, commentId) {
+      async undoMechanicalComment(entryId, commentId, options = {}) {
         await requireFirebaseUser();
-        const result = await commitUndoMechanicalCommentCallable({ entryId, commentId });
+        const result = await commitUndoMechanicalCommentCallable({ entryId, commentId, force: options.force === true });
+        return result.data;
+      },
+      async resetCombatParticipants(participants) {
+        await requireFirebaseUser();
+        const result = await commitResetCombatParticipantsCallable({ participants });
         return result.data;
       },
       async addHerausforderung(entryId, text, deleteCode, metadata = {}) {

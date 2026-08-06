@@ -16,7 +16,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260806-undo-btn-v1';
+} from './combat-encounter-ui.js?v=20260806-cheat-reset-v1';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';
@@ -235,12 +235,38 @@ async function submitEvent() {
   }
 }
 
+async function cheatResetSelected() {
+  const participants = selectedParticipants()
+    .map(participant => participant.persistence)
+    .filter(persistence => persistence?.kind === 'character' || persistence?.kind === 'creature')
+    .map(persistence => ({ kind: persistence.kind, recordId: persistence.recordId }));
+  if (!participants.length) {
+    setEncounterStatus('Wähle mindestens eine gespeicherte Figur aus, bevor du zurücksetzt.', 'error');
+    return;
+  }
+  const confirmed = confirm(
+    `${participants.length} Figur(en) auf ihren aktuellen Charakterbogen-Vollzustand zurücksetzen?\n\nTrefferpunkte, Ressourcen und Fähigkeiten werden auf maximal gesetzt, alle Kampfsperren gelöst. Das ist ein Cheat-Werkzeug und wird nicht als Beitrag erzählt.`
+  );
+  if (!confirmed) return;
+  try {
+    const backend = await globalThis.getCommentBackend?.({ timeoutMs: 1200 });
+    if (!backend?.resetCombatParticipants) throw new Error('Zurücksetzen benötigt eine Online-Verbindung.');
+    const result = await backend.resetCombatParticipants(participants);
+    setEncounterStatus(`${result?.reset?.length || 0} Figur(en) zurückgesetzt.`, 'success');
+    renderDialog();
+  } catch (error) {
+    console.error('cheat reset failed:', error);
+    setEncounterStatus(error?.message || 'Zurücksetzen fehlgeschlagen.', 'error');
+  }
+}
+
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('[data-combat-encounter-action]');
   if (!trigger) return;
   const action = trigger.dataset.combatEncounterAction;
   if (action === 'open') openDialog();
   if (action === 'close') closeDialog();
+  if (action === 'cheat-reset') void cheatResetSelected();
   if (action === 'operation') {
     activeOperation = trigger.dataset.operation || activeOperation;
     renderDialog();

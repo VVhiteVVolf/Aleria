@@ -187,7 +187,7 @@ async function clearModuleCommentsFromEditor() {
           continue;
         }
         try {
-          await backend.undoMechanicalComment(thread.threadId, comment.id);
+          await backend.undoMechanicalComment(thread.threadId, comment.id, { force: true });
           deleted += 1;
         } catch (error) {
           blocked += 1;

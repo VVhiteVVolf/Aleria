@@ -24,11 +24,13 @@ function recordRef(database, kind, recordId) {
   return database.collection(kind === 'creature' ? 'creatures' : 'characters').doc(recordId);
 }
 
-async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUndo, commentId) {
+async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUndo, commentId, options = {}) {
   const entries = Object.entries(mechanicalUndo || {});
   if (!entries.length) return;
   const refs = entries.map(([, entry]) => recordRef(database, entry.kind, entry.recordId));
   const snapshots = await Promise.all(refs.map(ref => transaction.get(ref)));
+  const blockingDescriptions = [];
+  const skipRevert = new Set();
 
   for (let index = 0; index < entries.length; index += 1) {
     const [, entry] = entries[index];
@@ -43,15 +45,19 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
       const blockingDescription = blockingSnapshot?.exists
         ? describeComment(blockingSnapshot.data())
         : `eine neuere Handlung von ${current.name || 'dieser Figur'}`;
-      fail(
-        'failed-precondition',
-        `Das kann nicht gelöscht werden, weil danach schon etwas Neueres passiert ist: ${blockingDescription}. Lösche zuerst diesen neueren Beitrag.`
-      );
+      if (!options.force) {
+        fail(
+          'failed-precondition',
+          `Das kann nicht gelöscht werden, weil danach schon etwas Neueres passiert ist: ${blockingDescription}. Lösche zuerst diesen neueren Beitrag.`
+        );
+      }
+      blockingDescriptions.push(blockingDescription);
+      skipRevert.add(index);
     }
   }
 
   entries.forEach(([, entry], index) => {
-    if (!snapshots[index].exists) return;
+    if (!snapshots[index].exists || skipRevert.has(index)) return;
     const ref = refs[index];
     const values = { updatedAt: FieldValue.serverTimestamp() };
     if (entry.before?.hitPoints !== undefined) values['combatProfile.hitPoints'] = entry.before.hitPoints;
@@ -62,6 +68,8 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
     values['combatProfile.lastMechanicalCommentId'] = entry.previousMechanicalCommentId || FieldValue.delete();
     transaction.update(ref, values);
   });
+
+  return blockingDescriptions;
 }
 
 function hasUnsupportedMechanics(comment = {}) {
@@ -79,10 +87,12 @@ export const commitUndoMechanicalComment = onCall({
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const entryId = clean(request.data?.entryId, 240);
   const commentId = clean(request.data?.commentId, 240);
+  const force = request.data?.force === true;
   if (!entryId || !commentId) fail('invalid-argument', 'Szene und Beitrag sind erforderlich.');
 
   const database = getFirestore();
   const commentRef = database.collection('comments').doc(commentId);
+  let skippedReversal = [];
 
   await database.runTransaction(async transaction => {
     const snapshot = await transaction.get(commentRef);
@@ -92,7 +102,7 @@ export const commitUndoMechanicalComment = onCall({
     if (!comment.serverValidatedMechanics && !comment.mechanicalAudit) {
       fail('failed-precondition', 'Dieser Beitrag ist kein serverseitig geprüfter Kampf-/Rast-Eintrag.');
     }
-    if (hasUnsupportedMechanics(comment)) {
+    if (!force && hasUnsupportedMechanics(comment)) {
       fail(
         'failed-precondition',
         'Dieser Beitrag enthält auch eine Fertigkeitsprobe oder Inventarnutzung und kann derzeit nicht automatisch gelöscht werden.'
@@ -107,15 +117,16 @@ export const commitUndoMechanicalComment = onCall({
       const encounterState = deriveCombatEncounterState(history).get(encounterId);
       const events = encounterState?.events || [];
       const lastEvent = events[events.length - 1];
-      if (!lastEvent || lastEvent.commentId !== commentId) {
+      const isLatestEncounterEvent = lastEvent && lastEvent.commentId === commentId;
+      if (!force && !isLatestEncounterEvent) {
         const laterOp = { start: 'begonnen', add: 'verstärkt', remove: 'verändert', end: 'beendet' };
         fail(
           'failed-precondition',
           `Das kann nicht gelöscht werden, weil diese Kampfliste danach schon wieder ${laterOp[lastEvent?.operation] || 'verändert'} wurde. Lösche zuerst die neueren Kampflisten-Einträge dieses Kampfes.`
         );
       }
-      await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId);
-      if (comment.encounterLockUndo?.descriptors?.length) {
+      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force }) || [];
+      if (comment.encounterLockUndo?.descriptors?.length && (force || isLatestEncounterEvent)) {
         const { encounterKey, locksActivated, descriptors } = comment.encounterLockUndo;
         descriptors.forEach(descriptor => {
           const ref = database.collection('combat_profile_locks')
@@ -129,13 +140,13 @@ export const commitUndoMechanicalComment = onCall({
         });
       }
     } else {
-      await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId);
+      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force }) || [];
     }
 
     transaction.delete(commentRef);
   });
 
-  return { id: commentId, deleted: true };
+  return { id: commentId, deleted: true, skippedReversal };
 });
 
 export const undoMechanicalCommentInternals = Object.freeze({

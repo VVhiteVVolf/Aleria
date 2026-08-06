@@ -40,7 +40,7 @@ export function ensureCombatEncounterDialog() {
         <div class="combat-encounter-list" data-combat-encounter-list></div>
         <p class="combat-encounter-status" data-combat-encounter-status></p>
       </div>
-      <footer><button type="button" data-combat-encounter-action="close">Abbrechen</button><button type="button" class="primary" data-combat-encounter-action="submit">Eintragen</button></footer>
+      <footer><button type="button" class="combat-encounter-cheat" data-combat-encounter-action="cheat-reset" title="Setzt Trefferpunkte, Ressourcen und Fähigkeiten der ausgewählten Figuren auf ihren aktuellen Charakterbogen-Vollzustand zurück und löst alle Kampfsperren">🔧 Ausgewählte zurücksetzen</button><span class="combat-encounter-footer-spacer"></span><button type="button" data-combat-encounter-action="close">Abbrechen</button><button type="button" class="primary" data-combat-encounter-action="submit">Eintragen</button></footer>
     </div>`;
   document.body.appendChild(overlay);
   return overlay;
