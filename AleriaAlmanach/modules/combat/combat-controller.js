@@ -278,6 +278,7 @@ function mountComposers(context = {}) {
   const segments = Array.isArray(context.segments) ? context.segments : [];
   if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
+  const activeEncounterPartyMap = getActiveCombatPartyMap(cachedComments);
   const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), cachedComments);
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
@@ -332,6 +333,7 @@ function mountComposers(context = {}) {
     }
     const targets = characters
       .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
+      .filter(character => !activeEncounterPartyMap.size || activeEncounterPartyMap.has(String(character.id || '')))
       .map(character => resolveActorProfile(character, {
         actorId: character.id,
         storedStates,
