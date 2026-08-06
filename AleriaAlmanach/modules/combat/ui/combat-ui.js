@@ -609,13 +609,19 @@ export function renderCombatEvaluation(source = {}) {
     const narrationSource = getNarrationSourceMeta(narrationMeta);
     const narration = String(narrationMeta.text || '').trim()
       || `${resolution.actorName} bereitet ${progress.actionName || 'die Wirkung'} weiter vor.`;
-    return `<aside class="combat-evaluation" data-state="channeling" data-narration-source="${narrationSource.key}" aria-label="Kanalisierung">
-      ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
-      <div class="combat-evaluation-heading"><span>Kanalisierung</span><strong>${escapeHtml(progress.progress || 0)} / ${escapeHtml(progress.requiredComments || 0)}</strong></div>
-      <p>${escapeHtml(narration)}</p>
-      <div class="combat-evaluation-mechanics"><span><b>Noch keine Kosten und kein Wirkungswurf.</b></span><span>Die Wirkung wird erst beim vollständigen Abschluss ausgelöst.</span></div>
-      <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
-    </aside>`;
+    return `<details class="combat-evaluation" data-state="channeling" data-narration-source="${narrationSource.key}" aria-label="Kanalisierung">
+      <summary class="combat-evaluation-summary">
+        ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
+        <strong class="combat-evaluation-summary-label">Kanalisierung ${escapeHtml(progress.progress || 0)}/${escapeHtml(progress.requiredComments || 0)}</strong>
+        <span class="combat-evaluation-toggle-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="combat-evaluation-body">
+        <div class="combat-evaluation-heading"><span>Kanalisierung</span><strong>${escapeHtml(progress.progress || 0)} / ${escapeHtml(progress.requiredComments || 0)}</strong></div>
+        <p>${escapeHtml(narration)}</p>
+        <div class="combat-evaluation-mechanics"><span><b>Noch keine Kosten und kein Wirkungswurf.</b></span><span>Die Wirkung wird erst beim vollständigen Abschluss ausgelöst.</span></div>
+        <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
+      </div>
+    </details>`;
   }
   const attack = resolution.attack;
   const state = attack.criticalFailure
@@ -669,33 +675,39 @@ export function renderCombatEvaluation(source = {}) {
   const rollLabel = savingThrowMode ? 'Rettungswurf' : (attack.resolutionMode === 'spell-attack' ? 'Zauberangriff' : 'Angriff');
   const defenseLabel = savingThrowMode ? 'Zauber-SG' : 'Verteidigung';
   return `
-    <aside class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
-      ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
-      <div class="combat-evaluation-heading">
-        <span>Kampfauswertung${Number(resolution.multiTargetCount) > 1 ? ` · Ziel ${Number(resolution.multiTargetIndex) + 1}/${Number(resolution.multiTargetCount)}` : ''}</span>
-        <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
+    <details class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
+      <summary class="combat-evaluation-summary">
+        ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
+        <strong class="combat-evaluation-summary-label">${escapeHtml(getEvaluationLabel(resolution))}</strong>
+        <span class="combat-evaluation-toggle-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="combat-evaluation-body">
+        <div class="combat-evaluation-heading">
+          <span>Kampfauswertung${Number(resolution.multiTargetCount) > 1 ? ` · Ziel ${Number(resolution.multiTargetIndex) + 1}/${Number(resolution.multiTargetCount)}` : ''}</span>
+          <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
+        </div>
+        ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
+        <div class="combat-evaluation-mechanics">
+          <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
+          <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
+          ${savingThrowMode ? `<span>Rettung ${attack.saveSucceeded ? 'gelungen' : 'misslungen'}${resolution.damage?.halvedBySave ? ' · halber Schaden' : ''}</span>` : ''}
+          ${damage}
+          ${hitPointTransition}
+          ${temporaryHitPoints}
+          ${resourceChanges}
+          ${ammunitionUse}
+          ${ruleResourceChanges}
+          ${secondarySaves}
+          ${followUpAttacks}
+          ${appliedCondition}
+          ${effectResults}
+          ${ruleConflicts}
+          ${defeatNotice}
+          ${ruleLedger}
+        </div>
+        <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
       </div>
-      ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
-      <div class="combat-evaluation-mechanics">
-        <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
-        <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
-        ${savingThrowMode ? `<span>Rettung ${attack.saveSucceeded ? 'gelungen' : 'misslungen'}${resolution.damage?.halvedBySave ? ' · halber Schaden' : ''}</span>` : ''}
-        ${damage}
-        ${hitPointTransition}
-        ${temporaryHitPoints}
-        ${resourceChanges}
-        ${ammunitionUse}
-        ${ruleResourceChanges}
-        ${secondarySaves}
-        ${followUpAttacks}
-        ${appliedCondition}
-        ${effectResults}
-        ${ruleConflicts}
-        ${defeatNotice}
-        ${ruleLedger}
-      </div>
-      <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
-    </aside>`;
+    </details>`;
 }
 
 export const combatUiInternals = Object.freeze({

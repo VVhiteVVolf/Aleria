@@ -572,6 +572,45 @@
   --combat-end: rgba(51, 13, 20, 0.96);
 }
 
+.combat-evaluation-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.combat-evaluation-summary::-webkit-details-marker { display: none; }
+.combat-evaluation-summary::marker { content: ""; }
+
+.combat-evaluation-summary .combat-evaluation-actors { margin: 0; }
+
+.combat-evaluation-summary-label {
+  color: var(--combat-result);
+  font: 600 0.9rem/1.2 "Cinzel", serif;
+}
+
+.combat-evaluation-toggle-icon {
+  display: grid;
+  place-items: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 1px solid var(--combat-accent);
+  border-radius: 50%;
+  color: var(--combat-muted);
+  font-size: 0.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.combat-evaluation-toggle-icon::before { content: "+"; }
+.combat-evaluation[open] .combat-evaluation-toggle-icon::before { content: "\2212"; }
+
+.combat-evaluation-body {
+  margin-top: 0.6rem;
+}
+
 .combat-evaluation-actors {
   display: flex;
   align-items: center;

@@ -33,7 +33,7 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260806-encounter-card-v1';
+} from './ui/combat-ui.js?v=20260806-evaluation-collapse-v1';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
