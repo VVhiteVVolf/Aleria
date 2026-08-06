@@ -2,6 +2,7 @@ const DIALOG_CONFIGS = {
   'modal-overlay': { label: 'Almanach-Eintrag', initialFocus: '.modal-close, button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])' },
   'comment-form-overlay': { label: 'Kommentar schreiben', initialFocus: '#cf-editor, #cf-text, button, input, textarea, select' },
   'showcase-form-overlay': { label: 'Objekt vorstellen', initialFocus: '#sf-title, button, input, textarea, select' },
+  'fazit-form-overlay': { label: 'Fazit eintragen', initialFocus: '#fz-title, button, input, textarea, select' },
   'attachment-form-overlay': { label: 'Anhang pr\u00e4sentieren', initialFocus: '#af-title, button, input, textarea' },
   'showcase-profile-overlay': { label: 'Vorstellung', initialFocus: '.showcase-profile-close, button' },
   'edit-comment-overlay': { label: 'Kommentar bearbeiten', initialFocus: '#ec-code, #ec-editor, button, input, textarea, select' },

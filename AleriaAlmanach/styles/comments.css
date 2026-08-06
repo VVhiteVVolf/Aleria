@@ -3010,7 +3010,8 @@
   #module-insert-form-overlay,
   #attachment-form-overlay,
   #module-insert-profile-overlay,
-  #showcase-profile-overlay {
+  #showcase-profile-overlay,
+  #fazit-form-overlay {
     display: none;
     position: fixed;
     inset: 0;
@@ -3025,7 +3026,8 @@
   #module-insert-form-overlay.active,
   #attachment-form-overlay.active,
   #module-insert-profile-overlay.active,
-  #showcase-profile-overlay.active {
+  #showcase-profile-overlay.active,
+  #fazit-form-overlay.active {
     display: flex;
   }
   .showcase-form-card {

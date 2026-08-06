@@ -4,6 +4,7 @@ document.addEventListener('click', function(e) {
   if (e.target && e.target.id === 'edit-comment-overlay') closeEditComment();
   if (e.target && e.target.id === 'attachment-form-overlay') closeAttachmentForm();
   if (e.target && e.target.id === 'showcase-form-overlay') closeShowcaseForm();
+  if (e.target && e.target.id === 'fazit-form-overlay') closeFazitForm();
   if (e.target && e.target.id === 'module-insert-form-overlay') closeModuleInsertForm();
   if (e.target && e.target.id === 'module-insert-choice-overlay') closeModuleInsertChoice();
   if (e.target && e.target.id === 'showcase-profile-overlay') closeCommentShowcaseProfile();
