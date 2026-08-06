@@ -26,6 +26,8 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'select-fazit-token-person',
   'close-fazit-person-picker',
   'request-fazit-hints',
+  'toggle-fazit-chat',
+  'send-fazit-chat',
   'export-module-insert',
   'choose-module-insert-create',
   'choose-module-insert-import',
@@ -155,6 +157,14 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'request-fazit-hints') {
     void requestFazitHints();
+    return;
+  }
+  if (action === 'toggle-fazit-chat') {
+    toggleFazitChat();
+    return;
+  }
+  if (action === 'send-fazit-chat') {
+    void sendFazitChatMessage();
     return;
   }
   if (action === 'close-fazit-form') {
