@@ -25,7 +25,7 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260803-gawain-level4-v1';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260807-alben-aldrimar-classes-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory

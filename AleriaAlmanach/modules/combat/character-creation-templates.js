@@ -86,6 +86,16 @@ export const CHARACTER_BACKGROUND_TEMPLATES = Object.freeze([
       tools: ['Heraldik und höfische Etikette']
     },
     traits: ['Ritterliche Herkunft und Standespflicht']
+  },
+  {
+    id: 'huskarl',
+    label: 'Huskarl',
+    description: 'Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.',
+    skillProficiencies: ['Einschüchtern', 'Überleben'],
+    proficiencies: {
+      tools: ['Seemannschaft und Gefolgschaftsbrauchtum']
+    },
+    traits: ['Aldrimarische Gefolgschaftstreue']
   }
 ]);
 
@@ -227,6 +237,200 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
       castingAttribute: 'wisdom',
       notes: 'Göttliche Magie Nimues, Göttin des Meeres und der Reinheit. Schwerpunkt: Wasser, Reinigung und Heilung.'
     }
+  },
+  // ── Alben ──
+  {
+    id: 'kern', group: 'Alben', label: 'Kern', subtitle: 'Leichtes Fußvolk',
+    description: 'Miliz der Alben mit Speer und Schild in leichter Rüstung.',
+    hitDie: 8,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'spear'] },
+    weapons: [weapon('kern-spear', 'Speer', 'spear', '1d6', 'Stich', 'strength', { properties: 'Vielseitig · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('kern-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'cateran', group: 'Alben', label: 'Cateran', subtitle: 'Schwertkämpfer',
+    description: 'Schwertkämpfer der Alben, ausgebildet in allen Arten des Schwertkampfes.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'dexterity'],
+    proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'martial', 'sword'] },
+    weapons: [weapon('cateran-longsword', 'Langschwert', 'sword', '1d8', 'Hieb')],
+    armorItems: [armor('cateran-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)]
+  },
+  {
+    id: 'mormaer', group: 'Alben', label: 'Mormaer', subtitle: 'Reiter der Alben',
+    description: 'Leichter Reiter der Alben mit Speer, gewohnt an Pferd und offenes Land.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'dexterity'],
+    proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'martial', 'spear'], tools: ['Reittiere'] },
+    weapons: [weapon('mormaer-riding-spear', 'Reiterspieß', 'spear', '1d8', 'Stich', 'strength', { properties: 'Beritten · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('mormaer-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'serf', group: 'Alben', label: 'Serf', subtitle: 'Waldläufer der Alben',
+    description: 'Waldläufer mit Bogen und Wurfspeer, begleitet von einem abgerichteten Tier.',
+    hitDie: 8,
+    savingThrowProficiencies: ['dexterity', 'wisdom'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'bow', 'spear', 'dagger'], tools: ['Mit Tieren umgehen'] },
+    weapons: [
+      weapon('serf-shortbow', 'Kurzbogen', 'bow', '1d6', 'Stich', 'dexterity', { range: 'Fernkampf', properties: 'Munition · Startausrüstung der gewählten Klasse' }),
+      weapon('serf-throwing-spear', 'Wurfspeer', 'spear', '1d6', 'Stich', 'dexterity', { properties: 'Wurfwaffe · Startausrüstung der gewählten Klasse' })
+    ],
+    armorItems: [armor('serf-leather', 'Lederrüstung', 'light', 11, 'full')],
+    abilities: [{
+      id: 'starter-serf-animal-companion', name: 'Tierbegleiter', description: 'Ein abgerichtetes Tier begleitet den Serf durch die Wildnis.',
+      activationType: 'passive', delivery: 'ability', combatUsable: false, usesCurrent: 0, usesMaximum: 0,
+      recovery: 'none', active: true, tags: 'Begleiter · Wildnis', aiInstructions: 'Berücksichtige das Tier nur, wenn es in der Szene anwesend ist.'
+    }]
+  },
+  {
+    id: 'airig', group: 'Alben', label: 'Airig', subtitle: 'Speerkrieger der Alben',
+    description: 'Agiler Speerkämpfer ohne Schild, auf Beweglichkeit statt Deckung ausgelegt.',
+    hitDie: 10,
+    savingThrowProficiencies: ['dexterity', 'strength'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'spear'] },
+    weapons: [weapon('airig-spear', 'Speer', 'spear', '1d6', 'Stich', 'dexterity', { properties: 'Vielseitig · Finesse · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('airig-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'currach', group: 'Alben', label: 'Currach', subtitle: 'Krieger zur See',
+    description: 'Seekämpfer der Alben mit Bogen und leichten Waffen.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'dexterity'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'bow', 'axe', 'sword'] },
+    weapons: [
+      weapon('currach-shortbow', 'Kurzbogen', 'bow', '1d6', 'Stich', 'dexterity', { range: 'Fernkampf', properties: 'Munition · Startausrüstung der gewählten Klasse' }),
+      weapon('currach-seaxe', 'Seeaxt', 'axe', '1d6', 'Hieb')
+    ],
+    armorItems: [armor('currach-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'ceolaire-piobaire', group: 'Alben', label: 'Ceólaire & Piobaire', subtitle: 'Dudelsackpfeifer & Kampfbarden',
+    description: 'Kampfbarde der Alben, wirkt seine Magie durch Dudelsack, Gesang und Vortrag.',
+    hitDie: 8,
+    savingThrowProficiencies: ['dexterity', 'charisma'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'sword'], tools: ['Musikinstrument (Dudelsack)'] },
+    weapons: [weapon('ceolaire-rapier', 'Rapier', 'sword', '1d8', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('ceolaire-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
+    magic: { enabled: true, castingAttribute: 'charisma', notes: 'Kampfmagie der Alben, gewirkt durch Dudelsack, Gesang und Vortrag.' }
+  },
+  {
+    id: 'riada', group: 'Alben', label: 'Riada', subtitle: 'Freischärler der Alben',
+    description: 'Barbarischer Freischärler, ungestüm und ohne schwere Rüstung im Kampf.',
+    hitDie: 12,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'axe', 'sword', 'mace'] },
+    weapons: [weapon('riada-battleaxe', 'Streitaxt', 'axe', '1d8', 'Hieb')],
+    armorItems: [armor('riada-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'silvaner', group: 'Alben', label: 'Silvaner', subtitle: 'Waldläufer, Pionier & Entdecker',
+    description: 'Besonderer Waldläufer und Seekrieger zugleich, vielseitig zwischen Wildnis und Küste.',
+    hitDie: 10,
+    savingThrowProficiencies: ['dexterity', 'wisdom'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'bow', 'sword', 'spear'] },
+    weapons: [
+      weapon('silvaner-longbow', 'Langbogen', 'bow', '1d8', 'Stich', 'dexterity', { range: 'Fernkampf', properties: 'Zweihändig · Munition · Startausrüstung der gewählten Klasse' }),
+      weapon('silvaner-shortsword', 'Kurzschwert', 'sword', '1d6', 'Hieb', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })
+    ],
+    armorItems: [armor('silvaner-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'galloghlaigh', group: 'Alben', label: 'Galloghlaigh', subtitle: 'Krieger der Gallochbhair',
+    description: 'Wuchtiger Nahkämpfer wie ein Berserker, aber rittermäßiger gerüstet und diszipliniert.',
+    hitDie: 12,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'axe', 'sword', 'mace'] },
+    weapons: [weapon('galloghlaigh-battleaxe', 'Streitaxt', 'axe', '1d8', 'Hieb')],
+    armorItems: [armor('galloghlaigh-chainmail', 'Kettenhemd', 'heavy', 16, 'none')]
+  },
+  {
+    id: 'fathach', group: 'Alben', label: 'Fathach', subtitle: 'Riesengeschlecht',
+    description: 'Brachialer Barbar und Berserker aus dem Riesengeschlecht, roh und übermächtig im Nahkampf.',
+    hitDie: 12,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'martial', 'axe', 'mace'] },
+    weapons: [weapon('fathach-greataxe', 'Großaxt', 'axe', '1d12', 'Hieb', 'strength', { properties: 'Schwer · Zweihändig · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('fathach-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)]
+  },
+  // ── Aldrimar ──
+  {
+    id: 'hird-maid', group: 'Aldrimar', label: 'Hird/Maid', subtitle: 'Fußvolk & Miliz',
+    description: 'Miliz Aldrimars, Grundkämpfer mit Schild und Waffe.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'axe', 'sword', 'spear'] },
+    weapons: [weapon('hird-maid-handaxe', 'Handaxt', 'axe', '1d6', 'Hieb')],
+    armorItems: [armor('hird-maid-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'skjoldr', group: 'Aldrimar', label: 'Skjoldr', subtitle: 'Axtkämpfender Huskarl',
+    description: 'Nahkämpfer und Frontkämpfer mit Schild, wahlweise Axt, Schwert oder Streitkolben.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'axe', 'sword', 'mace'] },
+    weapons: [weapon('skjoldr-battleaxe', 'Streitaxt', 'axe', '1d8', 'Hieb')],
+    armorItems: [armor('skjoldr-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)]
+  },
+  {
+    id: 'thegnar', group: 'Aldrimar', label: 'Thegnar', subtitle: 'Berittener Huskarl',
+    description: 'Berittener Nordmann mit Axt und Speer, führt ein Blashorn zur Signalgebung.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['medium', 'heavy'], weapons: ['simple', 'martial', 'axe', 'spear'], tools: ['Reittiere', 'Blashorn'] },
+    weapons: [
+      weapon('thegnar-riding-spear', 'Reiterspieß', 'spear', '1d8', 'Stich', 'strength', { properties: 'Beritten · Startausrüstung der gewählten Klasse' }),
+      weapon('thegnar-handaxe', 'Handaxt', 'axe', '1d6', 'Hieb')
+    ],
+    armorItems: [armor('thegnar-chainmail', 'Kettenhemd', 'heavy', 16, 'none')]
+  },
+  {
+    id: 'skeidr', group: 'Aldrimar', label: 'Skeidr', subtitle: 'Huskarl zur See',
+    description: 'Seekämpfer, beidhändig und zweihändig, aggressiv mit Wurfwaffen und Enterhaken.',
+    hitDie: 10,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'martial', 'spear', 'axe'] },
+    weapons: [
+      weapon('skeidr-throwing-spear', 'Wurfspeer', 'spear', '1d6', 'Stich', 'strength', { properties: 'Wurfwaffe · Startausrüstung der gewählten Klasse' }),
+      weapon('skeidr-boarding-axe', 'Enteraxt', 'axe', '1d6', 'Hieb', 'strength', { properties: 'Enterhaken · Startausrüstung der gewählten Klasse' })
+    ],
+    armorItems: [armor('skeidr-leather', 'Lederrüstung', 'light', 11, 'full')]
+  },
+  {
+    id: 'skjaldr', group: 'Aldrimar', label: 'Skjaldr', subtitle: 'Schildbeißer Huskarl',
+    description: 'Berserker, beidhändig und zweihändig, aber auch mit Schild führbar - sehr vielseitig.',
+    hitDie: 12,
+    savingThrowProficiencies: ['strength', 'constitution'],
+    proficiencies: { armor: ['light', 'medium', 'heavy'], weapons: ['simple', 'martial', 'axe', 'sword', 'mace'] },
+    weapons: [weapon('skjaldr-greataxe', 'Großaxt', 'axe', '1d12', 'Hieb', 'strength', { properties: 'Schwer · Zweihändig · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('skjaldr-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)]
+  },
+  {
+    id: 'skytte', group: 'Aldrimar', label: 'Skytte', subtitle: 'Fernkämpfender Huskarl',
+    description: 'Jäger und Waldläufer mit Kurzbogen und Axt, begleitet von einem abgerichteten Tier.',
+    hitDie: 10,
+    savingThrowProficiencies: ['dexterity', 'wisdom'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'bow', 'axe'], tools: ['Mit Tieren umgehen'] },
+    weapons: [
+      weapon('skytte-shortbow', 'Kurzbogen', 'bow', '1d6', 'Stich', 'dexterity', { range: 'Fernkampf', properties: 'Munition · Startausrüstung der gewählten Klasse' }),
+      weapon('skytte-handaxe', 'Handaxt', 'axe', '1d6', 'Hieb')
+    ],
+    armorItems: [armor('skytte-leather', 'Lederrüstung', 'light', 11, 'full')],
+    abilities: [{
+      id: 'starter-skytte-animal-companion', name: 'Tierbegleiter', description: 'Ein abgerichtetes Tier begleitet den Skytte auf der Jagd.',
+      activationType: 'passive', delivery: 'ability', combatUsable: false, usesCurrent: 0, usesMaximum: 0,
+      recovery: 'none', active: true, tags: 'Begleiter · Jagd', aiInstructions: 'Berücksichtige das Tier nur, wenn es in der Szene anwesend ist.'
+    }]
+  },
+  {
+    id: 'skalde', group: 'Aldrimar', label: 'Skalde', subtitle: 'Skalde und Huskarl',
+    description: 'Zauberwirker Aldrimars, wählt ein Instrument und wirkt seine Magie durch Saga und Vortrag.',
+    hitDie: 8,
+    savingThrowProficiencies: ['charisma', 'wisdom'],
+    proficiencies: { armor: ['light'], weapons: ['simple', 'sword'], tools: ['Musikinstrument (frei wählbar)'] },
+    weapons: [weapon('skalde-shortsword', 'Kurzschwert', 'sword', '1d6', 'Hieb', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('skalde-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
+    magic: { enabled: true, castingAttribute: 'charisma', notes: 'Skaldische Magie Aldrimars, gewirkt durch Saga, Gesang und das gewählte Instrument.' }
   }
 ]);
 

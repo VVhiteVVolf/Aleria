@@ -17,7 +17,7 @@ import {
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
-} from '../combat/character-creation-templates.js?v=20260803-character-creation-v1';
+} from '../combat/character-creation-templates.js?v=20260807-alben-aldrimar-classes-v1';
 import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
 
 let activeSetup = null;

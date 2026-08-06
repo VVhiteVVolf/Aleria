@@ -50,15 +50,39 @@ test('ein leerer Charakterbogen besitzt die vollständige Schema-9-Grundlage', (
   assert.equal(profile.resources.filter(resource => resource.category === 'spell-slot').length, 10);
 });
 
-test('der Vorlagenkatalog enthält alle gewünschten Völker, den Ritter und elf Klassen', () => {
+test('der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und Klassen', () => {
   assert.deepEqual(CHARACTER_ANCESTRY_TEMPLATES.map(template => template.id), ['cenyr', 'alben', 'aldrimarer', 'nordmann']);
-  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.map(template => template.id), ['ritter']);
+  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.map(template => template.id), ['ritter', 'huskarl']);
   assert.deepEqual(CHARACTER_CLASS_TEMPLATES.map(template => template.id), [
     'teulu', 'cantref', 'helwyr', 'uchelwyr', 'arthwyr', 'barddwyr',
-    'morwyr', 'rhyfelwyr', 'ceidwynr', 'rhiddwyrr', 'derwyn'
+    'morwyr', 'rhyfelwyr', 'ceidwynr', 'rhiddwyrr', 'derwyn',
+    'kern', 'cateran', 'mormaer', 'serf', 'airig', 'currach', 'ceolaire-piobaire', 'riada', 'silvaner', 'galloghlaigh', 'fathach',
+    'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde'
   ]);
   assert.deepEqual(getCharacterCreationTemplate('ancestry', 'cenyr').attributeBonuses, { strength: 2, charisma: 1 });
   assert.deepEqual(getCharacterCreationTemplate('class', 'teulu').proficiencies.armor, ['medium', 'heavy']);
+});
+
+test('alle neuen Alben- und Aldrimar-Klassen besitzen gültige Startausrüstung', () => {
+  const newClassIds = [
+    'kern', 'cateran', 'mormaer', 'serf', 'airig', 'currach', 'ceolaire-piobaire', 'riada', 'silvaner', 'galloghlaigh', 'fathach',
+    'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde'
+  ];
+  for (const id of newClassIds) {
+    const template = getCharacterCreationTemplate('class', id);
+    assert.ok(template, `Klasse ${id} fehlt`);
+    assert.ok(['Alben', 'Aldrimar'].includes(template.group), `Klasse ${id} hat keine Alben/Aldrimar-Gruppe`);
+    assert.ok(template.weapons.length >= 1, `Klasse ${id} hat keine Startwaffe`);
+    assert.ok(template.armorItems.length >= 1, `Klasse ${id} hat keine Startrüstung`);
+    const profile = sanitizeCharacterCombatProfile({
+      magic: template.magic || {},
+      weapons: template.weapons,
+      armorItems: template.armorItems
+    });
+    assert.ok(profile.weapons.some(weapon => weapon.name === template.weapons[0].name));
+  }
+  assert.equal(getCharacterCreationTemplate('class', 'skalde').magic.enabled, true);
+  assert.equal(getCharacterCreationTemplate('class', 'ceolaire-piobaire').magic.enabled, true);
 });
 
 test('Punktekauf beginnt bei acht und blockiert Ausgaben über 27 Punkte', () => {
