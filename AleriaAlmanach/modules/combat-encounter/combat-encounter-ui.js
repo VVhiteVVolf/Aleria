@@ -1,4 +1,4 @@
-import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260804-referee-v2';
+import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 
@@ -118,17 +118,54 @@ export function setEncounterSubmitting(submitting) {
   button.textContent = submitting ? 'Wird gespeichert …' : 'Eintragen';
 }
 
+const STATUS_LABELS = { active: 'aktiv', defeated: 'besiegt', fled: 'geflohen', left: 'ausgeschieden' };
+
+function renderRosterRow(participant) {
+  const initial = escapeMarkup((participant.name || '?').slice(0, 1));
+  return `<li data-status="${escapeMarkup(participant.status)}">
+    <span class="combat-encounter-roster-portrait">${participant.portrait ? `<img src="${escapeMarkup(participant.portrait)}" alt="">` : initial}</span>
+    <span class="combat-encounter-roster-name">${escapeMarkup(participant.name)}</span>
+    <span class="combat-encounter-roster-level">Stufe ${escapeMarkup(participant.level || 1)}</span>
+    <span class="combat-encounter-roster-status">${STATUS_LABELS[participant.status] || participant.status}</span>
+  </li>`;
+}
+
+function groupParticipantsByParty(participants = []) {
+  const order = [];
+  const byParty = new Map();
+  participants.forEach(participant => {
+    const key = participant.partyId || 'neutral';
+    if (!byParty.has(key)) {
+      byParty.set(key, { partyId: key, partyName: participant.partyName || key, members: [] });
+      order.push(key);
+    }
+    byParty.get(key).members.push(participant);
+  });
+  return order.map(key => byParty.get(key));
+}
+
+function renderRoster(participants = []) {
+  const parties = groupParticipantsByParty(participants);
+  if (!parties.length) return '';
+  const columns = parties.map(party => `<div class="combat-encounter-party">
+    <h4>${escapeMarkup(party.partyName)}</h4>
+    <ul>${party.members.map(renderRosterRow).join('')}</ul>
+  </div>`);
+  const withDividers = columns.reduce((acc, column, i) => (
+    i === 0 ? [column] : [...acc, '<span class="combat-encounter-vs">gegen</span>', column]
+  ), []);
+  return `<div class="combat-encounter-roster">${withDividers.join('')}</div>`;
+}
+
 export function renderCombatEncounterComment(comment = {}, index = 0) {
   const event = normalizeCombatEncounterEvent(comment.combatEncounter || comment);
   const labels = { start: 'Kampf beginnt', add: 'Verstärkung', remove: 'Kampfliste geändert', end: 'Kampf beendet' };
-  const statuses = { active: 'aktiv', defeated: 'besiegt', fled: 'geflohen', left: 'ausgeschieden' };
-  const participants = event.participants.map(participant => `<li><b>${escapeMarkup(participant.name)}</b><span>${escapeMarkup(participant.partyName)} · ${statuses[participant.status] || participant.status}</span></li>`).join('');
   const awards = event.experience.awards.map(award => `<li><b>${escapeMarkup(award.name)}</b><span>+${award.experience} EP · ${award.beforeExperience}→${award.afterExperience}${award.levelUpAvailable ? ` · Stufe ${award.availableLevel} verfügbar` : ''}</span></li>`).join('');
   const divider = index > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   return `${divider}<section class="combat-encounter-event" data-operation="${event.operation}">
     <header><img src="${COMBAT_ENCOUNTER_ICON_URL}" alt=""><span>${labels[event.operation]}</span><strong>${escapeMarkup(event.title)}</strong></header>
     ${event.body ? `<p>${escapeMarkup(event.body)}</p>` : ''}
-    ${participants ? `<ul>${participants}</ul>` : ''}
+    ${renderRoster(event.participants)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}
     ${event.operation === 'end' && !awards ? '<small>Kampfzustände und Konzentrationen wurden beendet. Es wurden keine EP vergeben.</small>' : ''}
   </section>`;

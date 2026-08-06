@@ -1,10 +1,11 @@
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260804-referee-v2';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260804-referee-v2';
 import {
   deriveCombatEncounterState,
   getActiveCombatEncounter,
   normalizeCombatEncounterEvent
-} from '../combat/combat-encounter-model.js?v=20260804-referee-v2';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260804-referee-v2';
+} from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
+import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260806-encounter-card-v1';
 import {
   ensureCombatEncounterDialog,
   filterEncounterCandidates,
@@ -15,7 +16,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260805-herausforderung-v2';
+} from './combat-encounter-ui.js?v=20260806-encounter-card-v1';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';
@@ -60,6 +61,7 @@ function candidateFromActor(actor) {
     name: String(actor.name || profile.name || 'Unbekannte Figur'),
     title: String(actor.title || ''),
     portrait: String(actor.portrait || profile.portrait || ''),
+    level: getEffectiveCombatLevel(profile),
     entityType: actor.entityType === 'creature' ? 'creature' : 'character',
     currentHitPoints: Number(profile.currentHitPoints) || 0,
     maximumHitPoints: Number(profile.maximumHitPoints) || 0,
@@ -160,6 +162,7 @@ function selectedParticipants() {
       sourceId: candidate.sourceId || '',
       name: candidate.name,
       portrait: candidate.portrait,
+      level: candidate.level || 1,
       partyId: partyName.toLocaleLowerCase('de').replace(/[^a-z0-9äöüß]+/g, '-').replace(/^-|-$/g, '') || 'neutral',
       partyName,
       status,

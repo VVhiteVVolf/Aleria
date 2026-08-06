@@ -458,7 +458,20 @@ export function ensureCombatResolutionDialog() {
     <div class="combat-resolution-dialog">
       <span class="combat-resolution-kicker">Kampfauswertung</span>
       <h2>Die Würfel entscheiden</h2>
-      <div class="combat-dice-stage" id="combat-dice-stage"></div>
+      <div class="scene-dice-board-shell">
+        <span class="scene-dice-frame-rail is-top" aria-hidden="true"></span>
+        <span class="scene-dice-frame-rail is-right" aria-hidden="true"></span>
+        <span class="scene-dice-frame-rail is-bottom" aria-hidden="true"></span>
+        <span class="scene-dice-frame-rail is-left" aria-hidden="true"></span>
+        <span class="scene-dice-frame-corner is-top-left" aria-hidden="true"><i></i></span>
+        <span class="scene-dice-frame-corner is-top-right" aria-hidden="true"><i></i></span>
+        <span class="scene-dice-frame-corner is-bottom-right" aria-hidden="true"><i></i></span>
+        <span class="scene-dice-frame-corner is-bottom-left" aria-hidden="true"><i></i></span>
+        <section class="scene-dice-board" aria-label="3D-Würfelbrett">
+          <div class="scene-dice-stage" id="combat-dice-stage"></div>
+          <div class="scene-dice-board-shade" aria-hidden="true"></div>
+        </section>
+      </div>
       <div class="combat-resolution-status" data-combat-resolution-status role="status">Bereit …</div>
       <div class="combat-resolution-detail" data-combat-resolution-detail></div>
     </div>`;
@@ -570,6 +583,23 @@ function renderEffectResult(result = {}) {
   return '';
 }
 
+function getEvaluationPortrait(id) {
+  const character = globalThis.getAvailableCommentCharacterById?.(String(id || ''));
+  return character?.portrait ? String(character.portrait) : '';
+}
+
+function renderEvaluationActors(actorId, actorName, targetId, targetName) {
+  const actorPortrait = getEvaluationPortrait(actorId);
+  const targetPortrait = getEvaluationPortrait(targetId);
+  if (!actorPortrait && !targetPortrait) return '';
+  const avatar = (portrait, name) => `<span class="combat-evaluation-avatar">${portrait ? `<img src="${escapeHtml(portrait)}" alt="">` : escapeHtml((name || '?').slice(0, 1))}</span>`;
+  return `<div class="combat-evaluation-actors">
+    ${avatar(actorPortrait, actorName)}
+    <span class="combat-evaluation-arrow">→</span>
+    ${avatar(targetPortrait, targetName)}
+  </div>`;
+}
+
 export function renderCombatEvaluation(source = {}) {
   const resolution = source.combatResolution || source.resolution;
   if (!resolution?.attack) return '';
@@ -580,6 +610,7 @@ export function renderCombatEvaluation(source = {}) {
     const narration = String(narrationMeta.text || '').trim()
       || `${resolution.actorName} bereitet ${progress.actionName || 'die Wirkung'} weiter vor.`;
     return `<aside class="combat-evaluation" data-state="channeling" data-narration-source="${narrationSource.key}" aria-label="Kanalisierung">
+      ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
       <div class="combat-evaluation-heading"><span>Kanalisierung</span><strong>${escapeHtml(progress.progress || 0)} / ${escapeHtml(progress.requiredComments || 0)}</strong></div>
       <p>${escapeHtml(narration)}</p>
       <div class="combat-evaluation-mechanics"><span><b>Noch keine Kosten und kein Wirkungswurf.</b></span><span>Die Wirkung wird erst beim vollständigen Abschluss ausgelöst.</span></div>
@@ -639,6 +670,7 @@ export function renderCombatEvaluation(source = {}) {
   const defenseLabel = savingThrowMode ? 'Zauber-SG' : 'Verteidigung';
   return `
     <aside class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
+      ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
       <div class="combat-evaluation-heading">
         <span>Kampfauswertung${Number(resolution.multiTargetCount) > 1 ? ` · Ziel ${Number(resolution.multiTargetIndex) + 1}/${Number(resolution.multiTargetCount)}` : ''}</span>
         <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
@@ -671,6 +703,8 @@ export const combatUiInternals = Object.freeze({
   getEvaluationLabel,
   getEvaluationFallback,
   getNarrationSourceMeta,
+  getEvaluationPortrait,
+  renderEvaluationActors,
   activationLabel,
   aggregateCosts,
   buildPaymentResourceCards,

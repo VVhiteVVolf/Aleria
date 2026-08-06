@@ -62,11 +62,15 @@
     return getCommentTransactionKinds(comment).length > 0;
   }
 
-  function getMechanicalCommentLabel(comment = {}) {
-    const labels = getCommentTransactionKinds(comment)
+  function getMechanicalCommentLabel(comment = {}, options = {}) {
+    const exclude = new Set(options.exclude || []);
+    const kinds = getCommentTransactionKinds(comment);
+    const labels = kinds
+      .filter(kind => !exclude.has(kind))
       .map(kind => TRANSACTION_LABELS[kind])
       .filter(Boolean);
-    return labels.join(', ') || 'Mechanischer Beitrag';
+    if (labels.length) return labels.join(', ');
+    return kinds.length ? '' : 'Mechanischer Beitrag';
   }
 
   function getMechanicalCommentLockMessage(comment = {}, operation = 'geändert') {

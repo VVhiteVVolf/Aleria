@@ -11,7 +11,7 @@ import {
 } from './combat-profile-resolver.js?v=20260804-referee-v2';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260804-referee-v2';
+} from './combat-state-model.js?v=20260806-encounter-card-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,

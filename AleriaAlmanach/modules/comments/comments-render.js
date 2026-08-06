@@ -157,7 +157,8 @@ function getCommentEmotePortrait(c, idx) {
 function renderCommentTransactionLock(comment = {}) {
   const policy = window.AleriaCommentTransactions;
   if (!policy?.isImmutable?.(comment)) return '';
-  const label = policy.getLabel?.(comment) || 'Mechanischer Beitrag';
+  const label = policy.getLabel?.(comment, { exclude: ['combat'] }) || '';
+  if (!label) return '';
   return `<span class="comment-transaction-lock" title="Dieser Beitrag ist Teil des unveränderlichen Szenenverlaufs.">${escapeHtml(label)} geschützt</span>`;
 }
 

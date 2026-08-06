@@ -1,5 +1,5 @@
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260802-dice-audio-v2';
-import { narrateCombatResolution } from './combat-narration-service.js?v=20260804-referee-v2';
+import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
@@ -20,7 +20,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260804-referee-v2';
+} from './combat-state-model.js?v=20260806-encounter-card-v1';
 import {
   canUseAuraPayment,
   getActionPaymentCosts,
@@ -33,12 +33,12 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260804-referee-v2';
+} from './ui/combat-ui.js?v=20260806-encounter-card-v1';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
 } from './combat-trigger-rules.js?v=20260804-referee-v2';
-import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260804-referee-v2';
+import { getActiveCombatPartyMap } from './combat-encounter-model.js?v=20260806-encounter-card-v1';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());

@@ -1,4 +1,4 @@
-import { applyCombatResourceCosts } from './combat-state-model.js?v=20260804-referee-v2';
+import { applyCombatResourceCosts } from './combat-state-model.js?v=20260806-encounter-card-v1';
 
 export function consumeCombatRuleResources(applications = [], sources = [], options = {}) {
   const relevant = (Array.isArray(applications) ? applications : [])

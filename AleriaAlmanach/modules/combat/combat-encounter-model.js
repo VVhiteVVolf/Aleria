@@ -24,6 +24,7 @@ export function normalizeEncounterParticipant(value = {}, index = 0) {
     sourceId: text(source.sourceId, 180),
     name: text(source.name || 'Unbekannte Figur', 180),
     portrait: text(source.portrait, 2000),
+    level: integer(source.level, 1, 0, 999),
     partyId: text(source.partyId || 'neutral', 100),
     partyName: text(source.partyName || source.partyId || 'Neutral', 140),
     status: STATUSES.has(status) ? status : 'active',

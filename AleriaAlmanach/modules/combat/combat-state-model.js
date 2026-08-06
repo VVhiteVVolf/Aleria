@@ -8,7 +8,7 @@ import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260804-referee-v2';
-import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260804-referee-v2';
+import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260806-encounter-card-v1';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;

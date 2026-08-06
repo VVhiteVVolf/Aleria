@@ -102,7 +102,8 @@ function buildCombatNarrationQuery(facts = {}) {
     'Schreibe 1–3 kurze, immersive Sätze als neutraler Erzähler über die bestätigte Folge dieser Kampfhandlung.',
     'Die Fakten sind unveränderlich. Erfinde keinen weiteren Angriff, keine Flucht, Verstümmelung, Bewusstlosigkeit, dauerhafte Verletzung oder Tod.',
     'Berücksichtige relevante Attribute, Zustände, Marotten, Ausrüstung, Ressourcen, Fähigkeiten, Magie und Notizen aus dem Pflichtkontext. Strukturierte Modifikatoren sind bereits verrechnet und dürfen nicht doppelt zählen.',
-    'Greife Stil und Absicht der Kampfbeschreibung auf, ohne deren behauptetes Ergebnis zu übernehmen. Nenne keine Würfel, Formeln oder Zahlen. Ausgabe nur als Erzählertext.'
+    'Greife Stil und Absicht der Kampfbeschreibung auf, ohne deren behauptetes Ergebnis zu übernehmen. Nenne keine Würfel, Formeln oder Zahlen. Ausgabe nur als Erzählertext.',
+    'Beschreibe nur, DASS getroffen/verfehlt wird, nie WO am Körper oder WIE genau - das legen die Spieler selbst in ihren eigenen Beiträgen fest.'
   ].join('\n');
   const payload = {
     actor: facts.actor,
