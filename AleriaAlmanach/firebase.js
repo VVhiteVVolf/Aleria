@@ -895,10 +895,13 @@
       async saveCreature(id, data) {
         const user = await requireFirebaseUser();
         if (id) {
+          const ref = doc(db, 'creatures', id);
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
-          await setDoc(doc(db, 'creatures', id), safeData, { merge: true });
+          const existing = await getDoc(ref);
+          const payload = existing.exists() ? safeData : { ...safeData, ownerUid: user.uid, createdBy: user.uid };
+          await setDoc(ref, payload, { merge: true });
           return id;
         }
         const ref = await addDoc(collection(db, 'creatures'), {
