@@ -183,6 +183,8 @@ function getFriendlyErrorMessage(error, fallback) {
   if (code.includes('permission-denied')) return 'Keine Berechtigung. Prüfe bitte die Firestore-Regeln oder deinen Zugriff.';
   if (code.includes('unavailable')) return 'Verbindung zu Firebase nicht verfügbar. Bitte später erneut versuchen.';
   if (code.includes('resource-exhausted')) return 'Speicher- oder Anfrage-Limit erreicht. Bitte Bildgröße oder Textmenge reduzieren.';
+  const message = String(error?.message || '').trim();
+  if (message) return message;
   return fallback || 'Ein Fehler ist aufgetreten.';
 }
 
