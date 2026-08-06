@@ -45,6 +45,26 @@ function buildFazitHintQuery() {
   ].join(' ');
 }
 
+const FAZIT_HINT_STATUS_MESSAGES = {
+  'not-configured': 'AleriaGPT ist noch nicht mit dem Worker verbunden.',
+  unauthenticated: 'Nicht angemeldet — bitte neu einloggen und erneut versuchen.',
+  401: 'Die Anmeldung ist abgelaufen — Seite neu laden und erneut versuchen.',
+  403: 'Diese Seite ist beim AleriaGPT-Worker nicht freigeschaltet (Origin-Sperre).',
+  413: 'Der Szenenverlauf ist für eine Anfrage zu groß.',
+  429: 'Zu viele Anfragen — AleriaGPT braucht kurz eine Pause, bitte gleich nochmal versuchen.',
+  502: 'AleriaGPT ist gerade nicht erreichbar (Modell-Anbieter antwortet nicht).',
+  503: 'AleriaGPT ist gerade nicht erreichbar (Worker/Modell nicht konfiguriert oder Guthaben aufgebraucht).'
+};
+
+function describeFazitHintError(response) {
+  const known = FAZIT_HINT_STATUS_MESSAGES[response?.status];
+  if (known) return known;
+  const detail = String(response?.raw?.error || '').trim();
+  return detail
+    ? `Die KI-Zusammenfassung konnte nicht erstellt werden: ${detail}`
+    : 'Die KI-Zusammenfassung konnte nicht erstellt werden (leere Antwort).';
+}
+
 async function requestFazitHints() {
   const btn = document.getElementById('fz-hint-btn');
   const threadId = typeof getCurrentCommentThreadId === 'function' ? getCurrentCommentThreadId() : '';
@@ -82,14 +102,15 @@ async function requestFazitHints() {
       timeoutMs: 45000
     });
     if (!response?.ok || !response.text) {
-      setFazitHintStatus('Die KI-Zusammenfassung konnte nicht erstellt werden.', 'error');
+      console.warn('fazit hint request not ok:', response);
+      setFazitHintStatus(describeFazitHintError(response), 'error');
       return;
     }
     renderFazitHintResult(response.text);
     setFazitHintStatus('Vorschläge erstellt — dienen nur als Erinnerung, das Fazit baust du selbst.', 'ready');
   } catch (error) {
     console.error('fazit hint request failed:', error);
-    setFazitHintStatus('Die KI-Zusammenfassung konnte nicht erstellt werden.', 'error');
+    setFazitHintStatus('Die KI-Zusammenfassung konnte nicht erstellt werden (Netzwerkfehler oder Zeitüberschreitung).', 'error');
   } finally {
     if (btn) btn.disabled = false;
   }

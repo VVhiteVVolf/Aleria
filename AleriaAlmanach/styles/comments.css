@@ -3560,6 +3560,13 @@
   }
   .fazit-token-icon img { width: 100%; height: 100%; object-fit: cover; }
   .fazit-token-icon-person { border-radius: 50%; }
+  .fazit-token-icon.fazit-token-icon-symbol {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .fazit-token-icon-symbol img { object-fit: contain; }
   .fazit-token-caption {
     font-size: 0.62rem;
     line-height: 1.2;

@@ -48,7 +48,7 @@ function buildFazitPlainText(item) {
 
 function renderFazitTokenMarkup(token) {
   const src = sanitizeImageSrc(token.icon || '');
-  const frameClass = token.kind === 'person' ? 'fazit-token-icon fazit-token-icon-person' : 'fazit-token-icon';
+  const frameClass = token.kind === 'person' ? 'fazit-token-icon fazit-token-icon-person' : 'fazit-token-icon fazit-token-icon-symbol';
   if (!src) {
     return `<span class="fazit-token fazit-token-text-only"><span class="fazit-token-glyph">${escapeHtml(token.label || '•')}</span></span>`;
   }
