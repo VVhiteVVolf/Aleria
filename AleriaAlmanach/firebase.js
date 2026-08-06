@@ -778,6 +778,10 @@
         const { setDoc, doc, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         if (id) {
           const ref = doc(db, 'characters', id);
+          const lockSnap = await getDoc(doc(db, 'combat_profile_locks', 'characters', 'records', id));
+          if ((lockSnap.data()?.activeEncounterKeys || []).length) {
+            throw new Error('Diese Figur nimmt gerade an einem aktiven Kampf teil, deshalb ist das Kampfprofil gesperrt. Beende den Kampf zuerst über die Kampfliste ("Kampf beenden"), um den Bogen wieder speichern zu können.');
+          }
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
