@@ -1,4 +1,5 @@
 import { normalizeCombatEncounterEvent } from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
+import { collectClaimedLootActorIds } from '../loot/loot-model.js?v=20260807-loot-v1';
 
 export const COMBAT_ENCOUNTER_ICON_URL = '../IconOrdner/Buttom Icons/Kampfstarter.png';
 
@@ -157,6 +158,29 @@ function renderRoster(participants = []) {
   return `<div class="combat-encounter-roster">${withDividers.join('')}</div>`;
 }
 
+function isCreaturePersistence(persistence = {}) {
+  return persistence?.kind === 'creature' || persistence?.kind === 'scene-creature';
+}
+
+function renderLootRow(event, comment) {
+  if (event.operation !== 'end') return '';
+  const defeated = event.participants.filter(participant => participant.status === 'defeated' && isCreaturePersistence(participant.persistence));
+  if (!defeated.length) return '';
+  const history = globalThis.getCachedCommentsForThread?.(comment.entryId) || [];
+  const claimed = collectClaimedLootActorIds(history, event.encounterId);
+  const lootable = defeated.filter(participant => !claimed.has(String(participant.actorId)));
+  if (!lootable.length) return '';
+  return `<div class="combat-encounter-loot-row">
+    <span class="combat-encounter-loot-label">Beute verfügbar</span>
+    <div class="combat-encounter-loot-avatars">
+      ${lootable.map(participant => `<button type="button" class="combat-encounter-loot-avatar" data-action="open-creature-loot" data-entry-id="${escapeMarkup(comment.entryId || '')}" data-encounter-id="${escapeMarkup(event.encounterId)}" data-actor-id="${escapeMarkup(participant.actorId)}" data-actor-name="${escapeMarkup(participant.name)}" data-actor-portrait="${escapeMarkup(participant.portrait || '')}" data-persistence-kind="${escapeMarkup(participant.persistence?.kind || '')}" data-persistence-record-id="${escapeMarkup(participant.persistence?.recordId || '')}" data-persistence-source-creature-id="${escapeMarkup(participant.persistence?.sourceCreatureId || '')}" title="Beute von ${escapeMarkup(participant.name)}" aria-label="Beute von ${escapeMarkup(participant.name)} öffnen">
+        ${participant.portrait ? `<img src="${escapeMarkup(participant.portrait)}" alt="">` : escapeMarkup((participant.name || '?').slice(0, 1))}
+        <span class="combat-encounter-loot-badge" aria-hidden="true">🎒</span>
+      </button>`).join('')}
+    </div>
+  </div>`;
+}
+
 export function renderCombatEncounterComment(comment = {}, index = 0) {
   const event = normalizeCombatEncounterEvent(comment.combatEncounter || comment);
   const labels = { start: 'Kampf beginnt', add: 'Verstärkung', remove: 'Kampfliste geändert', end: 'Kampf beendet' };
@@ -168,6 +192,7 @@ export function renderCombatEncounterComment(comment = {}, index = 0) {
     ${renderRoster(event.participants)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}
     ${event.operation === 'end' && !awards ? '<small>Kampfzustände und Konzentrationen wurden beendet. Es wurden keine EP vergeben.</small>' : ''}
+    ${renderLootRow(event, comment)}
   </section>`;
 }
 

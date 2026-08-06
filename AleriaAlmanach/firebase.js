@@ -34,6 +34,7 @@
     const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
+    const commitLootClaimCallable = httpsCallable(functions, 'commitLootClaim', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
     const importBackupRecordsCallable = httpsCallable(functions, 'importBackupRecords', { timeout: 60000 });
@@ -599,6 +600,25 @@
       async resetCombatParticipants(participants) {
         await requireFirebaseUser();
         const result = await commitResetCombatParticipantsCallable({ participants });
+        return result.data;
+      },
+      async getCreatureLootTable(recordId) {
+        const safeId = String(recordId || '').trim();
+        if (!safeId) return { currency: '', notes: '', items: [] };
+        const snapshot = await getDoc(doc(db, 'creatures', safeId));
+        const loot = snapshot.exists() ? snapshot.data()?.loot : null;
+        return {
+          currency: String(loot?.currency || ''),
+          notes: String(loot?.notes || ''),
+          items: Array.isArray(loot?.items) ? loot.items : []
+        };
+      },
+      async claimCreatureLoot(entryId, encounterId, actorId, receiverId, items = []) {
+        await requireFirebaseUser();
+        const result = await commitLootClaimCallable({
+          entryId, encounterId, actorId, receiverId,
+          items: cloneSerializableValue(items)
+        });
         return result.data;
       },
       async addHerausforderung(entryId, text, deleteCode, metadata = {}) {

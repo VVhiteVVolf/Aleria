@@ -25,6 +25,7 @@ const files = [
   'combat/rules/combat-mvp-rules.js',
   'herausforderung/herausforderung-model.js',
   'inventory-use/inventory-use-model.js',
+  'loot/loot-model.js',
   'scene-inventory/scene-inventory-transfer-model.js',
   'scene-rest/scene-rest-model.js',
   'skill-checks/skill-check-model.js',

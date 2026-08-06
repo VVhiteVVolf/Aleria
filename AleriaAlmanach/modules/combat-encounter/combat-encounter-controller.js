@@ -16,7 +16,7 @@ import {
   setEncounterStatus,
   setEncounterSubmitting,
   updateEncounterCount
-} from './combat-encounter-ui.js?v=20260806-edit-text-v1';
+} from './combat-encounter-ui.js?v=20260807-loot-v1';
 
 const resolver = new CombatProfileResolver();
 let activeThreadId = '';

@@ -1,0 +1,30 @@
+.combat-encounter-loot-row{display:flex;align-items:center;gap:.6rem;margin:.85rem 1rem 0;padding-top:.65rem;border-top:1px solid rgba(234,213,162,.3)}
+.combat-encounter-loot-label{font-family:Cinzel,serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#e8b978;white-space:nowrap}
+.combat-encounter-loot-avatars{display:flex;flex-wrap:wrap;gap:.45rem}
+.combat-encounter-loot-avatar{position:relative;width:2.4rem;height:2.4rem;border-radius:50%;overflow:hidden;display:grid;place-items:center;border:1px solid rgba(234,213,162,.4);background:#3b2410;color:#e8b978;font-size:.75rem;cursor:pointer;padding:0}
+.combat-encounter-loot-avatar:hover{border-color:#e8b978;box-shadow:0 0 0 2px rgba(232,185,120,.25)}
+.combat-encounter-loot-avatar img{width:100%;height:100%;object-fit:cover}
+.combat-encounter-loot-badge{position:absolute;right:-.2rem;bottom:-.2rem;width:1.1rem;height:1.1rem;border-radius:50%;display:grid;place-items:center;background:#5a1a16;border:1px solid rgba(234,213,162,.5);font-size:.6rem;line-height:1}
+
+.loot-card{width:min(420px,94vw)}
+.loot-head{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid rgba(143,104,29,.35);background:linear-gradient(110deg,#2b1809,#4a160f);color:#e3c374}
+.loot-head-portrait{width:2.6rem;height:2.6rem;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:#3b2410;border:1px solid rgba(234,213,162,.4);font-family:Cinzel,serif}
+.loot-head-portrait img{width:100%;height:100%;object-fit:cover}
+.loot-head small{display:block;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem}
+.loot-head h2{margin:0;font-family:Cinzel,serif;font-size:1rem}
+.loot-head button{border:0;background:transparent;color:#e3c374;font-size:1.5rem}
+.loot-body{padding:1rem;display:grid;gap:.8rem;overflow:auto}
+.loot-items{display:grid;gap:.5rem}
+.loot-item{display:grid;grid-template-columns:auto auto 1fr;gap:.6rem;align-items:center;padding:.55rem;border:1px solid rgba(143,104,29,.3);background:rgba(255,255,255,.2);cursor:pointer}
+.loot-item-icon{display:grid;place-items:center;width:2rem;height:2rem;border-radius:4px;background:#3b2410;color:#e8b978}
+.loot-item-copy{display:grid;gap:.1rem}
+.loot-item-copy small{color:#6b421d;font-size:.68rem}
+.loot-empty{color:#6b421d;font-style:italic}
+.loot-receiver{display:grid;gap:.3rem;font-family:Cinzel,serif;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.loot-receiver select{padding:.55rem;border:1px solid rgba(143,104,29,.45);background:#f8ebcb;color:#3a230d;font-family:inherit;text-transform:none;letter-spacing:normal}
+.loot-status{min-height:1.2em;margin:0;font-style:italic}
+.loot-status[data-status=error]{color:#8b1d1d}
+.loot-status[data-status=success]{color:#2f6b3a}
+.loot-card footer{display:flex;justify-content:flex-end;gap:.5rem;padding:.8rem 1rem;border-top:1px solid rgba(143,104,29,.35)}
+.loot-card footer button{padding:.65rem 1rem;border:1px solid rgba(143,104,29,.5);background:#ead7aa;color:#3a230d;font-family:Cinzel,serif}
+.loot-card footer .primary{background:#4a160f;color:#edd18a}

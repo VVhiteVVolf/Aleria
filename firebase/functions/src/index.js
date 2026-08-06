@@ -11,6 +11,7 @@ import { commitUndoMechanicalComment } from './mechanics/commit-undo-mechanical-
 import { commitResetCombatParticipants } from './mechanics/commit-reset-combat-participants.js';
 import { commitEditCombatEncounterText } from './mechanics/commit-edit-combat-encounter-text.js';
 import { commitHerausforderung } from './mechanics/commit-herausforderung.js';
+import { commitLootClaim } from './mechanics/commit-loot-claim.js';
 import { finalizeCombatNarration } from './mechanics/finalize-combat-narration.js';
 import { importBackupRecords } from './backup/import-backup-records.js';
 import { commitInventoryTransfer } from './mechanics/commit-inventory-transfer.js';
@@ -18,4 +19,4 @@ import { commitNarrativeComment } from './comments/commit-narrative-comment.js';
 
 initializeApp();
 
-export { commitCombatComment, commitCombatEncounter, commitEditCombatEncounterText, commitHerausforderung, commitInventoryTransfer, commitNarrativeComment, commitResetCombatParticipants, commitSceneRest, commitSkillComment, commitUndoMechanicalComment, finalizeCombatNarration, importBackupRecords, publishFamily, setAleriaRole, setFamilyMemberRole, uploadFamilyAsset };
+export { commitCombatComment, commitCombatEncounter, commitEditCombatEncounterText, commitHerausforderung, commitInventoryTransfer, commitLootClaim, commitNarrativeComment, commitResetCombatParticipants, commitSceneRest, commitSkillComment, commitUndoMechanicalComment, finalizeCombatNarration, importBackupRecords, publishFamily, setAleriaRole, setFamilyMemberRole, uploadFamilyAsset };
