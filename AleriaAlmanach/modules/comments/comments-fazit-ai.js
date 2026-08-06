@@ -45,23 +45,26 @@ function buildFazitHintQuery() {
   ].join(' ');
 }
 
-const FAZIT_HINT_STATUS_MESSAGES = {
-  'not-configured': 'AleriaGPT ist noch nicht mit dem Worker verbunden.',
-  unauthenticated: 'Nicht angemeldet — bitte neu einloggen und erneut versuchen.',
-  401: 'Die Anmeldung ist abgelaufen — Seite neu laden und erneut versuchen.',
-  403: 'Diese Seite ist beim AleriaGPT-Worker nicht freigeschaltet (Origin-Sperre).',
-  413: 'Der Szenenverlauf ist für eine Anfrage zu groß.',
-  429: 'Zu viele Anfragen — AleriaGPT braucht kurz eine Pause, bitte gleich nochmal versuchen.',
-  502: 'AleriaGPT ist gerade nicht erreichbar (Modell-Anbieter antwortet nicht).',
-  503: 'AleriaGPT ist gerade nicht erreichbar (Worker/Modell nicht konfiguriert oder Guthaben aufgebraucht).'
+const FAZIT_HINT_STATUS_LABELS = {
+  401: 'Anmeldung abgelaufen',
+  403: 'Nicht freigeschaltet (Origin-Sperre)',
+  413: 'Anfrage zu groß',
+  429: 'Rate-Limit erreicht',
+  502: 'Modell-Anbieter antwortet nicht',
+  503: 'Worker nicht konfiguriert'
 };
 
+// Zeigt die tatsächliche Worker-/Provider-Fehlermeldung mit an (nicht nur eine generische
+// Kategorie), damit sich Cloudflare-seitige Ursachen (fehlendes Secret, OpenRouter-Guthaben,
+// Rate-/Budget-Limit) direkt am Text erkennen lassen, statt raten zu müssen.
 function describeFazitHintError(response) {
-  const known = FAZIT_HINT_STATUS_MESSAGES[response?.status];
-  if (known) return known;
+  if (response?.status === 'not-configured') return 'AleriaGPT ist noch nicht mit dem Worker verbunden.';
+  if (response?.status === 'unauthenticated') return 'Nicht angemeldet — bitte neu einloggen und erneut versuchen.';
+  const label = FAZIT_HINT_STATUS_LABELS[response?.status];
   const detail = String(response?.raw?.error || '').trim();
-  return detail
-    ? `Die KI-Zusammenfassung konnte nicht erstellt werden: ${detail}`
+  const parts = [label, detail].filter(Boolean);
+  return parts.length
+    ? `Die KI-Zusammenfassung konnte nicht erstellt werden — ${parts.join(': ')}`
     : 'Die KI-Zusammenfassung konnte nicht erstellt werden (leere Antwort).';
 }
 
