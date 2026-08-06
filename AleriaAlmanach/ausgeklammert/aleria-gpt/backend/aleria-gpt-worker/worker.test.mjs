@@ -40,6 +40,11 @@ function encodePart(value) {
   return Buffer.from(typeof value === 'string' ? value : JSON.stringify(value)).toString('base64url');
 }
 
+// Google liefert das Standard-JWKS-Format { keys: [{kid, ...}, ...] }, keine flache kid->JWK-Map.
+function jwksResponse(entries = []) {
+  return new Response(JSON.stringify({ keys: entries }), { headers: { 'cache-control': 'public, max-age=300' } });
+}
+
 async function makeFirebaseToken(overrides = {}) {
   const keys = await crypto.subtle.generateKey({
     name: 'RSASSA-PKCS1-v1_5',
@@ -66,13 +71,30 @@ async function makeFirebaseToken(overrides = {}) {
   return { token: `${header}.${payload}.${Buffer.from(signature).toString('base64url')}`, publicJwk };
 }
 
+test('Firebase token verification parses the real Google JWKS array shape, not a flat kid map', async () => {
+  // Regression guard: Google's live endpoint returns { keys: [{kid, ...}, ...] }, not { [kid]: jwk }.
+  // Mixing this up meant jwks[header.kid] could never match anything, ever - every token failed.
+  const originalFetch = globalThis.fetch;
+  const { token, publicJwk } = await makeFirebaseToken();
+  workerInternals.resetFirebaseJwksCache();
+  const decoyJwk = { ...publicJwk, kid: 'decoy-key', alg: 'RS256', use: 'sig' };
+  globalThis.fetch = async () => jwksResponse([decoyJwk, { ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }]);
+  try {
+    const identity = await workerInternals.verifyFirebaseIdToken(token, {
+      ALERIA_FIREBASE_PROJECT_ID: 'aleriaprojekt'
+    });
+    assert.equal(identity.uid, 'anonymous-user-1');
+  } finally {
+    globalThis.fetch = originalFetch;
+    workerInternals.resetFirebaseJwksCache();
+  }
+});
+
 test('Firebase token verification checks signature, project and identity', async () => {
   const originalFetch = globalThis.fetch;
   const { token, publicJwk } = await makeFirebaseToken();
   workerInternals.resetFirebaseJwksCache();
-  globalThis.fetch = async () => new Response(JSON.stringify({
-    'test-key': { ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }
-  }), { headers: { 'cache-control': 'public, max-age=300' } });
+  globalThis.fetch = async () => jwksResponse([{ ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }]);
   try {
     const identity = await workerInternals.verifyFirebaseIdToken(token, {
       ALERIA_FIREBASE_PROJECT_ID: 'aleriaprojekt'
@@ -95,8 +117,8 @@ test('Firebase token verification force-refreshes the key set once if the kid is
   let calls = 0;
   globalThis.fetch = async () => {
     calls += 1;
-    const keys = calls === 1 ? {} : { 'test-key': { ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' } };
-    return new Response(JSON.stringify(keys), { headers: { 'cache-control': 'public, max-age=300' } });
+    const entries = calls === 1 ? [] : [{ ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }];
+    return jwksResponse(entries);
   };
   try {
     const identity = await workerInternals.verifyFirebaseIdToken(token, {
@@ -114,7 +136,7 @@ test('Firebase token verification still fails cleanly if the key is missing even
   const originalFetch = globalThis.fetch;
   const { token } = await makeFirebaseToken();
   workerInternals.resetFirebaseJwksCache();
-  globalThis.fetch = async () => new Response(JSON.stringify({}), { headers: { 'cache-control': 'public, max-age=300' } });
+  globalThis.fetch = async () => jwksResponse([]);
   try {
     await assert.rejects(
       workerInternals.verifyFirebaseIdToken(token, { ALERIA_FIREBASE_PROJECT_ID: 'aleriaprojekt' }),
@@ -130,9 +152,7 @@ test('Firebase token verification rejects a modified signature', async () => {
   const originalFetch = globalThis.fetch;
   const { token, publicJwk } = await makeFirebaseToken();
   workerInternals.resetFirebaseJwksCache();
-  globalThis.fetch = async () => new Response(JSON.stringify({
-    'test-key': { ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }
-  }));
+  globalThis.fetch = async () => jwksResponse([{ ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' }]);
   const parts = token.split('.');
   const head = parts[2].startsWith('a') ? 'b' : 'a';
   const tampered = `${parts[0]}.${parts[1]}.${head}${parts[2].slice(1)}`;

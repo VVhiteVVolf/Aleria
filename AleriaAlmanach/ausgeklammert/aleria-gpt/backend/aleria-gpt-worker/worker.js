@@ -74,7 +74,12 @@ async function getFirebaseJwks(now = Date.now(), forceRefresh = false) {
   // Das In-Memory-Caching oben (firebaseJwksCache) reicht als eigentlicher Cache voellig aus.
   const response = await fetch(FIREBASE_JWKS_URL, { cf: { cacheTtl: 0, cacheEverything: false } });
   if (!response.ok) throw Object.assign(new Error('Firebase-Schluessel konnten nicht geladen werden.'), { status: 503 });
-  const keys = await response.json();
+  const body = await response.json();
+  // Google liefert das Standard-JWKS-Format { keys: [{kid, kty, n, ...}, ...] }, keine flache
+  // kid->JWK-Zuordnung. Ohne diese Umformung schlaegt jwks[header.kid] weiter unten IMMER fehl,
+  // unabhaengig von Cache oder Rotation - das war der eigentliche, dauerhafte Bug.
+  const keyList = Array.isArray(body?.keys) ? body.keys : [];
+  const keys = Object.fromEntries(keyList.filter(key => key?.kid).map(key => [key.kid, key]));
   firebaseJwksCache = { keys, expiresAt: now + getCacheMaxAge(response.headers) * 1000 };
   return keys;
 }
