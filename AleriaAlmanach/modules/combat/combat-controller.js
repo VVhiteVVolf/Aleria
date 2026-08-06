@@ -537,7 +537,6 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
   });
   const ruleSources = buildCombatRuleSources({ characters, actorCharacter, targetCharacter, segment, stateContext });
   const stage = document.getElementById('combat-dice-stage');
-  if (stage) stage.innerHTML = '';
   setCombatResolutionStatus(
     total > 1 ? `Kampfauswertung ${index + 1} von ${total} …` : 'Angriffswurf …',
     `${actor.name} gegen ${target.name}`

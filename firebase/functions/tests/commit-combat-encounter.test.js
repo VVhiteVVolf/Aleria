@@ -167,3 +167,23 @@ test('assertNoConflictingEncounter laesst unbeteiligte Figuren unbeanstandet dur
     combatEncounterCommitInternals.assertNoConflictingEncounter(transaction, database, [participant], 'szene-a:encounter-1')
   );
 });
+
+test('assertNoConflictingEncounter blockiert geteilte Kreaturvorlagen NICHT, auch wenn dieselbe Vorlage anderswo aktiv ist', async () => {
+  // "scene-creature" ist eine geteilte Vorlage (z.B. mehrere Draig-Waffenknecht-Instanzen). Ihr
+  // Kampfzustand wird nie auf die Vorlage zurückgeschrieben, deshalb ist Mehrfachnutzung normal.
+  const database = fakeConflictDatabase({ lockData: { activeEncounterKeys: ['szene-b:encounter-9'] } });
+  const conflictComments = [{
+    id: 'c1', entryId: 'szene-b', combatEncounter: {
+      encounterId: 'encounter-9', operation: 'start', title: 'Ambush im Nordwald', participants: []
+    },
+    serverValidatedMechanics: true
+  }];
+  const transaction = fakeTransaction(conflictComments);
+  const participants = [
+    { name: 'Draig Waffenknecht I', persistence: { kind: 'scene-creature', sourceCreatureId: 'draig-waffenknecht' } },
+    { name: 'Draig Waffenknecht II', persistence: { kind: 'scene-creature', sourceCreatureId: 'draig-waffenknecht' } }
+  ];
+  await assert.doesNotReject(
+    combatEncounterCommitInternals.assertNoConflictingEncounter(transaction, database, participants, 'szene-a:encounter-1')
+  );
+});

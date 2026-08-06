@@ -98,6 +98,11 @@ async function assertNoConflictingEncounter(transaction, database, participants,
     return [recordKey(descriptor), { descriptor, participant }];
   })).values()];
   for (const { descriptor, participant } of unique) {
+    // Nicht-persistente Eintraege (z.B. "scene-creature") sind geteilte Kreaturvorlagen: mehrere
+    // gleichzeitige Instanzen (mehrere Draig Waffenknecht in einem Kampf, oder dieselbe Vorlage in
+    // zwei verschiedenen Szenen) sind normal und sollen sich nicht gegenseitig blockieren, weil ihr
+    // Kampfzustand ohnehin nie auf die geteilte Vorlage zurückgeschrieben wird.
+    if (!descriptor.persistent) continue;
     const conflict = await findConflictingEncounter(transaction, database, descriptor, currentEncounterKey);
     if (!conflict) continue;
     const name = participant.name || 'Diese Figur';
