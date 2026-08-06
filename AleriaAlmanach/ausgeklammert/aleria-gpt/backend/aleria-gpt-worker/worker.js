@@ -66,10 +66,14 @@ function getCacheMaxAge(headers) {
   return match ? Math.max(60, Number(match[1]) || 0) : 3600;
 }
 
-async function getFirebaseJwks(now = Date.now()) {
-  if (firebaseJwksCache.expiresAt > now && Object.keys(firebaseJwksCache.keys).length) return firebaseJwksCache.keys;
-  const response = await fetch(FIREBASE_JWKS_URL);
-  if (!response.ok) throw Object.assign(new Error('Firebase-SchlÃ¼ssel konnten nicht geladen werden.'), { status: 503 });
+async function getFirebaseJwks(now = Date.now(), forceRefresh = false) {
+  if (!forceRefresh && firebaseJwksCache.expiresAt > now && Object.keys(firebaseJwksCache.keys).length) return firebaseJwksCache.keys;
+  // cf.cacheTtl:0 umgeht Cloudflares eigene Edge-Cache-Schicht fuer diesen fetch() - ohne das
+  // koennte ein veralteter Edge-Cache-Eintrag zurueckkommen, obwohl Google die Schluessel laengst
+  // rotiert hat, und ein gueltiges Token wuerde faelschlich als "Schluessel unbekannt" abgelehnt.
+  // Das In-Memory-Caching oben (firebaseJwksCache) reicht als eigentlicher Cache voellig aus.
+  const response = await fetch(FIREBASE_JWKS_URL, { cf: { cacheTtl: 0, cacheEverything: false } });
+  if (!response.ok) throw Object.assign(new Error('Firebase-Schluessel konnten nicht geladen werden.'), { status: 503 });
   const keys = await response.json();
   firebaseJwksCache = { keys, expiresAt: now + getCacheMaxAge(response.headers) * 1000 };
   return keys;
@@ -79,14 +83,14 @@ async function verifyFirebaseIdToken(token, env, now = Date.now()) {
   const projectId = getEnvText(env, 'ALERIA_FIREBASE_PROJECT_ID');
   if (!projectId) throw Object.assign(new Error('Firebase-Authentifizierung ist nicht konfiguriert.'), { status: 503 });
   const parts = String(token || '').split('.');
-  if (parts.length !== 3) throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+  if (parts.length !== 3) throw Object.assign(new Error('Ungueltige Anmeldung.'), { status: 401 });
   let header;
   let payload;
   try {
     header = decodeJwtPart(parts[0]);
     payload = decodeJwtPart(parts[1]);
   } catch {
-    throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+    throw Object.assign(new Error('Ungueltige Anmeldung.'), { status: 401 });
   }
   const nowSeconds = Math.floor(now / 1000);
   if (header.alg !== 'RS256' || !header.kid
@@ -95,11 +99,14 @@ async function verifyFirebaseIdToken(token, env, now = Date.now()) {
     || !payload.sub || String(payload.sub).length > 128
     || Number(payload.exp || 0) <= nowSeconds
     || Number(payload.iat || 0) > nowSeconds + 60) {
-    throw Object.assign(new Error('Anmeldung abgelaufen oder ungÃ¼ltig.'), { status: 401 });
+    throw Object.assign(new Error('Anmeldung abgelaufen oder ungueltig.'), { status: 401 });
   }
-  const jwks = await getFirebaseJwks(now);
+  let jwks = await getFirebaseJwks(now);
+  // Der lokale Schluessel-Cache kann kurzzeitig hinter Googles Rotation zurueckliegen. Bevor ein
+  // ansonsten gueltiges Token abgelehnt wird, einmal erzwungen neu laden statt sofort aufzugeben.
+  if (!jwks[header.kid]) jwks = await getFirebaseJwks(now, true);
   const jwk = jwks[header.kid];
-  if (!jwk) throw Object.assign(new Error('AnmeldeschlÃ¼ssel ist nicht mehr gÃ¼ltig.'), { status: 401 });
+  if (!jwk) throw Object.assign(new Error('Anmeldeschluessel ist nicht mehr gueltig. Bitte Seite neu laden.'), { status: 401 });
   const key = await crypto.subtle.importKey(
     'jwk',
     jwk,
@@ -113,7 +120,7 @@ async function verifyFirebaseIdToken(token, env, now = Date.now()) {
     base64UrlBytes(parts[2]),
     new TextEncoder().encode(`${parts[0]}.${parts[1]}`)
   );
-  if (!verified) throw Object.assign(new Error('UngÃ¼ltige Anmeldung.'), { status: 401 });
+  if (!verified) throw Object.assign(new Error('Ungueltige Anmeldung.'), { status: 401 });
   return { uid: String(payload.sub), claims: payload };
 }
 

@@ -88,6 +88,44 @@ test('Firebase token verification checks signature, project and identity', async
   }
 });
 
+test('Firebase token verification force-refreshes the key set once if the kid is missing from the cache', async () => {
+  const originalFetch = globalThis.fetch;
+  const { token, publicJwk } = await makeFirebaseToken();
+  workerInternals.resetFirebaseJwksCache();
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    const keys = calls === 1 ? {} : { 'test-key': { ...publicJwk, kid: 'test-key', alg: 'RS256', use: 'sig' } };
+    return new Response(JSON.stringify(keys), { headers: { 'cache-control': 'public, max-age=300' } });
+  };
+  try {
+    const identity = await workerInternals.verifyFirebaseIdToken(token, {
+      ALERIA_FIREBASE_PROJECT_ID: 'aleriaprojekt'
+    });
+    assert.equal(identity.uid, 'anonymous-user-1');
+    assert.equal(calls, 2);
+  } finally {
+    globalThis.fetch = originalFetch;
+    workerInternals.resetFirebaseJwksCache();
+  }
+});
+
+test('Firebase token verification still fails cleanly if the key is missing even after a forced refresh', async () => {
+  const originalFetch = globalThis.fetch;
+  const { token } = await makeFirebaseToken();
+  workerInternals.resetFirebaseJwksCache();
+  globalThis.fetch = async () => new Response(JSON.stringify({}), { headers: { 'cache-control': 'public, max-age=300' } });
+  try {
+    await assert.rejects(
+      workerInternals.verifyFirebaseIdToken(token, { ALERIA_FIREBASE_PROJECT_ID: 'aleriaprojekt' }),
+      error => error.status === 401
+    );
+  } finally {
+    globalThis.fetch = originalFetch;
+    workerInternals.resetFirebaseJwksCache();
+  }
+});
+
 test('Firebase token verification rejects a modified signature', async () => {
   const originalFetch = globalThis.fetch;
   const { token, publicJwk } = await makeFirebaseToken();
