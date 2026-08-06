@@ -352,6 +352,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Fazit",
+    "fileName": "Fazit.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Fazit.png",
+    "width": 856,
+    "height": 856,
+    "ratio": "square"
+  },
+  {
     "name": "Flirt",
     "fileName": "Flirt.PNG",
     "folder": "Buttom Icons",
@@ -388,6 +397,24 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Herausforderung",
+    "fileName": "Herausforderung.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Herausforderung.png",
+    "width": 854,
+    "height": 854,
+    "ratio": "square"
+  },
+  {
+    "name": "Interagieren",
+    "fileName": "Interagieren.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Interagieren.png",
+    "width": 898,
+    "height": 898,
+    "ratio": "square"
+  },
+  {
     "name": "Kampfhandlung",
     "fileName": "Kampfhandlung.PNG",
     "folder": "Buttom Icons",
@@ -397,12 +424,39 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Kampfstarter",
+    "fileName": "Kampfstarter.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Kampfstarter.png",
+    "width": 854,
+    "height": 854,
+    "ratio": "square"
+  },
+  {
+    "name": "Konsumieren",
+    "fileName": "Konsumieren.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Konsumieren.png",
+    "width": 876,
+    "height": 876,
+    "ratio": "square"
+  },
+  {
     "name": "Modulicon",
     "fileName": "Modulicon.png",
     "folder": "Buttom Icons",
     "path": "../IconOrdner/Buttom Icons/Modulicon.png",
     "width": 500,
     "height": 500,
+    "ratio": "square"
+  },
+  {
+    "name": "Rasten",
+    "fileName": "Rasten.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Rasten.png",
+    "width": 860,
+    "height": 860,
     "ratio": "square"
   },
   {
@@ -421,6 +475,15 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Buttom Icons/Rufen.PNG",
     "width": 335,
     "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Schauspiel",
+    "fileName": "Schauspiel.png",
+    "folder": "Buttom Icons",
+    "path": "../IconOrdner/Buttom Icons/Schauspiel.png",
+    "width": 904,
+    "height": 904,
     "ratio": "square"
   },
   {
@@ -3187,6 +3250,726 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Abschrift",
+    "fileName": "Abschrift.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Abschrift.png",
+    "width": 164,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Aufnahme",
+    "fileName": "Aufnahme.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Aufnahme.png",
+    "width": 164,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Bezahlen",
+    "fileName": "Bezahlen.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bezahlen.png",
+    "width": 161,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1_2",
+    "fileName": "Bild1_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1_2.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1_3",
+    "fileName": "Bild1_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1_3.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1_4",
+    "fileName": "Bild1_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1_4.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1_5",
+    "fileName": "Bild1_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1_5.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1_6",
+    "fileName": "Bild1_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1_6.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild1",
+    "fileName": "Bild1.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild1.png",
+    "width": 338,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2_2",
+    "fileName": "Bild2_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2_2.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2_3",
+    "fileName": "Bild2_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2_3.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2_4",
+    "fileName": "Bild2_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2_4.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2_5",
+    "fileName": "Bild2_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2_5.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2_6",
+    "fileName": "Bild2_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2_6.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild2",
+    "fileName": "Bild2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild2.png",
+    "width": 335,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3_2",
+    "fileName": "Bild3_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3_2.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3_3",
+    "fileName": "Bild3_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3_3.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3_4",
+    "fileName": "Bild3_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3_4.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3_5",
+    "fileName": "Bild3_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3_5.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3_6",
+    "fileName": "Bild3_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3_6.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild3",
+    "fileName": "Bild3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild3.png",
+    "width": 339,
+    "height": 338,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4_2",
+    "fileName": "Bild4_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4_2.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4_3",
+    "fileName": "Bild4_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4_3.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4_4",
+    "fileName": "Bild4_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4_4.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4_5",
+    "fileName": "Bild4_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4_5.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4_6",
+    "fileName": "Bild4_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4_6.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild4",
+    "fileName": "Bild4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild4.png",
+    "width": 338,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5_2",
+    "fileName": "Bild5_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5_2.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5_3",
+    "fileName": "Bild5_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5_3.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5_4",
+    "fileName": "Bild5_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5_4.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5_5",
+    "fileName": "Bild5_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5_5.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5_6",
+    "fileName": "Bild5_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5_6.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild5",
+    "fileName": "Bild5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild5.png",
+    "width": 335,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6_2",
+    "fileName": "Bild6_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6_2.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6_3",
+    "fileName": "Bild6_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6_3.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6_4",
+    "fileName": "Bild6_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6_4.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6_5",
+    "fileName": "Bild6_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6_5.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6_6",
+    "fileName": "Bild6_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6_6.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild6",
+    "fileName": "Bild6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild6.png",
+    "width": 339,
+    "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7_2",
+    "fileName": "Bild7_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7_2.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7_3",
+    "fileName": "Bild7_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7_3.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7_4",
+    "fileName": "Bild7_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7_4.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7_5",
+    "fileName": "Bild7_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7_5.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7_6",
+    "fileName": "Bild7_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7_6.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild7",
+    "fileName": "Bild7.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild7.png",
+    "width": 338,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8_2",
+    "fileName": "Bild8_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8_2.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8_3",
+    "fileName": "Bild8_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8_3.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8_4",
+    "fileName": "Bild8_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8_4.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8_5",
+    "fileName": "Bild8_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8_5.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8_6",
+    "fileName": "Bild8_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8_6.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild8",
+    "fileName": "Bild8.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild8.png",
+    "width": 335,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9_2",
+    "fileName": "Bild9_2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9_2.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9_3",
+    "fileName": "Bild9_3.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9_3.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9_4",
+    "fileName": "Bild9_4.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9_4.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9_5",
+    "fileName": "Bild9_5.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9_5.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9_6",
+    "fileName": "Bild9_6.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9_6.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Bild9",
+    "fileName": "Bild9.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Bild9.png",
+    "width": 339,
+    "height": 339,
+    "ratio": "square"
+  },
+  {
+    "name": "Buch1",
+    "fileName": "Buch1.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Buch1.png",
+    "width": 161,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Buchnotiz",
+    "fileName": "Buchnotiz.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Buchnotiz.png",
+    "width": 164,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Debatte",
+    "fileName": "Debatte.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Debatte.png",
+    "width": 164,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Dokument",
+    "fileName": "Dokument.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Dokument.png",
+    "width": 161,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Fest",
+    "fileName": "Fest.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Fest.png",
+    "width": 161,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Geldbörse",
+    "fileName": "Geldbörse.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Geldbörse.png",
+    "width": 163,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Geste",
+    "fileName": "Geste.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Geste.png",
+    "width": 164,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Handschlag",
+    "fileName": "Handschlag.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Handschlag.png",
+    "width": 163,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Kampf",
+    "fileName": "Kampf.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Kampf.png",
+    "width": 163,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Kette",
+    "fileName": "Kette.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Kette.png",
+    "width": 164,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Krone",
+    "fileName": "Krone.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Krone.png",
+    "width": 161,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Lehen",
+    "fileName": "Lehen.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Lehen.png",
+    "width": 161,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Ritter",
+    "fileName": "Ritter.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Ritter.png",
+    "width": 161,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Schlüssel",
+    "fileName": "Schlüssel.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Schlüssel.png",
+    "width": 164,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
+    "name": "Schriftrolle",
+    "fileName": "Schriftrolle.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Schriftrolle.png",
+    "width": 164,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Schwert",
+    "fileName": "Schwert.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Schwert.png",
+    "width": 163,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Vereinbarung",
+    "fileName": "Vereinbarung.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Vereinbarung.png",
+    "width": 163,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Vereinbarung2",
+    "fileName": "Vereinbarung2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Vereinbarung2.png",
+    "width": 163,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Vergütung",
+    "fileName": "Vergütung.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Vergütung.png",
+    "width": 164,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Verlobung",
+    "fileName": "Verlobung.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Verlobung.png",
+    "width": 163,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Vertrag",
+    "fileName": "Vertrag.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Vertrag.png",
+    "width": 163,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Vertrag2",
+    "fileName": "Vertrag2.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Vertrag2.png",
+    "width": 161,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Waage",
+    "fileName": "Waage.png",
+    "folder": "Fazit Icons",
+    "path": "../IconOrdner/Fazit Icons/Waage.png",
+    "width": 163,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
     "name": "Ausschank",
     "fileName": "Ausschank.png",
     "folder": "Gebäudepins",
@@ -4564,6 +5347,879 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "1w10",
+    "fileName": "1w10.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/1w10.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "1w12",
+    "fileName": "1w12.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/1w12.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "1w4",
+    "fileName": "1w4.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/1w4.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "1w6",
+    "fileName": "1w6.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/1w6.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "1w8",
+    "fileName": "1w8.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/1w8.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Achtung",
+    "fileName": "Achtung.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Achtung.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Amulett",
+    "fileName": "Amulett.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Amulett.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Banner",
+    "fileName": "Banner.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Banner.png",
+    "width": 986,
+    "height": 206,
+    "ratio": "banner"
+  },
+  {
+    "name": "Bewegungsreichweite",
+    "fileName": "Bewegungsreichweite.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Bewegungsreichweite.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Blitz",
+    "fileName": "Blitz.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Blitz.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "blue-8w",
+    "fileName": "blue-8w.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/blue-8w.png",
+    "width": 26,
+    "height": 29,
+    "ratio": "square"
+  },
+  {
+    "name": "Blutend",
+    "fileName": "Blutend.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Blutend.png",
+    "width": 30,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Dauer",
+    "fileName": "Dauer.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Dauer.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "Eid",
+    "fileName": "Eid.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Eid.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Einhand",
+    "fileName": "Einhand.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Einhand.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Einhändig",
+    "fileName": "Einhändig.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Einhändig.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "Eintauchen",
+    "fileName": "Eintauchen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Eintauchen.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Fernkampf",
+    "fileName": "Fernkampf.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Fernkampf.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Feuer",
+    "fileName": "Feuer.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Feuer.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Finesse",
+    "fileName": "Finesse.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Finesse.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "Fragezeichen",
+    "fileName": "Fragezeichen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Fragezeichen.png",
+    "width": 626,
+    "height": 626,
+    "ratio": "square"
+  },
+  {
+    "name": "GeschwindigkeitHintergrund",
+    "fileName": "GeschwindigkeitHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/GeschwindigkeitHintergrund.png",
+    "width": 504,
+    "height": 495,
+    "ratio": "square"
+  },
+  {
+    "name": "Geübt",
+    "fileName": "Geübt.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Geübt.png",
+    "width": 18,
+    "height": 22,
+    "ratio": "square"
+  },
+  {
+    "name": "Gewicht",
+    "fileName": "Gewicht.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Gewicht.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Gold",
+    "fileName": "Gold.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Gold.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Goldmünze",
+    "fileName": "Goldmünze.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Goldmünze.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "green-10w",
+    "fileName": "green-10w.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/green-10w.png",
+    "width": 29,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Handschuhe",
+    "fileName": "Handschuhe.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Handschuhe.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Hast",
+    "fileName": "Hast.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Hast.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Heilung",
+    "fileName": "Heilung.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Heilung.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "helfen",
+    "fileName": "helfen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/helfen.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Helm",
+    "fileName": "Helm.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Helm.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Herz",
+    "fileName": "Herz.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Herz.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Hintergrund",
+    "fileName": "Hintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Hintergrund.png",
+    "width": 800,
+    "height": 800,
+    "ratio": "square"
+  },
+  {
+    "name": "Improvisieren",
+    "fileName": "Improvisieren.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Improvisieren.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Initiative",
+    "fileName": "Initiative.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Initiative.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "InitiativeHintergrund",
+    "fileName": "InitiativeHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/InitiativeHintergrund.png",
+    "width": 496,
+    "height": 503,
+    "ratio": "square"
+  },
+  {
+    "name": "Instrument",
+    "fileName": "Instrument.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Instrument.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Kleidung",
+    "fileName": "Kleidung.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Kleidung.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "konzentration",
+    "fileName": "konzentration.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/konzentration.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Kupfermünze",
+    "fileName": "Kupfermünze.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Kupfermünze.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "LebenspunkteHintergrund",
+    "fileName": "LebenspunkteHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/LebenspunkteHintergrund.png",
+    "width": 571,
+    "height": 437,
+    "ratio": "wide"
+  },
+  {
+    "name": "Mana",
+    "fileName": "Mana.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Mana.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "ManaHintergrund",
+    "fileName": "ManaHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/ManaHintergrund.png",
+    "width": 465,
+    "height": 537,
+    "ratio": "square"
+  },
+  {
+    "name": "Normaler Angriff",
+    "fileName": "Normaler Angriff.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Normaler Angriff.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "NormalerFernangriff",
+    "fileName": "NormalerFernangriff.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/NormalerFernangriff.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Opportunity_Attack",
+    "fileName": "Opportunity_Attack.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Opportunity_Attack.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "purple-12w",
+    "fileName": "purple-12w.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/purple-12w.png",
+    "width": 29,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Radius",
+    "fileName": "Radius.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Radius.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "Red-4W",
+    "fileName": "Red-4W.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Red-4W.png",
+    "width": 31,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Reichweite",
+    "fileName": "Reichweite.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Reichweite.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Ring",
+    "fileName": "Ring.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Ring.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "rot1w8",
+    "fileName": "rot1w8.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/rot1w8.png",
+    "width": 27,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Rueckzug",
+    "fileName": "Rueckzug.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Rueckzug.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "RuestungsklassenRahmen",
+    "fileName": "RuestungsklassenRahmen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/RuestungsklassenRahmen.png",
+    "width": 492,
+    "height": 507,
+    "ratio": "square"
+  },
+  {
+    "name": "Ruestungsklassenwappen",
+    "fileName": "Ruestungsklassenwappen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Ruestungsklassenwappen.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "Ruestungstyp",
+    "fileName": "Ruestungstyp.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Ruestungstyp.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "RüstungsklasseHintergrund",
+    "fileName": "RüstungsklasseHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/RüstungsklasseHintergrund.png",
+    "width": 515,
+    "height": 484,
+    "ratio": "square"
+  },
+  {
+    "name": "Schild",
+    "fileName": "Schild.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Schild.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Schnelligkeit",
+    "fileName": "Schnelligkeit.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Schnelligkeit.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Schubsen",
+    "fileName": "Schubsen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Schubsen.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Silbermünze",
+    "fileName": "Silbermünze.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Silbermünze.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "Springen",
+    "fileName": "Springen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Springen.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Spurten",
+    "fileName": "Spurten.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Spurten.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Tatendrang",
+    "fileName": "Tatendrang.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Tatendrang.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Umhang",
+    "fileName": "Umhang.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Umhang.png",
+    "width": 20,
+    "height": 20,
+    "ratio": "square"
+  },
+  {
+    "name": "Verstecken",
+    "fileName": "Verstecken.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Verstecken.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "Verzauberung",
+    "fileName": "Verzauberung.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Verzauberung.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "W20",
+    "fileName": "W20.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/W20.png",
+    "width": 27,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "Waffentype",
+    "fileName": "Waffentype.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Waffentype.png",
+    "width": 48,
+    "height": 48,
+    "ratio": "square"
+  },
+  {
+    "name": "Werfen",
+    "fileName": "Werfen.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Werfen.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
+    "name": "Wurf",
+    "fileName": "Wurf.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Wurf.png",
+    "width": 300,
+    "height": 300,
+    "ratio": "square"
+  },
+  {
+    "name": "yellow-6w",
+    "fileName": "yellow-6w.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/yellow-6w.png",
+    "width": 27,
+    "height": 30,
+    "ratio": "square"
+  },
+  {
+    "name": "ZauberangriffHintergrund",
+    "fileName": "ZauberangriffHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/ZauberangriffHintergrund.png",
+    "width": 492,
+    "height": 507,
+    "ratio": "square"
+  },
+  {
+    "name": "ZauberattributHintergrund",
+    "fileName": "ZauberattributHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/ZauberattributHintergrund.png",
+    "width": 492,
+    "height": 507,
+    "ratio": "square"
+  },
+  {
+    "name": "ZauberSGHintergrund",
+    "fileName": "ZauberSGHintergrund.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/ZauberSGHintergrund.png",
+    "width": 471,
+    "height": 530,
+    "ratio": "square"
+  },
+  {
+    "name": "Zweihänder",
+    "fileName": "Zweihänder.png",
+    "folder": "IconsCharakterbogen/BG Icons",
+    "path": "../IconOrdner/IconsCharakterbogen/BG Icons/Zweihänder.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "CHA",
+    "fileName": "CHA.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/CHA.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "GES",
+    "fileName": "GES.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/GES.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "INT",
+    "fileName": "INT.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/INT.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "KON",
+    "fileName": "KON.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/KON.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "STR",
+    "fileName": "STR.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/STR.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "WEI",
+    "fileName": "WEI.png",
+    "folder": "IconsCharakterbogen/IconsAttribute",
+    "path": "../IconOrdner/IconsCharakterbogen/IconsAttribute/WEI.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "Aktion",
+    "fileName": "Aktion.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Aktion.png",
+    "width": 459,
+    "height": 463,
+    "ratio": "square"
+  },
+  {
+    "name": "Auftreten",
+    "fileName": "Auftreten.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Auftreten.png",
+    "width": 500,
+    "height": 500,
+    "ratio": "square"
+  },
+  {
+    "name": "Aura Punkt",
+    "fileName": "Aura Punkt.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Aura Punkt.png",
+    "width": 835,
+    "height": 835,
+    "ratio": "square"
+  },
+  {
+    "name": "Besonderes",
+    "fileName": "Besonderes.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Besonderes.png",
+    "width": 504,
+    "height": 495,
+    "ratio": "square"
+  },
+  {
+    "name": "Bonusaktion",
+    "fileName": "Bonusaktion.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Bonusaktion.png",
+    "width": 463,
+    "height": 400,
+    "ratio": "square"
+  },
+  {
+    "name": "Mana Punkt",
+    "fileName": "Mana Punkt.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Mana Punkt.png",
+    "width": 813,
+    "height": 813,
+    "ratio": "square"
+  },
+  {
+    "name": "Mana",
+    "fileName": "Mana.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Mana.png",
+    "width": 967,
+    "height": 967,
+    "ratio": "square"
+  },
+  {
+    "name": "Nachteil",
+    "fileName": "Nachteil.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Nachteil.png",
+    "width": 68,
+    "height": 52,
+    "ratio": "wide"
+  },
+  {
+    "name": "Reaktion",
+    "fileName": "Reaktion.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Reaktion.png",
+    "width": 444,
+    "height": 562,
+    "ratio": "square"
+  },
+  {
+    "name": "Vorteil",
+    "fileName": "Vorteil.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Vorteil.png",
+    "width": 72,
+    "height": 52,
+    "ratio": "wide"
+  },
+  {
+    "name": "Zauberplatz",
+    "fileName": "Zauberplatz.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Zauberplatz.png",
+    "width": 0,
+    "height": 0,
+    "ratio": "unknown"
+  },
+  {
+    "name": "Zauberslot Leer",
+    "fileName": "Zauberslot Leer.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Zauberslot Leer.png",
+    "width": 819,
+    "height": 819,
+    "ratio": "square"
+  },
+  {
+    "name": "Zauberslot Voll",
+    "fileName": "Zauberslot Voll.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Zauberslot Voll.png",
+    "width": 825,
+    "height": 825,
+    "ratio": "square"
+  },
+  {
+    "name": "Zauberslot",
+    "fileName": "Zauberslot.png",
+    "folder": "IconsCharakterbogen/Interaktionen",
+    "path": "../IconOrdner/IconsCharakterbogen/Interaktionen/Zauberslot.png",
+    "width": 25,
+    "height": 25,
+    "ratio": "square"
+  },
+  {
     "name": "Aldervan Kontinent",
     "fileName": "Aldervan Kontinent.png",
     "folder": "Länder Icons",
@@ -4789,6 +6445,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Castellbryn",
+    "fileName": "Castellbryn.png",
+    "folder": "Länder und Häuser Icons/Haus Arwydd",
+    "path": "../IconOrdner/Länder und Häuser Icons/Haus Arwydd/Castellbryn.png",
+    "width": 256,
+    "height": 256,
+    "ratio": "square"
+  },
+  {
     "name": "Haus Arwydd",
     "fileName": "Haus Arwydd.png",
     "folder": "Länder und Häuser Icons/Haus Arwydd",
@@ -4852,6 +6517,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Gwynthor",
+    "fileName": "Gwynthor.png",
+    "folder": "Länder und Häuser Icons/Haus Draig",
+    "path": "../IconOrdner/Länder und Häuser Icons/Haus Draig/Gwynthor.png",
+    "width": 506,
+    "height": 506,
+    "ratio": "square"
+  },
+  {
     "name": "Haus Draig",
     "fileName": "Haus Draig.png",
     "folder": "Länder und Häuser Icons/Haus Draig",
@@ -4910,6 +6584,15 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Haus Gwefrydd.png",
     "folder": "Länder und Häuser Icons/Haus Gwefrydd",
     "path": "../IconOrdner/Länder und Häuser Icons/Haus Gwefrydd/Haus Gwefrydd.png",
+    "width": 883,
+    "height": 876,
+    "ratio": "square"
+  },
+  {
+    "name": "Rhosmere",
+    "fileName": "Rhosmere.png",
+    "folder": "Länder und Häuser Icons/Haus Gwefrydd",
+    "path": "../IconOrdner/Länder und Häuser Icons/Haus Gwefrydd/Rhosmere.png",
     "width": 883,
     "height": 876,
     "ratio": "square"
@@ -13091,6 +14774,15 @@ const ALERIA_ICON_DIRECTORY = [
     "fileName": "Religion.png",
     "folder": "ReiterIcons",
     "path": "../IconOrdner/ReiterIcons/Religion.png",
+    "width": 1024,
+    "height": 1024,
+    "ratio": "square"
+  },
+  {
+    "name": "Stammbäume",
+    "fileName": "Stammbäume.png",
+    "folder": "ReiterIcons",
+    "path": "../IconOrdner/ReiterIcons/Stammbäume.png",
     "width": 1024,
     "height": 1024,
     "ratio": "square"
