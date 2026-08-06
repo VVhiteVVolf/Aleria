@@ -4330,6 +4330,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "Bild3_7",
+    "fileName": "Bild3_7.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Bild3_7.png",
+    "width": 164,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
     "name": "Bild3_8",
     "fileName": "Bild3_8.png",
     "folder": "IconOrdner",
@@ -4690,6 +4699,15 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "minus2",
+    "fileName": "minus2.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/minus2.png",
+    "width": 161,
+    "height": 161,
+    "ratio": "square"
+  },
+  {
     "name": "Mörser",
     "fileName": "Mörser.PNG",
     "folder": "IconOrdner",
@@ -4714,6 +4732,51 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Objekt einführen.PNG",
     "width": 335,
     "height": 335,
+    "ratio": "square"
+  },
+  {
+    "name": "Pfeil schräg nach oben",
+    "fileName": "Pfeil schräg nach oben.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Pfeil schräg nach oben.png",
+    "width": 164,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "pfeilbogen",
+    "fileName": "pfeilbogen.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/pfeilbogen.png",
+    "width": 161,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "pfeilHoch",
+    "fileName": "pfeilHoch.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/pfeilHoch.png",
+    "width": 163,
+    "height": 163,
+    "ratio": "square"
+  },
+  {
+    "name": "Pfeillinks",
+    "fileName": "Pfeillinks.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Pfeillinks.png",
+    "width": 163,
+    "height": 164,
+    "ratio": "square"
+  },
+  {
+    "name": "Pfeilrunter",
+    "fileName": "Pfeilrunter.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Pfeilrunter.png",
+    "width": 161,
+    "height": 164,
     "ratio": "square"
   },
   {
@@ -4769,6 +4832,15 @@ const ALERIA_ICON_DIRECTORY = [
     "width": 107,
     "height": 161,
     "ratio": "portrait"
+  },
+  {
+    "name": "Plus",
+    "fileName": "Plus.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Plus.png",
+    "width": 163,
+    "height": 161,
+    "ratio": "square"
   },
   {
     "name": "Plusgrün",
@@ -5020,6 +5092,15 @@ const ALERIA_ICON_DIRECTORY = [
     "path": "../IconOrdner/Tropfenweiss.PNG",
     "width": 108,
     "height": 108,
+    "ratio": "square"
+  },
+  {
+    "name": "Undsymbol",
+    "fileName": "Undsymbol.png",
+    "folder": "IconOrdner",
+    "path": "../IconOrdner/Undsymbol.png",
+    "width": 164,
+    "height": 161,
     "ratio": "square"
   },
   {

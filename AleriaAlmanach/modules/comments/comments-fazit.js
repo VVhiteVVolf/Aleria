@@ -17,14 +17,26 @@ function fazitAvailableCharacters() {
   }
 }
 
-function newFazitLine() {
+const FAZIT_CONNECTOR_PRESETS = {
+  // "Pfeillinks" gespiegelt statt eines zweiten Icons - siehe flip-Feld im Token-Modell.
+  'arrow-right': { icon: '../IconOrdner/Pfeillinks.png', label: '', flip: true },
+  'arrow-left': { icon: '../IconOrdner/Pfeillinks.png', label: '' },
+  dash: { icon: '', label: '–' },
+  plus: { icon: '../IconOrdner/Plus.png', label: '' },
+  minus: { icon: '../IconOrdner/minus2.png', label: '' },
+  and: { icon: '../IconOrdner/Undsymbol.png', label: '' }
+};
+
+function newFazitLine(kind = 'tokens') {
   _fazitLineCounter += 1;
-  return { id: `line-${_fazitLineCounter}`, tokens: [] };
+  return kind === 'text'
+    ? { id: `line-${_fazitLineCounter}`, kind: 'text', text: '', tokens: [] }
+    : { id: `line-${_fazitLineCounter}`, kind: 'tokens', tokens: [], text: '' };
 }
 
 function newFazitToken(kind) {
   _fazitTokenCounter += 1;
-  return { id: `token-${_fazitTokenCounter}`, kind: kind === 'person' ? 'person' : 'symbol', icon: '', label: '', characterId: '' };
+  return { id: `token-${_fazitTokenCounter}`, kind: kind === 'person' ? 'person' : 'symbol', icon: '', label: '', characterId: '', flip: false };
 }
 
 function findFazitLine(lineId) {
@@ -87,12 +99,36 @@ function renderFazitPersonPicker(line) {
   </div>`;
 }
 
+function renderFazitConnectorButtons(line) {
+  const buttons = [
+    ['arrow-right', '→', 'Pfeil nach rechts'],
+    ['arrow-left', '←', 'Pfeil nach links'],
+    ['dash', '–', 'Bindestrich'],
+    ['plus', '+', 'Plus'],
+    ['minus', '−', 'Minus'],
+    ['and', '&', 'Und-Symbol']
+  ];
+  return buttons.map(([key, glyph, title]) => `<button type="button" class="fazit-connector-btn" data-action="add-fazit-connector" data-connector="${key}" data-line-id="${escapeHtml(line.id)}" title="${escapeHtml(title)}" aria-label="${escapeHtml(title)}">${glyph}</button>`).join('');
+}
+
 function renderFazitLineEditor(line) {
+  if (line.kind === 'text') {
+    return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
+      <div class="fazit-line-text-editor">
+        <span class="fazit-bullet" aria-hidden="true">✦</span>
+        <textarea rows="2" maxlength="600" placeholder="Freier Text für diese Zeile …" data-action="update-fazit-line-text" data-line-id="${escapeHtml(line.id)}">${escapeHtml(line.text)}</textarea>
+      </div>
+      <div class="fazit-line-actions">
+        <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
+      </div>
+    </div>`;
+  }
   return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
-    <div class="fazit-line-tokens">${line.tokens.map(token => renderFazitTokenEditor(line, token)).join('') || '<span class="fazit-line-empty">Noch keine Bausteine — füge Personen oder Symbole hinzu.</span>'}</div>
+    <div class="fazit-line-tokens">${line.tokens.map(token => renderFazitTokenEditor(line, token)).join('') || '<span class="fazit-line-empty">Noch keine Bausteine — füge Personen, Symbole oder Verbindungszeichen hinzu.</span>'}</div>
     <div class="fazit-line-actions">
       <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="person" data-line-id="${escapeHtml(line.id)}">+ Person</button>
       <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="symbol" data-line-id="${escapeHtml(line.id)}">+ Symbol</button>
+      <span class="fazit-connector-buttons">${renderFazitConnectorButtons(line)}</span>
       <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
     </div>
     ${renderFazitPersonPicker(line)}
@@ -123,8 +159,28 @@ function updateFazitPreview() {
     : '<p class="fazit-preview-empty">Noch nichts zum Anzeigen — füge Zeilen und Bausteine hinzu.</p>';
 }
 
-function addFazitLine() {
-  _fazitLines.push(newFazitLine());
+function addFazitLine(kind = 'tokens') {
+  _fazitLines.push(newFazitLine(kind));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function updateFazitLineText(lineId, value) {
+  const line = findFazitLine(lineId);
+  if (!line || line.kind !== 'text') return;
+  line.text = String(value || '').trim().slice(0, 600);
+  updateFazitPreview();
+}
+
+function addFazitConnectorToken(lineId, presetKey) {
+  const line = findFazitLine(lineId);
+  const preset = FAZIT_CONNECTOR_PRESETS[presetKey];
+  if (!line || line.kind !== 'tokens' || !preset || line.tokens.length >= 24) return;
+  const token = newFazitToken('symbol');
+  token.icon = preset.icon;
+  token.label = preset.label;
+  token.flip = preset.flip === true;
+  line.tokens.push(token);
   renderFazitLinesEditor();
   updateFazitPreview();
 }
@@ -294,6 +350,8 @@ function openEditFazitForm(commentId) {
   if (title) title.value = item.title;
   _fazitLines = item.lines.map(line => ({
     id: `line-${(_fazitLineCounter += 1)}`,
+    kind: line.kind === 'text' ? 'text' : 'tokens',
+    text: line.text || '',
     tokens: line.tokens.map(token => ({ ...token, id: `token-${(_fazitTokenCounter += 1)}` }))
   }));
   renderFazitLinesEditor();

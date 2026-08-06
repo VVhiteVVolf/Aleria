@@ -36,6 +36,10 @@ function handleEditCommentInput(event) {
   }
   if (field?.dataset?.action === 'filter-fazit-person-picker') {
     filterFazitPersonPicker(field.value);
+    return;
+  }
+  if (field?.dataset?.action === 'update-fazit-line-text') {
+    updateFazitLineText(field.dataset.lineId, field.value);
   }
 }
 

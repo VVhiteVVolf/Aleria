@@ -9,17 +9,24 @@ function normalizeFazitToken(token, index) {
     kind,
     icon: String(source.icon || '').trim(),
     label: String(source.label || '').trim().slice(0, 80),
-    characterId: kind === 'person' ? String(source.characterId || '').trim() : ''
+    characterId: kind === 'person' ? String(source.characterId || '').trim() : '',
+    // Spiegelt z.B. den vorhandenen Links-Pfeil zu einem Rechts-Pfeil, ohne ein zweites
+    // Icon-Asset zu brauchen - gilt nur fuer dieses eine Token, nicht fuer das Icon allgemein.
+    flip: source.flip === true
   };
 }
 
 function normalizeFazitLine(line, index) {
   const source = line && typeof line === 'object' ? line : {};
+  const kind = source.kind === 'text' ? 'text' : 'tokens';
+  if (kind === 'text') {
+    return { id: String(source.id || `line-${index + 1}`), kind, text: String(source.text || '').trim().slice(0, 600), tokens: [] };
+  }
   const tokens = (Array.isArray(source.tokens) ? source.tokens : [])
     .slice(0, 24)
     .map(normalizeFazitToken)
     .filter(token => token.icon || token.label);
-  return { id: String(source.id || `line-${index + 1}`), tokens };
+  return { id: String(source.id || `line-${index + 1}`), kind, tokens, text: '' };
 }
 
 function normalizeCommentFazitItem(item) {
@@ -27,7 +34,7 @@ function normalizeCommentFazitItem(item) {
   const lines = (Array.isArray(item.lines) ? item.lines : [])
     .slice(0, 24)
     .map(normalizeFazitLine)
-    .filter(line => line.tokens.length);
+    .filter(line => (line.kind === 'text' ? line.text : line.tokens.length));
   if (!lines.length) return null;
   return {
     title: String(item.title || 'Fazit').trim().slice(0, 120) || 'Fazit',
@@ -41,7 +48,9 @@ function getCommentFazitItem(comment) {
 
 function buildFazitPlainText(item) {
   return (item?.lines || [])
-    .map(line => line.tokens.map(token => token.label || (token.kind === 'person' ? 'Figur' : 'Symbol')).join(' → '))
+    .map(line => (line.kind === 'text'
+      ? line.text
+      : line.tokens.map(token => token.label || (token.kind === 'person' ? 'Figur' : 'Symbol')).join(' → ')))
     .filter(Boolean)
     .join('\n');
 }
@@ -53,12 +62,15 @@ function renderFazitTokenMarkup(token) {
     return `<span class="fazit-token fazit-token-text-only"><span class="fazit-token-glyph">${escapeHtml(token.label || '•')}</span></span>`;
   }
   return `<span class="fazit-token">
-    <span class="${frameClass}"><img src="${src}" alt="" loading="lazy" decoding="async"></span>
+    <span class="${frameClass}"><img src="${src}" alt="" loading="lazy" decoding="async"${token.flip ? ' style="transform:scaleX(-1)"' : ''}></span>
     ${token.label ? `<span class="fazit-token-caption">${escapeHtml(token.label)}</span>` : ''}
   </span>`;
 }
 
 function renderFazitLineMarkup(line) {
+  if (line.kind === 'text') {
+    return `<div class="fazit-line fazit-line-text"><span class="fazit-bullet" aria-hidden="true">✦</span><p>${escapeHtml(line.text)}</p></div>`;
+  }
   return `<div class="fazit-line">${line.tokens.map(renderFazitTokenMarkup).join('')}</div>`;
 }
 

@@ -18,6 +18,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'add-fazit-line',
   'remove-fazit-line',
   'add-fazit-token',
+  'add-fazit-connector',
   'remove-fazit-token',
   'move-fazit-token',
   'pick-fazit-token-icon',
@@ -113,7 +114,7 @@ function handleCommentFormActionClick(event) {
     return;
   }
   if (action === 'add-fazit-line') {
-    addFazitLine();
+    addFazitLine(trigger.dataset.lineKind || 'tokens');
     return;
   }
   if (action === 'remove-fazit-line') {
@@ -122,6 +123,10 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'add-fazit-token') {
     addFazitToken(trigger.dataset.lineId, trigger.dataset.tokenKind);
+    return;
+  }
+  if (action === 'add-fazit-connector') {
+    addFazitConnectorToken(trigger.dataset.lineId, trigger.dataset.connector);
     return;
   }
   if (action === 'remove-fazit-token') {
