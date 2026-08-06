@@ -169,6 +169,10 @@ function switchCharTab(tab) {
 }
 
 function closeCharProfile() {
+  if (window.AleriaCharacterCombatProfile?.hasUnsavedDraftNotice?.()) {
+    const discard = confirm('Stufenaufstieg oder Starthilfe wurden noch nicht gespeichert. Ohne Klick auf „Figur speichern" gehen diese Änderungen jetzt verloren. Trotzdem schließen?');
+    if (!discard) return;
+  }
   deactivateDialog('char-profile-overlay');
   _editingChar = null;
   _charPortraitUrl = null;

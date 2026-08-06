@@ -1036,5 +1036,6 @@ globalThis.AleriaCharacterCombatProfile = Object.freeze({
     return { inventory: result.inventory, combatProfile: sanitizeCharacterCombatProfile(draftProfile) };
   },
   sanitize: sanitizeCharacterCombatProfile,
-  refreshDerived: updateDerivedView
+  refreshDerived: updateDerivedView,
+  hasUnsavedDraftNotice: () => !!(levelUpNotice || setupNotice)
 });

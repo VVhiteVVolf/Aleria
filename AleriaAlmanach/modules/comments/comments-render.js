@@ -154,6 +154,15 @@ function getCommentEmotePortrait(c, idx) {
   return emote?.img ? sanitizeImageSrc(emote.img) : '';
 }
 
+function safeRenderCombatEvaluation(source) {
+  try {
+    return window.AleriaCombat?.renderEvaluation?.(source) || '';
+  } catch (error) {
+    console.error('renderCombatEvaluation failed:', error);
+    return '';
+  }
+}
+
 function renderCommentTransactionLock(comment = {}) {
   const policy = window.AleriaCommentTransactions;
   if (!policy?.isImmutable?.(comment)) return '';
@@ -250,7 +259,7 @@ function renderCommentBubble(c, idx) {
         ? segment.combatResolutions
         : (segment.combatResolution ? [segment.combatResolution] : []);
       const combatEvaluation = combatResolutions.map(combatResolution => (
-        window.AleriaCombat?.renderEvaluation?.({ ...segment, combatResolution }) || ''
+        safeRenderCombatEvaluation({ ...segment, combatResolution })
       )).join('');
       const skillEvaluation = segment.skillResolution
         ? (window.AleriaSkillChecks?.renderEvaluation?.(segment) || '')
@@ -353,7 +362,7 @@ function renderCommentBubble(c, idx) {
   }).join('');
 
   const legacyEvaluation = commentKind === 'combataction' && c.combatResolution
-    ? (window.AleriaCombat?.renderEvaluation?.(c) || '')
+    ? safeRenderCombatEvaluation(c)
     : '';
   return `${divider}${entries}${legacyEvaluation}`;
 }
