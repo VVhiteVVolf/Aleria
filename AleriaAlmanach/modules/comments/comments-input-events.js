@@ -20,6 +20,18 @@ function handleEditCommentInput(event) {
   }
   if (field?.dataset?.action === 'set-edit-portrait-url') {
     setEditPortraitUrl(field.value);
+    return;
+  }
+  if (field?.dataset?.action === 'update-fazit-preview') {
+    updateFazitPreview();
+    return;
+  }
+  if (field?.dataset?.action === 'update-fazit-token-icon') {
+    updateFazitTokenIcon(field.dataset.lineId, field.dataset.tokenId, field.value);
+    return;
+  }
+  if (field?.dataset?.action === 'update-fazit-token-label') {
+    updateFazitTokenLabel(field.dataset.lineId, field.dataset.tokenId, field.value);
   }
 }
 

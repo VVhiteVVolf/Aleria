@@ -1,0 +1,239 @@
+// Fazit ("Session-Fazit") form: mehrere Zeilen aus Icon+Beschriftung-Bausteinen
+// (Personen aus dem Charakterarchiv oder frei gewaehlte Symbole).
+let _fazitLines = [];
+let _fazitLineCounter = 0;
+let _fazitTokenCounter = 0;
+let _fazitIconPickerTarget = null;
+let _editingFazitCommentId = null;
+
+function fazitAvailableCharacters() {
+  try {
+    return (typeof getAvailableCommentCharacters === 'function' ? getAvailableCommentCharacters() : [])
+      .filter(character => character?.id && character.entityType !== 'creature');
+  } catch {
+    return [];
+  }
+}
+
+function newFazitLine() {
+  _fazitLineCounter += 1;
+  return { id: `line-${_fazitLineCounter}`, tokens: [] };
+}
+
+function newFazitToken(kind) {
+  _fazitTokenCounter += 1;
+  return { id: `token-${_fazitTokenCounter}`, kind: kind === 'person' ? 'person' : 'symbol', icon: '', label: '', characterId: '' };
+}
+
+function findFazitLine(lineId) {
+  return _fazitLines.find(line => line.id === String(lineId));
+}
+
+function findFazitToken(lineId, tokenId) {
+  const line = findFazitLine(lineId);
+  return line?.tokens.find(token => token.id === String(tokenId)) || null;
+}
+
+function renderFazitTokenEditor(line, token) {
+  const picker = token.kind === 'person'
+    ? `<button type="button" class="fazit-token-portrait-btn" data-action="pick-fazit-token-person" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Figur wählen">
+        ${token.icon ? `<img src="${escapeHtml(sanitizeImageSrc(token.icon))}" alt="">` : '<span>?</span>'}
+      </button>`
+    : `<span class="fazit-token-icon-field">
+        <input type="text" class="fazit-token-icon-input" value="${escapeHtml(token.icon)}" placeholder="Icon-URL" data-action="update-fazit-token-icon" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}">
+        <button type="button" data-action="pick-fazit-token-icon" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Icon-Verzeichnis öffnen">Icon</button>
+      </span>`;
+  return `<div class="fazit-token-editor" data-token-id="${escapeHtml(token.id)}">
+    <button type="button" class="fazit-token-move" data-action="move-fazit-token" data-direction="left" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Nach links verschieben" aria-label="Nach links verschieben">◀</button>
+    ${picker}
+    <input type="text" class="fazit-token-label-input" value="${escapeHtml(token.label)}" maxlength="80" placeholder="${token.kind === 'person' ? 'Name' : 'Beschriftung'}" data-action="update-fazit-token-label" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}">
+    <button type="button" class="fazit-token-move" data-action="move-fazit-token" data-direction="right" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Nach rechts verschieben" aria-label="Nach rechts verschieben">▶</button>
+    <button type="button" class="fazit-token-remove" data-action="remove-fazit-token" data-line-id="${escapeHtml(line.id)}" data-token-id="${escapeHtml(token.id)}" title="Baustein entfernen" aria-label="Baustein entfernen">×</button>
+  </div>`;
+}
+
+function renderFazitLineEditor(line) {
+  return `<div class="fazit-line-editor" data-line-id="${escapeHtml(line.id)}">
+    <div class="fazit-line-tokens">${line.tokens.map(token => renderFazitTokenEditor(line, token)).join('') || '<span class="fazit-line-empty">Noch keine Bausteine — füge Personen oder Symbole hinzu.</span>'}</div>
+    <div class="fazit-line-actions">
+      <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="person" data-line-id="${escapeHtml(line.id)}">+ Person</button>
+      <button type="button" class="module-editor-mini-btn" data-action="add-fazit-token" data-token-kind="symbol" data-line-id="${escapeHtml(line.id)}">+ Symbol</button>
+      <button type="button" class="fazit-line-remove" data-action="remove-fazit-line" data-line-id="${escapeHtml(line.id)}" title="Zeile entfernen" aria-label="Zeile entfernen">Zeile entfernen</button>
+    </div>
+  </div>`;
+}
+
+function renderFazitLinesEditor() {
+  const host = document.getElementById('fz-lines');
+  if (!host) return;
+  host.innerHTML = _fazitLines.length
+    ? _fazitLines.map(renderFazitLineEditor).join('')
+    : '<p class="fazit-lines-empty">Noch keine Zeile angelegt.</p>';
+}
+
+function collectFazitFormPayload() {
+  return normalizeCommentFazitItem({
+    title: document.getElementById('fz-title')?.value || 'Fazit',
+    lines: _fazitLines
+  });
+}
+
+function updateFazitPreview() {
+  const preview = document.getElementById('fz-preview');
+  if (!preview) return;
+  const item = collectFazitFormPayload() || { title: document.getElementById('fz-title')?.value.trim() || 'Fazit', lines: [] };
+  preview.innerHTML = item.lines.length
+    ? renderCommentFazitCard(item)
+    : '<p class="fazit-preview-empty">Noch nichts zum Anzeigen — füge Zeilen und Bausteine hinzu.</p>';
+}
+
+function addFazitLine() {
+  _fazitLines.push(newFazitLine());
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function removeFazitLine(lineId) {
+  _fazitLines = _fazitLines.filter(line => line.id !== String(lineId));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function addFazitToken(lineId, kind) {
+  const line = findFazitLine(lineId);
+  if (!line || line.tokens.length >= 24) return;
+  line.tokens.push(newFazitToken(kind));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function removeFazitToken(lineId, tokenId) {
+  const line = findFazitLine(lineId);
+  if (!line) return;
+  line.tokens = line.tokens.filter(token => token.id !== String(tokenId));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function moveFazitToken(lineId, tokenId, direction) {
+  const line = findFazitLine(lineId);
+  if (!line) return;
+  const index = line.tokens.findIndex(token => token.id === String(tokenId));
+  const targetIndex = index + (direction === 'right' ? 1 : -1);
+  if (index < 0 || targetIndex < 0 || targetIndex >= line.tokens.length) return;
+  [line.tokens[index], line.tokens[targetIndex]] = [line.tokens[targetIndex], line.tokens[index]];
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function updateFazitTokenIcon(lineId, tokenId, value) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token) return;
+  token.icon = String(value || '').trim();
+  updateFazitPreview();
+}
+
+function updateFazitTokenLabel(lineId, tokenId, value) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token) return;
+  token.label = String(value || '').trim().slice(0, 80);
+  updateFazitPreview();
+}
+
+function openFazitTokenIconPicker(lineId, tokenId) {
+  const input = document.querySelector(`.fazit-token-icon-input[data-line-id="${CSS.escape(String(lineId))}"][data-token-id="${CSS.escape(String(tokenId))}"]`);
+  if (!input) return;
+  _fazitIconPickerTarget = { lineId: String(lineId), tokenId: String(tokenId) };
+  if (typeof openIconDirectory === 'function') openIconDirectory();
+  else _fazitIconPickerTarget = null;
+}
+
+function handleFazitIconSelected(event) {
+  const target = _fazitIconPickerTarget;
+  const src = String(event?.detail?.src || '').trim();
+  _fazitIconPickerTarget = null;
+  if (!target || !src) return;
+  const token = findFazitToken(target.lineId, target.tokenId);
+  if (!token) return;
+  token.icon = src;
+  renderFazitLinesEditor();
+  updateFazitPreview();
+  if (typeof closeIconDirectory === 'function') closeIconDirectory();
+}
+
+document.addEventListener('almanach-icon-selected', handleFazitIconSelected);
+
+function openFazitTokenPersonPicker(lineId, tokenId) {
+  const token = findFazitToken(lineId, tokenId);
+  if (!token) return;
+  const characters = fazitAvailableCharacters();
+  if (!characters.length) {
+    if (typeof showAppStatus === 'function') showAppStatus('Keine gespeicherten Figuren im Charakterarchiv gefunden.', 'error');
+    return;
+  }
+  const names = characters.map((character, index) => `${index + 1}. ${character.name}`).join('\n');
+  const choice = prompt(`Welche Figur? (Nummer eintragen)\n\n${names}`, '1');
+  if (choice == null) return;
+  const index = Math.max(1, Math.min(characters.length, Number.parseInt(choice, 10) || 0)) - 1;
+  const character = characters[index];
+  if (!character) return;
+  token.icon = String(character.portrait || '');
+  token.label = String(character.name || '');
+  token.characterId = String(character.id || '');
+  renderFazitLinesEditor();
+  updateFazitPreview();
+}
+
+function resetFazitForm() {
+  _fazitLines = [];
+  _fazitLineCounter = 0;
+  _fazitTokenCounter = 0;
+  _editingFazitCommentId = null;
+  const title = document.getElementById('fz-title');
+  if (title) title.value = 'Fazit';
+  renderFazitLinesEditor();
+  updateFazitPreview();
+  const error = document.getElementById('fz-error');
+  if (error) {
+    error.textContent = '';
+    error.style.display = 'none';
+  }
+  const submit = document.getElementById('fz-submit');
+  if (submit) {
+    submit.disabled = false;
+    submit.textContent = 'Eintragen';
+  }
+}
+
+function openFazitForm() {
+  resetFazitForm();
+  addFazitLine();
+  activateDialog('fazit-form-overlay', { initialFocus: '#fz-title' });
+}
+
+function closeFazitForm() {
+  deactivateDialog('fazit-form-overlay');
+  _editingFazitCommentId = null;
+}
+
+function openEditFazitForm(commentId) {
+  const comment = findCachedCommentById(commentId);
+  const item = comment && getCommentFazitItem(comment);
+  if (!item) {
+    alert('Fazit konnte nicht geladen werden.');
+    return;
+  }
+  resetFazitForm();
+  _editingFazitCommentId = String(commentId || '');
+  const title = document.getElementById('fz-title');
+  if (title) title.value = item.title;
+  _fazitLines = item.lines.map(line => ({
+    id: `line-${(_fazitLineCounter += 1)}`,
+    tokens: line.tokens.map(token => ({ ...token, id: `token-${(_fazitTokenCounter += 1)}` }))
+  }));
+  renderFazitLinesEditor();
+  updateFazitPreview();
+  const submit = document.getElementById('fz-submit');
+  if (submit) submit.textContent = 'Änderungen speichern';
+  activateDialog('fazit-form-overlay', { initialFocus: '#fz-title' });
+}

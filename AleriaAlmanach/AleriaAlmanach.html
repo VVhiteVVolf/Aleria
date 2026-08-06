@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="./styles/archive.css?v=20260712-dashboard-continuation-v1">
 <link rel="stylesheet" href="./styles/archive-hierarchy.css?v=20260712-hierarchy-browser-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20260712-image-tabs-v1">
-  <link rel="stylesheet" href="./styles/comments.css?v=20260807-compact-usage-v1">
+  <link rel="stylesheet" href="./styles/comments.css?v=20260807-fazit-v1">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20260713-language-bubbles-v2">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
@@ -268,16 +268,17 @@
   <script src="./modules/comments/comments-spell-fonts.js?v=20260713-language-bubbles-v2" defer></script>
   <script src="./modules/comments/comments-transaction-policy.js?v=20260806-badge-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-combat-mini-profile.js?v=20260803-action-economy-v2" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20260807-compact-usage-v1" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
+  <script src="./modules/comments/comments-fazit-render.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260802-comment-combat-profile-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20260802-combat-state-v2" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20260805-herausforderung-v2" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20260804-referee-v2" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260804-char-filter-perf-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
@@ -301,6 +302,9 @@
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/comments/comments-fazit.js?v=20260807-fazit-v1" defer></script>
+  <script src="./modules/comments/comments-fazit-submit.js?v=20260807-fazit-v1" defer></script>
+  <script src="./modules/comments/comments-fazit-edit-submit.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20260803-character-image-sets-v1" defer></script>
@@ -312,7 +316,7 @@
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-action-events.js?v=20260804-early-bind-v1" defer></script>
+  <script src="./modules/comments/comments-action-events.js?v=20260807-fazit-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260804-referee-v2" defer></script>
@@ -397,7 +401,7 @@
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
 <script src="./modules/comments/comments-segment-events.js?v=20260802-brandhof-combat-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260802-creature-picker-v1" defer></script>
-<script src="./modules/comments/comments-input-events.js?v=20260520-cleanup-v1" defer></script>
+<script src="./modules/comments/comments-input-events.js?v=20260807-fazit-v1" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
 <script src="./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1" defer></script>
 
@@ -689,6 +693,38 @@
     <div class="comment-form-actions">
       <button class="comment-btn-cancel" type="button" data-action="close-showcase-form">Abbrechen</button>
       <button class="comment-btn-submit" id="sf-submit" type="button" data-action="submit-showcase">Vorstellen</button>
+    </div>
+  </div>
+</div>
+
+<!-- FAZIT FORM OVERLAY -->
+<div id="fazit-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="fazit-form-title" tabindex="-1">
+  <div class="comment-form-card fazit-form-card">
+    <div class="comment-form-title" id="fazit-form-title">✦ &nbsp; Fazit eintragen &nbsp; ✦</div>
+    <div class="fazit-form-grid">
+      <div class="fazit-form-fields">
+        <div>
+          <label>Titel</label>
+          <input type="text" id="fz-title" maxlength="120" value="Fazit" placeholder="z.B. Fazit der Anhörung" data-action="update-fazit-preview">
+        </div>
+        <div class="fazit-lines-editor-head">
+          <label>Zeilen</label>
+          <button class="module-editor-mini-btn" type="button" data-action="add-fazit-line">+ Zeile</button>
+        </div>
+        <div id="fz-lines" class="fazit-lines-editor" aria-label="Fazit-Zeilen"></div>
+        <div class="fmt-hint">Personen kommen aus dem Charakterarchiv (Figuren dieser Szene zuerst). Symbole: Icon-URL eintragen oder über „Icon” aus dem Icon-Verzeichnis wählen. Reihenfolge mit ◀ ▶ anpassen.</div>
+      </div>
+      <div class="showcase-form-preview-col">
+        <div class="comment-live-preview">
+          <div class="comment-live-preview-head"><div class="comment-live-preview-kicker">Vorschau in der Szene</div></div>
+          <div id="fz-preview"></div>
+        </div>
+      </div>
+    </div>
+    <div id="fz-error" class="comment-form-error" style="display:none"></div>
+    <div class="comment-form-actions">
+      <button class="comment-btn-cancel" type="button" data-action="close-fazit-form">Abbrechen</button>
+      <button class="comment-btn-submit" id="fz-submit" type="button" data-action="submit-fazit">Eintragen</button>
     </div>
   </div>
 </div>

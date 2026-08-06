@@ -224,6 +224,8 @@ function renderCommentBubble(c, idx) {
   }
   const showcaseItem = getCommentShowcaseItem(c);
   if (showcaseItem) return renderCommentShowcase(c, idx, showcaseItem);
+  const fazitItem = getCommentFazitItem(c);
+  if (fazitItem) return renderCommentFazit(c, idx, fazitItem);
   const moduleInsert = getCommentModuleInsertItem(c);
   if (moduleInsert) return renderCommentModuleInsert(c, idx, moduleInsert);
   const attachmentItem = getCommentAttachmentItem(c);

@@ -4,6 +4,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-showcase-form',
   'open-module-insert-form',
   'open-attachment-form',
+  'open-fazit-form',
   'open-comment-form-after',
   'open-showcase-form-after',
   'open-module-insert-form-after',
@@ -13,6 +14,14 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-edit-showcase-form',
   'open-edit-module-insert-form',
   'open-edit-attachment-form',
+  'open-edit-fazit-form',
+  'add-fazit-line',
+  'remove-fazit-line',
+  'add-fazit-token',
+  'remove-fazit-token',
+  'move-fazit-token',
+  'pick-fazit-token-icon',
+  'pick-fazit-token-person',
   'export-module-insert',
   'choose-module-insert-create',
   'choose-module-insert-import',
@@ -53,6 +62,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'close-showcase-form',
   'close-module-insert-form',
   'close-attachment-form',
+  'close-fazit-form',
   'close-edit-comment',
   'close-delete-confirm',
   'close-comment-showcase-profile',
@@ -62,6 +72,7 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'submit-showcase',
   'submit-module-insert',
   'submit-attachment',
+  'submit-fazit',
   'submit-edit-comment',
   'confirm-delete-comment'
 ]);
@@ -88,6 +99,50 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'open-attachment-form') {
     openAttachmentForm();
+    return;
+  }
+  if (action === 'open-fazit-form') {
+    openFazitForm();
+    return;
+  }
+  if (action === 'open-edit-fazit-form') {
+    openEditFazitForm(commentId);
+    return;
+  }
+  if (action === 'add-fazit-line') {
+    addFazitLine();
+    return;
+  }
+  if (action === 'remove-fazit-line') {
+    removeFazitLine(trigger.dataset.lineId);
+    return;
+  }
+  if (action === 'add-fazit-token') {
+    addFazitToken(trigger.dataset.lineId, trigger.dataset.tokenKind);
+    return;
+  }
+  if (action === 'remove-fazit-token') {
+    removeFazitToken(trigger.dataset.lineId, trigger.dataset.tokenId);
+    return;
+  }
+  if (action === 'move-fazit-token') {
+    moveFazitToken(trigger.dataset.lineId, trigger.dataset.tokenId, trigger.dataset.direction);
+    return;
+  }
+  if (action === 'pick-fazit-token-icon') {
+    openFazitTokenIconPicker(trigger.dataset.lineId, trigger.dataset.tokenId);
+    return;
+  }
+  if (action === 'pick-fazit-token-person') {
+    openFazitTokenPersonPicker(trigger.dataset.lineId, trigger.dataset.tokenId);
+    return;
+  }
+  if (action === 'close-fazit-form') {
+    closeFazitForm();
+    return;
+  }
+  if (action === 'submit-fazit') {
+    submitEditFazit();
     return;
   }
   if (action === 'open-comment-form-after') {

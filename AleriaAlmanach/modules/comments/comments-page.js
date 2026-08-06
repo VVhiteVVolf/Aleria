@@ -9,7 +9,8 @@ const COMMENT_ACTION_ICONS = {
   rest: '../IconOrdner/Buttom Icons/Rasten.png',
   encounter: '../IconOrdner/Buttom Icons/Kampfstarter.png',
   poll: 'https://i.imgur.com/jeMqIr7.png',
-  herausforderung: '../IconOrdner/Buttom Icons/Herausforderung.png'
+  herausforderung: '../IconOrdner/Buttom Icons/Herausforderung.png',
+  fazit: '../IconOrdner/Buttom Icons/Fazit.png'
 };
 
 function buildCommentActionIcon(iconKey) {
@@ -39,6 +40,9 @@ function buildCommentActionBar(hintText, options = {}) {
   const moduleInsertButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-module-insert-add-btn" type="button" data-action="open-module-insert-form" title="Modul einfuegen" aria-label="Modul einfuegen">${buildCommentActionIcon('module')}</button>`
     : '';
+  const fazitButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-fazit-btn" type="button" data-action="open-fazit-form" title="Fazit eintragen" aria-label="Fazit eintragen">${buildCommentActionIcon('fazit')}</button>`
+    : '';
   return `
     <div class="comments-form-bar">
       <button class="comments-add-btn comments-action-icon-btn" type="button" data-action="open-comment-form" title="Kommentieren" aria-label="Kommentieren">${buildCommentActionIcon('comment')}</button>
@@ -51,6 +55,7 @@ function buildCommentActionBar(hintText, options = {}) {
       <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>
       ${moduleInsertButton}
       <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>
+      ${fazitButton}
       <span class="comments-form-hint">${escapeHtml(hintText || '')}</span>
       ${buildCommentQuickToolsToggle()}
       ${buildCommentToolsToggle()}
