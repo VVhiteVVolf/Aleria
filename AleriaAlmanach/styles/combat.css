@@ -534,6 +534,7 @@
     linear-gradient(110deg, var(--combat-start), var(--combat-end));
   box-shadow: 0 8px 20px rgba(49, 7, 14, 0.19);
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .combat-evaluation::before {
