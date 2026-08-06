@@ -101,7 +101,7 @@ async function requestFazitHints() {
   try {
     const response = await window.AleriaGptClient.sendChat(buildFazitHintQuery(), retrieval, {
       responseMode: 'summary',
-      answerStyle: 'short',
+      answerStyle: 'deep',
       timeoutMs: 45000
     });
     if (!response?.ok || !response.text) {

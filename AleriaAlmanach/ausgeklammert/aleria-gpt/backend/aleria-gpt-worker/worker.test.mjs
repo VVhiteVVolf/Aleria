@@ -33,7 +33,28 @@ test('response budgets cap every requested answer style', () => {
   const env = { ALERIA_GPT_MAX_TOKENS: '5000' };
   assert.equal(workerInternals.getResponseTokenLimit(env, { answerStyle: 'short' }), 320);
   assert.equal(workerInternals.getResponseTokenLimit(env, { answerStyle: 'normal' }), 620);
-  assert.equal(workerInternals.getResponseTokenLimit(env, { answerStyle: 'deep' }), 1200);
+  assert.equal(workerInternals.getResponseTokenLimit(env, { answerStyle: 'deep' }), 3000);
+});
+
+test('response budgets still respect a lower configured ceiling than the style default', () => {
+  const env = { ALERIA_GPT_MAX_TOKENS: '1500' };
+  assert.equal(workerInternals.getResponseTokenLimit(env, { answerStyle: 'deep' }), 1500);
+});
+
+test('model chain puts the primary model first and appends configured fallbacks in order', () => {
+  const env = {
+    ALERIA_GPT_MODEL: 'sao10k/l3.3-euryale-70b',
+    ALERIA_GPT_FALLBACK_MODELS: 'anthracite-org/magnum-v4-72b, nousresearch/hermes-4-70b'
+  };
+  assert.deepEqual(workerInternals.getModelChain(env), [
+    'sao10k/l3.3-euryale-70b',
+    'anthracite-org/magnum-v4-72b',
+    'nousresearch/hermes-4-70b'
+  ]);
+});
+
+test('model chain works with no fallbacks configured', () => {
+  assert.deepEqual(workerInternals.getModelChain({ ALERIA_GPT_MODEL: 'sao10k/l3.3-euryale-70b' }), ['sao10k/l3.3-euryale-70b']);
 });
 
 function encodePart(value) {

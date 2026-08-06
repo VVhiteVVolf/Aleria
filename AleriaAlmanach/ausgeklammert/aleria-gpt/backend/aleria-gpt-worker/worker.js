@@ -162,14 +162,14 @@ function getAnswerStyle(payload) {
 function getResponseTokenLimit(env, payload) {
   const configuredMax = getEnvNumber(env, 'ALERIA_GPT_MAX_TOKENS', DEFAULT_MAX_TOKENS);
   const style = getAnswerStyle(payload);
-  if (style === 'deep') return Math.min(configuredMax, 1200);
+  if (style === 'deep') return Math.min(configuredMax, 3000);
   if (style === 'normal') return Math.min(configuredMax, 620);
   return Math.min(configuredMax, 320);
 }
 
 function getAnswerStyleInstruction(payload) {
   const style = getAnswerStyle(payload);
-  if (style === 'deep') return 'Antwortstil: Tief. Bis zu 5 kurze Absaetze oder 6 Listenpunkte.';
+  if (style === 'deep') return 'Antwortstil: Tief. Nimm dir den Platz, den das Thema wirklich braucht - bis zu 10 Absaetze oder Listenpunkte, ausfuehrlich und mit Details statt knapp zusammengefasst. Nicht kuenstlich kuerzen.';
   if (style === 'normal') return 'Antwortstil: Normal. 2-3 kurze Absaetze oder bis zu 4 Listenpunkte.';
   return 'Antwortstil: Kurz. 1-2 kurze Absaetze oder maximal 3 Listenpunkte. Keine lange Analyse.';
 }
@@ -326,10 +326,20 @@ async function enforceUsageProtection(request, env, uid, tokenReservation) {
   ]);
 }
 
+function getModelChain(env) {
+  const primary = getEnvText(env, 'ALERIA_GPT_MODEL');
+  const fallbacks = getEnvText(env, 'ALERIA_GPT_FALLBACK_MODELS')
+    .split(',')
+    .map(entry => entry.trim())
+    .filter(Boolean);
+  return [primary, ...fallbacks].filter(Boolean);
+}
+
 async function callProvider(payload, env) {
   const providerBaseUrl = getEnvText(env, 'ALERIA_GPT_PROVIDER_BASE_URL', DEFAULT_PROVIDER_BASE_URL).replace(/\/+$/g, '');
   const apiKey = getEnvText(env, 'ALERIA_GPT_API_KEY');
-  const model = getEnvText(env, 'ALERIA_GPT_MODEL');
+  const modelChain = getModelChain(env);
+  const model = modelChain[0] || '';
   const maxTokens = getResponseTokenLimit(env, payload);
   const timeoutMs = getEnvNumber(env, 'ALERIA_GPT_TIMEOUT_MS', DEFAULT_TIMEOUT_MS);
   const appUrl = getEnvText(env, 'ALERIA_GPT_APP_URL');
@@ -355,7 +365,10 @@ async function callProvider(payload, env) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      model,
+      // "models" (statt "model") laesst OpenRouter der Reihe nach durchprobieren, falls der
+      // jeweils erste Eintrag (Anbieter down/ueberlastet/Timeout) fehlschlaegt. Bei nur einem
+      // Eintrag verhaelt es sich identisch zu einem einzelnen "model".
+      models: modelChain,
       max_tokens: maxTokens,
       temperature: 0.25,
       messages: [
@@ -376,6 +389,7 @@ async function callProvider(payload, env) {
 
   return {
     text: cleanOutputText(json?.choices?.[0]?.message?.content || '', 10000),
+    model: cleanText(json?.model, 120) || model,
     usage: {
       promptTokens: Math.max(0, Number(json?.usage?.prompt_tokens || 0)),
       completionTokens: Math.max(0, Number(json?.usage?.completion_tokens || 0)),
@@ -398,7 +412,7 @@ async function handleChat(request, env, origin, identity) {
   return jsonResponse({
     ok: true,
     text: providerResult.text,
-    model: getEnvText(env, 'ALERIA_GPT_MODEL'),
+    model: providerResult.model,
     sourceHash: payload?.retrieval?.sourceHash || '',
     usage: providerResult.usage
   }, 200, origin, env);
@@ -451,6 +465,7 @@ export const workerInternals = Object.freeze({
   isOriginAllowed,
   getBearerToken,
   getResponseTokenLimit,
+  getModelChain,
   nextUsageState,
   decodeJwtPart,
   resetFirebaseJwksCache,
