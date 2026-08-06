@@ -31,6 +31,7 @@
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
     const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
     const commitResetCombatParticipantsCallable = httpsCallable(functions, 'commitResetCombatParticipants', { timeout: 30000 });
+    const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
@@ -588,6 +589,11 @@
       async undoMechanicalComment(entryId, commentId, options = {}) {
         await requireFirebaseUser();
         const result = await commitUndoMechanicalCommentCallable({ entryId, commentId, force: options.force === true });
+        return result.data;
+      },
+      async editCombatEncounterText(entryId, commentId, title, body) {
+        await requireFirebaseUser();
+        const result = await commitEditCombatEncounterTextCallable({ entryId, commentId, title, body });
         return result.data;
       },
       async resetCombatParticipants(participants) {

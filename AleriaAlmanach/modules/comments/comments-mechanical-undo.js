@@ -34,8 +34,37 @@ async function confirmMechanicalUndo(commentId) {
   }
 }
 
+async function editCombatEncounterText(trigger) {
+  const commentId = String(trigger.dataset.commentId || '').trim();
+  if (!commentId) return;
+  const currentTitle = trigger.dataset.title || '';
+  const currentBody = trigger.dataset.body || '';
+  const nextTitle = prompt('Titel der Kampfankündigung:', currentTitle);
+  if (nextTitle === null) return;
+  const nextBody = prompt('Erzählerischer Hinweis (optional):', currentBody);
+  if (nextBody === null) return;
+  try {
+    const backend = await getCommentBackend({ timeoutMs: 1200 });
+    if (typeof backend.editCombatEncounterText !== 'function') {
+      throw new Error('Bearbeiten von Kampfankündigungen benötigt eine Online-Verbindung.');
+    }
+    const threadId = getCurrentCommentThreadId();
+    await backend.editCombatEncounterText(threadId, commentId, nextTitle, nextBody);
+    await loadCommentsIntoPage(threadId, true);
+    if (typeof showAppStatus === 'function') showAppStatus('Kampfankündigung aktualisiert.', 'success');
+  } catch (e) {
+    console.error('edit combat encounter text failed:', e);
+    const message = getFriendlyErrorMessage(e, 'Fehler beim Bearbeiten.');
+    if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
+  }
+}
+
 document.addEventListener('click', event => {
-  const trigger = event.target?.closest?.('[data-action="undo-mechanical-comment"]');
-  if (!trigger) return;
-  void confirmMechanicalUndo(trigger.dataset.commentId || '');
+  const undoTrigger = event.target?.closest?.('[data-action="undo-mechanical-comment"]');
+  if (undoTrigger) {
+    void confirmMechanicalUndo(undoTrigger.dataset.commentId || '');
+    return;
+  }
+  const editTrigger = event.target?.closest?.('[data-action="edit-combat-encounter-text"]');
+  if (editTrigger) void editCombatEncounterText(editTrigger);
 });
