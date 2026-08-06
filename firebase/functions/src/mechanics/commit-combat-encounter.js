@@ -70,6 +70,45 @@ function getCurrentEncounter(history = [], encounterId = '') {
   return deriveCombatEncounterState(history).get(String(encounterId || '')) || null;
 }
 
+function splitEncounterKey(key = '') {
+  const raw = String(key || '');
+  const separatorIndex = raw.indexOf(':');
+  if (separatorIndex < 0) return { entryId: raw, encounterId: '' };
+  return { entryId: raw.slice(0, separatorIndex), encounterId: raw.slice(separatorIndex + 1) };
+}
+
+async function findConflictingEncounter(transaction, database, descriptor, currentEncounterKey) {
+  const lockSnapshot = await transaction.get(combatProfileLockRef(database, descriptor));
+  if (!lockSnapshot.exists) return null;
+  const keys = Array.isArray(lockSnapshot.data()?.activeEncounterKeys) ? lockSnapshot.data().activeEncounterKeys : [];
+  const conflictingKey = keys.find(key => key !== currentEncounterKey);
+  if (!conflictingKey) return null;
+  const { entryId: conflictEntryId, encounterId: conflictEncounterId } = splitEncounterKey(conflictingKey);
+  if (!conflictEntryId || !conflictEncounterId) return { title: '' };
+  const conflictSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', conflictEntryId));
+  const conflictHistory = sortSceneHistory(conflictSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+    .filter(isTrustedMechanicalComment);
+  const conflictEncounter = getCurrentEncounter(conflictHistory, conflictEncounterId);
+  return { title: conflictEncounter?.active ? conflictEncounter.title : '' };
+}
+
+async function assertNoConflictingEncounter(transaction, database, participants, currentEncounterKey) {
+  const unique = [...new Map((Array.isArray(participants) ? participants : []).map(participant => {
+    const descriptor = persistenceDescriptor(participant);
+    return [recordKey(descriptor), { descriptor, participant }];
+  })).values()];
+  for (const { descriptor, participant } of unique) {
+    const conflict = await findConflictingEncounter(transaction, database, descriptor, currentEncounterKey);
+    if (!conflict) continue;
+    const name = participant.name || 'Diese Figur';
+    const titlePart = conflict.title ? `am Kampf "${conflict.title}"` : 'an einem anderen aktiven Kampf';
+    fail(
+      'failed-precondition',
+      `${name} nimmt bereits ${titlePart} in einer anderen Szene teil. Entferne sie dort zuerst oder beende diesen Kampf, bevor du sie hier einträgst.`
+    );
+  }
+}
+
 function validateOperation(event, current) {
   if (event.operation === 'start') {
     if (current?.active) fail('already-exists', 'Dieser Kampf läuft bereits.');
@@ -158,6 +197,7 @@ export const commitCombatEncounter = onCall({
     let lockDescriptors = [];
     let locksActivated = true;
     if (requested.operation === 'start' || requested.operation === 'add') {
+      await assertNoConflictingEncounter(transaction, database, requested.participants, encounterKey);
       lockDescriptors = requested.participants.map(persistenceDescriptor);
       locksActivated = true;
       updateCombatProfileLocks(transaction, database, lockDescriptors, encounterKey, true);
@@ -267,5 +307,8 @@ export const combatEncounterCommitInternals = Object.freeze({
   validateOperation,
   combatProfileLockRef,
   updateCombatProfileLocks,
-  getDescriptorsNoLongerActive
+  getDescriptorsNoLongerActive,
+  splitEncounterKey,
+  findConflictingEncounter,
+  assertNoConflictingEncounter
 });

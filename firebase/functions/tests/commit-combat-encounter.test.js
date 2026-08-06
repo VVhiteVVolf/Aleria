@@ -66,3 +66,104 @@ test('eine geteilte Kreaturenvorlage bleibt gesperrt solange eine ihrer Instanze
     [{ kind: 'creature', recordId: 'skeleton-template', persistent: false }]
   );
 });
+
+test('zerlegt einen Sperrschluessel in Szene und Kampfkennung', () => {
+  assert.deepEqual(
+    combatEncounterCommitInternals.splitEncounterKey('szene-a:encounter-123'),
+    { entryId: 'szene-a', encounterId: 'encounter-123' }
+  );
+  assert.deepEqual(
+    combatEncounterCommitInternals.splitEncounterKey('ohne-trenner'),
+    { entryId: 'ohne-trenner', encounterId: '' }
+  );
+});
+
+function fakeConflictDatabase({ lockData = null } = {}) {
+  return {
+    collection(collectionId) {
+      if (collectionId === 'comments') {
+        return { where: () => ({ __isCommentsQuery: true }) };
+      }
+      return {
+        doc: documentId => ({
+          path: `${collectionId}/${documentId}`,
+          collection: nestedCollectionId => ({
+            doc: nestedDocumentId => ({ path: `${collectionId}/${documentId}/${nestedCollectionId}/${nestedDocumentId}`, __lockData: lockData })
+          })
+        })
+      };
+    }
+  };
+}
+
+function fakeTransaction(conflictComments = []) {
+  return {
+    get: async ref => {
+      if (ref?.__isCommentsQuery) return { docs: conflictComments.map(comment => ({ id: comment.id, data: () => comment })) };
+      return { exists: !!ref.__lockData, data: () => ref.__lockData };
+    }
+  };
+}
+
+test('findConflictingEncounter meldet keinen Konflikt ohne bestehende Sperre', async () => {
+  const database = fakeConflictDatabase({ lockData: null });
+  const transaction = fakeTransaction();
+  const result = await combatEncounterCommitInternals.findConflictingEncounter(
+    transaction, database, { kind: 'character', recordId: 'gawain' }, 'szene-a:encounter-1'
+  );
+  assert.equal(result, null);
+});
+
+test('findConflictingEncounter meldet keinen Konflikt fuer denselben Kampf', async () => {
+  const database = fakeConflictDatabase({ lockData: { activeEncounterKeys: ['szene-a:encounter-1'] } });
+  const transaction = fakeTransaction();
+  const result = await combatEncounterCommitInternals.findConflictingEncounter(
+    transaction, database, { kind: 'character', recordId: 'gawain' }, 'szene-a:encounter-1'
+  );
+  assert.equal(result, null);
+});
+
+test('findConflictingEncounter findet einen aktiven Kampf in einer anderen Szene und liefert dessen Titel', async () => {
+  const database = fakeConflictDatabase({ lockData: { activeEncounterKeys: ['szene-b:encounter-9'] } });
+  const conflictComments = [{
+    id: 'c1', entryId: 'szene-b', combatEncounter: {
+      encounterId: 'encounter-9', operation: 'start', title: 'Hinterhalt am Fluss', participants: []
+    },
+    serverValidatedMechanics: true
+  }];
+  const transaction = fakeTransaction(conflictComments);
+  const result = await combatEncounterCommitInternals.findConflictingEncounter(
+    transaction, database, { kind: 'character', recordId: 'gawain' }, 'szene-a:encounter-1'
+  );
+  assert.equal(result.title, 'Hinterhalt am Fluss');
+});
+
+test('assertNoConflictingEncounter blockiert mit klarer Fehlermeldung, wenn eine Figur schon anderswo im Kampf ist', async () => {
+  const database = fakeConflictDatabase({ lockData: { activeEncounterKeys: ['szene-b:encounter-9'] } });
+  const conflictComments = [{
+    id: 'c1', entryId: 'szene-b', combatEncounter: {
+      encounterId: 'encounter-9', operation: 'start', title: 'Hinterhalt am Fluss', participants: []
+    },
+    serverValidatedMechanics: true
+  }];
+  const transaction = fakeTransaction(conflictComments);
+  const participant = { name: 'Gawain', persistence: { kind: 'character', recordId: 'gawain' } };
+  await assert.rejects(
+    combatEncounterCommitInternals.assertNoConflictingEncounter(transaction, database, [participant], 'szene-a:encounter-1'),
+    error => {
+      assert.equal(error.code, 'failed-precondition');
+      assert.match(error.message, /Gawain/);
+      assert.match(error.message, /Hinterhalt am Fluss/);
+      return true;
+    }
+  );
+});
+
+test('assertNoConflictingEncounter laesst unbeteiligte Figuren unbeanstandet durch', async () => {
+  const database = fakeConflictDatabase({ lockData: null });
+  const transaction = fakeTransaction();
+  const participant = { name: 'Gawain', persistence: { kind: 'character', recordId: 'gawain' } };
+  await assert.doesNotReject(
+    combatEncounterCommitInternals.assertNoConflictingEncounter(transaction, database, [participant], 'szene-a:encounter-1')
+  );
+});
