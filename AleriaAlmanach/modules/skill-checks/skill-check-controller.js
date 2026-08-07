@@ -15,7 +15,7 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260803-skill-checks-v2';
+} from './skill-check-model.js?v=20260807-guinevere-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
 import { SkillResolutionService } from './skill-resolution-service.js?v=20260804-referee-v2';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260804-referee-v2';

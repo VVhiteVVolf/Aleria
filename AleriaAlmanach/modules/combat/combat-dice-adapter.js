@@ -32,4 +32,12 @@ export class CombatDiceAdapter {
       rollType: 'saving-throw'
     });
   }
+
+  async rollWardDeflection({ actorName = '', targetName = '', container = null } = {}) {
+    return this.service.roll('1d20', container, {
+      roller: targetName,
+      purpose: `Ablenkungswurf gegen ${actorName}`,
+      rollType: 'general'
+    });
+  }
 }

@@ -5,8 +5,8 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260803-skill-checks-v2';
-import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
+} from './skill-check-model.js?v=20260807-guinevere-v1';
+import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,

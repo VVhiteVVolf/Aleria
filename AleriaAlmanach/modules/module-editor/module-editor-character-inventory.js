@@ -402,7 +402,10 @@ function sanitizeCharacterInventoryData(data = {}) {
     ]),
     items,
     companions: sanitizeCharacterInventoryCompanions(data.companions),
-    equipmentQuiz: sanitizeCharacterInventoryEquipmentQuiz(data.equipmentQuiz)
+    equipmentQuiz: sanitizeCharacterInventoryEquipmentQuiz(data.equipmentQuiz),
+    // Siehe combatProfile.revision in combat-profile-model.js - dieselbe Absicherung
+    // gegen veraltete Browser-Tabs, hier fürs Inventar (Ausrüstung, Munition, Gegenstände).
+    revision: Math.max(0, Math.trunc(Number(data.revision) || 0))
   };
 }
 

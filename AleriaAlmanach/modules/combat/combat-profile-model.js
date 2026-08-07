@@ -518,6 +518,8 @@ function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
   return {
     id,
     name: normalizeText(source.name, 120),
+    school: normalizeText(source.school, 60),
+    icon: normalizeText(source.icon, 1000),
     level,
     manaCost,
     slotResourceId: cantrip ? '' : normalizeText(source.slotResourceId, 120),
@@ -774,6 +776,10 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
 
   return {
     schemaVersion: COMBAT_PROFILE_SCHEMA_VERSION,
+    // Monotone Kennzahl gegen versehentliches Zurücküberschreiben durch veraltete Browser-Tabs
+    // (z. B. ein Tab, der vor einem Charakterimport geladen wurde). saveCharacter() in firebase.js
+    // vergleicht diesen Wert mit dem serverseitig gespeicherten, bevor ein Kampfprofil ersetzt wird.
+    revision: Math.max(0, Math.trunc(Number(source.revision) || 0)),
     identity: {
       ancestry: normalizeText(source.identity?.ancestry || source.ancestry, 100),
       archetype: normalizeText(source.identity?.archetype || source.archetype, 120),

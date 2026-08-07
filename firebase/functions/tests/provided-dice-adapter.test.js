@@ -38,6 +38,24 @@ test('berechnet Fertigkeitswuerfe aus Einzelwuerfeln und dem serverseitigen Modi
     .rollSkill({ modifier: 4, rollMode: 'advantage' }));
 });
 
+test('berechnet einen Abwehrladungen-Ablenkungswurf ueber einen eigenen W20-Kanal, unabhaengig vom Schadenswurf', async () => {
+  const adapter = new ProvidedDiceAdapter({
+    wardResolution: { roll: { natural: 13, rollId: 'ward-1' } },
+    damage: { diceResults: [5] }
+  });
+  const wardResult = await adapter.rollWardDeflection();
+  assert.equal(wardResult.natural, 13);
+  assert.equal(wardResult.total, 13);
+  // Der Ablenkungswurf darf den Schadenswuerfel-Index nicht verbrauchen.
+  const damageResult = await adapter.rollDamage({ damageFormula: '1d6', bonus: 0 });
+  assert.equal(damageResult.total, 5);
+});
+
+test('weist einen manipulierten oder fehlenden Ablenkungswurf zurueck', async () => {
+  await assert.rejects(new ProvidedDiceAdapter({}).rollWardDeflection());
+  await assert.rejects(new ProvidedDiceAdapter({ wardResolution: { roll: { natural: 21 } } }).rollWardDeflection());
+});
+
 test('validiert gemischte Technikschadenswuerfel, Sekundaerrettung und Folgeangriff getrennt', async () => {
   const adapter = new ProvidedDiceAdapter({
     attack: { diceResults: [14], naturalRoll: 14 },

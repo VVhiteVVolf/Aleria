@@ -1,4 +1,4 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260807-freya-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260807-save-guard-v1';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260807-magic-system-v1';
 import {
   findSpellSlotResourceId,

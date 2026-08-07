@@ -7,7 +7,7 @@ import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
-} from './combat-condition-duration.js?v=20260804-referee-v2';
+} from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260806-encounter-card-v1';
 
 function finiteOrNull(value) {

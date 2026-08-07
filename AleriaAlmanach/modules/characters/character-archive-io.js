@@ -90,7 +90,10 @@ async function importCharacterArchivePayload(payload) {
     delete data.id;
     delete data._builtin;
     delete data._imageSetsExplicit;
-    await window._fb.saveCharacter(id || null, data);
+    // Ein bewusster Import setzt sich immer durch (der Bestätigungsdialog oben ist die
+    // Freigabe dafür) und wird dadurch selbst zum neuen, vor veralteten Tabs geschützten Stand -
+    // siehe die Revisionsprüfung in saveCharacter().
+    await window._fb.saveCharacter(id || null, data, { forceOverwrite: true });
   }
 
   if (normalized.charTabs) {

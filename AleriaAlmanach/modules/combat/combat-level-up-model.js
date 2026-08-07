@@ -5,7 +5,7 @@ import {
   getMaximumHitPoints,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-freya-v1';
+} from './combat-profile-model.js?v=20260807-save-guard-v1';
 
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);

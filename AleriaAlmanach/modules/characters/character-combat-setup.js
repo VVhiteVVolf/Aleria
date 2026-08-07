@@ -18,7 +18,7 @@ import {
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
 } from '../combat/character-creation-templates.js?v=20260807-freya-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
 
 let activeSetup = null;
 

@@ -4,7 +4,7 @@ import {
   CombatProfileResolver,
   getCombatActorValidationMessage
 } from './combat-profile-resolver.js?v=20260807-freya-v1';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260807-freya-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260807-rhiannon-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,

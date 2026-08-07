@@ -19045,6 +19045,177 @@ const ALERIA_ICON_DIRECTORY = [
     "ratio": "square"
   },
   {
+    "name": "feather_alteration",
+    "fileName": "feather_alteration.png",
+    "folder": "Zauber/menus/icons/png/alteration",
+    "path": "../IconOrdner/Zauber/menus/icons/png/alteration/feather_alteration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "lightning_shield_alteration",
+    "fileName": "lightning_shield_alteration.png",
+    "folder": "Zauber/menus/icons/png/alteration",
+    "path": "../IconOrdner/Zauber/menus/icons/png/alteration/lightning_shield_alteration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "shield_alteration",
+    "fileName": "shield_alteration.png",
+    "folder": "Zauber/menus/icons/png/alteration",
+    "path": "../IconOrdner/Zauber/menus/icons/png/alteration/shield_alteration.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "attribute_damage",
+    "fileName": "attribute_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/attribute_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "disintegrate_damage",
+    "fileName": "disintegrate_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/disintegrate_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "fire_damage",
+    "fileName": "fire_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/fire_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "frost_damage",
+    "fileName": "frost_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/frost_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "poison_damage",
+    "fileName": "poison_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/poison_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "shock_damage",
+    "fileName": "shock_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/shock_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "stunted_magicka_damage",
+    "fileName": "stunted_magicka_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/stunted_magicka_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "sun_damage",
+    "fileName": "sun_damage.png",
+    "folder": "Zauber/menus/icons/png/destruction",
+    "path": "../IconOrdner/Zauber/menus/icons/png/destruction/sun_damage.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "chameleon_illusion",
+    "fileName": "chameleon_illusion.png",
+    "folder": "Zauber/menus/icons/png/illusion",
+    "path": "../IconOrdner/Zauber/menus/icons/png/illusion/chameleon_illusion.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "invisibility_illusion",
+    "fileName": "invisibility_illusion.png",
+    "folder": "Zauber/menus/icons/png/illusion",
+    "path": "../IconOrdner/Zauber/menus/icons/png/illusion/invisibility_illusion.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "light_eye_illusion",
+    "fileName": "light_eye_illusion.png",
+    "folder": "Zauber/menus/icons/png/illusion",
+    "path": "../IconOrdner/Zauber/menus/icons/png/illusion/light_eye_illusion.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "paralyze_illusion",
+    "fileName": "paralyze_illusion.png",
+    "folder": "Zauber/menus/icons/png/illusion",
+    "path": "../IconOrdner/Zauber/menus/icons/png/illusion/paralyze_illusion.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "detect_life_mysticism",
+    "fileName": "detect_life_mysticism.png",
+    "folder": "Zauber/menus/icons/png/mysticism",
+    "path": "../IconOrdner/Zauber/menus/icons/png/mysticism/detect_life_mysticism.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "dispel_mysticism",
+    "fileName": "dispel_mysticism.png",
+    "folder": "Zauber/menus/icons/png/mysticism",
+    "path": "../IconOrdner/Zauber/menus/icons/png/mysticism/dispel_mysticism.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "reflect_mysticism",
+    "fileName": "reflect_mysticism.png",
+    "folder": "Zauber/menus/icons/png/mysticism",
+    "path": "../IconOrdner/Zauber/menus/icons/png/mysticism/reflect_mysticism.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
+    "name": "telekinesis_mysticism",
+    "fileName": "telekinesis_mysticism.png",
+    "folder": "Zauber/menus/icons/png/mysticism",
+    "path": "../IconOrdner/Zauber/menus/icons/png/mysticism/telekinesis_mysticism.png",
+    "width": 64,
+    "height": 64,
+    "ratio": "square"
+  },
+  {
     "name": "Alchemist",
     "fileName": "Alchemist.png",
     "folder": "ZunftsWappen",

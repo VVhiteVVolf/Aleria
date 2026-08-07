@@ -11,7 +11,7 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260807-freya-v1';
+} from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
@@ -786,7 +786,9 @@ function importArchive() {
         const data = { ...creature, updatedAt: new Date().toISOString() };
         const id = data.id || null;
         delete data.id;
-        await backend.saveCreature(id, data);
+        // Ein bewusster Import setzt sich immer durch (der Bestätigungsdialog oben ist die
+        // Freigabe dafür) - siehe die gleiche Begründung bei importCharacterArchivePayload().
+        await backend.saveCreature(id, data, { forceOverwrite: true });
       }
       await loadCreatures({ force: true });
       notify(`${imported.length} Kreatur(en) importiert.`, 'success');

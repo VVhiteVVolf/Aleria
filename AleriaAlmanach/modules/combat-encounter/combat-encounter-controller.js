@@ -1,5 +1,5 @@
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260807-save-guard-v1';
 import {
   deriveCombatEncounterState,
   getActiveCombatEncounter,

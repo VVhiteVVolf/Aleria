@@ -6,7 +6,7 @@ import {
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-freya-v1';
+} from './combat-profile-model.js?v=20260807-save-guard-v1';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts

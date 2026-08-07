@@ -5,7 +5,7 @@ import {
   getSavingThrowTotal,
   resolveAttackRollMode,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260807-freya-v1';
+} from './combat-profile-model.js?v=20260807-save-guard-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
@@ -21,7 +21,7 @@ import {
   normalizeCombatEffect,
   normalizeCombatEffects
 } from './combat-effect-model.js?v=20260804-referee-v2';
-import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260804-referee-v2';
+import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260807-rhiannon-v1';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
 import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260804-referee-v2';
 import {
@@ -182,11 +182,15 @@ function buildSupportAuraApplications(sources, actionKind) {
   return applications;
 }
 
-function effectApplies(effect, attack, savingThrowMode) {
+function effectApplies(effect, attack, savingThrowMode, halfDamageOnSave = false) {
   if (effect.on === 'always') return true;
   if (effect.on === 'miss') return attack.hit === false;
   if (effect.on === 'save-success') return savingThrowMode && attack.saveSucceeded === true;
   if (effect.on === 'save-failure') return savingThrowMode && attack.saveSucceeded === false;
+  // Ein 'hit'-Schadenseffekt greift regulär bei misslungenem Rettungswurf. Ist die Aktion als
+  // "halber Schaden bei bestandenem Rettungswurf" markiert, muss derselbe Effekt auch beim
+  // bestandenen Rettungswurf gefunden und angewendet werden (dann später halbiert).
+  if (savingThrowMode && halfDamageOnSave && effect.type === 'damage' && attack.hit === false) return true;
   return attack.hit === true;
 }
 
@@ -483,7 +487,53 @@ export class CombatResolutionService {
       ? target.temporaryConditions.map(condition => ({ ...condition }))
       : [];
     let appliedTemporaryCondition = null;
-    const primaryDamageEffect = effectiveEffects.find(effect => effect.type === 'damage' && effectApplies(effect, attack, savingThrowMode)) || null;
+    // Abwehrladungen (Schild, Spiegelbilder, …): lenkt einen bereits feststehenden Treffer ab,
+    // bevor überhaupt Schaden gewürfelt wird. Ein kritischer Treffer kann die Ladungen stattdessen
+    // zerbrechen, statt selbst abgelenkt zu werden.
+    const preWardTargetConditions = existingTemporaryConditions.map(normalizeRuntimeCondition);
+    let wardResolution = null;
+    if (!savingThrowMode && attack.hit) {
+      const wardIndex = preWardTargetConditions.findIndex(condition => condition.active !== false && condition.ward?.enabled && condition.ward.charges > 0);
+      if (wardIndex >= 0) {
+        const wardCondition = preWardTargetConditions[wardIndex];
+        if (attack.criticalSuccess && wardCondition.ward.breaksOnCriticalHit) {
+          wardResolution = {
+            conditionId: wardCondition.id, conditionName: wardCondition.name,
+            deflected: false, shattered: true,
+            chargesBefore: wardCondition.ward.charges, chargesAfter: 0, roll: null
+          };
+          preWardTargetConditions.splice(wardIndex, 1);
+        } else {
+          const deflectChance = wardCondition.ward.deflectChance;
+          let deflected = deflectChance >= 100;
+          let deflectionRoll = null;
+          let threshold = null;
+          if (!deflected && deflectChance > 0 && typeof this.dice.rollWardDeflection === 'function') {
+            // Eigener W20-Kanal statt Missbrauch der Schadenswürfel-Formel (die nur W4-W12
+            // zulässt und mit dem primären Schadenswurf um denselben Würfelbeleg konkurrieren
+            // würde) - deflectChance wird dafür linear auf einen 1-20-Schwellenwert abgebildet.
+            threshold = Math.max(1, Math.min(20, Math.round(deflectChance / 100 * 20)));
+            deflectionRoll = await this.dice.rollWardDeflection({
+              threshold, actorName: actor.name, targetName: target.name, container: options.container
+            });
+            deflected = Number(deflectionRoll.natural) <= threshold;
+          }
+          const chargesAfter = Math.max(0, wardCondition.ward.charges - (deflected ? 1 : 0));
+          wardResolution = {
+            conditionId: wardCondition.id, conditionName: wardCondition.name,
+            deflected, shattered: false,
+            chargesBefore: wardCondition.ward.charges, chargesAfter,
+            roll: deflectionRoll ? { natural: Number(deflectionRoll.natural), threshold, rollId: deflectionRoll.id || '' } : null
+          };
+          if (deflected) {
+            attack = { ...attack, hit: false, criticalSuccess: false };
+            if (chargesAfter <= 0) preWardTargetConditions.splice(wardIndex, 1);
+            else preWardTargetConditions[wardIndex] = { ...wardCondition, ward: { ...wardCondition.ward, charges: chargesAfter } };
+          }
+        }
+      }
+    }
+    const primaryDamageEffect = effectiveEffects.find(effect => effect.type === 'damage' && effectApplies(effect, attack, savingThrowMode, actor.actionHalfDamageOnSave)) || null;
 
     if (primaryDamageEffect && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
       const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
@@ -660,7 +710,7 @@ export class CombatResolutionService {
       ? resourceCheck.applied.after
       : target.resources;
     let targetResources = (Array.isArray(targetResourceBaseline) ? targetResourceBaseline : []).map(resource => ({ ...resource }));
-    let targetConditions = existingTemporaryConditions.map(normalizeRuntimeCondition);
+    let targetConditions = preWardTargetConditions;
     let actorHitPoints = {
       current: actor.currentHitPoints,
       maximum: actor.maximumHitPoints,
@@ -675,7 +725,7 @@ export class CombatResolutionService {
     let consumedPrimaryDamage = false;
     const applyEffectList = async effects => {
       for (const effect of effects) {
-      if (!effectApplies(effect, attack, savingThrowMode)) continue;
+      if (!effectApplies(effect, attack, savingThrowMode, actor.actionHalfDamageOnSave)) continue;
       const appliesToActor = effect.target === 'self' && String(actor.characterId) !== String(target.characterId);
       let recipientHitPoints = appliesToActor ? actorHitPoints : targetHitPoints;
       let recipientResources = appliesToActor ? actorResources : targetResources;
@@ -929,6 +979,7 @@ export class CombatResolutionService {
       weaponGrip: actor.weaponGrip || 'one-handed',
       secondarySaves,
       followUpAttacks,
+      wardResolution,
       targetConditionSnapshot: JSON.stringify(targetConditions) !== JSON.stringify(existingTemporaryConditions) ? {
         before: existingTemporaryConditions,
         after: targetConditions,

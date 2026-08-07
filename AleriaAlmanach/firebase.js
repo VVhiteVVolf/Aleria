@@ -9,6 +9,8 @@
       from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
+    import { detectStaleCharacterFields, stampFreshRevisions }
+      from "./modules/characters/character-save-guard.js?v=20260807-rhiannon-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -824,7 +826,7 @@
           publishedAt: published.data().publishedAt?.toDate?.()?.toISOString?.() || ''
         };
       },
-      async saveCharacter(id, data) {
+      async saveCharacter(id, data, options = {}) {
         const user = await requireFirebaseUser();
         const { setDoc, doc, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         if (id) {
@@ -836,11 +838,26 @@
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
-          await setDoc(ref, safeData, { merge: true });
+          // Schutz gegen veraltete Browser-Tabs, die ein Kampfprofil/Inventar aus dem
+          // Zwischenspeicher zurückschreiben und dabei z. B. einen frisch importierten
+          // Charakterbogen wieder überschreiben würden. Ein expliziter Import (forceOverwrite)
+          // setzt sich immer durch und wird dadurch selbst zum neuen, geschützten Stand.
+          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite) {
+            const currentSnap = await getDoc(ref);
+            if (currentSnap.exists()) {
+              const staleFields = detectStaleCharacterFields(currentSnap.data(), safeData);
+              if (staleFields.length) {
+                throw new Error(`Diese Figur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
+              }
+            }
+          }
+          const outgoingData = stampFreshRevisions(safeData);
+          await setDoc(ref, outgoingData, { merge: true });
           return id;
         } else {
+          const newCharacterData = stampFreshRevisions(data || {});
           const ref = await addDoc(collection(db, 'characters'), {
-            ...(data || {}),
+            ...newCharacterData,
             ownerUid: user.uid,
             createdBy: user.uid
           });
@@ -947,20 +964,33 @@
         }
         return { kind, imported };
       },
-      async saveCreature(id, data) {
+      async saveCreature(id, data, options = {}) {
         const user = await requireFirebaseUser();
         if (id) {
           const ref = doc(db, 'creatures', id);
+          const lockSnap = await getDoc(doc(db, 'combat_profile_locks', 'creatures', 'records', id));
+          if ((lockSnap.data()?.activeEncounterKeys || []).length) {
+            throw new Error('Diese Kreatur nimmt gerade an einem aktiven Kampf teil, deshalb ist das Kampfprofil gesperrt. Beende den Kampf zuerst über die Kampfliste ("Kampf beenden"), um den Bogen wieder speichern zu können.');
+          }
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
           const existing = await getDoc(ref);
-          const payload = existing.exists() ? safeData : { ...safeData, ownerUid: user.uid, createdBy: user.uid };
+          // Derselbe Schutz gegen veraltete Browser-Tabs wie bei saveCharacter() - siehe dort für
+          // die ausführliche Begründung. Ein expliziter Import (forceOverwrite) setzt sich immer durch.
+          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite && existing.exists()) {
+            const staleFields = detectStaleCharacterFields(existing.data(), safeData);
+            if (staleFields.length) {
+              throw new Error(`Diese Kreatur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
+            }
+          }
+          const stamped = stampFreshRevisions(safeData);
+          const payload = existing.exists() ? stamped : { ...stamped, ownerUid: user.uid, createdBy: user.uid };
           await setDoc(ref, payload, { merge: true });
           return id;
         }
         const ref = await addDoc(collection(db, 'creatures'), {
-          ...(data || {}),
+          ...stampFreshRevisions(data || {}),
           ownerUid: user.uid,
           createdBy: user.uid
         });

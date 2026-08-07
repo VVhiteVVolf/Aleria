@@ -42,6 +42,17 @@ export function normalizeConditionDuration(value = {}, fallbackText = '') {
   };
 }
 
+function sanitizeWard(value) {
+  const source = value && typeof value === 'object' ? value : {};
+  if (source.enabled !== true) return { enabled: false, charges: 0, deflectChance: 100, breaksOnCriticalHit: false };
+  return {
+    enabled: true,
+    charges: integer(source.charges, 0, 0, 99),
+    deflectChance: integer(source.deflectChance, 100, 0, 100),
+    breaksOnCriticalHit: source.breaksOnCriticalHit === true
+  };
+}
+
 export function normalizeRuntimeCondition(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   const legacyActorComments = integer(source.remainingActorComments, 0);
@@ -61,7 +72,9 @@ export function normalizeRuntimeCondition(value = {}, index = 0) {
     durationModel: duration,
     // Kept for old comments and old UI readers.
     remainingActorComments: duration.remainingActorComments,
-    remainingSceneComments: duration.remainingSceneComments
+    remainingSceneComments: duration.remainingSceneComments,
+    // Abwehrladungen (z. B. Schild, Spiegelbilder): lenkt eingehende Treffer ab, bis die Ladungen aufgebraucht sind.
+    ward: sanitizeWard(source.ward)
   };
 }
 

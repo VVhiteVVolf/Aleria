@@ -123,4 +123,20 @@ export class ProvidedDiceAdapter {
       visualMode: 'server-validated'
     };
   }
+
+  // Eigener Kanal für Abwehrladungen-Ablenkungswürfe (Spiegelbilder u. Ä.) - bewusst getrennt
+  // von rollDamage() (nur W4-W12, Formelvalidierung) und von den anderen W20-Kanälen (die
+  // jeweils an eine eigene Spielmechanik mit eigenem Index gebunden sind).
+  async rollWardDeflection() {
+    const source = this.submitted.wardResolution?.roll || {};
+    const dice = validateDieResults([source.natural], 1, 20, 'Ablenkungswurf');
+    return {
+      id: String(source.rollId || ''),
+      natural: dice[0],
+      dice,
+      keptDice: dice,
+      total: dice[0],
+      visualMode: 'server-validated'
+    };
+  }
 }

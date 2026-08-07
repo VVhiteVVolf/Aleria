@@ -4,7 +4,7 @@
 import {
   expireConditionsForRest,
   normalizeRuntimeCondition
-} from '../combat/combat-condition-duration.js?v=20260804-referee-v2';
+} from '../combat/combat-condition-duration.js?v=20260807-rhiannon-v1';
 
 export const SCENE_REST_EVENT_KIND = 'scene-rest-event';
 export const SCENE_REST_SCHEMA_VERSION = 1;

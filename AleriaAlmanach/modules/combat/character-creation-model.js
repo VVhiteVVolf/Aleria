@@ -2,7 +2,7 @@ import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getMaximumHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-freya-v1';
+} from './combat-profile-model.js?v=20260807-save-guard-v1';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate

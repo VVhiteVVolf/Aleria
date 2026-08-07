@@ -1,5 +1,5 @@
 import { normalizeHerausforderungEvent } from './herausforderung-model.js?v=20260805-herausforderung-v2';
-import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260803-skill-checks-v2';
+import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260807-guinevere-v1';
 
 export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
 

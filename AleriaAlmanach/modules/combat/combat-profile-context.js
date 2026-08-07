@@ -6,7 +6,7 @@ import {
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260807-freya-v1';
+} from './combat-profile-model.js?v=20260807-save-guard-v1';
 import { getOrderedSpellSlotResources, getSpellLevelLabel } from './combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getSpellManaCost } from './combat-resource-progression.js?v=20260807-mana-audit-v1';
 
