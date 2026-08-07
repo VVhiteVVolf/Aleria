@@ -74,6 +74,7 @@ export function buildNarrativeCommentDocument(payload, entryId, request, now) {
     commentKind: clean(metadata.commentKind, 80) || (payload.narrator ? 'narrator' : 'speech'),
     commentSegments: Array.isArray(metadata.commentSegments) ? metadata.commentSegments : null,
     itemShowcase: metadata.itemShowcase && typeof metadata.itemShowcase === 'object' ? metadata.itemShowcase : null,
+    fazit: metadata.fazit && typeof metadata.fazit === 'object' ? metadata.fazit : null,
     moduleInsert: null,
     moduleInsertJson: clean(metadata.moduleInsertJson, 500000),
     documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,

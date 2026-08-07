@@ -124,6 +124,7 @@ function getLocalCommentBackend() {
           : normalizeCommentKind(commentMetadata.commentKind, narrator),
         commentSegments: Array.isArray(commentMetadata.commentSegments) ? commentMetadata.commentSegments : null,
         itemShowcase: commentMetadata.itemShowcase && typeof commentMetadata.itemShowcase === 'object' ? commentMetadata.itemShowcase : null,
+        fazit: commentMetadata.fazit && typeof commentMetadata.fazit === 'object' ? commentMetadata.fazit : null,
         moduleInsert: null,
         moduleInsertJson: commentMetadata.moduleInsertJson || '',
         documentAttachment: commentMetadata.documentAttachment && typeof commentMetadata.documentAttachment === 'object' ? commentMetadata.documentAttachment : null,
