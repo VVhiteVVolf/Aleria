@@ -75,7 +75,7 @@ function renderFazitLineMarkup(line) {
 }
 
 function renderFazitLineDivider() {
-  return '<div class="fazit-line-divider" aria-hidden="true"><span class="fazit-line-divider-glyph">❧</span></div>';
+  return '<div class="fazit-line-divider" aria-hidden="true"><span class="fazit-line-divider-glyph">✦</span></div>';
 }
 
 function renderCommentFazitCard(item) {
