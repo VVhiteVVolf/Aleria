@@ -32,3 +32,24 @@ export function stampFreshRevisions(outgoingData, fields = ['combatProfile', 'in
   });
   return stamped;
 }
+
+// Vergleicht mehrere benannte Abschnitte (z. B. Kampfprofil, Inventar, Bilder & Emotes) zwischen
+// dem gerade aus dem Formular eingesammelten Stand und dem Stand, der beim Öffnen des Bogens
+// geladen wurde. Liefert nur die Namen der Abschnitte zurück, die sich WIRKLICH unterscheiden -
+// die Grundlage dafür, dass z. B. ein reiner Avatar-Upload das Kampfprofil/Inventar gar nicht erst
+// in den Schreibvorgang mitnimmt (siehe character-profile.js#saveCharacter). Ohne Baseline (z. B.
+// eine neu angelegte Figur) gilt automatisch alles als "geändert", da es dort nichts zu schützen
+// gibt und der erste Schreibvorgang vollständig sein muss.
+export function selectChangedSections(current, baseline, sectionNames) {
+  if (!baseline) return [...sectionNames];
+  return sectionNames.filter(name => JSON.stringify(current?.[name]) !== JSON.stringify(baseline?.[name]));
+}
+
+// Klassische (nicht-modulare) Skripte wie character-profile.js können kein `import` verwenden -
+// dieselbe, hier getestete Logik wird deshalb zusätzlich global bereitgestellt. firebase.js lädt
+// als type="module" vor allen defer-Skripten, das Fenster-Objekt steht rechtzeitig bereit.
+globalThis.AleriaCharacterSaveGuard = Object.freeze({
+  detectStaleCharacterFields,
+  stampFreshRevisions,
+  selectChangedSections
+});

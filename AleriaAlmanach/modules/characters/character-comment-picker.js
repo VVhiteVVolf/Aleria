@@ -226,11 +226,10 @@ function buildCommentCharacterSaveData(char, emotes, portraitFallback = null, im
       ? char.activeImageSetId
       : CHARACTER_IMAGE_SET_DEFAULT_ID,
     imageSetsOverride: true,
-    inventory: char.inventory && typeof char.inventory === 'object'
-      ? sanitizeCharacterInventoryData(char.inventory)
-      : undefined,
-    combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(char.combatProfile || {})
-      || cloneCharacterStructuredValue(char.combatProfile, {}),
+    // inventory/combatProfile werden hier bewusst NICHT mitgeschickt: Diese Aktion aendert nur
+    // Bilder & Emotes (siehe Speichersystem-Checkup). Ein fehlendes Feld im Merge-Write laesst
+    // den jeweils aktuellen Serverstand unangetastet, statt ihn aus dem moeglicherweise
+    // veralteten Zwischenspeicher zurueckzuschreiben.
     identity: normalizeCharacterIdentityRecord(char.identity),
     genealogy: normalizeCharacterGenealogyRecord(char.genealogy)
   };
@@ -244,8 +243,10 @@ async function saveCommentCharacterFromPicker(char, data) {
 
   if (saveTargetId) {
     const idx = _characters.findIndex(item => item.id === saveTargetId);
-    if (idx >= 0) _characters[idx] = { id: saveTargetId, ...data };
-    else _characters.push({ id: saveTargetId, ...data });
+    // data laesst inventory/combatProfile bewusst aus (siehe buildCommentCharacterSaveData) - der
+    // lokale Zwischenspeicher braucht trotzdem den vollstaendigen, zuvor bekannten Datensatz.
+    if (idx >= 0) _characters[idx] = { ..._characters[idx], ...data, id: saveTargetId };
+    else _characters.push({ ...char, id: saveTargetId, ...data });
     return saveTargetId;
   }
 
@@ -253,7 +254,7 @@ async function saveCommentCharacterFromPicker(char, data) {
     replaceCharacterIdInTabs(sourceId, savedId);
     saveCharTabs();
   }
-  _characters.push({ id: savedId, ...data });
+  _characters.push({ ...char, id: savedId, ...data });
   return savedId;
 }
 

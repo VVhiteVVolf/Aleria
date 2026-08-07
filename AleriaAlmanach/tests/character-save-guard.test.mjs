@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { detectStaleCharacterFields, stampFreshRevisions } from '../modules/characters/character-save-guard.js';
+import { detectStaleCharacterFields, stampFreshRevisions, selectChangedSections } from '../modules/characters/character-save-guard.js';
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
 
 test('sanitizeCharacterCombatProfile bewahrt eine mitgegebene Revision und faellt sonst auf 0 zurueck', () => {
@@ -47,4 +47,37 @@ test('stampFreshRevisions setzt eine neue Revision auf vorhandene Felder, ohne a
 test('stampFreshRevisions laesst ein Dokument ohne combatProfile/inventory unangetastet', () => {
   const stamped = stampFreshRevisions({ name: 'Rhiannon' }, ['combatProfile', 'inventory'], 999);
   assert.deepEqual(stamped, { name: 'Rhiannon' });
+});
+
+test('selectChangedSections meldet nur echte Aenderungen - ein reiner Avatar-Upload laesst Kampfprofil/Inventar unberuehrt', () => {
+  const baseline = {
+    images: { portrait: 'alt.png', emotes: [] },
+    inventory: { items: [{ id: 'sword' }] },
+    combatProfile: { weapons: [{ id: 'axe' }] }
+  };
+  // Nur das Bild wurde tatsaechlich veraendert, Inventar/Kampfprofil kommen unveraendert
+  // aus dem (potenziell veralteten) Formularzustand zurueck.
+  const current = {
+    images: { portrait: 'neu.png', emotes: [] },
+    inventory: { items: [{ id: 'sword' }] },
+    combatProfile: { weapons: [{ id: 'axe' }] }
+  };
+  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), ['images']);
+});
+
+test('selectChangedSections erkennt Aenderungen in mehreren Abschnitten gleichzeitig', () => {
+  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
+  const current = { images: { a: 1 }, inventory: { a: 2 }, combatProfile: { a: 2 } };
+  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), ['inventory', 'combatProfile']);
+});
+
+test('selectChangedSections behandelt eine fehlende Baseline (neu angelegte Figur) als "alles geaendert"', () => {
+  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
+  assert.deepEqual(selectChangedSections(current, null, ['images', 'inventory', 'combatProfile']), ['images', 'inventory', 'combatProfile']);
+});
+
+test('selectChangedSections meldet keine Aenderung, wenn ueberhaupt nichts angefasst wurde', () => {
+  const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
+  const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
+  assert.deepEqual(selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']), []);
 });

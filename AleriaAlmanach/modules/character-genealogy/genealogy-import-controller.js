@@ -1,4 +1,4 @@
-import { createFamilyCandidates, buildImportedCharacter } from './genealogy-mapping.js';
+import { createFamilyCandidates, buildImportedCharacter } from './genealogy-mapping.js?v=20260807-save-guard-v1';
 import {
   listGenealogyFamilies,
   loadGenealogyFamily,

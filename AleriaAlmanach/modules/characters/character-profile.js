@@ -3,6 +3,15 @@ let _charPortraitUrl = null;
 const MAX_EMOTES = CHARACTER_AVATAR_LIMIT;
 let _emoteSlots = [];
 
+// Schnappschuss dessen, was beim Öffnen des Bogens tatsächlich geladen wurde (Bilder/Emotes,
+// Inventar, Kampfprofil) - jeweils über dieselben collect...()-Funktionen wie beim Speichern,
+// damit der Vergleich später wirklich "Apfel mit Apfel" ist. Damit kann saveCharacter() Bereiche,
+// die in dieser Sitzung nie angefasst wurden, komplett aus dem Schreibvorgang weglassen, statt sie
+// aus dem (potenziell veralteten) Formularzustand einfach immer wieder mitzuspeichern. Genau das
+// verhindert, dass z.B. ein reiner Avatar-Upload das Kampfprofil/Inventar anfasst oder - schlimmer -
+// mit einem veralteten Stand überschreibt.
+let _charProfileLoadedSnapshot = null;
+
 function populateCharacterProfileForm(c = {}) {
   _charPortraitUrl = null;
 
@@ -29,6 +38,12 @@ function populateCharacterProfileForm(c = {}) {
   if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
   window.AleriaCharacterCombatProfile?.init?.(c);
 
+  const equipmentBaseline = collectCharacterEquipmentProfileData(c);
+  _charProfileLoadedSnapshot = {
+    images: collectCharacterImageSetEditorData(),
+    inventory: equipmentBaseline.inventory,
+    combatProfile: equipmentBaseline.combatProfile
+  };
 }
 
 function openCharProfile(id) {
@@ -176,6 +191,7 @@ function closeCharProfile() {
   deactivateDialog('char-profile-overlay');
   _editingChar = null;
   _charPortraitUrl = null;
+  _charProfileLoadedSnapshot = null;
 }
 
 function previewPortraitUrl(url) {
@@ -425,6 +441,20 @@ async function saveCharacter() {
   const genealogy = getCharacterGenealogyFormData(existing);
   const imageSetData = collectCharacterImageSetEditorData();
   const equipmentData = collectCharacterEquipmentProfileData(existing);
+
+  // Profil, Bilder & Emotes, Inventar und Kampfdaten sind vier eigenständige Bereiche - der
+  // gemeinsame "Speichern"-Knopf darf einen davon nur dann tatsächlich mit anfassen, wenn er in
+  // dieser Sitzung auch wirklich bearbeitet wurde. Sonst würde z.B. ein reiner Avatar-Upload das
+  // Kampfprofil/Inventar mit dem (möglicherweise veralteten) beim Öffnen geladenen Stand
+  // überschreiben. Bei einer neu angelegten Figur (kein Schnappschuss vorhanden) greift die
+  // Prüfung nicht - die braucht von Anfang an ein vollständiges Kampfprofil/Inventar/Bilderset.
+  const baseline = saveTargetId ? _charProfileLoadedSnapshot : null;
+  const current = { images: imageSetData, inventory: equipmentData.inventory, combatProfile: equipmentData.combatProfile };
+  const changedSections = new Set(window.AleriaCharacterSaveGuard.selectChangedSections(current, baseline, ['images', 'inventory', 'combatProfile']));
+  const imagesChanged = changedSections.has('images');
+  const inventoryChanged = changedSections.has('inventory');
+  const combatProfileChanged = changedSections.has('combatProfile');
+
   const data = {
     name, title, fraktion, role, status: characterStatus, relevance,
     taxonomyPath, currentLocation, origin, plotNode, profileLink, playerOwner, bio,
@@ -432,9 +462,9 @@ async function saveCharacter() {
     archived,
     createdAt: existing.createdAt || now,
     updatedAt: now,
-    ...imageSetData,
-    inventory: equipmentData.inventory,
-    combatProfile: equipmentData.combatProfile,
+    ...(imagesChanged ? imageSetData : {}),
+    ...(inventoryChanged ? { inventory: equipmentData.inventory } : {}),
+    ...(combatProfileChanged ? { combatProfile: equipmentData.combatProfile } : {}),
     ...(existing.localRecord ? {
       localRecord: cloneCharacterStructuredValue(existing.localRecord, existing.localRecord)
     } : {}),
@@ -451,7 +481,10 @@ async function saveCharacter() {
     const newId = await window._fb.saveCharacter(saveTargetId, data);
     if (saveTargetId) {
       const idx = _characters.findIndex(x => x.id === saveTargetId);
-      if (idx >= 0) _characters[idx] = { id: saveTargetId, ...data };
+      // data kann inventory/combatProfile/Bilder-Felder bewusst auslassen (siehe oben) - der
+      // lokale Zwischenspeicher braucht trotzdem den vollständigen Datensatz, sonst "vergisst"
+      // die Sitzung diese Felder bis zum nächsten kompletten Neuladen.
+      if (idx >= 0) _characters[idx] = { ..._characters[idx], ...data, id: saveTargetId };
     } else {
       if (isBuiltin && sourceId) {
         replaceCharacterIdInTabs(sourceId, newId);
@@ -468,6 +501,13 @@ async function saveCharacter() {
         }
       }
     }
+    // Nach erfolgreichem Speichern gilt der gerade geschriebene Stand als neuer Sync-Punkt fuer
+    // die "wurde dieser Bereich in dieser Sitzung ueberhaupt angefasst"-Pruefung oben.
+    _charProfileLoadedSnapshot = {
+      images: imagesChanged ? imageSetData : _charProfileLoadedSnapshot?.images,
+      inventory: inventoryChanged ? equipmentData.inventory : _charProfileLoadedSnapshot?.inventory,
+      combatProfile: combatProfileChanged ? equipmentData.combatProfile : _charProfileLoadedSnapshot?.combatProfile
+    };
     renderCharSubtabs();
     renderCharGrid();
     renderCharPickerInForm();

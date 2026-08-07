@@ -249,11 +249,14 @@ async function stampCharacterInventoryProfileTemplateToAll() {
   const template = buildCharacterInventoryTemplatePayload(collectCharacterInventoryProfileData());
   try {
     for (const char of targets) {
+      // Nur das Inventar wird geschickt (siehe Speichersystem-Checkup) - ein voller Spread von
+      // "char" wuerde bei jeder einzelnen Figur zusaetzlich Name/Bio/Kampfprofil/Bilder aus dem
+      // moeglicherweise veralteten Zwischenspeicher zurueckschreiben, obwohl diese Aktion
+      // ausdruecklich nur das Inventar aendern soll.
       const data = {
-        ...char,
-        inventory: buildCharacterInventoryForCharacterFromTemplate(template, char)
+        inventory: buildCharacterInventoryForCharacterFromTemplate(template, char),
+        updatedAt: new Date().toISOString()
       };
-      delete data.id;
       await window._fb.saveCharacter(char.id, data);
     }
     _characters = _characters.map(char => ({

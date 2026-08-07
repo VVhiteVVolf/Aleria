@@ -143,11 +143,9 @@ function buildStoredCharacterFromRecord(char, archived) {
       ? cloned.activeImageSetId
       : CHARACTER_IMAGE_SET_DEFAULT_ID,
     imageSetsOverride: !!cloned.imageSetsOverride,
-    inventory: cloned.inventory && typeof cloned.inventory === 'object'
-      ? sanitizeCharacterInventoryData(cloned.inventory)
-      : undefined,
-    combatProfile: window.AleriaCharacterCombatProfile?.sanitize?.(cloned.combatProfile || {})
-      || cloneCharacterStructuredValue(cloned.combatProfile, {}),
+    // inventory/combatProfile werden hier bewusst NICHT mitgeschickt: Archivieren/Wiederherstellen
+    // aendert nur das archived-Flag (siehe Speichersystem-Checkup). Ein fehlendes Feld im
+    // Merge-Write laesst den jeweils aktuellen Serverstand unangetastet.
     identity: normalizeCharacterIdentityRecord(cloned.identity),
     genealogy: normalizeCharacterGenealogyRecord(cloned.genealogy)
   };
@@ -173,11 +171,13 @@ async function setSelectedCharactersArchived(archived) {
       const savedId = await window._fb.saveCharacter(saveTargetId, data);
       if (saveTargetId) {
         const index = _characters.findIndex(item => String(item.id || '') === String(saveTargetId));
-        if (index >= 0) _characters[index] = { id: saveTargetId, ...data };
-        else _characters.push({ id: saveTargetId, ...data });
+        // data laesst inventory/combatProfile bewusst aus - der lokale Zwischenspeicher braucht
+        // trotzdem den vollstaendigen, zuvor bekannten Datensatz.
+        if (index >= 0) _characters[index] = { ..._characters[index], ...data, id: saveTargetId };
+        else _characters.push({ ...character, id: saveTargetId, ...data });
       } else {
         replaceCharacterIdInTabs(sourceId, savedId);
-        _characters.push({ id: savedId, ...data });
+        _characters.push({ ...character, id: savedId, ...data });
       }
     }
     saveCharTabs();

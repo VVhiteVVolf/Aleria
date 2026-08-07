@@ -214,7 +214,12 @@ export function buildImportedCharacter(candidate, existing = null, now = new Dat
     imageSets: Array.isArray(prior.imageSets) ? prior.imageSets : [],
     activeImageSetId: cleanText(prior.activeImageSetId),
     imageSetsOverride: !!prior.imageSetsOverride,
-    inventory: prior.inventory && typeof prior.inventory === 'object' ? prior.inventory : null,
+    // Bei einer bereits bestehenden Figur wird inventory bewusst NICHT mitgeschickt (siehe
+    // Speichersystem-Checkup): Diese Aktion verknüpft nur Stammbaum-Genealogiedaten, sie hat
+    // keine eigene Absicht, das Inventar zu ändern. Ein fehlendes Feld im Merge-Write lässt den
+    // jeweils aktuellen Serverstand unangetastet. Nur eine neu angelegte Figur (kein "existing")
+    // braucht von Anfang an ein Inventar-Feld.
+    ...(existing ? {} : { inventory: prior.inventory && typeof prior.inventory === 'object' ? prior.inventory : null }),
     identity: normalizeCharacterIdentity({ worldPersonId: candidate.worldPersonId }),
     genealogy
   };

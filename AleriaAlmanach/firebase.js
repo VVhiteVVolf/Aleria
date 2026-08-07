@@ -10,7 +10,7 @@
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { detectStaleCharacterFields, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20260807-rhiannon-v1";
+      from "./modules/characters/character-save-guard.js?v=20260807-save-scope-v1";
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
