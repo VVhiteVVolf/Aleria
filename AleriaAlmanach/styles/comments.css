@@ -3398,6 +3398,9 @@
     flex: 0 0 420px;
     min-width: 280px;
     max-width: 60%;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 0.2rem;
   }
   .fazit-lines-editor-head {
     display: flex;
