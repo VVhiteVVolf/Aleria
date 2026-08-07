@@ -18,6 +18,7 @@ const files = [
   'combat/combat-profile-context.js',
   'combat/combat-profile-model.js',
   'combat/combat-profile-resolver.js',
+  'combat/combat-resource-progression.js',
   'combat/combat-spell-slots.js',
   'combat/combat-resolution-service.js',
   'combat/combat-state-model.js',

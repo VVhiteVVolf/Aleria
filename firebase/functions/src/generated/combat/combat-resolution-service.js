@@ -1,17 +1,19 @@
 import { buildAttackNotation, buildDamageNotation, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import {
   getAuraTargetMechanics,
+  getBonusDamageFormulas,
   getSavingThrowTotal,
-  resolveAttackRollMode
-} from './combat-profile-model.js?v=20260804-referee-v2';
+  resolveAttackRollMode,
+  resolveSavingThrowRollMode
+} from './combat-profile-model.js?v=20260807-freya-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260804-referee-v2';
+} from './combat-profile-resolver.js?v=20260807-freya-v1';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260806-encounter-card-v1';
+} from './combat-state-model.js?v=20260807-freya-v1';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
@@ -320,6 +322,36 @@ export class CombatResolutionService {
       const missing = resourceCheck.applied.missing;
       throw new Error(`${actor.name} hat nicht genug ${missing?.name || 'Ressourcen'} für diesen Angriff.`);
     }
+    if (actor.selectedAction?.kind === 'equipment-switch') {
+      const targetWeaponId = String(actor.selectedAction.equipmentSwitchTargetId || '');
+      const beforeWeaponId = String((Array.isArray(actor.weapons) ? actor.weapons : []).find(item => item.equipped)?.id || '');
+      return {
+        schemaVersion: 4,
+        rulesVersion: COMBAT_EVALUATION_RULES_VERSION,
+        resolutionId: createResolutionId(),
+        actionType: 'equipment-switch',
+        resolutionMode: 'automatic',
+        actorId: actor.characterId,
+        actorName: actor.name,
+        targetId: target.characterId,
+        targetName: target.name,
+        actorPersistence: actor.persistence || null,
+        targetPersistence: target.persistence || null,
+        weapon: { ...weapon },
+        weaponGrip: actor.weaponGrip || 'one-handed',
+        attack: {
+          naturalRoll: 20, diceResults: [], modifier: 0, total: 0, targetDefense: 0,
+          hit: true, criticalSuccess: false, criticalFailure: false, rollMode: 'normal', rollId: ''
+        },
+        secondarySaves: [],
+        followUpAttacks: [],
+        actorResourceSnapshot: { before: actor.resources || [], after: resourceCheck.applied.after },
+        actorEquippedWeaponSnapshot: { before: beforeWeaponId, after: targetWeaponId },
+        effectResults: [],
+        ruleApplications: [],
+        ruleConflicts: []
+      };
+    }
     const relationship = options.relationship === 'ally' ? 'ally' : 'enemy';
     const distanceMeters = Number.isFinite(Number(options.distanceMeters)) ? Number(options.distanceMeters) : null;
     const auraContext = { relation: relationship, distanceMeters: options.distanceMeters };
@@ -342,7 +374,9 @@ export class CombatResolutionService {
     }).concat(buildSupportAuraApplications(ruleSources, actionKind));
     markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
     const preRollEffects = mergeCombatRuleEffects(preRollApplications);
-    const profileRollMode = resolveAttackRollMode(savingThrowMode ? target : actor, requestedRollMode);
+    const profileRollMode = savingThrowMode
+      ? resolveSavingThrowRollMode(target, actor.actionSaveAttribute, requestedRollMode)
+      : resolveAttackRollMode(actor, requestedRollMode);
     const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
     const safeRollMode = mergeRollModes(profileRollMode, auraRollMode, preRollEffects.rollMode);
     const attackModifier = savingThrowMode
@@ -452,7 +486,11 @@ export class CombatResolutionService {
     const primaryDamageEffect = effectiveEffects.find(effect => effect.type === 'damage' && effectApplies(effect, attack, savingThrowMode)) || null;
 
     if (primaryDamageEffect && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
-      const effectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
+      const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
+      // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
+      // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
+      const bonusDamageFormulas = (attack.hit && baseEffectFormula) ? getBonusDamageFormulas(actor) : [];
+      const effectFormula = [baseEffectFormula, ...bonusDamageFormulas].filter(Boolean).join('+');
       const damageNotation = effectFormula ? buildDamageNotation(effectFormula, damageBonus, attack.criticalSuccess) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
@@ -489,7 +527,7 @@ export class CombatResolutionService {
       const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey);
       const savingThrowRoll = await this.dice.rollSavingThrow({
         modifier: savingThrowModifier,
-        rollMode: 'normal',
+        rollMode: resolveSavingThrowRollMode(target, secondarySave.attributeKey),
         actorName: actor.name,
         targetName: target.name,
         container: options.container
@@ -521,7 +559,9 @@ export class CombatResolutionService {
       }
     }
     const followUp = actor.selectedAction?.followUpAttack;
+    const followUpRepeatCount = Math.max(1, Math.min(5, Number(followUp?.repeatCount) || 1));
     if (attack.hit && followUp?.enabled && followUp.damageFormula) {
+    for (let followUpIndex = 0; followUpIndex < followUpRepeatCount; followUpIndex += 1) {
       const followSources = followUp.triggerReactions === false
         ? ruleSources.map(source => ({ ...source, selectedRuleIds: [] }))
         : ruleSources;
@@ -572,8 +612,9 @@ export class CombatResolutionService {
       });
       let followDamage = null;
       if (followAttack.hit) {
+        const followBonusDamageFormulas = followUp.damageFormula ? getBonusDamageFormulas(actor) : [];
         followDamage = await this.dice.rollDamage({
-          damageFormula: followUp.damageFormula,
+          damageFormula: [followUp.damageFormula, ...followBonusDamageFormulas].filter(Boolean).join('+'),
           bonus: Number(actor.damageModifier || 0) + Number(followUp.damageBonus || 0)
             + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
@@ -608,6 +649,7 @@ export class CombatResolutionService {
           rollId: followDamage.id || ''
         } : null
       });
+    }
     }
     let targetHitPoints = {
       current: target.currentHitPoints,
@@ -682,8 +724,15 @@ export class CombatResolutionService {
         continue;
       }
       if (['apply-condition', 'buff', 'debuff'].includes(effect.type) && effect.condition) {
+        // Ein effect.formula (z.B. "1w4") wird einmalig gewürfelt und als negativer
+        // Angriffsmalus in die Zustandsmechanik eingebacken - für Effekte wie Spottvers,
+        // deren Stärke variabel ist statt eines festen Werts.
+        const rolledMechanics = roll
+          ? { ...effect.condition.mechanics, attack: (Number(effect.condition.mechanics?.attack) || 0) - Number(roll.total || 0) }
+          : effect.condition.mechanics;
         const condition = normalizeRuntimeCondition({
           ...effect.condition,
+          mechanics: rolledMechanics,
           id: `${effect.condition.id || effect.id}-${createResolutionId()}`,
           source: actor.selectedAction?.name || actor.weapon?.name || actor.name,
           active: true,
@@ -694,7 +743,7 @@ export class CombatResolutionService {
         recipientConditions.push(condition);
         if (appliesToActor) actorConditions = recipientConditions;
         else targetConditions = recipientConditions;
-        effectResults.push({ effect, condition, applied: true, recipient });
+        effectResults.push({ effect, condition, roll, applied: true, recipient });
         continue;
       }
       if (effect.type === 'remove-condition') {

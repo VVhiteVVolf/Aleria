@@ -96,6 +96,70 @@ export const CHARACTER_BACKGROUND_TEMPLATES = Object.freeze([
       tools: ['Seemannschaft und Gefolgschaftsbrauchtum']
     },
     traits: ['Aldrimarische Gefolgschaftstreue']
+  },
+  {
+    id: 'bauer',
+    label: 'Bauer',
+    description: 'Aufgewachsen auf dem Land, mit harter Feldarbeit, Vieh und den Launen der Jahreszeiten vertraut.',
+    skillProficiencies: ['Mit Tieren umgehen', 'Überleben'],
+    proficiencies: { tools: ['Landwirtschaftsgerät'] },
+    traits: ['Bäuerliche Zähigkeit und Bodenständigkeit']
+  },
+  {
+    id: 'gelehrter',
+    label: 'Gelehrter',
+    description: 'Jahre in Bibliotheken, Skriptorien oder als Lehrling eines Gelehrten verbracht; vertraut mit Schrift, Theorie und arkanem Grundwissen.',
+    skillProficiencies: ['Arkane Kunde', 'Nachforschungen'],
+    proficiencies: { tools: ['Schreibzeug und Kopierwerkzeug'] },
+    traits: ['Gelehrtes Grundwissen']
+  },
+  {
+    id: 'kultist',
+    label: 'Kultist',
+    description: 'Mitglied oder ehemaliges Mitglied eines geheimen Zirkels mit eigenen Riten, Zeichen und einer verschwiegenen Loyalität.',
+    skillProficiencies: ['Religion', 'Täuschen'],
+    proficiencies: { tools: ['Rituelle Zeichen und Geheimsprache'] },
+    traits: ['Verschwiegene Zirkelbindung']
+  },
+  {
+    id: 'soeldner',
+    label: 'Söldner',
+    description: 'Kämpft gegen Bezahlung für wechselnde Auftraggeber; kennt Feldlagerleben, Verträge und das Geschäft des Krieges.',
+    skillProficiencies: ['Einschüchtern', 'Athletik'],
+    proficiencies: { tools: ['Feldlager- und Vertragswesen'] },
+    traits: ['Söldnerhärte']
+  },
+  {
+    id: 'klerus',
+    label: 'Klerus',
+    description: 'Im Dienst eines Tempels oder Schreins aufgewachsen, mit Liturgie, Seelsorge und den Pflichten des Klerus vertraut.',
+    skillProficiencies: ['Religion', 'Motiv erkennen'],
+    proficiencies: { tools: ['Liturgisches Gerät'] },
+    traits: ['Kirchliche Erziehung']
+  },
+  {
+    id: 'handwerker',
+    label: 'Handwerker',
+    description: 'Ausgebildet in einer Zunft oder Werkstatt, mit einem eigenen Handwerk und dessen Werkzeugen bestens vertraut.',
+    skillProficiencies: ['Fingerfertigkeit', 'Nachforschungen'],
+    proficiencies: { tools: ['Handwerkszeug eines Gewerbes'] },
+    traits: ['Zünftisches Handwerksgeschick']
+  },
+  {
+    id: 'gassenkind',
+    label: 'Gassenkind',
+    description: 'Auf der Straße groß geworden, mit Verstecken, kleinen Diebstählen und dem Überleben in Gassen und Hinterhöfen vertraut.',
+    skillProficiencies: ['Heimlichkeit', 'Fingerfertigkeit'],
+    proficiencies: { tools: ['Gaunerzinken und Versteckwissen'] },
+    traits: ['Straßenschläue']
+  },
+  {
+    id: 'musikerin',
+    label: 'Musikerin',
+    description: 'Auf Marktplätzen, in Hallen und Wirtshäusern ausgebildete Musikerin oder Bardin, mit Vortrag, Instrument und dem Umgang mit Publikum vertraut.',
+    skillProficiencies: ['Auftreten', 'Überreden'],
+    proficiencies: { tools: ['Musikinstrument'] },
+    traits: ['Bühnenerfahrung und Publikumsgespür']
   }
 ]);
 
@@ -159,7 +223,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     proficiencies: { armor: ['light'], weapons: ['simple', 'rapier', 'sword'], tools: ['Musikinstrument'] },
     weapons: [weapon('barddwyr-rapier', 'Rapier', 'sword', '1d8', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('barddwyr-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
-    magic: { enabled: true, castingAttribute: 'charisma', notes: 'Barddwyr wirken ihre Magie durch Stimme, Vortrag und Instrument.' }
+    magic: { enabled: true, casterTier: 'full', castingAttribute: 'charisma', notes: 'Barddwyr wirken ihre Magie durch Stimme, Vortrag und Instrument.' }
   },
   {
     id: 'morwyr', group: 'Vennyr-Klassen', label: 'Morwyr', subtitle: 'Seekrieger',
@@ -234,8 +298,10 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     armorItems: [armor('derwyn-chainmail', 'Kettenhemd', 'heavy', 16, 'none')],
     magic: {
       enabled: true,
+      casterTier: 'full',
+      bypassResourceId: 'celestial-points',
       castingAttribute: 'wisdom',
-      notes: 'Göttliche Magie Nimues, Göttin des Meeres und der Reinheit. Schwerpunkt: Wasser, Reinigung und Heilung.'
+      notes: 'Göttliche Magie Nimues, Göttin des Meeres und der Reinheit. Schwerpunkt: Wasser, Reinigung und Heilung. Kann Mana durch Celestiale Punkte ersetzen.'
     }
   },
   // ── Alben ──
@@ -312,7 +378,7 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     proficiencies: { armor: ['light'], weapons: ['simple', 'sword'], tools: ['Musikinstrument (Dudelsack)'] },
     weapons: [weapon('ceolaire-rapier', 'Rapier', 'sword', '1d8', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('ceolaire-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
-    magic: { enabled: true, castingAttribute: 'charisma', notes: 'Kampfmagie der Alben, gewirkt durch Dudelsack, Gesang und Vortrag.' }
+    magic: { enabled: true, casterTier: 'full', castingAttribute: 'charisma', notes: 'Kampfmagie der Alben, gewirkt durch Dudelsack, Gesang und Vortrag.' }
   },
   {
     id: 'riada', group: 'Alben', label: 'Riada', subtitle: 'Freischärler der Alben',
@@ -430,7 +496,68 @@ export const CHARACTER_CLASS_TEMPLATES = Object.freeze([
     proficiencies: { armor: ['light'], weapons: ['simple', 'sword'], tools: ['Musikinstrument (frei wählbar)'] },
     weapons: [weapon('skalde-shortsword', 'Kurzschwert', 'sword', '1d6', 'Hieb', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
     armorItems: [armor('skalde-padded', 'Wattierter Waffenrock', 'light', 11, 'full')],
-    magic: { enabled: true, castingAttribute: 'charisma', notes: 'Skaldische Magie Aldrimars, gewirkt durch Saga, Gesang und das gewählte Instrument.' }
+    magic: { enabled: true, casterTier: 'full', castingAttribute: 'charisma', notes: 'Skaldische Magie Aldrimars, gewirkt durch Saga, Gesang und das gewählte Instrument.' }
+  },
+  // ── Universelle Klassen ──
+  {
+    id: 'magier', group: 'Universelle Klassen', label: 'Magier', subtitle: 'Gelehrter arkaner Zauberwirker',
+    description: 'Studierter Zauberwirker, dessen Macht aus jahrelangem Studium arkaner Theorie statt Blut oder Glauben stammt.',
+    hitDie: 6,
+    savingThrowProficiencies: ['intelligence', 'wisdom'],
+    proficiencies: { armor: [], weapons: ['simple'], tools: ['Arkane Fokusinstrumente'] },
+    weapons: [
+      weapon('magier-dagger', 'Ritualdolch', 'dagger', '1d4', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' }),
+      weapon('magier-staff', 'Zauberstab', 'staff', '1d6', 'Wucht', 'intelligence')
+    ],
+    armorItems: [],
+    magic: { enabled: true, casterTier: 'full', castingAttribute: 'intelligence', notes: 'Arkane Studienmagie. Ungepanzert, verlässt sich auf Geschick und Distanz statt Rüstung.' }
+  },
+  {
+    id: 'kleriker', group: 'Universelle Klassen', label: 'Kleriker', subtitle: 'Geweihter einer Gottheit',
+    description: 'Geweihter einer der neun Göttlichen oder fünf Souveränen, gewappnet mit göttlicher Macht im Dienst des eigenen Glaubens.',
+    hitDie: 8,
+    savingThrowProficiencies: ['wisdom', 'charisma'],
+    proficiencies: { armor: ['light', 'medium'], weapons: ['simple', 'mace'], tools: ['Religiöse Liturgie'] },
+    weapons: [weapon('kleriker-mace', 'Streitkolben', 'mace', '1d6', 'Wucht')],
+    armorItems: [armor('kleriker-scale', 'Schuppenpanzer', 'medium', 14, 'capped', 2)],
+    magic: {
+      enabled: true,
+      casterTier: 'full',
+      bypassResourceId: 'celestial-points',
+      castingAttribute: 'wisdom',
+      notes: 'Geweihte der neun Göttlichen und fünf Souveränen zahlen mit Celestialen Punkten statt Mana. Kleriker infernaler Götter tauschen magic.bypassResourceId von der Charakterkarte auf infernal-points.'
+    }
+  },
+  {
+    id: 'hexer', group: 'Universelle Klassen', label: 'Hexer', subtitle: 'Bündnisträger einer fremden Macht',
+    description: 'Bündnisträger, der seine Magie von einem übernatürlichen Gönner statt eigenem Studium oder Glauben bezieht.',
+    hitDie: 8,
+    savingThrowProficiencies: ['wisdom', 'charisma'],
+    proficiencies: { armor: ['light'], weapons: ['simple'], tools: ['Paktzeichen und Ritualutensilien'] },
+    weapons: [weapon('hexer-dagger', 'Paktdolch', 'dagger', '1d4', 'Stich', 'dexterity', { properties: 'Finesse · Startausrüstung der gewählten Klasse' })],
+    armorItems: [armor('hexer-padded', 'Wattierter Umhang', 'light', 11, 'full')],
+    magic: {
+      enabled: true,
+      casterTier: 'full',
+      castingAttribute: 'charisma',
+      manaResourceId: 'pact-points',
+      notes: 'Bezieht Zaubermacht ausschließlich aus dem eigenen Pakt und zahlt dafür grundsätzlich Paktpunkte statt Mana. Die Paktmagie-Ökonomie ist bewusst noch grob gehalten und wird später eigens ausbalanciert.'
+    }
+  },
+  {
+    id: 'asket', group: 'Universelle Klassen', label: 'Asket', subtitle: 'Waffenloser Kampfkünstler',
+    description: 'Kampfkünstler, dessen jahrelange Disziplin Körper und Geist zu einer waffenlosen Waffe geformt hat.',
+    hitDie: 8,
+    savingThrowProficiencies: ['strength', 'dexterity'],
+    proficiencies: { armor: [], weapons: ['simple', 'staff'], tools: ['Waffenlose Kampfkunst'] },
+    weapons: [weapon('asket-quarterstaff', 'Kampfstab', 'staff', '1d6', 'Wucht')],
+    armorItems: [],
+    magic: {
+      enabled: false,
+      focusEnabled: true,
+      focusResourceId: 'focus',
+      notes: 'Fokus speist waffenlose Kampfkunsttechniken, strukturell getrennt von Mana. Eigene Techniken werden dem Charakterbogen später ergänzt.'
+    }
   }
 ]);
 

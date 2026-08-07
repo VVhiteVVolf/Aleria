@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260804-referee-v2';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,

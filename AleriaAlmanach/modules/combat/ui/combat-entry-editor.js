@@ -1,5 +1,5 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260804-referee-v2';
-import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260803-economy-audit-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS } from '../combat-profile-model.js?v=20260807-freya-v1';
+import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260807-magic-system-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,

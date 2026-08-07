@@ -1,7 +1,7 @@
 {
   "type": "aleria-character",
   "version": 3,
-  "exportedAt": "2026-08-03T18:28:54.436Z",
+  "exportedAt": "2026-08-06T00:00:00.000Z",
   "character": {
     "id": "q1QtSIug74FzzwUAqWrs",
     "name": "Gawain Draig",
@@ -20,7 +20,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-07-26T10:52:51.454Z",
-    "updatedAt": "2026-08-03T18:28:54.434Z",
+    "updatedAt": "2026-08-06T00:00:00.000Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -898,7 +898,7 @@
         "notes": ""
       },
       "progression": {
-        "level": 4,
+        "level": 5,
         "specialLevels": 0,
         "experience": 0,
         "nextLevelExperience": null,
@@ -949,7 +949,7 @@
         }
       ],
       "hitPoints": {
-        "current": 32,
+        "current": 39,
         "temporary": 0,
         "hitDie": 10,
         "averagePerLevelOverride": null,
@@ -1703,6 +1703,39 @@
             "damageBonus": 0,
             "triggerFurtherEffects": false
           }
+        },
+        {
+          "id": "gawain-dragon-whirl",
+          "name": "Wirbelschritt des Drachen",
+          "trainingForm": "Drachentanz · Ausbildungsform",
+          "minimumLevel": 5,
+          "category": "technique",
+          "description": "Ein Pirouettenschritt trägt Drachenzahn im vollen Schwung mit, immer wieder neu.",
+          "effect": "Ein Pirouettenangriff: bei einem Treffer verursacht Drachenzahn 1W10 normalen Waffenschaden und zusätzlich 1W4 Schnittschaden. Der Drehschwung erleichtert das Treffen um +1 auf den Angriffswurf. Kostet Bonusaktion und einen Punkt Besondere Aktion gemeinsam und kann so oft wiederholt werden, wie Besondere Aktion reicht.",
+          "activationType": "bonus-action",
+          "weaponTypes": ["sword"],
+          "compatibleWeaponIds": ["gawain-draig-knightly-sword"],
+          "damageFormula": "1d10+1d4",
+          "damageType": "Hieb + Schnitt",
+          "attackBonus": 1,
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Drachenzahn muss aktiv geführt werden. Verbraucht Bonusaktion und einen Punkt Besondere Aktion gemeinsam; keine eigene Nutzungsbegrenzung über die Besondere Aktion (2 pro Tag) hinaus.",
+          "tags": "Drachentanz · Ritterschwert · Pirouette",
+          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der bestätigte Gesamtschaden enthält bereits den normalen 1W10-Waffenschaden und den zusätzlichen 1W4-Schnittschaden; nichts doppelt addieren. Diese Technik kostet keine normale Aktion und kann daher zusätzlich zu einem regulären Waffenangriff im selben Kommentar eingesetzt werden, solange Bonusaktion und Besondere Aktion verfügbar sind.",
+          "costs": [
+            { "id": "gawain-dragon-whirl-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" },
+            { "id": "gawain-dragon-whirl-special-action", "resourceId": "special-action", "name": "Besondere Aktion", "amount": 1, "scope": "persistent" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "secondarySave": { "enabled": false },
+          "followUpAttack": { "enabled": false }
         }
       ],
       "quirks": [

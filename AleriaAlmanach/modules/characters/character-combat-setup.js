@@ -17,8 +17,8 @@ import {
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
-} from '../combat/character-creation-templates.js?v=20260807-alben-aldrimar-classes-v1';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260803-gawain-level4-v1';
+} from '../combat/character-creation-templates.js?v=20260807-freya-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
 
 let activeSetup = null;
 
@@ -198,9 +198,11 @@ function renderResourcesStep(draft) {
       ${resourceCard('◆', 'Reaktion', 1, 1, 'Neu bei jedem Gesamtkommentar')}
       ${resourceCard('★', 'Besondere Aktion', 2, 2, 'Erst am nächsten Aleria-Tag')}
       ${resourceCard('◎', 'Aura-Fokuspunkt', 0, 0, 'Tagesgebundener Universalpunkt')}
-      ${resourceCard('✦', 'Mana / Fokus', 0, 0, 'Erst am nächsten Aleria-Tag')}
+      ${resourceCard('✦', 'Mana', 0, 0, 'Erst am nächsten Aleria-Tag')}
+      ${resourceCard('◈', 'Fokus', 0, 0, 'Erst am nächsten Aleria-Tag')}
       ${resourceCard('☀', 'Celestiale Punkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
       ${resourceCard('♨', 'Infernale Punkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
+      ${resourceCard('⚔', 'Paktpunkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
       ${resourceCard('✧', 'Inspiration', 0, 1, 'Wird gezielt vergeben')}
     </div>
     <div class="cp-setup-slots"><span>Zaubertricks <b>∞</b></span>${Array.from({ length: 10 }, (_entry, index) => `<span>Grad ${index + 1} <b>0 / 0</b></span>`).join('')}</div>

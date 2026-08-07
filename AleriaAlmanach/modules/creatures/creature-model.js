@@ -56,7 +56,7 @@ function createCreatureCombatDefaults() {
     skills: [],
     weapons: [],
     armorItems: [],
-    resources: [{ id: 'mana-focus', name: 'Mana / Fokus', current: 0, maximum: 0, recovery: 'long-rest', scope: 'persistent', category: 'magic' }],
+    resources: [{ id: 'mana-focus', name: 'Mana', current: 0, maximum: 0, recovery: 'long-rest', scope: 'persistent', category: 'magic' }],
     techniques: [],
     quirks: [],
     conditions: [],

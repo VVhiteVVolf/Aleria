@@ -3,8 +3,8 @@ import { narrateCombatResolution } from './combat-narration-service.js?v=2026080
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260804-referee-v2';
-import { CombatResolutionService } from './combat-resolution-service.js?v=20260804-referee-v2';
+} from './combat-profile-resolver.js?v=20260807-freya-v1';
+import { CombatResolutionService } from './combat-resolution-service.js?v=20260807-freya-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -20,20 +20,21 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260806-encounter-card-v1';
+} from './combat-state-model.js?v=20260807-freya-v1';
 import {
   canUseAuraPayment,
+  canUseManaSubstitutePayment,
   getActionPaymentCosts,
   recoverDailyCombatResources,
   resetCommentScopedResources
-} from './combat-action-economy.js?v=20260803-economy-audit-v1';
+} from './combat-action-economy.js?v=20260807-magic-system-v1';
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260806-evaluation-collapse-v1';
+} from './ui/combat-ui.js?v=20260807-mana-audit-v1';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
@@ -228,15 +229,30 @@ function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, s
 }
 
 function resolveActorProfile(character, options = {}) {
-  const profile = profileResolver.resolve(character, {
+  const actorId = String(options.actorId || character?.id || '');
+  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
+  // Ein späterer "Ausrüstung wechseln"-Kommentar bestimmt, welche Waffe/welches Instrument
+  // ab jetzt als aktiv gilt - muss vor der Profilauflösung angewendet werden, weil aktiveWeapon
+  // und Technik-Kompatibilität bereits innerhalb von profileResolver.resolve entschieden werden.
+  const effectiveCharacter = state?.equippedWeaponId && Array.isArray(character?.combatProfile?.weapons)
+    ? {
+        ...character,
+        combatProfile: {
+          ...character.combatProfile,
+          weapons: character.combatProfile.weapons.map(weapon => ({
+            ...weapon,
+            equipped: weapon.id === state.equippedWeaponId
+          }))
+        }
+      }
+    : character;
+  const profile = profileResolver.resolve(effectiveCharacter, {
     actionId: options.actionId,
     segmentKind: options.segmentKind,
     paymentMode: options.paymentMode,
     weaponGrip: options.weaponGrip,
     castLevel: options.castLevel
   });
-  const actorId = String(options.actorId || profile.characterId || '');
-  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
   const resetActors = options.commentResourceResetActors;
   const shouldResetCommentResources = options.resetCommentResources && !resetActors?.has(actorId);
   let effectiveResources = state?.resources || profile.resources;
@@ -311,7 +327,12 @@ function mountComposers(context = {}) {
       ? `${actor?.name || 'Die handelnde Figur'} hat keine Nutzung von ${abilityReservation.missing?.name || 'dieser Fähigkeit'} mehr übrig.`
       : (actor ? getCombatActorValidationMessage(actor, actorValidation) : '');
     const auraPaymentAvailable = actor ? canUseAuraPayment(actor.selectedAction, actor) : false;
-    const paymentOptions = actor ? ['standard', ...(auraPaymentAvailable ? ['aura'] : [])].map(mode => {
+    const manaSubstitutePaymentAvailable = actor ? canUseManaSubstitutePayment(actor.selectedAction, actor) : false;
+    const paymentOptions = actor ? [
+      'standard',
+      ...(auraPaymentAvailable ? ['aura'] : []),
+      ...(manaSubstitutePaymentAvailable ? ['mana-substitute'] : [])
+    ].map(mode => {
       const costs = getActionPaymentCosts(actor.selectedAction || {}, mode, actor);
       return { mode, costs, payment: applyCombatResourceCosts(actor.resources, costs) };
     }) : [];
@@ -361,7 +382,8 @@ function mountComposers(context = {}) {
       payment,
       paymentOptions,
       paymentConfirmed,
-      auraPaymentAvailable
+      auraPaymentAvailable,
+      manaSubstitutePaymentAvailable
     });
   });
 }
@@ -389,7 +411,7 @@ function updateSegmentSetting(segmentId, field, value) {
   }
   if (field === 'distanceMeters') segment.combatDistanceMeters = Math.max(0, Math.min(9999, Number(value) || 0));
   if (field === 'paymentMode') {
-    segment.combatPaymentMode = ['aura', 'cheat'].includes(value) ? value : 'standard';
+    segment.combatPaymentMode = ['aura', 'mana-substitute', 'cheat'].includes(value) ? value : 'standard';
     segment.combatPaymentConfirmed = false;
   }
   globalThis.persistCommentDraft?.();
@@ -407,7 +429,7 @@ function setSegmentPaymentConfirmation(segmentId, confirmed) {
 function chooseSegmentPayment(segmentId, paymentMode) {
   const segment = latestComposerContext?.segments?.find(item => String(item.id || '') === String(segmentId || ''));
   if (!segment || !isCombatSegment(segment)) return;
-  const normalizedMode = paymentMode === 'aura' ? 'aura' : 'standard';
+  const normalizedMode = ['aura', 'mana-substitute'].includes(paymentMode) ? paymentMode : 'standard';
   const releasesCurrent = segment.combatPaymentConfirmed && segment.combatPaymentMode === normalizedMode;
   segment.combatPaymentMode = normalizedMode;
   segment.combatPaymentConfirmed = !releasesCurrent;

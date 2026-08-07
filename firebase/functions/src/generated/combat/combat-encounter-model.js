@@ -1,4 +1,4 @@
-import { splitEncounterExperience } from './combat-progression.js?v=20260804-encounter-v1';
+import { splitEncounterExperience } from './combat-progression.js?v=20260807-magic-system-v1';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 1;

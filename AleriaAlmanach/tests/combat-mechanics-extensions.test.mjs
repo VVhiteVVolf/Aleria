@@ -147,11 +147,11 @@ test('null TP markieren einen Teilnehmer automatisch als besiegt und EP-fähig',
 });
 
 test('EP schalten die bestehende Level-up-Werkstatt frei, ohne Entscheidungen automatisch anzuwenden', () => {
-  const award = applyExperienceAward({ level: 1, experience: 250 }, 100);
+  const award = applyExperienceAward({ level: 1, experience: 1400 }, 200);
   assert.equal(award.after.level, 1);
-  assert.equal(award.after.experience, 350);
+  assert.equal(award.after.experience, 1600);
   assert.equal(award.levelUpAvailable, true);
-  assert.equal(getOrdinaryLevelForExperience(350), 2);
+  assert.equal(getOrdinaryLevelForExperience(1600), 2);
 });
 
 test('Zustandsdauer zählt auch Redeabschnitte der betroffenen Figur herunter', () => {

@@ -2,11 +2,11 @@ import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   getMaximumHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260803-gawain-level4-v1';
+} from './combat-profile-model.js?v=20260807-freya-v1';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
-} from './character-creation-templates.js?v=20260803-character-creation-v1';
+} from './character-creation-templates.js?v=20260807-freya-v1';
 
 export const CHARACTER_CREATION_METHODS = Object.freeze([
   { id: 'standard-array', label: 'Standard-Array', description: '15, 14, 13, 12, 10 und 8 frei verteilen.' },

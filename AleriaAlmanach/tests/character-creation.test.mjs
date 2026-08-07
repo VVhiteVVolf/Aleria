@@ -52,12 +52,15 @@ test('ein leerer Charakterbogen besitzt die vollständige Schema-9-Grundlage', (
 
 test('der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und Klassen', () => {
   assert.deepEqual(CHARACTER_ANCESTRY_TEMPLATES.map(template => template.id), ['cenyr', 'alben', 'aldrimarer', 'nordmann']);
-  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.map(template => template.id), ['ritter', 'huskarl']);
+  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.map(template => template.id), [
+    'ritter', 'huskarl', 'bauer', 'gelehrter', 'kultist', 'soeldner', 'klerus', 'handwerker', 'gassenkind', 'musikerin'
+  ]);
   assert.deepEqual(CHARACTER_CLASS_TEMPLATES.map(template => template.id), [
     'teulu', 'cantref', 'helwyr', 'uchelwyr', 'arthwyr', 'barddwyr',
     'morwyr', 'rhyfelwyr', 'ceidwynr', 'rhiddwyrr', 'derwyn',
     'kern', 'cateran', 'mormaer', 'serf', 'airig', 'currach', 'ceolaire-piobaire', 'riada', 'silvaner', 'galloghlaigh', 'fathach',
-    'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde'
+    'hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde',
+    'magier', 'kleriker', 'hexer', 'asket'
   ]);
   assert.deepEqual(getCharacterCreationTemplate('ancestry', 'cenyr').attributeBonuses, { strength: 2, charisma: 1 });
   assert.deepEqual(getCharacterCreationTemplate('class', 'teulu').proficiencies.armor, ['medium', 'heavy']);
@@ -83,6 +86,34 @@ test('alle neuen Alben- und Aldrimar-Klassen besitzen gültige Startausrüstung'
   }
   assert.equal(getCharacterCreationTemplate('class', 'skalde').magic.enabled, true);
   assert.equal(getCharacterCreationTemplate('class', 'ceolaire-piobaire').magic.enabled, true);
+});
+
+test('die vier universellen Klassen sind korrekt an Mana, Fokus und Paktpunkte angebunden', () => {
+  const magier = getCharacterCreationTemplate('class', 'magier');
+  const kleriker = getCharacterCreationTemplate('class', 'kleriker');
+  const hexer = getCharacterCreationTemplate('class', 'hexer');
+  const asket = getCharacterCreationTemplate('class', 'asket');
+  assert.ok(magier.weapons.length >= 1 && kleriker.weapons.length >= 1 && hexer.weapons.length >= 1 && asket.weapons.length >= 1);
+
+  const magierProfile = sanitizeCharacterCombatProfile({ progression: { level: 5 }, magic: magier.magic, weapons: magier.weapons, armorItems: magier.armorItems });
+  assert.equal(magierProfile.magic.manaResourceId, 'mana-focus');
+  assert.ok(magierProfile.resources.find(resource => resource.id === 'mana-focus').maximum > 0);
+
+  const klerikerProfile = sanitizeCharacterCombatProfile({ progression: { level: 10 }, magic: kleriker.magic, weapons: kleriker.weapons, armorItems: kleriker.armorItems });
+  assert.equal(klerikerProfile.magic.bypassResourceId, 'celestial-points');
+  assert.ok(klerikerProfile.resources.find(resource => resource.id === 'celestial-points').maximum > 0);
+  assert.equal(klerikerProfile.resources.find(resource => resource.id === 'infernal-points').maximum, 0);
+
+  const hexerProfile = sanitizeCharacterCombatProfile({ progression: { level: 10 }, magic: hexer.magic, weapons: hexer.weapons, armorItems: hexer.armorItems });
+  assert.equal(hexerProfile.magic.manaResourceId, 'pact-points');
+  assert.ok(hexerProfile.resources.find(resource => resource.id === 'pact-points').maximum > 0);
+  assert.equal(hexerProfile.resources.find(resource => resource.id === 'mana-focus').maximum, 0, 'Hexer nutzt keine reguläre Mana-Ressource');
+
+  const asketProfile = sanitizeCharacterCombatProfile({ progression: { level: 7 }, magic: asket.magic, weapons: asket.weapons, armorItems: asket.armorItems });
+  assert.equal(asketProfile.magic.enabled, false);
+  assert.equal(asketProfile.magic.focusEnabled, true);
+  assert.equal(asketProfile.resources.find(resource => resource.id === 'focus').maximum, 7);
+  assert.equal(asketProfile.resources.find(resource => resource.id === 'mana-focus').maximum, 0, 'Fokus bleibt strukturell von Mana getrennt');
 });
 
 test('Punktekauf beginnt bei acht und blockiert Ausgaben über 27 Punkte', () => {

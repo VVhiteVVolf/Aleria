@@ -168,7 +168,9 @@ export function getActionPaymentCosts(action = {}, paymentMode = 'standard', pro
     }];
   }
   if (paymentMode === 'aura') {
-    if (action?.auraBypass?.allowed === false || profile?.aura?.enabled !== true) {
+    const resourceId = String(action?.auraBypass?.resourceId || profile?.aura?.focusResourceId || 'aura-focus');
+    const resource = (profile?.resources || []).find(item => item.id === resourceId);
+    if (action?.auraBypass?.allowed === false || !resource || Number(resource.maximum) <= 0) {
       return [{
         id: 'invalid-aura-payment',
         resourceId: '__invalid-aura-payment__',
@@ -177,9 +179,7 @@ export function getActionPaymentCosts(action = {}, paymentMode = 'standard', pro
         scope: 'persistent'
       }];
     }
-    const resourceId = String(action?.auraBypass?.resourceId || profile?.aura?.focusResourceId || 'aura-focus');
     const amount = normalizeAmount(action?.auraBypass?.cost ?? profile?.aura?.focusBypassCost, 1) || 1;
-    const resource = (profile?.resources || []).find(item => item.id === resourceId);
     const auraCost = {
       id: `aura-${resourceId}`,
       resourceId,
@@ -193,14 +193,40 @@ export function getActionPaymentCosts(action = {}, paymentMode = 'standard', pro
     });
     return [auraCost, ...limitedUseCosts];
   }
+  if (paymentMode === 'mana-substitute') {
+    const substituteResourceId = String(profile?.magic?.bypassResourceId || '');
+    const substituteResource = (profile?.resources || []).find(item => item.id === substituteResourceId);
+    const explicit = normalizeCombatResourceCosts(action?.costs);
+    const hasManaCost = explicit.some(cost => cost.resourceId === 'mana-focus');
+    if (!substituteResourceId || !substituteResource || Number(substituteResource.maximum) <= 0 || !hasManaCost) {
+      return [{
+        id: 'invalid-mana-substitute-payment',
+        resourceId: '__invalid-mana-substitute-payment__',
+        name: 'keine Ersatzpunkte verfügbar',
+        amount: 1,
+        scope: 'persistent'
+      }];
+    }
+    return explicit.map(cost => (cost.resourceId === 'mana-focus'
+      ? { ...cost, id: `${cost.id}-substitute`, resourceId: substituteResourceId, name: substituteResource.name || cost.name }
+      : cost));
+  }
   const explicit = normalizeCombatResourceCosts(action?.costs);
   return explicit.length ? explicit : getDefaultActivationCosts(action?.activationType || 'action');
 }
 
 export function canUseAuraPayment(action = {}, profile = {}) {
-  if (!profile?.aura?.enabled || action?.auraBypass?.allowed === false) return false;
+  if (action?.auraBypass?.allowed === false) return false;
   const resourceId = String(action?.auraBypass?.resourceId || profile?.aura?.focusResourceId || 'aura-focus');
   return (profile.resources || []).some(resource => resource.id === resourceId && Number(resource.maximum) > 0);
+}
+
+export function canUseManaSubstitutePayment(action = {}, profile = {}) {
+  const substituteResourceId = String(profile?.magic?.bypassResourceId || '');
+  if (!substituteResourceId) return false;
+  const hasManaCost = normalizeCombatResourceCosts(action?.costs).some(cost => cost.resourceId === 'mana-focus');
+  if (!hasManaCost) return false;
+  return (profile.resources || []).some(resource => resource.id === substituteResourceId && Number(resource.maximum) > 0);
 }
 
 export const combatActionEconomyInternals = Object.freeze({ ACTION_RESOURCE_IDS, COMMENT_SCOPED_ACTION_RESOURCE_IDS, normalizeAmount });

@@ -68,7 +68,7 @@ test('Gawains Waffen und Ruestung sind als dieselben Gegenstaende mit dem Invent
   assert.equal(armor.dexterityUnlockLevel, 6);
   assert.equal(sword.name, 'Drachenzahn · Draig-Ritterschwert');
   assert.equal(armor.name, 'Silberschuppe · Draig-Rüstung');
-  assert.equal(gawain.combatProfile.progression.level, 4);
+  assert.equal(gawain.combatProfile.progression.level, 5);
   assert.equal(gawain.combatProfile.attributes.find(attribute => attribute.key === 'strength').score, 15);
   assert.equal(gawain.combatProfile.attributes.find(attribute => attribute.key === 'dexterity').score, 16);
   assert.deepEqual(
@@ -77,8 +77,21 @@ test('Gawains Waffen und Ruestung sind als dieselben Gegenstaende mit dem Invent
       ['Biss des Drachen', 2],
       ['Klaue des Drachen', 3],
       ['Tanz der Silbernen Schuppe', 4],
-      ['Schweif des Drachen', 4]
+      ['Schweif des Drachen', 4],
+      ['Wirbelschritt des Drachen', 5]
     ]
+  );
+});
+
+test('Wirbelschritt des Drachen kostet Bonusaktion und Besondere Aktion statt der normalen Aktion', async () => {
+  const gawain = await loadGawain();
+  const bite = resolveCombatProfile(gawain, { actionId: 'technique:gawain-dragon-bite', segmentKind: 'combataction' });
+  const whirl = resolveCombatProfile(gawain, { actionId: 'technique:gawain-dragon-whirl', segmentKind: 'combataction' });
+  assert.equal(whirl.weapon.damageFormula, '1d10+1d4');
+  assert.equal(whirl.attackModifier, bite.attackModifier + 1);
+  assert.deepEqual(
+    whirl.resourceCosts.map(cost => [cost.resourceId, cost.amount]),
+    [['bonus-action', 1], ['special-action', 1]]
   );
 });
 
@@ -135,7 +148,7 @@ test('Klaue des Drachen legt bei misslungenem Rettungswurf einen echten temporae
   const result = await new CombatResolutionService(new TechniqueDiceAdapter({ attacks: [15], damages: [8], saves: [2] }))
     .resolveAttack({ actor, target });
   assert.equal(result.secondarySaves.length, 1);
-  assert.equal(result.secondarySaves[0].dc, 12);
+  assert.equal(result.secondarySaves[0].dc, 13);
   assert.equal(result.secondarySaves[0].succeeded, false);
   assert.equal(result.targetConditionSnapshot.applied.mechanics.attack, -2);
 

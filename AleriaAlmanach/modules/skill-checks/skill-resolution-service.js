@@ -6,7 +6,7 @@ import {
   normalizeSkillCheckSettings,
   resolveSkillModifier
 } from './skill-check-model.js?v=20260803-skill-checks-v2';
-import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260804-referee-v2';
+import { getAuraTargetMechanics } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,

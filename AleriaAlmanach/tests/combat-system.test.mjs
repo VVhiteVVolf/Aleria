@@ -41,6 +41,7 @@ import {
   patchResolutionHitPointState
 } from '../modules/combat/combat-state-model.js';
 import {
+  canUseManaSubstitutePayment,
   COMBAT_ACTION_RESOURCE_DEFINITIONS,
   getActionPaymentCosts,
   getPersistentCombatResources,
@@ -404,7 +405,10 @@ test('wählt Waffe oder vorbereiteten Zauber ausdrücklich aus dem Profil', () =
   assert.equal(spell.weapon.damageFormula, '2d6');
   assert.equal(spell.profileActionKind, 'spell');
   assert.equal(spell.attackModifier, 5);
-  assert.deepEqual(spell.actions.map(action => action.kind), ['weapon', 'weapon', 'weapon', 'spell']);
+  assert.deepEqual(spell.actions.map(action => action.kind), [
+    'weapon', 'weapon', 'weapon', 'spell',
+    'equipment-switch', 'equipment-switch', 'equipment-switch'
+  ]);
 });
 
 test('ordnet Gebete als eigene magische Blase und Auswertung zu', () => {
@@ -658,6 +662,7 @@ test('Techniken werden nur mit einer passenden aktiven Waffenart freigeschaltet'
 
 test('Aura-Fokus ersetzt reguläre Aktions-, Mana- und Slotkosten vollständig', () => {
   const profile = sanitizeCharacterCombatProfile({
+    progression: { level: 6 },
     resources: [{ id: 'mana', name: 'Mana', current: 9, maximum: 9 }],
     aura: { enabled: true, focusResourceId: 'aura-focus', focusBypassCost: 2 }
   });
@@ -668,6 +673,7 @@ test('Aura-Fokus ersetzt reguläre Aktions-, Mana- und Slotkosten vollständig',
 
 test('Aura-Fokus ersetzt die Aktion, aber nicht die begrenzte Nutzung einer Technik', () => {
   const profile = sanitizeCharacterCombatProfile({
+    progression: { level: 6 },
     resources: [{
       id: 'technique-uses', name: 'Techniknutzungen', current: 2, maximum: 2,
       category: 'technique-use', scope: 'persistent', recovery: 'day'
@@ -812,7 +818,7 @@ test('ein Zauber mit gültigem Slot zieht den Zauberplatz in seine Kosten ein', 
   assert.equal(actor.resourceCosts.find(cost => cost.resourceId === 'slot-1')?.amount, 1);
 });
 
-test('Zaubertricks sind kostenlos und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
+test('Zaubertricks kosten 1 Mana und Zaubergrade I bis X erhalten eigene Langrast-Plätze', () => {
   const profile = sanitizeCharacterCombatProfile({
     magic: {
       enabled: true,
@@ -825,7 +831,7 @@ test('Zaubertricks sind kostenlos und Zaubergrade I bis X erhalten eigene Langra
   const slots = getOrderedSpellSlotResources(profile.resources, profile.magic.slotResourceIds);
   assert.equal(COMBAT_SPELL_SLOT_DEFINITIONS.length, 10);
   assert.deepEqual(slots.map(slot => [slot.spellLevel, slot.recovery]), Array.from({ length: 10 }, (_entry, index) => [index + 1, 'long-rest']));
-  assert.equal(profile.magic.spells[0].manaCost, 0);
+  assert.equal(profile.magic.spells[0].manaCost, 1);
   assert.equal(profile.magic.spells[0].slotCost, 0);
   assert.equal(profile.magic.spells[0].slotResourceId, '');
   assert.equal(profile.magic.spells[1].level, 10);
@@ -843,7 +849,63 @@ test('Zaubertricks sind kostenlos und Zaubergrade I bis X erhalten eigene Langra
     actionId: 'spell:spark', segmentKind: 'spell'
   });
   assert.equal(cantrip.selectedAction.isCantrip, true);
-  assert.deepEqual(cantrip.resourceCosts.map(cost => cost.resourceId), ['action']);
+  assert.deepEqual(cantrip.resourceCosts.map(cost => cost.resourceId), ['action', 'mana-focus']);
+});
+
+test('Mana, Aura-Fokus und Zaubergrad-Freischaltung wachsen automatisch mit der Stufe', () => {
+  const level1 = sanitizeCharacterCombatProfile({ progression: { level: 1 }, magic: { enabled: true, casterTier: 'full' } });
+  assert.equal(level1.resources.find(resource => resource.id === 'mana-focus').maximum, 14);
+  assert.equal(level1.resources.find(resource => resource.id === 'aura-focus').maximum, 0);
+  assert.equal(level1.resources.find(resource => resource.id === 'spell-slot-1').maximum, 1, 'Grad I ist ab Stufe 1 freigeschaltet');
+  assert.equal(level1.resources.find(resource => resource.id === 'spell-slot-2').maximum, 0, 'Grad II ist noch nicht freigeschaltet');
+
+  const level8Half = sanitizeCharacterCombatProfile({ progression: { level: 8 }, magic: { enabled: true, casterTier: 'half' } });
+  assert.equal(level8Half.resources.find(resource => resource.id === 'spell-slot-2').maximum, 1, 'Grad II ist seit Stufe 5 freigeschaltet');
+  assert.equal(level8Half.resources.find(resource => resource.id === 'spell-slot-3').maximum, 0, 'Grad III schaltet sich erst bei Stufe 9 frei');
+
+  const level9Half = sanitizeCharacterCombatProfile({ progression: { level: 9 }, magic: { enabled: true, casterTier: 'half' } });
+  assert.equal(level9Half.resources.find(resource => resource.id === 'mana-focus').maximum, 31);
+  assert.equal(level9Half.resources.find(resource => resource.id === 'aura-focus').maximum, 1);
+  assert.equal(level9Half.resources.find(resource => resource.id === 'spell-slot-3').maximum, 1, 'Grad III ist ab Stufe 9 freigeschaltet');
+
+  const rank30 = sanitizeCharacterCombatProfile({
+    progression: { level: 20, specialLevels: 10 },
+    magic: { enabled: true, casterTier: 'full' }
+  });
+  assert.equal(rank30.resources.find(resource => resource.id === 'aura-focus').maximum, 14);
+  assert.equal(rank30.resources.find(resource => resource.id === 'mana-focus').maximum, 153 + 10 * 18);
+
+  const noMagic = sanitizeCharacterCombatProfile({ progression: { level: 20 } });
+  assert.equal(noMagic.resources.find(resource => resource.id === 'mana-focus').maximum, 0, 'ohne magic.enabled bleibt Mana bei 0');
+  assert.equal(noMagic.resources.find(resource => resource.id === 'aura-focus').maximum, 4, 'Aura-Fokus wächst unabhängig von Magie');
+});
+
+test('höher gestufte Charaktere behalten manuell erhöhte Ressourcenwerte statt sie abzusenken', () => {
+  const profile = sanitizeCharacterCombatProfile({
+    progression: { level: 1 },
+    resources: [{ id: 'aura-focus', name: 'Aura-Fokuspunkt', current: 9, maximum: 9 }]
+  });
+  assert.equal(profile.resources.find(resource => resource.id === 'aura-focus').maximum, 9, 'ein manuell höher gesetztes Maximum wird nie automatisch gesenkt');
+});
+
+test('Kleriker- und hexerartige Figuren dürfen Celestiale/Infernale Punkte statt Mana ausgeben', () => {
+  const cleric = sanitizeCharacterCombatProfile({
+    progression: { level: 10 },
+    magic: { enabled: true, casterTier: 'full', bypassResourceId: 'celestial-points' }
+  });
+  assert.equal(cleric.resources.find(resource => resource.id === 'celestial-points').maximum, 5);
+  assert.equal(cleric.resources.find(resource => resource.id === 'infernal-points').maximum, 0, 'nur die hinterlegte Ersatzressource wächst');
+
+  const action = { costs: [{ resourceId: 'action', amount: 1 }, { resourceId: 'mana-focus', amount: 8 }] };
+  assert.equal(canUseManaSubstitutePayment(action, cleric), true);
+  assert.deepEqual(
+    getActionPaymentCosts(action, 'mana-substitute', cleric).map(cost => [cost.resourceId, cost.amount]),
+    [['action', 1], ['celestial-points', 8]]
+  );
+
+  const nonCleric = sanitizeCharacterCombatProfile({ progression: { level: 10 }, magic: { enabled: true, casterTier: 'full' } });
+  assert.equal(canUseManaSubstitutePayment(action, nonCleric), false);
+  assert.equal(getActionPaymentCosts(action, 'mana-substitute', nonCleric)[0].resourceId, '__invalid-mana-substitute-payment__');
 });
 
 test('AleriaGPT erhält Aura-Ersatzregel, Zaubergrade und aktuelle Zauberplätze strukturiert', () => {
@@ -1287,4 +1349,37 @@ test('Schaden prüft eine laufende Konzentration und beendet sie bei misslungene
   assert.equal(concentrationSave.succeeded, false);
   assert.equal(resolution.targetConcentrationSnapshot.after, null);
   assert.equal(resolution.targetConcentrationSnapshot.reason, 'save-failed');
+});
+
+test('Ausrüstung wechseln kostet eine Bonusaktion, würfelt nichts und markiert die neue aktive Waffe', async () => {
+  const source = character('actor', {
+    weapons: [
+      { id: 'sword', name: 'Langschwert', damageFormula: '1W8', attackAttribute: 'strength', equipped: true },
+      { id: 'lute', name: 'Laute', weaponType: 'arcane', damageFormula: '1W4', attackAttribute: 'charisma', equipped: false }
+    ]
+  });
+  const actor = resolveCombatProfile(source, { actionId: 'equip:lute', segmentKind: 'combataction' });
+  assert.equal(actor.selectedAction.kind, 'equipment-switch');
+  assert.deepEqual(actor.resourceCosts.map(cost => [cost.resourceId, cost.amount]), [['bonus-action', 1]]);
+  const target = resolveCombatProfile(character('target'));
+  const result = await new CombatResolutionService({}).resolveAttack({ actor, target });
+  assert.equal(result.actionType, 'equipment-switch');
+  assert.equal(result.attack.hit, true);
+  assert.deepEqual(result.actorEquippedWeaponSnapshot, { before: 'sword', after: 'lute' });
+});
+
+test('Ein Ausrüstungswechsel-Kommentar bestimmt die aktive Waffe für spätere Kommentare in der Historie', () => {
+  const comments = [{
+    id: 'switch-comment',
+    commentSegments: [{
+      actorId: 'actor',
+      combatResolution: {
+        actionType: 'equipment-switch',
+        actorId: 'actor', targetId: 'target',
+        actorEquippedWeaponSnapshot: { before: 'sword', after: 'lute' }
+      }
+    }]
+  }];
+  const states = deriveCombatStateFromComments(comments);
+  assert.equal(states.get('actor').equippedWeaponId, 'lute');
 });

@@ -6,13 +6,13 @@ import {
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile
-} from './combat-profile-model.js?v=20260804-referee-v2';
+} from './combat-profile-model.js?v=20260807-freya-v1';
 import {
   getActionPaymentCosts,
   normalizeCombatResourceCosts
-} from './combat-action-economy.js?v=20260803-economy-audit-v1';
+} from './combat-action-economy.js?v=20260807-magic-system-v1';
 import { getSpellLevelLabel, getSpellSlotLevel, isSpellSlotResource } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260804-referee-v2';
+import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=20260807-magic-system-v2';
 import { parseDamageFormula } from './rules/combat-mvp-rules.js';
 
 function buildCombatProfileActions(character, profile) {
@@ -131,7 +131,10 @@ function buildCombatProfileActions(character, profile) {
         activationType: ability.activationType,
         costs: normalizeCombatResourceCosts(ability.costs),
         auraBypass: ability.auraBypass,
-        resolutionMode: ability.rollFormula ? (isSpell ? 'spell-attack' : 'weapon-attack') : 'automatic',
+        resolutionMode: ability.resolutionType
+          || (ability.rollFormula ? (isSpell ? 'spell-attack' : 'weapon-attack') : 'automatic'),
+        saveAttribute: ability.saveAttribute || 'dexterity',
+        halfDamageOnSave: !!ability.halfDamageOnSave,
         effects: ability.effects || [],
         concentration: !!ability.concentration,
         channelComments: Number(ability.channelComments || 0),
@@ -146,7 +149,7 @@ function buildCombatProfileActions(character, profile) {
     .map(spell => {
       const presentationKind = ['prayer', 'song'].includes(spell.presentationKind) ? spell.presentationKind : 'spell';
       const cantrip = Number(spell.level) === 0;
-      const manaCost = cantrip ? null : resourceCost(manaResource?.id || profile.magic?.manaResourceId || 'mana-focus', manaResource?.name || 'Mana / Fokus', Number(spell.manaCost));
+      const manaCost = resourceCost(manaResource?.id || profile.magic?.manaResourceId || 'mana-focus', manaResource?.name || 'Mana', Number(spell.manaCost));
       const slotCost = cantrip ? null : resourceCost(spell.slotResourceId, 'Zauberplatz', Number(spell.slotCost));
       const requiresSlot = !cantrip && Number(spell.slotCost) > 0;
       const slotResource = requiresSlot
@@ -173,7 +176,7 @@ function buildCombatProfileActions(character, profile) {
         attackAttribute: profile.magic.castingAttribute,
         range: spell.range || 'Zauber',
         properties: cantrip
-          ? 'Zaubertrick · keine Mana- oder Zauberplatzkosten'
+          ? `Zaubertrick · ${spell.manaCost} Mana · keine Zauberplatzkosten`
           : `${getSpellLevelLabel(spell.level)} · ${spell.manaCost} Mana · ${spell.slotCost} Zauberplatz`,
         notes: spell.description,
         equipped: false
@@ -203,7 +206,36 @@ function buildCombatProfileActions(character, profile) {
       default: false
     };
     });
-  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions];
+  // Aktive Waffe/Schild/Casterinstrument im Kampf zu wechseln kostet eine Bonusaktion und
+  // wirkt sich erst auf künftige Handlungen aus - keine Attacke, keine Kosten außer der
+  // Bonusaktion, automatisch aufgelöst (kein Wurf nötig).
+  const equipmentSwitchActions = profile.weapons
+    .filter(weapon => weapon.name)
+    .map(weapon => ({
+      id: `equip:${weapon.id}`,
+      sourceId: weapon.id,
+      kind: 'equipment-switch',
+      kindLabel: 'Ausrüstungswechsel',
+      name: `Zu ${weapon.name} wechseln`,
+      formula: '',
+      weapon: { ...weapon },
+      attackModifier: 0,
+      damageModifier: 0,
+      activationType: 'bonus-action',
+      costs: normalizeCombatResourceCosts([
+        { id: `equip-${weapon.id}-bonus-action`, resourceId: 'bonus-action', name: 'Bonusaktion', amount: 1, scope: 'comment' }
+      ]),
+      effects: [],
+      ammunition: null,
+      auraBypass: { allowed: false, resourceId: '', cost: 1 },
+      resolutionMode: 'automatic',
+      equipmentSwitchTargetId: weapon.id,
+      segmentKinds: ['combataction'],
+      compatible: !weapon.equipped,
+      disabledReason: weapon.equipped ? 'Bereits aktiv ausgerüstet.' : '',
+      default: false
+    }));
+  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions, ...equipmentSwitchActions];
 }
 
 function resolveCombatPersistence(character = {}) {

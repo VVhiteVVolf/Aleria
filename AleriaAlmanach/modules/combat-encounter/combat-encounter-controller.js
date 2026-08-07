@@ -1,11 +1,11 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260804-referee-v2';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260804-referee-v2';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260807-freya-v1';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260807-freya-v1';
 import {
   deriveCombatEncounterState,
   getActiveCombatEncounter,
   normalizeCombatEncounterEvent
 } from '../combat/combat-encounter-model.js?v=20260806-encounter-card-v1';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260806-encounter-card-v1';
+import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260807-freya-v1';
 import {
   ensureCombatEncounterDialog,
   filterEncounterCandidates,

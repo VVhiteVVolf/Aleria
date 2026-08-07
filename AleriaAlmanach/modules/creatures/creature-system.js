@@ -11,7 +11,7 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260804-referee-v2';
+} from '../combat/combat-profile-model.js?v=20260807-freya-v1';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {

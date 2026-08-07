@@ -1,5 +1,5 @@
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-import { COMBAT_ACTION_RESOURCE_DEFINITIONS } from '../combat-action-economy.js?v=20260803-economy-audit-v1';
+import { COMBAT_ACTION_RESOURCE_DEFINITIONS } from '../combat-action-economy.js?v=20260807-magic-system-v1';
 import {
   getSpellLevelLabel,
   getSpellSlotLevel,
@@ -70,37 +70,33 @@ function buildPaymentResourceCards({ actor = {}, paymentOptions = [], paymentMod
 
   const magic = isMagicSegmentKind(segmentKind);
   if (magic) {
-    resources.filter(resource => ['magic', 'aura', 'celestial', 'infernal'].includes(resource?.category)
+    // Zauberplätze werden hier bewusst nicht mehr als eigene Kostenkarten angezeigt - sie
+    // zeigen nur noch (über den Grad-Auswahl-Dropdown der Handlung) welcher Zaubergrad
+    // freigeschaltet ist, verbrauchen aber selbst nichts mehr. Nur echte Ressourcenpools
+    // (Mana, Fokus, Celestiale/Infernale/Paktpunkte) tauchen hier auf.
+    resources.filter(resource => ['magic', 'aura', 'celestial', 'infernal', 'focus', 'pact'].includes(resource?.category)
       || MAGIC_RESOURCE_PATTERN.test(`${resource?.id || ''} ${resource?.name || ''}`))
+      .filter(resource => !isSpellSlotResource(resource, actor))
       .forEach(resource => visibleIds.push(String(resource.id || '')));
-    const configuredSlotIds = Array.isArray(actor.magic?.slotResourceIds) ? actor.magic.slotResourceIds.map(String) : [];
-    configuredSlotIds.forEach(resourceId => visibleIds.push(resourceId));
-    const hasSpellSlot = resources.some(resource => configuredSlotIds.includes(String(resource?.id || ''))
-      || /zauber.?platz|spell.?slot/i.test(`${resource?.id || ''} ${resource?.name || ''}`));
-    if (!hasSpellSlot) {
-      resourcesById.set('__missing-spell-slot__', {
-        id: '__missing-spell-slot__', name: 'Zauberplatz', current: 0, maximum: 0,
-        category: 'magic', configured: false
-      });
-      visibleIds.push('__missing-spell-slot__');
-    }
   }
 
   return [...new Set(visibleIds)].map(resourceId => {
     const standardOption = options.get('standard');
     const auraOption = options.get('aura');
+    const substituteOption = options.get('mana-substitute');
     const standardCost = standardOption?.costsByResource.get(resourceId) || null;
     const auraCost = auraOption?.costsByResource.get(resourceId) || null;
-    const mode = standardCost ? 'standard' : (auraCost ? 'aura' : '');
+    const substituteCost = substituteOption?.costsByResource.get(resourceId) || null;
+    const mode = standardCost ? 'standard' : (auraCost ? 'aura' : (substituteCost ? 'mana-substitute' : ''));
     const option = mode ? options.get(mode) : null;
     const resource = resourcesById.get(resourceId) || {
       id: resourceId,
-      name: standardCost?.name || auraCost?.name || 'Ressource',
+      name: standardCost?.name || auraCost?.name || substituteCost?.name || 'Ressource',
       current: 0,
       maximum: 0,
       configured: false
     };
-    const cost = standardCost || auraCost;
+    const cost = standardCost || auraCost || substituteCost;
     const sufficient = option?.payment?.sufficient !== false;
     return {
       resource,
@@ -309,10 +305,9 @@ function renderPaymentPanel({ actor = {}, cards = [], groups = {}, magic = false
   });
   const additionalGroups = magic
     ? `<div class="combat-magic-resource-row">
-        ${renderResourceGroup({ title: 'Mana & Fokus', kicker: 'magische Energie', cards: groups.mana, variant: 'pool', className: 'combat-resource-group--mana' })}
-        ${renderResourceGroup({ title: 'Weitere magische Reserven', kicker: 'celestial · infernal', cards: groups.otherResources, variant: 'pool', className: 'combat-resource-group--arcane' })}
-      </div>
-      ${renderResourceGroup({ title: 'Zauberplätze I–X', kicker: 'Zaubertricks verbrauchen keinen Platz', cards: groups.spellSlots, variant: 'slot', className: 'combat-resource-group--slots' })}`
+        ${renderResourceGroup({ title: 'Mana', kicker: 'magische Energie', cards: groups.mana, variant: 'pool', className: 'combat-resource-group--mana' })}
+        ${renderResourceGroup({ title: 'Weitere magische Reserven', kicker: 'fokus · celestial · infernal · pakt', cards: groups.otherResources, variant: 'pool', className: 'combat-resource-group--arcane' })}
+      </div>`
     : renderResourceGroup({
       title: 'Weitere Kampfressourcen',
       kicker: 'nur falls die gewählte Handlung sie nutzt',
@@ -356,7 +351,7 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
   const magic = isMagicSegmentKind(segmentKind);
   composer.classList.add(magic ? 'combat-composer--magic' : 'combat-composer--martial');
   composer.dataset.combatKind = magic ? 'magic' : 'martial';
-  const paymentMode = actor.cheats?.enabled ? 'cheat' : (['aura', 'cheat'].includes(segment?.combatPaymentMode) ? segment.combatPaymentMode : 'standard');
+  const paymentMode = actor.cheats?.enabled ? 'cheat' : (['aura', 'mana-substitute', 'cheat'].includes(segment?.combatPaymentMode) ? segment.combatPaymentMode : 'standard');
   const rollMode = ['advantage', 'disadvantage'].includes(segment?.combatRollMode) ? segment.combatRollMode : 'normal';
   const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
     ? 'two-handed'
@@ -367,7 +362,7 @@ export function mountCombatComposer({ card, segment, actor, targets = [], ruleOp
     return `<option value="${escapeHtml(target.characterId)}"${selectedTargetIds.has(String(target.characterId)) ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(optionLabel(target))}</option>`;
   }).join('');
   const actionOptions = (actor.actions || []).map(action => (
-    `<option value="${escapeHtml(action.id)}"${action.id === selectedActionId ? ' selected' : ''}${action.compatible === false ? ' disabled' : ''}>${escapeHtml(activationLabel(action.activationType))} · ${escapeHtml(action.kindLabel)} · ${escapeHtml(action.name)}${action.spellLevelLabel ? ` · ${escapeHtml(action.spellLevelLabel)}` : ''} · ${escapeHtml(action.formula.toUpperCase().replace(/D/g, 'W'))}${action.compatible === false ? ' · nicht mit aktiver Waffe möglich' : ''}</option>`
+    `<option value="${escapeHtml(action.id)}"${action.id === selectedActionId ? ' selected' : ''}${action.compatible === false ? ' disabled' : ''}>${escapeHtml(activationLabel(action.activationType))} · ${escapeHtml(action.kindLabel)} · ${escapeHtml(action.name)}${action.spellLevelLabel ? ` · ${escapeHtml(action.spellLevelLabel)}` : ''}${action.formula ? ` · ${escapeHtml(action.formula.toUpperCase().replace(/D/g, 'W'))}` : ''}${action.compatible === false ? ` · ${action.kind === 'equipment-switch' ? 'bereits aktiv' : 'nicht mit aktiver Waffe möglich'}` : ''}</option>`
   )).join('');
   const spellAction = actor.selectedAction?.spellLevel != null ? actor.selectedAction : null;
   const selectedCastLevel = spellAction?.isCantrip ? 0 : Math.max(Number(spellAction?.spellLevel) || 1, Number(segment?.combatCastLevel) || Number(spellAction?.castLevel) || 1);

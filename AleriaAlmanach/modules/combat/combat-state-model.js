@@ -2,7 +2,7 @@
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
-import { resetCommentScopedResources } from './combat-action-economy.js?v=20260803-economy-audit-v1';
+import { resetCommentScopedResources } from './combat-action-economy.js?v=20260807-magic-system-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260804-referee-v2';
 import {
   advanceTemporaryConditionsForComment,
@@ -185,6 +185,11 @@ export function getResolutionActorInventoryState(resolution = {}) {
   return inventory && typeof inventory === 'object' ? JSON.parse(JSON.stringify(inventory)) : null;
 }
 
+export function getResolutionActorEquippedWeaponState(resolution = {}) {
+  const weaponId = resolution?.actorEquippedWeaponSnapshot?.after;
+  return weaponId ? String(weaponId) : null;
+}
+
 export function getResolutionTargetConditionState(resolution = {}) {
   const conditions = resolution?.targetConditionSnapshot?.after;
   return Array.isArray(conditions) ? conditions.map(condition => ({ ...condition })) : null;
@@ -261,7 +266,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       const actorInventory = getResolutionActorInventoryState(resolution);
       const actorHitPoints = getResolutionActorHitPointState(resolution);
       const actorConditions = getResolutionActorConditionState(resolution);
-      if (actorResources || actorAbilities || actorInventory || actorHitPoints || actorConditions) {
+      const actorEquippedWeaponId = getResolutionActorEquippedWeaponState(resolution);
+      if (actorResources || actorAbilities || actorInventory || actorHitPoints || actorConditions || actorEquippedWeaponId) {
         const previous = states.get(String(resolution.actorId)) || {};
         states.set(String(resolution.actorId), {
           ...previous,
@@ -269,7 +275,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           ...(actorAbilities ? { abilities: actorAbilities } : {}),
           ...(actorInventory ? { inventory: actorInventory } : {}),
           ...(actorHitPoints || {}),
-          ...(actorConditions ? { temporaryConditions: actorConditions } : {})
+          ...(actorConditions ? { temporaryConditions: actorConditions } : {}),
+          ...(actorEquippedWeaponId ? { equippedWeaponId: actorEquippedWeaponId } : {})
         });
       }
       const targetResources = getResolutionTargetResourceState(resolution);

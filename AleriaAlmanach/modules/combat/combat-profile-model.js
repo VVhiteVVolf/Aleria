@@ -2,7 +2,7 @@ import {
   ensureCombatActionResources,
   getDefaultActivationCosts,
   normalizeCombatResourceCosts
-} from './combat-action-economy.js?v=20260803-economy-audit-v1';
+} from './combat-action-economy.js?v=20260807-magic-system-v1';
 import {
   ensureSpellSlotResources,
   findSpellSlotResourceId,
@@ -14,6 +14,19 @@ import {
   normalizeCombatEffects,
   normalizeDamageAffinity
 } from './combat-effect-model.js?v=20260804-referee-v2';
+import {
+  CASTER_TIERS,
+  MANA_BYPASS_RESOURCE_IDS,
+  getAuraFocusMaximum,
+  getCasterManaMaximum,
+  getDivineOrInfernalPointsMaximum,
+  getFocusMaximum,
+  getHighestUnlockedSpellGrade,
+  getPactPointsMaximum,
+  getSpellManaCost
+} from './combat-resource-progression.js?v=20260807-mana-audit-v1';
+
+const PACT_POINTS_RESOURCE_ID = 'pact-points';
 
 export const COMBAT_PROFILE_SCHEMA_VERSION = 9;
 
@@ -59,9 +72,11 @@ const REQUIRED_SKILLS = Object.freeze([
 ]);
 const DEFAULT_RESOURCES = Object.freeze([
   { id: 'inspiration', name: 'Inspiration', current: 0, maximum: 1, recovery: 'manual' },
-  { id: 'mana-focus', name: 'Mana / Fokus', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'magic' },
+  { id: 'mana-focus', name: 'Mana', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'magic' },
+  { id: 'focus', name: 'Fokus', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'focus' },
   { id: 'celestial-points', name: 'Celestiale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'celestial' },
-  { id: 'infernal-points', name: 'Infernale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'infernal' }
+  { id: 'infernal-points', name: 'Infernale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'infernal' },
+  { id: 'pact-points', name: 'Paktpunkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'pact' }
 ]);
 const DEFAULT_MELEE_WEAPON = Object.freeze({
   id: 'default-unarmed-melee',
@@ -119,6 +134,12 @@ export function normalizeCombatDamageFormula(value) {
   return normalizeText(value, 40).toLowerCase().replace(/\s+/g, '').replace(/w/g, 'd');
 }
 
+function sanitizeAttributeKeyList(value) {
+  return [...new Set((Array.isArray(value) ? value : [])
+    .map(item => normalizeText(item, 20).toLowerCase())
+    .filter(key => ATTRIBUTE_KEYS.has(key)))];
+}
+
 function sanitizeMechanicalModifiers(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const rollMode = normalizeText(source.attackRollMode || source.rollMode, 20);
@@ -134,7 +155,14 @@ function sanitizeMechanicalModifiers(value = {}) {
     movement: normalizeNumber(source.movement, 0, -999, 999),
     maximumHitPoints: normalizeNumber(source.maximumHitPoints, 0, -9999, 9999),
     passivePerception: normalizeNumber(source.passivePerception, 0, -99, 99),
-    attackRollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal'
+    attackRollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
+    // Ein zusätzlicher Würfel (z.B. "1w6"), der on-hit an den regulären Schaden angehängt wird,
+    // solange diese Quelle aktiv ist - anders als `damage` (fester Bonus) ist das ein echter
+    // Extrawurf mit eigener Varianz, z.B. für Rage-Schaden.
+    bonusDamageFormula: normalizeCombatDamageFormula(source.bonusDamageFormula),
+    // Attributspezifischer Vor-/Nachteil auf Rettungswürfe, unabhängig vom pauschalen `savingThrow`-Bonus.
+    savingThrowAdvantageAttributes: sanitizeAttributeKeyList(source.savingThrowAdvantageAttributes),
+    savingThrowDisadvantageAttributes: sanitizeAttributeKeyList(source.savingThrowDisadvantageAttributes)
   };
 }
 
@@ -330,6 +358,18 @@ function ensureDefaultCoreResources(resources = []) {
   return result.filter((resource, index, source) => source.findIndex(candidate => candidate.id === resource.id) === index);
 }
 
+// Whenever a level-derived table implies a higher maximum than what was last persisted,
+// treat the increase as a level-up top-up (mirrors how maximum hit points grow): raise the
+// maximum and carry current up by the same delta, but never lower an already-higher value
+// (e.g. a manually boosted resource, or a value the DM deliberately set higher).
+function applyLevelDerivedResourceCeiling(resources, resourceId, targetMaximum) {
+  const resource = resources.find(entry => entry.id === resourceId);
+  if (!resource || targetMaximum <= resource.maximum) return;
+  const delta = targetMaximum - resource.maximum;
+  resource.maximum = targetMaximum;
+  resource.current = Math.max(0, Math.min(targetMaximum, resource.current + delta));
+}
+
 function sanitizeTemplateSelections(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
@@ -421,6 +461,7 @@ function sanitizeAbility(value = {}, index = 0) {
   const recovery = normalizeText(source.recovery, 20);
   const activationType = normalizeText(source.activationType, 30);
   const delivery = normalizeText(source.delivery, 30);
+  const resolutionType = normalizeText(source.resolutionType, 30);
   return {
     id: normalizeId(source.id, `ability-${index + 1}`),
     name: normalizeText(source.name, 120),
@@ -433,6 +474,11 @@ function sanitizeAbility(value = {}, index = 0) {
     damageType: normalizeText(source.damageType || 'physisch', 80),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     delivery: ABILITY_DELIVERIES.has(delivery) ? delivery : 'ability',
+    // Erlaubt Fähigkeiten wie Spells eine Rettungswurf-Auflösung (z.B. Arkaner Schrei gegen
+    // Konstitution) statt nur automatischer oder angriffswurfbasierter Auflösung.
+    resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : '',
+    saveAttribute: getAttributeKey(source.saveAttribute, 'dexterity'),
+    halfDamageOnSave: normalizeBoolean(source.halfDamageOnSave),
     combatUsable: normalizeBoolean(source.combatUsable),
     target: normalizeText(source.target, 160),
     range: normalizeText(source.range, 160),
@@ -456,7 +502,7 @@ function sanitizeAbility(value = {}, index = 0) {
   };
 }
 
-function sanitizeSpell(value = {}, index = 0) {
+function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
   const source = value && typeof value === 'object' ? value : {};
   const activationType = normalizeText(source.activationType, 30);
   const resolutionType = normalizeText(source.resolutionType, 30);
@@ -464,11 +510,16 @@ function sanitizeSpell(value = {}, index = 0) {
     || (Number(source.manaCost) > 0 || Number(source.slotCost) > 0 ? 1 : 0);
   const level = normalizeNumber(source.level, inferredLegacyLevel, 0, 10);
   const cantrip = level === 0;
+  const id = normalizeId(source.id, `spell-${index + 1}`);
+  const manaCost = getSpellManaCost(level);
+  const resolvedManaResourceId = normalizeText(manaResourceId, 120) || 'mana-focus';
+  const baseCosts = normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action'))
+    .filter(cost => ![resolvedManaResourceId, 'mana-focus', 'pact-points'].includes(cost.resourceId));
   return {
-    id: normalizeId(source.id, `spell-${index + 1}`),
+    id,
     name: normalizeText(source.name, 120),
     level,
-    manaCost: cantrip ? 0 : normalizeNumber(source.manaCost, 0, 0, 999),
+    manaCost,
     slotResourceId: cantrip ? '' : normalizeText(source.slotResourceId, 120),
     slotCost: cantrip ? 0 : normalizeNumber(source.slotCost, 1, 1, 99),
     presentationKind: SPELL_PRESENTATION_KINDS.has(normalizeText(source.presentationKind, 20)) ? normalizeText(source.presentationKind, 20) : 'spell',
@@ -491,7 +542,10 @@ function sanitizeSpell(value = {}, index = 0) {
       amountPerLevel: normalizeNumber(source.upcast.amountPerLevel, 0, 0, 999),
       maximumLevel: normalizeNumber(source.upcast.maximumLevel, 10, 1, 10)
     } : { enabled: false, formulaPerLevel: '', amountPerLevel: 0, maximumLevel: 10 },
-    costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
+    costs: [
+      ...baseCosts,
+      { id: `${id}-mana-cost`, resourceId: resolvedManaResourceId, name: resolvedManaResourceId === 'pact-points' ? 'Paktpunkte' : 'Mana', amount: manaCost, scope: 'persistent' }
+    ],
     auraBypass: {
       allowed: normalizeBoolean(source.auraBypass?.allowed, true),
       resourceId: normalizeText(source.auraBypass?.resourceId, 120),
@@ -531,6 +585,9 @@ function sanitizeTechniqueFollowUp(value = {}) {
     damageType: normalizeText(source.damageType, 80),
     attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
     damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
+    // Wie oft dieser Folgeangriff separat gewürfelt wird (z.B. 2 für insgesamt drei Angriffe
+    // in einer Handlung: Hauptangriff + zwei Folgeangriffe, jeder für sich Treffer/Fehlschlag).
+    repeatCount: normalizeNumber(source.repeatCount, 1, 1, 5),
     triggerReactions: normalizeBoolean(source.triggerReactions, true),
     repeatPerAttackRules: normalizeBoolean(source.repeatPerAttackRules, true),
     triggerFurtherEffects: normalizeBoolean(source.triggerFurtherEffects, false)
@@ -651,7 +708,16 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
   const legacyMaximumHitPoints = normalizeOptionalNumber(source.maximumHitPoints, 1, 9999);
   const legacyBaseDefense = normalizeOptionalNumber(source.baseDefense ?? source.defense, 1, 999);
   const magicEnabled = normalizeBoolean(magic.enabled);
-  const sanitizedSpells = sanitizeList(magic.spells, sanitizeSpell);
+  const normalizedCasterTier = CASTER_TIERS.includes(normalizeText(magic.casterTier, 10)) ? normalizeText(magic.casterTier, 10) : 'full';
+  const normalizedManaResourceId = normalizeText(magic.manaResourceId, 120) || 'mana-focus';
+  const normalizedBypassResourceId = MANA_BYPASS_RESOURCE_IDS.includes(normalizeText(magic.bypassResourceId, 40))
+    ? normalizeText(magic.bypassResourceId, 40)
+    : '';
+  const normalizedFocusEnabled = normalizeBoolean(magic.focusEnabled);
+  const normalizedFocusResourceId = normalizeText(magic.focusResourceId, 120) || 'focus';
+  const sanitizedSpells = (Array.isArray(magic.spells) ? magic.spells : [])
+    .slice(0, 60)
+    .map((spell, index) => sanitizeSpell(spell, index, normalizedManaResourceId));
   const configuredSlotResourceIds = sanitizeList(magic.slotResourceIds, item => normalizeText(item, 120), 20).filter(Boolean);
   const resourceSources = ensureSpellSlotResources(
     ensureCombatActionResources(ensureDefaultCoreResources(Array.isArray(source.resources) ? source.resources : DEFAULT_RESOURCES)),
@@ -664,12 +730,38 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
   );
   const sanitizedResources = sanitizeList(resourceSources, sanitizeResource, 100);
   const normalizedNormalLevel = normalizeNumber(progression.level ?? source.level, 1, 1, 20);
-  if (normalizedNormalLevel >= 6) {
-    const auraFocus = sanitizedResources.find(resource => resource.id === 'aura-focus');
-    if (auraFocus && auraFocus.maximum < 1) {
-      auraFocus.maximum = 1;
-      auraFocus.current = Math.max(1, auraFocus.current);
+  const normalizedSpecialLevels = normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10);
+  applyLevelDerivedResourceCeiling(sanitizedResources, 'aura-focus', getAuraFocusMaximum(normalizedNormalLevel, normalizedSpecialLevels));
+  if (magicEnabled) {
+    // Paktpunkte (Hexer) replace Mana entirely rather than growing like a full/half caster
+    // pool - they deliberately follow the smaller Celestial/Infernal-style curve for now.
+    const manaMaximum = normalizedManaResourceId === PACT_POINTS_RESOURCE_ID
+      ? getPactPointsMaximum(normalizedNormalLevel, normalizedSpecialLevels)
+      : getCasterManaMaximum(normalizedCasterTier, normalizedNormalLevel, normalizedSpecialLevels);
+    applyLevelDerivedResourceCeiling(sanitizedResources, normalizedManaResourceId, manaMaximum);
+    // Grades no longer gate casts by consuming a limited slot count - mana does - but the
+    // slot resources stay as a simple "is this grade unlocked yet" flag (maximum >= 1),
+    // which is also what the composer UI already checks to enable higher spell grades.
+    const highestUnlockedGrade = getHighestUnlockedSpellGrade(normalizedCasterTier, normalizedNormalLevel);
+    for (let grade = 1; grade <= highestUnlockedGrade; grade += 1) {
+      applyLevelDerivedResourceCeiling(sanitizedResources, `spell-slot-${grade}`, 1);
     }
+  }
+  if (normalizedBypassResourceId) {
+    applyLevelDerivedResourceCeiling(
+      sanitizedResources,
+      normalizedBypassResourceId,
+      getDivineOrInfernalPointsMaximum(normalizedNormalLevel, normalizedSpecialLevels)
+    );
+  }
+  if (normalizedFocusEnabled) {
+    // Fokus (Asket und ähnliche) ist strukturell von Mana getrennt: eigene Ressource, eigene
+    // Wachstumskurve, unabhängig davon ob die Figur außerdem magic.enabled gesetzt hat.
+    applyLevelDerivedResourceCeiling(
+      sanitizedResources,
+      normalizedFocusResourceId,
+      getFocusMaximum(normalizedNormalLevel, normalizedSpecialLevels)
+    );
   }
   const finalizedSpells = sanitizedSpells.map(spell => ({
     ...spell,
@@ -691,7 +783,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     proficiencies: sanitizeProficiencies(source.proficiencies),
     progression: {
       level: normalizedNormalLevel,
-      specialLevels: normalizeNumber(progression.specialLevels ?? source.specialLevels, 0, 0, 10),
+      specialLevels: normalizedSpecialLevels,
       experience: normalizeNumber(progression.experience ?? source.experience, 0, 0, 999999999),
       nextLevelExperience: normalizeOptionalNumber(progression.nextLevelExperience, 1, 999999999),
       experienceReward: normalizeOptionalNumber(progression.experienceReward, 0, 999999999),
@@ -739,10 +831,14 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     abilities: sanitizeList(source.abilities, sanitizeAbility),
     magic: {
       enabled: magicEnabled,
+      casterTier: normalizedCasterTier,
+      bypassResourceId: normalizedBypassResourceId,
+      focusEnabled: normalizedFocusEnabled,
+      focusResourceId: normalizedFocusResourceId,
       castingAttribute: getAttributeKey(magic.castingAttribute, 'intelligence'),
       spellAttackOverride: normalizeOptionalNumber(magic.spellAttackOverride, -99, 99),
       spellSaveDcOverride: normalizeOptionalNumber(magic.spellSaveDcOverride, 0, 999),
-      manaResourceId: normalizeText(magic.manaResourceId || 'mana-focus', 120),
+      manaResourceId: normalizedManaResourceId,
       slotResourceIds: spellSlotResourceIds,
       notes: normalizeText(magic.notes, 1600),
       spells: finalizedSpells
@@ -790,16 +886,21 @@ function collectActiveMechanicalSources(profile) {
     .map(entry => entry.mechanics);
 }
 
+const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'bonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
+
 function mergeMechanicalModifiers(sources = []) {
   return sources.reduce((result, source) => {
     Object.keys(sanitizeMechanicalModifiers()).forEach(key => {
-      if (key === 'attackRollMode') return;
+      if (NON_NUMERIC_MECHANICAL_KEYS.has(key)) return;
       result[key] = (Number(result[key]) || 0) + (Number(source?.[key]) || 0);
     });
     const modes = [result.attackRollMode, source?.attackRollMode].filter(mode => mode && mode !== 'normal');
     result.attackRollMode = modes.includes('advantage') && modes.includes('disadvantage')
       ? 'normal'
       : (modes[0] || 'normal');
+    result.bonusDamageFormula = [result.bonusDamageFormula, source?.bonusDamageFormula].filter(Boolean).join('+');
+    result.savingThrowAdvantageAttributes = [...new Set([...(result.savingThrowAdvantageAttributes || []), ...(source?.savingThrowAdvantageAttributes || [])])];
+    result.savingThrowDisadvantageAttributes = [...new Set([...(result.savingThrowDisadvantageAttributes || []), ...(source?.savingThrowDisadvantageAttributes || [])])];
     return result;
   }, sanitizeMechanicalModifiers());
 }
@@ -946,6 +1047,29 @@ export function resolveAttackRollMode(profile = {}, requestedMode = 'normal') {
   const hasDisadvantage = modes.includes('disadvantage');
   if (hasAdvantage === hasDisadvantage) return 'normal';
   return hasAdvantage ? 'advantage' : 'disadvantage';
+}
+
+// Anders als resolveAttackRollMode ist das je Attribut unterschiedlich (z.B. Vorteil bei
+// Stärke-Rettungswürfen, aber Nachteil bei Weisheit während desselben Zustands).
+export function resolveSavingThrowRollMode(profile = {}, attributeKey, requestedMode = 'normal') {
+  const normalized = sanitizeCharacterCombatProfile(profile);
+  const key = getAttributeKey(attributeKey);
+  const sources = collectActiveMechanicalSources(normalized);
+  const hasAdvantage = (ROLL_MODES.has(requestedMode) && requestedMode === 'advantage')
+    || sources.some(mechanics => (mechanics.savingThrowAdvantageAttributes || []).includes(key));
+  const hasDisadvantage = (ROLL_MODES.has(requestedMode) && requestedMode === 'disadvantage')
+    || sources.some(mechanics => (mechanics.savingThrowDisadvantageAttributes || []).includes(key));
+  if (hasAdvantage === hasDisadvantage) return 'normal';
+  return hasAdvantage ? 'advantage' : 'disadvantage';
+}
+
+// Sammelt alle aktiven Bonus-Schadenswürfel-Formeln (z.B. Rage-Schaden), die zusätzlich zur
+// regulären Waffen-/Technikformel gewürfelt werden, sobald ein Treffer bestätigt ist.
+export function getBonusDamageFormulas(profile = {}) {
+  const normalized = sanitizeCharacterCombatProfile(profile);
+  return collectActiveMechanicalSources(normalized)
+    .map(mechanics => mechanics.bonusDamageFormula)
+    .filter(Boolean);
 }
 
 export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {

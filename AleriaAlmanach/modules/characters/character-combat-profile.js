@@ -10,7 +10,7 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260804-referee-v2';
+} from '../combat/combat-profile-model.js?v=20260807-freya-v1';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260804-referee-v2';
 import {
   createCharacterLevelUpPlan,

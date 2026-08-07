@@ -1,0 +1,1744 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-08-07T01:00:00.000Z",
+  "character": {
+    "id": "FKiXsSWVoV74rTgmpPip",
+    "name": "Fenrir Varulv",
+    "title": "Huskarl, Rorikshall",
+    "fraktion": "Clan Varulv, Jarltum Roriksheim",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "patrick",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-08-06T20:13:59.734Z",
+    "updatedAt": "2026-08-07T01:00:00.000Z",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/uAY6AgV.png",
+        "emotes": [],
+        "createdAt": "2026-08-06T20:23:09.455Z",
+        "updatedAt": "2026-08-06T20:23:09.455Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "https://i.imgur.com/uAY6AgV.png",
+    "emotes": [],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "inventory": {
+      "characterId": "",
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portrait": "",
+      "portraitFormat": "portrait",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "name": "Name des Charakters",
+      "role": "Rolle",
+      "level": "Stufe",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "moneyNotice": "",
+      "showInfoTable": false,
+      "carryLabel": "Traglast",
+      "carryValue": "Noch festlegen",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "icon": "*",
+          "label": "TP / Zustand",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Geld",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Rolle",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Notiz",
+          "value": "Noch festlegen"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "items": [
+        {
+          "id": "item-mshybav3-0-oynu",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mshybav3-1-l83n",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mshybav3-2-vyx4",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mshybav3-3-zrnj",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mshybav3-4-ej8h",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mshybav3-5-d5u9",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "other",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "companions": [
+        {
+          "id": "companion-mshybav3-0-bfxd",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mshybav3-1-4y45",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "status": "",
+        "updatedAt": ""
+      }
+    },
+    "combatProfile": {
+      "schemaVersion": 9,
+      "identity": {
+        "ancestry": "Aldrimarer",
+        "archetype": "Skjaldr",
+        "background": "Huskarl"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "aldrimarer",
+        "backgroundId": "huskarl",
+        "classId": "skjaldr",
+        "attributeMethod": "point-buy",
+        "appliedAt": "2026-08-07T00:00:00.000Z"
+      },
+      "proficiencies": {
+        "armor": [
+          "light",
+          "medium",
+          "heavy"
+        ],
+        "weapons": [
+          "simple",
+          "martial",
+          "axe",
+          "sword",
+          "mace"
+        ],
+        "tools": [
+          "Seemannschaft und Gefolgschaftsbrauchtum"
+        ],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 6,
+        "specialLevels": 0,
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 19,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 13,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 16,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 8,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 9,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 12,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 65,
+        "temporary": 0,
+        "hitDie": 12,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "attributeKey": "intelligence",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-9",
+          "name": "Religion",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-19",
+          "name": "Flirten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-20",
+          "name": "Körperbeherrschung",
+          "attributeKey": "constitution",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "fenrir-greataxe",
+          "inventoryItemId": "",
+          "name": "Großaxt",
+          "weaponType": "axe",
+          "training": "martial",
+          "damageFormula": "1d12",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schwer · Zweihändig",
+          "notes": "Fenrirs schwerste Waffe, für den brachialen Alleinangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            { "id": "fenrir-greataxe-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "equipped": true
+        },
+        {
+          "id": "fenrir-handaxe-pair",
+          "inventoryItemId": "",
+          "name": "Einhandäxte (Paar)",
+          "weaponType": "axe",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Ein aufeinander abgestimmtes Paar · wird gemeinsam beidhändig geführt",
+          "notes": "Grundlage für den Doppelhieb der Zwillingsäxte.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            { "id": "fenrir-handaxe-pair-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "equipped": false
+        },
+        {
+          "id": "fenrir-throwing-axe",
+          "inventoryItemId": "",
+          "name": "Wurfaxt",
+          "weaponType": "axe",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf oder Wurf (9m)",
+          "properties": "Wurfwaffe · 3 Stück mitgeführt, Munition manuell nachhalten",
+          "notes": "Drei Wurfäxte im Gürtel, nachschleifen für den Kreiselwurf.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            { "id": "fenrir-throwing-axe-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "equipped": false
+        },
+        {
+          "id": "fenrir-roundshield-bash",
+          "inventoryItemId": "",
+          "name": "Huskarl-Rundschild (Schildstoß)",
+          "weaponType": "shield",
+          "training": "martial",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Offensiver Einsatz des Rundschilds · Rüstungsbonus siehe Rüstungsteil",
+          "notes": "Derselbe Rundschild wie im Rüstungsteil, hier für den Schildstoß als Waffe erfasst.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "bonus-action",
+          "costs": [
+            { "id": "fenrir-roundshield-bash-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "equipped": false
+        }
+      ],
+      "armorItems": [
+        {
+          "id": "fenrir-scale-mail",
+          "inventoryItemId": "",
+          "name": "Schuppenpanzer",
+          "kind": "armor",
+          "baseArmorClass": 14,
+          "armorClassBonus": 0,
+          "dexterityMode": "capped",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 0,
+          "properties": "Schuppenpanzer der Skjaldr-Ausbildung",
+          "notes": "",
+          "equipped": true
+        },
+        {
+          "id": "fenrir-roundshield",
+          "inventoryItemId": "",
+          "name": "Huskarl-Rundschild",
+          "kind": "shield",
+          "baseArmorClass": null,
+          "armorClassBonus": 2,
+          "dexterityMode": "full",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 0,
+          "properties": "Rundschild der Huskarl-Ausbildung · +2 Rüstungsklasse",
+          "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil und Technik).",
+          "equipped": true
+        }
+      ],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana / Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        },
+        {
+          "id": "spell-slot-1",
+          "name": "Zauberplatz I",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-2",
+          "name": "Zauberplatz II",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 2,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-3",
+          "name": "Zauberplatz III",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 3,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-4",
+          "name": "Zauberplatz IV",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 4,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-5",
+          "name": "Zauberplatz V",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 5,
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-6",
+          "name": "Zauberplatz VI",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 6,
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-7",
+          "name": "Zauberplatz VII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-8",
+          "name": "Zauberplatz VIII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 8,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-9",
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-10",
+          "name": "Zauberplatz X",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        }
+      ],
+      "techniques": [
+        {
+          "id": "fenrir-crushing-blow",
+          "name": "Zerschmetternder Hieb",
+          "trainingForm": "Berserkerweg · Ausbildungsform",
+          "minimumLevel": 2,
+          "category": "technique",
+          "description": "Ein wuchtiger Überkopfhieb, der Rüstung und Knochen gleichermaßen bricht.",
+          "effect": "Bei einem Treffer verursacht die Großaxt 1W12 normalen Waffenschaden und zusätzlich 1W4 Wucht durch die schiere Wucht des Hiebs.",
+          "activationType": "action",
+          "weaponTypes": ["axe"],
+          "compatibleWeaponIds": ["fenrir-greataxe"],
+          "damageFormula": "1d12+1d4",
+          "damageType": "Hieb + Wucht",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Die Großaxt muss aktiv geführt werden.",
+          "tags": "Berserkerweg · Großaxt · Wucht",
+          "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
+          "costs": [
+            { "id": "fenrir-crushing-blow-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "secondarySave": { "enabled": false },
+          "followUpAttack": { "enabled": false }
+        },
+        {
+          "id": "fenrir-shield-bash",
+          "name": "Schildstoß",
+          "trainingForm": "Berserkerweg · Ausbildungsform",
+          "minimumLevel": 3,
+          "category": "technique",
+          "description": "Der Rundschild kracht mit voller Wucht ins Ziel.",
+          "effect": "Bei einem Treffer 1W4 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
+          "activationType": "bonus-action",
+          "weaponTypes": ["shield"],
+          "compatibleWeaponIds": ["fenrir-roundshield-bash"],
+          "damageFormula": "1d4",
+          "damageType": "Wucht",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Der Huskarl-Rundschild muss ausgerüstet sein.",
+          "tags": "Berserkerweg · Schild · Kontrolle",
+          "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
+          "costs": [
+            { "id": "fenrir-shield-bash-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "fenrir-shield-bash-staggered",
+              "name": "Vom Schildstoß taumelnd",
+              "duration": "Bis zum Ende des nächsten Gesamtkommentars der betroffenen Figur",
+              "description": "Der wuchtige Schildstoß bringt das Ziel aus dem Gleichgewicht.",
+              "mechanics": { "attack": -2 }
+            }
+          },
+          "followUpAttack": { "enabled": false }
+        },
+        {
+          "id": "fenrir-twin-axe-flurry",
+          "name": "Doppelhieb der Zwillingsäxte",
+          "trainingForm": "Berserkerweg · Ausbildungsform",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Beide Äxte wirbeln im selben Atemzug - drei Hiebe, kaum zu unterscheiden.",
+          "effect": "Fenrir führt mit seinem Axtpaar drei getrennte Angriffe in einer einzigen Handlung: einen Hauptangriff und zwei weitere Hiebe, jeder für sich mit eigenem Trefferwurf und eigenem 1W6-Schaden.",
+          "activationType": "action",
+          "weaponTypes": ["axe"],
+          "compatibleWeaponIds": ["fenrir-handaxe-pair"],
+          "damageFormula": "1d6",
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "range": "Nahkampf",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
+          "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
+          "aiInstructions": "Drei vollständig getrennte Angriffswürfe (Haupt- und zwei Folgeangriffe), jeder kann eigenständig treffen oder verfehlen. Nur die serverseitig bestätigten Treffer und deren Einzelschaden erzählen, nichts zusammenfassen oder erfinden.",
+          "costs": [
+            { "id": "fenrir-twin-axe-flurry-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "secondarySave": { "enabled": false },
+          "followUpAttack": {
+            "enabled": true,
+            "sameTarget": true,
+            "damageFormula": "1d6",
+            "damageType": "Hieb",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "repeatCount": 2,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          }
+        },
+        {
+          "id": "fenrir-spinning-throw",
+          "name": "Kreiselwurf",
+          "trainingForm": "Berserkerweg · Ausbildungsform",
+          "minimumLevel": 6,
+          "category": "technique",
+          "description": "Die Wurfaxt dreht sich schwirrend durch die Luft, ehe sie mit voller Wucht einschlägt.",
+          "effect": "Ein gezielter, kraftvoller Wurf: +1 auf den Angriffswurf, bei einem Treffer 1W6 normaler Wurfaxtschaden und zusätzlich 1W4 durch den Schwung des Wurfs.",
+          "activationType": "action",
+          "weaponTypes": ["axe"],
+          "compatibleWeaponIds": ["fenrir-throwing-axe"],
+          "damageFormula": "1d6+1d4",
+          "damageType": "Hieb",
+          "attackBonus": 1,
+          "damageBonus": 0,
+          "rollMode": "normal",
+          "range": "Fernkampf (9m)",
+          "target": "Ein Gegner",
+          "duration": "Sofort",
+          "requirements": "Verbraucht eine mitgeführte Wurfaxt.",
+          "tags": "Berserkerweg · Wurfaxt · Distanz",
+          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
+          "costs": [
+            { "id": "fenrir-spinning-throw-action", "resourceId": "action", "name": "Aktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "secondarySave": { "enabled": false },
+          "followUpAttack": { "enabled": false }
+        }
+      ],
+      "quirks": [
+        {
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "name": "Aldrimarische Widerstandskraft",
+          "type": "trait",
+          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "trigger": "",
+          "target": "self",
+          "duration": "",
+          "stacking": "normal",
+          "tags": "Volk · Aldrimarer",
+          "limitations": "",
+          "aiInstructions": "",
+          "priority": 0,
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht",
+          "type": "trait",
+          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "trigger": "",
+          "target": "self",
+          "duration": "",
+          "stacking": "normal",
+          "tags": "Hintergrund · Ritter",
+          "limitations": "",
+          "aiInstructions": "",
+          "priority": 0,
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "triggerRules": []
+        }
+      ],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "fenrir-berserkergang",
+          "name": "Berserkergang",
+          "description": "Der Skjaldr verfällt in blinde Kampfeswut. Angriffe treffen leichter und richten mehr Schaden an, doch die eigene Deckung fällt.",
+          "usesCurrent": 1,
+          "usesMaximum": 1,
+          "recovery": "day",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
+          "requirements": "Einmal pro Tag.",
+          "tags": "Berserker · Rage · Skjaldr",
+          "aiInstructions": "Solange der Zustand „Berserkergang“ aktiv ist, sind bereits serverseitig bestätigt und dürfen nicht doppelt angewendet werden: +5 auf Angriffswürfe, -5 Rüstungsklasse, +1W6 Bonusschaden bei jedem Treffer sowie Vorteil bei Stärke- und Nachteil bei Weisheit-, Intelligenz-, Charisma- und Konstitution-Rettungswürfen. Der Bonusschaden steigt bei künftigen Stufenaufstiegen (ab Stufe 11 auf 1W8, ab Stufe 16 auf 1W10) - das Formelfeld dann manuell auf dem Charakterbogen anpassen.",
+          "costs": [
+            { "id": "fenrir-berserkergang-bonus-action", "resourceId": "bonus-action", "name": "Bonusaktion", "amount": 1, "scope": "comment" }
+          ],
+          "auraBypass": { "allowed": true, "resourceId": "aura-focus", "cost": 1 },
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "effects": [
+            { "id": "fenrir-berserkergang-temp-hp", "type": "temporary-hit-points", "target": "self", "amount": 10, "on": "always" },
+            {
+              "id": "fenrir-berserkergang-condition",
+              "type": "apply-condition",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "fenrir-berserkergang-state",
+                "name": "Berserkergang",
+                "tags": "Berserker · Rage",
+                "source": "Berserkermodus des Skjaldr",
+                "description": "Blinde Kampfeswut: leichter zu treffen, aber selbst treffsicherer und verheerender.",
+                "durationModel": { "kind": "combat" },
+                "duration": "Bis kampfunfähig, außer Gefecht gesetzt oder Kampfende",
+                "mechanics": {
+                  "attack": 5,
+                  "damage": 0,
+                  "armorClass": -5,
+                  "initiative": 0,
+                  "skill": 0,
+                  "savingThrow": 0,
+                  "spellAttack": 0,
+                  "spellSaveDc": 0,
+                  "movement": 0,
+                  "maximumHitPoints": 0,
+                  "passivePerception": 0,
+                  "attackRollMode": "normal",
+                  "bonusDamageFormula": "1d6",
+                  "savingThrowAdvantageAttributes": ["strength"],
+                  "savingThrowDisadvantageAttributes": ["wisdom", "intelligence", "charisma", "constitution"]
+                }
+              }
+            }
+          ],
+          "inventoryUseTrigger": { "enabled": false, "itemTags": [], "restoreResources": [], "requireActualRecovery": true }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal"
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": ""
+    },
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "male",
+      "status": "",
+      "birth": "1718",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  },
+  "assignedTab": ""
+}

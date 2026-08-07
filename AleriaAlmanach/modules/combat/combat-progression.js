@@ -1,17 +1,20 @@
-// D&D-5e compatible XP thresholds for ordinary levels 1-20.
+// Deliberately slower than D&D 5e's own thresholds - roughly 5x at the start, tapering to
+// about 2x by level 20. Leveling should feel slow, especially early on, so the first few
+// levels take real, sustained play rather than a couple of lucky fights.
 // Special levels 21-30 remain separate and are never inferred from ordinary XP.
 
 export const ORDINARY_LEVEL_XP_THRESHOLDS = Object.freeze([
-  0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000,
-  85000, 100000, 120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000
+  0, 1500, 4000, 10000, 22000, 42000, 66000, 92000, 125000, 160000,
+  200000, 235000, 275000, 315000, 365000, 420000, 480000, 555000, 630000, 720000
 ]);
 
-// Aleria uses character/creature levels instead of D&D challenge ratings. These
-// rewards follow the familiar 5e encounter-XP curve and therefore remain
-// understandable without introducing a second, hidden power scale.
+// Aleria uses character/creature levels instead of D&D challenge ratings. Calibrated
+// against ORDINARY_LEVEL_XP_THRESHOLDS above so early levels need roughly 12-18 same-level
+// encounters (very slow), tapering down to roughly 3-5 by the high teens/twenties (fewer,
+// bigger, more dramatic fights) - the same "slow especially at first" pacing curve.
 export const DEFEAT_XP_BY_LEVEL = Object.freeze([
-  25, 50, 100, 200, 450, 700, 1100, 1800, 2300, 2900,
-  3900, 5000, 5900, 7200, 8400, 10000, 11500, 13000, 15000, 18000
+  100, 200, 400, 700, 1100, 1600, 2200, 3000, 4000, 5200,
+  6600, 8200, 10000, 12000, 14500, 17500, 21000, 25000, 30000, 36000
 ]);
 
 function integer(value, fallback = 0, minimum = 0, maximum = 999999999) {
