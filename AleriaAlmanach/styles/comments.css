@@ -3614,35 +3614,57 @@
   .comment-fazit-card {
     width: min(52rem, 100%);
     margin: 0 auto;
-    padding: 0.9rem 1.1rem;
-    border: 1px solid rgba(139,105,20,0.4);
+    padding: 1.1rem 1.3rem;
+    border: 1px solid rgba(139,105,20,0.45);
+    border-radius: 4px;
     background:
-      radial-gradient(circle at 50% 0, rgba(139,105,20,0.16), transparent 60%),
+      radial-gradient(circle at 50% 0, rgba(139,105,20,0.18), transparent 60%),
       var(--parchment);
-    box-shadow: 0 8px 20px rgba(49,7,14,0.14);
+    box-shadow: 0 10px 26px rgba(49,7,14,0.18), inset 0 0 0 1px rgba(139,105,20,0.12);
     text-align: center;
   }
   .comment-fazit-title {
     font-family: 'Cinzel', serif;
-    font-size: 0.92rem;
-    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--gold-dark);
-    margin-bottom: 0.7rem;
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid rgba(139,105,20,0.2);
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(139,105,20,0.25);
   }
   .comment-fazit-lines {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
   }
   .fazit-line {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    gap: 0.7rem;
+    gap: 0.8rem;
+    padding: 0.5rem 0;
+  }
+  .fazit-line-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0 1.5rem;
+    color: var(--gold);
+    opacity: 0.4;
+  }
+  .fazit-line-divider::before,
+  .fazit-line-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .fazit-line-divider-glyph {
+    font-size: 0.75rem;
+    line-height: 1;
+    transform: translateY(-1px);
   }
   .fazit-line-text {
     align-items: flex-start;
@@ -3672,18 +3694,21 @@
     max-width: 5.5rem;
   }
   .fazit-token-icon {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 6px;
     border: 1px solid var(--gold);
     background: var(--ink);
     overflow: hidden;
     display: grid;
     place-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,0.06);
   }
   .fazit-token-icon img { width: 100%; height: 100%; object-fit: cover; }
-  .fazit-token-icon-person { border-radius: 50%; }
+  .fazit-token-icon-person {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 2px var(--parchment), 0 0 0 3px rgba(139,105,20,0.5);
+  }
   .fazit-token-icon.fazit-token-icon-symbol {
     border: none;
     background: transparent;

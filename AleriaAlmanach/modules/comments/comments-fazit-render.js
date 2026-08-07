@@ -74,10 +74,17 @@ function renderFazitLineMarkup(line) {
   return `<div class="fazit-line">${line.tokens.map(renderFazitTokenMarkup).join('')}</div>`;
 }
 
+function renderFazitLineDivider() {
+  return '<div class="fazit-line-divider" aria-hidden="true"><span class="fazit-line-divider-glyph">❧</span></div>';
+}
+
 function renderCommentFazitCard(item) {
+  const lines = item.lines
+    .map(renderFazitLineMarkup)
+    .join(renderFazitLineDivider());
   return `<div class="comment-fazit-card">
     <div class="comment-fazit-title">${escapeHtml(item.title)}</div>
-    <div class="comment-fazit-lines">${item.lines.map(renderFazitLineMarkup).join('')}</div>
+    <div class="comment-fazit-lines">${lines}</div>
   </div>`;
 }
 
