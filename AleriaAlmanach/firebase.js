@@ -66,13 +66,6 @@
       return authSession.getAccess();
     }
 
-    async function requireSharedEditor() {
-      await requireFirebaseUser();
-      if (!getFirebaseAccess().canEditSharedContent) {
-        throw new Error('Diese Änderung benötigt die Firebase-Rolle Editor, Moderator oder Admin.');
-      }
-    }
-
     async function requireModerator() {
       await requireFirebaseUser();
       if (!getFirebaseAccess().canModerate) {
@@ -1061,7 +1054,7 @@
       },
       async saveCharTabs(data) {
         try {
-          await requireSharedEditor();
+          await requireFirebaseUser();
           await setDoc(doc(db, 'char_tabs', 'config'), data || {});
         } catch(e) {
           console.error('saveCharTabs:', e);
@@ -1095,7 +1088,7 @@
       },
       async saveModuleStore(data) {
         try {
-          await requireSharedEditor();
+          await requireFirebaseUser();
           const normalized = normalizeFirebaseModuleStore(data);
           try {
             await saveSplitModuleStore(normalized);
@@ -1170,7 +1163,7 @@
       },
       async saveItemDatabase(payload) {
         try {
-          await requireSharedEditor();
+          await requireFirebaseUser();
           const safePayload = payload && typeof payload === 'object' ? payload : {};
           try {
             await saveSplitItemDatabase(safePayload);
