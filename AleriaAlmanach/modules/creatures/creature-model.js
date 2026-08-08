@@ -135,7 +135,10 @@ export function sanitizeCreature(value = {}) {
     loot: {
       currency: normalizeText(loot.currency, 200),
       notes: normalizeText(loot.notes, 1600),
-      items: (Array.isArray(loot.items) ? loot.items : []).slice(0, 80).map(sanitizeLootItem)
+      items: (Array.isArray(loot.items) ? loot.items : []).slice(0, 80).map(sanitizeLootItem),
+      // Siehe combatProfile.revision in combat-profile-model.js - dieselbe Absicherung gegen
+      // veraltete Browser-Tabs, hier für die Beutetabelle.
+      revision: Math.max(0, Math.trunc(Number(loot.revision) || 0))
     },
     notes: normalizeText(source.notes, 6000)
   };

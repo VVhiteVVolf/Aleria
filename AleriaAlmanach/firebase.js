@@ -977,20 +977,21 @@
           void ignoredCreatedBy;
           const existing = await getDoc(ref);
           // Derselbe Schutz gegen veraltete Browser-Tabs wie bei saveCharacter() - siehe dort für
-          // die ausführliche Begründung. Ein expliziter Import (forceOverwrite) setzt sich immer durch.
-          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite && existing.exists()) {
-            const staleFields = detectStaleCharacterFields(existing.data(), safeData);
+          // die ausführliche Begründung. Kreaturen haben statt inventory ein loot-Feld. Ein
+          // expliziter Import (forceOverwrite) setzt sich immer durch.
+          if ((safeData.combatProfile || safeData.loot) && !options.forceOverwrite && existing.exists()) {
+            const staleFields = detectStaleCharacterFields(existing.data(), safeData, { combatProfile: 'Kampfprofil', loot: 'Beute' });
             if (staleFields.length) {
               throw new Error(`Diese Kreatur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
             }
           }
-          const stamped = stampFreshRevisions(safeData);
+          const stamped = stampFreshRevisions(safeData, ['combatProfile', 'loot']);
           const payload = existing.exists() ? stamped : { ...stamped, ownerUid: user.uid, createdBy: user.uid };
           await setDoc(ref, payload, { merge: true });
           return id;
         }
         const ref = await addDoc(collection(db, 'creatures'), {
-          ...stampFreshRevisions(data || {}),
+          ...stampFreshRevisions(data || {}, ['combatProfile', 'loot']),
           ownerUid: user.uid,
           createdBy: user.uid
         });

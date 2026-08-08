@@ -76,6 +76,21 @@ test('selectChangedSections behandelt eine fehlende Baseline (neu angelegte Figu
   assert.deepEqual(selectChangedSections(current, null, ['images', 'inventory', 'combatProfile']), ['images', 'inventory', 'combatProfile']);
 });
 
+test('detectStaleCharacterFields funktioniert mit eigenen Feldnamen (Kreaturen: loot statt inventory)', () => {
+  const currentDoc = { combatProfile: { revision: 200 }, loot: { revision: 50 } };
+  const staleLoot = { combatProfile: { revision: 200 }, loot: { revision: 10 } };
+  assert.deepEqual(
+    detectStaleCharacterFields(currentDoc, staleLoot, { combatProfile: 'Kampfprofil', loot: 'Beute' }),
+    ['Beute']
+  );
+});
+
+test('stampFreshRevisions funktioniert mit eigener Feldliste (Kreaturen: loot statt inventory)', () => {
+  const stamped = stampFreshRevisions({ name: 'Wolf', combatProfile: { revision: 1 }, loot: { revision: 1 } }, ['combatProfile', 'loot'], 999);
+  assert.equal(stamped.combatProfile.revision, 999);
+  assert.equal(stamped.loot.revision, 999);
+});
+
 test('selectChangedSections meldet keine Aenderung, wenn ueberhaupt nichts angefasst wurde', () => {
   const baseline = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };
   const current = { images: { a: 1 }, inventory: { a: 1 }, combatProfile: { a: 1 } };

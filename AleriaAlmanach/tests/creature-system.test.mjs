@@ -53,6 +53,12 @@ test('creature avatars are capped at ten and exposed as comment emotes', () => {
   });
 });
 
+test('creature loot carries the same revision safeguard as combatProfile', () => {
+  assert.equal(sanitizeCreature({}).loot.revision, 0);
+  assert.equal(sanitizeCreature({ loot: { revision: 1723000000000 } }).loot.revision, 1723000000000);
+  assert.equal(sanitizeCreature({ loot: { revision: -5 } }).loot.revision, 0, 'negative Werte werden auf 0 gekappt');
+});
+
 test('creature level 21-30 is represented by special combat levels', () => {
   const creature = sanitizeCreature({ level: 27, combatProfile: {} });
   assert.equal(creature.combatProfile.progression.level, 20);

@@ -31,12 +31,13 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260803-combat-sheet-v6';
+} from './creature-model.js?v=20260808-loot-revision-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260802-brandhof-combat-v1';
+} from './creature-catalog.js?v=20260808-loot-revision-v1';
+import { selectChangedSections } from '../characters/character-save-guard.js?v=20260807-save-scope-v1';
 
 const state = {
   creatures: getBuiltinCreatureTemplates().map(creature => ({ ...creature, _builtin: true })),
@@ -642,6 +643,9 @@ function openSheet(id = '') {
   state.editingId = String(id || '');
   const source = state.editingId ? state.creatures.find(item => item.id === state.editingId) : null;
   state.draft = source ? clone(source) : createCreatureDraft();
+  // Schnappschuss des beim Öffnen geladenen Kampfprofils/Loots - siehe Speichersystem-Checkup bei
+  // Charakteren. Ohne Baseline (neue Kreatur) gilt beim Speichern automatisch alles als geändert.
+  state.draftLoadedSnapshot = source ? { combatProfile: clone(source).combatProfile, loot: clone(source).loot } : null;
   renderSheet();
   setStatus(isBuiltinCreatureId(state.editingId)
     ? 'Versionierte Grundvorlage. Duplizieren erzeugt eine eigene Online-Instanz; Speichern legt eine Online-Fassung dieser Vorlage an.'
@@ -674,9 +678,19 @@ async function saveCurrent() {
     const now = new Date().toISOString();
     const data = { ...creature, createdAt: creature.createdAt || now, updatedAt: now };
     delete data.id;
+    // Kampfprofil/Loot nur mitschicken, wenn sie sich seit dem Öffnen des Bogens wirklich
+    // geändert haben - sonst würde jede Kleinigkeit (z. B. eine Notiz) das komplette, evtl.
+    // veraltete Kampfprofil zurückschreiben. Siehe character-save-guard.js/selectChangedSections.
+    const changedSections = new Set(selectChangedSections(data, state.draftLoadedSnapshot, ['combatProfile', 'loot']));
+    if (state.draftLoadedSnapshot && !changedSections.has('combatProfile')) delete data.combatProfile;
+    if (state.draftLoadedSnapshot && !changedSections.has('loot')) delete data.loot;
     const id = await backend.saveCreature(state.editingId || null, data);
     state.editingId = id;
-    state.draft = { id, ...data };
+    // data kann combatProfile/loot bewusst auslassen (siehe oben) - state.draft und der lokale
+    // Zwischenspeicher brauchen trotzdem den vollständigen, zuvor bekannten Datensatz.
+    const previous = state.creatures.find(item => item.id === id) || {};
+    state.draft = { ...previous, ...data, id };
+    state.draftLoadedSnapshot = { combatProfile: state.draft.combatProfile, loot: state.draft.loot };
     const index = state.creatures.findIndex(item => item.id === id);
     if (index >= 0) state.creatures[index] = state.draft;
     else state.creatures.push(state.draft);
