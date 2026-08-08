@@ -7,12 +7,65 @@ import { createPersonBiographyIconPicker } from './person-biography-icon-picker.
 import {
   createPersonBiographyModule,
   getPersonBiographyModule,
-  normalizePersonBiographyModule
+  normalizePersonBiographyModule,
+  PERSON_BIOGRAPHY_SCHEMA,
+  PERSON_BIOGRAPHY_SCHEMA_VERSION
 } from './person-biography-model.js';
 import { renderPersonBiography } from './person-biography-renderer.js';
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
+}
+
+function slugifyBiographyFileName(name) {
+  return String(name || '')
+    .toLocaleLowerCase('de')
+    .replace(/[^a-z0-9äöüß]+/gi, '-')
+    .replace(/^-|-$/g, '') || 'person';
+}
+
+// Eigenständiges Dateiformat statt eines Ausschnitts aus dem Familien-Export: Die Biographie
+// hängt sonst am selben fragilen lokalen Entwurf wie der restliche Stammbaum (siehe
+// family-sync-controller.js) - "Online speichern" im Kopfbereich ist der einzige Weg, sie
+// dauerhaft zu sichern. Diese Datei ist ein Werkzeug-unabhängiges Backup pro Person.
+function buildBiographyExportPayload(person, module) {
+  return {
+    schema: PERSON_BIOGRAPHY_SCHEMA,
+    schemaVersion: PERSON_BIOGRAPHY_SCHEMA_VERSION,
+    exportedAt: new Date().toISOString(),
+    personId: person?.id || '',
+    personName: person?.name || '',
+    biographyModule: normalizePersonBiographyModule(module)
+  };
+}
+
+function downloadBiographyModuleFile(person, module, documentRef) {
+  const payload = buildBiographyExportPayload(person, module);
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const anchor = documentRef.createElement('a');
+  anchor.href = url;
+  anchor.download = `${slugifyBiographyFileName(person?.name)}-biographie.json`;
+  anchor.click();
+  URL.revokeObjectURL(url);
+}
+
+function parseBiographyImportPayload(parsed) {
+  const source = parsed?.biographyModule && typeof parsed.biographyModule === 'object'
+    ? parsed.biographyModule
+    : parsed;
+  return normalizePersonBiographyModule(source || {});
+}
+
+function openBiographyImportPicker(documentRef, onFile) {
+  const input = documentRef.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.addEventListener('change', () => {
+    const file = input.files?.[0];
+    if (file) onFile(file);
+  });
+  input.click();
 }
 
 function inputField(label, field, value, options = {}) {
@@ -245,6 +298,8 @@ export function createPersonBiographyDialog({
       <footer class="dialog-footer person-biography-dialog__footer">
         ${editable && exists ? '<button class="button button--danger" type="button" data-biography-action="remove-module">Biographie entfernen</button>' : ''}
         <span class="person-biography-dialog__footer-spacer"></span>
+        ${editable ? '<button class="button button--quiet" type="button" data-biography-action="import-module">Importieren</button>' : ''}
+        ${editable ? '<button class="button button--quiet" type="button" data-biography-action="export-module">Exportieren</button>' : ''}
         <button class="button button--quiet" type="button" data-biography-action="close">Schließen</button>
         ${editable ? '<button class="button" type="submit">Biographie speichern</button>' : ''}
       </footer>
@@ -452,7 +507,32 @@ export function createPersonBiographyDialog({
       const collection = getCollection(draft, button.dataset.biographyCollection);
       collection?.splice(Number(button.dataset.biographyIndex), 1);
       rerenderEditor();
+    } else if (action === 'export-module') {
+      downloadBiographyModuleFile(person, draft, documentRef);
+    } else if (action === 'import-module') {
+      openBiographyImportPicker(documentRef, importBiographyFile);
     } else addItem(action);
+  }
+
+  function importBiographyFile(file) {
+    const FileReaderCtor = runtime.FileReader || globalThis.FileReader;
+    const reader = new FileReaderCtor();
+    reader.addEventListener('load', () => {
+      let imported;
+      try {
+        imported = parseBiographyImportPayload(JSON.parse(String(reader.result || '')));
+      } catch (error) {
+        runtime.alert?.(`Biographie-Datei konnte nicht gelesen werden: ${error?.message || 'Unbekanntes Format'}`);
+        return;
+      }
+      if (!runtime.confirm?.('Biographie-Datei importieren? Der aktuelle Entwurf in diesem Dialog wird dabei überschrieben (erst "Biographie speichern" schreibt das endgültig fest).')) return;
+      draft = imported;
+      rerenderEditor();
+    });
+    reader.addEventListener('error', () => {
+      runtime.alert?.('Biographie-Datei konnte nicht gelesen werden.');
+    });
+    reader.readAsText(file, 'utf-8');
   }
 
   function onInput(event) {
