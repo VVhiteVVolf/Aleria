@@ -838,20 +838,25 @@
           const { ownerUid: ignoredOwnerUid, createdBy: ignoredCreatedBy, ...safeData } = data || {};
           void ignoredOwnerUid;
           void ignoredCreatedBy;
+          // Manche Aufrufer (z. B. der Stammbaum-Import) vergeben für eine NEUE Figur bewusst eine
+          // vorbestimmte ID (worldPersonId), damit Dokument-ID und Stammbaum-Identität übereinstimmen,
+          // statt eine zufällige addDoc()-ID zu bekommen. Ohne existierendes Dokument zählt das für die
+          // Firestore-Regeln als "create" (verlangt ownerUid == auth.uid) - deshalb muss hier genau wie
+          // in saveCreature() geprüft werden, ob das Dokument schon existiert, statt das anhand der
+          // bloßen Anwesenheit einer id anzunehmen.
+          const existingSnap = await getDoc(ref);
           // Schutz gegen veraltete Browser-Tabs, die ein Kampfprofil/Inventar aus dem
           // Zwischenspeicher zurückschreiben und dabei z. B. einen frisch importierten
           // Charakterbogen wieder überschreiben würden. Ein expliziter Import (forceOverwrite)
           // setzt sich immer durch und wird dadurch selbst zum neuen, geschützten Stand.
-          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite) {
-            const currentSnap = await getDoc(ref);
-            if (currentSnap.exists()) {
-              const staleFields = detectStaleCharacterFields(currentSnap.data(), safeData);
-              if (staleFields.length) {
-                throw new Error(`Diese Figur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
-              }
+          if ((safeData.combatProfile || safeData.inventory) && !options.forceOverwrite && existingSnap.exists()) {
+            const staleFields = detectStaleCharacterFields(existingSnap.data(), safeData);
+            if (staleFields.length) {
+              throw new Error(`Diese Figur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
             }
           }
-          const outgoingData = stampFreshRevisions(safeData);
+          const stamped = stampFreshRevisions(safeData);
+          const outgoingData = existingSnap.exists() ? stamped : { ...stamped, ownerUid: user.uid, createdBy: user.uid };
           await setDoc(ref, outgoingData, { merge: true });
           return id;
         } else {
